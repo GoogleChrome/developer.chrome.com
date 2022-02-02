@@ -6,7 +6,7 @@ subhead: >
 description: >
   The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
 date: 2021-11-09
-updated: 2022-01-12
+updated: 2022-02-03
 authors:
   - alexandrawhite
 ---
@@ -38,7 +38,7 @@ need to [implement the User-Agent Client Hints
 API](https://web.dev/migrate-to-ua-ch/).
 
 [Review the latest timeline](https://www.chromium.org/updates/ua-reduction) for
-User-Agent reduction.
+{% footnoteref "ua-reduction" "Scaled availability for User-Agent reduction means the fully reduced UA string is shipping on all Chrome devices. Reduction is planned to begin with Chrome minor version starting in Q2 of 2022. [Read the proposed rollout timeline](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)." %}User-Agent reduction{% endfootnoteref %}.
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
@@ -47,6 +47,7 @@ application, operating system (OS), vendor, and / or version of a user agent.
 Currently, the `User-Agent` is shared on every HTTP request and exposed in
 JavaScript.
 {% endAside %}
+
 
 ### User-Agent Client Hints (UA-CH)
 
@@ -76,8 +77,8 @@ about the user's device or conditions.
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
-is easier to interpret. Existing code which parses the UA string shouldn’t
-break (though it will return less data), and you’ll need to migrate to UA-CH
+is easier to interpret. Existing code which parses the UA string shouldn't
+break (though it will return less data), and you'll need to migrate to UA-CH
 if your site [needs specific information
 information](https://wicg.github.io/ua-client-hints/#use-cases).
 
@@ -124,10 +125,10 @@ Stable, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
-browser version, you’ll need to
+browser version, you'll need to
 [implement the UA-CH API](https://web.dev/migrate-to-ua-ch/).
 
-Once you’ve updated to the UA-CH API, you should test to ensure you get the
+Once you've updated to the UA-CH API, you should test to ensure you get the
 data you expect from the User-Agent. There are three ways to test, each
 increasing in complexity.
 
@@ -153,7 +154,7 @@ There are a couple of methods to test the reduced User-Agent locally:
       flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
       to run Chrome with a custom user-agent string.
 
-### Transform the string in your site’s code
+### Transform the string in your site's code
 
 If you process the existing Chrome `user-agent` string in your client-side or
 server-side code, you can transform that string to the new format to test
