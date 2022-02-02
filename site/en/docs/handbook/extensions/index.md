@@ -90,7 +90,7 @@ Internal links should include a terminal slash.
 ## Code formatting {: #code-formatting }
 
 Code samples in extensions documentation should be formatted using the Chromium project's `git cl
-format` command. See [Using clang-format][clang-format] for additional details.
+format` command. To use this command, you must have [depot_tools][depot-tools] installed. See [Using clang-format][clang-format] for additional details.
 
 ```bash
 # Use this command to format JS files and code samples
@@ -98,4 +98,5 @@ git cl format --js <filename>
 ```
 
 [clang-format]: https://chromium.googlesource.com/chromium/src/+/main/docs/clang_format.md
+[depot-tools]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html
 [kebab-case]: https://en.wikipedia.org/wiki/Letter_case#Kebab_case
