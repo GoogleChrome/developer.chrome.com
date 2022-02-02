@@ -22,7 +22,7 @@ decision. For example, below you can see the geolocation permission prompt as im
 up to version 96. (You can try this and other permissions on our demo site
 [permission.site](https://permission.site/).)
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/dVZNzWjq3wBsRY4E7ShO.png", alt="ALT_TEXT_HERE", width="690", height="432" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/dVZNzWjq3wBsRY4E7ShO.png", alt="Chrome geolocation permission prompt", width="690", height="432" %}
 
 ### Most permission prompts are ignored or dismissed
 
@@ -74,10 +74,10 @@ perception that it's "annoying" for a site to ask for a permission.
 
 From Chrome 97 on, we therefore introduced an animated chip UI which appears next to the lock
 whenever a permission is requested. This consists of an icon and label describing the permission being
-requested. Our aim was to improve the experience of web browsing while avoiding permission requests 
+requested. Our aim was to improve the experience of web browsing while avoiding permission requests
 that are generally unnecessary for the vast majority of users and frequently ignored or dismissed.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/SsFtKKnZzbkAovNkX4Lt.png", alt="ALT_TEXT_HERE", width="653", height="229" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/SsFtKKnZzbkAovNkX4Lt.png", alt="Google search engine results page showing a search for pizza and the permissions chip with 'Use your location?' label.", width="653", height="229" %}
 
 The existing prompt bubble will be shown when the request chip is clicked (if not already shown) and
 the request UI is automatically augmented with the request bubble based on the heuristics listed
@@ -90,18 +90,22 @@ below:
 
 ### Flow of the new design
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/amp4hx5iei2FvfXFt8gK.png", alt="ALT_TEXT_HERE", width="800", height="445" %}
+#### Without user gesture
 
 For non-essential permissions not triggered by a gesture, the prompt no longer intrudes on the site
 contents, and does not insist on an immediate decision. The user can ignore the request chip until
 they have enough information to make a decision.
+
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/sLmK0PKtJzSLegl7VBLM.png", alt="Flow diagram going from padlock to the geolocation prompt, which, if dismissed, results in the 'geolocation blocked' icon, which, after a four second delay, is finally replaced with the padlock again.", width="800", height="292" %}
+
+#### Without interaction
 
 With no interaction, and after a short delay, the request chip will automatically collapse to just a
 blocked icon (to indicate the permission being temporarily blocked), before being dismissed
 entirely. The aim is to get out of the way of users who choose not to make a decision letting them do so
 without any interaction.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/0xzCGLqbOFMcDGVvM1Z2.png", alt="ALT_TEXT_HERE", width="722", height="180" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/8amGMpcjMo74bkVeFq4A.png", alt="Flow diagram going from padlock to the unobtrusive geolocation chip, which, after a twelve second delay results in the 'geolocation blocked' icon, which, after a four second delay, is finally replaced with the padlock again.", width="800", height="138" %}
 
 ### Expected short-term impact
 
