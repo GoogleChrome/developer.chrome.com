@@ -38,7 +38,7 @@ need to [implement the User-Agent Client Hints
 API](https://web.dev/migrate-to-ua-ch/).
 
 [Review the latest timeline](https://www.chromium.org/updates/ua-reduction) for
-{% footnoteref "ua-reduction" "Scaled availability for User-Agent reduction means the fully reduced UA string is shipping on all Chrome devices. Reduction is planned to begin with Chrome minor version starting in Q2 of 2022. [Read the proposed rollout timeline](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)." %}User-Agent reduction{% endfootnoteref %}.
+User-Agent reduction.
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
@@ -47,7 +47,6 @@ application, operating system (OS), vendor, and / or version of a user agent.
 Currently, the `User-Agent` is shared on every HTTP request and exposed in
 JavaScript.
 {% endAside %}
-
 
 ### User-Agent Client Hints (UA-CH)
 
@@ -120,8 +119,8 @@ to ensure Client Hints are available on site load and optimized.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
-As we get closer to the rollout of the reduced User-Agent string in Chrome
-Stable, [review your site
+As we get closer to scaled availability of the reduced User-Agent string in
+Chrome Stable, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
@@ -131,6 +130,10 @@ browser version, you'll need to
 Once you've updated to the UA-CH API, you should test to ensure you get the
 data you expect from the User-Agent. There are three ways to test, each
 increasing in complexity.
+
+Scaled availability for User-Agent reduction means the fully reduced UA string
+shipped on all Chrome devices. Reduction is planned to begin with a Chrome
+minor release in Q2 of 2022.
 
 ### Test the string locally {: #test-locally}
 
@@ -200,3 +203,5 @@ on third-parties.
   snippets to transform the current user-agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+
+{% footnotes %}
