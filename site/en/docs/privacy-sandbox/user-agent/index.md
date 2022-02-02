@@ -113,9 +113,34 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
    Sec-CH-UA-Arch: "arm"
    ```
 
-If you need a specific set of Client Hints on your initial request, refer to
-[Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
-to ensure Client Hints are available on site load and optimized.
+### Critical Client Hints
+
+If you need a specific set of Client Hints in your initial request, you can use
+the `Critical-CH` response header. `Critical-CH` values must be a subset of the
+values requested by `Accept-CH`.
+
+For example, the initial request may include a request for `Device-Memory` and
+`Viewport-Width`, where `Device-Memory` is considered critical.
+
+```http
+GET / HTTP/1.1
+Host: example.com
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-CH: Device-Memory, Viewport-Width
+Vary: Device-Memory, Viewport-Width
+Critical-CH: Device-Memory
+```
+
+If, after processing the Accept-CH header, the client would send a critical
+hint, the client retries the request.
+
+In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH`
+requests only the subset of values you must have on-load to properly load the
+page. Refer to the [Client Hints Reliability
+specification](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
+for more information.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
