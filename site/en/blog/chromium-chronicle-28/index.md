@@ -24,7 +24,7 @@ However, there's one major thing that makes Chrome on iOS very different from al
 
 Chrome on iOS doesn't use Blink. 
 
-Because of Apple's App Store rules, Chrome on iOS has to use the iOS platform API's for fetching and rendering web content. So Chrome on iOS uses WebKit, Nitro and CFNetwork where other Chrome platforms are using Blink, V8 and `//net`. Due to this, and the limited API available for iOS apps to interact with web page content, many Chrome features that use the `//content` APIs are implemented in Chrome on iOS using JavaScript injection. 
+Because of Apple's App Store rules, Chrome on iOS has to use the iOS platform APIs for fetching and rendering web content. So Chrome on iOS uses WebKit, Nitro and CFNetwork where other Chrome platforms are using Blink, V8 and `//net`. Due to this, and the limited API available for iOS apps to interact with web page content, many Chrome features that use the `//content` APIs are implemented in Chrome on iOS using JavaScript injection. 
 
 Cross-platform features in `//components` are structured to share as much code as possible across all platforms while keeping `//content` dependencies siloed:
 
@@ -55,8 +55,8 @@ See the [build instructions](https://chromium.googlesource.com/chromium/src/+/ma
 Fetching the source is much like other platforms:
 
 ```bash
-mkdir ${HOME}/ios
-cd ${HOME}/ios
+mkdir ${HOME}/chromium-ios
+cd ${HOME}/chromium-ios
 fetch ios
 ```
 
