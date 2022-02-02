@@ -28,8 +28,8 @@ up to version 96. (You can try this and other permissions on our demo site
 
 Chrome's telemetry data proves that a lot of permission prompts are ignored. You can explore the
 [notification permission data](https://developers.google.com/web/updates/2020/02/notification-permission-data-in-crux)
-in the Chrome UX report yourself, but, as an immediate example, consider the table below that shows
-in an accumulated way how Windows users reacted to the geolocation and the notification prompts:
+in the Chrome UX report yourself. For now, consider the table below that shows
+how Windows users reacted to the geolocation and the notification prompts on sites in an accumulated way:
 
 <div class="table-wrapper scrollbar">
 <table>
