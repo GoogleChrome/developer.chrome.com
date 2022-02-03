@@ -89,6 +89,8 @@ below:
 - The permission is deemed essential and generally non-spammy. Currently this includes camera,
   microphone, and camera paired with microphone.
 
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/sLmK0PKtJzSLegl7VBLM.png", alt="Flow diagram going from padlock to the geolocation prompt, which, if dismissed, results in the 'geolocation blocked' icon, which, after a four second delay, is finally replaced with the padlock again.", width="800", height="292" %}
+
 ### Flow of the new design
 
 #### Without user gesture
@@ -96,8 +98,6 @@ below:
 For non-essential permissions not triggered by a gesture, the prompt no longer intrudes on the site
 contents, and does not insist on an immediate decision. The user can ignore the request chip until
 they have enough information to make a decision.
-
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/sLmK0PKtJzSLegl7VBLM.png", alt="Flow diagram going from padlock to the geolocation prompt, which, if dismissed, results in the 'geolocation blocked' icon, which, after a four second delay, is finally replaced with the padlock again.", width="800", height="292" %}
 
 #### Without interaction
 
