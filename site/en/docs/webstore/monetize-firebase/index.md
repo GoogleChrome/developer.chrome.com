@@ -4,7 +4,8 @@ title: Monetize your extension with Firebase and Stripe
 date: 2021-12-20
 # updated: 2021-07-28
 description: >
-  Step-by-step instructions on how to... 
+ How to use Firebase and Stripe to offer in-app payments.
+subhead: Start monetizing your extension by following these steps.
 ---
 
 
