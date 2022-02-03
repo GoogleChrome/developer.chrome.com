@@ -67,7 +67,7 @@ this would switch to an opt-in.
 
 Chrome has [removed two
 items](https://www.chromestatus.com/feature/5667793157488640) that do not
-conform to recent changes in the WebCodecs spec.
+conform to recent changes in the WebCodecs specification.
 
 The `EncodedVideoChunkOutputCallback()` method takes an
 `EncodedVideoChunkMetadata` dictionary. Previously a member called
