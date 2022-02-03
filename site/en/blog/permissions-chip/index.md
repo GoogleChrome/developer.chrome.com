@@ -30,7 +30,7 @@ up to version 96. (You can try this and other permissions on our demo site
 Chrome's telemetry data proves that a lot of permission prompts are ignored. You can explore the
 [notification permission data](https://developers.google.com/web/updates/2020/02/notification-permission-data-in-crux)
 in the Chrome UX report yourself. For now, consider the table below that shows
-how Windows users reacted to the notification prompt on sites in an accumulated way, well noting
+how Windows users reacted to the notification prompt on sites in an accumulated way, while noting
 that geolocation prompts saw a similar dismiss or ignore behavior.
 
 <div class="table-wrapper scrollbar">
@@ -133,8 +133,8 @@ was introduced in Chrome 80. For more general guidance, see
 
 ## Outlook and conclusions
 
-There are plans for further UI and UX improvements the Chrome team is working on
-and the team is also investigating potentially more aggressive auto-blocking of permissions
+There are plans for further UI and UX improvements. The Chrome team is already working on
+them and investigating potentially more aggressive auto-blocking of permissions
 based on prior behavior. You will learn about the news here once these plans mature.
 
 Concluding, the new UI reduces the perceived insistence on a decision and improves the browsing
