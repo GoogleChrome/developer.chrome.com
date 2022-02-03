@@ -72,7 +72,7 @@ conform to recent changes in the WebCodecs specification.
 The `EncodedVideoChunkOutputCallback()` method takes an
 `EncodedVideoChunkMetadata` dictionary. Previously a member called
 `temporalLayerId` was located at `EncodedVideoChunkMetadata.temporalLayerId`. In
-conformance with the spec, it is now located at
+line with the specification, it is now located at
 `EncodedVideoChunkMetadata.SvcOutputMetadata.temporalLayerId`.
 
 The specification requires that the `VideoFrame()` constructor include a timestamp
