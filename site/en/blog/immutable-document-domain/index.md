@@ -28,9 +28,9 @@ communication](#alternative-cross-origin-communication)
 [`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname.
 
-On Chrome, websites will be unable to set `document.domain`. They will need to
-use alternative approaches such as `postMessage()` or Channel Messaging API to
-communicate cross-origin. We're targeting Chrome 101 to ship this change at the
+On Chrome, websites will be unable to set `document.domain`. You will need to
+use alternative approaches, such as `postMessage()` or the Channel Messaging API,
+to communicate cross-origin. We're targeting Chrome 101 to ship this change at the
 earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
@@ -115,18 +115,19 @@ MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
 Chrome plans to make `document.domain` immutable in the future.
 
-### How do I know my site is affected?
+### How do I know if my site is affected?
 
-If your website is affected by this change, Chrome will warn that `Setting
-document.domain will be deprecated.` in the DevTools console.
+If your website is affected by this change, Chrome will display a warning in
+the DevTools console: `Setting document.domain will be deprecated`.
 
-Affected websites will also get sent with deprecation reports, if they have a
-reporting endpoint set up. Learn more about [using the Reporting
+If you have a reporting endpoint set up, you will also be sent deprecation
+reports. Learn more about [how to use the Reporting
 API](https://web.dev/reporting-api/) with either existing report collection
 services or by building your own in-house solution.
 
-Also, you can run your site through [LightHouse's deprecated API
-audit](https://web.dev/deprecations/). 
+You can run your site through the [LightHouse deprecated API
+audit](https://web.dev/deprecations/) to find all APIs that are scheduled to
+be removed from Chrome.
 
 ## Alternative cross-origin communication
 
@@ -186,7 +187,7 @@ with `postMessage()` or Channel Messaging API, let us know on [Twitter via
 `document.domain`
 tag](https://stackoverflow.com/questions/tagged/document.domain).
 
-### In the last resort, send the `Origin-Agent-Cluster: ?0` header
+### As a last resort, send the `Origin-Agent-Cluster: ?0` header
 
 If you have strong reasons to continue setting `document.domain`, you can send
 `Origin-Agent-Cluster: ?0` response header along with the target document.
@@ -209,7 +210,7 @@ even after it becomes immutable by default.
   specification](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
   states that the feature should be removed.
 * [Mozilla considers disabling `document.domain` by default worth
-  prototyping.](https://github.com/mozilla/standards-positions/issues/601)
+  prototyping](https://github.com/mozilla/standards-positions/issues/601).
 * [WebKit indicated that they are moderately positive about deprecating
   `document.domain`
   setter](https://github.com/w3ctag/design-reviews/issues/564#issuecomment-768450217).
