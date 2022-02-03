@@ -57,7 +57,7 @@ process model.
 
 [Chromium's threat model](chromium.googlesource.com/chromium/src/+/master/docs/security/side-channel-threat-model.md)
 requires us to consider a process as the only defensible security boundary. To
-that end, aligning origins with processes is paramount. The `document.domain`
+do that, it's necessary to align origins with processes. The `document.domain`
 setter makes this a difficult task, as we don't know whether the same-origin
 policy will be relaxed until runtime, when it's too late to change the process
 into which a document has committed. We have some opt-out mechanisms; ideally
