@@ -19,7 +19,7 @@ tags:
 Chrome 99 beta was released on February 3, 2022 and is expected to become the
 stable version in early March, 2022.
 
-## Remove Battery Status API on Insecure Origins
+## Remove Battery Status API on insecure origins
 
 [Battery Status API is no longer supported on insecure origins](https://chromestatus.com/feature/4878376799043584),
 such as HTTP pages or HTTPS iframes embedded in HTTP pages. The Battery Status
