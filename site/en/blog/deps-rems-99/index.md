@@ -77,7 +77,7 @@ conformance with the spec, it is now located at
 
 The specification requires that the `VideoFrame()` constructor include a timestamp
 argument (`VideoFrameInit.timestamp`) for `CanvasImageSource` types that don't
-implicitly have a timestamp (e.g. `HTMLCanvasElement`). Failing to include the
+implicitly have a timestamp (for example, `HTMLCanvasElement`). Failing to include the
 timestamp should result in a `TypeError`, but Chrome previously defaulted the
 timestamp to zero. This seems helpful, but is problematic if you then send the
 `VideoFrame` to a `VideoEncoder`, where timestamps are used to guide bitrate
