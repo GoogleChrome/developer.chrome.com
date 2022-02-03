@@ -133,10 +133,8 @@ was introduced in Chrome 80. For more general guidance, see
 
 ## Outlook and conclusions
 
-At the moment, the chip appears side-by-side with the padlock, but the intention is to override
-the padlock in the future and add closer association between permissions and the site information
-surface. There are also plans to show a confirmation with additional feedback on the user's decision.
-The Chrome team is also investigating potentially more aggressive auto-blocking of permissions
+There are plans for further UI and UX improvements the Chrome team is working on
+and the team is also investigating potentially more aggressive auto-blocking of permissions
 based on prior behavior. You will learn about the news here once these plans mature.
 
 Concluding, the new UI reduces the perceived insistence on a decision and improves the browsing
