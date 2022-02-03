@@ -2,17 +2,18 @@
 layout: 'layouts/blog-post.njk'
 title: 'Permissions request chip'
 description: >
-  Permission prompts demand an answer immediately and are frequently ignored. Chrome 97 adds
+  Permission prompts demand an answer immediately and are frequently ignored. Chrome 98 adds
   dedicated space in the location bar for permissions, with the goal of putting all
   permissions-related UI (prompts, indicators, and controls) in the same place and thereby making
   the prompts less demanding to reduce the perceived insistence on a decision.
 authors:
   - thomassteiner
 date: 2022-02-01
+updated: 2022-02-03
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/K7jiiutmZA0DvzGU9irA.jpg
 alt: Computer user in front of a desktop computer.
 tags:
-  - chrome-97
+  - chrome-98
 ---
 
 ## The permissions UX until now
@@ -72,7 +73,7 @@ perception that it's "annoying" for a site to ask for a permission.
 
 ## New design
 
-From Chrome 97 on, we therefore introduced an animated chip UI which appears next to the lock
+From Chrome 98 on, we therefore introduced an animated chip UI which appears next to the lock
 whenever a permission is requested. This consists of an icon and label describing the permission being
 requested. Our aim was to improve the experience of web browsing while avoiding permission requests
 that are generally unnecessary for the vast majority of users and frequently ignored or dismissed.
