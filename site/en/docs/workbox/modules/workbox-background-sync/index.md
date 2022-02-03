@@ -56,6 +56,7 @@ registerRoute(
 );
 ```
 
+[comment]: <> (TODO: update the using-plugins link when that doc is migrated)
 `BackgroundSyncPlugin` hooks into the
 [`fetchDidFail` plugin callback](https://developers.google.com/web/tools/workbox/guides/using-plugins), and
 `fetchDidFail` is only invoked if there's an exception thrown, most likely due

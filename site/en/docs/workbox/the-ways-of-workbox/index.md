@@ -18,9 +18,8 @@ You'll rely on one of two core methods of Workbox's build tools: `generateSW` or
 
 You should use `generateSW` if:
 
-[comment]: <> (TODO: UPDATE REFERENCE DOC LINK)
 - You want to precache files associated with your build process, including files whose URLs contain hashes that you might not know ahead of time.
-- You have simple runtime caching needs that can be configured via [`generateSW`'s options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
+- You have simple runtime caching needs that can be configured via [`generateSW`'s options](/docs/workbox/reference/workbox-build/#method-generateSW).
 
 ### When _not_ to use `generateSW`
 

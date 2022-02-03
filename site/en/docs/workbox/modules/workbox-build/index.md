@@ -65,7 +65,7 @@ This will generate a service worker with precaching setup for all of the files p
 
 ### Full `generateSW` Config
 
-A full set of configuration options can be found on [this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
+A full set of configuration options can be found on [this reference page](/docs/workbox/reference/workbox-build/#method-generateSW).
 
 ## `injectManifest` Mode
 
@@ -92,7 +92,7 @@ This will create a precache manifest based on the files picked up by your config
 
 ### Full `injectManifest` Config
 
-A full set of configuration options can be found on [this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).
+A full set of configuration options can be found on [this reference page](/docs/workbox/reference/workbox-build/#method-injectManifest).
 
 ## Additional modes
 
@@ -116,4 +116,4 @@ getManifest({
 ```
 
 A full set of configuration options can be found on
-[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.getManifest).
+[this reference page](/docs/workbox/reference/workbox-build/#method-getManifest).

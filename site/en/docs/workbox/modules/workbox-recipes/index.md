@@ -11,7 +11,7 @@ A number of common patters, especially around [routing](/docs/workbox/modules/wo
 
 ## Recipes
 
-Each recipe combines a number of [Workbox modules](https://developers.google.com/web/tools/workbox/modules) together, bundling them into commonly used patterns. The recipes below will show the **recipe** you use when using this module, and the equivalent **pattern** it's using under the hood, should you want to write it yourself.
+Each recipe combines a number of [Workbox modules](/docs/workbox/modules/) together, bundling them into commonly used patterns. The recipes below will show the **recipe** you use when using this module, and the equivalent **pattern** it's using under the hood, should you want to write it yourself.
 
 ### Offline fallback
 

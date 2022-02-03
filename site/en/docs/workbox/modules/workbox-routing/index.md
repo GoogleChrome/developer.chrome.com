@@ -245,7 +245,7 @@ through Workbox.
 
 If you need more verbose information, you can set the log level to `debug` to
 view logs on requests not handled by the Router. See our
-[debugging guide](https://developers.google.com/web/tools/workbox/guides/troubleshoot-and-debug) for more info on
+[debugging guide](/docs/workbox/troubleshooting-and-logging/) for more info on
 setting the log level.
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lAJuL5UQuLYiTWTp5qH4.png", alt="Debug and Log Routing Messages", width="800", height="223" %}
@@ -255,7 +255,7 @@ setting the log level.
 If you want to have more control over when the Workbox Router is given
 requests, you can create your own
 [`Router`](/docs/workbox/reference/workbox-routing/#type-Router) instance and call
-it's [`handleRequest()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#handleRequest)
+it's [`handleRequest()`](/docs/workbox/reference/workbox-routing/#method-Router-handleRequest)
 method whenever you want to use the router to respond to a request.
 
 ```js

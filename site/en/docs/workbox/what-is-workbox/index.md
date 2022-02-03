@@ -21,11 +21,11 @@ Workbox aims to make using service workers as easy as possible,
 while allowing the flexibility to accommodate complex application requirements where needed.
 
 In the simplest cases,
-[`workbox-build`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build)
+[`workbox-build`](/docs/workbox/reference/workbox-build/)
 offers a couple of methods that can generate a service worker that precaches specified assets.
-The [`generateSW`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW)
+The [`generateSW`](/docs/workbox/reference/workbox-build/#method-generateSW)
 method does most of the work out of the box,
-while the [`injectManifest`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest)
+while the [`injectManifest`](/docs/workbox/reference/workbox-build/#method-injectManifest)
 method offers more control when necessary.
 
 For more advanced use cases, other modules can help. A few such modules are:
@@ -36,6 +36,6 @@ For more advanced use cases, other modules can help. A few such modules are:
 - [`workbox-expiration`](/docs/workbox/modules/workbox-expiration) for managing caches.
 - [`workbox-window`](/docs/workbox/modules/workbox-window) for registering a service worker and handling updates in the [`window context`](https://developer.mozilla.org/docs/Web/API/Window).
 
-These and [other modules](https://developers.google.com/web/tools/workbox/modules)
+These and [other modules](/docs/workbox/modules/)
 help compose service worker code in a declarative fashion that's easier to read and maintain than using service worker APIs directly.
 This documentation will explain how to use them in an applied fashion.
