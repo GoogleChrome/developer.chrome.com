@@ -116,15 +116,16 @@ Chrome plans to make `document.domain` immutable in the future.
 
 ### How do I know my site is affected?
 
-If your website is affected by this change, Chrome will complain that `Setting
+If your website is affected by this change, Chrome will warn that `Setting
 document.domain will be deprecated.` in the DevTools console.
 
-It will also send a deprecation report. You can receive it if you have a server
-side set up. Learn more about [the Reporting
-API](https://web.dev/reporting-api/).
+Affected websites will also get sent with deprecation reports, if they have a
+reporting endpoint set up. Learn more about [using the Reporting
+API](https://web.dev/reporting-api/) with either existing report collection
+services or by building your own in-house solution.
 
-Also, you can run by [the Lighthouse to see if your website is using a
-deprecated API](https://web.dev/deprecations/). 
+Also, you can run your site through [LightHouse's deprecated API
+audit](https://web.dev/deprecations/). 
 
 ## Alternative cross-origin communication
 
@@ -206,7 +207,7 @@ even after it becomes immutable by default.
 * [The Origin
   specification](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
   states that the feature should be removed.
-* [Mozilla considers it's worth
+* [Mozilla considers disabling `document.domain` by default worth
   prototyping.](https://github.com/mozilla/standards-positions/issues/601)
 * [WebKit indicated that they are moderately positive about deprecating
   `document.domain`
