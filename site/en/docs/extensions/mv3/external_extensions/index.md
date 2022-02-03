@@ -264,9 +264,9 @@ file (for example, `aaabbbcccdddeeefff.json`) or the metadata from the registry.
 
 This section answers common questions about external extensions.
 
-### Will the methodology for allowing a "pre-install" still be supported by Google Chrome from M33 onwards?
+### Is "pre-install" still supported by Google Chrome?
 
-Yes, but only as an install from a Chrome Web Store `update_URL`, not from a local CRX file path.
+Yes, but only as an install from a Chrome Web Store `update_url`, not from a local CRX file path. For more information, see [App and Extension policies][extension-policies].
 
 ### What are some common mistakes when installing with the preferences file? {: #faq-preference }
 
@@ -299,15 +299,16 @@ If the user uninstalls your extension, you should respect that decision. However
 developer) accidentally uninstalled your extension through the UI, you can remove the blocklist tag
 by installing the extension normally through the UI, and then uninstalling it.
 
+[extension-policies]: https://support.google.com/chrome/a/answer/7666985?hl=en
 [hosting]: /docs/extensions/mv3/hosting
 [linux-hosting]: /docs/extensions/mv3/linux_hosting/
 [malicious-mac]: http://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html
 [malicious-windows]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
 [packing]: /docs/extensions/mv3/linux_hosting/#packaging
 [publish]: /docs/webstore/publish
-[section-faq]: #faq
 [section-faq-preference]: #faq-preference
 [section-faq-registry]: #faq-registry
+[section-faq]: #faq
 [section-mac-troubleshooting]: #troubleshooting
 [section-preferences]: #preferences
 [section-registry]: #registry
