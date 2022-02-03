@@ -5,7 +5,7 @@ description: >
   If your website relies on setting `document.domain`, your action is required.
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
-date: 2022-01-11
+date: 2022-02-07
 authors:
   - agektmr
 tags:
@@ -112,7 +112,19 @@ To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome plans to make `document.domain` immutable from Chrome 101.
+Chrome plans to make `document.domain` immutable in the future.
+
+### How do I know my site is affected?
+
+If your website is affected by this change, Chrome will complain that `Setting
+document.domain will be deprecated.` in the DevTools console.
+
+It will also send a deprecation report. You can receive it if you have a server
+side set up. Learn more about [the Reporting
+API](https://web.dev/reporting-api/).
+
+Also, you can run by [the Lighthouse to see if your website is using a
+deprecated API](https://web.dev/deprecations/). 
 
 ## Alternative cross-origin communication
 
@@ -172,7 +184,7 @@ with `postMessage()` or Channel Messaging API, let us know on [Twitter via
 `document.domain`
 tag](https://stackoverflow.com/questions/tagged/document.domain).
 
-### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
+### In the last resort, send the `Origin-Agent-Cluster: ?0` header
 
 If you have strong reasons to continue setting `document.domain`, you can send
 `Origin-Agent-Cluster: ?0` response header along with the target document.
@@ -194,6 +206,8 @@ even after it becomes immutable by default.
 * [The Origin
   specification](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
   states that the feature should be removed.
+* [Mozilla considers it's worth
+  prototyping.](https://github.com/mozilla/standards-positions/issues/601)
 * [WebKit indicated that they are moderately positive about deprecating
   `document.domain`
   setter](https://github.com/w3ctag/design-reviews/issues/564#issuecomment-768450217).
