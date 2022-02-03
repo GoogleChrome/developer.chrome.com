@@ -31,7 +31,7 @@ different security constraints.
 ## Remove font-family -webkit-standard
 
 This version of Chrome
-[removes support for the `font-family` value `"-webkit-standard"](https://www.chromestatus.com/feature/5639265565278208)`.
+[removes support for the `font-family` value `"-webkit-standard"`](https://www.chromestatus.com/feature/5639265565278208).
 This value is merely an alias for the proprietary keyword `"-webkit-body"` and
 is only exposed because it's inherited from WebKit. Removing this improves
 alignment with the CSS specifications and with Firefox.
