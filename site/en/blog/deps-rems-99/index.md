@@ -47,7 +47,23 @@ method now returns an array of
 spec and with Gecko and Webkit. For information on Gamepads generally, see [Play
 the Chrome dino game with your gamepad](https://web.dev/gamepad/).
 
-## Remove minor WebCodecs spec violations
+## Remove the document.domain setter
+
+The `document.domain` setter, which allows developers to relax the same-origin
+policy [has been removed](https://chromestatus.com/feature/5428079583297536).
+This setter complicates the fundamental security boundary Chrome aims to
+maintain, and puts roadblocks in the way of post-Spectre changes to Chromium's
+process model.
+
+[Chromium's threat model](chromium.googlesource.com/chromium/src/+/master/docs/security/side-channel-threat-model.md)
+requires us to consider a process as the only defensible security boundary. To
+that end, aligning origins with processes is paramount. The `document.domain`
+setter makes this a difficult task, as we don't know whether the same-origin
+policy will be relaxed until runtime, when it's too late to change the process
+into which a document has committed. We have some opt-out mechanisms; ideally
+this would switch to an opt-in.
+
+## Update WebCodecs to Match Spec
 
 Chrome has [removed two
 items](https://www.chromestatus.com/feature/5667793157488640) that do not
@@ -66,21 +82,5 @@ timestamp should result in a `TypeError`, but Chrome previously defaulted the
 timestamp to zero. This seems helpful, but is problematic if you then send the
 `VideoFrame` to a `VideoEncoder`, where timestamps are used to guide bitrate
 control.
-
-## Remove the document.domain setter
-
-The `document.domain` setter, which allows developers to relax the same-origin
-policy [has been removed](https://chromestatus.com/feature/5428079583297536).
-This setter complicates the fundamental security boundary Chrome aims to
-maintain, and puts roadblocks in the way of post-Spectre changes to Chromium's
-process model.
-
-[Chromium's threat model](chromium.googlesource.com/chromium/src/+/master/docs/security/side-channel-threat-model.md)
-requires us to consider a process as the only defensible security boundary. To
-that end, aligning origins with processes is paramount. The `document.domain`
-setter makes this a difficult task, as we don't know whether the same-origin
-policy will be relaxed until runtime, when it's too late to change the process
-into which a document has committed. We have some opt-out mechanisms; ideally
-this would switch to an opt-in.
 
 {% include 'partials/deprecations-policy.md' %}
