@@ -29,7 +29,7 @@ related to a matching frame, including frames with `about:`, `data:`, `blob:`, a
 URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
-### 2021.12.30:  in Canary {: #canary-file-access }
+### 2021.12.30: Extension service worker support for `file:` schemes in Canary {: #canary-file-access }
 
 Service worker-based Manifest V2 and Manifest V3 extensions can now use the Fetch API to request
 `file:`-scheme URLs. Access to `file:`-scheme URLs still requires that the user enable 'Allow access to File
