@@ -75,7 +75,7 @@ temporalLayerId was located at `EncodedVideoChunkMetadata.temporalLayerId`. In
 conformance with the spec, it is now located at
 `EncodedVideoChunkMetadata.SvcOutputMetadata.temporalLayerId`.
 
-The spec requires that the `VideoFrame()` constructor include a timestamp
+The specification requires that the `VideoFrame()` constructor include a timestamp
 argument (`VideoFrameInit.timestamp`) for `CanvasImageSource` types that don't
 implicitly have a timestamp (e.g. `HTMLCanvasElement`). Failing to include the
 timestamp should result in a `TypeError`, but Chrome previously defaulted the
