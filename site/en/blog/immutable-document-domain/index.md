@@ -5,7 +5,8 @@ description: >
   If your website relies on setting `document.domain`, your action is required.
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
-date: 2022-02-07
+date: 2022-01-11
+updated: 2022-02-04
 authors:
   - agektmr
 tags:
