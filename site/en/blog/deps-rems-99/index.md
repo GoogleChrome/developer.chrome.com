@@ -41,7 +41,7 @@ alignment with the CSS specifications and with Firefox.
 The
 `[navigator.getGamepads()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads)`
 method now returns an array of
-`[Gamepad](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad)` objects
+[`Gamepad`](https://developer.mozilla.org/docs/Web/API/Gamepad) objects
 [instead of a GamepadList](https://www.chromestatus.com/feature/5693119438782464).
 `GamepadList` is no longer supported in Chrome. This brings Chrome in line with
 specification and with Gecko and Webkit. For information on Gamepads generally, see [Play
