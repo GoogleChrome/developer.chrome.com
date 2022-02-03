@@ -16,13 +16,13 @@ updated: 2022-01-20
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 100: i18n.getMessage() support in extension service workers {: #m100-i18n-getmessage }
+### Chrome 100: `i18n.getMessage()` support in extension service workers {: #m100-i18n-getmessage }
 
 The [`chrome.i18n.getMessage()`](/docs/extensions/reference/i18n/#method-getMessage) API is now
 supported in extension service worker contexts. This change landed in Canary on January 27, 2022
 and is expected to reach Stable in Chrome 100.
 
-### 2022.01.05: match_origin_as_fallback in Canary {: #canary-match-origin-as-fallback }
+### 2022.01.05: `match_origin_as_fallback` in Canary {: #canary-match-origin-as-fallback }
 
 Content scripts can now specify the `match_origin_as_fallback` key to inject into frames that are
 related to a matching frame, including frames with `about:`, `data:`, `blob:`, and `filesystem:`
@@ -43,7 +43,7 @@ Promise support has been added to
 [`runtime.sendNativeMessage`](/docs/extensions/reference/runtime/#method-sendNativeMessage) for
 extensions built for Manifest V3.
 
-### Chrome 98: Returning promises from scripting.executeScript()
+### Chrome 98: Returning promises from `scripting.executeScript()` {: #m96-execute-script }
 
 [`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
 now supports returning promises. When a script evaluates to a promise, Chrome will wait for the
