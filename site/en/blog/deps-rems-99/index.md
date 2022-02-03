@@ -71,7 +71,7 @@ conform to recent changes in the WebCodecs specification.
 
 The `EncodedVideoChunkOutputCallback()` method takes an
 `EncodedVideoChunkMetadata` dictionary. Previously a member called
-temporalLayerId was located at `EncodedVideoChunkMetadata.temporalLayerId`. In
+`temporalLayerId` was located at `EncodedVideoChunkMetadata.temporalLayerId`. In
 conformance with the spec, it is now located at
 `EncodedVideoChunkMetadata.SvcOutputMetadata.temporalLayerId`.
 
