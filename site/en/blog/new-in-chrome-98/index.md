@@ -7,6 +7,7 @@ description: >
   font format. And there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-02-01
+updated: 2022-03-04
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Eme4o8bSchfthB5p9g2R.png'
@@ -125,7 +126,6 @@ additional changes in Chrome 98.
 * [What's new in Chrome DevTools (98)](/blog/new-in-devtools-98/)
 * [Chrome 98 deprecations and removals](/blog/deps-rems-98/)
 * [ChromeStatus.com updates for Chrome 98](https://www.chromestatus.com/features#milestone%3D98)
-* [What's new in JavaScript in Chrome 98](https://v8.dev/blog/v8-release-98)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/97.0.4692.71..98.0.4758.88)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
