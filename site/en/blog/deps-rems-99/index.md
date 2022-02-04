@@ -4,7 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 99 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2022-02-03
-updated: 2022-02-03
+updated: 2022-02-04
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/km2rEb4m5xmqo3Y2KVMn.png'
 alt: >
   Deprecations and Removals hero logo
@@ -46,22 +46,6 @@ method now returns an array of
 `GamepadList` is no longer supported in Chrome. This brings Chrome in line with
 specification and with Gecko and Webkit. For information on Gamepads generally, see [Play
 the Chrome dino game with your gamepad](https://web.dev/gamepad/).
-
-## Remove the document.domain setter
-
-The `document.domain` setter, which allows developers to relax the same-origin
-policy [has been removed](https://chromestatus.com/feature/5428079583297536).
-This setter complicates the fundamental security boundary Chrome aims to
-maintain, and puts roadblocks in the way of post-Spectre changes to Chromium's
-process model.
-
-[Chromium's threat model](chromium.googlesource.com/chromium/src/+/master/docs/security/side-channel-threat-model.md)
-requires us to consider a process as the only defensible security boundary. To
-do that, it's necessary to align origins with processes. The `document.domain`
-setter makes this a difficult task, as we don't know whether the same-origin
-policy will be relaxed until runtime, when it's too late to change the process
-into which a document has committed. We have some opt-out mechanisms; ideally
-this would switch to an opt-in.
 
 ## Update WebCodecs to match the specification
 
