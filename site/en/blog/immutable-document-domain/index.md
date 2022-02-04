@@ -16,6 +16,12 @@ alt: >
   A dog in disguise.
 ---
 
+**Updates**
+
+- **February 4, 2022**: Updated with the new timeline - we'll show a warning in
+  the Issues panel starting from Chrome 100, removing `document.domain` setter
+  by default starting from Chrome 106.
+
 {% Aside 'warning' %}
 
 If your website relies on relaxing the same-origin policy via `document.domain`,
@@ -29,9 +35,9 @@ communication](#alternative-cross-origin-communication)
 was designed to get or set the origin's hostname.
 
 On Chrome, websites will be unable to set `document.domain`. You will need to
-use alternative approaches, such as `postMessage()` or the Channel Messaging API,
-to communicate cross-origin. We're targeting Chrome 101 to ship this change at the
-earliest, but this is dependent on the response to the [Intent to
+use alternative approaches, such as `postMessage()` or the Channel Messaging
+API, to communicate cross-origin. We're targeting Chrome 106 to ship this change
+at the earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
 If your website relies on same-origin policy relaxation via `document.domain`
@@ -113,12 +119,19 @@ To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome plans to make `document.domain` immutable in the future.
+Chrome plans to make `document.domain` immutable in Chrome 106.
 
 ### How do I know if my site is affected?
 
-If your website is affected by this change, Chrome will display a warning in
-the DevTools console: `Setting document.domain will be deprecated`.
+If your website is affected by this change, Chrome will warn in the DevTools
+Issues panel. Notice the yellow flag at the top right corner.
+
+<figure class="w-figcaption">
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/emNay9XjqqyNy3wEi0Aa.png",
+alt="When document.domain is modified, a warning is displayed in the Issues
+panel.", width="800", height="501" %}
+<figcaption>When document.domain is modified, a warning is displayed in the Issues panel.</figcaption>
+<figure>
 
 If you have a reporting endpoint set up, you will also be sent deprecation
 reports. Learn more about [how to use the Reporting
