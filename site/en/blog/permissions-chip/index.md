@@ -65,7 +65,7 @@ that geolocation prompts saw a similar dismiss or ignore behavior.
 Given an ignore/dismiss rate of approximately 85%, and especially given how much the prompt stands out and
 insists on users making a decision immediately, there is a conflict between the level of urgency
 assumed by the browser versus the user's preference for waiting to make a decision. This creates the
-perception that it's "annoying" for a site to ask for a permission, apart from potential extra
+perception that it's "annoying" for a site to ask for a permission because it will be lost in the potential extra
 things users need to react to like cookie consent banners, newsletter signups, etc.
 
 ## New design
