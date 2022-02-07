@@ -6,6 +6,7 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
+updated: 2022-02-04
 authors:
   - agektmr
 tags:
@@ -14,6 +15,12 @@ hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/grGMzuhOjsGhN150dONe.jpg'
 alt: >
   A dog in disguise.
 ---
+
+**Updates**
+
+- **February 4, 2022**: Updated with the new timeline - we'll show a warning in
+  the Issues panel starting from Chrome 100, removing `document.domain` setter
+  by default starting from Chrome 106.
 
 {% Aside 'warning' %}
 
@@ -27,10 +34,10 @@ communication](#alternative-cross-origin-communication)
 [`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname.
 
-On Chrome, websites will be unable to set `document.domain`. They will need to
-use alternative approaches such as `postMessage()` or Channel Messaging API to
-communicate cross-origin. We're targeting Chrome 101 to ship this change at the
-earliest, but this is dependent on the response to the [Intent to
+On Chrome, websites will be unable to set `document.domain`. You will need to
+use alternative approaches, such as `postMessage()` or the Channel Messaging
+API, to communicate cross-origin. We're targeting Chrome 106 to ship this change
+at the earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
 If your website relies on same-origin policy relaxation via `document.domain`
@@ -112,7 +119,28 @@ To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome plans to make `document.domain` immutable from Chrome 101.
+Chrome plans to make `document.domain` immutable in Chrome 106.
+
+### How do I know if my site is affected?
+
+If your website is affected by this change, Chrome will warn in the DevTools
+Issues panel. Notice the yellow flag at the top right corner.
+
+<figure class="w-figcaption">
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/emNay9XjqqyNy3wEi0Aa.png",
+alt="When document.domain is modified, a warning is displayed in the Issues
+panel.", width="800", height="501" %}
+<figcaption>When document.domain is modified, a warning is displayed in the Issues panel.</figcaption>
+<figure>
+
+If you have a reporting endpoint set up, you will also be sent deprecation
+reports. Learn more about [how to use the Reporting
+API](https://web.dev/reporting-api/) with either existing report collection
+services or by building your own in-house solution.
+
+You can run your site through the [LightHouse deprecated API
+audit](https://web.dev/deprecations/) to find all APIs that are scheduled to
+be removed from Chrome.
 
 ## Alternative cross-origin communication
 
@@ -172,7 +200,7 @@ with `postMessage()` or Channel Messaging API, let us know on [Twitter via
 `document.domain`
 tag](https://stackoverflow.com/questions/tagged/document.domain).
 
-### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
+### As a last resort, send the `Origin-Agent-Cluster: ?0` header
 
 If you have strong reasons to continue setting `document.domain`, you can send
 `Origin-Agent-Cluster: ?0` response header along with the target document.
@@ -194,6 +222,8 @@ even after it becomes immutable by default.
 * [The Origin
   specification](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
   states that the feature should be removed.
+* [Mozilla considers disabling `document.domain` by default worth
+  prototyping](https://github.com/mozilla/standards-positions/issues/601).
 * [WebKit indicated that they are moderately positive about deprecating
   `document.domain`
   setter](https://github.com/w3ctag/design-reviews/issues/564#issuecomment-768450217).
