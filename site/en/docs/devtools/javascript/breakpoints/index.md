@@ -81,8 +81,8 @@ Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from 
 - Right-click an entry to remove that breakpoint.
 - Right-click anywhere in the **Breakpoints** pane to deactivate all breakpoints, disable all
   breakpoints, or remove all breakpoints. Disabling all breakpoints is equivalent to unchecking each
-  one. Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints, but
-  to also maintain preserve their enabled state so that they are in the same state as before when
+  one. Deactivating all breakpoints instructs DevTools to ignore all line-of-code breakpoints as well as
+  preserve their enabled state so that they are in the same state as before when
   you reactivate them.
 
 {% Img src="image/admin/jR6uTu7EVph7vbfunUa3.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="657" %}
