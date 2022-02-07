@@ -20,9 +20,8 @@ examples of events include:
 - A content script or other extension [sends a message.][1]
 - Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage`][2].
 
-Once it has been loaded, a service worker keeps running as long as it is performing an action, such
-as calling a Chrome API or issuing a network request. Additionally, the service worker won't unload
-until all visible views and all message ports are closed.
+Once it has been loaded, an extension's service worker generally keeps running as long as it is
+performing an action, such as calling a Chrome API or issuing a network request. 
 
 {% Aside %}
 
@@ -231,3 +230,5 @@ in case of a crash.
 [15]: /docs/extensions/reference/runtime#event-onSuspend
 [16]: /docs/extensions/reference/runtime#event-onSuspend
 [sw-module]: https://web.dev/es-modules-in-sw/
+
+[doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
