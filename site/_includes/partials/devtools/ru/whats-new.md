@@ -4,10 +4,10 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 ### Chrome 98 {: #chrome98 }
-* [Ранний доступ: дерево специальных возможностей на всю страницу](/ru/blog/new-in-devtools-98/#a11y-tree)
+* [Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree)](/ru/blog/new-in-devtools-98/#a11y-tree)
 * [Явное отображение изменений на вкладке Изменения (Changes)](/ru/blog/new-in-devtools-98/#changes)
 * [Устанавливайте более длительный тайм-аут для записи поведения пользователя](/ru/blog/new-in-devtools-98/#recorder-timeout)
-* [Убедитесь, что ваши страницы кэшируются с помощью вкладки Возвратный кэш (Back/forward cache)](/ru/blog/new-in-devtools-98/#bfcache)
+* [Убедитесь, что ваши страницы кешируются с помощью вкладки Возвратный кеш (Back/forward cache)](/ru/blog/new-in-devtools-98/#bfcache)
 * [Новый фильтр в панели Свойства (Properties)](/ru/blog/new-in-devtools-98/#properties)
 * [Эмулируйте CSS-медиафункцию forced-colors](/ru/blog/new-in-devtools-98/#forced-colors)
 * [Показ линейки при наведении курсора мыши](/ru/blog/new-in-devtools-98/#show-rulers)
@@ -16,7 +16,7 @@
 * [Lighthouse 9 во вкладке Lighthouse](/ru/blog/new-in-devtools-98/#lighthouse)
 * [Улучшенная вкладка Источники (Sources)](/ru/blog/new-in-devtools-98/#sources)
 * [Другие важные моменты](/ru/blog/new-in-devtools-98/#misc)
-* [[Эксперимент] Конечные точки во вкладке Reporting API](/ru/blog/new-in-devtools-98/#reporting-api)
+* [[Эксперимент] Эндпоинты во вкладке Reporting API](/ru/blog/new-in-devtools-98/#reporting-api)
 
 ### Chrome 97 {: #chrome97 }
 

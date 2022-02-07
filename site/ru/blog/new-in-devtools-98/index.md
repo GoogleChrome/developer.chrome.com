@@ -6,7 +6,7 @@ authors:
 date: 2022-01-13
 updated: 2022-01-13
 description:
-  "Дерево специальных возможностей на всю страницу, явное отображение изменений на вкладке Изменения и многое другое."
+  "Дерево доступности на всю страницу, явное отображение изменений на вкладке Изменения и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Csl4vzzRO3Ei1ryeK4wc.jpg'
 alt: ''
 tags:
@@ -30,20 +30,20 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Preview feature: Full-page accessibility tree {: #a11y-tree } -->
-## Ранний доступ: дерево специальных возможностей на всю страницу {: #a11y-tree }
+## Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree) {: #a11y-tree }
 
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
-Новая функция **Дерево специальных возможностей на всю страницу** облегчает обзор полностраничного [дерева доступности](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) и помогает лучше понять, как ваш веб-контент работает со вспомогательными технологиями. 
+Новая функция **Дерево доступности на всю страницу** (Full-page accessibility tree) облегчает обзор полностраничного [дерева доступности](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) и помогает лучше понять, как ваш веб-контент работает со вспомогательными технологиями. 
 
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
-Во вкладке **Элементы** (Elements) откройте панель **Специальные возможности** (Accessibility) и поставьте галочку в чекбоксе **Дерево специальных возможностей на всю страницу** (Full-page accessibility tree). После этого перезагрузите DevTools, и вы увидите новую кнопку во вкладке **Элементы** (Elements).
+Во вкладке **Элементы** (Elements) откройте панель **Специальные возможности** (Accessibility) и поставьте галочку в чекбоксе **Дерево доступности на всю страницу** (Full-page accessibility tree). После этого перезагрузите DevTools, и вы увидите новую кнопку во вкладке **Элементы** (Elements).
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
-Вы можете нажать на нее, чтобы включить режим **Дерево специальных возможностей на всю страницу**. Вы можете развернуть отдельные узлы или посмотреть подробности в панели **Специальные возможности** (Accessibility).
+Вы можете нажать на нее, чтобы включить режим **Дерево доступности на всю страницу**. Вы можете развернуть отдельные узлы или посмотреть подробности в панели **Специальные возможности** (Accessibility).
 
 <!-- Select a node and toggle back to the DOM tree view. The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node. This works for DOM tree ⬌ Accessibility tree view too! -->
-Выберите узел и переключитесь обратно в представление дерева DOM. Теперь выбран соответствующий узел DOM. Это отличный способ понять, как отображается узел DOM в дереве доступности. Это работает и для дерева DOM ⬌ Представление дерева специальных возможностей!
+Выберите узел и переключитесь обратно в представление дерева DOM. Теперь выбран соответствующий узел DOM. Это отличный способ понять, как отображается узел DOM в дереве доступности. Это работает и для дерева DOM ⬌ Представление дерева доступности!
 
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
 Раньше дерево доступности было доступно в панели **Специальные возможности** (Accessibility). Область обзора была ограниченной, можно было исследовать только один элемент и его потомков.
@@ -51,7 +51,7 @@ tags:
 <!-- Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) for further enhancements! -->
 Наша команда все еще активно работает над этой новой функцией. Мы ждем [ваши отзывы](https://goo.gle/devtools-a11y-tree-feedback) для дальнейших улучшений.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="Дерево специальных возможностей на всю страницу", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="Дерево доступности на всю страницу", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/847a06a6535111826f898175b210dbe0948277a0 #}
 
@@ -95,21 +95,21 @@ tags:
 
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
-## Убедитесь, что ваши страницы кэшируются с помощью вкладки Возвратный кэш (Back/forward cache) {: #bfcache }
+## Убедитесь, что ваши страницы кешируются с помощью вкладки Возвратный кеш (Back/forward cache) {: #bfcache }
 
 <!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[Возвратный кэш (или bfcache)](https://web.dev/bfcache/) это оптимизация браузера, которая обеспечивает мгновенную навигацию назад и вперед. 
+[Возвратный кеш (или bfcache)](https://web.dev/bfcache/) это оптимизация браузера, которая обеспечивает мгновенную навигацию назад и вперед. 
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
-Новая вкладка **Возвратный кэш** (Back/forward cache) поможет протестировать ваши страницы, чтобы убедиться, что они оптимизированы для возвратного кэша, или выявить проблемы, которые этому препятствуют.
+Новая вкладка **Возвратный кеш** (Back/forward cache) поможет протестировать ваши страницы, чтобы убедиться, что они оптимизированы для возвратного кеша, или выявить проблемы, которые этому препятствуют.
 
 <!-- To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache. -->
-Чтобы протестировать конкретную страницу, перейдите на неё в Chrome и затем в DevTools откройте **Приложение** (Application) > **Возвратный кэш** (Back-forward Cache). Далее, нажмите кнопку **Test back/forward cache**, и DevTools попытается произвести переход на предыдущую страницу и обратно, чтобы проверить, может ли страница быть восстановлена из кэша.
+Чтобы протестировать конкретную страницу, перейдите на неё в Chrome и затем в DevTools откройте **Приложение** (Application) > **Возвратный кеш** (Back-forward Cache). Далее, нажмите кнопку **Test back/forward cache**, и DevTools попытается произвести переход на предыдущую страницу и обратно, чтобы проверить, может ли страница быть восстановлена из кеша.
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
-Для веб-разработчиков очень важно знать, как оптимизировать страницы для возвратного кэша во всех браузерах, поскольку это значительно улучшит качество просмотра для пользователей. Особенно для тех, у кого медленные сети или устройства. 
+Для веб-разработчиков очень важно знать, как оптимизировать страницы для возвратного кеша во всех браузерах, поскольку это значительно улучшит качество просмотра для пользователей. Особенно для тех, у кого медленные сети или устройства. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Вкладка Возвратный кэш", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Вкладка Возвратный кеш", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f4b1333582da2410e5bc8715998b96a83b924625 #}
 
