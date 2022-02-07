@@ -37,13 +37,13 @@ tags:
 
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
-Во вкладке **Элементы** (Elements) откройте панель **Специальные возможности** (Accessibility) и поставьте галочку в чекбоксе **Дерево специальных возможностей на всю страницу** (Full-page accessibility tree). После этого перезагрузите DevTools и вы увидите новую кнопку во вкладке **Элементы** (Elements).
+Во вкладке **Элементы** (Elements) откройте панель **Специальные возможности** (Accessibility) и поставьте галочку в чекбоксе **Дерево специальных возможностей на всю страницу** (Full-page accessibility tree). После этого перезагрузите DevTools, и вы увидите новую кнопку во вкладке **Элементы** (Elements).
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
 Вы можете нажать на нее, чтобы включить режим **Дерево специальных возможностей на всю страницу**. Вы можете развернуть отдельные узлы или посмотреть подробности в панели **Специальные возможности** (Accessibility).
 
 <!-- Select a node and toggle back to the DOM tree view. The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node. This works for DOM tree ⬌ Accessibility tree view too! -->
-Выберите узел и переключитесь обратно в представление дерева DOM. Теперь выбран соответствующий узел DOM. Это отличный способ понять как отображается узел DOM в дереве доступности. Это работает и для дерева DOM ⬌ Представление дерева специальных возможностей!
+Выберите узел и переключитесь обратно в представление дерева DOM. Теперь выбран соответствующий узел DOM. Это отличный способ понять, как отображается узел DOM в дереве доступности. Это работает и для дерева DOM ⬌ Представление дерева специальных возможностей!
 
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
 Раньше дерево доступности было доступно в панели **Специальные возможности** (Accessibility). Область обзора была ограниченной, можно было исследовать только один элемент и его потомков.
@@ -78,13 +78,13 @@ tags:
 ## Устанавливайте более длительный тайм-аут для записи поведения пользователя {: #recorder-timeout }
 
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
-Теперь вы можете настроить параметр **Timeout** во вкладке [Recorder](/docs/devtools/recorder/) для всех шагов или конкретного шага. Это полезно, особенно для страниц с медленными сетевыми запросами и длительной анимацией.
+Теперь вы можете настроить параметр **Timeout** во вкладке [Recorder](/docs/devtools/recorder/) для всех шагов или конкретного шага. Это особенно полезно для страниц с медленными сетевыми запросами и длительной анимацией.
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-Например, я [записала поведение пользователя](/docs/devtools/recorder/#record) на этой [демо-странице](https://jec.fyi/demo/pup-slow-result) при загрузке и клике на пункт меню. Однако загрузка пунктов меню происходит медленно (6 секунд). Воспроизведение [replay](/docs/devtools/recorder/#replay) этой записи не удалось, поскольку она превышает 5 секунд (таймаут по умолчанию).
+Например, мы [записали поведение пользователя](/docs/devtools/recorder/#record) на этой [демо-странице](https://jec.fyi/demo/pup-slow-result) при загрузке и клике на пункт меню. Однако загрузка пунктов меню происходит медленно (6 секунд). Воспроизведение [replay](/docs/devtools/recorder/#replay) этой записи не удалось, поскольку она превышает 5 секунд (тайм-аут по умолчанию).
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
-Мы можем использовать новую настройку **Timeout** чтобы исправить это. Расширьте шаг в котором мы нажимаем на пункт меню. [Редактируйте шаг](/docs/devtools/recorder/#edit-steps), нажав кнопку **Add timeout** и установите значение **6000** миллисекунд (равно 6 секундам).
+Мы можем использовать новую настройку **Timeout** чтобы исправить это. Откройте детали шага, в котором мы нажимаем на пункт меню. [Редактируйте шаг](/docs/devtools/recorder/#edit-steps), нажав кнопку **Add timeout** и установите значение **6000** миллисекунд (равно 6 секундам).
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 По желанию вы можете настроить **Timeout** для всех шагов в меню **Replay settings**. Раскройте настройки **Replay settings** и измените значение **Timeout**. 
@@ -101,10 +101,10 @@ tags:
 [Возвратный кэш (или bfcache)](https://web.dev/bfcache/) это оптимизация браузера, которая обеспечивает мгновенную навигацию назад и вперед. 
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
-Новая вкладка **Возвратный кэш** (Back/forward cache) поможет протестировать ваши страницы, чтобы убедиться, что они оптимизированы для возвратного кэша или выявить проблемы, которые этому препятствуют.
+Новая вкладка **Возвратный кэш** (Back/forward cache) поможет протестировать ваши страницы, чтобы убедиться, что они оптимизированы для возвратного кэша, или выявить проблемы, которые этому препятствуют.
 
 <!-- To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache. -->
-Чтобы протестировать конкретную страницу, перейдите на неё в Chrome и затем в DevTools откройте **Приложение** (Application) > **Возвратный кэш** (Back-forward Cache). Далее, нажмите кнопку **Test back/forward cache** и DevTools попытается произвести переход на предыдущую страницу и обратно, чтобы проверить, может ли страница быть восстановлена из кэша.
+Чтобы протестировать конкретную страницу, перейдите на неё в Chrome и затем в DevTools откройте **Приложение** (Application) > **Возвратный кэш** (Back-forward Cache). Далее, нажмите кнопку **Test back/forward cache**, и DevTools попытается произвести переход на предыдущую страницу и обратно, чтобы проверить, может ли страница быть восстановлена из кэша.
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
 Для веб-разработчиков очень важно знать, как оптимизировать страницы для возвратного кэша во всех браузерах, поскольку это значительно улучшит качество просмотра для пользователей. Особенно для тех, у кого медленные сети или устройства. 
@@ -123,7 +123,7 @@ tags:
 Если вы хотите сфокусироваться на конкретном свойстве в панели **Свойства** (Properties), вы теперь можете ввести название нужного свойства или его значение в новом текстовом поле **Фильтр** (Filter).
 
 <!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties.  -->
-По умолчанию свойства, чьи значения равны `null` или `undefined` не отображаются. Поставьте галочку в чекбоксе **Показывать все** (Show all), чтобы увидеть все свойства. 
+По умолчанию свойства, чьи значения равны `null` или `undefined`, не отображаются. Поставьте галочку в чекбоксе **Показывать все** (Show all), чтобы увидеть все свойства. 
 
 <!-- These enhancements allow you to get to the properties you care for quicker and thus improve your productivity! -->
 Эти нововведения позволят вам быстрее добраться до объектов, которые вам интересны, и тем самым повысить вашу продуктивность!
@@ -202,13 +202,13 @@ tags:
 На вкладке **Поиск** (Search) добавлено новое сочетание клавищ, позволяющее разворачивать и сворачивать все результаты поиска. Ранее результаты поиска можно было разворачивать и сворачивать, щелкая только по одному файлу за раз.
 
 <!-- Open the search tab via **Esc** > **3-dot** menu > **Search**. Enter a search string (e.g. function) and press **Enter** to see the list of search results. Focus on the search results and use the following shortcut to expand/collapse the search files: -->
-Откройте вкладку нажав последовательно **Esc** > **три точки** > **Поиск** (Search). Введите искомую строку (например, function) и нажмите **Enter**, чтобы увидеть список с результатами поиска. Переместите фокус на результаты поиска и нажмите следующее сочетания клавиш, чтобы развернуть/свернуть результаты поиска:
+Откройте вкладку, нажав последовательно **Esc** > **три точки** > **Поиск** (Search). Введите искомую строку (например, function) и нажмите **Enter**, чтобы увидеть список с результатами поиска. Переместите фокус на результаты поиска и нажмите следующее сочетания клавиш, чтобы развернуть/свернуть результаты поиска:
 
 - **Windows / Linux** - `Ctrl` + `Shift` + `{` или `}`
 - **MacOS** - `Cmd` + `Options` + `{` или `}`
 
 <!-- Go to the [keyboard shortcuts](/docs/devtools/shortcuts/) for reference of keyboard shortcuts in Chrome DevTools. -->
-Перейдите на страницу с [сочетаниями клавиш](/docs/devtools/shortcuts/) чтообы получить полную информацию о шорткатах в Chrome DevTools.
+Перейдите на страницу с [сочетаниями клавиш](/docs/devtools/shortcuts/), чтобы получить полную информацию о шорткатах в Chrome DevTools.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/v11XfQLwp7w9qIk440QP.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
 
@@ -224,7 +224,7 @@ tags:
 Во вкладке **Lighthouse** теперь запускается Lighthouse 9. Lighthouse теперь перечисляет все элементы, имеющие одинаковый идентификатор.
 
 <!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-Неуникальный идентификатор элемента — распространенная проблема доступности. Пример где id, на который ссылается атрибут `aria-labelledby`, используется на [нескольких элементах] (https://web.dev/duplicate-id-aria/). 
+Неуникальный идентификатор элемента — распространенная проблема доступности. Например, id, на который ссылается атрибут `aria-labelledby`, используется на [нескольких элементах] (https://web.dev/duplicate-id-aria/). 
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 Перейдите на страницу [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) для получения более подробной информации об обновлении.
@@ -271,7 +271,7 @@ tags:
 
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->
-### [Эксперимент] Конечные точки во вкладке Reporting API {: #reporting-api }
+### [Эксперимент] Эндпоинты во вкладке Reporting API {: #reporting-api }
 
 <!-- {% Aside %} -->
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
@@ -284,7 +284,7 @@ tags:
 Экспериментальная панель **Reporting API** была представлена в [Chrome 96](/blog/new-in-devtools-96/#reporting-api), чтобы помочь вам отслеживать созданные на странице отчеты и их статус.
 
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
-Секция **Endpoints** теперь доступна. Она даёт вам обзор всех конечных точек, настроенных в заголовке `Reporting-Endpoints`.
+Секция **Endpoints** теперь доступна. Она показывает все эндпоинты, настроенные в заголовке `Reporting-Endpoints`.
 
 <!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
 Научитесь пользоваться [Reporting API](https://web.dev/reporting-api/) для отслеживания проблем безопасности, устаревших вызовов API и т.д.
