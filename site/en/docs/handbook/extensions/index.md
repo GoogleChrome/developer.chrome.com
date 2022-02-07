@@ -11,16 +11,16 @@ Extensions docs are wrapped at 100 characters. New content and updates to existi
 follow this convention save for the following exceptions:
 
 * The existing page is already wrapped at another offset.
-    * Continue wrapping the document at the current offset.
+    * You may continue wrapping the document at the current offset.
 * Rewrapping would introduce significant noise to a code review.
-    * Try to limit line wrapping normalization to the text blocks your touch in a PR.
+    * Limiting line wrapping normalization to the text blocks your PR touches.
 
 ## Header IDs {: #header-ids }
 
 Header IDs are automatically generated based on the content of the header. This means that renaming
 a header will also change the header's ID and break existing links to that header.
 
-In order to make our documentation more resilient to change, authors should manually headers IDs.
+To make your documentation more resilient to change, authors should manually headers IDs.
 
 ```md
 // Do
@@ -30,7 +30,7 @@ In order to make our documentation more resilient to change, authors should manu
 ### Common use cases
 ```
 
-Header IDs should be short and meaningful. Try to use descriptive names that unambiguously identify
+Header IDs should be short and meaningful. Use descriptive names that unambiguously identify
 the content of the section rather than a [kebab cased][kebab-case] version of the header's text
 value.
 
@@ -42,7 +42,7 @@ By convention, extensions docs strongly prefer named footer links over inline li
 have a couple of advantages over inline links.
 
 - **Named links are typically shorter.** This makes it much easier to read and
-work with source Markdown file. 
+work with the source markdown file. 
 - **Named links are easier to maintain.** Authors can edit one link definition and update all uses
 of that link links across a given document. 
 
@@ -90,7 +90,7 @@ Internal links should include a terminal slash.
 ## Code formatting {: #code-formatting }
 
 Code samples in extensions documentation should be formatted using the Chromium project's `git cl
-format` command. To use this command, you must have [depot_tools][depot-tools] installed. See [Using clang-format][clang-format] for additional details.
+format` command. To use this command, you must first install [depot_tools][depot-tools]. See [Using clang-format][clang-format] for additional details.
 
 ```bash
 # Use this command to format JS files and code samples
