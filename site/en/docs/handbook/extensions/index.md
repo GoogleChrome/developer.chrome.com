@@ -71,8 +71,8 @@ tincidunt purus ex, eget congue lacus aliquet quis.
 
 ### Internal links {: #internal-links }
 
-When linking to other resources on `developer.chrome.com`, use the absolute path of the page rather
-than a relative path or full URL.
+When linking to other resources on `developer.chrome.com`, use the relative path from the site's
+root rather than a relative path from the page or a full URL.
 
 {% Compare 'better' %}
 ```md
