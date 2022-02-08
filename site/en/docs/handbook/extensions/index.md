@@ -22,13 +22,17 @@ a header will also change the header's ID and break existing links to that heade
 
 To make your documentation more resilient to change, authors should manually headers IDs.
 
+{% Compare 'better' %}
 ```md
-// Do
 ### Common use cases {: #use-cases }
+```
+{% endCompare %}
 
-// Don't do
+{% Compare 'worse' %}
+```md
 ### Common use cases
 ```
+{% endCompare %}
 
 Header IDs should be short and meaningful. Use descriptive names that unambiguously identify
 the content of the section rather than a [kebab cased][kebab-case] version of the header's text
@@ -46,46 +50,58 @@ work with the source markdown file.
 - **Named links are easier to maintain.** Authors can edit one link definition and update all uses
 of that link links across a given document. 
 
+{% Compare 'better' %}
 ```md
-// Do
 Lorem ipsum dolor [sit amet][mdn-global], consectetur adipiscing elit.
 Quisque aliquam rutrum pellentesque. Ut tincidunt purus ex, eget 
 congue lacus aliquet quis.
 
 [mdn-global]: https://developer.mozilla.org/en-US/docs/Glossary/Global_object
+```
+{% endCompare %}
 
-// Don't do
+{% Compare 'worse' %}
+```md
 Lorem ipsum dolor [sit
 amet](https://developer.mozilla.org/en-US/docs/Glossary/Global_object),
 consectetur adipiscing elit. Quisque aliquam rutrum pellentesque. Ut
 tincidunt purus ex, eget congue lacus aliquet quis.
 ```
+{% endCompare %}
 
 ### Internal links {: #internal-links }
 
 When linking to other resources on `developer.chrome.com`, use the absolute path of the page rather
 than a relative path or full URL.
 
+{% Compare 'better' %}
 ```md
-// Do
 [doc-page]: /docs/extensions/page/
+```
+{% endCompare %}
 
-// Don't do
+{% Compare 'worse' %}
+```md
 [doc-page]: https://develper.chrome.com/docs/extensions/page/
 [doc-page]: page/
 ```
+{% endCompare %}
 
 Internal links should include a terminal slash. 
 
+{% Compare 'better' %}
 ```md
-// Do
 [doc-page]: /docs/extensions/dir/page/
 [doc-page]: /docs/extensions/sub/dir/page/#header
+```
+{% endCompare %}
 
-// Don't do
+{% Compare 'worse' %}
+```md
 [doc-page]: /docs/extensions/dir/page
 [doc-page]: /docs/extensions/sub/dir/page#header
 ```
+{% endCompare %}
 
 ## Code formatting {: #code-formatting }
 
