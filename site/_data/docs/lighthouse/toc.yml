@@ -1,3 +1,6 @@
 - url: /docs/lighthouse/seo
   title: i18n.docs.seo.intro
   description: i18n.docs.seo.overview
+- url: /docs/lighthouse/best-practices
+  title: i18n.docs.best-practices.intro
+  description: i18n.docs.best-practices.overview
