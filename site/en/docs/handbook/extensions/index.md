@@ -5,15 +5,21 @@ date: 2021-02-02
 updated: 2021-02-02
 ---
 
+## Metadata {: #metadata }
+
+Extensions documents should follow the conventions outlined in the [Add a Doc][add-a-doc] and [Add a
+Blog Post][add-a-blog] guides. One notable exception to that guidance is that we do not use the
+`tags` and `author` YAML Front Matter properties in extensions docs.
+
 ## Line wrapping {: #line-wrapping }
 
 Extensions docs are wrapped at 100 characters. New content and updates to existing content must
 follow this convention save for the following exceptions:
 
-* The existing page is already wrapped at another offset.
-    * You may continue wrapping the document at the current offset.
-* Rewrapping would introduce significant noise to a code review.
-    * Limiting line wrapping normalization to the text blocks your PR touches.
+- The existing page is already wrapped at another offset.
+    - You may continue wrapping the document at the current offset.
+- Rewrapping would introduce significant noise to a code review.
+    - Limiting line wrapping normalization to the text blocks your PR touches.
 
 ## Header IDs {: #header-ids }
 
@@ -169,3 +175,6 @@ git cl format --js <filename>
 [depot-tools]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html
 [kebab-case]: https://en.wikipedia.org/wiki/Letter_case#Kebab_case
 [line-wrapping]: #line-wrapping
+
+[add-a-doc]: /docs/handbook/how-to/add-a-doc/
+[add-a-blog]: /docs/handbook/how-to/add-a-blog-post/
