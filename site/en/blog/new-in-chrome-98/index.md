@@ -7,7 +7,7 @@ description: >
   font format. And there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-02-01
-updated: 2022-03-07
+updated: 2022-02-08
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Eme4o8bSchfthB5p9g2R.png'
