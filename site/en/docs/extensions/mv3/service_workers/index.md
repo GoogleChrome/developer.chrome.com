@@ -228,6 +228,6 @@ in case of a crash.
 [14]: /docs/extensions/reference/runtime#property-Port-disconnect
 [15]: /docs/extensions/reference/runtime#event-onSuspend
 [16]: /docs/extensions/reference/runtime#event-onSuspend
-[sw-module]: https://web.dev/es-modules-in-sw/
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
+[sw-module]: https://web.dev/es-modules-in-sw/
