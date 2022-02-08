@@ -12,7 +12,7 @@ Extensions monitor these events using scripts in their background [service
 worker][doc-sw-migration], which then react with specified instructions.
 
 A background service worker is loaded when it is needed, and unloaded when it goes idle. Some
-examples of events include:
+examples include:
 
 - The extension is first installed or updated to a new version.
 - The background page was listening for an event, and the event is dispatched.
@@ -195,7 +195,7 @@ extension appears and disappears from Chrome's task manager.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
        alt="Chrome with an extension's popup open.", height="623", width="730" %}
 
-Open the task manager by clicking the Chrome Menu, hovering over more tools and selecting "Task
+Open the task manager by clicking the Chrome menu, hovering over more tools and selecting "Task
 Manager".
 
 Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup is
