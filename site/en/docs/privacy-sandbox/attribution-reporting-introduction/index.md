@@ -112,14 +112,12 @@ endAside %}
 Whether a flag or an origin trial is available for the API, and which features are available,
 depends on the current status of the API. Head over to [Status](#status).
 
-{% Aside %}  
 If you have implementation questions, join the [Attribution Reporting mailing list for
 developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) and ask.
 
 If you have general technical questions about your use case, consider opening an issue on the
 [Privacy Sandbox dev support
-repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).  
-{% endAside %}
+repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Use cases and features
 

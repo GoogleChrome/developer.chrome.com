@@ -19,7 +19,12 @@ under **Join the public discussion** in this post, or by creating new issues.
 [Learn more about participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate).
 {% endAside %}
 
-## Who is this post for?
+## Changelog
+
+- February 7, 2022: Section on [header trigger redirect](#header-trigger-redirect) added.
+- January 27, 2022: Article first published.
+
+## Who is this post for? {: #who }
 
 This post is for you:
 
@@ -33,7 +38,7 @@ to the
 [introduction to the API](/docs/privacy-sandbox/attribution-reporting-introduction/)
 instead.
 
-## Migration ahead
+## Migration ahead {: #migration }
 
 {% Aside %}
 The proposed changes will be implemented in Chrome for experimentation.
@@ -48,20 +53,21 @@ Once these changes are implemented in Chrome: if you use event-level reports fro
 
 This article also lists changes for aggregatable reports. However, these changes, if implemented, will not require any action or migration, as there's no browser implementation yet for aggregatable reports at the time of this writing.
 
-## Name changes
+## Name changes {: #name-changes }
 
 ### Summary reports and aggregatable reports
 
 What you may have seen described as aggregate reports will now be referred to as _summary
-reports_.  
+reports_.
+
 _Summary reports_ are the final output of the aggregation of multiple _aggregatable reports_,
 formerly called contributions or histogram contributions.
 
-## API mechanism changes
+## API mechanism changes {: #mechanism-changes }
 
-### Header-based source registration (event-level reports)
+### Header-based source registration (event-level reports) {: #header-source }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #header-source-event-change }
 
 When the user views or clicks an ad, the browser—locally on the user's device—records this event,
 alongside parameters that are specific to attribution reporting (such as the
@@ -83,40 +89,39 @@ origin—typically, an adtech—direct control over whether an attribution sourc
 scope. This partially mitigates fraud concerns, as with this change a genuine browser will never
 register a source without the reporting origin's opt-in.
 
-#### How does source registration work?
+#### How does source registration work? {: #header-source-event-how }
 
-- For a given ad, the adtech would now need to define a specific client-side attribute
-  `attributionsrc`. The value of this attribute is a URL to which the browser will send a
-  request; this request will include a new HTTP header `Attribution-Reporting-Source-Info` whose
-  value, `navigation `or `event,`specifies whether the source was a click or a view respectively.
-- Upon receiving this request, the click/view tracking server should respond with a HTTP
-  header, `Attribution-Reporting-Register-Source`, that contains the desired attribution
-  parameters. In the case of a click, this request would also redirect the user to the desired
-  landing page.
-- The origin that returns this header is now the reporting origin (formerly defined as
-  `attributionreportto`).
+1. For a given ad, the adtech would now need to define a specific client-side attribute
+   `attributionsrc`. The value of this attribute is a URL to which the browser will send a
+   request; this request will include a new HTTP header `Attribution-Reporting-Source-Info` whose
+   value, `navigation `or `event,`specifies whether the source was a click or a view respectively.
+1. Upon receiving this request, the click/view tracking server should respond with a HTTP
+   header, `Attribution-Reporting-Register-Source`, that contains the desired attribution
+   parameters.
+1. The origin that returns this header is now the reporting origin (formerly defined as
+   `attributionreportto`).
 
-HTTP Response Header `Attribution-Reporting-Register-Source`:
+   HTTP Response Header `Attribution-Reporting-Register-Source`:
 
-```json
-{
-  "source_event_id": "267630968326743374",
-  "destination": "https://toasters.example",
-  "expiry": "604800000"
-}
-```
+   ```json
+   {
+     "source_event_id": "267630968326743374",
+     "destination": "https://toasters.example",
+     "expiry": "604800000"
+   }
+   ```
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #header-source-event-explainer }
 
 [Registering attribution sources](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#registering-attribution-sources)
 
-#### Join the public discussion
+#### Join the public discussion {: #header-source-event-discuss }
 
 [Issue #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### Header-based attribution trigger (event-level reports)
+### Header-based attribution trigger (event-level reports) {: #header-trigger-event }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #header-trigger-event-change }
 
 Just like click or view registration, the new proposal changes the attribution trigger—when an
 adtech instructs the browser to record a conversion—to a header-based approach.  
@@ -135,11 +140,11 @@ attribution.
 Note that on the source side—typically, a publisher site—a page-wide control via
 `Permissions-Policy`, as well an element-wide control via `attributionsrc`, are present.
 
-#### How does attribution trigger work?
+#### How does attribution trigger work? {: #header-trigger-event-how }
 
 Upon receiving a pixel request and deciding that it should be categorized as a conversion, an adtech
 should respond with a new HTTP  
-header `Attribution-Reporting-Register-Event-Trigger`.
+ header `Attribution-Reporting-Register-Event-Trigger`.
 
 This header's value specifies how to treat the trigger event, as a JSON object. This is the same
 information that was defined as query parameters in the previous proposal.
@@ -148,23 +153,32 @@ HTTP Response Header `Attribution-Reporting-Register-Event-Trigger`:
 
 ```json
     [{
-        trigger_data: (unsigned 64-bit integer),
+        trigger_data: (unsigned 3-bit integer),
         trigger_priority: (signed 64-bit integer),
         deduplication_key: (signed 64-bit integer)
     }]
 ```
 
-#### Learn more in the technical explainer
+#### Redirection (optional) {: #header-trigger-redirect }
+
+Optionally, the adtech server can make the response that contains `Attribution-Reporting-Register-Event-Trigger` a redirect response.
+With this, it enables third-parties to observe the conversion event and to instruct the browser to attribute it.
+
+Redirection is optional; it's not needed when both an adtech and a third-party have pixels on the page.
+
+More details in [Third-pary reporting](#3p-reporting).
+
+#### Learn more in the technical explainer {: #header-trigger-event-explainer }
 
 [Triggering Attribution](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#triggering-attribution)
 
-#### Join the public discussion
+#### Join the public discussion {: #header-trigger-event-discuss }
 
 [Issue #91](https://github.com/WICG/conversion-measurement-api/issues/91)
 
-### No worklet (aggregatable reports)
+### No worklet (aggregatable reports) {: #no-worklet }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #no-worklet-change }
 
 In the previous proposal for aggregatable reports, JavaScript access was required to invoke a
 worklet—a JavaScript-based mechanism—that would generate these reports.
@@ -187,53 +201,53 @@ The new proposal offers several benefits:
   with `keepalive` semantics, for example if a click or view is registered when a user is leaving
   a page.
 
-#### How does the worklet-free mechanism work?
+#### How does the worklet-free mechanism work? {: #no-worklet-how }
 
 This declarative mechanism is based on HTTP headers—just like the event-level source registration
 and the attribution trigger header. More details on this in the next sections.
 
-#### Join the public discussion
+#### Join the public discussion {: #no-worklet-discuss }
 
 [Issue #194](https://github.com/WICG/conversion-measurement-api/issues/194)
 
-### Header-based source registration (aggregatable reports)
+### Header-based source registration (aggregatable reports) {: #header-source-agg }
 
 A new mechanism is proposed to register a source for an aggregatable report; this mechanism is the
 same as the [event-level source registration](#header-based-source-registration-event-level-reports).
 
 Only the header name is different: `Attribution-Reporting-Register-Aggregatable-Source`.
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #header-source-agg-explainer }
 
 [Attribution source registration](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-source-registration)
 
-### Header-based attribution trigger (aggregatable reports)
+### Header-based attribution trigger (aggregatable reports) {: #header-trigger-agg }
 
 A new mechanism is proposed to register a source for an aggregatable report; this mechanism is the
 same as the [event-level attribution trigger](#header-based-attribution-trigger-event-level-reports).
 
 Only the header name is different: `Attribution-Reporting-Register-Aggregatable-Trigger-Data`.
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #header-trigger-agg-explainer }
 
 [Attribution trigger registration](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-trigger-registration)
 
-## New features
+## New features {: #new-features }
 
-### Third-party reporting (event-level reports and aggregatable reports)
+### Third-party reporting (event-level reports and aggregatable reports) {: #3p-reporting }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #3p-reporting-change }
 
 Two aspects of the new proposal help better support third-party reporting use cases:
 
-- Adtechs can **redirect network requests to other adtechs servers**, which allows those other
+- Optionally, adtechs can **redirect network requests to other adtechs servers**, which allows those other
   adtechs to perform their own source and trigger registration. This is a common way third
   parties are configured today. This makes the API easier to adopt, among others in existing
   third-party reporting systems.
 - Reporting origins—typically, adtechs—**no longer share most privacy limits**. This supports use
   cases where multiple adtechs work with the same publishers or advertisers.
 
-#### How does third-party reporting work?
+#### How does third-party reporting work? {: #3p-reporting-how }
 
 In the new proposal, response-based source registration and trigger rely on HTTP headers. An adtech
 can leverage HTTP redirects for these requests.
@@ -249,14 +263,14 @@ allowing multiple other parties to register a conversion (attribution trigger).
 To prevent abuse, explicit reporting limitations have been added. Learn more in [Privacy protection changes](#privacy-protection-changes).
 {% endAside %}
 
-#### Join the public discussion
+#### Join the public discussion {: #3p-reporting-discuss }
 
 [Issue #91](https://github.com/WICG/conversion-measurement-api/issues/91)
 [Issue #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### View-through measurement (event-level reports and aggregatable reports)
+### View-through measurement (event-level reports and aggregatable reports) {: #view-through }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #view-through-change }
 
 In the new proposal, view-through measurement and click-through measurement work in a unified way:
 
@@ -269,28 +283,28 @@ This change is proposed to align with the new [header-based registration mechani
 It also simplifies developer experience when intending to support both click- and view-through
 measurement.
 
-#### How does view-through measurement work?
+#### How does view-through measurement work? {: #view-through-how }
 
 View-through measurement and click-through measurement both rely on [header-based registration](#api-mechanism-changes).
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #view-through-explainer }
 
 [Event-level reports (for both clicks and views)](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md)
 
-#### Join the public discussion
+#### Join the public discussion {: #view-through-discuss }
 
 [Issue #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### Debugging / Performance analysis (event-level reports and aggregatable reports)
+### Debugging / Performance analysis (event-level reports and aggregatable reports) {: #debugging }
 
-#### What's changing, and why?
+#### What's changing, and why? {: #debugging-change }
 
 A debugging mechanism has been added to the proposal to help developers detect bugs, as well as
 compare the performance of Attribution Reporting to existing cookie-based measurement solutions.
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/ncYlu8aGOiQn579Wzc2D.png", alt="Diagram of the new cookie-based debugging system", width="800", height="304" %}
 
-#### How does debugging work?
+#### How does debugging work? {: #debugging-how }
 
 {% Aside %}
 The Attribution Reporting API explicitly prevents the linking of detailed source events (ad clicks
@@ -322,22 +336,22 @@ report (JSON) will be sent to a `.well-known/attribution-reporting/debug` endpoi
 Event-level and aggregatable reports will also include these two new parameters, so that they can be
 associated with the correct debug report.
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #debugging-explainer }
 
 [Optional: extended debugging reports](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-extended-debugging-reports)
 
-#### Join the public discussion
+#### Join the public discussion {: #debugging-discuss }
 
 [Issue #174](https://github.com/WICG/conversion-measurement-api/issues/174)
 
-### Filtering capabilities (event-level reports and aggregatable reports)
+### Filtering capabilities (event-level reports and aggregatable reports) {: #filtering }
 
 {% Aside %}
 This is a new feature—more precisely, it was already part of the aggregatable reports proposal and
 has now been added to the event-level reports proposal.
 {% endAside %}
 
-#### What's changing, and why?
+#### What's changing, and why? {: #filtering-change }
 
 Because they support important use cases in today's advertising ecosystem, a number of use cases
 will now be supported in both event-level and aggregatable reports:
@@ -348,7 +362,7 @@ will now be supported in both event-level and aggregatable reports:
   specific type of conversion filtering. For example, filter out conversions that get matched to
   the wrong ad click/view due to the etld+1 destination scope in the API.
 
-#### How do filtering capabilities work? (for event-level reports)
+#### How do filtering capabilities work? (for event-level reports) {: #filtering-how }
 
 An optional `source_data` field in the source-side JSON object can define items that will be
 subsequently used by the browser at conversion time to apply filtering logic.
@@ -384,20 +398,20 @@ Alternatively, the `Attribution-Reporting-Register-Event-Trigger` header can be 
 If keys in the filters JSON match keys in `source_data`, the trigger is  
 completely ignored if the intersection is empty.
 
-#### Join the public discussion
+#### Learn more in the technical explainer {: #filtering-explainer }
+
+[Optional attribution filters](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-attribution-filters)
+
+#### Join the public discussion {: #filtering-discuss }
 
 [Issue #194](https://github.com/WICG/conversion-measurement-api/issues/194)  
 [Issue #201](https://github.com/WICG/conversion-measurement-api/issues/201)
 
-#### Learn more in the technical explainer
+## Privacy protection changes {: #privacy-changes }
 
-[Optional attribution filters](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-attribution-filters)
+### Noise and transparency (event-level reports and aggregatable reports) {: #noise }
 
-## Privacy protection changes
-
-### Noise and transparency (event-level reports and aggregatable reports)
-
-#### What's changing, and why?
+#### What's changing, and why? {: #noise-change }
 
 In the new proposal, one of the privacy mechanisms for reports has been improved: reports are
 subject to **randomized response**.  
@@ -426,7 +440,7 @@ This has two main benefits:
   browsers**: different browsers may decide to apply different levels of noise depending on their
   privacy goals, and the parties that will handle the report will need visibility into this.
 
-#### How does noise work?
+#### How does noise work? {: #noise-how }
 
 In the new proposal, at the time a source is registered (i.e. an ad click or view is recorded), the
 browser randomly decides whether it will truthfully attribute conversions and send reports for this
@@ -459,20 +473,20 @@ Fake reports for **views** are not subject to a random reporting window, because
 reporting window for views.
 {% endAside %}
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #noise-explainer }
 
 [Noisy fake conversions examples](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#noisy-fake-conversion-examples)
 
-#### Join the public discussion
+#### Join the public discussion {: #noise-discuss }
 
 [Issue #84](https://github.com/WICG/conversion-measurement-api/issues/84)  
 [Issue #273](https://github.com/WICG/conversion-measurement-api/issues/273)
 
-### Reporting limitations (event-level reports and aggregatable reports)
+### Reporting limitations (event-level reports and aggregatable reports) {: #reporting-limits }
 
 [Reporting origin limits](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#reporting-origin-limits)
 
-#### What's changing, and why?
+#### What's changing, and why? {: #reporting-limits-change }
 
 The new proposal **explicitly limits how many parties can measure events between two sites**.
 
@@ -487,11 +501,9 @@ The new proposal **explicitly limits how many parties can measure events between
 These limits are intended to be high enough that they don't limit any actor's ability to measure
 conversions, but low enough that they help mitigate some forms of API abuse.
 
-#### Learn more in the technical explainer
+### Reporting cooldown / rate limits {: #rate-limits }
 
-### Reporting cooldown / rate limits
-
-#### What's changing, and why?
+#### What's changing, and why? {: #rate-limits-change }
 
 Reporting cooldown is a privacy mechanism that throttles the amount of total information sent
 through this API in a given time period for a user.
@@ -503,17 +515,17 @@ Beyond this limit, the browser will stop scheduling reports that match this give
 destination, reporting origin} (typically {publisher, advertiser, adtech})—until the rolling 30-day
 report count falls below 100 for that {source site, destination, reporting origin}.
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #rate-limits-explainer }
 
 [Reporting cooldown / rate limits](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#reporting-cooldown--rate-limits)
 
-### Destination capping (event-level reports only)
+### Destination capping (event-level reports only) {: #capping }
 
 {% Aside %}
 The new proposal subjects **both clicks and views** to destination capping; note that the previous proposal already mentioned destination capping for views.
 {% endAside %}
 
-#### What's changing, and why?
+#### What's changing, and why? {: #capping-change }
 
 Destination capping is modified to include the reporting origin (typically, an adtech) in the scope: **100** unique
 pending destinations (typically, advertiser sites, or sites where conversions are expected to take
@@ -521,10 +533,10 @@ place) are allowed per {publisher, adtech}.
 
 This is a **privacy protection** to limit browsing history reconstruction.
 
-#### Learn more in the technical explainer
+#### Learn more in the technical explainer {: #capping-explainer }
 
 [Limiting the number of unique destinations covered by pending sources](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#limiting-the-number-of-unique-destinations-covered-by-pending-sources)
 
-## Attribution Reporting: all resources
+## Attribution Reporting: all resources {: #resources }
 
 See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
