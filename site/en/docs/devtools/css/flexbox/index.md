@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect and Debug CSS Flexbox layouts"
+title: "Inspect and Debug CSS Flexbox Layouts"
 authors:
   - jecelynyeen
 date: 2022-02-08
