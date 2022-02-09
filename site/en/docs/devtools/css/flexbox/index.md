@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-02-08
 #updated: YYYY-MM-DD
-description: "Learn how to use Chrome DevTools to inspect, modify and debug CSS Flexbox layouts."
+description: "Learn how to use Chrome DevTools to inspect, modify and debug CSS flexbox layouts."
 ---
 
 {% YouTube id='J5n2aS37rpE' %}
