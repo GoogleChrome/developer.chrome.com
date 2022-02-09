@@ -19,10 +19,10 @@ under **Join the public discussion** in this post, or by creating new issues.
 [Learn more about participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate).
 {% endAside %}
 
-## Changelog to this article
+## Changelog
 
-- 7/2/2022: Added section on [header trigger redirect](#header-trigger-redirect)
-- 27/1/2022: Article first published
+- February 7, 2022: Section on [header trigger redirect](#header-trigger-redirect) added.
+- January 27, 2022: Article first published.
 
 ## Who is this post for? {: #who }
 
