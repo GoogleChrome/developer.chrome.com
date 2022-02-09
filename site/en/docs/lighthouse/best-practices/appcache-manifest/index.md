@@ -48,7 +48,7 @@ consider using the
 This library generates a service-worker-based implementation of the behavior
 defined in an Application Cache manifest.
 
-See the [Current page does not respond with a 200 when offline](/works-offline) post
+See the [Current page does not respond with a 200 when offline](/docs/lighthouse/pwa/works-offline/) post
 for more information about using service workers to make your site work
 offline.
 
@@ -56,4 +56,4 @@ offline.
 
 - [Source code for **Uses Application Cache** audit](https://github.com/GoogleChrome/lighthouse/blob/ecd10efc8230f6f772e672cd4b05e8fbc8a3112d/lighthouse-core/audits/dobetterweb/appcache-manifest.js)
 - MDN's [Cache](https://developer.mozilla.org/docs/Web/API/Cache) page
-- [Current page does not respond with a 200 when offline](/works-offline)
+- [Current page does not respond with a 200 when offline](/docs/lighthouse/pwa/works-offline/)
