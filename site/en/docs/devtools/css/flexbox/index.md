@@ -10,7 +10,7 @@ description: "Learn how to use Chrome DevTools to inspect, modify and debug CSS 
 
 {% YouTube id='J5n2aS37rpE' %}
 
-This guide shows you how to discover flexbox elements on a page, inspect and modify the flexbox layouts in the **Elements** panel of Chrome DevTools.
+This guide shows you how to discover flexbox elements on a page, as well as inspect and modify the flexbox layouts in the **Elements** panel.
 
 The screenshots appearing in this article are from this web page: [Centering a text element with Flexbox][1].
 
