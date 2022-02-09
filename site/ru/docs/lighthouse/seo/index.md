@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/project-landing.njk'
-title: 'SEO-аудиты'
-description: 'Эти тесты позволяют убедиться, что ваша страница оптимизирована для продвижения в результатах поиска.'
-project_key: lighthouse/seo
+title: 'Аудиты соблюдения рекомендаций'
+description: 'Эти тесты позволяют выявить возможности для повышения общего качества кода вашего веб-приложения.'
+project_key: lighthouse/best-practices
 ---
