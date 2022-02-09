@@ -33,7 +33,7 @@ Por ejemplo, esta captura de pantalla muestra una página con dos errores:
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/KBP4iOO12CqHURgmjxaY.png", alt="Un ejemplo de los errores en la consola de Chrome DevTools", width="800", height="505" %}</figure>
 
-En el ejemplo anterior, el primer error proviene de un desarrollador web mediante una llamada a [`console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error). El segundo error proviene del navegador e indica que una variable que se utiliza en uno de los scripts de la página no existe.
+En el ejemplo anterior, el primer error proviene de un desarrollador web mediante una llamada a [`console.error()`](/docs/devtools/console/api/#error). El segundo error proviene del navegador e indica que una variable que se utiliza en uno de los scripts de la página no existe.
 
 Debajo del texto de cada error, la consola de DevTools indica la pila de llamadas en la que aparece el error. Por ejemplo, para el primer error la Consola indica que una función `(anonymous)` llamó a la función `init`, que a su vez llamó a la función `doStuff`. Al hacer clic en el enlace `pen.js:9` que aparece en la parte superior derecha de ese error, se muestra el código correspondiente.
 

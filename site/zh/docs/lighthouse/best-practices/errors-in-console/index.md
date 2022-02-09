@@ -33,7 +33,7 @@ Chrome DevTools 提供了一些可帮助您跟踪错误原因的工具：
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/KBP4iOO12CqHURgmjxaY.png", alt="Chrome DevTools 控制台中的错误示例", width="800", height="505" %}</figure>
 
-在上述示例中，第一个错误来自 Web 开发人员对 [`console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error) 的调用。第二个错误来自浏览器，指示页面脚本之一使用的一个变量不存在。
+在上述示例中，第一个错误来自 Web 开发人员对 [`console.error()`](/docs/devtools/console/api/#error) 的调用。第二个错误来自浏览器，指示页面脚本之一使用的一个变量不存在。
 
 在每个错误的文本下方，DevTools 控制台会指示出现错误的调用堆栈。例如，对于第一个错误，控制台指示一个 `(anonymous)` 函数调用了 `init` 函数，而后者则调用了 `doStuff` 函数。单击 `pen.js:9` 链接可显示相关代码。
 

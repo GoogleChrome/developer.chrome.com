@@ -35,7 +35,7 @@ Chrome DevTools에는 오류 원인을 추적하는 데 도움이 되는 몇 가
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/KBP4iOO12CqHURgmjxaY.png", alt="Chrome DevTools 콘솔의 오류 예", width="800", height="505" %}</figure>
 
-위의 예에서 첫 번째 오류는 [`console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error) 호출을 통해 웹 개발자로부터 발생합니다. 두 번째 오류는 브라우저에서 발생하며 페이지의 스크립트 중 하나에 사용된 변수가 존재하지 않음을 의미합니다.
+위의 예에서 첫 번째 오류는 [`console.error()`](/docs/devtools/console/api/#error) 호출을 통해 웹 개발자로부터 발생합니다. 두 번째 오류는 브라우저에서 발생하며 페이지의 스크립트 중 하나에 사용된 변수가 존재하지 않음을 의미합니다.
 
 각 오류의 텍스트 아래에 DevTools 콘솔은 오류가 나타나는 호출 스택을 표시합니다. 예를 들어, 첫 번째 오류의 경우 콘솔은 `doStuff` 함수를 호출하는 `init`이라 명명된 `(anonymous)` 함수를 나타냅니다. 해당 오류의 오른쪽 상단에 `pen.js:9` 링크를 클릭하면 관련 코드가 표시됩니다.
 
