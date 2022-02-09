@@ -1,16 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Examine and Modify CSS Flexbox Layouts"
+title: "Inspect and Debug CSS Flexbox layouts"
 authors:
   - jecelynyeen
 date: 2022-02-08
 #updated: YYYY-MM-DD
-description: "Learn how to use Chrome DevTools to examine and modify CSS Flexbox, as well as debugging layout issues."
+description: "Learn how to use Chrome DevTools to inspect, modify and debug CSS Flexbox layouts."
 ---
 
 {% YouTube id='J5n2aS37rpE' %}
 
-This guide shows you how to discover CSS flexbox on a page, editing them in the **Elements** panel of Chrome DevTools.
+This guide shows you how to discover and edit flexbox elements on a page, editin them in the **Elements** panel of Chrome DevTools.
 
 The screenshots appearing in this article are from this web page: [Centering a text element with Flexbox][1].
 
@@ -39,10 +39,10 @@ You can modify flexbox layouts visually with the **flexbox editor**. For example
 
 ## Examine the flexbox layout {: #examine }
 
-You can hover on the flexbox element in the **Elements** panel to visualize the layout. The overlay appears over the
+You can hover over the flexbox element in the **Elements** panel to visualize the layout. The overlay appears over the
 element, laid out with dotted lines to show the position of its content and items.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/T5fn0VMAClusOkvKMs9d.png", alt="hover on a flexbox element", width="800", height="479", class="screenshot" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/T5fn0VMAClusOkvKMs9d.png", alt="hover over a flexbox element", width="800", height="479", class="screenshot" %}
 
 Alternatively, you can click on the badge to toggle the display of the flexbox overlay. 
 
