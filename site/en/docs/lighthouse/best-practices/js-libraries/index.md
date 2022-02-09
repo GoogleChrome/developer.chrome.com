@@ -20,7 +20,7 @@ updated: 2019-08-28
 This audit simply lists all the front-end JavaScript libraries your page uses.
 
 Lighthouse also reports
-[front-end JavaScript libraries with known security risks](/no-vulnerable-libraries).
+[front-end JavaScript libraries with known security risks](/docs/lighthouse/best-practices/no-vulnerable-libraries).
 Make sure to update any insecure libraries.
 
 ## Resources
