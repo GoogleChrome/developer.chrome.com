@@ -15,6 +15,7 @@
     - url: /docs/devtools/css-overview/
     - url: /docs/devtools/css/animations/
     - url: /docs/devtools/css/grid/
+    - url: /docs/devtools/css/flexbox/
     - url: /docs/devtools/css/print-preview/
 - url: /docs/devtools/dom/
 - title: i18n.docs.devtools.console
