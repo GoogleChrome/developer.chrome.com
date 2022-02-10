@@ -136,7 +136,6 @@ provided that the permissions policy allows it.
         images or stylesheets) and subnavigations (for example, iframes) will send the
         reduced UA string, even if the origins of those requests are not
         enrolled in the origin trial.
-        
 1.  Load your website in Chrome M95 (or later) and start receiving the
     reduced UA string. 
 1.  Submit any issues or feedback to the UA Reduction [Github
