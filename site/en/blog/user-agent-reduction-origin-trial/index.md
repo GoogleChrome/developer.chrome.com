@@ -152,12 +152,12 @@ enrolled.
 To enroll as a third-party embed:
 
 1.  Visit the 
-    [UserAgentReduction origin trial page](/origintrials/#/view_trial/-7123568710593282047)
-    and click on Register.
+    [Trial for User Agent Reduction](/origintrials/#/view_trial/-7123568710593282047)
+    and click **Register**.
 1.  When creating the token, make sure to select the `Third-party matching` checkbox.
-1.  To receive the reduced User-Agent header from the third-party embed, follow the 
-    instructions for updating the HTTP response headers as outlined [above](#enroll-top-level).
-1.  To receive the reduced User-Agent string in the Javascript APIs, the trial token must be
+1.  To receive the reduced User-Agent header from the third-party embed,
+    [update the HTTP response headers](#enroll-top-level).
+1.  To receive the reduced User-Agent string in Javascript APIs, the trial token must be
     [injected via Javascript](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script).
 
 Some important points about running the origin trial on third-party embeds:
