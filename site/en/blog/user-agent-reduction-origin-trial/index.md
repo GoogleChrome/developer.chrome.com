@@ -150,6 +150,7 @@ can participate in the origin trial without requiring the top-level site to be
 enrolled.
 
 To enroll as a third-party embed:
+
 1.  Visit the 
     [UserAgentReduction origin trial page](/origintrials/#/view_trial/-7123568710593282047)
     and click on Register.
