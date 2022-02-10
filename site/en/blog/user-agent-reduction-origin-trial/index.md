@@ -116,7 +116,8 @@ provided that the permissions policy allows it.
     [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
     
     1.  If you want to register your domains for the trial as a third-party embed, you
-        will need a separate token as described [below](#enroll-third-party).
+        will [need a separate token](#enroll-third-party).
+        {% endAside %}
 
 1.  Update your HTTP response headers:
 
