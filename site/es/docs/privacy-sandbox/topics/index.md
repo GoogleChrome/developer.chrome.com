@@ -104,7 +104,7 @@ El ciclo de vida de la API de Topics:
 {% Aside %}
 
 La propuesta de la API de Topics se encuentra en la
-[fase de debate inicial](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)
+[fase de debate inicial](/docs/privacy-sandbox/cds21-update/#discussion)
 para recopilar comentarios del ecosistema y tomar medidas al respecto.   
 
 El diseño de la API no es definitivo. Los detalles que se mencionan a continuación cambiarán a
@@ -241,9 +241,9 @@ JavaScript incluido en el sitio).
 <table>
 <thead>
 <tr>
-<th><strong>Sitio</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Llamadores de API en el sitio</strong></th>
+<th style="text-align: left;"><strong>Sitio</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Llamadores de API en el sitio</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -288,9 +288,9 @@ En la segunda semana, el usuario visita otro sitio:
 <table>
 <thead>
 <tr>
-<th><strong>Sitio</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Llamadores de API en el sitio</strong></th>
+<th style="text-align: left;"><strong>Sitio</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Llamadores de API en el sitio</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -307,9 +307,9 @@ Además, se agrega el código de adtech2.example a diy-clothing.example:
 <table>
 <thead>
 <tr>
-<th><strong>Sitio</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Llamadores de API en el sitio</strong></th>
+<th style="text-align: left;"><strong>Sitio</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Llamadores de API en el sitio</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -354,7 +354,7 @@ temas para la época actual y las dos anteriores.
    1. El usuario visitó la página durante la época.
    1. La página incluye un código que llama a `document.browsingTopics()` 
    1. Se habilitó la API (p. ej., no la bloqueó el usuario ni un
-      [encabezado de respuesta](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)).
+      [encabezado de respuesta](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)).
 
 1. En el dispositivo del usuario, el navegador usa el modelo de clasificación que proporciona la
    API de Topics para asignar el nombre de host de cada página a una lista de temas.
@@ -447,7 +447,7 @@ En otras palabras, los sitios no son aptos para los cálculos de frecuencia de t
 o un servicio incorporado realice una acción para llamar a la API.  
 La explicación de Topics también propone que los sitios puedan bloquear el cálculo de temas de sus
 visitantes a través del siguiente encabezado
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy):  
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy):
 
 ```text  
 Permissions-Policy: browsing-topics=()

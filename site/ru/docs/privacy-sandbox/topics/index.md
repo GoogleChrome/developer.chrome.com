@@ -94,7 +94,7 @@ Topics API обеспечивает надежные элементы управ
 {% Aside %}
 
 Предложение по Topics API находится на
-[этапе начального обсуждения](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion).
+[этапе начального обсуждения](/docs/privacy-sandbox/cds21-update/#discussion).
 Мы планируем вносить изменения, опираясь на отзывы участников экосистемы.  
 Проект API пока находится в разработке, и указанные ниже сведения будут меняться.  
 
@@ -225,9 +225,9 @@ const creative = await response.json();
 <table>
 <thead>
 <tr>
-<th><strong>Сайт</strong></th>
-<th><strong>Темы</strong></th>
-<th><strong>Объекты на сайте, вызывающие API</strong></th>
+<th style="text-align: left;"><strong>Сайт</strong></th>
+<th style="text-align: left;"><strong>Темы</strong></th>
+<th style="text-align: left;"><strong>Объекты на сайте, вызывающие API</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -274,9 +274,9 @@ const creative = await response.json();
 <table>
 <thead>
 <tr>
-<th><strong>Сайт</strong></th>
-<th><strong>Темы</strong></th>
-<th><strong>Объекты на сайте, вызывающие API</strong></th>
+<th style="text-align: left;"><strong>Сайт</strong></th>
+<th style="text-align: left;"><strong>Темы</strong></th>
+<th style="text-align: left;"><strong>Объекты на сайте, вызывающие API</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -293,9 +293,9 @@ const creative = await response.json();
 <table>
 <thead>
 <tr>
-<th><strong>Сайт</strong></th>
-<th><strong>Темы</strong></th>
-<th><strong>Объекты на сайте, вызывающие API</strong></th>
+<th style="text-align: left;"><strong>Сайт</strong></th>
+<th style="text-align: left;"><strong>Темы</strong></th>
+<th style="text-align: left;"><strong>Объекты на сайте, вызывающие API</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -337,7 +337,7 @@ const creative = await response.json();
    1. Пользователь открывал страницу в течение эпохи.
    1. На странице есть код, который вызывает метод `document.browsingTopics()`.
    1. API был включен (например, не заблокирован пользователем или с помощью [заголовка
-      ответа](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)).
+      ответа](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)).
 
 1. Браузер на устройстве пользователя применяет модель классификации, предоставленную Topics API,
    для сопоставления имени хоста каждой страницы со списком тем.
@@ -433,7 +433,7 @@ chrome://settings/privacySandbox. Информация об интересующ
 Другими словами, если сайт или сервис не вызывает Topics API, то в расчетах интересов он не
 учитывается.  
 Предлагается также предоставлять сайтам возможность отключать вычисление тем с помощью заголовка
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy):  
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy):
 
 ```text  
 Permissions-Policy: browsing-topics=()

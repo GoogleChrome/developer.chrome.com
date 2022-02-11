@@ -80,7 +80,7 @@ Topics API 수명 주기:
 {% Aside %}
 
 Topics API 제안은 개발자 생태계에서 의견을 수렴하고 조치를 취하기 위한 [초기 토론
-단계](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)에 있습니다.   
+단계](/docs/privacy-sandbox/cds21-update/#discussion)에 있습니다.
 API 디자인은 최종 결정된 것이 아니며, 아래의 세부정보는 토론이 진행됨에 따라 변경될 수 있습니다.  
 
 {% endAside %}
@@ -187,9 +187,9 @@ API 호출자는 최근에 관찰한 주제만 수신하며 사용자의 주제�
 <table>
 <thead>
 <tr>
-<th><strong>사이트</strong></th>
-<th><strong>주제</strong></th>
-<th><strong>사이트의 API 호출자</strong></th>
+<th style="text-align: left;"><strong>사이트</strong></th>
+<th style="text-align: left;"><strong>주제</strong></th>
+<th style="text-align: left;"><strong>사이트의 API 호출자</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -232,9 +232,9 @@ API 호출자는 최근에 관찰한 주제만 수신하며 사용자의 주제�
 <table>
 <thead>
 <tr>
-<th><strong>사이트</strong></th>
-<th><strong>주제</strong></th>
-<th><strong>사이트의 API 호출자</strong></th>
+<th style="text-align: left;"><strong>사이트</strong></th>
+<th style="text-align: left;"><strong>주제</strong></th>
+<th style="text-align: left;"><strong>사이트의 API 호출자</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -251,9 +251,9 @@ API 호출자는 최근에 관찰한 주제만 수신하며 사용자의 주제�
 <table>
 <thead>
 <tr>
-<th><strong>사이트</strong></th>
-<th><strong>주제</strong></th>
-<th><strong>사이트의 API 호출자</strong></th>
+<th style="text-align: left;"><strong>사이트</strong></th>
+<th style="text-align: left;"><strong>주제</strong></th>
+<th style="text-align: left;"><strong>사이트의 API 호출자</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -286,7 +286,7 @@ API는 에포크당 하나씩 최대 3개의 주제를 반환합니다. 3개가 
    1. 에포크 동안 사용자가 방문한 페이지
    1. `document.browsingTopics()`를 호출하는 코드가 포함된 페이지 
    1. API가 사용 설정됨(예: 사용자가 또는 [응답
-      헤더](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)로 차단하지 않음)
+      헤더](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)로 차단하지 않음)
 
 1. 사용자 기기의 브라우저가 Topics API에서 제공하는 분류기 모델을 사용하여 각 페이지의 호스트 이름을 주제 목록에 매핑합니다.
 1. 브라우저에 주제 목록이 누적됩니다.
@@ -356,7 +356,7 @@ Topics API를 호출하는 코드가 있는 사이트만 주제 빈도 계산에
 [직접 관찰한 주제만 수신합니다](#observed-topics).
 따라서 사이트 또는 삽입된 서비스가 API 호출에 필요한 조치를 취하지 않으면 주제 빈도 계산에 해당 사이트가 반영되지 않습니다.  
 Topics 설명서에 따르면 사이트에서 다음의
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy) 헤더를
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) 헤더를
 사용해 사이트 방문자의 주제 계산을 차단할 수도 있습니다.  
 ```text  
 Permissions-Policy: browsing-topics=()

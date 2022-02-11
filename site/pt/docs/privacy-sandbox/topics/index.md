@@ -103,7 +103,7 @@ Ciclo de vida da API Topics:
 {% Aside %}
 
 A proposta da API Topics está na
-[fase de discussão inicial](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)
+[fase de discussão inicial](/docs/privacy-sandbox/cds21-update/#discussion)
 para coletar feedback e agir de acordo com o ecossistema.   
 O design da API não é definitivo, e os detalhes abaixo podem mudar à medida que as discussões
 progredirem.  
@@ -236,9 +236,9 @@ JavaScript incluído no site..
 <table>
 <thead>
 <tr>
-<th><strong>Site</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Autores da chamada da API no site</strong></th>
+<th style="text-align: left;"><strong>Site</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Autores da chamada da API no site</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -284,9 +284,9 @@ Na segunda semana, o usuário visita outro site:
 <table>
 <thead>
 <tr>
-<th><strong>Site</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Autores da chamada da API no site</strong></th>
+<th style="text-align: left;"><strong>Site</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Autores da chamada da API no site</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -303,9 +303,9 @@ Além disso, o código de adtech2.example é adicionado ao site façavocêmesmo-
 <table>
 <thead>
 <tr>
-<th><strong>Site</strong></th>
-<th><strong>Temas</strong></th>
-<th><strong>Autores da chamada da API no site</strong></th>
+<th style="text-align: left;"><strong>Site</strong></th>
+<th style="text-align: left;"><strong>Temas</strong></th>
+<th style="text-align: left;"><strong>Autores da chamada da API no site</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -347,7 +347,7 @@ incluem temas da época atual e das duas anteriores.
    1. A página foi visitada pelo usuário durante a época.
    1. A página inclui um código que chama o método `document.browsingTopics()` 
    1. A API está ativada e não foi bloqueada pelo usuário ou por um
-      [cabeçalho de resposta](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+      [cabeçalho de resposta](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
       (link em inglês).
 
 1. O navegador no dispositivo do usuário usa o modelo de classificador fornecido pela API Topics
@@ -438,7 +438,7 @@ Ou seja, os sites não se qualificam para cálculos de frequência de temas sem 
 integrado para chamar a API.  
 A explicação da API Topics também propõe que os sites possam bloquear o cálculo de temas para os
 visitantes com este cabeçalho
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy) (link
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) (link
 em inglês):  
 
 ```text  

@@ -68,7 +68,7 @@ Topics API
 {% Aside %}
 
 Topics API
-提案处于[初始讨论阶段](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)，旨在收集生态系统中的反馈意见并据此采取行动。  
+提案处于[初始讨论阶段](/docs/privacy-sandbox/cds21-update/#discussion)，旨在收集生态系统中的反馈意见并据此采取行动。
 该 API 的设计并非最终版本，以下详情会随着讨论的推进而发生变化。  
 
 {% endAside %}
@@ -102,7 +102,8 @@ Topics 解释器提议，`document.browsingTopics()` 所返回数组中的每个
 Topics API 的设计目标是实现针对用户兴趣投放广告的功能，同时不会将信息分享给目前使用第三方 Cookie 涉及的实体之外的更多实体。Topics API
 提议，只能针对在有限时间内已观察到主题的 API 调用方返回这些主题。  
 {: #caller}  
-{% Aside '关键术语' %}  
+
+{% Aside %}
 Topics API **调用方**是_调用_ `document.browsingTopics()` JavaScript 方法的实体，并且会使用由该方法返回的主题来帮助选择相关广告。
 通常，可以从来自第三方（例如广告技术平台）的网站中包含的代码调用
 `document.browsingTopics()`。浏览器会根据当前文档所在的网站确定调用方。因此，如果您是相应网页上的第三方，请务必从您的网站拥有的 iframe 中调用该 API。  
@@ -130,7 +131,9 @@ Topics API 所取代的技术（包括第三方 Cookie）涉及的实体之外�
 ### Topics JavaScript API 可能是什么样的？
 
 下面的代码提供了一个基本的 API 可能使用情况示例（为简单起见，我们不提供任何错误处理方法）。  
-{% Aside '警告' %}  
+
+{% Aside %}
+
 提供此代码段只是为了显示 Topics JavaScript API 的可能样式。API 设计随时可能更改，此代码目前无法在任何浏览器中使用！  
 
 {% endAside %}
@@ -164,9 +167,9 @@ JavaScript 代码中调用 `document.browsingTopics()` 的实体）。
 <table>
 <thead>
 <tr>
-<th><strong>网站</strong></th>
-<th><strong>主题</strong></th>
-<th><strong>网站上的 API 调用方</strong></th>
+<th style="text-align: left;"><strong>网站</strong></th>
+<th style="text-align: left;"><strong>主题</strong></th>
+<th style="text-align: left;"><strong>网站上的 API 调用方</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -206,9 +209,9 @@ JavaScript 代码中调用 `document.browsingTopics()` 的实体）。
 <table>
 <thead>
 <tr>
-<th><strong>网站</strong></th>
-<th><strong>主题</strong></th>
-<th><strong>网站上的 API 调用方</strong></th>
+<th style="text-align: left;"><strong>网站</strong></th>
+<th style="text-align: left;"><strong>主题</strong></th>
+<th style="text-align: left;"><strong>网站上的 API 调用方</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -225,9 +228,9 @@ JavaScript 代码中调用 `document.browsingTopics()` 的实体）。
 <table>
 <thead>
 <tr>
-<th><strong>网站</strong></th>
-<th><strong>主题</strong></th>
-<th><strong>网站上的 API 调用方</strong></th>
+<th style="text-align: left;"><strong>网站</strong></th>
+<th style="text-align: left;"><strong>主题</strong></th>
+<th style="text-align: left;"><strong>网站上的 API 调用方</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -259,7 +262,7 @@ Topics API
    1. 用户在周期内访问了该网页。
    1. 该网页包含调用 `document.browsingTopics()` 的代码
    1. 该 API
-      已启用（例如，未被用户禁止或未通过[响应标头](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)禁止）。
+      已启用（例如，未被用户禁止或未通过[响应标头](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)禁止）。
 
 1. 用户设备上的浏览器使用 Topics API 提供的分类器模型将每个网页的主机名映射到主题列表。
 1. 浏览器累积主题列表。
@@ -320,7 +323,7 @@ Topics 提案解释器这样描述："第三方 Cookie 可用于跟踪与用户�
 调用方[仅会接收它们观察到的主题](#observed-topics)。也就是说，如果网站或内嵌服务没有执行调用该
 API 的操作，该网站就不符合主题频率计算条件。  
 Topics 解释器还提议，网站可以通过以下
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
 标头阻止计算与其访问者相关的主题：  
 
 ```text  

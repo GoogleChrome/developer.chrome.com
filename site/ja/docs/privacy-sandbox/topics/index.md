@@ -76,7 +76,7 @@ Topics API のライフサイクル:
 {% Aside %}
 
 Topics API
-の提案は、エコシステムからフィードバックを集めて反映する、[最初の検討段階](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)にあります。  
+の提案は、エコシステムからフィードバックを集めて反映する、[最初の検討段階](/docs/privacy-sandbox/cds21-update/#discussion)にあります。
 API の設計は最終的なものではなく、以下の仕様は検討の過程で変わる可能性があります。  
 
 {% endAside %}
@@ -182,9 +182,9 @@ JavaScript コードで `document.browsingTopics()` を呼び出すエンティ�
 <table>
 <thead>
 <tr>
-<th><strong>サイト</strong></th>
-<th><strong>トピック</strong></th>
-<th><strong>サイトの API 呼び出し元</strong></th>
+<th style="text-align: left;"><strong>サイト</strong></th>
+<th style="text-align: left;"><strong>トピック</strong></th>
+<th style="text-align: left;"><strong>サイトの API 呼び出し元</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -225,9 +225,9 @@ JavaScript コードで `document.browsingTopics()` を呼び出すエンティ�
 <table>
 <thead>
 <tr>
-<th><strong>サイト</strong></th>
-<th><strong>トピック</strong></th>
-<th><strong>サイトの API 呼び出し元</strong></th>
+<th style="text-align: left;"><strong>サイト</strong></th>
+<th style="text-align: left;"><strong>トピック</strong></th>
+<th style="text-align: left;"><strong>サイトの API 呼び出し元</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -244,9 +244,9 @@ JavaScript コードで `document.browsingTopics()` を呼び出すエンティ�
 <table>
 <thead>
 <tr>
-<th><strong>サイト</strong></th>
-<th><strong>トピック</strong></th>
-<th><strong>サイトの API 呼び出し元</strong></th>
+<th style="text-align: left;"><strong>サイト</strong></th>
+<th style="text-align: left;"><strong>トピック</strong></th>
+<th style="text-align: left;"><strong>サイトの API 呼び出し元</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -280,7 +280,7 @@ API はエポックごとにトピックを 1 つ返します（最大 3 つ）�
    1. 対象エポック中にユーザーによってアクセスされたページ。
    1. `document.browsingTopics()` を呼び出すコードが含まれているページ。
    1. API が有効になっている（たとえばユーザーまたは[レスポンス
-      ヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)によってブロックされていない）。
+      ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)によってブロックされていない）。
 
 1. ユーザーのデバイスで、ブラウザは Topics API が提供する分類モデルを使用して、各ページのホスト名をトピックのリストにマッピングします。
 1. ブラウザがトピックのリストを蓄積します。
@@ -347,7 +347,7 @@ Topics API を呼び出すコードを実装しているサイトのみが、ト
 の呼び出し元は、[そのサイトで取得したトピックのみ受け取ります](#observed-topics)。つまり、サイトや埋め込まれたサービスで
 API を呼び出す操作が行われないと、そのサイトはトピックの頻度の推定対象とはなりません。  
 また、Topics API の解説では、サイトに対して、次の
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
 ヘッダーを使用して、ユーザーのトピックの推定を許可またはブロックできるようにすることを提案しています。  
 
 ```text  
