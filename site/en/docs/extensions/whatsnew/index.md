@@ -16,6 +16,22 @@ updated: 2022-01-20
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Chrome 100: Native messaging port keeps service worker alive {: #m100-native-msg-lifetime }
+
+February 9, 2022
+
+Connecting to a native messaging host using chrome.runtime.connectNative() in an extension's service
+worker will keep the service worker alive as long as the port is open. 
+
+### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
+
+February 8, 2022
+
+The
+[`omnibox.setDefaultSuggestion()`](/docs/extensions/reference/omnibox/#method-setDefaultSuggestion)
+method now returns a promise or accepts a callback to allow developers to determine when the
+suggestion has been properly set.
+
 ### Chrome 100: `i18n.getMessage()` support in extension service workers {: #m100-i18n-getmessage }
 
 The [`chrome.i18n.getMessage()`](/docs/extensions/reference/i18n/#method-getMessage) API is now
