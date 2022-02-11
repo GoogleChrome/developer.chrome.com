@@ -328,8 +328,8 @@ management](https://support.google.com/chrome/a/answer/9037717).
 
 If you are hosting a website within a private network that expects requests from
 public networks, the Chrome team is interested in your feedback and use cases.
-Let us know by filing an issue at [crbug.com](crbug.com) and set the component
-to `Blink>SecurityFeature>CORS>PrivateNetworkAccess`.
+Let us know by filing an issue with Chromium at [crbug.com](crbug.com) and set
+the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess`.
 
 ## What's next
 

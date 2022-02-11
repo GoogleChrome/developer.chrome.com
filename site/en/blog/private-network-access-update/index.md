@@ -14,7 +14,7 @@ tags:
 
 **Updates**
 
-- **February 10, 2022**: An update article is published at [Private Network
+- **February 10, 2022**: An updated article is published at [Private Network
   Access: introducing preflights](/blog/private-network-access-preflight)
 
 - **August 25, 2021**: Updated timeline announcement and introduction of a deprecation trial.
