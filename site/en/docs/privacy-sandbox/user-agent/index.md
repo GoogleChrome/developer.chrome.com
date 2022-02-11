@@ -6,7 +6,7 @@ subhead: >
 description: >
   The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
 date: 2021-11-09
-updated: 2022-02-03
+updated: 2022-02-11
 authors:
   - alexandrawhite
 ---
@@ -133,7 +133,7 @@ Vary: Device-Memory, Viewport-Width
 Critical-CH: Device-Memory
 ```
 
-If, after processing the Accept-CH header, the client would send a critical
+If, after processing the `Accept-CH header`, the client would send a critical
 hint, the client retries the request.
 
 In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH`
