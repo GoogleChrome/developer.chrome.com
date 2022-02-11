@@ -380,7 +380,7 @@ API の解説では、[プライバシー目標の詳細](https://github.com/jka
    [提案に関する解説](https://github.com/jkarlin/topics)を読み、[提案に関する問題のリポジトリ](https://github.com/jkarlin/topics/issues)で質問を投稿し、意見を交換してください。
 -  **W3C**:
    [「ウェブ広告ビジネスの改善」グループ](https://www.w3.org/community/web-adv/participants)で業界のユースケースについて意見を交換してください。
--  **Topics API に関するお知らせ: **メーリング
+-  **Topics API に関するお知らせ**: メーリング
    リスト（[groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)）を購読またはご覧ください。
 -  **プライバシー サンドボックスに関するデベロッパーのサポート**:   
    [「プライバシー サンドボックス デベロッパー サポート」リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問を投稿し、意見を交換してください。

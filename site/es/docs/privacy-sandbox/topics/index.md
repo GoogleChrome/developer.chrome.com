@@ -484,8 +484,7 @@ y la forma en que la API busca cumplirlos.
    propuestas](https://github.com/jkarlin/topics/issues).
 -  **W3C**: Analiza los casos de uso del sector en el
    [grupo de ubicaciones de la empresa para mejorar la publicidad web](https://www.w3.org/community/web-adv/participants).
--  **Anuncios de la API de Topics: **únete a la lista de distribución o consúltala en**
-   **[groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
+-  **Anuncios de la API de Topics**: únete a la lista de distribución o consúltala en [groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
 -  **Asistencia para desarrolladores de Privacy Sandbox**: Haz preguntas y únete al debate del
    [repositorio de asistencia para desarrolladores de Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 

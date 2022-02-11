@@ -354,8 +354,7 @@ Topics API 解释器[提议](https://github.com/jkarlin/topics#:~:text=empty)，
 -  **GitHub**：阅读[提案解释器](https://github.com/jkarlin/topics)中的内容，并在[提案代码库上的"问题"标签页](https://github.com/jkarlin/topics/issues)中提出问题和关注讨论。
 -  **W3C**：在 [Improving Web Advertising Business
    Group](https://www.w3.org/community/web-adv/participants) 中讨论行业用例。
--  **Topics API 公告：**在**
-   **[groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
+-  **Topics API 公告：**在 [groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
    上加入或查看邮寄名单
 -  **Privacy Sandbox 开发者支持**：在   
    [Privacy Sandbox 开发者支持代码库](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)中提问和参与讨论。

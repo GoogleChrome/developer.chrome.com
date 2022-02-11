@@ -468,8 +468,7 @@ Permissions-Policy: browsing-topics=()
    задавайте вопросы и участвуйте в обсуждениях [проблем](https://github.com/jkarlin/topics/issues).
 -  **W3C.** Обсуждайте примеры использования технологии с участниками [Improving Web Advertising
    Business Group](https://www.w3.org/community/web-adv/participants).
--  **Новости о Topics API.** Подпишитесь на рассылку:**
-   **[groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce).
+-  **Новости о Topics API.** Подпишитесь на рассылку: [groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce).
 -  **Privacy Sandbox: поддержка для разработчиков.** Задавайте вопросы и присоединяйтесь к
 обсуждениям на  
    [странице поддержки](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

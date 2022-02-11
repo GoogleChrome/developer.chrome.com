@@ -476,8 +476,7 @@ A explicação fornece
 -  **W3C**: fale sobre os casos de uso do setor na página de
    [Melhorias no grupo de empresas de publicidade na Web](https://www.w3.org/community/web-adv/participants)
    (link em inglês).
--  **Comunicados sobre a API Topics**: participe ou veja a lista de e-mails em**
-   **[groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
+-  **Comunicados sobre a API Topics**: participe ou veja a lista de e-mails em [groups.google.com/a/chromium.org/g/topics-api-annnounce](https://groups.google.com/a/chromium.org/g/topics-api-annnounce)
 -  **Suporte para desenvolvedores do Sandbox de privacidade**: faça perguntas e participe das
 discussões no   
    [Repositório de suporte ao desenvolvedor do Sandbox de privacidade](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
