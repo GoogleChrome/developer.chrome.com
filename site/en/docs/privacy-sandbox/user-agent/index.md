@@ -229,4 +229,3 @@ on third-parties.
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
-{% footnotes %}
