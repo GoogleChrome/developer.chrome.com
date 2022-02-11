@@ -122,7 +122,7 @@ values requested by `Accept-CH`.
 For example, the initial request may include a request for `Device-Memory` and
 `Viewport-Width`, where `Device-Memory` is considered critical.
 
-```http
+```powershell
 GET / HTTP/1.1
 Host: example.com
 
