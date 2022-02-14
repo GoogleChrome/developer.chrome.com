@@ -71,7 +71,9 @@ Hay muchas directorios por personalizar conforme el caché del navegador almacen
 
 Para conocer los recursos que obtiene el navegador a partir de su caché, abra la pestaña **Network** en Chrome DevTools:
 
-{% Instruction 'devtools-network', 'ol' %}
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
+1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
+2. Click the **Network** tab.
 
 El **tamaño** de la columna en Chrome DevTools puede ayudarle a verificar que un recurso se almacenó en el caché:
 

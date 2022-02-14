@@ -51,20 +51,20 @@ Content-Encoding: br
 
 Para comprobar si un servidor comprimió una respuesta:
 
-{% Instruction 'devtools-network', 'ol' %}
-
-1. Haga clic en la solicitud que generó la respuesta que le interesa.
-2. Haga clic en la pestaña **Encabezados.**
-3. Verifique el encabezado `content-encoding` en la sección **Encabezados de respuesta.**
+1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
+2. Click the **Network** tab.
+3. Haga clic en la solicitud que generó la respuesta que le interesa.
+4. Haga clic en la pestaña **Encabezados.**
+5. Verifique el encabezado `content-encoding` en la sección **Encabezados de respuesta.**
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jBKe0MYnlcQK9OLzAKTa.svg", alt="Encabezado de respuesta de codificación de contenido",  width="800", height="571" %} <figcaption> El encabezado de respuesta <code>content-encoding</code></figcaption></figure>
 
 Para comparar los tamaños comprimidos y descomprimidos de una respuesta:
 
-{% Instruction 'devtools-network', 'ol' %}
-
-1. Habilite filas de solicitud grandes. Consulte [Usar filas de solicitud grandes](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows).
-2. Busque en la **columna Tamaño** la respuesta que le interesa. El valor superior es el tamaño comprimido. El valor inferior es el tamaño descomprimido.
+1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
+2. Click the **Network** tab.
+3. Habilite filas de solicitud grandes. Consulte [Usar filas de solicitud grandes](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows).
+4. Busque en la **columna Tamaño** la respuesta que le interesa. El valor superior es el tamaño comprimido. El valor inferior es el tamaño descomprimido.
 
 Consulte también [Minificar y comprimir cargas útiles de red](https://web.dev/reduce-network-payloads-using-text-compression/).
 
