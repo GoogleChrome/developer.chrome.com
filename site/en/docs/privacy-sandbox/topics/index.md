@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-01-25
+updated: 2022-02-14
 authors:
   - samdutton
 ---
@@ -29,7 +29,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ## Why do we need this API?
 
-The Topics API is a [Privacy Sandbox](http://localhost:8080/docs/privacy-sandbox/overview/) proposal
+The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
 for a mechanism to enable interest-based advertising, without having to resort to tracking the sites
 a user visits.
 
