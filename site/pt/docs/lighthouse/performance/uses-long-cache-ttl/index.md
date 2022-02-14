@@ -71,6 +71,7 @@ Existem muitas diretivas para personalizar como o navegador armazena em cache di
 
 Para ver quais recursos o navegador está obtendo de seu cache, abra a **guia Rede** no Chrome DevTools:
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 
