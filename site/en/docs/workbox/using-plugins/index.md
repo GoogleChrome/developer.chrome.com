@@ -6,6 +6,8 @@ description: >
   While Workbox offers a lot of off-the-shelf utility, there may be times when you need to extend it to satisfy your application requirements. That's where Workbox's plugin architecture can come in handy.
 ---
 
+{% YouTube id='jR9-aDWZeSE' %}
+
 When using Workbox, you might want to manipulate a request and a response as it's being fetched or cached. Workbox plugins allow you to add additional behaviors to your service worker with minimal extra boilerplate. They can be packaged up and reused in your own projects, or released publicly for others to use as well.
 
 Workbox provides a number of plugins out of the box available for us, and&mdash;if you're the crafty sort&mdash;you can write custom plugins tailored to your application's requirements.

@@ -6,6 +6,8 @@ description: >
   What Navigation Preload is, how it can make navigations faster, and how to use it in Workbox.
 ---
 
+{% YouTube id='25aCD5XL1Jk' %}
+
 When a service worker handles `fetch` events, the browser waits for the service worker to provide a response. While the latency of the network request is a big part of the wait, the browser may also have to wait for the service worker to boot up and fire `fetch` event callbacks.
 
 Bootup time varies based on the device and its capabilities, but the time involved can be substantial, sometimes up to a half a second when a CPU is slow, or is working in a throttled state due to ambient conditions. The performance gain of avoiding the network is likely to outweigh this startup time when your navigation responses are served from a `Cache` instance. For navigation requests that go to the network, introducing a service worker can create a perceptible delay.

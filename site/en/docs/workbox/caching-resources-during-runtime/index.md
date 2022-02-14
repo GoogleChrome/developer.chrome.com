@@ -6,6 +6,8 @@ description: >
   Learn how to handle caching resources during runtime, including cross-origin resources.
 ---
 
+{% YouTube id='BO9fplbCTuQ' %}
+
 Some assets in your web application may be infrequently used, very large, or vary based on the user's device (such as responsive images) or language. These are instances where [precaching may be an anti-pattern](/docs/workbox/precaching-dos-and-donts/), and you should rely on runtime caching instead.
 
 In Workbox, you can handle runtime caching for assets using the [`workbox-routing` module](/docs/workbox/modules/workbox-routing/) to match routes, and handle caching strategies for them with the [`workbox-strategies` module](/docs/workbox/modules/workbox-strategies/).
