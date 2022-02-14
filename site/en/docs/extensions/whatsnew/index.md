@@ -48,7 +48,7 @@ related to a matching frame, including frames with `about:`, `data:`, `blob:`, a
 URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
-### Chrome 99: Extension service worker support for file: schemes in Canary {: #canary-file-access }
+### Chrome 99: extension service worker support for file: schemes in Canary {: #canary-file-access }
 
 December 30, 2021
 
@@ -81,7 +81,7 @@ October 27, 2021
 The [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/) page has been
 updated to provide developers with more detailed guidance for common reasons for rejection.
 
-### Chrome 96: Expanded promise support to 27 more APIs {: #m96-promise-support }
+### Chrome 96: expanded promise support to 27 more APIs {: #m96-promise-support }
 
 October 1, 2021
 
@@ -137,7 +137,7 @@ Chrome OS APIs
 
 {% endDetails %}
 
-### Chrome 96: Dynamic content scripts {: #m96-dynamic-content-scripts }
+### Chrome 96: dynamic content scripts {: #m96-dynamic-content-scripts }
 
 September 24, 2021
 
@@ -168,7 +168,7 @@ extension has host permissions for. This also enables existing Manifest V2 exten
 [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API without
 requiring the user to approve new permissions.
 
-### Chrome 95: Inject scripts directly into pages {: #m95-page-script-injection }
+### Chrome 95: inject scripts directly into pages {: #m95-page-script-injection }
 
 September 2, 2021
 
@@ -178,7 +178,7 @@ inject scripts directly into a page's main world. Previously, extensions could o
 into the extension's isolated world. For more information on isolated worlds, see the documentation
 on [content scripts](/docs/extensions/mv3/content_scripts/#isolated_world).
 
-### Chrome 95: Promise support for Storage API {: #m95-storage-promise-support }
+### Chrome 95: promise support for Storage API {: #m95-storage-promise-support }
 
 August 30, 2021
 
@@ -192,7 +192,7 @@ August 4, 2021
 The [policy update blog post](/blog/policy-update-2sv/) published on June 29, 2021 has been updated
 to correct the two step verification deployment timeline.
 
-### Chrome 94: Declarative net request static ruleset changes
+### Chrome 94: declarative net request static ruleset changes
 
 July 28, 2021
 
@@ -203,7 +203,7 @@ and enabling up to 10 rulesets
 ([MAX_NUMBER_OF_ENABLED_STATIC_RULESETS](/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS))
 at a time.
 
-### Chrome 93: Cross origin isolation support
+### Chrome 93: cross origin isolation support
 
 July 12, 2021
 
@@ -291,7 +291,7 @@ now include the [frameId](/docs/extensions/reference/webNavigation/#a-note-about
 The `frameId` property indicates the frame that the result is from, letting extensions easily
 associate results with the individual frames when injecting in multiple frames.
 
-### Chrome 89: New API for managing tab groups {: #new-api-for-tab-groups-mv3-only }
+### Chrome 89: new API for managing tab groups {: #new-api-for-tab-groups-mv3-only }
 
 January 14, 2021
 
@@ -299,7 +299,7 @@ The new [`chrome.tabGroups`](/docs/extensions/reference/tabGroups/) API and new 
 [`chrome.tabs`](/docs/extensions/reference/tabs/) let extensions read and manipulate tab groups.
 Requires Manifest V3.
 
-### Chrome 89: Customizable permissions for web accessible resources {: #customizable-permissions-for-mv3-web-accessible-resources }
+### Chrome 89: customizable permissions for web accessible resources {: #customizable-permissions-for-mv3-web-accessible-resources }
 
 December 23, 2020
 
@@ -307,7 +307,7 @@ December 23, 2020
 Manifest V3 have changed to let extensions restrict resource access based on the requester's origin
 or extension ID.
 
-### Blog post: extension Manifest Converter {: #extension-manifest-converter}
+### Blog post: Extension Manifest Converter {: #extension-manifest-converter}
 
 April 28, 2021
 
