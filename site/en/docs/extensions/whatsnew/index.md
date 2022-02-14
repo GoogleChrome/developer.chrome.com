@@ -39,7 +39,7 @@ January 27, 2022
 The [`chrome.i18n.getMessage()`](/docs/extensions/reference/i18n/#method-getMessage) API is now
 supported in extension service worker contexts.
 
-### Chrome 99: `match_origin_as_fallback` in Canary {: #canary-match-origin-as-fallback }
+### Chrome 99: match_origin_as_fallback in Canary {: #canary-match-origin-as-fallback }
 
 January 5, 2022
 
@@ -56,7 +56,7 @@ Service worker-based Manifest V2 and Manifest V3 extensions can now use the Fetc
 `file:`-scheme URLs. Access to `file:`-scheme URLs still requires that the user enable 'Allow access
 to File URLs' for the extension in the `chrome://extensions` page.
 
-### Chrome 99: Promise support for messaging APIs in Canary {: #canary-message-promise-support }
+### Chrome 99: promise support for messaging APIs in Canary {: #canary-message-promise-support }
 
 December 28, 2021
 
@@ -74,7 +74,7 @@ Added [a new reference page](/docs/webstore/review-process) that provides an ove
 Web Store review process and explains how [developer program
 policy](/docs/webstore/program_policies/) enforcement is handled.
 
-### Docs update: Review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
+### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 
 October 27, 2021
 
@@ -154,7 +154,7 @@ manifest.json or programmatically injected at runtime with
 
 September 23, 2021
 
-The Manifest V2->V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and
+The Manifest V2 to V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and
 a more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
 
 ### Chrome 96: `declarativeNetRequestWithHostAccess` permission
@@ -185,7 +185,7 @@ August 30, 2021
 Methods on the Manifest V3 version of the [`chrome.storage`](/docs/extensions/reference/storage/)
 API now return promises.
 
-### Policy update: Two step verification enforcement {: #two-step-verification-enforcement }
+### Policy update: two step verification enforcement {: #two-step-verification-enforcement }
 
 August 4, 2021
 
@@ -213,7 +213,7 @@ isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits w
 resources can load an extension's pages and enables the use of low level web platform features like
 [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 
-### Policy update: Developer program policies updated {: #developer-program-policies-updated }
+### Policy update: developer program policies updated {: #developer-program-policies-updated }
 
 June 29, 2021
 
@@ -222,7 +222,7 @@ with clarifications to the deceptive installation tactics, spam, and repetitive 
 This update also includes a new two step verification requirement to publish on the Chrome Web
 Store. [Read the blog post](/blog/policy-update-2sv/) for more information.
 
-### Blog post: Extension actions in Manifest V3 {: #new-blog-post-extension-actions-in-manifest-v3 }
+### Blog post: extension actions in Manifest V3 {: #new-blog-post-extension-actions-in-manifest-v3 }
 
 June 23, 2021
 
@@ -231,7 +231,7 @@ V3 replaced both with a generic [`chrome.actions`](/docs/extensions/reference/ac
 post explores the history of these APIs and what has changed in Manifest V3. [Read the
 post](/blog/mv3-actions).
 
-### Blog post: Introducing chrome.scripting {: #new-blog-post-introducing-chromescripting }
+### Blog post: introducing chrome.scripting {: #new-blog-post-introducing-chromescripting }
 
 June 8, 2021
 
@@ -239,7 +239,7 @@ The [`chrome.scripting`](/docs/extensions/reference/scripting/) API is a new Man
 on, well, scripting. In this post we dig into the motivations for this change and take a closer look
 at it's new capabilities. [Read the post](/blog/crx-scripting-api).
 
-### Chrome 92: Module service worker support {: #es-modules-for-service-workers }
+### Chrome 92: module service worker support {: #es-modules-for-service-workers }
 
 April 13, 2021
 
@@ -273,7 +273,7 @@ method allows extensions to remove CSS that was previously inserted via
 [`chrome.scripting.insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS). It
 replaces [`chrome.tabs.removeCSS()`](/docs/extensions/reference/tabs/#method-removeCSS).
 
-### Chrome 90: Returning promises from `scripting.executeScript()` {: #m96-execute-script }
+### Chrome 90: returning promises from scripting.executeScript() {: #m96-execute-script }
 
 February 24, 2021
 
@@ -307,7 +307,7 @@ December 23, 2020
 Manifest V3 have changed to let extensions restrict resource access based on the requester's origin
 or extension ID.
 
-### Blog post: Extension Manifest Converter {: #extension-manifest-converter}
+### Blog post: extension Manifest Converter {: #extension-manifest-converter}
 
 April 28, 2021
 
@@ -323,5 +323,5 @@ January 19, 2021
 Manifest V3 is a major update to the extensions platform; see [Overview of Manifest
 V3](/docs/extensions/mv3/intro/mv3-overview/) for a summary of new and changed features. Extensions
 may continue to use Manifest V2 for now, but this will be phased out in the near future. We strongly
-recommend that you use Manifest V3 for any new extensions, and begin to migrate existing extensions
+recommend that you use Manifest V3 for any new extensions, and begin migrating existing extensions
 to Manifest V3 as soon as possible.
