@@ -1,22 +1,29 @@
 intro:
   en: Performance audits
   es: Auditorías de rendimiento
+  ja: パフォーマンスの監査
 intro_description:
   en: Measure performance and find opportunities to speed up page loads.
   es: Mida el rendimiento y encuentre oportunidades para acelerar la carga de las páginas.
+  ja: パフォーマンスを測定し、ページの読み込みを高速化するために必要な改善項目を見つけ出します。
 overview:
   en: These checks ensure that your page is optimized for users to be able to see and interact with page content.
   es: Estas revisiones garantizan que su página esté optimizada para que los usuarios puedan ver e interactuar con el contenido de la misma.
+  ja: これらを確認することにより、ユーザーがページ内のコンテンツを閲覧したり操作したりすることができるようにページが最適化されているかどうかを確認することができます。
 topics:
   performance_audit_scoring:
     en: Performance audit scoring
     es: Puntuación de la auditoría de rendimiento
+    ja: パフォーマンスの監査スコア
   metrics:
     en: Metrics
     es: Métricas
+    ja: 指標
   opportunities:
     en: Opportunities
     es: Oportunidades
+    ja: 改善項目
   diagnostics:
     en: Diagnostics
     es: Diagnósticos
+    ja: 診断
