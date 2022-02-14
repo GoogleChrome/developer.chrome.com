@@ -6,6 +6,8 @@ description: >
   Sometimes users encounter network failures or go offline. Learn how to adapt to those situations and provide a fallback response.
 ---
 
+{% YouTube id='M7gQg9JojGE' %}
+
 In certain situations, you may want a fallback response cached in case the user is offline. Implementing a fallback is an alternative to caching behaviors that strategies like network-first or stale-while-revalidate provide.
 
 A fallback is a generic, one-size-fits-all response that's a better placeholder than what the browser would provide by default when a request fails. Some examples are:

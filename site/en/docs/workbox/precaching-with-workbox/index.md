@@ -6,6 +6,8 @@ description: >
   Learn how to precache assets in a service worker with Workbox.
 ---
 
+{% YouTube id='sOq92prx00w' %}
+
 Precaching is one of the most common things you'll do in a service worker, and Workbox offers lots of flexibility in how you can accomplish this important task, regardless of which one of [Workbox's build tools](/docs/workbox/the-ways-of-workbox/) you choose. In this guide, you'll learn how to precache assets using both `generateSW` and `injectManifest`, as well as which of these methods might be the best fit for your project.
 
 ## Precaching with `generateSW`

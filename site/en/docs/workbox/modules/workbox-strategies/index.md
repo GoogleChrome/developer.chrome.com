@@ -205,7 +205,7 @@ are two request strategies that can be used:
 [comment]: <> (TODO: update the using-plugins link when that doc is migrated)
 - `handle()`: Perform a request strategy and return a `Promise` that will resolve with a `Response`,
   invoking all [relevant plugin
-  callbacks](https://developers.google.com/web/tools/workbox/guides/using-plugins#lifecycle_callbacks).
+  callbacks](/docs/workbox/using-plugins/#methods-for-custom-plugins).
 - `handleAll()`: Similar to `handle()`, but returns two `Promise` objects. The first is
   equivalent to what `handle()` returns and the second will resolve when promises that were
   added to `event.waitUntil()` within the strategy have completed.
