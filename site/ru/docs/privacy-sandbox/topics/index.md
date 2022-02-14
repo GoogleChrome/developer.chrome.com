@@ -27,7 +27,7 @@ authors:
 
 ## Зачем нужен этот API
 
-Topics API – это технология [Privacy Sandbox](http://localhost:8080/docs/privacy-sandbox/overview/),
+Topics API – это технология [Privacy Sandbox](/docs/privacy-sandbox/overview/),
 позволяющая показывать пользователям рекламу на основе интересов, не отслеживая посещаемые сайты.  
 
 {% Aside %}

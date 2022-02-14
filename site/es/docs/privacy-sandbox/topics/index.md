@@ -31,7 +31,7 @@ Topics.
 ## ¿Por qué necesitamos esta API?
 
 La API de Topics es un mecanismo propuesto por
-[Privacy Sandbox](http://localhost:8080/docs/privacy-sandbox/overview/) a fin de permitir la
+[Privacy Sandbox](/docs/privacy-sandbox/overview/) a fin de permitir la
 publicidad basada en intereses, sin necesidad de realizar un seguimiento de los sitios que visita un
 usuario.    
 

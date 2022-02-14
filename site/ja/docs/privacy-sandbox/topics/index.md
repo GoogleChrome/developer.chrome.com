@@ -27,7 +27,7 @@ authors:
 ## この API が必要な理由
 
 Topics API は、ユーザーがアクセスしたサイトをトラッキングせずにインタレスト ベースの広告を掲載できるようにする、[プライバシー
-サンドボックス](http://localhost:8080/docs/privacy-sandbox/overview/)に関連した提案です。    
+サンドボックス](/docs/privacy-sandbox/overview/)に関連した提案です。
 
 {% Aside %}
 

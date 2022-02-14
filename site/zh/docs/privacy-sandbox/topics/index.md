@@ -26,7 +26,7 @@ authors:
 
 ## 为什么需要此 API？
 
-Topics API 是一种 [Privacy Sandbox](http://localhost:8080/docs/privacy-sandbox/overview/)
+Topics API 是一种 [Privacy Sandbox](/docs/privacy-sandbox/overview/)
 提案，旨在提供一种机制来实现针对用户兴趣投放广告的功能，而无需跟踪用户访问的网站。    
 
 {% Aside %}

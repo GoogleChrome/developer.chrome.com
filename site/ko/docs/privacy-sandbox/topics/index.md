@@ -27,7 +27,7 @@ authors:
 ## 이 API가 필요한 이유는 무엇인가요?
 
 Topics API는 사용자가 방문한 사이트를 추적하지 않고도 관심 기반의 광고를 노출할 수 있도록 하는 메커니즘을 [개인 정보 보호
-샌드박스](http://localhost:8080/docs/privacy-sandbox/overview/)에서 구현하기 위한 제안입니다.    
+샌드박스](/docs/privacy-sandbox/overview/)에서 구현하기 위한 제안입니다.
 
 {% Aside %}
 

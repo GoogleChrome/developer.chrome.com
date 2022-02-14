@@ -31,7 +31,7 @@ Este documento descreve uma nova proposta de publicidade com base em interesses:
 ## Por que precisamos dessa API?
 
 A API Topics é uma proposta do [Sandbox de
-privacidade](http://localhost:8080/docs/privacy-sandbox/overview/) que tem como objetivo fornecer um
+privacidade](/docs/privacy-sandbox/overview/) que tem como objetivo fornecer um
 mecanismo de publicidade com base em interesses sem precisar monitorar os sites visitados por um
 usuário.    
 
@@ -180,7 +180,7 @@ tema. Por exemplo:
 1. Um dos temas que o navegador inferiu para tricotando.example é "Tecidos e Artes Têxteis".
 1. O `adtech.example` observou o tema "Tecidos e Artes Têxteis" para esse usuário.
 
-O método `document.browsingTopics()`da API fornece apenas temas que já foram observados pelo autor
+O método `document.browsingTopics()` da API fornece apenas temas que já foram observados pelo autor
 da chamada nas três
 [épocas](#epoch)
 mais recentes. Isso impede que as informações sobre o usuário sejam compartilhadas com mais
@@ -410,7 +410,7 @@ a API Topics. .
 
 {% Aside %}
 
-Como a explicação da proposta da API Topicsdescreve (em inglês):  "Os cookies de terceiros podem ser usados para monitorar qualquer coisa sobre um usuário, desde os URLs exatos que ele visitou até o conteúdo das páginas. Isso pode incluir material sensível ilimitado. Por outro lado, a API Topics está restrita a uma taxonomia selecionada de temas. Isso não quer dizer que outras coisas não possam ser correlacionadas estatisticamente com os temas da taxonomia. Isso é possível. No entanto, ao comparar as duas abordagens, a API Topics parece ser uma grande melhoria em relação aos cookies."
+Como a explicação da proposta da API Topics descreve (em inglês):  "Os cookies de terceiros podem ser usados para monitorar qualquer coisa sobre um usuário, desde os URLs exatos que ele visitou até o conteúdo das páginas. Isso pode incluir material sensível ilimitado. Por outro lado, a API Topics está restrita a uma taxonomia selecionada de temas. Isso não quer dizer que outras coisas não possam ser correlacionadas estatisticamente com os temas da taxonomia. Isso é possível. No entanto, ao comparar as duas abordagens, a API Topics parece ser uma grande melhoria em relação aos cookies."
 
 {% endAside %}
 
