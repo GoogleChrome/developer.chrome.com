@@ -4,7 +4,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-02-14
+updated: 2022-02-17
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -20,8 +20,8 @@ and related policy or other changes.
 
 February 9, 2022
 
-Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's service
-worker will keep the service worker alive as long as the port is open. 
+Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
+service worker will keep the service worker alive as long as the port is open. 
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
@@ -48,7 +48,7 @@ related to a matching frame, including frames with `about:`, `data:`, `blob:`, a
 URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
-### Chrome 99: Extension service worker support for `file:` schemes in Canary {: #canary-file-access }
+### Chrome 99: Extension service worker support for file: schemes in Canary {: #canary-file-access }
 
 December 30, 2021
 
@@ -157,7 +157,7 @@ September 23, 2021
 The Manifest V2 to V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and
 a more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
 
-### Chrome 96: `declarativeNetRequestWithHostAccess` permission
+### Chrome 96: declarativeNetRequestWithHostAccess permission
 
 September 20, 2021
 
@@ -256,7 +256,7 @@ manifest:
 This loads the worker script as an ES module, which lets you use the `import` keyword in the
 worker's script to import other modules.
 
-### Chrome 91: `chrome.action.getUserSettings()` {: #chromeactiongetusersettings-available }
+### Chrome 91: chrome.action.getUserSettings() {: #chromeactiongetusersettings-available }
 
 April 2, 2021
 
@@ -264,7 +264,7 @@ The new
 [`chrome.action.getUserSettings()`](/docs/extensions/reference/action/#method-getUserSettings)
 method allows extensions to determine if the user has pinned the extension to the main toolbar.
 
-### Chrome 90: `chrome.scripting.removeCSS()` {: #chromescriptingremovecss-available }
+### Chrome 90: chrome.scripting.removeCSS() {: #chromescriptingremovecss-available }
 
 February 10, 2021
 
@@ -281,7 +281,7 @@ February 24, 2021
 now supports returning promises. When a script evaluates to a promise, Chrome will wait for the
 promise to settle and return its resulting value.
 
-### Chrome 90: `chrome.scripting.executeScript()` results include frameId {: # chromescriptingexecutescript-results-include-frameid }
+### Chrome 90: chrome.scripting.executeScript() results include frameId {: # chromescriptingexecutescript-results-include-frameid }
 
 January 27, 2021
 
