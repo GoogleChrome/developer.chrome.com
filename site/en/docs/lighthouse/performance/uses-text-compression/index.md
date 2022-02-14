@@ -80,6 +80,7 @@ To check if a server compressed a response:
 Press `Control+Shift+J` (or `Command+Option+J` on Mac) to open DevTools.
 Click the Network tab.
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 3. Click the request that caused the response you're interested in.
@@ -95,6 +96,7 @@ Click the Network tab.
 
 To compare the compressed and de-compressed sizes of a response:
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 3. Enable large request rows.

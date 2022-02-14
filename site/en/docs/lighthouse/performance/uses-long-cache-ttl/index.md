@@ -101,6 +101,7 @@ and [Configuring HTTP caching behavior codelab](https://web.dev/codelab-http-cac
 To see which resources the browser is getting from its cache,
 open the **Network** tab in Chrome DevTools:
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 

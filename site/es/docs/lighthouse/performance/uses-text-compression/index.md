@@ -51,6 +51,7 @@ Content-Encoding: br
 
 Para comprobar si un servidor comprimió una respuesta:
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 3. Haga clic en la solicitud que generó la respuesta que le interesa.
@@ -61,6 +62,7 @@ Para comprobar si un servidor comprimió una respuesta:
 
 Para comparar los tamaños comprimidos y descomprimidos de una respuesta:
 
+[comment]: <> (The following list was a shortcode from web.dev, but it was not translated from English for any language.)
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 3. Habilite filas de solicitud grandes. Consulte [Usar filas de solicitud grandes](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows).
