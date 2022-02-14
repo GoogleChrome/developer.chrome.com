@@ -1,15 +1,22 @@
 intro:
   en: Performance audits
+  es: Auditorías de rendimiento
 intro_description:
   en: Measure performance and find opportunities to speed up page loads.
+  es: Mida el rendimiento y encuentre oportunidades para acelerar la carga de las páginas.
 overview:
   en: These checks ensure that your page is optimized for users to be able to see and interact with page content.
+  es: Estas revisiones garantizan que su página esté optimizada para que los usuarios puedan ver e interactuar con el contenido de la misma.
 topics:
   performance_audit_scoring:
     en: Performance audit scoring
+    es: Puntuación de la auditoría de rendimiento
   metrics:
     en: Metrics
+    es: Métricas
   opportunities:
     en: Opportunities
+    es: Oportunidades
   diagnostics:
     en: Diagnostics
+    es: Diagnósticos
