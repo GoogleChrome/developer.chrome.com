@@ -297,7 +297,7 @@ Topics API 提议了多种机制，以帮助确保仅使用 Topics API 难以跨
 ### 敏感主题
 
 Topics [分类](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md)将是公开的，并会经过人工挑选，以避免敏感类别。  
-此外，网站和用户都可以[选择停用 ](#opt-out)Topics
+此外，网站和用户都可以[选择停用](#opt-out) Topics
 API。
 
 {% Aside %}
