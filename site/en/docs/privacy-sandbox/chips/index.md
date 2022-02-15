@@ -12,7 +12,7 @@ authors:
 
 ## What is CHIPS
 
-Cookies Having Independent Partitioned State (CHIPS) is a Privacy Sandbox proposal that will allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
+Cookies Having Independent Partitioned State (CHIPS) is a Privacy Sandbox proposal that will allow developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
 
 The aim is to allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set. A partitioned third-party cookie is tied to the top-level site where it was initially set and cannot be accessed from elsewhere.
 
