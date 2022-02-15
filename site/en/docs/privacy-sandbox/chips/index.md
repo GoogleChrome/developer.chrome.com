@@ -14,7 +14,7 @@ authors:
 
 Cookies Having Independent Partitioned State (CHIPS) is a Privacy Sandbox proposal that will allow developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
 
-A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed by other sites. The aim is to still allow cookies to be set by a third-party service, but those cookies can only be read within the context of the top-level site. 
+A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set. 
 
 ### Why do we need it
 
@@ -22,7 +22,7 @@ Currently, third-party cookies can enable services to track users and join their
 
 {% Img
    src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jLOlPtLY9Zqte4IOoU6g.png",
-   alt="When unpartitioned, a cookie attached to embedded media is shared with all sites that embed the same media.",
+   alt="Without cookie partitioning, a third-party service can set a cookie when embedded in one top-level site and access that same cookie when the service is embedded in other top-level sites.",
    width="800", height="450"
 %}
 
@@ -36,7 +36,7 @@ While cross-site tracking is an issue, there are valid cross-site cookie needs o
 
 For example, the site `retail.example` may want to work with a third-party service `support.chat.example` to embed a support chat box on its site. Many embeddable chat services today rely on cookies to save interaction history. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jsxgCpkMRXwXughPjg7j.png", alt="ALT_TEXT_HERE", width="800", height="620" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jsxgCpkMRXwXughPjg7j.png", alt="Top-level site retail.example embedding a third-party service support.chat.example.", width="400", height="310" %}
 
 Without the ability to set a cross-site cookie, `support.chat.example` could instead rely on `retail.example` passing along their first-party session identifier (or some derived value of it). In that case, every website that `support.chat.example` is embedded on would require additional setup to pass along the state.  
 
@@ -60,20 +60,19 @@ Under this proposal, when a user visits site A and embedded content from site C 
 
 When the user visits a new site, for example site B, an embedded C frame would not receive the cookie that was set when C was embedded in site A. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/PODInBIXZrgGeUoFhipj.png", alt="ALT_TEXT_HERE", width="800", height="443" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/PODInBIXZrgGeUoFhipj.png", alt="With cookie partitioning, a third-party service that sets a cookie when embedded in one top-level site cannot access that same cookie when the service is embedded in other top-level sites.", width="800", height="443" %}
 
 If a user visits site C as a top level website, the partitioned cookie that C set when it was embedded in A will not be sent in that request either.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/FaQYaZyTsAxCm8GvvVc8.png", alt="ALT_TEXT_HERE", width="800", height="608" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/FaQYaZyTsAxCm8GvvVc8.png", alt="With cookie partitioning, a third-party service that sets a cookie when embedded in a site cannot access that same cookie even when the users visits the service as top-level site.", width="400", height="304" %}
 
 ### Why it's important to opt into cookie partitioning
 
 As browsers are phasing out unpartitioned third-party cookies, a couple of other approaches to partitioning have been attempted.
 
-Firefox announced that they are [partitioning all third-party cookies by default](https://hacks.mozilla.org/2021/02/introducing-state-partitioning/) in their ETP Strict mode, so all cross-site cookies are partitioned by the top-level site.   
-However, partitioning cookies without a third-party opt-in can lead to unexpected bugs, since some third-party services have built servers which expect an unpartitioned third-party cookie.
+Firefox announced that they are [partitioning all third-party cookies by default](https://hacks.mozilla.org/2021/02/introducing-state-partitioning/) in their ETP Strict mode and private browsing mode, so all cross-site cookies are partitioned by the top-level site. However, partitioning cookies without a third-party opt-in can lead to unexpected bugs, since some third-party services have built servers which expect an unpartitioned third-party cookie.
 
-[Safari previously tried partitioning cookies based on heuristics](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/), but eventually chose to block them altogether, citing developer confusion as one of the reasons.
+[Safari previously tried partitioning cookies based on heuristics](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/), but eventually chose to block them altogether, citing developer confusion as one of the reasons. Recently, [Safari expressed interest in an opt-in based model](https://github.com/privacycg/storage-access/issues/75).
 
 What sets CHIPS apart from existing implementations of partitioned cookies is the third-party opt-in. Cookies must be set with a new attribute in order to be sent on cross-party requests once (unpartitioned) third-party cookies are obsoleted.
 
