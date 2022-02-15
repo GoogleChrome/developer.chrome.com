@@ -30,7 +30,7 @@ For example, when a user visits site A, embedded content from site C can set a c
 
 To protect user privacy, browser vendors are placing restrictions on this behavior and phasing out support for third-party cookies.
 
-While cross-site tracking is an issue, there are still valid cross-site cookie use cases on the web today which can be achieved in a privacy-preserving way with cookie partitioning.
+While cross-site tracking is an issue, there are valid cross-site cookie needs on the web today which can be achieved in a privacy-preserving way with cookie partitioning.
 
 ### Use cases
 
