@@ -115,7 +115,7 @@ key={("https", "retail.example"),
 
 To encourage good security practices, CHIPS proposes that partitioned cookies must be bound to the hostname (and not the registrable domain), and only be set by and sent over secure protocols. To ensure this, partitioned cookies must use the ``__Host-`` prefix.
 
-The `__Host-` prefix requires that the cookie be set with `Secure` and `Path=/` and disallows the `Domain` attribute. Since `Domain` cookies can be shared between different third-party subdomains within a partition, disallowing it makes partitioned cookies as close to being [origin-bound](https://developer.chrome.com/docs/privacy-sandbox/glossary/#origin) as possible; and aligns cookies closer to the [Same-Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
+The `__Host-` prefix requires that the cookie be set with `Secure` and `Path=/` and disallows the `Domain` attribute. Since `Domain` cookies can be shared between different third-party subdomains within a partition, disallowing it makes partitioned cookies as close to being [origin-bound](docs/privacy-sandbox/glossary/#origin) as possible; and aligns cookies closer to the [Same-Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
 
 Example: 
 
