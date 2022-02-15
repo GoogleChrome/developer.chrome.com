@@ -20,7 +20,11 @@ The aim is to allow cookies to be set by a third-party service, but only read wi
 
 Currently, third-party cookies can enable services to track users and join their information from across many unrelated top-level sites. This is known as cross-site tracking. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jLOlPtLY9Zqte4IOoU6g.png", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img
+   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jLOlPtLY9Zqte4IOoU6g.png",
+   alt="When unpartitioned, a cookie attached to embedded media is shared with all sites that embed the same media.",
+   width="800", height="450"
+%}
 
 For example, when a user visits site A, embedded content from site C can set a cookie on the user's machine in response to the cross-site request. If the user then visits site B which also embeds C, site C could access the same cookie that has been set earlier when the user visited site A. This allows site C to compile a user's browsing activity across site A, site B, and every site that it is embedded on.
 
