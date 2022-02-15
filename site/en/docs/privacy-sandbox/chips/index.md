@@ -99,7 +99,11 @@ Likewise, a _request's partition key_ is the site of the top-level URL the brows
 
 Here's what the cookie key in the example above looks like before and after CHIPS.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZZm3G3cCgziUK2eezdiu.png", alt="ALT_TEXT_HERE", width="800", height="204" %}
+{% Img
+   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ZZm3G3cCgziUK2eezdiu.png",
+   alt="Site A and the embedded site C share a partitioned cookie. When not embedded, site C cannot access the partitioned cookie.",
+   width="800", height="204"
+%}
 
 
 **Before CHIPS**
