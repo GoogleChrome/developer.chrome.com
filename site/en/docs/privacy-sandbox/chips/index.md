@@ -49,7 +49,7 @@ Example use cases for CHIPS include any scenarios where cross-site subresources 
 +   Subresource CDN load balancing
 +   Headless CMS providers
 +   Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
-+   Third-party CDNs that use cookies to serve content that's access-controlled based on the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
++   Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
 +   Front-end frameworks that rely on remote APIs using cookies on their requests
 
 ### How does it work?
@@ -71,7 +71,7 @@ If a user visits site C as a top level website, the partitioned cookie that C se
 As browsers are phasing out unpartitioned third-party cookies, a couple of other approaches to partitioning have been attempted.
 
 Firefox announced that they are [partitioning all third-party cookies by default](https://hacks.mozilla.org/2021/02/introducing-state-partitioning/) in their ETP Strict mode, so all cross-site cookies are partitioned by the top-level site.   
-However, partitioning cookies without a third-party opt-in can lead to unexpected bugs, since some third party services have built servers with the expectation of an unpartitioned third-party cookie.
+However, partitioning cookies without a third-party opt-in can lead to unexpected bugs, since some third-party services have built servers which expect an unpartitioned third-party cookie.
 
 [Safari previously tried partitioning cookies based on heuristics](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/), but eventually chose to block them altogether, citing developer confusion as one of the reasons.
 
