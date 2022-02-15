@@ -139,7 +139,11 @@ CHIPS is already available behind flags in Chrome 99. Check out the testing inst
 
 To try it out locally, turn on the `chrome://flags/#partitioned-cookies` flag in Chrome Canary or use the `--partitioned-cookies=true` command line flag.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Afo08gb3WxuNT77Bi6xc.png", alt="ALT_TEXT_HERE", width="779", height="329" %}
+{% Img
+   src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Afo08gb3WxuNT77Bi6xc.png",
+   alt="Set the partitioned cookies flag to Enabled.",
+   width="779", height="329"
+%}
 
 ### Engage and share feedback
 
