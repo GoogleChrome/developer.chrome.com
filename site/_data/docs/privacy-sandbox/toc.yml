@@ -17,7 +17,7 @@
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
     - url: /docs/privacy-sandbox/first-party-sets
-    - url: https://github.com/WICG/CHIPS
+    - url: /docs/privacy-sandbox/chips
       title: i18n.docs.privacy-sandbox.chips
     - url: https://github.com/WICG/FedCM
       title: i18n.docs.privacy-sandbox.fedcm

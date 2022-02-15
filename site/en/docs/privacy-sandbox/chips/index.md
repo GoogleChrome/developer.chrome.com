@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'CHIPS—Cookies Having Independent Partitioned State'
+title: 'Cookies Having Independent Partitioned State (CHIPS)'
 subhead: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
 description: >
