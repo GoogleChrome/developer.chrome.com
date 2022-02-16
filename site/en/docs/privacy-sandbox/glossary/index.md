@@ -28,15 +28,16 @@ A company that pays to advertise its products.
 Encrypted reports sent from individual user devices. These reports contain
 data about cross-site user behavior and conversions. Conversions (sometimes
 called attribution trigger events) and associated metrics are defined by the
-advertiser or adtech. Each report is encrypted to prevent various parties from
-accessing the underlying data.
+advertiser or adtech. Each report is encrypted to prevent various parties
+from accessing the underlying data.
 
 ## Attestation
 
 A mechanism to authenticate software identity, usually with [cryptographic
 hashes](https://en.wikipedia.org/wiki/Cryptographic_hash_function) or
-signatures. For the aggregation service proposal, attestation matches the code
-running in the adtech-operated aggregation service with the code provided by The Privacy Sandbox team.
+signatures. For the aggregation service proposal, attestation matches the
+code running in the adtech-operated aggregation service with the open
+source code.
 
 ## Attribution {: #attribution }
 
