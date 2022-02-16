@@ -120,9 +120,9 @@ The proposed process to create a summary report is as follows:
       report.
 1. Once the adtech reporting origin receives the aggregatable reports, the
    adtech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
-   *  In our initial implementation, the aggregation service is operated by
-      the adtech provider with a [Trusted Execution Environment
-      (TEE)](#trusted-execution-environment) hosted in the cloud. The
+   *  In our initial implementation, the [aggregation
+      service](#aggregation-service) is operated by the adtech provider
+      with a Trusted Execution Environment (TEE) hosted in the cloud. The
       _coordinator_ ensures that only verified entities have access to
       decryption keys and that no other intermediary (the adtech, the cloud
       provider, or any other party) can access and decrypt sensitive data
