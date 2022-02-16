@@ -16,7 +16,7 @@ authors:
 
 *  In the initial proposal
    ([client-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
-   [server-side](https://github.com/WICG/conversion-measurement-api/AGGREGATION_SERVICE_TEE.md))
+   [server-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md))
    and discussion stage
 *  Attribution Reporting [API
    specification](https://wicg.github.io/conversion-measurement-api/)
@@ -119,7 +119,7 @@ The proposed process to create a summary report is as follows:
       adtech providers cannot see or access the content of any individual
       report.
 1. Once the adtech reporting origin receives the aggregatable reports, the
-   adtech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/AGGREGATION_SERVICE_TEE.md).
+   adtech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
    *  In our initial implementation, the aggregation service is operated by
       the adtech provider with a [Trusted Execution Environment
       (TEE)](#trusted-execution-environment) hosted in the cloud. The
@@ -164,7 +164,7 @@ audit. These safeguards are meaningful to:
 ### Proposal for an aggregation service {: #aggregation-service}
 
 [The initial
-proposal](https://github.com/WICG/conversion-measurement-api/AGGREGATION_SERVICE_TEE.md)
+proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each adtech provider to operate their own instance of the aggregation
 service, in a Trusted Execution Environment (TEE) deployed on a cloud service
 that supports needed security features.
@@ -293,7 +293,7 @@ is the proposed format for summary reports.
 *  GitHub: read the [client-side
    proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)
    and [aggregation service
-   proposal](https://github.com/WICG/conversion-measurement-api/AGGREGATION_SERVICE_TEE.md),
+   proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md),
    ask questions, and suggest feedback.
 *  Developer support: ask questions and join discussions on the [Privacy
    Sandbox Developer Support
@@ -304,6 +304,6 @@ is the proposed format for summary reports.
 *  Read the [Introduction to Attribution Reporting (Conversion
    Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/)
 *  Read the [aggregation service
-   explainer](https://github.com/WICG/conversion-measurement-api/AGGREGATION_SERVICE_TEE.md)
+   explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 *  [Digging into the Privacy
    Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
