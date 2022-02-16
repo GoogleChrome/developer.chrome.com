@@ -273,9 +273,7 @@ taken:
    {% endAside %}
 1. The adtech provider batches the aggregatable reports and sends the batches
    to the aggregation service.
-1. The aggregation service schedules a
-   [worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
-   to aggregate the data.
+1. The aggregation service schedules a worker to aggregate the data.
    {% Aside %}
    Before the worker can aggregate, attestation is required from the ​​coordinator. If the worker passes attestation, the decryption keys will be provided.
    {% endAside %}
@@ -283,8 +281,8 @@ taken:
    along with noised data (a privacy mechanism for data).
 1. The aggregation service returns the summary report to the adtech provider.
 
-The adtech can use the summary report to inform bidding and to offer reporting
-to its own customers. A [JSON-encoded
+The adtech can use the summary report to inform bidding and to offer
+reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
 is the proposed format for summary reports.
 
