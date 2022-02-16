@@ -6,7 +6,7 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
-updated: 2022-02-04
+updated: 2022-02-14
 authors:
   - agektmr
 tags:
@@ -127,11 +127,10 @@ If your website is affected by this change, Chrome will warn in the DevTools
 Issues panel. Notice the yellow flag at the top right corner.
 
 <figure class="w-figcaption">
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/emNay9XjqqyNy3wEi0Aa.png",
-alt="When document.domain is modified, a warning is displayed in the Issues
-panel.", width="800", height="501" %}
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/OPEFWOBPMZHmj32aVq2I.png", alt="When document.domain is modified, a warning is displayed in the Issues
+panel.", width="800", height="472" %}
 <figcaption>When document.domain is modified, a warning is displayed in the Issues panel.</figcaption>
-<figure>
+</figure>
 
 If you have a reporting endpoint set up, you will also be sent deprecation
 reports. Learn more about [how to use the Reporting
