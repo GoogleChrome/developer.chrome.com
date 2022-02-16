@@ -34,6 +34,8 @@ attribution-reporting-events-api:
   en: 'Event-level reports API guide'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
+attribution-reporting-summary:
+  en: 'Summary reports'
 tracking-prevention:
   en: 'Prevent covert tracking'
 strengthen-boundaries:
