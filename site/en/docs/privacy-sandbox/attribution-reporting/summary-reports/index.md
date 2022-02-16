@@ -206,13 +206,6 @@ identify one or more independent entities who can share this role.
 Summary reports offer a combination of aggregated data alongside detailed
 ad-side and conversion data.
 
-For example, a summary report for ad campaign ID `1234567` on news.example led
-to **518** conversions on `shoes.example` on **January 12, 2022**, with a total
-spend of **$38,174**. Half of the conversions were from users buying blue
-sneakers with product SKU `9872`. `1234567` represents detailed ad-side data.
-The number of conversions and users' total spend is aggregated data, while the
-product SKU for the specific shoes is detailed conversion data.
-
 For example, an adtech provider runs an ad campaign on `news.example`, where a
 conversion represents a user clicking an ad for shoes and completing a
 purchase of shoes on `shoes.example`. The adtech receives a summary report for
