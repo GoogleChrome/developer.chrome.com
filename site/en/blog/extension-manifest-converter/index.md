@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Extension manifest converter
+title: Extension Manifest Converter
 description: >
   Open source tool to convert extensions to Manifest V3. You'll still need to manually update any
   code with non-mechanical changes, such as adapting to use service workers or some script
@@ -8,7 +8,7 @@ description: >
 subhead: >
   Easily convert an entire directory, extension zip file, or manifest.json file.
 date: 2021-04-28
-updated: 2021-04-28
+updated: 2022-02-16
 authors:
   - solomonkinard
   - dotproto
