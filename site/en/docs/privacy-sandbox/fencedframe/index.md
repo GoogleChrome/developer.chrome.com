@@ -9,8 +9,6 @@ description: |
 authors:
   - jackjey
 date: 2022-02-28
-hero: image/PV7xjXdOKHP8LWt9XhstsToJeK82/7wk4vhrka8qwub03eeSW.jpg
-alt: "PRIVATE PROPERTY" board on the metalic fence
 ---
 
 Fenced frame is a proposed new embedding API, which displays content similar to an iframe. However, a Fenced frame restricts communication with its embedder to allow access to unpartitioned data without leaking cross-site data.
