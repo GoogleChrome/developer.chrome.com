@@ -9,7 +9,7 @@ updated: 2021-02-02
 
 Extensions documents should follow the conventions outlined in the [Add a Doc][add-a-doc] and [Add a
 Blog Post][add-a-blog] guides. One notable exception to that guidance is that we do not use the
-`tags` and `author` YAML Front Matter properties in extensions docs.
+`tags` and `author` YAML front matter properties in extensions docs.
 
 ## Line wrapping {: #line-wrapping }
 
@@ -26,7 +26,7 @@ follow this convention save for the following exceptions:
 Header IDs are automatically generated based on the content of the header. This means that renaming
 a header will also change the header's ID and break existing links to that header.
 
-To make your documentation more resilient to change, authors should manually declare headers IDs.
+To make your documentation more resilient to change, authors should manually declare header IDs.
 
 {% Compare 'better' %}
 
