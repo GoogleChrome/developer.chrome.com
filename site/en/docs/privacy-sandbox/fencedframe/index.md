@@ -29,10 +29,10 @@ Currently, Chrome teams are working on [Storage Partitioning](https://github.com
 
 ## What does Privacy Sandbox cover ?
 
-The Privacy Sandbox initiative is both partitioning data by top-frame site as well as creating a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms. Examples include: [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/) which allows for interest-based ad serving in a privacy-preserving manner, [FedCM](https://github.com/fedidcg/FedCM) for secure Single Sign On, and [others](https://developer.chrome.com/docs/privacy-sandbox/overview/). Some Privacy Sandbox API proposals allow access to unpartitioned storage in a privacy-preserving way, while others satisfy specific use-cases without exposing first-party storage. Fenced frame is one of former works.
+The Privacy Sandbox initiative is both partitioning data by top-frame site as well as creating a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms. Examples include: [FLEDGE](/docs/privacy-sandbox/fledge/) which allows for interest-based ad serving in a privacy-preserving manner, [FedCM](https://github.com/fedidcg/FedCM) for secure Single Sign On, and [others](/docs/privacy-sandbox/overview/). Some Privacy Sandbox API proposals allow access to unpartitioned storage in a privacy-preserving way, while others satisfy specific use-cases without exposing first-party storage. Fenced frame is one of former works.
 
-For example, let's take a look at the [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/) proposal.
-With FLEDGE, a user's interests are registered on an advertiser's site in [interest groups](https://developer.chrome.com/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that may be of interest to the user. Then, on a publisher's site, the ads registered in an interest group are auctioned and the winning ads are displayed.
+For example, let's take a look at the [FLEDGE](/docs/privacy-sandbox/fledge/) proposal.
+With FLEDGE, a user's interests are registered on an advertiser's site in [interest groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that may be of interest to the user. Then, on a publisher's site, the ads registered in an interest group are auctioned and the winning ads are displayed.
 
 If the publisher's script takes the URL of the winning ad and sets it as the iframe's `src` attribute, the publisher can infer information about the visitor's interests from that ads URL. This is not privacy-preserving.
 
