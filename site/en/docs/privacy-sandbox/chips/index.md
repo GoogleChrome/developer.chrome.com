@@ -56,7 +56,7 @@ Example use cases for CHIPS include any scenarios where cross-site subresources 
 
 CHIPS introduces a new cookie attribute, `Partitioned`, to support cross-site cookies that are partitioned by top-level context.  
 
-Under this proposal, when a user visits site A and embedded content from site C sets a cookie with the `Partitioned `attribute, the cookie is saved in a partitioned jar designated only for cookies that the site C sets when it's embedded on site A. The browser would only send that cookie when the top-level site is A.   
+Under this proposal, when a user visits site A and embedded content from site C sets a cookie with the `Partitioned` attribute, the cookie is saved in a partitioned jar designated only for cookies that the site C sets when it's embedded on site A. The browser would only send that cookie when the top-level site is A.   
 
 When the user visits a new site, for example site B, an embedded C frame would not receive the cookie that was set when C was embedded in site A. 
 
