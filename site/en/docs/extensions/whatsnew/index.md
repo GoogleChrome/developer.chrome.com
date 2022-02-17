@@ -277,9 +277,9 @@ replaces [`chrome.tabs.removeCSS()`](/docs/extensions/reference/tabs/#method-rem
 
 February 24, 2021
 
-[`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
-now supports returning promises. When a script evaluates to a promise, Chrome will wait for the
-promise to settle and return its resulting value.
+[`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript) now
+supports returning promises. If the resulting value of the script execution is a promise, Chrome
+will wait for the promise to settle and return its resulting value.
 
 ### Chrome 90: chrome.scripting.executeScript() results include frameId {: # chromescriptingexecutescript-results-include-frameid }
 
