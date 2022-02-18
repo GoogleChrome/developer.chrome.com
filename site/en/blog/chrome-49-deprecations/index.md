@@ -47,7 +47,7 @@ number of changes to Chrome
 **TL;DR**: The use of the "css" prefix in
 [`getComputedStyle(e)`](https://code.google.com/p/chromium/issues/detail?id=413205)
 has been deprecated since it was not a part of the formal
-[spec](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle).
+[spec](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle).
 
 * [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/SX901460nbI)
 * [Chromestatus Tracker](https://www.chromestatus.com/features/5006796888473600)
@@ -188,7 +188,7 @@ constructor that takes an argument) you should use that.
 
 ## Error and success handlers required in RTCPeerConnection methods
 
-**TL;DR:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
+**TL;DR:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
 and [`createAnswer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)
 now require an error handler as well as a success handler. Previously it had 
@@ -205,7 +205,7 @@ This is part of clearing the way for introducing promises on these methods,
 as required by the [WebRTC spec](https://w3c.github.io/webrtc-pc/).
 
 Here's an example from the WebRTC
-[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/){: .external }
+[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/)
 ([main.js, line 126](https://github.com/webrtc/samples/blob/gh-pages/src/content/peerconnection/pc1/js/main.js#L126)):
 
 ```js
@@ -273,7 +273,7 @@ More discussion of the reasoning not to spec this out can be read on github
 ## getStorageUpdates() removed
 
 **TL;DR**: `Navigator.getStorageUpdates()` has been removed as it is no longer in the
-[Navigator spec](https://developer.mozilla.org/en-US/docs/Web/API/Navigator).
+[Navigator spec](https://developer.mozilla.org/docs/Web/API/Navigator).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/ak1kVjiX9T4/mo1rqcyQAQAJ)
 [Chromestatus Tracker](https://www.chromestatus.com/features/4780366799831040)

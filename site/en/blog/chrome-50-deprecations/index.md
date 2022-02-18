@@ -107,7 +107,7 @@ implementation had a bug that caused resources to be downloaded twice.
 Developers looking to improve the user experience through preloading of content
 have a number of options, the most customizable of which is to build a service
 worker to take advantage of precaching and the Caches API. Additional solutions
-include [other values for the `rel` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)
+include [other values for the `rel` attribute](https://developer.mozilla.org/docs/Web/HTML/Link_types)
 including `preconnect`, `prefetch`, `preload`, `prerender`. Some of these
 options are experimental and may not be widely supported.
 
@@ -147,7 +147,7 @@ distinguish between the two `Enter` keys on an extended keyboard.
 
 ## Error and success handlers required in RTCPeerConnection methods
 
-**TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
+**TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
 and [`createAnswer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)
 now require an error handler as well as a success handler. Previously it had
@@ -167,7 +167,7 @@ This is part of clearing the way for introducing promises on these methods,
 as required by the [WebRTC spec](https://w3c.github.io/webrtc-pc/).
 
 Here's an example from the WebRTC
-[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/){: .external }
+[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/)
 ([main.js, line 126](https://github.com/webrtc/samples/blob/gh-pages/src/content/peerconnection/pc1/js/main.js#L126)):
 
 ```js
@@ -203,7 +203,7 @@ with the attributes `position` and `totalSize`.
 This event existed to support the Gecko compatibility properties `position` and
 `totalSize`. Support for all three was dropped in Mozilla 22 and the
 functionality has long been superseded by the
-[`ProgressEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent).
+[`ProgressEvent`](https://developer.mozilla.org/docs/Web/API/ProgressEvent).
 
 ```js
      var progressBar = document.getElementById("p"),
@@ -251,5 +251,5 @@ improve consistency between browsers these properties were deprecated in Chrome
 
 Though equivalent properties are part of `HTMLElement`, developers looking for
 an alternative can also use
-[`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+[`getBoundingClientRect()`](https://developer.mozilla.org/docs/Web/API/Element/getBoundingClientRect)
 
