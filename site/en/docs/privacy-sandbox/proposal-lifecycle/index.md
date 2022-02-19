@@ -11,35 +11,41 @@ authors:
 ---
 
 _Much of this content was originally shared as a part of the
-[2021 Chrome Developer Summit](/docs/privacy-sandbox/cds21-update/).__
+[2021 Chrome Developer Summit recap](/docs/privacy-sandbox/cds21-update/)._
 
-## What is a web standard?
-
-Web standards are technical documents&mdash;known as specifications or
-specs&mdash; which detail exactly how web technology should work. These specs
-are intended for use by developers to implement the technologies. For example,
-the [Accessible Rich Internet Applications (WAI-ARIA)
-standard](https://www.w3.org/TR/wai-aria-1.1/) (commonly known as just "ARIA")
-defines technical ways to make the web more accessible to those with
-disabilities. These specs are developed for and by the [World Wide Web Consortium
-(W3C)](https://www.w3.org/Consortium/), an international community with
-full-time staff, member organizations, and feedback from the general public.
+## What is the goal of The Privacy Sandbox proposals?
 
 The Privacy Sandbox proposals are the first of many steps necessary in the
-creation of web standards. After [discussion](#discussion), [testing](#testing),
-and [scaled adoption](#scaled-adoption), some proposals will become specs. It's
+creation of web standards.
+
+Web standards are technical documents&mdash;known as specifications or
+specs&mdash;which detail exactly how web technology should work. These specs
+are for developers to implement the technologies. For example, the [Accessible
+Rich Internet Applications (WAI-ARIA) standard](https://www.w3.org/TR/wai-aria-1.1/)
+(commonly known as just "ARIA") defines technical ways to make the web more
+accessible to those with disabilities. These specs are developed for and by the
+[World Wide Web Consortium (W3C)](https://www.w3.org/Consortium/), an
+international community with full-time staff, member organizations, and feedback
+from the general public.
+
+After [discussion](#discussion), [testing](#testing), and [scaled
+adoption](#scaled-adoption), some proposals will become specs. It's
 critical we receive feedback from developers and industry leaders (with and
 without web technology knowledge) to ensure we create durable web features with
 broad utility and robust privacy protections for users.
 
-### 
+Chromium (the open source platform behind many modern browsers) has written
+about the [feature development
+process](https://www.chromium.org/blink/launching-features/) for all
+technologies which aim to become a web standard. Because of the critical nature
+of privacy and security on the web, we expect and encourage large amounts of
+discussion and feedback before testing can begin.
 
-
-## Proposal development procress
+## From proposal to web standard
 
 There is a large amount of ecosystem input shaping this work, at every stage of
 development. This process may be familiar to web developers, but may be new to
-other industry stakeholders who will use these purpose-built APIs &ndash; and
+other industry stakeholders who will use these purpose-built APIs&mdash;and
 whose expertise is critical to this initiative.
 
 ### Start with discussion {: #discussion}
@@ -79,12 +85,12 @@ There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward. 
 
-At the same time, we're starting [developer testing](/docs/privacy-sandbox/fledge/)
-for the initial version of FLEDGE behind a flag in Chrome so developers can get
+At the same time, [developer testing](/blog/fledge-api/)
+for the initial version of FLEDGE is behind a Chrome flag so developers can get
 their hands on it.
 
-Not every proposal will go through such an intense incubation period as FLEDGE
-&ndash; some will move much more quickly &ndash; but there is a lot of
+Not every proposal will go through such an intense incubation period as
+FLEDGE&mdash;some will move much more quickly&mdash;but there is a lot of
 innovation happening. These are new ideas and it can take a lot of work to get
 them right.
 
@@ -92,18 +98,18 @@ them right.
 
 Testing is critical because it surfaces issues or gaps that may require more
 work. There will be many iterative cycles of discussion and testing. There are
-a handful of proposals ready for developer testing today and more will be
-available for review as we head into 2022.
+a handful of proposals ready for developer testing today and more will become
+available.
 
 Testing in Chrome usually starts with a feature behind a flag for developers to
 test locally. This means developers need to turn it on in the browser to try it
 out. This code is often very fresh, so you can expect to find issues.
 
 We also run origin trials, each of which run for a limited time with a limited
-population of Chrome users. Origin trials are public and open to all developers
-&ndash; you just need to register to opt in your site or service. This is when
-we get actionable feedback from developers on what works, what doesn't, and
-where those gaps are.
+population of Chrome users. Origin trials are public and open to all
+developers&mdash;you just need to register to opt in your site or service. This
+is when we get actionable feedback from developers on what works, what doesn't,
+and where those gaps are.
 
 {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/vTqicAx2UauzkePJkM0A.png",
 alt="", width="800", height="368" %}
@@ -121,12 +127,6 @@ which has now been added to the API.
 
 We also hope to see companies talking about their approach to testing and how
 they expect to use an API. 
-
-In the origin trial for the first version of [FLoC](https://github.com/WICG/floc)
-&ndash; a proposal to support interest-based advertising and content &ndash;
-we saw companies like CafeMedia publishing their
-[analysis and insights](https://cafemedia.com/early-status-of-the-floc-origin-trials/)
-so that others could review what they'd learned.
 
 Chrome tests aren't the only way to explore how new technologies might work.
 Some companies are also building simulations based on Privacy Sandbox concepts. 
@@ -152,48 +152,45 @@ reduce covert tracking such as browser fingerprinting.
 Like cookies, the User-Agent (UA) string is an early web feature. By default,
 it provides a lot of information about the user's browser and device, making
 it a readily available surface for fingerprinting. It also has a format that
-can be a headache to parse!
+can be a headache to parse.
 
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/AVzbV9HF0T0bm3buFjV6.jpg",
    alt="For example, 'User-Agent: Mozilla/5.0 (Linux; Android 10; Pixel 3)
-AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile Safari/537.36' is very long and offers specific details used for fingeprinting, such as the exact device model, platfoorm verrsin, and full Chrme version.",
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile Safari/537.36' is very long and offers specific details used for fingerprinting, such as the exact device model, platform version, and full Chrome version.",
    width="800", height="464"
 %}
 
-To get this information in the future, you'll need to transition to UA-CH.
-The User-Agent string will give you some information by default, which may
-cover most of your use cases, but more detailed information is available only
-on request in a straightforward format. 
+The reduced User-Agent includes the browser's brand and a significant version,
+where the request came from (desktop or mobile), and the platform. In the
+future, you’ll need to use UA-CH if you need to access more data in the future,
+such as specific information about the user's device or conditions.
 
-We were happy to make this ergonomic improvement for developers while moving
-the majority of UA information from an "available by default" model to an "on
-request" model. This way, you can request only the information you need. This
-is a good privacy practice today, and the pattern we want to set for the
-future.
+In other words, the User-Agent data is moving from an "available by default"
+model to an "on request" model. This is a good privacy practice today, and the
+pattern we want to set for the future.
 
 {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZsumGF9jzVb5yYL4QD3i.png",
 alt="", width="800", height="338" %}
 
 In April 2022, gradual UA string reduction will begin in Chrome. UA-CH launched
 and was ready for scaled adoption starting in March of 2021&mdash;you can begin
-testing and migrating to it now.
-[Participate in an origin trial](/origintrials/#/view_trial/-7123568710593282047)
-to opt-in to the reduced UA string so you can see what the future state looks
-like.
+testing and migrating to it now. [Participate in an origin
+trial](/origintrials/#/view_trial/-7123568710593282047) to opt-in to the reduced
+UA string so you can see what the future state looks like.
 
-If it turns out you need extra time to address your site needs, you'll be
-able to opt-in to keep using the User Agent string as-is through March 2023.
+It's important that developers have ample time to transition their websites to
+adopt new standards. If it turns out your site needs extra time, you'll be able
+to opt-in to keep using the User Agent string as-is through March 2023.
 
 ## Wrap up and feedback  {: #wrap-up-feedback}
 
 We'll continue to explain what's happening, provide as much forward visibility
 as we can, encourage your involvement, and hear your input.
 
-
 *  Monitor and [engage in conversation](#discussion) around
-   [privacy proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
-*  Read the technical details and [implementation guidelines](/docs/privacy-sandbox/)
-*  Share your feedback with [@ChromiumDev on Twitter](https://twitter.com/ChromiumDev)
+   [privacy proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
+*  Read the technical details and [implementation guidelines](/docs/privacy-sandbox/).
+*  Share your feedback with [@ChromiumDev on Twitter](https://twitter.com/ChromiumDev).
 *  Submit Issues to the [developer support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
