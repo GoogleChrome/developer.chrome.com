@@ -6,8 +6,6 @@ description: |2-
   Lighthouse監査「ドキュメントにメタ記述がない」について説明します。
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - meta-description
 ---
 
 `<meta name="description">`要素は、検索エンジンが検索結果に含めるページのコンテンツの概要を提供します。高品質で固有なメタ記述により、ページの関連性が高まり、検索トラフィックを増やすことができます。

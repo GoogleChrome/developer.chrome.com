@@ -6,8 +6,6 @@ description: |2-
   了解“点击目标大小不当”Lighthouse 审计。
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - tap-targets
 ---
 
 点击目标是网页上用户通过触摸设备可以与之互动的区域。按钮、链接和表单元素都有点击目标。

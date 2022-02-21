@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Não usa HTTP/2 para todos os seus recursos.
 description: Saiba por que HTTP/2 é importante para o tempo de carregamento de sua página e como ativar HTTP/2 no seu servidor.
-web_lighthouse:
-  - uses-http2
 date: 2019-05-02
 updated: 2019-08-28
 ---

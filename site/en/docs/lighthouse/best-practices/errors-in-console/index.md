@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Browser errors were logged to the console
 description: |
   Learn how to identify and fix browser errors.
-web_lighthouse:
-  - errors-in-console
 date: 2019-05-02
 updated: 2019-08-28
 ---

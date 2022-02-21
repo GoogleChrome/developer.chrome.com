@@ -4,8 +4,6 @@ title: 安全でないクロスオリジン宛先へのリンク
 description: |2-
 
   別のホスト上のリソースに安全にリンクする方法を学びます。
-web_lighthouse:
-  - external-anchors-use-rel-noopener
 date: 2019-05-02
 updated: 2019-08-28
 ---

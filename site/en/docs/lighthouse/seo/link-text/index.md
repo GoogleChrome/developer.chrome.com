@@ -5,8 +5,6 @@ description: |
   Learn about the "Links do not have descriptive text" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - link-text
 ---
 
 Link text is the clickable word or phrase in a hyperlink. When link text clearly

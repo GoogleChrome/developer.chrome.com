@@ -4,8 +4,6 @@ title: 文档没有描述标签
 description: 了解 Lighthouse 的“文档没有描述标签”审计。
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - meta-description
 ---
 
 `<meta name="description">` 元素提供搜索引擎在搜索结果中展示的页面内容摘要。高质量、独特的描述标签可以提高您的网页相关性，提高您的搜索流量。

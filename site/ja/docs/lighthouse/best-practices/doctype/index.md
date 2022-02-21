@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: ページに HTML Doctype が指定されていないため、Quirks モードがトリガーされる
 description: ページが古いブラウザで Quirks モードをトリガーしないようにする方法を学習します。
-web_lighthouse:
-  - doctype
 date: 2019-05-02
 updated: 2019-08-28
 ---

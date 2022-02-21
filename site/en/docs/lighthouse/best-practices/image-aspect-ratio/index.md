@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Displays images with incorrect aspect ratio
 description: |
   Learn how to display responsive images with the correct aspect ratio.
-web_lighthouse:
-  - image-aspect-ratio
 date: 2019-05-02
 updated: 2020-04-29
 ---

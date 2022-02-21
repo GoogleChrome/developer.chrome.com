@@ -6,8 +6,6 @@ description: |2
   Aprenda como tornar sua página mais segura substituindo as bibliotecas JavaScript
 
   que têm vulnerabilidades conhecidas.
-web_lighthouse:
-  - no-vulnerable-libraries
 date: 2019-05-02
 updated: 2020-06-04
 ---

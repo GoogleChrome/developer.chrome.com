@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 不要为其所有资源使用 HTTP/2
 description: 了解为什么 HTTP/2 对页面加载时间很重要以及如何在服务器上启用 HTTP/2。
-web_lighthouse:
-  - uses-http2
 date: 2019-05-02
 updated: 2019-08-28
 ---

@@ -4,8 +4,6 @@ title: Incluye bibliotecas JavaScript de front-end con vulnerabilidades de segur
 description: |2-
 
   Obtenga información sobre cómo hacer que su página sea más segura al reemplazar las bibliotecas de JavaScript que tienen vulnerabilidades conocidas.
-web_lighthouse:
-  - bibliotecas-no-vulnerables
 date: 2019-05-02
 updated: 2020-06-04
 ---

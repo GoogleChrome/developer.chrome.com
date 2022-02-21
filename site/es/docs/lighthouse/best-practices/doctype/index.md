@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: La página carece del doctype HTML, por lo que se activa el modo quirks
 description: Aprenda a asegurarse de que su página no activa el modo "quirks" en los navegadores más antiguos.
-web_lighthouse:
-  - doctype
 date: 2019-05-02
 updated: 2019-08-28
 ---

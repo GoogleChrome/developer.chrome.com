@@ -5,8 +5,6 @@ description: |
   Learn about the "Document doesn't have a valid hreflang" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - hreflang
 ---
 
 Many sites provide different versions of a page based on a user's language or

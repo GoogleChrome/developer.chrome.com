@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Charset declaration is missing or occurs too late in the HTML
 description: |
   Learn how to add a character encoding declaration to your HTML.
-web_lighthouse:
-  - charset
 date: 2020-05-05
 ---
 

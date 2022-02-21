@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Uses document.write()
 description: |
   Learn how to speed up your page's load time by avoiding  document.write().
-web_lighthouse:
-  - no-document-write
 date: 2019-05-02
 updated: 2020-06-04
 ---

@@ -4,8 +4,6 @@ title: Los enlaces a destinos de origen cruzado no son seguros
 description: |2-
 
   Obtenga información sobre cómo vincular  recursos en otro host de forma segura.
-web_lighthouse:
-  - external-anchors-use-rel-noopener
 date: 2019-05-02
 updated: 2019-08-28
 ---

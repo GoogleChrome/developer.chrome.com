@@ -6,8 +6,6 @@ description: |2-
   Saiba mais sobre a auditoria Lighthouse "O documento não tem uma meta description".
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - meta-description
 ---
 
 O elemento `<meta name="description">` fornece um resumo do conteúdo de uma página que os mecanismos de pesquisa incluem nos resultados da busca. Uma descrição meta exclusiva e de alta qualidade torna sua página mais relevante e pode aumentar o tráfego de pesquisa.
