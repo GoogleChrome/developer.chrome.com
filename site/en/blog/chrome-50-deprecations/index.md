@@ -14,7 +14,7 @@ description: >
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
   - paulkinlan
-  - josephmedley
+  - joemedley
 
 # Required
 date: 2016-03-14
