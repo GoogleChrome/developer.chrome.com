@@ -2,7 +2,8 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
-### Chrome 98 {: #chrome99 }
+### Chrome 99 {: #chrome99 }
+
 * [Throttling WebSocket requests](/blog/new-in-devtools-99/#websocket)
 * [New Reporting API pane in the Application panel](/blog/new-in-devtools-99/#reporting-api)
 * [Support wait until element is visible/clickable in the Recorder panel](/blog/new-in-devtools-99/#recorder)
