@@ -1,15 +1,22 @@
 intro:
   en: PWA audits
+  es: Auditorias de las PWA
 intro_description:
   en: Measure if your site is fast, reliable and installable.
+  es: Miden si su sitio web es rápido, confiable e instalable.
 overview:
   en: These checks validate the aspects of a Progressive Web App.
+  es: Estas revisiones validan las características de una aplicación web progresiva.
 topics:
   fast_and_reliable:
     en: Fast and reliable
+    es: Rápida y confiable
   installable:
     en: Installable
+    es: Instalable
   pwa_optimized:
     en: PWA optimized
+    es: PWA optimizada
   additional_items_to_manually_check:
     en: Additional items to manually check
+    es: Elementos adicionales para revisar manualmente
