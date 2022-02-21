@@ -6,7 +6,7 @@ authors:
 date: 2022-01-13
 updated: 2022-01-13
 description:
-  "Full-page Accessibility tree, more precise changes in the Changes tab, and more."
+  "전체 페이지 접근성 트리, 변경 탭에서의 더욱 정교한 변화들 및 다른 새로운 기능들"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JBJjMJE3vqBrIPkPUt7D.jpg'
 alt: ''
 tags:
