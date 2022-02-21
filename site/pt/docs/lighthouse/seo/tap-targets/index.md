@@ -6,8 +6,6 @@ description: |2
   Saiba mais sobre a auditoria do Lighthouse "Os pontos de toque não têm o tamanho adequado".
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - tap-targets
 ---
 
 Os pontos de toque são as áreas de uma página da web com as quais os usuários em dispositivos de toque podem interagir. Botões, links e elementos de formulário têm pontos de toque.

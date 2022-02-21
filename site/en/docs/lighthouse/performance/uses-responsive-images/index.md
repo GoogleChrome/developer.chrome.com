@@ -5,8 +5,6 @@ description: |
   Learn about the uses-responsive-images audit.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - uses-responsive-images
 ---
 
 The Opportunities section of your Lighthouse report lists all images in your page

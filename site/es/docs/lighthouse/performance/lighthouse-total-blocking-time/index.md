@@ -4,8 +4,6 @@ title: Total Blocking Time
 description: |2-
 
   Obtenga información sobre la métrica Total Blocking Time de Lighthouse, cómo medirlo y optimizarlo.
-web_lighthouse:
-  - total-blocking-time
 date: 2019-10-09
 updated: 2021-06-04
 ---

@@ -5,8 +5,6 @@ description: |
   Learn about the efficient-animated-content audit.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - efficient-animated-content
 ---
 
 The Opportunities section of your Lighthouse report lists

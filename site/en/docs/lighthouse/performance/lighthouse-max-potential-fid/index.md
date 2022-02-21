@@ -6,8 +6,6 @@ description: |
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-10-16
-web_lighthouse:
-  - max-potential-fid
 ---
 
 Max Potential First Input Delay (FID) is one of the metrics

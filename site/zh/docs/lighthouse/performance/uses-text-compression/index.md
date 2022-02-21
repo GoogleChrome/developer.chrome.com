@@ -4,8 +4,6 @@ title: 启用文本压缩
 description: 了解启用文本压缩如何提高网页加载性能。
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - uses-text-compression
 ---
 
 基于文本的资源应进行压缩，以尽量减少网络总字节数。Lighthouse 报告的 Opportunities 部分列出了所有未压缩的基于文本的资源：

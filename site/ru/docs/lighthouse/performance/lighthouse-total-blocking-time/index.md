@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Общее время блокировки
 description: Узнайте о метрике Lighthouse Total Blocking Time (общее время блокировки), а также о том, как ее измерять и оптимизировать.
-web_lighthouse:
-  - total-blocking-time
 date: 2019-10-09
 updated: 2021-06-04
 ---

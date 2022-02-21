@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 既知のセキュリティ脆弱性を持つフロントエンド JavaScript ライブラリが含まれる
 description: 既知の脆弱性が含まれる JavaScript ライブラリを置き換えることでページをより安全にする方法を学びます。
-web_lighthouse:
-  - no-vulnerable-libraries
 date: 2019-05-02
 updated: 2020-06-04
 ---

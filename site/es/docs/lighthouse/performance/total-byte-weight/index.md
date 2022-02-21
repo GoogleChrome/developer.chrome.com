@@ -6,8 +6,6 @@ description: |2-
   Aprende a mejorar el tiempo de carga de tu página web reduciendo el tamaño total de los archivos de recursos que ofreces a tus usuarios.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - total-byte-weight
 ---
 
 Las grandes cargas útiles de red están altamente correlacionadas con tiempos de carga prolongados. También cuestan dinero a los usuarios; por ejemplo, los usuarios posiblemente tengan que pagar por más datos móviles. Por lo tanto, reducir el tamaño total de las solicitudes de red de tu página es bueno para la experiencia de tus usuarios en tu sitio _y_ sus billeteras.

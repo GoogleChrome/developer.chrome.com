@@ -6,8 +6,6 @@ description: |2
   unminified-javascript 감사에 대해 알아보세요.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - 축소되지 않은 자바 스크립트
 ---
 
 JavaScript 파일을 축소하면 페이로드 크기와 스크립트 구문 분석 시간을 줄일 수 있습니다. Lighthouse 보고서의 기회 섹션에는 축소되지 않은 모든 JavaScript 파일이 나열되며 이러한 파일을 축소할 때 잠재적으로 절약할 수 있는 [키비바이트(KiB)](https://en.wikipedia.org/wiki/Kibibyte)가 표시됩니다.

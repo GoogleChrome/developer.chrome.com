@@ -6,8 +6,6 @@ description: |
   for your web page.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - user-timings
 ---
 
 ## What's the User Timing API?

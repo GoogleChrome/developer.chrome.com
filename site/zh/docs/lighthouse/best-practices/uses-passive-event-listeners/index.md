@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 使用被动监听器优化滚动体验
 description: 了解如何通过避免被动事件监听器来提高页面的滚动响应能力。
-web_lighthouse:
-  - uses-passive-event-listeners
 date: 2019-05-02
 updated: 2019-08-28
 ---

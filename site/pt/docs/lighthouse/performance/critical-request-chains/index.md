@@ -8,8 +8,6 @@ description: |2
   e como você pode reduzir o efeito.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - cadeias de solicitações críticas
 ---
 
 [Cadeias de solicitações críticas](https://developers.google.com/web/fundamentals/performance/critical-rendering-path) são séries de solicitações de rede dependentes importantes para a renderização de páginas. Quanto maior o comprimento das cadeias e quanto maiores os tamanhos de download, mais significativo é o impacto no desempenho do carregamento da página.

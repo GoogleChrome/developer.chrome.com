@@ -5,8 +5,6 @@ description: |2
 
   Conozca las oportunidades para cargar recursos de terceros de forma diferida con fachadas.
 date: 2020-12-01
-web_lighthouse:
-  - fachadas de terceros
 ---
 
 Los [recursos de terceros](https://web.dev/third-party-javascript/) se utilizan a menudo para mostrar anuncios o videos e integrarse con las redes sociales. El enfoque predeterminado es cargar los recursos de terceros tan pronto como se carga la página, pero esto puede ralentizar innecesariamente la carga de la misma. Si el contenido de terceros no es crítico, este costo de rendimiento se puede reducir [al cargarlo de forma diferida](https://web.dev/fast/#lazy-load-images-and-video).

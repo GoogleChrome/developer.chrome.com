@@ -4,8 +4,6 @@ title: 중요한 요청 연결 방지
 description: 중요한 요청 연결이 무엇인지, 이것이 웹 페이지 성능에 어떠한 영향을 미치는지, 어떻게 그 효과를 줄일 수 있는지 알아봅니다.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - critical-request-chains
 ---
 
 [중요한 요청 연결](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)은 페이지 렌더링에 중요한 일련의 종속 네트워크 요청입니다. 연결의 길이와 다운로드 크기가 클수록 페이지 로드 성능에 미치는 영향이 더 커집니다.

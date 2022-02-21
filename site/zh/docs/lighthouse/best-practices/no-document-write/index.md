@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 使用 document.write()
 description: 了解如何通过避免使用 document.write() 来加快页面加载速度。
-web_lighthouse:
-  - no-document-write
 date: 2019-05-02
 updated: 2020-06-04
 ---

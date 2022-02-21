@@ -4,8 +4,6 @@ title: 過大な DOM サイズを回避
 description: 大規模な DOM によって Web ページのパフォーマンスが低下してしまうことと、読み込み時に DOM のサイズを縮小する方法を学びます。
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - dom-size
 tags:
   - memory
 ---

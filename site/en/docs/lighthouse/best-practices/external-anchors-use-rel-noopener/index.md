@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Links to cross-origin destinations are unsafe
 description: |
   Learn how to safely link to resources on another host.
-web_lighthouse:
-  - external-anchors-use-rel-noopener
 date: 2019-05-02
 updated: 2019-08-28
 ---

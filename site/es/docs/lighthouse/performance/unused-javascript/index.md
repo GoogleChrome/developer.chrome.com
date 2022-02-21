@@ -4,8 +4,6 @@ title: Cómo eliminar el JavaScript que no se utiliza
 description: |2-
 
   Conozca cómo superar la auditoría "Eliminar el JavaScript que no se utiliza" de Lighthouse.
-web_lighthouse:
-  - "\t\nunused-javascript"
 date: 2020-07-07
 ---
 

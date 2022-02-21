@@ -4,8 +4,6 @@ title: 총 차단 시간
 description: |2-
 
   Lighthouse의 총 차단 시간 메트릭과 이를 측정하고 최적화하는 방법에 대해 알아봅니다.
-web_lighthouse:
-  - 총 차단 시간
 date: 2019-10-09
 updated: 2021-06-04
 ---

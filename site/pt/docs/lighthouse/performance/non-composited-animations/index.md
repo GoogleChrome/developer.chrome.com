@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Evite animações não compostas
 description: Como passar na auditoria Lighthouse "Evitar animações não compostas".
 date: 2020-08-12
-web_lighthouse:
-  - non-composited-animations
 ---
 
 Animações não compostas podem parecer irregulares (ou seja, não suaves) em telefones de baixo custo ou quando tarefas de alto desempenho estiverem sendo executadas no thread principal. As animações Janky podem aumentar o [Cumulative Layout Shift](https://web.dev/cls/) (CLS) da sua página. Reduzir o CLS melhorará sua pontuação de desempenho do Lighthouse.

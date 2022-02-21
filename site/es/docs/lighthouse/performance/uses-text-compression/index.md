@@ -6,8 +6,6 @@ description: |2-
   Obtenga información sobre cómo puede mejorar el rendimiento de carga de su página web al habilitar la compresión de texto.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - '    uses-text-compression'
 ---
 
 Los recursos basados en texto deben servirse comprimidos para minimizar el total de bytes de la red. La sección Oportunidades de su informe de Lighthouse enumera todos los recursos basados en texto que no están comprimidos:

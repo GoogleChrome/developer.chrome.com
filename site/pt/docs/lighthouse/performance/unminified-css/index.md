@@ -4,8 +4,6 @@ title: Minificar CSS
 description: Saiba mais sobre a auditoria do css não minificado.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - css não minificado
 ---
 
 A seção Oportunidades de seu relatório do Lighthouse lista todos os arquivos CSS não minificados, junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte) quando esses arquivos são minificados:

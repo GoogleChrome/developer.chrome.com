@@ -6,8 +6,6 @@ description: |2
   Obtenga más información sobre la auditoría de imágenes fuera de la pantalla.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - offscreen-images
 ---
 
 La sección de Oportunidades del informe Lighthouse enumera todas las imágenes ocultas o fuera de la pantalla en tu página junto con los ahorros potenciales en [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considera la posibilidad de cargar de forma diferida estas imágenes después de que todos los recursos críticos hayan terminado de cargarse para reducir el [Time to Interactive (TTI): Tiempo para interactuar](https://web.dev/tti/):

@@ -4,8 +4,6 @@ title: Total Blocking Time
 description: |
   Learn about Lighthouse's Total Blocking Time metric and
   how to measure and optimize it.
-web_lighthouse:
-  - total-blocking-time
 date: 2019-10-09
 updated: 2021-06-04
 ---

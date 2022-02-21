@@ -6,8 +6,6 @@ description: |2
   Descubra por qué HTTP / 2 es importante para el tiempo de carga de su página y cómo habilitar
 
   HTTP / 2 en su servidor.
-web_lighthouse:
-  - usos-http2
 date: 2019-05-02
 updated: 2019-08-28
 ---

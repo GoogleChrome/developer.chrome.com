@@ -6,8 +6,6 @@ description: |
   can reduce the size of your DOM at load time.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - dom-size
 tags:
   - memory
 ---

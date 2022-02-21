@@ -6,8 +6,6 @@ description: |2
   Obtenga más información sobre la auditoría de contenido animado eficiente.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - efficient-animated-content
 ---
 
 La sección Oportunidades de su informe Lighthouse enumera todos los GIF animados, junto con los ahorros estimados de segundos obtenidos al convertir estos GIF en video:

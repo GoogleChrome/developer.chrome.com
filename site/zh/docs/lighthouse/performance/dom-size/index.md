@@ -4,8 +4,6 @@ title: 避免 DOM 过大
 description: 了解大型 DOM 如何降低网页性能以及如何在加载时减小 DOM 的大小。
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - DOM 大小
 tags:
   - memory
 ---

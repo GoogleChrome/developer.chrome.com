@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: ファサードを使用したサードパーティリソースの遅延読み込み
 description: ファサードを使用してサードパーティのリソースを遅延読み込みする機会について学習します。
 date: 2020-12-01
-web_lighthouse:
-  - third-party-facades
 ---
 
 [サードパーティのリソース](https://web.dev/third-party-javascript/)は、広告や動画の表示やソーシャルメディアとの統合でよく使用されます。デフォルトのアプローチでは、ページが読み込まれるとすぐにサードパーティのリソースが読み込まれますが、これによりページの読み込みが不必要に遅くなる可能性があります。サードパーティのコンテンツが重要でない場合は、[遅延読み込み](https://web.dev/fast/#lazy-load-images-and-video)を行うことで、このパフォーマンスコストを削減できます。

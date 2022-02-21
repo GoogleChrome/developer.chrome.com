@@ -4,8 +4,6 @@ title: Pré-carregue solicitações importantes
 description: Saiba mais sobre a auditoria uses-rel-preload.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - uses-rel-preload
 ---
 
 A seção Oportunidades de seu relatório Lighthouse sinaliza o terceiro nível de solicitações em sua cadeia de solicitações críticas como candidatos de pré-carregamento:

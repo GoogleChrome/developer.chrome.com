@@ -4,8 +4,6 @@ title: Avoid multiple page redirects
 description: |
   Learn why page redirects slow down your web page's load speed and
   how to avoid them.
-web_lighthouse:
-  - redirects
 date: 2019-05-04
 updated: 2019-09-19
 ---

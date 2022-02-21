@@ -6,8 +6,6 @@ description: |
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-11-05
-web_lighthouse:
-  - first-meaningful-paint
 ---
 
 {% Aside 'caution' %}

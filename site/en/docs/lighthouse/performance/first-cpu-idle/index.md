@@ -5,8 +5,6 @@ description: |
   Learn about Lighthouse's First CPU Idle metric and how to optimize it.
 date: 2019-05-02
 updated: 2019-11-05
-web_lighthouse:
-  - first-cpu-idle
 ---
 
 {% Aside 'caution' %}

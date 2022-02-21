@@ -5,8 +5,6 @@ description: |
   Learn about the render-blocking-resources audit.
 date: 2019-05-02
 updated: 2020-08-11
-web_lighthouse:
-  - render-blocking-resources
 ---
 
 The Opportunities section of your Lighthouse report lists all URLs

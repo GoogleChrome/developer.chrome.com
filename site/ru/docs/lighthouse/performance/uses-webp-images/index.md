@@ -6,8 +6,6 @@ date: 2019-05-02
 updated: 2020-05-29
 codelabs:
   - codelab-serve-images-webp
-web_lighthouse:
-  - uses-webp-images
 ---
 
 В разделе Opportunities (Возможности) отчета Lighthouse перечислены все изображения в более старых форматах и показана потенциальная экономия, полученная при использовании AVIF-версий этих изображений.

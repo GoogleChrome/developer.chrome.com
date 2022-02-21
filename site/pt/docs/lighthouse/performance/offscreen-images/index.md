@@ -4,8 +4,6 @@ title: Adie imagens offscreen
 description: Aprenda sobre a auditoria imagens fora da tela.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - offscreen-images
 ---
 
 A seção Oportunidades de seu relatório Lighthouse lista todas as imagens offscreen ou ocultas em sua página junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considere o carregamento lazy dessas imagens depois que todos os recursos críticos terminarem de carregar para reduzir a métrica [Time to Interactive](https://web.dev/tti/) (tempo até interação):

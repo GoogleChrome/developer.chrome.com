@@ -4,8 +4,6 @@ title: Includes front-end JavaScript libraries with known security vulnerabiliti
 description: |
   Learn how to make your page more secure by replacing JavaScript libraries
   that have known vulnerabilities.
-web_lighthouse:
-  - no-vulnerable-libraries
 date: 2019-05-02
 updated: 2020-06-04
 ---

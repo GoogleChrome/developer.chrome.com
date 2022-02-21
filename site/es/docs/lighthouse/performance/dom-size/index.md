@@ -4,8 +4,6 @@ title: Evitar un tamaño de DOM excesivo
 description: Aprenda cómo un DOM grande puede reducir el rendimiento de su página web y cómo puede reducir el tamaño de su DOM durante el tiempo de carga.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - dom-size
 tags:
   - memory
 ---

@@ -6,8 +6,6 @@ description: |2
   uses-rel-preconnect監査について学習します。
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - uses-rel-preconnect
 ---
 
 LighthouseレポートのOpportunitiesセクションには、`<link rel=preconnect>`でフェッチリクエストを優先していないすべての主要なリクエストの一覧が表示されます。

@@ -4,8 +4,6 @@ title: Exibe imagens com proporção incorreta
 description: |2
 
   Aprenda a exibir imagens responsivas com a proporção correta.
-web_lighthouse:
-  - image-aspect-ratio
 date: 2019-05-02
 updated: 2020-04-29
 ---

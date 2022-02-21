@@ -4,8 +4,6 @@ title: Requests the geolocation permission on page load
 description: |
   Learn how to responsibly request geolocation permission in a way that provides
   good user experience.
-web_lighthouse:
-  - geolocation-on-start
 date: 2019-05-02
 updated: 2019-08-28
 ---

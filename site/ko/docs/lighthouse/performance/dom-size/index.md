@@ -6,8 +6,6 @@ description: |2-
   큰 DOM이 웹 페이지의 성능을 어떻게 감소시키고 어떻게 로드 시 DOM 크기를 줄일 수 있는지 알아봅니다.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - dom-size
 tags:
   - memory
 ---

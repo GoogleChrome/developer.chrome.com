@@ -5,8 +5,6 @@ description: |
   Learn how to migrate your web page from the deprecated Application Cache to
   the Cache API.
 date: 2019-05-02
-web_lighthouse:
-  - appcache-manifest
 updated: 2019-08-28
 ---
 

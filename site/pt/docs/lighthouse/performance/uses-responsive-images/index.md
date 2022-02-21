@@ -4,8 +4,6 @@ title: Redimensione imagens corretamente
 description: Saiba mais sobre a auditoria uses-responsive-images.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - uses-responsive-images
 ---
 
 A seção Oportunidades de seu relatório Lighthouse lista todas as imagens em sua página que não têm o tamanho adequado, junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Redimensione essas imagens para economizar dados e melhorar o tempo de carregamento da página:

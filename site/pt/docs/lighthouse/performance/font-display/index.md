@@ -4,8 +4,6 @@ title: Garanta que o texto permanece visível durante o carregamento das fontes 
 description: Aprenda a usar a API font-display para garantir que o texto da sua página web estará sempre visível para seus usuários.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - font-display
 ---
 
 As fontes geralmente são arquivos grandes que demoram um pouco para carregar. Alguns navegadores ocultam o texto até que a fonte carregue, causando um [flash de texto invisível (Flash Of Invisible Text - FOIT)](https://web.dev/avoid-invisible-text/) .

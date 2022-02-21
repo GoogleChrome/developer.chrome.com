@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: 使用 Facade （外观）延迟加载第三方资源
 description: 了解使用 Facade 延迟加载第三方资源的机会。
 date: 2020-12-01
-web_lighthouse:
-  - third-party-facades
 ---
 
 [第三方资源](https://web.dev/third-party-javascript/)通常用于展示广告或视频以及集成社交媒体。默认方法是在页面加载后立即加载第三方资源，但这可能会不必要地减慢页面的加载速度。如果第三方内容不是那么重要，则可以通过[延迟加载](https://web.dev/fast/#lazy-load-images-and-video)来降低这种性能消耗。

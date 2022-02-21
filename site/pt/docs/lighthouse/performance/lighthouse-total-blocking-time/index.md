@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Tempo Total de Bloqueio
 description: Saiba mais sobre a métrica de tempo total de bloqueio do Lighthouse e como medi-lo e otimizá-lo.
-web_lighthouse:
-  - tempo de bloqueio total
 date: 2019-10-09
 updated: 2021-06-04
 ---

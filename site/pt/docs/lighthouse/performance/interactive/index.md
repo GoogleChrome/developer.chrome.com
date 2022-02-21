@@ -4,8 +4,6 @@ title: Time to Interactive
 description: Aprenda sobre a métrica Time to Interactive (tempo até interatividade) da Lighthouse e como medir e otimizá-la.
 date: 2019-05-02
 updated: 2019-10-10
-web_lighthouse:
-  - interactive
 ---
 
 Time to Interactive (TTI), ou tempo até interatividade, é uma das métricas monitoradas na seção **Desempenho** do relatório Lighthouse. Cada métrica captura algum aspecto da velocidade de carregamento da página.

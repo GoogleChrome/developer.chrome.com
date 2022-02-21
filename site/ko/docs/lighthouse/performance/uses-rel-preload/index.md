@@ -6,8 +6,6 @@ description: |2-
   uses-rel-preload 감사에 대해 알아봅니다.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - use-rel-preload
 ---
 
 Lighthouse 보고서의 '기회' 섹션에는 중요 요청 체인에 있는 세 번째 수준의 요청이 사전 로드 후보로 표시됩니다.

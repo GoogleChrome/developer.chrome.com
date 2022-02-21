@@ -6,8 +6,6 @@ description: |2
   Saiba mais sobre a auditoria uses-rel-preconnect.
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - usa-rel-preconnect
 ---
 
 A seção Oportunidades de seu relatório Lighthouse lista todas as solicitações principais que ainda não estão priorizando solicitações de busca com `<link rel=preconnect>`:

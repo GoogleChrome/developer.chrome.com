@@ -5,8 +5,6 @@ description: |
   Learn about the unminified-javascript audit.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - unminified-javascript
 ---
 
 Minifying JavaScript files can reduce payload sizes and script parse time.

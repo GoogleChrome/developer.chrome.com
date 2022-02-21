@@ -4,8 +4,6 @@ title: 자바스크립트 실행 시간 단축
 description: JavaScript 실행이 페이지 성능을 저하시키는 방식과 속도를 높이는 방법에 대해 알아봅니다.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - bootup-time
 tags:
   - memory
 ---

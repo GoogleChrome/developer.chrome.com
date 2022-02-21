@@ -6,8 +6,6 @@ description: |
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2021-06-04
-web_lighthouse:
-  - first-contentful-paint
 ---
 
 First Contentful Paint (FCP) is one of six metrics

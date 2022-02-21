@@ -4,8 +4,6 @@ title: Os erros do navegador foram registrados no console
 description: |2
 
   Aprenda como identificar e corrigir erros do navegador.
-web_lighthouse:
-  - erros no console
 date: 2019-05-02
 updated: 2019-08-28
 ---

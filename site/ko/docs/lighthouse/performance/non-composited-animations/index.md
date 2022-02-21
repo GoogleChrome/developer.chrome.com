@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: 합성되지 않은 애니메이션 방지
 description: '"합성되지 않은 애니메이션 방지" Lighthouse 감사를 통과하는 방법입니다.'
 date: 2020-08-12
-web_lighthouse:
-  - 합성되지 않은 애니메이션
 ---
 
 합성되지 않은 애니메이션은 저가형 휴대폰 또는 성능이 많이 요구되는 작업이 메인 스레드에서 실행될 때 버벅거림(즉, 매끄럽지 않음)으로 나타날 수 있습니다. 버벅거리는 애니메이션은 페이지의 [누적 레이아웃 이동](https://web.dev/cls/)(CLS)을 증가시킬 수 있습니다. CLS를 줄이면 Lighthouse Performance 점수가 향상됩니다.

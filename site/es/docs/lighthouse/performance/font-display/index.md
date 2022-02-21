@@ -4,8 +4,6 @@ title: Asegúrese de que el texto permanece visible mientras carga la fuente web
 description: Aprenda cómo utilizar la API de visualización de fuentes para asegurarse de que el texto de su página web siempre esté visible para sus usuarios.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - font-display
 ---
 
 Con frecuencia, las fuentes son archivos grandes que tardan en cargarse. En algunos navegadores se oculta el texto hasta que se carga la fuente, lo que provoca un [destello de texto invisible (FOIT)](https://web.dev/avoid-invisible-text/).

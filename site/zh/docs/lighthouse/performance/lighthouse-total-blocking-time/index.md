@@ -4,8 +4,6 @@ title: 总阻塞时间
 description: |2-
 
   了解 Lighthouse 的总阻塞时间指标以及如何测量和优化它。
-web_lighthouse:
-  - total-blocking-time
 date: 2019-10-09
 updated: 2021-06-04
 ---

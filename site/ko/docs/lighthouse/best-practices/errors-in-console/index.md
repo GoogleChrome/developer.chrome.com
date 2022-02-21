@@ -4,8 +4,6 @@ title: 브라우저 오류가 콘솔에 기록되었습니다
 description: |2
 
   브라우저 오류를 식별하고 수정하는 방법을 알아보세요.
-web_lighthouse:
-  - errors-in-console
 date: 2019-05-02
 updated: 2019-08-28
 ---

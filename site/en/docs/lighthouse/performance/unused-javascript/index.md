@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Remove unused JavaScript
 description: |
   Learn how to pass Lighthouse's "Remove unused JavaScript" audit.
-web_lighthouse:
-  - unused-javascript
 date: 2020-07-07
 ---
 

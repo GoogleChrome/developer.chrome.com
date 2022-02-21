@@ -5,8 +5,6 @@ description: |
   Learn about the uses-rel-preconnect audit.
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - uses-rel-preconnect
 ---
 
 The Opportunities section of your Lighthouse report lists all key requests

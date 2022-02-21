@@ -6,8 +6,6 @@ description: |2-
   uses-rel-preconnect 감사에 대해 알아보세요.
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - use-rel-preconnect
 ---
 
 Lighthouse 보고서의 기회 섹션에는 `<link rel=preconnect>`로 아직 가져오기 요청의 우선 순위를 지정하지 않은 모든 주요 요청이 나열되어 있습니다.

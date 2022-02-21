@@ -6,8 +6,6 @@ description: |2-
   了解“robots.txt 无效”Lighthouse 审计。
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - robots-txt
 ---
 
 `robots.txt` 文件告诉搜索引擎可以抓取您网站的哪些页面。`robots.txt` 配置无效会导致两类问题：

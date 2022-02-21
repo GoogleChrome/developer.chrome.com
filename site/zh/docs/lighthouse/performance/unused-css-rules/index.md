@@ -4,8 +4,6 @@ title: 删除未使用的 CSS
 description: 了解 unused-css-rules 审计。
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - unused-css-rules
 ---
 
 Lighthouse 报告的“Opportunities（机会）”部分列出了所有未使用 CSS 的样式表，可能节省 2 KiB 或更多。删除未使用的 CSS 以减少网络活动消耗的不必要的字节：

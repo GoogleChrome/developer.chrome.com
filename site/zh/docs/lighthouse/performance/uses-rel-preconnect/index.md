@@ -4,8 +4,6 @@ title: 预连接到所需的源
 description: 了解 uses-rel-preconnect 审计。
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - uses-rel-preconnect
 ---
 
 Lighthouse 报告的“机会”部分列出了所有尚未使用 `<link rel=preconnect>` 对获取请求进行优先级排序的关键请求：

@@ -6,8 +6,6 @@ description: |
   size of resources you serve to your users.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - total-byte-weight
 ---
 
 Large network payloads are highly correlated with long load times.

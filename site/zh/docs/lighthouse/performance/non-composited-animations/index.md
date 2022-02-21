@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: 避免非合成动画
 description: 如何通过“避免非合成动画”Lighthouse 审计。
 date: 2020-08-12
-web_lighthouse:
-  - non-composited-animations
 ---
 
 在低端手机上，或当主线程上运行高性能任务时，非合成动画可能会出现卡顿（即不流畅）。卡顿的动画会提高页面的 [Cumulative Layout Shift](https://web.dev/cls/) (CLS)。降低 CLS 将提高 Lighthouse Performance 得分。

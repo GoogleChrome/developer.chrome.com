@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Los errores del navegador se registraron en la consola
 description: Aprenda a identificar y corregir errores del navegador.
-web_lighthouse:
-  - errores en la consola
 date: 2019-05-02
 updated: 2019-08-28
 ---

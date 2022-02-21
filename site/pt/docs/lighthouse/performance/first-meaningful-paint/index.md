@@ -6,8 +6,6 @@ description: |2-
   Saiba mais sobre a métrica First Meaningful Paint da Lighthouse e como medi-la e otimizá-la.
 date: 2019-05-02
 updated: 2019-11-05
-web_lighthouse:
-  - first-meaningful-paint
 ---
 
 {% Aside 'caution' %} A métrica first-meaningful-paint (FMP) foi descontinuada no Lighthouse 6.0. Na prática, a FMP tem sido excessivamente sensível a pequenas diferenças no carregamento da página, levando a resultados inconsistentes (bimodais). Além disso, a definição da métrica depende de detalhes de implementação específicos do navegador, o que significa que não pode ser padronizada nem implementada em todos os navegadores da web. Seguindo em frente, considere usar a [Largest Contentful Paint](https://web.dev/lcp/). {% endAside %}

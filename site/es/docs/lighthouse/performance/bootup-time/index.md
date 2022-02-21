@@ -6,8 +6,6 @@ description: |-
   y cómo usted puede acelerarlo.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - bootup-time
 tags:
   - memory
 ---

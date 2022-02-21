@@ -5,8 +5,6 @@ description: |
   Learn about the "Page is blocked from indexing" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - is-crawlable
 ---
 
 Search engines can only show pages in their search results if those pages don't

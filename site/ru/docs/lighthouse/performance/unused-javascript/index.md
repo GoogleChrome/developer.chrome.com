@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Удалите неиспользуемый JavaScript
 description: Узнайте, как пройти проверку Lighthouse «Удаление неиспользуемого JavaScript».
-web_lighthouse:
-  - unused-javascript
 date: 2020-07-07
 ---
 

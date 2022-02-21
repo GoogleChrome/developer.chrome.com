@@ -4,8 +4,6 @@ title: Remover CSS não utilizado
 description: Aprenda sobre a auditoria unused-css-rules.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - unused-css-rules
 ---
 
 A seção Oportunidades de seu relatório Lighthouse lista todas as folhas de estilo com CSS não utilizado com uma economia potencial de 2 KiB ou mais. Remova o CSS não utilizado para reduzir bytes desnecessários consumidos pela atividade de rede:

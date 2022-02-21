@@ -4,8 +4,6 @@ title: 画像を効率的にエンコードする
 description: uses-optimized-images監査について学びます。
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - uses-optimized-images
 ---
 
 Lighthouseレポートの[Opportunities]セクションには、最適化されていないすべての画像が表示され、節約できると考えられるデータ量が[キビバイト (KiB)](https://en.wikipedia.org/wiki/Kibibyte) で表示されます。こうした画像を最適化することにより、ページの読み込み速度を改善し、消費するデータ量を減らします。

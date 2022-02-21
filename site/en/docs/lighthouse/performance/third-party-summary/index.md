@@ -6,8 +6,6 @@ description: |
   and how you can optimize third-party code.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - third-party-summary
 ---
 
 To add an advertising network, social media button, A/B test, or analytics service to your page,

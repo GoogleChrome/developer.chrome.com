@@ -6,8 +6,6 @@ description: |
   Get strategies for reducing request counts and transfer sizes.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - resource-summary
 ---
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/)

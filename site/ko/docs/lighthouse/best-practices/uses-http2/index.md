@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 모든 리소스에 HTTP/2를 사용하지 않음
 description: HTTP/2가 페이지 로드 시간에 중요한 이유와 서버에서 HTTP/2를 활성화하는 방법을 알아봅니다.
-web_lighthouse:
-  - uses-http2
 date: 2019-05-02
 updated: 2019-08-28
 ---

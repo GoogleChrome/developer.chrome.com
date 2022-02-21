@@ -8,8 +8,6 @@ description: |2
   tamanho dos recursos que você atende aos seus usuários.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - peso total em bytes
 ---
 
 Grandes cargas de rede são altamente correlacionadas com longos tempos de carregamento. Eles também custam dinheiro aos usuários; por exemplo, os usuários podem ter que pagar por mais dados de celular. Portanto, reduzir o tamanho total das solicitações de rede da sua página é bom para a experiência dos usuários no seu site *e* nas carteiras deles.

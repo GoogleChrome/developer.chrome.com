@@ -8,8 +8,6 @@ description: |2
   以及如何减少这种影响。
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - critical-request-chains
 ---
 
 [关键请求链](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)是一系列对页面呈现很重要的依赖网络请求。链的长度越长，下载量越大，对页面加载性能的影响就越大。

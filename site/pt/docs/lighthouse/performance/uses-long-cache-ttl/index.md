@@ -4,8 +4,6 @@ title: Sirva ativos estáticos com uma política de cache eficiente
 description: Aprenda como armazenar em cache os recursos estáticos de sua página web pode melhorar o desempenho e confiabilidade para visitantes recorrentes.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - uses-long-cache-ttl
 ---
 
 O cache HTTP pode acelerar o tempo de carregamento da página em visitas repetidas.

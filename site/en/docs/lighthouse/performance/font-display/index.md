@@ -6,8 +6,6 @@ description: |
   will always be visible to your users.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - font-display
 ---
 
 Fonts are often large files that take awhile to load.

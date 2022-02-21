@@ -6,8 +6,6 @@ description: |2-
   Obtenga más información sobre la auditoría de uses-rel-preload.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - uses-rel-preload
 ---
 
 La sección Oportunidades de su informe Lighthouse marca el tercer nivel de consultas en su cadena de consultas críticas como candidatos de precarga:

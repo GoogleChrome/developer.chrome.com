@@ -4,8 +4,6 @@ title: Minimize o trabalho do thread principal
 description: Aprenda sobre o thread principal do navegador e como você pode otimizar sua página web para reduzir a carga do thread principal e melhorar o desempenho.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - mainthread-work-breakdown
 ---
 
 O [processo de renderização](https://developers.google.com/web/updates/2018/09/inside-browser-part3) do navegador é o que transforma seu código numa página web com a qual seus usuários podem interagir. Por default, o [thread principal](https://developer.mozilla.org/docs/Glossary/Main_thread) do processo de renderização normalmente lida com a maioria do código: ele processa o HTML e constrói o DOM, processa o CSS e aplica os estilos especificados e processa, computa e executa o JavaScript.

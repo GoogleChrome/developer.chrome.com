@@ -6,8 +6,6 @@ description: |2
   Saiba mais sobre a auditoria javascript não-minimizada.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - unminified-javascript
 ---
 
 Minifizar arquivos JavaScript pode reduzir os tamanhos de carga útil e o tempo de análise do script. A seção Oportunidades de seu relatório Lighthouse lista todos os arquivos JavaScript não minimizados, junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte) quando esses arquivos são minimizados:

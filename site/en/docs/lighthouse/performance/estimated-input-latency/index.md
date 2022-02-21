@@ -6,8 +6,6 @@ description: |
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - estimated-input-latency
 ---
 
 Estimated Input Latency is one of six metrics

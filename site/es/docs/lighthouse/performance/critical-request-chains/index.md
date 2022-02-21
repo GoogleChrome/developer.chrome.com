@@ -8,8 +8,6 @@ description: |2-
   y cómo se puede reducir su efecto.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - cadenas-de-solicitudes-críticas
 ---
 
 [Las cadenas de solicitudes críticas](https://developers.google.com/web/fundamentals/performance/critical-rendering-path) son una serie de solicitudes de red dependientes importantes para la representación de páginas. Cuanto mayor sea la longitud de las cadenas y los tamaños de descarga, más significativo será el impacto en el rendimiento de carga de la página.

@@ -6,8 +6,6 @@ description: |2-
   Obtén más información sobre la auditoría uses-rel-preconnect.
 date: 2019-05-02
 updated: 2020-05-06
-web_lighthouse:
-  - uses-rel-preconnect
 ---
 
 La sección Oportunidades de tu informe Lighthouse enumera todas las solicitudes clave que aún no priorizan las solicitudes de recuperación con `<link rel=preconnect>`:

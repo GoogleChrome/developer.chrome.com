@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Avoid non-composited animations
 description: How to pass the "Avoid non-composited animations" Lighthouse audit.
 date: 2020-08-12
-web_lighthouse:
-  - non-composited-animations
 ---
 
 Non-composited animations can appear janky (i.e. not smooth) on low-end phones or when

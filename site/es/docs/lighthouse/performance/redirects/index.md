@@ -6,8 +6,6 @@ description: |2
   Descubra por qué los redireccionamientos de página ralentizan la velocidad de carga de su página web y
 
   cómo evitarlos.
-web_lighthouse:
-  - redirects
 date: 2019-05-04
 updated: 2019-09-19
 ---

@@ -5,8 +5,6 @@ description: |
   Learn about Lighthouse's Speed Index metric and how to optimize it.
 date: 2019-05-02
 updated: 2021-06-04
-web_lighthouse:
-  - speed-index
 ---
 
 Speed Index is one of six metrics

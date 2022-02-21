@@ -6,8 +6,6 @@ description: |2-
   Aprenda como um DOM grande pode reduzir o desempenho de sua página da web e como você pode reduzir o tamanho dele no momento do carregamento.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - dom-size
 tags:
   - memory
 ---

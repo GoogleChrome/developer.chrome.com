@@ -5,8 +5,6 @@ description: |
   Learn about how enabling text compression can improve your webpage load performance.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - uses-text-compression
 ---
 
 Text-based resources should be served with compression

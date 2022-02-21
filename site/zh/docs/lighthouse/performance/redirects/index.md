@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 避免多个页面重定向
 description: 了解为什么页面重定向会减慢网页的加载速度以及如何加以避免。
-web_lighthouse:
-  - redirects
 date: 2019-05-04
 updated: 2019-09-19
 ---

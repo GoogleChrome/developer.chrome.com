@@ -5,8 +5,6 @@ description: |
   Learn about the opportunities to lazy load third-party resources with facades.
 date: 2020-12-01
 #updated: 2020-12-01
-web_lighthouse:
-  - third-party-facades
 ---
 
 [Third-party resources](https://web.dev/third-party-javascript/) are often used for displaying ads or videos and integrating with social media. The default approach is to load third-party resources as soon as the page loads, but this can unnecessarily slow the page load. If the third-party content is not critical, this performance cost can be reduced by [lazy loading](https://web.dev/fast/#lazy-load-images-and-video) it.

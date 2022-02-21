@@ -6,8 +6,6 @@ description: |2-
   uses-responsive-images 감사에 대해 알아봅니다.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - uses-responsive-images
 ---
 
 Lighthouse 보고서의 '기회' 섹션에는 페이지에서 크기가 적절하지 않은 모든 이미지와 함께 잠재적인 절감량이 [KiB(kibibytes)](https://en.wikipedia.org/wiki/Kibibyte) 단위로 나열됩니다. 이러한 이미지의 크기를 조정하여 데이터를 절약하고 페이지 로드 시간을 개선하세요.

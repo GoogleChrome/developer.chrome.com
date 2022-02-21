@@ -6,8 +6,6 @@ description: |
   to reduce main thread load and improve performance.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - mainthread-work-breakdown
 ---
 
 The browser's [renderer process](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

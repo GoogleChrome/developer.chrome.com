@@ -6,8 +6,6 @@ description: |2-
   Saiba mais sobre a auditoria do Lighthouse "Os links não possuem texto descritivo".
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - link-text
 ---
 
 O texto do link é a palavra ou frase clicável em um hiperlink. Quando ele transmite o destino do hiperlink com clareza, tanto os usuários quanto os mecanismos de pesquisa conseguem entender mais facilmente seu conteúdo e como ele se relaciona com as outras páginas.

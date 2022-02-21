@@ -6,8 +6,6 @@ description: |
   how to measure and optimize it.
 date: 2020-01-10
 updated: 2021-06-04
-web_lighthouse:
-  - largest-contentful-paint
 ---
 
 Largest Contentful Paint (LCP) is one of the metrics

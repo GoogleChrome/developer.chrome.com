@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Usos de document.write()
 description: Aprenda a acelerar el tiempo de carga de su página con el fin de evitar document.write().
-web_lighthouse:
-  - no utilice document.write
 date: 2019-05-02
 updated: 2020-06-04
 ---

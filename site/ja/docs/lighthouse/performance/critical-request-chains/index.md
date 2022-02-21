@@ -4,8 +4,6 @@ title: クリティカル要求をチェーン化しない
 description: クリティカル要求チェーンとは何か、Webページのパフォーマンスにどのように影響するのか、その影響を低減する方法について説明します。
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - クリティカル要求チェーン
 ---
 
 [クリティカル要求チェーン](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)は、ページのレンダリングにとって重要な一連の依存ネットワークリクエストです。チェーンの長さが長く、ダウンロードサイズが大きいほど、ページの読み込みパフォーマンスへの影響が大きくなります。

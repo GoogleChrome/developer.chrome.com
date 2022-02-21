@@ -5,8 +5,6 @@ description: |
   Learn about the uses-rel-preload audit.
 date: 2019-05-02
 updated: 2020-06-04
-web_lighthouse:
-  - uses-rel-preload
 ---
 
 The Opportunities section of your Lighthouse report

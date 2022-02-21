@@ -6,8 +6,6 @@ description: |
   and reliability for repeat visitors.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - uses-long-cache-ttl
 ---
 
 HTTP caching can speed up your page load time on repeat visits.

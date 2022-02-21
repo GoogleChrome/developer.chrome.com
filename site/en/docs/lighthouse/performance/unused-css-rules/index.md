@@ -5,8 +5,6 @@ description: |
   Learn about the unused-css-rules audit.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - unused-css-rules
 ---
 
 The Opportunities section of your Lighthouse report lists

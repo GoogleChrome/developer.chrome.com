@@ -6,8 +6,6 @@ description: |2-
   uses-optimized-images 감사에 대해 알아보세요.
 date: 2019-05-02
 updated: 2020-06-20
-web_lighthouse:
-  - uses-optimized-images
 ---
 
 Lighthouse 보고서의 기회 섹션에는 [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte)로 잠재적 절감 효과를 제공하는 최적화되지 않은 모든 이미지가 나열되어 있습니다. 페이지가 더 빨리 로드되고 더 적은 데이터를 소비하도록 이러한 이미지를 최적화합니다.

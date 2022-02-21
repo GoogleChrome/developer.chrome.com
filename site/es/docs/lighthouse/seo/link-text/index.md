@@ -6,8 +6,6 @@ description: |2-
   Obtén más información sobre la auditoría Lighthouse de "Los enlaces no tienen texto descriptivo".
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - link-text
 ---
 
 El texto del vínculo es la palabra o frase en la que se puede hacer clic en un hipervínculo. Cuando el texto del enlace transmite claramente el objetivo de un hipervínculo, tanto los usuarios como los motores de búsqueda pueden comprender de una manera más sencilla tu contenido y cómo se relaciona con otras páginas.

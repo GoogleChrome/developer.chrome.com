@@ -6,8 +6,6 @@ description: |2-
   Obten información sobre la métrica Time to Interactive (TTI): Tiempo para interactuar de Lighthouse y cómo medirlo y optimizarlo.
 date: 2019-05-02
 updated: 2019-10-10
-web_lighthouse:
-  - interactive
 ---
 
 Time to Interactive (TTI): Tiempo para interactuar es una de las seis métricas que se registran en la sección de **Rendimiento** del informe Lighthouse. Cada métrica captura algún aspecto de la velocidad de carga de la página.

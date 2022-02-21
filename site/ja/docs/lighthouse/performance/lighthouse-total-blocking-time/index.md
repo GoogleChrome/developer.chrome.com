@@ -4,8 +4,6 @@ title: Total Blocking Time (合計ブロック時間)
 description: |2-
 
   LighthouseのTotal Blocking Timeメトリックの概要、それを評価および最適化する方法について学びます。
-web_lighthouse:
-  - 合計ブロック時間
 date: 2019-10-09
 updated: 2021-06-04
 ---

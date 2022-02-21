@@ -6,8 +6,6 @@ description: |
   and how you can reduce the effect.
 date: 2019-05-02
 updated: 2020-04-29
-web_lighthouse:
-  - critical-request-chains
 ---
 
 [Critical request chains](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)

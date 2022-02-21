@@ -4,8 +4,6 @@ title: 문서에 유효한 rel=canonical이 없음
 description: '"문서에 유효한 rel=canonical이 없음" Lighthouse 감사에 대해 알아봅니다.'
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - canonical
 ---
 
 여러 페이지에 유사한 콘텐츠가 있는 경우 검색 엔진은 이를 동일한 페이지의 중복 버전으로 간주합니다. 예를 들어, 제품 페이지의 데스크톱 및 모바일 버전은 종종 중복으로 간주됩니다.

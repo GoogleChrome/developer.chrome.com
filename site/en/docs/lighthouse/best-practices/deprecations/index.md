@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Uses deprecated APIs
 description: |
   Learn how to remove and replace deprecated APIs from your web page.
-web_lighthouse:
-  - deprecations
 date: 2019-05-02
 updated: 2019-08-28
 ---

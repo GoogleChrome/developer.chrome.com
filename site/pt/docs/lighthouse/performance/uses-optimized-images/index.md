@@ -6,8 +6,6 @@ description: |2
   Saiba mais sobre a auditoria de imagens otimizadas de uso.
 date: 2019-05-02
 updated: 2019-06-20
-web_lighthouse:
-  - usa imagens otimizadas
 ---
 
 A seção Oportunidades no seu relatório Lighthouse lista todas as imagens não otimizadas, com economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Otimize essas imagens para que a página carregue mais rápido e consuma menos dados:

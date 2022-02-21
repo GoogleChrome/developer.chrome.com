@@ -4,8 +4,6 @@ title: Cómo publicar activos estáticos con políticas eficientes para el cach�
 description: Descubra cómo el almacenamiento en el caché de los recursos estáticos de su página web puede mejorar el rendimiento y la seguridad para los visitantes habituales.
 date: 2019-05-02
 updated: 2019-10-04
-web_lighthouse:
-  - usa-long-cache-ttl
 ---
 
 Almacenar el HTTP en el caché puede acelerar el tiempo de carga de su página en las visitas habituales.

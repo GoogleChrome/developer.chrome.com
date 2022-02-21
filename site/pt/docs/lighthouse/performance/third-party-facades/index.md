@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Carregue recursos de terceiros de forma lazy com fachadas
 description: Aprenda sobre as oportunidades de carregamento lazy de recursos de terceiros com fachadas.
 date: 2020-12-01
-web_lighthouse:
-  - third-party-facades
 ---
 
 [Recursos de terceiros](https://web.dev/third-party-javascript/) costumam ser usados para exibir anúncios ou vídeos e integrar-se a mídias socias. A abordagem default é carregar recursos de terceiros assim que a página for carregada, mas isto pode retardar desnecessariamente o carregamento da página. Se o conteúdo de terceiros não for crítico, esse custo de desempenho pode ser reduzido usando [carregamento lazy](https://web.dev/fast/#lazy-load-images-and-video).

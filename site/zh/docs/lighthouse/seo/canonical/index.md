@@ -6,8 +6,6 @@ description: |2-
   了解“文档没有有效的 rel=canonical”Lighthouse 审计。
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - canonical
 ---
 
 当多个页面具有相似的内容时，搜索引擎会将它们视为同一页面的重复版本。例如，产品页面的桌面和移动版本通常被认为是重复版本。
