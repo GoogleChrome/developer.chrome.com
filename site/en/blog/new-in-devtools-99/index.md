@@ -55,6 +55,7 @@ Chromium issue: [1205856](https://crbug.com/1205856)
 You can now use the [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to properly style console messages. Previously, DevTools console had very limited (and partly broken) support for ANSI escape sequences.
 
 It is common for [Node.js](https://nodejs.org/) developers to colorize log messages via ANSI escape sequences, often with the help of some styling libraries like [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc. 
+
 With these changes, you can now debug your Node.js applications seamlessly using DevTools, with proper colorized console messages. Open this [demo](https://stackblitz.com/edit/node-colors-test) to view it yourself!
 
 To learn more about formatting & styling console messages with DevTools, go to [format and style messages in the Console](/docs/devtools/console/format-styling) documentation.
@@ -81,6 +82,7 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 ### More intuitive console group filter {: #console-filter }
 
 When filtering the console message, a console message is now shown if its message content matches the filter or the title of the group (or the ancestor group) matches the filter. Previously, the console group title would show despite the filter.
+
 In addition, if a console message is shown, the group (or the ancestor group) it belongs to is now shown as well. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7iE7r79DI3cQxObhiZUh.png", alt="console group filter", width="800", height="612" %}
