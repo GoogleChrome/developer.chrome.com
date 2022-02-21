@@ -3,6 +3,20 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/ru/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/ru/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/ru/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/ru/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/ru/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/ru/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/ru/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/ru/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/ru/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-99/#misc) -->
+
+
 ### Chrome 98 {: #chrome98 }
 * [Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree)](/ru/blog/new-in-devtools-98/#a11y-tree)
 * [Явное отображение изменений на вкладке Изменения (Changes)](/ru/blog/new-in-devtools-98/#changes)
@@ -44,13 +58,13 @@
 
 ### Chrome 95 {: #chrome95 }
 
-* [Новый инструмент выбора единиц измерения длины в CSS](/blog/new-in-devtools-95/#length)
-* [Скрытие задач во вкладке Проблемы (Issues)](/blog/new-in-devtools-95/#hide-issues)
-* [Улучшенное отображение свойств](/blog/new-in-devtools-95/#properties)
-* [Lighthouse 8.4 во вкладке Lighthouse](/blog/new-in-devtools-95/#lighthouse)
-* [Сортировка снипетов во вкладке Источники (Sources)](/blog/new-in-devtools-95/#snippets)
-* [Новые ссылки на переводы обновлений и сообщение об ошибке в переводе](/blog/new-in-devtools-95/#localized)
-* [Улучшенный UI для командного меню в DevTools](/blog/new-in-devtools-95/#command-menu)
+* [Новый инструмент выбора единиц измерения длины в CSS](/ru/blog/new-in-devtools-95/#length)
+* [Скрытие задач во вкладке Проблемы (Issues)](/ru/blog/new-in-devtools-95/#hide-issues)
+* [Улучшенное отображение свойств](/ru/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4 во вкладке Lighthouse](/ru/blog/new-in-devtools-95/#lighthouse)
+* [Сортировка снипетов во вкладке Источники (Sources)](/ru/blog/new-in-devtools-95/#snippets)
+* [Новые ссылки на переводы обновлений и сообщение об ошибке в переводе](/ru/blog/new-in-devtools-95/#localized)
+* [Улучшенный UI для командного меню в DevTools](/ru/blog/new-in-devtools-95/#command-menu)
 
 
 ### Chrome 94 {: #chrome94 }

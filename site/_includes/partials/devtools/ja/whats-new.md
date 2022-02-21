@@ -2,6 +2,21 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/ja/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/ja/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/ja/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/ja/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/ja/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/ja/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/ja/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/ja/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/ja/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-99/#misc) -->
+
+
 ### Chrome 98 {: #chrome98 }
 * [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
 * [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
