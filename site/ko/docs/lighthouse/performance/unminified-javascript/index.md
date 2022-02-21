@@ -20,9 +20,7 @@ JavaScript 파일을 축소하면 페이로드 크기와 스크립트 구문 분
 
 ### Drupal
 
-**관리**에서 **JavaScript 파일 집계**를 활성화했는지 확인하십시오.
-
-> **구성** &gt; **개발** 페이지. [추가 모듈](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search)을 통해 고급 집계 옵션을 구성하여 JavaScript 자산을 연결, 축소 및 압축하여 사이트 속도를 높일 수도 있습니다.
+**관리**에서 **JavaScript 파일 집계**를 활성화했는지 확인하십시오. &gt; **구성** &gt; **개발** 페이지. [추가 모듈](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search)을 통해 고급 집계 옵션을 구성하여 JavaScript 자산을 연결, 축소 및 압축하여 사이트 속도를 높일 수도 있습니다.
 
 ### Joomla
 

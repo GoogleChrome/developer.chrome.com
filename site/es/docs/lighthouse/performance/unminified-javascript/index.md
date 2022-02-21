@@ -20,9 +20,7 @@ La minificación es el proceso de eliminar los espacios en blanco y cualquier c�
 
 ### Drupal
 
-Asegúrese de habilitar **Aggregate JavaScript files** en la **Administration**.
-
-> **Configuración** > Página de **desarrollo.** También puede configurar opciones de agregación más avanzadas a través de [módulos adicionales](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search) para acelerar su sitio concatenando, minimizando y comprimiendo sus activos de JavaScript.
+Asegúrese de habilitar **Aggregate JavaScript files** en la **Administration** &gt; **Configuración** &gt; Página de **desarrollo.** También puede configurar opciones de agregación más avanzadas a través de [módulos adicionales](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search) para acelerar su sitio concatenando, minimizando y comprimiendo sus activos de JavaScript.
 
 ### Joomla
 
