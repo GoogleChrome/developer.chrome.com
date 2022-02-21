@@ -2,6 +2,19 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 98 {: #chrome99 }
+* [Throttling WebSocket requests](/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/blog/new-in-devtools-99/#misc)
+
+
 ### Chrome 98 {: #chrome98 }
 * [Preview feature: Full-page accessibility tree](/blog/new-in-devtools-98/#a11y-tree)
 * [More precise changes in the Changes tab](/blog/new-in-devtools-98/#changes)
