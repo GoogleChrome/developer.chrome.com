@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Fenced Frames'
+title: 'Fenced Frame'
 subhead: >
   Embed content onto a page in more privacy-preserving way.
 description: |
@@ -15,7 +15,7 @@ date: 2022-02-28
 *  [Fenced Frame API proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 
-## What are fenced frames?
+## What is Fenced Frame?
 
 The Fenced Frame API is a proposed new embedding API, which displays content
 similar to an iframe. Unlike iframes, a fenced frame restricts communication
@@ -24,7 +24,7 @@ cross-site data.
 
 ```html
 <fencedframe src="https://3rd.party.example">
-  New API for privacy-preserving way to embed content
+  <!-- Content displayed, in a privacy-preserving manner. -->
 </fencedframe>
 ```
 
