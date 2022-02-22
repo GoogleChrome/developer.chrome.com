@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Fenced Frame'
 subhead: >
-  Embed content onto a page in more privacy-preserving way.
+  Embed content onto a page in a more privacy-preserving way.
 description: |
-  Embed content onto a page in more privacy-preserving way. Learn about the Fenced Frame API and usage examples.
+  Embed content onto a page in a more privacy-preserving way. Learn about the Fenced Frame API and usage examples.
 authors:
   - jackjey
 date: 2022-02-28
