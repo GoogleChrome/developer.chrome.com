@@ -48,6 +48,17 @@ The **Endpoints** section gives you an overview of all the endpoints configured 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
 
+## Support wait until element is visible/clickable in the Recorder panel {: #recorder }
+
+When replaying a user flow recording, the **Recorder** panel will now wait until the element is visible or clickable in the viewport or try to automatically scroll the element into the viewport before replaying the step. Previously, the replay would fail immediately.
+
+Here is an example of an off-screen menu positioned outside of the viewport and slide in when activated. The user flow is to toggle the menu, and click on the menu item. Previously, the replay would fail at the last step, because the menu item is still sliding in and not visible in the viewport yet. It’s fixed now.
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
+
+Chromium issue: [1257499](https://crbug.com/1257499#c38)
+
+
 ## Better console styling, formatting and filtering {: #console }
 
 ### Properly style log messages with ANSI escape code {: #console-styling } 
@@ -103,17 +114,6 @@ You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
 Chromium issue: [212374](https://crbug.com/212374)
-
-
-## Support wait until element is visible/clickable in the Recorder panel {: #recorder }
-
-When replaying a user flow recording, the **Recorder** panel will now wait until the element is visible or clickable in the viewport or try to automatically scroll the element into the viewport before replaying the step. Previously, the replay would fail immediately.
-
-Here is an example of an off-screen menu positioned outside of the viewport and slide in when activated. The user flow is to toggle the menu, and click on the menu item. Previously, the replay would fail at the last step, because the menu item is still sliding in and not visible in the viewport yet. It’s fixed now.
-
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
-
-Chromium issue: [1257499](https://crbug.com/1257499#c38)
 
 
 ### Improved source folder tree in the Sources panel {: #source-tree }
