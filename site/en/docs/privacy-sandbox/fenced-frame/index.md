@@ -45,25 +45,32 @@ applied to standard storage APIs including LocalStorage, IndexedDB, and cookies.
 In a partitioned world, information leakage across first-party storage won't be
 possible, and many tracking related problems will be solved.
 
-## How does fenced frames work with The Privacy Sandbox initiative?
+### How does fenced frames work with partitioned data?
 
 The Privacy Sandbox initiative suggests top-level sites should partition data. Many of the proposals aim to satisfy cross-site use cases without third-party cookies or other tracking mechanisms. For example: 
 
 *  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
-   in a privacy-preserving manner 
-*  [FedCM](https://github.com/fedidcg/FedCM) for secure single sign-on (SSO)
+   in a privacy-preserving manner.
+*  [FedCM](https://github.com/fedidcg/FedCM) for secure single sign-on (SSO).
 
 Some Privacy Sandbox proposals allow access to unpartitioned storage with
-privacy-preserving methods, while others satisfy specific use-cases without exposing first-party storage. Fenced frames are in the former category.
+privacy-preserving methods, while others satisfy specific use-cases without exposing first-party storage.
 
-For example, let's take a look at the [FLEDGE](/docs/privacy-sandbox/fledge/)
-proposal. With FLEDGE, a user's interests are registered on an advertiser's site in [interest groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that may be of interest to the user. Then, on a separate site (known as a "publisher"), the ads registered in relevant interest groups are auctioned and the winning ad is displayed.
+For example, let's consider how fenced frames could work with the 
+[FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's 
+interests are registered on an advertiser's site in [interest 
+groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads 
+that may be of interest to the user. Then, on a separate site (known as a 
+"publisher"), the ads registered in relevant interest groups are auctioned and 
+the winning ad is displayed.
 
-If the publisher displays the winning ad in an iframe and the script can read
-the iframe's `src` attribute, the publisher can infer information about the
+If the publisher displays the winning ad in an iframe and the script can read 
+the iframe's `src` attribute, the publisher can infer information about the 
 visitor's interests from that ads URL. This is not privacy-preserving.
 
-This use case, among others, is why we've proposed fenced frames.
+With a fenced frame, the publisher could display an ad which matches visitor 
+interests, but the `src` and interest group will be known only to the 
+advertiser. The publisher could not access this information.
 
 ## How fenced frames work
 
@@ -89,7 +96,7 @@ Ultimately, fenced frames won't replace iframes. Instead they're proposed as a
 more private frame for usage when data from different top-level partitions needs
 to be displayed on the same page
 
-## How will this API be used?
+## How will the Fenced Frame API be used?
 
 Fenced frames will work in partnership with another proposed API to access
 unpartitioned data. Potential APIs are currently in discussion, but one contender
@@ -112,8 +119,12 @@ attribute.
 ```
 
 Some APIs can provide an opaque URL, which looks something like
-`"urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a"`, which could be used as a
+`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`, which could be used as a
 fenced frame `src`.
+
+```html
+<fencedframe src="urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a"></fencedframe>
+```
 
 Remember, a fenced frame can't communicate with its parent element with the
 [Messaging API](https://developer.mozilla.org/docs/Web/API/Window/postMessage).
@@ -127,13 +138,15 @@ Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from Fenced fr
 Sec-Fetch-Dest: fencedframe
 ```
 
-The server must set the `Supports-Loading-Mode: fenced-frame` response header for `demo_fenced_frame.html` to be embedded in a fenced frame.
+The server must set the `Supports-Loading-Mode: fenced-frame` response header
+for `demo_fenced_frame.html` to be embedded in a fenced frame.
 
 ```http
 Supports-Loading-Mode: fenced-frame
 ```
 
-For more details, review the [Fenced Frame API specifications](https://github.com/shivanigithub/fenced-frame).
+For more details, review the [Fenced Frame API
+specifications](https://github.com/shivanigithub/fenced-frame).
 
 ## Try the Fenced Frame API
 
