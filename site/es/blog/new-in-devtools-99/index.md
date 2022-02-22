@@ -165,7 +165,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 
 <!-- ## Touch-friendly color-picker and split pane {: #touch-friendly } -->
 
-<!-- You now now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices. -->
+<!-- You can now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices. -->
 
 <!-- Here is an example captured with the [Google Pixelbook](https://www.google.com/chromebook/device/google-pixelbook/) device touchscreen. -->
 
