@@ -36,14 +36,15 @@ you've seen them appear again in an ad on a completely different site.
 This advertising technique is achieved primarily through tracking technology
 that uses third-party cookies to share information across sites. This is
 technology which [Chrome has committed to phase
-out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/).
+out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/) and replace with more privacy-preserving variants.
 
 Currently, Chrome teams are working on [storage
 partitioning](https://github.com/privacycg/storage-partitioning), which
 separates browser storage on a per-site basis. Storage partitioning will be
 applied to standard storage APIs including LocalStorage, IndexedDB, and cookies.
-In a partitioned world, information leakage across first-party storage won't be
-possible, and many tracking related problems will be solved.
+In a partitioned world, information leakage across first-party storage will be
+significantly reduced, and many tracking related problems will be solved.
+
 
 ### How does fenced frames work with partitioned data?
 
