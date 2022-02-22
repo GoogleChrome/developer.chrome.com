@@ -169,6 +169,4 @@ The Fenced Frame proposal is under active discussion and subject to change in th
 ## Find out more
 
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064)
-*  [Blink Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)  
-
-_Header photo by [Gwengoat](https://www.istockphoto.com/portfolio/Gwengoat?mediatype=photography) on [iStockphoto](https://www.istockphoto.com/photo/private-property-sign-gm536675704-95052019)._
+*  [Blink Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)
