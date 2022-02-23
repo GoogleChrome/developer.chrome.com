@@ -10,6 +10,10 @@ blog:
   en: 'Blog'
   es: 'Blog'
 
+updates:
+  en: 'Key updates'
+  es: 'Key updates'
+
 releases:
   en: 'Releases'
   es: 'Versiones'
