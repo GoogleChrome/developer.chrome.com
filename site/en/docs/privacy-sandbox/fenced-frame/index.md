@@ -126,7 +126,7 @@ Now that you know what fenced frames will and won’t do, it’s useful to compa
 | Embedding context can access embedded content DOM | Yes | No | 
 | Access to `name` | Yes | No |
 | URLs (`http://example.com`) | Yes | No |
-| Opaque source (`urn:uuid`) | Yes | Yes |
+| Opaque source (`urn:uuid`) | No | Yes |
 | Messaging API allowed inside the frame (embedded content can interact with itself) | Yes | Yes |
 
 Fenced frames elect to support fewer features than iframes, as a way of 
