@@ -55,10 +55,9 @@ leakage across first-party storage will be significantly reduced.
 ### How do fenced frames work with cross-ste data?
 
 The fenced frame element is a [Privacy Sandbox 
-proposal](https://developer.chrome.com/docs/privacy-sandbox/overview/) which 
-suggests top-level sites should partition data. Many of the Privacy Sandbox 
-proposals aim to satisfy cross-site use cases without third-party cookies or 
-other tracking mechanisms. For example: 
+proposal](/docs/privacy-sandbox/overview/) which suggests top-level sites should 
+partition data. Many of the Privacy Sandbox proposals aim to satisfy cross-site 
+use cases without third-party cookies or other tracking mechanisms. For example: 
 
 *  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
    in a privacy-preserving manner.
@@ -139,7 +138,9 @@ Ultimately, fenced frames won't replace iframes. Instead they're proposed as a
 more private frame for usage when data from different top-level partitions needs
 to be displayed on the same page.
 
-There are still valuable use cases for if
+Friendly iframes, iframes which share the same source as the top-level page, are 
+considered trusted content and may value shared communication with the Messaging 
+API.
 
 ## How will the Fenced Frame API be used?
 
