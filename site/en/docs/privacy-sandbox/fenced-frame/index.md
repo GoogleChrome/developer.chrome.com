@@ -102,7 +102,7 @@ the ad source URL to the site owner.
 It's not enough to just be able to display ads. If the ad can `postMessage` to
 the publisher's site, like in an iframe, it may leak the content of the
 displayed ad. So unlike iframes, fenced frames don't allow usage of the
-[Messaging API](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
+[`postMessage`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 to communicate with the top-level site.
 
 Fenced frames will be isolated from the publisher in other ways as well. For
@@ -127,7 +127,6 @@ Now that you know what fenced frames will and won’t do, it’s useful to compa
 | Access to `name` | Yes | No |
 | URLs (`http://example.com`) | Yes | No |
 | Opaque source (`urn:uuid`) | No | Yes |
-| Messaging API allowed inside the frame (embedded content can interact with itself) | Yes | Yes |
 
 Fenced frames elect to support fewer features than iframes, as a way of 
 preserving privacy.
@@ -156,10 +155,6 @@ Current candidates for this combination. include:
   storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage)
 
 For more details, refer to the [Fenced Frame explainer](https://github.com/shivanigithub/fenced-frame#use-caseskey-scenarios).
-
-### Do I need to use fenced frames?
-
-
 
 ### Example usage
 
