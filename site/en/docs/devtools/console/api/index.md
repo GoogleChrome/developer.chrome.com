@@ -181,7 +181,7 @@ console.log('log');
 
 **Figure 9**. The result of the `console.log()` example above.
 
-## console.table(array) {: #table }
+## console.table(array [, columns]) {: #table }
 
 [Log level][19]: `Info`
 
