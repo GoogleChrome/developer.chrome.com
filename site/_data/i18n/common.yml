@@ -90,9 +90,9 @@ see_all_docs:
   en: 'See all documentation'
   es: 'Ver todos los documentación'
 
-read_more:
-  en: 'Read more'
-  es: 'Read more'
+see_updates:
+  en: 'See all recent updates'
+  es: 'See all recent updates'
 
 follow:
   en: 'Follow'
