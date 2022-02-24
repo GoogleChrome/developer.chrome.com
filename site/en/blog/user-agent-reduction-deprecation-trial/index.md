@@ -53,7 +53,7 @@ Once you've registerd for the trial, update your HTTP response headers with the 
         -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "[https://google.com](https://google.com)")`.
         -  To allow all third-party domains, add `Permissions-Policy: ch-ua-full=*`.
     - Add an `Accept-CH` meta tag with the third-party domains that should receive the reduced UA (only in Chrome 100 and above).
-        -  To allow a named list of third-party domains, add <meta name="accept-ch" content="ch-ua-full=( https://google.com )">
+        -  To allow a named list of third-party domains, add `<meta name="accept-ch" content="ch-ua-full=( https://google.com )">`.
         -  It's not possible to delegate to all third-party domains via `*` in the meta tag.
 1. Load your website in Chrome 100 (or later) and continue receiving the full User-Agent string.
 
