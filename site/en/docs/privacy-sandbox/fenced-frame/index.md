@@ -127,6 +127,7 @@ Now that you know what fenced frames will and won’t do, it’s useful to compa
 | Access to `name` | Yes | No |
 | URLs (`http://example.com`) | Yes | No |
 | Opaque source (`urn:uuid`) | No | Yes |
+| Access to unpartitioned storage | No | Yes |
 
 Fenced frames elect to support fewer features than iframes, as a way of 
 preserving privacy.
@@ -165,21 +166,24 @@ attribute.
 <fencedframe src="demo_fenced_frame.html" mode="opaque-ads"></fencedframe>
 ```
 
-Some APIs can provide an opaque URL, which looks something like
-`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`, which could be used as a
-fenced frame `src`.
+Browsers may generate an opaque URL for the fenced frame `src`, as requested by 
+certain use case API. For example, if a FLEDGE ad auction is run, the browser 
+can generate an `urn:uuid` which maps back to the URL for the winning ad 
+creative. That `urn:uuid` could then be used in a fenced frame to display the 
+winning ad.
 
 ```html
 <fencedframe src="urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a"></fencedframe>
 ```
 
 Remember, a fenced frame can't communicate with its parent element with the
-[Messaging API](https://developer.mozilla.org/docs/Web/API/Window/postMessage).
-However, a fenced frame can use the Messaging API with iframes that are children
+[`postMessage`](https://developer.mozilla.org/docs/Web/API/Window/postMessage).
+However, a fenced frame can use the postMessage with iframes that are children
 of the fenced frame. This means fenced frames behave like a [top-level browsing
-context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (such as a browser tab).
+context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
+(such as a browser tab).
 
-Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from Fenced frames and iframes that are embedded within a Fenced frame.
+Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from fenced frames and iframes that are embedded within a fenced frame.
 
 ```http
 Sec-Fetch-Dest: fencedframe
