@@ -15,6 +15,10 @@ date: 2022-02-28
 
 *  [Fenced Frame proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
+*  This feature has not yet been implemented in any browser.
+*  The [Privacy Sandbox 
+   timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) 
+   provides implementation timings for fenced frames and other proposals.
 
 ## What is Fenced frame?
 
