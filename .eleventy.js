@@ -96,6 +96,20 @@ module.exports = eleventyConfig => {
     }
     return blogCollection;
   }));
+
+  locales.forEach(locale => eleventyConfig.addCollection(`updates-${locale}`, collections => {
+    let updatesCollection = collections
+      .getFilteredByGlob(`./site/${locale}/blog/updates/*/*.md`)
+      .filter(filterOutDrafts)
+      .reverse();
+    console.log(updatesCollection.length)
+    // If we're running inside of Percy then just show the first six blog posts.
+    if (process.env.PERCY_BRANCH) {
+      updatesCollection = updatesCollection.slice(updatesCollection.length - 6);
+    }
+    return updatesCollection;
+  }));
+
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);

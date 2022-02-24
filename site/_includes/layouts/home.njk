@@ -14,7 +14,9 @@
     <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
       <div class="display-flex direction-column grid-gap-500">
         {% set blog = 'blog-' + locale %}
-        {{ featuredUpdatesCard(collections[blog][3]) }}
+        {% set updates = 'updates-' + locale %}
+        {{ featuredUpdatesCard(collections[updates][0]) }}
+        {# {{ featuredUpdatesCard(collections[blog][3]) }} #}
         {{ releasesCard() }}
         {% include 'partials/report-a-bug.njk' %}
       </div>
