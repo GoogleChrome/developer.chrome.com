@@ -7,3 +7,6 @@
 - url: /docs/lighthouse/performance/
   title: i18n.docs.performance.intro
   description: i18n.docs.performance.overview
+- url: /docs/lighthouse/pwa/
+  title: i18n.docs.pwa.intro
+  description: i18n.docs.pwa.overview
