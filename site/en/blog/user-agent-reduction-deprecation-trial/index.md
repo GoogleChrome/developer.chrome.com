@@ -19,7 +19,7 @@ tags:
 
 Starting from Chrome 101, the information available in the User-Agent string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) can take part in a deprecation trial to continue receiving the full User-Agent string.
 
-The registration for the deprecation trial will begin with the [Chrome 100 ](https://chromiumdash.appspot.com/schedule)Beta. It will allow sites to receive the full User-Agent string ahead of the Chrome 101 release, where the minor version string will be reduced. If you would like to test the origin trial on Chrome 100 Beta before it launches to the stable channel, be sure to register and test before the release date for Chrome 100 currently ([scheduled for March 31st, 2022](https://chromiumdash.appspot.com/schedule)).
+The registration for the deprecation trial will begin with the [Chrome 100 ](https://chromiumdash.appspot.com/schedule) Beta. It will allow sites to receive the full User-Agent string ahead of the Chrome 101 release, where the minor version string will be reduced. If you would like to test the origin trial on Chrome 100 Beta before it launches to the stable channel, be sure to register and test before the release date for Chrome 100 currently ([scheduled for March 31st, 2022](https://chromiumdash.appspot.com/schedule)).
 
 Below is an overview of the deprecation trial and what to expect. If you have feedback to share or you encounter any issues throughout this trial let us know in the [UA Reduction Github repository](https://github.com/abeyad/user-agent-reduction/issues).
 
@@ -38,7 +38,7 @@ Sites should still audit their usage of the User-Agent header and related APIs, 
 
 ### Register for the trial
 
-To register for the origin trial and get a token for your domains, visit the Trial for [User Agent Reduction Deprecation page](https://developer.chrome.com/origintrials/#/view_trial/2608710084154359809).
+To register for the origin trial and get a token for your domains, visit the Trial for [User Agent Reduction Deprecation page](/origintrials/#/view_trial/2608710084154359809).
 
 ### Setup
 
@@ -85,9 +85,9 @@ At any given point in time during the trial, you can stop participating and rece
 
 ## How is this trial different from other User-Agent origin trials?
 
-Chrome is running two origin trials related to User Agent reduction. The first was [User Agent Reduction origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047), which allowed sites to receive the reduced user agent string to test their use cases and provide feedback before it becomes the default behavior in Chrome.
+Chrome is running two origin trials related to User Agent reduction. The first was [User Agent Reduction origin trial](/origintrials/#/view_trial/-7123568710593282047), which allowed sites to receive the reduced user agent string to test their use cases and provide feedback before it becomes the default behavior in Chrome.
 
-The second, referenced here, is a deprecation trial intended for sites that need a little more time to migrate to the [User-Agent Client Hints API](https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API). It enables sites to continue receiving the full User-Agent string.
+The second, referenced here, is a deprecation trial intended for sites that need a little more time to migrate to the [User-Agent Client Hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API). It enables sites to continue receiving the full User-Agent string.
 
 ## How long will the deprecation trial last?
 
