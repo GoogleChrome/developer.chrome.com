@@ -50,7 +50,7 @@ Once you've registerd for the trial, update your HTTP response headers with the 
 1. To resend the first navigation request with the full User-Agent string, add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
 1.  If you want third-party subresource requests to also receive the full UA string, you have two options:
     - Add a `Permissions-Policy` header with the third-party domains that should receive the full UA.
-        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "[https://google.com](https://google.com)")`.
+        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://google.com")`.
         -  To allow all third-party domains, add `Permissions-Policy: ch-ua-full=*`.
     - Add an `Accept-CH` meta tag with the third-party domains that should receive the full UA (only in Chrome 100 and above).
         -  To allow a named list of third-party domains, add `<meta name="accept-ch" content="ch-ua-full=( https://google.com )">`.
