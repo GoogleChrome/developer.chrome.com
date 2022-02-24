@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Não tem uma `<meta name =" viewport ">` tag com `largura` ou` escala inicial`
+title: Não tem uma <meta name =" viewport "> tag com largura ou escala inicial
 description: |2-
 
   Saiba mais sobre a tag "não tem uma <meta name =" viewport "> tag com largura ou

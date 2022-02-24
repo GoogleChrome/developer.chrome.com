@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: No tiene una etiqueta `<meta name ="viewport">` con `width` o` initial-scale`
+title: No tiene una etiqueta <meta name ="viewport"> con width o initial-scale
 description: |2-
 
   Obtén más información sobre la auditoria de Lighthouse para "No tiene una etiqueta <meta name="viewport"> con width o initial-scale".
