@@ -20,7 +20,7 @@ date: 2022-02-28
    timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) 
    provides implementation timings for fenced frames and other proposals.
 
-## What is Fenced frame?
+## What are fenced frames and why do we need them?
 
 Fenced frame (`<fencedframe>`) is a proposed  HTML element for embedded content, 
 similar to an iframe. Unlike iframes, a fenced frame restricts communication 
