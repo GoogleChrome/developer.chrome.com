@@ -3,8 +3,6 @@ layout: 'layouts/doc-post.njk'
 title: Detected JavaScript libraries
 description: |
   Learn about Lighthouse's diagnostic "Detected JavaScript libraries" audit.
-web_lighthouse:
-  - js-libraries
 date: 2019-05-02
 updated: 2019-08-28
 ---

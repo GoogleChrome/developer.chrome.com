@@ -6,8 +6,6 @@ description: |
   audit.
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - canonical
 ---
 
 When multiple pages have similar content, search engines consider them duplicate

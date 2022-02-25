@@ -6,8 +6,6 @@ description: |2-
   Lighthouse の「robots.txt is not valid（robots.txt が無効です）」監査について学びます。
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - robots-txt
 ---
 
 `robots.txt` ファイルは、検索エンジンにサイトのどのページをクロールできるかを通知します。`robots.txt` の構成が無効である場合、以下の 2 つの問題が引き起こされる場合があります。

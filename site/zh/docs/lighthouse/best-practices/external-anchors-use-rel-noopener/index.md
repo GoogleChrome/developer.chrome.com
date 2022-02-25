@@ -4,8 +4,6 @@ title: 指向跨源目的地的链接不安全
 description: |2
 
   了解如何安全地链接到另一台主机上的资源。
-web_lighthouse:
-  - external-anchors-use-rel-noopener
 date: 2019-05-02
 updated: 2019-08-28
 ---

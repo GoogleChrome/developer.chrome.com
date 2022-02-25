@@ -279,7 +279,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 
-Destacados varios {: #misc }
+## Destacados varios {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
 

@@ -6,8 +6,6 @@ description: |2
   Obtenga más información sobre la auditoría de Lighthouse "robots.txt no es válido".
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - robots-txt
 ---
 
 El archivo `robots.txt` le dice a los motores de búsqueda cuáles de las páginas de su sitio se pueden rastrear. Una configuración invalida del archivo `robots.txt` puede provocar dos tipos de problemas:

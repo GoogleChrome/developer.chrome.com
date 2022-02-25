@@ -5,8 +5,6 @@ description: |
   Learn about the "robots.txt is not valid" Lighthouse audit.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - robots-txt
 ---
 
 The `robots.txt` file tells search engines which of your site's pages they can

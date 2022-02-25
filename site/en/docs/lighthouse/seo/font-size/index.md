@@ -5,8 +5,6 @@ description: |
   Learn about the "Document doesn't use legible font sizes" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - font-size
 ---
 
 Many search engines rank pages based on how mobile-friendly they are. Font

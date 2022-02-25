@@ -4,8 +4,6 @@ title: Los objetivos táctiles no tienen el tamaño adecuado
 description: Obtenga más información sobre la auditoría  "Los objetivos táctiles no tienen el tamaño adecuado" de Lighthouse.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - tap-targets
 ---
 
 Los objetivos táctiles son las áreas de una página web con las que los usuarios de dispositivos táctiles pueden interactuar. Todos los botones, enlaces y elementos de formulario tienen botones táctiles.

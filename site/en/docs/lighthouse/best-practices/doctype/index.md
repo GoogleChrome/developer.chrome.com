@@ -4,8 +4,6 @@ title: Page lacks the HTML doctype, thus triggering quirks mode
 description: |
   Learn how to make sure your page doesn't trigger quirks mode in older
   browsers.
-web_lighthouse:
-  - doctype
 date: 2019-05-02
 updated: 2019-08-28
 ---

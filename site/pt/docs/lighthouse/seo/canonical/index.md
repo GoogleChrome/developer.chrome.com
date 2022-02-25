@@ -6,8 +6,6 @@ description: |2-
   Saiba mais sobre a auditoria Lighthouse "O documento não tem um rel = canonical".
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - canônico
 ---
 
 Quando várias páginas têm conteúdo semelhante, os mecanismos de pesquisa as consideram versões duplicadas da mesma página. Por exemplo, as versões para desktop e celular de uma página de produto são frequentemente consideradas duplicatas.

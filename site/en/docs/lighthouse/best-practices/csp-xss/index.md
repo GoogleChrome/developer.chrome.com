@@ -5,8 +5,6 @@ description: |
   Learn about preventing cross-site scripting (XSS) attacks with a strict Content Security Policy (CSP).
 date: 2021-06-16
 #updated: 2021-06-02
-web_lighthouse:
-  - csp-xss
 ---
 
 A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough.  Check out [Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/strict-csp/) for more information. Lighthouse collects CSPs enforced on the main document, and reports issues from [CSP Evaluator](https://csp-evaluator.withgoogle.com/) if they can be bypassed.

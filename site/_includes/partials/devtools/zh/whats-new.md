@@ -1,6 +1,21 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/zh/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/zh/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/zh/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/zh/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/zh/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/zh/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/zh/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/zh/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/zh/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-99/#misc) -->
+
+
 ### Chrome 98 {: #chrome98 }
 * [预览功能：整页无障碍功能树](/zh/blog/new-in-devtools-98/#a11y-tree)
 * [在变更标签页中显示更精确的更改](/zh/blog/new-in-devtools-98/#changes)
@@ -25,29 +40,29 @@
 * [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
-* [预览特性: 新的 CSS 概览面板](/blog/new-in-devtools-96/#css-overview)
-* [修复以及改善 CSS 长度编辑与复制的体验](/blog/new-in-devtools-96/#length) 
-* [模拟 CSS prefers-contrast 媒体特性](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/blog/new-in-devtools-96/#auto-dark-mode)
-* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/blog/new-in-devtools-96/#copy-as-js)
-* [网络面板新增载荷（Payload）边栏](/blog/new-in-devtools-96/#payload)
-* [优化属性窗格里面的属性展示](/blog/new-in-devtools-96/#properties)
-* [新增选项，用于隐藏控制台里面的 CORS 错误](/blog/new-in-devtools-96/#hide-cors-errors)
-* [控制台正确预览以及执行 `Intl` 对象](/blog/new-in-devtools-96/#intl)
-* [统一的异步堆栈信息](/blog/new-in-devtools-96/#async)
-* [保留控制台侧边栏](/blog/new-in-devtools-96/#console-sidebar)
-* [弃用应用程序面板里面的应用程序缓存窗格](/blog/new-in-devtools-96/#capp-cache)
-* [[实验] 应用程序面板里面新增 Reporting API 窗格](/blog/new-in-devtools-96/#reporting-api)
+* [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
+* [修复以及改善 CSS 长度编辑与复制的体验](/zh/blog/new-in-devtools-96/#length) 
+* [模拟 CSS prefers-contrast 媒体特性](/zh/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/zh/blog/new-in-devtools-96/#auto-dark-mode)
+* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/zh/blog/new-in-devtools-96/#copy-as-js)
+* [网络面板新增载荷（Payload）边栏](/zh/blog/new-in-devtools-96/#payload)
+* [优化属性窗格里面的属性展示](/zh/blog/new-in-devtools-96/#properties)
+* [新增选项，用于隐藏控制台里面的 CORS 错误](/zh/blog/new-in-devtools-96/#hide-cors-errors)
+* [控制台正确预览以及执行 `Intl` 对象](/zh/blog/new-in-devtools-96/#intl)
+* [统一的异步堆栈信息](/zh/blog/new-in-devtools-96/#async)
+* [保留控制台侧边栏](/zh/blog/new-in-devtools-96/#console-sidebar)
+* [弃用应用程序面板里面的应用程序缓存窗格](/zh/blog/new-in-devtools-96/#capp-cache)
+* [[实验] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
 
 
 ### Chrome 95 {: #chrome95 }
-* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#length)
-* [在“问题”标签页隐藏问题](/blog/new-in-devtools-95/#hide-issues)
-* [改善属性展示](/blog/new-in-devtools-95/#properties)
-* [Lighthouse 面板中的 Lighthouse 8.4](/blog/new-in-devtools-95/#lighthouse)
-* [在“来源”面板中排序代码段](/blog/new-in-devtools-95/#snippets)
-* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/blog/new-in-devtools-95/#localized)
-* [DevTools 命令菜单的用户交互优化](/blog/new-in-devtools-95/#command-menu)
+* [新的 CSS 长度编辑工具](/zh/blog/new-in-devtools-95/#length)
+* [在“问题”标签页隐藏问题](/zh/blog/new-in-devtools-95/#hide-issues)
+* [改善属性展示](/zh/blog/new-in-devtools-95/#properties)
+* [Lighthouse 面板中的 Lighthouse 8.4](/zh/blog/new-in-devtools-95/#lighthouse)
+* [在“来源”面板中排序代码段](/zh/blog/new-in-devtools-95/#snippets)
+* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/zh/blog/new-in-devtools-95/#localized)
+* [DevTools 命令菜单的用户交互优化](/zh/blog/new-in-devtools-95/#command-menu)
 
 ### Chrome 94 {: #chrome94 }
 

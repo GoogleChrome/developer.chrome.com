@@ -1,0 +1,25 @@
+- title: i18n.docs.pwa.topics.fast_and_reliable
+  sections:
+    - url: /docs/lighthouse/pwa/load-fast-enough-for-pwa/
+    - url: /docs/lighthouse/pwa/works-offline/
+    - url: /docs/lighthouse/pwa/offline-start-url/
+- title: i18n.docs.pwa.topics.installable
+  sections:
+    - url: /docs/lighthouse/pwa/is-on-https/
+    - url: /docs/lighthouse/pwa/service-worker/
+    - url: /docs/lighthouse/pwa/installable-manifest/
+- title: i18n.docs.pwa.topics.pwa_optimized
+  sections:
+    - url: /docs/lighthouse/pwa/redirects-http/
+    - url: /docs/lighthouse/pwa/splash-screen/
+    - url: /docs/lighthouse/pwa/themed-omnibox/
+    - url: /docs/lighthouse/pwa/content-width/
+    - url: /docs/lighthouse/pwa/viewport/
+    - url: /docs/lighthouse/pwa/without-javascript/
+    - url: /docs/lighthouse/pwa/apple-touch-icon/
+    - url: /docs/lighthouse/pwa/maskable-icon-audit/
+- title: i18n.docs.pwa.topics.additional_items_to_manually_check
+  sections:
+    - url: /docs/lighthouse/pwa/pwa-cross-browser/
+    - url: /docs/lighthouse/pwa/pwa-page-transitions/
+    - url: /docs/lighthouse/pwa/pwa-each-page-has-url/

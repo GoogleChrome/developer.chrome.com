@@ -6,8 +6,6 @@ description: |2-
   "문서에 메타 설명이 없음" Lighthouse 감사에 대해 알아봅니다.
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - meta-description
 ---
 
 `<meta name="description">` 요소는 검색 엔진이 검색 결과에 포함하는 페이지 콘텐츠의 요약을 제공합니다. 고품질의 고유한 메타 설명은 페이지의 관련성을 높이고 검색 트래픽을 증가시킬 수 있습니다.

@@ -6,8 +6,6 @@ description: |2-
   Obtenga más información sobre la auditoría Lighthouse "El documento no tiene una metadescripción".
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - Metadescripción
 ---
 
 El elemento `<meta name="description">` proporciona un resumen del contenido de una página que los motores de búsqueda incluyen en los resultados de búsqueda. Una metadescripción única y de alta calidad hace que su página parezca más relevante y puede aumentar su tráfico de búsqueda.
