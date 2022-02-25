@@ -8,8 +8,8 @@ description: A quick reference on migrating your Chrome Extensions from Manifest
 ---
 
 This page provides a quick reference to help you identify any changes you might need to
-make to an Manifest V2 extension so that it works under Manifest V3 (MV3). For more
-description of the nature of these changes see the [MV3 migration guide](/docs/extensions/mv3/intro/mv3-migration).
+make to an Manifest V2 extension so that it works under Manifest V3. For more
+description of the nature of these changes see the [Manifest V3 migration guide](/docs/extensions/mv3/intro/mv3-migration).
 
 
 ## API checklist {: #api_checklist }
@@ -18,13 +18,13 @@ There are some changes you may need to make based on changes to the API surface.
 
 **Do you have host permissions in your manifest?**
 <br/>
-*Host permissions in MV3 [are a separate element](/docs/extensions/mv3/intro/mv3-migration#host-permissions); you don't specify them in `permissions` or `optional_permissions`.*
+*Host permissions in Manifest V3 [are a separate element](/docs/extensions/mv3/intro/mv3-migration#host-permissions); you don't specify them in `permissions` or `optional_permissions`.*
 
 - Move host permissions into the `host_permissions` field in manifest.json.
 
 **Are you using background pages?**
 <br/>
-*Background pages are [replaced by service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in MV3.*
+*Background pages are [replaced by service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in Manifest V3.*
 
 - Replace `background.page` or `background.scripts` with `background.service_worker` in
   manifest.json. Note that the `service_worker` field takes a string, not an array of strings.
@@ -37,22 +37,21 @@ Service workers must be registered at root level: they cannot be in a nested dir
 
 **Are you using the `browser_action` or `page_action` property in manifest.json?**
 <br/>
-*These properties are [unified into a single property](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
+*These properties are [unified into a single property](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in Manifest V3.*
 
 - Replace these properties with `action`.
 
 **Are you using the `chrome.browserAction` or `chrome.pageAction` JavaScript API?**
 <br/>
-*These two equivalent APIs are [unified into a single API](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
+*These two equivalent APIs are [unified into a single API](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in Manifest V3.*
 - Migrate to the `chrome.action` API.
 
 **Are you currently using the blocking version of `chrome.webRequest`?**
 <br/>
-*This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in MV3.*
+*This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in Manifest V3.*
 
 {% Aside %}
-This only applies to user-installed extensions; force installed extensions (extensions
-distributed using
+This only applies to user-installed extensions; force installed extensions (extensions distributed using
 [ExtensionInstallForcelist](https://www.chromium.org/administrators/policy-list-3#ExtensionInstallForcelist)).
 These extensions &mdash; typically used in an enterprise setting &mdash; can
 still use the blocking version of `chrome.webRequest`. 
@@ -68,7 +67,7 @@ still use the blocking version of `chrome.webRequest`.
 <br/>
 *In Manifest V3, several methods move from `chrome.tabs` to the `chrome.scripting` API.*
 
-- Change any of the following MV2 calls to use the correct MV3 API:
+- Change any of the following Manifest V2 calls to use the correct Manifest V3 API:
 
 <table class="with-heading-tint">
   <thead>
@@ -100,10 +99,9 @@ logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chr
 - Update script and style references to load resources from the extension bundle.
 - Use `chrome.runtime.getURL()` to build resource URLs at runtime.
 
-**Are you executing functions that expect an MV2 background context?**
+**Are you executing functions that expect an Manifest V2 background context?**
 <br/>
-*The [adoption of service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in MV3 isn't compatible with 
-methods like `chrome.runtime.getBackgroundPage()`,
+*The [adoption of service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in Manifest V3 isn't compatible with methods like `chrome.runtime.getBackgroundPage()`,
 `chrome.extension.getBackgroundPage()`, `chrome.extension.getExtensionTabs()`,
 and `chrome.extension.getViews()`.*
 
@@ -111,7 +109,8 @@ and `chrome.extension.getViews()`.*
 
 ## Security Checklist {: #security_checklist }
 
-There are some changes you may need to make based on changes in security policy. This section lists these changes.
+There are some changes you may need to make based on changes in security policy. This section lists
+these changes.
 
 **Are you making CORS requests in content scripts?**
 - Move these requests to the background service worker.

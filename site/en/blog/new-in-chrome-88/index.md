@@ -34,7 +34,7 @@ Here's what you need to know:
 * All the videos from [Chrome Dev Summit](#cds) are up.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 88!
 
 ## Manifest v3 {: #mv3 }
@@ -44,7 +44,7 @@ can upload them to the Chrome Web Store. Manifest v3 is a new extension
 platform, that makes Chrome extensions more secure, performant, and privacy
 respecting, by default.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", className="float-right", height="648", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", class="float-right", height="648", width="800" %}
 
 For example, it disallows remotely hosted code, which helps Chrome Web Store
 reviewers better understand what risks an extension poses. And should allow you

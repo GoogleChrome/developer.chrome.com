@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Updated Privacy Policy & Secure Handling Requirements"
 date: 2016-04-23
-updated: 2020-11-19
+updated: 2021-01-28
 description: Frequently asked questions about Chrome Web Store's user data policy.
 ---
 

@@ -92,7 +92,7 @@ Kiosk App through the [Chrome web store payment flow][14].
 - [Movie theater app][17]
 - [Kiosk apps in the Chrome Web Store][18]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://support.google.com/chromebook/answer/3134673
 [4]: https://support.google.com/chromebook/answer/3134673

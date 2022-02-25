@@ -36,7 +36,7 @@ have a look at the following starting pages:
 Beyond that, you might find useful entry points in these pages:
 
 * Learn the scope of things in the [Extension development overview](/docs/extensions/mv2/devguide/)
-* Pick something from the [samples page](/docs/extensions/???), install it, and start hacking on it.
+* Pick something from the [samples page](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv2/faq/)
 
 In addition to the documentation here, many developers find helpful community content at:

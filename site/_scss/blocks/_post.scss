@@ -1,8 +1,0 @@
-.post {
-  margin-left: auto;
-  margin-right: auto;
-
-  @include media-query('xl') {
-    margin-right: initial;
-  }
-}

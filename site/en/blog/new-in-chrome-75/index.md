@@ -30,7 +30,7 @@ In Chrome 75, we've added support for:
 * Google I/O 2019 is a wrap and all of [talks](#io-talks) are on our
   YouTube channel.
 
-I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see
 what's new for developers in Chrome 75!
 
 ## Change log
@@ -46,7 +46,7 @@ additional changes in Chrome 75.
 
 ## Hint for low latency `canvas` contexts {: #desync }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", className="float-right", height="450", width="600" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", class="float-right", height="450", width="600" %}
 
 Drawing on screen with the canvas element requires the page to synchronize
 graphics updates with the DOM. This synchronization can sometimes cause latency.

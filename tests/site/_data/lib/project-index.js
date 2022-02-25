@@ -19,7 +19,7 @@ test('flattens hierarchical yaml', t => {
     - url: /docs/extensions/policies/sub-url
 `;
 
-  const index = buildProjectIndex(yaml.safeLoad(testData));
+  const index = buildProjectIndex(yaml.load(testData));
 
   t.assert(index['/docs/extensions/mv2/overview'] === undefined);
 

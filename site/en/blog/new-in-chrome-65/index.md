@@ -29,7 +29,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 65!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 65!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/64.0.3282.140..65.0.3325.146).
@@ -81,7 +81,7 @@ response:
 'Server-Timing': 'su=42;"Start-up",db-read=142;"Database Read"'
 ```
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IPeIflKc639uL515Tml2.png", alt="", className="float-right", height="418", width="640" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IPeIflKc639uL515Tml2.png", alt="", class="float-right", height="418", width="640" %}
 
 They're shown in Chrome DevTools, or you can pull them out of the response
 header and save them with your other performance analytics.
@@ -166,7 +166,7 @@ there's plenty more.
 * The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA` coordinates
   for the color property now
   [match](https://drafts.csswg.org/css-color/#the-hsl-notation) the
-  [CSS Color 4 spec](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+  [CSS Color 4 spec](https://developer.mozilla.org/docs/Web/CSS/color_value).
 * There's a new [feature policy](http://xhr.featurepolicy.rocks/) that allows
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.

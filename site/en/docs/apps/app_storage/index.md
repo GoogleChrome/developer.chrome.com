@@ -281,7 +281,7 @@ saved in a hidden Google Drive folder, **Chrome Syncable FileSystem**. The folde
 your 'My Drive' list but can be accessed by searching the folder name in the search box. (Note that
 the remote folder layout is **not** guaranteed to remain backwards compatible between releases.)
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: app_frameworks
 [4]: offline_apps

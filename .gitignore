@@ -10,6 +10,8 @@ Thumbs.db
 .cache
 .vscode
 .lighthouseci
+.idea*
+.python-version
 
 # Code coverage generated files
 .nyc_output
@@ -23,3 +25,7 @@ dist
 # Eleventy
 # We generate our own .eleventyignore file dynamically during builds
 .eleventyignore
+
+# External source files
+external/data/
+external/local-build-flag

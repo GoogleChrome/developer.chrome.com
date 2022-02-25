@@ -7,7 +7,7 @@ browser action. A popup is below the icon.
 
 ![](browser-action.png)
 
-If you want to create an icon that isn't always visible, use a [page action][1] instead of a browser
+If you want to create an icon that isn't always active, use a [page action][1] instead of a browser
 action.
 
 ## Manifest
@@ -18,7 +18,7 @@ Register your browser action in the [extension manifest][2] like this:
 {
   "name": "My extension",
   ...
-  "action": {
+  "browser_action": {
     "default_icon": {                // optional
       "16": "images/icon16.png",     // optional
       "24": "images/icon24.png",     // optional
@@ -131,7 +131,7 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [4]: #tooltip
 [5]: #badge
 [6]: #popup
-[7]: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
+[7]: https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
 [8]: #manifest
 [9]: #method-setIcon
 [10]: #manifest

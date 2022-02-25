@@ -15,6 +15,9 @@ jobs:
   lhci:
     if: ${{ github.repository == 'GoogleChrome/developer.chrome.com' }}
     runs-on: ubuntu-latest
+    env:
+      # Increase RAM limit, and make uncaught exceptions crash (default in 16+).
+      NODE_OPTIONS: --max_old_space_size=4096 --unhandled-rejections=strict
     steps:
       - name: Checkout
         uses: actions/checkout@v1.0.0
@@ -31,8 +34,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install
         run: npm ci
-      - name: Install Canary Lighthouse CI
-        run: npm install @lhci/cli@next
       - name: Build
         env:
           ELEVENTY_IGNORE_NACL: true

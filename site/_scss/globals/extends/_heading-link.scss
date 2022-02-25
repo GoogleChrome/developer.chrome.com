@@ -1,5 +1,5 @@
+/* stylelint-disable */
 %heading-link-container {
-  &:hover > .heading-link {
-    visibility: visible;
-  }
+  // Intentionally blank. This is used for headings that contain a "#" link,
+  // but we don't style them based on the container right now.
 }

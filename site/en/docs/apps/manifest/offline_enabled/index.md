@@ -26,6 +26,6 @@ performed when launching an app in [Chrome OS kiosk mode][3]. A network connecti
 performed when apps are not offline enabled, and app launching put on hold until the device obtains
 connectivity to the Internet.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: /apps/manifest/kiosk_enabled

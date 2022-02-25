@@ -6,6 +6,11 @@ css:
   en: 'CSS'
 console:
   en: 'Console'
+new_in_devtools:
+  en: >
+    What's new in DevTools
+new_in_devtools_description:
+  en: 'Stay up to date with the latest DevTools changes.'
 network:
   en: 'Network'
 storage:

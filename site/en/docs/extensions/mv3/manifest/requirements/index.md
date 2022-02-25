@@ -28,7 +28,7 @@ NPAPI Plugin support for extension has been [discontinued][3]. As part of this, 
 requirement described below has been deprecated.
 
 The "plugins" requirement indicates if an extension requires NPAPI to run. This requirement is
-enabled by default when the manifest includes the ["plugins" field][4]. For apps and extensions that
+enabled by default when the manifest includes the ["plugins" field][4]. For extensions that
 still work when plugins aren't available, you can disable this requirement by setting NPAPI to
 false. You can also enable this requirement manually, by setting NPAPI to true, as shown in this
 example:

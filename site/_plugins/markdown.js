@@ -16,6 +16,19 @@
 
 const markdown = require('markdown-it');
 const uslug = require('uslug');
+const anchor = require('markdown-it-anchor');
+
+/** @type {anchor.AnchorOptions} */
+const anchorOptions = {
+  slugify: s => uslug(s),
+  level: 2,
+  permalink: anchor.permalink.ariaHidden({
+    space: true,
+    placement: 'before',
+    symbol: '#',
+    class: 'heading-link',
+  }),
+};
 
 const md = markdown({
   html: true,
@@ -29,13 +42,7 @@ const md = markdown({
     allowedAttributes: ['id', 'class', /^data-.*$/],
   })
   // Automatically add anchors to headings
-  .use(require('markdown-it-anchor'), {
-    slugify: s => uslug(s),
-    level: 2,
-    permalink: true,
-    permalinkClass: 'heading-link',
-    permalinkSymbol: '#',
-  })
+  .use(anchor, anchorOptions)
   // Disable indented code blocks.
   // We only support fenced code blocks.
   .disable('code');

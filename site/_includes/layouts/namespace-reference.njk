@@ -18,19 +18,16 @@
   </div>
 
   <h2 class="type--h3">Summary</h2>
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-      {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-      {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-      {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
-    </ul>
-  </div>
+  <ul class="code-sections code-sections--summary flow-space-300 stack">
+    {% for group in namespace.groups %}
+      {{ macros.renderGroupSummary(group) }}
+    {% endfor %}
+  </ul>
 
-  {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
-  {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
-  {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
-  {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }}
+  {% for group in namespace.groups %}
+   {{ macros.renderGroupAll(group) }}
+  {% endfor %}
+
 {% endset %}
 
 {% set tocContents %}
@@ -40,79 +37,84 @@
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
+    {% set f = namespace.root._feature %}
 
-    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
-      <h1 class="type--h2">{{ title }}</h1>
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long width-full pad-left-400 pad-right-400">
+        <h1 class="type--h2">{{ title }}</h1>
 
-      {% if namespace.source === 'platform_app.d.ts' %}
-        <div class="aside aside--warning">
-          This API is part of the deprecated Chrome Apps platform.
-          Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+        {% if f.platformAppsOnly %}
+          <div class="aside aside--warning">
+            This API is part of the deprecated Chrome Apps platform.
+            Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+          </div>
+        {% endif %}
+
+        {# TODO: unsupported #}
+        {% if f.chromeOsOnly %}
+          {# There are some historic cases of multi-platform support in Platform Apps, but
+              the only restriction these days is CrOS vs everywhere. #}
+          <div class="aside aside--note">
+            <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+          </div>
+        {% endif %}
+
+        <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
+          <ul class="code-sections code-sections--summary flow-space-300 stack">
+            {% set commentHtml %}{{ macros.renderCommentText(namespace.root) | trim }}{% endset %}
+            {% if commentHtml %}
+              <li>
+                <div class="code-sections__label">Description</div>
+                <div class="type">
+                  {{ commentHtml | safe }}
+                </div>
+              </li>
+            {% endif %}
+
+            {% if f.permissions.length %}
+              <li>
+                <div class="code-sections__label">Permissions</div>
+                <div>
+                  {% for permission in f.permissions %}
+                    <code>{{ permission }}</code><br />
+                  {% endfor %}
+                  {{ extra_permissions_html | safe }}
+                </div>
+              </li>
+            {% endif %}
+
+            {% if f.manifestKeys.length %}
+              <li>
+                <div class="code-sections__label">Manifest Keys</div>
+                <div>
+                  <p>The following keys must be declared <a href="/docs/extensions/mv3/manifest/">in the manifest</a> to use this API.</p>
+                  {% for manifestKey in f.manifestKeys %}
+                    <code>{{ manifestKey }}</code><br />
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
+
+            {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) | trim }}{% endset %}
+            {% if availabilityHtml %}
+              <li class="lg:align-center">
+                <div class="code-sections__label">Availability</div>
+                {{ availabilityHtml | safe }}
+              </li>
+            {% endif %}
+
+          </ul>
         </div>
-      {% endif %}
 
-      {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
-        {# There are some historic cases of multi-platform support in Platform Apps, but
-            the only restriction these days is CrOS vs everywhere. #}
-        <div class="aside aside--note">
-          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
-        </div>
-      {% endif %}
-
-      <div class="code-sections code-sections--summary">
-        <ul class="stack flow-space-300">
-          <li>
-            <div class="code-sections__label">Description</div>
-            <div class="type">
-              {{ namespace.comment | safe }}
-            </div>
-          </li>
-          {% if namespace.permissions.length %}
-            <li>
-              <div class="code-sections__label">Permissions</div>
-              <div>
-                {% for permission in permissions %}
-                  <code>{{ permission }}</code><br />
-                {% endfor %}
-                {{ extra_permissions_html | safe }}
-              </div>
-            </li>
+        {% include 'partials/toc-inner.njk' %}
+        {% if namespace.reference %}
+            <a href={{namespace.reference}}>Review the guide for <code>{{ title }}</code>.</a>
           {% endif %}
-          {% if namespace.channel !== 'stable' or namespace.version.low or namespace.maxManifestVersion or namespace.minManifestVersion %}
-            <li>
-              <div class="code-sections__label">Availability</div>
-              <div>
-                {% if namespace.channel === 'dev' %}
-                  Dev channel only.
-                {% elif namespace.channel === 'beta' %}
-                  Beta and Dev channels only.
-                {% elif namespace.version.low %}
-                  Since Chrome {{ namespace.version.low }}.
-                  {# No namespace is currently deprecated. #}
-                {% endif %}
-                {% if namespace.maxManifestVersion %}
-                  Manifest V{{ namespace.maxManifestVersion }}
-                  {% if namespace.maxManifestVersion === 2 %}
-                    {# Nothing is actually before MV2. #}
-                    only.
-                  {% else %}
-                    and below.
-                  {% endif %}
-                {% endif %}
-                {% if namespace.minManifestVersion %}
-                  Manifest V{{ namespace.minManifestVersion }} and above.
-                {% endif %}
-              </div>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+        {{ content | safe }}
+      </article>
 
-      {% include 'partials/toc-inner.njk' %}
-
-      {{ content | safe }}
-    </article>
-
-    {% include 'partials/toc-side.njk' %}
+      {% include 'partials/toc-side.njk' %}
+    </div>
   </div>
 {% endblock %}

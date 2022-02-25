@@ -24,9 +24,9 @@ import {expandSideNav} from '../actions/side-nav';
 export class TopNav extends BaseStateElement {
   connectedCallback() {
     super.connectedCallback();
-    this.hamburgerBtn = /** @type {HTMLElement} */ (this.querySelector(
-      '.top-nav__hamburger'
-    ));
+    this.hamburgerBtn = /** @type {HTMLElement} */ (
+      this.querySelector('.top-nav__hamburger')
+    );
     this.hamburgerBtn.addEventListener('click', expandSideNav);
   }
 

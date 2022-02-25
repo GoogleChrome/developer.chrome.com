@@ -13,14 +13,9 @@ const fakeOrigin = `https://fake-does-not-exist-${Math.random()}.localhost`;
  * @param {string} locale The locale for the file.
  */
 const prettyUrls = ($, outputPath, locale) => {
-  const $links = $('a');
-  $links.each((_, elem) => {
-    const $link = $(elem);
-
-    let href = $link.attr('href');
-
+  /** @type {(href: string|undefined) => string|undefined} */
+  const prettyHref = href => {
     if (!href) {
-      console.warn(`Found a link in ${outputPath} with a missing href.`);
       return;
     }
 
@@ -66,7 +61,41 @@ const prettyUrls = ($, outputPath, locale) => {
       }
     }
 
-    $link.attr('href', href);
+    return href;
+  };
+
+  // Update "a[href]".
+  const $links = $('a');
+  $links.each((_, elem) => {
+    const $link = $(elem);
+
+    // This is a cross-language link, so don't try to "fix" it, which causes invalid URLs.
+    if ($link.attr('translate') === 'no') {
+      return;
+    }
+
+    const href = $link.attr('href');
+    if (!href && !$link.attr('id')) {
+      console.warn(
+        `Found <a> in ${outputPath} with no href/id (text=\`${$link.text()}\`)`
+      );
+      return;
+    }
+
+    const update = prettyHref(href);
+    if (update) {
+      $link.attr('href', update);
+    }
+  });
+
+  // Update "option[href]", which is used on the tags page.
+  const $optionHref = $('option[href]');
+  $optionHref.each((_, elem) => {
+    const $opt = $(elem);
+    const update = prettyHref($opt.attr('href'));
+    if (update) {
+      $opt.attr('href', update);
+    }
   });
 };
 

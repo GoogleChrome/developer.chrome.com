@@ -165,7 +165,7 @@ The update manifest returned by the server should be an XML document.
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<gupdate xmlns='https://www.google.com/update2/response' protocol='2.0'>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'>
     <updatecheck codebase='https://myhost.com/mytestextension/mte_v2.crx' version='2.0' />
   </app>
@@ -179,7 +179,7 @@ update manifest:
 <table><tbody><tr><td>appid</td><td>The extension ID is generated based on a hash of the public key, as described in <a href="/linux_hosting#packaging">packaging</a>. An extension's ID is displayed on the <a href="/linux_hosting#extension_management">Extensions Managment Page</a></td></tr><tr><td>codebase</td><td>An HTTPS URL to the <code>.crx</code> file.</td></tr><tr><td>version</td><td>Used by the client to determine whether it should download the <code>.crx</code> file specified by <code>codebase</code>. It should match the value of "version" in the <code>.crx</code> file's <code>manifest.json</code> file.</td></tr></tbody></table>
 
 The update manifest XML file may contain information about multiple extensions by including multiple
-<app> elements.
+&lt;app> elements.
 
 ### Testing {: #testing }
 
@@ -203,11 +203,11 @@ same URL running dynamic server-side code instead of a static XML file.
 
 The format of the request parameters is:
 
-`?x=_<extension_data>_`
+`?x=EXTENSION_DATA`
 
-Where `_<extension_data>_` is a URL-encoded string of the format:
+Where `EXTENSION_DATA` is a URL-encoded string of the format:
 
-`_id=<id>_&v=_<version>_`
+`id=EXTENSION\_ID&v=EXTENSION\_VERSION`
 
 For example, two extensions point to the same update URL (`https://test.com/extension_updates.php`):
 

@@ -6,7 +6,7 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-To use most chrome.\* APIs, your extension or app must declare its intent in the permissions fields
+To use most chrome.\* APIs, your extension must declare its intent in the permissions fields
 of the [manifest][1]. Extensions can request three categories of permissions, specified using the
 respective keys in the manifest:
 
@@ -14,7 +14,7 @@ respective keys in the manifest:
 * **`optional_permissions`** are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance
 * **`host_permissions`** contain one or more [match patterns][2] that give access to one or more hosts
 
-Permissions help to limit damage if your extension or app is compromised by
+Permissions help to limit damage if your extension is compromised by
 malware. Some permissions are displayed to users for their consent before
 installation or at runtime as needed, as detailed in [Permission Warnings][3].
 
@@ -64,18 +64,16 @@ The following table lists the currently available permissions:
     <tr id="background">
       <td><code>"background"</code></td>
       <td>
-        <p id="bg">Makes Chrome start up early and and shut down late, so that apps and extensions can have a longer
+        <p id="bg">Makes Chrome start up early and and shut down late, so that extensions can have a longer
           life.</p>
-        <p>When any installed hosted app, packaged app, or extension has "background" permission, Chrome runs
+        <p>When any installed extension has "background" permission, Chrome runs
           (invisibly) as soon as the user logs into their computer—before the user launches Chrome. The "background"
           permission also makes Chrome continue running (even after its last window is closed) until the user explicitly
           quits Chrome.</p>
-        <div class="aside aside--note"><b>Note:</b> Disabled apps and extensions are treated as if they aren't
+        <div class="aside aside--note"><b>Note:</b> Disabled extensions are treated as if they aren't
           installed.</div>
-        <p>You typically use the "background" permission with a <a href="/docs/extensions/mv3/background_pages">background page</a>, <a
-            href="/docs/apps/event_pages">event page</a> or (for hosted apps) a <a
-            href="http://developers.google.com/chrome/apps/docs/background.html">background window</a>.</p>
-      </td>
+	<p>You should use the "background" permission with <a
+          href="/docs/extensions/mv3/background_pages/">background scripts</a>.</p></td>
     </tr>
     <tr id="bookmarks">
       <td><code>"bookmarks"</code></td>
@@ -91,13 +89,12 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="clipboardRead">
       <td><code>"clipboardRead"</code></td>
-      <td>Required if the extension or app uses <code>document.execCommand('paste')</code>.</td>
+      <td>Required if the extension uses <code>document.execCommand('paste')</code>.</td>
     </tr>
     <tr id="clipboardWrite">
       <td><code>"clipboardWrite"</code></td>
-      <td>Indicates the extension or app uses <code>document.execCommand('copy')</code> or
-        <code>document.execCommand('cut')</code>. This permission is <b>required for hosted apps</b>; it's recommended
-        for extensions and packaged apps.</td>
+      <td>Indicates the extension uses <code>document.execCommand('copy')</code> or
+        <code>document.execCommand('cut')</code>.
     </tr>
     <tr id="contentSettings">
       <td><code>"contentSettings"</code></td>
@@ -177,7 +174,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="experimental">
       <td><code>"experimental"</code></td>
-      <td>Required if the extension or app uses any <a href="/docs/extensions/reference/#experimental_apis/">chrome.experimental.* APIs</a>.</td>
+      <td>Required if the extension uses any <a href="/docs/extensions/reference/#experimental_apis/">chrome.experimental.* APIs</a>.</td>
     </tr>
     <tr id="fileBrowserHandler">
       <td><code>"fileBrowserHandler"</code></td>
@@ -197,7 +194,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="geolocation">
       <td><code>"geolocation"</code></td>
-      <td>Allows the extension or app to use the <a
+      <td>Allows the extension to use the <a
           href="https://dev.w3.org/geo/api/spec-source.html">geolocation API</a> without prompting the user for
         permission.</td>
     </tr>
@@ -346,7 +343,7 @@ The following table lists the currently available permissions:
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
       <td>Provides an unlimited quota for storing client-side data, such as databases and local storage files.
-        Without this permission, the extension or app is limited to 5 MB of local storage.<div
+        Without this permission, the extension is limited to 5 MB of local storage.<div
           class="aside aside--note"><b>Note:</b> This permission applies only to Web SQL Database and application cache
           (see issue <a href="http://crbug.com/58985">58985</a>). Also, it doesn't currently work with wildcard
           subdomains such as <code>http://*.example.com</code>.</div>

@@ -15,14 +15,16 @@ tags:
   - chrome-91
 ---
 
-{% Aside %}
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
+
+{% YouTube id="YCrEmhfwsgg" %}
+
+{% YouTube id="Givhtk3rObE" %}
 
 ## Web Vitals information pop up in the Performance panel {: #web-vitals }
 Hover on a Web Vitals marker in the **Performance** panel to understand what's the indicator about - whether the performance is good, needs improvement, or poor.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BTpc3iOnzmLhNvv9XZwF.png", alt="Web Vitals information pop up", width="800", height="524" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0vRGvO6a3tPuScMRO8ce.png", alt="Web Vitals information pop up", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ee192a42493f0b31f360da9caee458d18fb0c5 #}
 
@@ -46,13 +48,13 @@ Chromium issue: [862450](https://crbug.com/862450)
 ## New Memory inspector {: #memory-inspector }
 Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as the Wasm memory. 
 
-Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the **Sources** panel, open the **demo-js.js** file, and set a breakpoint at line 15.
+Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the **Sources** panel, open the **demo-js.js** file, and set a breakpoint at line 18.
 
 Refresh the page. Expand the **Scope** section in the right **debugger** pane. Notice the new icon next to the **buffer** value. Click on it to reveal the **Memory Inspector**.
 
-Try [this demo](https://memory-inspector.glitch.me/demo-wasm.html) for Wasm memory inspection. Read [this article](/blog/webassembly/#memory-inspector) to learn more on how to inspect Wasm memory.
+Check out the documentation to learn more about [inspecting JavaScript `ArrayBuffer` and `WebAssembly.Memory`](/docs/devtools/memory-inspector/) with this new Memory inspector. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7CY7ijbHVfFFl7DM3lLT.png", alt="Memory inspector", width="800", height="499" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aDyRZhv31ZQq8X22MkgF.png", alt="Memory inspector", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7de6c9a80d7214559939399310b7ef1184554d92 #}
 Chromium issue: [1166577](https://crbug.com/1166577)
@@ -132,7 +134,7 @@ The **Issues** tab now categorize issues into page errors, upcoming breaking cha
 - **Upcoming breaking changes (yellow)**. Issues that inform about an upcoming, incompatible change of the web platform that may result in a loss of page functionality (e.g. warning of upcoming [CORS RFC 1918 changes](https://web.dev/cors-rfc1918-feedback)).
 - **Possible improvements (blue)**. Potential improvements on the page, but are currently not impairing basic functionality of the page (e.g. accessibility issues)
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/urhDPcFLC8LO4ibV20Hd.png", alt="Categorize issue types with colors and icons", width="800", height="501" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mVZ8FNWGvj8siFq7vz00.png", alt="Categorize issue types with colors and icons", width="800", height="489" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8fb5eae8cb55c4fac5acd2a8e2a59b7a84310c82 #}
 
@@ -189,7 +191,7 @@ Chromium issue: [1186049](https://crbug.com/1186049)
 ### Support for new JavaScript features {: #javascript }
 DevTools now support the new [private brand check](https://v8.dev/features/private-brand-checks) JavaScript language feature, a.k.a `#foo in obj`.
 
-This private brand checks feature extends the [in operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object. 
+This private brand checks feature extends the [in operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object. 
 
 Try it out in the **Console** and **Sources** panel. You can inspect the private fields in the **Scope** section under the **debugger** pane as well.
 
@@ -244,3 +246,6 @@ The old version of Chrome on the left does not show the source location (e.g. `d
 
 Chromium issue: [1189161](https://crbug.com/1189161)
 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

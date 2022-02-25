@@ -1,0 +1,64 @@
+<svg aria-hidden="true" version="1.1" id="Layer_1_5e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2489 1400" style="enable-background:new 0 0 2489 1400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#AECBFA;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#AECBFA;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:9.9999;}
+	.st2{fill:none;stroke:#AECBFA;stroke-width:5.0002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10.0004;}
+	.st3{fill:#AECBFA;}
+	.st4{fill:none;stroke:#4285F4;stroke-width:5;stroke-miterlimit:9.9999;}
+	.st5{fill:none;stroke:#AAAAFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{fill:#FFFFFF;}
+	.st7{fill:#4285F4;}
+	.st8{fill:#8AB4F8;}
+	.st9{fill:none;stroke:#AECBFA;stroke-width:15;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:9.9999;}
+</style>
+<g id="Layer_1_1__5e">
+	<g>
+		<circle class="st10" cx="1244.5" cy="700" r="480.1"></circle>
+		
+			<ellipse transform="matrix(0.8755 -0.4832 0.4832 0.8755 -183.3217 688.4882)" class="st1" cx="1244.5" cy="700" rx="474.1" ry="200.3"></ellipse>
+		
+			<ellipse transform="matrix(0.1124 -0.9937 0.9937 0.1124 409.1249 1857.897)" class="st2" cx="1244.5" cy="699.9" rx="215.3" ry="474"></ellipse>
+		
+			<ellipse transform="matrix(0.5139 -0.8579 0.8579 0.5139 4.5204 1407.9371)" class="st2" cx="1244.6" cy="700" rx="474.1" ry="186.7"></ellipse>
+		<path class="st3" d="M1568.3,312.8h-80.6c-20.2,0-36.6-16.4-36.6-36.6l0,0c0-20.2,16.4-36.6,36.6-36.6h80.6
+			c20.2,0,36.6,16.4,36.6,36.6l0,0C1604.9,296.5,1588.5,312.8,1568.3,312.8z"></path>
+		
+			<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -130.4756 1085.0114)" class="st10" cx="1244.5" cy="700" rx="335.9" ry="480.1"></ellipse>
+		<g>
+			<g>
+				<path class="st5" d="M1860.1,682.1c-9.5-331.8-281.5-597.9-615.6-597.9"></path>
+				<g>
+					<polygon class="st6" points="1872.4,678.2 1860.3,700 1847.5,678.6"></polygon>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path class="st5" d="M628.9,717.9c9.5,331.8,281.5,597.9,615.6,597.9"></path>
+				<g>
+					<polygon class="st6" points="616.6,721.8 628.7,700 641.5,721.4"></polygon>
+				</g>
+			</g>
+		</g>
+		<path class="st3" d="M1048.6,1110.1l-17.3-30c-1.3-2.3-3.8-3.7-6.5-3.7h-1.2h-33.4h-50.7h-34.2h-0.4c-2.7,0-5.2,1.4-6.5,3.7
+			l-17.3,30c-1.3,2.3-1.3,5.2,0,7.5l17.3,30c1.3,2.3,3.8,3.7,6.5,3.7h0.4h34.2h50.7h33.4h1.2c2.7,0,5.2-1.4,6.5-3.7l17.3-30
+			C1050,1115.2,1050,1112.4,1048.6,1110.1z"></path>
+		<path class="st6" d="M1409,497.3c16.7,0,30.3,13.6,30.3,30.3v344.8c0,16.7-13.6,30.3-30.3,30.3h-329c-16.7,0-30.3-13.6-30.3-30.3
+			V527.6c0-16.7,13.6-30.3,30.3-30.3H1409z"></path>
+		<circle class="st7" cx="1244.5" cy="630.9" r="76.5"></circle>
+		<path class="st7" d="M1397.5,838.6c0-31-18.4-58.5-46.7-70.8c-32.5-14.2-68.5-22.2-106.3-22.2c-37.9,0-73.8,8-106.3,22.2
+			c-28.3,12.2-46.7,39.8-46.7,70.8v21.8h306V838.6z"></path>
+		<path class="st8" d="M1479.5,872.4V527.6c0-38.8-31.6-70.5-70.5-70.5h-329c-38.8,0-70.4,31.6-70.4,70.5v344.8
+			c0,38.8,31.6,70.4,70.4,70.4h329C1447.9,942.8,1479.5,911.2,1479.5,872.4z M1409,497.3c16.7,0,30.3,13.6,30.3,30.3v344.8
+			c0,16.7-13.6,30.3-30.3,30.3h-329c-16.7,0-30.3-13.6-30.3-30.3V527.6c0-16.7,13.6-30.3,30.3-30.3H1409z"></path>
+		<path class="st3" d="M1604.9,925.7l64.9,28.8v43.6c0,41.9-27.6,80.6-64.9,92.1c-37.3-11.5-64.9-50.2-64.9-92.1v-43.6L1604.9,925.7
+			z"></path>
+		<g>
+			<path class="st9" d="M915.4,354.8v-34.3c0-13.5-11-24.5-24.5-24.5s-24.5,11-24.5,24.5v34.3"></path>
+			<path class="st3" d="M942.4,435.4h-103c-4,0-7.3-3.3-7.3-7.3v-80c0-4,3.3-7.3,7.3-7.3h103c4,0,7.3,3.3,7.3,7.3v80
+				C949.7,432.2,946.4,435.4,942.4,435.4z"></path>
+		</g>
+	</g>
+</g>
+</svg>

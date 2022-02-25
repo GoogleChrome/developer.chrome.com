@@ -1,0 +1,28 @@
+- title: i18n.docs.best-practices.topics.general_best_practices
+  sections:
+    - url: /docs/lighthouse/best-practices/doctype/
+    - url: /docs/lighthouse/best-practices/errors-in-console/
+    - url: /docs/lighthouse/best-practices/image-aspect-ratio/
+- title: i18n.docs.best-practices.topics.make_your_page_fast
+  sections:
+    - url: /docs/lighthouse/best-practices/uses-http2/
+    - url: /docs/lighthouse/best-practices/no-document-write/
+    - url: /docs/lighthouse/best-practices/uses-passive-event-listeners/
+- title: i18n.docs.best-practices.topics.make_your_page_secure
+  sections:
+    - url: /docs/lighthouse/best-practices/is-on-https/
+    - url: /docs/lighthouse/best-practices/external-anchors-use-rel-noopener/
+    - url: /docs/lighthouse/best-practices/no-vulnerable-libraries/
+    - url: /docs/lighthouse/best-practices/csp-xss/
+- title: i18n.docs.best-practices.topics.create_a_good_user_experience
+  sections:
+    - url: /docs/lighthouse/best-practices/geolocation-on-start/
+    - url: /docs/lighthouse/best-practices/notification-on-start/
+    - url: /docs/lighthouse/best-practices/password-inputs-can-be-pasted-into/
+- title: i18n.docs.best-practices.topics.avoid_deprecated_technologies
+  sections:
+    - url: /docs/lighthouse/best-practices/appcache-manifest/
+    - url: /docs/lighthouse/best-practices/deprecations/
+- title: i18n.docs.best-practices.topics.diagnostic_audits
+  sections:
+    - url: /docs/lighthouse/best-practices/js-libraries/

@@ -3,21 +3,23 @@ layout: "layouts/doc-post.njk"
 title: "Installing extensions on Linux"
 date: 2017-12-14
 updated: 2018-03-23
-description: How to package, host, and update crx files from a personal server.
+description: How to package, host, and update crx files from a personal server for Linux users.
 ---
 
 {% include 'partials/extensions/mv2page-in-mv3.md' %}
 
-Extensions hosted outside of the [Chrome Web Store][1] can only be installed by Linux users. This
-article describes how to package, host, and update `.crx` files from a personal server. If
-distributing an extension or theme solely through the [Chrome Web Store][2], consult [Webstore
-Hosting and Updating][3].
+Linux is the only platform where Chrome users can install extensions that are hosted outside of the
+[Chrome Web Store][chrome-web-store]. This article describes how to package, host, and update `crx`
+files from a general purpose web server. If you are distributing an extension or theme solely
+through the [Chrome Web Store][chrome-web-store], consult [Webstore hosting and
+updating][hosting-options].
 
 ## Packaging {: #packaging }
 
 Extensions and themes are served as `.crx` files. When uploading through the [Chrome Developer
-Dashboard][4] , the dashboard creates the `.crx` file automatically. If published on a personal
-server, the `.crx` file will need to be created locally or downloaded from the Chrome Web Store.
+Dashboard][developer-dashboard], the dashboard creates the `crx` file automatically. If published
+on a personal server, the `crx` file will need to be created locally or downloaded from the Chrome
+Web Store.
 
 <!-- TODO this section's ID was previouly #create which is a duplicate of another section -->
 
@@ -34,10 +36,16 @@ The downloaded file can be hosted on a personal server. This is the most secure 
 extension locally as the contents of the extension will be signed by the Chrome Web Store. This
 helps detect potential attacks and tampering.
 
+{% Aside %}
+
+Read more about the [hosting policy][hosting-changes].
+
+{% endAside %}
+
 ### Create .crx locally {: #create }
 
 Extension directories are converted to `.crx` files at the Extensions Management Page. Navigate to
-`chrome://extensions/` in the ominibox, or click on the Chrome menu, hover over "More Tools" then
+`chrome://extensions/` in the omnibox, or click on the Chrome menu, hover over "More Tools" then
 select "Extensions".
 
 On the Extensions Management Page, enable Developer Mode by clicking the toggle switch next to
@@ -59,7 +67,7 @@ private key.
        alt="Packaged Extension Files", height="210", width="521" %}
 
 **Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
-needed to [update][5] the extension.
+needed to [update][header-updating] the extension.
 
 <!-- TODO duplicate ID (was previously #update) -->
 
@@ -85,7 +93,7 @@ Update an extension's `.crx` file by increasing the version number in `manifest.
 }
 ```
 
-Return to the [Extensions Management Page][6] and click the **PACK EXTENSION** button. Specify the
+Return to the [Extensions Management Page][load-locally] and click the **PACK EXTENSION** button. Specify the
 path to the extensions directory and the location of private key.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gcvNd3qR9hU7Pp0fQvhZ.png",
@@ -100,7 +108,7 @@ The page will provide the path for the updated packaged extension.
 
 ### Package through command line
 
-Package extensions in the command line by invoking [`chrome.exe`][7]. Use the `--pack-extension`
+Package extensions in the command line by invoking [`chrome.exe`][chromium-with-flags]. Use the `--pack-extension`
 flag to specify the location of the extension's folder and the `--pack-extension-key` flag to
 specify the location of the extension's private key file.
 
@@ -148,7 +156,7 @@ with the same private key as the currently installed version.
 ### Update URL {: #update_url }
 
 Extensions hosted on servers outside of the Chrome Webstore must include the `update_url` field in
-their [`manifest.json`][8] file.
+their [`manifest.json`][manifest] file.
 
 ```json
 {
@@ -165,14 +173,14 @@ The update manifest returned by the server should be an XML document.
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<gupdate xmlns='https://www.google.com/update2/response' protocol='2.0'>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'>
     <updatecheck codebase='https://myhost.com/mytestextension/mte_v2.crx' version='2.0' />
   </app>
 </gupdate>
 ```
 
-This XML format is borrowed from that used by [Omaha][9], Google's update infrastructure. The
+This XML format is borrowed from that used by [Omaha][omaha], Google's update infrastructure. The
 extensions system uses the following attributes for the `<app>` and `<updatecheck>` elements of the
 update manifest:
 
@@ -203,11 +211,11 @@ same URL running dynamic server-side code instead of a static XML file.
 
 The format of the request parameters is:
 
-`?x=_<extension_data>_`
+`?x=EXTENSION_DATA`
 
-Where `_<extension_data>_` is a URL-encoded string of the format:
+Where `EXTENSION_DATA` is a URL-encoded string of the format:
 
-`_id=<id>_&v=_<version>_`
+`id=EXTENSION_ID&v=EXTENSION_VERSION`
 
 For example, two extensions point to the same update URL (`https://test.com/extension_updates.php`):
 
@@ -262,14 +270,13 @@ version, add the "prodversionmin" attribute to the <app> element in the update r
 This would ensure that users would autoupdate to version 2 only if they are running Google Chrome
 3.0.193.0 or greater.
 
-[1]: http://chrome.google.com/webstore
-[2]: http://chrome.google.com/webstore
-[3]: /docs/extensions/mv3/hosting
-[4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: #update
-[6]: /packaging#extension_management
-[7]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
-[8]: /docs/extensions/mv3/tabs
-[9]: https://github.com/google/omaha
-[10]: /linux_hosting#packaging
-[11]: /linux_hosting#extension_management
+[chrome-web-store]: http://chrome.google.com/webstore
+[chromium-with-flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[developer-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[header-updating]: #update
+[hosting-changes]: /docs/extensions/mv2/hosting_changes/
+[hosting-options]: /docs/extensions/mv3/hosting
+[load-locally]: #create
+[manifest]: /docs/extensions/mv3/manifest/
+[omaha]: https://github.com/google/omaha
+

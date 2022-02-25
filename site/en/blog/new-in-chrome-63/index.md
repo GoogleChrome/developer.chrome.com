@@ -28,7 +28,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 63!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 63!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/62.0.3202.62..63.0.3239.84).
@@ -126,7 +126,7 @@ page performance!
 
 ## Permission UI changes {: #permissions }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right", height="491", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", class="float-right", height="491", width="800" %}
 
 I love web push notifications but I've been really frustrated by the number of
 sites asking for permission on page load, without any context - and I'm not

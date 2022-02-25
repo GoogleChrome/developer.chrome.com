@@ -7,9 +7,9 @@ extra_permissions_html:
 ## Manifest
 
 You can use most `chrome.tabs` methods and events without declaring any permissions in the
-extension's [manifest][manifest] file. However, if you require access to the [`url`][prop-url],
-[`pendingUrl`][3], [`title`][prop-title], or [`favIconUrl`][prop-faviconurl] properties of
-[`tabs.Tab`][tab], you must declare the `"tabs"` permission in the manifest, as shown below:
+extension's [manifest][manifest] file. However, if you require access to the `url`, `pendingUrl`,
+`title`, or `favIconUrl` properties of [`tabs.Tab`][tab], you must declare the `"tabs"` permission
+in the manifest, as shown below:
 
 ```json
 {
@@ -55,8 +55,8 @@ This example demonstrates how the background script can retrieve the currently f
 
 {% Aside %}
 
-This example requires Manifest due to the use of [Promises][promises]. Additionally, content scripts
-cannot use `tabs.query`.
+This example requires Manifest V3 due to the use of [Promises][promises]. Additionally, content
+scripts cannot use `tabs.query`.
 
 {% endAside %}
 
@@ -93,6 +93,37 @@ function toggleMuteState(tabId) {
 }
 ```
 
+### Move the current tab to the first position when clicked
+
+This example shows how to move a tab while a drag may or may not be in progress.
+
+{% Aside %}
+
+Manifest V3 required due to the use of Promises and chrome.tabs.onActivated(), replacing
+chrome.tabs.onSelectionChanged(). The use of catch(error) in a Promise context is a way to ensure
+that an error that otherwise populates chrome.runtime.lastError is not unchecked. chrome.tabs.move
+is used in this example, but the same waiting pattern can be used for other calls that modify tabs
+while a drag may be in progress.
+
+{% endAside %}
+
+```js
+//// background.js
+
+chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
+
+async function move(activeInfo) {
+  try {
+    await chrome.tabs.move(activeInfo.tabId, {index: 0});
+    console.log('Success.');
+  } catch (error) {
+    if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
+      setTimeout(() => move(activeInfo), 50);
+    }
+  }
+}
+```
+
 ### More samples
 
 For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
@@ -100,10 +131,6 @@ directory of the [chrome-extensions-samples][samples-repo] repository.
 
 [manifest]: /docs/extensions/mv3/manifest/
 [promises]: /docs/extensions/mv3/promises/
-[prop-url]: #property-Tab-url
-[prop-pendingurl]: #property-Tab-pendingUrl
-[prop-title]: #property-Tab-title
-[prop-faviconurl]: #property-Tab-favIconUrl
 [tab]: #type-Tab
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples

@@ -7,12 +7,14 @@ authors:
   - janscheffler
   - sigurds
 date: 2020-09-24
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHFSiflWmymyILCC18s7.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIBgHd0BAs0tNwtv7guE.jpg'
 alt: ''
 tags:
   - devtools-engineering
   - devtools
 ---
+
+{% include 'partials/devtools/en/banner.md' %}
 
 In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 
 
@@ -120,3 +122,6 @@ To keep issues actionable, we want to make it easier to discover which part of a
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Igbkg2AiyWGqET8GAfOZ.mp4", autoplay="true", muted="true", loop="true" %}
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

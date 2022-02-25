@@ -26,7 +26,7 @@ membership requests from unknown persons.
 ## Never use HTTP, Ever {: #https }
 
 When requesting or sending data, avoid an HTTP connection. Assume that any HTTP connections will
-have eavesdroppers or contain modifications. HTTPS should always be prefered, as it has built-in
+have eavesdroppers or contain modifications. HTTPS should always be preferred, as it has built-in
 security circumventing most [man-in-the-middle attacks][4].
 
 ## Request minimal permissions {: #permissions }
@@ -48,15 +48,15 @@ specified in the permissions.
   "version": "1.0",
   "description": "Example of a Secure Extension",
   "permissions": [
-    "/*",
-    "https://*.google.com/"
+    "https://developer.chrome.com/*",
+    "https://*.google.com/*"
   ],
   "manifest_version": 2
 }
 ```
 
 This extension requests access to anything on developer.chrome.com and subdomains of Google by
-listing `"/*"` and `"https://*google.com/"` in the permissions. If the
+listing `"https://developer.chrome.com/*"` and `"https://*.google.com/*"` in the permissions. If the
 extension were compromised, it would still only have permission to interact with websites that meet
 the [match pattern][7]. The attacker would not be able to access `"https://user_bank_info.com"` or
 interact with `"https://malicious_website.com"`.
@@ -81,8 +81,8 @@ trusted sources.
       "iamafriendlyextensionhereisdatas"
     ],
     "matches": [
-      "/*",
-      "https://*google.com/"
+      "https://developer.chrome.com/*",
+      "https://*.google.com/*"
     ],
     "accepts_tls_channel_id": false
   },
@@ -120,7 +120,7 @@ scripting attacks. If the extension only loads resources from itself register th
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self'"
+  "content_security_policy": "default-src 'self'; frame-ancestors 'none';",
   "manifest_version": 2
 }
 ```
@@ -132,7 +132,7 @@ If the extension needs to include scripts from specific hosts, they can be inclu
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self' https://extension.resource.com"
+  "content_security_policy": "default-src 'self' https://extension.resource.com; frame-ancestors 'none';",
   "manifest_version": 2
 }
 ```
@@ -270,7 +270,7 @@ function sanitizeInput(input) {
 [17]: #sanitize
 [18]: /docs/extensions/mv3/messaging#cross-site-scripting
 [19]: /docs/extensions/mv3/xhr#xhr-vs-content-scripts
-[20]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[20]: https://developer.mozilla.org/docs/Web/API/Fetch_API
 [21]: /docs/extensions/reference/tabs#method-create
 [22]: /docs/extensions/reference/runtime#event-onMessageExternal
 [23]: /docs/extensions/reference/runtime#event-onMessage

@@ -1,7 +1,7 @@
 module.exports = {
   'version': 1,
   'snapshot': {
-    'widths': [375, 865, 1280],
+    'widths': [375, 865, 1280, 1600],
     'percy-css': `
       iframe, .cookie-banner {
         display: none !important;
@@ -20,6 +20,7 @@ module.exports = {
       'docs/native-client/index.html',
       'blog/welcome/index.html',
       'docs/extensions/what-are-extensions/index.html',
+      'docs/extensions/reference/action/index.html',
       'docs/handbook/components/index.html'
     ].join(',')
   },

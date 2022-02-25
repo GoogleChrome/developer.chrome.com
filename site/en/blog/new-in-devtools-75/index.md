@@ -15,6 +15,8 @@ tags:
   - chrome-75
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
 ## Video version of this page {: #video }
@@ -158,17 +160,21 @@ used for indentation. To override the default behavior and use <kbd>Tab</kbd> to
 There's been a lot of work recently around making the DevTools UI itself more keyboard navigable.
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
+
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+[2]: https://developer.mozilla.org/docs/Web/CSS/filter
 [3]: https://crbug.com/931145
 [4]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
-[5]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
-[7]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+[5]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[6]: https://developer.mozilla.org/docs/Web/API/Window/sessionStorage
+[7]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [8]: https://www.w3.org/TR/webdatabase/
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
-[10]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
-[11]: https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
+[9]: https://developer.mozilla.org/docs/Web/HTTP/Cookies
+[10]: https://developer.mozilla.org/docs/Web/API/Cache
+[11]: https://developer.mozilla.org/docs/Web/HTML/Using_the_application_cache
 [12]: https://crbug.com/942503
 [13]: https://crbug.com/943770
 [14]: /docs/devtools/network

@@ -16,9 +16,7 @@ tags:
   - chrome-90
 ---
 
-{% Aside %}
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="UyXPdYLQVQk" %}
 
@@ -270,6 +268,10 @@ over time.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pkTyHQF0YfbgiE9IZufX.png", alt="Full accessibility tree view", width="800", height="535" %}
 
 Chromium issue: [887173][41]
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699

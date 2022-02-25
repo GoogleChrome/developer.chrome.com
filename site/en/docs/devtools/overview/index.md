@@ -111,6 +111,7 @@ View and debug network activity.
 - [Get Started][30]
 - [Network Issues Guide][31]
 - [Network Panel Reference][32]
+- [Inspect Resources][43]
 
 ### Performance panel {: #performance }
 
@@ -153,7 +154,6 @@ storage, cookies, Application Cache, images, fonts, and stylesheets.
 - [Debug Progressive Web Apps][40]
 - [Inspect and Manage Storage, Databases, and Caches][41]
 - [Inspect and Delete Cookies][42]
-- [Inspect Resources][43]
 
 ### Security panel {: #security }
 
@@ -200,10 +200,10 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [11]: /docs/devtools/device-mode/device-input-and-sensors
 [12]: /docs/devtools/dom
 [13]: /docs/devtools/css
-[14]: /docs/devtools/inspect-styles
-[15]: /docs/devtools/inspect-styles/edit-styles
-[16]: /docs/devtools/inspect-styles/edit-dom
-[17]: /docs/devtools/inspect-styles/animations
+[14]: /docs/devtools/css/#view
+[15]: /docs/devtools/css/reference/#change
+[16]: /docs/devtools/dom/#edit
+[17]: /docs/devtools/css/animations
 [18]: /docs/devtools/coverage
 [19]: /docs/devtools/console/get-started
 [20]: /docs/devtools/console
@@ -229,7 +229,7 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [40]: /docs/devtools/progressive-web-apps
 [41]: /docs/devtools/manage-data/local-storage
 [42]: /docs/devtools/manage-data/cookies
-[43]: /docs/devtools/manage-data/page-resources
+[43]: /docs/devtools/resources
 [44]: /docs/devtools/security
 [45]: https://crbug.com/new
 [46]: https://twitter.com/ChromeDevTools

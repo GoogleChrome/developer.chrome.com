@@ -53,6 +53,7 @@ function Aside(content, type = 'note') {
   // newline between it and the opening div or markdown-it will insert an extra
   // closing </div> if the Aside is used inside of a markdown definition list.
   return `<div class="aside aside--${type}">${ type !== 'note' ? `<div class="aside__label gap-bottom-300">${icons[type]}<span>${text}</span></div>` : ''}
+
 ${content}</div>`;
 }
 

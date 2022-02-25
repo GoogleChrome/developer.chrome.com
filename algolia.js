@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 require('dotenv').config();
-const algoliasearch = require('algoliasearch');
+const {default: algoliasearch} = require('algoliasearch');
 const fs = require('fs');
 const {sizeof} = require('sizeof');
 

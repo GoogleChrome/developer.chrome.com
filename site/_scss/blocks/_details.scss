@@ -12,7 +12,8 @@
   list-style: none;
   -webkit-tap-highlight-color: transparent;
 
-  &::-webkit-details-marker {
+  &::-webkit-details-marker,
+  &::marker {
     display: none;
   }
 

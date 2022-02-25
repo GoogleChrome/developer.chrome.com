@@ -710,7 +710,7 @@ For more detailed information about some of the APIs introduced in this step, re
 
 Ready to continue onto the next step? Go to [Step 3 - Add alarms and notifications »][31]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: /docs/extensions/reference/storage "Read 'chrome.storage.local' in the Chrome developer docs"
@@ -727,7 +727,7 @@ Ready to continue onto the next step? Go to [Step 3 - Add alarms and notificatio
 [13]:
   /docs/extensions/reference/storage#method-StorageArea-get
   "Read 'chrome.storage.local.get()' in the Chrome developer docs"
-[14]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [15]: http://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Read_After_Write_.28RAW.29
 [16]: /docs/extensions/reference/storage#method-StorageArea-remove
 [17]: /apps/contentSecurityPolicy "Read 'Content Security Policy' in the Chrome developer docs"

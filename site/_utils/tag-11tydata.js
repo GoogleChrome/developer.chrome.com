@@ -25,11 +25,23 @@ const {i18n} = require('../_filters/i18n');
 
 /**
  * @param {string} locale
- * @return {EleventyData}
+ * @return {Partial<EleventyData>}
  */
 module.exports = locale => ({
   eleventyComputed: {
-    title: data => data.paged.title,
+    title: data => data.paged.overrideTitle ?? i18n(data.paged.title, locale),
+    feedName: data => {
+      const key = data.paged.key ?? 'blog';
+      if (key.startsWith('chrome-')) {
+        return 'chrome';
+      }
+      return key;
+    },
+    permalink: data => {
+      // Tag links appear without a locale, since it's a single shared collection.
+      // Be sure to render in the right locale.
+      return `/${locale}/${data.permalink}`;
+    },
   },
   pagination: {
     /**
@@ -39,18 +51,14 @@ module.exports = locale => ({
     before: tags => {
       /** @type PaginatedPage[] */
       let paginated = [];
-
       for (const tag of tags) {
         const posts = tag.posts[locale];
-        if (posts.length > 0) {
-          paginated = paginated.concat(
-            addPagination(posts, locale + '/tags/' + tag.key, {
-              title: tag.isGeneratedTag ? tag.title : i18n(tag.title, locale),
-            })
-          );
+        if (posts.length) {
+          /** @type {VirtualCollectionItem} */
+          const additionalData = {...tag, description: '', elements: []};
+          paginated = paginated.concat(addPagination(posts, additionalData));
         }
       }
-
       return paginated;
     },
   },

@@ -53,8 +53,11 @@ The snippet below changes the background color for the address bar. colorInt is 
 that specifies a [`Color`][21].
 
 ```java
-int coolorInt = Color.parseColor("#FF0000"); //red
-builder.setToolbarColor(colorInt);
+int colorInt = Color.parseColor("#FF0000"); //red
+CustomTabColorSchemeParams defaultColors = new CustomTabColorSchemeParams.Builder()
+    .setToolbarColor(colorInt)
+    .build();
+intentBuilder.setDefaultColorSchemeParams(defaultColors);
 ```
 
 ## Configure a custom action button
@@ -291,7 +294,7 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 }
 ```
 
-Android 11 has introduced [package visiblity changes][31]. If your Android app is targeting API
+Android 11 has introduced [package visibility changes][31]. If your Android app is targeting API
 level 30 or above, adding a `queries` section to `AndroidManifest.xml` is needed, otherwise the
 code snippet above won't return results:
 

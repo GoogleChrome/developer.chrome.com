@@ -15,7 +15,7 @@
  */
 
 declare global {
-  export interface EleventyPagination<T = EleventyCollectionItem> {
+  export interface EleventyPagination<T = TODO> {
     /**
      * Array of current page's chunk of data
      */

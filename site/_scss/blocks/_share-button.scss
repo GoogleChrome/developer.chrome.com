@@ -1,0 +1,28 @@
+share-button {
+  border-radius: 50%;
+  display: block;
+  height: 32px;
+  // This ensures that the share button is in the vertical middle of the
+  // breadcrumbs and its won't shift the page (breadcrumbs are 28px high).
+  margin: -12px 0;
+  width: 32px;
+
+  &:hover {
+    background: var(--color-bg-shade);
+  }
+
+  .share-button__link {
+    display: inline-block;
+    height: 32px;
+    padding-left: 5px;
+    width: 100%;
+  }
+
+  .share-button__link:hover {
+    background-color: transparent;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}

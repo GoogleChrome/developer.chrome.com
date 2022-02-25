@@ -8,7 +8,7 @@
         {# This is nested as Safari fails to render `display: inline-flex` on <summary>. #}
         <div class="display-inline-flex align-center">
           <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
-          <span class="toc__icon">{{ icon('arrow-right') }}</span>
+          <span class="toc__icon">{{ icon('arrow-right', 'toggle') }}</span>
         </div>
       </summary>
       <div class="toc__wrapper">{{ tocContents | safe }}</div>

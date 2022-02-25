@@ -66,7 +66,7 @@ The `sockets` manifest property declares which permissions are available for the
 
   <table><tbody><tr><th>Type</th><th>Attribute</th><th>Description</th></tr><tr id="property-tcpServer-listen"><td>string or array of string</td><td><span class="optional">(optional)</span> listen</td><td><p></p><p>The host:port pattern for <code>listen</code> operations.</p><p></p></td></tr></tbody></table>
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: /apps/sockets.udp
 [4]: /apps/sockets.tcp

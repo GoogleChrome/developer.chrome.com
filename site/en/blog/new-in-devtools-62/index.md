@@ -16,6 +16,8 @@ tags:
   - chrome-62
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New features and changes coming to DevTools in Chrome 62:
 
 - [Support for top-level `await` operators in the **Console**][1].
@@ -198,6 +200,10 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
+
 [1]: #await
 [2]: #screenshot-areas
 [3]: #node-screenshots
@@ -212,7 +218,7 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 [12]: /docs/devtools/css/reference#select
 [13]: /docs/devtools/command-menu/
 [14]: /docs/devtools/console/reference/#context
-[15]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+[15]: https://developer.mozilla.org/docs/Web/API/Cache
 [16]: https://googlechrome.github.io/devtools-samples/whatsnew/m62/cache.html
 [17]: /blog/new-in-devtools-59#coverage
 [18]: /blog/new-in-devtools-59#screenshots

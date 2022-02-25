@@ -8,6 +8,7 @@
     - url: /docs/extensions/mv3/intro/mv3-overview
     - url: /docs/extensions/mv3/intro/mv3-migration
     - url: /docs/extensions/mv3/mv3-migration-checklist
+    - url: /docs/extensions/mv3/mv2-sunset
 - title: i18n.docs.extensions.overview
   sections:
     - url: /docs/extensions/mv3/overview
@@ -31,9 +32,10 @@
   sections:
     - url: /docs/extensions/mv3/messaging
     - url: /docs/extensions/mv3/content_scripts
-    - url: /docs/extensions/mv3/background_pages
+    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
+    - url: /docs/extensions/mv3/cross-origin-isolation
 - title: i18n.docs.extensions.indepth-security
   sections:
     - url: /docs/extensions/mv3/xhr
@@ -89,6 +91,7 @@
         - url: /docs/extensions/mv2/content_scripts
         - url: /docs/extensions/mv2/background_pages
         - url: /docs/extensions/mv2/match_patterns
+        - url: /docs/extensions/mv2/cross-origin-isolation
     - title: i18n.docs.extensions.indepth-security
       sections:
         - url: /docs/extensions/mv2/xhr

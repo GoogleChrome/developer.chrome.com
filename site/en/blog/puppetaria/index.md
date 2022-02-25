@@ -6,12 +6,14 @@ layout: "layouts/blog-post.njk"
 authors:
   - jobay
 date: 2020-11-10
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YhoLsiCeOqeg8yGr0pXi.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/tQ0RWQoMfnbeCKVjI3Nr.jpg'
 alt: ''
 tags:
   - devtools-engineering
   - devtools
 ---
+
+{% include 'partials/devtools/en/banner.md' %}
 
 ## Puppeteer and its approach to selectors {: .intro }
 
@@ -163,3 +165,6 @@ Now, with the CDP endpoint in place, we implemented the query handler on [the Pu
 
 ## What's next? {: .whats-next }
 The new `aria` handler shipped with [Puppeteer v5.4.0](https://github.com/puppeteer/puppeteer/releases/tag/v5.4.0) as a built-in query handler. We are looking forward to seeing how users adopt it into their test scripts, and we cannot wait to hear your ideas on how we can make this even more useful!
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

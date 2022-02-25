@@ -1,0 +1,62 @@
+{% from 'macros/cards/frontmatter-card.njk' import frontMatterCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+{% include 'partials/breadcrumbs-author.njk' %}
+{% endblock %}
+
+{% block content %}
+<div class="gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
+  <div class="center-margin project-hero text-align-center">
+    {% Img
+      src=paged.image,
+      alt=paged.title | i18n(locale),
+      height="192",
+      width="192",
+      class="rounded-full display-inline-block",
+      sizes="(min-width: 481px) 192px, 128px",
+      options={minWidth: 128}
+    %}
+    <h1 class="lg:gap-top-400 type--h4">{{ paged.title | i18n(locale) }}</h1>
+    <p class="type gap-top-300">{{ paged.description | i18n(locale) }}</p>
+
+    <div class="pad-top-300 pad-bottom-600 pad-left-400 pad-right-400 lg:pad-left-0 lg:pad-right-0">
+      <div class="display-flex direction-column align-center">
+        <div class="display-flex color-secondary-text gap-top-300 lg:gap-top-0">
+          {% if paged.homepage %}
+            <a href="{{ paged.homepage }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="{{ 'i18n.common.website' | i18n(locale) }}">
+              {{ icon('world', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.twitter %}
+            <a href="https://twitter.com/{{ paged.twitter }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Twitter">
+              {{ icon('twitter', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.github %}
+            <a href="https://github.com/{{ paged.github }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="GitHub">
+              {{ icon('github', {hidden: true}) }}
+            </a>
+          {% endif %}
+          {% if paged.glitch  %}
+            <a href="https://glitch.com/@{{ paged.glitch }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Glitch">
+              {{ icon('glitch', {hidden: true}) }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
+    <div class="blog-grid">
+      {% for fm in paged.pagination.items %}
+        {{ frontMatterCard(fm) }}
+      {% endfor %}
+    </div>
+    {% include 'partials/pagination.njk' %}
+  </div>
+</div>
+{% endblock %}

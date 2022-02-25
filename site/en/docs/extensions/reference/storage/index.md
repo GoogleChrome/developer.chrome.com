@@ -86,6 +86,10 @@ exceeded, please see the quota information for [sync][prop-sync] and [local][pro
 
 ## Examples
 
+The following sections demonstrate how to use `chrome.storage` to address some common use cases.
+
+### Synchronous response to storage updates
+
 If you're interested in tracking changes made to a data object, you can add a listener to its
 `onChanged` event. Whenever anything changes in storage, that event fires. Here's sample code to
 listen for saved changes:
@@ -151,6 +155,8 @@ chrome.storage.onChanged.addListener((changes, area) => {
 });
 ```
 
+### Asynchronous preload from storage
+
 Since service workers are not always running, Manifest V3 extensions sometimes need to
 asynchronously load data from storage before they execute their event handlers. To do this, the
 below snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
@@ -199,7 +205,7 @@ function getAllStorageSyncData() {
 [api-storage]: /docs/extensions/mv2/manifest/storage
 [api-tabs]: /docs/extensions/mv2/tabs
 [incognito]: /docs/extensions/mv2/manifest/incognito
-[local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/
 [prop-local]: #property-local
 [prop-sync]: #property-sync

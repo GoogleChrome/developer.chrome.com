@@ -216,13 +216,13 @@ For more detailed information about some of the APIs introduced in this step, re
 
 Ready to continue onto the next step? Go to [Step 6 - Export todos to the filesystem »][13]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
-[5]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
-[7]: https://developer.mozilla.org/en-US/docs/Web/API/URL.createObjectURL
+[5]: https://developer.mozilla.org/docs/Web/API/XMLHttpRequest
+[6]: https://developer.mozilla.org/docs/Web/API/Blob
+[7]: https://developer.mozilla.org/docs/Web/API/URL.createObjectURL
 [8]: https://github.com/GoogleChrome/apps-resource-loader#readme
 [9]: /apps/contentSecurityPolicy "Read 'Content Security Policy' in the Chrome developer docs"
 [10]:

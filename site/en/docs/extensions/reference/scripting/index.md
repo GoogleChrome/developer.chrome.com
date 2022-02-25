@@ -113,7 +113,7 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId},
-      function: getTitle,
+      func: getTitle,
     },
     () => { ... });
 ```
@@ -134,13 +134,27 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId},
-      function: changeBackgroundColor,
+      func: changeBackgroundColor,
     },
     () => { ... });
 ```
 
-You can work around this by using the [Storage API][storage] or by
-[passing messages][messaging].
+You can work around this by using the `args` property:
+
+```js
+const color = getUserColor();
+function changeBackgroundColor(backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor;
+}
+const tabId = getTabId();
+chrome.scripting.executeScript(
+    {
+      target: {tabId: tabId},
+      func: changeBackgroundColor,
+      args: [color],
+    },
+    () => { ... });
+```
 
 #### Runtime strings
 
@@ -149,7 +163,7 @@ If injecting CSS within a page, you can also specify a string to be used in the
 can't execute a string using `scripting.executeScript()`.
 
 ```js
-const css = 'body { background-color = "red"; }';
+const css = 'body { background-color: red; }';
 const tabId = getTabId();
 chrome.scripting.insertCSS(
     {
@@ -174,7 +188,7 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId, allFrames: true},
-      function: getTitle,
+      func: getTitle,
     },
     (injectionResults) => {
       for (const frameResult of injectionResults)
@@ -183,6 +197,35 @@ chrome.scripting.executeScript(
 ```
 
 `scripting.insertCSS()` does not return any results.
+
+#### Promises
+
+If the resulting value of the script execution is a promise, Chrome will wait
+for the promise to settle and return the resulting value.
+
+```js
+async function addIframe() {
+  const iframe = document.createElement('iframe');
+  const loadComplete = new Promise((resolve) => {
+    iframe.addEventListener('load', resolve);
+  });
+  iframe.src = 'https://example.com';
+  document.body.appendChild(iframe);
+  await loadComplete;
+  return iframe.contentWindow.document.title;
+}
+
+const tabId = getTabId();
+chrome.scripting.executeScript(
+    {
+      target: {tabId: tabId, allFrames: true},
+      func: addIframe,
+    },
+    (injectionResults) => {
+      for (const frameResult of injectionResults)
+        console.log('Iframe Title: ' + frameResult.result);
+    });
+```
 
 [manifest]: /docs/extensions/mv3/manifest
 [contentscripts]: /docs/extensions/mv3/content_scripts

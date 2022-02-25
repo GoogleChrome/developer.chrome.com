@@ -4,7 +4,7 @@ title: "Network features reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-#updated: YYYY-MM-DD
+updated: 2021-08-12
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -59,9 +59,7 @@ DevTools saves all requests until you disable **Preserve log**.
 
 Capture screenshots to analyze what users see as they wait for your page to load.
 
-To enable screenshots, click **Capture screenshots**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MzwAIIiGa9ZOUqfsCBaj.png", alt="Capture screenshots", width="26", height="16" %}
-on the Network panel. It turns blue when enabled.
+To enable screenshots, open **Settings** inside the Network panel and check **Capture screenshots**.
 
 Reload the page while the Network panel is in focus to capture screenshots.
 
@@ -73,10 +71,10 @@ Once captured, you can interact with screenshots in the following ways:
   captured.
 - Double-click a thumbnail to zoom in on it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cqE56LuAWj7R8H3xFCXt.png", alt="Hovering over a screenshot.", width="800", height="509" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/RM2QuyGbgYhQu61CSyCw.png",
+  alt="Capture screenshots enabled", width="800", height="614" %}
 
-**Figure 4**. Hovering over a screenshot. The yellow, vertical line in the Overview pane and the
-Waterfall represent the time at which the screenshot was captured.
+**Figure 4**. Capture screenshots enabled, showing loading screenshots over time.
 
 ### Replay XHR request {: #replay-xhr }
 
@@ -423,6 +421,18 @@ order they were received:
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][15].
 2.  Click **view source**, next to the **Request Header** or **Response Header** section.
 
+
+#### Provisional headers are shown {: #provisional-headers }
+
+There are times where the headers will show a  warning message "Provisional headers are shown...".
+
+1. It could be due to the request not sent over the network (served from a local cache), which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message", width="800", height="517" %}
+
+2. It could also be due to the network resource not valid (e.g. Try `fetch("https://jec.fyi.com/unknown-url/")` in the Console). DevTools could also display only provisional header due to security reasons.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message", width="800", height="517" %}
+
+
 ### View query string parameters {: #query-string }
 
 To view the query string parameters of a URL in a human-readable format:
@@ -513,7 +523,7 @@ Here's more information about each of the phases you may see in the Timing tab:
 - **Waiting (TTFB)**. The browser is waiting for the first byte of a response. TTFB stands for Time
   To First Byte. This timing includes 1 round trip of latency and the time the server took to
   prepare the response.
-- **Content Download**. The browser is receiving the response.
+- **Content Download**. The browser is receiving the response, either directly from the network or from a service worker. This value is the total amount of time spent reading the response body. Larger than expected values could indicate a slow network, or that the browser is busy performing other work which delays the response from being read.
 - **Receiving Push**. The browser is receiving data for this response via HTTP/2 Server Push.
 - **Reading Push**. The browser is reading the local data previously received.
 
@@ -646,27 +656,22 @@ Use large rows when you want more whitespace in your network requests table. Som
 provide a little more information when using large rows. For example, the bottom value of the
 **Size** column is the uncompressed size of a request.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of large request rows in the Requests pane.", width="800", height="478" %}
+Open **Settings** and click **Use large request rows** to enable large rows.
 
-**Figure 37**. An example of large request rows in the Requests pane
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png",
+  alt="The use large request rows checkbox", width="800", height="614" %}
 
-Click **Use large request rows**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use large request rows", width="28", height="20" %}
-to enable large rows.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/inNDJZFVu1zUQ4jz1XhV.svg", alt="The Large Request Rows button", width="705", height="450" %}
-
-**Figure 38**. Large Request Rows, outlined in blue
+**Figure 37**. Large Request Rows, outlined in blue
 
 ### Hide the Overview pane {: #hide-overview }
 
-By default, DevTools shows the [Overview pane][28]. Click **Hide overview**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
-to hide it.
+By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show
+overview** checkbox to hide it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SjuObPgFeP2thIv8NWem.svg", alt="The Hide Overview button", width="705", height="450" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/uWWJfuFbpiClEFjPTdVD.png",
+  alt="The show overview checkbox", width="800", height="614" %}
 
-**Figure 39**. Hide Overview, outlined in blue
+**Figure 38**. Hide Overview, outlined in blue
 
 [1]: #network-conditions
 [2]: https://web.dev/progressive-web-apps
@@ -674,12 +679,12 @@ to hide it.
 [4]: #network-conditions
 [5]: #network-conditions
 [6]: #hide-filters
-[7]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[8]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[9]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[10]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[7]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[8]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[9]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[10]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
 [11]: #hide-filters
-[12]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+[12]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 [13]: #waterfall
 [14]: #sort-by-activity
 [15]: #headers

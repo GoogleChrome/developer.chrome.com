@@ -412,7 +412,7 @@ release.
 [3]: https://developer.android.com/training/system-ui/immersive
 [4]: https://developer.android.com/guide/app-bundle
 [5]: https://android-developers.googleblog.com/2020/08/recent-android-app-bundle-improvements.html
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+[6]: https://developer.mozilla.org/docs/Web/API/Geolocation_API
 [7]: https://blog.chromium.org/2020/06/changes-to-quality-criteria-for-pwas.html
 [8]: /docs/android/trusted-web-activity/integration-guide#link-site-to-app
 [9]: https://developers.google.com/web/tools/workbox

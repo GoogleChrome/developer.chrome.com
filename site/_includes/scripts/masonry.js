@@ -27,12 +27,12 @@
   // This corresponds with the masonry breakpoint defined in _config.scss
   const minViewportWidth = 860;
   const gap = 32;
-  const grid = /** @type {HTMLElement} */ (document.querySelector(
-    '.masonry-grid'
-  ));
-  const items = /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll(
-    '.masonry-grid__item'
-  ));
+  const grid = /** @type {HTMLElement} */ (
+    document.querySelector('.masonry-grid')
+  );
+  const items = /** @type {NodeListOf<HTMLElement>} */ (
+    document.querySelectorAll('.masonry-grid__item')
+  );
   let isObserving;
 
   /**

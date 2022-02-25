@@ -208,8 +208,8 @@ try {
 
     // Call backend to validate the purchase.
     if (validatePurchaseOnBackend(purchaseToken)) {
-        // Acknowledge using the Digital Goods API. Use ‘onetime' for items
-        // that can only be purchased once and ‘repeatable for items
+        // Acknowledge using the Digital Goods API. Use 'onetime' for items
+        // that can only be purchased once and 'repeatable' for items
         // that can be purchased multiple times.
         await service.acknowledge(purchaseToken, 'onetime');
 
@@ -336,6 +336,7 @@ without enabling the Origin Trial:
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
      - `#enable-debug-for-store-billing`
+ - Ensure that the site is hosted using a https protocol. Using http will cause the API to be `undefined`
 
 Note: The `#enable-debug-for-store-billing` flag is not required when the application is downloaded
 from the Play Store.
@@ -351,6 +352,7 @@ meantime, it is possible to test the Digital Goods API:
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
  - Install your app from the Play Store on the device.
+ - Ensure that the site is hosted using a https protocol. Using http will cause the API to be `undefined`
 
 ## With test users and QA teams
 

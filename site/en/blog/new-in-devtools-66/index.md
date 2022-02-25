@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2018-02-26
 #updated: YYYY-MM-DD
-description: "Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more."
+description: "Ignore script in the Network panel, auto-adjust zooming in Device Mode, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3K94BKdNuYeQQpXJgwxF.jpg'
 alt: ''
 tags:
@@ -14,9 +14,11 @@ tags:
   - chrome-66
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New features and major changes coming to DevTools in Chrome 66 include:
 
-- [Blackboxing in the **Network** panel][1]
+- [Ignore script in the **Network** panel][1]
 - [Auto-adjust zooming in **Device Mode**][2]
 - [Pretty-printing in the **Preview** and **Response** tabs][3]
 - [Previewing HTML content in the **Preview** tab][4]
@@ -34,7 +36,7 @@ Read on, or watch the video version of the release notes below.
 
 {% YouTube id="eaYXFTJVewA" %}
 
-## Blackboxing in the Network panel {: #blackboxing }
+## Ignore script in the Network panel {: #ignore-script }
 
 The **Initiator** column in the **Network** panel tells you why a resource was requested. For
 example, if JavaScript causes an image to be fetched, the **Initiator** column shows you the line of
@@ -49,31 +51,21 @@ JavaScript code that caused the request.
 Previously, if your framework wrapped network requests in a wrapper, the **Initiator** column
 wouldn't be that helpful. All network requests pointed to the same line of wrapper code.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8LJ6KpBZs1LYKTWzCO5f.png", alt="The Initiator column shows that all of the requests were initiated by line 2 of requests.js.", width="800", height="500" %}
-
-**Figure 1**. The **Initiator** column shows that all of the requests were initiated by line 2 of
-`requests.js`
-
 What you really want in this scenario is to see the application code that causes the request. That's
 now possible:
 
 1.  Hover over the **Initiator** column. The call stack that caused the request appears in a pop-up.
 2.  Right-click the call that you want to hide from the initiator results.
-3.  Select **Blackbox script**. The **Initiator** column now hides any calls from the script that
-    you blackboxed.
+3.  Select **Add script to ignore list**. The **Initiator** column now hides any calls from the script that
+    you ignored.
 
-{% Img src="image/admin/hpgshbdiwKtYMcRsfVt9.png", alt="Blackboxing requests.js.", width="800", height="518" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring 'requests.js'.", width="800", height="575" %}
 
-**Figure 2**. Blackboxing `requests.js`
+**Figure 1**. Ignoring `requests.js`
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/QwQvjkwMlSyLLdzQGZKC.png", alt="After blackboxing requests.js, the Initiator column now shows more helpful results.", width="800", height="500" %}
+Manage your ignored scripts from the **Ignore List** tab in [Settings][6].
 
-**Figure 3**. After blackboxing `requests.js`, the **Initiator** column now shows more helpful
-results
-
-Manage your blackboxed scripts from the **Blackboxing** tab in [Settings][6].
-
-See [Ignore a script or pattern of scripts][7] to learn more about blackboxing.
+See [Ignore a script or pattern of scripts][7] to learn more about ignoring scripts.
 
 ## Pretty-printing in the Preview and Response tabs {: #pretty-printing }
 
@@ -82,14 +74,14 @@ that those resources have been minified.
 
 {% Img src="image/admin/pGztOri2zTIkZm559MvP.png", alt="The Preview tab pretty-printing the contents of analytics.js by default.", width="800", height="527" %}
 
-**Figure 4**. The **Preview** tab pretty-printing the contents of `analytics.js` by default
+**Figure 2**. The **Preview** tab pretty-printing the contents of `analytics.js` by default
 
 To view the unminified version of a resource, use the **Response** tab. You can also manually
 pretty-print resources from the **Response** tab, via the new **Format** button.
 
 {% Img src="image/admin/EvUzuxoqJEAd6US9bEzK.png", alt="Manually pretty-printing the contents of analytics.js via the Format button.", width="800", height="527" %}
 
-**Figure 5**. Manually pretty-printing the contents of `analytics.js` via the **Format** button
+**Figure 3**. Manually pretty-printing the contents of `analytics.js` via the **Format** button
 
 ## Previewing HTML content in the Preview tab {: #previews }
 
@@ -101,7 +93,7 @@ right-click a resource and select **Open in Sources panel**.
 
 {% Img src="image/admin/sZcyshIjXIgfT064asGm.png", alt="Previewing HTML in the Preview tab.", width="800", height="547" %}
 
-**Figure 6**. Previewing HTML in the **Preview** tab
+**Figure 4**. Previewing HTML in the **Preview** tab
 
 ## Auto-adjust zooming in Device Mode {: #auto-adjust }
 
@@ -118,7 +110,7 @@ rule in the `head` of the document that declares `font-weight: bold` for `h1` el
 
 {% Img src="image/admin/N4V6uciEsD8KxEJflPZc.png", alt="An example of styles defined within HTML", width="800", height="486" %}
 
-**Figure 7**. An example of styles defined within HTML
+**Figure 5**. An example of styles defined within HTML
 
 In Chrome 65, if you changed the `font-weight` declaration via the DevTools **Style** pane, **Local
 Overrides** wouldn't track the change. In other words, on the next reload, the style would revert
@@ -132,7 +124,7 @@ an HTML document, **Local Overrides** still won't be able to detect those change
 
 {% endAside %}
 
-## Bonus tip: Blackbox framework scripts to make Event Listener Breakpoints more useful {: #tip }
+## Bonus tip: Ignore framework scripts to make Event Listener Breakpoints more useful {: #tip }
 
 {% Aside %}
 
@@ -150,14 +142,14 @@ isn't that helpful.
 
 {% Img src="image/admin/R6aqGqlETYfPt229gX88.png", alt="The click breakpoint pauses in Vue.js' wrapper code.", width="800", height="486" %}
 
-**Figure 8**. The `click` breakpoint pauses in Vue.js' wrapper code
+**Figure 6**. The `click` breakpoint pauses in Vue.js' wrapper code
 
-Since the Vue.js script is in a separate file, I can blackbox that script from the **Call Stack**
+Since the Vue.js script is in a separate file, I can ignore that script from the **Call Stack**
 pane in order to make this `click` breakpoint more useful.
 
-{% Img src="image/admin/HthqwHAzXf5v61dwRZFh.png", alt="Blackboxing the Vue.js script from the Call Stack pane.", width="800", height="454" %}
+{% Img src="image/admin/HthqwHAzXf5v61dwRZFh.png", alt="Ignoring the Vue.js script from the Call Stack pane.", width="800", height="454" %}
 
-**Figure 9**. Blackboxing the Vue.js script from the **Call Stack** pane
+**Figure 7**. Ignoring the Vue.js script from the **Call Stack** pane
 
 The next time I click the button and trigger the `click` breakpoint, it executes the Vue.js code
 without pausing in it, and then pauses on the first line of code in my app's listener, which is
@@ -165,15 +157,19 @@ where I really wanted to pause all along.
 
 {% Img src="image/admin/0UHBfrZykjGbEfFkrCwE.png", alt="The click breakpoint now pauses on the app's listener code.", width="800", height="486" %}
 
-**Figure 10**. The `click` breakpoint now pauses on the app's listener code
+**Figure 8**. The `click` breakpoint now pauses on the app's listener code
 
-[1]: #blackboxing
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
+
+[1]: #ignore-script
 [2]: #auto-adjust
 [3]: #pretty-printing
 [4]: #previews
 [5]: #overrides
 [6]: /docs/devtools/customize/#settings
-[7]: /docs/devtools/javascript/reference#blackbox
+[7]: /docs/devtools/javascript/reference#ignore-script
 [8]: /docs/devtools/device-mode
 [9]: /blog/new-in-devtools-65#overrides
 [10]: https://youtu.be/H0XScE08hy8

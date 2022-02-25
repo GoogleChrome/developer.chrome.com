@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Content scripts"
 date: 2012-09-17
-updated: 2021-01-20
+updated: 2021-08-02
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
@@ -17,7 +17,7 @@ with the extension. They can also access the URL of an extension's file with
 `chrome.runtime.getURL()` and use the result the same as other URLs.
 
 ```js/1
-// Code for displaying <extensionDir>/images/myimage.png:
+// Code for displaying EXTENSION_DIR/images/myimage.png:
 var imgURL = chrome.runtime.getURL("images/myimage.png");
 document.getElementById("someImage").src = imgURL;
 ```
@@ -40,10 +40,15 @@ Content scripts are unable to access other APIs directly.
 ## Work in isolated worlds {: #isolated_world }
 
 Content scripts live in an isolated world, allowing a content script to make changes to its
-JavaScript environment without conflicting with the page or other extensions' content Scripts.
+JavaScript environment without conflicting with the page or other extensions' content scripts.
 
 {% Aside %}
-An *isolated world* is a private execution environment that isn't accessible from other extensions. A practical consequence of this isolation is that variables declared by one extension are not visible to another one. The concept was originally introduced with the initial launch of Chrome, providing isolation for browser tabs. 
+
+An *isolated world* is a private execution environment that isn't accessible to the page or other
+extensions. A practical consequence of this isolation is that JavaScript variables in an extension's
+content scripts are not visible to the host page or other extensions' content scripts. The concept was
+originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
+
 {% endAside %}
 
 An extension may run in a web page with code similar to the example below.
@@ -87,8 +92,8 @@ the others.
 
 ## Inject scripts {: #functionality }
 
-Content Scripts can be injected [declared statically][14], [declared dynamically][32], or
-[programmatically injected][13].
+Content scripts can be [declared statically][14]{% if false %}, [declared dynamically][32],
+{% endif %} or [programmatically injected][13].
 
 ### Inject with static declarations {: #static-declarative }
 
@@ -105,9 +110,9 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
  ...
  "content_scripts": [
    {
-     "matches": ["http://*.nytimes.com/*"],
-     "css": ["myStyles.css"],
-     "js": ["contentScript.js"]
+     "matches": ["https://*.nytimes.com/*"],
+     "css": ["my-styles.css"],
+     "js": ["content-script.js"]
    }
  ],
  ...
@@ -130,14 +135,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         URLs.</td>
     </tr>
     <tr id="css">
-      <td><code>css<code></code></code></td>
+      <td><code>css</code></td>
       <td>array of strings</td>
       <td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are
         injected in the order they appear in this array, before any DOM is constructed or displayed
         for the page.</td>
     </tr>
     <tr id="js">
-      <td><code>js<code></code></code></td>
+      <td><code>js</code></td>
       <td>
         <nobr>array of strings</nobr>
       </td>
@@ -151,13 +156,29 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         where the parent or opener frame matches one of the patterns declared in
         <code>matches</code>. Defaults to false.</td>
     </tr>
+    <tr id="match_origin_as_fallback">
+      <td><code>match_origin_as_fallback</code></td>
+      <td>boolean</td>
+      <td>
+        <em>Optional.</em> Whether the script should inject in frames that were
+        created by a matching origin, but whose URL or origin may not directly
+        match the pattern. These include frames with different schemes, such as
+        <code>about:</code>, <code>data:</code>, <code>blob:</code>, and
+        <code>filesystem:</code>. See also
+        <a href="#injecting-in-related-frames">Injecting in related frames</a>.
+      </td>
+    </tr>
   </tbody>
 </table>
 
+{% if false %}
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
 {% Aside 'caution' %}
-This feature is not yet fully supported. It is currently in dev and is also available in Chrome Canary.
+
+This feature is not yet fully supported. It is currently in dev and is also available in Chrome
+Canary.
+
 {% endAside %}
 
 You should use dynamic declarations in the following cases:
@@ -165,7 +186,6 @@ You should use dynamic declarations in the following cases:
 - When the host is not well known
 - The script may need to be added/removed from a known host
 
-{% if false %}
 **TODO**
 
 - Uses the JS scripting API
@@ -177,22 +197,19 @@ You should use dynamic declarations in the following cases:
 See the [api
 proposal](https://docs.google.com/document/d/1p2jnIL3znAhD2VVuEbzOetgj1Qeya9yATa3B9gBGGUg/edit) for
 additional details.
-{% endif %}
-
 
 ```js
 chrome.scripting.registerContentScript(optionsObject, callback);
 ```
 
-
 ```js
 chrome.scripting.unregisterContentScript(idArray, callback);
 ```
-
+{% endif %}
 
 ### Inject programmatically {: #programmatic }
 
-Use programmatic injection for content scripts that need to run in respond to events or on specific
+Use programmatic injection for content scripts that need to run in response to events or on specific
 occasions.
 
 In order to inject a content script programmatically, your extension needs host permissions for
@@ -200,47 +217,61 @@ the page it's trying to inject scripts into. Host permissions can either be gran
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 
-Below we'll look at an example that uses activeTab.
+Below we'll look at different versions of an activeTab-based extension.
 
-```json/3-5
+```json/4-6
+//// manifest.json ////
 {
   "name": "My extension",
   ...
   "permissions": [
     "activeTab"
   ],
-  ...
+  "background": {
+    "service_worker": "background.js"
+  }
 }
 ```
 
-Content scripts can be injected as files.
+Content scripts can be injected as files…
 
 ```js
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "runContentScript"){
-    chrome.scripting.executeScript({
-      file: 'contentScript.js'
-    });
-  }
+//// content-script.js ////
+document.body.style.backgroundColor = 'orange';
+```
+
+```js
+//// background.js ////
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['content-script.js']
+  });
 });
 ```
 
-Or an entire file can be injected.
+…or a function body can be injected and executed as a content script.
 
 ```js
+//// background.js ////
 function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
 
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "changeColor"){
-    chrome.scripting.executeScript({
-      function: injectedFunction
-    });
-  }
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: injectedFunction
+  });
 });
 ```
 
+Be aware that the injected function is a copy of the function referenced in the
+`chrome.scripting.executeScript` call, not the original function itself. As a result, the function's
+body must be self contained; references to variables outside of the function will cause the content
+script to throw a [`ReferenceError`][ref-error].
+
+{% if false %}
 When injecting as a function, you can also pass arguments to the function.
 
 ```js
@@ -248,18 +279,17 @@ function injectedFunction(color) {
   document.body.style.backgroundColor = color;
 }
 
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "changeColor"){
-    chrome.scripting.executeScript({
-      function: injectedFunction,
-      arguments: ['orange']
-    });
-  }
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: injectedFunction,
+    arguments: ['orange']
+  });
 });
 ```
+{% endif %}
 
-
-#### Exclude matches and globs {: #matchAndGlob }
+### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in a declarative
 registration.
@@ -283,7 +313,7 @@ registration.
       <td>array of strings</td>
       <td><em>Optional.</em> Applied after <code>matches</code> to include only those URLs that also
         match this glob. Intended to emulate the <a
-          href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code></a>
+          href="https://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code></a>
         Greasemonkey keyword.</td>
     </tr>
     <tr id="exclude_globs">
@@ -291,7 +321,7 @@ registration.
       <td>array of string</td>
       <td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this
         glob. Intended to emulate the <a
-          href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code></a>
+          href="https://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code></a>
         Greasemonkey keyword.</td>
     </tr>
   </tbody>
@@ -304,8 +334,8 @@ The content script will be injected into a page if both of the following are tru
 Because the `matches` property is required, `exclude_matches`, `include_globs`, and `exclude_globs`
 can only be used to limit which pages will be affected.
 
-The following extension injects the content script into **http://www.nytimes.com/ health**
-but not into **http://www.nytimes.com/ business** .
+The following extension injects the content script into **https://www.nytimes.com/ health**
+but not into **https://www.nytimes.com/ business** .
 
 ```json/6
 {
@@ -313,7 +343,7 @@ but not into **http://www.nytimes.com/ business** .
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "exclude_matches": ["*://*/*business*"],
       "js": ["contentScript.js"]
     }
@@ -324,7 +354,7 @@ but not into **http://www.nytimes.com/ business** .
 ```js/2
 chrome.scripting.registerContentScript({
   id: 1,
-  matches: ["http://*.nytimes.com/*"],
+  matches: ["https://*.nytimes.com/*"],
   exclude_matches: ["*://*/*business*"],
   js: ["contentScript.js"]
 });
@@ -335,20 +365,20 @@ strings are URLs that may contain "wildcard" asterisks and question marks. The a
 matches any string of any length, including the empty string, while the question mark **?** matches
 any single character.
 
-For example, the glob **http:// ??? .example.com/foo/ \*** matches any of the following:
+For example, the glob **https://???.example.com/foo/\*** matches any of the following:
 
-- **http:// www .example.com/foo /bar**
-- **http:// the .example.com/foo /**
+- **https://www.example.com/foo/bar**
+- **https://the.example.com/foo/**
 
 However, it does _not_ match the following:
 
-- **http:// my .example.com/foo/bar**
-- **http:// example .com/foo/**
-- **http://www.example.com/foo**
+- **https://my.example.com/foo/bar**
+- **https://example.com/foo/**
+- **https://www.example.com/foo**
 
-This extension injects the content script into **http:/www.nytimes.com/ arts /index.html** and
-**http://www.nytimes.com/ jobs /index.html** but not into **http://www.nytimes.com/ sports
-/index.html**.
+This extension injects the content script into **https://www.nytimes.com/arts/index.html** and
+**https://www.nytimes.com/jobs/index.html**, but not into
+**https://www.nytimes.com/sports/index.html**:
 
 ```json/6
 {
@@ -356,7 +386,7 @@ This extension injects the content script into **http:/www.nytimes.com/ arts /in
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "include_globs": ["*nytimes.com/???s/*"],
       "js": ["contentScript.js"]
     }
@@ -367,15 +397,15 @@ This extension injects the content script into **http:/www.nytimes.com/ arts /in
 ```js/3
 chrome.scripting.registerContentScript({
   id: 1,
-  matches: ['http://*.nytimes.com/*'],
+  matches: ['https://*.nytimes.com/*'],
   include_globs: ['*nytimes.com/???s/*'],
   js: ['contentScript.js']
 });
 ```
 
-This extension injects the content script into **http:// history .nytimes.com** and
-**http://.nytimes.com/ history** but not into **http:// science .nytimes.com** or
-**http://www.nytimes.com/ science** .
+This extension injects the content script into **https://history.nytimes.com** and
+**https://.nytimes.com/history**, but not into **https://science.nytimes.com** or
+**https://www.nytimes.com/science**:
 
 ```json/6
 {
@@ -383,7 +413,7 @@ This extension injects the content script into **http:// history .nytimes.com** 
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "exclude_globs": ["*science*"],
       "js": ["contentScript.js"]
     }
@@ -394,7 +424,7 @@ This extension injects the content script into **http:// history .nytimes.com** 
 ```js/3
 chrome.scripting.registerContentScript({
   id: 1,
-  matches: ['http://*.nytimes.com/*'],
+  matches: ['https://*.nytimes.com/*'],
   exclude_globs: ['*science*'],
   js: ['contentScript.js']
 });
@@ -408,7 +438,7 @@ One, all, or some of these can be included to achieve the correct scope.
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "exclude_matches": ["*://*/*business*"],
       "include_globs": ["*nytimes.com/???s/*"],
       "exclude_globs": ["*science*"],
@@ -420,7 +450,7 @@ One, all, or some of these can be included to achieve the correct scope.
 ```
 ```js/2-4
 chrome.scripting.registerContentScript({
-  matches: ['http://*.nytimes.com/*'],
+  matches: ['https://*.nytimes.com/*'],
   exclude_matches: ['*://*/*business*'],
   include_globs: ['*nytimes.com/???s/*'],
   exclude_globs: ['*science*'],
@@ -428,7 +458,7 @@ chrome.scripting.registerContentScript({
 });
 ```
 
-#### Run time {: #run_time }
+### Run time {: #run_time }
 
 The `run_at` field controls when JavaScript files are injected into the web page. The
 preferred and default value is `"document_idle"`, but you can also specify `"document_start"` or
@@ -440,7 +470,7 @@ preferred and default value is `"document_idle"`, but you can also specify `"doc
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "run_at": "document_idle",
       "js": ["contentScript.js"]
     }
@@ -450,7 +480,7 @@ preferred and default value is `"document_idle"`, but you can also specify `"doc
 ```
 ```js/2
 chrome.scripting.registerContentScript({
-  matches: ['http://*.nytimes.com/*'],
+  matches: ['https://*.nytimes.com/*'],
   run_at: 'document_idle',
   js: ['contentScript.js']
 });
@@ -466,17 +496,17 @@ chrome.scripting.registerContentScript({
     <tr id="document_idle">
       <td><code>document_idle</code></td>
       <td>string</td>
-      <td><em>Prefered.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser
+      <td><em>Preferred.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser
         chooses a time to inject scripts between <code>"document_end"</code> and immediately after
         the <a
-          href="http://www.whatwg.org/specs/web-apps/current-work/#handler-onload"><code>window.onload</code></a>
+          href="https://www.whatwg.org/specs/web-apps/current-work/#handler-onload"><code>window.onload</code></a>
         event fires. The exact moment of injection depends on how complex the document is and how
         long it is taking to load, and is optimized for page load speed.<br><br>Content scripts
         running at <code>"document_idle"</code> do not need to listen for the
         <code>window.onload</code> event, they are guaranteed to run after the DOM is complete. If a
         script definitely needs to run after <code>window.onload</code>, the extension can check if
         <code>onload</code> has already fired by using the <a
-          href="http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate"><code>document.readyState</code></a>
+          href="https://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate"><code>document.readyState</code></a>
         property.</td>
     </tr>
     <tr id="document_start">
@@ -494,7 +524,7 @@ chrome.scripting.registerContentScript({
   </tbody>
 </table>
 
-#### Specify frames {: #frames }
+### Specify frames {: #frames }
 
 The `"all_frames"` field allows the extension to specify if JavaScript and CSS files should be
 injected into all frames matching the specified URL requirements or only into the topmost frame in a
@@ -506,7 +536,7 @@ tab.
   ...
   "content_scripts": [
     {
-      "matches": ["http://*.nytimes.com/*"],
+      "matches": ["https://*.nytimes.com/*"],
       "all_frames": true,
       "js": ["contentScript.js"]
     }
@@ -516,7 +546,7 @@ tab.
 ```
 ```js/2
 chrome.scripting.registerContentScript({
-  matches: ['http://*.nytimes.com/*'],
+  matches: ['https://*.nytimes.com/*'],
   all_frames: true,
   js: ['contentScript.js']
 });
@@ -540,6 +570,59 @@ chrome.scripting.registerContentScript({
   </tbody>
 </table>
 
+### Injecting in related frames {: #injecting-in-related-frames }
+
+Extensions may want to run scripts in frames that are related to a matching
+frame, but don't themselves match. A common scenario when this is the case is
+for frames with URLs that were created by a matching frame, but whose URLs don't
+themselves match the script's specified patterns.
+
+This is the case when an extension wants to inject in frames with URLs that
+have `about:`, `data:`, `blob:`, and `filesystem:` schemes. In these cases, the
+URL will not match the content script's pattern (and, in the case of `about:`,
+`data:`, and `blob:`, do not even include the parent URL or origin in the URL
+at all, as in `about:blank` or `data:text/html,<html>Hello, World!</html>`).
+However, these frames can still be associated with the creating frame.
+
+To inject into these frames, extensions can specify the
+`"match_origin_as_fallback"` property on a content script specification in the
+manifest.
+
+```json
+{
+  "name": "My extension",
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://*.google.com/*"],
+      "match_origin_as_fallback": true,
+      "js": ["contentScript.js"]
+    }
+  ],
+  ...
+}
+```
+
+When specified and set to `true`, Chrome will look at the origin of the
+initiator of the frame to determine whether the frame matches, rather than at
+the URL of the frame itself. Note that this might also be different than the
+target frame's _origin_ (e.g., `data:` URLs have a null origin).
+
+The initiator of the frame is the frame that created or navigated the target
+frame. While this is commonly the direct parent or opener, it may not be (as in
+the case of a frame navigating an iframe within an iframe).
+
+Because this compares the _origin_ of the initiator frame, the initiator frame
+could be on at any path from that origin. To make this implication clear, Chrome
+requires any content scripts specified with `"match_origin_as_fallback"`
+set to `true` to also specify a path of `*`.
+
+When both `"match_origin_as_fallback"` and `"match_about_blank"` are specified,
+`"match_origin_as_fallback"` takes priority.
+
+This property is only available in extensions running manifest version 3 or
+higher.
+
 ## Communication with the embedding page {: #host-page-communication }
 
 Although the execution environments of content scripts and the pages that host them are isolated
@@ -553,8 +636,9 @@ var port = chrome.runtime.connect();
 
 window.addEventListener("message", (event) => {
   // We only accept messages from ourselves
-  if (event.source != window)
+  if (event.source != window) {
     return;
+  }
 
   if (event.data.type && (event.data.type == "FROM_PAGE")) {
     console.log("Content script received: " + event.data.text);
@@ -578,23 +662,24 @@ similar means.
 
 While isolated worlds provide a layer of protection, using content scripts can create
 vulnerabilities in an extension and the web page. If the content script receives content from a
-separate website, such as making an [XMLHttpRequest][28], be careful to filter content [cross-site
-scripting][29] attacks before injecting it. Only communicate over HTTPS in order to avoid
-["man-in-the-middle"][30] attacks.
+separate website, such as making an [`XMLHttpRequest`][28], be careful to filter content
+[cross-site scripting][29] attacks before injecting it. Only communicate over HTTPS in order to
+avoid ["man-in-the-middle"][30] attacks.
 
-Be sure to filter for malicious web pages. For example, the following patterns are dangerous:
+Be sure to filter for malicious web pages. For example, the following patterns are dangerous, and
+disallowed in Manifest V3:
 
 {% Compare 'worse' %}
 ```js
-var data = document.getElementById("json-data")
+const data = document.getElementById("json-data")
 // WARNING! Might be evaluating an evil script!
-var parsed = eval("(" + data + ")")
+const parsed = eval("(" + data + ")")
 ```
 {% endCompare %}
 
 {% Compare 'worse' %}
 ```js
-var elmt_id = ...
+const elmt_id = ...
 // WARNING! elmt_id might be "); ... evil script ... //"!
 window.setTimeout("animate(" + elmt_id + ")", 200);
 ```
@@ -604,21 +689,21 @@ Instead, prefer safer APIs that do not run scripts:
 
 {% Compare 'better' %}
 ```js
-var data = document.getElementById("json-data")
+const data = document.getElementById("json-data")
 // JSON.parse does not evaluate the attacker's scripts.
-var parsed = JSON.parse(data);
+const parsed = JSON.parse(data);
 ```
 {% endCompare %}
 
 {% Compare 'better' %}
 ```js
-var elmt_id = ...
+const elmt_id = ...
 // The closure form of setTimeout does not evaluate scripts.
 window.setTimeout(() => animate(elmt_id), 200);
 ```
 {% endCompare %}
 
-[1]: http://www.w3.org/TR/DOM-Level-2-HTML/
+[1]: https://www.w3.org/TR/DOM-Level-2-HTML/
 [2]: /docs/extensions/mv3/messaging
 [3]: /docs/extensions/reference/i18n
 [4]: /docs/extensions/reference/storage
@@ -638,15 +723,17 @@ window.setTimeout(() => animate(elmt_id), 200);
 [19]: /docs/extensions/mv3/match_patterns
 [20]: #matchAndGlob
 [21]: /docs/extensions/mv3/match_patterns
-[22]: http://wiki.greasespot.net/Metadata_Block#.40include
-[23]: http://wiki.greasespot.net/Metadata_Block#.40include
+[22]: https://wiki.greasespot.net/Metadata_Block#.40include
+[23]: https://wiki.greasespot.net/Metadata_Block#.40include
 [24]: /docs/extensions/mv3/match_patterns
-[25]: http://www.whatwg.org/specs/web-apps/current-work/#handler-onload
-[26]: http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate
-[27]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+[25]: https://www.whatwg.org/specs/web-apps/current-work/#handler-onload
+[26]: https://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate
+[27]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [28]: /docs/extensions/mv3/xhr
-[29]: http://en.wikipedia.org/wiki/Cross-site_scripting
-[30]: http://en.wikipedia.org/wiki/Man-in-the-middle_attack
+[29]: https://en.wikipedia.org/wiki/Cross-site_scripting
+[30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [31]: #functionality
 [32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
+
+[ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError

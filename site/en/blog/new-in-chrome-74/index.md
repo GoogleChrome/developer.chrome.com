@@ -30,7 +30,7 @@ In Chrome 74, we've added support for:
 
 And there's [plenty more](#more)!
 
-I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see
 what's new for developers in Chrome 74!
 
 ## Change log
@@ -99,7 +99,7 @@ To read more about public and private classes, check out Mathias's post on
 
 ## `prefers-reduced-motion` {: #prefers-reduced-motion }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", className="float-right", height="493", width="472" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", class="float-right", height="493", width="472" %}
 
 Some users have reported getting motion sick when viewing parallax scrolling,
 zooming, and other motion effects. To address this, many operating systems

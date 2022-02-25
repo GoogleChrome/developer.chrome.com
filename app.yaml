@@ -18,3 +18,11 @@ handlers:
   script: auto
   secure: always
   redirect_http_response_code: 301
+
+readiness_check:
+  path: "/_check"
+  check_interval_sec: 5
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 2
+  app_start_timeout_sec: 300

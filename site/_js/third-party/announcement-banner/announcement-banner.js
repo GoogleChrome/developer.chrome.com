@@ -4,11 +4,13 @@ class Banner extends HTMLElement {
     // after this class is added—this prevents ghost clicks on the button before
     // the event listener is added.
     this.setAttribute('active', '');
-
-    const button = this.querySelector('[data-banner-close-btn]');
-    /** @type {HTMLElement} */ (button).addEventListener('click', () => {
-      this.savePreference();
-      this.close();
+    this.addEventListener('click', e => {
+      if (
+        /** @type {HTMLElement} */ (e.target).closest('[data-banner-close-btn]')
+      ) {
+        this.savePreference();
+        this.close();
+      }
     });
   }
 

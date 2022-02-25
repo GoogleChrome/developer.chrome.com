@@ -2,126 +2,219 @@
 layout: "layouts/doc-post.njk"
 title: Identifying the User
 date: 2017-08-30
+updated: 2021-12-03
 description: How to get the Google Account identity of a Chrome Web Store user.
 ---
 
-This page tells you how to get the Google Account identity of a user, using Google's OpenID
-endpoint. You need this identity if you support Chrome Web Store Payments, because payment
-information is tied to the user's Google Account.
+Supporting Google account sign-in can help provide a better user experience. Users of the Chrome Web Store are likely to be logged in to their Google account already, so they won't have to set up and remember yet another username and password.
 
-Even if you don't use Chrome Web Store Payments, consider using Google Accounts if your app needs a
-login system. Google Accounts can help you provide a better user experience, since users of the
-Chrome Web Store are likely to be logged in already, and they won't have to set up and remember yet
-another username and password.
+This tutorial builds an extension using the [Google OAuth2/OpenID][google-openid] endpoint and the [Chrome
+Identity API][identity-api]. When the user clicks the [action][action], the extension will launch a consent
+screen. After the user signs in to their Google account, the background will log their
+information in the console.
 
-## When to support Google Accounts
+To identify the user with Google OAuth2/OpenId, follow these steps:
 
-The following table summarizes when you should support Google Account logins using OpenID.
+1. [Create your extension files][create-files].
+2. [Keep a consistent extension ID][consistent-id].
+3. [Get the OAuth client ID][client-id].
+4. [Launch the Authorization flow][auth-flow].
+5. [View the user information][view-user-info].
 
-<table><tbody><tr><th>App cost</th><th>Payment plan/system</th><th>Support for Google Accounts (using OpenID)</th></tr><tr><td>Paid</td><td>Chrome Web Store Payment System</td><td><b>Required</b><br>The Licensing API relies on Google Account user IDs.</td></tr><tr><td>Paid</td><td>Custom payment solution</td><td><b>Recommended</b><br>Users from the Chrome Web Store will have a better experience if you support the Google Account that they're already logged into.</td></tr><tr><td>Free</td><td>You <b>might charge</b> for the app in the future</td><td><b>Recommended</b><br>Supporting Google Accounts might make adding payments simpler.</td></tr><tr><td>Free</td><td><b>No plans to charge</b> for the app in the future</td><td><b>Optional</b><br>If you want to identify individual users, Google Accounts are a reasonable way to do so.</td></tr></tbody></table>
+We'll explain each step below.
 
-## How to use OpenID with Google Accounts
+## Create your extension files {: #create-extension-files}
 
-To get the user's OpenID URL, you query Google's OpenID service. If the user isn't already logged
-in, the user will be prompted to sign in with a Google-provided login page or popup.
+Begin by creating a directory and the following starter files.
 
-<div class="aside aside--note"><b>Note</b>: The OpenID URL is unique for a specific Google Account <em>and a specific app</em>. If you publish multiple apps, the same user will have a different OpenID URL for each app.</div>
+### manifest.json {: #manifest}
 
-Here's what the login page looks like. Note that it has a Google URL, not a URL from the app's site:
+Add the manifest by creating a file called `manifest.json` and include the following code:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", 
-       alt="The Google login page.", height="368", width="644" %}
-
-If you're writing a hosted app with Google App Engine, supporting Google Accounts is easy. You just
-use the default Google Accounts API authentication and the Users service. For details, see the user
-authentication docs (for [Java][1] or [Python][2]). Here's an example (taken from the [Licensing
-API][3] tutorial's [HelloLicenseServlet.java][4] file) of the code you use to get the current user's
-OpenID URL if you're implementing a Java app with Google App Engine:
-
-```java
-UserService userService = UserServiceFactory.getUserService();
-
-if (userService.isUserLoggedIn()) {
-  User user = userService.getCurrentUser();
-  /* ...Do something with user.getFederatedIdentity(), which is the OpenID URL. */
+```json
+{
+  "name": "Google OpenID Connect Example",
+  "version": "1.0",
+  "description": "Use OpenID Connect to identify the user",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Sign In with Google Accounts"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }
 ```
 
-If you aren't using Google App Engine, you can get the Google OpenID endpoint by sending a request
-to `https://www.google.com/accounts/o8/id`. See [Federated Login for Google Account Users][5] for
-details.
+### background.js {: #background}
 
-## How to skip the OpenID approval screen
+Add the background service worker by creating a file called `background.js`. Include the following
+code:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", alt="the Google Accounts approval page", height="368", width="644" %}
+```javascript
+// background.js
 
-Normally, the first time your app uses the
-Google OpenID endpoint to authenticate a particular user, the user must approve your access to their
-account. To the right, you can see a typical OpenID approval screen.
+chrome.action.onClicked.addListener(function() {
+  console.log('action clicked');
+});
+```
 
-Your users will have a better experience if they never see the approval screen. The screen is
-skipped if **both** of the following are true:
+{% include 'partials/extensions/reusing-prod-extension-id.md' %}
 
-* Your app requests only the OpenID URL. If your app requests something else—the user's
-  email address, for example—the approval screen is shown.
-* You specify your app's OpenID realm in the Edit page.
+## Get the OAuth client ID {: #get-client-id}
 
-Here's how to specify your OpenID realm:
+Navigate to the [Google API Console][google-console] and create a new project. To get a OAuth client
+ID, follow these steps:
 
-1.  In the Chrome Developer Dashboard, go to the Edit page for your app.
-2.  In the **OpenID** section, select the checkbox.
-3.  In the text field that appears, enter the realm that your app will use to query Google's OpenID
-    service.  
-    This must be exactly the same as the value of the `openid.realm` field in your authentication
-    requests.
-4.  Save your changes.  
-    They'll take effect the next time you publish your app.
+**1. Customize the consent screen and select scope.**
+   - Click the **OAuth consent screen** menu item.
+   - Fill out the required consent screen information.
+   - Add the **openid** scope.
+   - Add **Test users**.
+   - Click **Save > Continue**.
 
-If your app's code doesn't specify the value of the `openid.realm` parameter, look at your OpenID
-library to see how it sets that value. For details on how `openid.realm` is used, see [Request
-parameters][6] in the Google OpenID documentation.
+**2. Create credentials.**
+   - Click the **Credentials** menu item.
+   - Click **Create new credentials > Auth Client ID**.
+   - Select Application type **Web application**.
+   - Enter the **Name** of the OAuth2 client
+   - Add `https://YOUR_EXTENSION_ID.chromiumapp.org/` as the **Authorized redirect URI**.
+     - Replace <code><var>YOUR_EXTENSION_ID</var></code> with your extension's ID.
+   - Finish by clicking **Create**.
 
-## OpenID resources
+The console will provide an OAuth client ID. Keep this ID for later use.
 
-You should use an existing OpenID library rather than implement your own. In addition to Google App
-Engine's Users service, you can find OpenID libraries in a number of languages. Here are a few
-libraries we've used:
+## Launch the Authorization flow {: #auth-flow}
 
-- Java: [OpenID4Java][7]
-- Python: [GAE Django OpenID][8]
-- PHP: [LightOpenID][9]
-- Ruby: [ruby-openid][10] and [rack-openid][11], used together
+### Request the "identity" permission {: #identity-permission}
 
-You can find more libraries at Janrain's [OpenID Enabled][12], and a full list at the [OpenID
-Foundation][13].
+To use the [Chrome Identity API][identity-api], declare the `"identity"` permission in the
+`manifest.json`.
 
-The following pages have detailed explanations of how to use OpenID with Google Accounts:
+```json
+{
+  "name": "Google OpenID Connect example",
+  ...
+  "permissions": [
+    "identity"
+  ],
+  ...
+}
+```
 
-- [Supporting Federated Login with Google Accounts for Chrome Web Store Apps][14]
-- [Federated Login for Google Account Users][15]
-- [Using Federated Authentication via OpenID in Google App Engine][16]
+### Construct the authorization URL {: #auth-url}
 
-## What next?
+Before the extension can make a request to Google’s OAuth2 endpoint using the Identity API, you need
+to construct an [authorization URL][auth-url]. It must contain several request parameters including
+the client ID and redirect URI. In addition to the `openid` [scope][openid-scopes], you can request
+`profile` information and/or `email`. Update `background.js` to match the following code:
 
-If you're using the Licensing API, your next stop is [Checking for Payment][17]. Otherwise, go on to
-[Supplying Images][18].
+```javascript
+// background.js
 
-[1]: https://developers.google.com/appengine/docs/java/users/overview
-[2]: https://developers.google.com/appengine/docs/python/users/overview
-[3]: /docs/webstore/get_started
-[4]:
-  http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/apps/hello-java/HelloLicenseServlet.java
-[5]: https://developers.google.com/accounts/docs/OpenID
-[6]: https://developers.google.com/accounts/docs/OpenID#Parameters
-[7]: http://code.google.com/p/openid4java/
-[8]: http://code.google.com/p/google-app-engine-django-openid/
-[9]: http://gitorious.org/lightopenid
-[10]: http://rubyforge.org/projects/ruby-openid/
-[11]: http://github.com/josh/rack-openid
-[12]: http://www.janrain.com/openid-enabled
-[13]: http://openid.net/developers/libraries/
-[14]: /docs/webstore/authentication
-[15]: https://developers.google.com/accounts/docs/OpenID
-[16]: https://developers.google.com/appengine/articles/openid
-[17]: /docs/webstore/check_for_payment
-[18]: /docs/webstore/images
+let clientId = 'CLIENT_ID'
+let redirectUri = `https://${chrome.runtime.id}.chromiumapp.org/`
+let nonce = Math.random().toString(36).substring(2, 15)
+
+chrome.action.onClicked.addListener(function() {
+  const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+
+  authUrl.searchParams.set('client_id', clientId);
+  authUrl.searchParams.set('response_type', 'id_token');
+  authUrl.searchParams.set('redirect_uri', redirectUri);
+  // Add the OpenID scope. Scopes allow you to access the user’s information.
+  authUrl.searchParams.set('scope', 'openid profile email');
+  authUrl.searchParams.set('nonce', nonce);
+  // Show the consent screen after login.
+  authUrl.searchParams.set('prompt', 'consent');
+});
+```
+
+Replace <code><var>CLIENT_ID</var></code> with the API key generated from the Google console.
+
+### Retrieve a redirect URL {: #redirect-url}
+
+Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's
+authentication flow. Call [`identity.launchWebAuthFlow()`][identity-webauthflow] to launch the web
+auth flow and retrieve a redirect URL.
+
+The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
+user identity information, you'll need to parse the JWT into a plain JavaScript object. Update
+`background.js` to match the following code:
+
+```javascript
+// background.js
+
+...
+
+chrome.action.onClicked.addListener(function() {
+
+  ...
+
+  chrome.identity.launchWebAuthFlow(
+      {
+        url: authUrl.href,
+        interactive: true,
+      },
+      (redirectUrl) => {
+        if (redirectUrl) {
+          // The ID token is in the URL hash
+          const urlHash = redirectUrl.split('#')[1];
+          const params = new URLSearchParams(urlHash);
+          const jwt = params.get('id_token');
+
+          // Parse the JSON Web Token
+          const base64Url = jwt.split('.')[1];
+          const base64 = base64Url.replace('-', '+').replace('_', '/');
+          const token = JSON.parse(atob(base64));
+
+          console.log('token', token);
+        }
+      },
+    );
+});
+```
+
+{% Aside %}
+
+The above code is **not** production ready. We strongly encourage validating and decoding the JWT
+before the information it contains is trusted. For more information, see [how to handle credential
+responses][credential-responses].
+
+{% endAside %}
+
+## View the user information {: #user-info}
+
+Reload and return to the extension. Click the extension action button to start the web
+authentication flow. Sign in with your Google Account, then press Enter.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
+width="358", height="428" %}
+
+Go to the extension management page. Select the **service worker** blue link next to
+Inspect views. The extension should log the token containing the user information.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/450NKaekvVNpnAUXz7QJ.png", alt="ALT_TEXT_HERE",
+width="800", height="162" %}
+
+## Additional resources {: #additional-resources }
+
+- See [OAuth2: Authenticate users with Google][oauth-google-contacts] for a guided tutorial on how
+  to access a user's Google contacts.
+- See [Google OpenID Connect][google-openid] to learn more about OAuth 2.0 implementation for
+  authentication.
+
+[action]: /docs/extensions/reference/action/
+[auth-flow]: #auth-flow
+[auth-url]: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+[client-id]: #get-client-id
+[consistent-id]: #keep-consistent-id
+[create-files]: #create-extension-files
+[credential-responses]: https://developers.google.com/identity/gsi/web/guides/handle-credential-responses-js-functions
+[google-console]: https://console.developers.google.com
+[google-openid]: https://developers.google.com/identity/protocols/oauth2/openid-connect
+[identity-api]: /docs/extensions/reference/identity/
+[identity-webauthflow]: /docs/extensions/reference/identity/#method-launchWebAuthFlow
+[oauth-google-contacts]: /docs/extensions/mv3/tut_oauth/
+[openid-scopes]: https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
+[view-user-info]: #user-info

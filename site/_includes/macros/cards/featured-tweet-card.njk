@@ -3,9 +3,9 @@
 {% macro featuredTweetCard() %}
 {% set tweet = tweets[0] %}
 {% if tweet %}
-  <div class="masonry-grid__item featured-card tweet-card hairline rounded-lg width-full">
+  <div class="featured-card tweet-card hairline rounded-lg width-full">
     <div class="card-title-bar color-blue-medium">
-      {{ icon('twitter') }}
+      {{ icon('twitter', {hidden: true}) }}
       <span class="gap-left-300 flex-1 user-select-none">Twitter</span>
     </div>
 

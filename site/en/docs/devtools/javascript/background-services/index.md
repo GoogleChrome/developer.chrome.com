@@ -149,10 +149,10 @@ DevTools is not open:
 [10]: https://web.dev/service-workers-cache-storage/
 [11]: /docs/devtools/open
 [12]: https://web.dev/service-workers-cache-storage/
-[13]: https://developer.mozilla.org/en-US/docs/Web/API/Push_API
-[14]: https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API
+[13]: https://developer.mozilla.org/docs/Web/API/Push_API
+[14]: https://developer.mozilla.org/docs/Web/API/Notifications_API
 [15]: /docs/devtools/open
 [16]: https://web.dev/service-workers-cache-storage/
-[17]: https://developer.mozilla.org/en-US/docs/Web/API/Push_API
-[18]: https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API
+[17]: https://developer.mozilla.org/docs/Web/API/Push_API
+[18]: https://developer.mozilla.org/docs/Web/API/Notifications_API
 [19]: /docs/devtools/open

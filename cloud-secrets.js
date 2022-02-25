@@ -17,6 +17,9 @@ const cloudSecrets = async () => {
   const [secretsList] = await client.listSecrets({parent: project});
 
   for (const secretItem of secretsList) {
+    if (!secretItem.name) {
+      continue;
+    }
     const key = secretItem.name.split('/').pop();
     const [versions] = await client.listSecretVersions({
       parent: secretItem.name,
@@ -27,7 +30,7 @@ const cloudSecrets = async () => {
       const [accessedSecret] = await client.accessSecretVersion({
         name: version.name,
       });
-      const value = accessedSecret.payload.data.toString();
+      const value = accessedSecret.payload?.data?.toString() ?? '';
       dotenv += `${key}=${value}\n`;
       fetchedSecrets.push(key);
     }

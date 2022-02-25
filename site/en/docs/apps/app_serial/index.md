@@ -156,7 +156,7 @@ it can receive data even when your app is not running, or you can update connect
 the fly, like bitrate, timeouts, control signals, and many others with the [serial.update][16]
 method. See the full reference of the [serial][17] API for more information.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: serial
 [4]: app_usb

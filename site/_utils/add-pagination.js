@@ -21,6 +21,8 @@
  * the tags may be long to one data set.
  */
 
+const {paginationCount} = require('../_data/site.json');
+
 /**
  * Generates href for paginated page.
  * @param {string} baseUrl
@@ -38,49 +40,50 @@ const createHref = (baseUrl, i) => baseUrl + (i === 0 ? '/' : `/${i + 1}/`);
 const createPermalink = (baseUrl, i) => createHref(baseUrl, i) + 'index.html';
 
 /**
- * Take array of elements and returns an array of paginated pages for the elements.
- * @param {any[]} items Collection item's for pagination.
- * @param {string} baseUrl Beginning of url.
- * @param {{[key: string]: unknown}} additional
- * @return {PaginatedPage[]}
+ * Take array of elements of an item and returns an array of paginated pages for that item.
+ * @param {FrontMatterData[] | EleventyCollectionItem[]} elements Elements to paginate.
+ * @param {VirtualCollectionItem} additionalData Additional data to add pagination.
+ * @return {PaginatedPage[]} An array of items to display, including href and index.
  */
-module.exports = (items, baseUrl, additional = {}) => {
-  if (items.length === 0) {
-    return [];
+module.exports = (elements, additionalData) => {
+  if (!Array.isArray(elements)) {
+    throw new Error(
+      `\`elements\` must be an array, you passed in a ${typeof elements}`
+    );
   }
 
-  baseUrl = baseUrl.startsWith('/') ? baseUrl : '/' + baseUrl;
-  baseUrl = baseUrl.replace(/\/$/, '');
+  if (typeof additionalData !== 'object') {
+    throw new Error('`item` must be an object');
+  }
 
   /** @type PaginatedPage[] */
   const paginated = [];
-  const count = 24;
-  const total = Math.ceil(items.length / count);
-  const date = items[0].date;
+  const total = Math.ceil(elements.length / paginationCount);
+  const date = elements[0].date;
   const hrefs = Array.from({length: total}).map((_, i) =>
-    createHref(baseUrl, i)
+    createHref(additionalData.url, i)
   );
 
   for (let i = 0; i < total; i++) {
-    const start = i * count;
+    const start = i * paginationCount;
     paginated.push({
-      ...additional,
+      ...additionalData,
       date,
-      href: createHref(baseUrl, i),
+      href: createHref(additionalData.url, i),
       pagination: {
-        items: items.slice(start, start + count),
+        items: elements.slice(start, start + paginationCount),
         pageNumber: i,
         hrefs,
         href: {
-          next: i < total - 1 ? createHref(baseUrl, i + 1) : null,
-          previous: i > 0 ? createHref(baseUrl, i - 1) : null,
-          first: createHref(baseUrl, 0),
-          last: createHref(baseUrl, total - 1),
+          next: i < total - 1 ? createHref(additionalData.url, i + 1) : null,
+          previous: i > 0 ? createHref(additionalData.url, i - 1) : null,
+          first: createHref(additionalData.url, 0),
+          last: createHref(additionalData.url, total - 1),
         },
         data: 'WARNING_SYNTHETIC_PAGINATION',
         size: total,
       },
-      permalink: createPermalink(baseUrl, i),
+      permalink: createPermalink(additionalData.url, i),
     });
   }
 

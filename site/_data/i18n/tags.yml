@@ -1,3 +1,6 @@
+# The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
+# they have at least one matching post.
+
 news:
   en: News
   es: Noticias
@@ -11,6 +14,17 @@ accessibility:
 amp:
   en: AMP
 
+autoplay:
+  en: Autoplay
+
+capabilities:
+  en: Capabilities
+
+# This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
+# It does not need translation.
+chrome:
+  en: Chrome
+
 chromium-chronicle:
   en: Chromium Chronicle
 
@@ -20,6 +34,9 @@ cookies:
 deprecations:
   en: Deprecations
 
+device-characteristics:
+  en: Device Characteristics
+
 devices:
   en: Devices
 
@@ -28,6 +45,9 @@ encryption:
 
 extensions:
   en: Extensions
+
+fonts:
+  en: Fonts
 
 feature-policy:
   en: Feature-policy
@@ -47,11 +67,17 @@ houdini:
 html:
   en: HTML
 
+media:
+  en: Media
+
 new-in-chrome:
   en: New in Chrome
 
 privacy:
   en: Privacy
+
+progress-in-the-privacy-sandbox:
+  en: Progress in the Privacy Sandbox
 
 progressive-web-apps:
   en: Progressive Web Apps
@@ -67,6 +93,30 @@ devtools:
 
 new-in-devtools:
   en: What's New in DevTools
+  es: Qué hay de nuevo en DevTools
+  ja: DevTools の新機能
+  ko: DevTools 의 새로운 기능
+  ru: Новинки DevTools
+  zh: DevTools 新功能
+  pt: O que há de novo no DevTools
 
 devtools-engineering:
   en: DevTools Engineering
+
+devtools-architecture:
+  en: DevTools Architecture
+
+origin-trials:
+  en: Origin Trials
+
+identity:
+  en: Identity
+
+rendering:
+  en: Rendering
+
+lighthouse:
+  en: Lighthouse
+
+new-in-lighthouse:
+  en: What's new in Lighthouse

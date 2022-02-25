@@ -140,7 +140,7 @@ published by the `storage.managed` API.
 }
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://tools.ietf.org/html/draft-zyp-json-schema-03
 [4]: https://www.chromium.org/administrators/

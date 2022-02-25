@@ -9,21 +9,21 @@
 
   <h2 id="stable_apis">Stable APIs</h2>
   <p>
-    Release information is not available for APIs before Chrome 39, which was released in November 2014.
+    Release information is not available for APIs before Chrome 42, which was released in early 2015.
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'stable', 'index.d.ts') }}
+  {{ macros.renderReferenceTableForCollection(collections.reference, 'stable') }}
 
   <h2 id="beta_apis">Beta APIs</h2>
   <p>
     These APIs are only available in the Chrome Beta and Dev channels:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'beta', 'index.d.ts') }}
+  {{ macros.renderReferenceTableForCollection(collections.reference, 'beta') }}
 
   <h2 id="dev_apis">Dev APIs</h2>
   <p>
     These APIs are only available in the Chrome Dev channel:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'dev', 'index.d.ts') }}
+  {{ macros.renderReferenceTableForCollection(collections.reference, 'dev') }}
 
   <h2 id="platform_apps_apis">Platform Apps APIs</h2>
   <p>
@@ -34,7 +34,7 @@
     Chrome will be removing support for Chrome Apps on all platforms.
     Learn more about <a href="/docs/apps/migration">migrating your app</a>.
   </div>
-  {{ macros.renderReferenceTable(collections.reference, '', 'platform_app.d.ts') }}
+  {{ macros.renderReferenceTableForCollection(collections.reference, '', true) }}
 
 {# TODO(samthor): Chrome currently has none of these. #}
 {#
@@ -57,17 +57,20 @@
   <div class="display-flex gap-top-300 lg:gap-top-400 ">
     {% include 'partials/navigation-tree.njk' %}
 
-    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
-      <h1 class="type--h2">{{ title }}</h1>
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long pad-left-400 pad-right-400">
+        <h1 class="type--h2">{{ title }}</h1>
 
-      {% include 'partials/toc-inner.njk' %}
+        {% include 'partials/toc-inner.njk' %}
 
-      <div class="stack type">
-        {{ content | safe }}
-      </div>
+        <div class="stack type">
+          {{ content | safe }}
+        </div>
 
-    </article>
+      </article>
 
-    {% include 'partials/toc-side.njk' %}
+      {% include 'partials/toc-side.njk' %}
+    </div>
   </div>
 {% endblock %}

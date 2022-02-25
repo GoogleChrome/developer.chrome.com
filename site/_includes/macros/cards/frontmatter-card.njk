@@ -1,0 +1,57 @@
+{# Very similar to `blog-card` structurally except for it renders raw FrontMatter data read from the disk. #}
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
+{% macro frontMatterCard(fm) %}
+<div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
+  {% if fm.hero %}
+    {#
+      The thumbnail image defines its own bottom margin because it's optional
+      and needs to push the title down. If the title defined its own top
+      margin and the thumbnail was omitted then there would be too much space
+      between the title and the top of the card.
+    #}
+    <div class="blog-card__thumbnail gap-bottom-300">
+      <a class="display-block" href="{{ fm.url }}" {% if not fm.subhead %}aria-hidden="true" tabindex="-1"{% endif %}>
+        {% Img
+          class="rounded-100 object-fit-cover width-full",
+          src=fm.hero,
+          alt=fm.title,
+          width="278",
+          height="156",
+          sizes="(min-width: 36em) 330px, calc(100vw - 82px)"
+        %}
+      </a>
+    </div>
+  {% endif %}
+
+  <h2 class="type--h5">
+    <a class="surface display-inline-flex color-text" href="{{ fm.url }}">
+      {{ fm.title }}
+    </a>
+  </h2>
+
+  {% if not fm.hero %}
+    <p class="type--caption gap-top-200">
+      {{ fm.description }}
+    </p>
+  {% endif %}
+
+  {% if fm.tags %}
+    {% from 'macros/tag.njk' import tag with context %}
+    <div class="cluster flow-space-200 gap-top-300">
+      <div>
+        {% for item in fm.tags %}
+          {{ tag(item) }}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if fm.authors and fm.authors.length %}
+    <div class="gap-top-300">
+      {{ cardAuthors(fm.authors, fm.date) }}
+    </div>
+  {% endif %}
+
+</div>
+{% endmacro %}

@@ -14,6 +14,8 @@ tags:
   - chrome-84
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id="dgYAlcJonxo" %}
 
 ## Fix site issues with the new Issues tab {: #issues }
@@ -151,6 +153,10 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1KUD1snHJ1sVaaZo3BRK.png", alt="App shortcuts in the Manifest pane.", width="800", height="534" %}
 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
+
 [1]: /docs/devtools/issues
 [2]: https://crbug.com/1068116
 [3]: /blog/new-in-devtools-73#inspect
@@ -165,7 +171,7 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 [12]: https://web.dev/vitals/#core-web-vitals
 [13]: https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md
 [14]: https://bugs.chromium.org/p/v8/issues/detail?id=6751
-[15]: https://developer.mozilla.org/en-US/docs/Web/CSS/revert
+[15]: https://developer.mozilla.org/docs/Web/CSS/revert
 [16]: https://crbug.com/1075437
 [17]: https://crbug.com/1040019
 [18]: https://drafts.csswg.org/css-color/#changes-from-3

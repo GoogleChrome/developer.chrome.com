@@ -18,7 +18,7 @@ and to 100 microseconds on Android, where it's not.
 
 Starting from version 91, following a [specification change](https://github.com/w3c/hr-time/pull/93),
 Chrome will be restricting the resolution of explicit [timers](https://www.w3.org/TR/hr-time/)
-(`performance.now()`, `performance.timeOrigin()`,
+(`performance.now()`, `performance.timeOrigin`,
 and other performance APIs that expose `DOMHighResTimestamps`) to 100 microseconds across platforms.
 By enabling [cross-origin isolation](https://web.dev/coop-coep/),
 websites can relax the restriction to 5 microseconds regardless of platform.

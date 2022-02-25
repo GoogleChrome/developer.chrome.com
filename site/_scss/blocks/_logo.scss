@@ -1,0 +1,17 @@
+.logo__text {
+  display: inline-flex;
+  margin-left: 12px;
+  overflow: hidden;
+
+  // Hide the "Chrome" part of "Chrome Developers" on small screens.
+  @include media-query('md-max') {
+    > svg {
+      margin-left: -82px;
+    }
+  }
+
+  // The navigation rail on mobile always hides the "Chrome" part of "Chrome Developers".
+  &.logo__text-small > svg {
+    margin-left: -82px;
+  }
+}

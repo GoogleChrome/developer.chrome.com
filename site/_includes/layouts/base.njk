@@ -7,8 +7,10 @@
     <meta name="robots" content="noindex">
     {%- endif %}
 
-    {% include "partials/meta.njk" %}
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% include 'partials/meta.njk' %}
+    {% block feed %}
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% endblock %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
@@ -33,6 +35,7 @@
       {% endfor %}
     {% endif %}
 
+    {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
   </head>
   <body>

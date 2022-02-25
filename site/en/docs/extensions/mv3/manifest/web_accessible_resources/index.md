@@ -19,7 +19,7 @@ Prior to Manifest V2 all resources within an extension could be accessed from an
 web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
 or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
 
-Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. MV2
+Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
 extensions exposed only those resources explicitly designated as web accessible.
 
 Manifest V3 provides finer-grained control, letting you expose individual resources to specified
@@ -58,19 +58,22 @@ Each object in the array contains these properties:
   files.</dd>
   <dt><code>matches</code></dt>
   <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
-  is used to match URLs; subdomains patterns (<code>*.google.com<code>) and paths are ignored.</dd>
-  <dt><code>extensions</code></dt>
+  is used to match URLs. Origins include subdomain matching. Paths are ignored.</dd>
+  <dt><code>extension_ids</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
+  <dt><code>use_dynamic_url</code></dt>
+  <dd>If true, only allow resources to be accessible through dynamic ID. The dynamic ID is
+  generated per session. It's regenerated on browser restart or extension reload.</dd>
 </dl>
 
-Each element must include a `"resources"` element and either a `"matches"` or `"extensions"`
+Each element must include a `"resources"` element and either a `"matches"` or `"extension_ids"`
 element. This establishes a mapping that exposes the specified resources to web pages matching the
 pattern or to specified extensions.
 
 ## Navigability of resources
 
 These resources are available in a webpage via the URL
-`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [runtime.getURL][1]
+`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [`runtime.getURL`][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
 via mechanisms like XHR.
 
@@ -82,7 +85,7 @@ listed as web accessible. Note these corner cases:
 - The above holds true even if the resource that is not web accessible is owned by the redirecting
   extension.
 
-[Content scripts][5] themselves do not need to be allowlisted.
+[Content scripts][5] themselves do not need to be allowed.
 
 ## Example
 

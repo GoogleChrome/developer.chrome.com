@@ -12,9 +12,11 @@ to access. For example:
 {
   "name": "My extension",
   ...
-  "permissions": [
-    "cookies",
+  "host_permissions": [
     "*://*.google.com"
+  ],
+  "permissions": [
+    "cookies"
   ],
   ...
 }
@@ -26,6 +28,6 @@ You can find a simple example of using the cookies API in the
 [examples/api/cookies][2] directory. For other examples and for help in viewing
 the source code, see [Samples][3].
 
-[1]: /docs/extensions/mv2/declare_permissions
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/cookies/
-[3]: /docs/extensions/mv2/samples
+[1]: /docs/extensions/mv3/declare_permissions
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/cookies
+[3]: /docs/extensions/mv3/samples

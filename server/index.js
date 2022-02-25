@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-const isGAEProd = Boolean(process.env.GAE_APPLICATION);
-
+const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
-const pluralDomainRedirectHandler = require('./plural-domain');
+const unknownDomainRedirectHandler = require('./unknown-domain');
+const healthCheckHandler = require('./health-check');
 
 const app = express();
 
@@ -30,7 +30,7 @@ const app = express();
 const staticPaths = ['dist', 'dist/en'];
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
-const uniqueRedirectHandler = buildUniqueRedirectHandler(staticPaths);
+const uniqueRedirectHandler = buildUniqueRedirectHandler();
 
 // If we see content from /fonts/, then cache it forever.
 // If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
@@ -42,35 +42,43 @@ const immutableRootHandler = (req, res, next) => {
   next();
 };
 
-const cspHandler = (req, res, next) => {
+const cspHandler = (_req, res, next) => {
   // TODO(samthor): This is an unsuitable policy but included as a start.
   res.setHeader(
     'Content-Security-Policy-Report-Only',
     "object-src 'none'; " +
       "script-src 'self' 'unsafe-inline' https://www.google-analytics.com; " +
       "base-uri 'none'; " +
+      "frame-ancestors 'self'; " +
       'report-uri https://csp.withgoogle.com/csp/chrome-apps-doc'
   );
+  // nb. This is superceded by 'frame-ancestors' above, but retain while that
+  // policy is "Report-Only".
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   next();
 };
 
 const handlers = [
-  pluralDomainRedirectHandler,
   cspHandler,
   immutableRootHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
+  healthCheckHandler,
   notFoundHandler,
 ];
 
-if (!isGAEProd) {
+if (isGAEProd) {
+  // In production, ensure we're being served from the canonical domain.
+  handlers.unshift(unknownDomainRedirectHandler);
+} else {
+  // In production, the GFEs do gzip compression for us. Just set up for dev
+  // so that audits are happy.
   handlers.unshift(compression());
 }
 
 app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
-  // eslint-disable-next-line
-  console.log('The server is listening on port ' + listener.address().port);
+  console.log('The server is listening at:', listener.address());
 });

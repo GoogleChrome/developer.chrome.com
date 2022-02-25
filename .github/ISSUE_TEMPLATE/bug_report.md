@@ -2,7 +2,9 @@
 name: Bug report
 about: Create a report to help us improve the site
 title: ''
-labels: 'bug'
+labels:
+- 'bug'
+- 'P2'
 assignees: ''
 
 ---

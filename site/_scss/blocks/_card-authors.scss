@@ -1,8 +1,12 @@
-.card-authors__image {
+.card-authors__image > img {
   border: 2px solid var(--color-bg);
+  border-radius: 100%;
   // Since we're adding a 2px border all around the image, we need to set it to
   // be content-box, otherwise the image will display at 36px instead of 40px.
   box-sizing: content-box;
+  height: 40px;
+  max-width: 40px;
+  width: 40px;
 }
 
 .card-authors__image:not(:first-of-type) {

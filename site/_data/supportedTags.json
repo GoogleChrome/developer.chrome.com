@@ -1,4 +1,7 @@
 {
+  "autoplay": {
+    "title": "i18n.tags.autoplay"
+  },
   "news": {
     "title": "i18n.tags.news"
   },
@@ -11,6 +14,12 @@
   "amp": {
     "title": "i18n.tags.amp"
   },
+  "capabilities": {
+    "title": "i18n.tags.capabilities"
+  },
+  "chrome": {
+    "title": "i18n.tags.chrome"
+  },
   "chromium-chronicle": {
     "title": "i18n.tags.chromium-chronicle"
   },
@@ -19,6 +28,9 @@
   },
   "deprecations": {
     "title": "i18n.tags.deprecations"
+  },
+  "device-characteristics": {
+    "title": "i18n.tags.device-characteristics"
   },
   "devices": {
     "title": "i18n.tags.devices"
@@ -47,8 +59,17 @@
   "html": {
     "title": "i18n.tags.html"
   },
+  "identity": {
+    "title": "i18n.tags.identity"
+  },
+  "media": {
+    "title": "i18n.tags.media"
+  },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
+  },
+  "origin-trials": {
+    "title": "i18n.tags.origin-trials"
   },
   "privacy": {
     "title": "i18n.tags.privacy"
@@ -70,5 +91,8 @@
   },
   "devtools-engineering": {
     "title": "i18n.tags.devtools-engineering"
+  },
+  "devtools-architecture": {
+    "title": "i18n.tags.devtools-architecture"
   }
 }

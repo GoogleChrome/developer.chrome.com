@@ -70,6 +70,8 @@ search-box[active] {
   position: absolute;
   // top = search-box's height + top-nav's bottom padding + gap
   top: calc(#{$search-box-height} + #{nth(map-get($top-nav-padding, 'lg'), 1)} + #{get-size(400)});
+  // Helpful for smaller screens in case we end up with long text in search results.
+  word-break: break-word;
 
   strong {
     color: var(--color-primary);

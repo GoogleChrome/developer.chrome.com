@@ -388,7 +388,7 @@ network activity.
 [4]: /docs/devtools/open
 [5]: /docs/devtools/customize/#placement
 [6]: /docs/devtools/network/reference#hide-overview
-[7]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+[7]: https://developer.mozilla.org/docs/Web/HTTP/Caching
 [8]: #throttle
 [9]: https://web.dev/uses-long-cache-ttl/
 [10]: /docs/devtools/network/reference#filter-by-property

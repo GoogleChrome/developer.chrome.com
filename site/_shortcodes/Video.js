@@ -1,61 +1,26 @@
-const mime = require('browser-media-mime-type');
-const {html} = require('common-tags');
-const path = require('path');
-const url = require('url');
-const {bucket, gcs} = require('../_data/site.json');
-
-/**
+/*
+ * Copyright 2021 Google LLC
  *
- * @param {string} src
- * @return {string}
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-const generateSource = src => {
-  const extname = path.extname(src);
-  const type = mime(extname);
-  src = new url.URL(path.join(bucket, src), gcs).href;
-  return html`
-    <source src="${src}" ${type ? `type="${type}"` : ''} />
-  `.replace(/\n/g, '');
-};
+
+const {Video: BuildVideoShortcode} = require('webdev-infra/shortcodes/Video');
+const {bucket, imgixDomain} = require('../_data/site.json');
 
 /**
- * @param {VideoArgs} args Named arguments
+ * @param {import('webdev-infra/types').VideoArgs} args Named arguments
  * @returns {string}
  */
-const Video = args => {
-  if (typeof args.src === 'string') {
-    args.src = [args.src];
-  }
-
-  const {
-    autoplay,
-    autoPictureInPicture,
-    className,
-    disablePictureInPicture,
-    height,
-    loop,
-    muted,
-    poster,
-    preload,
-    src,
-    width,
-  } = args;
-
-  return html`<video
-    ${autoplay ? 'autoplay' : ''}
-    ${autoPictureInPicture ? 'autoPictureInPicture' : ''}
-    ${className ? `class="${className}"` : ''}
-    controls
-    ${disablePictureInPicture ? 'disablePictureInPicture' : ''}
-    ${height ? `height="${height}"` : ''}
-    ${loop ? 'loop' : ''}
-    ${muted ? 'muted' : ''}
-    ${poster ? `poster="${poster}"` : ''}
-    ${preload ? `preload="${preload}"` : ''}
-    ${width ? `width="${width}"` : ''}
-  >
-    ${src.map(generateSource)}
-  </video>`.replace(/\n/g, '');
-};
+const Video = BuildVideoShortcode(bucket, imgixDomain);
 
 module.exports = {Video};

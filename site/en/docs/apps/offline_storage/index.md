@@ -265,7 +265,7 @@ The plan is to put all HTML5 offline storage APIs—including IndexedDB, Applica
 System,{# LocalStorage, SessionStorage,#} and other APIs that might be specified—under the Quota
 Management API. You will be able to manage all storage allocation with it.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: #types
 [4]: #temporary

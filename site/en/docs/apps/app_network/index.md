@@ -249,7 +249,7 @@ chrome.sockets.tcpServer.onAccept.removeListener(onAccept);
 chrome.sockets.tcpServer.disconnect(serverSocketId);
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: sockets_udp
 [4]: sockets_tcp
@@ -262,7 +262,7 @@ chrome.sockets.tcpServer.disconnect(serverSocketId);
 [11]: /apps/sockets.tcp#method-connect
 [12]: /apps/sockets.tcp#method-send
 [13]: /apps/sockets.tcp#event-onReceive
-[14]: https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays
+[14]: https://developer.mozilla.org/docs/JavaScript_typed_arrays
 [15]: http://updates.html5rocks.com/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 [16]: /apps/sockets.tcp#method-disconnect
 [17]: /apps/sockets.udp#method-send

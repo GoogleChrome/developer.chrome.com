@@ -61,7 +61,7 @@ callback function.
 chrome.bookmarks.create({
   'parentId': extensionsFolderId,
   'title': 'Extensions doc',
-  'url': 'http://code.google.com/chrome/extensions',
+  'url': 'https://developer.chrome.com/docs/extensions',
 });
 ```
 

@@ -124,7 +124,7 @@ By default the Console clears whenever you load a new page. To persist messages 
 ### Hide network messages {: #network }
 
 By default the browser logs network messages to the **Console**. For example, the top message in
-**Figure X** represents a 404.
+**Figure 10** represents a 404.
 
 {% Img src="image/admin/rlMckNNbRXvT4xln5jTQ.png", alt="A 404 message in the Console.", width="800", height="497" %}
 
@@ -206,8 +206,8 @@ checkbox.
 
 ### Filter out messages that don't match a regular expression pattern {: #regex }
 
-Type a regular expression such as `/[gm][ta][mi]/` in the **Filter** text box to filter out any
-messages that don't match that pattern. DevTools checks if the pattern is found in the message text
+Type a regular expression such as `/[foo]\s[bar]/` in the **Filter** text box to filter out any
+messages that don't match that pattern. Spaces are not supported, use `\s` instead. DevTools checks if the pattern is found in the message text
 or the script that caused the message to be logged.
 
 {% Img src="image/admin/1FvJQi69s6J7nHtKUIDy.png", alt="Filtering out any messages that don't match /[gm][ta][mi]/.", width="800", height="512" %}
@@ -307,4 +307,4 @@ You can use any of the following workflows to clear the Console:
 [29]: /docs/devtools/console/live-expressions
 [30]: #settings
 [31]: #settings
-[32]: https://developer.mozilla.org/en-US/docs/Glossary/Browsing_context
+[32]: https://developer.mozilla.org/docs/Glossary/Browsing_context

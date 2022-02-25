@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Message passing"
 date: 2012-09-18
-updated: 2019-07-17
+updated: 2021-06-01
 description: How to pass messages between extensions and content scripts.
 ---
 
@@ -22,9 +22,9 @@ messages][3] section.
 ## Simple one-time requests {: #simple }
 
 If you only need to send a single message to another part of your extension (and optionally get a
-response back), you should use the simplified [runtime.sendMessage][4] or [tabs.sendMessage][5] .
-This lets you send a one-time JSON-serializable message from a content script to extension , or vice
-versa, respectively . An optional callback parameter allows you handle the response from the other
+response back), you should use the simplified [runtime.sendMessage][4] or [tabs.sendMessage][5].
+This lets you send a one-time JSON-serializable message from a content script to extension, or vice
+versa, respectively. An optional callback parameter allows you to handle the response from the other
 side, if there is one.
 
 Sending a request from a content script looks like this:
@@ -56,7 +56,7 @@ chrome.runtime.onMessage.addListener(
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.greeting == "hello")
+    if (request.greeting === "hello")
       sendResponse({farewell: "goodbye"});
   }
 );
@@ -72,8 +72,8 @@ In the above example, `sendResponse` was called synchronously. If you want to as
 ## Long-lived connections {: #connect }
 
 Sometimes it's useful to have a conversation that lasts longer than a single request and response.
-In this case, you can open a long-lived channel from your content script to an extension page , or
-vice versa, using [runtime.connect][7] or [tabs.connect][8], respectively . The channel can
+In this case, you can open a long-lived channel from your content script to an extension page, or
+vice versa, using [runtime.connect][7] or [tabs.connect][8], respectively. The channel can
 optionally have a name, allowing you to distinguish between different types of connections.
 
 One use case might be an automatic form fill extension. The content script could open a channel to
@@ -90,9 +90,9 @@ Here is how you open a channel from a content script, and send and listen for me
 var port = chrome.runtime.connect({name: "knockknock"});
 port.postMessage({joke: "Knock knock"});
 port.onMessage.addListener(function(msg) {
-  if (msg.question == "Who's there?")
+  if (msg.question === "Who's there?")
     port.postMessage({answer: "Madame"});
-  else if (msg.question == "Madame who?")
+  else if (msg.question === "Madame who?")
     port.postMessage({answer: "Madame... Bovary"});
 });
 ```
@@ -109,13 +109,13 @@ incoming connections:
 
 ```js
 chrome.runtime.onConnect.addListener(function(port) {
-  console.assert(port.name == "knockknock");
+  console.assert(port.name === "knockknock");
   port.onMessage.addListener(function(msg) {
-    if (msg.joke == "Knock knock")
+    if (msg.joke === "Knock knock")
       port.postMessage({question: "Who's there?"});
-    else if (msg.answer == "Madame")
+    else if (msg.answer === "Madame")
       port.postMessage({question: "Madame who?"});
-    else if (msg.answer == "Madame... Bovary")
+    else if (msg.answer === "Madame... Bovary")
       port.postMessage({question: "I don't get it."});
   });
 });
@@ -161,7 +161,7 @@ each:
 // For simple requests:
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    if (sender.id == blocklistedExtension)
+    if (sender.id === blocklistedExtension)
       return;  // don't allow this extension access
     else if (request.getTargetData)
       sendResponse({targetData: targetData});
@@ -202,13 +202,13 @@ port.postMessage(...);
 
 ## Sending messages from web pages {: #external-webpage }
 
-Similar to [cross-extension messaging][27], your app or extension can receive and respond to
+Similar to [cross-extension messaging][27], your extension can receive and respond to
 messages from regular web pages. To use this feature, you must first specify in your manifest.json
-which web sites you want to communicate with. For example:
+which websites you want to communicate with. For example:
 
 ```json
 "externally_connectable": {
-  "matches": ["*://*.example.com/*"]
+  "matches": ["https://*.example.com/*"]
 }
 ```
 
@@ -230,14 +230,14 @@ chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
   });
 ```
 
-From your app or extension, you may listen to messages from web pages via the
+From your extension, you may listen to messages from web pages via the
 [runtime.onMessageExternal][31] or [runtime.onConnectExternal][32] APIs, similar to [cross-extension
 messaging][33]. Only the web page can initiate a connection. Here is an example:
 
 ```js
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    if (sender.url == blocklistedWebsite)
+    if (sender.url === blocklistedWebsite)
       return;  // don't allow this web page access
     if (request.openUrlInEditor)
       openUrl(request.openUrlInEditor);
@@ -246,7 +246,7 @@ chrome.runtime.onMessageExternal.addListener(
 
 ## Native messaging {: #native-messaging }
 
-Extensions and apps [can exchange messages][34] with native applications that are registered as a
+Extensions [can exchange messages][34] with native applications that are registered as a
 [native messaging host][35]. To learn more about this feature, see [Native messaging][36].
 
 ## Security considerations {: #security-considerations }
@@ -300,8 +300,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 ## Examples {: #examples }
 
 You can find simple examples of communication via messages in the [examples/api/messaging][40]
-directory. The [native messaging sample][41] demonstrates how a Chrome app can communicate with a
-native app. For more examples and for help in viewing the source code, see [Samples][42].
+directory.
 
 [1]: #simple
 [2]: #connect

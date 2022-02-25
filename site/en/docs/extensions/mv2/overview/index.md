@@ -124,7 +124,7 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [6]: /docs/webstore
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/tutorials/hello_extensions
 [8]: /docs/extensions/reference/browserAction
-[9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
+[9]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv2/getstarted
 [11]: /docs/extensions/mv2/overview
 [12]: https://blog.chromium.org/

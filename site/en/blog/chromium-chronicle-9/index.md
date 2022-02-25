@@ -52,7 +52,7 @@ converted into `protobufs`. Once ClusterFuzz finds a crash, it will try to
 **minimize the input test case and even bisect to find the offending commit**.
 It finds a lot...
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="", className="float-left", height="430", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="", class="float-left", height="430", width="800" %}
 
 You can help:
 

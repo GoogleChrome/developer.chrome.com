@@ -21,7 +21,7 @@ example:
 ## Content setting patterns
 
 You can use patterns to specify the websites that each content setting affects. For example,
-`http://*.youtube.com/*` specifies youtube.com and all of its subdomains. The syntax for content
+`https://*.youtube.com/*` specifies youtube.com and all of its subdomains. The syntax for content
 setting patterns is the same as for [match patterns][1], with a few differences:
 
 - For `http`, `https`, and `ftp` URLs, the path must be a wildcard (`/*`). For `file` URLs, the path
@@ -37,25 +37,25 @@ pattern takes precedence.
 
 For example, the following patterns are ordered by precedence:
 
-1.  `http://www.example.com/*`
-2.  `http://*.example.com/*` (matching example.com and all subdomains)
-3.  `<all_urls>` (matching every URL)
+1. `https://www.example.com/*`
+2. `https://*.example.com/*` (matching example.com and all subdomains)
+3. `<all_urls>` (matching every URL)
 
 Three kinds of wildcards affect how specific a pattern is:
 
-- Wildcards in the port (for example `http://www.example.com:*/*`)
+- Wildcards in the port (for example `https://www.example.com:*/*`)
 - Wildcards in the scheme (for example `*://www.example.com:123/*`)
-- Wildcards in the hostname (for example `http://*.example.com:123/*`)
+- Wildcards in the hostname (for example `https://*.example.com:123/*`)
 
 If a pattern is more specific than another pattern in one part but less specific in another part,
 the different parts are checked in the following order: hostname, scheme, port. For example, the
 following patterns are ordered by precedence:
 
-1.  `http://www.example.com:*/*`
+1.  `https://www.example.com:*/*`
     Specifies the hostname and scheme.
 2.  `*:/www.example.com:123/*`
     Not as high, because although it specifies the hostname, it doesn't specify the scheme.
-3.  `http://*.example.com:123/*`
+3.  `https://*.example.com:123/*`
     Lower because although it specifies the port and scheme, it has a wildcard in the hostname.
 
 ## Primary and secondary patterns
@@ -74,7 +74,7 @@ pattern takes precedence. If there multiple rules have the same primary pattern,
 more specific secondary pattern takes precedence. For example, the following list of
 primary/secondary pattern pairs is ordered by precedence:
 
-<table><tbody><tr><th>Precedence</th><th>Primary pattern</th><th>Secondary pattern</th></tr><tr><td>1</td><td><code>http://www.moose.com/*</code>,</td><td><code>http://www.wombat.com/*</code></td></tr><tr><td>2</td><td><code>http://www.moose.com/*</code>,</td><td><code>&lt;all_urls&gt;</code></td></tr><tr><td>3</td><td><code>&lt;all_urls&gt;</code>,</td><td><code>http://www.wombat.com/*</code></td></tr><tr><td>4</td><td><code>&lt;all_urls&gt;</code>,</td><td><code>&lt;all_urls&gt;</code></td></tr></tbody></table>
+<table><tbody><tr><th>Precedence</th><th>Primary pattern</th><th>Secondary pattern</th></tr><tr><td>1</td><td><code>https://www.moose.com/*</code>,</td><td><code>https://www.wombat.com/*</code></td></tr><tr><td>2</td><td><code>https://www.moose.com/*</code>,</td><td><code>&lt;all_urls&gt;</code></td></tr><tr><td>3</td><td><code>&lt;all_urls&gt;</code>,</td><td><code>https://www.wombat.com/*</code></td></tr><tr><td>4</td><td><code>&lt;all_urls&gt;</code>,</td><td><code>&lt;all_urls&gt;</code></td></tr></tbody></table>
 
 ## Resource identifiers
 
@@ -86,7 +86,7 @@ plugin, the general content settings for plugins are checked.
 
 For example, if a content setting rule has the resource identifier `adobe-flash-player` and the
 pattern `<all_urls>`, it takes precedence over a rule without a resource identifier and the pattern
-`http://www.example.com/*`, even if that pattern is more specific.
+`https://www.example.com/*`, even if that pattern is more specific.
 
 You can get a list of resource identifiers for a content type by calling the
 [`contentSettings.ContentSetting.getResourceIdentifiers`][5] method. The returned list can change with

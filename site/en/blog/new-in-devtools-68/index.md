@@ -14,6 +14,8 @@ tags:
   - chrome-68
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New to DevTools in Chrome 68:
 
 - [Eager Evaluation][1]. As you type expressions, the Console previews the result.
@@ -161,6 +163,10 @@ path to watch** to add that property to the Watch pane.
 The **Show timestamps** checkbox previously in **Console Settings**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jYHojXbVbXa7SfX2r5zA.png", alt="The Console Settings button", width="28", height="28" %} has moved to [Settings][15].
 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
+
 [1]: #eagerevaluation
 [2]: #hints
 [3]: #autocomplete
@@ -170,8 +176,8 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [7]: #watch
 [8]: #timestamps
 [9]: https://stackoverflow.com/a/8129277/1669860
-[10]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
-[11]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Default_parameters
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [12]: #eagerevaluation
 [13]: https://developers.google.com/web/updates/2018/05/lighthouse3
 [14]: https://developers.google.com/web/updates/2018/05/bigint

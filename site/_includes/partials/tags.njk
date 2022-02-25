@@ -1,0 +1,12 @@
+{% if tags %}
+  <div>
+    {% from 'macros/tag.njk' import tag with context %}
+    <div class="cluster flow-space-200 gap-top-300">
+      <div>
+        {% for item in tags %}
+          {{ tag(item) }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}

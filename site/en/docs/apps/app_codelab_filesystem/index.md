@@ -259,15 +259,15 @@ For more detailed information about some of the APIs introduced in this step, re
 
 Ready to continue onto the next step? Go to [Step 7 - Publish your app »][26]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
 [5]: /apps/fileSystem#method-chooseEntry
 [6]: /apps/fileSystem#method-getDisplayPath
-[7]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
+[7]: https://developer.mozilla.org/docs/Web/API/Blob
 [8]: http://www.html5rocks.com/en/tutorials/file/filesystem/
-[9]: https://developer.mozilla.org/en-US/docs/Web/API/FileEntry
+[9]: https://developer.mozilla.org/docs/Web/API/FileEntry
 [10]: /apps/fileSystem#method-restoreEntry
 [11]: /apps/fileSystem#method-retainEntry
 [12]:

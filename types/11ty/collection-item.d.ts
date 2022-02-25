@@ -39,11 +39,11 @@ declare global {
     /**
      * All data for this piece of content (includes any data inherited from layouts)
      */
-    data: TODO;
+    data: EleventyData;
     /**
      * The rendered content of this template. This does not include layout wrappers.
      */
-    templateContent: unknown;
+    templateContent: string;
     /**
      * @UNDOCUMENTED
      */
