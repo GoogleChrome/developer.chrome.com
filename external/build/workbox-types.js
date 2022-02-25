@@ -25,7 +25,7 @@ const workboxPackages = [
   'workbox-routing',
   'workbox-strategies',
   'workbox-streams',
-  // 'workbox-webpack-plugin',
+  'workbox-webpack-plugin',
   'workbox-window',
 ];
 
@@ -54,6 +54,12 @@ async function fetchAndPrepare(packages, targetDir) {
 async function run() {
   const t = tmp.dirSync();
   try {
+    // webpack is a peerDependency of workbox-webpack-plugin, and needs to be
+    // manually installed.
+    childProcess.execFileSync('npm', ['install', 'webpack'], {
+      cwd: t.name,
+      stdio: 'inherit',
+    });
     await fetchAndPrepare(workboxPackages, t.name);
 
     const sources = [];
