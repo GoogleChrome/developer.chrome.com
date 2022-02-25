@@ -1,4 +1,19 @@
 {
+  "mscales": {
+    "twitter": "wibblymat"
+  },
+  "ericbidelman": {
+    "homepage": "http://ericbidelman.com/",
+    "twitter": "ebidel",
+    "github": "ebidel"
+  },
+  "paulkinlan": {
+    "homepage": "https://paul.kinlan.me/",
+    "twitter": "paul_kinlan"
+  },
+  "jpmedley": {
+    "github": "jpmedley"
+  },
   "jakearchibald": {
     "country": "UK",
     "homepage": "https://jakearchibald.com/",
