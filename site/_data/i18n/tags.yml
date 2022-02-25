@@ -120,3 +120,42 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+
+chrome49:
+  en: Chrome 49
+
+chrome50:
+  en: Chrome 50
+
+chrome51:
+  en: Chrome 51
+
+chrome52:
+  en: Chrome 52
+
+chrome53:
+  en: Chrome 53
+
+chrome58:
+  en: Chrome 58
+
+chrome59:
+  en: Chrome 59
+
+chrome61:
+  en: Chrome 61
+
+testing:
+  en: Testing
+
+headless:
+  en: Headless
+
+tools:
+  en: Tools
+
+performance:
+  en: Performance
+
+webvr:
+  en: WebVR
