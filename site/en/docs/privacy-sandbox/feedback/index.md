@@ -285,7 +285,7 @@ You can submit feedback using the **feedback form** here.
 _Trust Tokens enables a site to share small amounts of information, like
 signaling a user is genuine, to another site without allowing cross-site
 tracking. [Learn more about the Trust Token
-API.](https://developer.chrome.com/docs/privacy-sandbox/trust-tokens/)_
+API.](/docs/privacy-sandbox/trust-tokens/)_
 
 **Last updated 2022/02:** Currently in origin trial until 2022/04.
 
@@ -328,7 +328,7 @@ API.](https://developer.chrome.com/docs/privacy-sandbox/trust-tokens/)_
 
 _Topics enable interest-based advertising, without resorting to tracking the
 sites a user visits. [Learn more about the Topics
-API.](https://developer.chrome.com/docs/privacy-sandbox/topics/)_
+API.](/docs/privacy-sandbox/topics/)_
 
 **Last updated 2022/02:** The initial Topics API proposal was published in
 2022/01.
@@ -370,7 +370,7 @@ API.](https://developer.chrome.com/docs/privacy-sandbox/topics/)_
 
 _FLoC provided a high-level view of a user's interests by grouping them in
 cohorts with thousands of similar browsers. [Learn more about
-FLoC.](https://developer.chrome.com/docs/privacy-sandbox/floc/)_
+FLoC.](/docs/privacy-sandbox/floc/)_
 
 **Last updated 2022/02:** FLoC has been superseded by the Topics API. These
 links are for historical reference.
@@ -414,7 +414,7 @@ links are for historical reference.
 _FLEDGE enables remarketing and custom audience use cases, as in advertising
 that can make use of sites or products previously visited, but without relying
 on an individual identifier. [Learn more about
-FLEDGE.](https://developer.chrome.com/docs/privacy-sandbox/fledge/)_
+FLEDGE.](/docs/privacy-sandbox/fledge/)_
 
 **Last updated 2022/02.** The FLEDGE API is available for developer testing with
 origin trial plans proposed.
@@ -459,7 +459,7 @@ origin trial plans proposed.
 _Event-level reports allow sites to measure when a user action, such as an ad
 click or view, leads to a conversion, but without using cross-site identifiers.
 [Learn more about the Attribution Reporting
-API.](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)_
+API.](/docs/privacy-sandbox/attribution-reporting/)_
 
 Last updated 2022/02.
 
@@ -501,7 +501,7 @@ Last updated 2022/02.
 _Summary reports allow for an aggregated view of detailed conversion data, which
 retains critical information for reporting without the ability to identify
 individual users within that data. [Learn more about the Attribution Reporting
-API.](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)_
+API.](/docs/privacy-sandbox/attribution-reporting/)_
 
 Last updated 2022/02.
 
@@ -545,7 +545,7 @@ Last updated 2022/02.
 _First-Party Sets allows related sites, owned and operated by the same entity,
 to declare themselves as belonging to the same first-party. [Learn more about
 First-Party
-Sets.](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)_
+Sets.](/docs/privacy-sandbox/first-party-sets/)_
 
 Last updated 2022/02.
 
@@ -630,7 +630,7 @@ Last updated 2022/02.
 
 _CHIPS allows sites to opt-in a cookie to "partitioned" storage, with a separate
 cookie jar per top-level site. [Learn more about
-CHIPS.](https://developer.chrome.com/docs/privacy-sandbox/chips/)_
+CHIPS.](/docs/privacy-sandbox/chips/)_
 
 Last updated 2022/02.
 
@@ -971,7 +971,7 @@ user-agent string which limits the potential for covert tracking. User-Agent
 Client Hints allows sites to receive this information on-request with a clean
 and auditable API. [Learn more about the User-Agent reduction and User-Agent
 Client Hints
-(UA-CH).](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)_
+(UA-CH).](/docs/privacy-sandbox/user-agent/)_
 
 **Last updated 2022/02.**
 
