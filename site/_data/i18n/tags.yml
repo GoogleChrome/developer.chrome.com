@@ -120,3 +120,24 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+
+digest:
+  en: Digest
+
+update:
+  en: Update
+
+audio:
+  en: Audio
+
+video:
+  en: Video
+
+webrtc:
+  en: WebRTC
+
+getusermedia:
+  en: getusermedia()
+
+outreach:
+  en: Outreach
