@@ -12,6 +12,7 @@
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/feedback
     - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/faq
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
