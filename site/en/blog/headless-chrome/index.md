@@ -178,7 +178,7 @@ commands going across the wire, communicating with the browser.
 
 ### Puppeteer
 
-[Puppeteer](https://developer.chrome.com/web/tools/puppeteer/) is a Node library
+[Puppeteer](/web/tools/puppeteer/) is a Node library
 developed by the Chrome team. It provides a high-level API to control headless
 (or full) Chrome. It's similar to other automated testing libraries like Phantom
 and NightmareJS, but it only works with the latest versions of Chrome.
@@ -261,7 +261,7 @@ platforms. Just look at that hard-coded path to Chrome :(
 
 ##### Using ChromeLauncher
 
-[Lighthouse](https://developer.chrome.com/web/tools/lighthouse/) is a marvelous
+[Lighthouse](web/tools/lighthouse/) is a marvelous
 tool for testing the quality of your web apps. A robust module for launching
 Chrome was developed within Lighthouse and is now extracted for standalone use.
 The [`chrome-launcher` NPM module](https://www.npmjs.com/package/chrome-launcher)
@@ -348,7 +348,7 @@ launchChrome().then(async chrome => {
 
 Results in something like: `HeadlessChrome/60.0.3082.0`
 
-**Example** - check if the site has a [web app manifest](https://developer.chrome.com/web/fundamentals/web-app-manifest)
+**Example** - check if the site has a [web app manifest](/web/fundamentals/web-app-manifest)
 
 ```javascript
 const CDP = require('chrome-remote-interface');
