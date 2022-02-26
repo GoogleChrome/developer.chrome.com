@@ -5,16 +5,16 @@
 
 <!-- ### Chrome 99 {: #chrome99 }
 
-* [Throttling WebSocket requests](/ja/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/ja/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/ja/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/ja/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/ja/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/ja/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/ja/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/ja/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/ja/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-99/#misc) -->
+* [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)
+* [Application パネル内に新しく追加されたReporting API ペイン](/ja/blog/new-in-devtools-99/#reporting-api)
+* [Recorder パネルに要素が可視／クリック可能になるまで待機する機能が追加](/ja/blog/new-in-devtools-99/#recorder)
+* [コンソールのスタイル設定、フォーマット、フィルタの改善](/ja/blog/new-in-devtools-99/#console)
+* [ソースマップファイルを使用した Chrome 拡張機能のデバッグ](/ja/blog/new-in-devtools-99/#extension)
+* [Sources パネルのソースフォルダツリーの改善](/ja/blog/new-in-devtools-99/#source-tree)
+* [Sources パネルにワーカーのソースファイルを表示](/ja/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome の自動ダークテーマの更新](/ja/blog/new-in-devtools-99/#auto-dark-mode)
+* [タッチ操作で使いやすいカラーピッカーとスプリットペイン](/ja/blog/new-in-devtools-99/#touch-friendly)
+* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc) -->
 
 
 ### Chrome 98 {: #chrome98 }
