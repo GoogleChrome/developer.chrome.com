@@ -3,7 +3,7 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
-<!-- ### Chrome 99 {: #chrome99 }
+### Chrome 99 {: #chrome99 }
 
 * [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)
 * [Application パネル内に新しく追加されたReporting API ペイン](/ja/blog/new-in-devtools-99/#reporting-api)
@@ -18,6 +18,7 @@
 
 
 ### Chrome 98 {: #chrome98 }
+
 * [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
 * [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
 * [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)
