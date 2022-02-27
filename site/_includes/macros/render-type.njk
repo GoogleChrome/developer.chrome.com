@@ -66,7 +66,7 @@
 
   <li class="stack">
     <div>
-      <div class="code-sections__label" id="#{{ node._pageId }}">{{ node.name }}</div>
+      <div class="code-sections__label" id="{{ node._pageId }}">{{ node.name }}</div>
       <div class="type--xsmall">{{ renderSingleIconType(node.type, node) }}</div>
     </div>
 
@@ -134,7 +134,7 @@
             <div>
               {# We need to disambiguate this from parameters, so include the name. #}
               {% if not isTopLevel %}
-                <div class="code-sections__label" id="#{{ node._pageId }}">returns</div>
+                <div class="code-sections__label" id="{{ node._pageId }}">returns</div>
               {% endif %}
               <div class="type--xsmall">{{ renderSingleIconType(node._method.return.type, node._method.return) }}</div>
             </div>
@@ -155,8 +155,8 @@
 
   {% elif node._event %}
     {# This is a declarative event without a method. #}
-    {{ renderIconTypesArray(node._event.conditions, 'Conditions', prop) }}
-    {{ renderIconTypesArray(node._event.actions, 'Actions', prop) }}
+    {{ renderIconTypesArray(node._event.conditions, 'Conditions') }}
+    {{ renderIconTypesArray(node._event.actions, 'Actions') }}
 
   {% endif %}
 
@@ -188,7 +188,10 @@
   Renders a single type with its icon and possibly an "optional" hint.
 #}
 {% macro renderSingleIconType(type, node) %}
-  {% set iconType = type.type %}
+  {% if node.getSignature[0].type %}
+      {% set type = node.getSignature[0].type %}
+  {% endif %}
+
   {% if type.type === 'intrinsic' %}
     {% set iconType = type.name %}
   {% elif type.type === 'literal' %}
@@ -199,15 +202,20 @@
     {% set iconType = 'object' %}
   {% elif type.type === 'reference' %}
     {% set iconType = 'object' %}
+  {% else %}
+    {% set iconType = type.type %}
   {% endif %}
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, node) | trim | safe }}
+  <p class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, node) | trim | safe }}
     {%- if node.flags.isOptional -%}
       &nbsp;<span class="code-sections__optional">optional</span>
     {%- endif -%}
-  </span>
+  </p>
 
+  {%- if node._feature.default -%}
+    <p>Default value is: <span class="code-sections__optional">{{ node._feature.default }}</span></p>
+  {%- endif -%}
 {% endmacro %}
 
 

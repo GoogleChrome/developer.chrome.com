@@ -191,7 +191,7 @@ Chromium issue: [1186049](https://crbug.com/1186049)
 ### Support for new JavaScript features {: #javascript }
 DevTools now support the new [private brand check](https://v8.dev/features/private-brand-checks) JavaScript language feature, a.k.a `#foo in obj`.
 
-This private brand checks feature extends the [in operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object. 
+This private brand checks feature extends the [in operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object. 
 
 Try it out in the **Console** and **Sources** panel. You can inspect the private fields in the **Scope** section under the **debugger** pane as well.
 

@@ -224,8 +224,8 @@ Chromium 议题: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## 弃用应用程序面板里面的应用程序缓存边栏 {: #app-cache }
 
-<!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache](https://web.dev/appcache-removal/) 的支持，因此**应用**面板里面的[应用缓存](https://developer.chrome.com/docs/devtools/storage/applicationcache/)边栏现已被移除。
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache](https://web.dev/appcache-removal/) 的支持，因此**应用**面板里面的[应用缓存](/docs/devtools/storage/applicationcache/)边栏现已被移除。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

@@ -31,10 +31,10 @@ Some web APIs increase the risk of side-channel attacks such as
 mitigate that risk, browsers offer an opt-in-based isolated environment called
 [cross-origin isolation](https://web.dev/coop-coep/). With a cross-origin
 isolated state, the webpage can use privileged features including
-[`SharedArrayBuffer`](https://developer.chrome.com/blog/enabling-shared-array-buffer/),
+[`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/),
 [`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/)
 and [high-precision timers with better
-resolution](https://developer.chrome.com/blog/cross-origin-isolated-hr-timers/)
+resolution](/blog/cross-origin-isolated-hr-timers/)
 while isolating the origin from others unless they are opted in.
 
 The webpage must send two HTTP headers to enable cross-origin isolation:
@@ -150,7 +150,7 @@ You can register for it to allowlist your website to make the
 `Cross-Origin-Embedder-Policy: credentialless` header to take effect.
 
 1. [Request a
-   token](https://developer.chrome.com/origintrials/#/view_trial/3036552048754556929)
+   token](/origintrials/#/view_trial/3036552048754556929)
    for your origin.
 2. Apply an `Origin-Trial` HTTP header to the document you want to apply
    `Cross-Origin-Embedder-Policy: credentialless` header. The resulting response
@@ -181,7 +181,7 @@ cross-origin isolation:
 
 Those who registered for [the Chrome origin trial to extend the
 SharedArrayBuffer
-change](https://developer.chrome.com/blog/enabling-shared-array-buffer/) due to
+change](/blog/enabling-shared-array-buffer/) due to
 the above obstacles might be wondering when it will be terminated. Originally we
 announced that it will be terminated in Chrome 96, but we have decided to
 postpone this to Chrome 103.
@@ -195,7 +195,7 @@ postpone this to Chrome 103.
 * [A guide to enable cross-origin
   isolation](https://web.dev/cross-origin-isolation-guide/)
 * [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome
-  92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
+  92](/blog/enabling-shared-array-buffer/)
 
 Photo by [Martin
 Adams](https://unsplash.com/@martinadams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

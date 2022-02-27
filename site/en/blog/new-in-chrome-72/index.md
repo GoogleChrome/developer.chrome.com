@@ -80,7 +80,7 @@ More details are in Mathias's article on
 [class fields](https://developers.google.com/web/updates/2018/12/class-fields)
 for more details.
 
-[mdn-classes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+[mdn-classes]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes
 
 ## User Activation API {: #user-activation }
 

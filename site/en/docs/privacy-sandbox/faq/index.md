@@ -47,6 +47,18 @@ stakeholders, have offered more than 30 proposals to date. These proposals can
 be found in the
 [public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo) and cover a wide variety of use cases and requirements.
 
+### How can I keep track of changes and progress in the Privacy Sandbox?
+
+You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
+
+The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
+
+These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
+
+ - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
+ - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
+ - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes
+
 ### How can I get involved?
 
 -  Participate in incubation, testing and refinement of the APIs:  
@@ -340,22 +352,21 @@ For ads use cases, see
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-## WebID
+## FedCM
 
 ### How can I ask a question about this feature?
 
 -  For questions about the proposal:
-   [create an issue](https://github.com/WICG/WebID/issues) on the proposal repo.
+   [create an issue](https://github.com/WICG/FedCM/issues) on the proposal repo.
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-### What is WebID?
+### What is FedCM?
 
-The name "WebID" can be confusing! WebID is not a type of user identifier.
-Rather, WebID is a proposal for a privacy-preserving approach to federated
+FedCM (Federated Credential Management) is a proposal for a privacy-preserving approach to federated
 identity services (such as "Sign in with&nbsp;...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
 
-WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
+FedCM is still [in incubation in the W3C](https://github.com/WICG/FedCM).

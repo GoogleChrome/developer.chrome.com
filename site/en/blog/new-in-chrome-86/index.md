@@ -255,7 +255,7 @@ and you'll get an email notification whenever we launch a new video, or add our
 I'm Pete LePage, and as soon as Chrome 87 is released, I'll be right here to
 tell you -- what's new in Chrome!
 
-[a-download]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download
+[a-download]: https://developer.mozilla.org/docs/Web/API/HTMLAnchorElement/download
 [fs-article]: https://web.dev/file-system-access/
 [wd-window]: https://web.dev/multi-screen-window-placement/
 [ot-hid]: /origintrials/#/view_trial/1074108511127863297

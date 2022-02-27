@@ -5,7 +5,7 @@ description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
 date: 2020-12-03
-updated: 2021-09-23
+updated: 2021-11-23
 ---
 
 This page describes how to update an extension or theme ("item") that you previously published on
@@ -131,11 +131,19 @@ passes the review your item will become ready for you to publish. This lets you 
 ready (for example, with marketing announcements) and then manually publish it at a time of your
 choosing.
 
+Once the review is complete, you will have up to **30 days** to publish. After that
+period expires, the staged submission will revert to a draft which will have to be submitted again for
+review. You can check when your staged submission will expire under the status of your item. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
+staged item
+status", width="700", height="84" %}
+
 ### Review process {: #review-process }
 
 After you submit the item for review, it will undergo a review process. This is essentially the same
 review as new items receive; the time for this review depends on the nature of your item and the
-extent of your changes. See the [FAQ on review times][review-times] for more details.
+extent of your changes. See [review times][review-times] for more details.
 
 ## Update your percent rollout {: #update-rollout }
 
@@ -154,11 +162,18 @@ Changing the %rollout does *not* trigger a new review.
 
 {% endAside %}
 
+## Additional resources
+
+- Learn how to [Manage your Chrome Web Store Item][cws-manage].
+- Understand the [Chrome Web Store Review Process][cws-review].
+
+[cws-manage]: /docs/webstore/manage/
+[cws-review]: /docs/webstore/review-process/
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution
 [cws-listing]: /docs/webstore/cws-dashboard-listing
 [cws-privacy]: /docs/webstore/cws-dashboard-privacy
 [dev-console]: https://chrome.google.com/webstore/devconsole
-[review-times]: /docs/webstore/faq#faq-listing-108
+[review-times]: /docs/webstore/review-process/#review-time
 [partial-rollout]: #partial-rollout
 [unpublish]: /docs/webstore/faq/#faq-listing-03
 [update-rollout]: #update-rollout

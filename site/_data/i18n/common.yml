@@ -78,6 +78,10 @@ codelab:
   en: 'Codelab'
   es: 'Codelab'
 
+objective:
+  en: 'Objective'
+  es: 'Objective'
+
 see_all_articles:
   en: 'See all articles'
   es: 'Ver todos los articulos'

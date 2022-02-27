@@ -2,6 +2,45 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/es/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/es/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/es/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/es/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/es/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/es/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/es/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/es/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/es/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-99/#misc) -->
+
+
+### Chrome 98 {: #chrome98 }
+* [Función en vista previa: Árbol de accesibilidad de página completa](/es/blog/new-in-devtools-98/#a11y-tree)
+* [Establecer un tiempo de espera más largo para la grabación del flujo de usuario](/es/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/es/blog/new-in-devtools-98/#recorder-timeout)
+* [Asegúrese de que sus páginas se puedan almacenar en caché con la pestaña de caché Atrás/adelante](/es/blog/new-in-devtools-98/#bfcache)
+* [Nuevo filtro de panel de propiedades](/es/blog/new-in-devtools-98/#properties)
+* [Emular la característica de medios de colores forzados de CSS](/es/blog/new-in-devtools-98/#forced-colors)
+* [Mostrar reglas con el comando hover](/es/blog/new-in-devtools-98/#show-rulers)
+* [Soporte para `row-reverse` y `column-reverse` en el editor Flexbox](/es/blog/new-in-devtools-98/#flexbox-editor)
+* [Nuevos atajos de teclado para reproducir XHR y expandir todos los resultados de búsqueda](/es/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9](/es/blog/new-in-devtools-98/#lighthouse)
+* [Panel Fuentes mejorado](/es/blog/new-in-devtools-98/#sources)
+* [Destacados varios](/es/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints en el panel de informes de API](/es/blog/new-in-devtools-98/#reporting-api)
+
+
+### Chrome 97 {: #chrome97 }
+
+* [Función en vista previa: Nuevo panel de Grabadora](/es/blog/new-in-devtools-97/#recorder)
+* [Actualización de la lista de dispositivos en el Modo Dispositivo](/es/blog/new-in-devtools-97/#device)
+* [Autocompletado con Editar como HTML](/es/blog/new-in-devtools-97/#code-completion)
+* [Mejorada la experiencia de depuración de código](/es/blog/new-in-devtools-97/#debugging)
+* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync)
+
+
 ### Chrome 96 {: #chrome96 }
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
 <!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
@@ -16,6 +55,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mantener la barra lateral de la consola](/es/blog/new-in-devtools-96/#console-sidebar)
 * [Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación](/es/blog/new-in-devtools-96/#app-cache)
 * [[Experimental] Nuevo panel de la API de informes en el panel de la aplicación](/es/blog/new-in-devtools-96/#reporting-api)
+
 
 ### Chrome 95 {: #chrome95 }
 * [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)

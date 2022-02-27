@@ -140,9 +140,9 @@ of Android you should try enabling it for KitKat based devices and see if it imp
 [13]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [14]: http://updates.html5rocks.com/2012/08/Integrating-input-type-file-with-the-Filesystem-API
 [15]: http://updates.html5rocks.com/tag/datalist
-[16]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-[17]: https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event
-[18]: https://developer.mozilla.org/en-US/docs/Web/API/Media_Streams_API
-[19]: https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API
+[16]: https://developer.mozilla.org/docs/Web/API/Geolocation_API
+[17]: https://developer.mozilla.org/docs/Web/API/Window/deviceorientation_event
+[18]: https://developer.mozilla.org/docs/Web/API/Media_Streams_API
+[19]: https://developer.mozilla.org/docs/Web/API/Vibration_API
 [20]: http://developer.android.com/guide/webapps/migrating.html
 [21]: /devtools/docs/remote-debugging

@@ -15,7 +15,7 @@ authors:
 ## Implementation status
 
 * [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 94.
-* [Register for the trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* [Register for the trial](/origintrials/#/view_trial/2479231594867458049).
 * [Demo](https://trust-token-demo.glitch.me/).
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
@@ -68,7 +68,7 @@ publisher or online store) without identifying the user or linking identities ac
 {% Aside 'key-term' %}  
 [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) enables sites to identify 
 and track individual users by getting data about their device, operating system, and browser setup 
-(such as language preferences, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by 
+(such as language preferences, [user agent](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by 
 checking request headers or on the client with JavaScript.
 
 Fingerprinting uses mechanisms that users aren't aware of and can't control. Sites such as 
@@ -110,7 +110,7 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 ## Engage and share feedback
 
-* **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* **Origin trial**: Register and take part in the [Chrome origin trial](/origintrials/#/view_trial/2479231594867458049).
 * **Demo**: Try out trust token [issuance and redemption](https://trust-token-demo.glitch.me/).
 * **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and 
 follow discussion](https://github.com/WICG/trust-token-api/issues).

@@ -23,6 +23,22 @@ A company that provides services to deliver ads.
 
 A company that pays to advertise its products.
 
+## Aggregatable reports
+
+Encrypted reports sent from individual user devices. These reports contain
+data about cross-site user behavior and conversions. Conversions (sometimes
+called attribution trigger events) and associated metrics are defined by the
+advertiser or adtech. Each report is encrypted to prevent various parties
+from accessing the underlying data.
+
+## Attestation
+
+A mechanism to authenticate software identity, usually with [cryptographic
+hashes](https://en.wikipedia.org/wiki/Cryptographic_hash_function) or
+signatures. For the aggregation service proposal, attestation matches the
+code running in the adtech-operated aggregation service with the open
+source code.
+
 ## Attribution {: #attribution }
 
 Identification of user actions that contribute to an outcome.
@@ -49,6 +65,13 @@ See also [impression](#impression).
 
 A conversion attributed to an ad that was 'clicked'.
 
+## Coarse data
+
+Limited information provided by Attribution Reporting API event-level reports.
+This is limited to 3 pieces of conversion data for clicks and 1 piece for
+views. Specific, granular conversion data (such as specific prices of items
+and timestamps)  are not included.
+
 ## Conversion
 
 The completion of some desired goal following action by a user.
@@ -67,6 +90,10 @@ For example, an online store can retain shopping cart details even if a user is
 not logged in, or the site could record the user's browsing activity on their
 site. See [First-party cookie](#first-party-cookie) and
 [Third-party cookie](#third-party-cookie).
+
+## Coordinator
+
+An entity responsible for key management and aggregatable report accounting. The coordinator maintains a list of hashes of approved aggregation service configurations and configures access to decryption keys.
 
 ## Differential privacy  {: #differential-privacy }
 
@@ -108,10 +135,20 @@ out whether new data adds to entropy. For example, knowing a person is from
 Australia doesn't reduce entropy if you already know the person is from
 Kangaroo Island.
 
-## Federated identity (also known as federated login) {: #federated-identity }
+## Federated identity (federated login) {: #federated-identity }
 
 A third-party platform to allow a user to sign in to a website, without
 requiring the site to implement their own identity service.
+
+## Federated Credential Management API (FedCM) {: #fedcm }
+
+Federated Credential Management API is a proposal for a privacy-preserving
+approach to federated identity services. This will allow users to log into
+sites without sharing their personal information with the identity service or
+the site.
+
+FedCM was previously known as WebID, and is still
+[in development in the W3C](https://github.com/wicg/fedcm).
 
 ## Fingerprinting {: #fingerprinting }
 
@@ -222,11 +259,28 @@ the ad.
 Reaching people on other sites who have previously visited your site.
 
 For example, an online store could show ads for a toy sale to people who
-previously viewed toys on their site. 
+previously viewed toys on their site.
+
+## Reporting origin
+
+The entity that receives aggregatable reports&mdash;in other words, the adtech
+that called the Attribution Reporting API. Aggregatable reports are sent from
+user devices to a [well-known](#well-known) URL associated with the reporting
+origin.
 
 ## Site
 
 See [Top-Level Domain](#tld) and [eTLD](#etld).
+
+## Summary report {: #aggregate-report}
+
+An Attribution Reporting API report type. A [summary
+report](/docs/privacy-sandbox/attribution-reporting/summary-reports/) includes
+aggregated user data and detailed conversion data, resulting from noisy
+aggregation applied to aggregatable reports. The summary
+includes aggregated user data and detailed conversion data.
+
+Summary reports were formerly known as aggregate reports.
 
 ## Surface
 
@@ -261,6 +315,13 @@ Top-level domains such as .com and .org are listed in the
 Note that some 'sites' are actually just subdomains. For example,
 `translate.google.com` and `maps.google.com` are subdomains of `google.com`. These subdomains are [eTLD + 1](#etld).
 
+## Trusted Execution Environment (TEE) {: #tee }
+
+A special configuration of computer hardware and software that allows external
+parties to verify the exact versions of software running on the computer. TEEs
+allow external parties to verify that the software does exactly what the
+software manufacturer claims it does—nothing more or less.
+
 ## User-Agent Client Hints (UA-CH) {: #ua-ch }
 
 Provide specific pieces of user-agent data on explicit request. This helps
@@ -268,15 +329,6 @@ reduce passively exposed information which may lead to user identification or
 covert tracking.
 
 UA-CH are sometimes referred to as "Client Hints."
-
-## WebID
-
-WebID is a proposal for a privacy-preserving approach to federated identity
-services (such as "Sign in with&nbsp;..."). This will allow users to log into
-sites without sharing their personal information with the identity service or
-the site.
-
-WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
 
 ## .well-known {: #well-known }
 

@@ -34,7 +34,7 @@ Esta API forma parte de Privacy Sandbox, que es una serie de propuestas para sat
 
 ## ¿Por qué se necesita esta API?
 
-Hoy en día, la evaluación de conversiones publicitarias depende a menudo de las [cookies de terceros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Los navegadores restringen el acceso a las cookies de terceros porque pueden utilizarse para rastrear a los usuarios en distintos sitios y obstaculizar su privacidad. Esta API permite realizar esas evaluaciones preservando la privacidad, sin cookies de terceros.
+Hoy en día, la evaluación de conversiones publicitarias depende a menudo de las [cookies de terceros](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Los navegadores restringen el acceso a las cookies de terceros porque pueden utilizarse para rastrear a los usuarios en distintos sitios y obstaculizar su privacidad. Esta API permite realizar esas evaluaciones preservando la privacidad, sin cookies de terceros.
 
 ## ¿Quién debe conocer esta API?
 
@@ -77,7 +77,7 @@ Si está experimentando con la API en Chrome, tendrá acceso a todas las funcion
 
 #### Experimente con usuarios finales en un sitio implementado
 
-1. Habilite la API para los usuarios finales registrándose en una [prueba de origen](https://developer.chrome.com/blog/origin-trials/) si está disponible. Una prueba de origen le da acceso a una función experimental, para crear funciones que puede probar durante un tiempo limitado. Tenga en cuenta que las [pruebas de origen de terceros](https://developer.chrome.com/blog/third-party-origin-trials/) hacen posible que los terceros, como proveedores de servicios de publicidad y de medición, probar una API en varios sitios. **Para ver las pruebas de origen disponibles actualmente para esta API, diríjase a [Estado](#status)**. Para estar informado de futuras pruebas de origen, únase a la [lista de distribución de informes de atribuciones para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+1. Habilite la API para los usuarios finales registrándose en una [prueba de origen](/blog/origin-trials/) si está disponible. Una prueba de origen le da acceso a una función experimental, para crear funciones que puede probar durante un tiempo limitado. Tenga en cuenta que las [pruebas de origen de terceros](/blog/third-party-origin-trials/) hacen posible que los terceros, como proveedores de servicios de publicidad y de medición, probar una API en varios sitios. **Para ver las pruebas de origen disponibles actualmente para esta API, diríjase a [Estado](#status)**. Para estar informado de futuras pruebas de origen, únase a la [lista de distribución de informes de atribuciones para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 
 2. Integre la API en sus sitios y sistemas.
 
@@ -148,8 +148,8 @@ Otras funciones propuestas en esta API son la [atribución de la aplicación en 
 
 {% Aside %} En un futuro sin cookies de terceros, esta API se combinaría con otras API de anuncios que preservan la privacidad para cubrir casos de uso de un extremo a otro:
 
-- Remarketing: consulte [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- Selección de anuncios basada en intereses: consulte [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- Remarketing: consulte [FLEDGE](/docs/privacy-sandbox/fledge/)
+- Selección de anuncios basada en intereses: consulte [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -165,7 +165,7 @@ Estados:
 - `🧪 Experiment (BROWSER_NAME)`: hay un experimento disponible en BROWSER_NAME. En Chrome, un experimento se denomina prueba de origen.
 - `🚀 Stable (BROWSER_NAME)`: la función se envía de forma predeterminada en BROWSER_NAME.
 
-{% Aside %} [Prueba de origen actual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside %}
+{% Aside %} [Prueba de origen actual](/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside %}
 
 {% Aside 'caution' %} Se realizarán varias pruebas de origen (experimentos). Cada ronda se utiliza para mejorar y ajustar la API con base en los comentarios del ecosistema. {% endAside %}
 
@@ -352,7 +352,7 @@ Los informes agrupados asocian un evento de clic o visualización detallada con 
 ## Sitios y control de usuarios
 
 - Los usuarios pueden optar por no participar a través de la configuración del usuario en `chrome://settings/privacySandbox`.
-- De forma predeterminada, la función está habilitada en contextos de nivel superior. Los terceros arbitrarios no pueden utilizar la API sin el conocimiento de un editor, porque la API para informes de atribuciones debe estar habilitada en los iframes secundarios a través de una [Política de permisos](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+- De forma predeterminada, la función está habilitada en contextos de nivel superior. Los terceros arbitrarios no pueden utilizar la API sin el conocimiento de un editor, porque la API para informes de atribuciones debe estar habilitada en los iframes secundarios a través de una [Política de permisos](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ## Preguntas abiertas
 

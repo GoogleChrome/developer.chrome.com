@@ -17,7 +17,7 @@ with the extension. They can also access the URL of an extension's file with
 `chrome.runtime.getURL()` and use the result the same as other URLs.
 
 ```js/1
-// Code for displaying <extensionDir>/images/myimage.png:
+// Code for displaying EXTENSION_DIR/images/myimage.png:
 var imgURL = chrome.runtime.getURL("images/myimage.png");
 document.getElementById("someImage").src = imgURL;
 ```
@@ -155,6 +155,18 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
       <td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame
         where the parent or opener frame matches one of the patterns declared in
         <code>matches</code>. Defaults to false.</td>
+    </tr>
+    <tr id="match_origin_as_fallback">
+      <td><code>match_origin_as_fallback</code></td>
+      <td>boolean</td>
+      <td>
+        <em>Optional.</em> Whether the script should inject in frames that were
+        created by a matching origin, but whose URL or origin may not directly
+        match the pattern. These include frames with different schemes, such as
+        <code>about:</code>, <code>data:</code>, <code>blob:</code>, and
+        <code>filesystem:</code>. See also
+        <a href="#injecting-in-related-frames">Injecting in related frames</a>.
+      </td>
     </tr>
   </tbody>
 </table>
@@ -558,6 +570,59 @@ chrome.scripting.registerContentScript({
   </tbody>
 </table>
 
+### Injecting in related frames {: #injecting-in-related-frames }
+
+Extensions may want to run scripts in frames that are related to a matching
+frame, but don't themselves match. A common scenario when this is the case is
+for frames with URLs that were created by a matching frame, but whose URLs don't
+themselves match the script's specified patterns.
+
+This is the case when an extension wants to inject in frames with URLs that
+have `about:`, `data:`, `blob:`, and `filesystem:` schemes. In these cases, the
+URL will not match the content script's pattern (and, in the case of `about:`,
+`data:`, and `blob:`, do not even include the parent URL or origin in the URL
+at all, as in `about:blank` or `data:text/html,<html>Hello, World!</html>`).
+However, these frames can still be associated with the creating frame.
+
+To inject into these frames, extensions can specify the
+`"match_origin_as_fallback"` property on a content script specification in the
+manifest.
+
+```json
+{
+  "name": "My extension",
+  ...
+  "content_scripts": [
+    {
+      "matches": ["https://*.google.com/*"],
+      "match_origin_as_fallback": true,
+      "js": ["contentScript.js"]
+    }
+  ],
+  ...
+}
+```
+
+When specified and set to `true`, Chrome will look at the origin of the
+initiator of the frame to determine whether the frame matches, rather than at
+the URL of the frame itself. Note that this might also be different than the
+target frame's _origin_ (e.g., `data:` URLs have a null origin).
+
+The initiator of the frame is the frame that created or navigated the target
+frame. While this is commonly the direct parent or opener, it may not be (as in
+the case of a frame navigating an iframe within an iframe).
+
+Because this compares the _origin_ of the initiator frame, the initiator frame
+could be on at any path from that origin. To make this implication clear, Chrome
+requires any content scripts specified with `"match_origin_as_fallback"`
+set to `true` to also specify a path of `*`.
+
+When both `"match_origin_as_fallback"` and `"match_about_blank"` are specified,
+`"match_origin_as_fallback"` takes priority.
+
+This property is only available in extensions running manifest version 3 or
+higher.
+
 ## Communication with the embedding page {: #host-page-communication }
 
 Although the execution environments of content scripts and the pages that host them are isolated
@@ -602,7 +667,7 @@ separate website, such as making an [`XMLHttpRequest`][28], be careful to filter
 avoid ["man-in-the-middle"][30] attacks.
 
 Be sure to filter for malicious web pages. For example, the following patterns are dangerous, and
-disallowed in MV3:
+disallowed in Manifest V3:
 
 {% Compare 'worse' %}
 ```js
@@ -663,7 +728,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 [24]: /docs/extensions/mv3/match_patterns
 [25]: https://www.whatwg.org/specs/web-apps/current-work/#handler-onload
 [26]: https://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate
-[27]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+[27]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [28]: /docs/extensions/mv3/xhr
 [29]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
@@ -671,4 +736,4 @@ window.setTimeout(() => animate(elmt_id), 200);
 [32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
 
-[ref-error]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+[ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError

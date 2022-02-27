@@ -31,6 +31,10 @@ declare global {
   }
 
   export interface FeatureInfo {
+    /**
+     * Default value of a attribute.
+     */
+    default?: string;
     platformAppsOnly?: true;
     disallowServiceWorkers?: true;
     deprecated?: {

@@ -102,8 +102,8 @@ link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
 
-<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-试着在“控制台”中打出 `link`。自有属性现在是加粗并优先排序的。这些改动会让自定义属性更容易被发现，尤其对于有着很多继承属性的 [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)（例如 `URL`）。
+<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
+试着在“控制台”中打出 `link`。自有属性现在是加粗并优先排序的。这些改动会让自定义属性更容易被发现，尤其对于有着很多继承属性的 [Web APIs](https://developer.mozilla.org/docs/Web/API)（例如 `URL`）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="自有属性加粗并优先排序", width="800", height="561" %}
 

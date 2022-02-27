@@ -30,5 +30,5 @@ preview mode:
 From here, you can view and change your CSS, like any other web page. See [Get Started With Viewing
 And Changing CSS][2].
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+[1]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries
 [2]: /docs/devtools/css

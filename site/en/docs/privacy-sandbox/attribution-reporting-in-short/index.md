@@ -58,7 +58,7 @@ There may be use cases that are non-ads-related. [Engage](#engage) to share your
 ## Why is this API needed? {: #why-is-this-api-needed }
 
 Today, ad conversion measurement often relies on [third-party
-cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
+cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
 users across sites and hinder user privacy. This API enables those measurements in a
 privacy-preserving way, without third-party cookies.

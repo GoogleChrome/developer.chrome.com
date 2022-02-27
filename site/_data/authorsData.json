@@ -54,6 +54,12 @@
     "glitch": "dotproto",
     "image": "image/WlD8wC6g8khYWPJUsQceQkhXSlv1/ET2qKakhhrDt1sqjazmy.jpg"
   },
+  "drott": {
+    "country": "FI",
+    "github": "drott",
+    "twitter": "abrax5",
+    "image": "image/admin/xb7jK8lMyvbHQrBJzlxv.jpg"
+  },
   "marshallvale": {
     "country": "US",
     "twitter": "marshallvale",
@@ -265,11 +271,10 @@
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
   "ajara": {
-    "homepage": "https://blog.tomayac.com/",
     "twitter": "tropicadri",
     "github": "tropicadri",
     "country": "US",
-    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/suAORxTqXSSw91SaRaTm.jpg"
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/24pW1yRsYdAJXV7nfgbR.jpg"
   },
   "chrishtr": {
     "twitter": "chrishtr",
@@ -280,6 +285,11 @@
   "rebeccasoares": {
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/WWbi21K4D5om3zTba8hR.jpg"
+  },
+  "rsheeter": {
+    "country": "CA",
+    "github": "rsheeter",
+    "image": "image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/PRHDWY5YSOQehUCcvnWB.png"
   },
   "ackermanb": {
     "country": "US",
@@ -382,5 +392,11 @@
     "github": "heyawhite",
     "twitter": "heyawhite",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
+  },
+  "victortan": {
+    "country": "US",
+    "github": "victortan",
+    "twitter": "victortan",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/j7BoDYMJWpcjTNyhbnYu.jpeg"
   }
 }

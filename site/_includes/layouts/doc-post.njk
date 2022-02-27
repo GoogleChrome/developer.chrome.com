@@ -30,6 +30,9 @@
         {% include 'partials/draft.njk' %}
 
         <div class="stack stack--block type center-images">
+          {% if reference %}
+            <a href={{reference}}>Review the API reference for <code>{{ title }}</code>.</a>
+          {% endif %}
           {{ content | safe }}
         </div>
 

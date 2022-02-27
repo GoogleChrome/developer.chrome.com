@@ -73,16 +73,16 @@ in Chrome 70, but was accidentally left out of the original version of this post
 
 ## Credential Management API: Public Key Credentials {: #pki }
 
-The [Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+The [Credential Management API](https://developer.mozilla.org/docs/Web/API/Credential_Management_API)
 makes sign in super simple for users. It allows your site to interact with the
-browser's [credential manager](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
-or [federated account services](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential)
+browser's [credential manager](https://developer.mozilla.org/docs/Web/API/PasswordCredential)
+or [federated account services](https://developer.mozilla.org/docs/Web/API/FederatedCredential)
 like Google and Facebook to sign.
 
 {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/dlNQwA1kTHjDdHTTOPMK.png", alt="", class="float-right", height="458", width="624" %}
 
 Chrome 70 adds support for a third type of credential:
-[**Public Key Credential**](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential),
+[**Public Key Credential**](https://developer.mozilla.org/docs/Web/API/PublicKeyCredential),
 which allows web applications to create and use, strong, cryptographically
 attested, and application-scoped credentials to strongly authenticate users.
 
@@ -96,7 +96,7 @@ for more details or give it a try with the
 
 ## Named `workers` {: #named-workers }
 
-[Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker) are an easy
+[Workers](https://developer.mozilla.org/docs/Web/API/Worker) are an easy
 way to move JavaScript off the main thread and into the background. This is
 critical to keeping your site interactive, because it means that the main
 thread won't lock up when it's running an expensive or complex JavaScript

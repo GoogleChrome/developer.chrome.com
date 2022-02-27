@@ -2,16 +2,16 @@
 layout: 'layouts/doc-post.njk'
 title: Migrating to Manifest V3
 subhead: 'Getting you headed in the right direction.'
-description: 'A high-level guide to how you can migrate your MV2 extensions to MV3.'
+description: 'A high-level guide to how you can migrate your Manifest V2 extensions to Manifest V3.'
 date: 2020-11-09
 updated: 2021-08-13
 ---
 
 This guide provides developers with the information they need to begin
-migrating an extension from Manifest V2 to Manifest V3 (MV3). Some extensions
-will require very little change to make them MV3 compliant, while others will
-need to be redesigned to some degree. Developers experienced with MV2, and who
-are creating new MV3 extensions, may also find this helpful. For a quick
+migrating an extension from Manifest V2 to Manifest V3 (Manifest V3). Some extensions
+will require very little change to make them Manifest V3 compliant, while others will
+need to be redesigned to some degree. Developers experienced with Manifest V2, and who
+are creating new Manifest V3 extensions, may also find this helpful. For a quick
 reference guide see the [migration
 checklist](/docs/extensions/mv3/mv3-migration-checklist).
 
@@ -21,7 +21,7 @@ Manifest V3 offers a number of improvements reflecting the aims of our
 
 ## Feature summary  {: #feature-summary }
 
-There are a number of new features and functional changes for extensions using MV3:
+There are a number of new features and functional changes for extensions using Manifest V3:
 
 * [Service workers](/docs/extensions/mv3/intro/mv3-overview#service-workers)
   replace background pages.
@@ -37,15 +37,15 @@ There are a number of new features and functional changes for extensions using M
   methods.)
 * A number of other, relatively
   [minor feature changes](/docs/extensions/mv3/intro/mv3-overview#other-features)
-  are also introduced in MV3.
+  are also introduced in Manifest V3.
 
 For a fuller description of these changes, see the
-[MV3 Overview](/docs/extensions/mv3/intro/mv3-overview).
+[Manifest V3 Overview](/docs/extensions/mv3/intro/mv3-overview).
 
 
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
-To use the features of MV3, you need to first update your [manifest
+To use the features of Manifest V3, you need to first update your [manifest
 file](/docs/extensions/mv3/manifest). Naturally, you'll change the manifest
 version to "3", but there are a number of other things you need to change in
 the manifest file: host permissions, content security policy, action
@@ -55,7 +55,7 @@ declarations, and web-accessible resources.
 ### Manifest version  {: #manifest-version }
 
 Changing the value of the manifest_version element is the key to upgrading your
-extension. This determines whether you're using the MV2 or MV3 feature set:
+extension. This determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 {% Columns %}
 ```json
@@ -73,7 +73,7 @@ extension. This determines whether you're using the MV2 or MV3 feature set:
 
 ### Host permissions  {: #host-permissions }
 
-In MV3, you'll need to specify host permissions separately from other permissions:
+In Manifest V3, you'll need to specify host permissions separately from other permissions:
 
 {% Columns %}
 ```js
@@ -116,7 +116,7 @@ permissions requests by the Chrome Web Store review process.
 ### Content security policy  {: #content-security-policy }
 
 An extension's [content security policy](https://content-security-policy.com/)
-(CSP) was specified in MV2 as a string; in MV3 it is an object with members
+(CSP) was specified in Manifest V2 as a string; in Manifest V3 it is an object with members
 representing alternative CSP contexts:
 
 {% Columns %}
@@ -138,18 +138,18 @@ representing alternative CSP contexts:
 
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
 
-
 {% Aside %}
-These page types are served from the `chrome-extension://` protocol. For
-instance, a page in your extension is
-`chrome-extension://<extension-id>/foo.html`.
+
+These page types are served from the `chrome-extension://` protocol. For instance, a page in your
+extension is `chrome-extension://EXTENSION_ID/foo.html`.
+
 {% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
 pages](/docs/extensions/mv3/manifest/sandbox) that your extension uses.
 
-In addition, MV3 disallows certain CSP modifications for `extension_pages` that
-were permitted in MV2. The `script-src,` `object-src`, and `worker-src`
+In addition, Manifest V3 disallows certain CSP modifications for `extension_pages` that
+were permitted in Manifest V2. The `script-src,` `object-src`, and `worker-src`
 directives may only have the following values:
 
 *   `self`
@@ -161,9 +161,9 @@ CSP modifications for `sandbox` have no such new restrictions.
 
 ### Action API unification  {: #action-api-unification }
 
-In MV2, there were two different APIs to implement actions: `browser_action`
+In Manifest V2, there were two different APIs to implement actions: `browser_action`
 and `page_action`. These APIs filled distinct roles when they were introduced,
-but over time they've become redundant so in MV3 we are unifying them into as
+but over time they've become redundant so in Manifest V3 we are unifying them into as
 single `action` API:
 
 {% Columns %}
@@ -202,11 +202,12 @@ Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs or extension IDs:
 
 {% Columns %}
+
 ```json
 // Manifest V2
 
 "web_accessible_resources": [
-  <files>
+  RESOURCE_PATHS
 ]
 ```
 
@@ -214,13 +215,23 @@ of which can map to a set of resources to a set of URLs or extension IDs:
 // Manifest V3
 
 "web_accessible_resources": [{
-  "resources": [<resources>],
-  "matches": [<urls>],
-  "extension_ids": [<keys>],
+  "resources": [RESOURCE_PATHS],
+  "matches": [MATCH_PATTERNS],
+  "extension_ids": [EXTENSION_IDS],
   optional "use_dynamic_url": boolean
 }]
 ```
+
 {% endColumns %}
+
+Replace the following:
+
+- <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
+  given resource from the extension's root directory.
+- <code><var>MATCH_PATTERNS</var></code>: A list of strings, each containing a [match
+  pattern][doc-match-pattern] that specifies which sites can access this set of resources.
+- <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
+  extension.
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
@@ -232,20 +243,20 @@ documentation for usage information.
 
 ## Code execution  {: #code-execution }
 
-MV3 imposes new restrictions that limit an extension's ability to execute
+Manifest V3 imposes new restrictions that limit an extension's ability to execute
 unreviewed JavaScript through a combination of platform changes and policy
 limitations.
 
-Many extensions are unaffected by this change. However, if your MV2 extension
+Many extensions are unaffected by this change. However, if your Manifest V2 extension
 executes remotely hosted scripts, injects code strings into pages, or evals
 strings at runtime, you'll need to update your code execution strategies when
-migrating to MV3.
+migrating to Manifest V3.
 
 {% Aside %}
 With Manifest V3 the `executeScript()` method also moves to a different API.
 
-* **MV2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
-* **MV3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
+* **Manifest V2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
+* **Manifest V3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
 
 If you use executeScript() anywhere in your code, you'll need to update that call to use the new
 API. The `insertCSS()` and `removeCSS()` methods similarly move from chrome.tabs to
@@ -262,7 +273,7 @@ are considered remotely hosted code:
 *   JavaScript files pulled from a remote server
 *   a code string passed into eval at runtime
 
-In MV3, all of your extension's logic must be bundled with the extension. You
+In Manifest V3, all of your extension's logic must be bundled with the extension. You
 can no longer load and execute a remotely hosted file. A number of alternative
 approaches are available, depending on your use case and the reason for remote
 hosting. Two such approaches are:
@@ -365,7 +376,7 @@ implementation of `getCurrentTab`.
 
 ## Background service workers  {: #background-service-workers }
 
-Background pages in MV2 are replaced by service workers in MV3: this is a
+Background pages in Manifest V2 are replaced by service workers in Manifest V3: this is a
 foundational change that affects most extensions.
 
 [Service workers](https://developers.google.com/web/fundamentals/primers/service-workers)
@@ -376,7 +387,7 @@ Workers](/docs/extensions/mv3/migrating_to_service_workers) for additional
 details.
 
 {% Aside %}
-In order to aid with the migration process, MV2 extensions can use background
+In order to aid with the migration process, Manifest V2 extensions can use background
 service workers as of Chrome 87.
 {% endAside %}
 
@@ -392,7 +403,7 @@ network request modification, which provides an alternative for much of the
 ### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
 
 The blocking version of the [webRequest](/docs/extensions/reference/webRequest)
-API still exists in MV3 but its use is restricted to force-installed extensions
+API still exists in Manifest V3 but its use is restricted to force-installed extensions
 only. See Chrome Enterprise policies:
 [ExtensionSettings](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionSettings),
 [ExtensionInstallForcelist](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionInstallForcelist).
@@ -422,7 +433,7 @@ needing to read the actual requests.
 
 {% Aside %}
 In order to aid with the migration process, the declarativeNetRequest API is
-available for use in MV2 extensions as of Chrome 84.
+available for use in Manifest V2 extensions as of Chrome 84.
 {% endAside %}
 
 
@@ -473,4 +484,4 @@ As well as the undocumented:
 *   chrome.extension.onMessage
 
 If your extensions use any of these deprecated APIs, you'll need to make the
-appropriate changes when you migrate to MV3.
+appropriate changes when you migrate to Manifest V3.

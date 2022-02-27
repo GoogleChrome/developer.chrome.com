@@ -19,7 +19,7 @@ Prior to Manifest V2 all resources within an extension could be accessed from an
 web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
 or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
 
-Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. MV2
+Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. Manifest V2
 extensions exposed only those resources explicitly designated as web accessible.
 
 Manifest V3 provides finer-grained control, letting you expose individual resources to specified
@@ -58,7 +58,7 @@ Each object in the array contains these properties:
   files.</dd>
   <dt><code>matches</code></dt>
   <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
-  is used to match URLs; subdomains patterns (<code>*.google.com</code>) and paths are ignored.</dd>
+  is used to match URLs. Origins include subdomain matching. Paths are ignored.</dd>
   <dt><code>extension_ids</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
   <dt><code>use_dynamic_url</code></dt>

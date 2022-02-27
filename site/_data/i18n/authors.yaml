@@ -138,7 +138,7 @@ jobay:
   title:
     en: 'Johan Bay'
   description:
-    en: 'Software Development Intern working on Puppeteer'
+    en: 'Googler working on Chrome DevTools.'
 mathiasbynens:
   title:
     en: 'Mathias Bynens'
@@ -344,3 +344,19 @@ alexandrawhite:
     en: 'Alexandra White'
   description:
     en: 'Technical Writer, Google Chrome'
+drott:
+  title:
+    en: 'Dominik Röttsches'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rsheeter:
+  title:
+    en: 'Rod Sheeter'
+  description:
+    en: 'Tech Lead, Google Fonts'
+victortan:
+  title:
+    en: 'Victor Tan'
+  description:
+    en: 'Software Engineer, Google Chrome'
+    

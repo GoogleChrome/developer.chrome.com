@@ -270,7 +270,7 @@ function sanitizeInput(input) {
 [17]: #sanitize
 [18]: /docs/extensions/mv3/messaging#cross-site-scripting
 [19]: /docs/extensions/mv3/xhr#xhr-vs-content-scripts
-[20]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[20]: https://developer.mozilla.org/docs/Web/API/Fetch_API
 [21]: /docs/extensions/reference/tabs#method-create
 [22]: /docs/extensions/reference/runtime#event-onMessageExternal
 [23]: /docs/extensions/reference/runtime#event-onMessage

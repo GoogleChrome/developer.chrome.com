@@ -39,7 +39,7 @@ work so well on here.
 
 Touch events are good, but to support
 [touch](https://www.w3.org/TR/touch-events/) and
-[mouse](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent), you had
+[mouse](https://developer.mozilla.org/docs/Web/API/MouseEvent), you had
 to support two event models:
 
 ```js
@@ -48,7 +48,7 @@ elem.addEventListener('touchmove', touchMoveEvent);
 ```
 
 Chrome now enables unified input handling by dispatching
-[PointerEvents](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent):
+[PointerEvents](https://developer.mozilla.org/docs/Web/API/PointerEvent):
 
 ```js
 elem.addEventListener('pointermove', pointerMoveEvent);

@@ -74,13 +74,13 @@ page.
 Additionally, each file can also be accessed using an absolute URL.
 
 ```text
-chrome-extension://&lt;extensionID>/<pathToFile>
+chrome-extension://EXTENSION_ID/PATH_TO_FILE
 ```
 
-In the absolute URL, the _&lt;extensionID>_ is a unique identifier that the extension system
+In the absolute URL, the <var>EXTENSION_ID</var> is a unique identifier that the extension system
 generates for each extension. The IDs for all loaded extensions can be viewed by going to the URL
-**chrome://extensions**. The _&lt;pathToFile>_ is the location of the file under the extension's top
-folder; it matches the relative URL.
+**chrome://extensions**. The <var>PATH_TO_FILE</var> is the location of the file under the
+extension's top folder; it matches the relative URL.
 
 While working on an unpacked extension the extension ID can change. Specifically, the ID of an
 unpacked extension will change if the extension is loaded from a different directory; the ID will

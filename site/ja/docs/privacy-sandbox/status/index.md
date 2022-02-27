@@ -16,7 +16,7 @@ authors:
 *以前はコンバージョン測定と呼ばれていました。*
 
 - [現在のオリジントライアル](https://web.dev/origin-trials/)：Chrome 86から、Chrome93に[拡張されました](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM)。
-- [オリジントライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)。
+- [オリジントライアルに登録](/origintrials/#/view_trial/3411476717733150721)。
 - [デモ](https://goo.gle/demo-event-level-conversion-measurement-api)。
 - [Chromeプラットフォームでの状況](https://www.chromestatus.com/features/6412002824028160)。
 - [Blinkでの状況](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement)。
@@ -39,7 +39,7 @@ authors:
 ## Trust Tokens
 
 - [現在のオリジントライアル](https://web.dev/origin-trials/)：Chrome 84から、Chrome94に[拡張され](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ)ました。
-- [オリジントライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [オリジントライアルに登録](/origintrials/#/view_trial/2479231594867458049)。
 - [デモ](https://trust-token-demo.glitch.me/)。
 - [Chromeプラットフォームでの状況](https://www.chromestatus.com/feature/5078049450098688)。
 - [Blinkで状況](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens)。
@@ -50,7 +50,7 @@ authors:
 ## First-Party Sets
 
 - [現在のオリジントライアル](https://web.dev/origin-trials/)：Chrome89から93。
-- [オリジントライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- [オリジントライアルに登録](/origintrials/#/view_trial/988540118207823873)。
 - [Chromeプラットフォームでの状態](https://chromestatus.com/feature/5640066519007232)。
 - [Blinkでの状況](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets)。
 - [APIの提案](https://github.com/privacycg/first-party-sets)：APIの質問とディスカッションについては[問題](hhttps://github.com/privacycg/first-party-sets/issues)を参照してください。
@@ -93,7 +93,7 @@ authors:
 
 - [Chromeのオリジントライアルの紹介](https://web.dev/origin-trials/)
 - [サードパーティのオリジントライアルとは？](https://web.dev/third-party-origin-trials)
-- [Chromeのオリジントライアルのトラブルシューティング](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
+- [Chromeのオリジントライアルのトラブルシューティング](/blog/origin-trial-troubleshooting/)
 - [Web開発者向けのオリジントライアルガイド](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [オリジントライアルの説明](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 - [オリジントライアルの実行](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)

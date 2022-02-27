@@ -16,7 +16,7 @@ tags:
 
 {% Aside 'warning' %}
 The origin trial for the initial version of FLoC ran from Chrome 89 to 91 and 
-[is now closed](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
+[is now closed](/origintrials/#/view_trial/213920982300098561).
 
 This post refers to the API implemented in Chrome for the first origin trial of FLoC. 
 
@@ -48,7 +48,7 @@ To find out more about FLoC, see [What is Federated Learning of Cohorts?](https:
 
 An origin trial for FLoC started in Chrome 89, and has been made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/). 
 
-To take part, you will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+To take part, you will need to [register](/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
 
 {% Aside %}
 The initial testing of FLoC is taking place with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC%20is%20taking%20place%20with%20a%20small%20percentage%20of%20users), and FLoC is subject to [origin trial usage limits](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#19-are-there-any-usage-limits-on-experimental-features). This means that initially during the 
@@ -76,7 +76,7 @@ You will need to inject the origin trial token in a meta tag in order to test th
 
 ### Submit feedback
 
-Do this through Chrome's [origin trial site](https://developer.chrome.com/origintrials/#/trials/active). This feedback is not public and is available only to a limited group of people on the Chrome team.   
+Do this through Chrome's [origin trial site](/origintrials/#/trials/active). This feedback is not public and is available only to a limited group of people on the Chrome team.   
 When your token expires, you will get an email with a renewal link. Before renewing the token, you are again asked to submit feedback.
 
 ## Try out FLoC as a web developer

@@ -83,7 +83,7 @@ link.search = `?access=${link.access}`;
 
 **콘솔** 에서 `link` 를 로깅해보세요. 객체의 자체 속성은 굵게 표시되고 첫번째로 노출됩니다.
 이러한 변경을 통해 커스텀 속성을 더 쉽게 찾을 수 있습니다.
-특히 상속되는 속성이 많은 [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (예: `URL`)에서 유용합니다.
+특히 상속되는 속성이 많은 [Web APIs](https://developer.mozilla.org/docs/Web/API) (예: `URL`)에서 유용합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="자체 속성은 굵게 표시되고, 첫번째로 노출됩니다.", width="800", height="561" %}
 

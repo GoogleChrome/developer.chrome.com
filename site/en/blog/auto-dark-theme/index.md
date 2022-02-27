@@ -14,7 +14,7 @@ tags:
   - origin-trials
 ---
 
-Chrome 96 introduces an [origin trial](https://developer.chrome.com/blog/origin-trials/) for Auto Dark Themes on Android.
+Chrome 96 introduces an [origin trial](/blog/origin-trials/) for Auto Dark Themes on Android.
 With this feature, the browser applies an automatically generated dark theme to light themed sites,
 when the user has opted into dark themes in the operating system.
 Users can opt-out of dark themes by either disabling the option on the OS level or in a specific setting in Chrome.

@@ -2,21 +2,60 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/pt/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/pt/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/pt/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/pt/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/pt/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/pt/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/pt/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/pt/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/pt/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-99/#misc) -->
+
+
+### Chrome 98 {: #chrome98 }
+
+* [Prévia de funcionalidade: Árvore de acessibilidade da página](/pt/blog/new-in-devtools-98/#a11y-tree)
+* [Alterações mais precisas na guia Alterações](/pt/blog/new-in-devtools-98/#changes)
+* [Defina um tempo limite mais longo para a gravação do fluxo do usuário](/pt/blog/new-in-devtools-98/#recorder-timeout)
+* [Verifique se suas páginas podem ser armazenadas em cache com a guia Cache Voltar/Avançar](/pt/blog/new-in-devtools-98/#bfcache)
+* [Novo filtro do painel Propriedades](/pt/blog/new-in-devtools-98/#properties)
+* [Emular o recurso de mídia CSS cores forçadas](/pt/blog/new-in-devtools-98/#forced-colors)
+* [Mostrar réguas no comando hover](/pt/blog/new-in-devtools-98/#show-rulers)
+* [Suporte `row-reverse` e `column-reverse` no editor Flexbox](/pt/blog/new-in-devtools-98/#flexbox-editor)
+* [Novos atalhos de teclado para reproduzir XHR e expandir todos os resultados da pesquisa](/pt/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 no painel Lighthouse](/pt/blog/new-in-devtools-98/#lighthouse)
+* [Painel de fontes melhorado](/pt/blog/new-in-devtools-98/#sources)
+* [Destaques diversos](/pt/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints no painel API de relatórios](/pt/blog/new-in-devtools-98/#reporting-api)
+
+### Chrome 97 {: #chrome97 }
+
+* [Prévia de funcionalidade: Novo painel de Gravação](/pt/blog/new-in-devtools-97/#recorder)
+* [Atualização da lista de dispositivos no modo de Dispositivo](/pt/blog/new-in-devtools-97/#device)
+* [Preenchimento automático do Editar como HTML](/pt/blog/new-in-devtools-97/#code-completion)
+* [Melhoria na experiência de Debug](/pt/blog/new-in-devtools-97/#debugging)
+* [Sincronizando as configurações do DevTools entre dispositivos](/pt/blog/new-in-devtools-97/#sync)
+
 ### Chrome 96 {: #chrome96 }
 
-* [Prévia de funcionalidade: novo painel de visão geral CSS](/blog/new-in-devtools-966/#css-overview)
-* [Experiência de edição e cópia de comprimento de CSS foi restaurada e aprimorada](/blog/new-in-devtools-966/#length)
-* [Emule o recurso de prefers-contrast para CSS media](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emule o recurso Auto Dark Theme do Chrome](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copie as declarações como JavaScript no painel Estilos](/blog/new-in-devtools-96/#copy-as-js)
-* [Nova guia Payload no painel Rede](/blog/new-in-devtools-96/#payload)
-* [Melhoria na exibição de propriedades no painel Propriedades](/blog/new-in-devtools-96/#properties)
-* [Opção para ocultar erros CORS no console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Visualização e avaliação adequadas de objetos `Intl` no Console](/blog/new-in-devtools-96/#intl)
-* [Consistência em stack traces assíncronos](/blog/new-in-devtools-96/#async)
-* [Mantida a barra lateral do console](/blog/new-in-devtools-96/#console-sidebar)
-* [Obsolescência do Painel de cache no painel do Aplicativo](/blog/new-in-devtools-96/#app-cache)
-* [[Experimental] Novo painel da API de relatórios no painel do aplicativo](/blog/new-in-devtools-96/#reporting-api)
+* [Prévia de funcionalidade: novo painel de visão geral CSS](/pt/blog/new-in-devtools-966/#css-overview)
+* [Experiência de edição e cópia de comprimento de CSS foi restaurada e aprimorada](/pt/blog/new-in-devtools-966/#length)
+* [Emule o recurso de prefers-contrast para CSS media](/pt/blog/new-in-devtools-96/#prefers-contrast)
+* [Emule o recurso Auto Dark Theme do Chrome](/pt/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copie as declarações como JavaScript no painel Estilos](/pt/blog/new-in-devtools-96/#copy-as-js)
+* [Nova guia Payload no painel Rede](/pt/blog/new-in-devtools-96/#payload)
+* [Melhoria na exibição de propriedades no painel Propriedades](/pt/blog/new-in-devtools-96/#properties)
+* [Opção para ocultar erros CORS no console](/pt/blog/new-in-devtools-96/#hide-cors-errors)
+* [Visualização e avaliação adequadas de objetos `Intl` no Console](/pt/blog/new-in-devtools-96/#intl)
+* [Consistência em stack traces assíncronos](/pt/blog/new-in-devtools-96/#async)
+* [Mantida a barra lateral do console](/pt/blog/new-in-devtools-96/#console-sidebar)
+* [Obsolescência do Painel de cache no painel do Aplicativo](/pt/blog/new-in-devtools-96/#app-cache)
+* [[Experimental] Novo painel da API de relatórios no painel do aplicativo](/pt/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 

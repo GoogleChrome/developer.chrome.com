@@ -276,13 +276,14 @@ Congratulations, you have completed the tutorial. Click **Dispense Trophy** to r
   demonstrated in [View messages logged from JavaScript][10] and explore the other `console` methods
   that weren't covered in this tutorial.
 - See [Get Started][11] to explore what else you can do with DevTools.
+- See [Format and style messages in the Console](/docs/devtools/console/format-style) to learn more about all of the `console` format and styling methods.
 
 [1]: /docs/devtools
 [2]: https://devtools.glitch.me/console/log.html
 [3]: /docs/devtools/customize/#placement
 [4]: /docs/devtools/command-menu
 [5]: https://en.wikipedia.org/wiki/Stack_trace
-[6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+[6]: https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions
 [7]: https://regexr.com
 [8]: /docs/devtools/console/reference
 [9]: /docs/devtools/console/api

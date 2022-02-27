@@ -150,7 +150,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 [1]: /docs/devtools/console
 [2]: /docs/devtools/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
-[4]: https://developer.mozilla.org/en-US/docs/Tools/Scratchpad
+[4]: https://developer.mozilla.org/docs/Tools/Scratchpad
 [5]: #open
 [6]: #rename
 [7]: #open

@@ -36,7 +36,7 @@ Read [this article](/docs/devtools/css-overview) to learn more about the **CSS O
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-## Restored and improved CSS length edit and copy experince {: #length }
+## Restored and improved CSS length edit and copy experience {: #length }
 
 The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release.
 
@@ -174,7 +174,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Deprecated Application cache pane in the Application panel {: #app-cache }
 
-The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers.
+The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

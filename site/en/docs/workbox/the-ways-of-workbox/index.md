@@ -18,9 +18,8 @@ You'll rely on one of two core methods of Workbox's build tools: `generateSW` or
 
 You should use `generateSW` if:
 
-[comment]: <> (TODO: UPDATE REFERENCE DOC LINK)
 - You want to precache files associated with your build process, including files whose URLs contain hashes that you might not know ahead of time.
-- You have simple runtime caching needs that can be configured via [`generateSW`'s options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
+- You have simple runtime caching needs that can be configured via [`generateSW`'s options](/docs/workbox/reference/workbox-build/#method-generateSW).
 
 ### When _not_ to use `generateSW`
 
@@ -51,10 +50,10 @@ You shouldn't use `injectManifest` if:
 
 If you're looking for a framework-agnostic way to use Workbox in your build process, you have three options:
 
-1. [`workbox-cli`](https://developers.google.com/web/tools/workbox/modules/workbox-cli)
-2. [`workbox-build`](https://developers.google.com/web/tools/workbox/modules/workbox-build).
+1. [`workbox-cli`](/docs/workbox/modules/workbox-cli)
+2. [`workbox-build`](/docs/workbox/modules/workbox-build).
 command line tool.
-3. Using a bundler (e.g., [`workbox-webpack-plugin`](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)).
+3. Using a bundler (e.g., [`workbox-webpack-plugin`](/docs/workbox/modules/workbox-webpack-plugin)).
 
 Each of these build tools offers both the `generateSW` and `injectManifest` modes, with a similar set of options. These are all fine choices when you don't want to tie your Workbox-powered service worker to a particular framework. In order to know which of these options is the best fit, let's take a quick look at each one.
 
@@ -128,7 +127,7 @@ It's worth noting that these framework-specific integrations of Workbox may rest
 
 ## What if I don't have a build process?
 
-This article assumes your project has a build process, but your project, in fact, may not. If that describes your situation, it's still possible to use Workbox with the [`workbox-sw` module](https://developers.google.com/web/tools/workbox/modules/workbox-sw). With `workbox-sw`, you can load the Workbox runtime from a CDN or locally, and compose your own service worker.
+This article assumes your project has a build process, but your project, in fact, may not. If that describes your situation, it's still possible to use Workbox with the [`workbox-sw` module](/docs/workbox/modules/workbox-sw). With `workbox-sw`, you can load the Workbox runtime from a CDN or locally, and compose your own service worker.
 
 ## Conclusion
 

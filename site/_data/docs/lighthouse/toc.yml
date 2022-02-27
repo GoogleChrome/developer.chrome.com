@@ -1,0 +1,12 @@
+- url: /docs/lighthouse/seo/
+  title: i18n.docs.seo.intro
+  description: i18n.docs.seo.overview
+- url: /docs/lighthouse/best-practices/
+  title: i18n.docs.best-practices.intro
+  description: i18n.docs.best-practices.overview
+- url: /docs/lighthouse/performance/
+  title: i18n.docs.performance.intro
+  description: i18n.docs.performance.overview
+- url: /docs/lighthouse/pwa/
+  title: i18n.docs.pwa.intro
+  description: i18n.docs.pwa.overview

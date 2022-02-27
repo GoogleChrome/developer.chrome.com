@@ -4,7 +4,7 @@ title: "Remote debug Android devices"
 authors:
   - kaycebasques
 date: 2015-04-13
-#updated: YYYY-MM-DD
+updated: 2021-12-22
 description:
   "Remote debug live content on an Android device from a Windows, Mac, or Linux computer."
 ---
@@ -37,8 +37,9 @@ device][1] for more help.
 
     **Figure 2**. The **Discover USB Devices** checkbox is enabled
 
-6.  Connect your Android device directly to your development machine using a USB cable. The first
-    time you do this, you usually see that DevTools has detected an offline device. If you see the
+6.  Connect your Android device directly to your development machine using a USB cable. Your Android
+    device may ask you to confirm that you trust this computer. The first time you do this, you
+    usually see that DevTools has detected an offline device. If you see the
     model name of your Android device, then DevTools has successfully established the connection to
     your device. Continue to [Step 2][3].
 

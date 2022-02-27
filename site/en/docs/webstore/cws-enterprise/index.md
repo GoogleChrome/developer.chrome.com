@@ -1,8 +1,8 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Enterprise publishing options"
-#date: TODO
-#updated: TODO
+date: 2021-07-29
+updated: 2021-11-22
 description: How to distribute  extensions to enterprise users
 ---
 
@@ -18,8 +18,8 @@ Some of these enterprise features involve how the Chrome Web Store works within 
 * **Collections** &mdash; These provide curated collections of extensions specific to your
   organization.
 
-* **Blocklist and allowlist** &mdash; These options that let your admins manage which extensions can
-  be used in your org.
+* **Blocklist and allowlist** &mdash; These options let your admins manage which extensions can
+  be used in your organization.
 
 * **Force install** &mdash; Administrators can set policies that automatically and silently install
   extensions for users in the organization. Once installed, users cannot disable or remove these
@@ -84,7 +84,7 @@ The article [Create a Chrome app collection][ent-ext-admin-collections] provides
 administrators to add collections to your private Chrome Web Store.
 
 **Blocklist and allowlist:** These are options that your organization's administrators can use to
-explicitly control which extensions may or that may not be installed by members of the org.
+explicitly control which extensions may or that may not be installed by members of the organization.
 
 These and other enterprise extension controls are set by administrators using policies in the
 [extensions atomic policy group][ent-ext-admin-policies].
@@ -135,10 +135,11 @@ Here are a few things to check:
 * Also note that extensions roll out over a period of time, so&mdash;especially if your organization
   has a large user base&mdash;some users may see the update before others.
 
-* Make sure you're checking the [private Chrome Web Store][#private-cws] and not the public one.
+* Make sure you're checking the [private Chrome Web Store URL][private-cws] and not the public one.
 
 [ent-chrome-management]: https://support.google.com/chrome/a/answer/9296680
 [ent-ext-admin-collections]: https://support.google.com/chrome/a/answer/2649489
 [ent-ext-admin-forcelist]: https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist
 [ent-ext-admin-policies]: https://chromeenterprise.google/policies/atomic-groups/#Extensions
 [ent-ext-blog-how]: https://cloud.google.com/blog/products/chrome-enterprise/publishing-extensions-for-the-enterprise
+[private-cws]: #private-cws

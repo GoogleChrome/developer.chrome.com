@@ -87,7 +87,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc807
 **Issues**.
 
 [Attribution
-Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)
+Reporting](/docs/privacy-sandbox/attribution-reporting/)
 это новый API, который поможет вам понять,
 когда действия пользователя (например, клик или просмотр рекламы) приводят к
 конверсии, без использования межсайтовых идентификаторов.

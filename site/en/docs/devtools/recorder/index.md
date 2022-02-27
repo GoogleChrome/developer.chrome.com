@@ -10,7 +10,8 @@ description: "Record, replay and measure user flows with the Recorder panel."
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below. 
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
+{% YouTube id='rMUayh1QPYs' %}
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
 
 Use the **Recorder** panel to record, replay and measure user flows.
 
@@ -97,7 +98,7 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 Let's walk through the options to edit the user flows.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/a3NDihdiqCd6YsirLEcw.png", alt="header section of the Recorder panel", width="800", height="560" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/a3NDihdiqCd6YsirLEcw.png", alt="DevTools Recorder panel has a dropdown menu in the header which allows you to select a user flow to edit", width="800", height="560" %}
 
 On the top of the **Recorder** panel, there are options for you to:
 
@@ -112,12 +113,12 @@ On the top of the **Recorder** panel, there are options for you to:
 Let's walk through the options to edit the steps within a workflow.
 
 1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappucino"* step.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ADbB4FFeiBBZqbxKRw0s.png", alt="Expand Cappucino", width="800", height="663" %}
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ADbB4FFeiBBZqbxKRw0s.png", alt="In the recorder panel, the Cappucino element has been expanded to reveal type, target, selectors, offset X, and offset Y.", width="800", height="663" %}
 2. The step above shows 2 **selectors**. The **Recorder** will automatically detect 2 selectors for most of the steps by default.
     - When replaying the user flow, the **Recorder** will try to query the element with one of the selectors by sequence.
     - For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
 3. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappucino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="remove a selector", width="800", height="663" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="The DevTools recorder panel shows an option to remove a selector", width="800", height="663" %}
 4. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappucino*, you can edit the selector value to *aria/Mocha* instead.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %} 
 5. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappucino*.
@@ -125,17 +126,16 @@ Let's walk through the options to edit the steps within a workflow.
 
 There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="step menu", width="800", height="663" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="DevTools UI for coffee cart, including the menu for the Scroll event expanded to reveal three options: Add step before, add step after, and remove step.", width="800", height="663" %}
 
 1. For example, the *Scroll* event after the *Mocha* step is not necessary. You can select **Remove step** to remove it.
-2. Says, you want to **wait until there are 9 coffees** display on the page before performing any steps.
+2. Say you want to **wait until the 9 coffees** display on the page before performing any steps.
 3. In the *Mocha* step menu, select **Add step before**.
-4. A new step is created.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="new step added", width="800", height="663" %} 
-5. Edit the step with the following details:
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited", width="800", height="663" %} 
+5. In *Assert Element*, edit the new step with the following details:
     - type: **waitForElement**
     - selector #1: **.cup**
     - operator: **==** (click **add operator** button)
     - count: **9** (click **add count** button)
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="step details", width="800", height="663" %}
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
 6. [Replay](#replay) the flow now to see the changes.

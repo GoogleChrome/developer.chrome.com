@@ -45,16 +45,76 @@ if (!isProduction || isCI) {
     ignores.push('site/**/docs/**/*');
   }
 
-  // Ignore /docs/native-client/
-  if (process.env.ELEVENTY_IGNORE_NACL) {
-    console.log(warning('Ignoring native-client docs.'));
-    ignores.push('site/**/docs/native-client/**/*');
+  // Ignore /docs/android/
+  if (process.env.ELEVENTY_IGNORE_ANDROID) {
+    console.log(warning('Ignoring android docs.'));
+    ignores.push('site/**/docs/android/**/*');
+  }
+
+  // Ignore /docs/apps/
+  if (process.env.ELEVENTY_IGNORE_APPS) {
+    console.log(warning('Ignoring apps docs.'));
+    ignores.push('site/**/docs/apps/**/*');
+  }
+
+  // Ignore /docs/devtools/
+  if (process.env.ELEVENTY_IGNORE_DEVTOOLS) {
+    console.log(warning('Ignoring devtools docs.'));
+    ignores.push('site/**/docs/devtools/**/*');
   }
 
   // Ignore /docs/extensions/
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     console.log(warning('Ignoring extensions docs.'));
     ignores.push('site/**/docs/extensions/**/*');
+  }
+
+  // Ignore /docs/handbook/
+  if (process.env.ELEVENTY_IGNORE_HANDBOOK) {
+    console.log(warning('Ignoring handbook docs.'));
+    ignores.push('site/**/docs/handbook/**/*');
+  }
+
+  // Ignore /docs/lighthouse/
+  if (process.env.ELEVENTY_IGNORE_LIGHTHOUSE) {
+    console.log(warning('Ignoring lighthouse docs.'));
+    ignores.push('site/**/docs/lighthouse/**/*');
+  }
+
+  // Ignore /docs/multidevice/
+  if (process.env.ELEVENTY_IGNORE_MULTIDEVICE) {
+    console.log(warning('Ignoring multidevice docs.'));
+    ignores.push('site/**/docs/multidevice/**/*');
+  }
+
+  // Ignore /docs/native-client/
+  if (process.env.ELEVENTY_IGNORE_NACL) {
+    console.log(warning('Ignoring native-client docs.'));
+    ignores.push('site/**/docs/native-client/**/*');
+  }
+
+  // Ignore /docs/privacy-sandbox/
+  if (process.env.ELEVENTY_IGNORE_PRIVACY_SANDBOX) {
+    console.log(warning('Ignoring privacy-sandbox docs.'));
+    ignores.push('site/**/docs/privacy-sandbox/**/*');
+  }
+
+  // Ignore /docs/versionhistory/
+  if (process.env.ELEVENTY_IGNORE_VERSIONHISTORY) {
+    console.log(warning('Ignoring versionhistory docs.'));
+    ignores.push('site/**/docs/versionhistory/**/*');
+  }
+
+  // Ignore /docs/webstore/
+  if (process.env.ELEVENTY_IGNORE_WEBSTORE) {
+    console.log(warning('Ignoring webstore docs.'));
+    ignores.push('site/**/docs/webstore/**/*');
+  }
+
+  // Ignore /docs/workbox/
+  if (process.env.ELEVENTY_IGNORE_WORKBOX) {
+    console.log(warning('Ignoring workbox docs.'));
+    ignores.push('site/**/docs/workbox/**/*');
   }
 }
 
