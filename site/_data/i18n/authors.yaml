@@ -1,3 +1,18 @@
+ericbidelman:
+  title:
+    en: 'Eric Bidelman'
+  description:
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
+paulirish:
+  title:
+    en: 'Paul Irish'
+  description:
+    en: 'Paul is a contributor to WebFundamentals'
+vinamratasingal:
+  title:
+    en: 'Vinamrata Singal'
+  description:
+    en: 'Lighthouse Product Manager'
 jakearchibald:
   title:
     en: 'Jake Archibald'
