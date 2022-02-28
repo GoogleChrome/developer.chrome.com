@@ -101,11 +101,11 @@ exception. This is no longer true. From now on, sites installed using the
 served from origins included in the [web app manifest]'s scope without
 restrictions.
 
-```json
+```json/3
 {
   "name": "My Web App",
   "description": "An awesome app",
-  <b>"scope": "/foo",</b>
+  "scope": "/foo",
   ...
 }
 ```

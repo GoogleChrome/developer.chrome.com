@@ -104,18 +104,24 @@ to perform common tasks.
 
 The `--dump-dom` flag prints `document.body.innerHTML` to stdout:
 
+```shell
     chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/
+```
+
 
 ### Create a PDF
 
 The `--print-to-pdf` flag creates a PDF of the page:
 
+```shell
     chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
+```
 
 ### Taking screenshots
 
 To capture a screenshot of a page, use the `--screenshot` flag:
 
+```shell
     chrome --headless --disable-gpu --screenshot https://www.chromestatus.com/
 
     # Size of a standard letterhead.
@@ -123,6 +129,8 @@ To capture a screenshot of a page, use the `--screenshot` flag:
 
     # Nexus 5x
     chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.chromestatus.com/
+```
+
 
 Running with `--screenshot` will produce a file named `screenshot.png` in the
 current working directory. If you're looking for full page screenshots, things
