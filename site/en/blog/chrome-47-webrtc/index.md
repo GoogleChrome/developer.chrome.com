@@ -21,7 +21,7 @@ tags:
 
 Chrome 47 includes several significant WebRTC enhancements and updates.
 
-### Record video from your web apps
+## Record video from your web apps
 
 The `MediaStreamRecorder` API has long been the top chromium.org request, with over 2500 stars. Media recording has now been added to Chrome behind the experimental Web Platform features flag &mdash; though it's desktop only for the moment. This allows you to record and play back or download video. There is a simple demo on [the WebRTC samples repo](https://webrtc.github.io/samples/src/content/getusermedia/record/) and you can find out more from the [discuss-webrtc announcement](https://groups.google.com/forum/?#!msg/discuss-webrtc/n11m846oV4I/0b3ycjmjCAAJ). A sample Chrome App for recording video from screen capture is available at [github.com/niklasenbom/RecordingApp](https://github.com/niklasenbom/RecordingApp). These are brand-new implementations and there may still be bugs to iron out: please file issues on the repos if you encounter problems.
 
