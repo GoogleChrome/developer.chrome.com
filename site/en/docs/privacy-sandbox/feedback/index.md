@@ -193,9 +193,10 @@ or raise issues in the **Chromium component** column of the tables in the
 
 ### Follow and participate in standards bodies
 
-**_The W3C and IETF develop open standards for all web platforms. They encourage
-interested parties to discuss and learn about individual standards as well as
-the web ecosystem at-large._**
+**_The [World Wide Web Consortium (W3C)](https://www.w3.org/) and [Internet
+Engineering Task Force (IETF)](https://www.ietf.org/) develop open standards for
+all web platforms. They encourage interested parties to discuss and learn about
+individual standards as well as the web ecosystem at-large._**
 
 {% endDetailsSummary %}
 
@@ -225,9 +226,10 @@ groups** column of the tables in the [**Proposals** section](#proposals).
 
 ### Submit feedback through the feedback form {: #feedback-form}
 
-Not all issues fit neatly into the above categories. While these routes are the
-best way to start a public dialogue with the most relevant people, the feedback
-form is there to ensure you can always reach the Chrome team directly.
+**_Not all issues fit neatly into the above categories. While these routes are
+the best way to start a public dialogue with the most relevant people, the
+feedback form is there to ensure you can always reach the Chrome team
+directly._**
 
 {% endDetailsSummary %}
 
