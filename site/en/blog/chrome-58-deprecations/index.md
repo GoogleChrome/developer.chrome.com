@@ -13,7 +13,7 @@ description: >
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
-  - josephmedley
+  - joemedley
 
 # Required
 date: 2017-03-17
@@ -104,12 +104,31 @@ Console deprecation warnings were also implemented.
 In Chrome 58, the old property names are being removed. The affected properties
 and their new names are shown below.
 
-| Removed Property | Current Name |
-|------------------|--------------|
-| motion-path | offset-path |
-| motion-offset | offset-distance |
-| motion-rotation | offset-rotate |
-| motion | offset |
+
+<table class="with-heading-tint">
+  <thead>
+    <tr>
+      <th>Removed Property</th>
+      <th>Current Name</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>motion-path</td>
+    <td>offset-path</td>
+  </tr>
+  <tr>
+    <td>motion-offset</td>
+    <td>offset-distance</td>
+  </tr>
+  <tr>
+    <td>motion-rotation </td>
+    <td>offset-rotate</td>
+  </tr>
+  <tr>
+    <td>motion</td>
+    <td>offset</td>
+  </tr>
+</table>
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/o1C5NzGf9Q0/discussion)
 
