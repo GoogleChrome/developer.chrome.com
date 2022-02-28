@@ -1,4 +1,21 @@
 {
+  "rviscomi": {
+    "github": "rviscomi",
+    "twitter": "rick_viscomi"
+  },
+  "ilyagrigorik": {
+    "homepage": "https://igvita.com/",
+    "twitter": "igrigorik"
+  },
+  "philipwalton": {
+    "homepage": "https://philipwalton.com/",
+    "twitter": "philwalton",
+    "github": "philipwalton"
+    },
+  "hongchanchoi": {
+    "homepage": "https://hoch.io/",
+    "twitter": "hochsays"
+  },
   "jakearchibald": {
     "country": "UK",
     "homepage": "https://jakearchibald.com/",
