@@ -359,4 +359,13 @@ victortan:
     en: 'Victor Tan'
   description:
     en: 'Software Engineer, Google Chrome'
-    
+josephmedley:
+  title:
+    en: 'Joseph Medley'
+  description:
+    en: 'Technical Writer'
+cbrand:
+  title:
+    en: 'Christiaan Brand'
+  description:
+    en: 'Security Product Manager'

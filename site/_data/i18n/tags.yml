@@ -120,3 +120,24 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+
+chrome67:
+  en: Chrome 67
+
+chrome68:
+  en: Chrome 68
+
+desktop:
+  en: Desktop
+
+addtohomescreen:
+  en: Add to home screen
+
+webauthn:
+  en: WebAuthn
+
+credentials:
+  en: Credentials
+
+sign-in:
+  en: Sign in
