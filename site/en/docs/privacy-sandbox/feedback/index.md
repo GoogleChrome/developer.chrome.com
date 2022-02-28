@@ -2,12 +2,12 @@
 layout: layouts/doc-post.njk
 title: Feedback
 subhead: >
-    Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
+  Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 description: >
-    Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
+  Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 date: 2022-02-28
 authors:
-	- rowan_m
+  - rowan_m
 ---
 
 Getting feedback from a diverse set of stakeholders across the web ecosystem is
@@ -31,10 +31,12 @@ team’s public reports, without attribution.
 
 Regular updates for each Privacy Sandbox API are published on this site. In
 particular, these updates will cover a summary of common feedback themes per
-API. While public feedback channels are preferred, both public (e.g., GitHub)
-and direct (e.g., feedback form) channels do exist, and the Chrome team will
-explain whether and how feedback and concerns arising from stakeholder
-engagement are being incorporated into the design and development of each API.
+API.
+
+While public feedback channels are preferred, both public (e.g., GitHub) and
+direct (e.g., feedback form) channels do exist, and the Chrome team will explain
+whether and how feedback and concerns arising from stakeholder engagement are
+being incorporated into the design and development of each API.
 
 {% endAside %}
 
@@ -75,7 +77,8 @@ community commentary for each proposal.
 
 Discussion in the repository should be focused on how and why the proposal
 addresses the use case it sets out to solve. You can find the link to view and
-raise an issue for each proposal in the **Feedback** column of the tables below.
+raise an issue for each proposal in the **Feedback** column of the tables in the
+[**Proposals** section](#proposals).
 
 {% endDetails %}
 
@@ -130,7 +133,7 @@ Discussion on these threads should focus on the specifics of implementing the
 particular feature in Chromium; discussion on how the proposal itself functions
 [is best suited for GitHub](#proposal-feedback). You can find a link to view and
 contribute to each of these announcements in the **Intents** column in the
-tables below.
+tables in the [**Proposals** section](#proposals).
 
 {% endDetails %}
 
@@ -157,7 +160,8 @@ Discussions on these threads should be focused on the ongoing implementation
 detail in Chromium as the intended audience is developers directly coding
 against the feature, as opposed to a general audience interested in broad
 announcements. You can find a link to read and contribute to these in the
-**Mailing list** column in the tables below.
+**Mailing list** column in the tables in the [**Proposals**
+section](#proposals).
 
 {% endDetails %}
 
@@ -180,7 +184,8 @@ flag or something discovered in a stable release.
 Discussion in Chromium issues should be focused on the details of the envisaged
 implementation of the feature in Chromium; discussion on how the proposal itself
 functions [should go to GitHub](#proposal-feedback). You can find a link to view
-or raise issues in the **Chromium component** column of the tables below.
+or raise issues in the **Chromium component** column of the tables in the
+[**Proposals** section](#proposals).
 
 {% endDetails %}
 
@@ -188,7 +193,7 @@ or raise issues in the **Chromium component** column of the tables below.
 
 ### Follow and participate in standards bodies
 
-**_The W3C and IETF develop open standards for all web platforms.They encourage
+**_The W3C and IETF develop open standards for all web platforms. They encourage
 interested parties to discuss and learn about individual standards as well as
 the web ecosystem at-large._**
 
@@ -212,7 +217,7 @@ available.
 Discussion in standards bodies is wide-ranging, but generally focuses on how a
 proposal meets the needs of the ecosystem and its progress towards becoming an
 accepted standard. You can find a link to follow or join in the **Standards
-groups** column of the tables below.
+groups** column of the tables in the [**Proposals** section](#proposals).
 
 {% endDetails %}
 
@@ -239,8 +244,8 @@ inclusion in the Chrome team’s public reports, without attribution.
 
 {% Aside %}
 
-You can submit feedback using the [**feedback
-form**](https://goo.gle/privacy-sandbox-feedback) here.
+You can [**submit feedback using the feedback
+form**](https://goo.gle/privacy-sandbox-feedback).
 
 {% endAside %}
 
@@ -288,7 +293,7 @@ form**](https://goo.gle/privacy-sandbox-feedback) here.
 _Trust Tokens enables a site to share small amounts of information, like
 signaling a user is genuine, to another site without allowing cross-site
 tracking. [Learn more about the Trust Token
-API.](/docs/privacy-sandbox/trust-tokens/)_
+API](/docs/privacy-sandbox/trust-tokens/)_
 
 **_Last updated 2022/02_**
 
@@ -331,7 +336,7 @@ API.](/docs/privacy-sandbox/trust-tokens/)_
 
 _Topics enable interest-based advertising, without resorting to tracking the
 sites a user visits. [Learn more about the Topics
-API.](/docs/privacy-sandbox/topics/)_
+API](/docs/privacy-sandbox/topics/)._
 
 **_Last updated 2022/02: initial Topics API proposal published 2022/01_**
 
@@ -372,7 +377,7 @@ API.](/docs/privacy-sandbox/topics/)_
 
 _FLoC provided a high-level view of a user's interests by grouping them in
 cohorts with thousands of similar browsers. [Learn more about
-FLoC.](/docs/privacy-sandbox/floc/)_
+FLoC](/docs/privacy-sandbox/floc/)._
 
 **_Last updated 2022/02: FLoC has been superseded by Topics API, links are for
 historical reference_**
@@ -415,7 +420,7 @@ historical reference_**
 _FLEDGE enables remarketing and custom audience use cases, as in advertising
 that can make use of sites or products previously visited, but without relying
 on an individual identifier. [Learn more about
-FLEDGE.](/docs/privacy-sandbox/fledge/)_
+FLEDGE](/docs/privacy-sandbox/fledge/)._
 
 **_Last updated 2022/02_**
 
@@ -459,7 +464,7 @@ FLEDGE.](/docs/privacy-sandbox/fledge/)_
 _Event-level reports allow sites to measure when a user action, such as an ad
 click or view, leads to a conversion, but without using cross-site identifiers.
 [Learn more about the Attribution Reporting
-API.](/docs/privacy-sandbox/attribution-reporting/)_
+API](/docs/privacy-sandbox/attribution-reporting/)._
 
 **_Last updated 2022/02_**
 
@@ -501,7 +506,7 @@ API.](/docs/privacy-sandbox/attribution-reporting/)_
 _Summary reports allow for an aggregated view of detailed conversion data, which
 retains critical information for reporting without the ability to identify
 individual users within that data. [Learn more about the Attribution Reporting
-API.](/docs/privacy-sandbox/attribution-reporting/)_
+API](/docs/privacy-sandbox/attribution-reporting/)._
 
 **_Last updated 2022/02_**
 
@@ -544,7 +549,7 @@ API.](/docs/privacy-sandbox/attribution-reporting/)_
 
 _First-Party Sets allows related sites, owned and operated by the same entity,
 to declare themselves as belonging to the same first-party. [Learn more about
-First-Party Sets.](/docs/privacy-sandbox/first-party-sets/)_
+First-Party Sets](/docs/privacy-sandbox/first-party-sets/)._
 
 **_Last updated 2022/02_**
 
@@ -586,7 +591,7 @@ First-Party Sets.](/docs/privacy-sandbox/first-party-sets/)_
 _Shared Storage allows sites to store unpartitioned cross-site data, but only
 read that data in specifically controlled ways. This facilitates several use
 cases, such as consistent A/B experiments across sites. [Learn more about the
-Shared Storage API.](https://github.com/pythagoraskitty/shared-storage/)_
+Shared Storage API](https://github.com/pythagoraskitty/shared-storage/)._
 
 **_Last updated 2022/02_**
 
@@ -627,7 +632,7 @@ Shared Storage API.](https://github.com/pythagoraskitty/shared-storage/)_
 
 _CHIPS allows sites to opt-in a cookie to "partitioned" storage, with a separate
 cookie jar per top-level site. [Learn more about
-CHIPS.](/docs/privacy-sandbox/chips/)_
+CHIPS](/docs/privacy-sandbox/chips/)._
 
 **_Last updated 2022/02_**
 
@@ -669,7 +674,7 @@ CHIPS.](/docs/privacy-sandbox/chips/)_
 _Storage partitioning brings other existing storage and communication methods
 inline with the proposed cookie changes by creating separate containers for
 storage per top-level site. [Learn more about Storage
-Partitioning.](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md)_
+Partitioning](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md)._
 
 **_Last updated 2022/02_**
 
@@ -712,7 +717,7 @@ _The HTTP cache previously provided a single point where it was possible for one
 site to determine if its resources had been loading another—effectively leaking
 cross-site information. Partitioning the cache ensures that activity is
 restricted to a single site. [Learn more about HTTP Cache
-Partitioning.](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)_
+Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)._
 
 **_Last updated 2022/02: HTTP cache partitioning has fully shipped_**
 
@@ -754,7 +759,7 @@ Partitioning.](https://developers.google.com/web/updates/2020/10/http-cache-part
 _Network State Partitioning continues the pattern implemented in HTTP Cache
 Partitioning by creating finer-grained containers for caches, preventing
 cross-site information leakage. [Learn more about Network State
-Partitioning.](https://github.com/MattMenke2/Explainer---Partition-Network-State)_
+Partitioning](https://github.com/MattMenke2/Explainer---Partition-Network-State)._
 
 **_Last updated 2022/02_**
 
@@ -796,7 +801,7 @@ Partitioning.](https://github.com/MattMenke2/Explainer---Partition-Network-State
 _Fenced frames enforce a boundary between a page and embedded content which can
 allow safe access to unpartitioned data without allowing cross-site tracking.
 [Learn more about Fenced
-Frames.](https://github.com/shivanigithub/fenced-frame)_
+Frames](https://github.com/shivanigithub/fenced-frame)._
 
 **_Last updated 2022/02_**
 
@@ -838,7 +843,7 @@ Frames.](https://github.com/shivanigithub/fenced-frame)_
 _The Federated Credentials Management API builds on existing identity provider
 use cases to allow new and existing federated identity use cases to continue
 without third-party cookies. [Learn more about Federated Credentials
-Management.](https://github.com/fedidcg/FedCM)_
+Management](https://github.com/fedidcg/FedCM)._
 
 **_Last updated 2022/02_**
 
@@ -882,7 +887,7 @@ Management.](https://github.com/fedidcg/FedCM)_
 _"SameSite Lax by default" was a specification change which made all cookies
 first-party (or same-site) by default. This also required sites to explicitly
 mark their cookies for third-party (or cross-site) usage. [Learn more about
-SameSite cookies.](https://web.dev/samesite-cookies-explained/)_
+SameSite cookies](https://web.dev/samesite-cookies-explained/)._
 
 **_Last updated 2022/02: SameSite=Lax by default has fully shipped_**
 
@@ -923,7 +928,7 @@ SameSite cookies.](https://web.dev/samesite-cookies-explained/)_
 
 _DNS-over-HTTPS ensures that the sites visited by the browser are not visible to
 observers on the same network. [Learn more about
-DNS-over-HTTPS.](https://blog.chromium.org/2020/05/a-safer-and-more-private-browsing-DoH.html)_
+DNS-over-HTTPS](https://blog.chromium.org/2020/05/a-safer-and-more-private-browsing-DoH.html)._
 
 **_Last updated 2022/02: DNS-over-HTTPS has shipped for all platforms_**
 
@@ -966,7 +971,7 @@ _Chrome is reducing the amount of information exposed by default in its
 user-agent string which limits the potential for covert tracking. User-Agent
 Client Hints allows sites to receive this information on-request with a clean
 and auditable API. [Learn more about the User-Agent reduction and User-Agent
-Client Hints (UA-CH).](/docs/privacy-sandbox/user-agent/)_
+Client Hints (UA-CH)](/docs/privacy-sandbox/user-agent/)._
 
 **_Note: Overall work has shipped incrementally as a number of individual
 features resulting in more Intent messages._**
@@ -1016,7 +1021,7 @@ features resulting in more Intent messages._**
 _Gnatcatcher explores methods to mask a user's IP address from sites. Masking
 can reduce a major tracking signal while still retaining core functionality that
 requires the IP address. [Learn more about
-Gnatcatcher.](https://github.com/bslassey/ip-blindness)_
+Gnatcatcher](https://github.com/bslassey/ip-blindness)._
 
 **_Last updated 2022/02: The initial Privacy Budget proposal is still in early
 discussion_**
@@ -1059,7 +1064,7 @@ discussion_**
 _The Privacy Budget explores how a browser could detect the amount of
 identifying information available to a site, then allow the browser to take
 action before too much data is collected. [Learn more about Privacy
-Budget.](https://github.com/bslassey/privacy-budget)_
+Budget](https://github.com/bslassey/privacy-budget)._
 
 **_Last updated 2022/02: The initial Privacy Budget proposal is still in early
 discussion_**
