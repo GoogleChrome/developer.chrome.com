@@ -97,9 +97,11 @@ let credential = await navigator.credentials.create({ publicKey: {
 }});
 ```
 
+{% Aside 'warning' %}
 Warning: Attestation provides a way for a relying party to determine the
 provenance of an authenticator. **Google strongly recommends that relying parties
 not attempt to maintain allowlists of authenticators.**
+{% endAside %}
 
 ### Authenticating a user
 
