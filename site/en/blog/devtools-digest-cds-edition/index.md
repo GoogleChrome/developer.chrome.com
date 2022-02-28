@@ -17,31 +17,31 @@ Learn how DevTools is going mobile first with a new, streamlined Device Mode tha
 
 ## A glimpse into the future of authoring
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dJR-n8szgBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="dJR-n8szgBc" %}
 
 We’re just coming back from the Chrome Dev Summit where I showed you what working with DevTools looks like today and in the future. I usually don’t mention any features that are still experiments or heavy works of progress in this digest but I’m making an exception this time. If you don’t have time to watch the whole talk, here’s the gist:
 
 ### Device Mode version 2
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r-uc-fENa7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="r-uc-fENa7w" %}
 
 We’re still heavily working on this new, bold iteration of the **Device Mode** but wanted to give everyone an opportunity to try it out, so we’ve enabled it in your Canary today. With the changes, we are pushing DevTools into a mobile-first future where mobile development is the default, and Desktop development is the “add-on”. Expect more iteration over the next few weeks with an extended blog post when we’re done.
 
 ### Powerful animation inspection
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MjaYjUram14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="MjaYjUram14" %}
 
 The work-in-progress **Animation Inspection** gives you a full, detailed picture over what’s happening on anything moving. Instead of showing you a transition on one element at a time, we added heuristics that group complex animations so you can focus on all you’re seeing. Have a look at the video. We’ll offer a bigger, standalone blog post when we’re fully launched.
 
 ### Layout Mode (sneak peek)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fL1KjPMnEuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="fL1KjPMnEuI" %}
 
 Not quite ready for prime time but very promising is the new Layout Mode, a feature I can’t wait to see fully built out. The Layout Mode adds WYSIWYG editing capabilities to DevTools for any element on the page. So far, the height, width, paddings and margins can be edited in context. It’s going to take a little longer until we’re ready to let you try but we’ll keep you updated.
 
 ## Performance profiling with the updated Timeline panel
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w0O2znkSBXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="w0O2znkSBXA" %}
 
 As part of a bigger push of introducing the new [RAIL performance model](https://www.youtube.com/watch?v=wO9GGY17NXY), there have been hundreds of smaller and bigger changes to the Timeline panel, and together they transform and improve the performance profiling story quite a bit. So instead of showing every individual change in isolation, our own Paul Irish showed us how to properly debug the performance of a site, in this case the mobile site of Hotel Tonight, live on stage. Among the newly announced features are the [load and performance film strips](/web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling), the **included network waterfall**, the **treeview summary** and the ability to view **perf costs by domain & file**.
 
@@ -51,7 +51,7 @@ Whenever you wanted to add a background-color or color property to your element,
 
 We thought we could simplify this. We added two nifty buttons that appear when hovering over the bottom right corner of a selector, allowing you to add a color and bring up the picker with a single click:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/63hJtFXbToc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% YouTube id="63hJtFXbToc" %}
 
 ## The best of the rest
 
