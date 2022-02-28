@@ -1071,43 +1071,33 @@ discussion_**
 
 <table class="width-full">
   <tr>
-   <td>**Feedback**
-
+   <td><strong>Feedback</strong>
    </td>
-   <td>[bslassey/privacy-budget](https://github.com/bslassey/privacy-budget/issues)
-
+   <td><a href="https://github.com/bslassey/privacy-budget/issues">bslassey/privacy-budget</a>
    </td>
   </tr>
   <tr>
-   <td>**Intents**
-
+   <td><strong>Intents</strong>
    </td>
    <td>[to come]
-
    </td>
   </tr>
   <tr>
-   <td>**Chromium component**
-
+   <td><strong>Chromium component</strong>
    </td>
    <td>[to come]
-
    </td>
   </tr>
   <tr>
-   <td>**Mailing list**
-
+   <td><strong>Mailing list</strong>
    </td>
    <td>[optional]
-
    </td>
   </tr>
   <tr>
-   <td>**Standards groups**
-
+   <td><strong>Standards groups</strong>
    </td>
-   <td>[Privacy Community Group](https://www.w3.org/groups/cg/privacycg)
-
+   <td><a href="https://www.w3.org/groups/cg/privacycg">Privacy Community Group</a>
    </td>
   </tr>
 </table>
