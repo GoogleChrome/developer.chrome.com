@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-99
-draft: true
 ---
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro)さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
