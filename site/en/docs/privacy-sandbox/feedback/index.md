@@ -5,8 +5,7 @@ subhead: >
     Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 description: >
     Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
-date: 2021-09-21
-updated: 2021-11-04
+date: 2022-02-28
 authors:
 	- rowan_m
 ---
@@ -76,7 +75,8 @@ community commentary for each proposal.
 
 Discussion in the repository should be focused on how and why the proposal
 addresses the use case it sets out to solve. You can find the link to view and
-raise an issue for each proposal in the **Feedback** column of the tables below.
+raise an issue for each proposal in the **Feedback** column of the tables in
+the [Proposals section](#proposals).
 
 {% endDetails %}
 
@@ -189,7 +189,7 @@ or raise issues in the **Chromium component** column of the tables below.
 
 ### Follow and participate in standards bodies
 
-**_The W3C and IETF develop open standards for all web platforms.They encourage
+**_The W3C and IETF develop open standards for all web platforms. They encourage
 interested parties to discuss and learn about individual standards as well as
 the web ecosystem at-large._**
 
@@ -1070,7 +1070,7 @@ discussion_**
    <td>**Feedback**
 
    </td>
-   <td>[bslassey/privacy-budget](https://github.com/bslassey/privacy-budget/issues)
+   <td><a href="https://github.com/bslassey/privacy-budget/issues">bslassey/privacy-budget</a>
 
    </td>
   </tr>
