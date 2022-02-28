@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description:
-  "Throttling WebSocket requests, new Reporting API pane, console styling and more."
+  "WebSocketリクエスト数の制限、新しいReporting APIペイン、コンソールのスタイル指定など"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gE3lh8nJmOF9y3jzAhyI.jpg'
 alt: ''
 tags:
