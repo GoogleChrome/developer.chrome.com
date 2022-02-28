@@ -1,8 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: Feedback
-subhead: Where and how to provide feedback for Privacy Sandbox proposals throughout the development process
-description: "Frequently asked questions about the Privacy Sandbox proposals"
+subhead: >
+    Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
+description: >
+    Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 date: 2021-09-21
 updated: 2021-11-04
 authors:
@@ -11,14 +13,14 @@ authors:
 
 Getting feedback from a diverse set of stakeholders across the web ecosystem is
 critical to the Privacy Sandbox initiative. Here you’ll find explanations of the
-many public channels available that inform development alongside guidance on how
-individuals and organizations can provide feedback at every stage. Chrome
-product managers and engineers actively engage with this feedback, and there are
-hundreds of industry representatives already participating.
+many public channels that inform development, and guidance on how individuals
+and organizations can provide feedback at every stage. Chrome product managers
+and engineers actively engage with this feedback, and there are hundreds of
+industry representatives already participating.
 
-There are many feedback channels where you can engage. Individual interactions
-are public in most cases, which means you can follow along in discussions and
-decide where you want to contribute. There is also a **[feedback
+There are many feedback channels available to you. Individual interactions are
+public in most cases, which means you can follow along in discussions and decide
+where you want to contribute. There is also a **[feedback
 form](#feedback-form)**, which provides the opportunity for stakeholders to
 share feedback directly to the Chrome team outside of public forums. Feedback
 received through the feedback form may be aggregated for inclusion in the Chrome
@@ -137,8 +139,8 @@ tables below.
 
 ### Track and discuss individual feature development
 
-**_Specific mailing lists are created as proposal implementation progresses, to
-allow for more focused discussion._**
+**_Specific mailing lists may be created as proposal implementation progresses,
+to allow for more focused discussion._**
 
 {% endDetailsSummary %}
 
@@ -176,8 +178,8 @@ be to report an error. Issues can be raised at any point in the lifecycle of a
 Chromium feature, whether that's newly available for developer testing behind a
 flag or something discovered in a stable release.
 
-Discussion in Chromium issues should be focused on the functionality of the
-feature as implemented in Chromium; discussion on how the proposal itself
+Discussion in Chromium issues should be focused on the details of the envisaged
+implementation of the feature in Chromium; discussion on how the proposal itself
 functions [should go to GitHub](#proposal-feedback). You can find a link to view
 or raise issues in the **Chromium component** column of the tables below.
 
@@ -204,8 +206,8 @@ Each standards body offers any interested party a variety of different
 membership and contribution options. There are Community Groups and Business
 Groups which include members from across the web ecosystem and relevant
 industries. Proposal authors will often present overviews and progress updates
-at associated meetings, which provides an opportunity to ask direct questions
-and hear from other stakeholders. Meeting minutes for most groups are publicly
+at associated meetings, providing an opportunity to ask direct questions and
+hear from other stakeholders. Meeting minutes for most groups are publicly
 available.
 
 Discussion in standards bodies is wide-ranging, but generally focuses on how a
@@ -238,15 +240,14 @@ inclusion in the Chrome team’s public reports, without attribution.
 
 {% Aside %}
 
-You can submit feedback using the **feedback form** here.
+You can submit feedback using the [**feedback
+form**](https://goo.gle/privacy-sandbox-feedback) here.
 
 {% endAside %}
 
 ## Proposals
 
-
 ### Key
-
 
 <table class="width-full">
   <tr>
@@ -281,10 +282,7 @@ You can submit feedback using the **feedback form** here.
   </tr>
 </table>
 
-
-
 ### Fight spam and fraud on the web
-
 
 #### Trust Token API
 
@@ -293,8 +291,7 @@ signaling a user is genuine, to another site without allowing cross-site
 tracking. [Learn more about the Trust Token
 API.](/docs/privacy-sandbox/trust-tokens/)_
 
-**Last updated 2022/02:** Currently in origin trial until 2022/04.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -329,10 +326,7 @@ API.](/docs/privacy-sandbox/trust-tokens/)_
   </tr>
 </table>
 
-
-
 ### Show relevant content and ads
-
 
 #### Topics API
 
@@ -340,9 +334,7 @@ _Topics enable interest-based advertising, without resorting to tracking the
 sites a user visits. [Learn more about the Topics
 API.](/docs/privacy-sandbox/topics/)_
 
-**Last updated 2022/02:** The initial Topics API proposal was published in
-2022/01.
-
+**_Last updated 2022/02: initial Topics API proposal published 2022/01_**
 
 <table class="width-full">
   <tr>
@@ -377,17 +369,14 @@ API.](/docs/privacy-sandbox/topics/)_
   </tr>
 </table>
 
-
-
 #### FLoC API
 
 _FLoC provided a high-level view of a user's interests by grouping them in
 cohorts with thousands of similar browsers. [Learn more about
 FLoC.](/docs/privacy-sandbox/floc/)_
 
-**Last updated 2022/02:** FLoC has been superseded by the Topics API. These
-links are for historical reference.
-
+**_Last updated 2022/02: FLoC has been superseded by Topics API, links are for
+historical reference_**
 
 <table class="width-full">
   <tr>
@@ -411,7 +400,7 @@ links are for historical reference.
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>[n/a]
+   <td>[optional]
    </td>
   </tr>
   <tr>
@@ -422,8 +411,6 @@ links are for historical reference.
   </tr>
 </table>
 
-
-
 #### FLEDGE API
 
 _FLEDGE enables remarketing and custom audience use cases, as in advertising
@@ -431,9 +418,7 @@ that can make use of sites or products previously visited, but without relying
 on an individual identifier. [Learn more about
 FLEDGE.](/docs/privacy-sandbox/fledge/)_
 
-**Last updated 2022/02.** The FLEDGE API is available for developer testing with
-origin trial plans proposed.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -451,7 +436,7 @@ origin trial plans proposed.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3ABlink%3EInterestGroups&can=2">Blink>InterestGroups</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups">Blink>InterestGroups</a>
    </td>
   </tr>
   <tr>
@@ -468,10 +453,7 @@ origin trial plans proposed.
   </tr>
 </table>
 
-
-
 ### Measure digital ads
-
 
 #### Event-level reports in the Attribution Reporting API
 
@@ -480,8 +462,7 @@ click or view, leads to a conversion, but without using cross-site identifiers.
 [Learn more about the Attribution Reporting
 API.](/docs/privacy-sandbox/attribution-reporting/)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -499,7 +480,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement&can=2">Internals>ConversionMeasurement</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3EConversionMeasurement">Internals>ConversionMeasurement</a>
    </td>
   </tr>
   <tr>
@@ -516,8 +497,6 @@ Last updated 2022/02.
   </tr>
 </table>
 
-
-
 #### Summary reports in the Attribution Reporting API
 
 _Summary reports allow for an aggregated view of detailed conversion data, which
@@ -525,8 +504,7 @@ retains critical information for reporting without the ability to identify
 individual users within that data. [Learn more about the Attribution Reporting
 API.](/docs/privacy-sandbox/attribution-reporting/)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -544,7 +522,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement&can=2">Internals>ConversionMeasurement</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3EConversionMeasurement">Internals>ConversionMeasurement</a>
    </td>
   </tr>
   <tr>
@@ -561,10 +539,7 @@ Last updated 2022/02.
   </tr>
 </table>
 
-
-
 ### Strengthen cross-site privacy boundaries
-
 
 #### First-Party Sets API
 
@@ -572,8 +547,7 @@ _First-Party Sets allows related sites, owned and operated by the same entity,
 to declare themselves as belonging to the same first-party. [Learn more about
 First-Party Sets.](/docs/privacy-sandbox/first-party-sets/)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -591,7 +565,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=first%20party%20component%3AInternals%3ENetwork%3EFirst-Party-Sets&can=2">Internals>Network>First-Party-Sets</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3ENetwork%3EFirst-Party-Sets">Internals>Network>First-Party-Sets</a>
    </td>
   </tr>
   <tr>
@@ -608,8 +582,6 @@ Last updated 2022/02.
   </tr>
 </table>
 
-
-
 #### Shared Storage API
 
 _Shared Storage allows sites to store unpartitioned cross-site data, but only
@@ -617,8 +589,7 @@ read that data in specifically controlled ways. This facilitates several use
 cases, such as consistent A/B experiments across sites. [Learn more about the
 Shared Storage API.](https://github.com/pythagoraskitty/shared-storage/)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -636,7 +607,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=shared%20component%3ABlink%3EStorage%3ESharedStorage&can=2">Blink>Storage>SharedStorage</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EStorage%3ESharedStorage">Blink>Storage>SharedStorage</a>
    </td>
   </tr>
   <tr>
@@ -648,12 +619,10 @@ Last updated 2022/02.
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://www.w3.org/community/web-adv/participants">Improving Web Advertising Business Group</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Cookies Having Independent Partitioned State (CHIPS)
 
@@ -661,8 +630,7 @@ _CHIPS allows sites to opt-in a cookie to "partitioned" storage, with a separate
 cookie jar per top-level site. [Learn more about
 CHIPS.](/docs/privacy-sandbox/chips/)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -692,12 +660,10 @@ Last updated 2022/02.
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group (WICG)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Storage Partitioning
 
@@ -706,8 +672,7 @@ inline with the proposed cookie changes by creating separate containers for
 storage per top-level site. [Learn more about Storage
 Partitioning.](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -725,7 +690,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>[to come]
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EStorage">Blink>Storage</a>
    </td>
   </tr>
   <tr>
@@ -737,12 +702,10 @@ Last updated 2022/02.
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://www.w3.org/groups/cg/privacycg">Privacy Community Group</a>
    </td>
   </tr>
 </table>
-
-
 
 #### HTTP Cache Partitioning
 
@@ -752,8 +715,7 @@ cross-site information. Partitioning the cache ensures that activity is
 restricted to a single site. [Learn more about HTTP Cache
 Partitioning.](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02: HTTP cache partitioning has fully shipped_**
 
 <table class="width-full">
   <tr>
@@ -771,7 +733,7 @@ Last updated 2022/02.
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=http%20component%3AInternals%3ENetwork%3ECache&can=2">Internals>Network>Cache</a>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3ENetwork%3ECache">Internals>Network>Cache</a>
    </td>
   </tr>
   <tr>
@@ -783,12 +745,10 @@ Last updated 2022/02.
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://whatwg.org/">Web Hypertext Application Technology Working Group (WHATWG)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Network State Partitioning
 
@@ -797,8 +757,7 @@ Partitioning by creating finer-grained containers for caches, preventing
 cross-site information leakage. [Learn more about Network State
 Partitioning.](https://github.com/MattMenke2/Explainer---Partition-Network-State)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -810,30 +769,28 @@ Last updated 2022/02.
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/tJa6uzXu_IA/">I2S 2022/02</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/sLC_W6B8big/">I2E 2021/04</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/6KKXv1PqPZ0/">I2P 2019/07</a>
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3ENetwork">Internals>Network</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>
+   <td>[optional]
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://whatwg.org/">Web Hypertext Application Technology Working Group (WHATWG)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Fenced Frames
 
@@ -842,8 +799,7 @@ allow safe access to unpartitioned data without allowing cross-site tracking.
 [Learn more about Fenced
 Frames.](https://github.com/shivanigithub/fenced-frame)_
 
-Last updated 2022/02.
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -855,30 +811,28 @@ Last updated 2022/02.
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/">I2P 2021/04</a>
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EFencedFrames">Blink>FencedFrames</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>
+   <td>[optional]
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://www.w3.org/community/web-adv/participants">Improving Web Advertising Business Group</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Federated Credentials Management (FedCM)
 
@@ -887,8 +841,7 @@ use cases to allow new and existing federated identity use cases to continue
 without third-party cookies. [Learn more about Federated Credentials
 Management.](https://github.com/fedidcg/FedCM)_
 
-**Last updated 2022/02.**
-
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
@@ -900,33 +853,30 @@ Management.](https://github.com/fedidcg/FedCM)_
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jlV_1m7uUAg/">I2E 2022/02</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2B4TJ7j2U4M/">I2P 2020/09</a>
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EIdentity%3EFedCM">Blink>Identity>FedCM</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>
+   <td>[optional]
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://www.w3.org/community/fed-id/">Federated Identity Community Group</a>
    </td>
   </tr>
 </table>
 
-
-
 ### Prevent covert tracking
-
 
 #### SameSite Lax by default cookies
 
@@ -935,43 +885,40 @@ first-party (or same-site) by default. This also required sites to explicitly
 mark their cookies for third-party (or cross-site) usage. [Learn more about
 SameSite cookies.](https://web.dev/samesite-cookies-explained/)_
 
-**Last updated 2022/02.**
-
+**_Last updated 2022/02: SameSite=Lax by default has fully shipped_**
 
 <table class="width-full">
   <tr>
    <td><strong>Feedback</strong>
    </td>
-   <td>
+   <td><a href="https://github.com/mikewest/cookie-incrementalism/issues">mikewest/cookie-incrementalism</a>
    </td>
   </tr>
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/O_uF2FBXacA/">I2S 2019/08</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/6KhRNH3PrvU/">I2R 08/2019</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/AknSSyQTGYs/">I2P+I2S 2019/05</a>
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3ENetwork%3ECookies">Internals>Network>Cookies</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>
+   <td>[optional]
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://datatracker.ietf.org/group/httpstate/about/">HTTP State Management Mechanism (httpstate)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### DNS-over-HTTPS
 
@@ -979,43 +926,40 @@ _DNS-over-HTTPS ensures that the sites visited by the browser are not visible to
 observers on the same network. [Learn more about
 DNS-over-HTTPS.](https://blog.chromium.org/2020/05/a-safer-and-more-private-browsing-DoH.html)_
 
-**Last updated 2022/02.**
-
+**_Last updated 2022/02: DNS-over-HTTPS has shipped for all platforms_**
 
 <table class="width-full">
   <tr>
    <td><strong>Feedback</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/net-dev">net-dev</a>
    </td>
   </tr>
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>
+   <td>[n/a]
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Internals%3ENetwork%3EDoH">Internals>Network>DoH</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>
+   <td><a href="https://groups.google.com/a/chromium.org/g/net-dev">net-dev</a>
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>
+   <td><a href="https://datatracker.ietf.org/group/doh/about/">DNS Over HTTPS (doh)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### User-Agent reduction and User-Agent Client Hints
 
@@ -1025,43 +969,48 @@ Client Hints allows sites to receive this information on-request with a clean
 and auditable API. [Learn more about the User-Agent reduction and User-Agent
 Client Hints (UA-CH).](/docs/privacy-sandbox/user-agent/)_
 
-**Last updated 2022/02.**
+**_Note: Overall work has shipped incrementally as a number of individual
+features resulting in more Intent messages._**
 
+**_Last updated 2022/02_**
 
 <table class="width-full">
   <tr>
    <td><strong>Feedback</strong>
    </td>
-   <td><a href="https://github.com/WICG/ua-client-hints/issues">WICG/ua-client-hints</a>
+   <td><ul>
+
+<li>User-Agent Client Hints: <a href="https://github.com/WICG/ua-client-hints/issues">WICG/ua-client-hints</a>
+<li>Client Hints overall: <a href="https://github.com/WICG/client-hints-infrastructure/issues">WICG/client-hints-infrastructure</a>
+<li>Reducing the user-agent string: <a href="https://github.com/abeyad/user-agent-reduction/issues">abeyad/user-agent-reduction</a></li></ul>
+
    </td>
   </tr>
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>[none]
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/">I2S 2022/02</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/G-ouYoNY9Hs/">I2E 2022/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/-2OW78CB1-A/">I2E 2022/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/JQ68cvYuiQU/">I2S 2021/12</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/oDU_uaDTLic/">I2P 2021/12</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/yZh8Lwr34Ro/">I2S 2021/11</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2V3kubJSOU0">I2P 2021/11</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/FTNrw03Xs9s/">I2P 2021/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/R0xKm1B7qoQ/">I2E 2021/07</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/r0kcHYoK79U/">I2P 2021/07</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/dafizBGwWMw/">I2P 2021/04</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/t-S9nnos9qU/">I2R 2020/12</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/zPYGbULXn7o/">I2P 2020/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/-2JIRNMWJ7s/">I2R 2020/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/A4wxFpvqUfA/">I2S 2020/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/WQ0eC_Gf8bw">I2P 2019/01</a>
    </td>
   </tr>
   <tr>
    <td><strong>Chromium component</strong>
    </td>
-   <td>[none]
+   <td><a href="https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3ENetwork%3EClientHints">Blink>Network>ClientHints</a>
    </td>
   </tr>
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>[none]
+   <td>[optional]
    </td>
   </tr>
   <tr>
    <td><strong>Standards groups</strong>
    </td>
-   <td>[none]
+   <td><a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group (WICG)</a>
    </td>
   </tr>
 </table>
-
-
 
 #### Gnatcatcher
 
@@ -1070,8 +1019,8 @@ can reduce a major tracking signal while still retaining core functionality that
 requires the IP address. [Learn more about
 Gnatcatcher.](https://github.com/bslassey/ip-blindness)_
 
-**Last updated 2022/02.** Explainer has been published for feedback.
-
+**_Last updated 2022/02: The initial Privacy Budget proposal is still in early
+discussion_**
 
 <table class="width-full">
   <tr>
@@ -1106,8 +1055,6 @@ Gnatcatcher.](https://github.com/bslassey/ip-blindness)_
   </tr>
 </table>
 
-
-
 #### Privacy Budget
 
 _The Privacy Budget explores how a browser could detect the amount of
@@ -1115,7 +1062,8 @@ identifying information available to a site, then allow the browser to take
 action before too much data is collected. [Learn more about Privacy
 Budget.](https://github.com/bslassey/privacy-budget)_
 
-**Last updated 2022/02.** Explainer has been published for feedback.
+**_Last updated 2022/02: The initial Privacy Budget proposal is still in early
+discussion_**
 
 <table class="width-full">
   <tr>
@@ -1130,7 +1078,7 @@ Budget.](https://github.com/bslassey/privacy-budget)_
    <td>**Intents**
 
    </td>
-   <td>[none]
+   <td>[to come]
 
    </td>
   </tr>
@@ -1138,7 +1086,7 @@ Budget.](https://github.com/bslassey/privacy-budget)_
    <td>**Chromium component**
 
    </td>
-   <td>[none]
+   <td>[to come]
 
    </td>
   </tr>
@@ -1146,7 +1094,7 @@ Budget.](https://github.com/bslassey/privacy-budget)_
    <td>**Mailing list**
 
    </td>
-   <td>[none]
+   <td>[optional]
 
    </td>
   </tr>
@@ -1154,7 +1102,7 @@ Budget.](https://github.com/bslassey/privacy-budget)_
    <td>**Standards groups**
 
    </td>
-   <td>[none]
+   <td>[Privacy Community Group](https://www.w3.org/groups/cg/privacycg)
 
    </td>
   </tr>
