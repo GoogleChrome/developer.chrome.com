@@ -1,3 +1,18 @@
+rviscomi:
+  title:
+    en: 'Rick Viscomi'
+  description:
+    en: 'Rick is a contributor to WebFundamentals'
+rowanmerewood:
+  title:
+    en: 'Rowan Merewood'
+  description:
+    en: 'Rowan is a Developer Advocate'
+johannes:
+  title:
+    en: 'Johannes Henkel'
+  description:
+    en: 'Software Engineer working on the Chrome User Experience Report at Google.'
 jakearchibald:
   title:
     en: 'Jake Archibald'

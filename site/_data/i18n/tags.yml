@@ -120,3 +120,21 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+
+android:
+  en: Android
+
+custom-tabs:
+  en: Custom Tabs
+
+storage-isolation:
+  en: Storage Isolation
+
+cache:
+  en: Cache
+
+notifications:
+  en: Notifications
+
+performance:
+  en: Performance
