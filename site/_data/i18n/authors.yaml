@@ -359,4 +359,28 @@ victortan:
     en: 'Victor Tan'
   description:
     en: 'Software Engineer, Google Chrome'
-    
+rviscomi:
+  title:
+    en: 'Rick Viscomi'
+  description:
+    en: 'Rick is a contributor to WebFundamentals'
+ossu:
+  title:
+    en: 'Oskar Sundbom'
+  description:
+    en: 'Software Engineer working on WebRTC and Audio in Chromium'
+katiehempenius:
+  title:
+    en: 'Katie Hempenius'
+  description:
+    en: 'Katie is a contributor to WebFundamentals'
+philipwalton:
+  title:
+    en: 'Philip Walton'
+  description:
+    en: 'Engineer at Google working on the Web Platform'
+ericbidelman:
+  title:
+    en: 'Eric Bidelman'
+  description:
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'

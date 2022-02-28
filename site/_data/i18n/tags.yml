@@ -120,3 +120,33 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+
+chrome68:
+  en: Chrome 68
+
+webrtc:
+  en: WebRTC
+
+getusermedia:
+  en: getusermedia()
+
+ux:
+  en: UX
+
+performance:
+  en: Performance
+
+chrome63:
+  en: Chrome 63
+
+chrome69:
+  en: Chrome 69
+
+reporting-observer:
+  en: Reporting Observer
+
+analytics:
+  en: Analytics
+
+interventions:
+  en: Interventions

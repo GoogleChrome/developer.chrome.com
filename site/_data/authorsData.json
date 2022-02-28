@@ -398,5 +398,29 @@
     "github": "victortan",
     "twitter": "victortan",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/j7BoDYMJWpcjTNyhbnYu.jpeg"
+  },
+  "rviscomi": {
+    "country": "US",
+    "twitter": "rick_viscomi",
+    "github": "rviscomi",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/jtrQUxUnqhLRvqJRV5Mi.jpeg"
+  },
+  "katiehempenius": {
+    "country": "US",
+    "twitter": "katiehempenius"
+  },
+  "philipwalton": {
+    "country": "US",
+    "homepage": "https://philipwalton.com/",
+    "twitter": "philwalton",
+    "github": "philipwalton",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/s9nOZkb4LgpVtkH3xdCj.jpeg"
+  },
+  "ericbidelman": {
+    "country": "US",
+    "homepage": "https://ericbidelman.com/",
+    "twitter": "ebidel",
+    "github": "ebidel",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/yLB5wyJkVMZX6JMUmeeq.jpeg"
   }
 }
