@@ -77,17 +77,15 @@ Usage in HTML:
 
 Usage in JavaScript:
 
-```js
-    var video = document.querySelector('video');
-    video.controls; // true
-    video.controlsList; // ["nofullscreen", "nodownload", "noremoteplayback"]
-    video.controlsList.remove('noremoteplayback');
-    video.controlsList; // ["nofullscreen", "nodownload"]
-    video.getAttribute('controlsList'); // "nofullscreen nodownload"
+var video = document.querySelector('video');
+video.controls; // true
+video.controlsList; // ["nofullscreen", "nodownload", "noremoteplayback"]
+video.controlsList.remove('noremoteplayback');
+video.controlsList; // ["nofullscreen", "nodownload"]
+video.getAttribute('controlsList'); // "nofullscreen nodownload"
 
-    video.controlsList.supports('foo'); // false
-    video.controlsList.supports('noremoteplayback'); // true
-```
+video.controlsList.supports('foo'); // false
+video.controlsList.supports('noremoteplayback'); // true
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/tFuQd3AcsIQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5737006365671424) &#124;
@@ -184,48 +182,48 @@ Usage in HTML:
 
 Usage in CSS:
 ```css
-    main {
-      background-image: url("photo-srgb.jpg");
-    }
+main {
+  background-image: url("photo-srgb.jpg");
+}
 
-    @media (color-gamut: p3) {
-      main {
-        background-image: url("photo-p3.jpg");
-      }
-    }
+@media (color-gamut: p3) {
+  main {
+    background-image: url("photo-p3.jpg");
+  }
+}
 
-    @media (color-gamut: rec2020) {
-      main {
-        background-image: url("photo-rec2020.jpg");
-      }
-    }
+@media (color-gamut: rec2020) {
+  main {
+    background-image: url("photo-rec2020.jpg");
+  }
+}
 ```
 
 Usage in JavaScript:
 ```js
-    // It is expected that the majority of color displays will return true.
-    if (window.matchMedia("(color-gamut: srgb)").matches) {
-      document.querySelector('main').style.backgroundImage = 'url("photo-srgb.jpg")';
-    }
+// It is expected that the majority of color displays will return true.
+if (window.matchMedia("(color-gamut: srgb)").matches) {
+  document.querySelector('main').style.backgroundImage = 'url("photo-srgb.jpg")';
+}
 
-    if (window.matchMedia("(color-gamut: p3)").matches) {
-      document.querySelector('main').style.backgroundImage = 'url("photo-p3.jpg")';
-    }
+if (window.matchMedia("(color-gamut: p3)").matches) {
+  document.querySelector('main').style.backgroundImage = 'url("photo-p3.jpg")';
+}
 
-    if (window.matchMedia("(color-gamut: rec2020)").matches) {
-      document.querySelector('main').style.backgroundImage = 'url("photo-rec2020.jpg")';
-    }
+if (window.matchMedia("(color-gamut: rec2020)").matches) {
+  document.querySelector('main').style.backgroundImage = 'url("photo-rec2020.jpg")';
+}
 ```
 
 <p>For info, this screen currently supports approximately:</p>
 
 <style>
-  ul {
-    padding: 0;
-  }
-  li {
-    list-style-type: none
-  }
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none
+}
 </style>
 <ul>
   <li>

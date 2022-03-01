@@ -67,11 +67,11 @@ The easiest way to get started with headless mode is to open the Chrome binary
 from the command line. If you've got Chrome 59+ installed, start Chrome with the `--headless` flag:
 
 ```shell
-    chrome \
-      --headless \                   # Runs Chrome in headless mode.
-      --disable-gpu \                # Temporarily needed if running on Windows.
-      --remote-debugging-port=9222 \
-      https://www.chromestatus.com   # URL to open. Defaults to about:blank.
+chrome \
+--headless \                   # Runs Chrome in headless mode.
+--disable-gpu \                # Temporarily needed if running on Windows.
+--remote-debugging-port=9222 \
+https://www.chromestatus.com   # URL to open. Defaults to about:blank.
 ```
 
 {% Aside %}
@@ -87,9 +87,9 @@ If you're on the stable channel of Chrome and cannot get the Beta, I recommend
 using `chrome-canary`:
 
 ```shell
-    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
-    alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 ```
 
 Download Chrome Canary [here](https://www.google.com/chrome/browser/canary.html).
@@ -114,7 +114,7 @@ The `--dump-dom` flag prints `document.body.innerHTML` to stdout:
 The `--print-to-pdf` flag creates a PDF of the page:
 
 ```shell
-    chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
+chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
 ```
 
 ### Taking screenshots
@@ -122,13 +122,13 @@ The `--print-to-pdf` flag creates a PDF of the page:
 To capture a screenshot of a page, use the `--screenshot` flag:
 
 ```shell
-    chrome --headless --disable-gpu --screenshot https://www.chromestatus.com/
+chrome --headless --disable-gpu --screenshot https://www.chromestatus.com/
 
-    # Size of a standard letterhead.
-    chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://www.chromestatus.com/
+# Size of a standard letterhead.
+chrome --headless --disable-gpu --screenshot --window-size=1280,1696 https://www.chromestatus.com/
 
-    # Nexus 5x
-    chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.chromestatus.com/
+# Nexus 5x
+chrome --headless --disable-gpu --screenshot --window-size=412,732 https://www.chromestatus.com/
 ```
 
 
@@ -145,15 +145,15 @@ The `--repl` flag runs Headless in a mode where you can evaluate JS expressions
 in the browser, right from the command line:
 
 ```shell
-    $ chrome --headless --disable-gpu --repl --crash-dumps-dir=./tmp https://www.chromestatus.com/
-    [0608/112805.245285:INFO:headless_shell.cc(278)] Type a Javascript expression to evaluate or "quit" to exit.
-    >>> location.href
-    {"result":{"type":"string","value":"https://www.chromestatus.com/features"}}
-    >>> quit
-    $
+$ chrome --headless --disable-gpu --repl --crash-dumps-dir=./tmp https://www.chromestatus.com/
+[0608/112805.245285:INFO:headless_shell.cc(278)] Type a Javascript expression to evaluate or "quit" to exit.
+>>> location.href
+{"result":{"type":"string","value":"https://www.chromestatus.com/features"}}
+>>> quit
+$
 ```
 {% Aside %}
-Note: the addition of the --crash-dumps-dir flag when using repl mode.
+The addition of the --crash-dumps-dir flag when using repl mode.
 {% endAside %}
 
 ## Debugging Chrome without a browser UI?
@@ -200,7 +200,7 @@ debug instance of Chrome.
 Install it:
 
 ```shell
-    npm i --save puppeteer
+npm i --save puppeteer
 ```
 
 **Example** - print the user agent
@@ -221,12 +221,12 @@ const puppeteer = require('puppeteer');
 const puppeteer = require('puppeteer');
 
 (async() => {
-const browser = await puppeteer.launch();
-const page = await browser.newPage();
-await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle2'});
-await page.pdf({path: 'page.pdf', format: 'A4'});
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle2'});
+  await page.pdf({path: 'page.pdf', format: 'A4'});
 
-await browser.close();
+  await browser.close();
 })();
 ```
 
@@ -282,7 +282,8 @@ By default, **`chrome-launcher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
 use it, first install from npm:
 
-    npm i --save chrome-launcher
+```bash
+npm i --save chrome-launcher
 
 **Example** - using `chrome-launcher` to launch Headless
 
@@ -336,7 +337,7 @@ daunting at first. I recommend spending a bit of time browsing the
 Let's install the library:
 
 ```shell
-    npm i --save chrome-remote-interface
+npm i --save chrome-remote-interface
 ```
 
 ##### Examples
