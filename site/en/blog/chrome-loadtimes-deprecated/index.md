@@ -57,7 +57,7 @@ The `chrome.loadTimes()` function returns a single object containing all of its
 loading and network information. For example, the following object is the result
 of calling `chrome.loadTimes()` on [www.google.com](https://www.google.com):
 
-```json
+```json/3
 {
   "requestTime": 1513186741.847,
   "startLoadTime": 1513186741.847,
@@ -185,7 +185,7 @@ code examples of how to get each value in the old API with modern equivalents.
 </table>
 
 {% Aside %}
-  <strong>Note:</strong> some of the features of the original API were
+  Some of the features of the original API were
   never implemented or only apply to deprecated features. These are marked "N/A"
   in the table above.
 {% endAside %}

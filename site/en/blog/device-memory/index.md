@@ -46,7 +46,7 @@ gigabytes, rounded down to the nearest power of two. The API also features a
 `Device-Memory`, that reports the same value.
 
 {% Aside %}
-  <strong>Note:</strong> The JavaScript API is new in Chrome 63, while the
+  The JavaScript API is new in Chrome 63, while the
   Client Hints header has been enabled by default in Chrome since version 61.
 {% endAside %}
 

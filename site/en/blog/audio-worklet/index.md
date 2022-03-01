@@ -36,7 +36,7 @@ tags:
 ---
 
 {% Aside %}
-Note: Audio Worklet is enabled by default in Chrome 66.
+Audio Worklet is enabled by default in Chrome 66.
 {% endAside %}
 
 Chrome 64 comes with a highly anticipated new feature in Web Audio API -
