@@ -2,7 +2,7 @@
 title: New in Chrome 99
 description: >
   Chrome 99 is rolling out now! CSS cascade layers gives you more control over
-  your CSS, and helps to prevent style-specificity conflicts. The showPicker
+  your CSS, and helps to prevent style-specificity conflicts. The showPicker()
   method allows you to programmatically show a browser picker for input
   elements like date, color, and datalist. Version 100 of Chrome and Firefox
   is just weeks away. And there's plenty more!
@@ -18,7 +18,7 @@ tags:
   - chrome-99
 ---
 
-{% YouTube id='TODO' %}
+{% YouTube id='h3mzFraS8CA' %}
 
 Here's what you need to know:
 
@@ -72,18 +72,18 @@ the precedence of a layer always beats the specificity of a selector.
 
 If you're trying to style a link, inside a `.card`, within a `.post` you will
 find that the more specific selector will be applied. By using the `@layer`
-rule, you can be more explicit about the style-specificity of each, and make
+rule, you can be more explicit about the style specificity of each, and make
 sure that the link style in your card, overrides the link style in your post.
 
 ```css
 @layer base {
   a {
     font-weight: 800;
-    color: red; /* ignored */
+    color: red;
   }
 
   .link {
-    color: blue; /* ignored */
+    color: blue;
   }
 }
 ```
@@ -93,10 +93,10 @@ planes.
 
 Cascade layers using the CSS `@layer` rule are supported in Chrome 99,
 Firefox 97, and Safari 15.4 Beta. Check out
-[Cascade layers are coming to your browser](/blog/cascade-layers/) for lots
+[Cascade layers are coming to your browser](/blog/cascade-layers/) for
 more information.
 
-## `showPicker()` for `<input>` elements {: #showPicker }
+## showPicker() for input elements {: #showPicker }
 
 For a long time, we've had to resort to custom widget libraries or hacks to
 show a date picker. There's a new `showPicker()` method on HTML `InputElements`.
@@ -109,7 +109,7 @@ It's the canonical way to show a browser picker, not only for `date`, but also
 </figure>
 
 To use it, call `showPicker()` on the `<input>` element. In this example, I
-wrapped it in a `try/catch` block. That allows me to provide a fallback,
+wrapped it in a `try…catch` block. That allows me to provide a fallback,
 if the browser doesn't support the API, or can't show the picker. Thus,
 ensuring that users still get a good experience.
 
@@ -122,7 +122,7 @@ button.addEventListener("click", () => {
     dateInput.showPicker();
     // A date picker is shown.
   } catch (error) {
-    // Use external library when this fails.
+    // Use an external library when this fails.
   }
 });
 ```
@@ -172,5 +172,5 @@ tell you what's new in Chrome!
 [cr-ff-100]: https://web.dev/chrome-firefox-100/
 [cascade]: https://developer.mozilla.org/docs/Web/CSS/Cascade
 [canvas2d]: https://chromestatus.com/feature/6051647656558592
-[wam-dark]: https://chromestatus.com/feature/5714780426862592
+[wam-dark]: https://developer.chrome.com/origintrials/#/view_trial/4239013149262479361
 [cs-hand]: https://chromestatus.com/feature/5263213807534080
