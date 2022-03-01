@@ -49,7 +49,7 @@ console.log(padding.value, padding.unit); // 42, 'px'
 The days of concatenating strings and subtle bugs are over!
 
 {% Aside %}
-Heads up: Chrome 66 adds support for the CSS Typed Object Model for a
+Chrome 66 adds support for the CSS Typed Object Model for a
 [subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/css/cssom/README.md).
 {% endAside %}
 
@@ -163,7 +163,7 @@ shown [signs of support][edge-support], but has yet to add it to their
 [platform dashboard](https://developer.microsoft.com/microsoft-edge/platform/status/).
 
 {% Aside %}
-Note: Only a [subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/core/css/cssom/README.md) are supported in
+Only a [subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/core/css/cssom/README.md) are supported in
 Chrome 66+ for now.
 {% endAside %}
 
@@ -216,7 +216,7 @@ el.computedStyleMap().get('opacity').value // 0.5
 ```
 
 {% Aside 'gotchas' %}
-Note: One gotcha between `window.getComputedStyle()` and
+One gotcha between `window.getComputedStyle()` and
 `element.computedStyleMap()` is that the former returns resolved values whereas
 the latter returns computed values. For example, Typed OM retains percentage
 values (`width: 50%`), while CSSOM resolves them to lengths (e.g. `width: 200px`).
@@ -279,7 +279,7 @@ const {value, unit} = CSS.ms(300);
 ```
 
 {% Aside %}
-Note: as shown in the examples, these methods can be passed a `Number` or
+As shown in the examples, these methods can be passed a `Number` or
 `String` representing a number.
 {% endAside %}
 

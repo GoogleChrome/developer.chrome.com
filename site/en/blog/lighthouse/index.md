@@ -120,7 +120,7 @@ towards the **Accessibility** score.
 ## New loading message and fast facts 
 
 {% Aside %}
-Note: This update is only visible when you run Lighthouse from the **Audits** panel of Chrome
+This update is only visible when you run Lighthouse from the **Audits** panel of Chrome
 DevTools.
 {% endAside %}
 

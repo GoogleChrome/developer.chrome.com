@@ -54,13 +54,13 @@ worklet file using `CSS.paintWorklet.addModule('my-paint-worklet.js')`. In that
 file, we can use the `registerPaint` function to register a paint worklet class:
 
 ```js
-    class MyPainter {
-      paint(ctx, geometry, properties) {
-        // ...
-      }
-    }
+class MyPainter {
+  paint(ctx, geometry, properties) {
+    // ...
+  }
+}
 
-    registerPaint('myPainter', MyPainter);
+registerPaint('myPainter', MyPainter);
 ```
 
 Inside the `paint()` callback, we can use `ctx` the same way we would a
@@ -70,7 +70,7 @@ width and the height of the canvas that is at our disposal. `properties` I will
 explain later in this article.
 
 {% Aside %}
-Note: A paint worklet’s context is not 100% the same as a `<canvas>` context. As
+A paint worklet’s context is not 100% the same as a `<canvas>` context. As
 of now, text rendering methods are missing and for security reasons you cannot
 read back pixels from the canvas.
 {% endAside %}
@@ -81,42 +81,42 @@ as a background image of a `<textarea>`. (I am using a textarea because it’s
 resizable by default.):
 
 ```html
-    <!-- index.html -->
-    <!doctype html>
-    <style>
-      textarea {
-        background-image: paint(checkerboard);
-      }
-    </style>
-    <textarea></textarea>
-    <script>
-      CSS.paintWorklet.addModule('checkerboard.js');
-    </script>
+<!-- index.html -->
+<!doctype html>
+<style>
+  textarea {
+    background-image: paint(checkerboard);
+  }
+</style>
+<textarea></textarea>
+<script>
+  CSS.paintWorklet.addModule('checkerboard.js');
+</script>
 ```
 
 <div class="clearfix"></div>
 
 ```js
-    // checkerboard.js
-    class CheckerboardPainter {
-      paint(ctx, geom, properties) {
-        // Use `ctx` as if it was a normal canvas
-        const colors = ['red', 'green', 'blue'];
-        const size = 32;
-        for(let y = 0; y < geom.height/size; y++) {
-          for(let x = 0; x < geom.width/size; x++) {
-            const color = colors[(x + y) % colors.length];
-            ctx.beginPath();
-            ctx.fillStyle = color;
-            ctx.rect(x * size, y * size, size, size);
-            ctx.fill();
-          }
-        }
+// checkerboard.js
+class CheckerboardPainter {
+  paint(ctx, geom, properties) {
+    // Use `ctx` as if it was a normal canvas
+    const colors = ['red', 'green', 'blue'];
+    const size = 32;
+    for(let y = 0; y < geom.height/size; y++) {
+      for(let x = 0; x < geom.width/size; x++) {
+        const color = colors[(x + y) % colors.length];
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.rect(x * size, y * size, size, size);
+        ctx.fill();
       }
     }
+  }
+}
 
-    // Register our class under a specific name
-    registerPaint('checkerboard', CheckerboardPainter);
+// Register our class under a specific name
+registerPaint('checkerboard', CheckerboardPainter);
 ```
 
 If you’ve used `<canvas>` in the past, this code should look familiar. See
@@ -125,7 +125,7 @@ the live
 here.
 
 {% Aside %}
-Note: As with almost all new APIs, CSS Paint API is only available over HTTPS
+As with almost all new APIs, CSS Paint API is only available over HTTPS
 (or `localhost`).
 {% endAside %}
 
@@ -154,48 +154,48 @@ including custom properties. The values will be given to you through the
 `properties` parameter.
 
 ```html
-    <!-- index.html -->
-    <!doctype html>
-    <style>
-      textarea {
-        /* The paint worklet subscribes to changes of these custom properties. */
-        --checkerboard-spacing: 10;
-        --checkerboard-size: 32;
-        background-image: paint(checkerboard);
-      }
-    </style>
-    <textarea></textarea>
-    <script>
-      CSS.paintWorklet.addModule('checkerboard.js');
-    </script>
-````
+<!-- index.html -->
+<!doctype html>
+<style>
+  textarea {
+    /* The paint worklet subscribes to changes of these custom properties. */
+    --checkerboard-spacing: 10;
+    --checkerboard-size: 32;
+    background-image: paint(checkerboard);
+  }
+</style>
+<textarea></textarea>
+<script>
+  CSS.paintWorklet.addModule('checkerboard.js');
+</script>
+```
 <div class="clearfix"></div>
 
 ```js
-    // checkerboard.js
-    class CheckerboardPainter {
-      // inputProperties returns a list of CSS properties that this paint function gets access to
-      static get inputProperties() { return ['--checkerboard-spacing', '--checkerboard-size']; }
+// checkerboard.js
+class CheckerboardPainter {
+  // inputProperties returns a list of CSS properties that this paint function gets access to
+  static get inputProperties() { return ['--checkerboard-spacing', '--checkerboard-size']; }
 
-      paint(ctx, geom, properties) {
-        // Paint worklet uses CSS Typed OM to model the input values.
-        // As of now, they are mostly wrappers around strings,
-        // but will be augmented to hold more accessible data over time.
-        const size = parseInt(properties.get('--checkerboard-size').toString());
-        const spacing = parseInt(properties.get('--checkerboard-spacing').toString());
-        const colors = ['red', 'green', 'blue'];
-        for(let y = 0; y < geom.height/size; y++) {
-          for(let x = 0; x < geom.width/size; x++) {
-            ctx.fillStyle = colors[(x + y) % colors.length];
-            ctx.beginPath();
-            ctx.rect(x*(size + spacing), y*(size + spacing), size, size);
-            ctx.fill();
-          }
-        }
+  paint(ctx, geom, properties) {
+    // Paint worklet uses CSS Typed OM to model the input values.
+    // As of now, they are mostly wrappers around strings,
+    // but will be augmented to hold more accessible data over time.
+    const size = parseInt(properties.get('--checkerboard-size').toString());
+    const spacing = parseInt(properties.get('--checkerboard-spacing').toString());
+    const colors = ['red', 'green', 'blue'];
+    for(let y = 0; y < geom.height/size; y++) {
+      for(let x = 0; x < geom.width/size; x++) {
+        ctx.fillStyle = colors[(x + y) % colors.length];
+        ctx.beginPath();
+        ctx.rect(x*(size + spacing), y*(size + spacing), size, size);
+        ctx.fill();
       }
     }
+  }
+}
 
-    registerPaint('checkerboard', CheckerboardPainter);
+registerPaint('checkerboard', CheckerboardPainter);
 ```
 
 Now we can use the same code for all different kind of checkerboards. But even
@@ -207,7 +207,7 @@ until we find the right look.
 {% Video src="video/T4FyVKpzu4WKF1kBNvXepbi08t52/pbZ5QVGFkKDzolxo2kDJ.mp4", autoplay="true", loop="true" %}
 
 {% Aside %}
-Note: It would be great to parameterize the colors, too, wouldn’t it? The spec
+It would be great to parameterize the colors, too, wouldn’t it? The spec
 allows for the `paint()` function to take a list of arguments. This feature is
 not implemented in Chrome yet, as it heavily relies on Houdini’s Properties and
 Values API, which still needs some work before it can ship.
@@ -224,16 +224,16 @@ two places: The CSS and the JS.
 
 Detecting support for paint worklet in JS can be done by checking the `CSS` object:
 ```js
-    if ('paintWorklet' in CSS) {
-      CSS.paintWorklet.addModule('mystuff.js');
-    }
+if ('paintWorklet' in CSS) {
+  CSS.paintWorklet.addModule('mystuff.js');
+}
 ```
 For the CSS side, you have two options. You can use `@supports`:
 
 ```css
-    @supports (background: paint(id)) {
-      /* ... */
-    }
+@supports (background: paint(id)) {
+  /* ... */
+}
 ```
 
 A more compact trick is to use the fact that CSS invalidates and subsequently
@@ -242,10 +242,10 @@ you specify a property twice — first without paint worklet, and then with the
 paint worklet — you get progressive enhancement:
 
 ```css
-    textarea {
-      background-image: linear-gradient(0, red, blue);
-      background-image: paint(myGradient, red, blue);
-    }
+textarea {
+  background-image: linear-gradient(0, red, blue);
+  background-image: paint(myGradient, red, blue);
+}
 ```
 
 In browsers _with_ support for paint worklet, the second declaration of
@@ -316,7 +316,7 @@ take a look at [Vincent De Oliveira’s
 collection](https://lab.iamvdo.me/houdini/).
 
 {% Aside %}
-Note: Breakpoints are currently not supported in CSS Paint API, but will be
+Breakpoints are currently not supported in CSS Paint API, but will be
 enabled in a later release of Chrome.
 {% endAside %}
 

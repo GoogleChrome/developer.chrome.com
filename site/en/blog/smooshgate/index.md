@@ -65,7 +65,7 @@ array.flat(Infinity);
 // → [1, 2, 3]
 ```
 {% Aside %}
-Note: Since the publication of this article, `flatten` has been renamed to
+Since the publication of this article, `flatten` has been renamed to
 `flat` to resolve #SmooshGate. The above example has been updated accordingly,
 but keep in mind that the original name was `flatten`.
 {% endAside %}

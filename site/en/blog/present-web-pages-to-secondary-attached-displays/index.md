@@ -74,7 +74,7 @@ maximize to fullscreen), it is cumbersome and provides an inconsistent
 experience between local and remote presentation.
 
 {% Aside 'gotchas' %}
-Key Point: This change is about enabling secondary, attached displays to be
+This change is about enabling secondary, attached displays to be
 used as endpoints for presentations in the same way as remote endpoints.
 {% endAside %}
 
@@ -98,23 +98,23 @@ button visibility based on presentation displays availability. Note that we can
 also decide to always show this button. 
 
 {% Aside 'caution' %}
-Caution: the browser may use more energy while the `availability` object is alive
+The browser may use more energy while the `availability` object is alive
 and actively listening for presentation display availability changes. Please
 use it with caution in order to save energy on mobile.
 {% endAside %}
 
 ```js
-    presentationRequest.getAvailability()
-    .then(availability => {
-      console.log('Available presentation displays: ' + availability.value);
-      availability.addEventListener('change', function() {
-        console.log('> Available presentation displays: ' + availability.value);
-      });
-    })
-    .catch(error => {
-      console.log('Presentation availability not supported, ' + error.name + ': ' +
-          error.message);
+presentationRequest.getAvailability()
+  .then(availability => {
+    console.log('Available presentation displays: ' + availability.value);
+    availability.addEventListener('change', function() {
+      console.log('> Available presentation displays: ' + availability.value);
     });
+  })
+  .catch(error => {
+    console.log('Presentation availability not supported, ' + error.name + ': ' +
+        error.message);
+  });
 ```
 
 Showing a presentation display prompt requires a user gesture such as a click
@@ -123,15 +123,15 @@ wait for the promise to resolve once the user has selected a presentation
 display (.e.g. a secondary attached display in our use case).
 
 ```js
-    function onPresentButtonClick() {
-      presentationRequest.start()
-      .then(connection => {
-        console.log('Connected to ' + connection.url + ', id: ' + connection.id);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    }
+function onPresentButtonClick() {
+  presentationRequest.start()
+  .then(connection => {
+    console.log('Connected to ' + connection.url + ', id: ' + connection.id);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+}
 ```
 
 The list presented to the user may also include remote endpoints such as
@@ -155,24 +155,24 @@ below. Note that it is possible to reconnect to a "closed"
 where `presentationId` is the ID of the previous `presentationRequest` object.
 
 ```js
-    function onCloseButtonClick() {
-      // Disconnect presentation connection but will allow reconnection.
-      presentationConnection.close();
-    }
-    
-    presentationConnection.addEventListener('close', function() {
-      console.log('Connection closed.');
-    });
-    
-    
-    function onTerminateButtonClick() {
-      // Stop presentation connection for good.
-      presentationConnection.terminate();
-    }
-    
-    presentationConnection.addEventListener('terminate', function() {
-      console.log('Connection terminated.');
-    });
+function onCloseButtonClick() {
+  // Disconnect presentation connection but will allow reconnection.
+  presentationConnection.close();
+}
+
+presentationConnection.addEventListener('close', function() {
+  console.log('Connection closed.');
+});
+
+
+function onTerminateButtonClick() {
+  // Stop presentation connection for good.
+  presentationConnection.terminate();
+}
+
+presentationConnection.addEventListener('terminate', function() {
+  console.log('Connection terminated.');
+});
 ```
 
 ## Communicate with the page
@@ -186,27 +186,27 @@ First, let’s retrieve existing connections on the receiver page with
 connections as shown below. 
 
 ```js
-    // Receiver page
-    
-    navigator.presentation.receiver.connectionList
-    .then(list => {
-      list.connections.map(connection => addConnection(connection));
-      list.addEventListener('connectionavailable', function(event) {
-        addConnection(event.connection);
-      });
-    });
-    
-    function addConnection(connection) {
-    
-      connection.addEventListener('message', function(event) {
-        console.log('Message: ' + event.data);
-        connection.send('Hey controller! I just received a message.');
-      });
-    
-      connection.addEventListener('close', function(event) {
-        console.log('Connection closed!', event.reason);
-      });
-    }
+// Receiver page
+
+navigator.presentation.receiver.connectionList
+.then(list => {
+  list.connections.map(connection => addConnection(connection));
+  list.addEventListener('connectionavailable', function(event) {
+    addConnection(event.connection);
+  });
+});
+
+function addConnection(connection) {
+
+  connection.addEventListener('message', function(event) {
+    console.log('Message: ' + event.data);
+    connection.send('Hey controller! I just received a message.');
+  });
+
+  connection.addEventListener('close', function(event) {
+    console.log('Connection closed!', event.reason);
+  });
+}
 ```
 
 
@@ -217,15 +217,15 @@ controller page or the receiver page.
 
 
 ```js
-    // Controller page
-    
-    function onSendMessageButtonClick() {
-      presentationConnection.send('Hello!');
-    }
-    
-    presentationConnection.addEventListener('message', function(event) {
-      console.log('I just received ' + event.data + ' from the receiver.');
-    });
+// Controller page
+
+function onSendMessageButtonClick() {
+  presentationConnection.send('Hello!');
+}
+
+presentationConnection.addEventListener('message', function(event) {
+  console.log('I just received ' + event.data + ' from the receiver.');
+});
 ```
 Play with the sample at
 [https://googlechrome.github.io/samples/presentation-api/] to get a sense of
@@ -258,8 +258,8 @@ assign `navigator.presentation.defaultRequest` to a custom
 `presentationRequest` object created earlier.
 
 ```js
-    // Make this presentation the default one when using the "Cast" browser menu.
-    navigator.presentation.defaultRequest = presentationRequest;
+// Make this presentation the default one when using the "Cast" browser menu.
+navigator.presentation.defaultRequest = presentationRequest;
 ```
 
 ## Dev tips
