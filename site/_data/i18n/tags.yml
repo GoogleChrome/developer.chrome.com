@@ -121,24 +121,6 @@ lighthouse:
 new-in-lighthouse:
   en: What's new in Lighthouse
 
-chrome64:
-  en: Chrome 64
-
-chrome66:
-  en: Chrome 66
-
-webaudio:
-  en: Web Audio
-
-worklet:
-  en: Worklet
-
-performance:
-  en: Performance
-
-ux:
-  en: UX
-
 chrome49:
   en: Chrome 49
 
@@ -153,4 +135,11 @@ chrome52:
 
 chrome53:
   en: Chrome 53
+
+chrome64:
+  en: Chrome 64
+
+chrome66:
+  en: Chrome 66
+
 

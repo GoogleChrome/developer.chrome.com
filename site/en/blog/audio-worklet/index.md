@@ -28,8 +28,6 @@ updated: 2019-05-28
 tags:
   - chrome64
   - chrome66
-  - webaudio
-  - worklet
 
 
 
