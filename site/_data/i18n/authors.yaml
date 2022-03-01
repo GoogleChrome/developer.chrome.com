@@ -3,6 +3,16 @@ kosamari:
     en: 'Mariko Kosaka'
   description:
     en: 'Mariko is a drawsplainer'
+joemedley:
+  title:
+    en: 'Joe Medley'
+  description:
+    en: 'Technical Writer'
+paulkinlan:
+  title:
+    en: 'Paul Kinlan'
+  description:
+    en: 'Paul is a Developer Advocate'
 jakearchibald:
   title:
     en: 'Jake Archibald'
