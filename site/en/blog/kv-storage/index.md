@@ -3,7 +3,7 @@
 layout: 'layouts/blog-post.njk'
 
 # Required
-title: KV Storage&#58; the Web's First Built-in Module
+title: KV Storage - the Web's First Built-in Module
 
 
 # Required

@@ -74,34 +74,35 @@ this bug appears when an image is positioned beside a paragraph
 where the avoidance logic fails to account for the height of a line.
 (See [Chromium bug #861540](https://crbug.com/861540).)
 
-<figure class="float-left">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/5DKK9NKVCSU9WpHtlq9M.png", alt="top text line shown overlaying floated image", width="129", height="83" %}
   <figcaption>
     <small>Fig 1a, Legacy layout engine</small><br>
     Text overlaps the floating image to the right
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/b5PIFs59umMINybI4hZu.png", alt="proper text on left and floated image on right", width="129", height="82" %}
   <figcaption>
     <small>Fig 1b, LayoutNG</small><br>
     Text is positioned beside the floating image to the right
   </figcaption>
 </figure>
+
 <div class="clearfix"></div>
 
 The same problem may occur within a single line. The example below shows
 a block element with a negative margin following a floating element
 ([#895962](https://crbug.com/895962)). The text should not overlap with the float.
 
-<figure class="float-left">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/1oeYgLVEnIHddll3tUnE.png", alt="text line shown overlaying an orange box", width="162", height="34" %}
   <figcaption>
     <small>Fig 2a, Legacy layout engine</small><br>
     Text overlaps the floating orange element
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/nfvgRKZXe4qk4OvbTBlL.png", alt="proper text on right of orange box", width="162", height="34" %}
   <figcaption>
     <small>Fig 2b, LayoutNG</small><br>
@@ -187,14 +188,14 @@ layout engine and LayoutNG, respectively:
 <div>&#1606;&#1587;<span>&#1602;</span></div>
 ```
 
-<figure class="float-left">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/qaDGPDpGXaL0HerhcSUb.png", alt="proper grapheme on left and separated improper rendering on right", width="212", height="50" %}
   <figcaption>
     <small>Fig 3a, Legacy layout engine</small><br>
     Note how the form of the second letter changes
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/vwdlvfw6gg79HnKCs5sJ.png", alt="proper combined graphemes shown", width="199", height="50" %}
   <figcaption>
     <small>Fig 3b, LayoutNG</small><br>
@@ -213,7 +214,7 @@ LayoutNG removes these restrictions and supports ligatures regardless of script.
 The example below shows the rendering of three discretionary ligatures
 using the Adobe SourceHanSansJP font:
 
-<figure class="float-left">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/tPiDkk5LE7LAVKjw1GxC.png", alt="middle character combination not forming ligature", width="219", height="24" %}
   <figcaption>
     <small>Fig 4a, Legacy layout engine</small><br>
@@ -221,7 +222,7 @@ using the Adobe SourceHanSansJP font:
     but マンション and 10点 do not
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/ybuJs07hGcusHtmPDIlG.png", alt="proper ligatures shown", width="140", height="24" %}
   <figcaption>
     <small>Fig 4b, LayoutNG</small><br>
@@ -243,14 +244,14 @@ The example below shows a yellow block sized to content. It uses the Lato font
 which uses kerning to adjust the spacing between T and -.
 The bounds of the yellow box should match the bounds of the text.
 
-<figure class="float-left">
+<figure>
     {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/ehe2dqtsqJwvNwt8ia7H.png", alt="trailing whitespace shown at the end of the text container", width="117", height="45" %}
   <figcaption>
     <small>Fig 5a, Legacy layout engine</small><br>
     Note the trailing whitespace after the last T
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/ZrSItjzoNZVhW1JTW3Wq.png", alt="text bounds have no extra space", width="107", height="45" %}
   <figcaption>
     <small>Fig 5b, LayoutNG</small><br>
@@ -265,14 +266,14 @@ Similar to the problem described above, if the content of a size-to-content
 block is larger (wider) than the block, content can sometimes
 wrap unnecessarily. This is quite rare but sometimes happens for mixed directionality content.
 
-<figure class="float-left">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/Lm7uunt61ORUHCe1pNfz.png", alt="premature line break shown causing extra space", width="229", height="78" %}
   <figcaption>
     <small>Fig 6a, Legacy layout engine</small><br>
     Note the unnecessary line break and extra space on the right
   </figcaption>
 </figure>
-<figure class="float-right">
+<figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/qegKpIlj3sZAdNqsJD4C.png", alt="no unnecessary space or line breaks shown", width="235", height="41" %}
   <figcaption>
     <small>Fig 6b, LayoutNG</small><br>
