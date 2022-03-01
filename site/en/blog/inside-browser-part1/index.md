@@ -43,7 +43,7 @@ As part 1 of this series, we’ll take a look at core computing terminology and 
 multi-process architecture. 
 
 {% Aside %}
-Note: If you are familiar with the idea of CPU/GPU and process/thread you may skip to 
+If you are familiar with the idea of CPU/GPU and process/thread you may skip to 
 [Browser Architecture](#browser-architecture).
 {% endAside %}
 

@@ -203,7 +203,7 @@ Everything inside of a tab including your JavaScript code is handled by the rend
 the browser process has to check with current renderer process when new navigation request comes in.
 
 {% Aside 'caution' %}
-Caution: Do not add unconditional `beforeunload` handlers. It creates more latency because the 
+Do not add unconditional `beforeunload` handlers. It creates more latency because the 
 handler needs to be executed before the navigation can even be started. This event handler should 
 be added only when needed, for example if users need to be warned that they might lose data they've 
 entered on the page.

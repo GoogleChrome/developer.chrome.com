@@ -140,9 +140,9 @@ The open and highly versatile audio codec [Opus] has been supported in the
 Here's how you can detect if Opus in MP4 is supported for MSE:
 
 ```js
-    if (MediaSource.isTypeSupported('audio/mp4; codecs="opus"')) {
-      // TODO: Fetch data and feed it to a media source.
-    }
+if (MediaSource.isTypeSupported('audio/mp4; codecs="opus"')) {
+  // TODO: Fetch data and feed it to a media source.
+}
 ```
 
 If you want to see a full example, check out our [official sample].
@@ -153,7 +153,7 @@ values, if such precision is important to you, you'll need to use
 Chrome to obtain sample-accurate playback.
 
 {% Aside 'warning' %}
-Warning: Chrome for Android does not support encrypted Opus content on Android
+Chrome for Android does not support encrypted Opus content on Android
 versions prior to Lollipop.
 {% endAside %}
 
