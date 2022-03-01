@@ -10,8 +10,6 @@ updated: 2019-03-22
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/i1bS1RE1ZSpYNqGSEYDD.gif'
 alt: >
   Toggle the DevTools dock state with a keyboard shortcut
-tags:
-  - devtools
 ---
 
 Use `<kbd class="kbd">`Cmd + Shift + D`</kbd>` to toggle the DevTools dock state between the last two recently used states. Dock options are:

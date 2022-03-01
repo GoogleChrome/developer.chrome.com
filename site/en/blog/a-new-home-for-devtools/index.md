@@ -8,9 +8,7 @@ authors:
 date: 2015-03-29
 updated: 2019-03-22
 tags:
-  - devtools
   - news
-  - outreach
 ---
 
 When you're reading this, you're probably already close to our new home at [https://developers.google.com/web/](/web/), Google's new one-stop destination for everything web-related.

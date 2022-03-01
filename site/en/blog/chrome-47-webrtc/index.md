@@ -12,11 +12,6 @@ alt: >
   'Chrome 47 WebRTC: Media Recording, Secure Origins and Proxy Handling'
 tags:
   - news
-  - audio
-  - video
-  - media
-  - webrtc
-  - getusermedia
 ---
 
 Chrome 47 includes several significant WebRTC enhancements and updates.

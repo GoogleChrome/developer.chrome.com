@@ -7,10 +7,6 @@ authors:
   - pbakaus
 date: 2015-11-23
 updated: 2015-11-23
-tags:
-  - devtools
-  - digest
-  - update
 ---
 
 Learn how DevTools is going mobile first with a new, streamlined Device Mode that’s always on. Use the color buttons to quickly add colors to your selectors and find out what’s coming to DevTools soon.

@@ -10,8 +10,6 @@ updated: 2015-07-23
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/YHYLjRMGzo8AK60yMbub.gif'
 alt: >
   An improved breadcrumb trail for the DOM
-tags:
-  - devtools
 ---
 
 Did you know the Elements Panel has a <em>Breadcrumb trail</em>? It can help you trace your steps when you navigate the DOM.
