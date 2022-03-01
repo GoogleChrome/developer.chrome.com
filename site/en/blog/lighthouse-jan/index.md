@@ -28,10 +28,6 @@ updated: 2017-02-10
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - lighthouse
-  - tools
-  - performance
-  - progressive-web-apps
-
 
 
 ---

@@ -27,7 +27,6 @@ updated: 2017-09-28
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - news
-  - webvr
 
 
 

@@ -26,8 +26,6 @@ updated: 2018-02-23
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - testing
-  - headless
   - chrome59
 
 
