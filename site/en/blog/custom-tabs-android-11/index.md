@@ -26,10 +26,7 @@ updated: 2020-07-09
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
-tags:
-  - android
-  - custom-tabs
-  
+#tags:
 
 ---
 

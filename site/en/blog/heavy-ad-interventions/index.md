@@ -27,7 +27,6 @@ updated: 2022-02-03
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - devtools
-  - performance
 
 
 ---
@@ -69,7 +68,7 @@ those protections, meaning the restrictions are applied deterministically,
 purely according to the limits. This should make debugging and testing easier.
 
 {% Aside %}
-Note: Earlier versions of Chrome included the
+Earlier versions of Chrome included the
 `#heavy-ad-privacy-mitigations-opt-out` and `#enable-heavy-ad-intervention`
 flags for initial testing. These flags are no longer required and have been
 removed.
@@ -162,7 +161,7 @@ Content-Type: application/report
 ```
 
 {% Aside %}
-Note: The `null` values are expected. The intervention will trigger when the
+The `null` values are expected. The intervention will trigger when the
 limits are reached, but that particular point in the code is not necessarily the
 problem.
 {% endAside %}
@@ -214,7 +213,7 @@ You should use `navigator.sendBeacon()` to send that report and even then, this
 is only best-effort by the browser not a guarantee.
 
 {% Aside 'caution' %}
-Caution: [**Do not use** the `unload` and `beforeunload`
+[**Do not use** the `unload` and `beforeunload`
 events](https://web.dev/bfcache/#never-use-the-unload-event) here. This will
 actively hurt your page caching and performance across multiple browsers.
 {% endAside %}
@@ -222,7 +221,7 @@ actively hurt your page caching and performance across multiple browsers.
 The resulting JSON from the JavaScript is similar to that sent on the `POST`
 request:
 
-```js
+```json/3
 [
   {
     type: 'intervention',
@@ -360,7 +359,7 @@ the **Sources** panel to examine the cost of each line.
 </figure>
 
 {% Aside %}
-Note: DevTools may not always display the timing information if the frame has
+DevTools may not always display the timing information if the frame has
 already been unloaded, so you may want to capture the traces with the ad
 isolated or with the intervention disabled.
 {% endAside %}

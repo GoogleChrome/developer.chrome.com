@@ -118,7 +118,7 @@ Isolation Key" in addition to the resource URL. The Network Isolation Key is
 composed of the top-level site and the current-frame site.
 
 {% Aside %}
-Note: The "site" is recognized using "[scheme://eTLD+1](https://web.dev/same-site-same-origin/)" so if requests are from
+The "site" is recognized using "[scheme://eTLD+1](https://web.dev/same-site-same-origin/)" so if requests are from
 different pages, but they have the same scheme and effective top-level domain+1
 they will use the same cache partition. To learn more about this, read
 [Understanding "same-site" and

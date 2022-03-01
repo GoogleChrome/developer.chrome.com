@@ -27,8 +27,7 @@ updated: 2020-02-11
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
-tags:
-  - notifications
+#tags:
   
 
 ---
@@ -160,7 +159,7 @@ WHERE
 ```
 
 {% Aside 'caution' %}
-Note: Because "ignore" is a reserved keyword in BigQuery, we have to enclose it
+Because "ignore" is a reserved keyword in BigQuery, we have to enclose it
 in backticks so it's interpreted as a field name.
 {% endAside %}
 
