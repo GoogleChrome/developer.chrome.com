@@ -26,9 +26,7 @@ updated: 2020-10-24
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
-tags:
-  - storage-isolation
-  - cache
+#tags:
 
 
 ---
