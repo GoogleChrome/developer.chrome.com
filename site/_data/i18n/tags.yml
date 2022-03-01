@@ -121,30 +121,6 @@ lighthouse:
 new-in-lighthouse:
   en: What's new in Lighthouse
 
-css:
-  en: CSS
-
-cssom:
-  en: CSS OM
-
-style:
-  en: Style
-
-javascript:
-  en: JavaScript
-
-presentation:
-  en: Presentation
-
-cast:
-  en: Cast
-
-chrome65:
-  en: Chrome65
-
-chrome66:
-  en: Chrome66
-
 chrome49:
   en: Chrome 49
 
@@ -159,4 +135,11 @@ chrome52:
 
 chrome53:
   en: Chrome 53
+
+chrome65:
+  en: Chrome65
+
+chrome66:
+  en: Chrome66
+
 

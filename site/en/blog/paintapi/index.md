@@ -26,10 +26,7 @@ updated: 2019-09-26
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - css
-  - style
   - houdini
-  - javascript
   - chrome65
 
 
