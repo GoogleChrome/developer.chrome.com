@@ -18,6 +18,16 @@ hongchanchoi:
     en: 'Hongchan Choi'
   description:
     en: 'Software Engineer working on Web Audio in Chromium'
+mscales:
+  title:
+    en: 'Mat Scales'
+  description:
+    en: 'Mat is a contributor to WebFundamentals'
+ericbidelman:
+  title:
+    en: 'Eric Bidelman'
+  description:
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 joemedley:
   title:
     en: 'Joe Medley'
@@ -389,4 +399,13 @@ victortan:
     en: 'Victor Tan'
   description:
     en: 'Software Engineer, Google Chrome'
-    
+umarhansa:
+  title:
+    en: 'Umar Hansa'
+  description:
+    en: 'Umar is a front-end web developer'
+pbakaus:
+  title:
+    en: 'Paul Bakaus'
+  description:
+    en: 'Open Web Developer Advocate at Google • Tools, Performance, Animation, UX'
