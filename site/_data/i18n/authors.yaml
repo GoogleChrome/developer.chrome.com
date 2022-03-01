@@ -384,4 +384,13 @@ victortan:
     en: 'Victor Tan'
   description:
     en: 'Software Engineer, Google Chrome'
-    
+umarhansa:
+  title:
+    en: 'Umar Hansa'
+  description:
+    en: 'Umar is a front-end web developer'
+pbakaus:
+  title:
+    en: 'Paul Bakaus'
+  description:
+    en: 'Open Web Developer Advocate at Google • Tools, Performance, Animation, UX'
