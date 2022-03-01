@@ -120,15 +120,30 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
+  
+chrome49:
+  en: Chrome 49
+
+chrome50:
+  en: Chrome 50
+
+chrome51:
+  en: Chrome 51
+
+chrome52:
+  en: Chrome 52
+
+chrome53:
+  en: Chrome 53
 
 chrome85:
-  en: Chrome85
+  en: Chrome 85
 
 chrome86:
-  en: Chrome86
+  en: Chrome 86
 
 chrome87:
-  en: Chrome87
+  en: Chrome 87
 
 chrome88:
-  en: Chrome88
+  en: Chrome 88
