@@ -21,6 +21,8 @@ Extensions vary in types of files and amount of directories, but they are all re
 [manifest][docs-manifest]. Some basic, but useful, extensions may consist of just the manifest and its toolbar
 icon.
 
+### The manifest {: #manifest }
+
 The manifest file, titled `manifest.json`, gives the browser information about the extension, such
 as the most important files and the capabilities the extension might use.
 
@@ -39,7 +41,7 @@ as the most important files and the capabilities the extension might use.
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["storage"],
   "host_permissions": ["*://*.example.com/*"],
   "action": {
     "default_icon": "icon_16.png",
@@ -48,19 +50,13 @@ as the most important files and the capabilities the extension might use.
 }
 ```
 
+### Toolbar icon {: #icons }
+
 Extensions must have an icon that sits in the browser toolbar. Toolbar icons allow easy access and
 keep users aware of which extensions are installed. Most users will interact with an extension that
-uses a [popup][docs-popup] by clicking on the icon.
+uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started extension][sample-get-started].
 
-This Manifest V2 [Google Mail Checker extension][sample-gmail] uses a [browser action][4]:
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
-       alt="A screenshot of the Google Mail Checker extension", height="79", width="90" %}
-
-This Manifest V2 [Mappy extension][sample-mappy] uses a [page action][6] and [content script][7]:
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
-       alt="A screenshot of the Mappy extension", height="103", width="90" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started Popup", width="187", height="153" %}
 
 ### Referring to files {: #relative-urls }
 
@@ -275,8 +271,7 @@ following resources.
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
-[sample-gmail]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/gmail
-[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/mappy
+[sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-bg]: #background_script
 [section-cs]: #contentScripts
 [section-options]: #optionsPage
