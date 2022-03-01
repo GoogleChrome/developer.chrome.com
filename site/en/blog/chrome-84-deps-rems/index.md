@@ -36,13 +36,13 @@ tags:
 ---
 
 {% Aside %}
-  Visit ChromeStatus.com for lists of 
-  <a href="https://www.chromestatus.com/features#browsers.chrome.status%3A%22Deprecated%22">current deprecations</a>
-  and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
+Visit ChromeStatus.com for lists of 
+<a href="https://www.chromestatus.com/features#browsers.chrome.status%3A%22Deprecated%22">current deprecations</a>
+and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
 {% endAside %}
 
 {% Aside %}
-Note: Chrome expects to start the spec-mandated turn down of AppCache in Chrome
+Chrome expects to start the spec-mandated turn down of AppCache in Chrome
 85. For details and instructions for managing the transition gracefully, see
 [Preparing for AppCache removal](https://web.dev/appcache-removal/). For
 information on a feature that will help you identify uses of this and other

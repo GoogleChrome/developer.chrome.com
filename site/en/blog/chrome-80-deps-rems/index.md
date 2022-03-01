@@ -36,9 +36,9 @@ tags:
 ---
 
 {% Aside %}
-  Visit ChromeStatus.com for lists of 
-  <a href="https://www.chromestatus.com/features#browsers.chrome.status%3A%22Deprecated%22">current deprecations</a>
-  and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
+Visit ChromeStatus.com for lists of 
+<a href="https://www.chromestatus.com/features#browsers.chrome.status%3A%22Deprecated%22">current deprecations</a>
+and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
 {% endAside %}
 
 ## Disallow Synchronous XMLHTTPRequest() in Page Dismissal
