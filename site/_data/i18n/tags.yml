@@ -120,7 +120,7 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
-
+  
 chrome49:
   en: Chrome 49
 
@@ -164,4 +164,7 @@ chrome66:
   en: Chrome66
 
 
+
+chrome70:
+  en: Chrome70
 
