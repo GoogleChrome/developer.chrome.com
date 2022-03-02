@@ -149,9 +149,38 @@ Just as extensions allow users to customize the Chrome browser, the [options pag
 customization of the extension. Options can be used to enable features and allow users to choose
 what functionality is relevant to their needs.
 
+Users can access the options page via [direct link][docs-link-options] or in the context menu of the extension toolbar. The following is an example of the Google Dictionary extension. 
+
+{% Columns %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", alt="Options page link in UI", width="800", height="299" %}
+  <figcaption>
+    Link to Options page.
+  </figcaption>
+</figure>
+
+{% endColumn %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BM11QeGCThsUNTlsZbAe.png", alt="Context Menu Options page", width="357", height="222" %}
+
+  <figcaption>
+    Options page in extension's context menu.
+  </figcaption>
+</figure>
+
+{% endColumn %}
+
+{% endColumns %}
+
 ## Using Chrome APIs {: #apis }
 
-In addition to having access to the same APIs as web pages, extensions can also use
+In addition to having access to the same web APIs as web pages, extensions can also use
 [extension-specific APIs][api-reference] that create tight integration with the browser. Extensions and
 webpages can both access the standard `window.open()` method to open a URL, but extensions can
 specify which window that URL should be displayed in by using the Chrome API [tabs.create][api-tabs-create]
@@ -272,8 +301,9 @@ following resources.
 [docs-context-menu]: /docs/extensions/mv3/user_interface/#context_menu
 [docs-debugging]: /docs/extensions/mv3/tut_debugging
 [docs-dev-guide]: /docs/extensions/mv3/devguide
-[docs-key]: /docs/extensions/mv3/manifest/key/
 [docs-get-started]: /docs/extensions/mv3/getstarted
+[docs-key]: /docs/extensions/mv3/manifest/key/
+[docs-link-options]: /docs/extensions/mv3/options/#linking
 [docs-manifest]: /docs/extensions/mv3/manifest
 [docs-messages]: /docs/extensions/mv3/messaging
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
