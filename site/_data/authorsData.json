@@ -1,4 +1,60 @@
 {
+  "mikewest": {
+    "homepage": "https://mikewest.org/",
+    "twitter": "mikewest"
+  },
+  "johannes": {
+    "github": "powdercloud"
+  },
+  "maudnalpas": {
+    "twitter": "maudnals",
+    "github": "maudnals"
+  },
+  "rowanmerewood": {
+    "twitter": "rowan_m",
+    "github": "rowan-m"
+  },
+  "housseindjirdeh": {
+    "homepage": "https://houssein.me/",
+    "twitter": "hdjirdeh",
+    "github": "housseindjirdeh"
+  },
+  "katiehempenius": {
+    "twitter": "katiehempenius"
+  },
+  "cbrand": {
+    "github": "christiaanbrand",
+    "twitter": "christiaanbrand"
+  },
+  "paulirish": {
+    "homepage": "https://www.paulirish.com/",
+    "twitter": "paul_irish"
+  },
+  "rviscomi": {
+    "github": "rviscomi",
+    "twitter": "rick_viscomi"
+  },
+  "ilyagrigorik": {
+    "homepage": "https://igvita.com/",
+    "twitter": "igrigorik"
+  },
+  "philipwalton": {
+    "homepage": "https://philipwalton.com/",
+    "twitter": "philwalton",
+    "github": "philipwalton"
+  },
+  "hongchanchoi": {
+    "homepage": "https://hoch.io/",
+    "twitter": "hochsays"
+  },
+  "jeffposnick": {
+    "homepage": "https://twitter.com/jeffposnick",
+    "twitter": "jeffposnick"
+  },
+  "mattgaunt": {
+    "homepage": "https://gauntface.com/blog",
+    "twitter": "gauntface"
+  },
   "kosamari": {
     "twitter": "kosamari"
   },

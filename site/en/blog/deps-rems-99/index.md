@@ -39,7 +39,7 @@ alignment with the CSS specifications and with Firefox.
 ## Remove GamepadList
 
 The
-`[navigator.getGamepads()](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads)`
+[`navigator.getGamepads()`](https://developer.mozilla.org/docs/Web/API/Navigator/getGamepads)
 method now returns an array of
 [`Gamepad`](https://developer.mozilla.org/docs/Web/API/Gamepad) objects
 [instead of a GamepadList](https://www.chromestatus.com/feature/5693119438782464).
