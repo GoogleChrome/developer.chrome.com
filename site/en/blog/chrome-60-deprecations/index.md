@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 60
 description: >
   A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 authors:
-  - josephmedley
+  - joemedley
 date: 2017-06-08
 updated: 2018-01-08
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'

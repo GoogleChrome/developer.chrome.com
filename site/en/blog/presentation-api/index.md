@@ -129,8 +129,6 @@ function playMedia() {
 }
 ```
 
-    // ...
-
 A play/pause notification is shown when media is playing:
 
 {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/TTLw2EaknADqitGNHESy.png", alt="Cast play/pause notification", width="360", height="640" %}
@@ -149,8 +147,6 @@ function sessionListener(e) {
   }
 }
 ```
-
-<a id="disable-remote-playback">
 
 If Chrome on Android allows casting media from your website but you want to disable this feature so the default casting UI doesn't interfere with your own, use the [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) attribute, available in Chrome 49 and above:
 

@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 59
 description: >
   A round up of the deprecations and removals in Chrome 59 to help you plan.
 authors:
-  - josephmedley
+  - joemedley
 date: 2017-05-01
 updated: 2018-04-16
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'
