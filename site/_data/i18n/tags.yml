@@ -121,26 +121,38 @@ lighthouse:
 new-in-lighthouse:
   en: What's new in Lighthouse
 
-audio:
-  en: Audio
+chrome49:
+  en: Chrome 49
 
-video:
-  en: Video
+chrome50:
+  en: Chrome 50
 
-secondscreen:
-  en: Second Screen
+chrome51:
+  en: Chrome 51
 
-cast:
-  en: Cast
+chrome52:
+  en: Chrome 52
+
+chrome53:
+  en: Chrome 53
+
+chrome54:
+  en: Chrome 54
+
+chrome55:
+  en: Chrome 55
+
+chrome56:
+  en: Chrome 56
+
+chrome57:
+  en: Chrome 57
 
 chrome58:
   en: Chrome 58
 
 chrome59:
   en: Chrome 59
-
-chrome60:
-  en: Chrome 60
 
 chrome61:
   en: Chrome 61

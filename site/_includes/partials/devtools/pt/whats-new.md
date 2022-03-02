@@ -3,18 +3,18 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
-<!-- ### Chrome 99 {: #chrome99 }
+### Chrome 99 {: #chrome99 }
 
-* [Throttling WebSocket requests](/pt/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/pt/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/pt/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/pt/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/pt/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/pt/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/pt/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/pt/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/pt/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-99/#misc) -->
+* [Limitando requests de WebSocket](/pt/blog/new-in-devtools-99/#websocket)
+* [Novo painel API de relatórios no painel Aplicativo](/pt/blog/new-in-devtools-99/#reporting-api)
+* [Suporte para esperar até que o elemento esteja visível/clicável no painel Gravação](/pt/blog/new-in-devtools-99/#recorder)
+* [Melhor estilização, formatação e filtragem no console](/pt/blog/new-in-devtools-99/#console)
+* [Debug de extensões do Chrome com arquivos de sourcemap](/pt/blog/new-in-devtools-99/#extension)
+* [Árvore de pastas aprimorada no painel Fontes](/pt/blog/new-in-devtools-99/#source-tree)
+* [Exibição arquivos fontes de workers no painel Origens](/pt/blog/new-in-devtools-99/#worker-sourcemap)
+* [Atualizações na funcionalidade de tema escuro automático do Chrome](/pt/blog/new-in-devtools-99/#auto-dark-mode)
+* [Seletor de cores amigável ao toque e painel dividido](/pt/blog/new-in-devtools-99/#touch-friendly)
+* [Destaques diversos](/pt/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }

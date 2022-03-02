@@ -1,20 +1,39 @@
 ---
+# Required
 layout: 'layouts/blog-post.njk'
+
+# Required
 title: Deprecations and Removals in Chrome 58
+
+# Required
 description: >
   A round up of the deprecations and removals in Chrome 58 to help you plan.
+
+# Optional
+# How to add a new author
+# https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
-  - josephmedley
+  - joemedley
+
+# Required
 date: 2017-03-17
+
+# Optional
+# Include an updated date when you update your post
 updated: 2018-01-08
-hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'
-alt: >
-  Deprecations and Removals in Chrome 58
+
+# Optional
+# How to add a new tag
+# https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - deprecations
   - removals
   - chrome58
+
+
+
 ---
+
 
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
@@ -30,13 +49,13 @@ a mouse button is pressed generates `MotionEvents`, delivered through
 
 But since touch events cannot support hover, hovering mousemoves followed a
 separate path. The design had many side-effects including mouse interactions
-firing `TouchEvents`, all mouse buttons appearing as _left_ mouse buttons, and
+firing `TouchEvents`, all mouse buttons appearing as *left* mouse buttons, and
 `MouseEvents` being suppressed by `TouchEvents`.
 
 Starting with Chrome 58, a mouse on Android M or later will:
 
-- No longer fire `TouchEvents`.
-- Fire a consistent sequence of `MouseEvents` with appropriate buttons and
+* No longer fire `TouchEvents`.
+* Fire a consistent sequence of `MouseEvents` with appropriate buttons and
   other properties.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
@@ -85,7 +104,8 @@ Console deprecation warnings were also implemented.
 In Chrome 58, the old property names are being removed. The affected properties
 and their new names are shown below.
 
-<table>
+
+<table class="with-heading-tint">
   <thead>
     <tr>
       <th>Removed Property</th>
@@ -93,7 +113,7 @@ and their new names are shown below.
     </tr>
   </thead>
   <tr>
-    <td>otion-path</td>
+    <td>motion-path</td>
     <td>offset-path</td>
   </tr>
   <tr>
@@ -101,7 +121,7 @@ and their new names are shown below.
     <td>offset-distance</td>
   </tr>
   <tr>
-    <td>motion-rotation</td>
+    <td>motion-rotation </td>
     <td>offset-rotate</td>
   </tr>
   <tr>
@@ -190,12 +210,15 @@ deprecated this for nearly two decades, and the
 (which all publicly trusted certificate authorities must abide by) has required
 the presence of a `subjectAltName` since 2012. Firefox already requires the
 `subjectAltName` for any newly issued publicly trusted certificates since
-[Firefox 48](https://bugzilla.mozilla.org/show_bug.cgi?id=1245280).
+[Firefox 48]( https://bugzilla.mozilla.org/show_bug.cgi?id=1245280 ).
+
 
 {% Aside %}
 Note: Enterprises that need to support such certificates for internal purposes
 may set the `EnableCommonNameFallbackForLocalAnchors` Enterprise policy.
 {% endAside %}
+
+
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/4v82AueNjaQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4981025180483584) &#124;
@@ -299,3 +322,5 @@ This feature is removed in Chrome 60.
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/2fUr-3wFPKI/discussion)
 &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
+
+
