@@ -2,6 +2,14 @@
   "kosamari": {
     "twitter": "kosamari"
   },
+  "mscales": {
+    "twitter": "wibblymat"
+  },
+  "ericbidelman": {
+    "homepage": "http://ericbidelman.com/",
+    "twitter": "ebidel",
+    "github": "ebidel"
+  },
   "paulkinlan": {
     "homepage": "https://paul.kinlan.me/",
     "twitter": "paul_kinlan"
@@ -408,5 +416,17 @@
     "github": "victortan",
     "twitter": "victortan",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/j7BoDYMJWpcjTNyhbnYu.jpeg"
+  },
+  "pbakaus": {
+    "country": "US",
+    "homepage": "https://paulbakaus.com/",
+    "twitter": "pbakaus",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/fa0lUahofnggwG3lhxCe.jpeg"
+  },
+  "umarhansa": {
+    "country": "UK",
+    "homepage": "https://umaar.com/",
+    "twitter": "umaar",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/6Q7EVYpBXsElBaENIUKd.jpeg"
   }
 }
