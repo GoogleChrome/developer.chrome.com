@@ -181,7 +181,6 @@ cleared browsing data.
 
 
 
-<div class="clearfix"></div>
 
 
 

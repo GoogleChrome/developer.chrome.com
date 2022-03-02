@@ -62,7 +62,6 @@ browser, the network thread which deals with network stack to receive data from 
 the storage thread that controls access to the files and more. When you type a URL into the address 
 bar, your input is handled by browser process’s UI thread.
 
-<div class="clearfix"></div>
 
 ## A simple navigation 
 
@@ -112,7 +111,6 @@ but since it may be missing or wrong,
 is done here. This is a "tricky business" as commented in [the source code](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5). 
 You can read the comment to see how different browsers treat content-type/payload pairs.
 
-<div class="clearfix"></div>
 
 If the response is an HTML file, then the next step would be to pass the data to the renderer 
 process, but if it is a zip file or some other file then that means it is a download request so 
@@ -306,7 +304,6 @@ hear from you in the comment section below or [@kosamari](https://twitter.com/ko
   Next: Inner workings of a Renderer Process
 </a>
 
-<div class="clearfix"></div>
 
 
 

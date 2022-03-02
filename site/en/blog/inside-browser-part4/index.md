@@ -73,7 +73,6 @@ create a new composite frame completely independent of the main thread. But what
 listeners were attached to the page? How would the compositor thread find out if the event needs
 to be handled?
 
-<div class="clearfix"></div>
 
 ## Understanding non-fast scrollable region
 
@@ -146,7 +145,6 @@ Using `passive: true` option in your pointer event means that the page scroll ca
 vertical scroll might have started by the time you want to `preventDefault` in order to limit
 scroll direction. You can check against this by using `event.cancelable` method.
 
-<div class="clearfix"></div>
 
 ```javascript
 document.body.addEventListener('pointermove', event => {
@@ -180,7 +178,6 @@ When the compositor thread sends an input event to the main thread, the first th
 test to find the event target. Hit test uses paint records data that was generated in the rendering
 process to find out what is underneath the point coordinates in which the event occurred.
 
-<div class="clearfix"></div>
 
 ## Minimizing event dispatches to the main thread
 
@@ -281,7 +278,6 @@ would help me be more productive. Those things are important, but we should also
 browser takes the code we write. Modern browsers have been and continue to invest in ways to
 provide a better web experience for users. Being nice to the browser by organizing our code,
 in turn, improves your user experience. I hope you join me in the quest to be nice to the browsers!
-<div class="clearfix"></div>
 
 Huge thank you to everyone who reviewed early drafts of this series, including (but not limited
 to): [Alex Russell](https://twitter.com/slightlylate),

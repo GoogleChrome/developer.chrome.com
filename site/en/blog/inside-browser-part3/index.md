@@ -155,7 +155,6 @@ the layout tree (however, an element with `visibility: hidden` is in the layout 
 if a pseudo class with content like `p::before{content:"Hi!"}` is applied, it is included in the
 layout tree even though that is not in the DOM.
 
-<div class="clearfix"></div>
 
 <figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/0JqiVwHxNab2YL6qWHbS.png", alt="layout", width="800", height="421" %}
@@ -201,7 +200,6 @@ judge in what order you paint them.
 For example, `z-index` might be set for certain elements, in that case painting in order of
 elements written in the HTML will result in incorrect rendering.
 
-<div class="clearfix"></div>
 
 <figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/4x9etJ64cg0x4a6Ktt5T.png", alt="z-index fail", width="800", height="428" %}
@@ -235,7 +233,6 @@ The most important thing to grasp in rendering pipeline is that at each step the
 previous operation is used to create new data. For example, if something changes in the layout
 tree, then the Paint order needs to be regenerated for affected parts of the document.
 
-<div class="clearfix"></div>
 
 If you are animating elements, the browser has to run these operations in between every frame.
 Most of our displays refresh the screen 60 times a second (60 fps); animation will appear smooth to
@@ -293,7 +290,6 @@ scrolls the page, then move the rastered frame, and fill in the missing parts by
 This is how Chrome handled rasterizing when it was first released. However, the modern browser
 runs a more sophisticated process called compositing.
 
-<div class="clearfix"></div>
 
 ### What is compositing
 
@@ -312,7 +308,6 @@ the same way by moving layers and composite a new frame.
 You can see how your website is divided into layers in DevTools using
 [Layers panel](https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752?gi=cd6271834cea).
 
-<div class="clearfix"></div>
 
 ### Dividing into layers
 In order to find out which elements need to be in which layers, the main thread walks through the
@@ -405,5 +400,4 @@ hear from you in the comment section below or [@kosamari](https://twitter.com/ko
   Next: Input is coming to the compositor
 </a>
 
-<div class="clearfix"></div>
 

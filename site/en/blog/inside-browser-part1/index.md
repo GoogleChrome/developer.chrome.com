@@ -70,7 +70,6 @@ to a customer call. In the past most CPUs were a single chip. A core is like ano
 the same chip. In modern hardware, you often get more than one core, giving more computing power 
 to your phones and laptops.
 
-<div class="clearfix"></div>
 
 ### GPU
 
@@ -88,7 +87,6 @@ suggests, it was first developed to handle graphics. This is why in the context 
 In recent years, with GPU-accelerated computing, more and more computation is becoming possible on 
 GPU alone.
 
-<div class="clearfix"></div>
 
 When you start an application on your computer or phone, the CPU and GPU are the ones powering 
 the application. Usually, applications run on the CPU and GPU using mechanisms provided by the 
@@ -120,7 +118,6 @@ do work, but that's optional. The Operating System gives the process a "slab" of
 with and all application state is kept in that private memory space. When you close the 
 application, the process also goes away and the Operating System frees up the memory.
 
-<div class="clearfix"></div>
 
 <figure>
     {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/x5h2ZL6SWI1vF5jSa8YB.svg", alt="process and memory", width="273", height="150" %}
@@ -312,6 +309,5 @@ hear from you in the comment section below or [@kosamari](https://twitter.com/ko
    href="/web/updates/2018/09/inside-browser-part2"
    data-category="InsideBrowser" data-label="Part1 / Next">Next: What happens in navigation</a>
 
-<div class="clearfix"></div>
 
 
