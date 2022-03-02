@@ -113,17 +113,17 @@ when it goes idle.
 ### UI elements {: #pages }
 
 An [extension's user interface][docs-ui] should be purposeful and minimal. The UI should customize or
-enhance the browsing experience without distracting from it. Most extensions have a [browser
-action][16] or [page action][17], but can contain other forms of UI, such as [context menus][docs-context-menu],
-use of the [omnibox][docs-omnibox], or creation of a [keyboard shortcut][docs-commands].
+enhance the browsing experience without distracting from it. 
 
-Extension UI pages, such as a [popup][21], can contain ordinary HTML pages with JavaScript logic.
-Extensions can also call [tabs.create][22] or `window.open()` to display additional HTML files
+Most extensions run when the user clicks the toolbar icon [action][api-action] or display a [popup][docs-popup], but can also contain any of the following:
+
+- A [context menus][docs-context-menu]
+- An [omnibox][docs-omnibox]
+- A [keyboard shortcut][docs-commands].
+
+Extension UI pages, such as a [popup][docs-popup], can contain ordinary HTML pages with JavaScript logic.
+Extensions can also call [tabs.create][api-create-tab] or `window.open()` to display additional HTML files
 present in the extension.
-
-An extension using a page action and a popup can use the [declarative content][api-dec-content] API to set rules
-in the background script for when the popup is available to users. When the conditions are met, the
-background script communicates with the popup to make it's icon clickable to users.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
        alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
@@ -257,6 +257,7 @@ following resources.
 - The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation relevant to
   advanced extension creation.
 
+[api-action]: /docs/extensions/reference/action/
 [api-create-tab]: /docs/extensions/reference/tabs#method-create
 [api-dec-content]: /docs/extensions/reference/declarativeContent
 [api-get-url]: /docs/extensions/reference/runtime#method-getURL
@@ -277,7 +278,6 @@ following resources.
 [docs-messages]: /docs/extensions/mv3/messaging
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
 [docs-options]: /docs/extensions/mv3/options
-[docs-popup]: /docs/extensions/mv3/user_interface#popup
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
