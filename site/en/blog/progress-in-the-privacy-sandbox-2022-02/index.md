@@ -17,22 +17,22 @@ tags:
 ---
 
 Welcome to the start of year edition of "**[Progress in the Privacy
-Sandbox](/tags/progress-in-the-privacy-sandbox/)**," covering January and
+Sandbox](/tags/progress-in-the-privacy-sandbox/)**", covering January and
 February 2022, as we track the milestones on the path to phasing out third-party
-cookies in Chrome and working towards a more private web. In each edition, we'll
+cookies in Chrome and working towards a more private web. In each edition, we
 share an overview of the updates to the [Privacy Sandbox
 timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
-along with news from across the project&mdash;and the beginning of 2022 has plenty of
-updates.
+along with news from across the project&mdash;and the beginning of 2022 has
+plenty of updates.
 
 
 ## Privacy Sandbox on Android
 
-If you have been watching the Privacy Sandbox site you will have noticed changes
+If you have been watching the Privacy Sandbox site, you may have noticed changes
 to the structure as we [introduced the Privacy Sandbox for
 Android](https://blog.google/products/android/introducing-privacy-sandbox-android/).
 
-_"We're announcing a multi-year initiative to build the Privacy Sandbox on
+_"We’re announcing a multi-year initiative to build the Privacy Sandbox on
 Android, with the goal of introducing new, more private advertising solutions.
 Specifically, these solutions will limit sharing of user data with third parties
 and operate without cross-app identifiers, including advertising ID. We're also
@@ -49,7 +49,7 @@ Getting feedback from a diverse set of stakeholders across the web ecosystem is
 critical to the Privacy Sandbox initiative. We've added a **dedicated [feedback
 section](/docs/privacy-sandbox/feedback/)** that provides an overview of the
 existing public channels where you can follow or contribute to discussion along
-with a feedback form to ensure you can always reach the Chrome team directly. 
+with a feedback form to ensure you can always reach the Chrome team directly.
 
 
 ## Strengthen cross-site privacy boundaries
@@ -62,28 +62,28 @@ forms of cross-site storage or communication.
 ### Cookies
 
 As the cookie-related proposals progress, you should audit your own
-`SameSite=None` or **cross-site cookies** and plan the action you'll need
-to take on your site. 
+`SameSite=None` or **cross-site cookies** and plan the action you will need to
+take on your site.
 
 
 #### CHIPS
 
 If you set cookies that are sent in cross-site contexts, but in 1:1
-relationships—like iframe embeds, or API calls—we have added a [new overview for
-CHIPS](/docs/privacy-sandbox/chips/), or Cookies Having Independent Partitioned
-State. CHIPS allows you to mark cookies as "`Partitioned`", which puts them in a
-separate cookie jar per top-level site.
+relationships&mdash;like iframe embeds, or API calls&mdash;we have added a [new
+overview for CHIPS](/docs/privacy-sandbox/chips/), or Cookies Having Independent
+Partitioned State. CHIPS allows you to mark cookies as "`Partitioned`", which
+puts them in a separate cookie jar per top-level site.
 
-We've sent the **[I2E (Intent to Experiment) for
+We've also sent the **[I2E (Intent to Experiment) for
 CHIPS](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U)**
-with the plan to run the origin trial in Chrome 100 and run from March 31st,
+with the plan to start the origin trial in Chrome 100 and run from March 31st,
 2022 until June 30, 2022. The origin trial will be available for registration on
 [the Chrome Origin Trials site](/origintrials/#/trials/active).
 
 
 #### Additional cookie updates
 
-We're continuing to clean up issues in general cookie implementation in
+We're also continuing to clean up issues in general cookie implementation in
 Chrome and have sent an **[I2S (Intent to Ship) to allow cookie domain
 attributes to be the empty
 string](https://groups.google.com/a/chromium.org/g/blink-dev/c/IYWGbLV-1hU)**.
@@ -114,7 +114,7 @@ Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-parti
 by creating finer-grained containers for caches, which prevents cross-site
 information leakage. We sent an **[I2S to partition network
 state](https://groups.google.com/a/chromium.org/g/blink-dev/c/tJa6uzXu_IA)**
-which affects websocket connections, DNS cache, and others—however after
+which affects websocket connections, DNS cache, and others&mdash;however after
 discussion on the list we will be running additional performance experiments
 before returning to this topic with a new intent.
 
@@ -146,15 +146,15 @@ Safari/537.36</span> {% endCompare %}
 Chrome/100.<span style="background: #a5d6a7">0.0.0</span> Mobile
 Safari/537.36</span> {% endCompare %}
 
-Also starting in Chrome 101, we're launching (via an
+Also starting in Chrome 101 we're launching (via an
 [I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/-2OW78CB1-A)) the
 **[User-Agent reduction deprecation
 trial](/blog/user-agent-reduction-deprecation-trial/)**. This allows sites that
 have not had time to migrate to User-Agent Client Hints to continue receiving
 the full user-agent string.
 
-We are also continuing to improve the User-Agent Client Hints functionality.
-There is a new **[I2S for markup-based Client Hints delegation for third-party
+We are continuing to improve the User-Agent Client Hints functionality. There is
+a new **[I2S for markup-based Client Hints delegation for third-party
 content](https://groups.google.com/a/chromium.org/g/blink-dev/c/JQ68cvYuiQU)**.
 This allows for sites to use a `<meta>` tag in their HTML instead of a
 `Permissions-Policy` header to send extended Client Hints on cross-origin
@@ -167,8 +167,8 @@ the fragile parsing associated with the user-agent string.
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we are introducing APIs that
-enable key use cases that depended on them but **without** continuing to enable
-cross-site tracking.
+enable key use cases that sites depended on to allow them to fund their content
+**without** continuing to enable cross-site tracking.
 
 
 ### Topics
@@ -178,7 +178,7 @@ interest-based advertising without cross-site tracking. Topics was informed by
 our learning and widespread community feedback from our earlier
 [FLoC](/docs/privacy-sandbox/floc/) trials, and replaces our FLoC proposal. The
 Topics API uses a curated taxonomy of topics to map a site to an associated
-topic and provide a method to a browser's top topics.
+topic and provide a method to retrieve a browser's top topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
 alt="Diagram showing the stages in the Topics API lifecycle, from a user
@@ -202,7 +202,7 @@ visited, without relying on an individual identifier.
 FLEDGE is **[preparing for an initial origin
 trial](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)**
 with details available for discussion in the repository. Alongside this we have
-also published a [**detailed developer guide**](/blog/fledge-api/).
+also published a **[detailed developer guide](/blog/fledge-api/)**.
 
 
 ## Measure digital ads
@@ -217,17 +217,17 @@ ads.
 The **[Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)** enables functionality to
 measure events on one site, like clicking or viewing an ad, that lead to a
-conversion on another site—without enabling cross-site tracking.
+conversion on another site&mdash;without enabling cross-site tracking.
 
-A number of new changes landed in the Attribution Reporting API proposal. We've
-have a full list available in the **[Attribution Reporting API January 2022
+A number of new changes landed in the Attribution Reporting API proposal. We
+have made a full list available in the **[Attribution Reporting API January 2022
 update](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**.
-This includes an [overview of summary
-reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)
-(previously referred to as aggregate reports) which allows for an aggregated
-view of detailed conversion data, while retaining critical information for
-reporting, without the ability to identify individual users within that data.
-Event-level reporting adds [new
+This includes an [**overview of summary
+reports**](/docs/privacy-sandbox/attribution-reporting/summary-reports/)
+(previously referred to as aggregate reports). Summary reports provide an
+aggregated view of detailed conversion data, while retaining critical
+information for reporting, without the ability to identify individual users
+within that data. **Event-level reporting** added [new
 features](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#new-features)
 for third-party reporting, view-through measurement, filtering reports, and
 debugging functionality.
@@ -240,4 +240,3 @@ as a whole, we want to make sure that you as a developer are getting the
 information and support that you need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series. We'll use your input to continue improving the format.
-
