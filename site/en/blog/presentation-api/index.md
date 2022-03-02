@@ -12,10 +12,6 @@ alt: >
   Sender and receiver devices
 tags:
   - news
-  - audio
-  - video
-  - secondscreen
-  - cast
 ---
 
 ```css
