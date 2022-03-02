@@ -1,4 +1,5 @@
 {
+
   "rviscomi": {
     "github": "rviscomi",
     "twitter": "rick_viscomi"
@@ -11,10 +12,13 @@
     "homepage": "https://philipwalton.com/",
     "twitter": "philwalton",
     "github": "philipwalton"
-    },
+  },
   "hongchanchoi": {
     "homepage": "https://hoch.io/",
     "twitter": "hochsays"
+  },
+  "kosamari": {
+    "twitter": "kosamari"
   },
   "mscales": {
     "twitter": "wibblymat"

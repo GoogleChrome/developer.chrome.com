@@ -18,6 +18,11 @@ hongchanchoi:
     en: 'Hongchan Choi'
   description:
     en: 'Software Engineer working on Web Audio in Chromium'
+kosamari:
+  title:
+    en: 'Mariko Kosaka'
+  description:
+    en: 'Mariko is a drawsplainer'
 mscales:
   title:
     en: 'Mat Scales'
@@ -27,7 +32,7 @@ ericbidelman:
   title:
     en: 'Eric Bidelman'
   description:
-    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
+    en: 'Engineer at Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 joemedley:
   title:
     en: 'Joe Medley'
