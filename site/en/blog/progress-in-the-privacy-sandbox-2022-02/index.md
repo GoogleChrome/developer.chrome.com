@@ -29,7 +29,7 @@ plenty of updates.
 ## Privacy Sandbox on Android
 
 If you have been watching the Privacy Sandbox site, you may have noticed changes
-to the structure as we [introduced the Privacy Sandbox for
+to the structure as we [introduced the Privacy Sandbox on
 Android](https://blog.google/products/android/introducing-privacy-sandbox-android/).
 
 _"We’re announcing a multi-year initiative to build the Privacy Sandbox on
