@@ -30,8 +30,6 @@ updated: 2017-12-14
 
 ---
 
-<div class="clearfix"></div>
-
 {% YouTube id="_srJ7eHS3IM" %}
 
 Today, we're happy to announce a new [Chrome User Experience Report](https://developers.google.com//web/tools/chrome-user-experience-report/)

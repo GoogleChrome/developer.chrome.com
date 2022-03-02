@@ -72,7 +72,7 @@ built-in AudioNodes, which ensures zero additional latency and synchronous
 rendering.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/AdfZ3cT37ZLhfe7wZJAi.svg", alt="Fig.1", width="300", height="91" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/AdfZ3cT37ZLhfe7wZJAi.svg", alt="Main global scope and Audio Worklet scope diagram", width="300", height="91" %}
   <figcaption>
     Fig.1
   </figcaption>
@@ -147,7 +147,7 @@ automation with AudioParams. AudioWorkletNodes can use these to get
 exposed parameters that can be controlled at the audio rate automatically.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/fVk70jbLUCwZWF6kKqiu.svg", alt="Fig.2", width="300", height="117" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/fVk70jbLUCwZWF6kKqiu.svg", alt="Audio worklet node and processor diagram", width="300", height="117" %}
   <figcaption>
     Fig.2
   </figcaption>
@@ -374,7 +374,7 @@ at [Chrome WebAudio team's GitHub
 repository](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/).
 
 
-## Feature Transition: Experimental to Stable {: #experimental }
+## Feature Transition: Experimental to Stable
 
 Audio Worklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
 the feature was behind the experimental flag.
