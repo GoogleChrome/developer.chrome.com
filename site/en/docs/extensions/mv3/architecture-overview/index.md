@@ -103,11 +103,11 @@ include multiple components:
 - [Content Script][section-cs]
 - [Options Page][section-options]
 
-### Background script {: #background_script }
+### Background service worker {: #background_script }
 
-The [background script][docs-service-worker] is the extension's event handler; it contains listeners for browser
+The [background service worker][docs-service-worker] is the extension's event handler; it contains listeners for browser
 events that are important to the extension. It lies dormant until an event is fired then performs
-the instructed logic. An effective background script is only loaded when it is needed and unloaded
+the instructed logic; it is only loaded when it is needed and unloaded
 when it goes idle.
 
 ### UI elements {: #pages }
