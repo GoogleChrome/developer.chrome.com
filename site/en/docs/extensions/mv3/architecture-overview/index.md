@@ -18,8 +18,7 @@ Consider extensions the gateway to making the Chrome browser the most personaliz
 ## Extension files {: #files }
 
 Extensions vary in types of files and amount of directories, but they are all required to have a
-[manifest][docs-manifest]. Some basic, but useful, extensions may consist of just the manifest and its toolbar
-icon.
+[manifest][docs-manifest].
 
 ### The manifest {: #manifest }
 
@@ -54,9 +53,11 @@ as the most important files and the capabilities the extension might use.
 
 Extensions must have an icon that sits in the browser toolbar. Toolbar icons allow easy access and
 keep users aware of which extensions are installed. Most users will interact with an extension that
-uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started extension][sample-get-started].
+uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started example][sample-getting-started].
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started Popup", width="187", height="153" %}
+
+<!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
 ### Referring to files {: #relative-urls }
 
