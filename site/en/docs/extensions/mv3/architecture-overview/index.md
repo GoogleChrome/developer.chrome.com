@@ -33,7 +33,6 @@ as the most important files and the capabilities the extension might use.
   "manifest_version": 3,
   "icons": {
     "16": "icon_16.png",
-    "32": "icon_32.png",
     "48": "icon_48.png",
     "128": "icon_128.png"
   },
@@ -59,14 +58,18 @@ uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started
 
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
-### Referring to files {: #relative-urls }
+### Referring to files {: #ref-files }
 
-An extension's files can be referred to by using a relative URL, just as files in an ordinary HTML
+#### Relative URL {: #relative-urls }
+
+An extension's files can be referred to by using a relative URL, just like in an ordinary HTML
 page.
 
 ```html
 <img src="images/my_image.png">
 ```
+
+#### Absolute URL {: #absolute-urls }
 
 Additionally, each file can also be accessed using an absolute URL.
 
@@ -75,14 +78,19 @@ chrome-extension://EXTENSION_ID/PATH_TO_FILE
 ```
 
 In the absolute URL, the <var>EXTENSION_ID</var> is a unique identifier that the extension system
-generates for each extension. The IDs for all loaded extensions can be viewed by going to the URL
+generates. The extension ID's are displayed in the Extension management page
 **chrome://extensions**. The <var>PATH_TO_FILE</var> is the location of the file under the
 extension's top folder; it matches the relative URL.
 
-While working on an unpacked extension the extension ID can change. Specifically, the ID of an
-unpacked extension will change if the extension is loaded from a different directory; the ID will
-change again when the extension is packaged. If an extension's code relies on an absolute URL, it
-can use the [`chrome.runtime.getURL()`][api-get-url] method to avoid hardcoding the ID during development.
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", alt="Extension ID in the Extension management page", width="400", height="21" %}
+
+While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the manifest, then the extension ID can change. For example, when the extension is loaded from a different directory, packed or uploaded to the Chrome Web Store.
+
+You can use the [`chrome.runtime.getURL()`][api-get-url] method to avoid hardcoding the ID.
+
+``` js
+let image = chrome.runtime.getURL("images/my_image.png")
+```
 
 ## Architecture {: #arch }
 
@@ -263,6 +271,7 @@ following resources.
 [docs-context-menu]: /docs/extensions/mv3/user_interface/#context_menu
 [docs-debugging]: /docs/extensions/mv3/tut_debugging
 [docs-dev-guide]: /docs/extensions/mv3/devguide
+[docs-key]: /docs/extensions/mv3/manifest/key/
 [docs-get-started]: /docs/extensions/mv3/getstarted
 [docs-manifest]: /docs/extensions/mv3/manifest
 [docs-messages]: /docs/extensions/mv3/messaging
