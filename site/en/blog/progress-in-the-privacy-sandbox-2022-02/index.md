@@ -141,7 +141,7 @@ Safari/537.36</span> {% endCompare %}
 
 {% Compare 'better', 'new' %} <span style="font-family: monospace">Mozilla/5.0
 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/95.<span style="background: #a5d6a7">0.0.0</span> Mobile
+Chrome/100.<span style="background: #a5d6a7">0.0.0</span> Mobile
 Safari/537.36</span> {% endCompare %}
 
 Also starting in Chrome 101 we are launching (via an
@@ -197,8 +197,10 @@ announcing our intent to start coding on the feature.
 use cases, as in advertising that can make use of sites or products previously
 visited, without relying on an individual identifier.
 
-
-### FLEDGE is **[preparing for an initial origin trial](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)** with details available for discussion in the repository. Alongside this we have also published a **[detailed developer guide](/blog/fledge-api/)**.
+FLEDGE is **[preparing for an initial origin
+trial](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)**
+with details available for discussion in the repository. Alongside this we have
+also published a [**detailed developer guide**](/blog/fledge-api/).
 
 
 ## Measure digital ads
