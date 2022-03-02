@@ -1,3 +1,23 @@
+rviscomi:
+  title:
+    en: 'Rick Viscomi'
+  description:
+    en: 'Rick is a contributor to WebFundamentals'
+ilyagrigorik:
+  title:
+    en: 'Ilya Grigorik'
+  description:
+    en: 'Ilya is a Developer Advocate and Web Perf Guru'
+philipwalton:
+  title:
+    en: 'Philip Walton'
+  description:
+    en: 'Engineer at Google working on the Web Platform'
+hongchanchoi:
+  title:
+    en: 'Hongchan Choi'
+  description:
+    en: 'Software Engineer working on Web Audio in Chromium'
 kosamari:
   title:
     en: 'Mariko Kosaka'
