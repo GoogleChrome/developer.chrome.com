@@ -13,7 +13,6 @@ alt: >
 tags:
   - deprecations
   - removals
-  - chrome60
 ---
 
 In nearly every version of Chrome, we see a significant number of updates and
