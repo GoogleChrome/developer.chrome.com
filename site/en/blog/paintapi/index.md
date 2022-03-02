@@ -91,7 +91,6 @@ resizable by default.):
 </script>
 ```
 
-<div class="clearfix"></div>
 
 ```js
 // checkerboard.js
@@ -166,7 +165,6 @@ including custom properties. The values will be given to you through the
   CSS.paintWorklet.addModule('checkerboard.js');
 </script>
 ```
-<div class="clearfix"></div>
 
 ```js
 // checkerboard.js

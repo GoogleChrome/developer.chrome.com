@@ -85,7 +85,8 @@ on your secondary attached display. The end result is available at
 First, we’ll create a new `PresentationRequest` object that will contain the
 URL we want to present on the secondary attached display.
 
-    const presentationRequest = new PresentationRequest('receiver.html');
+```js
+const presentationRequest = new PresentationRequest('receiver.html');
 
 In this article, I won’t cover use cases where the parameter passed to
 `PresentationRequest` can be an array like `['cast://foo’, 'apple://foo',
