@@ -88,7 +88,7 @@ Chrome and have sent an **[I2S (Intent to Ship) to allow cookie domain
 attributes to be the empty
 string](https://groups.google.com/a/chromium.org/g/blink-dev/c/IYWGbLV-1hU)**.
 Unless you are already aware that you make use of an empty domain in cookie
-attributes, there is unlikely to be any developer action needed and this brings
+attributes, there is unlikely to be any developer action needed. This brings
 Chrome's behavior inline with other browsers.
 
 
@@ -111,7 +111,7 @@ own libraries.
 Partitioning](https://github.com/MattMenke2/Explainer---Partition-Network-State)
 continues the pattern implemented in [HTTP Cache
 Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)
-by creating finer-grained containers for caches, preventing cross-site
+by creating finer-grained containers for caches, which prevents cross-site
 information leakage. We sent an **[I2S to partition network
 state](https://groups.google.com/a/chromium.org/g/blink-dev/c/tJa6uzXu_IA)**
 which affects websocket connections, DNS cache, and others—however after
@@ -189,7 +189,7 @@ post](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbo
 along with the full detail in the **[Topics
 explainer](https://github.com/jkarlin/topics)**. This is also linked from the
 associated **[Topics
-I2P](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M)**
+I2P](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M)**,
 announcing our intent to start coding on the feature.
 
 
