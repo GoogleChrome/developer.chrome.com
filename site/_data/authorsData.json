@@ -61,14 +61,10 @@
   "mscales": {
     "twitter": "wibblymat"
   },
- "ericbidelman": {
+  "ericbidelman": {
     "homepage": "http://ericbidelman.com/",
     "twitter": "ebidel",
     "github": "ebidel"
-  },
-  "paulirish": {
-    "homepage": "https://www.paulirish.com/",
-    "twitter": "paul_irish"
   },
   "paulkinlan": {
     "homepage": "https://paul.kinlan.me/",
