@@ -1,13 +1,3 @@
-ericbidelman:
-  title:
-    en: 'Eric Bidelman'
-  description:
-    en: 'Engineer at Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
-paulirish:
-  title:
-    en: 'Paul Irish'
-  description:
-    en: 'Paul is a contributor to WebFundamentals'
 mikewest:
   title:
     en: 'Mike West'
@@ -103,6 +93,11 @@ mscales:
     en: 'Mat Scales'
   description:
     en: 'Mat is a contributor to WebFundamentals'
+ericbidelman:
+  title:
+    en: 'Eric Bidelman'
+  description:
+    en: 'Engineer at Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 joemedley:
   title:
     en: 'Joe Medley'
