@@ -17,7 +17,7 @@ tags:
 Welcome to the start of year edition of "**[Progress in the Privacy
 Sandbox](/tags/progress-in-the-privacy-sandbox/)**" covering January and
 February 2022 as we track the milestones on the path to phasing out third-party
-cookies in Chrome and working towards a more private web. Each edition we'll
+cookies in Chrome and working towards a more private web. In each edition, we'll
 share an overview of the updates to the [Privacy Sandbox
 timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
 along with news from across the project—and the beginning of 2022 has plenty of
@@ -27,8 +27,8 @@ updates.
 ## Privacy Sandbox on Android
 
 If you have been watching the Privacy Sandbox site you will have noticed changes
-to the structure as we [introduced the **Privacy Sandbox for
-Android**](https://blog.google/products/android/introducing-privacy-sandbox-android/).
+to the structure as we [introduced the Privacy Sandbox for
+Android](https://blog.google/products/android/introducing-privacy-sandbox-android/).
 
 _"We’re announcing a multi-year initiative to build the Privacy Sandbox on
 Android, with the goal of introducing new, more private advertising solutions.
@@ -47,8 +47,7 @@ Getting feedback from a diverse set of stakeholders across the web ecosystem is
 critical to the Privacy Sandbox initiative. We've added a **dedicated [feedback
 section](/docs/privacy-sandbox/feedback/)** that provides an overview of the
 existing public channels where you can follow or contribute to discussion along
-with an overall feedback form to ensure you can always reach the Chrome team
-directly. 
+with a feedback form to ensure you can always reach the Chrome team directly. 
 
 
 ## Strengthen cross-site privacy boundaries
@@ -56,6 +55,7 @@ directly.
 Third-party cookies are a key mechanism that enables cross-site tracking. Being
 able to phase them out is a major milestone, but we also need to tackle other
 forms of cross-site storage or communication.
+
 
 ### Cookies
 
@@ -67,10 +67,10 @@ to take on your site.
 #### CHIPS
 
 If you set cookies that are sent in cross-site contexts, but in 1:1
-relationships—like iframe embeds, or API calls—we have added a [new **overview
-for CHIPS**](/docs/privacy-sandbox/chips/), or Cookies Having Independent
-Partitioned State. This allows you to mark cookies as "`Partitioned`" putting
-them in a separate cookie jar per top-level site.
+relationships—like iframe embeds, or API calls—we have added a [new overview for
+CHIPS](/docs/privacy-sandbox/chips/), or Cookies Having Independent Partitioned
+State. This allows you to mark cookies as "`Partitioned`" putting them in a
+separate cookie jar per top-level site.
 
 We have also sent the **[I2E (Intent to Experiment) for
 CHIPS](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U)**
@@ -97,7 +97,7 @@ builds on existing identity provider use cases to allow new and existing
 federated identity use cases to continue without third-party cookies. We have
 sent the **[I2E for an initial FedCM origin
 trials](https://groups.google.com/a/chromium.org/g/blink-dev/c/jlV_1m7uUAg)**
-starting with an Android-only trial from Chrome 101. This initial trial is
+starting with a limited trial from Chrome 101 on Android. This initial trial is
 primarily aimed at identity providers who will eventually [integrate
 FedCM](https://github.com/fedidcg/FedCM/blob/main/explainer/HOWTO.md) into their
 own libraries.
@@ -107,8 +107,8 @@ own libraries.
 
 [Network State
 Partitioning](https://github.com/MattMenke2/Explainer---Partition-Network-State)
-continues the pattern implemented in [**HTTP Cache
-Partitioning**](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)
+continues the pattern implemented in [HTTP Cache
+Partitioning](https://developers.google.com/web/updates/2020/10/http-cache-partitioning)
 by creating finer-grained containers for caches, preventing cross-site
 information leakage. We sent an **[I2S to partition network
 state](https://groups.google.com/a/chromium.org/g/blink-dev/c/tJa6uzXu_IA)**
@@ -132,7 +132,7 @@ user-agent string and providing alternative User-Agent Client Hints
 request that information. We have sent the **[I2S for phase 4 of the reduction
 where we replace the minor
 version](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ)**
-information with zeros, starting Chrome 101.
+information with zeros starting in Chrome 101.
 
 {% Compare 'worse', 'old' %} <span style="font-family: monospace">Mozilla/5.0
 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko)
@@ -164,9 +164,9 @@ the fragile parsing associated with the user-agent string.
 
 ## Show relevant content and ads
 
-As we move towards phasing out third-party cookies, we need to introduce APIs
-that enable the use cases that depended on them but **without** continuing to
-enable cross-site tracking.
+As we move towards phasing out third-party cookies, we are introducing APIs that
+enable key use cases that depended on them but **without** continuing to enable
+cross-site tracking.
 
 
 ### Topics
@@ -182,13 +182,23 @@ topic and provide a method to a browser's top topics.
 alt="Diagram showing the stages in the Topics API lifecycle, from a user
 visiting websites to an ad being displayed.", width="800", height="275" %}
 
-You can read more in the [introductory **Topics blog
-post**](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/)
+You can read more in the [introductory Topics blog
+post](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/)
 along with the full detail in the **[Topics
 explainer](https://github.com/jkarlin/topics)**. This is also linked from the
 associated **[Topics
 I2P](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M)**
 announcing our intent to start coding on the feature.
+
+
+### FLEDGE
+
+[FLEDGE](/docs/privacy-sandbox/fledge/) enables remarketing and custom audience
+use cases, as in advertising that can make use of sites or products previously
+visited, without relying on an individual identifier.
+
+
+### FLEDGE is **[preparing for an initial origin trial](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)** with details available for discussion in the repository. Alongside this we have also published a **[detailed developer guide](/blog/fledge-api/)**.
 
 
 ## Measure digital ads
@@ -208,27 +218,15 @@ conversion on another site—without enabling cross-site tracking.
 A number of new changes landed in the Attribution Reporting API proposal and we
 have a full list available in the **[Attribution Reporting API January 2022
 update](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**.
-This includes an [**overview of the summary
-reports**](/docs/privacy-sandbox/attribution-reporting/summary-reports/)
+This includes an [overview of the summary
+reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)
 (previously referred to as aggregate reports) which allows for an aggregated
 view of detailed conversion data, while retaining critical information for
 reporting without the ability to identify individual users within that data.
-**Event-level reporting** adds [new
+Event-level reporting adds [new
 features](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#new-features)
 for third-party reporting, view-through measurement, filtering reports, and
 debugging functionality.
-
-
-### FLEDGE
-
-[FLEDGE](/docs/privacy-sandbox/fledge/) enables remarketing and custom audience
-use cases, as in advertising that can make use of sites or products previously
-visited, but without relying on an individual identifier.
-
-FLEDGE is **[preparing for an initial origin
-trial](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)**
-with details available for discussion in the repository. Alongside this we have
-also published a **[detailed developer guide](/blog/fledge-api/)**.
 
 
 ## Article feedback
