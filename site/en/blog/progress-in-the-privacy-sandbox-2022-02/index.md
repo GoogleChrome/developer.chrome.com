@@ -1,7 +1,9 @@
 ---
 title: Progress in the Privacy Sandbox (January/February 2022)
 description: >
-  
+  Updates including Privacy Sandbox on Android, CHIPS origin trial, user-agent
+  reduction, the new Topics proposal, and major updates for FLEDGE and
+  Attribution Reporting.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-07
 authors:
