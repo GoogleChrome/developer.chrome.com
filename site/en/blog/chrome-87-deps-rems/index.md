@@ -41,7 +41,7 @@ and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Rem
 {% endAside %}
 
 Chrome 87 beta was released on October 15, 2020 and stable was released on
-November 17, 2020ß.
+November 17, 2020.
 
 ## Comma separator in iframe allow attribute
 
