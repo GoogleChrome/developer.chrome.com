@@ -807,6 +807,7 @@ module.exports = async function parse({silent, sources, mode}) {
   /** @type {typedoc.TypeScript.CompilerOptions} */
   const typescriptOptions = {
     declaration: true,
+    esModuleInterop: true,
   };
 
   /** @type {Partial<typedoc.TypeDocOptions>} */
