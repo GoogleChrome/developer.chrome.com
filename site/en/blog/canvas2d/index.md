@@ -5,7 +5,7 @@ description: >
 layout: 'layouts/blog-post.njk'
 authors:
   - aaronhk
-date: 2022-02-03
+date: 2022-03-03
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Qr1BTg23IMo4QNsGJWg6.jpg'
 alt: >
   A collection of canvases in various shades of blue.
