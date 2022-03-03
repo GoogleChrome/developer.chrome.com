@@ -121,7 +121,7 @@ module.exports = {
 
 This will create a precache manifest based on the webpack assets picked up by your configuration and inject it into your bundled and compiled service worker file.
 
-A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-WebpackInjectManifestOptions).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-WebpackInjectManifestOptions).
 
 ## Extra Info
 
