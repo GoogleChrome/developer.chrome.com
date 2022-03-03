@@ -58,7 +58,7 @@ While bundlers are great, not every project needs them. If you find yourself in 
 
 The `workbox-sw` module simplifies loading other Workbox modules (e.g., `workbox-routing`, `workbox-precaching`, etc) from a CDN. Whether it loads the development or production bundles depends on the URL used to access your web app. By default, `workbox-sw` loads the development version of Workbox if your web app is running on `http://localhost`, and the production version at all other times.
 
-You can override the default behavior by calling Workbox's [`setConfig` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.setConfig) to set the `debug` option to `true`:
+You can override the default behavior by calling Workbox's `setConfig` method to set the `debug` option to `true`:
 
 ```js
 // Load workbox-sw from a CDN
