@@ -14,7 +14,7 @@
 * [Sources パネルにワーカーのソースファイルを表示](/ja/blog/new-in-devtools-99/#worker-sourcemap)
 * [Chrome の自動ダークテーマの更新](/ja/blog/new-in-devtools-99/#auto-dark-mode)
 * [タッチ操作で使いやすいカラーピッカーとスプリットペイン](/ja/blog/new-in-devtools-99/#touch-friendly)
-* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc) -->
+* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }
