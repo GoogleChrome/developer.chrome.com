@@ -1,4 +1,78 @@
 {
+  "mikewest": {
+    "homepage": "https://mikewest.org/",
+    "twitter": "mikewest"
+  },
+  "johannes": {
+    "github": "powdercloud"
+  },
+  "maudnalpas": {
+    "twitter": "maudnals",
+    "github": "maudnals"
+  },
+  "rowanmerewood": {
+    "twitter": "rowan_m",
+    "github": "rowan-m"
+  },
+  "housseindjirdeh": {
+    "homepage": "https://houssein.me/",
+    "twitter": "hdjirdeh",
+    "github": "housseindjirdeh"
+  },
+  "katiehempenius": {
+    "twitter": "katiehempenius"
+  },
+  "cbrand": {
+    "github": "christiaanbrand",
+    "twitter": "christiaanbrand"
+  },
+  "paulirish": {
+    "homepage": "https://www.paulirish.com/",
+    "twitter": "paul_irish"
+  },
+  "rviscomi": {
+    "github": "rviscomi",
+    "twitter": "rick_viscomi"
+  },
+  "ilyagrigorik": {
+    "homepage": "https://igvita.com/",
+    "twitter": "igrigorik"
+  },
+  "philipwalton": {
+    "homepage": "https://philipwalton.com/",
+    "twitter": "philwalton",
+    "github": "philipwalton"
+  },
+  "hongchanchoi": {
+    "homepage": "https://hoch.io/",
+    "twitter": "hochsays"
+  },
+  "jeffposnick": {
+    "homepage": "https://twitter.com/jeffposnick",
+    "twitter": "jeffposnick"
+  },
+  "mattgaunt": {
+    "homepage": "https://gauntface.com/blog",
+    "twitter": "gauntface"
+  },
+  "kosamari": {
+    "twitter": "kosamari"
+  },
+  "mscales": {
+    "twitter": "wibblymat"
+  },
+  "ericbidelman": {
+    "homepage": "http://ericbidelman.com/",
+    "twitter": "ebidel",
+    "github": "ebidel"
+  },
+  "paulkinlan": {
+    "homepage": "https://paul.kinlan.me/",
+    "twitter": "paul_kinlan"
+  },
+  "joemedley": {
+    "github": "jpmedley"
+  },
   "jakearchibald": {
     "country": "UK",
     "homepage": "https://jakearchibald.com/",
@@ -398,5 +472,22 @@
     "github": "mysterydate",
     "twitter": "_mysterydate",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/X8o5K4jnZHhQgHfkmJY7.jpeg"
+  "victortan": {
+    "country": "US",
+    "github": "victortan",
+    "twitter": "victortan",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/j7BoDYMJWpcjTNyhbnYu.jpeg"
+  },
+  "pbakaus": {
+    "country": "US",
+    "homepage": "https://paulbakaus.com/",
+    "twitter": "pbakaus",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/fa0lUahofnggwG3lhxCe.jpeg"
+  },
+  "umarhansa": {
+    "country": "UK",
+    "homepage": "https://umaar.com/",
+    "twitter": "umaar",
+    "image": "image/C47gYyWYVMMhDmtYSLOWazuyePF2/6Q7EVYpBXsElBaENIUKd.jpeg"
   }
 }

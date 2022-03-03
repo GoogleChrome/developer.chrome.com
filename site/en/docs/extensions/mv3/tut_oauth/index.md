@@ -79,40 +79,7 @@ Add an HTML file called `index.html` and include the following code. <!-- Or dow
 </html>
 ```
 
-## Upload to the developer dashboard {: #upload_to_dashboard }
-
-Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
-Dashboard][dev-console] without publishing it:
-
-1.  At the Developer Dashboard, click **Add new item**.
-2.  Click **Browse files**, select the `.zip` extension and upload it.
-3.  Go to the **Package** tab and click on **View public key**.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", alt="Developer Dashboard Package tab", width="296", height="121" %}
-
-From the popup, copy the
-public key and add it to the manifest inside the unzipped directory under the [`"key"`][manifest-key] field.
-
-
-```json
-{
-  "name": "OAuth Tutorial FriendBlock",
-...
-  "key": "ThisKeyIsGoingToBeVeryLong/go8G...AQAB"
-}
-```
-
-## Compare IDs {: #extension_management }
-
-Open the Extensions Management page at `chrome://extensions`, ensure developer mode is enabled and
-upload the unpackaged extension directory. Compare the extension ID on the extensions management
-page to the Item ID in the Developer Dashboard. They should match.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7T1Ko139zBRENzSyKpgB.png", 
-alt="Extension Ids matching", width="350", height="250" %}
-
-The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
-single ID is essential for API registration.
+{% include 'partials/extensions/reusing-prod-extension-id.md' %}
 
 ## Create OAuth client ID {: #oauth_client }
 

@@ -177,9 +177,9 @@ the following forms:
 To ensure the security of CWS accounts, two step verification is required for all developer
 accounts prior to publishing an extension or updating an existing extension. Developers can activate
 two step verification for their Google Accounts
-[here](two-step-enroll).
+[here][two-step-enroll].
 More information on Google's two step verification features can be found
-[here](two-step-features).
+[here][two-step-features].
 
 ### Additional requirements for Manifest V3 {: #mv3-req }
 
@@ -195,7 +195,7 @@ Some common violations include:
 - Including a &lt;script> tag that points to a resource that is not within the
   extension's package
 - Using JavaScript's
-  [eval()](mdn-eval)
+  [eval()][mdn-eval]
   method or other mechanisms to execute a string fetched from a remote source
 - Building an interpreter to run complex commands fetched from a remote source,
   even if those commands are fetched as data

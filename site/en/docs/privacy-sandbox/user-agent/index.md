@@ -6,7 +6,7 @@ subhead: >
 description: >
   The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
 date: 2021-11-09
-updated: 2022-01-12
+updated: 2022-02-11
 authors:
   - alexandrawhite
 ---
@@ -14,6 +14,7 @@ authors:
 ## Implementation status
 
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
+*  [In deprecation trial](/blog/user-agent-deprecation-origin-trial/) Chrome 100 to Chrome 112
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
@@ -76,8 +77,8 @@ about the user's device or conditions.
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
-is easier to interpret. Existing code which parses the UA string shouldn’t
-break (though it will return less data), and you’ll need to migrate to UA-CH
+is easier to interpret. Existing code which parses the UA string shouldn't
+break (though it will return less data), and you'll need to migrate to UA-CH
 if your site [needs specific information
 information](https://wicg.github.io/ua-client-hints/#use-cases).
 
@@ -113,23 +114,52 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
    Sec-CH-UA-Arch: "arm"
    ```
 
-If you need a specific set of Client Hints on your initial request, refer to
-[Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
-to ensure Client Hints are available on site load and optimized.
+### Critical Client Hints
+
+If you need a specific set of Client Hints in your initial request, you can use
+the `Critical-CH` response header. `Critical-CH` values must be a subset of the
+values requested by `Accept-CH`.
+
+For example, the initial request may include a request for `Device-Memory` and
+`Viewport-Width`, where `Device-Memory` is considered critical.
+
+```powershell
+GET / HTTP/1.1
+Host: example.com
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-CH: Device-Memory, Viewport-Width
+Vary: Device-Memory, Viewport-Width
+Critical-CH: Device-Memory
+```
+
+If, after processing the `Accept-CH header`, the client would send a critical
+hint, the client retries the request.
+
+In summary, `Accept-CH` requests all values you'd like for the page, while `Critical-CH`
+requests only the subset of values you must have on-load to properly load the
+page. Refer to the [Client Hints Reliability
+specification](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
+for more information.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
-As we get closer to the rollout of the reduced User-Agent string in Chrome
-Stable, [review your site
+As we get closer to scaled availability of the reduced User-Agent string in
+Chrome Stable, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
-browser version, you’ll need to
+browser version, you'll need to
 [implement the UA-CH API](https://web.dev/migrate-to-ua-ch/).
 
-Once you’ve updated to the UA-CH API, you should test to ensure you get the
+Once you've updated to the UA-CH API, you should test to ensure you get the
 data you expect from the User-Agent. There are three ways to test, each
 increasing in complexity.
+
+Scaled availability for User-Agent reduction means the fully reduced UA string
+shipped on all Chrome devices. Reduction is planned to begin with a Chrome
+minor release in Q2 of 2022.
 
 ### Test the string locally {: #test-locally}
 
@@ -153,7 +183,7 @@ There are a couple of methods to test the reduced User-Agent locally:
       flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
       to run Chrome with a custom user-agent string.
 
-### Transform the string in your site’s code
+### Transform the string in your site's code
 
 If you process the existing Chrome `user-agent` string in your client-side or
 server-side code, you can transform that string to the new format to test
@@ -199,3 +229,4 @@ on third-parties.
   snippets to transform the current user-agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+

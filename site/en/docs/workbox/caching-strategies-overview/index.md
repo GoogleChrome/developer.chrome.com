@@ -6,6 +6,8 @@ description: >
   An overview of caching in service workers.
 ---
 
+{% YouTube id='ZCVgDKjtgl0' %}
+
 Until now, there have only been mentions and tiny code snippets of the
 [`Cache` interface](https://developer.mozilla.org/docs/Web/API/Cache).
 To use service workers effectively, it's necessary to adopt one or more caching strategies,

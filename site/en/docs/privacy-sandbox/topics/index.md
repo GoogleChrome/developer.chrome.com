@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-01-25
+updated: 2022-02-14
 authors:
   - samdutton
 ---
@@ -29,7 +29,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ## Why do we need this API?
 
-The Topics API is a [Privacy Sandbox](http://localhost:8080/docs/privacy-sandbox/overview/) proposal
+The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
 for a mechanism to enable interest-based advertising, without having to resort to tracking the sites
 a user visits.
 
@@ -66,7 +66,7 @@ the user the topics stored in the browser.
 
 Topics would be selected from a
 [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md): a list of items such as
-"Country Music", "Makeup&nbsp;&&nbsp;Cosmetics" or "Vegetarian Cuisine". These topics would initially be
+"Country Music", "Make-Up&nbsp;&&nbsp;Cosmetics" or "Vegetarian Cuisine". These topics would initially be
 curated by Chrome for testing, but with the goal that the topic taxonomy becomes a resource
 maintained by trusted ecosystem contributors. The taxonomy needs to provide a set of topics that is
 small enough in number (currently proposed to be around 350, though we expect the final number of
@@ -415,9 +415,9 @@ Users should be able to understand the purpose of the Topics API, recognize what
 them, know when the API is in use, and be provided with controls to enable or disable it.
 
 The API's human-readable taxonomy enables people to learn about and control the topics that may be
-suggested for them by their browser. They can remove topics they specifically don't wish to see ads
-for, and there can be UX for informing the user about the API and how to enable or disable it.
-Chrome would provide information and settings for the Topics API at
+suggested for them by their browser. Users can remove topics they specifically do not want the Topics 
+API to share with advertisers or publishers, and there can be UX for informing the user about the API 
+and how to enable or disable it. Chrome would provide information and settings for the Topics API at
 chrome://settings/privacySandbox. In addition, topics are not available to API callers in Incognito
 mode, and topics are cleared when browsing history is cleared.
 
