@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: workbox-cli
 date: 2017-11-27
-updated: 2020-01-17
+updated: 2022-03-03
 description: >
   Generate a service worker, inject a precache manifest, or create a local copy the Workbox libraries from the command line.
 ---
@@ -68,12 +68,12 @@ are recommended to use `generateSW` mode.
 #### When to use `generateSW`
 
 - You want to precache files.
-- You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
+- You have simple runtime caching needs.
 
 #### When NOT to use `generateSW`
 
-- You want to use other Service Worker features (i.e. Web Push).
-- You want to import additional scripts or add additional logic.
+- You want to use other Service Worker features (i.e. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You want to import additional scripts, or add additional logic for custom caching strategies.
 
 ### `injectManifest`
 
@@ -96,14 +96,14 @@ npx workbox injectManifest path/to/config.js
 
 #### When to use `injectManifest`
 
-You want more control over your service worker.
-You want to precache files.
-You have more complex needs in terms of routing.
-You would like to use your service worker with other API's (e.g. Web Push).
+- You want more control over your service worker.
+- You want to precache files.
+- You need to customize routing and strategies.
+- You would like to use your service worker with other platform features (e.g. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
 
 #### When NOT to use `injectManifest`
 
-You want the easiest path to adding a service worker to your site.
+- You want the easiest path to adding a service worker to your site.
 
 ### `copyLibraries`
 
@@ -174,10 +174,8 @@ automatically by `workbox wizard` or tweaked manually.
 
 ### Options used by `generateSW`
 
-A full set of configuration options can be found on
-[this reference page](/docs/workbox/reference/workbox-build/#method-generateSW).
+A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GenerateSWOptions).
 
 ### Options used by `injectManifest`
 
-A full set of configuration options can be found on
-[this reference page](/docs/workbox/reference/workbox-build/#method-injectManifest).
+A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-InjectManifestOptions).
