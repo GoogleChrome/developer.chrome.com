@@ -50,7 +50,7 @@ Bundlers are tools that take code from individual modules and create JavaScript 
 - In webpack, the [`mode` configuration option](https://webpack.js.org/configuration/mode/) can be set to `'production'` or `'development'`. `workbox-webpack-plugin` will use the production or development logging in Workbox based on this value.
 - For Rollup, [`rollup-plugin-workbox`](https://www.npmjs.com/package/rollup-plugin-workbox) accepts a `mode` configuration option that also affects whether Workbox logs anything to the console. If you're using Rollup without the Workbox-specific plugin, you'll need to configure [`@rollup/plugin-replace`](https://www.npmjs.com/package/@rollup/plugin-replace) to substitute `process.env.NODE_ENV` with `'development'` or `'production'`.
 
-Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`'s `mode` option for the [`GenerateSW` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#GenerateSW).
+Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`'s `mode` option for the [`GenerateSW` method](/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW).
 
 ### Without a bundler
 
