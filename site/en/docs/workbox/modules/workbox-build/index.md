@@ -93,7 +93,7 @@ generateSW({
 
 This will generate a service worker with precaching setup for all of the files picked up by your configuration, and the runtime caching rules provided.
 
-A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GenerateSWOptions).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GenerateSWOptions).
 
 ## `injectManifest` Mode
 
