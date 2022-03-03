@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 63
 description: >
   A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to RTCRtcpMuxPolicy.
 authors:
-  - josephmedley
+  - joemedley
 date: 2017-10-23
 updated: 2017-12-14
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'

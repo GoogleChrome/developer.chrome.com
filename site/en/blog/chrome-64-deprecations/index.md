@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 64
 description: >
   A round up of the deprecations and removals in Chrome 64 to help you plan. In this version, performance API changes, removal of support for multiple shadow roots, and removal of a WebKit API.
 authors:
-  - josephmedley
+  - joemedley
 date: 2017-12-14
 updated: 2017-12-14
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'

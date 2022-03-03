@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 65
 description: >
   A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and document.all is now read only.
 authors:
-  - josephmedley
+  - joemedley
 date: 2018-02-08
 updated: 2018-11-27
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'

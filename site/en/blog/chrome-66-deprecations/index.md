@@ -4,7 +4,7 @@ title: Deprecations and Removals in Chrome 66
 description: >
   A round up of the deprecations and removals in Chrome 66 to help you plan. In this version, improved service worker security, changes to CSS position values, and more.
 authors:
-  - josephmedley
+  - joemedley
 date: 2018-03-26
 updated: 2018-04-11
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/Dbho9JdUpXHPmYjSqhoJ.png'
