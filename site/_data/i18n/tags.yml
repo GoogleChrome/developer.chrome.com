@@ -121,14 +121,53 @@ lighthouse:
 new-in-lighthouse:
   en: What's new in Lighthouse
 
+chrome49:
+  en: Chrome 49
+
+chrome50:
+  en: Chrome 50
+
+chrome51:
+  en: Chrome 51
+
+chrome52:
+  en: Chrome 52
+
+chrome53:
+  en: Chrome 53
+
+chrome54:
+  en: Chrome 54
+
+chrome55:
+  en: Chrome 55
+
+chrome56:
+  en: Chrome 56
+
+chrome57:
+  en: Chrome 57
+
+chrome58:
+  en: Chrome 58
+
+chrome59:
+  en: Chrome 59
+
 chrome61:
   en: Chrome 61
 
-chrome62:
-  en: Chrome 62
+chrome57:
+  en: Chrome 57
 
-chrome63:
-  en: Chrome 63
+chrome58:
+  en: Chrome 58
+
+chrome59:
+  en: Chrome 59
+
+chrome61:
+  en: Chrome 61
 
 chrome64:
   en: Chrome 64
@@ -138,3 +177,15 @@ chrome65:
 
 chrome66:
   en: Chrome 66
+
+chrome67:
+  en: Chrome 67
+
+chrome68:
+  en: Chrome 68
+
+chrome69:
+  en: Chrome 69
+
+chrome70:
+  en: Chrome 70
