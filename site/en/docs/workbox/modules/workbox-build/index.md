@@ -126,7 +126,7 @@ injectManifest({
 
 This will create a precache manifest based on the files picked up by your configuration and inject it into your existing service worker file.
 
-A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-InjectManifestOptions).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-InjectManifestOptions).
 
 ## Additional modes
 
