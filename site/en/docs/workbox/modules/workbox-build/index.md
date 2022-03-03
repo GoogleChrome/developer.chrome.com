@@ -161,4 +161,4 @@ getManifest({
 });
 ```
 
-A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GetManifestOptions).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GetManifestOptions).
