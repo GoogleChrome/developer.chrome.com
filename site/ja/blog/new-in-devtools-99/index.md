@@ -123,7 +123,7 @@ Chromium issue: [1257499](https://crbug.com/1257499#c38)
 DevToolsのコンソールメッセージのフォーマット指定やスタイル設定についてさらに学びたければ、[Format and style messages in the Console](/docs/devtools/console/format-style) ドキュメントを参照してください。
 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6Lu7Js1rgSmjV0cnhDlH.png", alt="console styling", width="800", height="547" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6Lu7Js1rgSmjV0cnhDlH.png", alt="コンソールスタイル設定", width="800", height="547" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f061ee77a872701a366a604903e639506574520a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22a372d445c3f8cff00c2cfe48cb7373165bcd9d #}
