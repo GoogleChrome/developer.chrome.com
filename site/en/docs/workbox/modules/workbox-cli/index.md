@@ -174,7 +174,7 @@ automatically by `workbox wizard` or tweaked manually.
 
 ### Options used by `generateSW`
 
-A full set of configuration options can be found on [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GenerateSWOptions).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-GenerateSWOptions).
 
 ### Options used by `injectManifest`
 
