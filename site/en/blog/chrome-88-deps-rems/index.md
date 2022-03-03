@@ -28,7 +28,6 @@ updated: 2021-01-19
 tags:
   - deprecations
   - removals
-  - chrome88
 
 
 

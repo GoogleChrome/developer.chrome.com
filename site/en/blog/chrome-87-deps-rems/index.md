@@ -28,7 +28,6 @@ updated: 2020-12-04
 tags:
   - deprecations
   - removals
-  - chrome87
 
 
 

@@ -28,7 +28,6 @@ updated: 2020-07-22
 tags:
   - deprecations
   - removals
-  - chrome85
 
 
 

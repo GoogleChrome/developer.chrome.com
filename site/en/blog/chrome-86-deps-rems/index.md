@@ -28,7 +28,6 @@ updated: 2020-09-03
 tags:
   - deprecations
   - removals
-  - chrome86
 
 
 

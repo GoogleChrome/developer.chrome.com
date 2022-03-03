@@ -93,8 +93,6 @@ This means that if no policy is set for your website, Chrome will use
 `strict-origin-when-cross-origin` by default. Note that you can still set a policy of your choice;
 this change will only have an effect on websites that have no policy set.
 
-<div class="clearfix"></div>
-
 {% Aside %}
 This step to help reduce silent cross-site user tracking is part of a larger initiative: the
 Privacy Sandbox. Check [Digging into the Privacy
