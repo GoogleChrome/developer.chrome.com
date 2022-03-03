@@ -58,7 +58,7 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はセキュリティ上の脆弱性や廃止されるAPIの呼び出しなどを監視できるように設計されています。
+[Reporting API](https://web.dev/reporting-api/) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 
