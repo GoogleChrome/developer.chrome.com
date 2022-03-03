@@ -28,7 +28,6 @@ updated: 2019-10-31
 tags:
   - deprecations
   - removals
-  - chrome79
 
 
 

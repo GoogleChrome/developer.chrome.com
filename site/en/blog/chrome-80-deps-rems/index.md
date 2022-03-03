@@ -28,7 +28,6 @@ updated: 2020-08-11
 tags:
   - deprecations
   - removals
-  - chrome80
 
 
 
