@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: workbox-webpack-plugin
 date: 2017-12-15
-updated: 2020-02-03
+updated: 2022-03-03
 description: >
   Generate a service worker or inject a precache manifest, using the webpack build tool.
 ---
@@ -25,12 +25,12 @@ add it to the webpack asset pipeline.
 #### When to use `GenerateSW`
 
 - You want to precache files.
-- You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
+- You have simple runtime caching needs.
 
 #### When NOT to use `GenerateSW`
 
-- You want to use other Service Worker features (i.e. Web Push).
-- You want to import additional scripts or add additional logic.
+- You want to use other Service Worker features (i.e. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You want to import additional scripts, or add additional logic for custom caching strategies.
 
 ### `InjectManifest`
 
@@ -42,8 +42,8 @@ file. It will otherwise leave the file as-is.
 
 - You want more control over your service worker.
 - You want to precache files.
-- You have more complex needs in terms of routing.
-- You would like to use your service worker with other API's (e.g. Web Push).
+- You need to customize routing and strategies.
+- You would like to use your service worker with other platform features (e.g. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
 
 #### When NOT to use `InjectManifest`
 
@@ -61,38 +61,40 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    new GenerateSW(),
-  ],
-};
-```
-
-This will generate a service worker with precaching setup for all of your
-webpack assets.
-
-### Full `GenerateSW` Config
-
-If you want to use any of the configuration options for the `GenerateSW` plugin,
-you'd just need to add an `Object` to the plugin's constructor.
-
-For example:
-
-```js
-// Inside of webpack.config.js:
-const {GenerateSW} = require('workbox-webpack-plugin');
-
-module.exports = {
-  // Other webpack config...
-  plugins: [
-    // Other plugins...
     new GenerateSW({
-      option: 'value',
+      // These are some common options, and not all are required.
+      // Consult the docs for more info.
+      exclude: [/.../, '...'],
+      maximumFileSizeToCacheInBytes: ...,
+      navigateFallback: '...',
+      runtimeCaching: [{
+        // Routing via a matchCallback function:
+        urlPattern: ({request, url}) => ...,
+        handler: '...',
+        options: {
+          cacheName: '...',
+          expiration: {
+            maxEntries: ...,
+          },
+        },
+      }, {
+        // Routing via a RegExp:
+        urlPattern: new RegExp('...'),
+        handler: '...',
+        options: {
+          cacheName: '...',
+          plugins: [..., ...],
+        },
+      }],
+      skipWaiting: ...,
     }),
   ],
 };
 ```
 
-A full set of configuration options can be found on
-[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
+This will generate a service worker with precaching setup for all of the webpack assets picked up by your configuration, and the runtime caching rules provided.
+
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-WebpackGenerateSWOptions).
 
 ## `InjectManifest` Plugin
 
@@ -107,38 +109,19 @@ module.exports = {
   plugins: [
     // Other plugins...
     new InjectManifest({
-      swSrc: './src/sw.js',
+      // These are some common options, and not all are required.
+      // Consult the docs for more info.
+      exclude: [/.../, '...'],
+      maximumFileSizeToCacheInBytes: ...,
+      swSrc: '...',
     }),
   ],
 };
 ```
 
-This will create a precache manifest (a list of webpack assets) and inject it into
-your service worker file via `importScripts()`.
+This will create a precache manifest based on the webpack assets picked up by your configuration and inject it into your bundled and compiled service worker file.
 
-### Full `InjectManifest` Config
-
-You can pass the appropriate configuration as properties of an `Object` to the plugin's constructor.
-
-For example:
-
-```js
-// Inside of webpack.config.js:
-const {InjectManifest} = require('workbox-webpack-plugin');
-
-module.exports = {
-  // Other webpack config...
-  plugins: [
-    // Other plugins...
-    new InjectManifest({
-      option: 'value',
-    }),
-  ],
-};
-```
-
-A full set of configuration options can be found on
-[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest#InjectManifest).
+A full set of configuration options can be found [in the reference documentation](/docs/workbox/reference/workbox-build/#type-WebpackInjectManifestOptions).
 
 ## Extra Info
 
