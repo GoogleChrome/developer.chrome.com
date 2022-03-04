@@ -129,9 +129,9 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
     <tr id="matches">
       <td><code>matches</code></td>
       <td>array of strings</td>
-      <td><em>Required.</em> Specifies which pages this content script will be injected into. See <a
-          href="match_patterns">Match Patterns</a> for more details on the syntax of these strings
-        and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude
+      <td><em>Required.</em> Specifies which pages this content script will be injected into. See
+        [Match Patterns][19] for more details on the syntax of these strings and
+        <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude
         URLs.</td>
     </tr>
     <tr id="css">
@@ -305,8 +305,7 @@ registration.
       <td><code>exclude_matches</code></td>
       <td>array of strings</td>
       <td><em>Optional.</em> Excludes pages that this content script would otherwise be injected
-        into. See <a href="match_patterns">Match Patterns</a> for more details on the syntax of
-        these strings.</td>
+        into. See [Match Patterns][21] for more details on the syntax of these strings.</td>
     </tr>
     <tr id="include_globs">
       <td><code>include_globs</code></td>
