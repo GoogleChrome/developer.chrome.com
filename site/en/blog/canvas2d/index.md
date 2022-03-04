@@ -177,7 +177,9 @@ ctx.resetTransform();
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/ddoRhRRV8AuTy1Z82yEj.png", alt="A blank canvas.", width="500", height="500" %}
+<div style="border:solid 1px #ccc;">
+  {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/ddoRhRRV8AuTy1Z82yEj.png", alt="A blank canvas.", width="500", height="500" %}
+</div>  
 
 Perfect! A nice blank canvas. Now let's start drawing a nice horizontal line:
 
