@@ -4,7 +4,7 @@ title: 'Fenced Frame'
 subhead: >
   Securely embed content onto a page without sharing cross-site data.
 description: |
-  Securely embed content onto a page without sharing cross-site data. Learn about the Fenced Frame HTML element and usage examples.
+  Securely embed content onto a page without sharing cross-site data.
 authors:
   - jackjey
   - alexandrawhite
@@ -30,12 +30,11 @@ its embedding context to allow access to cross-site data without sharing it with
 the embedding context. For instance, some Privacy Sandbox APIs may only be 
 [accessible within a fenced frame](#use-cases).
 
-Similarly, any first-party data in the  embedding page cannot be shared with the fenced frame.
+Similarly, any first-party data in the embedding page cannot be shared with the 
+fenced frame.
 
 ```html
-<fencedframe src="https://3rd.party.example">
-  <!-- Content displayed, in a privacy-preserving manner. -->
-</fencedframe>
+<fencedframe src="https://3rd.party.example"></fencedframe>
 ```
 
 ## Strengthen cross-site privacy with storage partitioning
@@ -124,7 +123,7 @@ Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
 (such as a browser tab).
 
-### How do fenced frames compare to iframes?
+### How do fenced frames compare to iframes? {: #compare }
 
 Now that you know what fenced frames will and won’t do, it’s useful to compare to existing iframe features. 
 
@@ -153,18 +152,21 @@ API.
 
 ## How will the Fenced Frame API be used?  {: #use-cases }
 
-Fenced frames will work in combination with other Privacy Sandbox proposal to 
+Fenced frames will work in combination with other Privacy Sandbox proposals to 
 access unpartitioned data. Potential APIs are currently in discussion.
 
-Current candidates for this combination. include:
+Current candidates for this combination include:
 
-* From the [TURTLEDOVE API](https://github.com/WICG/turtledove) family (which is the basis for FLEDGE), fenced frames could work with [Conversion Lift Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement) using [Shared Storage](https://github.com/pythagoraskitty/shared-storage)
-* Another option is to allow fenced frames  to be 
-  [read-only](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#read-only)
-  or to [access unpartitioned 
-  storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage)
+*  From the [TURTLEDOVE API](https://github.com/WICG/turtledove) family (which is 
+   the basis for FLEDGE), fenced frames could work with [Conversion Lift 
+   Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)
+   using [Shared Storage](https://github.com/pythagoraskitty/shared-storage)
+*  Another option is to allow fenced frames to be 
+   [read-only](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#read-only)
+   or [access unpartitioned storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage)
 
-For more details, refer to the [Fenced Frame explainer](https://github.com/shivanigithub/fenced-frame#use-caseskey-scenarios).
+For more details, refer to the [Fenced Frame 
+explainer](https://github.com/shivanigithub/fenced-frame#use-caseskey-scenarios).
 
 ### Example usage
 
@@ -246,11 +248,15 @@ if (window.HTMLFencedFrameElement) {
 
 The Fenced Frame proposal is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
 
-*  **GitHub**: Read the [proposal](https://github.com/shivanigithub/fenced-frame),[raise questions, and follow discussion](https://github.com/shivanigithub/fenced-frame/issues).
+*  **GitHub**: Read the [proposal](https://github.com/shivanigithub/fenced-frame), 
+   [raise questions, and follow 
+   discussion](https://github.com/shivanigithub/fenced-frame/issues).
 *  **Developer support**: Ask questions and join discussions on the
-[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+   [Privacy Sandbox Developer Support 
+   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064)
-*  [Blink Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)
+*  [Blink Intent to 
+   Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)
