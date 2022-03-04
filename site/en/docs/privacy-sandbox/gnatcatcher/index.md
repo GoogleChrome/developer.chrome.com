@@ -58,7 +58,8 @@ server-side changes are necessary to guarantee IP address privacy, which is
 much easier to rollout for sites and users.
 
 {% Aside 'key-term' %}
-_Network Address Translator_ is a process which allows one unique IP address to represent a group of computers.
+_Network Address Translator_ is a process which allows one unique IP address to 
+represent a group of computers.
 {% endAside %}
 
 The browser will use Multiplexed Application Substrate over QUIC Encryption 
@@ -89,13 +90,17 @@ discussion](https://github.com/bslassey/ip-blindness/issues).
 
 ## When will Gnatcatcher be available?
 
-The earliest date of scaled availability represents the earliest date when Gnatcatcher could be made available to sites for broad use on an optional basis. This will not happen before 2023.
+The earliest date of scaled availability represents the earliest date when 
+Gnatcatcher could be made available to sites for broad use on an optional basis. 
+This will not happen before 2023.
 
-At this time, Gnatcatcher is a proposal and has not been implemented for any browser.
+At this time, Gnatcatcher is a proposal and has not been implemented for any 
+browser.
 
 ## Engage and share feedback
 
-The Gnatcatcher proposal is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
+The Gnatcatcher proposal is under active discussion and subject to change in the 
+future. If you try this API and have feedback, we'd love to hear it.
 
 *  **GitHub**: Read the [proposal](https://github.com/bslassey/ip-blindness), 
    [raise questions and participate in discussion](https://github.com/bslassey/ip-blindness/issues).
