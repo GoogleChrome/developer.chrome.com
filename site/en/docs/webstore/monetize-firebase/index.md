@@ -12,28 +12,26 @@ subhead: Start monetizing your extension by following these steps.
 ## Overview
 
 There are many ways to manage users and monetize your Chrome extension. This tutorial will use
-Firebase to manage users and Stripe to process payments.  
-
-In Manifest version 3, the background page is a service worker, therefor it's cannot perform
-Firebase's [popup operations][firebase-auth-chrome-extension] to support federated identity providers. However, you can allow users to
-authenticate with Firebase using their [email address and password][firebase-email-password].
-
+Firebase to manage users and Stripe to process payments. 
+ 
+Firebase Authentication does not support [popup operations][firebase-auth-chrome-extension] for Manifest V3 extensions; meaning, federated identity providers like Google, Facebook and Twitter, are not compatible. However, you
+can authenticate users using their [email addresses and password][firebase-email-password].
+ 
 By the end of this tutorial, your users will be able to do the following:
-
-- Create an account and process payments in
-your web app. 
-- Sign in using their email and password in the Chrome Extension popup.
-- Sign out of their account.
-
+- Create an account and process payments in your web app.
+- Allow users to sign in using their email and password in the extension popup.
+- Allow users to sign out of their account in the popup.
+- Display the paid status of the user in the popup.
+ 
 This guide does not describe how to do the following:
-
 - Process payments directly in the extension popup.
-- Authenticate in the background service worker.
-- Advanced Stripe usage.
+- Advanced uses of Stripe.
+
 
 ## Prerequisites
 
-To receive payments and manage user accounts, you need to set up a Stripe account and configure a Firebase project.
+To receive payments and manage user accounts, you first need to set up a Stripe account and
+configure a Firebase project. The following sections walk through this process.
 
 {% Details %}
 {% DetailsSummary %}
@@ -41,10 +39,10 @@ To receive payments and manage user accounts, you need to set up a Stripe accoun
 {% endDetailsSummary %}
 
 1. Go to the [Stripe dashboard][stripe-dashboard].
-2. Create a Stripe account.
+2. Create a Stripe account, if necessary.
 3. Verify your email.
-4. Enable test mode.
-5. Copy the test Publishable and Secret API keys.
+4. (Optional) Ensure [test mode](https://collectforstripe.com/features/test-mode) is enabled.
+5. Note the test Publishable and Secret API keys.
 
 <!-- TODO Screenshot here -->
 
@@ -64,23 +62,25 @@ Stripe][stripe-get-started].
 
 {% endDetailsSummary %}
 
+#### Create a new peoject
+
 In the [Firebase console][firebase-console], click **Add project**, and name your Firebase project.
 
-**Choose your authentication provider.**
+#### Add email authentication
 
-1. Go to **Authentication** in the left panel.
-1. Click the **Sign-in method** tab.
-1. Enable **Email/Password** sign-in providers.
-<!-- Screenshot? -->
-**Create a Firestore Database.**
+1. Open the **Authentication** section.
+1. In the **Sign-in method** tab, enable **Email/Password** sign-in provider.
 
-1. Go to **Firestore Database** in the left panel.
+#### Create a Firestore Database
+
+1. Open the **Firestore Database** section.
 1. Click **Create database**.
 1. Select **Start in production mode**.
-1. Set the **Cloud Firestore location** > **Done**.
+1. Set the **Cloud Firestore location**
+1. Click **Done** to save the changes.
 <!-- Screenshot? -->
 
-**Upgrade billing plan**
+#### Upgrade billing plan
 
 1. At the end of the left panel, choose **Upgrade**.
 1. Select **Blaze plan** (Pay as you go).
@@ -108,14 +108,14 @@ documentation for assistance.
 
 ### Set up your project
 
-First, you need to download the [source code][firebase-stripe-github-webapp] from Github. To
-use Firebase CLI and configure your project, run the following commands in the terminal:
+First, download the [source code][firebase-stripe-github-webapp] from Github. To
+use [Firebase CLI](https://firebase.google.com/docs/cli) and configure your project, run the following commands in the terminal:
 
 1. Go to the folder where you downloaded the project.
-2. To Install Firebase CLI run: `npm install -g firebase-tools`.
-3. To sign in with your Firebase account, run: `firebase login`.
+1. To Install Firebase CLI run: `npm install -g firebase-tools`.
+1. To sign in with your Firebase account, run: `firebase login`.
     - Login to your account and return to your project.
-4. To add your project run: `firebase use --add`.
+1. To add your project run: `firebase use --add`.
     - Choose your project
 5. To install local dependencies run: `cd functions; npm install; cd -`
 
@@ -124,25 +124,30 @@ use Firebase CLI and configure your project, run the following commands in the t
 Get your [Stripe test API keys][stripe-api-keys]. Open `/public/javascript/app.js` and paste the Publishable key
 in the following line:
 
-`const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;`
+```js
+const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;
+```
 
 To add your secret key to the cloud function, run the following command: 
 
-`$ firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>`
+```bash
+$ firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>
+```
 
 ### Remove Google sign-in
 
-Federated identity providers are not compatible with MV3 extensions. Remove Google sign-in by
-deleting the following line in `public/javascript/app.js`:
+Firebase's federated identity providers are not compatible with MV3 extensions. As such, you will need to remove Google sign-in from the sample project by deleting the following line in `public/javascript/app.js`:
 
-- `firebase.auth.GoogleAuthProvider.PROVIDER_ID,`
+```js
+firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+```
 
 ### Deploy your project 
 
 To deploy your project, run the following command `$ firebase deploy`. This command performs the following tasks:
 
-- Sends all the files in the public directory to Hosting so that your website is available.
-- Sends the code in the functions directory to Cloud Functions for Firebase.
+- Sends all the files in the public directory to **Firebase Hosting** so that your website is available.
+- Sends the code in the functions directory to **Cloud Functions** for Firebase.
 - Sets security rules (`firestore.rules`) on your Firestore database. These
 rules only allow users to read and write their own payments and payment methods.
 
@@ -150,14 +155,15 @@ rules only allow users to read and write their own payments and payment methods.
 
 Go to your payments app's URL at _your-firebase-project-id.web.app_ and verify that the following features work: 
 
-* Sign in with your Google account or email.
-* Add a [Stripe test card][stripe-test-card].
-* Select one of your cards.
-* Sign out when you are done.
+- Create an account with your email and password.
+- Add a [Stripe test card][stripe-test-card].
+- Select one of your cards.
+- Choose an amount and process a payment.
+- Sign out when you are done.
 
 <!-- TODO: Screenshot -->
 
-To view processed payments, follow these steps:
+To view processed payments in the Firebase console, follow these steps:
 
 * Open your Firebase project in the [Firebase dashboard][firebase-console].
 * Go to Firestore **Database** > **Data**.
@@ -168,7 +174,10 @@ Now that you have created and configured your web app, you are ready to build yo
 
 {% Aside %}
 
-For a more advanced Stripe/Firebase integration in your web app, see the Firebase Stripe Extension [codelab tutorial][codelab-stripe-firebase-extension].
+For a more advanced Stripe/Firebase integration in your web app, check out the following [Firebase Extensions](https://firebase.google.com/docs/extensions):
+
+-  [Stripe subscriptions Firebase extension codelab][codelab-stripe-firebase-extension]
+- [Stripe Firestore payments](https://firebase.google.com/products/extensions/stripe-firestore-stripe-payments)
 
 {% endAside %}
 
@@ -189,6 +198,11 @@ Create a file called `manifest.json` and include the following code:
   "action": {
     "default_popup": "popup.html"
   },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage"],
 }
 ```
 
@@ -207,10 +221,14 @@ Create a file called `popup.html` and include the following code:
   </head>
   <body>
     <h1 id="authState">Checking auth state...</h1>
+    <h2 id="paid">Free account</h2>
     <input type="email" id="email" placeholder="Email" />
     <input type="password" id="password" placeholder="Password" />
-    <button id="signIn">Sign In</button>
-    <button id="signOut">Sign Out</button>
+    <div style="display: block;">
+      <button id="sign-in">Sign In</button>
+      <button id="sign-out">Sign Out</button>
+    </div>
+    
     <p>Not registered? <a href="https://payments-with-firebase-example.web.app/" target="_blank">Create an account</a></p>
     <script src="popup.js" type="module"></script>
   </body>
@@ -224,12 +242,12 @@ Replace `https://payments-with-firebase-example.web.app/` with your web app's ur
 Create a file called `popup.js` and include the following code:
 
 ```js
+const authState = document.getElementById("auth-state");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const signin = document.getElementById("signIn");
-const signout = document.getElementById("signOut");
-
-
+const payState = document.getElementById("paid")
+const signInButton = document.getElementById("sign-in");
+const signOutButton = document.getElementById("sign-out");
 ```
 
 {% include 'partials/extensions/reusing-prod-extension-id.md' %}
@@ -238,20 +256,47 @@ const signout = document.getElementById("signOut");
 
 Take the following steps to configure Firebase to your extension:
 
-1. Download the following ESM firebase files:
+### Get ESM Firebase files
+
+1. Download the following ESM Firebase files to your project:
     - [`firebase-app.js`][esm-firebase-app].
     - [`firebase-auth.js`][esm-firebase-auth].
     - [`firebase-firestore.js`][esm-firebase-firestore].
 
-1. Get your Firebase configuration code:
-      1. Select your project in the [Firebase Console][firebase-console].
-      2. Go to ⚙️ > **Project Settings**.
-      3. In the **Your apps** card, select the nickname of the app.
-      4. Copy the `firebaseConfig`.
+    {% Aside %}
 
-1. To initialize Firebase add the following code to `popup.js`:
+    To download the latest version of these Firebase files, check the [Firebase Javascript SDK release notes](https://firebase.google.com/support/release-notes/js) and change the version in the URL to the latest version.
 
-      ```js
+    {% endAside %}
+
+2. Update the import statements at the top of `firebase-auth.js` and `firebase-firestore.js` to reference the local version of `firebase-app.js`. For example, the following `import` points to a local file:
+
+    ```js
+    import {
+      _getProvider,
+      _registerComponent,
+      SDK_VERSION,
+      registerVersion,
+      getApp,
+    } from "./firebase-app.js";
+    ```
+### Add an app to your Firebase project 
+
+1. Select your project in the [Firebase Console][firebase-console].
+1. Go to ⚙️ > **Project Settings**.
+1. At the end of the **General tab**, create a new web app.
+1. Register your app and add Firebase SDK.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/dEGKBRdWOCP70d3qV0lj.png", alt="Add app in the Firebase Project Settings", 
+width="600", height="190" %}
+
+### Initialize Firebase
+
+1. Copy your web app's Firebase configuration code `firebaseConfig`.
+
+1. Create a new file named `background.js` and add the following code:
+
+      ```js   
       import { initializeApp } from "./firebase-app.js";
       import {
         getAuth,
@@ -260,9 +305,7 @@ Take the following steps to configure Firebase to your extension:
         signOut,
       } from "./firebase-auth.js";
 
-      import { initializeApp } from "./firebase-app.js";
-
-       ...
+      import { collection, query, where, getDocs, getFirestore } from "./firebase-firestore.js"
 
        // Your Firebase configuration
       const firebaseConfig = {
@@ -274,14 +317,14 @@ Take the following steps to configure Firebase to your extension:
         appId: "YOUR-APP-ID",
       };
 
+      // Initialize Firebase
       initializeApp(firebaseConfig);
       const auth = getAuth();
+      const db = getFirestore();
 
       ```
 
 Replace the placeholders with the value of each key from your Firebase application.
-
-<!-- Screenshot -->
 
 ## Display the sign-in state
 
