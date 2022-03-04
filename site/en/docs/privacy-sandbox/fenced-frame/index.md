@@ -137,8 +137,7 @@ Now that you know what fenced frames will and won’t do, it’s useful to compa
 | Opaque source (`urn:uuid`) | No | Yes |
 | Access to unpartitioned storage | No | Yes |
 
-Fenced frames elect to support fewer features than iframes, as a way of 
-preserving privacy.
+Fenced frames support fewer features than iframes to preserve privacy.
 
 ### Will fenced frames replace iframes?
 
