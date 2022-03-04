@@ -31,9 +31,9 @@ Rounded rectangles: the cornerstone of the internet, of computing, nigh, of civi
 In all seriousness, rounded rectangles are extremely useful: as buttons, chat bubbles, thumbnails, speech bubbles, you name it. It's always been possible to make a rounded rectangle in Canvas2D, it's just been a bit messy:
 
 ```js
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = “magenta”;
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'magenta';
 
   const top = 10;
   const left = 10;
@@ -143,7 +143,7 @@ These attributes all match their CSS counterparts with the same names.
 ## Part 2: ergonomic tweaks
 
 Previously, some things with Canvas2D were possible, but needlessly complicated to implement. 
-Here are some quality-of-life improvements for javascript developers who want to use Canvas2D:
+Here are some quality-of-life improvements for JavaScript developers who want to use Canvas2D:
 
 ### context.reset()
 
@@ -189,7 +189,7 @@ canvas.width = canvas.width;
 
 Why is this so silly? Why is this so hard?
 
-Well, it's not any more. With the new api we have the simple, elegant, beautiful groundbreaking:
+Well, it's not any more. With the new API we have the simple, elegant, beautiful groundbreaking:
 
 ```js
 ctx.reset();
@@ -199,7 +199,7 @@ Sorry that took so long.
 
 ### Filters
 
-SVG filters are a world unto themselves. If they're new to you I highly recommend reading "[The Art Of SVG Filters And Why It Is Awesome](https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/)", which shows some of their amazing potential.
+SVG filters are a world unto themselves. If they're new to you I highly recommend reading [The Art Of SVG Filters And Why It Is Awesome](https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/), which shows some of their amazing potential.
 
 SVG style filters are already available for Canvas2D! You just have to be willing to pass the filter as a url pointing to another SVG filter element on the page: 
 
@@ -247,17 +247,24 @@ But, what if you wanted to do the above but stay within JavaScript and not mess 
 
 Easy as pie! Try it and play with the parameters [in the demo here](https://glitch.com/edit/#!/pretty-dent-titanoceratops).
 
+{% Aside %}
+The app [SVGcode](https://svgco.de/), a PWA for converting raster images to SVGs,
+uses a dynamically created <code>CanvasFilter</code> for the task of
+posterization (more background in the [accompanying article](https://web.dev/svgcode/)). Be sure to check out the app and the related
+[source code](https://github.com/tomayac/SVGcode/blob/ef037e33d05b17f43b32cfb2cf039145aeee6104/src/js/preprocessworker.js#L89-L113).
+{% endAside %}
+
 ## Part 3: performance improvements
 
 With the New Canvas2D API, we also wanted to improve performance where possible. We added a couple features to give developers finer-grained control of their websites and allow for the slickest possible framerates:
 
-### Will Read Frequently
+### Will read frequently
 
 Use `getImageData()` to read pixel data back from a canvas. It can be very slow. The new API gives you a way of explicitly marking a canvas for reading back (for generative effects, for example). This allows you to optimize things under the hood and keep canvas fast for a larger variety of use cases. This feature has been in Firefox for a while and we're finally making it part of the canvas spec.
 
 ```js
 const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d', {‘willReadFrequently': true});
+const ctx = canvas.getContext('2d', {'willReadFrequently': true});
 ```
 
 ### Context loss
