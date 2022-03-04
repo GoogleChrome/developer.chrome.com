@@ -27,10 +27,10 @@ This document outlines a proposal for a new HTML element: fenced frames.
 Fenced frame (`<fencedframe>`) is a proposed HTML element for embedded content, 
 similar to an iframe. Unlike iframes, a fenced frame restricts communication with 
 its embedding context to allow access to cross-site data without sharing it with 
-the embedding context. For instance, some Privacy Sandbox APIs may only be 
-[accessible within a fenced frame](#use-cases).
+the embedding context. Some Privacy Sandbox APIs may only be  [accessible within a 
+fenced frame](#use-cases).
 
-Similarly, any first-party data in the embedding page cannot be shared with the 
+Similarly, any first-party data in the embedding context cannot be shared with the 
 fenced frame.
 
 ```html
@@ -48,12 +48,12 @@ is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
-Currently, Chrome teams are working on [storage 
+Chrome teams are working on [storage 
 partitioning](https://github.com/privacycg/storage-partitioning), which separates 
-browser storage per-site. This means sites with the same eTLD+1, such as  
-`http://example.com` and `http://this.example.com`, could share browser storage. 
-Sites that share the same port but have different hostnames, like 
-`http://example.com:443` and `http://this.com:443`, won’t share browser storage.
+browser storage per-site.  This means iframes embedded on sites with the same 
+eTLD+1, such as `frame.example` and `site.example`, could share browser storage. 
+Iframes embedded on sites that have different hostnames, such as `frame.example` 
+and `site.other`, won’t share browser storage.
 
 Storage partitioning will be applied to standard storage APIs including
 LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
@@ -61,16 +61,17 @@ across first-party storage will be significantly reduced.
 
 ### How do fenced frames work with cross-ste data?
 
-The fenced frame element is a [Privacy Sandbox
-proposal](/docs/privacy-sandbox/overview/) which suggests top-level sites should 
-partition data. Many of the Privacy Sandbox proposals aim to satisfy cross-site 
-use cases without third-party cookies or other tracking mechanisms. For example: 
+Fenced Frame is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
+which suggests top-level sites should partition data. Many Privacy Sandbox
+proposals aim to satisfy cross-site use cases without third-party cookies or other
+tracking mechanisms. For example: 
 
 *  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
    in a privacy-preserving manner.
-*  [FedCM](https://github.com/fedidcg/FedCM) for secure single sign-on (SSO).
+*  [Shared Storage](https://github.com/pythagoraskitty/shared-storage) allows
+   access to unpartitioned cross-site data in a secure environment.
 
-For example, let's consider how fenced frames could work with the 
+Let's consider how fenced frames could work with the 
 [FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's interests 
 are registered on an advertiser's site in [interest 
 groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that 
