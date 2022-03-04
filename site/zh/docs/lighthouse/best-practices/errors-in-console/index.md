@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 将浏览器错误记录到控制台
 description: 了解如何识别和解决浏览器错误。
-web_lighthouse:
-  - errors-in-console
 date: 2019-05-02
 updated: 2019-08-28
 ---

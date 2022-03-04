@@ -436,7 +436,7 @@ This has two main benefits:
 
 - It makes the underlying browser behavior **transparent** to the parties that will receive the reports
   (typically, adtechs).
-- It's helpful fo a future where the API would be supported **across
+- It's helpful for a future where the API would be supported **across
   browsers**: different browsers may decide to apply different levels of noise depending on their
   privacy goals, and the parties that will handle the report will need visibility into this.
 

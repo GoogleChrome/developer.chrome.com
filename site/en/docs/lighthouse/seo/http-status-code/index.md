@@ -5,8 +5,6 @@ description: |
   Learn about the "Page has unsuccessful HTTP status code" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - http-status-code
 ---
 
 Servers provide a three-digit [HTTP status code](https://developer.mozilla.org/docs/Web/HTTP/Status)

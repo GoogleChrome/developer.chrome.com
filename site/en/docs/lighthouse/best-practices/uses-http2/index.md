@@ -4,8 +4,6 @@ title: Does not use HTTP/2 for all of its resources
 description: |
   Learn why HTTP/2 is important for your page's load time and how to enable
   HTTP/2 on your server.
-web_lighthouse:
-  - uses-http2
 date: 2019-05-02
 updated: 2019-08-28
 ---

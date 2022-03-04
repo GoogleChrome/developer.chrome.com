@@ -4,8 +4,6 @@ title: Mostrar las imágenes con una relación de aspecto incorrecta
 description: |2
 
   Aprenda a mostrar imágenes receptivas con la relación de aspecto correcta.
-web_lighthouse:
-  - image-aspect-ratio
 date: 2019-05-02
 updated: 2020-04-29
 ---

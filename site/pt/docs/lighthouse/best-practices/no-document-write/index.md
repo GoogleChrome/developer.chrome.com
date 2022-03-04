@@ -4,8 +4,6 @@ title: Usa document.write ()
 description: |2
 
   Aprenda como acelerar o tempo de carregamento de sua página evitando document.write ().
-web_lighthouse:
-  - no-document-write
 date: 2019-05-02
 updated: 2020-06-04
 ---

@@ -4,8 +4,6 @@ title: A página não tem o doctype HTML, acionando assim o modo quirks
 description: |2-
 
   Saiba como se certificar de que sua página não acione o modo quirks em navegadores mais antigos.
-web_lighthouse:
-  - doctype
 date: 2019-05-02
 updated: 2019-08-28
 ---

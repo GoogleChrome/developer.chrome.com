@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Страница включает интерфейсные библиотеки JavaScript с известными уязвимостями безопасности
 description: Узнайте, как сделать свою страницу более безопасной, заменив библиотеки JavaScript, которые имеют известные уязвимости.
-web_lighthouse:
-  - no-vulnerable-libraries
 date: 2019-05-02
 updated: 2020-06-04
 ---

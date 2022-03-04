@@ -2,7 +2,23 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)
+* [Application パネル内に新しく追加されたReporting API ペイン](/ja/blog/new-in-devtools-99/#reporting-api)
+* [Recorder パネルに要素が可視／クリック可能になるまで待機する機能が追加](/ja/blog/new-in-devtools-99/#recorder)
+* [コンソールのスタイル設定、フォーマット、フィルタの改善](/ja/blog/new-in-devtools-99/#console)
+* [ソースマップファイルを使用した Chrome 拡張機能のデバッグ](/ja/blog/new-in-devtools-99/#extension)
+* [Sources パネルのソースフォルダツリーの改善](/ja/blog/new-in-devtools-99/#source-tree)
+* [Sources パネルにワーカーのソースファイルを表示](/ja/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome の自動ダークテーマの更新](/ja/blog/new-in-devtools-99/#auto-dark-mode)
+* [タッチ操作で使いやすいカラーピッカーとスプリットペイン](/ja/blog/new-in-devtools-99/#touch-friendly)
+* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc)
+
+
 ### Chrome 98 {: #chrome98 }
+
 * [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
 * [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
 * [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)

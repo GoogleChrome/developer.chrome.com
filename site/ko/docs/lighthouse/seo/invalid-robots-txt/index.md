@@ -6,8 +6,6 @@ description: |2
   "robots.txt가 유효하지 않음" Lighthouse 감사에 대해 알아보세요.
 date: 2019-05-02
 updated: 2020-05-29
-web_lighthouse:
-  - robots-txt
 ---
 
 `robots.txt` 파일은 검색 엔진에 사이트 페이지 중 크롤링할 수 있는 페이지를 알려줍니다. 잘못된 `robots.txt` 구성은 두 가지 유형의 문제를 일으킬 수 있습니다.

@@ -2,6 +2,21 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+
+### Chrome 99 {: #chrome99 }
+
+* [Limitando requests de WebSocket](/pt/blog/new-in-devtools-99/#websocket)
+* [Novo painel API de relatórios no painel Aplicativo](/pt/blog/new-in-devtools-99/#reporting-api)
+* [Suporte para esperar até que o elemento esteja visível/clicável no painel Gravação](/pt/blog/new-in-devtools-99/#recorder)
+* [Melhor estilização, formatação e filtragem no console](/pt/blog/new-in-devtools-99/#console)
+* [Debug de extensões do Chrome com arquivos de sourcemap](/pt/blog/new-in-devtools-99/#extension)
+* [Árvore de pastas aprimorada no painel Fontes](/pt/blog/new-in-devtools-99/#source-tree)
+* [Exibição arquivos fontes de workers no painel Origens](/pt/blog/new-in-devtools-99/#worker-sourcemap)
+* [Atualizações na funcionalidade de tema escuro automático do Chrome](/pt/blog/new-in-devtools-99/#auto-dark-mode)
+* [Seletor de cores amigável ao toque e painel dividido](/pt/blog/new-in-devtools-99/#touch-friendly)
+* [Destaques diversos](/pt/blog/new-in-devtools-99/#misc)
+
+
 ### Chrome 98 {: #chrome98 }
 
 * [Prévia de funcionalidade: Árvore de acessibilidade da página](/pt/blog/new-in-devtools-98/#a11y-tree)
@@ -28,19 +43,19 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 ### Chrome 96 {: #chrome96 }
 
-* [Prévia de funcionalidade: novo painel de visão geral CSS](/blog/new-in-devtools-966/#css-overview)
-* [Experiência de edição e cópia de comprimento de CSS foi restaurada e aprimorada](/blog/new-in-devtools-966/#length)
-* [Emule o recurso de prefers-contrast para CSS media](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emule o recurso Auto Dark Theme do Chrome](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copie as declarações como JavaScript no painel Estilos](/blog/new-in-devtools-96/#copy-as-js)
-* [Nova guia Payload no painel Rede](/blog/new-in-devtools-96/#payload)
-* [Melhoria na exibição de propriedades no painel Propriedades](/blog/new-in-devtools-96/#properties)
-* [Opção para ocultar erros CORS no console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Visualização e avaliação adequadas de objetos `Intl` no Console](/blog/new-in-devtools-96/#intl)
-* [Consistência em stack traces assíncronos](/blog/new-in-devtools-96/#async)
-* [Mantida a barra lateral do console](/blog/new-in-devtools-96/#console-sidebar)
-* [Obsolescência do Painel de cache no painel do Aplicativo](/blog/new-in-devtools-96/#app-cache)
-* [[Experimental] Novo painel da API de relatórios no painel do aplicativo](/blog/new-in-devtools-96/#reporting-api)
+* [Prévia de funcionalidade: novo painel de visão geral CSS](/pt/blog/new-in-devtools-966/#css-overview)
+* [Experiência de edição e cópia de comprimento de CSS foi restaurada e aprimorada](/pt/blog/new-in-devtools-966/#length)
+* [Emule o recurso de prefers-contrast para CSS media](/pt/blog/new-in-devtools-96/#prefers-contrast)
+* [Emule o recurso Auto Dark Theme do Chrome](/pt/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copie as declarações como JavaScript no painel Estilos](/pt/blog/new-in-devtools-96/#copy-as-js)
+* [Nova guia Payload no painel Rede](/pt/blog/new-in-devtools-96/#payload)
+* [Melhoria na exibição de propriedades no painel Propriedades](/pt/blog/new-in-devtools-96/#properties)
+* [Opção para ocultar erros CORS no console](/pt/blog/new-in-devtools-96/#hide-cors-errors)
+* [Visualização e avaliação adequadas de objetos `Intl` no Console](/pt/blog/new-in-devtools-96/#intl)
+* [Consistência em stack traces assíncronos](/pt/blog/new-in-devtools-96/#async)
+* [Mantida a barra lateral do console](/pt/blog/new-in-devtools-96/#console-sidebar)
+* [Obsolescência do Painel de cache no painel do Aplicativo](/pt/blog/new-in-devtools-96/#app-cache)
+* [[Experimental] Novo painel da API de relatórios no painel do aplicativo](/pt/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 

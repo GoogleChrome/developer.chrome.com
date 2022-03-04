@@ -6,7 +6,7 @@ authors:
 date: 2022-01-13
 updated: 2022-01-13
 description:
-  "Full-page Accessibility tree, more precise changes in the Changes tab, and more."
+  "전체 페이지 접근성 트리, 변경 탭에서의 더욱 정교한 변화들 및 다른 새로운 기능들"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JBJjMJE3vqBrIPkPUt7D.jpg'
 alt: ''
 tags:
@@ -108,7 +108,7 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 
 
 <!-- ## New Properties pane filter {: #properties } -->
-## 새로 추가된 속성 창 필터
+## 새로 추가된 속성 창 필터 {: #properties }
 <!-- If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.  -->
 **속성** 창의 특정 속성에 초점을 맞추고 싶으시다면, 배포판에 새로 추가된 **필터** 입력창에 프로퍼티의 이름이나 값을 기입하면 됩니다.
 
@@ -257,7 +257,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 - **네트워크 검색** 쿼리에서 임의의 문자(예: `,`, `.`)를 지원합니다.
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->
-[실험실 기능] Reporting API 창에서의 엔드포인트 {: #reporting-api }
+### [실험실 기능] Reporting API 창에서의 엔드포인트 {: #reporting-api }
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
 실험실 기능을 사용하려면 **설정** > **실험** > **Enable Reporting API panel in the Application panel** 항목 옆의 체크박스를 체크합니다.

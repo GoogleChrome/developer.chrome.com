@@ -2,20 +2,35 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 98 {: #chrome98 }
-* [Preview feature: Full-page accessibility tree](/ko/blog/new-in-devtools-98/#a11y-tree)
-* [More precise changes in the Changes tab](/ko/blog/new-in-devtools-98/#changes)
-* [Set longer timeout for user flow recording](/ko/blog/new-in-devtools-98/#recorder-timeout)
-* [Ensure your pages are cacheable with the Back/forward cache tab](/ko/blog/new-in-devtools-98/#bfcache)
-* [New Properties pane filter](/ko/blog/new-in-devtools-98/#properties)
-* [Emulate the CSS forced-colors media feature](/ko/blog/new-in-devtools-98/#forced-colors)
-* [Show rulers on hover command](/ko/blog/new-in-devtools-98/#show-rulers)
-* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/ko/blog/new-in-devtools-98/#flexbox-editor)
-* [New keyboard shortcuts to replay XHR and expand all search results](/ko/blog/new-in-devtools-98/#shortcuts)
-* [Lighthouse 9 in the Lighthouse panel](/ko/blog/new-in-devtools-98/#lighthouse)
-* [Improved Sources panel](/ko/blog/new-in-devtools-98/#sources)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-98/#misc)
-* [[Experimental] Endpoints in the Reporting API pane](/ko/blog/new-in-devtools-98/#reporting-api) -->
+
+<!-- ### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/ko/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/ko/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/ko/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/ko/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/ko/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/ko/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/ko/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/ko/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/ko/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-99/#misc) -->
+
+
+### Chrome 98 {: #chrome98 }
+* [미리보기 기능: 전체 페이지 접근성 트리](/ko/blog/new-in-devtools-98/#a11y-tree)
+* [변경 탭에서의 더욱 정교한 변화들](/ko/blog/new-in-devtools-98/#changes)
+* [유저 플로우 레코딩을 위한 더 긴 타임아웃 설정](/ko/blog/new-in-devtools-98/#recorder-timeout)
+* [뒤로/앞으로 캐쉬 탭을 이용해 페이지가 캐쉬 가능한지 확인하기](/ko/blog/new-in-devtools-98/#bfcache)
+* [새로 추가된 속성 창 필터](/ko/blog/new-in-devtools-98/#properties)
+* [CSS의 forced-colors 미디어 기능 에뮬레이팅](/ko/blog/new-in-devtools-98/#forced-colors)
+* [마우스를 가져가면 눈금자 표시](/ko/blog/new-in-devtools-98/#show-rulers)
+* [Flexbox 편집기에서의 `row-reverse` and `column-reverse` 지원](/ko/blog/new-in-devtools-98/#flexbox-editor)
+* [XHR 다시 재생 및 모든 검색 결과 표시를 위한 키보드 단축키 추가](/ko/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse panel의 Lighthouse 9](/ko/blog/new-in-devtools-98/#lighthouse)
+* [소스 패널에서의 개선점들](/ko/blog/new-in-devtools-98/#sources)
+* [기타 하이라이트](/ko/blog/new-in-devtools-98/#misc)
+* [[실험실 기능] Reporting API 창에서의 엔드포인트](/ko/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }

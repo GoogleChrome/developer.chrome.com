@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: Use ouvintes passivos para melhorar o desempenho de rolagem
 description: Aprenda como melhorar a responsividade da rolagem da página, evitando ouvintes de eventos passivos.
-web_lighthouse:
-  - uses-passive-event-listeners
 date: 2019-05-02
 updated: 2019-08-28
 ---

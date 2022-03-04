@@ -4,8 +4,6 @@ title: document.write() 사용
 description: |2
 
   document.write()를 피하여 페이지 로드 시간을 단축하는 방법을 알아보세요.
-web_lighthouse:
-  - no-document-write
 date: 2019-05-02
 updated: 2020-06-04
 ---

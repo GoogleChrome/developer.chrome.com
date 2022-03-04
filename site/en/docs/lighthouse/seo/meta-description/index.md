@@ -5,8 +5,6 @@ description: |
   Learn about the "Document does not have a meta description" Lighthouse audit.
 date: 2019-05-02
 updated: 2021-04-08
-web_lighthouse:
-  - meta-description
 ---
 
 The `<meta name="description">` element provides a summary of a page's content

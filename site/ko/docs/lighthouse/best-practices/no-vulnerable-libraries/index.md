@@ -6,8 +6,6 @@ description: |2
   JavaScript 라이브러리를 교체하여 페이지를 더 안전하게 만드는 방법 알아보기
 
   알려진 취약점이 있습니다.
-web_lighthouse:
-  - 취약하지 않은 라이브러리
 date: 2019-05-02
 updated: 2020-06-04
 ---

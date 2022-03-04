@@ -5,8 +5,6 @@ description: |
   Learn about the "Document uses plugins" Lighthouse audit.
 date: 2019-05-02
 updated: 2019-08-21
-web_lighthouse:
-  - plugins
 ---
 
 Search engines often can't index content that relies on browser plugins, such as

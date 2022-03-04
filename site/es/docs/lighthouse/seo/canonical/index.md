@@ -4,8 +4,6 @@ title: El documento no tiene un rel=canonical válido
 description: Conozca la auditoría de Lighthouse "El documento no tiene un rel=canonical válido".
 date: 2019-05-02
 updated: 2019-08-20
-web_lighthouse:
-  - canónico
 ---
 
 Cuando varias páginas tienen contenido similar, los motores de búsqueda las consideran versiones duplicadas de la misma página. Por ejemplo, las versiones de escritorio y móviles de una página de producto a menudo se consideran duplicadas.

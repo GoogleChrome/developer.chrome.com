@@ -2,8 +2,6 @@
 layout: 'layouts/doc-post.njk'
 title: 页面缺少 HTML 文档类型，因此触发了 Quirks 模式
 description: 了解如何确保页面不会触发旧版浏览器中的 Quirks 模式。
-web_lighthouse:
-  - 文档类型
 date: 2019-05-02
 updated: 2019-08-28
 ---
