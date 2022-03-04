@@ -17,7 +17,7 @@ This document outlines a proposal for a new HTML element: fenced frames.
 
 *  [Fenced Frame proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
-*  This feature has not yet been implemented in any browser.
+*  This feature is [available behind a Chrome flag](#try-fenced-frames).
 *  The [Privacy Sandbox 
    timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) 
    provides implementation timings for fenced frames and other proposals.
@@ -50,11 +50,10 @@ and replace with more privacy-preserving variants.
 
 Currently, Chrome teams are working on [storage 
 partitioning](https://github.com/privacycg/storage-partitioning), which separates 
-browser storage [per-site](https://web.dev/same-site-same-origin/). This means
-sites with the same eTLD+1, such as  `http://example.com` and
-`http://this.example.com`, could share browser storage. Sites that share the same
-port but have different hostnames, like `http://example.com:443` and
-`http://this.com:443`, won’t share browser storage.
+browser storage per-site. This means sites with the same eTLD+1, such as  
+`http://example.com` and `http://this.example.com`, could share browser storage. 
+Sites that share the same port but have different hostnames, like 
+`http://example.com:443` and `http://this.com:443`, won’t share browser storage.
 
 Storage partitioning will be applied to standard storage APIs including
 LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
@@ -217,7 +216,7 @@ The `<fencedframe>` element is still in  experimental mode, so it is currently
 supported from Chrome 97 onwards. At this time, it's [not supported by other 
 browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 
-### Try the Fenced Frame API
+### Try fenced frames
 
 [Use Chrome
 flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to
