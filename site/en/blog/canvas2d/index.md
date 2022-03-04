@@ -52,8 +52,9 @@ top + height, radius);
   ctx.lineTo(left + radius, top + height);
   ctx.arcTo(left, top + height, left, top + height - radius, radius)
   ctx.lineTo(left, top + radius);
-  ctx.arcTo(left, top, left + radius, top, radius)
-  ctx.stroke();
+  ctx.arcTo(left, top, left + radius, top, radius);
+  //ctx.stroke(); 
+  ctx.fill(); // fill in magneta color (style) as seen in image example.
 ```
 
 All this was necessary for a modest, simple rounded rectangle:
