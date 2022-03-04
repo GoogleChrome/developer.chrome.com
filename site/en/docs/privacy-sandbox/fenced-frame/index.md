@@ -13,6 +13,8 @@ date: 2022-02-28
 
 ## Implementation status
 
+This document outlines a proposal for a new HTML element: fenced frames.
+
 *  [Fenced Frame proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 *  This feature has not yet been implemented in any browser.
@@ -22,11 +24,13 @@ date: 2022-02-28
 
 ## What are fenced frames and why do we need them?
 
-Fenced frame (`<fencedframe>`) is a proposed  HTML element for embedded content, 
-similar to an iframe. Unlike iframes, a fenced frame restricts communication 
-with its embedding context to allow access to cross-site data without it being 
-shared with the embedding context. Similarly, any first-party data in the 
-embedding page cannot be shared with the fenced frame.
+Fenced frame (`<fencedframe>`) is a proposed HTML element for embedded content, 
+similar to an iframe. Unlike iframes, a fenced frame restricts communication with 
+its embedding context to allow access to cross-site data without sharing it with 
+the embedding context. For instance, some Privacy Sandbox APIs may only be 
+[accessible within a fenced frame](#use-cases).
+
+Similarly, any first-party data in the  embedding page cannot be shared with the fenced frame.
 
 ```html
 <fencedframe src="https://3rd.party.example">
@@ -36,29 +40,30 @@ embedding page cannot be shared with the fenced frame.
 
 ## Strengthen cross-site privacy with storage partitioning
 
-While browsing the web, you've probably looked at products on one site, and then
+While browsing the web, you've probably looked at products on one site, and then 
 you've seen them appear again in an ad on a completely different site.
 
 Today, this advertising technique is achieved primarily through tracking 
 technology that uses third-party cookies to share information across sites. This 
-is technology which [Chrome has committed to phase
-out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/) and replace with more privacy-preserving variants.
+is technology which [Chrome has committed to phase 
+out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
+and replace with more privacy-preserving variants.
 
-Currently, Chrome teams are working on [storage
-partitioning](https://github.com/privacycg/storage-partitioning), which
-separates browser storage [per-site](https://web.dev/same-site-same-origin/).
-This means sites with the same eTLD+1, such as `http://example.com` and
-`http://this.example.com`, could share browser storage. Sites that share the 
-same port but have different hostnames, like `http://example.com:443` and 
+Currently, Chrome teams are working on [storage 
+partitioning](https://github.com/privacycg/storage-partitioning), which separates 
+browser storage [per-site](https://web.dev/same-site-same-origin/). This means
+sites with the same eTLD+1, such as  `http://example.com` and
+`http://this.example.com`, could share browser storage. Sites that share the same
+port but have different hostnames, like `http://example.com:443` and
 `http://this.com:443`, won’t share browser storage.
 
-Storage partitioning will be applied to standard storage APIs including 
-LocalStorage, IndexedDB, and cookies. In a partitioned world, information 
-leakage across first-party storage will be significantly reduced.
+Storage partitioning will be applied to standard storage APIs including
+LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
+across first-party storage will be significantly reduced.
 
 ### How do fenced frames work with cross-ste data?
 
-The fenced frame element is a [Privacy Sandbox 
+The fenced frame element is a [Privacy Sandbox
 proposal](/docs/privacy-sandbox/overview/) which suggests top-level sites should 
 partition data. Many of the Privacy Sandbox proposals aim to satisfy cross-site 
 use cases without third-party cookies or other tracking mechanisms. For example: 
@@ -68,12 +73,12 @@ use cases without third-party cookies or other tracking mechanisms. For example:
 *  [FedCM](https://github.com/fedidcg/FedCM) for secure single sign-on (SSO).
 
 For example, let's consider how fenced frames could work with the 
-[FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's 
-interests are registered on an advertiser's site in [interest 
-groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads 
-that may be of interest to the user. Then, on a separate site (known as a 
-"publisher"), the ads registered in relevant interest groups are auctioned and 
-the winning ad is displayed in a fenced frame.
+[FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's interests 
+are registered on an advertiser's site in [interest 
+groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that 
+may be of interest to the user. Then, on a separate site (known as a "publisher"), 
+the ads registered in relevant interest groups are auctioned and the winning ad is 
+displayed in a fenced frame.
 
 If the publisher displays the winning ad in an iframe and the script can read 
 the iframe's `src` attribute, the publisher can infer information about the 
@@ -85,9 +90,9 @@ advertiser. The publisher could not access this information.
 
 ## How fenced frames work
 
-A fenced frame will fetch the results of the FLEDGE API ad auction and display
-the winning ad. The information retrieved from FLEDGE API isn't the URL of the
-ads itself, but will be an [opaque
+A fenced frame will fetch the results of the FLEDGE API ad auction and display the 
+winning ad. The information retrieved from FLEDGE API isn't the URL of the ads 
+itself, but will be an [opaque 
 source](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/opaque_src.md)
 (this specific proposal is a work in-progress).
 
@@ -100,7 +105,7 @@ location-independent identifiers, which means they cannot be used to locate a
 resource (such as an ad creative).
 {% endAside %}
 
-Opaque sources will allow your site to display ads on a site without revealing 
+Opaque sources allow your site to display ads on a site without revealing 
 the ad source URL to the site owner.
 
 It's not enough to just be able to display ads. If the ad can `postMessage` to
@@ -123,7 +128,7 @@ context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing
 
 Now that you know what fenced frames will and won’t do, it’s useful to compare to existing iframe features. 
 
-| Feature | iframe | Fenced frame |
+| Feature | `<iframe>` | `<fencedframe>` |
 | ----------- | ----------- | ----------- |
 | Embed content | Yes | Yes |
 | Embedded content can access embedding context DOM | Yes | No |
@@ -146,7 +151,7 @@ Friendly iframes, iframes which share the same source as the top-level page, are
 considered trusted content and may value shared communication with the Messaging 
 API.
 
-## How will the Fenced Frame API be used?
+## How will the Fenced Frame API be used?  {: #use-cases }
 
 Fenced frames will work in combination with other Privacy Sandbox proposal to 
 access unpartitioned data. Potential APIs are currently in discussion.
@@ -208,8 +213,8 @@ specifications](https://github.com/shivanigithub/fenced-frame).
 ## Browser support
 
 The `<fencedframe>` element is still in  experimental mode, so it is currently 
-supported from Chrome 97 onwards. At this time, it is not supported by other 
-browsers.
+supported from Chrome 97 onwards. At this time, it's [not supported by other 
+browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 
 ### Try the Fenced Frame API
 
@@ -219,12 +224,13 @@ enable the Fenced Frame API at `chrome://flags/#enable-fenced-frames`.
 
 {% Img src="image/PV7xjXdOKHP8LWt9XhstsToJeK82/AeU7fj1b3I9dfnqkDc6h.png", alt="In Chrome Experiments, set Enabled for the flag named Enable the Fenced frame element", width="800", height="211" %}
 
-There are multiple choices in the dialog. In most cases, you should select
-**Enable**.
+There are multiple choices in the dialog. We strongly recommend you should select 
+**Enable**, which allows Chrome to automatically update to new architecture as it 
+becomes available.
 
 The other options, **Enabled with ShadowDOM** and **Enabled with
 multiple page architecture**, offer different implementation strategies which
-are only relevant to browser engineers. For now, **Enable** works in the same way as **Enabled with ShadowDOM**. In the future, **Enable** will map to **Enable with multiple page architecture**.
+are only relevant to browser engineers. Today, **Enable** works in the same way as **Enabled with ShadowDOM**. In the future, **Enable** will map to **Enable with multiple page architecture**.
 
 ### Feature detection
 
