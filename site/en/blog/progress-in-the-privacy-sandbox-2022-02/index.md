@@ -5,7 +5,7 @@ description: >
   reduction, the new Topics proposal, and major updates for FLEDGE and
   Attribution Reporting.
 layout: 'layouts/blog-post.njk'
-date: 2022-03-07
+date: 2022-03-04
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Y7tKlJDkeqUGvTMUhwEX.jpg'
