@@ -19,7 +19,7 @@ This document outlines a new proposal to prevent covert tracking: Gnatcatcher.
    discussion](https://github.com/bslassey/ip-blindness/issues).
 *  This proposal has not been implemented in any browser.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides 
-   implementation timings for the Gnatcatcher API and other Privacy Sandbox 
+   implementation timings for Gnatcatcher and other Privacy Sandbox 
    proposals.
 
 ## Why do we need this proposal?
