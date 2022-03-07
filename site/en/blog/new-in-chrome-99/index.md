@@ -58,7 +58,7 @@ complete details.
 
 <div style="clear:both;"></div>
 
-## CSS Cascasde Layers {: #layers }
+## CSS Cascade Layers {: #layers }
 
 Support for CSS Cascade Layers and the CSS `@layer` rule is landing in
 Chrome 99. They provide more explicit control of your CSS files to prevent
