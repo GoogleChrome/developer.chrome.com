@@ -189,10 +189,10 @@ winning ad.
 <fencedframe src="urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a" mode="opaque-ads" ></fencedframe>
 ```
 
-Remember, a fenced frame can't communicate with its parent element with
-[`postMessage`](https://developer.mozilla.org/docs/Web/API/Window/postMessage).
-However, a fenced frame can use `postMessage` with iframes that are children of
-the fenced frame, because fenced frames behave like top-level browsing contexts.
+Remember, a fenced frame can't use `postMessage` to communicate with its parent
+element. However, a fenced frame can use `postMessage` with iframes that are
+children of the fenced frame, because fenced frames behave like top-level
+browsing contexts.
 
 Browsers will set `Sec-Fetch-Dest: fencedframe` for requests made from fenced
 frames and iframes that are embedded within a fenced frame.
