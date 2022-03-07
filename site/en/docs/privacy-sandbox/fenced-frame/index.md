@@ -66,11 +66,10 @@ across first-party storage will be significantly reduced.
 
 ### How do fenced frames work with cross-ste data? {: #cross-site-data }
 
-Fenced Frames is a [Privacy Sandbox
-proposal](https://developer.chrome.com/docs/privacy-sandbox/overview/) which
-suggests top-level sites should partition data. Many Privacy Sandbox proposals
-aim to satisfy cross-site use cases without third-party cookies or other tracking
-mechanisms. For example:
+Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
+which suggests top-level sites should partition data. Many Privacy Sandbox
+proposals aim to satisfy cross-site use cases without third-party cookies or
+other tracking mechanisms. For example:
 
 *  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
    in a privacy-preserving manner.
