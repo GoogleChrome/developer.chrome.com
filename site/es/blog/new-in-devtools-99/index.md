@@ -19,7 +19,7 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 {% include 'partials/devtools/es/banner.md' %}
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
-## Regulación de las peticiones WebSocket {: #websocket }
+## Regulación de las peticiones WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
 El panel **Red** ahora permite regular peticiones web socket. Antes, la regulación de las peticiones de la red no funcionaba en peticiones web socket.
 <!-- Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.  -->
@@ -31,7 +31,7 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 
 <!-- ## New Reporting API pane in the Application panel {: #reporting-api } -->
-## Nuevo panel de la Reportes API en el panel Aplicación {: #reporting-api }
+## Nuevo panel de la API de Reportes en el panel Aplicación {: #reporting-api }
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Usa el nuevo panel **Reportes API** para monitorizar los reportes generados en tu página y su estado.
 
@@ -55,7 +55,7 @@ Chromium issue: [1205856](https://crbug.com/1205856)
 
 
 <!-- ## Support wait until element is visible/clickable in the Recorder panel {: #recorder } -->
-## Soporte para esperar hasta que un elemento sea visible/clicable en el panel Recorder {: #recorder }
+## Soporte para esperar hasta que un elemento sea visible/clicable en el panel Recorder {: #recorder }
 
 <!-- When replaying a user flow recording, the **Recorder** panel will now wait until the element is visible or clickable in the viewport or try to automatically scroll the element into the viewport before replaying the step. Previously, the replay would fail immediately. -->
 Cuando se reproduce una grabación de flujo de usuario, el panel **Grabadora** ahora esperará hasta que el elemento sea visible o clicable en la vista o intentará desplazar automáticamente el elemento a la vista antes de reproducir el paso. Antes, la reproducción hubiera fallado inmediatamente.
@@ -68,12 +68,11 @@ Aquí hay un ejemplo de un menú fuera de la vista y que se desliza cuando se ac
 
 Chromium issue: [1257499](https://crbug.com/1257499#c38)
 
-
 <!-- ## Better console styling, formatting and filtering {: #console } -->
-## Mejores estilos de consola, formateado y filtraje {: #console }
+## Mejores estilos de consola, formateado y filtrado {: #console }
 
 <!-- ### Properly style log messages with ANSI escape code {: #console-styling }  -->
-### Estila correctamente los mensajes de registro con código de escape ANSI {: #console-styling }
+### Estila correctamente los mensajes de registro con código de escape ANSI {: #console-styling }
 
 <!-- You can now use the [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to properly style console messages. Previously, DevTools console had very limited (and partly broken) support for ANSI escape sequences. -->
 Ahora puedes usar las [secuencias de escape ANSI](https://en.wikipedia.org/wiki/ANSI_escape_code) para estilizar correctamente los mensajes de consola. Antes, DevTools console tenía un soporte muy limitado (y parcialmente defectuoso) para secuencias de escape ANSI.
@@ -98,7 +97,7 @@ Para aprender más sobre formatear y estilizar los mensajes de consola con DevTo
 Chromium issues: [1282837](https://crbug.com/1282837), [1282076](https://crbug.com/1282076)
 
 <!-- ### Properly support `%s`, `%d`, `%i` and `%f` format specifiers {: #console-format } -->
-### Soporte correcto para los especificadores de formato `%s`, `%d`, `%i` y `%f` {: #console-format }
+### Soporte correcto para los especificadores de formato `%s`, `%d`, `%i` y `%f` {: #console-format }
 
 <!-- The **Console** now properly performs the `%s`, `%d`, `%i`, and `%f` type conversions as specified in the [Console Standard](https://console.spec.whatwg.org/). Previously, the conversation result was inconsistent. -->
 La **Consola** ahora realiza correctamente las conversión de tipo `%s`, `%d`, `%i`, y `%f` como se especifica en la [Consola Estándar](https://console.spec.whatwg.org/). Antes, el resultado de la conversión era inconsistente.
@@ -109,7 +108,7 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 
 
 <!-- ### More intuitive console group filter {: #console-filter } -->
-### Filtro de grupo de consola más intuitivo {: #console-filter }
+### Filtro de grupo de consola más intuitivo {: #console-filter }
 
 <!-- When filtering the console message, a console message is now shown if its message content matches the filter or the title of the group (or the ancestor group) matches the filter. Previously, the console group title would show despite the filter. -->
 Al filtrar los mensajes de consola, un mensaje de consola se muestra ahora si su contenido de mensaje coincide con el filtro o el título del grupo (o el grupo ascendente) coincide con el filtro. Antes, el título del grupo de consola se mostraba sin importar el filtro.
@@ -126,10 +125,10 @@ Chromium issue: [1068788](https://crbug.com/1068788)
 
 
 <!-- ## Sourcemaps improvements {: #sourcemap } -->
-## Mejoras en los mapas de código fuente {: #sourcemap }
+## Mejoras en los mapas de código fuente {: #sourcemap }
 
 <!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### Depuración de extensiones de Chrome con archivos de mapa de código fuente {: #extension }
+### Depuración de extensiones de Chrome con archivos de mapa de código fuente {: #extension }
 
 <!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
 Ahora puedes [depurar extensiones de Chrome](/docs/extensions/mv3/getstarted/#unpacked) con archivos de mapa de código fuente. Antes, DevTools sólo soportaba mapa de código fuente en línea para depurar extensiones de Chrome.
@@ -142,7 +141,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 
 
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
-### Mejorado árbol de carpetas de fuente en el panel de Fuentes {: #source-tree }
+### Mejorado árbol de carpetas de fuente en el panel de Fuentes {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
 El árbol de carpetas de fuente en el panel de **Fuentes** ha sido mejorado con menos ruido en las estructuras de carpetas y nombres (ej. “../”, “./”, etc). Bajo el capó, esto es el resultado de normalizar las URL absolutas de fuente en los mapas de fuente.
@@ -155,7 +154,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
-### Muestra los archivos de fuente de Worker en el panel de Fuentes {: #worker-sourcemap }
+### Muestra los archivos de fuente de Worker en el panel de Fuentes {: #worker-sourcemap }
 
 <!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
 Los archivos fuente de Worker (ej. web worker, service worker) con SourceURL relativa se muestran ahora en el panel de **Fuentes**. Antes, los archivos de fuente de Worker no se manejaban correctamente.
@@ -205,7 +204,7 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## Destacados varios  {: #misc }
+## Destacados varios {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
 Estos son algunos arreglos destacados en esta versión:
