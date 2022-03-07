@@ -22,16 +22,6 @@
  * @return {EleventyData}
  */
 module.exports = {
-  noindex: true,
   // This is the default hero image for all Workbox pages.
   hero: 'image/QMjXarRXcMarxQddwrEdPvHVM242/ZUBXF0hK0jo9q4RvELUs.png',
-  banner: {
-    text: "This is a preview of Workbox's new documentation.",
-    actions: [
-      {
-        text: 'Need to see older docs?',
-        href: 'https://developers.google.com/web/tools/workbox',
-      },
-    ],
-  },
 };
