@@ -8,36 +8,41 @@ description: |
 authors:
   - jackjey
   - alexandrawhite
-date: 2022-02-28
+date: 2022-03-07
 ---
 
 ## Implementation status
 
-This document outlines a proposal for a new HTML element: fenced frames.
+This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
-*  [Fenced Frame proposal](https://github.com/shivanigithub/fenced-frame)
+*  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 *  This feature is [available behind a Chrome flag](#try-fenced-frames).
-*  The [Privacy Sandbox 
-   timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) 
+*  [The Privacy Sandbox
+   timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
    provides implementation timings for fenced frames and other proposals.
 
-## What are fenced frames and why do we need them?
+## Why do we need fenced frames?
 
-Fenced frame (`<fencedframe>`) is a proposed HTML element for embedded content, 
-similar to an iframe. Unlike iframes, a fenced frame restricts communication with 
-its embedding context to allow access to cross-site data without sharing it with 
-the embedding context. Some Privacy Sandbox APIs may only be  [accessible within a 
-fenced frame](#use-cases).
+A fenced frame (`<fencedframe>`) is a proposed HTML element for embedded
+content, similar to an iframe. Unlike iframes, a fenced frame restricts
+communication with its embedding context to allow the frame access to cross-site
+data without sharing it with the embedding context. Some Privacy Sandbox APIs
+may [require select documents to render within a fenced frame](#use-cases).
 
-Similarly, any first-party data in the embedding context cannot be shared with the 
-fenced frame.
+Similarly, any first-party data in the embedding context cannot be shared with
+the fenced frame.
 
 ```html
 <fencedframe src="https://3rd.party.example"></fencedframe>
 ```
 
-## Strengthen cross-site privacy with storage partitioning
+For example, let's say `news.example` (the embedding context) embeds an ad from
+`shoes.example` in a fenced frame. `news.example` cannot exfiltrate data from
+the `shoes.example` ad, and `shoes.example` cannot learn first-party data from
+`news.example`.
+
+### Strengthen cross-site privacy with storage partitioning
 
 While browsing the web, you've probably looked at products on one site, and then 
 you've seen them appear again in an ad on a completely different site.
