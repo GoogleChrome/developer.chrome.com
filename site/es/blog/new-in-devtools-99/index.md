@@ -19,11 +19,11 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 {% include 'partials/devtools/es/banner.md' %}
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
-## Regulación de las peticiones WebSocket {: #websocket }
+## Limitación de las peticiones WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
-El panel **Red** ahora permite regular peticiones web socket. Antes, la regulación de las peticiones de la red no funcionaba en peticiones web socket.
+El panel **Red** ahora permite limitar peticiones web socket. Antes, la limitación de la velocidad de peticiones de la red no afectaba a peticiones web socket.
 <!-- Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.  -->
-Abre el panel **Red**, clic en una petición web socket y abre la pestaña **Mensajes** para observar los mensajes de transferencia. Selecciona **3G lento** para regular la velocidad.
+Abre el panel **Red**, clic en una petición web socket y abre la pestaña **Mensajes** para observar los mensajes de transferencia. Selecciona **3G lento** para limitar la velocidad.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZHJibovD0IRQ7KrWb0aD.png", alt="Regulando peticiones WebSocket", width="800", height="540" %}
 

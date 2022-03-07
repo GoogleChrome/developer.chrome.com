@@ -4,7 +4,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 99 {: #chrome99 }
 
-* [Regulación de las peticiones WebSocket](/es/blog/new-in-devtools-99/#websocket)
+* [Limitación de las peticiones WebSocket](/es/blog/new-in-devtools-99/#websocket)
 * [Nuevo panel de la API de Reportes en el panel Aplicación](/es/blog/new-in-devtools-99/#reporting-api)
 * [Soporte para esperar hasta que un elemento sea visible/clicable en el panel Recorder](/es/blog/new-in-devtools-99/#recorder)
 * [Mejores estilos de consola, formateado y filtrado](/es/blog/new-in-devtools-99/#console)
