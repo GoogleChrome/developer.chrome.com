@@ -64,7 +64,7 @@ Storage partitioning will be applied to standard storage APIs including
 LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
 across first-party storage will be significantly reduced.
 
-### How do fenced frames work with cross-ste data? {: #cross-site-data }
+### Work with cross-ste data {: #cross-site-data }
 
 Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
 which suggests top-level sites should partition data. Many Privacy Sandbox
@@ -92,7 +92,7 @@ With a fenced frame, the publisher could display an ad which matches visitor
 interests, but the `src` and interest group will be known only to the advertiser
 in the frame. The publisher could not access this information.
 
-## How fenced frames work
+## How do fenced frames work?
 
 A fenced frame will be created from the winner of the FLEDGE API ad auction. The
 information retrieved from FLEDGE API isn't the URL of the ads itself, but will
@@ -154,7 +154,7 @@ different top-level partitions needs to be displayed on the same page.
 Same-site iframes (sometimes known as friendly iframes) are considered trusted
 content.
 
-## How will fenced frames be used? {: #use-cases }
+## Use fenced frames {: #use-cases }
 
 Fenced frames will work in combination with other Privacy Sandbox proposals to
 display documents from different storage partitions within a single page.
@@ -175,7 +175,7 @@ For more details, refer to the [Fenced Frames
 explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md)).
 
 
-### Example usage
+### Examples
 
 Embedded content inside the `<fencedframe>` will be described by the `src`
 attribute.
@@ -216,13 +216,7 @@ any iframes inside of a fenced frame, as well.
 Supports-Loading-Mode: fenced-frame
 ```
 
-## Browser support
-
-The `<fencedframe>` element is still in experimental mode, so it is currently
-supported from Chrome 97 onwards. At this time, it's [not supported by other
-browsers](https://chromestatus.com/feature/5699388062040064#consensus).
-
-### Try fenced frames
+## Try fenced frames
 
 [Use Chrome
 flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to
@@ -245,7 +239,7 @@ relevant to browser engineers. Today, **Enable** works in the same way as
 **Enabled with ShadowDOM**. In the future, **Enable** will map to **Enable with
 multiple page architecture**.
 
-#### Feature detection
+### Feature detection
 
 To determine if fenced frames are defined:
 
@@ -254,6 +248,12 @@ if (window.HTMLFencedFrameElement) {
   // The fenced frame element is defined
 }
 ```
+
+### Browser support
+
+The `<fencedframe>` element is still in experimental mode, so it is currently
+supported from Chrome 97 onwards. At this time, it's [not supported by other
+browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 
 ## Engage and share feedback
 
