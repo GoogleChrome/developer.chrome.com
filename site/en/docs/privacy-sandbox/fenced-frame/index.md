@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Fenced Frame'
+title: 'Fenced frames'
 subhead: >
   Securely embed content onto a page without sharing cross-site data.
 description: |
