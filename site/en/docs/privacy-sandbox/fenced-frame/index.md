@@ -100,7 +100,12 @@ be an [opaque
 source](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/opaque_src.md).
 
 {% Aside 'key-term' %}
-An _opaque source_ is represented by a [Uniform Resource Name (URN) for UUIDs](https://datatracker.ietf.org/doc/html/rfc4122). So, instead of `http://example.com` (a URL), an opaque source is represented as `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`. URN schemes are persistent, location-independent identifiers, which means they cannot be used to locate a resource (such as an ad creative).
+An _opaque source_ is represented by a [Uniform Resource Name (URN) for
+UUIDs](https://datatracker.ietf.org/doc/html/rfc4122). So, instead of
+`http://example.com` (a URL), an opaque source is represented as
+`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`. URN schemes are persistent,
+location-independent identifiers, which means they cannot be used to locate a
+resource (such as an ad creative).
 {% endAside %}
 
 Opaque sources allow your site to display ads on a site without revealing the ad
@@ -252,7 +257,8 @@ if (window.HTMLFencedFrameElement) {
 
 ## Engage and share feedback
 
-The Fenced Frame proposal is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
+The Fenced Frame proposal is under active discussion and subject to change in
+the future. If you try this API and have feedback, we'd love to hear it.
 
 *  **GitHub**: Read the [proposal](https://github.com/shivanigithub/fenced-frame), 
    [raise questions, and follow 
