@@ -6,13 +6,23 @@ authors:
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-02-11
+updated: 2022-03-07
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
   - security
 ---
+
+**Updates**
+
+- **March 7, 2022**: The experiment in Chrome 98 has been rolled back due to
+  stability and compatibility issues discovered during the rollout to Chrome
+  stable. These issues will be fixed before the experiment is tried again, no
+  earlier than in Chrome 101. See the
+  [blink-dev@chromium.org Intent to Ship email
+  thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/72CK2mxD47c)
+  for more details.
 
 ## Introduction
 
@@ -39,7 +49,8 @@ Chrome will roll this change out in two phases to give websites time to notice
 the change and adjust accordingly.
 
 1. In Chrome 98:
-    * Chrome sends preflight requests ahead of private network subresource
+    * Chrome experiments by sending preflight requests ahead of private network
+      subresource
       requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
