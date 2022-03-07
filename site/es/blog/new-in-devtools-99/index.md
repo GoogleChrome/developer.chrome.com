@@ -187,7 +187,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 
 
 <!-- ## Touch-friendly color-picker and split pane {: #touch-friendly } -->
-## Color-picker y panel de división en modo táctil {: #touch-friendly }
+## Selector de color y panel de división en modo táctil {: #touch-friendly }
 
 <!-- You can now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices. -->
 Ahora puedes seleccionar color, y redimensionar el [Cajón](/docs/devtools/customize/#drawer) en DevTools con dedos o lápiz en dispositivos táctiles.

@@ -12,7 +12,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorado árbol de carpetas de fuente en el panel de Fuentes](/es/blog/new-in-devtools-99/#source-tree)
 * [Muestra los archivos de fuente de Worker en el panel de Fuentes](/es/blog/new-in-devtools-99/#worker-sourcemap)
 * [Actualizaciones del modo oscuro automático de Chrome](/es/blog/new-in-devtools-99/#auto-dark-mode)
-* [Color-picker y panel de división en modo táctil](/es/blog/new-in-devtools-99/#touch-friendly)
+* [Selector de color y panel de división en modo táctil](/es/blog/new-in-devtools-99/#touch-friendly)
 * [Destacados varios](/es/blog/new-in-devtools-99/#misc) -->
 
 
