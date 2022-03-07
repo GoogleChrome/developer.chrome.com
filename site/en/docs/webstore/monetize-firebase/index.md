@@ -1,11 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Monetize your extension with Firebase and Stripe
-date: 2021-12-20
-# updated: 2021-07-28
+date: 2022-03-15
 description: >
  How to use Firebase and Stripe to offer in-app payments.
-subhead: Start monetizing your extension by following these steps.
 ---
 
 
@@ -15,7 +13,7 @@ There are many ways to manage users and monetize your Chrome extension. This tut
 Firebase to manage users and Stripe to process payments. 
  
 Firebase Authentication does not support [popup operations][firebase-auth-chrome-extension] for Manifest V3 extensions; meaning, federated identity providers like Google, Facebook and Twitter, are not compatible. However, you
-can authenticate users using their [email addresses and password][firebase-email-password].
+can authenticate users with [email address and password][firebase-email-password].
  
 By the end of this tutorial, your users will be able to do the following:
 - Create an account and process payments in your web app.
@@ -161,7 +159,9 @@ Go to your payments app's URL at _your-firebase-project-id.web.app_ and verify t
 - Choose an amount and process a payment.
 - Sign out when you are done.
 
-<!-- TODO: Screenshot -->
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8zhppl81GpRUa3BAPiFn.png", 
+alt="Web app", width="800", height="912" %}
+
 
 To view processed payments in the Firebase console, follow these steps:
 
@@ -217,10 +217,9 @@ Create a file called `popup.html` and include the following code:
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Firebase Persistent Auth Example</title>
+    <title>Firebase Auth Example</title>
   </head>
   <body>
-    <h1 id="authState">Checking auth state...</h1>
     <h2 id="paid">Free account</h2>
     <input type="email" id="email" placeholder="Email" />
     <input type="password" id="password" placeholder="Password" />
@@ -254,7 +253,7 @@ const signOutButton = document.getElementById("sign-out");
 
 ## Add Firebase to your extension
 
-Take the following steps to configure Firebase to your extension:
+Take the following steps to configure Firebase in your extension:
 
 ### Get ESM Firebase files
 
@@ -326,99 +325,214 @@ width="600", height="190" %}
 
 Replace the placeholders with the value of each key from your Firebase application.
 
-## Display the sign-in state
+## Display Auth State
 
-Add the following code to `popup.js` to update the user's sign-in state. The observer
-[`onAuthStateChanged`][firebase-onauthstatechanged] will trigger whenever this state changes.
+If the user data is saved in [storage][api-storage], the popup will display their email,
+paid status, and a sign-out button. Otherwise, the UI will show the sign in form.
 
 ``` js
 // popup.js
 ...
 
-  const authState = document.getElementById("authState");
-  
-  onAuthStateChanged(auth, (user) => {
-    authState.innerText = user ? `Signed in as ${user.email}` : "Not signed in";
-    signin.style.display = user ? "none" : "block";
-    signout.style.display = user ? "block" : "none";
-    email.style.display = user ? "none" : "block";
-    password.style.display = user ? "none" : "block";
+// Check if user is already logged in when popup opens
+chrome.storage.local.get(['user', 'paid'], ({ user, paid }) => {
+  updateAuthState(user)
+  updatePayState(paid)
+})
+
+// Update UI according to auth state
+function updateAuthState(user) {
+  authState.innerText = user ? `Signed in as ${user}` : "Not signed in";
+  email.style.display = user ? "none" : "block";
+  password.style.display = user ? "none" : "block";
+  payState.style.display = user ? "block" : "none";
+  signInButton.style.display = user ? "none" : "block";
+  signOutButton.style.display = user ? "block" : "none";
+}
+
+// Give user access to premium features
+function updatePayState(paid) {
+  if (paid === true) {
+    payState.innerText = 'Premium account'
+// Add premium features here
+  } else {
+    payState.innerText = 'Free account'
+  }
+}
 
 });
 ```
 
-## Sign in with email and password
+## Update Auth State {: #auth}
 
-To sign the user in, pass the user's email address and password to
-[`signInWithEmailAndPassword`][firebase-auth-email-password] in the `popup.js` file.
+The popup will use the [messages][docs-messages] API to tell the background script to either sign the
+user in or sign them out.
 
 ```js
 //popup.js
 ...
 
-signIn.addEventListener("click", () => {
-  signInWithEmailAndPassword(auth, email.value, password.value)
-    .then(({ user }) => {
-      console.log("signed in", user);
-    })
-    .catch(console.error);
+// Send login data to background service worker
+// when user signs in
+signInButton.addEventListener("click", () => {
+  chrome.runtime.sendMessage({
+    greeting: "signIn",
+    email: email.value,
+    password: password.value
+  })
+});
+
+// Send logout message to background service worker
+// when user signs out
+signOutButton.addEventListener("click", async () => {
+  chrome.runtime.sendMessage({
+    greeting: "signOut"
+  })
+});
+```
+
+The background will then call [`signInWithEmailAndPassword()`][firebase-auth-email-password] to sign
+the user in or [`signOut()`][firebase-auth-signout] to log them out.
+
+``` js
+// background.js
+...
+
+// Listen for messages sent by the popup
+chrome.runtime.onMessage.addListener((message) => {
+  switch (message.greeting) {
+    case 'signIn': {
+      signInWithEmailAndPassword(auth, message.email, message.password)
+      break;
+    }
+    case 'signOut': {
+      signOut(auth);
+      break;
+    }
+    default:
+    // do nothing
+  }
+})
+
+```
+
+## Check and store payment status {: #payment }
+
+The observer [onAuthStateChanged()][firebase-onauthstatechanged] is triggered on sign-in or sign-out. If the user is signed in, the background script will check if payment status is saved in storage. Otherwise, it will query the Firebase Firestore and save the data to storage. 
+ 
+```js
+// background.js
+...
+
+onAuthStateChanged(auth, async (user) => {
+  // If user is signed in
+  if (user) {
+    // Check if paid state is saved in storage
+    let { paid } = await chrome.storage.local.get('paid')
+    
+    // If paid state is not saved to storage
+    if (typeof paid === "undefined") {
+      // Query payment status in the database
+      const snapshot = await getDocs(
+        query(
+          collection(db, `stripe_customers/${user.uid}/payments`),
+          where("status", "==", "succeeded")
+        )
+      );
+      // User has paid if more than zero successful payments    
+      paid = snapshot.size > 0
+    }
+
+    // Update user & payment status in storage
+    await chrome.storage.local.set({ user: user.email, paid })
+  } else {
+    // If user is signed out, clear storage
+    await chrome.storage.local.remove(['user', 'paid'])
+  }
 });
 
 ```
 
-## Sign user out
+If the user is signed out, then the user data is removed from storage.
 
-Use [`signOut`][firebase-auth-signout] to sign the user out in the `popup.js` file:
+## Update popup with latest data in storage
+
+If any values change in storage, you can use
+`chrome.storage.onChanged` to listen for changes and update the popup UI.
 
 ```js
-//popup.js
+// popup.js
+
 ...
+// Listen for changes to storage and update state accordingly. 
+chrome.storage.onChanged.addListener((changes) => {
+  if (changes.user) {
+    updateAuthState(changes.user.newValue)
+  }
 
-signout.addEventListener("click", async () => {
-  signOut(auth);
-});
-
+  if (changes.paid) {
+    updatePayState(changes.paid.newValue)
+  }
+})
 ```
 
 ## Try signing in
 
-Now you can test your extension. Load your extension locally and click on the browser icon to open
-`popup.html`. Click on the **Create an account** link to take you to the web app. Then, try signing
-in with your email and password. After you sign-in, you should see your email displayed. Click the
-**Sign out** button to log out.
+Now you can test your extension. Load your extension locally and click on the toolbar icon to open
+the popup. Try out the following features:
+
+- Click on “Create an Account” link to open the web app.
+- Sign in with your email/password.
+- View your email and paid status.
+- Sign out of your account.
+
+{% Columns %}
+
+{% Column %}
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jJHlWoxGyYVlz4mYPfCT.png", 
+alt="Popup when user is not signed in", width="226", height="208" %}
+
+{% endColumn %}
+
+{% Column %}
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TeRl9UwHXSm7VIYgpgNk.png", 
+alt="Popup when user is logged in", width="270", height="234" %}
+
+{% endColumn %}
+
+{% endColumns %}
 
 ## Accept live payments
 
-Once you’re ready to go live, you'll need to exchange your test keys for your live keys. See the
-[Stripe docs][stripe-api-keys] to learn more about these keys.
+Once you’re ready to go live, follow the same instructions for [adding your Stripe keys][section-add-stripe-keys], but exchange your test keys for your live keys.
 
-1. Update your Stripe secret config:
-`firebase functions:config:set stripe.secret=<YOUR STRIPE LIVE SECRET KEY>`
-1. Set your [live publishable key][stripe-api-keys] in `/public/javascript/app.js`.
-1. Redeploy both Cloud Functions and Hosting for the changes to take effect: `firebase deploy`.
+See the [Stripe API keys][stripe-api-keys] to learn more.
 
-## Additional resources
+<!-- TODO: Further reading -->
 
-[esm-firebase-app]: https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js
-[esm-firebase-auth]: https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js
-[esm-firebase-firestore]: https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js
-[externally-connectable]: /docs/extensions/mv3/manifest/externally_connectable/
-[firebase-cli]: https://github.com/firebase/firebase-tools#node-package
+[api-storage]: /docs/extensions/reference/storage/
+[codelab-stripe-firebase-extension]: https://firebase.google.com/codelabs/stripe-firebase-extensions#0
+[developer-chrome-github]: https://github.com/GoogleChrome/developer.chrome.com
+[docs-externally-connectable]: /docs/extensions/mv3/manifest/externally_connectable/
+[docs-messages]: /docs/extensions/mv3/messaging/
+[esm-firebase-app]: https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js
+[esm-firebase-auth]: https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js
+[esm-firebase-firestore]: https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js
 [firebase-auth-chrome-extension]: https://firebase.google.com/docs/auth/web/google-signin#authenticate_with_firebase_in_a_chrome_extension
-[firebase-auth-signout]: https://firebase.google.com/docs/reference/js/auth#signout
-[firebase-onauthstatechanged]: https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#onauthstatechanged
 [firebase-auth-email-password]: https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#signinwithemailandpassword
-[firebase-email-password]: https://firebase.google.com/docs/auth/web/password-auth
+[firebase-auth-signout]: https://firebase.google.com/docs/reference/js/auth#signout
+[firebase-cli]: https://github.com/firebase/firebase-tools#node-package
 [firebase-console]: https://console.firebase.google.com/
-[firebase-ui]: https://firebase.google.com/docs/auth/web/firebaseui
+[firebase-email-password]: https://firebase.google.com/docs/auth/web/password-auth
+[firebase-onauthstatechanged]: https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#onauthstatechanged
 [firebase-stripe-github-webapp]: https://github.com/firebase/functions-samples/tree/main/stripe
-[identity-api]: /docs/extensions/reference/identity/
-[storage-api]: /docs/extensions/reference/storage/
+[firebase-stripe-web-app]: https://cloud-functions-stripe-sample.web.app/
+[firebase-ui]: https://firebase.google.com/docs/auth/web/firebaseui
 [payments-firebase-usecase]: https://firebase.google.com/docs/use-cases/payments
-[stripe-get-started]: https://support.stripe.com/questions/getting-started-with-stripe-create-or-connect-an-account
+[section-add-stripe-keys]: #add-your-stripe-test-api-keys
 [stripe-api-keys]: https://dashboard.stripe.com/account/apikeys
 [stripe-dashboard]: https://dashboard.stripe.com/register  
+[stripe-get-started]: https://support.stripe.com/questions/getting-started-with-stripe-create-or-connect-an-account
 [stripe-test-card]: https://stripe.com/docs/testing#cards
-[firebase-stripe-web-app]: https://cloud-functions-stripe-sample.web.app/
-[developer-chrome-github]: https://github.com/GoogleChrome/developer.chrome.com
-[codelab-stripe-firebase-extension]: https://firebase.google.com/codelabs/stripe-firebase-extensions#0
