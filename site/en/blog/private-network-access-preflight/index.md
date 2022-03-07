@@ -274,6 +274,18 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
    width="800", height="265"
 %}
 
+Note that if your request would have triggered a regular CORS preflight were it
+not for Private Network Access rules, then two preflights may appear in the
+network panel, with the first one always appearing to have failed. This is a
+[known quirk](https://crbug.com/1290390), and you may safely ignore it.
+
+{% Img
+   src="image/I8XwjL2ZK8fUPQRJMwrRzjyKAar1/MaBNk7572rWNybez1FHH.png",
+   alt="A spurious failed preflight request ahead of a successful preflight in
+   the DevTools Network panel.",
+   width="800", height="316"
+%}
+
 To review what happens if preflight success was enforced, you can
 [pass the following command-line argument](https://www.chromium.org/developers/how-tos/run-chromium-with-flags),
 starting in Chrome 98:
