@@ -121,7 +121,7 @@ publisher&mdash;aren't available in fenced frames.
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
 (such as a browser tab). The characteristics of fenced frames are further
-detailed in the [explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md)
+detailed in the [explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
 
 ### How do fenced frames compare to iframes? {: #compare }
 
