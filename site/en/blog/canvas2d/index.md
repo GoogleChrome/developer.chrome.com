@@ -257,7 +257,7 @@ Use `getImageData()` to read pixel data back from a canvas. It can be very slow.
 
 ```js
 const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d', {‘willReadFrequently': true});
+const ctx = canvas.getContext('2d', {'willReadFrequently': true});
 ```
 
 ### Context loss
