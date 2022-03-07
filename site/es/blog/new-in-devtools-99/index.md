@@ -80,8 +80,6 @@ Ahora puedes usar las [secuencias de escape ANSI](https://en.wikipedia.org/wiki/
 <!-- It is common for [Node.js](https://nodejs.org/) developers to colorize log messages via ANSI escape sequences, often with the help of some styling libraries like [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc.  -->
 Es común para los desarrolladores de [Node.js](https://nodejs.org/) usar secuencias de escape ANSI para colorear los mensajes de registro, a menudo con la ayuda de algunas bibliotecas de estilización como [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc.
 
-{# https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/devtools/front_end/console/console.js #}
-
 <!-- With these changes, you can now debug your Node.js applications seamlessly using DevTools, with proper colorized console messages. Open this [demo](https://stackblitz.com/edit/node-colors-test) to view it yourself! -->
 
 Con estos cambios, ahora puedes depurar tus aplicaciones de Node.js de forma sencilla usando DevTools, con mensajes de consola coloreados correctamente. Abre este [demo](https://stackblitz.com/edit/node-colors-test) para verlo tú mismo!

@@ -17,6 +17,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 
 ### Chrome 98 {: #chrome98 }
+
 * [Función en vista previa: Árbol de accesibilidad de página completa](/es/blog/new-in-devtools-98/#a11y-tree)
 * [Establecer un tiempo de espera más largo para la grabación del flujo de usuario](/es/blog/new-in-devtools-98/#changes)
 * [Set longer timeout for user flow recording](/es/blog/new-in-devtools-98/#recorder-timeout)
@@ -42,6 +43,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 
 ### Chrome 96 {: #chrome96 }
+
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
 <!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
 * [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
@@ -58,6 +60,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 
 ### Chrome 95 {: #chrome95 }
+
 * [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)
 * [Oculta problemas en la pestaña Problemas](/es/blog/new-in-devtools-95/#hide-issues)
 * [Mejora la visualización de propiedades](/es/blog/new-in-devtools-95/#properties)
