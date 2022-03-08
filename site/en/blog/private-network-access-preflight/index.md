@@ -16,7 +16,7 @@ tags:
 
 **Updates**
 
-- **March 7, 2022**: The experiment in Chrome 98 has been rolled back due to
+- **March 7, 2022**: The experiment in Chrome 98 was rolled back due to
   stability and compatibility issues discovered during the rollout to Chrome
   stable. These issues will be fixed before the experiment is tried again, no
   earlier than in Chrome 101. See the [blink-dev@chromium.org Intent to Ship
