@@ -11,8 +11,10 @@ description: >
 There are many ways to manage users and monetize your Chrome extension. This tutorial will use
 Firebase to manage users and Stripe to process payments. 
  
-Firebase Authentication does not support [popup operations][firebase-auth-chrome-extension] for Manifest V3 extensions; meaning, federated identity providers like Google, Facebook and Twitter, are not compatible. However, you
-can authenticate users with [email address and password][firebase-email-password].
+Firebase Authentication does not support [popup operations][firebase-auth-chrome-extension] for
+Manifest V3 extensions; meaning, federated identity providers like Google, Facebook and Twitter, are
+not compatible. However, you can authenticate users with [email address and
+password][firebase-email-password].
  
 By the end of this tutorial, your users will be able to do the following:
 - Create an account and process payments in your web app.
@@ -26,11 +28,10 @@ This guide does not describe how to do the following:
 
 ## What you will need {: #prereq }
 
-To receive payments and manage user accounts, you need to set up a Stripe account and
-configure a Firebase project. The following sections walk through this process.
+To receive payments and manage user accounts, you need to set up a Stripe account and configure a
+Firebase project. The following sections walk through this process.
 
-{% Details %}
-{% DetailsSummary %}
+{% Details %} {% DetailsSummary %}
 ### Set up a Stripe account {: #stripe }
 {% endDetailsSummary %}
 
@@ -49,8 +50,7 @@ Stripe][stripe-get-started].
 
 {% endDetails %}
 
-{% Details %}
-{% DetailsSummary %}
+{% Details %} {% DetailsSummary %}
 
 ### Configure a Firebase project {: #firebase-setup }
 
@@ -83,10 +83,10 @@ In the [Firebase console][firebase-console], click **Add project**, and name you
 
 ## Create your web app {: #create-app }
 
-You can use a few different Firebase features and Stripe to process payments without
-building your own server infrastructure. This example also uses [FirebaseUI][firebase-ui].
-To customize and deploy your own version of the
-[Firebase with Stripe Payments example][firebase-stripe-web-app], follow these steps.
+You can use a few different Firebase features and Stripe to process payments without building your
+own server infrastructure. This example also uses [FirebaseUI][firebase-ui]. To customize and deploy
+your own version of the [Firebase with Stripe Payments example][firebase-stripe-web-app], follow
+these steps.
 
 {% Aside %}
 
@@ -115,8 +115,8 @@ commands:
 
 ### Add your Stripe test API keys {: #stripe-keys }
 
-Get your [Stripe test API keys][stripe-api-keys]. Open `/public/javascript/app.js` and paste the Publishable key
-in the following line:
+Get your [Stripe test API keys][stripe-api-keys]. Open `/public/javascript/app.js` and paste the
+Publishable key in the following line:
 
 ```js
 const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;
@@ -125,29 +125,34 @@ const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;
 To add your secret key to the cloud function, run the following command: 
 
 ```bash
-$ firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>
+firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>
 ```
 
 ### Remove Google sign-in {: #remove-google }
 
-Firebase's federated identity providers are not compatible with MV3 extensions. As such, you will need to remove Google sign-in from the sample project by deleting the following line in `public/javascript/app.js`:
+Firebase's federated identity providers are not compatible with MV3 extensions. As such, you will
+need to remove Google sign-in from the sample project by deleting the following line in
+`public/javascript/app.js`:
 
-```js 1-1
+```javascript
 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 ```
 
 ### Deploy your project {: #deploy }
 
-To deploy your project, run the following command `$ firebase deploy`. This command performs the following tasks:
+To deploy your project, run the following command `$ firebase deploy`. This command performs the
+following tasks:
 
-- Sends all the files in the public directory to **Firebase Hosting** so that your website is available.
+- Sends all the files in the public directory to **Firebase Hosting** so that your website is
+  available.
 - Sends the code in the functions directory to **Cloud Functions** for Firebase.
-- Sets security rules (`firestore.rules`) on your Firestore database. These
-rules only allow users to read and write their own payments and payment methods.
+- Sets security rules (`firestore.rules`) on your Firestore database. These rules only allow users
+to read and write their own payments and payment methods.
 
 ### Test the sample app {: #test-web-app}
 
-Go to your payments app's URL at _your-firebase-project-id.web.app_ and verify that the following features work: 
+Go to your payments app's URL at _your-firebase-project-id.web.app_ and verify that the following
+features work: 
 
 - Create an account with your email and password.
 - Add a [Stripe test card][stripe-test-card].
@@ -244,28 +249,33 @@ Take the following steps to configure Firebase in your extension:
 
 ### Get ESM Firebase files {: #fb-esm }
 
-1. Download the following ESM Firebase files to your project:
-    - [`firebase-app.js`][esm-firebase-app].
-    - [`firebase-auth.js`][esm-firebase-auth].
-    - [`firebase-firestore.js`][esm-firebase-firestore].
+Download the following ESM Firebase files to your project:
+ - [`firebase-app.js`][esm-firebase-app].
+ - [`firebase-auth.js`][esm-firebase-auth].
+ - [`firebase-firestore.js`][esm-firebase-firestore].
 
-    {% Aside %}
+{% Aside %}
 
-    To download the latest version of these Firebase files, check the [Firebase Javascript SDK release notes](https://firebase.google.com/support/release-notes/js) and change the version in the URL to the latest version.
+To download the latest version of these Firebase files, check the [Firebase Javascript SDK release
+notes](https://firebase.google.com/support/release-notes/js) and change the version in the URL to
+the latest version.
 
-    {% endAside %}
+{% endAside %}
 
-2. Update the import statements at the top of `firebase-auth.js` and `firebase-firestore.js` to reference the local version of `firebase-app.js`. For example, the following `import` points to a local file:
+Update the import statements at the top of `firebase-auth.js` and `firebase-firestore.js` to
+reference the local version of `firebase-app.js`. For example, the following `import` points to a
+local file:
 
-    ```js
-    import {
-      _getProvider,
-      _registerComponent,
-      SDK_VERSION,
-      registerVersion,
-      getApp,
-    } from "./firebase-app.js";
-    ```
+```javascript/6-7
+import {
+  _getProvider,
+  _registerComponent,
+  SDK_VERSION,
+  registerVersion,
+  getApp,
+} from "./firebase-app.js";
+```
+
 ### Add an app to your Firebase project {: #fb-add-app}
 
 1. Select your project in the [Firebase Console][firebase-console].
@@ -275,46 +285,47 @@ Take the following steps to configure Firebase in your extension:
 1. Note your web app's Firebase configuration code `firebaseConfig`.
 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/dEGKBRdWOCP70d3qV0lj.png", alt="Add app in the Firebase Project Settings", 
-width="600", height="190" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/dEGKBRdWOCP70d3qV0lj.png", alt="Add app in the
+Firebase Project Settings", width="600", height="190" %}
 
 ### Initialize Firebase {: #fb-init}
 
-1. Create a new file named `background.js` and add the following code:
+Create a new file named `background.js` and add the following code:
 
-      ```js
-      import { initializeApp } from "./firebase-app.js";
-      import {
-        getAuth,
-        onAuthStateChanged,
-        signInWithEmailAndPassword,
-        signOut,
-      } from "./firebase-auth.js";
+```js
+import { initializeApp } from "./firebase-app.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "./firebase-auth.js";
 
-      import { collection, query, where, getDocs, getFirestore } from "./firebase-firestore.js"
+import { collection, query, where, getDocs, getFirestore } from "./firebase-firestore.js"
 
-       // Your Firebase configuration
-      const firebaseConfig = {
-        apiKey: "YOUR-FIREBASE-API-KEY",
-        authDomain: "YOUR-AUTH-DOMAIN",
-        projectId: "YOUR-PROJECT-ID",
-        storageBucket: "YOUR-STORAGE-BUCKET",
-        messagingSenderId: "YOUR-MESSAGING-SENDER-ID",
-        appId: "YOUR-APP-ID",
-      };
+ // Your Firebase configuration
+const firebaseConfig = {
+  apiKey: 'YOUR-FIREBASE-API-KEY',
+  authDomain: 'YOUR-AUTH-DOMAIN',
+  projectId: 'YOUR-PROJECT-ID',
+  storageBucket: 'YOUR-STORAGE-BUCKET',
+  messagingSenderId: 'YOUR-MESSAGING-SENDER-ID',
+  appId: 'YOUR-APP-ID',
+};
 
-      initializeApp(firebaseConfig);
-      const auth = getAuth();
-      const db = getFirestore();
+initializeApp(firebaseConfig);
 
-      ```
+const auth = getAuth();
+const db = getFirestore();
+
+```
 
 Replace the placeholders with the value of each key from your Firebase application `firebaseConfig`.
 
 ## Display Auth State {: #show-auth}
 
-If the user data is saved in [storage][api-storage], the popup will display their email,
-paid status, and a sign-out button. Otherwise, the UI will show the sign in form.
+If the user data is saved in [storage][api-storage], the popup will display their email, paid
+status, and a sign-out button. Otherwise, the UI will show the sign in form.
 
 ``` js
 // popup.js
@@ -351,8 +362,8 @@ function updatePayState(paid) {
 
 ## Update Auth State {: #update-auth}
 
-The popup will use the [messages][docs-messages] API to tell the background script to either sign the
-user in or sign them out.
+The popup will use the [messages][docs-messages] API to tell the background script to either sign
+the user in or sign them out.
 
 ```js
 //popup.js
@@ -361,7 +372,7 @@ user in or sign them out.
 // Send login data to the background script
 signInButton.addEventListener("click", () => {
   chrome.runtime.sendMessage({
-    greeting: "signIn",
+    greeting: 'signIn',
     email: email.value,
     password: password.value
   })
@@ -370,7 +381,7 @@ signInButton.addEventListener("click", () => {
 // Send logout message to the background script
 signOutButton.addEventListener("click", async () => {
   chrome.runtime.sendMessage({
-    greeting: "signOut"
+    greeting: 'signOut'
   })
 });
 ```
@@ -401,7 +412,9 @@ chrome.runtime.onMessage.addListener((message) => {
 
 ## Check and store payment status {: #payment }
 
-The observer [onAuthStateChanged()][firebase-onauthstatechanged] is triggered on sign-in or sign-out. If the user is signed in, the background script will check if payment status is saved in storage. Otherwise, it will query the Firebase Firestore and save the data to storage. 
+The observer [onAuthStateChanged()][firebase-onauthstatechanged] is triggered on sign-in or
+sign-out. If the user is signed in, the background script will check if payment status is saved in
+storage. Otherwise, it will query the Firebase Firestore and save the data to storage. 
  
 ```js
 // background.js
@@ -413,20 +426,19 @@ onAuthStateChanged(auth, async (user) => {
     // Check if paid state is saved in storage
     let { paid } = await chrome.storage.local.get('paid')
     
-    // If paid state is not saved to storage
-    if (typeof paid === "undefined") {
+    if (typeof paid === 'undefined') {
       // Query payment status in the database
       const snapshot = await getDocs(
         query(
           collection(db, `stripe_customers/${user.uid}/payments`),
-          where("status", "==", "succeeded")
+          where('status', '==', 'succeeded')
         )
       );
       // User has paid if more than zero successful payments    
       paid = snapshot.size > 0
     }
 
-    // Update user & payment status in storage
+    // Update user and payment status in storage
     await chrome.storage.local.set({ user: user.email, paid })
   } else {
     // If user is signed out, clear storage
@@ -440,14 +452,14 @@ If the user is signed out, then the user data is removed from storage.
 
 ## Listen for storage changes {: #storage-changes} 
 
-If any values change in storage, you can use
-`chrome.storage.onChanged` to listen for changes and update the popup UI.
+When any values in storage change, you can use `chrome.storage.onChanged` to listen for changes and
+update the popup UI.
 
 ```js
 // popup.js
 
 ...
-// Listen for changes to storage and update state accordingly. 
+
 chrome.storage.onChanged.addListener((changes) => {
   if (changes.user) {
     updateAuthState(changes.user.newValue)
@@ -473,15 +485,15 @@ the popup. Try out the following features:
 
 {% Column %}
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jJHlWoxGyYVlz4mYPfCT.png", 
-alt="Popup when user is not signed in", width="226", height="208" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jJHlWoxGyYVlz4mYPfCT.png", alt="Popup when user is
+not signed in", width="226", height="208" %}
 
 {% endColumn %}
 
 {% Column %}
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TeRl9UwHXSm7VIYgpgNk.png", 
-alt="Popup when user is logged in", width="270", height="234" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TeRl9UwHXSm7VIYgpgNk.png", alt="Popup when user is
+logged in", width="270", height="234" %}
 
 {% endColumn %}
 
@@ -489,16 +501,19 @@ alt="Popup when user is logged in", width="270", height="234" %}
 
 ## Accept live payments {: #stripe-live-keys }
 
-Once you’re ready to go live, follow the same instructions for [adding your Stripe keys][section-add-stripe-keys], but exchange your test keys for your live keys.
+Once you’re ready to go live, follow the same instructions for [adding your Stripe
+keys][section-add-stripe-keys], but exchange your test keys for your live keys.
 
 See the [Stripe API keys][stripe-api-keys] to learn more.
 
 ## Further reading
 
-For a more advanced Stripe/Firebase integration in your web app, check out the following [Firebase Extensions](https://firebase.google.com/docs/extensions):
+For a more advanced Stripe/Firebase integration in your web app, check out the following [Firebase
+Extensions](https://firebase.google.com/docs/extensions):
 
 - [Stripe subscriptions Firebase extension codelab][codelab-stripe-firebase-extension]
-- [Stripe Firestore payments](https://firebase.google.com/products/extensions/stripe-firestore-stripe-payments)
+- [Stripe Firestore
+  payments](https://firebase.google.com/products/extensions/stripe-firestore-stripe-payments)
 
 [api-storage]: /docs/extensions/reference/storage/
 [codelab-stripe-firebase-extension]: https://firebase.google.com/codelabs/stripe-firebase-extensions#0
