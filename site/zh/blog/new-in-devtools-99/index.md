@@ -176,6 +176,7 @@ Chromium 议题: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
+
 Chromium 议题: [1277002](https://crbug.com/1277002)
 
 
@@ -185,8 +186,9 @@ Chromium 议题: [1277002](https://crbug.com/1277002)
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 现在，[自动深色模式模拟](/blog/new-in-devtools-96/#auto-dark-mode) UI 变得更加简洁。当下是个复选框，之前是个下拉框。
 
-<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically. -->
-除了上面说的这些，在开启[自动深色主题](/blog/auto-dark-theme/)功能之后，**Emulate perfers-color-scheme** 下拉框会被禁用掉，并且下拉框选项还会被自动设置为 **perfers-color-scheme: dark**。
+
+<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
+除了上面说的这些，在开启[自动深色主题](/blog/auto-dark-theme/)功能之后，**Emulate prefers-color-scheme** 下拉框会被禁用掉，并且下拉框选项还会被自动设置为 **prefers-color-scheme: dark**。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->
 Chrome 96 发布了[自动深色主题](/blog/auto-dark-theme/)的 [Origin Trial](/blog/origin-trials/) （目前只限于 Android 版）。有了该功能，当用户在操作系统那里选择深色主题时，浏览器将自动为浅色主题网站生成深色主题。
