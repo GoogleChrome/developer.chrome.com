@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description: "Throttling WebSocket requests, new Reporting API pane, console styling and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5T6ul166nHYcExpepRoy.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5UIQl4sIWMT0UD4O1GmJ.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -16,7 +16,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5UIQl4sIWMT0UD4O1GmJ.jpg -->
+{% YouTube id='zFVWeOKZBHs' %}
 
 ## Throttling WebSocket requests {: #websocket }
 

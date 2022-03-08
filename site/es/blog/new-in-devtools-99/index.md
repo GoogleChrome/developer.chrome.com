@@ -18,6 +18,8 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 <!-- ## Throttling WebSocket requests {: #websocket } -->
 ## Limitación de las peticiones WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
