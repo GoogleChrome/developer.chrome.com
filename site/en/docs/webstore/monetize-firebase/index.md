@@ -32,7 +32,9 @@ To receive payments and manage user accounts, you need to set up a Stripe accoun
 Firebase project. The following sections walk through this process.
 
 {% Details %} {% DetailsSummary %}
+
 ### Set up a Stripe account {: #stripe }
+
 {% endDetailsSummary %}
 
 1. Go to the [Stripe dashboard][stripe-dashboard].
