@@ -2,6 +2,17 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/blog/new-in-devtools-100/#misc)
+
+
 ### Chrome 99 {: #chrome99 }
 
 * [Throttling WebSocket requests](/blog/new-in-devtools-99/#websocket)
