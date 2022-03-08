@@ -19,6 +19,8 @@ tags:
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 ## 웹 소켓 요청 쓰로틀링 {: #websocket }
 
 **네트워크** 패널에서 웹 소켓 요청에 대한 쓰로틀링을 지원합니다. 이전에는 웹 소켓 요청에 대한 네트워크 쓰로틀링은 동작하지 않았습니다.
