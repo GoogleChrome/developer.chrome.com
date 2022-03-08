@@ -125,7 +125,7 @@ const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;
 To add your secret key to the cloud function, run the following command: 
 
 ```bash
-firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>
+firebase functions:config:set stripe.secret=<YOUR_STRIPE_SECRET_KEY>
 ```
 
 ### Remove Google sign-in {: #remove-google }
@@ -473,7 +473,7 @@ chrome.storage.onChanged.addListener((changes) => {
 
 ## Try signing in {: #test-ext}
 
-Now you can test your extension. Load your extension locally and click on the toolbar icon to open
+Now you can test your extension. [Load your extension locally][load-locally] and click on the toolbar icon to open
 the popup. Try out the following features:
 
 - Click on “Create an Account” link to open the web app.
@@ -506,9 +506,9 @@ keys][section-add-stripe-keys], but exchange your test keys for your live keys.
 
 See the [Stripe API keys][stripe-api-keys] to learn more.
 
-## Further reading
+## Further reading {: #further}
 
-For a more advanced Stripe/Firebase integration in your web app, check out the following [Firebase
+For a more advanced Stripe/Firebase integration in your web app, see the following [Firebase
 Extensions](https://firebase.google.com/docs/extensions):
 
 - [Stripe subscriptions Firebase extension codelab][codelab-stripe-firebase-extension]
@@ -533,6 +533,7 @@ Extensions](https://firebase.google.com/docs/extensions):
 [firebase-stripe-github-webapp]: https://github.com/firebase/functions-samples/tree/main/stripe
 [firebase-stripe-web-app]: https://cloud-functions-stripe-sample.web.app/
 [firebase-ui]: https://firebase.google.com/docs/auth/web/firebaseui
+[load-locally]: /docs/extensions/mv3/getstarted/#unpacked
 [payments-firebase-usecase]: https://firebase.google.com/docs/use-cases/payments
 [section-add-stripe-keys]: #add-your-stripe-test-api-keys
 [stripe-api-keys]: https://dashboard.stripe.com/account/apikeys
