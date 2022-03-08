@@ -14,15 +14,16 @@ tags:
   - security
 ---
 
-**Updates**
+{% Aside 'warning' %}
 
 - **March 7, 2022**: The experiment in Chrome 98 was rolled back due to
-  stability and compatibility issues discovered during the rollout to Chrome
+  stability and compatibility issues discovered in the rollout to Chrome
   stable. These issues will be fixed before the experiment is tried again, no
-  earlier than in Chrome 101. See the [blink-dev@chromium.org Intent to Ship
+  earlier than in Chrome 101. Learn more in the [blink-dev@chromium.org Intent to Ship
   email
   thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/72CK2mxD47c/m/d835CNGtAAAJ)
   for more details.
+{% endAside %}
 
 ## Introduction
 
@@ -274,10 +275,10 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
    width="800", height="265"
 %}
 
-Note that if your request would have triggered a regular CORS preflight were it
-not for Private Network Access rules, then two preflights may appear in the
+If your request would have triggered a regular CORS preflight without
+Private Network Access rules, then two preflights may appear in the
 network panel, with the first one always appearing to have failed. This is a
-[known quirk](https://crbug.com/1290390), and you may safely ignore it.
+[known bug](https://crbug.com/1290390), and you can safely ignore it.
 
 {% Img
    src="image/I8XwjL2ZK8fUPQRJMwrRzjyKAar1/MaBNk7572rWNybez1FHH.png",
