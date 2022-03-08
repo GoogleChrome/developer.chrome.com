@@ -139,6 +139,7 @@ Chromium 이슈: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
+
 Chromium 이슈: [1277002](https://crbug.com/1277002) 
 
 
@@ -146,7 +147,9 @@ Chromium 이슈: [1277002](https://crbug.com/1277002)
 
 [자동 다크 테마 에뮬레이션](/blog/new-in-devtools-96/#auto-dark-mode) UI가 간소화되었습니다. 기존 드롭다운 메뉴에서 체크박스로 전환되었습니다.
 
-그 외에도 [자동 다크 테마](/blog/auto-dark-theme/) 가 활성화되면 **Emulate perfers-color-scheme** 드롭다운 메뉴가 비활성화되고 **perfers-color-scheme: dark** 가 자동으로 지정됩니다.
+
+그 외에도 [자동 다크 테마](/blog/auto-dark-theme/) 가 활성화되면 **Emulate prefers-color-scheme** 드롭다운 메뉴가 비활성화되고 **prefers-color-scheme: dark** 가 자동으로 지정됩니다.
+
 
 Android Chrome 96에서 [자동 다크 테마](/blog/auto-dark-theme/) 를 [시험적 기능](/blog/origin-trials/) 으로 소개했었습니다. 이 기능을 사용하면 사용자가 운영 체제에서 다크 테마를 선택하면 브라우저가 자동으로 생성된 다크 테마를 라이트 테마 사이트에도 적용합니다.
 
@@ -169,6 +172,7 @@ Chromium 이슈: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
 Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+
 
 
 ## 여러가지 하이라이트 {: #misc }

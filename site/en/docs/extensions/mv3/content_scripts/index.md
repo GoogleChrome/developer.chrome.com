@@ -130,7 +130,7 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
       <td><code>matches</code></td>
       <td>array of strings</td>
       <td><em>Required.</em> Specifies which pages this content script will be injected into. See <a
-          href="match_patterns">Match Patterns</a> for more details on the syntax of these strings
+          href="/docs/extensions/mv3/match_patterns/">Match Patterns</a> for more details on the syntax of these strings
         and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude
         URLs.</td>
     </tr>
