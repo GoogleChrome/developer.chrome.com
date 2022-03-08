@@ -19,7 +19,7 @@ tags:
 
 {% include 'partials/devtools/zh/banner.md' %}
 
-{% YouTube id='YqkIS88VulM' %}
+{% YouTube id='zFVWeOKZBHs' %}
 
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
