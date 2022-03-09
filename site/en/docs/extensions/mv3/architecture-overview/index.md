@@ -52,10 +52,11 @@ as the most important files and the capabilities the extension might use.
 
 Extensions must have an icon that sits in the browser toolbar. Toolbar icons allow easy access and
 keep users aware of which extensions are installed. Most users will interact with an extension that
-uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started example][sample-getting-started].
+uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started
+example][sample-getting-started].
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", 
-alt="Getting started Popup", width="187", height="153" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started
+Popup", width="187", height="153" %}
 
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
@@ -63,8 +64,7 @@ alt="Getting started Popup", width="187", height="153" %}
 
 #### Relative URL {: #relative-urls }
 
-An extension's files can be referred to by using a relative URL, just like in an ordinary HTML
-page.
+An extension's files can be referred to by using a relative URL, just like in an ordinary HTML page.
 
 ```html
 <img src="images/my_image.png">
@@ -83,10 +83,12 @@ generates. The extension ID's are displayed in the Extension management page
 **chrome://extensions**. The <var>PATH_TO_FILE</var> is the location of the file under the
 extension's top folder; it matches the relative URL.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", 
-alt="Extension ID in the Extension management page", width="400", height="21" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", alt="Extension ID in the
+Extension management page", width="400", height="21" %}
 
-While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the manifest, then the extension ID can change. For example, when the extension is loaded from a different directory, packed or uploaded to the Chrome Web Store.
+While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the
+manifest, then the extension ID can change. For example, when the extension is loaded from a
+different directory, packed or uploaded to the Chrome Web Store.
 
 You can use the [`chrome.runtime.getURL()`][api-get-url] method to avoid hardcoding the ID.
 
@@ -107,55 +109,57 @@ include multiple components:
 
 ### Background service worker {: #background_script }
 
-The [background service worker][docs-service-worker] is the extension's event handler; it contains listeners for browser
-events that are important to the extension. It lies dormant until an event is fired then performs
-the instructed logic; it is only loaded when it is needed and unloaded
-when it goes idle.
+The [background service worker][docs-service-worker] is the extension's event handler; it contains
+listeners for browser events that are important to the extension. It lies dormant until an event is
+fired then performs the instructed logic; it is only loaded when it is needed and unloaded when it
+goes idle.
 
 ### UI elements {: #pages }
 
-An [extension's user interface][docs-ui] should be purposeful and minimal. The UI should customize or
-enhance the browsing experience without distracting from it. 
+An [extension's user interface][docs-ui] should be purposeful and minimal. The UI should customize
+or enhance the browsing experience without distracting from it. 
 
-Most extensions run when the user clicks the toolbar icon [action][api-action] or display a [popup][docs-popup], but can also contain any of the following:
+Most extensions run when the user clicks the toolbar icon [action][api-action] or display a
+[popup][docs-popup], but can also contain any of the following:
 
 - A [context menus][docs-context-menu]
 - An [omnibox][docs-omnibox]
 - A [keyboard shortcut][docs-commands].
 
-Extension UI pages, such as a [popup][docs-popup], can contain ordinary HTML pages with JavaScript logic.
-Extensions can also call [tabs.create][api-create-tab] or `window.open()` to display additional HTML files
-present in the extension.
+Extension UI pages, such as a [popup][docs-popup], can contain ordinary HTML pages with JavaScript
+logic. Extensions can also call [tabs.create][api-create-tab] or `window.open()` to display
+additional HTML files present in the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
-alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png", alt="A browser window
+containing a page action displaying a popup", height="316", width="325" %}
 
 An extension using a popup can use the [declarative content API][api-dec-content] to set rules in
 the background script for when the popup is available to users. When the conditions are met, the
 background script communicates with the popup to make it's icon clickable to users.
 
-An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page with a custom HTML file.
+An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page
+with a custom HTML file.
 
 ### Content scripts {: #contentScripts }
 
-Extensions that read or write to web pages utilize a [content script][docs-content-scripts]. The content script
-contains JavaScript that executes in the contexts of a page that has been loaded into the browser.
-Content scripts read and modify the DOM of web pages the browser visits.
+Extensions that read or write to web pages utilize a [content script][docs-content-scripts]. The
+content script contains JavaScript that executes in the contexts of a page that has been loaded into
+the browser. Content scripts read and modify the DOM of web pages the browser visits.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
-alt="A browser window with a page action and a content script", height="316", width="388" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png", alt="A browser window with
+a page action and a content script", height="316", width="388" %}
 
-Content scripts can communicate with their parent extension by exchanging [messages][docs-messages] and storing
-values using the [storage][api-storage] API.
+Content scripts can communicate with their parent extension by exchanging [messages][docs-messages]
+and storing values using the [storage][api-storage] API.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
-alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png", alt="Shows a communication
+path between the content script and the parent extension", height="316", width="388" %}
 
 ### Options page {: #optionsPage }
 
-Just as extensions allow users to customize the Chrome browser, the [options page][docs-options] enables
-customization of the extension. Options can be used to enable features and allow users to choose
-what functionality is relevant to their needs.
+Just as extensions allow users to customize the Chrome browser, the [options page][docs-options]
+enables customization of the extension. Options can be used to enable features and allow users to
+choose what functionality is relevant to their needs.
 
 Users can access the options page via [direct link][docs-link-options] or in the context menu of the
 extension toolbar. The following is an example of the Google Dictionary extension. 
@@ -189,11 +193,11 @@ extension toolbar. The following is an example of the Google Dictionary extensio
 
 ## Using Chrome APIs {: #apis }
 
-In addition to having access to the same web APIs as web pages, extensions can also use
-[extension-specific APIs][api-reference] that create tight integration with the browser. Extensions and
-webpages can both access the standard `window.open()` method to open a URL, but extensions can
-specify which window that URL should be displayed in by using the Chrome API [tabs.create][api-tabs-create]
-method instead.
+In addition to having access to the same [web APIs][mdn-web-apis] as web pages, extensions can also
+use [extension-specific APIs][api-reference] that create tight integration with the browser.
+Extensions and webpages can both access the standard `window.open()` method to open a URL, but
+extensions can specify which window that URL should be displayed in by using
+[chrome.tabs.create()][api-tabs-create] instead.
 
 ### Asynchronous vs. synchronous methods {: #sync }
 
@@ -204,8 +208,7 @@ to finish. If an extension needs to know the outcome of an asynchronous operatio
 callback function into the method. The callback is executed later, potentially much later, after the
 method returns.
 
-A method is asynchronous when the callback parameter is
-available in its signature.
+A method is asynchronous when the callback parameter is available in its signature.
 
 ```js
 // Signature for an asynchronous method
@@ -254,7 +257,9 @@ anything with the results of the update.
 
 #### Promises
 
-With the introduction of Manifest V3, many extension API methods now return promises. Not all methods in extensions APIs support promises. You can check whether a method supports promises by checking its API reference page. See [Using promises][docs-promises] to learn more.
+With the introduction of Manifest V3, many extension API methods now return promises. Not all
+methods in extensions APIs support promises. You can check whether a method supports promises by
+checking its API reference page. See [Using promises][docs-promises] to learn more.
 
 #### Synchronous methods
 
@@ -271,14 +276,16 @@ For more information, explore the [Chrome API reference docs][api-reference].
 
 ## Communication between pages {: #pageComm }
 
-Different components in an extension can communicate with each other using [message passing][docs-messages]. Either side can listen for messages sent from the other end, and respond on the same channel. Additionally, all components of the
-extension can access values stored using the [storage][api-storage] API.
+Different components in an extension can communicate with each other using [message
+passing][docs-messages]. Either side can listen for messages sent from the other end, and respond on
+the same channel. Additionally, all components of the extension can access values stored using the
+[storage][api-storage] API.
 
 ## Saving data and incognito mode {: #incognito }
 
-Extensions can save data using the [storage][api-storage] API, or by making
-server requests that result in saving data. When the extension needs to save something, first
-consider if it's from an incognito window. By default, extensions don't run in incognito windows.
+Extensions can save data using the [storage][api-storage] API, or by making server requests that
+result in saving data. When the extension needs to save something, first consider if it's from an
+incognito window. By default, extensions don't run in incognito windows.
 
 _Incognito mode_ promises that the window will leave no tracks. When dealing with data from
 incognito windows, extensions should honor this promise. If an extension normally saves browsing
@@ -300,15 +307,16 @@ function saveTabData(tab) {
 
 ## Take the next step {: #next-steps }
 
-After reading the overview and completing the [Getting Started][docs-get-started] tutorial, developers should be
-ready to start writing their own extensions! Dive deeper into the world of custom Chrome with the
-following resources.
+After reading the overview and completing the [Getting Started][docs-get-started] tutorial, you
+should be ready to start writing your own extensions! Dive deeper into the world of custom Chrome
+with the following resources:
 
-- Learn about the options available for debugging Extensions in the [debugging tutorial][docs-debugging].
+- Learn about the options available for debugging Extensions in the [debugging
+  tutorial][docs-debugging].
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
   The [chrome.\* APIs documentation][api-reference] will walk through each API.
-- The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation relevant to
-  advanced extension creation.
+- The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation
+  relevant to advanced extension creation.
 
 [api-action]: /docs/extensions/reference/action/
 [api-create-tab]: /docs/extensions/reference/tabs#method-create
@@ -336,6 +344,7 @@ following resources.
 [docs-promises]: /docs/extensions/mv3/promises/
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
+[mdn-web-apis]: https://developer.mozilla.org/en-US/docs/Web/API
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-bg]: #background_script
 [section-cs]: #contentScripts
