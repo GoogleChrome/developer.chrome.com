@@ -82,8 +82,8 @@ You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel
 ## Preview class/function properties on hover {: #properties }
 
 You can now hover over a class or function in the **Sources** panel during debugging to preview its properties. Previously, it only showed the function name and a link to its location in the source code.
- 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ejDqFB6YqXPY2Ji1M6ho.png", alt="Preview class/function properties on hover", width="800", height="626" %}
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BZzL6QMheyd31VGqhA8W.png", alt="Preview class/function properties on hover", width="800", height="502" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0a585b3883ad39f2f83fa5ab9c7731270d3a2974 ​#}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/96fb7872ce01eb3fde267e39987a82ce3d3f3e21 #}
