@@ -2,28 +2,32 @@
 api: declarativeContent
 ---
 
+{% Aside %}
+
+To transition from pageaction to action, see [Emulating pageActions with declarativeContent][emulating-page-actions]
+
+{% endAside %}
+
 ## Usage
 
-The Declarative Content API allows you to show your extension's [page action][1] depending on the
-URL of a web page and the CSS selectors its content matches, without needing to take a [host
-permission][2] or inject a [content script][3]. Use the [activeTab][4] permission in order to be
-able to interact with a page after the user clicks on your page action.
+The Declarative Content API allows you to enable your extension's [action][api-action] depending on the
+URL of a web page and the CSS selectors its content matches, without needing to add [host
+permission][docs-host-perm] or inject a [content script][docs-content-scripts]. 
 
-If you need more precise control over when your page action appears or you need to change its
-appearance to match the current tab before the user clicks on it, you'll have to keep using the
-[pageAction][5] API.
+Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the toolbar icon.
 
 ## Rules
 
-As a [declarative API][6], this API lets you register rules on the [`onPageChanged`][7] [event][8]
-object which take an action ([`ShowPageAction`][9] and [`SetIcon`][10]) when a set of conditions,
-represented as a [`PageStateMatcher`][11], are met.
+As a [declarative API][api-declarative], this API lets you register rules on the [`onPageChanged`][event-onpagechanged] event
+object which take an action ([`ShowAction`][type-show-action] and [`SetIcon`][type-set-icon]) when a set of conditions,
+represented as a `PageStateMatcher`, are met.
 
-The [`PageStateMatcher`][12] matches web pages if and only if all listed criteria are met. The
-following rule would show a page action for pages on "https://www.google.com/" when a password field
-is present on it:
+The [`PageStateMatcher`][type-page-state-matcher] matches web pages if and only if all listed criteria are met. For example, the
+following rule uses [pageUrl][type-page-url] to enable the action for pages on "https://www.google.com/" when a password field
+is present:
 
 ```js
+
 var rule1 = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
@@ -31,17 +35,18 @@ var rule1 = {
       css: ["input[type='password']"]
     })
   ],
-  actions: [ new chrome.declarativeContent.ShowPageAction() ]
+  actions: [ new chrome.declarativeContent.ShowAction() ]
 };
+
 ```
 
 {% Aside %}
 
-**Note:** All conditions and actions are created via a constructor as shown in the example above.
+All conditions and actions are created via a constructor as shown in the example above.
 
 {% endAside %}
 
-In order to also show a page action for sites with a video, you can add a second condition, as each
+In order to also enable the toolbar icon for sites with a video, you can add a second condition, as each
 condition is sufficient to trigger all specified actions:
 
 ```js
@@ -55,11 +60,11 @@ var rule2 = {
       css: ["video"]
     })
   ],
-  actions: [ new chrome.declarativeContent.ShowPageAction() ]
+  actions: [ new chrome.declarativeContent.ShowAction() ]
 };
 ```
 
-[Added rules][27] are saved across browser restarts, so register them as follows:
+[Added rules][docs-adding-rules] are saved across browser restarts, so register them as follows:
 
 ```js
 chrome.runtime.onInstalled.addListener(function(details) {
@@ -71,20 +76,19 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 {% Aside %}
 
-**Note:** You should always register or unregister rules in bulk rather than individually because
+You should always register or unregister rules in bulk rather than individually because
 each of these operations recreates internal data structures. This re-creation is computationally
 expensive but facilitates a faster matching algorithm.
 
 {% endAside %}
 
-Combine the above rule with the [activeTab][33] permission to create an extension that doesn't need
-any install-time permissions but can invite the user to click its page action on relevant pages and
-can run on those pages when the user clicks the page action.
+Combine the above rule with the [activeTab][api-action] permission to create an extension that doesn't need
+any install-time permissions but can invite the user to click the toolbar icon on relevant pages.
 
 ## CSS Matching
 
-[`PageStateMatcher.css`][34] conditions must be _[compound selectors][35]_, meaning that you can't
-include [combinators][36] like whitespace or "`>`" in your selectors. This helps Chrome match the
+[`PageStateMatcher.css`][section-matcher-css] conditions must be _[compound selectors][w3-compound]_, meaning that you can't
+include [combinators][mdn-combinators] like whitespace or "`>`" in your selectors. This helps Chrome match the
 selectors more efficiently.
 
 <table><tbody><tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr><tr><td><code>a</code></td><td><code>div p</code></td></tr><tr><td><code>iframe.special[src^='http']</code></td><td><code>p&gt;span.highlight</code></td></tr><tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr><tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr></tbody></table>
@@ -96,45 +100,25 @@ can still make your condition match.
 
 ## Bookmarked State Matching
 
-The [`PageStateMatcher.isBookmarked`][37] condition allows matching of the bookmarked state of the
+The [`PageStateMatcher.isBookmarked`][property-is-bookmarked] condition allows matching of the bookmarked state of the
 current URL in the user's profile. To make use of this condition the "bookmarks" permission must be
-declared in the [extension manifest][38]
+declared in the extension [manifest][docs-manifest]
 
-[1]: /docs/extensions/pageAction
-[2]: /docs/extensions/mv2/declare_permissions#host-permissions
-[3]: /docs/extensions/mv2/content_scripts
-[4]: /docs/extensions/activeTab
-[5]: /docs/extensions/pageAction
-[6]: /docs/extensions/events#declarative
-[7]: #event-onPageChanged
-[8]: /docs/extensions/events#type-Event
-[9]: #type-ShowPageAction
-[10]: #type-SetIcon
-[11]: #type-PageStateMatcher
-[12]: #type-PageStateMatcher
-[13]: #type-PageStateMatcher
-[14]: #property-PageStateMatcher-pageUrl
-[15]: /docs/extensions/events#property-UrlFilter-hostEquals
-[16]: /docs/extensions/events#property-UrlFilter-schemes
-[17]: #property-PageStateMatcher-css
-[18]: #type-ShowPageAction
-[19]: #type-PageStateMatcher
-[20]: #property-PageStateMatcher-pageUrl
-[21]: /docs/extensions/events#property-UrlFilter-hostEquals
-[22]: /docs/extensions/events#property-UrlFilter-schemes
-[23]: #property-PageStateMatcher-css
-[24]: #type-PageStateMatcher
-[25]: #property-PageStateMatcher-css
-[26]: #type-ShowPageAction
-[27]: /docs/extensions/events#addingrules
-[28]: /docs/extensions/runtime#event-onInstalled
-[29]: #event-onPageChanged
-[30]: /docs/extensions/events#removingrules
-[31]: #event-onPageChanged
-[32]: /docs/extensions/events#addingrules
-[33]: /docs/extensions/activeTab
-[34]: #property-PageStateMatcher-css
-[35]: https://www.w3.org/TR/selectors4/#compound
-[36]: https://www.w3.org/community/webed/wiki/CSS/Selectors#Combinators
-[37]: #property-PageStateMatcher-isBookmarked
-[38]: /docs/extensions/mv2/tabs
+[api-action]: /docs/extensions/reference/action/
+[api-declarative]: /docs/extensions/reference/events/#declarative-event-handlers
+[docs-activetab]: /docs/extensions/mv3/manifest/activeTab/
+[docs-adding-rules]: /docs/extensions/events#addingrules
+[docs-content-scripts]: /docs/extensions/mv3/content_scripts
+[docs-host-perm]: /docs/extensions/mv3/declare_permissions#host-permissions
+[docs-manifest]: /docs/extensions/mv3/manifest/
+[emulating-page-actions]: /docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
+[event-onpagechanged]: #event-onPageChanged
+[mdn-combinators]: https://developer.mozilla.org/docs/Web/CSS/CSS_Selectors#combinators
+[property-is-bookmarked]: #property-PageStateMatcher-isBookmarked
+[section-matcher-css]: #property-PageStateMatcher-css
+[type-event]: /docs/extensions/reference/events/#type-Event
+[type-page-state-matcher]: #type-PageStateMatcher
+[type-page-url]: #property-PageStateMatcher-pageUrl
+[type-set-icon]: #type-SetIcon
+[type-show-action]: #type-ShowAction
+[w3-compound]: https://www.w3.org/TR/selectors4/#compound
