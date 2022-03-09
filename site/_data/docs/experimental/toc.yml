@@ -1,0 +1,6 @@
+- url: /docs/experimental/origin-trials
+- url: /docs/experimental/origin-trial-troubleshooting
+
+- title: i18n.docs.experimental.origin-trials
+  sections:
+    - url: /docs/experimental/launch-handler
