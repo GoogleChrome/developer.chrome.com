@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2021-05-12
+updated: 2022-03-12
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
@@ -54,7 +54,8 @@ Extensions must have an icon that sits in the browser toolbar. Toolbar icons all
 keep users aware of which extensions are installed. Most users will interact with an extension that
 uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started example][sample-getting-started].
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started Popup", width="187", height="153" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", 
+alt="Getting started Popup", width="187", height="153" %}
 
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
@@ -82,7 +83,8 @@ generates. The extension ID's are displayed in the Extension management page
 **chrome://extensions**. The <var>PATH_TO_FILE</var> is the location of the file under the
 extension's top folder; it matches the relative URL.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", alt="Extension ID in the Extension management page", width="400", height="21" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", 
+alt="Extension ID in the Extension management page", width="400", height="21" %}
 
 While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the manifest, then the extension ID can change. For example, when the extension is loaded from a different directory, packed or uploaded to the Chrome Web Store.
 
@@ -126,7 +128,13 @@ Extensions can also call [tabs.create][api-create-tab] or `window.open()` to dis
 present in the extension.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
-       alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
+alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
+
+An extension using a popup can use the [declarative content API][api-dec-content] to set rules in
+the background script for when the popup is available to users. When the conditions are met, the
+background script communicates with the popup to make it's icon clickable to users.
+
+An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page with a custom HTML file.
 
 ### Content scripts {: #contentScripts }
 
@@ -135,13 +143,13 @@ contains JavaScript that executes in the contexts of a page that has been loaded
 Content scripts read and modify the DOM of web pages the browser visits.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
-       alt="A browser window with a page action and a content script", height="316", width="388" %}
+alt="A browser window with a page action and a content script", height="316", width="388" %}
 
 Content scripts can communicate with their parent extension by exchanging [messages][docs-messages] and storing
 values using the [storage][api-storage] API.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
-       alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
+alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
 
 ### Options page {: #optionsPage }
 
@@ -149,7 +157,8 @@ Just as extensions allow users to customize the Chrome browser, the [options pag
 customization of the extension. Options can be used to enable features and allow users to choose
 what functionality is relevant to their needs.
 
-Users can access the options page via [direct link][docs-link-options] or in the context menu of the extension toolbar. The following is an example of the Google Dictionary extension. 
+Users can access the options page via [direct link][docs-link-options] or in the context menu of the
+extension toolbar. The following is an example of the Google Dictionary extension. 
 
 {% Columns %}
 
@@ -328,6 +337,7 @@ following resources.
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
 [docs-options]: /docs/extensions/mv3/options
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
+[docs-promises]: /docs/extensions/mv3/promises/
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
