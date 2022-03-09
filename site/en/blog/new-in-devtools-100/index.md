@@ -14,8 +14,9 @@ tags:
   - chrome-100
 ---
 
-
 <!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dzxqvpHgEBlwfnfW0osP.jpg -->
+
+{% include 'partials/devtools/en/banner.md' %}
 
 ## Chrome 100  {: #m100 }
 
