@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description:
-  "WebSocket 限速，Reporting API 新边栏，控制台美化以及更多。"
+  "WebSocket 限速、Reporting API 新边栏、控制台美化以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/65bzqQ8Lnd4l3LzhueDO.jpg'
 alt: ''
 tags:
@@ -44,7 +44,7 @@ Chromium 议题: [423246](https://crbug.com/423246)
 
 
 <!-- ## New Reporting API pane in the Application panel {: #reporting-api } -->
-## Application 面板里面的 Reporting API 新边栏 {: #reporting-api }
+## 应用面板里面的 Reporting API 新边栏 {: #reporting-api }
 
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 使用 **Reporting API** 新边栏来查看有关自己页面情况的报告以及报告对应的状态。
@@ -95,10 +95,10 @@ Chromium 议题: [1257499](https://crbug.com/1257499#c38)
 对 [Node.js](https://nodejs.org/) 开发者来说，使用 ANSI escape sequences 来美化日志信息的做法实属平常，通常是需要使用一些样式库，如 [chalk](https://www.npmjs.com/package/chalk)、[colors](https://www.npmjs.com/package/colors)、[ansi-colors](https://www.npmjs.com/package/ansi-colors)、[kleur](https://www.npmjs.com/package/kleur) 等。
 
 <!-- With these changes, you can now debug your Node.js applications seamlessly using DevTools, with proper colorized console messages. Open this [demo](https://stackblitz.com/edit/node-colors-test) to view it yourself! -->
-有了这些改动，您现在就可以无差别地使用 DevTools 来调试您的 Node.js 应用程序，并且能够适当地美化控制台信息。打开这个 [demo](https://stackblitz.com/edit/node-colors-test) 来亲自目睹效果！
+有了这些改动，您现在就可以无差别地使用 DevTools 来调试您的 Node.js 应用程序，并且能够适当地美化控制台信息。打开这个 [demo](https://stackblitz.com/edit/node-colors-test) 来亲眼目睹效果！
 
 <!-- To learn more about formatting & styling console messages with DevTools, go to [format and style messages in the Console](/docs/devtools/console/format-style) documentation. -->
-如果您想了解更多关于 DevTools 格式化以及 DevTools 修饰控制台信息的内容，请查看 [格式化和修饰控制台信息](/docs/devtools/console/format-style) 文档。
+如果您想了解更多关于 DevTools 格式化以及美化控制台信息的内容，请查看 [格式化和修饰控制台信息](/docs/devtools/console/format-style) 文档。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6Lu7Js1rgSmjV0cnhDlH.png", alt="控制台美化", width="800", height="547" %}
 
@@ -157,7 +157,7 @@ Chromium 议题: [212374](https://crbug.com/212374)
 ### 优化 Sources 面板里面源文件夹树的显示问题 {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-现在，**Sources** 面板里面源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。底层是通过规范化 sourcemaps 里面的绝对源 URL 来实现的。
+现在，**Sources** 面板里面的源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。这项功能的实现得益于规范化 sourcemaps 里面的绝对源 URL。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="优化 Sources 面板里面源文件夹树的显示", width="800", height="444" %}
 
@@ -236,7 +236,7 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->
 - 在 **Sources** 面板里面移除断点，会关闭断点编辑对话框。(922513)
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
-- 在 DevTools 里面切换 [light/dark 主题](/docs/devtools/customize/dark-theme/)，不需要重新加载 DevTools。([1278738](https://crbug.com/1278738))
+- 在 DevTools 里面切换 [浅色/深色主题](/docs/devtools/customize/dark-theme/)，不需要重新加载 DevTools。([1278738](https://crbug.com/1278738))
 
 
 {% include 'partials/devtools/zh/reach-out.md' %}
