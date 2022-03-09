@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description:
-  "WebSocket 限速、Reporting API 新边栏、控制台美化以及更多。"
+  "WebSocket 请求限速、Reporting API 新边栏、控制台美化以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/65bzqQ8Lnd4l3LzhueDO.jpg'
 alt: ''
 tags:
@@ -30,7 +30,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
-## WebSocket 限速 {: #websocket }
+## WebSocket 请求限速 {: #websocket }
 
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
 **网络**面板现在已经支持对网络套接字（web socket）请求进行限速。在此之前，网络限速的功能对网络套接字（web socket）请求不起作用。
@@ -44,10 +44,10 @@ Chromium 议题: [423246](https://crbug.com/423246)
 
 
 <!-- ## New Reporting API pane in the Application panel {: #reporting-api } -->
-## 应用面板里面的 Reporting API 新边栏 {: #reporting-api }
+## 应用面板里面的 报告 API （Reportng API）新边栏 {: #reporting-api }
 
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
-使用 **Reporting API** 新边栏来查看有关自己页面情况的报告以及报告对应的状态。
+使用 **报告 API** 新边栏来查看有关自己页面情况的报告以及报告对应的状态。
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 该 [Reporting API](https://web.dev/reporting-api/) 是为了帮助您了解自己页面的安全违规情况，弃用 API 的调用情况以及更多。
