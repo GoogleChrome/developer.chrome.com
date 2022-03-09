@@ -122,7 +122,7 @@ or enhance the browsing experience without distracting from it.
 Most extensions run when the user clicks the toolbar icon [action][api-action] or display a
 [popup][docs-popup], but can also contain any of the following:
 
-- A [context menus][docs-context-menu]
+- A [context menu][docs-context-menu]
 - An [omnibox][docs-omnibox]
 - A [keyboard shortcut][docs-commands].
 
@@ -137,7 +137,7 @@ An extension using a popup can use the [declarative content API][api-dec-content
 the background script for when the popup is available to users. When the conditions are met, the
 background script communicates with the popup to make it's icon clickable to users.
 
-An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page
+Extensions can also [override][docs-override] and replace the History, New Tab, or Bookmarks web page
 with a custom HTML file.
 
 ### Content scripts {: #contentScripts }
@@ -258,7 +258,7 @@ anything with the results of the update.
 #### Promises
 
 With the introduction of Manifest V3, many extension API methods now return promises. Not all
-methods in extensions APIs support promises. You can check whether a method supports promises by
+methods in extensions APIs support promises. You can verify whether a method supports promises by
 checking its API reference page. See [Using promises][docs-promises] to learn more.
 
 #### Synchronous methods
@@ -311,8 +311,7 @@ After reading the overview and completing the [Getting Started][docs-get-started
 should be ready to start writing your own extensions! Dive deeper into the world of custom Chrome
 with the following resources:
 
-- Learn about the options available for debugging Extensions in the [debugging
-  tutorial][docs-debugging].
+- Learn about how to debug Extensions in the [debugging tutorial][docs-debugging].
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
   The [chrome.\* APIs documentation][api-reference] will walk through each API.
 - The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation
@@ -340,6 +339,7 @@ with the following resources:
 [docs-messages]: /docs/extensions/mv3/messaging
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
 [docs-options]: /docs/extensions/mv3/options
+[docs-override]: /docs/extensions/mv3/override/
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
 [docs-promises]: /docs/extensions/mv3/promises/
 [docs-service-worker]: /docs/extensions/mv3/service_workers
