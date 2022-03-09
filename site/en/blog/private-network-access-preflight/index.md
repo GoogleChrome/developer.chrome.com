@@ -6,13 +6,24 @@ authors:
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-02-11
+updated: 2022-03-07
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
   - security
 ---
+
+{% Aside 'warning' %}
+
+- **March 7, 2022**: The experiment in Chrome 98 was rolled back due to
+  stability and compatibility issues discovered in the rollout to Chrome
+  stable. These issues will be fixed before the experiment is tried again, no
+  earlier than in Chrome 101. Learn more in the [blink-dev@chromium.org Intent to Ship
+  email
+  thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/72CK2mxD47c/m/d835CNGtAAAJ)
+  for more details.
+{% endAside %}
 
 ## Introduction
 
@@ -39,7 +50,8 @@ Chrome will roll this change out in two phases to give websites time to notice
 the change and adjust accordingly.
 
 1. In Chrome 98:
-    * Chrome sends preflight requests ahead of private network subresource
+    * Chrome experiments by sending preflight requests ahead of private network
+      subresource
       requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
@@ -261,6 +273,18 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
    gives a 501 status.",
    class="screenshot",
    width="800", height="265"
+%}
+
+If your request would have triggered a regular CORS preflight without
+Private Network Access rules, then two preflights may appear in the
+network panel, with the first one always appearing to have failed. This is a
+[known bug](https://crbug.com/1290390), and you can safely ignore it.
+
+{% Img
+   src="image/I8XwjL2ZK8fUPQRJMwrRzjyKAar1/MaBNk7572rWNybez1FHH.png",
+   alt="A spurious failed preflight request ahead of a successful preflight in
+   the DevTools Network panel.",
+   width="800", height="316"
 %}
 
 To review what happens if preflight success was enforced, you can
