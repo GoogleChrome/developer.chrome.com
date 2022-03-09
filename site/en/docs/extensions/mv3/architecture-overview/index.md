@@ -271,16 +271,12 @@ For more information, explore the [Chrome API reference docs][api-reference].
 
 ## Communication between pages {: #pageComm }
 
-Different components in an extension often need to communicate with each other. Different HTML pages
-can find each other by using the [`chrome.extension`][32] methods, such as `getViews()` and
-`getBackgroundPage()`. Once a page has a reference to other extension pages the first one can invoke
-functions on the other pages and manipulate their DOMs. Additionally, all components of the
-extension can access values stored using the [storage][33] API and communicate through [message
-passing][34].
+Different components in an extension can communicate with each other using [message passing][docs-messages]. Either side can listen for messages sent from the other end, and respond on the same channel. Additionally, all components of the
+extension can access values stored using the [storage][api-storage] API.
 
 ## Saving data and incognito mode {: #incognito }
 
-Extensions can save data using the [storage][api-storage] API, the HTML5 [web storage API][36] , or by making
+Extensions can save data using the [storage][api-storage] API, or by making
 server requests that result in saving data. When the extension needs to save something, first
 consider if it's from an incognito window. By default, extensions don't run in incognito windows.
 
