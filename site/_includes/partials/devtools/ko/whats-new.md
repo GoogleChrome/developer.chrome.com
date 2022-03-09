@@ -3,6 +3,17 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
+<!-- ### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/ko/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/ko/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/ko/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/ko/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/ko/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/ko/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-100/#misc) -->
+
+
 <!-- ### Chrome 99 {: #chrome99 }
 
 * [Throttling WebSocket requests](/ko/blog/new-in-devtools-99/#websocket)
