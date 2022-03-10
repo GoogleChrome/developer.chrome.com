@@ -947,7 +947,7 @@ onAllChangesSaved(() => {
 
 ## FAQs
 
-**My page does important work when it's hidden, how can I stop it from being frozen or discarded?**
+### My page does important work when it's hidden, how can I stop it from being frozen or discarded?
 
 There are lots of legitimate reasons web pages shouldn't be frozen while running
 in the hidden state. The most obvious example is an app that plays music.
@@ -979,7 +979,7 @@ in Chrome.
   freeze or discard the page but still show changes to the tab title or favicon.
 {% endAside %}
 
-**What is the Back-Forward Cache?**
+### What is the Back-Forward Cache?
   
 The Back-Forward Cache (or
 [bfcache](https://developer.mozilla.org/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
@@ -997,7 +997,7 @@ For all intents and purposes, this freezing is functionally the same as
 the freezing browsers perform to conserve CPU/battery; for that reason it's
 considered part of the [frozen](#state-frozen) lifecycle state.
 
-**Why aren't the load or DOMContentLoaded events mentioned?**
+### Why aren't the load or DOMContentLoaded events mentioned?
 
 The Page Lifecycle API defines states to be discrete and mutually exclusive.
 Since a page can be loaded in either the active, passive, or hidden state, a
@@ -1005,7 +1005,7 @@ separate loading state does not make sense, and since the `load` and
 `DOMContentLoaded` events don't signal a lifecycle state change, they're not
 relevant to this API.
 
-**If I can't run asynchronous APIs in the frozen or terminated states, how can I save data to IndexedDB?**
+### If I can't run asynchronous APIs in the frozen or terminated states, how can I save data to IndexedDB?
 
 In frozen and terminated states,
 [freezable tasks](https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn)

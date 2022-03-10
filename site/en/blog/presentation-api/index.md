@@ -77,11 +77,11 @@ function onRequestSessionSuccess(e) {
 
 The user will be presented with a device picker:
 
-<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/6wfDunXlqwEFO34XGPvH.png", alt="Cast device selection dialog", width="360", height="640", class="screenshot" %}</figure>
+<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/6wfDunXlqwEFO34XGPvH.png", alt="Cast device selection dialog.", width="360", height="640", class="screenshot" %}</figure>
 
 The **route details** dialog is shown when the page is already connected and calls `requestSession()`:
 
-<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/0Tw1RySyfEngjWna7mM3.png", alt="Cast route details dialog", width="360", height="640", class="screenshot" %}</figure>
+<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/0Tw1RySyfEngjWna7mM3.png", alt="Cast route details dialog.", width="360", height="640", class="screenshot" %}</figure>
 
 Once you have a Cast session, you can load media for the selected Cast device, and add a listener for media playback events:
 
@@ -114,11 +114,11 @@ function playMedia() {
 
 A play/pause notification is shown when media is playing:
 
-<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/f53fvcWloBo7u9ACYG2L.png", alt="Cast play/pause notification", width="360", height="640", class="screenshot" %}</figure>
+<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/f53fvcWloBo7u9ACYG2L.png", alt="Cast play/pause notification.", width="360", height="640", class="screenshot" %}</figure>
 
 If no media is playing, the notification only has a stop button, to stop casting:
 
-<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/TgmE8eZig366AKGuSRCe.png", alt="Cast stop notification", width="360", height="640", class="screenshot" %}</figure>
+<figure>{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/TgmE8eZig366AKGuSRCe.png", alt="Cast stop notification.", width="360", height="640", class="screenshot" %}</figure>
 
 
 The `sessionListener` callback for `chrome.cast.ApiConfig()` (see above) enables your app to join or manage an existing Cast session:
