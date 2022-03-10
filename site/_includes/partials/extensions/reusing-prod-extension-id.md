@@ -19,7 +19,7 @@ When the popup is open, follow these steps:
 1. Copy the code in between `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`.
 2. Remove the newlines in order to make it a single line of text.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iOF372HS2DNkv5gLc1AA.png", alt="Publi key popup",
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iOF372HS2DNkv5gLc1AA.png", alt="Public key popup",
 width="500", height="233" %}
 
 Add the code to the `manifest.json` under the [`"key"`]([/docs/extensions/mv3/manifest/key/) field.
