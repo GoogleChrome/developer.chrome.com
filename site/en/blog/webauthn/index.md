@@ -11,7 +11,7 @@ description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, wh
 
 ## The problem
 
-Phishing is the \#1 security problem on the web: 81% of hacking-related account
+Phishing is the top security problem on the web: 81% of hacking-related account
 breaches last year leveraged weak or stolen passwords. The industry's collective
 response to this problem has been multi-factor authentication, but
 implementations are fragmented and most still don't adequately address phishing.
@@ -28,10 +28,10 @@ platform – for the purposes of generating and challenging application-scoped
 (eTLD+k) public-key credentials. This enables a variety of use-cases, such as:
 
 - Low friction and phishing-resistant 2FA (to be used in conjunction with
-  a password)
-- Passwordless, biometrics-based re-authorization
+  a password).
+- Passwordless, biometrics-based re-authorization.
 - Low friction and phishing-resistant 2FA **without** a password (to be used
-  for passwordless accounts)
+  for passwordless accounts).
 
 The API is on track to be implemented by most major browsers, and is intended to
 both simplify the UI encountered when having to prove your identity online and
@@ -42,9 +42,9 @@ API](https://w3c.github.io/webappsec-credential-management/) and adds a new
 credential type called `PublicKeyCredential`. WebAuthn abstracts the
 communication between the browser and an authenticator and allows a user to:
 
-1. Create and register a public key credential for a website
+1. Create and register a public key credential for a website.
 1. Authenticate to a website by proving possession of the corresponding private
-   key
+   key.
 
 Authenticators are devices that can generate private/public key pairs and gather
 consent. Consent for signing can be granted with a simple tap, a successful
@@ -151,3 +151,4 @@ We are working on more detailed documentation:
 The session ["What's new with sign-up and sign-in on the
 web"](https://youtu.be/kGGMgEfSzMw?t=15m21s)
 at Google I/O 2018 covered WebAuthn.
+

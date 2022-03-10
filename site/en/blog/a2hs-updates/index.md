@@ -174,9 +174,11 @@ window.addEventListener('beforeinstallprompt', event => {
 });
 ```
 
-Note: Your site must meet the
+{% Aside %}
+Your site must meet the
 [add to home screen criteria](https://web.dev/install-criteria/)
 in order for the `beforeinstallprompt` event to be fired and your app installed.
+{% endAside %}
 
 The `beforeinstallprompt` event will not be fired if the app is already
 installed (see the
