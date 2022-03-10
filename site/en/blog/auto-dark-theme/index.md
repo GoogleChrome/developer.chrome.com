@@ -123,7 +123,7 @@ Then, use CSS to customize elements as needed:
 
 The per-element customization API is still in early development.
 We're working with the standards teams to provide developers with a more expressive API for opt-out.
-You follow the conversation on [this GitHub issue](https://github.com/w3c/csswg-drafts/issues/6664).
+You can follow the conversation on [this GitHub issue](https://github.com/w3c/csswg-drafts/issues/6664).
 
 ## How to opt-out of Auto Dark Theme
 
