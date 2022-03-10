@@ -1,12 +1,5 @@
 ---
 layout: 'layouts/project-landing.njk'
 title: 'Workbox'
-description: 'Tooling! Workbox! Stuff!'
+description: 'Production-ready service worker libraries and tooling.'
 ---
-
-<!-- TODO(samthor): Using a h2 here doesn't match our designs, but it's a linter requirement -->
-
-## Case Studies
-
-Learn more about how developers are using Workbox in production.
-

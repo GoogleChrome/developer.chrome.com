@@ -52,3 +52,9 @@ web-tabs {
     background: var(--color-primary);
   }
 }
+
+web-tab {
+  > * + * {
+    margin-top: var(--flow-space);
+  }
+}

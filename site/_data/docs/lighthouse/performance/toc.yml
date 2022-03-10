@@ -1,0 +1,43 @@
+- title: i18n.docs.performance.topics.performance_audit_scoring
+  sections:
+    - url: /docs/lighthouse/performance/performance-scoring/
+- title: i18n.docs.performance.topics.metrics
+  sections:
+    - url: /docs/lighthouse/performance/first-contentful-paint/
+    - url: /docs/lighthouse/performance/first-meaningful-paint/
+    - url: /docs/lighthouse/performance/speed-index/
+    - url: /docs/lighthouse/performance/first-cpu-idle/
+    - url: /docs/lighthouse/performance/interactive/
+    - url: /docs/lighthouse/performance/lighthouse-max-potential-fid/
+    - url: /docs/lighthouse/performance/lighthouse-total-blocking-time/
+    - url: /docs/lighthouse/performance/lighthouse-largest-contentful-paint/
+- title: i18n.docs.performance.topics.opportunities
+  sections:
+    - url: /docs/lighthouse/performance/render-blocking-resources/
+    - url: /docs/lighthouse/performance/uses-responsive-images/
+    - url: /docs/lighthouse/performance/offscreen-images/
+    - url: /docs/lighthouse/performance/unminified-css/
+    - url: /docs/lighthouse/performance/unminified-javascript/
+    - url: /docs/lighthouse/performance/unused-css-rules/
+    - url: /docs/lighthouse/performance/uses-optimized-images/
+    - url: /docs/lighthouse/performance/uses-webp-images/
+    - url: /docs/lighthouse/performance/uses-text-compression/
+    - url: /docs/lighthouse/performance/uses-rel-preconnect/
+    - url: /docs/lighthouse/performance/time-to-first-byte/
+    - url: /docs/lighthouse/performance/redirects/
+    - url: /docs/lighthouse/performance/uses-rel-preload/
+    - url: /docs/lighthouse/performance/efficient-animated-content/
+    - url: /docs/lighthouse/performance/third-party-summary/
+    - url: /docs/lighthouse/performance/non-composited-animations/
+    - url: /docs/lighthouse/performance/third-party-facades/
+- title: i18n.docs.performance.topics.diagnostics
+  sections:
+    - url: /docs/lighthouse/performance/total-byte-weight/
+    - url: /docs/lighthouse/performance/uses-long-cache-ttl/
+    - url: /docs/lighthouse/performance/dom-size/
+    - url: /docs/lighthouse/performance/critical-request-chains/
+    - url: /docs/lighthouse/performance/user-timings/
+    - url: /docs/lighthouse/performance/bootup-time/
+    - url: /docs/lighthouse/performance/mainthread-work-breakdown/
+    - url: /docs/lighthouse/performance/font-display/
+    - url: /docs/lighthouse/performance/resource-summary/

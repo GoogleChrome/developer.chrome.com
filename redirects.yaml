@@ -48,6 +48,9 @@ redirects:
 - from: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
   to: /docs/devtools/javascript/ignore-chrome-extension-scripts/
 
+- from: /summit
+  to: /devsummit/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/

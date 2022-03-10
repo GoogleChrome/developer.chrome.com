@@ -20,6 +20,12 @@ compare_helpful:
 compare_unhelpful:
   en: 'Unhelpful'
 
+compare_old:
+  en: 'Old'
+
+compare_new:
+  en: 'New'
+
 menu:
   en: 'menu'
   es: 'menu'
@@ -71,6 +77,10 @@ key-term:
 codelab:
   en: 'Codelab'
   es: 'Codelab'
+
+objective:
+  en: 'Objective'
+  es: 'Objective'
 
 see_all_articles:
   en: 'See all articles'

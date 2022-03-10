@@ -300,7 +300,7 @@ improving the developer experience. By introducing `chrome.scripting` in Manifes
 to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
 and to lay the groundwork for new scripting capabilities that will be coming later this year.
 
-[content-scripts]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
+[content-scripts]: https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
 [iframe-demo]: https://simple-iframe-demo.glitch.me/
 [scripting-api]: /docs/extensions/reference/scripting/
 [scripting-executescript]: /docs/extensions/reference/scripting/#method-executeScript

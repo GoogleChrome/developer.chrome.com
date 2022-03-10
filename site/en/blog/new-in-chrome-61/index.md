@@ -29,7 +29,7 @@ tags:
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/60.0.3112.78..61.0.3163.79?pretty=fuller&n=10000).
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 61!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 61!
 
 ## JavaScript Modules {: #modules }
 
@@ -110,7 +110,7 @@ on updates.
 * You can now specify scrolling smoothness with the
   [`scroll-behavior`](https://drafts.csswg.org/cssom-view/#smooth-scrolling)
   CSS property.
-* [CSS hex color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba)
+* [CSS hex color values](https://developer.mozilla.org/docs/Web/CSS/color_value#rgba)
   can now specify alpha transparency by adding digits to the end of the string.
 * You can access the relative positions of the screen content with the
   [Visual Viewport API](https://github.com/WICG/ViewportAPI), exposing complex

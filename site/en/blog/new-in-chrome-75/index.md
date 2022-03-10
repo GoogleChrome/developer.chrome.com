@@ -30,7 +30,7 @@ In Chrome 75, we've added support for:
 * Google I/O 2019 is a wrap and all of [talks](#io-talks) are on our
   YouTube channel.
 
-I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see
 what's new for developers in Chrome 75!
 
 ## Change log

@@ -37,6 +37,11 @@ module.exports = locale => ({
       }
       return key;
     },
+    permalink: data => {
+      // Tag links appear without a locale, since it's a single shared collection.
+      // Be sure to render in the right locale.
+      return `/${locale}/${data.permalink}`;
+    },
   },
   pagination: {
     /**

@@ -422,8 +422,8 @@ values(object);
 ```
 
 [1]: /docs/devtools/console/api
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+[2]: https://developer.mozilla.org/docs/Web/API/Document/querySelector
+[3]: https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll
 [4]: /docs/devtools/javascript/breakpoints
 [console-dir]: /docs/devtools/console/api/#dir
 [console-dirxml]: /docs/devtools/console/api/#dirxml

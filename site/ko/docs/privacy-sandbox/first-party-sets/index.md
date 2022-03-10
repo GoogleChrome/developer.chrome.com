@@ -14,7 +14,7 @@ authors:
 ## 구현 현황
 
 - [최초 평가판](https://web.dev/origin-trials/) Chrome 89 ~ 93
-- [최초 평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)
+- [최초 평가판에 등록](/origintrials/#/view_trial/988540118207823873)
 - [Chrome 플랫폼 현황](https://chromestatus.com/feature/5640066519007232)
 - [Chromium 프로젝트](https://www.chromium.org/updates/first-party-sets)
 
@@ -69,7 +69,7 @@ authors:
 
 ## 참여 및 피드백 공유
 
-- **최초 평가판**: 등록 후, [Chrome 최초 평가판](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)에 참여하세요.
+- **최초 평가판**: 등록 후, [Chrome 최초 평가판](/origintrials/#/view_trial/988540118207823873)에 참여하세요.
 - **GitHub**: [제안](https://github.com/privacycg/first-party-sets)을 읽고 [질문을 제기하고 토론에 참여하세요](https://github.com/privacycg/first-party-sets/issues).
 - **개발자 지원**: [개인정보 보호 샌드박스 개발자 지원 저장소](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)에서 질문을 하고 토론에 참여하세요.
 

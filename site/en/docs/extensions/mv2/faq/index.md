@@ -146,7 +146,7 @@ the browser's internal implementation to stay the same.
 ### Can extensions open browser/page action popups without user interaction? {: #faq-open-popups }
 
 No, popups can only be opened if the user clicks on the corresponding page or browser action. An
-extension cannot open its popup programatically.
+extension cannot open its popup programmatically.
 
 ### Can extensions keep popups open after the user clicks away from them? {: #faq-persist-popups }
 

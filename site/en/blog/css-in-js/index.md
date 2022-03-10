@@ -18,6 +18,7 @@ tags:
 This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it's different from regular CSS that has been supported by DevTools for a long time.
 
 ## What is CSS-in-JS?
+
 The definition of CSS-in-JS is rather vague. In a broad sense, it's an approach for managing CSS code using JavaScript. For example, it could mean that the CSS content is defined using JavaScript and the final CSS output is generated on the fly by the app. 
 
 In the context of DevTools, CSS-in-JS means that the CSS content is injected into the page using [CSSOM APIs](https://developers.google.com/web/updates/2018/03/cssom). Regular CSS is injected using `<style>` or `<link>` elements, and it has a static source (e.g. a DOM node or a network resource). In contrast, CSS-in-JS often does not have a static source. A special case here is that the content of a `<style>` element can be updated using CSSOM API, causing the source to become out of sync with the actual CSS stylesheet.
@@ -38,7 +39,7 @@ You can [create a completely new stylesheet](https://developers.google.com/web/u
 
 ```js
 // Create a completely new stylesheet
-const sheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 stylesheet.replaceSync('.some { color: blue; }');
 stylesheet.insertRule('.some { color: green; }'); 
 
@@ -47,6 +48,7 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
 ```
 
 ## CSS support in DevTools
+
 In DevTools, the most commonly used feature when dealing with CSS is the **Styles** pane. In the **Styles** pane, you can view what rules apply to a particular element and you can edit the rules and see the changes on the page in realtime. 
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Jy8q9gPbQknRturLyCsq.mp4", autoplay="true", muted="true", loop="true" %}
@@ -74,6 +76,7 @@ On the backend, when handling the edit call, DevTools updates the target stylesh
 This explains why editing CSS-in-JS in DevTools didn't work out of the box: **CSS-in-JS doesn't have an actual source stored anywhere** and **the CSS rules live in the browser's memory in CSSOM data structures**.
 
 ## How we added support for CSS-in-JS
+
 So, to support editing of CSS-in-JS rules, we decided that the best solution would be to create a source for constructed stylesheets that can be edited using the existing mechanism described above.
 
 The first step is to build the source text. The browser's style engine stores the CSS rules in the `CSSStyleSheet` class. That class is the one whose instances you can create from JavaScript as discussed previously. The code to build the source text is as follows:
@@ -137,6 +140,7 @@ With all these pieces in place, CSS-in-JS editing already works but we wanted to
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IcXohpDMPKuHH2L9yaTB.png", alt="Constructable stylesheet", width="800", height="484" %}
 
 ## Conclusions
+
 To recap our story here, we went through the relevant use cases related to CSS-in-JS that DevTools didn't support and walked through the solution to support those use cases. The interesting part of this implementation is that we were able to leverage existing functionality by making CSSOM CSS rules have a regular source text, avoiding the need to completely re-architect style editing in DevTools.
 
 For more background, check out [our design proposal](https://goo.gle/devtools-css-in-js) or the Chromium [tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=946975) which references all related patches.

@@ -187,7 +187,7 @@ As an indicator of flexibility of an extension's UI, apply the [200% test][11]; 
 page zoom is increased 200%, is it still usable?
 
 Avoid baking text into images. Users are unable to modify the size and screen readers are unable to
-interpret images. Insead, opt for styled web font, such as one of the fonts found in the [Google
+interpret images. Instead, opt for styled web font, such as one of the fonts found in the [Google
 Font API][12]. Web fonts can scale to different sizes and can be accessed by people using screen
 readers.
 
@@ -231,7 +231,7 @@ Learn more about accessibility in Chrome by checking out the [A11ycasts][17] cha
 through the [Chromium Accessibility Technical Documentation][18].
 
 [1]: https://webaim.org/techniques/screenreader/
-[2]: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+[2]: https://developer.mozilla.org/docs/Learn/Accessibility/HTML
 [3]: https://www.w3.org/WAI/standards-guidelines/aria/
 [4]: https://www.w3.org/TR/wai-aria/#roles
 [5]: https://www.w3.org/TR/wai-aria/#states_and_properties

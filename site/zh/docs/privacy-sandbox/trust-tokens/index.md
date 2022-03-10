@@ -12,7 +12,7 @@ authors:
 ## 实现状态
 
 - [源站试用](https://web.dev/origin-trials/)：Chrome 84 到 94。
-- [注册试用](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [注册试用](/origintrials/#/view_trial/2479231594867458049)。
 - [演示](https://trust-token-demo.glitch.me/)。
 - [Chrome DevTools 集成](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)。
 - [Chrome 平台状态](https://www.chromestatus.com/feature/5078049450098688)。
@@ -40,7 +40,7 @@ authors:
 
 借助 Trust Tokens API，网站可以向其信任的用户颁发加密令牌，随后可在其他位置使用。令牌由用户的浏览器安全地存储，然后可以在其他上下文中赎回以确认用户的真实性。这样即可将一个网站（例如社交媒体网站或电子邮件服务）的用户信任信息传达到另一个网站（例如发布商或在线商店），而无需识别用户身份或跨网站链接身份。
 
-{% Aside 'key-term' %} ["指纹"收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
+{% Aside 'key-term' %} ["指纹"收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
 
 "指纹"收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org/) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合"指纹"数据来识别您的个人身份。{% endAside %}
 
@@ -68,7 +68,7 @@ authors:
 
 ## 参与并分享反馈
 
-- **源站试用**：注册并参加 [Chrome 源站试用](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- **源站试用**：注册并参加 [Chrome 源站试用](/origintrials/#/view_trial/2479231594867458049)。
 - **演示**：尝试信任令牌的[颁发和赎回](https://trust-token-demo.glitch.me/)。
 - **GitHub**：阅读[提案](https://github.com/WICG/trust-token-api)、[提出问题并关注讨论](https://github.com/WICG/trust-token-api/issues)。
 - **W3C**：在 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) 中讨论行业用例。

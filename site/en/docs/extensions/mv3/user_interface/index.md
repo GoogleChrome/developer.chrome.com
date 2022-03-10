@@ -6,7 +6,7 @@ updated: 2021-08-18
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<!-- Note to editors: this is largely identical to the MV2 version, but removes 
+<!-- Note to editors: this is largely identical to the Manifest V2 version, but removes
     browser_action and page_action in favor of action -->
 
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the

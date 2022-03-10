@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2021-09-15
+updated: 2021-10-05
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -12,7 +12,7 @@ the Chrome Web Store.
 
 ## About the lifecycle of an item in the Chrome Web Store 
 
-All Chrome Web Store items go through an automated review process. In some instances a manual review
+All Chrome Web Store items go through an automated [review process][cws-review]. In some instances a manual review
 is required, especially when sensitive permissions are requested. For this reason review times
 and/or approval times can take longer. Since a Chrome Web Store item goes through several stages,
 it's important to keep track of your item's status. See the lifecycle diagram below:
@@ -30,7 +30,7 @@ status types", width="800", height="221" %}
 To stay informed of your item's status, you can:
 
 -  **Enable email notifications**. There are mandatory emails like take down or rejection
-   notifications that are enabled by default. To receive notification when you item is published or
+   notifications that are enabled by default. To receive notification when your item is published or
    staged, you can enable email notifications in the Account page. 
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/FgPIwRl3QEbNowNV1zRn.png", alt="How to enable
@@ -53,7 +53,8 @@ can also find this information in the Status tab of your item.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store
 Status Tab", width="700", height="276" %}
 
-If you have been informed about a violation and you do not rectify your item will be taken down. 
+If you have been informed about a violation and you do not rectify your item will be taken down. See
+[Violation enforcement][enforcement] for more details.
 
 {% Aside %} 
 
@@ -100,6 +101,62 @@ including the total number of reviews and ratings over time.
 You can give users a direct link to the review page of your
 store item by adding `/reviews` at the end of your item’s URL:
 `https://chrome.google.com/webstore/detail/{your-item-id}/reviews`
+
+{% endAside %}
+
+## Provide user support
+
+To ensure the best user experience and build a great extension it's important to
+collect, evaluate, and follow up on user feedback. You can manage your extension's user feedback in
+two ways:
+
+- By using the built in CWS User Support tab, or
+- By using a dedicated support site.
+
+Users will be able to communicate with you using the **Support** tab of your store item.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OBDYk7n5dBcaqs3z1HtL.png", alt="Store item Support tab", width="800", height="121" %}
+
+### Using the User Support tab {: #user-support-tab }
+
+First, you must enable user feedback in the developer console Account setting page.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+
+In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
+dropdown to filter user input by
+feature request, bug report or question. You can assign a status to each request, and can respond to each inquiry. Each ticket includes the extension
+version, browser type and operating system to help you reproduce bugs
+more efficiently.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VvJFAHdrcMnUivTLm0kK.png", alt="Dashboard User
+Support Tab", width="800", height="269" %}
+
+{% Aside %}
+Currently, this feature does not provide notifications:
+
+- You will not be notified when a user posts a new request.
+- The user will not be notified when you post a response.
+
+{% endAside %}
+
+### Using a dedicated support site {: #dedicated-support-site }
+
+You can set up a dedicated support site for your users, so that the support link goes there instead of the default forum experience. This site can be anything you like, such as:
+
+- A discussion group using Google Groups or some similar service.
+- A form-handling site that lets users submit feedback or support tickets.
+- A public information site with your product road map or other details.
+
+Once you set up the site, go to the **Store Listing** tab of the developer console and add the link to the **Support URL**
+field. Your support link will then take users to your dedicated site.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7R8GYtBJjjRy1ih20dGd.png", alt="Store Listing Support
+URL field", width="514", height="283" %}
+
+{% Aside %}
+
+Make sure you **turn off** the [User Feedback][support-tab] in the dashboard Account settings to disable the default support experience.
 
 {% endAside %}
 
@@ -154,8 +211,11 @@ Analytics ID in the **Store listing Tab** under Additional fields.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
 analytics id", width="787", height="121" %}
 
+[cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [dev-policies]: /docs/webstore/program_policies
+[enforcement]: /docs/webstore/review-process/#enforcement
+[support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/
 [whats-new]: /docs/extensions/whatsnew/

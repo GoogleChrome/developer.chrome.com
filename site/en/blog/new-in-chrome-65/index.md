@@ -29,7 +29,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 65!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 65!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/64.0.3282.140..65.0.3325.146).
@@ -166,7 +166,7 @@ there's plenty more.
 * The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA` coordinates
   for the color property now
   [match](https://drafts.csswg.org/css-color/#the-hsl-notation) the
-  [CSS Color 4 spec](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+  [CSS Color 4 spec](https://developer.mozilla.org/docs/Web/CSS/color_value).
 * There's a new [feature policy](http://xhr.featurepolicy.rocks/) that allows
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.

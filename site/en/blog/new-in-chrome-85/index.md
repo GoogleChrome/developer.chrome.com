@@ -33,7 +33,7 @@ Here's what you need to know:
 * An origin trial for [`fetch` upload streaming](#fetch-stream) has started.
 * And [more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+I'm [Pete LePage](https://petelepage.com/), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 85!
 
 ## Content Visibility {: #content-visibility }

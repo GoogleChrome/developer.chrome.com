@@ -58,7 +58,7 @@ Chromium issue: [1182537](https://crbug.com/1182537)
 
 Los errores de la API de Informes de Atribución ahora son notificados en la pestaña **Problemas**.
 
-[Informes de Atribución](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) es una nueva API que te ayuda a medir cuando una acción de usuario (como un clic a un anuncio o una visualización) conduce a una conversión, sin necesidad de usar identificadores de sitios cruzados.
+[Informes de Atribución](/docs/privacy-sandbox/attribution-reporting/) es una nueva API que te ayuda a medir cuando una acción de usuario (como un clic a un anuncio o una visualización) conduce a una conversión, sin necesidad de usar identificadores de sitios cruzados.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Errores de la API de Informes de Atribución en el panel Problemas", width="800", height="501" %}
 

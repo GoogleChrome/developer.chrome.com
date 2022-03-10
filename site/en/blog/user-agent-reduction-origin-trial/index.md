@@ -11,6 +11,7 @@ authors:
   - arichiv
   - abeyad
 date: 2021-09-14
+updated: 2022-01-07
 tags:
   - privacy
   - origin-trials
@@ -19,7 +20,7 @@ tags:
 
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
-[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 (UA) string to only the browser's brand and significant version, its desktop or
 mobile distinction, and the platform it's running on. Currently, the UA string
 is shared on every HTTP request and exposed in JavaScript to all resources
@@ -31,7 +32,7 @@ information that they need.
 
 Beginning with the [Chrome 95](https://chromiumdash.appspot.com/schedule) Beta,
 we'll open up the
-[origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
+[origin trial](/origintrials/#/view_trial/-7123568710593282047)
 for
 [User-Agent Reduction](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
 to allow sites to opt into receiving the reduced UA string now. This will enable
@@ -50,7 +51,7 @@ repository](https://github.com/abeyad/user-agent-reduction/issues).
 ## What is the User-Agent?
 
 The
-[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 (UA) string is shared on every HTTP request and exposed in JavaScript to all
 resources loaded by the browser. Currently, it contains significant information
 on the browser and the platform it's running on.
@@ -78,7 +79,12 @@ To receive more client information than what's shared by the reduced User-Agent,
 sites will need to migrate to the new User-Agent [Client
 Hints](https://web.dev/migrate-to-ua-ch/) API. For more details on migration
 strategies, see [Migrate to User-Agent Client
-Hints](https://web.dev/migrate-to-ua-ch/). 
+Hints](https://web.dev/migrate-to-ua-ch/).
+
+The User-Agent reduction plans do not currently include iOS and WebView, therefore
+those platforms will continue to get the full user agent string.  The primary
+reason is that these platforms have not yet implemented User-Agent
+[Client Hints](https://web.dev/migrate-to-ua-ch/).
 
 ## How does this origin trial work?
 
@@ -103,21 +109,16 @@ third-party origins will also send the same User-Agent string as the top-level
 request, including the reduced UA string if the origin trial token is valid,
 provided that the permissions policy allows it.
 
-If you operate a service that is implemented as a subresource across origins
-(like ad serving or analytics), this origin trial would not enable sending the
-reduced UA string in the User-Agent header from your cross-origin embedded
-resource. If you select a "third-party origin trial" during registration, the
-subresource requests will get the reduced UA string in the JavaScript APIs, but
-not in the User-Agent request header. To get the reduced User-Agent request
-header, enroll the top-level sites in the origin trial and set the permissions
-policy to allow the client hints and the reduced User-Agent request header to
-propagate to the cross-origin requests. 
-
-## How do I participate in the User-Agent Reduction origin trial?
+## How do I participate in the User-Agent Reduction origin trial? {: #enroll-top-level }
 
 1.  To register for the origin trial and get a token for your domains,
     visit the
-    [Trial for User Agent Reduction page](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047).
+    [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
+    
+    {% Aside %}
+    To register your domains for the trial as a third-party embed, you
+        will [need a separate token](#enroll-third-party).
+        {% endAside %}
 
 1.  Update your HTTP response headers:
 
@@ -130,21 +131,48 @@ propagate to the cross-origin requests.
         first navigation request with the reduced User-Agent string, add
         `Critical-CH: Sec-CH-UA-Reduced` to your HTTP response header, in
         addition to the `Accept-CH` and `Origin-Trial` headers.
-    1.  If you want third-party subresource requests to also receive the
-        reduced UA string, add a `Permissions-Policy` header with the
-        third-party domains that should receive the reduced UA. For example:
-
-        1.  To allow a named list of third-party domains, add
-            `Permissions-Policy: ch-ua-reduced=(self "https://google.com")`.
-        1.  To allow all third-party domains, add
-            `Permissions-Policy: ch-ua-reduced=*`.
-
+    1.  Note: If the response headers contain a valid `Origin-Trial` token and
+        `Accept-CH: Sec-CH-UA-Reduced`, then all subresource requests (for example, for
+        images or stylesheets) and subnavigations (for example, iframes) will send the
+        reduced UA string, even if the origins of those requests are not
+        enrolled in the origin trial.
 1.  Load your website in Chrome M95 (or later) and start receiving the
     reduced UA string. 
 1.  Submit any issues or feedback to the UA Reduction [Github
     repository](https://github.com/abeyad/user-agent-reduction/issues).
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
+
+## How to participate in the origin trial as a third-party embed? {: #enroll-third-party }
+
+Starting in Chrome 96, third-party embeds (for example, an iframe inside another site)
+can participate in the origin trial without requiring the top-level site to be
+enrolled.
+
+To enroll as a third-party embed:
+
+1.  Visit the 
+    [Trial for User Agent Reduction](/origintrials/#/view_trial/-7123568710593282047)
+    and click **Register**.
+1.  When creating the token, make sure to select the `Third-party matching` checkbox.
+1.  To receive the reduced User-Agent header from the third-party embed,
+    [update the HTTP response headers](#enroll-top-level).
+1.  To receive the reduced User-Agent string in Javascript APIs, the trial token must be
+    [injected via Javascript](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script).
+
+Some important points about running the origin trial on third-party embeds:
++   `Critical-CH` cannot be specified for third-party embeds, so the first
+     navigation won't send the reduced UA string, although the subresource
+     requests of the third-party embed will send the reduced UA string.
++   If the origin trial is validated for the origin of a third-party embed,
+    subsequent requests to the same origin in a top-level navigation will
+    send the reduced UA string. For this reason, it's recommended to ramp
+    up participation in the origin trial for both top-level and embed
+    requests together.
++   If the user agent has disabled third-party cookies, then the origin
+    trial won't work for `User-Agent` header in third-party embed
+    requests, although the Javascript APIs will still get the reduced UA
+    string.
 
 ## How do I validate that the origin trial is working? {: #validate }
 

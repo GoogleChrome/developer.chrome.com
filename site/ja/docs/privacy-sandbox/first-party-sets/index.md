@@ -14,7 +14,7 @@ authors:
 ## 実装状況
 
 - Chrome 89 から 93 の[オリジン トライアル](https://web.dev/origin-trials/)。
-- [オリジン トライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- [オリジン トライアルに登録](/origintrials/#/view_trial/988540118207823873)。
 - [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
 
@@ -71,7 +71,7 @@ First-Party Sets を補うために、`SameParty` という Cookie 属性が提�
 
 ## 本 API に貢献し、フィードバックを共有しましょう
 
-- **オリジン トライアル**: 登録して [Chrome オリジン トライアル](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)に参加しましょう。
+- **オリジン トライアル**: 登録して [Chrome オリジン トライアル](/origintrials/#/view_trial/988540118207823873)に参加しましょう。
 - **GitHub**: [提案](https://github.com/privacycg/first-party-sets)を読み、[質問をして、議論に参加しましょう](https://github.com/privacycg/first-party-sets/issues)。
 - **開発者サポート**: [プライバシー サンドボックス開発者サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、議論に参加したりしましょう。
 

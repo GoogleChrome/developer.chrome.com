@@ -4,6 +4,10 @@ description: >
   A round up of the deprecations and removals in Chrome 94 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2021-08-27
+updated: 2021-09-23
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/tKe2sOWOxDnporptQrKX.png'
+alt: >
+  Deprecations and Removals hero logo
 tags:
   - deprecations
   - removals
@@ -21,9 +25,9 @@ stable version in late September, 2021.
 Removal is expected in Chrome 97. The Web SQL Database standard was first
 proposed in April 2009 and abandoned in November 2010. Gecko never implemented
 this feature and WebKit deprecated this feature in 2019. The W3C encourages
-[Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+[Web Storage](https://developer.mozilla.org/docs/Web/API/Web_Storage_API)
 and
-[Indexed Database](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+[Indexed Database](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
 for those needing alternatives.
 
 Developers should expect that WebSQL itself will be deprecated and removed when

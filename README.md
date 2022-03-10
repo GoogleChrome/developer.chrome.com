@@ -5,7 +5,10 @@ to learn about what's new in Chrome!
 
 ## Found a bug? 👷‍♀️
 
-Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+Thanks for letting us know! [File an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+
+If you're submitting a pull request to fix a bug, read the
+[Contributing guidelines](https://github.com/GoogleChrome/developer.chrome.com/blob/main/CONTRIBUTING.md).
 
 ## Authoring content ✍️
 
@@ -48,11 +51,41 @@ build flags to ignore certain sections.
 # Ignore ALL /docs/
 ELEVENTY_IGNORE_DOCS=true
 
-# Only ignore /docs/native-client/
-ELEVENTY_IGNORE_NACL=true
+# Only ignore /docs/android/
+ELEVENTY_IGNORE_ANDROID=true
+
+# Only ignore /docs/apps/
+ELEVENTY_IGNORE_APPS=true
+
+# Only ignore /docs/devtools/
+ELEVENTY_IGNORE_DEVTOOLS=true
 
 # Only ignore /docs/extensions/
 ELEVENTY_IGNORE_EXTENSIONS=true
+
+# Only ignore /docs/handbook/
+ELEVENTY_IGNORE_HANDBOOK=true
+
+# Only ignore /docs/lighthouse/
+ELEVENTY_IGNORE_LIGHTHOUSE=true
+
+# Only ignore /docs/multidevice/
+ELEVENTY_IGNORE_MULTIDEVICE=true
+
+# Only ignore /docs/native-client/
+ELEVENTY_IGNORE_NACL=true
+
+# Only ignore /docs/privacy-sandbox/
+ELEVENTY_IGNORE_PRIVACY_SANDBOX=true
+
+# Only ignore /docs/versionhistory/
+ELEVENTY_IGNORE_VERSIONHISTORY=true
+
+# Only ignore /docs/webstore/
+ELEVENTY_IGNORE_WEBSTORE=true
+
+# Only ignore /docs/workbox/
+ELEVENTY_IGNORE_WORKBOX=true
 ```
 
 ### Start a local server to preview the site
@@ -64,9 +97,17 @@ npm run dev
 Open `http://localhost:8080/` to see the site locally. Changes to assets will
 rebuild the site. Refresh to see your changes.
 
+### Run linters to address bugs
+
+Before you push your branch, find and address any errors.
+
+```bash
+npm run lint
+```
+
 ## Environments 🌳
 
-To do a production build of the site and start the local server 
+To do a production build of the site and start the local server
 run `npm run production && npm start`.
 
 ## Staging 🕺

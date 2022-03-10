@@ -23,7 +23,7 @@ tags:
 
 Chrome 78 is rolling out now!
 
-I'm [Pete LePage](https://twitter.com/petele), let's dive in and see what's
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's
 new for developers in Chrome 78!
 
 ## CSS Properties and Values API {: #css-prop-val }

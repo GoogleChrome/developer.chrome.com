@@ -8,24 +8,25 @@ description: How to respond to browser triggers (events) from a Chrome Extension
 
 Extensions are event-based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
-Extensions monitor these events using scripts in their background
-[service worker](/docs/extensions/mv3/migrating_to_service_workers), which then react
-with specified instructions.
+Extensions monitor these events using scripts in their background [service
+worker][doc-sw-migration], which then react with specified instructions.
 
-A background service worker is loaded when it is needed, and unloaded when it goes idle. Some examples of
-events include:
+A background service worker is loaded when it is needed, and unloaded when it goes idle. Some
+examples include:
 
 - The extension is first installed or updated to a new version.
 - The background page was listening for an event, and the event is dispatched.
 - A content script or other extension [sends a message.][1]
 - Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage`][2].
 
-Once it has been loaded, a service worker keeps running as long as it is performing an action,
-such as calling a Chrome API or issuing a network request. Additionally, the service worker won't
-unload until all visible views and all message ports are closed.
+Once it has been loaded, an extension's service worker generally keeps running as long as it is
+performing an action, such as calling a Chrome API or issuing a network request. 
 
 {% Aside %}
-Opening a view doesn't cause the service worker to load, but only prevents it from closing once loaded.
+
+Opening a view doesn't cause the service worker to load, but only prevents it from closing once
+loaded.
+
 {% endAside %}
 
 Effective background scripts stay dormant until an event they are listening for fires, react with
@@ -48,7 +49,9 @@ field. This field uses the `"service_worker"` key, which specifies a single Java
 ```
 
 {% Aside %}
+
 The script used for `"service_worker"` must be located in your extension's root directory.
+
 {% endAside %}
 
 You can optionally specify an extra field of `"type": "module"` to include the service worker as an
@@ -118,7 +121,7 @@ that event.
 
 ```js
 chrome.runtime.onMessage.addListener((message, sender, reply) => {
- chrome.runtime.onMessage.removeListener(event);
+  chrome.runtime.onMessage.removeListener(event);
 });
 ```
 
@@ -137,6 +140,7 @@ const filter = {
     },
   ],
 };
+
 chrome.webNavigation.onCompleted.addListener(() => {
   console.info("The user has loaded my favorite website!");
 }, filter);
@@ -191,11 +195,11 @@ extension appears and disappears from Chrome's task manager.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
        alt="Chrome with an extension's popup open.", height="623", width="730" %}
 
-Open the task manager by clicking the Chrome Menu, hovering over more tools and selecting "Task
+Open the task manager by clicking the Chrome menu, hovering over more tools and selecting "Task
 Manager".
 
-Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup
-is required, listen to the [`runtime.onSuspend`][15] event.
+Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup is
+required, listen to the [`runtime.onSuspend`][15] event.
 
 ```js
 chrome.runtime.onSuspend.addListener(() => {
@@ -204,7 +208,7 @@ chrome.runtime.onSuspend.addListener(() => {
 });
 ```
 
-However, persisting data in the storage API should be prefered over relying on
+However, persisting data in the storage API should be preferred over relying on
 [`runtime.onSuspend`][16]. It doesn't allow for as much cleanup as may be needed and will not help
 in case of a crash.
 
@@ -224,4 +228,6 @@ in case of a crash.
 [14]: /docs/extensions/reference/runtime#property-Port-disconnect
 [15]: /docs/extensions/reference/runtime#event-onSuspend
 [16]: /docs/extensions/reference/runtime#event-onSuspend
+
+[doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
 [sw-module]: https://web.dev/es-modules-in-sw/

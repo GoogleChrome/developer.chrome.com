@@ -56,7 +56,7 @@ the standard [developer registration process][cws-register].
 All extensions go through an automated review process and in some cases, an extension will be published without
 further manual review. There may be some instances in which a manual review will be required before
 the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
-are requested, review times and/or [approval times may be longer][how-long-do-reviews-take].
+are requested, review times and/or [approval times may be longer][cws-review-times].
 
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
@@ -171,7 +171,7 @@ extension. Do not upload a .crx file; the submission will fail.
 
 The item won't appear in the web store until it has successfully completed the review process.
 (Although the item's unique ID is generated as soon as you upload your first zip file.) For further
-details, see [How long will it take to review my item?][how-long-do-reviews-take].
+details, see [Chrome Web Store Review Times][cws-review-times].
 
 Extensions which are published to the same domain as the publisher address may be approved more
 quickly. Learn more about [enterprise publishing][enterprise].
@@ -243,8 +243,7 @@ to only users of the "en-GB" Chrome Web Store.
 ### My item's status says "pending review." What does this mean? {: #faq-listing-08 }
 
 This means that you've submitted your item for publishing and it is currently in the queue to be
-reviewed. The item will not appear in the store until it passes this review. (See also [How long
-will it take to review my item?][how-long-do-reviews-take])
+[reviewed][cws-review]. The item will not appear in the store until it passes this review. 
 
 ### How long will it take to review my item? {: #faq-listing-108 }
 
@@ -261,7 +260,7 @@ include:
 {% Aside %}
 
 Note that all item submissions—whether for a new item or an update to an existing one—are
-subject to the same review process.
+subject to the same [review process][cws-review].
 
 {% endAside %}
 
@@ -328,6 +327,8 @@ Business related issues by contacting [CWS support][cws-support].
 [cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
 [cws-images]: /docs/webstore/images/
 [cws-register]: /docs/webstore/register
+[cws-review]: /docs/webstore/review-process/
+[cws-review-times]: /docs/webstore/review-process/#review-time
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
@@ -338,7 +339,6 @@ Business related issues by contacting [CWS support][cws-support].
 [extension-faq]: /docs/extensions/mv3/faq
 [google-groups]: https://groups.google.com
 [great-listing]: /docs/webstore/best_listing/
-[how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
 [malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion

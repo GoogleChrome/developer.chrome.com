@@ -2,6 +2,84 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- ### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/es/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/es/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/es/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/es/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/es/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/es/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-100/#misc) -->
+
+### Chrome 99 {: #chrome99 }
+
+* [Limitación de las peticiones WebSocket](/es/blog/new-in-devtools-99/#websocket)
+* [Nuevo panel de la API de Reportes en el panel Aplicación](/es/blog/new-in-devtools-99/#reporting-api)
+* [Soporte para esperar hasta que un elemento sea visible/clicable en el panel Recorder](/es/blog/new-in-devtools-99/#recorder)
+* [Mejores estilos de consola, formateado y filtrado](/es/blog/new-in-devtools-99/#console)
+* [Depuración de extensiones de Chrome con archivos de mapa de código fuente](/es/blog/new-in-devtools-99/#extension)
+* [Mejorado árbol de carpetas de fuente en el panel de Fuentes](/es/blog/new-in-devtools-99/#source-tree)
+* [Muestra los archivos de fuente de Worker en el panel de Fuentes](/es/blog/new-in-devtools-99/#worker-sourcemap)
+* [Actualizaciones del modo oscuro automático de Chrome](/es/blog/new-in-devtools-99/#auto-dark-mode)
+* [Selector de color y panel de división en modo táctil](/es/blog/new-in-devtools-99/#touch-friendly)
+* [Destacados varios](/es/blog/new-in-devtools-99/#misc) -->
+
+
+### Chrome 98 {: #chrome98 }
+
+* [Función en vista previa: Árbol de accesibilidad de página completa](/es/blog/new-in-devtools-98/#a11y-tree)
+* [Establecer un tiempo de espera más largo para la grabación del flujo de usuario](/es/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/es/blog/new-in-devtools-98/#recorder-timeout)
+* [Asegúrese de que sus páginas se puedan almacenar en caché con la pestaña de caché Atrás/adelante](/es/blog/new-in-devtools-98/#bfcache)
+* [Nuevo filtro de panel de propiedades](/es/blog/new-in-devtools-98/#properties)
+* [Emular la característica de medios de colores forzados de CSS](/es/blog/new-in-devtools-98/#forced-colors)
+* [Mostrar reglas con el comando hover](/es/blog/new-in-devtools-98/#show-rulers)
+* [Soporte para `row-reverse` y `column-reverse` en el editor Flexbox](/es/blog/new-in-devtools-98/#flexbox-editor)
+* [Nuevos atajos de teclado para reproducir XHR y expandir todos los resultados de búsqueda](/es/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9](/es/blog/new-in-devtools-98/#lighthouse)
+* [Panel Fuentes mejorado](/es/blog/new-in-devtools-98/#sources)
+* [Destacados varios](/es/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints en el panel de informes de API](/es/blog/new-in-devtools-98/#reporting-api)
+
+
+### Chrome 97 {: #chrome97 }
+
+* [Función en vista previa: Nuevo panel de Grabadora](/es/blog/new-in-devtools-97/#recorder)
+* [Actualización de la lista de dispositivos en el Modo Dispositivo](/es/blog/new-in-devtools-97/#device)
+* [Autocompletado con Editar como HTML](/es/blog/new-in-devtools-97/#code-completion)
+* [Mejorada la experiencia de depuración de código](/es/blog/new-in-devtools-97/#debugging)
+* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync)
+
+
+### Chrome 96 {: #chrome96 }
+
+* [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
+* [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
+* [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)
+* [Nueva pestaña de Payload en el panel Red](/es/blog/new-in-devtools-96/#payload)
+* [Mejoras en la visualización de propiedades en el panel Propiedades](/es/blog/new-in-devtools-96/#properties)
+* [Opción para ocultar errores CORS en la consola](/es/blog/new-in-devtools-96/#hide-cors-errors)
+* [Vista previa y evaluación adecuadas de los objetos `Intl` en la consola](/es/blog/new-in-devtools-96/#intl)
+* [Trazas de la pila asíncrona consistentes](/es/blog/new-in-devtools-96/#async)
+* [Mantener la barra lateral de la consola](/es/blog/new-in-devtools-96/#console-sidebar)
+* [Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación](/es/blog/new-in-devtools-96/#app-cache)
+* [[Experimental] Nuevo panel de la API de informes en el panel de la aplicación](/es/blog/new-in-devtools-96/#reporting-api)
+
+
+### Chrome 95 {: #chrome95 }
+
+* [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)
+* [Oculta problemas en la pestaña Problemas](/es/blog/new-in-devtools-95/#hide-issues)
+* [Mejora la visualización de propiedades](/es/blog/new-in-devtools-95/#properties)
+* [LLighthouse 8.4 en el panel Lighthouse](/es/blog/new-in-devtools-95/#lighthouse)
+* [Ordena los fragmentos en el panel Fuentes](/es/blog/new-in-devtools-95/#snippets)
+* [Nuevos enlaces a las notas de la versión traducida y reporta un error de traducción](/es/blog/new-in-devtools-95/#localized)
+* [Mejorado el menú de comandos de DevTools](/es/blog/new-in-devtools-95/#command-menu)
+
+
 ### Chrome 94 {: #chrome94 }
 
 * [Utiliza DevTools en tu idioma preferido](/es/blog/new-in-devtools-94/#localized)

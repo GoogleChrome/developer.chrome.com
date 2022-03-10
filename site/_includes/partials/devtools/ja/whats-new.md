@@ -2,6 +2,83 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+
+<!-- ### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/ja/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/ja/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/ja/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/ja/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/ja/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/ja/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-100/#misc) -->
+
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)
+* [Application パネル内に新しく追加されたReporting API ペイン](/ja/blog/new-in-devtools-99/#reporting-api)
+* [Recorder パネルに要素が可視／クリック可能になるまで待機する機能が追加](/ja/blog/new-in-devtools-99/#recorder)
+* [コンソールのスタイル設定、フォーマット、フィルタの改善](/ja/blog/new-in-devtools-99/#console)
+* [ソースマップファイルを使用した Chrome 拡張機能のデバッグ](/ja/blog/new-in-devtools-99/#extension)
+* [Sources パネルのソースフォルダツリーの改善](/ja/blog/new-in-devtools-99/#source-tree)
+* [Sources パネルにワーカーのソースファイルを表示](/ja/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome の自動ダークテーマの更新](/ja/blog/new-in-devtools-99/#auto-dark-mode)
+* [タッチ操作で使いやすいカラーピッカーとスプリットペイン](/ja/blog/new-in-devtools-99/#touch-friendly)
+* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc)
+
+
+### Chrome 98 {: #chrome98 }
+
+* [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
+* [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
+* [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)
+* [Back/forward cache タブでページがキャッシュ可能であることを確認する](/ja/blog/new-in-devtools-98/#bfcache)
+* [新しい Properties ペインのフィルター](/ja/blog/new-in-devtools-98/#properties)
+* [CSS の force-colors メディア機能のエミュレート](/ja/blog/new-in-devtools-98/#forced-colors)
+* [ホバー時にルーラーを表示するコマンド](/ja/blog/new-in-devtools-98/#show-rulers)
+* [Flexbox エディターで `row-reverse` と `column-reverse` をサポート](/ja/blog/new-in-devtools-98/#flexbox-editor)
+* [XHR のリプレイと全検索結果の展開に新しいキーボードショートカットを追加](/ja/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse パネルの Lighthouse 9](/ja/blog/new-in-devtools-98/#lighthouse)
+* [Sources パネルの改善](/ja/blog/new-in-devtools-98/#sources)
+* [その他のハイライト](/ja/blog/new-in-devtools-98/#misc)
+* [[実験的] Reporting API ペインに Endpoints を追加](/ja/blog/new-in-devtools-98/#reporting-api)
+
+
+### Chrome 97 {: #chrome97 }
+
+* [プレビュー機能: 新しい Recorder パネル](/ja/blog/new-in-devtools-97/#recorder)
+* [デバイスモードでのデバイス一覧の更新](/ja/blog/new-in-devtools-97/#device)
+* [Edit as HTML でのオートコンプリート](/ja/blog/new-in-devtools-97/#code-completion)
+* [改善されたコードデバッグ体験](/ja/blog/new-in-devtools-97/#debugging)
+* [デバイスを横断した DevTools 設定の同期](/ja/blog/new-in-devtools-97/#sync)
+
+### Chrome 96 {: #chrome96 }
+
+* [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/ja/blog/new-in-devtools-966/#length) -->
+* [CSS の prefers-contrast メディア機能のエミュレート](/ja/blog/new-in-devtools-96/#prefers-contrast)
+* [Chrome の Auto Dark Theme 機能のエミュレート](/ja/blog/new-in-devtools-96/#auto-dark-mode)
+* [Styles ペインで JavaScript として宣言をコピー](/ja/blog/new-in-devtools-96/#copy-as-js)
+* [Network パネルの新しい Payload タブ](/ja/blog/new-in-devtools-96/#payload)
+* [Properties ペインのプロパティ表示の改善](/ja/blog/new-in-devtools-96/#properties)
+* [コンソールで CORS エラーを隠すオプション](/ja/blog/new-in-devtools-96/#hide-cors-errors)
+* [Console での適切な `Intl` オブジェクトのプレビューと評価](/ja/blog/new-in-devtools-96/#intl)
+* [一貫性のある async スタックトレース](/ja/blog/new-in-devtools-96/#async)
+* [Console のサイドバーの維持](/ja/blog/new-in-devtools-96/#console-sidebar)
+* [Application パネルの Application cache ペインの廃止](/ja/blog/new-in-devtools-96/#app-cache)
+* [[実験的] Application パネルの新しい Reporting API ペイン](/ja/blog/new-in-devtools-96/#reporting-api)
+
+### Chrome 95 {: #chrome95 }
+
+* [新しいCSSの長さ編集ツール](/ja//blog/new-in-devtools-95/#length)
+* [Issues タブで問題を隠す](/ja/blog/new-in-devtools-95/#hide-issues)
+* [プロパティの表示の改善](/ja/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4 が Lighthouse パネルに](/ja/blog/new-in-devtools-95/#lighthouse)
+* [Sources パネルでのスニペットの並べ替え](/ja/blog/new-in-devtools-95/#snippets)
+* [翻訳されたリリースノートへの新しいリンクと翻訳バグの報告](/ja/blog/new-in-devtools-95/#localized)
+* [DevTools Command MenuのUI改善](/ja/blog/new-in-devtools-95/#command-menu)
+
 ### Chrome 94 {: #chrome94 }
 
 * [好みの言語での DevTools の利用](/ja/blog/new/in/devtools-94/#localized)
