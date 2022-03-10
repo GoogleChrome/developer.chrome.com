@@ -130,7 +130,7 @@ downloaded or the user has disabled JavaScript.
 ```
 
 With this initial state, we can perform the checks outlined above in the
-**initialiseState()** method, i.e. after our service worker is registered.
+`initialiseState()` method, i.e. after our service worker is registered.
 
 ```js
 // Once the service worker is registered set the initial state
@@ -188,15 +188,15 @@ function initialiseState() {
 
 A brief overview of these steps:
 
-* We check that **showNotification** is available in the ServiceWorkerRegistration
+* We check that `showNotification` is available in the ServiceWorkerRegistration
   prototype. Without it we won't be able to show a notification from our service worker
   when a push message is received.
-* We check what the current **Notification.permission** is to ensure it's not
-  **"denied"**. A denied permission means that you can't show notifications
+* We check what the current `Notification.permission` is to ensure it's not
+  `"denied"`. A denied permission means that you can't show notifications
   until the user manually changes the permission in the browser.
-* To check if push messaging is supported we check that **PushManager** is
+* To check if push messaging is supported we check that `PushManager` is
   available in the window object.
-* Finally, we used **pushManager.getSubscription()** to check whether we already
+* Finally, we used `pushManager.getSubscription()` to check whether we already
   have a subscription or not. If we do, we send the subscription details to our
   server to ensure we have the right information and set our UI to indicate
   that push messaging is already enabled or not. We'll look at what details
@@ -383,16 +383,16 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-This code registers a **push** event listener and displays a notification with a
+This code registers a push event listener and displays a notification with a
 predefined title, body text, icon and a notification tag.
-One subtlety to highlight with this example is the **_event.waitUntil()_**
+One subtlety to highlight with this example is the `event.waitUntil()`
 method. This method takes in a
 [promise](https://developers.google.com/web/fundamentals/getting-started/primers/promises) and extends the
 lifetime of an event handler (or can be thought of as keeping the service
 worker alive), until the promise is
 [settled](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md#states);
 In this case, the promise passed to `event.waitUntil` is the returned Promise
-from **showNotification()**.
+from `showNotification()`.
 
 The [notification tag](https://notifications.spec.whatwg.org/#tag) acts as an
 identifier for unique notifications. If we sent two push messages to the same
@@ -415,7 +415,7 @@ This is only applicable to the browsers using FCM.
 
 When you send the `PushSubscription.endpoint` variable to your server, the
 endpoint for FCM is special. It has a parameter on the end of the URL which
-is a `registration\_id`.
+is a `registration_id`.
 
 An example endpoint would be:
 
@@ -455,16 +455,16 @@ can find [reference docs on the FCM API here](https://firebase.google.com/docs/c
 
 The key aspects to remember when calling FCM are:
 
-* An **Authorization** header with a value of **key=&lt;YOUR\_API\_KEY&gt;**
-  must be set when you call the API, where **&lt;YOUR\_API\_KEY&gt;** is the
+* An **Authorization** header with a value of `key=&lt;YOUR_API_KEY&gt;`
+  must be set when you call the API, where `&lt;YOUR_API_KEY&gt;` is the
   API key from Firebase project.
     * The API key is used by FCM to find the appropriate sender ID, ensure
       the user has given permission for your project and finally
       ensuring that the server's IP address is allowlisted for that project.
-* An appropriate **Content-Type** header of **application/json** or
-  **application/x-www-form-urlencoded;charset=UTF-8** depending on whether you
+* An appropriate `Content-Type` header of `application/json` or
+  `application/x-www-form-urlencoded;charset=UTF-8` depending on whether you
   send the data as JSON or form data.
-* An array of **registration\_ids** - these are the registration ID's you'd
+* An array of `registration_ids` - these are the registration ID's you'd
   extract from the endpoints from your users.
 
 Please do [check out the docs](https://firebase.google.com/docs/cloud-messaging/server)
@@ -473,7 +473,7 @@ but for a quick check of your service worker you can use
 [cURL](http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCURL&sa=D&sntz=1&usg=AFQjCNHRhFnXmOaG9ZHmto3zw6T_7B15Ng)
 to send a push message to your browser.
 
-Swap out the **&lt;YOUR\_API\_KEY&gt;** and **&lt;YOUR\_REGISTRATION\_ID&gt;**
+Swap out the `&lt;YOUR_API_KEY&gt;` and `&lt;YOUR_REGISTRATION_ID&gt;`
 in this cURL command with your own and run it from a terminal.
 
 You should see a glorious notification:
@@ -486,7 +486,7 @@ You should see a glorious notification:
 
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/X1oltpDuHviZ6qS5RYNd.gif", alt="Example of a push message from Chrome for Android", width="800", height="695" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/X1oltpDuHviZ6qS5RYNd.gif", alt="Example of a push message from Chrome for Android.", width="800", height="695" %}
 </figure>
 
 When developing your backend logic, remember that the Authorization header and
@@ -572,9 +572,9 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-It's worth, once again, highlighting that the **event.waitUntil()** takes a promise
-which results in the promise returned by **showNotification()**, meaning
-that our event listener won't exit until the asynchronous fetch() call is complete, and
+It's worth, once again, highlighting that the `event.waitUntil()` takes a promise
+which results in the promise returned by `showNotification()`, meaning
+that our event listener won't exit until the asynchronous `fetch()` call is complete, and
 the notification is shown.
 
 You'll notice that we show a notification even when there is an error. This is
@@ -582,7 +582,7 @@ because if we don't, Chrome will show it's own generic notification.
 
 ### Opening a URL when the User Clicks a Notification
 
-When the user clicks a notification, a **notificationclick** event is dispatched
+When the user clicks a notification, a `notificationclick` event is dispatched
 in your service worker. Within your handler, you can take appropriate action,
 like focusing a tab or opening a window with a particular URL:
 
@@ -627,7 +627,7 @@ You've subscribed a user's device and they're receiving push messages, but how c
 unsubscribe them?
 
 The main things required to unsubscribe a users device is to call the
-**unsubscribe()** method on the
+`unsubscribe()` method on the
 [PushSubscription](https://w3c.github.io/push-api/#idl-def-PushSubscription)
 object and to remove the endpoint from your servers (just so you aren't
 sending push messages which you know won't be received). The code below does
@@ -684,7 +684,7 @@ function unsubscribe() {
 
 Subscriptions may get out of sync between FCM and your server. Make sure
 your server parses the response body of the FCM API's send POST, looking for
-**error:NotRegistered** and **canonical_id** results, as explained in the [FCM
+`error:NotRegistered` and `canonical_id` results, as explained in the [FCM
 documentation](https://developers.google.com/cloud-messaging/http).
 
 Subscriptions may also get out of sync between the service worker and your
@@ -692,14 +692,14 @@ server. For example, after subscribing/unsubscribing successfully, a flaky
 network connection may prevent you from updating your server; or a user might
 revoke notifications permission, which triggers an automatic unsubscribe. Handle
 such cases by checking the result of
-**serviceWorkerRegistration.pushManager.getSubscription()** periodically (e.g.
+`serviceWorkerRegistration.pushManager.getSubscription()` periodically (e.g.
 on page load) and synchronizing it with the server. You may also wish to
 re-subscribe automatically if you no longer have a subscription and
 Notification.permission == 'granted'.
 
-In **sendSubscriptionToServer()** you will need to consider how you handle
-failed network requests when updating the **endpoint**. One solution is
-to track the state of the **endpoint** in a cookie
+In `sendSubscriptionToServer()` you will need to consider how you handle
+failed network requests when updating the `endpoint`. One solution is
+to track the state of the `endpoint` in a cookie
 to determine whether your server needs the latest details or not.
 
 All of the above steps results in a full implementation of push messaging on the
@@ -787,7 +787,7 @@ formatted data, like you have to with FCM.
 
 Chrome was the first browser to implement the Push API and FCM does not
 support the Web Push Protocol, which is the reason why Chrome requires the
-**gcm\_sender\_id** and you need to use the restful API for FCM.
+`gcm_sender_id` and you need to use the restful API for FCM.
 
 The end goal for Chrome is to move towards using the Web Push Protocol with Chrome and FCM.
 
@@ -819,7 +819,7 @@ decide which one to send a push message to. You could do this via screen size,
 device model, sharing a generated key between the web app and native app, but
 each approach has pro's and con's.
 
-### Why do I need a gcm\_sender\_id?
+### Why do I need a gcm_sender_id?
 
 This is required so that Chrome, Opera for Android and the Samsung Browser can
 use the Firebase Cloud Messaging (FCM) API. The goal is to use the

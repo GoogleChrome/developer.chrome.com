@@ -82,7 +82,7 @@ a much better user experience.
 
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/Y9lAvq4Nk8hJILrpnU4b.png", alt="Example of grouping notifications together", width="800", height="349" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/Y9lAvq4Nk8hJILrpnU4b.png", alt="Example of grouping notifications together.", width="800", height="349" %}
 </figure>
 
 The code to do this is relatively simple. Inside your push event, call
@@ -218,11 +218,11 @@ for (var i = 0; i &lt; notifications.length; i++) {
 }
 ```    
 
-A subtlety to highlight is that you need to call close() on the notification to
+A subtlety to highlight is that you need to call `close()` on the notification to
 ensure the notification is removed from the notification list. This is a bug in
 Chrome since each notification is replaced by the next one because the same tag
 is used. At the moment this replacement isn't being reflected in returned array
-from getNotifications().
+from `getNotifications()`.
 
 This is only one example of getNotifications() and as you can imagine, this API
 opens up a range of other use cases.
