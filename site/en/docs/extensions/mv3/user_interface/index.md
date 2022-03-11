@@ -6,21 +6,37 @@ updated: 2021-08-18
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<!-- Note to editors: this is largely identical to the Manifest V2 version, but removes
-    browser_action and page_action in favor of action -->
-
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
 UI should customize or enhance the browsing experience without distracting from it.
 
 This guide explores required and optional user interface features. Use it to understand how and when
 to implement different UI elements within an extension.
 
-## Allow the extension on all pages {: #action }
+## The action icon {: #action }
 
-Use an [action][docs-action] when an extension's features are functional in most situations.
-It will be displayed to the right of the user's URL bar, hidden under the Extensions overflow menu by default, and a user can 'pin' it to be always visible.
+The [action][api-action] API controls the toolbar icon for your extension. It can open a [popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. The action icons are displayed in the browser toolbar to the right of the user's URL bar. 
 
-### Register browser action {: #browser }
+After installation, by default, these appear in the extensions menu (the puzzle piece). Users can choose to 'pin' your extension icon to the toolbar.
+
+{% Columns %}
+
+{% Column %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", 
+alt="Unpinned extension", width="340", height="174" %}
+
+**Unpinned**
+{% endColumn %}
+
+{% Column %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", 
+alt="Pinned extension", width="338", height="182" %}
+
+**Pinned**
+{% endColumn %}
+
+{% endColumns %}
+
+### Register the action {: #browser }
 
 The `"action"` field is registered in the manifest.
 
@@ -34,9 +50,6 @@ The `"action"` field is registered in the manifest.
   ...
 }
 ```
-
-Declaring `"action"` keeps the icon colorized, indicating the extension is available to
-users.
 
 ### Add a badge {: #badge }
 
@@ -234,7 +247,7 @@ Include the name of the message in the tooltip field instead of the message to e
 }
 ```
 
-### Click Event
+### Click Event {: #click}
 
 It's possible to install a [click handler][action-onclicked] for when the user clicks the action item.
 However, this won't fire if the action has a popup (default or otherwise).
@@ -464,4 +477,5 @@ pages.
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
 [sample-tab-flipper]: /docs/extensions/mv3/samples#search:tab%20flipper
 [section-popup]: #popup
+[section-onclick]: #click
 
