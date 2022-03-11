@@ -17,7 +17,7 @@ to implement different UI elements within an extension.
 
 ## Allow the extension on all pages {: #action }
 
-Use an [action][1] when an extension's features are functional in most situations.
+Use an [action][docs-action] when an extension's features are functional in most situations.
 It will be displayed to the right of the user's URL bar, hidden under the Extensions overflow menu by default, and a user can 'pin' it to be always visible.
 
 ### Register browser action {: #browser }
@@ -43,7 +43,7 @@ users.
 Badges display a colored banner with up to four characters on top of the browser icon. They can only
 be used by extensions that declare `"action"` in their manifest.
 
-Use badges to indicate the state of the extension. The [Drink Water Event][2] sample displays a
+Use badges to indicate the state of the extension. The [Drink Water Event][sample-drink] sample displays a
 badge with "ON" to show the user they successfully set an alarm and displays nothing when the
 extension is idle.
 
@@ -53,8 +53,8 @@ extension is idle.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
        alt="Badge Off", height="72", width="72" %}
 
-Set the text of the badge by calling [`chrome.action.setBadgeText`][3] and the banner color
-by calling [`chrome.action.setBadgeBackgroundColor`][4] .
+Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the banner color
+by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor] .
 
 ```js
 chrome.action.setBadgeText({text: 'ON'});
@@ -63,8 +63,8 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 
 ## Define rules for activating the extension{: #activate_pages }
 
-It's possible to use [declarativeContent](/docs/extensions/reference/declarativeContent/) to enable and disable the action based on the current URL being shown.
-See the [example as part of declarativeContent](docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent).
+It's possible to use [declarativeContent][api-declarativecontent] to enable and disable the action based on the current URL being shown.
+See the [example as part of declarativeContent][docs-emulating-page-actions].
 
 ## Provide the extension icons
 
@@ -74,7 +74,7 @@ visual results, although any format supported by WebKit including BMP, GIF, ICO,
 ### Designate toolbar icons {: #icons }
 
 Icons specific to the toolbar are registered in the `"default_icon"` field under
-[`action`][15]  in the manifest. Including multiple sizes is
+[`action`][api-action]  in the manifest. Including multiple sizes is
 encouraged to scale for the 16-dip space. At minimum, 16x16 and 32x32 sizes are recommended.
 
 ```json
@@ -124,7 +124,7 @@ A popup is an HTML file that is displayed in a special window when the user clic
 A popup works very similarly to a web page; it can contain links to stylesheets and script tags, but
 does not allow inline JavaScript.
 
-The [Drink Water Event][17] example popup displays available timer options. Users set an alarm by
+The [Drink Water Event][sample-drink] example popup displays available timer options. Users set an alarm by
 clicking one of the provided buttons.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png",
@@ -159,8 +159,7 @@ The popup can be registered in the manifest under the `"action"` key.
 }
 ```
 
-Popups can also be set dynamically by calling [`action.setPopup`][18] or
-[`action.setPopup`][19].
+Popups can also be set dynamically by calling [`action.setPopup`][action-setpopup].
 
 ```js
 chrome.storage.local.get('signed_in', (data) => {
@@ -194,9 +193,9 @@ in the manifest.
 }
 ```
 
-Tooltips can also be set or updated by calling [`action.setTitle`][22].
+Tooltips can also be set or updated by calling [`action.setTitle`][action-settitle].
 
-Specialized locale strings are implemented with [Internationalization][24]. Create directories to
+Specialized locale strings are implemented with [Internationalization][api-i18n]. Create directories to
 house language specific messages within a folder called `_locales`, like this:
 
 * `_locales/en/messages.json`
@@ -237,7 +236,7 @@ Include the name of the message in the tooltip field instead of the message to e
 
 ### Click Event
 
-It's possible to install a click handler for when the user clicks the action item.
+It's possible to install a [click handler][action-onclicked] for when the user clicks the action item.
 However, this won't fire if the action has a popup (default or otherwise).
 
 ```js
@@ -248,8 +247,8 @@ chrome.action.onClicked.addListener(function(tab) {
 
 ### Omnibox {: #omnibox }
 
-Users can invoke extension functionality through the [omnibox][26]. Include the `"omnibox"` field in
-the manifest and designate a keyword. The [Omnibox New Tab Search][27] sample extension uses "nt" as
+Users can invoke extension functionality through the [omnibox][api-omnibox]. Include the `"omnibox"` field in
+the manifest and designate a keyword. The [Omnibox New Tab Search][sample-new-tab-search] sample extension uses "nt" as
 the keyword.
 
 ```json/3
@@ -271,7 +270,7 @@ it grayscales the provided 16x16 icon and includes it in the omnibox next to the
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png",
        alt="Active Omnibox Extension", height="70", width="576" %}
 
-The extension listens to the [`omnibox.onInputEntered`][28] event. After it's triggered, the
+The extension listens to the [`omnibox.onInputEntered`][omnibox-inputentered] event. After it's triggered, the
 extension opens a new tab containing a Google search for the user's entry.
 
 ```js
@@ -284,7 +283,7 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
 
 ### Context menu {: #context_menu }
 
-Add new [context menu][29] options by granting the `"contextMenus"` permission in the manifest.
+Add new [context menu][api-context-menu] options by granting the `"contextMenus"` permission in the manifest.
 
 ```json/4
 {
@@ -308,10 +307,11 @@ The 16x16 icon is displayed next to the new menu entry.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png",
        alt="Context Menu Icon", height="500", width="500" %}
 
-Create a context menu by calling [`contextMenus.create`][30] in the [background script][31]. This
-should be done under the [`runtime.onInstalled`][32] listener event.
+Create a context menu by calling [`contextMenus.create`][contextmenu-create] in the background script. This
+should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
 
 ```js
+// background.js
 chrome.runtime.onInstalled.addListener(function() {
   for (const key of Object.keys(kLocales)) {
     chrome.contextMenus.create({
@@ -342,7 +342,7 @@ const kLocales = {
 ```
 
 The Global Google Search context menu example creates multiple options from the list in
-[locales.js][33]. When an extension contains more than one context menu, Google Chrome
+`locales.js`. When an extension contains more than one context menu, Google Chrome
 automatically collapses them into a single parent menu.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png",
@@ -350,8 +350,8 @@ automatically collapses them into a single parent menu.
 
 ### Commands {: #commands }
 
-Extensions can define specific [commands][34] and bind them to a key combination. Register one or
-more commands in the manifest under the `"commands"` field.
+Extensions can define specific [commands][api-commands] and bind them to a key combination. Register one or
+more commands in the manifest under the `"commands"` key.
 
 ```json
 {
@@ -377,11 +377,13 @@ more commands in the manifest under the `"commands"` field.
 }
 ```
 
-Commands can be used to provide new or alternative browser shortcuts. The [Tab Flipper][35] sample
-extension listens to the [`commands.onCommand`][36] event in the [background script][37] and defines
+Commands can be used to provide new or alternative browser shortcuts. The [Tab Flipper][sample-tab-flipper] sample
+extension listens to the [`commands.onCommand`][commands-oncommand] event in the [background script][docs-background] and defines
 functionality for each registered combination.
 
 ```js
+// background.js 
+
 chrome.commands.onCommand.addListener(command => {
   // command will be "flip-tabs-forward" or "flip-tabs-backwards"
 
@@ -403,8 +405,8 @@ chrome.commands.onCommand.addListener(command => {
 
 ### Override pages {: #override }
 
-An extension can [override][42] and replace the History, New Tab, or Bookmarks web page with a
-custom HTML file. Like a [popup][43], it can include specialized logic and style, but does not allow
+An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page with a
+custom HTML file. Like a [popup][section-popup], it can include specialized logic and style, but does not allow
 inline JavaScript. A single extension is limited to overriding only one of the three possible pages.
 
 Register an override page in the manifest under the `"chrome_url_overrides"` field.
@@ -436,44 +438,30 @@ pages.
 </html>
 ```
 
-[1]: /docs/extensions/reference/action
-[2]: /docs/extensions/mv3/samples#search:drink
-[3]: /docs/extensions/reference/action#method-setBadgeText
-[4]: /docs/extensions/reference/action#method-setBadgeBackgroundColor
-[5]: /docs/extensions/reference/action
-[6]: /docs/extensions/reference/declarativeContent
-[7]: /docs/extensions/reference/runtime#event-onInstalled
-[8]: /docs/extensions/mv3/background_pages
-[10]: /docs/extensions/reference/action#method-show
-[11]: /docs/extensions/reference/action#method-show
-[12]: /docs/extensions/reference/action#method-hide
-[13]: /docs/extensions/mv3/samples#search:mappy
-[15]: /docs/extensions/reference/action
-[16]: /docs/extensions/reference/action
-[17]: /docs/extensions/mv3/samples#search:drink
-[18]: /docs/extensions/reference/action#method-setPopup
-[19]: /docs/extensions/reference/action#method-setPopup
-[20]: /docs/extensions/reference/action
-[21]: /docs/extensions/reference/action
-[22]: /docs/extensions/reference/action#method-setTitle
-[23]: /docs/extensions/reference/action#method-setTitle
-[24]: /docs/extensions/reference/i18n
-[25]: /docs/extensions/mv3/i18n-messages
-[26]: /docs/extensions/reference/omnibox
-[27]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
-[28]: /docs/extensions/reference/omnibox#event-onInputEntered
-[29]: /docs/extensions/reference/contextMenus
-[30]: /docs/extensions/reference/contextMenus#method-create
-[31]: /docs/extensions/mv3/migrating_to_service_workers
-[32]: /docs/extensions/reference/runtime#event-onInstalled
-[33]: /docs/extensions/examples/api/contextMenus/global_context_search/locales.js
-[34]: /docs/extensions/reference/commands
-[35]: /docs/extensions/mv3/samples#search:tab%20flipper
-[36]: /docs/extensions/reference/commands#event-onCommand
-[37]: /docs/extensions/mv3/migrating_to_service_workers
-[38]: /docs/extensions
-[39]: /docs/extensions/mv3/user_interface#browser
-[40]: /docs/extensions/mv3/migrating_to_service_workers
-[42]: /docs/extensions/mv3/override
-[43]: /docs/extensions/mv3/user_interface/#popup
+[action-hide]: /docs/extensions/reference/action#method-hide
+[action-onclicked]: /docs/extensions/reference/action/#event-onClicked
+[action-setbadgebackgroundcolor]: /docs/extensions/reference/action#method-setBadgeBackgroundColor
+[action-setbadgetext]: /docs/extensions/reference/action#method-setBadgeText
+[action-setpopup]: /docs/extensions/reference/action#method-setPopup
+[action-settitle]: /docs/extensions/reference/action#method-setTitle
+[action-show]: /docs/extensions/reference/action#method-show
+[api-action]: /docs/extensions/reference/action
+[api-commands]: /docs/extensions/reference/commands
+[api-context-menu]: /docs/extensions/reference/contextMenus
+[api-declarativecontent]: /docs/extensions/reference/declarativeContent
+[api-i18n]: /docs/extensions/reference/i18n
+[api-messages]: /docs/extensions/mv3/i18n-messages
+[api-omnibox]: /docs/extensions/reference/omnibox
+[commands-oncommand]: /docs/extensions/reference/commands#event-onCommand
+[contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
+[docs-background]: /docs/extensions/mv3/background_pages
+[docs-emulating-page-actions]: /docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
+[docs-override]: /docs/extensions/mv3/override
+[omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
+[runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[sample-drink]: /docs/extensions/mv3/samples#search:drink
+[sample-mappy]: /docs/extensions/mv3/samples#search:mappy
+[sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
+[sample-tab-flipper]: /docs/extensions/mv3/samples#search:tab%20flipper
+[section-popup]: #popup
 
