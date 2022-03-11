@@ -51,29 +51,6 @@ The `"action"` field is registered in the manifest.
 }
 ```
 
-### Add a badge {: #badge }
-
-Badges display a colored banner with up to four characters on top of the browser icon. They can only
-be used by extensions that declare `"action"` in their manifest.
-
-Use badges to indicate the state of the extension. The [Drink Water Event][sample-drink] sample displays a
-badge with "ON" to show the user they successfully set an alarm and displays nothing when the
-extension is idle.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
-       alt="Badge On", height="72", width="72" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
-       alt="Badge Off", height="72", width="72" %}
-
-Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the banner color
-by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor] .
-
-```js
-chrome.action.setBadgeText({text: 'ON'});
-chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
-```
-
 ## Define rules for activating the extension{: #activate_pages }
 
 It's possible to use [declarativeContent][api-declarativecontent] to enable and disable the action based on the current URL being shown.
@@ -130,6 +107,29 @@ Register icons in the manifest under the `"icons"` field.
 ```
 
 ## Additional UI features {: #additional_features }
+
+### Add a badge {: #badge }
+
+Badges display a colored banner with up to four characters on top of the action icon. They can only
+be used by extensions that declare `"action"` in their manifest.
+
+Use badges to indicate the state of the extension. The [Drink Water Event][sample-drink] sample displays a
+badge with "ON" to show the user they successfully set an alarm and displays nothing when the
+extension is idle.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
+       alt="Badge On", height="72", width="72" %}
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
+       alt="Badge Off", height="72", width="72" %}
+
+Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the banner color
+by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor] .
+
+```js
+chrome.action.setBadgeText({text: 'ON'});
+chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
+```
 
 ### Popup {: #popup }
 
