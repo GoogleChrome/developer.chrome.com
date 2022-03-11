@@ -160,6 +160,5 @@ module.exports = eleventyConfig => {
       input: 'site',
       output: 'dist',
     },
-    templateFormats: ["md", "liquid", "njk"],
   };
 };
