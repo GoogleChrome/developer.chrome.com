@@ -22,14 +22,14 @@ After installation, by default, these appear in the extensions menu (the puzzle 
 
 {% Column %}
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", 
-alt="Unpinned extension", width="340", height="174" %}
+alt="Unpinned extension", width="300", height="174" %}
 
 **Unpinned**
 {% endColumn %}
 
 {% Column %}
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", 
-alt="Pinned extension", width="338", height="182" %}
+alt="Pinned extension", width="300", height="182" %}
 
 **Pinned**
 {% endColumn %}
@@ -51,10 +51,22 @@ The `"action"` field is registered in the manifest.
 }
 ```
 
-## Define rules for activating the extension{: #activate_pages }
+## Define rules for activating the extension {: #activate_pages }
 
-It's possible to use [declarativeContent][api-declarativecontent] to enable and disable the action based on the current URL being shown.
-See the [example as part of declarativeContent][docs-emulating-page-actions].
+The [declarativeContent][api-declarativecontent] API allows you to enable and disable the action
+based on the current URL being shown. 
+
+When an extension is disabled, the icon will be greyscale. If the user clicks on the action icon, they will see the extension's context menu.
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
+alt="Clicked Disabled extension", width="252", height="180" %}  
+
+<figcaption>
+    Disabled extension.
+  </figcaption>
+</figure>
+
+See the [Emulating pageActions with declarativeContent][docs-emulating-page-actions] for a code sample.
 
 ## Provide the extension icons
 
