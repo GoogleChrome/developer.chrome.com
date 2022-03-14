@@ -71,7 +71,9 @@ See the [Emulating pageActions with declarativeContent][docs-emulating-page-acti
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is accepted.
+visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is accepted. 
+
+See [Supplying images][docs-icon-guidelines] for guidelines on how to design your icon.
 
 ### Designate toolbar icons {: #icons }
 
@@ -81,7 +83,6 @@ encouraged to scale for the 16-dip space. At minimum, 16x16 and 32x32 sizes are 
 
 ```json
 {
-  "name": "My Awesome page_action Extension",
   ...
   "action": {
     "default_icon": {
@@ -94,7 +95,7 @@ encouraged to scale for the 16-dip space. At minimum, 16x16 and 32x32 sizes are 
 ```
 
 All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
-generic one to the toolbar.
+generic one to the toolbar with the first letter of the extension name. 
 
 ### Create and register additional icons {: #icon_size }
 
@@ -481,6 +482,7 @@ pages.
 [contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
 [docs-background]: /docs/extensions/mv3/background_pages
 [docs-emulating-page-actions]: /docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
+[docs-icon-guidelines]: /docs/webstore/images/#icons
 [docs-override]: /docs/extensions/mv3/override
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
