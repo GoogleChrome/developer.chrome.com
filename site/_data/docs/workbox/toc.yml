@@ -37,3 +37,6 @@
 - url: /docs/workbox/reference
   title: i18n.docs.workbox.reference
   description: i18n.docs.workbox.reference_description
+- url: https://github.com/GoogleChrome/workbox
+  title: i18n.docs.workbox.github
+  description: i18n.docs.workbox.github_description

@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Exists while Workbox is being ported across. Don't index pages on Algolia.
+ * @fileoverview Default metadata for Workbox pages.
  */
 
 /**
