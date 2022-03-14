@@ -71,9 +71,9 @@ See the [Emulating pageActions with declarativeContent][docs-emulating-page-acti
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is accepted. 
+visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is accepted (SVG is not supported).
 
-See [Supplying images][docs-icon-guidelines] for guidelines on how to design your icon.
+Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
 
 ### Designate toolbar icons {: #icons }
 
@@ -485,6 +485,7 @@ pages.
 [docs-override]: /docs/extensions/mv3/override
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
+[sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
 [sample-drink]: /docs/extensions/mv3/samples#search:drink
 [sample-mappy]: /docs/extensions/mv3/samples#search:mappy
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
