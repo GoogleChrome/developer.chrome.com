@@ -83,6 +83,7 @@ encouraged to scale for the 16-dip space. At minimum, 16x16 and 32x32 sizes are 
 
 ```json
 {
+    "name": "My Awesome Extension",
   ...
   "action": {
     "default_icon": {
@@ -101,7 +102,13 @@ generic one to the toolbar with the first letter of the extension name.
 
 Include additional icons in the following sizes for uses outside of the toolbar.
 
-<table><tbody><tr><th>Icon Size</th><th>Icon Use</th></tr><tr><td>16x16</td><td>favicon on the extension's pages</td></tr><tr></tr><tr><td>32x32</td><td>Windows computers often require this size. Providing this option will prevent size distortion from shrinking the 48x48 option.</td></tr><tr></tr><tr><td>48x48</td><td>displays on the extensions management page</td></tr><tr></tr><tr><td>128x128</td><td>displays on installation and in the Chrome Webstore</td></tr><tr></tr></tbody></table>
+| Icon Size | Icon Use                                                                                       |
+|-----------|------------------------------------------------------------------------------------------------|
+| 16x16     | favicon on the extension's pages                                                               |
+| 32x32     | Windows often uses size. Chrome will choose this size instead of shrinking a 48-pixel icon |
+| 48x48     | displays on the extension management page                                                     |
+| 128x128   | displays on installation and in the Chrome Web Store                                            |
+
 
 Register icons in the manifest under the `"icons"` field.
 
@@ -126,15 +133,7 @@ Register icons in the manifest under the `"icons"` field.
 Badges display a colored banner with up to four characters on top of the action icon. They can only
 be used by extensions that declare `"action"` in their manifest.
 
-Use badges to indicate the state of the extension. The [Drink Water Event][sample-drink] sample displays a
-badge with "ON" to show the user they successfully set an alarm and displays nothing when the
-extension is idle.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
-       alt="Badge On", height="72", width="72" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
-       alt="Badge Off", height="72", width="72" %}
+Use badges to indicate the state of the extension. See the action API
 
 Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the banner color
 by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor] .
