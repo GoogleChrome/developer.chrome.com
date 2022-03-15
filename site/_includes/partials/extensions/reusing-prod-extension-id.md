@@ -8,11 +8,11 @@ Package the extension directory into a `.zip` file and upload it to the [Chrome 
 Dashboard](https://chrome.google.com/webstore/developer/dashboard) without publishing it:
 
 1.  On the Developer Dashboard, click **Add new item**.
-2.  Click **Browse files**, select the extension `zip` file, and upload it.
+2.  Click **Browse files**, select the extension's `zip` file, and upload it.
 3.  Go to the **Package** tab and click **View public key**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", 
-alt="Developer Dashboard Package tab", width="296", height="121" %}
+alt="Developer Dashboard Package tab", width="296", height="121", class="screenshot" %}
 
 When the popup is open, follow these steps:
 
@@ -20,7 +20,7 @@ When the popup is open, follow these steps:
 2. Remove the newlines in order to make it a single line of text.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iOF372HS2DNkv5gLc1AA.png", alt="Public key popup",
-width="500", height="233" %}
+width="500", height="233", class="screenshot" %}
 
 Add the code to the `manifest.json` under the [`"key"`]([/docs/extensions/mv3/manifest/key/) field.
 This way the extension will maintain the same ID.
@@ -40,4 +40,5 @@ and upload the unpackaged extension directory. Compare the extension ID on the e
 page to the Item ID in the Developer Dashboard. They should match.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/AGorME3hdXd2YeKot5Nc.png", alt="The ID of the
-extension match", width="356", height="352" %}
+extension match", width="356", height="352", class="screenshot" %}
+
