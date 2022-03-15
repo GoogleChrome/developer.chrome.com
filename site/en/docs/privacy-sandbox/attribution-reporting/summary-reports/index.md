@@ -163,6 +163,14 @@ audit. These safeguards are meaningful to:
 
 ### Proposal for an aggregation service {: #aggregation-service}
 
+{% Aside 'key-term' %}
+A _Trusted Execution Environment_ is a special configuration of computer
+hardware and software that allows external parties to verify the exact
+versions of software running on the computer. TEEs allow external parties to
+verify that the software does exactly what the software manufacturer claims it
+does—nothing more or less.
+{% endAside %}
+
 [The initial
 proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each adtech provider to operate their own instance of the aggregation
