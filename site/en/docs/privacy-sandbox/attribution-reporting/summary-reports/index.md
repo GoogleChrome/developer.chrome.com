@@ -163,18 +163,24 @@ audit. These safeguards are meaningful to:
 
 ### Proposal for an aggregation service {: #aggregation-service}
 
-[The initial
-proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
-asks each adtech provider to operate their own instance of the aggregation
-service, in a Trusted Execution Environment (TEE) deployed on a cloud service
-that supports needed security features.
-
 {% Aside 'key-term' %}
 A _Trusted Execution Environment_ is a special configuration of computer
 hardware and software that allows external parties to verify the exact
 versions of software running on the computer. TEEs allow external parties to
 verify that the software does exactly what the software manufacturer claims it
 does—nothing more or less.
+{% endAside %}
+
+[The initial
+proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+asks each adtech provider to operate their own instance of the aggregation
+service, in a Trusted Execution Environment (TEE) deployed on a cloud service
+that supports needed security features.
+
+{% Aside %}
+The first [origin trial](/blog/origin-trials/) for the aggregation service will initially support Trusted Execution Environments (TEEs) provided by Amazon Web Services.
+
+During the first origin trial, developers will not be required to use TEEs for testing⏤and support for other select cloud providers that meet the security requirements for the aggregation service will be added in future testing.
 {% endAside %}
 
 The TEE's code is the only place in the aggregation service which has access
