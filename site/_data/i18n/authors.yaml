@@ -1,3 +1,193 @@
+mustaqahmed:
+  title:
+    en: 'Mustaq Ahmed'
+  description:
+    en: 'Mustaq is a contributor to WebFundamentals'
+shampson:
+  title:
+    en: 'Seth Hampson'
+  description:
+    en: 'Software Engineer at Google working on WebRTC'
+mlamouri:
+  title:
+    en: 'Mounir Lamouri'
+  description:
+    en: 'Software Engineer for Web Media Experience'
+tomgreenaway:
+  title:
+    en: 'Tom Greenaway'
+  description:
+    en: 'Chrome & Web Developer Relations Games Lead'
+kinukoyasuda:
+  title:
+    en: 'Kinuko Yasuda'
+  description:
+    en: 'Software Engineer at Google working on the web platform'
+tdresser:
+  title:
+    en: 'Tim Dresser'
+  description:
+    en: 'Software Engineer working on performance metrics at Google'
+victorcostan:
+  title:
+    en: 'Victor Costan'
+  description:
+    en: 'Tech Lead, Chrome Storage'
+rezaali:
+  title:
+    en: 'Reza Ali'
+  description:
+    en: 'Reza is a software developer'
+jeremywagner:
+  title:
+    en: 'Jeremy Wagner'
+  description:
+    en: 'Jeremy is a contributor to WebFundamentals'
+sunyunjia:
+  title:
+    en: 'Sandra Sun'
+  description:
+    en: 'Software Engineer working on Chromium'
+majidvp:
+  title:
+    en: 'Majid Valipour'
+  description:
+    en: 'Software Engineer working on Chromium'
+yangguo:
+  title:
+    en: 'Yang Guo'
+  description:
+    en: 'Yang is an engineer working on V8'
+jgruber:
+  title:
+    en: 'Jakob Gruber'
+  description:
+    en: 'Jakob is an engineer working on V8'
+smcgruer:
+  title:
+    en: 'Stephen McGruer'
+  description:
+    en: 'Stephen is a contributor to WebFundamentals'
+dtapuska:
+  title:
+    en: 'Dave Tapuska'
+  description:
+    en: 'Dave is a contributor to WebFundamentals'
+bokan:
+  title:
+    en: 'David Bokan'
+  description:
+    en: 'David is a contributor to WebFundamentals'
+mcasas:
+  title:
+    en: 'Miguel Casas-Sanchez'
+  description:
+    en: 'Miguel is an engineer in the Chrome team'
+sgomes:
+  title:
+    en: 'Sérgio Gomes'
+  description:
+    en: 'Web DevRel at Google'
+ericlawrence:
+  title:
+    en: 'Eric Lawrence'
+  description:
+    en: 'Eric is a contributor to WebFundamentals'
+flackr:
+  title:
+    en: 'Robert Flack'
+  description:
+    en: 'Robert is a contributor to WebFundamentals'
+mco:
+  title:
+    en: 'Marc Cohen'
+  description:
+    en: 'Eng Manager, Web Developer Relations'
+owencm:
+  title:
+    en: 'Owen Campbell-Moore'
+  description:
+    en: 'Owen is a contributor to WebFundamentals'
+wdenniss:
+  title:
+    en: 'William Denniss'
+  description:
+    en: 'Google Identity Product Manager'
+kenchris:
+  title:
+    en: 'Kenneth Christiansen'
+  description:
+    en: 'Kenneth is an Engineer at Intel'
+emilystark:
+  title:
+    en: 'Emily Stark'
+  description:
+    en: 'Emily is a contributor to WebFundamentals'
+heathermahan:
+  title:
+    en: 'Heather Mahan'
+  description:
+    en: 'Heather Mahan is a developer'
+ewagasperowicz:
+  title:
+    en: 'Ewa Gasperowicz'
+  description:
+    en: 'Ewa is a contributor to WebFundamentals'
+addyosmani:
+  title:
+    en: 'Addy Osmani'
+  description:
+    en: 'Eng Manager, Web Developer Relations'
+paullewis:
+  title:
+    en: 'Paul Lewis'
+  description:
+    en: 'Paul is a Design and Perf Advocate'
+glenshires:
+  title:
+    en: 'Glen Shires'
+  description:
+    en: 'Glen is a contributor to WebFundamentals'
+tomwiltzius:
+  title:
+    en: 'Tom Wiltzius'
+  description:
+    en: 'Tom is a contributor to WebFundamentals'
+chriswilson:
+  title:
+    en: 'Chris Wilson'
+  description:
+    en: 'Chris is a contributor to WebFundamentals'
+renatomangini:
+  title:
+    en: 'Renato Mangini'
+  description:
+    en: 'Renato is a contributor to WebFundamentals'
+ilmariheikkinen:
+  title:
+    en: 'Ilmari Heikkinen'
+  description:
+    en: 'Ilmari is a contributor to WebFundamentals'
+alexdanilo:
+  title:
+    en: 'Alex Danilo'
+  description:
+    en: 'Alex is a contributor to WebFundamentals'
+borissmus:
+  title:
+    en: 'Boris Smus'
+  description:
+    en: 'Boris is a contributor to WebFundamentals'
+sethladd:
+  title:
+    en: 'Seth Ladd'
+  description:
+    en: 'Seth is a contributor to WebFundamentals'
+mikemahemoff:
+  title:
+    en: 'Michael Mahemoff'
+  description:
+    en: 'Michael is a contributor to WebFundamentals'
 mikewest:
   title:
     en: 'Mike West'
