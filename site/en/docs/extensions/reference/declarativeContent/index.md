@@ -10,24 +10,25 @@ To transition from pageaction to action, see [Emulating pageActions with declara
 
 ## Usage
 
-The Declarative Content API allows you to enable your extension's [action][api-action] depending on the
-URL of a web page and the CSS selectors its content matches, without needing to add [host
+The Declarative Content API allows you to enable your extension's [action][api-action] depending on
+the URL of a web page and the CSS selectors its content matches, without needing to add [host
 permission][docs-host-perm] or inject a [content script][docs-content-scripts]. 
 
-Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the toolbar icon.
+Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
+extension's action (toolbar icon).
 
 ## Rules
 
-As a [declarative API][api-declarative], this API lets you register rules on the [`onPageChanged`][event-onpagechanged] event
-object which take an action ([`ShowAction`][type-show-action] and [`SetIcon`][type-set-icon]) when a set of conditions,
+As a [declarative API][api-declarative], this API lets you register rules on the
+[`onPageChanged`][event-onpagechanged] event object which take an action
+([`ShowAction`][type-show-action] and [`SetIcon`][type-set-icon]) when a set of conditions,
 represented as a `PageStateMatcher`, are met.
 
-The [`PageStateMatcher`][type-page-state-matcher] matches web pages if and only if all listed criteria are met. For example, the
-following rule uses [pageUrl][type-page-url] to enable the action for pages on "https://www.google.com/" when a password field
-is present:
+The [`PageStateMatcher`][type-page-state-matcher] matches web pages if and only if all listed
+criteria are met. For example, the following rule uses [pageUrl][type-page-url] to enable the action
+for pages on "https://www.google.com/" when a password field is present:
 
 ```js
-
 var rule1 = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
@@ -37,7 +38,6 @@ var rule1 = {
   ],
   actions: [ new chrome.declarativeContent.ShowAction() ]
 };
-
 ```
 
 {% Aside %}
@@ -46,8 +46,8 @@ All conditions and actions are created via a constructor as shown in the example
 
 {% endAside %}
 
-In order to also enable the toolbar icon for sites with a video, you can add a second condition, as each
-condition is sufficient to trigger all specified actions:
+If you also wanted to enable the extension's action on sites that contain a video element, you could
+add a second condition to the rule. Each condition is sufficient to trigger all specified actions:
 
 ```js
 var rule2 = {
@@ -76,22 +76,46 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 {% Aside %}
 
-You should always register or unregister rules in bulk rather than individually because
-each of these operations recreates internal data structures. This re-creation is computationally
-expensive but facilitates a faster matching algorithm.
+You should always register or unregister rules in bulk rather than individually because each of
+these operations recreates internal data structures. This re-creation is computationally expensive
+but facilitates a faster matching algorithm.
 
 {% endAside %}
 
-Combine the above rule with the [activeTab][api-action] permission to create an extension that doesn't need
-any install-time permissions but can invite the user to click the toolbar icon on relevant pages.
+Combine the above rule with the [activeTab][api-action] permission to create an extension that
+doesn't need any install-time permissions but can invite the user to click the extension's action on
+relevant pages.
 
 ## CSS Matching
 
-[`PageStateMatcher.css`][section-matcher-css] conditions must be _[compound selectors][w3-compound]_, meaning that you can't
-include [combinators][mdn-combinators] like whitespace or "`>`" in your selectors. This helps Chrome match the
-selectors more efficiently.
+[`PageStateMatcher.css`][section-matcher-css] conditions must be _[compound
+selectors][w3-compound]_, meaning that you can't include [combinators][mdn-combinators] like
+whitespace or "`>`" in your selectors. This helps Chrome match the selectors more efficiently.
 
-<table><tbody><tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr><tr><td><code>a</code></td><td><code>div p</code></td></tr><tr><td><code>iframe.special[src^='http']</code></td><td><code>p&gt;span.highlight</code></td></tr><tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr><tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr></tbody></table>
+<table>
+  <tbody>
+    <tr>
+      <th>Compound Selectors (OK)</th>
+      <th>Complex Selectors (Not OK)</th>
+    </tr>
+    <tr>
+      <td><code>a</code></td>
+      <td><code>div p</code></td>
+    </tr>
+    <tr>
+      <td><code>iframe.special[src^='http']</code></td>
+      <td><code>p&gt;span.highlight</code></td>
+    </tr>
+    <tr>
+      <td><code>ns|*</code></td>
+      <td><code>p + ol</code></td>
+    </tr>
+    <tr>
+      <td><code>#abcd:checked</code></td>
+      <td><code>p::first-line</code></td>
+    </tr>
+  </tbody>
+</table>
 
 CSS conditions only match displayed elements: if an element that matches your selector is
 `display:none` or one of its parent elements is `display:none`, it doesn't cause the condition to
@@ -100,9 +124,9 @@ can still make your condition match.
 
 ## Bookmarked State Matching
 
-The [`PageStateMatcher.isBookmarked`][property-is-bookmarked] condition allows matching of the bookmarked state of the
-current URL in the user's profile. To make use of this condition the "bookmarks" permission must be
-declared in the extension [manifest][docs-manifest]
+The [`PageStateMatcher.isBookmarked`][property-is-bookmarked] condition allows matching of the
+bookmarked state of the current URL in the user's profile. To make use of this condition the
+"bookmarks" permission must be declared in the extension [manifest][docs-manifest].
 
 [api-action]: /docs/extensions/reference/action/
 [api-declarative]: /docs/extensions/reference/events/#declarative-event-handlers
