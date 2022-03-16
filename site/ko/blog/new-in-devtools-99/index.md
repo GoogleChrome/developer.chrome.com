@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description:
-  "웹 소켓 요청 쓰로틀링, 새로운 Reporting API 창, console 스타일링 외"
+  "웹 소켓 요청 쓰로틀링, 새로운 Reporting API 창, console 스타일링 등"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iStno9LHU3f6DJe6hOIb.jpg'
 alt: ''
 tags:
@@ -38,7 +38,7 @@ Chromium 이슈: [423246](https://crbug.com/423246)
 
 [Reporting API](https://web.dev/reporting-api/) 는 페이지에 대한 보안 위험도, 더 이상 사용되지 않는 API 호출 등을 모니터링하는 데 도움을 주도록 설계되었습니다.
 
-Reporting API 를 사용하는 페이지에 접속하세요 (예시: [demo page](https://reporting-api-demo.glitch.me/)).
+Reporting API 를 사용하고자 하는 페이지에 접속하세요 (예시: [demo page](https://reporting-api-demo.glitch.me/)).
 **애플리케이션** 패널에서 스크롤을 내려 **백그라운드 서비스** 영역의 **Reporting API** 창을 선택하세요.
 
 **Reports** 영역에서는 페이지에서 생성된 보고서 목록과 그 상태를 보여줍니다. 보고서를 클릭하여 상세한 내용을 볼 수 있습니다.
@@ -56,7 +56,7 @@ Chromium 이슈: [1205856](https://crbug.com/1205856)
 
 사용자 흐름에 대한 기록을 재생할 때, **Recorder** 패널은 이제 특정 요소가 뷰포트에 표시되거나 클릭 가능할 때까지 기다리거나 다음 단계를 재생하기 전에 요소를 뷰포트 내로 자동으로 스크롤하고자 시도합니다. 이전에는 재생이 즉시 실패했습니다.
 
-다음 예제는 뷰포트 외부에 위치한 화면 밖 메뉴 예제로 활성화되면 즉시 화면에 들어옵니다. 사용자 흐름은 메뉴를 토글하고, 메뉴 아이템을 클릭하는 것입니다. 이전에는 메뉴 아이템이 슬라이딩 되었지만 뷰포트에서는 아직 보이지 않기 때문에 마지막 단계에서 재생이 실패했습니다. 지금은 수정되었습니다.
+또한 뷰포트 바깥에 위치한 화면 밖 메뉴 예제를 소개합니다. 이는 활성화되었을 때 즉시 화면에 들어옵니다. 사용자 흐름은 메뉴를 토글하고, 메뉴 아이템을 클릭하는 것입니다. 이전에는 메뉴 아이템이 슬라이딩 되었지만 뷰포트에서는 아직 보이지 않기 때문에 마지막 단계에서 재생이 실패했습니다. 지금은 수정되었습니다.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
@@ -69,7 +69,7 @@ Chromium 이슈: [1257499](https://crbug.com/1257499#c38)
 
 이제 [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code)를 사용하여 콘솔 메시지를 적절히 스타일링할 수 있습니다. 이전에는 DevTools 콘솔에서 지원하는 ANSI escape sequences 는 굉장히 제한적이며, 일부는 깨지기도 하였습니다.
 
-ANSI escape sequences 를 통해 로그 메시지에 색상을 주는 건 [Node.js](https://nodejs.org/) 개발자에게 보편적이며, [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur) 같은 라이브러리를 사용해 스타일링에 도움을 받기도 합니다.
+ANSI escape sequences 를 통해 로그 메시지에 색상을 입히는 건 [Node.js](https://nodejs.org/) 개발자에게 보편적이며, [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur) 같은 라이브러리를 사용해 스타일링에 도움을 받기도 합니다.
 
 이번 변경점을 통해 DevTools 를 이용하여 Node.js 애플리케이션을 디버깅할 때 적절히 색상이 부여된 콘솔 메시지를 통해 더 원활하게 디버깅할 수 있습니다.
 
@@ -83,9 +83,9 @@ DevTools를 이용한 콘솔 메시지의 포매팅 및 스타일링에 대한 �
 Chromium 이슈: [1282837](https://crbug.com/1282837), [1282076](https://crbug.com/1282076)
 
 
-### `%s`, `%d`, `%i` `%f` 형식 지정자 지원 {: #console-format }
+### `%s`, `%d`, `%i`, `%f` 형식 지정자 지원 {: #console-format }
 
-이제 **콘솔** 에서 [콘솔 표준](https://console.spec.whatwg.org/) 에서 정의된 `%s`, `%d`, `%i` `%f` 형식 지정자를 지원합니다.
+이제 **콘솔** 에서 [콘솔 표준](https://console.spec.whatwg.org/) 에 정의된 `%s`, `%d`, `%i`, `%f` 형식 지정자를 지원합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eQPTyQMmyjOUQ6WD4n6N.png", alt="console 메시지에서 형식 지원자 지원", width="800", height="490" %}
 
@@ -96,7 +96,7 @@ Chromium 이슈: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 
 ### 보다 직관적인 콘솔 그룹 필터 {: #console-filter }
 
-이제 콘솔 메시지를 필터링할 때, 필터에 일치하는 그룹 (또는 조상 그룹)의 제목 또는 필터에 일치하는 메시지 콘텐츠를 포함한 경우에만 콘솔 메시지를 보여줍니다. 이전에는 필터에도 불구하고 콘솔 그룹 제목이 노출되었습니다.
+이제 콘솔 메시지를 필터링할 때, 필터에 일치하는 그룹 (또는 조상 그룹)의 제목 또는 필터에 일치하는 메시지 콘텐츠를 포함한 경우에만 콘솔 메시지를 보여줍니다. 이전에는 필터와 관계없이 콘솔 그룹 제목이 노출되었습니다.
 
 추가로 콘솔 메시지를 보여줄 때 그룹 (또는 조상 그룹)도 표시됩니다.
 
@@ -122,7 +122,7 @@ Chromium 이슈: [212374](https://crbug.com/212374)
 
 ### 소스 패널에서 소스 폴더 트리 개선 {: #source-tree }
 
-**소스** 패널의 소스 폴더 트리가 폴더 구조 및 네이밍 (“../”, “./”, 등)을 더 복잡하게 보여주도록 개선되었습니다. 내부적으로 소스맵의 절대 소스 URL을 정규화한 결과입니다.
+**소스** 패널의 소스 폴더 트리가 폴더 구조 및 네이밍 (“../”, “./”, 등)을 덜 복잡하게 보여주도록 개선되었습니다. 내부적으로 소스맵의 절대 소스 URL을 정규화한 결과입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="소스 패널에서 소스 폴더 트리 개선", width="800", height="444" %}
 
@@ -175,7 +175,7 @@ Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 
 
 
-## 여러가지 하이라이트 {: #misc }
+## 기타 하이라이트 {: #misc }
 
 이번 릴리스에서 주목할만한 수정 사항들입니다:
 
