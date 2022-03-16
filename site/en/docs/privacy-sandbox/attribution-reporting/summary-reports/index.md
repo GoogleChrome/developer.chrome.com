@@ -180,7 +180,7 @@ that supports needed security features.
 {% Aside %}
 The first [origin trial](/blog/origin-trials/) for the aggregation service will initially support Trusted Execution Environments (TEEs) provided by Amazon Web Services.
 
-During the first origin trial, developers will not be required to use TEEs for testing and support for other select cloud providers that meet the security requirements for the Aggregation Service will be added in future testing.
+During the first origin trial, developers will not be required to use TEEs for testing⏤and support for other select cloud providers that meet the security requirements for the aggregation service will be added in future testing.
 {% endAside %}
 
 The TEE's code is the only place in the aggregation service which has access
