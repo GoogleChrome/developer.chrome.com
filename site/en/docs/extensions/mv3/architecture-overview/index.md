@@ -60,11 +60,12 @@ Popup", width="187", height="153" %}
 
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
-### Referring to files {: #ref-files }
+### Referencing extension files {: #ref-files }
 
-#### Relative URL {: #relative-urls }
+#### Relative URLs {: #relative-urls }
 
-An extension's files can be referred to by using a relative URL, just like in an ordinary HTML page.
+Just as HTML pages on the web can include files on the same site with relative URLs, extensions
+pages can also reference assets in the extension using relative paths.
 
 ```html
 <img src="images/my_image.png">
@@ -78,9 +79,9 @@ Additionally, each file can also be accessed using an absolute URL.
 chrome-extension://EXTENSION_ID/PATH_TO_FILE
 ```
 
-In the absolute URL, the <var>EXTENSION_ID</var> is a unique identifier that the extension system
+In the absolute URL, the <code><var>EXTENSION_ID</var></code> is a unique identifier that the extension system
 generates. The extension ID's are displayed in the Extension management page
-**chrome://extensions**. The <var>PATH_TO_FILE</var> is the location of the file under the
+**chrome://extensions**. The <code><var>PATH_TO_FILE</var></code> is the location of the file under the
 extension's top folder; it matches the relative URL.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", alt="Extension ID in the
@@ -88,7 +89,7 @@ Extension management page", width="400", height="21" %}
 
 While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the
 manifest, then the extension ID can change. For example, when the extension is loaded from a
-different directory, packed or uploaded to the Chrome Web Store.
+different director or uploaded to the Chrome Web Store.
 
 You can use the [`chrome.runtime.getURL()`][api-get-url] method to avoid hardcoding the ID.
 
