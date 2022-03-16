@@ -2,18 +2,29 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 99 {: #chrome99 }
+<!-- ### Chrome 100 {: #chrome100 }
 
-* [Throttling WebSocket requests](/zh/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/zh/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/zh/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/zh/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/zh/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/zh/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/zh/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/zh/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/zh/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-99/#misc) -->
+* [View and edit @supports at rules in the Styles pane](/zh/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/zh/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/zh/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/zh/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/zh/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/zh/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-100/#misc) -->
+
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocket 请求限速](/zh/blog/new-in-devtools-99/#websocket)
+* [应用面板里面的 报告 API （Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
+* [支持 Recorder 面板一直处于等待状态，直到元素可见或可点击](/zh/blog/new-in-devtools-99/#recorder)
+* [更好的控制台样式，格式化和过滤](/zh/blog/new-in-devtools-99/#console)
+* [使用 sourcemap 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
+* [优化 Sources 面板里面源文件夹树的显示问题](/zh/blog/new-in-devtools-99/#source-tree)
+* [Sources 面板里面显示 Worker 源文件](/zh/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome 自动深色模式的更新](/zh/blog/new-in-devtools-99/#auto-dark-mode)
+* [颜色选择器和分割面板支持触摸](/zh/blog/new-in-devtools-99/#touch-friendly)
+* [其他的更新](/zh/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }

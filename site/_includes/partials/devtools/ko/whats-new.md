@@ -3,6 +3,16 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
+<!-- ### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/ko/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/ko/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/ko/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/ko/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/ko/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/ko/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-100/#misc) -->
+
 ### Chrome 99 {: #chrome99 }
 
 * [웹 소켓 요청 쓰로틀링](/ko/blog/new-in-devtools-99/#websocket)
@@ -15,7 +25,6 @@
 * [Chrome 자동 다크 테마 개선](/ko/blog/new-in-devtools-99/#auto-dark-mode)
 * [터치에 친화적인 컬러 피커와 창 분리](/ko/blog/new-in-devtools-99/#touch-friendly)
 * [기타 하이라이트](/ko/blog/new-in-devtools-99/#misc)
-
 
 ### Chrome 98 {: #chrome98 }
 * [미리보기 기능: 전체 페이지 접근성 트리](/ko/blog/new-in-devtools-98/#a11y-tree)
