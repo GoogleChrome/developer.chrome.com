@@ -1,5 +1,5 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: Options of a PushSubscription
 description: >
   You can now access the options used when subscribing a user to push.
@@ -24,6 +24,7 @@ You can copy and paste the following code snippet into
 the options look like. The code simply gets the current subscription and prints
 out `subscription.options`.
 
+=======
 
 ```js
 navigator.serviceWorker.ready.then(registration => {  
@@ -39,6 +40,7 @@ navigator.serviceWorker.ready.then(registration => {
     console.log(subscription.options);  
 });
 ```    
+
 
 With this small piece of information you can re-subscribe a user in the
 [pushsubscriptionchange](https://www.w3.org/TR/push-api/#the-pushsubscriptionchange-event)
