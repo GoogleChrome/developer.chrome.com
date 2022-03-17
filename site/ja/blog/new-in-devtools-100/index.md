@@ -79,7 +79,7 @@ email 要素には `data-testid` が定義されているので、 `id` や `cla
 ### レコーディングのセレクタをカスタマイズする {: #customize-selector }
 
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
-[一般的なセレクタ](/docs/devtools/recorder/#selector) を使用していない場合は、レコーディングのセレクタをカスタマイズすることができます。
+[一般的なセレクタ](/docs/devtools/recorder/#selector) を使用していない場合は、レコーディングのセレクタをカスタマイズできます。
 
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 例えば、この [デモページ](https://jec.fyi/demo/recorder) は、セレクタとして `data-automate` 属性を使用しています。 [新規にレコーディングを開始](/docs/devtools/recorder/#record) して、セレクタとして `data-automate` と入力します。メールアドレスを入力して、セレクタの値 ( `[data-automate=email-address]` ) を確認してみてください。
