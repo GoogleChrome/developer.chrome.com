@@ -12,13 +12,13 @@ authors:
 
 ## What is CHIPS?
 
-[Cookies Having Independent Partitioned State (CHIPS)](https://developer.chrome.com/docs/privacy-sandbox/chips/) is a Privacy Sandbox proposal that allows developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
+[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a Privacy Sandbox proposal that allows developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
 
 A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 
 ## Who is the origin trial for?
 
-This trial is available as a [third-party origin trial](https://developer.chrome.com/blog/third-party-origin-trials/), which enables providers of embedded content to try out a new feature across multiple sites.
+This trial is available as a [third-party origin trial](/blog/third-party-origin-trials/), which enables providers of embedded content to try out a new feature across multiple sites.
 
 If a site enrolls in the trial as a first-party, the cookie partitioning functionality will be available to any third-party content providers on that site as well. These third-party providers should also expect to receive extra HTTP headers, indicating their enrollment in the origin trial.
 
@@ -36,7 +36,7 @@ Chrome stable 100.
 
 ### Steps
 
-1.  To register for the origin trial and get a token for your domains, visit the [CHIPS origin trial page](https://developer.chrome.com/origintrials/#/view_trial/1239615797433729025).
+1.  To register for the origin trial and get a token for your domains, visit the [CHIPS origin trial page](/origintrials/#/view_trial/1239615797433729025).
 
 1.  Include the `Origin-Trial` header with a valid token in each page response:
 
@@ -46,7 +46,7 @@ Chrome stable 100.
 
 1.  Include the `Accept-CH` header with the following value in each page response:
 
-    ```
+    ```text
     Accept-CH: Sec-CH-Partitioned-Cookies
     ```
 
@@ -54,7 +54,7 @@ Chrome stable 100.
 
     -   In `Set-Cookie `header:
 
-        ```
+        ```text
         Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned;
         ```
 
@@ -77,7 +77,7 @@ Chrome stable 100.
 
 Sites participating in the origin trial should include the following headers in their response:
 
-```
+```text
 Origin-Trial: <ORIGIN TRIAL TOKEN>
 Accept-CH: Sec-CH-Partitioned-Cookies
 Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned;
@@ -89,7 +89,7 @@ Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned;
 
 If you have successfully opted into the origin trial, subsequent requests from the Chrome client will include the `Sec-CH-Partitioned-Cookies: ?1` request header until the current session is ended.
 
-```
+```text
 Sec-CH-Partitioned-Cookies: ?1
 Cookie: __Host-name=value
 ```
@@ -98,7 +98,7 @@ If your site receives the cookie without this client hint, opting into the origi
 
 If you store persistent partitioned cookies, you will receive the `Sec-CH-Partitioned-Cookies: ?0` request header for the first request to the cookies' origin.
 
-```
+```text
 Origin-Trial: <ORIGIN TRIAL TOKEN>
 Accept-CH: Sec-CH-Partitioned-Cookies
 Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned; Max-Age=86400;
@@ -106,7 +106,7 @@ Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned; Max-A
 
 If the user visits the site after the current session has ended, the first request to the site will include the following request headers:
 
-```
+```text
 Sec-CH-Partitioned-Cookies: ?0
 Cookie: __Host-name=value
 ```
@@ -149,4 +149,4 @@ The CHIPS origin trial is currently not supported in service workers.
 
 -   Raise issues and follow the discussion on [GitHub](https://github.com/WICG/CHIPS/issues).
 -   Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
--   Explore different avenues for giving [feedback on Privacy Sandbox proposals](https://developer.chrome.com/docs/privacy-sandbox/feedback/).
+-   Explore different avenues for giving [feedback on Privacy Sandbox proposals](/docs/privacy-sandbox/feedback/).
