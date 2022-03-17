@@ -68,7 +68,7 @@ The biggest difference between the HTTP header and the `allow` attribute is
 that the `allow` attribute only controls features within an iframe. The header
 can control features in the main response + any iframe'd content within
 the page. This is because [iframes inherit the policies of their parent page](#inheritancerules).
-{% end Aside %}
+{% endAside %}
 
 ### The `Feature-Policy` HTTP header {: #header }
 
