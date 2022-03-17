@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-03-08
 updated: 2022-03-08
-description: '@supports アットルールの表示と編集, レコーディングのセレクタのリネームやカスタマイズなど'
+description: '@supports アットルールの表示と編集、レコーディングのセレクタのリネームやカスタマイズなど'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iGv7SjPPIapkDmYbjVVH.jpg'
 alt: ''
 tags:
