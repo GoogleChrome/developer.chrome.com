@@ -21,7 +21,7 @@
       </div>
 
       <nav class="pagination gap-top-300 pad-left-400 pad-right-400">
-        <span></span>
+        <span><!-- pagination elements expects to always have 2 children, therefore this empty span --></span>
         <a class="pagination__button type--small gap-left-200 text-align-center" href="/tags/{{ collection_tag }}/">
           <span>{{ 'i18n.common.see_all_articles' | i18n(locale) }}</span>
           {{ icon('arrow-forward', {hidden: true}) }}
