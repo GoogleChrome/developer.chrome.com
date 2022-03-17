@@ -11,7 +11,7 @@ authors:
   - mihajlija
 ---
 
-## Iplementation status
+## Implementation status
 
 - [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 103
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
