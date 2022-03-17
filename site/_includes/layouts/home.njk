@@ -9,7 +9,14 @@
 {% block content %}
   <div class="home-container width-full center-margin pad-400">
 
-    {{ heroCard() }}
+    {{ heroCard(
+        'Welcome!',
+        "This is Chrome's official site to help you build Extensions, publish on the Chrome Web Store, optimize your website, and more.",
+        "Start building",
+         "/docs/",
+        "image/QMjXarRXcMarxQddwrEdPvHVM242/uyy9OtWHTcxH5sK5VuRA.png",
+        "Construction crane lifting a resource into a Chrome tab"
+        ) }}
     <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
       <div class="display-flex direction-column grid-gap-500">
         {% set blog = 'blog-' + locale %}
