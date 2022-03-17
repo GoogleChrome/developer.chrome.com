@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Cookies Having Independent Partitioned State (CHIPS) origin trial'
 subhead: >
-  Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
+  Starting in Chrome 100, CHIPS origin trial allows optting cookies in to "partitioned" storage, with a separate cookie jar per top-level site.
 description: >
   Starting in Chrome 100, CHIPS origin trial allows optting cookies in to "partitioned" storage, with a separate cookie jar per top-level site. Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-03-17
