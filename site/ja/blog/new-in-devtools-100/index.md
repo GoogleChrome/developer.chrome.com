@@ -67,7 +67,7 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 上記の属性は、テストの自動化で使用される一般的なセレクタです。
 
 <!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-例えば、この [デモページ](https://jec.fyi/demo/recorder) で [新規にレコーディングを開始](start a new recording](/docs/devtools/recorder/#record) します。 メールアドレスを入力して、セレクタの値を確認してみてください。
+例えば、この [デモページ](https://jec.fyi/demo/recorder) で [新規にレコーディングを開始](/docs/devtools/recorder/#record) します。 メールアドレスを入力して、セレクタの値を確認してみてください。
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 email 要素には `data-testid` が定義されているので、 `id` や `class` 属性の代わりに、自動的にセレクタとして使用されます。
