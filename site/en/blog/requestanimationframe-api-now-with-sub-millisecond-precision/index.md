@@ -32,7 +32,7 @@ If you're using the common `requestAnimFrame` shim [provided here](https://www.p
 Why? Well rAF helps you get the ultimate 60 fps that is ideal, and 60 fps translates to 16.7ms per frame. But measuring with integer milliseconds means we have a precision of 1/16 for everything we want to observe and target.
 
 <figure>
-{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/S46O6DsodBJWuSEEkQak.png", alt="16 ms vs 16 integer ms graph comparison", width="565", height="315" %}
+{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/S46O6DsodBJWuSEEkQak.png", alt="16 ms vs 16 integer ms graph comparison.", width="565", height="315" %}
 </figure>
 
 As you can see above, the blue bar represents the maximum amount of time you have to do all your work before you paint a new frame (at 60fps). You're probably doing more than 16 things, but with integer milliseconds you only have the ability to schedule and measure in those very chunky increments. That's not good enough.

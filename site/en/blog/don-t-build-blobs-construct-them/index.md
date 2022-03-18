@@ -10,9 +10,9 @@ updated: 2019-02-09
 
 ---
 
-Here's a heads up to all you [BlobBuilder](https://developer.mozilla.org/docs/Web/API/BlobBuilder) fans...it's going bye bye!
+Here's a heads up to all you [BlobBuilder](https://developer.mozilla.org/docs/Web/API/BlobBuilder) fans, it's going bye bye!
 
-`BlobBuilder` is a handy API for creating Blobs (or Files) in JavaScript. It's been around since Chrome 8, FF 6, and IE 10 but has never shipped in Safari,...and likely never will. Recent spec changes to the [File API](https://w3c.github.io/FileAPI/#dfn-Blob) include a new constructor for `Blob`, which essentially makes `BlobBuilder` irrelevant. In fact, Safari nightlies have already disabled it and Chrome will start to warn you in the console very soon.
+`BlobBuilder` is a handy API for creating Blobs (or Files) in JavaScript. It's been around since Chrome 8, FF 6, and IE 10 but has never shipped in Safari, and likely never will. Recent spec changes to the [File API](https://w3c.github.io/FileAPI/#dfn-Blob) include a new constructor for `Blob`, which essentially makes `BlobBuilder` irrelevant. In fact, Safari nightlies have already disabled it and Chrome will start to warn you in the console very soon.
 
 For comparison, below is the same code using the deprecated `BlobBuilder` and the new `Blob` constructor. The snippet creates a stylesheet and appends it to the DOM.
 
