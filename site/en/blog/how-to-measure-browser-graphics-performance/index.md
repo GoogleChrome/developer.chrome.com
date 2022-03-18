@@ -10,7 +10,7 @@ updated: 2019-02-21
 
 ---
 
-Benchmarking browser graphics in a nutshell: draw as much as you can while maintaining a smooth frame rate. Once your framerate drops, you know how much you can draw per frame. End of post. ...No? Ok, I'll explain some more.
+Benchmarking browser graphics in a nutshell: draw as much as you can while maintaining a smooth frame rate. Once your framerate drops, you know how much you can draw per frame. End of post. No? Ok, I'll explain some more.
 
 Example time! Here's a small code snippet with a benchmarking `tick` function. The `tick` function calls a `draw` function with an increasing draw load until the draw takes consistently longer than 33 ms.
 
@@ -63,9 +63,9 @@ A better way to benchmark is to use a realistic drawing load and multiply it unt
 {% YouTube id="hAzhayTnhEI" %}
 
 
-Different graphics applications have different needs, so you should write your benchmarks with that in mind. Measure the graphics features that you are using in your app. When you find a slow scenario, try to reduce it down to the smallest piece of code that reproduces it (and file a bug report at "new.crbug.com":http://new.crbug.com if it should be faster.)
+Different graphics applications have different needs, so you should write your benchmarks with that in mind. Measure the graphics features that you are using in your app. When you find a slow scenario, try to reduce it down to the smallest piece of code that reproduces it (and file a bug report at [new.crbug.com](https://new.crbug.com] if it should be faster.)
 
-To see how to write high-performance web graphics code, check out th Google I/O 2012 talk by Nat Duca and Tom Wiltzius from the Chrome GPU team.
+To see how to write high-performance web graphics code, check out the Google I/O 2012 talk by Nat Duca and Tom Wiltzius from the Chrome GPU team.
 
 
 
