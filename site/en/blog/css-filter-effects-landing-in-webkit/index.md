@@ -13,7 +13,7 @@ updated: 2019-01-21
 
 Filter effects have been around for awhile but were [designed](https://www.w3.org/TR/filter-effects/) to work in SVG. They're fantastically powerful at applying effects like color intensity, warping, or blurring to an image before it's composited and rendered into the document.
 
-Well,...way back in 2009 Mozilla said SVG wasn't enough! They ended up taking filters one step further and [allowed them on HTML content](https://developer.mozilla.org/docs/Web/SVG/Applying_SVG_effects_to_HTML_content) in Firefox 3.5. Check out Paul Irish's timeless [demo](https://www.paulirish.com/work/videooo.xhtml) of SVG filters on a playing `<video>`. Again, only works in Firefox but still the bees knees.
+Well, way back in 2009 Mozilla said SVG wasn't enough! They ended up taking filters one step further and [allowed them on HTML content](https://developer.mozilla.org/docs/Web/SVG/Applying_SVG_effects_to_HTML_content) in Firefox 3.5. Check out Paul Irish's timeless [demo](https://www.paulirish.com/work/videooo.xhtml) of SVG filters on a playing `<video>`. Again, only works in Firefox but still the bees knees.
 
 ## Today
 
@@ -28,7 +28,7 @@ img {
 }
 ```
 
-Enabling filters directly in CSS means that nearly any DOM element can take advantage of them! Images, `<video>`, `<canvas>`,... you name it. You can even [see what the web looks like without glasses](javascript:document.body.style.webkitFilter='grayscale(0.5) blur(3px)';return false;).
+Enabling filters directly in CSS means that nearly any DOM element can take advantage of them! Images, `<video>`, `<canvas>`, you name it. You can even [see what the web looks like without glasses](javascript:document.body.style.webkitFilter='grayscale(0.5) blur(3px)';return false;).
 
 ### Demo
 
