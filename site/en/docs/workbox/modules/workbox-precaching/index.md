@@ -25,7 +25,7 @@ the API and ensuring assets are downloaded efficiently.
 When a web app is loaded for the first time, `workbox-precaching` will look at all
 the assets you want to download, remove any duplicates and hook up the relevant
 service worker events to download and store the assets. URLs that
-[already include](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#parameter_2:~:text=index.-,dontCacheBustURLsMatching)
+[already include](/docs/workbox/reference/workbox-build/#property-BasePartial-dontCacheBustURLsMatching)
 versioning information (like a content hash) are used as cache keys without any
 further modification. URLs that don't include versioning information have an extra
 URL query parameter appended to their cache key representing a hash of their content

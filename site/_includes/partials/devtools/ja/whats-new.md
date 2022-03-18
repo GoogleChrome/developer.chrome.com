@@ -3,6 +3,17 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
+### Chrome 100 {: #chrome100 }
+
+* [Styles ペインでの @supports アットルールの表示と編集](/ja/blog/new-in-devtools-100/#supports)
+* [デフォルトで共通セレクタをサポート](/ja/blog/new-in-devtools-100/#selector)
+* [レコーディングのセレクタをカスタマイズする](/ja/blog/new-in-devtools-100/#customize-selector)
+* [レコーディングのリネーム](/ja/blog/new-in-devtools-100/#recorder-rename)
+* [ホバーでクラスや関数のプロパティをプレビューする](/ja/blog/new-in-devtools-100/#properties)
+* [Performance パネルでの Partially presented frames](/ja/blog/new-in-devtools-100/#perf)
+* [その他のハイライト](/ja/blog/new-in-devtools-100/#misc)
+
+
 ### Chrome 99 {: #chrome99 }
 
 * [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)

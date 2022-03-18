@@ -20,6 +20,8 @@ draft: true
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
 <!-- 2. Provide translations under each of the English commented original content -->
@@ -145,14 +147,14 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Chromium issue: [1277002](https://crbug.com/1277002) 
+Chromium issue: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 
-<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically. -->
+<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->
 
@@ -174,7 +176,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->

@@ -6,9 +6,16 @@ subhead: >
 description: >
   CHIPS is a Privacy Sandbox proposal that will allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set
 date: 2022-02-15
+updated: 2022-03-17
 authors:
   - mihajlija
 ---
+
+## Implementation status
+
+- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 103
+- [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
+- [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
 
 ## What is CHIPS
 
@@ -130,11 +137,11 @@ Example:
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-### Implementation status
+### Try it out
 
-Chrome has published an [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) for CHIPS and is in the process of writing code for the feature. Follow the [Chrome Platform Status entry](https://chromestatus.com/feature/5179189105786880) for progress.
+[CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 103. 
 
-CHIPS is already available behind flags in Chrome 99. Check out the testing instructions and demo on [chromium.org](https://www.chromium.org/updates/chips/). Updated testing and debugging details will be added once the origin trials starts.
+CHIPS is also available behind flags from Chrome 99. Check out the testing instructions and demo on [chromium.org](https://www.chromium.org/updates/chips/). 
 
 To try it out locally, turn on the `chrome://flags/#partitioned-cookies` flag in Chrome Canary or use the `--partitioned-cookies=true` command line flag.
 

@@ -222,7 +222,10 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
+
 **Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
+
 
 ### Change a declaration name or value {: #change-declaration }
 
@@ -230,7 +233,6 @@ Double-click a declaration's name or value to change it. See [Change declaration
 keyboard shortcuts][17] for shortcuts for quickly incrementing or decrementing a value by 0.1, 1,
 10, or 100 units.
 
-{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
 
 ### Change declaration values with keyboard shortcuts {: #values-shortcuts }
 

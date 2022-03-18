@@ -13,7 +13,6 @@
   sections:
     - url: /docs/privacy-sandbox/feedback
     - url: /docs/privacy-sandbox/glossary
-
     - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/faq
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
@@ -21,12 +20,15 @@
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/chips
       title: i18n.docs.privacy-sandbox.chips
+    - url: /docs/privacy-sandbox/fenced-frame
     - url: https://github.com/WICG/FedCM
       title: i18n.docs.privacy-sandbox.fedcm
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
     - url: /docs/privacy-sandbox/user-agent/snippets
+    - url: /docs/privacy-sandbox/gnatcatcher
+    - url: /docs/privacy-sandbox/privacy-budget
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics

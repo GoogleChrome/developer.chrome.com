@@ -3,6 +3,17 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
+<!-- ### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/pt/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/pt/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/pt/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/pt/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/pt/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/pt/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-100/#misc) -->
+
+
 ### Chrome 99 {: #chrome99 }
 
 * [Limitando requests de WebSocket](/pt/blog/new-in-devtools-99/#websocket)
