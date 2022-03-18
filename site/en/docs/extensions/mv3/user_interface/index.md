@@ -102,11 +102,11 @@ generic one to the toolbar with the first letter of the extension name.
 
 Include additional icons in the following sizes for uses outside of the toolbar.
 
-| Icon Size | Icon Use                                                                                       |
-|-----------|------------------------------------------------------------------------------------------------|
-| 16x16     | favicon on the extension's pages                                                               |
+| Icon Size | Icon Use                                                                                   |
+|-----------|--------------------------------------------------------------------------------------------|
+| 16x16     | favicon on the extension's pages and context menu icon                                    |
 | 32x32     | Windows often uses size. Chrome will choose this size instead of shrinking a 48-pixel icon |
-| 48x48     | displays on the extension management page                                                     |
+| 48x48     | displays on the extension management page                                                  |
 | 128x128   | displays on installation and in the Chrome Web Store                                            |
 
 
@@ -147,7 +147,7 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 
 A popup is an HTML file that is displayed in a special window when the user clicks the toolbar icon.
 A popup works very similarly to a web page; it can contain links to stylesheets and script tags, but
-does not allow inline JavaScript.
+does not allow inline JavaScript. The popup cannot be smaller than 25x25 and cannot be larger than 800x600.
 
 The [Drink Water Event][sample-drink] example popup displays available timer options. Users set an alarm by
 clicking one of the provided buttons.
@@ -198,8 +198,8 @@ chrome.storage.local.get('signed_in', (data) => {
 
 ### Tooltip {: #tooltip }
 
-Use a tooltip to give short descriptions or instructions to users when hovering over the browser
-icon.
+Use a tooltip to give short descriptions or instructions to users when hovering over the action
+icon. By default, the tootip displays the name of the extension.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png",
        alt="A screenshot of an example tooltip", height="157", width="519" %}
@@ -432,7 +432,14 @@ chrome.commands.onCommand.addListener(command => {
 
 An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page with a
 custom HTML file. Like a [popup][section-popup], it can include specialized logic and style, but does not allow
-inline JavaScript. A single extension is limited to overriding only one of the three possible pages.
+inline JavaScript. 
+
+{% Aside %}
+
+A single extension is limited to overriding **only one** of the three possible pages.
+
+{% endAside %}
+
 
 Register an override page in the manifest under the `"chrome_url_overrides"` field.
 
@@ -492,4 +499,3 @@ pages.
 [sample-tab-flipper]: /docs/extensions/mv3/samples#search:tab%20flipper
 [section-popup]: #popup
 [section-onclick]: #click
-
