@@ -28,19 +28,24 @@ draft: true
 <!-- end: translation instructions -->
 
 <!-- ## Chrome 100  {: #m100 } -->
+## 크롬 100
 
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
+드디어 크롬의 100번째 버전이 발표되었습니다! 크롬 DevTools 도 계속해서 웹 개발자들을 위해 더 신뢰감 높은 도구를 제공할 것입니다. **What's New** 탭을 눌러 마일스톤을 축하할 수 있도록 시간을 잠시 내 주세요.
 
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
-
+언제나처럼 [What’s New in DevTools video](https://goo.gle/devtools-youtube)를 클릭하면 새로운 기능을 소개하는 영상이 재생됩니다.
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/u8sn7ubuxjJoyPgbfNJs.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
 
 <!-- ## View and edit @supports at rules in the Styles pane {: #supports } -->
+## 스타일 창의 규칙에서 @supports 보기 및 편집하기 {: #supports }
 
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
+**스타일** 창에서 CSS `@supports` 규칙을 확인하고 편집할 수 있게 되었습니다. 이 기능은 개발자들이 실시간으로 at-rules 규칙을 더 쉽게 실험할 수 있도록 합니다.
 
 <!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+[데모 페이지](https://jec.fyi/demo/at-support)를 열고 `<div class=”box”>` 요소를 [검사](/docs/devtools/dom/#inspect)하고, **스타일** 창에서 `@supports` at-규칙을 확인해 보세요. 그리고 이를 편집하기 위해서는 규칙의 선언을 클릭하면 됩니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="View and edit @supports at rules", width="800", height="502" %}
 
@@ -50,10 +55,14 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 
 <!-- ## Recorder panel improvements {: #recorder } -->
+## Recorder 창의 개선점 {: #recorder }
 
 <!-- ### Support common selectors by default {: #selector } -->
+### 공통 셀렉터의 기본적인 지원 {: #selector }
 
 <!-- When determining an unique selector during recording, the [Recorder](/docs/devtools/recorder/) panel now automatically prefers elements with the following attributes: -->
+녹화하는 동안 고유한 셀렉터를 결정할 때, [Recorder] 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
+
 
 - data-testid
 - data-test
@@ -64,19 +73,27 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 - data-testing
 
 <!-- The attributes above are common selectors used in test automation.  -->
+위 속성들은 자동회 테스트에서 사용되는 공통 셀렉터들입니다.
 
 <!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
+예를 들어, [데모 페이지](https://jec.fyi/demo/recorder)에서 [start a new recording](/docs/devtools/recorder/#record)을 클릭합니다. 이메일 주소를 기입하고 셀렉터 값을 관찰해 보세요.
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
+이메일 요소가 `data-testid` 를 정의하도록 했으므로, 이것이 자동적으로 `id` 나 `class` 속성 대신에 셀렉터로써 사용됩니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4diI81kpscXznWLrB6a9.png", alt="Support common selectors by default", width="800", height="585" %}
 
 
 <!-- ### Customize the recording’s selector {: #customize-selector } -->
+### 녹화 셀렉터의 커스터마이징 {: #customize-selector }
 
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 
+만일 [공통 셀렉터](/docs/devtools/recorder/#selector)를 사용하고 있지 않다면, 당신은 녹화 셀렉터를 커스터마이징할 수 있습니다.
+
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+
+예를 들어, [데모 페이지](https://jec.fyi/demo/recorder)는 `data-automate` 속성을 셀렉터로서 사용하고 있습니다. [start a new recording](/docs/devtools/recorder/#record) 을 클릭하고 `data-automate` 를 셀렉터 요소로 넣습니다. 이메일 주소를 채우고, 셀렉터 값(`[data-automate=email-address]`)을 관찰해 보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording’s selector", width="800", height="524" %}
 
@@ -84,15 +101,19 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 
 <!-- ### Rename a recording {: #recorder-rename } -->
+### 녹화 이름 바꾸기 {: #recorder-rename }
 
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording’s title. -->
+여러분은 이제 [Recorder](/docs/devtools/recorder/) 창에서 녹화 타이틀 옆의 편집 버튼(연필 아이콘)을 이용해 녹화 이름을 바꿀 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Pn9Xsrq9lnStmtjpe0jt.png", alt="Rename a recording", width="800", height="502" %}
 
 
 <!-- ## Preview class/function properties on hover {: #properties } -->
+## 호버링을 통한 클래스/함수 미리보기 {: #properties }
 
 <!-- You can now hover over a class or function in the **Sources** panel during debugging to preview its properties. Previously, it only showed the function name and a link to its location in the source code. -->
+소스 코드에서 오직 함수 이름과 위치로의 링크만을 보여 주던 이전과는 달리, 이제 디버깅하는 동안 여러분은 **소스** 창에서 클래스 혹은 함수 위로 마우스를 올려 속성을 미리 볼 수 있게 되었습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BZzL6QMheyd31VGqhA8W.png", alt="Preview class/function properties on hover", width="800", height="502" %}
 
