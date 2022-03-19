@@ -61,7 +61,7 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 ### 공통 셀렉터의 기본적인 지원 {: #selector }
 
 <!-- When determining an unique selector during recording, the [Recorder](/docs/devtools/recorder/) panel now automatically prefers elements with the following attributes: -->
-기록하는 동안 고유한 셀렉터를 결정할 때, [Recorder] 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
+기록하는 동안 고유한 셀렉터를 결정할 때, [Recorder](/docs/devtools/recorder/) 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
 
 
 - data-testid
