@@ -61,7 +61,7 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 ### 공통 셀렉터의 기본적인 지원 {: #selector }
 
 <!-- When determining an unique selector during recording, the [Recorder](/docs/devtools/recorder/) panel now automatically prefers elements with the following attributes: -->
-녹화하는 동안 고유한 셀렉터를 결정할 때, [Recorder] 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
+기록하는 동안 고유한 셀렉터를 결정할 때, [Recorder] 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
 
 
 - data-testid
@@ -85,11 +85,11 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 
 <!-- ### Customize the recording’s selector {: #customize-selector } -->
-### 녹화 셀렉터의 커스터마이징 {: #customize-selector }
+### 기록 셀렉터의 커스터마이징 {: #customize-selector }
 
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 
-만일 [공통 셀렉터](/docs/devtools/recorder/#selector)를 사용하고 있지 않다면, 당신은 녹화 셀렉터를 커스터마이징할 수 있습니다.
+만일 [공통 셀렉터](/docs/devtools/recorder/#selector)를 사용하고 있지 않다면, 당신은 기록 셀렉터를 커스터마이징할 수 있습니다.
 
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 
@@ -101,10 +101,10 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 
 <!-- ### Rename a recording {: #recorder-rename } -->
-### 녹화 이름 바꾸기 {: #recorder-rename }
+### 기록의 이름 바꾸기 {: #recorder-rename }
 
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording’s title. -->
-여러분은 이제 [Recorder](/docs/devtools/recorder/) 창에서 녹화 타이틀 옆의 편집 버튼(연필 아이콘)을 이용해 녹화 이름을 바꿀 수 있습니다.
+여러분은 이제 [Recorder](/docs/devtools/recorder/) 창에서 기록 타이틀 옆의 편집 버튼(연필 아이콘)을 이용해 녹화된 기록의 이름을 바꿀 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Pn9Xsrq9lnStmtjpe0jt.png", alt="Rename a recording", width="800", height="502" %}
 
@@ -124,14 +124,19 @@ Chromium issue: [1049947](https://crbug.com/1049947)
 
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
+## 성능 창의 유휴 상태 프레임 {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
+이제 성능을 기록할 때 우리는 **프레임** 타임라인에서 새로운 프레임 카테고리인 "유휴 상태 프레임"을 볼 수 있습니다.
 
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
+이전에는, **프레임** 타임라인은 지연된 메인 스레드 작업을 가진 프레임들을 "저하된 프레임" 으로서 시각화했습니다. 그러나, 몇몇 프레임이 여전히 컴포지터 스레드에 의한 시각적 업데이트를 생성하는 경우가 존재했습니다.
 
 <!-- This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.  -->
+"저하된 프레임"들의 스크린샷들이 여전히 시각적 업데이트를 반영하고 있었기 때문에 따라서 이는 유저들에게 혼란을 야기했습니다.
 
 <!-- The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether. -->
+새로운 "유휴 상태 프레임"은 몇몇 내용들이 프레임에 적시에 표시되지는 않을지라도, 그 이슈가 시각적인 업데이트를 막을 만큼 심각하지 않다는 것을 더욱 직관적으로 표시하는 것을 목표로 하고 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QcqjnFhMz1Bxd5dkmduj.png", alt="Partially presented frames in the Performance panel", width="800", height="531" %}
 
@@ -141,14 +146,23 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
+## 기타 하이라이트 {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
+이번 릴리스에는 몇몇 주목할 만한 수정사항이 포함되어 있습니다.
 
 <!-- - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553)) -->
-<!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-<!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
+- [에뮬레이팅 디바이스](/docs/devtools/device-mode/#device) 에 대한 아이폰 유저 에이전트 String이 업데이트되었습니다.
 
+<!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
+- 이제 [스니펫](/docs/devtools/javascript/snippets/)을 직접적으로 자바스크립트 파일에 저장할 수 있습니다. 
+
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+- 소스맵을 이용해 디버깅 시 스코프 변수 이름이 **소스** 패널에 정확하게 표시되도록 개선되었습니다. 이전 버전에서는 소스맵이 제공되었음에도, **소스** 패널이 오직 간소화된 스코프 변수 이름을 표시하고 있었습니다.
+
+
+<!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
+- **소스** 패널은 페이지 로딩 시 현재 스크롤 위치를 정확하게 복구합니다. 이전 버전에서는 스크롤 위치가 정확하게 복구되지 않아 디버깅 시 불편함을 야기하는 문제가 있었습니다. ([1294422](https://crbug.com/1294422))
 
 {% include 'partials/devtools/ko/reach-out.md' %}
 {% include 'partials/devtools/ko/whats-new.md' %}
