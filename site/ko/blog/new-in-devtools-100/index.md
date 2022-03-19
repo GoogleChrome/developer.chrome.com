@@ -162,7 +162,7 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 
 
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
-- **소스** 패널은 페이지 로딩 시 현재 스크롤 위치를 정확하게 복구합니다. 이전 버전에서는 스크롤 위치가 정확하게 복구되지 않아 디버깅 시 불편함을 야기하는 문제가 있었습니다. ([1294422](https://crbug.com/1294422))
+- 페이지 로딩 시 **소스** 패널이 현재 스크롤 위치를 정확하게 되돌리도록 개선되었습니다. 이전 버전에서는 스크롤 위치가 정확하게 복원되지 않아 디버깅 시 불편함을 야기하는 문제가 있었습니다. ([1294422](https://crbug.com/1294422))
 
 {% include 'partials/devtools/ko/reach-out.md' %}
 {% include 'partials/devtools/ko/whats-new.md' %}
