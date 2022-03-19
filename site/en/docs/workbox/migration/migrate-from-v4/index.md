@@ -52,7 +52,7 @@ This is a common pattern to use when implementing the [App Shell architecture](/
 
 The second step, generating a response by reading from the cache, falls outside of what we see as the responsibilities of `workbox-routing`. Instead, we see it as functionality that should be part of `workbox-precaching`, via a new method, `createHandlerBoundToURL()`. This new method can work hand-in-hand with the existing `NavigationRoute` class in `workbox-routing` to accomplish the same logic.
 
-If you're using the `navigateFallback` option in one of the build tool's "generate SW" mode, then the switchover will happen automatically. If you previously configured either the `navigateFallbackBlacklist` or `navigateFallbackWhitelist` options, please change those to `navigateFallbackDenylist` or `navigateFallbackAllowlist`, respectively.
+If you're using the `navigateFallback` option in one of the build tool's "generate SW" mode, then the switchover will happen automatically. If you previously configured either the `navigateFallbackBlacklist` or `navigateFallbackWhitelist` options, change those to `navigateFallbackDenylist` or `navigateFallbackAllowlist`, respectively.
 
 If you're using "inject manifest" mode or just writing the service worker yourself, and your Workbox v4 service worker calls `registerNavigationRoute()` directly, then you'll have to make a change to your code to get the equivalent behavior.
 
@@ -131,17 +131,17 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ### Build Tools Require Node.js v8 or Higher
 
-Node.js versions prior to v8 are no longer supported for `workbox-webpack-plugin`, `workbox-build`, or `workbox-cli`. Please update your Node.js runtime to a [supported version](https://nodejs.org/en/about/releases/).
+Node.js versions prior to v8 are no longer supported for `workbox-webpack-plugin`, `workbox-build`, or `workbox-cli`. If you're running a Node.js version prior to 8, update your runtime to a [supported version](https://nodejs.org/en/about/releases/).
 
 ### workbox-webpack-plugin Requires webpack v4 or Higher
 
-If you're using `workbox-webpack-plugin`, please [update your webpack setup](https://webpack.js.org/migrate/4/) to use at least webpack v4.
+If you're using `workbox-webpack-plugin`, [update your webpack setup](https://webpack.js.org/migrate/4/) to use at least webpack v4.
 
 ### Build Tool Option Overhaul
 
 A number of `workbox-build`, `workbox-cli`, and `workbox-webpack-plugin` configuration parameters are no longer supported. For instance, `generateSW` will always create a local Workbox runtime bundle for you, so the `importWorkboxFrom` option no longer makes sense.
 
-Please consult the relevant tool's documentation for the lists of supported options.
+Consult the relevant tool's documentation for the lists of supported options.
 
 ### Removal of generateSWString from workbox-build
 
@@ -197,4 +197,4 @@ While it doesn't cover every breaking change, here's the [before](https://github
 
 ## Getting Help
 
-We anticipate most migrations to be straightforward. If you run into issues not covered in this guide, please let us know by [opening an issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.
+We anticipate most migrations to be straightforward. If you run into issues not covered in this guide, let us know by [opening an issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.

@@ -45,7 +45,7 @@ The changes made to precaching in Workbox v4 mean that older precaches, created 
 
 To avoid this, you can add call to `workbox.precaching.cleanupOutdatedCaches()` to a service workers directly, or set the new `cleanupOutdatedCaches: true` option if using a build tool in `GenerateSW` mode. Because the cache cleanup logic operates on cache naming conventions to find older precaches, and because developers do have the option of overriding those conventions, we erred on the side of safety and did not enable this by default.
 
-We encourage developers who run into any issues using this, such as false-positives around deletion, to [please let us know](https://github.com/GoogleChrome/workbox/issues/new).
+We encourage developers who run into any issues using this&mdash;such as false-positives around deletion&mdash;to [let us know](https://github.com/GoogleChrome/workbox/issues/new).
 
 #### Parameter Capitalization
 

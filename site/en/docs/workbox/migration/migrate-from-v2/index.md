@@ -333,4 +333,4 @@ The plugin has been substantially rewritten, and in many cases, can be used in a
 
 ## Getting help
 
-We anticipate most migrations to be straightforward. If you run into issues not covered in this guide, please let us know by [opening an issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.
+We anticipate most migrations to be straightforward. If you run into issues not covered in this guide, let us know by [opening an issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.

@@ -56,7 +56,7 @@ runtimeCaching: [{
 
 ### Deprecated options
 
-Express-style wildcard routes are [no longer supported](https://github.com/GoogleChrome/workbox/issues/1012). If you were using Express-style wildcard routes in either the `runtimeCaching` configuration or directly in `sw-toolbox`, please migrate to an equivalent regular expression route when using Workbox.
+Express-style wildcard routes are [no longer supported](https://github.com/GoogleChrome/workbox/issues/1012). If you were using Express-style wildcard routes in either the `runtimeCaching` configuration or directly in `sw-toolbox`, migrate to an equivalent regular expression route when using Workbox.
 
 ## sw-precache migrations
 

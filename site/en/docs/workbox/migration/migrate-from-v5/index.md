@@ -43,7 +43,7 @@ The `mode` option for the `getManifest` and `injectManifest` modes in `workbox-b
 
 ### Build Tools Require Node.js v10 or Higher
 
-Node.js versions prior to v10 are no longer supported for `workbox-webpack-plugin`, `workbox-build`, or `workbox-cli`. Please update your Node.js runtime to a [supported version](https://nodejs.org/en/about/releases/).
+Node.js versions prior to v10 are no longer supported for `workbox-webpack-plugin`, `workbox-build`, or `workbox-cli`. If you're running a version of Node.js earlier than v8, update your runtime to a [supported version](https://nodejs.org/en/about/releases/).
 
 ## New Improvements
 
