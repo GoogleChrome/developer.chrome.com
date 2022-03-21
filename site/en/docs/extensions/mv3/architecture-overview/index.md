@@ -216,7 +216,7 @@ If the [tabs.query][api-tabs-query] method were synchronous, it may look somethi
 
 {% Compare 'worse' %}
 ```js
-var tab = chrome.tabs.query({'active': true}); //WRONG!!!
+var tab = chrome.tabs.query(queryOptions); //WRONG!!!
 chrome.tabs.update(tab.id, {url:newUrl});
 someOtherFunction();
 ```
@@ -233,7 +233,7 @@ To correctly query a tab and update its URL the extension must use the callback 
 
 {% Compare 'better' %}
 ```js
-chrome.tabs.query({'active': true}, function(tabs) {
+chrome.tabs.query(queryOptions, function(tabs) {
   chrome.tabs.update(tabs[0].id, {url: newUrl});
 });
 someOtherFunction();
@@ -253,6 +253,22 @@ anything with the results of the update.
 With the introduction of Manifest V3, many extension API methods now return promises. Not all
 methods in extensions APIs support promises. You can verify whether a method supports promises by
 checking its API reference page. See [Using promises][docs-promises] to learn more.
+
+```js
+// Promise
+chrome.tabs.query(queryOptions).then((tabs) => {
+  chrome.tabs.update(tabs[0].id, {url: newUrl});
+  someOtherFunction();
+});
+
+// async-await
+async function queryTab() {
+  let tabs = await chrome.tabs.query(queryOptions});
+  chrome.tabs.update(tabs[0].id, {url: newUrl});
+  someOtherFunction();
+}
+
+```
 
 #### Synchronous methods
 
