@@ -63,7 +63,7 @@ A better way to benchmark is to use a realistic drawing load and multiply it unt
 {% YouTube id="hAzhayTnhEI" %}
 
 
-Different graphics applications have different needs, so you should write your benchmarks with that in mind. Measure the graphics features that you are using in your app. When you find a slow scenario, try to reduce it down to the smallest piece of code that reproduces it (and file a bug report at [new.crbug.com](https://new.crbug.com] if it should be faster.)
+Different graphics applications have different needs, so you should write your benchmarks with that in mind. Measure the graphics features that you are using in your app. When you find a slow scenario, try to reduce it down to the smallest piece of code that reproduces it (and file a bug report at [new.crbug.com](https://new.crbug.com) if it should be faster.)
 
 To see how to write high-performance web graphics code, check out the Google I/O 2012 talk by Nat Duca and Tom Wiltzius from the Chrome GPU team.
 
