@@ -118,26 +118,20 @@ goes idle.
 An [extension's user interface][docs-ui] should be purposeful and minimal. The UI should customize
 or enhance the browsing experience without distracting from it. 
 
-Most extensions run when the user clicks the toolbar icon [action][api-action] or display a
-[popup][docs-popup], but can also contain any of the following:
+The following is a list of most common UI examples:
 
-- A [context menu][docs-context-menu]
+- An [action click][docs-click] event.
+- A [popup][docs-popup].
+- A [context menu][docs-context-menu].
 - An [omnibox][docs-omnibox]
 - A [keyboard shortcut][docs-commands].
+- Desktop [notifications][api-notif].
+- [Text-to-speech][api-tts].
+- Inject a custom UI [into a page][docs-content-scripts].
+- [Override Chrome pages][docs-override] (History page, New Tab, or Bookmarks).
+- Open a dedicated [tab][api-create-tab] or [window][api-window-create].
 
-Extension UI pages, such as a [popup][docs-popup], can contain ordinary HTML pages with JavaScript
-logic. Extensions can also call [tabs.create][api-create-tab] or `window.open()` to display
-additional HTML files present in the extension.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png", alt="A browser window
-containing a page action displaying a popup", height="316", width="325" %}
-
-An extension using a popup can use the [declarative content API][api-dec-content] to set rules in
-the background script for when the popup is available to users. When the conditions are met, the
-background script communicates with the popup to make it's icon clickable to users.
-
-Extensions can also [override][docs-override] and replace the History, New Tab, or Bookmarks web page
-with a custom HTML file.
+See [Design the UI][docs-ui] for UI and design guidelines for Chrome Extensions.  
 
 ### Content scripts {: #contentScripts }
 
@@ -320,12 +314,14 @@ with the following resources:
 [api-create-tab]: /docs/extensions/reference/tabs#method-create
 [api-dec-content]: /docs/extensions/reference/declarativeContent
 [api-get-url]: /docs/extensions/reference/runtime#method-getURL
+[api-notif]: /docs/extensions/reference/notifications/
 [api-reference]: /docs/extensions/reference
 [api-storage]: /docs/extensions/reference/storage
 [api-tab]: /docs/extensions/reference/tabs#type-Tab
-[api-tabs-create]: /docs/extensions/reference/tabs#method-create
 [api-tabs-query]: /docs/extensions/reference/tabs#method-query
-[api-window]: /docs/extensions/reference/windows#type-Window
+[api-tts]: /docs/extensions/reference/tts/
+[api-window-create]: /docs/extensions/reference/windows/#method-create
+[docs-click]: /docs/extensions/mv3/user_interface/#click-event
 [docs-commands]: /docs/extensions/mv3/user_interface/#commands
 [docs-content-scripts]: /docs/extensions/mv3/content_scripts
 [docs-context-menu]: /docs/extensions/mv3/user_interface/#context_menu
