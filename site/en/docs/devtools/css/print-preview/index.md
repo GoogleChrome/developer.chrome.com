@@ -21,7 +21,7 @@ preview mode:
     **Figure 1**. The **Command Menu**
 
 2.  Type `rendering`, select **Show Rendering**, and then press <kbd>Enter</kbd>.
-3.  Under **Emulate CSS media** select **print**.
+3.  Under **Emulate CSS media type** select **print**.
 
     {% Img src="image/admin/F5e5z6N1lhwERU1TrX8c.png", alt="Print preview mode.", width="800", height="588" %}
 
