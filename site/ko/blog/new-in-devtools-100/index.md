@@ -1,18 +1,17 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "DevTools 의 새로운 기능 (Chrome 99)"
+title: "DevTools 의 새로운 기능 (Chrome 100)"
 authors:
   - jecelynyeen
 date: 2022-03-08
 updated: 2022-03-08
-description: 'View and edit @supports at rules, rename and customize recording’s selector, and more.'
+description: '@supports 규칙 보기 및 편집하기, 기록 셀렉터의 이름 바꾸기와 커스터마이제이션 외 기타 기능들'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5QajycMSqwtiKSZD5MXU.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-100
-draft: true
 ---
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
