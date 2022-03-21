@@ -108,8 +108,8 @@ and add your own.
 In the next version of WSK, due for release early next year, we are working hard
 to simplify how the styleguide fits together and switching to a [material
 design](https://github.com/google/web-starter-kit/tree/material-sprint) look and
-feel. [Matt ](https://youtu.be/z6dg_V22wV0?t=15m5s)[showed
-an](https://youtu.be/z6dg_V22wV0?t=15m5s)[ early
+feel. [Matt](https://youtu.be/z6dg_V22wV0?t=15m5s)[showed
+an](https://youtu.be/z6dg_V22wV0?t=15m5s)[early
 mock](https://youtu.be/z6dg_V22wV0?t=15m5s) of what this may look like at Chrome
 Dev Summit and you can see an example below.
 
