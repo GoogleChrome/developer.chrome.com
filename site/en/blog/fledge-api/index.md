@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-01-28
+updated: 2022-03-21
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -290,6 +290,7 @@ const interestGroup = {
   owner: 'https://dsp.example',
   name: 'custom-bikes',
   biddingLogicUrl: ...,
+  biddingWasmHelperUrl: ...,
   dailyUpdateUrl: ...,
   trustedBiddingSignalsUrl: ...,
   trustedBiddingSignalsKeys: ['key1', 'key2'],
@@ -335,6 +336,12 @@ days. Successive calls overwrite previously stored values.
         <td style="vertical-align: top;">Optional*</td>
         <td style="vertical-align: top;"><code>'https://dsp.example/bid/custom-bikes/bid.js'</code></td>
         <td style="vertical-align: top;">URL for bidding JavaScript run in worklet.</td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top;"><code>biddingWasmHelperUrl</code>**</td>
+        <td style="vertical-align: top;">Optional*</td>
+        <td style="vertical-align: top;"><code>'https://dsp.example/bid/custom-bikes/bid.wasm'</code></td>
+        <td style="vertical-align: top;">URL for WebAssembly code driven from <code>biddingLogicUrl</code>.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>dailyUpdateUrl</code>**</td>
@@ -383,13 +390,13 @@ days. Successive calls overwrite previously stored values.
    want to add a browser to an interest group for a campaign that isn't running yet, or for some
    other future use, or they may temporarily have run out of advertising budget.
 
-\*\* In the current implementation of FLEDGE, `biddingLogicUrl`, `dailyUpdateUrl` and
-`trustedBiddingSignalsUrl` must have the same origin as owner. That may not be a long-term
-constraint, and the `ads` and `adComponents` URLs have no such constraint.
+\*\* In the current implementation of FLEDGE, `biddingLogicUrl`, `biddingWasmHelperUrl`,
+`dailyUpdateUrl` and `trustedBiddingSignalsUrl` must have the same origin as owner. That may not be
+a long-term constraint, and the `ads` and `adComponents` URLs have no such constraint.
 
 {: #update-interest-group}
 
-#### Update the interest group
+#### Update interest group attributes
 
 `dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties,
 corresponding to the interest group object passed to `navigator.joinAdInterestGroup()`. This
@@ -406,19 +413,30 @@ the following attributes can be changed:
 Any field not specified in the JSON will not be overwritten—only fields specified in the JSON get
 updated—whereas calling `navigator.joinAdInterestGroup()` overwrites any existing interest group.
 
-{% Aside "caution" %}
+##### Manual updates
 
-The current implementation of FLEDGE in Chrome does not update interest groups automatically in the
-background.
-
-For the time being, updates to interest groups owned by the current frame's origin can
-be triggered manually via `navigator.updateAdInterestGroups()`. Rate limiting prevents updates from
-happening too frequently: repeated calls to `navigator.updateAdInterestGroups()` don't do anything
-until the rate limit period (currently one day) has passed. The rate limit gets reset if
+Updates to interest groups owned by the current frame's origin can be triggered manually via
+`navigator.updateAdInterestGroups()`. Rate limiting prevents updates from happening too frequently:
+repeated calls to `navigator.updateAdInterestGroups()` don't do anything until the rate limit
+period (currently one day) has passed. The rate limit gets reset if
 `navigator.joinAdInterestGroup()` is called again for the same interest group `owner` and `name`.
 
+##### Automatic updates
 
-{% endAside %}
+All interest groups loaded for an auction are updated automatically after an auction completes. For
+each owner with at least one interest group participating in an auction, it's as if
+`navigator.updateAdInterestGroups()` is called from an iframe whose origin matches that owner.
+
+Updates are best-effort, and can fail under the following conditions:
+* Network request timeout (currently 30 seconds).
+* Other network failure.
+* JSON parsing failure.
+
+Updates will also be cancelled if too much contiguous time has been spent updating, though this
+doesn't impose any rate limiting on cancelled updates. Updates are rate-limited to a maximum of one
+per day. Updates that fail due to network errors are retried after an hour, and updates that fail
+due to disconnection from the internet are retried immediately on reconnection.
+
 
 #### Specify ads for an interest group
 
@@ -443,6 +461,16 @@ group's owner is invited to bid. In other words, `generateBid()` is called once 
 ad. When the seller calls the `navigator.runAdAuction()` function, they provide code that includes a
 `scoreAd()` function. This function is run for each bidder in the auction: to score each of the bids 
 returned by `generateBid()`. 
+
+{% Aside %}
+
+The `biddingWasmHelperUrl` property is optional, but it allows the bidder to provide
+computationally-expensive subroutines in WebAssembly, rather than JavaScript, to be driven from the
+JavaScript function provided by `biddingLogicUrl`. If provided, it must point to a WebAssembly
+binary, delivered with a `application/wasm mimetype`. The corresponding `WebAssembly.Module` is
+made available by the browser to the `generateBid()` function.
+
+{% endAside %}
 
 Bidding code might look this very simple example: 
 
@@ -518,6 +546,10 @@ The `browserSignals` object has the following properties:
   joinCount: 3,
   bidCount: 17,
   prevWins: [[time1,ad1],[time2,ad2],...],
+  wasmHelper: ... /* WebAssembly.Module object based on interest group's biddingWasmHelperUrl. */
+  dataVersion: 1, /* Data-Version value from the trusted bidding signals server's response(s). */
+}
+
 }
 ```
 
@@ -618,14 +650,28 @@ const auctionConfig = {
   decisionLogicUrl: ...,
   trustedScoringSignalsUrl: ...,
   interestGroupBuyers: ['https://dsp.example', 'https://buyer2.example', ...],
-  additionalBids: [otherSourceAd1, otherSourceAd2, ...],
   auctionSignals: {...},
   sellerSignals: {...},
+  sellerTimeout: 100,
   perBuyerSignals: {
     'https://dsp.example': {...},
     'https://another-buyer.example': {...},
     ...
   },
+  perBuyerTimeouts: {
+    'https://dsp.example': 50,
+    'https://another-buyer.example': 200,
+    '*': 150,
+    ...
+  },
+  componentAuctions: [
+    {
+      'seller': 'https://some-other-ssp.example',
+      'decisionLogicUrl': ...,
+      ...
+    },
+    ...
+  ]
 };
 
 const auctionResultPromise = navigator.runAdAuction(auctionConfig);
@@ -676,12 +722,6 @@ metadata, one at a time, and then assigns it a numerical desirability score.
         <td style="vertical-align: top;">Origins of all interest group owners asked to bid in the auction.</td>
       </tr>
       <tr>
-        <td style="vertical-align: top;"><code>additionalBids</code>**</td>
-        <td style="vertical-align: top;">Optional</td>
-        <td style="vertical-align: top;"><code>[otherSourceAd1, otherSourceAd2, ...]</code></td>
-        <td style="vertical-align: top;"><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants">Alternative ads</a> for participation in the auction.</td>
-      </tr>
-      <tr>
         <td style="vertical-align: top;"><code>auctionSignals</code></td>
         <td style="vertical-align: top;">Optional</td>
         <td style="vertical-align: top;"><code>{...}</code></td>
@@ -694,12 +734,32 @@ metadata, one at a time, and then assigns it a numerical desirability score.
         <td style="vertical-align: top;">Information based on publisher settings, making a contextual ad request, etc.</td>
       </tr>
       <tr>
+        <td style="vertical-align: top;"><code>sellerTimeout</code></td>
+        <td style="vertical-align: top;">Optional</td>
+        <td style="vertical-align: top;"><code>100</code></td>
+        <td style="vertical-align: top;">Maximum runtime (ms) of seller's <code>scoreAd()</code> script.</td>
+      </tr>
+      <tr>
         <td style="vertical-align: top;"><code>perBuyerSignals</code></td>
         <td style="vertical-align: top;">Optional</td>
         <td style="vertical-align: top;"><code>{'https://dsp.example': {...},<br>
           &nbsp;&nbsp;'https://another-buyer.example': {...},<br>
           ...}</code></td>
         <td style="vertical-align: top;">Contextual signals about the page for each specific buyer, from their server.</td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top;"><code>perBuyerTimeouts</code></td>
+        <td style="vertical-align: top;">Optional</td>
+        <td style="vertical-align: top;"><code>50</code></td>
+        <td style="vertical-align: top;">Maximum runtime (ms) of particular buyer's <code>generateBid()</code> scripts.</td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top;"><code>componentAuctions</code></td>
+        <td style="vertical-align: top;">Optional</td>
+        <td style="vertical-align: top;"><code>[{'seller': 'https://www.some-other-ssp.com',<br>
+          &nbsp;&nbsp;'decisionLogicUrl': ..., ...},<br>
+          &nbsp;&nbsp;...]</code></td>
+        <td style="vertical-align: top;">Additional configurations for <a href="#ad-components">component auctions</a>.</td>
       </tr>
     </tbody>
   </table>
@@ -744,8 +804,9 @@ knows and which the seller's auction script might want to verify:
   topWindowHostname: 'publisher.example',
   interestGroupOwner: 'https://dsp.example',
   renderUrl: 'https://cdn.example/render',
-  adComponentRenderUrls: ['https://cdn.com/ad-component-1',...],
-  biddingDurationMsec: 12
+  adComponents: ['https://cdn.com/ad-component-1', ...],
+  biddingDurationMsec: 12,
+  dataVersion: 1 /* Data-Version value from the trusted scoring signals server response. */
 }
 ```
 
