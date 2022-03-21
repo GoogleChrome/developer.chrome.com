@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-03-12
+updated: 2022-03-25
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
@@ -73,7 +73,8 @@ pages can also reference assets in the extension using relative paths.
 
 #### Absolute URL {: #absolute-urls }
 
-To access a file in a content script, you can use the [`chrome.runtime.getURL()`][api-get-url] method. 
+To access a file in a content script, you can use the [`chrome.runtime.getURL()`][api-get-url]
+method. 
 
 ``` js
 let image = chrome.runtime.getURL("images/my_image.png")
@@ -85,13 +86,14 @@ It will return an absolute URL for the asset in your extension, that looks like 
 chrome-extension://EXTENSION_ID/RELATIVE_PATH
 ```
 
-The <code><var>EXTENSION_ID</var></code> is a unique identifier that the browser generates. You can view these IDs in the Extension management page
-**chrome://extensions**. The <code><var>RELATIVE_PATH</var></code> is the file path relative to the
-extension's top folder.
+The <code><var>EXTENSION_ID</var></code> is a unique identifier that the browser generates. You can
+view these IDs in the Extension management page **chrome://extensions**. The
+<code><var>RELATIVE_PATH</var></code> is the file path relative to the extension's top folder.
 
 {% Aside 'caution' %}
 
-All assets accessed by content scripts must be declared as a [`web_accessible_resource`][docs-web-acc-res] in the manifest.
+All assets accessed by content scripts must be declared as a
+[`web_accessible_resource`][docs-web-acc-res] in the manifest.
 
 {% endAside %}
 
@@ -115,8 +117,8 @@ goes idle.
 
 ### UI elements {: #pages }
 
-An extension's user interface should be purposeful and minimal. The UI should customize
-or enhance the browsing experience without distracting from it. 
+An extension's user interface should be purposeful and minimal. The UI should customize or enhance
+the browsing experience without distracting from it. 
 
 The following is a list of most common UI examples:
 
@@ -135,9 +137,9 @@ See [Design the UI][docs-ui] for UI and design guidelines for Chrome Extensions.
 
 ### Content scripts {: #contentScripts }
 
-[Content scripts][docs-content-scripts] allow extensions to inject script into a page in order to read and modify its contents. The
-content script contains JavaScript that executes in the contexts of a page that has been loaded into
-the browser.
+[Content scripts][docs-content-scripts] allow extensions to inject script into a page in order to
+read and modify its contents. The content script contains JavaScript that executes in the contexts
+of a page that has been loaded into the browser.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png", alt="A browser window with
 a page action and a content script", height="316", width="388" %}
