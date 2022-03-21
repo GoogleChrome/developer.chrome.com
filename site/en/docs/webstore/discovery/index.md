@@ -39,8 +39,8 @@ but there is no set checklist developers can follow to guarantee being featured.
 pay to be featured on the homepage. The best thing a developer can do to increase their chances of
 being featured on the homepage is to build a useful, high-quality extension that is a joy to use.
 
-<!-- { % Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/pgzFlq6rxiKFQ5NjYlBi.svg", alt="Diagram of group
-publishing process", width="800", height="395" % } -->
+{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iCX0CN92abOKmENf8Co5.png", width="800", height="571",
+  class="screenshot", alt="Screenshot of the Chrome Web Store homepage." %}
 
 # Editors' Picks
 
