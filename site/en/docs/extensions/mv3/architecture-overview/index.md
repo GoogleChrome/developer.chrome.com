@@ -73,29 +73,27 @@ pages can also reference assets in the extension using relative paths.
 
 #### Absolute URL {: #absolute-urls }
 
-Additionally, each file can also be accessed using an absolute URL.
-
-```text
-chrome-extension://EXTENSION_ID/PATH_TO_FILE
-```
-
-In the absolute URL, the <code><var>EXTENSION_ID</var></code> is a unique identifier that the extension system
-generates. The extension ID's are displayed in the Extension management page
-**chrome://extensions**. The <code><var>PATH_TO_FILE</var></code> is the location of the file under the
-extension's top folder; it matches the relative URL.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GemDxnaBjzDiY0uwNiVT.png", alt="Extension ID in the
-Extension management page", width="400", height="21" %}
-
-While working on an unpacked extension, if the [`key`][docs-key] has not been specified in the
-manifest, then the extension ID can change. For example, when the extension is loaded from a
-different director or uploaded to the Chrome Web Store.
-
-You can use the [`chrome.runtime.getURL()`][api-get-url] method to avoid hardcoding the ID.
+To access a file in a content script, you can use the [`chrome.runtime.getURL()`][api-get-url] method. 
 
 ``` js
 let image = chrome.runtime.getURL("images/my_image.png")
 ```
+
+It will return an absolute URL for the asset in your extension, that looks like this:
+
+```text
+chrome-extension://EXTENSION_ID/RELATIVE_PATH
+```
+
+The <code><var>EXTENSION_ID</var></code> is a unique identifier that the browser generates. You can view these IDs in the Extension management page
+**chrome://extensions**. The <code><var>RELATIVE_PATH</var></code> is the file path relative to the
+extension's top folder.
+
+{% Aside 'caution' %}
+
+All assets accessed by content scripts must be declared as a [`web_accessible_resource`][docs-web-acc-res] in the manifest.
+
+{% endAside %}
 
 ## Architecture {: #arch }
 
@@ -345,6 +343,7 @@ with the following resources:
 [docs-promises]: /docs/extensions/mv3/promises/
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
+[docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [mdn-web-apis]: https://developer.mozilla.org/en-US/docs/Web/API
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-bg]: #background_script
