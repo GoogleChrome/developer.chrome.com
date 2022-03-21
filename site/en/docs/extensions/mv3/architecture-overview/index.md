@@ -115,7 +115,7 @@ goes idle.
 
 ### UI elements {: #pages }
 
-An [extension's user interface][docs-ui] should be purposeful and minimal. The UI should customize
+An extension's user interface should be purposeful and minimal. The UI should customize
 or enhance the browsing experience without distracting from it. 
 
 The following is a list of most common UI examples:
@@ -135,9 +135,9 @@ See [Design the UI][docs-ui] for UI and design guidelines for Chrome Extensions.
 
 ### Content scripts {: #contentScripts }
 
-Extensions that read or write to web pages utilize a [content script][docs-content-scripts]. The
+[Content scripts][docs-content-scripts] allow extensions to inject script into a page in order to read and modify its contents. The
 content script contains JavaScript that executes in the contexts of a page that has been loaded into
-the browser. Content scripts read and modify the DOM of web pages the browser visits.
+the browser.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png", alt="A browser window with
 a page action and a content script", height="316", width="388" %}
