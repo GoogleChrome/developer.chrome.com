@@ -57,7 +57,7 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 ## Recorder 창의 개선점 {: #recorder }
 
 <!-- ### Support common selectors by default {: #selector } -->
-### 공통 셀렉터의 기본적인 지원 {: #selector }
+### 공통 셀렉터의 기본 지원 {: #selector }
 
 <!-- When determining an unique selector during recording, the [Recorder](/docs/devtools/recorder/) panel now automatically prefers elements with the following attributes: -->
 기록하는 동안 고유한 셀렉터를 결정할 때, [Recorder](/docs/devtools/recorder/) 패널은 자동적으로 다음 속성을 가지는 요소들을 선호하게 됩니다.
@@ -109,7 +109,7 @@ Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 
 
 <!-- ## Preview class/function properties on hover {: #properties } -->
-## 호버링을 통한 클래스/함수 미리보기 {: #properties }
+## 마우스를 올려서 클래스/함수 미리보기 {: #properties }
 
 <!-- You can now hover over a class or function in the **Sources** panel during debugging to preview its properties. Previously, it only showed the function name and a link to its location in the source code. -->
 소스 코드에서 오직 함수 이름과 위치로의 링크만을 보여 주던 이전과는 달리, 이제 디버깅하는 동안 여러분은 **소스** 창에서 클래스 혹은 함수 위로 마우스를 올려 속성을 미리 볼 수 있게 되었습니다.
@@ -123,7 +123,7 @@ Chromium issue: [1049947](https://crbug.com/1049947)
 
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
-## 성능 창의 유휴 상태 프레임 {: #perf }
+## 성능 창에서의 유휴 상태 프레임 {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
 이제 성능을 기록할 때 우리는 **프레임** 타임라인에서 새로운 프레임 카테고리인 "유휴 상태 프레임"을 볼 수 있습니다.
