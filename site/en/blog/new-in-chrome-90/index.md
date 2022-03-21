@@ -86,8 +86,7 @@ that works similarly to `hidden`.
 Using `overflow: clip` makes it possible for you to prevent any type of
 scrolling for the box, including programmatic scrolling. That means the box
 is not considered a scroll container; it does not start a new formatting
-context, which gives it better performance than `overflow: hidden`. And if
-you need it, you can apply clipping to a single axis via `overflow-x`
+context. If you need it, you can apply clipping to a single axis via `overflow-x`
 and `overflow-y`.
 
 Oh, and FYI - there's also `overflow-clip-margin`, which allows you to expand
