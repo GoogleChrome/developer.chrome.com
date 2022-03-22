@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-03-21
+updated: 2022-03-22
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -26,15 +26,15 @@ tags:
 
 This post is a technical reference to the current iteration of the experimental FLEDGE API.
 
-* [The FLEDGE API](/docs/privacy-sandbox/fledge) is a less technical overview of the proposal.
+* [The FLEDGE API](/docs/privacy-sandbox/fledge) is a less technical overview of the proposal,
+and also has a [glossary](/docs/privacy-sandbox/fledge#glossary).
 
 * [The FLEDGE demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE 
 deployment. 
 
-
-{% Aside %}
-🔎 There is a [glossary](/docs/privacy-sandbox/fledge#glossary) of FLEDGE terms at the end of [The FLEDGE API](/docs/privacy-sandbox/fledge#glossary)
-{% endAside %}
+* [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use new Chrome DevTools features for FLEDGE
+debugging.
 
 
 {: #what}
@@ -70,6 +70,14 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 
 A walkthrough of a basic FLEDGE deployment across a shopping, travel and publisher site is 
 available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/). 
+
+The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use new Chrome DevTools features for FLEDGE
+debugging.
+
+{% YouTube
+  id='znDD0gkdJyM'
+%}
 
 {% Aside %}
 
@@ -183,6 +191,32 @@ worklet script that has been paused.", width="800", height="537" %}
 Since some worklets may run in parallel, multiple threads may end up in the "paused" state there; 
 you can use the thread list to switch between threads, and resume or inspect them more closely as 
 appropriate. 
+
+### Observe FLEDGE events
+
+From the Application panel in Chrome DevTools, you can observe FLEDGE interest group and auction
+events.
+
+If you visit the FLEDGE demo [shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
+in a browser with FLEDGE enabled, information about the `join` event will be displayed.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="Screenshot of the
+   DevTools Application panel in Chrome Canary, showing information about a FLEDGE interest group
+   join event.", width="800", height="402" %}
+
+Now, if you visit the FLEDGE demo [publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
+   in a browser with FLEDGE enabled, information about the `bid` and `win` events is displayed.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="Screenshot of the
+   DevTools Application panel in Chrome Canary, showing information about FLEDGE auction bid and
+   win events.", width="800", height="482" %}
+
+{% Aside %}
+
+You'll need to refresh the page to see FLEDGE events if DevTools wasn't open when you navigated to
+the site.
+
+{% endAside %}
 
 
 {: #how}
@@ -372,7 +406,7 @@ days. Successive calls overwrite previously stored values.
         <td style="vertical-align: top;"><code>ads</code></td>
         <td style="vertical-align: top;">Optional*</td>
         <td style="vertical-align: top;"><code>[bikeAd1, bikeAd2, bikeAd3]</code></td>
-        <td style="vertical-align: top;">Ads that might be rendered for this interest group<./td>
+        <td style="vertical-align: top;">Ads that might be rendered for this interest group.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>adComponents</code></td>
