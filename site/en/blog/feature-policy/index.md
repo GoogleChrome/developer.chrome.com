@@ -9,9 +9,6 @@ hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/iT1xyQsCEKZh1VAxOM6l.png'
 alt: Checklist
 description: >
   Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
-tags:
-  - chrome64
-  - chrome74
 ---
 
 ## TL;DR {: #tldr .hide-from-toc}
