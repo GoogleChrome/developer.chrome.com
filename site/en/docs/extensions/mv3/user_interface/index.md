@@ -6,6 +6,7 @@ updated: 2022-03-25
 description: UI and design guidelines for Chrome Extensions.
 ---
 
+<!-- TODO: Extension sample links need to be updated, once the samples are approved -->
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
 UI should customize or enhance the browsing experience without distracting from it.
 
@@ -14,7 +15,7 @@ to implement different UI elements within an extension.
 
 ## The action icon {: #action }
 
-The [action][api-action] API controls the toolbar icon for your extension. It can open a
+The [action][api-action] API controls the extension's action icon (toolbar icon). It can open a
 [popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. The
 action icons are displayed in the browser toolbar to the right of the user's URL bar. 
 
@@ -23,15 +24,23 @@ choose to 'pin' your extension icon to the toolbar.
 
 {% Columns %}
 
-{% Column %} {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned
-extension", width="300", height="174" %}
+{% Column %} 
 
-**Unpinned** {% endColumn %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", 
+alt="Unpinned extension", width="400", height="374" %}
 
-{% Column %} {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned
-extension", width="300", height="182" %}
+**Unpinned** 
 
-**Pinned** {% endColumn %}
+{% endColumn %}
+
+{% Column %} 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", 
+alt="Pinned extension", width="400", height="382" %}
+
+**Pinned** 
+
+{% endColumn %}
 
 {% endColumns %}
 
@@ -53,20 +62,23 @@ The `"action"` field is registered in the manifest.
 ## Define rules for activating the extension {: #activate_pages }
 
 The [declarativeContent][api-declarativecontent] API allows you to enable and disable the action
-based on the current URL being shown. 
+based on the current URL being shown and the CSS selectors its content matches.
 
-When an extension is disabled, the icon will be greyscale. If the user clicks on the action icon,
-they will see the extension's context menu.
+When an extension is disabled, the icon is grayscaled. If the user clicks on the action icon while
+disabled, the extension's context menu will appear.
+
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
-alt="Clicked Disabled extension", width="252", height="180" %}  
+alt="Clicked Disabled extension", width="252", height="180", class="screenshot"%}  
 
 <figcaption>
     Disabled extension.
   </figcaption>
 </figure>
 
-See [Emulating pageActions with declarativeContent][docs-emulating-page-actions] to learn more.
+See [Emulating pageActions with declarativeContent][docs-emulating-page-actions] for an example on
+how to disable the action by default and use declarativeContent to enable the action on specific
+sites.
 
 ## Provide the extension icons
 
@@ -76,7 +88,7 @@ accepted (SVG is not supported).
 
 Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
 
-### Designate toolbar icons {: #icons }
+### Designate action icons {: #icons }
 
 Icons specific to the toolbar are registered in the `"default_icon"` field under
 [`action`][api-action]  in the manifest. Including multiple sizes is encouraged to scale for the
@@ -103,12 +115,12 @@ generic one to the toolbar with the first letter of the extension name.
 
 Include additional icons in the following sizes for uses outside of the toolbar.
 
-| Icon Size | Icon Use                                                                                   |
-|-----------|--------------------------------------------------------------------------------------------|
-| 16x16     | favicon on the extension's pages and context menu icon                                     |
-| 32x32     | In Windows, Chrome will choose this prefered size instead of shrinking a 48-pixel icon     |
-| 48x48     | displays on the extension management page                                                  |
-| 128x128   | displays on installation and in the Chrome Web Store                                       |
+| Icon Size | Icon Use                                               |
+|-----------|--------------------------------------------------------|
+| 16x16     | favicon on the extension's pages and context menu icon |
+| 32x32     | Windows computers often require this size.             |
+| 48x48     | displays on the extension management page              |
+| 128x128   | displays on installation and in the Chrome Web Store   |
 
 
 Register icons in the manifest under the `"icons"` field.
@@ -146,16 +158,16 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 
 ### Popup {: #popup }
 
-A popup is an HTML file that is displayed in a special window when the user clicks the toolbar icon.
+A popup is an HTML file that is displayed in a special window when the user clicks the action icon.
 A popup works very similarly to a web page; it can contain links to stylesheets and script tags, but
-does not allow inline JavaScript. The popup cannot be smaller than 25x25 and cannot be larger than
-800x600.
+does not allow inline JavaScript. The popup cannot be smaller than 25x25 px and cannot be larger than
+800x600 px.
 
 The [Drink Water Event][sample-drink] example popup displays available timer options. Users set an
 alarm by clicking one of the provided buttons.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="Popup sample
-       screenshot", height="561", width="413" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", 
+alt="Popup sample screenshot", height="361", width="213" %}
 
 ```html
 <html>
@@ -203,10 +215,10 @@ chrome.storage.local.get('signed_in', (data) => {
 Use a tooltip to give short descriptions or instructions to users when hovering over the action
 icon. By default, the tootip displays the name of the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="A screenshot of an
-       example tooltip", height="157", width="519" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", 
+alt="A screenshot of an example tooltip", height="157", width="419" %}
 
-Tooltips are registered in the `"default_title"` field under the `"action"` key. in the manifest.
+Tooltips are registered in the `"default_title"` field under the `"action"` key in the manifest.
 
 ```json
 {
@@ -254,8 +266,8 @@ sample extension uses "nt" as the keyword.
 When the user types "nt" into the omnibox, it activates the extension. To signal this to the user,
 it grayscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", alt="Active Omnibox
-       Extension", height="70", width="576" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", 
+alt="Active Omnibox Extension", height="70", width="476" %}
 
 The extension listens to the [`omnibox.onInputEntered`][omnibox-inputentered] event. After it's
 triggered, the extension opens a new tab containing a Google search for the user's entry.
@@ -292,19 +304,19 @@ manifest.
 
 The 16x16 icon is displayed next to the new menu entry.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="Context Menu Icon",
-       height="500", width="500" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", 
+alt="Context Menu Icon", height="300", width="300" %}
 
 Create a context menu by calling [`contextMenus.create`][contextmenu-create] in the background
 script. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
 
 ```js
 // background.js
-chrome.runtime.onInstalled.addListener(function() {
-  for (const key of Object.keys(kLocales)) {
+chrome.runtime.onInstalled.addListener(async () => {
+  for (let [tld, locale] of Object.entries(tldLocales)) {
     chrome.contextMenus.create({
-      id: key,
-      title: kLocales[key],
+      id: tld,
+      title: locale,
       type: 'normal',
       contexts: ['selection'],
     });
@@ -313,7 +325,7 @@ chrome.runtime.onInstalled.addListener(function() {
 ```
 
 ```js
-const kLocales = {
+const tldLocales = {
   'com.au': 'Australia',
   'com.br': 'Brazil',
   'ca': 'Canada',
@@ -333,13 +345,13 @@ The Global Google Search context menu example creates multiple options from the 
 `locales.js`. When an extension contains more than one context menu, Google Chrome automatically
 collapses them into a single parent menu.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", alt="Multiple Context
-       Menus will Collapse", height="606", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", 
+alt="Multiple Context Menus will Collapse", height="306", width="500" %}
 
 ### Commands {: #commands }
 
 Extensions can define specific [commands][api-commands] and bind them to a key combination. Register
-one or more commands in the manifest under the `"commands"` key.
+one or more shortcuts in the manifest under the `"commands"` key.
 
 ```json
 {
@@ -403,7 +415,6 @@ but does not allow inline JavaScript.
 A single extension is limited to overriding **only one** of the three possible pages.
 
 {% endAside %}
-
 
 Register an override page in the manifest under the `"chrome_url_overrides"` field.
 
@@ -491,6 +502,10 @@ defined.
   ...
 }
 ```
+## Learn more
+
+See the [Action API example][sample-action] for a complete demonstration of the action APIs
+capabilities.
 
 [action-hide]: /docs/extensions/reference/action#method-hide
 [action-onclicked]: /docs/extensions/reference/action/#event-onClicked
@@ -516,8 +531,8 @@ defined.
 [omnibox-inputentered]: /docs/extensions/reference/omnibox#event-onInputEntered
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
+[sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
 [sample-drink]: /docs/extensions/mv3/samples#search:drink
-[sample-mappy]: /docs/extensions/mv3/samples#search:mappy
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
 [sample-tab-flipper]: /docs/extensions/mv3/samples#search:tab%20flipper
 [section-onclick]: #click
