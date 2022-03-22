@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Record, replay and measure user flows"
+title: "Recorder: Record, replay and measure user flows"
 authors:
   - jecelynyeen
 date: 2021-11-02

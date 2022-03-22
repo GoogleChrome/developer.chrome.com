@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find Unused JavaScript And CSS With The Coverage Tab"
+title: "Coverage: Find unused JavaScript and CSS"
 authors:
   - kaycebasques
 date: 2019-07-09

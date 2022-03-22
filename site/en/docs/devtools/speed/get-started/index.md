@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Optimize website speed"
+title: "Lighthouse: Optimize website speed"
 authors:
   - kaycebasques
 date: 2018-06-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Understand security issues"
+title: "Security: Understand security issues"
 authors:
   - kaycebasques
 date: 2015-12-21

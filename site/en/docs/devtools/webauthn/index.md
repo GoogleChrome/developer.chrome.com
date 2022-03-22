@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Emulate authenticators and debug WebAuthn"
+title: "WebAuthn: Emulate authenticators"
 authors:
   - fawazm
   - jecelynyeen

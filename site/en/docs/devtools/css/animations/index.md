@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect animations"
+title: "Animations: Inspect and modify CSS animation effects"
 authors:
   - kaycebasques
 date: 2016-05-02
