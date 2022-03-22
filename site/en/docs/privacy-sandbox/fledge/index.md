@@ -339,6 +339,7 @@ see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/F
 
 {% DetailsSummary %}
 ## What is an interest group?
+
 {% endDetailsSummary %}
 
 A FLEDGE interest group represents a group of people with a common interest, corresponding to a
@@ -420,6 +421,7 @@ The table below provides examples of different types of FLEDGE interest group an
 
 {% DetailsSummary %}
 ## What is a buyer?
+
 {% endDetailsSummary %}
 
 In FLEDGE, a party that owns an [interest group](#interest-group) and bids in an ad [auction](#).
@@ -458,6 +460,7 @@ The buyer's code can also include a `reportWin()` function to report the auction
 
 {% DetailsSummary %}
 ## Who runs an ad auction?
+
 {% endDetailsSummary %}
 
 There are multiple parties that might run an auction to sell ad space.
@@ -486,6 +489,7 @@ auction by calling the JavaScript function `navigator.runAdAuction()`.
 
 {% DetailsSummary %}
 ## How does a FLEDGE ad auction work?
+
 {% endDetailsSummary %}
 
 <br>
@@ -580,6 +584,7 @@ A reporting mechanism for losing bidders is [under discussion](https://github.co
 
 {% DetailsSummary %}
 ## What is a trusted server?
+
 {% endDetailsSummary %}
 
 In the context of the Privacy Sandbox, a trusted server is a secure environment to enable access to
@@ -601,6 +606,7 @@ or [secure enclaves](https://support.apple.com/en-gb/guide/security/sec59b0b31ff
 
 {% DetailsSummary %}
 ## How is realtime data incorporated into auctions?
+
 {% endDetailsSummary %}
 
 The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to realtime
@@ -630,6 +636,7 @@ model.
 
 {% DetailsSummary %}
 ## Glossary
+
 {% endDetailsSummary %}
 
 {: #ad-auction}

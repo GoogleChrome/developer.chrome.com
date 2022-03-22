@@ -1023,6 +1023,7 @@ The diagram below outlines each stage of a FLEDGE [ad auction](#ad-auction):
 
 {% DetailsSummary %}
 ### What is the difference between FLEDGE and TURTLEDOVE?
+
 {% endDetailsSummary %}
 
 FLEDGE is the first experiment to be implemented in Chromium within the TURTLEDOVE family of proposals.
@@ -1067,6 +1068,7 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 
 {% DetailsSummary %}
 ### What browser configuration is available?
+
 {% endDetailsSummary %}
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
