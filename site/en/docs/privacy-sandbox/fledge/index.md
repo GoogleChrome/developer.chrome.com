@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-01-31
+updated: 2022-03-22
 authors:
   - samdutton
 ---
@@ -121,13 +121,22 @@ buyer's code can include a `reportWin()` function.
 
 ## How can I try FLEDGE?
 
-* [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
-deployment across a shopping, travel and publisher site.
-
 * [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out
 FLEDGE by running Chrome from the command line using
 [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to manually
 enable the API.
+
+* [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
+deployment across advertiser and publisher sites.
+
+* [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
+
+{% YouTube
+  id='znDD0gkdJyM'
+%}
+
+
 
 {% Aside %}
 
@@ -781,6 +790,8 @@ JavaScript function.
 
 -  [FLEDGE API developer guide](/blog/fledge-api): reference guide to API usage.
 -  [FLEDGE demo](https://fledge-demo.glitch.me): walkthrough of a basic FLEDGE deployment.
+-  [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 -  [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)

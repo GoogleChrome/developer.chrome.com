@@ -33,8 +33,7 @@ and also has a [glossary](/docs/privacy-sandbox/fledge#glossary).
 deployment. 
 
 * [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
-explains how the demo code works, and shows how to use new Chrome DevTools features for FLEDGE
-debugging.
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
 
 {: #what}
@@ -68,12 +67,11 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 
 ### FLEDGE demo
 
-A walkthrough of a basic FLEDGE deployment across a shopping, travel and publisher site is 
-available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/). 
+A walkthrough of a basic FLEDGE deployment across advertiser and publisher sites is  available at
+[fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
 
 The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
-explains how the demo code works, and shows how to use new Chrome DevTools features for FLEDGE
-debugging.
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
 {% YouTube
   id='znDD0gkdJyM'
@@ -466,10 +464,10 @@ Updates are best-effort, and can fail under the following conditions:
 * Other network failure.
 * JSON parsing failure.
 
-Updates will also be cancelled if too much contiguous time has been spent updating, though this
-doesn't impose any rate limiting on cancelled updates. Updates are rate-limited to a maximum of one
-per day. Updates that fail due to network errors are retried after an hour, and updates that fail
-due to disconnection from the internet are retried immediately on reconnection.
+Updates can also be canceled if too much contiguous time has been spent updating, though this
+doesn't impose any rate limiting on canceled (remaining) updates. Updates are rate-limited to a
+maximum of one per day. Updates that fail due to network errors are retried after an hour, and
+updates that fail due to disconnection from the internet are retried immediately on reconnection.
 
 
 #### Specify ads for an interest group
@@ -501,7 +499,7 @@ returned by `generateBid()`.
 The `biddingWasmHelperUrl` property is optional, but it allows the bidder to provide
 computationally-expensive subroutines in WebAssembly, rather than JavaScript, to be driven from the
 JavaScript function provided by `biddingLogicUrl`. If provided, it must point to a WebAssembly
-binary, delivered with a `application/wasm mimetype`. The corresponding `WebAssembly.Module` is
+binary, delivered with an `application/wasm mimetype`. The corresponding `WebAssembly.Module` is
 made available by the browser to the `generateBid()` function.
 
 {% endAside %}
@@ -1109,6 +1107,8 @@ removed when users clear their site data.
 
 -  [The FLEDGE API](/docs/privacy-sandbox/fledge): less technical overview of the proposal.
 -  [FLEDGE demo](https://fledge-demo.glitch.me): walkthrough of a basic FLEDGE deployment. 
+-  [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv):
+explains the demo code, and shows how to use Chrome DevTools for FLEDGE debugging.
 -  [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
