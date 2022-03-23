@@ -42,7 +42,7 @@ being featured on the homepage is to build a useful, high-quality extension that
 {% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iCX0CN92abOKmENf8Co5.png", width="800", height="571",
   class="screenshot", alt="Screenshot of the Chrome Web Store homepage." %}
 
-# Editors' Picks
+## Editors' Picks
 
 Chrome editors handpick items to be featured as Editors' Picks to inspire users and recognize
 exceptional extensions. Editors' Picks items are featured in the Editors' Picks collection on the
