@@ -141,12 +141,20 @@ Register icons in the manifest under the `"icons"` field.
 
 ## Additional UI features {: #additional_features }
 
-### Add a badge {: #badge }
+### Action badge {: #badge }
 
 Badges display a colored banner with up to four characters on top of the action icon. They can only
 be used by extensions that declare `"action"` in their manifest.
 
-Use badges to indicate the state of the extension. See the action API
+Use badges to indicate the state of the extension. The [Drink Water][sample-drink] extension sample displays a
+badge with "ON" to show the user they successfully set an alarm and displays nothing when the
+extension is idle.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
+       alt="Badge On", height="72", width="72" %}
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
+       alt="Badge Off", height="72", width="72" %}
 
 Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the
 banner color by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor].
@@ -506,6 +514,12 @@ defined.
 
 See the [Action API example][sample-action] for a complete demonstration of the action APIs
 capabilities.
+
+## Learn more
+
+- See the [Action API example][sample-action] for a complete demonstration of the action APIs
+capabilities.
+- Understand
 
 [action-hide]: /docs/extensions/reference/action#method-hide
 [action-onclicked]: /docs/extensions/reference/action/#event-onClicked
