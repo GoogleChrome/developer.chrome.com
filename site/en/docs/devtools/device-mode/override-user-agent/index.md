@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Override the user agent string"
+title: "Network conditions: Override the user agent string"
 authors:
   - kaycebasques
 date: 2018-12-14

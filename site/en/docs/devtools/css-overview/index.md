@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Identify potential CSS improvements"
+title: "CSS Overview: Identify potential CSS improvements"
 authors:
   - jecelynyeen
 date: 2021-10-21
