@@ -13,7 +13,7 @@ discovery experience means making it simple for our users to find the items they
 well as new and undiscovered items. From browsing the homepage to searching by title, we want users
 to find the best item to fit their needs. Learn more about discovery on the Chrome Web Store below.
 
-## Search
+## Search {: #search }
 
 Chrome Web Store search is a key tool for users to find relevant and popular items. When users
 search for an item, search returns a list of items that are ranked based on a number of criteria,
@@ -21,14 +21,14 @@ including metadata from your item's listing page. Making sure that your store li
 complete, accurate and optimized is important to ensuring your item is discoverable through search.
 Learn more about [crafting a great listing page][best-listing].
 
-## Categories
+## Categories {: #categories }
 
 Categories on the Chrome Web Store organize items based on their main function. Users can browse
 category pages, like Shopping, Productivity or Fun, to find relevant items to install. Developers
 select a category for their item in the Developer Dashboard, which determines which category it will
 appear under in the store. Categories are only available for extensions at this time.
 
-## Extensions Homepage
+## Extensions Homepage {: #homepage }
 
 The homepage is where we highlight great extensions and themes that we think users will love. Users
 come to this page to find new and interesting items recommended by our editors. Chrome editors
@@ -42,7 +42,7 @@ being featured on the homepage is to build a useful, high-quality extension that
 {% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iCX0CN92abOKmENf8Co5.png", width="800", height="571",
   class="screenshot", alt="Screenshot of the Chrome Web Store homepage." %}
 
-## Editors' Picks
+## Editors' Picks {: #editors-picks }
 
 Chrome editors handpick items to be featured as Editors' Picks to inspire users and recognize
 exceptional extensions. Editors' Picks items are featured in the Editors' Picks collection on the
