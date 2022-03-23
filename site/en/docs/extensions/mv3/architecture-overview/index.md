@@ -128,10 +128,10 @@ The following is a list of most common UI examples:
 - An [omnibox][docs-omnibox]
 - A [keyboard shortcut][docs-commands].
 - Desktop [notifications][api-notif].
+- [Extension pages][docs-ext-pages].
 - [Text-to-speech][api-tts].
 - Inject a custom UI [into a page][docs-content-scripts].
 - [Override Chrome pages][docs-override] (History page, New Tab, or Bookmarks).
-- Open a dedicated [tab][api-create-tab] or [window][api-window-create].
 
 See [Design the UI][docs-ui] for UI and design guidelines for Chrome Extensions.  
 
@@ -351,6 +351,7 @@ with the following resources:
 [docs-manifest]: /docs/extensions/mv3/manifest
 [docs-messages]: /docs/extensions/mv3/messaging
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
+[docs-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [docs-options]: /docs/extensions/mv3/options
 [docs-override]: /docs/extensions/mv3/override/
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
