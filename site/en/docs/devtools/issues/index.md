@@ -6,6 +6,8 @@ authors:
 date: 2020-05-14
 #updated: YYYY-MM-DD
 description: "Use the Issues Tab to find and fix problems with your website."
+tags:
+  - find-issues
 ---
 
 The **Issues** tab in Chrome DevTools reduces the notification fatigue and clutter of the Console.

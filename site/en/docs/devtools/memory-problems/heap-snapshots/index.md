@@ -7,6 +7,9 @@ date: 2015-06-08
 #updated: YYYY-MM-DD
 description:
   "Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks."
+tags:
+  - performance
+  - memory
 ---
 
 Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.

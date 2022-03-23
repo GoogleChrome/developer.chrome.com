@@ -6,6 +6,8 @@ authors:
 date: 2019-04-19
 #updated: YYYY-MM-DD
 description: "Learn how to log messages to the Console."
+tags:
+  - get-started
 ---
 
 This interactive tutorial shows you how to log and filter messages in the [Chrome DevTools][1]

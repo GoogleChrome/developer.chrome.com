@@ -6,6 +6,8 @@ authors:
 date: 2017-02-03
 #updated: YYYY-MM-DD
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
+tags:
+  - javascript
 ---
 
 Use breakpoints to pause your JavaScript code. This guide explains each type of breakpoint that's

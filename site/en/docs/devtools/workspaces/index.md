@@ -1,11 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit files with Workspaces"
+title: "Edit and save files with Workspaces"
 authors:
   - kaycebasques
 date: 2018-04-10
 #updated: YYYY-MM-DD
 description: "Learn how to save changes made within DevTools to disk."
+tags:
+  - prototype-fixes
+  - html
+  - css
+  - javascript
 ---
 
 **Goal**: This tutorial provides hands-on practice in setting up and using Workspaces so that you
