@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-03-22
+updated: 2022-03-23
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -445,20 +445,6 @@ the following attributes can be changed:
 Any field not specified in the JSON will not be overwritten—only fields specified in the JSON get
 updated—whereas calling `navigator.joinAdInterestGroup()` overwrites any existing interest group.
 
-##### Manual updates
-
-Updates to interest groups owned by the current frame's origin can be triggered manually via
-`navigator.updateAdInterestGroups()`. Rate limiting prevents updates from happening too frequently:
-repeated calls to `navigator.updateAdInterestGroups()` don't do anything until the rate limit
-period (currently one day) has passed. The rate limit gets reset if
-`navigator.joinAdInterestGroup()` is called again for the same interest group `owner` and `name`.
-
-##### Automatic updates
-
-All interest groups loaded for an auction are updated automatically after an auction completes. For
-each owner with at least one interest group participating in an auction, it's as if
-`navigator.updateAdInterestGroups()` is called from an iframe whose origin matches that owner.
-
 Updates are best-effort, and can fail under the following conditions:
 * Network request timeout (currently 30 seconds).
 * Other network failure.
@@ -469,6 +455,20 @@ doesn't impose any rate limiting on canceled (remaining) updates. Updates are ra
 maximum of one per day. Updates that fail due to network errors are retried after an hour, and
 updates that fail due to disconnection from the internet are retried immediately on reconnection.
 
+##### Manual updates
+
+Updates to interest groups owned by the current frame's origin can be triggered manually via
+`navigator.updateAdInterestGroups()`. Rate limiting prevents updates from happening too frequently:
+repeated calls to `navigator.updateAdInterestGroups()` don't do anything until the rate limit
+period (currently one day) has passed. The rate limit gets reset if
+`navigator.joinAdInterestGroup()` is called again for the same interest group `owner` and `name`.
+
+##### Automatic updates
+
+All interest groups loaded for an auction are updated automatically after an auction completes, 
+subject to the same rate limits as manual updates. For each owner with at least one interest group 
+participating in an auction, it's as if `navigator.updateAdInterestGroups()` is called from an 
+iframe whose origin matches that owner.
 
 #### Specify ads for an interest group
 
