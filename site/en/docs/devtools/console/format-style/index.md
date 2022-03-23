@@ -175,7 +175,7 @@ Here is a list of color codes supported in DevTools.
       <td>32</td>
       <td>42</td>
       <td><div style="background:#00AA00;color:white;text-align:center;">#00AA00</div></td>
-      <td><div style="background:#01c80;color:white;text-align:center;">#01c80</div></td>
+      <td><div style="background:#01c800;color:white;text-align:center;">#01c800</div></td>
     </tr>
     <tr>
       <td>33</td>
