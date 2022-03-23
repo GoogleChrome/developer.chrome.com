@@ -510,16 +510,11 @@ defined.
   ...
 }
 ```
-## Learn more
-
-See the [Action API example][sample-action] for a complete demonstration of the action APIs
-capabilities.
 
 ## Learn more
 
 - See the [Action API example][sample-action] for a complete demonstration of the action APIs
 capabilities.
-- Understand
 
 [action-hide]: /docs/extensions/reference/action#method-hide
 [action-onclicked]: /docs/extensions/reference/action/#event-onClicked
