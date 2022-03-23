@@ -195,17 +195,17 @@ appropriate.
 From the Application panel in Chrome DevTools, you can observe FLEDGE interest group and auction
 events.
 
-If you visit the FLEDGE demo [shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
-in a browser with FLEDGE enabled, information about the `join` event will be displayed.
+If you visit the [FLEDGE demo shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
+in a browser with FLEDGE enabled, DevTools will display information about the `join` event.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="Screenshot of the
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="The
    DevTools Application panel in Chrome Canary, showing information about a FLEDGE interest group
    join event.", width="800", height="402" %}
 
-Now, if you visit the FLEDGE demo [publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
-   in a browser with FLEDGE enabled, information about the `bid` and `win` events is displayed.
+Now, if you visit the [FLEDGE demo publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
+   in a browser with FLEDGE enabled, DevTools displays information about the `bid` and `win` events.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="Screenshot of the
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="The
    DevTools Application panel in Chrome Canary, showing information about FLEDGE auction bid and
    win events.", width="800", height="482" %}
 
