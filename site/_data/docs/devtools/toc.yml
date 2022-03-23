@@ -14,7 +14,6 @@
     - url: /docs/devtools/javascript/disable/
     - url: /docs/devtools/shortcuts/
 - url: /docs/devtools/device-mode/
-- description: 'Tools'
 - title: i18n.docs.devtools.elements
   sections:
     - url: /docs/devtools/dom/
