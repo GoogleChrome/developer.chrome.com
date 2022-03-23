@@ -7,6 +7,9 @@ date: 2018-12-14
 #updated: YYYY-MM-DD
 description:
   "Open the Rendering tab and select Emulate CSS media > print."
+tags:
+  - emulate
+  - test
 ---
 
 The [print media query][1] controls how your page looks when printed. To force your page into print

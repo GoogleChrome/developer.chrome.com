@@ -6,6 +6,8 @@ authors:
 date: 2019-03-25
 #updated: YYYY-MM-DD
 description: "How to view Web SQL data from the Application panel of Chrome DevTools."
+tags:
+  - storage
 ---
 
 {% Aside "warning" %}

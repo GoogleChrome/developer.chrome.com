@@ -6,6 +6,9 @@ authors:
 date: 2018-06-18
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to find ways to make your websites load faster."
+tags:
+  - get-started
+  - performance
 ---
 
 ## Goal of tutorial {: #goal_of_tutorial }

@@ -6,6 +6,8 @@ authors:
 date: 2017-05-08
 #updated: YYYY-MM-DD
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
+tags:
+  - performance
 ---
 
 This page is a comprehensive reference of Chrome DevTools features related to analyzing performance.

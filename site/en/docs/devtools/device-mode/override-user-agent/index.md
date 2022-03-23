@@ -8,6 +8,9 @@ date: 2018-12-14
 description:
   "Open the Network conditions tab, disable Select automatically, and choose from the list
   or enter a custom string."
+tags:
+  - emulate
+  - test
 ---
 
 To override the [user agent][1] string from Chrome DevTools:

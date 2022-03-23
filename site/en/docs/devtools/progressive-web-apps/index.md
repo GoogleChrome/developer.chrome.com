@@ -8,6 +8,8 @@ date: 2016-07-25
 description:
   "Use the Application panel to inspect, modify, and debug web app manifests, service workers, and
   service worker caches."
+tags:
+  - progressive-web-apps
 ---
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and

@@ -9,6 +9,9 @@ description:
   "Snippets are small scripts that you can author and execute within the Sources panel of Chrome
   DevTools. You can access and run them from any page. When you run a Snippet, it executes from the
   context of the currently open page."
+tags:
+  - javascript
+  - prototype-fixes
 ---
 
 If you find yourself running the same code in the [**Console**][1] repeatedly, consider saving the
