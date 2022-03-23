@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Predefined snippets
+title: Quick Edit Element Tags
 description: >
   You can double click on the opening tag name of a node in the Elements Panel to edit it.
 authors:
