@@ -29,16 +29,22 @@ const ROOT_DIR = 'dist';
 /**
  * @param {string} originalPath The full URL path, which might include an i18n
  * prefix.
+ * @param {string} [rootDir] The root for static files. Defaults to 'dist'.
+ * @param {string} [locale] The locale to used. Defaults to 'en'.
  * @returns {string|null} The full URL path with the i18n prefix removed, if
  * that would return valid HTML, or null if there is no valid HTML at that
  * location either.
  **/
-const getNonLocalizedURL = originalPath => {
+const getNonLocalizedURL = (
+  originalPath,
+  rootDir = ROOT_DIR,
+  locale = defaultLocale
+) => {
   // E.g. '/ja/docs/privacy-sandbox/chips/' is split to
   // ['ja', 'docs', 'privacy-sandbox', 'chips', '']
   const pathParts = originalPath.substring(1).split('/');
 
-  if (pathParts[0] === defaultLocale) {
+  if (pathParts[0] === locale) {
     // If the default prefix is already at the start of the path, return early.
     return null;
   }
@@ -46,14 +52,14 @@ const getNonLocalizedURL = originalPath => {
   // If pathParts does not already include a locale prefix, chances are that
   // assigning 'en' as the first item will result in a path that doesn't exist.
   // That's okay for our purposes.
-  pathParts[0] = defaultLocale;
+  pathParts[0] = locale;
 
   // Normalize by removing a possible trailing 'index.html'.
   if (pathParts[pathParts.length - 1] === 'index.html') {
-    pathParts.pop();
+    pathParts[pathParts.length - 1] = '';
   }
 
-  const possibleIndexPath = path.join(ROOT_DIR, ...pathParts, 'index.html');
+  const possibleIndexPath = path.join(rootDir, ...pathParts, 'index.html');
   try {
     // This throws if the path is invalid, and returns undefined if it's valid.
     // (existsSync() is deprecated.)
@@ -105,4 +111,4 @@ const notFoundHandler = (req, res, next) => {
   res.sendFile('404/index.html', {root}, err => err && next(err));
 };
 
-module.exports = {notFoundHandler};
+module.exports = {getNonLocalizedURL, notFoundHandler};
