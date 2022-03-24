@@ -1,5 +1,6 @@
 /**
- * @fileoverview Tests the logic  used by the server.
+ * @fileoverview Tests the logic used when translating invalid localized URLs to
+ * valid URLs without an i18n prefix.
  */
 
 const path = require('path');
