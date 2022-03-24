@@ -1,0 +1,131 @@
+/* stylelint-disable max-nesting-depth*/
+/* stylelint-disable selector-max-compound-selectors*/
+/* TODO - Need to work on removing 2/3 level nesting. */
+
+.hero-section {
+  .mobile-share-logo {
+    float: right;
+    padding-left: 0;
+    position: relative;
+    right: 24px;
+    top: 28px;
+    width: auto;
+
+    @include media-query('lg') {
+      display: none;
+    }
+  }
+
+  share-button {
+    width: auto;
+    @include media-query('md') {
+      margin-top: 2px;
+      width: 32px;
+    }
+  }
+
+  .hero-wrapper {
+    font-family: 'Google Sans';
+
+    @include media-query('lg') {
+      margin-top: 140px;
+    }
+
+    .hero-img {
+      height: 260px;
+      margin-top: 54px;
+      max-width: 260px;
+
+      @include media-query('md') {
+        height: 532px;
+        max-width: 531px;
+      }
+
+      @include media-query('lg') {
+        margin-top: 0;
+      }
+    }
+
+    .hero-info {
+      @include media-query('lg') {
+        margin-left: 61px;
+        text-align: left;
+      }
+
+      .hero-logo {
+        height: 153px;
+        margin: 0 auto;
+        width: 200px;
+
+        @include media-query('md') {
+          height: 229px;
+          max-width: 300px;
+          width: 100%;
+        }
+
+        @include media-query('lg') {
+          margin: 0;
+        }
+      }
+
+      .hero-heading {
+        font-size: 41px;
+        font-weight: 700;
+        line-height: 52px;
+      }
+
+      .hero-desc {
+        font-size: 14px;
+        margin: 22px auto 18px;
+        max-width: 324px;
+
+        @include media-query('md') {
+          font-size: 18px;
+          margin: 20px 0 0;
+          max-width: 420px;
+        }
+      }
+
+      .hashtag {
+        color: #{get-color('blue-500')};
+      }
+
+      .share-info {
+        display: none;
+
+        @include media-query('lg') {
+          display: inline-flex;
+        }
+
+        .share-logo {
+          height: 22px;
+          padding-right: 20px;
+          width: 20px;
+        }
+
+        .share-text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .scroll-section {
+    margin: 28px 0 48px;
+
+    @include media-query('lg') {
+      margin: 20px 0 86px;
+    }
+
+    .scroll-text {
+      font-size: 14px;
+      letter-spacing: 0.28em;
+    }
+
+    .scroll-icon {
+      height: 9px;
+      margin: 21px auto 0;
+      width: 16px;
+    }
+  }
+}

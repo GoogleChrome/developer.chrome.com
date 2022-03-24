@@ -1,0 +1,56 @@
+/* stylelint-disable max-nesting-depth*/
+/* TODO - Need to work on removing 2/3 level nesting. */
+
+.footer {
+  align-items: center;
+  font-family: 'Google Sans';
+  height: 899px;
+
+  .no-internet-logo {
+    height: 142px;
+    width: 180px;
+  }
+
+  &-description {
+    margin-top: 37px;
+    max-width: 689px;
+    padding: 0 20px;
+
+    @include media-query('md') {
+      margin: 54px auto 0;
+    }
+  }
+
+  &-subheading {
+    color: #{get-color('blue-500')};
+    font-size: 28px;
+
+    @include media-query('md') {
+      font-size: 41px;
+    }
+  }
+
+  &-info {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .share-logo {
+    height: 22px;
+    margin-top: 4px;
+    width: 20px;
+  }
+
+  .back-to-top {
+    margin-top: 148px;
+
+    .back-to-logo {
+      height: 16px;
+      width: 9px;
+    }
+  }
+
+  .share-text {
+    font-size: 18px;
+  }
+}

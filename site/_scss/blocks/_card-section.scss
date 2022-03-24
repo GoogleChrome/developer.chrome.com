@@ -1,0 +1,315 @@
+/* stylelint-disable max-nesting-depth*/
+/* stylelint-disable selector-max-compound-selectors*/
+/* TODO - Need to work on removing 2/3 level nesting. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card-section {
+  font-family: 'Google Sans';
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  .navigation-wrapper {
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 56px;
+    width: 100px;
+    z-index: 9000;
+
+    @include media-query('md') {
+      width: 197px;
+    }
+
+    .chrome-logo {
+      height: 46px;
+      margin: 0 auto;
+      width: 48px;
+    }
+
+    .year-navigation {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 60px;
+      width: 100px;
+      z-index: 9000;
+
+      @include media-query('md') {
+        margin-top: 17px;
+        top: 85px;
+        width: 197px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        position: absolute;
+        top: 40%;
+        z-index: 9000;
+
+        li {
+          height: 60px;
+
+          a {
+            color: #{get-color('grey-800')};
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            text-decoration: none;
+            width: 100% !important;
+
+            @include media-query('md') {
+              font-size: 16px;
+            }
+          }
+
+          a:hover,
+          a:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .fixed-navigation-wrapper {
+    margin: 0;
+    position: fixed;
+
+    @include media-query('lg') {
+      left: 96px;
+    }
+  }
+
+  .side-arrow-DT {
+    display: block;
+    left: 94%;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 9999;
+
+    @include media-query('lg') {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1336px) {
+      display: none;
+    }
+
+    .side-arrow {
+      height: 80px;
+      width: 40px;
+    }
+  }
+
+  .fixed-year-navigation {
+    left: 0;
+    position: fixed;
+    top: 120px;
+
+    @include media-query('lg') {
+      left: 96px;
+    }
+  }
+
+  .inner-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 92px 16px 92px 125px;
+    position: relative;
+
+    .first-column {
+      .card-with-img {
+        height: auto;
+
+        @include media-query('md') {
+          height: 350px;
+        }
+      }
+
+      @media only screen and (max-width: 1230px) {
+        margin-right: 0;
+      }
+    }
+
+    .second-column {
+      .card-with-img {
+        height: auto;
+
+        @include media-query('md') {
+          height: 350px;
+        }
+      }
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+      height: auto;
+      max-width: 470px;
+      padding: 15px;
+
+      @include media-query('md') {
+        height: 167px;
+        width: 470px;
+      }
+
+      &-info {
+        padding-left: 0;
+
+        @include media-query('md') {
+          padding-left: 12px;
+        }
+
+        .arrow-wrapper {
+          justify-content: space-between;
+          padding: 0;
+
+          @include media-query('md') {
+            padding-top: 10px;
+          }
+
+          .card-heading {
+            color: #{get-color('black')};
+            font-size: 18px;
+            line-height: 28px;
+            text-decoration: underline;
+
+            @include media-query('md') {
+              font-size: 24px;
+              line-height: 38px;
+            }
+          }
+
+          .right-arrow {
+            display: none;
+            padding-right: 61px;
+
+            @include media-query('md') {
+              display: block;
+            }
+          }
+        }
+
+        .card-description {
+          font-size: 14px;
+          line-height: 18px;
+          margin-top: 10px;
+
+          @include media-query('md') {
+            line-height: 24px;
+          }
+
+          a {
+            color: #{get-color('black')};
+            text-decoration: none;
+          }
+        }
+
+        .logos {
+          justify-content: space-between;
+          padding-bottom: 15px;
+
+          @include media-query('md') {
+            margin-top: 18px;
+          }
+
+          .tags {
+            height: 15px;
+          }
+
+          .likes {
+            padding-right: 30px;
+
+            .heart-logo {
+              height: 19px;
+              margin: 5px 5px 0 0;
+              width: 20px;
+            }
+
+            .like {
+              .fill-like {
+                fill: #{get-color('heart-red')};
+                stroke: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .year-2008 {
+    background: #{get-color('year-2008')};
+  }
+
+  .year-2009 {
+    background: #{get-color('year-2009')};
+  }
+
+  .year-2010 {
+    background: #{get-color('year-2010')};
+  }
+
+  .year-2011 {
+    background: #{get-color('year-2011')};
+  }
+
+  .year-2012 {
+    background: #{get-color('year-2012')};
+  }
+
+  .year-2013 {
+    background: #{get-color('year-2013')};
+  }
+
+  .year-2014 {
+    background: #{get-color('year-2014')};
+  }
+
+  .year-2015 {
+    background: #{get-color('year-2015')};
+  }
+
+  .year-2016 {
+    background: #{get-color('year-2016')};
+  }
+
+  .year-2017 {
+    background: #{get-color('year-2017')};
+  }
+
+  .year-2018 {
+    background: #{get-color('year-2018')};
+  }
+
+  .year-2019 {
+    background: #{get-color('year-2019')};
+  }
+
+  .year-2020 {
+    background: #{get-color('year-2020')};
+  }
+
+  .year-2021 {
+    background: #{get-color('year-2021')};
+  }
+
+  .year-2022 {
+    background: #{get-color('year-2022')};
+  }
+
+  .hide-navigation {
+    display: none;
+  }
+}

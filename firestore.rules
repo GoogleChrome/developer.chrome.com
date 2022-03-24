@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isSignedInUser() {
+    	let ownerId= getAfter(/databases/$(database)/documents/users/$(request.auth.uid)).data.id;
+			return  ownerId == request.auth.uid;
+    }
+
+    function validateProject(pid) {
+    	let dbPath = /databases/$(database)/documents/projects/$(pid);
+      let keys = getAfter(dbPath).data.keys();
+      return keys.hasAll(["name", "owner", "owner_name", "created_at"]) && keys.hasOnly(["googleId", "name", "owner", "owner_name", "created_at"]);
+    }
+    
+    // Make sure the uid of the requesting user matches name of the user
+    // document. The wildcard expression {userId} makes the userId variable
+    // available in rules.
+    match /users/{userId} {
+      allow read, create, update: if isSignedIn() && isSignedInUser();
+      match /projects/{pid} {
+        allow create, read, update: if isSignedIn() && isSignedInUser();
+      }
+    }
+
+    match /admins/{adminId} {
+        allow read, write: if true;
+    }
+
+    match /projects/{projId} {
+      allow create, write, update: if isSignedIn() && validateProject(projId);
+      allow delete: if isSignedIn();
+      allow read: if isSignedIn();
+
+      match /inviteelist/{inviteelist_id} {
+        allow read : if isSignedIn();
+        allow create, update, delete: if isSignedIn() && validateProject(projId);
+      }
+
+      match /roles/{roleId} {
+        allow read: if isSignedIn();
+        allow create, update: if isSignedIn();
+      }
+      
+      match /dashboardRoles/{roleId} {
+        allow read: if isSignedIn();
+        allow create, update, delete: if isSignedIn();
+      }
+
+      match /projectdata/{project_steps} {
+        allow read, create, update : if isSignedIn();
+      }
+
+      match /auditlogs/{auditlogs} {
+        allow read, create, update: if isSignedIn();
+      }
+    }
+  }
+}

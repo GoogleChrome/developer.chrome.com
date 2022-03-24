@@ -19,6 +19,7 @@ import './store.js';
 
 // Web Components
 // These are components that appear on _every_ page.
+import './web-components/card-section';
 import './web-components/search-box';
 import './web-components/side-nav';
 import './web-components/top-nav';
@@ -26,6 +27,8 @@ import './web-components/share-button';
 import './web-components/web-tabs';
 import './web-components/language-select';
 import './third-party/announcement-banner/announcement-banner';
+import './slider';
+import './firebase';
 
 // This is only used on content pages.
 import './web-components/toc-active';
