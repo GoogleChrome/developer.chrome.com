@@ -33,7 +33,7 @@ tags:
 ## Chrome 100  {: #m100 }
 
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
-Сотая версия Chrome! Chrome DevTools будет продолжать предоставлять разработчикам надежные инструменты для создания веба. Уделите пару минут, чтобы пролистать вкладку **Что нового** и отпразновать важные вехи.
+А вот и сотая версия Chrome! Chrome DevTools будет продолжать предоставлять девелоперам надежные инструменты для веб-разработки. Найдите пару минут, чтобы просмотреть вкладку **Что нового** и отметить успехи.
 
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
 Как всегда вы можете узнать о последних изменениях из [видео What’s New in DevTools](https://goo.gle/devtools-youtube). Кликните на картинку.
@@ -42,7 +42,7 @@ tags:
 
 
 <!-- ## View and edit @supports at rules in the Styles pane {: #supports } -->
-## Просмотр и изменение директивы @supports в панели Стиле (Styles) {: #supports }
+## Просмотр и изменение директивы @supports в панели Стилей (Styles) {: #supports }
 
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 Теперь вы можете просматривать и изменять CSS-директиву `@supports` в панели **Стили** (Styles). Это облегчит экспериментирование с директивами в режиме реального времени.
@@ -61,10 +61,10 @@ tags:
 ## Улучшения вкладки Recorder {: #recorder }
 
 <!-- ### Support common selectors by default {: #selector } -->
-### Поддержка распространённых дефолтных селекторов {: #selector }
+### Дефолтная поддержка распространённых селекторов {: #selector }
 
 <!-- When determining an unique selector during recording, the [Recorder](/docs/devtools/recorder/) panel now automatically prefers elements with the following attributes: -->
-При определении уникальных селекторов во время записи на вкладке [Recorder](/docs/devtools/recorder/) теперь предпочтение отдаётся элементам со следующими атрибутами:
+При определении уникальных селекторов во время записи на вкладке [Recorder](/docs/devtools/recorder/) предпочтение теперь отдаётся элементам со следующими атрибутами:
 
 - data-testid
 - data-test
@@ -75,13 +75,13 @@ tags:
 - data-testing
 
 <!-- The attributes above are common selectors used in test automation.  -->
-Приведённые выше атрибуты часто используются в автоматическом тестировании.
+Атрибуты, приведённые выше, часто используются в автоматическом тестировании.
 
 <!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
 Например, [начните новую запись](/docs/devtools/recorder/#record) на этой [демо-странице](https://jec.fyi/demo/recorder). Введите адрес электронной почты и обратите внимание на значение селектора.
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
-Поскольку у поля ввода емейла есть атрибут `data-testid`, именно он автоматически используется в качестве селектора, а не атрибуты `id` или `class`.
+Поскольку у поля ввода имейла есть атрибут `data-testid`, он автоматически используется в качестве селектора вместо атрибутов `id` или `class`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4diI81kpscXznWLrB6a9.png", alt="Поддержка распространённых дефолтных селекторов", width="800", height="585" %}
 
@@ -110,10 +110,10 @@ tags:
 
 
 <!-- ## Preview class/function properties on hover {: #properties } -->
-## Предпросмотр свойств класса/функции по наведению курсора {: #properties }
+## Предпросмотр свойств класса/функции при наведении курсора {: #properties }
 
 <!-- You can now hover over a class or function in the **Sources** panel during debugging to preview its properties. Previously, it only showed the function name and a link to its location in the source code. -->
-Теперь во время отладки вы можете во вкладке **Источники** (Sources) навести курсор мыши на класс или функцию чтобы посмотреть их свойства. Раньше показывалось только имя функции и ссылка на её расположение в исходном коде.
+Теперь во время отладки вы можете навести курсор мыши во вкладке **Источники** (Sources) на класс или функцию, чтобы посмотреть их свойства. Раньше показывалось только имя функции и ссылка на её расположение в исходном коде.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BZzL6QMheyd31VGqhA8W.png", alt="Предпросмотр свойств класса/функции по наведению курсора", width="800", height="502" %}
 
@@ -127,18 +127,18 @@ tags:
 ## Частично представленные кадры во вкладке Производительность (Performance) {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
-На запись производительности на временной шкале **Кадры** (Frames) теперь отображается новая категория кадров – «Частично представленные кадры». 
+На записи производительности на временной шкале **Фреймы** (Frames) теперь отображается новая категория кадров – «Частичный показ фрейма». 
 
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
-Раньше на временной шкале **Кадры** (Frames) любые кадры с отложенной работой по основному потоку отображались как «выброшенные кадры». Однако есть случаи, когда некоторые кадры могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компановки.
+Раньше на временной шкале **Кадры** (Frames) любые кадры с отложенной работой по основному потоку отображались как «отмененные фреймы». Однако есть случаи, когда некоторые кадры могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компоновки.
 
 <!-- This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.  -->
-Это может смутить пользователя, поскольку на скриншотах таких «выброшенных кадров» по прежнему видны визуальные изменения.
+Это может смутить пользователя, поскольку скриншоты таких «отмененных фреймов» по прежнему отображают визуальные изменения.
 
 <!-- The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether. -->
-Новый тип «Частично представленные кадры» нужен чтобы показать более интуитивно, что хотя некоторое содержимое не представлено в кадре прямо сейчас, но проблема не настолько серьезная, чтобы полностью блокировать визуальные обновления.
+Новый тип «Частичный показ фрейма» нужен чтобы показать более интуитивно, что хотя некоторое содержимое не представлено в кадре своевременно, проблема не настолько серьезна, чтобы полностью блокировать визуальные обновления.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QcqjnFhMz1Bxd5dkmduj.png", alt="Частично представленные кадры во вкладке Производительность (Performance)", width="800", height="531" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QcqjnFhMz1Bxd5dkmduj.png", alt="Частичный показ фрейма во вкладке Производительность (Performance)", width="800", height="531" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a06c2e7c1abeb92be9cfc6b3bf9d6edf6d742e01 #}
 
@@ -152,13 +152,13 @@ tags:
 Вот несколько заслуживающих внимания исправлений в этом выпуске:
 
 <!-- - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553)) -->
-- Обновили строку юзер агента для iPhone в [режиме эмуляции](/docs/devtools/device-mode/#device). Все iPhone с версией младше 5 теперь имеют юзер агент iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
+- Обновили строки юзер агента для [режима эмуляции](/docs/devtools/device-mode/#device). Все iPhone с версией новее 5 теперь имеют юзер агент строку iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
-- Теперь вы можете сохранить [сниппет](/docs/devtools/javascript/snippets/) как JavaScript файл. Раньше нужно было вручную указывать файлу расширение `.js`. ([1137218](https://crbug.com/1137218))
+- Теперь вы можете сохранить [сниппет](/docs/devtools/javascript/snippets/) как JavaScript файл. Раньше нужно было вручную добавлять файлу расширение `.js`. ([1137218](https://crbug.com/1137218))
 <!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
 - На вкладке **Источники** (Sources) теперь корректно отображаются имена переменных области видимости при отладке с картой источников. Ранее на панели **Источники** (Sources) отображались минифицированные имена переменных области видимости, несмотря на предоставленную карту источников. ([1294682](https://crbug.com/1294682)) 
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
-- Панель **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422)) 
+- Вкладка **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422)) 
 
 
 {% include 'partials/devtools/ru/reach-out.md' %}
