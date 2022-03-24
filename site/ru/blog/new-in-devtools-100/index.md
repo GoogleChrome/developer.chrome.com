@@ -124,19 +124,19 @@ tags:
 
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
-## Частично представленные кадры во вкладке Производительность (Performance) {: #perf }
+## Частично представленные фреймы во вкладке Производительность (Performance) {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
-На записи производительности на временной шкале **Фреймы** (Frames) теперь отображается новая категория кадров – «Частичный показ фрейма». 
+На записи производительности на временной шкале **Фреймы** (Frames) теперь отображается новая категория фреймов – «Частичный показ фрейма». 
 
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
-Раньше на временной шкале **Кадры** (Frames) любые кадры с отложенной работой по основному потоку отображались как «отмененные фреймы». Однако есть случаи, когда некоторые кадры могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компоновки.
+Раньше на временной шкале **Фреймы** (Frames) любые фреймы с отложенной работой по основному потоку отображались как «отмененные фреймы». Однако есть случаи, когда некоторые фреймы могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компоновки.
 
 <!-- This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.  -->
 Это может смутить пользователя, поскольку скриншоты таких «отмененных фреймов» по прежнему отображают визуальные изменения.
 
 <!-- The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether. -->
-Новый тип «Частичный показ фрейма» нужен чтобы показать более интуитивно, что хотя некоторое содержимое не представлено в кадре своевременно, проблема не настолько серьезна, чтобы полностью блокировать визуальные обновления.
+Новый тип «Частичный показ фрейма» нужен чтобы показать более интуитивно, что хотя некоторое содержимое не представлено во фрейме своевременно, проблема не настолько серьезна, чтобы полностью блокировать визуальные обновления.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QcqjnFhMz1Bxd5dkmduj.png", alt="Частичный показ фрейма во вкладке Производительность (Performance)", width="800", height="531" %}
 
