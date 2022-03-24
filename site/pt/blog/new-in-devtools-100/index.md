@@ -18,6 +18,8 @@ tags:
 
 {% include 'partials/devtools/pt/banner.md' %}
 
+{% YouTube id='DAD72grzDDc' %}
+
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
 <!-- 2. Provide translations under each of the English commented original content -->
