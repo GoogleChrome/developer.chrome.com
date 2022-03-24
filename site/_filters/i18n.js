@@ -75,4 +75,4 @@ const i18n = (pth, locale = 'en') => {
   }
 };
 
-module.exports = {i18n};
+module.exports = {defaultLocale, i18n};
