@@ -153,14 +153,13 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 이번 릴리스에는 몇몇 주목할 만한 수정사항이 포함되어 있습니다.
 
 <!-- - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553)) -->
-- [에뮬레이팅 디바이스](/docs/devtools/device-mode/#device) 에 대한 아이폰 유저 에이전트 String이 업데이트되었습니다.
+- [에뮬레이팅 디바이스](/docs/devtools/device-mode/#device) 에 대한 아이폰 유저 에이전트 String이 업데이트되었습니다.  5 이후의 모든 iPhone이 user-agent 스트링으로서 iPhone OS 13_2_3을 가지고 있었습니다.([1289553](https://crbug.com/1289553))
 
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
-- 이제 [스니펫](/docs/devtools/javascript/snippets/)을 직접적으로 자바스크립트 파일에 저장할 수 있습니다. 
+- 이제 [스니펫](/docs/devtools/javascript/snippets/)을 직접적으로 자바스크립트 파일에 저장할 수 있습니다. 이전에는 여러분이 직접 `.js` 파일 확장자를 추가해 주어야 했습니다.([1137218](https://crbug.com/1137218))
 
 <!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-- 소스맵을 이용해 디버깅 시 스코프 변수 이름이 **소스** 패널에 정확하게 표시되도록 개선되었습니다. 이전 버전에서는 소스맵이 제공되었음에도, **소스** 패널이 오직 간소화된 스코프 변수 이름을 표시하고 있었습니다.
-
+- 소스맵을 이용해 디버깅 시 스코프 변수 이름이 **소스** 패널에 정확하게 표시되도록 개선되었습니다. 이전 버전에서는 소스맵이 제공되었음에도, **소스** 패널이 오직 간소화된 스코프 변수 이름을 표시하고 있었습니다. ([1294682](https://crbug.com/1294682))
 
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - 페이지 로딩 시 **소스** 패널이 현재 스크롤 위치를 정확하게 되돌리도록 개선되었습니다. 이전 버전에서는 스크롤 위치가 정확하게 복원되지 않아 디버깅 시 불편함을 야기하는 문제가 있었습니다. ([1294422](https://crbug.com/1294422))
