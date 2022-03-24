@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-03-23
+updated: 2022-03-24
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -433,10 +433,11 @@ a long-term constraint, and the `ads` and `adComponents` URLs have no such const
 `dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties,
 corresponding to the interest group object passed to `navigator.joinAdInterestGroup()`. This
 provides a mechanism for the group's owner to periodically update the attributes of the
-interest group. In the [current implementation](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=650;drc=13a62b6d89315e5a90deb712b0c1e47c72100f6c),
+interest group. In the [current implementation](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=671;drc=5a102f146faa0c21eb9cf255ceb46b35a158ab3f),
 the following attributes can be changed:
 
 * `biddingLogicUrl`
+* `biddingWasmHelperUrl`
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
