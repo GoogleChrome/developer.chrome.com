@@ -6,6 +6,8 @@ authors:
 date: 2015-04-13
 updated: 2021-09-11
 description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
+tags:
+  - storage
 ---
 
 [HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,

@@ -7,6 +7,8 @@ authors:
 date: 2017-06-09
 #updated: YYYY-MM-DD
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
+tags:
+  - css
 ---
 
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to

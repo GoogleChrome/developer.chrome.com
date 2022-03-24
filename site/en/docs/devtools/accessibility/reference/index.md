@@ -6,6 +6,8 @@ authors:
 date: 2018-07-13
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
+tags:
+  - accessibility
 ---
 
 This page is a comprehensive reference of accessibility features in Chrome DevTools. It is intended

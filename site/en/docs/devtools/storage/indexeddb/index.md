@@ -6,6 +6,8 @@ authors:
 date: 2019-03-18
 #updated: YYYY-MM-DD
 description: "How to view and change IndexedDB data with the Application panel and Snippets."
+tags:
+  - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to view and change [IndexedDB][2] data. It

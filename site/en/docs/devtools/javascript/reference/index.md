@@ -8,6 +8,8 @@ date: 2017-01-04
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
+tags:
+  - javascript
 ---
 
 Discover new debugging workflows with this comprehensive reference of Chrome DevTools debugging

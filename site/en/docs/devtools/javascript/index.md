@@ -6,6 +6,9 @@ authors:
 date: 2017-01-04
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
+tags:
+  - get-started
+  - javascript
 ---
 
 This tutorial teaches you the basic workflow for debugging any JavaScript issue in DevTools. Read
