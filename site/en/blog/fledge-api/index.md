@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-03-24
+updated: 2022-03-25
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -437,11 +437,9 @@ interest group. In the [current implementation](https://source.chromium.org/chro
 the following attributes can be changed:
 
 * `biddingLogicUrl`
-* `biddingWasmHelperUrl`
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
-* `adComponents`
 
 Any field not specified in the JSON will not be overwritten—only fields specified in the JSON get
 updated—whereas calling `navigator.joinAdInterestGroup()` overwrites any existing interest group.
