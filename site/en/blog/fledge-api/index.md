@@ -79,9 +79,7 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
   id='znDD0gkdJyM'
 %}
 
-{: #origin-trial}
-
-### Take part in a FLEDGE origin trial
+### Take part in a FLEDGE origin trial {: #origin-trial}
 
 An [origin trial](/blog/origin-trials/) for FLEDGE started in Chrome 101, and has been made
 available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).
@@ -91,8 +89,8 @@ trial token.
 
 Once you have successfully enrolled in the trial, you can try out the FLEDGE JavaScript API on pages
 that provide a valid trial token: for example, to ask the browser to [join one or more interest groups](#joinadinterestgroup),
-and then [run an an ad auction](#ad-auction) to select and display an ad. The [FLEDGE demo](#demo)
-outlines a basic FLEDGE deployment.
+then [run an an ad auction](#ad-auction) to select and display an ad. The [FLEDGE demo](#demo)
+provides a basic example of an end-to-end FLEDGE deployment.
 
 {% Aside %}
 
@@ -103,7 +101,7 @@ provides more details about the goals of the first trial and explains what featu
 
 #### First-party context
 
-To access FLEDGE APIs on your site, add the origin trial token to your web pages using one of the
+To access the FLEDGE API on your site, add the origin trial token to your web pages using one of the
 following methods for every page on which you would like to test the API:
 
 +   As a meta tag in the &lt;head&gt;:
@@ -119,19 +117,25 @@ following methods for every page on which you would like to test the API:
 In order to test the FLEDGE API in your code on third-party sites you will need to run code to inject
 the origin trial token in a meta tag. [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script) explains how to do this.
 
-#### Submit feedback
+#### Submit feedback and engage in discussion
 
-You should provide feedback on the origin trial implementation of FLEDGE features through Chrome's
+* You should provide feedback on the origin trial implementation of FLEDGE features through Chrome's
 [origin trial site](/origintrials/#/trials/active). This feedback is not public and is available
-only to a limited group of people on the Chrome team. The Privacy Sandbox
-[Feedback](/docs/privacy-sandbox/feedback/#fledge-api) article explains how to provide other types
-of feedback, and how to engage in discussion of Privacy Sandbox proposals. You can also use the
-Privacy Sandbox [feedback form](https://developer.chrome.com/docs/privacy-sandbox/feedback/#feedback-form)
+only to a limited group of people on the Chrome team.
+* You can also use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
 to share feedback directly to the Chrome team outside of public forums.
+* [Privacy Sandbox Feedback](/docs/privacy-sandbox/feedback/#fledge-api) explains how to provide
+other types of feedback, and how to engage in discussion of Privacy Sandbox proposals.
 
-{: #feature-flags}
+#### Find out more about origin trials
 
-### Test with feature flags
+* [Getting started with Chrome's origin trials](/blog/origin-trials/)
+* [What are third-party origin trials?](/blog/third-party-origin-trials/)
+* [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
+* [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+* [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
+
+### Test with feature flags {: #feature-flags}
 
 You can test FLEDGE for a single user running a current version of Chrome, Chrome Beta or Chrome
 Canary with feature flags set from the command line.
@@ -204,10 +208,25 @@ and buyers can run trusted servers themselves (a
 "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server)"
 model). Discussion is underway about how trusted servers are managed and owned.
 
+### Detect feature support
 
-{: #debugging }
+Before using the API, check if it's available on the page. For example:
 
-## Debug FLEDGE worklets
+```javascript
+'joinAdInterestGroup' in navigator ?
+  console.log('navigator.joinAdInterestGroup() is supported on this page') :
+  console.log('navigator.joinAdInterestGroup() is not supported on this page');
+```
+
+{% Aside 'caution' %}
+
+Feature support on the current page isn't a guarantee that an API is usable: the user may have
+disabled the API via browser settings, or they may have other settings that prevent the API from
+being used. In order to protect user privacy, there is no way to check for this programmatically.
+
+{% endAside %}
+
+## Debug FLEDGE worklets {: #debugging }
 
 From Chrome Canary 98.0.4718.0, it's possible to debug FLEDGE worklets within Chrome DevTools.
 
@@ -258,10 +277,7 @@ the site.
 
 {% endAside %}
 
-
-{: #how}
-
-## How does the FLEDGE API work?
+## How does the FLEDGE API work? {: #how}
 
 In this example, a user browses the website of a custom bike maker, then later visits a news website
 and is shown an ad for a new bike from the bike maker.
@@ -353,9 +369,7 @@ iframe can call `joinAdInterestGroup()` for interest groups owned by `dsp.exampl
 The proposal is that `joinAdInterestGroup()` can run in a page or iframe in the owner's domain, or
 be delegated to other domains provided using a list at a `.well-known` URL.
 
-{: #joinadinterestgroup}
-
-#### Using navigator.joinAdInterestGroup()
+#### Using navigator.joinAdInterestGroup() {: #joinadinterestgroup}
 
 Here's an example of how the API might be used:
 
@@ -470,9 +484,7 @@ days. Successive calls overwrite previously stored values.
 `dailyUpdateUrl` and `trustedBiddingSignalsUrl` must have the same origin as owner. That may not be
 a long-term constraint, and the `ads` and `adComponents` URLs have no such constraint.
 
-{: #update-interest-group}
-
-#### Update interest group attributes
+#### Update interest group attributes {: #update-interest-group}
 
 `dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties,
 corresponding to the interest group object passed to `navigator.joinAdInterestGroup()`. This
@@ -526,9 +538,7 @@ metadata that can be used at bidding time. For example:
 }
 ```
 
-{: #biddinglogicurl}
-
-#### How do buyers make bids?
+#### How do buyers make bids? {: #biddinglogicurl}
 
 The script at `biddingLogicUrl` provided by an interest group owner must include a `generateBid()`
 function. When an ad-space seller calls `navigator.runAdAuction()`, the `generatedBid()`
@@ -561,9 +571,7 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals,
 }
 ```
 
-{: #generate-bid}
-
-#### More about generateBid()
+#### More about generateBid() {: #generate-bid}
 
 The script at `biddingLogicUrl` provided by an ad-space buyer must include a `generateBid()` function.
 This function is called once for each candidate ad. As described later in this post, [`runAdAuction
@@ -624,8 +632,6 @@ The `browserSignals` object has the following properties:
   prevWins: [[time1,ad1],[time2,ad2],...],
   wasmHelper: ... /* WebAssembly.Module object based on interest group's biddingWasmHelperUrl. */
   dataVersion: 1, /* Data-Version value from the trusted bidding signals server's response(s). */
-}
-
 }
 ```
 
@@ -697,11 +703,9 @@ There are three main roles described in the FLEDGE proposal explainer:
 
 {% endAside %}
 
-{: #ad-auction}
-
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 4. An ad auction is run in the browser
+### 4. An ad auction is run in the browser {: #ad-auction}
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fP9qHtCjfk8IwrJLtOpo.png",
   alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
@@ -1134,10 +1138,8 @@ removed when users clear their site data.
 
 <br><br>
 
-{: #engage}
 
-
-## Engage and share feedback
+## Engage and share feedback {: #engage}
 
 -  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
    [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
