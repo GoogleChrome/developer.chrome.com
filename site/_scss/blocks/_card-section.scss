@@ -193,7 +193,7 @@ html {
 
           .right-arrow {
             display: none;
-            padding-right: 61px;
+            margin-right: 61px;
 
             @include media-query('md') {
               display: block;

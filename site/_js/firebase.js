@@ -47,7 +47,8 @@ export class Firebase {
     const buttons = document.querySelectorAll('.heart-logo');
     const self = this;
     for (const button of buttons) {
-      button?.addEventListener('click', function () {
+      button?.addEventListener('click', function (e) {
+        e.preventDefault();
         const state = this.classList.toggle('like');
         const {id, year} = this.dataset;
         const storedCard = localStorage.getItem(id);

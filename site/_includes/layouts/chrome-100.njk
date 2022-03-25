@@ -5,3 +5,22 @@
   {% include 'partials/chrome-100-card-section.njk' %}
   {% include 'partials/chrome-100-footer-section.njk' %}
 {% endblock %}
+
+{% block chromeanalytics %}
+  <script>
+    const chromeAnchors = document.getElementsByTagName('a');
+    for (const item of chromeAnchors) {
+      item.addEventListener('click', () => {
+        const linkAction = item.getAttribute('data-action');
+        const linkCategory = item.getAttribute('data-category');
+        const linkLabel = item.getAttribute('data-label');
+        ga('send', {
+          hitType: 'event',
+          eventCategory: `${linkCategory}`,
+          eventAction: `${linkAction}`,
+          eventLabel: `${linkLabel}`
+        });
+      });
+    }
+  </script>
+{% endblock %}
