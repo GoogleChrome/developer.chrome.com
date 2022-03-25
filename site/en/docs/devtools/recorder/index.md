@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Recorder: Record, replay and measure user flows"
 authors:
   - jecelynyeen
+  - sofiayem
 date: 2021-11-02
-updated: 2021-11-03
+updated: 2022-03-25
 description: "Record, replay and measure user flows with the Recorder panel."
 tags:
   - test
@@ -55,20 +56,24 @@ In the next sections, we will walk you through how to record, replay and audit t
 ## Record a user flow {: #record }
 
 1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
-2. Enter "coffee checkout" in the **Recording name** textbox, then click on the **Start a new recording** button.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLa973eE3tGGhHomHkOc.png", alt="Start a new recording", width="800", height="528" %}
-3. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
+1. Enter "coffee checkout" in the **Recording name** textbox.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
+   Notice the default `data-testid` value in the **Selector attribute** textbox and leave it as it is for the purposes of this tutorial.
+   {% Aside %}
+   If you use a custom selector attribute in your code, this is where you can specify it. For more information, see [Customize the recording's selector](#customize-selector).
+   {% endAside %}
+1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress", width="800", height="528" %} 
-4. Click on *Cappucino* to add it to the cart.
-5. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
+1. Click on *Cappuccino* to add it to the cart.
+1. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="steps in the Recorder panel", width="800", height="519" %}
-6. Go to the cart page.
-7. Remove *Americano* from the cart.
-8. Click on the *Total: $19.00* button to start the checkout process.
-9. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
+1. Go to the cart page.
+1. Remove *Americano* from the cart.
+1. Click on the *Total: $19.00* button to start the checkout process.
+1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="payment details form", width="800", height="519" %}
-10. Click on the *Submit* button to complete the checkout process.
-11. In the **Recorder** panel. Click **End recording** button to end the recording.
+1. Click on the *Submit* button to complete the checkout process.
+1. In the **Recorder** panel. Click **End recording** button to end the recording.
 
 
 ## Replay a user flow {: #replay }
@@ -115,17 +120,43 @@ On the top of the **Recorder** panel, there are options for you to:
 
 Let's walk through the options to edit the steps within a workflow.
 
-1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappucino"* step.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ADbB4FFeiBBZqbxKRw0s.png", alt="In the recorder panel, the Cappucino element has been expanded to reveal type, target, selectors, offset X, and offset Y.", width="800", height="663" %}
-2. The step above shows 2 **selectors**. The **Recorder** will automatically detect 2 selectors for most of the steps by default.
-    - When replaying the user flow, the **Recorder** will try to query the element with one of the selectors by sequence.
-    - For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
-3. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappucino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
+### Expand steps {: #expand-step }
+
+1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappuccino"* step.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WUIZb8eMWfcPZHPyQ5C5.png", alt="In the recorder panel, the Cappuccino element has been expanded to reveal type, target, selectors, offset X, and offset Y.", width="800", height="773" %}
+1. The step above shows two **selectors**. For more information, see [Selector types](#selector-types).
+   When replaying the user flow, the **Recorder** tries to query the element with one of the selectors by sequence.
+   For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
+1. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappuccino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="The DevTools recorder panel shows an option to remove a selector", width="800", height="663" %}
-4. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappucino*, you can edit the selector value to *aria/Mocha* instead.
+1. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappuccino*, you can edit the selector value to *aria/Mocha* instead.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %} 
-5. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappucino*.
-6. Try to edit other step properties such as **type**, **target**, **value** and more.
+1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
+1. Try to edit other step properties such as **type**, **target**, **value** and more.
+
+#### Selector types {: #selector-types }
+
+During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
+
+{% Aside %}
+For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
+{% endAside %}
+
+In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
+1. Your custom selector attribute if you specified it at the start of the recording.
+   If found, the **Recorder** will prioritize your custom CSS attribute selector above the ARIA one.
+   For more information, see [Customize the recording's selector](#customize-selector).
+1. The most common attributes used for testing: {: #selectors }
+   - `data-testid`
+   - `data-test`
+   - `data-qa`
+   - `data-cy`
+   - `data-test-id`
+   - `data-qa-id`
+   - `data-testing`
+1. Regular CSS selectors.
+
+### Add and remove steps {: #add-and-remove-steps }
 
 There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
 
@@ -142,3 +173,14 @@ There are options to add and remove steps too. This is useful if you want to add
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
 6. [Replay](#replay) the flow now to see the changes.
+
+## Customize the recording's selector {: #customize-selector }
+
+You can customize the selector of a recording if you are not using the [common selectors](#selectors).
+
+For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`).
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording's selector", width="800", height="524" %}
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/X8r52vWEu6aC8QHFuknp.png", alt="The result of custom selector selection", width="800", height="579" %}
+
