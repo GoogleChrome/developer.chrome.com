@@ -37,7 +37,7 @@ see what's new for developers in Chrome 100.
 
 ## Chrome 100 {: #chrome100 }
 
-Looking back, when browsers first reached version 10, there were a few
+When browsers first reached version 10, there were a few
 issues as the major version number went from one digit to two. Hopefully,
 we learned a few things that'll ease the transition from two digits to three.
 
@@ -97,7 +97,7 @@ present, I want the slides to appear full screen on the primary display,
 and my speaker notes to appear on the other display.
 
 The Multi-Screen Window Placement API makes it possible to enumerate the
-displays connected to the users machine, and place windows on specific screens.
+displays connected to the user's machine, and place windows on specific screens.
 
 You can quickly check if there's more than one screen connected to the
 device with `window.screen.isExtended`.
@@ -150,17 +150,17 @@ screens.addEventListener('screenschange', (event) => {
 
 Check out Tom's updated article
 [Managing several displays with the Multi-Screen Window Placement API][wd-mswp]
-on [web.dev][wdev] for a deeper dive!
+on [web.dev][wdev] for a deeper dive.
 
 ## And more! {: #more }
 
 Of course there's plenty more.
 
 There's a new `forget()` method for HID Devices that allow you to revoke a
-permission to a HID Device that was granted by a user.
+permission to an HID Device that was granted by a user.
 
 ```js
-// Request a HID device.
+// Request an HID device.
 const [device] = await navigator.hid.requestDevice(opts);
 
 
