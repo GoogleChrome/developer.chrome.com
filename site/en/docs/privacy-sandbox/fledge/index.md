@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-01-31
+updated: 2022-03-21
 authors:
   - samdutton
 ---
@@ -535,8 +535,8 @@ The `navigator.runAdAuction()` code (from step 2) must include a `scoreAd()` fun
 once for each ad and accompanying bid, to determine its desirability. The `scoreAd()` function is
 run for every candidate ad, in the auction logic JavaScript code provided by the seller. This
 function uses the bid value and other data returned by the `generateBid()` function in each buyer's
-code (in the previous step). The seller may also receive realtime data from its [trusted server]
-(#trusted-server).
+code (in the previous step). The seller may also receive realtime data from its 
+[trusted server](#trusted-server).
 
 For each ad, the `scoreAd()` function returns a number indicating its desirability. The most
 desirable ad is the winner. Before an auction starts, the seller finds the best contextual ad for
