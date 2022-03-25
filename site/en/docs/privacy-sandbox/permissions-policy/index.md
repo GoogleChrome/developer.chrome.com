@@ -194,7 +194,7 @@ With an empty origin list, the feature is blocked for all origins. This setup ca
 
 ## JavaScript API
 
-The existing JavaScript API of Feature Policy is found as an object on either the document or the element (`document.featurePolicy or element.featurePolicy`). The JS API for Permissions Policy has not been implemented yet, and the existing Feature Policy JS API can be used for policies set by Permissions Policy with a limitation. There are [remaining questions](https://github.com/w3c/webappsec-permissions-policy/issues/401) regarding JS API implementation, and a [proposal](https://github.com/w3c/webappsec-permissions-policy/issues/401#issuecomment-824878596) has been made to move the logic into [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API). Please join the discussion if you have any thoughts. 
+The existing JavaScript API of Feature Policy is found as an object on either the document or the element (`document.featurePolicy or element.featurePolicy`). The JS API for Permissions Policy has not been implemented yet, and the existing Feature Policy JS API can be used for policies set by Permissions Policy with a limitation. There are [remaining questions](https://github.com/w3c/webappsec-permissions-policy/issues/401) regarding JS API implementation, and a [proposal](https://github.com/w3c/webappsec-permissions-policy/issues/401#issuecomment-824878596) has been made to move the logic into [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API). Join the discussion if you have any thoughts. 
 
 (Default-origin is the origin of the document or the element that the policy is attached to).
 
@@ -239,11 +239,13 @@ const isCameraFeatureAllowed = someIframeEl.featurePolicy.allowsFeature(‘camer
 ```
 
 ### featurePolicy.allowedFeatures()
+
 * Returns a list of features allowed for the default-origin usage.
 * The behavior is the same for both policies set by Permissions Policy and Feature Policy
 * When the associated node is an iframe, the allow attribute is taken into account.
 
 ### featurePolicy.features()
+
 * Returns a list of features available in the browser.
 * The behavior is the same for both policies set by Permissions Policy and Feature Policy
 
@@ -252,6 +254,7 @@ const isCameraFeatureAllowed = someIframeEl.featurePolicy.allowsFeature(‘camer
 If you are currently using the Feature-Policy header, you can implement the following steps to prepare for Permissions Policy.
 
 ### Replace Feature Policy headers with Permissions Policy headers
+
 Since the Feature Policy headers are only supported in Chromium-based browsers, and Permissions Policy headers are supported since [Chrome 88](https://chromestatus.com/feature/5745992911552512), it is safe to update the existing headers with Permissions Policy.
 
 If you have a Feature-Policy header like this:
@@ -299,7 +302,7 @@ Check the allowed features and disallowed features of each frame in DevTools und
 
 ## Find out more
 
-For a deeper understanding of Permissions Policy, please utilize the following resources: 
+For a deeper understanding of Permissions Policy, utilize the following resources: 
 
 * [Permissions Policy specs](https://www.w3.org/TR/permissions-policy-1/)
 * [Permissions Policy explainer](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md)
