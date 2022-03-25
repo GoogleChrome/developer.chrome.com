@@ -18,10 +18,14 @@ html {
     position: absolute;
     top: 56px;
     width: 100px;
-    z-index: 9000;
+    z-index: 35;
 
-    @include media-query('md') {
+    @include media-query('lg') {
       width: 197px;
+    }
+
+    @media screen and (min-width: 650px) and (max-width: 992px) {
+      width: 150px;
     }
 
     .chrome-logo {
@@ -39,12 +43,18 @@ html {
       position: absolute;
       top: 60px;
       width: 100px;
-      z-index: 9000;
 
       @include media-query('md') {
         margin-top: 17px;
         top: 85px;
+      }
+
+      @include media-query('lg') {
         width: 197px;
+      }
+
+      @media screen and (min-width: 650px) and (max-width: 992px) {
+        width: 150px;
       }
 
       ul {
@@ -52,7 +62,7 @@ html {
         padding: 0;
         position: absolute;
         top: 40%;
-        z-index: 9000;
+        // z-index: 9000;
 
         li {
           height: 60px;
@@ -85,29 +95,7 @@ html {
     position: fixed;
 
     @include media-query('lg') {
-      left: 96px;
-    }
-  }
-
-  .side-arrow-DT {
-    display: block;
-    left: 94%;
-    position: fixed;
-    right: 0;
-    top: 50%;
-    z-index: 9999;
-
-    @include media-query('lg') {
-      display: none;
-    }
-
-    @media only screen and (max-width: 1336px) {
-      display: none;
-    }
-
-    .side-arrow {
-      height: 80px;
-      width: 40px;
+      left: 82px;
     }
   }
 
@@ -143,6 +131,8 @@ html {
     }
 
     .second-column {
+      width: 470px;
+
       .card-with-img {
         height: auto;
 
@@ -172,11 +162,16 @@ html {
         }
 
         .arrow-wrapper {
-          justify-content: space-between;
+          // justify-content: space-between;
           padding: 0;
 
           @include media-query('md') {
             padding-top: 10px;
+          }
+
+          .card-arrow {
+            justify-content: space-between;
+            padding-right: 45px;
           }
 
           .card-heading {
@@ -193,11 +188,16 @@ html {
 
           .right-arrow {
             display: none;
-            margin-right: 61px;
 
             @include media-query('md') {
               display: block;
             }
+          }
+
+          a {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 45px;
           }
         }
 
@@ -235,6 +235,10 @@ html {
               height: 19px;
               margin: 5px 5px 0 0;
               width: 20px;
+
+              svg {
+                pointer-events: none;
+              }
             }
 
             .like {

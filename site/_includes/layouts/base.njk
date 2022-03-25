@@ -37,6 +37,8 @@
 
     {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
+    {% block chromescripts %}{% endblock %}
+
   </head>
   <body>
     <div class="scaffold">

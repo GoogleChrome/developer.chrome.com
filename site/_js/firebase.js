@@ -2,9 +2,16 @@
 /**
  * @fileoverview Firebase integration.
  */
-import {initializeApp} from 'firebase/app';
-//import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
-import {getDatabase, ref, runTransaction, onValue} from 'firebase/database';
+
+// Since it has been used for single page chrome-100, so done via CDN.
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+import {
+  getDatabase,
+  ref,
+  runTransaction,
+  onValue,
+} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js';
+
 
 export class Firebase {
   constructor() {
@@ -14,6 +21,7 @@ export class Firebase {
       this.config = {
         databaseURL: 'http://localhost:9000/?ns=oct-sip-test2',
       };
+      // This is required and taken from firebase project settings.
       // this.config = {
       //   apiKey: "AIzaSyB1zPD5QjfGypRydnHE-F6vWaROlHZebSU",
       //   authDomain: "oct-sip-test2.firebaseapp.com",
@@ -27,6 +35,7 @@ export class Firebase {
 
     //Initialize firebase app
     this.firebase = initializeApp(this.config);
+    // Need to enable once production instance is ready.
     // this.appCheck = initializeAppCheck(this.firebase, {
     //   provider: new ReCaptchaV3Provider('6LdHHNweAAAAAA6jtgdZoZ6AFHC2_R4bSnAKY6Fp'),
     //   isTokenAutoRefreshEnabled: true
@@ -45,51 +54,57 @@ export class Firebase {
   }
 
   initialize() {
-    const buttons = document.querySelectorAll('.heart-logo');
     const self = this;
-    for (const button of buttons) {
-      button?.addEventListener('click', function (e) {
-        e.preventDefault();
-        const state = this.classList.toggle('like');
-        const {id, year} = this.dataset;
+    const cardContainer = document.querySelector('.card-container');
+    cardContainer?.addEventListener('click', event => {
+      const parent = event.target;
+
+      if (parent.classList.contains('heart-logo')) {
+        event.preventDefault();
+        const {id, year} = parent.dataset;
         const storedCard = localStorage.getItem(id);
         if (storedCard !== null) {
-          self.checkExisis(year, JSON.parse(storedCard));
+          self.checkExisis(year, JSON.parse(storedCard), parent);
         } else {
-          self.updateLikesCount(year, id, state);
+          self.updateLikesCount(year, id, parent);
         }
-      });
-    }
+      }
+    });
   }
 
   readData(cards) {
     onValue(cards, snapshot => {
       const data = snapshot.val();
-      console.log(data);
       for (const year in data) {
-        this.updateLikeCount(year, data[year]);
+        this.updateDomNodeCount(year, data[year]);
       }
     });
   }
 
   // Update the likes value
-  updateLikeCount(year, data) {
+  updateDomNodeCount(year, data) {
     const section = document.getElementById(`section${year}`);
     const childrens = section?.querySelectorAll('.like-count');
     childrens.forEach((child, idx) => {
-      child.innerHTML = `${data[idx].likes}`;
+      child.innerText = `${data[idx].likes}`;
+      const likeItem = localStorage.getItem(data[idx].id);
+      if (likeItem !== null) {
+        child.previousSibling.previousSibling.classList.add('like');
+      } else {
+        child.previousSibling.previousSibling.classList.remove('like');
+      }
     });
   }
 
   // check the card exist on local storage or not
-  checkExisis(year, key) {
+  checkExisis(year, key, parent) {
     runTransaction(this.cardsRef, post => {
       if (post !== null && post[year]) {
         post[year].map(item => {
           if (item.id === key.id && item.likes === key.likes) {
             item.likes -= 1;
-          } else if (item.id === key.id) {
-            item.likes += 1;
+            parent.classList.remove('like');
+            localStorage.removeItem(item.id);
           }
         });
       }
@@ -98,17 +113,14 @@ export class Firebase {
   }
 
   // Update like count
-  updateLikesCount(year, id, state) {
+  updateLikesCount(year, id, parent) {
     runTransaction(this.cardsRef, post => {
       if (post !== null && post[year]) {
         post[year].map(item => {
-          if (item.id === id) {
-            if (state) {
-              item.likes += 1;
-              localStorage.setItem(item.id, JSON.stringify(item));
-            } else {
-              item.likes !== 0 ? (item.likes -= 1) : (item.likes = 0);
-            }
+          if (item.id === parseInt(id)) {
+            item.likes += 1;
+            parent.classList.add('like');
+            localStorage.setItem(item.id, JSON.stringify({...item}));
           }
         });
       }

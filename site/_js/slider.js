@@ -1,10 +1,4 @@
 // @ts-nocheck
-import {gsap} from 'gsap';
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
 const cssClasses = {
   NAVIGATION_WRAPPER: 'navigation-wrapper',
   FIXED_NAVIGATION_WRAPPER: 'fixed-navigation-wrapper',
@@ -18,23 +12,24 @@ const cssClasses = {
   YEAR_SECTION: 'inner-card',
   HIDE_NAVIGATION: 'hide-navigation',
 };
-
+ 
 class Slider {
   constructor() {
     this.currentIndex = 0;
     this.previousIndex = 0;
-
+ 
     this.initialize();
   }
-
+ 
   initialize() {
     window.addEventListener('load', () => {
       const yearTimeline = gsap.timeline();
+      console.log(yearTimeline);
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
       yearTimeline.add(this.clickNavLink());
     });
-
+ 
     window.addEventListener('scroll', () => {
       const yearNav = document.querySelector(
         `.${cssClasses.NAVIGATION_WRAPPER}`
@@ -55,7 +50,7 @@ class Slider {
       }
     });
   }
-
+ 
   startup() {
     const yearNavigationTimeline = gsap.timeline({
       id: 'Loading year navigation',
@@ -70,10 +65,10 @@ class Slider {
       {autoAlpha: 0, y: 100, stagger: 0.1, ease: 'power.out'},
       '<'
     );
-
+ 
     return yearNavigationTimeline;
   }
-
+ 
   scrollSections() {
     let oldScrollValue = 0;
     let newScrollValue = 0;
@@ -91,14 +86,14 @@ class Slider {
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
     const chromeLogo = document.querySelector(`.${cssClasses.CHROME_LOGO}`);
-
+ 
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
       const menuitem = 'menu__'.concat(activeSection);
       const menulink = document
         .getElementById(menuitem)
         .querySelector(`.${cssClasses.MENU_ITEM_LINK}`);
-
+ 
       // ----create a new timeline
       const yearScrollTimeline = gsap.timeline({
         id: 'Nav Animation',
@@ -112,7 +107,7 @@ class Slider {
             chromeLogo.src = `/images/meta/chrome_${
               self.trigger.id.match(/\d+/g)[0]
             }.png`;
-
+ 
             if (oldScrollValue < newScrollValue) {
               if (isActive) {
                 this.currentIndex = activeItemIndex;
@@ -162,13 +157,13 @@ class Slider {
           toggleActions: 'play reverse play reverse',
         },
       });
-
+ 
       yearScrollTimeline.to(menulink, {duration: 0.5, scale: '2.5'}, '>');
-
+ 
       return yearScrollTimeline;
     });
   }
-
+ 
   clickNavLink() {
     gsap.utils.toArray(`.${cssClasses.MENU_ITEM_LINK}`).forEach(item => {
       const activeSection = item.getAttribute('href');
@@ -180,5 +175,5 @@ class Slider {
     });
   }
 }
-
+ 
 export default new Slider();
