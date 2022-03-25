@@ -36,7 +36,7 @@ tags:
 А вот и сотая версия Chrome! Chrome DevTools будет продолжать предоставлять девелоперам надежные инструменты для веб-разработки. Найдите пару минут, чтобы просмотреть вкладку **Что нового** и отметить успехи.
 
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
-Как всегда вы можете узнать о последних изменениях из [видео What’s New in DevTools](https://goo.gle/devtools-youtube). Кликните на картинку.
+Как всегда, вы можете просмотреть новое [видео What’s New in DevTools](https://goo.gle/devtools-youtube) кликнув на картинку.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/u8sn7ubuxjJoyPgbfNJs.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
