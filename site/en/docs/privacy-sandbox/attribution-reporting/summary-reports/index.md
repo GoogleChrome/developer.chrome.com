@@ -8,6 +8,7 @@ description: >
   Measure ad conversions aggregated across users, without revealing
   individual data. Formerly known as aggregate reports.
 date: 2022-02-16
+updated: 2022-03-16
 authors:
   - alexandrawhite
 ---
