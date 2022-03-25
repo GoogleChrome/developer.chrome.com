@@ -48,3 +48,5 @@ chips:
   en: 'Cookies Having Independent Partitioned State (CHIPS)'
 fedcm:
   en: 'Federated Credentials Management (FedCM)'
+permissions-policy:
+  en: 'Permissions Policy'

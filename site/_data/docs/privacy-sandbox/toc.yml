@@ -23,6 +23,7 @@
     - url: /docs/privacy-sandbox/fenced-frame
     - url: https://github.com/WICG/FedCM
       title: i18n.docs.privacy-sandbox.fedcm
+    - url: /docs/privacy-sandbox/permissions-policy
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
