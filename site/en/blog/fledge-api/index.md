@@ -440,6 +440,7 @@ the following attributes can be changed:
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
+* `priority`
 
 Any field not specified in the JSON will not be overwritten—only fields specified in the JSON get
 updated—whereas calling `navigator.joinAdInterestGroup()` overwrites any existing interest group.
