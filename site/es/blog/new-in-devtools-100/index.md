@@ -87,7 +87,8 @@ Los atributos anteriores son selectores comunes utilizados en la automatización
 
 <!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
 
-Por ejemplo, [iniciar una nueva grabación](/docs/devtools/recorder/#record) con esta [página de demostración](https://jec.fyi/demo/recorder). Complete una dirección de correo electrónico y observe el valor del selector.
+Por ejemplo, [inicie una nueva grabación](/docs/devtools/recorder/#record) con esta [página de demostración](https://jec.fyi/demo/recorder). Complete una dirección de correo electrónico y observe el valor del selector.
+
 
 <!-- Since the email element has `data-testid` defined, it's used as the selector automatically instead of the `id` or `class` attributes. -->
 
