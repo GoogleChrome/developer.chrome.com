@@ -145,7 +145,7 @@ Chromium issue: [1049947](https://crbug.com/1049947)
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
 
-## Fotogramas presentados parcialmente en el panel Rendimiento{: #perf }
+## Fotogramas presentados parcialmente en el panel Rendimiento {: #perf }
 
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
@@ -170,11 +170,9 @@ Los nuevos "Fotogramas presentados parcialmente" tienen como objetivo indicar de
 
 Chromium issue: [1261130](https://crbug.com/1261130)
 
-
 <!-- ## Miscellaneous highlights {: #misc } -->
 
 ## Destacados varios {: #misc }
-
 
 <!-- These are some noteworthy fixes in this release: -->
 
