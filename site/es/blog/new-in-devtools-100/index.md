@@ -109,7 +109,7 @@ Puede personalizar el selector de una grabación si no utiliza los [selectores c
 
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 
-Por ejemplo, esta [página de demostración](https://jec.fyi/demo/recorder) usa el atributo `data-automate` como selector. [Iniciar una nueva grabación](/docs/devtools/recorder/#record) e ingrese `data-automate` como el atributo del selector. Complete una dirección de correo electrónico y observe el valor del selector (`[data-automate=email-address]`).
+Por ejemplo, esta [página de demostración](https://jec.fyi/demo/recorder) usa el atributo `data-automate` como selector. [Inicie una nueva grabación](/docs/devtools/recorder/#record) e ingrese `data-automate` como el atributo del selector. Complete una dirección de correo electrónico y observe el valor del selector (`[data-automate=email-address]`).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Personaliza el selector de grabaciones", width="800", height="524" %}
 
