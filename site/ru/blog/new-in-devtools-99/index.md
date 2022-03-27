@@ -150,7 +150,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 Chromium issue: [1277002](https://crbug.com/1277002)
 
 
-<!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
+<!-- ## Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 
