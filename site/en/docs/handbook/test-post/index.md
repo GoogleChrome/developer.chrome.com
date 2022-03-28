@@ -58,7 +58,17 @@ alt: A description of the hero image for screen reader users.
 tags:
   - privacy
   - security
+pageScripts:
+  - /js/100.js
 ---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+
+<like-icon item='some-id'></like-icon>
+
+<like-icon item='some-other-id'></like-icon>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
