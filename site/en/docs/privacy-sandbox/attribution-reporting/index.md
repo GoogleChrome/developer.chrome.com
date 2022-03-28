@@ -115,7 +115,7 @@ This API enables advertisers and adtech providers to measure conversions in the 
 For an overview of the status of all Privacy Sandbox APIs, see the [Privacy Sandbox timeline](https://privacysandbox.com/timeline).
 {% endAside %}
 
-# Use cases and features
+## Use cases and features
 
 The Attribution Reporting API gives access to different types of insights via two types of reports that can be sent to an
 advertiser or a third-party adtech provider. These two types of reports can be used simultaneously
