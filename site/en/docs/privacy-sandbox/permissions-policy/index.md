@@ -62,7 +62,7 @@ And explicitly set the `allow` attribute in the iframe tag:
 
 In this example, the header origin list lets only your site (`self`) and `https://trusted-site.example` to use the geolocation feature. `https://ad.example` is not allowed to use geolocation. 
 
-1. Your code from `https://your-site.example` is allowed to use the geolocation feature with the user’s consent.
+1. Your site `https://your-site.example` is allowed to use the geolocation feature with the user’s consent.
 1. An iframe served from same-origin (`https://your-site.example`) is allowed to use the feature without the usage of the `allow` attribute.
 1. An iframe served from a cross-origin (`https://trusted-site.example`) that has been added to the origin list, and also has the `allow` attribute set on the iframe tag is allowed to use the feature.
 1. An iframe served from a cross-origin (`https://trusted-site.example`) that has been added to the origin list, but does not have the `allow` attribute set on the iframe tag is blocked from using the feature.
@@ -78,7 +78,8 @@ Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 
 A Permissions-Policy header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
 
-Example key-value pairs are: 
+Here are some example key-value pairs:
+
 * Syntax: `[FEATURE]=*` 
   * Policy applied to all origins
   * Example: `geolocation=*`
@@ -112,11 +113,12 @@ With the change in Permissions Policy from Feature Policy, just adding the origi
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/mD9lgR2lky1kdL8tohHx.png", alt="Iframes setup", width="800", height="316" %}
 
-For cross-origin usage, the iframe needs the `allow` attribute in the tag to gain access to the feature.
+For cross-origin usage, an iframe needs the `allow` attribute in the tag to gain access to the feature.
 
 Syntax: `<iframe src="[ORIGIN]" allow="[FEATURE] <’src’ | [ORIGIN(s)]"></iframe>`
 
-Example: 
+For example:
+
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation">
 ```
@@ -191,7 +193,7 @@ Permissions-Policy: geolocation=()
 
 With an empty origin list, the feature is blocked for all origins. This setup can be seen in the [demo](https://permissions-policy-demo.glitch.me/demo/none-allowed). 
 
-## JavaScript API
+## Use the JavaScript API
 
 The existing JavaScript API of Feature Policy is found as an object on either the document or the element (`document.featurePolicy or element.featurePolicy`). The JS API for Permissions Policy has not been implemented yet, and the existing Feature Policy JS API can be used for policies set by Permissions Policy with a limitation. There are [remaining questions](https://github.com/w3c/webappsec-permissions-policy/issues/401) regarding JS API implementation, and a [proposal](https://github.com/w3c/webappsec-permissions-policy/issues/401#issuecomment-824878596) has been made to move the logic into [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API). Join the discussion if you have any thoughts. 
 
@@ -219,9 +221,9 @@ The following code snippet checks that the allow attribute value contains the st
 Permissions-Policy: camera=(self "https://example.com")
 ```
 ```js
-const isCameraPolicySet = document.featurePolicy.allowsFeature(‘camera’, ‘https://example.com’) 
+const isCameraPolicySet = document.featurePolicy.allowsFeature('camera', 'https://example.com') 
 
-const someIframeEl = document.getElementById(‘some-iframe’)
+const someIframeEl = document.getElementById('some-iframe')
 const hasCameraAttributeValue = someIframeEl.hasAttribute('allow') 
   && someIframeEl.getAttribute(‘allow’).includes('camera')
 
@@ -289,7 +291,7 @@ Content-Security-Policy: script-src 'self'; object-src 'none'; report-to main-en
 Document-Policy: document-write=?0; report-to=main-endpoint;
 ```
 
-In the current implementation, you can receive policy violation reports from any violations occurring within that frame by configuring an endpoint named ‘default’ like the example above.  Subframes will require their own reporting configuration. 
+In the current implementation, you can receive policy violation reports from any violations occurring within that frame by configuring an endpoint named 'default' like the example above. Subframes will require their own reporting configuration. 
 
 There is currently a discussion regarding its usefulness, and feel free to share your thoughts at the [Reporting API discussion](https://github.com/w3c/webappsec-permissions-policy/issues/386).
 
