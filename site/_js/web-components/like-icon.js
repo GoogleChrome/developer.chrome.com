@@ -33,14 +33,17 @@ import {
   increment,
   // @ts-ignore
 } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js';
-// @ts-ignore
-import { initializeAppCheck, ReCaptchaV3Provider } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app-check.js';
+import {
+  initializeAppCheck,
+  ReCaptchaV3Provider,
+  // @ts-ignore
+} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app-check.js';
 
 // Local emulator configuration
 const config = {
-  apiKey: "AIzaSyBO19CVJtI2lRZQWCjfv3FnGqStHvP4xwU",
-  projectId: "devnook-playground-1b315",
-  appId: "1:353904485142:web:1af58ee02b74215c29a637"
+  apiKey: 'AIzaSyBO19CVJtI2lRZQWCjfv3FnGqStHvP4xwU',
+  projectId: 'devnook-playground-1b315',
+  appId: '1:353904485142:web:1af58ee02b74215c29a637',
 };
 const recaptchaPublicKey = '6LdDPCMfAAAAACPU7H4hn1uaV3_i9vkfIIIhX4LS';
 const storagePrefix = 'dcc-like-icon';
@@ -81,7 +84,7 @@ export class LikeIcon extends BaseElement {
       // App check does not work against emulator.
       initializeAppCheck(app, {
         provider: new ReCaptchaV3Provider(recaptchaPublicKey),
-        isTokenAutoRefreshEnabled: true
+        isTokenAutoRefreshEnabled: true,
       });
     }
     this.likesRef = ref(db, 'dcc-likes/' + this.itemId + '/likesCount');
