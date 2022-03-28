@@ -453,6 +453,65 @@ pages.
 </html>
 ```
 
+### Extension pages
+
+Extensions can have additional HTML pages that allow users to set preferences, go through an
+onboarding experience, fill out a form, etc. These pages also have access to all the Chrome APIs, as
+you can see in the Action API example:
+
+screenshot
+
+You can open an extension page using the Chrome APIs tabs.create() or windows.create().  
+
+```js
+  chrome.tabs.create({url: 'demo/index.html'});
+```
+
+### Notifications
+
+You can communicate relevant information to users by displaying notifications directly in their
+system tray. For example, in the Drink Water extension, you can remind users when to hydrate.
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
+alt="Mac OS notification", width="500", height="150", type="screenshot" %}
+  <figcaption>
+    Notification in Mac OS
+  </figcaption>
+</figure>
+
+To use the [`notifications`][api-notif] API, you must declare the `"notifications"` permission in
+the manifest.
+
+```json/5
+{ //manifest.json
+  "name": "Drink Water Event Popup",
+...
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+ ...
+}
+```
+
+```js
+// background.js
+chrome.notifications.create({
+    type: 'basic',
+    iconUrl: 'stay_hydrated.png',
+    title: 'Time to Hydrate',
+    message: 'Everyday I\'m Guzzlin\'!',
+    buttons: [
+      { title: 'Keep it Flowing.' }
+    ],
+    priority: 0
+  });
+```
+
+### Developer Tool panels
+
 ## Internationalize the UI {: #localize }
 
 You can use the [`chrome.i18n`][api-i18n] API to internationalize your extension. Create directories
