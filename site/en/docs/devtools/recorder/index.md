@@ -12,6 +12,9 @@ tags:
   - performance
 ---
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 Take a glance at the new **Recorder** panel (preview feature) with the video below. 
 
 {% YouTube id='rMUayh1QPYs' %}
@@ -110,11 +113,13 @@ Let's walk through the options to edit the user flows.
 
 On the top of the **Recorder** panel, there are options for you to:
 
-1. **Add a new recording**. Click on the **+** icon to [add a new recording](#record).
-2. **View all recordings**. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
+1. **Add a new recording**<span class="material-icons">add</span>. Click on the **+** icon to [add a new recording](#record).
+2. **View all recordings**<span class="material-icons">expand_more</span>. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
      {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/g3x137aFK4xJrsdqONKY.png", alt="View all recordings", width="800", height="560" %}
-3. **Export a recording**. You can export the user flow as [Puppeteer](https://pptr.dev) script to customize the script further.
-4. **Delete a recording**. Delete the selected recording. 
+3. **Export a recording**<span class="material-icons">file_upload</span>. You can export the user flow as [Puppeteer](https://pptr.dev) script to customize the script further.
+4. **Delete a recording**<span class="material-icons">delete</span>. Delete the selected recording.
+
+You can also edit the recording's name by clicking the edit button <span class="material-icons">edit</span> next to it.
 
 ## Edit steps {: #edit-steps }
 
