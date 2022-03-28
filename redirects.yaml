@@ -54,6 +54,12 @@ redirects:
 - from: /blog/wasm-debugging-2020/
   to: /blog/wasm-debugging/
 
+- from: /docs/privacy-sandbox/attribution-reporting-introduction/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
+- from: /docs/privacy-sandbox/attribution-reporting-in-short/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/

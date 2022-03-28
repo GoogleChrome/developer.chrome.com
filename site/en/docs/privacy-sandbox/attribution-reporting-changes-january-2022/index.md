@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: "Attribution Reporting proposal: What's changing in January 2022?"
+title: 'Attribution Reporting proposal: updates in January 2022'
 date: 2022-01-27
 updated: 2022-01-27
 authors:
