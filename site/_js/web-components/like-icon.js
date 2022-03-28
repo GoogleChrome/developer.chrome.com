@@ -48,6 +48,19 @@ const config = {
 const recaptchaPublicKey = '6LdDPCMfAAAAACPU7H4hn1uaV3_i9vkfIIIhX4LS';
 const storagePrefix = 'dcc-like-icon';
 
+const app = initializeApp(config);
+const db = getDatabase(app);
+if (location.hostname === 'localhost') {
+  // Point to the DB emulator running on localhost
+  connectDatabaseEmulator(db, 'localhost', 9000);
+} else {
+  // App check does not work against emulator.
+  initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider(recaptchaPublicKey),
+    isTokenAutoRefreshEnabled: true,
+  });
+}
+
 export class LikeIcon extends BaseElement {
   static get properties() {
     return {
@@ -75,18 +88,6 @@ export class LikeIcon extends BaseElement {
     this.liked = item === 'true';
 
     // Read likes from Firebase DB
-    const app = initializeApp(config);
-    const db = getDatabase(app);
-    if (location.hostname === 'localhost') {
-      // Point to the DB emulator running on localhost
-      connectDatabaseEmulator(db, 'localhost', 9000);
-    } else {
-      // App check does not work against emulator.
-      initializeAppCheck(app, {
-        provider: new ReCaptchaV3Provider(recaptchaPublicKey),
-        isTokenAutoRefreshEnabled: true,
-      });
-    }
     this.likesRef = ref(db, 'dcc-likes/' + this.itemId + '/likesCount');
     this.unsubscribe = onValue(this.likesRef, snapshot => {
       const data = snapshot.val();
