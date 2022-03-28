@@ -8,6 +8,8 @@ date: 2019-04-18
 description:
   "If you find yourself typing the same JavaScript expressions into the Console repeatedly, try Live
   Expressions instead."
+tags:
+  - javascript
 ---
 
 If you find yourself typing the same JavaScript expression in the Console repeatedly, you might find

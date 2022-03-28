@@ -18,6 +18,8 @@ tags:
 
 {% include 'partials/devtools/ja/banner.md' %}
 
+{% YouTube id='DAD72grzDDc' %}
+
 ## Chrome 100  {: #m100 }
 
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->

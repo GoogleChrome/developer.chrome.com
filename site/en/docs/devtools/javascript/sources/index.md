@@ -8,6 +8,10 @@ date: 2018-01-09
 description:
   "View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources
   panel of Chrome DevTools."
+tags:
+  - html
+  - css
+  - javascript
 ---
 
 Use the Chrome DevTools **Sources** panel to:

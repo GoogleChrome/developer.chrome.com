@@ -6,6 +6,8 @@ authors:
 date: 2019-03-25
 #updated: YYYY-MM-DD
 description: "How to view Application Cache data from the Application panel of Chrome DevTools."
+tags:
+  - storage
 ---
 
 [mdn]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache

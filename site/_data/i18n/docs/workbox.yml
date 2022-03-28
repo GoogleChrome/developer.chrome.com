@@ -28,6 +28,11 @@ reference:
 reference_description:
   en: |
     Browse the API reference to get information on available methods in the Workbox API, broken down by module.
+migration:
+  en: 'Migration Guides'
+migration_description:
+  en: |
+    How-to guides on migrating from older versions of Workbox.
 github:
   en: 'Workbox on GitHub'
 github_description:

@@ -6,6 +6,10 @@ authors:
 date: 2017-06-08
 updated: 2021-08-16
 description: "Learn how to use Chrome DevTools to view and change a page's CSS."
+tags:
+  - get-started
+  - prototype-fixes
+  - css
 ---
 
 Complete these interactive tutorials to learn the basics of viewing and changing a page's CSS using
