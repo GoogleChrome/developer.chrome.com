@@ -203,7 +203,7 @@ $chrome-100-colors: (
             text-decoration: underline;
 
             @include media-query('md') {
-              font-size: 24px;
+              font-size: 22px;
               line-height: 38px;
             }
           }
@@ -264,6 +264,7 @@ $chrome-100-colors: (
             }
 
             .like-count {
+              letter-spacing: 1px;
               text-align: center;
               width: 50px;
             }

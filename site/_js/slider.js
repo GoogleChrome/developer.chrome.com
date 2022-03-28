@@ -16,45 +16,26 @@ const cssClasses = {
   SCROLL_SECTION: 'scroll-section',
   BACK_TO_TOP: 'back-to-top',
   HERO_SECTION: 'hero-section',
-  CARD_SECTION: 'card-section'
+  CARD_SECTION: 'card-section',
 };
- 
 class Slider {
   constructor() {
     this.currentIndex = 0;
     this.previousIndex = 0;
- 
     this.initialize();
   }
   initialize() {
+    const scrollToFristSec = document.querySelector(
+      `.${cssClasses.SCROLL_SECTION}`
+    );
+    const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
     window.addEventListener('load', () => {
       const yearTimeline = gsap.timeline();
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
       yearTimeline.add(this.clickNavLink());
     });
-    window.addEventListener('scroll', () => {
-      const yearNav = document.querySelector(
-        `.${cssClasses.NAVIGATION_WRAPPER}`
-      );
-      const fixedMenu = document.querySelector(
-        `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
-      );
-      const lastYearSection = document.querySelector(`#${cssClasses.SECTION_2022}`);
-      if (fixedMenu !== undefined) {
-        if (
-          window.pageYOffset >=
-          lastYearSection.offsetTop + lastYearSection.offsetHeight + 500
-        ) {
-          yearNav?.classList.add(cssClasses.HIDE_NAVIGATION);
-        } else {
-          yearNav?.classList.remove(cssClasses.HIDE_NAVIGATION);
-        }
-      }
-    });
- 
-    const scrollToFristSec = document.querySelector(`.${cssClasses.SCROLL_SECTION}`);
-    const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
+
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
       const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
@@ -74,6 +55,7 @@ class Slider {
       });
     });
   }
+
   startup() {
     const yearNavigationTimeline = gsap.timeline({
       id: 'Loading year navigation',
@@ -88,7 +70,6 @@ class Slider {
       {autoAlpha: 0, y: 100, stagger: 0.1, ease: 'power.out'},
       '<'
     );
- 
     return yearNavigationTimeline;
   }
   scrollSections() {
@@ -104,11 +85,20 @@ class Slider {
       parseInt(window.getComputedStyle(item).height) +
       parseInt(window.getComputedStyle(item).marginBottom) +
       5;
-    const firstYearSection = document.querySelector(`.${cssClasses.CARD_SECTION}`);
+    const firstYearSection = document.querySelector(
+      `.${cssClasses.CARD_SECTION}`
+    );
     const chromeLogoWrapper = document.querySelector(
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
     const chromeLogo = document.querySelector(`.${cssClasses.CHROME_LOGO}`);
+
+    const fixedMenu = document.querySelector(
+      `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
+    );
+    const lastYearSection = document.querySelector(
+      `#${cssClasses.SECTION_2022}`
+    );
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
       const menuitem = 'menu__'.concat(activeSection);
@@ -173,13 +163,26 @@ class Slider {
                 cssClasses.FIXED_NAVIGATION_WRAPPER
               );
             }
+
+            // Handling side nav when user scroll to the footer
+
+            if (fixedMenu !== undefined) {
+              if (
+                window.pageYOffset >=
+                lastYearSection.offsetTop + lastYearSection.offsetHeight + 500
+              ) {
+                chromeLogoWrapper?.classList.add(cssClasses.HIDE_NAVIGATION);
+              } else {
+                chromeLogoWrapper?.classList.remove(cssClasses.HIDE_NAVIGATION);
+              }
+            }
           },
           toggleActions: 'play reverse play reverse',
         },
       });
- 
+
       yearScrollTimeline.to(menulink, {duration: 0.5, scale: '2.5'}, '>');
- 
+
       return yearScrollTimeline;
     });
   }

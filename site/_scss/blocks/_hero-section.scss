@@ -93,7 +93,7 @@
       .share-info {
         display: none;
 
-        @include media-query('lg') {
+        @include media-query('md') {
           display: inline-flex;
         }
 
