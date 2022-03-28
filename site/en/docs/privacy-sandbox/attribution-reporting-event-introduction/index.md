@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Event-level reports in the Attribution Reporting API '
+title: '[Obsolete] Event-level reports in the Attribution Reporting API '
 subhead: >
   Learn the basics of ad conversion measurement with the Attribution Reporting API with event-level reports.
 date: 2021-11-19
@@ -15,7 +15,7 @@ authors:
 {% Aside 'warning' %}
 The Attribution Reporting proposal is changing. The information contained in this post is obsolete, and will be updated.
 
-**Read all the details in [What's changing in January 2022?](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**
+**Read all the details in [Updates in January 2022](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**
 {% endAside %}
 
 Event-level reports are one of the two types of reports that can be generated via the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-in-short/). This API makes it possible to measure ad conversions without cross-site tracking.

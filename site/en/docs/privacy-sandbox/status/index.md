@@ -18,20 +18,17 @@ There may be multiple separate origin trial periods for each API.
 
 _Previously known as Conversion Measurement._
 
-- [Current origin trial](https://web.dev/origin-trials/): from Chrome 86, [now extended](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) to Chrome&nbsp;93. 
-- [Register for origin
-  trial](/origintrials/#/view_trial/3411476717733150721).
 - [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
 - [Blink
-  status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
+  status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=attribution%20reporting).
 - [GitHub](https://github.com/WICG/conversion-measurement-api/): see
   [issues](https://github.com/WICG/conversion-measurement-api/issues) for API questions
   and discussion.
 
 ### Status: details
 
-See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
+See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 
 ### All resources
 

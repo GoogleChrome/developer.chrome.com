@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Using event-level reports in the Attribution Reporting API'
+title: '[Obsolete] Using event-level reports in the Attribution Reporting API'
 subhead: >
   Learn how to use the Attribution Reporting API for click-through measurement with event-level reports.
 date: 2021-11-19
@@ -15,7 +15,7 @@ authors:
 {% Aside 'warning' %}
 The Attribution Reporting proposal is changing. The information contained in this post is obsolete, and will be updated.
 
-**Read all the details in [What's changing in January 2022?](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**
+**Read all the details in [Updates in January 2022](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**
 {% endAside %}
 
 ## Who is this blogpost for?
