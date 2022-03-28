@@ -30,6 +30,7 @@ import {
   ref,
   set,
   onValue,
+  increment,
   // @ts-ignore
 } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js';
 
@@ -96,8 +97,8 @@ export class LikeIcon extends BaseElement {
     localStorage.setItem(this.itemId, this.liked);
 
     // Save to store.
-    const likes = this.liked ? this.likes + 1 : this.likes - 1;
-    set(this.likesRef, Math.max(likes, 0));
+    const delta = this.liked ? 1 : -1;
+    set(this.likesRef, increment(delta));
   }
 
   render() {
