@@ -5,7 +5,7 @@ subhead: >
   Manage how your page and third-party iframes on your page have access to browser features
 description: >
   Use Permissions Policy to control how your and your third-party iframes access to browser features
-date: 2022-03-25
+date: 2022-03-31
 authors:
   - kevinkiklee
 ---
@@ -26,7 +26,7 @@ Permissions Policy has been renamed from Feature Policy. The key concepts remain
 
 [Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. You can learn more about Structured Fields from the [introduction article](https://www.fastly.com/blog/improve-http-structured-headers).
 
-* Before (Feature Policy):  
+* Before (Feature Policy):
   * `geolocation ‘self’ https://example.com; camera ‘none’`
 * After (Permissions Policy): 
   * `geolocation=(self "https://example.com"), camera=()`
@@ -186,6 +186,7 @@ This setup can be seen in the [demo](https://permissions-policy-demo.glitch.me/d
 ### Feature blocked on all origins
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/QplbQpjXOSnZxMBlNeLN.png", alt="Architecture of all origins blocked from accessing the feature", width="682", height="421" %}
+
 ```text
 Permissions-Policy: geolocation=()
 ```
@@ -229,7 +230,7 @@ const hasCameraAttributeValue = someIframeEl.hasAttribute('allow')
 const isCameraFeatureAllowed = isCameraPolicySet && hasCameraAttributeValue
 ```
 
-#### Better approach
+#### Better approach for checking iframe feature access
 
 Instead of the above approach, you can use element.allowsFeature(feature) that takes the allow attribute into account unlike document.allowsFeature(feature, origin) that does not. To simplify the code, we can use that to inspect the featurePolicy object on the actual iframe element, rather than checking for that origin from the document. 
 
@@ -260,10 +261,10 @@ Since the Feature Policy headers are only supported in Chromium-based browsers, 
 If you have a Feature-Policy header like this:
 ```text
 Feature-Policy:
-	autoplay *;
-	geolocation ‘self’;
-	camera ‘self’ ‘https://trusted-site.example’;
-	fullscreen ‘none’;	
+  autoplay *;
+  geolocation ‘self’;
+  camera ‘self’ ‘https://trusted-site.example’;
+  fullscreen ‘none’;	
 ```
 
 Update it to the Structured Fields syntax that Permissions Policy header uses:
@@ -277,11 +278,11 @@ Permissions-Policy:
 
 ### Update `document.allowsFeature(feature, origin)` usage
 
-If you are using document.allowsFeature(feature, origin) method, use allowsFeature(feature) method attached on the iframe element, and not the containing document. The method element.allowsFeature(feature) accounts for the allow attribute while document.allowsFeature(feature, origin) does not. The example is found in the above section ____ADD ANCHOR LINK ____.
+If you are using document.allowsFeature(feature, origin) method, use allowsFeature(feature) method attached on the iframe element, and not the containing document. The method element.allowsFeature(feature) accounts for the allow attribute while document.allowsFeature(feature, origin) does not. The sample code is found in the [previous example section](#better-approach-for-checking-iframe-feature-access).
 
 ## Reporting API
 
-The Reporting API is an experimental API that allows developers to monitor policy violations.
+The [Reporting API](https://web.dev/reporting-api/) provides a reporting mechanism for web applications in a consistent manner, and Reporting API for Permissions Policy violations is available as an experimental feature.
 
 ```text
 Reporting-Endpoints: main-endpoint="https://reports.example/main", default="https://reports.example/default"
@@ -290,9 +291,9 @@ Content-Security-Policy: script-src 'self'; object-src 'none'; report-to main-en
 Document-Policy: document-write=?0; report-to=main-endpoint;
 ```
 
-In the current implementation, you can receive policy violation reports from any violations occurring within that frame by configuring an endpoint named ‘default’ like the example above.  Subframes will require their own reporting configuration.
+In the current implementation, you can receive policy violation reports from any violations occurring within that frame by configuring an endpoint named ‘default’ like the example above.  Subframes will require their own reporting configuration. 
 
-You can learn more about the Reporting API from the [explainer article](https://web.dev/reporting-api/). Reporting API for Permissions Policy is available as an experimental feature, and there is currently a discussion regarding its usefulness. Feel free to share your thoughts at the [Reporting API discussion](https://github.com/w3c/webappsec-permissions-policy/issues/386).
+There is currently a discussion regarding its usefulness, and feel free to share your thoughts at the [Reporting API discussion](https://github.com/w3c/webappsec-permissions-policy/issues/386).
 
 ## Chrome DevTools integration
 
