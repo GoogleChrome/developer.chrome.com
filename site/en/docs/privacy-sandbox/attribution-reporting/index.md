@@ -238,6 +238,13 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 - The API is not active in **Incognito** mode. 
 - The API is not active when **third-party cookies** are disabled. 
 
+{% Aside %}
+
+The API does not rely on third-party cookies. However, in the testing phase, third-party cookies need to be enabled for the API to be enabled. This should make it easier for developers experimenting with the API to compare the API's performance with cookie-based performance.
+
+{% endAside %}
+
+
 ## How can sites control access? {: #sites-control }
 
 Arbitrary third-parties can't use the API without a publisher's or advertiser's knowledge. The
