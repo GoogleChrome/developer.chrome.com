@@ -15,7 +15,7 @@ the URL of a web page and the CSS selectors its content matches, without needing
 permission][docs-host-perm] or inject a [content script][docs-content-scripts]. 
 
 Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
-extension's action (toolbar icon).
+toolbar icon.
 
 ## Rules
 
@@ -29,6 +29,7 @@ criteria are met. For example, the following rule uses [pageUrl][type-page-url] 
 for pages on "https://www.google.com/" when a password field is present:
 
 ```js
+
 var rule1 = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
@@ -38,6 +39,7 @@ var rule1 = {
   ],
   actions: [ new chrome.declarativeContent.ShowAction() ]
 };
+
 ```
 
 {% Aside %}
@@ -46,8 +48,8 @@ All conditions and actions are created via a constructor as shown in the example
 
 {% endAside %}
 
-If you also wanted to enable the extension's action on sites that contain a video element, you could
-add a second condition to the rule. Each condition is sufficient to trigger all specified actions:
+In order to also enable the toolbar icon for sites with a video, you can add a second condition, as
+each condition is sufficient to trigger all specified actions:
 
 ```js
 var rule2 = {
@@ -83,7 +85,7 @@ but facilitates a faster matching algorithm.
 {% endAside %}
 
 Combine the above rule with the [activeTab][api-action] permission to create an extension that
-doesn't need any install-time permissions but can invite the user to click the extension's action on
+doesn't need any install-time permissions but can invite the user to click the toolbar icon on
 relevant pages.
 
 ## CSS Matching
@@ -92,30 +94,7 @@ relevant pages.
 selectors][w3-compound]_, meaning that you can't include [combinators][mdn-combinators] like
 whitespace or "`>`" in your selectors. This helps Chrome match the selectors more efficiently.
 
-<table>
-  <tbody>
-    <tr>
-      <th>Compound Selectors (OK)</th>
-      <th>Complex Selectors (Not OK)</th>
-    </tr>
-    <tr>
-      <td><code>a</code></td>
-      <td><code>div p</code></td>
-    </tr>
-    <tr>
-      <td><code>iframe.special[src^='http']</code></td>
-      <td><code>p&gt;span.highlight</code></td>
-    </tr>
-    <tr>
-      <td><code>ns|*</code></td>
-      <td><code>p + ol</code></td>
-    </tr>
-    <tr>
-      <td><code>#abcd:checked</code></td>
-      <td><code>p::first-line</code></td>
-    </tr>
-  </tbody>
-</table>
+<table><tbody><tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr><tr><td><code>a</code></td><td><code>div p</code></td></tr><tr><td><code>iframe.special[src^='http']</code></td><td><code>p&gt;span.highlight</code></td></tr><tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr><tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr></tbody></table>
 
 CSS conditions only match displayed elements: if an element that matches your selector is
 `display:none` or one of its parent elements is `display:none`, it doesn't cause the condition to
@@ -126,7 +105,7 @@ can still make your condition match.
 
 The [`PageStateMatcher.isBookmarked`][property-is-bookmarked] condition allows matching of the
 bookmarked state of the current URL in the user's profile. To make use of this condition the
-"bookmarks" permission must be declared in the extension [manifest][docs-manifest].
+"bookmarks" permission must be declared in the extension [manifest][docs-manifest]
 
 [api-action]: /docs/extensions/reference/action/
 [api-declarative]: /docs/extensions/reference/events/#declarative-event-handlers
