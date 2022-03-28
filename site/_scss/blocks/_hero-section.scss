@@ -76,7 +76,7 @@
 
       .hero-desc {
         font-size: 14px;
-        margin: 22px auto 18px;
+        margin: 22px auto 0;
         max-width: 324px;
 
         @include media-query('md') {

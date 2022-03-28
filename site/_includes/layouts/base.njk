@@ -37,7 +37,6 @@
 
     {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
-    {% block chromescripts %}{% endblock %}
 
   </head>
   <body>
@@ -65,6 +64,8 @@
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}
+
+    {% block chromescripts %}{% endblock %}
 
     {% block chromeanalytics %}{% endblock %}
   </body>

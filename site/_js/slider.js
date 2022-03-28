@@ -24,7 +24,6 @@ class Slider {
   initialize() {
     window.addEventListener('load', () => {
       const yearTimeline = gsap.timeline();
-      console.log(yearTimeline);
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
       yearTimeline.add(this.clickNavLink());
@@ -49,6 +48,20 @@ class Slider {
         }
       }
     });
+ 
+    let scrollToFristSec = document.querySelector('.scroll-section');
+    let scrollToTopSec = document.querySelector('.back-to-top ');
+    scrollToFristSec.addEventListener('click', (e) => {
+      e.preventDefault();
+      let firstSec = document.querySelector("#section2008");
+      gsap.to(window, {scrollTo:firstSec, duration:1.5, ease:'power1.inOut'});
+    })
+ 
+    scrollToTopSec.addEventListener('click', (e) => {
+      e.preventDefault();
+      let firstSec = document.querySelector(".hero-section");
+      gsap.to(window, {scrollTo:firstSec, duration:1.5, ease:'power1.inOut'});
+    })
   }
  
   startup() {
@@ -80,8 +93,8 @@ class Slider {
     const item = navItem.querySelectorAll(`.${cssClasses.MENU_ITEM}`)[0];
     const itemHeight =
       parseInt(window.getComputedStyle(item).height) +
-      parseInt(window.getComputedStyle(item).marginBottom);
-    const firstYearSection = document.getElementById('section2008');
+      parseInt(window.getComputedStyle(item).marginBottom) + 5;
+    const firstYearSection = document.querySelector(".card-section");
     const chromeLogoWrapper = document.querySelector(
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
@@ -138,7 +151,7 @@ class Slider {
             oldScrollValue = newScrollValue;
           },
           start: 'top 80%',
-          end: '+5px',
+          end: '80%',
           onUpdate: () => {
             if (window.pageYOffset >= firstYearSection.offsetTop) {
               progressNav?.classList.add(cssClasses.FIXED_YEAR_NAVIGATION);

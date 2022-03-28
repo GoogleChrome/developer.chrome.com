@@ -33,6 +33,10 @@
   &-info {
     font-size: 18px;
     line-height: 28px;
+
+    &:nth-child(3) {
+      padding-top: 10px;
+    }
   }
 
   share-button {

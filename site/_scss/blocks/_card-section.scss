@@ -2,19 +2,13 @@
 /* stylelint-disable selector-max-compound-selectors*/
 /* TODO - Need to work on removing 2/3 level nesting. */
 
-html {
-  scroll-behavior: smooth;
-}
-
 .card-section {
   font-family: 'Google Sans';
-  height: 100vh;
   position: relative;
-  width: 100%;
 
   .navigation-wrapper {
     height: 100vh;
-    left: 0;
+    left: 5px;
     position: absolute;
     top: 56px;
     width: 100px;
@@ -62,7 +56,6 @@ html {
         padding: 0;
         position: absolute;
         top: 40%;
-        // z-index: 9000;
 
         li {
           height: 60px;
@@ -95,12 +88,12 @@ html {
     position: fixed;
 
     @include media-query('lg') {
-      left: 82px;
+      left: 87px;
     }
   }
 
   .fixed-year-navigation {
-    left: 0;
+    left: 5px;
     position: fixed;
     top: 120px;
 
