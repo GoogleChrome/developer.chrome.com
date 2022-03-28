@@ -5,7 +5,7 @@ subhead: >
   How we collaborate with stakeholders to discuss, test, and adopt privacy-preserving technologies.
 description: >
   How we collaborate with stakeholders to discuss, test, and adopt privacy-preserving technologies.
-date: 2022-02-25
+date: 2022-03-30
 authors:
   - alexandrawhite
 ---
@@ -25,21 +25,22 @@ Rich Internet Applications (WAI-ARIA) standard](https://www.w3.org/TR/wai-aria-1
 (commonly known as just "ARIA") defines technical ways to make the web more
 accessible to those with disabilities. These specs are developed for and by the
 [World Wide Web Consortium (W3C)](https://www.w3.org/Consortium/), an
-international community with full-time staff, member organizations, and feedback
-from the general public.
+international community with full-time staff, member organizations, and
+feedback from the general public.
 
 After [discussion](#discussion), [testing](#testing), and [scaled
 adoption](#scaled-adoption), some proposals will become specs. It's
-critical we receive feedback from developers and industry leaders (with and
-without web technology knowledge) to ensure we create durable web features with
-broad utility and robust privacy protections for users.
+critical we [receive feedback](/docs/privacy-sandbox/feedback/) from
+developers and industry leaders (with and without web technology knowledge) to
+ensure we create durable web features with broad utility and robust privacy
+protections for users.
 
 Chromium (the open source platform behind many modern browsers) has written
 about the [feature development
 process](https://www.chromium.org/blink/launching-features/) for all
 technologies which aim to become a web standard. Because of the critical nature
 of privacy and security on the web, we expect and encourage large amounts of
-discussion and feedback before testing can begin.
+discussion and feedback before testing begins.
 
 ## From proposal to web standard
 
@@ -50,8 +51,8 @@ whose expertise is critical to this initiative.
 
 ### Start with discussion {: #discussion}
 
-There have been dozens of
-[privacy-preserving proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
+There have been dozens of [privacy-preserving
+proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
 offered by Chrome and others over the last couple of years. You can read these
 proposals, ask questions, offer ideas to improve them and see what others are
 saying. 
@@ -74,7 +75,7 @@ tracking. With input from privacy advocates and many industry stakeholders,
 FLEDGE has evolved from two previous proposals (PIGIN and TURTLEDOVE). More
 than one hundred organizations have joined [W3C
 meetings](https://github.com/WICG/turtledove/issues/88) to help refine the
-current version, plus over  [200 online discussion
+current version, plus over [200 online discussion
 threads](https://github.com/WICG/turtledove/issues).
 
 {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Rg4lEQVzb1v6CZTyzFTE.png",
@@ -141,7 +142,7 @@ impact advertising performance.
 
 ### Launch for scaled adoption {: #scaled-adoption}
 
-Once an API is tested and ready for general use in Chrome, we'll announce the
+Once an API is tested and ready for general use in Chrome, we announce the
 launch and make sure public documentation is ready for scaled ecosystem
 adoption.
 
@@ -176,20 +177,20 @@ alt="", width="800", height="338" %}
 In April 2022, gradual UA string reduction will begin in Chrome. UA-CH launched
 and was ready for scaled adoption starting in March of 2021&mdash;you can begin
 testing and migrating to it now. [Participate in an origin
-trial](/origintrials/#/view_trial/-7123568710593282047) to opt-in to the reduced
-UA string so you can see what the future state looks like.
+trial](/origintrials/#/view_trial/-7123568710593282047) to opt-in to the
+reduced UA string so you can see what the future state looks like.
 
 It's important that developers have ample time to transition their websites to
 adopt new standards. If it turns out your site needs extra time, you'll be able
-to opt-in to keep using the User Agent string as-is through March 2023.
+to opt-in to keep using the User-Agent string as-is through March 2023.
 
 ## Wrap up and feedback  {: #wrap-up-feedback}
 
 We'll continue to explain what's happening, provide as much forward visibility
 as we can, encourage your involvement, and hear your input.
 
-*  Monitor and [engage in conversation](#discussion) around
-   [privacy proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
+*  Learn about the many ways in which you can [provide
+   feedback](/docs/privacy-sandbox/feedback/).
 *  Read the technical details and [implementation guidelines](/docs/privacy-sandbox/).
 *  Share your feedback with [@ChromiumDev on Twitter](https://twitter.com/ChromiumDev).
 *  Submit Issues to the [developer support

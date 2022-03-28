@@ -6,7 +6,7 @@ subhead: >
 description: >
   An update on our progress at the 2021 Chrome Developer Summit, with an overview of how we collaborate with stakeholders to discuss, test, and adopt APIs.
 date: 2021-11-03
-updated: 2022-02-25
+updated: 2022-03-30
 authors:
   - alexandrawhite
 ---
