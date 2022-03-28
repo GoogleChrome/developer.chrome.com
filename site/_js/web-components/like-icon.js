@@ -67,12 +67,12 @@ export class LikeIcon extends BaseElement {
 
     // Read likes from Firebase DB
     const app = initializeApp(config);
-    this.db = getDatabase(app);
+    const db = getDatabase(app);
     if (location.hostname === 'localhost') {
       // Point to the DB emulator running on localhost
-      connectDatabaseEmulator(this.db, 'localhost', 9000);
+      connectDatabaseEmulator(db, 'localhost', 9000);
     }
-    this.likesRef = ref(this.db, 'dcc-likes/' + this.itemId + '/likesCount');
+    this.likesRef = ref(db, 'dcc-likes/' + this.itemId + '/likesCount');
     this.unsubscribe = onValue(this.likesRef, snapshot => {
       const data = snapshot.val();
       if (!data) {
