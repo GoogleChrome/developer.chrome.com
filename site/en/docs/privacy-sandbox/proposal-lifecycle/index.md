@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Privacy Sandbox Proposals Process
+title: Proposal lifecycle in the Privacy Sandbox
 subhead: >
   How we collaborate with stakeholders to discuss, test, and adopt privacy-preserving technologies.
 description: >
