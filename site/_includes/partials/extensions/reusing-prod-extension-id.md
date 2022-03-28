@@ -8,7 +8,7 @@ Package the extension directory into a `.zip` file and upload it to the [Chrome 
 Dashboard](https://chrome.google.com/webstore/developer/dashboard) without publishing it:
 
 1.  On the Developer Dashboard, click **Add new item**.
-2.  Click **Browse files**, select the extension's `zip` file, and upload it.
+2.  Click **Browse files**, select the extension's zip file, and upload it.
 3.  Go to the **Package** tab and click **View public key**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", 
@@ -23,7 +23,7 @@ When the popup is open, follow these steps:
 width="500", height="233", class="screenshot" %}
 
 Add the code to the `manifest.json` under the [`"key"`]([/docs/extensions/mv3/manifest/key/) field.
-This way the extension will maintain the same ID.
+This way the extension will use the same ID.
 
 ```json
 { // manifest.json 
@@ -35,7 +35,7 @@ This way the extension will maintain the same ID.
 
 ### Compare IDs {: #extension_management }
 
-Open the Extensions Management page at `chrome://extensions`, ensure **Developer mode** is enabled
+Open the Extensions Management page at `chrome://extensions`, ensure **Developer mode** is enabled,
 and upload the unpackaged extension directory. Compare the extension ID on the extensions management
 page to the Item ID in the Developer Dashboard. They should match.
 
