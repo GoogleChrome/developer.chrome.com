@@ -50,3 +50,5 @@ fedcm:
   en: 'Federated Credentials Management (FedCM)'
 permissions-policy:
   en: 'Permissions Policy'
+permissions-policy-description:
+  en: 'Use Permissions Policy to control how your and your third-party iframes access to browser features'
