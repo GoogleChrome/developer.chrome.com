@@ -11,13 +11,19 @@ const cssClasses = {
   CHROME_LOGO: 'chrome-logo',
   YEAR_SECTION: 'inner-card',
   HIDE_NAVIGATION: 'hide-navigation',
+  SECTION_2022: 'section2022',
+  SECTION_2008: 'section2008',
+  SCROLL_SECTION: 'scroll-section',
+  BACK_TO_TOP: 'back-to-top',
+  HERO_SECTION: 'hero-section',
+  CARD_SECTION: 'card-section'
 };
-
+ 
 class Slider {
   constructor() {
     this.currentIndex = 0;
     this.previousIndex = 0;
-
+ 
     this.initialize();
   }
   initialize() {
@@ -34,11 +40,11 @@ class Slider {
       const fixedMenu = document.querySelector(
         `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
       );
-      const lastYearSection = document.querySelector('#section2022');
+      const lastYearSection = document.querySelector(`#${cssClasses.SECTION_2022}`);
       if (fixedMenu !== undefined) {
         if (
           window.pageYOffset >=
-          lastYearSection.offsetTop + lastYearSection.offsetHeight - 500
+          lastYearSection.offsetTop + lastYearSection.offsetHeight + 500
         ) {
           yearNav?.classList.add(cssClasses.HIDE_NAVIGATION);
         } else {
@@ -46,12 +52,12 @@ class Slider {
         }
       }
     });
-
-    const scrollToFristSec = document.querySelector('.scroll-section');
-    const scrollToTopSec = document.querySelector('.back-to-top ');
+ 
+    const scrollToFristSec = document.querySelector(`.${cssClasses.SCROLL_SECTION}`);
+    const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
-      const firstSec = document.querySelector('#section2008');
+      const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
       gsap.to(window, {
         scrollTo: firstSec,
         duration: 1.5,
@@ -60,7 +66,7 @@ class Slider {
     });
     scrollToTopSec.addEventListener('click', e => {
       e.preventDefault();
-      const firstSec = document.querySelector('.hero-section');
+      const firstSec = document.querySelector(`.${cssClasses.HERO_SECTION}`);
       gsap.to(window, {
         scrollTo: firstSec,
         duration: 1.5,
@@ -82,7 +88,7 @@ class Slider {
       {autoAlpha: 0, y: 100, stagger: 0.1, ease: 'power.out'},
       '<'
     );
-
+ 
     return yearNavigationTimeline;
   }
   scrollSections() {
@@ -98,7 +104,7 @@ class Slider {
       parseInt(window.getComputedStyle(item).height) +
       parseInt(window.getComputedStyle(item).marginBottom) +
       5;
-    const firstYearSection = document.querySelector('.card-section');
+    const firstYearSection = document.querySelector(`.${cssClasses.CARD_SECTION}`);
     const chromeLogoWrapper = document.querySelector(
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
@@ -171,9 +177,9 @@ class Slider {
           toggleActions: 'play reverse play reverse',
         },
       });
-
+ 
       yearScrollTimeline.to(menulink, {duration: 0.5, scale: '2.5'}, '>');
-
+ 
       return yearScrollTimeline;
     });
   }
