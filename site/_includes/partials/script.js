@@ -40,20 +40,6 @@
   );
 
   ga('send', 'pageview');
-  const chromeAnchors = document.getElementsByTagName('a');
-  for (const item of chromeAnchors) {
-    item.addEventListener('click', () => {
-      const linkAction = item.getAttribute('data-action');
-      const linkCategory = item.getAttribute('data-category');
-      const linkLabel = item.getAttribute('data-label');
-      ga('send', {
-        hitType: 'event',
-        eventCategory: `${linkCategory}`,
-        eventAction: `${linkAction}`,
-        eventLabel: `${linkLabel}`,
-      });
-    });
-  }
 
   // Check if the user has accepted cookies. If so, set an attribute on
   // the html element which will hide the banner.

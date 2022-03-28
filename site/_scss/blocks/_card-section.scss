@@ -1,8 +1,8 @@
 /* stylelint-disable max-nesting-depth*/
 /* stylelint-disable selector-max-compound-selectors*/
-/* TODO - Need to work on removing 2/3 level nesting. */
+/* Disabled nesting since required as per the DOM */
 
-@use "sass:map";
+@use 'sass:map';
 
 $chrome-100-colors: (
   'heart-red': #f44336,
@@ -48,7 +48,6 @@ $chrome-100-colors: (
     }
 
     .chrome-logo {
-      height: 46px;
       margin: 0 auto;
       width: 48px;
     }
@@ -78,12 +77,13 @@ $chrome-100-colors: (
 
       ul {
         list-style-type: none;
-        padding: 0;
+        padding: 22px 0 0;
         position: absolute;
+        text-align: center;
         top: 40%;
 
         li {
-          height: 60px;
+          margin-bottom: 45px;
 
           a {
             color: #{get-color('grey-800')};
@@ -99,8 +99,7 @@ $chrome-100-colors: (
             }
           }
 
-          a:hover,
-          a:focus {
+          a:hover {
             text-decoration: underline;
           }
         }
@@ -199,12 +198,11 @@ $chrome-100-colors: (
           .card-heading {
             color: #{get-color('black')};
             font-size: 18px;
+            font-weight: 700;
             line-height: 28px;
-            text-decoration: underline;
 
             @include media-query('md') {
               font-size: 22px;
-              line-height: 38px;
             }
           }
 
@@ -219,7 +217,10 @@ $chrome-100-colors: (
           a {
             display: flex;
             justify-content: space-between;
-            padding-right: 70px;
+
+            @include media-query('md') {
+              padding-right: 60px;
+            }
           }
         }
 
@@ -261,6 +262,10 @@ $chrome-100-colors: (
               svg {
                 pointer-events: none;
               }
+
+              .icon {
+                fill: none;
+              }
             }
 
             .like-count {
@@ -271,7 +276,7 @@ $chrome-100-colors: (
 
             .like {
               .fill-like {
-                fill: map.get($chrome-100-colors,"heart-red");
+                fill: map.get($chrome-100-colors, 'heart-red');
                 stroke: transparent;
               }
             }
@@ -282,63 +287,63 @@ $chrome-100-colors: (
   }
 
   .year-2008 {
-    background: map.get($chrome-100-colors,"year-2008");
+    background: map.get($chrome-100-colors, 'year-2008');
   }
 
   .year-2009 {
-    background: map.get($chrome-100-colors,"year-2009");
+    background: map.get($chrome-100-colors, 'year-2009');
   }
 
   .year-2010 {
-    background: map.get($chrome-100-colors,"year-2010");
+    background: map.get($chrome-100-colors, 'year-2010');
   }
 
   .year-2011 {
-    background: map.get($chrome-100-colors,"year-2011");
+    background: map.get($chrome-100-colors, 'year-2011');
   }
 
   .year-2012 {
-    background: map.get($chrome-100-colors,"year-2012");
+    background: map.get($chrome-100-colors, 'year-2012');
   }
 
   .year-2013 {
-    background: map.get($chrome-100-colors,"year-2013");
+    background: map.get($chrome-100-colors, 'year-2013');
   }
 
   .year-2014 {
-    background: map.get($chrome-100-colors,"year-2014");
+    background: map.get($chrome-100-colors, 'year-2014');
   }
 
   .year-2015 {
-    background: map.get($chrome-100-colors,"year-2015");
+    background: map.get($chrome-100-colors, 'year-2015');
   }
 
   .year-2016 {
-    background: map.get($chrome-100-colors,"year-2016");
+    background: map.get($chrome-100-colors, 'year-2016');
   }
 
   .year-2017 {
-    background: map.get($chrome-100-colors,"year-2017");
+    background: map.get($chrome-100-colors, 'year-2017');
   }
 
   .year-2018 {
-    background: map.get($chrome-100-colors,"year-2018");
+    background: map.get($chrome-100-colors, 'year-2018');
   }
 
   .year-2019 {
-    background: map.get($chrome-100-colors,"year-2019");
+    background: map.get($chrome-100-colors, 'year-2019');
   }
 
   .year-2020 {
-    background: map.get($chrome-100-colors,"year-2020");
+    background: map.get($chrome-100-colors, 'year-2020');
   }
 
   .year-2021 {
-    background: map.get($chrome-100-colors,"year-2021");
+    background: map.get($chrome-100-colors, 'year-2021');
   }
 
   .year-2022 {
-    background: map.get($chrome-100-colors,"year-2022");
+    background: map.get($chrome-100-colors, 'year-2022');
   }
 
   .hide-navigation {

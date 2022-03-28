@@ -16,19 +16,44 @@
 
 {% block chromeanalytics %}
   <script>
-    const chromeAnchors = document.getElementsByTagName('a');
-    for (const item of chromeAnchors) {
-      item.addEventListener('click', () => {
-        const linkAction = item.getAttribute('data-action');
-        const linkCategory = item.getAttribute('data-category');
-        const linkLabel = item.getAttribute('data-label');
-        ga('send', {
-          hitType: 'event',
-          eventCategory: `${linkCategory}`,
-          eventAction: `${linkAction}`,
-          eventLabel: `${linkLabel}`
+      function getAnalyticsData(elem, defaultAction = 'click') {
+        const category = elem.dataset['gaCategory'] || undefined;
+        const action = elem.dataset['gaAction'] || defaultAction;
+        const label = elem.dataset['gaLabel'] || undefined;
+        return {
+          category,
+          action,
+          label,
+        };
+      }
+
+      function chrome100TrackEvent({category, action, label}) {
+        ga('send', 'event', {
+          eventCategory: category,
+          eventAction: action,
+          eventLabel: label,
+          eventValue: '',
         });
-      });
-    }
+      }
+
+      document.addEventListener(
+        'click',
+        /**
+        * @param {WMouseEvent} e
+        */
+        (e) => {
+          const clickableEl = e.target.closest('a[href], .ga-event');
+          if (!clickableEl) {
+            return;
+          }
+
+          const data = getAnalyticsData(clickableEl);
+          if (!data.category) {
+            return; // category is required
+          }
+
+          chrome100TrackEvent(data);
+        },
+      );
   </script>
 {% endblock %}

@@ -1,6 +1,8 @@
 /* stylelint-disable max-nesting-depth*/
 /* stylelint-disable selector-max-compound-selectors*/
-/* TODO - Need to work on removing 2/3 level nesting. */
+/* Disabled nesting since required as per the DOM */
+
+$share-text-color: #3c4043;
 
 .hero-section {
   .mobile-share-logo {
@@ -18,9 +20,25 @@
 
   share-button {
     width: auto;
+
     @include media-query('md') {
       margin-top: 2px;
       width: 32px;
+    }
+
+    a {
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    &:hover {
+      background: none;
+
+      @include media-query('md') {
+        background: var(--color-bg-shade);
+      }
     }
   }
 
@@ -98,13 +116,18 @@
         }
 
         .share-logo {
-          height: 22px;
-          padding-right: 20px;
-          width: 20px;
-        }
-
-        .share-text {
+          color: $share-text-color;
           font-size: 18px;
+          height: 22px;
+          text-decoration: none;
+
+          svg {
+            margin: 5px 15px 0 0;
+          }
+
+          &:visited {
+            color: $share-text-color;
+          }
         }
       }
     }
@@ -113,8 +136,9 @@
   .scroll-section {
     margin: 28px 0 48px;
 
-    @include media-query('lg') {
-      margin: 20px 0 86px;
+    @include media-query('md') {
+      margin: 20px auto 86px;
+      width: 200px;
     }
 
     a {
@@ -129,12 +153,13 @@
       color: #{get-color('black')};
       font-size: 14px;
       letter-spacing: 0.28em;
+      padding-left: 15px;
     }
 
     .scroll-icon {
-      height: 9px;
+      height: 20px;
       margin: 30px auto 0;
-      width: 16px;
+      width: 20px;
     }
 
     .bounce {

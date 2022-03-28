@@ -17,25 +17,60 @@ const cssClasses = {
   BACK_TO_TOP: 'back-to-top',
   HERO_SECTION: 'hero-section',
   CARD_SECTION: 'card-section',
+  FOOTER_TOP_SECTION: 'footer-top-section',
+};
+const imgBaseUrl = 'https://wd.imgix.net/image/H2WDdWf5aPXOtVabf53xIxMJyTF2/';
+const chromeLogoVersions = {
+  2008: '6Zok8fOGKlKnPmmA3BNM.png',
+  2009: '6Zok8fOGKlKnPmmA3BNM.png',
+  2010: '6Zok8fOGKlKnPmmA3BNM.png',
+  2011: 'AkT3tMmLmIlEphta9Zv0.png',
+  2012: 'AkT3tMmLmIlEphta9Zv0.png',
+  2013: 'AkT3tMmLmIlEphta9Zv0.png',
+  2014: '03FZEfj2hitsD2V7kSGz.png',
+  2015: '03FZEfj2hitsD2V7kSGz.png',
+  2016: '03FZEfj2hitsD2V7kSGz.png',
+  2017: '03FZEfj2hitsD2V7kSGz.png',
+  2018: '03FZEfj2hitsD2V7kSGz.png',
+  2019: '03FZEfj2hitsD2V7kSGz.png',
+  2020: '03FZEfj2hitsD2V7kSGz.png',
+  2021: '03FZEfj2hitsD2V7kSGz.png',
+  2022: 'ln27L4WEXP4h01jLfNBc.png',
 };
 class Slider {
   constructor() {
     this.currentIndex = 0;
     this.previousIndex = 0;
     this.initialize();
+
+    const preFooterSection = document.querySelector(
+      `.${cssClasses.FOOTER_TOP_SECTION}`
+    );
+    const yearNav = document.querySelector(`.${cssClasses.NAVIGATION_WRAPPER}`);
+    const observer = new IntersectionObserver(entries => {
+      entries.map(entry => {
+        if (entry.isIntersecting) {
+          yearNav.classList.add(cssClasses.HIDE_NAVIGATION);
+        } else {
+          yearNav.classList.remove(cssClasses.HIDE_NAVIGATION);
+        }
+      });
+    });
+
+    observer.observe(preFooterSection);
   }
   initialize() {
     const scrollToFristSec = document.querySelector(
       `.${cssClasses.SCROLL_SECTION}`
     );
     const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
-    window.addEventListener('load', () => {
+    window.addEventListener('load', event => {
       const yearTimeline = gsap.timeline();
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
       yearTimeline.add(this.clickNavLink());
+      yearTimeline.add(this.handleTab());
     });
-
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
       const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
@@ -55,7 +90,6 @@ class Slider {
       });
     });
   }
-
   startup() {
     const yearNavigationTimeline = gsap.timeline({
       id: 'Loading year navigation',
@@ -92,13 +126,6 @@ class Slider {
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
     const chromeLogo = document.querySelector(`.${cssClasses.CHROME_LOGO}`);
-
-    const fixedMenu = document.querySelector(
-      `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
-    );
-    const lastYearSection = document.querySelector(
-      `#${cssClasses.SECTION_2022}`
-    );
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
       const menuitem = 'menu__'.concat(activeSection);
@@ -115,9 +142,13 @@ class Slider {
             newScrollValue = window.pageYOffset;
             const isActive = self.isActive;
             const activeItemIndex = self.trigger.dataset.index;
-            chromeLogo.src = `/images/meta/chrome_${
-              self.trigger.id.match(/\d+/g)[0]
-            }.png`;
+
+            chromeLogo.src = `${imgBaseUrl}${
+              chromeLogoVersions[self.trigger.id.match(/\d+/g)[0]]
+            }`;
+            chromeLogo.srcset = `${imgBaseUrl}${
+              chromeLogoVersions[self.trigger.id.match(/\d+/g)[0]]
+            }`;
             if (oldScrollValue < newScrollValue) {
               if (isActive) {
                 this.currentIndex = activeItemIndex;
@@ -147,8 +178,8 @@ class Slider {
             }
             oldScrollValue = newScrollValue;
           },
-          start: 'top 80%',
-          end: '80%',
+          start: 'top 20%',
+          end: '50%',
           onUpdate: () => {
             if (window.pageYOffset >= firstYearSection.offsetTop) {
               progressNav?.classList.add(cssClasses.FIXED_YEAR_NAVIGATION);
@@ -162,19 +193,6 @@ class Slider {
               chromeLogoWrapper?.classList.remove(
                 cssClasses.FIXED_NAVIGATION_WRAPPER
               );
-            }
-
-            // Handling side nav when user scroll to the footer
-
-            if (fixedMenu !== undefined) {
-              if (
-                window.pageYOffset >=
-                lastYearSection.offsetTop + lastYearSection.offsetHeight + 500
-              ) {
-                chromeLogoWrapper?.classList.add(cssClasses.HIDE_NAVIGATION);
-              } else {
-                chromeLogoWrapper?.classList.remove(cssClasses.HIDE_NAVIGATION);
-              }
             }
           },
           toggleActions: 'play reverse play reverse',
@@ -193,6 +211,20 @@ class Slider {
         e.preventDefault();
         this.previousIndex = item.dataset.index;
         gsap.to(window, {duration: 1, scrollTo: activeSection});
+      });
+    });
+  }
+  handleTab() {
+    gsap.utils.toArray(`.${cssClasses.MENU_ITEM_LINK}`).forEach(item => {
+      item.addEventListener('keyup', event => {
+        const code = event.keyCode || event.which;
+        this.previousIndex = event.target.dataset.index;
+        if (code === 9) {
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: `#section${event.target.dataset.section}`,
+          });
+        }
       });
     });
   }

@@ -1,19 +1,16 @@
 /* stylelint-disable max-nesting-depth*/
-/* TODO - Need to work on removing 2/3 level nesting. */
+/* Disabled nesting since required as per the DOM */
+
+$share-text-color: #3c4043;
 
 .footer {
   align-items: center;
   font-family: 'Google Sans';
-  height: 899px;
-
-  .no-internet-logo {
-    height: 142px;
-    width: 180px;
-  }
+  margin-top: 200px;
 
   &-description {
     margin-top: 37px;
-    max-width: 689px;
+    max-width: 700px;
     padding: 0 20px;
 
     @include media-query('md') {
@@ -44,20 +41,33 @@
   }
 
   .share-logo {
+    color: $share-text-color;
     height: 22px;
-    width: 20px;
+    text-decoration: none;
+
+
+    svg {
+      margin: 5px 15px 0 0;
+    }
   }
 
   .back-to-top {
     margin-top: 148px;
 
     .back-to-logo {
-      height: 16px;
-      width: 9px;
+      height: 20px;
+      margin: 0 auto;
+      width: 20px;
     }
-  }
 
-  .share-text {
-    font-size: 18px;
+    a {
+      color: #{get-color('black')};
+      text-decoration: none;
+    }
+
+    span {
+      display: inline-block;
+      text-transform: uppercase;
+    }
   }
 }
