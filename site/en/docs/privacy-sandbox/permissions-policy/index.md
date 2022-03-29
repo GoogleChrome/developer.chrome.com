@@ -11,7 +11,7 @@ authors:
 <!--lint disable no-smart-quotes-->
 
 
-There are numerous features available in the browser that provide important functionality to the user. A video camera allows you to chat with people around the world and GPS enables driving in an unfamiliar neighborhood. Unfortunately, these important features can be misused for malicious purposes that violate user privacy. Developers should have a clear understanding of who has access to browser features, and control that access. 
+There are numerous features available in the browser that provide important functionality. For example, a connection to webcams allows users to chat with people around the world, and integration with GPS helps users use online maps to drive to unfamiliar neighborhoods. Unfortunately, these features can be misused for malicious purposes that violate user privacy. Developers should have a clear understanding of who has access to browser features and set up access controls.
 
 Permissions Policy allows the developer to control the browser features available to a page and its iframes, by declaring a set of policies for the browser to enforce. The policies are applied to origins provided in a response header origin list. The origins in the origin list can be same-origin (where your code resides) or cross-origin (where someone else’s code resides). 
 
