@@ -9,9 +9,9 @@ description: >
 ---
 
 We strive to make it easy for users to discover great items on the Chrome Web Store. A positive
-discovery experience means making it simple for users to find the items they know and love, as
-well as new and undiscovered items. From browsing the homepage to searching by title, we want users
-to find the best item to fit their needs. Learn more about discovery on the Chrome Web Store below.
+discovery experience means making it simple for users to find the items they know and love, as well
+as new and undiscovered items. From browsing the home page to searching by title, we want users to
+find the best item to fit their needs. Learn more about discovery on the Chrome Web Store below.
 
 ## Search {: #search }
 
@@ -28,15 +28,15 @@ category pages, like Shopping, Productivity, or Fun, to find relevant items to i
 which category an item will appear under, developers can select one on the Developer Dashboard.
 Categories are only available for extensions at this time.
 
-## Extensions Homepage {: #homepage }
+## Extensions home page {: #home-page }
 
-The homepage is where we highlight great extensions and themes that we think users will love. Users
+The home page is where we highlight great extensions and themes that we think users will love. Users
 come to this page to find new and interesting items recommended by our editors. Chrome editors
 curate items to be featured in merchandised collections and the rotating marquee based on a variety
 of factors including performance, design, usefulness, relevancy and breadth of appeal. Items
-featured on the homepage must follow our general [best practices][best-practices] to be considered,
+featured on the home page must follow our general [best practices][best-practices] to be considered,
 but there is no set checklist developers can follow to guarantee being featured. Developers cannot
-pay to be featured on the homepage. The best thing a developer can do to increase their chances of
+pay to be featured on the home page. The best thing a developer can do to increase their chances of
 being featured on the home page is to build a useful, high-quality extension that is a joy to use.
 
 {% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O4HjVbAcyIvYCxmCRB9H.png", width="800", height="571",
@@ -45,9 +45,9 @@ being featured on the home page is to build a useful, high-quality extension tha
 ## Editors' Picks {: #editors-picks }
 
 Chrome editors hand pick items to be featured as Editors' Picks to inspire users and recognize
-exceptional extensions. Editors' Picks are featured in the Editors' Picks collection on the
-homepage. We look for high-quality items that offer consistent, best-in-class experiences to users.
-Like the homepage, items chosen for Editors' Picks must follow our general [best
+exceptional extensions. Editors' Picks are featured in the Editors' Picks collection on the home
+page. We look for high-quality items that offer consistent, best-in-class experiences to users. Like
+the home page, items chosen for Editors' Picks must follow our general [best
 practices][best-practices] to be considered, but there is no set checklist of requirements to
 guarantee being featured. Developers cannot pay to be featured as an Editors' Pick.
 
