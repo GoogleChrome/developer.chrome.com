@@ -26,13 +26,11 @@ $share-text-color: #3c4043;
     }
 
     .hero-img {
-      height: 260px;
       margin-top: 54px;
-      max-width: 260px;
+      width: 260px;
 
       @include media-query('md') {
-        height: 532px;
-        max-width: 531px;
+        width: 495px;
       }
 
       @include media-query('lg') {
@@ -81,7 +79,7 @@ $share-text-color: #3c4043;
       }
 
       .hashtag {
-        color: #{get-color('blue-500')};
+        color: #{get-color('blue-600')};
       }
 
       .share-info {

@@ -219,7 +219,7 @@ $chrome-100-colors: (
             justify-content: space-between;
 
             @include media-query('md') {
-              padding-right: 60px;
+              padding-right: 70px;
             }
           }
         }
@@ -256,12 +256,9 @@ $chrome-100-colors: (
             gap: 10px;
 
             .heart-logo {
-              height: 19px;
-              width: 20px;
-
-              svg {
-                pointer-events: none;
-              }
+              background: none;
+              border: 0;
+              cursor: pointer;
 
               .icon {
                 fill: none;
