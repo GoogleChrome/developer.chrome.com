@@ -143,7 +143,7 @@ Chromium 이슈: [1284737](https://crbug.com/1284737)
 Chromium 이슈: [1277002](https://crbug.com/1277002) 
 
 
-# Chrome 자동 다크 테마 개선 {: #auto-dark-mode }
+## Chrome 자동 다크 테마 개선 {: #auto-dark-mode }
 
 [자동 다크 테마 에뮬레이션](/blog/new-in-devtools-96/#auto-dark-mode) UI가 간소화되었습니다. 기존 드롭다운 메뉴에서 체크박스로 전환되었습니다.
 

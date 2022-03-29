@@ -14,6 +14,16 @@
 * [Partially presented frames in the Performance panel](/ru/blog/new-in-devtools-100/#perf)
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-100/#misc) -->
 
+### Chrome 100 {: #chrome100 }
+
+* [Просмотр и изменение директивы @supports в панели Стилей (Styles)](/ru/blog/new-in-devtools-100/#supports)
+* [Дефолтная поддержка распространённых селекторов](/ru/blog/new-in-devtools-100/#selector)
+* [Кастомизация селектора записи](/ru/blog/new-in-devtools-100/#customize-selector)
+* [Переименование записи](/ru/blog/new-in-devtools-100/#recorder-rename)
+* [Предпросмотр свойств класса/функции при наведении курсора](/ru/blog/new-in-devtools-100/#properties)
+* [Частично представленные фреймы во вкладке Производительность (Performance)](/ru/blog/new-in-devtools-100/#perf)
+* [Другие важные моменты](/ru/blog/new-in-devtools-100/#misc)
+
 
 <!-- ### Chrome 99 {: #chrome99 }
 

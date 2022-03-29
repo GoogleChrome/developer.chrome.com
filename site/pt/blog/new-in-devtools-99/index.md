@@ -122,7 +122,7 @@ Issue relacionada: [1068788](https://crbug.com/1068788)
 
 
 <!-- ## Sourcemaps improvements {: #sourcemap } -->
- ## Melhorias nos sourcemaps {: #sourcemap }
+## Melhorias nos sourcemaps {: #sourcemap }
 <!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
 ### Depuração de extensões do Chrome com arquivos de sourcemap  {: #extension }
 <!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
@@ -160,7 +160,7 @@ Issue relacionada: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
-# Atualizações do Tema Escuro Automático do Chrome {: #auto-dark-mode }
+## Atualizações do Tema Escuro Automático do Chrome {: #auto-dark-mode }
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 A interface do [Tema Escuro Automático (Auto Dark Theme)](/blog/new-in-devtools-96/#auto-dark-mode) agora está simplificada. Agora é uma caixa de seleção, anteriormente era uma lista suspensa.
 
