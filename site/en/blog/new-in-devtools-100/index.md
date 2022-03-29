@@ -6,7 +6,7 @@ authors:
 date: 2022-03-08
 updated: 2022-03-08
 description: "View and edit @supports at rules, rename and customize recording’s selector, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ALD58FwgzF2bS3hY7X7O.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dzxqvpHgEBlwfnfW0osP.jpg'
 alt: ''
 tags:
   - new-in-devtools
