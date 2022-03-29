@@ -4,12 +4,12 @@ title: "Performance insights: Get actionable insights on your website's performa
 authors:
   - jecelynyeen
 date: 2022-03-29
-description: "Get actionable, use-case based insights on your website's performance with the Performance insights panel."
+description: "Get actionable insights on your website's performance with the Performance insights panel."
 tags:
   - performance
 ---
 
-Use the **Performance insights** panel to get actionable, use-case based insights on your website's performance.
+Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance.
 
 {% Aside %}
 This is a preview feature in Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
