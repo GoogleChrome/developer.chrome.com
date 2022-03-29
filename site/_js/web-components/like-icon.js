@@ -45,7 +45,7 @@ const config = {
   projectId: 'web-dev-production-1',
   appId: '1:1051961234704:web:d706ff04eb3dc39d128195',
 };
-const recaptchaPublicKey = '6Lfqf9YdAAAAAKUVvj6y53E_tMMlnj8dt1fpo-FV';
+const recaptchaPublicKey = '6LenWycfAAAAAL249jmfODctD4W56AmzwgSYW1O5';
 const storagePrefix = 'dcc-like-icon';
 
 const app = initializeApp(config);
