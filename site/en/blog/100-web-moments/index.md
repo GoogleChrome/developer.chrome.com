@@ -20,6 +20,6 @@ A lot has happened on the web since 2018. If you read Ethan Marcotte’s 2010 A 
 
 Chrome was at version 43 when Alex Russell introduced [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) in 2015, with [Microsoft announcing Edge as the new browser](https://www.theverge.com/2015/4/29/8511169/microsoft-edge-official-name-internet-explorer-upgrade) to replace Internet Explorer in the same year. 
 
-In March 2017, version 57 brought us CSS Grid, the layout method was shipped in [Chrome, Firefox, and Safari](https://rachelandrew.co.uk/archives/2017/03/07/css-grid-lands-in-firefox-52/) within days of each other. This shared release of a major feature happened again more recently, with [Cascade Layers](https://developer.chrome.com/blog/cascade-layers/) landing in Chrome 99, along with Firefox 97, and Safari 15.4. 
+In March 2017, version 57 brought us CSS Grid, the layout method was shipped in [Chrome, Firefox, and Safari](https://rachelandrew.co.uk/archives/2017/03/07/css-grid-lands-in-firefox-52/) within days of each other. This shared release of a major feature happened again more recently, with [Cascade Layers](/blog/cascade-layers/) landing in Chrome 99, along with Firefox 97, and Safari 15.4. 
 
 Tell us which moments you loved the most. If we've missed anything (and we're sure we have), tweet us [@Chromiumdev](https://twitter.com/ChromiumDev) with [#100CoolWebMoments](https://twitter.com/hashtag/100CoolWebMoments). 
