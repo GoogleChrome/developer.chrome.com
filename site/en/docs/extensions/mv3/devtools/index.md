@@ -193,9 +193,9 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
 
 ### Evaluating JavaScript in the inspected window {: #evaluating-js }
 
-You can use the [`inspectedWindow.eval()`][api-inspectedwindow-eval] method to execute JavaScript code
-in the context of the inspected page. You can invoke the `eval()` method from a DevTools page, panel
-or sidebar pane.
+You can use the [`inspectedWindow.eval()`][api-inspectedwindow-eval] method to execute JavaScript
+code in the context of the inspected page. You can invoke the `eval()` method from a DevTools page,
+panel or sidebar pane.
 
 By default, the expression is evaluated in the context of the main frame of the page. Now, you may
 be familiar with the DevTools [Console Utilities API][doc-utilities] features like element
@@ -228,9 +228,9 @@ comparison of the two methods, see [`inspectedWindow`][api-inspectedwindow].
 ### Passing the selected element to a content script {: #selected-element }
 
 The content script doesn't have direct access to the current selected element. However, any code you
-execute using [`inspectedWindow.eval()`][api-inspectedwindow-eval] has access to the DevTools console
-and Console Utilities APIs. For example, in evaluated code you can use `$0` to access the selected
-element.
+execute using [`inspectedWindow.eval()`][api-inspectedwindow-eval] has access to the DevTools
+console and Console Utilities APIs. For example, in evaluated code you can use `$0` to access the
+selected element.
 
 To pass the selected element to a content script:
 
@@ -353,14 +353,14 @@ backgroundPageConnection.postMessage({
 
 While the above solution works for content scripts, code that is injected directly into the page
 (e.g. through appending a `<script>` tag or through
-[`inspectedWindow.eval()`][api-inspectedwindow-eval]) requires a different strategy. In this context,
-[`runtime.sendMessage()`][api-runtime-sendmessage] will not pass messages to the background script as
-expected.
+[`inspectedWindow.eval()`][api-inspectedwindow-eval]) requires a different strategy. In this
+context, [`runtime.sendMessage()`][api-runtime-sendmessage] will not pass messages to the background
+script as expected.
 
 As a workaround, you can combine your injected script with a content script that acts as an
 intermediary. To pass messages to the content script, you can use the
-[`window.postMessage()`][mdn-postmessage] method. Here's an example, assuming the background script from
-the previous section:
+[`window.postMessage()`][mdn-postmessage] method. Here's an example, assuming the background script
+from the previous section:
 
 ```js
 // injected-script.js
