@@ -18,30 +18,6 @@ $share-text-color: #3c4043;
     }
   }
 
-  share-button {
-    width: auto;
-
-    @include media-query('md') {
-      margin-top: 2px;
-      width: 32px;
-    }
-
-    a {
-      svg {
-        height: 20px;
-        width: 20px;
-      }
-    }
-
-    &:hover {
-      background: none;
-
-      @include media-query('md') {
-        background: var(--color-bg-shade);
-      }
-    }
-  }
-
   .hero-wrapper {
     font-family: 'Google Sans';
 
