@@ -39,7 +39,6 @@ import {
   // @ts-ignore
 } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app-check.js';
 
-// Local emulator configuration
 const config = {
   apiKey: 'AIzaSyCyThSjI_ZUT1NwV9aQLtqklVcNj72gvo8',
   databaseURL: 'https://web-dev-production-1.firebaseio.com',
