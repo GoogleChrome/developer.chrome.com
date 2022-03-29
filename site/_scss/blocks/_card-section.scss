@@ -173,6 +173,7 @@ $chrome-100-colors: (
 
       @include media-query('md') {
         height: 167px;
+        position: relative;
         width: 470px;
       }
 
@@ -240,11 +241,14 @@ $chrome-100-colors: (
         }
 
         .logos {
+          bottom: 0;
           justify-content: space-between;
           padding-bottom: 15px;
 
           @include media-query('md') {
             margin-top: 18px;
+            position: absolute;
+            width: 100%;
           }
 
           .tags {

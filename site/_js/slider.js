@@ -42,35 +42,23 @@ class Slider {
     this.currentIndex = 0;
     this.previousIndex = 0;
     this.initialize();
-
-    const preFooterSection = document.querySelector(
-      `.${cssClasses.FOOTER_TOP_SECTION}`
-    );
-    const yearNav = document.querySelector(`.${cssClasses.NAVIGATION_WRAPPER}`);
-    const observer = new IntersectionObserver(entries => {
-      entries.map(entry => {
-        if (entry.isIntersecting) {
-          yearNav.classList.add(cssClasses.HIDE_NAVIGATION);
-        } else {
-          yearNav.classList.remove(cssClasses.HIDE_NAVIGATION);
-        }
-      });
-    });
-
-    observer.observe(preFooterSection);
   }
   initialize() {
     const scrollToFristSec = document.querySelector(
       `.${cssClasses.SCROLL_SECTION}`
     );
     const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
-    window.addEventListener('load', event => {
+    window.addEventListener('load', () => {
       const yearTimeline = gsap.timeline();
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
       yearTimeline.add(this.clickNavLink());
       yearTimeline.add(this.handleTab());
     });
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
       const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
@@ -122,10 +110,14 @@ class Slider {
     const firstYearSection = document.querySelector(
       `.${cssClasses.CARD_SECTION}`
     );
-    const chromeLogoWrapper = document.querySelector(
+    const navigationWrapper = document.querySelector(
       `.${cssClasses.NAVIGATION_WRAPPER}`
     );
     const chromeLogo = document.querySelector(`.${cssClasses.CHROME_LOGO}`);
+    const fixedMenu = document.querySelector(
+      `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
+    );
+
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
       const menuitem = 'menu__'.concat(activeSection);
@@ -138,6 +130,7 @@ class Slider {
         defaults: {duration: 5},
         scrollTrigger: {
           trigger: section,
+          id: 'my-Trigger',
           onToggle: self => {
             newScrollValue = window.pageYOffset;
             const isActive = self.isActive;
@@ -180,19 +173,28 @@ class Slider {
           },
           start: 'top 20%',
           end: '50%',
-          onUpdate: () => {
+          onUpdate: self => {
             if (window.pageYOffset >= firstYearSection.offsetTop) {
-              progressNav?.classList.add(cssClasses.FIXED_YEAR_NAVIGATION);
-              navItem?.classList.add(cssClasses.FIXED_MENU);
-              chromeLogoWrapper?.classList.add(
+              navigationWrapper?.classList.add(
                 cssClasses.FIXED_NAVIGATION_WRAPPER
               );
             } else {
-              progressNav?.classList.remove(cssClasses.FIXED_YEAR_NAVIGATION);
-              navItem?.classList.remove(cssClasses.FIXED_MENU);
-              chromeLogoWrapper?.classList.remove(
+              navigationWrapper?.classList.remove(
                 cssClasses.FIXED_NAVIGATION_WRAPPER
               );
+            }
+
+            //Handling side nav when user scroll to the footer
+            if (fixedMenu !== undefined) {
+              if (self.trigger.id === 'section2022') {
+                if (window.pageYOffset >= self.end) {
+                  navigationWrapper?.classList.add(cssClasses.HIDE_NAVIGATION);
+                } else {
+                  navigationWrapper?.classList.remove(
+                    cssClasses.HIDE_NAVIGATION
+                  );
+                }
+              }
             }
           },
           toggleActions: 'play reverse play reverse',
