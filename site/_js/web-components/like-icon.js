@@ -39,15 +39,13 @@ import {
   // @ts-ignore
 } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app-check.js';
 
-// Local emulator configuration
 const config = {
-  apiKey: 'AIzaSyBO19CVJtI2lRZQWCjfv3FnGqStHvP4xwU',
-  projectId: 'devnook-playground-1b315',
-  appId: '1:353904485142:web:1af58ee02b74215c29a637',
-  databaseURL:
-    'https://devnook-playground-1b315-default-rtdb.europe-west1.firebasedatabase.app',
+  apiKey: 'AIzaSyCyThSjI_ZUT1NwV9aQLtqklVcNj72gvo8',
+  databaseURL: 'https://web-dev-production-1.firebaseio.com',
+  projectId: 'web-dev-production-1',
+  appId: '1:1051961234704:web:d706ff04eb3dc39d128195',
 };
-const recaptchaPublicKey = '6LdDPCMfAAAAACPU7H4hn1uaV3_i9vkfIIIhX4LS';
+const recaptchaPublicKey = '6Lfqf9YdAAAAAKUVvj6y53E_tMMlnj8dt1fpo-FV';
 const storagePrefix = 'dcc-like-icon';
 
 const app = initializeApp(config);
