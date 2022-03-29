@@ -44,6 +44,8 @@ const config = {
   apiKey: 'AIzaSyBO19CVJtI2lRZQWCjfv3FnGqStHvP4xwU',
   projectId: 'devnook-playground-1b315',
   appId: '1:353904485142:web:1af58ee02b74215c29a637',
+  databaseURL:
+    'https://devnook-playground-1b315-default-rtdb.europe-west1.firebasedatabase.app',
 };
 const recaptchaPublicKey = '6LdDPCMfAAAAACPU7H4hn1uaV3_i9vkfIIIhX4LS';
 const storagePrefix = 'dcc-like-icon';
