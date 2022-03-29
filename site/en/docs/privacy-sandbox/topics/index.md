@@ -28,72 +28,22 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ---
 
-## Take part in a Topics origin trial {: #origin-trial}
+## Test with chrome://flags or feature flags {: #feature-flags}
 
-An [origin trial](/blog/origin-trials/) for Topics started in Chrome 101, and has been made
-available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).
+You can try out the Topics API for a single user running a current version of Chrome, Chrome Beta
+or Chrome Canary:
+* By setting the `PrivacySandboxAdsAPIs`  flag from the command line
+* By enabling chrome://flags/#privacy-sandbox-ads-apis
 
-To take part, you will need to [register](/origintrials/#/trials/active) for a Topics origin
-trial token.
-
-Once you have successfully enrolled in the trial, you can try out the Topics JavaScript API on pages
-that provide a valid trial token: to observe and access topics for the current browser using
-`document.browsingTopics()`.
-
-### First-party context
-
-To access the Topics API on your site, add the origin trial token to your web pages using
-one of the following methods for every page on which you would like to test the API:
-
-+   As a meta tag in the &lt;head&gt;:
-
-    `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
-
-+   As an HTTP header:
-
-    `Origin-Trial: TOKEN_GOES_HERE`
-
-### Third-party context
-
-In order to test the Topics API in your code on third-party sites you will need to run code to inject
-the origin trial token in a meta tag. [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script) explains how to do this.
-
-### Submit feedback and engage in discussion
-
-* You should provide feedback on the origin trial implementation of Topics features through Chrome's
-[origin trial site](/origintrials/#/trials/active). This feedback is not public and is available
-only to a limited group of people on the Chrome team.
-* You can also use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
-to share feedback directly to the Chrome team outside of public forums.
-* [Privacy Sandbox Feedback](/docs/privacy-sandbox/feedback/#Topics-api) explains how to provide
-other types of feedback, and how to engage in discussion of Privacy Sandbox proposals.
-
-### Find out more about origin trials
-
-* [Getting started with Chrome's origin trials](/blog/origin-trials/)
-* [What are third-party origin trials?](/blog/third-party-origin-trials/)
-* [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
-* [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-* [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
-
-
-## Test with feature flags {: #feature-flags}
-
-You can test Topics for a single user running Chrome 101 or above with the following feature flags
-set from the command line:
-
-```text
-[TBC]
-```
-
-* This is the in-progress version of Topics for early testing, so it should not be considered
+* This is the in-progress version of the API for early testing, so it should not be considered
 feature complete or indicative of the final implementation.
 * [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
 line.
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
-information for Topics and other Privacy Sandbox proposals.
+information for FLEDGE and other Privacy Sandbox proposals.
+
 
 ## Detect feature support
 
