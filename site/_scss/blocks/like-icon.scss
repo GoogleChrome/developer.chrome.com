@@ -2,8 +2,8 @@ like-icon {
   height: 20px;
 
   a {
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
   }
 
   a:hover,
@@ -28,8 +28,8 @@ like-icon {
   }
 
   span {
+    display: inline-block;
     margin: 0 0.5em;
     width: 3em;
-    display: inline-block;
   }
 }
