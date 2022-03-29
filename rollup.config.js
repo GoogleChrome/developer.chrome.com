@@ -33,7 +33,6 @@ const devConfig = {
       targets: [
         {src: 'site/_js/prettify.js', dest: 'dist/js'},
         {src: 'site/_js/slider.js', dest: 'dist/js'},
-        {src: 'site/_js/firebase.js', dest: 'dist/js'},
       ],
     }),
   ],
@@ -60,7 +59,6 @@ const productionConfig = {
       targets: [
         {src: 'site/_js/prettify.js', dest: 'dist/js'},
         {src: 'site/_js/slider.js', dest: 'dist/js'},
-        {src: 'site/_js/firebase.js', dest: 'dist/js'},
       ],
     }),
   ],

@@ -1,10 +1,13 @@
 {% extends "layouts/base.njk" %}
 
+{% block chromescss %}
+  <link rel="stylesheet" href="/css/chrome-main.css">
+{% endblock %}
+
 {% block chromescripts %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-  <script type="module" src="{{ helpers.hashForProd('/js/firebase.js') }}"></script>
   <script type="module" src="{{ helpers.hashForProd('/js/slider.js') }}"></script>
 {% endblock %}
 

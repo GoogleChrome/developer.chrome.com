@@ -29,11 +29,3 @@ dist
 # External source files
 external/data/
 external/local-build-flag
-# Firebase
-.firestore.rules
-firebase.json
-.firebaserc
-database.rules.json
-firestore.indexes.json
-functions/
-storage.rules
