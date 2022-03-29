@@ -15,13 +15,13 @@ There are numerous features available in the browser that provide important func
 
 Permissions Policy allows the developer to control the browser features available to a page and its iframes, by declaring a set of policies for the browser to enforce. The policies are applied to origins provided in a response header origin list. The origins in the origin list can be same-origin (where your code resides) or cross-origin (where someone else’s code resides). 
 
-### Changes from Feature Policy
+## Changes to Permissions Policy, formerly Feature Policy
 
-Permissions Policy has been renamed from Feature Policy. The key concepts remain the same between the two, but there are some important changes along with the name: 
+Permissions Policy was previously known as Feature Policy. The key concepts remain the same, but there are some important changes along with the name.
 
 ### Structured Fields usage
 
-[Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. You can learn more about Structured Fields from the [introduction article](https://www.fastly.com/blog/improve-http-structured-headers).
+[Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. Learn more about Structured Fields from Fastly's blog post, "[Improving HTTP with structured header fields](https://www.fastly.com/blog/improve-http-structured-headers)".
 
 * Before (Feature Policy):
   * `geolocation ‘self’ https://example.com; camera ‘none’`
@@ -30,13 +30,14 @@ Permissions Policy has been renamed from Feature Policy. The key concepts remain
 
 #### The header origin list must be combined with the allow attribute in the iframe tag 
 
-* WIth Feature Policy, you were able to enable the feature to a cross-origin frame by either adding the origin to the header origin list or adding an allow attribute to the iframe tag. With Permissions Policy, if you add a cross-origin to the origin list, the iframe tag for that origin must include the allow attribute.
-* If the response does not contain a Permissions Policy header, the origin list is considered to have the default value of `*`, and just adding the allow attribute to the iframe allows access to the feature.
-* Therefore, it is recommended that the Permissions Policy header is explicitly set in the response, so that cross-origin iframes that are not listed in the origin list will be blocked from accessing the feature even with an allow attribute in the tag.
+With Feature Policy, you could add the feature to a cross-origin frame by either adding the origin to the header origin list or adding an `allow` attribute to the iframe tag. With Permissions Policy, if you add a cross-origin frame to the origin list, the iframe tag for that origin must include the `allow` attribute.
+If the response does not contain a Permissions Policy header, the origin list is considered to have the default value of `*. Adding the `allow` attribute to the iframe allows access to the feature.
+
+Therefore, we recommend developers explicitly set the Permissions Policy header in the response, so that cross-origin iframes which aren't listed in the origin list are blocked from accessing this feature, even if `allow` is present.
 
 Feature Policy can still be used after Chrome 88, but it acts as an alias for Permissions Policy. Other than the syntax, there is no difference in logic between the two. If both Permissions Policy and Feature Policy are used together, the Permissions Policy header will have higher priority, and will overwrite the value provided from the Feature Policy header. 
 
-## Usage
+## How do I use Permissions Policy? {: #usage }
 
 ### Quick overview
 
@@ -46,14 +47,15 @@ Before we dive deep, let’s take a quick look at a common scenario where you ar
 * Your site embeds an iframe from same-origin (`https://your-site.example`). 
 * Your site embeds an iframe from `https://trusted-site.example` that you trust. 
 * Your site also displays ads served by `https://ad.example`. 
-* You want to enable the geolocation feature only for your site and the trusted site. 
+* You want to allow geolocation only for your site and the trusted site, not for the ad. 
 
 In this case, use the following header: 
 ```text
 Permissions-Policy: geolocation=(self "https://trusted-site.example")
 ```
 
-And explicitly set the `allow` attribute in the iframe tag: 
+And explicitly set the `allow` attribute to the iframe tag for the trusted site:
+ 
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation">
 ```
@@ -62,10 +64,10 @@ And explicitly set the `allow` attribute in the iframe tag:
 In this example, the header origin list lets only your site (`self`) and `https://trusted-site.example` to use the geolocation feature. `https://ad.example` is not allowed to use geolocation. 
 
 1. Your site `https://your-site.example` is allowed to use the geolocation feature with the user’s consent.
-1. An iframe served from same-origin (`https://your-site.example`) is allowed to use the feature without the usage of the `allow` attribute.
-1. An iframe served from a cross-origin (`https://trusted-site.example`) that has been added to the origin list, and also has the `allow` attribute set on the iframe tag is allowed to use the feature.
-1. An iframe served from a cross-origin (`https://trusted-site.example`) that has been added to the origin list, but does not have the `allow` attribute set on the iframe tag is blocked from using the feature.
-1. An iframe served from a cross-origin (`https://ad.example`) that has not been added to the origin list is blocked from using the feature even with the `allow` attribute on the iframe tag.
+1. A same-origin iframe (`https://your-site.example`) is allowed to use the feature without the usage of the `allow` attribute.
+1. A cross-origin iframe (`https://trusted-site.example`) that was added to the origin list and has the `allow` attribute set on the iframe tag is allowed to use the feature.
+1. A cross-origin iframe (`https://trusted-site.example`) added to the origin list, without the `allow` attribute, is blocked from using the feature.
+1. A cross-origin iframe (`https://ad.example`) which wasn't added to the origin list is blocked from using the feature, even if the `allow` attribute is included in the iframe tag.
 
 ### HTTP Header
 
@@ -75,7 +77,7 @@ In this example, the header origin list lets only your site (`self`) and `https:
 Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 ```
 
-A Permissions-Policy header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
+A `Permissions-Policy` header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
 
 Here are some example key-value pairs:
 
@@ -105,7 +107,7 @@ If the Permission Policy header is not present in the response, the default valu
 {% endAside %}
 
 {% Aside 'gotchas' %}
-With the change in Permissions Policy from Feature Policy, just adding the origin in the header origin list is no longer enough to enable the feature for a cross-origin iframe. The iframe must include the allow attribute if it’s a cross-origin regardless of what is set in the header origin list. 
+With the change in Permissions Policy from Feature Policy, adding the origin to the header origin list is no longer enough to enable the feature for a cross-origin iframe. The iframe must include the `allow` attribute if it’s cross-origin, regardless of what is set in the header origin list. 
 {% endAside %}
 
 ### Iframe
@@ -122,7 +124,7 @@ For example:
 <iframe src="https://trusted-site.example" allow="geolocation">
 ```
 
-{% Aside 'gotchas' %}
+{% Aside %}
 The syntax `allow="geolocation"` is a shorthand for allow="geolocation 'src'". src is a special token that expands into the origin of the iframe’s `src` attribute. 
 {% endAside %} 
 
@@ -194,9 +196,10 @@ With an empty origin list, the feature is blocked for all origins. This setup ca
 
 ## Use the JavaScript API
 
-The existing JavaScript API of Feature Policy is found as an object on either the document or the element (`document.featurePolicy or element.featurePolicy`). The JS API for Permissions Policy has not been implemented yet, and the existing Feature Policy JS API can be used for policies set by Permissions Policy with a limitation. There are [remaining questions](https://github.com/w3c/webappsec-permissions-policy/issues/401) regarding JS API implementation, and a [proposal](https://github.com/w3c/webappsec-permissions-policy/issues/401#issuecomment-824878596) has been made to move the logic into [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API). Join the discussion if you have any thoughts. 
+The existing JavaScript API of Feature Policy is found as an object on either the document or the element (`document.featurePolicy or element.featurePolicy`). The JavaScript API for Permissions Policy has not been implemented yet.
 
-(Default-origin is the origin of the document or the element that the policy is attached to).
+The Feature Policy API can be used for policies set by Permissions Policy, with some limitations. There are [remaining questions](https://github.com/w3c/webappsec-permissions-policy/issues/401) regarding a JavaScript API implementation, and a [proposal](https://github.com/w3c/webappsec-permissions-policy/issues/401#issuecomment-824878596) has been made to move the logic into the [Permissions API](https://developer.mozilla.org/docs/Web/API/Permissions_API). Join the discussion if you have any thoughts. 
+
 
 ### featurePolicy.allowsFeature(feature)
 
@@ -298,7 +301,11 @@ There is currently a discussion regarding its usefulness, and feel free to share
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/BBe4KFDoiYEkWApctsOE.png", alt="Chrome DevTools integration with Permissions Policy", width="800", height="446" %}
 
-Check the allowed features and disallowed features of each frame in DevTools under the Application panel. Select the frame in the sidebar that you want to inspect. You will be presented with a list of features that the selected frame is allowed to use, and a list of features that are blocked in that frame. 
+Check out how Permissions Policy works in DevTools.
+
+1. [Open Chrome DevTools](/docs/devtools/open/#elements).
+2. Open the **Application** panel to check the allowed features and disallowed features of each frame.
+3. In the sidebar, select the frame that you want to inspect. You will be presented with a list of features that the selected frame is allowed to use and a list of features that are blocked in that frame. 
 
 ## Find out more
 
