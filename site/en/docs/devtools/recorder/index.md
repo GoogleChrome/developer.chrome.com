@@ -64,6 +64,8 @@ In the next sections, we will walk you through how to record, replay and audit t
    Notice the default `data-testid` value in the **Selector attribute** textbox and leave it as it is for the purposes of this tutorial.
    {% Aside %}
    If you use a custom selector attribute in your code, this is where you can specify it. For more information, see [Customize the recording's selector](#customize-selector).
+
+   The `data-testid` attribute is just an example, the **Recorder** can also detect ID attributes and regular CSS selectors. For more information, see [Selector types](#selector-types).
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress", width="800", height="528" %} 
@@ -133,9 +135,10 @@ Let's walk through the options to edit the steps within a workflow.
    When replaying the user flow, the **Recorder** tries to query the element with one of the selectors by sequence.
    For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
 1. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappuccino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="The DevTools recorder panel shows an option to remove a selector", width="800", height="663" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ivZru7CFneS6fu5BAcIJ.png", alt="The DevTools recorder panel shows an option to remove a selector", width="800", height="758" %}
 1. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappuccino*, you can edit the selector value to *aria/Mocha* instead.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %} 
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %}
+   Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button", width="24", height="22" %} button and then click *Mocha* on the page.
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 1. Try to edit other step properties such as **type**, **target**, **value** and more.
 
@@ -159,6 +162,7 @@ In addition to the ARIA selector, the **Recorder** looks for the best CSS select
    - `data-test-id`
    - `data-qa-id`
    - `data-testing`
+1. ID attributes, for example, `<div id="some_ID">`.
 1. Regular CSS selectors.
 
 ### Add and remove steps {: #add-and-remove-steps }
