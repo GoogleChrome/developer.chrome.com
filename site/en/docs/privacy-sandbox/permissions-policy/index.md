@@ -19,7 +19,7 @@ Permissions Policy allows the developer to control the browser features availabl
 
 Permissions Policy has been renamed from Feature Policy. The key concepts remain the same between the two, but there are some important changes along with the name: 
 
-#### Structured Fields usage
+### Structured Fields usage
 
 [Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. You can learn more about Structured Fields from the [introduction article](https://www.fastly.com/blog/improve-http-structured-headers).
 
