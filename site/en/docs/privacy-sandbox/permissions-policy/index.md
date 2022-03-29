@@ -10,10 +10,9 @@ authors:
 
 <!--lint disable no-smart-quotes-->
 
-
 There are numerous features available in the browser that provide important functionality. For example, a connection to webcams allows users to chat with people around the world, and integration with GPS helps users use online maps to drive to unfamiliar neighborhoods. Unfortunately, these features can be misused for malicious purposes that violate user privacy. Developers should have a clear understanding of who has access to browser features and set up access controls.
 
-Permissions Policy allows the developer to control the browser features available to a page and its iframes, by declaring a set of policies for the browser to enforce. The policies are applied to origins provided in a response header origin list. The origins in the origin list can be same-origin (where your code resides) or cross-origin (where someone else’s code resides). 
+Permissions Policy allows the developer to control the browser features available to a page and its iframes, by declaring a set of policies for the browser to enforce. The policies are applied to [origins](/docs/privacy-sandbox/glossary/#origin) provided in a response header origin list. The origins can be same-origin (where your code resides) or cross-origin (where someone else’s code resides). 
 
 ## Changes to Permissions Policy, formerly Feature Policy
 
@@ -23,19 +22,37 @@ Permissions Policy was previously known as Feature Policy. The key concepts rema
 
 [Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. Learn more about Structured Fields from Fastly's blog post, "[Improving HTTP with structured header fields](https://www.fastly.com/blog/improve-http-structured-headers)".
 
-* Before (Feature Policy):
-  * `geolocation ‘self’ https://example.com; camera ‘none’`
-* After (Permissions Policy): 
-  * `geolocation=(self "https://example.com"), camera=()`
+{% Compare 'worse', 'old' %}
 
-#### The header origin list must be combined with the allow attribute in the iframe tag 
+```text
+geolocation ‘self’ https://example.com; camera ‘none’
+```
+
+{% CompareCaption %}
+Before with Feature Policy.
+{% endCompareCaption %}
+
+{% endCompare %}
+
+{% Compare 'better', 'new' %}
+   ```text
+   geolocation=(self "https://example.com"), camera=()
+   ```
+
+{% CompareCaption %}
+Now with Permissions Policy.
+{% endCompareCaption %}
+
+{% endCompare %}
+
+### Combine headers with the iframe `allow` attribute
 
 With Feature Policy, you could add the feature to a cross-origin frame by either adding the origin to the header origin list or adding an `allow` attribute to the iframe tag. With Permissions Policy, if you add a cross-origin frame to the origin list, the iframe tag for that origin must include the `allow` attribute.
-If the response does not contain a Permissions Policy header, the origin list is considered to have the default value of `*. Adding the `allow` attribute to the iframe allows access to the feature.
+If the response does not contain a Permissions Policy header, the origin list is considered to have the default value of `*`. Adding the `allow` attribute to the iframe allows access to the feature.
 
 Therefore, we recommend developers explicitly set the Permissions Policy header in the response, so that cross-origin iframes which aren't listed in the origin list are blocked from accessing this feature, even if `allow` is present.
 
-Feature Policy can still be used after Chrome 88, but it acts as an alias for Permissions Policy. Other than the syntax, there is no difference in logic between the two. If both Permissions Policy and Feature Policy are used together, the Permissions Policy header will have higher priority, and will overwrite the value provided from the Feature Policy header. 
+Feature Policy can still be used after Chrome 88, but it acts as an alias for Permissions Policy. Other than the syntax, there is no difference in logic. If both Permissions Policy and Feature Policy headers are used together, the `Permissions-Policy` header will have higher priority, and will overwrite the value provided by the `Feature-Policy` header. 
 
 ## How do I use Permissions Policy? {: #usage }
 
@@ -69,15 +86,15 @@ In this example, the header origin list lets only your site (`self`) and `https:
 1. A cross-origin iframe (`https://trusted-site.example`) added to the origin list, without the `allow` attribute, is blocked from using the feature.
 1. A cross-origin iframe (`https://ad.example`) which wasn't added to the origin list is blocked from using the feature, even if the `allow` attribute is included in the iframe tag.
 
-### HTTP Header
+### `Permissions-Policy` HTTP response header
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/jfhckpPdaepkw8bRPM0G.png", alt="HTTP response header diagram", width="800", height="459" %}
+  {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/jfhckpPdaepkw8bRPM0G.png", alt="Architecture diagram that shows how the user makes a request, the server responds with the Permissions Policy header, and then the browser granting access based on that header", width="800", height="459" %}
 
 ```text
 Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 ```
 
-A `Permissions-Policy` header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
+A `Permissions-Policy` header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin. Separate multiple features in the header with a comma. Separate multiple origins in the origin list with a space between. 
 
 Here are some example key-value pairs:
 
@@ -98,11 +115,7 @@ Here are some example key-value pairs:
   * Feature blocked for all origins
   * Example: `geolocation=()`
 
-{% Aside 'gotchas' %}
-Separate multiple features in the header with a comma. Separate multiple origins in the origin list with a space between. 
-{% endAside %}
-
-{% Aside 'gotchas' %}
+{% Aside 'warning' %}
 If the Permission Policy header is not present in the response, the default value `*` token is used, which allows all iframes on the page with an `allow` attribute to use the feature. Therefore, it is strongly recommended that the origin list is explicitly set in the Permissions-Policy header to control access. 
 {% endAside %}
 
@@ -110,7 +123,7 @@ If the Permission Policy header is not present in the response, the default valu
 With the change in Permissions Policy from Feature Policy, adding the origin to the header origin list is no longer enough to enable the feature for a cross-origin iframe. The iframe must include the `allow` attribute if it’s cross-origin, regardless of what is set in the header origin list. 
 {% endAside %}
 
-### Iframe
+### Iframe `allow` attribute
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/mD9lgR2lky1kdL8tohHx.png", alt="Iframes setup", width="800", height="316" %}
 
@@ -132,7 +145,7 @@ The syntax `allow="geolocation"` is a shorthand for allow="geolocation 'src'". s
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Y7RGrm7k7ysTtKfLvhO4.png", alt="Iframe navigation setup", width="500", height="283" %}
 
-By default, if an iframe navigates to another origin, the policy is not applied to the origin that the iframe navigates to. By listing the origin that iframe navigates to in the `allow` attribute, the permissions policy that was applied to the original iframe will be applied to the origin the iframe navigates to. 
+You may have a situation where an iframe navigates to another origin, where an ad from one origin is rendered in an iframe, then after a refresh time interval is passed, an ad from another origin is rendered. By default, if an iframe navigates to another origin, the policy is not applied to the origin that the iframe navigates to. By listing the origin that iframe navigates to in the `allow` attribute, the permissions policy that was applied to the original iframe will be applied to the origin the iframe navigates to. 
 
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation https://trusted-site.example https://trusted-navigated-site.example">
@@ -140,7 +153,7 @@ By default, if an iframe navigates to another origin, the policy is not applied 
 
 You can see it in action by visiting the iframe [navigation demo](https://permissions-policy-demo.glitch.me/demo/nav-allowed).
 
-## Example setups
+## Example Permissions Policy setups
 
 The examples of the following setups can be found in the [demo](https://permissions-policy-demo.glitch.me/demo/).
 
@@ -151,6 +164,7 @@ The examples of the following setups can be found in the [demo](https://permissi
 ```text
 Permissions-Policy: geolocation=*
 ```
+
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation">
 <iframe src="https://ad.example" allow="geolocation">
