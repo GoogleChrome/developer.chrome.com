@@ -49,6 +49,7 @@ class Slider {
     );
     const scrollToTopSec = document.querySelector(`.${cssClasses.BACK_TO_TOP}`);
     window.addEventListener('load', () => {
+      /* eslint-disable no-undef */
       const yearTimeline = gsap.timeline();
       yearTimeline.add(this.startup());
       yearTimeline.add(this.scrollSections());
