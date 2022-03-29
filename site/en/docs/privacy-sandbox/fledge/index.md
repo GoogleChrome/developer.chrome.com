@@ -25,8 +25,8 @@ much technical detail.
 such as [advertiser](#advertiser) and [publisher](#publisher). [How does FLEDGE work?](#how) should
 still be useful.
 
-* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api) provides more
-in-depth technical detail about the proposal.
+* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api)
+provides more in-depth technical detail about the proposal.
 
 * [The FLEDGE demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE
 deployment.
