@@ -121,10 +121,9 @@ buyer's code can include a `reportWin()` function.
 
 ## How can I try FLEDGE?
 
-* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to take part in the FLEDGE
-origin trial, and how to try out FLEDGE for a single user by running Chrome from the command line
-using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to
-manually enable the API.
+* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out FLEDGE for a
+single user by running Chrome from the command line using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+to manually enable the API.
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
 deployment across advertiser and publisher sites.

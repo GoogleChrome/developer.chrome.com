@@ -79,66 +79,22 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
   id='znDD0gkdJyM'
 %}
 
-### Take part in a FLEDGE origin trial {: #origin-trial}
-
-An [origin trial](/blog/origin-trials/) for FLEDGE started in Chrome 101, and has been made
-available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).
-
-To take part, you will need to [register](/origintrials/#/trials/active) for a FLEDGE origin
-trial token.
-
-Once you have successfully enrolled in the trial, you can try out the FLEDGE JavaScript API on pages
-that provide a valid trial token: for example, to ask the browser to [join one or more interest groups](#joinadinterestgroup),
-then [run an an ad auction](#ad-auction) to select and display an ad. The [FLEDGE demo](#demo)
-provides a basic example of an end-to-end FLEDGE deployment.
-
 {% Aside %}
 
+Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
+under discussion.
+
 [Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the first trial and explains what features are supported.
+provides more details about the goals of the trial and what features are proposed for support.
 
 {% endAside %}
 
-#### First-party context
-
-To access the FLEDGE API on your site, add the origin trial token to your web pages using one of the
-following methods for every page on which you would like to test the API:
-
-+   As a meta tag in the &lt;head&gt;:
-
-    `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
-
-+   As an HTTP header:
-
-    `Origin-Trial: TOKEN_GOES_HERE`
-
-#### Third-party context
-
-In order to test the FLEDGE API in your code on third-party sites you will need to run code to inject
-the origin trial token in a meta tag. [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script) explains how to do this.
-
-#### Submit feedback and engage in discussion
-
-* You should provide feedback on the origin trial implementation of FLEDGE features through Chrome's
-[origin trial site](/origintrials/#/trials/active). This feedback is not public and is available
-only to a limited group of people on the Chrome team.
-* You can also use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
-to share feedback directly to the Chrome team outside of public forums.
-* [Privacy Sandbox Feedback](/docs/privacy-sandbox/feedback/#fledge-api) explains how to provide
-other types of feedback, and how to engage in discussion of Privacy Sandbox proposals.
-
-#### Find out more about origin trials
-
-* [Getting started with Chrome's origin trials](/blog/origin-trials/)
-* [What are third-party origin trials?](/blog/third-party-origin-trials/)
-* [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
-* [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-* [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
-
-### Test with feature flags {: #feature-flags}
+### Test with chrome://flags or feature flags {: #feature-flags}
 
 You can test FLEDGE for a single user running a current version of Chrome, Chrome Beta or Chrome
-Canary with feature flags set from the command line.
+Canary:
+* By setting the `PrivacySandboxAdsAPIs`  flag from the command line
+* By enabling chrome://flags/#privacy-sandbox-ads-apis
 
 * This is the in-progress version of FLEDGE for early testing, so it should not be considered
 feature complete or indicative of the final implementation.
@@ -153,29 +109,11 @@ line.
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
 
-#### Frames and fenced frames
-
-When enabling FLEDGE for testing with feature flags, ads can be rendered in an `<iframe>` or a
-[`<fencedframe>`](https://github.com/shivanigithub/fenced-frame), depending on which flags are
-set.
-
-Using `<fencedframe>` to render ads:
-
-```text
---enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge,FencedFrames
-```
-
-Using `<iframe>` to render ads:
-
-```text
---enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge,AllowURNsInIframes --disable-features=FencedFrames
-```
 
 ### What features are supported in the latest version of Chrome?
 
-FLEDGE is being made available [in an origin trial](#origin-trial) and
-[behind feature flags](#feature-flags) in Chromium as a first experiment to test the following
-features of the FLEDGE proposal:
+FLEDGE is being made available [behind feature flags](#feature-flags) in Chromium as a first
+experiment to test the following features of the FLEDGE proposal:
 
 -  **Interest groups**: stored by the browser, with associated metadata to configure ad bidding
    and rendering.
@@ -1149,6 +1087,35 @@ removed when users clear their site data.
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 -  **FLEDGE mailing list**: [fledge-api-announce](https://groups.google.com/u/1/a/chromium.org/g/fledge-api-announce)
    provides announcements and updates about the API.
+- [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
+  second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
+  WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
+- Use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
+to share feedback privately with the Chrome team outside of public forums.
+
+## Get support
+
+To ask a question about **your implementation**, about the **demo**, or about the **documentation**:
+* [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+on the privacy-sandbox-dev-support repository. Make sure to select the issue template for FLEDGE.
+* Raise an issue on the [demo code repo on GitHub](https://github.com/JackJey/fledge-demo).
+* For more general questions about how to meet your **use cases** with the API,
+[file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
+
+For bugs and issues with the implementation of the FLEDGE API in Chrome:
+* [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
+reported for the API.
+* Raise a new issue at [crbug.com/new](https://crbug.com/new).
+
+## Get updates
+
+- To be notified of status changes in the API, join the [mailing list for
+  developers](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce).
+- To closely follow all ongoing discussions on the API, click the **Watch** button on the [proposal page on
+  GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md). This requires you have or [create a GitHub
+  account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+- To get overall updates on the Privacy Sandbox, subscribe to the RSS feed [Progress in the Privacy
+  Sandbox](/tags/progress-in-the-privacy-sandbox/).
 
 
 ## Find out more
