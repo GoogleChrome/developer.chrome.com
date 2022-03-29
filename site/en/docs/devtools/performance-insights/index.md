@@ -1,10 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Performance insight: Get actionable insights on your website's performance"
+title: "Performance insights: Get actionable insights on your website's performance"
 authors:
   - jecelynyeen
 date: 2022-03-29
-description: "Get actionable, use-case based insights on your website's performance with the Performance insight panel."
+description: "Get actionable, use-case based insights on your website's performance with the Performance insights panel."
 tags:
   - performance
 ---
