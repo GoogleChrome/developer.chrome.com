@@ -137,7 +137,7 @@ components of a DevTools extension.
 
 ### Injecting a content script {: #injecting }
 
-The DevTools page can't call [`scripting.executeScript`][api-scripting-executescript] directly. To
+The DevTools page can't call [`scripting.executeScript()`][api-scripting-executescript] directly. To
 inject a content script from the DevTools page, you must retrieve the ID of the inspected window's
 tab using the [`inspectedWindow.tabId`][api-inspectedwindow-tabid] property and send a message to
 the background page. From the background page, call
@@ -146,7 +146,7 @@ the background page. From the background page, call
 {% Aside %}
 
 If a content script has already been injected, you can add additional context scripts using the
-`eval` method. See [Passing the Selected Element to a Content Script][header-selected-element] for
+`eval()` method. See [Passing the Selected Element to a Content Script][header-selected-element] for
 more information.
 
 {% endAside %}
@@ -193,8 +193,8 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
 
 ### Evaluating JavaScript in the inspected window {: #evaluating-js }
 
-You can use the [`inspectedWindow.eval`][api-inspectedwindow-eval] method to execute JavaScript code
-in the context of the inspected page. You can invoke the `eval` method from a DevTools page, panel
+You can use the [`inspectedWindow.eval()`][api-inspectedwindow-eval] method to execute JavaScript code
+in the context of the inspected page. You can invoke the `eval()` method from a DevTools page, panel
 or sidebar pane.
 
 By default, the expression is evaluated in the context of the main frame of the page. Now, you may
@@ -221,21 +221,21 @@ Once the context script context exists, you can use this option to inject additi
 scripts.
 
 The `eval` method is powerful when used in the right context and dangerous when used
-inappropriately. Use the [`scripting.executeScript`][api-scripting-executescript] method if you
+inappropriately. Use the [`scripting.executeScript()`][api-scripting-executescript] method if you
 don't need access to the JavaScript context of the inspected page. For detailed cautions and a
 comparison of the two methods, see [`inspectedWindow`][api-inspectedwindow].
 
 ### Passing the selected element to a content script {: #selected-element }
 
 The content script doesn't have direct access to the current selected element. However, any code you
-execute using [`inspectedWindow.eval`][api-inspectedwindow-eval] has access to the DevTools console
+execute using [`inspectedWindow.eval()`][api-inspectedwindow-eval] has access to the DevTools console
 and Console Utilities APIs. For example, in evaluated code you can use `$0` to access the selected
 element.
 
 To pass the selected element to a content script:
 
 - Create a method in the content script that takes the selected element as an argument.
-- Call the method from the DevTools page using [`inspectedWindow.eval`][api-inspectedwindow-eval]
+- Call the method from the DevTools page using [`inspectedWindow.eval()`][api-inspectedwindow-eval]
   with the `useContentScriptContext: true` option.
 
 The code in your content script might look something like this:
@@ -258,7 +258,7 @@ same context as the content scripts, so it can access the `setSelectedElement` m
 
 ### Getting a reference panel's `window` {: #panel-window }
 
-To `postMessage` from a devtools panel, you'll need a reference to its `window` object. Get a
+To call `postMessage()` from a devtools panel, you'll need a reference to its `window` object. Get a
 panel's iframe window in from the the [`panel.onShown`][api-panels-onshown] event handler:
 
 ```js
@@ -274,7 +274,7 @@ extensionPanel.onShown.addListener(function (extPanelWindow) {
 Messaging between the DevTools page and content scripts is indirect, by way of the background page.
 
 When sending a message _to_ a content script, the background page can use the
-[`tabs.sendMessage`][api-scripting-sendmessage] method, which directs a message to the content
+[`tabs.sendMessage()`][api-scripting-sendmessage] method, which directs a message to the content
 scripts in a specific tab, as shown in [Injecting a Content Script][header-injecting].
 
 When sending a message _from_ a content script, there is no ready-made method to deliver a message
@@ -353,13 +353,13 @@ backgroundPageConnection.postMessage({
 
 While the above solution works for content scripts, code that is injected directly into the page
 (e.g. through appending a `<script>` tag or through
-[`inspectedWindow.eval`][api-inspectedwindow-eval]) requires a different strategy. In this context,
-[`runtime.sendMessage`][api-runtime-sendmessage] will not pass messages to the background script as
+[`inspectedWindow.eval()`][api-inspectedwindow-eval]) requires a different strategy. In this context,
+[`runtime.sendMessage()`][api-runtime-sendmessage] will not pass messages to the background script as
 expected.
 
 As a workaround, you can combine your injected script with a content script that acts as an
 intermediary. To pass messages to the content script, you can use the
-[`window.postMessage`][mdn-postmessage] API. Here's an example, assuming the background script from
+[`window.postMessage()`][mdn-postmessage] method. Here's an example, assuming the background script from
 the previous section:
 
 ```js
@@ -402,7 +402,7 @@ here][gh-devtools-messaging].
 
 If your extension needs to track whether the DevTools window is open, you can add an
 [onConnect][api-runtime-onconnect] listener to the background page, and call
-[connect][api-runtime-connect] from the DevTools page. Since each tab can have its own DevTools
+[connect()][api-runtime-connect] from the DevTools page. Since each tab can have its own DevTools
 window open, you may receive multiple connect events. To track whether any DevTools window is open,
 you need to count the connect and disconnect events as shown below:
 
@@ -443,9 +443,9 @@ var backgroundPageConnection = chrome.runtime.connect({
 
 Browse the source of these DevTools extension examples:
 
-- [Polymer Devtools Extension][gh-polymer-dt] - uses many helpers running in the host page to query
+- [Polymer Devtools Extension][gh-polymer-dt] - Uses many helpers running in the host page to query
   DOM/JS state to send back to the custom panel.
-- [React DevTools Extension][gh-react-dt] - Uses a submodule of Blink to reuse DevTools UI
+- [React DevTools Extension][gh-react-dt] - Uses a submodule of the renderer to reuse DevTools UI
   components.
 - [Ember Inspector][gh-ember-dt] - Shared extension core with adapters for both Chrome and Firefox.
 - [Coquette-inspect][gh-coquette] - A clean React-based extension with a debugging agent injected
