@@ -41,10 +41,10 @@ import {
 
 // Local emulator configuration
 const config = {
-  apiKey: "AIzaSyCyThSjI_ZUT1NwV9aQLtqklVcNj72gvo8",
-  databaseURL: "https://web-dev-production-1.firebaseio.com",
-  projectId: "web-dev-production-1",
-  appId: "1:1051961234704:web:d706ff04eb3dc39d128195",
+  apiKey: 'AIzaSyCyThSjI_ZUT1NwV9aQLtqklVcNj72gvo8',
+  databaseURL: 'https://web-dev-production-1.firebaseio.com',
+  projectId: 'web-dev-production-1',
+  appId: '1:1051961234704:web:d706ff04eb3dc39d128195',
 };
 const recaptchaPublicKey = '6LdDPCMfAAAAACPU7H4hn1uaV3_i9vkfIIIhX4LS';
 const storagePrefix = 'dcc-like-icon';
