@@ -10,7 +10,6 @@ authors:
 
 <!--lint disable no-smart-quotes-->
 
-## Description
 
 There are numerous features available in the browser that provide important functionality to the user. A video camera allows you to chat with people around the world and GPS enables driving in an unfamiliar neighborhood. Unfortunately, these important features can be misused for malicious purposes that violate user privacy. Developers should have a clear understanding of who has access to browser features, and control that access. 
 
