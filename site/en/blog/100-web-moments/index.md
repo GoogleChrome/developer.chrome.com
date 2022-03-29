@@ -14,7 +14,7 @@ tags:
   - chrome-100
 ---
 
-Google Chrome launched in 2018, and in March 2022 we are celebrating the launch of Chrome version 100 with a scroll down memory lane. [#100CoolWebMoments](/100/) remembers some cool, fun, interesting, and important things that have happened in the past 14 years.
+Google Chrome launched in 2008, and in March 2022 we are celebrating the launch of Chrome version 100 with a scroll down memory lane. [#100CoolWebMoments](/100/) remembers some cool, fun, interesting, and important things that have happened in the past 14 years.
 
 A lot has happened on the web since 2018. If you read Ethan Marcotte’s 2010 A List Apart article on [responsive web design](https://alistapart.com/article/responsive-web-design/) on the day of publication you might have done so with Chrome 4. By the time [Media Queries became a W3C Recommendation](https://www.css3.info/css3-media-queries-becomes-official-w3c-recommendation-css4-media-queries-takes-shape/) in 2012, Chrome 19 was available.
 
