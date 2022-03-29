@@ -2,9 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: 'RenderingNG deep-dive: BlinkNG'
 description: >
-  In 2021, we will largely complete the process of designing, building and shipping RenderingNG, a next-generation rendering architecture for Chromium.
-subhead: >
-  Ready for the next generation of web content
+  Find out about BlinkNG and the various sub-projects that addressed long-standing problems in the organization and structure of Blink code.
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/G8miv1svP6yMEZbP0DqX.png
 alt: The rendering pipeline before and aftr BLinkNG.
 date: 2022-03-29
