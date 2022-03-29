@@ -13,7 +13,7 @@ $share-text-color: #3c4043;
     top: 28px;
     width: auto;
 
-    @include media-query('lg') {
+    @include media-query('md') {
       display: none;
     }
   }
