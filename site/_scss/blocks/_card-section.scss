@@ -248,7 +248,7 @@ $chrome-100-colors: (
           @include media-query('md') {
             margin-top: 18px;
             position: absolute;
-            width: 100%;
+            width: 90%;
           }
 
           .tags {
