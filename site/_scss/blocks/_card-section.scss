@@ -243,7 +243,7 @@ $chrome-100-colors: (
         .logos {
           bottom: 0;
           justify-content: space-between;
-          padding-bottom: 15px;
+          padding-bottom: 20px;
 
           @include media-query('md') {
             margin-top: 18px;
@@ -255,33 +255,6 @@ $chrome-100-colors: (
             height: 15px;
           }
 
-          .likes {
-            align-items: center;
-            gap: 10px;
-
-            .heart-logo {
-              background: none;
-              border: 0;
-              cursor: pointer;
-
-              .icon {
-                fill: none;
-              }
-            }
-
-            .like-count {
-              letter-spacing: 1px;
-              text-align: center;
-              width: 50px;
-            }
-
-            .like {
-              .fill-like {
-                fill: map.get($chrome-100-colors, 'heart-red');
-                stroke: transparent;
-              }
-            }
-          }
         }
       }
     }

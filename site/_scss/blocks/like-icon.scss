@@ -1,9 +1,9 @@
 like-icon {
   height: 20px;
-  width: 60px;
 
   a {
     text-decoration: none;
+    color: #000;
   }
 
   a:hover,
@@ -25,5 +25,11 @@ like-icon {
   [data-liked='true'] svg {
     color: #fff;
     fill: #f00;
+  }
+
+  span {
+    margin: 0 0.5em;
+    width: 3em;
+    display: inline-block;
   }
 }

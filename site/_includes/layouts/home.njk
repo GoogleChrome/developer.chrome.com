@@ -21,7 +21,7 @@
       <div class="display-flex direction-column grid-gap-500">
         {% set post = helpers.findByUrl(collections.all, '/100', 'en') %}
         {% if post %}
-        {{ featuredCard(collections[blog][0], {
+        {{ featuredCard(post, {
           icon: 'star',
           actionText: 'Discover the timeline',
           actionUrl: '/100'
