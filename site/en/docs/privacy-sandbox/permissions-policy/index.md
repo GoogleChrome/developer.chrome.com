@@ -277,7 +277,7 @@ Permissions-Policy:
 
 ### Update `document.allowsFeature(feature, origin)` usage
 
-If you are using document.allowsFeature(feature, origin) method, use allowsFeature(feature) method attached on the iframe element, and not the containing document. The method element.allowsFeature(feature) accounts for the allow attribute while document.allowsFeature(feature, origin) does not. The sample code is found in the [previous example section](#better-approach-for-checking-iframe-feature-access).
+If you use `document.allowsFeature(feature, origin)` method, use `allowsFeature()` method attached on the iframe element, and not the containing document. The method `element.allowsFeature()` accounts for the allow attribute while `document.allowsFeature()` does not. The sample code is found in the [previous section](#better-approach-for-checking-iframe-feature-access).
 
 ## Reporting API
 
