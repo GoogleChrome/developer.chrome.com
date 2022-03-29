@@ -19,7 +19,7 @@ tags:
   - chrome-100
 ---
 
-{% YouTube id='TODO' %}
+{% YouTube id='VK7oR5vLluk' %}
 
 Here's what you need to know:
 
@@ -184,7 +184,7 @@ additional changes in Chrome 100.
 * [What's new in Chrome DevTools (100)](/blog/new-in-devtools-100/)
 * [Chrome 100 deprecations and removals](/blog/deps-rems-100/)
 * [ChromeStatus.com updates for Chrome 100](https://www.chromestatus.com/features#milestone%3D100)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..100.0.TODO.48)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/99.0.4844.48..100.0.4896.63.48)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
 ## Subscribe
