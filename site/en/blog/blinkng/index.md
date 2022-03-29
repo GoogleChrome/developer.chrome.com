@@ -16,7 +16,7 @@ This post is a part of a series on the Chromium rendering engine. Check out the 
 {% endAside %}
 
 
-_Blink_ refers to Chromium's implementation of the [web platform](https://en.wikipedia.org/wiki/Web_platform), and it encompasses all the phases of rendering prior to compositing, culminating in _compositor commit_. You can read more about blink rendering architecture in a previous [article](https://developer.chrome.com/blog/renderingng-architecture/#render-process-main-thread-components) in this series. 
+_Blink_ refers to Chromium's implementation of the [web platform](https://en.wikipedia.org/wiki/Web_platform), and it encompasses all the phases of rendering prior to compositing, culminating in _compositor commit_. You can read more about blink rendering architecture in a previous [article](/blog/renderingng-architecture/#render-process-main-thread-components) in this series. 
 
 [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) began life as a fork of [WebKit](https://en.wikipedia.org/wiki/WebKit), which is itself a fork of [KHTML](https://en.wikipedia.org/wiki/KHTML), which dates to 1998. It contains some of the oldest (and most critical) code in Chromium, and by 2014 it was definitely showing its age. In that year, we embarked on a set of ambitious projects under the banner BlinkNG, with the goal of addressing long-standing deficiencies in the organization and structure of the Blink code. This article will explore BlinkNG and its constituent projects: why we did them, what they accomplished, the guiding principles that shaped their design, and the opportunities for future improvements they afford.
 
@@ -82,7 +82,7 @@ Collectively, the rendering phases before paint are responsible for the followin
 -  Determining size and position information for all boxes.
 -  Rounding or snapping sub-pixel geometry to whole pixel boundaries for painting.
 -  Determining the properties of composited layers (affine transformation, filters, opacity, or anything else that can be GPU accelerated).
--  Determining what content has changed since the previous** paint** phase, and needs to be painted or repainted (paint invalidation).
+-  Determining what content has changed since the previous paint phase, and needs to be painted or repainted (paint invalidation).
 
 This list hasn't changed, but before BlinkNG much of this work was done in an ad hoc way, spread across multiple rendering phases, with lots of duplicated functionality and built-in inefficiencies. For example, the _style_ phase has always been primarily responsible for calculating the final style properties for nodes, but there were a few special cases where we didn't determine final style property values until after the _style_ phase was complete. There was no formal or enforceable point in the rendering process where we could say with certainty that style information was complete and immutable.
 
