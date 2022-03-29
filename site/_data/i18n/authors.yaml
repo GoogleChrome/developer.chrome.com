@@ -711,3 +711,8 @@ kevinkiklee:
   description:
     en: 'Developer Relations Engineer, Google Chrome'
     ko: 'Google Chrome의 개발자 관계 엔지니어'
+rachelandrew:
+  title:
+    en: 'Rachel Andrew'
+  description:
+    en: 'Technical writer at Google, content lead for the Chrome Developers site.'
