@@ -61,7 +61,6 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
-   Notice the default `data-testid` value in the **Selector attribute** textbox and leave it as it is for the purposes of this tutorial.
    {% Aside %}
    If you use a custom selector attribute in your code, this is where you can specify it. For more information, see [Customize the recording's selector](#customize-selector).
 
