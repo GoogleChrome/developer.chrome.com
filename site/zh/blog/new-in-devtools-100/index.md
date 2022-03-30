@@ -125,7 +125,7 @@ Chromium 议题: [1049947](https://crbug.com/1049947)
 ## **性能**面板中的部分呈现帧 {: #perf }
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
-性能记录现在在**帧**时间轴中展示了一个新的帧类别：部分呈现帧。
+性能记录现在在**帧**时间轴中展示了一个新的帧类别：部分呈现帧 （Partially presented frames）。
 
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
 在此之前，**帧**时间轴会将任何含有延迟主线程的任务的帧作为“丢弃的帧”来展示。然而，在某些情况下，这些帧仍然可以在合成器线程的驱动下产生视觉更新（比如滚动）。
