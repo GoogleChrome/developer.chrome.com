@@ -1,3 +1,3 @@
 module.exports = {
-  banner: false
+  banner: false,
 };
