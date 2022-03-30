@@ -11,23 +11,23 @@ declarativeContent][emulating-page-actions]
 
 ## Usage
 
-The Declarative Content API allows you to enable your extension's action depending on the URL of a
-web page and the CSS selectors, without needing to add [host permission][docs-host-perm] or inject a
-[content script][docs-content-scripts]. 
-
-Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
-extension's action.
-
 {% Aside 'key-term' %}
 
 An [_extension's action_][api-action] controls the extension's toolbar icon.
 
 {% endAside %}
 
+The Declarative Content API allows you to enable your extension's action depending on the URL of a
+web page and the CSS selectors, without needing to add [host permissions][docs-host-perm] or inject a
+[content script][docs-content-scripts]. 
+
+Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
+extension's action.
+
 ## Rules
 
 Rules consists of conditions and actions. If any of the conditions is fulfilled, all actions are
-executed.
+executed. The actions are [`setIcon`][type-set-icon] and [`showAction`][type-show-action].
 
 The [`PageStateMatcher`][type-page-state-matcher] matches web pages if and only if all listed
 criteria are met. It can match a [page url][section-pageurl], a [css compound selector][section-css]
@@ -93,7 +93,7 @@ matching algorithm.
 {% endAside %}
 
 With the [activeTab][docs-activetab] permission, your extension will not display any permission
-warnings and when the user clicks on the extension action, it will only run on relevant pages.
+warnings and when the user clicks the extension action, it will only run on relevant pages.
 
 ## Page URL Matching {: #page-url}
 
