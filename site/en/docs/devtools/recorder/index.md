@@ -152,6 +152,7 @@ For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/
 
 In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
 1. Your custom selector attribute if you specified it at the start of the recording.
+1. ARIA selector if found.
    If found, the **Recorder** will prioritize your custom CSS attribute selector above the ARIA one.
    For more information, see [Customize the recording's selector](#customize-selector).
 1. The most common attributes used for testing: {: #selectors }
