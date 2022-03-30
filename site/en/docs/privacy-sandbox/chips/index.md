@@ -6,7 +6,7 @@ subhead: >
 description: >
   CHIPS is a Privacy Sandbox proposal that will allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set
 date: 2022-02-15
-updated: 2022-03-17
+updated: 2022-03-30
 authors:
   - mihajlija
 ---
@@ -124,6 +124,16 @@ key=("support.chat.example")
 key={("https", "retail.example"),
      ("support.chat.example")}
 ```
+
+#### First-Party Sets and cookie partitioning
+
+[First-Party Sets](blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as first-party in situations where first party and third party are otherwise treated differently.
+
+When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party member sites. 
+
+Sites from the same First-Party Set will have the same partition key—the owner of the set. 
+
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/cnrraIMgqOHwCw0WbgmU.png", alt="", width="800", height="548" %}
 
 ### Security design
 
