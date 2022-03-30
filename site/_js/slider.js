@@ -18,25 +18,18 @@ const cssClasses = {
   HERO_SECTION: 'hero-section',
   CARD_SECTION: 'card-section',
   FOOTER_TOP_SECTION: 'footer-top-section',
+  CHROME_LOGO_TEXT: 'chrome-logo-wrapper--text',
 };
 const imgBaseUrl = 'https://wd.imgix.net/image/H2WDdWf5aPXOtVabf53xIxMJyTF2/';
-const chromeLogoVersions = {
-  2008: '6Zok8fOGKlKnPmmA3BNM.png',
-  2009: '6Zok8fOGKlKnPmmA3BNM.png',
-  2010: '6Zok8fOGKlKnPmmA3BNM.png',
-  2011: 'AkT3tMmLmIlEphta9Zv0.png',
-  2012: 'AkT3tMmLmIlEphta9Zv0.png',
-  2013: 'AkT3tMmLmIlEphta9Zv0.png',
-  2014: '03FZEfj2hitsD2V7kSGz.png',
-  2015: '03FZEfj2hitsD2V7kSGz.png',
-  2016: '03FZEfj2hitsD2V7kSGz.png',
-  2017: '03FZEfj2hitsD2V7kSGz.png',
-  2018: '03FZEfj2hitsD2V7kSGz.png',
-  2019: '03FZEfj2hitsD2V7kSGz.png',
-  2020: '03FZEfj2hitsD2V7kSGz.png',
-  2021: '03FZEfj2hitsD2V7kSGz.png',
-  2022: 'ln27L4WEXP4h01jLfNBc.png',
-};
+
+const chromeLogoVersions = new Map();
+chromeLogoVersions.set(['2008', '2009', '2010'], '6Zok8fOGKlKnPmmA3BNM.png');
+chromeLogoVersions.set(['2011', '2012', '2013'], 'AkT3tMmLmIlEphta9Zv0.png');
+chromeLogoVersions.set(
+  ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+  '03FZEfj2hitsD2V7kSGz.png'
+);
+chromeLogoVersions.set(['2022'], 'ln27L4WEXP4h01jLfNBc.png');
 class Slider {
   constructor() {
     this.currentIndex = 0;
@@ -56,10 +49,6 @@ class Slider {
       yearTimeline.add(this.clickNavLink());
       yearTimeline.add(this.handleTab());
     });
-
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
       const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
@@ -98,16 +87,7 @@ class Slider {
   scrollSections() {
     let oldScrollValue = 0;
     let newScrollValue = 0;
-    const progressNav = document.querySelector(
-      `.${cssClasses.YEAR_NAVIGATION}`
-    );
-    const navItem = progressNav.querySelector(`.${cssClasses.MENU}`);
-    const navOffsetHeight = progressNav.offsetHeight;
-    const item = navItem.querySelectorAll(`.${cssClasses.MENU_ITEM}`)[0];
-    const itemHeight =
-      parseInt(window.getComputedStyle(item).height) +
-      parseInt(window.getComputedStyle(item).marginBottom) +
-      5;
+
     const firstYearSection = document.querySelector(
       `.${cssClasses.CARD_SECTION}`
     );
@@ -118,6 +98,9 @@ class Slider {
     const fixedMenu = document.querySelector(
       `.${cssClasses.FIXED_NAVIGATION_WRAPPER}`
     );
+    const chromeLogoYear = document.querySelector(
+      `.${cssClasses.CHROME_LOGO_TEXT}`
+    );
 
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
@@ -125,47 +108,36 @@ class Slider {
       const menulink = document
         .getElementById(menuitem)
         .querySelector(`.${cssClasses.MENU_ITEM_LINK}`);
-      // ----create a new timeline
       const yearScrollTimeline = gsap.timeline({
-        id: 'Nav Animation',
+        id: 'year-timeline',
         defaults: {duration: 5},
         scrollTrigger: {
           trigger: section,
-          id: 'my-Trigger',
+          id: 'timeline-nav',
           onToggle: self => {
             newScrollValue = window.pageYOffset;
             const isActive = self.isActive;
             const activeItemIndex = self.trigger.dataset.index;
+            const sectionId = self.trigger.id.match(/\d+/g)[0];
 
-            chromeLogo.src = `${imgBaseUrl}${
-              chromeLogoVersions[self.trigger.id.match(/\d+/g)[0]]
-            }`;
-            chromeLogo.srcset = `${imgBaseUrl}${
-              chromeLogoVersions[self.trigger.id.match(/\d+/g)[0]]
-            }`;
+            for (const [key, value] of chromeLogoVersions.entries()) {
+              if (key.includes(sectionId)) {
+                chromeLogo.src = `${imgBaseUrl}${value}`;
+                chromeLogo.srcset = `${imgBaseUrl}${value}`;
+              }
+            }
+
+            chromeLogoYear.textContent = sectionId;
+
             if (oldScrollValue < newScrollValue) {
               if (isActive) {
                 this.currentIndex = activeItemIndex;
-                if (this.currentIndex > this.previousIndex) {
-                  navItem.style.top = `${
-                    navOffsetHeight / 2 -
-                    (navOffsetHeight * 10) / 100 -
-                    this.currentIndex * itemHeight
-                  }px`;
-                }
               } else {
                 this.previousIndex = activeItemIndex;
               }
             } else if (oldScrollValue > newScrollValue) {
               if (isActive) {
                 this.currentIndex = activeItemIndex;
-                if (this.currentIndex < this.previousIndex) {
-                  navItem.style.top = `${
-                    navOffsetHeight / 2 -
-                    (navOffsetHeight * 10) / 100 -
-                    this.currentIndex * itemHeight
-                  }px`;
-                }
               } else {
                 this.previousIndex = activeItemIndex;
               }
@@ -202,8 +174,18 @@ class Slider {
         },
       });
 
-      yearScrollTimeline.to(menulink, {duration: 0.5, scale: '2.5'}, '>');
-
+      yearScrollTimeline.to(
+        menulink,
+        {
+          duration: 0.5,
+          textDecoration: 'none',
+          fontWeight: 700,
+          fontSize: '1.5em',
+          lineHeight: 1,
+          transition: '0.125s all linear',
+        },
+        '>'
+      );
       return yearScrollTimeline;
     });
   }
