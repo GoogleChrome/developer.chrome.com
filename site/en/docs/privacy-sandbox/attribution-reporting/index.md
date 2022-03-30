@@ -82,6 +82,55 @@ This API enables advertisers and adtech providers to measure conversions in the 
 
 ## Status
 
+**🕙 Last updated: March 31st, 2022**
+
+### How can I try Attribution Reporting?
+
+At the time of this writing, you can try Attribution Reporting:
+- Soon, with end users, as part of an origin trial. [Learn more](https://developer.chrome.com/blog/privacy-sandbox-unified-origin-trial/).
+- Locally in your browser (with a _flag_).
+
+**If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).**
+
+{% Aside 'key-term' %}
+
+- In Chrome, a _flag_ is a toggle that tells
+  your browser to enable certain experimental functionalities.
+- An _origin trial_ is a way to test with end users a new
+  or experimental web platform feature, and give feedback to the web standards community on the
+  feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/). Note that **multiple rounds of origin trials are run**. Each round is used to improve and adjust the API
+based on ecosystem feedback. 
+  {% endAside %}
+
+### Status details
+
+<table class="simple width-full fixed-table with-heading-tint">
+<thead>
+<tr>
+    <th style="text-align: left;">Proposal</th>
+    <th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+    <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
+    <td>Available in Chrome behind a flag.</td>
+    </tr>
+    <tr>
+    <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
+    <td>Available in Chrome behind a flag.</td>
+    </tr>
+    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Explainer</a></td>
+    <td>Proposal, not implemented yet.</td>
+    </tr>
+    <tr>
+    <tr>
+    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md">Explainer</a></td>
+    <td>Proposal, not implemented yet.</td>
+    </tr>
+</tbody>
+</table>
+
 ### Status details
 
 <table class="simple width-full fixed-table with-heading-tint">
