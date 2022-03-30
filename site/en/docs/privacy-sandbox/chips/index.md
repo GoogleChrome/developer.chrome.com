@@ -129,7 +129,7 @@ key={("https", "retail.example"),
 
 [First-Party Sets](blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as first-party in situations where first party and third party are otherwise treated differently.
 
-When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party member sites. 
+When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party Set member sites. 
 
 Sites from the same First-Party Set will have the same partition key—the owner of the set. 
 
