@@ -32,7 +32,7 @@ tags:
 ## Chrome 100  {: #m100 }
 
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
-这是第 100 个 Chrome 版本！ Chrome DevTools 将继续为开发者在 Web 开发上提供可靠的工具。 请花点时间在 **What's New** 选项卡中单击以庆祝这些里程碑。
+这是第 100 个 Chrome 版本！ Chrome DevTools 将继续为开发者在 Web 开发上提供可靠的工具。  **What's New** 选项卡中内含彩蛋，您可以在该选项卡里随意单击以庆祝这个里程碑。
 
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
 和往常一样，您可以点击图片来观看最新的[DevTools 新功能视频](https://goo.gle/devtools-youtube)。
