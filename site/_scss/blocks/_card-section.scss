@@ -43,29 +43,29 @@ $chrome-100-colors: (
       width: 150px;
     }
 
-    @media screen and (min-width: 1231px) and (max-width: 1280px) {
-      left: -10px;
+    .chrome-logo-wrapper {
+      text-align: center;
+
+      &--text {
+        display: block;
+        font-size: 2em;
+        font-weight: 600;
+        margin-top: 24px;
+
+        @media screen and (min-width: 1231px) {
+          display: none;
+        }
+      }
     }
 
     .chrome-logo {
+      height: 48px;
       margin: 0 auto;
       width: 48px;
     }
 
     .year-navigation {
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      left: 0;
-      overflow: hidden;
-      position: absolute;
-      top: 60px;
-      width: 100px;
-
-      @include media-query('md') {
-        margin-top: 17px;
-        top: 85px;
-      }
+      display: none;
 
       @include media-query('lg') {
         width: 197px;
@@ -75,28 +75,31 @@ $chrome-100-colors: (
         width: 150px;
       }
 
+      @media screen and (min-width: 1231px) {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        top: 60px;
+        width: 100px;
+      }
+
       ul {
         list-style-type: none;
-        padding: 22px 0 0;
-        position: absolute;
+        padding: 0;
         text-align: center;
-        top: 40%;
 
         li {
-          margin-bottom: 45px;
+          margin-bottom: 10px;
 
           a {
             color: #{get-color('grey-800')};
             display: inline-block;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 30px;
+            font-size: 1em;
             text-decoration: none;
             width: 100% !important;
-
-            @include media-query('md') {
-              font-size: 16px;
-            }
           }
 
           a:hover {
@@ -110,9 +113,15 @@ $chrome-100-colors: (
   .fixed-navigation-wrapper {
     margin: 0;
     position: fixed;
+    top: 56px;
 
     @include media-query('lg') {
       left: 86px;
+      top: 0;
+    }
+
+    @include media-query('md') {
+      top: 50px;
     }
   }
 
@@ -243,7 +252,7 @@ $chrome-100-colors: (
         .logos {
           bottom: 0;
           justify-content: space-between;
-          padding-bottom: 20px;
+          padding-bottom: 15px;
 
           @include media-query('md') {
             margin-top: 18px;
@@ -255,6 +264,33 @@ $chrome-100-colors: (
             height: 15px;
           }
 
+          .likes {
+            align-items: center;
+            gap: 10px;
+
+            .heart-logo {
+              background: none;
+              border: 0;
+              cursor: pointer;
+
+              .icon {
+                fill: none;
+              }
+            }
+
+            .like-count {
+              letter-spacing: 1px;
+              text-align: center;
+              width: 50px;
+            }
+
+            .like {
+              .fill-like {
+                fill: map.get($chrome-100-colors, 'heart-red');
+                stroke: transparent;
+              }
+            }
+          }
         }
       }
     }
