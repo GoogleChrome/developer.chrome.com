@@ -426,6 +426,46 @@ To open the **Angle Clock**:
 5.  There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane
     keyboard shortcuts][28].
 
+### Change box and text shadows with the Shadow Editor {: #shadow-editor }
+
+The **Shadow Editor** provides a GUI for changing `text-shadow` and `box-shadow` CSS declarations.
+
+To open the **Shadow Editor**:
+
+1. [Select an element][27] with a shadow declaration. For example, select the element below. {: #shadow-element }
+
+    <div class="shadow-box"></div>
+    <style>
+      .shadow-box {
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      text-shadow: 0px 20px 1px #bebebe;
+      box-shadow:
+          11px 14px 5px 0px #bebebe, inset 0px 20px 7px 0px #dadce0;
+      }
+      .shadow-box::after { 
+        content: "I have a shadow!";
+      }
+    </style>
+
+1. In the **Styles** tab, find a shadow icon next to the `text-shadow` or `box-shadow` declaration.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oDpRxRK9of3pxQFkFwgc.png", alt="Shadow icons", width="800", height="513" %}
+
+   **Figure 29**. The shadow icon to the left of the `text-shadow` and `box-shadow` values.
+
+1. Click the shadow icon to open the **Shadow editor**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rp36OO9l2xg2dHW1i35t.png", alt="Shadow editor", width="800", height="513" %}
+
+1. Change the shadow properties:
+   - **Type** (only for `box-shadow`). Pick **Outset** or **Inset**.
+   - **X and Y offsets**. Drag the blue dot or specify values.
+   - **Blur**. Drag the slider or specify a value.
+   - **Spread** (only for `box-shadow`). Drag the slider or specify a value.
+1. Observe the changes applied to the [element](#shadow-element).
+
 [1]: /docs/devtools/css
 [2]: /docs/devtools/css#view
 [3]: /docs/devtools/javascript/reference#format
