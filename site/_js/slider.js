@@ -29,10 +29,7 @@ chromeLogoVersions.set(
   ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
   '03FZEfj2hitsD2V7kSGz.png'
 );
-chromeLogoVersions.set(
-  ['2022'],
-  ['ln27L4WEXP4h01jLfNBc.png', 'logo-animation-4']
-);
+chromeLogoVersions.set(['2022'], 'ln27L4WEXP4h01jLfNBc.png');
 
 class Slider {
   constructor() {
