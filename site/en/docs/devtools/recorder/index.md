@@ -62,7 +62,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
    {% Aside %}
- The **Selector attribute** textbox is optional. Leave it as it is for the purposes of this tutorial. For more information, see [Customize the recording's selector](#customize-selector).
+   The **Selector attribute** textbox is optional. Leave it as it is for the purposes of this tutorial. For more information, see [Customize the recording's selector](#customize-selector).
 
    The `data-testid` attribute is just an example, the **Recorder** can also detect ID attributes and regular CSS selectors. For more information, see [Selector types](#selector-types).
    {% endAside %}
@@ -141,30 +141,6 @@ Let's walk through the options to edit the steps within a workflow.
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 1. Try to edit other step properties such as **type**, **target**, **value** and more.
 
-#### Selector types {: #selector-types }
-
-During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
-
-{% Aside %}
-For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
-{% endAside %}
-
-In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
-1. Your custom selector attribute if you specified it at the start of the recording.
-1. ARIA selector if found.
-   If found, the **Recorder** will prioritize your custom CSS attribute selector above the ARIA one.
-   For more information, see [Customize the recording's selector](#customize-selector).
-1. The most common attributes used for testing: {: #selectors }
-   - `data-testid`
-   - `data-test`
-   - `data-qa`
-   - `data-cy`
-   - `data-test-id`
-   - `data-qa-id`
-   - `data-testing`
-1. ID attributes, for example, `<div id="some_ID">`.
-1. Regular CSS selectors.
-
 ### Add and remove steps {: #add-and-remove-steps }
 
 There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
@@ -193,3 +169,24 @@ For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-auto
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/X8r52vWEu6aC8QHFuknp.png", alt="The result of custom selector selection", width="800", height="579" %}
 
+### Selector types {: #selector-types }
+
+During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
+
+{% Aside %}
+For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
+{% endAside %}
+
+In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
+1. Your custom selector attribute if you specified it at the start of the recording.
+1. ARIA selector if found.
+1. The most common attributes used for testing: {: #selectors }
+   - `data-testid`
+   - `data-test`
+   - `data-qa`
+   - `data-cy`
+   - `data-test-id`
+   - `data-qa-id`
+   - `data-testing`
+1. ID attributes, for example, `<div id="some_ID">`.
+1. Regular CSS selectors.
