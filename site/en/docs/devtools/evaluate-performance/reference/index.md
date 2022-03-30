@@ -439,7 +439,7 @@ Hover over a frame to view a tooltip with more information about it.
 The **Frames** section can show four types of frames:
 
 1. **Idle frame (white)**. No changes.
-1. Frame (green). Rendered as expected and in time.
+1. **Frame (green)**. Rendered as expected and in time.
 1. Partially presented frame (yellow with a sparse wide dash-line pattern). Chrome did its best to render at least some visual updates in time. For example, in case the work of the main thread of the renderer process (canvas animation) is late but the compositor thread (scrolling) is in time.
 1. Dropped frame (red with a dense solid-line pattern). Chrome can't render the frame in reasonable time.
 
