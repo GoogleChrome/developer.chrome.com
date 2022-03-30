@@ -51,9 +51,6 @@ class Slider {
       yearTimeline.add(this.handleTab());
     });
 
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
     scrollToFristSec.addEventListener('click', e => {
       e.preventDefault();
       const firstSec = document.querySelector(`#${cssClasses.SECTION_2008}`);
