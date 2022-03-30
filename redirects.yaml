@@ -242,6 +242,9 @@ redirects:
 - from: /extensions/crx
   to: /docs/extensions/mv3/hosting
 
+- from: /extensions/event_pages/
+  to: /docs/extensions/mv2/background_pages/
+
 - from: /extensions/getstarted_arc
   to: https://developer.android.com/chrome-os/intro.html
 
