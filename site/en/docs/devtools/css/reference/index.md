@@ -4,6 +4,7 @@ title: "CSS features reference"
 authors:
   - kaycebasques
   - jecelynyeen
+  - sofiayem
 date: 2017-06-09
 #updated: YYYY-MM-DD
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
@@ -86,6 +87,39 @@ Use the **Computed** tab. See [View only the CSS that's actually applied to an e
 
 Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
 applied to an element][6].
+
+### View `@supports` at-rules {: #supports }
+
+The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
+
+<div class="box"></div>
+<style>
+  .box {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+}
+@supports (background: lab(0% 0 0)) {
+  .box {
+    background: lab(90% -44 55);
+  }
+  .box::after { content: "I support CIELAB color space!" }
+}
+@supports not (background: lab(0% 0 0)) {
+  .box {
+    background:#c9b1d6;
+  }
+  .box::after { content: "I don\'t support CIELAB color space :(" }
+}
+</style>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lw1ZveiO2lxVFDgylmnC.png", alt="View @supports at-rules", width="800", height="453" %}
+
+If your browser supports the `lab()` function, the element is green, otherwise it's purple.
+
+{% Aside %}
+**Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
+{% endAside %}
 
 ### View an element's box model {: #box-model }
 
