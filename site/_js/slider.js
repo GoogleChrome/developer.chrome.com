@@ -110,7 +110,7 @@ class Slider {
       const menulink = document
         .getElementById(menuitem)
         .querySelector(`.${cssClasses.MENU_ITEM_LINK}`);
-      // ----create a new timeline
+
       const yearScrollTimeline = gsap.timeline({
         id: 'year-timeline',
         defaults: {duration: 5},
