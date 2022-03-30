@@ -62,7 +62,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
    {% Aside %}
-   If you use a custom selector attribute in your code, this is where you can specify it. For more information, see [Customize the recording's selector](#customize-selector).
+ The **Selector attribute** textbox is optional. Leave it as it is for the purposes of this tutorial. For more information, see [Customize the recording's selector](#customize-selector).
 
    The `data-testid` attribute is just an example, the **Recorder** can also detect ID attributes and regular CSS selectors. For more information, see [Selector types](#selector-types).
    {% endAside %}
