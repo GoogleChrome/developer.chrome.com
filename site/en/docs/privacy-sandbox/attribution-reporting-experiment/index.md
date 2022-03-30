@@ -19,7 +19,7 @@ Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting).
    * (Optional) If you've already run an origin trial with this API in 2021, follow the [migration
      guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)
      to prepare for a future origin trial.
-   * To experiment with the API, follow these developer guides:
+   * To experiment with the API, follow these guides:
      * [What you should know about the Attribution Reporting
        API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/)
      * [Handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/):
@@ -56,8 +56,8 @@ your feedback is essential.
 
 ### Discuss the API
 
-{% Aside %} Like other Privacy Sandbox proposals, this API is documented and discussed publicly on a
-platform called _GitHub_. [Read this proposal](https://github.com/WICG/conversion-measurement-api/).
+{% Aside %} Like other Privacy Sandbox proposals, this API is documented and discussed publicly on _GitHub_. 
+[Read this proposal](https://github.com/WICG/conversion-measurement-api/).
 {% endAside %}
 
 - Join the conversation on [existing
