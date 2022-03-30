@@ -4,20 +4,18 @@ title: "Architecture overview"
 date: 2012-09-18
 updated: 2022-03-25
 description: A high-level explanation of the software architecture of Chrome Extensions.
+subhead: Overview of Chrome extensions components and capabilities.
 ---
 
 Extensions are zipped bundles of HTML, CSS, JavaScript, images, and other files used in the web
-platform, that customize the Google Chrome browsing experience. Extensions are built using web
-technology and can use the same APIs the browser provides to the open web.
+platform. Extensions can modify web content that users see and interact with. They can also extend and change the behavior of
+the browser itself. 
 
-Extensions have a wide range of functional possibilities. They can modify web content users see and
-interact with or extend and change the behavior of the browser itself.
-
-Consider extensions the gateway to making the Chrome browser the most personalized browser.
+This page briefly describes the files that could form part of an extension, how to access these files, how to use the Chrome APIs, how these pages communicate with each other and how to store data.
 
 ## Extension files {: #files }
 
-Extensions vary in types of files and amount of directories, but they are all required to have a
+Extensions may contain many files or directories, but they are all required to have a
 [manifest][docs-manifest].
 
 ### The manifest {: #manifest }
@@ -97,6 +95,8 @@ All assets accessed by content scripts must be declared as a
 
 {% endAside %}
 
+### Web accesible resources
+
 ## Architecture {: #arch }
 
 An extension's architecture will depend on its functionality, but many robust extensions will
@@ -130,10 +130,11 @@ The following is a list of most common UI examples:
 - Desktop [notifications][api-notif].
 - [Extension pages][docs-ext-pages].
 - [Text-to-speech][api-tts].
-- Inject a custom UI [into a page][docs-content-scripts].
+- A custom UI injected [into a page][docs-content-scripts].
+<!-- Rewrite -->
 - [Override Chrome pages][docs-override] (History page, New Tab, or Bookmarks).
 
-See [Design the UI][docs-ui] for UI and design guidelines for Chrome Extensions.  
+To learn more, see the [Design the UI of a Ch][docs-ui].  
 
 ### Content scripts {: #contentScripts }
 
