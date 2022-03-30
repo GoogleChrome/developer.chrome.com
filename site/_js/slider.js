@@ -123,14 +123,12 @@ class Slider {
             const activeItemIndex = self.trigger.dataset.index;
             const sectionId = self.trigger.id.match(/\d+/g)[0];
 
-            // Start V1
             for (const [key, value] of chromeLogoVersions.entries()) {
               if (key.includes(sectionId)) {
                 chromeLogo.src = `${imgBaseUrl}${value}`;
                 chromeLogo.srcset = `${imgBaseUrl}${value}`;
               }
             }
-            // End
 
             chromeLogoYear.textContent = sectionId;
 
@@ -181,7 +179,14 @@ class Slider {
 
       yearScrollTimeline.to(
         menulink,
-        {duration: 0.5, textDecoration: 'underline', fontWeight: 'bold'},
+        {
+          duration: 0.5,
+          textDecoration: 'none',
+          fontWeight: 700,
+          fontSize: '1.5em',
+          lineHeight: 1,
+          transition: '0.125s all linear',
+        },
         '>'
       );
 
