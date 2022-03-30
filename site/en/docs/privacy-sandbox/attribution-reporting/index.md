@@ -87,7 +87,7 @@ This API enables advertisers and adtech providers to measure conversions in the 
 ### How can I try Attribution Reporting?
 
 At the time of this writing, you can try Attribution Reporting:
-- Soon, with end users, as part of an origin trial. [Learn more](https://developer.chrome.com/blog/privacy-sandbox-unified-origin-trial/).
+- Soon, with end users, as part of an origin trial. [Learn more](/blog/privacy-sandbox-unified-origin-trial/).
 - Locally in your browser (with a _flag_).
 
 **If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).**
@@ -119,35 +119,6 @@ based on ecosystem feedback.
     <tr>
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
     <td>Available in Chrome behind a flag.</td>
-    </tr>
-    <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Explainer</a></td>
-    <td>Proposal, not implemented yet.</td>
-    </tr>
-    <tr>
-    <tr>
-    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md">Explainer</a></td>
-    <td>Proposal, not implemented yet.</td>
-    </tr>
-</tbody>
-</table>
-
-### Status details
-
-<table class="simple width-full fixed-table with-heading-tint">
-<thead>
-<tr>
-    <th style="text-align: left;">Proposal</th>
-    <th style="text-align: left;">Status</th>
-</tr>
-</thead>
-<tbody>
-    <tr>
-    <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Latest version not implemented yet, under development in Chrome.</td>
-    </tr>
-    <tr>
-    <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Latest version not implemented yet, under development in Chrome.</td>
     </tr>
     <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Explainer</a></td>
     <td>Proposal, not implemented yet.</td>
@@ -209,6 +180,8 @@ Event-level reports are suited for:
 
 **Summary reports**, on the other hand, offer more detailed conversion data and more flexibility for
 joining click/view data and conversion data.
+
+Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
 <figure>
  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="summary
