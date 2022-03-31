@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: VersionHistory API reference
-date: 2021-03-04
+date: 2022-03-31
 description: Technical reference information about the VersionHistory web service API.
 ---
 
@@ -109,6 +109,14 @@ A product is piece of software such as Chrome or Fuchsia Web Engine.
       <td>Fuchsia Web Engine</td>
       <td><code>fuchsiawebengine</code></td>
     </tr>
+    <tr>
+      <td>Chromium Updater</td>
+      <td><code>chromium_updater</code></td>
+    </tr>
+    <tr>
+      <td>ChromeOS</td>
+      <td><code>chromeos</code></td>
+    </tr>
   </tbody>
 </table>
 
@@ -208,6 +216,14 @@ GET /{product}/platforms/all/channels
     <tr>
       <td>Lacros</td>
       <td><code>lacros</code></td>
+    </tr>
+    <tr>
+      <td>Lacros (ARM32)</td>
+      <td><code>lacros_arm32</code></td>
+    </tr>
+    <tr>
+      <td>ChromeOS</td>
+      <td><code>chromeos</code></td>
     </tr>
   </tbody>
 </table>
@@ -347,6 +363,8 @@ expression should take the form of `field operator value`.
 * For releases that Chrome is still serving, `serving.endtime` will not be populated.
   During ordering or filtering, `serving.endtime` will be treated as
   `1970-01-01T00:00:00Z` if the field is not populated.
+* To query for versions that are still serving you can query for `endtime=1970-01-01T00:00:00Z`
+  or `endtime=none`
 * `fraction` is used to specify how many users were involved in the rollout.
   For example, `fraction=1` means 100% of users.
 
