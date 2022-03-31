@@ -160,7 +160,7 @@ There are options to add and remove steps too. This is useful if you want to add
 
 ## Customize the recording's selector {: #customize-selector }
 
-You can customize the selector of a recording if you are not using the [common selectors](#selectors).
+You can customize the selector of a recording if the above doesn't work for you.
 
 For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`).
 
