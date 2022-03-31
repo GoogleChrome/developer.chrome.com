@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting'
-subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion on such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
-description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion on such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
+subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
+description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2021-05-18
-updated: 2022-03-28
+updated: 2022-03-31
 authors:
   - maudn
   - samdutton
@@ -82,6 +82,26 @@ This API enables advertisers and adtech providers to measure conversions in the 
 
 ## Status
 
+**🕙 Last updated: March 31st, 2022**
+
+### How can I try Attribution Reporting?
+
+At the time of this writing, you can try Attribution Reporting:
+- Soon, with end users, as part of an origin trial. [Learn more](/blog/privacy-sandbox-unified-origin-trial/).
+- Locally in your browser (with a _flag_).
+
+**If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).**
+
+{% Aside 'key-term' %}
+
+- In Chrome, a _flag_ is a toggle that tells
+  your browser to enable certain experimental functionalities.
+- An _origin trial_ is a way to test with end users a new
+  or experimental web platform feature, and give feedback to the web standards community on the
+  feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/). Note that **multiple rounds of origin trials are run**. Each round is used to improve and adjust the API
+based on ecosystem feedback. 
+  {% endAside %}
+
 ### Status details
 
 <table class="simple width-full fixed-table with-heading-tint">
@@ -94,11 +114,11 @@ This API enables advertisers and adtech providers to measure conversions in the 
 <tbody>
     <tr>
     <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Latest version not implemented yet, under development in Chrome.</td>
+    <td>Available in Chrome behind a flag.</td>
     </tr>
     <tr>
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Latest version not implemented yet, under development in Chrome.</td>
+    <td>Available in Chrome behind a flag.</td>
     </tr>
     <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Explainer</a></td>
     <td>Proposal, not implemented yet.</td>
@@ -160,6 +180,8 @@ Event-level reports are suited for:
 
 **Summary reports**, on the other hand, offer more detailed conversion data and more flexibility for
 joining click/view data and conversion data.
+
+Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
 <figure>
  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="summary
