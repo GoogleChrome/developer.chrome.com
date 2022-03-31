@@ -44,3 +44,5 @@ chips:
   en: 'Cookies Having Independent Partitioned State (CHIPS)'
 fedcm:
   en: 'Federated Credentials Management (FedCM)'
+proposals:
+  en: 'Proposal lifecycle'
