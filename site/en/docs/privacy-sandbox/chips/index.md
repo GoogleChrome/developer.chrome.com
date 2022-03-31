@@ -6,7 +6,7 @@ subhead: >
 description: >
   CHIPS is a Privacy Sandbox proposal that will allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set
 date: 2022-02-15
-updated: 2022-03-17
+updated: 2022-03-30
 authors:
   - mihajlija
 ---
@@ -23,7 +23,7 @@ Cookies Having Independent Partitioned State (CHIPS) is a Privacy Sandbox propos
 
 A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set. 
 
-### Why do we need it
+## Why do we need it
 
 Currently, third-party cookies can enable services to track users and join their information from across many unrelated top-level sites. This is known as cross-site tracking. 
 
@@ -39,7 +39,7 @@ To protect user privacy, browser vendors are placing restrictions on this behavi
 
 While cross-site tracking is an issue, there are valid cross-site cookie needs on the web today which can be achieved in a privacy-preserving way with cookie partitioning.
 
-### Use cases
+## Use cases
 
 For example, the site `retail.example` may want to work with a third-party service `support.chat.example` to embed a support chat box on its site. Many embeddable chat services today rely on cookies to save interaction history. 
 
@@ -59,7 +59,7 @@ Example use cases for CHIPS include any scenarios where cross-site subresources 
 +   Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
 +   Front-end frameworks that rely on remote APIs using cookies on their requests
 
-### How does it work?
+## How does it work?
 
 CHIPS introduces a new cookie attribute, `Partitioned`, to support cross-site cookies that are partitioned by top-level context.  
 
@@ -73,7 +73,7 @@ If a user visits site C as a top level website, the partitioned cookie that C se
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/FaQYaZyTsAxCm8GvvVc8.png", alt="With cookie partitioning, a third-party service that sets a cookie when embedded in a site cannot access that same cookie even when the users visits the service as top-level site.", width="400", height="304" %}
 
-### Why it's important to opt into cookie partitioning
+## Why it's important to opt into cookie partitioning
 
 As browsers are phasing out unpartitioned third-party cookies, a couple of other approaches to partitioning have been attempted.
 
@@ -85,9 +85,9 @@ What sets CHIPS apart from existing implementations of partitioned cookies is th
 
 While third-party cookies still exist, the `Partitioned` attribute provides an opt-in to a more restrictive, more secure type of cookie behavior. CHIPS is an important step to help services make a smooth transition to a future without third-party cookies.
 
-### CHIPS design details
+## CHIPS design details
 
-#### Partitioning model
+### Partitioning model
 
 Today, cookies are keyed on the hostname or domain of the site that set them, that is, their _host key_.   
 
@@ -125,7 +125,17 @@ key={("https", "retail.example"),
      ("support.chat.example")}
 ```
 
-#### Security design
+#### First-Party Sets and cookie partitioning
+
+[First-Party Sets](blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as the same first-party as the top-level site, in situations where Chrome may apply restrictions, such as access to cookies on third-party subresources.
+
+When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party Set member sites. This allows the embedded service to provide a seamless, unified user session across all member sites.
+
+Sites from the same First-Party Set will have the same partition key—the owner of the set. 
+
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ho7jqWrZzBxmX3fsIpTt.png", alt="", width="800", height="548" %}
+
+### Security design
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
@@ -139,7 +149,7 @@ Example:
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-### Try it out
+## Try it out
 
 [CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 103. 
 
@@ -153,7 +163,7 @@ To try it out locally, turn on the `chrome://flags/#partitioned-cookies` flag in
    width="779", height="329"
 %}
 
-### Engage and share feedback
+## Engage and share feedback
 
 +   **GitHub**: Read the [proposal](https://github.com/WICG/CHIPS), [raise questions and follow the discussion](https://github.com/WICG/CHIPS/issues).
 +   **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
