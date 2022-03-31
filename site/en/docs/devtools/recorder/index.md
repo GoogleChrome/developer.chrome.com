@@ -196,7 +196,7 @@ For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-auto
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/X8r52vWEu6aC8QHFuknp.png", alt="The result of custom selector selection", width="800", height="579" %}
 
-### Selector types {: #selector-types }
+### Selector priority {: #selector-priority }
 
 During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
 
