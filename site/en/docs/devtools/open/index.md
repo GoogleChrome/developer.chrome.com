@@ -60,4 +60,4 @@ on, every new tab will automatically open DevTools until the user fully quits
 Chrome.
 
 [1]: /docs/devtools/css
-[2]: /docs/devtools/console/get-started
+[2]: /docs/devtools/console
