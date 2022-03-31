@@ -24,6 +24,10 @@ Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting).
        API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/)
      * [Handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/):
        Demo, detailed code examples and (local) debugging tips.
+4. Experiment with [summary
+   reports](/docs/privacy-sandbox/attribution-reporting/summary-reports)
+   * (Optional) Additional instructions for experimenting with the Aggregation Service running in a Trusted Execution Environment (TEE) or local testing from decrypted debug reports will be made available soon.
+
 
 ## Get support
 
