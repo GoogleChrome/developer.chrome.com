@@ -64,7 +64,6 @@ In the next sections, we will walk you through how to record, replay and audit t
    {% Aside %}
    The **Selector attribute** textbox is optional. Leave it as it is for the purposes of this tutorial. For more information, see [Customize the recording's selector](#customize-selector).
 
-   The `data-testid` attribute is just an example, the **Recorder** can also detect ID attributes and regular CSS selectors. For more information, see [Selector types](#selector-types).
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress", width="800", height="528" %} 
