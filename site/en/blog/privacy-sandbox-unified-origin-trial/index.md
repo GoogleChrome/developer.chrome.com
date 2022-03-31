@@ -130,8 +130,8 @@ To enable APIs for testing, you must:
     *   This flag forces the APIs on for easier testing, if you want to
         replicate an eligible origin trial user where their additional settings
         can still disable the APIs, then you should launch Chrome using the CLI
-        flags: `--enable-features=Browsing topics,
-        InterestGroupStorage,AllowURNsInIframes, PrivacySandboxAdsAPIs`.
+        flags:
+        `--enable-features=BrowsingTopics,InterestGroupStorage,AllowURNsInIframes,PrivacySandboxAdsAPIs`.
     *   Individual APIs may have more additional flags for more fine-grained
         configuration, check the individual guides for details.
     *   Additional flags may conflict with this one, so consider only setting
