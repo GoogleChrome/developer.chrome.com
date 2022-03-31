@@ -340,7 +340,7 @@ _Topics enable interest-based advertising, without resorting to tracking the
 sites a user visits. [Learn more about the Topics
 API](/docs/privacy-sandbox/topics/)._
 
-**_Last updated 2022/02: initial Topics API proposal published 2022/01_**
+**_Last updated 2022/03: Topics is preparing for origin trial_**
 
 <table class="width-full">
   <tr>
@@ -352,7 +352,7 @@ API](/docs/privacy-sandbox/topics/)._
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td>[to come]
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs/">I2E 2022/03</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M/">I2P 2022/02</a>
    </td>
   </tr>
   <tr>
@@ -424,7 +424,7 @@ that can make use of sites or products previously visited, but without relying
 on an individual identifier. [Learn more about
 FLEDGE](/docs/privacy-sandbox/fledge/)._
 
-**_Last updated 2022/02_**
+**_Last updated 2022/03: FLEDGE is preparing for origin trial_**
 
 <table class="width-full">
   <tr>
@@ -436,7 +436,7 @@ FLEDGE](/docs/privacy-sandbox/fledge/)._
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/">I2P 2021/03</a>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg/">I2E 2022/03</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/">I2P 2021/03</a>
    </td>
   </tr>
   <tr>
@@ -468,7 +468,7 @@ click or view, leads to a conversion, but without using cross-site identifiers.
 [Learn more about the Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)._
 
-**_Last updated 2022/02_**
+**_Last updated 2022/03: Attribution Reporting is preparing for an additional origin trial_**
 
 <table class="width-full">
   <tr>
@@ -480,7 +480,7 @@ API](/docs/privacy-sandbox/attribution-reporting/)._
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA/">I2E 2021/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/DmsUL3KHqMk/">I2E 2021/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/xCWP1ltlAgw/">I2E 2021/07</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/C0P7ePjITJQ/">I2E 2021/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/Ib9-tDFitns/">I2E 2020/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/7B0ldtZR_68/">I2P 2019/10</a>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y/">I2E 2022/03</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA/">I2E 2021/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/DmsUL3KHqMk/">I2E 2021/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/xCWP1ltlAgw/">I2E 2021/07</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/C0P7ePjITJQ/">I2E 2021/01</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/Ib9-tDFitns/">I2E 2020/09</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/7B0ldtZR_68/">I2P 2019/10</a>
    </td>
   </tr>
   <tr>
@@ -510,7 +510,7 @@ retains critical information for reporting without the ability to identify
 individual users within that data. [Learn more about the Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)._
 
-**_Last updated 2022/02_**
+**_Last updated 2022/03: Attribution Reporting is preparing for an additional origin trial_**
 
 <table class="width-full">
   <tr>
@@ -522,7 +522,7 @@ API](/docs/privacy-sandbox/attribution-reporting/)._
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2zA5-TuVSkA/">I2P 2021/08</a>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y/">I2E 2022/03</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2zA5-TuVSkA/">I2P 2021/08</a>
    </td>
   </tr>
   <tr>

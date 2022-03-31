@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-03-21
+updated: 2022-03-31
 authors:
   - samdutton
 ---
@@ -25,8 +25,8 @@ much technical detail.
 such as [advertiser](#advertiser) and [publisher](#publisher). [How does FLEDGE work?](#how) should
 still be useful.
 
-* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api) provides more
-in-depth technical detail about the proposal.
+* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api)
+provides more in-depth technical detail about the proposal.
 
 * [The FLEDGE demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE
 deployment.
@@ -121,23 +121,19 @@ buyer's code can include a `reportWin()` function.
 
 ## How can I try FLEDGE?
 
+* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out FLEDGE for a
+single user by running Chrome from the command line using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+to manually enable the API.
+
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
-deployment across a shopping, travel and publisher site.
+deployment across advertiser and publisher sites.
 
-* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out
-FLEDGE by running Chrome from the command line using
-[feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to manually
-enable the API.
+* [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
-{% Aside %}
-
-Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
-under discussion.
-
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the trial and what features are proposed for support.
-
-{% endAside %}
+{% YouTube
+  id='znDD0gkdJyM'
+%}
 
 {: #user-controls}
 
@@ -330,6 +326,7 @@ see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/F
 
 {% DetailsSummary %}
 ## What is an interest group?
+
 {% endDetailsSummary %}
 
 A FLEDGE interest group represents a group of people with a common interest, corresponding to a
@@ -411,6 +408,7 @@ The table below provides examples of different types of FLEDGE interest group an
 
 {% DetailsSummary %}
 ## What is a buyer?
+
 {% endDetailsSummary %}
 
 In FLEDGE, a party that owns an [interest group](#interest-group) and bids in an ad [auction](#).
@@ -449,6 +447,7 @@ The buyer's code can also include a `reportWin()` function to report the auction
 
 {% DetailsSummary %}
 ## Who runs an ad auction?
+
 {% endDetailsSummary %}
 
 There are multiple parties that might run an auction to sell ad space.
@@ -477,6 +476,7 @@ auction by calling the JavaScript function `navigator.runAdAuction()`.
 
 {% DetailsSummary %}
 ## How does a FLEDGE ad auction work?
+
 {% endDetailsSummary %}
 
 <br>
@@ -535,7 +535,7 @@ The `navigator.runAdAuction()` code (from step 2) must include a `scoreAd()` fun
 once for each ad and accompanying bid, to determine its desirability. The `scoreAd()` function is
 run for every candidate ad, in the auction logic JavaScript code provided by the seller. This
 function uses the bid value and other data returned by the `generateBid()` function in each buyer's
-code (in the previous step). The seller may also receive realtime data from its 
+code (in the previous step). The seller may also receive realtime data from its
 [trusted server](#trusted-server).
 
 For each ad, the `scoreAd()` function returns a number indicating its desirability. The most
@@ -571,6 +571,7 @@ A reporting mechanism for losing bidders is [under discussion](https://github.co
 
 {% DetailsSummary %}
 ## What is a trusted server?
+
 {% endDetailsSummary %}
 
 In the context of the Privacy Sandbox, a trusted server is a secure environment to enable access to
@@ -592,6 +593,7 @@ or [secure enclaves](https://support.apple.com/en-gb/guide/security/sec59b0b31ff
 
 {% DetailsSummary %}
 ## How is realtime data incorporated into auctions?
+
 {% endDetailsSummary %}
 
 The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to realtime
@@ -621,6 +623,7 @@ model.
 
 {% DetailsSummary %}
 ## Glossary
+
 {% endDetailsSummary %}
 
 {: #ad-auction}
@@ -781,6 +784,8 @@ JavaScript function.
 
 -  [FLEDGE API developer guide](/blog/fledge-api): reference guide to API usage.
 -  [FLEDGE demo](https://fledge-demo.glitch.me): walkthrough of a basic FLEDGE deployment.
+-  [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 -  [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
