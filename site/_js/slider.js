@@ -177,12 +177,11 @@ class Slider {
       yearScrollTimeline.to(
         menulink,
         {
-          duration: 0.5,
-          textDecoration: 'none',
+          duration: 0.25,
           fontWeight: 700,
           fontSize: '1.5em',
           lineHeight: 1,
-          transition: '0.125s all linear',
+          className: 'sectionLink ga-event active-year',
         },
         '>'
       );
