@@ -158,7 +158,7 @@ There are options to add and remove steps too. This is useful if you want to add
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
 6. [Replay](#replay) the flow now to see the changes.
 
-## Customize the recording's selector {: #customize-selector }
+### Customize the recording's selector {: #customize-selector }
 
 You can customize the selector of a recording if the above doesn't work for you.
 
