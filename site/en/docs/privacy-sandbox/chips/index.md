@@ -4,7 +4,8 @@ title: 'Cookies Having Independent Partitioned State (CHIPS)'
 subhead: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
 description: >
-  CHIPS is a Privacy Sandbox proposal that will allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set
+  Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
+  Prtitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
 updated: 2022-04-01
 authors:
