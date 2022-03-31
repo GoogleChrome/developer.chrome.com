@@ -2,21 +2,29 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-03-25
+updated: 2022-04-01
 description: A high-level explanation of the software architecture of Chrome Extensions.
-subhead: Overview of Chrome extensions components and capabilities.
+subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
 
 Extensions are zipped bundles of HTML, CSS, JavaScript, images, and other files used in the web
-platform. Extensions can modify web content that users see and interact with. They can also extend and change the behavior of
-the browser itself. 
+platform. Extensions can modify web content that users see and interact with. They can also extend
+and change the behavior of the browser itself. 
 
-This page briefly describes the files that could form part of an extension, how to access these files, how to use the Chrome APIs, how these pages communicate with each other and how to store data.
+This page briefly describes the files that could form part of an extension, how to access these
+files, how to use Chrome APIs, how extension files communicate and how to store
+data.
 
-## Extension files {: #files }
+## Architecture {: #arch }
 
-Extensions may contain many files or directories, but they are all required to have a
-[manifest][docs-manifest].
+An extension's architecture will depend on its functionality, but they are all required to have a
+[manifest][section-manifest]. The following are other components an extension can include: 
+
+- [Background Script][section-bg]
+- [Toolbar icon][section-icons]
+- [UI Elements][section-ui]
+- [Content Script][section-cs]
+- [Options Page][section-options]
 
 ### The manifest {: #manifest }
 
@@ -55,65 +63,31 @@ example][sample-getting-started].
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started
 Popup", width="187", height="153" %}
-
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
-
-### Referencing extension files {: #ref-files }
-
-#### Relative URLs {: #relative-urls }
-
-Just as HTML pages on the web can include files on the same site with relative URLs, extensions
-pages can also reference assets in the extension using relative paths.
-
-```html
-<img src="images/my_image.png">
-```
-
-#### Absolute URL {: #absolute-urls }
-
-To access a file in a content script, you can use the [`chrome.runtime.getURL()`][api-get-url]
-method. 
-
-``` js
-let image = chrome.runtime.getURL("images/my_image.png")
-```
-
-It will return an absolute URL for the asset in your extension, that looks like this:
-
-```text
-chrome-extension://EXTENSION_ID/RELATIVE_PATH
-```
-
-The <code><var>EXTENSION_ID</var></code> is a unique identifier that the browser generates. You can
-view these IDs in the Extension management page **chrome://extensions**. The
-<code><var>RELATIVE_PATH</var></code> is the file path relative to the extension's top folder.
-
-{% Aside 'caution' %}
-
-All assets accessed by content scripts must be declared as a
-[`web_accessible_resource`][docs-web-acc-res] in the manifest.
-
-{% endAside %}
-
-### Web accesible resources
-
-## Architecture {: #arch }
-
-An extension's architecture will depend on its functionality, but many robust extensions will
-include multiple components:
-
-- [Manifest][docs-manifest]
-- [Background Script][section-bg]
-- [UI Elements][section-ui]
-- [Content Script][section-cs]
-- [Options Page][section-options]
 
 ### Background service worker {: #background_script }
 
-The [background service worker][docs-service-worker] is the extension's event handler; it contains
-listeners for browser events that are important to the extension. It lies dormant until an event is
-fired then performs the instructed logic; it is only loaded when it is needed and unloaded when it
-goes idle.
+The background service worker is the extension's event handler; it contains listeners for browser
+events that are important to the extension. It lies dormant until an event is fired then performs
+the instructed logic; it is only loaded when it is needed and unloaded when it goes idle. The
+background script has access to all the [Chrome APIs][section-apis], as long it declares the
+required permissions in the `manifest.json`.
+
+See [Manage events with Service Workers][docs-service-worker] to learn more. 
+
+### Content scripts {: #contentScripts }
+
+Content scripts allow extensions to inject script into a page in order to read and modify its
+contents. The content script contains JavaScript that executes in the contexts of a page that has
+been loaded into the browser.
+
+Content scripts can communicate with their parent extension by exchanging [messages][docs-messages]
+and storing values using the [storage][api-storage] API.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png", alt="Shows a communication
+path between the content script and the parent extension", height="316", width="388" %}
+
+See [Understanding Content scripts][docs-content-scripts] to learn more.
 
 ### UI elements {: #pages }
 
@@ -128,34 +102,16 @@ The following is a list of most common UI examples:
 - An [omnibox][docs-omnibox]
 - A [keyboard shortcut][docs-commands].
 - Desktop [notifications][api-notif].
-- [Extension pages][docs-ext-pages].
 - [Text-to-speech][api-tts].
 - A custom UI injected [into a page][docs-content-scripts].
-<!-- Rewrite -->
-- [Override Chrome pages][docs-override] (History page, New Tab, or Bookmarks).
 
-To learn more, see the [Design the UI of a Ch][docs-ui].  
-
-### Content scripts {: #contentScripts }
-
-[Content scripts][docs-content-scripts] allow extensions to inject script into a page in order to
-read and modify its contents. The content script contains JavaScript that executes in the contexts
-of a page that has been loaded into the browser.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png", alt="A browser window with
-a page action and a content script", height="316", width="388" %}
-
-Content scripts can communicate with their parent extension by exchanging [messages][docs-messages]
-and storing values using the [storage][api-storage] API.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png", alt="Shows a communication
-path between the content script and the parent extension", height="316", width="388" %}
+See [Design the UI of a Chrome extension][docs-ui], to learn more.
 
 ### Options page {: #optionsPage }
 
-Just as extensions allow users to customize the Chrome browser, the [options page][docs-options]
-enables customization of the extension. Options can be used to enable features and allow users to
-choose what functionality is relevant to their needs.
+Just as extensions allow users to customize the Chrome browser, the options page enables
+customization of the extension. Options can be used to enable features and allow users to choose
+what functionality is relevant to their needs.
 
 Users can access the options page via [direct link][docs-link-options] or in the context menu of the
 extension toolbar. The following is an example of the Google Dictionary extension. 
@@ -165,7 +121,8 @@ extension toolbar. The following is an example of the Google Dictionary extensio
 {% Column %}
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", alt="Options page link in UI", width="800", height="299" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", 
+alt="Options page link in UI", width="800", height="299" %}
   <figcaption>
     Link to Options page.
   </figcaption>
@@ -176,7 +133,8 @@ extension toolbar. The following is an example of the Google Dictionary extensio
 {% Column %}
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BM11QeGCThsUNTlsZbAe.png", alt="Context Menu Options page", width="357", height="222" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BM11QeGCThsUNTlsZbAe.png", 
+alt="Context Menu Options page", width="357", height="222" %}
 
   <figcaption>
     Options page in extension's context menu.
@@ -187,17 +145,102 @@ extension toolbar. The following is an example of the Google Dictionary extensio
 
 {% endColumns %}
 
+See [Give users options][docs-options] to learn more.
+
+### Additional HTML files {: #html-files}
+
+You can display other HTML files present in the extension that are not declared in the manifest.
+These HTML files can access the same [Chrome APIs][section-apis] as the popup or other extension
+files. 
+
+You can open these pages using the web api [window.open()][mdn-window-open] or the Chrome APIs
+[windows.create()][api-window-create] or [tabs.create()][api-create-tab].
+
+<!-- TODO: See Extension pages to learn more. -->
+
+## Extension files {: #files }
+<!-- TODO: Intro -->
+### Referencing extension files {: #ref-files }
+
+Just as HTML pages on the web can include files on the same site with _relative URLs_, **extension
+pages** can also reference extension assets using relative paths.
+
+```html
+<img src="images/my_image.png">
+```
+
+To access an extension file from a **content script**, you can
+[`chrome.runtime.getURL()`][api-get-url] to get the _absolute URL_ of your extension asset.
+
+``` js
+let image = chrome.runtime.getURL("images/my_image.png")
+```
+
+To access an extension file from a **website**, you will have to construct the URL as follows:
+
+```text
+chrome-extension://EXTENSION_ID/RELATIVE_PATH
+```
+
+You can find the <code><var>EXTENSION_ID</var></code> in the Extension management page
+**chrome://extensions**. The <code><var>RELATIVE_PATH</var></code> is the file path relative to the
+extension's top folder.
+
+{% Aside 'key-term' %}
+
+The **extension ID** is a 32 character alpha string that identifies an extension in the browser and
+on the Chrome Web Store.
+
+{% endAside %}
+
+During development, a new ID is generated when an [_unpacked extension_][docs-unpacked] is loaded,
+unless the `"key"` property is set in the manifest.
+
+See xyz to learn how to set this key.
+
+{% Aside 'caution' %}
+
+All assets that content scripts and websites want to access must be declared as a
+[`web_accessible_resources`][section-web-res] in the manifest.
+
+{% endAside %}
+
+### Web accesible resources {: #web-resources }
+
+Web-accessible resources are files (images, HTML, CSS, Javascript) inside an extension that can be
+accessed by a content script, web pages or other extensions. 
+
+In Manifest Version 3, you can declare which resources are exposed and to what origins in the
+manifest:
+
+```json
+{
+  ...
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/*.png" ],
+      "matches": [ "https://example.com/*" ]
+    }
+  ],
+  ...
+}
+```
+
+See [Web accesible resources][docs-web-acc-res] to learn more.
+
 ## Using Chrome APIs {: #apis }
 
 In addition to having access to the same [web APIs][mdn-web-apis] as web pages, extensions can also
-use [extension-specific APIs][api-reference] that create tight integration with the browser.
-Extensions and webpages can both access the standard `window.open()` method to open a URL, but
-extensions can specify which window that URL should be displayed in by using
-[chrome.tabs.create()][api-tabs-create] instead.
+use [extension-specific APIs][api-reference] that create tight integration with the browser. For
+example, both extensions and webpages can access the standard [`window.open()`][mdn-window-open]
+method to open a URL, but extensions can specify which window that URL should be displayed in by
+using [chrome.tabs.create()][api-create-tab] instead.
+
+For more information, explore the [Chrome API reference docs][api-reference].
 
 ### Asynchronous vs. synchronous methods {: #sync }
 
-#### Callbacks
+#### Callbacks {: #callbacks }
 
 Most Chrome API methods are asynchronous: they return immediately without waiting for the operation
 to finish. If an extension needs to know the outcome of an asynchronous operation it can pass a
@@ -214,19 +257,18 @@ chrome.tabs.query(object queryInfo, function callback)
 If the extension needed to navigate the user's currently selected tab to a new URL, it would need to
 get the current tab's ID and then update that tab's address to the new URL.
 
-
 If the [tabs.query][api-tabs-query] method were synchronous, it may look something like below.
 
 {% Compare 'worse' %}
 ```js
-var tab = chrome.tabs.query(queryOptions); //WRONG!!!
+let tab = chrome.tabs.query(queryOptions); //WRONG!!!
 chrome.tabs.update(tab.id, {url:newUrl});
 someOtherFunction();
 ```
 {% CompareCaption %}
 
-This approach will fail because `query()` is asynchronous. It returns without waiting for the work
-to complete, and does not return a value.
+This approach will fail because `query()` is **asynchronous**. It returns without waiting for the
+work to complete, and does not return a value.
 
 {% endCompareCaption %}
 
@@ -250,12 +292,11 @@ currently selected tab is available. This happens sometime after `query()` retur
 `update()` is asynchronous the code doesn't use a callback parameter, since the extension doesn't do
 anything with the results of the update.
 
-
-#### Promises
+#### Promises {: #async }
 
 With the introduction of Manifest V3, many extension API methods now return promises. Not all
 methods in extensions APIs support promises. You can verify whether a method supports promises by
-checking its API reference page. See [Using promises][docs-promises] to learn more.
+checking its API reference page.
 
 ```js
 // Promise
@@ -270,21 +311,18 @@ async function queryTab() {
   chrome.tabs.update(tabs[0].id, {url: newUrl});
   someOtherFunction();
 }
-
 ```
 
-#### Synchronous methods
+See [Using promises][docs-promises] to learn more.
+
+#### Synchronous methods {: #sync }
 
 ```js
-// Synchronous methods have no callback option and returns a type of string
-string chrome.runtime.getURL()
+// Synchronous methods have no callback
+const imgUrl = chrome.runtime.getURL("images/icon.png")
 ```
 
 This method synchronously returns the URL as a `string` and performs no other asynchronous work.
-
-### More details {: #chrome-more }
-
-For more information, explore the [Chrome API reference docs][api-reference].
 
 ## Communication between pages {: #pageComm }
 
@@ -294,7 +332,7 @@ the same channel. Additionally, all components of the extension can access value
 [storage][api-storage] API.
 
 ## Saving data and incognito mode {: #incognito }
-
+<!-- TODO: Would like to move this section to Protect User Privacy docs -->
 Extensions can save data using the [storage][api-storage] API, or by making server requests that
 result in saving data. When the extension needs to save something, first consider if it's from an
 incognito window. By default, extensions don't run in incognito windows.
@@ -316,7 +354,7 @@ function saveTabData(tab) {
   }
 }
 ```
-
+'
 ## Take the next step {: #next-steps }
 
 After reading the overview and completing the [Getting Started][docs-get-started] tutorial, you
@@ -346,23 +384,28 @@ with the following resources:
 [docs-context-menu]: /docs/extensions/mv3/user_interface/#context_menu
 [docs-debugging]: /docs/extensions/mv3/tut_debugging
 [docs-dev-guide]: /docs/extensions/mv3/devguide
+[docs-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [docs-get-started]: /docs/extensions/mv3/getstarted
 [docs-key]: /docs/extensions/mv3/manifest/key/
 [docs-link-options]: /docs/extensions/mv3/options/#linking
 [docs-manifest]: /docs/extensions/mv3/manifest
 [docs-messages]: /docs/extensions/mv3/messaging
 [docs-omnibox]: /docs/extensions/mv3/user_interface/#omnibox
-[docs-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [docs-options]: /docs/extensions/mv3/options
-[docs-override]: /docs/extensions/mv3/override/
 [docs-popup]: /docs/extensions/mv3/user_interface#popup
 [docs-promises]: /docs/extensions/mv3/promises/
 [docs-service-worker]: /docs/extensions/mv3/service_workers
 [docs-ui]: /docs/extensions/mv3/user_interface
+[docs-unpacked]: /docs/extensions/mv3/getstarted/#unpacked
 [docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
-[mdn-web-apis]: https://developer.mozilla.org/en-US/docs/Web/API
+[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+[mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
+[section-apis]: #apis
 [section-bg]: #background_script
 [section-cs]: #contentScripts
+[section-icons]: #icons
+[section-manifest]: #manifest
 [section-options]: #optionsPage
 [section-ui]: #pages
+[section-web-res]: #web-resources
