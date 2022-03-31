@@ -6,7 +6,7 @@ subhead: >
 description: >
   CHIPS is a Privacy Sandbox proposal that will allow cookies to be set by a third-party service, but only read within the context of the top-level site where they were initially set
 date: 2022-02-15
-updated: 2022-03-30
+updated: 2022-04-01
 authors:
   - mihajlija
 ---
