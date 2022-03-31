@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Trust Tokens'
 subhead: >
-  Trust Tokens is an API for websites to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
+  An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 description: >
-  Trust Tokens is an API for websites to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
+  An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
 updated: 2022-03-31
 authors:
@@ -18,7 +18,6 @@ authors:
 * [Demo](https://trust-token-demo.glitch.me/).
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
-
 
 ## What are Trust Tokens?
 

@@ -45,8 +45,8 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 
 ## Trust Tokens
 
-- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84, 
-[now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/lv2JQjDdyhM/m/lZ-Ri4fcAQAJ) to Chrome 101.
+- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84,
+  [now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/lv2JQjDdyhM/m/lZ-Ri4fcAQAJ) to Chrome 101.
 - [Register for origin trial](/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
