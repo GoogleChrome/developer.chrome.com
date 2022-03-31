@@ -32,7 +32,9 @@
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics
+    - url: /docs/privacy-sandbox/topics-experiment
     - url: /docs/privacy-sandbox/fledge
+    - url: /docs/privacy-sandbox/fledge-experiment
 - title: i18n.docs.privacy-sandbox.measure
   sections:
     - url: /docs/privacy-sandbox/attribution-reporting
