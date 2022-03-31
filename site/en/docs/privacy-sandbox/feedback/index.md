@@ -364,7 +364,7 @@ API](/docs/privacy-sandbox/topics/)._
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>[optional]
+   <td><a href="https://groups.google.com/a/chromium.org/g/topics-api-announce/">topics-api-announce</a>
    </td>
   </tr>
   <tr>
@@ -448,7 +448,7 @@ FLEDGE](/docs/privacy-sandbox/fledge/)._
   <tr>
    <td><strong>Mailing list</strong>
    </td>
-   <td>[optional]
+   <td><a href="https://groups.google.com/a/chromium.org/g/fledge-api-announce">fledge-api-announce</a>
    </td>
   </tr>
   <tr>
@@ -468,7 +468,8 @@ click or view, leads to a conversion, but without using cross-site identifiers.
 [Learn more about the Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)._
 
-**_Last updated 2022/03: Attribution Reporting is preparing for an additional origin trial_**
+**_Last updated 2022/03: Attribution Reporting is preparing for an additional
+origin trial_**
 
 <table class="width-full">
   <tr>
@@ -510,7 +511,8 @@ retains critical information for reporting without the ability to identify
 individual users within that data. [Learn more about the Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)._
 
-**_Last updated 2022/03: Attribution Reporting is preparing for an additional origin trial_**
+**_Last updated 2022/03: Attribution Reporting is preparing for an additional
+origin trial_**
 
 <table class="width-full">
   <tr>
@@ -847,7 +849,7 @@ use cases to allow new and existing federated identity use cases to continue
 without third-party cookies. [Learn more about Federated Credentials
 Management](https://github.com/fedidcg/FedCM)._
 
-**_Last updated 2022/02_**
+**_Last updated 2022/03_**
 
 <table class="width-full">
   <tr>
@@ -859,7 +861,7 @@ Management](https://github.com/fedidcg/FedCM)._
   <tr>
    <td><strong>Intents</strong>
    </td>
-   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jlV_1m7uUAg/">I2E 2022/02</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2B4TJ7j2U4M/">I2P 2020/09</a>
+   <td><a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/kws-gltC5us/">I2E 2022/03</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/jlV_1m7uUAg/">I2E 2022/02</a>, <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/2B4TJ7j2U4M/">I2P 2020/09</a>
    </td>
   </tr>
   <tr>
