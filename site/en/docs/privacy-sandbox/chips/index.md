@@ -133,7 +133,7 @@ When an embedded service sets a cookie on a site that's a member of a First-Part
 
 Sites from the same First-Party Set will have the same partition key—the owner of the set. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/cnrraIMgqOHwCw0WbgmU.png", alt="", width="800", height="548" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ho7jqWrZzBxmX3fsIpTt.png", alt="", width="800", height="548" %}
 
 ### Security design
 
