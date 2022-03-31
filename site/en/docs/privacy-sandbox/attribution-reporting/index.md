@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2021-05-18
-updated: 2022-03-28
+updated: 2022-03-31
 authors:
   - maudn
   - samdutton
