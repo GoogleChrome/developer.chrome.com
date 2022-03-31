@@ -91,10 +91,29 @@ provides more details about the goals of the trial and what features are propose
 
 ### Test with chrome://flags or feature flags {: #feature-flags}
 
-You can test FLEDGE for a single user running a current version of Chrome, Chrome Beta or Chrome
-Canary:
-* By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
-* By enabling chrome://flags/#privacy-sandbox-ads-apis
+You can test FLEDGE for a single user by setting feature flags:
+* In Chrome Canary 102, enable FLEDGE by setting the `PrivacySandboxAdsAPIsOverride` flag from the
+command line or by enabling `chrome://flags/#privacy-sandbox-ads-apis`.
+* For a current version of Chrome, Chrome Beta or Chrome Canary, enable FLEDGE by setting the flags
+described below from the command line.
+
+#### Frames and fenced frames
+
+When enabling FLEDGE for testing with feature flags, ads can be rendered in an `<iframe>` or a
+[`<fencedframe>`](https://github.com/shivanigithub/fenced-frame), depending on which flags are
+set.
+
+To use `<fencedframe>` to render ads:
+
+```text
+--enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge,FencedFrames
+```
+
+To use `<iframe>` to render ads:
+
+```text
+--enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge,AllowURNsInIframes --disable-features=FencedFrames
+```
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
@@ -106,7 +125,7 @@ This is the in-progress version of FLEDGE for early testing, so it should not be
 complete or indicative of the final implementation. FLEDGE progress and status are discussed in the
 regular WICG meetings.
 
-The[minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda)
+The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda)
 for the 2021-05-12 WICG call provide detail on what is and is not supported in the current
 implementation.
 

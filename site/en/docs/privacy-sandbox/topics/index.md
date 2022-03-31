@@ -32,7 +32,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 You can try out the Topics API for a single user running Chrome Canary 102:
 * By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
-* By enabling chrome://flags/#privacy-sandbox-ads-apis
+* By enabling `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
