@@ -30,20 +30,23 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ## Test with chrome://flags or feature flags {: #feature-flags}
 
-You can try out the Topics API for a single user running a current version of Chrome, Chrome Beta
-or Chrome Canary:
-* By setting the `PrivacySandboxAdsAPIs`  flag from the command line
+You can try out the Topics API for a single user running Chrome Canary 102:
+* By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
 * By enabling chrome://flags/#privacy-sandbox-ads-apis
 
-* This is the in-progress version of the API for early testing, so it should not be considered
-feature complete or indicative of the final implementation.
-* [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+[Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
 line.
+
+{% Aside %}
+
+This is the in-progress version of the API for early testing, so it should not be considered
+feature complete or indicative of the final implementation.
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
 
+{% endAside %}
 
 ## Detect feature support
 
@@ -156,8 +159,9 @@ selected for each epoch would be randomly selected from the user's top five topi
 period. To further enhance privacy and ensure that all topics may be represented, there is a 5%
 chance the topic is randomly selected from all possible topics in the Taxonomy.
 
-The Topics JavaScript API has one method: `document.browsingTopics()`. This returns an array of
-up to three topics, one for each of the three most recent epochs, in random order.
+The Topics JavaScript API has one method: `document.browsingTopics()`. This returns a promise that
+resolves to an array of up to three topics, one for each of the three most recent epochs, in random
+order.
 
 The Topics explainer proposes that each topic object in the array returned by
 `document.browsingTopics()` would have three properties:

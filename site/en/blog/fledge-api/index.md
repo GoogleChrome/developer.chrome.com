@@ -93,21 +93,27 @@ provides more details about the goals of the trial and what features are propose
 
 You can test FLEDGE for a single user running a current version of Chrome, Chrome Beta or Chrome
 Canary:
-* By setting the `PrivacySandboxAdsAPIs`  flag from the command line
+* By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
 * By enabling chrome://flags/#privacy-sandbox-ads-apis
 
-* This is the in-progress version of FLEDGE for early testing, so it should not be considered
-feature complete or indicative of the final implementation.
-* FLEDGE progress and status are discussed in the regular WICG meetings. The
-[minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda)
-for the 2021-05-12 WICG call provide detail on what is and is not supported in the current
-implementation.
-* [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+[Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
 line.
 
+{% Aside %}
+
+This is the in-progress version of FLEDGE for early testing, so it should not be considered feature
+complete or indicative of the final implementation. FLEDGE progress and status are discussed in the
+regular WICG meetings.
+
+The[minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda)
+for the 2021-05-12 WICG call provide detail on what is and is not supported in the current
+implementation.
+
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
 information for FLEDGE and other Privacy Sandbox proposals.
+
+{% endAside %}
 
 
 ### What features are supported in the latest version of Chrome?
