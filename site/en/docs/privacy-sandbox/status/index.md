@@ -4,7 +4,7 @@ title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2021-11-09
+updated: 2022-03-31
 authors:
   - samdutton
   - alexandrawhite
@@ -90,6 +90,8 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 
 ## FLoC
 
+Now replaced by the Topics API.
+
 - Initial [origin trial](https://web.dev/origin-trials) now closed. See [Intent to
   Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for
   updates.
@@ -107,12 +109,28 @@ See [Status](/docs/privacy-sandbox/attribution-reporting/#status).
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 - [Intent to
+  Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg).
+- [Intent to
   Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/m/LqT59250CAAJ).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
 - [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under
   discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 - [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md): see [TURTLEDOVE
   issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
+
+## Topics
+
+Replaces FLoC.
+
+- [Intent to
+  Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs).
+- [Intent to
+  Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/59uTw_dxM3M/m/vF9lF9BVAgAJ).
+- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q="topics api").
+- [API proposal](https://github.com/jkarlin/topics) is under discussion with 
+  [WICG](https://www.w3.org/community/wicg/) and interest groups.
+- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md): see 
+  [Topics API issues](https://github.com/jkarlin/topics/issues) for API questions and discussion.
 
 <br>
 
