@@ -4,7 +4,7 @@ title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2021-11-09
+updated: 2022-03-31
 authors:
   - samdutton
   - alexandrawhite

@@ -6,7 +6,7 @@ subhead: >
 description: >
   Trust Tokens is an API for websites to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
-updated: 2021-10-28
+updated: 2022-03-31
 authors:
   - samdutton
 ---
