@@ -7,7 +7,8 @@ thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/G8miv1svP6yMEZbP0DqX.png
 alt: The rendering pipeline before and aftr BLinkNG.
 date: 2022-03-29
 authors:
-  - stefanzagar
+  - stefanzager
+  - chrishtr
 tags:
   - rendering
 ---
@@ -33,13 +34,13 @@ The rendering pipeline was always conceptually split into phases (_style_, _layo
 
 There are many examples of this, including:
 
-_Style_ would generate ComputedStyle based on stylesheets; but ComputedStyle was not immutable; in some cases it would be modified by later pipeline stages.
+_Style_ would generate `ComputedStyle` based on stylesheets; but `ComputedStyle` was not immutable; in some cases it would be modified by later pipeline stages.
 
 _Style_ would generate a tree of `LayoutObject`, and then _layout_ would annotate those objects with size and positioning information. In some cases, _layout_ would even modify the tree structure. There was no clear separation between the inputs and outputs of _layout_.
 
 _Style_ would generate accessory data structures that determined the course of _compositing_, and those data structures were modified in place by every phase after _style_.
 
-At a lower level, rendering data types largely consists of specialized trees (for example, the DOM tree, style tree, layout tree, paint property tree); and rendering updates are implemented as recursive tree walks. Ideally, a tree walk should be _contained_: when processing a given tree node, we should not access any information outside of the subtree rooted at that node. That was never true pre-RenderingNG; tree walks frequently accessed information from the ancestors of the node being processed. This made the system very fragile and error-prone. It was also impossible to begin a tree walk from anywhere but the root of the tree.
+At a lower level, rendering data types largely consists of specialized trees (for example, the DOM tree, style tree, layout tree, paint property tree); and rendering phases are implemented as recursive tree walks. Ideally, a tree walk should be _contained_: when processing a given tree node, we should not access any information outside of the subtree rooted at that node. That was never true pre-RenderingNG; tree walks frequently accessed information from the ancestors of the node being processed. This made the system very fragile and error-prone. It was also impossible to begin a tree walk from anywhere but the root of the tree.
 
 Finally, there were many on-ramps into the rendering pipeline sprinkled throughout the code: forced layouts triggered by JavaScript, partial updates triggered during document load, forced updates to prepare for event targeting, scheduled updates requested by the display system, and specialized APIs exposed only to test code, to name a few. There were even a few _recursive_ and _reentrant_ paths into the rendering pipeline (that is jumping to the beginning of one stage from the middle of another). Each of these on-ramps had their own idiosyncratic behavior, and in some cases the output of rendering would depend on the manner in which the rendering update was triggered.
 
@@ -50,7 +51,7 @@ RenderingNG is composed of many sub-projects, big and small, all with the shared
 -  **Uniform point of entry**: We should always enter the pipeline at the beginning.
 -  **Functional stages**: Each stage should have well-defined inputs and outputs, and its behavior should be _functional_, that is, deterministic and repeatable, and the outputs should depend only on the defined inputs.
 -  **Constant inputs**: The inputs of any stage should be effectively constant while the stage is running.
--  **Immutable outputs**: The output of any stage should be immutable once the stage is finished.
+-  **Immutable outputs**: Once a stage has finished, its outputs should be immutable for the remainder of the rendering update.
 -  **Checkpoint consistency**: At the end of each stage, the rendering data produced thus far should be in a self-consistent state.
 -  **Deduplication of work**: Only compute each thing once.
 
@@ -75,7 +76,7 @@ There are now only two points of entry into the rendering pipeline, correspondin
 
 ### Pipelining style, layout, and pre-paint
 
-Collectively, the rendering phases before paint are responsible for the following:
+Collectively, the rendering phases before _paint_ are responsible for the following:
 
 -  Running the _style cascade_ algorithm to calculate final style properties for DOM nodes.
 -  Generating the layout tree representing the box hierarchy of the document.
@@ -112,19 +113,17 @@ This [monumental project](/blog/layoutng/)—one of the cornerstones of Renderin
 
 Previously, there was no formal pre-paint rendering phase, just a grab bag of post-layout operations. The _pre-paint_ phase grew out of the recognition that there were a few related functions that could be best implemented as a systematic traversal of the layout tree after layout was complete; most importantly:  
 
--  **Issuing paint invalidations**: It's very difficult to do paint invalidation correctly during the course of layout**, when we have incomplete information. It's much easier to get right, and can be very efficient, if it's split into two distinct processes: during style and layout, content can be marked with a simple boolean flag as "possibly needs paint invalidation." During the pre-paint tree walk, we check these flags and issue invalidations as necessary.  
+-  **Issuing paint invalidations**: It's very difficult to do paint invalidation correctly during the course of layout, when we have incomplete information. It's much easier to get right, and can be very efficient, if it's split into two distinct processes: during style and layout, content can be marked with a simple boolean flag as "possibly needs paint invalidation." During the pre-paint tree walk, we check these flags and issue invalidations as necessary.  
 -  **Generating paint property trees**: A process described in greater detail further on.  
 -  **Computing and recording pixel-snapped paint locations**: The recorded results can be used by the paint phase, and also by any downstream code that needs them, without any redundant computation.
 
 ### Property trees: Consistent geometry
 
-[Property trees](/blog/renderingng-data-structures/#property-trees) were introduced early in RenderingNG to deal with the complexity of scrolling, which on the web has a different structure than all other kinds of visual effects.
-
-Before property trees, Chromium's compositor used a single "layer" hierarchy to represent the geometrical relationship of composited content, but that quickly fell apart as the full complexities of features such as position:fixed became apparent. The layer hierarchy grew extra non-local pointers indicating the "scroll parent" or "clip parent" of a layer, and before long it was very hard to understand the code.
+[Property trees](/blog/renderingng-data-structures/#property-trees) were introduced early in RenderingNG to deal with the complexity of scrolling, which on the web has a different structure than all other kinds of visual effects. Before property trees, Chromium's compositor used a single "layer" hierarchy to represent the geometrical relationship of composited content, but that quickly fell apart as the full complexities of features such as position:fixed became apparent. The layer hierarchy grew extra non-local pointers indicating the "scroll parent" or "clip parent" of a layer, and before long it was very hard to understand the code.
 
 Property trees fixed this by representing the overflow scroll and clip aspects of content separately from all other visual effects. This made it possible to correctly model the true visual and scrolling structure of websites. Next, "all" we had to do was to implement algorithms on top of the property trees, such as the screen-space transform of composited layers, or determining which layers scrolled and which did not.
 
-In fact, we soon noticed that there were many other places in the code where similar geometrical or questions were raised. (The [key data structures post](/blog/renderingng-data-structures/#property-trees) has a more complete list.) Several of them had duplicate implementations of the same thing the compositor code was doing; all had a different subset of bugs; and none of them properly modeled true website structure. The solution then became clear: centralize all the geometry algorithms in one place and refactor all the code to use it.
+In fact, we soon noticed that there were many other places in the code where similar geometrical questions were raised. (The [key data structures post](/blog/renderingng-data-structures/#property-trees) has a more complete list.) Several of them had duplicate implementations of the same thing the compositor code was doing; all had a different subset of bugs; and none of them properly modeled true website structure. The solution then became clear: centralize all the geometry algorithms in one place and refactor all the code to use it.
 
 These algorithms in turn all depend on property trees, which is why property trees are a _key_ data structure–that is, one used throughout the pipeline–of RenderingNG. So to achieve this goal of centralized geometry code, we needed to introduce the concept of property trees much earlier in the pipeline–in pre-paint–and change all APIs that now depended on them to require pre-paint be run before they could execute.
 
@@ -180,6 +179,6 @@ Now that Rendering NG is approaching completion, we are already starting to expl
 
 Non-Blocking Commit will eliminate the need for the main thread to stop and wait for the commit stage to end—the main thread will continue doing work while commit runs concurrently on the compositor thread. The net effect of Non-Blocking Commit will be a reduction in the time dedicated to rendering work on the main thread, which will decrease congestion on the main thread, and improve performance. As of this writing (March 2022), we have a working prototype of Non-Blocking Commit, and we're preparing to do a detailed analysis of its impact on performance.
 
-Waiting in the wings is [Off-main-hread Compositing](https://docs.google.com/document/d/1BfIqMcJvmMFdk8e_KKeOEofz16610Mql6gmfeFhrsZk/edit#), with the goal of making the rendering engine match the illustration by moving _layerization_ off the main thread, and onto a worker thread. Like Non-Blocking Commit, this will reduce congestion on the main thread by diminishing its rendering workload. A project like this would never have been possible without the architectural improvements of Composite After Paint.
+Waiting in the wings is [Off-main-thread Compositing](https://docs.google.com/document/d/1BfIqMcJvmMFdk8e_KKeOEofz16610Mql6gmfeFhrsZk/preview), with the goal of making the rendering engine match the illustration by moving _layerization_ off the main thread, and onto a worker thread. Like Non-Blocking Commit, this will reduce congestion on the main thread by diminishing its rendering workload. A project like this would never have been possible without the architectural improvements of Composite After Paint.
 
 And there are more projects in the pipeline (pun intended)! We finally have a foundation that makes it possible to experiment with redistributing rendering work, and we are very excited to see what's possible!
