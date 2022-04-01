@@ -18,8 +18,8 @@ An [extension's _action_][api-action] controls the extension's toolbar icon.
 {% endAside %}
 
 The Declarative Content API allows you to enable your extension's action depending on the URL of a
-web page and the CSS selectors, without needing to add [host permissions][docs-host-perm] or inject a
-[content script][docs-content-scripts]. 
+web page, or if a CSS selector matches an element on the page, without needing to 
+add [host permissions][docs-host-perm] or inject a [content script][docs-content-scripts]. 
 
 Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
 extension's action.
