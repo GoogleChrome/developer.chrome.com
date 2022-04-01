@@ -238,7 +238,7 @@ using [chrome.tabs.create()][api-create-tab] instead.
 
 For more information, explore the [Chrome API reference docs][api-reference].
 
-### Asynchronous vs. synchronous methods {: #sync }
+### Asynchronous vs. synchronous methods {: #async-sync }
 
 #### Callbacks {: #callbacks }
 
