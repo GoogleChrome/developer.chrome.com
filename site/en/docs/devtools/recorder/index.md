@@ -166,7 +166,10 @@ During recording, the **Recorder** automatically detects two types of selectors 
 For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
 {% endAside %}
 
-For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case.
+For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case, because:
+
+- Your webpages may use dynamic classes or ID's that change
+- Your selectors may break from development changes to CSS styles or JS behaviour
 
 ### Common test selectors {: common-test-selector}
 
