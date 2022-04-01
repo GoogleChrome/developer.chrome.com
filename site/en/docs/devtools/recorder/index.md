@@ -187,7 +187,6 @@ There are already some common test selectors for automation and the **Recorder**
 - `data-qa-id`
 - `data-testing`
 
-To create more resilient tests, consider using these test selectors.
 
 ### Customize the recording's selector {: #customize-selector }
 
