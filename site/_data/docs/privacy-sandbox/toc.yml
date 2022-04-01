@@ -20,7 +20,6 @@
   sections:
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/chips
-      title: i18n.docs.privacy-sandbox.chips
     - url: /docs/privacy-sandbox/fenced-frame
     - url: https://github.com/WICG/FedCM
       title: i18n.docs.privacy-sandbox.fedcm
