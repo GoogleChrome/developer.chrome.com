@@ -33,10 +33,10 @@ tags:
 ## Chrome 100  {: #m100 }
 
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
-А вот и сотая версия Chrome! Chrome DevTools будет продолжать предоставлять девелоперам надежные инструменты для веб-разработки. Найдите пару минут, чтобы просмотреть вкладку **Что нового** и отметить успехи.
+А вот и сотая версия Chrome! И Chrome DevTools продолжает предоставлять надежные инструменты для веб-разработки. Найдите пару минут, чтобы просмотреть вкладку **Что нового** и отметить успехи.
 
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
-Как всегда, вы можете просмотреть новое [видео What’s New in DevTools](https://goo.gle/devtools-youtube) кликнув на картинку.
+Как всегда, вы можете просмотреть новое [видео What’s New in DevTools](https://goo.gle/devtools-youtube), кликнув на картинку.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/u8sn7ubuxjJoyPgbfNJs.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
@@ -48,7 +48,7 @@ tags:
 Теперь вы можете просматривать и изменять CSS-директиву `@supports` в панели **Стили** (Styles). Это облегчит экспериментирование с директивами в режиме реального времени.
 
 <!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-Откройте [страницу с демо](https://jec.fyi/demo/at-support), [проинспектируйте](/docs/devtools/dom/#inspect) элемент `<div class=”box”>`, найдите директиву `@supports` в панели **Стили** (Styles). Кликните на объявление правила чтобы изменить его.
+Откройте [страницу с демо](https://jec.fyi/demo/at-support), [проинспектируйте](/docs/devtools/dom/#inspect) элемент `<div class=”box”>`, найдите директиву `@supports` в панели **Стили** (Styles). Кликните на объявление правила, чтобы изменить его.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="Просмотр и изменение директив @supports", width="800", height="502" %}
 
@@ -90,7 +90,7 @@ tags:
 ### Кастомизация селектора записи {: #customize-selector }
 
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
-Вы можете настраивать список селекторов для записи если вы не используете [распространённые селекторы](/docs/devtools/recorder/#selector).
+Вы можете настраивать список селекторов для записи, если вы не используете [распространённые селекторы](/docs/devtools/recorder/#selector).
 
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 Например, на этой [демо-странице](https://jec.fyi/demo/recorder) используется атрибут `data-automate` в качестве селектора. [Начните новую запись](/docs/devtools/recorder/#record) и введите `data-automate` как атрибут селектора. Введите адрес электронной почты и обратите внимание на значение селектора (`[data-automate=email-address]`).
@@ -104,7 +104,7 @@ tags:
 ### Переименование записи {: #recorder-rename }
 
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording’s title. -->
-Теперь вы можете переименовать запись на вкладке [Recorder](/docs/devtools/recorder/) нажав на кнопку редактирования (иконка карандаша) рядом с названием записи.
+Теперь вы можете переименовать запись на вкладке [Recorder](/docs/devtools/recorder/), нажав на кнопку редактирования (иконка карандаша) рядом с названием записи.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Pn9Xsrq9lnStmtjpe0jt.png", alt="Переименование записи", width="800", height="502" %}
 
@@ -113,7 +113,7 @@ tags:
 ## Предпросмотр свойств класса/функции при наведении курсора {: #properties }
 
 <!-- You can now hover over a class or function in the **Sources** panel during debugging to preview its properties. Previously, it only showed the function name and a link to its location in the source code. -->
-Теперь во время отладки вы можете навести курсор мыши во вкладке **Источники** (Sources) на класс или функцию, чтобы посмотреть их свойства. Раньше показывалось только имя функции и ссылка на её расположение в исходном коде.
+Теперь во время отладки вы можете навести курсор во вкладке **Источники** (Sources) на класс или функцию, чтобы посмотреть их свойства. Раньше показывалось только имя функции и ссылка на её расположение в исходном коде.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BZzL6QMheyd31VGqhA8W.png", alt="Предпросмотр свойств класса/функции по наведению курсора", width="800", height="502" %}
 
@@ -133,10 +133,10 @@ tags:
 Раньше на временной шкале **Фреймы** (Frames) любые фреймы с отложенной работой по основному потоку отображались как «отмененные фреймы». Однако есть случаи, когда некоторые фреймы могут продолжать производить визуальные обновления (например, при скролле), управляемые потоком компоновки.
 
 <!-- This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.  -->
-Это может смутить пользователя, поскольку скриншоты таких «отмененных фреймов» по прежнему отображают визуальные изменения.
+Это может запутать разработчика, поскольку скриншоты таких «отмененных фреймов» по прежнему отображают визуальные изменения.
 
 <!-- The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether. -->
-Новый тип «Частичный показ фрейма» нужен чтобы показать более интуитивно, что хотя некоторое содержимое не представлено во фрейме своевременно, проблема не настолько серьезна, чтобы полностью блокировать визуальные обновления.
+Новый тип «Частичный показ фрейма» нужен, чтобы показать более интуитивно, что хотя некоторое содержимое не представлено во фрейме своевременно, проблема не настолько серьезна, чтобы полностью блокировать визуальные обновления.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QcqjnFhMz1Bxd5dkmduj.png", alt="Частичный показ фрейма во вкладке Производительность (Performance)", width="800", height="531" %}
 
@@ -152,7 +152,7 @@ tags:
 Вот несколько заслуживающих внимания исправлений в этом выпуске:
 
 <!-- - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553)) -->
-- Обновили строки юзер агента для [режима эмуляции](/docs/devtools/device-mode/#device). Все iPhone с версией новее 5 теперь имеют юзер агент строку iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
+- Обновили строки юзер агента для [режима эмуляции](/docs/devtools/device-mode/#device). Все iPhone версии 5 и выше теперь показывают строку iPhone OS 13_2_3 в качестве юзер агента. ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - Теперь вы можете сохранить [сниппет](/docs/devtools/javascript/snippets/) как JavaScript файл. Раньше нужно было вручную добавлять файлу расширение `.js`. ([1137218](https://crbug.com/1137218))
 <!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
