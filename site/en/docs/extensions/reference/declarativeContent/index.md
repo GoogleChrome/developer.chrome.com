@@ -13,7 +13,7 @@ declarativeContent][emulating-page-actions]
 
 {% Aside 'key-term' %}
 
-An [_extension's action_][api-action] controls the extension's toolbar icon.
+An [extension's _action_][api-action] controls the extension's toolbar icon.
 
 {% endAside %}
 
@@ -53,7 +53,7 @@ All conditions and actions are created via a constructor as shown in the example
 
 {% endAside %}
 
-In order to also enable the extension's action for Google sites with a video, you can add a second
+To also enable the extension's action for Google sites with a video, you can add a second
 condition, as each condition is sufficient to trigger all specified actions:
 
 ```js
@@ -72,7 +72,7 @@ let rule2 = {
 ```
 
 The [`onPageChanged`][event-onpagechanged] event tests whether any rule has at least one fulfilled
-condition and executes the actions. Rules are persistent across browsing sessions; therefore, during
+condition and executes the actions. Rules persist across browsing sessions; therefore, during
 extension installation time you should first use [`removeRules`][docs-removing-rules] to clear
 previously installed rules and then use [`addRules`][docs-adding-rules] to register new ones.
 
@@ -97,8 +97,8 @@ warnings and when the user clicks the extension action, it will only run on rele
 
 ## Page URL Matching {: #page-url}
 
-The [`PageStateMatcher.pageurl`][type-matcher-url] matches if the URL criterias are fulfilled. The
-most common criterias are a concatination of either host, path, or url, followed by Contains, Equals, Prefix, or
+The [`PageStateMatcher.pageurl`][type-matcher-url] matches when the URL criteria are fulfilled. The
+most common criteria are a concatenation of either host, path, or url, followed by Contains, Equals, Prefix, or
 Suffix. The following table contains a few examples:
 
 | Criteria                                  | Matches                         |
@@ -107,11 +107,11 @@ Suffix. The following table contains a few examples:
 | `{ pathPrefix: '/docs/extensions'` }      | Extension docs URLs             |
 | `{ urlContains: 'developer.chrome.com'` } | All chrome developers docs URLs |
 
-All criteria are case sensitive. For complete list of criterias, see [UrlFilter][type-urlfilter].
+All criteria are case sensitive. For a complete list of criteria, see [UrlFilter][type-urlfilter].
 
 ## CSS Matching {: #css}
 
-[`PageStateMatcher.css`][type-matcher-css] conditions must be _[comp``ound selectors][w3-compound]_,
+[`PageStateMatcher.css`][type-matcher-css] conditions must be _[compound selectors][w3-compound]_,
 meaning that you can't include [combinators][mdn-combinators] like whitespace or "`>`" in your
 selectors. This helps Chrome match the selectors more efficiently.
 
