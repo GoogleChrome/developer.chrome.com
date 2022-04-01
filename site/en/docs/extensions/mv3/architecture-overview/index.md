@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-04-01
+updated: 2022-04-05
 description: A high-level explanation of the software architecture of Chrome Extensions.
 subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
@@ -196,7 +196,7 @@ on the Chrome Web Store.
 During development, a new ID is generated when an [_unpacked extension_][docs-unpacked] is loaded,
 unless the `"key"` property is set in the manifest.
 
-See xyz to learn how to set this key.
+See [Keeping a consistent key][docs-key] to learn how to set this key.
 
 {% Aside 'caution' %}
 
@@ -387,6 +387,7 @@ with the following resources:
 [docs-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [docs-get-started]: /docs/extensions/mv3/getstarted
 [docs-key]: /docs/extensions/mv3/manifest/key/
+[docs-key]: /docs/extensions/mv3/tut_oauth/#keep-consistent-id
 [docs-link-options]: /docs/extensions/mv3/options/#linking
 [docs-manifest]: /docs/extensions/mv3/manifest
 [docs-messages]: /docs/extensions/mv3/messaging
