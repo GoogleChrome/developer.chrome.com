@@ -156,8 +156,6 @@ files.
 You can open these pages using the web api [window.open()][mdn-window-open] or the Chrome APIs
 [windows.create()][api-window-create] or [tabs.create()][api-create-tab].
 
-<!-- TODO: See Extension pages to learn more. -->
-
 ## Extension files {: #files }
 <!-- TODO: Intro -->
 ### Referencing extension files {: #ref-files }
