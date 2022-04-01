@@ -716,3 +716,8 @@ stefanzager:
     en: 'Stefan Zager'
   description:
     en: 'Software Engineer, Google Chrome'
+rachelandrew:
+  title:
+    en: 'Rachel Andrew'
+  description:
+    en: 'Technical writer at Google, content lead for the Chrome Developers site.'

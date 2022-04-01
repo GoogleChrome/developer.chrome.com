@@ -639,5 +639,12 @@
   "stefanzager": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/j51qMPHhY07cFu4LQd9y.jpeg"
+  },
+  "rachelandrew": {
+    "country": "UK",
+    "twitter": "rachelandrew",
+    "github": "rachelandrew",
+    "homepage": "https://rachelandrew.co.uk",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/DbljY0AD921j6PKWl6JC.jpeg"
   }
 }

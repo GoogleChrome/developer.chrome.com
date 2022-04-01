@@ -49,6 +49,7 @@
     - url: /docs/devtools/evaluate-performance/
     - url: /docs/devtools/evaluate-performance/reference/
     - url: /docs/devtools/evaluate-performance/performance-reference/
+- url: /docs/devtools/performance-insights/
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/memory-101/

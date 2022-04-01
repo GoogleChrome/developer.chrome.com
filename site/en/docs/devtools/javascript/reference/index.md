@@ -23,6 +23,12 @@ Set a breakpoint so that you can pause your code in the middle of its execution.
 
 See [Pause Your Code With Breakpoints][2] to learn how to set breakpoints.
 
+### Preview class/function properties on hover {: #properties }
+
+While the execution is paused, hover over a class or function name to preview its properties.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wP0xZMDPcIGvz5xE8PAF.png", alt="Preview class/function properties on hover", width="800", height="629" %}
+
 ## Step through code {: #stepping }
 
 Once your code is paused, step through it, one line at a time, investigating control flow and

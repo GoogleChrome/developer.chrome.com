@@ -1,7 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
-{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
+{% from 'macros/cards/featured-card.njk' import featuredCard with context %}
 {% from 'macros/cards/featured-docs-card.njk' import featuredDocsCard with context %}
 {% from 'macros/cards/featured-tweet-card.njk' import featuredTweetCard with context %}
 {% from 'macros/cards/releases-card.njk' import releasesCard with context %}
@@ -19,16 +19,28 @@
         ) }}
     <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
       <div class="display-flex direction-column grid-gap-500">
+        {% set post = helpers.findByUrl(collections.all, '/100', 'en') %}
+        {% if post %}
+        {{ featuredCard(post, {
+          icon: 'star',
+          actionText: 'Discover the timeline',
+          actionUrl: '/100'
+        }) }}
+        {% endif %}
         {% set blog = 'blog-' + locale %}
-        {{ featuredPostCard(collections[blog][0]) }}
+        {{ featuredCard(collections[blog][0], {
+          title: 'i18n.nav.side_nav.blog' | i18n(locale),
+          actionText: 'i18n.common.see_all_articles' | i18n(locale),
+          actionUrl: '/blog'
+        }) }}
         {{ releasesCard() }}
-        {% include 'partials/report-a-bug.njk' %}
       </div>
       <div class="display-flex direction-column grid-gap-500">
         {{ featuredDocsCard(featuredProjects) }}
         {% if tweets and tweets.length %}
           {{ featuredTweetCard() }}
         {% endif %}
+        {% include 'partials/report-a-bug.njk' %}
       </div>
     </div>
 

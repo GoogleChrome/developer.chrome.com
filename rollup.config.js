@@ -34,7 +34,10 @@ const devConfig = {
     copy({
       // Legacy docs, like those at /docs/native-client/, rely on the old
       // prettify.js code for syntax highlighting.
-      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+      targets: [
+        {src: 'site/_js/prettify.js', dest: 'dist/js'},
+        {src: 'site/_js/slider.js', dest: 'dist/js'},
+      ],
     }),
   ],
 };
@@ -57,7 +60,10 @@ const productionConfig = {
       },
     }),
     copy({
-      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+      targets: [
+        {src: 'site/_js/prettify.js', dest: 'dist/js'},
+        {src: 'site/_js/slider.js', dest: 'dist/js'},
+      ],
     }),
   ],
 };
