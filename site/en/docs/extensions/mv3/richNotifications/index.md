@@ -110,7 +110,7 @@ within the notification:
 
 ```js
 var opt = {
-  type: "basic",
+  type: "image",
   title: "Primary Title",
   message: "Primary message to display",
   iconUrl: "url_to_small_icon",
