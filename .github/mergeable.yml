@@ -12,7 +12,7 @@ mergeable:
           teams: [ '@GoogleChrome/web-dev-eng', 'devnook' ]
     pass:
       - do: checks
-        status: 'success
+        status: 'success'
         payload:
           title: 'Mergeable Run have been Completed!'
           summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
