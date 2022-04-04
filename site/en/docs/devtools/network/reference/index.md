@@ -147,7 +147,7 @@ custom throttling profiles:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile", width="800", height="426" %}
 1. Back on the **Network** panel, select your new profile from the **Throttling** dropdown menu.
 
-DevTools displays a warning icon next to the **Network** tab to remind you that throttling is
+DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
 enabled.
 
 #### Throttle WebSocket connections {: #throttle-websocket}
