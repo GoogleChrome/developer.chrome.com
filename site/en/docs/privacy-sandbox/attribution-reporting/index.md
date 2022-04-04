@@ -248,7 +248,7 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 
 {% Aside %}
 
-The API does not rely on third-party cookies. However, in the testing phase, third-party cookies need to be enabled for the API to be enabled. This will make it easier to get debug reports and to compare the API's results with cookie-based attribution.
+The API does not rely on third-party cookies. However, in the testing phase, third-party cookies need to be enabled for the API to be enabled. This allows developers to get debug reports and compare the API's results with cookie-based attribution.
 
 {% endAside %}
 
