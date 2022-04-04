@@ -424,9 +424,8 @@ This new technique has a few benefits:
 - It's **simpler** to reason about than a mechanism where trigger data (conversion data) and trigger-source link noise would be separated.
 - It sets up a **privacy framework** which could, with the right noise settings, ensure that no party can rely on the API to know with certainty that an individual user has converted (or not) for a certain ad.
 
-This new mechanism replaces the
-[5% random noise on trigger data](/docs/privacy-sandbox/attribution-reporting-event-introduction/#noise)
-(conversion data).
+This new mechanism replaces the previous mechanism where 5% of the time, trigger data
+(conversion data) was replaced with a random value.
 
 Additionally, the randomized response probability value has been added to the report body
 (`randomized_trigger_rate` field). This field specifies the probability (0 to 1) that a source is
