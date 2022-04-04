@@ -1,0 +1,13 @@
+version: 1
+mergeable:
+  - when: pull_request.*, pull_request_review.*
+    name: 'Approval check'
+    validate:
+      - do: approvals
+        min:
+          count: 1
+        must_include:
+                  regex: 'site/*'
+        limit:
+          teams: [ '@GoogleChrome/web-dev-eng', 'devnook' ]
+
