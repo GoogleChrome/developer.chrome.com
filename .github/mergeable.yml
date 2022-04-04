@@ -10,17 +10,17 @@ mergeable:
           regex: 'site/**/*.md'
         limit:
           teams: [ '@GoogleChrome/web-dev-eng', 'devnook' ]
-      pass:
-        - do: checks
-          status: 'success'
-          payload:
-            title: 'Mergeable Run have been Completed!'
-            summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
-            text: "This is checks text"
-      fail:
-        - do: checks
-          status: 'failure'
-          payload:
-            title: 'Mergeable Run have been Completed!'
-            summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
-            text: "This is checks text"   
+    pass:
+      - do: checks
+        status: 'success
+        payload:
+          title: 'Mergeable Run have been Completed!'
+          summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
+          text: "This is checks text"
+    fail:
+      - do: checks
+        status: 'failure'
+        payload:
+          title: 'Mergeable Run have been Completed!'
+          summary: "All the validators have returned 'pass'! \n Here are some stats of the run: \n {{validationCount}} validations were ran"
+          text: "This is checks text"   
