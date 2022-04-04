@@ -29,6 +29,11 @@ test('returns null if no redirect is possible, with an index.html suffix', t => 
   t.is(result, null);
 });
 
+test('returns null if no redirect is possible, without a trailing /', t => {
+  const result = getNonLocalizedURL('/doesnotexist', ROOT_DIR, DEFAULT_LOCALE);
+  t.is(result, null);
+});
+
 test('returns null if the URL starts with the default locale', t => {
   const result = getNonLocalizedURL('/en/ignored/', ROOT_DIR, DEFAULT_LOCALE);
   t.is(result, null);
