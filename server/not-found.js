@@ -64,15 +64,19 @@ const getNonLocalizedURL = (
     // This throws if the path is invalid, and returns undefined if it's valid.
     // (existsSync() is deprecated.)
     fs.accessSync(possibleIndexPath);
-    // We have a valid file!
     // Setting the first item to '' will remove the default locale prefix from
     // the URL we redirect to, while ensuring the URL starts with '/'.
     pathParts[0] = '';
-    return pathParts.join('/');
+    // If there's at least one valid string, join it with '/' and redirect.
+    if (pathParts.some(part => part !== '')) {
+      return pathParts.join('/');
+    }
   } catch (err) {
     // There was no index.html at the default locale path.
-    return null;
   }
+
+  // If we get here, return null to indicate there's no non-localized URL.
+  return null;
 };
 
 /**
