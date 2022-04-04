@@ -7,7 +7,7 @@ mergeable:
         min:
           count: 1
         must_include:
-                  regex: 'src/site/content/*'
+                  regex: 'site/content/*'
         limit:
           teams: [ '@GoogleChrome/web-dev-eng', 'devnook' ]
 
