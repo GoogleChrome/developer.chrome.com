@@ -4,9 +4,10 @@ title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Short explanations of key concepts.
 date: 2021-05-18
-updated: 2021-11-04 
+updated: 2022-04-04 
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
 
@@ -165,7 +166,7 @@ Something that can be used (probably in combination with other surfaces) to
 identify a particular user or device.
 
 For example, the `navigator.userAgent()` JavaScript method and the `User-Agent`
-HTTP request header provide access to a fingerprinting surface (the user agent
+HTTP request header provide access to a fingerprinting surface (the User-Agent
 string).
 
 ## First-party {: #first-party }
@@ -234,7 +235,7 @@ Find out more:
 
 ## Passive surface {: #passive-surface }
 
-Some fingerprinting surfaces, such as user agent strings, IP addresses and
+Some fingerprinting surfaces, such as User-Agent strings, IP addresses and
 accept-language headers, that are available to every website whether the site
 asks for them or not.
 
@@ -322,9 +323,18 @@ parties to verify the exact versions of software running on the computer. TEEs
 allow external parties to verify that the software does exactly what the
 software manufacturer claims it does—nothing more or less.
 
+## User-Agent string {: #user-agent }
+
+An HTTP header used by servers and network peers to request indentifying
+information about an application, operating system, vendor, or version of a
+user agent. The User-Agent string broadcasts a large string of data, which is
+problematic for user privacy. [User-Agent
+reduction](/docs/privacy-sandbox/user-agent/) is proposed to remove sensitive
+information and reduce passive fingerprinting.
+
 ## User-Agent Client Hints (UA-CH) {: #ua-ch }
 
-Provide specific pieces of user-agent data on explicit request. This helps
+Provide specific pieces of User-Agent data on explicit request. This helps
 reduce passively exposed information which may lead to user identification or
 covert tracking.
 
