@@ -13,14 +13,14 @@ UI should customize or enhance the browsing experience without distracting from 
 This guide explores required and optional user interface features. Use it to understand how and when
 to implement different UI elements within an extension.
 
-## The action icon {: #action }
+## The extension action {: #action }
 
-The [action][api-action] API controls the extension's action icon (toolbar icon). It can open a
-[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. The
-action icons are displayed in the browser toolbar to the right of the user's URL bar. 
+The [action][api-action] API controls the extension's action (toolbar icon). It can either open a
+[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. 
 
-After installation, by default, these appear in the extensions menu (the puzzle piece). Users can
-choose to 'pin' your extension icon to the toolbar.
+By default, after installation, extensions appear under the extensions menu (the puzzle piece).
+Users can then 'pin' it to the toolbar. After that, users can find your
+extension action icon to the right of the URL bar. 
 
 {% Columns %}
 
@@ -29,7 +29,7 @@ choose to 'pin' your extension icon to the toolbar.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", 
 alt="Unpinned extension", width="400", height="374" %}
 
-**Unpinned** 
+**Unpinned extension** 
 
 {% endColumn %}
 
@@ -38,7 +38,7 @@ alt="Unpinned extension", width="400", height="374" %}
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", 
 alt="Pinned extension", width="400", height="382" %}
 
-**Pinned** 
+**Pinned extension** 
 
 {% endColumn %}
 
@@ -46,7 +46,8 @@ alt="Pinned extension", width="400", height="382" %}
 
 ### Register the action {: #browser }
 
-The `"action"` field is registered in the manifest.
+Declare the "action" field in the manifest to keep the icon colorized which indicates the extension
+is active.
 
 ```json
 {
@@ -59,13 +60,12 @@ The `"action"` field is registered in the manifest.
 }
 ```
 
-## Define rules for activating the extension {: #activate_pages }
+###  Activate the action conditionally  {: #activate_pages }
 
 The [declarativeContent][api-declarativecontent] API allows you to enable and disable the action
-based on the current URL being shown and the CSS selectors its content matches.
+based on the page URL or if the CSS selectors match the elements on the page.
 
-When an extension is disabled, the icon is grayscaled. If the user clicks on the action icon while
-disabled, the extension's context menu will appear.
+When an extension is disabled, the icon is greyscaled. If the user clicks on the disabled extension, the extension's context menu will appear.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
@@ -77,14 +77,20 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot"%
 </figure>
 
 See [Emulating pageActions with declarativeContent][docs-emulating-page-actions] for an example on
-how to disable the action by default and use declarativeContent to enable the action on specific
+how to disable the action by default and use the declarativeContent API to enable the action on specific
 sites.
 
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
 visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is
-accepted (SVG is not supported).
+accepted.
+
+{% Aside 'caution' %}
+
+SVG files are not supported for any icons declared in the manifest.
+
+{% endAside %}
 
 Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
 
