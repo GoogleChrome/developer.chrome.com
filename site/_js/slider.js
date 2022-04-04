@@ -24,7 +24,7 @@ const cssClasses = {
   FOOTER: 'type--footer',
 };
 const imgBaseUrl = 'https://wd.imgix.net/image/H2WDdWf5aPXOtVabf53xIxMJyTF2/';
- 
+
 const chromeLogoVersions = new Map();
 chromeLogoVersions.set(['2008', '2009', '2010'], '6Zok8fOGKlKnPmmA3BNM.png');
 chromeLogoVersions.set(['2011', '2012', '2013'], 'AkT3tMmLmIlEphta9Zv0.png');
@@ -54,7 +54,7 @@ class Slider {
     const preFooterElement = document.querySelector(
       `.${cssClasses.PRE_FOOTER}`
     );
- 
+
     window.addEventListener('load', () => {
       /* eslint-disable no-undef */
       const yearTimeline = gsap.timeline();
@@ -73,7 +73,7 @@ class Slider {
         ease: 'power1.inOut',
       });
     });
- 
+
     // adding click event listener for back to top
     scrollToTopSec.addEventListener('click', e => {
       e.preventDefault();
@@ -84,7 +84,7 @@ class Slider {
         ease: 'power1.inOut',
       });
     });
- 
+
     // Adding Observer on whndow to hide year navigation on prefooter/footer section
     Observer.create({
       target: window,
@@ -96,7 +96,7 @@ class Slider {
         this.hideNavigation(window.pageYOffset, this.lastYearSecTop);
       },
     });
- 
+
     // Register IntersectionObserver for pre footer section
     const preFooterIntersection = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -109,7 +109,7 @@ class Slider {
         }
       });
     });
- 
+
     // Register IntersectionObserver for footer section
     const footerIntersection = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -120,11 +120,11 @@ class Slider {
         }
       });
     });
- 
+
     preFooterIntersection.observe(preFooterElement);
     footerIntersection.observe(footerElement);
   }
- 
+
   hideNavigation(windowScroll, targetOffSet) {
     if (windowScroll >= targetOffSet) {
       this.navigationWrapper.classList.add(cssClasses.HIDE_ON_FOOTER);
@@ -132,7 +132,7 @@ class Slider {
       this.navigationWrapper.classList.remove(cssClasses.HIDE_ON_FOOTER);
     }
   }
- 
+
   startup() {
     const yearNavigationTimeline = gsap.timeline({
       id: 'Loading year navigation',
@@ -152,7 +152,7 @@ class Slider {
   scrollSections() {
     let oldScrollValue = 0;
     let newScrollValue = 0;
- 
+
     const firstYearSection = document.querySelector(
       `.${cssClasses.CARD_SECTION}`
     );
@@ -160,7 +160,7 @@ class Slider {
     const chromeLogoYear = document.querySelector(
       `.${cssClasses.CHROME_LOGO_TEXT}`
     );
- 
+
     gsap.utils.toArray(`.${cssClasses.YEAR_SECTION}`).forEach(section => {
       const activeSection = section.id;
       const menuitem = 'menu__'.concat(activeSection);
@@ -178,16 +178,16 @@ class Slider {
             const isActive = self.isActive;
             const activeItemIndex = self.trigger.dataset.index;
             const sectionId = self.trigger.id.match(/\d+/g)[0];
- 
+
             for (const [key, value] of chromeLogoVersions.entries()) {
               if (key.includes(sectionId)) {
                 chromeLogo.src = `${imgBaseUrl}${value}`;
                 chromeLogo.srcset = `${imgBaseUrl}${value}`;
               }
             }
- 
+
             chromeLogoYear.textContent = sectionId;
- 
+
             if (oldScrollValue < newScrollValue) {
               if (isActive) {
                 this.currentIndex = activeItemIndex;
@@ -219,7 +219,7 @@ class Slider {
           toggleActions: 'play reverse play reverse',
         },
       });
- 
+
       yearScrollTimeline.to(
         menulink,
         {
