@@ -20,7 +20,7 @@ stable version in late April, 2022.
 
 ## Reduce user agent string information
 
-Chrome is trying to [reduce the amount of information the user agent string exposes](https://www.chromestatus.com/feature/5704553745874944) in HTTP requests as well as in navigator.userAgent, navigator.appVersion, and navigator.platform. We're doing this to prevent the user agent string from being used for passive user fingerprinting. To join the origin trial, see [its entry on Chrome Origin Trials](/origintrials/#/view_trial/-7123568710593282047).
+Chrome is [reducing the amount of information the User-Agent string exposes](https://www.chromestatus.com/feature/5704553745874944) in HTTP requests as well as in navigator.userAgent, navigator.appVersion, and navigator.platform. We're doing this to prevent the user agent string from being used for passive user fingerprinting. To join the origin trial, see [its entry on Chrome Origin Trials](/origintrials/#/view_trial/-7123568710593282047).
 
 ## Remove WebSQL in third-party contexts
 
