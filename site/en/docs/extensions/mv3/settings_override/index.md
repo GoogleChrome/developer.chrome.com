@@ -122,7 +122,7 @@ An extension can override one or more of the following properties in the manifes
         <td>string</td>
         <td>search_url</td>
         <td>
-          <p>An search URL used by the search engine.</p>
+          <p>A search URL used by the search engine.</p>
         </td>
       </tr>
       <tr id="property-search_provider-encoding">
