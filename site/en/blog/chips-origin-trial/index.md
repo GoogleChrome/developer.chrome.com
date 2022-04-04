@@ -131,7 +131,7 @@ Not every client will have the origin trial enabled.
 
 ### Cookies requirements
 
--   Partitioned cookies must be set with the  `__Host- `prefix, which ensures the cookies are sent over secure connections.
+-   Partitioned cookies must be set with the `Secure` and `Path=/` and without the `Domain` attribute. 
 -   `SameParty` attribute cannot be used along with `Partitioned.`
 
 Chrome will enforce these rules for cookies set with the `Partitioned` attribute whether cookie partitioning is enabled or disabled. Cookies that are set incorrectly will be rejected.
