@@ -9,7 +9,7 @@ mergeable:
         must_include:
           regex: 'site/**/*.md'
         limit:
-          teams: [ '@GoogleChrome/web-dev-eng' ]
+          teams: [ 'GoogleChrome/web-dev-eng' ]
     pass:
       - do: checks
         status: 'success'
