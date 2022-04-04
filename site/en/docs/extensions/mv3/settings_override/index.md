@@ -172,7 +172,7 @@ An extension can override one or more of the following properties in the manifes
         <td>array of string</td>
         <td><span class="optional">(optional)</span> alternate_urls</td>
         <td>
-          <p>A list of URL patterns that can be used, in addition to |search_url|.</p>
+          <p>A list of URL patterns that can be used, in addition to <em>search_url</em>.</p>
         </td>
       </tr>
       <tr id="property-search_provider-prepopulated_id">
