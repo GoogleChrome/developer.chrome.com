@@ -16,12 +16,17 @@ updated: 2022-02-17
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Docs update: Chrome Web Store item discovery {: #cws-discoevery-doc }
+
+[Discovery on Chrome Web Store](/docs/webstore/discovery/) gives an overview of how users find items
+on the Chrome Web Store and how our editors select items to feature.
+
 ### Chrome 100: native messaging port keeps service worker alive {: #m100-native-msg-lifetime }
 
 February 9, 2022
 
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open. 
+service worker will keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
