@@ -19,15 +19,15 @@ The [action][api-action] API controls the extension's action (toolbar icon). It 
 [popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. 
 
 By default, after installation, extensions appear under the extensions menu (the puzzle piece).
-Users can then 'pin' it to the toolbar. After that, users can find your
-extension action icon to the right of the URL bar. 
+Users can then 'pin' it to the toolbar. After that, users can find your extension action icon to the
+right of the URL bar. 
 
 {% Columns %}
 
 {% Column %} 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", 
-alt="Unpinned extension", width="400", height="374" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
+width="400", height="374" %}
 
 **Unpinned extension** 
 
@@ -35,8 +35,8 @@ alt="Unpinned extension", width="400", height="374" %}
 
 {% Column %} 
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", 
-alt="Pinned extension", width="400", height="382" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
+width="400", height="382" %}
 
 **Pinned extension** 
 
@@ -65,7 +65,8 @@ is active.
 The [declarativeContent][api-declarativecontent] API allows you to enable and disable the action
 based on the page URL or if the CSS selectors match the elements on the page.
 
-When an extension is disabled, the icon is greyscaled. If the user clicks on the disabled extension, the extension's context menu will appear.
+When an extension is disabled, the icon is greyscaled. If the user clicks on the disabled extension,
+the extension's context menu will appear.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
@@ -77,8 +78,8 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot"%
 </figure>
 
 See [Emulating pageActions with declarativeContent][docs-emulating-page-actions] for an example on
-how to disable the action by default and use the declarativeContent API to enable the action on specific
-sites.
+how to disable the action by default and use the declarativeContent API to enable the action on
+specific sites.
 
 ## Provide the extension icons
 
@@ -149,21 +150,22 @@ Register icons in the manifest under the `"icons"` field.
 
 ### Action badge {: #badge }
 
-Badges display a colored banner with up to four characters on top of the action icon. They can only
-be used by extensions that declare `"action"` in their manifest.
+Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
+is declared in the manifest. 
 
-Use badges to indicate the state of the extension. The [Drink Water][sample-drink] extension sample displays a
-badge with "ON" to show the user they successfully set an alarm and displays nothing when the
-extension is idle.
+Use badges to indicate the state of the extension. The [Drink Water][sample-drink] extension sample
+displays a badge with "ON" to show the user they successfully set an alarm and displays nothing when
+the extension is idle. Badges can contain up to 4 characters.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
-       alt="Badge On", height="72", width="72" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
+       height="72", width="72" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
-       alt="Badge Off", height="72", width="72" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
+       height="72", width="72" %}
 
-Set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and the
-banner color by calling [`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor].
+You can set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and
+the banner color by calling
+[`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor].
 
 ```js
 chrome.action.setBadgeText({text: 'ON'});
@@ -174,14 +176,14 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 
 A popup is an HTML file that is displayed in a special window when the user clicks the action icon.
 A popup works very similarly to a web page; it can contain links to stylesheets and script tags, but
-does not allow inline JavaScript. The popup cannot be smaller than 25x25 px and cannot be larger than
-800x600 px.
+does not allow inline JavaScript. The popup cannot be smaller than 25x25 px nor larger than 800x600
+px.
 
 The [Drink Water Event][sample-drink] example popup displays available timer options. Users set an
 alarm by clicking one of the provided buttons.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", 
-alt="Popup sample screenshot", height="361", width="213" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="Popup sample
+screenshot", height="361", width="213" %}
 
 ```html
 <html>
@@ -229,8 +231,8 @@ chrome.storage.local.get('signed_in', (data) => {
 Use a tooltip to give short descriptions or instructions to users when hovering over the action
 icon. By default, the tootip displays the name of the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", 
-alt="A screenshot of an example tooltip", height="157", width="419" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="A screenshot of an
+example tooltip", height="157", width="419" %}
 
 Tooltips are registered in the `"default_title"` field under the `"action"` key in the manifest.
 
@@ -280,8 +282,8 @@ sample extension uses "nt" as the keyword.
 When the user types "nt" into the omnibox, it activates the extension. To signal this to the user,
 it grayscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", 
-alt="Active Omnibox Extension", height="70", width="476" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png", alt="Active Omnibox
+Extension", height="70", width="476" %}
 
 The extension listens to the [`omnibox.onInputEntered`][omnibox-inputentered] event. After it's
 triggered, the extension opens a new tab containing a Google search for the user's entry.
@@ -318,8 +320,8 @@ manifest.
 
 The 16x16 icon is displayed next to the new menu entry.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", 
-alt="Context Menu Icon", height="300", width="300" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png", alt="Context Menu Icon",
+height="300", width="300" %}
 
 Create a context menu by calling [`contextMenus.create`][contextmenu-create] in the background
 script. This should be done under the [`runtime.onInstalled`][runtime-oninstalled] listener event.
@@ -359,8 +361,8 @@ The Global Google Search context menu example creates multiple options from the 
 `locales.js`. When an extension contains more than one context menu, Google Chrome automatically
 collapses them into a single parent menu.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", 
-alt="Multiple Context Menus will Collapse", height="306", width="500" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png", alt="Multiple Context
+Menus will Collapse", height="306", width="500" %}
 
 ### Commands {: #commands }
 
@@ -459,32 +461,10 @@ pages.
 </html>
 ```
 
-### Extension pages
-
-Extensions can have additional HTML pages that allow users to set preferences, go through an
-onboarding experience, fill out a form, etc. These pages also have access to all the Chrome APIs, as
-you can see in the Action API example:
-
-screenshot
-
-You can open an extension page using the Chrome APIs tabs.create() or windows.create().  
-
-```js
-  chrome.tabs.create({url: 'demo/index.html'});
-```
-
 ### Notifications
 
 You can communicate relevant information to users by displaying notifications directly in their
-system tray. For example, in the Drink Water extension, you can remind users when to hydrate.
-
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
-alt="Mac OS notification", width="500", height="150", type="screenshot" %}
-  <figcaption>
-    Notification in Mac OS
-  </figcaption>
-</figure>
+system tray.
 
 To use the [`notifications`][api-notif] API, you must declare the `"notifications"` permission in
 the manifest.
@@ -502,6 +482,8 @@ the manifest.
 }
 ```
 
+In the Drink Water extension, you can remind users when to hydrate.
+
 ```js
 // background.js
 chrome.notifications.create({
@@ -516,7 +498,13 @@ chrome.notifications.create({
   });
 ```
 
-### Developer Tool panels
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
+alt="Mac OS notification", width="500", height="150", type="screenshot" %}
+  <figcaption>
+    Notification in Mac OS
+  </figcaption>
+</figure>
 
 ## Internationalize the UI {: #localize }
 
@@ -576,9 +564,9 @@ defined.
 }
 ```
 
-## Learn more
+## Continue exploring {: #next}
 
-- See the [Action API example][sample-action] for a complete demonstration of the action APIs
+See the [Action API example][sample-action] for a complete demonstration of the action APIs
 capabilities.
 
 [action-hide]: /docs/extensions/reference/action#method-hide
@@ -594,6 +582,7 @@ capabilities.
 [api-declarativecontent]: /docs/extensions/reference/declarativeContent
 [api-i18n]: /docs/extensions/reference/i18n
 [api-messages]: /docs/extensions/mv3/i18n-messages
+[api-notif]: /docs/extensions/reference/notifications
 [api-omnibox]: /docs/extensions/reference/omnibox
 [commands-oncommand]: /docs/extensions/reference/commands#event-onCommand
 [contextmenu-create]: /docs/extensions/reference/contextMenus#method-create
