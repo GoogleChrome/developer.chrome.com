@@ -60,6 +60,12 @@ redirects:
 - from: /docs/privacy-sandbox/attribution-reporting-in-short/
   to: /docs/privacy-sandbox/attribution-reporting/
 
+- from: /docs/privacy-sandbox/attribution-reporting-event-guide/
+  to: /docs/privacy-sandbox/attribution-reporting-experiment/
+
+- from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
+  to: /docs/privacy-sandbox/attribution-reporting-experiment/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/

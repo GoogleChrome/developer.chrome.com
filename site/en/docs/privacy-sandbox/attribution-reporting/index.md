@@ -189,27 +189,13 @@ Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandb
  <figcaption>Example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption>
 </figure>
 
-Aggregate summary reports are best suited for **reporting** use cases. These reports help answer questions such as
+Summary reports are best suited for **reporting** use cases. These reports help answer questions such as
 _"What is my return on investment?"_.
 Usage of summary reports for **optimization**—for example, to optimize for a purchase value, which
 is not supported by event-level reports because the conversion data is too coarse—is an area of
 active research.
 
-{% Details %}
-{% DetailsSummary 'h3' %}
-Why are two types of reports needed?
-{% endDetailsSummary %}
-
-Event-level reports only offer coarse conversion data in order to preserve user privacy.
-
-But this coarse data may not be sufficient to measure campaign effectiveness. Marketers may need to
-learn specific details about conversions, such as the purchase value, the aggregated advertiser-side
-demographics for users who converted, the product categories that were purchased, whether
-converted users are first-time or recurring customers, the carts' contents, etc.
-
-Summary reports provide a privacy-preserving solution to this need.
-
-{% endDetails %}
+### Other features
 
 Other features proposed in this API include [app-to-web
 attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md) (see or
@@ -262,7 +248,7 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 
 {% Aside %}
 
-The API does not rely on third-party cookies. However, in the testing phase, third-party cookies need to be enabled for the API to be enabled. This should make it easier for developers experimenting with the API to compare the API's performance with cookie-based performance.
+The API does not rely on third-party cookies. However, in the testing phase, third-party cookies need to be enabled for the API to be enabled. This allows developers to get debug reports and compare the API's results with cookie-based attribution.
 
 {% endAside %}
 
