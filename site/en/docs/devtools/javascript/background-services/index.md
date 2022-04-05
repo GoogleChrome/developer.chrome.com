@@ -38,7 +38,7 @@ Whenever your site's policies are violated, Chrome generates reports and sends t
 ## Background Fetch {: #fetch }
 
 The [Background Fetch][6] API enables a [service worker][7] to reliably download large resources,
-like movies or podcasts, as a background service. To log Background Fetch event for 3 days, even
+like movies or podcasts, as a background service. To log Background Fetch event for three days, even
 when DevTools is not open:
 
 1.  [Open DevTools][8].
@@ -65,7 +65,7 @@ when DevTools is not open:
 ## Background Sync {: #sync }
 
 The [Background Sync][9] API enables an offline [service worker][10] to send data to a server once
-it has re-established a reliable internet connection. To log Background Sync events for 3 days, even
+it has re-established a reliable internet connection. To log Background Sync events for three days, even
 when DevTools is not open:
 
 1.  [Open DevTools][11].
@@ -92,7 +92,7 @@ when DevTools is not open:
 ## Notifications {: #notifications }
 
 After a [service worker][12] has received a [Push Message][13] from a server, the service worker
-uses the [Notifications][14] API to display the data to a user. To log Notifications for 3 days,
+uses the [Notifications][14] API to display the data to a user. To log Notifications for three days,
 even when DevTools is not open:
 
 1.  [Open DevTools][15].
@@ -120,7 +120,7 @@ even when DevTools is not open:
 
 To display a push notification to a user, a [service worker][16] must first use the [Push
 Message][17] API to receive data from a server. When the service worker is ready to display the
-notification, it uses the [Notifications][18] API. To log Push Messages for 3 days, even when
+notification, it uses the [Notifications][18] API. To log Push Messages for three days, even when
 DevTools is not open:
 
 1.  [Open DevTools][19].
