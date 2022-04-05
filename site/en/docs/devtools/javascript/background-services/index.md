@@ -23,7 +23,7 @@ DevTools considers each of the following APIs to be a background service:
 - [Notifications][4]
 - [Push Messages][5]
 
-Chrome DevTools can log fetch, sync, and notification events for 3 days, even when DevTools is not open. This can help you make sure that events are being sent and received as expected.
+Chrome DevTools can log fetch, sync, and notification events for three days, even when DevTools is not open. This can help you make sure that events are being sent and received as expected.
 
 You can also inspect the details of each event.
 
