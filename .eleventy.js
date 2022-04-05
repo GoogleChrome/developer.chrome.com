@@ -19,8 +19,11 @@ const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 
 // Shortcodes
+const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
+const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
+const {Empty} = require('./site/_shortcodes/Empty');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -119,6 +122,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('typeof', x => typeof x);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('Codepen', Codepen);
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('Hreflang', Hreflang);
@@ -126,6 +130,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
   eleventyConfig.addShortcode('includeRaw', includeRaw);
+  eleventyConfig.addPairedShortcode('Blockquote', Blockquote);
   eleventyConfig.addPairedShortcode('Details', Details);
   eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);
@@ -134,6 +139,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+
+  // Empty shortcodes. They are added for backward compatibility with web.dev.
+  // They will not render any html, but will prevent the build from failing.
+  eleventyConfig.addShortcode('Widget', Empty);
+  eleventyConfig.addShortcode('BrowserCompat', Empty);
+  eleventyConfig.addShortcode('CodePattern', Empty);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
