@@ -1,28 +1,13 @@
-/// SWITCHER
-/// More info: https://every-layout.dev/layouts/switcher/
-/// A layout that allows you to lay **2** items next to each other
-/// until there is not enough horizontal space to allow that.
-
-/// CUSTOM PROPERTIES AND CONFIGURATION
-/// --gutter ($global-gutter): This defines the space
-/// between each item
-
-/// --switcher-target-container-width (40rem): How large the container
-/// needs to be to allow items to sit inline with each other
-
-/// --switcher-vertical-alignment How items should align vertically.
-/// Can be any acceptable flexbox alignment value.
-
 .switcher {
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: get-size(300);
-  align-items: flex-start;
 }
 
 .switcher > * {
-  flex-grow: 1;
   flex-basis: 0;
+  flex-grow: 1;
 }
 
 /// Max 2 items, so we target everything *after* those

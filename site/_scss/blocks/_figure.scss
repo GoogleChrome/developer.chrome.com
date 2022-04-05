@@ -18,8 +18,8 @@ figure {
 }
 
 figure[data-float] {
-  width: auto;
   margin-bottom: get-size(200);
+  width: auto;
 }
 
 figure[data-float='left'] {
