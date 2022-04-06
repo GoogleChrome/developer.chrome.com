@@ -32,7 +32,7 @@ pagination:
       <author>
         <name>
           {%- if author -%}
-            <name>{{ author.title | i18n(locale) }}</name>
+            {{ author.title | i18n(locale) }}
           {%- else -%}
             {{ authorId }}
           {%- endif -%}
