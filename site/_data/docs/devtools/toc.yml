@@ -76,7 +76,7 @@
 - url: /docs/devtools/memory-inspector/
 - url: /docs/devtools/device-mode/override-user-agent/
 - url: /docs/devtools/recorder/
-- url: /docs/devtools/css/print-preview/
+- url: /docs/devtools/rendering/
 - url: /docs/devtools/security/
 - title: i18n.docs.devtools.sensors
   sections:
