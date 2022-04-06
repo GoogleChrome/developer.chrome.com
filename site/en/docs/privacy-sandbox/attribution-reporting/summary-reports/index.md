@@ -31,7 +31,7 @@ The API doesn't rely on third-party cookies or mechanisms that can be used to
 identify individual users across sites.
 
 This API offers two types of reports. [Event-level
-reports](/docs/privacy-sandbox/attribution-reporting-event-introduction/)
+reports](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
 are already available for testing in Chrome, which associate a specific ad
 click or view with less detailed conversion data. The browser delays sending
 reports to adtech companies for multiple days to prevent identity connection

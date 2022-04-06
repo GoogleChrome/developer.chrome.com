@@ -159,8 +159,7 @@ The popup can be registered in the manifest under the `"action"` key.
 }
 ```
 
-Popups can also be set dynamically by calling [`action.setPopup`][18] or
-[`action.setPopup`][19].
+Popups can also be set dynamically by calling [`action.setPopup`][18].
 
 ```js
 chrome.storage.local.get('signed_in', (data) => {
@@ -452,7 +451,6 @@ pages.
 [16]: /docs/extensions/reference/action
 [17]: /docs/extensions/mv3/samples#search:drink
 [18]: /docs/extensions/reference/action#method-setPopup
-[19]: /docs/extensions/reference/action#method-setPopup
 [20]: /docs/extensions/reference/action
 [21]: /docs/extensions/reference/action
 [22]: /docs/extensions/reference/action#method-setTitle

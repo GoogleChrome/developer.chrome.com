@@ -1,3 +1,23 @@
+arthurevans:
+  title:
+    en: 'Arthur Evans'
+  description:
+    en: 'Arthur writes words about code'
+jbingham:
+  title:
+    en: 'Jonathan Bingham'
+  description:
+    en: 'Jonathan is a Product Manager at Google'
+justinfagnani:
+  title:
+    en: 'Justin Fagnani'
+  description:
+    en: 'Justin is a Software Engineer on the Polymer Project'
+sahel:
+  title:
+    en: 'Sahel Sharify'
+  description:
+    en: 'Sahel is a contributor to Chrome Developers'
 mustaqahmed:
   title:
     en: 'Mustaq Ahmed'
@@ -691,3 +711,8 @@ kevinkiklee:
   description:
     en: 'Developer Relations Engineer, Google Chrome'
     ko: 'Google Chrome의 개발자 관계 엔지니어'
+rachelandrew:
+  title:
+    en: 'Rachel Andrew'
+  description:
+    en: 'Technical writer at Google, content lead for the Chrome Developers site.'

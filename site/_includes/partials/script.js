@@ -38,6 +38,7 @@
     '{{ analytics.dimensions.TRACKING_VERSION }}',
     '{{ analytics.TRACKING_VERSION }}'
   );
+
   ga('send', 'pageview');
 
   // Check if the user has accepted cookies. If so, set an attribute on

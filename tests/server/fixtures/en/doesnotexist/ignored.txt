@@ -1,0 +1,1 @@
+The logic checks for an index.html file, so this file is not sufficient.

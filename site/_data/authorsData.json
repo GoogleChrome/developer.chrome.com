@@ -1,4 +1,17 @@
 {
+  "arthurevans": {
+    "github": "arthurevans",
+    "twitter": "devdocdude"
+  },
+  "jbingham": {
+    "github": "jbingham",
+    "twitter": "jonathanbingham"
+  },
+  "justinfagnani": {
+    "homepage": "http://justinfagnani.com/",
+    "github": "justinfagnani",
+    "twitter": "justinfagnani"
+  },
   "mustaqahmed": {
     "github": "mustaqahmed"
   },
@@ -622,5 +635,12 @@
     "github": "kevinkiklee",
     "glitch": "kevinkiklee",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8bRRaZVXzJKCDu0RlK1Y.jpg"
+  },
+  "rachelandrew": {
+    "country": "UK",
+    "twitter": "rachelandrew",
+    "github": "rachelandrew",
+    "homepage": "https://rachelandrew.co.uk",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/DbljY0AD921j6PKWl6JC.jpeg"
   }
 }

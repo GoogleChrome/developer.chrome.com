@@ -26,10 +26,6 @@ blog:
   en: 'Blog'
 attribution-reporting-changing:
   en: 'January 2022 API updates'
-attribution-reporting-events:
-  en: 'Event-level reports'
-attribution-reporting-events-api:
-  en: 'Event-level reports API guide'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
 attribution-reporting-summary:
@@ -48,7 +44,10 @@ chips:
   en: 'Cookies Having Independent Partitioned State (CHIPS)'
 fedcm:
   en: 'Federated Credentials Management (FedCM)'
+proposals:
+  en: 'Proposal lifecycle'
 permissions-policy:
   en: 'Permissions Policy'
 permissions-policy-description:
   en: 'Manage browser access to your page and embedded third-party iframes.'
+  

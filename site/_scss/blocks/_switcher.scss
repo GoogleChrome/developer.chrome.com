@@ -1,0 +1,17 @@
+.switcher {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: get-size(300);
+}
+
+.switcher > * {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+/// Max 2 items, so we target everything *after* those
+.switcher > :nth-last-child(n + 3),
+.switcher > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+}

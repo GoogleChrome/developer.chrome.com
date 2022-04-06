@@ -64,7 +64,7 @@ The following table lists the currently available permissions:
     <tr id="background">
       <td><code>"background"</code></td>
       <td>
-        <p id="bg">Makes Chrome start up early and and shut down late, so that extensions can have a longer
+        <p id="bg">Makes Chrome start up early and shut down late, so that extensions can have a longer
           life.</p>
         <p>When any installed extension has "background" permission, Chrome runs
           (invisibly) as soon as the user logs into their computer—before the user launches Chrome. The "background"
@@ -93,7 +93,7 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="clipboardWrite">
       <td><code>"clipboardWrite"</code></td>
-      <td>Indicates the extension uses <code>document.execCommand('copy')</code> or
+      <td>Required if the extension uses <code>document.execCommand('copy')</code> or
         <code>document.execCommand('cut')</code>.
     </tr>
     <tr id="contentSettings">
