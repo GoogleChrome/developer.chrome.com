@@ -11,10 +11,11 @@ description:
 tags:
   - emulate
   - test
+  - find-issues
   - css
 ---
 
-
+The **Rendering** tab contains a collection of options that affect web content rendering. With this tab, you can discover issues with content repainting, layout shifts, scrolling performance, different display options, and more.
 
 To open the **Rendering** tab:
 
@@ -24,29 +25,28 @@ To open the **Rendering** tab:
 
     {% Img src="image/admin/vAwmfhwU6lLmrbEBCSsc.png", alt="The Command Menu", width="800", height="632" %}
 
-1.  Start typing `rendering`, and select **Show Rendering**, and then press <kbd>Enter</kbd>.
+1.  Start typing `rendering`, select **Show Rendering**, and press <kbd>Enter</kbd>.
     DevTools displays the **Rendering** tab at the bottom of your DevTools window.
 
+## Highlight repainted areas with paint flashing {: #paint-flashing }
 
-## Paint flashing {: #paint-flashing }
+With this option switched on, Chrome flashes the screen green whenever repainting happens.
 
-With this option switched on, Chrome flashes the screen green whenever painting happens.
+To highlight areas that are being repainted:
 
-To identify areas that are being painted:
-
-1. On the **Rendering tab**, check **Paint flashing**.
+1. Open the [demo](https://googlechrome.github.io/devtools-samples/jank/), and, on the **Rendering tab**, check **Paint flashing**.
 
    {% Img src="image/admin/AKUsdeRRaSFncCF94ap5.gif", alt="Paint flashing", width="800", height="322" %}
 
-1. Observe the repainting highlighted in green or, if nothing changes, make an action that causes repainting, for example, drag a cursor over an element that is supposed to be highlighted with a cursor hover.
+1. Observe the repainting highlighted in green.
 
-If you see the whole screen flash green, or areas of the screen that you didn't think should be painted, consider investigating further.
+If, on your page, you see the whole screen flash green, or areas of the screen that you didn't think should be painted, consider investigating further.
 
-## Layout shift regions {: #layout-shift-regions }
+## Highlight layout shift regions {: #layout-shift-regions }
 
 Discover the location and timing of the layout shifts happening on a page.
 
-To identify layout shifts:
+To highlight layout shifts:
 
 1. On the **Rendering tab**, check **Layout Shift Regions**.
 
@@ -54,46 +54,100 @@ To identify layout shifts:
 
 img
 
-### View an overlay of layers with Layer Borders {: #layer-borders }
+### View layers with layer borders {: #layer-borders }
 
 Use **Layer Borders** to view an overlay of layer borders and tiles on top of the page.
 
 To enable Layer Borders:
 
 1. On the **Rendering tab**, check **Layer Borders**.
-1. Hover the cursor over the page to see how layer borders change.
+1. Observe layer borders in orange and olive and tiles in cyan.
 
-{% Img src="image/admin/FAgzk3UUc2WZC5i28X9f.png", alt="Layer Borders", width="800", height="515" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fNAI08rYVM3yVqEmowTt.png", alt="Layer borders and tiles", width="800", height="479" %}
 
 See the comments in [`debug_colors.cc`][32] for an explanation of the color-codings.
 
-## Frame rendering stats {: #frame-rendering-stats }
+## View frames per second in real time with frame rendering stats {: #frame-rendering-stats }
 
-The **FPS meter** is an overlay that appears in the top-right corner of your viewport. It provides a real time estimate of FPS as the page runs.
+The **Frame rendering stats** is an overlay that appears in the top-right corner of your viewport.
 
-To open the **FPS meter**:
+To open the **Frame rendering stats**:
 
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][29].
-2.  Enable the **FPS Meter** checkbox.
+1. On the **Rendering** tab, enable the **Frame rendering stats** checkbox.
+1. Observe the statistics in the top right corner of the page.
 
-{% Img src="image/admin/ztC0PRZRr0tczy4jqrxq.png", alt="The FPS meter", width="800", height="593" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7BR4zTh9IMobaelSH0xV.png", alt="Frame rendering stats", width="388", height="358" %}
+
+The **Frame rendering stats** overlay shows:
+
+- Real time estimate of frames per second as the page runs.
+- Plot of frames: rendered frames (blue), partially presented frames (yellow), dropped frames (red).
+- The state of the GPU raster: on or off. For more information, see [How to get GPU rasterization][4].
+- GPU memory usage: the number of used and maximum MB of memory.
 
 ## Scrolling performance issues {: #scrolling-performance-issues }
 
-Use Scrolling Performance Issues to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the potentially-problematic elements in teal.
+Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the potentially-problematic elements in teal.
 
 To view scroll performance issues:
 
 1. On the **Rendering** tab, check **Scrolling Performance Issues**.
-1. Scroll your page.
+1. Observe the potentially problematic elements highlighted.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NH12bctPHXR9VD9GO7ov.png", alt="Scrolling Performance Issues is indicating that there's a mousewheel event listener encompassing the entire viewport that may harm scroll performance", width="800", height="498" %}
 
 ## Highlight ad frames
 
-## Core web vitals
+Check if frames have been tagged as ads:
+
+1. On the **Rendering** tab, check **Highlight ad frames**.
+1. Observe the ad frames highlighted in red.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UuQMD7ifcGe1n6nFdYth.png", alt="Ad highlighted in red", width="800", height="490" %}
+
+## View Core Web Vitals
+
+[Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
+
+Core Web Vitals are the subset of Web Vitals that apply to all web pages. Each of the Core Web Vitals represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome. The Core Web Vitals are:
+
+- **[Largest Contentful Paint (LCP)](/lcp/)**: measures _loading_ performance.
+  To provide a good user experience, LCP should occur within **2.5 seconds** of
+  when the page first starts loading.
+- **[First Input Delay (FID)](/fid/)**: measures _interactivity_. To provide a
+  good user experience, pages should have a FID of **100 milliseconds** or less.
+- **[Cumulative Layout Shift (CLS)](/cls/)**: measures _visual stability_. To
+  provide a good user experience, pages should maintain a CLS of **0.1.** or
+  less.
+
+To view the Core Web Vitals as an overlay in the top right corner of the viewport:
+
+1. On the **Rendering** tab, check **Core Web Vitals**.
+1. Scroll the page to reveal all layout shifts and perform an interaction, for example, click a button, open a tab, or enter text in a textbox.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HW8iWmtzvC3S0uuQdcsp.png", alt="ALT_TEXT_HERE", width="800", height="311" %}
+
+If your Core Web Vitals are in good shape, they are green. If they need attention, they are yellow or red.
 
 ## Disable local fonts
+
+Check if the local font alternatives work as expected by disabling `local()` sources in `@font-face` rules.
+
+<style>
+    @font-face {
+      font-family: "MyFont";
+      src: local("Courier New"), url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+    }
+    .text-box {
+      font-family: 'MyFont';
+    }
+</style>
+<div class="text-box">Chrome displays this sentence in Courier New if it finds this font on your computer.</div>
+
+Disable local fonts:
+
+1. On the **Rendering** tab, check **Disable local fonts**.
+1. Reload the page and observe the font of the sentence above change to Roboto.
 
 ## Emulate a focused page
 
@@ -125,29 +179,8 @@ From here, you can view and change your CSS, like any other web page. See [Get S
 
 ## Disable WebP image format
 
-### View frames per second in realtime with the FPS meter {: #fps-meter }
-
-The **FPS meter** is an overlay that appears in the top-right corner of your viewport. It provides a
-realtime estimate of FPS as the page runs. To open the **FPS meter**:
-
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][29].
-2.  Enable the **FPS Meter** checkbox.
-
-{% Img src="image/admin/ztC0PRZRr0tczy4jqrxq.png", alt="The FPS meter", width="800", height="593" %}
-
-### Find scroll performance issues in real time
-
-Use Scrolling Performance Issues to identify elements of the page that have event listeners related
-to scrolling that may harm the performance of the page. DevTools outlines the
-potentially-problematic elements in teal.
-
-To view scroll performance issues:
-
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][33].
-2.  Enable the **Scrolling Performance Issues** checkbox.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NH12bctPHXR9VD9GO7ov.png", alt="Scrolling Performance Issues is indicating that there's a mousewheel event listener encompassing the entire viewport that may harm scroll performance", width="800", height="498" %}
-
 [1]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries
 [2]: /docs/devtools/css
 [3]: /docs/devtools/command-menu/
+[4]: https://www.chromium.org/developers/design-documents/chromium-graphics/how-to-get-gpu-rasterization/
+[32]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
