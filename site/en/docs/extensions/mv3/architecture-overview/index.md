@@ -330,7 +330,10 @@ the same channel.
 
 ## Saving data {: #data}
 
-The chrome storage API has been optimized to meet the specific storage needs of extensions. For example, whenever data is updated, you can use the onChanged() event to track these changes. All extension components have access to this API. An extension can also store data using the web API [indexedDB][mdn-indexeddb].
+The chrome storage API has been optimized to meet the specific storage needs of extensions. For
+example, whenever data is updated, you can use the onChanged() event to track these changes. All
+extension components have access to this API. An extension can also store data using the web API
+[indexedDB][mdn-indexeddb].
 
 See [storage API][api-storage] for usage and examples.
 
@@ -365,7 +368,6 @@ with the following resources:
 [docs-dev-guide]: /docs/extensions/mv3/devguide
 [docs-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [docs-get-started]: /docs/extensions/mv3/getstarted
-[docs-key]: /docs/extensions/mv3/manifest/key/
 [docs-key]: /docs/extensions/mv3/tut_oauth/#keep-consistent-id
 [docs-link-options]: /docs/extensions/mv3/options/#linking
 [docs-manifest]: /docs/extensions/mv3/manifest
