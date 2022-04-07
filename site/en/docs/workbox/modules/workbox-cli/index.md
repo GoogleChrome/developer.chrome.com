@@ -160,7 +160,7 @@ From package.json:
 ```json
 {
   "scripts": {
-    "build": "my-build-script && workbox-cli <mode> <path/to/config.js>"
+    "build": "my-build-script && workbox <mode> <path/to/config.js>"
   }
 }
 ```
