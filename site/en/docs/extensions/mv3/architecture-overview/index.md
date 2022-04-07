@@ -326,33 +326,14 @@ This method synchronously returns the URL as a `string` and performs no other as
 
 Different components in an extension can communicate with each other using [message
 passing][docs-messages]. Either side can listen for messages sent from the other end, and respond on
-the same channel. Additionally, all components of the extension can access values stored using the
-[storage][api-storage] API.
+the same channel. 
 
-## Saving data and incognito mode {: #incognito }
-<!-- TODO: Would like to move this section to Protect User Privacy docs -->
-Extensions can save data using the [storage][api-storage] API, or by making server requests that
-result in saving data. When the extension needs to save something, first consider if it's from an
-incognito window. By default, extensions don't run in incognito windows.
+## Saving data {: #data}
 
-_Incognito mode_ promises that the window will leave no tracks. When dealing with data from
-incognito windows, extensions should honor this promise. If an extension normally saves browsing
-history, don't save history from incognito windows. However, extensions can store setting
-preferences from any window, incognito or not.
+The chrome storage API has been optimized to meet the specific storage needs of extensions. For example, whenever data is updated, you can use the onChanged() event to track these changes. All extension components have access to this API. An extension can also store data using the web API [indexedDB][mdn-indexeddb].
 
-To detect whether a window is in incognito mode, check the `incognito` property of the relevant
-[tabs.Tab][api-tab] or [windows.Window][api-window] object.
+See [storage API][api-storage] for usage and examples.
 
-```js
-function saveTabData(tab) {
-  if (tab.incognito) {
-    return;
-  } else {
-    chrome.storage.local.set({data: tab.url});
-  }
-}
-```
-'
 ## Take the next step {: #next-steps }
 
 After reading the overview and completing the [Getting Started][docs-get-started] tutorial, you
@@ -398,6 +379,7 @@ with the following resources:
 [docs-unpacked]: /docs/extensions/mv3/getstarted/#unpacked
 [docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+[mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-apis]: #apis
