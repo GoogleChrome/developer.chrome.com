@@ -162,6 +162,27 @@ Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
+
+## Topics
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal:
+   [create an issue](https://github.com/jkarlin/topics/issues) on the proposal
+   repo.
+-  For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.
+   
+### Can I opt out of Topics collection for specific pages only on my site?
+
+Yes. Using `Permissions-Policy: browsing-topics=()` on the header of a page will prevent the topics calculation for users, on that path only. Subsequent visit to other paths of your site will not be affected by the header on the pages opted out.
+
+Each page visit is an independent calculation. But also note that the topic is derived from the domain and not the individual paths.
+
+
 ## FLEDGE
 
 ### How can I ask a question about this feature?
