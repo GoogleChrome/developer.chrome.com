@@ -57,7 +57,7 @@ Here is the list of [format specifiers](https://console.spec.whatwg.org/#formatt
       <td>Formats the value as an expandable DOM element</td>
     </tr>
     <tr>
-      <td><code>%0</code></td>
+      <td><code>%O</code></td>
       <td>Formats the value as an expandable JavaScript object</td>
     </tr>
     <tr>
