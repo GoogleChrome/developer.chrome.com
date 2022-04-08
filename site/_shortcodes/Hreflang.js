@@ -17,10 +17,10 @@ function Hreflang(url, site, collections) {
     findByUrl(collections.all, hreflang[0])
   );
   const links = hreflangs.map(hreflang => {
-    return `<link href="${path.join(
-      site.url,
-      hreflang[0]
-    )}" rel="alternate" hreflang="${hreflang[1]}">`;
+    return (
+      `<link href="${site.url}${hreflang[0]}" ` +
+      `rel="alternate" hreflang="${hreflang[1]}">`
+    );
   });
   return links.length > 1 ? links.join('\n') : '';
 }
