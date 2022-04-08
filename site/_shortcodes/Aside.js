@@ -14,7 +14,9 @@ const icons = {
   caution: loadIcon('error'),
   warning: loadIcon('warning'),
   success: loadIcon('done'),
+  objective: loadIcon('done'),
   gotchas: loadIcon('lightbulb-outline'),
+  important: loadIcon('lightbulb-outline'),
   'key-term': loadIcon('ink-highlighter'),
   codelab: loadIcon('code'),
 };

@@ -1,11 +1,14 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect animations"
+title: "Animations: Inspect and modify CSS animation effects"
 authors:
   - kaycebasques
 date: 2016-05-02
 #updated: YYYY-MM-DD
 description: "Inspect and modify animations with the Chrome DevTools Animation Inspector."
+tags:
+  - prototype-fixes
+  - css
 ---
 
 Inspect and modify animations with the Chrome DevTools Animation Inspector.

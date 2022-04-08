@@ -12,6 +12,16 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Partially presented frames in the Performance panel](/es/blog/new-in-devtools-100/#perf)
 * [Miscellaneous highlights](/es/blog/new-in-devtools-100/#misc) -->
 
+### Chrome 100 {: #chrome100 }
+
+* [Ver y editar reglas @supports en el panel Estilos](/es/blog/new-in-devtools-100/#supports)
+* [Admite selectores comunes de forma predeterminada](/es/blog/new-in-devtools-100/#selector)
+* [Personaliza el selector de grabaciones](/es/blog/new-in-devtools-100/#customize-selector)
+* [Cambiar el nombre de una grabación](/es/blog/new-in-devtools-100/#recorder-rename)
+* [Vista previa de propiedades de clase/función al pasar el mouse](/es/blog/new-in-devtools-100/#properties)
+* [Fotogramas presentados parcialmente en el panel Rendimiento](/es/blog/new-in-devtools-100/#perf)
+* [Destacados varios](/es/blog/new-in-devtools-100/#misc)
+
 ### Chrome 99 {: #chrome99 }
 
 * [Limitación de las peticiones WebSocket](/es/blog/new-in-devtools-99/#websocket)

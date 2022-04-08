@@ -184,7 +184,7 @@ button.current {
 }
 ```
 
-Designation for toolbar icons is also included under `action` in the `default_icons` field.
+Designation for toolbar icons is also included under `action` in the `default_icon` field.
 Download the images folder [here][18], unzip it, and place it in the extension's directory. Update
 the manifest so the extension knows how to use the images.
 

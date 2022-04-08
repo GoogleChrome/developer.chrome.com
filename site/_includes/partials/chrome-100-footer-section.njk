@@ -1,0 +1,32 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block content %}
+<section class="footer footer-top-section display-flex direction-column justify-content-center">
+  {% Img src="image/x1Los57vDga6OEMNi1dIJwZ0qvp2/QFqln7DXP9AsjCdgpTLU.svg", alt="No internet logo",
+      class="no-internet-logo", width="180", height="143" %}
+  <div class="text-align-center footer-description gap-top-500">
+    <div class="footer-subheading">#100CoolWebMoments</div>
+    <p class="footer-info">On 29 March 2022, Chrome launched its 100th release. Since our first iteration in 2008, our goal has been to improve the experience for our users and help developers build amazing things. We've grown together with the needs of the platform and its ecosystem. And it's been quite a ride.</p>
+    <p class="footer-info">If there's anything we've missed or you'd like fixed, tweet us <a href="https://twitter.com/ChromiumDev" target="_blank" rel="noreferrer noopener">@Chromiumdev</a> with #100CoolWebMoments and we'll try to address it.
+    </p>
+    <p class="gap-top-300">Inspired by <a href="https://thehistoryoftheweb.com/" target="_blank" rel="noopener noreferrer">The History of the Web</a> by <a href="https://twitter.com/jay_hoffmann/" target="_blank" rel="noopener noreferrer">Jay Hoffman</a>.</p>
+
+  </div>
+  <div class="display-flex justify-content-center gap-top-400">
+    <a class="share-button__link gap-right-200 share-logo display-flex ga-event"
+        href="https://twitter.com/share?url={{site.url}}{{ page.url | stripDefaultLocale}}&text=%23100CoolWebMoments brought back some memories! Loved going through this timeline of the web. Check it out!"
+        target="_blank" data-ga-label="twitter share" data-ga-category="share" data-ga-action="click" aria-label="twitter share">
+      {{ icon('share', {}) }}
+      Share
+    </a>
+  </div>
+  <div class="back-to-top display-flex direction-column justify-content-center">
+    <a href="#back-to-top" class="center-margin">
+      {% Img src="image/x1Los57vDga6OEMNi1dIJwZ0qvp2/dXusE4d4JE2yjHbK64Ky.svg", alt="Back to top",
+          class="back-to-logo", width="44", height="24" %}
+      <span class="text-align-center gap-top-300">Back to top</span>
+    </a>
+  </div>
+</section>
+
+{% endblock %}

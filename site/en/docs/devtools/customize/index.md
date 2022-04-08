@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Customization"
+title: "Customize"
 authors:
   - kaycebasques
   - jecelynyeen

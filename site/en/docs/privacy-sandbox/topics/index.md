@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-02-14
+updated: 2022-03-31
 authors:
   - samdutton
 ---
@@ -17,15 +17,56 @@ authors:
 This document outlines a new proposal for interest-based advertising: the Topics API.
 
 -  The [Topics API proposal](https://github.com/jkarlin/topics) has entered [public
-   discussion](https://github.com/jkarlin/topics/issues).
+   discussion](https://github.com/jkarlin/topics/issues) and is now available in an origin trial.
 -  This proposal needs your feedback. If you have comments, please create an issue on the [Topics
    Explainer repository](https://github.com/jkarlin/topics) or participate in discussions in the
    [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
    The explainer has a number of [open questions](https://github.com/jkarlin/topics/issues) that
    still require further definition.
--  The API has not yet been implemented in any browser.
 -  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation
    timings for the Topics API and other Privacy Sandbox proposals.
+
+---
+
+## Test with chrome://flags or feature flags {: #feature-flags}
+
+You can try out the Topics API for a single user running Chrome Canary 102:
+* By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
+* By enabling `chrome://flags/#privacy-sandbox-ads-apis`
+
+[Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+explains how to set flags when running Chrome and other Chromium-based browsers from the command
+line.
+
+{% Aside %}
+
+This is the in-progress version of the API for early testing, so it should not be considered
+feature complete or indicative of the final implementation.
+
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
+information for FLEDGE and other Privacy Sandbox proposals.
+
+{% endAside %}
+
+## Detect feature support
+
+Before using the API, check if it's available on the page. For example:
+
+```javascript
+'browsingTopics' in document ?
+  console.log('document.browsingTopics() is supported on this page') :
+  console.log('document.browsingTopics() is not supported on this page');
+```
+
+{% Aside 'caution' %}
+
+Feature support on the current page isn't a guarantee that an API is usable: the user may have
+disabled the API via browser settings, or they may have other settings that prevent the API from
+being used. In order to protect user privacy, there is no way to check for this programmatically.
+
+{% endAside %}
+
+---
 
 ## Why do we need this API?
 
@@ -50,6 +91,7 @@ for the visitor.
 The Topics API proposes a way to provide topics that a user might currently be interested in, based
 on their recent browsing activity. These topics can supplement contextual information to help select
 appropriate advertisements.
+
 The Topics API has three main tasks:
 
 -  Map website hostnames to topics of interest. For example, a yoga website might be classified
@@ -117,8 +159,9 @@ selected for each epoch would be randomly selected from the user's top five topi
 period. To further enhance privacy and ensure that all topics may be represented, there is a 5%
 chance the topic is randomly selected from all possible topics in the Taxonomy.
 
-The Topics JavaScript API has one method: `document.browsingTopics()`. This returns an array of
-up to three topics, one for each of the three most recent epochs, in random order.
+The Topics JavaScript API has one method: `document.browsingTopics()`. This returns a promise that
+resolves to an array of up to three topics, one for each of the three most recent epochs, in random
+order.
 
 The Topics explainer proposes that each topic object in the array returned by
 `document.browsingTopics()` would have three properties:

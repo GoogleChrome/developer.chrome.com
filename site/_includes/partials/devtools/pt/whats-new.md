@@ -3,15 +3,15 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
-<!-- ### Chrome 100 {: #chrome100 }
+### Chrome 100 {: #chrome100 }
 
-* [View and edit @supports at rules in the Styles pane](/pt/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/pt/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/pt/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/pt/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/pt/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/pt/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-100/#misc) -->
+* [Visualize e edite @supports em rules no painel Estilos](/pt/blog/new-in-devtools-100/#supports)
+* [Suporte a seletores comuns por padrão](/pt/blog/new-in-devtools-100/#selector)
+* [Personalize o seletor de gravação](/pt/blog/new-in-devtools-100/#customize-selector)
+* [Renomeação de gravação](/pt/blog/new-in-devtools-100/#recorder-rename)
+* [Visualização de propriedades de classe/função ao passar o mouse](/pt/blog/new-in-devtools-100/#properties)
+* [Quadros parcialmente apresentados no painel Desempenho](/pt/blog/new-in-devtools-100/#perf)
+* [Destaques diversos](/pt/blog/new-in-devtools-100/#misc)
 
 
 ### Chrome 99 {: #chrome99 }

@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Network features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2015-04-13
-updated: 2021-08-12
+updated: 2022-04-01
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -119,25 +120,49 @@ There's a new class of web apps, called [Progressive Web Apps][2], which can fun
 the help of [service workers][3]. When you're building this type of app, it's useful to be able to
 quickly simulate a device that has no data connection.
 
-Check the **Offline** checkbox to simulate a completely offline network experience.
+To simulate a completely offline network experience, select **Offline** from the **Network throttling** dropdown menu next to the **Disable cache** checkbox.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2GrWegpdEJMfsnEYNkq6.svg", alt="The Offline checkbox", width="684", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lHvzbNUlrm2Mvd4H1Ywc.png", alt="Offline selected from the dropdown menu", width="800", height="620" %}
 
-**Figure 8**. The Offline checkbox, outlined in blue
+**Figure 8**. Offline selected from the dropdown menu
+
+DevTools displays a warning icon next to the **Network** tab to remind you that offline is enabled.
 
 ### Emulate slow network connections {: #throttling }
 
-Emulate 2G, 3G, and other connection speeds from the **Network Throttling** menu.
+Emulate slow 3G, fast 3G, and other connection speeds from the **Throttling** menu.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7LD09urCKiCrkJcsYhiA.svg", alt="The Network Throttling menu.", width="753", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VSk4XiLkW8TZBCPFzSmE.png", alt="The Network Throttling menu", width="800", height="620" %}
 
-**Figure 9**. The Network Throttling menu, outlined in blue
+**Figure 9**. The Throttling menu, outlined in blue
 
-You can select from a variety of presets, such as Regular or Good 2G. You can also add your own
-custom presets by opening the Network Throttling menu and selecting **Custom** > **Add**.
+#### Create custom throttling profiles {: #throttling-profile}
 
-DevTools displays a warning icon next to the **Network** tab to remind you that throttling is
+In addition to presets, such as slow or fast 3G, you can also add your own
+custom throttling profiles:
+
+1. Open the **Throttling** menu and select **Custom** > **Add...**.
+1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
+1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile", width="800", height="426" %}
+1. Back on the **Network** panel, select your new profile from the **Throttling** dropdown menu.
+
+DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
 enabled.
+
+#### Throttle WebSocket connections {: #throttle-websocket}
+
+In addition to HTTP requests, DevTools throttles WebSocket connections since version 99.
+
+To observe WebSocket throttling:
+
+1. Initiate a new connection, for example, by using a [test tool](https://www.piesocket.com/websocket-tester).
+1. On the **Network** panel, select **No throttling** and send a message through the connection.
+1. Create a very slow [custom throttling profile](#throttling-profile), for example, `10 kbit/s`. Such a slow profile will help you notice the difference.
+1. On the **Network** panel, select the profile and send another message.
+1. Toggle the **WS** filter, click your connection name, open the **Messages** tab, and check the time difference between sent and echoed messages with and without throttling. For example:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tqynaMk7SIL6oIYwuBgM.png", alt="Messages sent and echoed with and without throttling", width="800", height="694" %}
 
 #### Emulate slow network connections from the Network Conditions drawer {: #throttling-network-conditions }
 

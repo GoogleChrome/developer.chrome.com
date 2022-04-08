@@ -20,7 +20,7 @@ Rich notifications come in four different flavors: basic, image, list, and progr
 notifications include a title, message, small icon displayed to the left of the notification
 message, and a contextMessage field, which is displayed as a 3rd text field in a lighter color font.
 
-A basic image:
+A basic notification:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZNTfa7vVa0sor219W0dk.png",
        alt="Basic notification", height="175", width="479" %}
@@ -110,7 +110,7 @@ within the notification:
 
 ```js
 var opt = {
-  type: "basic",
+  type: "image",
   title: "Primary Title",
   message: "Primary message to display",
   iconUrl: "url_to_small_icon",

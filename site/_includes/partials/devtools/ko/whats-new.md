@@ -3,30 +3,28 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
-<!-- ### Chrome 100 {: #chrome100 }
+### Chrome 100 {: #chrome100 }
 
-* [View and edit @supports at rules in the Styles pane](/ko/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/ko/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/ko/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/ko/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/ko/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/ko/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-100/#misc) -->
+* [스타일 창의 규칙에서 @supports 보기 및 편집하기](/ko/blog/new-in-devtools-100/#supports)
+* [공통 셀렉터의 기본 지원](/ko/blog/new-in-devtools-100/#selector)
+* [기록 셀렉터의 커스터마이징](/ko/blog/new-in-devtools-100/#customize-selector)
+* [기록 이름 바꾸기](/ko/blog/new-in-devtools-100/#recorder-rename)
+* [마우스를 올려서 클래스/함수 미리보기](/ko/blog/new-in-devtools-100/#properties)
+* [성능 창에서의 유휴 상태 프레임](/ko/blog/new-in-devtools-100/#perf)
+* [기타 하이라이트](/ko/blog/new-in-devtools-100/#misc)
 
+### Chrome 99 {: #chrome99 }
 
-<!-- ### Chrome 99 {: #chrome99 }
-
-* [Throttling WebSocket requests](/ko/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/ko/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/ko/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/ko/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/ko/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/ko/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/ko/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/ko/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/ko/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-99/#misc) -->
-
+* [웹 소켓 요청 쓰로틀링](/ko/blog/new-in-devtools-99/#websocket)
+* [애플리케이션 패널에 Reporting API 창 추가](/ko/blog/new-in-devtools-99/#reporting-api)
+* [Recorder 패널에서 요소가 클릭 가능 / 표시될 때까지 대기 지원](/ko/blog/new-in-devtools-99/#recorder)
+* [콘솔 스타일링, 포매팅, 필터링 개선](/ko/blog/new-in-devtools-99/#console)
+* [소스맵 파일을 이용한 Chrome extension 디버깅](/ko/blog/new-in-devtools-99/#extension)
+* [소스 패널에서 소스 폴더 트리 개선](/ko/blog/new-in-devtools-99/#source-tree)
+* [소스 패널에서 워커 소스 파일 표시](/ko/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome 자동 다크 테마 개선](/ko/blog/new-in-devtools-99/#auto-dark-mode)
+* [터치에 친화적인 컬러 피커와 창 분리](/ko/blog/new-in-devtools-99/#touch-friendly)
+* [기타 하이라이트](/ko/blog/new-in-devtools-99/#misc)
 
 ### Chrome 98 {: #chrome98 }
 * [미리보기 기능: 전체 페이지 접근성 트리](/ko/blog/new-in-devtools-98/#a11y-tree)

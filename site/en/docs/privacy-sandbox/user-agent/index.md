@@ -14,7 +14,7 @@ authors:
 ## Implementation status
 
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
-*  [In deprecation trial](/blog/user-agent-deprecation-origin-trial/) Chrome 100 to Chrome 112
+*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 100 to Chrome 112
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)

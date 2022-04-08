@@ -7,6 +7,9 @@ date: 2019-04-18
 #updated: YYYY-MM-DD
 description:
   "The main uses of the Chrome DevTools Console are logging messages and running JavaScript."
+tags:
+  - get-started
+  - javascript
 ---
 
 This page explains how the Chrome DevTools Console makes it easier to develop web pages. The Console

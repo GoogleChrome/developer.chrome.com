@@ -51,6 +51,21 @@ redirects:
 - from: /summit
   to: /devsummit/
 
+- from: /blog/wasm-debugging-2020/
+  to: /blog/wasm-debugging/
+
+- from: /docs/privacy-sandbox/attribution-reporting-introduction/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
+- from: /docs/privacy-sandbox/attribution-reporting-in-short/
+  to: /docs/privacy-sandbox/attribution-reporting/
+
+- from: /docs/privacy-sandbox/attribution-reporting-event-guide/
+  to: /docs/privacy-sandbox/attribution-reporting-experiment/
+
+- from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
+  to: /docs/privacy-sandbox/attribution-reporting-experiment/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/
@@ -233,6 +248,9 @@ redirects:
 - from: /extensions/crx
   to: /docs/extensions/mv3/hosting
 
+- from: /extensions/event_pages/
+  to: /docs/extensions/mv2/background_pages/
+
 - from: /extensions/getstarted_arc
   to: https://developer.android.com/chrome-os/intro.html
 
@@ -334,6 +352,9 @@ redirects:
 
 - from: /native-client/...
   to: /docs/native-client/...
+
+- from: /privacy-sandbox/...
+  to: /docs/privacy-sandbox/...
 
 - from: /webstore/...
   to: /docs/webstore/...

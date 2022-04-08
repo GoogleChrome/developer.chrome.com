@@ -19,7 +19,7 @@ tags:
 
 ## The road so far {: #past }
 
-A year ago, Chrome [announced initial support](/blog/webassembly-debug)
+A year ago, Chrome [announced initial support](/blog/wasm-debugging-2019)
 for native WebAssembly debugging in Chrome DevTools.
 
 We demonstrated basic stepping support and talked about opportunities

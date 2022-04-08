@@ -6,6 +6,8 @@ authors:
 date: 2018-04-18
 #updated: YYYY-MM-DD
 description: "Learn how to run JavaScript in the Console."
+tags:
+  - javascript
 ---
 
 This interactive tutorial shows you how to run JavaScript in the [Chrome DevTools][1] Console. See

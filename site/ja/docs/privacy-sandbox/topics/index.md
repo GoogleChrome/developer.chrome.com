@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API'
 subhead: >
-  Enable interest-based advertising, without having to resort to tracking the sites a user visits.
+  ユーザーが訪問するサイトをトラッキングすることなく、興味 / 関心に基づく広告を可能にします。
 description: >
- A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
+  ユーザーが訪問するサイトをトラッキングすることなく、興味 / 関心に基づく広告を実現する手法の提案です。
 date: 2022-02-14
 updated: 2022-02-14
 authors:

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect JavaScript ArrayBuffer with the Memory inspector"
+title: "Memory Inspector: Inspect JavaScript ArrayBuffer"
 authors:
   - jecelynyeen
 date: 2020-08-20
