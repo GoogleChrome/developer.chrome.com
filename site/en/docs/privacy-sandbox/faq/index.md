@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-11-04
+updated: 2021-04-08
 authors:
 	- samdutton
 ---
@@ -176,11 +176,11 @@ Application tabs: read
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
    
-### Can I opt out of Topics collection for specific pages only on my site?
+### Can I opt out of topic calculation for specific pages on my site?
 
-Yes. Using `Permissions-Policy: browsing-topics=()` on the header of a page will prevent the topics calculation for users, on that path only. Subsequent visit to other paths of your site will not be affected by the header on the pages opted out.
+Yes. Including the `Permissions-Policy: browsing-topics=()` header on a page will prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: setting a policy to block the Topics API on one page does not affect other pages. 
 
-Each page visit is an independent calculation. But also note that the topic is derived from the domain and not the individual paths.
+Also note that topics are inferred from the hostname only, not the URL path.
 
 
 ## FLEDGE
