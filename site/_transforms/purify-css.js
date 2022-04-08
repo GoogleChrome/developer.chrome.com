@@ -17,8 +17,9 @@
 const fs = require('fs');
 /* eslint-disable node/no-unpublished-require */
 const PurgeCSS = require('purgecss').PurgeCSS;
-const csso = require('csso');
-const pathToCss = 'dist/css/main.css';
+
+let mainCSS;
+const MAIN_CSS_FILE = 'dist/css/main.css';
 
 /**
  * Inlines all of the page's CSS into the <head>
@@ -30,9 +31,13 @@ const purifyCss = async (content, outputPath) => {
     outputPath.endsWith('.html') &&
     !/data-style-override/.test(content)
   ) {
-    const before = fs.readFileSync(pathToCss, {
-      encoding: 'utf-8',
-    });
+    // Lazily populate the full CSS file string. We don't want to read this
+    // earlier as the file might not be written to dist/ yet.
+    if (!mainCSS) {
+      mainCSS = fs.readFileSync(MAIN_CSS_FILE, {
+        encoding: 'utf-8',
+      });
+    }
 
     const purged = await new PurgeCSS().purge({
       // Here we take the actual text of the current page and give it to
@@ -53,7 +58,7 @@ const purifyCss = async (content, outputPath) => {
       ],
       css: [
         {
-          raw: before,
+          raw: mainCSS,
         },
       ],
       fontFace: true,
@@ -62,12 +67,11 @@ const purifyCss = async (content, outputPath) => {
       },
     });
 
-    const after = csso.minify(purged[0].css).css;
-    if (!after.length) {
-      throw new Error(`Minified CSS for ${outputPath} has no length.`);
-    }
-    content = content.replace('</head>', `<style>${after}</style></head>`);
-    return content;
+    // The CSS in the <style> tag will be optimized during HTML minification.
+    content = content.replace(
+      '</head>',
+      `<style>${purged[0].css}</style></head>`
+    );
   }
 
   return content;

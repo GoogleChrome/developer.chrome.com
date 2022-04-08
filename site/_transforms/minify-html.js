@@ -14,24 +14,19 @@
  * limitations under the License.
  */
 
-const minify = require('html-minifier').minify;
+const htmlMinifier = require('@minify-html/js');
+
+const config = htmlMinifier.createConfiguration({
+  minify_css: true,
+  minify_js: true,
+});
 
 const minifyHtml = (content, outputPath) => {
   if (outputPath && outputPath.endsWith('.html')) {
     try {
-      content = minify(content, {
-        removeAttributeQuotes: true,
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        removeComments: true,
-        sortClassName: true,
-        sortAttributes: true,
-        html5: true,
-        decodeEntities: true,
-      });
-      return content;
+      content = htmlMinifier.minify(content, config);
     } catch (err) {
-      console.warn('Could not minify html for', outputPath);
+      console.warn(err, 'while minifying', outputPath);
     }
   }
 
