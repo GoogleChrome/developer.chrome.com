@@ -138,3 +138,6 @@ function saveTabData(tab) {
 [4]: /docs/extensions/mv3/manifest/activeTab
 [5]: /docs/extensions/reference/permissions#manifest
 [6]: /webstore/user_data
+[api-tab]: /docs/extensions/reference/tabs/#type-Tab
+[api-window]: /docs/extensions/reference/windows/#type-Window
+[api-storage]: /docs/extensions/reference/storage

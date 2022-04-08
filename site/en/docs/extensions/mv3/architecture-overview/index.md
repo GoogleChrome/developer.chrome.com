@@ -337,6 +337,15 @@ extension components have access to this API. An extension can also store data u
 
 See [storage API][api-storage] for usage and examples.
 
+## Incognito mode {: #incognito}
+
+Extensions don't run in incognito windows unless the user manually allows it in the extension's
+settings page. By default, normal and incognito windows run in a single shared process. However,
+extensions can run incognito windows in their own separate process or not support incognito windows
+at all. You can specify this behavior in the ["incognito"][manifest-incognito] key in the manifest.
+
+See [Saving data in incognito mode][incognito-data] to understand how to protect user privacy.
+
 ## Take the next step {: #next-steps }
 
 After reading the overview and completing the [Getting Started][docs-get-started] tutorial, you
@@ -383,7 +392,8 @@ with the following resources:
 [mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
 [mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
-[sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
+[sample-getting-started]:
+    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-apis]: #apis
 [section-bg]: #background_script
 [section-cs]: #contentScripts
@@ -392,3 +402,5 @@ with the following resources:
 [section-options]: #optionsPage
 [section-ui]: #pages
 [section-web-res]: #web-resources
+[incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
+[manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
