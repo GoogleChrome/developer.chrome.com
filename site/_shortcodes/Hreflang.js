@@ -1,6 +1,5 @@
 const {findByUrl} = require('../_data/lib/find');
 const {getLocalizedPaths} = require('../_filters/urls');
-const path = require('path');
 
 /**
  * Outputs a list of <link hreflang=""> tags with alternate language versions
