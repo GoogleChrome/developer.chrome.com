@@ -55,18 +55,14 @@ discusses each field.
     <span class="token property">"matches"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"*://*.example.com/*"</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/fileBrowserHandler">file_browser_handlers</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/reference/fileSystemProvider">file_system_provider_capabilities</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"configurable"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"multiple_mounts"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"source"</span><span class="token operator">:</span> <span class="token string">"network"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"homepage_url</a>"</span><span class="token operator">:</span> <span class="token string">"https://path/to/homepage"</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/reference/fileSystemProvider">file_system_provider_capabilities</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"homepage_url</a>"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions">host_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv2/shared_modules">import</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/incognito">incognito</a>"</span><span class="token operator">:</span> <span class="token string">"spanning, split, or not_allowed"</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/shared_modules">import</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/incognito">incognito</a>"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
   <span class="token property">"input_components"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/key">key</a>"</span><span class="token operator">:</span> <span class="token string">"publicKey"</span><span class="token punctuation">,</span>
-  <span class="token property">"minimum_chrome_version"</span><span class="token operator">:</span> <span class="token string">"versionString"</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/key">key</a>"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+  <span class="token property">"minimum_chrome_version"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/nacl_modules">nacl_modules</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"natively_connectable"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"oauth2"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
@@ -80,11 +76,11 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_ui</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"options.html"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/reference/permissions">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/reference/permissions">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"..."</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"platforms"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"replacement_web_app"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/requirements">requirements</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/sandbox">sandbox</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/sandbox">sandbox</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/name#short_name">short_name</a>"</span><span class="token operator">:</span> <span class="token string">"Short Name"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/storage">storage</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"managed_schema"</span><span class="token operator">:</span> <span class="token string">"schema.json"</span>
@@ -92,8 +88,7 @@ discusses each field.
   <span class="token property">"system_indicator"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/ttsEngine">tts_engine</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/hosting">update_url</a>"</span><span class="token operator">:</span> <span class="token string">"https://path/to/updateInfo.xml"</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/version#version_name">version_name</a>"</span><span class="token operator">:</span> <span class="token string">"aString"</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/manifest/web_accessible_resources">web_accessible_resources</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/version#version_name">version_name</a>"</span><span class="token operator">:</span> <span class="token string">"..."</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/web_accessible_resources">web_accessible_resources</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span></code></pre>
 
 [1]: https://www.json.org

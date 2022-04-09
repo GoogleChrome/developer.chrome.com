@@ -60,7 +60,7 @@ March 9, 2022
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/) rule conditions have been
 updated to allow extensions to better target requests based on the request's "request" and
 "initiator" domains. The relevant condition properties are `initiatorDomains`,
-`excludedInitiatorDomains`, `requestDomains` and `excludedRequestDomains`. Also, the engineer that
+`excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. Also, the engineer that
 implemented this change announced this change and answered some questions form developers in this
 [chromium-extensions
 thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
