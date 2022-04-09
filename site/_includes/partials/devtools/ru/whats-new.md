@@ -38,8 +38,22 @@
 * [Touch-friendly color-picker and split pane](/ru/blog/new-in-devtools-99/#touch-friendly)
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-99/#misc) -->
 
+### Chrome 99 {: #chrome99 }
+
+* [Троттлинг запросов WebSocket](/ru/blog/new-in-devtools-99/#websocket)
+* [Новая панель Reporting API во вкладке Приложение (Application)](/ru/blog/new-in-devtools-99/#reporting-api)
+* [Ожидание момента, когда элемент становится видимым/кликабельным во вкладке Recorder](/ru/blog/new-in-devtools-99/#recorder)
+* [Улучшенный внешний вид, форматирование и фильтрация в консоли](/ru/blog/new-in-devtools-99/#console)
+* [Отладка расширений Chrome с помощью файлов исходных карт](/ru/blog/new-in-devtools-99/#extension)
+* [Улучшено дерево папок источников во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#source-tree)
+* [Отображение исходных файлов сервис-воркеров во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#worker-sourcemap)
+* [Обновление автоматической тёмной темы Chrome](/ru/blog/new-in-devtools-99/#auto-dark-mode)
+* [Выбор цвета и разделитель панелей, отзывчивые на устройствах с сенсорным экраном](/ru/blog/new-in-devtools-99/#touch-friendly)
+* [Другие важные моменты](/ru/blog/new-in-devtools-99/#misc)
+
 
 ### Chrome 98 {: #chrome98 }
+
 * [Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree)](/ru/blog/new-in-devtools-98/#a11y-tree)
 * [Явное отображение изменений на вкладке Изменения (Changes)](/ru/blog/new-in-devtools-98/#changes)
 * [Устанавливайте более длительный тайм-аут для записи поведения пользователя](/ru/blog/new-in-devtools-98/#recorder-timeout)
