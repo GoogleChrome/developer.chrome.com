@@ -137,6 +137,8 @@ Let's walk through the options to edit the steps within a workflow.
 1. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappuccino*, you can edit the selector value to *aria/Mocha* instead.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %}
    Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button", width="24", height="22" %} button and then click *Mocha* on the page.
+  {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+
 1. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappuccino*.
 1. Try to edit other step properties such as **type**, **target**, **value** and more.
 
