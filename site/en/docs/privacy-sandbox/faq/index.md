@@ -192,6 +192,7 @@ fetch the values for those keys, and then makes those values available to the `g
 metadata, along with the interest group, to improve on-device bidding.
 
 ### How to use Topics in FLEDGE? 
+
 Observed Topics can be embedded in FLEDGE `interestGroups` and be used as an input into bidding logic when the auction is run later.
 In FLEDGE API, the interestGroup has a parameter `userBiddingSignals`, which is storage of additional metadata that the owner can use during on-device bidding. 
 
