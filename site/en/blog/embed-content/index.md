@@ -12,7 +12,7 @@ alt: >
   HTML closed tag.
 tags:
   - security
-  - privacy-sandbox
+  - html
 ---
 
 Embedded content is the best way to keep users on your site while sharing
