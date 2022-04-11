@@ -7,7 +7,7 @@ authors:
 date: 2022-04-15
 description: >
    Learn about multiple HTML elements used to embed content, and how to optimize for security.
-hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/USsZELgMeJW2htiuy6lO.jpg'
+hero: "image/VbsHyyQopiec0718rMq2kTE1hke2/USsZELgMeJW2htiuy6lO.jpg"
 alt: >
   HTML closed tag.
 tags:
