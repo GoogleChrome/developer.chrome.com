@@ -203,7 +203,7 @@ To emulate a focused page:
 
 See what your site can look like in dark mode even if you didn't implement it.
 
-Chrome 96 introduced an [Origin Trial](https://developer.chrome.com/blog/origin-trials/) for [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites if the user opted into dark themes in the operating system.
+Chrome 96 introduced an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites if the user opted into dark themes in the operating system.
 
 To enable automatic dark mode:
 
@@ -213,7 +213,7 @@ To enable automatic dark mode:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DWex5Vmp51B0e1MFKDjZ.png", alt="Automatic dark mode enabled", width="800", height="398" %}
 
 {% Aside 'gotchas' %}
-When the [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/) is enabled, the **Emulate CSS media feature `prefers-color-scheme`** dropdown is disabled and set to `prefers-color-scheme: dark` automatically.
+When the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate CSS media feature `prefers-color-scheme`** dropdown is disabled and set to `prefers-color-scheme: dark` automatically.
 {% endAside %}
 
 ## Emulate CSS media feature `prefers-color-scheme`
