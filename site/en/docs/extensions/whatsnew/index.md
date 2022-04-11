@@ -36,7 +36,7 @@ since the page continues to load while the API call is being made.
 
 March 31, 2022
 
-The [Omnibox API](/docs/extensions/reference/omnibox) can now be used in service worker based
+The [Omnibox API](/docs/extensions/reference/omnibox) can now be used in service worker-based
 extensions. Previously, some of this API's methods would throw on invocation due to internal
 dependencies on DOM capabilities.
 
@@ -44,7 +44,8 @@ dependencies on DOM capabilities.
 
 March 22, 2022
 
-Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy` declarations. This change allows Manifest V3 extensions to use Wasm.
+Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy`
+declarations. This change allows Manifest V3 extensions to use WebAssembly.
 
 ### Docs update: Chrome Web Store item discovery {: #cws-discoevery-doc }
 
@@ -60,15 +61,14 @@ March 9, 2022
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/) rule conditions have been
 updated to allow extensions to better target requests based on the request's "request" and
 "initiator" domains. The relevant condition properties are `initiatorDomains`,
-`excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. Also, the engineer that
-implemented this change announced this change and answered some questions form developers in this
+`excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. See also this
 [chromium-extensions
 thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
 
 ### Chrome 100: Resolved issue with scripting.executeScript on newly created tabs {: #m100-executescript-bugfix }
 
-There was a longstanding issue where calling `scripting.executeScript()` on a newly created tab or
-window could fail. These should be resolved now and it should execute as you would expect.
+Fixed a longstanding issue where calling `scripting.executeScript()` on a newly created tab or
+window could fail.
 
 ### Chrome 100: native messaging port keeps service worker alive {: #m100-native-msg-lifetime }
 
@@ -133,9 +133,8 @@ policy](/docs/webstore/program_policies/) enforcement is handled.
 November 9, 2021
 
 The Scripting API's [`executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
-and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept an
-array of files. Previously these methods accepted an array of files, but the array could only
-contain a single file string. 
+and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept multiple
+files. Previously these methods required an array with a single file entry.
 
 ### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 
