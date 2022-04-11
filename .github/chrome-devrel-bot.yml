@@ -12,10 +12,10 @@
       {
         "check_name" : "Eng team approval",
         "teams" : [],
-        "users" : ["jeffposnick"],
+        "users" : ["tomayac"],
         "paths" : [
           "**/*.js",
-          "**/*.njk"
+          "**/*.md"
         ]
       }
     ]
