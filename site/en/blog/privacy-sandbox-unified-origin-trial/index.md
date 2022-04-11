@@ -26,10 +26,9 @@ experiments across the APIs making up an initial version of the end-to-end ad
 lifecycle. The APIs are available for **local developer testing** in the
 **Chrome 102 [Canary](https://www.google.com/chrome/canary/)** release now and
 we expect to make the **origin trial** available as soon as possible during the
-**Chrome 101 [Beta](https://www.google.com/chrome/beta/)** window. The [Chrome
-101 Beta will also see updates to the user
-controls](https://blog.chromium.org/2022/03/what-to-expect-from-ps-testing.html)
-as we continue to iterate on configuration options.
+**Chrome 101 [Beta](https://www.google.com/chrome/beta/)** window. The Chrome
+101 Beta will also see updates to the user controls as we continue to iterate on
+configuration options.
 
 As a developer you will be able to sign up for this single origin trial that
 will allow you to test across the Topics, FLEDGE, and Attribution Reporting
