@@ -7,7 +7,7 @@ authors:
 date: 2018-12-14
 updated: 2022-04-06
 description:
-  "Open the Rendering tab, enable print preview mode, automatic dark theme, and more."
+  "Open the Rendering tab, find rendering issues, emulate display options, enable automatic dark mode, and more."
 tags:
   - emulate
   - test
@@ -19,7 +19,14 @@ tags:
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-The **Rendering** tab contains a collection of options that affect web content rendering. With this tab, you can discover issues with content repainting, layout shifts, scrolling performance, different display options, and more.
+Discover a collection of options that affect web content rendering with this reference of the **Rendering** tab features in DevTools.
+
+The **Rendering** tab helps you:
+
+- Discover issues with content repainting, layout shifts, scrolling performance, and more.
+- Test how pages render with different display options and CSS media features without manually specifying them in your code or testing environment.
+    
+    For example,  you can emulate light or dark mode preference without changing your system settings.
 
 ## Open the Rendering tab {: #open-rendering }
 
@@ -40,9 +47,9 @@ Alternatively, click **More Options** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J
 
 With this option switched on, Chrome flashes the screen green whenever repainting happens.
 
-To highlight areas that are being repainted:
+To view areas that are being repainted:
 
-1. Open the [demo](https://googlechrome.github.io/devtools-samples/jank/), and, on the **Rendering tab**, check **Paint flashing**.
+1. [Open the **Rendering** tab](#open-rendering) on the [demo](https://googlechrome.github.io/devtools-samples/jank/) and check **Paint flashing**.
 1. Observe the repainting highlighted in green.
 
 <div class="elevation--2">
@@ -53,9 +60,26 @@ If, on another page, you see the whole screen flash green or areas of the screen
 
 ## Highlight layout shift regions {: #layout-shift-regions }
 
-Discover the location and timing of the layout shifts happening on a page.
+[Layout shifts](https://web.dev/cls/) can be not only annoying but harmful.
 
-To highlight layout shifts:
+<figure>
+  <video autoplay controls loop muted
+    poster="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability-poster.png"
+    width="658" height="510">
+    <source
+      src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.webm"
+      type="video/webm; codecs=vp8">
+    <source
+      src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.mp4"
+      type="video/mp4; codecs=h264">
+  </video>
+  <figcaption>
+    A screencast illustrating how layout instability can negatively affect
+    users.
+  </figcaption>
+</figure>
+
+To view the location and timing of the layout shifts on a page:
 
 1. [Open the **Rendering** tab](#open-rendering) and check **Layout Shift Regions**.
 
@@ -92,7 +116,7 @@ To open the **Frame rendering stats**:
 The **Frame rendering stats** overlay shows:
 
 - Real time estimate of frames per second as the page runs.
-- Plot of frames:
+- Frame timeline as a plot with three frame types:
    - Successfully rendered frames (blue lines)
    - Partially presented frames (yellow lines)
    - Dropped frames (red lines).
@@ -101,21 +125,21 @@ The **Frame rendering stats** overlay shows:
 
 ## Identify scrolling performance issues {: #scrolling-performance-issues }
 
-Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the potentially-problematic elements in teal.
+Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page.
 
-To view scroll performance issues:
+To view the potentially problematic elements:
 
 1. [Open the **Rendering** tab](#open-rendering) and check **Scrolling Performance Issues**.
 1. Observe the potentially problematic elements highlighted.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NH12bctPHXR9VD9GO7ov.png", alt="Scrolling Performance Issues is indicating that there's a mousewheel event listener encompassing the entire viewport that may harm scroll performance", width="800", height="498" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GW40vR3wxrl5nh04bHzE.png", alt="Scrolling Performance Issues is indicating that there are multiple event listeners that may harm scroll performance", width="800", height="406" %}
 
 ## Highlight ad frames
 
-Check if frames have been tagged as ads:
+To check if frames have been tagged as ads:
 
-1. [Open the **Rendering** tab](#open-rendering) and check **Highlight ad frames**.
-1. Observe the ad frames highlighted in red.
+1. [Open the **Rendering** tab](#open-rendering)  an the [demo page](https://heavy-ads.glitch.me/) and check **Highlight ad frames**.
+1. Observe the ad frame highlighted in red.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UuQMD7ifcGe1n6nFdYth.png", alt="Ad highlighted in red", width="800", height="490" %}
 
@@ -125,12 +149,12 @@ Check if frames have been tagged as ads:
 
 Core Web Vitals are the subset of Web Vitals that apply to all web pages. Each of the Core Web Vitals represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome. The Core Web Vitals are:
 
-- **[Largest Contentful Paint (LCP)](/lcp/)**: measures _loading_ performance.
+- **[Largest Contentful Paint (LCP)](https://web.dev/lcp/)**: measures _loading_ performance.
   To provide a good user experience, LCP should occur within **2.5 seconds** of
   when the page first starts loading.
-- **[First Input Delay (FID)](/fid/)**: measures _interactivity_. To provide a
+- **[First Input Delay (FID)](https://web.dev/fid/)**: measures _interactivity_. To provide a
   good user experience, pages should have a FID of **100 milliseconds** or less.
-- **[Cumulative Layout Shift (CLS)](/cls/)**: measures _visual stability_. To
+- **[Cumulative Layout Shift (CLS)](https://web.dev/cls/)**: measures _visual stability_. To
   provide a good user experience, pages should maintain a CLS of **0.1.** or
   less.
 
@@ -141,7 +165,7 @@ To view the Core Web Vitals as an overlay in the top right corner of the viewpor
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HW8iWmtzvC3S0uuQdcsp.png", alt="ALT_TEXT_HERE", width="800", height="311" %}
 
-Green Core Web Vitals mean they are in good shape. Yellow or red mean they need attention.
+Green Core Web Vitals indicate that your page is in good shape. Yellow or red vitals need attention.
 
 ## Disable local fonts
 
@@ -161,7 +185,7 @@ Check if the local font alternatives work as expected by disabling `local()` sou
 To disable local fonts:
 
 1. [Open the **Rendering** tab](#open-rendering) and check **Disable local fonts**.
-1. Reload the page and observe the font of the sentence above change to Roboto.
+1. <span class="material-icons">refresh</span> Reload the page and observe the font of the sentence above change to Roboto.
 
 ## Emulate a focused page
 
@@ -177,14 +201,16 @@ To emulate a focused page:
 
 ## Enable automatic dark mode
 
-See what your site looks like in dark mode even if you didn't implement it.
+See what your site can look like in dark mode even if you didn't implement it.
+
+Chrome 96 introduced an [Origin Trial](https://developer.chrome.com/blog/origin-trials/) for [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites if the user opted into dark themes in the operating system.
 
 To enable automatic dark mode:
 
 1. On this page, [open the **Rendering** tab](#open-rendering) and check **Enable automatic dark mode**.
-1. Observe this page in dark mode despite the fact that it doesn't have one at the time of writing.
+1. Observe this page in dark mode.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KBOQQfk0XoCuZU9i9wAh.png", alt="Automatic dark mode enabled", width="800", height="632" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DWex5Vmp51B0e1MFKDjZ.png", alt="Automatic dark mode enabled", width="800", height="398" %}
 
 {% Aside 'gotchas' %}
 When the [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/) is enabled, the **Emulate CSS media feature `prefers-color-scheme`** dropdown is disabled and set to `prefers-color-scheme: dark` automatically.
@@ -192,34 +218,36 @@ When the [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/) i
 
 ## Emulate CSS media feature `prefers-color-scheme`
 
-The [`prefers-color-scheme` CSS media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) indicates if the user prefers light or dark color scheme.
-
-If your site has both schemes and support for `prefers-color-scheme` implemented, with this option, you can test if they work correctly.
+The [`prefers-color-scheme` CSS media feature][7] indicates if the user prefers light or dark color scheme.
 
 To emulate this condition:
 
-1. On the [`prefers-color-scheme`: Hello darkness, my old friend](https://web.dev/prefers-color-scheme/) page, [open the **Rendering** tab](#open-rendering).
+1. On the [prefers-color-scheme](https://web.dev/prefers-color-scheme/) page, [open the **Rendering** tab](#open-rendering).
 1. Under the **Emulate CSS media feature `prefers-color-scheme`**, select one of the following from the dropdown list:
 
    - No emulation
    - `prefers-color-scheme:light`
    - `prefers-color-scheme:dark`
 
-1. Reload the page. For example:
+1. <span class="material-icons">refresh</span> Reload the page. For example:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/peTdHnJJeksHISUdpJzX.png", alt="Emulated prefers-color-scheme:dark", width="800", height="487" %}
 
-## Emulate CSS media type (print preview mode)
+## Emulate CSS media type (Enable print preview)
 
-The [print media query][1] controls how your page looks when printed. To force your page into print preview mode:
+The [print media query][1] controls how your page looks when printed.
 
-1.  Under **Emulate CSS media type** select **print**.
+To force your page into print preview mode:
 
-    {% Img src="image/admin/F5e5z6N1lhwERU1TrX8c.png", alt="Print preview mode.", width="800", height="588" %}
+1.  Open the **Rendering** tab](#open-rendering) and under **Emulate CSS media type** select **print**.
 
-From here, you can view and change your CSS, like any other web page. See [Get Started With Viewing And Changing CSS][2].
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1kJOAaC1vMfTmm94wIJa.png", alt="Print preview mode", width="800", height="439" %}
+
+2. From here, you can view and change your CSS, like any other web page. See [Get Started With Viewing And Changing CSS][2].
 
 ## Emulate CSS media feature `forced-colors`
+
+The [`forced-colors` CSS media feature][5] indicates if the user agent enabled a forced colors mode. An example of a forced colors mode is Windows High Contrast.
 
 To emulate this condition:
 
@@ -230,7 +258,13 @@ To emulate this condition:
    - `forced-colors:active`
    - `forced-colors:none`
 
+With `forced-colors:active` emulated:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ezZ8wZmzGYWvciitKSso.png", alt="forced-colors:active", width="800", height="398" %}
+
 ## Emulate CSS media feature `prefers-contrast`
+
+The [`prefers-contrast` CSS media feature][6] indicates if the user requested the web content to present with a higher, lower, or specific contrast value.
 
 To emulate this condition:
 
@@ -244,15 +278,17 @@ To emulate this condition:
 
 ## Emulate CSS media feature `prefers-reduced-motion`
 
+The [`prefers-reduced-motion` CSS media feature][8] indicates if the user has requested to minimize the amount of motion on a page.
+
 To emulate this condition:
 
-1. [Open the **Rendering** tab](#open-rendering).
-1. Under the **Emulate CSS media feature `prefers-reduced-motion`**, select one of the following from the dropdown list:
-
-   - No emulation
-   - `prefers-reduced-motion:reduce`
+1. [Open the **Rendering** tab](#open-rendering) on the [demo page](https://prefers-reduced-motion.glitch.me/) and try scrolling to see various animations.
+1. Under the **Emulate CSS media feature `prefers-reduced-motion`**, select `prefers-reduced-motion:reduce`.
+1. Try scrolling again.
 
 ## Emulate CSS media feature `color-gamut`
+
+The [`color-gamut` CSS media feature][9] indicates which range of colors the user agent and the output device support.
 
 To emulate this condition:
 
@@ -260,15 +296,15 @@ To emulate this condition:
 1. Under the **Emulate CSS media feature `color-gamut`**, select one of the following from the dropdown list:
 
    - No emulation
-   - `color-gamut:srgb`
-   - `color-gamut:p3`
-   - `color-gamut:rec2020`
+   - `color-gamut:srgb`—approximately [sRGB](https://en.wikipedia.org/wiki/SRGB) gamut or more
+   - `color-gamut:p3`—approximately the gamut specified in [Display P3 Color Space](https://www.color.org/chardata/rgb/DisplayP3.xalter) or more
+   - `color-gamut:rec2020`—approximately the gamut specified in [Rec. 2020](https://en.wikipedia.org/wiki/Rec._2020) or more
 
 ## Emulate vision deficiencies
 
-Everyone should be able to access and enjoy the web. [Google is committed](https://www.google.com/accessibility/) to making that a reality.
+Everyone should be able to access and enjoy the web. [Google is committed to making that a reality](https://www.google.com/accessibility/).
 
-With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make is better for them.
+With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make it better for them.
 
 To emulate vision deficiencies:
 
@@ -291,7 +327,7 @@ To emulate vision deficiencies:
 To disable all AVIF images on a page:
 
 1. [Open the **Rendering** tab](#open-rendering) and check **Disable AVIF image format**.
-1. Reload the page.
+1. <span class="material-icons">refresh</span> Reload the page.
 
 {% Aside 'gotchas' %}
 This option disables image caching automatically. 
@@ -302,10 +338,10 @@ This option disables image caching automatically.
 To disable all WebP images on a page:
 
 1. [Open the **Rendering** tab](#open-rendering) and check **Disable WebP image format**.
-1. Reload the page.
+1. <span class="material-icons">refresh</span> Reload the page.
 
 {% Aside 'gotchas' %}
-This option disables image caching automatically. 
+This option disables image caching automatically.
 {% endAside %}
 
 [1]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries
@@ -313,3 +349,8 @@ This option disables image caching automatically.
 [3]: /docs/devtools/command-menu/
 [4]: https://www.chromium.org/developers/design-documents/chromium-graphics/how-to-get-gpu-rasterization/
 [32]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
+[5]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors
+[6]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast
+[7]: https://web.dev/prefers-color-scheme/
+[8]: https://web.dev/prefers-reduced-motion/
+[9]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color-gamut

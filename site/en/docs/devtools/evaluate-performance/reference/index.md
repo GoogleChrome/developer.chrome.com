@@ -606,17 +606,17 @@ To view advanced information about a paint event:
 
 Use the **Rendering** tab's features to help visualize your page's rendering performance.
 
-[Open the **Rendering** tab](/docs/devtools/rendering).
+[Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
 
 ### View frames per second in realtime with the FPS meter {: #fps-meter }
 
-The FPS meter is an overlay that appears in the top-right corner of your viewport. It provides a realtime estimate of FPS as the page runs.
+The **Frame rendering stats** is an overlay that appears in the top-right corner of your viewport. It provides a realtime estimate of FPS as the page runs.
 
 See [Frame rendering stats](/docs/devtools/rendering#frame-rendering-stats).
 
 ### View painting events in realtime with Paint Flashing {: #paint-flash }
 
-Use Paint Flashing to get a realtime view of all paint events on the page. 
+Use **Paint Flashing** to get a realtime view of all paint events on the page. 
 
 See [Paint flashing](/docs/devtools/rendering#paint-flashing).
 
@@ -628,7 +628,7 @@ See [Layer borders](/docs/devtools/rendering#layer-borders).
 
 ### Find scroll performance issues in realtime {: scrolling-performance-issues }
 
-Use Scrolling Performance Issues to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the
+Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the
 potentially-problematic elements in teal.
 
 See [Scrolling performace issues](/docs/devtools/rendering#scrolling-performance-issues).
@@ -664,5 +664,4 @@ See [Scrolling performace issues](/docs/devtools/rendering#scrolling-performance
 [29]: #rendering
 [30]: #rendering
 [31]: #rendering
-[32]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
 [33]: #rendering
