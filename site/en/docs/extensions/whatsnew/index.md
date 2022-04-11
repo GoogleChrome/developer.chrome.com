@@ -48,7 +48,7 @@ March 22, 2022
 Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy`
 declarations. This change allows Manifest V3 extensions to use WebAssembly.
 
-### Docs update: Chrome Web Store item discovery {: #cws-discoevery-doc }
+### Docs update: Chrome Web Store item discovery {: #cws-discovery-doc }
 
 March 21, 2022
 
