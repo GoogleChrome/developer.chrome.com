@@ -20,8 +20,9 @@ and related policy or other changes.
 
 April 4, 2022
 
-Added a new manifest key named `optional_host_permissions` for Manifest V3. This behaves the exact
-same as specifying hosts in `optional_permissions` in Manifest V2.
+Manifest V3 extensions can now specify the `optional_host_permissions` key in manifest.json. This
+allows Manifest V3 extensions to declare optional match patterns for hosts just as Manifest V2
+extensions could using the `optional_permissions` key.
 
 ### Chrome 102: injectImmediately property in scripting.executeScript() {: #m102-injectimmediately }
 
