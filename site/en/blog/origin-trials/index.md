@@ -59,8 +59,7 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
 ## Take part in an origin trial
 
 1. Choose an origin trial from the [list of active trials](https://developers.chrome.com/origintrials/#/trials/active).
-1. Request a token (a string of letters and numbers) by clicking the **Register** button and
-filling out the form.
+1. Request a token by clicking the **Register** button and filling out the form.
 1. Provide the token on every web page for which you want the trial feature to be enabled, using one
 of the following methods:
    -  As a meta tag in the &lt;head&gt;:
