@@ -33,7 +33,7 @@ As we share what we are working on, it will be in the context of our four priori
 * **Improving the privacy of the web:** serve web users’ expectation for better data privacy protections in the face of ever-increasing developer sophistication in tracking and targeting. 
 
 
-#### **In the news: Interop 2022**
+## In the news: Interop 2022
 
 As we plan our roadmaps, we look at [developer feedback](https://insights.developer.mozilla.org/) to understand web developers’ top pain points and needs, amongst other things. A key theme that repeatedly shows up is **browser compatibility**, making an experience work the same across browsers. Over the past year, we’ve been working with the ecosystem to address this theme as part of our priority to "simplify web development". 
 
@@ -42,15 +42,15 @@ Last year, Mozilla, Chrome and ecosystem players announced  **[Compat 2021](http
 And last month, Apple, Google and Microsoft and Mozilla came together to solve the top browsers compatibility issues identified by web developers and agree on a common benchmark. The result is **[Interop 2022](https://web.dev/interop-2022),** a project with the goal of bringing more homogeneity to the platform. The benchmark focuses on [15 priority areas](https://web.dev/interop-2022/#the-15-areas-of-focus) identified by developers as key to improving their productivity.
 
 
-#### **Insider scoop: Working with our browser peers**
+## Insider scoop: Working with our browser peers
 
 With Interop 2022 top of mind, I sat down with [Robert Nyman](https://twitter.com/robertnyman) and [Philip Jägenstedt](https://twitter.com/foolip) who have been involved in these conversations to get the inside story. Here’s the editor’s cut of how it came together. 
 
 _What’s the genesis of this initiative?_
 
-**Robert:** It all started back in 2019, when we did the [MDN DNA 2019](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2019.html) survey. Compatibility issues clearly stood out as the main problem for developers building for the web, and we followed up in much more detail in the [MDN Browser Compatibility Report 2020](https://insights.developer.mozilla.org/reports/mdn-browser-compatibility-report-2020.html). This gave us enough information and actionable data to start the [Compat 2021 effort](https://web.dev/compat2021/), which in turn led to both continuing that work and also expanding that scope with Interop 2022.
+**Robert:** It all started back in 2019, when we did the [MDN DNA 2019](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2019.html) survey. Compatibility issues clearly stood out as the main problem for developers building for the web, and we followed up in much more detail in the [MDN Browser Compatibility Report 2020](https://insights.developer.mozilla.org/reports/mdn-browser-compatibility-report-2020.html). This gave us enough information and actionable data to start the [Compat 2021 effort](https://web.dev/compat2021), which in turn led to both continuing that work and also expanding that scope with Interop 2022.
 
-**Philip:** I’d also like to mention [web-platform-tests](https://web-platform-tests.org/) and [State of CSS 2021](https://2021.stateofcss.com/en-US/). We’ve had a strong collaboration with other browser vendors on testing using WPT going back years, and we really wanted to lean into that. The tests for these features were mostly already written, so we just needed to review the tests and add some missing coverage. Google has invested a lot in wpt.fyi, but we also have Mozilla to thank for making WPT the success that it is today. Mozilla of course also had a big hand in the MDN DNA surveys. Beyond those, there’s also the State of CSS 2021. In order to put together an effort like Interop 2022, we need fresh input on web developer needs, so we worked with the survey maintainer Sacha to include some new questions about browser compatibility issues. That really helped us in the Interop 2022 planning process.
+**Philip:** I’d also like to mention [web-platform-tests](https://web-platform-tests.org) and [State of CSS 2021](https://2021.stateofcss.com/). We’ve had a strong collaboration with other browser vendors on testing using WPT going back years, and we really wanted to lean into that. The tests for these features were mostly already written, so we just needed to review the tests and add some missing coverage. Google has invested a lot in wpt.fyi, but we also have Mozilla to thank for making WPT the success that it is today. Mozilla of course also had a big hand in the MDN DNA surveys. Beyond those, there’s also the State of CSS 2021. In order to put together an effort like Interop 2022, we need fresh input on web developer needs, so we worked with the survey maintainer Sacha to include some new questions about browser compatibility issues. That really helped us in the Interop 2022 planning process.
 
 _Any learnings or feedback from Compat 2021?_
 
@@ -71,7 +71,7 @@ _Coming back to Interop 2022, do we see non-design or layout features coming int
 **Philip:** Absolutely! Interop 2022 was not limited to styling and layout features, but it did end up leaning very heavily towards CSS. Partly because State of CSS 2021 was fresh, but also because web developers have told us that this is where they have the most trouble with differences between browsers. Multiple focus areas, like form and dialog elements, go beyond CSS, and we also have some [investigation efforts](https://web.dev/interop-2022/#investigation-efforts) around editing APIs and pointer and mouse events. I hope that for Interop 2023, we will have more fresh data on developer needs across the web, and include more such features in the effort.
 
 
-#### **Key upcoming changes**
+## Key upcoming changes
 
 One of the intents of this series is to give developers a heads up on upcoming key changes; things that are important for improving user experience and the platform’s capabilities. 
 
@@ -79,16 +79,16 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 
 
-* **The Update:** The [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) header—and its associated JS interfaces—transmits not only useful browser and device information, but also carries with it a legacy of lineage and inaccurate information. More problematic than the near endless supply of UA string parsing bugs is the fact that it’s **_passively_** sent to servers for all navigation and sub-resource requests. This represents approximately 10 bits of entropy that servers can use to build stable tracking identifiers as users navigate the web. 
+* **The Update:** The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) header—and its associated JS interfaces—transmits not only useful browser and device information, but also carries with it a legacy of lineage and inaccurate information. More problematic than the near endless supply of UA string parsing bugs is the fact that it’s **_passively_** sent to servers for all navigation and sub-resource requests. This represents approximately 10 bits of entropy that servers can use to build stable tracking identifiers as users navigate the web. 
 
     Our current plan is to “reduce” the existing UA string by continuing to ship low-entropy browser major version, platform name, and “mobileness”, freezing the [high entropy info](https://www.chromium.org/updates/ua-reduction/#token-reference). For use cases that require additional information than contained in the header, we’ve been shipping the [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) API since Chrome 89.
 
 
-    We [ran an Origin Trial for 6 months](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/) for experimentation and feedback and were happy to  have received no feedback related to breakage despite having more than 200 participants.
+    We [ran an Origin Trial for 6 months](/blog/user-agent-reduction-origin-trial/) for experimentation and feedback and were happy to  have received no feedback related to breakage despite having more than 200 participants.
 * **Timeline:** In Chrome 101, [we’re moving forward](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/KyomPLOnAwAJ) with what we call “Phase 4”: reducing the MINOR.BUILD.PATCH information in the UA string to “0.0.0”. And we’ll continue to give sites a heads up and time to [prepare for phases 5 and beyond.](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html#:~:text=the%20deprecation%20trial.-,Phase%205%3A%20Chrome%20107,-CTA%3A%20Ensure%20your) 
 
-    We’ve also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
-* **Call to action:** [Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/).
+    We’ve also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
+* **Call to action:** [Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
 
 **Local Fonts Access API**
 
@@ -99,7 +99,7 @@ One of the intents of this series is to give developers a heads up on upcoming k
     Local fonts have long been known as a fingerprinting vector. Though this new API doesn’t increase the ability to use fonts for fingerprinting, Chrome requires that a user grant a new `"local-fonts"` permission for a site before it can use the new Local Font Access API.
 
 
-    In the future, we plan to require that the same “local-fonts” permission be granted before using any other API that provides access to local fonts. 
+    In the future, we plan to require that the same “local-fonts” permission be granted before using any other API that provides access to local fonts.
 * **Timeline:** Shipping in Chrome 102 stable
 * **Call to action:** [Learn more](https://web.dev/local-fonts/) about the API and [how to use](https://web.dev/local-fonts/#how-to-use-the-local-font-access-api) it to start implementing.
 
@@ -107,7 +107,7 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 
 
-* **The Update:** We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (e.g. evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (e.g. group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
+* **The Update:** We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (e.g. evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (e.g. group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
 * **Timeline:** Tentatively, shipping in Chrome 102 (assuming no major surprises).
 * **Call to action:** See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
 
