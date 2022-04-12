@@ -3,6 +3,16 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
+<!-- ### Chrome 101 {: #chrome101 }
+
+* [Import and export recorded user flows as a JSON file](/ja/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/ja/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/ja/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/ja/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/ja/blog/new-in-devtools-101/#lighthouse) -->
+
+
 ### Chrome 100 {: #chrome100 }
 
 * [Styles ペインでの @supports アットルールの表示と編集](/ja/blog/new-in-devtools-100/#supports)
