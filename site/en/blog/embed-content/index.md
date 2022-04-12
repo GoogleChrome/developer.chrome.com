@@ -30,8 +30,7 @@ common technique is to use an
 which allows you to embed any content onto your site with just a URL. It's
 already possible to add the `sandbox` attribute to make an iframe more secure.
 
-Alternatively, you could implement a proposed HTML element, which focus on
-security and style:
+Alternatively, you could use a proposed HTML element:
 
 *  `<fencedframe>` is proposed as a privacy-preserving way to embed third
    party content.
@@ -69,12 +68,11 @@ window.addEventListener("message", (event) => {
 
 ### Added security with the `sandbox` attribute
 
-If malicious content is deployed in an iframe, it's possible that unintendeds
+If malicious content is deployed in an iframe, it's possible that unintended
 actions (such as a JavaScript execution or form submission) could be executed.
 To avoid this, the [`sandbox`
 attribute](https://www.w3schools.com/tags/att_iframe_sandbox.asp) restricts the
-APIs that content in the iframe can execute and disable potentially harmful
-features.
+executable APIs in the iframe and disables potentially harmful features.
 
 ```html
 <iframe src="https://example.com" sandbox></iframe>
@@ -136,7 +134,7 @@ revealing the ad source URL to the site owner.
 <fencedframe src="urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a"></fencedframe>
 ```
 
-Ultimately, fenced frames won't replace iframes and you won't have to use them.
+Ultimately, fenced frames won't replace iframes. You won't have to use them.
 Fenced frames are proposed for a more private frame for usage when data from
 different top-level partitions needs to be displayed on the same page.
 
