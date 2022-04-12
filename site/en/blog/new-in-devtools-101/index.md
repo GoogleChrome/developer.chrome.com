@@ -68,7 +68,7 @@ Alternatively, you can change the color format to HWB in the [color picker](/doc
 
 ## Improved the display of private properties {: #private-props }
 
-Private accessors are now properly evaluated and displayed. Previously, classes with private accessors could not be expanded in the **Console** and the **Sources** panel.
+DevTools now properly evaluates and displays private accessors. Previously, you couldn't expand classes with private accessors in the **Console** and the **Sources** panel.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LKir8oYFgNvRZSXMhXa7.png", alt="private properties in the Console", width="800", height="498" %}
 
