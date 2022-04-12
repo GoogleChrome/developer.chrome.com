@@ -94,8 +94,8 @@ This technique is used to provide tokens for [third-party trials](#third-party).
 Usually if an API lands unchanged after a successful origin trial, there is a
 short period between the end of the origin trial and the date the implementation ships in the
 browser when the API is unavailable. This is by design. If Chrome were to avoid the
-mandatory total-breakage period, that would bias toward also avoiding breakages in the API surface,
-which are often needed to improve the API. The final shipping API might be worse for it.
+mandatory total-breakage period, that would bias toward avoiding breakages in the API surface. Such
+breakages are often needed to improve the API. The final shipping API might be worse for it.
 
 In rare circumstances, if there was clear evidence that developers engaged with the origin trial and
 that their concerns were taken into account in the final API design and implementation, this
