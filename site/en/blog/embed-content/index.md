@@ -2,9 +2,9 @@
 layout: "layouts/blog-post.njk"
 title: "Securely embed content on your site"
 authors:
-  - jxck
+  - jackjey
   - alexandrawhite
-date: 2022-04-15
+date: 2022-04-12
 description: >
    Learn about multiple HTML elements used to embed content, and how to optimize for security.
 hero: "image/VbsHyyQopiec0718rMq2kTE1hke2/USsZELgMeJW2htiuy6lO.jpg"
