@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-04-08
+updated: 2021-04-12
 authors:
 	- samdutton
 ---
@@ -178,9 +178,12 @@ Application tabs: read
    
 ### Can I opt out of topic calculation for specific pages on my site?
 
-Yes. Including the `Permissions-Policy: browsing-topics=()` header on a page will prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: setting a policy to block the Topics API on one page does not affect other pages. 
+Yes. Include the `Permissions-Policy: browsing-topics=()` header on a page to prevent topics
+calculation for all users on that page only. Subsequent visits to other pages on your site will
+not be affected. If you set a policy to block the Topics API on one page, this does won't
+affect other pages. 
 
-Also note that topics are inferred from the hostname only, not the URL path.
+Topics are only inferred from the hostname and not from the URL path.
 
 
 ## FLEDGE
