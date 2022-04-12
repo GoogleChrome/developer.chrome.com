@@ -15,7 +15,7 @@ tags:
   - html
 ---
 
-Embedded content is the best way to keep users on your site while sharing
+Embedded content is the best way to keep users on your site, while sharing
 content from other pages or sites. This could be as small as an embedded Tweet,
 which displays in Twitter's style and format. It could be as large as an
 entirely separate site embedded onto your own, such as an embedded Shopify shop
@@ -96,8 +96,8 @@ more.
 
 ### Permissions Policy
 
-As increasingly powerful features have been developed for the web, Permissions
-Policies were created to manage permissions for all of them. Permissions Policy
+As increasingly powerful features have been developed for the web, permissions
+policies were created to manage permissions for all of them. A permissions policy
 can be applied to a parent site and to iframe content. The permissions granted
 to a parent site can also be granted to the iframe, using the `allow` attribute.
 
