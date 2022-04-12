@@ -74,6 +74,7 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/reference/omnibox">omnibox</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"keyword"</span><span class="token operator">:</span> <span class="token string">"aString"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/reference/permissions">optional_host_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"..."</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions">optional_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_page</a>"</span><span class="token operator">:</span> <span class="token string">"options.html"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_ui</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
