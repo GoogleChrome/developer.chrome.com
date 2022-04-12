@@ -26,7 +26,7 @@ content.
 
 There are several ways developers can embed content on a website. The most
 common technique is to use an
-`[<iframe>](https://developer.mozilla.org/docs/Web/HTML/Element/iframe)`, 
+[`<iframe>`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe), 
 which allows you to embed any content onto your site with just a URL. It's
 already possible to add the `sandbox` attribute to make an iframe more secure.
 
@@ -107,9 +107,9 @@ to a parent site can also be granted to the iframe, using the `allow` attribute.
 
 ## Embed with fenced frames {: #fenced-frames }
 
-[Fenced frames](/docs/privacy-sandbox/fenced-frame/) (`<fencedframe>`) are a
+A [fenced frame](/docs/privacy-sandbox/fenced-frame/) (`<fencedframe>`) is a
 proposed HTML element for embedded content, similar to an iframe. Unlike
-iframes, a fenced frame restricts communication with its embedding context to
+an iframe, a fenced frame restricts communication with its embedding context to
 allow the frame access to cross-site data without sharing it with the embedding
 context. Similarly, first-party data on the parent's page cannot be shared with
 the fenced frame.
@@ -163,8 +163,8 @@ early stages of development.
 
 Throughout web history, there have been a number of HTML elements proposed and
 APIs created to embed content. For a while, it was common to create sites with
-multiple `[<frame>](https://developer.mozilla.org/docs/Web/HTML/Element/frame)` 
-and a `[<frameset>](https://developer.mozilla.org/docs/Web/HTML/Element/frameset)`
+multiple [`<frame>`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) 
+and a [`<frameset>`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset)
 elements. Sites with several `<frameset>` elements displayed the URL of the
 parent page in the address bar, regardless of the source of the many individual
 frames. This made it difficult to share links to content within the site. These
