@@ -695,7 +695,7 @@
     "github": "jh3y",
     "linkedin": "https://www.linkedin.com/in/jheytompkins/",
     "homepage": "https://jhey.dev/links",
-    "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JMkAJAgH01auU1FiapGg.jpeg"
+    "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JjwUlxDMTmjyFEvBC8wG.jpeg"
   },
   "mariahhart": {
     "country": "US",
@@ -780,5 +780,7 @@
     "github": "christianliebel",
     "glitch": "christianliebel",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/pguQ0oykD0nNu9jM5OcP.jpeg"
+=======
+>>>>>>> b6e79075 (feat: add jhey to authors list)
   }
 }
