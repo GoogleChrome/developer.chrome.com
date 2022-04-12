@@ -66,7 +66,7 @@ updated to allow extensions to better target requests based on the request's "re
 [chromium-extensions
 thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
 
-### Chrome 100: Resolved issue with scripting.executeScript on newly created tabs {: #m100-executescript-bugfix }
+### Chrome 100: Resolved issue with scripting.executeScript() on newly created tabs {: #m100-executescript-bugfix }
 
 Fixed a longstanding issue where calling `scripting.executeScript()` on a newly created tab or
 window could fail.
@@ -129,7 +129,7 @@ Added [a new reference page](/docs/webstore/review-process) that provides an ove
 Web Store review process and explains how [developer program
 policy](/docs/webstore/program_policies/) enforcement is handled.
 
-### Chrome 98: scripting.executeScript and scripting.insertCSS accept multiple files {: #m98-execute-multiple-files }
+### Chrome 98: scripting.executeScript() and scripting.insertCSS() accept multiple files {: #m98-execute-multiple-files }
 
 November 9, 2021
 
