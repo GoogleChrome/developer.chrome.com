@@ -7,7 +7,7 @@ authors:
 date: 2018-12-14
 updated: 2022-04-06
 description:
-  "Open the Rendering tab, find rendering issues, emulate display options, enable automatic dark mode, and more."
+  "Open the Rendering tab, find rendering issues, emulate display options, enable dark themes, and more."
 tags:
   - emulate
   - test
