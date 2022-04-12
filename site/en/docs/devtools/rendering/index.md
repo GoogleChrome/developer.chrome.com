@@ -7,7 +7,7 @@ authors:
 date: 2018-12-14
 updated: 2022-04-06
 description:
-  "Open the Rendering tab, find rendering issues, emulate display options, enable dark themes, and more."
+  "Open the Rendering tab, find rendering issues, emulate display options, enable dark theme, and more."
 tags:
   - emulate
   - test
@@ -36,12 +36,19 @@ To open the **Rendering** tab:
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
     **Command Menu**.
 
-    {% Img src="image/admin/vAwmfhwU6lLmrbEBCSsc.png", alt="The Command Menu", width="800", height="632" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VH5DGkKSHnAm0tD8DJHv.png", alt="Command menu, Rendering", width="800", height="637" %}
 
 1.  Start typing `rendering`, select **Show Rendering**, and press <kbd>Enter</kbd>.
     DevTools displays the **Rendering** tab at the bottom of your DevTools window.
 
-Alternatively, click **More Options** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="6", height="26" %} > **More tools** > **Rendering**.
+{% Aside 'gotchas' %}
+In addition to opening the **Rendering** tab, you can also use the Command menu to search for and enable any option. Try typing an option name, for example, `emulate`. 
+{% endAside %}
+
+Alternatively, you can open the **Rendering** tab in the following ways:
+
+- Press <kbd>Esc</kbd> to open the Drawer, and, in the top left corner, click **More Tools** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="6", height="26" %} > **Rendering**.
+- In the top right corner, click **More Options** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="6", height="26" %} > **More Tools** > **Rendering**.
 
 ## Highlight repainted areas with paint flashing {: #paint-flashing }
 
@@ -111,7 +118,7 @@ To open the **Frame rendering stats**:
 1. [Open the **Rendering** tab](#open-rendering) and enable the **Frame rendering stats** checkbox.
 1. Observe the statistics in the top right corner of the page.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7BR4zTh9IMobaelSH0xV.png", alt="Frame rendering stats", width="388", height="358" , class="screenshot"%}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7BR4zTh9IMobaelSH0xV.png", alt="Frame rendering stats", width="300", height="358" , class="screenshot"%}
 
 The **Frame rendering stats** overlay shows:
 
@@ -163,7 +170,7 @@ To view the Core Web Vitals as an overlay in the top right corner of the viewpor
 1. [Open the **Rendering** tab](#open-rendering) and check **Core Web Vitals**.
 1. Scroll the page to reveal all layout shifts and perform an interaction, for example, click a button, open a tab, or enter text in a textbox.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HW8iWmtzvC3S0uuQdcsp.png", alt="ALT_TEXT_HERE", width="800", height="311" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HW8iWmtzvC3S0uuQdcsp.png", alt="Core Web Vitals", width="400", height="311" %}
 
 Green Core Web Vitals indicate that your page is in good shape. Yellow or red vitals need attention.
 
@@ -171,33 +178,49 @@ Green Core Web Vitals indicate that your page is in good shape. Yellow or red vi
 
 Check if the local font alternatives work as expected by disabling `local()` sources in `@font-face` rules.
 
+Often, developers and designers use two different copies of the same font during development:
+
+- A local font for your design tools, and
+- A web font for your code
+
+Disabling local fonts makes it easier for you to:
+
+- Debug and measure web fonts loading performance and optimization
+- Verify correctness of your CSS `@font-face` rules
+- Discover any differences between web fonts and their local versions
+
 <style>
     @font-face {
-      font-family: "MyFont";
+      font-family: "Courier New";
       src: local("Courier New"), url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
     }
     .text-box {
-      font-family: 'MyFont';
+      font-family: 'Courier New';
     }
 </style>
-<div class="text-box">Chrome displays this sentence in Courier New if it finds this font on your computer.</div>
+<div class="text-box">Chrome renders this sentence in Courier New if it finds this font on your device.</div>
 
-To disable local fonts:
+Emulate missing `local()` sources in `@font-face` rules:
 
-1. [Open the **Rendering** tab](#open-rendering) and check **Disable local fonts**.
-1. <span class="material-icons">refresh</span> Reload the page and observe the font of the sentence above change to Roboto.
+1. [Inspect](/docs/devtools/open/#elements) the sentence above, open **Elements** > **Computed**, scroll all the way down, and, under **Rendered Fonts**, discover that Chrome found **Courier New** in local files.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/p4YVF0NsuNpOHXMMXZ4V.png", alt="Rendered fonts: local", width="800", height="610" %}
+
+1. [Open the **Rendering** tab](#open-rendering), check **Disable local fonts**, and <span class="material-icons">refresh</span> reload the page.
+1. Observe the sentence in Roboto found on the web.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dILf4tJKLflQdKk80dQq.png", alt="Rendered fonts: network resource", width="800", height="589" %}
 
 ## Emulate a focused page
 
 If you switch focus from the current page to DevTools, some overlay elements automatically hide if they are triggered by focus. For example, dropdown lists, menus, or date pickers.
 
-To emulate a focused page:
+1. Open a page with the element to debug, for example, the [YouTube website](https://www.youtube.com/watch?v=zFVWeOKZBHs) with its search bar.
+1. On the page, [open the **Rendering** tab](#open-rendering), then check and uncheck **Emulate a focused page**.
 
-1. On this page, [open the **Rendering** tab](#open-rendering).
-1. <p><label for="example-input-number"></label><input type="number" id="example-input-number" placeholder="Focus me."></p>
-   
-1. Check and uncheck **Emulate a focused page** on the **Rendering** tab.
-1. Observe how up<span class="material-icons">arrow_drop_up</span> and down<span class="material-icons">arrow_drop_down</span> arrows inside the element appear and hide depending on the focus.
+<div class="elevation--2">
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nIXptxL1r7NezWQraJJ7.gif", alt="Emulate a focused page", width="800", height="454" %}
+</div>
 
 ## Enable automatic dark mode
 
@@ -239,7 +262,7 @@ The [print media query][1] controls how your page looks when printed.
 
 To force your page into print preview mode:
 
-1.  Open the **Rendering** tab](#open-rendering) and under **Emulate CSS media type** select **print**.
+1.  [Open the **Rendering** tab](#open-rendering) and under **Emulate CSS media type** select **print**.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1kJOAaC1vMfTmm94wIJa.png", alt="Print preview mode", width="800", height="439" %}
 
@@ -304,44 +327,50 @@ To emulate this condition:
 
 Everyone should be able to access and enjoy the web. [Google is committed to making that a reality](https://www.google.com/accessibility/).
 
-With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make it better for them.
+With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).
 
 To emulate vision deficiencies:
 
 1. [Open the **Rendering** tab](#open-rendering).
-1. Under the **Emulate CSS media feature `color-gamut`**, select one of the following from the dropdown list:
+1. Under the **Emulate vision deficiencies**, select one of the following from the dropdown list:
 
-   - No emulation
-   - Blurred vision
-   - Protanopia—can't perceive red and green colors
-   - Deuteranopia—confusion of red, green, and yellow
-   - Tritanopia—can't distinguish blue and yellow
-   - Achromatopsia—partial or total absence of color vision
+   - **No emulation**.
+   - **Blurred vision**.
+   - **Protanopia**. No perception of red and green colors.
+   - **Deuteranopia**. Confusion of red, green, and yellow.
+   - **Tritanopia**. No distinction of blue and yellow.
+   - **Achromatopsia**. Partial or total absence of color vision.
 
   For example:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aj8UMMDpofn8s7UPzHTy.png", alt="Emulated blurred vision", width="800", height="481" %}
 
-## Disable AVIF image format
+## Disable AVIF and WebP image formats
 
-To disable all AVIF images on a page:
+These emulations make it easier for developers to test different image loading scenarios without having to switch browsers.
 
-1. [Open the **Rendering** tab](#open-rendering) and check **Disable AVIF image format**.
-1. <span class="material-icons">refresh</span> Reload the page.
+Suppose you have the following HTML code to serve an image in [AVIF](https://web.dev/compress-images-avif/) and [WebP](https://web.dev/serve-images-webp/) formats for newer browsers, with a fallback PNG image for older browsers.
+
+```html
+<picture>
+  <source srcset="test.avif" type="image/avif">
+  <source srcset="test.webp" type="image/webp">
+  <img src="test.png" alt="A test image">
+</picture>
+```
+
+To disable all AVIF images on a page (or, similarly, WebP images):
+
+1. [Open the **Rendering** tab](#open-rendering), check **Disable AVIF image format**.
+1. <span class="material-icons">refresh</span> Reload the page and hover over the
+`img src`. The current image src (`currentSrc`) is now the fallback WebP image.
+
+{% Img src="image/admin/WHyF0XexaaWPCp07vJRj.png", alt="Emulate image types", width="800", height="480" %}
+
+Similarly, you can disable WebP images. 
 
 {% Aside 'gotchas' %}
-This option disables image caching automatically. 
-{% endAside %}
-
-## Disable WebP image format
-
-To disable all WebP images on a page:
-
-1. [Open the **Rendering** tab](#open-rendering) and check **Disable WebP image format**.
-1. <span class="material-icons">refresh</span> Reload the page.
-
-{% Aside 'gotchas' %}
-This option disables image caching automatically.
+These options disable image caching automatically. 
 {% endAside %}
 
 [1]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries
