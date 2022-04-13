@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 
-title: Introducing "Chrome Dev Insider"
+title: Introducing Chrome Dev Insider
 
 description: >
   A new series by Chrome’s Web Platform team where we take developers behind the scenes to share perspectives, conversations and updates.
@@ -15,6 +15,8 @@ tags:
   - insider
  
 hero: 'image/C8ys09lNbQOJLokQMhRtN2A0YU12/RPMWTGEBXQXVHozgFlIG.png'
+
+thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Hfx3C2heobFhRJJejstK.png'
 
 alt: >
   Chrome Dev Insider
