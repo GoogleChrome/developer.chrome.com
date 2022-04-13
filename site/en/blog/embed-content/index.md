@@ -4,7 +4,7 @@ title: "Securely embed content on your site"
 authors:
   - jackjey
   - alexandrawhite
-date: 2022-04-12
+date: 2022-04-13
 description: >
    Learn about multiple HTML elements used to embed content, and how to optimize for security.
 hero: "image/VbsHyyQopiec0718rMq2kTE1hke2/USsZELgMeJW2htiuy6lO.jpg"
