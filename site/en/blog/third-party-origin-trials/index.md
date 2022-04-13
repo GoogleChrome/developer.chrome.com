@@ -102,8 +102,8 @@ using a token provided by JavaScript from a different origin.
 ## Provide feedback
 
 If you're registering for a third-party origin trial and have feedback to share on the process or
-ideas on how we can improve it, [create an issue](https://github.com/GoogleChrome/OriginTrials/issues/new)
-on the Origin Trials GitHub code repo.
+ideas on how we can improve it, [create an Issue](https://github.com/GoogleChrome/OriginTrials/issues/new)
+on the Origin Trials GitHub repository.
 
 
 ## Find out more
