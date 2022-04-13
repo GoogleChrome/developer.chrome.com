@@ -83,7 +83,7 @@ The [`prefers-reduced-motion` CSS media feature][8] indicates if the user has re
 
 To emulate this condition:
 
-1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering) on this [demo ](https://prefers-reduced-motion.glitch.me/) and try scrolling to see various animations.
+1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering) on this [demo](https://prefers-reduced-motion.glitch.me/) and try scrolling to see various animations.
 1. Under the **Emulate CSS media feature `prefers-reduced-motion`**, select `prefers-reduced-motion:reduce`.
 1. Try scrolling again.
 
