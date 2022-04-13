@@ -73,7 +73,7 @@ _Coming back to Interop 2022, do we see non-design or layout features coming int
 
 ## Key upcoming changes
 
-One of the intents of this series is to give developers a heads up on upcoming key changes; things that are important for improving user experience and the platform’s capabilities. 
+One of the intents of this series is to give developers a heads up on upcoming key changes; things that are important for improving user experience and the platform's capabilities. 
 
 **User-Agent reduction**
 
