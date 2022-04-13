@@ -35,7 +35,7 @@ As we share what we are working on, it will be in the context of our four priori
 
 ## In the news: Interop 2022
 
-As we plan our roadmaps, we look at [developer feedback](https://insights.developer.mozilla.org/) to understand web developers’ top pain points and needs, amongst other things. A key theme that repeatedly shows up is **browser compatibility**, making an experience work the same across browsers. Over the past year, we’ve been working with the ecosystem to address this theme as part of our priority to "simplify web development". 
+As we plan our roadmaps, we look at [developer feedback](https://insights.developer.mozilla.org/) to understand web developers’ top pain points and needs, amongst other things. A key theme that repeatedly shows up is _browser compatibility_, making an experience work the same across browsers. Over the past year, we’ve been working with the ecosystem to address this theme as part of our priority to "simplify web development". 
 
 Last year, Mozilla, Chrome and ecosystem players announced  [Compat 2021](https://web.dev/compat2021/) that resulted in all popular browser engines (Chromium, Gecko and Webkit) achieving a 90+% score in the [five key focus areas](https://web.dev/compat2021-holiday-update/#css-flexbox) identified for the year. Among other things, Compat 2021 led to creating a solid foundation for powerful features such as [CSS Grid](https://wpt.fyi/compat2021?feature=css-grid) ([12% usage and steadily growing](https://chromestatus.com/metrics/feature/timeline/popularity/1693)) and [CSS Flexbox](https://wpt.fyi/compat2021?feature=css-flexbox) ([77% usage](https://chromestatus.com/metrics/feature/timeline/popularity/1692)).
 
