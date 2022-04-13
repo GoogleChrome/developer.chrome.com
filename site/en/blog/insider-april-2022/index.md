@@ -54,7 +54,7 @@ _What’s the genesis of this initiative?_
 
 _Any learnings or feedback from Compat 2021?_
 
-**Robert:** It was really useful to measure and have [scores and insight](https://wpt.fyi/compat2021?feature=summary) into how each browser engine was doing, so we could follow the progress and make sure to discuss and address issues that were unclear or needed to be prioritized. We also quickly realized that “Interop” was a better name for the initiative. The terms "compatibility" and "interoperability" are typically distinguished by browser vendors, where compat refers to site compat, and interop refers to two or more browsers behaving the same. In that terminology, this effort is about interoperability and so the project has aligned with that naming.
+**Robert:** It was really useful to measure and have [scores and insight](https://wpt.fyi/compat2021?feature=summary) into how each browser engine was doing, so we could follow the progress and make sure to discuss and address issues that were unclear or needed to be prioritized. We also quickly realized that "Interop" was a better name for the initiative. The terms _compatibility_ and _interoperability_ are typically distinguished by browser vendors, where compat refers to site compat, and interop refers to two or more browsers behaving the same. In that terminology, this effort is about interoperability and so the project has aligned with that naming.
 
 _What’s our vision here?_
 
