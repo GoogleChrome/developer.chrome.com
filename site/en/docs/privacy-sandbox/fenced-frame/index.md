@@ -64,7 +64,7 @@ Storage partitioning will be applied to standard storage APIs including
 LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
 across first-party storage will be significantly reduced.
 
-### Work with cross-ste data {: #cross-site-data }
+### Work with cross-site data {: #cross-site-data }
 
 Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
 which suggests top-level sites should partition data. Many Privacy Sandbox
