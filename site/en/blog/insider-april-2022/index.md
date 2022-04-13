@@ -103,7 +103,7 @@ The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 * **Timeline:** Shipping in Chrome 103 stable
 * **Call to action:** [Learn more](https://web.dev/local-fonts/) about the API and [how to use](https://web.dev/local-fonts/#how-to-use-the-local-font-access-api) it to start implementing.
 
-**Making BFCache work with Cache-control: no-store**
+### Making BFCache work with `Cache-control: no-store`
 
 
 
