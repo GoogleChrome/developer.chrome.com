@@ -21,7 +21,7 @@ Discover useful effects to apply to your page with this reference of the **Rende
 
 To check if frames are tagged as ads:
 
-1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering)  on this [demo](https://heavy-ads.glitch.me/) and check **Highlight ad frames**.
+1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering) on this [demo](https://heavy-ads.glitch.me/) and check **Highlight ad frames**.
 1. Observe the ad frame highlighted in red.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UuQMD7ifcGe1n6nFdYth.png", alt="Ad highlighted in red", width="800", height="490" %}
