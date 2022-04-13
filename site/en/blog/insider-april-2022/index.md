@@ -85,14 +85,8 @@ Our current plan is to reduce the existing UA string by continuing to ship low-e
 
 
 We [ran an Origin Trial for 6 months](/blog/user-agent-reduction-origin-trial/) for experimentation and feedback and were happy to  have received no feedback related to breakage despite having more than 200 participants.
-#### Timeline
-
-In Chrome 101, [we're moving forward](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/KyomPLOnAwAJ) with what we call Phase 4: reducing the `MINOR.BUILD.PATCH` information in the UA string to `0.0.0`. And we’ll continue to give sites a heads up and time to [prepare for phases 5 and beyond.](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html#:~:text=the%20deprecation%20trial.-,Phase%205%3A%20Chrome%20107,-CTA%3A%20Ensure%20your) 
-
-We've also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
-#### Call to action: 
-
-[Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
+* **Timeline:** In Chrome 101, [we're moving forward](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/KyomPLOnAwAJ) with what we call Phase 4: reducing the `MINOR.BUILD.PATCH` information in the UA string to `0.0.0`. And we’ll continue to give sites a heads up and time to [prepare for phases 5 and beyond.](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html#:~:text=the%20deprecation%20trial.-,Phase%205%3A%20Chrome%20107,-CTA%3A%20Ensure%20your) We've also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
+* **Call to action:** [Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
 
 ### Local Fonts Access API
 
@@ -110,18 +104,12 @@ In the future, we plan to require that the same "local-fonts" permission be gran
 ### Making BFCache work with `Cache-control: no-store`
 
 We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (for example evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (for example group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
-#### Timeline
+* **Timeline:** Tentatively, shipping in Chrome 102 (assuming no major surprises).
+* **Call to action:** See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
 
-Tentatively, shipping in Chrome 102 (assuming no major surprises).
-
-#### Call to action:
-
-See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
 
 Through this series, I hope to be able to give our developer community a sense of focus and connection by bringing them closer to my team and their work. So stay tuned and watch this space for more updates.
 
 Until then, happy webbing.
 
-_What did you think of the first edition of The Chrome Dev Insider?_
-
-[😄](https://docs.google.com/forms/d/e/1FAIpQLSeExIBrSWSRfdkyM8YcWFnSFeWXeptKWWXZhwlE--WlVwueQA/viewform?usp=pp_url&entry.535312149=Very+useful) [🙂](https://docs.google.com/forms/d/e/1FAIpQLSeExIBrSWSRfdkyM8YcWFnSFeWXeptKWWXZhwlE--WlVwueQA/viewform?usp=pp_url&entry.535312149=Somewhat+useful) [😐](https://docs.google.com/forms/d/e/1FAIpQLSeExIBrSWSRfdkyM8YcWFnSFeWXeptKWWXZhwlE--WlVwueQA/viewform?usp=pp_url&entry.535312149=Neutral) [😕](https://docs.google.com/forms/d/e/1FAIpQLSeExIBrSWSRfdkyM8YcWFnSFeWXeptKWWXZhwlE--WlVwueQA/viewform?usp=pp_url&entry.535312149=Mildly+useful) [😞](https://docs.google.com/forms/d/e/1FAIpQLSeExIBrSWSRfdkyM8YcWFnSFeWXeptKWWXZhwlE--WlVwueQA/viewform?usp=pp_url&entry.535312149=Not+useful)
+_What did you think of the first edition of The Chrome Dev Insider?_ [Share your feedback](https://forms.gle/Mdkz4JPccgYZQEBH9).
