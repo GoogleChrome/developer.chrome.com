@@ -75,7 +75,7 @@ _Coming back to Interop 2022, do we see non-design or layout features coming int
 
 One of the intents of this series is to give developers a heads up on upcoming key changes; things that are important for improving user experience and the platform's capabilities. 
 
-**User-Agent reduction**
+### User-Agent reduction
 
 
 
