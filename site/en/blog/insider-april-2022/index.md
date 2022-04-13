@@ -99,7 +99,7 @@ The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
     Local fonts have long been known as a fingerprinting vector. Though this new API doesn’t increase the ability to use fonts for fingerprinting, Chrome requires that a user grant a new `"local-fonts"` permission for a site before it can use the new Local Font Access API.
 
 
-    In the future, we plan to require that the same “local-fonts” permission be granted before using any other API that provides access to local fonts.
+In the future, we plan to require that the same "local-fonts" permission be granted before using any other API that provides access to local fonts.
 * **Timeline:** Shipping in Chrome 103 stable
 * **Call to action:** [Learn more](https://web.dev/local-fonts/) about the API and [how to use](https://web.dev/local-fonts/#how-to-use-the-local-font-access-api) it to start implementing.
 
