@@ -108,8 +108,13 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 
 * **The Update:** We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (e.g. evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (e.g. group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
-* **Timeline:** Tentatively, shipping in Chrome 102 (assuming no major surprises).
-* **Call to action:** See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
+#### Timeline
+
+Tentatively, shipping in Chrome 102 (assuming no major surprises).
+
+#### Call to action:
+
+See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
 
 Through this series, I hope to be able to give our developer community a sense of focus and connection by bringing them closer to my team and their work. So stay tuned and watch this space for more updates.
 
