@@ -41,3 +41,5 @@ lighthouse:
   en: 'Lighthouse'
 sensors:
   en: 'Sensors'
+rendering:
+  en: 'Rendering'
