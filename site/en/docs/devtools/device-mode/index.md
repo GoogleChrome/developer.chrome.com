@@ -6,6 +6,9 @@ authors:
 date: 2015-04-13
 #updated: YYYY-MM-DD
 description: "Use virtual devices in Chrome's Device Mode to build mobile-first websites."
+tags:
+  - emulate
+  - test
 ---
 
 Use Device Mode to approximate how your page looks and performs on a mobile device.

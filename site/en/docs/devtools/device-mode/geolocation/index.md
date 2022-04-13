@@ -6,6 +6,9 @@ authors:
 date: 2018-12-18
 #updated: YYYY-MM-DD
 description: "Open the Sensors tab and select coordinates from the Geolocation list."
+tags:
+  - emulate
+  - test
 ---
 
 Many websites take advantage of [user location][1] in order to provide a more relevant experience

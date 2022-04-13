@@ -1,30 +1,40 @@
 intro:
-  en: "Introduction to Workbox and service workers"
+  en: 'Introduction to Workbox and service workers'
 intro_description:
   en: |
     To do.
 know:
-  en: "What you need to know"
+  en: 'What you need to know'
 know_description:
   en: |
     To do.
 ways:
-  en: "Ways to use Workbox"
+  en: 'Ways to use Workbox'
 ways_description:
   en: |
     To do.
 uses:
-  en: "Use cases and recipes"
+  en: 'Use cases and recipes'
 uses_description:
   en: |
     To do.
 modules:
-  en: "Workbox Modules"
+  en: 'Workbox Modules'
 modules_description:
   en: |
     Dig deeper into specific Workbox modules.
 reference:
-  en: "API Reference"
+  en: 'API Reference'
 reference_description:
   en: |
     Browse the API reference to get information on available methods in the Workbox API, broken down by module.
+migration:
+  en: 'Migration Guides'
+migration_description:
+  en: |
+    How-to guides on migrating from older versions of Workbox.
+github:
+  en: 'Workbox on GitHub'
+github_description:
+  en: |
+    File issues, read release notes, and browse the source code.

@@ -1,12 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Force print preview mode"
+title: "Rendering: Force print preview mode"
 authors:
   - kaycebasques
 date: 2018-12-14
 #updated: YYYY-MM-DD
 description:
   "Open the Rendering tab and select Emulate CSS media > print."
+tags:
+  - emulate
+  - test
+  - css
 ---
 
 The [print media query][1] controls how your page looks when printed. To force your page into print
@@ -21,7 +25,7 @@ preview mode:
     **Figure 1**. The **Command Menu**
 
 2.  Type `rendering`, select **Show Rendering**, and then press <kbd>Enter</kbd>.
-3.  Under **Emulate CSS media** select **print**.
+3.  Under **Emulate CSS media type** select **print**.
 
     {% Img src="image/admin/F5e5z6N1lhwERU1TrX8c.png", alt="Print preview mode.", width="800", height="588" %}
 

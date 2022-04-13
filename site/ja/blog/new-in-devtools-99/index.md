@@ -19,7 +19,7 @@ tags:
 
 {% include 'partials/devtools/ja/banner.md' %}
 
-{% YouTube id='YqkIS88VulM' %}
+{% YouTube id='zFVWeOKZBHs' %}
 
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
@@ -226,15 +226,15 @@ Chromium issue: [1277002](https://crbug.com/1277002)
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
-# Chrome の自動ダークテーマの更新 {: #auto-dark-mode }
+## Chrome の自動ダークテーマの更新 {: #auto-dark-mode }
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 
 [自動ダークテーマエミュレーション](/blog/new-in-devtools-96/#auto-dark-mode)の UI が単純になりました。これまではドロップダウンでしたが、チェックボックスが使用されます。
 
-<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically. -->
+<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
 
-さらに、[Auto Dark Theme](/blog/auto-dark-theme/) が有効なときに、**Emulate perfers-color-scheme** ドロップダウンが無効になり、**perfers-color-scheme: dark** が自動的に設定されます。
+さらに、[Auto Dark Theme](/blog/auto-dark-theme/) が有効なときに、**Emulate prefers-color-scheme** ドロップダウンが無効になり、**prefers-color-scheme: dark** が自動的に設定されます。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->
 

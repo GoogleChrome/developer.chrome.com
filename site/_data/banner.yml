@@ -1,0 +1,6 @@
+type: info
+text: "Take a stroll down memory lane and celebrate #100CoolWebMoments since Chrome's first release."
+actions:
+  - text: Discover
+    href: /100
+  - text: Dismiss

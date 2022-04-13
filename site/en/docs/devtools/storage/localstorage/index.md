@@ -6,6 +6,8 @@ authors:
 date: 2019-03-14
 #updated: YYYY-MM-DD
 description: "How to view and edit localStorage with the Local Storage pane and the Console."
+tags:
+  - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to view, edit, and delete [`localStorage`][2]

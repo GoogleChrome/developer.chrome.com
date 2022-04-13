@@ -1,0 +1,23 @@
+{
+  "pr_checks": {
+    "approvals": [
+      {
+        "check_name" : "Content team approval",
+        "teams" : [],
+        "users" : ["tomayac"],
+        "paths" : [
+          "site/_data/i18n/*"
+        ]
+      },
+      {
+        "check_name" : "Eng team approval",
+        "teams" : [],
+        "users" : ["jeffposnick"],
+        "paths" : [
+          "**/*.js",
+          "**/*.md"
+        ]
+      }
+    ]
+  }
+}

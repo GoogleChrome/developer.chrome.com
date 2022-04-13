@@ -3,6 +3,27 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
+<!-- ### Chrome 101 {: #chrome101 }
+
+* [Import and export recorded user flows as a JSON file](/pt/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/pt/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/pt/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/pt/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/pt/blog/new-in-devtools-101/#lighthouse) -->
+
+
+### Chrome 100 {: #chrome100 }
+
+* [Visualize e edite @supports em rules no painel Estilos](/pt/blog/new-in-devtools-100/#supports)
+* [Suporte a seletores comuns por padrão](/pt/blog/new-in-devtools-100/#selector)
+* [Personalize o seletor de gravação](/pt/blog/new-in-devtools-100/#customize-selector)
+* [Renomeação de gravação](/pt/blog/new-in-devtools-100/#recorder-rename)
+* [Visualização de propriedades de classe/função ao passar o mouse](/pt/blog/new-in-devtools-100/#properties)
+* [Quadros parcialmente apresentados no painel Desempenho](/pt/blog/new-in-devtools-100/#perf)
+* [Destaques diversos](/pt/blog/new-in-devtools-100/#misc)
+
+
 ### Chrome 99 {: #chrome99 }
 
 * [Limitando requests de WebSocket](/pt/blog/new-in-devtools-99/#websocket)

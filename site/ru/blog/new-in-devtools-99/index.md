@@ -20,6 +20,8 @@ draft: true
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
 <!-- 2. Provide translations under each of the English commented original content -->
@@ -148,7 +150,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 Chromium issue: [1277002](https://crbug.com/1277002)
 
 
-<!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
+<!-- ## Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 

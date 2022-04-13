@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Understand security issues"
+title: "Security: Understand security issues"
 authors:
   - kaycebasques
 date: 2015-12-21
 #updated: YYYY-MM-DD
 description: "Use the Security Panel to make sure that a page is fully protected by HTTPS."
+tags:
+  - find-issues
 ---
 
 Use the **Security** Panel in Chrome DevTools to make sure HTTPS is properly implemented on a page.

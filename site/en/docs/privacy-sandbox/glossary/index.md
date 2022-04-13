@@ -4,9 +4,10 @@ title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Short explanations of key concepts.
 date: 2021-05-18
-updated: 2021-11-04 
+updated: 2022-04-04 
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
 
@@ -165,7 +166,7 @@ Something that can be used (probably in combination with other surfaces) to
 identify a particular user or device.
 
 For example, the `navigator.userAgent()` JavaScript method and the `User-Agent`
-HTTP request header provide access to a fingerprinting surface (the user agent
+HTTP request header provide access to a fingerprinting surface (the User-Agent
 string).
 
 ## First-party {: #first-party }
@@ -234,15 +235,15 @@ Find out more:
 
 ## Passive surface {: #passive-surface }
 
-Some fingerprinting surfaces, such as user agent strings, IP addresses and
-accept-language headers, that are available to every website whether the site
-asks for them or not.
+Some [fingerprinting surfaces](#fingerprinting-surface)&mdash;such as 
+User-Agent strings, IP addresses, and Accept-Language headers&mdash;that are
+available to every website, whether the site asks for them or not.
 
 Passive surfaces can easily consume a site's privacy budget.
 
 The Privacy Sandbox initiative proposes replacing passive surfaces with active
 ways to get specific information, for example using Client Hints a single time
-to get the user's language rather than having an accept-language header for
+to get the user's language rather than having an Accept-Language header for
 every response to every server.
 
 ## Publisher
@@ -322,13 +323,22 @@ parties to verify the exact versions of software running on the computer. TEEs
 allow external parties to verify that the software does exactly what the
 software manufacturer claims it does—nothing more or less.
 
+## User-Agent string {: #user-agent }
+
+An HTTP header used by servers and network peers to request indentifying
+information about an application, operating system, vendor, or version of a
+user agent. The User-Agent string broadcasts a large string of data, which is
+problematic for user privacy. [User-Agent
+reduction](/docs/privacy-sandbox/user-agent/) is proposed to remove sensitive
+information and reduce passive fingerprinting.
+
 ## User-Agent Client Hints (UA-CH) {: #ua-ch }
 
-Provide specific pieces of user-agent data on explicit request. This helps
-reduce passively exposed information which may lead to user identification or
-covert tracking.
+Provide specific pieces of the User-Agent string on explicit request. This
+helps reduce [passive surfaces](#passive-surface) in the User-Agent string
+which may lead to user identification or covert tracking.
 
-UA-CH are sometimes referred to as "Client Hints."
+UA-CH is sometimes referred to as "Client Hints."
 
 ## .well-known {: #well-known }
 

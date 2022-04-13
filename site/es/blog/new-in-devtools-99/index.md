@@ -18,6 +18,8 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 <!-- ## Throttling WebSocket requests {: #websocket } -->
 ## Limitación de las peticiones WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
@@ -165,7 +167,7 @@ Chromium issue: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
-# Actualizaciones del modo oscuro automático de Chrome {: #auto-dark-mode }
+## Actualizaciones del modo oscuro automático de Chrome {: #auto-dark-mode }
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 La UI de la [emulación de Modo Oscuro Automático](/blog/new-in-devtools-96/#auto-dark-mode) ha sido simplificada. Ahora es una casilla, antes era un desplegable.
 

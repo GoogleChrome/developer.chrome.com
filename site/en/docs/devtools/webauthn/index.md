@@ -1,12 +1,15 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Emulate authenticators and debug WebAuthn"
+title: "WebAuthn: Emulate authenticators"
 authors:
   - fawazm
   - jecelynyeen
 date: 2020-09-28
 #updated: YYYY-MM-DD
 description: "Emulate Authenticators and Debug WebAuthn in Chrome DevTools."
+tags:
+  - emulate
+  - test
 ---
 
 Use the **WebAuthn** tab in Chrome DevTools to create and interact with software-based virtual
