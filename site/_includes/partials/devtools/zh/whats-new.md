@@ -2,15 +2,24 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 100 {: #chrome100 }
+<!-- ### Chrome 101 {: #chrome101 }
 
-* [View and edit @supports at rules in the Styles pane](/zh/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/zh/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/zh/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/zh/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/zh/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/zh/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-100/#misc) -->
+* [Import and export recorded user flows as a JSON file](/zh/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/zh/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/zh/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/zh/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-101/#lighthouse) -->
+
+### Chrome 100 {: #chrome100 }
+
+* [在样式边栏中查看并修改](/zh/blog/new-in-devtools-100/#supports)
+* [默认支持常用选择器](/zh/blog/new-in-devtools-100/#selector)
+* [自定义一段录制内容的选择器](/zh/blog/new-in-devtools-100/#customize-selector)
+* [重命名一段录制内容](/zh/blog/new-in-devtools-100/#recorder-rename)
+* [在悬停时预览类/函数属性](/zh/blog/new-in-devtools-100/#properties)
+* [性能面板中的部分呈现帧](/zh/blog/new-in-devtools-100/#perf)
+* [其他的更新](/zh/blog/new-in-devtools-100/#misc)
 
 
 ### Chrome 99 {: #chrome99 }
@@ -40,7 +49,7 @@
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
-* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
+* [[实验] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }
