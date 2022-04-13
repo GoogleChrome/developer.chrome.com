@@ -81,22 +81,26 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) header—and its associated JS interfaces—transmits not only useful browser and device information, but also carries with it a legacy of lineage and inaccurate information. More problematic than the near endless supply of UA string parsing bugs is the fact that it's _passively_ sent to servers for all navigation and sub-resource requests. This represents approximately 10 bits of entropy that servers can use to build stable tracking identifiers as users navigate the web. 
 
-    Our current plan is to “reduce” the existing UA string by continuing to ship low-entropy browser major version, platform name, and “mobileness”, freezing the [high entropy info](https://www.chromium.org/updates/ua-reduction/#token-reference). For use cases that require additional information than contained in the header, we’ve been shipping the [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) API since Chrome 89.
+Our current plan is to reduce the existing UA string by continuing to ship low-entropy browser major version, platform name, and _mobileness_, freezing the [high entropy info](https://www.chromium.org/updates/ua-reduction/#token-reference). For use cases that require additional information than contained in the header, we've been shipping the [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) API since Chrome 89.
 
 
-    We [ran an Origin Trial for 6 months](/blog/user-agent-reduction-origin-trial/) for experimentation and feedback and were happy to  have received no feedback related to breakage despite having more than 200 participants.
-* **Timeline:** In Chrome 101, [we’re moving forward](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/KyomPLOnAwAJ) with what we call “Phase 4”: reducing the MINOR.BUILD.PATCH information in the UA string to “0.0.0”. And we’ll continue to give sites a heads up and time to [prepare for phases 5 and beyond.](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html#:~:text=the%20deprecation%20trial.-,Phase%205%3A%20Chrome%20107,-CTA%3A%20Ensure%20your) 
+We [ran an Origin Trial for 6 months](/blog/user-agent-reduction-origin-trial/) for experimentation and feedback and were happy to  have received no feedback related to breakage despite having more than 200 participants.
+#### Timeline
 
-    We’ve also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
-* **Call to action:** [Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
+In Chrome 101, [we're moving forward](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/KyomPLOnAwAJ) with what we call Phase 4: reducing the `MINOR.BUILD.PATCH` information in the UA string to `0.0.0`. And we’ll continue to give sites a heads up and time to [prepare for phases 5 and beyond.](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html#:~:text=the%20deprecation%20trial.-,Phase%205%3A%20Chrome%20107,-CTA%3A%20Ensure%20your) 
 
-**Local Fonts Access API**
+We've also [created enterprise policies](https://bugs.chromium.org/p/chromium/issues/detail?id=1261837) to opt out of these changes, and will be running a [deprecation trial until Chrome 113 to give sites more time](/blog/user-agent-reduction-deprecation-trial/) to be ready for these changes.
+#### Call to action: 
+
+[Migrate your site to UA Client Hints](https://web.dev/migrate-to-ua-ch/) or [participate in the deprecation trial](/blog/user-agent-reduction-deprecation-trial/).
+
+### Local Fonts Access API
 
 
 
-* **The Update:** Chrome is launching the Local Font Access API. Though sites have long been able to use local fonts, this API enumerates the list of local fonts and gives access to the font data itself. This functionality gives users the ability to use all of their fonts with web-based design and other applications. 
+Chrome is launching the Local Font Access API. Though sites have long been able to use local fonts, this API enumerates the list of local fonts and gives access to the font data itself. This functionality gives users the ability to use all of their fonts with web-based design and other applications. 
 
-    Local fonts have long been known as a fingerprinting vector. Though this new API doesn’t increase the ability to use fonts for fingerprinting, Chrome requires that a user grant a new `"local-fonts"` permission for a site before it can use the new Local Font Access API.
+Local fonts have long been known as a fingerprinting vector. Though this new API doesn’t increase the ability to use fonts for fingerprinting, Chrome requires that a user grant a new `"local-fonts"` permission for a site before it can use the new Local Font Access API.
 
 
 In the future, we plan to require that the same "local-fonts" permission be granted before using any other API that provides access to local fonts.
@@ -105,9 +109,7 @@ In the future, we plan to require that the same "local-fonts" permission be gran
 
 ### Making BFCache work with `Cache-control: no-store`
 
-
-
-* **The Update:** We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (e.g. evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (e.g. group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
+We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (for example evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (for example group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
 #### Timeline
 
 Tentatively, shipping in Chrome 102 (assuming no major surprises).
