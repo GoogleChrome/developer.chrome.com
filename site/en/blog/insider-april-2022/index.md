@@ -28,9 +28,9 @@ As we share what we are working on, it will be in the context of our four priori
 
 
 * **Enabling delightful user experiences:** make things intuitive for users; whether it’s performance, transactions, identity or transitions.
-* **Advancing the web’s capabilities:** support the web’s evolving role from being a content consumption platform, to the platform for a wide range of experiences including those that need deep OS and hardware level integrations. 
+* **Advancing the web’s capabilities:** support the web's evolving role from being a content consumption platform, to the platform for a wide range of experiences including those that need deep OS and hardware level integrations. 
 * **Simplifying web development:** make decision making easier and improve developer productivity.
-* **Improving the privacy of the web:** serve web users’ expectation for better data privacy protections in the face of ever-increasing developer sophistication in tracking and targeting. 
+* **Improving the privacy of the web:** serve web users' expectation for better data privacy protections in the face of ever-increasing developer sophistication in tracking and targeting. 
 
 
 ## In the news: Interop 2022
