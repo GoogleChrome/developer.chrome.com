@@ -100,7 +100,7 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 
     In the future, we plan to require that the same “local-fonts” permission be granted before using any other API that provides access to local fonts.
-* **Timeline:** Shipping in Chrome 102 stable
+* **Timeline:** Shipping in Chrome 103 stable
 * **Call to action:** [Learn more](https://web.dev/local-fonts/) about the API and [how to use](https://web.dev/local-fonts/#how-to-use-the-local-font-access-api) it to start implementing.
 
 **Making BFCache work with Cache-control: no-store**
