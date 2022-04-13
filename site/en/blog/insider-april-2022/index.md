@@ -64,7 +64,7 @@ _How do we collectively move things forward when browsers with (sometimes) diffe
 
 **Philip:** Our approach has been to look for areas of shared interest, to find those win-win collaborations where goals are already roughly aligned. And by prioritizing a limited number of things to work on at the same time, we bring focus to those areas, and move forward faster and get higher quality than we would if we simply worked separately. That’s the idea.
 
-I think it’s important to recognize that there are limits to this consensus-based approach, where goals aren’t sufficiently aligned we need to move forward in some other way. Sometimes bringing more evidence of web developer or user needs can help, but ultimately browser vendors can ship things that don’t have broad agreement. In the best case, the value of the feature is then demonstrated by web developers trying the feature, finding that it solves their needs, and asking for the same feature in all browsers.
+I think it's important to recognize that there are limits to this consensus-based approach, where goals aren't sufficiently aligned we need to move forward in some other way. Sometimes bringing more evidence of web developer or user needs can help, but ultimately browser vendors can ship things that don't have broad agreement. In the best case, the value of the feature is then demonstrated by web developers trying the feature, finding that it solves their needs, and asking for the same feature in all browsers.
 
 _Coming back to Interop 2022, do we see non-design or layout features coming into the pipeline at some point?_
 
