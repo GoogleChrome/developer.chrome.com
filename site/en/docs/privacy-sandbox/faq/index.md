@@ -185,6 +185,12 @@ affect other pages.
 
 Topics are only inferred from the hostname and not from the URL path.
 
+### Can I control which third parties on my page are allowed to infer topics from my users?
+
+Yes. You can control access to the API for third party domains on your page with the Permission Policy header.
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+As an example: to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is "https://example.com", set the following HTTP response header: `Permissions-Policy: geolocation=(self "https://example.com")`.
 
 ## FLEDGE
 
