@@ -79,7 +79,7 @@ One of the intents of this series is to give developers a heads up on upcoming k
 
 
 
-* **The Update:** The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) header—and its associated JS interfaces—transmits not only useful browser and device information, but also carries with it a legacy of lineage and inaccurate information. More problematic than the near endless supply of UA string parsing bugs is the fact that it’s **_passively_** sent to servers for all navigation and sub-resource requests. This represents approximately 10 bits of entropy that servers can use to build stable tracking identifiers as users navigate the web. 
+The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) header—and its associated JS interfaces—transmits not only useful browser and device information, but also carries with it a legacy of lineage and inaccurate information. More problematic than the near endless supply of UA string parsing bugs is the fact that it's _passively_ sent to servers for all navigation and sub-resource requests. This represents approximately 10 bits of entropy that servers can use to build stable tracking identifiers as users navigate the web. 
 
     Our current plan is to “reduce” the existing UA string by continuing to ship low-entropy browser major version, platform name, and “mobileness”, freezing the [high entropy info](https://www.chromium.org/updates/ua-reduction/#token-reference). For use cases that require additional information than contained in the header, we’ve been shipping the [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) API since Chrome 89.
 
