@@ -87,7 +87,7 @@ otMeta.content = 'TOKEN_GOES_HERE';
 document.head.append(otMeta);
 ```
 
-This technique is used to provide tokens for [third-party trials](#third-party).
+Use this method if you're participating in a [third-party trial](#third-party).
 
 {% Aside 'warning' %}
 
