@@ -21,7 +21,7 @@ alt: >
 ---
 
 
-Developers often tell us that it’s difficult to keep up with changes on the web and understand why these changes are happening. Today, we’re kicking off a new series called **_Chrome Dev Insider,_** where we’ll share (1) What’s cool and newsworthy, (2) An insight into how we made a decision on a key topic (for example [changing FLOC](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/)) or approach our work with the ecosystem (for example [Interop 2022](https://web.dev/interop-2022/)), and (3) any really important things that you need to know about (for example [changes in user agent strings](https://web.dev/chrome-firefox-100/)).
+Developers often tell us that it’s difficult to keep up with changes on the web and understand why these changes are happening. Today, we’re kicking off a new series called _Chrome Dev Insider,_ where we’ll share (1) What’s cool and newsworthy, (2) An insight into how we made a decision on a key topic (for example [changing FLOC](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/)) or approach our work with the ecosystem (for example [Interop 2022](https://web.dev/interop-2022/)), and (3) any really important things that you need to know about (for example [changes in user agent strings](https://web.dev/chrome-firefox-100/)).
 
 As we share what we are working on, it will be in the context of our four priorities for 2022:
 
