@@ -75,6 +75,8 @@ _Coming back to Interop 2022, do we see non-design or layout features coming int
 
 One of the intents of this series is to give developers a heads up on upcoming key changes; things that are important for improving user experience and the platform's capabilities. 
 
+The timelines mentioned below are when we expect these changes to happen. However, it is possible release versions for features may change.
+
 ### User-Agent reduction
 
 
