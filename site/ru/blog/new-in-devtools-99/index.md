@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description:
-  "Троттлинг запросов WebSocket, новая панель Reporting API во вкладке Приложение, стилизация консоли и многое другое."
+  "Троттлинг запросов WebSocket, новая панель Reporting API, стилизация консоли и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qQf01GakdRgMhlnFD4B2.jpg'
 alt: ''
 tags:
@@ -47,7 +47,7 @@ tags:
 ## Новая панель Reporting API во вкладке Приложение (Application) {: #reporting-api }
 
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
-Используйте новую панель **Reporting API** чтобы отслеживать созданные для страницы отчёты и их статус.
+Используйте новую панель **Reporting API**, чтобы отслеживать созданные на вашей страницы отчёты и их статус.
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 [Reporting API](https://web.dev/reporting-api/) помогает отслеживать нарушения безопасности на вашем сайте, устаревшие запросы API и многое другое.
@@ -56,10 +56,10 @@ tags:
 Откроейте страницу, которая использует Reporting API (например, [демо страница](https://reporting-api-demo.glitch.me/)). Во вкладке **Приложение** (Application) проскрольте до раздела **Фоновые службы** (Background services) и выберите панель **Reporting API**.
 
 <!-- The **Reports** section shows you a list of reports generated on your page and their status. Click on it to view the report’s details. -->
-В разделе **Reports** будет список сгенерированных отчётов и их статус. Кликните на один из отчётов чтобы посмотреть детали.
+В разделе **Отчеты** (Reports) отображается список сгенерированных на вашей странице отчётов и их статус. Кликните на один из них, чтобы посмотреть детали.
 
 <!-- The **Endpoints** section gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header.  -->
-Раздел **Endpoints** даёт представление о всех конечных точках, сконфигурированных при помощи заголовка `Reporting-Endpoints`.
+Раздел **Endpoints** даёт представление о всех конечных точках, настроенных в заголовке `Reporting-Endpoints`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Панель Reporting API", width="800", height="560" %}
 
@@ -69,13 +69,13 @@ tags:
 
 
 <!-- ## Support wait until element is visible/clickable in the Recorder panel {: #recorder } -->
-## Ожидание момента, когда элемент становится видимым/кликабельным во вкладке Recorder {: #recorder }
+## Поддержка ожидания момента, когда элемент становится видимым/кликабельным во вкладке Recorder {: #recorder }
 
 <!-- When replaying a user flow recording, the **Recorder** panel will now wait until the element is visible or clickable in the viewport or try to automatically scroll the element into the viewport before replaying the step. Previously, the replay would fail immediately. -->
-При воспроизведении записи пользовательского сценария владка **Recorder** не будет ждать пока элемент станет видимым или кликабельным в области видимости или попробует автоматически проскроллить элемент в область видимости перед воспроизведением шага. Раньше воспроизведение моментально прерывалось с ошибкой.
+При воспроизведении записи пользовательского сценария вкладка **Recorder** теперь будет ждать пока элемент станет видимым или кликабельным в области просмотра или попробует автоматически проскроллить элемент в область видимости перед воспроизведением шага. Раньше воспроизведение моментально прерывалось с ошибкой.
 
 <!-- Here is an example of an off-screen menu positioned outside of the viewport and slide in when activated. The user flow is to toggle the menu, and click on the menu item. Previously, the replay would fail at the last step, because the menu item is still sliding in and not visible in the viewport yet. It’s fixed now. -->
-Вот пример с меню, которое находящится за пределами области видимости и выдвигается при активации. В сценарии пользователь активирует меню и кликает на один из пунктов. Раньше воспроизведение завершалось неудачей потому что пункт меню находился вне области видимости. Теперь всё исправлено.
+Вот пример закадрового меню, расположенного за пределами окна просмотра, которое выдвигается при активации. В сценарии пользователь активирует меню и кликает на один из пунктов. Раньше воспроизведение завершалось неудачей в последнем шаге, потому что пункт меню все еще выдвигался и находился вне области видимости. Теперь всё исправлено.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
@@ -89,13 +89,13 @@ tags:
 ### Правильная стилизация сообщений в логах с использованием ANSI {: #console-styling } 
 
 <!-- You can now use the [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to properly style console messages. Previously, DevTools console had very limited (and partly broken) support for ANSI escape sequences. -->
-Теперь вы можете использовать [управляющих символов ANSI](https://ru.wikipedia.org/wiki/Управляющие_последовательности_ANSI) для стилизации сообщений в логах. Раньше консоль в DevTools имела очень ограниченную (и частично сломанную) поддержку управляющих символов ANSI.
+Теперь вы можете использовать [управляющие символы ANSI](https://ru.wikipedia.org/wiki/Управляющие_последовательности_ANSI) для стилизации сообщений в логах. Раньше консоль DevTools имела очень ограниченную (и частично нарушенную) поддержку управляющих символов ANSI.
 
 <!-- It is common for [Node.js](https://nodejs.org/) developers to colorize log messages via ANSI escape sequences, often with the help of some styling libraries like [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc.  -->
 Это обычное явление для разработчиков на [Node.js](https://nodejs.org/) расскрашивать сообщения в логах при помощи ANSI, часто с использованием библиотек типа [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur) и подобных.
 
 <!-- With these changes, you can now debug your Node.js applications seamlessly using DevTools, with proper colorized console messages. Open this [demo](https://stackblitz.com/edit/node-colors-test) to view it yourself! -->
-Благодаря этим изменениям теперь вы можете отлаживать свои Node.js приложения с помощью DevTools без лишних усилий, с соответствующим цветовым оформлением сообщений в консоли.
+Благодаря этим изменениям вы теперь можете беспрепятственно отлаживать приложения Node.js с помощью DevTools , с соответствующим цветовым оформлением сообщений в консоли. Откройте [демонстрацию] (https://stackblitz.com/edit/node-colors-test), чтобы просмотреть!
 
 <!-- To learn more about formatting & styling console messages with DevTools, go to [format and style messages in the Console](/docs/devtools/console/format-style) documentation. -->
 Узнайте больше о форматировании и стилизации сообщений в консоли при помощи DevTools в [документации](/docs/devtools/console/format-style).
@@ -125,10 +125,10 @@ tags:
 ### Более интуитивный фильтр групп в консоли  {: #console-filter }
 
 <!-- When filtering the console message, a console message is now shown if its message content matches the filter or the title of the group (or the ancestor group) matches the filter. Previously, the console group title would show despite the filter. -->
-При фильтрации сообщений в консоли теперь сообщение показывается если его контент соответствуетфильтру или если заголовок группы (или группы-предок) соответствует фильтру. Ранее заголовок группы показывался, несмотря на фильтр.
+При фильтрации сообщений в консоли теперь сообщение показывается если его контент соответствует фильтру или если заголовок группы (или группы-предка) соответствует фильтру. Ранее заголовок группы показывался, несмотря на фильтр.
 
 <!-- In addition, if a console message is shown, the group (or the ancestor group) it belongs to is now shown as well.  -->
-Кроме того, если отображается сообщение консоли, то теперь отображается и группа (или группа-предок), к которой оно принадлежит.
+Кроме того, при отображении сообщения консоли теперь отображается и группа (или группа-предок), к которой оно принадлежит.
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7iE7r79DI3cQxObhiZUh.png", alt="Фильтр группы в консоли", width="800", height="612" %}
@@ -158,7 +158,7 @@ tags:
 ### Улучшено дерево папок источников во вкладке Источники (Sources) {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-Улучшенно дерево папок источников во вкладке **Источники** (Sources), меньше беспорядка в структуре папок и именовании (например, "../", "./" и т.д.). Под капотом это результат нормализации абсолютных URL-адресов источников в картах источников.
+Дерево папок источников во вкладке **Источники** (Sources) теперь улучшено, с меньшим беспорядком в структуре папок и именовании (например, "../", "./" и т.д.). Под капотом это результат нормализации абсолютных URL-адресов источников в картах источников.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Улучшенное дерево папок источников во вкладке Источники", width="800", height="444" %}
 
@@ -168,10 +168,10 @@ tags:
 
 
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
-### Отображение исходных файлов сервис-воркеров во вкладке Источники (Sources) {: #worker-sourcemap }
+### Отображение исходных файлов воркеров во вкладке Источники (Sources) {: #worker-sourcemap }
 
 <!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-Исходные файлы [воркера](https://web.dev/workers-overview/) (веб-воркера, сервис-воркера) со связанными SourceURL теперь отображаются во вкладке **Источники** (Sources). Ранее исходные файлы воркеров обрабатывались некорректно.
+Исходные файлы [воркера](https://web.dev/workers-overview/) (веб-воркера, сервис-воркера) с относительным SourceURL теперь отображаются во вкладке **Источники** (Sources). Ранее исходные файлы воркеров обрабатывались неправильно.
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Исходный файл сервис-вордекра во вкладке Источники", width="800", height="509" %}
@@ -185,10 +185,10 @@ tags:
 ## Обновление автоматической тёмной темы Chrome {: #auto-dark-mode }
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
-UI [эмуляции автоматической тёмной темы](/blog/new-in-devtools-96/#auto-dark-mode) теперь упрощён. Раньше это был выпадающий список, теперь это чекбокс.
+UI [эмуляции автоматической тёмной темы](/blog/new-in-devtools-96/#auto-dark-mode) теперь упрощён. Сейчас это чекбокс, раньше это был выпадающий список.
 
 <!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
-Кроме того, если активируется [автоматическая тёмная тема](/blog/auto-dark-theme/), то выпадающий список **Эмулировать едиафункцию prefers-color-scheme** становится неактивным и устанавливает значение **prefers-color-scheme: dark** автоматически.
+Кроме того, если [автоматическая тёмная тема](/blog/auto-dark-theme/) активирована, выпадающий список **Эмулировать медиафункцию prefers-color-scheme** становится неактивным и устанавливает значение **prefers-color-scheme: dark** автоматически.
 
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->
@@ -202,7 +202,7 @@ Chrome 96 анонсировал [ранний доступ](/blog/origin-trials
 
 
 <!-- ## Touch-friendly color-picker and split pane {: #touch-friendly } -->
-## Выбор цвета и разделитель панелей, отзывчивые на устройствах с сенсорным экраном {: #touch-friendly }
+## Удобные сенсорные палитра цветов и разделитель панелей {: #touch-friendly }
 
 <!-- You can now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices. -->
 Теперь вы можете выбрать цвет или изменить размер [Drawer](/docs/devtools/customize/#drawer) в DevTools при помощи пальцев или стилуса на устройствах с сенсорным экраном.
@@ -227,7 +227,7 @@ Chrome 96 анонсировал [ранний доступ](/blog/origin-trials
 <!-- - Fixed the [edit cookies](/docs/devtools/storage/cookies/#edit) issue in the **Cookies** pane. ([1290196](https://crbug.com/1290196)) -->
 - Исправлены неполадки с [редактированием cookies](/docs/devtools/storage/cookies/#edit) в панели **Файлы cookie** (Cookies). ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
-- Использование `Shift` + `Tab для выбора предыдущей команды в [Командном меню (Command menu)](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
+- Использование `Shift` + `Tab` для выбора предыдущей команды в [Командном меню (Command menu)](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
 <!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
 - Вывод сообщений о проблемах с [предварительным запросом CORS](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) во вкладке [Проблемы (Issues)](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445))
 <!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
