@@ -81,7 +81,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 ## Replay a user flow {: #replay }
 
-After recording a user flow, you can replay it by clicking on the **Replay** button.
+After recording a user flow, you can replay it by clicking on the <span class="material-icons">play_arrow</span>**Replay** button.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/0fLvDBSUaiEwL8kJG2Kx.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -113,15 +113,23 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 Let's walk through the options to edit the user flows.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/a3NDihdiqCd6YsirLEcw.png", alt="DevTools Recorder panel has a dropdown menu in the header which allows you to select a user flow to edit", width="800", height="560" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gRr2bASlwPtTFFbXnqeM.png", alt="DevTools Recorder panel has a dropdown menu in the header which allows you to select a user flow to edit", width="800", height="500" %}
 
 On the top of the **Recorder** panel, there are options for you to:
 
 1. **Add a new recording**<span class="material-icons">add</span>. Click on the **+** icon to [add a new recording](#record).
-2. **View all recordings**<span class="material-icons">expand_more</span>. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
-     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/g3x137aFK4xJrsdqONKY.png", alt="View all recordings", width="800", height="560" %}
-3. **Export a recording**<span class="material-icons">file_upload</span>. You can export the user flow as [Puppeteer](https://pptr.dev) script to customize the script further.
-4. **Delete a recording**<span class="material-icons">delete</span>. Delete the selected recording.
+1. **View all recordings**<span class="material-icons">expand_more</span>. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
+     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0g3cyg48vjubSa6HoSLi.png", alt="View all recordings", width="800", height="490" %}
+1. **Export a recording**<span class="material-icons">file_download</span>. To further customize the script or share it for bug reporting purposes, you can export the user flow in one of the following formats:
+
+   - JSON file.
+   - [Puppeteer](https://pptr.dev) script.
+   - [@puppeteer/replay](https://github.com/puppeteer/replay) script.
+
+   For more information on the formats, see [Export a user flow](#export-flows).
+
+1. **Import a recording**<span class="material-icons">file_upload</span>. Only in JSON format.
+1. **Delete a recording**<span class="material-icons">delete</span>. Delete the selected recording.
 
 You can also edit the recording's name by clicking the edit button <span class="material-icons">edit</span> next to it.
 
@@ -133,7 +141,7 @@ Let's walk through the options to edit the steps within a workflow.
 
 1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappuccino"* step.
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WUIZb8eMWfcPZHPyQ5C5.png", alt="In the recorder panel, the Cappuccino element has been expanded to reveal type, target, selectors, offset X, and offset Y.", width="800", height="773" %}
-1. The step above shows two **selectors**. For more information, see [Selector priority](#selector-priority).
+1. The step above shows two **selectors**. For more information, see [Understanding the recording's selector](#selector).
    When replaying the user flow, the **Recorder** tries to query the element with one of the selectors by sequence.
    For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
 1. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappuccino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
@@ -163,6 +171,47 @@ There are options to add and remove steps too. This is useful if you want to add
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
 6. [Replay](#replay) the flow now to see the changes.
+
+## Share user flows {: #share-flows }
+
+You can export and import user flows. This is useful for bug reporting because you can share an exact record of the steps that reproduce a bug.
+
+### Export a user flow {: #export-flows }
+
+To export a user flow:
+
+1. Open the user flow you want to export.
+2. Click on the **Export**<span class="material-icons">file_download</span> button at the top of the **Recorder** panel.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LJJqpZ0vOEdp6rdDLXmP.png", alt="Download format options", width="800", height="490" %}
+ 1. Select one of the following formats from the dropdown list:
+    - **Export as a JSON file**. Download the recording as a JSON file.
+    - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script. In this script, the steps remain a JSON object and the file is smaller. You can replay this script with the new Puppeteer replay library.
+    - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script. This script is entirely in JavaScript and you can replay it with the regular Puppeteer library.
+1. Save the file.
+
+To replay the exported recording depending on its format:
+- **JSON**. [Import the file](#import-flows) to the **Recorder** and click <span class="material-icons">play_arrow</span>**Replay** .
+- **Puppeteer replay script**. Run the following commands:
+    ```shell
+    npm install puppeteer
+    npm install @puppeteer/replay
+    # replay JSON
+    npx @puppeteer/replay user-flow.json
+    ```
+- **Puppeteer script**. Run the following commands:
+   ```shell
+   npm install puppeteer
+   node user-flow.js
+   ```
+
+### Import a user flow {: #import-flows }
+
+To import a user flow:
+
+1. Click the **Import** <span class="material-icons">file_upload</span> button at the top of the **Recorder** panel.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LdIrYNYuKa2OA7PnYVjf.png", alt="Import recording", width="800", height="490" %}
+1. Select the JSON file with the recorded user flow.
+1. Click the <span class="material-icons">play_arrow</span>**Replay** button to run the imported user flow.
 
 ## Understanding the recording's selector {: #selector }
 
