@@ -36,7 +36,7 @@ tags:
 Вкладка **Сеть** (Network) теперь поддерживает троттлинг запросов для веб-сокетов. Раньше замедление сети не работало для веб-сокетов.
 
 <!-- Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.  -->
-Откройте вкладку **Сеть** (Network), кликните на веб-сокет запрос и откройте вкладку **Ответ** (Messages) чтобы наблюдать за передачей сообщений. Выберите **Медленная 3G-сеть** (Slow 3G) чтобы замедлить скорость.
+Откройте вкладку **Сеть** (Network), кликните на веб-сокет запрос и откройте вкладку **Сообщения** (Messages) чтобы наблюдать за передачей сообщений. Выберите **Медленная 3G-сеть** (Slow 3G) чтобы замедлить скорость.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZHJibovD0IRQ7KrWb0aD.png", alt="Троттлинг запросов WebSocket", width="800", height="540" %}
 
@@ -56,7 +56,7 @@ tags:
 Откроейте страницу, которая использует Reporting API (например, [демо страница](https://reporting-api-demo.glitch.me/)). Во вкладке **Приложение** (Application) проскрольте до раздела **Фоновые службы** (Background services) и выберите панель **Reporting API**.
 
 <!-- The **Reports** section shows you a list of reports generated on your page and their status. Click on it to view the report’s details. -->
-В разделе **Отчеты** (Reports) отображается список сгенерированных на вашей странице отчётов и их статус. Кликните на один из них, чтобы посмотреть детали.
+В разделе **Reports** отображается список сгенерированных на вашей странице отчётов и их статус. Кликните на один из них, чтобы посмотреть детали.
 
 <!-- The **Endpoints** section gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header.  -->
 Раздел **Endpoints** даёт представление о всех конечных точках, настроенных в заголовке `Reporting-Endpoints`.
@@ -142,12 +142,12 @@ tags:
 ## Улучшение карты источников {: #sourcemap }
 
 <!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### Отладка расширений Chrome с помощью файлов исходных карт {: #extension }
+### Отладка расширений Chrome с помощью карта источников {: #extension }
 
 <!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-Теперь вы можете [отлаживать расширения для Chrome](/docs/extensions/mv3/getstarted/#unpacked) с использованием файлов исходных карт. Ранее DevTools поддерживал только встроенную карту источников для отладки расширений Chrome. 
+Теперь вы можете [отлаживать расширения для Chrome](/docs/extensions/mv3/getstarted/#unpacked) с использованием карта источников. Ранее DevTools поддерживал только встроенную карту источников для отладки расширений Chrome. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Отладка расширений Chrome с помощью файлов исходных карт", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Отладка расширений Chrome с помощью карта источников", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 

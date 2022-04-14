@@ -51,13 +51,13 @@
 
 * [Троттлинг запросов WebSocket](/ru/blog/new-in-devtools-99/#websocket)
 * [Новая панель Reporting API во вкладке Приложение (Application)](/ru/blog/new-in-devtools-99/#reporting-api)
-* [Ожидание момента, когда элемент становится видимым/кликабельным во вкладке Recorder](/ru/blog/new-in-devtools-99/#recorder)
+* [Поддержка ожидания момента, когда элемент становится видимым/кликабельным во вкладке Recorder](/ru/blog/new-in-devtools-99/#recorder)
 * [Улучшенный внешний вид, форматирование и фильтрация в консоли](/ru/blog/new-in-devtools-99/#console)
-* [Отладка расширений Chrome с помощью файлов исходных карт](/ru/blog/new-in-devtools-99/#extension)
+* [Отладка расширений Chrome с помощью карта источников](/ru/blog/new-in-devtools-99/#extension)
 * [Улучшено дерево папок источников во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#source-tree)
-* [Отображение исходных файлов сервис-воркеров во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#worker-sourcemap)
+* [Отображение исходных файлов воркеров во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#worker-sourcemap)
 * [Обновление автоматической тёмной темы Chrome](/ru/blog/new-in-devtools-99/#auto-dark-mode)
-* [Выбор цвета и разделитель панелей, отзывчивые на устройствах с сенсорным экраном](/ru/blog/new-in-devtools-99/#touch-friendly)
+* [Удобные сенсорные палитра цветов и разделитель панелей](/ru/blog/new-in-devtools-99/#touch-friendly)
 * [Другие важные моменты](/ru/blog/new-in-devtools-99/#misc)
 
 
