@@ -172,7 +172,7 @@ Current candidates for this combination include:
    storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage).
 
 For more details, refer to the [Fenced Frames
-explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md)).
+explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md).
 
 
 ### Examples
