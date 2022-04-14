@@ -5,6 +5,7 @@ authors:
   - jackjey
   - alexandrawhite
 date: 2022-04-13
+updated: 2022-04-14
 description: >
    Learn about multiple HTML elements used to embed content, and how to optimize for security.
 hero: "image/VbsHyyQopiec0718rMq2kTE1hke2/USsZELgMeJW2htiuy6lO.jpg"
@@ -86,9 +87,10 @@ sandbox attribute.
 <iframe sandbox="allow-forms" src="https://example.com"></iframe>
 ```
 
-There are a number of possible values for the [`sandbox`
-specification](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-ifram-sandbox),
-including `allow-forms`, `allow-same-origin`, `allow-popups`, and more.
+There are a number of possible values for the
+[`sandbox` specification](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox),
+including `allow-forms`, `allow-same-origin`, `allow-popups`, and
+more.
 
 
 ### Permissions Policy
@@ -125,7 +127,7 @@ frame](/docs/privacy-sandbox/fenced-frame/#cross-site-data).
 For example, a fenced frame will be created for the winner of the FLEDGE API ad
 auction. The FLEDGE API will provide an [opaque
 source](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/opaque_src.md),
-a URN scheme which is location-independent, which can render within a fenced
+a location-independent URN scheme, which can render within a fenced
 frame. Opaque sources allow sites to display content on their sites without
 revealing the ad source URL to the site owner.
 
