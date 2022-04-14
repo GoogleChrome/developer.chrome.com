@@ -50,7 +50,7 @@ to a contact page, and displaying ads.
 
 Each iframe has its own browsing context, with its own session history and
 [document](https://developer.mozilla.org/docs/Web/API/Document). The context
-that embeds the iframe is referred to as the _parent _browsing context.
+that embeds the iframe is referred to as the _parent_ browsing context.
 
 Third-party content displayed in an iframe can interact with the parent site
 through `postMessage()`. This allows developers to send arbitrary values between
@@ -88,9 +88,10 @@ sandbox attribute.
 ```
 
 There are a number of possible values for the
-[`sandbox`specification](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox),
+[`sandbox` specification](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox),
 including `allow-forms`, `allow-same-origin`, `allow-popups`, and
 more.
+
 
 ### Permissions Policy
 
@@ -177,7 +178,7 @@ rendered both the `<object>` and `<applet>` elements obsolete.
 
 Although `<object>` and `<embed>` are not officially deprecated yet, it's best
 to avoid them, especially since they have some [strange
-behaviors](https://github.com/whatwg/html/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+embed+and+object%22)).
+behaviors](https://github.com/whatwg/html/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+embed+and+object%22).
 `<applet>` was [removed from the HTML
 specification](https://github.com/whatwg/html/pull/1399) in 2017. 
 
