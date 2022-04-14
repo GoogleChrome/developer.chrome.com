@@ -144,7 +144,7 @@ Chromium 议题: [1261130](https://crbug.com/1261130)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## 其它亮点 {: #misc }
+## 其他的更新 {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
 本次发布还包含了一些值得注意的修复：

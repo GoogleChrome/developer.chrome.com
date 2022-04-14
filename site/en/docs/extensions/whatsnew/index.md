@@ -4,7 +4,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-02-17
+updated: 2022-04-11
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -16,10 +16,60 @@ updated: 2022-02-17
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Docs update: Chrome Web Store item discovery {: #cws-discoevery-doc }
+### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
+
+April 4, 2022
+
+Manifest V3 extensions can now specify the `optional_host_permissions` key in manifest.json. This
+allows Manifest V3 extensions to declare optional match patterns for hosts just as Manifest V2
+extensions could using the `optional_permissions` key.
+
+### Chrome 102: injectImmediately property in scripting.executeScript() {: #m102-injectimmediately }
+
+April 4, 2022
+
+`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property.  If present
+and set to true, the script will inject into the target as soon as possible, rather than waiting for
+`document_idle`. Note that this is not a guarantee the script will inject before the page is loaded
+since the page continues to load while the API call is being made.
+
+### Chrome 102: Omnibox API support in Manifest V3 {: #m102-omnibox }
+
+March 31, 2022
+
+The [Omnibox API](/docs/extensions/reference/omnibox) can now be used in service worker-based
+extensions. Previously, some of this API's methods would throw on invocation due to internal
+dependencies on DOM capabilities.
+
+### Chrome 102: wasm-unsafe-eval allowed in Manifest V3 CSP {: #m102-wasm }
+
+March 22, 2022
+
+Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy`
+declarations. This change allows Manifest V3 extensions to use WebAssembly.
+
+### Docs update: Chrome Web Store item discovery {: #cws-discovery-doc }
+
+March 21, 2022
 
 [Discovery on Chrome Web Store](/docs/webstore/discovery/) gives an overview of how users find items
 on the Chrome Web Store and how our editors select items to feature.
+
+### Chrome 101: Improved declarativeNetRequest domain conditions {: #m101-dnr-conditions }
+
+March 9, 2022
+
+[declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/) rule conditions have been
+updated to allow extensions to better target requests based on the request's "request" and
+"initiator" domains. The relevant condition properties are `initiatorDomains`,
+`excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. See also this
+[chromium-extensions
+thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
+
+### Chrome 100: Resolved issue with scripting.executeScript() on newly created tabs {: #m100-executescript-bugfix }
+
+Fixed a longstanding issue where calling `scripting.executeScript()` on a newly created tab or
+window could fail.
 
 ### Chrome 100: native messaging port keeps service worker alive {: #m100-native-msg-lifetime }
 
@@ -78,6 +128,14 @@ December 10, 2021
 Added [a new reference page](/docs/webstore/review-process) that provides an overview of the Chrome
 Web Store review process and explains how [developer program
 policy](/docs/webstore/program_policies/) enforcement is handled.
+
+### Chrome 98: scripting.executeScript() and scripting.insertCSS() accept multiple files {: #m98-execute-multiple-files }
+
+November 9, 2021
+
+The Scripting API's [`executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
+and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept multiple
+files. Previously these methods required an array with a single file entry.
 
 ### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 

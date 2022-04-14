@@ -2,6 +2,16 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 101 {: #chrome101 }
+
+* [Import and export recorded user flows as a JSON file](/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/blog/new-in-devtools-101/#lighthouse)
+
+
 ### Chrome 100 {: #chrome100 }
 
 * [View and edit @supports at rules in the Styles pane](/blog/new-in-devtools-100/#supports)

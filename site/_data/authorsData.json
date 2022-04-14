@@ -326,9 +326,9 @@
   },
   "jecelynyeen": {
     "country": "DE",
-    "twitter": "jecelynyeen",
+    "twitter": "jecfish",
     "homepage": "https://jec.fyi/",
-    "github": "chybie",
+    "github": "jecfish",
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   },
   "megginkearney": {
@@ -642,5 +642,10 @@
     "github": "rachelandrew",
     "homepage": "https://rachelandrew.co.uk",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/DbljY0AD921j6PKWl6JC.jpeg"
+  },
+  "bgalbs": {
+    "country": "US",
+    "twitter": "bgalbs",
+    "image": "image/C8ys09lNbQOJLokQMhRtN2A0YU12/cySC1Gzh8NlFSsURpnpS.jpg"
   }
 }

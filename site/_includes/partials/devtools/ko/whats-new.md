@@ -3,6 +3,16 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
+<!-- ### Chrome 101 {: #chrome101 }
+
+* [Import and export recorded user flows as a JSON file](/ko/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/ko/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/ko/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/ko/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/ko/blog/new-in-devtools-101/#lighthouse) -->
+
+
 ### Chrome 100 {: #chrome100 }
 
 * [스타일 창의 규칙에서 @supports 보기 및 편집하기](/ko/blog/new-in-devtools-100/#supports)

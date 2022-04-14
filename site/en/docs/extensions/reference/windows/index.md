@@ -43,16 +43,16 @@ directory. Another example is in the [tabs_api.html][12] file of the [inspector]
 other examples and for help in viewing the source code, see [Samples][14].
 
 [1]: #type-Window
-[2]: /docs/extensions/tabs#type-Tab
-[3]: /docs/extensions/mv2/tabs
-[4]: /docs/extensions/tabs#property-Tab-url
-[5]: /docs/extensions/tabs#property-Tab-pendingUrl
-[6]: /docs/extensions/tabs#property-Tab-title
-[7]: /docs/extensions/tabs#property-Tab-favIconUrl
-[8]: /docs/extensions/tabs#type-Tab
-[9]: /docs/extensions/tabs#method-query
+[2]: /docs/extensions/reference/tabs#type-Tab
+[3]: /docs/extensions/reference/tabs/#manifest
+[4]: /docs/extensions/reference/tabs#property-Tab-url
+[5]: /docs/extensions/reference/tabs#property-Tab-pendingUrl
+[6]: /docs/extensions/reference/tabs#property-Tab-title
+[7]: /docs/extensions/reference/tabs#property-Tab-favIconUrl
+[8]: /docs/extensions/reference/tabs#type-Tab
+[9]: /docs/extensions/reference/tabs#method-query
 [10]: /docs/extensions/mv2/event_pages
-[11]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/windows/
-[12]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/inspector/tabs_api.html
-[13]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/inspector/
+[11]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/api/windows/
+[12]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/api/tabs/inspector/tabs_api.html
+[13]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/api/tabs/inspector/
 [14]: /docs/extensions/mv2/samples
