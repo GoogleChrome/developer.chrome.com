@@ -102,13 +102,13 @@ Local fonts have long been known as a fingerprinting vector. Though this new API
 
 
 In the future, we plan to require that the same "local-fonts" permission be granted before using any other API that provides access to local fonts.
-* **Timeline:** Shipping in Chrome 103 stable
+* **Timeline:** Targeting Chrome 103 (June'22)
 * **Call to action:** [Learn more](https://web.dev/local-fonts/) about the API and [how to use](https://web.dev/local-fonts/#how-to-use-the-local-font-access-api) it to start implementing.
 
 ### Making BFCache work with `Cache-control: no-store`
 
 We have identified a significant opportunity to improve how often the [Back/Forward cache](https://web.dev/bfcache/) can deliver instant back/forward navigations. This requires a change in how BFCache behaves on pages served with the [Cache-control: no-store HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control#:~:text=shared%20caches%20only.-,no%2Dstore,-The%20no%2Dstore). We have a public proposal designed to prevent significant surprises by monitoring various signals (for example evicting pages from the BFCache whenever an HTTP-only cookie changes), and carve-outs (for example group policy for Enterprise/Edu customers) for unique contexts. This is a complex but exciting opportunity, and we’d love additional scrutiny and feedback!
-* **Timeline:** Tentatively, shipping in Chrome 102 (assuming no major surprises).
+* **Timeline:** Targeting Chrome 104 (July'22), assuming no major surprises.
 * **Call to action:** See [the proposal](https://docs.google.com/document/d/1qX1w6L6laTzpFTh78dvT7wwC1060Z3he2Azp4BAwsUE/edit) for further details, including how to enable a work-in-progress implementation, and ways to share feedback such as actual scenarios in which our approach would create new hurdles.
 
 
