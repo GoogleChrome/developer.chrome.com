@@ -8,6 +8,8 @@ date: 2018-12-14
 description:
   "Open the Console, create a Live Expression, and set the expression to
   document.activeElement."
+tags:
+  - accessibility
 ---
 
 Suppose that you're testing the keyboard navigation accessibility of a page. When navigating the

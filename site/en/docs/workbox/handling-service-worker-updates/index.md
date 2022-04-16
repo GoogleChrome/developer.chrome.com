@@ -42,14 +42,14 @@ The following code runs in an inline `<script>` element using JavaScript modules
 
       // This code assumes your app has a promptForUpdate() method,
       // which returns true if the user wants to update.
-	// Implementing this is app-specific; some examples are:
-	// https://open-ui.org/components/alert.research or
+      // Implementing this is app-specific; some examples are:
+      // https://open-ui.org/components/alert.research or
       // https://open-ui.org/components/toast.research
-	const updateAccepted = await promptForUpdate();
+      const updateAccepted = await promptForUpdate();
 
-	if (updateAccepted) {
-        wb.mesageSkipWaiting();
-}
+      if (updateAccepted) {
+        wb.messageSkipWaiting();
+      }
     };
 
     // Add an event listener to detect when the registered

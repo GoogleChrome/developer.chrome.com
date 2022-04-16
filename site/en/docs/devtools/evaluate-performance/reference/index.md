@@ -3,9 +3,12 @@ layout: "layouts/doc-post.njk"
 title: "Performance features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2017-05-08
 #updated: YYYY-MM-DD
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
+tags:
+  - performance
 ---
 
 This page is a comprehensive reference of Chrome DevTools features related to analyzing performance.
@@ -432,7 +435,18 @@ Hover over a frame to view a tooltip with more information about it.
 
 {% Img src="image/admin/MX9kRvaRf3DqfkZAgoTq.png", alt="Hovering over a frame", width="800", height="542" %}
 
-**Figure 21**. Hovering over a frame
+**Figure 21.a**. Hovering over a frame
+
+The **Frames** section can show four types of frames:
+
+1. **Idle frame (white)**. No changes.
+1. **Frame (green)**. Rendered as expected and in time.
+1. **Partially presented frame (yellow with a sparse wide dash-line pattern)**. Chrome did its best to render at least some visual updates in time. For example, in case the work of the main thread of the renderer process (canvas animation) is late but the compositor thread (scrolling) is in time.
+1. **Dropped frame (red with a dense solid-line pattern)**. Chrome can't render the frame in reasonable time.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZT2pGas5UPTRfkRTTnG8.png", alt="Hovering over a partially presented frame", width="800", height="529" %}
+
+**Figure 21.b**. Hovering over a partially presented frame
 
 Click on a frame to view even more information about the frame in the **Summary** tab. DevTools
 outlines the selected frame in blue.

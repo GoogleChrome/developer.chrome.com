@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "dcc-likes": {
+      "$item": {
+        "likesCount": {
+           ".read": "true",
+           ".write": "true",
+           ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "$other": { ".validate": false }
+      }
+    }
+  }
+}

@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find and fix problems with the Issues tab"
+title: "Issues: Find and fix problems"
 authors:
   - samdutton
 date: 2020-05-14
 #updated: YYYY-MM-DD
 description: "Use the Issues Tab to find and fix problems with your website."
+tags:
+  - find-issues
 ---
 
 The **Issues** tab in Chrome DevTools reduces the notification fatigue and clutter of the Console.

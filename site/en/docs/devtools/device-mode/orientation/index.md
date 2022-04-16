@@ -6,6 +6,9 @@ authors:
 date: 2018-12-18
 #updated: YYYY-MM-DD
 description: "Open the Sensors tab and go to the Orientation section."
+tags:
+  - emulate
+  - test
 ---
 
 To simulate different [device orientations][1] from Chrome DevTools:

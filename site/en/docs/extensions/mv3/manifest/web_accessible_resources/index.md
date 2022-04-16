@@ -92,10 +92,10 @@ listed as web accessible. Note these corner cases:
 The [Web Accessible Resources example][war-example] demonstrates the use of this element in a working extension.
 
 [war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
-[1]: /docs/extensions/extension#method-getURL
+[1]: /docs/extensions/reference/extension/#method-getURL
 [2]: https://www.w3.org/TR/cors/
-[3]: /docs/extensions/webRequest
-[4]: /docs/extensions/declarativeWebRequest
+[3]: /docs/extensions/reference/webRequest/
+[4]: /docs/extensions/reference/declarativeWebRequest
 [5]: /docs/extensions/mv3/content_scripts
 [6]: https://en.wikipedia.org/wiki/Device_fingerprint
 [7]: https://en.wikipedia.org/wiki/Cross-site_scripting

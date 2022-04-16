@@ -1,0 +1,35 @@
+like-icon {
+  height: 20px;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active,
+  a:visited {
+    color: #000;
+  }
+
+  svg,
+  [data-liked='false'] svg {
+    color: #000;
+    fill: none;
+    height: 20px;
+    margin-top: -3px;
+    vertical-align: middle;
+    width: 20px;
+  }
+
+  [data-liked='true'] svg {
+    color: #fff;
+    fill: #f00;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 3em;
+  }
+}

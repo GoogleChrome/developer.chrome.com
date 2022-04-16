@@ -57,7 +57,7 @@ Here is the list of [format specifiers](https://console.spec.whatwg.org/#formatt
       <td>Formats the value as an expandable DOM element</td>
     </tr>
     <tr>
-      <td><code>%0</code></td>
+      <td><code>%O</code></td>
       <td>Formats the value as an expandable JavaScript object</td>
     </tr>
     <tr>
@@ -175,7 +175,7 @@ Here is a list of color codes supported in DevTools.
       <td>32</td>
       <td>42</td>
       <td><div style="background:#00AA00;color:white;text-align:center;">#00AA00</div></td>
-      <td><div style="background:#01c80;color:white;text-align:center;">#01c80</div></td>
+      <td><div style="background:#01c800;color:white;text-align:center;">#01c800</div></td>
     </tr>
     <tr>
       <td>33</td>

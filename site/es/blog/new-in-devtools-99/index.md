@@ -167,7 +167,7 @@ Chromium issue: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
-# Actualizaciones del modo oscuro automático de Chrome {: #auto-dark-mode }
+## Actualizaciones del modo oscuro automático de Chrome {: #auto-dark-mode }
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 La UI de la [emulación de Modo Oscuro Automático](/blog/new-in-devtools-96/#auto-dark-mode) ha sido simplificada. Ahora es una casilla, antes era un desplegable.
 

@@ -14,7 +14,11 @@ import {terser} from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 
 const devConfig = {
-  input: 'site/_js/main.js',
+  input: [
+    'site/_js/main.js',
+    // Scripts used on /100 page
+    'site/_js/100.js',
+  ],
   output: {
     dir: 'dist/js',
     format: 'esm',
@@ -30,13 +34,16 @@ const devConfig = {
     copy({
       // Legacy docs, like those at /docs/native-client/, rely on the old
       // prettify.js code for syntax highlighting.
-      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+      targets: [
+        {src: 'site/_js/prettify.js', dest: 'dist/js'},
+        {src: 'site/_js/slider.js', dest: 'dist/js'},
+      ],
     }),
   ],
 };
 
 const productionConfig = {
-  input: 'site/_js/main.js',
+  input: ['site/_js/main.js', 'site/_js/100.js'],
   output: {
     dir: 'dist/js',
     format: 'esm',
@@ -53,7 +60,10 @@ const productionConfig = {
       },
     }),
     copy({
-      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+      targets: [
+        {src: 'site/_js/prettify.js', dest: 'dist/js'},
+        {src: 'site/_js/slider.js', dest: 'dist/js'},
+      ],
     }),
   ],
 };

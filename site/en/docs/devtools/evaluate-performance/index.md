@@ -6,6 +6,8 @@ authors:
 date: 2017-04-06
 #updated: YYYY-MM-DD
 description: "Learn how to evaluate runtime performance in Chrome DevTools."
+tags:
+  - performance
 ---
 
 {% Aside %}

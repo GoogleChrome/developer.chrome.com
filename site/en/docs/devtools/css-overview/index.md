@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Identify potential CSS improvements"
+title: "CSS Overview: Identify potential CSS improvements"
 authors:
   - jecelynyeen
 date: 2021-10-21
 #updated: YYYY-MM-DD
 description: "Identify potential CSS improvements with the CSS Overview panel."
+tags:
+  - find-issues
 ---
 
 {% YouTube id="OAP_Sr0zb5I" %}
