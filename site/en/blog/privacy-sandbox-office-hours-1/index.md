@@ -1,0 +1,55 @@
+---
+layout: 'layouts/blog-post.njk'
+title: "Join Privacy Sandbox Developer Office Hours #1: How Chrome's Origin Trials Work"
+authors:
+  - mariahhart
+description: >
+  The Google Chrome team will host developer office hours, where developers who are testing and integrating the Privacy Sandbox technologies can ask questions of Chrome tech leads. The first sessions will be dedicated to origin trials.
+date: 2022-04-18
+hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/chmSoJfgOfptuBMorI3U.jpg
+alt: An office space with desks and chairs
+tags:
+  - privacy
+  - origin-trials
+---
+
+The Google Chrome team will host developer office hours, where developers who
+are testing and integrating the Privacy Sandbox technologies can ask questions
+of Chrome tech leads. 
+
+The first sessions will be dedicated to [origin trials](/blog/origin-trials/):
+how trials work and how developers can test new features. Office hours will be
+offered in multiple time zones and languages.
+
+**Session A - Chrome Developer Office Hours (AMER & EMEA friendly in English)**:
+* April 20th at 7:00 am PT
+* April 20th at 10:00 am ET
+
+**Session B - Chrome Developer Office Hours (APAC friendly in English)**
+* April 27th at 6:30 pm PT
+* April 27th at 9:30 pm ET
+* April 28th at 9:30 am SST (Singapore Standard Time)
+
+**Session C - Chrome Developer Office Hours (APAC friendly in Japanese)**
+* April 27th at 5:00 pm PT
+* April 27th at 8:00 pm ET
+* April 28th at 9:00 am JST (Japan Standard Time)
+
+To best prepare for the developer office hours, read the following articles:
+
+* [Getting started with Chrome's origin
+  trials](http://developer.chrome.com/blog/origin-trials)
+* [What are third-party origin
+  trials?](http://developer.chrome.com/blog/third-party-origin-trials)
+* [Troubleshooting Chrome's origin
+  trials](http://developer.chrome.com/blog/origin-trial-troubleshooting)
+
+No registration is required. Find [details of how to attend the office hours
+here](https://docs.google.com/document/d/14GNexALd7dLBJe-MdLFuAjiZI3EhfNvk8zTs5Ct6nnM/edit#).
+Please feel free to jump in and ask questions. We are looking forward to your
+attendance.
+
+Photo by [Matt
+Hoffman](https://unsplash.com/@__matthoffman__?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on
+[Unsplash](https://unsplash.com/s/photos/office-hours?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
