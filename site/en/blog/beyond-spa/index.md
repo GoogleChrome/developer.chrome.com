@@ -698,7 +698,7 @@ pages.
 **Server / service worker drift**
 
 The other pitfall to avoid involves your server and service worker getting out
-of sync. \*My approach\*\* was to use isomorphic JavaScript, so that the same code
+of sync. _My approach_ was to use isomorphic JavaScript, so that the same code
 was run in both places. Depending on your existing server architecture,
 that's not always possible.
 
