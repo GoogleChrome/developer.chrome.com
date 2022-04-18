@@ -356,7 +356,7 @@ In your site template, add the following snippet above the Google Analytics snip
 <script data-issxg-var>window.isSXG=false</script>
 ```
 
-Customize your Google Analytics reporting script [as recommended](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics) to record LCP. If you're using gtag.js, modify the  the 'config' command to set the custom dimension (replacing `dimension1` and `dimension2` with the names that Google Analytics says to use):
+Customize your Google Analytics reporting script [as recommended](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics) to record LCP. If you're using gtag.js, modify the `'config'` command to set the custom dimension (replacing `'dimension1'` and `'dimension2'` with the names that Google Analytics says to use):
 
 ```js
 gtag('config', 'YOUR_TRACKING_ID', {
