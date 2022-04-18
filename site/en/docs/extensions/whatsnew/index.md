@@ -22,7 +22,7 @@ April 14, 2022
 
 Dynamically registered content scripts can now specify a target world. See
 [scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
-for additional details.
+for details.
 
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
 
