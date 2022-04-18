@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Join Privacy Sandbox Developer Office Hours #1: How Chrome's Origin Trials Work"
+title: 'Join Privacy Sandbox developer office hours #1: learn about Chrome Origin Trials'
 authors:
   - mariahhart
 description: >
@@ -21,16 +21,18 @@ The first sessions will be dedicated to [origin trials](/blog/origin-trials/):
 how they work and how developers can test new features. Office hours will be
 offered in multiple time zones and languages.
 
-**Session A - Chrome Developer Office Hours (AMER & EMEA friendly in English)**:
+## Available Chrome developer office hours
+
+### Session A: AMER and EMEA-friendly time, in English
 * April 20th at 7:00 am PT
 * April 20th at 10:00 am ET
 
-**Session B - Chrome Developer Office Hours (APAC friendly in English)**
+### Session B: APAC-friendly time, in English
 * April 27th at 6:30 pm PT
 * April 27th at 9:30 pm ET
 * April 28th at 9:30 am SST (Singapore Standard Time)
 
-**Session C - Chrome Developer Office Hours (APAC friendly in Japanese)**
+### Session C: APAC-friendly time, in Japanese
 * April 27th at 5:00 pm PT
 * April 27th at 8:00 pm ET
 * April 28th at 9:00 am JST (Japan Standard Time)
@@ -51,5 +53,5 @@ information](https://docs.google.com/document/d/14GNexALd7dLBJe-MdLFuAjiZI3EhfNv
 We look forward to your attendance, and we encourage you to jump in and
 ask questions.
 
-_Photo by [Matt Hoffman](https://unsplash.com/@__matthoffman__)
+_Feature image by [Matt Hoffman](https://unsplash.com/@__matthoffman__)
 on [Unsplash](https://unsplash.com/)._
