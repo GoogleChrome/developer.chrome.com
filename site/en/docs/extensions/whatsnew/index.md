@@ -20,7 +20,9 @@ and related policy or other changes.
 
 April 14, 2022
 
-Dynamically registered content scripts can now specify a target world. See
+Dynamically registered content scripts can now specify the
+[world](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#isolated_world) that
+assets will be injected into. See
 [scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
 for details.
 
