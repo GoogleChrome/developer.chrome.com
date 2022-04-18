@@ -74,7 +74,7 @@ If your page doesn't appear in any Google Search results yet, you can use [this 
 
 
 {% Aside %}
-Note that when Google Search instructs a user's browser to prefetch your SXG, it does so via a URL on webpkgcache.com in order to [avoid revealing the user's intent](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#name-privacy-preserving-prefetch) before they navigate. These URLs don't affect the display or behavior of the page, because the browser trusts the original URL that has been signed into the SXG.
+When Google Search instructs a user's browser to prefetch your SXG, it does so via a URL on webpkgcache.com in order to [avoid revealing the user's intent](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#name-privacy-preserving-prefetch) before they navigate. These URLs don't affect the display or behavior of the page, because the browser trusts the original URL that has been signed into the SXG.
 {% endAside %}
 
 The easiest way to determine the webpkgcache.com URL is to visit your page using the [SXG Validator Chrome extension](https://chrome.google.com/webstore/detail/sxg-validator/hiijcdgcphjeljafieaejfhodfbpmgoe), and click the extension icon to see the cache URL:
@@ -111,7 +111,7 @@ The easiest way is to use the SXG Validator Chrome extension:
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/zUqSkRSLNkF26gjyymEo.png", alt="SXG Validator showing a check mark (✅) and a Content Type of application/signed-exchange;v=b3", width="600", height="281" %}
 </figure>
 
-The extension fetches the current URL again, but with an Accept header that says it prefers the SXG version. If you see a check mark (✅), that means an SXG was returned; you can skip to the [Indexing](#indexing) section.
+The extension fetches the current URL again, but with an `Accept` request header that says it prefers the SXG version. If you see a check mark (✅), that means an SXG was returned; you can skip to the [Indexing](#indexing) section.
 
 If you see a cross mark (❌), that means an SXG wasn't returned:
 
@@ -171,7 +171,7 @@ If Google Search thinks the user is likely to click on the result, it will also 
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/uhchyec7uo4rgcQsteaE.png", alt="Google Search results with DevTools showing a <link rel=prefetch> for webpkgcache.com", width="800", height="147" %}
 </figure>
 
-The `<link>` tag instructs the browser to download the SXG into its prefetch cache. When the user clicks on the `<a>` tag, the browser will use that cached SXG to render the page.
+The `<link>` element instructs the browser to download the SXG into its prefetch cache. When the user clicks on the `<a>` element, the browser will use that cached SXG to render the page.
 
 You can also see evidence of this by going to the Network tab in DevTools and searching for URLs containing `webpkgcache`.
 
@@ -277,7 +277,7 @@ Right now, SXGs are only enabled for Android, but we will soon enable them for d
 
 ### Subresources
 
-SXG can be used to prefetch subresources (including images) along with the HTML. Cloudflare ASX will scan the HTML for same-origin (first-party) `<link rel=preload>` tags and convert them into [SXG-compatible Link headers](https://github.com/WICG/webpackage/blob/main/explainers/signed-exchange-subresource-substitution.md). Details in the source code [here](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/cloudflare_worker/worker/src/index.ts#L250-L275) and [here](https://github.com/google/sxg-rs/blob/main/sxg_rs/src/link.rs).
+SXG can be used to prefetch subresources (including images) along with the HTML. Cloudflare ASX will scan the HTML for same-origin (first-party) `<link rel=preload>` elements and convert them into [SXG-compatible Link headers](https://github.com/WICG/webpackage/blob/main/explainers/signed-exchange-subresource-substitution.md). Details in the source code [here](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/cloudflare_worker/worker/src/index.ts#L250-L275) and [here](https://github.com/google/sxg-rs/blob/main/sxg_rs/src/link.rs).
 
 If it's working, you'll see additional prefetches from Google Search:
 
