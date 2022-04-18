@@ -36,10 +36,10 @@ extensions could using the `optional_permissions` key.
 
 April 4, 2022
 
-`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property.  If present
-and set to true, the script will inject into the target as soon as possible, rather than waiting for
-`document_idle`. Note that this is not a guarantee the script will inject before the page is loaded
-since the page continues to load while the API call is being made.
+`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property on it's
+`injection` argument. If present and set to true, the script will inject into the target as soon as
+possible, rather than waiting for `document_idle`. Note that this is not a guarantee the script will
+inject before the page is loaded since the page continues to load while the API call is being made.
 
 ### Chrome 102: Omnibox API support in Manifest V3 {: #m102-omnibox }
 
