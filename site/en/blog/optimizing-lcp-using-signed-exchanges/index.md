@@ -304,19 +304,19 @@ When measuring server-side metrics such as [Time to First Byte (TTFB)](https://w
 ### Client-side metrics
 
 SXGs produce the most speed benefit for client-side metrics; especially LCP. However, their biggest impact is limited to scenarios where they can be prefetched. When measuring their impact, you could simply enable Cloudflare ASX, wait for it to be re-crawled by Googlebot, wait an additional 28 days for Core Web Vitals (CWV) aggregation, and then look at your new CWV numbers. However, the change might be harder to spot when mixed in among all the other changes during this time frame.
- 
+
 Instead, I find it helpful to "zoom in" on the potentially affected page loads, and frame it as, "SXGs affect X% of page views, improving their LCP by Y milliseconds at the 75th percentile."
- 
+
 Currently, SXG prefetch only happens under certain conditions:
 
 - Chromium browser (e.g. Chrome or Edge except on [iOS](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/ios/user_agent.md)), version M87 or higher
 - Android OS
 - `Referer: google.com` or other [Google search domains](https://source.chromium.org/chromium/chromium/src/+/main:components/google/core/common/google_tld_list.h;l=13-42;drc=bea0acf022da996a8ff1dbdee378667a66c768e4). (Note that in Google Analytics, a referral tag applies to [all page views in the session](https://support.google.com/analytics/answer/6205762?hl=en#flowchart&zippy=%2Cin-this-article), whereas SXG prefetch only applies to the first page view, directly linked from Google Search.)
- 
+
 {% Aside %}
 Google Search is planning to expand the contexts where SXG prefetch can occur, including desktop OSes and more. This may increase the X% over time, and also means you may want to update your metrics to accommodate the change. When that happens, it should be announced on [webpackaging-announce](https://groups.google.com/g/webpackaging-announce).
 {% endAside %}
- 
+
 Read on for how to measure "X% of page views" and "improving their LCP by Y milliseconds", but note that this is an area I'm still learning more about. If you have additional advice on how to capture SXG performance in Real User Monitoring (RUM), please let us know! [File a bug against developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com) with your suggested improvements.
 
 ### Contemporary study
@@ -427,9 +427,9 @@ The ideal way to measure impact would be to conduct a holdback study, which has 
 
 - In the experiment group, some random fraction of page views that *would* be SXG are "held back", and served as non-SXG instead. This allows for an "apples-to-apples" comparison between equivalent users, devices, scenarios, and pages.
 - Those held-back (aka counterfactual) page views are labeled as such in the analytics. This allows for a "zoomed-in" view of the data, where we can compare SXG page loads in the control to SXG counterfactuals in the experiment. This, in turn, reduces noise from the other page loads that would be unaffected by SXG prefetch.
- 
+
 This would eliminate the aforementioned possible sources of selection bias, although it wouldn't eliminate the risk of LCP survivorship bias.
- 
+
 Unfortunately, you can't do this kind of test currently. Both of these properties require either the browser or the referrer to enable. We're planning to add support for such a test in the future.
 
 ## Conclusion
