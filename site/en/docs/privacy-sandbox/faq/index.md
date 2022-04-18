@@ -193,11 +193,14 @@ metadata, along with the interest group, to improve on-device bidding.
 
 ### Can the Topics API be used with the FLEDGE API? 
 
-An observed topic for the current user, provided by the Topics API, could be used as 
-contextual information by a seller or bidder. A topic could be included in the 
-`auctionSignals` property of the auction configuration object passed to `runAdAuction`, or 
-the `userBiddingSignals` property of the interest group configuration object passed to 
-`navigator.joinAdInterestGroup()`.
+Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object which
+   is passed to `runAdAuction`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object which is passed to `navigator.joinAdInterestGroup()`
 
 
 ## Attribution Reporting
