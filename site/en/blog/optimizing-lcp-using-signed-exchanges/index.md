@@ -102,7 +102,7 @@ If the WebPageTest is showing that the HTML is being prefetched, then it has suc
 Make sure your pages are being generated as signed exchanges.
 
 {% Aside %}
-Your site will not serve SXG to users, even on SXG-capable browsers. They're meant for SXG-capable crawlers, to enable prefetch. (Serving SXGs to users who visit the site directly only adds overhead over a perfectly cromulent web page.) Thus, to debug, you need to pretend to be a crawler.
+Your site will not serve SXG to users, even on SXG-capable browsers. They're meant for SXG-capable crawlers, to enable prefetch. (Serving SXGs to users who visit the site directly, where there is no opportunity for prefetch, only adds overhead.) Thus, to debug, you need to pretend to be a crawler.
 {% endAside %}
 
 The easiest way is to use the SXG Validator Chrome extension:
@@ -177,7 +177,7 @@ You can also see evidence of this by going to the Network tab in DevTools and se
 
 If this is happening, this means that Google Search indexing of the signed exchange is working. You can skip forward to the [Ingestion](#ingestion) section.
 
-Otherwise, it could be that Google hasn't recrawled the page yet since you enabled SXG. Try the Search Console URL Inspection Tool:
+Otherwise, it could be that Google hasn't recrawled the page yet since you enabled SXG. Try the [Google Search Console URL Inspection Tool](https://support.google.com/webmasters/answer/9012289):
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/vaPuQ3k315xVxdn9elPe.png", alt="Search Console URL Inspection tool, clicking View Crawled Page and then More Info", width="800", height="302" %}
@@ -338,11 +338,11 @@ In Google Analytics (UA), [create two custom dimensions](https://support.google.
 
 Create a custom segment named "SXG counterfactual" with the following filters ANDed together:
 
-- **referrer** starts with **https://www.google.**
-- **Browser** exactly matches **Chrome**
-- **Browser** Version matches regex **^(8[7-9]|9[0-9]|[0-9]{3})**
-- **Operating System** exactly matches **Android**
-- **isSXG** exactly matches **false**
+- `referrer` starts with `https://www.google.`
+- `Browser` exactly matches `Chrome`
+- `Browser` Version matches regex `^(8[7-9]|9[0-9]|[0-9]{3})`
+- `Operating System` exactly matches `Android`
+- `isSXG` exactly matches `false`
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tqpW8Jy95f1jYJeV5Opx.png", alt="Google Analytics segment editor with recommended filters", width="800", height="441" %}
