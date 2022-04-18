@@ -177,8 +177,10 @@
     "twitter": "hochsays"
   },
   "jeffposnick": {
-    "homepage": "https://twitter.com/jeffposnick",
-    "twitter": "jeffposnick"
+    "homepage": "https://jeffy.info/",
+    "twitter": "jeffposnick",
+    "github": "jeffposnick",
+    "image": "image/FNkVSAX8UDTTQWQkKftSgGe9clO2/aNrmVViMdqMvdXZn0NHA.jpg"
   },
   "mattgaunt": {
     "homepage": "https://gauntface.com/blog",
@@ -601,7 +603,7 @@
     "github": "mysterydate",
     "twitter": "_mysterydate",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/X8o5K4jnZHhQgHfkmJY7.jpeg"
-    },
+  },
   "victortan": {
     "country": "US",
     "github": "victortan",
@@ -655,5 +657,9 @@
     "linkedin": "https://www.linkedin.com/in/jheytompkins/",
     "homepage": "https://jhey.dev/links",
     "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JMkAJAgH01auU1FiapGg.jpeg"
+  },
+  "mariahhart": {
+    "country": "US",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/iy1Y4UTfdXCdXqdnveqi.jpg"
   }
 }

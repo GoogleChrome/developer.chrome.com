@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-11-04
+updated: 2021-04-12
 authors:
 	- samdutton
 ---
@@ -161,6 +161,30 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
 Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
+
+
+## Topics
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal:
+   [create an issue](https://github.com/jkarlin/topics/issues) on the proposal
+   repo.
+-  For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.
+   
+### Can I opt out of topic calculation for specific pages on my site?
+
+Yes. Include the `Permissions-Policy: browsing-topics=()` header on a page to prevent topics
+calculation for all users on that page only. Subsequent visits to other pages on your site will
+not be affected. If you set a policy to block the Topics API on one page, this does won't
+affect other pages. 
+
+Topics are only inferred from the hostname and not from the URL path.
+
 
 ## FLEDGE
 

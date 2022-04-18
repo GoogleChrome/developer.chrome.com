@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2021-09-07
+updated: 2022-04-11
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -495,6 +495,14 @@ a token in an `Origin-Trial` header. Dedicated workers inherit access to feature
 parent document.
 
 
+## Origin trial demos
+
+-  [Token in a meta tag](https://ot-meta.glitch.me)
+-  [Token in a header](https://ot-header.glitch.me)
+-  [Feature accessed in an iframe](https://ot-iframe.glitch.me)
+-  [Token injected by third-party script](https://ot-3p.glitch.me)
+
+
 ## Find out more
 
 -  [Getting started with Chrome's origin trials](/blog/origin-trials/)
@@ -506,4 +514,4 @@ parent document.
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 ---
 
-Photo by [Bill Oxford](https://unsplash.com/@bill_oxford) on [Unsplash](https://unsplash.com/photos/tR0PPLuN6Pw).
+Photo by [Bill Oxford](https://unsplash.com/@bill_oxford) on [Unsplash](https://unsplash.com).
