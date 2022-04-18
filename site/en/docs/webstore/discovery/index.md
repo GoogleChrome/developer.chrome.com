@@ -73,7 +73,7 @@ before it receives the badge, paying special attention to the following:
 2. A [store listing page][best-listing] that is clear and helpful for users, with quality images and
    a detailed description.
 
-### Established Publisher badge {: #featured-badge }
+### Established Publisher badge {: #publisher-badge }
 
 {% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/vZQXBcGDZaWBWQLPCM95.png", width="800", height="400",
    alt="Screenshot of an extension listing that has an established publisher badge.",
