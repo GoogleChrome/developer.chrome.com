@@ -31,15 +31,15 @@ Find a time that's best for you.
 * April 20th at 7:00 am PT
 * April 20th at 10:00 am ET
 
-### Session B: APAC-friendly time, in English
-* April 27th at 6:30 pm PT
-* April 27th at 9:30 pm ET
-* April 28th at 9:30 am SST (Singapore Standard Time)
-
-### Session C: APAC-friendly time, in Japanese
+### Session B: APAC-friendly time, in Japanese
 * April 27th at 5:00 pm PT
 * April 27th at 8:00 pm ET
 * April 28th at 9:00 am JST (Japan Standard Time)
+
+### Session C: APAC-friendly time, in English
+* April 27th at 6:30 pm PT
+* April 27th at 9:30 pm ET
+* April 28th at 9:30 am SST (Singapore Standard Time)
 
 ## Prepare for office hours
 
