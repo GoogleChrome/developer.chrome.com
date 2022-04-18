@@ -6,19 +6,11 @@ description: >
 subhead: >
   How to measure and optimize signed exchanges to get the most improvement out of them.
 date: 2022-04-15
-
 authors:
   - twifkak
-
 tags:
   - performance
 ---
-
-<!--
-- Only use h2-h4s in markdown.
-- Make sure all of your images have `alt` text.
-- Code blocks should use triple backticks and include a language name.
--->
 
 Signed exchanges (SXGs) are a means for web developers to improve their page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/lcp/)—by enabling other sites (currently Google Search) to [prefetch their pages](https://developers.google.com/search/docs/advanced/experience/signed-exchange) before the user clicks on the link.
 
@@ -28,15 +20,15 @@ SXGs are potentially useful for other use cases not covered in this article. For
 
 It is possible to make web pages that completely eliminate the network from the critical path to rendering the page, when prefetched! On 4G, this page load [goes from 6s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220329_BiDc1V_FJG,220329_AiDcB7_HB0&medianMetric=LCP). What remains is bound mostly by CPU:
 
-{% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/5IRBMSsCZwihnVIVK4gS.mp4",
-         controls=true,
-         poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/4ttTTum2aZuNZL04vYmI.jpg" %}
+<figure>
+  {% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/5IRBMSsCZwihnVIVK4gS.mp4", controls=true, poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/4ttTTum2aZuNZL04vYmI.jpg" %}
+</figure>
 
 Most people publishing signed exchanges today are using Cloudflare's amazingly easy-to-use [Automatic Signed Exchanges](https://support.cloudflare.com/hc/en-us/articles/4411075595661-Automatic-Signed-Exchanges-SXGs-Beta) (ASX) feature (though [open source options](https://web.dev/signed-exchanges/#tooling) exist, too):
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Jok2O4SHNgW5d9y20YQP.png",
-       alt="Cloudflare settings panel with checkbox to enable Automatic Signed Exchanges",
-       width="800", height="373" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Jok2O4SHNgW5d9y20YQP.png", alt="Cloudflare settings panel with checkbox to enable Automatic Signed Exchanges", width="800", height="373" %}
+</figure>
 
 In many cases, checking the box is enough to get the kind of drastic improvement shown above. However, sometimes there are a few more steps to ensure these signed exchanges are working as intended at each stage of the pipeline, and to optimize pages to take full advantage of prefetch.
 
@@ -54,10 +46,10 @@ One place to start is to use a lab tool like WebPageTest like shown above, so yo
 
 Generate a test without SXG in the standard way: go to [WebPageTest](https://www.webpagetest.org/) and enter a URL.
 
-  - Consider doing this while signed in, so you can more easily generate a comparison.
-  - Go to "Advanced Configuration" and choose a set of options there, rather than "Simple Configuration". (This makes it easy to assure that you have the same set of parameters as the "with SXG" test, which will use Advanced.)
-  - Under Browser, choose an Android phone under "Chrome Device Emulation". (This is also for parity with the "with SXG" test. As of writing, Google Search only supports SXG on Android.)
-  - Everything else is up to you. It may be helpful to increase "Number of Tests to Run" to 7, and pick a 4G connection.
+- Consider doing this while signed in, so you can more easily generate a comparison.
+- Go to "Advanced Configuration" and choose a set of options there, rather than "Simple Configuration". (This makes it easy to assure that you have the same set of parameters as the "with SXG" test, which will use Advanced.)
+- Under Browser, choose an Android phone under "Chrome Device Emulation". (This is also for parity with the "with SXG" test. As of writing, Google Search only supports SXG on Android.)
+- Everything else is up to you. It may be helpful to increase "Number of Tests to Run" to 7, and pick a 4G connection.
 
 Generate a test with SXG by starting with the same steps as above, but then go to the Script tab and enter a [WebPageTest script](https://docs.webpagetest.org/scripting/) like the following. This script overrides the URL entered in the main input field:
 
@@ -87,15 +79,15 @@ Note that when Google Search instructs a user's browser to prefetch your SXG, it
 
 The easiest way to determine the webpkgcache.com URL is to visit your page using the [SXG Validator Chrome extension](https://chrome.google.com/webstore/detail/sxg-validator/hiijcdgcphjeljafieaejfhodfbpmgoe), and click the extension icon to see the cache URL:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/DbkcylGpILjOzOnxREXl.png",
-       alt="SXG Validator showing cache information including URL",
-       width="506", height="229" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/DbkcylGpILjOzOnxREXl.png", alt="SXG Validator showing cache information including URL", width="506", height="229" %}
+</figure>
 
 Once these tests are complete, go to [Test History](https://app.webpagetest.org/ui/wpt/testhistory), select the two tests, and click Compare:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/ElSV7nAWCWV0Yjf7VC2o.png",
-       alt="Test History with two tests checked and the Compare button highlighted",
-       width="509", height="202" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/ElSV7nAWCWV0Yjf7VC2o.png", alt="Test History with two tests checked and the Compare button highlighted", width="509", height="202" %}
+</figure>
 
 Append `?medianMetric=LCP` to the compare URL so that the run with median LCP is selected for each side of the comparison. (The default is median by Speed Index.)
 
@@ -115,29 +107,29 @@ Your site will not serve SXG to users, even on SXG-capable browsers. They're mea
 
 The easiest way is to use the SXG Validator Chrome extension:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/zUqSkRSLNkF26gjyymEo.png",
-       alt="SXG Validator showing a check mark (✅) and a Content Type of application/signed-exchange;v=b3",
-       width="600", height="281" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/zUqSkRSLNkF26gjyymEo.png", alt="SXG Validator showing a check mark (✅) and a Content Type of application/signed-exchange;v=b3", width="600", height="281" %}
+</figure>
 
 The extension fetches the current URL again, but with an Accept header that says it prefers the SXG version. If you see a check mark (✅), that means an SXG was returned; you can skip to the [Indexing](#indexing) section.
 
 If you see a cross mark (❌), that means an SXG wasn't returned:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/4T3la9HtoRDz8SK7lWGi.png",
-       alt="SXG Validator showing a cross mark (❌) and a Content Type of text/html",
-       width="483", height="162" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/4T3la9HtoRDz8SK7lWGi.png", alt="SXG Validator showing a cross mark (❌) and a Content Type of text/html", width="483", height="162" %}
+</figure>
 
 If Cloudflare ASX is enabled, then the most likely reason for a cross mark (❌) is because a cache control response header prevents it. ASX looks at headers with the following names:
-  - `Cache-Control`
-  - `CDN-Cache-Control`
-  - `Surrogate-Control`
-  - `Cloudflare-CDN-Cache-Control`
+- `Cache-Control`
+- `CDN-Cache-Control`
+- `Surrogate-Control`
+- `Cloudflare-CDN-Cache-Control`
 
 If any of these headers contains any of the following header values, it will prevent an SXG from being generated:
-  - `private`
-  - `no-store`
-  - `no-cache`
-  - `s-maxage` less than 120, if present, or else `max-age` less than 120
+- `private`
+- `no-store`
+- `no-cache`
+- `s-maxage` less than 120, if present, or else `max-age` less than 120
 
 ASX backs off in these cases because SXGs may be [cached and reused](https://developers.google.com/search/docs/advanced/experience/signed-exchange#additional-requirements-for-google-search) for multiple visits and multiple visitors.
 
@@ -169,15 +161,15 @@ dump-signedexchange -verify -uri $URL
 
 Make sure your SXGs are successfully [indexed](https://support.google.com/webmasters/answer/7645831) by Google Search. Test if Google Search is linking to webpkgcache.com's copy of your page, by looking in DevTools. Since Google Search currently only supports SXG for Android OSes, you may need to enable mobile-emulation mode and select an Android device:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Qu2qWl2LES3N8tiqnskP.png",
-       alt="Google Search results with DevTools showing an <a> that points to webpkgcache.com",
-       width="800", height="635" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Qu2qWl2LES3N8tiqnskP.png", alt="Google Search results with DevTools showing an <a> that points to webpkgcache.com", width="800", height="635" %}
+</figure>
 
 If Google Search thinks the user is likely to click on the result, it will also prefetch it:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/uhchyec7uo4rgcQsteaE.png",
-       alt="Google Search results with DevTools showing a <link rel=prefetch> for webpkgcache.com",
-       width="800", height="147" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/uhchyec7uo4rgcQsteaE.png", alt="Google Search results with DevTools showing a <link rel=prefetch> for webpkgcache.com", width="800", height="147" %}
+</figure>
 
 The `<link>` tag instructs the browser to download the SXG into its prefetch cache. When the user clicks on the `<a>` tag, the browser will use that cached SXG to render the page.
 
@@ -187,9 +179,9 @@ If this is happening, this means that Google Search indexing of the signed excha
 
 Otherwise, it could be that Google hasn't recrawled the page yet since you enabled SXG. Try the Search Console URL Inspection Tool:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/vaPuQ3k315xVxdn9elPe.png",
-       alt="Search Console URL Inspection tool, clicking View Crawled Page and then More Info",
-       width="800", height="302" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/vaPuQ3k315xVxdn9elPe.png", alt="Search Console URL Inspection tool, clicking View Crawled Page and then More Info", width="800", height="302" %}
+</figure>
 
 The presence of a `digest: mi-sha256-03=...` header indicates that Google successfully crawled the SXG version.
 
@@ -201,25 +193,25 @@ If an SXG is successfully crawled, but it still isn't being linked to, then it m
 
 When Google Search indexes an SXG, it sends its copy to the Google SXG Cache, which validates it against the [cache requirements](https://github.com/google/webpackager/blob/main/docs/cache_requirements.md). The Chrome extension shows the result:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/pB76K9ocvcooeZIpVxIq.png",
-       alt="SXG Validator showing a check mark (✅) and no warning message",
-       width="390", height="159" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/pB76K9ocvcooeZIpVxIq.png", alt="SXG Validator showing a check mark (✅) and no warning message", width="390", height="159" %}
+</figure>
 
 If you see a check mark (✅), then you can skip ahead to [Optimize](#optimize).
 
 If it fails to meet the requirements, a warning message indicates why:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/fdNg8KIIXGsfSBpVCaVB.png",
-       alt='SXG Validator showing a cross mark (❌) and a warning message saying "error… parsing signature"',
-       width="359", height="258" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/fdNg8KIIXGsfSBpVCaVB.png", alt='SXG Validator showing a cross mark (❌) and a warning message saying "error… parsing signature"', width="359", height="258" %}
+</figure>
 
 In this case, the page will work just as it did before enabling SXG. Google will link to the page on its original host without an SXG prefetch.
 
 In the event that the cached copy has expired and is being re-fetched in the background, you will see an hourglass (⌛):
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/BG0EYkGJOH9U391725he.png",
-       alt="SXG Validator showing an hourglass (⌛) and no warning message",
-       width="377", height="188" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/BG0EYkGJOH9U391725he.png", alt="SXG Validator showing an hourglass (⌛) and no warning message", width="377", height="188" %}
+</figure>
 
 The Google developer document on SXG also has instructions for [querying the cache manually](https://developers.google.com/search/docs/advanced/experience/signed-exchange#debug-the-google-sxg-cache).
 
@@ -232,12 +224,14 @@ If the extension shows all check marks (✅), you have a SXG that can be served 
 When SXGs expire, the Google SXG Cache will fetch a new copy in the background. While waiting for that fetch, users are directed to the page on its original host, which is not prefetched. The longer your `Cache-Control: max-age`, the less often this background fetch happens, and thus the more often that LCP can be reduced by prefetch.
 
 This is a tradeoff between performance and freshness, and the cache allows site owners to provide SXGs with a max-age anywhere between 2 minutes and 7 days, to fit each page's particular needs. Anecdotally, we find that:
-  - `max-age=86400` (1 day) or longer works well for performance
-  - `max-age=120` does not
+
+- `max-age=86400` (1 day) or longer works well for performance
+- `max-age=120` does not
+
 We hope to learn more about values in between those two, as we study the data more.
 
 {% Aside %}
-We plan to make this tradeoff easier to manage in the future, by adding a cache purge API.  When that happens, it should be announced on [webpackaging-announce](https://groups.google.com/g/webpackaging-announce).
+We plan to make this tradeoff easier to manage in the future, by adding a cache purge API. When that happens, it should be announced on [webpackaging-announce](https://groups.google.com/g/webpackaging-announce).
 {% endAside %}
 
 ### user-agent
@@ -278,18 +272,18 @@ We dug deeper and discovered the reason for this difference is that the page var
 
 Right now, SXGs are only enabled for Android, but we will soon enable them for desktop OSes. To prepare for this future, ensure that one of these is true:
 
-  - Your page doesn't `Vary: User-Agent` (e.g. it uses [responsive design](https://developers.google.com/search/mobile-sites/mobile-seo/responsive-design) or [separate mobile/desktop URLs](https://developers.google.com/search/mobile-sites/mobile-seo/separate-urls)).
-  - If it uses [dynamic serving](https://developers.google.com/search/mobile-sites/mobile-seo/dynamic-serving), it annotates itself as mobile- or desktop-only using [`<meta name=supported-media content=...>`](https://github.com/google/webpackager/blob/main/docs/supported_media.md).
+- Your page doesn't `Vary: User-Agent` (e.g. it uses [responsive design](https://developers.google.com/search/mobile-sites/mobile-seo/responsive-design) or [separate mobile/desktop URLs](https://developers.google.com/search/mobile-sites/mobile-seo/separate-urls)).
+- If it uses [dynamic serving](https://developers.google.com/search/mobile-sites/mobile-seo/dynamic-serving), it annotates itself as mobile- or desktop-only using [`<meta name=supported-media content=...>`](https://github.com/google/webpackager/blob/main/docs/supported_media.md).
 
-### subresources
+### Subresources
 
 SXG can be used to prefetch subresources (including images) along with the HTML. Cloudflare ASX will scan the HTML for same-origin (first-party) `<link rel=preload>` tags and convert them into [SXG-compatible Link headers](https://github.com/WICG/webpackage/blob/main/explainers/signed-exchange-subresource-substitution.md). Details in the source code [here](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/cloudflare_worker/worker/src/index.ts#L250-L275) and [here](https://github.com/google/sxg-rs/blob/main/sxg_rs/src/link.rs).
 
 If it's working, you'll see additional prefetches from Google Search:
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/e09y5ZGYE93zgPi2pyFk.png",
-       alt="Google Search results with DevTools Network tab, showing a prefetch of /sub/…/image.jpg",
-       width="800", height="493" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/e09y5ZGYE93zgPi2pyFk.png", alt="Google Search results with DevTools Network tab, showing a prefetch of /sub/…/image.jpg", width="800", height="493" %}
+</figure>
 
 To optimize for LCP, look closely at your waterfall, and figure out which resources are on the critical path to rendering the largest element. If they can't be prefetched, consider if they can be [taken off the critical path](https://web.dev/render-blocking-resources/#how-to-eliminate-render-blocking-scripts). Be on the lookout for scripts that hide the page until they are done loading.
 
@@ -314,12 +308,13 @@ SXGs produce the most speed benefit for client-side metrics; especially LCP. How
 Instead, I find it helpful to "zoom in" on the potentially affected page loads, and frame it as, "SXGs affect X% of page views, improving their LCP by Y milliseconds at the 75th percentile."
  
 Currently, SXG prefetch only happens under certain conditions:
-  - Chromium browser (e.g. Chrome or Edge except on [iOS](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/ios/user_agent.md)), version M87 or higher
-  - Android OS
-  - `Referer: google.com` or other [Google search domains](https://source.chromium.org/chromium/chromium/src/+/main:components/google/core/common/google_tld_list.h;l=13-42;drc=bea0acf022da996a8ff1dbdee378667a66c768e4). (Note that in Google Analytics, a referral tag applies to [all page views in the session](https://support.google.com/analytics/answer/6205762?hl=en#flowchart&zippy=%2Cin-this-article), whereas SXG prefetch only applies to the first page view, directly linked from Google Search.)
+
+- Chromium browser (e.g. Chrome or Edge except on [iOS](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/ios/user_agent.md)), version M87 or higher
+- Android OS
+- `Referer: google.com` or other [Google search domains](https://source.chromium.org/chromium/chromium/src/+/main:components/google/core/common/google_tld_list.h;l=13-42;drc=bea0acf022da996a8ff1dbdee378667a66c768e4). (Note that in Google Analytics, a referral tag applies to [all page views in the session](https://support.google.com/analytics/answer/6205762?hl=en#flowchart&zippy=%2Cin-this-article), whereas SXG prefetch only applies to the first page view, directly linked from Google Search.)
  
 {% Aside %}
-Google Search is planning to expand the contexts where SXG prefetch can occur, including  desktop OSes and more. This may increase the X% over time, and also means you may want to update your metrics to accommodate the change. When that happens, it should be announced on [webpackaging-announce](https://groups.google.com/g/webpackaging-announce).
+Google Search is planning to expand the contexts where SXG prefetch can occur, including desktop OSes and more. This may increase the X% over time, and also means you may want to update your metrics to accommodate the change. When that happens, it should be announced on [webpackaging-announce](https://groups.google.com/g/webpackaging-announce).
 {% endAside %}
  
 Read on for how to measure "X% of page views" and "improving their LCP by Y milliseconds", but note that this is an area I'm still learning more about. If you have additional advice on how to capture SXG performance in Real User Monitoring (RUM), please let us know! [File a bug against developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com) with your suggested improvements.
@@ -330,28 +325,28 @@ When looking at production data, you can split page loads into SXG and non-SXG. 
 
 However, it is essential to limit the set of page loads you look at, so that the non-SXG side matches the eligibility conditions for SXG, in order to avoid selection bias. Otherwise, all of the following would exist *only* in the set of non-SXG page loads, which may have innately different LCP:
 
-  - iOS devices — due to differences in hardware or network speed among the users who have these devices.
-  - older Chromium browsers — for the same reasons.
-  - desktop devices — for the same reasons or because the page layout causes a different "largest element" to be chosen.
-  - same-site navigations (visitors following links within the site) — because they can reuse cached subresources from the previous page load.
+- iOS devices—due to differences in hardware or network speed among the users who have these devices.
+- older Chromium browsers—for the same reasons.
+- desktop devices—for the same reasons or because the page layout causes a different "largest element" to be chosen.
+- same-site navigations (visitors following links within the site)—because they can reuse cached subresources from the previous page load.
 
 In Google Analytics (UA), [create two custom dimensions](https://support.google.com/analytics/answer/2709829) with scope "Hit", one named "isSXG" and one named "referrer". (The built-in "Source" dimension has [session scope](https://support.google.com/analytics/answer/2709828?hl=en#example-session&zippy=%2Cin-this-article), so it doesn't exclude same-site navigations.)
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/GartToDEdIzMEXN8sktm.png",
-       alt="Google Analytics dimension editor with recommended settings",
-       width="619", height="432" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/GartToDEdIzMEXN8sktm.png", alt="Google Analytics dimension editor with recommended settings", width="619", height="432" %}
+</figure>
 
 Create a custom segment named "SXG counterfactual" with the following filters ANDed together:
 
-  - **referrer** starts with **https://www.google.**
-  - **Browser** exactly matches **Chrome**
-  - **Browser** Version matches regex **^(8[7-9]|9[0-9]|[0-9]{3})**
-  - **Operating System** exactly matches **Android**
-  - **isSXG** exactly matches **false**
+- **referrer** starts with **https://www.google.**
+- **Browser** exactly matches **Chrome**
+- **Browser** Version matches regex **^(8[7-9]|9[0-9]|[0-9]{3})**
+- **Operating System** exactly matches **Android**
+- **isSXG** exactly matches **false**
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tqpW8Jy95f1jYJeV5Opx.png",
-       alt="Google Analytics segment editor with recommended filters",
-       width="800", height="441" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tqpW8Jy95f1jYJeV5Opx.png", alt="Google Analytics segment editor with recommended filters", width="800", height="441" %}
+</figure>
 
 Create a copy of this segment, named "SXG", except with **isSXG** exactly matches **true**.
 
@@ -370,33 +365,33 @@ gtag('config', 'YOUR_TRACKING_ID', {
 });
 ```
 
-If you're using analytics.js, modify the 'create' command as [documented here](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers).
+If you're using analytics.js, modify the `'create'` command as [documented here](https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers).
 
 After waiting a few days to collect some data, go to the Google Analytics Events report and add a drilldown for the SXG segment. This should fill in the X for "SXGs affect X% of page views":
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/MNaYo8ZjOxto57txJvwf.png",
-       alt="Google Analytics Events report with SXG segment, showing 12.5% Unique Events",
-       width="363", height="111" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/MNaYo8ZjOxto57txJvwf.png", alt="Google Analytics Events report with SXG segment, showing 12.5% Unique Events", width="363", height="111" %}
+</figure>
 
 Finally, go to the [Web Vitals Report](https://web-vitals-report.web.app/), select "Choose segments", and select "SXG counterfactual" and "SXG".
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tIsSMUofs9lMv3C0ncwe.png",
-       alt="Web Vitals Report with selections for SXG counterfactual and SXG",
-       width="657", height="164" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tIsSMUofs9lMv3C0ncwe.png", alt="Web Vitals Report with selections for SXG counterfactual and SXG", width="657", height="164" %}
+</figure>
 
 Click "Submit", and you should see LCP distributions for the two segments. This should fill in the Y for "improving their LCP by Y milliseconds at the 75th percentile":
 
-{% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/LTiuLf05jVOH2xe9RMOg.png",
-       alt="Web Vitals Report showing LCP distributions for SXG counterfactual and SXG",
-       width="800", height="363" %}
+<figure>
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/LTiuLf05jVOH2xe9RMOg.png", alt="Web Vitals Report showing LCP distributions for SXG counterfactual and SXG", width="800", height="363" %}
+</figure>
 
 #### Caveats
 
 Once you've applied all of the above filters, SXG counterfactual page loads should consist of things like these:
 
-  - cache misses — If the Google SXG Cache doesn't have a fresh copy of the SXG for a given URL, it will redirect to the original URL at your site.
-  - other result types — As of writing, Google Search only supports SXG for standard web results (aka "10 blue links") and a few other types. Others, like Top Stories Carousel, will link to the original URL at your site.
-  - ineligible URLs — If some pages on your site are not eligible for SXG (e.g. because they are not cacheable), they could appear in this set.
+- cache misses—If the Google SXG Cache doesn't have a fresh copy of the SXG for a given URL, it will redirect to the original URL at your site.
+- other result types—As of writing, Google Search only supports SXG for standard web results (aka "10 blue links") and a few other types. Others, like Top Stories Carousel, will link to the original URL at your site.
+- ineligible URLs—If some pages on your site are not eligible for SXG (e.g. because they are not cacheable), they could appear in this set.
 
 There may be remaining bias between the SXG page loads and the above set of non-SXG page loads, but I believe it will be smaller in magnitude than the above biases. For instance, perhaps your non-cacheable pages are slower or faster than your cacheable pages. If you suspect this could be an issue, consider looking at the data limited to a specific SXG-eligible URL to see if its results match the overall study.
 
@@ -410,13 +405,13 @@ To corroborate results from the contemporary study, it may be useful to do a com
 
 Note that Google Search may take up to several weeks to recrawl all pages on your site, in order to identify that SXG has been enabled for them. In those several weeks, there are other potential biases that may occur:
 
-  - New browser releases or new device purchases may speed up page loads.
-  - A significant event like a holiday may skew traffic from normal.
+- New browser releases or new device purchases may speed up page loads.
+- A significant event like a holiday may skew traffic from normal.
 
 It also is helpful to look at overall 75th percentile LCP before and after, in order to corroborate the above studies. Learning about a subset of the population doesn't necessarily tell us about the overall population. For instance, let's say SXG improves 10% of page loads by 800ms.
 
-  - If these were already the 10% fastest page loads, then it won't affect 75p at all.
-  - If they were the 10% slowest page loads, but they were more than 800ms slower than the 75p LCP to begin with, then it won't affect 75p at all.
+- If these were already the 10% fastest page loads, then it won't affect 75p at all.
+- If they were the 10% slowest page loads, but they were more than 800ms slower than the 75p LCP to begin with, then it won't affect 75p at all.
 
 These are extreme examples, likely not reflective of reality, but hopefully illustrate the issue. In practice, I believe it's likely that SXG will affect the 75th percentile for most sites. Cross-site navigations tend to be some of the slowest, and improvements from prefetching tend to be significant.
 
@@ -430,8 +425,8 @@ My intuition is that this has a bigger risk of selection bias. For instance, it 
 
 The ideal way to measure impact would be to conduct a holdback study, which has these properties:
 
-  - In the experiment group, some random fraction of page views that *would* be SXG are "held back", and served as non-SXG instead. This allows for an "apples-to-apples" comparison between equivalent users, devices, scenarios, and pages.
-  - Those held-back (aka counterfactual) page views are labeled as such in the analytics. This allows for a "zoomed-in" view of the data, where we can compare SXG page loads in the control to SXG counterfactuals in the experiment. This, in turn, reduces noise from the other page loads that would be unaffected by SXG prefetch.
+- In the experiment group, some random fraction of page views that *would* be SXG are "held back", and served as non-SXG instead. This allows for an "apples-to-apples" comparison between equivalent users, devices, scenarios, and pages.
+- Those held-back (aka counterfactual) page views are labeled as such in the analytics. This allows for a "zoomed-in" view of the data, where we can compare SXG page loads in the control to SXG counterfactuals in the experiment. This, in turn, reduces noise from the other page loads that would be unaffected by SXG prefetch.
  
 This would eliminate the aforementioned possible sources of selection bias, although it wouldn't eliminate the risk of LCP survivorship bias.
  
