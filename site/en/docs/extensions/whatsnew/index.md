@@ -21,8 +21,7 @@ and related policy or other changes.
 April 14, 2022
 
 Dynamically registered content scripts can now specify the
-[world](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#isolated_world) that
-assets will be injected into. See
+[world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
 [scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
 for details.
 
@@ -74,7 +73,7 @@ updated to allow extensions to better target requests based on the request's "re
 "initiator" domains. The relevant condition properties are `initiatorDomains`,
 `excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. See also this
 [chromium-extensions
-thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
+thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E).
 
 ### Chrome 100: Resolved issue with scripting.executeScript() on newly created tabs {: #m100-executescript-bugfix }
 
