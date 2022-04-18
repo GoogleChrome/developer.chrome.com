@@ -16,6 +16,14 @@ updated: 2022-02-17
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Chrome 102: {: #m102-registercontentscripts-main-world }
+
+April 14, 2022
+
+Dynamically registered content scripts can now specify a target world. See
+[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+for additional details.
+
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
 
 April 4, 2022
