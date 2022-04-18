@@ -22,7 +22,10 @@ The first sessions will be dedicated to [origin trials](/blog/origin-trials/):
 how they work and how developers can test new features. Office hours will be
 offered in multiple time zones and languages.
 
-## Available Chrome developer office hours
+## Available office hours
+
+Our first session is this week, followed by additional sessions next week.
+Find a time that's best for you.
 
 ### Session A: AMER and EMEA-friendly time, in English
 * April 20th at 7:00 am PT
