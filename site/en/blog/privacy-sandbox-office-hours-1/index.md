@@ -13,9 +13,10 @@ tags:
   - origin-trials
 ---
 
-The Google Chrome team will host developer office hours, where developers who
+The Google Chrome team will be hosting office hours, where developers who
 are testing and integrating the Privacy Sandbox technologies can ask questions
-of Chrome tech leads. 
+directly of Chrome leads. Access the [Google Meet joining links and dial-in
+information](https://docs.google.com/document/d/14GNexALd7dLBJe-MdLFuAjiZI3EhfNvk8zTs5Ct6nnM/edit?usp=sharing).
 
 The first sessions will be dedicated to [origin trials](/blog/origin-trials/):
 how they work and how developers can test new features. Office hours will be
