@@ -348,7 +348,7 @@ Create a custom segment named "SXG counterfactual" with the following filters AN
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tqpW8Jy95f1jYJeV5Opx.png", alt="Google Analytics segment editor with recommended filters", width="800", height="441" %}
 </figure>
 
-Create a copy of this segment, named "SXG", except with **isSXG** exactly matches **true**.
+Create a copy of this segment, named "SXG", except with `isSXG` exactly matches `true`.
 
 In your site template, add the following snippet above the Google Analytics snippet. When generating an SXG, ASX will change `false` to `true`:
 
@@ -401,7 +401,7 @@ Lastly, even addressing all selection biases, there is risk that survivorship bi
 
 ### Before/after study
 
-To corroborate results from the contemporary study, it may be useful to do a comparison of LCP before and after enabling SXG. Don't limit to SXG page views, to eliminate the potential biases noted above. Instead, look at SXG-eligible results — the above segment definitions but without the **isSXG** constraint.
+To corroborate results from the contemporary study, it may be useful to do a comparison of LCP before and after enabling SXG. Don't limit to SXG page views, to eliminate the potential biases noted above. Instead, look at SXG-eligible results—the above segment definitions but without the `isSXG` constraint.
 
 Note that Google Search may take up to several weeks to recrawl all pages on your site, in order to identify that SXG has been enabled for them. In those several weeks, there are other potential biases that may occur:
 
