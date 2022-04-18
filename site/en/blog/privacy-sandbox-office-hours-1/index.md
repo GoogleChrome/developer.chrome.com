@@ -4,10 +4,10 @@ title: "Join Privacy Sandbox Developer Office Hours #1: How Chrome's Origin Tria
 authors:
   - mariahhart
 description: >
-  The Google Chrome team will host developer office hours, where developers who are testing and integrating the Privacy Sandbox technologies can ask questions of Chrome tech leads. The first sessions will be dedicated to origin trials.
+  Join the Google Chrome team in our Privacy Sandbox office hours, where developers testing and integrating the Privacy Sandbox technologies can ask questions of Chrome tech leads.
 date: 2022-04-18
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/chmSoJfgOfptuBMorI3U.jpg
-alt: An office space with desks and chairs
+alt: An office space with desks and chairs.
 tags:
   - privacy
   - origin-trials
@@ -18,7 +18,7 @@ are testing and integrating the Privacy Sandbox technologies can ask questions
 of Chrome tech leads. 
 
 The first sessions will be dedicated to [origin trials](/blog/origin-trials/):
-how trials work and how developers can test new features. Office hours will be
+how they work and how developers can test new features. Office hours will be
 offered in multiple time zones and languages.
 
 **Session A - Chrome Developer Office Hours (AMER & EMEA friendly in English)**:
@@ -35,6 +35,8 @@ offered in multiple time zones and languages.
 * April 27th at 8:00 pm ET
 * April 28th at 9:00 am JST (Japan Standard Time)
 
+## Prepare for office hours
+
 To best prepare for the developer office hours, read the following articles:
 
 * [Getting started with Chrome's origin
@@ -44,12 +46,10 @@ To best prepare for the developer office hours, read the following articles:
 * [Troubleshooting Chrome's origin
   trials](http://developer.chrome.com/blog/origin-trial-troubleshooting)
 
-No registration is required. Find [details of how to attend the office hours
-here](https://docs.google.com/document/d/14GNexALd7dLBJe-MdLFuAjiZI3EhfNvk8zTs5Ct6nnM/edit#).
-Please feel free to jump in and ask questions. We are looking forward to your
-attendance.
+No registration is required. You can access the [Google Meet joining links and dial-in
+information](https://docs.google.com/document/d/14GNexALd7dLBJe-MdLFuAjiZI3EhfNvk8zTs5Ct6nnM/edit?usp=sharing).
+We look forward to your attendance, and we encourage you to jump in and
+ask questions.
 
-Photo by [Matt
-Hoffman](https://unsplash.com/@__matthoffman__?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on
-[Unsplash](https://unsplash.com/s/photos/office-hours?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+_Photo by [Matt Hoffman](https://unsplash.com/@__matthoffman__)
+on [Unsplash](https://unsplash.com/)._
