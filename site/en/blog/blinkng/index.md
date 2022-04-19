@@ -3,9 +3,9 @@ layout: 'layouts/blog-post.njk'
 title: 'RenderingNG deep-dive: BlinkNG'
 description: >
   Find out about BlinkNG and the various sub-projects that addressed long-standing problems in the organization and structure of Blink code.
-thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/G8miv1svP6yMEZbP0DqX.png
+thumbnail: image/HodOHWjMnbNw56hvNASHWSgZyAf2/eg6i9S7UHWfrkF9Oube7.png
 alt: The rendering pipeline before and aftr BLinkNG.
-date: 2022-03-29
+date: 2022-04-19
 authors:
   - stefanzager
   - chrishtr
