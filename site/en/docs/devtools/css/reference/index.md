@@ -128,7 +128,7 @@ If your browser supports the `lab()` function, the element is green, otherwise i
 
 [Cascade layers](https://developer.chrome.com/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
 
-[Inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
+To view cascade layers, [inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
 
 <div class="cascade-box"></div>
 <style>
