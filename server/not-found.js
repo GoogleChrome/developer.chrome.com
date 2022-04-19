@@ -22,9 +22,9 @@ const path = require('path');
 const fs = require('fs');
 
 const {doRedirect} = require('./env');
-const {defaultLocale} = require('../site/_filters/i18n');
 
 const ROOT_DIR = 'dist';
+const DEFAULT_LOCALE = 'en';
 
 /**
  * @param {string} originalPath The full URL path, which might include an i18n
@@ -38,7 +38,7 @@ const ROOT_DIR = 'dist';
 const getNonLocalizedURL = (
   originalPath,
   rootDir = ROOT_DIR,
-  locale = defaultLocale
+  locale = DEFAULT_LOCALE
 ) => {
   // E.g. '/ja/docs/privacy-sandbox/chips/' is split to
   // ['ja', 'docs', 'privacy-sandbox', 'chips', '']
@@ -107,7 +107,7 @@ const notFoundHandler = (req, res, next) => {
   const locale = req.url.split(path.sep)[1];
 
   // Send the 404 for the current locale, or the default if we can't find it.
-  let root = path.join(ROOT_DIR, defaultLocale);
+  let root = path.join(ROOT_DIR, DEFAULT_LOCALE);
   const toSend = path.join(ROOT_DIR, locale, '404', 'index.html');
   if (fs.existsSync(toSend)) {
     root = path.join(ROOT_DIR, locale);
