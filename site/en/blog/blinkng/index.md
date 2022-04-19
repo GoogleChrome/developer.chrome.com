@@ -21,7 +21,7 @@ _Blink_ refers to Chromium's implementation of the [web platform](https://en.wik
 
 [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) began life as a fork of [WebKit](https://en.wikipedia.org/wiki/WebKit), which is itself a fork of [KHTML](https://en.wikipedia.org/wiki/KHTML), which dates to 1998. It contains some of the oldest (and most critical) code in Chromium, and by 2014 it was definitely showing its age. In that year, we embarked on a set of ambitious projects under the banner BlinkNG, with the goal of addressing long-standing deficiencies in the organization and structure of the Blink code. This article will explore BlinkNG and its constituent projects: why we did them, what they accomplished, the guiding principles that shaped their design, and the opportunities for future improvements they afford.
 
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/G8miv1svP6yMEZbP0DqX.png", alt="The rendering pipeline before and after BlinkNG.", width="800", height="362" %}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/eg6i9S7UHWfrkF9Oube7.png", alt="The rendering pipeline before and after BlinkNG.", width="800", height="362" %}
 
 ## Rendering pre-NG
 
