@@ -79,7 +79,9 @@ before it receives the badge, paying special attention to the following:
    alt="Screenshot of an extension listing that has an established publisher badge.",
    class="screenshot" %}
 
-The Established Publisher badge showcases developers who have verified their identity and demonstrated compliance with the developer program policies. This badge is granted automatically to publishers who meet the following two conditions:
+The Established Publisher badge showcases developers who have verified their identity and
+demonstrated compliance with the developer program policies. This badge is granted automatically to
+publishers who meet the following two conditions:
 
 1. The publisher's identity has been [verified][verified].
 2. The publisher has established a consistent positive track record with Google services and
