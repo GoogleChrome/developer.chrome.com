@@ -417,12 +417,15 @@ Here's a description of each of the UI elements of the **Color Picker**:
 1.  **Shades**.
 2.  **Eyedropper**. See [Sample a color off the page with the Eyedropper][25].
 3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
-4.  **Display Value**. The RGBA, HSLA, or Hex representation of the color.
+4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
 5.  **Color Palette**. Click one of these squares to change the color to that square.
 6.  **Hue**.
 7.  **Opacity**.
-8.  **Display Value Switcher**. Toggle between the RGBA, HSLA, and Hex representations of the
+8.  **Display Value Switcher**. Toggle between the [RGBA][29], [HSLA][30], [HWBA][31], and [Hex][32] representations of the
     current color.
+    {% Aside %}
+    **Note**: Alternatively, to toggle between color representations, hold down <kbd>Shift</kbd> and click on the color preview button.
+    {% endAside %}
 9.  **Color Palette Switcher**. Toggle between the [Material Design palette][26], a custom palette,
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
@@ -535,3 +538,7 @@ To open the **Shadow Editor**:
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
+[29]: https://drafts.csswg.org/css-color/#rgb-functions
+[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
+[31]: https://drafts.csswg.org/css-color/#the-hsl-notation
+[32]: https://drafts.csswg.org/css-color/#hex-notation
