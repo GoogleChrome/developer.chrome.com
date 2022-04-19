@@ -5,7 +5,7 @@ banner:
   type: info
   text: "Join us behind the scenes to get perspectives and important updates from Chrome's Web Platform team."
   actions:
-    - text: Learn more
+    - text: Discover
       href: /insider
     - text: Dismiss
 ---
