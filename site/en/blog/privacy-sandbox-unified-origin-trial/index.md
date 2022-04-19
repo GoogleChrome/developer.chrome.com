@@ -68,25 +68,21 @@ and choose which aspects to implement—as much or as little as fits your needs.
 
 ## How do developers sign up for the origin trial?
 
-All active origin trials are available at the [Chrome Origin Trials
-site](/origintrials/). You will be able to register for the **"Privacy Sandbox
-Ads APIs"** origin trial from here when it is available.
-
-Much of the functionality available in the origin trial is intended for use in
-cross-site contexts, as in when you are providing a service as a third-party on
-the top-level site. To enable your origin trial for these additional contexts,
-**ensure that you select the option for "Third-party matching"**.
-
-You will receive an origin trial token that must be included either in a:
+Register for the [Privacy Sandbox Relevance and Measurement](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441)
+trial, and provide a trial token for every page on which you would like to run API code:
 
 *   `<meta>` tag in the top-level page's `<head>` section:
-    *   `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
+    `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
 *   HTTP header in the top-level page response:
-    *   `Origin-Trial: TOKEN_GOES_HERE`
+    `Origin-Trial: TOKEN_GOES_HERE`
 
-If you are enabling the origin trial as a third-party, then you **must inject
-the `<meta>` tag** into the **top-level page** (i.e. the first-party page, not
-your own content) from your script. For example:
+Some functionality available in the origin trial is intended for use in
+cross-site contexts, as in when you are providing a service as a third-party on
+the top-level site. If you need to enable your origin trial for these additional
+contexts, **ensure that you select the option for "Third-party matching"**.
+To enable the origin trial from third-party JavaScript, inject the `<meta>` tag**
+into the **top-level page** (i.e. the first-party page, not your own content)
+from your script. For example:
 
 ```javascript
 const otMeta = document.createElement('meta');
@@ -95,8 +91,12 @@ otMeta.setAttribute('content', 'TOKEN_GOES_HERE');
 document.querySelector('head').appendChild(otMeta);
 ```
 
-Learn more in [the guide to getting started with Chrome's origin
-trials](/blog/origin-trials/).
+{% Aside 'caution' %}
+An iframe accessing a trial feature (such as FLEDGE's [`joinAdInterestGroup()`](/blog/fledge-api#joinadinterestgroup))
+must provide a token that matches its origin.
+{% endAside %}
+
+Learn more in [the guide to getting started with Chrome's origin trials](/blog/origin-trials/).
 
 
 ## How do developers test locally? {: #local-testing}
