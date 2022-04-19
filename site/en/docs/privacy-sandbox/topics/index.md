@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-03-31
+updated: 2022-04-19
 authors:
   - samdutton
 ---
@@ -28,10 +28,54 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ---
 
+## Take part in a Topics origin trial {: #origin-trial}
+
+A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics,
+[FLEDGE](/docs/privacy-sandbox/fledge) and
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+
+To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
+
+Once you have successfully enrolled in the trial, you can try out the Topics JavaScript API on pages
+that provide a valid trial token:
+
+*   As a meta tag in the &lt;head&gt;:<br>
+
+    `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
+
+*   As an HTTP header:<br>
+
+    `Origin-Trial: TOKEN_GOES_HERE`
+
+*   By providing a token programmatically:<br>
+
+    ```javascript
+    const otMeta = document.createElement('meta');
+    otMeta.httpEquiv = 'origin-trial';
+    otMeta.content = 'TOKEN_GOES_HERE';
+    document.head.append(otMeta);
+    ```
+
+An iframe running Topics code—such as a `document.browsingTopics()` call to observe topics—will
+need to provide a token that matches its origin.
+
+{% Aside 'caution' %}
+
+Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
+on pages that provide a valid trial token.
+
+[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
+explains why this is so, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
+
+{% endAside %}
+
+
 ## Test with chrome://flags or feature flags {: #feature-flags}
 
-You can try out the Topics API for a single user running Chrome Canary 102:
-* By setting the `PrivacySandboxAdsAPIsOverride`  flag from the command line
+You can try out the Topics API for a single user running Chrome 101 or above:
+* By setting the `--enable-features=PrivacySandboxAdsAPIsOverride` flag from the command line
 * By enabling `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
@@ -40,7 +84,7 @@ line.
 
 {% Aside %}
 
-This is the in-progress version of the API for early testing, so it should not be considered
+This is an in-progress version of the API for early testing, so it should not be considered
 feature complete or indicative of the final implementation.
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
@@ -50,10 +94,10 @@ information for FLEDGE and other Privacy Sandbox proposals.
 
 ## Detect feature support
 
-Before using the API, check if it's available on the page. For example:
+Before using the API, check if it's supported by the browser and available in the document:
 
 ```javascript
-'browsingTopics' in document ?
+'browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics') ?
   console.log('document.browsingTopics() is supported on this page') :
   console.log('document.browsingTopics() is not supported on this page');
 ```
@@ -229,15 +273,15 @@ the [API caller](#caller) has previously observed, and the number of topics that
 available (such as the number of weeks of data accumulated). Anywhere from zero to three topics may
 be returned.
 
-### What might the Topics JavaScript API look like?
+### Access topics with the JavaScript API {: #access-topics}
 
-The code below provides a basic example of possible API usage (to keep it simple, there's no error
-handling).
+The code below provides a basic example of possible API usage to access topics for the current user
+(to keep it simple, there's no error handling).
 
 {% Aside 'warning' %}
 
-This snippet of code is provided only to show what a Topics JavaScript API might look like. API
-design is subject to change, and this code won't work in any browser right now!
+This snippet of code is provided only to show how the Topics JavaScript API might be used. API
+design is subject to change!
 
 {% endAside %}
 

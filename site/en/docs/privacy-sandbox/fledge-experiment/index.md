@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
-updated: 2022-03-31
+updated: 2022-04-19
 authors:
   - samdutton
 ---
@@ -22,16 +22,31 @@ provides an in-depth technical reference to the proposal.
 
 ## Try the API
 
+{% Aside 'caution' %}
+
+Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
+on pages that provide a valid trial token.
+
+[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
+explains why this is so, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
+
+{% endAside %}
+
 1. Try the [demo](https://fledge-demo.glitch.me). This provides a walkthrough of a basic FLEDGE
 implementation. [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 2. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#fledge) for updates on the
 implementation status of the FLEDGE API.
 3. Experiment with the API:
+   * [FLEDGE API developer guide](/blog/fledge-api#try-fledge) explains how to take part in the
+   Privacy Sandbox Relevance and Measurement origin trial.
+   * Try out FLEDGE for a single user by enabling `chrome://flags/#privacy-sandbox-ads-apis`
+   or by running Chrome from the command line with [FLEDGE feature flags](/blog/fledge-api#flags).
+   * The [developer guide](/blog/fledge-api) also provides a reference guide to API methods
+   and parameters.
    * The [source code](https://github.com/JackJey/fledge-demo) for the [FLEDGE demo](https://fledge-demo.glitch.me)
    provides a starting point for your own experimentation.
-   * The [FLEDGE API Developer Guide](/blog/fledge-api) provides a reference guide to API methods
-   and parameters.
    * [Debug FLEDGE worklets](/blog/fledge-api/#debug-fledge-worklets)
    explains how to use Chrome DevTools to help debug FLEDGE bidding and auction code.
    * The [developer guide](/blog/fledge-api/#what-features-are-supported-behind-these-feature-flags-in-the-latest-version-of-chrome)
