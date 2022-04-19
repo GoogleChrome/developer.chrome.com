@@ -137,7 +137,7 @@ To view cascade layers, [inspect](/docs/devtools/open/#elements) the element bel
     height: 30px;
     text-align: center;}
     .cascade-box::after { 
-        content: "I have a cascade of layers!";
+        content: "My styles are layered!";
       }
     /* Define the specificity */
 @layer base, component, page;
