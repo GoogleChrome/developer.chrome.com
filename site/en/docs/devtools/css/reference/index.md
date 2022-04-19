@@ -133,8 +133,12 @@ To view cascade layers, [inspect](/docs/devtools/open/#elements) the element bel
 <div class="cascade-box"></div>
 <style>
     .cascade-box{
-    width: 100px;
-    height: 30px;}
+    width: 250px;
+    height: 30px;
+    text-align: center;}
+    .cascade-box::after { 
+        content: "I have a cascade of layers!";
+      }
     /* Define the specificity */
 @layer base, component, page;
 @layer page {
