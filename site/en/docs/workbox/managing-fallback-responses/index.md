@@ -122,7 +122,7 @@ An example use case for the second fallback setup is if a page was cached ahead 
 
 Workbox maintains separate caches for precaching and runtime caches, and there may be situations where you want to cache something ahead of time without relying on precaching, since updates to the precache manifest will require you to deploy an updated service worker.
 
-To prime the runtime cache ahead of time with assets, you can do using so using the `warmStrategyCache` recipe from [`workbox-recipes`](LINK UP TO MODULE DOC). Under the hood, this strategy calls [`Cache.addAll`](https://developer.mozilla.org/docs/Web/API/Cache/addAll) in a service worker's `install` event.
+To prime the runtime cache ahead of time with assets, you can do using so using the `warmStrategyCache` recipe from [`workbox-recipes`](/docs/workbox/modules/workbox-recipes/). Under the hood, this strategy calls [`Cache.addAll`](https://developer.mozilla.org/docs/Web/API/Cache/addAll) in a service worker's `install` event.
 
 ```js
 import {warmStrategyCache} from 'workbox-recipes';
