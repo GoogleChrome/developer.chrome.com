@@ -711,6 +711,11 @@ kevinkiklee:
   description:
     en: 'Developer Relations Engineer, Google Chrome'
     ko: 'Google Chrome의 개발자 관계 엔지니어'
+stefanzager:
+  title:
+    en: 'Stefan Zager'
+  description:
+    en: 'Software Engineer, Google Chrome'
 rachelandrew:
   title:
     en: 'Rachel Andrew'
