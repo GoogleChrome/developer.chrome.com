@@ -91,12 +91,12 @@ otMeta.setAttribute('content', 'TOKEN_GOES_HERE');
 document.querySelector('head').appendChild(otMeta);
 ```
 
+Learn more in [the guide to getting started with Chrome's origin trials](/blog/origin-trials/).
+
 {% Aside 'caution' %}
 An iframe accessing a trial feature (such as FLEDGE's [`joinAdInterestGroup()`](/blog/fledge-api#joinadinterestgroup))
 must provide a token that matches its origin.
 {% endAside %}
-
-Learn more in [the guide to getting started with Chrome's origin trials](/blog/origin-trials/).
 
 
 ## How do developers test locally? {: #local-testing}
