@@ -6,6 +6,7 @@ description: >
   APIs: Topics, FLEDGE, and Attribution Reporting.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
+updated: 2022-04-19
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/1Eh5fSHWhurUuED3WGU1.png'
@@ -21,14 +22,11 @@ tracking. [Origin trials](/blog/origin-trials/) provide the opportunity for
 developers to evaluate and provide feedback on new web technologies through
 real-world testing. In previous origin trials sites have been able to test
 against individual APIs. For the Topics, FLEDGE and Attribution Reporting APIs
-we are providing a **single origin trial** that will allow sites to run unified
+we are providing a **single origin trial** that allows sites to run unified
 experiments across the APIs making up an initial version of the end-to-end ad
-lifecycle. The APIs are available for **local developer testing** in the
-**Chrome 102 [Canary](https://www.google.com/chrome/canary/)** release now and
-we expect to make the **origin trial** available as soon as possible during the
-**Chrome 101 [Beta](https://www.google.com/chrome/beta/)** window. The [Chrome
-101 Beta will also see updates to the user
-controls](https://blog.chromium.org/2022/03/what-to-expect-from-ps-testing.html)
+lifecycle. The APIs are available for testing in Chrome 101 [Beta](https://www.google.com/chrome/beta/)
+and above. The Chrome 101 Beta release also sees
+[updates to the user controls](https://blog.chromium.org/2022/03/what-to-expect-from-ps-testing.html)
 as we continue to iterate on configuration options.
 
 As a developer you will be able to sign up for this single origin trial that
@@ -43,17 +41,14 @@ testing against the APIs.
 The aim of this origin trial is to allow for meaningful testing across the ad
 lifecycle over multiple sites. To cover this journey, the origin trial includes:
 
-
-
 *   **[Topics](/docs/privacy-sandbox/topics/)** to observe and access a
     browser's topics via `document.browsingTopics()`.
 *   **[FLEDGE](/docs/privacy-sandbox/fledge/)** to manage a browser's interest
     groups, along with ad bidding and selection based on those groups and other
     signals.
     *   In this origin trial, FLEDGE is available on desktop and includes a
-        specific subset of all the proposed functionality. See the [FLEDGE
-        origin trial
-        details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
+        specific subset of all the proposed functionality. See the
+        [FLEDGE origin trial details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
         for more information.
 *   **[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)** to
     measure and report on the performance over the ad lifecycle.
@@ -64,8 +59,7 @@ lifecycle over multiple sites. To cover this journey, the origin trial includes:
         for local and origin trial testing soon.
     *   If you have participated in previous origin trials for Attribution
         Reporting, be aware that you will need to update inline with the latest
-        API changes. See the [Migration
-        guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)
+        API changes. See the [Migration guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)
         for details.
 
 While this setup allows for unified testing across all these APIs, you can pick
@@ -84,8 +78,6 @@ the top-level site. To enable your origin trial for these additional contexts,
 **ensure that you select the option for "Third-party matching"**.
 
 You will receive an origin trial token that must be included either in a:
-
-
 
 *   `<meta>` tag in the top-level page's `<head>` section:
     *   `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
@@ -120,10 +112,7 @@ testing.
 
 To enable APIs for testing, you must:
 
-
-
-*   be using **Chrome 102 [Canary](https://www.google.com/chrome/canary/) or
-    above**.
+*   be using **Chrome 101 [Beta](https://www.google.com/chrome/beta/) or above**.
     *   FLEDGE requires desktop Chrome.
     *   APIs are not available on iOS versions of Chrome.
 *   **enable the APIs** using the `chrome://flags/#privacy-sandbox-ads-apis`
@@ -183,8 +172,6 @@ user should still be eligible when they convert on a participating advertiser
 site.
 
 For a user to be eligible, they must:
-
-
 
 *   be using **Chrome 101 [Beta](https://www.google.com/chrome/beta/) or
     above**.
