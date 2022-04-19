@@ -56,7 +56,7 @@ guarantee being featured. Developers cannot pay to be featured as an Editors' Pi
 Badges on Chrome Web Store are visible to users as they browse the store, and offer an added signal
 of quality and trust on vetted items. Developers who earn these badges may receive higher rankings
 in search and filtering, and might also see their extensions appear in special promotions both on
-and off Chrome Web Store. Learn more about the badges below.
+and off Chrome Web Store. Learn more about badges below.
 
 ### Featured badge {: #featured-badge }
 
@@ -67,9 +67,9 @@ The Featured badge is assigned to extensions that follow our technical best prac
 high standard of user experience and design. Chrome team members manually evaluate each extension
 before it receives the badge, paying special attention to the following:
 
-1. Adherence to Chrome Web Store’s [best practices][best-practices] guidelines, including providing
+1. Adherence to Chrome Web Store’s [best practices][best-practices], including providing
    an enjoyable and intuitive experience, using the latest platform APIs and respecting the [privacy
-   of end-users][user-privacy].
+   of users][user-privacy].
 2. A [store listing page][best-listing] that is clear and helpful for users, with quality images and
    a detailed description.
 
@@ -87,7 +87,7 @@ The Established Publisher badge showcases developers who have verified their ide
 
 Any extensions built by a developer who follows the Chrome Web Store Developer Program Policies and
 does not have any unresolved violations will be considered. For new developers, it will take at
-least a few months of respecting these conditions to qualify. Today, this represents nearly 75% of
+least a few months of respecting these conditions to qualify. Today, this represents nearly 75 percent of
 all extensions in the Chrome Web Store and we expect this number to keep growing.
 
 Note that developers cannot pay to receive either badge, but we aim to provide other ways to request
@@ -95,12 +95,12 @@ consideration. The [One Stop Support][one-stop-support] page is trialing an opti
 developers to nominate extensions for the Featured badge. To successfully nominate your extension to
 receive the Featured badge, the following additional criteria must be met:
 
-1. Your item must be an extension.
-2. You must own the extension you are nominating.
-3. Your extension should have English language support.
-4. Your extension must be published and public.
-5. Your extension must not have any active policy violations.
-6. Your extension’s core features must be accessible without additional credentials or payments.
+* Your item must be an extension.
+* You must own the extension you are nominating.
+* Your extension should have English language support.
+* Your extension must be published and public.
+* Your extension must not have any active policy violations.
+* Your extension’s core features must be accessible without additional credentials or payments.
 
 [best-listing]: /docs/webstore/best_listing/
 [best-practices]: /docs/webstore/best_practices/
