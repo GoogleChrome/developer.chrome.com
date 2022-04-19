@@ -562,7 +562,7 @@ metadata that can be used at bidding time. For example:
 }
 ```
 
-#### How do buyers make bids? {: #biddinglogicurl}
+#### How do buyers make bids? {: #generatebid}
 
 The script at `biddingLogicUrl` provided by an interest group owner must include a `generateBid()`
 function. When [an ad-space seller calls `navigator.runAdAuction()`]](#ad-auction), the `generatedBid()`
@@ -1060,7 +1060,7 @@ The current implementation of FLEDGE in Chrome will warn if `reportWin()` is not
 The arguments passed to this function are:
 
 * `auctionSignals` and `perBuyerSignals`<br>
-The same values passed to [`generateBid()`](#generate-bid) for the winning bidder.
+The same values passed to [`generateBid()`](#generatebid) for the winning bidder.
 * `sellerSignals`<br>
 The return value of [`reportResult()`](#reportresult), which gives the seller an
 opportunity to pass information to the buyer.
