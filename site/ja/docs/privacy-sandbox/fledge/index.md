@@ -146,7 +146,7 @@ FLEDGE の機能は、実装作業が進むにつれて追加される予定で�
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png", alt="ノートパソコンのブラウザでサイトを閲覧するユーザーのイラスト。 JavaScript コードの joinadInterestGroup() がブラウザで実行されている。", width="400", height="187" %}
 
-広告主の [DSP](#dsp)（または広告主自体）は、JavaScript 呼び出しの `navigator.joinAdInterestGroup()<code> を実行し、ブラウザに、インタレストグループをそれがメンバーであるグループに追加するように求めます。 この例では、グループの名前を <code>custom-bikes` とします。 インタレストグループのオーナーは、[ステップ 4](#ad-auction) で説明した広告オークションの広告スペースバイヤーです。 このオーナーは、広告オークションの実行時にブラウザがグループの入札コード、広告コード、およびリアルタイムデータにアクセスできるようにするための構成情報を提供します。
+広告主の [DSP](#dsp)（または広告主自体）は、JavaScript 呼び出しの `navigator.joinAdInterestGroup()` を実行し、ブラウザに、インタレストグループをそれがメンバーであるグループに追加するように求めます。 この例では、グループの名前を `custom-bikes` とします。 インタレストグループのオーナーは、[ステップ 4](#ad-auction) で説明した広告オークションの広告スペースバイヤーです。 このオーナーは、広告オークションの実行時にブラウザがグループの入札コード、広告コード、およびリアルタイムデータにアクセスできるようにするための構成情報を提供します。
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇ ︎</p>
 
@@ -580,7 +580,7 @@ FLEDGE では、広告オークションを実行する当事者を指します�
 
 -  [FLEDGE API 開発者ガイド](/blog/fledge-api): API 使用法のリファレンスガイド
 -  [FLEDGE デモ](https://fledge-demo.glitch.me): 基本的な FLEDGE デプロイメントのウォークスルー
--  [FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードの動作を説明し、FLEDGE デバッグに Chrome DevTools を使用する方法を示します。
+-  [FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードの動作が説明されており、FLEDGE デバッグに Chrome DevTools を使用する方法が紹介されています。
 -  [FLEDGE API 技術説明書](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)

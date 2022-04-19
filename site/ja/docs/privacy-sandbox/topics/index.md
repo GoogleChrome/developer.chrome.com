@@ -34,7 +34,7 @@ Chrome Canary 102 を実行している単一のユーザーに対して Topics 
 
 これは、初期テストに向けた開発中の API バージョンであるため、機能が完全である、または最終的な実装を示しているとは見なさないでください。
 
-[プライバシーサンドボックスタイムライン](https://privacysandbox.com/timeline) は、FLEDGE およびその他のプライバシーサンドボックス提案の実装タイミング情報を提供します。
+[プライバシーサンドボックスのタイムライン](https://privacysandbox.com/timeline)には、FLEDGE とその他のプライバシーサンドボックス提案の実装時期に関する情報が提供されています。
 
 {% endAside %}
 
@@ -355,7 +355,7 @@ Topics API の説明では、次の場合に返されるトピックのリスト
 ## 貢献とフィードバックの共有
 
 -  **GitHub**: [提案の説明](https://github.com/jkarlin/topics)を読み、質問を提起し、[提案リポジトリに関する問題](https://github.com/jkarlin/topics/issues)のディスカッションに従います。
--  **W3C**: [ウェブ広告事業の改善 グループ](https://www.w3.org/community/web-adv/participants)の業界ユースケースについて議論する。
+-  **W3C**: [Web 広告事業の改善グループ](https://www.w3.org/community/web-adv/participants)で、業界ユースケースについて議論できます。
 -  **Topics API の通知**: [groups.google.com/a/chromium.org/g/topics-api-announce](https://groups.google.com/a/chromium.org/g/topics-api-announce) でメーリングリストに参加するか、閲覧します。
 -  **プライバシーサンドボックス開発者サポート**: [プライバシーサンドボックス開発者サポートリポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、ディスカッションに参加したりします。
 

@@ -20,7 +20,7 @@ authors:
 
 {% endAside %}
 
-## この記事は誰のためのものですか？
+## この記事の対象者
 
 この記事ではアトリビューションレポートの基礎的な情報を扱い、いくつかの基本的なコンセプトについて説明をしていますが、技術的な詳細情報は扱っていません。
 
@@ -186,7 +186,7 @@ Chrome が 提案する Attribution Reporting API は、Safari/WebKit が提案�
 
 {% endDetails %}
 
-## どのようなブラウザ構成が利用可能ですか？ {: #browser-configuration }
+## 利用可能なブラウザ構成 {: #browser-configuration }
 
 - ユーザーは、`chrome://settings/privacySandbox` のユーザー設定から API の利用を停止することができます。
 - **シークレット**モードの使用中は API が無効になります。
