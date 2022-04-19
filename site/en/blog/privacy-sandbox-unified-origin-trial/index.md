@@ -68,7 +68,7 @@ and choose which aspects to implement—as much or as little as fits your needs.
 
 ## How do developers sign up for the origin trial?
 
-Register for the [Privacy Sandbox Relevance and Measurement](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441)
+Register for the [Privacy Sandbox Relevance and Measurement](/origintrials/#/view_trial/771241436187197441)
 trial, and provide a trial token for every page on which you would like to run API code:
 
 *   `<meta>` tag in the top-level page's `<head>` section:
@@ -80,7 +80,7 @@ Some functionality available in the origin trial is intended for use in
 cross-site contexts, as in when you are providing a service as a third-party on
 the top-level site. If you need to enable your origin trial for these additional
 contexts, **ensure that you select the option for "Third-party matching"**.
-To enable the origin trial from third-party JavaScript, inject the `<meta>` tag**
+To enable the origin trial from third-party JavaScript, inject the `<meta>` tag
 into the **top-level page** (i.e. the first-party page, not your own content)
 from your script. For example:
 

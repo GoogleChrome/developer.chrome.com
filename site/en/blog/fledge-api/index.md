@@ -109,6 +109,12 @@ Provide a trial token for every page on which you would like to run FLEDGE API c
     document.head.append(otMeta);
     ```
 
+An iframe running FLEDGE code—such as a [`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
+call by an interest group owner—will need to provide a token that matches its origin.
+
+[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
+provides more details about the goals of the first trial and explains what features are supported.
+
 {% Aside 'caution' %}
 
 Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
@@ -119,12 +125,6 @@ explains why this is so, and shows how you can (and should) detect if an origin 
 available before attempting to use it.
 
 {% endAside %}
-
-An iframe running FLEDGE code—such as a [`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
-call by an interest group owner—will need to provide a token that matches its origin.
-
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the first trial and explains what features are supported.
 
 ### Test with `chrome://flags` or feature flags {: #flags}
 
