@@ -12,6 +12,9 @@ tags:
   - css
 ---
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to
 viewing and changing CSS.
 
@@ -120,6 +123,44 @@ If your browser supports the `lab()` function, the element is green, otherwise i
 {% Aside %}
 **Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
 {% endAside %}
+
+### View cascade layers {: #cascade-layers}
+
+[Cascade layers](https://developer.chrome.com/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
+
+[Inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
+
+<div class="cascade-box"></div>
+<style>
+    .cascade-box{
+    width: 100px;
+    height: 30px;}
+    /* Define the specificity */
+@layer base, component, page;
+@layer page {
+  .cascade-box {
+    background: palegreen;
+  }
+}
+@layer base {
+  .cascade-box {
+    background: rebeccapurple;
+  }
+}
+@layer component {
+  .cascade-box {
+    background: hotpink;
+  }
+}
+</style>
+
+In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
+
+To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
+
+The `page` layer has the highest specificity, therefore the element's background is green.
 
 ### View an element's box model {: #box-model }
 
