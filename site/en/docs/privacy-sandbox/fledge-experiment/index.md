@@ -53,40 +53,40 @@ implementation status of the FLEDGE API.
    details the features supported in the latest version of Chrome. [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
    about feature support and constraints.
 
-
 ## Get support
 
-{% Aside %}
-Is anything blocking you from experimenting with the API? Please ask us!
-{% endAside %}
+Is anything blocking you from experimenting with the API? Ask a question 
+about **your implementation**, about the **demo**, or about the 
+**documentation**:
 
-To ask a question about **your implementation**, about the **demo**, or about the **documentation**:
-* [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
-on the privacy-sandbox-dev-support repository. Make sure to select the issue template for FLEDGE.
-* Raise an issue on the [demo code repo on GitHub](https://github.com/JackJey/fledge-demo).
-* For more general questions about how to meet your **use cases** with the API,
-[file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
+*  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+   on the Privacy Sandbox Dev Support repository. Make sure to select the
+   Issue template for FLEDGE.
+*  Raise an issue on the [demo code repo on
+   GitHub](https://github.com/JackJey/fledge-demo).
+*  For more general questions about how to meet your **use cases** with the
+   API, [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 
 For bugs and issues with the implementation of the FLEDGE API in Chrome:
-* [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
-reported for the API.
-* Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
+*  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
+   reported for the API.
+*  Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
 ## Join the discussion
 
-Everyone is welcome to join in discussion of the FLEDGE proposal. In particular, if you're
-experimenting with the API, your feedback is essential.
+Everyone is welcome to join in discussion of the FLEDGE proposal. In 
+particular, if you're experimenting with the API, your feedback is essential.
 
 ### Discuss the API
 
 Like other Privacy Sandbox proposals, this API is documented and discussed publicly.
 
-- [Read the proposal explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
-- Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
-- [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a question, propose a
+*  [Read the proposal explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
+*  Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
+*  [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a question, propose a
 feature, or discuss a use case.
-- [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
+*  [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
   second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
   WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
 

@@ -18,7 +18,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 -  The [Topics API proposal](https://github.com/jkarlin/topics) has entered [public
    discussion](https://github.com/jkarlin/topics/issues) and is now available in an [origin trial](#origin-trial).
--  This proposal needs your feedback. If you have comments, please create an issue on the [Topics
+-  This proposal needs your feedback. If you have comments, create an issue on the [Topics
    Explainer repository](https://github.com/jkarlin/topics) or participate in discussions in the
    [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
    The explainer has a number of [open questions](https://github.com/jkarlin/topics/issues) that

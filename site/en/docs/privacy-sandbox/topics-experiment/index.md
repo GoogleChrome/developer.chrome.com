@@ -47,20 +47,19 @@ implementation status of the Topics API.
 
 ## Get support
 
-{% Aside %}
-Is anything blocking you from experimenting with the API? Please ask us!
-{% endAside %}
+Is anything blocking you from experimenting with the API? Ask a question 
+about **your implementation** or about the **documentation**:
 
-To ask a question about **your implementation** or about the **documentation**:
-* [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
-on the privacy-sandbox-dev-support repository. Make sure to select the issue template for Topics.
-* For more general questions about how to meet your **use cases** with the API,
-[file an issue on the proposal repository](https://github.com/jkarlin/topics/issues/new).
+*  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+   on the Privacy Sandbox Dev Support repository. Make sure to select the issue template for Topics.
+*  For more general questions about how to meet your **use cases** with the 
+   API, [file an issue on the proposal repository](https://github.com/jkarlin/topics/issues/new).
 
 For bugs and issues with the implementation of the Topics API in Chrome:
-* [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestCohort)
-reported for the API.
-* Raise a new issue at [crbug.com/new](https://crbug.com/new).
+
+*  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestCohort)
+   reported for the API.
+*  Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
 
 ## Join the discussion

@@ -779,7 +779,6 @@ JavaScript function.
 -  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
-
 ## Find out more
 
 -  [FLEDGE API developer guide](/blog/fledge-api): reference guide to API usage.
@@ -790,6 +789,6 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
----
+<hr />
 
-Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/photos/GL6ORxDMswI).
+_Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/)._
