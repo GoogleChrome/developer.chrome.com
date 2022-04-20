@@ -197,10 +197,9 @@ Yes. An observed topic for the current user, provided by the Topics API, could b
 contextual information by a seller or bidder. A topic could be included in
 the following properties:
 
-*  `auctionSignals`, a property of the auction configuration object which
-   is passed to `runAdAuction`
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
 *  `userBiddingSignals`, a property of the interest group configuration
-   object which is passed to `navigator.joinAdInterestGroup()`
+   object passed to `navigator.joinAdInterestGroup()`
 
 
 ## Attribution Reporting
