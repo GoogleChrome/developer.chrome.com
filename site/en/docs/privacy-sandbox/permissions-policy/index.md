@@ -28,26 +28,21 @@ Permissions Policy was previously known as Feature Policy. The key concepts rema
 [Structured Fields](https://www.rfc-editor.org/rfc/rfc8941.html) provide a set of common data structures to standardize parsing and serialization of HTTP header field values. Learn more about Structured Fields from Fastly's blog post, "[Improving HTTP with structured header fields](https://www.fastly.com/blog/improve-http-structured-headers)".
 
 {% Compare 'worse', 'old' %}
-
-```text
-geolocation ‘self’ https://example.com; camera ‘none’
-```
-
-{% CompareCaption %}
-Before with Feature Policy.
-{% endCompareCaption %}
-
+  ```text
+  geolocation ‘self’ https://example.com; camera ‘none’
+  ```
+  {% CompareCaption %}
+    Before with Feature Policy.
+  {% endCompareCaption %}
 {% endCompare %}
 
 {% Compare 'better', 'new' %}
-   ```text
-   geolocation=(self "https://example.com"), camera=()
-   ```
-
-{% CompareCaption %}
-Now with Permissions Policy.
-{% endCompareCaption %}
-
+  ```text
+  geolocation=(self "https://example.com"), camera=()
+  ```
+  {% CompareCaption %}
+    Now with Permissions Policy.
+  {% endCompareCaption %}
 {% endCompare %}
 
 ### Combine headers with the iframe `allow` attribute
