@@ -124,48 +124,6 @@ If your browser supports the `lab()` function, the element is green, otherwise i
 **Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
 {% endAside %}
 
-### View cascade layers {: #cascade-layers}
-
-[Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
-
-To view cascade layers, [inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
-
-<div class="cascade-box"></div>
-<style>
-    .cascade-box{
-    width: 250px;
-    height: 30px;
-    text-align: center;}
-    .cascade-box::after { 
-        content: "My styles are layered!";
-      }
-    /* Define the specificity */
-@layer base, component, page;
-@layer page {
-  .cascade-box {
-    background: palegreen;
-  }
-}
-@layer base {
-  .cascade-box {
-    background: rebeccapurple;
-  }
-}
-@layer component {
-  .cascade-box {
-    background: hotpink;
-  }
-}
-</style>
-
-In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
-
-To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
-
-The `page` layer has the highest specificity, therefore the element's background is green.
-
 ### View an element's box model {: #box-model }
 
 To view [the box model][7] of an element, go to the **Styles** tab. If your DevTools window is
@@ -211,6 +169,48 @@ To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus
 element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
+
+### View cascade layers {: #cascade-layers}
+
+[Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
+
+To view cascade layers, [inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
+
+<div class="cascade-box"></div>
+<style>
+    .cascade-box{
+    width: 250px;
+    height: 30px;
+    text-align: center;}
+    .cascade-box::after { 
+        content: "My styles are layered!";
+      }
+    /* Define the specificity */
+@layer base, component, page;
+@layer page {
+  .cascade-box {
+    background: palegreen;
+  }
+}
+@layer base {
+  .cascade-box {
+    background: rebeccapurple;
+  }
+}
+@layer component {
+  .cascade-box {
+    background: hotpink;
+  }
+}
+</style>
+
+In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
+
+To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
+
+The `page` layer has the highest specificity, therefore the element's background is green.
 
 ### View a page in print mode {: #print-mode }
 
@@ -544,5 +544,5 @@ To open the **Shadow Editor**:
 [28]: /docs/devtools/shortcuts#styles
 [29]: https://drafts.csswg.org/css-color/#rgb-functions
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
-[31]: https://drafts.csswg.org/css-color/#the-hsl-notation
+[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
