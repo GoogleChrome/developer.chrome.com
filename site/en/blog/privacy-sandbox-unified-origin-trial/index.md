@@ -1,9 +1,8 @@
 ---
-title: Testing the Privacy Sandbox ads relevance and measurement APIs
+title: Test the Privacy Sandbox ads relevance and measurement APIs
 description: >
   Learn about developer testing and the upcoming origin trial allowing for
-  unified experimentation across the Privacy Sandbox relevance and measurement
-  APIs: Topics, FLEDGE, and Attribution Reporting.
+  unified experimentation across the Privacy Sandbox relevance and measurement APIs: Topics, FLEDGE, and Attribution Reporting.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
 updated: 2022-04-21
@@ -14,6 +13,7 @@ alt: >
   Privacy Sandbox beta logo
 tags:
   - privacy
+  - origin-trials
 ---
 
 The [Privacy Sandbox](https://privacysandbox.com/open-web/) includes a selection

@@ -159,7 +159,9 @@ curated by Chrome for testing, but with the goal that the topic taxonomy becomes
 maintained by trusted ecosystem contributors. The taxonomy needs to provide a set of topics that is
 small enough in number (currently proposed to be around 350, though we expect the final number of
 topics to be between a few hundred and a few thousand) so that many browsers will be associated with
-each topic. To avoid sensitive categories, these topics must be public, human-curated, and kept
+each topic.
+
+To avoid sensitive categories, these topics must be public, human-curated, and kept
 updated. The initial taxonomy proposed for testing by Chrome has been human-curated [to exclude
 categories generally considered sensitive](#sensitive-topics), such as ethnicity or sexual
 orientation.
@@ -172,8 +174,10 @@ be distributed with the browser, so it would be openly developed and freely avai
 on the user's device, could then use the model to calculate the most popular topics for a user,
 based on the [hostnames](https://web.dev/same-site-same-origin/#origin) of the sites recently
 visited.
-The diagram below outlines a simplified example, showing how the Topics API might help an adtech
-platform to select an appropriate ad. This example assumes that the user's browser already has a
+
+The diagram below outlines a simplified example, to demonstrate how the 
+Topics API might help an adtech platform to select an appropriate ad. The 
+example assumes that the user's browser already has a
 model to map website hostnames to topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
@@ -242,7 +246,7 @@ limited timeframe.
 
 {% Aside 'key-term' %}
 
-A Topics API **caller** is the entity that _calls_ the `document.browsingTopics()` JavaScript
+A Topics API _caller_ is the entity that calls the `document.browsingTopics()` JavaScript
 method, and will use the topics returned by the method to help select relevant ads.
 Typically, a call to `document.browsingTopics()` would be from code included in a site from a
 third party such as an adtech platform. The browser determines the caller from the site of the
@@ -410,8 +414,9 @@ adtech2.example.
 The Topics API explainer proposes that topics are derived from a [classifier
 model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website
 [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
-Analyzing additional information (such as full URLs or page contents) might enable more relevant
-ads, but might also reduce privacy.
+
+Analyzing additional information (such as full URLs or page contents) might
+allow for more relevant ads, but might also reduce privacy.
 The classifier model for mapping hostnames to topics would be publicly available, and the explainer
 proposes that it should be possible to view the topics for a site via browser developer tools. The
 mapping model would be updated periodically; the frequency of this is still under consideration.
@@ -485,7 +490,8 @@ In addition, both sites and users can [opt out](#opt-out) of the Topics API.
 
 {% Aside %}
 
-As [the Topics proposal explainer states](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
+The [Topics proposal explainer states](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
+
 "Third party cookies can be used to track anything about a user, from the
 exact URLs they visited, to the precise page content on those pages. This 
 could include limitless sensitive material. The Topics API, on the other
