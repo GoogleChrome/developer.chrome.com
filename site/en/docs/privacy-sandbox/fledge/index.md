@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-03-31
+updated: 2022-04-19
 authors:
   - samdutton
 ---
@@ -121,9 +121,9 @@ buyer's code can include a `reportWin()` function.
 
 ## How can I try FLEDGE?
 
-* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out FLEDGE for a
-single user by running Chrome from the command line using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-to manually enable the API.
+* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to take part in the
+Privacy Sandbox Relevance and Measurement origin trial and how to try out FLEDGE for a single user
+by setting Chrome flags.
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
 deployment across advertiser and publisher sites.
@@ -177,9 +177,9 @@ of the FLEDGE API currently being tested in Chrome. The [FLEDGE API developer gu
 explains what FLEDGE features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
-We expect the features of FLEDGE will be added over time as work on implementation continues. Once
-the API reaches the origin trial stage, we'll provide a regularly-updated list of which parts are
-already implemented and what's still in progress.
+We expect the features of FLEDGE will be added over time as work on implementation continues. During
+the origin trial stage, we'll regularly update a list of which features are already
+implemented and what's still in progress.
 
 {% endAside %}
 
@@ -779,7 +779,6 @@ JavaScript function.
 -  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
-
 ## Find out more
 
 -  [FLEDGE API developer guide](/blog/fledge-api): reference guide to API usage.
@@ -790,6 +789,6 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
----
+<hr />
 
-Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/photos/GL6ORxDMswI).
+_Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/)._
