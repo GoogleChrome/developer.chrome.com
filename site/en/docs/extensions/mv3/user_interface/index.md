@@ -21,7 +21,7 @@ The [`action` API][api-action] controls the extension's action (toolbar icon). I
 
 Users can trigger an extension's action by expanding the extension menu and selecting the desired
 extension. 
-	
+
 In order to make it easier to access an extension, the user may choose to pin the extension's action to the
 toolbar. Once pinned, the extension's action will appear to the left of the extension menu. Users
 can rearrange their pinned extensions by dragging and dropping their action icons in the desired
@@ -32,7 +32,7 @@ order.
 {% Column %} 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
-width="400", height="374" %}
+width="400", height="374", class="screenshot" %}
 
 **Unpinned extension** 
 
@@ -41,7 +41,7 @@ width="400", height="374" %}
 {% Column %} 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
-width="400", height="382" %}
+width="400", height="382", class="screenshot" %}
 
 **Pinned extension** 
 
@@ -78,7 +78,7 @@ the extension's context menu will appear.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
-alt="Clicked Disabled extension", width="252", height="180", class="screenshot"%}  
+alt="Clicked Disabled extension", width="252", height="180", class="screenshot" %}  
 
 <figcaption>
     Disabled extension.
