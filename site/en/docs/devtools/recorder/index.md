@@ -185,24 +185,13 @@ To export a user flow:
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LJJqpZ0vOEdp6rdDLXmP.png", alt="Download format options", width="800", height="490" %}
  1. Select one of the following formats from the dropdown list:
     - **Export as a JSON file**. Download the recording as a JSON file.
-    - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script. In this script, the steps remain a JSON object and the file is smaller. You can replay this script with the new Puppeteer replay library.
-    - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script. This script is entirely in JavaScript and you can replay it with the regular Puppeteer library.
+    - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
+    - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
 1. Save the file.
 
-To replay the exported recording depending on its format:
-- **JSON**. [Import the file](#import-flows) to the **Recorder** and click <span class="material-icons">play_arrow</span>**Replay** .
-- **Puppeteer replay script**. Run the following commands:
-    ```shell
-    npm install puppeteer
-    npm install @puppeteer/replay
-    # replay JSON
-    npx @puppeteer/replay user-flow.json
-    ```
-- **Puppeteer script**. Run the following commands:
-   ```shell
-   npm install puppeteer
-   node user-flow.js
-   ```
+In the Puppeteer Replay script, the steps remain a JSON object and the file is smaller. You can replay this script with the new Puppeteer Replay library.
+
+The regular Puppeteer script is entirely in JavaScript and you can replay it with the regular Puppeteer library.
 
 ### Import a user flow {: #import-flows }
 
