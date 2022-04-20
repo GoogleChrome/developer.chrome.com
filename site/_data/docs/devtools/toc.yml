@@ -76,7 +76,12 @@
 - url: /docs/devtools/memory-inspector/
 - url: /docs/devtools/device-mode/override-user-agent/
 - url: /docs/devtools/recorder/
-- url: /docs/devtools/css/print-preview/
+- title: i18n.docs.devtools.rendering
+  sections:
+    - url: /docs/devtools/rendering/
+    - url: /docs/devtools/rendering/performance
+    - url: /docs/devtools/rendering/emulate-css
+    - url: /docs/devtools/rendering/apply-effects
 - url: /docs/devtools/security/
 - title: i18n.docs.devtools.sensors
   sections:

@@ -606,72 +606,32 @@ To view advanced information about a paint event:
 
 Use the **Rendering** tab's features to help visualize your page's rendering performance.
 
-To open the **Rendering** tab:
-
-1.  Open the [Command Menu][28].
-2.  Start typing `Rendering` and select `Show Rendering`. DevTools displays the **Rendering** tab at
-    the bottom of your DevTools window.
-
-{% Img src="image/admin/hBtfLDNsBbr9vJhy4GHr.png", alt="The Rendering tab", width="800", height="687" %}
-
-**Figure 35**. The **Rendering** tab
+[Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
 
 ### View frames per second in realtime with the FPS meter {: #fps-meter }
 
-The **FPS meter** is an overlay that appears in the top-right corner of your viewport. It provides a
-realtime estimate of FPS as the page runs. To open the **FPS meter**:
+The **Frame rendering stats** is an overlay that appears in the top-right corner of your viewport. It provides a realtime estimate of FPS as the page runs.
 
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][29].
-2.  Enable the **FPS Meter** checkbox.
+See [Frame rendering stats](/docs/devtools/rendering#frame-rendering-stats).
 
-{% Img src="image/admin/ztC0PRZRr0tczy4jqrxq.png", alt="The FPS meter", width="800", height="593" %}
+### View painting events in realtime with Paint Flashing {: #paint-flash }
 
-**Figure 36**. The FPS meter
+Use **Paint Flashing** to get a realtime view of all paint events on the page. 
 
-### View painting events in realtime with Paint Flashing {: #paint-flashing }
+See [Paint flashing](/docs/devtools/rendering#paint-flashing).
 
-Use Paint Flashing to get a realtime view of all paint events on the page. Whenever a part of the
-page gets re-painted, DevTools outlines that section in green.
-
-To enable Paint Flashing:
-
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][30].
-2.  Enable the **Paint Flashing** checkbox.
-
-{% Img src="image/admin/AKUsdeRRaSFncCF94ap5.gif", alt="Paint Flashing", width="800", height="322" %}
-
-**Figure 37**. **Paint Flashing**
-
-### View an overlay of layers with Layer Borders {: #layer-borders }
+### View an overlay of layers with Layer Borders {: #layer-border }
 
 Use **Layer Borders** to view an overlay of layer borders and tiles on top of the page.
 
-To enable Layer Borders:
+See [Layer borders](/docs/devtools/rendering#layer-borders).
 
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][31].
-2.  Enable the **Layer Borders** checkbox.
+### Find scroll performance issues in realtime {: scrolling-performance-issues }
 
-{% Img src="image/admin/FAgzk3UUc2WZC5i28X9f.png", alt="Layer Borders", width="800", height="515" %}
-
-**Figure 38**. **Layer Borders**
-
-See the comments in [`debug_colors.cc`][32] for an explanation of the color-codings.
-
-### Find scroll performance issues in realtime {: #scrolling-performance-issues }
-
-Use Scrolling Performance Issues to identify elements of the page that have event listeners related
-to scrolling that may harm the performance of the page. DevTools outlines the
+Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the
 potentially-problematic elements in teal.
 
-To view scroll performance issues:
-
-1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][33].
-2.  Enable the **Scrolling Performance Issues** checkbox.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NH12bctPHXR9VD9GO7ov.png", alt="Scrolling Performance Issues is indicating that there's a mousewheel event listener encompassing the entire viewport that may harm scroll performance", width="800", height="498" %}
-
-**Figure 39**. **Scrolling Performance Issues** is indicating that there's a `mousewheel` event
-listener encompassing the entire viewport that may harm scroll performance
+See [Scrolling performace issues](/docs/devtools/rendering#scrolling-performance-issues).
 
 [1]: /docs/devtools/evaluate-performance
 [2]: #view-screenshot
@@ -704,5 +664,4 @@ listener encompassing the entire viewport that may harm scroll performance
 [29]: #rendering
 [30]: #rendering
 [31]: #rendering
-[32]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
 [33]: #rendering
