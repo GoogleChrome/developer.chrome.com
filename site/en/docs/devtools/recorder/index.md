@@ -87,6 +87,10 @@ After recording a user flow, you can replay it by clicking on the **Replay** but
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
+{% Aside 'gotchas' %}
+When replaying a user flow recording, the **Recorder** waits until the element is visible or clickable in the viewport or tries to automatically scroll the element into the viewport before replaying the corresponding step.
+{% endAside %}
+
 You can simulate a slow network connection by configuring the **Replay settings**. For example, expand the **Replay settings**, select **Slow 3G** in the **Network** dropdown.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SSoCLGi4xdaVHKO9D0ec.png", alt="replay settings", width="800", height="528" %}
 
