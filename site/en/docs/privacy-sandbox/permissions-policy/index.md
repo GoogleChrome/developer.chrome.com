@@ -3,16 +3,21 @@ layout: 'layouts/doc-post.njk'
 title: 'Controlling browser features with Permissions Policy'
 subhead: >
   Manage how your page and third-party iframes on your page have access to browser features
-date: 2022-04-06
+date: 2022-04-20
 authors:
   - kevinkiklee
 ---
 
 <!--lint disable no-smart-quotes-->
 
-There are numerous features available in the browser that provide important functionality. For example, a connection to webcams allows users to chat with people around the world, and integration with GPS helps users use online maps to drive to unfamiliar neighborhoods. Unfortunately, these features can be misused for malicious purposes that violate user privacy. Developers should have a clear understanding of who has access to browser features and set up access controls.
+Permissions Policy allows the developer to control the browser features available to a page, its iframes, and subresources, by declaring a set of policies for the browser to enforce. The policies are applied to origins provided in a response header origin list. The origin list can contain same-origins and/or cross-origins, and it enables the developer to control first-party and third-party access to browser features. The user has the final decision to allow access to more powerful features, and needs to provide explicit permission via a prompt. 
 
-Permissions Policy allows the developer to control the browser features available to a page and its iframes, by declaring a set of policies for the browser to enforce. The policies are applied to [origins](/docs/privacy-sandbox/glossary/#origin) provided in a response header origin list. The origins can be same-origin (where your code resides) or cross-origin (where someone else’s code resides). 
+Permissions Policy allows the top-level site to define what it and its third parties intend to use, and removes the burden from the user of determining whether the feature access request is legitimate or not. For example, by blocking the geolocation feature for all third parties via Permissions Policy, the developer can be certain that no third party will gain access to the user’s geolocation. 
+
+{% Aside %}
+[Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms. Privacy Sandbox APIs, such as [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) and the [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/), are managed by Permissions Policy in the same way that features like `geolocation` and `camera` are managed. For a list of web platform APIs that rely on Permissions Policy, see the [feature list](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md) (The list may not be always up to date).
+{% endAside %}
+
 
 ## Changes to Permissions Policy, formerly Feature Policy
 
@@ -76,12 +81,13 @@ And explicitly set the `allow` attribute to the iframe tag for the trusted site:
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation">
 ```
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/6glnEtP01JOyxOtdephq.png", alt="Quick overview diagram of Permissions Policy usage", width="800", height="238" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8mRSZZQAhoAHsa6Tgvyo.png", alt="Quick overview diagram of Permissions Policy usage", width="700", height="238" %}
 
 In this example, the header origin list lets only your site (`self`) and `https://trusted-site.example` to use the geolocation feature. `https://ad.example` is not allowed to use geolocation. 
 
 1. Your site `https://your-site.example` is allowed to use the geolocation feature with the user’s consent.
 1. A same-origin iframe (`https://your-site.example`) is allowed to use the feature without the usage of the `allow` attribute.
+1. An iframe served from a different subdomain (`https://subdomain.your-site-example`) that was not added to the origin list, and has the allow attribute set on the iframe tag, is blocked from using the feature. Different subdomains are considered same-site but cross-origin. 
 1. A cross-origin iframe (`https://trusted-site.example`) that was added to the origin list and has the `allow` attribute set on the iframe tag is allowed to use the feature.
 1. A cross-origin iframe (`https://trusted-site.example`) added to the origin list, without the `allow` attribute, is blocked from using the feature.
 1. A cross-origin iframe (`https://ad.example`) which wasn't added to the origin list is blocked from using the feature, even if the `allow` attribute is included in the iframe tag.
@@ -123,6 +129,12 @@ If the Permission Policy header is not present in the response, the default valu
 With the change in Permissions Policy from Feature Policy, adding the origin to the header origin list is no longer enough to enable the feature for a cross-origin iframe. The iframe must include the `allow` attribute if it’s cross-origin, regardless of what is set in the header origin list. 
 {% endAside %}
 
+#### Different subdomains and paths
+
+Different subdomains, such as `https://your-site.example` and `https://subdomain.your-site.example`, are considered [same-site but cross-origin](https://web.dev/same-site-same-origin/). Therefore, adding a subdomain in the origin list does not allow access to another subdomain of the same site. Every embedded subdomain that wants to use the feature must be added separately to the origin list.  For example, if access to the user’s browsing topics is allowed to the same-origin only with the header `Permissions-Policy: browsing-topics=(self)`, an iframe from a different subdomain of the same site, `https://subdomain.your-site.example`, will not have access to the topics. 
+
+Different paths, such as `https://your-site.example` and `https://your-site.example/embed`, are considered same-origin, and different paths do not have to be listed in the origin list. 
+
 ### Iframe `allow` attribute
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/mD9lgR2lky1kdL8tohHx.png", alt="Iframes setup", width="800", height="316" %}
@@ -145,13 +157,13 @@ The syntax `allow="geolocation"` is a shorthand for allow="geolocation 'src'". s
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Y7RGrm7k7ysTtKfLvhO4.png", alt="Iframe navigation setup", width="500", height="283" %}
 
-You may have a situation where an iframe navigates to another origin, where an ad from one origin is rendered in an iframe, then after a refresh time interval is passed, an ad from another origin is rendered. By default, if an iframe navigates to another origin, the policy is not applied to the origin that the iframe navigates to. By listing the origin that iframe navigates to in the `allow` attribute, the permissions policy that was applied to the original iframe will be applied to the origin the iframe navigates to. 
+By default, if an iframe navigates to another origin, the policy is not applied to the origin that the iframe navigates to. By listing the origin that the iframe navigates to in the `allow` attribute, the Permissions Policy that was applied to the original iframe will be applied to the origin the iframe navigates to. 
 
 ```html
 <iframe src="https://trusted-site.example" allow="geolocation https://trusted-site.example https://trusted-navigated-site.example">
 ```
 
-You can see it in action by visiting the iframe [navigation demo](https://permissions-policy-demo.glitch.me/demo/nav-allowed).
+You can see it in action by visiting the [iframe navigation demo](https://permissions-policy-demo.glitch.me/demo/nav-allowed).
 
 ## Example Permissions Policy setups
 
@@ -226,29 +238,9 @@ The Feature Policy API can be used for policies set by Permissions Policy, with 
 * Returns `true` if the feature is allowed for the specified origin. 
 * If the method is called on `document`, this method no longer tells you whether the feature is allowed for the specified origin like Feature Policy did. Now, this method tells you that it’s possible for the feature to be allowed to that origin. You must conduct an additional check of whether the iframe has the `allow` attribute set or not. The developer must conduct an additional check for the `allow` attribute on the iframe element to determine if the feature is allowed for the third-party origin. 
 
-#### Code example with `document`
+#### Check for features in an iframe with the  `element` object
 
-The following code snippet checks that the allow attribute value contains the string ‘camera’. 
-
-```html
-<iframe id="some-iframe" src="https://example.com" allow="camera"></iframe>
-```
-```text
-Permissions-Policy: camera=(self "https://example.com")
-```
-```js
-const isCameraPolicySet = document.featurePolicy.allowsFeature('camera', 'https://example.com') 
-
-const someIframeEl = document.getElementById('some-iframe')
-const hasCameraAttributeValue = someIframeEl.hasAttribute('allow') 
-  && someIframeEl.getAttribute(‘allow’).includes('camera')
-
-const isCameraFeatureAllowed = isCameraPolicySet && hasCameraAttributeValue
-```
-
-#### Better approach for checking iframe feature access
-
-Instead of the above approach, you can use element.allowsFeature(feature) that takes the allow attribute into account unlike document.allowsFeature(feature, origin) that does not. To simplify the code, we can use that to inspect the featurePolicy object on the actual iframe element, rather than checking for that origin from the document. 
+You can use `element.allowsFeature(feature)` that takes the allow attribute into account unlike `document.allowsFeature(feature, origin)` that does not. 
 
 ```js
 const someIframeEl = document.getElementById(‘some-iframe’)
@@ -266,9 +258,19 @@ const isCameraFeatureAllowed = someIframeEl.featurePolicy.allowsFeature(‘camer
 * Returns a list of features available in the browser.
 * The behavior is the same for both policies set by Permissions Policy and Feature Policy
 
+## Chrome DevTools integration
+
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/BBe4KFDoiYEkWApctsOE.png", alt="Chrome DevTools integration with Permissions Policy", width="800", height="446" %}
+
+Check out how Permissions Policy works in DevTools.
+
+1. [Open Chrome DevTools](/docs/devtools/open/#elements).
+2. Open the **Application** panel to check the allowed features and disallowed features of each frame.
+3. In the sidebar, select the frame that you want to inspect. You will be presented with a list of features that the selected frame is allowed to use and a list of features that are blocked in that frame. 
+
 ## Migration from Feature-Policy
 
-If you are currently using the Feature-Policy header, you can implement the following steps to prepare for Permissions Policy.
+If you are currently using the `Feature-Policy` header, you can implement the following steps to migrate to Permissions Policy.
 
 ### Replace Feature Policy headers with Permissions Policy headers
 
@@ -294,11 +296,38 @@ Permissions-Policy:
 
 ### Update `document.allowsFeature(feature, origin)` usage
 
-If you use `document.allowsFeature(feature, origin)` method, use `allowsFeature()` method attached on the iframe element, and not the containing document. The method `element.allowsFeature()` accounts for the allow attribute while `document.allowsFeature()` does not. The sample code is found in the [previous section](#better-approach-for-checking-iframe-feature-access).
+If you are using `document.allowsFeature(feature, origin)` method to check allowed features for iframes, use `allowsFeature(feature)` method attached on the iframe element, and not the containing `document`. The method `element.allowsFeature(feature)` accounts for the allow attribute while `document.allowsFeature(feature, origin)` does not.  
+
+#### Checking feature access with `document`
+If you wish to continue using `document` as the base node, then you must conduct an additional check for the `allow` attribute on the iframe tag. 
+
+```html
+<iframe id="some-iframe" src="https://example.com" allow="camera"></iframe>
+```
+
+```text
+Permissions-Policy: camera=(self "https://example.com")
+```
+
+```js
+const isCameraPolicySet = document.featurePolicy.allowsFeature(‘camera’, ‘https://example.com’) 
+
+const someIframeEl = document.getElementById(‘some-iframe’)
+const hasCameraAttributeValue = someIframeEl.hasAttribute('allow') 
+&& someIframeEl.getAttribute(‘allow’).includes('camera')
+
+const isCameraFeatureAllowed = isCameraPolicySet && hasCameraAttributeValue
+```
+
+Instead of updating the existing code using `document`, it’s recommended to call `allowsFeature()` on the `element` object like the example in the [previous section]().
 
 ## Reporting API
 
 The [Reporting API](https://web.dev/reporting-api/) provides a reporting mechanism for web applications in a consistent manner, and Reporting API for Permissions Policy violations is available as an experimental feature.
+
+If you would like to test the experimental feature, follow the [walkthrough](https://web.dev/reporting-api/#use-devtools) and enable the flag in `chrome://flags/#enable-experimental-web-platform-features`. With the flag enabled, you can observe Permissions Policy violations in DevTools under the Application tab:
+
+The following example shows how the Reporting API header may be constructed: 
 
 ```text
 Reporting-Endpoints: main-endpoint="https://reports.example/main", default="https://reports.example/default"
@@ -309,17 +338,9 @@ Document-Policy: document-write=?0; report-to=main-endpoint;
 
 In the current implementation, you can receive policy violation reports from any violations occurring within that frame by configuring an endpoint named 'default' like the example above. Subframes will require their own reporting configuration. 
 
-There is currently a discussion regarding its usefulness, and feel free to share your thoughts at the [Reporting API discussion](https://github.com/w3c/webappsec-permissions-policy/issues/386).
-
-## Chrome DevTools integration
-
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/BBe4KFDoiYEkWApctsOE.png", alt="Chrome DevTools integration with Permissions Policy", width="800", height="446" %}
-
-Check out how Permissions Policy works in DevTools.
-
-1. [Open Chrome DevTools](/docs/devtools/open/#elements).
-2. Open the **Application** panel to check the allowed features and disallowed features of each frame.
-3. In the sidebar, select the frame that you want to inspect. You will be presented with a list of features that the selected frame is allowed to use and a list of features that are blocked in that frame. 
+{% Aside %}
+If you would like to see Permissions Policy support in the Reporting API by default, then add your support or comments to the [discussion](https://github.com/w3c/webappsec-permissions-policy/issues/386).
+{% endAside %}
 
 ## Find out more
 
