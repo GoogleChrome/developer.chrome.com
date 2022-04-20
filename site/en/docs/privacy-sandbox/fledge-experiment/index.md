@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
-updated: 2022-03-31
+updated: 2022-04-19
 authors:
   - samdutton
 ---
@@ -22,56 +22,71 @@ provides an in-depth technical reference to the proposal.
 
 ## Try the API
 
+{% Aside 'caution' %}
+
+Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
+on pages that provide a valid trial token.
+
+[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
+explains why this is so, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
+
+{% endAside %}
+
 1. Try the [demo](https://fledge-demo.glitch.me). This provides a walkthrough of a basic FLEDGE
 implementation. [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 2. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#fledge) for updates on the
 implementation status of the FLEDGE API.
 3. Experiment with the API:
+   * [FLEDGE API developer guide](/blog/fledge-api#try-fledge) explains how to take part in the
+   Privacy Sandbox Relevance and Measurement origin trial.
+   * Try out FLEDGE for a single user by enabling `chrome://flags/#privacy-sandbox-ads-apis`
+   or by running Chrome from the command line with [FLEDGE feature flags](/blog/fledge-api#flags).
+   * The [developer guide](/blog/fledge-api) also provides a reference guide to API methods
+   and parameters.
    * The [source code](https://github.com/JackJey/fledge-demo) for the [FLEDGE demo](https://fledge-demo.glitch.me)
    provides a starting point for your own experimentation.
-   * The [FLEDGE API Developer Guide](/blog/fledge-api) provides a reference guide to API methods
-   and parameters.
    * [Debug FLEDGE worklets](/blog/fledge-api/#debug-fledge-worklets)
    explains how to use Chrome DevTools to help debug FLEDGE bidding and auction code.
    * The [developer guide](/blog/fledge-api/#what-features-are-supported-behind-these-feature-flags-in-the-latest-version-of-chrome)
    details the features supported in the latest version of Chrome. [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
    about feature support and constraints.
 
-
 ## Get support
 
-{% Aside %}
-Is anything blocking you from experimenting with the API? Please ask us!
-{% endAside %}
+Is anything blocking you from experimenting with the API? Ask a question 
+about **your implementation**, about the **demo**, or about the 
+**documentation**:
 
-To ask a question about **your implementation**, about the **demo**, or about the **documentation**:
-* [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
-on the privacy-sandbox-dev-support repository. Make sure to select the issue template for FLEDGE.
-* Raise an issue on the [demo code repo on GitHub](https://github.com/JackJey/fledge-demo).
-* For more general questions about how to meet your **use cases** with the API,
-[file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
+*  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+   on the Privacy Sandbox Dev Support repository. Make sure to select the
+   Issue template for FLEDGE.
+*  Raise an issue on the [demo code repo on
+   GitHub](https://github.com/JackJey/fledge-demo).
+*  For more general questions about how to meet your **use cases** with the
+   API, [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 
 For bugs and issues with the implementation of the FLEDGE API in Chrome:
-* [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
-reported for the API.
-* Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
+*  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)
+   reported for the API.
+*  Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
 ## Join the discussion
 
-Everyone is welcome to join in discussion of the FLEDGE proposal. In particular, if you're
-experimenting with the API, your feedback is essential.
+Everyone is welcome to join in discussion of the FLEDGE proposal. In 
+particular, if you're experimenting with the API, your feedback is essential.
 
 ### Discuss the API
 
 Like other Privacy Sandbox proposals, this API is documented and discussed publicly.
 
-- [Read the proposal explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
-- Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
-- [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a question, propose a
+*  [Read the proposal explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
+*  Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
+*  [Open a new issue](https://github.com/WICG/turtledove/issues/new) to ask a question, propose a
 feature, or discuss a use case.
-- [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
+*  [Join the scheduled calls for FLEDGE](https://github.com/WICG/turtledove/issues/88) (every
   second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
   WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
 

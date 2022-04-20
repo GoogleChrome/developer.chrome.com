@@ -177,8 +177,10 @@
     "twitter": "hochsays"
   },
   "jeffposnick": {
-    "homepage": "https://twitter.com/jeffposnick",
-    "twitter": "jeffposnick"
+    "homepage": "https://jeffy.info/",
+    "twitter": "jeffposnick",
+    "github": "jeffposnick",
+    "image": "image/FNkVSAX8UDTTQWQkKftSgGe9clO2/aNrmVViMdqMvdXZn0NHA.jpg"
   },
   "mattgaunt": {
     "homepage": "https://gauntface.com/blog",
@@ -601,7 +603,7 @@
     "github": "mysterydate",
     "twitter": "_mysterydate",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/X8o5K4jnZHhQgHfkmJY7.jpeg"
-    },
+  },
   "victortan": {
     "country": "US",
     "github": "victortan",
@@ -636,6 +638,10 @@
     "glitch": "kevinkiklee",
     "image": "image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/8bRRaZVXzJKCDu0RlK1Y.jpg"
   },
+  "stefanzager": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/j51qMPHhY07cFu4LQd9y.jpeg"
+  },
   "rachelandrew": {
     "country": "UK",
     "twitter": "rachelandrew",
@@ -647,5 +653,22 @@
     "country": "US",
     "twitter": "bgalbs",
     "image": "image/C8ys09lNbQOJLokQMhRtN2A0YU12/cySC1Gzh8NlFSsURpnpS.jpg"
+  },
+  "twifkak": {
+    "twitter": "twifkak",
+    "github": "twifkak",
+    "image": "image/rULxC7pPw3PFS4o9xr7v8isFmCv1/fDaDWpuKLKDm4mjnt0jV.jpg"
+  },
+  "jhey": {
+    "country": "UK",
+    "twitter": "jh3yy",
+    "github": "jh3y",
+    "linkedin": "https://www.linkedin.com/in/jheytompkins/",
+    "homepage": "https://jhey.dev/links",
+    "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JMkAJAgH01auU1FiapGg.jpeg"
+  },
+  "mariahhart": {
+    "country": "US",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/iy1Y4UTfdXCdXqdnveqi.jpg"
   }
 }

@@ -16,6 +16,15 @@ updated: 2022-04-11
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Chrome 102: {: #m102-registercontentscripts-main-world }
+
+April 14, 2022
+
+Dynamically registered content scripts can now specify the
+[world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
+[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+for details.
+
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
 
 April 4, 2022
@@ -28,10 +37,10 @@ extensions could using the `optional_permissions` key.
 
 April 4, 2022
 
-`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property.  If present
-and set to true, the script will inject into the target as soon as possible, rather than waiting for
-`document_idle`. Note that this is not a guarantee the script will inject before the page is loaded
-since the page continues to load while the API call is being made.
+`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property on it's
+`injection` argument. If present and set to true, the script will inject into the target as soon as
+possible, rather than waiting for `document_idle`. Note that this is not a guarantee the script will
+inject before the page is loaded since the page continues to load while the API call is being made.
 
 ### Chrome 102: Omnibox API support in Manifest V3 {: #m102-omnibox }
 
@@ -64,7 +73,7 @@ updated to allow extensions to better target requests based on the request's "re
 "initiator" domains. The relevant condition properties are `initiatorDomains`,
 `excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. See also this
 [chromium-extensions
-thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
+thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E).
 
 ### Chrome 100: Resolved issue with scripting.executeScript() on newly created tabs {: #m100-executescript-bugfix }
 
