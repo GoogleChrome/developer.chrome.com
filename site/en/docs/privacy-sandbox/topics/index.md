@@ -17,7 +17,7 @@ authors:
 This document outlines a new proposal for interest-based advertising: the Topics API.
 
 -  The [Topics API proposal](https://github.com/jkarlin/topics) has entered [public
-   discussion](https://github.com/jkarlin/topics/issues) and is now available in an origin trial.
+   discussion](https://github.com/jkarlin/topics/issues) and is now available in an [origin trial](#origin-trial).
 -  This proposal needs your feedback. If you have comments, please create an issue on the [Topics
    Explainer repository](https://github.com/jkarlin/topics) or participate in discussions in the
    [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
@@ -31,8 +31,8 @@ This document outlines a new proposal for interest-based advertising: the Topics
 ## Take part in a Topics origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
-made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics,
-[FLEDGE](/docs/privacy-sandbox/fledge) and
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the 
+Topics, [FLEDGE](/docs/privacy-sandbox/fledge) and
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
@@ -57,38 +57,40 @@ that provide a valid trial token:
     document.head.append(otMeta);
     ```
 
-An iframe running Topics code—such as a `document.browsingTopics()` call to observe topics—will
+An iframe running Topics code&mdash;such as a `document.browsingTopics()` call to observe topics&mdash;will
 need to provide a token that matches its origin.
 
 {% Aside 'caution' %}
 
-Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
-on pages that provide a valid trial token.
+Not all users are eligible for the Privacy Sandbox Relevance and Measurement 
+origin trial, even on pages that provide a valid trial token.
 
 [Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
-explains why this is so, and shows how you can (and should) detect if an origin trial feature is
-available before attempting to use it.
+explains why this is, and shows how you can (and should) detect if an origin 
+trial feature is available before attempting to use it.
 
 {% endAside %}
 
 
-## Test with chrome://flags or feature flags {: #feature-flags}
+## Test with `chrome://flags` or feature flags {: #feature-flags}
 
 You can try out the Topics API for a single user running Chrome 101 or above:
-* By setting the `--enable-features=PrivacySandboxAdsAPIsOverride` flag from the command line
-* By enabling `chrome://flags/#privacy-sandbox-ads-apis`
+
+*  Set the `--enable-features=PrivacySandboxAdsAPIsOverride` flag from the command line
+*  Enable `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-explains how to set flags when running Chrome and other Chromium-based browsers from the command
-line.
+explains how to set flags when running Chrome and other Chromium-based 
+browsers from the command line.
 
 {% Aside %}
 
-This is an in-progress version of the API for early testing, so it should not be considered
-feature complete or indicative of the final implementation.
+This is an in-progress version of the API for early testing, so it should 
+not be considered feature complete or indicative of the final implementation.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
-information for FLEDGE and other Privacy Sandbox proposals.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides 
+implementation timing information for FLEDGE and other Privacy Sandbox 
+proposals.
 
 {% endAside %}
 
@@ -106,7 +108,7 @@ Before using the API, check if it's supported by the browser and available in th
 
 Feature support on the current page isn't a guarantee that an API is usable: the user may have
 disabled the API via browser settings, or they may have other settings that prevent the API from
-being used. In order to protect user privacy, there is no way to check for this programmatically.
+being used. To protect user privacy, there is no way to check for this programmatically.
 
 {% endAside %}
 
@@ -115,15 +117,15 @@ being used. In order to protect user privacy, there is no way to check for this 
 ## Why do we need this API?
 
 The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
-for a mechanism to enable interest-based advertising, without having to resort to tracking the sites
-a user visits.
+for a mechanism to enable interest-based advertising, without having to 
+resort to tracking the sites a user visits.
 
 {% Aside %}
 
 **Interest-based advertising (IBA)** is a form of personalized advertising in which an ad is
 selected for a user based on their interests, inferred from the sites they've recently visited.
-This is different from contextual advertising, which aims to match content on the page the user
-is visiting.
+This is different from contextual advertising, which aims to match content 
+on the page the user is visiting.
 
 IBA can help advertisers to reach potential customers and help fund websites that cannot
 otherwise easily monetize visits to their site purely via contextual advertising. IBA can also
@@ -138,11 +140,11 @@ appropriate advertisements.
 
 The Topics API has three main tasks:
 
--  Map website hostnames to topics of interest. For example, a yoga website might be classified
-   as being related to "Fitness".
+-  Map website hostnames to topics of interest. For example, a yoga website 
+   might be classified as being related to "Fitness".
 -  Calculate the top topics for a user based on their recent browsing activity.
--  Provide a JavaScript API to provide topics currently of interest to the user, to help enable
-   the selection of appropriate ads.
+-  Provide a JavaScript API to provide topics currently of interest to the 
+   user, to help select the appropriate ads.
 
 The Topics API can help facilitate robust user controls, as the API is built on top of recognizable,
 high-level topics. Chrome plans to offer users the option to remove individual topics, and to show
@@ -275,16 +277,12 @@ be returned.
 
 ### Access topics with the JavaScript API {: #access-topics}
 
-The code below provides a basic example of possible API usage to access topics for the current user
-(to keep it simple, there's no error handling).
+Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
 {% Aside 'warning' %}
-
-This snippet of code is provided only to show how the Topics JavaScript API might be used. API
-design is subject to change!
-
+This snippet of code is provided only to show how the Topics JavaScript API 
+might be used. API design is subject to change.
 {% endAside %}
-
 
 ```javascript
 // Get the array of top topics for this user.
@@ -487,12 +485,14 @@ In addition, both sites and users can [opt out](#opt-out) of the Topics API.
 
 {% Aside %}
 
-As [the Topics proposal explainer describes](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
-"Third party cookies can be used to track anything about a user, from the exact URLs they visited,
- to the precise page content on those pages. This could include limitless sensitive material. The
- Topics API, on the other hand, is restricted to a human-curated taxonomy of topics. That's not to
- say that other things couldn't be statistically correlated with the topics in that taxonomy. That
- is possible. But when comparing the two, Topics seems like a clear improvement over cookies."
+As [the Topics proposal explainer states](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
+"Third party cookies can be used to track anything about a user, from the
+exact URLs they visited, to the precise page content on those pages. This 
+could include limitless sensitive material. The Topics API, on the other
+hand, is restricted to a human-curated taxonomy of topics. That's not to say
+that other things couldn't be statistically correlated with the topics in
+that taxonomy. That is possible. But when comparing the two, Topics seems
+like a clear improvement over cookies."
 
 {% endAside %}
 
@@ -505,7 +505,7 @@ The API's human-readable taxonomy enables people to learn about and control the 
 suggested for them by their browser. Users can remove topics they specifically do not want the Topics 
 API to share with advertisers or publishers, and there can be UX for informing the user about the API 
 and how to enable or disable it. Chrome would provide information and settings for the Topics API at
-chrome://settings/privacySandbox. In addition, topics are not available to API callers in Incognito
+`chrome://settings/privacySandbox`. In addition, topics are not available to API callers in Incognito
 mode, and topics are cleared when browsing history is cleared.
 
 {: #opt-out}
@@ -517,10 +517,9 @@ eligible for topic frequency calculations, and API callers [only receive topics 
 observed](#observed-topics). In other words, sites are not eligible for topic frequency calculations
 without the site or an embedded service taking action to call the API.
 
-The Topics explainer also proposes sites be allowed to block topic calculation for their visitors
-via the following
-[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
-header:
+The Topics explainer also proposes sites be allowed to block topic 
+calculation for their visitors with the following
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header:
 
 ```text
 Permissions-Policy: browsing-topics=()
