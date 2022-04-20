@@ -2,15 +2,15 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 100 {: #chrome100 }
+<!-- ### Chrome 101 {: #chrome101 }
 
-* [View and edit @supports at rules in the Styles pane](/es/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/es/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/es/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/es/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/es/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/es/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-100/#misc) -->
+* [Import and export recorded user flows as a JSON file](/es/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/es/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/es/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/es/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/es/blog/new-in-devtools-101/#lighthouse) -->
+
 
 ### Chrome 100 {: #chrome100 }
 

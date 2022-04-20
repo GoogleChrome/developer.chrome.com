@@ -4,7 +4,7 @@ title: Beyond SPAs - alternative architectures for your PWA
 description: >
   Building a Progressive Web App doesn't mean building a single page app! Read about alternative architectures for content-focused PWAs, to help you make the right decision for your use case.
 authors:
-  - mattgaunt
+  - jeffposnick
 date: 2018-05-23
 updated: 2018-05-23
 ---
@@ -14,9 +14,7 @@ Prefer a video to an article? You can watch the presentation on which this
 was based instead:
 {% endAside %}
 
-
 {% YouTube id="X6yof_vIQnk" %}
-
 
 ## Let's talk about... architecture?
 
@@ -192,7 +190,8 @@ between route names the underlying Express pattern to match against.
 ```js
 const routes = new Map([
   ['about', '/about'],
-  ['questions', '/questions/:questionId'], ['index', '/'],
+  ['questions', '/questions/:questionId'],
+  ['index', '/'],
 ]);
 
 export default routes;
@@ -275,10 +274,14 @@ that can be imported into both the server and the service worker.
 export function index(tag, items) {
   const title = `<h3>Top "${escape(tag)}" Questions</h3>`;
   const form = `<form method="GET">...</form>`;
-  const questionCards = items.map((item) => questionCard({
-    id: item.question_id,
-    title: item.title,
-  })).join('');
+  const questionCards = items
+    .map(item =>
+      questionCard({
+        id: item.question_id,
+        title: item.title,
+      })
+    )
+    .join('');
   const questions = `<div id="questions">${questionCards}</div>`;
   return title + form + questions;
 }
@@ -386,7 +389,8 @@ a lot of the heavy lifting.
 ```js
 import regExpRoutes from './regexp-routes.mjs';
 
-workbox.routing.registerRoute(regExpRoutes.get('index'),
+workbox.routing.registerRoute(
+  regExpRoutes.get('index')
   // Templating logic.
 );
 ```
@@ -427,10 +431,11 @@ similar to the following:
 workbox.precaching.precacheAndRoute([
   {
     url: 'partials/about.html',
-    revision: '518747aad9d7e'
-  }, {
+    revision: '518747aad9d7e',
+  },
+  {
     url: 'partials/foot.html',
-    revision: '69bf746a9ecc6'
+    revision: '69bf746a9ecc6',
   },
   // etc.
 ]);
@@ -469,17 +474,18 @@ flows, like the following:
 ```js
 const stream = new ReadableStream({
   pull(controller) {
-    return sources[0].then((r) => r.read())
-    .then((result) => {
-      if (result.done) {
-        sources.shift();
-        if (sources.length === 0) return controller.close();
-        return this.pull(controller);
-      } else {
-        controller.enqueue(result.value);
-      }
-    })
-  }
+    return sources[0]
+      .then(r => r.read())
+      .then(result => {
+        if (result.done) {
+          sources.shift();
+          if (sources.length === 0) return controller.close();
+          return this.pull(controller);
+        } else {
+          controller.enqueue(result.value);
+        }
+      });
+  },
 });
 ```
 
@@ -506,7 +512,7 @@ worker](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/service-worker.
 deals with runtime data, from the Stack Exchange API. I'm making use of
 Workbox's built-in support for a [stale-while-revalidate caching
 strategy](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.strategies#stalewhilerevalidate),
-along with expiration to ensure that the web app's  storage doesn't grow
+along with expiration to ensure that the web app's storage doesn't grow
 unbounded.
 
 I set up two strategies in Workbox to handle the different sources that will
@@ -521,9 +527,7 @@ const cacheStrategy = workbox.strategies.cacheFirst({
 
 const apiStrategy = workbox.strategies.staleWhileRevalidate({
   cacheName: API_CACHE_NAME,
-  plugins: [
-    new workbox.expiration.Plugin({maxEntries: 50}),
-  ],
+  plugins: [new workbox.expiration.Plugin({maxEntries: 50})],
 });
 ```
 
@@ -627,7 +631,7 @@ The other progressive enhancement I've added is used to bring attention to our
 offline capabilities. I've built a reliable PWA, and I want users to know
 that when they're offline, they can still load previously visited pages.
 
-First, I use the Cache Storage API to get  a list of all the previously cached
+First, I use the Cache Storage API to get a list of all the previously cached
 API requests, and I translate that into a list of URLs.
 
 Remember those special data attributes [I talked
@@ -645,10 +649,10 @@ navigating.
 ```js
 const apiCache = await caches.open(API_CACHE_NAME);
 const cachedRequests = await apiCache.keys();
-const cachedUrls = cachedRequests.map((request) => request.url);
+const cachedUrls = cachedRequests.map(request => request.url);
 
 const cards = document.querySelectorAll('.card');
-const uncachedCards = [...cards].filter((card) => {
+const uncachedCards = [...cards].filter(card => {
   return !cachedUrls.includes(card.dataset.cacheUrl);
 });
 
@@ -676,7 +680,7 @@ own approach, and you may end up making different choices than I did. That
 flexibility is one of the great things about building for the web.
 
 There are a few common pitfalls that you may encounter when making your own
-architectural decisions, and I want  to save you
+architectural decisions, and I want to save you
 some pain.
 
 **Don't cache full HTML**
@@ -694,7 +698,7 @@ pages.
 **Server / service worker drift**
 
 The other pitfall to avoid involves your server and service worker getting out
-of sync. *My approach** was to use isomorphic JavaScript, so that the same code
+of sync. _My approach_ was to use isomorphic JavaScript, so that the same code
 was run in both places. Depending on your existing server architecture,
 that's not always possible.
 
@@ -761,4 +765,3 @@ data.
 - [SO PWA GitHub project](https://github.com/GoogleChromeLabs/so-pwa)
 - [Workbox](/web/tools/workbox/)
 - [Streams API specification](https://streams.spec.whatwg.org/)
-

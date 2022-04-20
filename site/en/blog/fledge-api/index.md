@@ -6,14 +6,13 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-03-31
+updated: 2022-04-21
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
   - privacy
   - security
 ---
-
 
 {% YouTube
   id='HkvmYKqnytw'
@@ -61,17 +60,13 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 <br>
 
 
-{: #try-fledge}
+## How can I try FLEDGE? {: #try-fledge}
 
-## How can I try FLEDGE?
-
-{: #demo}
-
-### FLEDGE demo
+### FLEDGE demo {: #demo}
 
 A walkthrough of a basic FLEDGE deployment across advertiser and publisher sites is  available at
 [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
-
+ 
 The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
@@ -79,29 +74,67 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
   id='znDD0gkdJyM'
 %}
 
-{% Aside %}
+### Take part in a FLEDGE origin trial {: #origin-trial}
 
-Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
-under discussion.
+A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the FLEDGE,
+[Topics](/docs/privacy-sandbox/topics/), and
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+
+To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
+
+Once you have successfully enrolled in the trial, you can try out the FLEDGE JavaScript API on pages
+that provide a valid trial token: for example, to ask the browser to [join one or more interest groups](#joinadinterestgroup),
+and then to [run an ad auction](#ad-auction) to select and display an ad.
+
+The [FLEDGE demo](#demo) provides a basic example of an end-to-end FLEDGE deployment.
+
+Provide a trial token for every page on which you would like to run FLEDGE API code:
+
+*   As a meta tag in the &lt;head&gt;:<br>
+
+    `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
+
+*   As an HTTP header:<br>
+
+    `Origin-Trial: TOKEN_GOES_HERE`
+
+*   By providing a token programmatically:<br>
+
+    ```javascript
+    const otMeta = document.createElement('meta');
+    otMeta.httpEquiv = 'origin-trial';
+    otMeta.content = 'TOKEN_GOES_HERE';
+    document.head.append(otMeta);
+    ```
+
+An iframe running FLEDGE code—such as a [`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
+call by an interest group owner—will need to provide a token that matches its origin.
 
 [Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the trial and what features are proposed for support.
+provides more details about the goals of the first trial and explains what features are supported.
+
+{% Aside 'caution' %}
+
+Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
+on pages that provide a valid trial token.
+
+[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
+explains why this is so, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
 
 {% endAside %}
 
-### Test with chrome://flags or feature flags {: #feature-flags}
+### Test with `chrome://flags` or feature flags {: #flags}
 
-You can test FLEDGE for a single user by setting feature flags:
-* In Chrome Canary 102, enable FLEDGE by setting the `PrivacySandboxAdsAPIsOverride` flag from the
-command line or by enabling `chrome://flags/#privacy-sandbox-ads-apis`.
-* For a current version of Chrome, Chrome Beta or Chrome Canary, enable FLEDGE by setting the flags
-described below from the command line.
+You can test FLEDGE for a single user in Chrome Beta 101.0.4951.26 and above on desktop:
+* By enabling `chrome://flags/#privacy-sandbox-ads-apis`.
+* By setting flags from the command line.
 
-#### Frames and fenced frames
+#### Render ads in iframes or fenced frames
 
-When enabling FLEDGE for testing with feature flags, ads can be rendered in an `<iframe>` or a
-[`<fencedframe>`](https://github.com/shivanigithub/fenced-frame), depending on which flags are
-set.
+Ads can be rendered in an `<iframe>` or a [`<fencedframe>`](/docs/privacy-sandbox/fenced-frame/),
+depending on which flags are set.
 
 To use `<fencedframe>` to render ads:
 
@@ -115,13 +148,17 @@ To use `<iframe>` to render ads:
 --enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge,AllowURNsInIframes --disable-features=FencedFrames
 ```
 
+Include the `BiddingAndScoringDebugReportingAPI` flag to enable the [temporary debug loss/win reporting methods](#temporary-reporting).
+
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
-line.
+line. The full list of FLEDGE flags is available from
+[Chromium Code Search](https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/about_flags.cc;l=7135;drc=e50bce9adfbbac13d8ec1017f9239fe1ae06cc72).
+
 
 {% Aside %}
 
-This is the in-progress version of FLEDGE for early testing, so it should not be considered feature
+This is an in-progress version of FLEDGE for early testing. It shouldn't be considered
 complete or indicative of the final implementation. FLEDGE progress and status are discussed in the
 regular WICG meetings.
 
@@ -134,10 +171,9 @@ information for FLEDGE and other Privacy Sandbox proposals.
 
 {% endAside %}
 
-
 ### What features are supported in the latest version of Chrome?
 
-FLEDGE is being made available [behind feature flags](#feature-flags) in Chromium as a first
+FLEDGE is being made available [behind feature flags](#flags) in Chromium as a first
 experiment to test the following features of the FLEDGE proposal:
 
 -  **Interest groups**: stored by the browser, with associated metadata to configure ad bidding
@@ -173,10 +209,12 @@ model). Discussion is underway about how trusted servers are managed and owned.
 
 ### Detect feature support
 
-Before using the API, check if it's available on the page. For example:
+Before using the API, check if it's supported by the browser and available in the document:
 
 ```javascript
-'joinAdInterestGroup' in navigator ?
+'joinAdInterestGroup' in navigator &&
+  document.featurePolicy.allowsFeature('join-ad-interest-group') &&
+  document.featurePolicy.allowsFeature('run-ad-auction') ?
   console.log('navigator.joinAdInterestGroup() is supported on this page') :
   console.log('navigator.joinAdInterestGroup() is not supported on this page');
 ```
@@ -248,7 +286,7 @@ and is shown an ad for a new bike from the bike maker.
 {% Aside 'warning' %}
 
 Not all features described in this post have been implemented (or fully implemented) in the version
-of the FLEDGE API currently being tested in Chrome. [Test with feature flags](#feature-flags)
+of the FLEDGE API currently being tested in Chrome. [Test with feature flags](#flags)
 explains what FLEDGE features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
@@ -282,7 +320,7 @@ exchanges, DSPs, and networks. This enables a wide range of potential buyers to 
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 2. The user's browser is asked to add an interest group
+### 2. The user's browser is asked to add an interest group {: #joinadinterestgroup}
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png",
   alt="Illustration showing a person viewing a site in a browser on their laptop. JavaScript
@@ -290,12 +328,23 @@ exchanges, DSPs, and networks. This enables a wide range of potential buyers to 
 
 **Explainer section:** [Browsers Record Interest Groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups)
 
-The advertiser's [demand-side platform](/docs/privacy-sandbox/fledge/#dsp) (DSP) (or the advertiser itself) calls
-`navigator.joinAdInterestGroup()` to ask the browser to add an interest group to the list of groups
-the browser is a member of. In this example, the group is named `custom-bikes`, and the owner is
-`dsp.example`. The interest group owner (in this case, the DSP) will be a [buyer](/docs/privacy-sandbox/fledge/#buyer)
-in the ad auction described in [step 4](#ad-auction). Interest group membership is stored by the
-browser, on the user's device, and is not shared with the browser vendor or anyone else.
+The advertiser's [demand-side platform](/docs/privacy-sandbox/fledge/#dsp) (DSP) (or the advertiser
+itself) calls `navigator.joinAdInterestGroup()` to ask the browser to add an interest group to the
+list of groups the browser is a member of. In this example, the group is named `custom-bikes`, and
+the owner is `dsp.example`. The interest group owner (in this case, the DSP) will be a
+[buyer](/docs/privacy-sandbox/fledge/#buyer) in the ad auction described in [step 4](#ad-auction).
+Interest group membership is stored by the browser, on the user's device, and is not shared with the
+browser vendor or anyone else.
+
+{% Aside %}
+The origin of the calling context for `joinAdInterestGroup()` must match the interest group
+owner's origin, so `joinAdInterestGroup()` will need to be called from an iframe (for
+example, from a DSP) unless the origin of the interest group owner matches the origin of the current
+document (for example, a website with its own interest groups).
+
+[`runAdAuction`](#ad-auction) doesn't have the same requirements, so calling `runAdAuction()` from a
+&lt;script&gt; tag is probably far more performant than a cross-origin iframe.
+{% endAside %}
 
 `joinAdInterestGroup()` requires permission from:
 * The site being visited
@@ -332,7 +381,7 @@ iframe can call `joinAdInterestGroup()` for interest groups owned by `dsp.exampl
 The proposal is that `joinAdInterestGroup()` can run in a page or iframe in the owner's domain, or
 be delegated to other domains provided using a list at a `.well-known` URL.
 
-#### Using navigator.joinAdInterestGroup() {: #joinadinterestgroup}
+#### Using navigator.joinAdInterestGroup()
 
 Here's an example of how the API might be used:
 
@@ -359,7 +408,18 @@ The `interestGroup` object passed to the function must be no more than 50 kiB in
 call will fail. The second parameter specifies the duration of the interest group, capped at 30
 days. Successive calls overwrite previously stored values.
 
-#### Interest group properties
+{% Aside 'gotchas' %}
+
+All URLs used as parameters for FLEDGE API methods must be from secure origins: all resources must
+be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/how-to-use-local-https/)
+explains how to do this when running FLEDGE locally.
+
+In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` all require an
+`X-Allow-FLEDGE: true` HTTP response header.
+
+{% endAside %}
+
+#### Interest group properties {: #interest-group-properties}
 
 <div class="w-table-wrapper">
   <table class="w-table--top-align">
@@ -501,45 +561,31 @@ metadata that can be used at bidding time. For example:
 }
 ```
 
-#### How do buyers make bids? {: #biddinglogicurl}
+#### How do buyers make bids? {: #generatebid}
 
 The script at `biddingLogicUrl` provided by an interest group owner must include a `generateBid()`
-function. When an ad-space seller calls `navigator.runAdAuction()`, the `generatedBid()`
+function. When [an ad-space seller calls `navigator.runAdAuction()`]](#ad-auction), the `generatedBid()`
 function is called once for each of the interest groups the browser is a member of, if the interest
 group's owner is invited to bid. In other words, `generateBid()` is called once for each candidate
-ad. When the seller calls the `navigator.runAdAuction()` function, they provide code that includes a
-`scoreAd()` function. This function is run for each bidder in the auction: to score each of the bids
-returned by `generateBid()`.
+ad. The seller provides a `decisionLogicUrl` property on the auction configuration parameter passed
+to `navigator.runAdAuction()`. The code at this URL must include a `scoreAd()` function, which is
+run for each bidder in the auction, to score each of the bids returned by `generateBid()`.
 
 {% Aside %}
 
 The `biddingWasmHelperUrl` property is optional, but it allows the bidder to provide
-computationally-expensive subroutines in WebAssembly, rather than JavaScript, to be driven from the
-JavaScript function provided by `biddingLogicUrl`. If provided, it must point to a WebAssembly
-binary, delivered with an `application/wasm mimetype`. The corresponding `WebAssembly.Module` is
-made available by the browser to the `generateBid()` function.
+computationally-expensive subroutines in [WebAssembly](https://developer.mozilla.org/docs/WebAssembly),
+rather than JavaScript, to be driven from the JavaScript function provided by `biddingLogicUrl`. If
+provided, it must point to a WebAssembly binary, delivered with an `application/wasm mimetype`. The
+corresponding `WebAssembly.Module` is made available by the browser to the `generateBid()` function.
 
 {% endAside %}
 
-Bidding code might look this very simple example:
-
-```javascript
-function generateBid(interestGroup, auctionSignals, perBuyerSignals,
-    trustedBiddingSignals, browserSignals) {
-  return {
-    ad: {...}, // ad metadata
-    bid: auctionSignals.is_above_the_fold ? perBuyerSignals.atf_value : perBuyerSignals.btf_value,
-    render: interestGroup.ads[0].renderUrl
-  }
-}
-```
-
-#### More about generateBid() {: #generate-bid}
 
 The script at `biddingLogicUrl` provided by an ad-space buyer must include a `generateBid()` function.
-This function is called once for each candidate ad. As described later in this post, [`runAdAuction
-()`](#ad-auction) individually checks each ad, along with its associated bid and metadata, then
-assigns the ad a numerical desirability score.
+This function is called once for each candidate ad. [`runAdAuction()`](#ad-auction)
+individually checks each ad, along with its associated bid and metadata, then assigns the ad a
+numerical desirability score.
 
 ```javascript
 generateBid(interestGroup, auctionSignals, perBuyerSignals,
@@ -567,7 +613,7 @@ the ad size and the publisher ID), the type of auction (first-price or second-pr
 metadata.
 
 * `perBuyerSignals`<br>
-As with `auctionSignals`, a property of the [auction config](#ad-auction)
+As with `auctionSignals`, a property of the [auction configuration](#ad-auction)
 argument passed to `navigator.runAdAuction()` by the seller. This can provide contextual
 signals from the buyer's server about the page, if the seller is an [SSP](/docs/privacy-sandbox/fledge#ssp) which
 performs a real-time bidding call to buyer servers and pipes the response back, or if the publisher
@@ -598,6 +644,20 @@ The `browserSignals` object has the following properties:
 }
 ```
 
+To calculate a `bid` value, code in `generateBid()` can use the properties of the function's
+parameters. For example:
+
+```javascript
+function generateBid(interestGroup, auctionSignals, perBuyerSignals,
+    trustedBiddingSignals, browserSignals) {
+  return {
+    ...
+    bid: auctionSignals.is_above_the_fold ? perBuyerSignals.atf_value : perBuyerSignals.btf_value,
+    ...
+  }
+}
+```
+
 `generateBid()` returns an object with four properties:
 
 * `ad`<br>
@@ -613,16 +673,16 @@ seller's auction at all. With this mechanism, the buyer can implement any advert
 their ads may or may not appear.
 
 * `render`<br>
-A URL, or a list of URLs, that will be rendered to display the creative if this bid
-wins the auction. (See [Ads Composed of Multiple Pieces](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces)
-in the API explainer.) The value has to match the `renderUrl` of one of the [ads defined for the
-interest group](#ad-components).
+A URL, or a list of URLs, that will be used to render the creative if this bid wins the auction.
+(See [Ads Composed of Multiple Pieces](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces)
+in the API explainer.) The value has to match the `renderUrl` of one of the
+[ads defined for the interest group](#ad-components).
 
 
 * `adComponents`<br>
 An optional list of up to 20 components for
 [ads composed of multiple pieces](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces),
-taken from the [`adComponents`](ad-components) property of the interest group argument
+taken from the [`adComponents`](#ad-components) property of the interest group argument
 passed to `navigator.joinAdInterestGroup()`.
 
 #### Asking a browser to leave an interest group
@@ -630,7 +690,7 @@ passed to `navigator.joinAdInterestGroup()`.
 The interest group owner can request that a browser be removed from an interest group. In other
 words, the browser is asked to remove the interest group from the list of those it is a member of.
 
-``` javascript
+```javascript
 navigator.leaveAdInterestGroup({
   owner: 'https://dsp.example',
   name: 'custom-bikes'
@@ -676,11 +736,11 @@ There are three main roles described in the FLEDGE proposal explainer:
 
 **Explainer section:** [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
 
-The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or the publisher
-itself. The purpose of the auction is to select the most appropriate ad for a single available ad
-slot on the current page. The auction takes into account the interest groups the browser is a
-member of, along with data from ad-space buyers and the seller—from trusted servers in the next
-step.
+The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or
+the publisher itself. The purpose of the auction is to select the most appropriate ad for a single
+available ad slot on the current page. The auction takes into account the interest groups the
+browser is a member of, along with data from ad-space buyers and the seller—from trusted servers in
+the next step.
 
 The ad-space **seller** makes a request to the user's browser to begin an ad auction by calling
 `navigator.runAdAuction()`.
@@ -723,6 +783,16 @@ const auctionResultPromise = navigator.runAdAuction(auctionConfig);
 `runAdAuction()` returns a promise that resolves to a [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (`urn:uuid:<something>`) that represents the
 ad auction outcome. This can only be decoded by the browser when passed to a [fenced frame](/docs/privacy-sandbox/fledge#fenced-frame)
 for rendering: the publisher page cannot inspect the winning ad.
+
+{% Aside %} As explained earlier, the origin of the calling context for
+[`joinAdInterestGroup()`](#joinadinterestgroup) must match the interest group owner's
+origin, so `joinAdInterestGroup()` will need to be called from an iframe (for example,
+from a DSP) unless the origin of the interest group owner matches the origin of the current
+document (for example, a website with its own interest groups).
+
+[`runAdAuction`](#ad-auction) doesn't have the same requirements, so calling `runAdAuction()` from a
+&lt;script&gt; tag is probably far more performant than a cross-origin iframe.
+{% endAside %}
 
 The `decisionLogicUrl` script considers each individual ad, along with its associated bid and
 metadata, one at a time, and then assigns it a numerical desirability score.
@@ -818,8 +888,9 @@ FLEDGE explainer for more information.
 
 #### How are ads selected?
 
-The `runAdAuction()` code must include a `scoreAd()` function, which is run once for each ad to
-determine its desirability.
+The code at `decisionLogicUrl` (a property of the auction configuration object passed to
+[`runAdAuction()`(#ad-auction)) must include a `scoreAd()` function. This is run once for each ad
+to determine its desirability.
 
 ```javascript
 scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
@@ -869,25 +940,32 @@ its `scoreAd()` logic is to reject any ad that can't beat the contextual winner.
 
 During an ad auction, the ad-space **seller** can get realtime data about specific ad creatives by
 making a request to a trusted server using the `trustedScoringSignalsUrl` property of
-[auction config](#ad-auction) argument passed to `navigator.runAdAuction()`, along with the keys
+[auction configuration](#ad-auction) argument passed to `navigator.runAdAuction()`, along with the keys
 from the `renderUrl` properties of all entries in the `ads` and `adComponents` fields of all
 interest groups in the auction.
 
 Likewise, an ad-space **buyer** can request realtime data from a trusted server using the
 `trustedBiddingSignalsUrl` and `trustedBiddingSignalsKeys` properties of the interest group argument
-passed to `navigator.joinAdInterestGroup()`. The URL for an ad buyer request to a trusted server
-might look like this:
+passed to `navigator.joinAdInterestGroup()`.
+
+When  `runAdAuction()` is called, the browser makes a request to each ad buyer's trusted server. The
+URL for the request might look like this:
 
 ```javascript
 https://trusted-server.example/getvalues?hostname=publisher.example&keys=key1,key2
 ```
 
-A request to this URL is made when `runAdAuction()` is called:
 * The base URL comes from `trustedBiddingSignalsUrl`.
 * The `hostname` is provided by the browser.
 * The `keys` value is taken from `trustedBiddingSignalsKeys`.
 
 The response to this request is a JSON object providing values for each of the keys.
+
+{% Aside 'gotchas' %}
+In the current initial experimental phase for testing FLEDGE, `trustedBiddingSignalsUrl` must have
+the same origin as the interest group owner: see [Interest group properties](#interest-group-properties) and
+[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server).
+{% endAside %}
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
@@ -972,10 +1050,16 @@ reportWin(auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
 }
 ```
 
+{% Aside %}
+
+The current implementation of FLEDGE in Chrome will warn if `reportWin()` is not defined.
+
+{% endAside %}
+
 The arguments passed to this function are:
 
 * `auctionSignals` and `perBuyerSignals`<br>
-The same values passed to [`generateBid()`](#generate-bid) for the winning bidder.
+The same values passed to [`generateBid()`](#generatebid) for the winning bidder.
 * `sellerSignals`<br>
 The return value of [`reportResult()`](#reportresult), which gives the seller an
 opportunity to pass information to the buyer.
@@ -994,9 +1078,23 @@ For&nbsp;example:<br><br>
   }
   ```
 
-{% Aside %}
-A reporting mechanism for losing bidders is [under discussion](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting).
-{% endAside %}
+#### Temporary loss/win reporting implementation {: #temporary-reporting}
+
+There are two methods available temporarily in Chrome for auction reporting:
+
+* `forDebuggingOnly.reportAdAuctionLoss()`
+* `forDebuggingOnly.reportAdAuctionWin()`
+
+These methods each take a single argument: a URL to fetch after the auction is completed. They can
+be called multiple times, in both `scoreAd()` and `generateBid()`, with different URL arguments.
+
+Chrome only sends debug loss/win reports when an auction runs to completion. If an auction is
+canceled (for example, due to a new navigation) no reports will be generated.
+
+These methods are available by default in Chrome if `chrome://flags/#privacy-sandbox-ads-apis` is
+enabled. But, if you're running Chrome with command line flags to enable FLEDGE, you'll need to
+explicitly enable the methods by including the `BiddingAndScoringDebugReportingAPI` flag. If the
+flag is not enabled, the methods will still be available but do nothing.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
@@ -1068,7 +1166,8 @@ FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifica
    for PARAKEET and FLEDGE into alignment, in support of future work to further combine the best
    features of both proposals.
 
-FLEDGE does not yet prevent a website's ad network from learning which ads a person sees. We expect it to modify it to become more private over time.
+FLEDGE does not yet prevent a website's ad network from learning which ads a person sees. We expect
+to modify the API to become more private over time.
 
 {% endDetails %}
 
@@ -1153,6 +1252,6 @@ explains the demo code, and shows how to use Chrome DevTools for FLEDGE debuggin
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
----
+<hr>
   
 Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/photos/GL6ORxDMswI).
