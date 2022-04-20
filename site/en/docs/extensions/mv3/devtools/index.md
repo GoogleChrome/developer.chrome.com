@@ -379,7 +379,7 @@ window.addEventListener('message', function(event) {
 
   // Only accept messages that we know are ours
   if (message !== null && typeof message !== 'object' ||
-       message.source !== 'my-devtools-extension') {
+      message.source !== 'my-devtools-extension') {
     return;
   }
 
