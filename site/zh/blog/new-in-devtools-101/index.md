@@ -36,7 +36,7 @@ draft: true
 <!-- - **Export as a JSON file**. Download the recording as a JSON file. -->
 - **导出为 JSON 文件**。下载的记录为一个 JSON 文件。
 <!-- - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.  -->
-- **导出为 @puppeteer/replay 脚本**。下载的记录为一段 [Puppeteer Replay](https://github.com/puppeteer/replay）脚本
+- **导出为 @puppeteer/replay 脚本**。下载的记录为一段 [Puppeteer Replay](https://github.com/puppeteer/replay）脚本。
 <!-- - **Export as a Puppeteer script** . Download the recording as [Puppeteer](https://pptr.dev/) script. -->
 - **导出为 Puppeteer 脚本**。下载的记录为一段 [Puppeteer](https://pptr.dev/) 脚本。
 
