@@ -433,7 +433,7 @@ height="424" %}
 
 Information about usage restrictions and availability will be provided for each origin trial.
 
-As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to check support 
+As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) to check support 
 for an origin trial feature before using it.
 
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
