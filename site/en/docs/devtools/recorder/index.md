@@ -189,7 +189,12 @@ To export a user flow:
     - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
 1. Save the file.
 
-In the Puppeteer Replay script, the steps remain a JSON object and the file is smaller. You can replay this script with the new Puppeteer Replay library.
+Aside 
+[@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of the [Puppeteer](https://pptr.dev/). It is also a command line tools, you can replay JSON file with it too.
+
+When exporting as a @puppeteer/replay script, the steps remain a JSON object (unlike exporting as a Puppeteer script, the steps are converted into JavaScript). The script is therefore shorter.
+
+When to use what? Provide suggestion maybe?
 
 The regular Puppeteer script is entirely in JavaScript and you can replay it with the regular Puppeteer library.
 
