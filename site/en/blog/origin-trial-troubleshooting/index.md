@@ -423,7 +423,7 @@ status of the feature you're testing.
 
 ### The origin trial is available for the current user {: #user}
 
-Not all origin trials are available for all users, even if a valid token is provided.
+Some origin trials are unavailable to certain users, even if a valid token is provided.
 
 If a trial isn't available for the current user, Chrome DevTools will display a `TrialNotAllowed` warning:
 
