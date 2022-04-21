@@ -16,7 +16,7 @@ Workbox abstracts this API with the [`workbox-background-sync` module](/docs/wor
 
 ## Basic usage
 
-The `BackgroundSync` plugin is exported from the `workbox-background-sync` module, and can be used to queue up failed requests and retry them when future `sync` events fire:
+The `BackgroundSyncPlugin` is exported from the `workbox-background-sync` module, and can be used to queue up failed requests and retry them when future `sync` events fire:
 
 ```js
 import {BackgroundSyncPlugin} from 'workbox-background-sync';
