@@ -516,6 +516,7 @@ interest group. In the [current implementation](https://source.chromium.org/chro
 the following attributes can be changed:
 
 * `biddingLogicUrl`
+* `biddingWasmHelperUrl`
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
