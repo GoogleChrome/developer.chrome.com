@@ -30,7 +30,7 @@ In many cases, checking the box to enable this feature is enough to get the kind
 
 In the past couple of months since Cloudflare's launch, I've been reading and responding to questions on [various](https://support.google.com/webmasters/threads?hl=en&thread_filter=(%27%22signed%20exchange%22%27)) [forums](https://community.cloudflare.com/t/automatic-signed-exchanges-sxgs-beta-launch/312634) and advising sites on how to make sure they're getting the most out of their SXG deployments. This post is a collection of that advice, walking through the steps to analyze SXG performance, find ways to improve it, and finally measure its real world impact.
 
-## How do signed exchanges work?
+## Introduction
 
 An SXG is a message containing a URL, a set of HTTP response headers, and a response body, all cryptographically signed by a Web PKI certificate that matches the signed URL. When the browser loads an SXG, it verifies that the SXG hasn't expired, that the signature matches the URL, headers, body, and certificate, and that the certificate is valid. If verification fails, the browser fetches the resource from the original signed URL. This allows any mirror to serve the SXG as long as it isn't expired or modified since being signed.
 
