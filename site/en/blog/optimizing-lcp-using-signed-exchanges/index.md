@@ -40,7 +40,7 @@ An SXG is a file containing a URL, a set of HTTP response headers, and a respons
 
 If verification fails, the browser abandons the SXG and instead fetches the signed URL. If verification succeeds, the browser loads the signed response, treating it as if it came directly from the signed URL. This allows SXGs to be rehosted on any server as long as it isn't expired or modified since being signed.
 
-In the case of Google Search, SXG enables prefetching of pages in its search results. For pages supporting SXGs, Google Search can prefetch its cached copy of the page, hosted on webpkgcache.com. These webpkgcache.com URLs don't affect the display or behavior of the page, because the browser respects the original, signed URL. Prefetching can enable your page to load much faster.
+In the case of Google Search, SXG [enables](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#name-privacy-preserving-prefetch) prefetching of pages in its search results. For pages supporting SXGs, Google Search can prefetch its cached copy of the page, hosted on webpkgcache.com. These webpkgcache.com URLs don't affect the display or behavior of the page, because the browser respects the original, signed URL. Prefetching can enable your page to load much faster.
 
 {% Aside %}
 SXGs are potentially useful for other use cases not covered in this article. For instance, they could enable connection resilience: a chat app could pre-download a link sent to the user if the page supports SXG, so they could later view it while offline. See this larger list of [potential use cases](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html).
