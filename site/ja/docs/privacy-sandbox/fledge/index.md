@@ -18,7 +18,7 @@ authors:
 
 この記事では FLEDGE の基本について説明します。いくつかの基本的な概念について説明はしますが、技術的な詳細についてはあまり説明しません。
 
-* **広告またはアドテック**の分野に従事している方は、[広告主](#advertiser)や[サイト運営者](#publisher)などの概念を説明する部分をスキップすることができます。 それでも「[FLEDGE の仕組み](#how)」は役に立つでしょう。
+* **広告またはアドテク**の分野に従事している方は、[広告主](#advertiser)や[サイト運営者](#publisher)などの概念を説明する部分をスキップすることができます。 それでも「[FLEDGE の仕組み](#how)」は役に立つでしょう。
 
 * **開発者またはソフトウェアエンジニア**の方は、提案に関するより詳細な技術情報が記載された「[FLEDGE API 開発者ガイド](/blog/fledge-api)」をご覧ください。
 
@@ -112,7 +112,7 @@ API 呼び出し元は、ユーザーがシークレットモードで閲覧し�
 
 従来、広告プラットフォームはサイト間でユーザーの行動を追跡することで、ユーザーの興味を学習してきましたが、 コンテンツパブリッシャーがクロスサイトトラッキングなしで広告収入を得られるようにするには、ブラウザに、広告プラットフォームが関連性のある広告を選択できるようにする方法が必要となります。
 
-FLEDGE の実験は、ユーザーが興味を持っている物事に関する情報がそのユーザーのブラウザ（広告主やアドテックプラットフォーム上ではなく、ユーザーのデバイス上）に保持される状態に Web プラットフォームを近づけることを目的としています。
+FLEDGE の実験は、ユーザーが興味を持っている物事に関する情報がそのユーザーのブラウザ（広告主やアドテクプラットフォーム上ではなく、ユーザーのデバイス上）に保持される状態に Web プラットフォームを近づけることを目的としています。
 
 {% Aside 'warning' %}
 
@@ -162,7 +162,7 @@ FLEDGE の機能は、実装作業が進むにつれて追加される予定で�
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fP9qHtCjfk8IwrJLtOpo.png", alt="ノートパソコンのブラウザでニュースサイトを閲覧しているユーザーのイラスト。 FLEDGE API を使用した広告オークションが行われている。", width="500", height="228" %}
 
-ユーザーのデバイス上で、サイト運営者サイトの特定の空き広告スペースに最適な広告を選択するための広告オークションが実行されます。 オークションを実行するためのコードは大抵、[サイドプラットフォーム（SSP）](#ssp) またはサイト自体によって提供されます。
+ユーザーのデバイス上で、サイト運営者サイトの特定の空き広告スペースに最適な広告を選択するための広告オークションが実行されます。 オークションを実行するためのコードは大抵、[サプライサイドプラットフォーム（SSP）](#ssp) またはサイト自体によって提供されます。
 
 {% Aside %}
 
@@ -190,9 +190,9 @@ FLEDGE では、広告オークションを実行している当事者を**セ�
 
 ### 6. 落札した広告が表示される
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wlkJ84sb3tRjJXHkCDfE.png", alt="ノートパソコンのブラウザでニュースサイトを閲覧しているユーザーのイラスト。 自転車の広告（20% 割引）が表示されている。上部のロックは、広告が Fenced Frame（フェンスで囲まれたフレーム）に表示されていることを示している。", width="400", height="192" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wlkJ84sb3tRjJXHkCDfE.png", alt="ノートパソコンのブラウザでニュースサイトを閲覧しているユーザーのイラスト。 自転車の広告（20% 割引）が表示されている。上部のロックは、広告が Fenced Frame に表示されていることを示している。", width="400", height="192" %}
 
-ステップ 5 で `navigator.runadAuction()` によって返された値が、レンダリング目的で [Fenced Frame（フェンスで囲まれたフレーム）](#fenced-frame)に渡されると、落札した広告がサイトに表示されます。 Fenced Frame で表示すると、広告コードが周囲のページと対話することはできません。
+ステップ 5 で `navigator.runadAuction()` によって返された値が、レンダリング目的で [Fenced Frame](#fenced-frame) に渡されると、落札した広告がサイトに表示されます。 Fenced Frame で表示すると、広告コードが周囲のページと対話することはできません。
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇ ︎</p>
 
@@ -267,11 +267,11 @@ FLEDGE インタレストグループは、[リマーケティング](#remarketi
           サイト運営者は、オーディエンスの特定のセグメントに広告を表示する機能に対して課金することが可能です。</td>
       </tr>
       <tr>
-        <td style="vertical-align: top;">アドテック</td>
+        <td style="vertical-align: top;">アドテク</td>
         <td style="vertical-align: top;"><a href="#dsp" title="DSP の用語集エントリ">DSP</a></td>
         <td style="vertical-align: top;">商品カテゴリ</td>
         <td style="vertical-align: top;">サイクリング用品に興味を示した人たち。</td>
-        <td style="vertical-align: top;">アドテック企業は、あるカテゴリのアイテムの市場にいると信じているユーザーのインタレストグループを作成し、管理することができます。 このインタレストグループは、そのカテゴリ（とアドテック会社と連携しているユーザー）で商品を販売するサイトで、商品を宣伝するために使用されます。</td>
+        <td style="vertical-align: top;">アドテク企業は、あるカテゴリのアイテムの市場にいると信じているユーザーのインタレストグループを作成し、管理することができます。 このインタレストグループは、そのカテゴリ（とアドテク会社と連携しているユーザー）で商品を販売するサイトで、商品を宣伝するために使用されます。</td>
       </tr>
     </tbody>
   </table>
@@ -505,11 +505,11 @@ FLEDGE では、広告を表示するサイトの広告スペースを販売す�
 
 ### デマンドサイドプラットフォーム（DSP）
 
-広告購入の自動化に使用されるアドテックサービス。 広告主は DSP を使用して、サイト運営者の広範なサイトに渡って[広告インプレッション](https://en.wikipedia.org/wiki/Impression_(online_media))を購入します。 サイト運営者は、アドエクスチェンジと呼ばれるマーケットプレイスを通じて[広告枠](#ad-inventory)を販売し、DSP は、利用可能な広告インプレッションの内、広告主が購入する上でどれが最も合理的であるかをプログラムで決定します。
+広告購入の自動化に使用されるアドテクサービス。 広告主は DSP を使用して、サイト運営者の広範なサイトに渡って[広告インプレッション](https://en.wikipedia.org/wiki/Impression_(online_media))を購入します。 サイト運営者は、アドエクスチェンジと呼ばれるマーケットプレイスを通じて[広告枠](#ad-inventory)を販売し、DSP は、利用可能な広告インプレッションの内、広告主が購入する上でどれが最も合理的であるかをプログラムで決定します。
 
 {: #fenced-frame}
 
-### Fenced Frame（フェンスで囲まれたフレーム）
+### Fenced Frame
 
 [フレーム](https://developer.mozilla.org/docs/Web/HTML/Element/iframe)の種類。広告を表示するために使用されますが、その周囲のページと対話することはできません。 [Fenced Frame の提案](https://github.com/shivanigithub/fenced-frame)は議論中です。
 
@@ -517,7 +517,7 @@ FLEDGE では、広告を表示するサイトの広告スペースを販売す�
 
 ### インタレストグループ
 
-[リマーケティングリスト](https://www.thinkwithgoogle.com/marketing-strategies/search/remarketing-lists-for-search-ads/)など、共通の関心を持つユーザーのグループ。 各 FLEDGEインタレストグループには、広告主、サイト運営者、またはアドテックプラットフォームのオーナーがいます。 オーナーは、ユーザーのブラウザにインタレストグループへの参加を依頼します。
+[リマーケティングリスト](https://www.thinkwithgoogle.com/marketing-strategies/search/remarketing-lists-for-search-ads/)など、共通の関心を持つユーザーのグループ。 各 FLEDGEインタレストグループには、広告主、サイト運営者、またはアドテクプラットフォームのオーナーがいます。 オーナーは、ユーザーのブラウザにインタレストグループへの参加を依頼します。
 
 {: #publisher}
 
@@ -527,7 +527,7 @@ FLEDGE では、広告を表示するサイトの広告スペースを販売す�
 
 ### サイト運営者
 
-[FLEDGE の説明文書](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=publisher)の文脈では、広告を表示するために支払われるサイトを指します。 この記事の例では、ニュースサイトです。
+[FLEDGE の Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=publisher) の文脈では、広告を表示するために支払われるサイトを指します。 この記事の例では、ニュースサイトです。
 
 {: #rtb}
 
@@ -551,7 +551,7 @@ FLEDGE では、広告オークションを実行する当事者を指します�
 
 ### サプライサイドプラットフォーム、セルサイドプラットフォーム（SSP）
 
-広告枠の販売を自動化するために使用されるアドテックサービス。 SSP を使用すると、サイト運営者は広告枠（広告が表示される空の矩形）を複数のアドエクスチェンジ、DSP、およびネットワークに提供できます。 このため、幅広い潜在的なバイヤーが広告スペースに入札することが可能となります。
+広告枠の販売を自動化するために使用されるアドテクサービス。 SSP を使用すると、サイト運営者は広告枠（広告が表示される空の矩形）を複数のアドエクスチェンジ、DSP、およびネットワークに提供できます。 このため、幅広い潜在的なバイヤーが広告スペースに入札することが可能となります。
 
 {: #trusted-server}
 
@@ -588,7 +588,7 @@ FLEDGE では、広告オークションを実行する当事者を指します�
 -  [FLEDGE API 開発者ガイド](/blog/fledge-api): API 使用法のリファレンスガイド
 -  [FLEDGE デモ](https://fledge-demo.glitch.me): 基本的な FLEDGE デプロイメントのウォークスルー
 -  [FLEDGE デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードの動作が説明されており、FLEDGE デバッグに Chrome DevTools を使用する方法が紹介されています。
--  [FLEDGE API 技術説明書](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
+-  [FLEDGE API Explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
