@@ -34,9 +34,9 @@ In the past couple of months since Cloudflare's launch, I've been reading and re
 
 An SXG is a file containing a URL, a set of HTTP response headers, and a response body—all cryptographically signed by a Web PKI certificate. When the browser loads an SXG, it verifies all of these:
 
-- the SXG hasn't expired
-- the signature matches the URL, headers, body, and certificate
-- the certificate is valid and matches the URL
+- The SXG hasn't expired.
+- The signature matches the URL, headers, body, and certificate.
+- The certificate is valid and matches the URL.
 
 If verification fails, the browser abandons the SXG and instead fetches the signed URL. If verification succeeds, the browser loads the signed response, treating it as if it came directly from the signed URL. This allows SXGs to be rehosted on any server as long as it isn't expired or modified since being signed.
 
@@ -137,12 +137,14 @@ If you see a cross mark (❌), that means an SXG wasn't returned:
 </figure>
 
 If Cloudflare ASX is enabled, then the most likely reason for a cross mark (❌) is because a cache control response header prevents it. ASX looks at headers with the following names:
+
 - `Cache-Control`
 - `CDN-Cache-Control`
 - `Surrogate-Control`
 - `Cloudflare-CDN-Cache-Control`
 
 If any of these headers contains any of the following header values, it will prevent an SXG from being generated:
+
 - `private`
 - `no-store`
 - `no-cache`
@@ -156,13 +158,13 @@ Another possible reason for a cross mark (❌) is the presence of one of [these 
 These restrictions can be seen in more detail in the ASX code. For instance, cache control headers are inspected by the code that [determines when to sign](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L105-L116) and [what the signature duration should be](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L252-L272). Other headers are removed before signing [by this configuration](https://github.com/google/sxg-rs/blob/130fec932e100b1f9949903bc6c5a61452b9f042/cloudflare_worker/wrangler.example.toml#L42) or [by this code](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L279-L292). Other headers [prevent signing](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L325-L345) if not otherwise stripped.
 {% endAside %}
 
-Another possible reason is the presence of a `Vary: Cookie` response header. Googlebot fetches SXGs without user credentials and may serve them to multiple visitors. If you serve different HTML to different users based on their cookie, then they could see an incorrect experience such as a logged out view.
+Another possible reason is the presence of a [`Vary: Cookie`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Vary) response header. Googlebot fetches SXGs without user credentials and may serve them to multiple visitors. If you serve different HTML to different users based on their cookie, then they could see an incorrect experience such as a logged out view.
 
 {% Aside %}
 In the future, pages using `Vary: Cookie` will be supported by SXG, by being shown only to visitors without cookies for your site. This is [implemented in Chromium](https://crbug.com/1250532), and will be enabled in Google Search once that has rolled out more fully.
 {% endAside %}
 
-Alternatively to the Chrome extension, you can use a tool like `curl`:
+Alternatively to the Chrome extension, you can use a tool like [`curl`](https://curl.se/):
 
 ```bash
 curl -siH "Accept: application/signed-exchange;v=b3" $URL | less
@@ -346,10 +348,10 @@ Read the [Contemporary study section](#contemporary-study) for how to measure "X
 
 When looking at real user monitoring (RUM) data, you should split page loads into SXG and non-SXG. When doing so, it is essential to limit the set of page loads you look at, so the non-SXG side matches the eligibility conditions for SXG, in order to avoid selection bias. Otherwise, all of the following would exist *only* in the set of non-SXG page loads, which may have innately different LCP:
 
-- iOS devices—due to differences in hardware or network speed among the users who have these devices.
-- older Chromium browsers—for the same reasons.
-- desktop devices—for the same reasons or because the page layout causes a different "largest element" to be chosen.
-- same-site navigations (visitors following links within the site)—because they can reuse cached subresources from the previous page load.
+- **iOS devices:** due to differences in hardware or network speed among the users who have these devices.
+- **Older Chromium browsers:** for the same reasons.
+- **Desktop devices:** for the same reasons or because the page layout causes a different "largest element" to be chosen.
+- **Same-site navigations (visitors following links within the site):** because they can reuse cached subresources from the previous page load.
 
 In Google Analytics (UA), [create two custom dimensions](https://support.google.com/analytics/answer/2709829) with scope "Hit", one named "isSXG" and one named "referrer". (The built-in "Source" dimension has [session scope](https://support.google.com/analytics/answer/2709828?hl=en#example-session&zippy=%2Cin-this-article), so it doesn't exclude same-site navigations.)
 
@@ -410,9 +412,9 @@ Click "Submit", and you should see LCP distributions for the two segments. This 
 
 Once you've applied all of the above filters, SXG counterfactual page loads should consist of things like these:
 
-- cache misses—If the Google SXG Cache doesn't have a fresh copy of the SXG for a given URL, it will redirect to the original URL at your site.
-- other result types—Currently, Google Search only supports SXG for standard web results and a few other types. Others, like Featured Snippets and Top Stories Carousel, will link to the original URL at your site.
-- ineligible URLs—If some pages on your site are not eligible for SXG (e.g. because they are not cacheable), they could appear in this set.
+- **Cache misses:** If the Google SXG Cache doesn't have a fresh copy of the SXG for a given URL, it will redirect to the original URL at your site.
+- **Other result types:** Currently, Google Search only supports SXG for standard web results and a few other types. Others, like Featured Snippets and Top Stories Carousel, will link to the original URL at your site.
+- **Ineligible URLs:** If some pages on your site are not eligible for SXG (e.g. because they are not cacheable), they could appear in this set.
 
 There may be remaining bias between the SXG page loads and the above set of non-SXG page loads, but it should be smaller in magnitude than the biases mentioned at the top of the [Contemporary study section](#contemporary-study). For example, perhaps your non-cacheable pages are slower or faster than your cacheable pages. If you suspect this could be an issue, consider looking at the data limited to a specific SXG-eligible URL to see if its results match the overall study.
 
@@ -431,8 +433,8 @@ Note that Google Search may take up to several weeks to recrawl all pages on you
 
 It also is helpful to look at overall 75th percentile LCP before and after, to confirm the above studies. Learning about a subset of the population doesn't necessarily tell us about the overall population. For instance, let's say SXG improves 10% of page loads by 800ms.
 
-- If these were already the 10% fastest page loads, then it won't affect 75p at all.
-- If they were the 10% slowest page loads, but they were more than 800ms slower than the 75p LCP to begin with, then it won't affect 75p at all.
+- If these were already the 10% fastest page loads, then it won't affect the 75th percentile at all.
+- If they were the 10% slowest page loads, but they were more than 800ms slower than the 75th percentile LCP to begin with, then it won't affect the 75th percentile at all.
 
 These are extreme examples, likely not reflective of reality, but hopefully illustrate the issue. In practice, it's likely that SXG will affect the 75th percentile for most sites. Cross-site navigations tend to be some of the slowest, and improvements from prefetching tend to be significant.
 
