@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-04-11
+updated: 2022-04-20
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -81,9 +81,8 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-trial-ended" class="w-ml--l"><a href="#trial-ended">The origin trial hasn't 
     ended</a></label>
   <br>
-  <input class="w-checkbox" type="checkbox" id="check-region">
-  <label for="check-region" class="w-ml--l"><a href="#region">The origin trial is available in your 
-    region</a></label>
+  <input class="w-checkbox" type="checkbox" id="check-user">
+  <label for="check-user" class="w-ml--l"><a href="#user">The origin trial is available for the current user</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-usage-restrictions">
   <label for="check-usage-restrictions" class="w-ml--l"><a href="#usage-restrictions">Origin trial 
@@ -144,8 +143,8 @@ be accessed on multiple sites from third-party scripts.
 is enabled for the token. This enables an origin trial feature to be tested on multiple 
 subdomains of an origin, without requiring a different token for every subdomain.
 
-Chrome DevTools will display a warning next to the trial name if the trial is not available in your 
-region, the token has expired, or if there are other restrictions.
+Chrome DevTools will display a warning next to the trial name if the trial is not available 
+for the current user, the token has expired, or if there are other restrictions.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iW93yyW0wFk7qCeIkqLx.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing expired token", width="800", height="424" %}
@@ -422,15 +421,20 @@ status of the feature you're testing.
 {% endAside %}
 
 
-### The origin trial is available in your region {: #region}
+### The origin trial is available for the current user {: #user}
 
-Not all origin trials are supported in all geographical regions.
+Some origin trials are unavailable to certain users, even if a valid token is provided.
 
-If a trial isn't supported in your region, Chrome DevTools will display a `TrialNotAllowed` warning:
+If a trial isn't available for the current user, Chrome DevTools will display a `TrialNotAllowed` warning:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jToK0McIe9AgqCS3rymo.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing TrialNotAllowed warning", width="800", 
 height="424" %}
+
+Information about usage restrictions and availability will be provided for each origin trial.
+
+As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+to confirm that an origin trial feature is supported before you use it.
 
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
 
