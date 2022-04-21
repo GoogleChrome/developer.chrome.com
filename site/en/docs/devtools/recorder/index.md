@@ -196,7 +196,6 @@ When exporting as a @puppeteer/replay script, the steps remain a JSON object (un
 
 When to use what? Provide suggestion maybe?
 
-The regular Puppeteer script is entirely in JavaScript and you can replay it with the regular Puppeteer library.
 
 ### Import a user flow {: #import-flows }
 
