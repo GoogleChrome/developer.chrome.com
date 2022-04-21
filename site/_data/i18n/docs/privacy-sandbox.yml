@@ -57,6 +57,10 @@ fedcm:
   en: 'Federated Credentials Management (FedCM)'
 proposals:
   en: 'Proposal lifecycle'
+permissions-policy:
+  en: 'Permissions Policy'
+permissions-policy-description:
+  en: 'Manage browser access to your page and embedded third-party iframes.'
 feedback:
   en: 'Feedback'
 faq:
