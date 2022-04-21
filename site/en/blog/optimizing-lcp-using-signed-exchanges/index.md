@@ -4,54 +4,62 @@ title: Optimizing LCP using Signed Exchanges
 description: >
   Signed exchanges are a means for web developers to drastically improve page loading speed coming from SXG referrers such as Google Search. They can provide benefit simply from being enabled by a checkbox, but you can take additional steps to get the most out of them.
 subhead: >
-  How to measure and optimize signed exchanges to get the most improvement out of them.
-date: 2022-04-15
+  How to measure and optimize signed exchanges to get the most improvement out of them
+date: 2022-04-21
 authors:
   - twifkak
 tags:
   - performance
 ---
 
-Signed exchanges (SXGs) are a means for web developers to improve their page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/lcp/)—by enabling other sites (currently Google Search) to [prefetch their pages](https://developers.google.com/search/docs/advanced/experience/signed-exchange) before the user clicks on the link.
+Signed exchanges (SXGs) are a means to improve your page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/lcp/). When referring sites (currently Google Search) link to a page, they can [prefetch it](https://developers.google.com/search/docs/advanced/experience/signed-exchange) into the browser cache before the user clicks on the link.
 
-{% Aside %}
-SXGs are potentially useful for other use cases not covered in this article. For instance, they could enable connection resilience: a chat app could pre-download an SXG of a link sent to the user, so they could later view it while offline. See this larger list of [potential use cases](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html).
-{% endAside %}
-
-It is possible to make web pages that completely eliminate the network from the critical path to rendering the page, when prefetched! On 4G, this page load [goes from 6s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220329_BiDc1V_FJG,220329_AiDcB7_HB0&medianMetric=LCP). What remains is bound mostly by CPU:
+It is possible to make web pages that, when prefetched, completely eliminate the network from the [critical path to rendering the page](https://developer.mozilla.org/docs/Web/Performance/Critical_rendering_path), when prefetched! On 4G, this page load [goes from 6s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220329_AiDcB7_HB0-l:Before,220329_BiDc1V_FJG-l:After&medianMetric=LCP). The remaining time until render is bound mostly by CPU usage:
 
 <figure>
-  {% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/5IRBMSsCZwihnVIVK4gS.mp4", controls=true, poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/4ttTTum2aZuNZL04vYmI.jpg" %}
+  {% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/KATYwVUsB7yG3sxtFkJI.mp4", controls=true, poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/PKUIECQWQwpDzGRUzL86.jpg" %}
 </figure>
 
-Most people publishing signed exchanges today are using Cloudflare's amazingly easy-to-use [Automatic Signed Exchanges](https://support.cloudflare.com/hc/en-us/articles/4411075595661-Automatic-Signed-Exchanges-SXGs-Beta) (ASX) feature (though [open source options](https://web.dev/signed-exchanges/#tooling) exist, too):
+Most people publishing SXGs today are using Cloudflare's easy-to-use [Automatic Signed Exchanges](https://support.cloudflare.com/hc/articles/4411075595661-Automatic-Signed-Exchanges-SXGs-Beta) (ASX) feature (though [open source options](https://web.dev/signed-exchanges/#tooling) exist, too):
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Jok2O4SHNgW5d9y20YQP.png", alt="Cloudflare settings panel with checkbox to enable Automatic Signed Exchanges", width="800", height="373" %}
 </figure>
 
-In many cases, checking the box is enough to get the kind of drastic improvement shown above. However, sometimes there are a few more steps to ensure these signed exchanges are working as intended at each stage of the pipeline, and to optimize pages to take full advantage of prefetch.
+In many cases, checking the box to enable this feature is enough to get the kind of substantial improvement shown above. Sometimes, there are a few more steps to ensure these SXGs are working as intended at each stage of the pipeline, and to optimize pages to take full advantage of prefetch.
 
-In the past couple of months since Cloudflare's launch, I've been reading and responding to questions on [various](https://support.google.com/webmasters/threads?hl=en&thread_filter=(%27%22signed%20exchange%22%27)) [forums](https://community.cloudflare.com/t/automatic-signed-exchanges-sxgs-beta-launch/312634) and advising sites on how to make sure they're getting the most out of their signed exchange deployments. In the process, I think I've learned enough to begin offering some common advice for frequently asked questions.
+In the past couple of months since Cloudflare's launch, I've been reading and responding to questions on [various](https://support.google.com/webmasters/threads?hl=en&thread_filter=(%27%22signed%20exchange%22%27)) [forums](https://community.cloudflare.com/t/automatic-signed-exchanges-sxgs-beta-launch/312634) and advising sites on how to make sure they're getting the most out of their SXG deployments. This post is a collection of that advice, walking through the steps to analyze SXG performance, find ways to improve it, and finally measure its real world impact.
 
-Let's dig in.
+## How do signed exchanges work?
+
+An SXG is a message containing a URL, a set of HTTP response headers, and a response body, all cryptographically signed by a Web PKI certificate that matches the signed URL. When the browser loads an SXG, it verifies that the SXG hasn't expired, that the signature matches the URL, headers, body, and certificate, and that the certificate is valid. If verification fails, the browser fetches the resource from the original signed URL. This allows any mirror to serve the SXG as long as it isn't expired or modified since being signed.
+
+In the case of Google Search, SXG enables prefetching. Most search results cannot be prefetched because doing so would reveal the searcher's interest in a topic to a site before they navigate to that site; this is contrary to user expectations around [sensitive information](https://w3cping.github.io/privacy-threat-model/#model-sensitive-information). However, using SXG, Google Search can prefetch its cached copy of the result.
+
+When Google Search instructs a user's browser to prefetch your SXG, it does so via a URL on webpkgcache.com in order to [avoid revealing the user's behavior to a third party](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#name-privacy-preserving-prefetch). These URLs don't affect the display or behavior of the page, because the browser respects the original URL that has been signed into the SXG.
+
+{% Aside %}
+SXGs are potentially useful for other use cases not covered in this article. For instance, they could enable connection resilience: a chat app could pre-download a link sent to the user if the page supports SXG, so they could later view it while offline. See this larger list of [potential use cases](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html).
+{% endAside %}
 
 ## Analyze
 
-One place to start is to use a lab tool like WebPageTest like shown above, so you can compare waterfalls—and LCP—with and without SXG prefetch.
+Start by using a lab tool to analyze SXG performance in repeatable conditions. You can use [WebPageTest](https://www.webpagetest.org/) to compare waterfalls—and LCP—with and without SXG prefetch.
 
 {% Aside 'caution' %}
-[Lab results may differ](https://web.dev/lab-and-field-data-differences/) from real user experiences, but they are a useful tool to diagnose what needs optimization and iterate quickly. We'll cover how to measure the resultant field data in the [Measure](#measure) section.
+[Lab results may differ](https://web.dev/lab-and-field-data-differences/) from real user experiences, but they are a useful tool to diagnose where to optimize and to iterate quickly. We'll cover how to measure the resultant real user metrics in the [Measure section](#measure).
 {% endAside %}
 
-Generate a test without SXG in the standard way: go to [WebPageTest](https://www.webpagetest.org/) and enter a URL.
+Generate a test without SXG as follows:
 
-- Consider doing this while signed in, so you can more easily generate a comparison.
-- Go to "Advanced Configuration" and choose a set of options there, rather than "Simple Configuration". (This makes it easy to assure that you have the same set of parameters as the "with SXG" test, which will use Advanced.)
-- Under Browser, choose an Android phone under "Chrome Device Emulation". (This is also for parity with the "with SXG" test. As of writing, Google Search only supports SXG on Android.)
-- Everything else is up to you. It may be helpful to increase "Number of Tests to Run" to 7, and pick a 4G connection.
+- Go to [WebPageTest](https://www.webpagetest.org/) and sign in. Signing in saves your test history for easier comparison later.
+- Enter the URL you want to test.
+- Go to "Advanced Configuration". (You will need Advanced Configuration for the SXG test, so using it here helps ensure the test options are the same.)
+- Under Browser, choose an Android phone under "Chrome Device Emulation". (This is also for parity with the "with SXG" test. Currently, Google Search only supports SXG on Android.)
+- In the Test Settings tab, it may be helpful to set Connection to 4G and increase "Number of Tests to Run" to 7.
+- Click "Start Test".
 
-Generate a test with SXG by starting with the same steps as above, but then go to the Script tab and enter a [WebPageTest script](https://docs.webpagetest.org/scripting/) like the following. This script overrides the URL entered in the main input field:
+Generate a test *with* SXG by using the same steps as above, but before clicking "Start Test", go to the Script tab, paste in the following [WebPageTest script](https://docs.webpagetest.org/scripting/), and modify the `navigate` URLs as directed:
 
 ```clike
 // Disable log collection for the first step. We only want the waterfall for the target navigation.
@@ -70,18 +78,13 @@ logData 1
 navigate https://signed--exchange--testing-dev.webpkgcache.com/doc/-/s/signed-exchange-testing.dev/sxgs/valid-image-subresource.html
 ```
 
-If your page doesn't appear in any Google Search results yet, you can use [this prefetch page](https://signed-exchange-testing.dev/prefetch/) to generate a pretend search results page for this purpose.
-
-
-{% Aside %}
-When Google Search instructs a user's browser to prefetch your SXG, it does so via a URL on webpkgcache.com in order to [avoid revealing the user's intent](https://wicg.github.io/webpackage/draft-yasskin-wpack-use-cases.html#name-privacy-preserving-prefetch) before they navigate. These URLs don't affect the display or behavior of the page, because the browser trusts the original URL that has been signed into the SXG.
-{% endAside %}
-
-The easiest way to determine the webpkgcache.com URL is to visit your page using the [SXG Validator Chrome extension](https://chrome.google.com/webstore/detail/sxg-validator/hiijcdgcphjeljafieaejfhodfbpmgoe), and click the extension icon to see the cache URL:
+To determine the webpkgcache.com URL, visit your page using the [SXG Validator Chrome extension](https://chrome.google.com/webstore/detail/sxg-validator/hiijcdgcphjeljafieaejfhodfbpmgoe), and click the extension icon to see the cache URL:
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/DbkcylGpILjOzOnxREXl.png", alt="SXG Validator showing cache information including URL", width="506", height="229" %}
 </figure>
+
+If your page doesn't appear in any Google Search results yet, you can use [this prefetch page](https://signed-exchange-testing.dev/prefetch/) to generate a pretend search results page for this purpose.
 
 Once these tests are complete, go to [Test History](https://app.webpagetest.org/ui/wpt/testhistory), select the two tests, and click Compare:
 
@@ -89,29 +92,42 @@ Once these tests are complete, go to [Test History](https://app.webpagetest.org/
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/ElSV7nAWCWV0Yjf7VC2o.png", alt="Test History with two tests checked and the Compare button highlighted", width="509", height="202" %}
 </figure>
 
-Append `?medianMetric=LCP` to the compare URL so that the run with median LCP is selected for each side of the comparison. (The default is median by Speed Index.)
+Append `&medianMetric=LCP` to the compare URL so that the run with median LCP is selected for each side of the comparison. (The default is median by Speed Index.)
 
 To compare waterfalls, expand the Waterfall Opacity section and drag the slider. To view the video, click Adjust Filmstrip Settings, scroll down inside that dialog, and click View Video.
 
+If the HTML is prefetched, you will see that the "with SXG" waterfall doesn't include a row for the HTML, and the fetches for subresources start sooner. For instance compare "Before" and "After" here:
+
+<web-tabs>
+  <web-tab title=Before>
+    {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/aIBr57FFOuQr2vFmhMmT.png",
+           alt="Network waterfall without SXG prefetch; first row is HTML fetch which takes 1050ms",
+           width="800", height="327" %}
+  </web-tab>
+  <web-tab title=After>
+    {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/ucVLPpadkNUua75d2zD9.png",
+           alt="Network waterfall with SXG prefetch; the HTML has been prefetched, allowing all subresources to start fetching 1050ms earlier",
+           width="800", height="327" %}
+  </web-tab>
+</web-tabs>
+
 ## Debug
 
-If the WebPageTest is showing that the HTML is being prefetched, then it has succeeded in all the steps of the pipeline; you may skip to the [Optimize](#optimize) section to learn how to further improve LCP. Otherwise, you'll need to find out where in the pipeline it failed and why; see the following sections for how.
+If the WebPageTest is showing that the HTML is being prefetched, then it has succeeded in all the steps of the pipeline; you may skip to the [Optimize](#optimize) section to learn how to further improve LCP. Otherwise, you'll need to find out where in the pipeline it failed and why; read on to learn how.
 
 ### Publishing
 
-Make sure your pages are being generated as signed exchanges.
-
-{% Aside %}
-Your site will not serve SXG to users, even on SXG-capable browsers. They're meant for SXG-capable crawlers, to enable prefetch. (Serving SXGs to users who visit the site directly, where there is no opportunity for prefetch, only adds overhead.) Thus, to debug, you need to pretend to be a crawler.
-{% endAside %}
-
-The easiest way is to use the SXG Validator Chrome extension:
+Make sure your pages are being generated as signed exchanges. To do so, you need to pretend to be a crawler. The easiest way is to use the SXG Validator Chrome extension:
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/zUqSkRSLNkF26gjyymEo.png", alt="SXG Validator showing a check mark (✅) and a Content Type of application/signed-exchange;v=b3", width="600", height="281" %}
 </figure>
 
-The extension fetches the current URL again, but with an `Accept` request header that says it prefers the SXG version. If you see a check mark (✅), that means an SXG was returned; you can skip to the [Indexing](#indexing) section.
+{% Aside %}
+SXGs are meant for SXG-capable crawlers, to enable prefetching. You should not serve SXGs to users who visit your site directly, even on SXG-capable browsers, since it will not be prefetched in this case—doing so only adds overhead. Cloudflare ASX performs this [content negotation](https://github.com/google/webpackager/blob/main/cmd/webpkgserver/README.md#content-negotiation) automatically.
+{% endAside %}
+
+The extension fetches the current URL with an `Accept` request header that says it prefers the SXG version. If you see a check mark (✅) next to Origin, that means an SXG was returned; you can skip to the [Indexing](#indexing) section.
 
 If you see a cross mark (❌), that means an SXG wasn't returned:
 
@@ -129,20 +145,20 @@ If any of these headers contains any of the following header values, it will pre
 - `private`
 - `no-store`
 - `no-cache`
-- `s-maxage` less than 120, if present, or else `max-age` less than 120
+- `max-age` less than 120, unless overridden by `s-maxage` less than 120
 
-ASX backs off in these cases because SXGs may be [cached and reused](https://developers.google.com/search/docs/advanced/experience/signed-exchange#additional-requirements-for-google-search) for multiple visits and multiple visitors.
+ASX doesn't create an SXG in these cases because SXGs may be [cached and reused](https://developers.google.com/search/docs/advanced/experience/signed-exchange#additional-requirements-for-google-search) for multiple visits and multiple visitors.
 
-Another possible reason for a cross mark (❌) is the presence of one of [these response headers](https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#name-stateful-header-fields), though ASX may strip some of these before checking this list.
+Another possible reason for a cross mark (❌) is the presence of one of [these stateful response headers](https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#name-stateful-header-fields), though ASX may strip some of these before checking this list.
 
 {% Aside %}
-These restrictions can be seen in more detail in the code. For instance, cache control headers are inspected by the code that [determines when to sign](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L105-L116) and [what the signature duration should be](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L252-L272). Other headers are removed before signing [by configuration](https://github.com/google/sxg-rs/blob/130fec932e100b1f9949903bc6c5a61452b9f042/cloudflare_worker/wrangler.example.toml#L42) or [by code](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L279-L292). Other headers [prevent signing](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L325-L345) if not otherwise stripped.
+These restrictions can be seen in more detail in the ASX code. For instance, cache control headers are inspected by the code that [determines when to sign](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L105-L116) and [what the signature duration should be](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L252-L272). Other headers are removed before signing [by this configuration](https://github.com/google/sxg-rs/blob/130fec932e100b1f9949903bc6c5a61452b9f042/cloudflare_worker/wrangler.example.toml#L42) or [by this code](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L279-L292). Other headers [prevent signing](https://github.com/google/sxg-rs/blob/d16e66a2b8d5e0c069ec70af198dd95f640321d8/sxg_rs/src/headers.rs#L325-L345) if not otherwise stripped.
 {% endAside %}
 
-Another possible reason is the presence of the `Vary: Cookie` response header. If you serve different HTML to different users based on their cookie, then it wouldn't be correct for Google to cache and reuse an SXG of that HTML for multiple visitors.
+Another possible reason is the presence of a `Vary: Cookie` response header. Googlebot fetches SXGs without user credentials and may serve them to multiple visitors. If you serve different HTML to different users based on their cookie, then they could see an incorrect experience such as a logged out view.
 
 {% Aside %}
-In the future, you will be able to designate an SXG as only for new visitors, using `Vary: Cookie`. This is [implemented in Chromium](https://crbug.com/1250532), and will be enabled in Google Search once that has rolled out to enough people.
+In the future, pages using `Vary: Cookie` will be supported by SXG, by being shown only to visitors without cookies for your site. This is [implemented in Chromium](https://crbug.com/1250532), and will be enabled in Google Search once that has rolled out more fully.
 {% endAside %}
 
 Alternatively to the Chrome extension, you can use a tool like `curl`:
@@ -157,9 +173,11 @@ or [`dump-signedexchange`](https://github.com/WICG/webpackage/blob/main/go/signe
 dump-signedexchange -verify -uri $URL
 ```
 
+If the SXG is present and valid, you will see a human readable printout of the SXG. Otherwise, you will see an error message.
+
 ### Indexing
 
-Make sure your SXGs are successfully [indexed](https://support.google.com/webmasters/answer/7645831) by Google Search. Test if Google Search is linking to webpkgcache.com's copy of your page, by looking in DevTools. Since Google Search currently only supports SXG for Android OSes, you may need to enable mobile-emulation mode and select an Android device:
+Make sure your SXGs are successfully [indexed](https://support.google.com/webmasters/answer/7645831) by Google Search. Test if Google Search is linking to webpkgcache.com's copy of your page, by looking in Chrome DevTools. Since Google Search currently only supports SXG for Android OSes, you may need to enable mobile-emulation mode and select an Android device:
 
 <figure>
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Qu2qWl2LES3N8tiqnskP.png", alt="Google Search results with DevTools showing an <a> that points to webpkgcache.com", width="800", height="635" %}
