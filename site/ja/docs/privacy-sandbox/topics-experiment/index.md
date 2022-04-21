@@ -10,22 +10,22 @@ authors:
 ユーザーがアクセスしたサイトをトラッキングせずに、インタレスト
 ベースの広告を掲載できるようにします。
 
-## [\#](/docs/privacy-sandbox/topics-experiment/#learn-the-essentials)基礎を学ぶ
+## (/docs/privacy-sandbox/topics-experiment/#learn-the-essentials)基礎を学ぶ
 
 [Topics API](/docs/privacy-sandbox/topics/)
 で提案の概要を確認できます。
 
-## [\#](/docs/privacy-sandbox/topics-experiment/#try-the-api)API を試す
+## (/docs/privacy-sandbox/topics-experiment/#try-the-api)API を試す
 
-1.  Topics API の最新の実装状況については、プライバシーサンドボックスの[ステータスページ](/docs/privacy-sandbox/status/#topics)をご覧ください。
+1. Topics API の最新の実装状況については、プライバシーサンドボックスの[ステータスページ](/docs/privacy-sandbox/status/#topics)をご覧ください。
 
-2.  API を試す:
+2. API を試す:
 
-    - [Topics API](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like) では、API の使用方法を示す簡単なコード例を紹介しています。
+   - [Topics API](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like) では、API の使用方法を示す簡単なコード例を紹介しています。
 
-    - [Topics API の仕組み](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)では、API によって返される値の概要のほか、機能のサポートと制約に関する詳細情報を確認できます。
+   - [Topics API の仕組み](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)では、API によって返される値の概要のほか、機能のサポートと制約に関する詳細情報を確認できます。
 
-## [\#](/docs/privacy-sandbox/topics-experiment/#get-support)サポートを受ける
+## (/docs/privacy-sandbox/topics-experiment/#get-support)サポートを受ける
 
 {% Aside %}
 API のテストをうまく進められない場合はご連絡ください。
@@ -43,13 +43,13 @@ Chrome での Topics API の実装に関してバグや問題がある場合:
 
 - 新しいイシューを作成するには [crbug.com/new](https://crbug.com/new) にアクセスしてください。
 
-## [\#](/docs/privacy-sandbox/topics-experiment/#join-the-discussion)ディスカッションに参加する
+## (/docs/privacy-sandbox/topics-experiment/#join-the-discussion)ディスカッションに参加する
 
 Topics
 の提案に関するディスカッションにはどなたでもご参加いただけます。特にこの
 API をテストしている場合は、フィードバックをぜひご提供ください。
 
-### [\#](/docs/privacy-sandbox/topics-experiment/#discuss-the-api)この API について意見を交換する
+### (/docs/privacy-sandbox/topics-experiment/#discuss-the-api)この API について意見を交換する
 
 プライバシー サンドボックスに関する他の提案と同様に、この API
 についてもドキュメントを公開し、どなたでもディスカッションに参加できるようにしています。
@@ -60,17 +60,17 @@ API をテストしている場合は、フィードバックをぜひご提供�
 
 - [新しいイシューを作成](https://github.com/jkarlin/topics/issues/new)できます。質問、機能の提案、ユースケースについてのディスカッションといった用途にご利用ください。
 
-### [\#](/docs/privacy-sandbox/topics-experiment/#discuss-related-topics)関連トピックについて意見を交換する
+### (/docs/privacy-sandbox/topics-experiment/#discuss-related-topics)関連トピックについて意見を交換する
 
 - [「ウェブ広告ビジネスの改善」グループ](https://www.w3.org/community/web-adv/participants)で、業界のユースケースについて意見を交換できます。
 
-### [\#](/docs/privacy-sandbox/topics-experiment/#give-feedback)フィードバックを送信する
+### (/docs/privacy-sandbox/topics-experiment/#give-feedback)フィードバックを送信する
 
 - プライバシー サンドボックスの[フィードバックフォーム](/docs/privacy-sandbox/feedback/#feedback-form)を使用して、公開フォーラムではなく Chrome チーム宛に非公開でフィードバックを送信できます。
 
 - [プライバシーサンドボックスのフィードバック](/docs/privacy-sandbox/feedback/#topics-api)では、他の種類のフィードバックを送信する方法や、プライバシー サンドボックスの提案に関するディスカッションに参加する方法について説明しています。
 
-## [\#](/docs/privacy-sandbox/topics-experiment/#get-updates)最新情報を入手する
+## (/docs/privacy-sandbox/topics-experiment/#get-updates)最新情報を入手する
 
 - この API のステータス変更について通知を受け取るには、[デベロッパー向けのメーリングリスト](https://groups.google.com/u/3/a/chromium.org/g/topics-api-announce)にご参加ください。
 
