@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Optimizing LCP using Signed Exchanges
 description: >
-  Signed exchanges are a means for web developers to drastically improve page loading speed coming from SXG referrers such as Google Search. They can provide benefit simply from being enabled by a checkbox, but you can take additional steps to get the most out of them.
+  Signed exchanges are a means for web developers to substantially improve page loading speed coming from SXG referrers such as Google Search. They can provide benefit simply from being enabled by a checkbox, but you can take additional steps to get the most out of them.
 subhead: >
   How to measure and optimize signed exchanges to get the most improvement out of them
 date: 2022-04-21
