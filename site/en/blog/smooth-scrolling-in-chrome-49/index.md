@@ -22,7 +22,7 @@ The solution to the stepped native, input-driven scroll behavior for many develo
 
 These drawbacks are often also true of many libraries that deal with scroll behaviors, whether that’s parallax effects, or other scroll-coupled animations. They all too often trigger jank, get in the way of accessibility, and generally damage the user experience. Scrolling is a core interaction of the web, and altering it with libraries should be done with great care.
 
-In Chrome 49, the default scroll behavior will be changing Windows, Linux, and Chrome OS. The old, stepped scrolling behavior is going away, and scrolling will be smooth by default! No changes to your code are necessary, except maybe removing any smooth scrolling libraries if you’ve used them.
+In Chrome 49, the default scroll behavior will be changing Windows, Linux, and ChromeOS. The old, stepped scrolling behavior is going away, and scrolling will be smooth by default! No changes to your code are necessary, except maybe removing any smooth scrolling libraries if you’ve used them.
 
 ## More scrolling goodies
 

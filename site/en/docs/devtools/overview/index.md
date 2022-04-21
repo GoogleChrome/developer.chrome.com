@@ -22,9 +22,9 @@ of the DevTools UI.
 
 - When you want to work with the DOM or CSS, right-click an element on the page and select
   **Inspect** to jump into the **Elements** panel. Or press Command+Option+C (Mac) or
-  Control+Shift+C (Windows, Linux, Chrome OS).
+  Control+Shift+C (Windows, Linux, ChromeOS).
 - When you want to see logged messages or run JavaScript, press Command+Option+J (Mac) or
-  Control+Shift+J (Windows, Linux, Chrome OS) to jump straight into the **Console** panel.
+  Control+Shift+J (Windows, Linux, ChromeOS) to jump straight into the **Console** panel.
 
 See [Open Chrome DevTools][2] for more details and workflows.
 

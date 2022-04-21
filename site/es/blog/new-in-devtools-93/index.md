@@ -117,7 +117,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 El panel **Manifiesto** ahora muestra una [nueva nota URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Actualmente en Chrome OS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
+Actualmente en ChromeOS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Nueva nota URL en el panel de Manifiesto", width="800", height="477" %}
 
