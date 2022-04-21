@@ -9,7 +9,6 @@ date: 2022-03-31
 updated: 2022-03-31
 authors:
   - samdutton
----
 
 ## 基礎を学ぶ
 
@@ -29,6 +28,7 @@ API のテストをうまく進められない場合はご連絡ください。
 {% endAside %}
 
 **ご自身の実装**や**ドキュメント**について質問がある場合:
+
 * privacy-sandbox-dev-support リポジトリで[新しいイシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)してください。その際、必ず Topics 用のイシュー テンプレートを選択します。
 * この API を使用した**ユースケース**への対応に関する全般的な質問がある場合は、[提案リポジトリでイシューを作成](https://github.com/jkarlin/topics/issues/new)してください。
 
