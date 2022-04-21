@@ -23,9 +23,9 @@ authors:
 
 - 必要に応じて、このサイトのレポジトリで[機能をリクエスト](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)してください。
 
-## [\#](/docs/privacy-sandbox/faq/#general-questions)一般的な質問
+## (/docs/privacy-sandbox/faq/#general-questions)一般的な質問
 
-### [\#](/docs/privacy-sandbox/faq/#why-do-we-need-the-privacy-sandbox)プライバシー サンドボックスが必要な理由を教えてください。
+### (/docs/privacy-sandbox/faq/#why-do-we-need-the-privacy-sandbox)プライバシー サンドボックスが必要な理由を教えてください。
 
 プライバシー サンドボックスは、次の 2
 つを主な目的とするイニシアチブです。
@@ -37,14 +37,14 @@ authors:
 - 新しいソリューションの導入に合わせて、サードパーティの Cookie
 - や他のトラッキング方式のサポートを段階的に廃止する。
 
-### [\#](/docs/privacy-sandbox/faq/#who-works-on-the-privacy-sandbox)プライバシー サンドボックスに携わっているメンバーを教えてください。
+### (/docs/privacy-sandbox/faq/#who-works-on-the-privacy-sandbox)プライバシー サンドボックスに携わっているメンバーを教えてください。
 
 プライバシー サンドボックスは、ウェブ標準の提案をまとめたものです。
 
 Chrome などのブラウザ ベンダーや広告会社などの関係者が、これまでに 30
 を超える提案を行ってきました。これらの提案は、[W3C グループのパブリックリソース](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)で確認でき、さまざまなユースケースや要件に対応しています。
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-keep-track-of-changes-and-progress-in-the-privacy-sandbox)プライバシー サンドボックスに関する変更や進捗状況を確認するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-keep-track-of-changes-and-progress-in-the-privacy-sandbox)プライバシー サンドボックスに関する変更や進捗状況を確認するにはどうすればよいですか？
 
 毎月の更新情報を[プライバシーサンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)に関する一連の記事でご確認いただけます。これらの記事には、ご希望のリーダーで[登録可能な RSS / Atom フィード](/feeds/progress-in-the-privacy-sandbox.xml)も含まれています。
 
@@ -62,7 +62,7 @@ Chrome などのブラウザ ベンダーや広告会社などの関係者が、
 - Chrome
 - の実装に関する変更について更新情報をメールで受け取るには、[プラットフォームのステータス](https://chromestatus.com/)で、関連するエントリにスターを付けます
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-get-involved)参加するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-get-involved)参加するにはどうすればよいですか？
 
 - API の検討、テスト、改良に参加する:\
 
@@ -73,18 +73,18 @@ Chrome などのブラウザ ベンダーや広告会社などの関係者が、
 
 特定の API について質問がある場合は、[API の解説用 GitHub レポジトリ](/docs/privacy-sandbox/status/)で問題を報告できます。
 
-### [\#](/docs/privacy-sandbox/faq/#can-you-define-the-terminology-in-the-api-explainers)API の解説で用語は定義されていますか？
+### (/docs/privacy-sandbox/faq/#can-you-define-the-terminology-in-the-api-explainers)API の解説で用語は定義されていますか？
 
 はい。[プライバシーサンドボックスの用語集](/docs/privacy-sandbox/glossary/)をご覧ください。
 
-### [\#](/docs/privacy-sandbox/faq/#when-will-the-privacy-sandbox-apis-be-implemented)Privacy Sandbox API はいつ実装されますか？
+### (/docs/privacy-sandbox/faq/#when-will-the-privacy-sandbox-apis-be-implemented)Privacy Sandbox API はいつ実装されますか？
 
 [プライバシーサンドボックスのタイムライン](https://privacysandbox.com/timeline/)では、サードパーティの
 Cookie
 を段階的に廃止するためのロードマップをご確認いただけます。その他の、個々の
 API の最新情報については、[実装ステータスページ](/docs/privacy-sandbox/status/)をご覧ください。
 
-### [\#](/docs/privacy-sandbox/faq/#are-the-privacy-sandbox-apis-in-chromium-or-chrome)Privacy Sandbox API が搭載されているのは Chromium と Chrome のどちらですか？
+### (/docs/privacy-sandbox/faq/#are-the-privacy-sandbox-apis-in-chromium-or-chrome)Privacy Sandbox API が搭載されているのは Chromium と Chrome のどちらですか？
 
 API は、Chrome の作成に使用されるオープンソース ブラウザの
 [Chromium](<https://en.wikipedia.org/wiki/Chromium_(web_browser)>)
@@ -92,7 +92,7 @@ API は、Chrome の作成に使用されるオープンソース ブラウザ�
 
 実装途中の API にアクセスできるようにするには、[Chromium をダウンロード](http://chromium.org/getting-involved/download-chromium)して、[フラグ付きで実行](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)します。
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-try-privacy-sandbox-apis-that-arent-yet-turned-on-by-default)まだデフォルトで有効になっていない Privacy Sandbox API を試すにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-try-privacy-sandbox-apis-that-arent-yet-turned-on-by-default)まだデフォルトで有効になっていない Privacy Sandbox API を試すにはどうすればよいですか？
 
 API は、Chrome
 での開発の進行状況に応じて、複数の方法で試すことができます。
@@ -127,12 +127,12 @@ Chrome ユーザーは、ブラウザの設定でプライバシー
 サンドボックスの機能は有効になりません。
 {% endAside %}
 
-### [\#](/docs/privacy-sandbox/faq/#i-registered-for-an-origin-trial-but-the-api-isnt-working-on-my-site)オリジン トライアルに登録したにもかかわらず、サイトで API が機能しません。
+### (/docs/privacy-sandbox/faq/#i-registered-for-an-origin-trial-but-the-api-isnt-working-on-my-site)オリジン トライアルに登録したにもかかわらず、サイトで API が機能しません。
 
 [Chrome のオリジントライアルでのトラブルシューティング](/blog/origin-trial-troubleshooting/#chrome)
 ページをご覧ください。
 
-### [\#](/docs/privacy-sandbox/faq/#will-privacy-sandbox-origin-trials-work-in-chromium-or-other-browsers)プライバシー サンドボックスのオリジン トライアルは、Chromium や他のブラウザでも可能ですか？
+### (/docs/privacy-sandbox/faq/#will-privacy-sandbox-origin-trials-work-in-chromium-or-other-browsers)プライバシー サンドボックスのオリジン トライアルは、Chromium や他のブラウザでも可能ですか？
 
 Chrome オリジン トライアルは、Chrome
 ユーザー向けに設計されています。Chrome オリジン トライアル
@@ -145,9 +145,9 @@ Chrome オリジン トライアルは、Chrome
 iOS と iPadOS の Chrome では Chrome オリジン
 トライアルはサポートされていません。
 
-## [\#](/docs/privacy-sandbox/faq/#trust-tokens)トラスト トークン
+## (/docs/privacy-sandbox/faq/#trust-tokens)トラスト トークン
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/trust-token-api/issues)してください。
 
@@ -160,14 +160,14 @@ iOS と iPadOS の Chrome では Chrome オリジン
 - デベロッパー サポート
 - リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#is-tooling-available-for-trust-tokens)トラスト トークンにツールを使用できますか？
+### (/docs/privacy-sandbox/faq/#is-tooling-available-for-trust-tokens)トラスト トークンにツールを使用できますか？
 
 Chrome DevTools の Network タブと Application タブでトラスト
 トークンの検査を有効にできます。[トラストトークンの使用を開始する](https://web.dev/trust-tokens/#summary)をご覧ください。
 
-## [\#](/docs/privacy-sandbox/faq/#topics)トピック
+## (/docs/privacy-sandbox/faq/#topics)トピック
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-1)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-1)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/jkarlin/topics/issues)してください。
 
@@ -178,7 +178,7 @@ Chrome DevTools の Network タブと Application タブでトラスト
 - デベロッパー サポート
 - リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#can-i-opt-out-of-topic-calculation-for-specific-pages-on-my-site)サイトの特定のページでトピックの推定を無効にすることはできますか？
+### (/docs/privacy-sandbox/faq/#can-i-opt-out-of-topic-calculation-for-specific-pages-on-my-site)サイトの特定のページでトピックの推定を無効にすることはできますか？
 
 はい。ページに `Permissions-Policy: browsing-topics=()`
 ヘッダーを追加すると、そのページに限りすべてのユーザーのトピックの推定が行われなくなります。サイトでそれ以降にアクセスする他のページには影響はありません。たとえば、あるページで
@@ -187,9 +187,9 @@ Topics API
 
 トピックはホスト名からのみ推測され、URL パスからは推測されません。
 
-## [\#](/docs/privacy-sandbox/faq/#fledge)FLEDGE
+## (/docs/privacy-sandbox/faq/#fledge)FLEDGE
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-2)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-2)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/turtledove/issues)してください。
 
@@ -200,7 +200,7 @@ Topics API
   デベロッパー サポート
   リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#whats-the-difference-between-fledge-and-turtledove)FLEDGE と TURTLEDOVE の違いを教えてください。
+### (/docs/privacy-sandbox/faq/#whats-the-difference-between-fledge-and-turtledove)FLEDGE と TURTLEDOVE の違いを教えてください。
 
 [FLEDGE](/docs/privacy-sandbox/fledge/)
 は、[TURTLEDOVE](https://github.com/WICG/turtledove)
@@ -217,9 +217,9 @@ FLEDGE
 関数で使用できるようにします。広告主（広告の購入者）は、オンデバイスの入札を改善する目的で、インタレスト
 グループとともに追加のメタデータを保存することができます。
 
-## [\#](/docs/privacy-sandbox/faq/#attribution-reporting)アトリビューション レポート
+## (/docs/privacy-sandbox/faq/#attribution-reporting)アトリビューション レポート
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-3)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-3)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/conversion-measurement-api/issues)してください。
 
@@ -232,13 +232,13 @@ FLEDGE
 - デベロッパー サポート
 - リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#is-attribution-reporting-the-same-as-the-event-conversion-measurement-api)アトリビューション レポートと Event Conversion Measurement API は同じものですか？
+### (/docs/privacy-sandbox/faq/#is-attribution-reporting-the-same-as-the-event-conversion-measurement-api)アトリビューション レポートと Event Conversion Measurement API は同じものですか？
 
 はい。元のイベントレベルのスコープが拡張されて追加の測定ユースケースに対応できるようになったため、[名称が変更](/docs/privacy-sandbox/attribution-reporting-introduction/)されました。
 
-## [\#](/docs/privacy-sandbox/faq/#first-party-sets)ファーストパーティ セット
+## (/docs/privacy-sandbox/faq/#first-party-sets)ファーストパーティ セット
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-4)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-4)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/privacycg/first-party-sets/issues)してください。
 
@@ -247,7 +247,7 @@ FLEDGE
 - デベロッパー サポート
 - リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#what-does-sharded-mean-in-the-context-of-first-party-sets)ファーストパーティ セットにおける「シャードされている」とはどういう意味ですか？
+### (/docs/privacy-sandbox/faq/#what-does-sharded-mean-in-the-context-of-first-party-sets)ファーストパーティ セットにおける「シャードされている」とはどういう意味ですか？
 
 登録可能なドメイン（「ファーストパーティ
 セット」）がドメイン全体で登録されていません。
@@ -257,9 +257,9 @@ FLEDGE
 セットには含まれません。所有者ドメインは、他のドメインとの関係を定義したマニフェスト
 ファイルを提供する必要があります。
 
-## [\#](/docs/privacy-sandbox/faq/#user-agent-client-hints-ua-ch)User-Agent Client Hints（UA-CH）
+## (/docs/privacy-sandbox/faq/#user-agent-client-hints-ua-ch)User-Agent Client Hints（UA-CH）
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-5)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-5)この機能について質問するにはどうすればよいですか？
 
 - この API
 
@@ -270,7 +270,7 @@ FLEDGE
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-detect-tablet-devices-with-the-ua-ch-api)UA-CH API を使用してタブレット デバイスを検出するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-detect-tablet-devices-with-the-ua-ch-api)UA-CH API を使用してタブレット デバイスを検出するにはどうすればよいですか？
 
 今後、モバイル デバイス、タブレット デバイス、デスクトップ
 デバイスの境界はあいまいになり、動的なフォーム
@@ -304,12 +304,12 @@ FLEDGE
 ハードウェア固有のユースケースには、高エントロピーの `Sec-CH-UA-Model`
 ヒントを介してデバイスモデル名をリクエストできます。
 
-### [\#](/docs/privacy-sandbox/faq/#how-long-will-hints-specified-via-the-accept-ch-header-be-sent)Accept-CH ヘッダーを介して指定されたヒントはいつまで送信されますか？
+### (/docs/privacy-sandbox/faq/#how-long-will-hints-specified-via-the-accept-ch-header-be-sent)Accept-CH ヘッダーを介して指定されたヒントはいつまで送信されますか？
 
 `Accept-CH`
 ヘッダーを介して指定されたヒントは、ブラウザのセッション中、または別のヒントセットが指定されるまで送信されます。
 
-### [\#](/docs/privacy-sandbox/faq/#does-ua-ch-work-with-http2-and-http3)UA-CH は HTTP/2 や HTTP/3 で動作しますか？
+### (/docs/privacy-sandbox/faq/#does-ua-ch-work-with-http2-and-http3)UA-CH は HTTP/2 や HTTP/3 で動作しますか？
 
 UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 
@@ -318,7 +318,7 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 を使用していることを確認してください。
 {% endAside %}
 
-### [\#](/docs/privacy-sandbox/faq/#do-subdomains-and-cnames-require-a-top-level-page-permissions-policy-to-access-high-entropy-ua-ch)サブドメイン（および CNAME）で高エントロピー UA-CH にアクセスするには、トップレベル ページの `Permissions-Policy` が必要ですか？
+### (/docs/privacy-sandbox/faq/#do-subdomains-and-cnames-require-a-top-level-page-permissions-policy-to-access-high-entropy-ua-ch)サブドメイン（および CNAME）で高エントロピー UA-CH にアクセスするには、トップレベル ページの `Permissions-Policy` が必要ですか？
 
 リクエスト ヘッダーの高エントロピー UA-CH は、発信元が DNS
 側で定義されているかどうかにかかわらず、クロスオリジン
@@ -327,9 +327,9 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 コンテキストで実行される JavaScript
 を介して委任を取得する必要があります。
 
-## [\#](/docs/privacy-sandbox/faq/#shared-storage)共有ストレージ
+## (/docs/privacy-sandbox/faq/#shared-storage)共有ストレージ
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-6)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-6)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/pythagoraskitty/shared-storage/issues)してください。
 
@@ -338,9 +338,9 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-## [\#](/docs/privacy-sandbox/faq/#chips)チップ
+## (/docs/privacy-sandbox/faq/#chips)チップ
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-7)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-7)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/CHIPS/issues)してください。
 
@@ -349,9 +349,9 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-## [\#](/docs/privacy-sandbox/faq/#storage-partitioning)ストレージのパーティショニング
+## (/docs/privacy-sandbox/faq/#storage-partitioning)ストレージのパーティショニング
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-8)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-8)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案の解説用レポジトリで[イシューを作成](https://github.com/MattMenke2/Explainer---Partition-Network-State/issues)してください。
 
@@ -360,9 +360,9 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-## [\#](/docs/privacy-sandbox/faq/#fenced-frames)フェンス付きフレーム
+## (/docs/privacy-sandbox/faq/#fenced-frames)フェンス付きフレーム
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-9)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-9)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/shivanigithub/fenced-frame/issues)してください。
 
@@ -371,7 +371,7 @@ UA-CH は HTTP/2 接続と HTTP/3 接続の両方で動作します。
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#what-are-the-use-cases-for-fenced-frames)フェンス付きフレームのユースケースを教えてください。
+### (/docs/privacy-sandbox/faq/#what-are-the-use-cases-for-fenced-frames)フェンス付きフレームのユースケースを教えてください。
 
 この API
 は、[新しい形式の埋め込みドキュメント](https://github.com/shivanigithub/fenced-frame)を提案します。これにより、新しい
@@ -380,9 +380,9 @@ API
 
 広告のユースケースについては、[広告デザインドキュメント用のフェンス付きフレーム](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95)についての記事をご覧ください。
 
-## [\#](/docs/privacy-sandbox/faq/#network-state-partitioning)ネットワーク状態のパーティショニング
+## (/docs/privacy-sandbox/faq/#network-state-partitioning)ネットワーク状態のパーティショニング
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-10)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-10)この機能について質問するにはどうすればよいですか？
 
 - この仕様に関する質問がある場合は、解説用レポジトリで[イシューを作成](https://github.com/shivanigithub/fenced-frame/issues)してください。
 
@@ -391,9 +391,9 @@ API
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-## [\#](/docs/privacy-sandbox/faq/#fedcm)FedCM
+## (/docs/privacy-sandbox/faq/#fedcm)FedCM
 
-### [\#](/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-11)この機能について質問するにはどうすればよいですか？
+### (/docs/privacy-sandbox/faq/#how-can-i-ask-a-question-about-this-feature-11)この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/FedCM/issues)してください。
 
@@ -402,7 +402,7 @@ API
 - サンドボックス デベロッパー
 - サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### [\#](/docs/privacy-sandbox/faq/#what-is-fedcm)FedCM とは何ですか？
+### (/docs/privacy-sandbox/faq/#what-is-fedcm)FedCM とは何ですか？
 
 FedCM（Federated Credential Management）は、ID
 連携サービス（「～でログイン」など）へのプライバシーを保護したアプローチの提案です。ID
