@@ -189,13 +189,15 @@ To export a user flow:
     - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
 1. Save the file.
 
-Aside 
-[@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of the [Puppeteer](https://pptr.dev/). It is also a command line tools, you can replay JSON file with it too.
+{% Aside 'gotchas' %}
+The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of [Puppeteer](https://pptr.dev/). It is also a command line tool, so you can replay JSON files with it too.
+{% endAside %}
 
-When exporting as a @puppeteer/replay script, the steps remain a JSON object (unlike exporting as a Puppeteer script, the steps are converted into JavaScript). The script is therefore shorter.
+You can do the following with each export option:
 
-When to use what? Provide suggestion maybe?
-
+- **JSON**. Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
+- **@puppeteer/replay**. Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. Additionally, you can still edit the script because the steps remain a JSON object. The script is shorter as a result.
+- **Puppeteer** script. Replay the script with [Puppeteer](https://pptr.dev/). In this script, the steps are in JavaScript and you can't import them back into the **Recorder**. 
 
 ### Import a user flow {: #import-flows }
 
