@@ -19,13 +19,13 @@ This post is a part of a series on the Chromium rendering engine. Check out the 
 
 _Blink_ refers to Chromium's implementation of the [web platform](https://en.wikipedia.org/wiki/Web_platform), and it encompasses all the phases of rendering prior to compositing, culminating in _compositor commit_. You can read more about blink rendering architecture in a previous [article](/blog/renderingng-architecture/#render-process-main-thread-components) in this series. 
 
-[Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) began life as a fork of [WebKit](https://en.wikipedia.org/wiki/WebKit), which is itself a fork of [KHTML](https://en.wikipedia.org/wiki/KHTML), which dates to 1998. It contains some of the oldest (and most critical) code in Chromium, and by 2014 it was definitely showing its age. In that year, we embarked on a set of ambitious projects under the banner BlinkNG, with the goal of addressing long-standing deficiencies in the organization and structure of the Blink code. This article will explore BlinkNG and its constituent projects: why we did them, what they accomplished, the guiding principles that shaped their design, and the opportunities for future improvements they afford.
+[Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) began life as a fork of [WebKit](https://en.wikipedia.org/wiki/WebKit), which is itself a fork of [KHTML](https://en.wikipedia.org/wiki/KHTML), which dates to 1998. It contains some of the oldest (and most critical) code in Chromium, and by 2014 it was definitely showing its age. In that year, we embarked on a set of ambitious projects under the banner of what we're calling BlinkNG, with the goal of addressing long-standing deficiencies in the organization and structure of the Blink code. This article will explore BlinkNG and its constituent projects: why we did them, what they accomplished, the guiding principles that shaped their design, and the opportunities for future improvements they afford.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/eg6i9S7UHWfrkF9Oube7.png", alt="The rendering pipeline before and after BlinkNG.", width="800", height="362" %}
 
 ## Rendering pre-NG
 
-The rendering pipeline was always conceptually split into phases (_style_, _layout_, _paint_, and so on), but the abstraction barriers were leaky. Broadly speaking, the data associated with rendering consisted of long-lived, mutable objects. These objects could be—and were—modified at any time, and were frequently recycled and reused by successive rendering updates. It was impossible to answer simple questions such as:
+The rendering pipeline within Blink was always conceptually split into phases (_style_, _layout_, _paint_, and so on), but the abstraction barriers were leaky. Broadly speaking, the data associated with rendering consisted of long-lived, mutable objects. These objects could be—and were—modified at any time, and were frequently recycled and reused by successive rendering updates. It was impossible to reliably answer simple questions such as:
 
 -  Does the output of style, layout, or paint need to be updated?
 -  When will these data get their "final" value?
@@ -34,7 +34,7 @@ The rendering pipeline was always conceptually split into phases (_style_, _layo
 
 There are many examples of this, including:
 
-_Style_ would generate `ComputedStyle` based on stylesheets; but `ComputedStyle` was not immutable; in some cases it would be modified by later pipeline stages.
+_Style_ would generate `ComputedStyle`s based on stylesheets; but `ComputedStyle` was not immutable; in some cases it would be modified by later pipeline stages.
 
 _Style_ would generate a tree of `LayoutObject`, and then _layout_ would annotate those objects with size and positioning information. In some cases, _layout_ would even modify the tree structure. There was no clear separation between the inputs and outputs of _layout_.
 
@@ -42,11 +42,11 @@ _Style_ would generate accessory data structures that determined the course of _
 
 At a lower level, rendering data types largely consists of specialized trees (for example, the DOM tree, style tree, layout tree, paint property tree); and rendering phases are implemented as recursive tree walks. Ideally, a tree walk should be _contained_: when processing a given tree node, we should not access any information outside of the subtree rooted at that node. That was never true pre-RenderingNG; tree walks frequently accessed information from the ancestors of the node being processed. This made the system very fragile and error-prone. It was also impossible to begin a tree walk from anywhere but the root of the tree.
 
-Finally, there were many on-ramps into the rendering pipeline sprinkled throughout the code: forced layouts triggered by JavaScript, partial updates triggered during document load, forced updates to prepare for event targeting, scheduled updates requested by the display system, and specialized APIs exposed only to test code, to name a few. There were even a few _recursive_ and _reentrant_ paths into the rendering pipeline (that is jumping to the beginning of one stage from the middle of another). Each of these on-ramps had their own idiosyncratic behavior, and in some cases the output of rendering would depend on the manner in which the rendering update was triggered.
+Finally, there were many on-ramps into the rendering pipeline sprinkled throughout the code: forced layouts triggered by JavaScript, partial updates triggered during document load, forced updates to prepare for event targeting, scheduled updates requested by the display system, and specialized APIs exposed only to test code, to name a few. There were even a few _recursive_ and _reentrant_ paths into the rendering pipeline (that is, jumping to the beginning of one stage from the middle of another). Each of these on-ramps had their own idiosyncratic behavior, and in some cases the output of rendering would depend on the manner in which the rendering update was triggered.
 
 ## What we changed
 
-RenderingNG is composed of many sub-projects, big and small, all with the shared goal of eliminating the architectural deficits described earlier. These projects share a few guiding principles designed to make the rendering pipeline more of an actual pipeline:
+BlinkNG is composed of many sub-projects, big and small, all with the shared goal of eliminating the architectural deficits described earlier. These projects share a few guiding principles designed to make the rendering pipeline more of an actual pipeline:
 
 -  **Uniform point of entry**: We should always enter the pipeline at the beginning.
 -  **Functional stages**: Each stage should have well-defined inputs and outputs, and its behavior should be _functional_, that is, deterministic and repeatable, and the outputs should depend only on the defined inputs.
@@ -55,7 +55,7 @@ RenderingNG is composed of many sub-projects, big and small, all with the shared
 -  **Checkpoint consistency**: At the end of each stage, the rendering data produced thus far should be in a self-consistent state.
 -  **Deduplication of work**: Only compute each thing once.
 
-A complete list of RenderingNG sub-projects would make for tedious reading, but following are a few of particular consequence.
+A complete list of BlinkNG sub-projects would make for tedious reading, but following are a few of particular consequence.
 
 ### The document lifecycle
 
@@ -65,9 +65,9 @@ The [DocumentLifecycle](https://source.chromium.org/chromium/chromium/src/+/main
 -  If the DocumentLifecycle state is `kStyleClean` or later, then `NeedsStyleRecalc()` must return _false_ for any attached node.
 -  When entering the _paint_ lifecycle phase, the lifecycle state must be `kPrePaintClean`.
 
-Over the course of implementing RenderingNG, we systematically eliminated code paths that violated these invariants, and sprinkled many more assertions throughout the code to ensure we don't regress.
+Over the course of implementing BlinkNG, we systematically eliminated code paths that violated these invariants, and sprinkled many more assertions throughout the code to ensure we don't regress.
 
-If you've ever been down the rabbit hole looking at low-level rendering code, you may well ask yourself, "How did I get here?" As mentioned earlier, there are a variety of points of entry into the rendering pipeline. Previously, this included recursive and reentrant call paths, and places where we entered the pipeline at an intermediate phase, rather than starting from the beginning. In the course of RenderingNG, we analyzed these call paths and determined that they were all reducible to two basic scenarios:
+If you've ever been down the rabbit hole looking at low-level rendering code, you may well ask yourself, "How did I get here?" As mentioned earlier, there are a variety of points of entry into the rendering pipeline. Previously, this included recursive and reentrant call paths, and places where we entered the pipeline at an intermediate phase, rather than starting from the beginning. In the course of BlinkNG, we analyzed these call paths and determined that they were all reducible to two basic scenarios:
 
 -  All rendering data need to be updated—for example, when generating new pixels for display or doing a hit test for event targeting.
 -  We need an up-to-date value for a specific query which can be answered without updating all rendering data. This includes most JavaScript queries, for example, `node.offsetTop`.
@@ -103,7 +103,7 @@ Previously, `ComputedStyle` did not always get its final value during style reca
 
 ### LayoutNG: Pipelining the layout phase
 
-This [monumental project](/blog/layoutng/)—one of the cornerstones of RenderingNG—was a complete rewrite of the layout rendering phase. We won't do justice to the entire project here, but there are a few notable aspects for the overall RenderingNG project:
+This [monumental project](/blog/layoutng/)—one of the cornerstones of RenderingNG—was a complete rewrite of the layout rendering phase. We won't do justice to the entire project here, but there are a few notable aspects for the overall BlinkNG project:
 
 - Previously, the layout phase received a tree of `LayoutObject` created by the style phase, and annotated the tree with size and position information. Thus, there was no clean separation of inputs from outputs. LayoutNG introduced the _fragment tree_, which is the primary, read-only output of layout, and serves as the primary input to subsequent rendering phases.  
 - LayoutNG brought the _containment property_ to layout: when calculating the size and position of a given `LayoutObject`, we no longer look outside the subtree rooted at that object. All of the information needed to update layout for a given object is calculated beforehand and provided as a read-only input to the algorithm.  
@@ -137,7 +137,7 @@ This caused major problems, because it more or less required that there were cir
 
 This means that invalidation depended on DOM, style, layout, and past layerization decisions (past: meaning for the previous rendered frame). But the current layerization depends on all of those things as well. And since we didn't have two copies of all layerization data, it was hard to tell the difference between the past and future layerization decisions.  So we ended up with lots of code that had circular reasoning. This led sometimes to illogical or incorrect code, or even crashes or security issues, if we weren't very careful.
 
-To deal with this situation, early on we introduced the concept of the `DisableCompositingQueryAsserts` object. Most of the time, if code tried to query past layerization decisions, it would cause an assertion failure and crash the browser if it was in debug mode. This helped us avoid introducing new bugs. And in each case where the code legitimately needed to query past layerization decisions, we put in code to allow it by allocating a DisableCompositingQueryAsserts object.
+To deal with this situation, early on we introduced the concept of the `DisableCompositingQueryAsserts` object. Most of the time, if code tried to query past layerization decisions, it would cause an assertion failure and crash the browser if it was in debug mode. This helped us avoid introducing new bugs. And in each case where the code legitimately needed to query past layerization decisions, we put in code to allow it by allocating a `DisableCompositingQueryAsserts` object.
 
 Our plan was to, over time, get rid of all call sites `DisableCompositingQueryAssert` objects, and then declare the code safe and correct. But what we discovered is that a number of the calls were essentially impossible to remove as long as layerization happened before paint. (We were finally able to remove it [only very recently](https://chromium-review.googlesource.com/c/chromium/src/+/3321653)!) This was the first reason discovered for the Composite After Paint project. What we learned was that, even if you have a well-defined pipeline phase for an operation, if it is in the wrong place in the pipeline you will eventually get stuck.
 
@@ -148,10 +148,10 @@ The second reason for the Composite After Paint project was the Fundamental Comp
 As you've seen, a well-defined rendering pipeline yields enormous long-term benefits. There are even more than you might think:
 
 -  **Greatly improved reliability**: This one is pretty straightforward. Cleaner code with well-defined and understandable interfaces is easier to understand, write, and test. This makes it more reliable. It also makes the code safer and more stable, with fewer crashes and fewer use-after-free bugs.
--  **Expanded test coverage**: In the course of Rendering NG, we added a great many new tests to our suite. This includes unit tests that provide focused verification of internals; regression tests that prevent us from reintroducing old bugs we've fixed (so many!); and lots of additions to the public, collectively-maintained [Web Platform Test suite](https://wpt.fyi), which all browsers use to measure conformance to web standards.
+-  **Expanded test coverage**: In the course of BlinkNG, we added a great many new tests to our suite. This includes unit tests that provide focused verification of internals; regression tests that prevent us from reintroducing old bugs we've fixed (so many!); and lots of additions to the public, collectively-maintained [Web Platform Test suite](https://wpt.fyi), which all browsers use to measure conformance to web standards.
 -  **Easier to extend**: If a system is broken down into clear components, it's not necessary to understand other components at any level of detail in order to make progress on the current one. This makes it easier for everyone to add value to the rendering code without having to be a deep expert, and it also makes it easier to reason about the behavior of the entire system.
 -  **Performance**: Optimizing algorithms written in spaghetti code is difficult enough, but it's almost impossible to achieve even bigger things such as [universal threaded scrolling and animations](/blog/renderingng/#threaded-scrolling-animations-and-decode) or the [processes and threads for site isolation](/blog/renderingng-architecture/#process-and-thread-structure) without such a pipeline. Parallelism can help us to improve performance tremendously, but is also extremely complicated.
--  **Yielding and containment**: There are several new features made possible by RenderingNG that exercise the pipeline in new and novel ways. For example, what if we wanted to only run the rendering pipeline until a budget has expired? Or skip rendering for subtrees known to be not relevant to the user right now? That's what the [content-visibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job) CSS property enables. What about making the style of a component depend on its layout? That's [container queries](/blog/renderingng/#extensibility-the-right-tools-for-the-job).
+-  **Yielding and containment**: There are several new features made possible by BlinkNG that exercise the pipeline in new and novel ways. For example, what if we wanted to only run the rendering pipeline until a budget has expired? Or skip rendering for subtrees known to be not relevant to the user right now? That's what the [content-visibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job) CSS property enables. What about making the style of a component depend on its layout? That's [container queries](/blog/renderingng/#extensibility-the-right-tools-for-the-job).
 
 ## Case study: Container queries
 
@@ -175,7 +175,7 @@ To understand why this is important, and where else it may lead, we need to cons
 
 The good news is that it doesn't have to be this way! This aspect of Chromium's architecture dates all the way back to the [KHTML](https://en.wikipedia.org/wiki/KHTML) days, when single-threaded execution was the dominant programing model. By the time multi-core processors became common in consumer-grade devices, the single-threaded assumption was thoroughly baked into Blink (previously WebKit). We have wanted to introduce more threading into the rendering engine for a long time, but it was simply impossible in the old system. One of the main objectives of Rendering NG was to dig ourselves out of this hole, and make it possible to move rendering work, in part or in whole, to another thread (or threads).
 
-Now that Rendering NG is approaching completion, we are already starting to explore this area; [Non-Blocking Commit](http://crbug.com/1255972) is a first foray into changing the renderer's threading model. _Compositor commit_ (or just _commit_) is a synchronization step between the main thread and the compositor thread. During commit, we make copies of rendering data that are produced on the main thread, to be used by the downstream compositing code running on the compositor thread. While this synchronization is happening, main thread execution is stopped while the copying code runs on the compositor thread. This is done to ensure that the main thread doesn't modify its rendering data while the compositor thread is copying it.
+Now that BlinkNG is approaching completion, we are already starting to explore this area; [Non-Blocking Commit](http://crbug.com/1255972) is a first foray into changing the renderer's threading model. _Compositor commit_ (or just _commit_) is a synchronization step between the main thread and the compositor thread. During commit, we make copies of rendering data that are produced on the main thread, to be used by the downstream compositing code running on the compositor thread. While this synchronization is happening, main thread execution is stopped while the copying code runs on the compositor thread. This is done to ensure that the main thread doesn't modify its rendering data while the compositor thread is copying it.
 
 Non-Blocking Commit will eliminate the need for the main thread to stop and wait for the commit stage to end—the main thread will continue doing work while commit runs concurrently on the compositor thread. The net effect of Non-Blocking Commit will be a reduction in the time dedicated to rendering work on the main thread, which will decrease congestion on the main thread, and improve performance. As of this writing (March 2022), we have a working prototype of Non-Blocking Commit, and we're preparing to do a detailed analysis of its impact on performance.
 
