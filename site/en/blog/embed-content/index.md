@@ -95,8 +95,8 @@ more.
 
 ### Permissions Policy
 
-As increasingly powerful features have been developed for the web, permissions
-policies were created to manage permissions for all of them. A permissions policy
+As increasingly powerful features have been developed for the web, [permissions
+policies](/docs/privacy-sandbox/permissions-policy/) were created to manage permissions for all of them. A permissions policy
 can be applied to a parent site and to iframe content. The permissions granted
 to a parent site can also be granted to the iframe, using the `allow` attribute.
 
