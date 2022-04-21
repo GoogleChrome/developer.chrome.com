@@ -158,7 +158,7 @@ updated to provide developers with more detailed guidance for common reasons for
 October 1, 2021
 
 This release contains significantly more promise updates than any previous release. Updates include
-both general and Chrome OS-specific extensions APIs. Expand the following sections for details.
+both general and ChromeOS-specific extensions APIs. Expand the following sections for details.
 
 {% Details %}
 {% DetailsSummary %}
@@ -194,7 +194,7 @@ prototype now also support promises. The following APIs are affected by this cha
 
 {% Details %}
 {% DetailsSummary %}
-Chrome OS APIs
+ChromeOS APIs
 {% endDetailsSummary %}
 
 - [`chrome.certificateProvider`](/docs/extensions/reference/certificateProvider)

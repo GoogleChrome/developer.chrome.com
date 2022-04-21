@@ -61,7 +61,7 @@ Standard key strings
 
 Modifier key strings
 
-: `Ctrl`, `Alt`, `Shift`, `MacCtrl` (macOS only), `Command` (macOS only), `Search` (Chrome OS only)
+: `Ctrl`, `Alt`, `Shift`, `MacCtrl` (macOS only), `Command` (macOS only), `Search` (ChromeOS only)
 
 {% Aside 'note' %}
 
@@ -84,7 +84,7 @@ Modifier key strings
 
 - `Shift` is an optional modifier on all platforms.
 
-- `Search` is an optional modifier exclusive to Chrome OS.
+- `Search` is an optional modifier exclusive to ChromeOS.
 
 - Certain operating system and Chrome shortcuts (e.g. window management) always take priority over
   Extension command shortcuts and can not be overwritten.
@@ -150,7 +150,7 @@ optionally mark a command as "global". Global commands also work while Chrome *d
 
 {% Aside %}
 
-Chrome OS does not support global commands.
+ChromeOS does not support global commands.
 
 {% endAside %}
 

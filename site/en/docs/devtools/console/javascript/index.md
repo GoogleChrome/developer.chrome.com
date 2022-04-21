@@ -30,7 +30,7 @@ JavaScript that you type into it, evaluates your code, prints out the result of 
 This tutorial is designed so that you can open up the demo and try all the workflows yourself. When
 you physically follow along, you're more likely to remember the workflows later.
 
-1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to open the
+1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, ChromeOS) to open the
     **Console**, right here on this very page.
 
     {% Img src="image/admin/5aHOGjzCHY5tHEnye4lU.png", alt="This tutorial on the left, and DevTools on the right.", width="800", height="480" %}

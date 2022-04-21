@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: Push Notifications on the Open Web 
+title: Push Notifications on the Open Web
 description: >
   Push Messaging and Notifications are Landing in Chrome 42.
 authors:
@@ -876,7 +876,7 @@ There are a few limitations outlined in this post:
   the future.
 * You have to show a notification when you receive a push message.
 * Chrome on desktop has the caveat that if Chrome isn't running, push messages
-  won't be received. This differs from Chrome OS and Android where push messages
+  won't be received. This differs from ChromeOS and Android where push messages
   will always be received.
 
 ### Shouldn't we be using the Permissions API?

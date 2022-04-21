@@ -42,9 +42,9 @@ be paused and receive a "paused" media event. If the play key is pressed, the
 previously paused media element will be resumed and receive a "play" media
 event. It works whether Chrome is in foreground or background.
 
-In Chrome OS, Android apps using [audio focus] will now tell Chrome to pause and
+In ChromeOS, Android apps using [audio focus] will now tell Chrome to pause and
 resume audio to create a seamless media experience between websites on Chrome,
-Chrome Apps and Android Apps. This is currently supported only on Chrome OS
+Chrome Apps and Android Apps. This is currently supported only on ChromeOS
 device running Android P.
 
 In short, it's a good practice to always listen to these media events and act
@@ -91,7 +91,7 @@ navigator.mediaSession.setActionHandler('pause', function() {
 });
 ```
 
-Hardware Media Keys support is available on Chrome OS, macOS, and Windows. Linux
+Hardware Media Keys support is available on ChromeOS, macOS, and Windows. Linux
 will come later.
 
 {% Aside %}
@@ -169,7 +169,7 @@ sample].
 
 {% Aside %}
 To get feedback from web developers, the Auto Picture-in-Picture
-feature is available as an [origin trial] in Chrome 73 for desktop (Chrome OS,
+feature is available as an [origin trial] in Chrome 73 for desktop (ChromeOS,
 Linux, Mac, and Windows). You will need to [request a token], so that the
 feature is automatically enabled for your origin for a limited period of time.
 This will eliminate the need to enable the "Web Platform Features" flag.
@@ -188,7 +188,7 @@ Picture-in-Picture can't do this today.
 
 With the [Media Session API] now available on desktop (it was supported on
 mobile only before), a new `skipad` media session action may be used to offer this
-option in [Picture-in-Picture]. 
+option in [Picture-in-Picture].
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/LawyPY28acxZd6t4NQDS.png", alt="Skip Ad button in Picture-in-Picture window", width="668", height="416" %}
@@ -234,7 +234,7 @@ be improved.
 {% Aside %}
 To get feedback from web developers, the Skip Ad in Picture-in-Picture
 window feature is available as an [origin trial] in Chrome 73 for desktop
-(Chrome OS, Linux, Mac, and Windows). You will need to [request a token], so
+(ChromeOS, Linux, Mac, and Windows). You will need to [request a token], so
 that the feature is automatically enabled for your origin for a limited period
 of time. This will eliminate the need to enable the "Web Platform Features"
 flag.

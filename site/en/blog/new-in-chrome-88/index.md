@@ -122,7 +122,7 @@ for all the details.
 You can now use Play Billing in your Trusted Web Activity to sell digital
 goods and subscriptions using the new Digital Goods API. It's available as an
 origin trial in Chrome 88 on Android, and we expect it to expand the origin
-trial to Chrome OS in the next release.
+trial to ChromeOS in the next release.
 
 Once your accounts are set-up, update your Trusted Web Activity to enable Play
 billing, and create your digital goods in the Play Developer Console. Then,
