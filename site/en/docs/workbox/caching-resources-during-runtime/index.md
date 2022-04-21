@@ -107,6 +107,7 @@ Be aware of storage quotas when managing service worker cache(s). [`ExpirationPl
 // sw.js
 import { registerRoute, Route } from 'workbox-routing';
 import { CacheFirst } from 'workbox-strategies';
+import { ExpirationPlugin } from 'workbox-expiration';
 
 // Evict image cache entries older thirty days:
 const imageRoute = new Route(({ request }) => {
