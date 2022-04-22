@@ -17,7 +17,7 @@ Stylus-based drawing applications built for the web have long suffered from
 latency issues because a web page has to synchronize graphics updates with the
 DOM. In any drawing application, latencies longer than 50 milliseconds can
 interfere with a user's hand-eye coordination, making applications difficult to
-use.   
+use.
 
 The `desynchronized` hint for `canvas.getContext()` invokes a different code
 path that bypasses the [usual DOM update
@@ -40,30 +40,30 @@ have one, try the [2d](https://codepen.io/miguelao/full/WKZaqd) or
 [webgl](https://codepen.io/miguelao/full/WKZaqd) samples. For the rest of you
 check out this [demo by Miguel Casas](https://codepen.io/miguelao/full/mLLKLg),
 one of the engineers who implemented this feature. Open the demo, press play,
-then move the slider back and forth randomly and quickly. 
+then move the slider back and forth randomly and quickly.
 
 This example uses a one-minute, twenty-one second clip from the short film
 [Sintel](https://durian.blender.org/download/) by Durian, the Blender open movie
 project. In this example, the movie is played in a `<video>` element whose
 contents are simultaneously rendered to a `<canvas>` element.  Many devices can
 do this without tearing, though devices with front buffer rendering such as
-Chrome OS for example may have tearing. (The movie is great, but heartbreaking.
+ChromeOS for example may have tearing. (The movie is great, but heartbreaking.
 I was useless for an hour after I saw it. Consider yourself warned.)
 
 ## Using the hint
 
-There's more to using low latency than adding `desynchronized` to 
+There's more to using low latency than adding `desynchronized` to
 `canvas.getContext()`. I'll go over the issues one at a time.
- 
+
 ### Create the canvas
 
 On another API I'd discuss feature detection first. For the `desynchronized`
 hint you must create the canvas first. Call `canvas.getContext()` and pass it
-the new `desynchronized` hint with a value of `true`. 
+the new `desynchronized` hint with a value of `true`.
 
 ```javascript
 const canvas = document.querySelector('myCanvas');
-const ctx = canvas.getContext('2d', { 
+const ctx = canvas.getContext('2d', {
   desynchronized: true,
   // Other options. See below.
 });
@@ -72,7 +72,7 @@ const ctx = canvas.getContext('2d', {
 ### Feature detection
 
 Next, call `getContextAttributes()`. If the returned attributes object has a
-`desynchronized` property, then test it. 
+`desynchronized` property, then test it.
 
 ```javascript
 if (ctx.getContextAttributes().desynchronized) {
@@ -85,7 +85,7 @@ if (ctx.getContextAttributes().desynchronized) {
 ### Avoiding flicker
 
 There are two instances where you can cause flicker if you don't code correctly.
-  
+
 Some browsers including Chrome clear WebGL canvases between frames. It's
 possible for the display controller to read the buffer while it's empty causing
 the image being drawn to flicker. To avoid this is to set
@@ -93,7 +93,7 @@ the image being drawn to flicker. To avoid this is to set
 
 ```js
 const canvas = document.querySelector('myCanvas');
-const ctx = canvas.getContext('webgl', { 
+const ctx = canvas.getContext('webgl', {
   desynchronized: true,
   preserveDrawingBuffer: true
 });
@@ -101,7 +101,7 @@ const ctx = canvas.getContext('webgl', {
 
 Flicker can also occur when you clear the screen context in your own drawing
 code.  If you must clear, draw to an offscreen framebuffer then copy that to the
-screen. 
+screen.
 
 ### Alpha channels
 
@@ -112,11 +112,11 @@ desynchronized, but it must not have any other DOM elements above it.
 
 You cannot change the context attributes after the first call to
 `canvas.getContext()`. This has always been true, but repeating it might save
-you some frustration if you're unaware or have forgotten . 
+you some frustration if you're unaware or have forgotten .
 
 For example, let's say that I get a context and specify alpha as false, then
 somewhere later in my code I call `canvas.getContext()` a second time with alpha
-set to true as shown below. 
+set to true as shown below.
 
 ```javascript
 const canvas = document.querySelector('myCanvas');

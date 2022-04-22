@@ -22,7 +22,7 @@ Data Fields</h2><table class="memberdecls">
 </tbody></table>
 <hr><span class="anchor" id="details" style="margin: 0;"></span><h2>Detailed Description</h2>
 <div class="textblock"><p>Use the <code>PPB_VpnProvider</code> interface to implement a VPN client. </p>
-<p>Important: This API is available only on Chrome OS.</p>
+<p>Important: This API is available only on ChromeOS.</p>
 <p>This interface enhances the <code>chrome.vpnProvider</code> JavaScript API by providing a high performance path for packet handling.</p>
 <p>Permissions: Apps permission <code>vpnProvider</code> is required for <code>PPB_VpnProvider.Bind()</code>.</p>
 <p>Typical usage:</p>
@@ -32,7 +32,7 @@ Data Fields</h2><table class="memberdecls">
 <li>In the extension follow the usual workflow for configuring a VPN connection via the <code>chrome.vpnProvider</code> API until the step for notifying the connection state as &quot;connected&quot;.</li>
 <li>Bind to the previously created connection using <code>PPB_VpnProvider.Bind()</code>.</li>
 <li>Notify the connection state as &quot;connected&quot; from JavaScript using <code>chrome.vpnProvider.notifyConnectionStateChanged</code>.</li>
-<li>When the steps above are completed without errors, a virtual tunnel is created to the network stack of Chrome OS. IP packets can be sent through the tunnel using <code>PPB_VpnProvider.SendPacket()</code> and any packets originating on the Chrome OS device will be received using the callback registered for <code>PPB_VpnProvider.ReceivePacket()</code>.</li>
+<li>When the steps above are completed without errors, a virtual tunnel is created to the network stack of ChromeOS. IP packets can be sent through the tunnel using <code>PPB_VpnProvider.SendPacket()</code> and any packets originating on the ChromeOS device will be received using the callback registered for <code>PPB_VpnProvider.ReceivePacket()</code>.</li>
 <li>When the user disconnects from the VPN configuration or there is an error the extension will be notfied via <code>chrome.vpnProvider.onPlatformMessage</code>. </li>
 </ul>
 </div><hr><h2>Field Documentation</h2>

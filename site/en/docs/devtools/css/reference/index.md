@@ -180,7 +180,7 @@ To view a page in print mode:
 The Coverage tab shows you what CSS a page actually uses.
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) while DevTools is
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) while DevTools is
     in focus to open the Command Menu.
 2.  Start typing `coverage` and select **Show Coverage**. The Coverage tab appears.
 
@@ -444,7 +444,7 @@ To open the **Shadow Editor**:
       box-shadow:
           11px 14px 5px 0px #bebebe, inset 0px 20px 7px 0px #dadce0;
       }
-      .shadow-box::after { 
+      .shadow-box::after {
         content: "I have a shadow!";
       }
     </style>
