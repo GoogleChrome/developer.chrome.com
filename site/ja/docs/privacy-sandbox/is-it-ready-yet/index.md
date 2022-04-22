@@ -1,6 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 実装ステータス
+subhead: Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオリジン トライアル期間が複数ある場合があります。
+description: Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオリジン トライアル期間が複数ある場合があります。
 date: 2021-05-18
 updated: 2022-03-31
 authors:
@@ -8,7 +10,6 @@ authors:
   - alexandrawhite
 ---
 
-[実装ステータス](/docs/privacy-sandbox/status/)
 
 Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオリジン トライアル期間が複数ある場合があります。
 
