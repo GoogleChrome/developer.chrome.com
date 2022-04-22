@@ -11,16 +11,17 @@ authors:
 レポートの提案には、コミュニティからのフィードバックに対応するため、API
 メカニズムの変更から新機能まで、さまざまな変更が反映されています。
 
+{% Aside %}
 これらの変更についてフィードバックをお寄せください。さまざまなユースケースに対する解決策をオープンに議論するには、エコシステムからのアイデアが不可欠です。
 
-議論に参加するには、この投稿の「**公開ディスカッションに参加**」の下にあるリンクでコメントするか、新しいイシューを作成してください。[参加の詳細についてご確認ください](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。
+議論に参加するには、この投稿の「**公開ディスカッションに参加**」の下にあるリンクでコメントするか、新しいイシューを作成してください。[参加の詳細についてご確認ください](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。{% endAside %}
 
 ## 変更履歴
 
-- 2022 年 2 月 7 日: [ヘッダートリガーのリダイレクト](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#header-trigger-redirect)に関するセクションを追加しました。
+- 2022 年 2 月 7 日: [ヘッダートリガーのリダイレクト](#header-trigger-redirect)に関するセクションを追加しました。
 - 2022 年 1 月 27 日: 記事を最初に公開しました。
 
-## この投稿の対象者
+## この投稿の対象者 {: #who }
 
 この投稿は次の方を対象としています。
 
@@ -28,19 +29,22 @@ authors:
 - デモや本番環境のテストで Attribution Reporting API を使用している方。
 
 この API を初めて検討する場合や、まだ試してみていない場合は、まず、[API
-の概要](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/)をご覧ください。
+の概要](/docs/privacy-sandbox/attribution-reporting-introduction/)をご覧ください。
 
-## 今後の移行
+## 今後の移行 {: #migration }
 
+{% Aside %}
 提案された変更は Chrome で試験的に実装される予定です。
 
-これらの変更についてエコシステムからのフィードバックをお寄せください。議論に参加するには、この投稿の「公開ディスカッションに参加」の下にあるリンクでコメントするか、新しいイシューを作成してください。[参加の詳細についてご確認ください](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。
+これらの変更についてエコシステムからのフィードバックをお寄せください。議論に参加するには、この投稿の「公開ディスカッションに参加」の下にあるリンクでコメントするか、新しいイシューを作成してください。[参加の詳細についてご確認ください](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。
 
 **これは API
 ガイドではありません**。新しい提案の詳細は変更される場合があります。この
 API を試してみる予定がある場合は、Chrome
 でコードが利用可能になるまで移行を保留し、[デベロッパー向けメーリング
 リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)に登録して最新情報を入手してください。
+
+{% endAside %}
 
 これらの変更が Chrome に実装された場合: Attribution Reporting API
 のイベントレベル レポートをデモや本番環境のテスト（オリジン
@@ -49,7 +53,7 @@ API を試してみる予定がある場合は、Chrome
 
 この記事では、集計可能レポートの変更点についても説明します。ただし、この投稿を記述した時点では、集計可能レポートに関するブラウザの実装はまだ存在しないため、これらの変更点が実装された場合、対応や移行は特に必要ありません。
 
-## 名前の変更
+## 名前の変更 {: #name-changes }
 
 ### 概要レポートと集計可能レポート
 
@@ -58,11 +62,11 @@ API を試してみる予定がある場合は、Chrome
 「概要レポート」は、複数の「集計可能レポート」（旧名称は「コントリビューション」または「ヒストグラム
 コントリビューション」）の集計の最終的な出力です。
 
-## API メカニズムの変更
+## API メカニズムの変更 {: #mechanism-changes }
 
-### ヘッダーベースのソース登録（イベントレベル レポート）
+### ヘッダーベースのソース登録（イベントレベル レポート）{: #header-source }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #header-source-event-change }
 
 ユーザーが広告を表示またはクリックすると、ブラウザは（ユーザーのデバイスでローカルに）このイベントを記録します。その際に、アトリビューション
 レポートに固有のパラメータ `attributionsourceeventid`, `attributiondestination`, `attributionexpiry`
@@ -83,7 +87,7 @@ API を試してみる予定がある場合は、Chrome
 メカニズムでは、アトリビューション
 ソースがスコープ内に登録されるかどうかについて、レポート送信元（通常はアドテック）が直接制御できるようになるからです。この変更により、正規のブラウザでは送信元を有効にしていないソースは登録されなくなるため、不正行為に関する懸念が部分的に軽減されます。
 
-#### ソース登録の仕組み
+#### ソース登録の仕組み {: #header-source-event-how }
 
 1. ある広告について、アドテックは特定のクライアントサイド属性
    `attributionsrc`. を定義する必要があります。この属性の値は、ブラウザのリクエストの送信先となる
@@ -103,23 +107,23 @@ API を試してみる予定がある場合は、Chrome
     }
     ```
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #header-source-event-explainer }
 
 [アトリビューション
 ソースの登録](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#registering-attribution-sources)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #header-source-event-discuss }
 
 [イシュー #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### ヘッダーベースのアトリビューション トリガー（イベントレベル レポート）
+### ヘッダーベースのアトリビューション トリガー（イベントレベル レポート）{: #header-trigger-event }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #header-trigger-event-change }
 
 クリックやビューの登録と同様に、新しい提案では、アトリビューション
 トリガー（アドテックがブラウザにコンバージョンを記録するよう指示するタイミング）がヘッダーベースの手法に変更されています。
 
-このメカニズムは[ヘッダーベースのソース登録](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#header-based-source-registration-event-level-reports)に合わせたもので、以前に使用していたリダイレクト
+このメカニズムは[ヘッダーベースのソース登録](#header-based-source-registration-event-level-reports)に合わせたもので、以前に使用していたリダイレクト
 メカニズムよりも従来型の方法です。
 
 また、新しい提案では、コンバージョン ページで `attributionsrc`
@@ -133,7 +137,7 @@ API を試してみる予定がある場合は、Chrome
 によるページ全体の制御と、`attributionsrc`
 による要素レベルの制御があります。
 
-#### アトリビューション トリガーの仕組み
+#### アトリビューション トリガーの仕組み {: #header-trigger-event-how }
 
 ピクセル
 リクエストを受信し、コンバージョンとして分類する必要があると判断した場合、アドテックは新しい
@@ -156,7 +160,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
     }]
 ```
 
-#### リダイレクト（任意）
+#### リダイレクト（任意）{: #header-trigger-redirect }
 
 必要に応じて、アドテック サーバーは
 `Attribution-Reporting-Register-Event-Trigger` を含むレスポンスをリダイレクト
@@ -165,19 +169,19 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 
 リダイレクトは任意です。アドテックとサードパーティの両方がページ上にピクセルを配置している場合、リダイレクトは不要です。
 
-詳しくは、[サードパーティのレポート](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#3p-reporting)をご覧ください。
+詳しくは、[サードパーティのレポート](#3p-reporting)をご覧ください。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #header-trigger-event-explainer }
 
 [アトリビューションのトリガー](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#triggering-attribution)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #header-trigger-event-discuss }
 
 [イシュー #91](https://github.com/WICG/conversion-measurement-api/issues/91)
 
-### ワークレットなし（集計可能レポート）
+### ワークレットなし（集計可能レポート）{: #no-worklet }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #no-worklet-change }
 
 以前の集計可能レポートの提案では、JavaScript
 にアクセスして、集計可能レポートを生成するワークレット（JavaScript
@@ -189,52 +193,52 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 この新しい提案には次のようなメリットがあります。
 
 - **ブラウザの実装:** ワークレットの設計とは異なり、新しい設計では、ブラウザでの新しい実行環境を必要としないため、大幅にシンプルになります。
-- **デベロッパーのエクスペリエンス:** 新しい設計はヘッダーに依存しています。ヘッダーはワークレットとは異なり、デベロッパーによく使用されていて、広く知られています。また、[ソース登録](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#header-based-source-registration-event-level-reports)の API サーフェスと密接に連携しているため、API の習得と使用が容易になります。
+- **デベロッパーのエクスペリエンス:** 新しい設計はヘッダーに依存しています。ヘッダーはワークレットとは異なり、デベロッパーによく使用されていて、広く知られています。また、[ソース登録](#header-based-source-registration-event-level-reports)の API サーフェスと密接に連携しているため、API の習得と使用が容易になります。
 - **採用:** 新しい設計では、より多くの既存の測定システムが集計可能レポートを使用できるようになります。多くの測定ソリューションは
   HTTP のみを使用しています。つまり、JavaScript へのアクセスを必要としない画像リクエスト（ピクセル リクエスト）に依存しています。しかし、ワークレットの手法では
   JavaScript へのアクセスが必要であるため、既存の測定システムからの移行が難しくなる可能性がありました。
 - **堅牢性:** 新しい設計では、`keepalive` セマンティクスとの統合が容易になるため、たとえば、ユーザーがページを離れるときにクリックやビューが登録される場合などに、データ損失を軽減できます。
 
-#### ワークレットのないメカニズムの仕組み
+#### ワークレットのないメカニズムの仕組み {: #no-worklet-how }
 
 この宣言的なメカニズムは、イベントレベルのソース登録やアトリビューション
 トリガーのヘッダーと同様に、HTTP
 ヘッダーに基づいています。この点について詳しくは、次のセクションをご覧ください。
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #no-worklet-discuss }
 
 [イシュー #194](https://github.com/WICG/conversion-measurement-api/issues/194)
 
-### ヘッダーベースのソース登録（集計可能レポート）
+### ヘッダーベースのソース登録（集計可能レポート）{: #header-source-agg }
 
-集計可能レポートのソースを登録するために新しいメカニズムが提案されています。このメカニズムは[イベントレベルのソース登録](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#header-based-source-registration-event-level-reports)と同じです。
+集計可能レポートのソースを登録するために新しいメカニズムが提案されています。このメカニズムは[イベントレベルのソース登録](#header-based-source-registration-event-level-reports)と同じです。
 
 ヘッダー名のみが異なります:
 `Attribution-Reporting-Register-Aggregatable-Source`
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #header-source-agg-explainer }
 
 [アトリビューション
 ソースの登録](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-source-registration)
 
-### ヘッダーベースのアトリビューション トリガー（集計可能レポート）
+### ヘッダーベースのアトリビューション トリガー（集計可能レポート）{: #header-trigger-agg }
 
 集計可能レポートのソースを登録するために新しいメカニズムが提案されています。このメカニズムは[イベントレベルのアトリビューション
-トリガー](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#header-based-attribution-trigger-event-level-reports)と同じです。
+トリガー](#header-based-attribution-trigger-event-level-reports)と同じです。
 
 ヘッダー名のみが異なります:
 `Attribution-Reporting-Register-Aggregatable-Trigger-Data`
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #header-trigger-agg-explainer }
 
 [アトリビューション
 トリガーの登録](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-trigger-registration)
 
-## 新機能
+## 新機能 {: #new-features }
 
-### サードパーティ レポート（イベントレベルのレポートと集計レポート）
+### サードパーティ レポート（イベントレベルのレポートと集計レポート）{: #3p-reporting }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #3p-reporting-change }
 
 新しい提案には、サードパーティ
 レポートのユースケースのサポートを改善する 2 つの側面があります。
@@ -243,7 +247,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
     サーバーにリダイレクトできます**。それにより、他のアドテックがソースとトリガーを独自に登録できます。これは現在、サードパーティで設定されている一般的な方法です。これにより API は、サードパーティの、特に既存のレポート システムに導入しやすくなります。
 - レポートの送信元（通常はアドテック）は**プライバシーに関する制限をほとんど共有しなくなります**。これにより、複数のアドテックが同じパブリッシャーや広告主と連携するユースケースに対応できます。
 
-#### サードパーティ レポートの仕組み
+#### サードパーティ レポートの仕組み {: #3p-reporting-how }
 
 新しい提案では、レスポンス ベースのソース登録とトリガーが HTTP
 ヘッダーを利用するようになります。アドテックは、こうしたリクエストに対して
@@ -258,40 +262,42 @@ HTTP リダイレクトを利用できます。
 
 **関係者がそれぞれ個別のレポートにアクセスし**、個別のデータでレポートを設定できます。
 
-不正行為を防止するため、レポートに関する明示的な制限が追加されました。詳しくは、[プライバシー保護の変更](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#privacy-protection-changes)をご覧ください。
+{% Aside %}
+不正行為を防止するため、レポートに関する明示的な制限が追加されました。詳しくは、[プライバシー保護の変更](#privacy-protection-changes)をご覧ください。
+{% endAside %}
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #3p-reporting-discuss }
 
 [イシュー #91](https://github.com/WICG/conversion-measurement-api/issues/91)
 [イシュー #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### ビュースルーの測定（イベントレベルのレポートと集計レポート）
+### ビュースルーの測定（イベントレベルのレポートと集計レポート）{: #view-through }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #view-through-change }
 
 新しい提案では、ビュースルー測定とクリックスルー測定が、次のように連携して機能します。
 
 - `registerattributionsrc` は、クリックとともに視聴を記録するようにブラウザに指示する視聴専用の属性で、今回の提案により**削除されます**。
-- **プライバシーのメカニズム**が、クリックと視聴の両方で統一されます。詳しくは、[ノイズと透明性](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#noise-and-transparency-event-level-reports-and-aggregatable-reports)をご覧ください。
+- **プライバシーのメカニズム**が、クリックと視聴の両方で統一されます。詳しくは、[ノイズと透明性](#noise-and-transparency-event-level-reports-and-aggregatable-reports)をご覧ください。
 
-この変更は、新しい[ヘッダーベースの登録メカニズム](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#api-mechanism-changes)に合わせて提案されています。また、クリックスルー測定とビュースルー測定の両方をサポートする場合に、デベロッパー
+この変更は、新しい[ヘッダーベースの登録メカニズム](#api-mechanism-changes)に合わせて提案されています。また、クリックスルー測定とビュースルー測定の両方をサポートする場合に、デベロッパー
 エクスペリエンスも簡素化されます。
 
-#### ビュースルー測定の仕組み
+#### ビュースルー測定の仕組み {: #view-through-how }
 
-ビュースルー測定とクリックスルー測定には、どちらも[ヘッダーベースの登録](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#api-mechanism-changes)を使用します。
+ビュースルー測定とクリックスルー測定には、どちらも[ヘッダーベースの登録](#api-mechanism-changes)を使用します。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #view-through-explainer }
 
 [イベントレベルのレポート（クリックと視聴の両方](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #view-through-discuss }
 
 [イシュー #261](https://github.com/WICG/conversion-measurement-api/issues/261)
 
-### デバッグ / パフォーマンス分析（イベントレベルのレポートと集計レポート）
+### デバッグ / パフォーマンス分析（イベントレベルのレポートと集計レポート）{: #debugging }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #debugging-change }
 
 デバッグ
 メカニズムが提案に追加され、デベロッパーがバグを検出しやすくなるだけでなく、アトリビューション
@@ -300,8 +306,9 @@ HTTP リダイレクトを利用できます。
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/ncYlu8aGOiQn579Wzc2D.png", alt="新しいCookieベースのデバッグシステムの図", width="800", height="304" %}
 
-#### デバッグの仕組み
+#### デバッグの仕組み {: #debugging-how }
 
+{% Aside %}
 Attribution Reporting API は、ソースイベント（パブリッシャー
 サイトでの広告クリックまたは広告視聴）の詳細と、トリガー
 イベント（広告主サイトでのコンバージョン）の詳細とのリンクを明示的に阻止しています。これにより、サードパーティの
@@ -314,6 +321,7 @@ Cookie を設定しておく機能を必須としています。つまり、サ�
 Cookie
 がブロックされている場合は、デバッグ機能を利用できなくなります。また、サードパーティの
 Cookie のサポートが終了した後は、必然的に利用できなくなります。
+{% endAside %}
 
 ソース登録とトリガー登録はどちらも、新しいパラメータ `debug_key`
 を受け取ります。これは 64 ビットの符号なし整数（大きい数値）です。
@@ -335,20 +343,22 @@ ar_debug=1` という Cookie
 つの新しいパラメータが含まれるため、これらを適切なデバッグ
 レポートに関連付けることができます。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #debugging-explainer }
 
 [省略可: 拡張デバッグ
 レポート](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-extended-debugging-reports)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #debugging-discuss }
 
 [イシュー #174](https://github.com/WICG/conversion-measurement-api/issues/174)
 
-### フィルタ機能（イベントレベルのレポートと集計レポート）
+### フィルタ機能（イベントレベルのレポートと集計レポート）{: #filtering }
 
+{% Aside %}
 これは新機能です。正確に言うと、集計レポートの提案にはすでに含まれており、今回、イベントレベルのレポートの提案にも追加されました。
+{% endAside %}
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #filtering-change }
 
 この機能は、現在の広告エコシステムの重要なユースケースをサポートするので、イベントレベルのレポートと集計レポートの両方で多くのユースケースがサポートされるようになります。
 
@@ -357,7 +367,7 @@ ar_debug=1` という Cookie
 - **アトリビューションの不一致:** 間違ったアトリビューションが行われたコンバージョンをフィルタします。これは特殊なコンバージョン
 フィルタリングです。たとえば、API 内の etld+1 の送信先スコープが原因で間違った広告クリックまたは広告視聴に一致したコンバージョンを除外します。
 
-#### フィルタ機能の仕組み（イベントレベルのレポート）
+#### フィルタ機能の仕組み（イベントレベルのレポート）{: #filtering-how }
 
 ソース側の JSON オブジェクトでオプションの `source_data`
 フィールドを使用すると、後でコンバージョン時にブラウザがフィルタリング
@@ -398,22 +408,22 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 
 共通集合が空であれば、完全に無視されます。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #filtering-explainer }
 
 [オプションのアトリビューション
 フィルタ](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-attribution-filters)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #filtering-discuss }
 
 [イシュー #194](https://github.com/WICG/conversion-measurement-api/issues/194)
 
 [イシュー #201](https://github.com/WICG/conversion-measurement-api/issues/201)
 
-## プライバシー保護の変更
+## プライバシー保護の変更 {: #privacy-changes }
 
-### ノイズと透明性（イベントレベルのレポートと集計レポート）
+### ノイズと透明性（イベントレベルのレポートと集計レポート）{: #noise }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #noise-change }
 
 新しい提案では、レポートのプライバシー
 メカニズムの一つが改善され、レポートが**ランダム化されるレスポンス**の対象となります。
@@ -437,7 +447,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 - ブラウザの基本動作の**透明性**を、レポートを受け取る対象者（通常はアドテック）に対して保ちます。
 - これは今後、API がサポートされる**すべてのブラウザ**にとって有用となります。ブラウザごとに、プライバシーに関する目標に応じて、異なるレベルのノイズを適用できるようになり、レポートを取り扱う関係者にとって、こうした可視性が必要になるからです。
 
-#### ノイズの仕組み
+#### ノイズの仕組み {: #noise-how }
 
 新しい提案では、ソースの登録時（広告クリックまたは広告視聴が記録されたとき）に、コンバージョンのアトリビューションを正しく行ってこの広告クリック
 /
@@ -464,24 +474,26 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 
 これとは別に、前回の提案ですでに説明したように、*各期間内*のレポートの順序はランダムです。
 
+{% Aside %}
 **視聴**の場合のレポート期間は 1
 種類しかないため、視聴についての偽のレポートは、ランダムなレポート期間の対象になりません。
+{% endAside %}
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #noise-explainer }
 
 [ノイズとなる偽のコンバージョンの例](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#noisy-fake-conversion-examples)
 
-#### 公開ディスカッションに参加
+#### 公開ディスカッションに参加 {: #noise-discuss }
 
 [イシュー #84](https://github.com/WICG/conversion-measurement-api/issues/84)
 
 [イシュー #273](https://github.com/WICG/conversion-measurement-api/issues/273)
 
-### レポートに関する制限事項（イベントレベルのレポートと集計レポート）
+### レポートに関する制限事項（イベントレベルのレポートと集計レポート）{: #reporting-limits }
 
 [レポート送信元の制限](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#reporting-origin-limits)
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #reporting-limits-change }
 
 新しい提案では、**2
 つのサイト間でイベントを測定できる当事者の数が明示的に制限されます**。
@@ -495,9 +507,9 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 API
 の一部の不正使用による影響を軽減できる程度に十分小さい値となっています。
 
-### レポートのクールダウン / レート制限
+### レポートのクールダウン / レート制限 {: #rate-limits }
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #rate-limits-change }
 
 レポートのクールダウンは、1 人のユーザーについて、この API
 を介して一定期間に送信される情報の合計量を抑制するプライバシー
@@ -514,16 +526,18 @@ API
 件を下回ってから 30
 日間が経過すると再度スケジュール作成できるようになります。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #rate-limits-explainer }
 
 [レポートのクールダウン /
 レート制限](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#reporting-cooldown--rate-limits)
 
-### 送信先の制限（イベントレベルのレポートのみ）
+### 送信先の制限（イベントレベルのレポートのみ）{: #capping }
 
+{% Aside %}
 新しい提案は、**クリック数と視聴回数の両方**について送信先を制限するものです。なお、視聴回数に関する送信先の制限については、前回すでに提案されています。
+{% endAside %}
 
-#### 変更点とその理由
+#### 変更点とその理由 {: #capping-change }
 
 送信先の制限で、スコープにレポート送信元（通常はアドテック）を含めるよう修正:
 {パブリッシャー、アドテック} あたり **100**
@@ -531,11 +545,11 @@ API
 
 これは、閲覧履歴の再構成を制限する**プライバシー保護メカニズム**です。
 
-#### 技術解説で詳細を見る
+#### 技術解説で詳細を見る {: #capping-explainer }
 
 [保留中のソースで扱う固有の送信先の数を制限する](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#limiting-the-number-of-unique-destinations-covered-by-pending-sources)
 
-## アトリビューション レポート: すべてのリソース
+## アトリビューション レポート: すべてのリソース {: #resources }
 
 [アトリビューション
-レポート](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/)をご覧ください。
+レポート](/docs/privacy-sandbox/attribution-reporting-introduction)をご覧ください。
