@@ -14,11 +14,15 @@ tags:
 
 Signed exchanges (SXGs) are a means to improve your page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/lcp/). When referring sites (currently Google Search) link to a page, they can [prefetch it](https://developers.google.com/search/docs/advanced/experience/signed-exchange) into the browser cache before the user clicks on the link.
 
-It's possible to make web pages that, when prefetched, require no network on the [critical path to rendering the page](https://developer.mozilla.org/docs/Web/Performance/Critical_rendering_path)! On a 4G connection, this page load [goes from 6s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220329_AiDcB7_HB0-l:Before,220329_BiDc1V_FJG-l:After&medianMetric=LCP) (the remaining 0.9s being mostly by CPU usage):
+It's possible to make web pages that, when prefetched, require no network on the [critical path to rendering the page](https://developer.mozilla.org/docs/Web/Performance/Critical_rendering_path)! On a 4G connection, this page load [goes from 2.8s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220422_AiDcJ6_54R-l:Before,220329_BiDc1V_FJG-l:After&medianMetric=LCP) (the remaining 0.9s being mostly by CPU usage):
 
 <figure>
-  {% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/KATYwVUsB7yG3sxtFkJI.mp4", controls=true, poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/PKUIECQWQwpDzGRUzL86.jpg" %}
+  {% Video src="video/rULxC7pPw3PFS4o9xr7v8isFmCv1/MQwtXWQD41XWNTzRHLie.mp4", controls=true, poster="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/cdP5lEt76GS8N3Bix2X2.jpg" %}
 </figure>
+
+{% Aside %}
+Previously, this post showed [an improvement from 6s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220329_AiDcB7_HB0-l:Before,220329_BiDc1V_FJG-l:After&medianMetric=LCP). That was true, but the site under test was atypically slow at the time. Still, it may serve as a example representative of pages with [more subresources](https://almanac.httparchive.org/en/2021/javascript#fig-5), [slower servers](https://almanac.httparchive.org/en/2021/performance#fig-6), or users with [slower connection types](https://almanac.httparchive.org/en/2021/performance#fig-16).
+{% endAside %}
 
 Most people publishing SXGs today are using Cloudflare's easy-to-use [Automatic Signed Exchanges](https://support.cloudflare.com/hc/articles/4411075595661-Automatic-Signed-Exchanges-SXGs-Beta) (ASX) feature (though [open source options](https://web.dev/signed-exchanges/#tooling) exist too):
 
