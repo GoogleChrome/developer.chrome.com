@@ -7,7 +7,7 @@ authors:
 date: 2020-06-22
 updated: 2021-10-27
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
-alt: Pipette with purple liquid
+alt: Pipette with purple liquid.
 tags:
   - origin-trials
 ---

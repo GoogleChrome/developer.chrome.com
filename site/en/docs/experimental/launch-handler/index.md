@@ -5,7 +5,8 @@ description: >
   Launch handler lets you control how your app is launched, for example, whether it uses an existing or a new window and whether the chosen window is navigated to the launch URL.
 subhead: >
   Control how your app is launched.
-date: 2022-03-07
+date: 2021-12-14
+updated: 2022-04-22
 ---
 
 The Launch Handler API lets you control how your app is launched, for example, whether it uses an existing or a new window and whether the chosen window is navigated to the launch URL. This also enqueues a `LaunchParams` object in the launched page's `window.launchQueue`, similar to the File Handling API.
@@ -23,6 +24,21 @@ The Launch Handler API lets you control how your app is launched, for example, w
 | 5. Launch                                | Not started              |
 
 </div>
+
+{% Aside %} 
+### Try out the Launch Handler API
+
+During the trial phase you can test the API by one of two methods.
+
+#### Local testing
+
+To experiment with the Launch Handler API locally, without an origin trial token, enable the `#enable-desktop-pwas-launch-handler` flag in `about://flags`.
+
+#### Register for the origin trial
+
+Starting in Chromium 98, the Launch Handler API will be available as an [origin trial](/docs/experimental/origin-trials/) in Chromium. The origin trial is expected to end in Chromium 102 (June 15, 2022). [Register here](https://developers.chrome.com/origintrials/#/trials/active).
+
+{% endAside %}
 
 ## Interfaces
 
@@ -106,6 +122,17 @@ launchQueue.setConsumer((launchParams) => {
   }
 });
 ```
+
+### Demo
+
+You can see a demo of the Launch Handler API in action in the [PWA Launch Handler Demo](https://launch-handler.glitch.me/). 
+Be sure to check out the [source code](https://glitch.com/edit/#!/launch-handler) of the application to see how it uses the Launch Handler API.
+
+1. Install the _Musicr 2.0_ app on a ChromeOS device.
+1. Send yourself a link in a chat application of the form `https://launch-handler.glitch.me?track=https://example.com/music.mp3`. (You can customize `https://example.com/music.mp3` for any URL pointing to an audio file, for example, `https://launch-handler.glitch.me?track=https://cdn.glitch.me/3e952c9c-4d6d-4de4-9873-23cf976b422e%2Ffile_example_MP3_700KB.mp3?v=1638795977190`).
+1. Click the link in your chat app and notice how _Musicr 2.0_ opens and plays the track.
+1. Click the link in your chat app again and notice that you will not get a second instance of _Musicr 2.0_.
+
 
 ## Feedback {: #feedback }
 
