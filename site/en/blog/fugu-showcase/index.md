@@ -9,7 +9,7 @@ authors:
 date: 2022-04-22
 # updated: 2022-04-21
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
-alt: Blowfish swarm swimming in the ocean
+alt: Blowfish swarm swimming in the ocean.
 tags:
   - capabilities
 ---
