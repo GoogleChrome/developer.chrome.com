@@ -1,3 +1,23 @@
+arthurevans:
+  title:
+    en: 'Arthur Evans'
+  description:
+    en: 'Arthur writes words about code'
+jbingham:
+  title:
+    en: 'Jonathan Bingham'
+  description:
+    en: 'Jonathan is a Product Manager at Google'
+justinfagnani:
+  title:
+    en: 'Justin Fagnani'
+  description:
+    en: 'Justin is a Software Engineer on the Polymer Project'
+sahel:
+  title:
+    en: 'Sahel Sharify'
+  description:
+    en: 'Sahel is a contributor to Chrome Developers'
 mustaqahmed:
   title:
     en: 'Mustaq Ahmed'
@@ -553,7 +573,7 @@ joycetoh:
   title:
     en: 'Joyce Toh'
   description:
-    en: 'Joyce is a Developer Relations Engineer for Chrome OS.'
+    en: 'Joyce is a Developer Relations Engineer for ChromeOS.'
 yigu:
   title:
     en: 'Yi Gu'
@@ -687,5 +707,51 @@ sofiayem:
 kevinkiklee:
   title:
     en: 'Kevin K. Lee'
+    ko: '이경인'
   description:
-    en: "Developer Relations Engineer, Google Chrome"
+    en: 'Developer Relations Engineer, Google Chrome'
+    ko: 'Google Chrome의 개발자 관계 엔지니어'
+stefanzager:
+  title:
+    en: 'Stefan Zager'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rachelandrew:
+  title:
+    en: 'Rachel Andrew'
+  description:
+    en: 'Technical writer at Google, content lead for the Chrome Developers site.'
+bgalbs:
+  title:
+    en: 'Ben Galbraith'
+  description:
+    en: "Ben is the Senior Director of Product Management for Chrome's Web Platform team."
+twifkak:
+  title:
+    en: 'Devin Mullins'
+  description:
+    en: 'Software engineer at Google, signed exchanges integration lead in Search'
+jhey:
+  title:
+    en: 'Jhey Tompkins'
+    es: 'Jhey Tompkins'
+    it: 'Jhey Tompkins'
+    ja: 'Jhey Tompkins'
+    ko: 'Jhey Tompkins'
+    pt: 'Jhey Tompkins'
+    ru: 'Jhey Tompkins'
+    zh: 'Jhey Tompkins'
+  description:
+    en: 'Whimsy Dev Supreme! Developer Relations Engineer @ Google'
+    es: '¡Extravagante Dev Supremo! Ingeniero de Relaciones con los Desarrolladores @ Google'
+    it: 'Stravagante Dev Supremo! Ingegnere relazioni con gli sviluppatori @ Google'
+    ja: '気まぐれな開発最高！開発者関係エンジニア@Google'
+    ko: '변덕스러운 데브 슈프림! 개발자 관계 엔지니어 @ Google'
+    pt: 'Excêntrico Dev Supremo! Engenheiro de relações com desenvolvedores @ Google'
+    ru: 'Причудливый Дев Высший! Инженер по связям с разработчиками @ Google'
+    zh: '奇思妙想的开发者至尊！开发者关系工程师 @ Google'
+mariahhart:
+  title:
+    en: 'Mariah Hart'
+  description:
+    en: 'Technical Program Manager, Google'

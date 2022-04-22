@@ -114,7 +114,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 ## Manifest 영역에서 new note URL을 보여줍니다 {: #new-note-url }
 이제 Manifest 영역에서 [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)을 보여줍니다.
 
-현재 Chrome OS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다. 메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
+현재 ChromeOS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다. 메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Manifest 영역의 new note URL", width="800", height="477" %}
 

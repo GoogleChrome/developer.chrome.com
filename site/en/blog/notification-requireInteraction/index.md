@@ -21,22 +21,22 @@ to save resources. This means we need another way to create a good experience fo
 The Notification spec was recently updated to give the developer the ability to
 [indicate that the notification should _not_ be automatically dismissed by the system](https://notifications.spec.whatwg.org/#require-interaction-preference-flag).
 
-> A notification has an associated require interaction preference flag which is initially 
-> unset. When set, indicates that on devices with a sufficiently large screen, the notification 
+> A notification has an associated require interaction preference flag which is initially
+> unset. When set, indicates that on devices with a sufficiently large screen, the notification
 > should remain readily available until the user activates or dismisses the notification.
 
 This might seem odd, but what it implies that unless told otherwise the notification
 should be removed from view after a short period of time.
 
-Chrome 47 (beta in October 2015) now supports the `requireInteraction` option. Unless it is explicitly 
+Chrome 47 (beta in October 2015) now supports the `requireInteraction` option. Unless it is explicitly
 provided *and* set to `true`, all notifications on *desktop* will be dismissed after
-approximately [20 seconds](https://crbug.com/530697#c9). The interesting part though is that Chrome has 
-recently just removed the Notification Center from all desktop platforms (but Chrome OS), this means that 
-minimized notifications are considered to be dismissed and are not accessible in a call to `getNotifications` 
+approximately [20 seconds](https://crbug.com/530697#c9). The interesting part though is that Chrome has
+recently just removed the Notification Center from all desktop platforms (but ChromeOS), this means that
+minimized notifications are considered to be dismissed and are not accessible in a call to `getNotifications`
 in a service worker.
 
-On Chrome for Android, because the notifications are minimized in the notifications tray area, the 
-`requireInteraction` option is ignored. 
+On Chrome for Android, because the notifications are minimized in the notifications tray area, the
+`requireInteraction` option is ignored.
 
 ```js
 navigator.serviceWorker.register('sw.js');

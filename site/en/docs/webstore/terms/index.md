@@ -37,7 +37,7 @@ acquire and maintain a valid Google account.
 
 2.1 Your use of the Web Store to distribute Products is governed by a legal agreement between you
 and Google consisting of the Google Terms of Service (found at [https://policies.google.com/terms][google-terms]),
-Google Chrome and Chrome OS Additional Terms of Service (found at
+Google Chrome and ChromeOS Additional Terms of Service (found at
 [https://www.google.com/intl/en/chrome/terms/][google-additional-terms]) and this Google Chrome Web Store Developer
 Agreement (together, the "Agreement"). You are contracting with the applicable Google entity based
 on where You reside. In order to use the Web Store to distribute Products, you must agree to this

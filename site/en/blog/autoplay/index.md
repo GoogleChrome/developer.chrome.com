@@ -292,7 +292,7 @@ on the Chromium site.
 [do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [https://airhorner.com]: https://airhorner.com/progressive-web-apps/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
+[permissions policy]: /docs/privacy-sandbox/permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
 [policy list]: https://chromeenterprise.google/policies/
 [progressive-web-apps]: https://web.dev/progressive-web-apps/

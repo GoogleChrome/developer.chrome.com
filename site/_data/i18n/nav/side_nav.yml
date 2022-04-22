@@ -10,6 +10,9 @@ blog:
   en: 'Blog'
   es: 'Blog'
 
+100:
+  en: 'Chrome 100'
+
 releases:
   en: 'Releases'
   es: 'Versiones'

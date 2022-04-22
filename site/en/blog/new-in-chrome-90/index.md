@@ -125,7 +125,7 @@ preselected rules, the browser overrides the behavior with better UX or
 just says, "talk to the hand," blocking the API altogether.
 
 Starting in Chrome 90, the Feature Policy API will be renamed
-Permissions Policy, and the HTTP header has been renamed along with it. At
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/), and the HTTP header has been renamed along with it. At
 the same time, the community has settled on a new syntax, based on Structured
 Field Values for HTTP.
 

@@ -301,7 +301,7 @@ Chromium issue: [887173][41]
 [26]: https://crbug.com/1128885
 [27]: https://crbug.com/1069425
 [28]: https://crbug.com/1077657
-[29]: https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md
+[29]: /docs/privacy-sandbox/permissions-policy/
 [30]: https://crbug.com/1158827
 [31]: https://github.com/privacycg/first-party-sets
 [32]: https://crbug.com/1161427

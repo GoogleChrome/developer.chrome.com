@@ -14,7 +14,7 @@ tags:
 To simulate different [device orientations][1] from Chrome DevTools:
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the
     **Command Menu**.
 
     {% Img src="image/admin/ybeQIXE0h2xg3nfKPFZU.png", alt="The Command Menu.", width="800", height="632" %}

@@ -30,7 +30,7 @@ be persisted on the device so that applications can load the license into
 memory without sending another license request to the server. This is how
 offline playback is supported in EME.
 
-Until now, Chrome OS was the only platform to support persistent licenses. It
+Until now, ChromeOS was the only platform to support persistent licenses. It
 is not true anymore. Playing protected content through EME while the device is
 offline is now possible on Android as well.
 

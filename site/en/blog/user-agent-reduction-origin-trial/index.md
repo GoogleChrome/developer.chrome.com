@@ -107,7 +107,7 @@ Subresource requests to the same origin will automatically send the same
 User-Agent string as the top-level request sent. Subresource requests to
 third-party origins will also send the same User-Agent string as the top-level
 request, including the reduced UA string if the origin trial token is valid,
-provided that the permissions policy allows it.
+provided that the [permissions policy](/docs/privacy-sandbox/permissions-policy/) allows it.
 
 ## How do I participate in the User-Agent Reduction origin trial? {: #enroll-top-level }
 

@@ -20,13 +20,13 @@ When you want to inspect a DOM node's styles or attributes, right-click the elem
 
 **Figure 1**. The **Inspect** option
 
-Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, Chrome OS).
+Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, ChromeOS).
 
 See [Get Started With Viewing And Changing CSS][1].
 
 ## Open the Console panel to view logged messages or run JavaScript {: #console }
 
-Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS) to jump straight into
+Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, ChromeOS) to jump straight into
 the **Console** panel.
 
 See [Get Started With The Console][2].

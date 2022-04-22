@@ -200,7 +200,7 @@ Calendar image photo by [Eric Rothermel] on [Unsplash].
 [error]: https://developer.mozilla.org/en-US/docs/Web/API/DOMException
 [demo]: https://show-picker.glitch.me/demo.html
 [issues]: https://github.com/whatwg/html/issues
-[permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
+[permissions policy]: /docs/privacy-sandbox/permissions-policy/
 [@chromiumdev]: https://twitter.com/ChromiumDev
 [mdn]: https://developer.mozilla.org/docs/Web/API/HTMLInputElement/showPicker
 [explainer]: https://github.com/whatwg/html/pull/7319
