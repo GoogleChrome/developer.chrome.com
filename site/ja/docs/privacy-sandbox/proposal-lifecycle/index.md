@@ -6,17 +6,7 @@ authors:
   - alexandrawhite
 ---
 
-[提案のライフサイクル](/docs/privacy-sandbox/proposal-lifecycle/)
-
-GitHub English source:
-[https://raw.githubusercontent.com/GoogleChrome/developer.chrome.com/main/site/en/docs/privacy-sandbox/proposal-lifecycle/index.md](https://raw.githubusercontent.com/GoogleChrome/developer.chrome.com/main/site/en/docs/privacy-sandbox/proposal-lifecycle/index.md)
-
-Google
-がどのようなプロセスで関係者と協力して、プライバシー保護技術についてディスカッション、テスト、導入するかについて。
-
 _こちらのコンテンツの多くは、元々は [2021 年の Chrome Developer Summit のまとめ](/docs/privacy-sandbox/cds21-update/)の一部として共有されていたものです。_
-
-## [プライバシー サンドボックスの提案の目的](/docs/privacy-sandbox/proposal-lifecycle/#what-is-the-goal-of-the-privacy-sandbox-proposals)
 
 プライバシー
 サンドボックスの提案は、ウェブ標準の作成に必要な数多くのステップのうちの最初のステップです。
