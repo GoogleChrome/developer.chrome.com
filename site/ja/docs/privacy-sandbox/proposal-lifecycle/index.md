@@ -66,7 +66,7 @@ W3C グループがいくつもあります。（全て英語）
 つの提案（PIGIN と TURTLEDOVE）から進化しました。100 以上の組織が [W3C での会議](https://github.com/WICG/turtledove/issues/88)に参加して現行バージョンの改善を支援し、[オンランディスカッション スレッドも 200](https://github.com/WICG/turtledove/issues)
 を超えました。
 
-{% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/GUccejeZiolwdTSzwW0z.avif", alt="2019 年に PIGIN が提案され、2020 年に TURTLEDOVE、2021 年に FLEDGE が提案されました。", width="800", height="169" %}
+{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Rg4lEQVzb1v6CZTyzFTE.png", alt="2019 年に PIGIN が提案され、2020 年に TURTLEDOVE、2021 年に FLEDGE が提案されました。", width="800", height="169" %}
 
 また、同じソリューション分野で他社から 6
 つ以上の提案が提供されました。Google
@@ -92,7 +92,7 @@ Chrome フラグが利用できます。
 Google
 は、何が成功し、何がうまくいかず、その差がどこにあるかについて、デベロッパーから実用的なフィードバックを得ています。
 
-{% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/s6gTNVydmZZmGyivBClC.avif", alt="ALT_TEXT_HERE", width="800", height="368" %}
+{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/vTqicAx2UauzkePJkM0A.png", alt="ALT_TEXT_HERE", width="800", height="368" %}
 
 この段階で実りあるテストを行う為には、実践的なテストの実施と、自分で学んだことを共有する姿勢が必要です。
 
@@ -129,7 +129,7 @@ API をテストして、Chrome での一般利用の準備ができたら、そ
 Cookie と同様に、ユーザー
 エージェント（UA）文字列は初期のウェブ機能です。デフォルトでは、ユーザーのブラウザとデバイスに関する多くの情報が提供されるため、フィンガープリントに容易に利用できます。また、解析の際には悩みの種になりうる形式でもあります。
 
-{% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/mgc6Yud6cv4sosrObMKD.avif", alt="たとえば、「User-Agent: Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile Safari/537.36」は非常に長く、フィンガープリントに使用される特定の詳細情報（デバイスの正確な機種、プラットフォームのバージョン、Chrome のバージョン全体など）を提供しています。", width="800", height="464" %}
+{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/AVzbV9HF0T0bm3buFjV6.jpg", alt="たとえば、「User-Agent: Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile Safari/537.36」は非常に長く、フィンガープリントに使用される特定の詳細情報（デバイスの正確な機種、プラットフォームのバージョン、Chrome のバージョン全体など）を提供しています。", width="800", height="464" %}
 
 削減されたユーザー
 エージェントには、リクエストの送信元であるブラウザのブランドとメジャーバージョン（デスクトップまたはモバイル）、プラットフォームが含まれます。今後、ユーザーのデバイスや条件に関する特定の情報など、より多くのデータにアクセスする必要がある場合は、UA-CH
@@ -139,7 +139,7 @@ Cookie と同様に、ユーザー
 データは「デフォルトで使用可能な」モデルから「リクエストに応じた」モデルに移行します。これはプライバシーに関する現在の優れた方法であり、Google
 が今後設定していきたいと考えているパターンです。
 
-{% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/UCXrDoPE25iNA5cIEJWX.avif", alt="ALT_TEXT_HERE", width="800", height="339" %}
+{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZsumGF9jzVb5yYL4QD3i.png", alt="ALT_TEXT_HERE", width="800", height="339" %}
 
 2022 年 4 月より、UA 文字列の段階的な削減が Chrome で開始されます。UA-CH
 は 2021 年 3
