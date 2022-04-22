@@ -18,6 +18,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='u9GRAliBrM8' %}
 
 ## Import and export recorded user flows as a JSON file  {: #recorder }
 
