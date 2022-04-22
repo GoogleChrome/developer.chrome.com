@@ -192,7 +192,7 @@ about feature support and constraints.
 
 The default in the current implementation of FLEDGE is to allow calling `joinAdInterestGroup()` from
 anywhere in a page, even from cross-domain iframes. In the future, once site owners have had time
-to adjust their cross-domain iframe permissions policies, the plan is to disallow calls from
+to adjust their cross-domain iframe [permissions policies](/docs/privacy-sandbox/permissions-policy/), the plan is to disallow calls from
 cross-domain iframes, as the explainer describes.
 
 #### Trusted servers
@@ -358,7 +358,7 @@ For example: it must not be possible for `malicious.example` to call
 
 **Same origin**: By default, permission is implicitly granted for `joinAdInterestGroup()` calls from
 the same origin as the site being visited, i.e. from the same origin as the top-level frame of the
-current page. Sites can use a FLEDGE [permissions policy header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
+current page. Sites can use a FLEDGE [permissions policy header](/docs/privacy-sandbox/permissions-policy/)
  `join-ad-interest-group` directive to disable `joinAdInterestGroup()` calls.
 
 **Cross origin**: Calling `joinAdInterestGroup()` from origins that are different from the current

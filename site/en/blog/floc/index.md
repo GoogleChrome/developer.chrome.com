@@ -185,7 +185,7 @@ As an example, for a publisher finding ways to select relevant content, the proc
 
 ## How can websites opt out of the FLoC computation?
 
-A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation. A new `interest-cohort` [permissions policy](https://www.w3.org/TR/permissions-policy-1/) enables this. The policy will be `allow` by default.  
+A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation. A new `interest-cohort` [permissions policy](/docs/privacy-sandbox/permissions-policy/) enables this. The policy will be `allow` by default.  
 
 For any frame that is _not_ allowed `interest-cohort` permission, the promise returned when it calls `document.interestCohort()` will reject. If the main frame does not have `interest-cohort` permission then the page visit will not be included in interest cohort calculation.  
 
