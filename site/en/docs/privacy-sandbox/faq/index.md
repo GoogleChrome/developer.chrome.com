@@ -221,6 +221,17 @@ At auction time, the browser communicates with the trusted server to
 fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
 
+### Can the Topics API be used with the FLEDGE API? 
+
+Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+
+
 ## Attribution Reporting
 
 ### How can I ask a question about this feature?
