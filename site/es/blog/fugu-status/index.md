@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Estado de las nuevas capacidades
 subhead: Las aplicaciones web deberían ser capaces de hacer todo lo que las aplicaciones de escritorio/iOS/Android pueden hacer. Los miembros del proyecto de capacidades entre empresas quieren hacer posible que usted cree y entregue aplicaciones en la web abierta que nunca antes habían sido posibles.
 date: 2018-11-12
-updated: 2021-11-04
+updated: 2022-04-22
 tags:
   - capabilities
 ---

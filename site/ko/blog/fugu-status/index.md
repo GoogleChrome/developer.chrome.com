@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: 새로운 기능 상태
 subhead: 웹 앱은 iOS/Android/데스크톱 앱이 할 수 있는 모든 작업을 수행할 수 있어야 합니다. 회사 간 기능 프로젝트의 구성원은 이전에는 불가능했던 개방형 웹에서 앱을 빌드하고 제공할 수 있도록 하고자 합니다.
 date: 2018-11-12
-updated: 2021-11-04
+updated: 2022-04-22
 tags:
   - capabilities
 ---

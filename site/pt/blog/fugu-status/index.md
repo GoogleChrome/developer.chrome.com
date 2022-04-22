@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Status de novos recursos
 subhead: Os aplicativos da Web devem ser capazes de fazer qualquer coisa que os aplicativos iOS, Android e desktop possam. Os membros do projeto de recursos entre empresas querem possibilitar que você crie e entregue aplicativos na web aberta que nunca foram possíveis antes.
 date: 2018-11-12
-updated: 2021-11-04
+updated: 2022-04-22
 tags:
   - capabilities
 ---

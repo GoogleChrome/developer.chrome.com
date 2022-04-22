@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: 新功能状态
 subhead: Web 应用理应能够执行任何 iOS/Android/桌面应用可以执行的操作。跨公司能力项目的成员希望让您能够在开放的 Web 上构建和交付以前从未实现过的应用。
 date: 2018-11-12
-updated: 2021-11-04
+updated: 2022-04-22
 tags:
   - capabilities
 ---
