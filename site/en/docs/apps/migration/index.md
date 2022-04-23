@@ -24,7 +24,7 @@ complicated.
 ### Build a Progressive Web App {: #build-pwa }
 
 Building a [Progressive Web App][3] (PWA) is the ideal way to reach users across all operating
-systems.  
+systems.
 As part of our [Web Capabilities][4] (codename: [Fugu][5]) efforts, we are investigating ways to
 improve the migration path to the web for developers that depend on exclusive Chrome App APIs—in
 particular the Sockets, HID, File System, and Serial APIs. If there are web platform features you
@@ -59,9 +59,9 @@ Note there are significant costs to this approach. [While some browsers][13] sup
 extensions API as Chrome, this support is not universal. This can significant friction for your
 users who would prefer a cross-browser alternative.
 
-### Build for Chrome OS via Android {: #build-chromeos-android }
+### Build for ChromeOS via Android {: #build-chromeos-android }
 
-If you are an Android developer interested in building for Chrome OS, you can optimize your Android
+If you are an Android developer interested in building for ChromeOS, you can optimize your Android
 application for a better experience.
 
 Chrome App API/Capability migration recommendations (current as of Nov. 2019):

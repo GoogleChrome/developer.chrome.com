@@ -73,7 +73,7 @@ But first, you need to set up the site so that you can make changes to it later:
 
     **Figure 4**. The demo tab
 
-6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, Chrome OS). Chrome DevTools opens
+6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, ChromeOS). Chrome DevTools opens
     up alongside the demo.
 
     {% Img src="image/admin/QyoSneXNo8Npiy28nJlU.png", alt="DevTools and the demo.", width="800", height="476" %}
@@ -81,7 +81,7 @@ But first, you need to set up the site so that you can make changes to it later:
     **Figure 5**. DevTools and the demo
 
 For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
-can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open
+can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open
 the Command Menu, typing `Undock`, and then selecting **Undock into separate window**.
 
 {% Img src="image/admin/YgPOzT6Re0aIGezSKPZr.png", alt="Undocked DevTools.", width="800", height="514" %}
@@ -383,7 +383,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
     **Figure 29**. More information about the _Reduce render-blocking resources_ opportunity
 
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
     Menu, start typing `Coverage`, and then select **Show Coverage**.
 
     {% Img src="image/admin/Cy7cW3nb11D7A2ndQcsS.png", alt="Opening the Command Menu from the Audits panel.", width="800", height="438" %}
@@ -422,7 +422,7 @@ Are the `jquery.js` and `lodash.js` files even needed to load the page? The Requ
 show you what happens when resources aren't available.
 
 1.  Click the **Network** tab.
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
     Menu again.
 3.  Start typing `blocking` and then select **Show Request Blocking**.
 

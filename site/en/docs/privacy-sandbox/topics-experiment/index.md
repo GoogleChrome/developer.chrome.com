@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-03-31
-updated: 2022-03-31
+updated: 2022-04-19
 authors:
   - samdutton
 ---
@@ -18,11 +18,28 @@ authors:
 
 ## Try the API
 
+{% Aside 'caution' %}
+
+Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
+on pages that provide a valid trial token.
+
+[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
+explains why this is so, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
+
+{% endAside %}
+
 1. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#topics) for updates on the
 implementation status of the Topics API.
 2. Experiment with the API:
-   * [The Topics API](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)
-   provides a simple code example showing how the API might be used.
+   * [The Topics API](/docs/privacy-sandbox/topics/#origin-trial) explains how to take part in the
+   Privacy Sandbox Relevance and Measurement origin trial.
+   * Try out Topics for a single user in Chrome 101 or above by enabling `chrome://flags/#privacy-sandbox-ads-apis`
+   or by running Chrome from the command line with the `--enable-features=PrivacySandboxAdsAPIsOverride`
+   [feature flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
+   * [Use the Topics JavaScript API to access topics](/docs/privacy-sandbox/topics/#access-topics)
+   provides a short code example to demonstrate how the API might be used to access topics observed
+   for the current user.
    * [How does the Topics API work?](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)
    outlines the values returned by the API, and provides more information about feature support and
    constraints.
@@ -30,20 +47,19 @@ implementation status of the Topics API.
 
 ## Get support
 
-{% Aside %}
-Is anything blocking you from experimenting with the API? Please ask us!
-{% endAside %}
+Is anything blocking you from experimenting with the API? Ask a question 
+about **your implementation** or about the **documentation**:
 
-To ask a question about **your implementation** or about the **documentation**:
-* [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
-on the privacy-sandbox-dev-support repository. Make sure to select the issue template for Topics.
-* For more general questions about how to meet your **use cases** with the API,
-[file an issue on the proposal repository](https://github.com/jkarlin/topics/issues/new).
+*  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
+   on the Privacy Sandbox Dev Support repository. Make sure to select the issue template for Topics.
+*  For more general questions about how to meet your **use cases** with the 
+   API, [file an issue on the proposal repository](https://github.com/jkarlin/topics/issues/new).
 
 For bugs and issues with the implementation of the Topics API in Chrome:
-* [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestCohort)
-reported for the API.
-* Raise a new issue at [crbug.com/new](https://crbug.com/new).
+
+*  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestCohort)
+   reported for the API.
+*  Raise a new issue at [crbug.com/new](https://crbug.com/new).
 
 
 ## Join the discussion

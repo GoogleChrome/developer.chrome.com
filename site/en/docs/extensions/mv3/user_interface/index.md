@@ -64,7 +64,7 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 ## Define rules for activating the extension{: #activate_pages }
 
 It's possible to use [declarativeContent](/docs/extensions/reference/declarativeContent/) to enable and disable the action based on the current URL being shown.
-See the [example as part of declarativeContent](docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent).
+See the [example as part of declarativeContent](/docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent).
 
 ## Provide the extension icons
 

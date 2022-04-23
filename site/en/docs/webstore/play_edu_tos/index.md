@@ -15,7 +15,7 @@ organization. That person needs to read and accept the terms and conditions belo
 
 ## Definitions {: #definitions }
 
-**Chromebook**: An electronic device running Google Chrome OS as its operating system.
+**Chromebook**: An electronic device running Google ChromeOS as its operating system.
 
 **Developer or You**: Any person or company who is registered to develop products for publication
 and distribution on the Google Chrome Web Store in accordance with the terms the Agreement.
