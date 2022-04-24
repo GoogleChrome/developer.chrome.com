@@ -36,9 +36,9 @@ Además de esto, puede exportar también la grabación. Después de [grabar un f
 <!-- - **Export as a JSON file**. Download the recording as a JSON file. -->
 - **Exportar como un archivo JSON**. Descargue la grabación como un archivo JSON.
 <!-- - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.  -->
-- **Exportar como un script de @puppeteer/replay**. Descargue la grabación como un script de [Puppeteer Replay](
+- **Exportar como un script de @puppeteer/replay**. Descargue la grabación como un script de [Puppeteer Replay](https://github.com/puppeteer/replay).
 <!-- - **Export as a Puppeteer script** . Download the recording as [Puppeteer](https://pptr.dev/) script. -->
-- **Exportar como un script de Puppeteer**. Descargue la grabación como un script de [Puppeteer](https://pptr.dev/) script.
+- **Exportar como un script de Puppeteer**. Descargue la grabación como un script de [Puppeteer](https://pptr.dev/).
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
 Consulte [la documentación](/docs/devtools/recorder) para obtener más información sobre las diferencias entre estas opciones.
@@ -129,7 +129,7 @@ Además del modo de navegación existente, el panel **Lighthouse** ahora soporta
 Por ejemplo, puede usar los informes de **tiempo de espera** para analizar las interacciones de usuario. Abra esta página [demo](https://coffee-cart.netlify.app/). Seleccione el modo de **Tiempo de Espera** y haga clic en **Iniciar tiempo de bloqueo**. En la página, haga clic en un café y termine el tiempo de bloqueo. Lea el informe para encontrar el [Tiempo de bloqueo total](https://web.dev/tbt/) y [Desplazamiento acumulado del diseño](https://web.dev/cls/) que fueron causados por la interacción.
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
-Cada mode tiene sus propios casos de uso, beneficios y limitaciones. Por favor, consulte la [documentación de Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) para más información.
+Cada modo tiene sus propios casos de uso, beneficios y limitaciones. Por favor, consulte la [documentación de Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) para más información.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/loe3f6KaR9UdYe57oQ7r.png", alt="Los modos de Instantánea y Tiempo de Espera en el panel de Lighthouse", width="800", height="488" %}
 
