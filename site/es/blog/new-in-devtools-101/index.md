@@ -12,13 +12,13 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-101
-draft: true
 ---
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='u9GRAliBrM8' %}
 <!-- ## Import and export recorded user flows as a JSON file {: #recorder } -->
 ## Importar y exportar como JSON flujos de usuario grabados {: #recorder }
 
