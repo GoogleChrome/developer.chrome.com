@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: FLEDGE
+title: 'FLEDGE: テストとディスカッションへの参加'
 subhead: リマーケティングに活用できるソリューションです。このソリューションは、第三者がサイト間のユーザーの閲覧行動を追跡できないように設計されています。
 description: FLEDGE はリマーケティングに活用可能でありながら、第三者がサイト間のユーザーの閲覧行動を追跡できないように設計されています。この API を使用すると、ユーザーが以前にアクセスした Web サイトが提供する関連広告を選択するためのブラウザーによるデバイス上の「オークション」を実現できます。
 date: 2021-05-18
@@ -9,53 +9,84 @@ authors:
   - samdutton
 ---
 
-<!--lint disable no-smart-quotes-->
+FLEDGE は、リマーケティングとカスタム
+オーディエンスのユースケースに向けたプライバシー
+サンドボックスの提案です。サイト間でユーザーの閲覧行動をトラッキングしようとする第三者に利用されないよう設計されています。
 
-## 実装状況
+## 基礎を学ぶ
 
-- [API の提案](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)は、 [WICG](https://www.w3.org/community/wicg/) および利害関係者グループと議論中です。
-- [Blink](https://www.chromium.org/blink) の [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)。
+- デベロッパーやソフトウェア エンジニアの方は、[FLEDGE API デベロッパーガイド](/blog/fledge-api/)で、この提案の詳細な技術情報を確認できます。
 
-{% Aside %} FLEDGE は [TURTLEDOVE](https://github.com/WICG/turtledove) から生まれた API です。{% endAside %}
+- [FLEDGE API](/docs/privacy-sandbox/fledge/) では概要と[用語集](/docs/privacy-sandbox/fledge#glossary)を参照できます。
 
-## FLEDGE が必要な理由
+## API を試す
 
-ユーザーの関心を理解することで、サイトのコンテンツ (コンテキスト ターゲティング) または、広告が表示されるサイトにユーザーが提供した情報 (ファーストパーティ データ ターゲティング) に基づいて広告を表示するよりも、より関連性の高い広告を表示できるようになります。従来、広告プラットフォームは、サイト間でのユーザーの行動を追跡することにより、ユーザーの興味を把握してきましたが、サイト間の追跡を行わずに、関連性の高い広告をユーザーに表示する方法が必要です。
+1.  [デモ](https://fledge-demo.glitch.me/)をお試しください。基本的な FLEDGE の実装のチュートリアルとなっています。[FLEDGE のデモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードの仕組みと、Chrome > DevTools を使用して FLEDGE > のデバッグを行う方法について説明しています。
 
-FLEDGE は[リマーケティング](/privacy-sandbox/glossary/#remarketing)に活用可能でありながら、第三者がサイト間のユーザーの閲覧行動を追跡できないように設計されています。この API を使用すると、ユーザーが以前にアクセスした Web サイトが提供する関連広告を選択するためのブラウザーによるデバイス上の「オークション」を実現できます。
+2.  FLEDGE API の最新の実装状況については、プライバシーサンドボックスの[ステータスページ](/docs/privacy-sandbox/status/#fledge)をご確認ください。
 
-FLEDGE を使用すると:
+3.  API を試す方法は次のとおりです。
 
-- ユーザーのブラウザーが関連付けられている広告主が定義する広告グループは、広告主や広告技術プラットフォームではなく、ユーザーのブラウザーに保管されます。
-- ユーザーのブラウザは、注目グループのデータを広告の購入者/販売者のデータおよびビジネスロジックと組み合わせて、広告を選択するためのいわゆる「オークション」を実施します。この広告オークションは、サードパーティとデータを共有するのではなく、ユーザーのデバイス上でローカルに行われます。
-- 広告グループに合わせて広告を選択することはできますが、広告主が広告グループのデータをユーザーに関する他の情報、特に個人を識別できる情報やユーザーがアクセスしたページの情報と組み合わせることはできません。広告主が、ユーザーがサイト運営者のサイトでどのページを表示しているかを確認することはできません。
-- Web サイト、およびそれらのサイトが使用する広告ネットワークは、訪問者の興味のある広告または広告グループの情報を利用することはできません。広告の選択はユーザーのブラウザ上で行われます。
+    - [FLEDGE デモ](https://fledge-demo.glitch.me/)の[ソースコード](https://github.com/JackJey/fledge-demo)からテストを開始できます。
 
-つまり、FLEDGE はあなたの関心事とブラウジング活動の情報を保護します。たとえば、オンラインの靴屋にアクセスしてランニング シューズに興味を持った後に、広告を表示するニュース サイト (サイト運営者) にアクセスした場合、広告主 (靴屋) があなたがニュース サイトで表示しているページを知ることはできません。そして、サイト運営者 (ニュース サイト) がランニング シューズへのあなたの興味について知ることはできません。
+    - [FLEDGE API デベロッパーガイド](/blog/fledge-api/)では、API メソッドとパラメータを参照できます。
 
-## FLEDGE の仕組み
+    - [FLEDGE ワークレットのデバッグ](/blog/fledge-api/#debug-fledge-worklets)では、Chrome DevTools を使って FLEDGE の入札とオークションのコードをデバッグする方法について説明しています。
 
-ユーザーが自社の製品またはサービスを宣伝したいサイトのページ (広告主) にアクセスすると、サイトはユーザーのブラウザーに特定の期間 (たとえば、30 日間) ユーザーを特定の広告グループに関連付けるように要求できます。
+    - [デベロッパーガイド](/blog/fledge-api/#what-features-are-supported-behind-these-feature-flags-in-the-latest-version-of-chrome)では、最新バージョンの Chrome でサポートされている機能について説明しています。[API の解説](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)では、機能のサポートと制約についてさらに詳しく説明しています。
 
-広告グループは、リマーケティング リストとして使えるように広告主の Web サイトの固有のものにできます。あるいは、複数の Web サイトがユーザーを同じ広告グループに関連付けることもできます (たとえば、サイトが提携している場合や同じ広告ネットワークに属している場合)。ユーザーのブラウザーは、広告グループに指定された広告を定期的に取得します。また、広告グループに関連付けられている広告がデバイス上のオークションで入札できるタイミングについて、広告主からの指示を提供するコードも取得します。たとえば、広告がページの上部に表示されているような広告在庫の場合にのみ入札できるようにするなど。<br>ユーザーが運営者のサイトを訪問すると、ページにある広告コードがブラウザーに「オークション」コードを実行するようリクエストし、「落札」した広告が表示されます。これを実現するには、運営者のサイトが FLEDGE API を介して広告を受け取るように設定されており、かつユーザーが以前訪問した広告主のサイトによって使用されている広告ネットワークの広告を表示するように設定されている必要があります。
+## サポートを受ける
 
-1. ユーザーが、オンライン ストアなど、自社の製品を宣伝したいサイトのページにアクセスします。
-2. 広告主サイト (またはそのサイトが使用する広告技術) が joinAdInterestGroup()を呼び出してデータを渡し、ユーザーのブラウザーに「広告グループ」に参加するように要求します。データにはユーザーが閲覧する内容に関連する広告、広告プラットフォームのホスト名、および入札ロジックと入札シグナルにアクセスするための URL が含まれています。
-3. ユーザーが広告を表示し、FLEDGE を使用して選択された広告を受け入れるように設定されているニュースなどのサイトにアクセスします。
-4. ユーザーのブラウザーが「オークション」を実行し、FLEDGE が選択した広告を受け入れられる広告在庫 (広告枠) を選択します。このオークションの「売り手」は、サイト自体、またはサプライサイド プラットフォームなど、サイトを代行する第三者のどちらかとなります。「売り手」は、広告主を代行するデマンドサイド プラットフォームなど、サイトの広告在庫に入札する第三者です。この広告オークションの売り手には、3 つの役割があります。<br>• 参加できる買い手を選択すること。<br>• 各入札の金額とメタデータに基づいて最も望ましい入札を選択すること。<br>• オークションの結果をレポートすること。<br>
-5. 売り手はデータを使用して runAdAuction() を呼び出し、広告オークションを開始します。データには、売り手のホスト名、買い手と売り手からのシグナル、およびオークション決定ロジックの URL が含まれます。
-6. オークションから落札した広告に関するデータが返されます。Fenced Frame (フェンスで囲まれたフレーム) に広告を表示することを除いて、サイト運営者はそのデータにはアクセスできません。
-7. 広告が表示されます。
+API のテストをうまく進められない場合はご連絡ください。
 
----
+**ご自身の実装**、**デモ**、**ドキュメント**について質問がある場合:
 
-## 本 API に貢献し、フィードバックを共有しましょう
+- privacy-sandbox-dev-support リポジトリで[新しいイシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)してください。その際、必ず FLEDGE 用のイシュー テンプレートを選択します。
 
-- **GitHub**: [提案](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)を読み、[質問をして、議論に参加しましょう](https://github.com/WICG/turtledove/issues)。
-- **W3C**: [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) で、業界内でのユース ケースについて議論しましょう。
-- **開発者サポート**: [プライバシー サンドボックス開発者サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、議論に参加したりしましょう。
+- [GitHub のデモコードリポジトリ](https://github.com/JackJey/fledge-demo)でイシューを作成してください。
 
-## 詳細はこちら
+- この API を使用した**ユースケース**への対応に関する全般的な質問がある場合は、[提案リポジトリでイシューを作成](https://github.com/WICG/turtledove/issues/new)してください。
 
-- [FLEDGE API の技術的説明](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
-- [プライバシー サンドボックスの詳細](https://web.dev/digging-into-the-privacy-sandbox)
+Chrome での FLEDGE API の実装に関してバグや問題がある場合:
+
+- [既存のイシューを確認](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)し、この API について報告されているものがないかお探しください。
+
+- 新しいイシューを作成するには [crbug.com/new](https://crbug.com/new) にアクセスしてください。
+
+## ディスカッションに参加する
+
+FLEDGE
+の提案に関するディスカッションにはどなたでもご参加いただけます。特にこの
+API をテストしている場合は、フィードバックをぜひご提供ください。
+
+### この API について意見を交換する
+
+プライバシー サンドボックスに関する他の提案と同様に、この API
+についてもドキュメントを公開し、どなたでもディスカッションに参加できるようにしています。
+
+- [GitHub の提案の解説](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)をご覧ください。
+
+- [既存のイシュー](https://github.com/WICG/turtledove/issues)に関するやり取りに参加できます。
+
+- [新しいイシューを作成](https://github.com/WICG/turtledove/issues/new)できます。質問、機能の提案、ユースケースについてのディスカッションといった用途にご利用ください。
+
+- [FLEDGE > に関する会議](https://github.com/WICG/turtledove/issues/88)が隔週で開催されています。どなたでも参加できますが、まず > [WICG
+  に参加](https://www.w3.org/community/wicg/)していることをご確認ください。積極的な発言はもちろん、閲覧のみの参加でもかまいません。
+
+### 関連トピックについて意見を交換する
+
+- [「ウェブ広告ビジネスの改善」グループ](https://www.w3.org/community/web-adv/participants)で、業界のユースケースについて意見を交換できます。
+
+### フィードバックを送信する
+
+- プライバシー サンドボックスの[フィードバックフォーム](/docs/privacy-sandbox/feedback/#feedback-form)を使用して、公開フォーラムではなく Chrome チーム宛に非公開でフィードバックを送信できます。
+
+- [プライバシーサンドボックスのフィードバック](/docs/privacy-sandbox/feedback/#fledge-api)では、他の種類のフィードバックを送信する方法や、プライバシーサンドボックスの提案に関するディスカッションに参加する方法について説明しています。
+
+## 最新情報を入手する
+
+- この API のステータス変更について通知を受け取るには、[デベロッパー向けのメーリングリスト](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce)にご参加ください。
+
+- この API に関する進行中のディスカッションすべてを常にチェックするには、[GitHub の提案ページ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)で ボタンをクリックしてください。なお、この操作を行うには GitHub > アカウントが必要です。お持ちでない場合は [GitHub アカウントを作成](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)してください。
+
+- プライバシー > サンドボックス全般に関する最新情報を入手するには、[プライバシーサンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)の > RSS フィードを購読してください。
