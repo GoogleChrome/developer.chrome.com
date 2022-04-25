@@ -347,6 +347,8 @@ To toggle a single declaration on or off:
 
 ### Change colors with the Color Picker {: #color-picker }
 
+{% YouTube id='TuR27BxCRVk' %}
+
 The **Color Picker** provides a GUI for changing `color` and `background-color` declarations.
 
 To open the **Color Picker**:
@@ -427,6 +429,8 @@ To open the **Angle Clock**:
     keyboard shortcuts][28].
 
 ### Change box and text shadows with the Shadow Editor {: #shadow-editor }
+
+{% YouTube id='DAD72grzDDc', startTime=270 %}
 
 The **Shadow Editor** provides a GUI for changing `text-shadow` and `box-shadow` CSS declarations.
 

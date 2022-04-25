@@ -161,6 +161,8 @@ View an element's computed accessibility properties in [the Accessibility pane][
 
 ## View the contrast ratio of a text element in the Color Picker {: #contrast }
 
+{% YouTube id='t4pDjqhG6fE', startTime=38 %}
+
 Some people with low vision don't see areas as very bright or very dark. Everything tends to appear
 at about the same brightness, which makes it hard to distinguish outlines and edges. Contrast ratio
 measures the difference in brightness between the foreground and background of text. If your text
