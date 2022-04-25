@@ -1,34 +1,26 @@
 module.exports = {
-  'version': 1,
-  'snapshot': {
-    'widths': [375, 865, 1280, 1600],
-    'percy-css': `
-      iframe, .cookie-banner {
-        display: none !important;
-      }
-    `,
-    // We need this for pages that use the masonry layout which requires
-    // runtime JS to layout correctly.
-    'enable-javascript': true,
+  version: 2,
+  snapshot: {
+    widths: [
+      375,
+      865,
+      1280,
+      1600
+    ],
+    percyCSS: '\n' +
+      '      iframe, .cookie-banner {\n' +
+      '        display: none !important;\n' +
+      '      }\n' +
+      '    ',
+    enableJavaScript: true
   },
-  'static-snapshots': {
-    'path': 'dist',
-    'snapshot-files': [
-      'index.html',
-      'releases/index.html',
-      'docs/index.html',
-      'docs/native-client/index.html',
-      'blog/welcome/index.html',
-      'docs/extensions/what-are-extensions/index.html',
-      'docs/extensions/reference/action/index.html',
-      'docs/handbook/components/index.html'
-    ].join(',')
+  discovery: {
+    disableCache: true
   },
-  'agent': {
-    'asset-discovery': {
-      'network-idle-timeout': 250, // ms
-      'page-pool-size-min': 5, // pages
-      'page-pool-size-max': 20 // pages
-    }
+  static: {
+    include: [
+      '/en/index.html',
+      '/en/blog/index.html'
+    ],
   }
-};
+}
