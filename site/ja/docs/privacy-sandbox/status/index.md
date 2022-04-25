@@ -121,9 +121,6 @@ Topics API に置き換えられました。
 - [API の提案](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)は、[WICG](https://www.w3.org/community/wicg/)、インタレスト グループと検討中です。
 
 - [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) : API に関する質問とディスカッションについては、[TURTLEDOVE のイシュー](https://github.com/WICG/turtledove/issues)をご覧ください。
-- ```
-
-  ```
 
 ## [Topics](/docs/privacy-sandbox/status/#topics)
 
