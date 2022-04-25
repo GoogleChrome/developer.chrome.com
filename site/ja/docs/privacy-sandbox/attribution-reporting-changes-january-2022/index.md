@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting proposal: updates in January 2022'
+title: 'アトリビューション レポートの提案: 2022 年 1 月のアップデート'
 date: 2022-01-27
 updated: 2022-01-27
 authors:
@@ -70,7 +70,7 @@ API を試してみる予定がある場合は、Chrome
 
 ユーザーが広告を表示またはクリックすると、ブラウザは（ユーザーのデバイスでローカルに）このイベントを記録します。その際に、アトリビューション
 レポートに固有のパラメータ `attributionsourceeventid`, `attributiondestination`, `attributionexpiry`
-などのパラメータ）も記録されます。これらのパラメータの値はアドテックによって設定されます。
+などのパラメータ）も記録されます。これらのパラメータの値はアドテクによって設定されます。
 
 これらのパラメータの設定方法が変更されています。
 
@@ -78,18 +78,18 @@ API を試してみる予定がある場合は、Chrome
 タグ内に HTML 属性として、または JS
 ベースの呼び出しの引数として含める必要がありました。パラメータは、クリック時または表示時に判明している必要がありました。
 
-新しい提案では、これらのパラメータの値はアドテック
+新しい提案では、これらのパラメータの値はアドテク
 サーバーで定義されます。
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/YHKvC2HL9yLi7j6QZ3zv.png", alt="ヘッダーベースのソース登録の図", width="800", height="476" %}
 
 この方法には、特にセキュリティの面で多くのメリットがあります。このヘッダー
 メカニズムでは、アトリビューション
-ソースがスコープ内に登録されるかどうかについて、レポート送信元（通常はアドテック）が直接制御できるようになるからです。この変更により、正規のブラウザでは送信元を有効にしていないソースは登録されなくなるため、不正行為に関する懸念が部分的に軽減されます。
+ソースがスコープ内に登録されるかどうかについて、レポート送信元（通常はアドテク）が直接制御できるようになるからです。この変更により、正規のブラウザでは送信元を有効にしていないソースは登録されなくなるため、不正行為に関する懸念が部分的に軽減されます。
 
 #### ソース登録の仕組み {: #header-source-event-how }
 
-1. ある広告について、アドテックは特定のクライアントサイド属性
+1. ある広告について、アドテクは特定のクライアントサイド属性
    `attributionsrc`. を定義する必要があります。この属性の値は、ブラウザのリクエストの送信先となる
     URL です。このリクエストには新しい HTTP ヘッダー `Attribution-Reporting-Source-Info` が含まれます。その値 `navigation`
     または `event` では、それぞれソースがクリックとビューのどちらであるかを指定します。
@@ -107,7 +107,7 @@ API を試してみる予定がある場合は、Chrome
     }
     ```
 
-#### 技術解説で詳細を見る {: #header-source-event-explainer }
+#### テクニカル Explainer で詳細を見る {: #header-source-event-explainer }
 
 [アトリビューション
 ソースの登録](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#registering-attribution-sources)
@@ -121,7 +121,7 @@ API を試してみる予定がある場合は、Chrome
 #### 変更点とその理由 {: #header-trigger-event-change }
 
 クリックやビューの登録と同様に、新しい提案では、アトリビューション
-トリガー（アドテックがブラウザにコンバージョンを記録するよう指示するタイミング）がヘッダーベースの手法に変更されています。
+トリガー（アドテクがブラウザにコンバージョンを記録するよう指示するタイミング）がヘッダーベースの手法に変更されています。
 
 このメカニズムは[ヘッダーベースのソース登録](#header-based-source-registration-event-level-reports)に合わせたもので、以前に使用していたリダイレクト
 メカニズムよりも従来型の方法です。
@@ -140,9 +140,8 @@ API を試してみる予定がある場合は、Chrome
 #### アトリビューション トリガーの仕組み {: #header-trigger-event-how }
 
 ピクセル
-リクエストを受信し、コンバージョンとして分類する必要があると判断した場合、アドテックは新しい
+リクエストを受信し、コンバージョンとして分類する必要があると判断した場合、アドテクは新しい
 HTTP
-
 ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 を指定して応答する必要があります。
 
@@ -162,16 +161,16 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 
 #### リダイレクト（任意）{: #header-trigger-redirect }
 
-必要に応じて、アドテック サーバーは
+必要に応じて、アドテク サーバーは
 `Attribution-Reporting-Register-Event-Trigger` を含むレスポンスをリダイレクト
 レスポンスにすることができます。それにより、サードパーティは、コンバージョン
 イベントを確認し、ブラウザに関連付けるよう指示できるようになります。
 
-リダイレクトは任意です。アドテックとサードパーティの両方がページ上にピクセルを配置している場合、リダイレクトは不要です。
+リダイレクトは任意です。アドテクとサードパーティの両方がページ上にピクセルを配置している場合、リダイレクトは不要です。
 
 詳しくは、[サードパーティのレポート](#3p-reporting)をご覧ください。
 
-#### 技術解説で詳細を見る {: #header-trigger-event-explainer }
+#### テクニカル Explainer で詳細を見る {: #header-trigger-event-explainer }
 
 [アトリビューションのトリガー](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#triggering-attribution)
 
@@ -187,7 +186,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 にアクセスして、集計可能レポートを生成するワークレット（JavaScript
 ベースのメカニズム）を呼び出す必要がありました。
 
-新しい提案では、ワークレットは必要ありません。代わりに、アドテックは、ブラウザが集計可能レポートを生成する際に使用するルールを宣言的に（HTTP
+新しい提案では、ワークレットは必要ありません。代わりに、アドテクは、ブラウザが集計可能レポートを生成する際に使用するルールを宣言的に（HTTP
 ヘッダーを使って）定義します。
 
 この新しい提案には次のようなメリットがあります。
@@ -216,7 +215,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 ヘッダー名のみが異なります:
 `Attribution-Reporting-Register-Aggregatable-Source`
 
-#### 技術解説で詳細を見る {: #header-source-agg-explainer }
+#### テクニカル Explainer で詳細を見る {: #header-source-agg-explainer }
 
 [アトリビューション
 ソースの登録](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-source-registration)
@@ -229,7 +228,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 ヘッダー名のみが異なります:
 `Attribution-Reporting-Register-Aggregatable-Trigger-Data`
 
-#### 技術解説で詳細を見る {: #header-trigger-agg-explainer }
+#### テクニカル Explainer で詳細を見る {: #header-trigger-agg-explainer }
 
 [アトリビューション
 トリガーの登録](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-trigger-registration)
@@ -243,20 +242,20 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Register-Event-Trigger`
 新しい提案には、サードパーティ
 レポートのユースケースのサポートを改善する 2 つの側面があります。
 
-- 必要に応じて、アドテックが**ネットワーク リクエストを他のアドテック
-    サーバーにリダイレクトできます**。それにより、他のアドテックがソースとトリガーを独自に登録できます。これは現在、サードパーティで設定されている一般的な方法です。これにより API は、サードパーティの、特に既存のレポート システムに導入しやすくなります。
-- レポートの送信元（通常はアドテック）は**プライバシーに関する制限をほとんど共有しなくなります**。これにより、複数のアドテックが同じパブリッシャーや広告主と連携するユースケースに対応できます。
+- 必要に応じて、アドテクが**ネットワーク リクエストを他のアドテク
+    サーバーにリダイレクトできます**。それにより、他のアドテクがソースとトリガーを独自に登録できます。これは現在、サードパーティで設定されている一般的な方法です。これにより API は、サードパーティの、特に既存のレポート システムに導入しやすくなります。
+- レポートの送信元（通常はアドテク）は**プライバシーに関する制限をほとんど共有しなくなります**。これにより、複数のアドテクが同じパブリッシャーや広告主と連携するユースケースに対応できます。
 
 #### サードパーティ レポートの仕組み {: #3p-reporting-how }
 
 新しい提案では、レスポンス ベースのソース登録とトリガーが HTTP
-ヘッダーを利用するようになります。アドテックは、こうしたリクエストに対して
+ヘッダーを利用するようになります。アドテクは、こうしたリクエストに対して
 HTTP リダイレクトを利用できます。
 
 パブリッシャー
 サイトでのクリックまたは視聴のリクエスト（ソース登録）が、後で複数の関係者にリダイレクトされれば、それぞれの関係者がこの視聴またはクリック（ソースイベント）を登録できます。
 
-同様に、アドテックは広告主サイトからの個々のアトリビューション
+同様に、アドテクは広告主サイトからの個々のアトリビューション
 リクエストをリダイレクトできるので、他の複数の関係者がコンバージョンを登録できます（アトリビューション
 トリガー）。
 
@@ -287,7 +286,7 @@ HTTP リダイレクトを利用できます。
 
 ビュースルー測定とクリックスルー測定には、どちらも[ヘッダーベースの登録](#api-mechanism-changes)を使用します。
 
-#### 技術解説で詳細を見る {: #view-through-explainer }
+#### テクニカル Explainer で詳細を見る {: #view-through-explainer }
 
 [イベントレベルのレポート（クリックと視聴の両方](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md)
 
@@ -343,7 +342,7 @@ ar_debug=1` という Cookie
 つの新しいパラメータが含まれるため、これらを適切なデバッグ
 レポートに関連付けることができます。
 
-#### 技術解説で詳細を見る {: #debugging-explainer }
+#### テクニカル Explainer で詳細を見る {: #debugging-explainer }
 
 [省略可: 拡張デバッグ
 レポート](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-extended-debugging-reports)
@@ -408,7 +407,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 
 共通集合が空であれば、完全に無視されます。
 
-#### 技術解説で詳細を見る {: #filtering-explainer }
+#### テクニカル Explainer で詳細を見る {: #filtering-explainer }
 
 [オプションのアトリビューション
 フィルタ](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#optional-attribution-filters)
@@ -444,7 +443,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 
 これには主に 2 つのメリットがあります。
 
-- ブラウザの基本動作の**透明性**を、レポートを受け取る対象者（通常はアドテック）に対して保ちます。
+- ブラウザの基本動作の**透明性**を、レポートを受け取る対象者（通常はアドテク）に対して保ちます。
 - これは今後、API がサポートされる**すべてのブラウザ**にとって有用となります。ブラウザごとに、プライバシーに関する目標に応じて、異なるレベルのノイズを適用できるようになり、レポートを取り扱う関係者にとって、こうした可視性が必要になるからです。
 
 #### ノイズの仕組み {: #noise-how }
@@ -479,7 +478,7 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 種類しかないため、視聴についての偽のレポートは、ランダムなレポート期間の対象になりません。
 {% endAside %}
 
-#### 技術解説で詳細を見る {: #noise-explainer }
+#### テクニカル Explainer で詳細を見る {: #noise-explainer }
 
 [ノイズとなる偽のコンバージョンの例](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#noisy-fake-conversion-examples)
 
@@ -498,9 +497,9 @@ HTTP レスポンス ヘッダー `Attribution-Reporting-Filters`:
 新しい提案では、**2
 つのサイト間でイベントを測定できる当事者の数が明示的に制限されます**。
 
-- {パブリッシャー、広告主} あたりのソース登録が可能な固有のレポート送信元（通常はアドテック）の上限数を **30 日間で 100
+- {パブリッシャー、広告主} あたりのソース登録が可能な固有のレポート送信元（通常はアドテク）の上限数を **30 日間で 100
 件**に制限することが提案されています。この数は、広告のクリックや視聴（ソースイベント）ごとにカウントされ、関連付けが行われていない場合もカウントされます。
-- {パブリッシャー、広告主} あたりのレポート送信が可能な固有のレポート送信元（通常はアドテック）の上限数を **30 日間で 10
+- {パブリッシャー、広告主} あたりのレポート送信が可能な固有のレポート送信元（通常はアドテク）の上限数を **30 日間で 10
 件**に制限することが提案されています。この数は、関連付けが行われたコンバージョンごとにカウントされます。
 
 これらの上限数は、当事者によるコンバージョンの測定を妨げない程度に十分大きく、かつ
@@ -516,17 +515,17 @@ API
 メカニズムです。
 
 新しい提案では、{ソースサイト、送信先、レポートの送信元}（通常は
-{パブリッシャー、広告主、アドテック}）あたり **30
+{パブリッシャー、広告主、アドテク}）あたり **30
 日間**にスケジュール作成できるレポートが **100** 件に制限されます。
 
 この制限に達すると、ブラウザは該当の
 {ソースサイト、送信先、レポートの送信元}（通常は
-{パブリッシャー、広告主、アドテック}）に一致するレポートのスケジュール作成を停止します。その後、該当の
+{パブリッシャー、広告主、アドテク}）に一致するレポートのスケジュール作成を停止します。その後、該当の
 {ソースサイト、送信先、レポートの送信元} のレポート数が 100
 件を下回ってから 30
 日間が経過すると再度スケジュール作成できるようになります。
 
-#### 技術解説で詳細を見る {: #rate-limits-explainer }
+#### テクニカル Explainer で詳細を見る {: #rate-limits-explainer }
 
 [レポートのクールダウン /
 レート制限](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#reporting-cooldown--rate-limits)
@@ -539,13 +538,13 @@ API
 
 #### 変更点とその理由 {: #capping-change }
 
-送信先の制限で、スコープにレポート送信元（通常はアドテック）を含めるよう修正:
-{パブリッシャー、アドテック} あたり **100**
+送信先の制限で、スコープにレポート送信元（通常はアドテク）を含めるよう修正:
+{パブリッシャー、アドテク} あたり **100**
 件の固有の保留中の送信先（通常は広告主のサイト、またはコンバージョンが発生すると想定されるサイト）が許可されます。
 
 これは、閲覧履歴の再構成を制限する**プライバシー保護メカニズム**です。
 
-#### 技術解説で詳細を見る {: #capping-explainer }
+#### テクニカル Explainer で詳細を見る {: #capping-explainer }
 
 [保留中のソースで扱う固有の送信先の数を制限する](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#limiting-the-number-of-unique-destinations-covered-by-pending-sources)
 
