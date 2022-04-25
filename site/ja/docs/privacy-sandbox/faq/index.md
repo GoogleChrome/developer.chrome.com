@@ -255,7 +255,7 @@ Client Hint は安全な接続を介してのみ送信されるため、HTTPS �
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/FedCM/issues)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-## FedCM とは何ですか？
+### FedCM とは何ですか？
 
 FedCM（Federated Credential Management）は、ID 連携サービス（「～でログイン」など）へのプライバシーを保護したアプローチの提案です。ID 連携サービスを利用すると、ユーザーは個人情報を ID サービスやサイトと共有することなくサイトにログインできます。
 
