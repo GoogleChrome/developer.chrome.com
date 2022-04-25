@@ -102,7 +102,7 @@ In this example, the adtech creates two files:
 
 *  `get-url.js` is the shared storage worklet, which evaluates the frequency
    cap to determine which URL is returned for the ad creative.
-*  `main.js` selects and renders the ad creative and is injected on a
+*  `ad-iframe.js` selects and renders the ad creative and is injected on a
    publisher's website.
 
 #### `get-url.js`
