@@ -105,7 +105,7 @@ In this example, the adtech creates two files:
 *  `main.js` selects and renders the ad creative and is injected on a
    publisher's website.
 
-**get-url.js**
+#### `get-url.js`
 
 ```javascript
 class SelectURLOperation {
@@ -131,7 +131,7 @@ registerURLSelectionOperation(
 );
 ```
 
-**main.js**
+#### `ad-iframe.js`
 
 ```javascript
 // Set up the default and ad URLs
@@ -169,7 +169,7 @@ example, the publisher creates two files:
 *  `reach.js`  is the shared storage worklet which sends the reach report to
    be aggregated.
 
-**ad-iframe.js**
+#### `ad-iframe.js`
 
 ```javascript
 await window.sharedStorage.worklet.addModule("reach.js");
@@ -182,7 +182,7 @@ await window.sharedStorage.runOperation("send-reach-report", {
 });
 ```
 
-**reach.js**
+#### `reach.js`
 
 ```javascript
 class SendReachReportOperation {
