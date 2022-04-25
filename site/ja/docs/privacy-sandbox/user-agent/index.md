@@ -15,17 +15,17 @@ authors:
 
 ## 実装ステータス
 
-- [オリジントライアル中](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/) Chrome 95 ～ 100
-- [サポート終了トライアル中](https://developer.chrome.com/blog/user-agent-reduction-deprecation-trial/) Chrome 100 ～ 112
-- [トライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
-- [Chrome DevTools の統合](https://developer.chrome.com/blog/new-in-devtools-89/#ua-ch)
+- [オリジントライアル中](/blog/user-agent-reduction-origin-trial/) Chrome 95 ～ 100
+- [サポート終了トライアル中](/blog/user-agent-reduction-deprecation-trial/) Chrome 100 ～ 112
+- [トライアルに登録](/origintrials/#/view_trial/-7123568710593282047)
+- [Chrome DevTools の統合](/blog/new-in-devtools-89/#ua-ch)
 - [UA-CH Chrome プラットフォームのステータス](https://chromestatus.com/feature/5995832180473856)
 
 ## User-Agent の情報量削減とは
 
 User-Agent（UA）の情報量削減とは、[パッシブフィンガープリントに使用される](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control)可能性のある User-Agent 文字列中の識別情報を最小限に抑える取り組みです。この[変更が展開される](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)と、すべてのリソース リクエストには情報量が削減された User-Agent ヘッダーが含まれるようになります。その結果、いくつかの `Navigator` インターフェース `navigator.userAgent`、`navigator.appVersion`、`navigator.platform` など から返される値の情報量が削減されます。
 
-ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](https://developer.chrome.com/docs/privacy-sandbox/user-agent/#prepare-and-test)必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/)が必要になります。
+ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](/docs/privacy-sandbox/user-agent/#prepare-and-test)必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/)が必要になります。
 
 [User-Agent の情報量削減のスケジュールに関する最新情報をご確認ください](https://www.chromium.org/updates/ua-reduction)。
 
@@ -161,19 +161,19 @@ UA-CH API に更新したら、User-Agent
 既存の Chrome の `User-Agent`
 文字列をクライアントサイドまたはサーバーサイドのコードで処理している場合、その文字列を新しい形式に変換することで互換性をテストできます。オーバーライドと置き換えによりテストすることも、新しいバージョンを作成して並列にテストすることもできます。
 
-[User-Agent の情報量削減スニペット](https://developer.chrome.com/docs/privacy-sandbox/user-agent/snippets/)で、正規表現の例をご確認ください。
+[User-Agent の情報量削減スニペット](/docs/privacy-sandbox/user-agent/snippets/)で、正規表現の例をご確認ください。
 
 ### オリジン トライアルで実際のユーザー トラフィックをテストする
 
-[Chrome オリジントライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)することにより、ご使用のプラットフォームで実際のユーザートラフィックにおける情報量削減後の User-Agent をテストできます。
+[Chrome オリジントライアルに登録](/origintrials/#/view_trial/-7123568710593282047)することにより、ご使用のプラットフォームで実際のユーザートラフィックにおける情報量削減後の User-Agent をテストできます。
 
-他のウェブサイトに埋め込まれるコンテンツ（つまり、サードパーティのコンテンツ）を作成している場合は、[サードパーティのオリジントライアル](https://developer.chrome.com/blog/third-party-origin-trials/)に参加して複数のサイトにわたってこの変更をテストできます。Chrome
+他のウェブサイトに埋め込まれるコンテンツ（つまり、サードパーティのコンテンツ）を作成している場合は、[サードパーティのオリジントライアル](/blog/third-party-origin-trials/)に参加して複数のサイトにわたってこの変更をテストできます。Chrome
 オリジン トライアルに登録する際に「サードパーティ
 マッチング」のオプションを選択すると、サイトがサードパーティに埋め込まれるときにスクリプトを挿入できます。
 
 ## 意見交換とフィードバックの提供
 
-- **オリジン トライアル**: [Chrome オリジントライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)して、情報量削減後の User-Agent の使用を選択し、[フィードバックを共有](https://github.com/abeyad/user-agent-reduction/issues)しましょう。
+- **オリジン トライアル**: [Chrome オリジントライアルに登録](/origintrials/#/view_trial/-7123568710593282047)して、情報量削減後の User-Agent の使用を選択し、[フィードバックを共有](https://github.com/abeyad/user-agent-reduction/issues)しましょう。
 
 - **デモ**: [User-Agent の情報量削減のデモ](https://uar-ot.glitch.me/)をお試しください。
 
@@ -189,6 +189,6 @@ UA-CH API に更新したら、User-Agent
 
 - [UA 文字列から UA-CH に移行する](https://web.dev/migrate-to-ua-ch/)ためのウェブデベロッパー向けチュートリアル
 
-- [User-Agent の情報量削減スニペット](https://developer.chrome.com/docs/privacy-sandbox/user-agent/snippets/)（テストのために現在の User-Agent 文字列を情報量削減後の形式に変換するコード スニペット）
+- [User-Agent の情報量削減スニペット](/docs/privacy-sandbox/user-agent/snippets/)（テストのために現在の User-Agent 文字列を情報量削減後の形式に変換するコード スニペット）
 
 - [プライバシーサンドボックスの詳細](https://web.dev/digging-into-the-privacy-sandbox)
