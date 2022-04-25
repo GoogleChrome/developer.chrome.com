@@ -12,7 +12,7 @@ authors:
 
 Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオリジン トライアル期間が複数ある場合があります。
 
-## [Attribution Reporting](/docs/privacy-sandbox/status/#attribution-reporting)
+## [アトリビューション レポート](/docs/privacy-sandbox/status/#attribution-reporting)
 
 旧称: Conversion Measurement。
 
@@ -22,7 +22,7 @@ Privacy Sandbox API の実装ステータス。注意 API ごとに個別のオ�
 
 - [Blink のステータス](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=attribution%20reporting)。
 
-- [GitHub](https://github.com/WICG/conversion-measurement-api/): API に関する質問とディスカッションについては、[問題](https://github.com/WICG/conversion-measurement-api/issues)をご覧ください。
+- [GitHub](https://github.com/WICG/conversion-measurement-api/): API に関する質問とディスカッションについては、[イシュー](https://github.com/WICG/conversion-measurement-api/issues)をご覧ください。
 
 ### [ステータス: 詳細](/docs/privacy-sandbox/status/#status-details)
 
@@ -102,7 +102,7 @@ Topics API に置き換えられました。
 
 - [API の提案](https://github.com/WICG/floc)は、[WICG](https://www.w3.org/community/wicg/)、インタレスト グループと検討中です。
 
-- [GitHub](https://github.com/WICG/floc): API に関する質問とディスカッションについては、[問題](https://github.com/WICG/floc/issues)をご覧ください。
+- [GitHub](https://github.com/WICG/floc): API に関する質問とディスカッションについては、[イシュー](https://github.com/WICG/floc/issues)をご覧ください。
 
 - [Chrome プラットフォームのステータス](https://www.chromestatus.com/features/5710139774468096)。
 
@@ -120,7 +120,8 @@ Topics API に置き換えられました。
 
 - [API の提案](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)は、[WICG](https://www.w3.org/community/wicg/)、インタレスト グループと検討中です。
 
-- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) : API に関する質問とディスカッションについては、[TURTLEDOVE の問題](https://github.com/WICG/turtledove/issues)をご覧ください。
+- [GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) : API に関する質問とディスカッションについては、[TURTLEDOVE のイシュー](https://github.com/WICG/turtledove/issues)をご覧ください。
+- ```
 
 ## [Topics](/docs/privacy-sandbox/status/#topics)
 
@@ -134,7 +135,7 @@ FLoC に代わるものです。
 
 - [API の提案](https://github.com/jkarlin/topics)は、[WICG](https://www.w3.org/community/wicg/)、インタレスト グループと検討中です。
 
-- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md) : API に関する質問とディスカッションについては、[Topics API の問題](https://github.com/jkarlin/topics/issues)をご覧ください。
+- [GitHub](https://github.com/jkarlin/topics/blob/main/README.md) : API に関する質問とディスカッションについては、[Topics API のイシュー](https://github.com/jkarlin/topics/issues)をご覧ください。
 
 ## [詳細](/docs/privacy-sandbox/status/#find-out-more)
 
