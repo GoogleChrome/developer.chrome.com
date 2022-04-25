@@ -196,7 +196,7 @@ The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built 
 You can do the following with each export option:
 
 - **JSON**. Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
-- **@puppeteer/replay**. Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. Additionally, you can still edit the script because the steps remain a JSON object. The script is shorter as a result.
+- **@puppeteer/replay**. Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a Puppeteer reply script, the steps remain a JSON object. This option is perfect if you want to integrate with your [CI/CD pipeline](Not sure should include any link or full sentence) but want to have flexibility to still edit the steps as JSON, and potentially convert and import it back into the Recorder panel. 
 - **Puppeteer** script. Replay the script with [Puppeteer](https://pptr.dev/). Since the steps are converted to JavaScript, it allow you to have more fine-grained customization (e.g. export to pdf, integration with Lighthouse, etc). One caveat, you can't import them back into the **Recorder**. 
 
 ### Import a user flow {: #import-flows }
