@@ -70,7 +70,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 
 ### You're an IdP {: #idp }
 
-FedCM requires support from an indentity provider. A relying party cannot use
+FedCM requires support from an identity provider. A relying party cannot use
 FedCM independently. If you are a RP, you can ask your IdP to provide
 instructions.
 
@@ -553,7 +553,7 @@ validate the authentication.
 
 The IdP's revocation endpoint provides a way for RPs to revoke the user's 
 tokens on the IdP. The URL of the revocation endpoint is declared by [the
-manifest](#fedcm-manifest-and-endpoints).
+manifest](#manifest-endpoints).
 
 Once [FedCM `revoke()`](#revoke-rp-access) is called on the RP, the browser
 sends a `POST` request with cookies and a content type of
@@ -605,7 +605,7 @@ for the RP. With this object, the RP can:
    the browser.
 *  Allow [users to sign out from the RP](#signout-rp), which clears the sign-in
    state from the browser.
-*  Request to [revoke tokens](#rovoke-rp-access) at the IdP.
+*  Request to [revoke tokens](#revoke-rp-access) at the IdP.
 
 For example:
 
@@ -702,7 +702,7 @@ The `login()` call takes the following properties:
 When the RP calls `login()`, the following activities take place:
 
 1. The browser sends requests and fetches several documents:
-    1. [An IdP manifest](#fedcm-manifest-and-endpoints) which stores declared endpoints.
+    1. [An IdP manifest](#manifest-endpoints) which stores declared endpoints.
     2. URLs for the RP's privacy policy and terms of service, retrieved from the [client metadata endpoint](#client-metadata-endpoint).
     3. [An accounts list](#accounts-list-endpoint).
 2. The browser displays the list of accounts that the user can use to sign-in, as well as the terms of service and privacy policy.
