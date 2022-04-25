@@ -42,7 +42,7 @@ levels being shared and prevent unintended abuse.
 
 This proposal is now available to test in [the FedCM origin
 trial](/origintrials/#/view_trial/3977804370874990593). To learn about
-high-level FedCM user journeys, please read [Federated Credential
+high-level FedCM user journeys, read [Federated Credential
 Management API](/docs/privacy-sandbox/fedcm).
 
 ## Support and compatibility {: #compatibility }

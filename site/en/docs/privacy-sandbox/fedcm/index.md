@@ -40,7 +40,8 @@ and password.
 {% Aside 'key-term' %}
 _Identity federation_ delegates authentication or authorization of an
 individual (user or entity) to a trusted external party (an _identity
-provider_ or IdP). The identity provider then allows the individual to sign in to a website (a _relying party_ or RP). 
+provider_ or IdP). The identity provider then allows the individual to
+sign in to a website (a _relying party_ or RP). 
 {% endAside %}
 
 Unfortunately, the mechanisms that identity federation was designed on
