@@ -106,7 +106,7 @@ iOS と iPadOS の Chrome では Chrome オリジン トライアルはサポー
 
 Chrome DevTools の Network タブと Application タブでトラスト トークンの検査を有効にできます。[トラストトークンの使用を開始する](https://web.dev/trust-tokens/#summary)をご覧ください。
 
-### Topics
+## Topics
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -120,7 +120,7 @@ Chrome DevTools の Network タブと Application タブでトラスト トー�
 
 トピックはホスト名からのみ推測され、URL パスからは推測されません。
 
-### FLEDGE
+## FLEDGE
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -136,7 +136,7 @@ FLEDGE では、「信頼できるサーバー」がプライバシーを損な�
 
 オークションの際、ブラウザは信頼できるサーバーとやり取りしてこれらのキーの値を取得し、`generate_bid()` 関数で使用できるようにします。広告主（広告の購入者）は、オンデバイスの入札を改善する目的で、インタレスト グループとともに追加のメタデータを保存することができます。
 
-### アトリビューション レポート
+## アトリビューション レポート
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -148,7 +148,7 @@ FLEDGE では、「信頼できるサーバー」がプライバシーを損な�
 
 はい。元のイベントレベルのスコープが拡張されて追加の測定ユースケースに対応できるようになったため、[名称が変更](/docs/privacy-sandbox/attribution-reporting-introduction/)されました。
 
-### First-Party Sets
+## First-Party Sets
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -161,7 +161,7 @@ FLEDGE では、「信頼できるサーバー」がプライバシーを損な�
 
 たとえば、`a.example`、`b.example`、`c.example` は、本質的に 1 つのドメインが所有するファーストパーティ セットには含まれません。所有者ドメインは、他のドメインとの関係を定義したマニフェスト ファイルを提供する必要があります。
 
-### User-Agent Client Hints（UA-CH）
+## User-Agent Client Hints（UA-CH）
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -207,7 +207,7 @@ Client Hint は安全な接続を介してのみ送信されるため、HTTPS �
 
 リクエスト ヘッダーの高エントロピー UA-CH は、発信元が DNS 側で定義されているかどうかにかかわらず、クロスオリジン リクエストでは制限されます。任意のクロスオリジン サブリソースに対する `Permissions-Policy` を介して委任を処理するか、クロスオリジン コンテキストで実行される JavaScript を介して委任を取得する必要があります。
 
-### 共有ストレージ
+## 共有ストレージ
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -221,14 +221,14 @@ Client Hint は安全な接続を介してのみ送信されるため、HTTPS �
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/CHIPS/issues)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### ストレージのパーティショニング
+## ストレージのパーティショニング
 
 ### この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案の解説用レポジトリで[イシューを作成](https://github.com/MattMenke2/Explainer---Partition-Network-State/issues)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### Fenced Frames
+## Fenced Frames
 
 ### この機能について質問するにはどうすればよいですか？
 
@@ -241,21 +241,21 @@ Client Hint は安全な接続を介してのみ送信されるため、HTTPS �
 
 広告のユースケースについては、[広告デザインドキュメント用のフェンス付きフレーム](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95)についての記事をご覧ください。
 
-### ネットワーク状態のパーティショニング
+## ネットワーク状態のパーティショニング
 
 ### この機能について質問するにはどうすればよいですか？
 
 - この仕様に関する質問がある場合は、解説用レポジトリで[イシューを作成](https://github.com/shivanigithub/fenced-frame/issues)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### FedCM
+## FedCM
 
 ### この機能について質問するにはどうすればよいですか？
 
 - この提案に関する質問がある場合は、提案リポジトリで[イシューを作成](https://github.com/WICG/FedCM/issues)してください。
 - 実装、統合、一般的なベスト プラクティスに関する質問がある場合は、「プライバシー サンドボックス デベロッパー サポート」リポジトリで[イシューを作成](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)してください。
 
-### FedCM とは何ですか？
+## FedCM とは何ですか？
 
 FedCM（Federated Credential Management）は、ID 連携サービス（「～でログイン」など）へのプライバシーを保護したアプローチの提案です。ID 連携サービスを利用すると、ユーザーは個人情報を ID サービスやサイトと共有することなくサイトにログインできます。
 
