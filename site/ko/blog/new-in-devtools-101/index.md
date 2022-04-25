@@ -19,6 +19,8 @@ draft: true
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='u9GRAliBrM8' %}
+
 <!-- ## Import and export recorded user flows as a JSON file  {: #recorder } -->
 
 <!-- The [Recorder](/docs/devtools/recorder) panel now supports importing and exporting user flow recordings as a JSON file. This addition makes it easier to share user flows and can be useful for bug reporting. -->
