@@ -192,7 +192,7 @@ To export a user flow:
 {% Aside 'gotchas' %}
 The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of [Puppeteer](https://pptr.dev/). It is also a command line tool, so you can replay JSON files with it too.
 
-**Advance use cases**
+**Advance use case: Integrate with the Puppeteer Replay library**
 
 Apart from that, you can build your own library on top of the Puppeteer Replay library to replay or "stringify" the user flow JSON files (i.e. convert them to something else).
 
