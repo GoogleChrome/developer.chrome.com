@@ -60,7 +60,9 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 
 ここで得られた値を、次に示す情報量削減後の形式のテンプレート文字列に挿入します。
 
-`Mozilla/5.0 (\${unifiedPlatform\[matched.platform\]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/\${matched.major}.0.0.0\${matched.mobile} Safari/537.36`
+```text
+Mozilla/5.0 (\${unifiedPlatform\[matched.platform\]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/\${matched.major}.0.0.0\${matched.mobile} Safari/537.36
+```
 
 `unifiedPlatform` の値は、一致する短縮形の `platform` を適切な情報量削減後の値に置き換えることで得られます。
 
@@ -77,7 +79,8 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 デモ: [reduced-ua.glitch.me/javascript.html](https://reduced-ua.glitch.me/javascript.html)
 
 ```js
-const chromeUAs = /^Mozilla\/5\.0\(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\)AppleWebKit\/537.36 \(KHTML, like Gecko\)Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*)Safari\/537\.36$/;
+const chromeUAs =
+  /^Mozilla\/5\.0\(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\)AppleWebKit\/537.36 \(KHTML, like Gecko\)Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*)Safari\/537\.36$/;
 const matched = chromeUAs.exec(navigator.userAgent);
 
 if (matched) {
@@ -91,9 +94,9 @@ if (matched) {
   };
 
   const reducedUA =
-        `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) ` +
-        `AppleWebKit/537.36 (KHTML, like Gecko) ` +
-        `Chrome/${matched.groups.major}.0.0.0${matched.groups.mobile} Safari/537.36`;
+    `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) ` +
+    `AppleWebKit/537.36 (KHTML, like Gecko) ` +
+    `Chrome/${matched.groups.major}.0.0.0${matched.groups.mobile} Safari/537.36`;
   // navigator.userAgent を情報量削減後の文字列でオーバーライドする
   Object.defineProperty(navigator, 'userAgent', {
     value: reducedUA,
@@ -132,23 +135,31 @@ if (matched) {
 ```js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
-})
+});
 
 async function handleRequest(request) {
-  const chromeUAs = /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
+  const chromeUAs =
+    /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
   const matched = chromeUAs.exec(request.headers.get('user-agent'));
 
   if (matched) {
     const unifiedPlatform = {
-      'Lin': 'Linux; Android 10; K',
-      'Win': 'Windows NT 10.0; Win64; x64',
-      'Mac': 'Macintosh; Intel Mac OS X 10_15_7',
+      Lin: 'Linux; Android 10; K',
+      Win: 'Windows NT 10.0; Win64; x64',
+      Mac: 'Macintosh; Intel Mac OS X 10_15_7',
       'X11; C': 'X11; CrOS x86_64',
       'X11; L': 'X11; Linux x86_64',
     };
 
     const clonedRequest = new Request(request, {referrer: request.referrer});
-    clonedRequest.headers.set('user-agent', `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.groups.major}.0.0.0${matched.groups.mobile} Safari/537.36`);
+    clonedRequest.headers.set(
+      'user-agent',
+      `Mozilla/5.0 (${
+        unifiedPlatform[matched.groups.platform]
+      }) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${
+        matched.groups.major
+      }.0.0.0${matched.groups.mobile} Safari/537.36`
+    );
     return await fetch(clonedRequest);
   } else {
     return await fetch(request);
