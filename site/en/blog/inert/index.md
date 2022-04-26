@@ -9,8 +9,7 @@ date: 2022-04-28
 hero: image/dQwiPAoChjTYzXYCNg6U6Tsnr3x1/1LbX307KtYGNK9lthN5V.jpg
 alt: A sloth hanging out in a tree.
 tags:
-  - css
-  - chrome
+  - chrome 102
 ---
 
 The inert property is a global HTML attribute that simplifies how to remove and restore user input events for an element, including focus events and events from assistive technologies. 
