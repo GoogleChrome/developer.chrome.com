@@ -31,7 +31,7 @@ In Chromium 102, `inert` is available by default for developers.
 </div>
 ```
 
-Here, `inert` has been declared on the second <div> element containing “button2”, so all content contained within this <div>, including the button and label, cannot receive focus or be clicked. 
+Here, `inert` has been declared on the second `<div>` element containing “button2”, so all content contained within this `<div>`, including the button and label, cannot receive focus or be clicked. 
 
 The introduction of `inert` is especially useful for focus trapping and accessibility considerations.
 
