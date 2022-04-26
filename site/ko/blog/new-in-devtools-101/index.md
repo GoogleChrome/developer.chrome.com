@@ -32,7 +32,7 @@ tags:
 - **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다. 
 - **Puppeteer 스크립트로 내보내기** . 녹화본을 [Puppeteer](https://pptr.dev/) 스크립트로 다운로드합니다.
 
-이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자한다면 [recorder 문서](/docs/devtools/recorder) 를 참고하세요.
+이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자한다면 [recorder 문서](/docs/devtools/recorder/#export-flows) 를 참고하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Recorder 패널의 export 옵션", width="800", height="556" %}
 
