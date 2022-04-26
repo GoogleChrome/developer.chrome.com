@@ -49,7 +49,7 @@ tags:
 - **Export as a Puppeteer script**. Скачать запись как скрипт для [Puppeteer](https://pptr.dev/).
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
-Обратитесь к [документации](/docs/devtools/recorder) чтобы узнать больше о различиях между опциями.
+Обратитесь к [документации](/docs/devtools/recorder/#export-flows) чтобы узнать больше о различиях между опциями.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Опции экспорта во вкладке Recorder", width="800", height="556" %}
 
