@@ -41,7 +41,7 @@ Además de esto, puede exportar también la grabación. Después de [grabar un f
 - **Exportar como un script de Puppeteer**. Descargue la grabación como un script de [Puppeteer](https://pptr.dev/).
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
-Consulte [la documentación](/docs/devtools/recorder) para obtener más información sobre las diferencias entre estas opciones.
+Consulte [la documentación](/docs/devtools/recorder/#export-flows) para obtener más información sobre las diferencias entre estas opciones.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Opciones de exportación en el panel Grabadora", width="800", height="556" %}
 
