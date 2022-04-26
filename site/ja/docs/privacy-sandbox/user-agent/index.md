@@ -2,16 +2,14 @@
 layout: 'layouts/doc-post.njk'
 title: User-Agent の情報量削減
 subhead: >
-  Limit browser data shared to remove sensitive information and reduce fingerprinting.
+  ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
 description: >
-  The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
+  情報量が削減された User-Agent 文字列は、共有されるデータを限定し、トラッキングの機会を減らすことで、ユーザーのプライバシーを改善します。User-Agent Client Hints を使用すれば、管理・監査可能な形で、より詳細をリクエストすることもできます。
 date: 2021-11-09
 updated: 2022-02-11
 authors:
   - alexandrawhite
 ---
-
-ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
 
 ## 実装ステータス
 
@@ -23,7 +21,7 @@ authors:
 
 ## User-Agent の情報量削減とは
 
-User-Agent（UA）の情報量削減とは、[パッシブフィンガープリントに使用される](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control)可能性のある User-Agent 文字列中の識別情報を最小限に抑える取り組みです。この[変更が展開される](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)と、すべてのリソース リクエストには情報量が削減された User-Agent ヘッダーが含まれるようになります。その結果、いくつかの `Navigator` インターフェース `navigator.userAgent`、`navigator.appVersion`、`navigator.platform` など から返される値の情報量が削減されます。
+User-Agent（UA）の情報量削減とは、[パッシブフィンガープリントに使用される](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control)可能性のある User-Agent 文字列中の識別情報を最小限に抑える取り組みです。この[変更が展開される](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)と、すべてのリソース リクエストには情報量が削減された `User-Agent` ヘッダーが含まれるようになります。その結果、いくつかの `Navigator` インターフェース `navigator.userAgent`、`navigator.appVersion`、`navigator.platform` など から返される値の情報量が削減されます。
 
 ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](/docs/privacy-sandbox/user-agent/#prepare-and-test)必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/)が必要になります。
 
@@ -72,24 +70,23 @@ Client Hints
 
 2.  ブラウザがウェブページを読み込むためのリクエストを送信します。
 
-    1.  ブラウザは、`User-Agent` ヘッダーに情報量が削減された `User-Agent` 文字列を含めます。例: `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
+    1.  ブラウザは、`User-Agent` ヘッダーに情報量が削減された User-Agent 文字列を含めます。例: `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
 
     2.  ブラウザは、デフォルトの User-Agent Client Hints ヘッダーにこれと同じ情報を含めます。次に例を示します。
-
     ```powershell
-        Sec-CH-UA: "Chrome"; v="93"
-        Sec-CH-UA-Mobile: ?1
-        Sec-CH-UA-Platform: "Android"
+    Sec-CH-UA: "Chrome"; v="93"
+    Sec-CH-UA-Mobile: ?1
+    Sec-CH-UA-Platform: "Android"
     ```
 
 3.  サーバーは、`Accept-CH` レスポンス ヘッダーを使用して、追加の Client Hints を送信するようブラウザにリクエストできます。例: `Accept-CH: Sec-CH-UA-Arch`
 
 4.  ブラウザは、ポリシーとユーザー設定に照らして、その後のリクエスト ヘッダーでサーバーに返すことができるデータを決定します。次に例を示します。
     ```powershell
-        Sec-CH-UA: "Chrome"; v="93"
-        Sec-CH-UA-Mobile: ?1
-        Sec-CH-UA-Platform: "Android"
-        Sec-CH-UA-Arch: "arm"
+    Sec-CH-UA: "Chrome"; v="93"
+    Sec-CH-UA-Mobile: ?1
+    Sec-CH-UA-Platform: "Android"
+    Sec-CH-UA-Arch: "arm"
     ```
 
 ### Critical Client Hints
@@ -106,6 +103,7 @@ Client Hints
 ```powershell
 GET / HTTP/1.1
 Host: example.com
+
 HTTP/1.1 200 OK
 Content-Type: text/html
 Accept-CH: Device-Memory, Viewport-Width
@@ -143,18 +141,12 @@ UA-CH API に更新したら、User-Agent
 をローカルでテストするには、次の方法を使用します。
 
 - `chrome://flags/#reduce-user-agent` フラグを有効化する
-
-  - これにより、ローカルのブラウザがすべてのサイトから情報量削減後の `User-Agent` 文字列のみを受信するよう（それがデフォルトの設定になる前に）設定できます。
-
-- 適切な `User-Agent` 文字列と Client Hints を提供するようエミュレートされたデバイスを、DevTools で構成する
-
-  - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="32", height="32" %} > **設定** > [**デバイス**] > > [**カスタム デバイスを追加**] をクリックし、必要な User-Agent 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
-
+  - これにより、ローカルのブラウザがすべてのサイトから情報量削減後の `user-agent` 文字列のみを受信するよう（それがデフォルトの設定になる前に）設定できます。
+- 適切な `user-agent` 文字列と Client Hints を提供するようエミュレートされたデバイスを、DevTools で構成する
+  - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="32", height="32" %} > **設定** > [**デバイス**] > [**カスタム デバイスを追加**] をクリックし、必要な `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
   - DevTools 画面の左上で {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/eLRsSnxmkhz0yKsXTjxD.png", alt="ALT_TEXT_HERE", width="60", height="64" %} [**デバイスのツールバーを切り替え**] をクリックして DevTools の UI を開き、デバイスをエミュレートします。
-
-- Chrome を `「--user-agent="（ここにカスタム文字列を記述）\"」`付きで起動する
-
-- この[コマンドラインフラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)を使用して、カスタム User-Agent 文字列を付けて Chrome を起動します。
+- Chrome を `「--user-agent="（ここにカスタム文字列を記述）"」`付きで起動する
+    - この[コマンドラインフラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)を使用して、カスタム User-Agent 文字列を付けて Chrome を起動します。
 
 ### サイトのコード内で UA 文字列を変換する
 
