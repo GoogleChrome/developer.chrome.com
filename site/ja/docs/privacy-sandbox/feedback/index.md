@@ -78,7 +78,7 @@ Explainer と補足コンテンツは GitHub でホストされます。GitHub
 
 {% endDetails %}
 
-{% Details %} {% Details Summary %}
+{% Details %} {% DetailsSummary %}
 
 ### Chromium 機能の開発を追跡して対応する
 
