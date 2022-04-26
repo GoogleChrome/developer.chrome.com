@@ -191,6 +191,15 @@ To export a user flow:
 
 {% Aside 'gotchas' %}
 The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of [Puppeteer](https://pptr.dev/). It is also a command line tool, so you can replay JSON files with it too.
+
+**Advance use cases**
+
+Apart from that, you can build your own library on top of the Puppeteer Replay library to replay or "stringify" the user flow JSON files (i.e. convert them to something else).
+
+For example, [@cypress/chrome-recorder](https://github.com/cypress-io/cypress-chrome-recorder) is a library that  built on top the Puppeteer Replay. It converts user flow JSON files to Cypress test scripts.
+
+Learn more about [stringify](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script).
+
 {% endAside %}
 
 You can do the following with each export option:
