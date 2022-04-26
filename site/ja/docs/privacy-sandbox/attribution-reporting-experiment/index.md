@@ -6,13 +6,11 @@ authors:
   - maudn
 ---
 
-# Attribution Reporting: テストとディスカッション
+## 基礎を学ぶ
 
 [Attribution
 Reporting](/docs/privacy-sandbox/attribution-reporting/)
 をお読みください。
-
-## 基礎を学ぶ
 
 ## API を試す
 
