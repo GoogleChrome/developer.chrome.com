@@ -20,7 +20,6 @@
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
     - url: /docs/privacy-sandbox/fedcm
-      title: i18n.docs.privacy-sandbox.fedcm
     - url: /docs/privacy-sandbox/permissions-policy
       title: i18n.docs.privacy-sandbox.permissions-policy
       description: i18n.docs.privacy-sandbox.permissions-policy-description
