@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2021-07-22
+updated: 2022-04-25
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
@@ -354,8 +354,8 @@ Start by creating a file in the directory named `options.html` and include the f
     <div>
       <p>Choose a different background color!</p>
     </div>
+    <script src="options.js"></script>
   </body>
-  <script src="options.js"></script>
 </html>
 ```
 

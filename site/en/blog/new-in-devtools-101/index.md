@@ -18,6 +18,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='u9GRAliBrM8' %}
 
 ## Import and export recorded user flows as a JSON file  {: #recorder }
 
@@ -33,7 +34,7 @@ Apart from that, you can export the recording as well. After [recording a user f
 - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script. 
 - **Export as a Puppeteer script** . Download the recording as [Puppeteer](https://pptr.dev/) script.
 
-Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options.
+Consult [the documentation](/docs/devtools/recorder/#export-flows) to learn more about the differences between these options.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Export options in the Recorder panel", width="800", height="556" %}
 

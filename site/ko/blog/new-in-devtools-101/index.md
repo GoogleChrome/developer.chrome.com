@@ -18,6 +18,8 @@ tags:
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='u9GRAliBrM8' %}
+
 ## 녹화된 유저 플로우를 JSON 파일로 내보내고 불러오기 {: #recorder }
 
 이제 [Recorder](/docs/devtools/recorder) 패널에서 유저 플로우를 JSON 파일로 내보내거나 불러올 수 있습니다. 이 기능은 유저 플로우를 더 쉽게 공유할 수 있게 하고 버그 리포팅에 유용하게 쓰일 수 있습니다.
