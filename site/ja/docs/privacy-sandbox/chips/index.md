@@ -2,10 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Cookies Having Independent Partitioned State (CHIPS)'
 subhead: >
-  Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
+  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
 description: >
-  Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
-  Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
+  デベロッパーは、トップレベル サイト別の「パーティション化した」Cookie の保存に オプトインできます。
+  パーティション化した Cookie はサードパーティー サービスからセット可能ですが、最初にセットされたトップレベル サイト内からしか読み込むことはできません。
 date: 2022-02-15
 updated: 2022-04-01
 authors:
@@ -233,7 +233,7 @@ Cookie を[オリジン バインド](docs/privacy-sandbox/glossary/#origin)に�
 
 パーティション化された Cookie
 を設定する際は（登録可能なドメインではなく）ホスト名に紐づけられるように
-`Host` プレフィックスを使用することをおすすめします。
+`__Host` プレフィックスを使用することをおすすめします。
 
 例:
 
