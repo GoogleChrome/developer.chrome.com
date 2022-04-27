@@ -56,8 +56,9 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 コピーしやすいように 1 行で記述されています。長いですが、Chrome
 のみに一致させることと比較的低負荷なチェックで済ませることを優先した結果です。
 
-````text
+```text
 /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/
+```
 
 この式から次の値が得られます。
 
@@ -69,7 +70,7 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 
 ```text
 Mozilla/5.0 (${unifiedPlatform[matched.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.major}.0.0.0${matched.mobile} Safari/537.36
-````
+```
 
 `unifiedPlatform` の値は、一致する短縮形の `platform` を適切な情報量削減後の値に置き換えることで得られます。
 
