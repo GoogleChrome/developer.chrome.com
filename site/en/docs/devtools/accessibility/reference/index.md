@@ -11,9 +11,6 @@ tags:
   - accessibility
 ---
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
 This page is a comprehensive reference of accessibility features in Chrome DevTools. It is intended
 for web developers who:
 
@@ -135,7 +132,7 @@ Inspect an element's position in the accessibility tree from the [Accessibility 
 
 **Figure 7**. The Accessibility Tree section
 
-This view allows you to explore only a single node and its ancestors.
+This view allows you to explore only a single node and its ancestors. To explore the whole accessibility tree, follow the steps below.
 
 ### (Preview) Explore the full-page accessibility tree {: #explore-tree}
 
@@ -143,17 +140,17 @@ The full-page view of the accessibility tree allows you to explore the whole tre
 
 To explore the accessibility tree:
 
-1. Check <span class="material-icons">science</span> **Enable full-page accessibility tree**.
+1. Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TpySBK8kJoHcLaMtJnKr.svg", alt="Science", width="20", height="20" %} **Enable full-page accessibility tree**.
 1. On the action bar at the top, click **Reload DevTools**.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iPBBTmKOT0EkBLDPNmxi.png", alt="Enable full-page accessibility tree", width="800", height="387" %}
 
-1. In the upper right corner of the **Elements** panel, toggle the <span class="material-icons">accessibility</span> **Switch to Accessibility Tree view** button.
+1. In the upper right corner of the **Elements** panel, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RDMkRkH8tvYkbOedSZgg.svg", alt="Accessibility", width="20", height="20" %} **Switch to Accessibility Tree view** button.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w3l7Zbtti7m5NuxuOalR.png", alt="Full-page view of the accessibility tree", width="800", height="444" %}
 
 1. Browse the accessibility tree. You can expand nodes or click to see details under [**Computed properties**](#computed).
-1. Select a node and click the <span class="material-icons">accessibility</span> **Switch to DOM tree view** button to toggle back to DOM tree.
+1. Select a node and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RDMkRkH8tvYkbOedSZgg.svg", alt="Accessibility", width="20", height="20" %} **Switch to DOM tree view** button to toggle back to DOM tree.
 
    The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node.
 
