@@ -14,7 +14,7 @@ authors:
 
 ## 実装ステータス
 
-- [オリジン トライアル](https://developer.chrome.com/origintrials/#/view_trial/1239615797433729025)は Chrome 100～103 で使用できます
+- [オリジン トライアル](/origintrials/#/view_trial/1239615797433729025)は Chrome 100～103 で使用できます
 - [テストの目的](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U)
 - [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5179189105786880)
 
@@ -226,7 +226,7 @@ First-Party Set のメンバーサイトで、埋め込みのサービスによ�
 適切なセキュリティ対策を促進するため、CHIPS では、Cookie
 の設定と送信は安全なプロトコルを介してのみ行うよう提案しています。
 
-パーティション化された Cookie を設定する際は、`Secur`e と `Path=/`
+パーティション化された Cookie を設定する際は、`Secure` と `Path=/`
 を指定します。`Domain` 属性は指定しません。Cookie に Domain
 を指定すると、パーティション内の異なるサードパーティのサブドメイン間で共有される可能性があるため、これを許可しないことにより、パーティション化された
 Cookie を[オリジン バインド](docs/privacy-sandbox/glossary/#origin)にできるだけ近づけ、[同一オリジン ポリシー](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy)に厳密に沿うようにできます。
