@@ -24,12 +24,18 @@ OS のバージョン、デバイス、ブラウザの詳細バージョンの�
 
 {% Compare 'worse', 'old' %}
 
-`Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.16 Mobile Safari/537.36`
+<span style="font-family: monospace">Mozilla/5.0
+(Linux; Android <span style="background: #ef9a9a">12; Pixel 5</span>)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span  style="background:
+#ef9a9a">0.4638.16</span> Mobile Safari/537.36</span>
 {% endCompare %}
 
 {% Compare 'better', 'new' %}
 
-`Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.0.0 Mobile Safari/537.36`
+<span style="font-family: monospace">Mozilla/5.0
+(Linux; Android <span style="background: #a5d6a7">10; K</span>)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
+#a5d6a7">0.0.0</span> Mobile Safari/537.36</span>
 {% endCompare %}
 
 ## コード内で User-Agent をオーバーライドする方法
@@ -50,7 +56,8 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 コピーしやすいように 1 行で記述されています。長いですが、Chrome
 のみに一致させることと比較的低負荷なチェックで済ませることを優先した結果です。
 
-`/\^Mozilla\\/5\\.0 \\(((?Lin\|Win\|Mac\|X11; C\|X11; L)+\[\^\\)\]+)\\) AppleWebKit\\/537.36 \\(KHTML, like Gecko\\) Chrome\\/(?\\d+)\[\\d\\.\]+(?\[ Mobile\]\*) Safari\\/537\\.36\$/`
+```text
+/^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/
 
 この式から次の値が得られます。
 
@@ -61,7 +68,7 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 ここで得られた値を、次に示す情報量削減後の形式のテンプレート文字列に挿入します。
 
 ```text
-Mozilla/5.0 (\${unifiedPlatform\[matched.platform\]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/\${matched.major}.0.0.0\${matched.mobile} Safari/537.36
+Mozilla/5.0 (${unifiedPlatform[matched.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.major}.0.0.0${matched.mobile} Safari/537.36
 ```
 
 `unifiedPlatform` の値は、一致する短縮形の `platform` を適切な情報量削減後の値に置き換えることで得られます。
@@ -114,7 +121,7 @@ if (matched) {
 
 ```js
 const chromeUAs = /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\)Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
-const matched = chromeUAs.exec(request.get(\'user-agent\'));
+const matched = chromeUAs.exec(request.get('user-agent'));
 
 if (matched) {
   const unifiedPlatform = {
@@ -130,7 +137,7 @@ if (matched) {
 
 ### Cloudflare Workers
 
-[Cloudflare Workers](https://developers.cloudflare.com/workers/) を使用すると、サイトへのリクエストをプロキシして変換できます。次のスニペットは、受信した [User-Agent ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)を情報量削減後の形式に置き換えます。
+[Cloudflare Workers](https://developers.cloudflare.com/workers/) を使用すると、サイトへのリクエストをプロキシして変換できます。次のスニペットは、受信した [`User-Agent` ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)を情報量削減後の形式に置き換えます。
 
 ```js
 addEventListener('fetch', event => {
