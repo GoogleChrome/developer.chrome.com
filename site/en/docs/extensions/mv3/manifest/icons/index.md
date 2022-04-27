@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest - Icons"
 date: 2013-05-12
-updated: 2022-04-25
+updated: 2022-04-27
 description: Reference documentation for the icons property of manifest.json.
 ---
 
@@ -35,7 +35,7 @@ Here's an example of how to declare the icons in the manifest:
 
 You may provide icons of any other size you wish, and Chrome will attempt to use the best size where
 appropriate. For example, Windows often requires 32-pixel icons, and if the app includes a 32-pixel
-icon, Chrome will choose that instead of shrinking a 48-pixel icon down.
+icon, Chrome will choose that instead of shrinking a 48-pixel icon.
 
 {% endAside %}
 

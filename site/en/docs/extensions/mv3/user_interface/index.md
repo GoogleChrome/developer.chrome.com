@@ -2,13 +2,13 @@
 layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 date: 2018-03-16
-updated: 2022-04-25
+updated: 2022-04-27
 description: UI and design guidelines for Chrome Extensions.
 ---
 
 <!-- TODO: Extension sample links need to be updated, once the samples are approved -->
-Like Chrome's user interface (UI), an extension UIs should be purposeful and minimal. Extensions
-should allow users to customize or enhance the end user's browsing experience without distracting
+Like Chrome's user interface (UI), an extension UI should be purposeful and minimal. Extensions
+should allow users to customize or enhance the user's browsing experience without distracting
 from it. 
 
 This guide explores required and optional user interface features. Use it to understand how and when
@@ -22,9 +22,9 @@ The [`action` API][api-action] controls the extension's action (toolbar icon). I
 Users can trigger an extension's action by expanding the extension menu and selecting the desired
 extension. 
 
-In order to make it easier to access an extension, the user may choose to pin the extension's action to the
+To make it easier to access an extension, the user may choose to pin the extension's action to the
 toolbar. Once pinned, the extension's action will appear to the left of the extension menu. Users
-can rearrange their pinned extensions by dragging and dropping their action icons in the desired
+can rearrange their pinned extensions by dragging and dropping their action icons to the desired
 order.
 
 {% Columns %}
@@ -51,7 +51,7 @@ width="400", height="382", class="screenshot" %}
 
 ### Register the action {: #browser }
 
-In order to use the `action` API, the extension's [manifest][manifest-file] must contain an `"action"`
+To use the `action` API, the extension's [manifest][manifest-file] must contain an `"action"`
 key. This informs the browser that the extension will customize the action.
 
 ```json
@@ -73,7 +73,7 @@ optional properties of this field.
 The [declarativeContent API][api-declarativecontent] allows you to enable the extension's action
 based on the page URL or if the CSS selectors match the elements on the page.
 
-When an extension is disabled, the icon is grayed out. If the user clicks on the disabled extension,
+When an extension is disabled, the icon is grayed out. If the user clicks the disabled extension,
 the extension's context menu will appear.
 
 <figure>
@@ -128,10 +128,10 @@ Include additional icons in the following sizes for uses outside of the toolbar.
 
 | Icon Size | Icon Use                                               |
 |-----------|--------------------------------------------------------|
-| 16x16     | favicon on the extension's pages and context menu icon |
+| 16x16     | Favicon on the extension's pages and context menu icon.|
 | 32x32     | Windows computers often require this size.             |
-| 48x48     | displays on the extension management page              |
-| 128x128   | displays on installation and in the Chrome Web Store   |
+| 48x48     | Displays on the extension management page.             |
+| 128x128   | Displays on installation and in the Chrome Web Store.  |
 
 
 Register icons in the manifest under the `"icons"` field.
@@ -158,7 +158,7 @@ Badges display a colored banner on top of the action icon. They can only be used
 is declared in the manifest. 
 
 Use badges to indicate the state of the extension. The [Drink Water][sample-drink] extension sample
-displays a badge with "ON" to show the user they successfully set an alarm and displays nothing when
+displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
 the extension is idle. Badges can contain up to 4 characters.
 
 {% Columns %}
@@ -179,9 +179,9 @@ the extension is idle. Badges can contain up to 4 characters.
 
 {% endColumns %}
 
-You can set the text of the badge by calling [`chrome.action.setBadgeText`][action-setbadgetext] and
+You can set the text of the badge by calling [`chrome.action.setBadgeText()`][action-setbadgetext] and
 the banner color by calling
-[`chrome.action.setBadgeBackgroundColor`][action-setbadgebackgroundcolor].
+[`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
 
 ```js
 chrome.action.setBadgeText({text: 'ON'});
@@ -437,7 +437,7 @@ chrome.commands.onCommand.addListener(command => {
 
 ### Override pages {: #override }
 
-An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks web page
+An extension can [override][docs-override] and replace the History, New Tab, or Bookmarks page
 with a custom HTML file. Like a [popup][section-popup], it can include specialized logic and style,
 but does not allow inline JavaScript. 
 
@@ -527,7 +527,7 @@ alt="Mac OS notification", width="500", height="150", class="screenshot" %}
 ## Internationalize the UI {: #localize }
 
 You can use the [`chrome.i18n` API][api-i18n] to internationalize your extension. Create directories
-to house language specific messages within a folder called `_locales`, like this:
+to house language specific messages within a folder called `_locales/`, like this:
 
 - `_locales/en/messages.json`
 - `_locales/es/messages.json`
@@ -538,9 +538,8 @@ following code localizes the tooltip:
 {% Columns %}
 
 {% Column %}
-
+Located in  `_locales/en/messages.json`:
 ```json
-// _locales/en/messages.json
 {
   "__MSG_tooltip__": {
     "message": "Hello!",
@@ -552,9 +551,8 @@ following code localizes the tooltip:
 {% endColumn %}
 
 {% Column %}
-
+Located in `_locales/es/messages.json`:
 ```json
-// _locales/es/messages.json
 {
   "__MSG_tooltip__": {
     "message": "Hola!",
