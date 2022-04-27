@@ -10,7 +10,6 @@ description:
 tags:
   - javascript
   - css
-  - prototype-fixes
 ---
 
 With the **Changes** tab, track the changes you make to:
@@ -40,6 +39,15 @@ Alternatively, in the upper right corner, click {% Img src="image/NJdAV9UgKuN8Ah
 
 By default, DevTools displays the **Changes** tab at the bottom of your DevTools window, in the **Drawer**.
 
-## View and understand your changes {: #view-changes }
+## View your changes {: #view-changes }
 
+The **Changes** tab shows you a regular `diff` output with standard highlighting:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KNrKe0eW2hBU2v9wKdV9.png", alt="Highlighted diff in the Changes tab", width="850", height="375" %}
+ 
 ## Revert all changes made to a file {: #revert-changes}
+
+To revert changes made to a file:
+
+1. On left-hand side of the **Changes** tab, select a file with changes to revert.
+1. On the action bar at the bottom, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/d1eyw9WYyVIT5UnIOlcE.svg", alt="Undo", width="20", height="20" %} **Revert all changes to current file**.
