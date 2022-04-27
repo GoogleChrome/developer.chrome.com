@@ -56,7 +56,7 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 コピーしやすいように 1 行で記述されています。長いですが、Chrome
 のみに一致させることと比較的低負荷なチェックで済ませることを優先した結果です。
 
-```text
+````text
 /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/
 
 この式から次の値が得られます。
@@ -69,7 +69,7 @@ Chrome ブラウザは情報量削減後の形式の User-Agent を送信する�
 
 ```text
 Mozilla/5.0 (${unifiedPlatform[matched.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.major}.0.0.0${matched.mobile} Safari/537.36
-```
+````
 
 `unifiedPlatform` の値は、一致する短縮形の `platform` を適切な情報量削減後の値に置き換えることで得られます。
 
@@ -85,9 +85,9 @@ Mozilla/5.0 (${unifiedPlatform[matched.platform]}) AppleWebKit/537.36 (KHTML, li
 
 デモ: [reduced-ua.glitch.me/javascript.html](https://reduced-ua.glitch.me/javascript.html)
 
-```js
+```javascript
 const chromeUAs =
-  /^Mozilla\/5\.0\(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\)AppleWebKit\/537.36 \(KHTML, like Gecko\)Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*)Safari\/537\.36$/;
+  /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
 const matched = chromeUAs.exec(navigator.userAgent);
 
 if (matched) {
@@ -99,7 +99,6 @@ if (matched) {
     'X11; C': 'X11; CrOS x86_64',
     'X11; L': 'X11; Linux x86_64',
   };
-
   const reducedUA =
     `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) ` +
     `AppleWebKit/537.36 (KHTML, like Gecko) ` +
@@ -119,19 +118,24 @@ if (matched) {
 
 デモ: [reduced-ua.glitch.me/server-side](https://reduced-ua.glitch.me/server-side)
 
-```js
-const chromeUAs = /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\)Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
+```javascript
+const chromeUAs =
+  /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/;
 const matched = chromeUAs.exec(request.get('user-agent'));
 
 if (matched) {
   const unifiedPlatform = {
-    'Lin': 'Linux; Android 10; K',
-    'Win': 'Windows NT 10.0; Win64; x64',
-    'Mac': 'Macintosh; Intel Mac OS X 10_15_7',
+    Lin: 'Linux; Android 10; K',
+    Win: 'Windows NT 10.0; Win64; x64',
+    Mac: 'Macintosh; Intel Mac OS X 10_15_7',
     'X11; C': 'X11; CrOS x86_64',
     'X11; L': 'X11; Linux x86_64',
   };
-  request.headers['user-agent'] = `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.groups.major}.0.0.0${matched.groups.mobile} Safari/537.36`;
+  request.headers['user-agent'] = `Mozilla/5.0 (${
+    unifiedPlatform[matched.groups.platform]
+  }) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${
+    matched.groups.major
+  }.0.0.0${matched.groups.mobile} Safari/537.36`;
 }
 ```
 
@@ -139,7 +143,7 @@ if (matched) {
 
 [Cloudflare Workers](https://developers.cloudflare.com/workers/) を使用すると、サイトへのリクエストをプロキシして変換できます。次のスニペットは、受信した [`User-Agent` ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)を情報量削減後の形式に置き換えます。
 
-```js
+```javascript
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });
