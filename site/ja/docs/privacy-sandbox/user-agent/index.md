@@ -28,7 +28,7 @@ User-Agent（UA）の情報量削減とは、[パッシブフィンガープリ�
 [User-Agent の情報量削減のスケジュールに関する最新情報をご確認ください](https://www.chromium.org/updates/ua-reduction)。
 
 {% Aside 'key-term' %}
-[User-Agent 文字列](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)とは、HTTP リクエスト ヘッダーの一つです。これにより、サーバーやネットワークはユーザー エージェントのアプリケーション、オペレーティング システム（OS）、ベンダー、バージョンを識別できます。現在、`User-Agent` はすべての HTTP リクエストで提供され、JavaScript で内容を見ることができます。
+[`User-Agent` 文字列](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)とは、HTTP リクエスト ヘッダーの一つです。これにより、サーバーやネットワークはユーザー エージェントのアプリケーション、オペレーティング システム（OS）、ベンダー、バージョンを識別できます。現在、`User-Agent` はすべての HTTP リクエストで提供され、JavaScript で内容を見ることができます。
 {% endAside %}
 
 ### User-Agent Client Hints（UA-CH）
@@ -49,13 +49,13 @@ User-Agent（UA）の情報量削減とは、[パッシブフィンガープリ�
 
 デフォルトで提供される情報を基本的なもののみにすることで、ユーザーのプライバシーを強化できます。
 
-情報量削減後の `User-Agent`
+情報量削減後の User-Agent
 には、リクエストを送信したパソコンまたはモバイルのブラウザのブランドとメジャー
 バージョン、プラットフォームが含まれます。それ以外のデータを利用する場合は、User-Agent
 Client Hints
 を使用して、ユーザーのデバイスや状態に関する特定の情報をリクエストします。
 
-さらに、User-Agent
+さらに、`User-Agent`
 文字列が長く複雑になったことで、文字列解析でエラーが発生しやすいという問題も生じています。UA-CH
 を使用すれば、構造化された信頼できるデータが提供され、解釈が容易になります。UA
 文字列解析のための既存のコードがエラーになることはないはずですが、返される情報量は少なくなります。[特定の情報が必要](https://wicg.github.io/ua-client-hints/#use-cases)なサイトの場合は、UA-CH
@@ -73,11 +73,11 @@ Client Hints
     1.  ブラウザは、`User-Agent` ヘッダーに情報量が削減された User-Agent 文字列を含めます。例: `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
 
     2.  ブラウザは、デフォルトの User-Agent Client Hints ヘッダーにこれと同じ情報を含めます。次に例を示します。
-    ```powershell
-    Sec-CH-UA: "Chrome"; v="93"
-    Sec-CH-UA-Mobile: ?1
-    Sec-CH-UA-Platform: "Android"
-    ```
+        ```powershell
+        Sec-CH-UA: "Chrome"; v="93"
+        Sec-CH-UA-Mobile: ?1
+        Sec-CH-UA-Platform: "Android"
+        ```
 
 3.  サーバーは、`Accept-CH` レスポンス ヘッダーを使用して、追加の Client Hints を送信するようブラウザにリクエストできます。例: `Accept-CH: Sec-CH-UA-Arch`
 
@@ -143,8 +143,8 @@ UA-CH API に更新したら、User-Agent
 - `chrome://flags/#reduce-user-agent` フラグを有効化する
   - これにより、ローカルのブラウザがすべてのサイトから情報量削減後の `user-agent` 文字列のみを受信するよう（それがデフォルトの設定になる前に）設定できます。
 - 適切な `user-agent` 文字列と Client Hints を提供するようエミュレートされたデバイスを、DevTools で構成する
-  - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="32", height="32" %} > **設定** > [**デバイス**] > [**カスタム デバイスを追加**] をクリックし、必要な `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
-  - DevTools 画面の左上で {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/eLRsSnxmkhz0yKsXTjxD.png", alt="ALT_TEXT_HERE", width="60", height="64" %} [**デバイスのツールバーを切り替え**] をクリックして DevTools の UI を開き、デバイスをエミュレートします。
+  - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="28", height="28" %} > **設定** > [**デバイス**] > [**カスタム デバイスを追加**] をクリックし、必要な `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
+  - DevTools 画面の左上で {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/eLRsSnxmkhz0yKsXTjxD.png", alt="ALT_TEXT_HERE", width="30", height="32" %} [**デバイスのツールバーを切り替え**] をクリックして DevTools の UI を開き、デバイスをエミュレートします。
 - Chrome を `「--user-agent="（ここにカスタム文字列を記述）"」`付きで起動する
     - この[コマンドラインフラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)を使用して、カスタム User-Agent 文字列を付けて Chrome を起動します。
 
