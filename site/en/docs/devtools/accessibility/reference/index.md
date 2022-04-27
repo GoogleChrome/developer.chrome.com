@@ -137,7 +137,7 @@ Inspect an element's position in the accessibility tree from the [Accessibility 
 
 This view allows you to explore only a single node and its ancestors.
 
-### (Preview) Explore the accessibility tree {: #explore-tree}
+### (Preview) Explore the full-page accessibility tree {: #explore-tree}
 
 The full-page view of the accessibility tree allows you to explore the whole tree and helps you better understand how your web content is exposed to assistive technology.
 
