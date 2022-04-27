@@ -85,6 +85,6 @@ API をテストしている場合は、フィードバックをぜひご提供�
 
 - この API のステータス変更について通知を受け取るには、[デベロッパー向けのメーリングリスト](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce)にご参加ください。
 
-- この API に関する進行中のディスカッションすべてを常にチェックするには、[GitHub の提案ページ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)で ボタンをクリックしてください。なお、この操作を行うには GitHub > アカウントが必要です。お持ちでない場合は [GitHub アカウントを作成](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)してください。
+- この API に関する進行中のディスカッションすべてを常にチェックするには、[GitHub の提案ページ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)で **Watch** ボタンをクリックしてください。なお、この操作を行うには GitHub > アカウントが必要です。お持ちでない場合は [GitHub アカウントを作成](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)してください。
 
 - プライバシー > サンドボックス全般に関する最新情報を入手するには、[プライバシーサンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)の > RSS フィードを購読してください。
