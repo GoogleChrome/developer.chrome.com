@@ -18,24 +18,24 @@ Being in a sandbox has two implications:
     the extension (it has its own separate CSP value). This means that, for example, it can
     use inline script and `eval`.
 
-    For example, here's how to specify that two extension pages are to be served in a sandbox with a
-    custom CSP:
+For example, here's how to specify that two extension pages are to be served in a sandbox with a
+custom CSP:
 
-    ```json
-    {
-      ...
-      "content_security_policy": {
-        "sandbox": "sandbox allow-scripts; script-src 'self' https://example.com"
-      },
-      "sandbox": {
-        "pages": [
-          "page1.html",
-          "directory/page2.html"
-        ]
-      ],
-      ...
-    }
-    ```
+```json
+{
+  ...
+  "content_security_policy": {
+    "sandbox": "sandbox allow-scripts; script-src 'self' https://example.com"
+  },
+  "sandbox": {
+    "pages": [
+      "page1.html",
+      "directory/page2.html"
+    ]
+  ],
+  ...
+}
+```
 
 If not specified, the default `content_security_policy` value is `sandbox allow-scripts allow-forms
 allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';`.
