@@ -4,7 +4,7 @@ description: >
   How this new attribute value can ensure that content within accordion sections can be found and linked to. 
 layout:
   'layouts/blog-post.njk'
-date: 2022-04-27
+date: 2022-04-28
 authors:
   - jarhar
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/bt6eW4gluWeTMRNfvKa6.jpg'
