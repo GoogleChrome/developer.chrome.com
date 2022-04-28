@@ -1,25 +1,27 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Changes: Track your CSS and JavaScript changes"
+title: "Changes: Track your HTML, CSS, and JavaScript changes"
 authors:
   - sofiayem
 date: 2022-04-26
 #updated: YYYY-MM-DD
 description:
-  "Track changes to CSS and JavaScript."
+  "Track changes to HTML, CSS, and JavaScript."
 tags:
   - javascript
   - css
+  - html
 ---
 
 With the **Changes** tab, track the changes you make to:
 
-- CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) and [**Sources**](docs/devtools/javascript/sources/#edit)
+- HTML in [**Sources**](docs/devtools/javascript/sources/#edit) with enabled [Local overrides](blog/new-in-devtools-65/#overrides)
+- CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](docs/devtools/javascript/sources/#edit)
 - JavaScript in [**Sources**](docs/devtools/javascript/sources/#edit)
 
 The **Changes** tab shows changes you made within DevTools. If you reload either DevTools or your page, the changes disappear.
 
-To make DevTools remember changes across page loads, follow the steps in [Local overrides](/blog/new-in-devtools-65/#overrides).
+To make DevTools persist changes across page loads, follow the steps in [Local overrides](/blog/new-in-devtools-65/#overrides).
 
 To make DevTools write changes to your local sources, follow the steps in [Edit and save files with Workspaces](/docs/devtools/workspaces/).
 
@@ -37,17 +39,33 @@ To open the **Changes** tab:
 
 Alternatively, in the upper right corner, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More", width="17", height="17" %} **Customize and control DevTools** > **More tools** > **Changes**.
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4eQAS6Jv4bh37Q8yODjA.png", alt="More tools > Changes", width="800", height="460" %}
+
 By default, DevTools displays the **Changes** tab at the bottom of your DevTools window, in the **Drawer**.
 
-## View your changes {: #view-changes }
+## View and understand your changes {: #view-changes }
 
-The **Changes** tab shows you a regular `diff` output with standard highlighting:
+To view your changes:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KNrKe0eW2hBU2v9wKdV9.png", alt="Highlighted diff in the Changes tab", width="850", height="375" %}
- 
+1. [Open DevTools](/docs/devtools/open/).
+1. Make changes to your sources:
+
+   - HTML: First, enable [Local overrides](blog/new-in-devtools-65/#overrides), then make changes in **Sources**
+   - CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](docs/devtools/javascript/sources/#edit)
+   - JavaScript in [**Sources**](docs/devtools/javascript/sources/#edit)
+
+1. [Open the **Changes** tab](#open-changes) and select a file in the right-hand side of the tab.
+1. Observe a `diff` output that highlights the following:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qkldtZMyhliuFy7c3SiG.png", alt="Highlighted diff in the Changes tab", width="800", height="479" %}
+
+The **Changes** tab pretty-prints the `diff` output automatically, so you don't have to scroll horizontally to see the changes in a single line.
+
 ## Revert all changes made to a file {: #revert-changes}
 
 To revert changes made to a file:
 
 1. On left-hand side of the **Changes** tab, select a file with changes to revert.
 1. On the action bar at the bottom, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/d1eyw9WYyVIT5UnIOlcE.svg", alt="Undo", width="20", height="20" %} **Revert all changes to current file**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j8aKXkFcYiQenQtHxenn.png", alt="Revert button", width="800", height="414" %}
