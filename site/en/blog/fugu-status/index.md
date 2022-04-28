@@ -38,7 +38,7 @@ iterate quickly. Not shipping a feature because it doesn't solve the developer n
 ## Capabilities available in stable {: #in-stable }
 
 The following APIs have graduated from origin trial and are available in the
-latest version of Chrome, and in many cases other Chromium based browsers.
+latest version of Chromium, and in many cases other Chromium based browsers.
 
 <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="https://fugu-tracker.web.app/#shipped">
   All already shipped APIs
