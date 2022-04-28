@@ -8,7 +8,7 @@
   },
   "scripts": {
     "algolia": "node ./algolia.js",
-    "setup": "npm-run-all clean ignore gulp rollup maybe-sync-external",
+    "setup": "npm-run-all clean ignore maybe-sync-external gulp rollup",
     "clean": "rimraf dist",
     "cloud-secrets": "node ./cloud-secrets.js",
     "dev": "npm-run-all setup eleventy --parallel start watch",
