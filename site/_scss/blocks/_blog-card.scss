@@ -8,8 +8,13 @@
   border: 1px solid var(--color-hairline);
 }
 
+.blog-card__thumbnail a {
+  aspect-ratio: 1.57/1;
+}
+
 .blog-card__thumbnail {
   img {
     max-height: px-to-rem(184px);
+    height: 100%;
   }
 }
