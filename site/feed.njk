@@ -14,7 +14,7 @@ pagination:
   <subtitle>{{ feed.description or site.description }}</subtitle>
   <link href="{{ site.url }}{{ feed.permalink | url }}" rel="self"/>
   <link href="{{ absoluteFeedUrl }}" />
-  {% if feed.items.length %}
+  {% if feed.items and feed.items.length  %}
     <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
   {% endif %}
   <id>{{ absoluteFeedUrl }}</id>
