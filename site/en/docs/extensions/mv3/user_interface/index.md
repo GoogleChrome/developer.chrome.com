@@ -157,7 +157,7 @@ Register icons in the manifest under the `"icons"` field.
 Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
 is declared in the manifest. 
 
-Use badges to indicate the state of the extension. The [Drink Water][sample-drink] extension sample
+Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
 displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
 the extension is idle. Badges can contain up to 4 characters.
 
