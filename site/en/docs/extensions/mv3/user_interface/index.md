@@ -372,7 +372,7 @@ const tldLocales = {
 };
 ```
 
-The Global Google Search context menu example creates multiple options from the list in
+The [Global Google Search context menu example][sample-context-menu] creates multiple options from the list in
 `locales.js`. When an extension contains more than one context menu, Chrome automatically
 collapses them into a single parent menu.
 
@@ -613,9 +613,10 @@ capabilities.
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [sample-action-api]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
 [sample-action]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
-[sample-drink]: /docs/extensions/mv3/samples#search:drink
+[sample-context-menu]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/contextMenus/global_context_search
+[sample-drink]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/water_alarm_notification
 [sample-new-tab-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
-[sample-tab-flipper]: /docs/extensions/mv3/samples#search:tab%20flipper
+[sample-tab-flipper]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/default_command_override
 [section-onclick]: #click
 [section-popup]: #popup
 [notifications-create]: /docs/extensions/reference/notifications#method-create
