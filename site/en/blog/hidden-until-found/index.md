@@ -15,7 +15,7 @@ tags:
   - html
 ---
 
-Collapsing sections of content, sometimes described as [an accordion](https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/), is a common UI pattern. However, content hidden in the collapsed sections becomes impossible to search using a find-in-page search. Also, it isn't possible to link to [text fragments](https://web.dev/text-fragments/) inside collapsed regions.
+Collapsing content sections, sometimes described as [an accordion](https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/), are a common UI pattern. However, content hidden in the collapsed sections becomes impossible to search using a find-in-page search. Also, it isn't possible to link to [text fragments](https://web.dev/text-fragments/) inside collapsed regions.
 
 The `hidden=until-found` HTML attribute and `beforematch` event can solve these problems. By adding `hidden=until-found` to the container for your hidden content, you make it possible for the browser to search text in that hidden region, and reveal the section if a match is found.
 
