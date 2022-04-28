@@ -63,10 +63,13 @@ the change and adjust accordingly.
       the same time to allow for websites affected by this phase to request a
       time extension. The trial will last for at least 6 months.
 
-An earlier attempt was made at rolling out warnings in Chrome 98, as previously
+{% Aside %}
+An earlier attempt was made to roll out warnings in Chrome 98, previously
 announced by this blog post. This was rolled back after stability and
-compatibility issues were discovered during the rollout. The identified issues
-were then fixed before the second attempt in Chrome 102.
+compatibility issues were discovered during the rollout.
+
+The identified issues were fixed for Chrome 102.
+{% endAside %}
 
 ## What is Private Network Access (PNA)
 
