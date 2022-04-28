@@ -755,3 +755,13 @@ mariahhart:
     en: 'Mariah Hart'
   description:
     en: 'Technical Program Manager, Google'
+jarhar:
+  title:
+    en: 'Joey Arhar'
+  description:
+    en: 'Software engineer, Google'
+emmatwersky:
+  title:
+    en: 'Emma Twersky'
+  description:
+    en: 'Developer Relations Engineer, Google'

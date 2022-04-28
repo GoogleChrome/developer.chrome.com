@@ -3,13 +3,11 @@
 - title: i18n.docs.privacy-sandbox.overview
   sections:
     - url: /docs/privacy-sandbox/overview
-      title: i18n.docs.privacy-sandbox.overview-article
     - url: /tags/privacy/
       title: i18n.docs.privacy-sandbox.blog
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
     - url: /docs/privacy-sandbox/proposal-lifecycle
-      title: i18n.docs.privacy-sandbox.proposals
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/feedback
@@ -22,7 +20,6 @@
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
     - url: /docs/privacy-sandbox/fedcm
-      title: i18n.docs.privacy-sandbox.fedcm
     - url: /docs/privacy-sandbox/permissions-policy
       title: i18n.docs.privacy-sandbox.permissions-policy
       description: i18n.docs.privacy-sandbox.permissions-policy-description
