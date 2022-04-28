@@ -670,5 +670,12 @@
   "mariahhart": {
     "country": "US",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/iy1Y4UTfdXCdXqdnveqi.jpg"
+  },
+  "emmatwersky": {
+    "country": "US",
+    "homepage": "https://twerske.dev",
+    "github": "twerske",
+    "twitter": "twerske",
+    "image": "image/dQwiPAoChjTYzXYCNg6U6Tsnr3x1/9oW5Nx95erxvoGHcKHL6.jpg"
   }
 }
