@@ -22,21 +22,15 @@ OS のバージョン、デバイス、ブラウザの詳細バージョンの�
 
 モバイル デバイスの場合の例を次に示します。
 
-{% Compare 'worse', 'old' %}
-
-<span style="font-family: monospace">Mozilla/5.0
+{% Compare 'worse', 'old' %} <span style="font-family: monospace">Mozilla/5.0
 (Linux; Android <span style="background: #ef9a9a">12; Pixel 5</span>)
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span  style="background:
-#ef9a9a">0.4638.16</span> Mobile Safari/537.36</span>
-{% endCompare %}
+#ef9a9a">0.4638.16</span> Mobile Safari/537.36</span> {% endCompare %}
 
-{% Compare 'better', 'new' %}
-
-<span style="font-family: monospace">Mozilla/5.0
+{% Compare 'better', 'new' %} <span style="font-family: monospace">Mozilla/5.0
 (Linux; Android <span style="background: #a5d6a7">10; K</span>)
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
-#a5d6a7">0.0.0</span> Mobile Safari/537.36</span>
-{% endCompare %}
+#a5d6a7">0.0.0</span> Mobile Safari/537.36</span> {% endCompare %}
 
 ## コード内で User-Agent をオーバーライドする方法
 
