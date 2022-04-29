@@ -41,7 +41,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
     style="min-height: 800px; width: 100%; border: 0"
     src="https://tomayac.github.io/fugu-showcase/data/"
     allow="web-share; clipboard-write; clipboard"
-    onload="frames[0].postMessage({hash:location.hash,search:location.search.substr(1)},'*');"
+    onload="frames[0].postMessage({hash:location.hash.substr(1),search:location.search.substr(1)},'*');"
   ></iframe>      
 </div>
 
