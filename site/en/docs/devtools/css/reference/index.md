@@ -182,7 +182,7 @@ To view cascade layers, [inspect](/docs/devtools/open/#elements) the element bel
     width: 250px;
     height: 30px;
     text-align: center;}
-    .cascade-box::after { 
+    .cascade-box::after {
         content: "My styles are layered!";
       }
     /* Define the specificity */
@@ -324,7 +324,7 @@ the value by a fixed amount:
   increment by 0.1.
 - <kbd>Up</kbd> to change the value by 1, or by 0.1 if the current value is between -1 and 1.
 - <kbd>Shift</kbd>+<kbd>Up</kbd> to increment by 10.
-- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Shift</kbd>+<kbd>Page Up</kbd>
+- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>Page Up</kbd>
   (Windows, Linux) to increment the value by 100.
 
 Decrementing also works. Just replace each instance of <kbd>Up</kbd> mentioned above with
