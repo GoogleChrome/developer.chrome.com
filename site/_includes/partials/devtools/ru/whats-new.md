@@ -15,7 +15,7 @@
 
 ### Chrome 101 {: #chrome101 }
 
- * [Импорт и экспорт записей поведения пользователя в виде JSON файла](/ru/blog/new-in-devtools-101/#recorder)
+ * [Импорт и экспорт записей действий пользователя в виде JSON файла](/ru/blog/new-in-devtools-101/#recorder)
  * [Просмотр каскадных слоёв во вкладке Стили (Styles)](/ru/blog/new-in-devtools-101/#layer)
  * [Поддержка функции цвета hwb()](/ru/blog/new-in-devtools-101/#hwb)
  * [Улучшено отображение приватных свойств](/ru/blog/new-in-devtools-101/#private-props)

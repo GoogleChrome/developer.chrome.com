@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: "Импорт и экспорт записей поведения пользователя в виде JSON файла, поддержка функции цвета hwb(), просмотр каскадных слоёв во вкладке Стили и многое другое."
+description: "Импорт и экспорт записей действий пользователя в виде JSON файла, поддержка функции цвета hwb(), просмотр каскадных слоёв во вкладке Стили и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gKKxxweE6MsOJQpQnmiP.jpg'
 alt: ''
 tags:
@@ -28,7 +28,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Import and export recorded user flows as a JSON file  {: #recorder } -->
-## Импорт и экспорт записей поведения пользователя в виде JSON файла  {: #recorder }
+## Импорт и экспорт записей действий пользователя в виде JSON файла  {: #recorder }
 
 <!-- The [Recorder](/docs/devtools/recorder) panel now supports importing and exporting user flow recordings as a JSON file. This addition makes it easier to share user flows and can be useful for bug reporting. -->
 Вкладка [Recorder](/docs/devtools/recorder) теперь поддерживает импорт и экспорт записи действий пользователя в виде файла JSON. Это дополнение облегчает обмен записями и может быть полезно для отчёта об ошибках.
@@ -49,7 +49,7 @@ tags:
 - **Export as a Puppeteer script**. Скачать запись как скрипт для [Puppeteer](https://pptr.dev/).
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
-Обратитесь к [документации](/docs/devtools/recorder/#export-flows) чтобы узнать больше о различиях между опциями.
+Обратитесь к [документации](/docs/devtools/recorder/#export-flows), чтобы узнать больше о различиях между опциями.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Опции экспорта во вкладке Recorder", width="800", height="556" %}
 
@@ -63,10 +63,10 @@ tags:
 [Каскадные слои](/blog/cascade-layers/) позволяют более точно контролировать файлы CSS для предотвращения конфликтов, связанных со специфичностью стилей. Это особенно полезно для большой кодовой базы, дизайн-систем и для управления стилями внешних приложений.
 
 <!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-В этом [примере](https://jec.fyi/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. Во вкладке **Стили** (Styles) вы можете видеть каждый из этих слоёв и их стили.
+В этом [примере](https://jec.fyi/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. Во вкладке **Стили** (Styles) вы можете увидеть каждый из этих слоёв и их стили.
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
-Кликните на имя слоя чтобы посмотреть порядок слоёв. Слой `page` имеет наибольшую специфичность, поэтому у блока `box` зелёный цвет фона.
+Кликните на имя слоя, чтобы посмотреть порядок слоёв. Слой `page` имеет наибольшую специфичность, поэтому у блока `box` зелёный цвет фона.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A0yHsGUcqVCIO3fzKhEz.png", alt="Просмотр каскадных слоёв во вкладке Стили", width="800", height="490" %}
 
@@ -82,7 +82,7 @@ tags:
 Теперь вы можете просматривать и редактировать [цвет в формате HWB](https://drafts.csswg.org/css-color/#the-hwb-notation) в DevTools.
 
 <!-- In the **Styles** pane, hold the **Shift** key and click on any color preview to change the color format. The HWB color format is added. -->
-На вкладке **Стили** (Styles) зажмите клавишу **Shift** и кликните на превью цвета чтобы изменить формат. Добавлен формат цвета HWB.
+На вкладке **Стили** (Styles) зажмите клавишу **Shift** и кликните на превью цвета, чтобы изменить формат. Добавлен формат цвета HWB.
 
 <!-- Alternatively, you can change the color format to HWB in the [color picker](/docs/devtools/css/reference/#color-picker). -->
 Либо вы можете изменить формат цвета на HWB в [палитре цветов](/docs/devtools/css/reference/#color-picker).
@@ -115,11 +115,11 @@ DevTools теперь правильно оценивает и отобража�
 <!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/bfcache/) when present.( [1284548](https://crbug.com/1284548)) -->
 - [Возвратный кэш](/blog/new-in-devtools-98/#bfcache) теперь показывает ID расширения, которое блокирует [bfcache](https://web.dev/bfcache/) при наличии. ([1284548](https://crbug.com/1284548))
 <!-- - Fixed autocompletion support for array-like objects, CSS class names, `map.get` and HTML tags. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983)) -->
-- Исправленна поддержка автодополнения объектов типа массив, имён CSS-классов, `map.get` и HTML-тегов. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
+- Исправлена поддержка автодополнения объектов типа массив, имён CSS-классов, `map.get` и HTML-тегов. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 <!-- - Fixed incorrect highlights when double-clicking on words and undoing autocomplete. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667)) -->
-- Исправленна неправильная подсветка при двойном клике и отмене автодополнения. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667))
+- Исправлена неправильная подсветка при двойном клике и отмене автодополнения. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667))
 <!-- - Fixed comment keyboard shortcut in the **Sources** panel. ([1296535](https://crbug.com/1296535)) -->
-- Исправленна поддержка горячих клавиш для комментрирования во влкадке **Источники** (Sources). ([1296535](https://crbug.com/1296535))
+- Исправлена поддержка горячих клавиш для комментирования во вкладке **Источники** (Sources). ([1296535](https://crbug.com/1296535))
 <!-- - Re-enable support for using **Alt** (Options) key for multi selection in the **Sources** panel. ([1304070](https://crbug.com/1304070)) -->
 - Вновь включена поддержка клавиш **Alt** (Options) для множественного выбора во вкладке **Источники** (Sources). ([1304070](https://crbug.com/1304070))
 
@@ -129,14 +129,14 @@ DevTools теперь правильно оценивает и отобража�
 
 {% Aside %}
 <!-- To enable the experiment, enable the **Use Lighthouse panel with timespan and snapshot modes** checkbox under **Settings** > **Experiments**. -->
-Чтобы включить эту экспериментальную функцию поставьте голочку в чекбоксе рядом с пунктом **Use Lighthouse panel with timespan and snapshot modes** в **Настройки** (Settings) > **Эксперименты** (Experiments).
+Чтобы включить эту экспериментальную функцию, поставьте галочку в чекбоксе рядом с пунктом **Use Lighthouse panel with timespan and snapshot modes** в **Настройки** (Settings) > **Эксперименты** (Experiments).
 {% endAside %}
 
 <!-- Apart from the existing **navigation** mode, the **Lighthouse** panel now support two more modes on measuring user flows - **timespan** and **snapshot**. -->
 Помимо существующего режима **навигации**, вкладка **Lighthouse** теперь поддерживает еще два режима измерения пользовательских потоков — **timespan** и **сводка**.
 
 <!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/tbt/) and [Cumulative Layout Shift](https://web.dev/cls/) that were caused by the interaction. -->
-Например, вы можете использовать отчёты в режиме **timespan** для анализа пользовательских действий. Откройте эту [демо-страницу](https://coffee-cart.netlify.app/). Выберите режим **Timespan** и нажмите **Start timespan**. Кликните на кофе на странице и закончите запись. Прочитайте отчёт чтобы узнать [Total Blocking Time](https://web.dev/tbt/) и [Cumulative Layout Shift](https://web.dev/cls/) обусловленные взаимодействием.
+Например, вы можете использовать отчёты в режиме **timespan** для анализа пользовательских действий. Откройте эту [демо-страницу](https://coffee-cart.netlify.app/). Выберите режим **Timespan** и нажмите **Start timespan**. Кликните на кофе на странице и закончите запись. Прочитайте отчёт, чтобы узнать [Total Blocking Time](https://web.dev/tbt/) и [Cumulative Layout Shift](https://web.dev/cls/) обусловленные взаимодействием.
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 Каждый режим имеет свои уникальные сценарии использования, преимущества и ограничения. Пожалуйста, обратитесь к [документации по Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) для получения дополнительной информации.
