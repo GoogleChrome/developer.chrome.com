@@ -34,6 +34,16 @@ Easter egg, the Project Fugu API Showcase is of course
 <a href="https://tomayac.github.io/fugu-showcase/data/#tomayac.github.io!fugu-showcase!data" target="showcase">contained
 in the Project Fugu API Showcase</a>. Happy browsing!
 
+<div style="height: 100%; width: 100%">
+  <iframe
+    title="Fugu showcase"
+    name="showcase"
+    style="min-height: 800px; width: 100%; border: 0"
+    src="https://tomayac.github.io/fugu-showcase/data/"
+    allow="web-share; clipboard-write; clipboard"    
+  ></iframe>      
+</div>
+
 <script>
   window.addEventListener('message', (event) => {
     if (event.origin !== 'https://tomayac.github.io') {
@@ -52,17 +62,14 @@ in the Project Fugu API Showcase</a>. Happy browsing!
         url.searchParams.delete('api');
       }
     }
-    window.history.pushState({}, "", url);
+    window.history.pushState({}, '', url);
+  });
+
+  const showCaseIframe = document.querySelector('iframe[name="showcase"]');
+  showCaseIframe.addEventListener('onload', () => {
+    showCaseIframe.postMessage({
+      hash: location.hash,
+      search: location.search.substr(1),
+    }, '*');
   });
 </script>
-
-<div style="height: 100%; width: 100%">
-  <iframe
-    title="Fugu showcase"
-    name="showcase"
-    style="min-height: 800px; width: 100%; border: 0"
-    src="https://tomayac.github.io/fugu-showcase/data/"
-    allow="web-share; clipboard-write; clipboard"
-    onload="this.postMessage({hash: location.hash, search: location.search.substr(1)}, '*');"
-  ></iframe>      
-</div>
