@@ -34,7 +34,7 @@ tags:
 - **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다. 
 - **Puppeteer 스크립트로 내보내기** . 녹화본을 [Puppeteer](https://pptr.dev/) 스크립트로 다운로드합니다.
 
-이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자한다면 [recorder 문서](/docs/devtools/recorder/#export-flows) 를 참고하세요.
+이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자 한다면 [문서](/docs/devtools/recorder/#export-flows) 를 참고하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Recorder 패널의 export 옵션", width="800", height="556" %}
 
@@ -45,7 +45,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 [Cascade 레이어](/blog/cascade-layers/) 를 사용하면 스타일별 충돌을 방지하기 위해 CSS 파일을 보다 명시적으로 제어할 수 있습니다. 이 기능은 대규모 코드베이스, 디자인 시스템, 애플리케이션 내부의 써드 파티 스타일을 관리할 때 특히 유용합니다.
 
-다음 [예제](https://jec.fyi/demo/cascade-layer) 에서는 `page`, `component`, `base` 라는 3가지 cascade 레이어가 정의되어있습니다. **스타일** 창에서 각 레이어와 스타일을 볼 수 있습니다.
+다음 [예제](https://jec.fyi/demo/cascade-layer) 에서는 `page`, `component`, `base` 라는 3가지 cascade 레이어가 정의되어 있습니다. **스타일** 창에서 각 레이어와 스타일을 볼 수 있습니다.
 
 레이어 이름을 클릭하고 레이어 순서를 살펴보세요. `page` 레이어가 가장 높은 특정성을 가지고 있어 `box` 의 배경색은 초록색으로 정의됩니다.
 
@@ -84,17 +84,17 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 이번 릴리스에서 주목할만한 수정 사항들입니다:
 
-- [뒤로/앞으로 캐쉬(혹은 bfcache)](/blog/new-in-devtools-98/#bfcache) 에서 표시 가능할 때 블락된 [bfcache](https://web.dev/bfcache/) 익스텐션 ID를 표시합니다. ( [1284548](https://crbug.com/1284548))
+- [뒤로/앞으로 캐쉬(혹은 bfcache)](/blog/new-in-devtools-98/#bfcache) 에서 블락된 [bfcache](https://web.dev/bfcache/) 익스텐션 ID를 표시합니다. ( [1284548](https://crbug.com/1284548))
 - 유사 배열 객체, CSS 클래스 이름, `map.get` 과 HTML 태그에 대한 자동 완성 지원이 수정되었습니다. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 - 단어를 더블 클릭하거나 자동 완성을 취소할 때 잘못된 하이라이트를 수정하였습니다. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667))
 - **소스** 패널에서 주석 키보드 단축키를 수정하였습니다. ([1296535](https://crbug.com/1296535))
 - **소스** 패널에서 **Alt** (Options) 키를 사용해 여러 곳을 선택하는 기능을 다시 지원합니다. ([1304070](https://crbug.com/1304070))
 
  
-## [실험] Lighthouse 패널의 새로운 시간 범위 (timespan) 및 스냅샷 (snapshot) 모드 {: #lighthouse }
+## [실험실 기능] Lighthouse 패널의 새로운 시간 범위 (timespan) 및 스냅샷 (snapshot) 모드 {: #lighthouse }
 
 {% Aside %}
-이 실험을 활성화하려면, **설정** > **실험** 에서 **Use Lighthouse panel with timespan and snapshot modes** 체크박스를 활성화해야합니다.
+이 실험을 활성화하려면, **설정** > **실험** 에서 **Use Lighthouse panel with timespan and snapshot modes** 체크박스를 활성화해야 합니다.
 {% endAside %}
 
 기존 **navigation** 모드와 별개로 **Lighthouse** 패널에서 유저 플로우를 측정하기 위한 **timespan**, **snapshot** 모드를 추가로 지원합니다.
