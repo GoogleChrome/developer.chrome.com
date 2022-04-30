@@ -13,6 +13,15 @@
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-101/#misc)
 * [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/ru/blog/new-in-devtools-101/#lighthouse) -->
 
+### Chrome 101 {: #chrome101 }
+
+ * [Импорт и экспорт записей действий пользователя в виде JSON файла](/ru/blog/new-in-devtools-101/#recorder)
+ * [Просмотр каскадных слоёв во вкладке Стили (Styles)](/ru/blog/new-in-devtools-101/#layer)
+ * [Поддержка функции цвета hwb()](/ru/blog/new-in-devtools-101/#hwb)
+ * [Улучшено отображение приватных свойств](/ru/blog/new-in-devtools-101/#private-props)
+ * [Другие важные моменты](/ru/blog/new-in-devtools-101/#misc)
+ * [[Эксперимент] Новые режимы временного промежутка и сводки во вкладке Lighthouse](/ru/blog/new-in-devtools-101/#lighthouse)
+
 
 ### Chrome 100 {: #chrome100 }
 
