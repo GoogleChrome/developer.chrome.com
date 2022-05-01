@@ -5,7 +5,7 @@
 
 ### Chrome 101 {: #chrome101 }
 
-* [ユーザーフローをJSONとしてインポート/エクスポート](/ja/blog/new-in-devtools-101/#recorder)
+* [記録されたユーザーフローをJSONファイルとしてインポート/エクスポート](/ja/blog/new-in-devtools-101/#recorder)
 * [Styles ペインでカスケードレイヤーを表示する](/ja/blog/new-in-devtools-101/#layer)
 * [hwb() カラー関数のサポート](/ja/blog/new-in-devtools-101/#hwb)
 * [プライベートプロパティの表示を改善](/ja/blog/new-in-devtools-101/#private-props)

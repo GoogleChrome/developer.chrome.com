@@ -22,7 +22,7 @@ draft: true
 {% YouTube id='u9GRAliBrM8' %}
 
 <!-- ## Import and export recorded user flows as a JSON file  {: #recorder } -->
-## ユーザーフローをJSONとしてインポート/エクスポート  {: #recorder }
+## 記録されたユーザーフローをJSONファイルとしてインポート/エクスポート  {: #recorder }
 
 <!-- The [Recorder](/docs/devtools/recorder) panel now supports importing and exporting user flow recordings as a JSON file. This addition makes it easier to share user flows and can be useful for bug reporting. -->
 [Recorder](/docs/devtools/recorder) パネルは、ユーザーフローの記録をJSONファイルとしてインポートおよびエクスポートすることをサポートするようになりました。この追加により、ユーザーフローを簡単に共有できるようになり、バグレポートにも役立ちます。
@@ -45,7 +45,7 @@ draft: true
 <!-- Consult [the documentation](/docs/devtools/recorder/#export-flows) to learn more about the differences between these options. -->
 これらのオプションの違いについては、[ドキュメント](/docs/devtools/recorder/#export-flows)を参照してください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Export options in the Recorder panel", width="800", height="556" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="RecorderパネルのExportオプション", width="800", height="556" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
@@ -62,7 +62,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 レイヤー名をクリックすると、レイヤーの順番が表示されます。 `page` レイヤーが最も高い詳細度を持つので、 `box` の背景は緑色になっています。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A0yHsGUcqVCIO3fzKhEz.png", alt="View cascade layers in the Styles pane", width="800", height="490" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A0yHsGUcqVCIO3fzKhEz.png", alt="Stylesペインでのカスケードレイヤーの表示", width="800", height="490" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/52f5be82ff6ba59343ba65ab7d8e215e46d44d3b #}
 
@@ -81,7 +81,7 @@ DevTools で [HWB カラーフォーマット](https://drafts.csswg.org/css-colo
 <!-- Alternatively, you can change the color format to HWB in the [color picker](/docs/devtools/css/reference/#color-picker). -->
 また、[カラーピッカー](/docs/devtools/css/reference/#color-picker)でカラーフォーマットを HWB に変更することも可能です。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jW7PXLu6Q5myiKLrsoD3.png", alt="hwb() color function", width="800", height="508" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jW7PXLu6Q5myiKLrsoD3.png", alt="hwb() カラー関数", width="800", height="508" %}
 
 
 <!-- ## Improved the display of private properties {: #private-props } -->
@@ -90,7 +90,7 @@ DevTools で [HWB カラーフォーマット](https://drafts.csswg.org/css-colo
 <!-- DevTools now properly evaluates and displays private accessors. Previously, you couldn't expand classes with private accessors in the **Console** and the **Sources** panel. -->
 DevTools は、プライベートアクセサを適切に評価および表示するようになりました。以前は、 **Console** および **Sources** パネルで、プライベートアクセサを持つクラスを展開することができませんでした。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LKir8oYFgNvRZSXMhXa7.png", alt="private properties in the Console", width="800", height="498" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LKir8oYFgNvRZSXMhXa7.png", alt="Consoleでのプライベートプロパティ", width="800", height="498" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/78b2ae5c5baa825c88917098ef57b595d3c94aa0 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/fdc72aa79313d8ec9e7a04461588bcc27aae1535 #}
@@ -134,7 +134,7 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 それぞれのモードには、独自の使用例、利点、制限があります。詳しくは、[Lighthouse のドキュメント](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md)をご参照ください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/loe3f6KaR9UdYe57oQ7r.png", alt="Timespan and snapshot mode in the Lighthouse panelhouse", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/loe3f6KaR9UdYe57oQ7r.png", alt="Lighthouseパネルでのタイムスパンモードとスナップショットモード", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4d17e989f0f5bad0f9d4d5badff16fd6da09ae33 #}
 
