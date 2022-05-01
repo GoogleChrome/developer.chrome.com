@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 'layouts/blog-post.njk'
 title: 'Advanced Web Apps Fund'
 authors: 
   - rkochman
