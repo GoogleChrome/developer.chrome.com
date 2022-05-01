@@ -12,7 +12,6 @@ description: >
   Announcing the Advanced Web Apps Fund, supporting those who make the web more powerful.
 date: 2022-05-31
 tags:
-  - blog
   - performance
   - capabilities
   - progressive-web-apps
