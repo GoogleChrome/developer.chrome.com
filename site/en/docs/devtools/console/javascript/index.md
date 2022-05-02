@@ -93,9 +93,9 @@ features you're not familiar with. The Console is a perfect place for these kind
     `add(25)` evaluates to `45` because when the `add` function is called without a second argument,
     `b` defaults to `20`.
 
-5.  You will not be able to run any code in this console session until your function has returned.
-    If that takes too long, you can use the **Task Manager** to cancel the time-intensive computation;
-    however, it will also cause the current page to fail and all data you have entered will be lost.
+You will not be able to run any code in this console session until your function has returned.
+If that takes too long, you can use the **Task Manager** to cancel the time-intensive computation;
+however, it will also cause the current page to fail and all data you have entered will be lost.
 
 
 ## Next steps {: #next }
