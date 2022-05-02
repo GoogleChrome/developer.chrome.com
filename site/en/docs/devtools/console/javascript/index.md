@@ -65,7 +65,7 @@ features you're not familiar with. The Console is a perfect place for these kind
 
 1.  Type `5 + 15` in the Console. The result `20` will appear below your expression
     (unless your expression takes too much time to evaluate).
-2.  Press `Enter` to evaluate the expression. The Console prints out
+2.  Press `Enter` to evaluate the expression. The Console prints
     the result of the expression below your code. **Figure 4** below shows how your Console should
     look after evaluating this expression.
 3.  Type the following code into the **Console**. Try typing it out, character-by-character, rather
