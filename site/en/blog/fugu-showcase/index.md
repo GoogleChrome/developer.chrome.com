@@ -7,7 +7,7 @@ subhead: >
 authors:
   - thomassteiner
 date: 2022-04-25
-updated: 2022-04-29
+updated: 2022-05-02
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -34,34 +34,56 @@ Easter egg, the Project Fugu API Showcase is of course
 <a href="https://tomayac.github.io/fugu-showcase/data/#tomayac.github.io!fugu-showcase!data" target="showcase">contained
 in the Project Fugu API Showcase</a>. Happy browsing!
 
-<div style="height: 100%; width: 100%">
-  <iframe
-    title="Fugu showcase"
-    name="showcase"
-    style="min-height: 800px; width: 100%; border: 0"
-    src="https://tomayac.github.io/fugu-showcase/data/"
-    allow="web-share; clipboard-write; clipboard"
-    onload="frames[0].postMessage({hash:location.hash.substr(1),search:location.search.substr(1)},'*');"
-  ></iframe>      
+<div class="showcase-container" style="height: 100%; width: 100%">
+  <noscript>
+    <iframe
+      title="Fugu showcase"
+      name="showcase"
+      style="min-height: 800px; width: 100%; border: none"
+      src="https://tomayac.github.io/fugu-showcase/data/"
+      allow="web-share; clipboard-write; clipboard"
+    ></iframe>
+  </noscript>
 </div>
 
 <script>
+  const SHOWCASE_URL = 'https://tomayac.github.io/fugu-showcase/data/';
+  
+  const iframe = document.createElement('iframe');
+  iframe.title = 'Project Fugu API Showcase';
+  iframe.name = 'showcase';
+  iframe.style.minHeight = '800px';
+  iframe.style.width = '100%';
+  iframe.style.border = 'none';
+  iframe.allow = 'web-share; clipboard-write; clipboard';
+  iframe.addEventListener('load', () => {
+    iframe.contentWindow.postMessage(
+      {
+        hash: location.hash.substr(1),
+        search: location.search.substr(1),
+      },
+      '*'
+    );
+  });
+  document.querySelector('.showcase-container').append(iframe);
+  iframe.src = SHOWCASE_URL;
+
   window.addEventListener('message', (event) => {
-    if (event.origin !== 'https://tomayac.github.io') {
+    if (event.origin !== new URL(SHOWCASE_URL).origin) {
       return;
     }
-
     const url = new URL(window.location);
-    if ('anchor' in event.data) {
-      url.hash = event.data.anchor;
-    }
     if ('search' in event.data) {
       if (event.data.search) {
         const [key, value] = event.data.search.split('=');
         url.searchParams.set(key, value);
+        url.hash = '';
       } else {
         url.searchParams.delete('api');
       }
+    }
+    if ('hash' in event.data) {
+      url.hash = event.data.hash;
     }
     window.history.pushState({}, '', url);
   });
