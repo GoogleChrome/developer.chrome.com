@@ -43,7 +43,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
     <iframe
       title="Fugu showcase"
       name="showcase"
-      style="min-height: 1000px; width: 100%; border: solid 1px #000"
+      style="min-height: 1000px; width: 100%; border: solid 1px var(--color-hairline);"
       src="https://tomayac.github.io/fugu-showcase/data/"
       allow="web-share; clipboard-write; clipboard"
     ></iframe>
@@ -58,7 +58,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
   iframe.name = 'showcase';
   iframe.style.minHeight = '1000px';
   iframe.style.width = '100%';
-  iframe.style.border = 'solid 1px #000';
+  iframe.style.border = 'solid 1px var(--color-hairline)';
   iframe.allow = 'web-share; clipboard-write; clipboard';
   iframe.addEventListener('load', () => {
     iframe.contentWindow.postMessage(
