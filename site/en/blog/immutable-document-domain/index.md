@@ -108,11 +108,11 @@ vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in
 the same direction.
 
 For example, when two pages set `document.domain`, they can pretend as if they
-are the same-origin. This is particularly critical when using a shared hosting
-service with different subdomains per user, setting `document.domain` opens up
-an access to any other site hosted by the same service, making it easily
-accessible to any attackers. This is possible because `document.domain` ignores
-the port number part of the domain.
+are the same-origin. This is particularly critical when these pages use a shared
+hosting service with different subdomains. Setting `document.domain` opens up
+access to all other sites hosted by that same service, which makes it easier for
+attackers to access your sites. This is possible because `document.domain`
+ignores the port number part of the domain.
 
 To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
