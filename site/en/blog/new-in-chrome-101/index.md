@@ -56,7 +56,7 @@ Read more about the various use cases for Priority Hints in [Optimize resource l
 There is a new method of [`forget()`](
 https://web.dev/usb/#revoke-access) for [`USBDevice`](https://developer.mozilla.org/docs/Web/API/USBDevice) objects. This enables the forgetting of a device that previously had permission granted. For example, if this is an application used on a shared computer with many devices.
 
-Also for Web USB, a fix to support [`SameObject`] for related attributes within `USBDevice`. The specification change can be found [in a PR to the draft spec ](https://github.com/WICG/webusb/pull/212). 
+Also for Web USB, a fix to support [`SameObject`] for related attributes within `USBDevice`. The specification change can be found [in a PR to the draft spec](https://github.com/WICG/webusb/pull/212). 
 
 Dedicated workers loaded from a secure (HTTPS) origin yet instantiated by insecure (non-HTTPS) contexts are no longer considered secure. This means that inside such worker contexts:
 - `self.isSecureContext` is now `false`.
