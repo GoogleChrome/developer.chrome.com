@@ -18,14 +18,14 @@ Here's what you need to know:
 
 - [The `hwb()` color notation](#hwb) gives you a new way to specify color according to hue, whiteness, and blackness.
 - [Priority Hints](#priority-hints) give you a way to hint to the browser in which order resources should be downloaded.
-And there's plenty more.
+- And there's plenty more.
 
 Let's take a look at what's available in Chrome 101.
 
 
 ## `hwb()` color notation {: #hwb }
 
-Described [in an article by Stefan Judis](https://www.stefanjudis.com/blog/hwb-a-color-notation-for-humans/) as a "color notation for humans", [`hwb()`](https://developer.mozilla.org/docs/Web/CSS/color_value/hwb) color specifies color according to hue, whiteness, and blackness. As with other color notations, an optional alpha component specifies opacity.
+Described [in an article by Stefan Judis](https://www.stefanjudis.com/blog/hwb-a-color-notation-for-humans/) as a "color notation for humans", [`hwb()`](https://developer.mozilla.org/docs/Web/CSS/color_value/hwb) specifies color according to hue, whiteness, and blackness. As with other color notations, an optional alpha component specifies opacity.
 
 ```css
 h1 {
@@ -39,9 +39,9 @@ This method of specifying color is now well-supported, with Firefox supporting i
 
 Priority Hints give you a way to hint to the browser which order resources should be downloaded in, by using the `fetchpriority` attribute. This accepts values of `"high"`, `"low"`, and `"auto"`. 
 
-`"high"`: You consider the resource a high priority and want the browser to prioritize it as long as the browser's heuristics don't prevent that from happening.
-`"low"`: You consider the resource a low priority and want the browser to deprioritize it if its heuristics permit.
-`"auto"`: This is the default value where you don't have a preference and let the browser decide the appropriate priority.
+*  `"high"`: You consider the resource a high priority and want the browser to prioritize it as long as the browser's heuristics don't prevent that from happening.
+*  `"low"`: You consider the resource a low priority and want the browser to deprioritize it if its heuristics permit.
+*  `"auto"`: This is the default value that lets the browser decide the appropriate priority.
 
 In the example below, a low priority image is indicated with `fetchpriority="low"`.
 
@@ -49,7 +49,7 @@ In the example below, a low priority image is indicated with `fetchpriority="low
 <img src="/images/in_viewport_but_not_important.svg" fetchpriority="low" alt="I'm an unimportant image!">
 ```
 
-Read more about the various use cases for Priority Hints in [Optimize resource loading with priority hints](https://web.dev/priority-hints/).
+Read more about the various use cases in [Optimize resource loading with Priority Hints](https://web.dev/priority-hints/).
 
 ### Also in this release
 
@@ -58,7 +58,7 @@ https://web.dev/usb/#revoke-access) for [`USBDevice`](https://developer.mozilla.
 
 Also for Web USB, a fix to support [`SameObject`] for related attributes within `USBDevice`. The specification change can be found [in a PR to the draft spec](https://github.com/WICG/webusb/pull/212). 
 
-Dedicated workers loaded from a secure (HTTPS) origin yet instantiated by insecure (non-HTTPS) contexts are no longer considered secure. This means that inside such worker contexts:
+Dedicated workers loaded from a secure (HTTPS) origin, yet instantiated by insecure (non-HTTPS) contexts, are no longer considered secure. This means that inside such worker contexts:
 - `self.isSecureContext` is now `false`.
 - `self.caches` and `self.storageFoundation` are no longer available
 
