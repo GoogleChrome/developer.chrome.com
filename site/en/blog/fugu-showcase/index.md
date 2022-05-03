@@ -7,7 +7,7 @@ subhead: >
 authors:
   - thomassteiner
 date: 2022-04-25
-updated: 2022-05-02
+updated: 2022-05-03
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -39,7 +39,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
     <iframe
       title="Fugu showcase"
       name="showcase"
-      style="min-height: 800px; width: 100%; border: none"
+      style="min-height: 1000px; width: 100%; border: solid 1px #000"
       src="https://tomayac.github.io/fugu-showcase/data/"
       allow="web-share; clipboard-write; clipboard"
     ></iframe>
@@ -52,9 +52,9 @@ in the Project Fugu API Showcase</a>. Happy browsing!
   const iframe = document.createElement('iframe');
   iframe.title = 'Project Fugu API Showcase';
   iframe.name = 'showcase';
-  iframe.style.minHeight = '800px';
+  iframe.style.minHeight = '1000px';
   iframe.style.width = '100%';
-  iframe.style.border = 'none';
+  iframe.style.border = 'solid 1px #000';
   iframe.allow = 'web-share; clipboard-write; clipboard';
   iframe.addEventListener('load', () => {
     iframe.contentWindow.postMessage(
