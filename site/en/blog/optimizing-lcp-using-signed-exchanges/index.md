@@ -32,7 +32,12 @@ Most people publishing SXGs today are using Cloudflare's easy-to-use [Automatic 
 
 In many cases, checking the box to enable this feature is enough to get the kind of substantial improvement shown above. Sometimes, there are a few more steps to ensure these SXGs are working as intended at each stage of the pipeline, and to optimize pages to take full advantage of prefetch.
 
-In the past couple of months since Cloudflare's launch, I've been reading and responding to questions on [various](https://support.google.com/webmasters/threads?hl=en&thread_filter=(%27%22signed%20exchange%22%27)) [forums](https://community.cloudflare.com/t/automatic-signed-exchanges-sxgs-beta-launch/312634) and learning how to advise sites on how to make sure they're getting the most out of their SXG deployments. This post is a collection of my advice. I'll walk through the steps to analyze SXG performance, find ways to improve it, and finally measure its real world impact.
+In the past couple of months since Cloudflare's launch, I've been reading and responding to questions on [various](https://support.google.com/webmasters/threads?hl=en&thread_filter=(%27%22signed%20exchange%22%27)) [forums](https://community.cloudflare.com/t/automatic-signed-exchanges-sxgs-beta-launch/312634) and learning how to advise sites on how to make sure they're getting the most out of their SXG deployments. This post is a collection of my advice. I'll walk through the steps to:
+
+- [Analyze SXG performance](#analyze) using WebPageTest.
+- [Debug the SXG pipeline](#debug) if the Analyze step shows that it's not working.
+- [Optimize pages for SXG prefetch](#optimize) including setting an optimal `max-age` and preloading render-blocking subresources.
+- [Measure SXG improvement](#measure) using Google Analytics by selecting appropriate experiment and control groups.
 
 ## Introduction
 
