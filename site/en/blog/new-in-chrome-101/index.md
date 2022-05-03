@@ -18,7 +18,7 @@ Here's what you need to know:
 
 - [The `hwb()` color notation](#hwb) gives you a new way to specify color according to hue, whiteness, and blackness.
 - [Priority Hints](#priority-hints) give you a way to hint to the browser in which order resources should be downloaded.
-- And there's plenty more.
+- And there's plenty [more](#also-in-this-release).
 
 Let's take a look at what's available in Chrome 101.
 
