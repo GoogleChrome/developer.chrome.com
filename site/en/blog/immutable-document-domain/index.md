@@ -6,7 +6,7 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
-updated: 2022-02-14
+updated: 2022-04-28
 authors:
   - agektmr
 tags:
@@ -107,13 +107,12 @@ The [current discussion with other browser
 vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in
 the same direction.
 
-For example, if a hosting service provides different subdomains per user, an
-attacker can set `document.domain` to pretend they are the same-origin
-as another user's page. Further, an attacker can host a website under a shared
-hosting service, which serves sites through the same IP address with different
-port numbers. In that case, the attacker can pretend to be on the same-site-but-same-origin
-as yours. This is possible because `document.domain` ignores the port number
-part of the domain.
+For example, when two pages set `document.domain`, they can pretend as if they
+are the same-origin. This is particularly critical when these pages use a shared
+hosting service with different subdomains. Setting `document.domain` opens up
+access to all other sites hosted by that same service, which makes it easier for
+attackers to access your sites. This is possible because `document.domain`
+ignores the port number part of the domain.
 
 To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
