@@ -20,11 +20,11 @@ data.
 An extension's architecture will depend on its functionality, but all extensions are required to have a
 [manifest][section-manifest]. The following are other components an extension can include: 
 
-- [Background Script][section-bg]
+- [Background service worker][section-bg]
 - [Toolbar icon][section-icons]
-- [UI Elements][section-ui]
-- [Content Script][section-cs]
-- [Options Page][section-options]
+- [UI elements][section-ui]
+- [Content acript][section-cs]
+- [Options page][section-options]
 
 ### The manifest {: #manifest }
 
