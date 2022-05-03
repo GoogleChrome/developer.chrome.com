@@ -139,7 +139,7 @@ const myPlugin = {
     // Can report any data here.
   },
   handlerDidError: async ({request, event, error, state}) => {
-    // Return a `Response` to use a fallback, or `null`.
+    // Return a `Response` to use as a fallback, or `null`.
     return fallbackResponse;
   },
 };
