@@ -14,6 +14,8 @@ tags:
   - capabilities
 ---
 
+## Motivation
+
 The Capabilities Project (code name [Project Fugu](/blog/fugu-status/)) is a cross-company effort with
 the objective of making it possible for web apps to do anything platform-specific apps can. We
 enable amazing web applications like [Photoshop](https://web.dev/ps-on-the-web/) by exposing the capabilities of
@@ -33,6 +35,8 @@ browsers, you can share any of the listed apps via the **Share app** feature. As
 Easter egg, the Project Fugu API Showcase is of course
 <a href="https://tomayac.github.io/fugu-showcase/data/#tomayac.github.io!fugu-showcase!data" target="showcase">contained
 in the Project Fugu API Showcase</a>. Happy browsing!
+
+## Showcase
 
 <div class="showcase-container" style="height: 100%; width: 100%">
   <noscript>
