@@ -211,7 +211,7 @@ on third-parties.
 *  **Origin trial**:
    [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
    to opt-in for the reduced user-agent, and
-   [share your feedback](https://github.com/abeyad/user-agent-reduction/issues).
+   [share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).
