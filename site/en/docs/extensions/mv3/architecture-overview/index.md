@@ -12,12 +12,12 @@ platform. Extensions can modify web content that users see and interact with. Th
 and change the behavior of the browser itself. 
 
 This page briefly describes the files that could form part of an extension, how to access these
-files, how to use Chrome APIs, how extension files communicate and how to store
+files, how to use Chrome APIs, how extension files communicate, and how to store
 data.
 
 ## Architecture {: #arch }
 
-An extension's architecture will depend on its functionality, but they are all required to have a
+An extension's architecture will depend on its functionality, but all extensions are required to have a
 [manifest][section-manifest]. The following are other components an extension can include: 
 
 - [Background Script][section-bg]
@@ -58,11 +58,11 @@ as the most important files and the capabilities the extension might use.
 
 Extensions must have an icon that sits in the browser toolbar. Toolbar icons allow easy access and
 keep users aware of which extensions are installed. Most users will interact with an extension that
-uses a [popup][docs-popup] by clicking on the icon, like in the [Getting Started
+uses a [popup][docs-popup] by clicking the icon, like in the [getting started
 example][sample-getting-started].
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started
-Popup", width="187", height="153" %}
+popup", width="187", height="153" %}
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
 ### Background service worker {: #background_script }
@@ -73,7 +73,7 @@ the instructed logic; it is only loaded when it is needed and unloaded when it g
 background script has access to all the [Chrome APIs][section-apis], as long it declares the
 required permissions in the `manifest.json`.
 
-See [Manage events with Service Workers][docs-service-worker] to learn more. 
+See [Manage events with service workers][docs-service-worker] to learn more. 
 
 ### Content scripts {: #contentScripts }
 
@@ -87,7 +87,7 @@ and storing values using the [storage][api-storage] API.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png", alt="Shows a communication
 path between the content script and the parent extension", height="316", width="388" %}
 
-See [Understanding Content scripts][docs-content-scripts] to learn more.
+See [Understanding content scripts][docs-content-scripts] to learn more.
 
 ### UI elements {: #pages }
 
@@ -122,9 +122,9 @@ extension toolbar. The following is an example of the Google Dictionary extensio
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", 
-alt="Options page link in UI", width="800", height="299" %}
+alt="Options page link in the UI", width="800", height="299" %}
   <figcaption>
-    Link to Options page.
+    Link to the Options page.
   </figcaption>
 </figure>
 
@@ -137,7 +137,7 @@ alt="Options page link in UI", width="800", height="299" %}
 alt="Context Menu Options page", width="357", height="222" %}
 
   <figcaption>
-    Options page in extension's context menu.
+    Options page in the extension's context menu.
   </figcaption>
 </figure>
 
@@ -153,8 +153,8 @@ You can display other HTML files present in the extension that are not declared 
 These HTML files can access the same [Chrome APIs][section-apis] as the popup or other extension
 files. 
 
-You can open these pages using the web api [window.open()][mdn-window-open] or the Chrome APIs
-[windows.create()][api-window-create] or [tabs.create()][api-create-tab].
+You can open these pages using the web api [window.open()][mdn-window-open], the Chrome APIs
+[windows.create()][api-window-create], or [tabs.create()][api-create-tab].
 
 ## Extension files {: #files }
 <!-- TODO: Intro -->
@@ -167,7 +167,7 @@ pages** can also reference extension assets using relative paths.
 <img src="images/my_image.png">
 ```
 
-To access an extension file from a **content script**, you can
+To access an extension file from a **content script**, you can call
 [`chrome.runtime.getURL()`][api-get-url] to get the _absolute URL_ of your extension asset.
 
 ``` js
@@ -206,7 +206,7 @@ All assets that content scripts and websites want to access must be declared as 
 ### Web accesible resources {: #web-resources }
 
 Web-accessible resources are files (images, HTML, CSS, Javascript) inside an extension that can be
-accessed by a content script, web pages or other extensions. 
+accessed by a content script, web pages, or other extensions. 
 
 In Manifest Version 3, you can declare which resources are exposed and to what origins in the
 manifest:
@@ -298,7 +298,8 @@ checking its API reference page.
 
 ```js
 // Promise
-chrome.tabs.query(queryOptions).then((tabs) => {
+chrome.tabs.query(queryOptions)
+.then((tabs) => {
   chrome.tabs.update(tabs[0].id, {url: newUrl});
   someOtherFunction();
 });
@@ -331,7 +332,7 @@ the same channel.
 ## Saving data {: #data}
 
 The chrome storage API has been optimized to meet the specific storage needs of extensions. For
-example, whenever data is updated, you can use the onChanged() event to track these changes. All
+example, whenever data is updated, you can use the `onChanged()` event to track these changes. All
 extension components have access to this API. An extension can also store data using the web API
 [indexedDB][mdn-indexeddb].
 
@@ -348,13 +349,13 @@ See [Saving data in incognito mode][incognito-data] to understand how to protect
 
 ## Take the next step {: #next-steps }
 
-After reading the overview and completing the [Getting Started][docs-get-started] tutorial, you
+After reading the overview and completing the [Getting started][docs-get-started] tutorial, you
 should be ready to start writing your own extensions! Dive deeper into the world of custom Chrome
 with the following resources:
 
-- Learn about how to debug Extensions in the [debugging tutorial][docs-debugging].
+- Learn how to debug Extensions in the [debugging tutorial][docs-debugging].
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [chrome.\* APIs documentation][api-reference] will walk through each API.
+  The [chrome APIs documentation][api-reference] will walk through each API.
 - The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
 

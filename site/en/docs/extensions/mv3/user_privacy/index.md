@@ -120,7 +120,7 @@ history, don't save history from incognito windows. However, extensions can stor
 preferences from any window, incognito or not.
 
 To detect whether a window is in incognito mode, check the `incognito` property of the relevant
-[tabs.Tab][api-tab] or [windows.Window][api-window] object.
+[`tabs.Tab`][api-tab] or [`windows.Window`][api-window] object.
 
 ```js
 function saveTabData(tab) {
