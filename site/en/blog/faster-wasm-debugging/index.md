@@ -15,7 +15,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-At [Chrome Dev Summit 2020](https://developer.chrome.com/blog/wasm-debugging-2020), we demoed [Chrome's debugging support for WebAssembly applications](https://youtu.be/VBMHswhun-s) on the web for the first time. Since then, the team has invested a lot of energy into making the developer experience scale for large and even huge applications. In this post we will show you the knobs we added (or made work) in the different tools and how to use them!
+At [Chrome Dev Summit 2020](/blog/wasm-debugging-2020), we demoed [Chrome's debugging support for WebAssembly applications](https://youtu.be/VBMHswhun-s) on the web for the first time. Since then, the team has invested a lot of energy into making the developer experience scale for large and even huge applications. In this post we will show you the knobs we added (or made work) in the different tools and how to use them!
 
 
 ## Scalable debugging
