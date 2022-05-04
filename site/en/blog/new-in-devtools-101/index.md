@@ -6,15 +6,13 @@ authors:
 date: 2022-04-12
 updated: 2022-04-12
 description: "Import and export user flow as JSON, support hwb() colors, view cascade layers in the Styles pane and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mPXyPxgzu9PAoAgctnn1.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B5K95d3OAmyytzJVCyr1.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-101
 ---
-
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B5K95d3OAmyytzJVCyr1.jpg -->
 
 {% include 'partials/devtools/en/banner.md' %}
 
