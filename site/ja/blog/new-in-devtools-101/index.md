@@ -12,7 +12,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-101
-draft: true
 ---
 
 *翻訳者の [lacolaco](https://github.com/lacolaco) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [yoichiro](https://github.com/yoichiro) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
