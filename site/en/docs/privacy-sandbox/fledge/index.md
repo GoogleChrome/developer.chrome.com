@@ -153,12 +153,12 @@ You can block access to the FLEDGE API either as a site owner, or as an individu
 
 ### How can sites control access? {: #opt-out-site}
 
-FLEDGE will eventually require sites to set permissions policy to allow FLEDGE functionality to be
-available. This will help ensure that arbitrary third parties can't use the API without a site's
+FLEDGE will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to allow FLEDGE functionality to be available. This will help ensure that arbitrary third parties can't use the API without a site's
 knowledge. However, to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
-this requirement is being [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
+this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
 Sites that would like to explicitly disable FLEDGE functionality during the testing period can use
-the relevant permissions policy to block access.
+the relevant Permissions Policy to block access.
 
 There are two FLEDGE permissions policies that can be set independently:
 * `join-ad-interest-group` enables/disables functionality to add a browser to interest groups
@@ -171,14 +171,14 @@ permissions policy in an HTTP response header:
 Permissions-Policy: join-ad-interest-group=(), run-ad-auction=()
 ```
 
-Usage of the APIs in an  iframe can be disabled by adding the following `allow` attribute to an
+You can disable usage of the APIs in an iframe by adding the following `allow` attribute to an
 iframe element:
 
 ``` html
 <iframe src="https://example.com" allow="join-ad-interest-group 'none'; run-ad-auction 'none'"></iframe>
 ```
 
-The Proposed First FLEDGE Origin Trial [Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy) section provides more detail.one
+The [Proposed First FLEDGE Origin Trial Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy) section provides more detail.
 
 ### User opt-out {: #opt-out-user}
 
