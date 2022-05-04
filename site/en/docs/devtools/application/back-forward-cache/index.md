@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Test back/forward caching"
+title: "Test back/forward cache"
 authors:
   - sofiayem
 date: 2022-05-04
@@ -35,17 +35,25 @@ To test back/forward cache, follow these steps:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rbo260mBWwD4MieKEJIn.png", alt="Back/forward cache tab", width="800", height="405" %}
 
 1. Click **Test back/forward cache**. Chrome automatically takes you to `chrome://terms/` and back to your page.
+    
+    Alternatively, you can click the browser's back and forward buttons.
 
-    If the back/forward cache works for your page with no issues, you'll see the `Successfully served from back/forward cache.` message:
+If the back/forward cache works for your page with no issues, you'll see the following message:
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kf5vmtKRZpe4SMV4Gp8G.png", alt="Successfully served from back/forward cache", width="800", height="405" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kf5vmtKRZpe4SMV4Gp8G.png", alt="Successfully served from back/forward cache", width="800", height="405" %}
 
-   Otherwise, you'll see a list of issues explained in the next section.
+Otherwise, you'll see a list of issues explained in the next section.
 
 ## Identify and resolve issues that may prevent caching {: #identify-issues }
 
+If your page isn't eligible for back/forward caching, the **Back/forward cache** tab shows you a list with three types of causes:
 
+<div class="elevation--2" style="margin-top: 20px; margin-bottom: 20px;">
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NJA0g2CuAfmihkuOomyQ.png", alt="Not eligible for back/forward cache", width="800", height="583" %}</div>
 
+- **Actionable**. You can fix these issues to enable caching. For example, [stop using `unload` events](https://web.dev/bfcache/#never-use-the-unload-event).
+- **Pending Support**. Chrome doesn't support these features yet, so they prevent caching. However, once supported, Chrome removes these limitations.
+- **Not Actionable**. You can't fix these issues on this page. Something that is outside the page's control prevents caching.
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/API/Cache
