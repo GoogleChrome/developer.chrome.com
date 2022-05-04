@@ -60,7 +60,7 @@ Also for Web USB, a fix to support [`SameObject`] for related attributes within 
 
 Dedicated workers loaded from a secure (HTTPS) origin, yet instantiated by insecure (non-HTTPS) contexts, are no longer considered secure. This means that inside such worker contexts:
 - `self.isSecureContext` is now `false`.
-- `self.caches` and `self.storageFoundation` are no longer available
+- `self.caches` and `self.storageFoundation` are no longer available.
 
 The [`popup`](https://developer.mozilla.org/docs/Web/API/Window/open#popup) argument for `window.open()` now evaluates to `true`, following a recent change to the spec for parsing this argument. Previously, when `popup` was set equal to true, `window.open()` was interpreted to mean `false`. This change makes boolean features easier to use and understand.
 
