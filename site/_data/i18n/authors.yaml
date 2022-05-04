@@ -785,3 +785,8 @@ emmatwersky:
     en: 'Emma Twersky'
   description:
     en: 'Developer Relations Engineer, Google'
+pfaffe:
+  title:
+    en: 'Philip Pfaffe'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
