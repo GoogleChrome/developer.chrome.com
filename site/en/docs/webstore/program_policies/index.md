@@ -448,7 +448,7 @@ criteria are met:
 - There is clear attribution of the ads' sources wherever those ads appear.
 - The ads do not interfere with any native ads or functionality of the website.
 - The ads do not mimic or impersonate the native ads or content on the third-party website, and
-  the ads adhere to the content policy on [impersonation and deceptive behavior][19].
+  the ads adhere to the content policy on [impersonation and deceptive behavior][section-impersonation].
 
 {% Aside %}
 

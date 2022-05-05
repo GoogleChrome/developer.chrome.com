@@ -19,6 +19,7 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 {% include 'partials/devtools/es/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
+
 <!-- ## Import and export recorded user flows as a JSON file {: #recorder } -->
 ## Importar y exportar como JSON flujos de usuario grabados {: #recorder }
 
