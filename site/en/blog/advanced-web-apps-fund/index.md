@@ -30,7 +30,7 @@ Anything that improves the web as a platform for advanced apps is in scope. We d
 
 ## Requirements
 
-Anyone can apply, but you need an Open Collective account. You can apply for a project you own or nominate a project that you think deserves support. If you don't own the project, you'll need to ensure that the project’s core maintainers would be willing to accept the code changes you’re seeking funding for, as a prerequisite for sponsorship being approved.
+Anyone can apply, but you need an [Open Collective](https://opencollective.com/) account. You can apply for a project you own or nominate a project that you think deserves support. If you don't own the project, you'll need to ensure that the project’s core maintainers would be willing to accept the code changes you’re seeking funding for, as a prerequisite for sponsorship being approved.
 
 ## How to apply
 
