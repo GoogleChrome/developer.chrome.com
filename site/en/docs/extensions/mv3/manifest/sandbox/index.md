@@ -44,7 +44,7 @@ You can specify your CSP value to restrict the sandbox even further, but it MUST
 `sandbox` directive and MUST NOT have the `allow-same-origin` token (see [the HTML5
 specification][3] for possible sandbox tokens).
 
-Note that you only need to list pages that you expected to be loaded in windows or frames. Resources
+Note that you only need to list pages that you expect to be loaded in windows or frames. Resources
 used by sandboxed pages (e.g. stylesheets or JavaScript source files) do not need to appear in the
 `pages` list because they will use the sandbox of the frame that embeds them.
 
