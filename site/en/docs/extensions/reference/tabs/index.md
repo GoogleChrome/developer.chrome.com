@@ -64,7 +64,8 @@ scripts cannot use `tabs.query`.
 //// background.js
 
 async function getCurrentTab() {
-  let queryOptions = { active: true, currentWindow: true };
+  let queryOptions = { active: true, lastFocusedWindow: true };
+  // tab will either be a Tab instance or undefined
   let [tab] = await chrome.tabs.query(queryOptions);
   return tab;
 }
