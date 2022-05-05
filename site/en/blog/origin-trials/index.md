@@ -78,8 +78,9 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
 You can register for the same origin trial multiple times, for different origins, and include 
 multiple tokens in the same page if necessary. This can be useful if you need to provide tokens 
 that are valid for resources served from different origins, such as code included on multiple 
-sites that you own. The origin trials framework looks for the first valid token and ignores 
-other tokens. You can validate this from Chrome DevTools.
+sites that you own. The origin trials framework looks for the first valid token and then
+ignores all other tokens. You can validate this
+[from Chrome DevTools](/blog/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
 
 ### Provide a token programmatically {: #programmatic}
 
