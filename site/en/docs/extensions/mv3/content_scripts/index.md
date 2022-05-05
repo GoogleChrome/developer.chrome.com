@@ -42,9 +42,9 @@ Content scripts are unable to access other APIs directly.
 Content scripts live in an isolated world, allowing a content script to make changes to its
 JavaScript environment without conflicting with the page or other extensions' content scripts.
 
-{% Aside %}
+{% Aside 'key-term' %}
 
-An *isolated world* is a private execution environment that isn't accessible to the page or other
+An **isolated world** is a private execution environment that isn't accessible to the page or other
 extensions. A practical consequence of this isolation is that JavaScript variables in an extension's
 content scripts are not visible to the host page or other extensions' content scripts. The concept
 was originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
