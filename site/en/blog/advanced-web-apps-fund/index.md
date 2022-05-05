@@ -10,7 +10,7 @@ subhead: >
   Announcing the Advanced Web Apps Fund, supporting those who make the web more powerful.
 description: >
   Announcing the Advanced Web Apps Fund, supporting those who make the web more powerful.
-date: 2022-05-31
+date: 2022-05-09
 tags:
   - performance
   - capabilities
