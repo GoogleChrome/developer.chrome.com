@@ -16,10 +16,10 @@ Store that is already familiar to your users.
 For apps built using [Trusted Web Activities][2], and delivered through the Google Play Store, you
 can now use the [Payment Request API][3] and the new [Digital Goods API][4] to integrate with
 Google Play Billing. It's available as an [origin trial][5] in Chrome 88 for Android, and we expect
-it to expand the origin trial to Chrome OS in version 89.
+it to expand the origin trial to ChromeOS in version 89.
 
 In this guide, you will learn how to add Google Play Billing support to your PWA and package it for
-distribution on the Google Play Store for both Chrome OS and Play Store.
+distribution on the Google Play Store for both ChromeOS and Play Store.
 
 You will use two web platform APIs to add Play Billing support to your PWA. The
 [Digital Goods API][4] is used to gather SKU information and check for purchases and entitlements
@@ -81,8 +81,8 @@ feature:
   "features": {
     "playBilling": {
       "enabled": true
-    }   
-  },  
+    }
+  },
   "alphaDependencies": {
     "enabled": true
   },
@@ -129,7 +129,7 @@ if ('getDigitalGoodsService' in window) {
 The Digital Goods API provides `getDetails()`, which allows retrieving the information like the
 product title, description, and most importantly, the price, from the payments backend.
 
-You can then use this information in your use interface and provide more details to the user: 
+You can then use this information in your use interface and provide more details to the user:
 
 ```js
 const skuDetails = await itemService.getDetails(['shiny_sword', 'gem']);
@@ -189,7 +189,7 @@ const request = new PaymentRequest(paymentMethods, paymentDetails);
 ```
 
 Call the `show()` on the payment request object to start the payment flow. If the Promise succeeds
-that will may be payment was successful. If it fails, the user likely aborted the payment. 
+that will may be payment was successful. If it fails, the user likely aborted the payment.
 
 If the promise succeeds, you will need to verify the purchase in order to protect against fraud.
 Due to the sensitivity of the data, this step must be implemented using your backend. Check out the
@@ -332,7 +332,7 @@ without enabling the Origin Trial:
  - Ensure you are on Android 9 or greater with [developer mode enabled][23].
  - Install Chrome 88 or above.
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
-   flag by name:  
+   flag by name:
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
      - `#enable-debug-for-store-billing`
@@ -341,14 +341,14 @@ without enabling the Origin Trial:
 Note: The `#enable-debug-for-store-billing` flag is not required when the application is downloaded
 from the Play Store.
 
-### On a Chrome OS device
+### On a ChromeOS device
 
-The Digital Goods API will be available on Chrome OS stable starting with version 89. In the
+The Digital Goods API will be available on ChromeOS stable starting with version 89. In the
 meantime, it is possible to test the Digital Goods API:
 
- - Enable the [Chrome OS dev channel][24], 
+ - Enable the [ChromeOS dev channel][24],
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
-   flag by name: 
+   flag by name:
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
  - Install your app from the Play Store on the device.
@@ -357,7 +357,7 @@ meantime, it is possible to test the Digital Goods API:
 ## With test users and QA teams
 
 In order to test with a broader audience, you will need to sign-up for the Origin Trial, as asking
-every user to enable the Chrome flags is not practical. 
+every user to enable the Chrome flags is not practical.
 
 The Play Store also provides affordances for testing, including user test accounts and test SKUs.
 Checkout the [Google Play Billing test documentation][25] for more information.
@@ -377,7 +377,7 @@ by the Digital Goods API, and server-side components.
  backend is notified  when the state of a subscription changes instead of polling their status on
  Play.
  - Implement `linkedPurchaseToken` to prevent duplicate subscriptions. Read [this blogpost][31] on
- how to implement it correctly. 
+ how to implement it correctly.
 
 [1]: https://developer.android.com/google/play/billing
 [2]: /docs/android/trusted-web-activity/

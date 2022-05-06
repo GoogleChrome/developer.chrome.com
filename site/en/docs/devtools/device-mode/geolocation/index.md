@@ -6,6 +6,9 @@ authors:
 date: 2018-12-18
 #updated: YYYY-MM-DD
 description: "Open the Sensors tab and select coordinates from the Geolocation list."
+tags:
+  - emulate
+  - test
 ---
 
 Many websites take advantage of [user location][1] in order to provide a more relevant experience
@@ -17,7 +20,7 @@ make sure that the site behaves correctly in different places around the world. 
 geolocation in Chrome DevTools:
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the
     **Command Menu**.
 
     {% Img src="image/admin/Ok1tHKMMQkTppz0aYqjk.png", alt="The Command Menu.", width="800", height="632" %}

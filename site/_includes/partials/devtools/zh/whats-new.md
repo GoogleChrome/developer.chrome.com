@@ -2,18 +2,38 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 99 {: #chrome99 }
+<!-- ### Chrome 101 {: #chrome101 }
 
-* [Throttling WebSocket requests](/zh/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/zh/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/zh/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/zh/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/zh/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/zh/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/zh/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/zh/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/zh/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-99/#misc) -->
+* [Import and export recorded user flows as a JSON file](/zh/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/zh/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/zh/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/zh/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-101/#lighthouse) -->
+
+### Chrome 100 {: #chrome100 }
+
+* [在样式边栏中查看并修改](/zh/blog/new-in-devtools-100/#supports)
+* [默认支持常用选择器](/zh/blog/new-in-devtools-100/#selector)
+* [自定义一段录制内容的选择器](/zh/blog/new-in-devtools-100/#customize-selector)
+* [重命名一段录制内容](/zh/blog/new-in-devtools-100/#recorder-rename)
+* [在悬停时预览类/函数属性](/zh/blog/new-in-devtools-100/#properties)
+* [性能面板中的部分呈现帧](/zh/blog/new-in-devtools-100/#perf)
+* [其他的更新](/zh/blog/new-in-devtools-100/#misc)
+
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocket 请求限速](/zh/blog/new-in-devtools-99/#websocket)
+* [应用面板里面的 报告 API （Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
+* [支持 Recorder 面板一直处于等待状态，直到元素可见或可点击](/zh/blog/new-in-devtools-99/#recorder)
+* [更好的控制台样式，格式化和过滤](/zh/blog/new-in-devtools-99/#console)
+* [使用 sourcemap 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
+* [优化 Sources 面板里面源文件夹树的显示问题](/zh/blog/new-in-devtools-99/#source-tree)
+* [Sources 面板里面显示 Worker 源文件](/zh/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome 自动深色模式的更新](/zh/blog/new-in-devtools-99/#auto-dark-mode)
+* [颜色选择器和分割面板支持触摸](/zh/blog/new-in-devtools-99/#touch-friendly)
+* [其他的更新](/zh/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }
@@ -29,7 +49,7 @@
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
-* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
+* [[实验] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }

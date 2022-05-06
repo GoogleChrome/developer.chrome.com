@@ -6,6 +6,10 @@ date: 2019-03-01
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
+tags:
+  - get-started
+  - prototype-fixes
+  - html
 ---
 
 Complete these interactive tutorials to learn the basics of viewing and

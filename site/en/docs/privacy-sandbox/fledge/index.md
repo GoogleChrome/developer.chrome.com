@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-01-31
+updated: 2022-05-03
 authors:
   - samdutton
 ---
@@ -25,8 +25,8 @@ much technical detail.
 such as [advertiser](#advertiser) and [publisher](#publisher). [How does FLEDGE work?](#how) should
 still be useful.
 
-* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api) provides more
-in-depth technical detail about the proposal.
+* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api)
+provides more in-depth technical detail about the proposal.
 
 * [The FLEDGE demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE
 deployment.
@@ -38,9 +38,7 @@ about how to [engage and share feedback](#engage).
 {% endAside %}
 
 
-{: #what}
-
-## What is FLEDGE?
+## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](#remarketing) and custom audience use cases, designed so that it cannot be used by
@@ -55,9 +53,7 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 information for FLEDGE and other Privacy Sandbox proposals.
 
 
-{: #overview}
-
-## FLEDGE in one minute
+## FLEDGE in one minute {: #overview}
 
 <br>
 
@@ -117,31 +113,24 @@ To report the auction outcome, the seller's code can include a `reportResult()` 
 buyer's code can include a `reportWin()` function.
 
 
-{: #try-fledge}
+## How can I try FLEDGE? {: #try-fledge}
 
-## How can I try FLEDGE?
+* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to take part in the
+Privacy Sandbox Relevance and Measurement origin trial and how to try out FLEDGE for a single user
+by setting Chrome flags.
 
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
-deployment across a shopping, travel and publisher site.
+deployment across advertiser and publisher sites.
 
-* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out
-FLEDGE by running Chrome from the command line using
-[feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to manually
-enable the API.
+* [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
-{% Aside %}
+{% YouTube
+  id='znDD0gkdJyM'
+%}
 
-Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
-under discussion.
 
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the trial and what features are proposed for support.
-
-{% endAside %}
-
-{: #user-controls}
-
-## What browser configuration is available?
+## What browser configuration is available? {: #user-controls}
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
 the top-level setting in chrome://settings/privacySandbox.  During initial testing, people will be
@@ -158,9 +147,55 @@ API callers can't access group membership when users browse in Incognito mode, a
 removed when users clear their site data.
 
 
-{: #why}
+## How can I opt out of FLEDGE? {: #opt-out}
 
-## Why do we need FLEDGE?
+You can block access to the FLEDGE API either as a site owner, or as an individual user.
+
+### How can sites control access? {: #opt-out-site}
+
+FLEDGE will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to allow FLEDGE functionality to be available. This will help ensure that arbitrary third parties can't use the API without a site's
+knowledge. However, to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
+this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
+Sites that would like to explicitly disable FLEDGE functionality during the testing period can use
+the relevant Permissions Policy to block access.
+
+There are two FLEDGE permissions policies that can be set independently:
+* `join-ad-interest-group` enables/disables functionality to add a browser to interest groups
+* `run-ad-auction` enables/disables functionality to run an on-device auction
+
+Access to FLEDGE APIs can be disabled completely in first-party contexts by specifying the following
+permissions policy in an HTTP response header:
+
+``` text
+Permissions-Policy: join-ad-interest-group=(), run-ad-auction=()
+```
+
+You can disable usage of the APIs in an iframe by adding the following `allow` attribute to an
+iframe element:
+
+``` html
+<iframe src="https://example.com" allow="join-ad-interest-group 'none'; run-ad-auction 'none'"></iframe>
+```
+
+The [Proposed First FLEDGE Origin Trial Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy) section provides more detail.
+
+### User opt-out {: #opt-out-user}
+
+A user can block access to the FLEDGE API and other Privacy Sandbox features by using any of the
+following mechanisms:
+
+*  **Disable the Privacy Sandbox trials** in Chrome Settings: **Settings** >
+    **Security and privacy** > **Privacy Sandbox**. This is also accessible at `chrome://settings/privacySandbox`.
+* **Disable third-party cookies** in Chrome Settings: **Settings** > **Security and privacy**.
+* Set **Cookies and other site data** to either "Block third-party cookies" or "Block all cookies"
+  from `chrome://settings/cookies`.
+* Use Incognito mode.
+
+The FLEDGE explainer provides [more detail about API design elements](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements) and describes how the API seeks to meet [privacy goals](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=privacy%20goal).
+
+
+## Why do we need FLEDGE? {: #why}
 
 Understanding user interests can enable more relevant ads than simply choosing ads based on site
 content (contextual targeting) or by using information that the user provided to the site on which
@@ -181,17 +216,16 @@ of the FLEDGE API currently being tested in Chrome. The [FLEDGE API developer gu
 explains what FLEDGE features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
-We expect the features of FLEDGE will be added over time as work on implementation continues. Once
-the API reaches the origin trial stage, we'll provide a regularly-updated list of which parts are
-already implemented and what's still in progress.
+We expect the features of FLEDGE will be added over time as work on implementation continues. During
+the origin trial stage, we'll regularly update a list of which features are already
+implemented and what's still in progress.
 
 {% endAside %}
 
 <br>
 
-{: #how}
 
-## How does FLEDGE work?
+## How does FLEDGE work? {: #how}
 
 Here's an example of how a user's interest groups inform ad selection as the user visits different
 sites.
@@ -212,9 +246,8 @@ bike maker with a [remarketing](#remarketing) opportunity.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-{: #joinAdInterestGroup}
 
-### 2. The user's browser is asked to add an interest group
+### 2. The user's browser is asked to add an interest group {: #joinAdInterestGroup}
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png",
   alt="Illustration showing a person viewing a site in a browser on their laptop. JavaScript
@@ -330,6 +363,7 @@ see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/F
 
 {% DetailsSummary %}
 ## What is an interest group?
+
 {% endDetailsSummary %}
 
 A FLEDGE interest group represents a group of people with a common interest, corresponding to a
@@ -411,6 +445,7 @@ The table below provides examples of different types of FLEDGE interest group an
 
 {% DetailsSummary %}
 ## What is a buyer?
+
 {% endDetailsSummary %}
 
 In FLEDGE, a party that owns an [interest group](#interest-group) and bids in an ad [auction](#).
@@ -449,6 +484,7 @@ The buyer's code can also include a `reportWin()` function to report the auction
 
 {% DetailsSummary %}
 ## Who runs an ad auction?
+
 {% endDetailsSummary %}
 
 There are multiple parties that might run an auction to sell ad space.
@@ -477,6 +513,7 @@ auction by calling the JavaScript function `navigator.runAdAuction()`.
 
 {% DetailsSummary %}
 ## How does a FLEDGE ad auction work?
+
 {% endDetailsSummary %}
 
 <br>
@@ -535,8 +572,8 @@ The `navigator.runAdAuction()` code (from step 2) must include a `scoreAd()` fun
 once for each ad and accompanying bid, to determine its desirability. The `scoreAd()` function is
 run for every candidate ad, in the auction logic JavaScript code provided by the seller. This
 function uses the bid value and other data returned by the `generateBid()` function in each buyer's
-code (in the previous step). The seller may also receive realtime data from its [trusted server]
-(#trusted-server).
+code (in the previous step). The seller may also receive realtime data from its
+[trusted server](#trusted-server).
 
 For each ad, the `scoreAd()` function returns a number indicating its desirability. The most
 desirable ad is the winner. Before an auction starts, the seller finds the best contextual ad for
@@ -571,6 +608,7 @@ A reporting mechanism for losing bidders is [under discussion](https://github.co
 
 {% DetailsSummary %}
 ## What is a trusted server?
+
 {% endDetailsSummary %}
 
 In the context of the Privacy Sandbox, a trusted server is a secure environment to enable access to
@@ -592,6 +630,7 @@ or [secure enclaves](https://support.apple.com/en-gb/guide/security/sec59b0b31ff
 
 {% DetailsSummary %}
 ## How is realtime data incorporated into auctions?
+
 {% endDetailsSummary %}
 
 The [buyers](#buyer-detail) or [seller](#seller-detail) in an ad auction may need access to realtime
@@ -621,6 +660,7 @@ model.
 
 {% DetailsSummary %}
 ## Glossary
+
 {% endDetailsSummary %}
 
 {: #ad-auction}
@@ -776,15 +816,16 @@ JavaScript function.
 -  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
-
 ## Find out more
 
 -  [FLEDGE API developer guide](/blog/fledge-api): reference guide to API usage.
 -  [FLEDGE demo](https://fledge-demo.glitch.me): walkthrough of a basic FLEDGE deployment.
+-  [The FLEDGE demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
+explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 -  [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
----
+<hr />
 
-Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/photos/GL6ORxDMswI).
+_Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/)._

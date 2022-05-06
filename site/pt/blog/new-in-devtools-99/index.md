@@ -19,6 +19,8 @@ tags:
 
 {% include 'partials/devtools/pt/banner.md' %}
 
+{% YouTube id='zFVWeOKZBHs' %}
+
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
 <!-- 2. Provide translations under each of the English commented original content -->
@@ -120,7 +122,7 @@ Issue relacionada: [1068788](https://crbug.com/1068788)
 
 
 <!-- ## Sourcemaps improvements {: #sourcemap } -->
- ## Melhorias nos sourcemaps {: #sourcemap }
+## Melhorias nos sourcemaps {: #sourcemap }
 <!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
 ### Depuração de extensões do Chrome com arquivos de sourcemap  {: #extension }
 <!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
@@ -158,11 +160,11 @@ Issue relacionada: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
-# Atualizações do Tema Escuro Automático do Chrome {: #auto-dark-mode }
+## Atualizações do Tema Escuro Automático do Chrome {: #auto-dark-mode }
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 A interface do [Tema Escuro Automático (Auto Dark Theme)](/blog/new-in-devtools-96/#auto-dark-mode) agora está simplificada. Agora é uma caixa de seleção, anteriormente era uma lista suspensa.
 
-<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically. -->
+<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
 Além disso, quando o [Auto Dark Theme](/blog/auto-dark-theme/) estiver ativado, o menu suspenso **Emular prefers-color-scheme** será desativado e definido como **prefers-color-scheme: escuro** automaticamente.
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->

@@ -33,7 +33,7 @@ Managing extension lifecycle and options
 
 Device restart support
 
-: These methods are available only on Chrome OS, and exist mainly to support kiosk implementations.
+: These methods are available only on ChromeOS, and exist mainly to support kiosk implementations.
   Methods in this category include
   [restart](/docs/extensions/reference/runtime/#method-restart) and
   [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).

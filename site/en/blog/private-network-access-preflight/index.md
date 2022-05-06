@@ -6,13 +6,20 @@ authors:
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-02-11
+updated: 2022-04-27
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
+  - chrome-102
   - security
 ---
+
+**Updates**
+
+- **April 27, 2022**: Updated timeline announcement.
+- **March 7, 2022**: Announced rollback after issues were discovered in
+  Chrome 98.
 
 ## Introduction
 
@@ -38,15 +45,16 @@ allowing attackers to redirect them to malicious servers.
 Chrome will roll this change out in two phases to give websites time to notice
 the change and adjust accordingly.
 
-1. In Chrome 98:
-    * Chrome sends preflight requests ahead of private network subresource
+1. In Chrome 102:
+    * Chrome experiments by sending preflight requests ahead of private network
+      subresource
       requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
     * Chrome gathers compatibility data and reaches out to the largest
       affected websites.
     * We expect this to be broadly compatible with existing websites.
-1. In Chrome 101 at the earliest:
+1. In Chrome 105 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing
@@ -55,6 +63,13 @@ the change and adjust accordingly.
       the same time to allow for websites affected by this phase to request a
       time extension. The trial will last for at least 6 months.
 
+{% Aside %}
+An earlier attempt was made to roll out warnings in Chrome 98, previously
+announced by this blog post. This was rolled back after stability and
+compatibility issues were discovered during the rollout.
+
+The identified issues were fixed for Chrome 102.
+{% endAside %}
 
 ## What is Private Network Access (PNA)
 
@@ -239,7 +254,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ## How to know if your website is affected
 
-Starting in Chrome 98, if a private network request is detected, a preflight
+Starting in Chrome 102, if a private network request is detected, a preflight
 request will be sent ahead of it. If this preflight request fails, the final
 request will still be sent, but a warning will be surfaced in the DevTools
 issues panel.
@@ -263,6 +278,18 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
    width="800", height="265"
 %}
 
+If your request would have triggered a regular CORS preflight without
+Private Network Access rules, then two preflights may appear in the
+network panel, with the first one always appearing to have failed. This is a
+[known bug](https://crbug.com/1290390), and you can safely ignore it.
+
+{% Img
+   src="image/I8XwjL2ZK8fUPQRJMwrRzjyKAar1/MaBNk7572rWNybez1FHH.png",
+   alt="A spurious failed preflight request ahead of a successful preflight in
+   the DevTools Network panel.",
+   width="800", height="316"
+%}
+
 To review what happens if preflight success was enforced, you can
 [pass the following command-line argument](https://www.chromium.org/developers/how-tos/run-chromium-with-flags),
 starting in Chrome 98:
@@ -278,7 +305,7 @@ the same way as warnings using the DevTools panels mentioned above.
 
 ## What to do if your website is affected
 
-When this change rolls out in Chrome 98, it is not expected to break any
+When this change rolls out in Chrome 102, it is not expected to break any
 website. However, we strongly encourage you to update affected request paths to
 ensure your website keeps running as expected.
 
@@ -336,10 +363,10 @@ the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess`.
 Next up, Chrome will extend Private Network Access checks to cover
 [web workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API):
 dedicated workers, shared workers and service workers. We're tentatively aiming
-for Chrome 100 to begin showing warnings.
+for Chrome 104 to begin showing warnings.
 
 Then, Chrome will extend Private Network Access checks to cover navigations,
-including iframes and popups. We're tentatively aiming for Chrome 102 to start
+including iframes and popups. We're tentatively aiming for Chrome 105 to start
 showing warnings.
 
 In both cases, we will be proceeding cautiously with a similar phased rollout,

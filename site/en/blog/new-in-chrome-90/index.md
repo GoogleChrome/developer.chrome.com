@@ -86,8 +86,7 @@ that works similarly to `hidden`.
 Using `overflow: clip` makes it possible for you to prevent any type of
 scrolling for the box, including programmatic scrolling. That means the box
 is not considered a scroll container; it does not start a new formatting
-context, which gives it better performance than `overflow: hidden`. And if
-you need it, you can apply clipping to a single axis via `overflow-x`
+context. If you need it, you can apply clipping to a single axis via `overflow-x`
 and `overflow-y`.
 
 Oh, and FYI - there's also `overflow-clip-margin`, which allows you to expand
@@ -126,7 +125,7 @@ preselected rules, the browser overrides the behavior with better UX or
 just says, "talk to the hand," blocking the API altogether.
 
 Starting in Chrome 90, the Feature Policy API will be renamed
-Permissions Policy, and the HTTP header has been renamed along with it. At
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/), and the HTTP header has been renamed along with it. At
 the same time, the community has settled on a new syntax, based on Structured
 Field Values for HTTP.
 

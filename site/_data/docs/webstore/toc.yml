@@ -30,6 +30,7 @@
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
     - url: /docs/webstore/cws-enterprise/
+- url: /docs/webstore/discovery/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/

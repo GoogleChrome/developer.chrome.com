@@ -62,7 +62,7 @@ presentation is shown in a Hangout session.
 
 There are scenarios though where users may simply want to present content onto
 a second, attached display. For example, imagine a user in a conference room
-outfitted with a projector to which they are connected via an HDMI cable. 
+outfitted with a projector to which they are connected via an HDMI cable.
 Rather than mirroring the presentation onto a remote endpoint, **the user
 really wants to present the slides full-screen on the projector**, leaving the
 laptop screen available for speaker notes and slide control. While the site
@@ -94,7 +94,7 @@ In this article, I won’t cover use cases where the parameter passed to
 
 We can now monitor presentation display availability and toggle a "Present"
 button visibility based on presentation displays availability. Note that we can
-also decide to always show this button. 
+also decide to always show this button.
 
 {% Aside 'caution' %}
 The browser may use more energy while the `availability` object is alive
@@ -182,7 +182,7 @@ we’ve passed to the `PresentationRequest` object)?
 
 First, let’s retrieve existing connections on the receiver page with
 `navigator.presentation.receiver.connectionList` and listen to incoming
-connections as shown below. 
+connections as shown below.
 
 ```js
 // Receiver page
@@ -279,7 +279,7 @@ page for diving into the internal discovery/availability processes.
 
 ## What's next
 
-As of Chrome 66, Chrome OS, Linux, and Windows platforms are supported. Mac
+As of Chrome 66, ChromeOS, Linux, and Windows platforms are supported. Mac
 support will come [later].
 
 ## Resources
@@ -297,8 +297,8 @@ support will come [later].
 [https://github.com/googlechromelabs/presentation-api-samples]: https://github.com/GoogleChromeLabs/presentation-api-samples
 [later]: https://bugs.chromium.org/p/chromium/issues/detail?id=810814
 [https://www.chromestatus.com/features#presentation%20api]: https://www.chromestatus.com/features#presentation%20api
-[https://crbug.com/?q=component:blink>presentationapi]: https://crbug.com/?q=component:Blink>PresentationAPI 
-[https://w3c.github.io/presentation-api/]: https://w3c.github.io/presentation-api/ 
+[https://crbug.com/?q=component:blink>presentationapi]: https://crbug.com/?q=component:Blink>PresentationAPI
+[https://w3c.github.io/presentation-api/]: https://w3c.github.io/presentation-api/
 [https://github.com/w3c/presentation-api/issues]: https://github.com/w3c/presentation-api/issues
 [the official chrome sample]: https://googlechrome.github.io/samples/presentation-api/
 [the interactive photowall demo]: https://googlechromelabs.github.io/presentation-api-samples/photowall

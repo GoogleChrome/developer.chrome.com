@@ -14,7 +14,7 @@ authors:
 ## Implementation status
 
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
-*  [In deprecation trial](/blog/user-agent-deprecation-origin-trial/) Chrome 100 to Chrome 112
+*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 100 to Chrome 112
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
@@ -211,7 +211,7 @@ on third-parties.
 *  **Origin trial**:
    [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
    to opt-in for the reduced user-agent, and
-   [share your feedback](https://github.com/abeyad/user-agent-reduction/issues).
+   [share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).

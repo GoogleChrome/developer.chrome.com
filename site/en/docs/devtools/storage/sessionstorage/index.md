@@ -6,6 +6,8 @@ authors:
 date: 2019-03-14
 #updated: YYYY-MM-DD
 description: "How to view and edit sessionStorage with the Session Storage pane and the Console."
+tags:
+  - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to view, edit, and delete [`sessionStorage`][2]

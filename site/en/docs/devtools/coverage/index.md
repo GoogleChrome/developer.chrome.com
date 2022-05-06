@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find Unused JavaScript And CSS With The Coverage Tab"
+title: "Coverage: Find unused JavaScript and CSS"
 authors:
   - kaycebasques
 date: 2019-07-09
 updated: 2020-07-10
 description: "How to find and analyze unused JavaScript and CSS code in Chrome DevTools."
+tags:
+  - find-issues
 ---
 
 The Coverage tab in Chrome DevTools can help you find unused JavaScript and

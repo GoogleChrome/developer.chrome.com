@@ -6,6 +6,8 @@ authors:
 date: 2018-04-18
 #updated: YYYY-MM-DD
 description: "Learn how to run JavaScript in the Console."
+tags:
+  - javascript
 ---
 
 This interactive tutorial shows you how to run JavaScript in the [Chrome DevTools][1] Console. See
@@ -28,7 +30,7 @@ JavaScript that you type into it, evaluates your code, prints out the result of 
 This tutorial is designed so that you can open up the demo and try all the workflows yourself. When
 you physically follow along, you're more likely to remember the workflows later.
 
-1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to open the
+1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, ChromeOS) to open the
     **Console**, right here on this very page.
 
     {% Img src="image/admin/5aHOGjzCHY5tHEnye4lU.png", alt="This tutorial on the left, and DevTools on the right.", width="800", height="480" %}
@@ -61,10 +63,12 @@ to change how the page looks or runs.
 Sometimes, you just want a code playground where you can test some code, or try out new JavaScript
 features you're not familiar with. The Console is a perfect place for these kinds of experiments.
 
-1.  Type `5 + 15` in the Console and press Enter to evaluate the expression. The Console prints out
+1.  Type `5 + 15` in the Console. The result `20` will appear below your expression
+    (unless your expression takes too much time to evaluate).
+2.  Press `Enter` to evaluate the expression. The Console prints
     the result of the expression below your code. **Figure 4** below shows how your Console should
     look after evaluating this expression.
-2.  Type the following code into the **Console**. Try typing it out, character-by-character, rather
+3.  Type the following code into the **Console**. Try typing it out, character-by-character, rather
     than copy-pasting it.
 
     ```js
@@ -76,7 +80,7 @@ features you're not familiar with. The Console is a perfect place for these kind
     See [define default values for function arguments][6] if you're unfamiliar with the `b=20`
     syntax.
 
-3.  Now, call the function that you just defined.
+4.  Now, call the function that you just defined.
 
     ```js
     add(25);
@@ -88,6 +92,11 @@ features you're not familiar with. The Console is a perfect place for these kind
 
     `add(25)` evaluates to `45` because when the `add` function is called without a second argument,
     `b` defaults to `20`.
+
+You will not be able to run any code in this console session until your function has returned.
+If that takes too long, you can use the **Task Manager** to cancel the time-intensive computation;
+however, it will also cause the current page to fail and all data you have entered will be lost.
+
 
 ## Next steps {: #next }
 

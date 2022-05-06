@@ -1,0 +1,42 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block content %}
+<section id="back-to-top" class="hero-section">
+  <a class="share-button__link gap-right-200 mobile-share-logo ga-event"
+      href="https://twitter.com/share?url={{site.url}}{{ page.url | stripDefaultLocale}}&text=%23100CoolWebMoments brought back some memories! Loved going through this timeline of the web. Check it out!"
+      target="_blank" data-ga-label="twitter share" data-ga-category="share" data-ga-action="mobile click" aria-label="twitter share">
+    {{ icon('share', {}) }}
+  </a>
+
+  <div class="hero-wrapper display-flex direction-column align-center justify-content-center lg:direction-row pad-left-400">
+    <div>
+      {% Img src="image/x1Los57vDga6OEMNi1dIJwZ0qvp2/EAwkX7k7d2W0LgKSbZy1.png", alt="Hero image", class="hero-img",
+          width="800", height="859" %}
+    </div>
+    <div class="hero-info text-align-center">
+      {% Img src="image/x1Los57vDga6OEMNi1dIJwZ0qvp2/OGhcqyf7RviBpDR27WHJ.svg", alt="100 image", class="hero-logo",
+          width="283", height="129" %}
+      <h1 class="hero-heading lg:pad-left-300">cool web moments</h1>
+      <p class="hero-desc lg:pad-left-300">Take a scroll down memory lane... Tell us which moments you loved the most. If we’ve missed anything (and we’re sure we have!), tweet us <a href="https://twitter.com/ChromiumDev" target="_blank" rel="noreferrer noopener">@Chromiumdev</a> with <span class="hashtag">#100CoolWebMoments.</span> Enjoy!</p>
+      <div class="display-flex gap-top-500 pad-left-300 share-info">
+        <a class="share-button__link gap-right-200 share-logo display-flex ga-event"
+            href="https://twitter.com/share?url={{site.url}}{{ page.url | stripDefaultLocale}}&text=%23100CoolWebMoments brought back some memories! Loved going through this timeline of the web. Check it out!"
+            target="_blank" data-ga-label="twitter share" data-ga-category="share" data-ga-action="click" aria-label="twitter share">
+          {{ icon('share', {}) }}
+          Share
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-section">
+    <a href="#section2008">
+      <p class="scroll-text text-align-center">SCROLL TO BEGIN</p>
+      <div class="arrow bounce">
+        {% Img src="image/x1Los57vDga6OEMNi1dIJwZ0qvp2/jORwLCLhZzYKeX8hL8wq.svg", alt="Scroll to begin",
+          class="scroll-icon", width="44", height="23" %}
+      </div>
+    </a>
+  </div>
+</section>
+{% endblock %}

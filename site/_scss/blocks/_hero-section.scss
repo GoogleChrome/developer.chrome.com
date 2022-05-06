@@ -1,0 +1,161 @@
+/* stylelint-disable max-nesting-depth*/
+/* stylelint-disable selector-max-compound-selectors*/
+/* Disabled nesting since required as per the DOM */
+
+$share-text-color: #3c4043;
+
+.hero-section {
+  .mobile-share-logo {
+    float: right;
+    padding-left: 0;
+    position: relative;
+    right: 24px;
+    top: 28px;
+    width: auto;
+
+    @include media-query('md') {
+      display: none;
+    }
+  }
+
+  .hero-wrapper {
+    font-family: 'Google Sans';
+
+    @include media-query('lg') {
+      margin-top: 140px;
+    }
+
+    .hero-img {
+      margin-top: 54px;
+      width: 260px;
+
+      @include media-query('md') {
+        width: 495px;
+      }
+
+      @include media-query('lg') {
+        margin-top: 0;
+      }
+    }
+
+    .hero-info {
+      @include media-query('lg') {
+        margin-left: 61px;
+        text-align: left;
+      }
+
+      .hero-logo {
+        height: 153px;
+        margin: 0 auto;
+        width: 200px;
+
+        @include media-query('md') {
+          height: 229px;
+          max-width: 300px;
+          width: 100%;
+        }
+
+        @include media-query('lg') {
+          margin: 0;
+        }
+      }
+
+      .hero-heading {
+        font-size: 41px;
+        font-weight: 700;
+        line-height: 52px;
+      }
+
+      .hero-desc {
+        font-size: 14px;
+        margin: 22px auto 0;
+        max-width: 324px;
+
+        @include media-query('md') {
+          font-size: 18px;
+          margin: 20px 0 0;
+          max-width: 420px;
+        }
+      }
+
+      .hashtag {
+        color: #{get-color('blue-600')};
+      }
+
+      .share-info {
+        display: none;
+
+        @include media-query('md') {
+          display: inline-flex;
+        }
+
+        .share-logo {
+          color: $share-text-color;
+          font-size: 18px;
+          height: 22px;
+          text-decoration: none;
+
+          svg {
+            margin: 5px 15px 0 0;
+          }
+
+          &:visited {
+            color: $share-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-section {
+    margin: 28px 0 48px;
+
+    @include media-query('md') {
+      margin: 20px auto 86px;
+      width: 200px;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover .bounce {
+        animation: none;
+      }
+    }
+
+    .scroll-text {
+      color: #{get-color('black')};
+      font-size: 14px;
+      letter-spacing: 0.28em;
+      padding-left: 15px;
+    }
+
+    .scroll-icon {
+      height: 20px;
+      margin: 30px auto 0;
+      width: 20px;
+    }
+
+    .bounce {
+      animation: bounce 2.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-20px);
+      }
+
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

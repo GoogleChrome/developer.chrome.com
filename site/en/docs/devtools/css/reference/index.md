@@ -4,10 +4,16 @@ title: "CSS features reference"
 authors:
   - kaycebasques
   - jecelynyeen
+  - sofiayem
 date: 2017-06-09
 #updated: YYYY-MM-DD
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
+tags:
+  - css
 ---
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to
 viewing and changing CSS.
@@ -85,6 +91,39 @@ Use the **Computed** tab. See [View only the CSS that's actually applied to an e
 Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
 applied to an element][6].
 
+### View `@supports` at-rules {: #supports }
+
+The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
+
+<div class="box"></div>
+<style>
+  .box {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+}
+@supports (background: lab(0% 0 0)) {
+  .box {
+    background: lab(90% -44 55);
+  }
+  .box::after { content: "I support CIELAB color space!" }
+}
+@supports not (background: lab(0% 0 0)) {
+  .box {
+    background:#c9b1d6;
+  }
+  .box::after { content: "I don\'t support CIELAB color space :(" }
+}
+</style>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lw1ZveiO2lxVFDgylmnC.png", alt="View @supports at-rules", width="800", height="453" %}
+
+If your browser supports the `lab()` function, the element is green, otherwise it's purple.
+
+{% Aside %}
+**Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
+{% endAside %}
+
 ### View an element's box model {: #box-model }
 
 To view [the box model][7] of an element, go to the **Styles** tab. If your DevTools window is
@@ -131,6 +170,48 @@ element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
 
+### View cascade layers {: #cascade-layers}
+
+[Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
+
+To view cascade layers, [inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
+
+<div class="cascade-box"></div>
+<style>
+    .cascade-box{
+    width: 250px;
+    height: 30px;
+    text-align: center;}
+    .cascade-box::after {
+        content: "My styles are layered!";
+      }
+    /* Define the specificity */
+@layer base, component, page;
+@layer page {
+  .cascade-box {
+    background: palegreen;
+  }
+}
+@layer base {
+  .cascade-box {
+    background: rebeccapurple;
+  }
+}
+@layer component {
+  .cascade-box {
+    background: hotpink;
+  }
+}
+</style>
+
+In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
+
+To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
+
+The `page` layer has the highest specificity, therefore the element's background is green.
+
 ### View a page in print mode {: #print-mode }
 
 To view a page in print mode:
@@ -144,7 +225,7 @@ To view a page in print mode:
 The Coverage tab shows you what CSS a page actually uses.
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) while DevTools is
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) while DevTools is
     in focus to open the Command Menu.
 2.  Start typing `coverage` and select **Show Coverage**. The Coverage tab appears.
 
@@ -222,7 +303,10 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
+
 **Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
+
 
 ### Change a declaration name or value {: #change-declaration }
 
@@ -230,7 +314,6 @@ Double-click a declaration's name or value to change it. See [Change declaration
 keyboard shortcuts][17] for shortcuts for quickly incrementing or decrementing a value by 0.1, 1,
 10, or 100 units.
 
-{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
 
 ### Change declaration values with keyboard shortcuts {: #values-shortcuts }
 
@@ -241,7 +324,7 @@ the value by a fixed amount:
   increment by 0.1.
 - <kbd>Up</kbd> to change the value by 1, or by 0.1 if the current value is between -1 and 1.
 - <kbd>Shift</kbd>+<kbd>Up</kbd> to increment by 10.
-- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Shift</kbd>+<kbd>Page Up</kbd>
+- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>Page Up</kbd>
   (Windows, Linux) to increment the value by 100.
 
 Decrementing also works. Just replace each instance of <kbd>Up</kbd> mentioned above with
@@ -309,6 +392,8 @@ To toggle a single declaration on or off:
 
 ### Change colors with the Color Picker {: #color-picker }
 
+{% YouTube id='TuR27BxCRVk' %}
+
 The **Color Picker** provides a GUI for changing `color` and `background-color` declarations.
 
 To open the **Color Picker**:
@@ -338,12 +423,15 @@ Here's a description of each of the UI elements of the **Color Picker**:
 1.  **Shades**.
 2.  **Eyedropper**. See [Sample a color off the page with the Eyedropper][25].
 3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
-4.  **Display Value**. The RGBA, HSLA, or Hex representation of the color.
+4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
 5.  **Color Palette**. Click one of these squares to change the color to that square.
 6.  **Hue**.
 7.  **Opacity**.
-8.  **Display Value Switcher**. Toggle between the RGBA, HSLA, and Hex representations of the
+8.  **Display Value Switcher**. Toggle between the [RGBA][29], [HSLA][30], [HWBA][31], and [Hex][32] representations of the
     current color.
+    {% Aside %}
+    **Note**: Alternatively, to toggle between color representations, hold down <kbd>Shift</kbd> and click on the color preview button.
+    {% endAside %}
 9.  **Color Palette Switcher**. Toggle between the [Material Design palette][26], a custom palette,
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
@@ -388,6 +476,48 @@ To open the **Angle Clock**:
 5.  There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane
     keyboard shortcuts][28].
 
+### Change box and text shadows with the Shadow Editor {: #shadow-editor }
+
+{% YouTube id='DAD72grzDDc', startTime=270 %}
+
+The **Shadow Editor** provides a GUI for changing `text-shadow` and `box-shadow` CSS declarations.
+
+To open the **Shadow Editor**:
+
+1. [Select an element][27] with a shadow declaration. For example, select the element below. {: #shadow-element }
+
+    <div class="shadow-box"></div>
+    <style>
+      .shadow-box {
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      text-shadow: 0px 20px 1px #bebebe;
+      box-shadow:
+          11px 14px 5px 0px #bebebe, inset 0px 20px 7px 0px #dadce0;
+      }
+      .shadow-box::after {
+        content: "I have a shadow!";
+      }
+    </style>
+
+1. In the **Styles** tab, find a shadow icon next to the `text-shadow` or `box-shadow` declaration.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oDpRxRK9of3pxQFkFwgc.png", alt="Shadow icons", width="800", height="513" %}
+
+   **Figure 29**. The shadow icon to the left of the `text-shadow` and `box-shadow` values.
+
+1. Click the shadow icon to open the **Shadow editor**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rp36OO9l2xg2dHW1i35t.png", alt="Shadow editor", width="800", height="513" %}
+
+1. Change the shadow properties:
+   - **Type** (only for `box-shadow`). Pick **Outset** or **Inset**.
+   - **X and Y offsets**. Drag the blue dot or specify values.
+   - **Blur**. Drag the slider or specify a value.
+   - **Spread** (only for `box-shadow`). Drag the slider or specify a value.
+1. Observe the changes applied to the [element](#shadow-element).
+
 [1]: /docs/devtools/css
 [2]: /docs/devtools/css#view
 [3]: /docs/devtools/javascript/reference#format
@@ -416,3 +546,7 @@ To open the **Angle Clock**:
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
+[29]: https://drafts.csswg.org/css-color/#rgb-functions
+[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
+[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
+[32]: https://drafts.csswg.org/css-color/#hex-notation

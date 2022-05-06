@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-11-04
+updated: 2021-04-12
 authors:
 	- samdutton
 ---
@@ -162,6 +162,36 @@ Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
+
+## Topics
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal:
+   [create an issue](https://github.com/jkarlin/topics/issues) on the proposal
+   repo.
+-  For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.
+   
+### Can I opt out of topic calculation for specific pages on my site?
+
+Yes. Include the `Permissions-Policy: browsing-topics=()` header on a page to prevent topics
+calculation for all users on that page only. Subsequent visits to other pages on your site will
+not be affected. If you set a policy to block the Topics API on one page, this does won't
+affect other pages. 
+
+Topics are only inferred from the hostname and not from the URL path.
+
+### Can I control which third parties have access to topics on my page?
+
+Yes. You can use the Permission Policy header to control third-party access to the Topics API on your page.
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
+
 ## FLEDGE
 
 ### How can I ask a question about this feature?
@@ -190,6 +220,17 @@ attribute.
 At auction time, the browser communicates with the trusted server to
 fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
+
+### Can the Topics API be used with the FLEDGE API? 
+
+Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+
 
 ## Attribution Reporting
 

@@ -19,8 +19,11 @@ const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 
 // Shortcodes
+const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
+const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
+const {Empty} = require('./site/_shortcodes/Empty');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -35,13 +38,13 @@ const {LanguageList} = require('./site/_shortcodes/LanguageList');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
-const {purifyCss} = require('./site/_transforms/purify-css');
+const {purifyCss} = require('./site/_transforms/purify-css-pool');
 const {minifyHtml} = require('./site/_transforms/minify-html');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 // Supported locales
 const locales = require('./site/_data/site.json').locales;
@@ -85,17 +88,19 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Add collections
-  locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
-    let blogCollection = collections
-      .getFilteredByGlob(`./site/${locale}/blog/*/*.md`)
-      .filter(filterOutDrafts)
-      .reverse();
-    // If we're running inside of Percy then just show the first six blog posts.
-    if (process.env.PERCY_BRANCH) {
-      blogCollection = blogCollection.slice(blogCollection.length - 6);
-    }
-    return blogCollection;
-  }));
+  locales.forEach(locale =>
+    eleventyConfig.addCollection(`blog-${locale}`, collections => {
+      let blogCollection = collections
+        .getFilteredByGlob(`./site/${locale}/blog/*/*.md`)
+        .filter(filterOutDrafts)
+        .reverse();
+      // If we're running inside of Percy then just show the first six blog posts.
+      if (process.env.PERCY_BRANCH) {
+        blogCollection = blogCollection.slice(blogCollection.length - 6);
+      }
+      return blogCollection;
+    })
+  );
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
@@ -119,6 +124,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('typeof', x => typeof x);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('Codepen', Codepen);
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('Hreflang', Hreflang);
@@ -126,6 +132,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
   eleventyConfig.addShortcode('includeRaw', includeRaw);
+  eleventyConfig.addPairedShortcode('Blockquote', Blockquote);
   eleventyConfig.addPairedShortcode('Details', Details);
   eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);
@@ -134,6 +141,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+
+  // Empty shortcodes. They are added for backward compatibility with web.dev.
+  // They will not render any html, but will prevent the build from failing.
+  eleventyConfig.addShortcode('Widget', Empty);
+  eleventyConfig.addShortcode('BrowserCompat', Empty);
+  eleventyConfig.addShortcode('CodePattern', Empty);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
@@ -148,7 +161,6 @@ module.exports = eleventyConfig => {
     eleventyConfig.addTransform('purifyCss', purifyCss);
     eleventyConfig.addTransform('minifyHtml', minifyHtml);
   }
-
 
   return {
     markdownTemplateEngine: 'njk',

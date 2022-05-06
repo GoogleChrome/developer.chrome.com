@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-10-01
-updated: 2021-06-03
+updated: 2022-04-11
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/gPlFs9TIUayaQ1MvxRlP.jpg
 alt: Person wearing medical gloves pouring purple liquid from glass beaker into flask. Bristol Robotics Laboratory, UK.
 tags:
@@ -22,9 +22,11 @@ registered for the origin trial, each with a unique trial token. This is not a s
 testing scripts that are embedded across a number of sites.
 
 Third-party origin trials make it possible for providers of embedded content to try out a new
-feature across multiple sites.
+feature across multiple sites by [providing a token using JavaScript](#provide-token).
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="Diagram showing how third-party origin trials enable a single registration token to be used across multiple origins", width="800", height="400" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="Diagram showing how
+   third-party origin trials enable a single registration token to be used across multiple origins",
+   width="800", height="400" %}
 
 Third-party origin trials don't make sense for all features. Chrome will only make the third-party
 origin trial option available for features where embedding code on third-party sites is a common use
@@ -49,7 +51,8 @@ affecting multiple sites. The Origin Trials Developer Guide explains the
 Check [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568) for updates
 on progress with third-party origin trials.
 
-## How to register for a third-party origin trial
+
+## Register for a third-party origin trial
 
 1. Select a trial from the [list of active
    trials](https://developers.chrome.com/origintrials/#/trials/active).
@@ -73,18 +76,41 @@ on progress with third-party origin trials.
      <figcaption class="w-figcaption">Registration page for the Conversion Measurement trial.</figcaption>
    </figure>
 
-## How to provide feedback
+
+## Provide a trial token programmatically {: #provide-token}
+
+To take part in an origin trial, a page must provide a valid trial token. If you want a trial
+feature to be enabled on multiple sites where your code is embedded, use JavaScript to inject a
+token:
+
+```javascript
+const otMeta = document.createElement('meta');
+otMeta.httpEquiv = 'origin-trial';
+otMeta.content = 'TOKEN_GOES_HERE';
+document.head.append(otMeta);
+```
+
+Otherwise, you would need to get every site that embeds your code to provide a token with an HTTP
+header or in their HTML.
+
+{% Aside %}
+The demo at [ot-3p.glitch.me](https://ot-3p.glitch.me) accesses an origin trial feature enabled by
+using a token provided by JavaScript from a different origin.
+{% endAside %}
+
+
+## Provide feedback
 
 If you're registering for a third-party origin trial and have feedback to share on the process or
-ideas on how we can improve it, [create an
-issue](https://github.com/GoogleChrome/OriginTrials/issues/new) on the Origin Trials GitHub code
-repo.
+ideas on how we can improve it, [create an Issue](https://github.com/GoogleChrome/OriginTrials/issues/new)
+on the Origin Trials GitHub repository.
+
 
 ## Find out more
 
+-  [Demo](https://ot-3p.glitch.me)
 -  [Getting started with Chrome's origin trials](/blog/origin-trials/)
 -  [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568)
 
-Photo by [Louis Reed
-](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/JeInkKlI2Po).
+Photo by [Louis Reed](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/JeInkKlI2Po).

@@ -172,7 +172,7 @@ name "Hola mundo".
 ### How to set your browser's locale {: #how-to-set-browsers-locale}
 
 To test translations, you might want to set your browser's locale. This section tells you how to set
-the locale in [Windows][9], [Mac OS X][10], [Linux][11], and [Chrome OS][12].
+the locale in [Windows][9], [Mac OS X][10], [Linux][11], and [ChromeOS][12].
 
 #### Windows
 
@@ -250,16 +250,16 @@ environment variable and launch Google Chrome. For example:
 LANGUAGE=es ./chrome
 ```
 
-#### Chrome OS
+#### ChromeOS
 
-To change the locale on Chrome OS:
+To change the locale on ChromeOS:
 
 1.  From the system tray, choose **Settings**.
 2.  Under the **Languages and input** section, choose the **Language** dropdown.
 3.  If your language is not listed, click **Add languages** and add it.
 4.  Once added, click the the 3-dot **More actions** menu item next to your language and choose
-    **Display Chrome OS in this language**.
-5.  Click the **Restart** button that appears next to the set language to restart Chrome OS.
+    **Display ChromeOS in this language**.
+5.  Click the **Restart** button that appears next to the set language to restart ChromeOS.
 
 ## Examples
 

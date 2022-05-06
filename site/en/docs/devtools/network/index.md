@@ -6,6 +6,9 @@ authors:
 date: 2019-02-08
 #updated: YYYY-MM-DD
 description: "A tutorial on the most popular network-related features in Chrome DevTools."
+tags:
+  - get-started
+  - find-issues
 ---
 
 This is a hands-on tutorial of some of the most commonly-used DevTools features related to

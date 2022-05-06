@@ -73,4 +73,4 @@ const purifyCss = async (content, outputPath) => {
   return content;
 };
 
-module.exports = {purifyCss};
+module.exports = purifyCss;

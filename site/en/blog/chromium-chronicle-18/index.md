@@ -60,7 +60,7 @@ Component View
 
 The [Code Coverage tool][2] provides a code coverage breakdown by directory
 and component for the whole codebase, for Windows, iOS, Android, Linux and
-Chrome OS.
+ChromeOS.
 
 **Share your feedback:** Contact `code-coverage @ chromium.org` or file a bug
 on [crbug.com][3].
