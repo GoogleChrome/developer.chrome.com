@@ -1,0 +1,67 @@
+---
+title: Web platform docs
+layout: 'layouts/doc-post.njk'
+date: 2022-05-06
+---
+
+## Metadata {: #metadata }
+
+Web Platform documentation should follow the conventions outlined in the [Add a Doc][add-a-doc] and [Add a
+Blog Post][add-a-blog] guides. 
+
+The `toc.yml` file is located at `site/_collections/_data/docs/web-platform/toc.yml`. 
+Link your new doc in this file in the appropriate category. If your doc moves between Origin and Developer Trials, 
+and when it ships, make a PR to update this file to move it in the list.
+
+The following is a suggested outline when documenting a new Origin or Developer Trial. 
+As the intention is for new web platform features to ultimately be documented over on [MDN][mdn], 
+use the same conventions as described in the [MDN guide to writing API docs][mdn-guide] where possible. 
+
+## Outline
+
+```md
+
+Intro paragraph explaining briefly what this API is for.
+
+## Current status
+
+Add information about status, and how developers can try out the API. 
+
+## Interfaces
+
+Describe each interface that is part of the API 
+using a description list format.
+
+`interfaceName`
+: Short description.
+
+## Use cases 
+
+Change the heading above to make sense for your content, 
+however here you can add a short explanation, 
+and the core use cases for the API.
+
+## Examples
+
+Code snippets should be included here to show the basic use of the API. 
+
+## Demo
+
+If you have a demo hosted elsewhere, 
+add a short description and link out to it.
+
+## Feedback
+
+How should developers offer feedback?
+
+## Useful links
+
+Include links to the spec, explainer, 
+Chrome Status, MDN, and so on.
+  
+```
+
+[add-a-doc]: /docs/handbook/how-to/add-a-doc/
+[add-a-blog]: /docs/handbook/how-to/add-a-blog-post/
+[mdn]: https://developer.mozilla.org/en-US/docs/Web/API
+[mdn-guide]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
