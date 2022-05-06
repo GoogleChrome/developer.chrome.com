@@ -308,15 +308,15 @@ Note that aggregate reports are not be delayed to the same extent as event-level
 
 ### Overview
 
-Let's take a person named Bob. Bob sees an ad while reading the news on `news.com`. One week later,
+Let's take a person named Bob. Bob sees an ad while reading the news on `news.example`. One week later,
 Bob buys shoes on `shoes.example`.
 
 Today, this conversion would be tracked by a third-party cookie used as a **cross-site identifier**.
 With third-party cookies, an adtech company can access a lot of details on Bob's activity on
 `news.example` and on `shoes.example`, and merge these pieces of information together to build a
 detailed profile of Bob. An adtech company can end up knowing Bob's location, browsing habits and
-preferred reads on `news.com`⏤as well as purchases, activity, and credit card information on
-`shoes.com`. This cross-site joint is useful to measure ad conversions. But it hinders user privacy:
+preferred reads on `news.example`⏤as well as purchases, activity, and credit card information on
+`shoes.example`. This cross-site joint is useful to measure ad conversions. But it hinders user privacy:
 Bob's activity is tracked across sites with a high level of detail.
 
 Unlike third-party cookies, the Attribution Reporting API enables advertising companies to gain insights into
