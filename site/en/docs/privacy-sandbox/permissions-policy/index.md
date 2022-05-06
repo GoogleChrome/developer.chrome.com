@@ -285,7 +285,7 @@ Update it to the Structured Fields syntax that Permissions Policy header uses:
 Permissions-Policy: 
   autoplay=*,
   geolocation=(self),
-  camera=(self ‘https://trusted-site.example’),
+  camera=(self "https://trusted-site.example"),
   fullscreen=()
 ```
 
