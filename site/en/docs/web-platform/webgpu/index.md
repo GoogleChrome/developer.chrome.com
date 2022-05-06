@@ -9,7 +9,7 @@ updated: 2022-03-23
 
 ## What is WebGPU? {: #what }
 
-[WebGPU] is a new web API that exposes modern computer graphics capabilities,
+[webgpu] is a new web API that exposes modern computer graphics capabilities,
 specifically Direct3D 12, Metal, and Vulkan, for performing rendering and
 computation operations on a graphics processing unit (GPU).
 
@@ -18,13 +18,13 @@ computation operations on a graphics processing unit (GPU).
   <figcaption>WebGPU architecture diagram</figcaption>
 </figure>
 
-This goal is similar to the [WebGL] family of APIs, but WebGPU enables access to
+This goal is similar to the [WebGL][webgl] family of APIs, but WebGPU enables access to
 more advanced features of GPUs. Whereas WebGL is mostly for drawing images but
 can be repurposed with great effort for other kinds of computations, WebGPU
 provides first-class support for performing general computations on the GPU.
 
 After four years of development in the [W3C's "GPU for the Web" Community
-Group], WebGPU is now ready for developers to try in Chrome and give feedback on
+Group][w3c-gpu], WebGPU is now ready for developers to try in Chrome and give feedback on
 the API and the shading language.
 
 {% Blockquote 'Mr.doob, Creator of Three.js' %}
@@ -99,13 +99,13 @@ requires understanding key concepts before diving into it. That's why I'll link
 to existing high-quality content in this article for you to get started with
 WebGPU.
 
-- [WebGPU — All of the cores, none of the canvas]
-- [Get started with GPU Compute on the web]
-- [A Taste of WebGPU in Firefox]
-- [WebGPU for Metal Developers, Part One]
-- [Learn what key data structures and types are needed to draw in WebGPU]
-- [WebGPU Explainer]
-- [WebGPU Best Practices]
+- [WebGPU — All of the cores, none of the canvas][webgpu-surma]
+- [Get started with GPU Compute on the web][webgpu-started]
+- [A Taste of WebGPU in Firefox][webgpu-firefox]
+- [WebGPU for Metal Developers, Part One][webgpu-metal]
+- [Learn what key data structures and types are needed to draw in WebGPU][webgpu-draw]
+- [WebGPU Explainer][webgpu-explainer]
+- [WebGPU Best Practices][webgpu-best-practices]
 
 ## Browser support {: #browser-support }
 
@@ -115,33 +115,33 @@ experimental support is available by running Chrome with
 `--enable-features=Vulkan`. More support for more platforms will
 follow.
 
-The full list of known issues is available in the [Origin Trial Caveats document].
+The full list of known issues is available in the [ot-caveats].
 
-At the time of writing, WebGPU support is in progress in [Safari] and [Firefox].
+At the time of writing, WebGPU support is in progress in [Safari][safari] and [Firefox][firefox].
 
 ## Platform support {: #platform-support }
 
 As in WebGL's world, some libraries implement WebGPU as well:
 
-- [Dawn] is a C++ implementation of WebGPU used in Chromium. It can be used to
+- [Dawn][dawn] is a C++ implementation of WebGPU used in Chromium. It can be used to
   target WebGPU in C and C++ applications that can then be ported to
-  [WebAssembly] using [Emscripten] and automatically take advantage of WebGPU in
+  [WebAssembly][webassembly] using [Emscripten][emscripten] and automatically take advantage of WebGPU in
   the browser.
-- [Wgpu] is a Rust implementation of WebGPU used in Firefox. It is used by
-  various GPU applications in the Rust ecosystem, for example [Veloren], a
+- [Wgpu][wgpu] is a Rust implementation of WebGPU used in Firefox. It is used by
+  various GPU applications in the Rust ecosystem, for example [Veloren][veloren], a
   multiplayer voxel RPG.
 
 ## Demos {: #demos }
 
-- [WebGPU Samples]
-- [Metaballs rendered in WebGPU]
-- [WebGPU Clustered Forward Shading]
+- [WebGPU Samples][samples]
+- [Metaballs rendered in WebGPU][metaballs]
+- [WebGPU Clustered Forward Shading][shading]
 
 ## Security and privacy  {: #security-privacy }
 
 To ensure a web page can only work with its own data, all the commands are
 strictly validated before they reach the GPU. Check out the [Malicious use
-considerations] section of the WebGPU spec to learn more about the security
+considerations][malicious] section of the WebGPU spec to learn more about the security
 tradeoffs regarding driver bugs for instance.
 
 ## Feedback {: #feedback }
@@ -153,7 +153,7 @@ The Chrome team wants to hear about your experiences with WebGPU.
 Is there something about the API or the shading language that does not work like
 you expected? Or are there missing methods or properties that you need to
 implement your idea? Have a question or comment on the security model? File a
-spec issue on the corresponding [GitHub repo], or add your thoughts to an
+spec issue on the corresponding [gitHub-repo], or add your thoughts to an
 existing issue.
 
 ### Report a problem with the implementation
@@ -162,7 +162,7 @@ Did you find a bug with Chrome's implementation? Or is the implementation
 different from the spec? File a bug at [new.crbug.com](https://new.crbug.com).
 Be sure to include as much detail as you can like the content of the internal
 `about:gpu` page, simple instructions for reproducing, and enter `Blink>WebGPU`
-in the **Components** box. [Glitch](https://glitch.com/) works great for sharing
+in the **Components** box. [glitch](https://glitch.com/) works great for sharing
 quick and easy repros.
 
 ### Show support for WebGPU
@@ -193,30 +193,30 @@ with the hashtag [`#webgpu`](https://stackoverflow.com/questions/tagged/webgpu).
 Hero image via [Maxime Rossignol](https://unsplash.com/@maxoor) on
 [Unsplash](https://unsplash.com/photos/ukOCJ09jpgc).
 
-[WebGPU]: https://gpuweb.github.io/gpuweb/
-[WebGL]: https://developer.mozilla.org/docs/Web/API/WebGL_API
-[W3C's "GPU for the Web" Community Group]: https://www.w3.org/community/gpu/
+[webgpu]: https://gpuweb.github.io/gpuweb/
+[webgl]: https://developer.mozilla.org/docs/Web/API/WebGL_API
+[w3c-gpu]: https://www.w3.org/community/gpu/
 [Babylon.js Playground]: https://playground.babylonjs.com/#XCNL7Y
-[WebGPU — All of the cores, none of the canvas]: https://surma.dev/things/webgpu/
-[Get started with GPU Compute on the web]: /gpu-compute/
-[A Taste of WebGPU in Firefox]: https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/
-[WebGPU for Metal Developers, Part One]: https://metalbyexample.com/webgpu-part-one/
-[Learn what key data structures and types are needed to draw in WebGPU]: https://alain.xyz/blog/raw-webgpu
-[WebGPU Explainer]: https://gpuweb.github.io/gpuweb/explainer/
-[WebGPU Best Practices]: https://toji.github.io/webgpu-best-practices/
-[Origin Trial Caveats document]: https://hackmd.io/QcdsK_g7RVKRCIIBqgs5Hw
-[Safari]: https://webkit.org/blog/9528/webgpu-and-wsl-in-safari/
-[Firefox]: https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/
-[Dawn]: https://dawn.googlesource.com/dawn
-[WebAssembly]: https://developer.mozilla.org/docs/WebAssembly
-[Emscripten]: https://emscripten.org/
-[Wgpu]: https://sotrh.github.io/learn-wgpu/#what-is-wgpu
-[Veloren]: https://veloren.net/devblog-125/
-[WebGPU Samples]: https://austin-eng.com/webgpu-samples/
-[Metaballs rendered in WebGPU]: https://toji.github.io/webgpu-metaballs/
-[WebGPU Clustered Forward Shading]: https://toji.github.io/webgpu-clustered-shading/
-[Malicious use considerations]: https://gpuweb.github.io/gpuweb/#malicious-use
-[GitHub repo]: https://github.com/gpuweb/gpuweb/issues/
+[webgpu-surma]: https://surma.dev/things/webgpu/
+[webgpu-started]: /gpu-compute/
+[webgpu-firefox]: https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/
+[webgpu-metal]: https://metalbyexample.com/webgpu-part-one/
+[webgpu-draw]: https://alain.xyz/blog/raw-webgpu
+[webgpu-explainer]: https://gpuweb.github.io/gpuweb/explainer/
+[webgpu-best-practices]: https://toji.github.io/webgpu-best-practices/
+[ot-caveats]: https://hackmd.io/QcdsK_g7RVKRCIIBqgs5Hw
+[safari]: https://webkit.org/blog/9528/webgpu-and-wsl-in-safari/
+[firefox]: https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/
+[dawn]: https://dawn.googlesource.com/dawn
+[webassembly]: https://developer.mozilla.org/docs/WebAssembly
+[emscripten]: https://emscripten.org/
+[wgpu]: https://sotrh.github.io/learn-wgpu/#what-is-wgpu
+[veloren]: https://veloren.net/devblog-125/
+[samples]: https://austin-eng.com/webgpu-samples/
+[metaballs]: https://toji.github.io/webgpu-metaballs/
+[shading]: https://toji.github.io/webgpu-clustered-shading/
+[malicious]: https://gpuweb.github.io/gpuweb/#malicious-use
+[github-repo]: https://github.com/gpuweb/gpuweb/issues/
 [spec]: https://gpuweb.github.io/gpuweb/
 [wgsl-spec]: https://gpuweb.github.io/gpuweb/wgsl/
 [issues]: https://github.com/gpuweb/gpuweb/issues
