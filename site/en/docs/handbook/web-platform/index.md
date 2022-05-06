@@ -6,8 +6,7 @@ date: 2022-05-06
 
 ## Metadata {: #metadata }
 
-Web Platform documentation should follow the conventions outlined in the [Add a Doc][add-a-doc] and [Add a
-Blog Post][add-a-blog] guides. 
+Web Platform documentation should follow the conventions outlined in the [Add a Doc][add-a-doc] guide. 
 
 The `toc.yml` file is located at `site/_collections/_data/docs/web-platform/toc.yml`. 
 Link your new doc in this file in the appropriate category. If your doc moves between Origin and Developer Trials, 
@@ -16,6 +15,12 @@ and when it ships, make a PR to update this file to move it in the list.
 The following is a suggested outline when documenting a new Origin or Developer Trial. 
 As the intention is for new web platform features to ultimately be documented over on [MDN][mdn], 
 use the same conventions as described in the [MDN guide to writing API docs][mdn-guide] where possible. 
+
+{% Aside %}
+Once you have written your docs, or if there has been a big change to the feature, write a [quick blog post][blog] to let developers know. 
+The blog post shouldnt repeat these docs, but could share the latest news, or demonstrate part of the feature with a tutorial, 
+then link to the docs for all the details.
+{% endAside %}
 
 ## Outline
 
@@ -62,6 +67,6 @@ Chrome Status, MDN, and so on.
 ```
 
 [add-a-doc]: /docs/handbook/how-to/add-a-doc/
-[add-a-blog]: /docs/handbook/how-to/add-a-blog-post/
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/API
 [mdn-guide]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
+[blog]: /docs/handbook/how-to/add-a-blog-post/
