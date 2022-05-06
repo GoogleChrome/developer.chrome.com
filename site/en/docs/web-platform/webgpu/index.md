@@ -36,7 +36,7 @@ take full advantage of modern graphics cards. WebGPU arrives just in time!"
 {% Blockquote 'David Catuhe, Creator of Babylon.js' %}
 WebGPU gets us closer to the metal and it also unlocks the power of compute
 shader for Web developers. New 3D experiences can be built today on [Babylon.js
-Playground].
+Playground][babylon].
 {% endBlockquote %}
 
 <figure>
@@ -196,7 +196,7 @@ Hero image via [Maxime Rossignol](https://unsplash.com/@maxoor) on
 [webgpu]: https://gpuweb.github.io/gpuweb/
 [webgl]: https://developer.mozilla.org/docs/Web/API/WebGL_API
 [w3c-gpu]: https://www.w3.org/community/gpu/
-[Babylon.js Playground]: https://playground.babylonjs.com/#XCNL7Y
+[babylon]: https://playground.babylonjs.com/#XCNL7Y
 [webgpu-surma]: https://surma.dev/things/webgpu/
 [webgpu-started]: /gpu-compute/
 [webgpu-firefox]: https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/
