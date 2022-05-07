@@ -5,6 +5,7 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - pfaffe
+  - kimanh
 date: 2022-05-07
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IpmLbsBVHj8R3jRkX91q.jpg'
 alt: ''
