@@ -35,5 +35,5 @@ Easter egg, the Project Fugu API Showcase is of course
 in the Project Fugu API Showcase</a>. Happy browsing!
 
 <div style="height: 100%; width: 100%;">
-  <iframe title="Fugu showcase" name="showcase" style="min-height: 800px; width: 100%; border: 0;" src="https://tomayac.github.io/fugu-showcase/data/" allow="web-share"></iframe>
+  <iframe title="Fugu showcase" name="showcase" style="min-height: 800px; width: 100%; border: 0;" src="https://tomayac.github.io/fugu-showcase/data/" allow="web-share; clipboard-write; clipboard"></iframe>
 </div>

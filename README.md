@@ -44,6 +44,9 @@ Building the entire site can take a while because it's over a thousand pages.
 If you want to _massively_ speed up your build times, we suggest setting some
 build flags to ignore certain sections.
 
+WARNING: By default, in dev we ignore all translated docs (all docs outside of /en/ directory).
+To include them back, use `ELEVENTY_INCLUDE_TRANSLATED=true` env variable.
+
 - Create a `.env` file at the root of your project
 - Optionally add the following:
 
@@ -86,6 +89,9 @@ ELEVENTY_IGNORE_WEBSTORE=true
 
 # Only ignore /docs/workbox/
 ELEVENTY_IGNORE_WORKBOX=true
+
+# Ignore BLOG /blog/
+ELEVENTY_IGNORE_BLOG=true
 ```
 
 ### Start a local server to preview the site

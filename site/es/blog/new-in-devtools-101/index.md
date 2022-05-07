@@ -19,6 +19,7 @@ _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballer
 {% include 'partials/devtools/es/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
+
 <!-- ## Import and export recorded user flows as a JSON file {: #recorder } -->
 ## Importar y exportar como JSON flujos de usuario grabados {: #recorder }
 
@@ -41,7 +42,7 @@ Además de esto, puede exportar también la grabación. Después de [grabar un f
 - **Exportar como un script de Puppeteer**. Descargue la grabación como un script de [Puppeteer](https://pptr.dev/).
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
-Consulte [la documentación](/docs/devtools/recorder) para obtener más información sobre las diferencias entre estas opciones.
+Consulte [la documentación](/docs/devtools/recorder/#export-flows) para obtener más información sobre las diferencias entre estas opciones.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Opciones de exportación en el panel Grabadora", width="800", height="556" %}
 

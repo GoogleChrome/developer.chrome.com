@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Accessibility features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2018-07-13
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
@@ -116,7 +117,7 @@ To open the Accessibility pane:
 3.  Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs**
     {% Img src="image/admin/K91DZQf9MTMExVz8NZ3w.png", alt="More Tabs", width="18", height="16" %} button.
 
-{% Img src="image/admin/i38qmp8kPpiHCepwqkAg.png", alt="Inspecting the h1 element of the DevTools homepage in the Accessibility pane.", width="800", height="464" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SyQG3AhymPvIohoZfizN.png", alt="Inspecting an h1 element of the DevTools homepage in the Accessibility pane.", width="800", height="466" %}
 
 **Figure 6**. Inspecting the `h1` element of the DevTools homepage in the Accessibility pane
 
@@ -125,11 +126,37 @@ To open the Accessibility pane:
 [The accessibility tree][7] is a subset of the DOM tree. It only contains elements from the DOM tree
 that are relevant and useful for displaying the page's contents in a screen reader.
 
-Inspect an element's position in the accessibility tree from [the Accessibility pane][8].
+Inspect an element's position in the accessibility tree from the [Accessibility pane][8].
 
-{% Img src="image/admin/IGM9xYMSTugsmo7sxIjk.png", alt="The Accessibility Tree section", width="800", height="506" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mTkkFUVuQ64mAY5iXCE3.png", alt="The Accessibility Tree section", width="800", height="524" %}
 
 **Figure 7**. The Accessibility Tree section
+
+This view allows you to explore only a single node and its ancestors. To explore the whole accessibility tree, follow the steps below.
+
+### (Preview) Explore the full-page accessibility tree {: #explore-tree}
+
+The full-page view of the accessibility tree allows you to explore the whole tree and helps you better understand how your web content is exposed to assistive technology.
+
+To explore the accessibility tree:
+
+1. Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TpySBK8kJoHcLaMtJnKr.svg", alt="Science", width="20", height="20" %} **Enable full-page accessibility tree**.
+1. On the action bar at the top, click **Reload DevTools**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iPBBTmKOT0EkBLDPNmxi.png", alt="Enable full-page accessibility tree", width="800", height="387" %}
+
+1. In the upper right corner of the **Elements** panel, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RDMkRkH8tvYkbOedSZgg.svg", alt="Accessibility", width="20", height="20" %} **Switch to Accessibility Tree view** button.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w3l7Zbtti7m5NuxuOalR.png", alt="Full-page view of the accessibility tree", width="800", height="444" %}
+
+1. Browse the accessibility tree. You can expand nodes or click to see details under [**Computed properties**](#computed).
+1. Select a node and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RDMkRkH8tvYkbOedSZgg.svg", alt="Accessibility", width="20", height="20" %} **Switch to DOM tree view** button to toggle back to DOM tree.
+
+   The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node.
+
+{% Aside %}
+**Note**: Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) to further improve it!
+{% endAside %}
 
 ### View an element's ARIA attributes {: #aria }
 

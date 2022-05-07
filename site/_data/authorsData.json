@@ -1,4 +1,18 @@
 {
+  "ryanseddon": {
+    "homepage": "https://ryanseddon.com/",
+    "twitter": "ryanseddon"
+  },
+  "timstatler": {
+    "twitter": "tstatz"
+  },
+  "deannarubin": {
+    "twitter": "deanna_rubin"
+  },
+  "pearlchen": {
+    "homepage": "http://karma-laboratory.com/",
+    "twitter": "PearlChen"
+  },
   "arthurevans": {
     "github": "arthurevans",
     "twitter": "devdocdude"
@@ -670,5 +684,18 @@
   "mariahhart": {
     "country": "US",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/iy1Y4UTfdXCdXqdnveqi.jpg"
+  },
+  "jarhar": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/xHYktxBPGfDHbzmEufy9.jpeg",
+    "github": "https://github.com/josepharhar",
+    "twitter": "https://twitter.com/josepharhar"
+  },
+  "emmatwersky": {
+    "country": "US",
+    "homepage": "https://twerske.dev",
+    "github": "twerske",
+    "twitter": "twerske",
+    "image": "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/7lFlJupvNAPBh7huFYyg.png"
   }
 }

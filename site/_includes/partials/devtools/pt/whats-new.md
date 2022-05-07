@@ -2,16 +2,14 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+### Chrome 101 {: #chrome101 }
 
-<!-- ### Chrome 101 {: #chrome101 }
-
-* [Import and export recorded user flows as a JSON file](/pt/blog/new-in-devtools-101/#recorder)
-* [View cascade layers in the Styles pane](/pt/blog/new-in-devtools-101/#layer)
-* [Support for the hwb() color function](/pt/blog/new-in-devtools-101/#hwb)
-* [Improved the display of private properties](/pt/blog/new-in-devtools-101/#private-props)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-101/#misc)
-* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/pt/blog/new-in-devtools-101/#lighthouse) -->
-
+* [Importe e exporte fluxos de usuário gravados como um arquivo JSON](/pt/blog/new-in-devtools-101/#recorder)
+* [Visualize cascade layers no painel Estilos](/pt/blog/new-in-devtools-101/#layer)
+* [Suporte para a função de cor hwb()](/pt/blog/new-in-devtools-101/#hwb)
+* [Melhoria na exibição de propriedades privadas](/pt/blog/new-in-devtools-101/#private-props)
+* [Destaques diversos](/pt/blog/new-in-devtools-101/#misc)
+* [[Experimental] Novos modos timespan e snapshot no painel Lighthouse](/pt/blog/new-in-devtools-101/#lighthouse)
 
 ### Chrome 100 {: #chrome100 }
 

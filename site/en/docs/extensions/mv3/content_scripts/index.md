@@ -213,7 +213,7 @@ Use programmatic injection for content scripts that need to run in response to e
 occasions.
 
 In order to inject a content script programmatically, your extension needs host permissions for
-the page it's trying to inject scripts into. Host permissions can either be granted either by
+the page it's trying to inject scripts into. Host permissions can be granted either by
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 

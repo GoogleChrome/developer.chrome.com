@@ -12,6 +12,9 @@ tags:
   - css
 ---
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to
 viewing and changing CSS.
 
@@ -167,6 +170,48 @@ element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
 
+### View cascade layers {: #cascade-layers}
+
+[Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is useful for large codebases, design systems, and when managing third-party styles in applications.
+
+To view cascade layers, [inspect](/docs/devtools/open/#elements) the element below and open **Elements** > **Styles**.
+
+<div class="cascade-box"></div>
+<style>
+    .cascade-box{
+    width: 250px;
+    height: 30px;
+    text-align: center;}
+    .cascade-box::after {
+        content: "My styles are layered!";
+      }
+    /* Define the specificity */
+@layer base, component, page;
+@layer page {
+  .cascade-box {
+    background: palegreen;
+  }
+}
+@layer base {
+  .cascade-box {
+    background: rebeccapurple;
+  }
+}
+@layer component {
+  .cascade-box {
+    background: hotpink;
+  }
+}
+</style>
+
+In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
+
+To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
+
+The `page` layer has the highest specificity, therefore the element's background is green.
+
 ### View a page in print mode {: #print-mode }
 
 To view a page in print mode:
@@ -279,7 +324,7 @@ the value by a fixed amount:
   increment by 0.1.
 - <kbd>Up</kbd> to change the value by 1, or by 0.1 if the current value is between -1 and 1.
 - <kbd>Shift</kbd>+<kbd>Up</kbd> to increment by 10.
-- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Shift</kbd>+<kbd>Page Up</kbd>
+- <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>Page Up</kbd>
   (Windows, Linux) to increment the value by 100.
 
 Decrementing also works. Just replace each instance of <kbd>Up</kbd> mentioned above with
@@ -378,12 +423,15 @@ Here's a description of each of the UI elements of the **Color Picker**:
 1.  **Shades**.
 2.  **Eyedropper**. See [Sample a color off the page with the Eyedropper][25].
 3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
-4.  **Display Value**. The RGBA, HSLA, or Hex representation of the color.
+4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
 5.  **Color Palette**. Click one of these squares to change the color to that square.
 6.  **Hue**.
 7.  **Opacity**.
-8.  **Display Value Switcher**. Toggle between the RGBA, HSLA, and Hex representations of the
+8.  **Display Value Switcher**. Toggle between the [RGBA][29], [HSLA][30], [HWBA][31], and [Hex][32] representations of the
     current color.
+    {% Aside %}
+    **Note**: Alternatively, to toggle between color representations, hold down <kbd>Shift</kbd> and click on the color preview button.
+    {% endAside %}
 9.  **Color Palette Switcher**. Toggle between the [Material Design palette][26], a custom palette,
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
@@ -498,3 +546,7 @@ To open the **Shadow Editor**:
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
+[29]: https://drafts.csswg.org/css-color/#rgb-functions
+[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
+[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
+[32]: https://drafts.csswg.org/css-color/#hex-notation
