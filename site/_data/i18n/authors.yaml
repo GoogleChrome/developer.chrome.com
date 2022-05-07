@@ -795,3 +795,8 @@ sbc:
     en: 'Sam Clegg'
     description:
       en: 'Software engineer, Google'
+ericsl:
+  title:
+    en: 'Eric Leese'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'

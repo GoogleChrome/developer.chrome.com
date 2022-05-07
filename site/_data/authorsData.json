@@ -706,5 +706,9 @@
   "sbc": {
     "country": "US",
     "github": "sbc100"
+   },
+   "ericsl": {
+     "country": "DE",
+     "github": "ericsl"
    }
 }
