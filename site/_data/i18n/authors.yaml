@@ -790,3 +790,8 @@ pfaffe:
     en: 'Philip Pfaffe'
   description:
     en: 'Software Engineer working on Chrome DevTools at Google.'
+sbc:
+  title:
+    en: 'Sam Clegg'
+    description:
+      en: 'Software engineer, Google'
