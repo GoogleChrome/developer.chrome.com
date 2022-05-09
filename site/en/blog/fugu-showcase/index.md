@@ -33,7 +33,7 @@ You can launch each app by clicking the app's name, the app's preview image, or 
 link. For many apps, you can also see the source code by clicking **Source code**. On supporting
 browsers, you can share any of the listed apps via the **Share app** feature. As a special inception
 Easter egg, the Project Fugu API Showcase is of course
-<a href="https://tomayac.github.io/fugu-showcase/data/#tomayac.github.io!fugu-showcase!data" target="showcase">contained
+<a href="/blog/fugu-showcase/#tomayac.github.io!fugu-showcase!data" target="_blank">contained
 in the Project Fugu API Showcase</a>. Happy browsing!
 
 ## Showcase
