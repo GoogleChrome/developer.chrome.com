@@ -165,7 +165,7 @@ UA-CH API に更新したら、User-Agent
 
 ## 意見交換とフィードバックの提供
 
-- **オリジン トライアル**: [Chrome オリジントライアルに登録](/origintrials/#/view_trial/-7123568710593282047)して、情報量削減後の User-Agent の使用を選択し、[フィードバックを共有](https://github.com/abeyad/user-agent-reduction/issues)しましょう。
+- **オリジン トライアル**: [Chrome オリジントライアルに登録](/origintrials/#/view_trial/-7123568710593282047)して、情報量削減後の User-Agent の使用を選択し、[フィードバックを共有](https://github.com/miketaylr/user-agent-reduction/issues)しましょう。
 
 - **デモ**: [User-Agent の情報量削減のデモ](https://uar-ot.glitch.me/)をお試しください。
 

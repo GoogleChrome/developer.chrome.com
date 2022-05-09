@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-04-22
+updated: 2022-05-03
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -19,9 +19,7 @@ tags:
 %}
 
 
-{: #who}
-
-## Who is this article for?
+## Who is this article for? {: #who}
 
 This post is a technical reference to the current iteration of the experimental FLEDGE API.
 
@@ -35,9 +33,7 @@ deployment.
 explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
 
-{: #what}
-
-## What is FLEDGE?
+## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use cases, designed so that it cannot be used by
@@ -516,6 +512,7 @@ interest group. In the [current implementation](https://source.chromium.org/chro
 the following attributes can be changed:
 
 * `biddingLogicUrl`
+* `biddingWasmHelperUrl`
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
