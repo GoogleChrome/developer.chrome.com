@@ -49,6 +49,9 @@ in the Project Fugu API Showcase</a>. Happy browsing!
   ></iframe>
 </div>
 
+<!-- TODO: @tomayac
+  Remove this inline script once a stand-alone has been implemented.
+--> 
 <script>
   const SHOWCASE_URL = 'https://tomayac.github.io/fugu-showcase/data/';
   window.addEventListener('message', (event) => {
