@@ -80,15 +80,15 @@ int main() {
 
 It's still a fairly small example and you would likely not see any of the real issues you would see in a really big application, but we can still show you what the new features are. It's quick and easy to set up and to try for yourself!
 
-In the last post, we discussed how to compile and debug this example. Let's do that again, but let's also take a peak at the //performance//:
+In the last post, we discussed how to compile and debug this example. Let's do that again, but let's also take a peak at the _//performance//_:
 
 ```bash
 $ emcc -sUSE_SDL=2 -g -O0 -o mandelbrot.html mandelbrot.cc -sALLOW_MEMORY_GROWTH
 ```
 
-This command produces a 3MB wasm binary. And the bulk of that, as you might expect, is debug information. You can verify this with the `llvm-objdump` tool[^1] for example:
+This command produces a 3MB wasm binary. And the bulk of that, as you might expect, is debug information. You can verify this with the `llvm-objdump` tool< sup >[[1]](#footnote-1)</sup> for example:
 
-[^1]: If you don't have a recent version of `llvm-objdump` on your system, and you are using `emsdk`, you can find it in the `emsdk/upstream/bin` directory.
+[<span id="footnote-1">1</span>]: If you don't have a recent version of `llvm-objdump` on your system, and you are using `emsdk`, you can find it in the `emsdk/upstream/bin` directory.
 
 ```bash
 $ llvm-objdump -h mandelbrot.wasm
