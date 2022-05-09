@@ -212,7 +212,7 @@ chrome.scripting.unregisterContentScript(idArray, callback);
 Use programmatic injection for content scripts that need to run in response to events or on specific
 occasions.
 
-In order to inject a content script programmatically, your extension needs host permissions for
+To inject a content script programmatically, your extension needs host permissions for
 the page it's trying to inject scripts into. Host permissions can either be granted by
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
