@@ -7,7 +7,7 @@ description: An overview of how to filter content on prefetched navigations.
 
 To improve page load times for our users, Chrome will sometimes prefetch links on the Google Search results page, and other participating websites, before the user clicks on them. This feature is described in detail in [this article](/blog/private-prefetch-proxy) from a technical perspective.
 
-This feature relies on a [CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy which hides the user's IP address from the website that needs to be prefetched.  In turn, this inherently moves the connection establishment out of the network administrators' view.
+This feature relies on a [`CONNECT`](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy which hides the user's IP address from the website that needs to be prefetched. In turn, this inherently moves the connection establishment out of the network administrators' view.
 
 At the same time, we recognize that network administrators may need to filter content. So, we've designed a mechanism by which network administrators can continue to do so if the user does click a prefetched link.
 
