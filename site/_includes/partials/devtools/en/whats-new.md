@@ -2,6 +2,20 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 102 {: #chrome102 }
+
+* [Preview feature: New Performance insights panel](/blog/new-in-devtools-102/#perf)
+* [New shortcuts to emulate light and dark themes](/blog/new-in-devtools-102/#emulation)
+* [Improve security on the Network Preview tab](/blog/new-in-devtools-102/#network-preview)
+* [Improved reloading at breakpoint](/blog/new-in-devtools-102/#debugger)
+* [Console updates](/blog/new-in-devtools-102/#console)
+* [Cancel user flow recording at the start](/blog/new-in-devtools-102/#recorder)
+* [Display inherited highlight pseudo-elements in the Styles pane](/blog/new-in-devtools-102/#pseudo)
+* [Miscellaneous highlights](/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copy CSS changes](/blog/new-in-devtools-102/#copy)
+* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
+
+
 ### Chrome 101 {: #chrome101 }
 
 * [Import and export recorded user flows as a JSON file](/blog/new-in-devtools-101/#recorder)
