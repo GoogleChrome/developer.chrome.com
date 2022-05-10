@@ -134,4 +134,4 @@ This launch is only a first step. We hope to expand and improve this feature bas
 
 - [Prefetch proxy for network administrators](/multidevice/private-prefetch-proxy-for-network-admins).
 - [WICG github repository for efforts related to navigation speculation](https://github.com/WICG/nav-speculation/).
-- [Chromium blog in which the private prefetch proxy concept was originally introduced](https://blog.chromium.org/2020/12/continuing-our-journey-to-bring-instant.html#:~:text=The%20proposal%20defines%20the%20concept,can%20not%20be%20personalized%20to).
+- [Chromium blog in which the private prefetch proxy concept was originally introduced](https://blog.chromium.org/2020/12/continuing-our-journey-to-bring-instant.html).
