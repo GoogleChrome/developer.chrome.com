@@ -73,50 +73,50 @@ For the duration of the Early Access Program, website owners interested in Priva
 
 This traffic advice file should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster [LCP](https://web.dev/lcp/) on prefetched navigations.
 
-In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from private prefetch proxy for links with cookies.
+In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from Private Prefetch Proxy for links with cookies.
 
 Concretely, while the prefetch requests will remain uncredentialed, the web page will gain access to cookies, and other local state, when the user navigates to it. Developers could take advantage of this to add back the personalization and changes based on cookies or local state. Or perhaps, developers might also be interested in declaring certain resources as perfectly fine to prefetch and use as is, without cookies (that is, resources that don't depend on any cookies). Please have a look at the [What's next](#next) section to learn more and inform our plan.
 
 ### Geo-dependent content or services
 
-If your website behaves differently (for example, different content, or selective access) across markets based on the user's IP address, you may wonder how to handle private prefetch proxy's prefetch requests. It's important to know that private prefetch proxy is powered by several servers spread across the globe, and that the IP of the proxy will geolocate to the country from which the user initiated a prefetch.
+If your website behaves differently (for example, different content, or selective access) across markets based on the user's IP address, you may wonder how to handle Private Prefetch Proxy's prefetch requests. It's important to know that Private Prefetch Proxy is powered by several servers spread across the globe, and that the IP of the proxy will geolocate to the country from which the user initiated a prefetch.
 
 So, with that in mind, here is what we recommend:
 
-1. Identify prefetch requests from a private prefetch proxy by the presence of a Sec-Purpose: Prefetch; anonymous-client-ip HTTP header.
-1. Lookup the geolocation of the private prefetch proxy that issued the request via its IP address. See [this resource](https://www.gstatic.com/chrome/prefetchproxy/prefetch_proxy_geofeed) for an up-to-date list of rolled-out geographies and the corresponding IP addresses.
+1. Identify prefetch requests from Private Prefetch Proxy by the presence of a `Sec-Purpose: Prefetch; anonymous-client-ip` HTTP header.
+1. Lookup the geolocation of the Private Prefetch Proxy that issued the request via its IP address. See [this resource](https://www.gstatic.com/chrome/prefetchproxy/prefetch_proxy_geofeed) for an up-to-date list of rolled-out geographies and the corresponding IP addresses.
 1. Serve resources in accordance with the market attached to this particular geolocation.
 
 ### Traffic control {: #traffic }
 
-From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much the private prefetch proxy should let through. You can start with a small fraction such as 0.3 (that is,. 30%), and gradually increase it to 1.0 (that is, 100%).
+From past experiments, we know that this feature typically results in less than 2% extra requests for main resources (for example HTML documents). That said, if you are the cautious kind, you can use the traffic advice's fraction field to control how much Private Prefetch Proxy should let through. You can start with a small fraction such as 0.3 (that is, 30%), and gradually increase it to 1.0 (that is, 100%).
 
 ```json
 [{
-    "user_agent": "prefetch-proxy",
-    "google_prefetch_proxy_eap": {
-        	"fraction": 0.3
-    }
+  "user_agent": "prefetch-proxy",
+  "google_prefetch_proxy_eap": {
+    "fraction": 0.3
+  }
 }]
 ```
 
-The `fraction` field gives you control over the prefetch traffic by specifying how much the private prefetch proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
+The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
 
 This _traffic advice file_ should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`.
 
-For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: Prefetch; anonymous-client-ip`) with a 503 status code, and by setting the `Cache-control: no-store` header on the response. You may also add the [Retry-After](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
+For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: Prefetch; anonymous-client-ip`) with a 503 status code, and by setting the `Cache-control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
 ## For referrer website owners {: #referrers }
 
-If you operate a website with lots of links to other websites, you may be interested in using the private prefetch proxy feature to speed up these cross-origin navigations. You will need to add [speculation rules](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender) to your pages for Chrome to know which page you believe it should prefetch via the private prefetch proxy. Here is a simple example:
+If you operate a website with lots of links to other websites, you may be interested in using the Private Prefetch Proxy feature to speed up these cross-origin navigations. You will need to add [speculation rules](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender) to your pages for Chrome to know which page you believe it should prefetch via Private Prefetch Proxy. Here is a simple example:
 
 ```html
 <script type="speculationrules">
 {
   "prefetch": [
-"source": "list",
-"urls": ["https://example.com/index.html"],
-"requires": ["anonymous-client-ip-when-cross-origin"]}
+    "source": "list",
+    "urls": ["https://example.com/index.html"],
+    "requires": ["anonymous-client-ip-when-cross-origin"]
   ]
 }
 </script>
