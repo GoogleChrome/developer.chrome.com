@@ -11,6 +11,8 @@ tags:
 
 Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance.
 
+{% YouTube id='5PFmGeCZDvw' %}
+
 {% Aside %}
 This is a preview feature in Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
 {% endAside %}
