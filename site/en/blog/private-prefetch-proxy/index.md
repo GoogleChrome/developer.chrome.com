@@ -29,7 +29,7 @@ or [how referrer websites can help their users](#referrers) achieve their goals 
 
 ### Secure communication channel
 
-This feature uses a [CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy to establish a secure communication channel between Chrome and the server hosting the content to be prefetched. This secure communication channel prevents the proxy from inspecting any data transfer. Notably, while the private prefetch proxy necessarily sees the host name in order to establish a secure communication channel, it does not see the full URLs, nor the resources themselves.
+This feature uses a [CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy to establish a secure communication channel between Chrome and the server hosting the content to be prefetched. This secure communication channel prevents the proxy from inspecting any data transfer. Notably, while Private Prefetch Proxy necessarily sees the host name in order to establish a secure communication channel, it does not see the full URLs, nor the resources themselves.
 
 <figure>
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/UF6dpd6QvSzGXXlM9YWE.gif", alt="Animation showing flow of data through proxy.", width="600", height="365" %}
