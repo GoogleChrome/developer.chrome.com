@@ -43,21 +43,28 @@ This tutorial teaches you how to measure and understand your page load performan
 
 
 ## Record performance {: #record }
+
 The **Performance insights** panel supports record general and use-case-driven (e.g. page load) performance.
 
 1. Click [Open Demo]. The demo opens in a new tab. [Open Demo](https://coffee-cart.netlify.app/?ad=1)
 2. You can throttle the network and CPU while recording. For the tutorial, let’s set:
-  - CPU: 4x slowdown
-  - Disable cache
-  {% Aside 'gotchas' %}
-  Throttling is relative to your computer's capabilities. For example, the 4x slowdown option makes your CPU operate 4 times slower than its usual ability. DevTools can't truly simulate the CPUs of mobile devices, because the architecture of mobile devices is very different from that of desktops and laptops.
-  {% endAside %}
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling", width="800", height="489" %}
+  
+    - CPU: 4x slowdown
+    - Disable cache
+  
+    {% Aside 'gotchas' %}
+    Throttling is relative to your computer's capabilities. For example, the 4x slowdown option makes your CPU operate 4 times slower than its usual ability. DevTools can't truly simulate the CPUs of mobile devices, because the architecture of mobile devices is very different from that of desktops and laptops.
+    {% endAside %}
+    
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling", width="800", height="489" %}
+
 3. Click **Measure page load**. DevTools records performance metrics while the page reloads and then automatically stops the recording a couple seconds after the page load has finished.
-  {% Aside 'gotchas' %}
-  If you want to measure general performance of your web page, use **Start recording**. Interact with the page and click **Stop recording** manually to stop recording. 
-  {% endAside %}
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/z24Hl8VhBVetZUNHIGms.png", alt="Start options", width="800", height="489" %}
+
+    {% Aside 'gotchas' %}
+    If you want to measure general performance of your web page, use **Start recording**. Interact with the page and click **Stop recording** manually to stop recording. 
+    {% endAside %}
+    
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/z24Hl8VhBVetZUNHIGms.png", alt="Start options", width="800", height="489" %}
 
 
 ## Replay a performance recording {: #replay }
