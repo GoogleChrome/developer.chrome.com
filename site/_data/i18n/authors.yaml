@@ -549,6 +549,11 @@ beaufortfrancois:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+eladalon:
+  title:
+    en: 'Elad Alon'
+  description:
+    en: 'Rushes in where angels fear to tread'
 atotic:
   title:
     en: 'Aleks Totic'
@@ -785,3 +790,23 @@ emmatwersky:
     en: 'Emma Twersky'
   description:
     en: 'Developer Relations Engineer, Google'
+pfaffe:
+  title:
+    en: 'Philip Pfaffe'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+sbc:
+  title:
+    en: 'Sam Clegg'
+  description:
+    en: 'Software engineer, Google'
+ericsl:
+  title:
+    en: 'Eric Leese'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+rkochman:
+  title:
+    en: 'Rob Kochman'
+  description:
+    en: "Rob is a product manager on Chrome's Web Platform team."

@@ -17,7 +17,8 @@ authenticators.
 
 ## Open the WebAuthn tab {: #open_the_webauthn_tab }
 
-1.  Visit a page that uses WebAuthn, such as our demo page here - [try-webauthn.appspot.com/][1]
+
+1.  Visit a page that uses WebAuthn, such as our demo page here - [try-webauthn.appspot.com][1]
     (please login to access the page).
 2.  [Open DevTools][2].
 3.  Click **More Options** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="6", height="26" %} > **More
