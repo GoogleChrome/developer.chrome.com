@@ -88,7 +88,6 @@ $ emcc -sUSE_SDL=2 -g -O0 -o mandelbrot.html mandelbrot.cc -sALLOW_MEMORY_GROWTH
 
 This command produces a 3MB wasm binary. And the bulk of that, as you might expect, is debug information. You can verify this with the `llvm-objdump` tool <sup>[[1]](#footnote-1)</sup> for example:
 
-<sup id="footnote-1">1</sup>: If you don't have a recent version of `llvm-objdump` on your system, and you are using `emsdk`, you can find it in the `emsdk/upstream/bin` directory.
 
 ```bash
 $ llvm-objdump -h mandelbrot.wasm
@@ -226,5 +225,6 @@ There are several advantages to splitting up the debug information if one is wor
 
 2. **Faster debugging: The debugger can skip parsing the additional symbols in `.dwo`/`.dwp` files for some symbol lookups**. For some lookups (such as requests on the line mapping of wasm-to-C++ files), we don’t need to look into the additional debug data. This saves us time, not needing to load the and parse the additional debug data.
 
+<sup id="footnote-1">1</sup>: If you don't have a recent version of `llvm-objdump` on your system, and you are using `emsdk`, you can find it in the `emsdk/upstream/bin` directory.
 {% include 'partials/devtools/en/reach-out.md' %}
 {% include 'partials/devtools/en/engineering-blog.md' %}
