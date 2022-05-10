@@ -50,6 +50,7 @@ lifecycle over multiple sites. To cover this journey, the origin trial includes:
         specific subset of all the proposed functionality. Read the
         [FLEDGE origin trial details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
         for more information.
+*   **[Fenced frames](/docs/privacy-sandbox/fenced-frame/)** to render the [opaque URL](https://github.com/WICG/fenced-frame/blob/master/explainer/opaque_src.md) of the [FLEDGE ad auction winner](/docs/privacy-sandbox/fledge/#6-the-winning-ad-is-displayed).
 *   **[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)** to
     measure and report on the performance over the ad lifecycle.
     *   As part of Attribution Reporting, aggregatable reports must be 
