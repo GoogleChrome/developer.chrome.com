@@ -187,7 +187,7 @@ Building the DWARF package out of the individual objects has the advantage that 
 
 You might have noticed, we snuck another flag into the `emcc` command above, `-gdwarf-5`. Enabling version 5 of the DWARF symbols, which is currently not the default, is another trick to help us start debugging faster. With it, certain information is stored in the main binary that the default version 4 left out. Specifically, we can determine the full set of source files just from the main binary. This allows the debugger to do basic actions like showing the full source tree and setting breakpoints without loading and parsing the full symbol data. This makes debugging with split symbols a lot faster, so we're always using the `-gsplit-dwarf` and `-gdwarf-5` command line flags together!
 
-WIth the DWARF5 debug format we also get access to another useful feature. It introduces a  *name index* in the debug data that will be generated when passing the `-gpubnames` flag:
+With the DWARF5 debug format we also get access to another useful feature. It introduces a  *name index* in the debug data that will be generated when passing the `-gpubnames` flag:
 
 ```bash
 $ emcc -sUSE_SDL=2 -g -gdwarf-5 -gsplit-dwarf -gpubnames -O0 -o mandelbrot.html mandelbrot.cc -sALLOW_MEMORY_GROWTH -sWASM_BIGINT -sERROR_ON_WASM_CHANGES_AFTER_LINK 
