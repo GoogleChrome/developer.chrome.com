@@ -17,7 +17,7 @@ updated: 2022-05-10
 
 This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
-* Fenced frames are available for experimentation in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from [M102 to M104](https://chromiumdash.appspot.com/schedule). Learn how you can [setup your origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues). 
+* Fenced frames are available for experimentation in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from [M102 to M105](https://chromiumdash.appspot.com/schedule). Learn how you can [setup your origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues). 
 *  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 *  This feature is [available behind a Chrome flag](#try-fenced-frames).
