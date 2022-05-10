@@ -3,9 +3,9 @@
 layout: 'layouts/blog-post.njk'
 title: Private prefetch proxy in Chrome
 description: >
-  Speeding up Largest Contentful Paint with cross-site prefetching.
+  Speeding up Largest Contentful Paint (LCP) with cross-site prefetching.
 subhead: >
-  Speeding up Largest Contentful Paint with cross-site prefetching
+  Speeding up Largest Contentful Paint (LCP) with cross-site prefetching.
 date: 2022-05-11
 authors:
   - katiehempenius
@@ -19,13 +19,13 @@ alt: >
   A gate with a sign reading private.
 ---
 
-Since Chrome 92, we've been running an early access program (EAP) for a feature called private prefetch proxy, which speeds up out-going navigations from Google Search by 30% at the median. This private prefetch proxy feature allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates. We expect that the feature will graduate from this EAP as early as Chrome 103, thereby no longer requiring websites to opt-in, and allowing other referrer websites to safely speed up cross-site navigations.
+Since Chrome 92, we've been running an Early Access Program (EAP) for a feature called Private Prefetch Proxy, which speeds up outgoing navigations from Google Search by 30% at the median. Private Prefetch Proxy allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates. We expect that the feature will graduate from this EAP as early as Chrome 103, thereby no longer requiring websites to opt-in, and allowing other referrer websites to safely speed up cross-site navigations.
 
 Read on to learn about [how this feature works](#how), 
-[how it can help significantly improve your sites' Largest Contentful Paint](#owners), 
+[how it can help significantly improve your sites' Largest Contentful Paint (LCP)](#owners), 
 or [how referrer websites can help their users](#referrers) achieve their goals by speeding up cross-site navigations.
 
-## How private prefetch proxy works {: #how }
+## How Private Prefetch Proxy works {: #how }
 
 ### Secure communication channel
 
@@ -33,45 +33,45 @@ This feature uses a [CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6)
 
 <figure>
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/UF6dpd6QvSzGXXlM9YWE.gif", alt="Animation showing flow of data through proxy.", width="600", height="365" %}
-  <figcaption>Prefetching websites via a CONNECT proxy prevents leaking user information.</figcaption>
+  <figcaption>Prefetching websites via a <code>CONNECT</code> proxy prevents leaking user information.</figcaption>
 </figure>
 
 In addition, because the secure communication channel is encrypted end-to-end, intermediaries can neither observe the host names, nor the content of the prefetched sites. Finally, the proxy inherently prevents the destination server from seeing the user's IP address.
 
 ### Preventing user identification
 
-Beyond the network aspects detailed earlier, we also need to prevent servers from identifying a user at prefetch time, via information previously stored on their device. To that end, Chrome currently restricts the usage of Private Prefetch Proxy to websites for which the user has no cookies or other local state. Here are the restrictions for prefetch requests made via the private prefetch proxy:
+Beyond the network aspects detailed earlier, we also need to prevent servers from identifying a user at prefetch time, via information previously stored on their device. To that end, Chrome currently restricts the usage of Private Prefetch Proxy to websites for which the user has no cookies or other local state. Here are the restrictions for prefetch requests made via Private Prefetch Proxy:
 
 - **Cookies:** Prefetch requests are not allowed to carry cookies.
   - If there is a cookie for a resource, Chrome will make an uncredentialed fetch but will not use the response (see later [Caching](#caching) section). 
   - Although responses to a prefetch request can include cookies, these cookies will only be saved if the user navigates to the prefetched page.
-- **Fingerprinting:** Other surfaces which could be used for fingerprinting are also adjusted. For example, the User-Agent header sent by the prefetch proxy only carries limited information.
+- **Fingerprinting:** Other surfaces which could be used for fingerprinting are also adjusted. For example, the `User-Agent` header sent by prefetch proxy only carries limited information.
 
-In the future, we hope to expand private prefetch proxy to links with cookies or local state while maintaining the same privacy characteristics. See the [What's next](#next) section for more details.
+In the future, we hope to expand Private Prefetch Proxy to links with cookies or local state while maintaining the same privacy characteristics. See the [What's next](#next) section for more details.
 
 ### Caching {: #caching }
 
-Chrome will prefetch resources even if they are already in the cache, but they will not carry any conditional headers such as Etags or If-Modified-Since (these contain server-set values which could be used for tracking even without cookies). This prefetching is done to prevent leaking a client's cache state to the prefetched website. In addition, Chrome will only commit a prefetched resource to the cache if the user decides to navigate to the prefetched website.
+Chrome will prefetch resources even if they are already in the cache, but they will not carry any conditional headers such as `ETag` or `If-Modified-Since` (these contain server-set values which could be used for tracking even without cookies). This prefetching is done to prevent leaking a client's cache state to the prefetched website. In addition, Chrome will only commit a prefetched resource to the cache if the user decides to navigate to the prefetched website.
 
 ## Getting started with private prefetch proxy
 
 ### For website owners {: #owners }
 
-For the duration of the early access Program, website owners interested in private prefetch proxy will need to deploy a traffic advice file on their server with the following content: 
+For the duration of the Early Access Program, website owners interested in Private Prefetch Proxy will need to deploy a traffic advice file on their server with the following content: 
 
 ```json
 [{
-    "user_agent": "prefetch-proxy",
-    "google_prefetch_proxy_eap": {
-    	"fraction": 1.0
-    }
+  "user_agent": "prefetch-proxy",
+  "google_prefetch_proxy_eap": {
+    "fraction": 1.0
+  }
 }]
 ```
 
 - The `google_prefetch_proxy_eap` section allows you to opt into the EAP.
-- The `fraction` field gives you control over the prefetch traffic by specifying how much the private prefetch proxy should let through. See the [traffic control](#traffic) section for more details.
+- The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. See the [traffic control](#traffic) section for more details.
 
-This traffic advice file should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster Largest Contentful Paint on prefetched navigations.
+This traffic advice file should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster [LCP](https://web.dev/lcp/) on prefetched navigations.
 
 In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from private prefetch proxy for links with cookies.
 
