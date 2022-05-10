@@ -20,11 +20,11 @@ alt: >
 
 ## Why does page load speed matter?
 
-Most users routinely identify slow page loads as a major source of frustration (54% in a user study conducted by Google). So, it should not come as a surprise that faster page loads result in better outcomes for a business. Indeed, if visitors get frustrated even before they interact with a website, it's very unlikely that they will stay long enough to appreciate its value. In fact, another Google study across 254 eCommerce, Finance, and Travel sites showed that sites which load in two seconds or less had 15% higher conversion rates.
+Most users routinely identify slow page loads as a major source of frustration (54% in a user study conducted by Google). So, it should not come as a surprise that faster page loads result in better outcomes for a business. Indeed, if visitors get frustrated even before they interact with a website, it's very unlikely that they will stay long enough to appreciate its value. In fact, another Google study across 254 eCommerce, finance, and travel sites showed that sites which load in two seconds or less had 15% higher conversion rates.
 
 ## Speeding up Largest Contentful Paint
 
-As the saying goes, you can't improve what you don't measure. For user experiences on the web, we believe that [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) constitute a solid set of user-centric metrics designed to capture fundamental aspects of the user experience. In particular, [Largest Contentful Paint](https://web.dev/lcp/), or LCP, measures your pages' loading performance by reporting the time it takes to display the largest text or image block that the user sees. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading (namely, the Good LCP threshold).
+As the saying goes, you can't improve what you don't measure. For user experiences on the web, we believe that [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) constitute a solid set of user-centric metrics designed to capture fundamental aspects of the user experience. In particular, [Largest Contentful Paint](https://web.dev/lcp/), or LCP, measures your pages' loading performance by reporting the time it takes to display the largest text or image block that the user sees. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading (namely, the good LCP threshold).
 
 Let's look at what contributes to the LCP of a typical page. 
 
