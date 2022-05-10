@@ -47,24 +47,21 @@ This tutorial teaches you how to measure and understand your page load performan
 The **Performance insights** panel supports record general and use-case-driven (e.g. page load) performance.
 
 1. Click [Open Demo]. The demo opens in a new tab. [Open Demo](https://coffee-cart.netlify.app/?ad=1)
-2. You can throttle the network and CPU while recording. For the tutorial, let’s set:
-  
-    - CPU: 4x slowdown
-    - Disable cache
+2. You can throttle the network and CPU while recording. For the tutorial, let’s set **disable cache** and set **CPU to 4x slowdown**:
+
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling", width="800", height="489" %}
   
     {% Aside 'gotchas' %}
     Throttling is relative to your computer's capabilities. For example, the 4x slowdown option makes your CPU operate 4 times slower than its usual ability. DevTools can't truly simulate the CPUs of mobile devices, because the architecture of mobile devices is very different from that of desktops and laptops.
-    {% endAside %}
-    
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling", width="800", height="489" %}
+    {% endAside %} 
 
 3. Click **Measure page load**. DevTools records performance metrics while the page reloads and then automatically stops the recording a couple seconds after the page load has finished.
+    
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/z24Hl8VhBVetZUNHIGms.png", alt="Start options", width="800", height="489" %}
 
     {% Aside 'gotchas' %}
     If you want to measure general performance of your web page, use **Start recording**. Interact with the page and click **Stop recording** manually to stop recording. 
     {% endAside %}
-    
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/z24Hl8VhBVetZUNHIGms.png", alt="Start options", width="800", height="489" %}
 
 
 ## Replay a performance recording {: #replay }
@@ -75,7 +72,7 @@ Use the controls at the bottom to control the replay of your recording.
 
 Here is an example of how to do it.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/VBbc5OLPefRvxs29Cxqy.mp4", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/VBbc5OLPefRvxs29Cxqy.mp4", controls="true", muted="true", class="screenshot" %}
 
 - Click **Play** to play the recording.
 - Click **Pause** to pause the replay.
@@ -85,9 +82,9 @@ Here is an example of how to do it.
 
 ## Navigate a performance recording {: #navigate }
 
-DevTools automatically zooms out to show the full recording. You can navigate the recording with zoom and move the timeline 
+DevTools automatically zooms out to show the full recording timeline. You can navigate the recording with zoom and move the timeline. 
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/aiNxjBK2fBr76NKHfMoA.mp4", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/aiNxjBK2fBr76NKHfMoA.mp4", controls="true", muted="true", class="screenshot" %}
 
 - Click on the **Timeline** to move the playhead to view a particular frame.
 - Use the **Zoom in** and **Zoom out** control at the bottom to zoom.
@@ -105,7 +102,7 @@ Get a list of performance insights in the **Insights** pane. Identify and fix po
 
 Hover over each of the insights to highlight them on the main tracks.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/FXl6y9hXBJNXsOLgLPft.mp4", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/FXl6y9hXBJNXsOLgLPft.mp4", controls="true", muted="true", class="screenshot" %}
 
 Click on an insight (e.g. Rendering block request) to understand it further in the **Details** pane - **source file**, **issue**, **how to fix** it and more. 
 
@@ -122,7 +119,7 @@ You can view these metrics on the **Timeline** and **Insights** pane.
 
 Hover over the insights on the **Timeline** to learn more about the metrics.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/23onsIV7BvDJpMI4mnMZ.mp4", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/23onsIV7BvDJpMI4mnMZ.mp4", controls="true", muted="true", class="screenshot" %}
 
 
 ## View layout shifts activity {: #layout-shifts }
@@ -134,7 +131,7 @@ View layout shifts activity in the **Layout Shifts** track.
 Layout shifts are grouped in [session window](https://web.dev/evolving-cls/?utm_source=devtools#why-a-session-window). In the example above, there are 2 session windows. There are gaps between session windows. 
 
 {% Aside 'gotchas' %}
-Think about layout shifts like fireworks, there are times where multiple shifts happen at once, then it pauses for a while, and multiple shifts happen. Each set of multiple shifts is a session window. For more information, see [Session window]((https://web.dev/evolving-cls/?utm_source=devtools#why-a-session-window).
+Think about layout shifts like fireworks, there are times where multiple shifts happen at once, then it pauses for a while, and multiple shifts happen. Each set of multiple shifts is a session window. For more information, see [Session window](https://web.dev/evolving-cls/?utm_source=devtools#why-a-session-window).
 {% endAside %}
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7uN8y6gdUU8QdmAREPtJ.png", alt="session window and gap", width="800", height="491" %}
@@ -164,7 +161,7 @@ The maximum score of each layout shift is 1, if the whole page is shifted. In ou
 
 The total score for this session window is 0.19. Based on the CLS threshold, it needs improvement. The session window background color reflects the same.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fn3OABX9z2kCOlrOFeHp.svg", alt="CLS threshold", width="300", height="75" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qLAsAvXRANlaPjrNwtcG.png", alt="CLS threshold", width="800", height="212" %}
 
 The session window background graph is increased over time. It is reflect the **cumulative score** of the layout shift at that point of time.
 
@@ -192,7 +189,7 @@ View GPU activity in the **GPU** track. The GPU track is hidden by default, enab
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XLah7eTk4W8FlgzWONdU.png", alt="View GPU activity", width="800", height="377" %}
 
 
-## Customize the **Performance insights** panel {: #settings }
+## Customize the UI {: #settings }
 
 Click **Settings** to customize the **Timeline** and **Tracks**.
 
