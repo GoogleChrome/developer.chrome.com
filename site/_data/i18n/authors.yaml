@@ -798,8 +798,8 @@ pfaffe:
 sbc:
   title:
     en: 'Sam Clegg'
-    description:
-      en: 'Software engineer, Google'
+  description:
+    en: 'Software engineer, Google'
 ericsl:
   title:
     en: 'Eric Leese'
