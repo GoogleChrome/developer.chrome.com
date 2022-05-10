@@ -21,11 +21,11 @@ alt: >
 
 Since Chrome 92, we've been running an early access program (EAP) for a feature called private prefetch proxy, which speeds up out-going navigations from Google Search by 30% at the median. This private prefetch proxy feature allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates. We expect that the feature will graduate from this EAP as early as Chrome 103, thereby no longer requiring websites to opt-in, and allowing other referrer websites to safely speed up cross-site navigations.
 
-Read on to learn about [how this feature works](https://docs.google.com/document/d/1e6NWmwdHs4GLZWcjGHi3jAob-w6l4iKZ1Tp7AZOqGZ0/edit#heading=h.buxpbr2csmu5), 
-[how it can help significantly improve your sites' Largest Contentful Paint](https://docs.google.com/document/d/1e6NWmwdHs4GLZWcjGHi3jAob-w6l4iKZ1Tp7AZOqGZ0/edit#heading=h.yt9rd5nty84c), 
-or [how referrer websites can help their users](https://docs.google.com/document/d/1e6NWmwdHs4GLZWcjGHi3jAob-w6l4iKZ1Tp7AZOqGZ0/edit#heading=h.9nd11p7mg0ai) achieve their goals by speeding up cross-site navigations.
+Read on to learn about [how this feature works](#how), 
+[how it can help significantly improve your sites' Largest Contentful Paint](#owners), 
+or [how referrer websites can help their users](#referrers) achieve their goals by speeding up cross-site navigations.
 
-## How private prefetch proxy works
+## How private prefetch proxy works {: #how }
 
 ### Secure communication channel
 
@@ -55,7 +55,7 @@ Chrome will prefetch resources even if they are already in the cache, but they w
 
 ## Getting started with private prefetch proxy
 
-### For website owners
+### For website owners {: #owners }
 
 For the duration of the early access Program, website owners interested in private prefetch proxy will need to deploy a traffic advice file on their server with the following content: 
 
@@ -106,7 +106,7 @@ This _traffic advice file_ should be placed under the `/.well-known/` path of yo
 
 For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: Prefetch; anonymous-client-ip`) with a 503 status code, and by setting the `Cache-control: no-store` header on the response. You may also add the [Retry-After](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
-## For referrer website owners
+## For referrer website owners {: #referrers }
 
 If you operate a website with lots of links to other websites, you may be interested in using the private prefetch proxy feature to speed up these cross-origin navigations. You will need to add [speculation rules](https://web.dev/speculative-prerendering/#in-browser-speculation-rules-for-prefetch-and-prerender) to your pages for Chrome to know which page you believe it should prefetch via the private prefetch proxy. Here is a simple example:
 
