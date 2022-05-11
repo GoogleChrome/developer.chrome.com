@@ -621,7 +621,7 @@ The above code does three things:
 This code yields different results in different browsers, as the order
 and reliability of events has not been consistently implemented. To learn
 how best to handle these inconsistencies see [managing cross-browsers
-differences][#managing-cross-browsers-differences].
+differences](#managing-cross-browsers-differences).
 {% endAside %}
 
 One thing to note about the above code is that all the event listeners are added
@@ -935,13 +935,13 @@ onAllChangesSaved(() => {
 ```
 
 {% Aside %}
-  [PageLifecycle.js][https://github.com/GoogleChromeLabs/page-lifecycle] library provides the convenience methods `addUnsavedChanges()`
+  [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle) library provides the convenience methods `addUnsavedChanges()`
   and `removeUnsavedChanges()`, that follow all the best practices
-  outlined above. They're based on a [draft proposal][https://docs.google.com/document/d/1SXY2zGDgh7L73kX3bXfxCi15IV_Z7RnH9lRIZnuqf6g/edit?usp=sharing] to officially replace the `beforeunload` event with a declarative API that can be less easily
+  outlined above. They're based on a [draft proposal](https://docs.google.com/document/d/1SXY2zGDgh7L73kX3bXfxCi15IV_Z7RnH9lRIZnuqf6g/edit?usp=sharing) to officially replace the `beforeunload` event with a declarative API that can be less easily
   abused and more reliable on mobile platforms.
 
   If you want to use the `beforeunload` event properly and in a
-  way that works cross-browser, the [PageLifecycle.js][https://github.com/GoogleChromeLabs/page-lifecycle]
+  way that works cross-browser, the [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)
   library is our recommended solution.
 {% endAside %}
 
@@ -975,7 +975,7 @@ in Chrome.
   In the case of pages that update the title or favicon to alert users of unread
   notifications, we currently have a
   [proposal to enable
-  these kinds of updates from service worker][https://github.com/WICG/page-lifecycle/issues/24], which would allow Chrome to
+  these kinds of updates from service worker](https://github.com/WICG/page-lifecycle/issues/24), which would allow Chrome to
   freeze or discard the page but still show changes to the tab title or favicon.
 {% endAside %}
 
