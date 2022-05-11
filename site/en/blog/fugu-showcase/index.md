@@ -38,7 +38,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
 
 ## Showcase
 
-<div class="showcase-container" style="height: 100%; width: 100%">
+<div class="showcase-container" style="width: 100%">
   <iframe
     title="Fugu showcase"
     name="showcase"
