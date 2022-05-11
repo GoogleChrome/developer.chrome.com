@@ -810,3 +810,14 @@ rkochman:
     en: 'Rob Kochman'
   description:
     en: "Rob is a product manager on Chrome's Web Platform team."
+kenjibaheux:
+  title:
+    en: Kenji Baheux
+  description:
+    en: Kenji is a product manager on the Chrome team.
+buettner:
+  title:
+    en: Michael Buettner
+  description:
+    en: Michael is a software engineer on the Chrome team.
+    
