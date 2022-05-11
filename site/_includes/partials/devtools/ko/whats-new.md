@@ -2,6 +2,19 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+<!-- ### Chrome 102 {: #chrome102 }
+
+* [Preview feature: New Performance insights panel](/ko/blog/new-in-devtools-102/#perf)
+* [New shortcuts to emulate light and dark themes](/ko/blog/new-in-devtools-102/#emulation)
+* [Improve security on the Network Preview tab](/ko/blog/new-in-devtools-102/#network-preview)
+* [Improved reloading at breakpoint](/ko/blog/new-in-devtools-102/#debugger)
+* [Console updates](/ko/blog/new-in-devtools-102/#console)
+* [Cancel user flow recording at the start](/ko/blog/new-in-devtools-102/#recorder)
+* [Display inherited highlight pseudo-elements in the Styles pane](/ko/blog/new-in-devtools-102/#pseudo)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copy CSS changes](/ko/blog/new-in-devtools-102/#copy)
+* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/ko/blog/new-in-devtools-102/#color-picker) -->
+
 
 ### Chrome 101 {: #chrome101 }
 
