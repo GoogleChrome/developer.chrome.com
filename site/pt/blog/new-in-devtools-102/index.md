@@ -185,7 +185,7 @@ Essas são algumas melhorias dignas de nota nessa atualizacão:
 
 
 <!-- ## [Experimental] Copy CSS changes {: #copy } -->
-## [Experimental] Copie mudanças de CDD {: #copy }
+## [Experimental] Copie mudanças de CSS {: #copy }
 
 {% Aside %}
 <!-- To enable the experiment, check **Sync CSS changes in the Styles pane** under **Settings** > **Experiments**. -->
