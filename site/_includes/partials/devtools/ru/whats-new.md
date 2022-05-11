@@ -3,6 +3,18 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+<!-- ### Chrome 102 {: #chrome102 }
+
+* [Preview feature: New Performance insights panel](/ru/blog/new-in-devtools-102/#perf)
+* [New shortcuts to emulate light and dark themes](/ru/blog/new-in-devtools-102/#emulation)
+* [Improve security on the Network Preview tab](/ru/blog/new-in-devtools-102/#network-preview)
+* [Improved reloading at breakpoint](/ru/blog/new-in-devtools-102/#debugger)
+* [Console updates](/ru/blog/new-in-devtools-102/#console)
+* [Cancel user flow recording at the start](/ru/blog/new-in-devtools-102/#recorder)
+* [Display inherited highlight pseudo-elements in the Styles pane](/ru/blog/new-in-devtools-102/#pseudo)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copy CSS changes](/ru/blog/new-in-devtools-102/#copy)
+* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/ru/blog/new-in-devtools-102/#color-picker) -->
 
 ### Chrome 101 {: #chrome101 }
 

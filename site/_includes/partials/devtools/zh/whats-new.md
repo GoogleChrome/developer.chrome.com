@@ -2,14 +2,28 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 101 {: #chrome101 }
+<!-- ### Chrome 102 {: #chrome102 }
 
-* [Import and export recorded user flows as a JSON file](/zh/blog/new-in-devtools-101/#recorder)
-* [View cascade layers in the Styles pane](/zh/blog/new-in-devtools-101/#layer)
-* [Support for the hwb() color function](/zh/blog/new-in-devtools-101/#hwb)
-* [Improved the display of private properties](/zh/blog/new-in-devtools-101/#private-props)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-101/#misc)
-* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-101/#lighthouse) -->
+* [Preview feature: New Performance insights panel](/zh/blog/new-in-devtools-102/#perf)
+* [New shortcuts to emulate light and dark themes](/zh/blog/new-in-devtools-102/#emulation)
+* [Improve security on the Network Preview tab](/zh/blog/new-in-devtools-102/#network-preview)
+* [Improved reloading at breakpoint](/zh/blog/new-in-devtools-102/#debugger)
+* [Console updates](/zh/blog/new-in-devtools-102/#console)
+* [Cancel user flow recording at the start](/zh/blog/new-in-devtools-102/#recorder)
+* [Display inherited highlight pseudo-elements in the Styles pane](/zh/blog/new-in-devtools-102/#pseudo)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copy CSS changes](/zh/blog/new-in-devtools-102/#copy)
+* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/zh/blog/new-in-devtools-102/#color-picker) -->
+
+
+### Chrome 101 {: #chrome101 }
+
+* [导入以及导出用户流程为 JSON 文件](/zh/blog/new-in-devtools-101/#recorder)
+* [样式边栏查看级联层](/zh/blog/new-in-devtools-101/#layer)
+* [支持 hwb() 颜色函数](/zh/blog/new-in-devtools-101/#hwb)
+* [改进私有属性的显示问题](/zh/blog/new-in-devtools-101/#private-props)
+* [其他的更新](/zh/blog/new-in-devtools-101/#misc)
+* [[实验阶段] Lighthouse 面板新增 timespan 和快照模式](/zh/blog/new-in-devtools-101/#lighthouse)
 
 ### Chrome 100 {: #chrome100 }
 
@@ -49,7 +63,7 @@
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
-* [[实验] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
+* [[实验阶段] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }
@@ -57,7 +71,7 @@
 * [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
 * [修改 HTML 时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
 * [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
-* [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
+* [[实验阶段] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
 * [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
@@ -72,7 +86,7 @@
 * [统一的异步堆栈信息](/zh/blog/new-in-devtools-96/#async)
 * [保留控制台侧边栏](/zh/blog/new-in-devtools-96/#console-sidebar)
 * [弃用应用程序面板里面的应用程序缓存窗格](/zh/blog/new-in-devtools-96/#capp-cache)
-* [[实验] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
+* [[实验阶段] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
 
 
 ### Chrome 95 {: #chrome95 }
