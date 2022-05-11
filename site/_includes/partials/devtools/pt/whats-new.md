@@ -3,18 +3,18 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/pt/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/pt/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/pt/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/pt/blog/new-in-devtools-102/#debugger)
-* [Console updates](/pt/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/pt/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/pt/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/pt/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/pt/blog/new-in-devtools-102/#color-picker) -->
+* [Prévia de funcionalidade: Novo painel de insights de performance](/pt/blog/new-in-devtools-102/#perf)
+* [Novos atalhos para emular temas claros e escuros](/pt/blog/new-in-devtools-102/#emulation)
+* [Melhorias na segurança da aba de Visualização de Rede](/pt/blog/new-in-devtools-102/#network-preview)
+* [Melhorias no reload em breakpoints](/pt/blog/new-in-devtools-102/#debugger)
+* [Atualizações no Console](/pt/blog/new-in-devtools-102/#console)
+* [Cancelamento de gravações de fluxo de usuário no início](/pt/blog/new-in-devtools-102/#recorder)
+* [Veja pseudo-elementos herdados de seleção no painel de Estilos](/pt/blog/new-in-devtools-102/#pseudo)
+* [Outras novidades](/pt/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copie mudanças de CSS](/pt/blog/new-in-devtools-102/#copy)
+* [[Experimental] Escolhendo cores fora do browser](/pt/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
