@@ -117,7 +117,7 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 
 <!-- ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
-## [实验性] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
+## [实验阶段] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
 
 {% Aside %}
 <!-- To enable the experiment, enable the **Use Lighthouse panel with timespan and snapshot modes** checkbox under **Settings** > **Experiments**. -->
