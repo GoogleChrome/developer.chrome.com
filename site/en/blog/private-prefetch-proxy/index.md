@@ -29,7 +29,7 @@ or [how referrer websites can help their users](#referrers) achieve their goals 
 
 ### Secure communication channel
 
-This feature uses a [CONNECT](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy to establish a secure communication channel between Chrome and the server hosting the content to be prefetched. This secure communication channel prevents the proxy from inspecting any data transfer. Notably, while Private Prefetch Proxy necessarily sees the host name in order to establish a secure communication channel, it does not see the full URLs, nor the resources themselves.
+This feature uses a [`CONNECT`](https://tools.ietf.org/html/rfc7231#section-4.3.6) proxy to establish a secure communication channel between Chrome and the server hosting the content to be prefetched. This secure communication channel prevents the proxy from inspecting any data transfer. Notably, while Private Prefetch Proxy necessarily sees the host name in order to establish a secure communication channel, it does not see the full URLs, nor the resources themselves.
 
 <figure>
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/UF6dpd6QvSzGXXlM9YWE.gif", alt="Animation showing flow of data through proxy.", width="600", height="365" %}
@@ -71,7 +71,7 @@ For the duration of the Early Access Program, website owners interested in Priva
 - The `google_prefetch_proxy_eap` section allows you to opt into the EAP.
 - The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. See the [traffic control](#traffic) section for more details.
 
-This traffic advice file should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster [LCP](https://web.dev/lcp/) on prefetched navigations.
+This `traffic-advice` file should be placed under the `/.well-known/` path of your website (i.e. `/.well-known/traffic-advice`), and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster [LCP](https://web.dev/lcp/) on prefetched navigations.
 
 In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from Private Prefetch Proxy for links with cookies.
 
@@ -101,8 +101,6 @@ From past experiments, we know that this feature typically results in less than 
 ```
 
 The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
-
-This _traffic advice file_ should be placed under the `/.well-known/` path of your website, and served with a MIME type of `application/trafficadvice+json`.
 
 For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: Prefetch; anonymous-client-ip`) with a 503 status code, and by setting the `Cache-control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
