@@ -199,7 +199,7 @@ To better understand the inheritance and priority of the rules, you can view the
 1. Select a portion of the text above.
 1. In the **Styles** pane, scroll down to find the `Inherited from ::selection pseudo of...` section.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/te2Rhrbqs5BlrlcVFPZf.png", alt="Viewing the Inherited section of the Styles pane.", width="800", height="410" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/te2Rhrbqs5BlrlcVFPZf.png", alt="View the Inherited section of the Styles pane.", width="800", height="410" %}
 
 ### View cascade layers {: #cascade-layers}
 
