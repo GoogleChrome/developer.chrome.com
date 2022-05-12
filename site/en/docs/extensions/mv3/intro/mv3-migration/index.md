@@ -8,16 +8,16 @@ updated: 2021-08-13
 ---
 
 This guide provides developers with the information they need to begin
-migrating an extension from Manifest V2 to Manifest V3 (Manifest V3). Some extensions
+migrating an extension from Manifest V2 to Manifest V3. Some extensions
 will require very little change to make them Manifest V3 compliant, while others will
-need to be redesigned to some degree. Developers experienced with Manifest V2, and who
-are creating new Manifest V3 extensions, may also find this helpful. For a quick
-reference guide see the [migration
+need to be redesigned to some degree. For a quick reference guide see the [migration
 checklist](/docs/extensions/mv3/mv3-migration-checklist).
 
-Manifest V3 offers a number of improvements reflecting the aims of our
-[platform vision](/docs/extensions/mv3/intro/platform-vision).
+{% Aside %}
 
+Follow [What's new in Chrome Extensions](https://developer.chrome.com/docs/extensions/whatsnew/) to read about new Manifest V3 features as they become available.
+
+{% endAside %}
 
 ## Feature summary  {: #feature-summary }
 
@@ -41,7 +41,6 @@ There are a number of new features and functional changes for extensions using M
 
 For a fuller description of these changes, see the
 [Manifest V3 Overview](/docs/extensions/mv3/intro/mv3-overview).
-
 
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
@@ -107,9 +106,11 @@ In Manifest V3, you'll need to specify host permissions separately from other pe
 
 
 {% Aside 'warning' %}
+
 You do not have to declare content script match patterns in `host_permissions`
 in order to inject content scripts.  However, they **are** treated as host
 permissions requests by the Chrome Web Store review process.
+
 {% endAside %}
 
 
