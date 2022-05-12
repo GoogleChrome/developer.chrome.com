@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-04-05
+updated: 2022-05-13
 description: A high-level explanation of the software architecture of Chrome Extensions.
 subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
@@ -17,13 +17,13 @@ data.
 
 ## Architecture {: #arch }
 
-An extension's architecture will depend on its functionality, but all extensions are required to have a
+An extension's architecture will depend on its functionality, but all extensions must have a
 [manifest][section-manifest]. The following are other components an extension can include: 
 
-- [Background service worker][section-bg]
+- [Service worker][section-bg]
 - [Toolbar icon][section-icons]
 - [UI elements][section-ui]
-- [Content acript][section-cs]
+- [Content script][section-cs]
 - [Options page][section-options]
 
 ### The manifest {: #manifest }
@@ -65,20 +65,20 @@ example][sample-getting-started].
 popup", width="187", height="153" %}
 <!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
 
-### Background service worker {: #background_script }
+### Service worker {: #background_script }
 
-The background service worker is the extension's event handler; it contains listeners for browser
+The extension service worker is the extension's event handler; it contains listeners for browser
 events that are important to the extension. It lies dormant until an event is fired then performs
 the instructed logic; it is only loaded when it is needed and unloaded when it goes idle. The
-background script has access to all the [Chrome APIs][section-apis], as long it declares the
+service worker has access to all the [Chrome APIs][section-apis], as long it declares the
 required permissions in the `manifest.json`.
 
 See [Manage events with service workers][docs-service-worker] to learn more. 
 
 ### Content scripts {: #contentScripts }
 
-Content scripts allow extensions to inject script into a page in order to read and modify its
-contents. The content script contains JavaScript that executes in the contexts of a page that has
+Content scripts allow extensions to inject logic into a page in order to read and modify its
+contents. A content script contains JavaScript that executes in the context of a page that has
 been loaded into the browser.
 
 Content scripts can communicate with their parent extension by exchanging [messages][docs-messages]
@@ -94,12 +94,12 @@ See [Understanding content scripts][docs-content-scripts] to learn more.
 An extension's user interface should be purposeful and minimal. The UI should customize or enhance
 the browsing experience without distracting from it. 
 
-The following is a list of most common UI examples:
+The following is a list of the most common UI examples:
 
 - An [action click][docs-click] event.
 - A [popup][docs-popup].
 - A [context menu][docs-context-menu].
-- An [omnibox][docs-omnibox]
+- An [omnibox][docs-omnibox].
 - A [keyboard shortcut][docs-commands].
 - Desktop [notifications][api-notif].
 - [Text-to-speech][api-tts].
@@ -157,7 +157,7 @@ You can open these pages using the web api [window.open()][mdn-window-open], the
 [windows.create()][api-window-create], or [tabs.create()][api-create-tab].
 
 ## Extension files {: #files }
-<!-- TODO: Intro -->
+
 ### Referencing extension files {: #ref-files }
 
 Just as HTML pages on the web can include files on the same site with _relative URLs_, **extension
@@ -186,29 +186,27 @@ extension's top folder.
 
 {% Aside 'key-term' %}
 
-The **extension ID** is a 32 character alpha string that identifies an extension in the browser and
+The **extension ID** is a 32-character alpha string that identifies an extension in the browser and
 on the Chrome Web Store.
 
 {% endAside %}
 
 During development, a new ID is generated when an [_unpacked extension_][docs-unpacked] is loaded,
-unless the `"key"` property is set in the manifest.
-
-See [Keeping a consistent key][docs-key] to learn how to set this key.
+unless the `"key"` property is [set in the manifest][docs-key].
 
 {% Aside 'caution' %}
 
-All assets that content scripts and websites want to access must be declared as a
-[`web_accessible_resources`][section-web-res] in the manifest.
+All assets that content scripts and websites want to access must be declared under
+[`web_accessible_resources`][section-web-res] key in the manifest.
 
 {% endAside %}
 
-### Web accesible resources {: #web-resources }
+### Web-accesible resources {: #web-resources }
 
 Web-accessible resources are files (images, HTML, CSS, Javascript) inside an extension that can be
 accessed by a content script, web pages, or other extensions. 
 
-In Manifest Version 3, you can declare which resources are exposed and to what origins in the
+You can declare which resources are exposed and to what origins in the
 manifest:
 
 ```json
@@ -224,7 +222,7 @@ manifest:
 }
 ```
 
-See [Web accesible resources][docs-web-acc-res] to learn more.
+See [Web-accesible resources][docs-web-acc-res] for usage information.
 
 ## Using Chrome APIs {: #apis }
 
