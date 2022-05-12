@@ -96,22 +96,22 @@ mandelbrot.wasm:        file format wasm
 
 Sections:
 Idx Name          Size     VMA      Type
-  0 TYPE          0000026f 00000000 
-  1 IMPORT        00001f03 00000000 
-  2 FUNCTION      0000043e 00000000 
-  3 TABLE         00000007 00000000 
-  4 MEMORY        00000007 00000000 
-  5 GLOBAL        00000021 00000000 
-  6 EXPORT        0000014a 00000000 
-  7 ELEM          00000457 00000000 
+  0 TYPE          0000026f 00000000
+  1 IMPORT        00001f03 00000000
+  2 FUNCTION      0000043e 00000000
+  3 TABLE         00000007 00000000
+  4 MEMORY        00000007 00000000
+  5 GLOBAL        00000021 00000000
+  6 EXPORT        0000014a 00000000
+  7 ELEM          00000457 00000000
   8 CODE          0009308a 00000000 TEXT
   9 DATA          0000e4cc 00000000 DATA
- 10 name          00007e58 00000000 
- 11 .debug_info   000bb1c9 00000000 
- 12 .debug_loc    0009b407 00000000 
- 13 .debug_ranges 0000ad90 00000000 
- 14 .debug_abbrev 000136e8 00000000 
- 15 .debug_line   000bb3ab 00000000 
+ 10 name          00007e58 00000000
+ 11 .debug_info   000bb1c9 00000000
+ 12 .debug_loc    0009b407 00000000
+ 13 .debug_ranges 0000ad90 00000000
+ 14 .debug_abbrev 000136e8 00000000
+ 15 .debug_line   000bb3ab 00000000
  16 .debug_str    000209bd 00000000
 ```
 
@@ -189,7 +189,7 @@ You might have noticed, we snuck another flag into the `emcc` command above, `-g
 With the DWARF5 debug format we also get access to another useful feature. It introduces a  *name index* in the debug data that will be generated when passing the `-gpubnames` flag:
 
 ```bash
-$ emcc -sUSE_SDL=2 -g -gdwarf-5 -gsplit-dwarf -gpubnames -O0 -o mandelbrot.html mandelbrot.cc -sALLOW_MEMORY_GROWTH -sWASM_BIGINT -sERROR_ON_WASM_CHANGES_AFTER_LINK 
+$ emcc -sUSE_SDL=2 -g -gdwarf-5 -gsplit-dwarf -gpubnames -O0 -o mandelbrot.html mandelbrot.cc -sALLOW_MEMORY_GROWTH -sWASM_BIGINT -sERROR_ON_WASM_CHANGES_AFTER_LINK
 ```
 
 During a debugging session, symbol lookups often happen by searching for an entity by  name, e.g., when looking for a variable or a type. The name index accelerates  this search by  pointing directly to the compilation unit that defines that name. Without a name index, an exhaustive search of the entire debug data would be required to find the correct compilation unit that defines the named entity that we're looking for.
