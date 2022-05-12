@@ -108,6 +108,9 @@ documentation:
 blog:
   en: 'Blog'
 
+articles:
+  en: 'Articles'
+
 skip_to_content:
   en: 'Skip to content'
   es: 'Saltar al contenido'

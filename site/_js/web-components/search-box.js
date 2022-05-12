@@ -35,6 +35,7 @@ export class SearchBox extends BaseElement {
       active: {type: Boolean, reflect: true},
       buttonLabel: {type: String},
       docsLabel: {type: String},
+      articlesLabel: {type: String},
       blogLabel: {type: String},
       locale: {type: String},
       placeholder: {type: String},
@@ -322,6 +323,7 @@ export class SearchBox extends BaseElement {
 
       // Further categorize results into docs and blog posts.
       this.docsResults = this.results.filter(r => r.type === 'doc');
+      this.articlesResults = this.results.filter(r => r.type === 'article');
       this.blogResults = this.results.filter(r => r.type === 'blogPost');
     } catch (err) {
       console.error(err);
@@ -416,6 +418,14 @@ export class SearchBox extends BaseElement {
                 ${this.blogLabel.toUpperCase()}
               </div>
               ${this.blogResults.map(this.renderResult)}
+            `
+          : ''}
+        ${this.articlesResults?.length
+          ? html`
+              <div class="search-box__result-heading type--label">
+                ${this.articlesLabel.toUpperCase()}
+              </div>
+              ${this.articlesResults.map(this.renderResult)}
             `
           : ''}
         ${this.docsResults.length
