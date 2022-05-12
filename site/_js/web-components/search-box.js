@@ -70,6 +70,7 @@ export class SearchBox extends BaseElement {
     this._active = false;
     this.buttonLabel = 'open search';
     this.docsLabel = 'Documentation';
+    this.articlesLabel = 'Articles';
     this.blogLabel = 'Blog';
     this.locale = 'en';
     this.placeholder = 'Search';
