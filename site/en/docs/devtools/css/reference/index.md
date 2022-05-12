@@ -91,6 +91,10 @@ Use the **Computed** tab. See [View only the CSS that's actually applied to an e
 Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
 applied to an element][6].
 
+Alternatively, scroll down the **Styles** pane and find sections named `Inherited from <element_name>`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TuWZmbeQlHR6Qp6pUHVP.png", alt="View the Inherited from... section of the Styles pane.", width="800", height="361" %}
+
 ### View `@supports` at-rules {: #supports }
 
 The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
@@ -169,6 +173,33 @@ To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus
 element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
+
+### (Preview) View inherited highlight pseudo-elements {: #view-inherited-highlight-pseudo-elements }
+
+[Pseudo-elements][33] let you style specific parts of elements. Highlight pseudo-elements are document portions with a "selected" status and they are styled as "highlighted" to indicate this status to the user. For example, such pseudo-elements are `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`.
+
+As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style.
+
+{% Aside %}
+Currently, this is a preview feature. To enable it, run Chrome with the `--enable-blink-features=HighlightInheritance` flag.
+{% endAside %}
+
+To better understand the inheritance and priority of the rules, you can view the inherited highlight pseudo-elements:
+
+1. [Inspect the text below](/docs/devtools/open/#elements).
+
+    <div class="text-parent"><div class="highlighted-text">I inherited the style of my parent's highlight pseudo-element. Select me!</div></div>
+    <style>
+    .text-parent::selection {
+      background: #ff0;
+      color: #ff1493;
+    }
+    </style>
+
+1. Select a portion of the text above.
+1. In the **Styles** pane, scroll down to find the `Inherited from ::selection pseudo of...` section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/te2Rhrbqs5BlrlcVFPZf.png", alt="Viewing the Inherited section of the Styles pane.", width="800", height="410" %}
 
 ### View cascade layers {: #cascade-layers}
 
@@ -550,3 +581,4 @@ To open the **Shadow Editor**:
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
+[33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
