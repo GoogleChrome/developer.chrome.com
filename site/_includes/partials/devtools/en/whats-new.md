@@ -13,7 +13,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Display inherited highlight pseudo-elements in the Styles pane](/blog/new-in-devtools-102/#pseudo)
 * [Miscellaneous highlights](/blog/new-in-devtools-102/#misc)
 * [[Experimental] Copy CSS changes](/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
+* [[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
