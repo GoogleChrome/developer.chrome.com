@@ -3,7 +3,7 @@
 layout: 'layouts/blog-post.njk'
 
 # Required
-title: An example blog post
+title: An example post
 
 # Required
 description: >
