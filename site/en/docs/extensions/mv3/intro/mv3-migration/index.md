@@ -15,7 +15,7 @@ checklist](/docs/extensions/mv3/mv3-migration-checklist).
 
 {% Aside %}
 
-Follow [What's new in Chrome Extensions](https://developer.chrome.com/docs/extensions/whatsnew/) to read about new Manifest V3 features as they become available.
+Follow [What's new in Chrome Extensions](docs/extensions/whatsnew/) to read about new Manifest V3 features as they become available.
 
 {% endAside %}
 
@@ -44,12 +44,11 @@ For a fuller description of these changes, see the
 
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
-To use the features of Manifest V3, you need to first update your [manifest
+To use the features of Manifest V3, you need to update your [manifest
 file](/docs/extensions/mv3/manifest). Naturally, you'll change the manifest
-version to "3", but there are a number of other things you need to change in
-the manifest file: host permissions, content security policy, action
-declarations, and web-accessible resources.
-
+version to "3", but there are other things you need to change in
+the manifest file: the [service worker][section-man-sw], [host permissions][section-host], [content security policy][section-csp], [action
+declarations][section-action], and [web-accessible resources][section-war].
 
 ### Manifest version  {: #manifest-version }
 
@@ -69,6 +68,37 @@ extension. This determines whether you're using the Manifest V2 or Manifest V3 f
 "manifest_version": 3
 ```
 {% endColumns %}
+
+### Service worker  {: #man-sw }
+
+In Manifest V3, background pages are now *service workers*. Register the service worker under the `"background"` field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
+
+{% Columns %}
+
+```json
+// Manifest V2
+
+"background": {
+  "scripts": [
+    "backgroundContextMenus.js",
+    "backgroundOauth.js"
+],
+  "persistent": false
+}
+```
+
+```json
+// Manifest V3
+
+"background": {
+  "service_worker": "background.js",
+  "type": "module" //optional
+}
+```
+
+{% endColumns %}
+
+Even though Manifest V3, does not support multiple background scripts, you can optionally declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"`, which allows you to import further code.
 
 ### Host permissions  {: #host-permissions }
 
@@ -486,3 +516,9 @@ As well as the undocumented:
 
 If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to Manifest V3.
+
+[section-man-sw]: #man-sw
+[section-host]: #host-permissions
+[section-csp]: #content-security-policy
+[section-action]: #action-api-unification
+[section-war]: #web-accessible-resources
