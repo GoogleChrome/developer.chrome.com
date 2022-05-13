@@ -265,7 +265,9 @@ Replace the following:
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources. See the [web
+other sites or extensions can access extension resources. 
+
+See the [web
 accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
 documentation for usage information.
 
@@ -520,3 +522,4 @@ appropriate changes when you migrate to Manifest V3.
 [section-csp]: #content-security-policy
 [section-action]: #action-api-unification
 [section-war]: #web-accessible-resources
+[doc-match-pattern]: /docs/extensions/mv3/match_patterns/
