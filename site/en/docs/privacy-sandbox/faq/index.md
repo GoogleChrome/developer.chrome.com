@@ -192,7 +192,7 @@ Use `self` and any domains you would like to allow access to the API as paramete
 
 For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
 
-### If prebid.js is integrated on our website, can the Topics API be triggered and the topics read on our website afterwards? i.e. the topics of all websites where prebid.js is integrated?
+### If prebid.js is integrated on our website, can the Topics API be triggered and the topics read on our website afterwards? In other words, the topics of all websites where prebid.js is integrated?
 
 Topics are available to an API caller as long as the `document.browsingTopics()` call to *access* topics is made from a document with the same origin as calls to *observe* topics. 
 
