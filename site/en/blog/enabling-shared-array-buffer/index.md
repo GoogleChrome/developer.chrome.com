@@ -8,23 +8,23 @@ description: >
   SharedArrayBuffer will arrive in Android Chrome 88. It will only be available
   to pages that are cross-origin isolated. Starting in Desktop Chrome 92 it will
   also only be available to cross-origin isolated pages. You can register for an
-  origin trial to retain the current behavior until Desktop Chrome 103.
+  origin trial to retain the current behavior until Desktop Chrome 106.
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-12-21
+updated: 2022-05-13
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
 
 {% Aside %}
 
-**Update, October 2021**
+**Update, May 2022**
 
 To secure more time to introduce ways to relax the requirement to enable
 cross-origin isolation, we've decided to postpone the restriction on
-`SharedArrayBuffer` on desktop described in this article to Chrome 103
-(originally Chrome 96). You might need to update the token.
+`SharedArrayBuffer` on desktop described in this article to Chrome 106
+(originally Chrome 103). You might need to update the token.
 
 {% endAside %}
 
@@ -40,7 +40,7 @@ web, but things are settling down. Here's what you need to know:
   92 it will be limited to cross-origin isolated pages. If you don't think you
   can make this change in time, you can [register for an origin
   trial](#origin-trial) to retain the current behavior until at least Chrome
-  103.
+  106.
 - If you intend to enable cross-origin isolation to continue using
   `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
   elements on your website, such as ad placements. Check if `SharedArrayBuffer`
@@ -70,7 +70,7 @@ can gather data on requests that failed as a result of
 
 If you don't think you can make these changes in time for Chrome 92, you can
 [register for an origin trial](#origin-trial) to retain current Desktop Chrome
-behavior until at least Chrome 103.
+behavior until at least Chrome 106.
 
 {% Aside %}
 **Update, December 2021**
@@ -188,7 +188,7 @@ isolation.
 This is a temporary exception in the form of an 'origin trial' that gives folks
 more time to implement cross-origin isolated pages. It enables
 `SharedArrayBuffer` without requiring the page to be cross-origin isolated. The
-exception expires in Chrome 103, and the exception only applies to Desktop
+exception expires in Chrome 106, and the exception only applies to Desktop
 Chrome.
 
 1. [Request a token]({{origin_trial.url}}) for your origin.
