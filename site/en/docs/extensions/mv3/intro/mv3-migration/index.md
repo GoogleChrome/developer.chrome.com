@@ -102,7 +102,7 @@ Even though Manifest V3, does not support multiple background scripts, you can o
 
 ### Host permissions  {: #host-permissions }
 
-In Manifest V3, you'll need to specify host permissions separately from other permissions:
+In Manifest V3, you'll need to specify host permissions and optional host permissions separately from other permissions.
 
 {% Columns %}
 ```js
@@ -113,12 +113,11 @@ In Manifest V3, you'll need to specify host permissions separately from other pe
   "http://www.blogger.com/",
 ],
 "optional_permissions": [
-  "*://*/*",
   "unlimitedStorage"
 ]
 ```
 
-```js/8-10
+```js/8-13
 // Manifest V3
 "permissions": [
   "tabs",
@@ -129,20 +128,19 @@ In Manifest V3, you'll need to specify host permissions separately from other pe
 ],
 "host_permissions": [
   "http://www.blogger.com/",
-  "*://*/*"
 ],
+"optional_host_permissions": [
+    "https://*/*",
+]
+
 ```
 {% endColumns %}
 
+{% Aside 'caution' %}
 
-{% Aside 'warning' %}
-
-You do not have to declare content script match patterns in `host_permissions`
-in order to inject content scripts.  However, they **are** treated as host
-permissions requests by the Chrome Web Store review process.
+Moving the match patterns to `"host_permissions"` does not affect [content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/#static-declarative). Content script match patterns remain under `"content_scripts.matches"`.
 
 {% endAside %}
-
 
 ### Content security policy  {: #content-security-policy }
 
