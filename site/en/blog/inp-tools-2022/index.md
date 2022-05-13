@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Interaction to Next Paint (INP) Tool Support
+title: Interaction to Next Paint (INP) tool support
 authors:
   - egsweeny
   - brendankenny
@@ -66,7 +66,7 @@ Install the [Web Vitals extension for Chrome](https://chrome.google.com/webstore
 
 The new timespan mode in the Lighthouse Panel in DevTools lets you start Lighthouse, interact with your test page however you wish, and then get a report of what happened during that time. This report now includes INP and an audit to help diagnose any responsiveness issues.
 
-TODO(bckenny): video here
+{% Video src="video/MtjnObpuceYe3ijODN3a79WrxLU2/GioMntCgOope1zSUmT7s.mov", controls="true"%}
 
 The same series of interactions can be automated by using [Lighthouse user flows](https://web.dev/lighthouse-user-flows/). INP is available in user flows as of Lighthouse 9.6.
 
@@ -91,4 +91,4 @@ The same series of interactions can be automated by using [Lighthouse user flows
 
 Moving forward, Chrome tooling teams will continue to invest in debugging capabilities and optimization recommendations for INP.
 
-INP itself is still experimental. If you have feedback on anything from the metric's usefulness to ease of measurement in tooling to its name, please bring it to the [web-vitals-feedback Google group](https://groups.google.com/g/web-vitals-feedback).
+INP itself is still experimental. If you have feedback on anything from the metric's usefulness, to ease of measurement, to its name, please bring it to the [web-vitals-feedback Google group](https://groups.google.com/g/web-vitals-feedback).
