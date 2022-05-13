@@ -75,6 +75,8 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
 1. When your token expires, you will get an email with a renewal link.
    To do so, you are again asked to submit feedback.
 
+{: #multiple}
+
 You can register for the same origin trial multiple times, for different origins, and include 
 multiple tokens in the same page if necessary. This can be useful if you need to provide tokens 
 that are valid for resources served from different origins, such as code included on multiple 
