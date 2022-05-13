@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-04-20
+updated: 2022-05-13
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -64,6 +64,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <input class="w-checkbox" type="checkbox" id="check-token-third">
   <label for="check-token-third" class="w-ml--l"><a href="#token-third">Third-party script uses a 
     third-party token</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-third-first">
+  <label for="check-token-third-first" class="w-ml--l"><a href="#token-third-first">Third-party token is not used in a first-party context</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
@@ -332,6 +335,18 @@ function addTrialToken(tokenContents) {
   document.head.appendChild(tokenElement);
 }
 ```
+
+### Third-party token is not used in a first-party context {: #token-third-first}
+
+Don't use third-party tokens in a first-party context. If you use a token with third-party 
+matching enabled, it will not work in first-party contexts. For example, if you embed an 
+iframe which includes code that accesses a trial feature, provide a 'normal' token with the 
+iframe document: a token registered with third-party matching _not_ enabled.
+
+{% Aside %}
+If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
+for the same origin trial or for different trials.
+{% endAside %}
 
 
 ### Origin trial feature access is supported for the method used to provide a trial token {: #token-method}
