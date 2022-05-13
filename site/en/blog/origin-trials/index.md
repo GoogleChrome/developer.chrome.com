@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-04-19
+updated: 2022-05-13
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid
 tags:
@@ -74,6 +74,17 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
    channel.
 1. When your token expires, you will get an email with a renewal link.
    To do so, you are again asked to submit feedback.
+
+{: #multiple}
+
+You can register for the same origin trial multiple times, for different origins, and include 
+multiple tokens in the same page. This can be useful if you need to provide tokens 
+that are valid for resources served from different origins, such as code included on multiple 
+sites that you own.
+
+The origin trials framework looks for the first valid token and then
+ignores all other tokens. You can validate this
+[with Chrome DevTools](/blog/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
 
 ### Provide a token programmatically {: #programmatic}
 
