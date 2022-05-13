@@ -49,21 +49,21 @@ Feedback received recently may not yet have a considered Chrome response.
 {% endDetailsSummary %}
 
 <dl>
-<dt>W3C</dt> href="https://www.w3.org/">World Wide Web Consortium</a></dd>
-<dt>PatCG</dt> href="https://www.w3.org/community/patcg/">Private Advertising Technology Community Group</a></dd>
-<dt>IETF</dt> href="https://www.ietf.org/">Internet Engineering Task Force</a></dd>
+<dt>W3C</dt><a href="https://www.w3.org/">World Wide Web Consortium</a></dd>
+<dt>PatCG</dt><a href="https://www.w3.org/community/patcg/">Private Advertising Technology Community Group</a></dd>
+<dt>IETF</dt><a href="https://www.ietf.org/">Internet Engineering Task Force</a></dd>
 <dt>DSP</dt><dd>Demand-side Platform</dd>
 <dt>SSP</dt><dd>Supply-side Platform</dd>
-<dt>OT</dt> href="/blog/origin-trials/">Origin Trial</a></dd>
-<dt>UA</dt> href="/docs/privacy-sandbox/user-agent/">User Agent string</a></dd>
-<dt>UA-CH</dt> href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></dd>
+<dt>OT</dt><a href="/blog/origin-trials/">Origin Trial</a></dd>
+<dt>UA</dt><a href="/docs/privacy-sandbox/user-agent/">User Agent string</a></dd>
+<dt>UA-CH</dt><a href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></dd>
 <dt>IP</dt><dd>Internet Protocol address</dd>
-<dt>WIPB</dt> href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></dd>
-<dt>IAB</dt> href="https://www.iab.com/">Interactive Advertising Bureau</a></dd>
-<dt>openRTB</dt> href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">Real-time bidding</a></dd>
-<dt>CHIPS</dt> href="/docs/privacy-sandbox/chips/">Cookies Having Independent Partitioned State</a></dd>
-<dt>FPS</dt> href="/docs/privacy-sandbox/first-party-sets/">First Party Sets</a></dd>
-<dt>FedCM</dt> href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></dd>
+<dt>WIPB</dt><a href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></dd>
+<dt>IAB</dt><a href="https://www.iab.com/">Interactive Advertising Bureau</a></dd>
+<dt>openRTB</dt><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">Real-time bidding</a></dd>
+<dt>CHIPS</dt><a href="/docs/privacy-sandbox/chips/">Cookies Having Independent Partitioned State</a></dd>
+<dt>FPS</dt><a href="/docs/privacy-sandbox/first-party-sets/">First Party Sets</a></dd>
+<dt>FedCM</dt><a href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></dd>
 <dt>IDP</dt><dd>Identity Provider</dd>
 </dl>
 
@@ -79,19 +79,19 @@ has communicated broadly, and Chrome will post an FAQ confirming the same, that
 testing will be available globally. Furthermore, Chrome will continue to update
 public timelines in consultation with the CMA regularly.
 
-## Show Relevant Content and Ads — Top Feedback Themes
+## Show relevant content and ads — top feedback themes
 
 <table>
   <tr>
-   <td style="background-color: #f3f3f3"><strong>API/Technology</strong>
+   <td style="background-color: #f3f3f3"><strong>API / Technology</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Feedback Theme</strong>
+   <td style="background-color: #f3f3f3"><strong>Feedback theme</strong>
 <p>
 <strong>(Ranked by Prevalence)</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Questions and Concerns Summary</strong>
+   <td style="background-color: #f3f3f3"><strong>Questions and concerns summary</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Chrome Response</strong>
+   <td style="background-color: #f3f3f3"><strong>Chrome response</strong>
    </td>
   </tr>
   <tr>
@@ -246,19 +246,19 @@ public timelines in consultation with the CMA regularly.
   </tr>
 </table>
 
-## Measuring Digital Ads — Top Feedback Themes
+## Measuring digital ads — top feedback themes
 
 <table>
   <tr>
-   <td style="background-color: #f3f3f3"><strong>API/Technology</strong>
+   <td style="background-color: #f3f3f3"><strong>API / Technology</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Feedback Theme</strong>
+   <td style="background-color: #f3f3f3"><strong>Feedback theme</strong>
 <p>
 <strong>(Ranked by Prevalence)</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Questions and Concerns Summary</strong>
+   <td style="background-color: #f3f3f3"><strong>Questions and concerns summary</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Chrome Response</strong>
+   <td style="background-color: #f3f3f3"><strong>Chrome response</strong>
    </td>
   </tr>
   <tr>
@@ -333,19 +333,19 @@ public timelines in consultation with the CMA regularly.
   </tr>
 </table>
 
-## Limit Covert Tracking — Top Feedback Themes
+## Limit covert tracking — top feedback themes
 
 <table>
   <tr>
-   <td style="background-color: #f3f3f3"><strong>API/Technology</strong>
+   <td style="background-color: #f3f3f3"><strong>API / Technology</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Feedback Theme</strong>
+   <td style="background-color: #f3f3f3"><strong>Feedback theme</strong>
 <p>
 <strong>(Ranked by Prevalence)</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Questions and Concerns Summary</strong>
+   <td style="background-color: #f3f3f3"><strong>Questions and concerns summary</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Chrome Response</strong>
+   <td style="background-color: #f3f3f3"><strong>Chrome response</strong>
    </td>
   </tr>
   <tr>
@@ -502,19 +502,19 @@ However the issue remains open in case others also share this concern and would 
   </tr>
 </table>
 
-## Strengthen Cross-site Privacy Boundaries — Top Feedback Themes
+## Strengthen cross-site privacy boundaries — top feedback themes
 
 <table>
   <tr>
-   <td style="background-color: #f3f3f3"><strong>API/Technology</strong>
+   <td style="background-color: #f3f3f3"><strong>API / Technology</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Feedback Theme</strong>
+   <td style="background-color: #f3f3f3"><strong>Feedback theme</strong>
 <p>
 <strong>(Ranked by Prevalence)</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Questions and Concerns Summary</strong>
+   <td style="background-color: #f3f3f3"><strong>Questions and concerns summary</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Chrome Response</strong>
+   <td style="background-color: #f3f3f3"><strong>Chrome response</strong>
    </td>
   </tr>
   <tr>
@@ -671,19 +671,19 @@ OR
   </tr>
 </table>
 
-## Fight Spam and Fraud  — Top Feedback Themes
+## Fight spam and fraud  — top feedback themes
 
 <table>
   <tr>
-   <td style="background-color: #f3f3f3"><strong>API/Technology</strong>
+   <td style="background-color: #f3f3f3"><strong>API / Technology</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Feedback Theme</strong>
+   <td style="background-color: #f3f3f3"><strong>Feedback theme</strong>
 <p>
 <strong>(Ranked by Prevalence per API)</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Questions and Concerns Summary</strong>
+   <td style="background-color: #f3f3f3"><strong>Questions and concerns summary</strong>
    </td>
-   <td style="background-color: #f3f3f3"><strong>Chrome Response</strong>
+   <td style="background-color: #f3f3f3"><strong>Chrome response</strong>
    </td>
   </tr>
   <tr>
