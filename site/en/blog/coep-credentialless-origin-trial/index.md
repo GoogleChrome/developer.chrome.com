@@ -22,7 +22,7 @@ alt: >
 
 **Update, May 2022**
 
-`Cross-Origin-Embedder-Policy: credentialless` has been shipped and available in
+`Cross-Origin-Embedder-Policy: credentialless` shipped and has been available in
 Chrome since 96. We've updated this article accordingly.
 
 {% endAside %}
