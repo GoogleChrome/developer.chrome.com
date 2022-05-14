@@ -2,18 +2,18 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/ja/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/ja/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/ja/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/ja/blog/new-in-devtools-102/#debugger)
-* [Console updates](/ja/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/ja/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/ja/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/ja/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/ja/blog/new-in-devtools-102/#color-picker) -->
+* [プレビュー機能: 新しいパフォーマンスインサイトパネル](/ja/blog/new-in-devtools-102/#perf)
+* [ライトテーマとダークテーマをエミュレートする新しいショートカット](/ja/blog/new-in-devtools-102/#emulation)
+* [Network Preview タブのセキュリティ改善](/ja/blog/new-in-devtools-102/#network-preview)
+* [ブレークポイントのリロード改善](/ja/blog/new-in-devtools-102/#debugger)
+* [コンソールの更新](/ja/blog/new-in-devtools-102/#console)
+* [ユーザーフローレコーディングを開始時にキャンセル](/ja/blog/new-in-devtools-102/#recorder)
+* [Styles ペインで継承されたハイライト疑似要素を表示](/ja/blog/new-in-devtools-102/#pseudo)
+* [その他のハイライト](/ja/blog/new-in-devtools-102/#misc)
+* [[実験的] CSS の変更をコピー](/ja/blog/new-in-devtools-102/#copy)
+* [[実験的] ブラウザ外の色を抽出](/ja/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
