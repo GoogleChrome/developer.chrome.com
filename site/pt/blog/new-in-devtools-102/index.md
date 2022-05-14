@@ -121,7 +121,7 @@ Issue relacionada: [1295750](https://crbug.com/1295750)
 <!-- ### Commit live expression with Enter {: #live-expression } -->
 ### Enter para enviar uma *live expression*  {: #live-expression }
 <!-- Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools.  -->
-Quando você terminar de digitar uma [live expression](/blog/new-in-devtools-70/#watch), você pode apertar `Enter` para enviá-la. Anteriormente, apertar `Enter` resultava na adição de novas linhas. Isso é inconsistente com outras partes do DevTools.
+Quando você terminar de digitar uma [live expression](/blog/new-in-devtools-70/#watch), você pode apertar `Enter` para enviá-la. Anteriormente, apertar `Enter` resultava na adição de novas linhas. Isso era inconsistente com outras partes do DevTools.
 <!-- To add a new line in the **live expression** editor, use `Shift` + `Enter` instead. -->
 Para adicionar uma nova linha no editor de **live expressions** use `Shift` + `Enter`.
 
@@ -135,7 +135,7 @@ Issue relacionada: [1260744](https://crbug.com/1260744)
 <!-- ## Cancel user flow recording at the start {: #recorder } -->
 ## Cancelamento de gravações de fluxo de usuário no início {: #recorder }
 <!-- You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording. -->
-Você pode cancelar a gravação durante o início de uma gravação de fluxo de usuário. Anteriormente não havia essa opção.
+Você pode cancelar a gravação durante o início de um registro de fluxo de usuário. Anteriormente não havia essa opção.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="Cancelamento de gravações de fluxo de usuário no início", width="800", height="488" %}
 
