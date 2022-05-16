@@ -27,14 +27,17 @@ aggregation of the amount of feedback that the Chrome team has received around a
 given theme and organizing in descending order of quantity. The common feedback
 themes were identified by reviewing topics of discussion from public meetings
 (W3C, PatCG, IETF), direct feedback, GitHub, and commonly asked questions
-surfacing through Google’s internal teams and public forms. More specifically,
-meeting minutes for web standard bodies meetings were reviewed and, for direct
-feedback, Google’s records of 1:1 stakeholder meetings, emails received by
-individual engineers, the API mailing list, and the public feedback form were
-considered. Google then coordinated between the teams involved in these various
-outreach activities to determine the relative prevalence of the themes emerging
-in relation to each API. The explanations of Chrome’s responses to feedback were
-developed from published FAQs, actual responses made to issues raised by
+surfacing through Google’s internal teams and public forms.
+
+More specifically, meeting minutes for web standard bodies meetings were
+reviewed. For direct feedback, Google’s records of 1:1 stakeholder meetings,
+emails received by individual engineers, the API mailing list, and the public feedback
+form were considered. Google then coordinated between the teams involved in
+these various outreach activities to determine the relative prevalence of the themes
+emerging in relation to each API.
+
+The explanations of Chrome’s responses to feedback were developed from
+published FAQs, actual responses made to issues raised by
 stakeholders, and determining a position specifically for the purposes of this
 public reporting exercise. Reflecting the current focus of development and
 testing, questions and feedback were received in particular with respect to
