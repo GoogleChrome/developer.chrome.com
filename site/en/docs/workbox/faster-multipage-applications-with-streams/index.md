@@ -35,7 +35,9 @@ For service workers, streaming is a bit different as it uses the JavaScript [Str
 These requests can interact with the cache in a number of ways, but a common caching pattern for markup is to favor using a response from the [network _first_, but fall back to the cache](/docs/workbox/caching-strategies-overview/#network-first-falling-back-to-cache) if an older copy is available&mdash;and optionally [provide a generic fallback response](/docs/workbox/managing-fallback-responses/) if a usable response isn't in the cache.
 
 This is a time-tested pattern for markup that works well, but while it helps with reliability in terms of offline access, it doesn't offer any inherent performance advantages for navigation requests that rely on a network first or network only strategy. That's where streaming comes in, and we'll explore how to use the Streams API-powered [`workbox-streams` module](/docs/workbox/reference/workbox-streams/) in your Workbox service worker to speed up navigation requests on your multipage website.
+
 ## Breaking down a typical web page
+
 Structurally speaking, websites _tend_ to have common elements that exist on every page. A typical arrangement of page elements often goes something like:
 
 - Header.
