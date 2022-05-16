@@ -77,10 +77,12 @@ Feedback received recently may not yet have a considered Chrome response.
 A common theme across our discussions and feedback channels is questions about
 the timing, traffic levels and availability of testing. In particular, testers
 have consistently wanted confirmation of when APIs will be available for testing
-and whether testing will be available globally. To address this feedback, Chrome
-has communicated broadly, and Chrome will post an FAQ confirming the same, that
-testing will be available globally. Furthermore, Chrome will continue to update
-public timelines in consultation with the CMA regularly.
+and whether testing will be available globally.
+
+To address this feedback, Chrome has communicated broadly, and Chrome
+will post an FAQ confirming the same, that testing will be available globally.
+Furthermore, Chrome will continue to update public timelines in consultation
+with the CMA regularly.
 
 ## Show relevant content and ads — top feedback themes
 
