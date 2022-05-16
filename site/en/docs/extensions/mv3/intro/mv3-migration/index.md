@@ -98,7 +98,9 @@ In Manifest V3, background pages are now *service workers*. Register the service
 
 {% endColumns %}
 
-Even though Manifest V3, does not support multiple background scripts, you can optionally declare the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by specifying `"type": "module"`, which allows you to import further code.
+Even though Manifest V3, does not support multiple background scripts, you can optionally declare
+the service worker as an [ES Module](https://web.dev/es-modules-in-sw/#static-imports-only) by
+specifying `"type": "module"`, which allows you to import further code.
 
 ### Host permissions  {: #host-permissions }
 
@@ -187,7 +189,6 @@ directives may only have the following values:
 
 CSP modifications for `sandbox` have no such new restrictions.
 
-
 ### Action API unification  {: #action-api-unification }
 
 In Manifest V2, there were two different APIs to implement actions: `browser_action`
@@ -271,7 +272,6 @@ See the [web
 accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
 documentation for usage information.
 
-
 ## Code execution  {: #code-execution }
 
 Manifest V3 imposes new restrictions that limit an extension's ability to execute
@@ -283,127 +283,168 @@ executes remotely hosted scripts, injects code strings into pages, or evals
 strings at runtime, you'll need to update your code execution strategies when
 migrating to Manifest V3.
 
-{% Aside %}
-With Manifest V3 the `executeScript()` method also moves to a different API.
-
-* **Manifest V2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
-* **Manifest V3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
-
-If you use executeScript() anywhere in your code, you'll need to update that call to use the new
-API. The `insertCSS()` and `removeCSS()` methods similarly move from chrome.tabs to
-chrome.scripting.
-{% endAside %}
-
-
 ### Remotely hosted code  {: #remotely-hosted-code }
 
 _Remotely hosted code_ refers to any code that is not included in an
-extension's package as a loadable resource. For example, both of the following
+extension's package as a loadable resource. For example, the following
 are considered remotely hosted code:
 
-*   JavaScript files pulled from a remote server
-*   a code string passed into eval at runtime
+- JavaScript files pulled from a remote server
+- Any library hosted on a [CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN).
+- a code string passed into [`"eval()"`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) at runtime
 
-In Manifest V3, all of your extension's logic must be bundled with the extension. You
+In Manifest V3, all of your extension's logic must be included in the extension. You
 can no longer load and execute a remotely hosted file. A number of alternative
 approaches are available, depending on your use case and the reason for remote
-hosting. Two such approaches are:
+hosting. Here's a few approaches are:
 
-**Configuration-driven features and logic**—In this approach, your extension
+Configuration-driven features and logic
+: In this approach, your extension
 loads a remote configuration (for example a JSON file) at runtime and caches
 the configuration locally. The extension then uses this cached configuration to
 decide which features to enable.
 
-**Externalize logic with a remote service**—Consider migrating application
+Externalize logic with a remote service
+: Consider migrating application
 logic from the extension to a remote web service that your extension can call.
 (Essentially a form of message passing.) This provides you the ability to keep
 code private and change the code on demand while avoiding the extra overhead of
 resubmitting to the Chrome Web Store.
 
+Bundle third-party libraries
+: If you are using a popular framework like React or Bootstrap, you can download the minified files, add them to your project and import them locally. For example:
+
+{% Columns %}
+
+```html
+// Manifest V2
+
+// popup.html
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+```
+
+```html
+// Manifest V3
+
+// popup.html
+<script src="./react-dom.production.min.js"></script>
+<link href="./bootstrap.min.css" rel="stylesheet">
+```
+
+{% endColumns %}
+
+To include a library in a service worker, you have two options:
+- For standard service workers, use `importScripts()`.
+- To use static import statements, set the
+  `"background.type"` to `"module"` in the manifest.
 
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
-
 
 In Manifest V2 it was possible to execute an arbitrary string of code using
 [`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript) and the `code`
 property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
-adapt to this requirement, extension developers can either use the
-[`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to
-inject a static file or a function.
+adapt to this requirement, extension developers can use the
+[`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to either
+inject a [static file][section-file] or a [function][section-func]. 
 
-Static file injection with `scripting.executeScript` is almost identical to it used to work in Tabs
-API. While the old method only took a single file, the new method now takes an array of files.
+<web-tabs>
+  <web-tab title="Injecting a static file">
 
-{% Columns %}
-```js
-// Manifest V2
+  Static file injection with `scripting.executeScript()` is almost identical to it used to work in Tabs
+  API. While the old method only took a single file, the new method now takes an array of files.
 
-// background.js
-chrome.tabs.executeScript({
-  file: 'content-script.js'
-});
+  {% Columns %}
+  ```js
+  // Manifest V2
 
-// content-script.js
-alert('File test alert');
-```
+  // background.js
+  chrome.tabs.executeScript({
+    file: 'content-script.js'
+  });
 
-```js
-// Manifest V3
+  // content-script.js
+  alert('File test alert');
+  ```
 
-// background.js
-async function getCurrentTab() {/* ... */}
-let tab = await getCurrentTab();
+  ```js
+  // Manifest V3
 
-chrome.scripting.executeScript({
-  target: {tabId: tab.id},
-  files: ['content-script.js']
-});
+  // background.js
+  async function getCurrentTab() {/* ... */}
+  let tab = await getCurrentTab();
 
-// content-script.js
-alert('File test alert');
-```
-{% endColumns %}
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['content-script.js']
+  });
 
-If you need more dynamism, the new `func` property allows you to inject a function as a content
-script and pass variables using the `args` property. Note that the function is not run as if it
-was located within the content script; rather, its source is sent to the target tab and it is run
-there.
+  // content-script.js
+  alert('File test alert');
 
-{% Columns %}
-```js
-// Manifest V2
+  ```
+  {% endColumns %}
 
-// background.js
-let name = 'World!';
-chrome.tabs.executeScript({
-  code: `alert('Hello, ${name}!')`
-});
-```
+  To include an external library, save the file locally and add it to the files
+  array:
 
-```js
-// Manifest V3
+  ```js
+  ...
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['jquery-min.js, content-script.js']
+  });
+  ...
+  ```
 
-// background.js
-async function getCurrentTab() {/* ... */}
-let tab = await getCurrentTab();
+  </web-tab>
+  <web-tab title="Injecting a function">
+  
+  If you need more dynamism, the new `func` property allows you to inject a function as a content
+  script and pass variables using the `args` property. Note that the function is not run as if it
+  was located within the content script; rather, its source is sent to the target tab and it is run
+  there.
 
-function showAlert(givenName) {
-  alert(`Hello, ${givenName}`);
-}
+  {% Columns %}
+  ```js
+  // Manifest V2
 
-let name = 'World';
-chrome.scripting.executeScript({
-  target: {tabId: tab.id},
-  func: showAlert,
-  args: [name],
-});
-```
-{% endColumns %}
+  // background.js
+  let name = 'World!';
+  chrome.tabs.executeScript({
+    code: `alert('Hello, ${name}!')`
+  });
+  ```
+
+  ```js
+  // Manifest V3
+
+  // background.js
+  async function getCurrentTab() {/* ... */}
+  let tab = await getCurrentTab();
+
+  function showAlert(givenName) {
+    alert(`Hello, ${givenName}`);
+  }
+
+  let name = 'World';
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    func: showAlert,
+    args: [name],
+  });
+
+  ```
+  {% endColumns %}
+
+  </web-tab>
+</web-tabs>
 
 A functional version of the Manifest V3 snippets in this section can be found in the
 [chrome-extensions-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts)
 repository. See the [Tabs API examples](/docs/extensions/reference/tabs/#get-the-current-tab) for an
-implementation of `getCurrentTab`.
+implementation of `getCurrentTab()`.
 
 ## Background service workers  {: #background-service-workers }
 
@@ -522,4 +563,6 @@ appropriate changes when you migrate to Manifest V3.
 [section-csp]: #content-security-policy
 [section-action]: #action-api-unification
 [section-war]: #web-accessible-resources
+[section-file]: #inject-file
+[section-func]: #inject-func
 [doc-match-pattern]: /docs/extensions/mv3/match_patterns/
