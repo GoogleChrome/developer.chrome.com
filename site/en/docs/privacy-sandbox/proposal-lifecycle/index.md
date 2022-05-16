@@ -99,10 +99,9 @@ them right.
 
 
 Testing is critical because it provides an early opportunity to [provide
-feedback](https://developer.chrome.com/docs/privacy-sandbox/feedback/) on
-improvements or issues that require more work. A growing number of Privacy
-Sandbox proposals are available for testing now with a variety of options
-available to you.
+feedback](/docs/privacy-sandbox/feedback/) on improvements or issues that
+require more work. A growing number of Privacy Sandbox proposals are available
+for testing now with a variety of options available to you.
 
 Testing in Chrome usually starts with a feature behind a flag for developers to
 test locally, without that feature being live. This means developers need to
@@ -154,10 +153,9 @@ testing and being willing to share what they learn. We will also be carrying out
 our own testing through these phases and sharing the results with you through
 the various individual project channels with regular summaries across the
 project in our [Progress in the Privacy Sandbox blog
-series](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/) and
-[quarterly feedback
-reports](https://developer.chrome.com/docs/privacy-sandbox/feedback/#reports) as
-part of [our commitments  agreed with the
+series](/tags/progress-in-the-privacy-sandbox/) and [quarterly feedback
+reports](/docs/privacy-sandbox/feedback/#reports) as part of [our commitments
+agreed with the
 CMA](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/).
 
 
@@ -174,7 +172,7 @@ conversion reports, which has now been added to the API.
 
 Whether you share your testing in public places like the W3C, feedback forms, or
 through direct partnership channels, [we hope to hear from
-you](https://developer.chrome.com/docs/privacy-sandbox/feedback/).
+you](/docs/privacy-sandbox/feedback/).
 
 Testing in the browser, either through feature flags or origin trials, isn't the
 only way to explore how new technologies might work. Some companies are also
