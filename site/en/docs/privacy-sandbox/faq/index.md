@@ -143,12 +143,14 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ### Can a site allow testing but opt-out of the OTs in specific geographic regions?
 
-A site can set a Permission Policy to control when an API can be accessed. The way 
-the Permission Policy works is that a site adds a little snippet of code to their 
+A site can set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control when an API can be accessed.
+
+With a Permissions Policy, a site adds a little snippet of code to their 
 pages that provides instructions to the browser. When the page loads, the browser 
 reads the Permission Policy instructions and will allow or block features (or APIs)
-as outlined in the Permission Policy. So, if a site wanted to restrict an API in a 
-specific region, they could set a policy for all pages requested from that region.
+as outlined in the Permissions Policy. If a site wants to restrict an API in a 
+specific region, the developer could set a policy for all pages requested from that region.
 
 ## Trust Tokens
 
