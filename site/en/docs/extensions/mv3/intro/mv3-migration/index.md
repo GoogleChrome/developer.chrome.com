@@ -342,12 +342,23 @@ To include a library in a service worker, you have two options:
 
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
 
-In Manifest V2 it was possible to execute an arbitrary string of code using
+In Manifest V2, it was possible to execute an arbitrary string of code using
 [`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript) and the `code`
 property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
 adapt to this requirement, extension developers can use the
 [`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to either
-inject a [static file][section-file] or a [function][section-func]. 
+inject a [static file][section-file] or a [function][section-func].
+
+To use the [Scripting API][api-scripting], you need to include the `"scripting"` permission
+in your manifest file. This API does not [trigger a permission warning][doc-perm-warn].
+
+```json
+{
+  "manifest_version": 3,
+  "permissions": ["scripting"],
+  ...
+}
+```
 
 <web-tabs>
   <web-tab title="Injecting a static file">
@@ -448,19 +459,26 @@ implementation of `getCurrentTab()`.
 
 ## Background service workers  {: #background-service-workers }
 
-Background pages in Manifest V2 are replaced by service workers in Manifest V3: this is a
-foundational change that affects most extensions.
+Background pages in Manifest V2 are replaced by [service
+workers](https://developers.google.com/web/fundamentals/primers/service-workers), that are event
+based in Manifest V3: this is a foundational change that affects most extensions. The following are
+the main differences:
 
-[Service workers](https://developers.google.com/web/fundamentals/primers/service-workers)
-are event based, and like event pages they do not persist between invocations.
-This change generally requires some redesign, with a number of factors to
-consider: see [Migrating from Background Pages to Service
-Workers](/docs/extensions/mv3/migrating_to_service_workers) for additional
-details.
+| MV2 - Background page      | MV3 - Service worker                                  |
+|----------------------------|-------------------------------------------------------|
+| Can use a persistent page. | Terminates when not in use and restarted when needed. |
+| Has access to the DOM.     | Doesn't have access to the DOM.                       |
+| Uses XMLHttpRequest.       | Must use [fetch()][mdn-fetch] to make requests.       |
+
+See [Migrating from Background Pages to Service
+Workers](/docs/extensions/mv3/migrating_to_service_workers) to explore how to adapt to these and
+other challenges.
 
 {% Aside %}
+
 In order to aid with the migration process, Manifest V2 extensions can use background
 service workers as of Chrome 87.
+
 {% endAside %}
 
 
@@ -469,7 +487,7 @@ service workers as of Chrome 87.
 There is a new
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) for
 network request modification, which provides an alternative for much of the
-[webRequest](/docs/extensions/reference/webRequest) AP's functionality.
+[webRequest](/docs/extensions/reference/webRequest) API's functionality.
 
 
 ### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
@@ -514,8 +532,10 @@ available for use in Manifest V2 extensions as of Chrome 84.
 Most use cases for declarativeNetRequest don't require any host permissions at
 all. However, some do.
 
-{% Aside %}
+{% Aside 'caution' %}
+
 Request redirects and header modifications **do** require the user to grant host permissions.
+
 {% endAside %}
 
 When extensions require host permissions for these use cases, we recommend a
@@ -566,3 +586,6 @@ appropriate changes when you migrate to Manifest V3.
 [section-file]: #inject-file
 [section-func]: #inject-func
 [doc-match-pattern]: /docs/extensions/mv3/match_patterns/
+[doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
+[api-scripting]: /docs/extensions/reference/scripting/
+[mdn-fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
