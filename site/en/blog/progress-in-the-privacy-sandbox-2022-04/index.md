@@ -5,7 +5,7 @@ description: >
   for partitioned cookies and Attribution Reporting, FLEDGE, and Topics as part
   of the combined Privacy Sandbox Relevance and Measurement trial.
 layout: 'layouts/blog-post.njk'
-date: 2022-05-16
+date: 2022-05-17
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/DrSOB8w3wN26K2O8nfy9.png'
