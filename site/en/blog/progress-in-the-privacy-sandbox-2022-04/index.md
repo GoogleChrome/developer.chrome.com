@@ -150,20 +150,15 @@ user-agent string and providing alternative User-Agent Client Hints
 request that information. In Chrome 101 we are starting the first phase of the
 reduction, by replacing the build or minor version with zeroes.
 
-**Old**
+{% Compare 'worse', 'old' %} <span style="font-family: monospace">Mozilla/5.0
+(Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/101.<span  style="background: #ef9a9a">0.4638.16</span> Mobile
+Safari/537.36</span> {% endCompare %}
 
-
-```
-Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4638.16 Mobile Safari/537.36
-```
-
-
-**New**
-
-
-```
-Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Mobile Safari/537.36
-```
+{% Compare 'better', 'new' %} <span style="font-family: monospace">Mozilla/5.0
+(Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/100.<span style="background: #a5d6a7">0.0.0</span> Mobile
+Safari/537.36</span> {% endCompare %}
 
 
 **Note:** We are incrementally rolling out this change as we monitor for issues,
