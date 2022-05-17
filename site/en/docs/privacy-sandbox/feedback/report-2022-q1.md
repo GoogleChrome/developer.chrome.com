@@ -57,22 +57,22 @@ Feedback received recently may not yet have a considered Chrome response.
 {% endDetailsSummary %}
 
 <dl>
-<dt>W3C</dt><a href="https://www.w3.org/">World Wide Web Consortium</a></dd>
-<dt>PatCG</dt><a href="https://www.w3.org/community/patcg/">Private Advertising Technology Community Group</a></dd>
-<dt>IETF</dt><a href="https://www.ietf.org/">Internet Engineering Task Force</a></dd>
-<dt>DSP</dt><dd>Demand-side Platform</dd>
-<dt>SSP</dt><dd>Supply-side Platform</dd>
-<dt>OT</dt><a href="/blog/origin-trials/">Origin Trial</a></dd>
-<dt>UA</dt><a href="/docs/privacy-sandbox/user-agent/">User Agent string</a></dd>
-<dt>UA-CH</dt><a href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></dd>
-<dt>IP</dt><dd>Internet Protocol address</dd>
-<dt>WIPB</dt><a href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></dd>
-<dt>IAB</dt><a href="https://www.iab.com/">Interactive Advertising Bureau</a></dd>
-<dt>openRTB</dt><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">Real-time bidding</a></dd>
-<dt>CHIPS</dt><a href="/docs/privacy-sandbox/chips/">Cookies Having Independent Partitioned State</a></dd>
-<dt>FPS</dt><a href="/docs/privacy-sandbox/first-party-sets/">First Party Sets</a></dd>
-<dt>FedCM</dt><a href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></dd>
-<dt>IDP</dt><dd>Identity Provider</dd>
+<dt>W3C</dt>    <dd><a href="https://www.w3.org/">World Wide Web Consortium</a></dd>
+<dt>PatCG</dt>  <dd><a href="https://www.w3.org/community/patcg/">Private Advertising Technology Community Group</a></dd>
+<dt>IETF</dt>   <dd><a href="https://www.ietf.org/">Internet Engineering Task Force</a></dd>
+<dt>DSP</dt>    <dd>Demand-side Platform</dd>
+<dt>SSP</dt>    <dd>Supply-side Platform</dd>
+<dt>OT</dt>     <dd><a href="/blog/origin-trials/">Origin Trial</a></dd>
+<dt>UA</dt>     <dd><a href="/docs/privacy-sandbox/user-agent/">User Agent string</a></dd>
+<dt>UA-CH</dt>  <dd><a href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></dd>
+<dt>IP</dt>     <dd>Internet Protocol address</dd>
+<dt>WIPB</dt>   <dd><a href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></dd>
+<dt>IAB</dt>    <dd><a href="https://www.iab.com/">Interactive Advertising Bureau</a></dd>
+<dt>openRTB</dt><dd><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">Real-time bidding</a></dd>
+<dt>CHIPS</dt>  <dd><a href="/docs/privacy-sandbox/chips/">Cookies Having Independent Partitioned State</a></dd>
+<dt>FPS</dt>    <dd><a href="/docs/privacy-sandbox/first-party-sets/">First Party Sets</a></dd>
+<dt>FedCM</dt>  <dd><a href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></dd>
+<dt>IDP</dt>    <dd>Identity Provider</dd>
 </dl>
 
 {% endDetails %}
