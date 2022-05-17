@@ -211,3 +211,7 @@ chrome70:
 
 insider:
   en: Chrome Dev Insider
+
+web-vitals:
+  en: Web Vitals
+  zh: 网页指标
