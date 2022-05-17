@@ -177,7 +177,7 @@ extension is `chrome-extension://EXTENSION_ID/foo.html`.
 {% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
-pages](/docs/extensions/mv3/manifest/sandbox) that your extension uses.
+pages][manifest-sandbox] that your extension uses.
 
 In addition, Manifest V3 disallows certain CSP modifications for `extension_pages` that
 were permitted in Manifest V2. The `script-src,` `object-src`, and `worker-src`
@@ -456,14 +456,14 @@ in your manifest file. This API does not [trigger a permission warning][doc-perm
 </web-tabs>
 
 A functional version of the Manifest V3 snippets in this section can be found in the
-[chrome-extensions-samples](github-samples-content)
+[chrome-extensions-samples][github-samples-content]
 repository. See the [Tabs API examples][api-tabs-example] for an
 implementation of `getCurrentTab()`.
 
 ## Background service workers  {: #background-service-workers }
 
 Background pages in Manifest V2 are replaced by [service
-workers](dev-google-sw) in Manifest V3: this is a foundational change that affects most extensions. The following are
+workers][dev-google-sw] in Manifest V3: this is a foundational change that affects most extensions. The following are
 some notable differences:
 
 | MV2 - Background page      | MV3 - Service worker                                  |
@@ -487,13 +487,13 @@ service workers as of Chrome 87.
 ## Modifying network requests  {: #modifying-network-requests }
 
 There is a new
-[declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) for
+[declarativeNetRequest][api-declarativenetrequest] for
 network request modification, which provides an alternative for much of the
-[webRequest](/docs/extensions/reference/webRequest) API's functionality.
+[webRequest][api-webrequest] API's functionality.
 
 ### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
 
-The blocking version of the [webRequest](api-webrequest)
+The blocking version of the [webRequest][api-webrequest]
 API still exists in Manifest V3 but its use is restricted to force-installed extensions
 only. See Chrome Enterprise policies:
 [ExtensionSettings][enterprise-settings],
@@ -600,11 +600,12 @@ appropriate changes when you migrate to Manifest V3.
 [doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [doc-whats-new]: /docs/extensions/whatsnew/
-[docs-background-to-worker]: /docs/extensions/mv3/migrating_to_service_workers
-[docs-static-cs]: /docs/extensions/mv3/content_scripts/#static-declarative
+[doc-background-to-worker]: /docs/extensions/mv3/migrating_to_service_workers
+[doc-static-cs]: /docs/extensions/mv3/content_scripts/#static-declarative
 [enterprise-force-list]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionInstallForcelist
 [enterprise-settings]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionSettings
 [github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts
+[manifest-sandbox]: /docs/extensions/mv3/manifest/sandbox
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
 [mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval
 [mdn-fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
