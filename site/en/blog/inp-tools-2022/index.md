@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: Interaction to Next Paint (INP) tool support
 authors:
-  - egsweeny
   - brendankenny
-date: 2022-05-13
+  - egsweeny
+date: 2022-05-17
 description: >
   Support for Interaction to Next Paint across Chrome performance tools.
 tags:
@@ -15,7 +15,7 @@ tags:
   - devtools
 ---
 
-We are thrilled to have the first round of tooling support for the new responsiveness metric, Interaction to Next Paint (INP). To learn about the metric itself, check out [the official metric guide](https://web.dev/inp/).
+We are thrilled to have the first round of tooling support for the new experimental responsiveness metric, Interaction to Next Paint (INP). To learn about the metric itself, check out [the official INP metric guide](https://web.dev/inp/).
 
 ## Suggested measurement
 
