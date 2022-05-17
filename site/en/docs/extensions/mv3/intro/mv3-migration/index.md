@@ -7,15 +7,15 @@ date: 2020-11-09
 updated: 2021-08-13
 ---
 
-This guide provides developers with the information they need to begin
-migrating an extension from Manifest V2 to Manifest V3. Some extensions
-will require very little change to make them Manifest V3 compliant, while others will
-need to be redesigned to some degree. For a quick reference guide see the [migration
-checklist][mv3-checklist].
+This guide provides developers with the information they need to begin migrating an extension from
+Manifest V2 to Manifest V3. Some extensions will require very little change to make them Manifest V3
+compliant, while others will need to be redesigned to some degree. For a quick reference guide see
+the [migration checklist][mv3-checklist].
 
 {% Aside %}
 
-Follow [What's new in Chrome Extensions][doc-whats-new] to read about new Manifest V3 features as they become available.
+Follow [What's new in Chrome Extensions][doc-whats-new] to read about new Manifest V3 features as
+they become available.
 
 {% endAside %}
 
@@ -23,37 +23,30 @@ Follow [What's new in Chrome Extensions][doc-whats-new] to read about new Manife
 
 There are a number of new features and functional changes for extensions using Manifest V3:
 
-* [Service workers][mv3-sw]
-  replace background pages.
-* [Network request modification][mv3-network]
-  is now handled with the new
+* [Service workers][mv3-sw] replace background pages.
+* [Network request modification][mv3-network] is now handled with the new
   [declarativeNetRequest][mv3-declarative] API.
-* [Remotely hosted code][mv3-remote]
-  is no longer allowed; an extension can only execute JavaScript that is
-  included within its package.
-* [Promise][mv3-promise]
-  support has been added to many methods, though callbacks are still supported
-  as an alternative.  (We will eventually support promises on all appropriate
-  methods.)
-* A number of other, relatively
-  [minor feature changes][mv3-other]
-  are also introduced in Manifest V3.
+* [Remotely hosted code][mv3-remote] is no longer allowed; an extension can only execute JavaScript
+  that is included within its package.
+* [Promise][mv3-promise] support has been added to many methods, though callbacks are still
+  supported as an alternative.  (We will eventually support promises on all appropriate methods.)
+* A number of other, relatively [minor feature changes][mv3-other] are also introduced in Manifest
+  V3.
 
-For a fuller description of these changes, see the
-[Manifest V3 Overview][mv3-overview].
+For a fuller description of these changes, see the [Manifest V3 Overview][mv3-overview].
 
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
-To use the features of Manifest V3, you need to update your [manifest
-file][doc-manifest]. Naturally, you'll change the manifest
-version to "3", but there are other things you need to change in
-the manifest file: the [service worker][section-man-sw], [host permissions][section-host], [content security policy][section-csp], [action
-declarations][section-action], and [web-accessible resources][section-war].
+To use the features of Manifest V3, you need to update your [manifest file][doc-manifest].
+Naturally, you'll change the manifest version to "3", but there are other things you need to change
+in the manifest file: the [service worker][section-man-sw], [host permissions][section-host],
+[content security policy][section-csp], [action declarations][section-action], and [web-accessible
+resources][section-war].
 
 ### Manifest version  {: #manifest-version }
 
-Changing the value of the manifest_version element is the key to upgrading your
-extension. This determines whether you're using the Manifest V2 or Manifest V3 feature set:
+Changing the value of the manifest_version element is the key to upgrading your extension. This
+determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 {% Columns %}
 ```json
@@ -71,7 +64,9 @@ extension. This determines whether you're using the Manifest V2 or Manifest V3 f
 
 ### Service worker  {: #man-sw }
 
-In Manifest V3, background pages are now *service workers*. Register the service worker under the `"background"` field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
+In Manifest V3, background pages are now *service workers*. Register the service worker under the
+`"background"` field. This field uses the `"service_worker"` key, which specifies a single
+JavaScript file.
 
 {% Columns %}
 
@@ -99,12 +94,13 @@ In Manifest V3, background pages are now *service workers*. Register the service
 {% endColumns %}
 
 Even though Manifest V3, does not support multiple background scripts, you can optionally declare
-the service worker as an [ES Module][webdev-esm] by
-specifying `"type": "module"`, which allows you to import further code.
+the service worker as an [ES Module][webdev-esm] by specifying `"type": "module"`, which allows you
+to import further code.
 
 ### Host permissions  {: #host-permissions }
 
-In Manifest V3, you'll need to specify host permissions and optional host permissions separately from other permissions.
+In Manifest V3, you'll need to specify host permissions and optional host permissions separately
+from other permissions.
 
 {% Columns %}
 ```js
@@ -140,15 +136,15 @@ In Manifest V3, you'll need to specify host permissions and optional host permis
 
 {% Aside 'caution' %}
 
-Moving the match patterns to `"host_permissions"` does not affect [content scripts][doc-static-cs]. Content script match patterns remain under `"content_scripts.matches"`.
+Moving the match patterns to `"host_permissions"` does not affect [content scripts][doc-static-cs].
+Content script match patterns remain under `"content_scripts.matches"`.
 
 {% endAside %}
 
 ### Content security policy  {: #content-security-policy }
 
-An extension's [content security policy][csp]
-(CSP) was specified in Manifest V2 as a string; in Manifest V3 it is an object with members
-representing alternative CSP contexts:
+An extension's [content security policy][csp] (CSP) was specified in Manifest V2 as a string; in
+Manifest V3 it is an object with members representing alternative CSP contexts:
 
 {% Columns %}
 ```json
@@ -167,7 +163,8 @@ representing alternative CSP contexts:
 ```
 {% endColumns %}
 
-**`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
+**`extension_pages`**:  This policy covers pages in your extension, including html files and service
+workers.
 
 {% Aside %}
 
@@ -176,12 +173,12 @@ extension is `chrome-extension://EXTENSION_ID/foo.html`.
 
 {% endAside %}
 
-**`sandbox`**: This policy covers any [sandboxed extension
-pages][manifest-sandbox] that your extension uses.
+**`sandbox`**: This policy covers any [sandboxed extension pages][manifest-sandbox] that your
+extension uses.
 
-In addition, Manifest V3 disallows certain CSP modifications for `extension_pages` that
-were permitted in Manifest V2. The `script-src,` `object-src`, and `worker-src`
-directives may only have the following values:
+In addition, Manifest V3 disallows certain CSP modifications for `extension_pages` that were
+permitted in Manifest V2. The `script-src,` `object-src`, and `worker-src` directives may only have
+the following values:
 
 *   `self`
 *   `none`
@@ -194,10 +191,9 @@ files bundled as part of the extension.
 
 ### Action API unification  {: #action-api-unification }
 
-In Manifest V2, there were two different APIs to implement actions: `browser_action`
-and `page_action`. These APIs filled distinct roles when they were introduced,
-but over time they've become redundant so in Manifest V3 we are unifying them into as
-single `action` API:
+In Manifest V2, there were two different APIs to implement actions: `browser_action` and
+`page_action`. These APIs filled distinct roles when they were introduced, but over time they've
+become redundant so in Manifest V3 we are unifying them into as single `action` API:
 
 {% Columns %}
 ```js
@@ -230,9 +226,9 @@ chrome.action.onClicked.addListener(tab => { … });
 
 ### Web-accessible resources  {: #web-accessible-resources }
 
-This change limits access to extension resources to specific sites/extensions.
-Instead of providing a list of files, you now provide a list of objects, each
-of which can map to a set of resources to a set of URLs or extension IDs:
+This change limits access to extension resources to specific sites/extensions. Instead of providing
+a list of files, you now provide a list of objects, each of which can map to a set of resources to a
+set of URLs or extension IDs:
 
 {% Columns %}
 
@@ -240,7 +236,7 @@ of which can map to a set of resources to a set of URLs or extension IDs:
 // Manifest V2
 
 "web_accessible_resources": [
-  RESOURCE_PATHS
+  RESOURCE_PATHSA
 ]
 ```
 
@@ -266,56 +262,46 @@ Replace the following:
 - <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
   extension.
 
-Previously, the list of web accessible resources applied to all websites and
-extensions, which created opportunities for fingerprinting or unintentional
-resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources. 
+Previously, the list of web accessible resources applied to all websites and extensions, which
+created opportunities for fingerprinting or unintentional resource access. The updated API lets
+extensions more tightly control what other sites or extensions can access extension resources. 
 
-See the [web
-accessible resources][doc-war]
-documentation for usage information.
+See the [web accessible resources][doc-war] documentation for usage information.
 
 ## Code execution  {: #code-execution }
 
-Manifest V3 imposes new restrictions that limit an extension's ability to execute
-unreviewed JavaScript through a combination of platform changes and policy
-limitations.
+Manifest V3 imposes new restrictions that limit an extension's ability to execute unreviewed
+JavaScript through a combination of platform changes and policy limitations.
 
-Many extensions are unaffected by this change. However, if your Manifest V2 extension
-executes remotely hosted scripts, injects code strings into pages, or evals
-strings at runtime, you'll need to update your code execution strategies when
-migrating to Manifest V3.
+Many extensions are unaffected by this change. However, if your Manifest V2 extension executes
+remotely hosted scripts, injects code strings into pages, or evals strings at runtime, you'll need
+to update your code execution strategies when migrating to Manifest V3.
 
 ### Remotely hosted code  {: #remotely-hosted-code }
 
-_Remotely hosted code_ refers to any code that is not included in an
-extension's package as a loadable resource. For example, the following
-are considered remotely hosted code:
+_Remotely hosted code_ refers to any code that is not included in an extension's package as a
+loadable resource. For example, the following are considered remotely hosted code:
 
 - JavaScript files pulled from a remote server
 - Any library hosted on a [CDN][mdn-cdn].
 - a code string passed into [`"eval()"`][mdn-eval] at runtime
 
-In Manifest V3, all of your extension's logic must be included in the extension. You
-can no longer load and execute a remotely hosted file. A number of alternative
-approaches are available, depending on your use case and the reason for remote
-hosting. Here's a few approaches are:
+In Manifest V3, all of your extension's logic must be included in the extension. You can no longer
+load and execute a remotely hosted file. A number of alternative approaches are available, depending
+on your use case and the reason for remote hosting. Here's a few approaches are:
 
-Configuration-driven features and logic
-: In this approach, your extension
-loads a remote configuration (for example a JSON file) at runtime and caches
-the configuration locally. The extension then uses this cached configuration to
-decide which features to enable.
+Configuration-driven features and logic : In this approach, your extension loads a remote
+configuration (for example a JSON file) at runtime and caches the configuration locally. The
+extension then uses this cached configuration to decide which features to enable.
 
-Externalize logic with a remote service
-: Consider migrating application
-logic from the extension to a remote web service that your extension can call.
-(Essentially a form of message passing.) This provides you the ability to keep
-code private and change the code on demand while avoiding the extra overhead of
-resubmitting to the Chrome Web Store.
+Externalize logic with a remote service : Consider migrating application logic from the extension to
+a remote web service that your extension can call. (Essentially a form of message passing.) This
+provides you the ability to keep code private and change the code on demand while avoiding the extra
+overhead of resubmitting to the Chrome Web Store.
 
-Bundle third-party libraries
-: If you are using a popular framework like [React][react-cdn] or [Bootstrap][bootstrap-gs], you can download the minified files, add them to your project and import them locally. For example:
+Bundle third-party libraries : If you are using a popular framework like [React][react-cdn] or
+[Bootstrap][bootstrap-gs], you can download the minified files, add them to your project and import
+them locally. For example:
 
 {% Columns %}
 
@@ -340,20 +326,18 @@ Bundle third-party libraries
 
 To include a library in a service worker, you have two options:
 - For standard service workers, use `importScripts()`.
-- To use static import statements, set the
-  `"background.type"` to `"module"` in the manifest.
+- To use static import statements, set the `"background.type"` to `"module"` in the manifest.
 
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
 
 In Manifest V2, it was possible to execute an arbitrary string of code using
-[`tabs.executeScript()`][api-tabs-executescript] and the `code`
-property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
-adapt to this requirement, extension developers can use the
-[`scripting.executeScript()`][api-scripting-executescript] API to either
-inject a static file or a function.
+[`tabs.executeScript()`][api-tabs-executescript] and the `code` property on the options object.
+Manifest V3 does not allow arbitrary code execution. In order to adapt to this requirement,
+extension developers can use the [`scripting.executeScript()`][api-scripting-executescript] API to
+either inject a static file or a function.
 
-To use the [Scripting API][api-scripting], you need to include the `"scripting"` permission
-in your manifest file. This API does not [trigger a permission warning][doc-perm-warn].
+To use the [Scripting API][api-scripting], you need to include the `"scripting"` permission in your
+manifest file. This API does not [trigger a permission warning][doc-perm-warn].
 
 ```json
 {
@@ -366,8 +350,9 @@ in your manifest file. This API does not [trigger a permission warning][doc-perm
 <web-tabs>
   <web-tab title="Injecting a static file">
 
-  Static file injection with `scripting.executeScript()` is almost identical to it used to work in Tabs
-  API. While the old method only took a single file, the new method now takes an array of files.
+  Static file injection with `scripting.executeScript()` is almost identical to it used to work in
+  Tabs API. While the old method only took a single file, the new method now takes an array of
+  files.
 
   {% Columns %}
   ```js
@@ -400,8 +385,7 @@ in your manifest file. This API does not [trigger a permission warning][doc-perm
   ```
   {% endColumns %}
 
-  To include an external library, save the file locally and add it to the files
-  array:
+  To include an external library, save the file locally and add it to the files array:
 
   ```js
   ...
@@ -456,54 +440,47 @@ in your manifest file. This API does not [trigger a permission warning][doc-perm
 </web-tabs>
 
 A functional version of the Manifest V3 snippets in this section can be found in the
-[chrome-extensions-samples][github-samples-content]
-repository. See the [Tabs API examples][api-tabs-example] for an
-implementation of `getCurrentTab()`.
+[chrome-extensions-samples][github-samples-content] repository. See the [Tabs API
+examples][api-tabs-example] for an implementation of `getCurrentTab()`.
 
 ## Background service workers  {: #background-service-workers }
 
-Background pages in Manifest V2 are replaced by [service
-workers][dev-google-sw] in Manifest V3: this is a foundational change that affects most extensions. The following are
-some notable differences:
+Background pages in Manifest V2 are replaced by [service workers][dev-google-sw] in Manifest V3:
+this is a foundational change that affects most extensions. The following are some notable
+differences:
 
-| MV2 - Background page      | MV3 - Service worker                                  |
-|----------------------------|-------------------------------------------------------|
-| Can use a persistent page. | Terminates when not in use and restarted when needed. |
-| Has access to the DOM.     | Doesn't have access to the DOM.                       |
-| Can use `XMLHttpRequest()`.       | Must use [fetch()][mdn-fetch] to make requests.       |
+| MV2 - Background page       | MV3 - Service worker                                  |
+|-----------------------------|-------------------------------------------------------|
+| Can use a persistent page.  | Terminates when not in use and restarted when needed. |
+| Has access to the DOM.      | Doesn't have access to the DOM.                       |
+| Can use `XMLHttpRequest()`. | Must use [fetch()][mdn-fetch] to make requests.       |
 
-See [Migrating from Background Pages to Service
-Workers][doc-background-to-worker] to explore how to adapt to these and
-other challenges.
+See [Migrating from Background Pages to Service Workers][doc-background-to-worker] to explore how to
+adapt to these and other challenges.
 
 {% Aside %}
 
-In order to aid with the migration process, Manifest V2 extensions can use background
-service workers as of Chrome 87.
+In order to aid with the migration process, Manifest V2 extensions can use background service
+workers as of Chrome 87.
 
 {% endAside %}
 
 
 ## Modifying network requests  {: #modifying-network-requests }
 
-There is a new
-[declarativeNetRequest][api-declarativenetrequest] for
-network request modification, which provides an alternative for much of the
-[webRequest][api-webrequest] API's functionality.
+There is a new [declarativeNetRequest][api-declarativenetrequest] for network request modification,
+which provides an alternative for much of the [webRequest][api-webrequest] API's functionality.
 
 ### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
 
-The blocking version of the [webRequest][api-webrequest]
-API still exists in Manifest V3 but its use is restricted to force-installed extensions
-only. See Chrome Enterprise policies:
-[ExtensionSettings][enterprise-settings],
-[ExtensionInstallForcelist][enterprise-force-list].
+The blocking version of the [webRequest][api-webrequest] API still exists in Manifest V3 but its use
+is restricted to force-installed extensions only. See Chrome Enterprise policies:
+[ExtensionSettings][enterprise-settings], [ExtensionInstallForcelist][enterprise-force-list].
 
-All other extensions must now use
-[declarativeNetRequest][api-declarativenetrequest] for
-network request modification. This moves the actual modification of the network
-request into the Chrome browser: the extension no longer can read the actual
-network request, and in most cases needs no host permissions.
+All other extensions must now use [declarativeNetRequest][api-declarativenetrequest] for network
+request modification. This moves the actual modification of the network request into the Chrome
+browser: the extension no longer can read the actual network request, and in most cases needs no
+host permissions.
 
 {% Aside 'caution' %}
 
@@ -514,52 +491,48 @@ Request redirects and header modifications **do** require the user to grant host
 
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
 
-Instead of reading the request and programmatically altering it, your extension
-specifies a number of [rules][api-declarative-rules], which map a set of conditions to corresponding
-actions. See the
-[declarativeNetRequest][api-declarativenetrequest]
-reference documentation for a more detailed description of rules.
+Instead of reading the request and programmatically altering it, your extension specifies a number
+of [rules][api-declarative-rules], which map a set of conditions to corresponding actions. See the
+[declarativeNetRequest][api-declarativenetrequest] reference documentation for a more detailed
+description of rules.
 
-This feature allows content blockers and other request-modifying extensions to
-implement their use cases without requiring host permissions, and without
-needing to read the actual requests.
+This feature allows content blockers and other request-modifying extensions to implement their use
+cases without requiring host permissions, and without needing to read the actual requests.
 
 {% Aside %}
 
-In order to aid with the migration process, the declarativeNetRequest API is
-available for use in Manifest V2 extensions as of Chrome 84.
+In order to aid with the migration process, the declarativeNetRequest API is available for use in
+Manifest V2 extensions as of Chrome 84.
 
 {% endAside %}
 
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
 
-Most use cases for declarativeNetRequest don't require any host permissions at
-all. However, some do.
+Most use cases for declarativeNetRequest don't require any host permissions at all. However, some
+do.
 
 {% Aside 'caution' %}
 
-Host permissions are still required if the extension wants to *redirect* a
-request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always
-requires host permissions to the request URL and initiator to act on a request.
+Host permissions are still required if the extension wants to *redirect* a request or modify headers
+on it. The `declarativeNetRequestWithHostAccess` permission always requires host permissions to the
+request URL and initiator to act on a request.
 
 {% endAside %}
 
-When extensions require host permissions for these use cases, we recommend a
-"tiered" permissions strategy. This means implementing the extension's core
-functionality without using these permissions; putting the more advanced use
-cases behind an `"optional_host_permission"`.
+When extensions require host permissions for these use cases, we recommend a "tiered" permissions
+strategy. This means implementing the extension's core functionality without using these
+permissions; putting the more advanced use cases behind an `"optional_host_permission"`.
 
-This approach allows privacy-conscious users to withhold those permissions and
-still use much of the extension's functionality. This means that developers
-can implement many common use cases, such as content-blocking functionality,
-without requiring any host permissions.
+This approach allows privacy-conscious users to withhold those permissions and still use much of the
+extension's functionality. This means that developers can implement many common use cases, such as
+content-blocking functionality, without requiring any host permissions.
 
 
 ## Sunset for deprecated APIs  {: #sunset-deprecated-apis }
 
-There are a number of APIs that have long been deprecated. Manifest V3 finally
-removes support for the following deprecated APIs:
+There are a number of APIs that have long been deprecated. Manifest V3 finally removes support for
+the following deprecated APIs:
 
 *   chrome.extension.getExtensionTabs()
 *   chrome.extension.getURL()
@@ -582,8 +555,8 @@ As well as the undocumented:
 *   chrome.extension.onMessage
 *   chrome.extension.sendMessage()
 
-If your extensions use any of these deprecated APIs, you'll need to make the
-appropriate changes when you migrate to Manifest V3.
+If your extensions use any of these deprecated APIs, you'll need to make the appropriate changes
+when you migrate to Manifest V3.
 
 [api-declarative-rules]: /docs/extensions/reference/declarativeNetRequest/#example
 [api-declarativenetrequest]: /docs/extensions/reference/declarativeNetRequest
