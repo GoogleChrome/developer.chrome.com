@@ -16,3 +16,7 @@ blog:
 releases:
   en: 'Releases'
   es: 'Versiones'
+
+articles:
+  en: 'Articles'
+  es: 'Artículos'
