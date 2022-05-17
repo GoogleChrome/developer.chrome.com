@@ -36,7 +36,7 @@ To experiment with the Launch Handler API locally, without an origin trial token
 
 #### Register for the origin trial
 
-Starting in Chromium 98, the Launch Handler API will be available as an [origin trial](/docs/experimental/origin-trials/) in Chromium. The origin trial is expected to end in Chromium 102 (June 15, 2022). [Register here](https://developers.chrome.com/origintrials/#/trials/active).
+Starting in Chromium 98, the Launch Handler API will be available as an [origin trial](/docs/web-platform/origin-trials/) in Chromium. The origin trial is expected to end in Chromium 102 (June 15, 2022). [Register here](https://developers.chrome.com/origintrials/#/trials/active).
 
 {% endAside %}
 

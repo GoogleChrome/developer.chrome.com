@@ -32,6 +32,12 @@ Intro paragraph explaining briefly what this API is for.
 
 Add information about status, and how developers can try out the API. 
 
+## Use cases 
+
+Change the heading above to make sense for your content, 
+however here you can add a short explanation, 
+and the core use cases for the API.
+
 ## Interfaces
 
 Describe each interface that is part of the API 
@@ -39,12 +45,6 @@ using a description list format.
 
 `interfaceName`
 : Short description.
-
-## Use cases 
-
-Change the heading above to make sense for your content, 
-however here you can add a short explanation, 
-and the core use cases for the API.
 
 ## Examples
 
@@ -65,6 +65,11 @@ Include links to the spec, explainer,
 Chrome Status, MDN, and so on.
   
 ```
+
+## Origin trials we are no longer persuing
+
+If the origin trial is abandoned, then move the documentation to the section under `- title: i18n.docs.web-platform.not-persuing` in `toc.yml`. 
+Then remove information about signing up for the trial from the documentation.
 
 [add-a-doc]: /docs/handbook/how-to/add-a-doc/
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/API
