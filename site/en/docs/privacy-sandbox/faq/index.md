@@ -141,7 +141,7 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
-### Can a site allow testing but opt-out of the OTs in specific geographic regions?
+### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
 A site can set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
 to control when an API can be accessed.
