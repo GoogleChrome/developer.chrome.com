@@ -60,9 +60,8 @@ An extension may run in a web page with code similar to the example below.
     var greeting = "hello, ";
     var button = document.getElementById("mybutton");
     button.person_name = "Bob";
-    button.addEventListener("click", () =>
-      alert(greeting + button.person_name + ".")
-    , false);
+    button.addEventListener(
+        "click", () => alert(greeting + button.person_name + "."), false);
   </script>
 </html>
 ```
@@ -74,9 +73,8 @@ That extension could inject the following content script using one of the techni
 var greeting = "hola, ";
 var button = document.getElementById("mybutton");
 button.person_name = "Roberto";
-button.addEventListener("click", () =>
-  alert(greeting + button.person_name + ".")
-, false);
+button.addEventListener(
+    "click", () => alert(greeting + button.person_name + "."), false);
 ```
 
 With this change, both alerts appear in sequence when the button is clicked.
@@ -197,35 +195,35 @@ Like static declarations, dynamic declarations can include JavaScript files, CSS
 ```js
 chrome.scripting
   .registerContentScripts([{
-    id: 'session-script',
-    js: ['content.js'],
+    id: "session-script",
+    js: ["content.js"],
     persistAcrossSessions: false,
-    matches: ['*://example.com/*'],
-    runAt: 'document_start',
+    matches: ["*://example.com/*"],
+    runAt: "document_start",
   }])
-  .then(() => console.log('registration complete'))
-  .catch((err) => console.warn('unexpected error', err))
+  .then(() => console.log("registration complete"))
+  .catch((err) => console.warn("unexpected error", err))
 ```
 
 ```js
 chrome.scripting
   .updateContentScripts([{
-    id: 'session-script',
-    excludeMatches: ['*://admin.example.com/*'],
+    id: "session-script",
+    excludeMatches: ["*://admin.example.com/*"],
   }])
-  .then(() => console.log('registration updated'));
+  .then(() => console.log("registration updated"));
 ```
 
 ```js
 chrome.scripting
   .getRegisteredContentScripts()
-  .then(scripts => console.log('registered content scripts', scripts));
+  .then(scripts => console.log("registered content scripts", scripts));
 ```
 
 ```js
 chrome.scripting
-  .unregisterContentScript(['session-script'])
-  .then(() => console.log('un-registration complete'));
+  .unregisterContentScript(["session-script"])
+  .then(() => console.log("un-registration complete"));
 ```
 
 ### Inject programmatically {: #programmatic }
@@ -260,7 +258,8 @@ Content scripts can be injected as files…
 {% Label %}content-script.js:{% endLabel %}
 
 ```js
-document.body.style.backgroundColor = 'orange';
+//// content-script.js ////
+document.body.style.backgroundColor = "orange";
 ```
 
 {% Label %}background.js:{% endLabel %}
@@ -269,7 +268,7 @@ document.body.style.backgroundColor = 'orange';
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    files: ['content-script.js']
+    files: ["content-script.js"]
   });
 });
 ```
@@ -280,13 +279,13 @@ chrome.action.onClicked.addListener((tab) => {
 
 ```js
 function injectedFunction() {
-  document.body.style.backgroundColor = 'orange';
+  document.body.style.backgroundColor = "orange";
 }
 
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: injectedFunction
+    target : {tabId : tab.id},
+    function : injectedFunction,
   });
 });
 ```
@@ -306,9 +305,9 @@ function injectedFunction(color) {
 
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: injectedFunction,
-    arguments: ['orange']
+    target : {tabId : tab.id},
+    function : injectedFunction,
+    arguments : [ "orange" ],
   });
 });
 ```
@@ -378,10 +377,10 @@ but not into **https://www.nytimes.com/ business** .
 ```
 ```js/2
 chrome.scripting.registerContentScript({
-  id: 1,
-  matches: ["https://*.nytimes.com/*"],
-  exclude_matches: ["*://*/*business*"],
-  js: ["contentScript.js"]
+  id : 1,
+  matches : [ "https://*.nytimes.com/*" ],
+  exclude_matches : [ "*://*/*business*" ],
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -421,10 +420,10 @@ This extension injects the content script into **https://www.nytimes.com/arts/in
 ```
 ```js/3
 chrome.scripting.registerContentScript({
-  id: 1,
-  matches: ['https://*.nytimes.com/*'],
-  include_globs: ['*nytimes.com/???s/*'],
-  js: ['contentScript.js']
+  id : 1,
+  matches : [ "https://*.nytimes.com/*" ],
+  include_globs : [ "*nytimes.com/???s/*" ],
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -448,10 +447,10 @@ This extension injects the content script into **https://history.nytimes.com** a
 ```
 ```js/3
 chrome.scripting.registerContentScript({
-  id: 1,
-  matches: ['https://*.nytimes.com/*'],
-  exclude_globs: ['*science*'],
-  js: ['contentScript.js']
+  id : 1,
+  matches : [ "https://*.nytimes.com/*" ],
+  exclude_globs : [ "*science*" ],
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -475,11 +474,11 @@ One, all, or some of these can be included to achieve the correct scope.
 ```
 ```js/2-4
 chrome.scripting.registerContentScript({
-  matches: ['https://*.nytimes.com/*'],
-  exclude_matches: ['*://*/*business*'],
-  include_globs: ['*nytimes.com/???s/*'],
-  exclude_globs: ['*science*'],
-  js: ['contentScript.js']
+  matches : [ "https://*.nytimes.com/*" ],
+  exclude_matches : [ "*://*/*business*" ],
+  include_globs : [ "*nytimes.com/???s/*" ],
+  exclude_globs : [ "*science*" ],
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -506,9 +505,9 @@ values.
 
 ```js/2
 chrome.scripting.registerContentScript({
-  matches: ['https://*.nytimes.com/*'],
-  runAt: 'document_idle',
-  js: ['contentScript.js']
+  matches : [ "https://*.nytimes.com/*" ],
+  runAt : "document_idle",
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -572,9 +571,9 @@ tab.
 ```
 ```js/2
 chrome.scripting.registerContentScript({
-  matches: ['https://*.nytimes.com/*'],
-  all_frames: true,
-  js: ['contentScript.js']
+  matches : [ "https://*.nytimes.com/*" ],
+  all_frames : true,
+  js : [ "contentScript.js" ],
 });
 ```
 
@@ -662,11 +661,11 @@ var port = chrome.runtime.connect();
 
 window.addEventListener("message", (event) => {
   // We only accept messages from ourselves
-  if (event.source != window) {
+  if (event.source !== window) {
     return;
   }
 
-  if (event.data.type && (event.data.type == "FROM_PAGE")) {
+  if (event.data.type && (event.data.type === "FROM_PAGE")) {
     console.log("Content script received: " + event.data.text);
     port.postMessage(event.data.text);
   }
@@ -675,7 +674,8 @@ window.addEventListener("message", (event) => {
 
 ```js
 document.getElementById("theButton").addEventListener("click", () => {
-  window.postMessage({ type: "FROM_PAGE", text: "Hello from the webpage!" }, "*");
+  window.postMessage(
+      {type : "FROM_PAGE", text : "Hello from the webpage!"}, "*");
 }, false);
 ```
 
@@ -697,16 +697,16 @@ disallowed in Manifest V3:
 
 {% Compare 'worse' %}
 ```js
-const data = document.getElementById("json-data")
+const data = document.getElementById("json-data");
 // WARNING! Might be evaluating an evil script!
-const parsed = eval("(" + data + ")")
+const parsed = eval("(" + data + ")");
 ```
 {% endCompare %}
 
 {% Compare 'worse' %}
 ```js
 const elmt_id = ...
-// WARNING! elmt_id might be "); ... evil script ... //"!
+// WARNING! elmt_id might be '); ... evil script ... //'!
 window.setTimeout("animate(" + elmt_id + ")", 200);
 ```
 {% endCompare %}

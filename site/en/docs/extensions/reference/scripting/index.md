@@ -36,11 +36,11 @@ main frame of the specified tab.
 function getTabId() { ... }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()},
-    files: ['script.js'],
-  })
-  .then(() => console.log('script injected'));
+    .executeScript({
+      target : {tabId : getTabId()},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected"));
 ```
 
 To run in all frames of the specified tab, you can set the `allFrames` boolean
@@ -50,11 +50,11 @@ to `true`.
 function getTabId() { ... }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()}, allFrames: true},
-    files: ['script.js'],
-  })
-  .then(() => console.log('script injected in all frames'));
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected in all frames"));
 ```
 
 You can also inject into specific frames of a tab by specifying individual frame
@@ -65,11 +65,12 @@ API][webnavigation].
 function getTabId() { ... }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()}, frameIds: [frameId1, frameId2]},
-    files: ['script.js'],
-  })
-  .then(() => console.log('script injected on target frames'));
+    .executeScript({
+      target : {tabId : getTabId()},
+      frameIds : [ frameId1, frameId2 ],
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("script injected on target frames"));
 ```
 
 {% Aside %}
@@ -93,11 +94,11 @@ frame of the tab.
 function getTabId() { ... }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()},
-    files: ['script.js'],
-  })
-  .then(() => console.log('injected script file'));
+    .executeScript({
+      target : {tabId : getTabId()},
+      files : [ "script.js" ],
+    })
+    .then(() => console.log("injected script file"));
 ```
 
 #### Runtime functions
@@ -108,25 +109,15 @@ variable available to the current extension context.
 
 ```js
 function getTabId() { ... }
-function getTitle() {
-  return document.title;
-}
+function getTitle() { return document.title; }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()},
-    func: getTitle,
-  })
-  .then(() => console.log('injected a function'));
-);
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : getTitle,
+    })
+    .then(() => console.log("injected a function"));
 ```
-
-This function will be executed in the context of injection target. However, this
-will not carry over any of the current execution context of the function. As
-such, bound parameters (including the `this` object) and externally-referenced
-variables will result in errors.  For instance, the following code will not
-work, and will throw a ReferenceError because `getUserColor` is undefined when
-the function executes:
 
 ```js
 function getTabId() { ... }
@@ -137,11 +128,11 @@ function changeBackgroundColor() {
 }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()},
-    func: changeBackgroundColor,
-  })
-  .then(() => console.log('injected a function'));
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : changeBackgroundColor,
+    })
+    .then(() => console.log("injected a function"));
 ```
 
 You can work around this by using the `args` property:
@@ -154,12 +145,12 @@ function changeBackgroundColor(backgroundColor) {
 }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId()},
-    func: changeBackgroundColor,
-    args: [getUserColor()],
-  })
-  .then(() => console.log('injected a function'));
+    .executeScript({
+      target : {tabId : getTabId()},
+      func : changeBackgroundColor,
+      args : [ getUserColor() ],
+    })
+    .then(() => console.log("injected a function"));
 ```
 
 #### Runtime strings
@@ -170,14 +161,14 @@ can't execute a string using `scripting.executeScript()`.
 
 ```js
 function getTabId() { ... }
-const css = 'body { background-color: red; }';
+const css = "body { background-color: red; }";
 
 chrome.scripting
-  .insertCSS({
-    target: {tabId: getTabId()},
-    css: css,
-  })
-  .then(() => console.log('CSS injected'));
+    .insertCSS({
+      target : {tabId : getTabId()},
+      css : css,
+    })
+    .then(() => console.log("CSS injected"));
 ```
 
 ### Handling results
@@ -188,21 +179,18 @@ resulting array; all other frames are in a non-deterministic order.
 
 ```js
 function getTabId() { ... }
-function getTitle() {
-  return document.title;
-}
+function getTitle() { return document.title; }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId(), allFrames: true},
-    func: getTitle,
-  })
-  .then(injectionResults => {
-    for (const frameResult of injectionResults) {
-      const {frameId, result} = frameResult;
-      console.log(`Frame ${frameId} result:`, result);
-    }
-  });
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      func : getTitle,
+    })
+    .then(injectionResults => {
+      for (const {frameId, result} of injectionResults) {
+        console.log(`Frame ${frameId} result:`, result);
+      }
+    });
 ```
 
 `scripting.insertCSS()` does not return any results.
@@ -215,27 +203,26 @@ for the promise to settle and return the resulting value.
 ```js
 function getTabId() { ... }
 async function addIframe() {
-  const iframe = document.createElement('iframe');
-  const loadComplete = new Promise(resolve => {
-    iframe.addEventListener('load', resolve);
-  });
-  iframe.src = 'https://example.com';
+  const iframe = document.createElement("iframe");
+  const loadComplete =
+      new Promise(resolve => iframe.addEventListener("load", resolve));
+  iframe.src = "https://example.com";
   document.body.appendChild(iframe);
   await loadComplete;
   return iframe.contentWindow.document.title;
 }
 
 chrome.scripting
-  .executeScript({
-    target: {tabId: getTabId(), allFrames: true},
-    func: addIframe,
-  })
-  .then(injectionResults => {
-    for (const frameResult of injectionResults) {
-      const {frameId, result} = frameResult;
-      console.log(`Frame ${frameId} result:`, result);
-    }
-  });
+    .executeScript({
+      target : {tabId : getTabId(), allFrames : true},
+      func : addIframe,
+    })
+    .then(injectionResults => {
+      for (const frameResult of injectionResults) {
+        const {frameId, result} = frameResult;
+        console.log(`Frame ${frameId} result:`, result);
+      }
+    });
 ```
 
 ## Examples
@@ -252,11 +239,11 @@ async function unregisterAllDynamicContentScripts() {
     const scriptIds = scripts.map(script => script.id);
     return chrome.scripting.unregisterContentScripts(scriptIds);
   } catch (error) {
-    let message = [
-      'An unexpected error occurred while',
-      'unregistering dynamic content scripts',
-    ].join(' ');
-    throw new Error(message, {cause: error};
+    const message = [
+      "An unexpected error occurred while",
+      "unregistering dynamic content scripts",
+    ].join(" ");
+    throw new Error(message, {cause : error});
   }
 }
 ```
