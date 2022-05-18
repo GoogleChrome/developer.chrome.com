@@ -143,14 +143,26 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
-A site can set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
-to control when an API can be accessed.
+In short, no, you cannot opt-out of an origin trial for specific regions.
+
+However, a geographic-specific origin can set a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and
+`uk.example.com` are geographic-specific origins which can be controlled.
+This does not mean that a region has opted-out of the origin trial.
 
 With a Permissions Policy, a site adds a little snippet of code to their 
 pages that provides instructions to the browser. When the page loads, the browser 
 reads the Permission Policy instructions and will allow or block features (or APIs)
 as outlined in the Permissions Policy. If a site wants to restrict an API in a 
 specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
 
 ## Trust Tokens
 
