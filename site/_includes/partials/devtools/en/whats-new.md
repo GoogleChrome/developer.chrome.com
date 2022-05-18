@@ -6,7 +6,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 * [Preview feature: New Performance insights panel](/blog/new-in-devtools-102/#perf)
 * [New shortcuts to emulate light and dark themes](/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/blog/new-in-devtools-102/#network-preview)
+* [Improved security on the Network Preview tab](/blog/new-in-devtools-102/#network-preview)
 * [Improved reloading at breakpoint](/blog/new-in-devtools-102/#debugger)
 * [Console updates](/blog/new-in-devtools-102/#console)
 * [Cancel user flow recording at the start](/blog/new-in-devtools-102/#recorder)
