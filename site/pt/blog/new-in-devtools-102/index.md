@@ -175,7 +175,7 @@ Essas são algumas melhorias dignas de nota nessa atualizacão:
 - Cap the **Expand recursively** option of an object in the **Console** to maximum 100 so it does not go on forever for circular objects. ([1272450](https://crbug.com/1272450)) -->
 - O painel **Propriedades** agora mostra os acessores de cada propriedade com seus valores por padrão. Ele estava escondido por um erro anteriormente. ([1309087](https://crbug.com/1309087))
 - O painel **Estilos** agora mostra as regras sobrescritas de `@support` de forma correta como riscadas. Anteriormente elas não estavam sendo exibidas nesse estilo. ([1298025](https://crbug.com/1298025))
-- Logica de formação de CSS no painel de **Sources** que causava múltiplas linhas em branco quando editando CSS foi corrigida. ([1309588](https://crbug.com/1309588))
+- Logica de formação de CSS no painel de **Fontes** que causava múltiplas linhas em branco quando editando CSS foi corrigida. ([1309588](https://crbug.com/1309588))
 - Limitação de, no máximo, 100 para a opção **expandir recursivamente** em qualquer objeto no console para que ele não seja executado para sempre em objetos com referência circular. ([1272450](https://crbug.com/1272450))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4240f8bc96a3ebd2dc2a5b316fd41c24e20fb3c #}
