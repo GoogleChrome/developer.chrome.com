@@ -345,7 +345,7 @@ To add a class to an element:
 
 ### Emulate light and dark theme preferences and enable automatic dark mode {: #emulate-light-dark-themes }
 
-To toggle automatic dark mode or emulate the user's preference of light or dark themes:
+To toggle [automatic dark mode][33] or emulate the user's preference of [light or dark themes][34]:
 
 1. On the **Elements** > **Styles** pane, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CNwUGOgogDCqUaQGt9ZS.svg", alt="Toggle common rendering emulations.", width="20", height="20" %}**Toggle common rendering emulations**.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2G2TqgXtPcUnSgRN4saG.png", alt="Toggle common rendering emulations.", width="800", height="376" %}
@@ -564,3 +564,5 @@ To open the **Shadow Editor**:
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
+[33]: /blog/auto-dark-theme/
+[34]: https://web.dev/prefers-color-scheme/
