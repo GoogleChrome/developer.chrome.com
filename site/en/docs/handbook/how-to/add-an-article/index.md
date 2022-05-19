@@ -1,19 +1,17 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a blog post
-description: 'Add a new post to /blog'
-date: 2021-01-27
-updated: 2022-05-19
+title: Add an article
+description: 'Add a new post to /articles'
+date: 2022-05-19
 ---
 
 ## Before you start
 
-Make sure your content is a blog post, and not reference documentation or an article (or a mixture of all three). 
-See [where to publish](/docs/handbook/where-to-publish) for more information.
+Make sure your content is an article, and not reference documentation or a blog post. See [where to publish](/docs/handbook/where-to-publish) for more information.
 
 ## Clone the sample post
 
-Duplicate the example post located in `site/en/blog/_example/` and
+Duplicate the example post located in `site/en/articles/_example/` and
 rename the folder to match whatever slug you want to use for your url.
 
 Posts support markdown syntax with some additional features and shortcodes.
@@ -21,7 +19,9 @@ Posts support markdown syntax with some additional features and shortcodes.
 ## Metadata
 
 Each `index.md` file starts with YAML Front Matter. See
-`site/en/blog/_example/` for documentation of all supported metadata.
+`site/en/articles/_example/` for documentation of all supported metadata.
+
+Articles and blog posts share the same template and are identical other than location at the moment.
 
 ### Hero images
 
