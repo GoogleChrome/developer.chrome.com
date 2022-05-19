@@ -128,7 +128,7 @@ key={("https", "retail.example"),
 
 #### First-Party Sets and cookie partitioning
 
-[First-Party Sets](blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as the same first-party as the top-level site, in situations where Chrome may apply restrictions, such as access to cookies on third-party subresources.
+[First-Party Sets](/blog/first-party-sets-sameparty/#how-to-define-a-first-party-set) allow related domain names that are owned and operated by the same entity to be treated as the same first-party as the top-level site, in situations where Chrome may apply restrictions, such as access to cookies on third-party subresources.
 
 When an embedded service sets a cookie on a site that's a member of a First-Party Set, that cookie will be accessible to the service when it's embedded on any of the First-Party Set member sites. This allows the embedded service to provide a seamless, unified user session across all member sites.
 
