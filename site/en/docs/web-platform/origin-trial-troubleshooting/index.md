@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2021-09-07
+updated: 2022-05-13
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -15,7 +15,8 @@ tags:
 {% Aside %}
 This guide assumes a working knowledge of origin trials in Chrome.
 
-* [Getting started with Chrome's origin trials](/docs/experimental/origin-trials/) explains the basics.
+
+* [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) explains the basics.
 * [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#faq) 
 provides a detailed FAQ. 
 
@@ -65,6 +66,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-token-third" class="w-ml--l"><a href="#token-third">Third-party script uses a 
     third-party token</a></label>
   <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-third-first">
+  <label for="check-token-third-first" class="w-ml--l"><a href="#token-third-first">Third-party token is not used in a first-party context</a></label>
+  <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
   is supported for the method used to provide a trial token</a></label>
@@ -81,9 +85,8 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-trial-ended" class="w-ml--l"><a href="#trial-ended">The origin trial hasn't 
     ended</a></label>
   <br>
-  <input class="w-checkbox" type="checkbox" id="check-region">
-  <label for="check-region" class="w-ml--l"><a href="#region">The origin trial is available in your 
-    region</a></label>
+  <input class="w-checkbox" type="checkbox" id="check-user">
+  <label for="check-user" class="w-ml--l"><a href="#user">The origin trial is available for the current user</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-usage-restrictions">
   <label for="check-usage-restrictions" class="w-ml--l"><a href="#usage-restrictions">Origin trial 
@@ -144,8 +147,8 @@ be accessed on multiple sites from third-party scripts.
 is enabled for the token. This enables an origin trial feature to be tested on multiple 
 subdomains of an origin, without requiring a different token for every subdomain.
 
-Chrome DevTools will display a warning next to the trial name if the trial is not available in your 
-region, the token has expired, or if there are other restrictions.
+Chrome DevTools will display a warning next to the trial name if the trial is not available 
+for the current user, the token has expired, or if there are other restrictions.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iW93yyW0wFk7qCeIkqLx.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing expired token", width="800", height="424" %}
@@ -334,6 +337,18 @@ function addTrialToken(tokenContents) {
 }
 ```
 
+### Third-party token is not used in a first-party context {: #token-third-first}
+
+Don't use third-party tokens in a first-party context. If you use a token with third-party 
+matching enabled, it will not work in first-party contexts. For example, if you embed an 
+iframe which includes code that accesses a trial feature, provide a 'normal' token with the 
+iframe document: a token registered with third-party matching _not_ enabled.
+
+{% Aside %}
+If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
+for the same origin trial or for different trials.
+{% endAside %}
+
 
 ### Origin trial feature access is supported for the method used to provide a trial token {: #token-method}
 
@@ -422,15 +437,20 @@ status of the feature you're testing.
 {% endAside %}
 
 
-### The origin trial is available in your region {: #region}
+### The origin trial is available for the current user {: #user}
 
-Not all origin trials are supported in all geographical regions.
+Some origin trials are unavailable to certain users, even if a valid token is provided.
 
-If a trial isn't supported in your region, Chrome DevTools will display a `TrialNotAllowed` warning:
+If a trial isn't available for the current user, Chrome DevTools will display a `TrialNotAllowed` warning:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jToK0McIe9AgqCS3rymo.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing TrialNotAllowed warning", width="800", 
 height="424" %}
+
+Information about usage restrictions and availability will be provided for each origin trial.
+
+As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+to confirm that an origin trial feature is supported before you use it.
 
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
 
@@ -473,7 +493,7 @@ A demo showing access to an origin trial feature in an iframe is available at
 
 ### Permissions policies are correctly configured {: #permissions-policies}
 
-Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) 
+Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
 header (previously known as a `Feature-Policy` header). You can check for this in the 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=subject%3Aintent%20subject%3Ato%20subject%3Aexperiment) 
 for the trial feature, or in developer documentation for the feature on [web.dev](https://web.dev) 
@@ -495,15 +515,21 @@ a token in an `Origin-Trial` header. Dedicated workers inherit access to feature
 parent document.
 
 
+## Origin trial demos
+
+-  [Token in a meta tag](https://ot-meta.glitch.me)
+-  [Token in a header](https://ot-header.glitch.me)
+-  [Feature accessed in an iframe](https://ot-iframe.glitch.me)
+-  [Token injected by third-party script](https://ot-3p.glitch.me)
+
+
 ## Find out more
 
--  [Getting started with Chrome's origin trials](/blog/origin-trials/)
--  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/)
+-  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
----
 
-Photo by [Bill Oxford](https://unsplash.com/@bill_oxford) on [Unsplash](https://unsplash.com/photos/tR0PPLuN6Pw).

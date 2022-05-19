@@ -80,6 +80,15 @@ redirects:
 - from: /multidevice/webview/overview/
   to: /multidevice/webview/
 
+- from: /blog/origin-trials/
+  to: /docs/web-platform/origin-trials/
+
+- from: /blog/origin-trial-troubleshooting/
+  to: /docs/web-platform/origin-trial-troubleshooting/
+
+- from: /blog/third-party-origin-trials/
+  to: /docs/web-platform/third-party-origin-trials/
+
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
   to: /docs/webstore
