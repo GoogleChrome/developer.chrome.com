@@ -174,14 +174,14 @@ element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
 
-### (Preview) View inherited highlight pseudo-elements {: #view-inherited-highlight-pseudo-elements }
+### View inherited highlight pseudo-elements {: #view-inherited-highlight-pseudo-elements }
 
 [Pseudo-elements][33] let you style specific parts of elements. Highlight pseudo-elements are document portions with a "selected" status and they are styled as "highlighted" to indicate this status to the user. For example, such pseudo-elements are `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`.
 
 As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style.
 
 {% Aside %}
-Currently, this is a preview feature. To enable it, run Chrome with the `--enable-blink-features=HighlightInheritance` flag.
+To enable this feature, run Chrome with the `--enable-blink-features=HighlightInheritance` flag.
 {% endAside %}
 
 To better understand the inheritance and priority of the rules, you can view the inherited highlight pseudo-elements:
