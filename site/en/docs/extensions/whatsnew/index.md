@@ -16,7 +16,7 @@ updated: 2022-04-11
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 102: {: #m102-registercontentscripts-main-world }
+### Chrome 102: Specify the world with registerContentScripts{: #m102-registercontentscripts-main-world }
 
 April 14, 2022
 
