@@ -51,7 +51,9 @@ chrome.runtime.onInstalled.addListener((reason) => {
 
 ### Get the current tab
 
-This example demonstrates how the background script can retrieve the currently focused tab.
+This example demonstrates how the background script can retrieve the active tab from the
+currently-focused window (or most recently-focused window, if no Chrome windows are focused). This
+can usually be thought of as the user's current tab.
 
 {% Aside %}
 
