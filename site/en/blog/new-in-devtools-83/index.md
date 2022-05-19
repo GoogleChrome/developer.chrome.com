@@ -45,7 +45,7 @@ By designing for the more extreme simulations in DevTools, your web apps are gua
 accessible to people with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
 
 Send feedback to [Chromium issue #1003700][3], or [read more about the
-implementation](https://developer.chrome.com/blog/cvd/).
+implementation](/blog/cvd/).
 
 ## Emulate locales {: #locales }
 
