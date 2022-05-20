@@ -56,7 +56,9 @@ if ('serviceWorker' in navigator) {
 }
 </script>  
 ```
+
 ### Using the CDN
+
 While not the recommended approach, an easier way to use `workbox-window` is to import it from a CDN:
 
 ```html
@@ -72,7 +74,9 @@ While not the recommended approach, an easier way to use `workbox-window` is to 
 ```
 
 You'll note that the [`<script>` element](https://developer.mozilla.org/docs/Web/HTML/Element/script) in the above example uses the `type="module"` attribute. This is required if you want to use static `import` statements in the browser without a build step. All major browsers that support service workers also support JavaScript modules, so it's fine to serve this code to any browser, as older browsers will ignore `<script>` elements with a `type` attribute value of `"module"`.
+
 ## Registering a service worker
+
 Registering a service worker with `workbox-window` is done with the `Workbox` class's `register` method like so:
 
 ```js
