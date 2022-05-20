@@ -32,7 +32,8 @@ npm install workbox-window --save
 
 Then, in your application JavaScript, you can `import` the `Workbox` class from `workbox-window`:
 
-```js
+```html
+<script type="module">
 import {Workbox} from 'workbox-window';
 
 if ('serviceWorker' in navigator) {
@@ -40,17 +41,20 @@ if ('serviceWorker' in navigator) {
 
   wb.register();
 }
+</script>  
 ```
 
 Though `workbox-window` is quite small, you _could_ split it from your website's core application logic using [dynamic `import`](https://web.dev/reduce-javascript-payloads-with-code-splitting/), which can reduce the size of your page's main bundle:
 
-```js
+```html
+<script type="module">
 if ('serviceWorker' in navigator) {
   const {Workbox} = await import('workbox-window');
 
   const wb = new Workbox('/sw.js');
   wb.register();
 }
+</script>  
 ```
 ### Using the CDN
 While not the recommended approach, an easier way to use `workbox-window` is to import it from a CDN:
