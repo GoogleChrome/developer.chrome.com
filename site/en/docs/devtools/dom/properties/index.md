@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "View properties of DOM objects"
 date: 2022-05-05
 #updated: YYYY-MM-DD
-description: "Browse and filter properties of DOM objects."
+description: "View and filter properties of DOM objects."
 authors:
   - sofiayem
 tags:
@@ -12,7 +12,7 @@ tags:
 
 Use the **Elements** > **Properties** pane to browse and filter properties of [DOM][1] objects.
 
-## View the properties of a DOM object {: #browse-properties }
+## View the properties of DOM objects {: #view-properties }
 
 To view properties of a DOM object, follow these steps:
 
@@ -24,33 +24,59 @@ To view properties of a DOM object, follow these steps:
 
 ## Understand properties {: #understand-properties }
 
-The **Properties** pane shows you the following:
+The **Elements** > **Properties** pane shows a variety of properties.
 
-- Simple properties are pairs of `<name>: <value>`.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZmYdzL6Ba28qSYVNt9wQ.png", alt="Simple properties.", width="800", height="322" %}
-- Collapsible ({% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tFA9uWBcDgv8NNS1FlRm.svg", alt="Arrow right.", width="20", height="20" %}) properties are objects.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6cTP5nhIU3M6gYS76KFs.png", alt="Collapsible property.", width="800", height="401" %}
-- Objects that correspond to DOM nodes are links. Click on a link to select the relevant node in the DOM tree.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2gmf2oRmCAEY3IALwaSY.png", alt="Link to the head DOM node.", width="800", height="401" %}
-- Properties in bold font are object's own. They are defined directly on the object.
-   Properties in regular font are inherited from the object's prototype.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uyQ5VEFFkA570chS4BOP.png", alt="Own and inherited properties.", width="800", height="419" %}
-   DevTools sorts own properties first to make them easier to spot.
-- Enumerable properties are bright in color. Non-enumerable ones are muted.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0KWrBdSyyBGzNtVfkbk.png", alt="Enumerable and non-enumerable properties.", width="800", height="335" %}
-   Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
-- Methods are marked with *`f <name>()`*.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OnKyVrKCRPlRz9x98sUW.png", alt="Method.", width="800", height="409" %}
-- Accessors are marked with `(...)`. Accessors are computed properties, for example, getters and setters.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pXAgvgCdQD7hSRdmhBhe.png", alt="Accessor", width="800", height="338" %}
-   DevTools doesn't evaluate accessors by default. To evaluate an accessor, click on `(...)`.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cwGW1PDI1FxEltGcCuxv.png", alt="Evaluated accessor.", width="800", height="338" %}
+### Simple properties
 
-## Brows prototype chains {: #prototype-chain }
+Simple properties are pairs of `<name>: <value>`.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZmYdzL6Ba28qSYVNt9wQ.png", alt="Simple properties.", width="800", height="322" %}
 
-native accessors = inherited
+### Objects and arrays
 
-prototype-specific properties are shown in prototypes, not on objects -> easier to diagnose objects
+Collapsible ({% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tFA9uWBcDgv8NNS1FlRm.svg", alt="Arrow right.", width="20", height="20" %}) properties are objects `{}` or arrays `[]`.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/p4tuMj2RjFpieyANV7s1.png", alt="Collapsible properties.", width="800", height="437" %}
+
+For more information on diagnosing objects, see [Console]().
+
+### Properties that correspond to DOM nodes
+
+Properties that correspond to DOM nodes are links. Click on a link to select the relevant node in the DOM tree.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2gmf2oRmCAEY3IALwaSY.png", alt="Link to the head DOM node.", width="800", height="401" %}
+
+### Own and inherited properties
+
+Properties in bold font are object's own. They are defined directly on the object.
+
+Properties in regular font are inherited from the prototype chain. To show them to you, DevTools evaluates relevant accessors on built-in HTML elements.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HTNE3zZQNBOKCvR3opTC.png", alt="Own and inherited properties.", width="800", height="405" %}
+DevTools sorts own properties first to make them easier to spot.
+
+### Enumerable and non-enumerable properties
+
+Enumerable properties are bright in color. Non-enumerable ones are muted.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0KWrBdSyyBGzNtVfkbk.png", alt="Enumerable and non-enumerable properties.", width="800", height="335" %}
+Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
+
+### Methods
+
+Methods are marked with an *`f ()`*.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KKCw924Jst5jW1qmPnHa.png", alt="Method.", width="800", height="402" %}
+
+For more information on debugging methods and functions, see [Scope]().
+
+## Browse prototype chains {: #prototype-chain }
+
+Sometimes, to diagnose DOM object's properties, it is useful to go up its prototype chain.
+
+To do this, expand an object, then its `[[Prototype]]`, then the nested `[[Prototype]]`, and so on.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BBXkuc1QsZau4tLbZ3s2.png", alt="Tracing the size property up to its getter on the prototype chain.", width="800", height="619" %}
+
+In this example, you can trace where the inherited `size` property came from by locating the original own (bold) property on the prototype chain together with the corresponding getter.
+
+Additionally, prototype-specific properties are shown only on prototypes, not on objects. This makes it easier to diagnose objects.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZbBp2o5zGUOzIc46Xsvi.png", alt="Prototype-specific properties.", width="800", height="455" %}
 
 ## Show all properties {: # show-all}
 
