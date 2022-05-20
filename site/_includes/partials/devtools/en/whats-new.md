@@ -13,7 +13,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Display inherited highlight pseudo-elements in the Styles pane](/blog/new-in-devtools-102/#pseudo)
 * [Miscellaneous highlights](/blog/new-in-devtools-102/#misc)
 * [[Experimental] Copy CSS changes](/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
+* [[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
@@ -52,6 +52,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 
 ### Chrome 98 {: #chrome98 }
+
 * [Preview feature: Full-page accessibility tree](/blog/new-in-devtools-98/#a11y-tree)
 * [More precise changes in the Changes tab](/blog/new-in-devtools-98/#changes)
 * [Set longer timeout for user flow recording](/blog/new-in-devtools-98/#recorder-timeout)
@@ -68,6 +69,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 
 ### Chrome 97 {: #chrome97 }
+
 * [Preview feature: New Recorder panel](/blog/new-in-devtools-97/#recorder)
 * [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/blog/new-in-devtools-97/#code-completion)
