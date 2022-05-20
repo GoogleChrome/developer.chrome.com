@@ -18,16 +18,16 @@ Posts support markdown syntax with some additional features and shortcodes.
 
 ## Metadata
 
-Each `index.md` file starts with YAML Front Matter. See
+Each `index.md` file starts with YAML front matter. See
 `site/en/articles/_example/` for documentation of all supported metadata.
 
 Articles and blog posts share the same template and are identical other than location at the moment.
 
 ### Hero images
 
-Hero images should be at least 1920 x 960. Use jpg unless you have a specific
-need for png or svg. Our image CDN will handle compressing and converting the
-image to newer formats such as webp so you don't have to do that in advance.
+Hero images should be at least 1920 x 960. Use JPG unless you have a specific
+need for PNG or SVG. Our image CDN will handle compressing and converting the
+image to newer formats such as WebP so you don't have to do that in advance.
 
 Follow the [add media guide](/docs/handbook/how-to/add-media/) to upload your
 image to our CDN. Once you've uploaded the image, copy the path out of the

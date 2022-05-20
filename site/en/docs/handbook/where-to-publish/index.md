@@ -33,10 +33,10 @@ Content placed in [articles](/articles/) should be considered _evergreen_. We mi
 
 ## Example
 
-On launching a new API as an Origin Trial. Create:
+On launching a new API as an origin trial. Create:
 
 - Reference documentation under `/docs`.
-- A short blog post announcing the Origin Trial, and linking to the documentation.
+- A short blog post announcing the origin trial, and linking to the documentation.
 - Optionally, a tutorial under `/articles` showing how to use the new API to build something, or solve a common use case.
 
 If there are then significant changes to the API. Update the documentation, and the article if needed, then post a new blog post explaining the changes. 
