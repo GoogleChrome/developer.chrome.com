@@ -144,6 +144,15 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
 In short, no, you cannot opt-out of an origin trial for specific regions.
+Origin trials are active on pages which
+[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
+included via HTTP headers (server-side) or HTML meta tags
+(client-side). 
+
+If you can determine the user's location, then you could write code which
+opts to include the origin trial token based on that location information.
+For example, you could attempt to use IP addresses to determine a user's
+location. IP addresses can be spoofed, so this is not a guaranteed solution.
 
 However, a geographic-specific origin can set a
 [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
