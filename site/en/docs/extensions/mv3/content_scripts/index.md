@@ -321,7 +321,7 @@ registration.
       <td>array of string</td>
       <td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this
         glob. Intended to emulate the <a
-          href="https://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code></a>
+          href="https://wiki.greasespot.net/Metadata_Block#.40exclude"><code>@exclude</code></a>
         Greasemonkey keyword.</td>
     </tr>
   </tbody>
