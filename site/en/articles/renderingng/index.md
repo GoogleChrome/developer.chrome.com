@@ -13,7 +13,8 @@ tags:
   - rendering
 ---
 {% Aside %}
-This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG architecture](/blog/renderingng-architecture/), [key data structures](/blog/renderingng-data-structures/), [VideoNG](/blog/videong/), and [LayoutNG](/blog/layoutng/).
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about the [RenderingNG architecture](/blog/renderingng-architecture/), [key data structures](/blog/renderingng-data-structures/), [VideoNG](/blog/videong/), [LayoutNG](/blog/layoutng/)
+and [BlinkNG](/blog/blinkng/).
 {% endAside %}
 
 I'm Chris Harrelson,
@@ -339,7 +340,7 @@ and using less memory without sacrificing performance. It began in 2014 and will
     </tr>
     <tr>
       <td>2021</td>
-      <td>Ship SVG.</td>
+      <td>Completed shipping the project.</td>
     </tr>
     <tr>
   </tbody>
