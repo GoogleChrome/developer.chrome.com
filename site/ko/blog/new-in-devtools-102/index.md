@@ -59,14 +59,14 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 
 
 <!-- ## Improve security on the Network Preview tab {: #network-preview } -->
-
+## 네트워크 창의 미리보기 탭의 보안 개선 {: #network-preview }
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
-
+DevTools의 새로운 기능 중 하나로, **네트워크** 창의 **미리보기** 탭에 콘텐츠 보안 정책(CSP)이 적용되었습니다.
 <!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-
+예를 들어, 첫 번째 스크린샷을 보면 이 페이지에는 [혼합 콘텐츠](https://web.dev/what-is-mixed-content/)가 포함되어 있습니다. 이 페이지는 보안 HTTPS 연결을 통해 로딩되지만, 스타일시트는 로딩을 위해 보안되지 않은 HTTP 연결을 이용합니다.
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="Improve security on the Network Preview tab", width="800", height="488" %}
+브라우저는 스타일시트의 요청을 기본적으로 제한합니다. 그러나 여러분이 이 페이지를 **네트워크** 창의 **미리보기** 탭을 통해 열었을 때, 이전에는 스타일시트의 요청이 제한되지 않았습니다. (따라서 배경이 붉게 바뀝니다.) 그러나 이제는 여러분이 예상했듯 요청이 받아들여지지 않습니다.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="네트워크 창의 미리 보기 탭 보안 개선", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/95bce20a2490b59a36d5da04c5f81d8c38230a39 #}
 
