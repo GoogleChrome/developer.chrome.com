@@ -15,7 +15,7 @@ tags:
 draft: true
 ---
 
-*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
@@ -28,19 +28,20 @@ draft: true
 <!-- end: translation instructions -->
 
 <!-- ## Preview feature: New Performance insights panel {: #perf } -->
+## 미리보기 기능: 새로운 Performance insights 창 {: #perf }
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->
-
+**Performance insights** 창을 이용하여 여러분의 웹사이트 성능에 대해 실행 가능한, 그리고 유스 케이스에 기반한 인사이트를 발견할 수 있습니다.
 <!-- [Open the panel](/docs/devtools/performance-insights/#open) and start a new recording based on your use case. For example, let’s measure the page load of this [demo page](https://coffee-cart.netlify.app/?ad=1). -->
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="New Performance insights panel", width="800", height="585" %}
+여기를 [클릭](/docs/devtools/performance-insights/#open)하여 창을 열고, 여러분의 유스 케이스을 토대로 녹화를 시작합니다. 한 가지 예시로, 이 [데모 페이지](https://coffee-cart.netlify.app/?ad=1) 로딩을 측정해 보겠습니다.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="새로운 Performance insights 창", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
-
+녹화가 완료되면, 여러분은 **Insight** 창에서 Performance insight 를 볼 수 있습니다. 각각의 인사이트 항목(예시: Render blocking request 및 layout shift)을 클릭하여 페이지 내의 이슈와 잠재적인 수정 사항에 대해 알아보세요.
 <!-- Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.  -->
-
+**Performance insights** [관련 문서](/docs/devtools/performance-insights/) 로 가면 단계별 튜토리얼을 볼 수 있으며, 이와 함께 이 기능에 대한 이해도를 넓힐 수 있을 것입니다.
 <!-- This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements. -->
-
+Performance insights 는 미리보기 기능으로서, 웹 개발자-특히 비성능 전문가-들이 잠재적인 성능 문제를 인식하고 해결하는 데에 도음을 줄 수 있습니다. 우리는 이 기능을 현재 활발하게 개발하고 있으며, 더 많은 개선사항을 위해서 여러분의 [피드백](https://crbug.com/1270700)이 필요합니다.
 Chromium issue: [1270700](https://crbug.com/1270700)
 
 
