@@ -74,7 +74,7 @@ Chromium issue: [833147](https://crbug.com/833147)
 
 
 <!-- ## Improved reloading at breakpoint {: #debugger } -->
-## 브레이크 포인트에서의 재로딩 개선
+## 브레이크 포인트에서의 재로딩 개선 {: #debugger }
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
 디버거는 이제 브레이크 포인트에서 재로딩이 발생할 시, 스크립트 실행을 종료합니다.
 <!-- For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.  -->
