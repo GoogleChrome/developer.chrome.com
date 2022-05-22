@@ -50,7 +50,7 @@ Chromium issue: [1270700](https://crbug.com/1270700)
 <!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
 여러분은 이제 **스타일** 창의 새로운 바로가기를 통해 라이트 테마 및 다크 테마를 좀더 빠르게 에뮬레이팅할 수 있습니다. (CSS 미디어 기능 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query))
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
-이전에는, **렌더링** 탭에서 [테마 에뮬레이팅](/docs/devtools/rendering/emulate-css/) 하는 데 더 많은 단계를 거쳐야 했습니다.
+이전에는, **렌더링** 탭에서 [테마 에뮬레이션](/docs/devtools/rendering/emulate-css/) 을 위해 더 많은 단계를 거쳐야 했습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="라이트 테마 및 다크 테마를 에뮬레이팅하기 위한 새로운 바로가기", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/34c39bcabca71195024f1312ec29eecf464a633d #}
