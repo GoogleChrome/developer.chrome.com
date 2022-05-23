@@ -103,12 +103,12 @@ Chromium issue: [1295750](https://crbug.com/1295750)
 
 
 <!-- ### Commit live expression with Enter {: #live-expression } -->
-
+### 엔터키로 라이브 표현식 행하기 {: #live-expression }
 <!-- Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools.  -->
-
+이번 업데이트에서 여러분이 [라이브 표현식](/blog/new-in-devtools-70/#watch)을 타이핑한 후 실행하기 위해서는 `Enter`를 클릭하면 됩니다. 이전 버전에서는 Enter 키를 치면 새로운 라인이 추가되었으며, 이는 DevTools 의 다른 기능들과 일치하지 않았습니다.
 <!-- To add a new line in the **live expression** editor, use `Shift` + `Enter` instead. -->
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yB7m2052mYzgsRgjIMvs.png", alt="Commit live expression with Enter", width="800", height="541" %}
+**라이브 표현식** 편집기에서 새로운 라인을 추가하기 위해서는 `Shift` + `Enter` 를 사용하세요.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yB7m2052mYzgsRgjIMvs.png", alt="엔터키로 라이브 표현식 실행하기", width="800", height="541" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f6f73b8d9eedbc5b6006e61c3be0d843188eac55 #}
 
