@@ -116,10 +116,12 @@ Chromium issue: [1260744](https://crbug.com/1260744)
 
 
 <!-- ## Cancel user flow recording at the start {: #recorder } -->
-
+## 시작 전에 유저 플로우 녹화 취소하기 {: #recorder }
 <!-- You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording. -->
+이전 버전에서는 녹화를 취소할 방법이 없었으나 이제 유저 플로우 녹화를 시작하기 직전에 취소가 가능해졌습니다. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="Cancel user flow recording at the start", width="800", height="488" %}
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="시작 전에 유저 플로우 녹화 취소하기", width="800", height="488" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
