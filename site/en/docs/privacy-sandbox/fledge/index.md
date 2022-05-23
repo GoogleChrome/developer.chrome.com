@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-05-13
+updated: 2022-05-23
 authors:
   - samdutton
 ---
@@ -146,6 +146,7 @@ In the future, we plan to offer more granular settings to manage FLEDGE and asso
 API callers can't access group membership when users browse in Incognito mode, and membership is
 removed when users clear their site data.
 
+{: #opt-out-site}
 
 ## How can I opt out of FLEDGE? {: #opt-out}
 
