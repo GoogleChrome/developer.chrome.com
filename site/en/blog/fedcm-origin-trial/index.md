@@ -20,9 +20,9 @@ tags:
 Starting Chrome 103, FedCM:
 * Supports desktop environments.
 * Supports per RP settings on desktop.
-* No longer requires privacy policy URL in [the client metadata
-  endpoint](#client-metadata-endpoint) and the client metadata endpoint itself
-  is now optional.
+* The [client metadata endpoint](#client-metadata-endpoint) is
+   now optional.
+   *.  In this endpoint, the privacy policy URL is also optional.
 * No longer supports SVG images as an icon in [the IdP manifest](#manifest-endpoints).
 
 Also added a caveat about using CSP `connect-src`.
@@ -65,8 +65,11 @@ Management API](/docs/privacy-sandbox/fedcm).
 
 ## Support and compatibility {: #compatibility }
   
-FedCM is supported in Google Chrome 101 and above on Android and 103 and above
-on desktop. It's not supported by other browsers yet, but the [WebKit team has
+FedCM is supported in:
+*  **Android**: Google Chrome 101 and above
+*  **Desktop**: Google Chrome 103 and above
+
+FedCM isn't supported by other browsers yet, but the [WebKit team has
 expressed general
 support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
 and interest in working together on the FedCM proposal.
