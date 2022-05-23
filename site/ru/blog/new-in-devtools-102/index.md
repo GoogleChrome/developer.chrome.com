@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: "Новая панель анализа производительности, горячие клавиши для эмуляции светлой и тёмной темы и многое другое."
+description: "Новая вкладка анализа производительности, горячие клавиши для эмуляции светлой и тёмной темы и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ReGAmU4kfP3P9hxZ8uhv.jpg'
 alt: ''
 tags:
@@ -27,24 +27,24 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Preview feature: New Performance insights panel {: #perf } -->
-## Ранний доступ: Новая панель анализа производительности {: #perf }
+## Ранний доступ: Новая вкладка анализа производительности {: #perf }
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->
-Используйте панель **Performance insights** для получения достоверных и с учётом конкретных примеров использования данные о производительности вашего сайта.
+Используйте вкладку **Performance insights**, чтобы получить полезную и основанную на прецедентах информацию о производительности вашего сайта.
 
 <!-- [Open the panel](/docs/devtools/performance-insights/#open) and start a new recording based on your use case. For example, let’s measure the page load of this [demo page](https://coffee-cart.netlify.app/?ad=1). -->
-[Откройте панель](/docs/devtools/performance-insights/#open) и начните новую запись, основанную на вашем сценарии использования. Например, давайте оценим время загрузки этой [демо-страницы](https://coffee-cart.netlify.app/?ad=1).
+[Откройте вкладку](/docs/devtools/performance-insights/#open) и начните новую запись, основанную на вашем сценарии использования. Например, давайте оценим загрузку этой [демо-страницы](https://coffee-cart.netlify.app/?ad=1).
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="Новая панель анализа производительности", width="800", height="585" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="Новая вкладка анализа производительности", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
-После завершения записи вы получите обзор производительности на панели **Insights**. Кликните на любой из пунктов отчёта (например, Render blocking request, Layout shift), чтобы определить проблему и возможные способы её устранения.
+После завершения записи вы получите обзор производительности на панели **Insights**. Кликните на каждый пункт отчёта (например, Render blocking request, Layout shift), чтобы понять проблему и возможные способы её устранения.
 
 <!-- Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.  -->
-Читайте [документацию](/docs/devtools/performance-insights/) о панели **Performance insights** чтобы узнать больше в пошаговом руководстве.
+Читайте [документацию](/docs/devtools/performance-insights/) панели **Performance insights**, чтобы узнать больше в пошаговом руководстве.
 
 <!-- This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements. -->
-Это ранний доступ к функции, призванной помочь веб-разработчикам (особенно не специалистам в вопросе производительности) выявить и устранить потенциальные проблемы с производительностью. Наша команда все еще активно работает над этой новой функцией. Мы ждем ваши [отзывы](https://crbug.com/1270700) для дальнейших улучшений.
+Это ранний доступ к функции, призванной помочь веб-разработчикам (особенно не специалистам в вопросе производительности) выявить и устранить потенциальные проблемы с производительностью. Наша команда все еще активно работает над этой функцией. Мы ждем ваши [отзывы](https://crbug.com/1270700) для дальнейших улучшений.
 
 Задача в трекере Chromium: [1270700](https://crbug.com/1270700)
 
@@ -53,10 +53,10 @@ tags:
 ## Новые горячие клавиши для эмуляции светлой и тёмной темы {: #emulation }
 
 <!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-Теперь вы можете быстро переключать светлую и тёмную темы (медиафункция [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query) в CSS) при помощи горячих клавиш в панели **Стили** (Styles).
+Теперь вы можете быстро переключать светлую и тёмную темы (CSS медиафункция [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) при помощи горячих клавиш в панели **Стили** (Styles).
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
-До этого требовалось больше действий для включения [эмуляции темы](/docs/devtools/rendering/emulate-css/) во вкладке **Отрисовка** (Rendering).
+До этого требовалось больше действий для [эмуляции темы](/docs/devtools/rendering/emulate-css/) во вкладке **Отрисовка** (Rendering).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="Новые горячие клавиши для эмуляции светлой и тёмной темы", width="800", height="488" %}
 
@@ -69,15 +69,15 @@ tags:
 ## Улучшение безопасности на вкладке Предварительный просмотр (Preview) панели Сеть (Network) {: #network-preview }
 
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
-DevTools теперь применяет политику безопасности содержимого (CSP) на вкладке **Предварительный просмотр** (Preview) на панели **Сеть** (Network).
+DevTools теперь применяет политику безопасности содержимого (CSP) на вкладке **Предварительный просмотр** (Preview) внутри вкладки **Сеть** (Network).
 
 <!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
 Например, на первом скриншоте показана страница, содержащая [смешанный контент](https://web.dev/what-is-mixed-content/). Страница загружается через безопасное соединение HTTPS, но таблица стилей загружается через небезопасное соединение HTTP.
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
-Браузер по умолчанию блокирует запрос таблицы стилей. Однако, когда вы открывали страницу через вкладку **Предварительный просмотр** (Preview) в панели **Сеть** (Network), таблица стилей ранее не блокировалась (поэтому фон становился красным). Теперь запрос блокируется, как и следовало ожидать (второй скриншот).
+Браузер по умолчанию блокирует запрос таблицы стилей. Однако, когда вы открывали страницу через вкладку **Предварительный просмотр** (Preview) во вкладке **Сеть** (Network), таблица стилей ранее не блокировалась (поэтому фон становился красным). Теперь запрос блокируется, как и следовало ожидать (второй скриншот).
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="Улучшение безопасности на вкладке Предварительный просмотр панели Сеть", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="Улучшение безопасности на вкладке Предварительный просмотр во вкладке Сеть", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/95bce20a2490b59a36d5da04c5f81d8c38230a39 #}
 
@@ -88,10 +88,10 @@ DevTools теперь применяет политику безопасност
 ## Улучшена перезагрузка в точке останова {: #debugger }
 
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
-Отладчик теперь завершает выполнение сценария при перезагрузке по точке останова.
+Отладчик теперь завершает выполнение сценария при перезагрузке на точке останова.
 
 <!-- For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.  -->
-Например, ранее скрипт попадал в бесконечный цикл при установке и перезагрузке в точке останова `ReactDOM` в этом [демо-приложении](https://react-stuck.glitch.me/). Панель **Источники** (Sources) ломалась из-за бесконечного цикла.
+Например, ранее скрипт попадал в бесконечный цикл при установке и перезагрузке в точке останова `ReactDOM` в этом [демо-приложении](https://react-stuck.glitch.me/). Вкладка **Источники** (Sources) ломалась из-за бесконечного цикла.
 
 <!-- Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox. -->
 Продолжение выполнения JavaScript создает много проблем для разработчиков и может сломать рендер. Теперь отладчик отрабатывает в этой ситуации как в других браузерах, например, Firefox.
@@ -120,15 +120,15 @@ DevTools теперь применяет политику безопасност
 
 
 <!-- ### Commit live expression with Enter {: #live-expression } -->
-### Выполните живое выражение с помощью Enter {: #live-expression }
+### Выполнение живых выражений с помощью Enter {: #live-expression }
 
 <!-- Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools.  -->
-После окончания набора [живого выражения](/blog/new-in-devtools-70/#watch) можете нажать `Enter` чтобы выполнить его. Раньше нажатие на Enter переводило курсор на новую строку. Это противоречило поведению в других инструментах DevTools.
+После того, как вы закончите набирать [живое выражение](/blog/new-in-devtools-70/#watch), вы можете нажать `Enter`, чтобы выполнить его. Раньше нажатие на Enter приводило к добавлению новых строк. Это противоречило поведению в других инструментах DevTools.
 
 <!-- To add a new line in the **live expression** editor, use `Shift` + `Enter` instead. -->
-Чтобы перейти на новую строку в редакторе **живых выражений** используйте `Shift` + `Enter`.
+Чтобы перейти на новую строку в редакторе **живых выражений** используйте вместо этого `Shift` + `Enter`.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yB7m2052mYzgsRgjIMvs.png", alt="Выполните живое выражение с помощью Enter", width="800", height="541" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yB7m2052mYzgsRgjIMvs.png", alt="Выполнение живых выражений с помощью Enter", width="800", height="541" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f6f73b8d9eedbc5b6006e61c3be0d843188eac55 #}
 
@@ -150,14 +150,14 @@ DevTools теперь применяет политику безопасност
 ## Отображение наследуемых псевдоэлементов выделения в панели Стили (Styles) {: #pseudo }
 
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
-Просматривайте наследуемые псевдоэлементы выделения (`::selection`, `::spelling-error`, `::grammar-error` и `::highlight`) в панели **Стили** (Styles). Раньше эти правила были не видны. 
+Просматривайте наследуемые псевдоэлементы выделения (`::selection`, `::spelling-error`, `::grammar-error` и `::highlight`) в панели **Стили** (Styles). Раньше эти правила не отображались. 
 
 <!-- As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules. -->
 Как указано в [спецификации](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), когда несколько стилей конфликтуют, каскад определяет победивший стиль. Эта новая функция помогает понять наследование и приоритет правил.
 
 {% Aside %}
 <!-- At the moment, you need to run Chrome with the `--enable-blink-features=HighlightInheritance` flag to enable this feature. -->
-В данный момент вам нужно запустить Chrome в флагом `--enable-blink-features=HighlightInheritance` чтобы активировать эту функцию
+В данный момент вам нужно запустить Chrome с флагом `--enable-blink-features=HighlightInheritance`, чтобы активировать эту функцию
 {% endAside %}
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD8vohg49HvBPW53GV2Q.png", alt="Отображение наследуемых псевдоэлементов выделения в панели Стили", width="800", height="529" %}
@@ -177,9 +177,9 @@ DevTools теперь применяет политику безопасност
 - The **Styles** pane now properly shows the overridden `@support` rules as strikethrough. Previously, the rules weren’t strikethrough. ([1298025](https://crbug.com/1298025))
 - Fixed the CSS formatting logic in the **Sources** panel that caused multiple blank lines when editing CSS. ([1309588](https://crbug.com/1309588))
 - Cap the **Expand recursively** option of an object in the **Console** to maximum 100 so it does not go on forever for circular objects. ([1272450](https://crbug.com/1272450)) -->
-- На панели **Свойства** (Properties) теперь по умолчанию отображаются свойства-аксессоры вместе со значениями. Ранее оно по ошибке были скрыты. ([1309087](https://crbug.com/1309087))
+- На панели **Свойства** (Properties) теперь по умолчанию отображаются свойства-аксессоры вместе со значениями. Ранее это было скрыто по ошибке. ([1309087](https://crbug.com/1309087))
 - В панели **Стили** (Styles) переопределенные правила `@support` теперь правильно отображаются как зачеркнутые. Ранее правила не зачёркивались. ([1298025](https://crbug.com/1298025))
--  Исправлена логика форматирования CSS в панели **Источники** (Sources), которая приводила к появлению множества пустых строк при редактировании CSS. ([1309588](https://crbug.com/1309588))
+-  Исправлена логика форматирования CSS во вкладке **Источники** (Sources), которая приводила к появлению множества пустых строк при редактировании CSS. ([1309588](https://crbug.com/1309588))
 - Добавлено максимальное ограничние 100 для параметра **Расширить рекурсивно** объекта в **Консоли**, чтобы он не продолжался бесконечно для циклических объектов. ([1272450](https://crbug.com/1272450))
 
 
@@ -194,17 +194,17 @@ DevTools теперь применяет политику безопасност
 
 {% Aside %}
 <!-- To enable the experiment, check **Sync CSS changes in the Styles pane** under **Settings** > **Experiments**. -->
-Чтобы включить этот эксперимент поставьте галочку напротив **Sync CSS changes in the Styles pane** по пути **Настройки** (Settings) > **Эксперименты** (Experiments).
+Чтобы включить этот эксперимент поставьте галочку напротив **Sync CSS changes in the Styles pane** в **Настройки** (Settings) > **Эксперименты** (Experiments).
 {% endAside %}
 
 <!-- With this experiment, the **Styles** pane highlights your CSS changes in green. You can hover over the changed rules and click on the new copy button next to it to copy it. -->
-В этом эксперименте добавлена зелёная подсветка для внесённых вами изменений в CSS. Вы можете навести курсор на изменённое свойство и нажать на новую кнопку копирования чтобы скопировать его.
+С этим экспериментом панель **Стили** (Styles) подсвечивает зелёным ваши CSS изменения. Вы можете навести курсор на изменённое свойство и нажать на новую кнопку копирования, чтобы скопировать его.
 
 <!-- Apart from that, you can copy all CSS changes across declarations by right-clicking on any rule, and selecting **Copy all CSS changes**. -->
 Кроме того, вы можете скопировать все изменения CSS, щелкнув правой кнопкой мыши на любом правиле и выбрав **Копировать все изменения кода CSS**.
 
 <!-- A new **Copy** button is added to the [Changes](/docs/devtools/changes/) tab as well to help you keep track and copy your CSS changes with ease! -->
-Новая кнопка **Copy** также добавлена на вкладку [Изменения](/docs/devtools/changes/) чтобы помочь вамлегко отслеживать и копировать изменения в CSS!
+Новая кнопка **Copy** также добавлена на вкладку [Изменения](/docs/devtools/changes/), чтобы помочь вам легко отслеживать и копировать изменения в CSS!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7PYMKJNBguswcas6jbpu.png", alt="Копирование изменений в CSS", width="800", height="488", class="screenshot" %}
 
@@ -220,14 +220,14 @@ DevTools теперь применяет политику безопасност
 
 {% Aside %}
 <!-- To enable the experiment, check **Enable color picking outside the browser window** under **Settings** > **Experiments**. -->
-Чтобы включить этот эксперимент поставьте галочку напротив **Enable color picking outside the browser window** по пути **Настройки** (Settings) > **Эксперименты** (Experiments).
+Чтобы включить этот эксперимент поставьте галочку напротив **Enable color picking outside the browser window** в **Настройки** (Settings) > **Эксперименты** (Experiments).
 {% endAside %}
 
 <!-- Enable this experiment to pick a color outside of the browser with the color picker. Previously, you could only pick a color within the browser. -->
-Запустили эксперимент, позволяющий выбирать цвет за пределами окна браузера. Раньше вы могли захватывать цвет только в пределах окна браузера.
+Запустите эксперимент, чтобы выбирать цвет за пределами окна браузера. Раньше вы могли захватывать цвет только в пределах окна браузера.
 
 <!-- In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere.  -->
-В панели **Стили** (Styles) кликните на любое превью цвета чтобы открыть палитру цветов. Используйте пипетку, чтобы выбрать цвет из любого места.
+В панели **Стили** (Styles) кликните на любое превью цвета, чтобы открыть палитру цветов. Используйте пипетку, чтобы выбрать цвет из любого места.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="Выбор цвета вне браузера", width="800", height="450" %}
 
