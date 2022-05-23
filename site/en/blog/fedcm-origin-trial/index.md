@@ -144,8 +144,8 @@ Start with:
 Set a [browser flag](/blog/browser-flags/) to develop locally, here is
 how:
 
-1.  In the Chrome address bar, type `chrome://version`. Confirm the browser
-    version is newer than 101.
+1.  Open Google Chrome. In the address bar, enter `chrome://version`. Confirm
+    the browser version is 101 or higher.
 2.  Go to `chrome://flags#fedcm` to enable FedCM.
 3.  Restart your browser.
 
