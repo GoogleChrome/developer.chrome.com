@@ -5,6 +5,7 @@
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
+    - url: /docs/web-platform/navigation-api
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/webgpu
 
