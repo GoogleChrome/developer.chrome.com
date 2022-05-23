@@ -76,7 +76,7 @@ Chromium issue: [833147](https://crbug.com/833147)
 <!-- ## Improved reloading at breakpoint {: #debugger } -->
 ## 브레이크 포인트에서의 재로딩 개선 {: #debugger }
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
-디버거는 이제 브레이크 포인트에서 재로딩이 발생할 시, 스크립트 실행을 종료합니다.
+이제 브레이크 포인트에서 재로딩이 발생할 시, 스크립트 실행이 디버거에 의해 종료됩니다.
 <!-- For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.  -->
 예를 들어, [리액트 데모 페이지](https://react-stuck.glitch.me/)내부의 `ReactDOM` 브레이크포인트가 설정되고 재로딩될 때 이전에는 스크립트가 무한루프에 진입했습니다.
 <!-- Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox. -->
@@ -89,12 +89,13 @@ Chromium issues: [1014415](https://crbug.com/1014415), [1004038](https://crbug.c
 
 
 <!-- ## Console updates  {: #console } -->
-
+## 콘솔 업데이트  {: #console }
 <!-- ### Handle script execution errors in the Console {: #errors } -->
-
+### 콘솔에서의 스크립트 실행 오류 다루기 {: #errors }
 <!-- Errors during script evaluation in the Console now generate proper error events that trigger the `window.onerror` handler and are dispatched as `"error"` events on the window object. -->
+콘솔에서의 스크립트 평가 중 발생한 오류는 `window.onerror` 핸들러를 실행시키는 데 적절한 오류 이벤트를 생성하며, 이 이벤트는 윈도우 객체의 `"error"` 이벤트로 전달됩니다. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gBtY4zD39SPizfcCGJJW.png", alt="Handle script execution errors in the Console", width="800", height="487" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gBtY4zD39SPizfcCGJJW.png", alt="콘솔에서의 스크립트 실행 오류 다루기", width="800", height="487" %}
 
 {# https://chromium.googlesource.com/v8/v8/+/56cfdd68c731c53d016326b890b56b5c30098998 #}
 
