@@ -22,7 +22,7 @@ Starting Chrome 103, FedCM:
 * Supports per RP settings on desktop.
 * The [client metadata endpoint](#client-metadata-endpoint) is
    now optional.
-   *.  In this endpoint, the privacy policy URL is also optional.
+   *  In this endpoint, the privacy policy URL is also optional.
 * No longer supports SVG images as an icon in [the IdP manifest](#manifest-endpoints).
 
 Also added a caveat about using CSP `connect-src`.
