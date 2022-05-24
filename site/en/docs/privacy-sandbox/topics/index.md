@@ -429,7 +429,7 @@ is still under consideration.
 
 #### How can I provide feedback or input on the classifier model?
 
-There are [several channels](https://developer.chrome.com/docs/privacy-sandbox/feedback/) for
+There are [several channels](/docs/privacy-sandbox/feedback/) for
 providing feedback on the Topics proposal. For feedback on the classifier model, we recommend
 [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to
 an existing issue. For example:
