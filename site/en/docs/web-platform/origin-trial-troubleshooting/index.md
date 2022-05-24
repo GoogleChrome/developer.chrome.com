@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/doc-post.njk'
 title: Troubleshooting Chrome's origin trials
 subhead: Origin trials are a way to test a new or experimental web platform feature. This guide explains how to troubleshoot common problems with trial tokens in meta tags, headers, and scripts. You'll also learn about debugging support in Chrome DevTools.
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-04-20
+updated: 2022-05-13
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -15,7 +15,8 @@ tags:
 {% Aside %}
 This guide assumes a working knowledge of origin trials in Chrome.
 
-* [Getting started with Chrome's origin trials](/blog/origin-trials/) explains the basics.
+
+* [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) explains the basics.
 * [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#faq) 
 provides a detailed FAQ. 
 
@@ -64,6 +65,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <input class="w-checkbox" type="checkbox" id="check-token-third">
   <label for="check-token-third" class="w-ml--l"><a href="#token-third">Third-party script uses a 
     third-party token</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-third-first">
+  <label for="check-token-third-first" class="w-ml--l"><a href="#token-third-first">Third-party token is not used in a first-party context</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
@@ -333,6 +337,18 @@ function addTrialToken(tokenContents) {
 }
 ```
 
+### Third-party token is not used in a first-party context {: #token-third-first}
+
+Don't use third-party tokens in a first-party context. If you use a token with third-party 
+matching enabled, it will not work in first-party contexts. For example, if you embed an 
+iframe which includes code that accesses a trial feature, provide a 'normal' token with the 
+iframe document: a token registered with third-party matching _not_ enabled.
+
+{% Aside %}
+If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
+for the same origin trial or for different trials.
+{% endAside %}
+
 
 ### Origin trial feature access is supported for the method used to provide a trial token {: #token-method}
 
@@ -509,13 +525,11 @@ parent document.
 
 ## Find out more
 
--  [Getting started with Chrome's origin trials](/blog/origin-trials/)
--  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/)
+-  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
----
 
-Photo by [Bill Oxford](https://unsplash.com/@bill_oxford) on [Unsplash](https://unsplash.com).

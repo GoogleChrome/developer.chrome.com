@@ -531,12 +531,6 @@ calculation for their visitors with the following
 Permissions-Policy: browsing-topics=()
 ```
 
-{% Aside %}
-
-The existing Permissions-Policy `interest-cohort=()` from FLOC will also forbid topic calculation.
-
-{% endAside %}
-
 ### User opt-out
 
 The Topics API explainer [proposes](https://github.com/jkarlin/topics#:~:text=empty) that the list

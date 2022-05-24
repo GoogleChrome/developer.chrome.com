@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/doc-post.njk'
 title: Chromeのオリジントライアル入門
 subhead: オリジントライアルは、ウェブプラットフォームの新しい機能や実験的な機能が一般公開されるより先に、使いやすさ、実用性、そして有効性についてテストし、ウェブ標準コミュニティにフィードバックできる方法です。
 authors:

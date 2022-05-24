@@ -9,7 +9,10 @@
 {% set sliced = (colld.length / 3) | round(0, "floor") %}
 {% set list1 = colld | slice(sliced) | random %}
 {% set list2 = [ colln[0], colln[1] ] %}
-{% set list = list1.concat(list2) %}
+
+{% if list1.length %}
+  {% set list = list1.concat(list2) %}
+{% endif %}
 
 {% for item in list %}
 - [{{ item.data.title }}]({{ item.url | url }})

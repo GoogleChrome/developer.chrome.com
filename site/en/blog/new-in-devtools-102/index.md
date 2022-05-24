@@ -48,7 +48,7 @@ Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emul
 Chromium issue: [1314299](https://crbug.com/1314299)
 
 
-## Improve security on the Network Preview tab {: #network-preview }
+## Improved security on the Network Preview tab {: #network-preview }
 
 DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel.
 

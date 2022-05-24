@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/doc-post.njk'
 title: Getting started with Chrome's origin trials
 subhead: Origin trials are a way to test a new or experimental web platform feature, and give feedback to the web standards community on the feature's usability, practicality, and effectiveness, before the feature is made available to all users.
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-04-19
+updated: 2022-05-13
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
-alt: Pipette with purple liquid
+alt: Pipette with purple liquid.
 tags:
   - origin-trials
 ---
@@ -27,7 +27,7 @@ Origin trials are public and open to all developers. They are limited in duratio
 usage. Participation is a self-managed process with limited documentation and support.
 Participants should be willing and able to work relatively independently using the
 documentation available, which, at this stage, will likely be limited to API
-specifications and explainers, though [web.dev](https://web.dev) tries to provide guidance whenever
+specifications and explainers, [though we try to provide guidance](/docs/web-platform/) whenever
 possible.
 
 If you register for a trial, the Chrome team will periodically ask you for specific
@@ -42,7 +42,7 @@ registered [origin](https://web.dev/same-site-same-origin/#origin). Third-party 
 it possible for providers of embedded content to try a new feature across multiple sites
 without requiring a token for every origin.
 
-Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/)
+Find out more: [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 
 
 ## Deprecation trials
@@ -58,7 +58,7 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
 
 ## Take part in an origin trial
 
-1. Choose an origin trial from the [list of active trials](https://developers.chrome.com/origintrials/#/trials/active).
+1. Choose an origin trial from the [list of active trials](/origintrials/#/trials/active).
 1. Request a token by clicking the **Register** button and filling out the form.
 1. Provide the token on every web page for which you want the trial feature to be enabled:
    -  As a meta tag in the &lt;head&gt;:
@@ -74,6 +74,17 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
    channel.
 1. When your token expires, you will get an email with a renewal link.
    To do so, you are again asked to submit feedback.
+
+{: #multiple}
+
+You can register for the same origin trial multiple times, for different origins, and include 
+multiple tokens in the same page. This can be useful if you need to provide tokens 
+that are valid for resources served from different origins, such as code included on multiple 
+sites that you own.
+
+The origin trials framework looks for the first valid token and then
+ignores all other tokens. You can validate this
+[with Chrome DevTools](/docs/web-platform/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
 
 ### Provide a token programmatically {: #programmatic}
 
@@ -124,16 +135,12 @@ View information about the origin trials available to a page from the **Applicat
 
 ## Find out more
 
--  [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
+-  [Troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting)
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
--  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 -  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
 
----
-
-Photo by [Louis Reed](https://unsplash.com/@_louisreed) on
-[Unsplash](https://unsplash.com/photos/pwcKF7L4-no).

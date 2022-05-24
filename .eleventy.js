@@ -1,4 +1,5 @@
 const yaml = require('js-yaml');
+const path = require('path');
 const {filterOutDrafts} = require('./site/_utils/drafts');
 
 // Filters
@@ -87,20 +88,25 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // Add collections
-  locales.forEach(locale =>
-    eleventyConfig.addCollection(`blog-${locale}`, collections => {
-      let blogCollection = collections
-        .getFilteredByGlob(`./site/${locale}/blog/*/*.md`)
+  function addCollectionByDirectory(config, locale, dir) {
+    config.addCollection(`${dir}-${locale}`, collections => {
+      let collection = collections
+        .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
         .filter(filterOutDrafts)
         .reverse();
-      // If we're running inside of Percy then just show the first six blog posts.
+      // If we're running inside of Percy then just show the first six posts.
       if (process.env.PERCY_BRANCH) {
-        blogCollection = blogCollection.slice(blogCollection.length - 6);
+        collection = collection.slice(collection.length - 6);
       }
-      return blogCollection;
+      return collection;
     })
-  );
+  }
+
+  // Add collections
+  locales.forEach(locale => {
+    addCollectionByDirectory(eleventyConfig, locale, 'blog');
+    addCollectionByDirectory(eleventyConfig, locale, 'articles');
+  });
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);

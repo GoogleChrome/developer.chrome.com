@@ -6,6 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
+updated: 2022-05-23
 authors:
   - agektmr
 ---
@@ -18,8 +19,8 @@ Credential Management API (FedCM).
 *  The [FedCM proposal](https://github.com/fedidcg/FedCM) has entered [public
    discussion](https://github.com/fedidcg/FedCM/issues).
 *  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 105
-   on Android. Chrome on desktop support is coming soon. Other browsers don't
-   support it yet.
+   on Android. Chrome on desktop support starts in Chrome 103. Other browsers
+   don't support it yet.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides
    implementation timings for FedCM and other Privacy Sandbox proposals.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
@@ -150,9 +151,7 @@ of third-party cookie phase-out. Users can enable or disable FedCM in
 [Chrome's user sttings](#user-settings).
 
 FedCM is designed to be protocol-agnostic and offers the following
-authentication-related functionalities  to Chrome on Android. Initial
-testing is limited to Chrome on Android to assess feature stability, but we
-expect to expand to Chrome on desktop soon.
+authentication-related functionalities.
 
 * [Use an identity provider to sign-in to a relying party](#sign-in)
 * [Sign-out from a relying party](#sign-out)
@@ -214,12 +213,21 @@ time, FedCM clears the sign-in state on the RP from the browser.
 
 ### Setting to enable or disable FedCM {: #user-settings}
 
-Users can enable or disable FedCM in Chrome settings. Go to **Settings** >
-**Site settings** > **Third-party sign-in**, then change the toggle.
+Users can enable or disable FedCM in settings on Chrome on Android. Go to
+**Settings** > **Site settings** > **Third-party sign-in**, then change the
+toggle.
 
 {% Img
-   src="image/VbsHyyQopiec0718rMq2kTE1hke2/ThWp3UvxdbU6TzwxlC1j.jpg", alt="Enable FedCM in Chrome Settings by toggling on Third-party sign-in",
+   src="image/VbsHyyQopiec0718rMq2kTE1hke2/ThWp3UvxdbU6TzwxlC1j.jpg", alt="Enable FedCM in Chrome Settings on mobile by toggling on Third-party sign-in",
    width="550", height="257", class="screenshot"
+%}
+
+They can do the same for Chrome on desktop by going to
+`chrome://settings/content/federatedIdentityApi`.
+
+{% Img
+   src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/8zR9MNWyt0c6M5GjWpfw.png", alt="Enable FedCM in Chrome Settings on desktop by toggling on Third-party sign-in",
+   width="800", height="678", class="screenshot"
 %}
 
 ## How can IdPs support FedCM? {: #support-fedcm}

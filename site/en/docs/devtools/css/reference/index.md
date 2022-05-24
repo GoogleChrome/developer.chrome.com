@@ -374,6 +374,20 @@ To add a class to an element:
 
 **Figure 14**. The **Element Classes** pane
 
+### Emulate light and dark theme preferences and enable automatic dark mode {: #emulate-light-dark-themes }
+
+To toggle [automatic dark mode][34] or emulate the user's preference of [light or dark themes][35]:
+
+1. On the **Elements** > **Styles** pane, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CNwUGOgogDCqUaQGt9ZS.svg", alt="Toggle common rendering emulations.", width="20", height="20" %}**Toggle common rendering emulations**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2G2TqgXtPcUnSgRN4saG.png", alt="Toggle common rendering emulations.", width="800", height="376" %}
+1. Select one of the following from the drop-down list:
+
+   - **prefers-color-scheme: light**. Indicates that the user prefers the light theme.
+   - **prefers-color-scheme: dark**. Indicates that the user prefers the dark theme.
+   - **Automatic dark mode**. Displays your page in dark mode even if you didn't implement it. Additionally, sets `prefers-color-scheme` to `dark` automatically.
+
+This drop-down is a shortcut for [Emulate CSS media feature `prefers-color-scheme`](/docs/devtools/rendering/apply-effects/#enable-automatic-dark-mode]) and [Enable automatic dark mode](/docs/devtools/rendering/apply-effects/#enable-automatic-dark-mode) options of the **Rendering** tab.
+
 ### Toggle a class {: #toggle-class }
 
 To enable or disable a class on an element:
@@ -582,3 +596,5 @@ To open the **Shadow Editor**:
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
 [33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+[34]: /blog/auto-dark-theme/
+[35]: https://web.dev/prefers-color-scheme/
