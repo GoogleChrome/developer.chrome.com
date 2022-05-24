@@ -206,7 +206,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 {% endAside %}
 
 <!-- With this experiment, the **Styles** pane highlights your CSS changes in green. You can hover over the changed rules and click on the new copy button next to it to copy it. -->
-この実験的機能を使用すると、**Styles** ペインはあなたの CSS の変更を緑色にハイライトします。コピーするには変更されたルール上にマウスを重ね、その隣りにある新しいコピーボタンをクリックします。
+この実験的機能を使用すると、**Styles** ペインはあなたの CSS の変更を緑色にハイライトします。コピーするには変更されたルール上にマウスを重ね、その隣にある新しいコピーボタンをクリックします。
 
 <!-- Apart from that, you can copy all CSS changes across declarations by right-clicking on any rule, and selecting **Copy all CSS changes**. -->
 それ以外にも、任意のルールを右クリックして、**Copy all CSS changes** を選択すると、宣言全体に渡る CSS の変更をすべてコピーできます。
