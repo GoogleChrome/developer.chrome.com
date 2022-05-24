@@ -421,9 +421,21 @@ model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website
 
 Analyzing additional information (such as full URLs or page contents) might
 allow for more relevant ads, but might also reduce privacy.
+
 The classifier model for mapping hostnames to topics would be publicly available, and the explainer
-proposes that it should be possible to view the topics for a site via browser developer tools. The
-mapping model would be updated periodically; the frequency of this is still under consideration.
+proposes that it should be possible to view the topics for a site via browser developer tools.  The
+model is expected to evolve and improve over time and be updated periodically; the frequency of this
+is still under consideration.
+
+#### How can I provide feedback or input on the classifier model?
+
+There are [several channels](https://developer.chrome.com/docs/privacy-sandbox/feedback/) for
+providing feedback on the Topics proposal. For feedback on the classifier model, we recommend
+[submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to
+an existing issue. For example:
+
+* [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
+* [What if a site disagrees to the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/2)
 
 ### How are the user's top five topics selected?
 
