@@ -192,6 +192,17 @@ Use `self` and any domains you would like to allow access to the API as paramete
 
 For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
 
+### Can Topics API be used with on websites with `prebid.js`?
+
+Yes. Topics are available to API callers when the `document.browsingTopics()` call
+to access topics is made from a document with the
+[same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin)
+as the call to observe topics. 
+
+For example, a call to observe topics could be made from an iframe whose `src` is
+same-origin as the source of the Topics API call to access topics. You can try out an
+example at [topics-demo.glitch.me](https://topics-demo.glitch.me).
+
 ## FLEDGE
 
 ### How can I ask a question about this feature?

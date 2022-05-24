@@ -94,7 +94,7 @@ Chromium 议题: [1073064](https://crbug.com/1073064)
 
 
 <!-- ## [Experimental] Syncing DevTools settings across devices {: #sync } -->
-## [实验] 跨设备同步 DevTools 设置 {: #sync }
+## [实验阶段] 跨设备同步 DevTools 设置 {: #sync }
 
 <!-- Your DevTools settings are now synced across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**.  -->
 现在当您打开 Chrome 个人设置同步之后，您的 DevTools 设置会默认在多个设备上同步。您可以在**设置** > **同步** > **启用设置同步**中更改 DevTools 的同步设置。

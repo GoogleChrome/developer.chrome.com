@@ -6,10 +6,28 @@ authors:
 description: >
   A Web Platform API that allows users to login to websites with their federated accounts in a privacy preserving manner.
 date: 2022-04-25
+updated: 2022-05-23
 tags:
   - privacy
   - security
+  - origin-trials
 ---
+
+{% Aside %}
+
+**Update, May 2022**
+
+Starting Chrome 103, FedCM:
+* Supports desktop environments.
+* Supports per RP settings on desktop.
+* The [client metadata endpoint](#client-metadata-endpoint) is
+   now optional.
+   *  In this endpoint, the privacy policy URL is also optional.
+* No longer supports SVG images as an icon in [the IdP manifest](#manifest-endpoints).
+
+Also added a caveat about using CSP `connect-src`.
+
+{% endAside %}
 
 Over the last decade, identity federation has played a central role in
 raising the bar for authentication on the web, in terms of ease-of-use (such
@@ -47,15 +65,14 @@ Management API](/docs/privacy-sandbox/fedcm).
 
 ## Support and compatibility {: #compatibility }
   
-At this time, FedCM is supported in Google Chrome 101 and above on Android.
-It's not supported by other browsers yet, but the [WebKit team has expressed
-general support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
-and interest in working together on the FedCM proposal.
+FedCM is supported in:
+*  **Android**: Google Chrome 101 and above
+*  **Desktop**: Google Chrome 103 and above
 
-{% Aside %}
-Chrome on desktop is planning to support FedCM within this origin trial
-period.
-{% endAside %}
+FedCM isn't supported by other browsers yet, but the [WebKit team has
+expressed general
+support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
+and interest in working together on the FedCM proposal.
 
 ## Who should use FedCM? {: #who-uses-fedcm }
 
@@ -113,12 +130,9 @@ consider using First-Party Sets.
 
 ## How can identity providers test FedCM?
 
-You need a secure context (HTTPS or localhost) on Chrome on Android to use
-the Federated Credential Management API. Initial testing is limited to
-Chrome on Android to assess feature stability, but we expect to expand to
-Chrome on desktop soon.
-
-FedCM is currently disabled by default on Chrome. Start with:
+You need a secure context (HTTPS or localhost) on Chrome to use the Federated
+Credential Management API. FedCM is currently disabled by default on Chrome.
+Start with:
 
 1. Local development and tests by flipping a flag at
    [`chrome://flags`](#set-flag).
@@ -127,17 +141,13 @@ FedCM is currently disabled by default on Chrome. Start with:
 
 ### Develop and test locally with a flag {: #set-flag}
 
-{% Aside %}
-At this time, FedCM is only supported in Google Chrome 101 and above on Android.
-{% endAside %}
-
 Set a [browser flag](/blog/browser-flags/) to develop locally, here is
 how:
 
-1.  Open Google Chrome on an Android device.
-2.  In the Chrome address bar, type `chrome://version`. Confirm the browser version is newer than 101.
-3.  Go to `chrome://flags#fedcm` to enable FedCM.
-4.  Restart your browser.
+1.  Open Google Chrome. In the address bar, enter `chrome://version`. Confirm
+    the browser version is 101 or higher.
+2.  Go to `chrome://flags#fedcm` to enable FedCM.
+3.  Restart your browser.
 
 ### Detect whether FedCM is available {: #feature-detection}
 
@@ -159,12 +169,11 @@ if (window.FederatedCredential || FederatedCredential.prototype.login) {
 
 ### Debug code on Chrome on Android {: #remote-debug-android}
 
-[Set up and run a server
-locally](/docs/devtools/remote-debugging/local-server/) to debug your FedCM
-code. You can access this server in Chrome on an Android device connected
-using a USB cable with port forwarding.
+Set up and run a server locally to debug your FedCM code. You can [access this
+server in Chrome on an Android device connected using a USB cable with port
+forwarding](/docs/devtools/remote-debugging/local-server/).
 
-Use DevTools on desktop to debug Chrome on Android by following the
+You can use DevTools on desktop to debug Chrome on Android by following the
 instructions at [Remote debug Android
 devices](/docs/devtools/remote-debugging/).
 
@@ -172,9 +181,9 @@ devices](/docs/devtools/remote-debugging/).
 
 You integrate with FedCM by creating a [manifest and
 endpoints](#manifest-endpoints) for [client
-metadata](#client-metadata-endpoint), [accounts
-list](#accounts-list-endpoint, [ID token issuance](#id-token-endpoint),
-and [token revocation](#revocation-endpoint).
+metadata](#client-metadata-endpoint), [accounts list](#accounts-list-endpoint),
+[ID token issuance](#id-token-endpoint), and [token
+revocation](#revocation-endpoint).
 
 From there, FedCM exposes JavaScript APIs that RPs can use to [sign in](#sign-into-rp), [sign out](#signout-rp), and [revoke tokens](#revoke-rp-access) from the IdP.
 
@@ -238,7 +247,7 @@ following properties:
     <td>URL for the <a href="#accounts-list-endpoint">accounts list endpoint</a>.</td>
   </tr>
   <tr>
-     <td><code>client_metadata_endpoint</code> (required)</td>
+     <td><code>client_metadata_endpoint</code> (optional)</td>
      <td>URL for the <a href="#client-metadata-endpoint">client metadata endpoint</a>.</td>
   </tr>
   <tr>
@@ -273,7 +282,7 @@ following properties:
      <td><code>branding.icons</code> (optional)</td>
      <td>Branding option which sets the icon object, displayed in the sign-in dialog. The icon object is an array with two parameters:
         <ul>
-           <li><code>url</code> (required): URL of the icon image.<li>
+           <li><code>url</code> (required): URL of the icon image. This does not support SVG images.<li>
            <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution.</li>
          </ul>
       </td>
@@ -309,11 +318,16 @@ Once the browser fetches the manifest, it sends subsequent requests to the IdP e
   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/4SLjHA1LipB0Wh52yUl6.png", alt="IdP endpoints", width="800", height="419", class="type--full-bleed"
 %}
 
-#### Top level domain manifest {: #top-level-domain-manifest }
+{% Aside 'caution' %}
 
-{% Aside %}
-Beginning in Chrome 102, this endpoint is required.
+If the RP deploys [Content Security Policy
+(CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) on the page FedCM is
+called and enforce `connect-src` directive, they must explicitly allow endpoints
+and icon image URLs described in the manifest.
+
 {% endAside %}
+
+#### Top level domain manifest {: #top-level-domain-manifest }
 
 To prevent [trackers from abusing the
 API](https://github.com/fedidcg/FedCM/issues/230), an additional manifest
@@ -336,15 +350,12 @@ The JSON file must contain the `provider_urls` property with an array of URL
 strings that can be [specified in `navigator.credentials.get` by
 RPs](#get-fedcm-object). he number of URL strings in the array is limited to one, but this may change with [your feedback](#next-steps) in the future.
 
-As of Chrome version 102, FedCM will not work without this manifest file.
-
 #### Client metadata endpoint {: #client-metadata-endpoint }
 
-The IdP's client metadata endpoint returns the relying party’s metadata such
-as the RP's privacy policy and terms of service. RPs should provide links to
-their privacy policy and terms of service to the IdP in advance. These links
-are displayed in the sign-in dialog when the user hasn't registered with the
-RP yet.
+The IdP's client metadata endpoint returns the relying party’s metadata such as
+the RP's privacy policy and terms of service. RPs should provide links to their
+privacy policy and terms of service to the IdP in advance. These links are
+displayed in the sign-in dialog when the user hasn't registered with the RP yet.
 
 The browser sends a `GET` request using the `client_id` 
 [`navigator.credentials.get`](#get-fedcm-object) without cookies. For example:
@@ -367,7 +378,7 @@ The properties for the client metadata endpoint include:
     </tr>
   </thead>
   <tr>
-    <td><code>privacy_policy_url</code> (required)</td>
+    <td><code>privacy_policy_url</code> (optional)</td>
     <td>RP privacy policy URL.</td>
   </tr>
   <tr>

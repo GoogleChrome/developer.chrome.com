@@ -233,7 +233,7 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
-## [实验] 应用程序面板里面新增 Reporting API 边栏 {: #reporting-api }
+## [实验阶段] 应用程序面板里面新增 Reporting API 边栏 {: #reporting-api }
 
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
