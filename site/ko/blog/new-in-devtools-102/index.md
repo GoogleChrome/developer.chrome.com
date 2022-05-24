@@ -1,18 +1,17 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "DevTools 의 새로운 기능 (Chrome 101)"
+title: "DevTools 의 새로운 기능 (Chrome 102)"
 authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: "New Performance insights panel, shortcuts to emulate light/dark themes, and more."
+description: "새로운 Performance insights 창, light/dark 테마 에뮬레이팅 바로가기 외 여러 가지 업데이트."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hi4lr0K9V9WE2HGgE7m8.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-102
-draft: true
 ---
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
