@@ -118,7 +118,7 @@ Chromium issue: [1260744](https://crbug.com/1260744)
 <!-- ## Cancel user flow recording at the start {: #recorder } -->
 ## 시작 전에 유저 플로우 녹화 취소하기 {: #recorder }
 <!-- You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording. -->
-이전 버전에서는 녹화를 취소할 방법이 없었으나 이제 유저 플로우 녹화를 시작하기 직전에 취소가 가능해졌습니다. 
+이전 버전에서는 녹화를 취소할 수 있는 옵션이 없었으나 이제 유저 플로우 녹화를 시작하기 직전에 취소가 가능해졌습니다. 
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="시작 전에 유저 플로우 녹화 취소하기", width="800", height="488" %}
@@ -181,16 +181,17 @@ Chromium issue: [1268754](https://crbug.com/1268754)
 
 
 <!-- ## [Experimental] Picking color outside of browser {: #color-picker } -->
-
+## [실험 기능] 브라우저 바깥의 색상 선택하기
 {% Aside %}
 <!-- To enable the experiment, check **Enable color picking outside the browser window** under **Settings** > **Experiments**. -->
+실험 기능을 활성화하기 위해서는 **설정** > **실험** 으로 들어간 후 **Enable color picking outside the browser window** 를 체크해 줍니다.
 {% endAside %}
 
 <!-- Enable this experiment to pick a color outside of the browser with the color picker. Previously, you could only pick a color within the browser. -->
-
+이전 버전에서는 브라우저 내부에서만 색상을 선택할 수 있었습니다만 실험 기능을 활성화하여, 브라우저 바깥의 색상을 컬러 피커를 통해 선택할 수 있습니다.
 <!-- In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere.  -->
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="Picking color outside of browser", width="800", height="450" %}
+**스타일** 창에서 임의의 색상 미리보기를 클릭하여 컬러 피커를 열 수 있으며, 스포이드 아이콘을 이용하여 원하는 곳의 색상을 선택합니다.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="브라우저 바깥의 색상 선택하기", width="800", height="450" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1a73be9f3cb75fdd57578224b71396fbf68f8637 #}
 
