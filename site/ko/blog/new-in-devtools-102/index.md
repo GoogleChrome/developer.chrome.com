@@ -160,17 +160,19 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 
 
 <!-- ## [Experimental] Copy CSS changes {: #copy } -->
-
+## [실험 기능] CSS에서의 변경사항 복사 {: #copy }
 {% Aside %}
 <!-- To enable the experiment, check **Sync CSS changes in the Styles pane** under **Settings** > **Experiments**. -->
+이 기능을 활성화하기 위해, **설정** > **실험** 으로 들어간 후 **Sync CSS changes in the Styles pane** 를 체크해 줍니다.
 {% endAside %}
 
 <!-- With this experiment, the **Styles** pane highlights your CSS changes in green. You can hover over the changed rules and click on the new copy button next to it to copy it. -->
+**스타일** 창은 여러분의 CSS 변경사항을 녹색으로 강조해 줍니다. 변경사항 위로 마우스를 가져간 다음 옆에 있는 복사 버튼을 클릭하여 복사할 수 있습니다.
 
 <!-- Apart from that, you can copy all CSS changes across declarations by right-clicking on any rule, and selecting **Copy all CSS changes**. -->
-
+그 외에도, 어떤 규칙 위에서 마우스 우클릭 후 **모든 CSS 변경사항 복사** 를 선택하여, 모든 변경사항들을 복사할 수 있습니다.
 <!-- A new **Copy** button is added to the [Changes](/docs/devtools/changes/) tab as well to help you keep track and copy your CSS changes with ease! -->
-
+[변경사항](/docs/devtools/changes/)탭에 새로운 **복사** 버튼이 추가되었으며, 이는 여러분들의 변경 이력을 추적하고 CSS 변경사항들을 쉽게 복사할 수 있도록 합니다. ]
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7PYMKJNBguswcas6jbpu.png", alt="Copy CSS changes", width="800", height="488", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
@@ -184,7 +186,7 @@ Chromium issue: [1268754](https://crbug.com/1268754)
 ## [실험 기능] 브라우저 바깥의 색상 선택하기
 {% Aside %}
 <!-- To enable the experiment, check **Enable color picking outside the browser window** under **Settings** > **Experiments**. -->
-실험 기능을 활성화하기 위해서는 **설정** > **실험** 으로 들어간 후 **Enable color picking outside the browser window** 를 체크해 줍니다.
+이 기능을 활성화하기 위해 **설정** > **실험** 으로 들어간 후 **Enable color picking outside the browser window** 를 체크해 줍니다.
 {% endAside %}
 
 <!-- Enable this experiment to pick a color outside of the browser with the color picker. Previously, you could only pick a color within the browser. -->
