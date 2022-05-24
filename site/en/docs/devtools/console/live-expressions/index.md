@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2019-04-18
-#updated: YYYY-MM-DD
+updated: 2022-05-24
 description:
   "If you find yourself typing the same JavaScript expressions into the Console repeatedly, try Live
   Expressions instead."
