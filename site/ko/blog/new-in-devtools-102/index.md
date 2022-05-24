@@ -156,6 +156,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 - **스타일** 창이 오버라이딩된 `@support` 규칙을 취소선으로 적절하게 표시하기 시작했습니다. 이전 버전에서는 취소선이 표시되지 않았습니다. ([1298025](https://crbug.com/1298025))
 - **소스** 창에서 CSS를 편집할 떄 여러 개의 빈 줄을 만들던 CSS 포매팅 로직이 현 버전에서 수정되었습니다.
 - **콘솔**에 있는 객체의 **재귀적으로 확장** 옵션을 최대 100으로 제한하여 원형 개체에 대해 영원히 지속되지 않도록 합니다. ([1272450](https://crbug.com/1272450))
+- 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4240f8bc96a3ebd2dc2a5b316fd41c24e20fb3c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cf09d1de8a0277dbaa9e2000a8d2fcca69e7128e #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6616b9f0cd3e9f1138fb0f409fbe91206d5c8640 #}
