@@ -283,7 +283,7 @@ sample extension uses <kbd>nt</kbd> as the keyword.
 
 ```json/3
 {
-  "name": "Omnibox New Tab Search",\
+  "name": "Omnibox New Tab Search",
   ...
   "omnibox": { "keyword" : "nt" },
   "default_icon": {
