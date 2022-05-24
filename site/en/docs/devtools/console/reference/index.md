@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Console features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2019-04-18
 #updated: YYYY-MM-DD
 description:
@@ -264,6 +265,10 @@ to tweak the ad's DOM. To do this, you first need to select the ad's browsing co
 {% Img src="image/admin/Vl95VEu6LEV6X2cpgyAv.png", alt="Selecting a different JavaScript context.", width="800", height="650" %}
 
 **Figure 20**. Selecting a different JavaScript context.
+
+## Inspect object properties {: #inspect-objects }
+
+
 
 ## Clear the Console {: #clear }
 
