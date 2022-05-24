@@ -609,7 +609,7 @@ filtering the topics for a calling context.</td>
 is to cap the in-use memory.</td>
     </tr>
     <tr>
-      <td>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</td>
+      <td><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></td>
       <td>100000</td>
       <td>The max number of entries allowed to be retrieved from the database for each query
 for the API usage contexts. The query will occur once per epoch at topics calculation
