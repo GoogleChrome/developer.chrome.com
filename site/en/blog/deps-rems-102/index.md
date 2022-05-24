@@ -13,20 +13,19 @@ tags:
   - chrome-102
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 102 beta was released on April 28, 2022 and is expected to become the
 stable version in late May, 2022.
 
 
-## Deprecate PaymentRequest.show() without User Activation {#deprecate-paymentrequest-show-without-user-activation}
+## Deprecate PaymentRequest.show() without User Activation {: #deprecate-paymentrequest-show-without-user-activation}
 
 Sites can [no longer call PaymentRequest.show() without a user activation](https://chromestatus.com/feature/5948593429020672). Allowing `PaymentRequest.show()` to be triggered without a user activation could be abused by malicious websites. To protect users, the spec was changed to require user activation. To avoid a broken purchase experience, calls to this method should now be inside a user event such as `click`.
 
 Firefox has not shipped `PaymentRequest` at all, while Safari's implementation already requires user activation for calling `show()`.
 
 
-## Remove SDP Plan B {#remove-sdp-plan-b}
+## Remove SDP Plan B {: #remove-sdp-plan-b}
 
 The Session Description Protocol (SDP) used to establish a session in WebRTC has been implemented with two different dialects in Chromium: Unified Plan and Plan B. Plan B is not cross-browser compatible and [is hereby removed](https://www.chromestatus.com/features/5823036655665152).
 
