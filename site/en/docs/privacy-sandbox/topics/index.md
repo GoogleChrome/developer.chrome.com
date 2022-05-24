@@ -455,7 +455,7 @@ View information about topics observed during the current epoch [from the `chrom
 ### How can I debug API usage? {: #debug}
 
 The `chrome://topics-internals` page is available in Chrome Canary and Chrome Dev, if
-[you enable the Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/#feature-flags).
+[you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags).
 This displays topics for the current user, topics inferred for hostnames, and technical information
 about the API implementation.
 
@@ -513,8 +513,8 @@ attempt to include a  "/" in the Host field.
 ####  View Topics API information {: #view-api-information}
 
 Information is provided about the Topics API implementation and settings, such as the
-[taxonomy](https://developer.chrome.com/docs/privacy-sandbox/topics/#taxonomy) version and
-[epoch](https://developer.chrome.com/docs/privacy-sandbox/topics/#epoch) duration. These values
+[taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and
+[epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values
 reflect default settings for the API or parameters successfully set [from the command
 line](#feature-flags). This is handy for checking that command line flags have worked as expected:
 in the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven
