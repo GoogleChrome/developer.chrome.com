@@ -316,6 +316,7 @@ const creative = await response.json();
 API callers only receive topics they've recently observed, and the topics for a user are refreshed
 once each epoch. That means the API provides a rolling window in which a given caller may receive
 certain topics.
+
 The table below outlines an example (though unrealistically small) of a hypothetical browsing
 history for a user during a single epoch, showing topics associated with the sites they've visited,
 and the API [callers](#caller) present on each site (the entities that call
@@ -536,7 +537,8 @@ days).
   alt="Screenshot of chrome://topics-internal page with Features and Parameters panel selected.",
   width="800", height="695" %}
 
-The meaning of each parameter is explained in the table below.
+The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally 
+to see all the details!)
 
 The parameters correspond to flags that can be set when running Chrome from the command line. For
 example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the
