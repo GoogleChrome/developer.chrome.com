@@ -24,7 +24,6 @@ tags:
 <!-- + 3. Translate the "description" tag above -->
 <!-- + 4. Translate all the <img> alt text -->
 <!-- + 5. Update the whats-new.md file -->
-<!-- end: translation instructions -->
 
 <!-- ## Preview feature: New Performance insights panel {: #perf } -->
 ## プレビュー機能: 新しいパフォーマンスインサイトパネル {: #perf }
