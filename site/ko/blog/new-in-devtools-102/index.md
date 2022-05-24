@@ -127,16 +127,17 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Display inherited highlight pseudo-elements in the Styles pane {: #pseudo } -->
-
+## 스타일 창에 상속된 하이라이트 의사 속성들 표시하기 {: #pseudo }
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
-
+**스타일** 창에서 상속된 하이라이트 의사 속성들 (예시: `::selection`, `::spelling-error`, `::grammar-error`, `::highlight`)을 보세요. 이전에는 이 규칙들이 표시되지 않았습니다. 
 <!-- As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules. -->
-
+[정식 문서](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade)에 언급되었듯이 다중 스타일이 충돌을 일으킬 때, 캐스케이드가 가장 우선시되는 스타일을 결정합니다. 이 새로운 기능은 여러분들로 하여금 상속과 우선되는 규칙을 더 잘 이해할 수 있도록 해 줍니다.
 {% Aside %}
 <!-- At the moment, you need to run Chrome with the `--enable-blink-features=HighlightInheritance` flag to enable this feature. -->
+현재는 이 기능을 활성화하기 위해서 `--enable-blink-features=HighlightInheritance` 플래그와 함께 크롬을 실행할 필요가 있습니다.
 {% endAside %}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD8vohg49HvBPW53GV2Q.png", alt="Display inherited highlight pseudo-elements in the Styles pane", width="800", height="529" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD8vohg49HvBPW53GV2Q.png", alt="스타일 창에 상속된 하이라이트 의사 속성들 표시하기", width="800", height="529" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bfe1683fe8b2eaa9ea2960dedca2e4a0bbc73546 #}
 
@@ -146,7 +147,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## 기타 하이라이트 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
-여러 가지 주목할 만한 개선점들이 추가되었습니다:
+그 외 여러 가지 주목할 만한 개선점들이 추가되었습니다:
 <!-- - The **Properties** pane now displays accessor properties with value by default. It was hidden mistakenly previously. ([1309087](https://crbug.com/1309087))
 - The **Styles** pane now properly shows the overridden `@support` rules as strikethrough. Previously, the rules weren’t strikethrough. ([1298025](https://crbug.com/1298025))
 - Fixed the CSS formatting logic in the **Sources** panel that caused multiple blank lines when editing CSS. ([1309588](https://crbug.com/1309588))
@@ -156,7 +157,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 - **스타일** 창이 오버라이딩된 `@support` 규칙을 취소선으로 적절하게 표시하기 시작했습니다. 이전 버전에서는 취소선이 표시되지 않았습니다. ([1298025](https://crbug.com/1298025))
 - **소스** 창에서 CSS를 편집할 떄 여러 개의 빈 줄을 만들던 CSS 포매팅 로직이 현 버전에서 수정되었습니다.
 - **콘솔**에 있는 객체의 **재귀적으로 확장** 옵션을 최대 100으로 제한하여 원형 개체에 대해 영원히 지속되지 않도록 합니다. ([1272450](https://crbug.com/1272450))
-- 
+ 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4240f8bc96a3ebd2dc2a5b316fd41c24e20fb3c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cf09d1de8a0277dbaa9e2000a8d2fcca69e7128e #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6616b9f0cd3e9f1138fb0f409fbe91206d5c8640 #}
