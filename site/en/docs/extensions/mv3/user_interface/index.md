@@ -283,7 +283,7 @@ sample extension uses <kbd>nt</kbd> as the keyword.
 
 ```json/3
 {
-  "name": "Omnibox New Tab Search",\
+  "name": "Omnibox New Tab Search",
   ...
   "omnibox": { "keyword" : "nt" },
   "default_icon": {
@@ -503,17 +503,17 @@ Once the permission is declared, you can display a notification by calling
 ```js
 // background.js
 function showStayHydratedNotification() {
-	  chrome.notifications.create({
-	    type: 'basic',
-	    iconUrl: 'stay_hydrated.png',
-	    title: 'Time to Hydrate',
-	    message: 'Everyday I\'m Guzzlin\'!',
-	    buttons: [
-	      { title: 'Keep it Flowing.' }
-	    ],
-	    priority: 0
-	  });
-	}
+  chrome.notifications.create({
+    type: 'basic',
+    iconUrl: 'stay_hydrated.png',
+    title: 'Time to Hydrate',
+    message: 'Everyday I\'m Guzzlin\'!',
+    buttons: [
+      { title: 'Keep it Flowing.' }
+    ],
+    priority: 0
+  });
+}
 ```
 
 <figure>
@@ -539,6 +539,7 @@ following code localizes the tooltip:
 
 {% Column %}
 Located in  `_locales/en/messages.json`:
+
 ```json
 {
   "__MSG_tooltip__": {
@@ -552,6 +553,7 @@ Located in  `_locales/en/messages.json`:
 
 {% Column %}
 Located in `_locales/es/messages.json`:
+
 ```json
 {
   "__MSG_tooltip__": {
