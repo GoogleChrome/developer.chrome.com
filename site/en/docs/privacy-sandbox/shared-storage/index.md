@@ -19,13 +19,13 @@ Storage API.
 
 *  The [Shared Storage proposal](https://github.com/pythagoraskitty/shared-storage)
    has entered [public discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  The API is being implemented in Chrome.
-   * The initial origin trial will likely only include the `selectURL`. Support for the Private Aggregation API will come shortly after.
-   * The `selectURL` API is available for testing in Chrome Canary as of M104, and please [try the Shared Storage API](#try-the-shared-storage-api).
+*  We are [implementing this API in Chrome](#try-the-shared-storage-api).
+   *  The initial origin trial will likely only include the `selectURL` API
+	 function. Support for the Private Aggregation API is planned shortly after.
+   *  The `selectURL` API is available for testing in Chrome Canary as of M104.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline)
    provides implementation timings for the Shared Storage API and other
    Privacy Sandbox proposals.
-
 
 ## Why do we need this API?
 
@@ -59,7 +59,6 @@ The proposal intends to create a general purpose API which supports many
 possible future use cases. This allows for further experimentation and change,
 to grow alongside the web ecosystem.
 
-
 ## How will shared storage work?
 
 Shared storage will allow you to make informed decisions based on cross-site
@@ -80,7 +79,6 @@ The shared storage data can be used for:
    able to run a worklet script to send your data through the
    [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api),
    a Privacy Sandbox proposal, which returns a privacy-preserving report. 
-
 
 ### Example: URL selection for frequency capping {: #url-selection }
 
@@ -140,7 +138,7 @@ const defaultUrl = new URL('https://default.example');
 const adUrl = new URL('[https://ad.example](https://ad.example)');
 
 // Register the worklet module
-await window.sharedStorage.worklet.addModule(‘get-url.js');
+await window.sharedStorage.worklet.addModule('get-url.js');
 
 // Set the frequency cap for this campaign, if it wasn't already set
 window.sharedStorage.set('frequencycap', 5, { ignoreIfPresent: true });
@@ -153,7 +151,6 @@ const opaqueUrl = await window.sharedStorage.selectURL(
 // Render the returned URL into an iframe or a fenced frame
 document.getElementById('example-iframe').src = opaqueUrl;
 ```
-
 
 ### Example: aggregation of cross-site data (ad campaign reach) {: #aggregated-data }
 
@@ -213,14 +210,21 @@ register("send-reach-report", SendReachReportOperation);
 
 ## Try the Shared Storage API
 
-Shared Storage API is available in Chrome Canary 104 with the command line flag `--args --enable-features=SharedStorageAPI,FencedFrames,PrivacySandboxAdsAPIsOverride`.
+Shared Storage API is available in Chrome Canary 104 with a command line
+flag:
+```
+--args --enable-features=SharedStorageAPI,FencedFrames,PrivacySandboxAdsAPIsOverride
+```
 
-If you have enabled the [Privacy Sandbox Ads APIs](chrome://flags/#privacy-sandbox-ads-apis) previously, please disable it since it overrides the flags set from the command line. 
+If you have previously enabled the [Privacy Sandbox Ads APIs 
+experiment](chrome://flags/#privacy-sandbox-ads-apis), you must disable it as this setting overrides flags set from the command line. 
 
 ## Engage and share feedback
 
 The shared storage proposal is under active discussion and subject to change
 in the future. If you try this API and have feedback, we'd love to hear it.
 
-* **GitHub**: Read the [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-* **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+*  **GitHub**: Read the
+   [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
+*  **Developer support**: Ask questions and join discussions on the
+   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
