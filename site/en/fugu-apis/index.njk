@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+FUGU APPS
+{% endblock %}
+
+{% block content %}
+
+<ul>
+{% for app in fuguApis %}
+  <li> {{ app.appURL }}:
+    <ul>
+      {% for api in app.usedAPIs %}
+        <li>{{api.name}}</li>
+      {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+ <ul>
+{% endblock %}
