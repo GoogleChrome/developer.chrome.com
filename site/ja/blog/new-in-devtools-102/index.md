@@ -77,7 +77,7 @@ DevTools は **Network** パネルの **Preview** タブに Content Security Pol
 例えば、最初のスクリーンショットは[混合コンテンツ](https://web.dev/what-is-mixed-content/)を含むページを示しています。このページはセキュアな HTTPS 接続を使用して読み込まれますが、スタイルシートはセキュアではない HTTP 接続が使用されています。
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
-デフォルトではブラウザはスタイルシートのリクエストをブロックします。しかし、これまではこのページが **Network** パネルの **Preview** タブで開かれたときには、スタイルシートがブロックされませんでした（そのため背景が赤色に変わります）。これが期待どおりにブロックされるようになります（2枚めのスクリーンショット）。
+デフォルトではブラウザはスタイルシートのリクエストをブロックします。しかし、これまではこのページが **Network** パネルの **Preview** タブで開かれたときには、スタイルシートがブロックされませんでした（そのため背景が赤色に変わります）。これが期待どおりにブロックされるようになります（2枚目のスクリーンショット）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="Network Previewタブのセキュリティ改善", width="800", height="488" %}
 
