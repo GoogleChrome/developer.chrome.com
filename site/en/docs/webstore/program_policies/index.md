@@ -382,7 +382,7 @@ The following types of personal or sensitive user data are also subject to addit
 ### Limited uses of user data {: #limited_use }
 
 Upon accessing personal and sensitive user data for a single purpose, your use of the user data
-obtained must comply with the below requirements. The requirements apply to both the raw data
+obtained must comply with the following requirements. The requirements apply to both the raw data
 obtained and the data aggregated, anonymized, de-identified, or derived from the raw data. They also
 apply to scraped content or otherwise automatically gathered user data.
 
