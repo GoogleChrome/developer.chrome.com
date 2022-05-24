@@ -1,0 +1,1803 @@
+[
+  {
+    "timestamp": "2022-02-23T11:21:57.000Z",
+    "appURL": "https://editor.bridge-core.app/",
+    "sourceURL": "https://github.com/bridge-core/editor",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T11:55:57.000Z",
+    "appURL": "https://sqliteviewer.app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Storage Estimation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T12:26:05.000Z",
+    "appURL": "https://uspeaking.netlify.app/",
+    "sourceURL": "https://github.com/rafaelguinho/u-speaking-react",
+    "usedAPIs": [
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T12:43:26.000Z",
+    "appURL": "https://anaesthetics.app/bluetooth/",
+    "sourceURL": "https://github.com/anaestheticsapp/bluetooth",
+    "usedAPIs": [
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T12:45:53.000Z",
+    "appURL": "https://thelogbook.app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T13:25:27.000Z",
+    "appURL": "https://md.nico.dev/",
+    "sourceURL": "https://github.com/nico-martin/markdown-editor/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Local Font Access",
+        "url": "https://web.dev/local-fonts/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T14:41:34.000Z",
+    "appURL": "https://edit.photostack.app",
+    "sourceURL": "https://github.com/photostack/photostack",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T14:44:17.000Z",
+    "appURL": "https://linkcleaner.app/",
+    "sourceURL": "https://github.com/corbindavenport/link-cleaner",
+    "usedAPIs": [
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T15:23:21.000Z",
+    "appURL": "https://avg-colour.netlify.app/",
+    "sourceURL": "https://github.com/ThomasRettig/average-color",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T17:01:10.000Z",
+    "appURL": "https://www.improv-wifi.com/",
+    "sourceURL": "https://github.com/improv-wifi/sdk-js/",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T17:01:44.000Z",
+    "appURL": "https://esphome.github.io/esp-web-tools/",
+    "sourceURL": "https://github.com/esphome/esp-web-tools",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T17:02:36.000Z",
+    "appURL": "https://esphome.io/",
+    "sourceURL": "https://github.com/esphome/dashboard/",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T19:35:14.000Z",
+    "appURL": "https://stackedit.io ",
+    "sourceURL": "https://github.com/benweet/stackedit/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T19:37:27.000Z",
+    "appURL": "https://hexed.it",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T19:38:16.000Z",
+    "appURL": "https://makecode.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T20:09:29.000Z",
+    "appURL": "https://dannymoerkerke.github.io/file-tree",
+    "sourceURL": "https://github.com/DannyMoerkerke/file-tree",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-23T20:11:46.000Z",
+    "appURL": "https://whatpwacando.today ",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Contact Picker",
+        "url": "https://web.dev/contact-picker/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gyroscope",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Linear Acceleration Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Notification Triggers",
+        "url": "https://web.dev/notification-triggers/"
+      },
+      {
+        "name": "Payment Request",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API"
+      },
+      {
+        "name": "Relative Orientation Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "WebNFC",
+        "url": "https://web.dev/nfc/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-24T05:11:50.000Z",
+    "appURL": "https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Absolute Orientation Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Background Fetch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Background_Fetch_API"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-24T12:14:05.000Z",
+    "appURL": "https://loilo.github.io/diffr/",
+    "sourceURL": "https://github.com/loilo/diffr",
+    "usedAPIs": [
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-25T09:23:57.000Z",
+    "appURL": "https://panel.hostmeapp.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-25T10:14:58.000Z",
+    "appURL": "https://tgstorage.com",
+    "sourceURL": "https://github.com/sh-a-v/tgstorage",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-02-27T10:48:33.000Z",
+    "appURL": "https://boxy-svg.com/app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "EyeDropper",
+        "url": "https://github.com/WICG/eyedropper-api/blob/main/README.md"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Local Font Access",
+        "url": "https://web.dev/local-fonts/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-03-01T09:29:47.000Z",
+    "appURL": "https://mconverter.eu/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Digital Goods",
+        "url": "https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-03-01T09:40:08.000Z",
+    "appURL": "https://tidepool.org/uploader",
+    "sourceURL": "https://github.com/tidepool-org/uploader",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebHID",
+        "url": "https://web.dev/hid/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-03-31T12:04:37.000Z",
+    "appURL": "https://web.telegram.org/z/",
+    "sourceURL": "https://github.com/Ajaxy/telegram-tt",
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-11T09:35:10.000Z",
+    "appURL": "https://svgco.de/",
+    "sourceURL": "https://github.com/tomayac/SVGcode",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-13T10:31:31.000Z",
+    "appURL": "https://tomayac.github.io/fugu-showcase/data/",
+    "sourceURL": "https://github.com/tomayac/fugu-showcase",
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-13T17:05:39.000Z",
+    "appURL": "https://bpmtech.no",
+    "sourceURL": "https://github.com/webmaxru/bpm-counter",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Protocol Handlers",
+        "url": "https://web.dev/url-protocol-handler/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "URL Handlers",
+        "url": "https://web.dev/pwa-url-handler/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-14T18:24:15.000Z",
+    "appURL": "https://case.xchart.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-14T18:25:00.000Z",
+    "appURL": "https://spike.legoeducation.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-17T08:58:59.000Z",
+    "appURL": "http://postr.me/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-18T04:15:32.000Z",
+    "appURL": "https://dev.to",
+    "sourceURL": "https://github.com/forem/forem",
+    "usedAPIs": [
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T07:31:18.000Z",
+    "appURL": "https://photoshop.adobe.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T09:26:54.000Z",
+    "appURL": "https://editor.construct.net",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Compression Streams",
+        "url": "https://wicg.github.io/compression/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Pointer Lock (unadjustedMovement)",
+        "url": "https://web.dev/disable-mouse-acceleration/"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "VirtualKeyboard",
+        "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/VirtualKeyboardAPI/explainer.md"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T10:44:51.000Z",
+    "appURL": "https://remap-keys.app/",
+    "sourceURL": "https://github.com/remap-keys/remap",
+    "usedAPIs": [
+      {
+        "name": "WebHID",
+        "url": "https://web.dev/hid/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T10:57:46.000Z",
+    "appURL": "https://qrsnapper.com",
+    "sourceURL": "https://github.com/PaulKinlan/qrcode",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shape Detection (Barcodes)",
+        "url": "https://web.dev/shape-detection/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T11:00:25.000Z",
+    "appURL": "https://app.vysor.io/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T11:00:59.000Z",
+    "appURL": "https://vscode.dev/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T11:21:36.000Z",
+    "appURL": "https://mishipay.shop/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Device Memory",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shape Detection (Barcodes)",
+        "url": "https://web.dev/shape-detection/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T13:05:50.000Z",
+    "appURL": "https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T13:46:07.000Z",
+    "appURL": "https://codeit.codes",
+    "sourceURL": "https://github.com/codeitcodes/codeit",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T16:45:29.000Z",
+    "appURL": "https://haven.pages.dev/",
+    "sourceURL": "https://github.com/ThaUnknown/pwa-haven",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Declarative Link Capturing",
+        "url": "https://web.dev/declarative-link-capturing/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Protocol Handlers",
+        "url": "https://web.dev/url-protocol-handler/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "URL Handlers",
+        "url": "https://web.dev/pwa-url-handler/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T16:56:40.000Z",
+    "appURL": "https://app.thepocketlab.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T16:59:47.000Z",
+    "appURL": "https://code.makewonder.com/cue/#/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T17:18:06.000Z",
+    "appURL": "https://code.irobot.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebGPU",
+        "url": "https://web.dev/webgpu"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T17:21:45.000Z",
+    "appURL": "https://studio.samlabs.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T17:41:51.000Z",
+    "appURL": "https://fuse.littlebits.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T17:50:51.000Z",
+    "appURL": "https://flash.android.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T17:51:32.000Z",
+    "appURL": "https://grapheneos.org/install/web",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T19:21:13.000Z",
+    "appURL": "https://bundle.js.org",
+    "sourceURL": "https://github.com/okikio/bundle",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-25T21:25:04.000Z",
+    "appURL": "http://leonidasesteban.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-26T03:33:16.000Z",
+    "appURL": "https://stedit.app",
+    "sourceURL": "https://github.com/Offroaders123/Smart-Text-Editor",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-26T09:16:50.000Z",
+    "appURL": "https://logseq.com/?spa=true",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Compression Streams",
+        "url": "https://wicg.github.io/compression/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-26T11:29:45.000Z",
+    "appURL": "https://www.jsmusicdb.com",
+    "sourceURL": "https://github.com/lucienimmink/jsmusicdb",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-26T13:39:48.000Z",
+    "appURL": "https://tinder.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Contact Picker",
+        "url": "https://web.dev/contact-picker/"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "WebOTP",
+        "url": "https://web.dev/web-otp/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-26T16:52:26.000Z",
+    "appURL": "https://ember.ly",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T06:54:53.000Z",
+    "appURL": "https://maskable.app",
+    "sourceURL": "https://github.com/NotWoods/maskable",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "EyeDropper",
+        "url": "https://github.com/WICG/eyedropper-api/blob/main/README.md"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T07:02:41.000Z",
+    "appURL": "https://kenchris.github.io/webnfc-groceries/",
+    "sourceURL": "https://github.com/kenchris/webnfc-groceries",
+    "usedAPIs": [
+      {
+        "name": "WebNFC",
+        "url": "https://web.dev/nfc/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T09:53:49.000Z",
+    "appURL": "https://josephrocca.github.io/clip-image-sorter/",
+    "sourceURL": "https://github.com/josephrocca/clip-image-sorter",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T16:20:03.000Z",
+    "appURL": "https://yt-playlist-notifier.web.app/",
+    "sourceURL": "https://github.com/jeffposnick/yt-playlist-notifier",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Periodic Background Sync",
+        "url": "https://web.dev/periodic-background-sync/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T16:21:59.000Z",
+    "appURL": "https://scrapbook-pwa.web.app/",
+    "sourceURL": "https://github.com/GoogleChrome/samples/blob/gh-pages/web-share/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Content Index",
+        "url": "https://web.dev/content-indexing-api/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T17:03:59.000Z",
+    "appURL": "https://1tuner.com",
+    "sourceURL": "https://github.com/robinbakker/1tuner",
+    "usedAPIs": [
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T18:23:26.000Z",
+    "appURL": "https://www.espruino.com/ide/",
+    "sourceURL": "https://github.com/espruino/EspruinoWebIDE",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T18:33:23.000Z",
+    "appURL": "https://make.firialabs.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T18:35:14.000Z",
+    "appURL": "https://my.numworks.com/",
+    "sourceURL": "https://www.numworks.com/blog/webusb-firmware-update/",
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T18:35:41.000Z",
+    "appURL": "https://www.stemplayer.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-27T18:38:31.000Z",
+    "appURL": "https://duino.app/",
+    "sourceURL": "https://github.com/duinoapp/duinoapp-client",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-28T18:53:24.000Z",
+    "appURL": "https://stadia.google.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Pointer Lock (unadjustedMovement)",
+        "url": "https://web.dev/disable-mouse-acceleration/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-04-28T18:54:22.000Z",
+    "appURL": "https://play.geforcenow.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-03T10:28:50.000Z",
+    "appURL": "https://lookscanned.io/scan",
+    "sourceURL": "https://github.com/rwv/lookscanned.io",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-03T16:45:41.000Z",
+    "appURL": "http://sharedgametimer.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "HapticsDevice",
+        "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HapticsDevice/explainer.md"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-03T22:08:08.000Z",
+    "appURL": "https://configure.zsa.io/train",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-04T07:51:50.000Z",
+    "appURL": "https://hoten.cc/zc/play/",
+    "sourceURL": "https://github.com/connorjclark/ZeldaClassic",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-04T09:19:18.000Z",
+    "appURL": "https://squoosh.app",
+    "sourceURL": "https://github.com/GoogleChromeLabs/squoosh",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-05T07:57:14.000Z",
+    "appURL": "https://activerecall.com/login.html",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-06T07:04:51.000Z",
+    "appURL": "https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-06T07:16:39.000Z",
+    "appURL": "https://www.canva.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Device Memory",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-09T18:13:55.000Z",
+    "appURL": "https://apps.tibbo.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ]
+  },
+  {
+    "timestamp": "2022-05-12T10:19:13.000Z",
+    "appURL": "https://pwa.kiwix.org/www/index.html",
+    "sourceURL": "https://github.com/kiwix/kiwix-js-windows",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Tabbed Application Mode",
+        "url": "https://web.dev/tabbed-application-mode/"
+      }
+    ]
+  }
+]
