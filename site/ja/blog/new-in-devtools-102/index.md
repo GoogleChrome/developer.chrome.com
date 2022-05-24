@@ -30,7 +30,7 @@ tags:
 ## プレビュー機能: 新しいパフォーマンスインサイトパネル {: #perf }
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->
-**Performance insights** を使用して、ウェブサイトのパフォーマンスに関する実用的でユースケース駆動の洞察を得ることができます。
+**Performance insights** パネルを使用して、ウェブサイトのパフォーマンスに関する実用的でユースケース駆動の洞察を得ることができます。
 
 <!-- [Open the panel](/docs/devtools/performance-insights/#open) and start a new recording based on your use case. For example, let’s measure the page load of this [demo page](https://coffee-cart.netlify.app/?ad=1). -->
 [このパネルを開き](/docs/devtools/performance-insights/#open)、あなた自身のユースケースに基づいて新しく記録を開始します。例えば、この[デモページ](https://coffee-cart.netlify.app/?ad=1)のページ読み込みについて測定してみましょう。
