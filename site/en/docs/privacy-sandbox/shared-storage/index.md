@@ -212,7 +212,8 @@ register("send-reach-report", SendReachReportOperation);
 
 Shared Storage API is available in Chrome Canary 104 with a command line
 flag:
-```
+
+```text
 --args --enable-features=SharedStorageAPI,FencedFrames,PrivacySandboxAdsAPIsOverride
 ```
 
