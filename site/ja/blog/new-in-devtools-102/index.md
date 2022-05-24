@@ -39,7 +39,7 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="新しいパフォーマンスインサイトパネル", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
-記録が完了すると、**Insights** ペインにパフォーマンスインサイトが表示されます。それぞれのインサイトアイテムをクリックして、問題点と考えられる対策を確認してください。
+記録が完了すると、**Insights** ペインにパフォーマンスインサイトが表示されます。それぞれのインサイトアイテム（例えば、Render blocking request や layout shift）をクリックして、問題点と考えられる対策を確認してください。
 
 <!-- Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.  -->
 **Performance insights** パネルの[ドキュメント](/docs/devtools/performance-insights/)を使用すると、ステップ・バイ・ステップのチュートリアルを通じてさらに学習を深めることができます。
