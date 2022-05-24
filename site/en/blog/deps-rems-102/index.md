@@ -13,7 +13,6 @@ tags:
   - chrome-102
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 102 beta was released on April 28, 2022 and is expected to become the
 stable version in late May, 2022.
