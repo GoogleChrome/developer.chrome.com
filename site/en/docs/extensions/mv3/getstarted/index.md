@@ -129,7 +129,7 @@ green`"
 
 ## Introduce a user interface {: #user_interface }
 
-[User interfaces] for extensions can have many forms[4]; this one will use a [popup][15]. Create and
+[User interfaces][4] for extensions can have many forms; this one will use a [popup][15]. Create and
 add a file named `popup.html` to the extension's directory. This extension uses a button to change
 the background color.
 
