@@ -184,6 +184,7 @@ To view a report that's been saved as a gist:
 Lighthouse aims to provide guidance that is relevant and actionable for all web developers. To this end, there are two features available that allow you to tailor Lighthouse to your specific needs.
 
 ### Stack Packs
+
 Developers use many different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used.  
 
 "Stack Packs" allow Lighthouse to detect what platform your site is built on and display specific stack-based recommendations. These recommendations are defined and curated by experts from the community.
@@ -191,11 +192,13 @@ Developers use many different technologies (backend/CMS/JavaScript frameworks) t
 To contribute a Stack Pack, review the [Contributing Guidelines](https://github.com/GoogleChrome/lighthouse-stack-packs/blob/master/CONTRIBUTING.md).
 
 ### Lighthouse Plugins
+
 Lighthouse Plugins allow domain experts to extend the functionality of Lighthouse for their community's specific needs. You are now able to leverage the data that Lighthouse collects to create new audits. At its core, a Lighthouse plugin is a node module that implements a set of checks that will be run by Lighthouse and added to the report as a new category.
 
 For more information about how to create your own plugin, check out our [Plugin Handbook](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md) in the Lighthouse GitHub repo.
 
 ## Integrate Lighthouse {: #integrate }
+
 If you are a company or an individual who is integrating Lighthouse as part of the products / services you're offering, first things first - we're so excited you are! We want as many people as possible to use Lighthouse, and this [Guidelines and Brand Assets for Integrating Lighthouse](https://docs.google.com/document/d/e/2PACX-1vRWKW9RiB3suYt1KqgBJhwLnvV-AiFne8iAudADtwK-LWLNParYsFts92InHNtB_BV5x-xtSVcnTO2n/pub) is meant to make it straightforward for you to show that Lighthouse is under the hood while protecting our brand.
 
 ## Contribute to Lighthouse {: #contribute }
