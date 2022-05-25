@@ -30,18 +30,18 @@ tags:
 ## 预览功能：新的 Performance insights 面板 {: #perf }
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->
-利用 **Performance insights** 面板来获取关于您网站性能的可操作且由用例驱动的深度分析。
+利用 **Performance insights** 面板来获取关于您网站性能的可行性深度分析。面板将按照您的用例提供可行性的建议和回馈。
 
 <!-- [Open the panel](/docs/devtools/performance-insights/#open) and start a new recording based on your use case. For example, let’s measure the page load of this [demo page](https://coffee-cart.netlify.app/?ad=1). -->
-[打开此面板](/docs/devtools/performance-insights/#open)并根据您的用例来开始一段新的录制。举个例子，让我们来测量这个[示例网页](https://coffee-cart.netlify.app/?ad=1)的页面加载。
+[打开此面板](/docs/devtools/performance-insights/#open)并根据您的用例来开始一段新的录制。举个例子，让我们来测量这个[示例网页](https://coffee-cart.netlify.app/?ad=1)的页面加载情况。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="新的 Performance insights 面板", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
-录制完成后，您会在 **Insights** 窗格中获得性能的深度分析。 单击每个深度分析项目（例如，阻止渲染的请求、布局偏移）以了解问题和潜在的修复。
+录制完成后，您会在 **Insights** 窗格中获得相关的性能深度分析。 单击每个深度分析项目（例如，阻止渲染的请求、布局偏移）以了解问题和潜在的修复。
 
 <!-- Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.  -->
-前往 **Performance insights** 面板的[文档](/docs/devtools/performance-insights/)并通过逐步教程来了解更多。
+前往 **Performance insights** 面板的[文档](/docs/devtools/performance-insights/)并通过教程来逐步了解更多内容。
 
 <!-- This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements. -->
 这是一项预览功能，可帮助 Web 开发人员（尤其是非性能专家）识别和修复潜在的性能问题。 我们的团队正在积极开发此功能，并期待获得您的[反馈](https://crbug.com/1270700) 以进一步改进。
@@ -53,7 +53,7 @@ Chromium 议题: [1270700](https://crbug.com/1270700)
 ## 新的模拟浅色和深色主题的快捷方式 {: #emulation }
 
 <!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-您现在可以在**样式**边栏中利用新的快捷方式更快速地模拟浅色和深色主题（CSS 媒体功能 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)）。
+您现在可以在**样式**边栏中利用新的快捷方式来更快速地模拟浅色和深色主题（CSS 媒体功能 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)）。
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 在此之前，在**渲染**标签页中[模拟主题](/docs/devtools/rendering/emulate-css/)需要更多步骤。
@@ -69,13 +69,13 @@ Chromium 议题: [1314299](https://crbug.com/1314299)
 ## 提升网络预览标签页的安全性 {: #network-preview }
 
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
-DevTools 现在在**网络**面板中的**预览**标签页应用了内容安全政策（CSP）。
+**网络**面板中的**预览**标签页现在应用了内容安全政策（CSP）。
 
 <!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
 例如，第一个屏幕截图显示了一个包含[混合内容](https://web.dev/what-is-mixed-content/)的页面。该页面通过安全的 HTTPS 连接加载，但样式表通过不安全的 HTTP 连接加载。
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
-浏览器默认阻止了样式表请求。但是，当您通过**网络**面板中的**预览**标签页打开页面时，样式表此前并没有被阻止（因此背景变成了红色）。现在像您期望的那样，该样式表被阻止了（第二个屏幕截图）。
+浏览器默认阻止样式表请求。但是，当您通过**网络**面板中的**预览**标签页打开页面时，样式表此前并没有被阻止（因此背景变成了红色）。现在像您期望的那样，该样式表被阻止了（第二个屏幕截图）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="提升网络预览标签页的安全性", width="800", height="488" %}
 
@@ -168,7 +168,7 @@ Chromium 议题: [1024156](https://crbug.com/1024156)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## 其它亮点 {: #misc }
+## 其它的更新 {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
 以下是此版本中一些值得注意的修复：
