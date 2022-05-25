@@ -70,7 +70,7 @@ Simple properties are pairs of `<name>: <value>`.
 Collapsible ({% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tFA9uWBcDgv8NNS1FlRm.svg", alt="Arrow right.", width="20", height="20" %}) properties are objects `{}` or arrays `[]`.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/p4tuMj2RjFpieyANV7s1.png", alt="Collapsible properties.", width="800", height="437" %}
 
-For more information on diagnosing objects, see [Console]().
+For more information on inspecting JavaScript objects, see [Inspect object properties](/docs/devtools/console/reference/#inspect-object-properties).
 
 ### Properties that correspond to DOM nodes {: #dom-nodes }
 
@@ -87,7 +87,7 @@ DevTools sorts own properties first to make them easier to spot.
 
 ### Enumerable and non-enumerable properties {: #enumerable-and-non-enumerable }
 
-Enumerable properties are bright in color. Non-enumerable ones are muted.
+Enumerable properties are bright in color. Non-enumerable properties are muted.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0KWrBdSyyBGzNtVfkbk.png", alt="Enumerable and non-enumerable properties.", width="800", height="335" %}
 Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
 
@@ -99,4 +99,4 @@ Methods are marked with an *`f ()`*.
 For more information on debugging methods and functions, see [Scope]().
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
-[2]: https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots
+

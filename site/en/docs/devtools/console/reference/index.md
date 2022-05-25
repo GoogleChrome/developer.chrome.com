@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2019-04-18
-#updated: YYYY-MM-DD
+updated: 2022-05-25
 description:
   "A comprehensive reference on every feature and behavior related to the Console UI in Chrome
   DevTools."
@@ -266,9 +266,71 @@ to tweak the ad's DOM. To do this, you first need to select the ad's browsing co
 
 **Figure 20**. Selecting a different JavaScript context.
 
-## Inspect object properties {: #inspect-objects }
+## Inspect object properties {: #inspect-object-properties }
 
+The **Console** can display an interactive list of properties of an JavaScript object you specify.
 
+To browse the list, type the object name into the **Console** and press <kbd>Enter</kbd>.
+
+For information on DOM objects, see [View the properties of DOM objects](/docs/devtools/dom/properties/).
+
+For more information on functions, see [Scopes]().
+
+### Spot own and inherited properties {: #own-properties }
+
+The console sorts own object properties first and highlights them in bold font.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2F9FCRzbXchmgxgeNCjb.png", alt="Displaying object properties.", width="800", height="375" %}
+
+Properties inherited from the prototype chain are in regular font. The **Console** displays them on the object itself by evaluating the corresponding native accessors of [built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9mBq20PzTJfmsj9PWoXN.png", alt="Displaying inherited properties.", width="800", height="681" %}
+
+### Spot enumerable and non-enumerable properties {: #enumerable-properties }
+
+Enumerable properties are bright in color. Non-enumerable properties are muted.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qNr0GSzHF1sAV3hjyqb7.png", alt="Enumerable and non-enumerable properties.", width="800", height="361" %}
+Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
+
+### Spot private properties of class instances {: #private-properties }
+
+The **Console** designates private properties of class instances with a `#`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sAotDs0veLSGWr6J4ZRG.png", alt="Private property of a class instance.", width="800", height="514" %}
+
+### Inspect internal JavaScript properties {: #inspect-internal-properties }
+
+Borrowing the [ECMAScript notation](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots), the **Console** encloses some properties internal to JavaScript in double square brackets. You can't interact with such properties in your code. However, it might be useful to inspect them.
+
+You might see the following internal properties on different objects:
+
+- Any object has a`[[Prototype]]`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UiiwMcouRB8PZasbiKhG.png", alt="Object prototype.", width="800", height="667" %}
+- Primitive wrappers have a `[[PrimitiveValue]]` property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jbmea0tvK85vSdwg3ZDV.png", alt="Primitive values.", width="800", height="553" %}
+- `ArrayBuffer` objects have the following:
+   - [`[[Int8Array]]`, `[[Uint8Array]]`, `[[Int16Array]]`, `[[Int32Array]]`][40]
+   - [`[[ArrayBufferByteLength]]`, `[[ArrayBufferData]]`][41]
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lm75hKTWdO2tJfnbLVEY.png", alt="ArrayBuffer and view objects.", width="800", height="735" %}
+   {% Aside 'gotchas' %}
+   To [inspect a JavaScripts ArrayBuffer](/docs/devtools/memory-inspector/) that a view object refers to, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/owgvsrFODHWRRAhbIwfT.svg", alt="Memory icon.", width="20", height="20" %} button.
+   {% endAside %}
+- `WebAssembly.Memory` objects have a `[[WebAssemblyMemory]]` property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DKbH651INnLPj4IZhhbp.png", alt="WebAssemblyMemory object.", width="800", height="562" %}
+- [Keyed collections](https://tc39.es/ecma262/#sec-keyed-collections) (Maps and Sets) have an `[[Entries]]` property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PBHT8RBNIVA6iWrBQCz9.png", alt="Keyed collections", width="800", height="637" %}
+- `Promise` objects have the following properties:
+   - [`[[PromiseState]]`][43]: pending, fulfilled, or rejected
+   - [`[[PromiseResult]]`][43]: `undefined` if pending, `<value>` if fulfilled, `<reason>` if rejected
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UzW9neGj5VpHaisjkkRb.png", alt="Promise object.", width="800", height="461" %}
+- `Proxy` objects have the following properties: [[[Handler]], [[Target]], and [[isRevoked]]][42].
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/t0kVs0acn6n7T53eZHHF.png", alt="Proxy object.", width="800", height="542" %}
+
+### Inspect functions {: #inspect-functions }
+
+In JavaScript, functions are also objects and they have properties as well. However, if you type a function name into the **Console**, DevTools calls it. Instead, to view function properties, use the [console.dir()](/docs/devtools/console/api/#dir) command.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/skX6B0t9ht7jNvem6YZ6.png", alt="Inspecting properties of a function.", width="800", height="613" %}
 
 ## Clear the Console {: #clear }
 
@@ -313,3 +375,7 @@ You can use any of the following workflows to clear the Console:
 [30]: #settings
 [31]: #settings
 [32]: https://developer.mozilla.org/docs/Glossary/Browsing_context
+[40]: https://tc39.es/ecma262/#table-the-typedarray-constructors
+[41]: https://tc39.es/ecma262/#sec-properties-of-the-arraybuffer-instances
+[42]: https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots
+[43]: https://tc39.es/ecma262/#sec-properties-of-the-promise-prototype-object
