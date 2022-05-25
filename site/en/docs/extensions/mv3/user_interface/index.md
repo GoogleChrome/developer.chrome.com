@@ -485,7 +485,7 @@ To use the [Notifications API][api-notif], you must declare the `"notifications"
 the manifest.
 
 ```json/5
-//manifest.json
+// manifest.json
 { 
   "name": "Drink Water Event Popup",
 ...
@@ -569,8 +569,8 @@ Located in `_locales/es/messages.json`:
 
 {% endColumns %}
 
-Specify the name of the message in the `"default_title"` field of the manifest. The `"default_locale"` field must be
-defined.
+Specify the name of the message in the `"default_title"` field of the manifest. The
+`"default_locale"` field must be defined.
 
 ```json
 // manifest.json
