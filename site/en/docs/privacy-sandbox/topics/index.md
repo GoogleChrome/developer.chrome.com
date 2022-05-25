@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-05-24
+updated: 2022-05-25
 authors:
   - samdutton
 ---
@@ -497,12 +497,6 @@ since there is not enough browsing history (on sites that observe topics) to pro
 
 The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for
 which a topic was observed.
-
-{% Aside %}
-Topics inference is not completely deterministic: for each site observed, there is a
-[5% chance](https://github.com/patcg-individual-drafts/topics#:~:text=5%%20chance) of a random topic being
-provided.
-{% endAside %}
 
 #### View topics inferred for hostnames {: #view-inferred-topics}
 
