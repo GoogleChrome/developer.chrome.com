@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Modern client-side routing: the Navigation API'
+title: 'Modern client-side routing: the App History API'
 subhead: 'Standardizing client-side routing through a brand new API which completely overhauls building single-page applications.'
 authors:
   - samthor
@@ -8,7 +8,7 @@ date: 2021-08-25
 updated: 2021-09-20
 hero: image/QMjXarRXcMarxQddwrEdPvHVM242/aDcKXxmGtrMVmwZK43Ta.jpg
 alt: 'Sculpture adorning the General Post Office, Sydney, Australia'
-description: 'Learn about the Navigation API, a new API which adds improved functionality to build single-page applications.'
+description: 'Learn about the App History API, a new API which adds improved functionality to build single-page applications.'
 tags:
   - capabilities
 ---
@@ -16,22 +16,22 @@ tags:
 Single-page applications, or SPAs, are defined by a core feature: dynamically rewriting their content as the user interacts with the site, instead of the default method of loading entirely new pages from the server.
 
 While SPAs have been able to bring you this feature via the History API (or in limited cases, by adjusting the site's #hash part), it's a [clunky API][clunky-history-api] developed long-before SPAs were the norm—and the web is crying out for a completely new approach.
-The Navigation API is a proposed API that completely overhauls this space, rather than trying to simply patch History API's rough edges.
+The App History API is a proposed API that completely overhauls this space, rather than trying to simply patch History API's rough edges.
 (For example, [Scroll Restoration][scroll-restoration] patched the History API rather than trying to reinvent it.)
 
 {% Aside %}
 
-The Navigation API is currently in development, and available in Chrome 95 and beyond behind the "Experimental Web Platform features" flag.
+The App History API is currently in development, and available in Chrome 95 and beyond behind the "Experimental Web Platform features" flag.
 [Check out a demo here][demo].
 
 {% endAside %}
 
-This post describes the Navigation API at a high level.
+This post describes the App History API at a high level.
 If you'd like to read the technical proposal, [check out the Draft Report in the WICG repository][wicg-report].
 
 ## Example Usage
 
-To use the Navigation API, start by adding a "navigate" handler for the `NavigationNavigationEvent` event on the global `Navigation` object.
+To use the App History API, start by adding a "navigate" handler for the `AppHistoryNavigationEvent` event on the global `appHistory` object.
 This event is fundamentally _centralized_: it will fire for all types of navigations, whether because the user performed an action (such as clicking a link, submitting a form, or going back and forward) or when navigation is triggered programmatically (i.e., via your site's code).
 In most cases, it lets your code override the browser's default behavior for that action.
 For SPAs, that likely means keeping the user on the same page and loading or changing the site's content.
@@ -43,11 +43,11 @@ Read on to find out more!
 
 {% endAside %}
 
-The specific `NavigationNavigationEvent` passed to the "navigate" event handler contains information about the navigation, such as the destination URL, and allows you to respond to the navigation in one centralized place.
+The specific `AppHistoryNavigationEvent` passed to the "navigate" event handler contains information about the navigation, such as the destination URL, and allows you to respond to the navigation in one centralized place.
 A basic implementation for the handler, on example.com, could look like this:
 
 ```js
-navigation.addEventListener('navigate', event => {
+appHistory.addEventListener('navigate', event => {
   switch (event.destination.url) {
     case 'https://example.com/':
       event.transitionWhile(loadIndexPage());
@@ -96,7 +96,7 @@ links.forEach(link => link.addEventListener('click', updatePage));
 This is fine, but not exhaustive.
 Links might come and go on your page, and they're not the only way users can navigate through pages.
 E.g., they may submit a form or even use an [image map].
-Your page might deal with these, but there's a long tail of possibilities which could just be simplified—something that the new Navigation API achieves.
+Your page might deal with these, but there's a long tail of possibilities which could just be simplified—something that the new App History API achieves.
 
 Personally, the History API often _feels_ like it could go some way to help with these possibilities.
 However, it really only has two surface areas: responding if the user presses Back or Forward in their browser, plus pushing and replacing URLs.
@@ -116,14 +116,14 @@ After the "navigate" handler completes normally, the URL being navigated to will
 This happens immediately, even if you've called `transitionWhile()`.
 But if you have called it with a `Promise`, one of two things will happen:
 
-- If that succeeds (or you did not call `transitionWhile()`), the Navigation API will fire "navigatesuccess" with an `Event`.
+- If that succeeds (or you did not call `transitionWhile()`), the App History API will fire "navigatesuccess" with an `Event`.
 - If the `Promise` rejects, the API will fire "navigateerror" with an `ErrorEvent`.
 
 These events allow your code to deal with success or failure in a centralized way.
 For example, you might deal with success by hiding a previously displayed progress indicator, like this:
 
 ```js
-navigation.addEventListener('navigatesuccess', event => {
+appHistory.addEventListener('navigatesuccess', event => {
   loadingIndicator.hidden = true;
 });
 ```
@@ -131,7 +131,7 @@ navigation.addEventListener('navigatesuccess', event => {
 Or you might show an error message on failure (i.e., if the `Promise` passed to `transitionWhile` rejected):
 
 ```js
-navigation.addEventListener('navigateerror', event => {
+appHistory.addEventListener('navigateerror', event => {
   loadingIndicator.hidden = true; // also hide indicator
   showMessage(`Failed to load page: ${event.message}`);
 });
@@ -143,21 +143,21 @@ You can simply `await fetch()` knowing that if the network is unavailable, the e
 ### Transition Context and Rollback
 
 During the period between the initial "navigate" event and the exact time these terminal events fire, there'll also be an object available that gives some context on the navigation that's occurring.
-It's available at `navigation.transition`.
+It's available at `appHistory.transition`.
 You're able to use this object to _rollback_ this navigation, pretending as if the navigation never occurred.
 Your site might choose to do this in response to a user action, or perhaps if the loaded URL is invalid and should never appear in the user's history.
 For example:
 
 ```js
-navigation.addEventListener('navigateerror', event => {
+appHistory.addEventListener('navigateerror', event => {
   const attemptedLoadURL = location.href;
-  const previousURL = navigation.transition.from;
+  const previousURL = appHistory.transition.from;
   console.warn('Failed to load', attemptedLoadURL, 'returning to', previousURL);
-  navigation.transition.rollback();
+  appHistory.transition.rollback();
 });
 ```
 
-Like many of the features in the Navigation API, this call to `rollback()` is a semantic action that implies meaning to the browser.
+Like many of the features in the App History API, this call to `rollback()` is a semantic action that implies meaning to the browser.
 If a clicked `<a href>` fails to load and rolls back, the URL won't appear in the user's session history (for Forward or Back navigation).
 
 {% Aside %}
@@ -183,7 +183,7 @@ By passing the `signal` to it, the fetch will be cancelled if the user decides t
 Take a look:
 
 ```js
-navigation.addEventListener('navigate', event => {
+appHistory.addEventListener('navigate', event => {
   if (isCatsUrl(event.destination.url)) {
     const method = async () => {
       const request = await fetch('/cat-memes.json', {signal: event.signal});
@@ -197,15 +197,15 @@ navigation.addEventListener('navigate', event => {
 });
 ```
 
-## Navigation Entries
+## App History Entries
 
-The `Navigation` interface provides the current entry through its `current` property.
+The `AppHistory` interface provides the current entry through its `current` property.
 This is an object which describes where the user is right now.
 This entry includes the current URL, metadata that can be used to identify this entry over time, and developer-provided state.
 
 {% Aside %}
 
-Even sites that do not explicitly use the Navigation API will have a "current entry", and the entry is even updated or replaced if you use the older methods in the History API, `history.pushState()` and `history.replaceState()`, respectively.
+Even sites that do not explicitly use the App History API will have a "current entry", and the entry is even updated or replaced if you use the older methods in the History API, `history.pushState()` and `history.replaceState()`, respectively.
 
 {% endAside %}
 
@@ -214,55 +214,55 @@ This key remains the same even if the current entry's URL or state changes.
 It's still in the same slot.
 Conversely, if a user presses Back and then re-opens the same page, `key` will change as this new entry creates a new slot.
 
-To a developer, "key" is useful because the Navigation API allows you to directly navigate the user to an entry with a matching key.
+To a developer, "key" is useful because the App History API allows you to directly navigate the user to an entry with a matching key.
 You're able to hold onto it, even in the states of other entries, in order to easily jump between pages.
 
 ```js
 // On JS startup, get the key of the first loaded page
 // so the user can always go back there.
-const {key} = navigation.current;
-backToHomeButton.onclick = () => navigation.goTo(key);
+const {key} = appHistory.current;
+backToHomeButton.onclick = () => appHistory.goTo(key);
 
 // Navigate away, but the button will always work.
-await navigation.navigate('/another_url').finished;
+await appHistory.navigate('/another_url').finished;
 ```
 
 ### State
 
-The Navigation API surfaces a notion of "state", which is developer-provided information that is stored persistently on the current history entry, but which isn't directly visible to the user.
+The App History API surfaces a notion of "state", which is developer-provided information that is stored persistently on the current history entry, but which isn't directly visible to the user.
 This is extremely similar to but improved from `history.state` in the History API.
 
-In the Navigation API, you can call the `NavigationEntry.getState()` method of the current entry (or any entry) to return a copy of its state.
+In the App History API, you can call the `AppHistoryEntry.getState()` method of the current entry (or any entry) to return a copy of its state.
 By default, this will be `undefined`.
-You can synchronously set the state for the current `NavigationEntry` by calling:
+You can synchronously set the state for the current `AppHistoryEntry` by calling:
 
 ```js
-navigation.updateCurrent({state: something});
+appHistory.updateCurrent({state: something});
 ```
 
-You can also set the state when navigating programmatically with `navigation.navigate()` (this is [described below](#programmatic-navigation)).
+You can also set the state when navigating programmatically with `appHistory.navigate()` (this is [described below](#programmatic-navigation)).
 
-In the Navigation API, the state returned from `.getState()` is a copy of the previously set state.
+In the App History API, the state returned from `.getState()` is a copy of the previously set state.
 If you modify it, the stored version won't also change.
 For example:
 
 ```js
-navigation.updateCurrent({state: {count: 1}});
+appHistory.updateCurrent({state: {count: 1}});
 
-const state = navigation.current.getState();
+const state = appHistory.current.getState();
 state.count = 2;
 
-console.info(navigation.current.getState()); // count will still be one
+console.info(appHistory.current.getState()); // count will still be one
 ```
 
 ### Access All Entries
 
 The "current entry" is not all, though.
-The API also provides a way to access the entire list of entries that a user has navigated through while using your site via its `navigation.entries()` call, which returns a snapshot array of entries.
+The API also provides a way to access the entire list of entries that a user has navigated through while using your site via its `appHistory.entries()` call, which returns a snapshot array of entries.
 This could be used to, e.g., show a different UI based on how the user navigated to a certain page, or just to look back at the previous URLs or their states.
 This is impossible with the current History API.
 
-It's possible to handle events on `NavigationEntry`.
+It's possible to handle events on `AppHistoryEntry`.
 These events include "dispose" (if the entry is no longer accessible), along with "navigateto" and "navigatefrom".
 For example, you might add a "navigatefrom" handler to clean up some state when the user leaves a specific page (either by forward navigation or their Back or Forward button).
 
@@ -277,24 +277,24 @@ While for many sites the most common case will be when the user clicks a `<a hre
 
 First is programmatic navigation, where navigation is caused by a method call inside your client-side code.
 
-You can call `navigation.navigate('/another_page')` from anywhere in your code to cause a navigation.
+You can call `appHistory.navigate('/another_page')` from anywhere in your code to cause a navigation.
 This will be handled by the centralized event handler registered on the "navigate" handler, and your centralized handler will be called synchronously.
 
 This is intended as an improved aggregation of older methods like `location.assign()` and friends, plus the History API's methods `pushState()` and `replacestate()`.
 
 {% Aside %}
 
-These older programmatic methods for changing the URL are all still supported with the Navigation API and now fire the "navigate" handler.
+These older programmatic methods for changing the URL are all still supported with the App History API and now fire the "navigate" handler.
 That is, they're also handled centrally.
 Their signatures aren't modified in any way (i.e., they won't now return a `Promise`) by this new specification, and we imagine that in an older codebase, they'll be replaced by calls to `.navigate()` over time.
 
 {% endAside %}
 
-The `navigation.navigate()` method returns a object which contains two `Promise` instances in `{ committed, finished }`.
-This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
+The `AppHistory.navigate()` method returns a object which contains two `Promise` instances in `{ committed, finished }`.
+This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `AppHistoryEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
 
 The `navigate` method also has an optional options object which controls how the navigation will occur.
-These options will allow you to `replace` the current URL, set a new immutable `state` (to be made available via `NavigationEntry.getState()`), and configure `NavigationNavigateEvent.info`.
+These options will allow you to `replace` the current URL, set a new immutable `state` (to be made available via `AppHistoryEntry.getState()`), and configure `AppHistoryNavigateEvent.info`.
 
 The `info` property is worth calling out.
 It allows you to pass transient information about this specific navigation event into the "navigate" handler.
@@ -316,21 +316,21 @@ In fact, it will always be `undefined` in those cases.
   </figcaption>
 </figure>
 
-The `Navigation` interface also has a number of other navigation methods, all which return an object containing `{ committed, finished }`.
+The `AppHistory` interface also has a number of other navigation methods, all which return an object containing `{ committed, finished }`.
 I've already mentioned `goTo()` (which accepts a `key` that denotes a specific entry in the user's history) and `navigate()`.
 It also includes `back()`, `forward()` and `reload()`.
 These methods are all handled—just like `navigate()`—by the centralized "navigate" event handler.
 
 ### Form Submissions
 
-Secondly, HTML `<form>` submission via POST is a special type of navigation, and the Navigation API can intercept it.
+Secondly, HTML `<form>` submission via POST is a special type of navigation, and the App History API can intercept it.
 While it includes an additional payload, the navigation is still handled centrally by the "navigate" handler.
 
-Form submission can be detected by looking for the `formData` property on the `NavigationNavigateEvent`.
+Form submission can be detected by looking for the `formData` property on the `AppHistoryNavigateEvent`.
 Here's an example that simply turns any form submission into one which stays on the current page via `fetch()`:
 
 ```js
-navigation.addEventListener('navigate', event => {
+appHistory.addEventListener('navigate', event => {
   if (event.formData && event.canTransition) {
     // User submitted a POST form to a same-domain URL
     // (If canTransition is false, the event is just informative:
@@ -352,14 +352,14 @@ navigation.addEventListener('navigate', event => {
 
 ## What's missing?
 
-Despite the centralized nature of the "navigate" event handler, the current Navigation API specification doesn't trigger "navigate" on a page's first load.
+Despite the centralized nature of the "navigate" event handler, the current App History API specification doesn't trigger "navigate" on a page's first load.
 And for sites which use [Server Side Rendering][ssr-definition] (SSR) for all states, this might be fine—your server could return the correct initial state, which is the fastest way to get content to your users.
 But sites that leverage client-side code to create their pages may need to create an additional function to initialize their page.
 This is up for discussion [in the app-history repo][initial-event-discuss].
 
-Another intentional design choice of the Navigation API is that it operates only within a single frame—that is, the top-level page, or a single specific `<iframe>`.
+Another intentional design choice of the App History API is that it operates only within a single frame—that is, the top-level page, or a single specific `<iframe>`.
 This has a number of interesting implications that are [further documented in the spec][backforward-note], but in practice, will reduce developer confusion.
-The previous History API has a number of confusing edge cases, like support for frames, and the reimagined Navigation API handles these edge cases from the get-go.
+The previous History API has a number of confusing edge cases, like support for frames, and the reimagined App History API handles these edge cases from the get-go.
 
 {% Aside %}
 
@@ -381,16 +381,16 @@ E.g., as a developer, I could:
 This could be perfect for temporary modals or interstitals: the new URL is something that a user can use the Back gesture to leave from, but they then cannot accidentaly go Forward to open it again (because the entry has been removed).
 This is just not possible with the current History API.
 
-## Try the Navigation API
+## Try the App History API
 
-You can try the Navigation API in Chrome 95 and above by enabling the "Experimental Web Platform features" flag.
+You can try the App History API in Chrome 95 and above by enabling the "Experimental Web Platform features" flag.
 You can also [try out a demo][demo] by [Domenic Denicola][domenic].
 
 We're especially eager for feedback on issues labelled with ["feedback wanted"][feedback-wanted] on GitHub.
 You can also check out the repo and spec more generally at [https://github.com/WICG/app-history][repo], including filing new issues.
 
 While the classic History API appears straightforward, it's not very well-defined and has [a large number of issues][history-api-issues] around corner cases and how it has been implemented differently across browsers.
-We hope you consider providing feedback on the new Navigation API.
+We hope you consider providing feedback on the new App History API.
 
 ## References
 
@@ -406,7 +406,7 @@ Thanks to [Thomas Steiner][thomassteiner], [Domenic Denicola][domenic] and Nate 
 Hero image from [Unsplash][hero-image], by [Jeremy Zero][hero-image-by].
 
 [clunky-history-api]: https://html5doctor.com/interview-with-ian-hickson-html-editor/#:~:text=My%20biggest%20mistake%E2%80%A6there%20are%20so%20many%20to%20choose%20from!%20pushState()%20is%20my%20favourite%20mistake
-[scroll-restoration]: /blog/history-api-scroll-restoration/
+[scroll-restoration]: https://developer.chrome.com/blog/history-api-scroll-restoration/
 [image map]: https://developer.mozilla.org/docs/Web/HTML/Element/map
 [back-forward-discuss]: https://github.com/WICG/app-history/issues/32
 [loading-crbug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1241202
