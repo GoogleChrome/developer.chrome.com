@@ -282,7 +282,7 @@ The console sorts own object properties first and highlights them in bold font.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2F9FCRzbXchmgxgeNCjb.png", alt="Displaying object properties.", width="800", height="375" %}
 
-Properties inherited from the prototype chain are in regular font. The **Console** displays them on the object itself by evaluating the corresponding native accessors of [built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+Properties inherited from the prototype chain are in regular font. The **Console** displays them on the object itself by evaluating the corresponding native accessors of [built-in objects](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9mBq20PzTJfmsj9PWoXN.png", alt="Displaying inherited properties.", width="800", height="681" %}
 

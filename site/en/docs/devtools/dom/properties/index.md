@@ -99,4 +99,4 @@ Methods are marked with an *`f ()`*.
 
 For more information on debugging methods and functions, see [Scope]().
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[1]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction
