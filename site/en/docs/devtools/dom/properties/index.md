@@ -88,6 +88,7 @@ DevTools sorts own properties first to make them easier to spot.
 ### Enumerable and non-enumerable properties {: #enumerable-and-non-enumerable }
 
 Enumerable properties are bright in color. Non-enumerable properties are muted.
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0KWrBdSyyBGzNtVfkbk.png", alt="Enumerable and non-enumerable properties.", width="800", height="335" %}
 Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
 
@@ -99,4 +100,3 @@ Methods are marked with an *`f ()`*.
 For more information on debugging methods and functions, see [Scope]().
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
-
