@@ -34,6 +34,6 @@ The Battery Status API is [no longer supported on insecure contexts](https://chr
 
 ## Remove <param> element
 
-Given the removal of plugins from the web platform, and the relative lack of use of <param>, it is being [removed from the web platform](https://chromestatus.com/feature/6283184588193792).
+Given the removal of plugins from the web platform, and the relative lack of use of `<param>`, it is being [removed from the web platform](https://chromestatus.com/feature/6283184588193792).
 
 {% include 'partials/deprecations-policy.md' %}
