@@ -18,7 +18,7 @@ tags:
 Chrome 103 beta was released on May 26, 2022 and is expected to become the
 stable version in late June, 2022.
 
-## Block External Protocol in Sandboxed iframe
+## Block external protocol in sandboxed iframes
 
 Sandboxed iframes are not blocked from opening external applications. Currently, developers sandbox untrusted content and block user navigation. Blocking probably should have also included links to external apps or to the Play store. [This has now been fixed](https://chromestatus.com/feature/5680742077038592).
 
