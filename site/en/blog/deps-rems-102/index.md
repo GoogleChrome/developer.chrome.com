@@ -4,7 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 102 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
-hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/GLywh0GpxQEByxtmCaVY.png'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Yj71FJ6FU94BnscmhmVy.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
