@@ -9,6 +9,7 @@ date: 2022-05-27
 tags:
   - payments
   - experiment
+  - spc
 ---
 
 To use Secure Payment Confirmation (SPC) in a transaction, the customer must

@@ -9,6 +9,7 @@ date: 2022-05-27
 tags:
   - payments
   - experiment
+  - spc
 ---
 
 Merchants can use Secure Payment Confirmation (SPC) as part of a strong customer authentication (SCA) process for a given credit card or bank account. WebAuthn performs the authentication (frequently through biometrics). WebAuthn must be registered in advance, which you can learn about in [Register a Secure Payment Confirmation](/articles/register-secure-payment-confirmation).

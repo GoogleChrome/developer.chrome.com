@@ -9,6 +9,7 @@ date: 2022-05-27
 tags:
   - payments
   - experiment
+  - spc
 ---
 
 Secure Payment Confirmation (SPC) is a
