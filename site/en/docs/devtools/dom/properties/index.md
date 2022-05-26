@@ -97,6 +97,6 @@ Enumerable properties can be iterated over with the `for … in` loop or `Object
 Methods are marked with an *`f ()`*.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KKCw924Jst5jW1qmPnHa.png", alt="Method.", width="800", height="402" %}
 
-For more information on debugging methods and functions, see [Scope]().
+For more information on functions, see [Inspect functions](/docs/devtools/console/reference/#inspect-functions) via the **Console**.
 
 [1]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction
