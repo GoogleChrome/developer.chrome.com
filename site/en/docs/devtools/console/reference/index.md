@@ -288,7 +288,7 @@ Properties inherited from the prototype chain are in regular font. The **Console
 
 By default, DevTools doesn't evaluate accessors you create.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JhB3574SgvRaQ0ybhhkx.png", alt="Custom accessor.", width="800", height="506" %}
-To evaluate a custom accessor on an object, click the `(...)`.
+To evaluate a custom accessor on an object, click `(...)`.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Bzbdz122FdsNFjz3ajpe.png", alt="Evaluated custom accessor.", width="800", height="382" %}
 
 ### Spot enumerable and non-enumerable properties {: #enumerable-properties }
@@ -333,7 +333,9 @@ You might see the following internal properties on different objects:
 
 ### Inspect functions {: #inspect-functions }
 
-In JavaScript, functions are also objects with properties. However, if you type a function name into the **Console**, DevTools calls it instead of displaying its properties. To view function properties, use the [console.dir()](/docs/devtools/console/api/#dir) command.
+In JavaScript, functions are also objects with properties. However, if you type a function name into the **Console**, DevTools calls it instead of displaying its properties.
+
+To view function properties internal to JavaScript, use the [console.dir()](/docs/devtools/console/api/#dir) command.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/skX6B0t9ht7jNvem6YZ6.png", alt="Inspecting properties of a function.", width="800", height="613" %}
 
@@ -348,7 +350,7 @@ Functions have the following properties:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wIj0KSmY1J3ONQQ023Uw.png", alt="Bound function.", width="800", height="663" %}
 - [Generator functions][45] are marked with a `[[IsGenerator]]: true` property.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CFTVrDADzeA5oW3u3n2s.png", alt="Generator function.", width="800", height="568" %}
-   Generators return iterator objects and they have following properties:
+- Generators return iterator objects and they have following properties:
    - `[[GeneratorLocation]]`. A link to a line with the generator definition in a source file.
    - `[[GeneratorState]]`: `suspended`, `closed`, or `running.`
    - `[[GeneratorFunction]]`. The generator that returned the object.
