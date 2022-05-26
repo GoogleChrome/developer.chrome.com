@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/article-post.njk'
+layout: 'layouts/blog-post.njk'
 title: Authenticate with Secure Payment Confirmation
 description: >
    Implement authentication protocols for SPC, to validate customer transactions.

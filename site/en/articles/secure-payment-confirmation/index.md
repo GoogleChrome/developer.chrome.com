@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/article-post.njk'
+layout: 'layouts/blog-post.njk'
 title: Secure Payment Confirmation
 description: >
    High-level overview of a proposed web standard to allow for secure authentication with payment service providers.

@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/article-post.njk'
+layout: 'layouts/blog-post.njk'
 title: Register a Secure Payment Confirmation
 description: >
    Implement the registration protocols and flow for SPC, so customers can strongly authenticate against card issuers or banks directly from a merchant.
