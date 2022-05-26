@@ -28,7 +28,7 @@ Sites that need navigation can add the following values to the `<iframe>` elemen
 * `allow-top-navigation`
 * `allow-top-navigation-with-user-activation`
 
-## Remove Battery Status API on Insecure Origins
+## Remove Battery Status API on insecure origins
 
 The Battery Status API is [no longer supported on insecure contexts](https://chromestatus.com/feature/4878376799043584), specifically HTTP pages and HTTPS iframes embedded in HTTP pages. This is being removed in accordance with our policy of [deprecating powerful features on insecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins), This also follows [a spec change](https://github.com/w3c/battery/issues/15).
 
