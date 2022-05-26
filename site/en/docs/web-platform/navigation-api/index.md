@@ -5,7 +5,7 @@ subhead: 'Standardizing client-side routing through a brand new API which comple
 authors:
   - samthor
 date: 2021-08-25
-updated: 2021-09-20
+updated: 2022-05-26
 hero: image/QMjXarRXcMarxQddwrEdPvHVM242/aDcKXxmGtrMVmwZK43Ta.jpg
 alt: 'Sculpture adorning the General Post Office, Sydney, Australia'
 description: 'Learn about the Navigation API, a new API which adds improved functionality to build single-page applications.'
@@ -56,20 +56,20 @@ navigation.addEventListener('navigate', navigateEvent => {
 
 You can intercept the navigation in one of two ways:
 
-- by calling `transitionWhile()` (as described above) to handle the navigation
-- by calling `preventDefault()`, which can cancel the navigation completely
+- Calling `transitionWhile()` (as described above) to handle the navigation.
+- Calling `preventDefault()`, which can cancel the navigation completely.
 
 This example calls `transitionWhile()` on the event with a promise generated from async functions.
 By calling this method, the browser knows that your code will configure the next state of your site.
 This will create a transition object, `navigation.transition`, which other code can use to track the progress of the transition.
 
 Both `transitionWhile()` and `preventDefault()` are usually allowed, but have cases where they're unable to be called.
-You can't handle navigations via `transitionWhile()` if the navigation is a cross-origin navigation: e.g., if it's leaving your domain.
+You can't handle navigations via `transitionWhile()` if the navigation is a cross-origin navigation, for example, if it's leaving your domain.
 And you can't cancel a navigation via `preventDefault()` if the user is pressing the Back or Forward buttons in their browser; you should not be able to trap your users on your site.
 (This is [being discussed on GitHub][back-forward-discuss].)
 
 Even if you can't stop or intercept the navigation itself, the "navigate" event will still fire.
-It's _informative_, so your code could, e.g., log an Analytics event to indicate that a user is leaving your site.
+It's _informative_, so your code could, for example, log an Analytics event to indicate that a user is leaving your site.
 
 ## Why add another event to the platform?
 
@@ -141,7 +141,7 @@ navigation.addEventListener('navigateerror', event => {
 ```
 
 The "navigateerror" event listener, which receives an `ErrorEvent`, is particularly handy as it's guaranteed to receive any errors from your code that's setting up a new page.
-You can simply `await fetch()` knowing that if the network is unavailable, the error will eventually be routed to "navigateerror".
+You can simply `await fetch()` knowing that if the network is unavailable, the error will eventually be routed to `"navigateerror"`.
 
 ### Abort Signals
 
@@ -388,8 +388,8 @@ Hero image from [Unsplash][hero-image], by [Jeremy Zero][hero-image-by].
 [image map]: https://developer.mozilla.org/docs/Web/HTML/Element/map
 [back-forward-discuss]: https://github.com/WICG/navigation-api/issues/32
 [loading-crbug]: https://bugs.chromium.org/p/chromium/issues/detail?id=1241202
-[abortable-fetch]: https://developers.google.com/web/updates/2017/09/abortable-fetch
-[ssr-definition]: https://developers.google.com/web/updates/2019/02/rendering-on-the-web#terminology
+[abortable-fetch]: /blog/abortable-fetch/
+[ssr-definition]: https://web.dev/rendering-on-the-web/#terminology
 [initial-event-discuss]: https://github.com/WICG/navigation-api/issues/31
 [backforward-note]: https://github.com/WICG/navigation-api#warning-backforward-are-not-always-opposites
 [iframe-historyless]: https://github.com/whatwg/html/issues/6501
