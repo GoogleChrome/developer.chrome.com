@@ -24,10 +24,8 @@ The Navigation API is a proposed API that completely overhauls this space, rathe
 (For example, [Scroll Restoration][scroll-restoration] patched the History API rather than trying to reinvent it.)
 
 {% Aside %}
-
-The Navigation API is currently in development, and available in Chrome 95 and beyond behind the "Experimental Web Platform features" flag.
+The Navigation API launched in Chrome 102.
 [Check out a demo here][demo].
-
 {% endAside %}
 
 This post describes the Navigation API at a high level.
@@ -104,7 +102,7 @@ When your code calls `transitionWhile()` from within its "navigate" listener, it
 
 As such, this API introduces a semantic concept that the browser understands: an SPA navigation is currently occurring, over time, changing the document from a previous URL and state to a new one.
 This has a number of potential benefits, including accessibility: browsers can surface the beginning, end, or potential failure of a navigation.
-Chrome, for example, activates its native loading indicator, and allows the user to interact with the stop button. (This doesn't currently happen when the user navigates via the back/forward buttons, but that (will be fixed soon)[loading-crbug].)
+Chrome, for example, activates its native loading indicator, and allows the user to interact with the stop button. (This doesn't currently happen when the user navigates via the back/forward buttons, but that [will be fixed soon][loading-crbug].)
 
 ### Transition Success and Failure
 
@@ -112,10 +110,14 @@ After the "navigate" event completes, the URL being navigated to will take effec
 This happens immediately, even if you've called `transitionWhile()`.
 
 {% Aside 'caution' %}
-This means if there's a delay updating the page, there's a period where the old content is being displayed with the new URL. This can change the behavior of relative URLs (not just links, also other URLs like images and scripts), and other scripts that rely on the current history entry to represent current content (such as `location.href`). These issues are [being discussed on GitHub](https://github.com/WICG/navigation-api/issues/232).
+This means `navigation.currentEntry`, `location.href`, etc. will update immediately. This impacts things like relative URL resolution when fetching new data or loading new subresources.
+
+Many web and native applications immediately update the page with some sort of placeholder for the incoming content. But if you don't also immediately update the page's content, it will be out of sync with your application's programmatic view of the current entry and URL, which can be tricky.
+
+These issues are being [discussed on GitHub](https://github.com/WICG/navigation-api/issues/66).
 {% endAside %}
 
-When you pass a promise to `transitionWhile`, one of two things will happen:
+When you pass a promise to `transitionWhile()`, one of two things will happen:
 
 - If that `Promise` fulfills (or you did not call `transitionWhile()`), the Navigation API will fire "navigatesuccess" with an `Event`.
 - If that `Promise` rejects, the API will fire "navigateerror" with an `ErrorEvent`.
@@ -144,7 +146,7 @@ You can simply `await fetch()` knowing that if the network is unavailable, the e
 ### Abort Signals
 
 Since you're able to do asynchronous work while preparing a new page, it's possible that the transition your code is handling (to load a specific URL or state) might get preempted, or considered out-of-date.
-This might happen because the user just clicked on another link, or your code itself throws an error.
+This might happen because the user just clicked on another link, or your code performs another navigation.
 
 To deal with any of these possibilities, the event passed to the "navigate" listener contains a `signal` property, which is an `AbortSignal`.
 For more information see [Abortable fetch][abortable-fetch].
@@ -159,14 +161,14 @@ Take a look:
 ```js
 navigation.addEventListener('navigate', navigateEvent => {
   if (isCatsUrl(navigateEvent.destination.url)) {
-    const method = async () => {
+    const processNavigation = async () => {
       const request = await fetch('/cat-memes.json', {
         signal: navigateEvent.signal,
       });
       const json = await request.json();
       // TODO: do something with cat memes json
     };
-    navigateEvent.transitionWhile(method());
+    navigateEvent.transitionWhile(processNavigation());
   } else {
     // load some other page
   }
@@ -175,7 +177,7 @@ navigation.addEventListener('navigate', navigateEvent => {
 
 ## Navigation Entries
 
-`navigation.current` provides access to the current entry.
+`navigation.currentEntry` provides access to the current entry.
 This is an object which describes where the user is right now.
 This entry includes the current URL, metadata that can be used to identify this entry over time, and developer-provided state.
 
@@ -196,7 +198,7 @@ You're able to hold onto it, even in the states of other entries, in order to ea
 ```js
 // On JS startup, get the key of the first loaded page
 // so the user can always go back there.
-const {key} = navigation.current;
+const {key} = navigation.currentEntry;
 backToHomeButton.onclick = () => navigation.traverseTo(key);
 
 // Navigate away, but the button will always work.
@@ -211,11 +213,11 @@ This is extremely similar to, but improved from, `history.state` in the History 
 In the Navigation API, you can call the `.getState()` method of the current entry (or any entry) to return a copy of its state:
 
 ```js
-console.log(navigation.current.getState());
+console.log(navigation.currentEntry.getState());
 ```
 
 By default, this will be `undefined`.
-You can synchronously set the state for the current `NavigationEntry` by calling:
+You can synchronously set the state for the current `NavigationHistoryEntry` by calling:
 
 ```js
 navigation.updateCurrent({state: something});
@@ -230,10 +232,10 @@ For example:
 ```js
 navigation.updateCurrent({state: {count: 1}});
 
-const state = navigation.current.getState();
+const state = navigation.currentEntry.getState();
 state.count = 2;
 
-console.info(navigation.current.getState().count); // will still be one
+console.info(navigation.currentEntry.getState().count); // will still be one
 ```
 
 ### Access All Entries
@@ -243,7 +245,7 @@ The API also provides a way to access the entire list of entries that a user has
 This could be used to, e.g., show a different UI based on how the user navigated to a certain page, or just to look back at the previous URLs or their states.
 This is impossible with the current History API.
 
-You can also listen for a "dispose" event on individual `NavigationEntry`s, which is fired when the entry is no longer part of browser history. This can happen as part of general cleanup, but also happen when navigating. For example, if you traverse back 10 places, then navigate forwards, those 10 history entries will be disposed.
+You can also listen for a "dispose" event on individual `NavigationHistoryEntry`s, which is fired when the entry is no longer part of browser history. This can happen as part of general cleanup, but also happen when navigating. For example, if you traverse back 10 places, then navigate forwards, those 10 history entries will be disposed.
 
 ## Examples
 
@@ -270,14 +272,15 @@ Their signatures aren't modified in any way (i.e., they won't now return a `Prom
 {% endAside %}
 
 The `navigation.navigate()` method returns a object which contains two `Promise` instances in `{ committed, finished }`.
-This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
+This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationHistoryEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
 
-The `navigate` method also has an optional options object which controls how the navigation will occur.
-These options will allow you to `replace` the current URL, set a new immutable `state` (to be made available via the `.getState()` method on `NavigationEntry`s), and configure `navigateEvent.info`.
+The `navigate` method also has an options object, where you can set:
 
-The `info` property is worth calling out.
-It allows you to pass transient information about this specific navigation event into the "navigate" listener.
-This could be useful to, for example, denote a particular animation that causes the next page to appear.
+- `state`: the state for the new history entry, as available via the `.getState()` method on the `NavigationHistoryEntry`.
+- `history`: which can be set to `"replace"` to replace the current history entry.
+- `info`: an object to pass to the navigate event via `navigateEvent.info`.
+
+In particular, `info` could be useful to, for example, denote a particular animation that causes the next page to appear.
 (The alternative might be to set a global variable or include it as part of the #hash. Both options are a bit awkward.)
 Notably, this `info` won't be replayed if a user later causes navigation, e.g., via their Back and Forward buttons.
 In fact, it will always be `undefined` in those cases.
@@ -321,7 +324,7 @@ navigation.addEventListener('navigate', navigateEvent => {
         method: 'POST',
         body: navigateEvent.formData,
       });
-      // You could navigate again with {replace: true} to change the URL here,
+      // You could navigate again with {history: 'replace'} to change the URL here,
       // which might indicate "done"
     };
     navigateEvent.transitionWhile(submitToServer());
@@ -334,7 +337,6 @@ navigation.addEventListener('navigate', navigateEvent => {
 Despite the centralized nature of the "navigate" event listener, the current Navigation API specification doesn't trigger "navigate" on a page's first load.
 And for sites which use [Server Side Rendering][ssr-definition] (SSR) for all states, this might be fine—your server could return the correct initial state, which is the fastest way to get content to your users.
 But sites that leverage client-side code to create their pages may need to create an additional function to initialize their page.
-This is up for discussion [in the navigation-api repo][initial-event-discuss].
 
 Another intentional design choice of the Navigation API is that it operates only within a single frame—that is, the top-level page, or a single specific `<iframe>`.
 This has a number of interesting implications that are [further documented in the spec][backforward-note], but in practice, will reduce developer confusion.
@@ -362,11 +364,8 @@ This is just not possible with the current History API.
 
 ## Try the Navigation API
 
-You can try the Navigation API in Chrome 95 and above by enabling the "Experimental Web Platform features" flag.
+The Navigation API is available in Chrome 102 without flags.
 You can also [try out a demo][demo] by [Domenic Denicola][domenic].
-
-We're especially eager for feedback on issues labelled with ["feedback wanted"][feedback-wanted] on GitHub.
-You can also check out the repo and spec more generally at [https://github.com/WICG/navigation-api][repo], including filing new issues.
 
 While the classic History API appears straightforward, it's not very well-defined and has [a large number of issues][history-api-issues] around corner cases and how it has been implemented differently across browsers.
 We hope you consider providing feedback on the new Navigation API.
