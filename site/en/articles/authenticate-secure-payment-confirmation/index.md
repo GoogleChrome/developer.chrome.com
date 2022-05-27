@@ -8,7 +8,8 @@ authors:
 date: 2022-05-27
 tags:
   - payments
-  - experiment
+  - webauthn
+  - chrome-stable
   - spc
 ---
 
