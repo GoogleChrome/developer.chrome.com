@@ -263,9 +263,9 @@ allowing multiple other parties to register a conversion (attribution trigger).
 To prevent abuse, explicit reporting limitations have been added. Learn more in [Privacy protection changes](#privacy-protection-changes).
 {% endAside %}
 
-#### Registering several triggers without redirects
+#### Registering multiple triggers without redirects
 
-It's also possible to register several attribution triggers without using redirects, by adding multiple pixel elements on the conversion side (one per trigger).
+It's also possible to register multiple attribution triggers without using redirects, by adding multiple pixel elements on the conversion side (one per trigger).
 
 #### Join the public discussion {: #3p-reporting-discuss }
 
