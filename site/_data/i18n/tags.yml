@@ -215,3 +215,30 @@ insider:
 web-vitals:
   en: Web Vitals
   zh: 网页指标
+
+#####
+# These are for Privacy Sandbox
+
+proposal:
+  en: Proposal
+
+experiment:
+  en: Experimental
+
+chrome-stable:
+  en: Supported in Chrome stable
+
+cross-browser:
+  en: Supported cross-browser
+
+####
+# These are for collections
+
+payments:
+  en: Payments
+
+spc:
+  en: Secure Payment Confirmation
+  
+webauthn:
+  en: WebAuthn
