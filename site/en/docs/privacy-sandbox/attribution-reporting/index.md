@@ -257,7 +257,7 @@ The API does not rely on third-party cookies. However, in the testing phase, thi
 
 If the API is available in a given browser, it's available by default in any given site, both in top-level documents and scripts, and in same-origin iframes.
 
-Arbitrary third-parties—for example, cross-origin ad iframes that were not added to the page via a script that has top-level access—can't use the API without a publisher's or advertiser's knowledge: in these iframes, the Attribution Reporting API needs to be explicily enabled via a [Permissions
+Arbitrary third-parties—for example, cross-origin ad iframes that were not added to the page via a script that has top-level access—can't use the API without a publisher's or advertiser's knowledge: in these iframes, the Attribution Reporting API needs to be explicitly enabled via a [Permissions
 policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ```html
@@ -272,7 +272,7 @@ policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as w
 **What's the security benefit?**
 
 By doing this, a script with top-level access allows the frames it adds itself to use Attribution Reporting. This isn't an issue, because only a third-party script that is trusted by the site should be given top-level access anyway.
-The main security advantage of the policy lies somewhere else: frames that were not added via a top-level script should not be trusted by default to register sources or triggers, hence the requirement for the top-level site to explicitly enable the API for these.
+The main security advantage of the policy lies somewhere else: frames that were not added via a top-level script should not be trusted by default to register sources or triggers (unless their embedder is already trusted). This is why the top-level site is required to explicitly enable the API for these iframes
 
 {% endAside %}
 
