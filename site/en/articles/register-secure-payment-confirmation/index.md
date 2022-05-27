@@ -219,10 +219,10 @@ additional is required to comply with SPC.
 
 ## Registration from within an iframe
 
-If the payer hasn't registered their device with the RP (payment issuer), they
-can still do so at the merchant website. After a successful authentication
-during a purchase, the issuer can request the payer to register their device
-indirectly from within an iframe.
+If the payer hasn't registered their device with the RP (payment issuer), the
+payer can register on the merchant website. After a successful authentication
+during a purchase, the RP can request the payer register their device
+indirectly, from within an iframe.
 
 <figure class="screenshot">
 {% Img
@@ -232,10 +232,12 @@ indirectly from within an iframe.
 %}
 </figure>
 
-To do so, the issuer can follow the same steps as previously described within
-an iframe, except the merchant or the parent frame must explicitly allow it
-using [the Permissions Policy](/docs/privacy-sandbox/permissions-policy/).
-There are two approaches to allow it:
+To do so, the merchant or parent must explicitly allow this action within an
+iframe using [the Permissions Policy](/docs/privacy-sandbox/permissions-policy/).
+The issuer follows the [same steps to register an
+authenticator](#register-an-authenticator) within an iframe.
+
+There are two approaches for the merchant to allow registration:
 
 1. The iframe tag in the HTML served from the merchant domain adds an `allow` attribute:
 
