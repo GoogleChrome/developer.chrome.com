@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2021-05-18
-updated: 2022-03-31
+updated: 2022-05-27
 authors:
   - maudn
   - samdutton
@@ -15,9 +15,9 @@ authors:
 {% Aside %}
 
 This API is a proposal. It is being incubated, discussed and developed in the open.
-This API is evolving over time, as ecosystem feedback is gathered. 
+This API is evolving over time, as ecosystem feedback is gathered.
 
-Participation is welcome and encouraged. Learn about the ways you can participate in  [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+Participation is welcome and encouraged. Learn about the ways you can participate in [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
 {% endAside %}
 
@@ -26,13 +26,13 @@ Participation is welcome and encouraged. Learn about the ways you can participat
 This article covers the basics of Attribution Reporting, and explains some underlying concepts, but doesn't go into
 much technical detail.
 
-* If you work in **advertising or adtech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
- be useful.
+- If you work in **advertising or adtech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
+  be useful.
 
-* If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+- If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
-* [The Attribution Reporting demo](https://attribution-reporting-demo.glitch.me/) provides a walkthrough of a basic Attribution Reporting
-deployment.
+- [The Attribution Reporting demo](https://attribution-reporting-demo.glitch.me/) provides a walkthrough of a basic Attribution Reporting
+  deployment.
 
 {% Aside %}
 🧐 There is a [glossary](#glossary) at the end of this post.
@@ -82,11 +82,12 @@ This API enables advertisers and adtech providers to measure conversions in the 
 
 ## Status
 
-**🕙 Last updated: March 31st, 2022**
+**🕙 Last updated: May 2022**
 
 ### How can I try Attribution Reporting?
 
 At the time of this writing, you can try Attribution Reporting:
+
 - Soon, with end users, as part of an origin trial. [Learn more](/blog/privacy-sandbox-unified-origin-trial/).
 - Locally in your browser (with a _flag_).
 
@@ -99,7 +100,7 @@ At the time of this writing, you can try Attribution Reporting:
 - An _origin trial_ is a way to test with end users a new
   or experimental web platform feature, and give feedback to the web standards community on the
   feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/). Note that **multiple rounds of origin trials are run**. Each round is used to improve and adjust the API
-based on ecosystem feedback. 
+  based on ecosystem feedback.
   {% endAside %}
 
 ### Status details
@@ -114,11 +115,11 @@ based on ecosystem feedback.
 <tbody>
     <tr>
     <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Available in Chrome behind a flag.</td>
+    <td>Available in Chrome for origin trial.</td>
     </tr>
     <tr>
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Available in Chrome behind a flag.</td>
+    <td>Available in Chrome for origin trial.</td>
     </tr>
     <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Explainer</a></td>
     <td>Proposal, not implemented yet.</td>
@@ -243,8 +244,8 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 ## What browser configuration is available? {: #browser-configuration }
 
 - Users can opt out of the API via the user settings at `chrome://settings/privacySandbox`.
-- The API is not active in **Incognito** mode. 
-- The API is not active when **third-party cookies** are disabled. 
+- The API is not active in **Incognito** mode.
+- The API is not active when **third-party cookies** are disabled.
 
 {% Aside %}
 
@@ -252,12 +253,34 @@ The API does not rely on third-party cookies. However, in the testing phase, thi
 
 {% endAside %}
 
-
 ## How can sites control access? {: #sites-control }
 
-Arbitrary third-parties can't use the API without a publisher's or advertiser's knowledge. The
-  Attribution Reporting API needs to be enabled in child iframes via a [Permissions
-  policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
+If the API is available in a given browser, it's available by default in any given site, both in top-level documents and scripts, and in same-origin iframes.
+
+Arbitrary third-parties—for example, cross-origin ad iframes that were not added to the page via a script that has top-level access—can't use the API without a publisher's or advertiser's knowledge: in these iframes, the Attribution Reporting API needs to be explicitly enabled via a [Permissions
+policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
+
+```html
+<iframe src="..." allow="attribution-reporting"></iframe>
+```
+
+Third parties with top-level access that add cross-origin iframes to a page can enable the Attribution Reporting API via this [Permissions
+policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as well.
+
+{% Aside %}
+
+### What's the security benefit?
+
+By doing this, a script with top-level access allows the frames it adds itself to use Attribution Reporting. This isn't an issue, because only a third-party script that is trusted by the site should be given top-level access anyway.
+The main security advantage of the policy lies somewhere else: frames that were not added via a top-level script should not be trusted by default to register sources or triggers (unless their embedder is already trusted). This is why the top-level site is required to explicitly enable the API for these iframes
+
+{% endAside %}
+
+A site can disable the Attribution Reporting API for all parties—including scripts with top-level access—by sending the HTTP response header:
+
+```text
+Permissions-Policy: attribution-reporting=()
+```
 
 ## How does the Attribution Reporting API work?
 
