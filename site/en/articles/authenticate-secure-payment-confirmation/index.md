@@ -19,17 +19,17 @@ Merchants can use Secure Payment Confirmation (SPC) as part of a strong customer
 
 ## How a typical implementation works
 
-The most common SPC use case is when a customer makes a purchase on a merchant's site, and the credit card issuer or bank requires payer authentication.
+The most common use for SPC is when a customer makes a purchase on a merchant's
+site, and the credit card issuer or bank requires payer authentication.
 
 <figure class="screenshot">
 {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/dArhbZxZhQokGLfwL0Dg.svg", alt="Authentication workflow.", width="788", height="517" %}
 </figure>
 
+Let's walk through the authentication flow:
 
-
-Here's how the authentication flow works:
-
-1. A customer provides their payment credentials (such as credit card information) to the merchant.
+1. A customer provides their payment credentials (such as credit card
+   information) to the merchant.
 2. The merchant asks the payment credential's corresponding issuer or bank
    (relying party or RP) if the payer needs a separate authentication. This
    exchange might happen, for example, with
@@ -45,12 +45,16 @@ Here's how the authentication flow works:
 4. The merchant invokes SPC. The browser displays a confirmation dialog.
    *  If there are no credential IDs passed from the RP, fall back to the
       existing authentication flow.  
-      After a successful authentication, **consider [SPC registration](/articles/register-secure-payment-confirmation) to streamline future authentications**.
-5. The user confirms the amount and the destination of the payment. Then, they authenticate by unlocking the device.
+      After a successful authentication, **consider using [SPC registration](/articles/register-secure-payment-confirmation)
+	to streamline future authentications**.
+5. The user confirms and authenticates the amount and the destination of the
+   payment by unlocking the device.
 6. The merchant receives a credential from the authentication.
-7. The RP receives the credential from the merchant and verifies its authenticity.
-8. The RP notifies the verification results to the merchant.
-9. The merchant shows an interface to the user to indicate if the payment was successful or unsuccessful.
+7. The RP receives the credential from the merchant and verifies its
+   authenticity.
+8. The RP sends the verification results to the merchant.
+9. The merchant shows the user a message to indicate if the payment was
+   successful or unsuccessful.
 
 {% Aside 'gotchas' %}
 To quickly support an initial SPC experiment, this API was designed atop
@@ -129,6 +133,7 @@ isSecurePaymentConfirmationSupported().then(result => {
 
 To authenticate the user, invoke the `PaymentRequest.show()` method with
 `secure-payment-confirmation` and WebAuthn parameters: 
+
 *  [`PublicKeyCredentialRequestOptions`](https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions)
 *  Other [payment specific parameters](https://w3c.github.io/secure-payment-confirmation/#sctn-securepaymentconfirmationrequest-dictionary) on the merchant's platform.
 
