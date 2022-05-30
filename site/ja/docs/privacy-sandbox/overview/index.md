@@ -41,7 +41,7 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 * [**Origin-Bound Cookie**](https://www.chromestatus.com/feature/4945698250293248): デフォルトで Cookie をその設定オリジンにバインドし、そのオリジンからのみアクセスできるようにします。
 * [**SameSite Cookie**](https://web.dev/samesite-cookies-explained/): クロスサイト Cookie を明示的にマーキングしてサイトを保護します。
 * [**ストレージパーティショニング**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキーで使用できるようにします。
-* [**フェンスフレーム**](https://github.com/shivanigithub/fenced-frame): コンテンツ（広告など）の表示に使用できても、同じページ内の他の要素とは対話できないようにする一種の frame 要素を提供します。
+* [**Fenced Frame**](https://github.com/shivanigithub/fenced-frame): コンテンツ（広告など）の表示に使用できても、同じページ内の他の要素とは対話できないようにする一種の frame 要素を提供します。
 * [**ネットワークの状態のパーティショニング**](https://github.com/MattMenke2/Explainer---Partition-Network-State/blob/main/README.md): ネットワークの状態を分割し、リソースの再利用を可能にするために照合する必要のあるネットワークパーティションキーをすべてのリクエストに割り当てることによって、ブラウザネットワークリソースがファーストパーティのコンテキスト間で共有されないようにします。
 * [**HTTP キャッシュのパーティショニング**](https://developers.google.com/web/updates/2020/10/http-cache-partitioning): ブラウザの HTTP キャッシュを分割することで、セキュリティとプライバシーを向上させます。
 * [**Federated Credential Management**](https://github.com/wicg/fedcm): ユーザーが明示的に同意しない限り、ユーザーのメールアドレスやその他の識別情報をサードパーティのサービスやウェブサイトに共有することなく、フェデレーション ID をサポートします（ユーザーがサードパーティサービスを通じてウェブサイトにサインインできる場合）。 WebID を使用すると、リダイレクト、ポップアップ、またはサイト間でユーザーの識別と追跡に使用できるサードパーティ Cookie を用いずに、ID 連携によるログインが可能になります。
