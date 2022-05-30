@@ -55,7 +55,7 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 
 ### デジタル広告の測定
 
-* [**Core Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting): 広告クリックまたは広告ビューをコンバージョンに関連付けます。 以前は Event Conversion Measurement API と呼ばれていました。 イベントレベルと集計の 2 つのタイプのレポートを有効にします。
+* [**アトリビューション レポート**](/docs/privacy-sandbox/attribution-reporting): 広告クリックまたは広告ビューをコンバージョンに関連付けます。 以前は Event Conversion Measurement API と呼ばれていました。 イベントレベルと集計の 2 つのタイプのレポートを有効にします。
 
 
 ### 秘密追跡の防止
