@@ -122,7 +122,7 @@ API 提案の Explainer では、特に欠落しているユースケースや�
 
 * [プライバシーバジェット](https://github.com/bslassey/privacy-budget)
 * [トラストトークン](https://github.com/dvorak42/trust-token-api)
-* [ファーストパーティセット](https://github.com/privacycg/first-party-sets)
+* [First-Party Sets](https://github.com/privacycg/first-party-sets)
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
 * [アトリビューション レポート](https://github.com/csharrison/conversion-measurement-api)
