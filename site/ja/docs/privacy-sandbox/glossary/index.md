@@ -256,6 +256,6 @@ UA-CH は「クライアントヒント」と呼ばれることもあります�
 
 たとえば、パスワードマネージャーは、ウェブサイトが `/.wellknown/change-password` からそのサイトのパスワード変更ページへのリダイレクトを設定すると、ユーザーがパスワードを更新しやすくすることができます。
 
-さらに、リクエストを発行する_前に_、ホストに関するポリシーやその他の情報にアクセスすると便利です。 たとえば、`robots.txt` は、アクセスするページと無視するページをウェブクローラに指示します。 IETF [RFC8615](https://tools.ietf.org/html/rfc8615) には、サイト全体のメタデータを `/.well-known/` サブディレクトリの標準的な場所でアクセスできるようにするための標準化された方法が概説されています。
+さらに、リクエストを発行する _前に_ 、ホストに関するポリシーやその他の情報にアクセスすると便利です。 たとえば、`robots.txt` は、アクセスするページと無視するページをウェブクローラに指示します。 IETF [RFC8615](https://tools.ietf.org/html/rfc8615) には、サイト全体のメタデータを `/.well-known/` サブディレクトリの標準的な場所でアクセスできるようにするための標準化された方法が概説されています。
 
 `.well-known` の推奨リストについては、[iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) を参照してください。
