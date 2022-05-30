@@ -125,7 +125,7 @@ API 提案の Explainer では、特に欠落しているユースケースや�
 * [ファーストパーティセット](https://github.com/privacycg/first-party-sets)
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
-* [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
+* [アトリビューション レポート](https://github.com/csharrison/conversion-measurement-api)
 * [Topics API](https://github.com/jkarlin/topics)
 * [FLEDGE](https://github.com/michaelkleber/turtledove)
 
