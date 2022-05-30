@@ -40,7 +40,7 @@ Chrome やその他のエコシステムの関係者は、これまでに 30 件
 * [**CHIPS**](https://github.com/WICG/CHIPS): [First-Party Sets](/docs/privacy-sandbox/first-party-sets)と同様に、この提案では、パーティショニングに関するユースケース、意味を持つ場合にクロスオリジンのインタラクションと共有を有効にする方法、およびこれを安全に保つ方法について説明されています。 サードパーティサービスが Cookie を設定できるようにする一方で、Cookie が最初に設定されたトップレベルサイトのコンテキスト内でのみ読み取れるようにすることを主な目的としています。 パーティショニングされたサードパーティ Cookie は、それを最初に設定したトップレベルサイトに関連付けられるため、他の場所からはアクセスできません。
 * [**Origin-Bound Cookie**](https://www.chromestatus.com/feature/4945698250293248): デフォルトで Cookie をその設定オリジンにバインドし、そのオリジンからのみアクセスできるようにします。
 * [**SameSite Cookie**](https://web.dev/samesite-cookies-explained/): クロスサイト Cookie を明示的にマーキングしてサイトを保護します。
-* [**ストレージパーティショニング**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキー暗号化を使用できるようにします。
+* [**ストレージパーティショニング**](https://github.com/privacycg/storage-partitioning): `localStorage` または Cookie など、あらゆる形態の[ユーザーエージェントステート](https://github.com/privacycg/storage-partitioning#user-agent-state)を、単一のオリジンまたはサイトではなく、トップレベルサイトと読み込まれるリソースのオリジンによってダブルキーで使用できるようにします。
 * [**フェンスフレーム**](https://github.com/shivanigithub/fenced-frame): コンテンツ（広告など）の表示に使用できても、同じページ内の他の要素とは対話できないようにする一種の frame 要素を提供します。
 * [**ネットワークの状態のパーティショニング**](https://github.com/MattMenke2/Explainer---Partition-Network-State/blob/main/README.md): ネットワークの状態を分割し、リソースの再利用を可能にするために照合する必要のあるネットワークパーティションキーをすべてのリクエストに割り当てることによって、ブラウザネットワークリソースがファーストパーティのコンテキスト間で共有されないようにします。
 * [**HTTP キャッシュのパーティショニング**](https://developers.google.com/web/updates/2020/10/http-cache-partitioning): ブラウザの HTTP キャッシュを分割することで、セキュリティとプライバシーを向上させます。
