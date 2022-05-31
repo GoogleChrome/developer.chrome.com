@@ -89,7 +89,7 @@ DevTools sorts own properties first to make them easier to spot.
 
 Enumerable properties are bright in color. Non-enumerable properties are muted.
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X0KWrBdSyyBGzNtVfkbk.png", alt="Enumerable and non-enumerable properties.", width="800", height="335" %}
-Enumerable properties can be iterated over with the `for … in` loop or `Object.keys()` method.
+You can iterate over the enumerable properties with the `for … in` loop or `Object.keys()` method.
 
 ### Methods {: #methods }
 
