@@ -6,10 +6,71 @@ extra_permissions_html:
 
 ## Manifest
 
-You can use most `chrome.tabs` methods and events without declaring any permissions in the
-extension's [manifest][manifest] file. However, if you require access to the `url`, `pendingUrl`,
-`title`, or `favIconUrl` properties of [`tabs.Tab`][tab], you must declare the `"tabs"` permission
-in the manifest, as shown below:
+### No permission
+
+You can use most Tabs API methods and events without declaring any permissions. The following are a some common examples:
+
+- Opening a new tab using `tabs.create()`.
+- Moving a tab using `tabs.move()`.
+- Reloading the tab using `tabs.reload()`.
+
+### Tabs, host permissions or... both?
+
+If you need access to any of the following properties of [`tabs.Tab`][tab]: `url`, `pendingUrl`,
+`title`, or `favIconUrl`, you have to request permission in the extension's
+[manifest][doc-manifest] file. The following are a couple of examples:
+
+- Querying tabs by specific URLs.
+- Muting tabs that contain a keyword in the title.
+
+Use the following table to determine which permission you need:
+
+| Permission           | Tab data access                                                                 |
+|----------------------|---------------------------------------------------------------------------------|
+| **Host permissions** | Access to the tabs matching the URL [match patterns][doc-match].                |
+| **Tabs**             | Access to the data of all tabs.                                                 |
+| **Both**             | Access to host permissions to specific URLs, and the data of all the open tabs. |
+
+The following are code samples fo each case, along with the correspondent [permission warning][doc-perms].
+
+<web-tabs>
+  <web-tab title="Host Permissions (code)">
+
+  ```json
+  {
+    "name": "My extension",
+    ...
+    "host_permissions": [
+      "*://*/*"
+    ],
+    ...
+  }
+  ```
+
+#### Permission warning
+
+Read and change all your data on the websites you visit
+
+  </web-tab>
+    <web-tab title="Tabs permission (code)">
+   
+  ```json
+  {
+    "name": "My extension",
+    ...
+    "permissions": [
+      "tabs"
+    ],
+    ...
+  }
+  ```
+
+#### Permission warning
+
+Read your browsing history
+
+  </web-tab>
+  <web-tab title="Both (code)">
 
 ```json
 {
@@ -18,9 +79,22 @@ in the manifest, as shown below:
   "permissions": [
     "tabs"
   ],
+  "host_permissions": [
+    "https://www.google.com/"
+  ],
   ...
 }
 ```
+
+#### Permission warnings
+
+- Read your browsing history
+- Read and change your data on www.google.com
+
+
+  </web-tab>
+</web-tabs>
+
 
 ## Examples
 
@@ -57,7 +131,7 @@ can usually be thought of as the user's current tab.
 
 {% Aside %}
 
-This example requires Manifest V3 due to the use of [Promises][promises]. Additionally, content
+This example requires Manifest V3 due to the use of [Promises][doc-promises]. Additionally, content
 scripts cannot use `tabs.query`.
 
 {% endAside %}
@@ -132,8 +206,9 @@ async function move(activeInfo) {
 For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
 directory of the [chrome-extensions-samples][samples-repo] repository.
 
-[manifest]: /docs/extensions/mv3/manifest/
-[promises]: /docs/extensions/mv3/promises/
-[tab]: #type-Tab
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-perms]: /docs/extensions/mv3/permission_warnings/
+[doc-promises]: /docs/extensions/mv3/promises/
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
+[tab]: #type-Tab
