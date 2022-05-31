@@ -128,15 +128,11 @@ This example demonstrates how the background script can retrieve the active tab 
 currently-focused window (or most recently-focused window, if no Chrome windows are focused). This
 can usually be thought of as the user's current tab.
 
-{% Aside %}
-
-This example requires Manifest V3 due to the use of [Promises][doc-promises]. Additionally, content
-scripts cannot use `tabs.query`.
-
-{% endAside %}
+<web-tabs>
+  <web-tab title="Manifest V3 (promise)">
 
 ```js
-//// background.js
+  // background.js
 
 async function getCurrentTab() {
   let queryOptions = { active: true, lastFocusedWindow: true };
@@ -146,19 +142,43 @@ async function getCurrentTab() {
 }
 ```
 
+  </web-tab>
+  <web-tab title="Manifest V2 (callback)">
+
+  ```js
+  // background.js
+
+  function getCurrentTab(callback) {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    chrome.tabs.query(queryOptions, ([tab]) => {
+      if (chrome.runtime.lastError) console.error(chrome.runtime.lastError);
+      // `tab` will either be a `tabs.Tab` instance or `undefined`.
+      callback(tab);
+    });
+  }
+  ```
+
+  </web-tab>
+</web-tabs>
+
+
+{% Aside 'gotchas' %}
+
+The activeTab permission is **not** required to query for the active tab. Read more about the [Tabs API
+and permissions][section-manifest].
+
+{% endAside %}
+
+
 ### Mute the specified tab
 
 This example shows how an extension can toggle the muted state for a given tab.
 
-{% Aside %}
-
-Requires Manifest V3 due to the use of Promises. Content scripts cannot use `tabs.get` or
-`tabs.update`.
-
-{% endAside %}
-
+<web-tabs>
+  <web-tab  title="Manifest V3 (promise)">
+  
 ```js
-//// background.js
+  // background.js
 
 function toggleMuteState(tabId) {
   chrome.tabs.get(tabId, async (tab) => {
@@ -169,36 +189,89 @@ function toggleMuteState(tabId) {
 }
 ```
 
+</web-tab>
+<web-tab  title="Manifest V2 (callback)">
+
+  ```js
+  // background.js
+  function toggleMuteState(tabId) {
+    chrome.tabs.get(tabId, (tab) => {
+      let muted = !tab.mutedInfo.muted;
+      chrome.tabs.update(tabId, { muted }, () => {
+        console.log(`Tab ${tab.id} is ${muted ? 'muted' : 'unmuted'}`);
+      });
+    });
+  }
+  ```
+
+  </web-tab>
+</web-tabs>
+
 ### Move the current tab to the first position when clicked
 
 This example shows how to move a tab while a drag may or may not be in progress.
 
-{% Aside %}
-
-Manifest V3 required due to the use of Promises and chrome.tabs.onActivated(), replacing
-chrome.tabs.onSelectionChanged(). The use of catch(error) in a Promise context is a way to ensure
-that an error that otherwise populates chrome.runtime.lastError is not unchecked. chrome.tabs.move
-is used in this example, but the same waiting pattern can be used for other calls that modify tabs
-while a drag may be in progress.
-
-{% endAside %}
+<web-tabs>
+  <web-tab  title="Manifest V3 (promise)">
 
 ```js
-//// background.js
+// background.js
 
-chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
+chrome.tabs.onActivated.addListener(activeInfo => moveToFirstPosition(activeInfo));
 
-async function move(activeInfo) {
+async function moveToFirstPosition(activeInfo) {
   try {
     await chrome.tabs.move(activeInfo.tabId, {index: 0});
     console.log('Success.');
   } catch (error) {
     if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
-      setTimeout(() => move(activeInfo), 50);
+      setTimeout(() => moveToFirstPosition(activeInfo), 50);
     }
   }
 }
 ```
+
+{% Aside 'success' %}
+
+The use of catch(error) in a Promise context is
+a way to ensure that an error that otherwise populates chrome.runtime.lastError is not unchecked. 
+
+{% endAside %}
+
+
+
+```js
+// background.js
+
+chrome.tabs.onActivated.addListener((activeInfo) =>
+  moveToFirstPositionMV2(activeInfo)
+);
+
+function moveToFirstPositionMV2(activeInfo) {
+  chrome.tabs.move(activeInfo.tabId, { index: 0 }, () => {
+    if (chrome.runtime.lastError) {
+      const error = chrome.runtime.lastError;
+      if (
+        error ==
+        'Error: Tabs cannot be edited right now (user may be dragging a tab).'
+      ) {
+        setTimeout(() => moveToFirstPositionMV3(activeInfo), 50);
+      } else {
+        console.error(error);
+    }
+    } else {
+      console.log('Success.');
+  }
+  });
+}
+```
+  </web-tab>
+</web-tabs>
+
+
+
+While this example uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs
+while a drag may be in progress.
 
 ### More samples
 
