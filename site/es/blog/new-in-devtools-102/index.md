@@ -12,6 +12,7 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-102
+draft: true
 ---
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
