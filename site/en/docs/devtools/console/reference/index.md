@@ -268,7 +268,7 @@ to tweak the ad's DOM. To do this, you first need to select the ad's browsing co
 
 ## Inspect object properties {: #inspect-object-properties }
 
-The **Console** can display an interactive list of properties of an JavaScript object you specify.
+The **Console** can display an interactive list of properties of a JavaScript object you specify.
 
 To browse the list, type the object name into the **Console** and press <kbd>Enter</kbd>.
 
