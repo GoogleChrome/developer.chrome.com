@@ -10,6 +10,7 @@ tags:
   - get-started
   - prototype-fixes
   - html
+  - dom
 ---
 
 Complete these interactive tutorials to learn the basics of viewing and
