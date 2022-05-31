@@ -4,7 +4,7 @@ title: Migrating to Manifest V3
 subhead: 'Getting you headed in the right direction.'
 description: 'A high-level guide to how you can migrate your Manifest V2 extensions to Manifest V3.'
 date: 2020-11-09
-updated: 2021-08-13
+updated: 2022-06-02
 ---
 
 This guide provides developers with the information they need to begin migrating an extension from
@@ -465,7 +465,6 @@ workers as of Chrome 87.
 
 {% endAside %}
 
-
 ## Modifying network requests  {: #modifying-network-requests }
 
 There is a new [declarativeNetRequest][api-declarativenetrequest] for network request modification,
@@ -487,7 +486,6 @@ host permissions.
 Request redirects and header modifications **do** require the user to grant host permissions.
 
 {% endAside %}
-
 
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
 
@@ -528,7 +526,6 @@ This approach allows privacy-conscious users to withhold those permissions and s
 extension's functionality. This means that developers can implement many common use cases, such as
 content-blocking functionality, without requiring any host permissions.
 
-
 ## Sunset for deprecated APIs  {: #sunset-deprecated-apis }
 
 There are a number of APIs that have long been deprecated. Manifest V3 finally removes support for
@@ -568,13 +565,13 @@ when you migrate to Manifest V3.
 [bootstrap-gs]: https://getbootstrap.com/docs/5.1/getting-started/introduction/
 [csp]: https://content-security-policy.com/
 [dev-google-sw]: https://developers.google.com/web/fundamentals/primers/service-workers
+[doc-background-to-worker]: /docs/extensions/mv3/migrating_to_service_workers
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-match-pattern]: /docs/extensions/mv3/match_patterns/
 [doc-perm-warn]: /docs/extensions/mv3/permission_warnings/
+[doc-static-cs]: /docs/extensions/mv3/content_scripts/#static-declarative
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [doc-whats-new]: /docs/extensions/whatsnew/
-[doc-background-to-worker]: /docs/extensions/mv3/migrating_to_service_workers
-[doc-static-cs]: /docs/extensions/mv3/content_scripts/#static-declarative
 [enterprise-force-list]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionInstallForcelist
 [enterprise-settings]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ExtensionSettings
 [github-samples-content]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts
