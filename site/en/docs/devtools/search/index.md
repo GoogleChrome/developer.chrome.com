@@ -42,9 +42,14 @@ To search for text that matches a RegEx pattern, toggle the {% Img src="image/NJ
 You don't need to wrap your RegEx query in forward slashes. 
 {% endAside %}
 
-### Rerun a search query and clear results {: #rerun-and-clear }
+### Rerun a query, expand, and clear results {: #rerun-and-clear }
 
 To rerun your search query, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="20", height="20" %} **Refresh**.
+
+To expand all search results, press:
+
+- On Windows / Linux, `Ctrl` + `Shift` + `{` or `}`
+- On MacOS, `Command` + `Option` + `{` or `}`
 
 To clear your search results, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Nh5W7S7oEdlTcjarzxKC.svg", alt="Clear.", width="20", height="20" %} **Clear**.
 
@@ -58,4 +63,65 @@ To open a built-in search bar in a specific tool, press <kbd>Command</kbd>+<kbd>
 
 Not all DevTools panels and tabs have a built-in search bar but those that do, often provide tool-specific features. Below is a list of tools with search bars and their features.
 
-<table class="with-borders with-heading-tint"><thead><tr><td>Panel or tab</td><td>Case-sensitive</td><td>RegEx</td><td>Tool-specific features</td></tr></thead><tbody><tr><td><a href="/docs/devtools/dom/#search">Elements</a></td><td></td><td></td><td>Search by selector and XPath.</td></tr><tr><td><a href="/docs/devtools/console/reference/#search">Console</a></td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td></td></tr><tr><td><a href="/docs/devtools/javascript/reference/#search">Sources</a></td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>Replace text.</td></tr><tr><td><a href="/docs/devtools/network/#search">Network</a></td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>Scope: network headers and responses.</td></tr><tr><td><a href="/docs/devtools/evaluate-performance/reference/#search">Performance</a></td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>Scope: activities.</td></tr><tr><td>Memory</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td></td><td>Scopes: string search for all profiles; cost, name, and file search for sampling profiles.</td></tr><tr><td>JavaScript Profiler</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td></td><td>Scope: cost, name, and file search for CPU profiles.</td></tr><tr><td>Quick Source</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td><td></td></tr></tbody></table>
+<table class="fixed-table width-full">
+<thead>
+  <tr>
+    <th>Panel or tab</th>
+    <th>Case-sensitive</th>
+    <th>RegEx</th>
+    <th>Scope</th>
+    <th>Tool-specific features</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="/docs/devtools/dom/#search">Elements</a></td>
+    <td></td>
+    <td></td>
+    <td>DOM tree</td>
+    <td>Search by selector and XPath</td>
+  </tr>
+  <tr>
+    <td><a href="/docs/devtools/console/reference/#search">Console</a></td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>Log messages</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a href="/docs/devtools/javascript/reference/#search">Sources</a></td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>Current source file</td>
+    <td>Replace</td>
+  </tr>
+  <tr>
+    <td><a href="/docs/devtools/evaluate-performance/reference/#search">Performance</a></td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>Activities</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Memory</td>
+    <td class="tg-0pky">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td></td>
+    <td>Profiles</td>
+    <td class="tg-0pky">Search sampling profiles by cost, name, and file</td>
+  </tr>
+  <tr>
+    <td>JavaScript Profiler</td>
+    <td class="tg-0pky">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td></td>
+    <td>CPU profiles</td>
+    <td>Search by cost, name, and file</td>
+  </tr>
+  <tr>
+    <td>Quick Source</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>Current source file</td>
+    <td>Replace</td>
+  </tr>
+</tbody>
+</table>
