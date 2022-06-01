@@ -28,7 +28,9 @@ You can open the **Search** tab in several ways. First, [open DevTools](/docs/de
 
 To search for text across all loaded resources, in the search bar on the **Search** tab, type your query and press <kbd>Enter</kbd>.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/D3YatkHJm3NkOEPMcxzg.png", alt="Search results.", width="800", height="626" %}
+<figure>
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/D3YatkHJm3NkOEPMcxzg.png", alt="Search results.", width="800", height="626" %}
+</figure>
 
 To make your query case-sensitive, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/egjnpBbgTvj6FDiIbfoc.png", alt="Match case.", width="25", height="20" %} **Match Case** button.
 
