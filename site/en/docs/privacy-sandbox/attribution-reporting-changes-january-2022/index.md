@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting proposal: updates in January 2022'
 date: 2022-01-27
-updated: 2022-01-27
+updated: 2022-05-27
 authors:
   - maudn
 ---
@@ -262,6 +262,10 @@ allowing multiple other parties to register a conversion (attribution trigger).
 {% Aside %}
 To prevent abuse, explicit reporting limitations have been added. Learn more in [Privacy protection changes](#privacy-protection-changes).
 {% endAside %}
+
+#### Registering multiple triggers without redirects
+
+It's also possible to register multiple attribution triggers without using redirects, by adding multiple pixel elements on the conversion side (one per trigger).
 
 #### Join the public discussion {: #3p-reporting-discuss }
 

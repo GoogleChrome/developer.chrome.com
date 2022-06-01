@@ -172,7 +172,7 @@ option:
 
 ```js
 workbox.setConfig({
-  debug: &lt;true or false&gt;
+  debug: <true or false>
 });
 ```
 

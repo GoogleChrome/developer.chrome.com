@@ -70,3 +70,13 @@ topics-experiment:
   en: 'Topics API: experiment and participate'
 fledge-experiment:
   en: 'FLEDGE: experiment and participate'
+first-party-sets:
+  en: 'First-Party Sets'
+gnatcatcher:
+  en: 'Gnatcatcher'
+privacy-budget:
+  en: 'Privacy Budget'
+shared-storage:
+  en: 'Shared Storage'
+fenced-frame:
+  en: 'Fenced Frames'
