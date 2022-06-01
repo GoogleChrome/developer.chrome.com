@@ -24,7 +24,7 @@ IP アドレスは、クライアントに一意の識別子を提供するた�
 
 Gnatcatcher、つまりグローバルネットワークアドレス変換と Audited および Trusted CDN または HTTP-Proxy Elimination Reidentification の組み合わせは、IP Blindness に対して提案された ソリューションです。 この提案は、[Willful IP Blindness](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) と [Near-Path NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) (またはプロキシ関連ソリューション) (Willful IP Blindness に参加していない接続の場合) という他の 2 つの提案と組み合わせることを提言しています。
 
-つまり、デフォルトでは IP アドレスは非表示になります。 サイトは、IP アドレスを悪用せずに直接接続を使用していること を証明できる場合があります。
+つまり、デフォルトでは IP アドレスは隠されます。 サイトは、IP アドレスを悪用せずに直接接続を使用していること を証明できる場合があります。
 
 ### Willful IP Blindness とは何か
 
