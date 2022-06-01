@@ -54,8 +54,8 @@ To rerun your search query, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1
 
 To expand all search results, press:
 
-- On Windows / Linux, `Ctrl` + `Shift` + `{` or `}`
-- On MacOS, `Command` + `Option` + `{` or `}`
+- On Windows / Linux, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>{</kbd> or <kbd>}</kbd>
+- On MacOS, <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>{</kbd> or <kbd>}</kbd>
 
 To clear your search results, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Nh5W7S7oEdlTcjarzxKC.svg", alt="Clear.", width="20", height="20" %} **Clear**.
 
