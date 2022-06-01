@@ -18,6 +18,17 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y [M
 
 {% include 'partials/devtools/es/banner.md' %}
 
+
+{% YouTube id='0V_ph7PA_aw' %}
+
+<!-- start: translation instructions -->
+<!-- + 1. Remove the "draft: true" tag above when submitting PR -->
+<!-- + 2. Provide translations under each of the English commented original content -->
+<!-- + 3. Translate the "description" tag above -->
+<!-- + 4. Translate all the <img> alt text -->
+<!-- + 5. Update the whats-new.md file -->
+<!-- end: translation instructions -->
+
 <!-- ## Preview feature: New Performance insights panel {: #perf } -->
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->

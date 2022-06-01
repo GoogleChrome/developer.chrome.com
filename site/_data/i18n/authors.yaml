@@ -422,7 +422,7 @@ agektmr:
   title:
     en: 'Eiji Kitamura'
   description:
-    en: 'Developer Advocate for security, identity and payment on the web.'
+    en: 'Developer Advocate for identity, security, privacy and payment on the web.'
 titouan:
   title:
     en: 'Titouan Rigoudy'
@@ -820,3 +820,13 @@ buettner:
     en: Michael Buettner
   description:
     en: Michael is a software engineer on the Chrome team.
+egsweeny:
+  title:
+    en: Elizabeth Sweeny
+  description:
+    en: Elizabeth is a product manager working on developer tooling for Chrome Web Platform.
+samthor:
+  title:
+    en: Sam Thorogood
+  description:
+    en: Sam was a developer relations engineer at Google.

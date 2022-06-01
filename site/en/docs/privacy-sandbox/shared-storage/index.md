@@ -6,8 +6,10 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
+updated: 2022-05-24
 authors:
   - alexandrawhite
+  - kevinkiklee
 ---
 
 ## Implementation status
@@ -17,14 +19,13 @@ Storage API.
 
 *  The [Shared Storage proposal](https://github.com/pythagoraskitty/shared-storage)
    has entered [public discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  The API is being implemented in Chrome.
-    *  The initial origin trial will likely only include the
-       `runURLSelectionOperation`. Support for the Private Aggregation API 
-       will come shortly after.
+*  We are [implementing this API in Chrome](#try-the-shared-storage-api).
+   *  The initial origin trial will likely only include the `selectURL` API
+	 function. Support for the Private Aggregation API is planned shortly after.
+   *  The `selectURL` API is available for testing in Chrome Canary as of M104.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline)
    provides implementation timings for the Shared Storage API and other
    Privacy Sandbox proposals.
-
 
 ## Why do we need this API?
 
@@ -58,7 +59,6 @@ The proposal intends to create a general purpose API which supports many
 possible future use cases. This allows for further experimentation and change,
 to grow alongside the web ecosystem.
 
-
 ## How will shared storage work?
 
 Shared storage will allow you to make informed decisions based on cross-site
@@ -80,14 +80,13 @@ The shared storage data can be used for:
    [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api),
    a Privacy Sandbox proposal, which returns a privacy-preserving report. 
 
-
 ### Example: URL selection for frequency capping {: #url-selection }
 
 To select and create an opaque URL, register a worklet module to read shared
 storage data. The worklet class receives a list of up to eight URLs and then
 returns the index of the chosen URL. 
 
-When the client calls `sharedStorage.runURLSelectionOperation()`, the worklet
+When the client calls `sharedStorage.selectURL()`, the worklet
 executes and returns an opaque URL to be rendered into a fenced frame.
 
 Let's say you want to render an ad based on the advertiser's frequency cap
@@ -126,7 +125,7 @@ class SelectURLOperation {
 }
 
 // Register the operation
-registerURLSelectionOperation(
+register(
    'select-url', SelectURLOperation
 );
 ```
@@ -139,20 +138,19 @@ const defaultUrl = new URL('https://default.example');
 const adUrl = new URL('[https://ad.example](https://ad.example)');
 
 // Register the worklet module
-await window.sharedStorage.worklet.addModule(‘get-url.js');
+await window.sharedStorage.worklet.addModule('get-url.js');
 
 // Set the frequency cap for this campaign, if it wasn't already set
 window.sharedStorage.set('frequencycap', 5, { ignoreIfPresent: true });
 
 // Select the URL from available options
-const opaqueUrl = await window.sharedStorage.runURLSelectionOperation(
+const opaqueUrl = await window.sharedStorage.selectURL(
   'select-url', [defaultUrl, adUrl]
 );
 
 // Render the returned URL into an iframe or a fenced frame
 document.getElementById('example-iframe').src = opaqueUrl;
 ```
-
 
 ### Example: aggregation of cross-site data (ad campaign reach) {: #aggregated-data }
 
@@ -175,7 +173,7 @@ example, the publisher creates two files:
 await window.sharedStorage.worklet.addModule("reach.js");
 
 // Send a report to the shared storage worklet
-await window.sharedStorage.runOperation("send-reach-report", {
+await window.sharedStorage.run("send-reach-report", {
   data: {
      "campaign-id": "1234"
   }
@@ -186,7 +184,7 @@ await window.sharedStorage.runOperation("send-reach-report", {
 
 ```javascript
 class SendReachReportOperation {
-  async function run(data) {
+  async run(data) {
     const report_sent_for_campaign = "report-sent-" + data["campaign-id"];
 
     // Compute reach for users who haven't previously had a report sent
@@ -207,13 +205,27 @@ class SendReachReportOperation {
   }
 }
 
-registerOperation("send-reach-report", SendReachReportOperation);
+register("send-reach-report", SendReachReportOperation);
 ```
+
+## Try the Shared Storage API
+
+Shared Storage API is available in Chrome Canary 104 with a command line
+flag:
+
+```text
+--args --enable-features=SharedStorageAPI,FencedFrames,PrivacySandboxAdsAPIsOverride
+```
+
+If you have previously enabled the [Privacy Sandbox Ads APIs 
+experiment](chrome://flags/#privacy-sandbox-ads-apis), you must disable it as this setting overrides flags set from the command line. 
 
 ## Engage and share feedback
 
 The shared storage proposal is under active discussion and subject to change
 in the future. If you try this API and have feedback, we'd love to hear it.
 
-* **GitHub**: Read the [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-* **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+*  **GitHub**: Read the
+   [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
+*  **Developer support**: Ask questions and join discussions on the
+   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

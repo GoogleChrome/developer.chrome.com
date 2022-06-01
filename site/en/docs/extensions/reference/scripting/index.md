@@ -95,10 +95,6 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-{% Aside %}
-Note: Currently, a maximum of a single file is supported.
-{% endAside %}
-
 #### Runtime functions
 
 When injecting JavaScript with `scripting.executeScript()`, you can specify a

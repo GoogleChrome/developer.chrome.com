@@ -10,5 +10,6 @@ architecture:
   - url: native-client
   - url: multidevice
   - url: android
+  - url: web-platform
 infrastructure:
   - url: versionhistory

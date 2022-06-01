@@ -61,6 +61,16 @@ To view your changes:
 
 The **Changes** tab pretty-prints the `diff` output automatically, so you don't have to scroll horizontally to see the changes in a single line.
 
+## Copy CSS changes {: #copy-css-changes }
+
+If you made changes to CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations), you can copy all of them with a single button:
+
+1. [Open the **Changes** tab](#open-changes) and, in the right-hand side of the tab, select the CSS file you made changes to.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Tza78o0COW0Bn9eb1mgS.png", alt="Copy.", width="800", height="428" %}
+
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0vPvwat277ITJphiOtml.svg", alt="Copy.", width="20", height="20" %} **Copy** button at the bottom of the **Changes tab**.
+
 ## Revert all changes made to a file {: #revert-changes}
 
 To revert changes made to a file:

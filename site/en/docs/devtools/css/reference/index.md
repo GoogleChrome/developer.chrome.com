@@ -91,6 +91,10 @@ Use the **Computed** tab. See [View only the CSS that's actually applied to an e
 Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
 applied to an element][6].
 
+Alternatively, scroll down the **Styles** pane and find sections named `Inherited from <element_name>`.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TuWZmbeQlHR6Qp6pUHVP.png", alt="View the Inherited from... section of the Styles pane.", width="800", height="361" %}
+
 ### View `@supports` at-rules {: #supports }
 
 The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
@@ -169,6 +173,33 @@ To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus
 element is not actually being hovered over
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
+
+### View inherited highlight pseudo-elements {: #view-inherited-highlight-pseudo-elements }
+
+[Pseudo-elements][33] let you style specific parts of elements. Highlight pseudo-elements are document portions with a "selected" status and they are styled as "highlighted" to indicate this status to the user. For example, such pseudo-elements are `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`.
+
+As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style.
+
+{% Aside %}
+To enable this feature, run Chrome with the `--enable-blink-features=HighlightInheritance` flag.
+{% endAside %}
+
+To better understand the inheritance and priority of the rules, you can view the inherited highlight pseudo-elements:
+
+1. [Inspect the text below](/docs/devtools/open/#elements).
+
+    <div class="text-parent"><div class="highlighted-text">I inherited the style of my parent's highlight pseudo-element. Select me!</div></div>
+    <style>
+    .text-parent::selection {
+      background: #ff0;
+      color: #ff1493;
+    }
+    </style>
+
+1. Select a portion of the text above.
+1. In the **Styles** pane, scroll down to find the `Inherited from ::selection pseudo of...` section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/te2Rhrbqs5BlrlcVFPZf.png", alt="View the Inherited section of the Styles pane.", width="800", height="410" %}
 
 ### View cascade layers {: #cascade-layers}
 
@@ -343,6 +374,20 @@ To add a class to an element:
 
 **Figure 14**. The **Element Classes** pane
 
+### Emulate light and dark theme preferences and enable automatic dark mode {: #emulate-light-dark-themes }
+
+To toggle [automatic dark mode][34] or emulate the user's preference of [light or dark themes][35]:
+
+1. On the **Elements** > **Styles** pane, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CNwUGOgogDCqUaQGt9ZS.svg", alt="Toggle common rendering emulations.", width="20", height="20" %}**Toggle common rendering emulations**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2G2TqgXtPcUnSgRN4saG.png", alt="Toggle common rendering emulations.", width="800", height="376" %}
+1. Select one of the following from the drop-down list:
+
+   - **prefers-color-scheme: light**. Indicates that the user prefers the light theme.
+   - **prefers-color-scheme: dark**. Indicates that the user prefers the dark theme.
+   - **Automatic dark mode**. Displays your page in dark mode even if you didn't implement it. Additionally, sets `prefers-color-scheme` to `dark` automatically.
+
+This drop-down is a shortcut for [Emulate CSS media feature `prefers-color-scheme`](/docs/devtools/rendering/apply-effects/#enable-automatic-dark-mode]) and [Enable automatic dark mode](/docs/devtools/rendering/apply-effects/#enable-automatic-dark-mode) options of the **Rendering** tab.
+
 ### Toggle a class {: #toggle-class }
 
 To enable or disable a class on an element:
@@ -436,20 +481,35 @@ Here's a description of each of the UI elements of the **Color Picker**:
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
 
-#### Sample a color off the page with the Eyedropper {: #eyedropper }
+#### Sample a color (anywhere) with the Eyedropper {: #eyedropper }
 
 When you open the **Color Picker**, the **Eyedropper**
-{% Img src="image/admin/FCjp9jpqJo8tAB7LneFU.png", alt="Eyedropper", width="28", height="28" %} is on by default. To change
-the selected color to some other color on the page:
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
 
-1.  Hover over the target color in the viewport.
-2.  Click to confirm.
+The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and, with a corresponding experiment enabled, from anywhere on the screen:
 
-    {% Img src="image/admin/7g1d1iGpJgm98vIHA6pA.png", alt="Using the Eyedropper", width="800", height="529" %}
+- Pick a color from the page:
 
-    **Figure 27**. The **Color Picker** shows a current color value of `#212121`, which is close to
-    black. This color would change to the blue that's currently highlighted in the viewport once the
-    blue was clicked
+    1.  Hover over the target color in the viewport.
+    1.  Click to confirm.
+
+        {% Img src="image/admin/7g1d1iGpJgm98vIHA6pA.png", alt="Using the Eyedropper on the page.", width="800", height="529" %}
+
+    The **Color Picker** shows a current color value of `#212121`, which is close to black. This color changes to the blue that's highlighted in the viewport once you click the blue.
+
+- (Experimental) Pick a color from anywhere on the screen:
+
+    {% Aside %}
+    To enable this experimental feature, check **Enable color picking outside the browser window** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
+    {% endAside %}
+
+    1. Hover over the target color on your screen.
+    1. Click to confirm.
+
+       <div class="elevation--2" style="margin-top: 20px; margin-bottom: 20px;">
+       {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
+
+    The **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to the pink from outside the browser window once you click the pink.
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
@@ -518,6 +578,24 @@ To open the **Shadow Editor**:
    - **Spread** (only for `box-shadow`). Drag the slider or specify a value.
 1. Observe the changes applied to the [element](#shadow-element).
 
+### (Experimental) Copy CSS changes {: #copy-css-changes }
+
+{% Aside %}
+To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
+{% endAside %}
+
+With this experiment enabled, the **Styles** pane highlights your CSS changes in green.
+
+To copy a single CSS declaration change, hover over the highlighted declaration and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0vPvwat277ITJphiOtml.svg", alt="Copy.", width="20", height="20" %} **Copy** button.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iKzTdyPSLtN5ZkyGATIt.png", alt="Copy a CSS declaration change.", width="800", height="471" %}
+
+To copy all CSS changes across declarations at once, right-click on any declaration and select **Copy all CSS changes**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/odEF8CoGaRuzvVSJcIzo.png", alt="Copy all CSS changes.", width="800", height="471" %}
+
+Additionally, you can [track changes](/docs/devtools/changes/) you make with the **Changes** tab.
+
 [1]: /docs/devtools/css
 [2]: /docs/devtools/css#view
 [3]: /docs/devtools/javascript/reference#format
@@ -550,3 +628,6 @@ To open the **Shadow Editor**:
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
+[33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+[34]: /blog/auto-dark-theme/
+[35]: https://web.dev/prefers-color-scheme/

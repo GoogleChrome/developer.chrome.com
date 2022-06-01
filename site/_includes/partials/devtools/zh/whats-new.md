@@ -2,18 +2,18 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/zh/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/zh/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/zh/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/zh/blog/new-in-devtools-102/#debugger)
-* [Console updates](/zh/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/zh/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/zh/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/zh/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/zh/blog/new-in-devtools-102/#color-picker) -->
+* [预览功能：新的 Performance insights 面板](/zh/blog/new-in-devtools-102/#perf)
+* [新的模拟浅色和深色主题的快捷方式](/zh/blog/new-in-devtools-102/#emulation)
+* [提升网络预览标签页的安全性](/zh/blog/new-in-devtools-102/#network-preview)
+* [提升在断点处的重新加载](/zh/blog/new-in-devtools-102/#debugger)
+* [控制台更新](/zh/blog/new-in-devtools-102/#console)
+* [在用户流程录制开始时取消](/zh/blog/new-in-devtools-102/#recorder)
+* [在样式边栏中展示继承的高亮伪元素](/zh/blog/new-in-devtools-102/#pseudo)
+* [其它亮点](/zh/blog/new-in-devtools-102/#misc)
+* [[实验阶段] 复制 CSS 更改](/zh/blog/new-in-devtools-102/#copy)
+* [[实验阶段] 在浏览器外选择颜色](/zh/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
