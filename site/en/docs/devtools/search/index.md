@@ -34,7 +34,9 @@ To search for text across all loaded resources, in the search bar on the **Searc
 
 To make your query case-sensitive, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/egjnpBbgTvj6FDiIbfoc.png", alt="Match case.", width="25", height="20" %} **Match Case** button.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/u2YlZUWEgtSIr7Ma7iol.png", alt="Match Case button.", width="800", height="444" %}
+<figure>
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/u2YlZUWEgtSIr7Ma7iol.png", alt="Match Case button.", width="800", height="444" %}
+</figure>
 
 To search for text that matches a RegEx pattern, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/97kuRQETaw1jnAfMHrbQ.png", alt="RegEx button.", width="17", height="18" %} **Use Regular Expression** button.
 
