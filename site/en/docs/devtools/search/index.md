@@ -21,7 +21,7 @@ Alternatively, use [built-in search bars](#built-in-search-bars) to find text in
 You can open the **Search** tab in several ways. First, [open DevTools](/docs/devtools/open/), then do one of the following:
 
 - In the top-right corner of DevTools, select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools", width="20", height="20" %} **Customize and control DevTools** > **More tools** > **Search**.
-- Press `Esc` to open [**Drawer**](/docs/devtools/customize/#drawer), and in the top-left corner, select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools", width="20", height="20" %} **More Tools** > **Search**.
+- Press <kbd>Esc</kbd> to open [**Drawer**](/docs/devtools/customize/#drawer), and in the top-left corner, select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools", width="20", height="20" %} **More Tools** > **Search**.
 - Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>F</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> (Windows/Linux).
 
 ## Search for text across all loaded resources {: #search-loaded-resources }
