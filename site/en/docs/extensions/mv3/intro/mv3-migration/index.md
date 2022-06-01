@@ -290,16 +290,19 @@ In Manifest V3, all of your extension's logic must be included in the extension.
 load and execute a remotely hosted file. A number of alternative approaches are available, depending
 on your use case and the reason for remote hosting. Here's a few approaches are:
 
-Configuration-driven features and logic : In this approach, your extension loads a remote
+Configuration-driven features and logic
+: In this approach, your extension loads a remote
 configuration (for example a JSON file) at runtime and caches the configuration locally. The
 extension then uses this cached configuration to decide which features to enable.
 
-Externalize logic with a remote service : Consider migrating application logic from the extension to
+Externalize logic with a remote service
+: Consider migrating application logic from the extension to
 a remote web service that your extension can call. (Essentially a form of message passing.) This
 provides you the ability to keep code private and change the code on demand while avoiding the extra
 overhead of resubmitting to the Chrome Web Store.
 
-Bundle third-party libraries : If you are using a popular framework like [React][react-cdn] or
+Bundle third-party libraries
+: If you are using a popular framework like [React][react-cdn] or
 [Bootstrap][bootstrap-gs], you can download the minified files, add them to your project and import
 them locally. For example:
 
