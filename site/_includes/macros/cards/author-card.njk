@@ -4,7 +4,7 @@
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full text-align-center">
   {% if author.image %}
     <div class="gap-bottom-300">
-      <a class="display-block" href="{{ author.url }}">
+      <a translate="no" class="display-block" href="{{ author.url }}">
         {% Img
           src=author.image,
           alt=author.title | i18n(locale),
@@ -19,7 +19,7 @@
   {% endif %}
 
   <h2 class="type--h5">
-    <a class="surface display-inline-flex color-text" href="{{ author.url }}">
+    <a translate="no" class="surface display-inline-flex color-text" href="{{ author.url }}">
       {{ author.title | i18n(locale) }}
     </a>
   </h2>
