@@ -79,7 +79,7 @@ Chromium issue: [833147](https://crbug.com/833147)
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
 이제 브레이크 포인트에서 새로고침이 발생할 시, 스크립트 실행이 디버거에 의해 종료됩니다.
 <!-- For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.  -->
-예를 들어, [리액트 데모 페이지](https://react-stuck.glitch.me/)내부의 `ReactDOM` 브레이크포인트가 설정되고 새로고침될 때 이전에는 종료되지 않는 루프로 인해 소스 패널이 동작하지 않았습니다.
+예를 들어, [리액트 데모 페이지](https://react-stuck.glitch.me/) 내부의 `ReactDOM` 브레이크포인트가 설정되고 새로고침될 때 이전에는 종료되지 않는 루프로 인해 소스 패널이 동작하지 않았습니다.
 <!-- Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox. -->
 계속해서 자바스크립트를 실행하는 것은 개발자들에게 매우 많은 문제를 야기할 것이고, 또한 이는 렌더러를 깨진 상태로 남아 있게 할 수도 있습니다. 이 변경 사항은 디버깅 동작을 파이어폭스와 같은 다른 브라우저의 동작과 일치하도록 조정합니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QBv59pX5TE9c7iJAB3Xu.png", alt="브레이크 포인트에서의 개선된 새로고침", width="800", height="566" %}
@@ -178,7 +178,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 <!-- Apart from that, you can copy all CSS changes across declarations by right-clicking on any rule, and selecting **Copy all CSS changes**. -->
 그 외에도, 어떤 규칙 위에서 마우스 우클릭 후 **모든 CSS 변경사항 복사** 를 선택하여, 모든 변경사항들을 복사할 수 있습니다.
 <!-- A new **Copy** button is added to the [Changes](/docs/devtools/changes/) tab as well to help you keep track and copy your CSS changes with ease! -->
-[변경사항](/docs/devtools/changes/)탭에 새로운 **복사** 버튼이 추가되었으며, 이는 여러분들의 변경 이력을 추적하고 CSS 변경사항들을 쉽게 복사할 수 있도록 합니다. ]
+[변경사항](/docs/devtools/changes/) 탭에 새로운 **복사** 버튼이 추가되었으며, 이는 여러분들의 변경 이력을 추적하고 CSS 변경사항들을 쉽게 복사할 수 있도록 합니다. ]
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7PYMKJNBguswcas6jbpu.png", alt="Copy CSS changes", width="800", height="488", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
