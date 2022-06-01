@@ -40,7 +40,9 @@ To make your query case-sensitive, toggle the {% Img src="image/NJdAV9UgKuN8Ahoa
 
 To search for text that matches a RegEx pattern, toggle the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/97kuRQETaw1jnAfMHrbQ.png", alt="RegEx button.", width="17", height="18" %} **Use Regular Expression** button.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OMfgsPc0jnodtsmaL7A1.png", alt="RegEx button.", width="800", height="558" %}
+<figure>
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OMfgsPc0jnodtsmaL7A1.png", alt="RegEx button.", width="800", height="558" %}
+</figure>
 
 {% Aside 'gotchas' %}
 You don't need to wrap your RegEx query in forward slashes. 
