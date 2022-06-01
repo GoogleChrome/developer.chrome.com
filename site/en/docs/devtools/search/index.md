@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Search: Find text across all loaded resources"
 authors:
   - sofiayem
-date: 2022-05-27
+date: 2022-06-01
 #updated: YYYY-MM-DD
 description: "Find text across all loaded resources with the Search tab."
 ---
