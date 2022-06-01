@@ -32,24 +32,24 @@ tags:
 ## 미리보기 기능: 새로운 Performance insights 창 {: #perf }
 
 <!-- Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance. -->
-**Performance insights** 창을 이용하여 여러분의 웹사이트 성능에 대해 실행 가능한, 그리고 유스 케이스에 기반한 인사이트를 발견할 수 있습니다.
+**Performance insights** 창을 이용하여 웹사이트 성능에 대해 실천 가능한, 그리고 유스 케이스에 기반한 인사이트를 발견할 수 있습니다.
 <!-- [Open the panel](/docs/devtools/performance-insights/#open) and start a new recording based on your use case. For example, let’s measure the page load of this [demo page](https://coffee-cart.netlify.app/?ad=1). -->
-여기를 [클릭](/docs/devtools/performance-insights/#open)하여 창을 열고, 여러분의 유스 케이스을 토대로 녹화를 시작합니다. 한 가지 예시로, 이 [데모 페이지](https://coffee-cart.netlify.app/?ad=1) 로딩을 측정해 보겠습니다.
+여기를 [클릭](/docs/devtools/performance-insights/#open)하여 창을 열고, 여러분의 유스 케이스를 바탕으로 녹화를 시작합니다. 한 가지 예시로, 이 [데모 페이지](https://coffee-cart.netlify.app/?ad=1) 로딩을 측정해 보겠습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="새로운 Performance insights 창", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
 녹화가 완료되면, 여러분은 **Insight** 창에서 Performance insight 를 볼 수 있습니다. 각각의 인사이트 항목(예시: Render blocking request 및 layout shift)을 클릭하여 페이지 내의 이슈와 잠재적인 수정 사항에 대해 알아보세요.
 <!-- Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.  -->
-**Performance insights** [관련 문서](/docs/devtools/performance-insights/) 로 가면 단계별 튜토리얼을 볼 수 있으며, 이와 함께 이 기능에 대한 이해도를 넓힐 수 있을 것입니다.
+**Performance insights** [관련 문서](/docs/devtools/performance-insights/) 로 가면 단계별 튜토리얼을 볼 수 있습니다.
 <!-- This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements. -->
-Performance insights 는 미리보기 기능으로서, 웹 개발자-특히 비성능 전문가-들이 잠재적인 성능 문제를 인식하고 해결하는 데에 도음을 줄 수 있습니다. 우리는 이 기능을 현재 활발하게 개발하고 있으며, 더 많은 개선사항을 위해서 여러분의 [피드백](https://crbug.com/1270700)이 필요합니다.
+Performance insights 는 미리보기 기능으로서, 성능 전문가가 아닌 웹 개발자들이 잠재적인 성능 문제를 인식하고 해결하는 데에 도음을 줄 수 있습니다. 우리는 이 기능을 현재 활발하게 개발하고 있으며, 더 많은 개선사항을 위해서 여러분의 [피드백](https://crbug.com/1270700)이 필요합니다.
 Chromium issue: [1270700](https://crbug.com/1270700)
 
 
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## 새 바로가기 메뉴 -  라이트 테마 및 다크 테마 에뮬레이팅하기 {: #emulation }
 <!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-여러분은 이제 **스타일** 창의 새로운 바로가기를 통해 라이트 테마 및 다크 테마를 좀더 빠르게 에뮬레이팅할 수 있습니다. (CSS 미디어 기능 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query))
+여러분은 이제 **스타일** 창의 새 바로가기를 통해 라이트 테마 및 다크 테마를 좀 더 빠르게 에뮬레이트할 수 있습니다. (CSS 미디어 기능 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query))
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 이전에는, **렌더링** 탭에서 [테마 에뮬레이션](/docs/devtools/rendering/emulate-css/) 을 위해 더 많은 단계를 거쳐야 했습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="라이트 테마 및 다크 테마를 에뮬레이팅하기 위한 새로운 바로가기", width="800", height="488" %}
@@ -60,13 +60,13 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 
 
 <!-- ## Improve security on the Network Preview tab {: #network-preview } -->
-## 네트워크 창의 미리보기 탭의 보안 개선 {: #network-preview }
+## 네트워크 창의 미리보기 탭 보안 개선 {: #network-preview }
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 DevTools의 새로운 기능 중 하나로, **네트워크** 창의 **미리보기** 탭에 콘텐츠 보안 정책(CSP)이 적용되었습니다.
 <!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-예를 들어, 첫 번째 스크린샷을 보면 이 페이지에는 [혼합 콘텐츠](https://web.dev/what-is-mixed-content/)가 포함되어 있습니다. 이 페이지는 보안 HTTPS 연결을 통해 로딩되지만, 스타일시트는 로딩을 위해 보안되지 않은 HTTP 연결을 이용합니다.
+예를 들어, 첫 번째 스크린샷을 보면 이 페이지에는 [혼합 콘텐츠](https://web.dev/what-is-mixed-content/)가 포함되어 있습니다. 이 페이지는 안전한 HTTPS 연결을 통해 로딩되지만, 스타일시트는 로딩을 위해 보안되지 않은 HTTP 연결을 이용합니다.
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
-브라우저는 스타일시트의 요청을 기본적으로 제한합니다. 그러나 여러분이 이 페이지를 **네트워크** 창의 **미리보기** 탭을 통해 열었을 때, 이전에는 스타일시트의 요청이 제한되지 않았습니다. (따라서 배경이 붉게 바뀝니다.) 그러나 이제는 여러분이 예상했듯이 요청이 받아들여지지 않습니다.
+브라우저는 스타일시트 요청을 기본적으로 제한합니다. 그러나 이 페이지를 **네트워크** 창의 **미리보기** 탭을 통해 열었을 때, 이전에는 스타일시트의 요청이 제한되지 않았습니다. (따라서 배경이 붉게 바뀝니다.) 그러나 이제는 여러분이 기대하는 것처럼 요청이 받아들여지지 않습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="네트워크 창의 미리 보기 탭 보안 개선", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/95bce20a2490b59a36d5da04c5f81d8c38230a39 #}
@@ -75,14 +75,14 @@ Chromium issue: [833147](https://crbug.com/833147)
 
 
 <!-- ## Improved reloading at breakpoint {: #debugger } -->
-## 브레이크 포인트에서의 재로딩 개선 {: #debugger }
+## 브레이크 포인트에서의 새로고침 개선 {: #debugger }
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
-이제 브레이크 포인트에서 재로딩이 발생할 시, 스크립트 실행이 디버거에 의해 종료됩니다.
+이제 브레이크 포인트에서 새로고침이 발생할 시, 스크립트 실행이 디버거에 의해 종료됩니다.
 <!-- For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.  -->
-예를 들어, [리액트 데모 페이지](https://react-stuck.glitch.me/)내부의 `ReactDOM` 브레이크포인트가 설정되고 재로딩될 때 이전에는 스크립트가 무한루프에 진입했습니다.
+예를 들어, [리액트 데모 페이지](https://react-stuck.glitch.me/)내부의 `ReactDOM` 브레이크포인트가 설정되고 새로고침될 때 이전에는 종료되지 않는 루프로 인해 소스 패널이 동작하지 않았습니다.
 <!-- Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox. -->
-계속해서 자바스크립트를 실행하는 것은 개발자들에게 매우 많은 문제를 야기할 것이고, 또한 이는 렌더러를 깨진 상태로 남아 있게 할 수도 있습니다. 이 변경 사항은 디버깅 동작을 파이어폭스와 같은 다른 브라우저에 맞게 조정합니다.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QBv59pX5TE9c7iJAB3Xu.png", alt="브레이크 포인트에서의 개선된 재로딩", width="800", height="566" %}
+계속해서 자바스크립트를 실행하는 것은 개발자들에게 매우 많은 문제를 야기할 것이고, 또한 이는 렌더러를 깨진 상태로 남아 있게 할 수도 있습니다. 이 변경 사항은 디버깅 동작을 파이어폭스와 같은 다른 브라우저의 동작과 일치하도록 조정합니다.
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QBv59pX5TE9c7iJAB3Xu.png", alt="브레이크 포인트에서의 개선된 새로고침", width="800", height="566" %}
 
 {# https://chromium.googlesource.com/chromium/src/+/ea207cee9bbd9b6731228d94778b23138373ec97 #}
 
@@ -119,23 +119,23 @@ Chromium issue: [1260744](https://crbug.com/1260744)
 <!-- ## Cancel user flow recording at the start {: #recorder } -->
 ## 시작 전에 유저 플로우 녹화 취소하기 {: #recorder }
 <!-- You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording. -->
-이전 버전에서는 녹화를 취소할 수 있는 옵션이 없었으나 이제 유저 플로우 녹화를 시작하기 직전에 취소가 가능해졌습니다. 
+이전 버전에서는 녹화를 취소할 수 있는 옵션이 없었으나 이제 유저 플로우 녹화 시작 중에도 취소가 가능해졌습니다. 
 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="시작 전에 유저 플로우 녹화 취소하기", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="시작 중에 유저 플로우 녹화 취소하기", width="800", height="488" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Display inherited highlight pseudo-elements in the Styles pane {: #pseudo } -->
-## 스타일 창에 상속된 하이라이트 의사 속성들 표시하기 {: #pseudo }
+## 스타일 창에 상속된 하이라이트 의사 요소들 표시하기 {: #pseudo }
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
-**스타일** 창에서 상속된 하이라이트 의사 속성들 (예시: `::selection`, `::spelling-error`, `::grammar-error`, `::highlight`)을 보세요. 이전에는 이 규칙들이 표시되지 않았습니다. 
+**스타일** 창에서 상속된 하이라이트 의사 요소들 (예시: `::selection`, `::spelling-error`, `::grammar-error`, `::highlight`)을 보세요. 이전에는 이 규칙들이 표시되지 않았습니다. 
 <!-- As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules. -->
-[정식 문서](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade)에 언급되었듯이 다중 스타일이 충돌을 일으킬 때, 캐스케이드가 가장 우선시되는 스타일을 결정합니다. 이 새로운 기능은 여러분들로 하여금 상속과 우선되는 규칙을 더 잘 이해할 수 있도록 해 줍니다.
+[스펙 문서](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade)에 언급되었듯이 다중 스타일이 충돌을 일으킬 때, 캐스케이드가 가장 우선시되는 스타일을 결정합니다. 이 새로운 기능은 여러분들로 하여금 상속과 우선되는 규칙을 더 잘 이해할 수 있도록 해 줍니다.
 {% Aside %}
 <!-- At the moment, you need to run Chrome with the `--enable-blink-features=HighlightInheritance` flag to enable this feature. -->
-현재는 이 기능을 활성화하기 위해서 `--enable-blink-features=HighlightInheritance` 플래그와 함께 크롬을 실행할 필요가 있습니다.
+현재는 이 기능을 활성화하기 위해서 `--enable-blink-features=HighlightInheritance` 플래그를 활성화하여 크롬을 실행하여야 합니다.
 {% endAside %}
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD8vohg49HvBPW53GV2Q.png", alt="스타일 창에 상속된 하이라이트 의사 속성들 표시하기", width="800", height="529" %}
@@ -154,7 +154,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 - Fixed the CSS formatting logic in the **Sources** panel that caused multiple blank lines when editing CSS. ([1309588](https://crbug.com/1309588))
 - Cap the **Expand recursively** option of an object in the **Console** to maximum 100 so it does not go on forever for circular objects. ([1272450](https://crbug.com/1272450)) -->
 
-- **속성** 창은 이제 접근자 속성 값을 기본적으로 표시합니다. 이전 버전에서는 숨겨져 있었습니다. ([1309087](https://crbug.com/1309087))
+- 이제 **속성** 창은 창은 이전 버전에서는 숨겨져 있었던 접근자 속성 값을 기본적으로 표시합니다. ([1309087](https://crbug.com/1309087))
 - **스타일** 창이 오버라이딩된 `@support` 규칙을 취소선으로 적절하게 표시하기 시작했습니다. 이전 버전에서는 취소선이 표시되지 않았습니다. ([1298025](https://crbug.com/1298025))
 - **소스** 창에서 CSS를 편집할 떄 여러 개의 빈 줄을 만들던 CSS 포매팅 로직이 현 버전에서 수정되었습니다.
 - **콘솔**에 있는 객체의 **재귀적으로 확장** 옵션을 최대 100으로 제한하여 원형 개체에 대해 영원히 지속되지 않도록 합니다. ([1272450](https://crbug.com/1272450))
