@@ -214,11 +214,6 @@ Shared Storage API with Fenced Frame can be tested in Chrome 104 (>= 104.0.5086.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Shared Storage API flag screen", width="744", height="124" %}
 
-To test rendering an opaque source into an iframe instead of a fenced frame, start Chrome Canary from the terminal with the following command line flags: 
-```text
---args --enable-features=PrivacySandboxAdsAPIsOverride,AllowURNsInIframes,SharedStorageAPI --disable-features=FencedFrame
-```
-
 ## Engage and share feedback
 
 The shared storage proposal is under active discussion and subject to change
