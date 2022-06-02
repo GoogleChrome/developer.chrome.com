@@ -22,7 +22,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Soporte para la función de color hwb()](/es/blog/new-in-devtools-101/#hwb)
 * [Mejorada la visualización de las propiedades privadas](/es/blog/new-in-devtools-101/#private-props)
 * [Varios aspectos destacados](/es/blog/new-in-devtools-101/#misc)
-* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse) -->
+* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }
