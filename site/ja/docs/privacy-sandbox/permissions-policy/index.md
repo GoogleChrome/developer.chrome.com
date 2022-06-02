@@ -180,7 +180,7 @@ Permissions-Policy: geolocation=*
 
 このセットアップは、[デモ](https://permissions-policy-demo.glitch.me/demo/all-allowed)でご覧いただけます。
 
-### 同一オリジンにのみ許可される機能
+### 機能が同一オリジンにのみ許可される例
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/qMXplbgF43NkktDHgyec.png", alt="機能へのアクセスが同一オリジンにのみ許可されるアーキテクチャ", width="800", height="490" %}
 
