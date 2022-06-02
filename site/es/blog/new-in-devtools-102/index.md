@@ -274,7 +274,6 @@ Habilite este experimento para elegir un color fuera del navegador con el select
 
 En el panel **Estilos**, haga clic en cualquier vista previa de color para abrir el selector de color. Usa el cuentagotas para elegir el color de cualquier lugar.
 
-
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="Elegir color fuera del navegador", width="800", height="450" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1a73be9f3cb75fdd57578224b71396fbf68f8637 #}
