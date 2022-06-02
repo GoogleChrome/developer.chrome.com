@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: '権限ポリシーによるブラウザ機能の制御'
+title: 'Permissions Policy によるブラウザ機能の制御'
 subhead: >
   ページとページ上のサードパーティ iframe のブラウザ機能へのアクセスを管理する
 date: 2022-04-20
