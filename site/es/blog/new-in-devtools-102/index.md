@@ -41,7 +41,6 @@ Use el panel **Performance Insights** para obtener información procesable y bas
 
 [Abra el panel](/docs/devtools/performance-insights/#open) e inicie una nueva grabación según su caso de uso. Por ejemplo, midamos la carga de la página de esta [página de demostración](https://coffee-cart.netlify.app/?ad=1).
 
-
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="Nuevo panel de información sobre el rendimiento", width="800", height="585" %}
 
 <!-- Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.  -->
@@ -169,7 +168,6 @@ Chromium issue: [1260744](https://crbug.com/1260744)
 ## Cancelar registro de flujo de usuario al inicio {: #recorder }
 
 Puede cancelar la grabación durante el inicio de la grabación del flujo de usuario. Anteriormente, no había opción para cancelar la grabación.
-
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="Cancelar registro de flujo de usuario al inicio", width="800", height="488" %}
 
