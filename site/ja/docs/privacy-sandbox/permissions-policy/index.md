@@ -192,7 +192,7 @@ Permissions-Policy: geolocation=(self)
 
 このセットアップは、[デモ](https://permissions-policy-demo.glitch.me/demo/same-allowed)でご覧いただけます。
 
-### 同一オリジンと特定のクロスオリジンに許可される機能
+### 機能が同一オリジンと特定のクロスオリジンに許可される例
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/txgnW1b0dQRvnxhrjnGZ.png", alt="機能へのアクセスが指定されたオリジンに許可されるアーキテクチャ", width="683", height="429" %}
 
