@@ -36,7 +36,7 @@ This panel is experimental and we want your feedback! Please let us know if you 
 
 ## How we built Performance Insights
 
-Like the rest of DevTools, we built Performance Insights in [TypeScript](/blog/migrating-to-typescript/ ) and used [web components](/blog/migrating-to-web-components/), backed by [lit-html](https://lit.dev/), to build the user interface. Where Performance Insights differs is that the primary UI interface is an HTML `[canvas](https://developer.mozilla.org/docs/Web/HTML/Element/canvas)` element, and the timeline is drawn onto this canvas. A lot of the complexity comes from managing this canvas: not only drawing the right details in the right place, but managing mouse events (for example: where did the user click on the canvas? Did they click on an event we’ve drawn?) and ensure that we re-render the canvas effectively.
+Like the rest of DevTools, we built Performance Insights in [TypeScript](/blog/migrating-to-typescript/ ) and used [web components](/blog/migrating-to-web-components/), backed by [lit-html](https://lit.dev/), to build the user interface. Where Performance Insights differs is that the primary UI interface is [an HTML `canvas` element](https://developer.mozilla.org/docs/Web/HTML/Element/canvas), and the timeline is drawn onto this canvas. A lot of the complexity comes from managing this canvas: not only drawing the right details in the right place, but managing mouse events (for example: where did the user click on the canvas? Did they click on an event we’ve drawn?) and ensure that we re-render the canvas effectively.
 
 {% Aside 'gotchas' %}
 Note that because this panel is an experimental feature, the code for the panel is not open source, but it may become open source in the future.
