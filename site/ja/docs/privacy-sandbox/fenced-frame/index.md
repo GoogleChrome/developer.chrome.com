@@ -70,7 +70,7 @@ _不透明なソース_ は、[UUID の Uniform Resource Name (URN)](https://dat
 
 広告を表示するだけでは十分ではありません。 iframe のように、広告がパブリッシャーのサイトに `postMessage` を送信できる場合、表示されているの広告のコンテンツがリークする可能性があります。 そのため、Fenced Frames は、iframe とは異なり、[postMessage](https://developer.mozilla.org/docs/Web/API/Window/postMessage) を使用して最上位のサイトと通信できません。
 
-Fenced Frames は、他の方法でパブリッシャーから分離されます。 たとえば、パブリッシャーはフェンスで囲まれたフレーム内の DOM にアクセスできず、 Fenced Frames はパブリッシャーの DOM にアクセスできません。 さらに、`name` などの属性は、任意の値に設定し、パブリッシャーが観察することができますが、Fenced Frames では使用できません。
+Fenced Frames は、他の方法でパブリッシャーから分離されます。 たとえば、パブリッシャーは Fenced Frame 内の DOM にアクセスできず、 Fenced Frames はパブリッシャーの DOM にアクセスできません。 さらに、`name` などの属性は、任意の値に設定し、パブリッシャーが観察することができますが、Fenced Frames では使用できません。
 
 Fenced Frames は、[トップレベルブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (ブラウザタブなど) のように動作します。 Fenced Frames の特性は、[説明](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md)で詳しく説明されています。
 
