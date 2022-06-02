@@ -125,7 +125,7 @@ Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 
 #### さまざまなサブドメインとパス
 
-`https://your-site.example` や `https://subdomain.your-site.example` などの異なるサブドメインは、[同一サイトであってもクロスオリジンとは見なされません](https://web.dev/same-site-same-origin/)。 したがって、オリジンリストにサブドメインを追加しても、同じサイトの別のサブドメインへのアクセスは許可されません。 この機能を使用するすべての埋め込みサブドメインは、個別にオリジンリストに追加する必要があります。  たとえば、ユーザーのブラウジングトピックへのアクセスが、`Permissions-Policy: browsing-topics=(self)` ヘッダーを持つ同一オリジンにのみ許可されている場合、同じサイトの別のサブドメイン `https://subdomain.your-site.example` から配信される iframe は、そのトピックにアクセスできません。
+`https://your-site.example` や `https://subdomain.your-site.example` などの異なるサブドメインは、[同一サイトでクロスオリジンです](https://web.dev/same-site-same-origin/)。 したがって、オリジンリストにサブドメインを追加しても、同じサイトの別のサブドメインへのアクセスは許可されません。 この機能を使用するすべての埋め込みサブドメインは、個別にオリジンリストに追加する必要があります。  たとえば、ユーザーのブラウジングトピックへのアクセスが、`Permissions-Policy: browsing-topics=(self)` ヘッダーを持つ同一オリジンにのみ許可されている場合、同じサイトの別のサブドメイン `https://subdomain.your-site.example` から配信される iframe は、そのトピックにアクセスできません。
 
 `https://your-site.example` や `https://your-site.example/embed` などの異なるパスは同一オリジンとみなされ、このように異なるパスをオリジンリストに含める必要はありません。
 
