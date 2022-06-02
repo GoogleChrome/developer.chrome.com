@@ -72,7 +72,7 @@ _不透明なソース_ は、[UUID の Uniform Resource Name (URN)](https://dat
 
 Fenced Frames は、他の方法でパブリッシャーから分離されます。 たとえば、パブリッシャーは Fenced Frame 内の DOM にアクセスできず、 Fenced Frames はパブリッシャーの DOM にアクセスできません。 さらに、`name` などの属性は、任意の値に設定し、パブリッシャーが観察することができますが、Fenced Frames では使用できません。
 
-Fenced Frames は、[トップレベルブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (ブラウザタブなど) のように動作します。 Fenced Frames の特性は、[説明](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md)で詳しく説明されています。
+Fenced Frames は、[トップレベルブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (ブラウザタブなど) のように動作します。 Fenced Frames の特性は、[Explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md)で詳しく説明されています。
 
 ### Fenced Frames と iframe を比べたときの違い {: #compare }
 
