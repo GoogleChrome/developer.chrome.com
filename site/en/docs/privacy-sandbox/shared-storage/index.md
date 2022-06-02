@@ -210,13 +210,12 @@ register("send-reach-report", SendReachReportOperation);
 
 ## Try the Shared Storage API
 
-Shared Storage API with Fenced Frame can be tested in Chrome Canary 104 (>= 104.0.5086.0) by enabling the "Privacy Sandbox Ads APIs 
-experiment" flag by visiting `chrome://flags/#privacy-sandbox-ads-apis`.
+Shared Storage API with Fenced Frame can be tested in Chrome Canary 104 (>= 104.0.5086.0) by enabling the "Privacy Sandbox Ads APIs experiment" flag by visiting `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Shared Storage API flag screen", width="744", height="124" %}
 
 To test rendering an opaque source into an iframe instead of a fenced frame, start Chrome Canary from the terminal with the following command line flags: 
-```
+```text
 --args --enable-features=PrivacySandboxAdsAPIsOverride,AllowURNsInIframes,SharedStorageAPI --disable-features=FencedFrame
 ```
 
