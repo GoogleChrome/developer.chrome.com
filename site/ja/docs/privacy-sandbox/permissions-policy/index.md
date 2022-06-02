@@ -204,7 +204,7 @@ Permissions-Policy: geolocation=(self "https://trusted-site.example")
 
 このセットアップは、[デモ](https://permissions-policy-demo.glitch.me/demo/some-allowed)でご覧いただけます。
 
-### すべてのオリジンにブロックされる機能
+### 機能がすべてのオリジンでブロックされる例
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/QplbQpjXOSnZxMBlNeLN.png", alt="機能へのアクセスがすべてのオリジンにブロックされるアーキテクチャ", width="682", height="421" %}
 
