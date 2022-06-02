@@ -37,7 +37,7 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y [M
 
 ## Función de vista previa: nuevo panel de información de rendimiento {: #perf }
 
-Use el panel **Perspectivas de rendimiento** para obtener información procesable y basada en casos de uso sobre el rendimiento de su sitio web.
+Use el panel **Performance Insights** para obtener información procesable y basada en casos de uso sobre el rendimiento de su sitio web.
 
 [Abra el panel](/docs/devtools/performance-insights/#open) e inicie una nueva grabación según su caso de uso. Por ejemplo, midamos la carga de la página de esta [página de demostración](https://coffee-cart.netlify.app/?ad=1).
 
