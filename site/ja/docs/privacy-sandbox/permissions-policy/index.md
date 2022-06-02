@@ -163,7 +163,7 @@ Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 
 次のセットアップ例は、[デモ](https://permissions-policy-demo.glitch.me/demo/)でご覧いただけます。
 
-### すべてのオリジンに許可される機能
+### 機能がすべてのオリジンに許可される例
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/uzpMbPWgvHjJwF4TTAIG.png", alt="機能へのアクセスがすべてのオリジンに許可されるアーキテクチャ", width="800", height="491" %}
 
