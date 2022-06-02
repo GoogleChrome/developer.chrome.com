@@ -13,7 +13,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mostrar pseudoelementos heredados resaltados en el panel Estilos](/es/blog/new-in-devtools-102/#pseudo)
 * [Destacados varios](/es/blog/new-in-devtools-102/#misc)
 * [[Experimental] Copiar cambios de CSS](/es/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser](/es/blog/new-in-devtools-102/#color-picker)
+* [[Experimental] Selección de color fuera del navegador](/es/blog/new-in-devtools-102/#color-picker)
 
 ### Chrome 101 {: #chrome101 }
 
