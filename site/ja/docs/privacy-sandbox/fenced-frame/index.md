@@ -20,7 +20,7 @@ updated: 2022-05-10
 *  M102 ～ M105 の[プライバシーサンドボックス統合オリジントライアル](/origintrials/#/view_trial/771241436187197441)で Fenced Frames を試してください。 [オリジントライアルを設定](/blog/privacy-sandbox-unified-origin-trial/)する方法を習得し、[フィードバック/ディスカッションに参加](https://github.com/WICG/fenced-frame/issues)してください。
 *  [Fenced Frames 提案](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5699388062040064)
-*  この機能は、[Chrome フラグの背後で提供](#try-fenced-frames)されています。
+*  この機能は、[Chrome フラグを有効にすることで提供](#try-fenced-frames)されています。
 *  [プライバシーサンドボックスタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)は、Fenced Frames やその他の提案の実装タイミングを提供します。
 
 ## Fenced Frames が必要な理由
