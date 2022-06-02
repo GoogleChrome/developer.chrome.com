@@ -63,7 +63,7 @@ Fenced Frames では、パブリッシャーは訪問者の関心と一致する
 Fenced Frames は、FLEDGE API 広告オークションで勝った広告から作成されます。 FLEDGE API から取得された情報は、広告自体の URL ではありませんが、[不透明なソース](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/opaque_src.md)になります。
 
 {% Aside 'key-term' %}
-_不透明なソース_は、[UUID の Uniform Resource Name (URN)](https://datatracker.ietf.org/doc/html/rfc4122) で表されます。 したがって、不透明なソースは、`http://example.com` (URL) ではなく、`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`として表されます。 URN スキームは永続的で、場所に依存しない識別子です。つまり、リソース (広告クリエイティブなど) を検索するために使用することはできません。
+_不透明なソース_ は、[UUID の Uniform Resource Name (URN)](https://datatracker.ietf.org/doc/html/rfc4122) で表されます。 したがって、不透明なソースは、`http://example.com` (URL) ではなく、`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`として表されます。 URN スキームは永続的で、場所に依存しない識別子です。つまり、リソース (広告クリエイティブなど) を検索するために使用することはできません。
 {% endAside %}
 
 不透明なソースを使用すると、サイトの所有者に広告のソース URL を公開しなくても、サイトで広告を表示できます。
