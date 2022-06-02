@@ -2,18 +2,18 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/ko/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/ko/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/ko/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/ko/blog/new-in-devtools-102/#debugger)
-* [Console updates](/ko/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/ko/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/ko/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/ko/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/ko/blog/new-in-devtools-102/#color-picker) -->
+* [미리보기 기능: 새로운 Performance insights 창](/ko/blog/new-in-devtools-102/#perf)
+* [새 바로가기 메뉴 -  라이트 테마 및 다크 테마 에뮬레이팅하기](/ko/blog/new-in-devtools-102/#emulation)
+* [네트워크 창의 미리보기 탭의 보안 개선](/ko/blog/new-in-devtools-102/#network-preview)
+* [브레이크 포인트에서의 재로딩 개선](/ko/blog/new-in-devtools-102/#debugger)
+* [콘솔 업데이트](/ko/blog/new-in-devtools-102/#console)
+* [시작 전에 유저 플로우 녹화 취소하기](/ko/blog/new-in-devtools-102/#recorder)
+* [스타일 창에 상속된 하이라이트 의사 속성들 표시하기](/ko/blog/new-in-devtools-102/#pseudo)
+* [기타 하이라이트](/ko/blog/new-in-devtools-102/#misc)
+* [[실험 기능] CSS에서의 변경사항 복사](/ko/blog/new-in-devtools-102/#copy)
+* [[실험 기능] 브라우저 바깥의 색상 선택하기](/ko/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }
