@@ -25,7 +25,7 @@ updated: 2022-05-10
 
 ## Fenced Frames が必要な理由
 
-Fenced Frames (`<fencedframe>`) は、iframe と同様に、埋め込まれた コンテンツ向けに提案された HTML 要素です。 Fenced Frames は、iframe とは異なり、埋め込みコンテキストとの通信を制限し、フレームが埋め込みコンテキストと共有せずにクロスサイトデータにアクセスできるようにします。 一部のプライバシーサンドボックス API では、[Fenced Frames 内でレンダリングする文書を選択する必要がある](#use-cases)場合があります。
+Fenced Frames (`<fencedframe>`) は、iframe と同様に、埋め込まれた コンテンツ向けに提案された HTML 要素です。 Fenced Frames は、iframe とは異なり、埋め込みコンテキストとの通信を制限し、フレームが埋め込みコンテキストとは共有されずにクロスサイトデータにアクセスできるようにします。 一部のプライバシーサンドボックス API では、[Fenced Frames 内でレンダリングする文書を選択する必要がある](#use-cases)場合があります。
 
 同様に、埋め込みコンテキストのファーストパーティデータは、Fenced Frames と共有できません。
 
