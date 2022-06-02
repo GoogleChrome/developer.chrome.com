@@ -50,7 +50,8 @@ Use el panel **Performance Insights** para obtener información procesable y bas
 
 <!-- This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements. -->
 
-Una vez que se completa la grabación, se obtiene información sobre el rendimiento en el panel **Información**. Haga clic en cada elemento de información (por ejemplo, solicitud de bloqueo de procesamiento, cambio de diseño) para comprender el problema y las posibles soluciones.
+Una vez que se completa la grabación, se obtiene información sobre el rendimiento en el panel **Insights**. Haga clic en cada elemento de información (por ejemplo, solicitudes de red que bloquean el renderizado, cambio de diseño) para comprender el problema y las posibles soluciones.
+
 
 Vaya al panel de **Perspectivas de rendimiento** [documentación](/docs/devtools/performance-insights/) para obtener más información con el tutorial paso a paso.
 
