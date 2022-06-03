@@ -69,5 +69,190 @@ Project Fugu 🐡 showcase
   </article>
 {% endfor %}
 </div>
-{% endblock %}
 
+<script>
+  const EMBED_URL = 'https://developer.chrome.com/fugu-showcase/';
+
+  const articles = document.querySelectorAll('article');
+  const options = document.querySelectorAll('option');
+  const button = document.querySelector('button[type="reset"].search-apis');
+  const input = document.querySelector('input.search-apis');
+  const form = document.querySelector('form.search-apis');
+  const searchButton = document.querySelector('button.search-apps');
+  const searchInput = document.querySelector('input.search-apps');
+  const shareButtons = document.querySelectorAll('.share');
+  const container = document.querySelector('.container');
+  const anchors = document.querySelectorAll('a.anchor');
+
+  if ('clipboard' in navigator && 'writeText' in navigator.clipboard) {
+    anchors.forEach((anchor) => {
+      anchor.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const anchorURL = new URL(anchor.href);
+        anchor.classList.add('copied');
+        setTimeout(() => {
+          anchor.classList.remove('copied');
+        }, 3000);
+        window.history.pushState({}, '', anchorURL);
+        try {
+          const embedURL = new URL(EMBED_URL);
+          anchorURL.host = embedURL.host;
+          anchorURL.pathname = embedURL.pathname;
+          anchorURL.port = '';
+          anchorURL.protocol = 'https:';
+          await navigator.clipboard.writeText(anchorURL);
+        } catch (err) {
+          console.error(err.name, err.message);
+        }
+      });
+    });
+  }
+
+  const slugify = (string) => {
+    return string.toLowerCase().replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/-*$/g, '');
+  };
+
+  const removeTargetClass = () => {
+    document.querySelectorAll('.target').forEach((target) => target.classList.remove('target'));
+  };
+
+  const clearURL = () => {
+    removeTargetClass();
+    const url = new URL(location.href);
+    url.searchParams.delete('api');
+    url.hash = '';
+    window.history.pushState({}, '', url);
+  };
+
+  searchInput.addEventListener('input', (e) => {
+    if (!e.target.value) {
+      input.dispatchEvent(new Event('input'));
+      return;
+    }
+    input.value = '';
+    clearURL();
+    articles.forEach((article) => {
+      article.style.display = 'none';
+    });
+    const value = e.target.value.toLowerCase();
+    const matchingArticles = container.querySelectorAll(`article[class*="\${value}"]`);
+    matchingArticles.forEach((article) => {
+      article.style.display = 'block';
+    });
+  });
+
+  searchButton.addEventListener('click', (e) => {
+    clearURL();
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+  });
+
+  button.addEventListener('click', () => {
+    clearURL();
+    input.value = '';
+    input.dispatchEvent(new Event('input'));
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  });
+
+  options.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      clearURL();
+      input.value = option.value;
+      input.dispatchEvent(new Event('input'));
+    });
+    option.addEventListener('keypress', (e) => {
+      e.preventDefault();
+      if (e.key !== 'Enter' && e.key !== ' ') {
+        return;
+      }
+      clearURL();
+      input.value = option.value;
+      input.dispatchEvent(new Event('input'));
+    });
+  });
+
+  input.addEventListener('input', () => {
+    const value = slugify(input.value);
+    const url = new URL(window.location);
+    searchInput.value = '';
+    clearURL();
+    if (value && availableAPIs.includes(value)) {
+      url.searchParams.set('api', value);
+      url.hash = '';
+      window.history.pushState({}, '', url);
+      articles.forEach(article => {
+        article.style.display = 'none';
+        if (article.classList.contains(value)) {
+          article.style.display = 'block';
+        }
+      });
+    } else {
+      articles.forEach(article => {
+        article.style.display = 'block';
+      });
+      url.searchParams.delete('api');
+      window.history.pushState({}, '', url);
+    }
+  });
+
+  const getOptionValue = (api) => {
+    for (const option of options) {
+      if (slugify(option.value) === api) {
+        return option.value;
+        break;
+      }
+    }
+  };
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'f' && e.metaKey) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+  });
+
+  window.addEventListener('load', () => {
+    const url = new URL(window.location);
+    const api = url.searchParams.get('api');
+    if (api && availableAPIs.includes(api)) {
+      input.value = getOptionValue(api);
+    } else {
+      url.searchParams.delete('api');
+      window.history.pushState({}, '', url);
+    }
+    input.dispatchEvent(new Event('input'));
+  });
+
+  if ('share' in navigator && 'canShare' in navigator) {
+    const isMac = /Mac|iPhone/.test(navigator.platform);
+    shareButtons.forEach((button) => {
+      if (isMac) {
+        button.classList.add('mac');
+      }
+      button.style.display = 'block';
+      button.addEventListener('click', async (e) => {
+        const article = e.target.closest('article');
+        const img = article.querySelector('img');
+        const blob = await fetch(img.currentSrc).then((res) => res.blob());
+        const file = new File([blob], img.getAttribute('src'), { type: blob.type });
+        const data = {
+          text: `👀 I just found the app “\${article.querySelector('h2').textContent}”: \${article.querySelector('a').href}.\n\nAmong others, it uses these cool Project Fugu APIs:\n\n\${Array.from(article.querySelectorAll('li')).slice(0, 2).map(li => \`👉 \${li.textContent}\`).join('\\n')}\n\n(via the 🐡 \${document.title}: ${EMBED_URL})`.trim(),
+          files: [file],
+        }
+        if (navigator.canShare(data)) {
+          try {
+            await navigator.share(data);
+          } catch (err) {
+            if (err.name !== 'AbortError') {
+              console.error(err.name, err.message);
+            }
+          }
+        }
+      });
+    });
+  }
+</script>
+{% endblock %}
