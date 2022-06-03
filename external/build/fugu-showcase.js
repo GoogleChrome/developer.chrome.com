@@ -62,7 +62,8 @@ async function run() {
               meta.description ||
               '';
           })
-          .catch(_ => {
+          .catch(err => {
+            console.warn(err);
             item.meta = {};
             item.title = new URL(item.appURL).hostname;
             item.description = '';
