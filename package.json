@@ -129,6 +129,7 @@
     "stylelint-config-sass-guidelines": "^7.1.0",
     "terser": "^5.4.0",
     "tmp": "^0.2.1",
+    "unfurl.js": "^5.7.0",
     "unified-lint-rule": "^1.0.6",
     "unist-util-visit": "^2.0.3",
     "uslug": "^1.0.4",

@@ -1,0 +1,73 @@
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+Project Fugu 🐡 showcase
+{% endblock %}
+
+{% block content %}
+<p>
+  This showcase of
+  <a href="https://web.dev/fugu-status/" rel="noopener" target="_blank">Project Fugu APIs</a>
+  is sourced by community submissions. You can propose missing apps by submitting them via this
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform"
+    rel="noopener"
+    target="_blank"
+    >form</a
+  >. Submissions are reviewed on a regular basis and the site will be updated accordingly.
+</p>
+
+<form class="search-apis">
+  <label>Filter used APIs: <input class="search-apis" list="available-apis" type="search" /></label
+  ><button class="search-apis" type="reset">Clear</button>
+</form>
+
+<datalist id="available-apis">
+  {% for availableAPI in fuguApis.availableApis %}
+    <option tabindex="0" value="{{ availableAPI }}">{{ availableAPI }}</option>
+  {% endfor %}
+</datalist>
+
+<form class="search-apps">
+  <label>Search apps: <input class="search-apps" list="available-apps" type="search" /></label
+  ><button class="search-apps" type="reset">Clear</button>
+</form>
+
+<div class="container">
+{% for app in fuguApis.fuguItems %}
+  <article
+    class=""
+    id=""
+  >
+    <h2><a href="{{ app.appURL }}" rel="noopener" target="_blank">{{ app.title }}</a></h2>
+    <figure>
+      <a href="{{ app.appURL }}" rel="noopener" target="_blank">
+        <picture
+          ><source media="(prefers-color-scheme: dark)" srcset="" />
+          <source media="(prefers-color-scheme: light)" srcset="" />
+          <img alt="{{ 'Screenshot of ' + app.title }}" height="800" src="" width="1280"
+            loading="lazy" /></picture>
+      </a>
+      <figcaption class="description">{{ app.description }}</figcaption>
+    </figure>
+    <span class="launch"
+      ><a href="{{ app.appURL }}" rel="noopener" target="_blank">Launch app</a></span
+    >{% if app.sourceURL %}
+      <span class="source"
+        ><a href="{{ app.sourceURL }}" rel="noopener" target="_blank">Source code</a
+      ></span>{% endif %}
+    <button class="share" type="button">Share app</button>
+    <h3>Used APIs:</h3>
+    <ul>
+      {% for api in app.usedAPIs %}
+        <li>
+          <a href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="anchor" href="#">#</a>
+  </article>
+{% endfor %}
+</div>
+{% endblock %}
+
