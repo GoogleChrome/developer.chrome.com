@@ -8,15 +8,15 @@ extra_permissions_html:
 
 You can use most `chrome.tabs` methods and events without declaring any permissions in the
 extension's [manifest][manifest] file. However, if you require access to the `url`, `pendingUrl`,
-`title`, or `favIconUrl` properties of [`tabs.Tab`][tab], you must declare the `"tabs"` permission
+`title`, or `favIconUrl` properties of [`tabs.Tab`][tab], you must declare the `"host"` permission
 in the manifest, as shown below:
 
 ```json
 {
   "name": "My extension",
   ...
-  "permissions": [
-    "tabs"
+  "host_permissions": [
+    "http://www.blogger.com/"
   ],
   ...
 }
