@@ -23,7 +23,9 @@ to get started.
 To generate summary reports in the origin trial, you'll first need to set up
 the aggregation service. This blog post gives an overview of those steps.
 
-_If ran an origin trial with this API in 2021, follow the [migration guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#) to prepare for the latest origin trial._
+_If ran an origin trial with this API in 2021, follow the [migration
+guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit?usp=sharing)
+to prepare for the latest origin trial._
 
 ## Key terms
 
@@ -39,7 +41,7 @@ before learning about the aggregation service set up.
    user's browser. These contain data about individual conversions and
    associated metrics, as defined by the advertiser or adtech. Learn more about
    [aggregatable reports](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md).
-*  The _aggregation service _ processes data from aggregatable reports to
+*  The _aggregation service_ processes data from aggregatable reports to
    create a summary report.
 
 ## Set up the aggregation service
