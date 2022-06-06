@@ -5,10 +5,17 @@ subhead: >
   Starting in Chrome 100, CHIPS origin trial allows opting cookies in to "partitioned" storage, with a separate cookie jar per top-level site.
 description: >
   Starting in Chrome 100, CHIPS origin trial allows opting cookies in to "partitioned" storage, with a separate cookie jar per top-level site. Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
-date: 2022-03-17
+date: 2022-06-17
+updated: 2022-06-06
 authors:
   - mihajlija
 ---
+
+## Changes
+
+- **June 2022**:  As of Chrome 104, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute.
+- **May 2022**: As of Chrome 103, sending `Accept-CH: Sec-CH-Partitioned-Cookies` header is no longer required for optting into the origin trial.
+
 
 ## What is CHIPS?
 
@@ -22,8 +29,6 @@ This trial is available as a [third-party origin trial](/blog/third-party-origin
 
 If a site enrolls in the trial as a first-party, the cookie partitioning functionality will be available to any third-party content providers on that site as well. These third-party providers should also expect to receive extra HTTP headers, indicating their enrollment in the origin trial.
 
-##
-
 ## How long will the trial run?
 
 The trial will be available from Chrome 100 to Chrome 103. Check the [Chrome release schedule](https://chromiumdash.appspot.com/schedule) for the planned release dates.
@@ -32,7 +37,7 @@ The trial will be available from Chrome 100 to Chrome 103. Check the [Chrome rel
 
 ### Prerequisites
 
-Chrome stable 100.
+Chrome stable 103.
 
 ### Steps
 
@@ -42,12 +47,6 @@ Chrome stable 100.
 
     ```js
     Origin-Trial: <ORIGIN TRIAL TOKEN>
-    ```
-
-1.  Include the `Accept-CH` header with the following value in each page response:
-
-    ```text
-    Accept-CH: Sec-CH-Partitioned-Cookies
     ```
 
 1.  Add `Partitioned` attribute to cookies in one of two ways:
@@ -72,6 +71,7 @@ Chrome stable 100.
         });
         ```
 
+The `Set-Cookie` header does not have to result in a valid cookie. 
 
 ### Example
 
@@ -79,7 +79,6 @@ Sites participating in the origin trial should include the following headers in 
 
 ```text
 Origin-Trial: <ORIGIN TRIAL TOKEN>
-Accept-CH: Sec-CH-Partitioned-Cookies
 Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned;
 ```
 
@@ -87,31 +86,18 @@ Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned;
 
 ### Inspect the headers
 
-If you have successfully opted into the origin trial, subsequent requests from the Chrome client will include the `Sec-CH-Partitioned-Cookies: ?1` request header until the current session is ended.
-
-```text
-Sec-CH-Partitioned-Cookies: ?1
-Cookie: __Host-name=value
-```
-
-If your site receives the cookie without this client hint, opting into the origin trial was not successful and the cookie you are receiving is not partitioned.
-
-If you store persistent partitioned cookies, you will receive the `Sec-CH-Partitioned-Cookies: ?0` request header for the first request to the cookies' origin.
-
-```text
-Origin-Trial: <ORIGIN TRIAL TOKEN>
-Accept-CH: Sec-CH-Partitioned-Cookies
-Set-Cookie: __Host-name=value; Secure; Path=/; SameSite=None; Partitioned; Max-Age=86400;
-```
-
-If the user visits the site after the current session has ended, the first request to the site will include the following request headers:
+If you have successfully opted into the origin trial and set a partitioned cookie, subsequent requests from the Chrome client will include the `Sec-CH-Partitioned-Cookies: ?0` request header until the current session is ended.
 
 ```text
 Sec-CH-Partitioned-Cookies: ?0
 Cookie: __Host-name=value
 ```
 
-If you do not respond with a valid token in the `Origin-Trial` header and `Accept-CH: Sec-CH-Partitioned-Cookies`, then the partitioned cookies on the machine will be converted to unpartitioned cookies.
+If your site receives the cookie without this client hint, opting into the origin trial was not successful and the cookie you are receiving is not partitioned.
+
+Responses which do not include a `Set-Cookie` header with `Partitioned` will not impact a site's origin trial participation status.
+
+If you do not respond with a valid token in the `Origin-Trial` header the partitioned cookies on the machine will be converted to unpartitioned cookies.
 
 For more details, check out [CHIPS documentation on chromium.org](https://www.chromium.org/updates/chips/).
 
@@ -131,7 +117,7 @@ Not every client will have the origin trial enabled.
 
 ### Cookies requirements
 
--   Partitioned cookies must be set with the `Secure` and `Path=/` and without the `Domain` attribute. 
+-   Partitioned cookies must be set with the `Secure` and `Path=/`. 
 -   `SameParty` attribute cannot be used along with `Partitioned.`
 
 Chrome will enforce these rules for cookies set with the `Partitioned` attribute whether cookie partitioning is enabled or disabled. Cookies that are set incorrectly will be rejected.
