@@ -7,7 +7,7 @@ description: >
   Experiment and set up the aggregation service to generate Attribution Reporting summary reports.
 date: 2022-06-06
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/ASAZM31nd8FvgV22LTvJ.jpg
-alt: Cords plugged into the server, which represents service set up
+alt: Cords plugged into the server, which represents service set up.
 tags:
   - privacy
   - experiment
@@ -23,7 +23,7 @@ to get started.
 To generate summary reports in the origin trial, you'll first need to set up
 the aggregation service. This blog post gives an overview of those steps.
 
-_If ran an origin trial with this API in 2021, follow the [migration
+_If you ran an origin trial with this API in 2021, follow the [migration
 guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit?usp=sharing)
 to prepare for the latest origin trial._
 
