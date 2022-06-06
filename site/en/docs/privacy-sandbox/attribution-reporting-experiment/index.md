@@ -2,8 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting: experiment and participate'
 date: 2022-03-31
+updated: 2022-06-06
 authors:
   - maudn
+  - alexandrawhite
 ---
 
 ## Learn the essentials
@@ -26,7 +28,17 @@ Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting).
        Demo, detailed code examples and (local) debugging tips.
 4. Experiment with [summary
    reports](/docs/privacy-sandbox/attribution-reporting/summary-reports)
-   * (Optional) Additional instructions for experimenting with the Aggregation Service running in a Trusted Execution Environment (TEE) or local testing from decrypted debug reports will be made available soon.
+   *  Adtechs can generate summary reports with the aggregation service. Learn
+	how to set it up for
+	[local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
+	or [test in production with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS) :
+        *  Create or have an [AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) available.
+        *  [Register](/origintrials/#/view_trial/771241436187197441) for the
+	      Privacy Sandbox Relevance and Measurement origin trial (OT).
+        *  Complete the aggregation service
+	      [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). After you've
+		submitted this form, we'll send a verification email and instructions.
+
 
 
 ## Get support
