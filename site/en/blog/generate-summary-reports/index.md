@@ -23,9 +23,7 @@ to get started.
 To generate summary reports in the origin trial, you'll first need to set up
 the aggregation service. This blog post gives an overview of those steps.
 
-_If ran an origin trial with this API in 2021, follow the
-[migration guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)
-to prepare for the latest origin trial._
+_If ran an origin trial with this API in 2021, follow the [migration guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#) to prepare for the latest origin trial._
 
 ## Key terms
 
@@ -56,7 +54,7 @@ For the initial implementation and origin trial, adtechs can set up
 [local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
 or [test in TEEs with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS):
 
-1. [Register](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441) for the Privacy Sandbox Relevance and Measurement origin trial (OT).
+1. [Register](/origintrials/#/view_trial/771241436187197441) for the Privacy Sandbox Relevance and Measurement origin trial (OT).
 1. Create or have an [Amazon Web Services account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html).
 1. Complete the aggregation service
    [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). After filling out
