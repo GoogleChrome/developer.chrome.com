@@ -58,15 +58,15 @@ and replace with more privacy-preserving variants.
 
 Chrome is working on [storage
 partitioning](https://github.com/privacycg/storage-partitioning), which
-separates browser storage per-site. Currently, if an iframe from `news.example`
-is embedded on `blog.example`, and that iframe stores a value into storage,
-then that value can be read from the `blog.example` site. When storage has been
+separates browser storage per-site. Currently, if an iframe from `shoes.example`
+is embedded on `news.example`, and that iframe stores a value into storage,
+then that value can be read from the `shoes.example` site. When storage has been
 partitioned, cross-site iframes will no longer share storage, therefore
-`blog.example` will not be able to access information stored by the iframe. If
-the iframe is served from `frame.news.example` and embedded on
-`news.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
+`shoes.example` will not be able to access information stored by the iframe. If
+the iframe is served from `*.shoes.example` and embedded on
+`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Yy8nyLhZp1crxNLGEvtz.png", alt="A comparison of before and after state of storage partitinoing.", width="758", height="583" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/ss7wjBshEJcwdQXcXGov.png", alt="A comparison of before and after state of storage partitinoing.", width="800", height="613" %}
 
 Storage partitioning will be applied to standard storage APIs including
 LocalStorage, IndexedDB, and cookies. In a partitioned world, information
