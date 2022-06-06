@@ -6,7 +6,7 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-05-24
+updated: 2022-06-06
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -210,15 +210,11 @@ register("send-reach-report", SendReachReportOperation);
 
 ## Try the Shared Storage API
 
-Shared Storage API is available in Chrome Canary 104 with a command line
-flag:
+Shared Storage API with Fenced Frames can be tested in Chrome 104 (version
+104.0.5086.0 or later) by enabling the **Privacy Sandbox Ads APIs experiment**
+flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
-```text
---args --enable-features=SharedStorageAPI,FencedFrames,PrivacySandboxAdsAPIsOverride
-```
-
-If you have previously enabled the [Privacy Sandbox Ads APIs 
-experiment](chrome://flags/#privacy-sandbox-ads-apis), you must disable it as this setting overrides flags set from the command line. 
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
 
 ## Engage and share feedback
 
