@@ -56,13 +56,21 @@ is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
-Chrome teams are working on [storage partitioning](https://github.com/privacycg/storage-partitioning), which separates browser storage per-site. Currently, if an iframe from `shoes.example` is embedded in `news.example`, and that iframe stores a value into storage, then that value can be read from the actual `shoes.example` site. Once the storage has been partitioned, cross-site iframes will no longer share storage, and `shoes.example` will not be able to access information stored by the iframe. If the iframe is served from `frame.shoes.example` and embedded into `news.example`, browser storage will be shared due to being same-site. 
+Chrome is working on [storage
+partitioning](https://github.com/privacycg/storage-partitioning), which
+separates browser storage per-site. Currently, if an iframe from `news.example`
+is embedded on `blog.example`, and that iframe stores a value into storage,
+then that value can be read from the `blog.example` site. When storage has been
+partitioned, cross-site iframes will no longer share storage, therefore
+`blog.example` will not be able to access information stored by the iframe. If
+the iframe is served from `frame.news.example` and embedded on
+`news.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Yy8nyLhZp1crxNLGEvtz.png", alt="comparison of before and after state of storage partitinoing", width="758", height="583" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/Yy8nyLhZp1crxNLGEvtz.png", alt="A comparison of before and after state of storage partitinoing.", width="758", height="583" %}
 
 Storage partitioning will be applied to standard storage APIs including
-LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
-across first-party storage will be significantly reduced.
+LocalStorage, IndexedDB, and cookies. In a partitioned world, information
+leakage across first-party storage will be significantly reduced.
 
 ### Work with cross-site data {: #cross-site-data }
 
