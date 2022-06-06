@@ -102,6 +102,13 @@ Not all DevTools panels and tabs have a built-in search bar but those that do, o
     <td>Replace</td>
   </tr>
   <tr>
+    <td><a href="/docs/devtools/network/#search">Network</a></td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+    <td>Network headers and responses</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><a href="/docs/devtools/evaluate-performance/reference/#search">Performance</a></td>
     <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
     <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
