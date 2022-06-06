@@ -86,6 +86,7 @@
     - url: /docs/devtools/rendering/emulate-css
     - url: /docs/devtools/rendering/apply-effects
 - url: /docs/devtools/security/
+- url: /docs/devtools/search
 - title: i18n.docs.devtools.sensors
   sections:
     - url: /docs/devtools/device-mode/geolocation/
