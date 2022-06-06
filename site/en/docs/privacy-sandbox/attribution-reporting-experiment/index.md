@@ -39,11 +39,7 @@ Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting).
 	      [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). After you've
 		submitted this form, we'll send a verification email and instructions.
 
-
-
 ## Get support
-
-{% Aside %} Is anything blocking you from experimenting with the API? Please ask us! {% endAside %}
 
 To ask a question about your implementation, about the
 [demo](https://goo.gle/attribution-reporting-demo), or about the documentation: 
@@ -55,7 +51,7 @@ To ask a question about your implementation, about the
   developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) and ask
   there.
 
-If you notice any unexpected behaviour: 
+If you notice any unexpected behavior: 
 
 * [View Chrome
   issues](https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement)
@@ -72,9 +68,8 @@ your feedback is essential.
 
 ### Discuss the API
 
-{% Aside %} Like other Privacy Sandbox proposals, this API is documented and discussed publicly on _GitHub_. 
+Like other Privacy Sandbox proposals, this API is documented and discussed publicly on GitHub. 
 [Read this proposal](https://github.com/WICG/conversion-measurement-api/).
-{% endAside %}
 
 - Join the conversation on [existing
   issues](https://github.com/WICG/conversion-measurement-api/issues).
