@@ -28,7 +28,7 @@ under **Join the public discussion** in this post, or by creating new issues.
 
 This post is for you:
 
-- If you already understand of the API—for example, if you've been observing or
+- If you already understand the API—for example, if you've been observing or
   participating in the discussions on the WICG repository and want to understand the batch of
   changes made to the proposal in January 2022.
 - If you're using the Attribution Reporting API in a demo or in an experiment in production.
