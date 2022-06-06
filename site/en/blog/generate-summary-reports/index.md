@@ -13,8 +13,6 @@ tags:
   - experiment
 ---
 
-## Origin trial for Attribution Reporting
-
 You can now [experiment and participate in an origin
 trial](/docs/privacy-sandbox/attribution-reporting-experiment/) for Attribution
 Reporting. There are a number of available developer resources and code samples
