@@ -6,7 +6,7 @@ authors:
 date: 2022-05-10
 updated: 2022-05-10
 description: "New Performance insights panel, shortcuts to emulate light/dark themes, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7xWcGcxvvypYViZFzVSw.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1ai2SfNkWhFS0BT58WKy.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -14,9 +14,9 @@ tags:
   - chrome-102
 ---
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1ai2SfNkWhFS0BT58WKy.jpg -->
-
 {% include 'partials/devtools/en/banner.md' %}
+
+{% YouTube id='0V_ph7PA_aw' %}
 
 ## Preview feature: New Performance insights panel {: #perf }
 

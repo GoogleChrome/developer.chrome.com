@@ -631,7 +631,7 @@ See [Layer borders](/docs/devtools/rendering#layer-borders).
 Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the
 potentially-problematic elements in teal.
 
-See [Scrolling performace issues](/docs/devtools/rendering#scrolling-performance-issues).
+See [Scrolling performance issues](/docs/devtools/rendering#scrolling-performance-issues).
 
 [1]: /docs/devtools/evaluate-performance
 [2]: #view-screenshot

@@ -1,10 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-04-11
+updated: 2022-05-26
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -15,6 +14,12 @@ updated: 2022-04-11
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
+
+May 26, 2022
+
+Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that informs developers to accurately self-declare their trader/non-trader status.
 
 ### Chrome 102: {: #m102-registercontentscripts-main-world }
 

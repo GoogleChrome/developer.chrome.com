@@ -7,7 +7,7 @@ subhead: >
 authors:
   - thomassteiner
 date: 2022-04-25
-updated: 2022-05-09
+updated: 2022-06-01
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -33,7 +33,7 @@ You can launch each app by clicking the app's name, the app's preview image, or 
 link. For many apps, you can also see the source code by clicking **Source code**. On supporting
 browsers, you can share any of the listed apps via the **Share app** feature. As a special inception
 Easter egg, the Project Fugu API Showcase is of course
-<a href="/blog/fugu-showcase/#tomayac.github.io!fugu-showcase!data" target="_blank">contained
+<a href="/blog/fugu-showcase/#developer.chrome.com!blog!fugu-showcase" target="_blank">contained
 in the Project Fugu API Showcase</a>. Happy browsing!
 
 ## Showcase
@@ -43,7 +43,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
     title="Fugu showcase"
     name="showcase"
     style="min-height: 1000px;width: 100%;border: solid 1px var(--color-hairline);"
-    src="https://tomayac.github.io/fugu-showcase/data/"
+    src="https://googlechromelabs.github.io/fugu-showcase/data/"
     allow="web-share; clipboard-write; clipboard"
     onload="this.contentWindow.postMessage({hash:location.hash.substr(1),search:location.search.substr(1)},'*');"
   ></iframe>
@@ -53,7 +53,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
   Remove this inline script once a stand-alone has been implemented.
 --> 
 <script>
-  const SHOWCASE_URL = 'https://tomayac.github.io/fugu-showcase/data/';
+  const SHOWCASE_URL = 'https://googlechromelabs.github.io/fugu-showcase/data/';
   window.addEventListener('message', (event) => {
     if (event.origin !== new URL(SHOWCASE_URL).origin) {
       return;

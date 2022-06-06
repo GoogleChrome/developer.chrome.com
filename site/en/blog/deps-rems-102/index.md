@@ -4,7 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 102 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
-hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/GLywh0GpxQEByxtmCaVY.png'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Yj71FJ6FU94BnscmhmVy.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
@@ -13,7 +13,6 @@ tags:
   - chrome-102
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 102 beta was released on April 28, 2022 and is expected to become the
 stable version in late May, 2022.

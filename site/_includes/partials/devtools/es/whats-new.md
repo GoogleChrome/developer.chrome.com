@@ -2,18 +2,18 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/es/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/es/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/es/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/es/blog/new-in-devtools-102/#debugger)
-* [Console updates](/es/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/es/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/es/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/es/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/es/blog/new-in-devtools-102/#color-picker) -->
+* [Función de vista previa: nuevo panel de información de rendimiento](/es/blog/new-in-devtools-102/#perf)
+* [Nuevos atajos para emular temas claros y oscuros](/es/blog/new-in-devtools-102/#emulation)
+* [Mejore la seguridad en la pestaña Vista previa de la red](/es/blog/new-in-devtools-102/#network-preview)
+* [Recarga mejorada en el punto de interrupción](/es/blog/new-in-devtools-102/#debugger)
+* [Actualizaciones de la consola](/es/blog/new-in-devtools-102/#console)
+* [Cancelar registro de flujo de usuario al inicio](/es/blog/new-in-devtools-102/#recorder)
+* [Mostrar pseudoelementos heredados resaltados en el panel Estilos](/es/blog/new-in-devtools-102/#pseudo)
+* [Destacados varios](/es/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copiar cambios de CSS](/es/blog/new-in-devtools-102/#copy)
+* [[Experimental] Selección de color fuera del navegador](/es/blog/new-in-devtools-102/#color-picker)
 
 ### Chrome 101 {: #chrome101 }
 
@@ -22,7 +22,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Soporte para la función de color hwb()](/es/blog/new-in-devtools-101/#hwb)
 * [Mejorada la visualización de las propiedades privadas](/es/blog/new-in-devtools-101/#private-props)
 * [Varios aspectos destacados](/es/blog/new-in-devtools-101/#misc)
-* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse) -->
+* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }
