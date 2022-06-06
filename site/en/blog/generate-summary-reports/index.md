@@ -101,11 +101,14 @@ For more support with the Attribution Reporting API:
 *  Open a new Issue on the [Privacy Sandbox Developer Support GitHub
    repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose).
    Select the Issue template for Attribution Reporting.
-* Or [join the Attribution Reporting mailing list for
-   developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) and ask there.
+*  Or [join the Attribution Reporting mailing list for
+   developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)
+   and ask there.
 
 If you notice any unexpected behavior:
 
-* [View Chrome issues](https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement) reported for the API implementation.
-* Open a [Chrome bug](https://crbug.com/new).
-* Raise a new Issue for the [Trusted Execution Aggregation Service](https://github.com/google/trusted-execution-aggregation-service/issues).
+*  [View Chrome
+   issues](https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement) reported for the API implementation.
+*  Open a [Chrome bug](https://crbug.com/new).
+*  Raise a new Issue for the [Trusted Execution Aggregation
+   Service](https://github.com/google/trusted-execution-aggregation-service/issues).
