@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting proposal: updates in January 2022'
 date: 2022-01-27
-updated: 2022-05-27
+updated: 2022-06-06
 authors:
   - maudn
 ---
@@ -28,7 +28,7 @@ under **Join the public discussion** in this post, or by creating new issues.
 
 This post is for you:
 
-- If you already have a solid grasp of the API—for example, if you've been observing or
+- If you already understand the API—for example, if you've been observing or
   participating in the discussions on the WICG repository and want to understand the batch of
   changes made to the proposal in January 2022.
 - If you're using the Attribution Reporting API in a demo or in an experiment in production.
@@ -57,8 +57,8 @@ This article also lists changes for aggregatable reports. However, these changes
 
 ### Summary reports and aggregatable reports
 
-What you may have seen described as aggregate reports will now be referred to as _summary
-reports_.
+What you may have seen described as aggregate reports will now be referred to
+as [_summary reports_](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
 _Summary reports_ are the final output of the aggregation of multiple _aggregatable reports_,
 formerly called contributions or histogram contributions.
