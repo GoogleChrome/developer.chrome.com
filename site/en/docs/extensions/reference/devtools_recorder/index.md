@@ -7,22 +7,26 @@ See [DevTools APIs summary][1] for general introduction to using Developer Tools
 
 ## Overview
 
-`devtools.recorder` API is a preview feature that allows extending the [Recorder panel](/docs/devtools/recorder/) in Chrome DevTools.
-Currently, it's only possible to extend the export feature.
+`devtools.recorder` API is a preview feature that allows you to extend the [Recorder panel](/docs/devtools/recorder/) in Chrome DevTools.
+Currently, you can extend only the export feature.
 
-`devtools.recorder` allows registering an extension plugin using `registerRecorderExtensionPlugin`.
-`registerRecorderExtensionPlugin` requires a plugin instance that implements `stringify` and
-`stringifyStep` functions, a `name` parameter and a `mediaType` parameter.
+To register an extension plugin, use the `registerRecorderExtensionPlugin` function.
+This function requires a plugin instance that implements the following:
 
-The `name` provided by the extension shows up in the Export menu in the Recorder panel. When the user
-clicks on the export option provided by the extension, the Recorder panel invokes either the
-`stringify` function or the `stringifyStep` function depending on the context of the export. The `stringify`
-function receives an [entire user flow recording][2] and the `stringifyStep` receives a [single recorded step][3].
+- `stringify` and `stringifyStep` functions
+- `name` and `mediaType` parameters
 
-The [`mediaType`][4] parameters allows the extension to specify what kind of output it generates with the
+The `name` provided by the extension shows up in the **Export** menu in the **Recorder** panel.
+
+Depending on the export context, when the user clicks the export option provided by the extension,
+the **Recorder** panel invokes one of the two functions:
+
+- `stringify` that receives an [entire user flow recording][2]
+- `stringifyStep`  that receives a [single recorded step][3]
+
+The [`mediaType`][4] parameter allows the extension to specify the kind of output it generates with the
 `stringify` and `stringifyStep` functions. For example, `application/javascript` if the result is a JavaScript
 program.
-
 
 ## Examples
 
