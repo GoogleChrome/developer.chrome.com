@@ -102,12 +102,10 @@ setCatchHandler(async ({event}) => {
     case 'document':
       // FALLBACK_HTML_URL must be defined as a precached URL for this to work:
       return matchPrecache(FALLBACK_HTML_URL);
-    break;
 
     case 'image':
       // FALLBACK_IMAGE_URL must be defined as a precached URL for this to work:
       return matchPrecache(FALLBACK_IMAGE_URL);
-    break;
 
     default:
       // If we don't have a fallback, return an error response.
