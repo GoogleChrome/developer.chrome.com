@@ -40,7 +40,7 @@ DevTools APIs and a limited set of extension APIs. Specifically, the DevTools pa
 - Get information about the inspected window and evaluate code in the inspected window using the
   [`devtools.inspectedWindow`][api-inspectedwindow] APIs.
 - Get information about network requests using the [`devtools.network`][api-network] APIs.
-- Extend the Recorder panel using the [`devtools.recorder`][api-recorder] APIs (preview feature).
+- Extend the [Recorder panel](/docs/devtools/recorder/) using the [`devtools.recorder`][api-recorder] APIs (preview feature).
 
 The DevTools page cannot use most of the extensions APIs directly. It has access to the same subset
 of the [`extension`][api-extension] and [`runtime`][api-runtime] APIs that a content script has
