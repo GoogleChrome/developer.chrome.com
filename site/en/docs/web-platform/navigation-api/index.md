@@ -220,7 +220,7 @@ By default, this will be `undefined`.
 You can synchronously set the state for the current `NavigationHistoryEntry` by calling:
 
 ```js
-navigation.updateCurrent({state: something});
+navigation.updateCurrentEntry({state: something});
 ```
 
 You can also set the state when navigating programmatically with `navigation.navigate()` (this is [described below](#programmatic-navigation)).
@@ -230,7 +230,7 @@ If you modify it, the stored version won't also change.
 For example:
 
 ```js
-navigation.updateCurrent({state: {count: 1}});
+navigation.updateCurrentEntry({state: {count: 1}});
 
 const state = navigation.currentEntry.getState();
 state.count = 2;
