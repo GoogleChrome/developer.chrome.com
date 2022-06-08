@@ -194,6 +194,14 @@ Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
+### How do publishers handle tokens from multiple trusted issuers?
+
+The publisher can check a user's browser for valid tokens with
+`document.hasTrustToken()` for one issuer at a time. If this returns `true`
+and a token is available, the publisher can redeem the token and stop
+looking for other tokens.
+
+The publisher must decide which token issuers to check and in what order.
 
 ## Topics
 
