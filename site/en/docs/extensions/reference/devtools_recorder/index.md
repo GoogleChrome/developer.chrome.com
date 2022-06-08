@@ -11,10 +11,7 @@ See [DevTools APIs summary][1] for general introduction to using Developer Tools
 Currently, you can extend only the export feature.
 
 To register an extension plugin, use the `registerRecorderExtensionPlugin` function.
-This function requires a plugin instance that implements the following:
-
-- `stringify` and `stringifyStep` functions
-- `name` and `mediaType` parameters
+To register an extension plugin, use the `registerRecorderExtensionPlugin` function. This function requires a plugin instance, a `name` and a `mediaType` as parameters. The plugin instance must implement two methods: `stringify` and `stringifyStep`.
 
 The `name` provided by the extension shows up in the **Export** menu in the **Recorder** panel.
 
