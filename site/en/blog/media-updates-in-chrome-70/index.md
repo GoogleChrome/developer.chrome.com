@@ -10,7 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
-  - chrome-70
+  - chrome70
 ---
 
 - Web developers can control [Picture-in-Picture for videos](#pip).
@@ -49,8 +49,8 @@ To try AV1:
 
 1. Go to the [YouTube TestTube page].
 1. Select "Prefer AV1 for SD" or "Always Prefer AV1" to get the desired
-  AV1 resolution. Note that at higher resolutions, AV1 is more likely to
-  experience playback performance issues on some devices.
+   AV1 resolution. Note that at higher resolutions, AV1 is more likely to
+   experience playback performance issues on some devices.
 1. Try playing YouTube clips from the [AV1 Beta Launch Playlist].
 1. Confirm the codec av01 in "Stats for nerds".
 
@@ -89,7 +89,9 @@ coded frame processing algorithm.
 Here's how to use the `changeType()` method:
 
 ```js
-const sourceBuffer = myMediaSource.addSourceBuffer('video/webm; codecs="opus, vp09.00.10.08"');
+const sourceBuffer = myMediaSource.addSourceBuffer(
+  'video/webm; codecs="opus, vp09.00.10.08"'
+);
 sourceBuffer.appendBuffer(someWebmOpusVP9Data);
 
 // Later on...
@@ -159,21 +161,21 @@ cleared browsing data.
 
 <!-- lint disable definition-case -->
 
-[Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
+[picture-in-picture web api]: https://wicg.github.io/picture-in-picture/
 [our article]: https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture
-[Alliance for Open Media]: http://aomedia.org/
+[alliance for open media]: http://aomedia.org/
 [improves compression efficiency by greater than 30%]: https://code.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
 [official bitstream specification]: https://aomedia.org/av1-bitstream-and-decoding-process-specification/
 [profile 0]: https://aomediacodec.github.io/av1-spec/#profiles
-[ISO-BMFF]: https://aomediacodec.github.io/av1-isobmff
-[Containers and codecs]: https://web.dev/containers-and-codecs/
-[YouTube TestTube page]: https://www.youtube.com/testtube
-[AV1 Beta Launch Playlist]: https://www.youtube.com/playlist?list=PLyqf6gJt7KuHBmeVzZteZUlNUQAVLwrZS
+[iso-bmff]: https://aomediacodec.github.io/av1-isobmff
+[containers and codecs]: https://web.dev/containers-and-codecs/
+[youtube testtube page]: https://www.youtube.com/testtube
+[av1 beta launch playlist]: https://www.youtube.com/playlist?list=PLyqf6gJt7KuHBmeVzZteZUlNUQAVLwrZS
 [adding support]: https://github.com/wicg/media-source/blob/codec-switching/codec-switching-explainer.md
-[Media Source Extensions]: https://developers.google.com/web/fundamentals/media/mse/basics
-[current version of MSE]: https://www.w3.org/TR/2016/REC-media-source-20161117/
+[media source extensions]: https://developers.google.com/web/fundamentals/media/mse/basics
+[current version of mse]: https://www.w3.org/TR/2016/REC-media-source-20161117/
 [bytestream formats]: https://www.w3.org/TR/mse-byte-stream-format-registry/
 [sample]: https://googlechrome.github.io/samples/media/sourcebuffer-changetype.html
-[Opus]: https://opus-codec.org/
-[Opus in ISO-BMFF]: https://people.xiph.org/~shobson/opus-codec.org/docs/opus_in_isobmff.html
+[opus]: https://opus-codec.org/
+[opus in iso-bmff]: https://people.xiph.org/~shobson/opus-codec.org/docs/opus_in_isobmff.html
 [official sample]: https://googlechrome.github.io/samples/media/opus-in-mp4-for-mse.html

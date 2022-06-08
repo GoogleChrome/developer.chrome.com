@@ -1,17 +1,17 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 61)"
 authors:
   - kaycebasques
 date: 2017-07-10
 #updated: YYYY-MM-DD
-description: "New features and changes coming to DevTools in Chrome 61."
+description: 'New features and changes coming to DevTools in Chrome 61.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pkmry1VcHxSk2Wx96Ee6.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
-  - chrome-61
+  - chrome61
 ---
 
 {% include 'partials/devtools/en/banner.md' %}
@@ -97,7 +97,6 @@ setting to **Scroll**, this gesture now scrolls up or down.
 ES6 Modules are shipping natively in Chrome 61. There's not much going on here with regards to
 DevTools, other than that debugging works as you'd expect it to. Try setting some breakpoints in and
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
-
 
 {% include 'partials/devtools/en/reach-out.md' %}
 {% include 'partials/devtools/en/whats-new.md' %}

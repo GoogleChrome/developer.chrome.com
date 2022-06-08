@@ -14,19 +14,19 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PV8Mm3Un6QQgXhG6m03E.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-58
+  - chrome58
 ---
 
 {% YouTube id='y5-hH8DnqMk' %}
 
-* The [IndexedDB 2.0](#idb2) standard is now fully supported in Chrome, and
+- The [IndexedDB 2.0](#idb2) standard is now fully supported in Chrome, and
   features new schema management, bulk action methods, and more
   standardized handling of failures.
-* Progressive Web Apps become more immersive with
+- Progressive Web Apps become more immersive with
   [`display: fullscreen`](#fullscreen).
-* [`allow-top-navigation-by-user-activation`](#iframes) gives sandboxed
+- [`allow-top-navigation-by-user-activation`](#iframes) gives sandboxed
   `iframes` new powers
-* And there's plenty [more](#more)!
+- And there's plenty [more](#more)!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/57.0.2987.98..58.0.3029.81?pretty=fuller&n=10000)
@@ -40,11 +40,11 @@ be difficult to change.
 [IndexedDB 2.0](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
 changes that.
 
-* `object` stores and `indexes` can now be renamed in-place after a
+- `object` stores and `indexes` can now be renamed in-place after a
   refactoring.
-* Binary keys allow more natural keys without worrying about performance
+- Binary keys allow more natural keys without worrying about performance
   penalties.
-* Data retrieval is easier with the `getKey()`, `openKeyCursor()` and
+- Data retrieval is easier with the `getKey()`, `openKeyCursor()` and
   `continuePrimaryKey()` methods.
 
 And bulk recovery of entire datasets no longer needs a cursor with the
@@ -88,13 +88,13 @@ ability to navigate the top-level page, while still blocking auto-redirects.
 
 And of course, there's plenty more.
 
-* Say goodbye to the `clearfix` hack. Instead of manually resetting
+- Say goodbye to the `clearfix` hack. Instead of manually resetting
   multiple layout properties like float and clear, you can now add a new
   block-formatting context using `display: flow-root`.
-* `PointerEvents.getCoalescedEvents()` allows you to access all input events
+- `PointerEvents.getCoalescedEvents()` allows you to access all input events
   since the last time a `PointerEvent` was delivered. Perfect for when you
   need a precise history of points for things like drawing apps.
-* And `Workers` and `SharedWorkers` can now be created using `data:` URLs,
+- And `Workers` and `SharedWorkers` can now be created using `data:` URLs,
   making development with `Workers` more secure by giving them an opaque origin.
 
 These are just a few of the changes in Chrome 58 for developers.

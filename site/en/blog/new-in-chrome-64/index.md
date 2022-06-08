@@ -14,17 +14,17 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4aa1SbOet4bZfzdpCWFL.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-64
+  - chrome64
 ---
 
 {% YouTube id='y5sb-icqOyg' %}
 
-* Support for [`ResizeObservers`](#resizeobserver), will notify you
+- Support for [`ResizeObservers`](#resizeobserver), will notify you
   when an element's content rectangle has changed its size.
-* Modules can now access to host specific metadata with
+- Modules can now access to host specific metadata with
   [import.meta](#import-meta).
-* The [pop-up blocker](#popup-blocker) gets strong.
-* [`window.alert()`](#window-alert) no longer changes focus.
+- The [pop-up blocker](#popup-blocker) gets strong.
+- [`window.alert()`](#window-alert) no longer changes focus.
 
 And there's [plenty more](#more)!
 
@@ -54,7 +54,7 @@ an array of `ResizeOberverEntries`–one entry per observed element–which
 contain the new dimensions for the element.
 
 ```js
-const ro = new ResizeObserver( entries => {
+const ro = new ResizeObserver(entries => {
   for (const entry of entries) {
     const cr = entry.contentRect;
     console.log('Element:', entry.target);
@@ -96,18 +96,18 @@ module file as opposed to the current HTML document.
 These are just a few of the changes in Chrome 64 for developers, of course,
 there's plenty more.
 
-* Chrome now supports
+- Chrome now supports
   [named captures](https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures)
   and [Unicode property
   escapes](https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes)
   in regular expressions.
-* The default `preload` value for `<audio>` and `<video>` elements is now
+- The default `preload` value for `<audio>` and `<video>` elements is now
   `metadata`. This brings Chrome in line with other browsers and helps to
   reduce bandwidth and resource usage by only loading the metadata and not the
   media itself.
-* You can now use `Request.prototype.cache` to view the cache mode of a
+- You can now use `Request.prototype.cache` to view the cache mode of a
   `Request` and determine whether a request is a reload request.
-* Using the Focus Management API, you can now focus an element without
+- Using the Focus Management API, you can now focus an element without
   scrolling to it with the `preventScroll` attribute.
 
 ## `window.alert()` {: #window-alert }

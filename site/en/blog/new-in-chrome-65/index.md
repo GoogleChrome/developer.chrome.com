@@ -15,16 +15,16 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IxYXN8ROQ5KPkDwcAUXR.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-65
+  - chrome65
 ---
 
 {% YouTube id='_W4GSpoSOZI' %}
 
-* The [CSS Paint API](#css-paint) allows you to programmatically generate
+- The [CSS Paint API](#css-paint) allows you to programmatically generate
   an image.
-* The [Server Timing API](#server-timing) allows web servers to provide
+- The [Server Timing API](#server-timing) allows web servers to provide
   performance timing information via HTTP headers.
-* the new [CSS `display: contents` property](#display-contents) can make
+- the new [CSS `display: contents` property](#display-contents) can make
   boxes disappear!
 
 And there's [plenty more](#more)!
@@ -163,11 +163,11 @@ for more details and other examples.
 These are just a few of the changes in Chrome 65 for developers, of course,
 there's plenty more.
 
-* The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA` coordinates
+- The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA` coordinates
   for the color property now
   [match](https://drafts.csswg.org/css-color/#the-hsl-notation) the
   [CSS Color 4 spec](https://developer.mozilla.org/docs/Web/CSS/color_value).
-* There's a new [feature policy](http://xhr.featurepolicy.rocks/) that allows
+- There's a new [feature policy](http://xhr.featurepolicy.rocks/) that allows
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.
 

@@ -11,7 +11,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
-  - chrome-58
+  - chrome58
 ---
 
 - Developers can now [customize media controls](#controlslist) such as the
@@ -87,22 +87,26 @@ restrictions.
 ```
 
 {% Compare 'better' %}
+
 ```html
 <html>
-  <link rel="canonical" href="https://example.com/foo">
+  <link rel="canonical" href="https://example.com/foo" />
   <audio autoplay src="https://cdn.com/file.mp4"></audio>
 </html>
 ```
+
 Audio will autoplay as <code>/foo</code> is in the scope.
 {% endCompare %}
 
 {% Compare 'worse' %}
+
 ```html
 <html>
-  <link rel="canonical" href="https://example.com/bar">
+  <link rel="canonical" href="https://example.com/bar" />
   <audio autoplay src="https://cdn.com/file.mp4"></audio>
 </html>
 ```
+
 Audio fails to autoplay as <code>/bar</code> is NOT in the scope.
 {% endCompare %}
 
@@ -151,9 +155,9 @@ Usage in HTML:
 
 ```html
 <picture>
-  <source media="(color-gamut: p3)" srcset="photo-p3.jpg">
-  <source media="(color-gamut: rec2020)" srcset="photo-rec2020.jpg">
-  <img src="photo-srgb.jpg">
+  <source media="(color-gamut: p3)" srcset="photo-p3.jpg" />
+  <source media="(color-gamut: rec2020)" srcset="photo-rec2020.jpg" />
+  <img src="photo-srgb.jpg" />
 </picture>
 ```
 
@@ -161,18 +165,18 @@ Usage in CSS:
 
 ```css
 main {
-  background-image: url("photo-srgb.jpg");
+  background-image: url('photo-srgb.jpg');
 }
 
 @media (color-gamut: p3) {
   main {
-    background-image: url("photo-p3.jpg");
+    background-image: url('photo-p3.jpg');
   }
 }
 
 @media (color-gamut: rec2020) {
   main {
-    background-image: url("photo-rec2020.jpg");
+    background-image: url('photo-rec2020.jpg');
   }
 }
 ```
@@ -181,16 +185,18 @@ Usage in JavaScript:
 
 ```js
 // It is expected that the majority of color displays will return true.
-if (window.matchMedia("(color-gamut: srgb)").matches) {
-  document.querySelector('main').style.backgroundImage = 'url("photo-srgb.jpg")';
+if (window.matchMedia('(color-gamut: srgb)').matches) {
+  document.querySelector('main').style.backgroundImage =
+    'url("photo-srgb.jpg")';
 }
 
-if (window.matchMedia("(color-gamut: p3)").matches) {
+if (window.matchMedia('(color-gamut: p3)').matches) {
   document.querySelector('main').style.backgroundImage = 'url("photo-p3.jpg")';
 }
 
-if (window.matchMedia("(color-gamut: rec2020)").matches) {
-  document.querySelector('main').style.backgroundImage = 'url("photo-rec2020.jpg")';
+if (window.matchMedia('(color-gamut: rec2020)').matches) {
+  document.querySelector('main').style.backgroundImage =
+    'url("photo-rec2020.jpg")';
 }
 ```
 
@@ -207,8 +213,8 @@ if (window.matchMedia("(color-gamut: rec2020)").matches) {
 <!-- lint disable definition-case -->
 
 [remoteplayback]: https://w3c.github.io/remote-playback/
-[ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
-[improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
+[controlslist api]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
+[improved add to home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
 [web app manifest]: https://web.dev/add-manifest
-[Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
+[improving color on the web]: https://webkit.org/blog/6682/improving-color-on-the-web/
 [switch between encrypted and clear streams]: https://developers.google.com/web/updates/2017/03/mixing-streams

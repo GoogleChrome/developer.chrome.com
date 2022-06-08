@@ -1,18 +1,17 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 70)"
 authors:
   - kaycebasques
 date: 2018-08-29
 #updated: YYYY-MM-DD
-description:
-  "Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more."
+description: 'Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/THn7nAwsJpBAbaFeRKgU.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
-  - chrome-70
+  - chrome70
 ---
 
 {% include 'partials/devtools/en/banner.md' %}
@@ -171,7 +170,7 @@ event handler associated to a page load event, such as `DOMContentLoaded`:
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
-  window.performance.mark('start');
+  window.performance.mark('start');
 });
 ```
 
@@ -179,8 +178,8 @@ Then, you would mark the end of the journey and calculate its duration when the 
 
 ```js
 document.querySelector('#CTA').addEventListener('click', () => {
-  window.performance.mark('end');
-  window.performance.measure('CTA', 'start', 'end');
+  window.performance.mark('end');
+  window.performance.measure('CTA', 'start', 'end');
 });
 ```
 
@@ -201,7 +200,6 @@ Performance recordings.
 This also comes in handy when debugging or optimizing code. For example, if you want to optimize a
 certain phase of your lifecycle, call `window.performance.mark()` at the beginning and end of your
 lifecycle function. React does this in development mode.
-
 
 {% include 'partials/devtools/en/reach-out.md' %}
 {% include 'partials/devtools/en/whats-new.md' %}

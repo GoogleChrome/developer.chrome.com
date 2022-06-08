@@ -11,7 +11,7 @@ authors:
 tags:
   - media
   - chrome-63
-  - chrome-64
+  - chrome64
 ---
 
 - Web developers can now [predict whether playback will be smooth and power
@@ -56,22 +56,27 @@ const mediaConfig = {
     contentType: 'audio/webm; codecs=opus',
     channels: '2', // audio channels used by the track
     bitrate: 132266, // number of bits used to encode a second of audio
-    samplerate: 48000 // number of samples of audio carried per second
+    samplerate: 48000, // number of samples of audio carried per second
   },
   video: {
     contentType: 'video/webm; codecs="vp09.00.10.08"',
     width: 1920,
     height: 1080,
     bitrate: 2646242, // number of bits used to encode a second of video
-    framerate: '25' // number of frames used in one second
-  }
+    framerate: '25', // number of frames used in one second
+  },
 };
 
 navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
-  console.log('This configuration is' +
-      (result.supported ? '' : ' NOT') + ' supported,' +
-      (result.smooth ? '' : ' NOT') + ' smooth and' +
-      (result.powerEfficient ? '' : ' NOT') + ' power efficient.');
+  console.log(
+    'This configuration is' +
+      (result.supported ? '' : ' NOT') +
+      ' supported,' +
+      (result.smooth ? '' : ' NOT') +
+      ' smooth and' +
+      (result.powerEfficient ? '' : ' NOT') +
+      ' power efficient.'
+  );
 });
 ```
 
@@ -95,7 +100,6 @@ don't support this API.
 
 ```js
 function isMediaConfigSupported(mediaConfig) {
-
   const promise = new Promise((resolve, reject) => {
     if (!('mediaCapabilities' in navigator)) {
       return reject('MediaCapabilities API not available');
@@ -110,16 +114,20 @@ function isMediaConfigSupported(mediaConfig) {
     let fallbackResult = {
       supported: false,
       smooth: false, // always false
-      powerEfficient: false // always false
+      powerEfficient: false, // always false
     };
     if ('video' in mediaConfig) {
-      fallbackResult.supported = MediaSource.isTypeSupported(mediaConfig.video.contentType);
+      fallbackResult.supported = MediaSource.isTypeSupported(
+        mediaConfig.video.contentType
+      );
       if (!fallbackResult.supported) {
         return fallbackResult;
       }
     }
     if ('audio' in mediaConfig) {
-      fallbackResult.supported = MediaSource.isTypeSupported(mediaConfig.audio.contentType);
+      fallbackResult.supported = MediaSource.isTypeSupported(
+        mediaConfig.audio.contentType
+      );
     }
     return fallbackResult;
   });
@@ -188,11 +196,14 @@ those to detect if VP9 HDR is supported for instance:
 ```js
 // Detect if display is in HDR mode and if browser supports VP9 HDR.
 function canPlayVp9Hdr() {
-
   // TODO: Adjust VP9 codec string based on your video encoding properties.
-  return (window.matchMedia('(color-gamut: p3)').matches &&
-      screen.colorDepth >= 48 &&
-      MediaSource.isTypeSupported('video/webm; codecs="vp09.02.10.10.01.09.16.09.01"'))
+  return (
+    window.matchMedia('(color-gamut: p3)').matches &&
+    screen.colorDepth >= 48 &&
+    MediaSource.isTypeSupported(
+      'video/webm; codecs="vp09.02.10.10.01.09.16.09.01"'
+    )
+  );
 }
 ```
 
@@ -220,22 +231,27 @@ licenses. It is not true anymore. Playing protected content through EME while
 the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 
 ```js
-const config = [{
-  sessionTypes: ['persistent-license'],
-  videoCapabilities: [{
-    contentType: 'video/webm; codecs="vp09.00.10.08"',
-    robustness: 'SW_SECURE_DECODE' // Widevine L3
-  }]
-}];
+const config = [
+  {
+    sessionTypes: ['persistent-license'],
+    videoCapabilities: [
+      {
+        contentType: 'video/webm; codecs="vp09.00.10.08"',
+        robustness: 'SW_SECURE_DECODE', // Widevine L3
+      },
+    ],
+  },
+];
 
-navigator.requestMediaKeySystemAccess('com.widevine.alpha', config)
-.then(access => {
-  // User will be able to watch encrypted content while being offline when
-  // license is stored locally on device and loaded later.
-})
-.catch(error => {
-  // Persistent licenses are not supported on this platform yet.
-});
+navigator
+  .requestMediaKeySystemAccess('com.widevine.alpha', config)
+  .then(access => {
+    // User will be able to watch encrypted content while being offline when
+    // license is stored locally on device and loaded later.
+  })
+  .catch(error => {
+    // Persistent licenses are not supported on this platform yet.
+  });
 ```
 
 You can try persistent licenses yourself by checking out the [Sample Media PWA]
@@ -255,8 +271,7 @@ to cases where no preload value is set. Note that the preload attribute's
 hint is discarded when a `MediaSource` is attached to the media element as the
 web site handles its own preload.
 
-In other words, `<video>` preload value is now `"metadata"` while `<video
-preload="auto">` preload value stays `"auto"`. Give a try to the [official
+In other words, `<video>` preload value is now `"metadata"` while `<video preload="auto">` preload value stays `"auto"`. Give a try to the [official
 sample](https://googlechrome.github.io/samples/media/preload-metadata).
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5CDvJkdxyQ8) &#124;
@@ -273,7 +288,7 @@ is set to a value not supported by Chrome (e.g. a negative value), a
 const audio = document.querySelector('audio');
 try {
   audio.playbackRate = -1;
-} catch(error) {
+} catch (error) {
   console.log(error.message); // Failed to set the playbackRate property
 }
 ```
@@ -312,18 +327,18 @@ super fast now.
 
 <!-- lint disable definition-case -->
 
-[Media Capabilities]: https://wicg.github.io/media-capabilities/
-[Windows 10 is in HDR mode]: https://support.microsoft.com/en-us/help/4040263/windows-10-hdr-advanced-color-settings
-[scRGB]: https://en.wikipedia.org/wiki/ScRGB
-[The World in HDR in 4K (ULTRA HD)]: https://www.youtube.com/watch?v=tO01J-M3g0U
+[media capabilities]: https://wicg.github.io/media-capabilities/
+[windows 10 is in hdr mode]: https://support.microsoft.com/en-us/help/4040263/windows-10-hdr-advanced-color-settings
+[scrgb]: https://en.wikipedia.org/wiki/ScRGB
+[the world in hdr in 4k (ultra hd)]: https://www.youtube.com/watch?v=tO01J-M3g0U
 [color-gamut media query]: /blog/media-updates-in-chrome-58#colorgamut
-[screen.colorDepth]: https://www.chromestatus.com/feature/5743005361242112
-[VP9 codec string with Profile 2]: https://googlechrome.github.io/samples/media/vp9-codec-string.html
-[colors in CSS]: https://drafts.csswg.org/css-color/#working-color-space
+[screen.colordepth]: https://www.chromestatus.com/feature/5743005361242112
+[vp9 codec string with profile 2]: https://googlechrome.github.io/samples/media/vp9-codec-string.html
+[colors in css]: https://drafts.csswg.org/css-color/#working-color-space
 [canvas]: https://github.com/WICG/canvas-color-space/blob/main/CanvasColorSpaceProposal.md
 [protected content]: https://bugs.chromium.org/p/chromium/issues/detail?id=707128&desc=2
-[Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
-[Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
+[encrypted media extensions (eme)]: https://w3c.github.io/encrypted-media/
+[sample media pwa]: https://github.com/GoogleChrome/sample-media-pwa
 [https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
-[HTML specification change]: https://github.com/whatwg/html/pull/2829
-[MSE videos in Chrome 62]: /blog/media-updates-in-chrome-62#background-video-track-optimizations
+[html specification change]: https://github.com/whatwg/html/pull/2829
+[mse videos in chrome 62]: /blog/media-updates-in-chrome-62#background-video-track-optimizations

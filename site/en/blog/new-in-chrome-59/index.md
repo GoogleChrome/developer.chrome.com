@@ -13,16 +13,16 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jHLPlbkgTHucmlsHZwK3.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-59
+  - chrome59
 ---
 
 {% YouTube id='zNoc4zEkWPo' %}
 
-* [Headless Chrome](#headless) allows you to run Chrome in an automated
+- [Headless Chrome](#headless) allows you to run Chrome in an automated
   environment without a user interface or peripherals.
-* [Notifications on macOS](#macnot) will be shown directly by the native
+- [Notifications on macOS](#macnot) will be shown directly by the native
   macOS notification system.
-* You can now capture full resolution photos with the
+- You can now capture full resolution photos with the
   [image capture API](#imagecapture), and there's plenty more!
 
 Want the full list of changes? Check out the
@@ -36,9 +36,9 @@ A headless browser is a great tool for running automated tests and server
 environments where you don't need to see the rendered output or have a
 visible UI shell. For example:
 
-* Using Selenium for unit tests against your progressive web app
-* To create a PDF of a wikipedia page
-* Inspecting a page with DevTools
+- Using Selenium for unit tests against your progressive web app
+- To create a PDF of a wikipedia page
+- Inspecting a page with DevTools
 
 Starting in Chrome 59, you can now run headless Chrome. It brings all modern web
 platform features provided by Chrome to the command line.
@@ -88,7 +88,7 @@ sample code you can use to get started right away.
 
 ## And more! {: #more }
 
-* The [`MediaError.message`](https://googlechrome.github.io/samples/media/error-message.html)
+- The [`MediaError.message`](https://googlechrome.github.io/samples/media/error-message.html)
   string provides, if available, any additional error message detail to help
   web developers debugging media player errors.
 

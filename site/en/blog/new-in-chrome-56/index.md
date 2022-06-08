@@ -14,16 +14,16 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/RkoGJnCCgHnWDI7rd7Pv.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-56
+  - chrome56
 ---
 
 {% YouTube id='F4DfGVbvRpY' %}
 
-* Users can now select Bluetooth Low Energy
+- Users can now select Bluetooth Low Energy
   devices to connect to web sites that use the [Web Bluetooth API](#webbluetooth).
-* [`position: sticky`](#position-sticky) is back - making it easy to create
+- [`position: sticky`](#position-sticky) is back - making it easy to create
   elements that scroll normally until sticking to the top of the viewport.
-* And [HTML5 by Default](#html5-by-default) is enabled for all users.
+- And [HTML5 by Default](#html5-by-default) is enabled for all users.
 
 I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 56.
 
@@ -100,11 +100,11 @@ and [recommendations](https://sites.google.com/a/chromium.org/dev/flash-roadmap#
 
 And of course, there's plenty more.
 
-* [WebVR](https://developers.google.com/web/fundamentals/vr/) is available as
+- [WebVR](https://developers.google.com/web/fundamentals/vr/) is available as
   an Origin Trial.
-* The [WebGL 2.0 API](//www.khronos.org/registry/webgl/specs/latest/2.0/) is
+- The [WebGL 2.0 API](//www.khronos.org/registry/webgl/specs/latest/2.0/) is
   now available.
-* And the Payment Request API has a
+- And the Payment Request API has a
   [variety of new features](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/preview).
 
 If you want to stay up to date with Chrome and know what's coming, be sure to

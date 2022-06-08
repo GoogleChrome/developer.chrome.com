@@ -10,7 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
-  - chrome-61
+  - chrome61
 ---
 
 - Chrome now [disables video tracks when an MSE video is played in the
@@ -47,7 +47,7 @@ snippet that shows you what Chrome is roughly doing behind the scenes.
 var video = document.querySelector('video');
 var selectedVideoTrackIndex;
 
-document.addEventListener('visibilitychange', function() {
+document.addEventListener('visibilitychange', function () {
   if (document.hidden) {
     // Disable video track when page is hidden.
     selectedVideoTrackIndex = video.videoTracks.selectedIndex;
@@ -104,9 +104,9 @@ This magic behavior only happens when:
 
 <!-- lint disable definition-case -->
 
-[Media Source Extensions (MSE)]: https://developers.google.com/web/fundamentals/media/mse/basics
-[Page Visibility API]: https://www.w3.org/TR/page-visibility/
+[media source extensions (mse)]: https://developers.google.com/web/fundamentals/media/mse/basics
+[page visibility api]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
-[Mobile Web Video Playback]: https://developers.google.com/web/fundamentals/media/mobile-web-video-playback#fullscreen
+[mobile web video playback]: https://developers.google.com/web/fundamentals/media/mobile-web-video-playback#fullscreen
 [fullscreen element]: https://developer.mozilla.org/docs/Web/API/Document/fullscreenElement
-[Screen Orientation API]: https://w3c.github.io/screen-orientation/
+[screen orientation api]: https://w3c.github.io/screen-orientation/

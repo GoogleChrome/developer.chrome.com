@@ -28,9 +28,6 @@ updated: 2019-05-28
 tags:
   - chrome64
   - chrome66
-
-
-
 ---
 
 {% Aside %}
@@ -61,7 +58,6 @@ to "jank" or audio to "glitch". Because of this fundamental design flaw,
 <code>ScriptProcessorNode</code> is deprecated from the specification and
 replaced with AudioWorklet.
 
-
 ## Concepts
 
 Audio Worklet nicely keeps the user-supplied JavaScript code all within the
@@ -77,7 +73,6 @@ rendering.
     Fig.1
   </figcaption>
 </figure>
-
 
 ### Registration and Instantiation
 
@@ -142,6 +137,7 @@ promise from `AudioWorklet.addModule()` will be resolved notifying users
 that the class definition is ready to be used in the main global scope.
 
 ### Custom AudioParam
+
 One of the useful things about AudioNodes is schedulable parameter
 automation with AudioParams. AudioWorkletNodes can use these to get
 exposed parameters that can be controlled at the audio rate automatically.
@@ -162,16 +158,19 @@ AudioParam objects to the node accordingly.
 ```js
 /* A separate script file, like "my-worklet-processor.js" */
 class MyWorkletProcessor extends AudioWorkletProcessor {
-
   // Static getter to define AudioParam objects in this custom processor.
   static get parameterDescriptors() {
-    return [{
-      name: 'myParam',
-      defaultValue: 0.707
-    }];
+    return [
+      {
+        name: 'myParam',
+        defaultValue: 0.707,
+      },
+    ];
   }
 
-  constructor() { super(); }
+  constructor() {
+    super();
+  }
 
   process(inputs, outputs, parameters) {
     // |myParamValues| is a Float32Array of either 1 or 128 audio samples
@@ -239,7 +238,6 @@ anymore. To keep the processor alive, the method must return `true`.
 Otherwise, the node/processor pair will be garbage collected by the system
 eventually.
 
-
 ### Bi-directional Communication with MessagePort
 
 Sometimes custom AudioWorkletNodes will want to expose controls that do
@@ -256,8 +254,6 @@ can be exchanged through this channel.
   </figcaption>
 </figure>
 
-
-
 MessagePort can be accessed via `.port` attribute on both the node and
 the processor. The node's `port.postMessage()` method sends a message to
 the associated processor's `port.onmessage` handler and vice versa.
@@ -266,7 +262,7 @@ the associated processor's `port.onmessage` handler and vice versa.
 /* The code in the main global scope. */
 context.audioWorklet.addModule('processors.js').then(() => {
   let node = new AudioWorkletNode(context, 'port-processor');
-  node.port.onmessage = (event) => {
+  node.port.onmessage = event => {
     // Handling data from the processor.
     console.log(event.data);
   };
@@ -280,7 +276,7 @@ context.audioWorklet.addModule('processors.js').then(() => {
 class PortProcessor extends AudioWorkletProcessor {
   constructor() {
     super();
-    this.port.onmessage = (event) => {
+    this.port.onmessage = event => {
       // Handling data from the node.
       console.log(event.data);
     };
@@ -301,7 +297,6 @@ Also note that MessagePort supports Transferable, which allows you to
 transfer data storage or a WASM module over the thread boundary. This opens
 up countless possibility on how the Audio Worklet system can be utilized.
 
-
 ## Walkthrough: building a GainNode
 
 Putting everything together, here's a complete example of GainNode built on
@@ -310,24 +305,24 @@ top of AudioWorkletNode and AudioWorkletProcessor.
 Index.html
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<script>
-  const context = new AudioContext();
+  <script>
+    const context = new AudioContext();
 
-  // Loads module script via AudioWorklet.
-  context.audioWorklet.addModule('gain-processor.js').then(() => {
-    let oscillator = new OscillatorNode(context);
+    // Loads module script via AudioWorklet.
+    context.audioWorklet.addModule('gain-processor.js').then(() => {
+      let oscillator = new OscillatorNode(context);
 
-    // After the resolution of module loading, an AudioWorkletNode can be
-    // constructed.
-    let gainWorkletNode = new AudioWorkletNode(context, 'gain-processor');
+      // After the resolution of module loading, an AudioWorkletNode can be
+      // constructed.
+      let gainWorkletNode = new AudioWorkletNode(context, 'gain-processor');
 
-    // AudioWorkletNode can be interoperable with other native AudioNodes.
-    oscillator.connect(gainWorkletNode).connect(context.destination);
-    oscillator.start();
-  });
-</script>
+      // AudioWorkletNode can be interoperable with other native AudioNodes.
+      oscillator.connect(gainWorkletNode).connect(context.destination);
+      oscillator.start();
+    });
+  </script>
 </html>
 ```
 
@@ -335,10 +330,9 @@ gain-processor.js
 
 ```js
 class GainProcessor extends AudioWorkletProcessor {
-
   // Custom AudioParams can be defined with this static getter.
   static get parameterDescriptors() {
-    return [{ name: 'gain', defaultValue: 1 }];
+    return [{name: 'gain', defaultValue: 1}];
   }
 
   constructor() {
@@ -373,9 +367,7 @@ This covers the fundamental of Audio Worklet system. Live demos are available
 at [Chrome WebAudio team's GitHub
 repository](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/).
 
-
 ## Feature Transition: Experimental to Stable
 
 Audio Worklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
 the feature was behind the experimental flag.
-

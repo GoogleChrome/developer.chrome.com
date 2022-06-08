@@ -14,14 +14,14 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/DU7j6Ed17BVr0k2f7EBy.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-66
+  - chrome66
 ---
 
 {% YouTube id='hsfueop_Hb8' %}
 
-* CSS manipulation becomes easier with the new [CSS Typed Model Object](#cssom).
-* Access to the [clipboard](#async-clipboard) is now asynchronous.
-* There's a new [rendering context](#css-paint-api) for canvas elements.
+- CSS manipulation becomes easier with the new [CSS Typed Model Object](#cssom).
+- Access to the [clipboard](#async-clipboard) is now asynchronous.
+- There's a new [rendering context](#css-paint-api) for canvas elements.
 
 And there's [plenty more](#more)!
 
@@ -113,10 +113,9 @@ integrates with the permission API to provide a better experience for users.
 Text can be copied to the clipboard by calling `writeText()`.
 
 ```js
-navigator.clipboard.writeText('Copy me!')
-  .then(() => {
-    console.log('Text is on the clipboard.');
-  });
+navigator.clipboard.writeText('Copy me!').then(() => {
+  console.log('Text is on the clipboard.');
+});
 ```
 
 Since this API is asynchronous, the `writeText()` function returns a Promise
@@ -127,10 +126,9 @@ Similarly, text can be read from the clipboard by calling `getText()` and
 waiting for the returned Promise to resolve with the text.
 
 ```js
-navigator.clipboard.getText()
-  .then((text) => {
-    console.log('Clipboard: ', text);
-  });
+navigator.clipboard.getText().then(text => {
+  console.log('Clipboard: ', text);
+});
 ```
 
 Check out Jason's post and demos in the
@@ -153,7 +151,7 @@ const context = el.getContext('2d');
 const img = new Image();
 img.onload = function () {
   context.drawImage(img, 0, 0);
-}
+};
 img.src = 'llama.png';
 ```
 
@@ -182,7 +180,7 @@ Worklets are in! PaintWorklet shipped in Chrome 65, and now we're enabling
 [AudioWorklet](https://developers.google.com/web/updates/2017/12/audio-worklet)
 by default in Chrome 66. This new type of Worklet can be used to process
 audio in the dedicated audio thread, replacing the legacy ScriptProcessorNode
-which ran on the main thread.  Each AudioWorklet runs in its own global scope,
+which ran on the main thread. Each AudioWorklet runs in its own global scope,
 reducing latency and increasing throughput stability.
 
 There are some interesting examples of AudioWorklet over on
@@ -193,11 +191,11 @@ There are some interesting examples of AudioWorklet over on
 These are just a few of the changes in Chrome 66 for developers, of course,
 there's plenty more.
 
-* `TextArea` and `Select` now support the `autocomplete` attribute.
-* Setting `autocapitalize` on a `form` element will apply to any child form
+- `TextArea` and `Select` now support the `autocomplete` attribute.
+- Setting `autocapitalize` on a `form` element will apply to any child form
   fields, improving compatibility with Safari's implementation of
   `autocapitalize`.
-* `trimStart()` and `trimEnd()` are now available as the standards-based way
+- `trimStart()` and `trimEnd()` are now available as the standards-based way
   of trimming whitespace from strings.
 
 Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-66),

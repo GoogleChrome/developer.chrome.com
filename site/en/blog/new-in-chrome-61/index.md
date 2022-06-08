@@ -13,18 +13,18 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/SPYKhVLxFeqCrweiAZLB.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-61
+  - chrome61
 ---
 
 {% YouTube id='2vJm1Gfn0ng' %}
 
-* Chrome 61 now supports JavaScript [modules](#modules) natively, unifying the
+- Chrome 61 now supports JavaScript [modules](#modules) natively, unifying the
   way modular JavaScript can be written.
-* You can now use [`navigator.share`](#share) to trigger the native Android
+- You can now use [`navigator.share`](#share) to trigger the native Android
   share dialog.
-* The [WebUSB API](#webusb) has landed, allowing web apps to access user
+- The [WebUSB API](#webusb) has landed, allowing web apps to access user
   permitted USB devices.
-* And there's [plenty more](#more)!
+- And there's [plenty more](#more)!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/60.0.3112.78..61.0.3163.79?pretty=fuller&n=10000).
@@ -54,9 +54,9 @@ JavaScript.
 You can learn more about modules and the aspects of JavaScript that are
 affected by modules from the links below.
 
-* [Chrome Status](https://www.chromestatus.com/feature/5365692190687232)
-* [ES Modules in Browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
-* [ES6 Modules in Depth](https://ponyfoo.com/articles/es6-modules-in-depth)
+- [Chrome Status](https://www.chromestatus.com/feature/5365692190687232)
+- [ES Modules in Browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
+- [ES6 Modules in Depth](https://ponyfoo.com/articles/es6-modules-in-depth)
 
 ## Web Share API {: #share }
 
@@ -78,12 +78,15 @@ to share the system will handle the rest.
 <br style="clear: both;">
 
 ```js
-navigator.share({
-  title: document.title, text: 'Hello',
-  url: window.location.href
-}).then(() => {
-  console.log('Successful share');
-});
+navigator
+  .share({
+    title: document.title,
+    text: 'Hello',
+    url: window.location.href,
+  })
+  .then(() => {
+    console.log('Successful share');
+  });
 ```
 
 Check out Paul's [WebShare API Update](https://developers.google.com/web/updates/2016/10/navigator-share)
@@ -107,12 +110,12 @@ on updates.
 
 ## And more! {: #more }
 
-* You can now specify scrolling smoothness with the
+- You can now specify scrolling smoothness with the
   [`scroll-behavior`](https://drafts.csswg.org/cssom-view/#smooth-scrolling)
   CSS property.
-* [CSS hex color values](https://developer.mozilla.org/docs/Web/CSS/color_value#rgba)
+- [CSS hex color values](https://developer.mozilla.org/docs/Web/CSS/color_value#rgba)
   can now specify alpha transparency by adding digits to the end of the string.
-* You can access the relative positions of the screen content with the
+- You can access the relative positions of the screen content with the
   [Visual Viewport API](https://github.com/WICG/ViewportAPI), exposing complex
   functionality like pinch-and-zoom in a more direct way.
 

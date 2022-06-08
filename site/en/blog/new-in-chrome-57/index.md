@@ -14,16 +14,16 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/3ISvS8m03zhH24iy9TKv.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-57
+  - chrome57
 ---
 
 {% YouTube id='57Scec2XPd0' %}
 
-* Chrome 57 adds support for [`display: grid`](#gridlayout) - the new
+- Chrome 57 adds support for [`display: grid`](#gridlayout) - the new
   CSS Grid Layout specification.
-* You can now customize and respond to user input on the lock screen and
+- You can now customize and respond to user input on the lock screen and
   notifications using the new [Media Session API](#mediasession).
-* And there are plenty [more](#andmore)!
+- And there are plenty [more](#andmore)!
 
 I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 57!
 
@@ -72,25 +72,25 @@ on GitHub.
 
 And there's lots more!
 
-* There are [some](https://developers.google.com/web/updates/2017/01/payment-request-updates)
+- There are [some](https://developers.google.com/web/updates/2017/01/payment-request-updates)
   [improvements](https://developers.google.com/web/updates/2017/01/payment-request-updates#paymentmethoddata_supports_basic-card)
   to the Payment Request API.
-* You can specify the color of the text input cursor with the
+- You can specify the color of the text input cursor with the
   [`caret-color`](https://www.chromestatus.com/feature/5720917787279360)
   property.
-* Visual effects such as line color and style can be specified with new
+- Visual effects such as line color and style can be specified with new
   [`text-decoration`](https://developer.mozilla.org/docs/Web/CSS/text-decoration)
   properties.
-* The [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)
+- The [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)
   [Response class](https://developer.mozilla.org/docs/Web/API/Response)
   now supports the
   [`.redirected`](https://developer.mozilla.org/docs/Web/API/Response/redirected)
   attribute to help avoid untrustworthy responses and reduce the risk of open
   redirectors.
-* All `-webkit-` prefixed [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
+- All `-webkit-` prefixed [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
   global aliases have been removed, after
   their deprecation in M38.
-* And one of my favorites &mdash; new
+- And one of my favorites &mdash; new
   [`padStart`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
   and
   [`padEnd`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)

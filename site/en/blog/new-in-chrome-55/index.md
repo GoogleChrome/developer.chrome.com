@@ -13,18 +13,18 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/mSTrfPSzkd9urYjiYguF.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-55
+  - chrome55
 ---
 
 {% YouTube id="OC7tgJP1D4s" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=OC7tgJP1D4s)
 
-* [`async` and `await`](#async-and-await) allows you to write promise-based
+- [`async` and `await`](#async-and-await) allows you to write promise-based
   code as if it were synchronous, but without blocking the main thread.
-* [Pointer events](#pointer-events) provide a unified way of handling all
+- [Pointer events](#pointer-events) provide a unified way of handling all
   input events.
-* Sites added to the home screen, are automatically granted the [persistent
+- Sites added to the home screen, are automatically granted the [persistent
   storage](#persistent-storage) permission.
 
 And there's plenty more.
@@ -58,12 +58,12 @@ Pointer events unify the pointer input model for the browser, bringing
 touch, pens, and mice together into a single set of events. They're supported
 in [IE11, Edge, Chrome, Opera and partially supported in Firefox](https://goo.gl/znkJcj).
 
-Check out  [Pointing the Way Forward](https://developers.google.com/web/updates/2016/10/pointer-events)
+Check out [Pointing the Way Forward](https://developers.google.com/web/updates/2016/10/pointer-events)
 for more details.
 
 ## `async` and `await` {: #async-and-await }
 
-Asynchronous JavaScript can be difficult to reason about.  Take this
+Asynchronous JavaScript can be difficult to reason about. Take this
 function with all it's "lovely" callbacks:
 
 ```js
@@ -94,7 +94,8 @@ function logFetch(url) {
     .then(response => response.text())
     .then(text => {
       console.log(text);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.error('fetch failed', err);
     });
 }
@@ -114,8 +115,7 @@ async function logFetch(url) {
   try {
     const response = await fetch(url);
     console.log(await response.text());
-  }
-  catch (err) {
+  } catch (err) {
     console.log('fetch failed', err);
   }
 }
@@ -135,9 +135,8 @@ storage for your site.
 if (navigator.storage && navigator.storage.persist) {
   navigator.storage.persist().then(granted => {
     if (granted)
-      alert("Storage will not be cleared except by explicit user action");
-    else
-      alert("Storage may be cleared by the UA under storage pressure.");
+      alert('Storage will not be cleared except by explicit user action');
+    else alert('Storage may be cleared by the UA under storage pressure.');
   });
 }
 ```

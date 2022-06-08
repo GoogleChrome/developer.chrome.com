@@ -29,9 +29,6 @@ tags:
   - news
   - chrome70
   - media
-
-
-
 ---
 
 - Web developers can control [Picture-in-Picture for videos](#pip).
@@ -109,15 +106,17 @@ coded frame processing algorithm.
 Here's how to use the `changeType()` method:
 
 ```js
-    const sourceBuffer = myMediaSource.addSourceBuffer('video/webm; codecs="opus, vp09.00.10.08"');
-    sourceBuffer.appendBuffer(someWebmOpusVP9Data);
+const sourceBuffer = myMediaSource.addSourceBuffer(
+  'video/webm; codecs="opus, vp09.00.10.08"'
+);
+sourceBuffer.appendBuffer(someWebmOpusVP9Data);
 
-    // Later on...
-    if ('changeType' in sourceBuffer) {
-      // Change source buffer type and append new data.
-      sourceBuffer.changeType('video/mp4; codecs="mp4a.40.5, avc1.4d001e"');
-      sourceBuffer.appendBuffer(someMp4AacAvcData);
-    }
+// Later on...
+if ('changeType' in sourceBuffer) {
+  // Change source buffer type and append new data.
+  sourceBuffer.changeType('video/mp4; codecs="mp4a.40.5, avc1.4d001e"');
+  sourceBuffer.appendBuffer(someMp4AacAvcData);
+}
 ```
 
 As expected, if the passed type is not supported by the browser, this method
@@ -170,7 +169,6 @@ additional steps taken to clear media licenses alongside cookies and site data,
 ensuring that media licenses are not used by sites to track users who have
 cleared browsing data.
 
-
 <figure class="float-right">
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/wB5JY8PI2RVn4fTv9I3z.png", alt="Protected content setting in Android.", width="800", height="800" %}
   <figcaption>
@@ -178,11 +176,6 @@ cleared browsing data.
     Protected content setting in Android.
   </figcaption>
 </figure>
-
-
-
-
-
 
 [picture-in-picture web api]: https://wicg.github.io/picture-in-picture/
 [our article]: https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture

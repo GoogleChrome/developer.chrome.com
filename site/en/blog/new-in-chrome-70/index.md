@@ -14,16 +14,16 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/xyMUK7XGvNYPfZtfeahN.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-70
+  - chrome70
 ---
 
 {% YouTube id='msA284Q6yZU' %}
 
 In Chrome 70, we've added support for:
 
-* [Desktop Progressive Web Apps on Windows & Linux](#dpwa-windows).
-* The credential management API adds support for [Public Key Credentials](#pki).
-* And you can now [name workers](#named-workers)!
+- [Desktop Progressive Web Apps on Windows & Linux](#dpwa-windows).
+- The credential management API adds support for [Public Key Credentials](#pki).
+- And you can now [name workers](#named-workers)!
 
 And there's [plenty more](#more)!
 
@@ -206,19 +206,19 @@ details.
 These are just a few of the changes in Chrome 70 for developers, of course,
 there's plenty more.
 
-* [Web Bluetooth](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web)
+- [Web Bluetooth](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web)
   is [now available in Windows 10](https://www.chromestatus.com/feature/5264933985976320),
   and allows your site to communicate with nearby user-selected Bluetooth
   devices in a secure and privacy-preserving way.
-* Chrome can
+- Chrome can
   [send intervention and deprecation messages](https://www.chromestatus.com/feature/5544632075157504)
   to your servers using the `Report-To HTTP` Response header field or surface
   them in the `ReportingObserver` interface.
-* There are a number of important deprecations you should know about,
+- There are a number of important deprecations you should know about,
   check the
   [Deprecations and removals in Chrome 70](https://developers.google.com/web/updates/2018/09/chrome-70-deps-rems)
   post for more details.
-* And be sure to check out the latest
+- And be sure to check out the latest
   [What's new in DevTools](/blog/new-in-devtools-70) post to learn what's
   new in Chrome DevTools.
 

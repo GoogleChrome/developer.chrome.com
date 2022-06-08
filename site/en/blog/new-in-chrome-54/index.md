@@ -14,7 +14,7 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZnBf6Txfx1pb3DLfiWt6.png'
 alt: 'Cropped Chrome logo on the left, version number on the right.'
 tags:
   - new-in-chrome
-  - chrome-54
+  - chrome54
 ---
 
 Note: I'm trying something new with the latest video release of New In Chrome,
@@ -27,12 +27,12 @@ if this is useful to you!
 
 [Watch on YouTube](https://www.youtube.com/watch?v=qPD2yc8BoDk)
 
-* You can now create your own custom HTML tag with and make re-usable web
-components with [Custom Elements v1](#custom-elements).
-* It's easier to send messages between open windows or tabs on the same origin
-with the [BroadcastChannel API](#broadcast-channel).
-* [Media experience get better](#request-full-screen) on Android and
-[foreign fetch](#foreign-fetch) is now available as an origin trial.
+- You can now create your own custom HTML tag with and make re-usable web
+  components with [Custom Elements v1](#custom-elements).
+- It's easier to send messages between open windows or tabs on the same origin
+  with the [BroadcastChannel API](#broadcast-channel).
+- [Media experience get better](#request-full-screen) on Android and
+  [foreign fetch](#foreign-fetch) is now available as an origin trial.
 
 I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 54!
 
@@ -68,8 +68,8 @@ browsing contexts of the same origin.
 
 ### Other `BroadcastChannel` resources
 
-* [Spec](https://goo.gl/Lek3U0)
-* [Polyfill](https://developers.google.com/web/updates/2016/09/broadcastchannel#feature_detection_and_browser_support)
+- [Spec](https://goo.gl/Lek3U0)
+- [Polyfill](https://developers.google.com/web/updates/2016/09/broadcastchannel#feature_detection_and_browser_support)
 
 ## `requestFullScreen` {: #request-full-screen }
 
