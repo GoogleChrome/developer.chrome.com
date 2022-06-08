@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 102
 description: >
-  Chrome 102 is rolling out now! Installed PWAs can register as file handlers, making it easy for users to open files directly from disk. The inert attribute allows you to mark parts of the DOM as inert. The navigation API makes it easier for single page apps to handle navigation and updates to the URL. And there's plenty more!
+  Chrome 102 is rolling out now! Installed PWAs can register as file handlers, making it easy for users to open files directly from disk. The inert attribute allows you to mark parts of the DOM as inert. The Navigation API makes it easier for single page apps to handle navigation and updates to the URL. And there's plenty more!
 layout: 'layouts/blog-post.njk'
 date: 2022-06-09
 authors:
@@ -21,7 +21,7 @@ Here's what you need to know:
 * Installed PWAs can register as [file handlers](#file-handlers), making it
   easy for users to open files directly from disk.
 * The [`inert`](#inert) attribute allows you to mark parts of the DOM as inert.
-* The [navigation API](#navigation-api) makes it easier for single page apps
+* The [Navigation API](#navigation-api) makes it easier for single page apps
   to handle navigation and updates to the URL
 * And there's plenty [more](#more).
 
@@ -30,7 +30,7 @@ see what's new for developers in Chrome 102.
 
 ## File Handling API {: #file-handlers }
 
-The file handling API allows installed PWAs to register with the OS as a file
+The File Handling API allows installed PWAs to register with the OS as a file
 handler. Once registered, a user can click on a file to open it with the
 installed PWA. This is perfect for PWAs that interact with files, for example,
 image editors, IDEs, text editors, and so on.
@@ -64,6 +64,7 @@ consumer for the `launchQueue` object. Launches are queued until they are
 handled by the consumer.
 
 ```js
+// Access from Window.launchQueue.
 launchQueue.setConsumer((launchParams) => {
   if (!launchParams.files.length) {
     // Nothing to do when the queue is empty.
@@ -77,9 +78,9 @@ launchQueue.setConsumer((launchParams) => {
 ```
 
 Check out [Let installed web applications be file handlers](https://web.dev/file-handling/)
-on web.dev for all the details!
+on web.dev for all the details.
 
-## The `inert` attribute {: #inert }
+## The `inert` property {: #inert }
 
 The `inert` property is a global HTML attribute that tells the browser to
 ignore user input events for an element, including focus events, and events
@@ -111,7 +112,7 @@ Check out [Introducing inert](/articles/inert/) for more details.
 
 ## Navigation API {: #navigation-api }
 
-Many web apps depend on the ability to update the URL, without a page
+Many web apps depend on the ability to update the URL without a page
 navigation. Today, we use the [history API][mdn-history], but it's clunky and
 doesn't always work as expected. Rather than trying to patch the History API's
 rough edges, the Navigation API completely overhauls this space.
