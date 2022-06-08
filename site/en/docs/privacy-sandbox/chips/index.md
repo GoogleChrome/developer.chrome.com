@@ -12,10 +12,6 @@ authors:
   - mihajlija
 ---
 
-## Changes
-
-- **June 2022**:  Based on feedback, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute. This allows a site to access partitioned cookies across its subdomains.
-
 ## Implementation status
 
 - [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 105
@@ -144,7 +140,7 @@ Sites from the same First-Party Set will have the same partition key—the owner
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/`.
+Partitioned cookies must be set with `Secure` and `Path=/` and without the `Domain` attribute. Since `Domain` cookies can be shared between different third-party subdomains within a partition, disallowing it makes partitioned cookies as close to being [origin-bound](docs/privacy-sandbox/glossary/#origin) as possible; and aligns cookies closer to the [Same-Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 
