@@ -4,9 +4,9 @@ extra_permissions_html:
   The majority of the Tabs API can be used without declaring any permission. However, the <code>"tabs"</code> permission is required in order to populate the <code>url</code>, <code>pendingUrl</code>, <code>title</code>, and <code>favIconUrl</code> properties of <code><a href="#type-Tab">Tab</a></code>.
 ---
 
-## Manifest
+## Manifest {: #manifest }
 
-### No permission
+### No permission required {: #no-perm}
 
 You can use most Tabs API methods and events without declaring any permissions. The following are a some common examples:
 
@@ -14,24 +14,18 @@ You can use most Tabs API methods and events without declaring any permissions. 
 - Moving a tab using `tabs.move()`.
 - Reloading the tab using `tabs.reload()`.
 
-### Tabs, host permissions or... both?
+### Tabs permission or host permissions {: #perms}
 
-If you need access to any of the following properties of [`tabs.Tab`][tab]: `url`, `pendingUrl`,
-`title`, or `favIconUrl`, you have to request permission in the extension's
-[manifest][doc-manifest] file. The following are a couple of examples:
+If your extension needs access to any of the following properties of [`tabs.Tab`][tab]: `url`, `pendingUrl`,
+`title`, or `favIconUrl`, use the following table to determine which
+permission to request:
 
-- Querying tabs by specific URLs.
-- Muting tabs that contain a keyword in the title.
+| Permission           | Use case                                                                       |
+|----------------------|--------------------------------------------------------------------------------|
+| **Host permissions** | If you are already requesting host permissions, and need access to those tabs. |
+| **Tabs**             | If you need access to the data of all tabs.                                    |
 
-Use the following table to determine which permission you need:
-
-| Permission           | Tab data access                                                                 |
-|----------------------|---------------------------------------------------------------------------------|
-| **Host permissions** | Access to the tabs matching the URL [match patterns][doc-match].                |
-| **Tabs**             | Access to the data of all tabs.                                                 |
-| **Both**             | Access to host permissions to specific URLs, and the data of all the open tabs. |
-
-The following are code samples fo each case, along with the correspondent [permission warning][doc-perms].
+The following code shows how to declare each permission in the extension's [manifest][doc-manifest] and the [permission warnings][doc-perms] the user will see.
 
 <web-tabs>
   <web-tab title="Host Permissions (code)">
@@ -47,9 +41,8 @@ The following are code samples fo each case, along with the correspondent [permi
   }
   ```
 
-#### Permission warning
-
-Read and change all your data on the websites you visit
+Permission warning
+: Read and change all your data on the websites you visit
 
   </web-tab>
     <web-tab title="Tabs permission (code)">
@@ -65,35 +58,19 @@ Read and change all your data on the websites you visit
   }
   ```
 
-#### Permission warning
+{% Aside %}
 
-Read your browsing history
+Permission warning
+: Read your browsing history
 
-  </web-tab>
-  <web-tab title="Both (code)">
-
-```json
-{
-  "name": "My extension",
-  ...
-  "permissions": [
-    "tabs"
-  ],
-  "host_permissions": [
-    "https://www.google.com/"
-  ],
-  ...
-}
-```
-
-#### Permission warnings
-
-- Read your browsing history
-- Read and change your data on www.google.com
+{% endAside %}
 
 
   </web-tab>
+
 </web-tabs>
+
+NOTE: If you are already requesting a narrow host permission, like for example to google.com, but you also need access to all tabs URL, then you will need to request both.
 
 ## Examples
 
