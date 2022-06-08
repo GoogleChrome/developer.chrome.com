@@ -17,7 +17,7 @@ tags:
 
 ## Changes
 
-- **May 2022**: As of Chrome 103, sending `Accept-CH: Sec-CH-Partitioned-Cookies` header is no longer required for optting into the origin trial.
+- **May 2022**: As of Chrome 103, sending `Accept-CH: Sec-CH-Partitioned-Cookies` header is no longer required for opting into the origin trial.
 
 
 ## What is CHIPS?
