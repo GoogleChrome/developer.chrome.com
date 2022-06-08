@@ -30,7 +30,7 @@ If a site enrolls in the trial as a first-party, the cookie partitioning functio
 
 ## How long will the trial run?
 
-The trial will be available from Chrome 100 to Chrome 103. Check the [Chrome release schedule](https://chromiumdash.appspot.com/schedule) for the planned release dates.
+The trial will be available from Chrome 100 to Chrome 105. Check the [Chrome release schedule](https://chromiumdash.appspot.com/schedule) for the planned release dates.
 
 ## How to enroll in the origin trial
 
