@@ -7,14 +7,17 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2022-04-01
+updated: 2022-06-08
 authors:
   - mihajlija
+tags:
+  - cookies
+  - privacy  
 ---
 
 ## Implementation status
 
-- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 103
+- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 105
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
 - [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
 
@@ -152,7 +155,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## Try it out
 
-[CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 103. 
+[CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 105. 
 
 CHIPS is also available behind flags from Chrome 99. Check out the testing instructions and demo on [chromium.org](https://www.chromium.org/updates/chips/). 
 
