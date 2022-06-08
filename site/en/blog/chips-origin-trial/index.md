@@ -46,7 +46,7 @@ Chrome stable 103.
 
 1.  To register for the origin trial and get a token for your domains, visit the [CHIPS origin trial page](/origintrials/#/view_trial/1239615797433729025).
 
-1.  Include the `Origin-Trial` header with a valid token in each page response:
+1.  Include the `Origin-Trial` header with a valid token in any responses with `Set-Cookie` header that include `Partitioned`:
 
     ```js
     Origin-Trial: <ORIGIN TRIAL TOKEN>
@@ -73,8 +73,6 @@ Chrome stable 103.
         partitioned: true,
         });
         ```
-
-The `Set-Cookie` header does not have to result in a valid cookie. 
 
 ### Example
 
