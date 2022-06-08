@@ -10,7 +10,6 @@ See [DevTools APIs summary][1] for general introduction to using Developer Tools
 `devtools.recorder` API is a preview feature that allows you to extend the [Recorder panel](/docs/devtools/recorder/) in Chrome DevTools.
 Currently, you can extend only the export feature.
 
-To register an extension plugin, use the `registerRecorderExtensionPlugin` function.
 To register an extension plugin, use the `registerRecorderExtensionPlugin` function. This function requires a plugin instance, a `name` and a `mediaType` as parameters. The plugin instance must implement two methods: `stringify` and `stringifyStep`.
 
 The `name` provided by the extension shows up in the **Export** menu in the **Recorder** panel.
