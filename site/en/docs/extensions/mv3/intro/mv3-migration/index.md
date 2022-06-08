@@ -397,7 +397,7 @@ service workers as of Chrome 87.
 There is a new
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) for
 network request modification, which provides an alternative for much of the
-[webRequest](/docs/extensions/reference/webRequest) AP's functionality.
+[webRequest](/docs/extensions/reference/webRequest) API's functionality.
 
 
 ### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
