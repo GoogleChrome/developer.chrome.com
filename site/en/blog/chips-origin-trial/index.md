@@ -9,6 +9,10 @@ date: 2022-03-17
 updated: 2022-06-08
 authors:
   - mihajlija  
+tags:
+ - origin-trials
+ - cookies
+ - privacy  
 ---
 
 ## Changes
