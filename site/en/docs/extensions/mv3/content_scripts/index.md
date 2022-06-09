@@ -220,8 +220,9 @@ via [activeTab][15].
 
 Below we'll look at different versions of an activeTab-based extension.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json/4-6
-//// manifest.json ////
 {
   "name": "My extension",
   ...
@@ -236,13 +237,15 @@ Below we'll look at different versions of an activeTab-based extension.
 
 Content scripts can be injected as files…
 
+{% Label %}content-script.js:{% endLabel %}
+
 ```js
-//// content-script.js ////
 document.body.style.backgroundColor = 'orange';
 ```
 
+{% Label %}background.js:{% endLabel %}
+
 ```js
-//// background.js ////
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
@@ -253,8 +256,9 @@ chrome.action.onClicked.addListener((tab) => {
 
 …or a function body can be injected and executed as a content script.
 
+{% Label %}background.js:{% endLabel %}
+
 ```js
-//// background.js ////
 function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
