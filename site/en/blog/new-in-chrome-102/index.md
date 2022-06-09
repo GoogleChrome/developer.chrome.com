@@ -4,6 +4,7 @@ description: >
   Chrome 102 is rolling out now! Installed PWAs can register as file handlers, making it easy for users to open files directly from disk. The inert attribute allows you to mark parts of the DOM as inert. The Navigation API makes it easier for single page apps to handle navigation and updates to the URL. And there's plenty more!
 layout: 'layouts/blog-post.njk'
 date: 2022-06-09
+updated: 2022-06-09
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/6zvxf9vrqKPSpM23mIwd.png'
@@ -78,7 +79,7 @@ launchQueue.setConsumer((launchParams) => {
 ```
 
 Check out [Let installed web applications be file handlers](https://web.dev/file-handling/)
-on web.dev for all the details.
+for all the details.
 
 ## The `inert` property {: #inert }
 
