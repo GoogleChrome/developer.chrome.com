@@ -21,7 +21,7 @@ May 26, 2022
 
 Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that informs developers to accurately self-declare their trader/non-trader status.
 
-### Chrome 102: {: #m102-registercontentscripts-main-world }
+### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
 
 April 14, 2022
 
