@@ -114,7 +114,7 @@ Check out [Introducing inert](/articles/inert/) for more details.
 ## Navigation API {: #navigation-api }
 
 Many web apps depend on the ability to update the URL without a page
-navigation. Today, we use the [history API][mdn-history], but it's clunky and
+navigation. Today, we use the [History API][mdn-history], but it's clunky and
 doesn't always work as expected. Rather than trying to patch the History API's
 rough edges, the Navigation API completely overhauls this space.
 
