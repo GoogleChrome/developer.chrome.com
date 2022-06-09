@@ -6,7 +6,7 @@ description: >
 subhead: >
   How to measure and optimize signed exchanges to get the most improvement out of them
 date: 2022-04-21
-updated: 2022-06-07
+updated: 2022-06-09
 authors:
   - twifkak
 tags:
