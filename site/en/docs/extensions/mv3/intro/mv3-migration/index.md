@@ -76,22 +76,28 @@ JavaScript file.
 
 ```json
 // Manifest V2
-
-"background": {
-  "scripts": [
-    "backgroundContextMenus.js",
-    "backgroundOauth.js"
-],
-  "persistent": false
+{
+  ...
+  "background": {
+    "scripts": [
+      "backgroundContextMenus.js",
+      "backgroundOauth.js"
+    ],
+    "persistent": false
+  },
+  ...
 }
 ```
 
 ```json
 // Manifest V3
-
-"background": {
-  "service_worker": "background.js",
-  "type": "module" //optional
+{
+  ...
+  "background": {
+    "service_worker": "background.js",
+    "type": "module" //optional
+  }
+  ...
 }
 ```
 
@@ -115,7 +121,9 @@ from other permissions.
   "http://www.blogger.com/",
 ],
 "optional_permissions": [
-  "unlimitedStorage"
+  "unlimitedStorage",
+  "*://*/*",
+
 ]
 ```
 
@@ -231,7 +239,7 @@ chrome.action.onClicked.addListener(tab => { … });
 ### Web-accessible resources  {: #web-accessible-resources }
 
 This change limits access to extension resources to specific sites/extensions. Instead of providing
-a list of files, you now provide a list of objects, each of which can map to a set of resources to a
+a list of files, you now provide an **array of objects**, each of which can map to a set of resources to a
 set of URLs or extension IDs:
 
 {% Columns %}
@@ -283,10 +291,10 @@ to update your code execution strategies when migrating to Manifest V3.
 
 ### Remotely hosted code restrictions  {: #remotely-hosted-code }
 
-_Remotely hosted code_ refers to any code that is not included in an extension's package as a
+_Remotely hosted code_ refers to any code that is **not** included in an extension's package as a
 loadable resource. For example, the following are considered remotely hosted code:
 
-- JavaScript files pulled from a remote server
+- JavaScript files pulled from the developer's server.
 - Any library hosted on a [CDN][mdn-cdn].
 - a code string passed into [`"eval()"`][mdn-eval] at runtime
 
@@ -354,113 +362,108 @@ manifest file. This API does not [trigger a permission warning][doc-perm-warn].
 }
 ```
 
-<web-tabs>
-  <web-tab title="Injecting a static file">
+#### Injecting a static file {: #cs-static-file}
 
-  Static file injection with `scripting.executeScript()` is almost identical to it used to work in
-  Tabs API. While the old method only took a single file, the new method now takes an array of
-  files.
+Static file injection with `scripting.executeScript()` is almost identical to it used to work in
+Tabs API. While the old method only took a single file, the new method now takes an array of files.
 
-  {% Columns %}
-  ```js
-  // Manifest V2
+{% Columns %}
+```js
+// Manifest V2
 
-  // background.js
-  chrome.tabs.executeScript({
-    file: 'content-script.js'
-  });
+// background.js
+chrome.tabs.executeScript({
+  file: 'content-script.js'
+});
 
-  // content-script.js
-  alert('File test alert');
-  ```
+// content-script.js
+alert('File test alert');
+```
 
-  ```js
-  // Manifest V3
+```js
+// Manifest V3
 
-  // background.js
-  async function getCurrentTab() {/* ... */}
-  let tab = await getCurrentTab();
+// background.js
+async function getCurrentTab() {/* ... */}
+let tab = await getCurrentTab();
 
-  chrome.scripting.executeScript({
-    target: {tabId: tab.id},
-    files: ['content-script.js']
-  });
+chrome.scripting.executeScript({
+  target: {tabId: tab.id},
+  files: ['content-script.js']
+});
 
-  // content-script.js
-  alert('File test alert');
+// content-script.js
+alert('File test alert');
 
-  ```
-  {% endColumns %}
+```
+{% endColumns %}
 
-  To include an external library, save the file locally and add it to the files array:
+To include an external library, save the file locally and add it to the files array:
 
-  ```js
-  ...
-  chrome.scripting.executeScript({
-    target: {tabId: tab.id},
-    files: ['jquery-min.js, content-script.js']
-  });
-  ...
-  ```
+```js
+// background.js
+...
+chrome.scripting.executeScript({
+  target: {tabId: tab.id},
+  files: ['jquery-min.js, content-script.js']
+});
+...
+```
 
-  </web-tab>
-  <web-tab title="Injecting a function">
-  
-  If you need more dynamism, the new `func` property allows you to inject a function as a content
-  script and pass variables using the `args` property. Note that the function is not run as if it
-  was located within the content script; rather, its source is sent to the target tab and it is run
-  there.
+#### Injecting a function {: #cs-func } 
 
-  {% Columns %}
-  ```js
-  // Manifest V2
+If you need more dynamism, the new `func` property allows you to inject a function as a content
+script and pass variables using the `args` property. Note that the function is not run as if it
+was located within the content script; rather, its source is sent to the target tab and it is run
+there.
 
-  // background.js
-  let name = 'World!';
-  chrome.tabs.executeScript({
-    code: `alert('Hello, ${name}!')`
-  });
-  ```
+{% Columns %}
+```js
+// Manifest V2
 
-  ```js
-  // Manifest V3
+// background.js
+let name = 'World!';
+chrome.tabs.executeScript({
+  code: `alert('Hello, ${name}!')`
+});
+```
 
-  // background.js
-  async function getCurrentTab() {/* ... */}
-  let tab = await getCurrentTab();
+```js
+// Manifest V3
 
-  function showAlert(givenName) {
-    alert(`Hello, ${givenName}`);
-  }
+// background.js
+async function getCurrentTab() {/* ... */}
+let tab = await getCurrentTab();
 
-  let name = 'World';
-  chrome.scripting.executeScript({
-    target: {tabId: tab.id},
-    func: showAlert,
-    args: [name],
-  });
+function showAlert(givenName) {
+  alert(`Hello, ${givenName}`);
+}
 
-  ```
-  {% endColumns %}
+let name = 'World';
+chrome.scripting.executeScript({
+  target: {tabId: tab.id},
+  func: showAlert,
+  args: [name],
+});
 
-  </web-tab>
-</web-tabs>
+```
+{% endColumns %}
 
 A functional version of the Manifest V3 snippets in this section can be found in the
 [chrome-extensions-samples][github-samples-content] repository. See the [Tabs API
 examples][api-tabs-example] for an implementation of `getCurrentTab()`.
 
-## Background service workers  {: #background-service-workers }
+## Service workers  {: #background-service-workers }
 
-Background pages in Manifest V2 are replaced by [service workers][dev-google-sw] in Manifest V3:
+Background pages in Manifest V2 are replaced by [service workers][dev-google-sw] in Manifest V3;
 this is a foundational change that affects most extensions. The following are some notable
 differences:
 
-| MV2 - Background page       | MV3 - Service worker                                  |
-|-----------------------------|-------------------------------------------------------|
-| Can use a persistent page.  | Terminates when not in use and restarted when needed. |
-| Has access to the DOM.      | Doesn't have access to the DOM.                       |
-| Can use `XMLHttpRequest()`. | Must use [fetch()][mdn-fetch] to make requests.       |
+| MV2 - Background page       | MV3 - Service worker                            |
+|-----------------------------|-------------------------------------------------|
+| Can use a persistent page.  | Terminates when not in use.                     |
+| Has access to the DOM.      | Doesn't have access to the DOM.                 |
+| Can use `XMLHttpRequest()`. | Must use [fetch()][mdn-fetch] to make requests. |
 
 See [Migrating from Background Pages to Service Workers][doc-background-to-worker] to explore how to
 adapt to these and other challenges.
@@ -490,12 +493,6 @@ Request][api-declarativenetrequest] for network request modification. Here used 
 public means any extension published to the Chrome Web Store except those deployed to a given domain
 or to trusted testers. 
 
-{% Aside 'caution' %}
-
-Request redirects and header modifications **do** require the user to grant host permissions.
-
-{% endAside %}
-
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
 
 Instead of reading the request and programmatically altering it, your extension specifies a number
@@ -506,14 +503,6 @@ reference documentation for a more detailed description of rules
 
 This feature allows content blockers and other request-modifying extensions to implement their use
 cases without requiring host permissions, and without needing to read the actual requests.
-
-{% Aside %}
-
-In order to aid with the migration process, the declarativeNetRequest API is available for use in
-Manifest V2 extensions as of Chrome 84.
-
-{% endAside %}
-
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
 
