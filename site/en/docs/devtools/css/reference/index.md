@@ -481,35 +481,22 @@ Here's a description of each of the UI elements of the **Color Picker**:
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
 
-#### Sample a color (anywhere) with the Eyedropper {: #eyedropper }
+#### Sample a color anywhere with the Eyedropper {: #eyedropper }
 
 When you open the **Color Picker**, the **Eyedropper**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
 
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and, with a corresponding experiment enabled, from anywhere on the screen:
+The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
 
-- Pick a color from the page:
+To pick a color from anywhere on the screen:
 
-    1.  Hover over the target color in the viewport.
-    1.  Click to confirm.
+1.  Hover over the target color.
+1.  Click to confirm.
 
-        {% Img src="image/admin/7g1d1iGpJgm98vIHA6pA.png", alt="Using the Eyedropper on the page.", width="800", height="529" %}
+    <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
 
-    The **Color Picker** shows a current color value of `#212121`, which is close to black. This color changes to the blue that's highlighted in the viewport once you click the blue.
-
-- (Experimental) Pick a color from anywhere on the screen:
-
-    {% Aside %}
-    To enable this experimental feature, check **Enable color picking outside the browser window** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
-    {% endAside %}
-
-    1. Hover over the target color on your screen.
-    1. Click to confirm.
-
-       <div class="elevation--2" style="margin-top: 20px; margin-bottom: 20px;">
-       {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
-
-    The **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to the pink from outside the browser window once you click the pink.
+In the example above, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click it.
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
