@@ -40,12 +40,19 @@ tabs.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CUmjkDySI6MMzgEjukxi.png", alt="The button for opening Drawer tabs.", width="800", height="485" %}
 
 
-## Reorder panels and tabs {: #reorder }
+## Reorder panels, tabs, and panes {: #reorder }
 
-Click and drag a panel / tab left or right to change its ordering. You can [move the panel / tab up and down](/blog/new-in-devtools-87/#moveable-tools) too by right click > **move to top** / **move to bottom**. Your custom tab order persists across DevTools sessions.
+To change ordering, you can click and drag left or right any of the following:
+
+- Panels at the top of DevTools
+- Panes in the **Elements** panel such as **Styles**, **Comnputed**, **Layout**, etc.
+- **Drawer** tabs
+
+Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this: right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/TrzgaUT4vNk1ToIDTnKv.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
+Your custom tab order persists across DevTools sessions.
 
 ## Change DevTools placement {: #placement }
 
