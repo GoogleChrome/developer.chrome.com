@@ -113,7 +113,7 @@ Click on an insight (e.g. Rendering block request) to understand it further in t
 
 ## View Web Vitals performance metrics {: #vitals }
 
-[Web Vitals](https://web.dev/vitals/) is is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
+[Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
 
 You can view these metrics on the **Timeline** and **Insights** pane.
 
