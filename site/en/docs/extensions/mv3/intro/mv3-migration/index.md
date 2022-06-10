@@ -38,10 +38,14 @@ For a fuller description of these changes, see the [Manifest V3 Overview][mv3-ov
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
 To use the features of Manifest V3, you need to update your [manifest file][doc-manifest].
-Naturally, you'll change the manifest version to "3", but there are other things you need to change
-in the manifest file: the [service worker][section-man-sw], [host permissions][section-host],
-[content security policy][section-csp], [action declarations][section-action], and [web-accessible
-resources][section-war].
+Naturally, you'll need to change the manifest version, but there are other changes that will require
+manifest updates. Each of these is detailed further on in this document.
+
+- [service worker][section-man-sw]
+- [host permissions][section-host]
+- [content security policy][section-csp]
+- [action declarations][section-action]
+- [web-accessible resources][section-war]
 
 ### Manifest version  {: #manifest-version }
 
@@ -128,7 +132,7 @@ from other permissions.
   "http://www.blogger.com/",
 ],
 "optional_host_permissions": [
-    "https://*/*",
+  "*://*/*",
 ]
 
 ```
@@ -236,7 +240,7 @@ set of URLs or extension IDs:
 // Manifest V2
 
 "web_accessible_resources": [
-  RESOURCE_PATHSA
+  RESOURCE_PATHS
 ]
 ```
 
@@ -262,7 +266,7 @@ Replace the following:
 - <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
   extension.
 
-Previously, the list of web accessible resources applied to all websites and extensions, which
+Previously, the list of web accessible resources applied to all websites and extensions. This
 created opportunities for fingerprinting or unintentional resource access. The updated API lets
 extensions more tightly control what other sites or extensions can access extension resources. 
 
@@ -277,7 +281,7 @@ Many extensions are unaffected by this change. However, if your Manifest V2 exte
 remotely hosted scripts, injects code strings into pages, or evals strings at runtime, you'll need
 to update your code execution strategies when migrating to Manifest V3.
 
-### Remotely hosted code  {: #remotely-hosted-code }
+### Remotely hosted code restrictions  {: #remotely-hosted-code }
 
 _Remotely hosted code_ refers to any code that is not included in an extension's package as a
 loadable resource. For example, the following are considered remotely hosted code:
@@ -288,7 +292,7 @@ loadable resource. For example, the following are considered remotely hosted cod
 
 In Manifest V3, all of your extension's logic must be included in the extension. You can no longer
 load and execute a remotely hosted file. A number of alternative approaches are available, depending
-on your use case and the reason for remote hosting. Here's a few approaches are:
+on your use case and the reason for remote hosting. Here are approaches to consider:
 
 Configuration-driven features and logic
 : In this approach, your extension loads a remote
@@ -470,19 +474,21 @@ workers as of Chrome 87.
 
 ## Modifying network requests  {: #modifying-network-requests }
 
-There is a new [declarativeNetRequest][api-declarativenetrequest] for network request modification,
-which provides an alternative for much of the [webRequest][api-webrequest] API's functionality.
+Extensions that modify network requests will need to transition from the blocking version of the
+[Web Request API][api-webrequest] to the new [Declarative Net Request
+API][api-declarativenetrequest]. This new API was designed to work well with the event-based
+execution model of service workers and to maximize an extension's ability to block network requests
+without requiring the extension to have permissions.
 
-### When can you use blocking webRequest?  {: #when-use-blocking-webrequest }
+### Can Manifest V3 extensions use blocking Web Request?  {: #when-use-blocking-webrequest }
 
-The blocking version of the [webRequest][api-webrequest] API still exists in Manifest V3 but its use
-is restricted to force-installed extensions only. See Chrome Enterprise policies:
+The blocking version of the [Web Request API][api-webrequest] exists in Manifest V3, but it can only be used by extensions that are force-installed using Chrome's Enterprise Policies: 
 [ExtensionSettings][enterprise-settings], [ExtensionInstallForcelist][enterprise-force-list].
 
-All other extensions must now use [declarativeNetRequest][api-declarativenetrequest] for network
-request modification. This moves the actual modification of the network request into the Chrome
-browser: the extension no longer can read the actual network request, and in most cases needs no
-host permissions.
+Extensions meant to be used by the general public must now use [Declarative Net
+Request][api-declarativenetrequest] for network request modification. Here used by the general
+public means any extension published to the Chrome Web Store except those deployed to a given domain
+or to trusted testers. 
 
 {% Aside 'caution' %}
 
@@ -493,9 +499,10 @@ Request redirects and header modifications **do** require the user to grant host
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
 
 Instead of reading the request and programmatically altering it, your extension specifies a number
-of [rules][api-declarative-rules], which map a set of conditions to corresponding actions. See the
-[declarativeNetRequest][api-declarativenetrequest] reference documentation for a more detailed
-description of rules.
+of [rules][api-declarative-rules]. Each rule contains a set of actions to perform when a given set
+of conditions are matched. For example, you could define a rule that removes "cookie" headers when a
+request is sent to a specific domain. See the [declarativeNetRequest][api-declarativenetrequest]
+reference documentation for a more detailed description of rules
 
 This feature allows content blockers and other request-modifying extensions to implement their use
 cases without requiring host permissions, and without needing to read the actual requests.
@@ -515,15 +522,15 @@ do.
 
 {% Aside 'caution' %}
 
-Host permissions are still required if the extension wants to *redirect* a request or modify headers
-on it. The `declarativeNetRequestWithHostAccess` permission always requires host permissions to the
-request URL and initiator to act on a request.
+Host permissions are still required if the extension wants to *redirect* a request or modify its
+headers. The `declarativeNetRequestWithHostAccess` permission always requires host permissions to
+the request URL and initiator to act on a request.
 
 {% endAside %}
 
 When extensions require host permissions for these use cases, we recommend a "tiered" permissions
 strategy. This means implementing the extension's core functionality without using these
-permissions; putting the more advanced use cases behind an `"optional_host_permission"`.
+permissions; putting the more advanced use cases behind an `"optional_host_permissions"` pattern.
 
 This approach allows privacy-conscious users to withhold those permissions and still use much of the
 extension's functionality. This means that developers can implement many common use cases, such as
@@ -532,7 +539,7 @@ content-blocking functionality, without requiring any host permissions.
 ## Sunset for deprecated APIs  {: #sunset-deprecated-apis }
 
 There are a number of APIs that have long been deprecated. Manifest V3 finally removes support for
-the following deprecated APIs:
+the following deprecated methods and properties:
 
 *   chrome.extension.getExtensionTabs()
 *   chrome.extension.getURL()
