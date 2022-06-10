@@ -17,7 +17,7 @@ authenticators.
 
 ## Open the WebAuthn tab {: #open_the_webauthn_tab }
 
-1.  Visit a page that uses WebAuthn, such as our demo page here - [try-webauthn.appspot.com][1]
+1.  Visit a page that uses WebAuthn, such as our [demo page][1]
     (please login to access the page).
 2.  [Open DevTools][2].
 3.  Click **More Options** {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="6", height="26" %} > **More
@@ -46,8 +46,8 @@ credential is registered to the authenticator.
 
 ### Register a new credential {: #register_a_new_credential }
 
-To register a new credential, you need to have a web page that uses WebAuthn, for example our demo
-page here - [webauthndemo.appspot.com/][3].
+To register a new credential, you need to have a web page that uses WebAuthn, for example our [demo
+page][1].
 
 1.  On the demo page, click on **Register new credential** to register a new credential.
 2.  A new credential is now added to the **Credentials** table in the WebAuthn tab.
@@ -88,6 +88,5 @@ To remove a virtual authenticator, click the **Remove** button of the authentica
 
 {% Img src="image/admin/QfQ84aImd5DkQNnT8VlI.png", alt="Remove authenticator", width="800", height="503" %}
 
-[1]: try-webauthn.appspot.com
+[1]: https://try-webauthn.appspot.com
 [2]: /docs/devtools/open/
-[3]: try-webauthn.appspot.com
