@@ -7,13 +7,17 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2022-06-08
+updated: 2022-06-10
 authors:
   - mihajlija
 tags:
   - cookies
   - privacy  
 ---
+
+## Changes
+ 
+- **June 2022**:  Based on feedback, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute. This allows subdomains of a third-party site to access cookies within a partition.
 
 ## Implementation status
 
@@ -143,7 +147,7 @@ Sites from the same First-Party Set will have the same partition key—the owner
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/` and without the `Domain` attribute. Since `Domain` cookies can be shared between different third-party subdomains within a partition, disallowing it makes partitioned cookies as close to being [origin-bound](docs/privacy-sandbox/glossary/#origin) as possible; and aligns cookies closer to the [Same-Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
+Partitioned cookies must be set with `Secure` and `Path=/`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 
