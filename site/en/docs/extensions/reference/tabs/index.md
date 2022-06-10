@@ -8,7 +8,7 @@ extra_permissions_html:
 
 ### No permission required {: #no-perm}
 
-You can use most Tabs API methods and events without declaring any permissions. The following are a some common examples:
+You can use most Tabs API methods and events without declaring any permissions. The following are some common examples:
 
 - Opening a new tab using `tabs.create()`.
 - Moving a tab using `tabs.move()`.
@@ -81,14 +81,8 @@ The following sections demonstrate several common use cases for the Tabs API.
 A common pattern for extensions is to open an onboarding page in a new tab when the extension is
 installed. The following example shows how to do this.
 
-{% Aside %}
-
-Content scripts cannot use `chrome.tabs.create()`.
-
-{% endAside %}
-
 ```js
-//// background.js
+// background.js
 
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
@@ -99,6 +93,12 @@ chrome.runtime.onInstalled.addListener((reason) => {
 });
 ```
 
+{% Aside 'success' %}
+
+For this example, you do not need to request any [permissions][section-manifest].
+
+{% endAside %}
+
 ### Get the current tab
 
 This example demonstrates how the background script can retrieve the active tab from the
@@ -108,16 +108,16 @@ can usually be thought of as the user's current tab.
 <web-tabs>
   <web-tab title="Manifest V3 (promise)">
 
-```js
+  ```js
   // background.js
 
-async function getCurrentTab() {
-  let queryOptions = { active: true, lastFocusedWindow: true };
-  // `tab` will either be a `tabs.Tab` instance or `undefined`.
-  let [tab] = await chrome.tabs.query(queryOptions);
-  return tab;
-}
-```
+  async function getCurrentTab() {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    let [tab] = await chrome.tabs.query(queryOptions);
+    return tab;
+  }
+  ```
 
   </web-tab>
   <web-tab title="Manifest V2 (callback)">
@@ -154,17 +154,17 @@ This example shows how an extension can toggle the muted state for a given tab.
 <web-tabs>
   <web-tab  title="Manifest V3 (promise)">
   
-```js
+  ```js
   // background.js
 
-function toggleMuteState(tabId) {
-  chrome.tabs.get(tabId, async (tab) => {
-    let muted = !tab.mutedInfo.muted;
-    await chrome.tabs.update(tabId, { muted });
-    console.log(`Tab ${tab.id} is ${ muted ? 'muted' : 'unmuted' }`);
-  });
-}
-```
+  function toggleMuteState(tabId) {
+    chrome.tabs.get(tabId, async (tab) => {
+      let muted = !tab.mutedInfo.muted;
+      await chrome.tabs.update(tabId, { muted });
+      console.log(`Tab ${tab.id} is ${ muted ? 'muted' : 'unmuted' }`);
+    });
+  }
+  ```
 
 </web-tab>
 <web-tab  title="Manifest V2 (callback)">
@@ -235,10 +235,10 @@ function moveToFirstPositionMV2(activeInfo) {
         setTimeout(() => moveToFirstPositionMV3(activeInfo), 50);
       } else {
         console.error(error);
-    }
+      }
     } else {
       console.log('Success.');
-  }
+    }
   });
 }
 ```
@@ -256,8 +256,10 @@ For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][
 directory of the [chrome-extensions-samples][samples-repo] repository.
 
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [tab]: #type-Tab
+[section-manifest]: #manifest
