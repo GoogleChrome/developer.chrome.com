@@ -620,7 +620,7 @@ when you migrate to Manifest V3.
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
 [mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval
 [mdn-fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
-[mdn-service-workers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+[mdn-service-workers]: https://developer.mozilla.org/docs/Web/API/Service_Worker_API
 [mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist
 [mv3-declarative]: /docs/extensions/reference/declarativeNetRequest
 [mv3-network]: /docs/extensions/mv3/intro/mv3-overview#network-request-modification
