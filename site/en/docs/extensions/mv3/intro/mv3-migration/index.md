@@ -39,7 +39,7 @@ For a fuller description of these changes, see the [Manifest V3 Overview][mv3-ov
 
 To use the features of Manifest V3, you need to update your [manifest file][doc-manifest].
 Naturally, you'll need to change the manifest version, but there are other changes that will require
-manifest updates. Each of these is detailed further on in this document.
+manifest updates. Each of these is explained further on in this document.
 
 - [service worker][section-man-sw]
 - [host permissions][section-host]
@@ -49,7 +49,7 @@ manifest updates. Each of these is detailed further on in this document.
 
 ### Manifest version  {: #manifest-version }
 
-Changing the value of the manifest_version element is the key to upgrading your extension. This
+Changing the value of the `"manifest_version"` element is the key to upgrading your extension. This
 determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 {% Columns %}
@@ -68,7 +68,7 @@ determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 ### Service worker  {: #man-sw }
 
-In Manifest V3, background pages are now *service workers*. Register the service worker under the
+In Manifest V3, background pages are now [*service workers*](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Register the service worker under the
 `"background"` field. This field uses the `"service_worker"` key, which specifies a single
 JavaScript file.
 
@@ -198,14 +198,14 @@ the following values:
 
 CSP modifications for `sandbox` have no such new restrictions.
 
-In Chrome 102, Manifest V3 extensions can include `wasm-unsafe-eval` in the CSP to use WebAssembly
+Starting in Chrome 102, Manifest V3 extensions can include `wasm-unsafe-eval` in the CSP to use WebAssembly
 files bundled as part of the extension.
 
 ### Action API unification  {: #action-api-unification }
 
-In Manifest V2, there were two different APIs to implement actions: `browser_action` and
-`page_action`. These APIs filled distinct roles when they were introduced, but over time they've
-become redundant so in Manifest V3 we are unifying them into as single `action` API:
+In Manifest V2, there were two different APIs to implement actions: `"browser_action"` and
+`"page_action"`. These APIs filled distinct roles when they were introduced, but over time they've
+become redundant so in Manifest V3 we are unifying them into as single `"action"` API:
 
 {% Columns %}
 ```js
@@ -296,7 +296,7 @@ loadable resource. For example, the following are considered remotely hosted cod
 
 - JavaScript files pulled from the developer's server.
 - Any library hosted on a [CDN][mdn-cdn].
-- a code string passed into [`"eval()"`][mdn-eval] at runtime
+- a code string passed into [`eval()`][mdn-eval] at runtime
 
 In Manifest V3, all of your extension's logic must be included in the extension. You can no longer
 load and execute a remotely hosted file. A number of alternative approaches are available, depending
@@ -348,7 +348,7 @@ To include a library in a service worker, you have two options:
 In Manifest V2, it was possible to execute an arbitrary string of code using
 [`tabs.executeScript()`][api-tabs-executescript] and the `code` property on the options object.
 Manifest V3 does not allow arbitrary code execution. In order to adapt to this requirement,
-extension developers can use the [`scripting.executeScript()`][api-scripting-executescript] API to
+extension developers can use the [`scripting.executeScript()`][api-scripting-executescript] method to
 either inject a static file or a function.
 
 To use the [Scripting API][api-scripting], you need to include the `"scripting"` permission in your
@@ -463,14 +463,14 @@ differences:
 |-----------------------------|-------------------------------------------------|
 | Can use a persistent page.  | Terminates when not in use.                     |
 | Has access to the DOM.      | Doesn't have access to the DOM.                 |
-| Can use `XMLHttpRequest()`. | Must use [fetch()][mdn-fetch] to make requests. |
+| Can use `XMLHttpRequest()`. | Must use [`fetch()`][mdn-fetch] to make requests. |
 
 See [Migrating from Background Pages to Service Workers][doc-background-to-worker] to explore how to
 adapt to these and other challenges.
 
 {% Aside %}
 
-In order to aid with the migration process, Manifest V2 extensions can use background service
+To aid with the migration process, Manifest V2 extensions can use service
 workers as of Chrome 87.
 
 {% endAside %}
@@ -489,8 +489,8 @@ The blocking version of the [Web Request API][api-webrequest] exists in Manifest
 [ExtensionSettings][enterprise-settings], [ExtensionInstallForcelist][enterprise-force-list].
 
 Extensions meant to be used by the general public must now use [Declarative Net
-Request][api-declarativenetrequest] for network request modification. Here used by the general
-public means any extension published to the Chrome Web Store except those deployed to a given domain
+Request][api-declarativenetrequest] for network request modification. Here 'used by the general
+public' means any extension published to the Chrome Web Store except those deployed to a given domain
 or to trusted testers. 
 
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
@@ -506,7 +506,7 @@ cases without requiring host permissions, and without needing to read the actual
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
 
-Most use cases for declarativeNetRequest don't require any host permissions at all. However, some
+Most use cases for `declarativeNetRequest` don't require any host permissions at all. However, some
 do.
 
 {% Aside 'caution' %}
