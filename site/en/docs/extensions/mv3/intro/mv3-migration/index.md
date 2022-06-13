@@ -4,7 +4,7 @@ title: Migrating to Manifest V3
 subhead: 'Getting you headed in the right direction.'
 description: 'A high-level guide to how you can migrate your Manifest V2 extensions to Manifest V3.'
 date: 2020-11-09
-updated: 2022-06-02
+updated: 2022-06-13
 ---
 
 This guide provides developers with the information they need to begin migrating an extension from
@@ -68,7 +68,7 @@ determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 ### Service worker  {: #man-sw }
 
-In Manifest V3, background pages are now [*service workers*](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Register the service worker under the
+In Manifest V3, background pages are now [*service workers*][mdn-service-workers]. Register the service worker under the
 `"background"` field. This field uses the `"service_worker"` key, which specifies a single
 JavaScript file.
 
@@ -364,8 +364,8 @@ manifest file. This API does not [trigger a permission warning][doc-perm-warn].
 
 #### Injecting a static file {: #cs-static-file}
 
-Static file injection with `scripting.executeScript()` is almost identical to it used to work in
-Tabs API. While the old method only took a single file, the new method now takes an array of files.
+Static file injection with `scripting.executeScript()` is almost identical to how it used to work in
+the Tabs API. While the old method only took a single file, the new method now takes an array of files.
 
 {% Columns %}
 ```js
@@ -485,7 +485,7 @@ without requiring the extension to have permissions.
 
 ### Can Manifest V3 extensions use blocking Web Request?  {: #when-use-blocking-webrequest }
 
-The blocking version of the [Web Request API][api-webrequest] exists in Manifest V3, but it can only be used by extensions that are force-installed using Chrome's Enterprise Policies: 
+The blocking version of the [Web Request API][api-webrequest] exists in Manifest V3, but it can only be used by extensions that are force-installed using Chrome's enterprise policies: 
 [ExtensionSettings][enterprise-settings], [ExtensionInstallForcelist][enterprise-force-list].
 
 Extensions meant to be used by the general public must now use [Declarative Net
@@ -513,7 +513,7 @@ do.
 
 Host permissions are still required if the extension wants to *redirect* a request or modify its
 headers. The `declarativeNetRequestWithHostAccess` permission always requires host permissions to
-the request URL and initiator to act on a request.
+the request URL and it's initiator to act on a request.
 
 {% endAside %}
 
@@ -578,6 +578,7 @@ when you migrate to Manifest V3.
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
 [mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval
 [mdn-fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
+[mdn-service-workers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
 [mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist
 [mv3-declarative]: /docs/extensions/reference/declarativeNetRequest
 [mv3-network]: /docs/extensions/mv3/intro/mv3-overview#network-request-modification
