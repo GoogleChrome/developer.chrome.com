@@ -4,9 +4,11 @@ extra_permissions_html:
   The majority of the Tabs API can be used without declaring any permission. However, the <code>"tabs"</code> permission is required in order to populate the <code>url</code>, <code>pendingUrl</code>, <code>title</code>, and <code>favIconUrl</code> properties of <code><a href="#type-Tab">Tab</a></code>.
 ---
 
+## Overview
+
 ## Manifest {: #manifest }
 
-### No permission required {: #no-perm}
+### No permission required {: #no-perm }
 
 You can use most Tabs API methods and events without declaring any permissions. The following are some common examples:
 
@@ -14,16 +16,16 @@ You can use most Tabs API methods and events without declaring any permissions. 
 - Moving a tab using `tabs.move()`.
 - Reloading the tab using `tabs.reload()`.
 
-### Tabs permission or host permissions {: #perms}
+### Tabs permission or host permissions {: #perms }
 
 If your extension needs access to any of the following properties of [`tabs.Tab`][tab]: `url`, `pendingUrl`,
 `title`, or `favIconUrl`, use the following table to determine which
 permission to request:
 
-| Permission           | Use case                                                                       |
-|----------------------|--------------------------------------------------------------------------------|
-| **Host permissions** | If you are already requesting host permissions, and need access to those tabs. |
-| **Tabs**             | If you need access to the data of all tabs.                                    |
+| Permission           | Use case                                                                    |
+|----------------------|-----------------------------------------------------------------------------|
+| **Host permissions** | If you are requesting host permissions, and only need access to those tabs. |
+| **Tabs**             | If you need access to the data of all tabs.                                 |
 
 The following code shows how to declare each permission in the extension's [manifest][doc-manifest] and the [permission warnings][doc-perms] the user will see.
 
@@ -65,14 +67,11 @@ Permission warning
 
 {% endAside %}
 
-
   </web-tab>
-
 </web-tabs>
 
-NOTE: If you are already requesting a narrow host permission, like for example to google.com, but you also need access to all tabs URL, then you will need to request both.
 
-## Examples
+## Use cases {: #examples }
 
 The following sections demonstrate several common use cases for the Tabs API.
 
@@ -250,7 +249,7 @@ function moveToFirstPositionMV2(activeInfo) {
 While this example uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs
 while a drag may be in progress.
 
-### More samples
+### Extension examples {: #more-samples}
 
 For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
 directory of the [chrome-extensions-samples][samples-repo] repository.
