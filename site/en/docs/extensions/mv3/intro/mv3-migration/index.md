@@ -55,15 +55,22 @@ determines whether you're using the Manifest V2 or Manifest V3 feature set:
 {% Columns %}
 ```json
 // Manifest V2
-
-"manifest_version": 2
+{
+  ...
+  "manifest_version": 2
+  ...
+}
 ```
 
 ```json
 // Manifest V3
-
-"manifest_version": 3
+{
+  ...
+  "manifest_version": 3
+  ...
+}
 ```
+
 {% endColumns %}
 
 ### Service worker  {: #man-sw }
@@ -115,34 +122,40 @@ from other permissions.
 {% Columns %}
 ```js
 // Manifest V2
-"permissions": [
-  "tabs",
-  "bookmarks",
-  "http://www.blogger.com/",
-],
-"optional_permissions": [
-  "unlimitedStorage",
-  "*://*/*",
-
-]
+{
+  ...
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "http://www.blogger.com/",
+  ],
+  "optional_permissions": [
+    "unlimitedStorage",
+    "*://*/*",
+  ]
+  ...
+}
 ```
 
 ```js/8-13
 // Manifest V3
-"permissions": [
-  "tabs",
-  "bookmarks"
-],
-"optional_permissions": [
-  "unlimitedStorage"
-],
-"host_permissions": [
-  "http://www.blogger.com/",
-],
-"optional_host_permissions": [
-  "*://*/*",
-]
-
+{
+  ...
+  "permissions": [
+    "tabs",
+    "bookmarks"
+  ],
+  "optional_permissions": [
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "http://www.blogger.com/",
+  ],
+  "optional_host_permissions": [
+    "*://*/*",
+  ]
+  ...
+}
 ```
 {% endColumns %}
 
@@ -161,16 +174,22 @@ Manifest V3 it is an object with members representing alternative CSP contexts:
 {% Columns %}
 ```json
 // Manifest V2
-
-"content_security_policy": "..."
+{
+  ...
+  "content_security_policy": "..."
+  ...
+}
 ```
 
 ```json
 // Manifest V3
-
-"content_security_policy": {
-  "extension_pages": "...",
-  "sandbox": "..."
+{
+  ...
+  "content_security_policy": {
+    "extension_pages": "...",
+    "sandbox": "..."
+  }
+  ...
 }
 ```
 {% endColumns %}
@@ -213,13 +232,15 @@ become redundant so in Manifest V3 we are unifying them into as single `"action"
 
 // manifest.json
 {
-  "browser_action": { … },
-  "page_action": { … }
+  ...
+  "browser_action": { ... },
+  "page_action": { ... }
+  ...
 }
 
 // background.js
-chrome.browserAction.onClicked.addListener(tab => { … });
-chrome.pageAction.onClicked.addListener(tab => { … });
+chrome.browserAction.onClicked.addListener(tab => { ... });
+chrome.pageAction.onClicked.addListener(tab => { ... });
 ```
 
 ```js
@@ -227,12 +248,14 @@ chrome.pageAction.onClicked.addListener(tab => { … });
 
 // manifest.json
 {
-  "action": { … }
+  ...
+  "action": { ... }
+  ...
 }
 
 
 // background.js
-chrome.action.onClicked.addListener(tab => { … });
+chrome.action.onClicked.addListener(tab => { ... });
 ```
 {% endColumns %}
 
@@ -246,21 +269,27 @@ set of URLs or extension IDs:
 
 ```json
 // Manifest V2
-
-"web_accessible_resources": [
-  RESOURCE_PATHS
-]
+{
+  ...
+  "web_accessible_resources": [
+    RESOURCE_PATHS
+  ]
+  ...
+}
 ```
 
 ```json
 // Manifest V3
-
-"web_accessible_resources": [{
-  "resources": [RESOURCE_PATHS],
-  "matches": [MATCH_PATTERNS],
-  "extension_ids": [EXTENSION_IDS],
-  optional "use_dynamic_url": boolean
-}]
+{
+  ...
+  "web_accessible_resources": [{
+    "resources": [RESOURCE_PATHS],
+    "matches": [MATCH_PATTERNS],
+    "extension_ids": [EXTENSION_IDS],
+    "use_dynamic_url": boolean //optional
+  }]
+  ...
+}
 ```
 
 {% endColumns %}
@@ -286,7 +315,7 @@ Manifest V3 imposes new restrictions that limit an extension's ability to execut
 JavaScript through a combination of platform changes and policy limitations.
 
 Many extensions are unaffected by this change. However, if your Manifest V2 extension executes
-remotely hosted scripts, injects code strings into pages, or evals strings at runtime, you'll need
+remotely hosted scripts, injects code strings into pages, or eval strings at runtime, you'll need
 to update your code execution strategies when migrating to Manifest V3.
 
 ### Remotely hosted code restrictions  {: #remotely-hosted-code }
@@ -324,17 +353,20 @@ them locally. For example:
 // Manifest V2
 
 // popup.html
+...
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+...
 ```
 
 ```html
 // Manifest V3
 
 // popup.html
+...
 <script src="./react-dom.production.min.js"></script>
 <link href="./bootstrap.min.css" rel="stylesheet">
+...
 ```
 
 {% endColumns %}
@@ -372,18 +404,23 @@ the Tabs API. While the old method only took a single file, the new method now t
 // Manifest V2
 
 // background.js
+...
 chrome.tabs.executeScript({
   file: 'content-script.js'
 });
+...
 
 // content-script.js
+...
 alert('File test alert');
+...
 ```
 
 ```js
 // Manifest V3
 
 // background.js
+...
 async function getCurrentTab() {/* ... */}
 let tab = await getCurrentTab();
 
@@ -391,10 +428,12 @@ chrome.scripting.executeScript({
   target: {tabId: tab.id},
   files: ['content-script.js']
 });
+...
 
 // content-script.js
+...
 alert('File test alert');
-
+...
 ```
 {% endColumns %}
 
@@ -422,16 +461,19 @@ there.
 // Manifest V2
 
 // background.js
+...
 let name = 'World!';
 chrome.tabs.executeScript({
   code: `alert('Hello, ${name}!')`
 });
+...
 ```
 
 ```js
 // Manifest V3
 
 // background.js
+...
 async function getCurrentTab() {/* ... */}
 let tab = await getCurrentTab();
 
@@ -445,7 +487,7 @@ chrome.scripting.executeScript({
   func: showAlert,
   args: [name],
 });
-
+...
 ```
 {% endColumns %}
 
