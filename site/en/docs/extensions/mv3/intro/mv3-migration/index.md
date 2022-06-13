@@ -137,7 +137,7 @@ from other permissions.
 }
 ```
 
-```js/8-13
+```js/10-15
 // Manifest V3
 {
   ...
@@ -349,7 +349,7 @@ them locally. For example:
 
 {% Columns %}
 
-```html
+```js
 // Manifest V2
 
 // popup.html
@@ -359,7 +359,7 @@ them locally. For example:
 ...
 ```
 
-```html
+```js
 // Manifest V3
 
 // popup.html
