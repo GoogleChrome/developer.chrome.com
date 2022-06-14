@@ -89,8 +89,15 @@ window could fail.
 
 February 9, 2022
 
+{% Aside 'warning' %}
+
+This change did not fully address the underlying issue. We will share another update when we are
+confident that native messaging ports are behaving as intended.
+
+{% endAside %}
+
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open.
+service worker should keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
