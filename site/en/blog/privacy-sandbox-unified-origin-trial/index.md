@@ -200,7 +200,9 @@ before using it.
 
 ### Topics
 
-Check for the `browsingTopics()` function in the `document`, and the [permissions policy](/docs/privacy-sandbox/permissions-policy/#featurepolicyallowsfeaturefeature) for "browsing-topics".
+Check for the `browsingTopics()` function in the `document` and
+the Permissions Policy](/docs/privacy-sandbox/permissions-policy/#featurepolicyallowsfeaturefeature)
+for "browsing-topics".
 
 ```javascript
 if ('browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics')) {
@@ -210,7 +212,8 @@ if ('browsingTopics' in document && document.featurePolicy.allowsFeature('browsi
 
 ### FLEDGE
 
-If you want to join an ad interest group, check for the `joinAdInterestGroup` function in `navigator`, and the permissions policy for "join-ad-interest-group".
+If you want to join an ad interest group, check for the `joinAdInterestGroup` function in
+`navigator` and the Permissions Policy for "join-ad-interest-group".
 
 ```javascript
 if ('joinAdInterestGroup' in navigator && document.featurePolicy.allowsFeature('join-ad-interest-group')) {
@@ -228,7 +231,8 @@ if ('runAdAuction' in navigator && document.featurePolicy.allowsFeature('run-ad-
 
 ### Attribution Reporting
 
-Check for the `attributionReporting` object in the `window`, and the permissions policy for "attribution-reporting".
+Check for the `attributionReporting` object in the `window` and
+the Permissions Policy for "attribution-reporting".
 
 ```javascript
 if ('attributionReporting' in window && document.featurePolicy.allowsFeature('attribution-reporting)) {
