@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-05-26
+updated: 2022-06-15
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -21,6 +21,14 @@ May 26, 2022
 
 Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
 informs developers to accurately self-declare their trader/non-trader status.
+
+### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
+
+April 28, 2022
+
+Changing a Manifest V3 extension's keyboard shortcuts using the `chrome://extensions/shortcuts` page
+now applies the update immediately. Previously the extension would have to be reloaded before the
+change would take effect.
 
 ### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
 
