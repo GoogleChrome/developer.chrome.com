@@ -2,6 +2,20 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+
+<!-- ### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/ko/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/ko/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/ko/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/ko/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/ko/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/ko/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/ko/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/ko/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/ko/blog/new-in-devtools-103/#sourcemaps) -->
+
+
 ### Chrome 102 {: #chrome102 }
 
 * [미리보기 기능: 새로운 Performance insights 창](/ko/blog/new-in-devtools-102/#perf)

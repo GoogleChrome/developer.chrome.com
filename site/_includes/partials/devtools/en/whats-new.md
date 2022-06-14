@@ -2,6 +2,19 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+
+### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/blog/new-in-devtools-103/#sourcemaps)
+
 ### Chrome 102 {: #chrome102 }
 
 * [Preview feature: New Performance insights panel](/blog/new-in-devtools-102/#perf)
