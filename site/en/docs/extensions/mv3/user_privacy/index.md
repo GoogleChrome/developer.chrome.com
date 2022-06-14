@@ -108,9 +108,36 @@ All requested user data should be treated with care. Store and retrieve data in 
 a registered domain. Always use HTTPS to connect and avoid keeping sensitive user data in the client
 side of an extension as extension storage is not encrypted.
 
+## Saving data and incognito mode {: #data-incognito }
+
+Extensions can save data using the [storage][api-storage] API, or by making server requests that
+result in saving data. When the extension needs to save something, first consider if it's from an
+incognito window. By default, extensions don't run in incognito windows.
+
+_Incognito mode_ promises that the window will leave no tracks. When dealing with data from
+incognito windows, extensions should honor this promise. If an extension normally saves browsing
+history, don't save history from incognito windows. However, extensions can store setting
+preferences from any window, incognito or not.
+
+To detect whether a window is in incognito mode, check the `incognito` property of the relevant
+[`tabs.Tab`][api-tab] or [`windows.Window`][api-window] object.
+
+```js
+function saveTabData(tab) {
+  if (tab.incognito) {
+    return;
+  } else {
+    chrome.storage.local.set({data: tab.url});
+  }
+}
+```
+
 [1]: /docs/webstore/program_policies#userdata
 [2]: /docs/extensions/mv3/manifest
 [3]: #optional_permissions
 [4]: /docs/extensions/mv3/manifest/activeTab
 [5]: /docs/extensions/reference/permissions#manifest
 [6]: /webstore/user_data
+[api-tab]: /docs/extensions/reference/tabs/#type-Tab
+[api-window]: /docs/extensions/reference/windows/#type-Window
+[api-storage]: /docs/extensions/reference/storage

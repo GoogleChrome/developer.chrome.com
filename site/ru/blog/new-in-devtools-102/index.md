@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "Новинки DevTools (Chrome 101)"
+title: "Новинки DevTools (Chrome 102)"
 authors:
   - jecelynyeen
 date: 2022-04-12
@@ -17,6 +17,8 @@ tags:
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
 {% include 'partials/devtools/ru/banner.md' %}
+
+{% YouTube id='0V_ph7PA_aw' %}
 
 <!-- start: translation instructions -->
 <!-- + +1. Remove the "draft: true" tag above when submitting PR -->

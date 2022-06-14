@@ -7,14 +7,21 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2022-04-01
+updated: 2022-06-10
 authors:
   - mihajlija
+tags:
+  - cookies
+  - privacy  
 ---
+
+## Changes
+ 
+- **June 2022**:  Based on feedback, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute. This allows subdomains of a third-party site to access cookies within a partition.
 
 ## Implementation status
 
-- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 103
+- [Origin trial](/origintrials/#/view_trial/1239615797433729025) available from Chrome 100 to 105
 - [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U) 
 - [Chrome Platform Status](https://chromestatus.com/feature/5179189105786880)
 
@@ -140,7 +147,7 @@ Sites from the same First-Party Set will have the same partition key—the owner
 
 To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
 
-Partitioned cookies must be set with `Secure` and `Path=/` and without the `Domain` attribute. Since `Domain` cookies can be shared between different third-party subdomains within a partition, disallowing it makes partitioned cookies as close to being [origin-bound](docs/privacy-sandbox/glossary/#origin) as possible; and aligns cookies closer to the [Same-Origin Policy](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy).
+Partitioned cookies must be set with `Secure` and `Path=/`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 
@@ -152,7 +159,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## Try it out
 
-[CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 103. 
+[CHIPS origin trial](/blog/chips-origin-trial) is available from Chrome 100 to 105. 
 
 CHIPS is also available behind flags from Chrome 99. Check out the testing instructions and demo on [chromium.org](https://www.chromium.org/updates/chips/). 
 

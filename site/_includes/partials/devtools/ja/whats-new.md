@@ -2,6 +2,20 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+
+<!-- ### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/ja/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/ja/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/ja/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/ja/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/ja/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/ja/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/ja/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/ja/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/ja/blog/new-in-devtools-103/#sourcemaps) -->
+
+
 ### Chrome 102 {: #chrome102 }
 
 * [プレビュー機能: 新しいパフォーマンスインサイトパネル](/ja/blog/new-in-devtools-102/#perf)

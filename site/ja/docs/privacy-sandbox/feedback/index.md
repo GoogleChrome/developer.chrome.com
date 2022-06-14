@@ -220,7 +220,7 @@ Chrome チームの公開レポートに含められる場合があります。
 {% Aside %}
 
 [**フィードバック
-フォームを使ってフィードバックをお送りいただけます**](https://goo.gle/privacy-sandbox-feedback)。
+フォームを使ってフィードバックをお送りいただけます**](https://goo.gle/privacy-sandbox-feedback-ja)。
 
 {% endAside %}
 

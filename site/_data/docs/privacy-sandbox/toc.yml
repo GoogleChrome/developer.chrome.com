@@ -19,17 +19,22 @@
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
+      title: i18n.docs.privacy-sandbox.fenced-frame
     - url: /docs/privacy-sandbox/fedcm
+      title: i18n.docs.privacy-sandbox.fedcm
     - url: /docs/privacy-sandbox/permissions-policy
       title: i18n.docs.privacy-sandbox.permissions-policy
       description: i18n.docs.privacy-sandbox.permissions-policy-description
     - url: /docs/privacy-sandbox/shared-storage
+      title: i18n.docs.privacy-sandbox.shared-storage
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
     - url: /docs/privacy-sandbox/user-agent/snippets
     - url: /docs/privacy-sandbox/gnatcatcher
+      title: i18n.docs.privacy-sandbox.gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
+      title: i18n.docs.privacy-sandbox.privacy-budget
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics

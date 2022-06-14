@@ -32,7 +32,7 @@ custom CSP:
       "page1.html",
       "directory/page2.html"
     ]
-  ],
+  },
   ...
 }
 ```
