@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-06-14
 updated: 2022-06-14
-description: "Record double-click and right-click events, new options to measure user flow in  Lighthouse and more. "
+description: "Record double-click and right-click events, new options to measure user flow in  Lighthouse and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KDGrFqdw3eSDcZ00qt72.jpg'
 alt: ''
 tags:
@@ -24,7 +24,7 @@ The **Recorder** panel can now capture double-click and right-click events.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Capture double-click and right-click events in the Recorder panel", width="800", height="572" %}
 
-In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording]((/docs/devtools/recorder/#record) and try to perform the following steps: 
+In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps: 
 
 - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu
@@ -75,7 +75,7 @@ Chromium issue: [1313382](https://crbug.com/1313382)
 
 ### Confirm to delete a performance recording {: #delete }
 
-DevTools now shows a confirmation dialog before [deleting a performance recording](/docs/devtools/performance-insights/#delete). No worries if you misclick the delete button.
+DevTools now shows a confirmation dialog before [deleting a performance recording](/docs/devtools/performance-insights/#delete).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DaoCroAA60WmMLpuVU9P.png", alt="Confirm to delete a performance recording", width="800", height="549" %}
 
@@ -164,7 +164,7 @@ Here are a few fixes on sourcemaps to improve the overall debugging experience:
  
 {# https://chromium.googlesource.com/v8/v8/+/d821a6a373ecf086a2ef0d233ace7f3431e47732 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9d3d33e0bde8357d58a3c4981dd016e9b9c553f3 #}
-[# https://chromium.googlesource.com/devtools/devtools-frontend/+/04a58f2837c1ec9e78bd722bbe81e9cd7ab38727 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/04a58f2837c1ec9e78bd722bbe81e9cd7ab38727 #}
 
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
 
