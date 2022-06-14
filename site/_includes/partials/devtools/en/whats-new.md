@@ -2,6 +2,7 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+
 ### Chrome 103 {: #chrome103 }
 
 * [Capture double-click and right-click events in the Recorder panel](/blog/new-in-devtools-103/#recorder)
@@ -13,8 +14,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Support large blobs for virtual authenticators](/blog/new-in-devtools-103/#webauthn)
 * [New keyboard shortcuts in the Sources panel](/blog/new-in-devtools-103/#shortcuts)
 * [Sourcemaps improvements](/blog/new-in-devtools-103/#sourcemaps)
-* [](/blog/new-in-devtools-103/#)
-
 
 ### Chrome 102 {: #chrome102 }
 
