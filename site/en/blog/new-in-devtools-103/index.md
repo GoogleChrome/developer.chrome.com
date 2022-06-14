@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-06-14
 updated: 2022-06-14
-description: "Record double-click and right-click events, new options to measure user flow in  Lighthouse and more."
+description: "Record double-click and right-click events, new options to measure user flow in Lighthouse and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KDGrFqdw3eSDcZ00qt72.jpg'
 alt: ''
 tags:
