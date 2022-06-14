@@ -10,11 +10,11 @@ extra_permissions_html:
 
 ### No permission required {: #no-perm }
 
-You can use most Tabs API methods and events without declaring any permissions. The following are some common examples:
+You can use most Tabs API methods and events without declaring any permissions. The following are some examples:
 
-- Opening a new tab using `tabs.create()`.
-- Moving a tab using `tabs.move()`.
-- Reloading the tab using `tabs.reload()`.
+- Opening a new tab with `tabs.create()`.
+- Moving a tab with `tabs.move()`.
+- Reloading the tab with `tabs.reload()`.
 
 ### Tabs permission or host permissions {: #perms }
 
@@ -22,12 +22,12 @@ If your extension needs access to any of the following properties of [`tabs.Tab`
 `title`, or `favIconUrl`, use the following table to determine which
 permission to request:
 
-| Permission           | Use case                                                                    |
-|----------------------|-----------------------------------------------------------------------------|
-| **Host permissions** | If you are requesting host permissions, and only need access to those tabs. |
+| Permission           | Use case                                                       |
+|----------------------|----------------------------------------------------------------|
+| **Host permissions** | If you only need access to the tabs of the match pattern URLs. |
 | **Tabs**             | If you need access to the data of all tabs.                                 |
 
-The following code shows how to declare each permission in the extension's [manifest][doc-manifest] and the [permission warnings][doc-perms] the user will see.
+The following code shows how to declare each permission in the extension's [manifest][doc-manifest].
 
 <web-tabs>
   <web-tab title="Host Permissions (code)">
@@ -42,10 +42,6 @@ The following code shows how to declare each permission in the extension's [mani
     ...
   }
   ```
-
-Permission warning
-: Read and change all your data on the websites you visit
-
   </web-tab>
     <web-tab title="Tabs permission (code)">
    
@@ -60,16 +56,14 @@ Permission warning
   }
   ```
 
-{% Aside %}
-
-Permission warning
-: Read your browsing history
-
-{% endAside %}
-
   </web-tab>
 </web-tabs>
 
+{% Aside 'caution' %}
+
+The `cookies` permission triggers a [permission warning][doc-perms].
+
+{% endAside %}
 
 ## Use cases {: #examples }
 
