@@ -14,9 +14,11 @@ tags:
   - chrome-103
 ---
 
+<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zDmJK6jWRUal7SAiezJl.jpg -->
+
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zDmJK6jWRUal7SAiezJl.jpg -->
+{% YouTube id='LyMts4yfQu8' %}
 
 ## Capture double-click and right-click events in the Recorder panel {: #recorder }
 
