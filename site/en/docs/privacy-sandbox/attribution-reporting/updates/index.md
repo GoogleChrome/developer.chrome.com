@@ -36,8 +36,8 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
-*  February 7, 2022: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-22-updates/#header-trigger-redirect) added.
-*  January 27, 2022: [Initial API updates published](/blog/attribution-reporting-jan-22-updates).
+*  February 7, 2022: Documentation for the [header trigger redirect](/blog/attribution-reporting-january-2022-updates/#header-trigger-redirect) added.
+*  January 27, 2022: [Initial API updates published](/blog/attribution-reporting-january-2022-updates/).
 
 ## Attribution Reporting: all resources
 

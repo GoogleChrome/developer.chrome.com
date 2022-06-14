@@ -67,7 +67,7 @@ redirects:
   to: /docs/privacy-sandbox/attribution-reporting-experiment/
   
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
-  to: /docs/privacy-sandbox/attribution-reporting/updates/
+  to: /blog/attribution-reporting-january-2022-updates/
 
 # Removal of /overview pages
 
