@@ -4,7 +4,7 @@ description: >
   Learn about changes made to Attribution Reporting to reflect community feedback.
 layout: 'layouts/blog-post.njk'
 date: 2022-01-27
-updated: 2022-06-23
+updated: 2022-06-15
 authors:
   - maudn
   - alexandrawhite

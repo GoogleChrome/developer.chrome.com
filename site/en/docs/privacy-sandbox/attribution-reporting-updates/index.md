@@ -5,7 +5,7 @@ subhead: >
   Review the latest changes to the Attribution Reporting API.
 description: >
   Review the latest changes to the Attribution Reporting API.
-date: 2022-06-23
+date: 2022-06-15
 authors:
   - maudn
   - alexandrawhite
