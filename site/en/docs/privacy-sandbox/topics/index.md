@@ -430,7 +430,7 @@ is still under consideration.
 
 #### Where can I find the current classifier model?
 
-You can find the path to the model file in the "Classifier" tab of `chrome://topics-internals/` page. The top 10k domains currently used are in the `override_list.pb.gz` file found in the same directory as the model above. The domain to topics associations in the list are utilized by the API in lieu of the output of the model itself.
+Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at`chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
 
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 
