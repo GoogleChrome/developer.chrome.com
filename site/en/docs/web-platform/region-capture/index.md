@@ -143,7 +143,7 @@ Region Capture can be used to limit what information is sent to remote participa
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/XLZZK696L6YS2pqvJWJV.png", alt="Screenshot of a browser window containing slides and speaker notes.", width="800", height="490" %}
   <figcaption>
-    A web app containing slides and speaker notes. Sharing the notes remotely is highly undesirable. Cue Region Capture.
+    A web app containing slides and speaker notes.<br/>Sharing the notes remotely is highly undesirable. Cue Region Capture.
   </figcaption>
 </figure>
 
