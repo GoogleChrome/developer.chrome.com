@@ -38,7 +38,7 @@ You define a `CropTarget` in your web app by calling `CropTarget.fromElement()` 
 
 ```js
 // In the main web app, associate mainContentArea with a new CropTarget
-const mainContentArea = document.getElementById("mainContentArea");
+const mainContentArea = document.querySelector("#mainContentArea");
 const cropTarget = await CropTarget.fromElement(mainContentArea);
 ```
 
@@ -46,8 +46,8 @@ You pass the `CropTarget` to the video conferencing web app.
 
 ```js
 // Send the CropTarget to the video conferencing web app.
-const videoConferenceIframe = document.getElementById("videoConferenceIframe");
-videoConferenceIframe.contentWindow.postMessage(cropTarget);
+const iframe = document.querySelector("#videoConferenceIframe");
+iframe.contentWindow.postMessage(cropTarget);
 ```
 
 The video conferencing web app asks the browser to crop the track to the area defined by `CropTarget` by calling `cropTo()` on the self-capture video track with the crop target received from the main web app.
