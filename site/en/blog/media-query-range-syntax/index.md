@@ -56,7 +56,7 @@ This syntax has the potential to streamline queries, in particular when testing 
 
 ```css
 @media (min-width: 400px) and (max-width: 600px) {
-
+  // Styles for viewports between 400px and 600px.
 }
 ```
 
@@ -64,7 +64,7 @@ This can be rewritten in the new syntax as:
 
 ```css
 @media (400px <= width <= 600px )  {
-
+  // Styles for viewports between 400px and 600px.
 }
 ```
 
