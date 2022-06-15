@@ -267,7 +267,9 @@ policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as w
 
 ### What's the security benefit?
 
-By doing this, a script with top-level access allows the frames it adds itself to use Attribution Reporting. Only a third-party script that is trusted by the site should be given top-level access, so this isn't an issue.
+By doing this, a script with top-level access allows the frames it adds itself
+to use Attribution Reporting. Only a third-party script that is trusted by the
+site should be given top-level access, so this isn't an issue.
 
 The main security advantage of the policy lies somewhere else: frames that were
 added without a top-level script shouldn't be trusted by default to register
@@ -322,7 +324,8 @@ Adtech-defined code is then executed within a worklet to define contributions, n
 ad-side and conversion-side data.
 
 These contributions (raw reports) are sent encrypted to an adtech server, and
-then over to aggregation services that will compute aggregate reports in a [private](#privacy) way.
+then over to aggregation services that will compute aggregate reports in a
+[privacy-preserving](#privacy) way.
 
 Note that aggregate reports are not be delayed to the same extent as event-level reports.
 
@@ -382,8 +385,8 @@ aggregate reports.
 {% Details %}
 {% DetailsSummary 'h3' %}
 In detail: event-level reports and privacy {% endDetailsSummary %}
-Event-level reports provide conversion insights without tracking users across sites, by following
-the following privacy mechanisms:
+Event-level reports provide conversion insights without tracking users across
+sites, by following the following privacy mechanisms:
 - No cross-site identifier is used and no detailed cross-site browsing activity leaves the device.
 Event-level reports associate 64 bits of information on the ad side (`news.example`) with only 1
 bit or 3 bits on the conversion side (`shop.example`). 64 bits **are enough information to be

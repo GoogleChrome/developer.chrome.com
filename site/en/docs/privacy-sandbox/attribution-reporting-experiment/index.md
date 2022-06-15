@@ -71,14 +71,14 @@ your feedback is essential.
 Like other Privacy Sandbox proposals, this API is documented and discussed publicly on GitHub. 
 [Read this proposal](https://github.com/WICG/conversion-measurement-api/).
 
-- Join the conversation on [existing
-  issues](https://github.com/WICG/conversion-measurement-api/issues).
-- [Open a new issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask a
-  question, propose a feature, or discuss a use case. Unsure how to formulate your issue? [Review
-  this example](https://github.com/WICG/conversion-measurement-api/issues/147).
-- [Join the bi-weekly meetings](https://github.com/WICG/conversion-measurement-api/issues/80) (every
-  second week). Everyone is welcome to join&mdash;to participate, first make sure to [join the
-  WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
+*  Join the conversation on [existing  issues](https://github.com/WICG/conversion-measurement-api/issues).
+*  [Open a new Issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask
+   a question, propose a feature, or discuss a use case. Unsure how to
+   formulate your issue? [Review this example](https://github.com/WICG/conversion-measurement-api/issues/147).
+*  [Join the bi-weekly meetings](https://github.com/WICG/conversion-measurement-api/issues/80) (every
+   second week). Everyone is welcome to join. To participate, first you must
+   [join the WICG](https://www.w3.org/community/wicg/). You can actively
+   participate or just listen in!
 
 ### Discuss related topics
 
@@ -91,11 +91,9 @@ Like other Privacy Sandbox proposals, this API is documented and discussed publi
 
 ## Get updates
 
-- To be notified of status changes in the API, join the [mailing list for
-  developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-- To closely follow all ongoing discussions on the API, click the **Watch** button on the [proposal
-  page on GitHub](https://github.com/WICG/conversion-measurement-api). This requires you to have or
-  [create a GitHub
-  account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
-- To get overall updates on the Privacy Sandbox, subscribe to the RSS feed [Progress in the Privacy
-  Sandbox](/tags/progress-in-the-privacy-sandbox/).
+*  To be notified of status changes in the API, join the [mailing list for developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+*  To closely follow all ongoing discussions on the API, click the **Watch**
+   button on the [GitHub proposal](https://github.com/WICG/conversion-measurement-api).
+   This requires you to have or [create a GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+*  To get overall updates on the Privacy Sandbox, subscribe to the RSS feed
+   [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/).
