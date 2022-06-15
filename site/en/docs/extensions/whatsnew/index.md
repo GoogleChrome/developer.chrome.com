@@ -26,8 +26,8 @@ informs developers to accurately self-declare their trader/non-trader status.
 
 April 28, 2022
 
-Changing a Manifest V3 extension's keyboard shortcuts using the `chrome://extensions/shortcuts` page
-now applies the update immediately. Previously the extension would have to be reloaded before the
+When changing a Manifest V3 extension's keyboard shortcut on `chrome://extensions/shortcuts`,
+updates are now applied immediately. Previously the extension would have to be reloaded before the
 change would take effect.
 
 ### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
