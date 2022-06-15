@@ -123,7 +123,7 @@ await track.cropTo(null);
 
 ### Occluding and occluded content
 
-For Region Capture, only the position and size of the target matter, not the z-index. Pixels occluding the target will be captured. Occluded parts of the target will not be captured.
+For Region Capture, only the position and size of the target matter, not the [z-index]. Pixels occluding the target will be captured. Occluded parts of the target will not be captured.
 
 This is a corollary of Region Capture being essentially cropping. One alternative, which will be its own future API, is Element-level Capture; that is, capture only pixels associated with the target, regardless of occlusions. Such an API has a different set of security and privacy requirements than simple cropping.
 
@@ -218,6 +218,7 @@ Thanks to [Joe Medley] for reviewing this article.
 [clones]: https://developer.mozilla.org/docs/Web/API/MediaStreamTrack/clone
 [capture handle]: /blog/capture-handle/
 [`prefercurrenttab`]: https://wicg.github.io/prefer-current-tab/
+[z-index]: https://developer.mozilla.org/docs/Web/CSS/z-index
 [demo]: https://region-capture-demo.glitch.me/
 [check out the source code]: https://glitch.com/edit/#!/region-capture-demo?path=iframe.js
 [conditional focus]: https://wicg.github.io/conditional-focus
