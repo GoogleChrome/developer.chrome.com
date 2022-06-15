@@ -3,6 +3,9 @@ layout: 'layouts/doc-post.njk'
 title: WebGPU
 description: WebGPU enables high-performance 3D graphics and data-parallel computation on the web.
 subhead: WebGPU enables high-performance 3D graphics and data-parallel computation on the web.
+authors:
+  - beaufortfrancois
+  - cwallez
 date: 2021-08-26
 updated: 2022-03-23
 ---
