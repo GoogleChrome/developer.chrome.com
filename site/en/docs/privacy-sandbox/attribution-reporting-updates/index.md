@@ -36,8 +36,7 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
-*  **May 20, 2022**: Extended guidance on [feature detection](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.7yomtnn3mrs4)
-*  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](https://developer.chrome.com/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API.
+*  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API.
 *  **February 7, 2022**: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
 *  **January 27, 2022**: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:
    *  [API mechanism changes](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)
