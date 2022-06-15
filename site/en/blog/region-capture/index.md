@@ -209,15 +209,15 @@ Send a tweet to [@ChromiumDev] and let us know where and how you are using it.
 
 Thanks to [Joe Medley] for reviewing this article.
 
-[`Element`]: https://developer.mozilla.org/docs/Web/API/Element
+[`element`]: https://developer.mozilla.org/docs/Web/API/Element
 [bounding box]: https://developer.mozilla.org/docs/Glossary/bounding_box
 [serializable]: https://developer.mozilla.org/docs/Glossary/Serializable_object
-[`Window.postMessage()`]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
-[`BrowserCaptureMediaStreamTrack`]: https://w3c.github.io/mediacapture-region/#browser-capture-media-stream-track
-[`MediaStreamTrack`]: https://developer.mozilla.org/docs/Web/API/MediaStreamTrack
+[`window.postmessage()`]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
+[`browsercapturemediastreamtrack`]: https://w3c.github.io/mediacapture-region/#browser-capture-media-stream-track
+[`mediastreamtrack`]: https://developer.mozilla.org/docs/Web/API/MediaStreamTrack
 [clones]: https://developer.mozilla.org/docs/Web/API/MediaStreamTrack/clone
-[Capture Handle]: /blog/capture-handle/
-[`preferCurrentTab`]: https://wicg.github.io/prefer-current-tab/
+[capture handle]: /blog/capture-handle/
+[`prefercurrenttab`]: https://wicg.github.io/prefer-current-tab/
 [demo]: https://region-capture-demo.glitch.me/
 [check out the source code]: https://glitch.com/edit/#!/region-capture-demo?path=iframe.js
 [conditional focus]: https://wicg.github.io/conditional-focus
