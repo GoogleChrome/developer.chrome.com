@@ -1,6 +1,5 @@
 ---
 api: devtools.recorder
-title: chrome.devtools.recorder
 ---
 
 See [DevTools APIs summary][1] for general introduction to using Developer Tools APIs.
