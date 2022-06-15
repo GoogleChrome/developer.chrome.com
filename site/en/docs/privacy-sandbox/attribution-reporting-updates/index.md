@@ -36,15 +36,18 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
-*  February 7, 2022: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
-*  January 27, 2022: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:
+*  **May 20, 2022**: Extended guidance on [feature detection](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.7yomtnn3mrs4)
+*  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](https://developer.chrome.com/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API.
+*  **February 7, 2022**: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
+*  **January 27, 2022**: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:
    *  [API mechanism changes](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)
    *  New [features and measurements](/blog/attribution-reporting-jan-2022-updates/#new-features)
    *  [Privacy protection changes](/blog/attribution-reporting-jan-2022-updates/#privacy-changes)
 *  **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
 *  **Early 2021**: The API is renamed to "Attribution Reporting API".
 
-## Attribution Reporting: all resources
+## All resources
 
 *  Read the introduction to [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/).
 *  [Experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  [Read the API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit?usp=sharing)
