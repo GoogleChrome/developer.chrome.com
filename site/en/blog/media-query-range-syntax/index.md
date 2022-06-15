@@ -70,7 +70,7 @@ This can be rewritten in the new syntax as:
 
 The feature that you are testing, in this case `width`, goes between the two values.
 
-In addition to making media queries less verbose, the new syntax has the advantage of accuracy. The `min-` and `max-` queries are inclusive of the value being tested for, for example `min-width: 400px` tests for a width of 400px or greater. The new syntax allows you to be more explicit about what you mean and avoid the potential of clashing queries.
+In addition to making media queries less verbose, the new syntax has the advantage of accuracy. The `min-` and `max-` queries are inclusive of the specified values, for example `min-width: 400px` tests for a width of 400px or greater. The new syntax allows you to be more explicit about what you mean and avoid the potential of clashing queries.
 
 To use the new range syntax while accounting for browsers that have not yet implemented it, there is a [PostCSS plugin](https://github.com/postcss/postcss-media-minmax) that will rewrite the new syntax to the old in your stylesheets.
 
