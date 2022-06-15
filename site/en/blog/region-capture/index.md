@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Better Tab Sharing with Region Capture'
+title: 'Better tab sharing with Region Capture'
 description: >
  The web platform now ships with Region Capture, a performant and robust way for cropping a video track.
 authors:
@@ -13,7 +13,7 @@ tags:
   - chrome-104
 ---
 
-The web platform already allows a web app to capture a video track of the current tab. It now ships with Region Capture - a mechanism for cropping these video tracks. The web app designates a portion of the current tab as its area of interest, and the browser crops away all pixels outside that area.
+The web platform already allows a web app to capture a video track of the current tab. It now ships with Region Capture, a mechanism for cropping these video tracks. The web app designates a portion of the current tab as its area of interest, and the browser crops all pixels outside that area.
 
 Web apps could previously crop video tracks “manually”. That is, web apps could manipulate each and every single frame directly. This was neither robust nor performant. Region Capture addresses these shortcomings. The web app can now instruct the browser to do the work on its behalf.
 
@@ -22,9 +22,9 @@ Web apps could previously crop video tracks “manually”. That is, web apps co
 So you've created a website with Dynamic Content™. It's the best web app ever, and people just can't stop using it; often collaboratively. A possible next step is to embed virtual conferencing capabilities. You decide to go with that. You team up with an existing video conferencing service provider, embedding their web app as a cross-origin iframe. The video conferencing web app captures the current tab as a video track and transmits it to remote participants.
 
 <figure>
-  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/CbRfrQjZHbHQxpxV0dsz.png", alt="Screenshot of a browser window featuring a web app highlighting the main content area and cross-origin iframe.", width="800", height="449" %}
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/L87rANm3IfsVZiMHfbH2.png", alt="Screenshot of a browser window featuring a web app highlighting the main content area and cross-origin iframe.", width="800", height="568" %}
   <figcaption>
-    The main content area is in blue - the cross-origin iframe in red
+    The main content area is in blue and the cross-origin iframe is in red.
   </figcaption>
 </figure>
 
@@ -83,10 +83,10 @@ if ("CropTarget" in self && "fromElement" in CropTarget) {
 
 ### Deriving a CropTarget
 
-Let's focus on the Element called `mainContentArea`. To derive a `CropTarget` from it, call `CropTarget.fromElement(mainContentArea)`. The returned promise will be resolved with a new `CropTarget` object if successful. Otherwise it will be rejected if either:
+Let's focus on the Element called `mainContentArea`. To derive a `CropTarget` from it, call `CropTarget.fromElement(mainContentArea)`. The returned Promise will be resolved with a new `CropTarget` object if successful. Otherwise it will be rejected if either:
 
-- `mainContentArea`'s type is not supported. (At the time of writing, Chrome has only implemented support for `<div>` and iframes. As a workaround, put the element in a `<div>`.)
-- you have minted an unreasonable number of `CropTarget` objects.
+- The type for `mainContentArea` is not supported. (At the time of writing, Chrome has only implemented support for `<div>` and iframes. As a workaround, put the element in a `<div>`.)
+- You have minted an unreasonable number of `CropTarget` objects.
 
 ```js
 const mainContentArea = document.querySelector("#mainContentArea");
@@ -99,13 +99,13 @@ Unlike an `Element`, a `CropTarget` object is [serializable]. It can be passed t
 
 When tab-capturing, the video track is instantiated as a [`BrowserCaptureMediaStreamTrack`], which is a subclass of [`MediaStreamTrack`]. That subclass exposes `cropTo()`. Call `track.cropTo(cropTarget)` to start cropping to the contours of `mainContentArea` (the Element from which cropTarget was derived).
 
-If successful, the promise will be resolved when it can be guaranteed that all subsequent video frames will consist of the pixels that fall within `mainContentArea`'s bounding box.
+If successful, the Promise will be resolved when it can be guaranteed that all subsequent video frames will consist of the pixels that fall within the bounding box of the `mainContentArea`.
 
-If unsuccessful, the promise will be rejected. This will happen if:
-- the `CropTarget` was minted in another tab. (For now - stay tuned.)
-- the `CropTarget` was derived from an Element that no longer exists.
-- the track has [clones].
-- the current track is not a self-capture video track; see below.
+If unsuccessful, the Promise will be rejected. This will happen if:
+- The `CropTarget` was minted in another tab. (For now - stay tuned.)
+- The `CropTarget` was derived from an Element that no longer exists.
+- The track has [clones].
+- The current track is not a self-capture video track; see below.
 
 The `cropTo()` method is exposed on any tab-capture video track, and not just for self-capture. It is therefore advisable to check if the user selected the current tab, before attempting to crop the track. This can be accomplished using [Capture Handle]. It is also possible to ask the browser to nudge the user towards self-capture using [`preferCurrentTab`].
 
@@ -143,7 +143,7 @@ Region Capture can be used to limit what information is sent to remote participa
 <figure class="screenshot">
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5jSA4qEzUkKwLPgbPvda.png", alt="Screenshot of a browser window containing slides and speaker notes.", width="800", height="476" %}
   <figcaption>
-    Sharing the notes remotely is highly undesirable - cue Region Capture.
+    A web app containing slides and speaker notes. Note that sharing the notes remotely is highly undesirable. Cue Region Capture.
   </figcaption>
 </figure>
 
@@ -172,8 +172,8 @@ Here's a sneak peek of what to expect in the near future that will improve scree
 
 - Region Capture will support all Element types.
 - Region Capture will support captures of other tabs.
-- [Conditional Focus] will allow the capturing web app to instruct the browser to either switch focus to the captured display-surface, or to avoid such a focus change.
-- An Element-level Capture API will be provided.
+- [Conditional Focus] will allow the capturing web app to instruct the browser to either switch focus to the captured display surface, or to avoid such a focus change.
+- An Element-level Capture API might be provided.
 
 ## Feedback {: #feedback }
 
@@ -181,7 +181,7 @@ The Chrome team and the web standards community want to hear about your experien
 
 ### Tell us about the design
 
-Is there something about Region Capture that doesn't work like you expected? Or are there missing methods or properties that you need to implement your idea? Have a question or comment on the security model?
+Is there something about Region Capture that doesn't work as you expected? Or are there missing methods or properties that you need to implement your idea? Have a question or comment on the security model?
 
 * File a spec issue on the [GitHub repo][issues], or add your thoughts to an existing issue.
 
