@@ -45,7 +45,7 @@ Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-upda
 
 - **January 2022**: New functionality is added to the Attribution Reporting
   proposal. Read [Updates in January
-  2022](/blog/attribution-reporting-january-2022-updates/).
+  2022](/blog/attribution-reporting-jan-2022-updates/).
 - **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
 - **Early 2021**: The API is renamed to "Attribution Reporting API".
 
