@@ -15,10 +15,9 @@ tags:
 
 {% Aside %}
 This content was initially posted in the Attribution Reporting API
-documentation. We've decided to keep a [running list of
-updates](/docs/privacy-sandbox/attribution-reporting/updates/), which links out
-to dated blog posts, so you know what major and minor changes have happened
-recently.
+documentation. We're now keeping a [running list of
+updates](/docs/privacy-sandbox/attribution-reporting-updates/), with links
+out to more information.
 {% endAside %}
 
 The Attribution Reporting proposal has undergone a number of changes to address

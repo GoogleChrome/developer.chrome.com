@@ -24,8 +24,8 @@ Participation is welcome and encouraged. Learn about the ways you can participat
 
 ## Who is this article for?
 
-This article covers the basics of Attribution Reporting, and explains some underlying concepts, but doesn't go into
-much technical detail.
+This article covers the basics of Attribution Reporting, and explains some
+underlying concepts, but doesn't go into much technical detail.
 
 - If you work in **advertising or adtech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
   be useful.
@@ -41,7 +41,7 @@ much technical detail.
 
 ## Changes
 
-Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting/updates/)
+Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/)
 
 - **January 2022**: New functionality is added to the Attribution Reporting
   proposal. Read [Updates in January
