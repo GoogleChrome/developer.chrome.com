@@ -140,14 +140,14 @@ Region Capture allows a web app that's already observing all pixels in the tab, 
 
 Region Capture can be used to limit what information is sent to remote participants. For example, maybe you'd like to share some slides, but not your speaker notes.
 
-<figure class="screenshot">
-  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5jSA4qEzUkKwLPgbPvda.png", alt="Screenshot of a browser window containing slides and speaker notes.", width="800", height="476" %}
+<figure>
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/XLZZK696L6YS2pqvJWJV.png", alt="Screenshot of a browser window containing slides and speaker notes.", width="800", height="490" %}
   <figcaption>
-    A web app containing slides and speaker notes. Note that sharing the notes remotely is highly undesirable. Cue Region Capture.
+    A web app containing slides and speaker notes. Sharing the notes remotely is highly undesirable. Cue Region Capture.
   </figcaption>
 </figure>
 
-Note however that locally, Region Capture does not add any security guarantees. When handing a track off to another document, the receiving **document** can still uncrop the track and gain access to all of the captured tab's pixels.
+Note that locally, Region Capture does not add any security guarantees. When handing a track off to another document, the receiving **document** can still uncrop the track and gain access to all of the captured tab's pixels.
 
 Chrome draws a blue border around the edges of captured tabs. When cropping, Chrome generally draws the blue border around the cropped target.
 
