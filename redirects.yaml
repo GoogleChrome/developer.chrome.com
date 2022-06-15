@@ -66,6 +66,9 @@ redirects:
 - from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
   to: /docs/privacy-sandbox/attribution-reporting-experiment/
 
+- from: /blog/capture-handle/
+  to: /docs/web-platform/capture-handle/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/

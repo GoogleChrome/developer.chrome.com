@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/doc-post.njk'
 title: 'Better tab sharing with Region Capture'
 description: >
  The web platform now ships with Region Capture, a performant and robust way for cropping a video track.

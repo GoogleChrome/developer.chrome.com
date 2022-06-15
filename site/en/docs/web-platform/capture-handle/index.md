@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: 'layouts/doc-post.njk'
 title: 'Better tab sharing with Capture Handle'
 description: >
   The web platform now ships with Capture Handle, a mechanism that allows a capturing web app to ergonomically and confidently identify the captured web app, if the captured web app has opted-in.
