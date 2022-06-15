@@ -37,7 +37,12 @@ If you're new to this API or have not experimented with it yet, read the
 ## Changelog
 
 *  February 7, 2022: Documentation for the [header trigger redirect](/blog/attribution-reporting-january-2022-updates/#header-trigger-redirect) added.
-*  January 27, 2022: [Initial API updates published](/blog/attribution-reporting-january-2022-updates/).
+*  January 27, 2022: [Migration for API updates](/blog/attribution-reporting-january-2022-updates/) published, including:
+   *  [API mechanism changes](/blog/attribution-reporting-january-2022-updates/#mechanism-changes)
+   *  New [features and measurements](/blog/attribution-reporting-january-2022-updates/#new-features)
+   *  [Privacy protection changes](/blog/attribution-reporting-january-2022-updates/#privacy-changes)
+*  **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
+*  **Early 2021**: The API is renamed to "Attribution Reporting API".
 
 ## Attribution Reporting: all resources
 

@@ -41,10 +41,11 @@ much technical detail.
 
 ## Changes
 
-- **January 2022**: New functionality is added to the Attribution Reporting
-  proposal. See [Updates in January
-  2022](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/).
+Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting/updates/)
 
+- **January 2022**: New functionality is added to the Attribution Reporting
+  proposal. Read [Updates in January
+  2022](/blog/attribution-reporting-january-2022-updates/).
 - **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
 - **Early 2021**: The API is renamed to "Attribution Reporting API".
 
@@ -156,7 +157,7 @@ Both report types can be used simultaneously. They're complementary.
 
 ### Event-level reports
 
-**Event-level reports** associate an ad click or view with coarse conversion data.
+Event-level reports associate an ad click or view with coarse conversion data.
 
 <figure>
  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/8PZhfv4UXYxt2vTKRNI2.png",
@@ -180,8 +181,8 @@ Event-level reports are suited for:
 
 ### Summary reports (formerly aggregate reports)
 
-**Summary reports**, on the other hand, offer more detailed conversion data and more flexibility for
-joining click/view data and conversion data.
+Summary reports, on the other hand, offer more detailed conversion data and
+more flexibility for joining click/view data and conversion data.
 
 Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
