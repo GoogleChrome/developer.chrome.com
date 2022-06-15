@@ -45,7 +45,8 @@
   sections:
     - url: /docs/privacy-sandbox/attribution-reporting
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
-    - url: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
+      title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
+    - url: /docs/privacy-sandbox/attribution-reporting-updates
       title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
       title: i18n.docs.privacy-sandbox.attribution-reporting-summary

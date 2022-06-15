@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2021-05-18
-updated: 2022-06-06
+updated: 2022-06-15
 authors:
   - maudn
   - samdutton
@@ -24,8 +24,8 @@ Participation is welcome and encouraged. Learn about the ways you can participat
 
 ## Who is this article for?
 
-This article covers the basics of Attribution Reporting, and explains some underlying concepts, but doesn't go into
-much technical detail.
+This article covers the basics of Attribution Reporting, and explains some
+underlying concepts, but doesn't go into much technical detail.
 
 - If you work in **advertising or adtech**, [Use cases](#use-cases-and-features) and [How does Attribution Reporting work?](#how-does-the-attribution-reporting-api-work) should
   be useful.
@@ -41,12 +41,7 @@ much technical detail.
 
 ## Changes
 
-- **January 2022**: New functionality is added to the Attribution Reporting
-  proposal. See [Updates in January
-  2022](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/).
-
-- **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
-- **Early 2021**: The API is renamed to "Attribution Reporting API".
+Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/)
 
 ## What is the Attribution Reporting API?
 
@@ -67,7 +62,7 @@ This API enables advertisers and adtech providers to measure conversions in the 
 - Ads in a **first-party** context, such as ads on a social network or a search engine results page,
   or a publisher serving their own ads.
 
-## Who needs to know about the Attribution Reporting API?
+## Who needs to know about this API?
 
 - **Adtech platforms** such as [demand-side
   platforms](https://en.wikipedia.org/wiki/Demand-side_platform) (DSP) or [data management
@@ -156,7 +151,7 @@ Both report types can be used simultaneously. They're complementary.
 
 ### Event-level reports
 
-**Event-level reports** associate an ad click or view with coarse conversion data.
+Event-level reports associate an ad click or view with coarse conversion data.
 
 <figure>
  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/8PZhfv4UXYxt2vTKRNI2.png",
@@ -178,10 +173,10 @@ Event-level reports are suited for:
   analysis, by allowing you to understand patterns that can be used to identify spammy or invalid
   activity.
 
-### Summary reports (formerly aggregate reports)
+### Summary reports
 
-**Summary reports**, on the other hand, offer more detailed conversion data and more flexibility for
-joining click/view data and conversion data.
+Summary reports (formerly known as aggregate reports) offer more detailed
+conversion data and more flexibility for joining click/view data and conversion data.
 
 Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
@@ -191,27 +186,27 @@ Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandb
  <figcaption>Example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption>
 </figure>
 
-Summary reports are best suited for **reporting** use cases. These reports help answer questions such as
+Summary reports are best suited for **reporting** use cases. These reports help answer questions such as:
 _"What is my return on investment?"_.
+
 Usage of summary reports for **optimization**—for example, to optimize for a purchase value, which
-is not supported by event-level reports because the conversion data is too coarse—is an area of
+is not supported by event-level reports (because the conversion data is too coarse)—is an area of
 active research.
 
 ### Other features
 
-Other features proposed in this API include [app-to-web
-attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md) (see or
-click an ad in an app and convert on the web) and [cross-device
-attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) (see or
-click an ad on mobile and convert on desktop).
+Other features proposed in this API include: 
+*  [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
+   see or click an ad in an app and convert on the web.
+*  [Cross-device attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md):
+   see or click an ad on mobile and convert on desktop.
 
 {% Aside %}
 In a future without third-party cookies, this API would be combined with other privacy-preserving
-ads APIs in order to cover end-to-end use cases:
+ads APIs to cover end-to-end use cases:
 
 - Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see [Topics](/docs/privacy-sandbox/topics/)
-
 {% endAside %}
 
 ## Browser support
@@ -272,8 +267,14 @@ policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as w
 
 ### What's the security benefit?
 
-By doing this, a script with top-level access allows the frames it adds itself to use Attribution Reporting. This isn't an issue, because only a third-party script that is trusted by the site should be given top-level access anyway.
-The main security advantage of the policy lies somewhere else: frames that were not added via a top-level script should not be trusted by default to register sources or triggers (unless their embedder is already trusted). This is why the top-level site is required to explicitly enable the API for these iframes
+By doing this, a script with top-level access allows the frames it adds itself
+to use Attribution Reporting. Only a third-party script that is trusted by the
+site should be given top-level access, so this isn't an issue.
+
+The main security advantage of the policy lies somewhere else: frames that were
+added without a top-level script shouldn't be trusted by default to register
+sources or triggers (unless their embedder is already trusted). This is why the
+top-level site is required to explicitly enable the API for these iframes.
 
 {% endAside %}
 
@@ -302,10 +303,11 @@ conversion on an advertiser site.
 <figure>
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="ALT_TEXT_HERE", width="800", height="1024" %}
  <figcaption style="text-align:left;">Summary reports are generated as follows:<br>
-When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
-Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an adtech company, following a specific logic that is defined by the adtech.<br>
-The output of this process is an aggregatable report. Aggregatable reports are then encrypted by the browser and sent to the adtech server. From the adtech server, the aggregatable reports are sent to a service that aggregates them to produce a summary report.<br> Summary reports are then made available to the adtech.
-Note that summary reports are not delayed to the same extent as event-level reports.</figcaption>
+*  When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
+*  Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an adtech company, following a specific logic that is defined by the adtech. The output of this process is an aggregatable report.<br>
+*  Aggregatable reports are encrypted by the browser and sent to the adtech server. From the adtech server, the aggregatable reports are sent to the aggregation service to produce a summary report.<br>
+*  Summary reports are then made available to the adtech. Note that summary reports are not delayed to the same extent as event-level reports.
+</figcaption>
 </figure>
 
 {% Details %}
@@ -321,8 +323,9 @@ device—records this event, alongside the attribution configuration data that w
 Adtech-defined code is then executed within a worklet to define contributions, namely joints of
 ad-side and conversion-side data.
 
-These contributions (raw reports) are sent encrypted to an adtech server, and then over to
-aggregation services that will compute aggregate reports in a [private](#privacy) way.
+These contributions (raw reports) are sent encrypted to an adtech server, and
+then over to aggregation services that will compute aggregate reports in a
+[privacy-preserving](#privacy) way.
 
 Note that aggregate reports are not be delayed to the same extent as event-level reports.
 
@@ -382,8 +385,8 @@ aggregate reports.
 {% Details %}
 {% DetailsSummary 'h3' %}
 In detail: event-level reports and privacy {% endDetailsSummary %}
-Event-level reports provide conversion insights without tracking users across sites, by following
-the following privacy mechanisms:
+Event-level reports provide conversion insights without tracking users across
+sites, by following the following privacy mechanisms:
 - No cross-site identifier is used and no detailed cross-site browsing activity leaves the device.
 Event-level reports associate 64 bits of information on the ad side (`news.example`) with only 1
 bit or 3 bits on the conversion side (`shop.example`). 64 bits **are enough information to be
