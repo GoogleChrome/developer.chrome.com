@@ -189,7 +189,7 @@ Is there something about Region Capture that doesn't work as you expected? Or ar
 
 Did you find a bug with Chrome's implementation? Or is the implementation different from the spec?
 
-* File a bug at <https://new.crbug.com>. Be sure to include as much detail as you can, and simple instructions for reproducing. [Glitch](https://glitch.com) works great for sharing quick and easy repros.
+* File a bug at [https://new.crbug.com](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EGetDisplayMedia%3ERegionCapture). Be sure to include as much detail as you can, and simple instructions for reproducing. [Glitch](https://glitch.com) works great for sharing quick and easy repros.
 
 ### Show support
 
