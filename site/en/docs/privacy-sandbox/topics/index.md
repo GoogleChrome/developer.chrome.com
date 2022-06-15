@@ -428,6 +428,18 @@ proposes that it should be possible to view the topics for a site via browser de
 model is expected to evolve and improve over time and be updated periodically; the frequency of this
 is still under consideration.
 
+#### Where can I find the current classifier model?
+
+You can find the path to the model file in the "Classifier" tab of `chrome://topics-internals/` page. The top 10k domains currently used are in the `override_list.pb.gz` file found in the same directory as the model above. The domain to topics associations in the list are utilized by the API in lieu of the output of the model itself.
+
+To run the model directly, refer to the documentation here: https://www.tensorflow.org/lite/guide/inference#running_a_model (Also see: https://www.tensorflow.org/learn)
+
+To inspect the override_list.pb.gz file:
+
+* Unpack it: `gunzip -c override_list.pb.gz > override_list.pb`
+* Use protoc to inspect: `protoc --decode_raw < override_list.pb > output.txt`
+* Also see: Taxonomy of topics with IDs: https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md
+
 #### How can I provide feedback or input on the classifier model?
 
 There are [several channels](/docs/privacy-sandbox/feedback/) for
