@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2017-06-09
-#updated: YYYY-MM-DD
+updated: 2022-06-21
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
 tags:
   - css
@@ -466,7 +466,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
 **Figure 26**. The **Color Picker**, annotated
 
 1.  **Shades**.
-2.  **Eyedropper**. See [Sample a color off the page with the Eyedropper][25].
+2.  **Eyedropper**. See [Sample a color anywhere with the Eyedropper][25].
 3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
 4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
 5.  **Color Palette**. Click one of these squares to change the color to that square.

@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - jecelynyeen
 date: 2019-05-02
-updated: 2021-12-02
+updated: 2022-06-21
 description: "A list of ways you can customize Chrome DevTools."
 ---
 
@@ -42,13 +42,13 @@ tabs.
 
 ## Reorder panels, tabs, and panes {: #reorder }
 
-To change ordering, you can click and drag left or right any of the following:
+To change ordering, click and drag left or right any of the following:
 
 - Panels at the top of DevTools
-- Panes in the **Elements** panel such as **Styles**, **Comnputed**, **Layout**, etc.
-- **Drawer** tabs
+- Panes in the **Elements** panel such as **Styles**, **Computed**, **Layout**, etc.
+- **Drawer** tabs at the bottom of DevTools
 
-Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this: right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.
+Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this, right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/TrzgaUT4vNk1ToIDTnKv.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
