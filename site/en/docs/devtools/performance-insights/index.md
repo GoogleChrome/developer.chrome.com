@@ -4,6 +4,7 @@ title: "Performance insights: Get actionable insights on your website's performa
 authors:
   - jecelynyeen
 date: 2022-03-29
+updated: 2022-06-21
 description: "Get actionable insights on your website's performance with the Performance insights panel."
 tags:
   - performance
@@ -86,15 +87,20 @@ Here is an example of how to do it.
 
 DevTools automatically zooms out to show the full recording timeline. You can navigate the recording with zoom and move the timeline. 
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/aiNxjBK2fBr76NKHfMoA.mp4", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/aiNxjBK2fBr76NKHfMoA.mp4", autoplay=true, loop=true, muted="true", class="screenshot" %}
+
+To zoom and move the timeline left and right, use the corresponding navigation buttons:
 
 - Click on the **Timeline** to move the playhead to view a particular frame.
-- Use the **Zoom in** and **Zoom out** control at the bottom to zoom.
+- Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W0YLGvycDjOWpEubawyh.svg", alt="Zoom in.", width="20", height="20" %} **Zoom in** and {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0kg9yZVysvkgc8mutOvB.svg", alt="Zoom out.", width="20", height="20" %} **Zoom out** controls at the bottom to zoom. In this case, you zoom based on the playhead.
 - Drag the horizontal scroll bar at the bottom to move the timeline left and right.
-- Alternatively, you can use **keyboard shortcuts** to zoom, move the timeline left and right. Click on the **?** button to view the shortcuts.
 
+Alternatively, you can use keyboard shortcuts. Click on the **?** button to view the shortcuts.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Pcg1vz3JvbvhT2pyhGgg.png", alt="keyboard shortcuts", width="800", height="489" %}
 
+When using shortcuts, you zoom based on your mouse coursor.
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/U8d1PjOFZuGkyOXHQ5Z8.mp4", autoplay=true, loop=true, class="screenshot" %}
 
 ## View performance insights {: #insights }
 
@@ -214,6 +220,8 @@ To load a recording, select **Import**.
 
 ## Delete a recording {: #delete }
 
-After making a recording, press **Delete** to clear that recording from the panel.
+To delete a recording:
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QhKTWlPVACLINviDp4GL.png", alt="Delete the recording", width="800", height="489" %}
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G3beoQrG60COzsJM4TNb.svg", alt="Delete.", width="20", height="20" %} **Delete**. A confirmation dialog opens.
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QhKTWlPVACLINviDp4GL.png", alt="Delete the recording", width="800", height="489" %}
+1. In the dialog, click **Delete** to confirm the deletion.
