@@ -8,7 +8,7 @@ extra_permissions_html:
 
 ## Manifest {: #manifest }
 
-### No permission required {: #no-perm }
+### No permissions {: #no-perm }
 
 You can use most Tabs API methods and events without declaring any permissions. The following are some examples:
 
@@ -18,19 +18,19 @@ You can use most Tabs API methods and events without declaring any permissions. 
 
 ### Tabs permission or host permissions {: #perms }
 
-If your extension needs access to any of the following properties of [`tabs.Tab`][tab]: `url`, `pendingUrl`,
-`title`, or `favIconUrl`, use the following table to determine which
+A permission is required to populate the `url`, `pendingUrl`, `title`, and `favIconUrl` properties of [`tabs.Tab`][tab]. Consider the following cases to determine which
 permission to request:
 
-| Permission           | Use case                                                       |
-|----------------------|----------------------------------------------------------------|
-| **Host permissions** | If you only need access to the tabs of the match pattern URLs. |
-| **Tabs**             | If you need access to the data of all tabs.                                 |
+[Host permissions][doc-match]
+: If you already need host permissions, you can access the tab data of the matching URLs.
+
+Tabs permission
+: Use this permission to gain access to the data of all tabs.
 
 The following code shows how to declare each permission in the extension's [manifest][doc-manifest].
 
 <web-tabs>
-  <web-tab title="Host Permissions (code)">
+  <web-tab title="Host Permissions (Manifest)">
 
   ```json
   {
@@ -43,7 +43,7 @@ The following code shows how to declare each permission in the extension's [mani
   }
   ```
   </web-tab>
-    <web-tab title="Tabs permission (code)">
+    <web-tab title="Tabs permission (Manifest)">
    
   ```json
   {
@@ -96,14 +96,12 @@ For this example, you do not need to request any [permissions][section-manifest]
 
 ### Get the current tab
 
-This example demonstrates how the background script can retrieve the active tab from the
+This example demonstrates how the extension service worker can retrieve the active tab from the
 currently-focused window (or most recently-focused window, if no Chrome windows are focused). This
 can usually be thought of as the user's current tab.
 
 <web-tabs>
   <web-tab title="Manifest V3 (promise)">
-
-{% Label %}background.js:{% endLabel %}
 
   ```js
   async function getCurrentTab() {
@@ -116,8 +114,6 @@ can usually be thought of as the user's current tab.
 
   </web-tab>
   <web-tab title="Manifest V2 (callback)">
-
-{% Label %}background.js:{% endLabel %}
 
   ```js
   function getCurrentTab(callback) {
