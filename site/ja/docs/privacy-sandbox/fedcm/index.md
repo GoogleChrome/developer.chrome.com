@@ -38,7 +38,7 @@ Federated Credential Management API（FedCM）は、ウェブ上の ID 連携フ
 ### 期待される影響
 
 {% Aside 'caution' %}
-[プライバシーサンドボックスイニシアチブ](https://privacysandbox.com/)を使用して、Chrome 上のすべての追跡ベクトルを軽減することを目指しています。 サードパーティ Cookie の段階的廃止による影響を減らすことを最初の取り組みとしています。他のブラウザですでに行われている最中ですが、[Chrome では 2023 年に予定](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)されています。 これらの Cookie を削除すると、サードパーティの追跡を減らすことができますが、他のクロスサイトのユースケースにも影響が及ぼされます。
+[プライバシーサンドボックスイニシアチブ](https://privacysandbox.com/)を使用して、Chrome 上のすべてのトラッキングベクターを軽減することを目指しています。 サードパーティ Cookie の段階的廃止による影響を減らすことを最初の取り組みとしています。他のブラウザですでに行われている最中ですが、[Chrome では 2023 年に予定](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)されています。 これらの Cookie を削除すると、サードパーティのトラッキングを減らすことができますが、他のクロスサイトのユースケースにも影響が及ぼされます。
 {% endAside %}
 
 [コミュニティの取り組み](https://github.com/fedidcg/use-case-library/wiki/Primitives-by-Use-Case)と私たちの調査を通じて、サードパーティ Cookie の段階的廃止の影響を受ける ID フェデレーション関連の統合がいくつかあることがわかりました。
