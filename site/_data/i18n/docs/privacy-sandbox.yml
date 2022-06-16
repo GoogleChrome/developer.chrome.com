@@ -30,9 +30,9 @@ blog:
   en: 'Blog'
   ja: 'ブログ'
 attribution-reporting-experiment:
-  en: 'Attribution API: experiment and participate'
+  en: 'Experiment and participate'
 attribution-reporting-changing:
-  en: 'January 2022 API updates'
+  en: 'API updates'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
 attribution-reporting-summary:

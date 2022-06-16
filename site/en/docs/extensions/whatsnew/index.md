@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-05-26
+updated: 2022-06-15
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -19,7 +19,16 @@ and related policy or other changes.
 
 May 26, 2022
 
-Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that informs developers to accurately self-declare their trader/non-trader status.
+Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
+informs developers to accurately self-declare their trader/non-trader status.
+
+### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
+
+April 28, 2022
+
+When changing a Manifest V3 extension's keyboard shortcut on `chrome://extensions/shortcuts`,
+updates are now applied immediately. Previously the extension would have to be reloaded before the
+change would take effect.
 
 ### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
 
@@ -89,8 +98,15 @@ window could fail.
 
 February 9, 2022
 
+{% Aside 'warning' %}
+
+This change did not fully address the underlying issue. We will share another update when we are
+confident that native messaging ports are behaving as intended.
+
+{% endAside %}
+
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open.
+service worker should keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 

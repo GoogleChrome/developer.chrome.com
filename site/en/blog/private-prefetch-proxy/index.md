@@ -7,6 +7,7 @@ description: >
 subhead: >
   Speeding up Largest Contentful Paint (LCP) with cross-site prefetching.
 date: 2022-05-11
+updated: 2022-06-14
 authors:
   - katiehempenius
   - kenjibaheux
@@ -19,7 +20,7 @@ alt: >
   A gate with a sign reading private.
 ---
 
-Since Chrome 92, we've been running an Early Access Program (EAP) for a feature called Private Prefetch Proxy, which speeds up outgoing navigations from Google Search by 30% at the median. Private Prefetch Proxy allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates. We expect that the feature will graduate from this EAP as early as Chrome 103, thereby no longer requiring websites to opt-in, and allowing other referrer websites to safely speed up cross-site navigations.
+Starting with Chrome 103 for Android, Chrome will gradually roll out a private prefetch proxy feature to speed up out-going navigations from Google Search and other participating websites by 30% at the median. This private prefetch proxy feature allows the prefetching of cross-origin content without exposing user information to the destination website until the user navigates.
 
 Read on to learn about [how this feature works](#how), 
 [how it can help significantly improve your sites' Largest Contentful Paint (LCP)](#owners), 
@@ -57,21 +58,7 @@ Chrome will prefetch resources even if they are already in the cache, but they w
 
 ### For website owners {: #owners }
 
-For the duration of the Early Access Program, website owners interested in Private Prefetch Proxy will need to deploy a traffic advice file on their server with the following content: 
-
-```json
-[{
-  "user_agent": "prefetch-proxy",
-  "google_prefetch_proxy_eap": {
-    "fraction": 1.0
-  }
-}]
-```
-
-- The `google_prefetch_proxy_eap` section allows you to opt into the EAP.
-- The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. See the [traffic control](#traffic) section for more details.
-
-This `traffic-advice` file should be placed under the `/.well-known/` path of your website (i.e. `/.well-known/traffic-advice`), and served with a MIME type of `application/trafficadvice+json`. Doing so will allow Chrome to speed up navigations to your website from participating referrers on links for which the user has no cookies or local state. From past experiments, we've seen between 20% to 30% faster [LCP](https://web.dev/lcp/) on prefetched navigations.
+There is no action required from website owners to start benefiting from private prefetch proxy on links for which the user has no cookies or local state. From our experiments, this is a significant opportunity for most websites. Besides, it's always a good idea to impress first-time visitors or infrequent visitors with a super fast loading experience. From past experiments, we’ve seen between 20% to 30% faster Largest Contentful Paint on prefetched navigations.
 
 In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from Private Prefetch Proxy for links with cookies.
 
@@ -94,9 +81,7 @@ From past experiments, we know that this feature typically results in less than 
 ```json
 [{
   "user_agent": "prefetch-proxy",
-  "google_prefetch_proxy_eap": {
-    "fraction": 0.3
-  }
+  "fraction": 0.3
 }]
 ```
 
@@ -121,7 +106,7 @@ If you operate a website with lots of links to other websites, you may be intere
 ```
 
 {% Aside %}
-At this moment, to allow other sites to preload navigations through Google servers, users need to select the "Extended preloading" mode in Chrome's preload settings. We are [looking for interested parties](https://github.com/WICG/nav-speculation/issues/) as a catalyst for further improvements to this initial approach.
+At this moment, to allow other sites to preload navigations through Google servers, users need to select the "Extended preloading" mode in Chrome's [preload settings](https://support.google.com/chrome/answer/1385029?hl=en&co=GENIE.Platform%3DAndroid). We are [looking for interested parties](https://github.com/WICG/nav-speculation/issues/) as a catalyst for further improvements to this initial approach.
 {% endAside %}
 
 ## What's next? {: #next }
