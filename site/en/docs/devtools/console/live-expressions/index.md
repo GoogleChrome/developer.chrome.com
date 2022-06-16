@@ -34,7 +34,7 @@ To pin an expression to the top of the **Console**:
 
 1.  Press <kbd>Enter</kbd> to save the expression, or click outside of the **Live Expression** text box.
 
-The value below the pinned expression is its result. The result updates every 250 seconds.
+The value below the pinned expression is its result. The result updates every 250 milliseconds.
 
 ## Add multiple expressions {: #add-multiple }
 
