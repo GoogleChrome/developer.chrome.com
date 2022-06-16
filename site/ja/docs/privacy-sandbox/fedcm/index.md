@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Federated Credential Management API'
 subhead: >
-  プライバシーを保護する ID フェデレーションのためのウェブ API。
+  プライバシーを保護する ID 連携のためのウェブ API。
 description: >
   ユーザーがブラウザのプライバシーの向上と互換性のある方法で、フェデレーションアカウントを使用してウェブサイトにログインできるようにするウェブプラットフォーム API。
 date: 2022-04-25
