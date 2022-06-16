@@ -6,7 +6,7 @@ description: >
   Find out how this new syntax can streamline media queries.
 subhead: >
   Find out how this new syntax can streamline media queries.
-date: 2022-06-15
+date: 2022-06-16
 authors:
   - rachelandrew
 tags:
