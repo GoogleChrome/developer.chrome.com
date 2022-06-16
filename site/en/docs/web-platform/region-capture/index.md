@@ -19,7 +19,7 @@ Web apps could previously crop video tracks “manually”. That is, web apps co
 
 ## About Region Capture {: #region-capture }
 
-So you've created a website with Dynamic Content™. It's the best web app ever, and people just can't stop using it; often collaboratively. A possible next step is to embed virtual conferencing capabilities. You decide to go with that. You team up with an existing video conferencing service provider, embedding their web app as a cross-origin iframe. The video conferencing web app captures the current tab as a video track and transmits it to remote participants.
+So you've created a website with Dynamic Content™. It's the best web app ever, and people just can't stop using it, often collaboratively. A possible next step is to embed virtual conferencing capabilities. You decide to go with that. You team up with an existing video conferencing service provider, embedding their web app as a cross-origin iframe. The video conferencing web app captures the current tab as a video track and transmits it to remote participants.
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/L87rANm3IfsVZiMHfbH2.png", alt="Screenshot of a browser window featuring a web app highlighting the main content area and cross-origin iframe.", width="800", height="568" %}
@@ -130,7 +130,7 @@ This is a corollary of Region Capture being essentially cropping. One alternativ
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/baMnFn0oH9NbRhBQ1XQR.png", alt="Picture of different results for Region Capture and Element-level Capture API.", width="800", height="446" %}
   <figcaption>
-    Region Capture's behavior with occluding content
+    Region Capture's behavior with occluding content.
   </figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ At the time of writing, Region Capture is available in Chrome&nbsp;104 on deskto
 
 ## What's next {: #future }
 
-Here's a sneak peek of what to expect in the near future that will improve screen-sharing on the web:
+Here's a sneak peek of what to expect in the near future that will improve screen sharing on the web:
 
 - Region Capture will support all Element types.
 - Region Capture will support captures of other tabs.
