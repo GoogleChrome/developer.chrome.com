@@ -2,86 +2,8 @@
 title: Components
 layout: 'layouts/doc-post.njk'
 date: 2021-01-12
-updated: 2021-01-27
+updated: 2022-06-17
 ---
-
-## Details
-
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-The details shortcode also supports using headers in the summary.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}
 
 ## Asides
 Use asides to provide information that's related to but distinct from the
@@ -502,6 +424,84 @@ var x = 0;
 ```
 {% endCompare %}
 
+## Details
+
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
+
 ## Glitches {: #glitches }
 
 ### Create a Glitch
@@ -635,7 +635,26 @@ place the `Img` shortcode snippet inside:
   </figcaption>
 </figure>
 
+## Labels
+
+Labels can be used to display a filename associated with a [code](https://web.dev/handbook/markup-code/) snippet.
+
+````text
+{% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}
+
+```js
+console.log('hello');
+```
+````
+
+{% Label %}filename.js:{% endLabel %}
+
+```js
+console.log('hello');
+```
+
 ## Lists
+
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
 
