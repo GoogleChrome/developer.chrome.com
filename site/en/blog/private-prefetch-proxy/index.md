@@ -87,7 +87,7 @@ From past experiments, we know that this feature typically results in less than 
 
 The `fraction` field gives you control over the prefetch traffic by specifying how much Private Prefetch Proxy should let through. The value is a float between 0.0 (no prefetch at all) and 1.0 (100% of the prefetch requests get through).
 
-For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: Prefetch; anonymous-client-ip`) with a 503 status code, and by setting the `Cache-control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
+For more flexibility (for example, a sudden peak of heavy access), you may want to temporarily reject prefetch requests (`Sec-Purpose: prefetch;anonymous-client-ip`) with a 503 status code, and by setting the `Cache-Control: no-store` header on the response. You may also add the [`Retry-After`](https://tools.ietf.org/html/rfc7231#section-6.6.4) header to tell Chrome how long to wait before retrying prefetch requests.
 
 ## For referrer website owners {: #referrers }
 
