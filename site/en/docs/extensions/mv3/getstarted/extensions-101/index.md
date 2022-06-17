@@ -56,7 +56,7 @@ Below is a short explanation of the most frequently used extension components:
 
 ## Developing your extension {: #development }
 
-Even though web applications and extensions share the same technologies, the developer experience for creating a Chrome extension is different. See [Extension Development Basics](doc-dev-basics) to create a basic Hello World extension and become familiar with the extension development workflow.
+Even though web applications and extensions share the same technologies, the developer experience for creating a Chrome extension is different. See [Extension Development Basics][doc-dev-basics] to create a basic Hello World extension and become familiar with the extension development workflow.
 
 ## Choosing your extension features {: #quality }
 
@@ -81,22 +81,23 @@ Choose any of the following step-by-step beginner tutorials to begin your Chrome
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome Extension and Chrome Web store documentation.
 
 
-[mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
-[mdn-html]: https://developer.mozilla.org/docs/Learn/html
-[section-tutorials]: #building
-[doc-manifest]: /docs/extensions/mv3/manifest/
-[doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
-[doc-service-worker]: /docs/extensions/mv3/service_workers/
-[doc-content-scripts]: /docs/extensions/mv3/content_scripts/
-[doc-ui-action]: /docs/extensions/mv3/user_interface/#action
-[js-apis]: /docs/extensions/api_other/
 [doc-apis]: /docs/extensions/reference/
-[doc-dev-overview]: /docs/extensions/mv3/devguide
-[mdn-dom]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
-[tut-reading-time]: https://google.com
-[tut-focus-mode]: https://google.com
-[tut-tabs-man]: https://google.com
+[doc-arch]: /docs/extensions/mv3/architecture-overview/
+[doc-content-scripts]: /docs/extensions/mv3/content_scripts/
 [doc-cws-policy]: /docs/webstore/program_policies/
 [doc-cws-publish]: /docs/webstore/publish/
-[doc-arch]: /docs/extensions/mv3/architecture-overview/
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
+[doc-dev-overview]: /docs/extensions/mv3/devguide
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-service-worker]: /docs/extensions/mv3/service_workers/
+[doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
+[doc-ui-action]: /docs/extensions/mv3/user_interface/#action
 [doc-ui]: /docs/extensions/mv3/user_interface/
+[js-apis]: /docs/extensions/api_other/
+[mdn-dom]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+[mdn-html]: https://developer.mozilla.org/docs/Learn/html
+[mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
+[section-tutorials]: #building
+[tut-focus-mode]: https://google.com
+[tut-reading-time]: https://google.com
+[tut-tabs-man]: https://google.com
