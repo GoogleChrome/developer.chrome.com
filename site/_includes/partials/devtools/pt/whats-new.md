@@ -6,7 +6,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 * [Gravação de eventos de clique duplo e clique com o botão direito do mouse](/pt/blog/new-in-devtools-103/#recorder)
 * [Novo intervalo de tempo e modo de instantâneo no painel Lighthouse](/pt/blog/new-in-devtools-103/#lighthouse)
-* [Controle de zoom aprimorado no painel Performance Insights ](/pt/blog/new-in-devtools-103/#zoom)
+* [Controle de zoom aprimorado no painel Performance Insights](/pt/blog/new-in-devtools-103/#zoom)
 * [Confirmação para excluir uma gravação de apresentação](/pt/blog/new-in-devtools-103/#delete)
 * [Escolhendo uma cor fora do navegador](/pt/blog/new-in-devtools-103/#color)
 * [Visualização aprimorada do valor inline durante a depuração](/pt/blog/new-in-devtools-103/#inline-preview)
