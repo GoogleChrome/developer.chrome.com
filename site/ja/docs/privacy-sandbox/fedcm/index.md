@@ -13,7 +13,7 @@ authors:
 
 ## 実装状況
 
-このドキュメントでは、IDフェデレーションの新しい提案である Federated Credential Management API（FedCM）の概要を説明します。
+このドキュメントでは、ID 連携の新しい提案である Federated Credential Management API（FedCM）の概要を説明します。
 
 *  [FedCM 提案](https://github.com/fedidcg/FedCM)の[公開ディスカッション](https://github.com/fedidcg/FedCM/issues)が開始しました。
 *  [FedCM のオリジントライアル](/blog/fedcm-origin-trial)は、Android の Chrome 101 から 105で利用できます。 デスクトップ版 Chrome では、Chrome 103 以降でサポートされています。 他のブラウザでは 未対応です。
@@ -22,33 +22,33 @@ authors:
 
 ## FedCM が必要な理由
 
-過去 10 年間、ID フェデレーションは、使いやすさ（パスワードレスのシングルサインオンなど）、セキュリティ（フィッシング攻撃やクレデンシャルスタッフィング攻撃への耐性の向上など）、サイト単位でのユーザー名とパスワードに比較した信頼性の観点から、ウェブでの認証の水準を上げる上で中心的な役割を果たしてきました。
+過去 10 年間、ID 連携は、使いやすさ（パスワードレスのシングルサインオンなど）、セキュリティ（フィッシング攻撃やクレデンシャルスタッフィング攻撃への耐性の向上など）、サイト単位でのユーザー名とパスワードに比較した信頼性の観点から、ウェブでの認証の水準を上げる上で中心的な役割を果たしてきました。
 
-ID フェデレーションを採り入れることで、RP（リライングパーティ）は IDP（ID プロバイダー）に依存して、ユーザーに新しいユーザー名とパスワードを要求せずにアカウントを提供することが可能となっています。
+ID 連携を採り入れることで、RP（リライングパーティ）は IDP（ID プロバイダー）に依存して、ユーザーに新しいユーザー名とパスワードを要求せずにアカウントを提供することが可能となっています。
 
 
 {% Aside 'key-term' %}
-_ID 連携_ は、信頼できる外部パーティ（_ID プロバイダー_ または IdP）に個人（ユーザーまたはエンティティ）の認証または認可を委任します。 すると ID プロバイダーは、その個人のウェブサイト（_リライングパーティ_ または RP）へのサインインを許可します。
+_ID 連携_は、信頼できる外部パーティ（_ID プロバイダー_ または IdP）に個人（ユーザーまたはエンティティ）の認証または認可を委任します。 すると ID プロバイダーは、その個人のウェブサイト（_リライングパーティ_または RP）へのサインインを許可します。
 {% endAside %}
 
-残念ながら、ID フェデレーションの設計基盤（iframe、リダイレクト、Cookie）の仕組みでは、ウェブ全体でユーザーをトラッキングすることも可能です。 ユーザーエージェントは ID フェデレーションとトラッキングを区別できないため、これらの仕組みが ID フェデレーションをサポートするために使用されているのかどうかを判断するのが困難となっています。
+残念ながら、ID 連携の設計基盤（iframe、リダイレクト、Cookie）の仕組みでは、ウェブ全体でユーザーをトラッキングすることも可能です。 ユーザーエージェントは ID 連携とトラッキングを区別できないため、これらの仕組みが ID 連携をサポートするために使用されているのかどうかを判断するのが困難となっています。
 
-Federated Credential Management API（FedCM）は、ウェブ上の ID 連携フローをユースケースごとに抽象化することができます。 この専用の API を用いることで、ブラウザは RP と IdP が情報を交換するコンテキストを理解し、共有される情報と特権 レベルをユーザーに伝達することで、意図しない悪用を防ぐことができます。
+Federated Credential Management API（FedCM）は、ウェブ上の ID 連携フローをユースケースごとに抽象化することができます この専用の API を用いることで、ブラウザは RP と IdP が情報を交換するコンテキストを理解し、共有される情報と特権レベルをユーザーに伝達することで、意図しない悪用を防ぐことができます。
 
 ### 期待される影響
 
 {% Aside 'caution' %}
-[プライバシーサンドボックスイニシアチブ](https://privacysandbox.com/)を使用して、Chrome 上のすべてのトラッキングベクターを軽減することを目指しています。 サードパーティ Cookie の段階的廃止による影響を減らすことを最初の取り組みとしています。他のブラウザですでに行われている最中ですが、[Chrome では 2023 年に予定](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)されています。 これらの Cookie を削除すると、サードパーティのトラッキングを減らすことができますが、他のクロスサイトのユースケースにも影響が及ぼされます。
+[プライバシーサンドボックスイニシアチブ](https://privacysandbox.com/)を使用して、Chrome 上のすべてのトラッキングベクターを軽減することを目指しています。 サードパーティ Cookie の段階的廃止による影響を減らすことを最初の取り組みとしています。他のブラウザですでに行われている最中ですが、[Chrome では 2023 年に予定](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)されています。 これらの Cookie を削除すると、サードパーティの追跡を減らすことができますが、他のクロスサイトのユースケースにも影響が及ぼされます。
 {% endAside %}
 
-[コミュニティの取り組み](https://github.com/fedidcg/use-case-library/wiki/Primitives-by-Use-Case)と私たちの調査を通じて、サードパーティ Cookie の段階的廃止の影響を受ける ID フェデレーション関連の統合がいくつかあることがわかりました。
+[コミュニティの取り組み](https://github.com/fedidcg/use-case-library/wiki/Primitives-by-Use-Case)と私たちの調査を通じて、サードパーティ Cookie の段階的廃止の影響を受ける ID 連携関連の統合がいくつかあることがわかりました。
 
 * [OpenID Connect Front-Channel Logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html)
 * [OpenID Connect Session Management](https://openid.net/specs/openid-connect-session-1_0.html)
 * [iframeベースのバックグラウンドトークン 更新](https://github.com/fedidcg/use-case-library/issues/10)
 * [Iframeベースのログインウィジェット](https://github.com/fedidcg/use-case-library/issues/12)（[Facebook のパーソナル化されたログインボタン](https://developers.facebook.com/docs/facebook-login/web/login-button/)など）
 
-FedCM の最初の目標は、サードパーティ Cookie の段階的廃止が ID フェデレーションに与える影響を減らすことです。上記は、影響を受けると予想される領域のリストです。 その他のユースケースでリストに含まれていないものがある場合は、[貢献とフィードバックの共有](#share-feedback)をお勧めします。
+FedCM の最初の目標は、サードパーティ Cookie の段階的廃止が ID 連携に与える影響を減らすことです。上記は、影響を受けると予想される領域のリストです。 その他のユースケースでリストに含まれていないものがある場合は、[貢献とフィードバックの共有](#share-feedback)をお勧めします。
 
 ## FedCM の推奨使用対象者 {: #who-uses-fedcm }
 
@@ -73,9 +73,9 @@ FedCM は ID プロバイダーからのサポートを必要とします。 リ
 
 FedCM は、現在の統合がサードパーティ Cookie の段階的廃止による影響を受ける場合にのみ使用してください。 影響を受けない場合は、FedCM を使用しないことをお勧めします。
 
-Chrome のサードパーティ Cookie が段階的に廃止された後も ID フェデレーションが引き続き機能するかどうかわからない場合は、[シークレットモード](https://support.google.com/chrome/answer/95464)でウェブサイトでの統合への影響をテストすることができます。 または、デスクトップの場合は `chrome://settings/cookies` で、モバイルの場合は**設定** > **サイト設定** > **Cookie** に移動して、サードパーティ Cookie をブロックすることができます。
+Chrome のサードパーティ Cookie が段階的に廃止された後も ID 連携が引き続き機能するかどうかわからない場合は、[シークレットモード](https://support.google.com/chrome/answer/95464)でウェブサイトでの統合への影響をテストすることができます。 または、デスクトップの場合は `chrome://settings/cookies` で、モバイルの場合は**設定** > **サイト設定** > **Cookie** に移動して、サードパーティ Cookie をブロックすることができます。
 
-サードパーティ Cookie を使用しなくても ID フェデレーションへの影響が検出されない場合は、FedCM を使用せずに、現在の統合を引き続き使用できます。
+サードパーティ Cookie を使用しなくても ID 連携への影響が検出されない場合は、FedCM を使用せずに、現在の統合を引き続き使用できます。
 
 確認すべき内容がわからない場合は、段階的廃止による影響が期待される[既知の機能](https://github.com/fedidcg/use-case-library/wiki/Primitives-by-Use-Case)について詳しくお読みください。
 
@@ -100,7 +100,7 @@ FedCM はプロトコルに依存しないように設計されており、次�
 将来的には、以下を含むより多くの機能をサポートしたいと考えています。
 
 *  自動サインイン
-*  認可プロンプト
+*  承認プロンプト
 *  アクセストークンとリフレッシュトークン
 *  フロントチャネルログアウト: ID プロバイダー（IdP）が開始するリライングパーティ（RP）からのサインアウト
 *  OpenID Connect（OIDC） セッション管理
@@ -125,7 +125,7 @@ FedCM はプロトコルに依存しないように設計されており、次�
 
 {% Aside 'caution' %}
 
-**既知の問題があります**。 ユーザーが IdP でサインインしないか、セッションが期限切れになっている場合、FedCM ダイアログが表示されません。 この修正が必要な場合は、[フィードバックをお送りください](#share-feedback)。
+**既知のイシューがあります**。 ユーザーが IdP でサインインしないか、セッションが期限切れになっている場合、FedCM ダイアログが表示されません。 この修正が必要な場合は、[フィードバックをお送りください](#share-feedback)。
 
 {% endAside %}
 
@@ -156,7 +156,7 @@ RP が FedCM をサポートしていないブラウザをサポートする可�
 ## 貢献とフィードバックの共有 {: #share-feedback}
 
 *  **オリジンライアル**: [FedCM のオリジントライアル](/origintrials/#/view_trial/3977804370874990593)は、バージョン 101 から 105 までの Chrome で利用可能です。 [オリジントライアル](/blog/fedcm-origin-trial)について、詳細をご覧ください。
-*  **GitHub**: [提案](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md)を読み、[課題を投稿し、ディスカッションをフォロー](https://github.com/fedidcg/FedCM/issues)できます。
+*  **GitHub**: [提案](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md)を読み、[イシューを投稿し、ディスカッションをフォロー](https://github.com/fedidcg/FedCM/issues)できます。
 *  **開発者サポート**: [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)リポジトリで質問をしたり、ディスカッションに参加したりできます。
 
 ## 詳細について
