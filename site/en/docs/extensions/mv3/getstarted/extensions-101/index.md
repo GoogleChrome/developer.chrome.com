@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Extensions 101
-subhead: 'Explore basic concepts of Chrome Extensions.'
-description: 'Explore basic concepts of Chrome Extensions.'
+title: 'Extensions 101'
+subhead: 'Explore basic concepts of Chrome Extension development.'
+description: 'Explore basic concepts of Chrome Extension development.'
 date: 2022-07-15
 # updated: 2022-06-13
 ---
@@ -42,21 +42,25 @@ Below is a short explanation of the most frequently used extension components:
 : The manifest is the only required file. It is a JSON file that records important metadata, defines resources, declares permissions, and identifies which files to run in the background and what files to run on the page.
 
 [The service worker][doc-service-worker]
-: The extension service worker handles and listens for browser events, such as navigating to a new page, removing a bookmark, or closing a tab. As a service worker, It lies dormant until an event is fired and then reacts with specified instructions. It can access all the [Chrome APIs](doc-apis), but it cannot directly access the content of web pages; that’s the job of content scripts.
+: The extension service worker handles and listens for browser events, such as navigating to a new page, removing a bookmark, or closing a tab. As a service worker, It lies dormant until an event is fired and then reacts with specified instructions. It can access all the [Chrome APIs][doc-apis], but it cannot directly access the content of web pages; that’s the job of content scripts.
 
 [Content scripts][doc-content-scripts]
-: Content scripts can execute Javascript in the context of a web page. They can also read and modify the [DOM](mdn-dom). Content Scripts can only use a subset of the [Chrome APIs](https://developer.chrome.com/docs/extensions/reference/), but can indirectly access the rest by exchanging messages with the extension service worker.
+: Content scripts can execute Javascript in the context of a web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs](https://developer.chrome.com/docs/extensions/reference/), but can indirectly access the rest by exchanging messages with the extension service worker.
 
 <!-- Not sure if to include the extension action or extension icons -->
 [The extension action][doc-ui-action]
 : The extension action controls the toolbar button of the extension. When the user invokes the extension action, it can either display a popup or execute the extension’s primary functionality.  
 
-- Visit [Extensions Architecture](https://developer.chrome.com/docs/extensions/mv3/architecture-overview/) for an overview on extension components.
-- Explore [Designing the user interface](https://developer.chrome.com/docs/extensions/mv3/user_interface/) for UI and design guidelines for Chrome Extensions.
+- Visit [Extensions Architecture][doc-arch] for an overview on extension components.
+- Explore [Designing the user interface][doc-ui] for UI and design guidelines for Chrome Extensions.
 
 ## Developing your extension {: #development }
 
 Even though web applications and extensions share the same technologies, the developer experience for creating a Chrome extension is different. See [Extension Development Basics](doc-dev-basics) to create a basic Hello World extension and become familiar with the extension development workflow.
+
+## Choosing your extension features {: #quality }
+
+When you are deciding which features your extension will support, make sure your extension fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
 
 ## Distributing your extension {: #distribution }
 
@@ -64,13 +68,7 @@ You can register a developer account with the Chrome Web Store to host and distr
 
 Visit [Publish in the Chrome Web Store][doc-cws-publish] to learn how to publish your extension.
 
-## Extension quality {: #quality}
-
-When designing your extension, make sure it fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
-
-<!-- I'd like to add why this is important -->
-
-## Ready to start building? {: #building}
+## Ready to start building? {: #building }
 
 Choose any of the following step-by-step beginner tutorials to begin your Chrome extension development exploration. 
 
@@ -87,7 +85,7 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [section-tutorials]: #building
 [doc-manifest]: /docs/extensions/mv3/manifest/
-[doc-single-purpose]: /docs/webstore/program_policies/#single-purpose)
+[doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts/
 [doc-ui-action]: /docs/extensions/mv3/user_interface/#action
@@ -100,3 +98,5 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [tut-tabs-man]: https://google.com
 [doc-cws-policy]: /docs/webstore/program_policies/
 [doc-cws-publish]: /docs/webstore/publish/
+[doc-arch]: /docs/extensions/mv3/architecture-overview/
+[doc-ui]: /docs/extensions/mv3/user_interface/
