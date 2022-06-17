@@ -78,7 +78,10 @@
 - url: /docs/devtools/media-panel/
 - url: /docs/devtools/memory-inspector/
 - url: /docs/devtools/device-mode/override-user-agent/
-- url: /docs/devtools/recorder/
+- title: i18n.docs.devtools.recorder
+  sections:
+    - url: /docs/devtools/recorder/
+    - url: /docs/devtools/recorder/reference
 - title: i18n.docs.devtools.rendering
   sections:
     - url: /docs/devtools/rendering/
