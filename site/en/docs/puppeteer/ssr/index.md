@@ -276,7 +276,7 @@ const entry = performance.getEntriesByType('navigation').find(
 console.log(entry.serverTiming[0].toJSON());
 ```
 
-```
+```js
 {
   "name": "Prerender",
   "duration": 3808,
@@ -680,7 +680,7 @@ And in the page, we can look for that parameter:
 
 **public/index.html**
 
-```
+```html
 <html>
 <body>
   <div id="container">

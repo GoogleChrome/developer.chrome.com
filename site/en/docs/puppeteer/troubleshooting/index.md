@@ -239,7 +239,7 @@ Running Puppeteer smoothly on CircleCI requires the following steps:
    into your own config.
 1. Lastly, if you’re using Puppeteer through Jest, then you may encounter an
    error spawning child processes:
-   ```
+   ```shell
    [00:00.0]  jest args: --e2e --spec --max-workers=36
    Error: spawn ENOMEM
       at ChildProcess.spawn (internal/child_process.js:394:11)

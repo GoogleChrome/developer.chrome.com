@@ -20,7 +20,7 @@ NODE_PATH=../ node examples/search.js
 
 More complex and use case driven examples can be found at [github.com/GoogleChromeLabs/puppeteer-examples](https://github.com/GoogleChromeLabs/puppeteer-examples).
 
-## Other useful tools, articles, and projects that use Puppeteer.
+## Other useful tools, articles, and projects that use Puppeteer
 
 ### Rendering and web scraping
 

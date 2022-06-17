@@ -91,11 +91,11 @@ PUPPETEER_PRODUCT=firefox npm i puppeteer
 ## Q: What’s considered a “Navigation”?
 
 From Puppeteer’s standpoint, **“navigation” is anything that changes a page’s URL**.
-Aside from regular navigation where the browser hits the network to fetch a new document from the web server, this includes [anchor navigations](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid) and [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) usage.
+Aside from regular navigation where the browser hits the network to fetch a new document from the web server, this includes [anchor navigations](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid) and [History API](https://developer.mozilla.org/docs/Web/API/History_API) usage.
 
 With this definition of “navigation,” **Puppeteer works seamlessly with single-page applications.**
 
-#### Q: What’s the difference between a “trusted" and "untrusted" input event?
+## Q: What’s the difference between a “trusted" and "untrusted" input event?
 
 In browsers, input events could be divided into two big groups: trusted vs. untrusted.
 
@@ -104,7 +104,7 @@ In browsers, input events could be divided into two big groups: trusted vs. untr
 
 Websites can distinguish between these two groups:
 
-- using an [`Event.isTrusted`](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted) event flag
+- using an [`Event.isTrusted`](https://developer.mozilla.org/docs/Web/API/Event/isTrusted) event flag
 - sniffing for accompanying events. For example, every trusted `'click'` event is preceded by `'mousedown'` and `'mouseup'` events.
 
 For automation purposes it’s important to generate trusted events. **All input events generated with Puppeteer are trusted and fire proper accompanying events.** If, for some reason, one needs an untrusted event, it’s always possible to hop into a page context with `page.evaluate` and generate a fake event:
