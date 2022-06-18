@@ -3,14 +3,41 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
-<!-- ### Chrome 101 {: #chrome101 }
+<!-- ### Chrome 103 {: #chrome103 }
 
-* [Import and export recorded user flows as a JSON file](/ko/blog/new-in-devtools-101/#recorder)
-* [View cascade layers in the Styles pane](/ko/blog/new-in-devtools-101/#layer)
-* [Support for the hwb() color function](/ko/blog/new-in-devtools-101/#hwb)
-* [Improved the display of private properties](/ko/blog/new-in-devtools-101/#private-props)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-101/#misc)
-* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/ko/blog/new-in-devtools-101/#lighthouse) -->
+* [Capture double-click and right-click events in the Recorder panel](/ko/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/ko/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/ko/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/ko/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/ko/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/ko/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/ko/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/ko/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/ko/blog/new-in-devtools-103/#sourcemaps) -->
+
+
+### Chrome 102 {: #chrome102 }
+
+* [미리보기 기능: 새로운 Performance insights 창](/ko/blog/new-in-devtools-102/#perf)
+* [새 바로가기 메뉴 -  라이트 테마 및 다크 테마 에뮬레이팅하기](/ko/blog/new-in-devtools-102/#emulation)
+* [네트워크 창의 미리보기 탭의 보안 개선](/ko/blog/new-in-devtools-102/#network-preview)
+* [브레이크 포인트에서의 재로딩 개선](/ko/blog/new-in-devtools-102/#debugger)
+* [콘솔 업데이트](/ko/blog/new-in-devtools-102/#console)
+* [시작 전에 유저 플로우 녹화 취소하기](/ko/blog/new-in-devtools-102/#recorder)
+* [스타일 창에 상속된 하이라이트 의사 속성들 표시하기](/ko/blog/new-in-devtools-102/#pseudo)
+* [기타 하이라이트](/ko/blog/new-in-devtools-102/#misc)
+* [[실험 기능] CSS에서의 변경사항 복사](/ko/blog/new-in-devtools-102/#copy)
+* [[실험 기능] 브라우저 바깥의 색상 선택하기](/ko/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [녹화된 유저 플로우를 JSON 파일로 내보내고 불러오기](/ko/blog/new-in-devtools-101/#recorder)
+* [스타일 창에서 cascade 레이어 보기](/ko/blog/new-in-devtools-101/#layer)
+* [hwb() 색상 함수 지원](/ko/blog/new-in-devtools-101/#hwb)
+* [private 속성 표시 개선](/ko/blog/new-in-devtools-101/#private-props)
+* [기타 하이라이트](/ko/blog/new-in-devtools-101/#misc)
+* [[실험] Lighthouse 패널의 새로운 시간 범위 (timespan) 및 스냅샷 (snapshot) 모드](/ko/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }

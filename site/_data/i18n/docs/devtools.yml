@@ -43,3 +43,5 @@ sensors:
   en: 'Sensors'
 rendering:
   en: 'Rendering'
+changes:
+  en: 'Changes'

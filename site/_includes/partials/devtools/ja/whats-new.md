@@ -3,14 +3,41 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
-<!-- ### Chrome 101 {: #chrome101 }
+<!-- ### Chrome 103 {: #chrome103 }
 
-* [Import and export recorded user flows as a JSON file](/ja/blog/new-in-devtools-101/#recorder)
-* [View cascade layers in the Styles pane](/ja/blog/new-in-devtools-101/#layer)
-* [Support for the hwb() color function](/ja/blog/new-in-devtools-101/#hwb)
-* [Improved the display of private properties](/ja/blog/new-in-devtools-101/#private-props)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-101/#misc)
-* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/ja/blog/new-in-devtools-101/#lighthouse) -->
+* [Capture double-click and right-click events in the Recorder panel](/ja/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/ja/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/ja/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/ja/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/ja/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/ja/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/ja/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/ja/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/ja/blog/new-in-devtools-103/#sourcemaps) -->
+
+
+### Chrome 102 {: #chrome102 }
+
+* [プレビュー機能: 新しいパフォーマンスインサイトパネル](/ja/blog/new-in-devtools-102/#perf)
+* [ライトテーマとダークテーマをエミュレートする新しいショートカット](/ja/blog/new-in-devtools-102/#emulation)
+* [Network Preview タブのセキュリティ改善](/ja/blog/new-in-devtools-102/#network-preview)
+* [ブレークポイントのリロード改善](/ja/blog/new-in-devtools-102/#debugger)
+* [コンソールの更新](/ja/blog/new-in-devtools-102/#console)
+* [ユーザーフローレコーディングを開始時にキャンセル](/ja/blog/new-in-devtools-102/#recorder)
+* [Styles ペインで継承されたハイライト疑似要素を表示](/ja/blog/new-in-devtools-102/#pseudo)
+* [その他のハイライト](/ja/blog/new-in-devtools-102/#misc)
+* [[実験的] CSS の変更をコピー](/ja/blog/new-in-devtools-102/#copy)
+* [[実験的] ブラウザ外の色を抽出](/ja/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [記録されたユーザーフローをJSONファイルとしてインポート/エクスポート](/ja/blog/new-in-devtools-101/#recorder)
+* [Styles ペインでカスケードレイヤーを表示する](/ja/blog/new-in-devtools-101/#layer)
+* [hwb() カラー関数のサポート](/ja/blog/new-in-devtools-101/#hwb)
+* [プライベートプロパティの表示を改善](/ja/blog/new-in-devtools-101/#private-props)
+* [その他のハイライト](/ja/blog/new-in-devtools-101/#misc)
+* [[実験的] Lighthouse パネルに新しいタイムスパンとスナップショットのモードを追加](/ja/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }

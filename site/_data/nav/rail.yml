@@ -10,6 +10,10 @@ blog:
   text: i18n.nav.side_nav.blog
   url: /blog/
 
+articles:
+  text: i18n.nav.side_nav.articles
+  url: /articles/
+
 # releases:
 #   text: i18n.nav.side_nav.releases
 #   url: /releases/

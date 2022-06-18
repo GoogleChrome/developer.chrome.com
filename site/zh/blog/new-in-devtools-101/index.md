@@ -19,6 +19,7 @@ tags:
 {% include 'partials/devtools/zh/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
+
 <!-- ## Import and export recorded user flows as a JSON file  {: #recorder } -->
 ## 导入以及导出用户流程为 JSON 文件 {: #recorder }
 
@@ -41,7 +42,7 @@ tags:
 - **导出为 Puppeteer 脚本**。下载的记录为一段 [Puppeteer](https://pptr.dev/) 脚本。
 
 <!-- Consult [the documentation](/docs/devtools/recorder) to learn more about the differences between these options. -->
-请参考[文档](/docs/devtools/recorder)以便于了解更多关于这些选项之间的区别。
+请参考[文档](/docs/devtools/recorder/#export-flows)以便于了解更多关于这些选项之间的区别。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Recorder 面板中的导出选项", width="800", height="556" %}
 
@@ -116,7 +117,7 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 
 <!-- ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
-## [实验性] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
+## [实验阶段] Lighthouse 面板新增 timespan 和快照模式 {: #lighthouse }
 
 {% Aside %}
 <!-- To enable the experiment, enable the **Use Lighthouse panel with timespan and snapshot modes** checkbox under **Settings** > **Experiments**. -->

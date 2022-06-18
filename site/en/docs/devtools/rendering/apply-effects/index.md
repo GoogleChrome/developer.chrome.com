@@ -93,6 +93,8 @@ When the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate CSS
 
 ## Emulate vision deficiencies
 
+{% YouTube id='t4pDjqhG6fE', startTime=157 %}
+
 Everyone should be able to access and enjoy the web. [Google is committed to making that a reality](https://www.google.com/accessibility/).
 
 With Chrome DevTools, you can see how people with vision deficiencies see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).

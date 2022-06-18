@@ -51,6 +51,9 @@ performance:
 storage:
   en: Storage
 
+dom:
+  en: DOM
+
 # This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
 # It does not need translation.
 chrome:
@@ -211,3 +214,34 @@ chrome70:
 
 insider:
   en: Chrome Dev Insider
+
+web-vitals:
+  en: Web Vitals
+  zh: 网页指标
+
+#####
+# These are for Privacy Sandbox
+
+proposal:
+  en: Proposal
+
+experiment:
+  en: Experimental
+
+chrome-stable:
+  en: Supported in Chrome stable
+
+cross-browser:
+  en: Supported cross-browser
+
+####
+# These are for collections
+
+payments:
+  en: Payments
+
+spc:
+  en: Secure Payment Confirmation
+  
+webauthn:
+  en: WebAuthn

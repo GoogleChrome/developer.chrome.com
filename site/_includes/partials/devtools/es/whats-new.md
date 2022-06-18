@@ -2,14 +2,41 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 101 {: #chrome101 }
 
-* [Import and export recorded user flows as a JSON file](/es/blog/new-in-devtools-101/#recorder)
-* [View cascade layers in the Styles pane](/es/blog/new-in-devtools-101/#layer)
-* [Support for the hwb() color function](/es/blog/new-in-devtools-101/#hwb)
-* [Improved the display of private properties](/es/blog/new-in-devtools-101/#private-props)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-101/#misc)
-* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/es/blog/new-in-devtools-101/#lighthouse) -->
+<!-- ### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/es/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/es/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/es/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/es/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/es/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/es/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/es/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/es/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/es/blog/new-in-devtools-103/#sourcemaps) -->
+
+
+### Chrome 102 {: #chrome102 }
+
+* [Función de vista previa: nuevo panel de información de rendimiento](/es/blog/new-in-devtools-102/#perf)
+* [Nuevos atajos para emular temas claros y oscuros](/es/blog/new-in-devtools-102/#emulation)
+* [Mejore la seguridad en la pestaña Vista previa de la red](/es/blog/new-in-devtools-102/#network-preview)
+* [Recarga mejorada en el punto de interrupción](/es/blog/new-in-devtools-102/#debugger)
+* [Actualizaciones de la consola](/es/blog/new-in-devtools-102/#console)
+* [Cancelar registro de flujo de usuario al inicio](/es/blog/new-in-devtools-102/#recorder)
+* [Mostrar pseudoelementos heredados resaltados en el panel Estilos](/es/blog/new-in-devtools-102/#pseudo)
+* [Destacados varios](/es/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copiar cambios de CSS](/es/blog/new-in-devtools-102/#copy)
+* [[Experimental] Selección de color fuera del navegador](/es/blog/new-in-devtools-102/#color-picker)
+
+### Chrome 101 {: #chrome101 }
+
+* [Importar y exportar como JSON flujos de usuario grabados](/es/blog/new-in-devtools-101/#recorder)
+* [Ver capas de cascada en el panel de Estilos](/es/blog/new-in-devtools-101/#layer)
+* [Soporte para la función de color hwb()](/es/blog/new-in-devtools-101/#hwb)
+* [Mejorada la visualización de las propiedades privadas](/es/blog/new-in-devtools-101/#private-props)
+* [Varios aspectos destacados](/es/blog/new-in-devtools-101/#misc)
+* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }
