@@ -205,7 +205,7 @@ There are two properties that make the replay pause:
 
 - The `waitForElement` property makes the step wait for the presence (or absence) of a number of elements identified by a selector. For example, the following step waits for less than three elements to be on the page that match the selector `.my-class`.
 
-     ```
+     ```json
        "type": "waitForElement",
        "selectors": [".my-class"],
        "operator": "<=",
@@ -214,10 +214,9 @@ There are two properties that make the replay pause:
 
 - The `waitForExpression`  property makes the step wait for a JavaScript expression to resolve to true. For example, the following step pauses for two seconds and then resolves to true allowing the replay to continue.
 
-    ```
+    ```json
        "type": "waitForExpression",
-       "expression": "new Promise(resolve => setTimeout(() => resolve(true),
-     2000))",
+       "expression": "new Promise(resolve => setTimeout(() => resolve(true), 2000))",
      ```
 
 ### Adjust timeouts for steps {: #adjust-timeout }
