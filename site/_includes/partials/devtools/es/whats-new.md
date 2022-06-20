@@ -3,17 +3,17 @@
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 
-<!-- ### Chrome 103 {: #chrome103 }
+### Chrome 103 {: #chrome103 }
 
-* [Capture double-click and right-click events in the Recorder panel](/es/blog/new-in-devtools-103/#recorder)
-* [New timespan and snapshot mode in the Lighthouse panel](/es/blog/new-in-devtools-103/#lighthouse)
-* [Improved zoom control in the Performance Insights panel](/es/blog/new-in-devtools-103/#zoom)
-* [Confirm to delete a performance recording](/es/blog/new-in-devtools-103/#delete)
-* [Picking a color outside of the browser](/es/blog/new-in-devtools-103/#color)
-* [Improved inline value preview during debugging](/es/blog/new-in-devtools-103/#inline-preview)
-* [Support large blobs for virtual authenticators](/es/blog/new-in-devtools-103/#webauthn)
-* [New keyboard shortcuts in the Sources panel](/es/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/es/blog/new-in-devtools-103/#sourcemaps) -->
+* [Captura de eventos de doble-click y clic derecho en el panel Grabación](/es/blog/new-in-devtools-103/#recorder)
+* [Nuevos modos de tiempo e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-103/#lighthouse)
+* [Mejora en el control de zoom en el panel de Consejos de Rendimiento](/es/blog/new-in-devtools-103/#zoom)
+* [Confirmar para eliminar de una grabación de rendimiento](/es/blog/new-in-devtools-103/#delete)
+* [Eligiendo un color fuera del navegador](/es/blog/new-in-devtools-103/#color)
+* [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
+* [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
+* [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
+* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps) -->
 
 
 ### Chrome 102 {: #chrome102 }
