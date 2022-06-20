@@ -31,7 +31,7 @@ tags:
 - 카드를 더블 클릭하면 확대됩니다.
 - 카드를 우클릭하고 컨텍스트 메뉴에서 동작을 선택하세요.
 
-**Recorder** 가 어떻게 이러한 이벤트를 캡쳐하는 지 이해하려면, 다음 단계로 확장하세요:
+**Recorder** 가 어떻게 이러한 이벤트를 캡쳐하는지 이해하려면, 다음 단계로 확장하세요:
 
 - **더블 클릭** 은 `type: doubleClick` 으로 캡쳐됩니다.
 - **우 클릭** 이벤트는 `type: click` 으로 캡쳐되지만 `button` 속성은 `secondary` 로 설정됩니다. 일반적인 마우스 클릭의 `button` 값은 `primary` 입니다.
@@ -39,11 +39,11 @@ tags:
 Chromium issues: [1300839](https://crbug.com/1300839), [1322879](https://crbug.com/1322879), [1299701](https://crbug.com/1299701), [1323688](https://crbug.com/1323688)
 
 
-## Lighthouse 패널에서 새로 출시된 timspan 과 snapshot 모드 {: #lighthouse }
+## Lighthouse 패널에서 새로 출시된 timespan과 snapshot 모드 {: #lighthouse }
 
-이제 **Lighthouse** 를 사용하여 페이지 로딩 이상의 웹사이트 성능을 측정할 수 있습니다.
+이제 **Lighthouse** 에서 페이지 로딩 이상의 웹사이트 성능을 측정할 수 있습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="Lighthouse 패널에서 새로 출시된 timspan 과 snapshot 모드", width="800", height="507" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="Lighthouse 패널에서 새로 출시된 timespan과 snapshot 모드", width="800", height="507" %}
 
 **Lighthouse** 패널은 이제 유저 플로우 측정을 위해 3가지 모드를 지원합니다.
 
@@ -51,7 +51,7 @@ Chromium issues: [1300839](https://crbug.com/1300839), [1322879](https://crbug.c
 - [Timespans](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#timespan) 리포트는 일반적으로 유저 인터렉션을 포함한 임의의 기간을 분석합니다.
 - [Snapshots](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#snapshot) 리포트는 일반적으로 유저가 인터렉션한 후 특정 상태의 페이지를 분석합니다. 
 
-예를 들어, 다음 [데모 페이지](https://coffee-cart.netlify.app/) 를 사용하여 카트에 아이템을 넣는 과정의 성능을 측정해본다고 해봅시다. **Timespan** 모드를 선택하고 **Start timespan** 를 클릭하세요. 스크롤한 뒤 몇 개 아이템을 카트에 넣어봅시다. 끝나고 나면, **End timespan** 을 클릭하여 유저 인터렉션에 대한 Lighthouse 리포트를 생성할 수 있습니다.
+예를 들어, 다음 [데모 페이지](https://coffee-cart.netlify.app/) 에서 카트에 아이템을 넣는 과정의 성능을 측정해본다고 해봅시다. **Timespan** 모드를 선택하고 **Start timespan** 를 클릭하세요. 스크롤한 뒤 몇 개 아이템을 카트에 넣어봅시다. 끝나고 나면, **End timespan** 을 클릭하여 유저 인터렉션에 대한 Lighthouse 리포트를 생성할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pq9Vg8xOUzplWAlXGJEa.png", alt="Timespan 모드", width="800", height="549" %}
 
@@ -66,11 +66,11 @@ Chromium issue: [1291284](https://crbug.com/1291284)
 
 ### Performance Insights 패널에서 zoom 컨트롤 개선 {: #zoom }
 
-DevTools 는 이제 재생 헤드 위치가 아닌 마우스 커서를 기반으로 줌됩니다. 커서를 중심으로 한 줌을 사용하면 트랙 내 어디에나 마우스를 옮겨 원하는 곳으로 [줌 인](/docs/devtools/performance-insights/#navigate) 할 수 있습니다.
+DevTools 는 이제 재생 헤드 위치가 아닌 마우스 커서를 기반으로 줌됩니다. 커서 기반 줌을 사용하면 트랙 내 어디에나 마우스를 옮겨 원하는 곳으로 [줌 인](/docs/devtools/performance-insights/#navigate) 할 수 있습니다.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/U8d1PjOFZuGkyOXHQ5Z8.mp4", autoplay=true, loop=true, class="screenshot" %}
 
-[Performance Insights](/docs/devtools/performance-insights/) 에서 패널을 통해 실천 가능한 인사이트를 얻고 웹사이트의 성능을 최적화할 수 있는 지 알 수 있습니다.
+[Performance Insights](/docs/devtools/performance-insights/) 에서 패널을 통해 실천 가능한 인사이트를 얻고 웹사이트의 성능의 최적화 방법을 배울 수 있습니다.
 
 Chromium issue: [1313382](https://crbug.com/1313382)
 
@@ -123,13 +123,13 @@ Chromium issue: [1245191](https://crbug.com/1245191)
 Chromium issue: [1316340](https://crbug.com/1316340) 
 
 
-## 가상 인증자를 위한 대규모 Blob 지원 {: #webauthn }
+## 가상 인증자를 위한 대용량 Blob 지원 {: #webauthn }
 
 가상 인증자를 지원하기 위해 [WebAuthn](/docs/devtools/webauthn/) 탭에 새로 **Supports large blob** 체크박스가 추가되었습니다.
 
 이 체크박스는 비활성화 상태가 기본입니다. 레지던트 키를 지원하는 `ctap2` 프로토콜을 사용한 인증자만 지원하고 있습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m58oDW2ZwCMxX6zoUoJM.png", alt=" 가상 인증자를 위한 대규모 Blob 지원", width="800", height="601" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m58oDW2ZwCMxX6zoUoJM.png", alt=" 가상 인증자를 위한 대용량 Blob 지원", width="800", height="601" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/519350816e99a82142712b2e5b6781984a77e39c #}
 
@@ -152,7 +152,7 @@ Chromium issues: [1226363](https://crbug.com/1226363)
 
 ## 소스맵 개선 {: #sourcemaps }
  
- 이전에는 개발자가 도중에 임의의 오류를 경험했습니다.
+ 이전에는 개발자가 다음과 같은 상황에서 불규칙한 오류를 겪었습니다.
  
 - [Codepen](https://codepen.io/) 예제를 디버깅할 때
 - [Codepen](https://codepen.io/) 예제에서 성능 이슈의 소스 위치를 특정할 때
