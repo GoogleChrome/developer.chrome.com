@@ -78,6 +78,7 @@
                   {% for permission in f.permissions %}
                     <code>{{ permission }}</code><br />
                   {% endfor %}
+                  {{ extra_permissions_html | safe }}
                 </div>
               </li>
               <li>
@@ -90,7 +91,7 @@
             <li>
                 <div class="code-sections__label">Permission</div>
                 <div>
-                {{ extra_permissions_html | safe }}
+                {{ special_permissions_html | safe }}
                 </div>
               </li>
             {% endif %}
