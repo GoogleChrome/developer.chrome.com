@@ -4,7 +4,7 @@ layout: 'layouts/error.njk'
 ---
 
 <!--lint disable first-heading-level-->
-# Aw, Lo lamento!
+# Lo lamento!
 <!--lint enable first-heading-level-->
 
 No encontramos la pagina buscada.
