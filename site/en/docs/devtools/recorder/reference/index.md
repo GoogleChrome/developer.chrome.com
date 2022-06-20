@@ -11,13 +11,11 @@ tags:
   - performance
 ---
 
-Discover all the capabilities and options in this comprehensive features reference of the Chrome DevTools **Recorder** panel.
+Discover ways to share user flows, edit them and their steps in this comprehensive features reference of the Chrome DevTools **Recorder** panel.
 
 To learn the basics of working with the **Recorder** panel, see [Record, replay, and measure user flows](/docs/devtools/recorder/).
 
 ## Edit user flows {: #edit-flows }
-
-Let's walk through the options to edit the user flows.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gRr2bASlwPtTFFbXnqeM.png", alt="DevTools Recorder panel has a drop-down menu in the header which allows you to select a user flow to edit", width="800", height="500" %}
 
@@ -38,37 +36,6 @@ On the top of the **Recorder** panel, there are options for you to:
 1. **Delete a recording**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9bkJ0VAuCp9iixG2LUtd.svg", alt="Delete", width="20", height="20" %}. Delete the selected recording.
 
 You can also edit the recording's name by clicking the edit button {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fFpbDTHPicjesIbiG4Hm.svg", alt="Edit", width="20", height="20" %} next to it.
-
-## Edit steps {: #edit-steps }
-
-### Adjust timeouts for steps {: #adjust-timeout }
-
-In case your page has slow network requests or lengthy animations, the replay can fail on steps that exceed the default timeout of `5000` milliseconds.
-
-To avoid this problem, you can adjust the default timeout for each step at once or set separate timeouts for specific steps. Timeouts on specific steps overwrite the default.
-
-To adjust the default timeout for each step at once:
-
-1. Click on **Replay settings** to make the **Timeout** box editable.
-
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ys9x9oHiQNATMSJkeYSn.png", alt="Replay settings", width="800", height="506" %}
-
-1. In the **Timeout** box, set the timeout value in milliseconds.
-1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}[**Replay**](/docs/devtools/recorder/#replay) to see the adjusted default timeout in action.
-
-To overwrite the default timeout on a specific step:
-
-1. [Expand the step](/docs/devtools/recorder/#expand-step) and click **Add timeout**.
-
-   <div class="elevation--2", style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MEDm7NXPbGe3aObUhVj6.png", alt="Add timeout", width="800", height="542" %}</div>
-
-1. Click on the `timeout: <value>` and set the value in milliseconds.
-
-   <div class="elevation--2", style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8jkQCHfBatGJf8PxrlFi.png", alt="Set the timeout value", width="800", height="580" %}</div>
-
-1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}[**Replay**](/docs/devtools/recorder/#replay) to see the step with the timeout in action.
-
-To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9bkJ0VAuCp9iixG2LUtd.svg", alt="Delete", width="20", height="20" %} button next to it.
 
 ## Share user flows {: #share-flows }
 
@@ -115,7 +82,174 @@ To import a user flow:
 1. Select the JSON file with the recorded user flow.
 1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}**Replay** button to run the imported user flow.
 
-## Understand the recording's selector {: #selector }
+## Edit steps {: #edit-steps }
+
+You can edit any step in the recording by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1UTR0tiSxiKD0YSwAc1g.svg", alt="Expand", width="24", height="24" %} button next to it.
+
+You can also add missing steps and remove accidentally recorded ones as described below.
+
+### Add and remove steps {: #add-and-remove-steps }
+
+To add a step:
+
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="20", height="20" %} three-dot button next to any existing step.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vBETaaLND6v4PVtOvPzv.png", alt="Three-dot menu.", width="800", height="842" %}
+
+1. Select **Add step before** or **Add step after** from the drop-down menu.
+1. [Configure the new step](#configure-steps) by specifying its properties.
+
+To remove a step, select **Remove** from the same three-dot menu.
+
+### Configure steps {: #configure-steps }
+
+To configure a step:
+
+1. Specify its type: `click`, `doubleClick`, (input) `change`, `keyUp`, `keyDown`, `scroll`, `close`, `navigate` (to a page), `waitForElement`, or `waitForExpression`.
+   
+   Other properties depend on the `type` value.
+
+1. Specify the required properties below the `type`.
+   <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GICuzxrYSrsj2zyLdi8X.png", alt="Configuring a step.", width="800", height="388" %}</div>
+1. Click the corresponding buttons to add optional type-specific properties and specify them.
+
+For a list of available properties, see [Step properties](#step-properties).
+
+To remove an optional property, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G3beoQrG60COzsJM4TNb.svg", alt="Remove.", width="20", height="20" %} **Remove** button next to it.
+
+To add or remove an element to or from an array property, click the **+** or **-** buttons next to the element.
+
+#### Step properties {: #step-properties }
+
+Each step can have the following optional properties:
+
+- `target`—a URL for the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/) target, the default `main` keyword refers to the current page.
+- `assertedEvents` that currently can only be a single `navigation` event
+
+Other common properties available for most of the step types are:
+
+- `frame`—an array of zero-based indexes that identify an iframe that can be nested. For example, you can identify the first (0) iframe inside a second (1) iframe of the main target as `[1, 0]`.
+- `timeout`—a number of milliseconds to wait before executing a step. For more information, see [Adjust timeouts for steps](#adjust-timeout).
+- `selectors`—an array of selectors. For more information, see [Understand selectors](#selector).
+
+Type-specific properties are:
+
+<table>
+    <thead>
+        <tr>
+            <td>Type</td>
+            <td>Property</td>
+            <td>Required</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>click</code>, <code>doubleClick</code></td>
+            <td><code>offsetX</code>, <code>offsetY</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Relative to the top-left of the element content box, in pixels</td>
+        </tr>
+        <tr>
+            <td><code>click</code>, <code>doubleClick</code></td>
+            <td><code>button</code></td>
+            <td></td>
+            <td>Pointer button: primary | auxiliary | second | back | forward</td>
+        </tr>
+        <tr>
+            <td><code>change</code></td>
+            <td><code>value</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Final value</td>
+        </tr>
+        <tr>
+            <td><code>keyDown</code>, <code>keyUp</code></td>
+            <td><code>key</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Key name</td>
+        </tr>
+        <tr>
+            <td><code>scroll</code></td>
+            <td><code>x</code>, <code>y</code></td>
+            <td></td>
+            <td>Absolute scroll x and y positions in pixels, default 0</td>
+        </tr>
+        <tr>
+            <td><code>navigate</code></td>
+            <td><code>url</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>Target URL</td>
+        </tr>
+        <tr>
+            <td><code>waitForElement</code></td>
+            <td><code>operator</code></td>
+            <td></td>
+            <td>&gt;= | == (default) | &lt;=</td>
+        </tr>
+        <tr>
+            <td><code>waitForElement</code></td>
+            <td><code>count</code></td>
+            <td></td>
+            <td>Number of elements identified by a selector</td>
+        </tr>
+        <tr>
+            <td><code>waitForExpression</code></td>
+            <td><code>expression</code></td>
+            <td>{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lh0C6z3sePNX1Tiibddr.svg", alt="Check.", width="24", height="24" %}</td>
+            <td>JavaScript expression that resolves to true</td>
+        </tr>
+    </tbody>
+</table>
+
+There are two properties that make the replay pause:
+
+- The `waitForElement` property makes the step wait for the presence (or absence) of a number of elements identified by a selector. For example, the following step waits for less than three elements to be on the page that match the selector `.my-class`.
+
+     ```
+       "type": "waitForElement",
+       "selectors": [".my-class"],
+       "operator": "<=",
+       "count": 2,
+     ```
+
+- The `waitForExpression`  property makes the step wait for a JavaScript expression to resolve to true. For example, the following step pauses for two seconds and then resolves to true allowing the replay to continue.
+
+    ```
+       "type": "waitForExpression",
+       "expression": "new Promise(resolve => setTimeout(() => resolve(true),
+     2000))",
+     ```
+
+### Adjust timeouts for steps {: #adjust-timeout }
+
+In case your page has slow network requests or lengthy animations, the replay can fail on steps that exceed the default timeout of `5000` milliseconds.
+
+To avoid this problem, you can adjust the default timeout for each step at once or set separate timeouts for specific steps. Timeouts on specific steps overwrite the default.
+
+To adjust the default timeout for each step at once:
+
+1. Click on **Replay settings** to make the **Timeout** box editable.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ys9x9oHiQNATMSJkeYSn.png", alt="Replay settings", width="800", height="506" %}
+
+1. In the **Timeout** box, set the timeout value in milliseconds.
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}[**Replay**](/docs/devtools/recorder/#replay) to see the adjusted default timeout in action.
+
+To overwrite the default timeout on a specific step:
+
+1. [Expand the step](/docs/devtools/recorder/#expand-step) and click **Add timeout**.
+
+   <div class="elevation--2", style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MEDm7NXPbGe3aObUhVj6.png", alt="Add timeout", width="800", height="542" %}</div>
+
+1. Click on the `timeout: <value>` and set the value in milliseconds.
+
+   <div class="elevation--2", style="margin-top: 20px; margin-bottom: 20px;">{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8jkQCHfBatGJf8PxrlFi.png", alt="Set the timeout value", width="800", height="580" %}</div>
+
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}[**Replay**](/docs/devtools/recorder/#replay) to see the step with the timeout in action.
+
+To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9bkJ0VAuCp9iixG2LUtd.svg", alt="Delete", width="20", height="20" %} button next to it.
+
+## Understand selectors {: #selector }
 
 During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
 

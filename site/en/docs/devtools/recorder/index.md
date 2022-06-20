@@ -17,13 +17,13 @@ Take a glance at the new **Recorder** panel with the video below.
 {% YouTube id='rMUayh1QPYs' %}
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
 
-Complete this tutorial to learn how to use the **Recorder** panel to record, replay, measure user flows, and edit their steps.
+Complete this tutorial to learn how to use the **Recorder** panel to record, replay, measure user flows.
 
 {% Aside %}
 This is a preview feature in Chrome 97. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. 
 {% endAside %}
 
-For more information on **Recorder** capabilities and options, see the [Recorder features reference](/docs/devtools/recorder/reference/).
+For more information on how to share the recorded user flows, edit them and their steps, see the [Recorder features reference](/docs/devtools/recorder/reference/).
 
 ## Open the Recorder panel {: #open }
 
@@ -109,7 +109,9 @@ Learn how to [analyze your page's runtime performance](/devtools/evaluate-perfor
 
 ## Edit steps {: #edit-steps }
 
-Let's walk through the options to edit the steps within a workflow.
+Let's walk through the basic options to edit the steps within the recorded workflow.
+
+For a comprehensive list of editing options, see [Edit steps](/docs/devtools/recorder/reference/##edit-steps) in features reference.
 
 ### Expand steps {: #expand-step }
 
@@ -122,7 +124,7 @@ The step above shows two **selectors**. For more information, see [Understand th
 When replaying the user flow, the **Recorder** tries to query the element with one of the selectors by sequence.
 For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
 
-### Add and remove selectors from a step {: #add-remove-selectors}
+### Add and remove selectors from a step {: #add-remove-selectors }
 
 You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappuccino` is sufficient in this case. Hover over the *selector #2* and click on **`-`** to remove it.
 
