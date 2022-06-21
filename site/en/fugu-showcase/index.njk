@@ -34,32 +34,32 @@ Project Fugu 🐡 showcase
 </form>
 
 <div class="container">
-{% for app in fuguApis.fuguItems %}
+{% for item in fuguApis.fuguItems %}
   <article
     class=""
     id=""
   >
-    <h2><a href="{{ app.appURL }}" rel="noopener" target="_blank">{{ app.title }}</a></h2>
+    <h2><a href="{{ item.appURL }}" rel="noopener" target="_blank">{{ item.title }}</a></h2>
     <figure>
-      <a href="{{ app.appURL }}" rel="noopener" target="_blank">
+      <a href="{{ item.appURL }}" rel="noopener" target="_blank">
         <picture
-          ><source media="(prefers-color-scheme: dark)" srcset="" />
-          <source media="(prefers-color-scheme: light)" srcset="" />
-          <img alt="{{ 'Screenshot of ' + app.title }}" height="800" src="" width="1280"
+          ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshotDark }}" />
+          <source media="(prefers-color-scheme: light)" srcset="{{ item.screenshot }}" />
+          <img alt="{{ 'Screenshot of ' + item.title }}" height="800" src="{{ item.screenshot }}" width="1280"
             loading="lazy" /></picture>
       </a>
-      <figcaption class="description">{{ app.description }}</figcaption>
+      <figcaption class="description">{{ item.description }}</figcaption>
     </figure>
     <span class="launch"
-      ><a href="{{ app.appURL }}" rel="noopener" target="_blank">Launch app</a></span
-    >{% if app.sourceURL %}
+      ><a href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a></span
+    >{% if item.sourceURL %}
       <span class="source"
-        ><a href="{{ app.sourceURL }}" rel="noopener" target="_blank">Source code</a
+        ><a href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a
       ></span>{% endif %}
     <button class="share" type="button">Share app</button>
     <h3>Used APIs:</h3>
     <ul>
-      {% for api in app.usedAPIs %}
+      {% for api in item.usedAPIs %}
         <li>
           <a href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
         </li>
