@@ -17,7 +17,7 @@ Take a glance at the new **Recorder** panel with the video below.
 {% YouTube id='rMUayh1QPYs' %}
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
 
-Complete this tutorial to learn how to use the **Recorder** panel to record, replay, measure user flows.
+Complete this tutorial to learn how to use the **Recorder** panel to record, replay, and measure user flows.
 
 {% Aside %}
 This is a preview feature in Chrome 97. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. 
