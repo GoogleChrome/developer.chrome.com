@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 103
 description: >
-  Chrome 103 is rolling out now! There's a new HTTP status code that helps the browser decide what content to preload before the page has even started to arrive. The Local Font Access API gives web applications the ability to enumerate and use fonts installed on the user's computer. There's an easier way to implement timeouts on asynchronous APIs. And there's plenty more!
+  Chrome 103 is rolling out now! There's a new HTTP status code that helps the browser decide what content to preload before the page has even started to arrive. The Local Font Access API gives web applications the ability to enumerate and use fonts installed on the user's computer. There's an easier way to implement timeouts on asynchronous APIs. And there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-06-21
 authors:
@@ -22,7 +22,7 @@ Here's what you need to know:
   decide what content to preload before the page has even started to arrive.
 * The [Local Font Access API](#local-fonts) gives web applications the ability
   to enumerate and use fonts installed on the user's computer.
-* [`AbortSignal.timeout`](#abort-timeout) is an easier way to implement
+* [`AbortSignal.timeout()`](#abort-timeout) is an easier way to implement
   timeouts on asynchronous APIs.
 * And there's plenty [more](#more).
 
@@ -50,9 +50,9 @@ part of the page.
 Imagine the browser requests a page, but the server requires a few hundred
 milliseconds to generate it. Until the browser starts to receive the page,
 it just sits there and waits. But, if the server knows the page will always
-need a certain set of sub-resources, for example, a CSS file, some JavaScript,
+need a certain set of subresources, for example, a CSS file, some JavaScript,
 and a few images, it can immediately respond with the new HTTP 103
-Early Hints status code, and ask the browser to preload those sub-resources.
+Early Hints status code, and ask the browser to preload those subresources.
 
 Then, once the server has generated the page, it can send it with the normal
 HTTP 200 response. As the page comes in, the browser has already started
@@ -67,18 +67,16 @@ Get started with HTTP 103 Early hints:
 * [Using Early Hints on Cloudflare](https://developers.cloudflare.com/cache/about/early-hints/)
 * [Fastly Beyond Server Push: The 103 Early Hints Status Code](https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code)
 
-## Local font access API {: #local-fonts }
+## Local Font Access API {: #local-fonts }
 
 Fonts on the web have always been a challenge, and especially so for apps
 that let users create their own graphics and designs. Until now, web apps
-could only really use web fonts.
-
-There was no way to get a list of fonts the user had installed on their
+could only really use web fonts. There was no way to get a list of fonts the user had installed on their
 computer. And, there was no way to access the full font table data, critical
 if you need to implement your own custom text stack.
 
 The new Local Font Access API gives web applications the ability to enumerate
-the local fonts on the users device, and provides access to the font table data.
+the local fonts on the user's device, and provides access to the font table data.
 
 To get a list of fonts installed on the device, you'll first need to request
 permission.
@@ -135,8 +133,8 @@ on web.dev for complete details.
 In JavaScript, `AbortController` and `AbortSignal` are used to cancel an
 asynchronous call.
 
-For example, when making a `fetch` request, you can create an
-`AbortSignal`, and pass it to the `fetch`. If you want to cancel the `fetch`
+For example, when making a `fetch()` request, you can create an
+`AbortSignal`, and pass it to `fetch()`. If you want to cancel the `fetch()`
 before it returns, call `abort()` on the instance of the `AbortSignal`. Up
 until now, if you wanted it to abort after a specific amount of time, you'd
 need to wrap it in a `setTimeout()`.
@@ -163,7 +161,7 @@ const resp = fetch(url, { signal });
 ```
 
 [`AbortSignal.timeout()`](https://developer.mozilla.org/docs/Web/API/AbortSignal)
-is supported in Chrome 103, and is already in Firefox, and Safari!
+is supported in Chrome 103, and is already in Firefox, and Safari.
 
 ## And more! {: #more }
 
