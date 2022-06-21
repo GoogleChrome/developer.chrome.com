@@ -6,17 +6,94 @@
 require('dotenv').config();
 
 const {default: fetch} = require('node-fetch');
-const fs = require('fs');
 const path = require('path');
 const {unfurl} = require('unfurl.js');
+const sharp = require('sharp');
+const fs = require('fs').promises;
 
 const SPREADSHEET_URL =
   'https://sheets.googleapis.com/v4/spreadsheets/1S_Apr0HavFCO7H9hKcRjIUrgoT7MFRg4uBm7aWSoaYo/values/Sheet2?key=AIzaSyCkROWBarEOJ9hQJggyrlUFulOFA4h6AW0&alt=json';
+
+const SCREENSHOT_OPTIONS = {
+  width: 1280,
+  height: 800,
+  overwrite: true,
+  delay: 2,
+  type: 'webp',
+};
+
+async function limit(tasks, concurrency) {
+  const results = [];
+
+  async function runTasks(tasksIterator) {
+    for (const [index, task] of tasksIterator) {
+      try {
+        results[index] = await task();
+      } catch (error) {
+        results[index] = new Error(`Failed with: ${error.message}`);
+      }
+    }
+  }
+
+  const workers = new Array(concurrency).fill(tasks.entries()).map(runTasks);
+  await Promise.allSettled(workers);
+  return results;
+}
+
+const createScreenshots = async (data, overrideType = null) => {
+  const captureWebsite = (await import('capture-website')).default;
+  let items = data.map(item => [item.appURL, item.screenshot]);
+  const length = items.length;
+  if (!overrideType) {
+    items = items.concat(items);
+  }
+  const tasks = items.map(([url, filename], i) => {
+    return () => {
+      SCREENSHOT_OPTIONS.type = overrideType || SCREENSHOT_OPTIONS.type;
+      SCREENSHOT_OPTIONS.darkMode = i >= length;
+      filename = SCREENSHOT_OPTIONS.darkMode
+        ? filename.replace(
+            new RegExp(`(.${SCREENSHOT_OPTIONS.type}$)`),
+            '-dark$1'
+          )
+        : filename;
+      if (!SCREENSHOT_OPTIONS.darkMode) {
+        data[i].screenshot = filename;
+      } else {
+        data[i - length].screenshotDark = filename;
+      }
+      return captureWebsite.buffer(url, SCREENSHOT_OPTIONS).then(buffer => {
+        const fileLocation = 'site/en/fugu-showcase';
+        if (!overrideType) {
+          return sharp(buffer)
+            .resize({
+              width: SCREENSHOT_OPTIONS.width / 2,
+              height: SCREENSHOT_OPTIONS.height / 2,
+            })
+            .toBuffer()
+            .then(data => {
+              return fs
+                .writeFile(path.resolve(fileLocation, filename), data)
+                .then(() =>
+                  console.log(`Successfully created \`${filename}\`.`)
+                );
+            })
+            .catch(err => console.error(err));
+        }
+        return fs
+          .writeFile(path.resolve(fileLocation, filename), buffer)
+          .then(() => console.log(`Successfully created \`${filename}\`.`));
+      });
+    };
+  });
+  await limit(tasks, 5);
+};
 
 async function run() {
   if (process.env.CI) {
     return; // do nothing, the fallback data will win
   }
+  const fileNamifyURL = (await import('filenamify-url')).default;
   try {
     const response = await fetch(SPREADSHEET_URL);
     if (!response.ok) {
@@ -42,7 +119,9 @@ async function run() {
             url: api.replace(/.*?\((https.*)\)/g, '$1'),
           };
         }),
-        screenshot: '',
+        screenshot: `${fileNamifyURL(row[1])}.${
+          SCREENSHOT_OPTIONS.type
+        }`.replace(/#/g, ''),
       };
     });
 
@@ -72,7 +151,8 @@ async function run() {
     );
 
     const targetFile = path.join(__dirname, '../data/fugu-showcase.json');
-    fs.writeFileSync(targetFile, JSON.stringify(data, null, 2));
+    await fs.writeFile(targetFile, JSON.stringify(data, null, 2));
+    createScreenshots(data);
   } catch (error) {
     console.error(error);
     throw error;
