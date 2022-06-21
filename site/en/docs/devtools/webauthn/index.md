@@ -103,8 +103,8 @@ To remove a virtual authenticator, click its **Remove** button.
 
 [1]: https://try-webauthn.appspot.com
 [2]: /docs/devtools/open/
-[3]: https://www.w3.org/TR/2019/REC-webauthn-1-20190304/
-[4]: https://www.w3.org/TR/2019/REC-webauthn-1-20190304/#dom-publickeycredentialdescriptor-transports
-[5]: https://www.w3.org/TR/2019/REC-webauthn-1-20190304/#dom-authenticatorselectioncriteria-requireresidentkey
-[6]: https://www.w3.org/TR/2019/REC-webauthn-1-20190304/#userVerificationRequirement
+[3]: https://w3c.github.io/webauthn/
+[4]: https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports
+[5]: https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-requireresidentkey
+[6]: https://w3c.github.io/webauthn/#enumdef-userverificationrequirement
 [7]: https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-largeBlobKey-extension
