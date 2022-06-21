@@ -79,7 +79,7 @@ the events that signal transitions between them &mdash; is with a diagram:
 
   <figure>
 <a href="https://wd.imgix.net/image/kheDArv5csY6rvQUJDbWRscckLr1/Hs3H9gK98YT0pvvU3k25.png">
-    {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/Hs3H9gK98YT0pvvU3k25.png", alt="Page Lifecycle API state and event flow.", width="800", height="400" %}
+    {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/Hs3H9gK98YT0pvvU3k25.png", alt="Page Lifecycle API state and event flow.", width="800", height="541" %}
     </a>
   </figure>
 
