@@ -128,7 +128,7 @@ const pickedFonts = await self.queryLocalFonts(opts);
 Check out Tom's article [Use advanced typography with local fonts](https://web.dev/local-fonts/)
 on web.dev for complete details.
 
-## Easier Timeouts with AbortSignal.timeout()
+## Easier Timeouts with AbortSignal.timeout() {: #abort-timeout }
 
 In JavaScript, `AbortController` and `AbortSignal` are used to cancel an
 asynchronous call.
