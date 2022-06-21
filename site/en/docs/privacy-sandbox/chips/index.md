@@ -66,6 +66,7 @@ Example use cases for CHIPS include any scenarios where cross-site subresources 
 +   Sandbox domains for serving untrusted user content (such as googleusercontent.com and githubusercontent.com)
 +   Third-party CDNs that use cookies to serve content that's access-controlled by the authentication status on the first-party site (for example, profile pictures on social media sites hosted on third-party CDNs)
 +   Front-end frameworks that rely on remote APIs using cookies on their requests
++   Embedded ads that need state scoped per publisher (for example, capturing users' ads preferences for that website)
 
 ## How does it work?
 
