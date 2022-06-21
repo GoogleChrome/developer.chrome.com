@@ -19,7 +19,7 @@ Storage API.
 
 *  The [Shared Storage proposal](https://github.com/pythagoraskitty/shared-storage)
    has entered [public discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  We are [implementing this API in Chrome](#try-the-shared-storage-api).
+*  We are implementing this API in Chrome, and the [live demo is available](#try-the-shared-storage-api).
    *  The initial origin trial will likely only include the `selectURL` API
 	 function. Support for the Private Aggregation API is planned shortly after.
    *  The `selectURL` API is available for testing in Chrome Canary as of M104.
@@ -48,16 +48,17 @@ such as [Trust Tokens](/docs/privacy-sandbox/trust-tokens/),
 The Shared Storage API intends to support many use cases, replacing several
 existing uses for third-party cookies. This may include:
 
-*  Recording aggregated statistics, such as demographics, reach, frequency
-   measurement, and conversion measurement with the
-   [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api)
-*  Frequency capping
-*  Lift experiments
-*  A/B experimentation
+*  **Frequency capping** - When the same ad is shown repeatedly to a user, the ad starts to lose its effectiveness. Frequency capping allows you to limit the number of times an ad can be shown to a user. The count of how many times the user has seen the ad is saved in shared storage and can be accessed [cross-site](https://web.dev/same-site-same-origin/). 
+*  **A/B testing, such as brand lift experiment** - To see if an experiment has the desired effect, you can conduct A/B testing across multiple sites. As an advertiser, you can choose to render a different ad based on what group the user is assigned to. The group assignment is saved in shared storage.
+* **Creative rotation** - An advertiser may want to apply different strategies to an ad campaign, and rotate the creatives to increase effectiveness of the ads. Shared storage can be used to run different rotation strategies, such as sequential rotation and evenly-distributed rotation, across different sites.
+* **Known customer** - You may want to render a different element based on whether the user was seen on a different site. For example, a payment provider may want to render a "Register" or "Buy now" button based on whether the user has registered at the payment provider's site. Shared storage can be used to set the user's status.
+* **Reach measurement and custom reporting** - Advertisers can save user information, such as demographics, reach, frequency measurement, and conversion measurement, in shared storage. The [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api) can be used transmit and processes the data in a privacy-preserving way to generate an aggregated report.
 
 The proposal intends to create a general purpose API which supports many
 possible future use cases. This allows for further experimentation and change,
 to grow alongside the web ecosystem.
+
+Frequency capping, A/B testing, creative rotation, and known customer use cases can be seen in the [live demo](#try-the-shared-storage-api).
 
 ## How will shared storage work?
 
@@ -210,11 +211,21 @@ register("send-reach-report", SendReachReportOperation);
 
 ## Try the Shared Storage API
 
+### How to enable Shared Storage
+
 Shared Storage API with Fenced Frames can be tested in Chrome 104 (version
 104.0.5086.0 or later) by enabling the **Privacy Sandbox Ads APIs experiment**
 flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
+
+### How to use the demo
+
+The demo can be accessed from the [live site](https://shared-storage-demo.web.app), and the code is available on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
+
+The demo is constructed from the perspective of an advertiser/DSP that wants to store information across different publishers. Think of the advertiser as a shoe company, and the publishers as news companies. In the demo, the same advertiser code will run on both **Publisher A** and **Publisher B** sites for each use case. Visit both publishers to see how the data is shared between two sites. =
+
+The demo contains frequency capping, creative rotation, known customer, and A/B testing use cases.
 
 ## Engage and share feedback
 
