@@ -1,7 +1,5 @@
 ---
 api: windows
-special_permissions_html:
-  In many cases, this API does not require any permissions. See the <a href="#manifest">Manifest</a> section for details on permission use. 
 ---
 ## Manifest
 
