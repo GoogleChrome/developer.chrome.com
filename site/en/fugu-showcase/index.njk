@@ -1,258 +1,302 @@
+---
+title: 'Project Fugu API Showcase'
+subhead: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in
+  the context of Project Fugu.
+description: >
+  The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in
+  the context of Project Fugu.
+hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
+alt: Blowfish swarm swimming in the ocean.
+---
+
 {% extends "layouts/base.njk" %}
 
 {% block title_bar %}
-Project Fugu 🐡 showcase
+  {% set sharingEnabled = true %}
+  {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
 {% block content %}
-<p>
-  This showcase of
-  <a href="https://web.dev/fugu-status/" rel="noopener" target="_blank">Project Fugu APIs</a>
-  is sourced by community submissions. You can propose missing apps by submitting them via this
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform"
-    rel="noopener"
-    target="_blank"
-    >form</a
-  >. Submissions are reviewed on a regular basis and the site will be updated accordingly.
-</p>
+  {% if hero %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      {% Img
+        class="hero-image object-fit-cover",
+        src=hero,
+        alt=alt,
+        width="960",
+        height="480",
+        sizes="(min-width: 960px) 960px, 100vw"
+      %}
+    </div>
+  {% endif %}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    <div class="display-flex justify-content-center width-full">
+      <article class="post stack measure-long width-full pad-left-400 pad-right-400">
+        <div class="stack flow-space-200">
+          {% include 'partials/post-headline.njk' %}
+        </div>
+        <div class="home-container width-full center-margin pad-400">
+          <p>
+            This showcase of
+            <a href="/blog/fugu-status/">Project Fugu APIs</a>
+            is sourced by community submissions. You can propose missing apps by submitting them via this
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform"
+              rel="noopener"
+              target="_blank"
+              >form</a
+            >. Submissions are reviewed on a regular basis and the site will be updated accordingly.
+          </p>
 
-<form class="search-apis">
-  <label>Filter used APIs: <input class="search-apis" list="available-apis" type="search" /></label
-  ><button class="search-apis" type="reset">Clear</button>
-</form>
+          <form class="search-apis pad-top-400">
+            <label>Filter used APIs: <input class="search-apis" list="available-apis" type="search" /></label
+            ><button class="search-apis" type="reset">Clear</button>
+          </form>
 
-<datalist id="available-apis">
-  {% for availableAPI in fuguApis.availableApis %}
-    <option tabindex="0" value="{{ availableAPI }}">{{ availableAPI }}</option>
-  {% endfor %}
-</datalist>
+          <div class="cluster flow-space-200 gap-top-300 gap-bottom-300">
+            <datalist id="available-apis">
+              {% for availableAPI in fuguApis.availableApis %}
+                <option style="display: block;" class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg" tabindex="0" value="{{ availableAPI }}">{{ availableAPI }}</option>
+              {% endfor %}
+            </datalist>
+          </div>
 
-<form class="search-apps">
-  <label>Search apps: <input class="search-apps" list="available-apps" type="search" /></label
-  ><button class="search-apps" type="reset">Clear</button>
-</form>
+          <form class="search-apps pad-top-400">
+            <label>Search apps: <input class="search-apps" list="available-apps" type="search" /></label
+            ><button class="search-apps" type="reset">Clear</button>
+          </form>
 
-<div class="container">
-{% for item in fuguApis.fuguItems %}
-  <article
-    class=""
-    id=""
-  >
-    <h2><a href="{{ item.appURL }}" rel="noopener" target="_blank">{{ item.title }}</a></h2>
-    <figure>
-      <a href="{{ item.appURL }}" rel="noopener" target="_blank">
-        <picture
-          ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshotDark }}" />
-          <source media="(prefers-color-scheme: light)" srcset="{{ item.screenshot }}" />
-          <img alt="{{ 'Screenshot of ' + item.title }}" height="800" src="{{ item.screenshot }}" width="1280"
-            loading="lazy" /></picture>
-      </a>
-      <figcaption class="description">{{ item.description }}</figcaption>
-    </figure>
-    <span class="launch"
-      ><a href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a></span
-    >{% if item.sourceURL %}
-      <span class="source"
-        ><a href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a
-      ></span>{% endif %}
-    <button class="share" type="button">Share app</button>
-    <h3>Used APIs:</h3>
-    <ul>
-      {% for api in item.usedAPIs %}
-        <li>
-          <a href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    <a class="anchor" href="#">#</a>
-  </article>
-{% endfor %}
-</div>
+          <div class="blog-grid pad-top-400">
+            {% for item in fuguApis.fuguItems %}
+              {% set apis = "" %}
+              {% for api in item.usedAPIs %}
+                {% set name = api.name | replace(" ", "-") %}
+                {% set apis = apis + " " + name %}
+              {% endfor %}
+              {% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
+              <article id="{{ item.screenshot | replace(".webp", "") }}" data-name="{{ (item.title | lower) + " " + (item.appURL | lower) }}" data-used-apis="{{ apis }}" class="blog-card rounded-lg pad-300 md:pad-400 width-full">
+                <h2 class="type--h5">
+                  <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
+                    {{ item.title }}
+                  </a>
+                </h2>
+                <div class="gap-top-400 blog-card__thumbnail">
+                  <figure>
+                    <a href="{{ item.appURL }}" rel="noopener" target="_blank">
+                      <picture
+                        ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshotDark }}" />
+                        <source media="(prefers-color-scheme: light)" srcset="{{ item.screenshot }}" />
+                        <img class="hairline" alt="{{ 'Screenshot of ' + item.title }}" height="800" src="{{ item.screenshot }}" width="1280"
+                          loading="lazy" /></picture>
+                    </a>
+                    <figcaption class="type--caption gap-top-200">{{ item.description }}</figcaption>
+                  </figure>
+                </div>
+                <div>
+                  <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a>
+                  {% if item.sourceURL %}
+                    <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a>
+                  {% endif %}
+                  <button class="share material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" style="display: none;" type="button">Share app</button>
+                </div>
+                <div class="gap-top-400">
+                  <h3 class="type--h6 gap-top-300">Used APIs:</h3>
+                  <div class="cluster flow-space-200 gap-top-300">
+                    <div>
+                      {% for api in item.usedAPIs %}
+                        <a class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg" href="{{ api.url }}" rel="noopener" target="_blank">{{ api.name }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <div class="gap-top-400">
+                  <a class="heading-link" href="#{{ item.screenshot | replace(".webp", "") }}">#</a>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 
-<script>
-  const EMBED_URL = 'https://developer.chrome.com/fugu-showcase/';
+  <script>
+    const EMBED_URL = 'https://developer.chrome.com/fugu-showcase/';
 
-  const articles = document.querySelectorAll('article');
-  const options = document.querySelectorAll('option');
-  const button = document.querySelector('button[type="reset"].search-apis');
-  const input = document.querySelector('input.search-apis');
-  const form = document.querySelector('form.search-apis');
-  const searchButton = document.querySelector('button.search-apps');
-  const searchInput = document.querySelector('input.search-apps');
-  const shareButtons = document.querySelectorAll('.share');
-  const container = document.querySelector('.container');
-  const anchors = document.querySelectorAll('a.anchor');
+    const articles = document.querySelectorAll('article[data-used-apis]');
+    const options = document.querySelectorAll('option');
+    const button = document.querySelector('button[type="reset"].search-apis');
+    const input = document.querySelector('input.search-apis');
+    const form = document.querySelector('form.search-apis');
+    const searchButton = document.querySelector('button.search-apps');
+    const searchInput = document.querySelector('input.search-apps');
+    const shareButtons = document.querySelectorAll('.share');
+    const container = document.querySelector('.home-container');
+    const anchors = document.querySelectorAll('a.heading-link');
 
-  if ('clipboard' in navigator && 'writeText' in navigator.clipboard) {
-    anchors.forEach((anchor) => {
-      anchor.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const anchorURL = new URL(anchor.href);
-        anchor.classList.add('copied');
-        setTimeout(() => {
-          anchor.classList.remove('copied');
-        }, 3000);
-        window.history.pushState({}, '', anchorURL);
-        try {
-          const embedURL = new URL(EMBED_URL);
-          anchorURL.host = embedURL.host;
-          anchorURL.pathname = embedURL.pathname;
-          anchorURL.port = '';
-          anchorURL.protocol = 'https:';
-          await navigator.clipboard.writeText(anchorURL);
-        } catch (err) {
-          console.error(err.name, err.message);
-        }
+    const slugify = (string) => {
+      return string.toLowerCase().replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/-*$/g, '');
+    };
+
+    const availableAPIs = Array.from(document.querySelectorAll('datalist > option')).map(availableAPI => slugify(availableAPI.value));
+
+    if ('clipboard' in navigator && 'writeText' in navigator.clipboard) {
+      anchors.forEach((anchor) => {
+        anchor.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const anchorURL = new URL(anchor.href);
+          anchor.classList.add('copied');
+          setTimeout(() => {
+            anchor.classList.remove('copied');
+          }, 3000);
+          window.history.pushState({}, '', anchorURL);
+          try {
+            const embedURL = new URL(EMBED_URL);
+            anchorURL.host = embedURL.host;
+            anchorURL.pathname = embedURL.pathname;
+            anchorURL.port = '';
+            anchorURL.protocol = 'https:';
+            await navigator.clipboard.writeText(anchorURL);
+          } catch (err) {
+            console.error(err.name, err.message);
+          }
+        });
       });
-    });
-  }
-
-  const slugify = (string) => {
-    return string.toLowerCase().replace(/[^a-z0-9]/gi, '-').replace(/-+/g, '-').replace(/-*$/g, '');
-  };
-
-  const removeTargetClass = () => {
-    document.querySelectorAll('.target').forEach((target) => target.classList.remove('target'));
-  };
-
-  const clearURL = () => {
-    removeTargetClass();
-    const url = new URL(location.href);
-    url.searchParams.delete('api');
-    url.hash = '';
-    window.history.pushState({}, '', url);
-  };
-
-  searchInput.addEventListener('input', (e) => {
-    if (!e.target.value) {
-      input.dispatchEvent(new Event('input'));
-      return;
     }
-    input.value = '';
-    clearURL();
-    articles.forEach((article) => {
-      article.style.display = 'none';
-    });
-    const value = e.target.value.toLowerCase();
-    const matchingArticles = container.querySelectorAll(`article[class*="\${value}"]`);
-    matchingArticles.forEach((article) => {
-      article.style.display = 'block';
-    });
-  });
 
-  searchButton.addEventListener('click', (e) => {
-    clearURL();
-    searchInput.value = '';
-    searchInput.dispatchEvent(new Event('input'));
-  });
-
-  button.addEventListener('click', () => {
-    clearURL();
-    input.value = '';
-    input.dispatchEvent(new Event('input'));
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-  });
-
-  options.forEach((option) => {
-    option.addEventListener('click', (e) => {
-      clearURL();
-      input.value = option.value;
-      input.dispatchEvent(new Event('input'));
-    });
-    option.addEventListener('keypress', (e) => {
-      e.preventDefault();
-      if (e.key !== 'Enter' && e.key !== ' ') {
-        return;
-      }
-      clearURL();
-      input.value = option.value;
-      input.dispatchEvent(new Event('input'));
-    });
-  });
-
-  input.addEventListener('input', () => {
-    const value = slugify(input.value);
-    const url = new URL(window.location);
-    searchInput.value = '';
-    clearURL();
-    if (value && availableAPIs.includes(value)) {
-      url.searchParams.set('api', value);
+    const clearURL = () => {
+      const url = new URL(location.href);
+      url.searchParams.delete('api');
       url.hash = '';
       window.history.pushState({}, '', url);
-      articles.forEach(article => {
+    };
+
+    searchInput.addEventListener('input', (e) => {
+      if (!e.target.value) {
+        input.dispatchEvent(new Event('input'));
+        return;
+      }
+      input.value = '';
+      clearURL();
+      articles.forEach((article) => {
         article.style.display = 'none';
-        if (article.classList.contains(value)) {
-          article.style.display = 'block';
-        }
       });
-    } else {
-      articles.forEach(article => {
+      const value = e.target.value.toLowerCase();
+      const matchingArticles = container.querySelectorAll(`article[data-name*="${value}"]`);
+      matchingArticles.forEach((article) => {
         article.style.display = 'block';
       });
-      url.searchParams.delete('api');
-      window.history.pushState({}, '', url);
-    }
-  });
+    });
 
-  const getOptionValue = (api) => {
-    for (const option of options) {
-      if (slugify(option.value) === api) {
-        return option.value;
-        break;
-      }
-    }
-  };
+    searchButton.addEventListener('click', (e) => {
+      clearURL();
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+    });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'f' && e.metaKey) {
+    button.addEventListener('click', () => {
+      clearURL();
+      input.value = '';
+      input.dispatchEvent(new Event('input'));
+    });
+
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      searchInput.focus();
-    }
-  });
+    });
 
-  window.addEventListener('load', () => {
-    const url = new URL(window.location);
-    const api = url.searchParams.get('api');
-    if (api && availableAPIs.includes(api)) {
-      input.value = getOptionValue(api);
-    } else {
-      url.searchParams.delete('api');
-      window.history.pushState({}, '', url);
-    }
-    input.dispatchEvent(new Event('input'));
-  });
-
-  if ('share' in navigator && 'canShare' in navigator) {
-    const isMac = /Mac|iPhone/.test(navigator.platform);
-    shareButtons.forEach((button) => {
-      if (isMac) {
-        button.classList.add('mac');
-      }
-      button.style.display = 'block';
-      button.addEventListener('click', async (e) => {
-        const article = e.target.closest('article');
-        const img = article.querySelector('img');
-        const blob = await fetch(img.currentSrc).then((res) => res.blob());
-        const file = new File([blob], img.getAttribute('src'), { type: blob.type });
-        const data = {
-          text: `👀 I just found the app “\${article.querySelector('h2').textContent}”: \${article.querySelector('a').href}.\n\nAmong others, it uses these cool Project Fugu APIs:\n\n\${Array.from(article.querySelectorAll('li')).slice(0, 2).map(li => \`👉 \${li.textContent}\`).join('\\n')}\n\n(via the 🐡 \${document.title}: ${EMBED_URL})`.trim(),
-          files: [file],
+    options.forEach((option) => {
+      option.addEventListener('click', (e) => {
+        clearURL();
+        input.value = option.value;
+        input.dispatchEvent(new Event('input'));
+      });
+      option.addEventListener('keypress', (e) => {
+        e.preventDefault();
+        if (e.key !== 'Enter' && e.key !== ' ') {
+          return;
         }
-        if (navigator.canShare(data)) {
-          try {
-            await navigator.share(data);
-          } catch (err) {
-            if (err.name !== 'AbortError') {
-              console.error(err.name, err.message);
-            }
-          }
-        }
+        clearURL();
+        input.value = option.value;
+        input.dispatchEvent(new Event('input'));
       });
     });
-  }
-</script>
+
+    input.addEventListener('input', () => {
+      const value = slugify(input.value);
+      const url = new URL(window.location);
+      searchInput.value = '';
+      clearURL();
+      if (value && availableAPIs.includes(value)) {
+        url.searchParams.set('api', value);
+        url.hash = '';
+        window.history.pushState({}, '', url);
+        articles.forEach(article => {
+          article.style.display = 'none';
+          if (article.dataset.usedApis.split(' ').includes(value)) {
+            article.style.display = 'block';
+          }
+        });
+      } else {
+        articles.forEach(article => {
+          article.style.display = 'block';
+        });
+        url.searchParams.delete('api');
+        window.history.pushState({}, '', url);
+      }
+    });
+
+    const getOptionValue = (api) => {
+      for (const option of options) {
+        if (slugify(option.value) === api) {
+          return option.value;
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'f' && e.metaKey) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const url = new URL(window.location);
+      const api = url.searchParams.get('api');
+      if (api && availableAPIs.includes(api)) {
+        input.value = getOptionValue(api);
+      } else {
+        url.searchParams.delete('api');
+        window.history.pushState({}, '', url);
+      }
+      input.dispatchEvent(new Event('input'));
+    });
+
+    if ('share' in navigator && 'canShare' in navigator) {
+      shareButtons.forEach((button) => {
+        button.style.display = 'block';
+        button.addEventListener('click', async (e) => {
+          const article = e.target.closest('article');
+          const img = article.querySelector('img');
+          const blob = await fetch(img.currentSrc).then((res) => res.blob());
+          const file = new File([blob], img.getAttribute('src'), { type: blob.type });
+          const data = {
+            text: `👀 I just found the app “\${article.querySelector('h2').textContent}”: \${article.querySelector('a').href}.\n\nAmong others, it uses these cool Project Fugu APIs:\n\n\${Array.from(article.querySelectorAll('li')).slice(0, 2).map(li => \`👉 \${li.textContent}\`).join('\\n')}\n\n(via the 🐡 \${document.title}: ${EMBED_URL})`.trim(),
+            files: [file],
+          }
+          if (navigator.canShare(data)) {
+            try {
+              await navigator.share(data);
+            } catch (err) {
+              if (err.name !== 'AbortError') {
+                console.error(err.name, err.message);
+              }
+            }
+          }
+        });
+      });
+    }
+  </script>
 {% endblock %}
