@@ -41,6 +41,7 @@ async function limit(tasks, concurrency) {
 }
 
 const createScreenshots = async (data, overrideType = null) => {
+  // eslint-disable-next-line node/no-unsupported-features/es-syntax
   const captureWebsite = (await import('capture-website')).default;
   let items = data.map(item => [item.appURL, item.screenshot]);
   const length = items.length;
@@ -93,6 +94,7 @@ async function run() {
   if (process.env.CI) {
     return; // do nothing, the fallback data will win
   }
+  // eslint-disable-next-line node/no-unsupported-features/es-syntax
   const fileNamifyURL = (await import('filenamify-url')).default;
   try {
     const response = await fetch(SPREADSHEET_URL);
