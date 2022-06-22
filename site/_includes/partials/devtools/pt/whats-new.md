@@ -3,6 +3,19 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
+<!-- ### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/pt/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/pt/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/pt/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/pt/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/pt/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/pt/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/pt/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/pt/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/pt/blog/new-in-devtools-103/#sourcemaps) -->
+
+
 ### Chrome 102 {: #chrome102 }
 
 * [Prévia de funcionalidade: Novo painel de insights de performance](/pt/blog/new-in-devtools-102/#perf)

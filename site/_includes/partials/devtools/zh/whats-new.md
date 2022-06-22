@@ -2,6 +2,19 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
+<!-- ### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/zh/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/zh/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/zh/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/zh/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/zh/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/zh/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/zh/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/zh/blog/new-in-devtools-103/#sourcemaps) -->
+
+
 ### Chrome 102 {: #chrome102 }
 
 * [预览功能：新的 Performance insights 面板](/zh/blog/new-in-devtools-102/#perf)

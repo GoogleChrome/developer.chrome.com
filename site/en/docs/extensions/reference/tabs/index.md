@@ -37,9 +37,9 @@ Content scripts cannot use `chrome.tabs.create()`.
 
 {% endAside %}
 
-```js
-//// background.js
+{% Label %}background.js:{% endLabel %}
 
+```js
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({
@@ -62,9 +62,9 @@ scripts cannot use `tabs.query`.
 
 {% endAside %}
 
-```js
-//// background.js
+{% Label %}background.js:{% endLabel %}
 
+```js
 async function getCurrentTab() {
   let queryOptions = { active: true, lastFocusedWindow: true };
   // `tab` will either be a `tabs.Tab` instance or `undefined`.
@@ -84,9 +84,9 @@ Requires Manifest V3 due to the use of Promises. Content scripts cannot use `tab
 
 {% endAside %}
 
-```js
-//// background.js
+{% Label %}background.js:{% endLabel %}
 
+```js
 function toggleMuteState(tabId) {
   chrome.tabs.get(tabId, async (tab) => {
     let muted = !tab.mutedInfo.muted;
@@ -110,9 +110,9 @@ while a drag may be in progress.
 
 {% endAside %}
 
-```js
-//// background.js
+{% Label %}background.js:{% endLabel %}
 
+```js
 chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
 
 async function move(activeInfo) {

@@ -1,6 +1,6 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'Better Tab Sharing with Capture Handle'
+layout: 'layouts/doc-post.njk'
+title: 'Better tab sharing with Capture Handle'
 description: >
   The web platform now ships with Capture Handle, a mechanism that allows a capturing web app to ergonomically and confidently identify the captured web app, if the captured web app has opted-in.
 authors:
@@ -166,7 +166,6 @@ Send a tweet to [@ChromiumDev] and let us know where and how you are using it.
 ## Acknowledgements
 
 Thanks to [Joe Medley] for reviewing this article.
-Calendar image photo by [Jessica Kantak Bailey] on [Unsplash].
 
 [cross-document navigation]: https://chromium.googlesource.com/chromium/src/+/main/docs/navigation_concepts.md#Same_Document-and-Cross_Document-Navigations
 [sample]: https://capture-handle.glitch.me/
