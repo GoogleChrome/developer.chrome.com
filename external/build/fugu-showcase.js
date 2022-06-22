@@ -19,7 +19,7 @@ const SCREENSHOT_OPTIONS = {
   height: 800,
   overwrite: true,
   delay: 2,
-  /** @type "webp" | "png" | "jpeg" | undefined' */ type: 'webp',
+  type: 'webp',
 };
 
 async function limit(tasks, concurrency) {

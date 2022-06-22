@@ -85,7 +85,7 @@ alt: Blowfish swarm swimming in the ocean.
                   <figure>
                     <a href="{{ item.appURL }}" rel="noopener" target="_blank">
                       <picture
-                        ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshotDark }}" />
+                        ><source media="(prefers-color-scheme: dark)" srcset="{{ item.screenshot | replace(".webp", "-dark.webp") }}" />
                         <source media="(prefers-color-scheme: light)" srcset="{{ item.screenshot }}" />
                         <img class="hairline" alt="{{ 'Screenshot of ' + item.title }}" height="800" src="{{ item.screenshot }}" width="1280"
                           loading="lazy" /></picture>
