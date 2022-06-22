@@ -24,12 +24,12 @@ The **Rendering** tab helps you:
 
 ## Open the Rendering tab {: #open-rendering }
 
-To open the **Rendering** tab: 
+To open the **Rendering** tab:
 
 1. [Open DevTools](/docs/devtools/open/).
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the
     **Command Menu**.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VH5DGkKSHnAm0tD8DJHv.png", alt="Command menu, Rendering", width="800", height="637" %}
@@ -38,7 +38,7 @@ To open the **Rendering** tab:
     DevTools displays the **Rendering** tab at the bottom of your DevTools window.
 
 {% Aside 'gotchas' %}
-In addition to opening the **Rendering** tab, you can also use the Command menu to search for and enable any option. Try typing an option name, for example, `emulate`. 
+In addition to opening the **Rendering** tab, you can also use the Command menu to search for and enable any option. Try typing an option name, for example, `emulate`.
 {% endAside %}
 
 Alternatively, you can open the **Rendering** tab in the following ways:

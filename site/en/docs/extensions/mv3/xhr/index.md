@@ -224,4 +224,4 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 [9]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [10]: /docs/extensions/mv3/security#content_scripts
 [11]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
-[12]: /docs/extensions/mv3/contentSecurityPolicy
+[12]: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy

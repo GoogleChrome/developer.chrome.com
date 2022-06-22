@@ -7,6 +7,6 @@ description: Reference documentation for the chrome.experimental.input.ui API.
 ---
 
 Use the `chrome.experimental.input.ui` module to implement input method user interface. This module
-is for Chrome OS only. [chrome.experimental.\* APIs][1] page.
+is for ChromeOS only. [chrome.experimental.\* APIs][1] page.
 
 [1]: /docs/extensions/experimental

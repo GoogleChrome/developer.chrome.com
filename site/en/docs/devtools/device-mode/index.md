@@ -209,7 +209,7 @@ To throttle the network only and not the CPU, go the **Network** panel and selec
 
 **Figure 19**. The Throttle list
 
-Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
 Menu, type `3G`, and select **Enable fast 3G throttling** or **Enable slow 3G throttling**.
 
 {% Img src="image/admin/dpOHIvK5v3J5Flv1Zrsv.png", alt="The Command Menu.", width="800", height="518" %}
@@ -234,7 +234,7 @@ and then select **More tools** > **Sensors**.
 
 **Figure 22**. Sensors
 
-Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
 Menu, type `Sensors`, and then select **Show Sensors**.
 
 {% Img src="image/admin/hVVQ0sRjUQkDKWfyjH8O.png", alt="Show Sensors", width="800", height="627" %}
@@ -259,7 +259,7 @@ and then select **More tools** > **Sensors**.
 
 **Figure 25**. Sensors
 
-Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
 Menu, type `Sensors`, and then select **Show Sensors**.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nQ9bLVGBdLT4I9jvm69f.png", alt="Show Sensors", width="800", height="627" %}

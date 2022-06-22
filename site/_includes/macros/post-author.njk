@@ -9,7 +9,7 @@
 
 <div class="display-flex align-start">
   {% if author.image %}
-    <a href="{{ author.url }}" class="card-authors__image">
+    <a href="{{ author.url }}" translate="no" class="card-authors__image">
       {% Img
         class="flex-shrink-none width-600 height-600",
         src=author.image,
@@ -22,7 +22,7 @@
   {% endif %}
   <div class="display-flex direction-column align-start gap-left-300 type--small">
     {% if author %}
-      <a href="{{ author.url }}" class="surface display-inline-flex color-text">{{ author.title | i18n(locale) }}</a>
+      <a href="{{ author.url }}" translate="no" class="surface display-inline-flex color-text">{{ author.title | i18n(locale) }}</a>
       <p class="color-secondary-text">{{ author.description | i18n(locale) }}</p>
     {% else %}
       <p>{{ authorId }}</p>

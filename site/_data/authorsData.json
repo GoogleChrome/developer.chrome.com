@@ -1,4 +1,18 @@
 {
+  "ryanseddon": {
+    "homepage": "https://ryanseddon.com/",
+    "twitter": "ryanseddon"
+  },
+  "timstatler": {
+    "twitter": "tstatz"
+  },
+  "deannarubin": {
+    "twitter": "deanna_rubin"
+  },
+  "pearlchen": {
+    "homepage": "http://karma-laboratory.com/",
+    "twitter": "PearlChen"
+  },
   "arthurevans": {
     "github": "arthurevans",
     "twitter": "devdocdude"
@@ -149,7 +163,8 @@
     "github": "housseindjirdeh"
   },
   "katiehempenius": {
-    "twitter": "katiehempenius"
+    "twitter": "katiehempenius",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/mS485fIOwA8B1869Iy0A.jpeg"
   },
   "cbrand": {
     "github": "christiaanbrand",
@@ -456,6 +471,17 @@
     "github": "beaufortfrancois",
     "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
   },
+  "cwallez": {
+    "country": "FR",
+    "twitter": "DaKangz",
+    "github": "Kangz",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/mYkUaoNpythq50oIFiQh.jpeg"
+  },
+  "eladalon": {
+    "country": "SE",
+    "github": "eladalon1983",
+    "image": "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/EAFBslJDQgJynWlS3Hp8.jpeg"
+  },
   "atotic": {
     "country": "US",
     "twitter": "atotic",
@@ -677,5 +703,57 @@
     "github": "SimonHearne",
     "linkedin": "https://www.linkedin.com/in/simonhearne/",
     "homepage": "https://simonhearne.com"
+  },
+  "jarhar": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/xHYktxBPGfDHbzmEufy9.jpeg",
+    "github": "https://github.com/josepharhar",
+    "twitter": "https://twitter.com/josepharhar"
+  },
+  "emmatwersky": {
+    "country": "US",
+    "homepage": "https://twerske.dev",
+    "github": "twerske",
+    "twitter": "twerske",
+    "image": "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/7lFlJupvNAPBh7huFYyg.png"
+  },
+  "pfaffe": {
+    "country": "DE",
+    "github": "pfaffe"
+  },
+  "sbc": {
+    "country": "US",
+    "github": "sbc100"
+   },
+   "ericsl": {
+     "country": "DE",
+     "github": "ericsl"
+   },
+  "rkochman": {
+    "country": "US",
+    "twitter": "rkochman",
+    "image": "image/admin/2TCATL7dglEFzZZWnXo0.jpg"
+  },
+  "kenjibaheux": {
+    "country": "JP",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/SPujPUYWhP5RXRNXCvKX.jpeg"
+  },
+  "buettner": {
+    "country": "US",
+    "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/4vRQOG0KfM3DoG3iNxG3.jpeg"
+  },
+  "egsweeny": {
+    "country": "US",
+    "github": "egsweeny",
+    "twitter": "egsweeny",
+    "image": "image/MtjnObpuceYe3ijODN3a79WrxLU2/C1NFRYmipqzYPr1f6tXZ.jpg"
+  },
+  "samthor": {
+    "country": "AU",
+    "homepage": "https://whistlr.info/",
+    "twitter": "samthor",
+    "github": "samthor",
+    "glitch": "samthor",
+    "image": "image/admin/XQIDJD6narW2eA4d141g.jpg"
   }
 }

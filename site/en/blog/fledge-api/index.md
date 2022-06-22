@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-04-21
+updated: 2022-05-13
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -19,9 +19,7 @@ tags:
 %}
 
 
-{: #who}
-
-## Who is this article for?
+## Who is this article for? {: #who}
 
 This post is a technical reference to the current iteration of the experimental FLEDGE API.
 
@@ -35,9 +33,7 @@ deployment.
 explains how the demo code works, and shows how to use Chrome DevTools for FLEDGE debugging.
 
 
-{: #what}
-
-## What is FLEDGE?
+## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use cases, designed so that it cannot be used by
@@ -192,7 +188,7 @@ about feature support and constraints.
 
 The default in the current implementation of FLEDGE is to allow calling `joinAdInterestGroup()` from
 anywhere in a page, even from cross-domain iframes. In the future, once site owners have had time
-to adjust their cross-domain iframe permissions policies, the plan is to disallow calls from
+to adjust their cross-domain iframe [permissions policies](/docs/privacy-sandbox/permissions-policy/), the plan is to disallow calls from
 cross-domain iframes, as the explainer describes.
 
 #### Trusted servers
@@ -226,6 +222,55 @@ disabled the API via browser settings, or they may have other settings that prev
 being used. In order to protect user privacy, there is no way to check for this programmatically.
 
 {% endAside %}
+
+
+## How can I opt out of FLEDGE? {: #opt-out}
+
+You can block access to the FLEDGE API either as a site owner, or as an individual user.
+
+### How can sites control access? {: #opt-out-site}
+
+FLEDGE will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to allow FLEDGE functionality to be available. This will help ensure that arbitrary third parties can't use the API without a site's
+knowledge. However, to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
+this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
+Sites that would like to explicitly disable FLEDGE functionality during the testing period can use
+the relevant Permissions Policy to block access.
+
+There are two FLEDGE permissions policies that can be set independently:
+* `join-ad-interest-group` enables/disables functionality to add a browser to interest groups
+* `run-ad-auction` enables/disables functionality to run an on-device auction
+
+Access to FLEDGE APIs can be disabled completely in first-party contexts by specifying the following
+permissions policy in an HTTP response header:
+
+``` text
+Permissions-Policy: join-ad-interest-group=(), run-ad-auction=()
+```
+
+You can disable usage of the APIs in an iframe by adding the following `allow` attribute to an
+iframe element:
+
+``` html
+<iframe src="https://example.com" allow="join-ad-interest-group 'none'; run-ad-auction 'none'"></iframe>
+```
+
+The [Proposed First FLEDGE Origin Trial Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy) section provides more detail.
+
+### User opt-out {: #opt-out-user}
+
+A user can block access to the FLEDGE API and other Privacy Sandbox features by using any of the
+following mechanisms:
+
+*  **Disable the Privacy Sandbox trials** in Chrome Settings: **Settings** >
+    **Security and privacy** > **Privacy Sandbox**. This is also accessible at `chrome://settings/privacySandbox`.
+* **Disable third-party cookies** in Chrome Settings: **Settings** > **Security and privacy**.
+* Set **Cookies and other site data** to either "Block third-party cookies" or "Block all cookies"
+  from `chrome://settings/cookies`.
+* Use Incognito mode.
+
+The FLEDGE explainer provides [more detail about API design elements](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements) and describes how the API seeks to meet [privacy goals](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=privacy%20goal).
+
 
 ## Debug FLEDGE worklets {: #debugging }
 
@@ -358,7 +403,7 @@ For example: it must not be possible for `malicious.example` to call
 
 **Same origin**: By default, permission is implicitly granted for `joinAdInterestGroup()` calls from
 the same origin as the site being visited, i.e. from the same origin as the top-level frame of the
-current page. Sites can use a FLEDGE [permissions policy header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
+current page. Sites can use a FLEDGE [permissions policy header](/docs/privacy-sandbox/permissions-policy/)
  `join-ad-interest-group` directive to disable `joinAdInterestGroup()` calls.
 
 **Cross origin**: Calling `joinAdInterestGroup()` from origins that are different from the current
@@ -516,6 +561,7 @@ interest group. In the [current implementation](https://source.chromium.org/chro
 the following attributes can be changed:
 
 * `biddingLogicUrl`
+* `biddingWasmHelperUrl`
 * `trustedBiddingSignalsUrl`
 * `trustedBiddingSignalsKeys`
 * `ads`
@@ -889,7 +935,7 @@ FLEDGE explainer for more information.
 #### How are ads selected?
 
 The code at `decisionLogicUrl` (a property of the auction configuration object passed to
-[`runAdAuction()`(#ad-auction)) must include a `scoreAd()` function. This is run once for each ad
+[`runAdAuction()`](#ad-auction)) must include a `scoreAd()` function. This is run once for each ad
 to determine its desirability.
 
 ```javascript

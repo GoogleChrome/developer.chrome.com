@@ -42,7 +42,7 @@ Progress notifications show a progress bar:
 
 ## How they behave {: #behave }
 
-On Chrome OS, notifications show up in a user's system tray, and stay in the system tray until the
+On ChromeOS, notifications show up in a user's system tray, and stay in the system tray until the
 user dismisses them. The system tray keeps a count of all new notifications. Once a users sees the
 notifications in the system tray, the count is reset to zero.
 

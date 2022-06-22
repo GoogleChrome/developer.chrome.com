@@ -158,7 +158,7 @@ You can now view details on blocked features under the **Permissions policy** se
 
 Open this [demo](http://permission-policy-demo.glitch.me/) page. Go to the **Application** panel and select a frame. In the **Permissions Policy** section, scroll to the **Disabled Features** property. Click on **Show details** to view the details on why the feature is blocked. Click on the icon next to each policy to navigate to the iframe or network request that blocked the feature.
 
-[Permissions policy](https://github.com/w3c/webappsec-permissions-policy/blob/main/permissions-policy-explainer.md) is a web platform API which gives a website the ability to allow or block the use of browser features in its own frame or in iframes that it embeds.
+[Permissions policy](/docs/privacy-sandbox/permissions-policy/) is a web platform API which gives a website the ability to allow or block the use of browser features in its own frame or in iframes that it embeds.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/8GxecpqtEUv3xoocvcLi.png", alt="Blocked features in the Frame details view", width="800", height="461" %}
 

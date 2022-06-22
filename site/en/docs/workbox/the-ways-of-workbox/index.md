@@ -121,7 +121,7 @@ The options you pass to either `GenerateSW` or `InjectManifest` aren't the same 
 
 ## Using a framework
 
-Everything covered up this point focuses on using Workbox regardless of one's framework preferences. However, it's possible to use Workbox within a specific framework if it makes development easier. For example, [`create-react-app` ships with Workbox by default](https://web.dev/precache-with-workbox-react/). Different framework integrations with Workbox [are covered later in a later article](LINK IT UP).
+Everything covered up this point focuses on using Workbox regardless of one's framework preferences. However, it's possible to use Workbox within a specific framework if it makes development easier. For example, [`create-react-app` ships with Workbox by default](https://web.dev/precache-with-workbox-react/). Different framework integrations with Workbox [are covered later in a later article](/docs/workbox/framework-integrations/).
 
 It's worth noting that these framework-specific integrations of Workbox may restrict your ability to configure Workbox in the way you want. In cases like these, you can always fall back to the methods discussed in this article.
 

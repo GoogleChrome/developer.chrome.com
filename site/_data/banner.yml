@@ -1,0 +1,6 @@
+type: info
+text: Check out what's new for the web platform at Google IO!
+actions:
+  - text: Join the party
+    href: https://io.google/2022/products/web/
+  - text: Dismiss

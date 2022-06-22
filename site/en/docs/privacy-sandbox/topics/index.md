@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-04-21
+updated: 2022-06-15
 authors:
   - samdutton
 ---
@@ -175,6 +175,10 @@ on the user's device, could then use the model to calculate the most popular top
 based on the [hostnames](https://web.dev/same-site-same-origin/#origin) of the sites recently
 visited.
 
+{% Aside %}
+View the topics inferred for hostnames [from the `chrome://topics internal` page](#view-inferred-topics).
+{% endAside %}
+
 The diagram below outlines a simplified example, to demonstrate how the 
 Topics API might help an adtech platform to select an appropriate ad. The 
 example assumes that the user's browser already has a
@@ -312,6 +316,7 @@ const creative = await response.json();
 API callers only receive topics they've recently observed, and the topics for a user are refreshed
 once each epoch. That means the API provides a rolling window in which a given caller may receive
 certain topics.
+
 The table below outlines an example (though unrealistically small) of a hypothetical browsing
 history for a user during a single epoch, showing topics associated with the sites they've visited,
 and the API [callers](#caller) present on each site (the entities that call
@@ -417,9 +422,34 @@ model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website
 
 Analyzing additional information (such as full URLs or page contents) might
 allow for more relevant ads, but might also reduce privacy.
+
 The classifier model for mapping hostnames to topics would be publicly available, and the explainer
-proposes that it should be possible to view the topics for a site via browser developer tools. The
-mapping model would be updated periodically; the frequency of this is still under consideration.
+proposes that it should be possible to view the topics for a site via browser developer tools.  The
+model is expected to evolve and improve over time and be updated periodically; the frequency of this
+is still under consideration.
+
+#### Where can I find the current classifier model?
+
+Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at`chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
+
+To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
+
+To inspect the `override_list.pb.gz` file:
+
+* Unpack it: `gunzip -c override_list.pb.gz > override_list.pb`
+* Use protoc to inspect: `protoc --decode_raw < override_list.pb > output.txt`
+
+ A full [taxonomy of topics with IDs is available on GitHub](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md).
+
+#### How can I provide feedback or input on the classifier model?
+
+There are [several channels](/docs/privacy-sandbox/feedback/) for
+providing feedback on the Topics proposal. For feedback on the classifier model, we recommend
+[submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to
+an existing issue. For example:
+
+* [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
+* [What if a site disagrees to the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/2)
 
 ### How are the user's top five topics selected?
 
@@ -443,6 +473,192 @@ epoch, with a 5% chance that any of these may be randomly chosen from the full t
 In Chrome, users would also be able to remove individual topics, or clear their browsing history to
 reduce the number of topics returned by the API. Users may also opt-out of the API: see [User
 opt-out](#opt-out).
+
+{% Aside %}
+View information about topics observed during the current epoch [from the `chrome://topics internal` page](#view-current-topics).
+{% endAside %}
+
+### How can I debug API usage? {: #debug}
+
+The `chrome://topics-internals` page is available in Chrome Canary and Chrome Dev, if
+[you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags).
+This displays topics for the current user, topics inferred for hostnames, and technical information
+about the API implementation.
+
+{% Aside %}
+The `chrome://topics-internals` page is new! Design and functionality are still under discussion.
+
+We're currently iterating and improving the design based on developer feedback. Add your feedback at
+[bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3ETopicsAPI).
+{% endAside %}
+
+#### View topics calculated for your browser {: #view-current-topics}
+
+You can view information about topics observed for your browser during the current and previous
+epochs.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
+  alt="Screenshot of chrome://topics-internal page with Topics State panel selected.",
+  width="800", height="697" %}
+
+In this example, recently visited sites included
+[topics-demo-cats.glitch.me](http://topics-demo-cats.glitch.me) and
+[cats-cats-cats-cats.glitch.me](cats-cats-cats-cats.glitch.me). This caused the Topics API to
+select `Pets` and `Cats` as two of the top topics for the current epoch. The remaining three
+topics have been [chosen at random](https://github.com/patcg-individual-drafts/topics#:~:text=random),
+since there is not enough browsing history (on sites that observe topics) to provide five topics.
+
+The **Observed-by context domains (hashed)** column provides the hashed value of a hostname for
+which a topic was observed.
+
+#### View topics inferred for hostnames {: #view-inferred-topics}
+
+You can view the topics inferred by the Topics
+[classifier model](https://github.com/patcg-individual-drafts/topics#:~:text=classifier%20model) for
+one or more hostnames.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
+  alt="Screenshot of chrome://topics-internal page with Classifier panel selected.",
+  width="800", height="695" %}
+
+{% Aside %}
+The current implementation of the Topics API infers topics from hostnames only: not any other part
+of a URL.
+
+Use hostnames only (without protocol or path) to view inferred topics from the
+`chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you
+attempt to include a  "/" in the Host field.
+ {% endAside %}
+
+####  View Topics API information {: #view-api-information}
+
+Information is provided about the Topics API implementation and settings, such as the
+[taxonomy](/docs/privacy-sandbox/topics/#taxonomy) version and
+[epoch](/docs/privacy-sandbox/topics/#epoch) duration. These values
+reflect default settings for the API or parameters successfully set [from the command
+line](#feature-flags). This is handy for checking that command line flags have worked as expected:
+in the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven
+days).
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
+  alt="Screenshot of chrome://topics-internal page with Features and Parameters panel selected.",
+  width="800", height="695" %}
+
+The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally 
+to see all the details!)
+
+The parameters correspond to flags that can be set when running Chrome from the command line. For
+example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the
+following flags:
+
+```text
+--enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
+```
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left;"><strong>Parameter</strong></th>
+      <th style="text-align: left;"><strong>Default value</strong></th>
+      <th style="text-align: left;"><strong>Meaning</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>BrowsingTopics</code></td>
+      <td>enabled</td>
+      <td>Whether the Topics API is enabled.</td>
+    </tr>
+    <tr>
+      <td><code>PrivacySandboxAdsAPIsOverride</code></td>
+      <td>enabled</td>
+      <td>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</td>
+    </tr>
+    <tr>
+      <td><code>PrivacySandboxSettings3</code></td>
+      <td>disabled</td>
+      <td>Enables the third release of the Privacy Sandbox UI settings.</td>
+    </tr>
+    <tr>
+      <td><code>OverridePrivacySandboxSettingsLocalTesting</code></td>
+      <td>enabled</td>
+      <td>If enabled, the browser no longer requires the underlying settings to be enabled for
+enabling the Privacy Sandbox features.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopicsBypassIPIsPubliclyRoutableCheck</code></td>
+      <td>disabled</td>
+      <td>If enabled, the check for whether the IP address is publicly routable will be
+bypassed when determining the eligibility for a page to be included in topics
+calculation.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:number_of_epochs_to_expose</code></td>
+      <td>3</td>
+      <td>The number of epochs from where to calculate the topics to give to a requesting
+context. The browser will internally keep up to N+1 epochs.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:time_period_per_epoch</code></td>
+      <td style="white-space: nowrap;">7d-0h-0m-0s</td>
+      <td>Duration of each <a href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=epoch">epoch</a>.
+      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:number_of_top_topics_per_epoch</code></td>
+      <td>5</td>
+      <td>Number of topics calculated per epoch.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:use_random_topic_probability_percent</code></td>
+      <td>5</td>
+      <td>Probability that an individual topic within an epoch is one returned at random from
+the entire <a
+href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+of topics. The randomness is sticky to an epoch and site.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:number_of_epochs_of_observation_data_to_use_for_filtering</code></td>
+      <td>3</td>
+      <td>How many epochs of API usage data (i.e. topics observations) will be used for
+filtering the topics for a calling context.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></td>
+      <td>1000</td>
+      <td>The max number of observed-by context domains to keep for each top topic. The intent
+is to cap the in-use memory.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></td>
+      <td>100000</td>
+      <td>The max number of entries allowed to be retrieved from the database for each query
+for the API usage contexts. The query will occur once per epoch at topics calculation
+time. The intent is to cap the peak memory usage.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></td>
+      <td>30</td>
+      <td>The max number of API usage context domains allowed to be stored per page load.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:config_version</code></td>
+      <td>1</td>
+      <td>Encodes the Topics API configuration parameters. Each version number should only be
+mapped to one configuration set. Updating the configuration parameters without updating the `config_version` should
+be usually fine for local testing, but in some situations could leave the browser in an
+inconsistent state and/or could let the browser crash, e.g. updating the
+`number_of_top_topics_per_epoch`.</td>
+    </tr>
+    <tr>
+      <td><code>BrowsingTopics:taxonomy_version</code></td>
+      <td>1</td>
+      <td>The <a
+href="https://developer.chrome.com/docs/privacy-sandbox/topics/#:~:text=taxonomy">taxonomy</a>
+version used by the API.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## How does the Topics API address concerns with FLoC?
 
@@ -530,12 +746,6 @@ calculation for their visitors with the following
 ```text
 Permissions-Policy: browsing-topics=()
 ```
-
-{% Aside %}
-
-The existing Permissions-Policy `interest-cohort=()` from FLOC will also forbid topic calculation.
-
-{% endAside %}
 
 ### User opt-out
 
