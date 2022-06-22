@@ -1,6 +1,7 @@
 tools:
   - url: devtools
   - url: workbox
+  - url: puppeteer
 crx:
   - url: extensions
   - url: webstore
