@@ -42,16 +42,28 @@ This is what the final file structure of this project will look like:
 
 ### Step 1: Add the extension information {: #step-1 }
 
-Let’s create the most important Chrome extension file: the **manifest.json**. Place it at the root of the project: the Reading time folder. Include the following code to specify name, description and version number of our extension: 
+The `manifest.json` is the only required extension file. It contains important information about the extension; we will continue adding more fields as we go along. For now, create a `manifest.json` file in the root of the project and add the following code to specify the name, description, and version number of the extension:
 
 ```json
 {
  "manifest_version": 3,
  "name": "Reading time",
- "description": "Add the reading time to the Chrome Extension  documentation",
+ "description": "Add the reading time to the Chrome Extension documentation",
  "version": "1.0"
 }
 ```
+
+{% Details %}
+{% DetailsSummary %}
+👆 **Learn more about the manifest**
+{% endDetailsSummary %}
+
+- The metadata is displayed in the extension manager and the Chrome Web Store listing.
+- The manifest [JSON][mdn-json] file does not support comments in the Chrome Web Store.
+- The `manifest.json` must always go at the **root** of the project.  
+
+
+{% endDetails %}
 
 ### Step 2: Provide the icons {: #step-2 }
 
@@ -133,7 +145,7 @@ if (article) {
 ```
 
 
-ASIDE TIP: [Viewing the DOM](https://developer.chrome.com/docs/devtools/dom/) explains how to inspect the DOM  to find out which element you want to query using the Chrome devtools.
+ASIDE TIP: [Viewing the DOM][dev-dom] explains how to inspect the DOM  to find out which element you want to query using the Chrome devtools.
 
 
 ## Test that it works {: #try-out }
@@ -170,18 +182,20 @@ Continue developing your skills by completing any of the following:
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
 | [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
-| [Tabs Manager][tut-tabs-man]     | To create a popup that manages browser tabs.                           |
+| [Tabs Manager][tut-tabs-manager]     | To create a popup that manages browser tabs.                           |
 
 [dev-chrome]: https://developer.chrome.com/docs/
-[devtools]: https://developer.chrome.com/docs/devtools/)
+[devtools]: https://developer.chrome.com/docs/devtools/
 [doc-cs]: /docs/extensions/mv3/content_scripts/
-[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-icons]: /docs/extensions/mv3/manifest/icons/
 [doc-promises]: /docs/extensions/mv3/promises/
-[doc-tut-focus-mode]: /docs/extensions/mv3/getstarted/focus-mode
-[doc-tut-focus-mode]: /docs/extensions/mv3/getstarted/tabs-manager
+[tut-focus-mode]: /docs/extensions/mv3/getstarted/focus-mode
+[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tabs-manager
 [doc-welcome]:/docs/extensions/mv3/
 [gh-reading-time]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
 [w3-dom]: https://www.w3.org/TR/DOM-Level-2-HTML/
 [workbox]: https://developer.chrome.com/docs/workbox/
+[devtools-dom]: https://developer.chrome.com/docs/devtools/dom/
+[tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
+[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager

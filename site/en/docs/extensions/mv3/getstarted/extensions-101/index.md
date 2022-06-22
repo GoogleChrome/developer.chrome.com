@@ -39,7 +39,7 @@ For a complete list of APIs, see the [Extension development Overview][doc-dev-ov
 Below is a short explanation of the most frequently used extension components:
 
 [The Manifest][doc-manifest]
-: The manifest is the only required file. It is a JSON file that records important metadata, defines resources, declares permissions, and identifies which files to run in the background and what files to run on the page.
+: The manifest is the only required file. It is a [JSON][mdn-json] file that records important metadata, defines resources, declares permissions, and identifies which files to run in the background and what files to run on the page.
 
 [The service worker][doc-service-worker]
 : The extension service worker handles and listens for browser events, such as navigating to a new page, removing a bookmark, or closing a tab. As a service worker, It lies dormant until an event is fired and then reacts with specified instructions. It can access all the [Chrome APIs][doc-apis], but it cannot directly access the content of web pages; that’s the job of content scripts.
@@ -76,7 +76,7 @@ Choose any of the following step-by-step beginner tutorials to begin your Chrome
 |----------------------------------|------------------------------------------------------------------------|
 | [Reading time][tut-reading-time] | To insert an element on every page automatically.                      |
 | [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
-| [Tabs Manager][tut-tabs-man]     | To create a popup that manages browser tabs.                           |
+| [Tabs Manager][tut-tabs-manager]     | To create a popup that manages browser tabs.                           |
 
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome Extension and Chrome Web store documentation.
 
@@ -94,10 +94,11 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [doc-ui-action]: /docs/extensions/mv3/user_interface/#action
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
-[mdn-dom]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+[mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
+[mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
 [section-tutorials]: #building
-[tut-focus-mode]: https://google.com
-[tut-reading-time]: https://google.com
-[tut-tabs-man]: https://google.com
+[tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
+[tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
+[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
