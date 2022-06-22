@@ -3,17 +3,17 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 
-<!-- ### Chrome 103 {: #chrome103 }
+### Chrome 103 {: #chrome103 }
 
-* [Capture double-click and right-click events in the Recorder panel](/ko/blog/new-in-devtools-103/#recorder)
-* [New timespan and snapshot mode in the Lighthouse panel](/ko/blog/new-in-devtools-103/#lighthouse)
-* [Improved zoom control in the Performance Insights panel](/ko/blog/new-in-devtools-103/#zoom)
-* [Confirm to delete a performance recording](/ko/blog/new-in-devtools-103/#delete)
-* [Picking a color outside of the browser](/ko/blog/new-in-devtools-103/#color)
-* [Improved inline value preview during debugging](/ko/blog/new-in-devtools-103/#inline-preview)
-* [Support large blobs for virtual authenticators](/ko/blog/new-in-devtools-103/#webauthn)
-* [New keyboard shortcuts in the Sources panel](/ko/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/ko/blog/new-in-devtools-103/#sourcemaps) -->
+* [Recorder 패널에서 더블 클릭 & 우 클릭 이벤트 캡쳐하기](/ko/blog/new-in-devtools-103/#recorder)
+* [Lighthouse 패널에서 새로 출시된 timspan 과 snapshot 모드](/ko/blog/new-in-devtools-103/#lighthouse)
+* [Performance Insights 패널에서 zoom 컨트롤 개선](/ko/blog/new-in-devtools-103/#zoom)
+* [성능 레코딩 삭제 확인](/ko/blog/new-in-devtools-103/#delete)
+* [브라우저 밖의 색상 선택하기](/ko/blog/new-in-devtools-103/#color)
+* [디버깅 중 인라인 값 미리보기 개선](/ko/blog/new-in-devtools-103/#inline-preview)
+* [가상 인증자를 위한 대규모 Blob 지원](/ko/blog/new-in-devtools-103/#webauthn)
+* [소스 패널에서 새로운 키보드 단축키 지원](/ko/blog/new-in-devtools-103/#shortcuts)
+* [소스맵 개선](/ko/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
