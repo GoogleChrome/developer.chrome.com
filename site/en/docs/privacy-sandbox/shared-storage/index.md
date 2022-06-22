@@ -223,7 +223,7 @@ flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 The demo can be accessed from the [live site](https://shared-storage-demo.web.app), and the code is available on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
-The demo is constructed from the perspective of an advertiser/DSP that wants to store information across different publishers. Think of the advertiser as a shoe company, and the publishers as news companies. In the demo, the same advertiser code will run on both **Publisher A** and **Publisher B** sites for each use case. Visit both publishers to see how the data is shared between two sites. =
+The demo is constructed from the perspective of an advertiser/DSP that wants to store information across different publishers. Think of the advertiser as a shoe company, and the publishers as news companies. In the demo, the same advertiser code will run on both **Publisher A** and **Publisher B** sites for each use case. Visit both publishers to see how the data is shared between two sites.
 
 The demo contains frequency capping, creative rotation, known customer, and A/B testing use cases.
 
