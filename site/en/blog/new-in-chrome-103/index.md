@@ -4,6 +4,7 @@ description: >
   Chrome 103 is rolling out now! There's a new HTTP status code that helps the browser decide what content to preload before the page has even started to arrive. The Local Font Access API gives web applications the ability to enumerate and use fonts installed on the user's computer. There's an easier way to implement timeouts on asynchronous APIs. And there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-06-21
+updated: 2022-06-22
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VmtySPL3SpEcse1ttSGr.png'
@@ -128,7 +129,7 @@ const pickedFonts = await self.queryLocalFonts(opts);
 Check out Tom's article [Use advanced typography with local fonts](https://web.dev/local-fonts/)
 on web.dev for complete details.
 
-## Easier Timeouts with AbortSignal.timeout()
+## Easier Timeouts with AbortSignal.timeout() {: #abort-timeout }
 
 In JavaScript, `AbortController` and `AbortSignal` are used to cancel an
 asynchronous call.
@@ -173,6 +174,10 @@ Of course there's plenty more.
   platforms.
 * And `Element.isVisible()` tells you whether an element is visible or not.
 
+{% Aside %}
+In the video, I mentioned `Element.isVisible()` is available in stable, but
+it is currently only available behind a feature flag.
+{% endAside %}
 
 ## Further reading
 
