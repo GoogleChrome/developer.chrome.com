@@ -6,7 +6,7 @@ description: >
   Find out how your server can send hints to the browser about critical sub-resources.
 subhead: >
   Find out how your server can send hints to the browser about critical sub-resources.
-date: 2022-06-21
+date: 2022-06-23
 authors:
   - kenjibaheux
 tags:
@@ -37,7 +37,7 @@ Early Hints is an HTTP status code (`103 Early Hints`) used to send a preliminar
 <figcaption>With Early Hints: the server can serve a partial response with resource hints while it determines the final response</figcaption>
 </figure>
 
-In some cases, the performance improvement to the [Largest Contentful Paint](http://web.dev/lcp) can go from several hundred milliseconds, as observed in case studies by Shopify and [by Cloudflare](http://blog.cloudflare.com/early-hints-performance), and up to a second faster, as seen in this before/after comparison:
+In some cases, the performance improvement to the [Largest Contentful Paint](http://web.dev/lcp) can go from several hundred milliseconds, as observed by [Shopify](https://twitter.com/colinbendell/status/1539322190541295616) and [by Cloudflare](http://blog.cloudflare.com/early-hints-performance), and up to a second faster, as seen in this before/after comparison:
 
 
 <figure>
