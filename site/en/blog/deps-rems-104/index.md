@@ -3,7 +3,7 @@ title: Deprecations and removals in Chrome 104
 description: >
   A round up of the deprecations and removals in Chrome 104 to help you plan.
 layout: 'layouts/blog-post.njk'
-date: 2022-06-23
+date: 2022-06-30
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/r2jZ0eCtd4KDjgEYu3BC.png'
 alt: >
   Deprecations and Removals hero logo
@@ -15,7 +15,7 @@ tags:
 
 {% include 'partials/see-all-dep-rem.md' %}
 
-Chrome 104 beta was released on June 23, 2022 and is expected to become the
+Chrome 104 beta was released on June 30, 2022 and is expected to become the
 stable version in early August, 2022.
 
 ## Block third-party contexts navigating to filesystem URLs
