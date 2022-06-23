@@ -108,11 +108,11 @@ ASIDE: Match patterns consist of three parts &lt;scheme>://&lt;host>&lt;path>. T
 
 When the user installs your extension, the browser will let them know which sites your extension will be running on. In this example, the user would see the following permission warning:
 
-_Did you know about relative paths in the manifest? _
+_Did you know about relative paths in the manifest?_
 
 All files should be relative to the manifest file and start with a letter, not with a leading “/” or “./”.
 
-### Step 4:  Calculate and insert reading time {: #step-4 }
+### Step 4: Calculate and insert reading time {: #step-4 }
 
 Content scripts use the standard [Document Object Model][w3-dom] (DOM) to read details of the web pages and make changes. Add a folder called **scripts** and in it a file called `content.js`.
 

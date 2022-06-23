@@ -45,7 +45,7 @@ Below is a short explanation of the most frequently used extension components:
 : The extension service worker handles and listens for browser events, such as navigating to a new page, removing a bookmark, or closing a tab. As a service worker, It lies dormant until an event is fired and then reacts with specified instructions. It can access all the [Chrome APIs][doc-apis], but it cannot directly access the content of web pages; that’s the job of content scripts.
 
 [Content scripts][doc-content-scripts]
-: Content scripts can execute Javascript in the context of a web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs](https://developer.chrome.com/docs/extensions/reference/), but can indirectly access the rest by exchanging messages with the extension service worker.
+: Content scripts can execute Javascript in the context of a web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs][doc-reference], but can indirectly access the rest by exchanging messages with the extension service worker.
 
 <!-- Not sure if to include the extension action or extension icons -->
 [The extension action][doc-ui-action]
@@ -89,6 +89,7 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-overview]: /docs/extensions/mv3/devguide
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
 [doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
 [doc-ui-action]: /docs/extensions/mv3/user_interface/#action
