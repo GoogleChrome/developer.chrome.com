@@ -14,7 +14,8 @@ tags:
   - experiment
 ---
 
-The Attribution Reporting proposal has changed for Chrome version 104, with new API mechanisms, functionality, and updates to the aggregation service.
+The Attribution Reporting proposal is changing for [Chrome version 104](https://chromiumdash.appspot.com/schedule),
+with new API mechanisms, functionality, and updates to the aggregation service.
 
 ## Who are these updates for?
 
