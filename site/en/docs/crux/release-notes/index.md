@@ -3,14 +3,14 @@
 layout: 'layouts/doc-post.njk'
 
 # Required
-title: CrUX Release Notes
+title: Release Notes
 
 # Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Details on the latest changes to the Chrome User Experience Report
+  Details on the latest changes to the CrUX dataset
 
 # Optional
 # This appears below the title and is an optional teaser
@@ -18,11 +18,11 @@ subhead: >
   Details on the latest changes to the Chrome User Experience Report
 
 # Required
-date: 2022-04-01
+date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2020-10-16
+updated: 2022-06-14
 
 # Optional
 # How to add a new author
@@ -40,6 +40,41 @@ tags:
 The CrUX dataset on BigQuery is updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
+
+In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202205
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/A_LAY_lYxQk)
+
+Publication date
+ : June 14, 2022
+
+What's new
+ : - The percentage of origins having good LCP experiences increased this month by 2.4%, thanks in large part to an improvement in the [performance of Chrome on Android](https://blog.chromium.org/2022/03/a-new-speed-milestone-for-chrome.html#:~:text=Chrome%20continues%20to%20get%20faster%20on%20Android%20as%20well.%20Loading%20a%20page%20now%20takes%2015%25%20less%20time%2C%20thanks%20to%20prioritizing%20critical%20navigation%20moments%20on%20the%20browser%20user%20interface%20thread.). This was a major contributing factor to the percentage of origins having good Core Web Vitals increasing by 2.1%.
+ : - With this release, CrUX records no longer require effective connection type and form factor, so we're including data for which these fields are `NULL`, indicating all effective connection types or form factors, respectively. This allows us to increase origin coverage by 28.2%.
+ : - An unrelated issue with our data pipeline prevents us from adding new origins in this release, so we're only including origins for which we published data in the previous 6 months. Due to this, `experimental.popularity.rank` has some gaps, e.g. there are only 904 origins in the top 1,000. This is unique to the 202205 release and should be fixed next month.
+
+Notable stats
+ : - 11,024,795 origins
+ : - 42% of origins have good Core Web Vitals
+
+## 202204
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/v-h5gKkUEE0)
+
+Publication date
+ : May 3, 2022
+
+What's new
+ : - This release includes `experimental.interaction_to_next_paint`, our updated responsiveness metric.
+ : - `experimental_interaction_to_next_paint` in the CrUX API, with thresholds 200ms and 500ms.
+ : - `experimental_time_to_first_Byte` in the CrUX API, with thresholds 800ms and 1800ms.
+
+Notable stats
+ : - 8,602,902 origins
+ : - 41.2% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202203
 
@@ -105,7 +140,7 @@ Publication date
  : December 14, 2021
 
 What's new
- : - We've removed the old CLS metric: experimental.uncapped_cumulative_layout_shift is no longer in this BigQuery release, and CrUX API no longer serves experimental_uncapped_cumulative_layout_shift. Please use the current CLS metric instead.
+ : - We've removed the old CLS metric: `experimental.uncapped_cumulative_layout_shift` is no longer in this BigQuery release, and CrUX API no longer serves `experimental.uncapped_cumulative_layout_shift`. Please use the current CLS metric instead.
  : - An LCP fix rolled out with M96.
 
 Notable stats
