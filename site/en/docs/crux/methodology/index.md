@@ -18,7 +18,7 @@ subhead: >
   This section documents how CrUX collects and organizes user experience data.
 
 # Required
-date: 2022-06-01
+date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
@@ -26,13 +26,13 @@ date: 2022-06-01
 
 # Optional
 # How to add a new author
-# https://developer.chrome.com/docs/handbook/how-to/add-an-author/
+# /docs/handbook/how-to/add-an-author/
 authors:
   - simonhearne
 
 # Optional
 # How to a new tag
-# https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
+# /docs/handbook/how-to/add-a-tag/
 tags:
   - performance
 ---
@@ -55,19 +55,19 @@ For a **user** to have their experiences aggregated in the CrUX dataset, they mu
 The current supported platforms are:
 
 - Desktop versions of Chrome including Windows, MacOS, ChromeOS, and Linux operating systems
-- Android versions of Chrome, including native apps using [Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/webapks/)
+- Android versions of Chrome, including native apps using [Custom Tabs](/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/webapks/)
 
 There are a few notable exceptions that do not provide data to the CrUX dataset:
 
 - Chrome on iOS
 - Native Android apps using WebView
-- Other Chromium browsers (e.g. [Microsoft Edge](https://www.microsoft.com/en-us/edge))
+- Other Chromium browsers (e.g. [Microsoft Edge](https://www.microsoft.com/edge))
 
 Chrome does not publish data about the proportions of users that meet these criteria. You can learn more about the data we collect in the [Chrome Privacy Whitepaper](https://www.google.com/chrome/privacy/whitepaper.html#usagestats).
 
 ### Origin {: #origin-eligibility }
 
-An [**origin**](https://developer.mozilla.org/en-US/docs/Glossary/Origin) represents an entire website, addressable by a URL like `https://www.example.com`. For an origin to be included in the CrUX dataset it must meet two requirements:
+An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents an entire website, addressable by a URL like `https://www.example.com`. For an origin to be included in the CrUX dataset it must meet two requirements:
 
 1. Publicly discoverable
 2. Sufficiently popular
@@ -76,7 +76,7 @@ An origin is considered to be publicly discoverable if its **root page** is disc
 
 Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
 
-- The page is served with an HTTP [status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) other than `200`
+- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200`
 - The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation)
 - The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)
 - The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro)
@@ -378,7 +378,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 {% Aside %}
 "The DOMContentLoaded reports the time when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading."
 
-<cite><a href="https://developer.mozilla.org/en-US/docs/web/api/window/domcontentloaded_event">MDN</a></cite>
+<cite><a href="https://developer.mozilla.org/docs/web/api/window/domcontentloaded_event">MDN</a></cite>
 {% endAside %}
 
 ### Largest Contentful Paint {: #lcp-metric }
@@ -394,7 +394,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 {% Aside %}
 "The load event is fired when the page and its dependent resources have finished loading."
 
-<cite><a href="https://developer.mozilla.org/en-US/docs/Web/Events/load">MDN</a></cite>
+<cite><a href="https://developer.mozilla.org/docs/Web/Events/load">MDN</a></cite>
 {% endAside %}
 
 ### First Input Delay {: #fid-metric }
@@ -439,7 +439,7 @@ Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022]
 
 #### Popularity {: #popularity-metric}
 
-The [popularity rank](https://developer.chrome.com/blog/crux-rank-magnitude/) metric is a relative measure of site popularity within the CrUX dataset, measured by the total number of navigations on the origin. Rank is on a log10 scale (e.g. top 1k, 10k, 100k, 1M, etc.) with each rank excluding the previous (e.g. top 10k is actually 9k URLs, excluding top 1k). The upper limit is dynamic as the dataset grows.
+The [popularity rank](/blog/crux-rank-magnitude/) metric is a relative measure of site popularity within the CrUX dataset, measured by the total number of navigations on the origin. Rank is on a log10 scale (e.g. top 1k, 10k, 100k, 1M, etc.) with each rank excluding the previous (e.g. top 10k is actually 9k URLs, excluding top 1k). The upper limit is dynamic as the dataset grows.
 
 Popularity is provided as a guide for broad analysis, e.g. to determine performance by country for the top 1,000 origins. It should not be used to determine an origin's overall popularity on the web.
 
@@ -448,7 +448,7 @@ Popularity is provided as a guide for broad analysis, e.g. to determine performa
 {% Aside %}
 "The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms."
 
-<cite><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">MDN</a></cite>
+<cite><a href="https://developer.mozilla.org/docs/Web/API/Notifications_API">MDN</a></cite>
 {% endAside %}
 
 ## Dimensions
@@ -459,7 +459,7 @@ Data may not be available for all dimensions, based on [eligibility criteria](#p
 
 ### Effective Connection Type {: #ect-dimension }
 
-[Effective Connection Type](https://developer.mozilla.org/en-US/docs/Glossary/Effective_connection_type) (ECT) is a web platform API to broadly categorize visitor connection speeds. This dimension in the CrUX dataset allows you to:
+[Effective Connection Type](https://developer.mozilla.org/docs/Glossary/Effective_connection_type) (ECT) is a web platform API to broadly categorize visitor connection speeds. This dimension in the CrUX dataset allows you to:
 
 - See a breakdown of connection speeds of real visitors
 - Filter performance data by connection speed
@@ -518,11 +518,11 @@ The form factor dimension allows you to query against three separate form factor
 - Tablet (`TABLET`)
 - Desktop (`DESKTOP`)
 
-Form factor is inferred from the device [user-agent string](https://developer.chrome.com/docs/multidevice/user-agent/).
+Form factor is inferred from the device [user-agent string](/docs/multidevice/user-agent/).
 
 ### Country {: #country-dimension }
 
-The country dimension was [added to CrUX in 2018](https://developer.chrome.com/blog/crux-2018-01/). The term "country" is used loosely, as some geographic areas are politically disputed. Values in the country dimension are inferred from users' IP addresses and represented as two-letter country codes as defined by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+The country dimension was [added to CrUX in 2018](/blog/crux-2018-01/). The term "country" is used loosely, as some geographic areas are politically disputed. Values in the country dimension are inferred from users' IP addresses and represented as two-letter country codes as defined by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 Country-level datasets are provided in addition to the global dataset, with the standard eligibility requirements applied at a country level. A table is [provided for each country](../bigquery/#schema-country-summary), as well as [summary tables](../bigquery/#schema-raw-tables) which include the country code as a column.
 

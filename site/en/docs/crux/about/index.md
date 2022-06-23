@@ -18,7 +18,7 @@ subhead: >
   The Chrome User Experience Report (also known as the Chrome UX Report, or CrUX for short) is a dataset that reflects how real-world Chrome users experience popular destinations on the web.
 
 # Required
-date: 2022-06-01
+date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post

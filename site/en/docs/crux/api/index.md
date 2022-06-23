@@ -18,7 +18,7 @@ subhead: >
   The Chrome UX Report API gives low-latency access to aggregated Real User Metrics (RUM) from the Chrome User Experience Report.
 
 # Required
-date: 2022-06-01
+date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post

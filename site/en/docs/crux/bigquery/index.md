@@ -18,7 +18,7 @@ subhead: >
   CrUX data can be accessed via BigQuery. Learn more about data structure and example queries.
 
 # Required
-date: 2022-06-01
+date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
