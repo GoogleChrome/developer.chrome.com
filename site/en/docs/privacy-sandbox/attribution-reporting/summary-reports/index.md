@@ -15,12 +15,8 @@ authors:
 
 ## Implementation status
 
-*  In the initial proposal
-   ([client-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
-   [server-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md))
-   and discussion stage
-*  Attribution Reporting [API
-   specification](https://wicg.github.io/conversion-measurement-api/)
+*  This API is available in the [ads relevance and measurement origin trial]/blog/privacy-sandbox-unified-origin-trial/).
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
 
 ## What is an Attribution Reporting summary report?
@@ -294,7 +290,9 @@ is the proposed format for summary reports.
 
 ## Engage and share feedback
 
-*  GitHub: read the [client-side
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  Read the [Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
+*  Read the [client-side
    proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)
    and [aggregation service
    proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md),
