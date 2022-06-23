@@ -22,10 +22,6 @@ stable version in early August, 2022.
 
 iframes can [no longer navigate to filesystem URLs](https://chromestatus.com/feature/5816343679991808). Top frame support for navigating to filesystem URLs was dropped in Chrome 68.
 
-## Remove clamping of setTimeout()
-
-Calls to `[setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)` with a duration of 0 were previously clamped to a 1 ms, instead of resulting in a callback as soon as possible. [This has been fixed](https://www.chromestatus.com/feature/4889002157015040). If your script relied on the previous behavior, you can set the duration to 1.
-
 ## Remove non-standard client hint mode
 
 Four client hints (`dpr`, `width`, `viewport-width`, and `device-memory`) have a default allowlist of `self` but behave as though they have a default allowlist of `*` on Android, contrary to the spec. [This is now fixed](https://www.chromestatus.com/feature/5694492182052864), increasing privacy on Android by requiring explicit delegation of these hints.
