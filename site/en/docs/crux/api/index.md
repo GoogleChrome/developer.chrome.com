@@ -57,7 +57,7 @@ Identifiers specify what records should be looked up. In the Chrome UX Report th
 
 When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the http://www.example.com origin had pages as laid out by this sitemap:
 
-```
+```text
 http://www.example.com
 http://www.example.com/foo.html
 http://www.example.com/bar.html
@@ -69,7 +69,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 
 When the identifier is a url only data for that specific url will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
-```
+```text
 http://www.example.com
 http://www.example.com/foo.html
 http://www.example.com/bar.html
@@ -93,7 +93,7 @@ Metrics are expressed in a histogram, which represents the percent of users that
 
 A simple three bin histogram for metric "ExampleMetric" looks like this.
 
-```
+```json
 {
   "histogram": [
     {
@@ -120,7 +120,7 @@ Additionally, 49.9% of users experience an ExampleMetric value between 1,000ms a
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
-```
+```json
 {
   "percentiles": {
     "p75": 2063
@@ -160,7 +160,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 Queries are submitted as JSON objects via a POST request to `https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=[YOUR_API_KEY]"` with query data as a JSON object in the POST body, e.g.
 
-```
+```json
 {
   "origin": "https://example.com",
   "formFactor": "PHONE",
@@ -173,7 +173,7 @@ Queries are submitted as JSON objects via a POST request to `https://chromeuxrep
 
 Page-level data is available through the API by passing a `url` property in the query, e.g.
 
-```
+```json
 {
   "url": "https://example.com/page",
   "formFactor": "PHONE",
@@ -219,7 +219,7 @@ There is a single endpoint for the CrUX API which accepts `POST` HTTP requests. 
 
 ### HTTP Request
 
-```
+```http
 POST https://chromeuxreport.googleapis.com/v1/records:queryRecord
 ```
 
@@ -308,7 +308,6 @@ For example, to request the desktop largest contentful paint values for the Chro
 }
 ```
 
-
 ### Response Body
 
 Successful requests return responses with a `record` object and `urlNormalizationDetails` in the following structure:
@@ -331,7 +330,7 @@ Successful requests return responses with a `record` object and `urlNormalizatio
 }
 ```
 
-For example the response to the request body in the [above example]() could be:
+For example, the response to the request body in the above request could be:
 
 ```json
 {
