@@ -32,7 +32,7 @@ Websites have become more sophisticated over time. As such, it's not unusual tha
 Early Hints is an HTTP status code (`103 Early Hints`) used to send a preliminary HTTP response ahead of a final response. This allows a server to send hints to the browser about critical sub-resources (for example,  stylesheet for the page, critical JavaScript) or origins that will be likely used by the page, while the server is busy generating the main resource. The browser can use those hints to warm up connections, and request sub-resources, while waiting for the main resource. In other words, Early Hints helps the browser take advantage of such "server think-time" by doing some work in advance, thereby speeding up page loads.
 
 <figure>
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/jBvw3bncw5GZ9DcsH4jy.png", alt="Image showing how Early Hints allows the page to become ", width="347", height="357" %}
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/jBvw3bncw5GZ9DcsH4jy.png", alt="Image showing how Early Hints allows the page to send a partial response.", width="347", height="357" %}
 
 <figcaption>With Early Hints: the server can serve a partial response with resource hints while it determines the final response</figcaption>
 </figure>
@@ -41,7 +41,7 @@ In some cases, the performance improvement to the [Largest Contentful Paint](htt
 
 
 <figure>
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/oMiX9VrAFUtE9U4S3UTt.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/oMiX9VrAFUtE9U4S3UTt.jpg", alt="Comparison of two sites.", width="800", height="450" %}
 
 <figcaption>Before/After comparison of Early Hints on a test website done with <a href="https://www.webpagetest.org/">WebPageTest</a> (Moto G4 - DSL)</figcaption>
 </figure>
@@ -140,7 +140,6 @@ Here is a quick summary of the level of support for Early Hints among popular OS
 
 If you are using one of the following CDNs or platforms, you may not need to manually implement Early Hints. Refer to your solution provider's online documentation to find out if it supports Early Hints, or refer to the non-exhaustive list here:
 
--  [Early Hints at Shopify](https://developers.cloudflare.com/cache/about/early-hints/)
 -  [Early Hints at Cloudflare](https://developers.cloudflare.com/cache/about/early-hints/)
 -  [Early Hints at Fastly](https://www.google.com/url?q=https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code%23:~:text%3Dabout%2520this%2520feature.-,Sending%2520103%2520Early%2520Hints,in%2520VCL%252C%2520like%2520this%253A&sa=D&source=docs&ust=1655290700718877&usg=AOvVaw07p23rkLcV4vplasZJBjEx).
 
