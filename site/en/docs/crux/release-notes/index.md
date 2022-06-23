@@ -97,7 +97,7 @@ Publication date
  : March 8, 2022
 
 What's new
- : - This release includes `experimental.responsiveness`, our candidate for the new responsiveness metric. Please see [web.dev/responsiveness/](https://web.dev/responsiveness/) for details.
+ : - This release includes `experimental.responsiveness`, our candidate for the new responsiveness metric. See [web.dev/responsiveness/](https://web.dev/responsiveness/) for details.
 
 Notable stats
  : - 8,764,246 origins
@@ -139,7 +139,7 @@ Publication date
  : December 14, 2021
 
 What's new
- : - We've removed the old CLS metric: `experimental.uncapped_cumulative_layout_shift` is no longer in this BigQuery release, and CrUX API no longer serves `experimental.uncapped_cumulative_layout_shift`. Please use the current CLS metric instead.
+ : - We've removed the old CLS metric: `experimental.uncapped_cumulative_layout_shift` is no longer in this BigQuery release, and CrUX API no longer serves `experimental_uncapped_cumulative_layout_shift`. Use the current CLS metric instead.
  : - An LCP fix rolled out with M96.
 
 Notable stats
@@ -471,7 +471,7 @@ Notable stats
 
 What's new
  : - The [LCP](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#largest-contentful-paint) metric was launched as `largest_contentful_paint`
- : - [CLS](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#cumulative-layout-shift) was updated to take [move distance](https://github.com/WICG/layout-instability/blob/master/README.md#distance-fraction) into account. Coverage may be lower while Chrome users upgrade to the latest version of the Layout Instability API
+ : - [CLS](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#cumulative-layout-shift) was updated to take [move distance](https://github.com/WICG/layout-instability/blob/main/README.md#distance-fraction) into account. Coverage may be lower while Chrome users upgrade to the latest version of the Layout Instability API
 
 ## 201908
 

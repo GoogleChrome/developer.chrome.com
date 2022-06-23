@@ -559,7 +559,7 @@ Histogram [bin widths are normalized](https://twitter.com/chromeuxreport/status/
 
 ## Feedback and support
 
-We would love to hear your feedback, questions, and suggestions to help us improve the Chrome User Experience Report. Please join the conversation on our [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
+We would love to hear your feedback, questions, and suggestions to help us improve the Chrome User Experience Report. Join the conversation on our [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
 We also tweet on [@ChromeUXReport](https://twitter.com/chromeuxreport) with updates.
 
 ## License
