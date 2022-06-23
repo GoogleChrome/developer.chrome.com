@@ -63,7 +63,7 @@ for triggers, formatted in JSON.
 *  To complete trigger registration, set the
    `Attribution-Reporting-Register-Trigger` header.
 
-This change requires action. Please refer to the
+This change requires action. Refer to the
 [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)
 for more information.
 
@@ -86,7 +86,7 @@ For example:
  }
 ```
 
-This change requires action. Please refer to the
+This change requires action. Refer to the
 [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)
 for more information.
 
