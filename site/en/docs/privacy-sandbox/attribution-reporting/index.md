@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2021-05-18
-updated: 2022-06-15
+updated: 2022-06-23
 authors:
   - maudn
   - samdutton
@@ -41,15 +41,15 @@ underlying concepts, but doesn't go into much technical detail.
 
 ## Changes
 
-Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/)
+Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
 ## What is the Attribution Reporting API?
 
 Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
 
-Browsers are restricting access to third-party cookies because these can be used to track users
-across sites and hinder user privacy.
+Browsers are restricting access to third-party cookies because these can be
+used to track users across sites and hinder user privacy.
 
 The Attribution Reporting API enables those measurements in a privacy-preserving way, without
 third-party cookies.
@@ -78,26 +78,28 @@ This API enables advertisers and adtech providers to measure conversions in the 
 
 ## Status
 
-**🕙 Last updated: May 2022**
+**🕙 [Last updated](/docs/privacy-sandbox/attribution-reporting-updates/): June 2022**
 
 ### How can I try Attribution Reporting?
 
 At the time of this writing, you can try Attribution Reporting:
 
-- Soon, with end users, as part of an origin trial. [Learn more](/blog/privacy-sandbox-unified-origin-trial/).
-- Locally in your browser (with a _flag_).
+- This API is available for experiments in the ads relevance and measurement origin trial.
+- You can test locally in your browser with a _flag_.
 
 **If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).**
 
 {% Aside 'key-term' %}
 
-- In Chrome, a _flag_ is a toggle that tells
-  your browser to enable certain experimental functionalities.
-- An _origin trial_ is a way to test with end users a new
-  or experimental web platform feature, and give feedback to the web standards community on the
-  feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/). Note that **multiple rounds of origin trials are run**. Each round is used to improve and adjust the API
+- A _flag_ is a toggle that tells the Chrome browser to enable specific
+  experimental functionalities.
+- An _origin trial_ is a way to test a new or experimental web platform feature
+  with end users, and give feedback to the web standards
+  community on the feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/).
+  Multiple rounds of origin trials are run, to improve and adjust the API 
   based on ecosystem feedback.
-  {% endAside %}
+
+{% endAside %}
 
 ### Status details
 
@@ -186,12 +188,12 @@ Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandb
  <figcaption>Example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption>
 </figure>
 
-Summary reports are best suited for **reporting** use cases. These reports help answer questions such as:
-_"What is my return on investment?"_.
+Summary reports are best suited for reporting use cases. These reports help
+answer questions such as: "What is my return on investment?"
 
-Usage of summary reports for **optimization**—for example, to optimize for a purchase value, which
-is not supported by event-level reports (because the conversion data is too coarse)—is an area of
-active research.
+Usage of summary reports for optimization—for example, to optimize for a
+purchase value, which is not supported by event-level reports (because the
+conversion data is too coarse)—is an area of active research.
 
 ### Other features
 

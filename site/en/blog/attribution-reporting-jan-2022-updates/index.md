@@ -5,6 +5,9 @@ description: >
 layout: 'layouts/blog-post.njk'
 date: 2022-01-27
 updated: 2022-06-15
+hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/0ZWxOTHGZIp5fRzDBLTx.jpg'
+alt: >
+  Measuring tape.
 authors:
   - maudn
   - alexandrawhite
@@ -548,3 +551,5 @@ This is a **privacy protection** to limit browsing history reconstruction.
 *  See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
 *  Read the [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit?usp=sharing)
    and [What you should know about the API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit?usp=sharing).
+
+_The header image is from <a href="https://unsplash.com/@diana_pole">Diana Polekhina</a> on <a href="https://unsplash.com/">Unsplash</a>._
