@@ -10,12 +10,12 @@ title: Release Notes
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Details on the latest changes to the CrUX dataset
+  Details on the latest changes to the CrUX dataset.
 
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  Details on the latest changes to the Chrome User Experience Report
+  Details on the latest changes to the Chrome User Experience Report.
 
 # Required
 date: 2017-10-01
@@ -27,14 +27,13 @@ updated: 2022-06-14
 # Optional
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
-authors:
-  - simonhearne
+# authors:
 
 # Optional
 # How to a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - performance
+  - web-vitals
 ---
 
 The CrUX dataset on BigQuery is updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.

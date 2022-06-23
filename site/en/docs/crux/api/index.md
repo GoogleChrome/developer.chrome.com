@@ -10,7 +10,7 @@ title: CrUX API
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Learn how to construct requests to and parse responses from the CrUX API
+  Learn how to construct requests to and parse responses from the CrUX API.
 
 # Optional
 # This appears below the title and is an optional teaser
@@ -27,14 +27,13 @@ date: 2022-06-23
 # Optional
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
-authors:
-  - simonhearne
+# authors:
 
 # Optional
 # How to a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - performance
+  - web-vitals
 ---
 
 The Chrome UX Report API gives low-latency access to aggregated Real User Metrics (RUM) from the Chrome User Experience Report.
@@ -44,6 +43,8 @@ The Chrome UX Report API gives low-latency access to aggregated Real User Metric
 The Chrome UX Report API allows for the querying of user experience metrics for a specific URI like "Get metrics for the `https://example.com` origin."
 
 ## Data model
+
+This section details the structure of data in requests and responses.
 
 ### Record
 
@@ -63,7 +64,7 @@ http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
 
-This would mean that when querying the Chrome UX Report with the origin set to `http://www.example.com`, data for `http://www.example.com/`, `http://www.example.com/foo.html`, and `http://www.example.com/bar.html` would be returned because those are all pages under that origin.
+This would mean that when querying the Chrome UX Report with the origin set to `http://www.example.com`, data for `http://www.example.com/`, `http://www.example.com/foo.html`, and `http://www.example.com/bar.html` would be returned, aggregated together, because those are all pages under that origin.
 
 ### URLs
 
@@ -79,19 +80,23 @@ If the identifier is set to url with the value of `http://www.example.com/foo.ht
 
 ### Dimensions
 
-Dimensions identify a specific group of data that a record is being aggregated against, e.g. a form factor of Mobile indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
+Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of Mobile indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.
 
 #### Form Factor
 
-The device class that the end-user used to navigate to the page. This is a general class of device split into `Phone`, `Tablet`, and `Desktop`. The `formFactor`
+The device class that the end-user used to navigate to the page. This is a general class of device split into `PHONE`, `TABLET`, and `DESKTOP`.
+
+#### Effective Connection Type
+
+[Effective Connection Type](/docs/crux/methodology/#ect-dimension) is the estimated connection quality of the device when navigating to the page. This is a general class split into `offline`, `slow-2G`, `2G`, `3G` and `4G`.
 
 ### Metric
 
-See [metrics](../methodology/#metrics) for more info about the kinds of metrics included in the CrUX dataset.
+See [metrics](/docs/crux/methodology/#metrics) for more info about the kinds of metrics included in the CrUX dataset.
 
 Metrics are expressed in a histogram, which represents the percent of users that experienced a metric with that value proportionally to all.
 
-A simple three bin histogram for metric "ExampleMetric" looks like this.
+A simple three bin histogram for an example metric looks like this:
 
 ```json
 {
@@ -114,9 +119,9 @@ A simple three bin histogram for metric "ExampleMetric" looks like this.
 }
 ```
 
-This data indicates that 38.2% of users experience an ExampleMetric value between 0ms and 1,000ms. The units of ExampleMetric are not contained in this histogram, in this case we will assume milliseconds.
+This data indicates that 38.2% of users experience the example metric value between 0ms and 1,000ms. The units of the metric are not contained in this histogram, in this case we will assume milliseconds.
 
-Additionally, 49.9% of users experience an ExampleMetric value between 1,000ms and 3,000ms, and 11.9% of users experience an ExampleMetric value greater than 3,000ms.
+Additionally, 49.9% of users experience the example metric value between 1,000ms and 3,000ms, and 11.9% of users experience a value greater than 3,000ms.
 
 Metrics will also contain percentiles that can be useful for additional analysis.
 
@@ -136,27 +141,95 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 ### Metric value types
 
-| CrUX API Metric Name                     | Data Type                | Metric Units | web.dev Docs                  |
-|------------------------------------------|--------------------------|--------------|-------------------------------|
-| `first_contentful_paint`                 | int                      | milliseconds | [fcp](https://web.dev/fcp/)   |
-| `largest_contentful_paint`               | int                      | milliseconds | [lcp](https://web.dev/lcp/)   |
-| `cumulative_layout_shift`                | double encoded as string | unitless     | [cls](https://web.dev/cls/)   |
-| `first_input_delay`                      | int                      | milliseconds | [fid](https://web.dev/fid/)   |
-| `experimental_time_to_first_byte`        | int                      | milliseconds | [ttfb](https://web.dev/ttfb/) |
-| `experimental_interaction_to_next_paint` | int                      | milliseconds | [inp](https://web.dev/inp/)   |
+<div class="responsive-table">
+<table class="with-heading-tint width-full fixed-table">
+<thead>
+<tr>
+<th>CrUX API Metric Name</th>
+<th>Data Type</th>
+<th>Metric Units</th>
+<th>web.dev Docs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/fcp/">fcp</a></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/lcp/">lcp</a></td>
+</tr>
+<tr>
+<td><code>cumulative_layout_shift</code></td>
+<td>double encoded as string</td>
+<td>unitless</td>
+<td><a href="https://web.dev/cls/">cls</a></td>
+</tr>
+<tr>
+<td><code>first_input_delay</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/fid/">fid</a></td>
+</tr>
+<tr>
+<td><code>experimental_time_to_first_byte</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/ttfb/">ttfb</a></td>
+</tr>
+<tr>
+<td><code>experimental_interaction_to_next_paint</code></td>
+<td>int</td>
+<td>milliseconds</td>
+<td><a href="https://web.dev/inp/">inp</a></td>
+</tr>
+</tbody>
+</table></div>
 
 ### BigQuery metric name mapping
 
-| CrUX API Metric Name                       | BigQuery Metric Name                         |
-|--------------------------------------------|----------------------------------------------|
-| `first_contentful_paint`                   | `first_contentful_paint`                     |
-| `largest_contentful_paint`                 | `largest_contentful_paint`                   |
-| `cumulative_layout_shift`                  | `layout_instability.cumulative_layout_shift` |
-| `first_input_delay`                        | `first_input.delay`                          |
-| `experimental_time_to_first_byte`          | `experimental.time_to_first_byte`            |
-| `experimental_interaction_to_next_paint`   | `experimental.interaction_to_next_paint`     |
+<div class="responsive-table">
+<table class="with-heading-tint width-full fixed-table">
+<thead>
+<tr>
+<th>CrUX API Metric Name</th>
+<th>BigQuery Metric Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first_contentful_paint</code></td>
+<td><code>first_contentful_paint</code></td>
+</tr>
+<tr>
+<td><code>largest_contentful_paint</code></td>
+<td><code>largest_contentful_paint</code></td>
+</tr>
+<tr>
+<td><code>cumulative_layout_shift</code></td>
+<td><code>layout_instability.cumulative_layout_shift</code></td>
+</tr>
+<tr>
+<td><code>first_input_delay</code></td>
+<td><code>first_input.delay</code></td>
+</tr>
+<tr>
+<td><code>experimental_time_to_first_byte</code></td>
+<td><code>experimental.time_to_first_byte</code></td>
+</tr>
+<tr>
+<td><code>experimental_interaction_to_next_paint</code></td>
+<td><code>experimental.interaction_to_next_paint</code></td>
+</tr>
+</tbody>
+</table></div>
 
-## Example Queries
+## Example queries
 
 Queries are submitted as JSON objects via a POST request to `https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=[YOUR_API_KEY]"` with query data as a JSON object in the POST body, e.g.
 
@@ -171,7 +244,7 @@ Queries are submitted as JSON objects via a POST request to `https://chromeuxrep
 }
 ```
 
-Page-level data is available through the API by passing a `url` property in the query, e.g.
+Page-level data is available through the API by passing a `url` property in the query:
 
 ```json
 {
@@ -199,6 +272,8 @@ See [Using the Chrome UX Report API on web.dev](https://web.dev/chrome-ux-report
 
 ## Data pipeline
 
+The CrUX dataset is processed through a pipeline to consolidate, aggregate and filter the data before becoming available via the API.
+
 ### The rolling average
 
 The data in the Chrome UX Report is a 28-day rolling average of aggregated metrics. This means that the data presented in the Chrome UX Report at any given time is actually data for the past 28 days aggregated together.
@@ -207,17 +282,17 @@ This is similar to how the [CrUX dataset on BigQuery](https://developers.google.
 
 ### Daily updates
 
-Data is updated daily around 04:00 UTC. There is no SLO for update times; it is run on a best-effort basis every day.
+Data is updated daily around 04:00 UTC. There is no service level agreement for update times; it is run on a best-effort basis every day.
 
 {% Aside 'caution' %}
-Data will not differ within the same day, repeated calls will yield the same results.
+Data will not differ within the same day after it has been updated around 04:00 UTC, repeated calls will yield the same results.
 {% endAside %}
 
-## API Reference
+## API reference
 
 There is a single endpoint for the CrUX API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
 
-### HTTP Request
+### HTTP request
 
 ```http
 POST https://chromeuxreport.googleapis.com/v1/records:queryRecord
@@ -225,7 +300,7 @@ POST https://chromeuxreport.googleapis.com/v1/records:queryRecord
 
 The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
 
-### Request Body
+### Request body
 
 The request body should contain data with the following structure:
 
@@ -265,7 +340,7 @@ The request body should contain data with the following structure:
     <tr>
       <td><code translate="no" dir="ltr">formFactor</code></td>
       <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="/web/tools/chrome-user-experience-report/api/reference/rest/v1/records/queryRecord#FormFactor">FormFactor</a></code>)</code></strong></p>
+        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a></code>)</code></strong></p>
         <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p><p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
       </td>
     </tr>
@@ -308,7 +383,7 @@ For example, to request the desktop largest contentful paint values for the Chro
 }
 ```
 
-### Response Body
+### Response body
 
 Successful requests return responses with a `record` object and `urlNormalizationDetails` in the following structure:
 
@@ -396,7 +471,7 @@ For example, the response to the request body in the above request could be:
     <tr></tr>
       <td><code translate="no" dir="ltr">formFactor</code></td>
       <td>
-        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="/web/tools/chrome-user-experience-report/api/reference/rest/v1/records/queryRecord#FormFactor">FormFactor</a>)</code></strong></p>
+        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form-factor">FormFactor</a>)</code></strong></p>
         <p>The form factor is the device class that all users used to access the site for this record.</p><p>If the form factor is unspecified, then aggregated data over all form factors will be returned.</p>
       </td>
     </tr>

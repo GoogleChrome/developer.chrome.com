@@ -10,7 +10,7 @@ title: CrUX Methodology
 # /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: >
-  Technical documentation on CrUX eligibility, metrics, dimensions and accessing the data
+  Technical documentation on CrUX eligibility, metrics, dimensions and accessing the data.
 
 # Optional
 # This appears below the title and is an optional teaser
@@ -27,14 +27,13 @@ date: 2022-06-23
 # Optional
 # How to add a new author
 # /docs/handbook/how-to/add-an-author/
-authors:
-  - simonhearne
+#authors:
 
 # Optional
 # How to a new tag
 # /docs/handbook/how-to/add-a-tag/
 tags:
-  - performance
+  - web-vitals
 ---
 
 ## Eligibility
@@ -47,21 +46,21 @@ Pages and origins will be automatically included or removed from the dataset if 
 
 For a **user** to have their experiences aggregated in the CrUX dataset, they must meet the following criteria:
 
-1. Enable [usage statistic reporting](https://support.google.com/chrome/answer/96817)
-2. Sync their [browser history](https://support.google.com/chrome/answer/185277)
-3. Not have a [Sync passphrase](https://support.google.com/chrome/answer/165139?co=GENIE.Platform%3DAndroid#zippy=%2Ccreate-a-passphrase) set
-4. Use a supported platform
+1. Enable [usage statistic reporting](https://support.google.com/chrome/answer/96817).
+2. Sync their [browser history](https://support.google.com/chrome/answer/185277).
+3. Not have a [Sync passphrase](https://support.google.com/chrome/answer/165139?co=GENIE.Platform%3DAndroid#zippy=%2Ccreate-a-passphrase) set.
+4. Use a supported platform.
 
 The current supported platforms are:
 
-- Desktop versions of Chrome including Windows, MacOS, ChromeOS, and Linux operating systems
-- Android versions of Chrome, including native apps using [Custom Tabs](/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/webapks/)
+- Desktop versions of Chrome including Windows, MacOS, ChromeOS, and Linux operating systems.
+- Android versions of Chrome, including native apps using [Custom Tabs](/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/webapks/).
 
 There are a few notable exceptions that do not provide data to the CrUX dataset:
 
-- Chrome on iOS
-- Native Android apps using WebView
-- Other Chromium browsers (e.g. [Microsoft Edge](https://www.microsoft.com/edge))
+- Chrome on iOS.
+- Native Android apps using WebView.
+- Other Chromium browsers (for example [Microsoft Edge](https://www.microsoft.com/edge)).
 
 Chrome does not publish data about the proportions of users that meet these criteria. You can learn more about the data we collect in the [Chrome Privacy Whitepaper](https://www.google.com/chrome/privacy/whitepaper.html#usagestats).
 
@@ -76,10 +75,10 @@ An origin is considered to be publicly discoverable if its **root page** is disc
 
 Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
 
-- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200`
-- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation)
-- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)
-- The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro)
+- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200`.
+- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation).
+- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
+- The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
 
 You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
 
@@ -106,7 +105,7 @@ A website's architecture may complicate how its data is represented in CrUX. For
 
 ### Accelerated Mobile Pages (AMP)
 
-Pages built with AMP are included in the CrUX dataset like any other web page as of the [June 2020 CrUX release](../release-notes/#202006). Pages served via the [AMP Cache](https://developers.google.com/amp/cache) and / or rendered in the [AMP Viewer](https://developers.google.com/search/docs/advanced/experience/about-amp#about-google-amp-viewer) are also captured, and attributed to the publisher's page URL.
+Pages built with AMP are included in the CrUX dataset like any other web page as of the [June 2020 CrUX release](/docs/crux/release-notes/#202006). Pages served via the [AMP Cache](https://developers.google.com/amp/cache) and / or rendered in the [AMP Viewer](https://developers.google.com/search/docs/advanced/experience/about-amp#about-google-amp-viewer) are also captured, and attributed to the publisher's page URL.
 
 ## Tools
 
@@ -127,60 +126,61 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <tbody>
 <tr>
 <td><a href="#tool-bigquery">CrUX on BigQuery</a></td>
-<td>Monthly <a href="#tooltip-1"><sup>1</sup></a></td>
+<td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
 <td>All dimensions</td>
-<td>Since 2017 <a href="#tooltip-1"><sup>1</sup></a></td>
+<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
 <td><a href="#tool-crux-dash">CrUX Dashboard</a></td>
-<td>Monthly <a href="#tooltip-1"><sup>1</sup></a></td>
+<td>Monthly <a href="#footnote-1"><sup>1</sup></a></td>
 <td>All metrics</td>
-<td>No effective connection type or country dimensions</td>
-<td>Since 2017 <a href="#tooltip-1"><sup>1</sup></a></td>
+<td>No country dimension</td>
+<td>Since 2017 <a href="#footnote-3"><sup>3</sup></a></td>
 <td>Origin</td>
 </tr>
 <tr>
 <td><a href="#tool-crux-api">CrUX API</a></td>
-<td>28-day average <a href="#tooltip-2"><sup>2</sup></a></td>
-<td>Subset of key metrics  <a href="#tooltip-4"><sup>4</sup></a></td>
+<td>28-day average <a href="#footnote-2"><sup>2</sup></a></td>
+<td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No country dimension</td>
 <td>No</td>
 <td>Origin &amp; Page</td>
 </tr>
 <tr>
 <td><a href="#tool-psi">PageSpeed Insights</a></td>
-<td>28-day average <a href="#tooltip-2"><sup>2</sup></a></td>
-<td>Subset of key metrics  <a href="#tooltip-4"><sup>4</sup></a></td>
+<td>28-day average <a href="#footnote-2"><sup>2</sup></a></td>
+<td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No effective connection type or country dimensions</td>
 <td>No</td>
 <td>Origin &amp; Page</td>
 </tr>
 <tr>
 <td><a href="#tool-psi-api">PageSpeed Insights API</a></td>
-<td>28-day average <a href="#tooltip-2"><sup>2</sup></a></td>
-<td>Subset of key metrics  <a href="#tooltip-4"><sup>4</sup></a></td>
+<td>28-day average <a href="#footnote-2"><sup>2</sup></a></td>
+<td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No effective connection type or country dimensions</td>
 <td>No</td>
 <td>Page</td>
 </tr>
 <tr>
 <td><a href="#tool-gsc">Google Search Console</a></td>
-<td>28-day average <a href="#tooltip-2"><sup>2</sup></a></td>
+<td>28-day average <a href="#footnote-2"><sup>2</sup></a></td>
 <td>Core web vitals</td>
 <td>No dimensions</td>
 <td>Three months</td>
-<td>Page</td>
+<td>Page Group <a href="#footnote-5"><sup>5</sup></a></td>
 </tr>
 </tbody>
 </table></div>
 
 <p>
-<a id="tooltip-1"><sup>1</sup></a>: Monthly data is released on the second Tuesday after each monthly collection period. The first 28 days of each month period are included.<br>
-<a id="tooltip-2"><sup>2</sup></a>: 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
-<a id="tooltip-3"><sup>3</sup></a>: Not all metrics are available in all monthly tables, see the <a href="../release-notes">release notes</a> for details.<br>
-<a id="tooltip-4"><sup>4</sup></a>: The web vital metrics are available in all tools.<br>
+<a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The first 28 days of each month period are included.<br>
+<a id="footnote-2"><sup>2</sup></a> 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
+<a id="footnote-3"><sup>3</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
+<a id="footnote-4"><sup>4</sup></a> The web vital metrics are available in all tools.<br>
+<a id="footnote-5"><sup>5</sup></a> Search Console <a href="https://support.google.com/webmasters/answer/9205520#page_groups">groups URLs</a> that provide similar experiences, Core Web Vitals data are shown aggregated by these page groups.
 </p>
 
 The following sections briefly summarize each tool and how the data can be used.
@@ -189,23 +189,23 @@ The following sections briefly summarize each tool and how the data can be used.
 
 Origin-level CrUX data is available for public querying via [BigQuery](https://cloud.google.com/bigquery). Read the guide on [Using the Chrome UX Report](https://web.dev/chrome-ux-report-bigquery/).
 
-[CrUX on BigQuery](../bigquery/) provides a publicly accessible database of all origin-level data collected by CrUX. It is possible to query any and all origins for which data is collected, analyze any metric that CrUX supports and filter by all available dimensions. Full metric histograms are stored in the BigQuery tables allowing for visualization of performance distributions, including experimental metrics.
+[CrUX on BigQuery](/docs/crux/bigquery/) provides a publicly accessible database of all origin-level data collected by CrUX. It is possible to query any and all origins for which data is collected, analyze any metric that CrUX supports and filter by all available dimensions. Full metric histograms are stored in the BigQuery tables allowing for visualization of performance distributions, including experimental metrics.
 
 The data in BigQuery is updated monthly, with each month's data released on the second Tuesday after the collection period. Page-level data is not available in BigQuery tables, and percentiles are interpreted from coarse histogram data which results in approximate values.
 
-Use CrUX on BigQuery for analysis across any dimension: origins, countries, dates, form factor and connection type. Read more on the [CrUX on BigQuery](../bigquery/) documentation page.
+Use CrUX on BigQuery for analysis across any dimension: origins, countries, dates, form factor and connection type. Read more on the [CrUX on BigQuery](/docs/crux/bigquery/) documentation page.
 
 ### CrUX Dashboard {: #tool-crux-dash}
 
 The [CrUX Dashboard](https://web.dev/chrome-ux-report-data-studio-dashboard/) is a Data Studio dashboard that allows you to query and render CrUX data into an interactive dashboard, as well as exporting PDF reports.
 
-The dashboard provides visualization of all CrUX metrics in monthly trends, with data available back to 2017. Data can be split by form factor to compare mobile / tablet / desktop performance and performance goals are available to create red-amber-green visualizations.
+The dashboard provides visualization of all CrUX metrics in monthly trends, with data available back to 2017. Data can be split by form factor to compare mobile / tablet / desktop performance and performance goals are available to create red-amber-green visualizations. Effective connection type can be shown as a distribution.
 
-The CrUX dashboard does not support effective connection type or country dimensions, so all global data is presented in the reports. Page-level data is not available and percentile values are calculated from coarse histogram data so are approximate.
+The CrUX dashboard does not support the country dimension, so all global data is presented in the reports. Page-level data is not available and percentile values are calculated from coarse histogram data so are approximate.
 
 ### CrUX API {: #tool-crux-api}
 
-The [CrUX API](https://web.dev/chrome-ux-report-api/) provides programmatic access to CrUX data by page or origin.
+The [CrUX API](https://web.dev/chrome-ux-report-api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
 The API provides web vitals metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
 
@@ -215,7 +215,7 @@ The API provides web vitals metrics both by origin and at page-level and the dat
 
 [PageSpeed Insights](https://pagespeed.web.dev/) uses CrUX data to present field performance statistics alongside the lab statistics calculated at run time.
 
-The PageSpeed Insights report presents a consolidated view of the core web vitals (plus first contentful paint) for the given URL - or origin in case data for the URL is not available. Data is presented by desktop or mobile form factors and can be compared with the lab test results to give a better understanding of your page performance.
+The PageSpeed Insights report presents a consolidated view of the Core Web Vitals (plus First Contentful Paint) for the given URL - or origin in case data for the URL is not available. Data is presented by desktop and mobile form factors and can be compared with the lab test results to give a better understanding of your page performance.
 
 PageSpeed Insights does not provide historical data, and does not include country or effective connection type dimensions.
 
@@ -225,19 +225,19 @@ The [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v
 
 This API integrates well into existing SEO tooling and workflows, allowing CrUX data to be included in automated reports and analyses.
 
-As in the web version, the PageSpeed Insights API has no historical data and is limited to the core web vitals. Country and effective connection type dimensions are not included.
+As in the web version, the PageSpeed Insights API has no historical data and is limited to the Core Web Vitals. Country and effective connection type dimensions are not included.
 
 ### Search Console {: #tool-gsc}
 
 [Search Console](https://search.google.com/search-console) shows how CrUX data influences the [Page Experience](https://developers.google.com/search/docs/advanced/experience/page-experience) ranking factor by URL and URL group.
 
-Search console presents data at the page-level, with individual pages grouped into URL groups with aggregate core web vitals values. This provides a quick indication of which sections of a site are potentially impacting the page experience ranking factor.
+Search Console presents Core Web Vitals values as aggregates of [groups of similar pages](https://support.google.com/webmasters/answer/9205520#page_groups). This provides a quick indication of which sections of a site are potentially impacting the page experience ranking factor.
 
-Data is updated daily and is split by mobile and desktop form factors. For URL groups with more than 20 members, only a sample of 20 are presented for further analysis.
+Data is updated daily and is split by mobile and desktop form factors. A maximum sample of 20 pages per group are presented for further analysis.
 
 ## Metrics
 
-Metrics provided by the CrUX on Google BigQuery are powered by standard web platform APIs exposed by modern browsers and aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins.
+Metrics provided by the CrUX on Google BigQuery are powered by standard web platform APIs exposed by browsers and aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
 
 Most metrics are represented as a histogram aggregation, allowing visualization of the distribution and approximation of percentile values.
 
@@ -360,7 +360,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 ### First Paint {: #fp-metric }
 
 {% Aside %}
-""First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load - when the browser has started to render the page."
+"First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load - when the browser has started to render the page."
 
 <cite><a href="https://w3c.github.io/paint-timing/#first-paint">Paint Timing API</a></p></cite>
 {% endAside %}
@@ -415,7 +415,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 
 ### Experimental {: #experimental-metrics }
 
-Experimental metrics are available in the CrUX dataset via [BigQuery](../bigquery/). These metrics are likely to change regularly as they evolve based on user feedback. Check the [release notes](../release-notes/) to keep up to date on the latest changes.
+Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux/bigquery/), with some also available in the [CrUX API](/docs/crux/api/). These metrics are likely to change regularly as they evolve based on user feedback. Check the [release notes](/docs/crux/release-notes/) to keep up to date on the latest changes.
 
 #### Time to First Byte {: #ttfb-metric }
 
@@ -435,7 +435,7 @@ TTFB is only collected on full page loads, unlike other timers (such as [LCP](#l
 <cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
 {% endAside %}
 
-Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](../release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
+Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022](/docs/crux/release-notes/#202202). This new metric captures the end-to-end latency of individual events and offers a more holistic picture of the overall responsiveness of a page throughout its lifetime.
 
 #### Popularity {: #popularity-metric}
 
@@ -524,15 +524,17 @@ Form factor is inferred from the device [user-agent string](/docs/multidevice/us
 
 The country dimension was [added to CrUX in 2018](/blog/crux-2018-01/). The term "country" is used loosely, as some geographic areas are politically disputed. Values in the country dimension are inferred from users' IP addresses and represented as two-letter country codes as defined by [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
-Country-level datasets are provided in addition to the global dataset, with the standard eligibility requirements applied at a country level. A table is [provided for each country](../bigquery/#schema-country-summary), as well as [summary tables](../bigquery/#schema-raw-tables) which include the country code as a column.
+Country-level datasets are provided in addition to the global dataset, with the standard eligibility requirements applied at a country level. A table is [provided for each country](/docs/crux/bigquery/#schema-country-summary), as well as [summary tables](/docs/crux/bigquery/#schema-raw-tables) which include the country code as a column.
 
 ### Optional dimensions {: #optional-dimensions}
 
-As of the [May 2022](../release-notes/#202205) release, the CrUX dataset supports optional dimensions. Previously, a form factor and effective connection type (ECT) combination must have independently met the _sufficiently popular_ criterion or else it would be excluded from the page or origin record. With this feature, experiences on different ECTs could be combined by their common form factor, and the corresponding ECT value will be `NULL`. Experiences on different form factors may also be combined, and both the ECT and form factor values will be `NULL`.
+As of the [May 2022](/docs/crux/release-notes/#202205) release, the CrUX dataset supports optional dimensions. Previously, a form factor and effective connection type (ECT) combination must have independently met the _sufficiently popular_ criterion or else it would be excluded from the page or origin record. With this feature, experiences on different ECTs could be combined by their common form factor, and the corresponding ECT value will be `NULL`. Experiences on different form factors may also be combined, and both the ECT and form factor values will be `NULL`.
 
 Previously, form factor and effective connection type were required columns in our BigQuery tables. This meant that when we did not have sufficient coverage to express the histogram densities in the specific rows (e.g., form factor = phone, effective connection type = 2G), we were dropping the entire origin from the dataset. With optional dimensions, we made the form factor and effective connection type optional (NULLABLE) and therefore, we're now able to publish overall histogram densities in such cases; that is, we may set the effective connection type value to NULL indicating "all effective connection types", or we may set both effective connection type and form factor to NULL indicating "all effective connection types" and "all form factors".
 
 ## Data quality
+
+Data in CrUX undergoes a small amount of processing to ensure that it is statistically accurate, well structured and easy to query.
 
 ### Filtering
 
