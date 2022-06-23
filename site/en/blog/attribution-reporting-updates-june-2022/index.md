@@ -14,8 +14,10 @@ tags:
   - experiment
 ---
 
-The Attribution Reporting proposal is changing for [Chrome version 104](https://chromiumdash.appspot.com/schedule),
+The Attribution Reporting proposal is changing for Chrome version 104,
 with new API mechanisms, functionality, and updates to the aggregation service.
+To get the latest information on versions, sign up for [Chrome OS release
+notifications](https://groups.google.com/a/google.com/g/cros-rel-notify).
 
 ## Who are these updates for?
 
