@@ -5,7 +5,7 @@
 
 ### Chrome 103 {: #chrome103 }
 
-* [Recorder パネルでのダブルクリックや右クリックのイベントキャプチャ](/ja/blog/new-in-devtools-103/#recorder)
+* [Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ](/ja/blog/new-in-devtools-103/#recorder)
 * [Lighthouse パネルでの新しいタイムスパンモードとスナップショットモード](/ja/blog/new-in-devtools-103/#lighthouse)
 * [Performance Insights パネルでの改善されたズーム制御](/ja/blog/new-in-devtools-103/#zoom)
 * [パフォーマンスレコーディングの削除確認](/ja/blog/new-in-devtools-103/#delete)

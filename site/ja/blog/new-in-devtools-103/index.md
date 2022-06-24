@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-06-14
 updated: 2022-06-14
-description: "ダブルクリックや右クリックのイベント記録、Lighthouse にてユーザフローを計測する新しいオプションなど。"
+description: "ダブルクリックイベントや右クリックイベントの記録、Lighthouse にてユーザフローを計測する新しいオプションなど。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9eRpd1kBJDrv2fkJuBca.jpg'
 alt: ''
 tags:
@@ -21,12 +21,12 @@ tags:
 {% YouTube id='LyMts4yfQu8' %}
 
 <!-- ## Capture double-click and right-click events in the Recorder panel {: #recorder } -->
-## Recorder パネルでのダブルクリックや右クリックのイベントキャプチャ {: #recorder }
+## Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ {: #recorder }
 
 <!-- The **Recorder** panel can now capture double-click and right-click events. -->
-**Recorder** パネルにて、ダブルクリックや右クリックのイベントをキャプチャできるようになりました。
+**Recorder** パネルにて、ダブルクリックイベントや右クリックイベントをキャプチャできるようになりました。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder パネルでのダブルクリックや右クリックのイベントキャプチャ", width="800", height="572" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ", width="800", height="572" %}
 
 <!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
 この [例](https://jec.fyi/demo/dbl-right-click) では、以下の手順を行うために、 [レコーディング](/docs/devtools/recorder/#record) を開始しています。
