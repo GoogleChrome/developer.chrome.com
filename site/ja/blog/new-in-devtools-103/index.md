@@ -140,7 +140,7 @@ Chromium issue: [1245191](https://crbug.com/1245191)
 
 
 <!-- ## Improved inline value preview during debugging {: #inline-preview } -->
-## デバッグ中の改善されたインラインでの値のプレビュー {: #inline-preview }
+## 改善されたデバッグ中のインライン値プレビュー {: #inline-preview }
 
 <!-- The debugger now shows the inline values preview correctly. -->
 デバッガーは、インライン値のプレビューを正しく表示するようになりました。
