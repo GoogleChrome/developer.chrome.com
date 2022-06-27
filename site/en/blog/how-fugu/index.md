@@ -20,7 +20,7 @@ capable the modern Web has become. Double-clicking an image file so it opens in 
 making some modifications, saving the changes back to the file and then copying the image contents
 over into another app or sharing it to an email client is a flow that wasn't possible on the Web
 before, but which APIs developed in the context of
-[Project Fugu](https://developer.chrome.com/blog/fugu-status/) 🐡 like the
+[Project Fugu](/blog/fugu-status/) 🐡 like the
 [File Handling API](https://web.dev/file-handling/), the
 [File System Access API](https://web.dev/file-system-access/), the
 [Async Clipboard API](https://web.dev/async-clipboard/), and the
@@ -51,8 +51,8 @@ When you install this extension from the Chrome Web Store and browse the Web, yo
 Fugu fish counter on some sites display a badge with the detected Project Fugu APIs. For example, if
 you browse to [Excalidraw](https://excalidraw.com/), the counter jumps to 9, since Excalidraw uses
 nine detectable Project Fugu APIs, namely
-[Cache Storage](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage),
-[Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API),
+[Cache Storage](https://developer.mozilla.org/docs/Web/API/CacheStorage),
+[Service Worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API),
 [Web Share](https://web.dev/web-share/), [Async Clipboard](https://web.dev/async-clipboard/),
 [Async Clipboard (Images)](https://web.dev/async-clipboard/),
 [File System Access](https://web.dev/file-system-access/),

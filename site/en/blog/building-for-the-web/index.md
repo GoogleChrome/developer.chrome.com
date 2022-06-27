@@ -11,7 +11,7 @@ tags:
   - capabilities
 ---
 
-### Lighthouse cases that demonstrate the Web's abilities
+## Lighthouse cases that demonstrate the Web's abilities
 
 Photoshop has for the longest time been recognized as one of the last bastions of high quality apps
 that supposedly would never make it to the Web platform. Record scratch, this last bastion finally
@@ -55,7 +55,7 @@ the app from the Microsoft Store.
   </figcaption>
 </figure>
 
-### Linkability and universality, the Web's super powers
+## Linkability and universality, the Web's super powers
 
 All three companies, Adobe, Microsoft, and Twitter, in parallel to their Web apps have
 well-established platform-specific Windows, macOS, Android, iOS, Linux,… etc. versions of their apps
@@ -85,7 +85,7 @@ issues—there are plenty actually—but there is a
 [solid shared increasing baseline](https://web.dev/interop-2022/) that all applications can build
 upon.
 
-### Linkability of platform-specific apps
+## Linkability of platform-specific apps
 
 While more ubiquitous on mobile, on desktop linking into a platform-specific app from the Web is
 comparatively rare. On mobile (and macOS), this works via a technology called
@@ -98,7 +98,7 @@ register their own custom schemes for their own apps. So while technically possi
 platform-specific apps is a lot less flexible and requires more plumbing work than simply linking
 into a Web app.
 
-### The slow decline of interest in cross-platform app frameworks and the rise of Flutter
+## The slow decline of interest in cross-platform app frameworks and the rise of Flutter
 
 With the Web becoming powerful enough to drive Web apps that were believed to be impossible like
 Photoshop, we can see a slow decline of interest in cross-platform desktop app frameworks like
@@ -150,19 +150,19 @@ with people asking questions about said technology on StackOverflow is not out o
   </figcaption>
 </figure>
 
-### Should not everybody be building for the Web then?
+## Should not everybody be building for the Web then?
 
 Given the proves from the introductory three examples, Photoshop, VS Code, and Twitter, that it
 indeed is possible to build amazing applications on the Web and given the Web's super powers of
 linkability and universality, then _(i)_, why do people still not fully bet on PWAs but build
 platform-specific apps and _(ii),_ do at least in part happily flock to Flutter?
 
-#### Why do people not fully bet on PWA?
+## Why do people not fully bet on PWA?
 
 For _(i)_, the answer is complex and manyfold. I want to break it down into different
 sub-categories.
 
-##### Missing capabilities, aka. the app gap
+### Missing capabilities, aka. the app gap
 
 Web applications still lack certain functionalities that platform-specific apps have. In the
 following, I list representative examples of such functionalities on different platforms. First, it
@@ -175,7 +175,7 @@ support for app menus is tracked as [crbug/1295253](https://crbug.com/1295253).)
 in-app purchases on macOS that can be handled via Electron's
 <code>[inAppPurchase()](https://www.electronjs.org/docs/latest/tutorial/in-app-purchases)</code>
 method. (On the Web, the next best thing is the
-[Digital Goods API](https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/),
+[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/),
 currently limited to Android and Chrome OS.) Installers are a common way users have learned to
 install applications on Windows. With Electron.js, it is possible to create
 [installers](https://www.electronjs.org/docs/latest/api/auto-updater#windows) and make installed
@@ -183,11 +183,11 @@ applications [update automatically](https://www.electronjs.org/docs/latest/api/a
 the Web, [Web Bundles](https://web.dev/web-bundles/) are the next best alternative in Chrome.) This
 list is non-exhaustive, and Electron.js is mentioned as a representative framework out of many.
 
-##### Discoverability in stores
+### Discoverability in stores
 
 Collectively we have educated users to look for apps in app stores. Some stores like the
 [Windows Store](https://developer.microsoft.com/en-us/microsoft-store/pwa/) and the
-[Android Play Store](https://developer.chrome.com/docs/android/trusted-web-activity/quick-start/)
+[Android Play Store](/docs/android/trusted-web-activity/quick-start/)
 have started to embrace (wrapped!) PWAs (optionally
 [limited to Chrome OS](https://chromeos.dev/en/publish/pwa-in-play#chrome-os-only)) and offer
 graphical user interface tools like [PWABuilder](https://www.pwabuilder.com/) (internally based on
@@ -199,7 +199,7 @@ into the store, depending on the outcome of the app review. Recently, Oculus, a 
 Platforms that produces virtual reality headsets, has announced that PWAs would be accepted on the
 [Oculus Store](https://developer.oculus.com/pwa/).
 
-##### Monetization of apps and in-app content
+### Monetization of apps and in-app content
 
 Apart from making apps themselves available for a fee, apps can also be monetized by selling items
 as in-app purchases (for example, items in a game app) or by selling subscriptions (for example,
@@ -207,14 +207,14 @@ regular courses in a fitness app). If the developer integrates with payment prov
 is available to Web apps as well, but the smooth integration of stores and their related payment
 systems makes this a lot more attractive for platform-specific apps, albeit at a 15–30% commission.
 For apps built using
-[Trusted Web Activities](https://developer.chrome.com/docs/android/trusted-web-activity/) and
+[Trusted Web Activities](/docs/android/trusted-web-activity/) and
 delivered through the Google Play Store, developers can now use the
-[Payment Request API](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) and the
+[Payment Request API](https://developer.mozilla.org/docs/Web/API/Payment_Request_API) and the
 new
-[Digital Goods API](https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/)
+[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/)
 to integrate with Google Play Billing.
 
-##### Hiring or retraining developers
+### Hiring or retraining developers
 
 From personal experience from talking to many of Google's partners, a lot of
 [companies struggle with hiring great Web developers](https://medium.com/javascript-scene/why-hiring-is-so-hard-in-tech-c462c3230017).
@@ -224,7 +224,7 @@ helped the guild's reputation with IT professionals. Companies also often alread
 Android and/or iOS developers that they cannot just retrain to become Web developers. Creating a PWA
 requires a high level of specialization that not all Web developers can offer.
 
-##### Legacy existing apps (and migrating its user base)
+### Legacy existing apps (and migrating its user base)
 
 It is not unusual for companies to have made massive investments in platform-specific apps, and
 giving up these investments as well as the over the time acquired user base (not to speak of the
@@ -232,7 +232,7 @@ vanity install statistics) is not easy. Seemingly starting from scratch, even wh
 have an existing website, appears very unattractive in comparison, but sometimes it
 [happens](https://www.glossy.co/ecommerce/gone-fishin-patagonia-bids-farewell-to-mobile-app/).
 
-##### Compatibility with relevant browsers
+### Compatibility with relevant browsers
 
 Web compatibility is still the
 [top issue](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2020.html#needs-assessment-top-ten-needs)
@@ -251,7 +251,7 @@ compatibility in core areas in the context of the [Compat 2021](https://web.dev/
 [Interop 2023](https://github.com/web-platform-tests/interop-2022/issues/78) already in the
 planning.
 
-##### Tools and framework support
+### Tools and framework support
 
 Mozilla's
 [developer survey](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2020.html#needs-assessment-top-ten-needs),
@@ -260,7 +260,7 @@ frameworks. Supporting multiple frameworks in the same code base, understanding 
 security measures, plus outdated or inaccurate documentation for frameworks and libraries, and
 keeping up with a large number of new and existing tools or frameworks were mentioned.
 
-##### Security (or rather, security theater with certificate pinning)
+### Security (or rather, security theater with certificate pinning)
 
 In platform-specific app development, certificate pinning restricts which certificates are
 considered valid for a particular app. Instead of allowing any trusted certificate to be used,
@@ -272,7 +272,7 @@ sniffed with browser DevTools. There are ways to
 [circumvent pinned certificates](https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/) on
 all platforms, so it is mostly a security theater at this point.
 
-##### Performance limitations
+### Performance limitations
 
 Web applications have seen impressive performance improvements thanks to advanced technologies like
 [Web Assembly](https://webassembly.org/) (including [SIMD](https://v8.dev/features/simd)),
@@ -280,15 +280,15 @@ Web applications have seen impressive performance improvements thanks to advance
 years. Nonetheless will a carefully developed platform-specific app typically outperform a Web-based
 application, albeit the situations where this _actually_ matters may be limited. With even
 high-performance audio editing tools like [Soundtrap](https://www.soundtrap.com/) (thanks to the
-[Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) and
-[AudioWorklet](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet)), interactive
+[Web Audio API](https://developer.mozilla.org/docs/Web/API/Web_Audio_API) and
+[AudioWorklet](https://developer.mozilla.org/docs/Web/API/AudioWorklet)), interactive
 development environments like [Jupyter Notebook](https://jupyter.org/try) and graphics editing tools
 like [Figma](https://www.figma.com/) (thanks to Web Assembly), and of course graphics-intensive
 games like [Quake](http://www.quakejs.com) (thanks to
 [WebGL](https://developer.mozilla.org/de/docs/Web/API/WebGL_API) and
 [WebGPU](https://gpuweb.github.io/gpuweb/) in the future), the boundary is pushed at a rapid rate.
 
-#### Why is Flutter so popular?
+## Why is Flutter so popular?
 
 For _(ii)_, one possible explanation is that it is a
 [Google-backed](https://flutter.dev/#:~:text=Flutter%20is%20Google%27s%20UI%20toolkit%20for%20building%20beautiful%2C%20natively%20compiled%20applications%20for%20mobile%2C%20web%2C%20desktop%2C%20and%20embedded%20devices%20from%20a%20single%20codebase.)
