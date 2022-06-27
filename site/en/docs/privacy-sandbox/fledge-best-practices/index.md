@@ -14,7 +14,7 @@ authors:
 
 It's in everyone's best interest to make sure FLEDGE operates efficiently.
 
-* People browsing the web want sites to load quickly. This means FLEDGE must not overutilize limited device resources, like compute or network resources, necessary to load sites and their embedded ads.
+* People browsing the web want sites to load quickly. This means developers should build with FLEDGE efficiently as to not overutilize limited device resources, like compute or network resources, that are necessary to load sites and their embedded ads.
 * Publishers want their sites to load quickly, providing users an efficient and responsive experience. Publishers also want effective advertising to maximize their revenue.
 * Advertisers and adtechs want their ads to display quickly to provide the greatest utility.
 
