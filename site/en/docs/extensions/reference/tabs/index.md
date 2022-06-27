@@ -5,36 +5,37 @@ api: tabs
 ## Overview
 
 The Tabs API not only offers features for manipulating and managing tabs, but can also detect the
-[language][tabs-detect-language] of the tab, take a [screenshot][tabs-capture], and [communicate][tabs-message] with
-a content script. 
+[language][tabs-detect-language] of the tab, take a [screenshot][tabs-capture], and
+[communicate][tabs-message] with a content script. 
 
 {% Aside %}
 
-The service worker and extension pages can use the Tabs API. Content scripts cannot.
+The Tabs API can be used in the service worker and extension pages, but not in content scripts.
 
 {% endAside %}
 
 ## Manifest {: #manifest }
 
-Most functions don't require any permission, like, for example: [creating][tabs-create] a new tab, [reloading][tabs-reload] a tab, [navigating][tabs-update] to another URL, etc.
+Most functions don't require any permission, like, for example: [creating][tabs-create] a new tab,
+[reloading][tabs-reload] a tab, [navigating][tabs-update] to another URL, etc.
 
 ### Permissions {: #perms }
 
 A permission is only required to access the `url`, `pendingUrl`, `title`, and `favIconUrl` of
 [`tabs.Tab`][tab] or to capture a screenshot. Consider the following when requesting permissions:
 
-[Host permissions][doc-match]
-: With host permissions, the extension has access to the tab data of the URL match
-patterns and the ability to capture screenshots.
+[Host permissions][doc-match] : With host permissions, the extension has access to the tab data of
+the URL match patterns and the ability to capture screenshots.
 
 {% Aside %}
 
-A better alternative for capturing the visible tab or current tab data, is the `"activeTab"` permission, which doesn't trigger any warnings. See the [activeTab][doc-activetab] for usage details.
+A better alternative for capturing the visible tab or current tab data, is the `"activeTab"`
+permission, which doesn't trigger any warnings. See the [activeTab][doc-activetab] for usage
+details.
 
 {% endAside %}
 
-Tabs permission
-: Use the `"tabs"` permission to access the tab data of all tabs.
+Tabs permission : Use the `"tabs"` permission to access the tab data of all tabs.
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest].
 
@@ -196,8 +197,8 @@ a drag may be in progress.
 
 {% Aside 'success' %}
 
-The use of catch(error) in a Promise context is
-a way to ensure that an error that otherwise populates chrome.runtime.lastError is not unchecked. 
+The use of catch(error) in a Promise context is a way to ensure that an error that otherwise
+populates chrome.runtime.lastError is not unchecked. 
 
 {% endAside %}
   </web-tab>
