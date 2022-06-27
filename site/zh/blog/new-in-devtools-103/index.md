@@ -218,7 +218,7 @@ Chromium 议题：[1226363](https://crbug.com/1226363)
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
 - Properly resolve relative urls with frame's URL   -->
-- 针对 inline scripts 和 source location，修正位置跟偏移之间的映射关系
+- 针对行内脚本（inline scripts）和源码位置（source location），修正位置跟偏移之间的映射关系
 - 针对 frame 的文本位置，使用 fallback 信息
 - 使用 frame 的 URL 来正确解析相对路径
 
