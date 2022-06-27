@@ -11,6 +11,11 @@ tags:
   - capabilities
 ---
 
+{% Aside %}
+This is part one of a two part mini series on the capable web.
+Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/how-fugu/)!
+{% endAside %}
+
 ## Lighthouse cases that demonstrate the web's abilities
 
 Photoshop has for the longest time been recognized as one of the last bastions of high quality apps
@@ -358,3 +363,8 @@ a challenge. I could go on and on, but in the end it all boils down to the concr
 needs to be built for. In this article, I have given a number of really strong arguments for building for the web,
 while also not hiding the fact that the web is a platform that is still not perfect and that other alternatives exist.
 And as the three leading examples have shown, the decision is also not mutually exclusive. You can build a powerful PWA for the web, and also have a great platform-specific application at the same time. It is up to you to decide if you have to.
+
+{% Aside %}
+This is part one of a two part mini series on the capable web.
+Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/how-fugu/)!
+{% endAside %}

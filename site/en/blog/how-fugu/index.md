@@ -11,6 +11,11 @@ tags:
   - capabilities
 ---
 
+{% Aside %}
+This is part two of a two part mini series on the capable web.
+Be sure to also read [Why not everyone's building for the web yet, but why they should](/building-for-the-web/)!
+{% endAside %}
+
 ## How Fugu is my browser?
 
 Given all the reasons (and counterarguments) listed in my previous article Why not everyone's
@@ -86,3 +91,8 @@ Building for the Web is more viable than ever, and new features keep being added
 an amazing pace. The Web is not your only choice for building your app, but I hope with this article
 I have convinced you to give The Capable Web a second look if you have dismissed it so far. It has
 come a long way.
+
+{% Aside %}
+This is part two of a two part mini series on the capable web.
+Be sure to also read [Why not everyone's building for the web yet, but why they should](/building-for-the-web/)!
+{% endAside %}
