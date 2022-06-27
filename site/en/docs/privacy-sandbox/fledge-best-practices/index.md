@@ -45,7 +45,7 @@ There is ongoing discussion about how to reuse the JavaScript execution environm
 
 ### Reuse bidding scripts
 
-Interest groups sharing a bidding script can prevent the browser from having to download multiple scripts (which incurs extra network requests) and parse and compile them.
+Set up a shared bidding script for separate interest groups. This prevents the browser from having to download, parse, and compile multiple scripts (which incurs extra network requests).
 
 ### Reuse `trustedBiddingSignalsUrls`
 
