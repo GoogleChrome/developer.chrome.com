@@ -103,7 +103,7 @@ In this example, you create two files:
 
 *  `frequency-cap.js` is loaded via the advertiser's iframe, and is responsible
    for loading the shared storage worklet, and rendering the returned opaque
-   source into a fenced frame. 
+   source into a fenced frame.
 *  `frequency-cap-worklet.js` is the shared storage worklet that reads the
    frequency cap count value to determine which URL is returned for the ad creative.
 
