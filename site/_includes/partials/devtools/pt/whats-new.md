@@ -2,18 +2,17 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+### Chrome 103 {: #chrome103 }
 
-<!-- ### Chrome 103 {: #chrome103 }
-
-* [Capture double-click and right-click events in the Recorder panel](/pt/blog/new-in-devtools-103/#recorder)
-* [New timespan and snapshot mode in the Lighthouse panel](/pt/blog/new-in-devtools-103/#lighthouse)
-* [Improved zoom control in the Performance Insights panel](/pt/blog/new-in-devtools-103/#zoom)
-* [Confirm to delete a performance recording](/pt/blog/new-in-devtools-103/#delete)
-* [Picking a color outside of the browser](/pt/blog/new-in-devtools-103/#color)
-* [Improved inline value preview during debugging](/pt/blog/new-in-devtools-103/#inline-preview)
-* [Support large blobs for virtual authenticators](/pt/blog/new-in-devtools-103/#webauthn)
-* [New keyboard shortcuts in the Sources panel](/pt/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/pt/blog/new-in-devtools-103/#sourcemaps) -->
+* [Gravação de eventos de clique duplo e clique com o botão direito do mouse](/pt/blog/new-in-devtools-103/#recorder)
+* [Novo intervalo de tempo e modo de instantâneo no painel Lighthouse](/pt/blog/new-in-devtools-103/#lighthouse)
+* [Controle de zoom aprimorado no painel Performance Insights](/pt/blog/new-in-devtools-103/#zoom)
+* [Confirmação para excluir uma gravação de apresentação](/pt/blog/new-in-devtools-103/#delete)
+* [Escolhendo uma cor fora do navegador](/pt/blog/new-in-devtools-103/#color)
+* [Visualização aprimorada do valor inline durante a depuração](/pt/blog/new-in-devtools-103/#inline-preview)
+* [Suporte a blobs grandes para autenticadores virtuais](/pt/blog/new-in-devtools-103/#webauthn)
+* [Novos atalhos de teclado no painel Sources](/pt/blog/new-in-devtools-103/#shortcuts)
+* [Melhorias nos sourcemaps](/pt/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
