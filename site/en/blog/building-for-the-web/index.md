@@ -13,7 +13,7 @@ tags:
 
 {% Aside %}
 This is part one of a two part mini series on the capable web.
-Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/how-fugu/)!
+Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)!
 {% endAside %}
 
 ## Lighthouse cases that demonstrate the web's abilities
@@ -366,5 +366,5 @@ And as the three leading examples have shown, the decision is also not mutually 
 
 {% Aside %}
 This is part one of a two part mini series on the capable web.
-Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/how-fugu/)!
+Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)!
 {% endAside %}
