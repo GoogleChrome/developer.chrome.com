@@ -39,9 +39,9 @@ The browser must do significant setup and preparation before invoking a buyer's 
 * Combining similar interest groups will decrease the number of times `generateBid()` must be run. An interest group's `userBiddingSignals` property can be used to store additional metadata about the user, so fewer interest groups doesn't have to mean less effective targeting.
 * Currently, FLEDGE supports seller-specified limits on the numbers of interest groups,and an API for buyers to specify the relative priority of their interest groups. This can be used to significantly reduce the number of bidding scripts to run.
 
-There is ongoing discussion about how to filter the interest groups that participate in an auction. If you have ideas in this area, please [file a GitHub issue](https://github.com/WICG/turtledove/issues/new) or contribute to [Issue 305 for interest group and ad filter support](https://github.com/WICG/turtledove/issues/305).
+There is ongoing discussion about how to filter the interest groups that participate in an auction. If you have ideas in this area, [file a GitHub issue](https://github.com/WICG/turtledove/issues/new) or contribute to [Issue 305](https://github.com/WICG/turtledove/issues/305).
 
-There is ongoing discussion about how to reuse the JavaScript execution environment between auctions. Reusing it reduces the amount of time the browser must spend initializing them. You can follow along on [Issue 304 for reusing FLEDGE worklet contexts](https://github.com/WICG/turtledove/issues/304) or [Issue 310 for restricting JavaScript environment for reuse](https://github.com/WICG/turtledove/issues/310), or [file a new GitHub issue](https://github.com/WICG/turtledove/issues/new).
+There is ongoing discussion about how to reuse the JavaScript execution environment between auctions. Reusing it reduces the amount of time the browser must spend initializing them. You can follow along on [Issue 304](https://github.com/WICG/turtledove/issues/304) or [Issue 310](https://github.com/WICG/turtledove/issues/310), or [file a new GitHub issue](https://github.com/WICG/turtledove/issues/new).
 
 ### Reuse bidding scripts
 
