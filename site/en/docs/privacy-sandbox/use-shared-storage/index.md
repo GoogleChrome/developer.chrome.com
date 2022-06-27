@@ -57,8 +57,7 @@ flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 ### Use the demo
 
-The demo can be accessed at
-[shared-storage-demo.web.app](https://shared-storage-demo.web.app),
+The demo can be accessed at [goo.gle/ss-demo](http://goo.gle/ss-demo),
 and the code is available on
 [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
