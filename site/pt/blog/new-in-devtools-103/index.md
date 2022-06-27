@@ -12,7 +12,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-103
-draft: true
 ---
 
 *Tradução realizada por [Lucas Santos](https://lsantos.dev). Revisão por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
