@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'FLEDGE latency best practices'
 subhead: >
-  How to get the best performance from FLEDGE usage
+  Get the best performance from FLEDGE
 description: >
-  Collection of best practices to improve FLEDGE auction latency
+  Review a collection of best practices to improve FLEDGE auction latency.
 date: 2022-06-27
 authors:
   - pauljensen
@@ -51,7 +51,7 @@ Set up a shared bidding script for separate interest groups. This prevents the b
 
 Network latency and resource usage can be very significant. Fewer real-time trusted bidding signals fetches can help reduce this latency.
 
-As the explainer notes, the trusted bidding [signal fetches can be combined](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups) when the `trustedBiddingSignalsUrl` is reused amongst multiple interest groups, so be sure to use the same `trustedBiddingSignalsUrl` between interest groups when possible.
+As the explainer notes, the [trusted bidding signal fetches can be combined](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups) when the `trustedBiddingSignalsUrl` is reused amongst multiple interest groups, so be sure to use the same `trustedBiddingSignalsUrl` between interest groups when possible.
 
 ### Smaller real-time trusted bidding signals fetches
 
@@ -67,7 +67,7 @@ Make sure you're monitoring and optimizing for FLEDGE auction efficiency.
 
 Collect metrics on your auctions:
 
-* As discussed above, the number of interest group owners and interest groups bidding (both visible metrics to `scoreAd()`) have a significant effect on auction performance and are worth monitoring.
+* The number of interest group owners and interest groups bidding significantly impacts auction performance and should be monitored. The metrics are visible in `scoreAd()`.
 * `scoreAd()` receives `biddingDurationMsec` which indicates how long a bidder took to compute their bid. Though multi-core processors can execute multiple bidding scripts concurrently, this still has a significant effect on performance and is worth monitoring.
 * Bidders may have insights into their own interest groups' bidding performance, but they may not be able to compare this to other bidders. Comparing relative win rates and bid rejection rates for different bidders may help identify cases where bidding compute resources were wasted due to interest groups never producing viable bids or excessive bidding with unapproved creatives.
 
