@@ -17,7 +17,7 @@ find code samples to help you get started.
 
 The following features are available to test in Chrome 104:
 
-*  [**URL filtering**](#url-filtering): you can run a worklet script to select
+*  [**URL selection**](#url-selection): you can run a worklet script to select
    a URL from a provided list, based on the stored data, and then render that
    URL in a fenced frame. This has many possible uses, such as selecting new
    ads when a frequency cap is reached.
@@ -82,7 +82,7 @@ for the given use cases. These are not meant to be used in production.
 
 {% endAside %}
 
-### URL filtering {: #url-filtering }
+### URL selection {: #url-selection }
 
 To select and create an opaque URL, register a worklet module to read shared
 storage data. The worklet class receives a list of up to eight URLs and then
@@ -112,8 +112,8 @@ In this example:
 ```javascript
 // The first URL is the default ad to be rendered when the frequency cap is reached
 const AD_URLS = [
-  'https://advertiser.example/ads/default-ad.html', 
-  'https://advertiser.example/ads/example-ad.html'
+  { url: `https://localhost:4437/ads/default-ad.html` },
+  { url: `https://localhost:4437/ads/example-ad.html` },
 ];
 
 async function injectAd() {
@@ -207,7 +207,7 @@ async function injectAd() {
     ignoreIfPresent: true,
   });
 
-  const urls = EXPERIMENT_MAP.map(({ url }) => url);
+  const urls = EXPERIMENT_MAP.map(({ url }) => ({ url }));
   const groups = EXPERIMENT_MAP.map(({ group }) => group);
 
   // Run the URL selection operation to select an ad based on the experiment group in shared storage
@@ -289,9 +289,9 @@ async function injectAd() {
   // Initially set the storage to sequential mode for the demo
   seedStorage();
 
-  // Run the URL selection operation to determine the next ad rendered.
-  const adUrls = DEMO_AD_CONFIG.map(({ url }) => url);
-  const opaqueURL = await window.sharedStorage.selectURL('creative-rotation', adUrls, { data: DEMO_AD_CONFIG });
+  // Run the URL selection operation to determine the next ad that should be rendered
+  const urls = DEMO_AD_CONFIG.map(({ url }) => ({ url }));
+  const opaqueURL = await window.sharedStorage.selectURL('creative-rotation', urls, { data: DEMO_AD_CONFIG });
 
   // Render the opaque URL into a fenced frame
   document.getElementById('ad-slot').src = opaqueURL;
@@ -379,8 +379,8 @@ In this example:
 ```javascript
 // The first URL for the "register" button is rendered for unknown users.
 const AD_URLS = [
-  'https://advertiser.example/components/register-button.html',
-  'https://advertiser.example/components/buy-now-button.html',
+  { url: `https://${advertiserUrl}/ads/register-button.html` },
+  { url: `https://${advertiserUrl}/ads/buy-now-button.html` },
 ];
 
 async function injectAd() {
