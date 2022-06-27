@@ -18,8 +18,9 @@ Be sure to also read [Why not everyone's building for the web yet, but why they 
 
 ## How Fugu is my browser?
 
-Given all the reasons (and counterarguments) listed in my previous article Why not everyone's
-building for the Web yet, but why they should why companies are currently _not_ building for the
+Given all the reasons (and counterarguments) listed in my previous article
+[Why not everyone's building for the Web yet, but why they should](/building-for-the-web/)
+why companies are currently _not_ building for the
 Web, why should you? My hypothesis is that many developers and executives alike don't realize how
 capable the modern Web has become. Double-clicking an image file so it opens in an associated PWA,
 making some modifications, saving the changes back to the file and then copying the image contents
