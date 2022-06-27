@@ -1,33 +1,42 @@
 ---
 api: tabs
-extra_permissions_html:
-  The majority of the Tabs API can be used without declaring any permission. However, the <code>"tabs"</code> permission is required in order to populate the <code>url</code>, <code>pendingUrl</code>, <code>title</code>, and <code>favIconUrl</code> properties of <code><a href="#type-Tab">Tab</a></code>.
 ---
 
 ## Overview
 
+The Tabs API not only offers features for manipulating and managing tabs, but can also detect the
+[language][tabs-detect-language] of the tab, take a [screenshot][tabs-capture], and [communicate][tabs-message] with
+a content script. 
+
+{% Aside %}
+
+The service worker and extension pages can use the Tabs API. Content scripts cannot.
+
+{% endAside %}
+
 ## Manifest {: #manifest }
 
-### No permissions {: #no-perm }
+Most functions don't require any permission, like, for example: [creating][tabs-create] a new tab, [reloading][tabs-reload] a tab, [navigating][tabs-update] to another URL, etc.
 
-You can use most Tabs API methods and events without declaring any permissions. The following are some examples:
+### Permissions {: #perms }
 
-- Opening a new tab with `tabs.create()`.
-- Moving a tab with `tabs.move()`.
-- Reloading the tab with `tabs.reload()`.
-
-### Tabs permission or host permissions {: #perms }
-
-A permission is required to populate the `url`, `pendingUrl`, `title`, and `favIconUrl` properties of [`tabs.Tab`][tab]. Consider the following cases to determine which
-permission to request:
+A permission is only required to access the `url`, `pendingUrl`, `title`, and `favIconUrl` of
+[`tabs.Tab`][tab] or to capture a screenshot. Consider the following when requesting permissions:
 
 [Host permissions][doc-match]
-: If you already need host permissions, you can access the tab data of the matching URLs.
+: With host permissions, the extension has access to the tab data of the URL match
+patterns and the ability to capture screenshots.
+
+{% Aside %}
+
+A better alternative for capturing the visible tab or current tab data, is the `"activeTab"` permission, which doesn't trigger any warnings. See the [activeTab][doc-activetab] for usage details.
+
+{% endAside %}
 
 Tabs permission
-: Use this permission to gain access to the data of all tabs.
+: Use the `"tabs"` permission to access the tab data of all tabs.
 
-The following code shows how to declare each permission in the extension's [manifest][doc-manifest].
+The following are examples of how to declare each permission in the [manifest][doc-manifest].
 
 <web-tabs>
   <web-tab title="Host Permissions (Manifest)">
@@ -37,7 +46,8 @@ The following code shows how to declare each permission in the extension's [mani
     "name": "My extension",
     ...
     "host_permissions": [
-      "*://*/*"
+      "http://*/*",
+      "https://*/*"
     ],
     ...
   }
@@ -59,15 +69,10 @@ The following code shows how to declare each permission in the extension's [mani
   </web-tab>
 </web-tabs>
 
-{% Aside 'caution' %}
-
-Both permissions trigger a [permission warning][doc-perms].
-
-{% endAside %}
 
 ## Use cases {: #examples }
 
-The following sections demonstrate several common use cases for the Tabs API.
+The following sections demonstrate some common use cases.
 
 ### Opening an extension page in a new tab
 
@@ -90,7 +95,7 @@ chrome.runtime.onInstalled.addListener((reason) => {
 
 {% Aside 'success' %}
 
-For this example, you do not need to request any [permissions][section-manifest].
+This example doesn't require any [permissions][section-manifest].
 
 {% endAside %}
 
@@ -119,7 +124,8 @@ can usually be thought of as the user's current tab.
   function getCurrentTab(callback) {
     let queryOptions = { active: true, lastFocusedWindow: true };
     chrome.tabs.query(queryOptions, ([tab]) => {
-      if (chrome.runtime.lastError) console.error(chrome.runtime.lastError);
+      if (chrome.runtime.lastError) 
+      console.error(chrome.runtime.lastError);
       // `tab` will either be a `tabs.Tab` instance or `undefined`.
       callback(tab);
     });
@@ -130,21 +136,12 @@ can usually be thought of as the user's current tab.
 </web-tabs>
 
 
-{% Aside 'gotchas' %}
-
-The activeTab permission is **not** required to query for the active tab. Read more about the [Tabs API
-and permissions][section-manifest].
-
-{% endAside %}
-
 ### Mute the specified tab
 
 This example shows how an extension can toggle the muted state for a given tab.
 
 <web-tabs>
   <web-tab  title="Manifest V3 (promise)">
-
-{% Label %}background.js:{% endLabel %}
 
   ```js
   function toggleMuteState(tabId) {
@@ -158,8 +155,6 @@ This example shows how an extension can toggle the muted state for a given tab.
 
 </web-tab>
 <web-tab  title="Manifest V2 (callback)">
-
-{% Label %}background.js:{% endLabel %}
 
   ```js
   function toggleMuteState(tabId) {
@@ -177,12 +172,12 @@ This example shows how an extension can toggle the muted state for a given tab.
 
 ### Move the current tab to the first position when clicked
 
-This example shows how to move a tab while a drag may or may not be in progress.
+This example shows how to move a tab while a drag may or may not be in progress. While this example
+uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs while
+a drag may be in progress.
 
 <web-tabs>
   <web-tab  title="Manifest V3 (promise)">
-
-{% Label %}background.js:{% endLabel %}
 
   ```js
   chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
@@ -208,10 +203,7 @@ a way to ensure that an error that otherwise populates chrome.runtime.lastError 
   </web-tab>
   <web-tab title="Manifest V2 (callback)">
 
-{% Label %}background.js:{% endLabel %}
-
 ```js
-
 chrome.tabs.onActivated.addListener((activeInfo) =>
   moveToFirstPositionMV2(activeInfo)
 );
@@ -237,19 +229,26 @@ function moveToFirstPositionMV2(activeInfo) {
   </web-tab>
 </web-tabs>
 
-While this example uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs
-while a drag may be in progress.
+## Extension examples {: #more-samples}
 
-### Extension examples {: #more-samples}
+For more Tabs API extensions demos, explore any of the following:
 
-For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
-directory of the [chrome-extensions-samples][samples-repo] repository.
+- [Manifest V2 - Tabs API extensions][mv2-tabs-samples].
+- [Manifest V3 - Tabs Manager][mv3-tabs-manager].
 
+[doc-activetab]:/docs/extensions/mv3/manifest/activeTab/ 
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
+[mv3-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
-[tab]: #type-Tab
 [section-manifest]: #manifest
+[tab]: #type-Tab
+[tabs-capture]: #method-captureVisibleTab
+[tabs-create]: #method-create
+[tabs-detect-language]: #method-detectLanguage
+[tabs-message]: #method-sendMessage
+[tabs-reload]: #method-reload
+[tabs-update]: #method-update
