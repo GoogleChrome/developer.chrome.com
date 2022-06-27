@@ -18,7 +18,7 @@ It's in everyone's best interest to make sure FLEDGE operates efficiently.
 * Publishers want their sites to load quickly, providing users an efficient and responsive experience. Publishers also want effective advertising to maximize their revenue.
 * Advertisers and adtechs want their ads to display quickly to provide the greatest utility.
 
-This document seeks to outline some behaviors to ensure FLEDGE operates at maximum efficiency.
+This document outlines some best practices for FLEDGE implementation, to ensure your site operates at maximum efficiency.
 
 
 ## Buyer (bidder) best practices
