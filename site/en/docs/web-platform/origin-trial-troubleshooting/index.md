@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-05-13
+updated: 2022-07-27
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -102,6 +102,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <br>
   <input class="w-checkbox" type="checkbox" id="check-workers">
   <label for="check-workers" class="w-ml--l"><a href="#workers">Worker access is enabled</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="token-before-access">
+  <label for="token-before-access" class="w-ml--l"><a href="#token-before-access">Token is provided before feature is accessed</a></label>
 </div>
 
 
@@ -491,6 +494,10 @@ don't inherit access to features enabled for pages that contain them.
 A demo showing access to an origin trial feature in an iframe is available at 
 [ot-iframe.glitch.me](https://ot-iframe.glitch.me).
 
+{% Aside 'gotchas' %}
+Provide a 'normal' token (not a third-party token) in an iframe which includes code that accesses a trial feature. See [Third-party token is not used in a first-party context](#token-third-first) for more information.
+{% endAside %}
+
 ### Permissions policies are correctly configured {: #permissions-policies}
 
 Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
@@ -506,13 +513,18 @@ full list of allowed features in the Application panel.
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/AcG4YbivB3L4lM43vIRe.png", alt="Chrome DevTools 
   Application panel, showing Permissions Policy Allowed Feature", width="800", height="408" %}
 
-
 ### What about the workers? {: #workers}
 
 Origin trials features can be made available to service workers, shared workers, and dedicated 
 workers. However, the only way to enable access for service workers and shared workers is to provide 
 a token in an `Origin-Trial` header. Dedicated workers inherit access to features enabled by their 
 parent document.
+
+###  Token is provided before feature is accessed {: #token-before-access}
+
+Make sure that an origin trial token is provided _before_ a trial feature is accessed. 
+For example, if a page provides a token via JavaScript, make sure the code to provide the token 
+is run before code that attempts to access the trial feature.
 
 
 ## Origin trial demos
