@@ -99,7 +99,7 @@ additional view. If there are available impressions left (the user has not hit
 their frequency cap), the ad is returned (index `1`). If not, the default URL
 is returned (index `0`).
 
-In this example, you create two files:
+In this example:
 
 *  `frequency-cap.js` is loaded via the advertiser's iframe, and is responsible
    for loading the shared storage worklet, and rendering the returned opaque
