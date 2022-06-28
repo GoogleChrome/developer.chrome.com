@@ -39,7 +39,7 @@ a keyboard or screen reader yourself. See [How To Do An Accessibility Review][4]
 
 ## Audit a page's accessibility {: #audits }
 
-In general, use the accessibility checks under the 'Lighthouse' panel to determine if:
+In general, use the accessibility checks under the **Lighthouse** panel to determine if:
 
 - A page is properly marked up for screen readers.
 - The text elements on a page have sufficient contrast ratios. See also [View the contrast ratio of
@@ -97,7 +97,7 @@ To audit a page:
 
 ### See also: aXe extension {: #axe }
 
-You may prefer to use the [aXe extension][6] or [Lighthouse extension][7] rather than the Lighthouse panel that is available by default in Chrome.
+You may prefer to use the [aXe extension][6] or [Lighthouse extension][14] rather than the Lighthouse panel that is available by default in Chrome.
 They generally provide the same information, since aXe is the underlying engine that powers the Lighthouse panel. The aXe
 extension has a different UI and describes audits slightly differently. One advantage that the aXe
 extension has over the Audits panel is that it lets you inspect and highlight failing nodes.
