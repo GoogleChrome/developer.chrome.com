@@ -56,9 +56,9 @@ To audit a page:
 
     {% Aside %}
 
-    **Note**: The screenshots in this section were taken with version 69 of Chrome. In the screenshot the tab
-    is still named `Audits` but this was [renamed Lighthouse per Chrome 83](/blog/new-in-devtools-83/#lighthouse)
-    You can check what version you're running at `chrome://version`. The Audits panel UI will look different in
+    **Note**: The screenshots in this section were taken with Chrome 69. In the screenshots, the tab
+    is still named **Audits** but it was [renamed into Lighthouse in Chrome 83](/blog/new-in-devtools-83/#lighthouse)
+    You can check what version you're running at `chrome://version`. The **Audits** panel UI will look different in
     some earlier or later versions of Chrome, but the general workflow is the same.
 
     {% endAside %}
