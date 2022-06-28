@@ -75,7 +75,7 @@ An origin is considered to be publicly discoverable if its **root page** is disc
 
 Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
 
-- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200`.
+- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200` (after redirects).
 - The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation).
 - The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
 - The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
@@ -514,9 +514,9 @@ Note that the specification defines four connection types, the majority of visit
 
 The form factor dimension allows you to query against three separate form factors:
 
-- Mobile (`PHONE`)
-- Tablet (`TABLET`)
-- Desktop (`DESKTOP`)
+- Phone
+- Tablet
+- Desktop
 
 Form factor is inferred from the device [user-agent string](/docs/multidevice/user-agent/).
 
