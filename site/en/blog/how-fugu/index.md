@@ -12,7 +12,7 @@ tags:
 ---
 
 {% Aside %} This is part two of a two part mini series on the capable web. Be sure to also read
-[Why not everyone's building for the web yet, but why they should](/building-for-the-web/)!
+[Why not everyone's building for the web yet, but why potentially they should](/building-for-the-web/)!
 {% endAside %}
 
 ## How Fugu is my browser?
@@ -44,7 +44,12 @@ that tell you how popular over time a given feature is.
 If your browser supports it, you can share how Fugu your browser is by clicking the **Share** button
 right next to the Fugu fish and the progress bar.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/8z3ZhxPAq5NxfXEss1XS.png", alt="ALT_TEXT_HERE", width="800", height="649" %}
+<figure>
+  {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/8z3ZhxPAq5NxfXEss1XS.png", alt="Screenshot of the site https://howfuguismybrowser.dev/.", width="800", height="649" %}
+  <figcaption>
+    Have you ever wondered: "<a href="https://howfuguismybrowser.dev/">How Fugu is my browser?</a>"
+  </figcaption>
+</figure>
 
 ## How Fugu is the Web?
 
@@ -67,7 +72,12 @@ nine detectable Project Fugu APIs, namely
 feature and click through to documentation by clicking on **Details**, and also directly check out
 the relevant source code snippet by clicking on the source code link in the bullet list.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/nqW8WRlqQap8cY7sFxRw.png", alt="ALT_TEXT_HERE", width="800", height="676" %}
+<figure>
+  {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/nqW8WRlqQap8cY7sFxRw.png", alt="The extension 'How Fugu is the Web' invoked on the site https://excalidraw.com/.", width="800", height="676" %}
+  <figcaption>
+    Have you ever wondered: "<a href="https://chrome.google.com/webstore/detail/how-fugu-is-the-web/apcghpabklkjjgpfoplnglnjghonjhdl">How Fugu is the web?</a>"
+  </figcaption>
+</figure>
 
 ## Conclusions
 
