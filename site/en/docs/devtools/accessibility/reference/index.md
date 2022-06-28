@@ -48,7 +48,7 @@ In general, use the accessibility checks under the 'Lighthouse' panel to determi
 To audit a page:
 
 1.  Go to the URL that you want to audit.
-2.  In DevTools, click the **Lighthouse** tab (called 'Audits' in earlier Chrome versions). DevTools shows you various configuration options.
+2.  In DevTools, click the **Lighthouse** tab. DevTools shows you various configuration options.
 
     {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring an accessabillity scan in Lighthouse panel.", width="800", height="1053" %}
 
