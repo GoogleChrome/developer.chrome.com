@@ -3,42 +3,41 @@ layout: 'layouts/blog-post.njk'
 title: How Fugu is my browser and how Fugu is the Web?
 subhead: >
 
-date: 2022-06-27
-# updated: 2022-06-27
+date: 2022-06-28
+# updated: 2022-06-28
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
   - capabilities
 ---
 
-{% Aside %}
-This is part two of a two part mini series on the capable web.
-Be sure to also read [Why not everyone's building for the web yet, but why they should](/building-for-the-web/)!
+{% Aside %} This is part two of a two part mini series on the capable web. Be sure to also read
+[Why not everyone's building for the web yet, but why they should](/building-for-the-web/)!
 {% endAside %}
 
 ## How Fugu is my browser?
 
 Given all the reasons (and counterarguments) listed in my previous article
-[Why not everyone's building for the Web yet, but why they should](/blog/building-for-the-web/)
-why companies are currently _not_ building for the
-Web, why should you? My hypothesis is that many developers and executives alike don't realize how
-capable the modern Web has become. Double-clicking an image file so it opens in an associated PWA,
-making some modifications, saving the changes back to the file and then copying the image contents
-over into another app or sharing it to an email client is a flow that wasn't possible on the Web
-before, but which APIs developed in the context of
-[Project Fugu](/blog/fugu-status/) 🐡 like the
-[File Handling API](https://web.dev/file-handling/), the
-[File System Access API](https://web.dev/file-system-access/), the
+[Why not everyone's building for the Web yet, but why they should](/blog/building-for-the-web/) why
+companies are currently _not_ building for the Web, why should you? My hypothesis is that many
+developers and executives alike don't realize how capable the modern Web has become. Double-clicking
+an image file so it opens in an associated PWA, making some modifications, saving the changes back
+to the file and then copying the image contents over into another app or sharing it to an email
+client is a flow that wasn't possible on the Web before, but which APIs developed in the context of
+[Project Fugu](/blog/fugu-status/) 🐡 like the [File Handling API](https://web.dev/file-handling/),
+the [File System Access API](https://web.dev/file-system-access/), the
 [Async Clipboard API](https://web.dev/async-clipboard/), and the
 [Web Share API](https://web.dev/web-share/) have made possible.
 
 Yes, in many cases the Web can do that! I have developed a test application with the tongue-in-cheek
 name [How Fugu is my browser?](https://howfuguismybrowser.dev/) that you can take for a spin to see
 what Project Fugu APIs your browser of choice supports. Since not all features are exposed on all
-platforms, it's technically impossible to reach a score of 100%, so take it more like a playful
-competition than absolute science. For each tested feature, there's a link to the relevant
-documentation so you can learn more about the feature. Where feature detection is possible, there is
-also a note whether the feature is supported by your browser or not, and finally
+platforms, for example, the [Contact Picker API](https://web.dev/contact-picker/) is currently only
+exposed on mobile, it's technically impossible to reach a score of 100% if you test on desktop (and
+vice versa), so take it more like a playful competition than absolute science. For each tested
+feature, there's a link to the relevant documentation so you can learn more about the feature. Where
+feature detection is possible, there is also a note whether the feature is supported by your browser
+or not, and finally
 [page load statistics linked to Chrome Status](https://chromestatus.com/metrics/feature/timeline/popularity)
 that tell you how popular over time a given feature is.
 
@@ -93,7 +92,6 @@ an amazing pace. The Web is not your only choice for building your app, but I ho
 I have convinced you to give The Capable Web a second look if you have dismissed it so far. It has
 come a long way.
 
-{% Aside %}
-This is part two of a two part mini series on the capable web.
-Be sure to also read [Why not everyone's building for the web yet, but why they should](/blog/building-for-the-web/)!
+{% Aside %} This is part two of a two part mini series on the capable web. Be sure to also read
+[Why not everyone's building for the web yet, but why they should](/blog/building-for-the-web/)!
 {% endAside %}

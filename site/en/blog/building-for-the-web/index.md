@@ -1,20 +1,27 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Why not everyone's building for the web yet, but why they should
+title: Why not everyone's building for the web yet, but why potentially they should
 subhead: >
 
-date: 2022-06-27
-# updated: 2022-06-27
+date: 2022-06-28
+# updated: 2022-06-28
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
   - capabilities
 ---
 
-{% Aside %}
-This is part one of a two part mini series on the capable web.
-Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)!
-{% endAside %}
+{% Aside %} This is part one of a two part mini series on the capable web. Be sure to also read
+[How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)! {% endAside %}
+
+When you want to build an app today, you have several options to do so. You can build a
+platform-specific app for the platforms you care about, like, for example, Windows, Android, and
+iOS. That is, in this case, technically, you would build three apps. You can also build a
+(progressive) web app, possibly _on top_ of platform-specific apps. Alternatively, you can choose a
+cross-platform framework like [Electron.js](https://www.electronjs.org/) or
+[Ionic](https://ionicframework.com/) that promises to let you write once and run anywhere. This very
+publication being about the web, let me begin with walking you through three extraordinary examples
+of apps whose makers chose to build for the web.
 
 ## Lighthouse cases that demonstrate the web's abilities
 
@@ -33,8 +40,8 @@ new lighthouse showcase of what is possible on the web.
 
 Similarly, Microsoft has launched
 [Visual Studio Code on the web](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev), a
-full-fledged, installable web experience of its IDE that renders developing fully in the browser
-almost completely possible, including the option to open and edit files on the local file system.
+full-fledged, installable web experience of its IDE that makes developing completely in the browser
+possible, including the option to open and edit files on the local file system.
 
 <figure>
   {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/i8DIRLsHwHeEJX4NPUUn.png", alt="Microsoft VS Code running in the browser.", width="800", height="483" %}
@@ -75,8 +82,8 @@ running on"_. With Visual Studio Code for the web,
 [according to](https://code.visualstudio.com/blogs/2021/10/20/vscode-dev#:~:text=You%20can%20make%20quick%20edits%2C%20review%20PRs%2C%20and%20Continue%20on%20to%20a%20local%20clone)
 Microsoft's [Chris Dias](https://twitter.com/chrisdias), when working with GitHub, _"you can make
 quick edits, review PRs, and continue on to a local clone"_. The sole fact that you can share a link
-to your work unlocks collaboration patterns that we have learned to love since the birth of apps
-like Google Docs. Twitter of course lives and dies with links. News sites regularly
+to your work unlocks collaboration patterns that users embrace and love since the birth of apps like
+Google Docs. Twitter of course lives and dies with links. News sites regularly
 [link to newsworthy tweets](https://edition.cnn.com/2021/11/09/politics/gosar-anime-video-violence-ocasio-cortez-biden/index.html#:~:text=Ocasio-Cortez%20tweeted%20in%20response%20Monday%20saying%20a%20%22creepy%20member%22%20of%20the%20House%20had%20%22shared%20a%20fantasy%20video%20of%20him%20killing%20me.%22),
 which _means "keeping it quick"_
 [is core](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/progressively-enhancing-desktop-devices#:~:text=%C2%A0-,Keeping%20it%20quick,-With%20all%20the)
@@ -105,8 +112,10 @@ into a web app.
 
 ## The slow decline of interest in cross-platform app frameworks and the rise of Flutter
 
-With the web becoming powerful enough to drive web apps that were believed to be impossible like
-Photoshop, we can see a slow decline of interest in cross-platform desktop app frameworks like
+The web isn't the only platform that promises "write once, run anywhere". Cross platform frameworks
+à la [Electron.js](https://www.electronjs.org/) do, too. With the Web becoming powerful enough to
+drive Web apps that were believed to be impossible like Photoshop, we can, however, observe a slow
+decline of interest in cross-platform desktop app frameworks like
 [Electron.js](https://www.electronjs.org/) and [NW.js](https://nwjs.io/) and mobile app frameworks
 like [Cordova](https://cordova.apache.org/) or [React Native](https://reactnative.dev/), while at
 the same time there is an undeniable increase of interest in [Flutter](https://flutter.dev/). The
@@ -142,7 +151,6 @@ according to which Flutter has passed React Native as the most popular framework
   </figcaption>
 </figure>
 
-And also
 [StackOverflow statistics](https://insights.stackoverflow.com/trends?tags=flutter%2Creact-native%2Celectron%2Cionic-framework)
 on tag usage agree. The underlying assumption of people actually using a technology being correlated
 with people asking questions about said technology on StackOverflow is not out of this world.
@@ -155,16 +163,16 @@ with people asking questions about said technology on StackOverflow is not out o
   </figcaption>
 </figure>
 
-## Should not everybody be building for the web then?
+## Shouldn't everybody be building for the web then?
 
-Given the proves from the introductory three examples, Photoshop, VS Code, and Twitter, that it
-indeed is possible to build amazing applications on the web and given the web's super powers of
-linkability and universality, then _(i)_, why do people still not fully bet on PWAs but build
-platform-specific apps and _(ii),_ do at least in part happily flock to Flutter?
+Given the examples, Photoshop, VS Code, and Twitter, that it indeed is possible to build amazing
+applications on the web and given the web's super powers of linkability and universality, then
+_(1)_, why do people still not fully bet on PWAs but build platform-specific apps and _(2),_ do at
+least in part happily flock to Flutter?
 
 ## Why do people not fully bet on PWA?
 
-For _(i)_, the answer is complex and manyfold. I want to break it down into different
+For _(1)_, the answer is complex and manyfold. I want to break it down into different
 sub-categories.
 
 ### Missing capabilities, aka. the app gap
@@ -180,9 +188,9 @@ support for app menus is tracked as [crbug/1295253](https://crbug.com/1295253).)
 in-app purchases on macOS that can be handled via Electron's
 <code>[inAppPurchase()](https://www.electronjs.org/docs/latest/tutorial/in-app-purchases)</code>
 method. (On the web, the next best thing is the
-[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/),
-currently limited to Android and Chrome OS.) Installers are a common way users have learned to
-install applications on Windows. With Electron.js, it is possible to create
+[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/), currently
+limited to Android and Chrome OS.) Installers are a common way users have learned to install
+applications on Windows. With Electron.js, it is possible to create
 [installers](https://www.electronjs.org/docs/latest/api/auto-updater#windows) and make installed
 applications [update automatically](https://www.electronjs.org/docs/latest/api/auto-updater). (On
 the web, [Web Bundles](https://web.dev/web-bundles/) are the next best alternative in Chrome.) This
@@ -192,8 +200,8 @@ list is non-exhaustive, and Electron.js is mentioned as a representative framewo
 
 Collectively we have educated users to look for apps in app stores. Some stores like the
 [Windows Store](https://developer.microsoft.com/en-us/microsoft-store/pwa/) and the
-[Android Play Store](/docs/android/trusted-web-activity/quick-start/)
-have started to embrace (wrapped!) PWAs (optionally
+[Android Play Store](/docs/android/trusted-web-activity/quick-start/) have started to embrace
+(wrapped!) PWAs (optionally
 [limited to Chrome OS](https://chromeos.dev/en/publish/pwa-in-play#chrome-os-only)) and offer
 graphical user interface tools like [PWABuilder](https://www.pwabuilder.com/) (internally based on
 the command line tool [bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap)) for submitting
@@ -211,13 +219,11 @@ as in-app purchases (for example, items in a game app) or by selling subscriptio
 regular courses in a fitness app). If the developer integrates with payment providers, all of this
 is available to web apps as well, but the smooth integration of stores and their related payment
 systems makes this a lot more attractive for platform-specific apps, albeit at a 15–30% commission.
-For apps built using
-[Trusted web Activities](/docs/android/trusted-web-activity/) and
-delivered through the Google Play Store, developers can now use the
-[Payment Request API](https://developer.mozilla.org/docs/Web/API/Payment_Request_API) and the
-new
-[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/)
-to integrate with Google Play Billing.
+For apps built using [Trusted web Activities](/docs/android/trusted-web-activity/) and delivered
+through the Google Play Store, developers can now use the
+[Payment Request API](https://developer.mozilla.org/docs/Web/API/Payment_Request_API) and the new
+[Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/) to integrate
+with Google Play Billing.
 
 ### Hiring or retraining developers
 
@@ -286,16 +292,16 @@ years. Nonetheless will a carefully developed platform-specific app typically ou
 application, albeit the situations where this _actually_ matters may be limited. With even
 high-performance audio editing tools like [Soundtrap](https://www.soundtrap.com/) (thanks to the
 [Web Audio API](https://developer.mozilla.org/docs/Web/API/Web_Audio_API) and
-[AudioWorklet](https://developer.mozilla.org/docs/Web/API/AudioWorklet)), interactive
-development environments like [Jupyter Notebook](https://jupyter.org/try) and graphics editing tools
-like [Figma](https://www.figma.com/) (thanks to Web Assembly), and of course graphics-intensive
-games like [Quake](http://www.quakejs.com) (thanks to
+[AudioWorklet](https://developer.mozilla.org/docs/Web/API/AudioWorklet)), interactive development
+environments like [Jupyter Notebook](https://jupyter.org/try) and graphics editing tools like
+[Figma](https://www.figma.com/) (thanks to Web Assembly), and of course graphics-intensive games
+like [Quake](http://www.quakejs.com) (thanks to
 [WebGL](https://developer.mozilla.org/de/docs/Web/API/WebGL_API) and
 [WebGPU](https://gpuweb.github.io/gpuweb/) in the future), the boundary is pushed at a rapid rate.
 
 ## Why is Flutter so popular?
 
-For _(ii)_, one possible explanation is that it is a
+For _(2)_, one possible explanation is that it is a
 [Google-backed](https://flutter.dev/#:~:text=Flutter%20is%20Google%27s%20UI%20toolkit%20for%20building%20beautiful%2C%20natively%20compiled%20applications%20for%20mobile%2C%20web%2C%20desktop%2C%20and%20embedded%20devices%20from%20a%20single%20codebase.)
 toolkit for _"building beautiful, natively compiled applications for mobile, Web, desktop, and
 embedded devices from a single codebase"_. If even Google, as the maker of Android, trusts Flutter
@@ -350,21 +356,22 @@ help when one is stuck.
 
 ## Conclusions
 
-It is undeniable that amazing apps can be built on the web. Photoshop, VS Code, and Twitter were
-the leading examples in this article, but there are many others. The web's super power is its
+It is undeniable that amazing apps can be built on the web. Photoshop, VS Code, and Twitter were the
+leading examples in this article, but there are many others. The web's super power is its
 linkability, which is hard to beat on platforms other than the web. There seems to be a certain
 tendency of cross-platform app frameworks becoming less attractive to developers, with the notable
 exception being Flutter, which allows for web as one of its target platforms. Reasons for not
 building for the web are not hard to find, but it is likely not hard to find counterarguments to
-take these reasons apart. Some of them rely on outdated or weak assumptions, for example, PWAs being not
-welcome on app stores or platform-specific apps being more secure than PWAs. Others are things that are in process, like closing the app gap by adding
-missing web platform APIs. Some reasons apply equally to both worlds, for example, hiring being
-a challenge. I could go on and on, but in the end it all boils down to the concrete circumstances your use case
-needs to be built for. In this article, I have given a number of really strong arguments for building for the web,
-while also not hiding the fact that the web is a platform that is still not perfect and that other alternatives exist.
-And as the three leading examples have shown, the decision is also not mutually exclusive. You can build a powerful PWA for the web, and also have a great platform-specific application at the same time. It is up to you to decide if you have to.
+take these reasons apart. Some of them rely on outdated or weak assumptions, for example, PWAs being
+not welcome on app stores or platform-specific apps being more secure than PWAs. Others are things
+that are in process, like closing the app gap by adding missing web platform APIs. Some reasons
+apply equally to both worlds, for example, hiring being a challenge. I could go on and on, but in
+the end it all boils down to the concrete circumstances your use case needs to be built for. In this
+article, I have given a number of really strong arguments for building for the web, while also not
+hiding the fact that the web is a platform that is still not perfect and that other alternatives
+exist. And as the three leading examples have shown, the decision is also not mutually exclusive.
+You can build a powerful PWA for the web, and also have a great platform-specific application at the
+same time. It is up to you to decide if you have to.
 
-{% Aside %}
-This is part one of a two part mini series on the capable web.
-Be sure to also read [How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)!
-{% endAside %}
+{% Aside %} This is part one of a two part mini series on the capable web. Be sure to also read
+[How Fugu is my browser and how Fugu is the Web?](/blog/how-fugu/)! {% endAside %}
