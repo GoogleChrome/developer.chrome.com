@@ -39,7 +39,7 @@ check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-upda
         *  Complete the aggregation service
 	      [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). After you've
 		submitted this form, we'll send a verification email and instructions.
-   *  Refer to the [strategy and tips for summary reports]https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
+   *  Refer to the [strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
 
 ## Get support
 
