@@ -48,12 +48,27 @@ Focus mode/
 
 Create a file called manifest.json and include the following code.
 
-<!-- <MANIFEST CODE GOES HERE> -->
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Focus Mode",
+  "description": "Enable reading mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "version": "1.0",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  ...
+}
+```
 
 These manifest keys are explained in more detail in [tbd][link to reading mode manifest metadata]. 
 
 Create an “images” folder and place the icons inside. You can download the icons here.
-
 
 ### Step 2: Register the extension service worker {: #step-2 }
 
@@ -61,24 +76,64 @@ Create an “images” folder and place the icons inside. You can download the i
 
 To use a [service worker][doc-sw], the extension must first point to the file in the manifest by adding the following code:
 
-<!-- <MANIFEST CODE GOES HERE> -->
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  ...
+  "background": {
+      "service_worker": "background.js"
+  },
+  ...
+}
+```
 
 #### Initialize the extension
 
-The main role of a service worker is to respond to browser events. The first event the extension will listen for is `[runtime.onInstalled()][runtime-oninstalled]`. This way, the extension can complete a few tasks when it’s first installed.
+The main role of a service worker is to respond to browser events. The first event the extension
+will listen for is `[runtime.onInstalled()][runtime-oninstalled]`. This way, the extension can
+complete a few tasks when it’s first installed.
 
-In this example, there are only two states (on and off), so the extension will manage these by tracking the badge text associated with each tab. Create a file called background.js and add the following code to set the initial state as “OFF”:
+In this example, there are only two states (on and off), so the extension will manage these by
+tracking the badge text associated with each tab. Create a file called `background.js` and add the
+following code to set the initial state as “OFF”:
 
-<!-- <CODE GOES HERE> -->
+{% Label %}background.js:{% endLabel %}
+
+```js
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.action.setBadgeText({
+    text: "OFF",
+  });
+});
+...
+```
 
 TIP: For more complex states, use the storage API to save the initial state. See example TBD. 
 
 
 ### Step 3: Enable the extension action {: #step-3 }
 
-The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the extension action, it will either run some code on the page (like in this example) or it can display a popup. Add the following code to declare the extension action in the manifest:
+The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the
+extension action, it will either run some code on the page (like in this example) or it can display
+a popup. Add the following code to declare the extension action in the manifest:
 
-<!-- <MANIFEST CODE GOES HERE> -->
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  ...
+  "action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  ...
+}
+```
 
 #### Declare the activeTab permission
 
@@ -97,46 +152,122 @@ ASIDE SUCCESS The [activeTab][doc-active-tab] permission does not trigger a [per
 
 To use the activetab permission, add it to manifest's permission array.
 
-<!-- <MANIFEST CODE GOES HERE>  -->
+{% Label %}manifest.json:{% endLabel %}
 
-### STEP 4: Listen for the onClicked event {: #step-4 }
+```json
+{
+  ...
+  "permissions": ["activeTab"],
+  ...
+}
+```
 
-In “background.js”, add the following code to listen for the action.onClicked() event. When the user clicks on the extension action, the extension will have access to the focused tab and execute some code.
+### Step 4: Track the state of the current tab {: #step-4 }
 
-<!-- <BACKGROUND CODE GOES HERE> -->
+In `background.js`, add the following code to listen for the `action.onClicked()` event. When the
+user clicks on the extension action, the extension will have access to the focused tab and execute
+some code.
 
+{% Label %}background.js:{% endLabel %}
 
-### Step 5: Track the state of the current tab {: #step-5 }
+```js
+  chrome.action.onClicked.addListener(async (tab) => {
+    if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
+      // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
+      const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
+      // Next state will always be the opposite
+      const nextState = prevState === 'ON' ? 'OFF' : 'ON'
+  
+      // Set the action badge to the next state
+      await chrome.action.setBadgeText({
+        tabId: tab.id,
+        text: nextState,
+      });
+  ...
+```
 
-Now that the extension has access to the tab information, you can make sure the URL matches an extension or webstore documentation page. If that’s the case, check the content of the badge to determine the current state and set the next state.
+The extension now has access to the current tab data, so let's perform the following: 
+    - Make sure that the URL matches an extension or webstore page
+    - Then, check the content of the badge to determine the current state and set the next state.
 
-<!-- <BACKGROUND CODE GOES HERE> -->
+### Step 5: Add or remove the stylesheet {: #step-5 }
 
+Great! Now that you know if the extension is on or off, you are ready to insert or remove the CSS
+stylesheet accordingly. Create a file called focus-mode.css and include the following code:
 
-### Step 6: Add or remove the stylesheet {: #step-6 }
+{% Label %}focus-mode.css:{% endLabel %}
 
-Great! Now that you know if the extension is on or off, you are ready to insert or remove the CSS stylesheet accordingly. Create a file called focus-mode.css and include the following code:
+```css
+body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
+main > :not(:last-child),
+main > :last-child > navigation-tree,
+main .toc-container {
+  display: none;
+}
 
-<!-- <CSS CODE GOES HERE> -->
+main > :last-child {
+  margin-top: min(10vmax, 10rem);
+  margin-bottom: min(10vmax, 10rem);
+}
+```
 
-The Scripting API allows the extension to insert or remove the CSS stylesheet.  First, let's add the "scripting" permission to the manifest:
+The Scripting API allows the extension to insert or remove the CSS stylesheet.  First, let's add the "scripting" permission, next to the activeTab permission in the manifest:
 
-<!-- <MANIFEST CODE GOES HERE> -->
+{% Label %}manifest.json:{% endLabel %}
 
+```json
+{
+  ...
+  "permissions": ["activeTab", "scripting"],
+  ...
+}
+```
 ASIDE SUCCESS: The scripting API does not trigger a permission warning.
 
 Finally, add the following code to background.js to change the layout of the page to make it easier to read.
 
-<!-- <BACKGROUND CODE GOES HERE> -->
+{% Label %}background.js:{% endLabel %}
 
-### Step 7: Assign a keyboard shortcut {: #step-7 }
+```js
+  ...
+      if (nextState === "ON") {
+        // Insert the CSS file when the user turns the extension on
+        await chrome.scripting.insertCSS({
+          files: ["focus-mode.css"],
+          target: { tabId: tab.id },
+        });
+      } else if (nextState === "OFF") {
+        // Remove the CSS file when the user turns the extension off
+        await chrome.scripting.removeCSS({
+          files: ["focus-mode.css"],
+          target: { tabId: tab.id },
+        });
+      }
+    }
+  });
+```
+
+### Step 6: Assign a keyboard shortcut {: #step-6 }
 
 As a bonus, add a shortcut to make it easier to enable or disable focus mode. Start by adding the “commands” key to the manifest.json.
 
-<!-- <MANIFEST CODE GOES HERE> -->
+{% Label %}manifest.json:{% endLabel %}
 
-The “_execute_action” key runs the same code as the action.onClicked() event, so no additional code is needed. 
+```json
+{
+  ...
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  }
+}
+```
 
+The `“_execute_action”` key runs the same code as the `onClicked()` event, so no additional code is needed. 
 
 ## Test that it works {: #try-out }
 
@@ -146,13 +277,13 @@ To load an unpacked extension in developer mode, follow the steps in [Developmen
 
 ### Open an extension documentation page {: #open-sites }
 
-1. Go to any of the following pages:
+Go to any of the following pages:
 
 - [Welcome to the Chrome Extension documentation][doc-welcome]
 - [Using promises][doc-promises]
 - [Scripting API][api-scripting]
 
-2. Click on the extension action or press the keyboard shortcut `Ctrl + U` or `Cmd + U`.
+Then, click on the extension action or press the keyboard shortcut `Ctrl + U` or `Cmd + U`.
 
 It should look like this:
 
@@ -170,10 +301,10 @@ Based on what you’ve learned today, try to add any of the following features:
 
 Congratulations on finishing this tutorial 🎉. Continue developing your skills by completing any of the following tutorials:
 
-| Extension                        | What you will learn                                                    |
-|----------------------------------|------------------------------------------------------------------------|
-| [Reading time][tut-reading-time] | To insert an element on every page automatically.                      |
-| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
+| Extension                        | What you will learn                               |
+|----------------------------------|---------------------------------------------------|
+| [Reading time][tut-reading-time] | To insert an element on every page automatically. |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.      |
 
 ## Continue exploring
 

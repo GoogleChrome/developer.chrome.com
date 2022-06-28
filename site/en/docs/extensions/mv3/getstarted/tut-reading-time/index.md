@@ -40,16 +40,24 @@ This is what the final file structure of this project will look like:
 
 ## Build the extension {: #build }
 
-### Step 1: Add the extension information {: #step-1 }
+<!-- TODO: Add friendly intro -->
 
-The `manifest.json` is the only required extension file. It contains important information about the extension; we will continue adding more fields as we go along. For now, create a `manifest.json` file in the root of the project and add the following code to specify the name, description, and version number of the extension:
+### Step 1: Add information about the extension {: #step-1 }
+
+The `manifest.json` is the only required extension file. It contains important information about the
+extension; we will continue adding more fields as we go along. For now, create a `manifest.json`
+file in the root of the project and add the following code to specify the name, description, and
+version number of the extension:
+
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
- "manifest_version": 3,
- "name": "Reading time",
- "description": "Add the reading time to the Chrome Extension documentation",
- "version": "1.0"
+  "manifest_version": 3,
+  "name": "Reading time",
+  "version": "1.0",
+  "description": "Add the reading time to Chrome Extension documentation articles",
+  ...
 }
 ```
 
@@ -69,37 +77,40 @@ The `manifest.json` is the only required extension file. It contains important i
 
 Although [icons][doc-icons] are optional during development, we recommend you include them. They are used in the extension management page, the permissions warning, the Chrome web store, and favicon. Declare the icons in the manifest JSON by adding the following code.
 
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
- ...
- "icons": {
-   "16": "images/icon-16.png",
-   "32": "images/icon-32.png",
-   "48": "images/icon-48.png",
-   "128": "images/icon-128.png"
- }
- ...
+  ...
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+  ...
 ```
-
 
 ASIDE: Learn more about icon design and best practices.
 
 ### Step 3: Declare the content scripts {: #step-3 }
 
-Extensions can run scripts that read and modify the content of the pages. These are called _content scripts_. Add the following code to the manifest.json to load a content script called `content.js`. You can choose which sites this script will be injected into by adding one or more match patterns to an array in the “match” field.
+Extensions can run scripts that read and modify the content of the pages. These are called _content
+scripts_. Add the following code to the manifest.json to load a content script called `content.js`.
+You can choose which sites this script will be injected into by adding one or more match patterns to
+an array in the “match” field.
 
 
 ```json
- ...
- "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
-    }
-  ]
+  ...
+  "content_scripts": [
+      {
+        "js": ["scripts/content.js"],
+        "matches": [
+          "https://developer.chrome.com/docs/extensions/*",
+          "https://developer.chrome.com/docs/webstore/*"
+        ]
+      }
+    ]
   ...
 ```
 
@@ -112,12 +123,15 @@ _Did you know about relative paths in the manifest?_
 
 All files should be relative to the manifest file and start with a letter, not with a leading “/” or “./”.
 
-### Step 4: Calculate and insert reading time {: #step-4 }
+### Step 4: Calculate and insert the reading time {: #step-4 }
 
-Content scripts use the standard [Document Object Model][w3-dom] (DOM) to read details of the web pages and make changes. Add a folder called **scripts** and in it a file called `content.js`.
+Content scripts use the standard [Document Object Model][w3-dom] (DOM) to read details of the web
+pages and make changes. Add a folder called **scripts** and in it a file called `content.js`.
 
-Add the following code to find the element that contains the `article` element. Then, create an element that will contain how long it should take to read the content of the article. 
+Add the following code to find the element that contains the `article` element. Then, create an
+element that will contain how long it should take to read the content of the article. 
 
+{% Label %}content.js:{% endLabel %}
 
 ```js
 const article = document.querySelector("article");
@@ -144,9 +158,9 @@ if (article) {
 }
 ```
 
-
 ASIDE TIP: [Viewing the DOM][dev-dom] explains how to inspect the DOM  to find out which element you want to query using the Chrome devtools.
 
+<!-- Details: What's a regular expression? -->
 
 ## Test that it works {: #try-out }
 
@@ -154,9 +168,11 @@ ASIDE TIP: [Viewing the DOM][dev-dom] explains how to inspect the DOM  to find o
 
 To load an unpacked extension in developer mode, follow the steps in [Development Basics][doc-dev-basics].
 
+<!-- Explore including steps as a detail dropdown -->
+
 ### Open an extension documentation {: #open-sites }
 
-Here are a few pages you can open to see how long they will take to read. 
+Here are a few pages you can open to see how long each article  will take to read. 
 
 * [Welcome to the Chrome Extension documentation][doc-welcome]
 * [Using promises][doc-promises]
@@ -170,19 +186,21 @@ It should look like this:
 
 Based on what you’ve learned today, try to support any of the following features:
 
-- Add another **match pattern** in the manifest.json to support other [chrome developer][dev-chrome] pages, like the [devtool][devtools] or [workbox][workbox].
-- Add a new content script that calculates the reading time on any of your favorite blogs or documentation sites. 
+- Add another **match pattern** in the manifest.json to support other [chrome developer][dev-chrome]
+  pages, like for example, the [devtool][devtools] or [workbox][workbox].
+- Add a new content script that calculates the reading time to any of your favorite blogs or
+  documentation sites. 
 
 ## Keep building! {: #continue }
 
 Congratulations on finishing this tutorial 🎉. 
 
-Continue developing your skills by completing any of the following:
+Continue developing your skills by completing other tutorials on this series:
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
 | [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
-| [Tabs Manager][tut-tabs-manager]     | To create a popup that manages browser tabs.                           |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
 [dev-chrome]: https://developer.chrome.com/docs/
 [devtools]: https://developer.chrome.com/docs/devtools/
