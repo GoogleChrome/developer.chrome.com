@@ -39,7 +39,7 @@ a keyboard or screen reader yourself. See [How To Do An Accessibility Review][4]
 
 ## Audit a page's accessibility {: #audits }
 
-In general, use the accessability checks under the 'Lighthouse' panel to determine if:
+In general, use the accessibility checks under the 'Lighthouse' panel to determine if:
 
 - A page is properly marked up for screen readers.
 - The text elements on a page have sufficient contrast ratios. See also [View the contrast ratio of
