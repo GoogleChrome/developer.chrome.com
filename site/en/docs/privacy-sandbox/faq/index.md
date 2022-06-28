@@ -380,6 +380,13 @@ regardless of how that origin is defined on the DNS side. Delegation must be
 handled via `Permissions-Policy` for any cross-origin subresource or obtained
 via JavaScript which executes in the cross-origin context.
 
+### Whart is the impact of Chome's UA reduction on bot detection?
+
+Chrome's change to its user-agent string does not directly impact the user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced information Chrome sends, but that is entirely their implementation choice. 
+Chrome is still sending the same user-agent format and bots that append their own identifier to the end of a Chrome user-agent string can continue to do that. For any concerns with specific bots, it may be worth reaching out directly to the owners to ask if they have any plans to change their own strings.
+
 ## Shared storage
 
 ### How can I ask a question about this feature?
