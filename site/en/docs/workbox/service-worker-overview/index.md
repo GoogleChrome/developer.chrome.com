@@ -12,6 +12,7 @@ Workbox makes service workers easier to use.
 However, because service workers solve hard problems,
 any abstraction of that technology will also be tricky without understanding it.
 Thus, these first few bits of documentation will cover that underlying technology before getting into Workbox specifics.
+A running list of service workers can be viewed at chrome://serviceworker-internals/
 
 ## What do service workers provide?
 
