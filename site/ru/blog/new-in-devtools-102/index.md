@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "Новинки DevTools (Chrome 101)"
+title: "Новинки DevTools (Chrome 102)"
 authors:
   - jecelynyeen
 date: 2022-04-12

@@ -2,6 +2,20 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ](/ja/blog/new-in-devtools-103/#recorder)
+* [Lighthouse パネルでの新しいタイムスパンモードとスナップショットモード](/ja/blog/new-in-devtools-103/#lighthouse)
+* [Performance Insights パネルでの改善されたズーム制御](/ja/blog/new-in-devtools-103/#zoom)
+* [パフォーマンスレコーディングの削除確認](/ja/blog/new-in-devtools-103/#delete)
+* [ブラウザ外でのカラーピッキング](/ja/blog/new-in-devtools-103/#color)
+* [デバッグ中の改善されたインラインでの値のプレビュー](/ja/blog/new-in-devtools-103/#inline-preview)
+* [仮想認証器での大きな blob サポート](/ja/blog/new-in-devtools-103/#webauthn)
+* [Sources パネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-103/#shortcuts)
+* [ソースマップの改善](/ja/blog/new-in-devtools-103/#sourcemaps)
+
+
 ### Chrome 102 {: #chrome102 }
 
 * [プレビュー機能: 新しいパフォーマンスインサイトパネル](/ja/blog/new-in-devtools-102/#perf)

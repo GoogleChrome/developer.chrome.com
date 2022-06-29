@@ -6,7 +6,7 @@ authors:
 description: >
   A Web Platform API that allows users to login to websites with their federated accounts in a privacy preserving manner.
 date: 2022-04-25
-updated: 2022-05-23
+updated: 2022-06-20
 tags:
   - privacy
   - security
@@ -14,6 +14,14 @@ tags:
 ---
 
 {% Aside %}
+
+
+**Update, June 2022**
+
+Starting Chrome 104:
+* `consent_acquired` parameter sent to the ID token endpoint is now
+  `disclosure_text_shown`. The value is unchanged.
+* branding icons stop supporting SVG images.
 
 **Update, May 2022**
 
@@ -509,7 +517,7 @@ the following information:
      <td>The request nonce, provided by the RP.</td>
   </tr>
   <tr>
-     <td><code>consent_acquired</code></td>
+     <td><code>disclosure_text_shown</code></td>
      <td>Results in a string of <code>true</code> or <code>false</code> (rather than a boolean). The result is <code>false</code> if the RP's client ID was included in the <code>approved_clients</code> property list and the sign-in dialog displayed both the privacy policy and the terms of service.</td>
   </tr>
 </table>
@@ -523,7 +531,7 @@ Referer: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-FedCM-CSRF: ?1
-account_id=123&client_id=client1234&nonce=Ct60bD&consent_acquired=true
+account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 
 On the server, the IdP should confirm if the claimed account ID matches the 
@@ -746,10 +754,10 @@ user or let them sign-in and start a new session.
 
 #### Allow user sign out  {: #signout-rp }
 
-TTo sign out a user from the RP, the [initialized `FederatedCredential`
-object](#get-fedcm-object) must include the account ID of the signed-in user
-as the `hint` property in addition to the IdP URL and the RP’s client ID.
-The account ID must match the ID returned by [accounts list
+To sign out a user from the RP, the [initialized `FederatedCredential`
+object](#get-fedcm-object) must include the account ID of the signed-in user as
+the `hint` property in addition to the IdP URL and the RP’s client ID. The
+account ID must match the ID returned by [accounts list
 endpoint](#accounts-list-endpoint). Once a credential is returned, use the
 `logout()` call to let the user sign-out from the RP.
 

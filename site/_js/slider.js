@@ -23,7 +23,7 @@ const cssClasses = {
 const imgBaseUrl = 'https://wd.imgix.net/image/H2WDdWf5aPXOtVabf53xIxMJyTF2/';
 
 const chromeLogoVersions = new Map();
-chromeLogoVersions.set(['2008', '2009', '2010'], '6Zok8fOGKlKnPmmA3BNM.png');
+chromeLogoVersions.set(['2008', '2009', '2010'], '7A2waJiE9mMmiaHUtqXl.png');
 chromeLogoVersions.set(['2011', '2012', '2013'], 'AkT3tMmLmIlEphta9Zv0.png');
 chromeLogoVersions.set(
   ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],

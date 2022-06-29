@@ -141,6 +141,38 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
+
+In short, no, you cannot opt-out of an origin trial for specific regions.
+Origin trials are active on pages which
+[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
+included via HTTP headers (server-side) or HTML meta tags
+(client-side). 
+
+If you can determine the user's location, then you could write code which
+opts to include the origin trial token based on that location information.
+For example, you could attempt to use IP addresses to determine a user's
+location. IP addresses can be spoofed, so this is not a guaranteed solution.
+
+However, a geographic-specific origin can set a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and
+`uk.example.com` are geographic-specific origins which can be controlled.
+This does not mean that a region has opted-out of the origin trial.
+
+With a Permissions Policy, a site adds a little snippet of code to their 
+pages that provides instructions to the browser. When the page loads, the browser 
+reads the Permission Policy instructions and will allow or block features (or APIs)
+as outlined in the Permissions Policy. If a site wants to restrict an API in a 
+specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
+
 ## Trust Tokens
 
 ### How can I ask a question about this feature?
@@ -162,6 +194,14 @@ Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
+### How do publishers handle tokens from multiple trusted issuers?
+
+The publisher can check a user's browser for valid tokens with
+`document.hasTrustToken()` for one issuer at a time. If this returns `true`
+and a token is available, the publisher can redeem the token and stop
+looking for other tokens.
+
+The publisher must decide which token issuers to check and in what order.
 
 ## Topics
 
@@ -339,6 +379,21 @@ High-entropy UA-CH on request headers are restricted on cross-origin requests
 regardless of how that origin is defined on the DNS side. Delegation must be
 handled via `Permissions-Policy` for any cross-origin subresource or obtained
 via JavaScript which executes in the cross-origin context.
+
+### How does User-Agent reduction affect bot detection?
+
+Chrome's change to its user-agent string does not directly impact the
+user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced
+information Chrome sends, but that is entirely their implementation
+choice. Chrome is still sending the same user-agent format, and bots
+that append their own identifier to the end of a Chrome user-agent
+string can continue to do so.
+
+For any concerns with specific bots, it may be worth reaching out
+directly to the owners to ask if they have any plans to change their
+user-agent string.
 
 ## Shared storage
 

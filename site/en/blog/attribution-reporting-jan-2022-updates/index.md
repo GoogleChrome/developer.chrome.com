@@ -1,23 +1,30 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting proposal: updates in January 2022'
+title: Attribution Reporting proposal updates in January 2022
+description: >
+  Learn about changes made to Attribution Reporting to reflect community feedback.
+layout: 'layouts/blog-post.njk'
 date: 2022-01-27
-updated: 2022-05-27
+updated: 2022-06-15
+hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/0ZWxOTHGZIp5fRzDBLTx.jpg'
+alt: >
+  Measuring tape.
 authors:
   - maudn
+  - alexandrawhite
+tags:
+  - privacy
+  - experiment
 ---
 
-The Attribution Reporting proposal is undergoing a number of changes to address community feedback,
-from API mechanism changes to new functionality.
-
 {% Aside %}
-Feedback on these changes is greatly appreciated.
-Ecosystem input is vital to ensure that solutions to various use cases are discussed in the open.
-
-Join the discussion by commenting on the links listed
-under **Join the public discussion** in this post, or by creating new issues.
-[Learn more about participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate).
+This content was initially posted in the Attribution Reporting API
+documentation. We're now keeping a [running list of
+updates](/docs/privacy-sandbox/attribution-reporting-updates/), with links
+out to more information.
 {% endAside %}
+
+The Attribution Reporting proposal has undergone a number of changes to address
+community feedback, from API mechanism changes to new functionality.
 
 ## Changelog
 
@@ -28,7 +35,7 @@ under **Join the public discussion** in this post, or by creating new issues.
 
 This post is for you:
 
-- If you already have a solid grasp of the API—for example, if you've been observing or
+- If you already understand the API—for example, if you've been observing or
   participating in the discussions on the WICG repository and want to understand the batch of
   changes made to the proposal in January 2022.
 - If you're using the Attribution Reporting API in a demo or in an experiment in production.
@@ -46,7 +53,6 @@ The proposed changes will be implemented in Chrome for experimentation.
 Ecosystem feedback on these changes is greatly appreciated. Join the discussion by commenting on the links listed under Join the public discussion in this post, or by creating new issues. [Learn more about participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate).
 
 **This is not an API guide**; details in the new proposal are subject to change. If you intend to experiment with the API: hold your migration until code is available in Chrome, and subscribe to the [developer mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) for updates.
-
 {% endAside %}
 
 Once these changes are implemented in Chrome: if you use event-level reports from the Attribution Reporting API in a demo or in an experiment in production (origin trial), you'll need to edit your code for the API to continue working. You may also consider using the new features.
@@ -57,8 +63,8 @@ This article also lists changes for aggregatable reports. However, these changes
 
 ### Summary reports and aggregatable reports
 
-What you may have seen described as aggregate reports will now be referred to as _summary
-reports_.
+What you may have seen described as aggregate reports will now be referred to
+as [_summary reports_](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
 
 _Summary reports_ are the final output of the aggregation of multiple _aggregatable reports_,
 formerly called contributions or histogram contributions.
@@ -249,8 +255,8 @@ Two aspects of the new proposal help better support third-party reporting use ca
 
 #### How does third-party reporting work? {: #3p-reporting-how }
 
-In the new proposal, response-based source registration and trigger rely on HTTP headers. An adtech
-can leverage HTTP redirects for these requests.
+In the new proposal, response-based source registration and trigger rely on
+HTTP headers. An adtech can leverage HTTP redirects for these requests.
 
 If a click/view request on a publisher site (source registration) is subsequently redirected to
 multiple parties, each of these parties can register this view or click (source event).  
@@ -263,7 +269,7 @@ allowing multiple other parties to register a conversion (attribution trigger).
 To prevent abuse, explicit reporting limitations have been added. Learn more in [Privacy protection changes](#privacy-protection-changes).
 {% endAside %}
 
-#### Registering multiple triggers without redirects
+#### Register multiple triggers without redirects
 
 It's also possible to register multiple attribution triggers without using redirects, by adding multiple pixel elements on the conversion side (one per trigger).
 
@@ -540,6 +546,10 @@ This is a **privacy protection** to limit browsing history reconstruction.
 
 [Limiting the number of unique destinations covered by pending sources](https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md#limiting-the-number-of-unique-destinations-covered-by-pending-sources)
 
-## Attribution Reporting: all resources {: #resources }
+## All resources {: #resources }
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+*  See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+*  Read the [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit?usp=sharing)
+   and [What you should know about the API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit?usp=sharing).
+
+_The header image is from <a href="https://unsplash.com/@diana_pole">Diana Polekhina</a> on <a href="https://unsplash.com/">Unsplash</a>._

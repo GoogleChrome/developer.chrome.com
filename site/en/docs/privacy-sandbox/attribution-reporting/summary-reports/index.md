@@ -8,19 +8,15 @@ description: >
   Measure ad conversions aggregated across users, without revealing
   individual data. Formerly known as aggregate reports.
 date: 2022-02-16
-updated: 2022-03-16
+updated: 2022-06-06
 authors:
   - alexandrawhite
 ---
 
 ## Implementation status
 
-*  In the initial proposal
-   ([client-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
-   [server-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md))
-   and discussion stage
-*  Attribution Reporting [API
-   specification](https://wicg.github.io/conversion-measurement-api/)
+*  This API is available in the [ads relevance and measurement origin trial]/blog/privacy-sandbox-unified-origin-trial/).
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
 
 ## What is an Attribution Reporting summary report?
@@ -179,9 +175,15 @@ service, in a Trusted Execution Environment (TEE) deployed on a cloud service
 that supports needed security features.
 
 {% Aside %}
-The first [origin trial](/blog/origin-trials/) for the aggregation service will initially support Trusted Execution Environments (TEEs) provided by Amazon Web Services.
 
-During the first origin trial, developers will not be required to use TEEs for testing⏤and support for other select cloud providers that meet the security requirements for the aggregation service will be added in future testing.
+You can [participate in an origin trial](/docs/privacy-sandbox/attribution-reporting-experiment/)
+for Attribution Reporting with the aggregation service, which will initially
+support local testing or testing in TEEs provided by Amazon Web Services. Read
+detailed [setup instructions for the aggregation
+service](https://github.com/google/trusted-execution-aggregation-service/#set-up-aggregation-service-for-aggregatable-reports).
+
+In the future, we intend to add support for other cloud providers that meet the
+aggregation service’s security requirements.
 {% endAside %}
 
 The TEE's code is the only place in the aggregation service which has access
@@ -288,7 +290,9 @@ is the proposed format for summary reports.
 
 ## Engage and share feedback
 
-*  GitHub: read the [client-side
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  Read the [Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
+*  Read the [client-side
    proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)
    and [aggregation service
    proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md),
@@ -303,5 +307,6 @@ is the proposed format for summary reports.
    Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/)
 *  Read the [aggregation service
    explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+   and [detailed setup instructions](https://github.com/google/trusted-execution-aggregation-service/).
 *  [Digging into the Privacy
    Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

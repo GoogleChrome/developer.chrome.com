@@ -1,11 +1,12 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started With Viewing And Changing The DOM"
+title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-#updated: YYYY-MM-DD
+updated: 2022-06-09
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
+  - sofiayem
 tags:
   - get-started
   - prototype-fixes
@@ -89,6 +90,19 @@ lets you quickly reposition the viewport so that you can see the node.
    The instructions continue there.
 
 After completing the instructions at the bottom of the page you should jump back up to here.
+
+### Show rulers {: #rulers }
+
+With rulers above and to the left of your viewport, you can measure the width and height of an element when you hover over it in the **Elements** panel.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DsBqSHZFNeUcr1a1oKd7.png", alt="Rulers.", width="800", height="552" %}
+
+Enable the rulers in one of two ways:
+
+- Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the **Command menu**, type `Show rulers on hover`, and press <kbd>Enter</kbd>.
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Elements** > **Show rulers on hover**.
+
+The sizing unit of the rulers is pixels.
 
 ### Search for nodes {: #search }
 

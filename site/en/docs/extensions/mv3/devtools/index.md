@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
 date: 2012-09-17
-updated: 2020-08-25
+updated: 2022-06-07
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
@@ -17,6 +17,7 @@ DevTools extensions have access to an additional set of DevTools-specific extens
 - [`devtools.inspectedWindow`][api-inspectedwindow]
 - [`devtools.network`][api-network]
 - [`devtools.panels`][api-panels]
+- [`devtools.recorder` (preview feature)][api-recorder]
 
 A DevTools extension is structured like any other extension: it can have a background page, content
 scripts, and other items. In addition, each DevTools extension has a DevTools page, which has access
@@ -39,6 +40,7 @@ DevTools APIs and a limited set of extension APIs. Specifically, the DevTools pa
 - Get information about the inspected window and evaluate code in the inspected window using the
   [`devtools.inspectedWindow`][api-inspectedwindow] APIs.
 - Get information about network requests using the [`devtools.network`][api-network] APIs.
+- Extend the [Recorder panel](/docs/devtools/recorder/) using the [`devtools.recorder`][api-recorder] APIs (preview feature).
 
 The DevTools page cannot use most of the extensions APIs directly. It has access to the same subset
 of the [`extension`][api-extension] and [`runtime`][api-runtime] APIs that a content script has
@@ -474,6 +476,7 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [api-panels-setobject]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setObject
 [api-panels-setpane]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setPage
 [api-panels]: /docs/extensions/reference/devtools_panels
+[api-recorder]: /docs/extensions/reference/devtools_recorder
 [api-runtime-connect]: /docs/extensions/reference/runtime#method-connect
 [api-runtime-onconnect]: /docs/extensions/reference/runtime#event-onConnect
 [api-runtime-sendmessage]: /docs/extensions/reference/runtime#method-sendMessage

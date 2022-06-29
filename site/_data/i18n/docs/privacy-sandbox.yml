@@ -2,6 +2,8 @@ attribution-reporting:
   en: 'Attribution Reporting'
 fledge:
   en: 'FLEDGE'
+fledge-best-practices:
+  en: 'FLEDGE latency best practices'
 floc:
   en: 'Federated Learning of Cohorts (FLoC)'
 topics-api:
@@ -30,9 +32,9 @@ blog:
   en: 'Blog'
   ja: 'ブログ'
 attribution-reporting-experiment:
-  en: 'Attribution API: experiment and participate'
+  en: 'Experiment and participate'
 attribution-reporting-changing:
-  en: 'January 2022 API updates'
+  en: 'API updates'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
 attribution-reporting-summary:
@@ -76,7 +78,5 @@ gnatcatcher:
   en: 'Gnatcatcher'
 privacy-budget:
   en: 'Privacy Budget'
-shared-storage:
-  en: 'Shared Storage'
 fenced-frame:
   en: 'Fenced Frames'

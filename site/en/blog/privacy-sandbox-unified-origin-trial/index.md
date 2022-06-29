@@ -5,7 +5,7 @@ description: >
   unified experimentation across the Privacy Sandbox relevance and measurement APIs: Topics, FLEDGE, and Attribution Reporting.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
-updated: 2022-04-21
+updated: 2022-07-27
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/1Eh5fSHWhurUuED3WGU1.png'
@@ -200,31 +200,42 @@ before using it.
 
 ### Topics
 
-Check for the `browsingTopics()` function in the `document`.
+Check for the `browsingTopics()` function in the `document` and
+the Permissions Policy](/docs/privacy-sandbox/permissions-policy/#featurepolicyallowsfeaturefeature)
+for "browsing-topics".
 
 ```javascript
-if ('browsingTopics' in document) {
+if ('browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics')) {
   // Topics enabled
 }
 ```
 
 ### FLEDGE
 
-Check for the `runAdAuction`function  in `navigator`. 
+If you want to join an ad interest group, check for the `joinAdInterestGroup` function in
+`navigator` and the Permissions Policy for "join-ad-interest-group".
 
 ```javascript
-if ('runAdAuction' in navigator) {
-  // FLEDGE enabled
+if ('joinAdInterestGroup' in navigator && document.featurePolicy.allowsFeature('join-ad-interest-group')) {
+  // FLEDGE interest group enabled
 }
 ```
 
+If you want to run an auction, check for the `runAdAuction`function in `navigator`, and the permissions policy for "run-ad-auction". 
+
+```javascript
+if ('runAdAuction' in navigator && document.featurePolicy.allowsFeature('run-ad-auction')) {
+  // FLEDGE auction enabled
+}
+```
 
 ### Attribution Reporting
 
-Check for the `attributionReporting` object in the `window`.
+Check for the `attributionReporting` object in the `window` and
+the Permissions Policy for "attribution-reporting".
 
 ```javascript
-if ('attributionReporting' in window) {
+if ('attributionReporting' in window && document.featurePolicy.allowsFeature('attribution-reporting')) {
   // Attribution Reporting API enabled
 }
 ```

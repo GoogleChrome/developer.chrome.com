@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "JavaScript debugging reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2017-01-04
-#updated: YYYY-MM-DD
+updated: 2022-05-30
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
@@ -324,6 +325,25 @@ To edit a script:
     {% Img src="image/admin/zOITyiLOZPasp6Zf30Xi.svg", alt="The Editor pane.", width="800", height="564" %}
 
     **Figure 17**. The Editor pane, outlined in blue
+
+## Search and replace text in a script {: #search }
+
+To search for text in a script:
+
+1.  Open the file in the **Editor** pane of the **Sources** panel.
+1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux).
+1. In the bar, enter your query.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oRnZxCkZal6VxqryNTR.png", alt="Search.", width="800", height="354" %}
+    Optionally, you can:
+    - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/egjnpBbgTvj6FDiIbfoc.png", alt="Match case.", width="25", height="20" %} **Match Case** to make your query case-sensitive.
+    - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/97kuRQETaw1jnAfMHrbQ.png", alt="RegEx button.", width="17", height="18" %} **Use Regular Expression** to search using a RegEx expression.
+1. Press <kbd>Enter</kbd>. To jump to previous or next search result, press the up or down button.
+
+To replace the text you found:
+
+1. On the search bar, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vm7LAoTC4jArS8SjcMM5.png", alt="Replace.", width="22", height="23" %} **Replace** button.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TWp9T4OsMCuxLPAvWmMo.png", alt="Replace.", width="800", height="342" %}
+1. Type the text to replace with, then click **Replace** or **Replace all**.
 
 ## Disable JavaScript {: #disable }
 

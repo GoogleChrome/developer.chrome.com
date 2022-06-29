@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-05-25
+updated: 2022-06-15
 authors:
   - samdutton
 ---
@@ -427,6 +427,19 @@ The classifier model for mapping hostnames to topics would be publicly available
 proposes that it should be possible to view the topics for a site via browser developer tools.  The
 model is expected to evolve and improve over time and be updated periodically; the frequency of this
 is still under consideration.
+
+#### Where can I find the current classifier model?
+
+Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at`chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
+
+To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
+
+To inspect the `override_list.pb.gz` file:
+
+* Unpack it: `gunzip -c override_list.pb.gz > override_list.pb`
+* Use protoc to inspect: `protoc --decode_raw < override_list.pb > output.txt`
+
+ A full [taxonomy of topics with IDs is available on GitHub](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md).
 
 #### How can I provide feedback or input on the classifier model?
 

@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2019-04-18
-updated: 2022-05-25
+updated: 2022-05-30
 description:
   "A comprehensive reference on every feature and behavior related to the Console UI in Chrome
   DevTools."
@@ -214,6 +214,18 @@ or the script that caused the message to be logged.
 {% Img src="image/admin/1FvJQi69s6J7nHtKUIDy.png", alt="Filtering out any messages that don't match /[gm][ta][mi]/.", width="800", height="512" %}
 
 **Figure 17**. Filtering out any messages that don't match `/[gm][ta][mi]/`.
+
+## Search for text in logs {: #search }
+
+To search for text in log messages:
+
+1. To open a built-in search bar, press <kbd>Command</kbd>+<kbd>F</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows, Linux) 
+1. In the bar, enter your query.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rLEzbmZU3zU3rE3OWNli.png", alt="ALT_TEXT_HERE", width="800", height="426" %}
+    Optionally, you can:
+    - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/egjnpBbgTvj6FDiIbfoc.png", alt="Match case.", width="25", height="20" %} **Match Case** to make your query case-sensitive.
+    - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/97kuRQETaw1jnAfMHrbQ.png", alt="RegEx button.", width="17", height="18" %} **Use Regular Expression** to search using a RegEx expression.
+1. Press <kbd>Enter</kbd>. To jump to previous or next search result, press the up or down button.
 
 ## Run JavaScript {: #js }
 

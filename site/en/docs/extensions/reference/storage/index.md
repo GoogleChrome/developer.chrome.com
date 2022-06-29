@@ -94,9 +94,9 @@ If you're interested in tracking changes made to a data object, you can add a li
 `onChanged` event. Whenever anything changes in storage, that event fires. Here's sample code to
 listen for saved changes:
 
-```js
-//// background.js ////
+{% Label %}background.js:{% endLabel %}
 
+```js
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
     console.log(
@@ -111,9 +111,9 @@ We can take this idea even further. In this example we have an [options page][op
 allows the user to toggle a "debug mode" in the extension (implementation not shown here). Changes
 to this setting are immediately saved to sync storage by the options page and the background script uses `storage.onChanged` to apply the setting as soon as possible.
 
-```html
-<!-- options.html -->
+{% Label %}options.html:{% endLabel %}
 
+```html
 <script defer src="options.js"></script>
 <form id="optionsForm">
   <label for="debug">
@@ -123,9 +123,9 @@ to this setting are immediately saved to sync storage by the options page and th
 </form>
 ```
 
-```js
-//// options.js ////
+{% Label %}options.js:{% endLabel %}
 
+```js
 // In-page cache of the user's options
 const options = {};
 
@@ -142,9 +142,9 @@ optionsForm.debug.addEventListener('change', (event) => {
 });
 ```
 
-```js
-//// background.js ////
+{% Label %}background.js:{% endLabel %}
 
+```js
 // Watch for changes to the user's options & apply them
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync' && changes.options?.newValue) {
@@ -162,9 +162,9 @@ asynchronously load data from storage before they execute their event handlers. 
 below snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
 global to be populated before executing its logic.
 
-```js
-//// background.js ////
+{% Label %}background.js:{% endLabel %}
 
+```js
 // Where we will expose all the data we retrieve from storage.sync.
 const storageCache = {};
 // Asynchronously retrieve data from storage.sync, then cache it.
