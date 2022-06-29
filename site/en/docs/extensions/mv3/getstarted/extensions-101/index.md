@@ -9,11 +9,13 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-Chrome extensions enhance the browsing experience by adding features and functionality to Chrome. This page will briefly introduce extension development concepts and provide [beginner tutorials][section-tutorials] to start your extension development journey. 
+Chrome extensions enhance the browsing experience by adding features and functionality to Chrome.
+This page will briefly introduce extension development concepts and provide links to step-by-step
+[beginner tutorials][section-tutorials]. 
 
 ## Web technologies {: #web-tech }
 
-Extensions are written with the same web technologies used to create a web application:
+Extensions are written with the same web technologies used to create web applications:
 
 * [HTML][mdn-html] is used as a content markup language.
 * [CSS](https://web.dev/learn/css/) is used for styling.
@@ -30,47 +32,82 @@ What makes extensions more powerful than a web app is their access to various [C
 
 * Change the functionality or behavior of a website. 
 * Allow users to collect and organize information across websites.
-* Add functionality to the Chrome Dev Tools.
+* Add features to the Chrome Dev Tools.
 
 For a complete list of APIs, see the [Extension development Overview][doc-dev-overview].
 
 ## Extension files {: #extension-files }
 
-Below is a short explanation of the most frequently used extension components:
+The following are the most frequently used extension files:
 
 [The Manifest][doc-manifest]
-: The manifest is the only required file. It is a [JSON][mdn-json] file that records important metadata, defines resources, declares permissions, and identifies which files to run in the background and what files to run on the page.
+: The manifest is the only required file. It is a [JSON][mdn-json] file that records important
+metadata, defines resources, declares permissions, and identifies which files to run in the
+background and what files to run on the page.
 
 [The service worker][doc-service-worker]
-: The extension service worker handles and listens for browser events, such as navigating to a new page, removing a bookmark, or closing a tab. As a service worker, It lies dormant until an event is fired and then reacts with specified instructions. It can access all the [Chrome APIs][doc-apis], but it cannot directly access the content of web pages; that’s the job of content scripts.
+: The extension service worker handles and listens for browser events, such as navigating to a new
+page, removing a bookmark, or closing a tab. It can access all the [Chrome APIs][doc-apis], but it
+cannot directly access the content of web pages; that’s the job of content scripts.
 
 [Content scripts][doc-content-scripts]
-: Content scripts can execute Javascript in the context of a web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs][doc-reference], but can indirectly access the rest by exchanging messages with the extension service worker.
+: Content scripts can execute Javascript in the context of a web page. They can also read and modify
+the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs][doc-reference], but
+can indirectly access the rest by exchanging messages with the extension service worker.
 
-<!-- Not sure if to include the extension action or extension icons -->
-[The extension action][doc-ui-action]
-: The extension action controls the toolbar button of the extension. When the user invokes the extension action, it can either display a popup or execute the extension’s primary functionality.  
+Extension popup and other pages
+: An extension can include various html files: a [popup][doc-popup], an [options page][doc-options]
+and [other html pages][doc-ext-pages]. All these pages can use [Chrome APIs][doc-apis].
 
-- Visit [Extensions Architecture][doc-arch] for an overview on extension components.
-- Explore [Designing the user interface][doc-ui] for UI and design guidelines for Chrome Extensions.
+Visit [Extensions Architecture][doc-arch] for a more in-depth description and [Designing the
+user interface][doc-ui] for UI and design guidelines for Chrome Extensions.
 
 ## Developing your extension {: #development }
 
-Even though web applications and extensions share the same technologies, the developer experience for creating a Chrome extension is different. See [Extension Development Basics][doc-dev-basics] to create a basic Hello World extension and become familiar with the extension development workflow.
+Even though web applications and extensions share the same technologies, the developer experience
+for creating an extension is different. Check out [Development Basics][doc-dev-basics] to
+create a _Hello World_ extension and familiarize yourself with the extension development workflow.
 
-## Choosing your extension features {: #quality }
+## Designing your extension features {: #quality }
 
-When you are deciding which features your extension will support, make sure your extension fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
+When you start designing your extension and choosing which features to support, make sure it
+fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
+This will allow your extension to be distributed through the Chrome Web Store.
+
+{% Details %}
+{% DetailsSummary %}
+
+**What exactly does "single purpose" mean?**
+
+{% endDetailsSummary %}
+
+"Single purpose" can refer to one of two aspects of an extension:
+
+1. An extension can have a single purpose limited to a narrow _focus area_ or _subject matter_. For
+example, "news headlines", "weather", "comparison shopping").
+
+2. Or, an extension can have a single purpose limited to a narrow _browser function_. For example,
+"new tab page", "tab management", or "search provider".
+
+Regardless of the extension's purpose, the experience provided by the extension must respect the
+user's other settings and preferences.
+
+See [Extension quality guidelines][doc-single-purpose] for additional details.
+
+{% endDetails %}
 
 ## Distributing your extension {: #distribution }
 
-You can register a developer account with the Chrome Web Store to host and distribute your extension. One thing to keep in mind, is that extensions must adhere to the [Chrome Web Store developer policies][doc-cws-policy]. 
+You can register a developer account with the [Chrome Web Store][chrome-web-store] to host and distribute your
+extension. One thing to keep in mind, is that extensions must adhere to the [Chrome Web Store
+developer policies][doc-cws-policy]. 
 
 Visit [Publish in the Chrome Web Store][doc-cws-publish] to learn how to publish your extension.
 
-## Ready to start building? {: #building }
+## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step beginner tutorials to begin your Chrome extension development exploration. 
+Choose any of the following step-by-step beginner tutorials to kick-off your Chrome extension
+development journey. 
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
@@ -92,10 +129,12 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
 [doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
-[doc-ui-action]: /docs/extensions/mv3/user_interface/#action
 [doc-ui]: /docs/extensions/mv3/user_interface/
+[doc-popup]: /docs/extensions/mv3/user_interface/
+[doc-options]: /docs/extensions/mv3/user_interface/
+[doc-ext-pages]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
-[mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
+[mdn-dom]: https://developer.mozilla.org/d`ocs/Web/API/Document_Object_Model
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
@@ -103,3 +142,5 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
+[doc-single-purpose]: /docs/extensions/mv3/single_purpose/
+[chrome-web-store]: https://chrome.google.com/webstore/
