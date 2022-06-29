@@ -28,4 +28,4 @@ Inspect `@container` rules applied to descendants when containers satisfy query 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WbHl2Tj7voNJ7tIgZzWD.png", alt="@container rule.", width="800", height="647" %}
 
-To learn more about the support of container queries in DevTools, see [Inspect and debug CSS container queries](https://developer.chrome.com/docs/devtools/css/container-queries/).
+To learn more about the support of container queries in DevTools, see [Inspect and debug CSS container queries](/docs/devtools/css/container-queries/).
