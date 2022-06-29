@@ -9,36 +9,48 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-This page describes the process of developing an extension. We will create a demo extension, load it locally and share tips that will help improve your chrome extension development experience. 
+This page describes the process of developing an extension. We will create a demo extension, load it
+locally and share tips that will improve your chrome extension development experience. 
 
 ## Building the extension {: #build }
 
-Let’s create a “Hello, World” extension. It displays a “Hello, world!” heading on an extension popup.
+Let’s create an extension that displays a “Hello, world!” heading on a popup. If you prefer, you can
+download the files hosted on [Github][sample-hello-world].
 
-If you prefer, you can download the files on Github.
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
+alt="hello world extension", width="206", height="130", class="screenshot" %}
+  <figcaption>
+  Hello World extension
+  </figcaption>
+</figure>
 
-Create a directory to store the extension files. Next, add a file called `manifest.json` and include the following code:
+Create a directory to store the extension files. Next, add a file called `manifest.json` and include
+the following code:
 
 {% Label %}manifest.js:{% endLabel %}
 
 ```json
 {
- "name": "Hello Extensions",
+  "name": "Hello Extensions",
  "description": "Base Level Extension",
  "version": "1.0",
  "manifest_version": 3
 }
 ```
 
-Every extension requires a manifest; above, we defined the extension’s metadata. This extension will only have a popup. Let’s declare it under the [action][api-action] key:
+Every extension requires a manifest; above, we defined the extension’s metadata. Now let's add a
+popup by declaring it under the [action][api-action] key:
 
 {% Label %}manifest.js:{% endLabel %}
 
 ```json
 {
- ...
+  ...
  "action": {
-   "default_popup": "hello.html"
+   "default_popup": "hello.html",
+   "default_icon": "hello_extensions.png"
+ ...
  }
 }
 ```
@@ -49,13 +61,14 @@ Create a file titled `hello.html`, and add the following code:
 
 ``` html
 <html>
- <body>
-   <h1>Hello Extensions</h1>
+  <body>
+    <h1>Hello Extensions</h1>
  </body>
 </html>
 ```
 
-The extension now displays `hello.html` when the extension action is clicked. Let’s test it on Chrome by loading it locally.
+The extension now displays a popup when the extension action (toolbar icon) is clicked. Let’s test
+it on Chrome by loading it locally.
 
 ## Loading your unpacked extension {: #load-unpacked }
 
@@ -66,21 +79,38 @@ To load an unpacked extension in developer mode, follow these steps:
     * Or, click on the Chrome menu, hovering over **More Tools,** then select **Extensions**.
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the extension directory.
+    <figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Chrome Extension Management page", width="500", height="283",  class="screenshot" %}
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vOu7iPbaapkALed96rzN.png", alt="Loading an unpacked extension", width="563", height="355" %}
+      <figcaption>
+      Chrome Management (chrome://extensions)
+      </figcaption>
+    </figure>
 
-Ta-da! The extension has been successfully installed. Because no icons were included in the manifest, a generic icon will be created for the extension.
-
+Ta-da! The extension has been successfully installed. Because no icons were included in the
+manifest, a generic icon will be created for the extension.
 
 ## Pinning your extension {: #pin }
 
-By default, when you load your extension locally, it will appear in the extensions menu (the puzzle piece). To access your extension quickly during development, pin your extension to the toolbar.
+By default, when you load your extension locally, it will appear in the **extensions menu** {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24", height="24" %}. To access your extension quickly during development, pin your extension to the toolbar.
 
-<!-- TODO Screenshot -->
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LahIugYHQW3QpHM0z1qZ.png", 
+alt="Pinning the extension", width="358", height="248", class="screenshot" %}
+  <figcaption>
+  Pinning the extension
+  </figcaption>
+</figure>
 
 Now when you click on the extension’s action (toolbar icon), you should see a popup.
 
-<!-- TODO Screenshot -->
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
+alt="hello world extension", width="206", height="130", class="screenshot" %}
+  <figcaption>
+  Hello World extension
+  </figcaption>
+</figure>
 
 ## Reloading your extension {: #reload }
 
@@ -96,25 +126,30 @@ Let’s go back to the code and change the `H1` element in your HTML file.
 </html>
 ```
 
-After saving the file, go to the extension management page. You can see your changes made by clicking on the refresh icon next to the **on/off** toggle:
+After saving the file, go to the extension management page. You can see your changes by clicking on
+the refresh icon next to the **on/off** toggle:
 
-<!-- SCREENSHOT HERE -->
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QNtwZICbwsGO3gacCJEd.png", 
+alt="Reload an extension", width="500", height="233" %}
 
-Remember every time you make any changes, refresh your extension!
+💡 Remember to refresh your extension every time you make any changes!
 
-## Finding console and error logs {: #logs}
+## Finding console logs and errors {: #logs}
 
-During development, you may want to debug your scripts by accessing the browser console logs. Let’s start by adding a script tag to the hello.html.
+### Console logs
+
+During development, you may want to debug your scripts by accessing the browser console logs. Let’s
+start by adding a script tag to `hello.html`.
 
 {% Label %}hello.html{% endLabel %}
 
 ```html
 <html>
  <head>
- <script src="popup.js"></script>
- </head>
+   </head>
  <body>
-   <h1>Hello Extensions of the world</h1>
+   <h1>Hello Extensions of the world! 👋/h1>
+   <script src="popup.js"></script>
  </body>
 </html>
 ```
@@ -127,11 +162,37 @@ Create a `popup.js` file and add a console.log():
 console.log("This is a popup!")
 ```
 
-Refresh the extension. Open the popup and right-click to inspect the popup. You should see the log.
+Refresh the extension. Open the popup, right-click and select **Inspect**. The **Elements** panel of DevTools will open. Navigate to the **Console** panel to see the console log.
 
-<!-- SCREENSHOT HERE -->
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/WgZW1LIGR8dvSx1Zkhia.png", 
+alt="Inspecting the extension popup", width="400", height="294", class="screenshot" %}
+  <figcaption>
+  Inspecting an extension popup 
+  </figcaption>
+</figure>
 
-To learn how to debug other extension components like the service worker, option pages, and content scripts, check out [Debugging extensions][doc-debug].
+### Error 
+
+Now let's break the extension by throwing a syntax error in the `popup.js` file:
+
+{% Label %}popup.js{% endLabel %}
+
+```js
+console.log("This is a popup!)
+```
+
+Go to the extension management page and open the popup. An **Errors** button will appear next to **Remove**.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
+alt="Extension Management page with error button", width="500", height="226", class="screenshot" %}
+
+Click on the **Error** button to see details of the error:
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", alt="Extension error details", width="500", height="281" %}
+
+To learn more about debugging the service worker, options
+page, and content scripts, check out [Debugging extensions][doc-debug].
 
 ## Structuring your project {: #structure }
 
@@ -180,3 +241,7 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [doc-debug]: /docs/extensions/mv3/tut_debugging/
 [mdn-ide]: https://developer.mozilla.org/docs/Glossary/IDE
 [npm-chrome-types]: https://www.npmjs.com/package/chrome-types
+[sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world
+[tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
+[tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
+[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
