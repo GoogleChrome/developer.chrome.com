@@ -32,7 +32,7 @@ tags:
 ## Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder {: #recorder }
 
 <!-- The **Recorder** panel can now capture double-click and right-click events. -->
-На вкладке **Recorder** теперь записываются события двойного клика и клика правой клавиши мыши.
+На вкладке **Recorder** теперь записываются события двойного клика и клика правой кнопкой мыши.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder", width="800", height="572" %}
 
@@ -42,10 +42,10 @@ tags:
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
 - Дважды кликните по карточке, чтобы увеличить её
-- Кликните правой клавишей мыши и выберите один из пунктов контекстного меню
+- Кликните правой кнопкой мыши и выберите один из пунктов контекстного меню
 
 <!-- To understand how **Recorder** captured these events, expand the steps: -->
-Чтобы понять, как **Recorder** зафиксировал эти события, разверните шаг:
+Чтобы понять, как **Recorder** зафиксировал эти события, разверните шаги:
 
 <!-- - **Double-click** is captured as `type: doubleClick`.
 - **Right-click** event is captured as `type: click` but with the `button` property is set to `secondary`. The `button` value of a normal mouse click is `primary`. -->
@@ -56,12 +56,12 @@ tags:
 
 
 <!-- ## New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
-## Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse {: #lighthouse }
+## Новые режимы: Анализ временного диапазона и Сводка во вкладке Lighthouse {: #lighthouse }
 
 <!-- You can now use **Lighthouse** to measure your website’s performance beyond page load. -->
 Теперь вы можете использовать **Lighthouse** для измерения производительности вашего сайта не только при загрузке страницы. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse", width="800", height="507" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="Новые режимы: Анализ временного диапазона и Сводка во вкладке Lighthouse", width="800", height="507" %}
 
 <!-- The **Lighthouse** panel now supports 3 modes of user flow measurement:  -->
 Вкладка **Lighthouse** теперь поддерживает 3 режима измерения пользовательского потока: 
@@ -71,10 +71,10 @@ tags:
 - [Snapshots](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#snapshot) reports analyze the page in a particular state, typically after the user has interacted with it. -->
 - В режиме [Навигация (Navigation)](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#navigation) анализируется загрузка одной страницы. Навигация — самый распространенный тип отчета. Все отчеты Lighthouse до текущей версии являются навигационными отчетами.
 - В режиме [Анализа временного диапазона (Timespans)](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#timespan) анализируется произвольный отрезок времени, обычно содержащий взаимодействия с пользователем.
-- В режиме [Сводка (Snapshots)](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#snapshot) анализируется страница в определенном состоянии, обычно после того, как пользователь провзаимодействовал с ней.
+- В режиме [Сводка (Snapshots)](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#snapshot) анализируется страница в определенном состоянии, обычно после того, как пользователь повзаимодействовал с ней.
 
 <!-- For example, let’s measure the performance of adding items to cart on this [demo page](https://coffee-cart.netlify.app/). Select the **Timespan** mode and click **Start timespan**. Scroll and add a few items to the cart. Once you are done, click on **End timespan** to generate a Lighthouse report of the user interactions. -->
-Для примера двайте измерим производительность во время добавления товаров в конзину на этой [демо-странице](https://coffee-cart.netlify.app/). Выберите режим **Анализ временного диапазона** (Timespan) и нажмите **Запустить анализ временного диапазона** (Start timespan). Прокрутите страницу и добавьте несколько товаров в корзину. Когда вы будете готовы нажмите **Остановить анализ временного диапазона** (End timespan) чтобы Lighthouse сгенерировал отчёт о действиях пользователя.
+Для примера, двайте измерим производительность во время добавления товаров в корзину на этой [демо-странице](https://coffee-cart.netlify.app/). Выберите режим **Анализ временного диапазона** (Timespan) и нажмите **Запустить анализ временного диапазона** (Start timespan). Прокрутите страницу и добавьте несколько товаров в корзину. Когда вы будете готовы, нажмите **Остановить анализ временного диапазона** (End timespan), чтобы Lighthouse сгенерировал отчёт о действиях пользователя.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pq9Vg8xOUzplWAlXGJEa.png", alt="Режим Анализ временного диапазона (Timespan)", width="800", height="549" %}
 
@@ -90,7 +90,7 @@ tags:
 ## Улучшение Performance Insights {: #performance }
 
 <!-- ### Improved zoom control in the Performance Insights panel {: #zoom } -->
-### Улучшен управление масштабированием во вкладке Performance Insights {: #zoom }
+### Улучшено управление масштабированием во вкладке Performance Insights {: #zoom }
 
 <!-- DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away.  -->
 Теперь DevTools увеличивает масштаб, основываясь на положении курсора мыши, а не на положении точки воспроизведения. С новой версией масштабирования на основе курсора вы можете подвести мышь к любой точке трека и [увеличить](/docs/devtools/performance-insights/#navigate) до нужной области сразу же.
@@ -98,7 +98,7 @@ tags:
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/U8d1PjOFZuGkyOXHQ5Z8.mp4", autoplay=true, loop=true, class="screenshot" %}
 
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
-Почитайте дикументацию по [Performance Insights](/docs/devtools/performance-insights/) чтобы узнать, как получить практические выводы и улучшить показатели вашего сайта с помощью этой вкладки.
+Почитайте документацию по [Performance Insights](/docs/devtools/performance-insights/), чтобы узнать, как получить полезные сведения и улучшить показатели вашего сайта с помощью этой вкладки.
 
 Задача в трекере Chromium: [1313382](https://crbug.com/1313382)
 
@@ -121,7 +121,7 @@ DevTools теперь показывает диалог подтверждени
 Теперь вы можете менять порядок панелей во вкладке **Элементы** (Elements) так, как вам будет удобнее.
 
 <!-- For example, when you open DevTools on a narrow screen, the [Accessibility](/docs/devtools/accessibility/reference/#pane) pane is hidden under the **Show more** button. If you frequently debug accessibility issues, you can now drag the pane to the front for easier access. -->
-Например, когда вы открываете DevTools на узком экране панель [Специальные возможности (Accessibility)](/docs/devtools/accessibility/reference/#pane) прячетка за кнопкой **Ещё** (Show more). Если вы регулярно занимаетесь отладкой задач по доступности, то теперь вы можете перетащить эту панель в начало для упрощения доступа.
+Например, когда вы открываете DevTools на узком экране, панель [Специальные возможности (Accessibility)](/docs/devtools/accessibility/reference/#pane) прячется за кнопкой **Ещё** (Show more). Если вы регулярно занимаетесь отладкой задач по доступности, то теперь вы можете перетащить эту панель в начало для упрощения доступа.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hcaQzMTxecNyw4RY0PMX.png", alt="Изменение порядка панелей во вкладке Элементы (Elements)", width="800", height="616" %}
 
@@ -137,7 +137,7 @@ DevTools теперь показывает диалог подтверждени
 DevTools теперь поддерживают возможность выбрать цвет за пределами браузера. До этого вы могли выбирать цвет только в пределах окна браузера.
 
 <!-- In the **Styles** pane, click on any color preview to open a color picker. Use the eyedropper to pick color from anywhere. -->
-Во вкладке **Стили** (Styles) кликните на любое превью цвета чтобы открыть палитру цветов. Используйте пипетку, чтобы выбрать цвет из любого места.
+Во вкладке **Стили** (Styles) кликните на любое превью цвета, чтобы открыть палитру цветов. Используйте пипетку, чтобы выбрать цвет из любого места.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JAp1UdPCnWNduuNadLVz.png", alt="Выбор цвета вне браузера", width="800", height="450", class="screenshot" %}
 
@@ -153,7 +153,7 @@ DevTools теперь поддерживают возможность выбра
 Отладчик теперь корректно показывает предварительное значение в строке.
 
 <!-- In this example, the `double` function has an input parameter  `a` and a variable `x`. Put a breakpoint at the `return` line and run the code. The inline preview shows values `a` and `x` correctly. Previously, the debugger did not show the value `x` in the inline preview. -->
-В примере ниже у функции `double` есть аргумент `a` и переменная `x`. Установите брейкпоинт на строку с `return` и запустите код. Превью правильно покажет значения `a` и `x`. Раньее отладчик не показывал превью значения переменной `x`.
+В примере ниже у функции `double` есть аргумент `a` и переменная `x`. Установите брейкпоинт на строку с `return` и запустите код. Превью правильно покажет значения `a` и `x`. Ранее отладчик не показывал превью значения переменной `x`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XMHyRsyK24fWLK7o72K7.png", alt="Улучшен предварительный просмотр значений в строке при отладке", width="800", height="534" %}
 
@@ -170,7 +170,7 @@ DevTools теперь поддерживают возможность выбра
 
 <!-- This checkbox is disabled by default. You can enable it only for the authenticators with `ctap2` protocol that support resident keys. -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m58oDW2ZwCMxX6zoUoJM.png", alt="для виртуальных аутентификаторов", width="800", height="601" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m58oDW2ZwCMxX6zoUoJM.png", alt="Поддержка больших объектов BLOB для виртуальных аутентификаторов", width="800", height="601" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/519350816e99a82142712b2e5b6781984a77e39c #}
 
@@ -196,7 +196,7 @@ DevTools теперь поддерживают возможность выбра
 
 
 <!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Улучшения карты источников {: #sourcemaps }
+## Улучшения карты исходников {: #sourcemaps }
  
 <!-- Previously, developers experience random failure during: -->
 Ранее разработчики могли сталкиваться со случайными сбоями при следующих действиях:
@@ -209,13 +209,13 @@ DevTools теперь поддерживают возможность выбра
 - Отсутствие вкладки **Компонент** (Component) при включении [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
  
 <!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-Вот несколько исправлений в картах источников для улучшения общего опыта отладки:
+Вот несколько исправлений в картах исходников для улучшения отладки:
  
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
 - Properly resolve relative urls with frame's URL   -->
-- Корректное отображение местоположения и смещения для встроенных скриптов и расположения источников
-- Используйте информацию о падении для расположения текстовых элементов фрейма
+- Корректное сопоставление нахождения и смещения для инлайновых скриптов и исходников
+- Использование фолбэк-информации для нахождения текста во фрейме
 - Правильное преобразование относительных адресов в URL фрейма 
  
 {# https://chromium.googlesource.com/v8/v8/+/d821a6a373ecf086a2ef0d233ace7f3431e47732 #}

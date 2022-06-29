@@ -8,13 +8,13 @@
 
 * [Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder](/ru/blog/new-in-devtools-103/#recorder)
 * [Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse](/ru/blog/new-in-devtools-103/#lighthouse)
-* [Улучшен управление масштабированием во вкладке Performance Insights](/ru/blog/new-in-devtools-103/#zoom)
+* [Улучшено управление масштабированием во вкладке Performance Insights](/ru/blog/new-in-devtools-103/#zoom)
 * [Подтверждение удаления записи производительности](/ru/blog/new-in-devtools-103/#delete)
 * [Выбор цвета вне браузера](/ru/blog/new-in-devtools-103/#color)
 * [Улучшен предварительный просмотр значений в строке при отладке](/ru/blog/new-in-devtools-103/#inline-preview)
 * [Поддержка больших объектов BLOB для виртуальных аутентификаторов](/ru/blog/new-in-devtools-103/#webauthn)
 * [Новые сочетания клавиш во вкладке Источники (Sources)](/ru/blog/new-in-devtools-103/#shortcuts)
-* [Улучшения карты источников](/ru/blog/new-in-devtools-103/#sourcemaps)
+* [Улучшения карты исходников](/ru/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
