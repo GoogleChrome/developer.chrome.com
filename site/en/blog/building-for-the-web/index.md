@@ -196,6 +196,15 @@ applications [update automatically](https://www.electronjs.org/docs/latest/api/a
 the web, [Web Bundles](https://web.dev/web-bundles/) are the next best alternative in Chrome.) This
 list is non-exhaustive, and Electron.js is mentioned as a representative framework out of many.
 
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+    There're undeniably a number of capabilities that are missing from the web. In many cases, they are
+    nice-to-have, but not necessarily required for a still great experience. Carefully assess if a
+    capability can be seen as a progressive enhancement.
+  </p>
+</details>
+
 ### Discoverability in stores
 
 Collectively we have educated users to look for apps in app stores. Some stores like the
@@ -212,6 +221,15 @@ into the store, depending on the outcome of the app review. Recently, Oculus, a 
 Platforms that produces virtual reality headsets, has announced that PWAs would be accepted on the
 [Oculus Store](https://developer.oculus.com/pwa/).
 
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+    If your users are on one of the platforms whose stores accept PWAs, you can just publish your app
+    to the stores in question. Else, remember linkability as one of the web's super powers. Your app
+    is discoverable, advertisable, and linkable from the web, too.
+  </p>
+</details>
+
 ### Monetization of apps and in-app content
 
 Apart from making apps themselves available for a fee, apps can also be monetized by selling items
@@ -225,6 +243,13 @@ through the Google Play Store, developers can now use the
 [Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/) to integrate
 with Google Play Billing.
 
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
+
 ### Hiring or retraining developers
 
 From personal experience from talking to many of Google's partners, a lot of
@@ -235,6 +260,13 @@ helped the guild's reputation with IT professionals. Companies also often alread
 Android and/or iOS developers that they cannot just retrain to become web developers. Creating a PWA
 requires a high level of specialization that not all web developers can offer.
 
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
+
 ### Legacy existing apps (and migrating its user base)
 
 It is not unusual for companies to have made massive investments in platform-specific apps, and
@@ -242,6 +274,13 @@ giving up these investments as well as the over the time acquired user base (not
 vanity install statistics) is not easy. Seemingly starting from scratch, even when the companies
 have an existing website, appears very unattractive in comparison, but sometimes it
 [happens](https://www.glossy.co/ecommerce/gone-fishin-patagonia-bids-farewell-to-mobile-app/).
+
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
 
 ### Compatibility with relevant browsers
 
@@ -262,6 +301,13 @@ compatibility in core areas in the context of the [Compat 2021](https://web.dev/
 [Interop 2023](https://github.com/web-platform-tests/interop-2022/issues/78) already in the
 planning.
 
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
+
 ### Tools and framework support
 
 Mozilla's
@@ -270,6 +316,13 @@ apart from browser compatibility, likewise showed that developers struggle with 
 frameworks. Supporting multiple frameworks in the same code base, understanding and implementing
 security measures, plus outdated or inaccurate documentation for frameworks and libraries, and
 keeping up with a large number of new and existing tools or frameworks were mentioned.
+
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
 
 ### Security (or rather, security theater with certificate pinning)
 
@@ -282,6 +335,13 @@ impossible, so platform-specific apps are more "secure" than web apps, where tra
 sniffed with browser DevTools. There are ways to
 [circumvent pinned certificates](https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/) on
 all platforms, so it is mostly a security theater at this point.
+
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
 
 ### Performance limitations
 
@@ -298,6 +358,13 @@ environments like [Jupyter Notebook](https://jupyter.org/try) and graphics editi
 like [Quake](http://www.quakejs.com) (thanks to
 [WebGL](https://developer.mozilla.org/de/docs/Web/API/WebGL_API) and
 [WebGPU](https://gpuweb.github.io/gpuweb/) in the future), the boundary is pushed at a rapid rate.
+
+<details>
+  <summary>How big of a challenge is this?</summary>
+  <p>
+
+  </p>
+</details>
 
 ## Why is Flutter so popular?
 

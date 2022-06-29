@@ -12,7 +12,7 @@ tags:
 ---
 
 {% Aside %} This is part two of a two part mini series on the capable web. Be sure to also read
-[Why not everyone's building for the web yet, but why potentially they should](/building-for-the-web/)!
+[Why not everyone's building for the web yet, but why potentially they should](/blog/building-for-the-web/)!
 {% endAside %}
 
 ## How Fugu is my browser?
