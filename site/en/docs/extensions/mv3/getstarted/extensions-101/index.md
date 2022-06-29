@@ -118,6 +118,7 @@ development journey.
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome Extension and Chrome Web store documentation.
 
 
+[chrome-web-store]: https://chrome.google.com/webstore/
 [doc-apis]: /docs/extensions/reference/
 [doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts/
@@ -125,22 +126,21 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [doc-cws-publish]: /docs/webstore/publish/
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-overview]: /docs/extensions/mv3/devguide
+[doc-ext-pages]: /docs/extensions/mv3/user_interface/
 [doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-options]: /docs/extensions/mv3/user_interface/
+[doc-popup]: /docs/extensions/mv3/user_interface/
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
+[doc-single-purpose]: /docs/extensions/mv3/single_purpose/
 [doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
 [doc-ui]: /docs/extensions/mv3/user_interface/
-[doc-popup]: /docs/extensions/mv3/user_interface/
-[doc-options]: /docs/extensions/mv3/user_interface/
-[doc-ext-pages]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
 [mdn-dom]: https://developer.mozilla.org/d`ocs/Web/API/Document_Object_Model
-[mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
+[mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [section-tutorials]: #building
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
-[doc-single-purpose]: /docs/extensions/mv3/single_purpose/
-[chrome-web-store]: https://chrome.google.com/webstore/
