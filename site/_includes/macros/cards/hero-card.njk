@@ -1,17 +1,18 @@
 {% from 'macros/icon.njk' import icon with context %}
 
-{% macro heroCard(title, text, actionText, actionLink, imgSrc, imgAlt) %}
-<div class="hero-card width-full rounded-lg bg-blue-lighter pad-400 masonry:pad-right-500 masonry:pad-top-1000 masonry:pad-bottom-1000 masonry:pad-left-500">
+{% macro heroCard(title, text, actionText, actionLink, imgSrc, imgAlt, color) %}
+  {% set color = color or 'blue' %}
+<div class="hero-card width-full rounded-lg bg-{{color}}-lighter pad-400 masonry:pad-right-500 masonry:pad-top-1000 masonry:pad-bottom-1000 masonry:pad-left-500">
   <div class="hero-card__inner">
     <div>
-      <h1 class="type--h1 color-blue-darkest">
+      <h1 class="type--h1 color-{{color}}-darkest">
         {{ title }}
       </h1>
       <p class="gap-top-300">
         {{ text }}
       </p>
       {% if actionText %}
-        <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400">
+        <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-{{color}}-medium gap-top-400">
           {{ actionText }}
         </a>
       {% endif %}

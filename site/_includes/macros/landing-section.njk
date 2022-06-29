@@ -1,0 +1,43 @@
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+
+{% macro landingSection(title, desc, items, color, imgSrc, imgAlt, type) %}
+<section
+  class="landing-section landing-section--{{type}} hairline rounded-lg width-full display-grid gap-top-500"
+  style="--primary-color: var(--color-{{ color }}-medium); --secondary-color: var(--color-{{ color }}-lighter);">
+
+  {{ landingDeco(title, desc, color, imgSrc, imgAlt) }}
+
+  <div class="gap-top-400 gap-left-200 gap-right-200">
+    <div class="landing-section__links">
+      {% for item in items %}
+
+        {% set post = null %} {# Reset #}
+        {% if item.url and item.title and item.description %}
+          {% set post = item %}
+        {% else %}
+          {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+        {% endif %}
+
+        {% if post %}
+          {% if type === 'top' %}<div class="item__outer">{% endif %}
+            <div class="item {% if not loop.last %} gap-bottom-400 {% endif %}">
+              <div class="item__inner {% if not loop.last %} {% if type !== 'top' %}hairline-bottom{% endif %} pad-bottom-400  {% endif %}">
+                <div class="item__title"><a href="{{ post.url }}">{{ post.title or post.data.title }}
+                  {% if type === 'right' %}<span class="gap-left-100">{{ icon('blog') }}</span>{% endif %} </a></div>
+                <p class="desc">{{ post.description or post.data.description }}</p>
+                {% if type === 'left' %}
+                  <div class="gap-top-200 color-primary">
+                    <a href="#">{{ icon('blog') }}</a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% if type === 'top' %}</div>{% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endmacro %}

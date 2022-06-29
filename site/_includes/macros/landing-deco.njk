@@ -1,0 +1,30 @@
+{% macro landingDeco(title, desc, color, imgSrc, imgAlt, actionText, actionLink) %}
+  <div class="landing-deco rounded-lg pad-500 masonry:pad-500 width-full bg-{{color}}-lightest">
+    <div class="landing-deco__inner">
+      <div>
+        <h2 class="type--h3 color-{{color}}-medium">
+          {{ title }}
+        </h2>
+        <p class="gap-top-300 gap-bottom-600">
+          {{ desc }}
+        </p>
+        {% if actionText %}
+          <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400">
+            {{ actionText }}
+          </a>
+        {% endif %}
+      </div>
+      {% if imgSrc %}
+        <div class="display-flex justify-content-center align-content-center gap-top-600 masonry:gap-top-600">
+          {% Img
+            src=imgSrc,
+            alt=imgAlt,
+            width="264",
+            height="132",
+            sizes="(min-width: 592px) 597px, calc(100vw - 96px)"
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

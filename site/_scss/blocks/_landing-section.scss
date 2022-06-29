@@ -1,0 +1,186 @@
+.landing-section {
+  gap: get-size(400);
+  grid-template-columns: 1fr;
+  padding: get-size(300);
+
+  .icon {
+    height: 1em;
+    vertical-align: middle;
+    width: 1em;
+  }
+
+  &__links {
+    counter-reset: section;
+    min-width: px-to-rem(200px);
+    overflow: hidden;
+    position: relative;
+
+    .item {
+      padding-left: 3.125rem;
+      position: relative;
+    }
+
+    .item__outer:last-child::before,
+    .item:last-child {
+      background-color: #fff;
+    }
+
+    .item::before {
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      color: #f3f9f5;
+      content: counter(section);
+      counter-increment: section;
+      display: block;
+      height: 1.75em;
+      left: 0;
+      line-height: 1.75em;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 1.75em;
+    }
+
+    .item__title a,
+    .item__title a:visited {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    &::before {
+      background-color: var(--secondary-color);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      /* stylelint-disable property-no-vendor-prefix */
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"   height="12" width="4" ><g><path d="M0,2a2,2 0 1,0 4,0a2,2 0 1,0 -4,0"/></g></svg>');
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"   height="12" width="4" ><g><path d="M0,2a2,2 0 1,0 4,0a2,2 0 1,0 -4,0"/></g></svg>');
+      -webkit-mask-position: center 1.75em;
+      mask-position: center 1.75em;
+      -webkit-mask-repeat: repeat-y;
+      mask-repeat: repeat-y;
+      /* stylelint-enable property-no-vendor-prefix */
+      position: absolute;
+      top: 0;
+      width: 1.75em;
+    }
+  }
+
+  &--cards {
+    background: var(--color-bg-shade);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    .blog-card {
+      background-color: var(--color-bg);
+    }
+  }
+
+  &--boxes {
+    grid-template-columns: 1fr;
+    padding: 0;
+
+    @include media-query('md') {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .landing-deco {
+      grid-area: 1 / -2 / 3 / -1;
+    }
+  }
+
+  &--left {
+    @include media-query('md') {
+      grid-auto-flow: dense;
+      grid-template-columns: 1fr 2fr;
+
+      /* stylelint-disable max-nesting-depth */
+      div:first-child {
+        grid-column: 2;
+      }
+
+      div:last-child {
+        grid-column: 1;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    .item__title {
+      font-size: 1.1em;
+      font-weight: normal;
+    }
+
+    .item::before {
+      font-size: 1.1em;
+    }
+  }
+
+  &--right {
+
+    @include media-query('md') {
+      grid-auto-flow: dense;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .item__title {
+      font-weight: 600;
+    }
+  }
+
+  &--top {
+    .landing-deco__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      /* stylelint-disable max-nesting-depth */
+      @include media-query('md') {
+        grid-template-columns: 2fr 1fr;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    .landing-section__links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      /* stylelint-disable max-nesting-depth */
+      &::before {
+        display: none;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    .item__outer {
+      position: relative;
+    }
+
+    .item__outer::before {
+      background-color: var(--secondary-color);
+      content: '';
+      display: block;
+      height: 1.75em;
+      left: 0;
+      margin-bottom: 1.75em;
+      /* stylelint-disable property-no-vendor-prefix */
+      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"   height="10" width="10" ><g><path d="M3,5a2,2 0 1,0 4,0a2,2 0 1,0 -4,0"/></g></svg>');
+      mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"   height="10" width="10" ><g><path d="M3,5a2,2 0 1,0 4,0a2,2 0 1,0 -4,0"/></g></svg>');
+      -webkit-mask-position: 1.75em center;
+      mask-position: 1.75em center;
+      -webkit-mask-repeat: repeat-x;
+      mask-repeat: repeat-x;
+      /* stylelint-enable property-no-vendor-prefix */
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .item {
+      margin-top: 1.75em;
+      padding: 1em 1em 0 0;
+    }
+
+    .item::before {
+      margin-top: -1.75em;
+    }
+  }
+}
