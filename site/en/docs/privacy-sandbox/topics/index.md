@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-06-15
+updated: 2022-06-30
 authors:
   - samdutton
 ---
@@ -480,7 +480,7 @@ View information about topics observed during the current epoch [from the `chrom
 
 ### How can I debug API usage? {: #debug}
 
-The `chrome://topics-internals` page is available in Chrome Canary and Chrome Dev, if
+The `chrome://topics-internals` page is available in Chrome Canary, Dev and Beta, if
 [you enable the Topics API](/docs/privacy-sandbox/topics/#feature-flags).
 This displays topics for the current user, topics inferred for hostnames, and technical information
 about the API implementation.
