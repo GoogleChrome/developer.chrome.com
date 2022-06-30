@@ -213,8 +213,8 @@ chrome.scripting.unregisterContentScript(idArray, callback);
 Use programmatic injection for content scripts that need to run in response to events or on specific
 occasions.
 
-In order to inject a content script programmatically, your extension needs host permissions for
-the page it's trying to inject scripts into. Host permissions can be granted either by
+To inject a content script programmatically, your extension needs host permissions for
+the page it's trying to inject scripts into. Host permissions can either be granted by
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 
@@ -584,8 +584,8 @@ themselves match the script's specified patterns.
 
 This is the case when an extension wants to inject in frames with URLs that
 have `about:`, `data:`, `blob:`, and `filesystem:` schemes. In these cases, the
-URL will not match the content script's pattern (and, in the case of `about:`,
-`data:`, and `blob:`, do not even include the parent URL or origin in the URL
+URL will not match the content script's pattern (and, in the case of `about:` and
+`data:`, do not even include the parent URL or origin in the URL
 at all, as in `about:blank` or `data:text/html,<html>Hello, World!</html>`).
 However, these frames can still be associated with the creating frame.
 
