@@ -70,7 +70,7 @@ Create a file titled `hello.html`, and add the following code:
 The extension now displays a popup when the extension action (toolbar icon) is clicked. Let’s test
 it on Chrome by loading it locally.
 
-## Loading your unpacked extension {: #load-unpacked }
+## Loading an unpacked extension {: #load-unpacked }
 
 To load an unpacked extension in developer mode, follow these steps:
 
@@ -90,7 +90,7 @@ To load an unpacked extension in developer mode, follow these steps:
 Ta-da! The extension has been successfully installed. Because no icons were included in the
 manifest, a generic icon will be created for the extension.
 
-## Pinning your extension {: #pin }
+## Pinning the extension {: #pin }
 
 By default, when you load your extension locally, it will appear in the **extensions menu** {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24", height="24" %}. To access your extension quickly during development, pin your extension to the toolbar.
 
@@ -112,7 +112,7 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
   </figcaption>
 </figure>
 
-## Reloading your extension {: #reload }
+## Reloading the extension {: #reload }
 
 Let’s go back to the code and change the `H1` element in your HTML file.
 
@@ -130,7 +130,7 @@ After saving the file, go to the extension management page. You can see your cha
 the refresh icon next to the **on/off** toggle:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QNtwZICbwsGO3gacCJEd.png", 
-alt="Reload an extension", width="500", height="233" %}
+alt="Reload an extension", width="500", height="233", class="screenshot" %}
 
 💡 Remember to refresh your extension every time you make any changes!
 
@@ -182,21 +182,23 @@ Now let's break the extension by throwing a syntax error in the `popup.js` file:
 console.log("This is a popup!)
 ```
 
-Go to the extension management page and open the popup. An **Errors** button will appear next to **Remove**.
+Go to the extension management page and open the popup. An **Errors** button will appear.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
 alt="Extension Management page with error button", width="500", height="226", class="screenshot" %}
 
-Click on the **Error** button to see details of the error:
+Click on the **Errors** button to see details of the error:
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", alt="Extension error details", width="500", height="281" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", 
+alt="Extension error details", width="500", height="281", class="screenshot" %}
 
 To learn more about debugging the service worker, options
 page, and content scripts, check out [Debugging extensions][doc-debug].
 
-## Structuring your project {: #structure }
+## Structuring an extension project {: #structure }
 
-There are many ways to structure an extension project, however, you should always place the manifest.json file in the root of the project. Here’s a structure example:
+There are many ways to structure an extension project, however, you should always place the
+manifest.json file in the root of the project. Here’s a structure example:
 
 
 ```text
@@ -219,22 +221,25 @@ There are many ways to structure an extension project, however, you should alway
 
 ## Using Typescript {: #types }
 
-If you are developing using an [IDE][mdn-ide] like VSCode, Atom, Sublime, etc... you can use the npm package [chrome-types][npm-chrome-types] to take advantage of autocompletion for the [Chrome API][doc-apis]. This npm package is published automatically and is updated when the Chromium source changes.
+If you are developing using an [IDE][mdn-ide] like VSCode, Atom, Sublime, etc... you can use the npm
+package [chrome-types][npm-chrome-types] to take advantage of autocompletion for the [Chrome
+API][doc-apis]. This npm package is published automatically and is updated when the Chromium source
+changes.
 
-Make sure you upgrade this npm package to the latest version frequently.
+💡 Make sure you upgrade this npm package to the latest version frequently!
 
-## Ready to start building? {: #building }
+## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step beginner tutorials to begin your Chrome extension development journey. 
+Choose any of the following step-by-step tutorials to begin your extension development journey. 
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
 | [Reading time][tut-reading-time] | To insert an element on every page automatically.                      |
 | [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
-| [Tabs Manager][tut-tabs-man]     | To create a popup that manages browser tabs.                           |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
-As a bonus, these tutorials were designed to improve your experience when reading the Chrome Extension and Chrome Web store documentation.
-
+As a bonus, these tutorials were designed to improve your experience when reading the Chrome
+Extension and Chrome Web store documentation.
 
 [api-action]: /docs/extensions/reference/action/
 [doc-apis]: /docs/extensions/reference/
