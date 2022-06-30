@@ -49,7 +49,6 @@ To understand when you can inspect `@container` declarations on [this demo page]
 }
 
 @container (inline-size > 600px) {
-  .coffee p, .coffee a {
     margin-left: 20px;
   }
 
