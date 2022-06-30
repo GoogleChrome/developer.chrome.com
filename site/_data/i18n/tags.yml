@@ -125,6 +125,9 @@ security:
 devtools:
   en: DevTools
 
+devtools-tips:
+  en: DevTools Tips
+
 new-in-devtools:
   en: What's New in DevTools
   es: Qué hay de nuevo en DevTools
