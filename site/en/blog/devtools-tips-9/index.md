@@ -22,7 +22,9 @@ tags:
 
 [Chrome DevTools](/docs/devtools/) is here to help you adopt new layout design patterns and stay on top of the latest trends. With the support of this CSS feature, you can now inspect and debug your container queries in DevTools.
 
-Discover container elements and their descendants with the corresponding badge that toggles a dotted-line overlay.
+The video above gives you an overview of container queries, their syntax, and how to inspect them in DevTools.
+
+You can now discover container elements and their descendants with the corresponding badge that toggles a dotted-line overlay.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/32Rgch28boxD9dSwHVwJ.png", alt="Container badge.", width="800", height="497" %}
 
