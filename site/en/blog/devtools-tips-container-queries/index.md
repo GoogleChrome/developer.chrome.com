@@ -16,7 +16,7 @@ tags:
   - devtools-tips
 ---
 
-[CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) are the new CSS feature that web developers are excited about. It may trigger a tectonic shift in the design approach of website layouts, from page-based responsive design to container-based [responsive design](https://web.dev/new-responsive/#responsive-to-the-container).
+[CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) is the new CSS feature that web developers are excited about. It may trigger a revolution in web design—from page-based responsive design to container-based [responsive design](https://web.dev/new-responsive/#responsive-to-the-container).
 
 {% YouTube id='X4TYXlvbb2E' %}
 
