@@ -17,9 +17,11 @@
 - title: i18n.docs.devtools.elements
   sections:
     - url: /docs/devtools/dom/
+    - url: /docs/devtools/dom/properties
     - url: /docs/devtools/css/
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/flexbox/
+    - url: /docs/devtools/css/container-queries/
     - url: /docs/devtools/css/reference/
 - title: i18n.docs.devtools.console
   sections:
@@ -58,26 +60,37 @@
     - url: /docs/devtools/memory-problems/allocation-profiler/
 - title: i18n.docs.devtools.application
   sections:
-    - url: /docs/devtools/javascript/background-services/
     - url: /docs/devtools/progressive-web-apps/
-    - url: /docs/devtools/storage/cookies/
     - url: /docs/devtools/storage/localstorage/
     - url: /docs/devtools/storage/sessionstorage/
     - url: /docs/devtools/storage/indexeddb/
-    - url: /docs/devtools/storage/applicationcache/
     - url: /docs/devtools/storage/websql/
+    - url: /docs/devtools/storage/cookies/
     - url: /docs/devtools/storage/cache/
+    - url: /docs/devtools/application/back-forward-cache/
+    - url: /docs/devtools/javascript/background-services/
+    - url: /docs/devtools/storage/applicationcache/
 - url: /docs/devtools/speed/get-started/
 - url: /docs/devtools/css/animations/
+- url: /docs/devtools/changes/
 - url: /docs/devtools/coverage/
 - url: /docs/devtools/css-overview/
 - url: /docs/devtools/issues/
 - url: /docs/devtools/media-panel/
 - url: /docs/devtools/memory-inspector/
 - url: /docs/devtools/device-mode/override-user-agent/
-- url: /docs/devtools/recorder/
-- url: /docs/devtools/css/print-preview/
+- title: i18n.docs.devtools.recorder
+  sections:
+    - url: /docs/devtools/recorder/
+    - url: /docs/devtools/recorder/reference
+- title: i18n.docs.devtools.rendering
+  sections:
+    - url: /docs/devtools/rendering/
+    - url: /docs/devtools/rendering/performance
+    - url: /docs/devtools/rendering/emulate-css
+    - url: /docs/devtools/rendering/apply-effects
 - url: /docs/devtools/security/
+- url: /docs/devtools/search
 - title: i18n.docs.devtools.sensors
   sections:
     - url: /docs/devtools/device-mode/geolocation/

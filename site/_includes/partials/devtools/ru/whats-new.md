@@ -4,15 +4,41 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
-<!-- ### Chrome 100 {: #chrome100 }
+### Chrome 103 {: #chrome103 }
 
-* [View and edit @supports at rules in the Styles pane](/ru/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/ru/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/ru/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/ru/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/ru/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/ru/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-100/#misc) -->
+* [Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder](/ru/blog/new-in-devtools-103/#recorder)
+* [Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse](/ru/blog/new-in-devtools-103/#lighthouse)
+* [Улучшено управление масштабированием во вкладке Performance Insights](/ru/blog/new-in-devtools-103/#zoom)
+* [Подтверждение удаления записи производительности](/ru/blog/new-in-devtools-103/#delete)
+* [Выбор цвета вне браузера](/ru/blog/new-in-devtools-103/#color)
+* [Улучшен предварительный просмотр значений в строке при отладке](/ru/blog/new-in-devtools-103/#inline-preview)
+* [Поддержка больших объектов BLOB для виртуальных аутентификаторов](/ru/blog/new-in-devtools-103/#webauthn)
+* [Новые сочетания клавиш во вкладке Источники (Sources)](/ru/blog/new-in-devtools-103/#shortcuts)
+* [Улучшения карты исходников](/ru/blog/new-in-devtools-103/#sourcemaps)
+
+
+### Chrome 102 {: #chrome102 }
+
+* [Ранний доступ: Новая панель анализа производительности](/ru/blog/new-in-devtools-102/#perf)
+* [Новые горячие клавиши для эмуляции светлой и тёмной темы](/ru/blog/new-in-devtools-102/#emulation)
+* [Улучшение безопасности на вкладке Предварительный просмотр (Preview) панели Сеть (Network)](/ru/blog/new-in-devtools-102/#network-preview)
+* [Улучшена перезагрузка в точке останова](/ru/blog/new-in-devtools-102/#debugger)
+* [Обновления консоли](/ru/blog/new-in-devtools-102/#console)
+* [Отмена записи пользовательского сценария в самом начале](/ru/blog/new-in-devtools-102/#recorder)
+* [Отображение наследуемых псевдоэлементов выделения в панели Стили (Styles)](/ru/blog/new-in-devtools-102/#pseudo)
+* [Другие важные моменты](/ru/blog/new-in-devtools-102/#misc)
+* [[Эксперимент] Копирование изменений в CSS](/ru/blog/new-in-devtools-102/#copy)
+* [[Эксперимент] Выбор цвета вне браузера](/ru/blog/new-in-devtools-102/#color-picker)
+
+### Chrome 101 {: #chrome101 }
+
+ * [Импорт и экспорт записей действий пользователя в виде JSON файла](/ru/blog/new-in-devtools-101/#recorder)
+ * [Просмотр каскадных слоёв во вкладке Стили (Styles)](/ru/blog/new-in-devtools-101/#layer)
+ * [Поддержка функции цвета hwb()](/ru/blog/new-in-devtools-101/#hwb)
+ * [Улучшено отображение приватных свойств](/ru/blog/new-in-devtools-101/#private-props)
+ * [Другие важные моменты](/ru/blog/new-in-devtools-101/#misc)
+ * [[Эксперимент] Новые режимы временного промежутка и сводки во вкладке Lighthouse](/ru/blog/new-in-devtools-101/#lighthouse)
+
 
 ### Chrome 100 {: #chrome100 }
 
@@ -25,21 +51,22 @@
 * [Другие важные моменты](/ru/blog/new-in-devtools-100/#misc)
 
 
-<!-- ### Chrome 99 {: #chrome99 }
+### Chrome 99 {: #chrome99 }
 
-* [Throttling WebSocket requests](/ru/blog/new-in-devtools-99/#websocket)
-* [New Reporting API pane in the Application panel](/ru/blog/new-in-devtools-99/#reporting-api)
-* [Support wait until element is visible/clickable in the Recorder panel](/ru/blog/new-in-devtools-99/#recorder)
-* [Better console styling, formatting and filtering](/ru/blog/new-in-devtools-99/#console)
-* [Debug Chrome extension with sourcemap files](/ru/blog/new-in-devtools-99/#extension)
-* [Improved source folder tree in the Sources panel](/ru/blog/new-in-devtools-99/#source-tree)
-* [Display worker source files in the Sources panel](/ru/blog/new-in-devtools-99/#worker-sourcemap)
-* [Chrome’s Auto Dark Theme updates](/ru/blog/new-in-devtools-99/#auto-dark-mode)
-* [Touch-friendly color-picker and split pane](/ru/blog/new-in-devtools-99/#touch-friendly)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-99/#misc) -->
+* [Троттлинг запросов WebSocket](/ru/blog/new-in-devtools-99/#websocket)
+* [Новая панель Reporting API во вкладке Приложение (Application)](/ru/blog/new-in-devtools-99/#reporting-api)
+* [Поддержка ожидания момента, когда элемент становится видимым/кликабельным во вкладке Recorder](/ru/blog/new-in-devtools-99/#recorder)
+* [Улучшенный внешний вид, форматирование и фильтрация в консоли](/ru/blog/new-in-devtools-99/#console)
+* [Отладка расширений Chrome с помощью карта источников](/ru/blog/new-in-devtools-99/#extension)
+* [Улучшено дерево папок источников во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#source-tree)
+* [Отображение исходных файлов воркеров во вкладке Источники (Sources)](/ru/blog/new-in-devtools-99/#worker-sourcemap)
+* [Обновление автоматической тёмной темы Chrome](/ru/blog/new-in-devtools-99/#auto-dark-mode)
+* [Удобные сенсорные палитра цветов и разделитель панелей](/ru/blog/new-in-devtools-99/#touch-friendly)
+* [Другие важные моменты](/ru/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }
+
 * [Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree)](/ru/blog/new-in-devtools-98/#a11y-tree)
 * [Явное отображение изменений на вкладке Изменения (Changes)](/ru/blog/new-in-devtools-98/#changes)
 * [Устанавливайте более длительный тайм-аут для записи поведения пользователя](/ru/blog/new-in-devtools-98/#recorder-timeout)

@@ -8,6 +8,8 @@ date: 2019-04-09
 description: "A guide on how to open the Command Menu, run commands, see other actions, and more."
 ---
 
+{% YouTube id='xHusjrb_34A', startTime=33 %}
+
 The Command Menu provides a fast way to navigate the Chrome DevTools UI and accomplish common tasks,
 such as [disabling JavaScript][1]. You may be familiar with a similar feature in Visual Studio Code
 called the [Command Palette][2], which was the original inspiration for the Command Menu.

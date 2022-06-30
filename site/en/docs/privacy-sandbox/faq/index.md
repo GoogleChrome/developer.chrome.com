@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-11-04
+updated: 2021-04-12
 authors:
 	- samdutton
 ---
@@ -141,6 +141,38 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
+
+In short, no, you cannot opt-out of an origin trial for specific regions.
+Origin trials are active on pages which
+[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
+included via HTTP headers (server-side) or HTML meta tags
+(client-side). 
+
+If you can determine the user's location, then you could write code which
+opts to include the origin trial token based on that location information.
+For example, you could attempt to use IP addresses to determine a user's
+location. IP addresses can be spoofed, so this is not a guaranteed solution.
+
+However, a geographic-specific origin can set a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and
+`uk.example.com` are geographic-specific origins which can be controlled.
+This does not mean that a region has opted-out of the origin trial.
+
+With a Permissions Policy, a site adds a little snippet of code to their 
+pages that provides instructions to the browser. When the page loads, the browser 
+reads the Permission Policy instructions and will allow or block features (or APIs)
+as outlined in the Permissions Policy. If a site wants to restrict an API in a 
+specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
+
 ## Trust Tokens
 
 ### How can I ask a question about this feature?
@@ -161,6 +193,55 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
 Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
+
+### How do publishers handle tokens from multiple trusted issuers?
+
+The publisher can check a user's browser for valid tokens with
+`document.hasTrustToken()` for one issuer at a time. If this returns `true`
+and a token is available, the publisher can redeem the token and stop
+looking for other tokens.
+
+The publisher must decide which token issuers to check and in what order.
+
+## Topics
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal:
+   [create an issue](https://github.com/jkarlin/topics/issues) on the proposal
+   repo.
+-  For questions about the implementation currently available to test in
+   Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=topics).
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+   on the Privacy Sandbox developer support repo.
+   
+### Can I opt out of topic calculation for specific pages on my site?
+
+Yes. Include the `Permissions-Policy: browsing-topics=()` header on a page to prevent topics
+calculation for all users on that page only. Subsequent visits to other pages on your site will
+not be affected. If you set a policy to block the Topics API on one page, this does won't
+affect other pages. 
+
+Topics are only inferred from the hostname and not from the URL path.
+
+### Can I control which third parties have access to topics on my page?
+
+Yes. You can use the Permission Policy header to control third-party access to the Topics API on your page.
+Use `self` and any domains you would like to allow access to the API as parameters.
+
+For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
+
+### Can Topics API be used with on websites with `prebid.js`?
+
+Yes. Topics are available to API callers when the `document.browsingTopics()` call
+to access topics is made from a document with the
+[same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin)
+as the call to observe topics. 
+
+For example, a call to observe topics could be made from an iframe whose `src` is
+same-origin as the source of the Topics API call to access topics. You can try out an
+example at [topics-demo.glitch.me](https://topics-demo.glitch.me).
 
 ## FLEDGE
 
@@ -190,6 +271,17 @@ attribute.
 At auction time, the browser communicates with the trusted server to
 fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
+
+### Can the Topics API be used with the FLEDGE API? 
+
+Yes. An observed topic for the current user, provided by the Topics API, could be used as 
+contextual information by a seller or bidder. A topic could be included in
+the following properties:
+
+*  `auctionSignals`, a property of the auction configuration object passed to `navigator.runAdAuction()`
+*  `userBiddingSignals`, a property of the interest group configuration
+   object passed to `navigator.joinAdInterestGroup()`
+
 
 ## Attribution Reporting
 
@@ -287,6 +379,21 @@ High-entropy UA-CH on request headers are restricted on cross-origin requests
 regardless of how that origin is defined on the DNS side. Delegation must be
 handled via `Permissions-Policy` for any cross-origin subresource or obtained
 via JavaScript which executes in the cross-origin context.
+
+### How does User-Agent reduction affect bot detection?
+
+Chrome's change to its user-agent string does not directly impact the
+user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced
+information Chrome sends, but that is entirely their implementation
+choice. Chrome is still sending the same user-agent format, and bots
+that append their own identifier to the end of a Chrome user-agent
+string can continue to do so.
+
+For any concerns with specific bots, it may be worth reaching out
+directly to the owners to ask if they have any plans to change their
+user-agent string.
 
 ## Shared storage
 

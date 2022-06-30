@@ -95,7 +95,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
 ### Set up DevTools {: #devtools }
 
-1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to open the
+1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, ChromeOS) to open the
     **Console** panel of DevTools.
 
     {% Img src="image/admin/RjZAIMvHhWe2HnMp4XUU.png", alt="The Console panel.", width="800", height="524" %}
@@ -199,7 +199,7 @@ If you want to save a change to the page's HTML, do it via the **Sources** panel
 2.  Click the **Page** tab.
 3.  Click **(index)**. The HTML for the page opens.
 4.  Replace `<h1>Workspaces Demo</h1>` with `<h1>I ❤️ Cake</h1>`. See **Figure 11**.
-5.  Press Command+S (Mac) or Control+S (Windows, Linux, Chrome OS) to save the change.
+5.  Press Command+S (Mac) or Control+S (Windows, Linux, ChromeOS) to save the change.
 6.  Reload the page. The `<h1>` element is still displaying the new text.
 
     {% Img src="image/admin/AMhS744qZFBSt0UHqFjv.png", alt="Changing HTML from the Sources panel.", width="800", height="524" %}
@@ -215,7 +215,7 @@ access other panels, such as the **Elements** panel or the **Console** panel, wh
 to your site. There's a way to have the **Sources** panel open alongside other panels.
 
 1.  Click the **Elements** tab.
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS). The **Command Menu**
+2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS). The **Command Menu**
     opens.
 3.  Type `QS`, then select **Show Quick Source**. At the bottom of your DevTools window there is now
     a **Quick Source** tab. The tab is displaying the contents of `index.html`, which is the last
@@ -226,7 +226,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 
     **Figure 9**. Opening the **Quick Source** tab via the **Command Menu**
 
-4.  Press Command+P (Mac) or Control+P (Windows, Linux, Chrome OS) to open the **Open File** dialog.
+4.  Press Command+P (Mac) or Control+P (Windows, Linux, ChromeOS) to open the **Open File** dialog.
     See **Figure 10**.
 5.  Type `script`, then select **app/script.js**.
 
@@ -241,7 +241,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
     console.log('greetings from script.js'); document.querySelector('a').style = 'font-style:italic';
     ```
 
-8.  Press Command+S (Mac) or Control+S (Windows, Linux, Chrome OS) to save the change.
+8.  Press Command+S (Mac) or Control+S (Windows, Linux, ChromeOS) to save the change.
 9.  Reload the page. The link on the page is now italic.
 
     {% Img src="image/admin/9USr1MmQSdD8wGABrVtI.png", alt="The link on the page is now italic.", width="800", height="524" %}

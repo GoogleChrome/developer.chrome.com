@@ -2,15 +2,51 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 
-<!-- ### Chrome 100 {: #chrome100 }
+<!-- ### Chrome 103 {: #chrome103 }
 
-* [View and edit @supports at rules in the Styles pane](/zh/blog/new-in-devtools-100/#supports)
-* [Support common selectors by default](/zh/blog/new-in-devtools-100/#selector)
-* [Customize the recording’s selector](/zh/blog/new-in-devtools-100/#customize-selector)
-* [Rename a recording](/zh/blog/new-in-devtools-100/#recorder-rename)
-* [Preview class/function properties on hover](/zh/blog/new-in-devtools-100/#properties)
-* [Partially presented frames in the Performance panel](/zh/blog/new-in-devtools-100/#perf)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-100/#misc) -->
+* [Capture double-click and right-click events in the Recorder panel](/zh/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/zh/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/zh/blog/new-in-devtools-103/#delete)
+* [Picking a color outside of the browser](/zh/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/zh/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/zh/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/zh/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/zh/blog/new-in-devtools-103/#sourcemaps) -->
+
+
+### Chrome 102 {: #chrome102 }
+
+* [预览功能：新的 Performance insights 面板](/zh/blog/new-in-devtools-102/#perf)
+* [新的模拟浅色和深色主题的快捷方式](/zh/blog/new-in-devtools-102/#emulation)
+* [提升网络预览标签页的安全性](/zh/blog/new-in-devtools-102/#network-preview)
+* [提升在断点处的重新加载](/zh/blog/new-in-devtools-102/#debugger)
+* [控制台更新](/zh/blog/new-in-devtools-102/#console)
+* [在用户流程录制开始时取消](/zh/blog/new-in-devtools-102/#recorder)
+* [在样式边栏中展示继承的高亮伪元素](/zh/blog/new-in-devtools-102/#pseudo)
+* [其它亮点](/zh/blog/new-in-devtools-102/#misc)
+* [[实验阶段] 复制 CSS 更改](/zh/blog/new-in-devtools-102/#copy)
+* [[实验阶段] 在浏览器外选择颜色](/zh/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [导入以及导出用户流程为 JSON 文件](/zh/blog/new-in-devtools-101/#recorder)
+* [样式边栏查看级联层](/zh/blog/new-in-devtools-101/#layer)
+* [支持 hwb() 颜色函数](/zh/blog/new-in-devtools-101/#hwb)
+* [改进私有属性的显示问题](/zh/blog/new-in-devtools-101/#private-props)
+* [其他的更新](/zh/blog/new-in-devtools-101/#misc)
+* [[实验阶段] Lighthouse 面板新增 timespan 和快照模式](/zh/blog/new-in-devtools-101/#lighthouse)
+
+### Chrome 100 {: #chrome100 }
+
+* [在样式边栏中查看并修改](/zh/blog/new-in-devtools-100/#supports)
+* [默认支持常用选择器](/zh/blog/new-in-devtools-100/#selector)
+* [自定义一段录制内容的选择器](/zh/blog/new-in-devtools-100/#customize-selector)
+* [重命名一段录制内容](/zh/blog/new-in-devtools-100/#recorder-rename)
+* [在悬停时预览类/函数属性](/zh/blog/new-in-devtools-100/#properties)
+* [性能面板中的部分呈现帧](/zh/blog/new-in-devtools-100/#perf)
+* [其他的更新](/zh/blog/new-in-devtools-100/#misc)
 
 
 ### Chrome 99 {: #chrome99 }
@@ -40,7 +76,7 @@
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
-* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
+* [[实验阶段] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }
@@ -48,7 +84,7 @@
 * [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
 * [修改 HTML 时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
 * [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
-* [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
+* [[实验阶段] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
 * [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
@@ -63,7 +99,7 @@
 * [统一的异步堆栈信息](/zh/blog/new-in-devtools-96/#async)
 * [保留控制台侧边栏](/zh/blog/new-in-devtools-96/#console-sidebar)
 * [弃用应用程序面板里面的应用程序缓存窗格](/zh/blog/new-in-devtools-96/#capp-cache)
-* [[实验] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
+* [[实验阶段] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
 
 
 ### Chrome 95 {: #chrome95 }

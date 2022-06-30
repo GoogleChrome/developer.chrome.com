@@ -181,7 +181,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/16d96a25f24c934ef
 В панели Manifest теперь отображается
 [`new_note_url`](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-В настоящее время в Chrome OS (CrOS) приложения Chrome и Android, в которых
+В настоящее время в ChromeOS (CrOS) приложения Chrome и Android, в которых
 есть возможность создания заметок, могут быть выбраны в качестве приложения
 для создания заметок в настройках стилуса (отображаются, если устройство CrOS
 используется со стилусом). Если приложение помечено таким образом,

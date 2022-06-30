@@ -65,7 +65,7 @@ Chromium 이슈: [1257499](https://crbug.com/1257499#c38)
 
 ## 콘솔 스타일링, 포매팅, 필터링 개선 {: #console }
 
-### ANSI 이스케이프 코드를 사용한 적절한 스타일의 로그 메시지 {: #console-styling } 
+### ANSI 이스케이프 코드를 사용한 적절한 스타일의 로그 메시지 {: #console-styling }
 
 이제 [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code)를 사용하여 콘솔 메시지를 적절히 스타일링할 수 있습니다. 이전에는 DevTools 콘솔에서 지원하는 ANSI escape sequences 는 굉장히 제한적이며, 일부는 깨지기도 하였습니다.
 
@@ -140,7 +140,7 @@ Chromium 이슈: [1284737](https://crbug.com/1284737)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
 
-Chromium 이슈: [1277002](https://crbug.com/1277002) 
+Chromium 이슈: [1277002](https://crbug.com/1277002)
 
 
 ## Chrome 자동 다크 테마 개선 {: #auto-dark-mode }
@@ -171,7 +171,7 @@ Chromium 이슈: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 
@@ -184,7 +184,7 @@ Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - [이슈](/docs/devtools/issues/) 탭에서 [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) 이슈가 노출됩니다. ([1272445](https://crbug.com/1272445)).
 - [이슈](/docs/devtools/issues/) 탭에서 [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) 이슈가 노출됩니다. ([1219359](https://crbug.com/1219359)).
 - **소스** 및 **콘솔** 패널에서 `Shift` + `Delete` 및 `Page up` / `Page down` 동작을 수정하였습니다. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
-- **소스** 패널에서 브레이크포인트를 제거하면 브레이크포인트 편집 다이얼로그를 닫습니다. ([922513](https://crbug.com/922513)) 
+- **소스** 패널에서 브레이크포인트를 제거하면 브레이크포인트 편집 다이얼로그를 닫습니다. ([922513](https://crbug.com/922513))
 - DevTools에서 [라이트 / 다크 테마 선택](/docs/devtools/customize/dark-theme/) 시에 다시 불러올 필요가 없어졌습니다. ([1278738](https://crbug.com/1278738))
 
 

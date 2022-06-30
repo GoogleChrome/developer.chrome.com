@@ -1,10 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-04-11
+updated: 2022-06-15
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -15,6 +14,30 @@ updated: 2022-04-11
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
+
+May 26, 2022
+
+Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
+informs developers to accurately self-declare their trader/non-trader status.
+
+### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
+
+April 28, 2022
+
+When changing a Manifest V3 extension's keyboard shortcut on `chrome://extensions/shortcuts`,
+updates are now applied immediately. Previously the extension would have to be reloaded before the
+change would take effect.
+
+### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
+
+April 14, 2022
+
+Dynamically registered content scripts can now specify the
+[world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
+[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+for details.
 
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
 
@@ -28,10 +51,10 @@ extensions could using the `optional_permissions` key.
 
 April 4, 2022
 
-`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property.  If present
-and set to true, the script will inject into the target as soon as possible, rather than waiting for
-`document_idle`. Note that this is not a guarantee the script will inject before the page is loaded
-since the page continues to load while the API call is being made.
+`chrome.scripting.executeScript()` now accepts an optional `injectImmediately` property on it's
+`injection` argument. If present and set to true, the script will inject into the target as soon as
+possible, rather than waiting for `document_idle`. Note that this is not a guarantee the script will
+inject before the page is loaded since the page continues to load while the API call is being made.
 
 ### Chrome 102: Omnibox API support in Manifest V3 {: #m102-omnibox }
 
@@ -64,7 +87,7 @@ updated to allow extensions to better target requests based on the request's "re
 "initiator" domains. The relevant condition properties are `initiatorDomains`,
 `excludedInitiatorDomains`, `requestDomains`, and `excludedRequestDomains`. See also this
 [chromium-extensions
-thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E). 
+thread](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/4971ZS9cI7E).
 
 ### Chrome 100: Resolved issue with scripting.executeScript() on newly created tabs {: #m100-executescript-bugfix }
 
@@ -75,8 +98,15 @@ window could fail.
 
 February 9, 2022
 
+{% Aside 'warning' %}
+
+This change did not fully address the underlying issue. We will share another update when we are
+confident that native messaging ports are behaving as intended.
+
+{% endAside %}
+
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open.
+service worker should keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
@@ -149,7 +179,7 @@ updated to provide developers with more detailed guidance for common reasons for
 October 1, 2021
 
 This release contains significantly more promise updates than any previous release. Updates include
-both general and Chrome OS-specific extensions APIs. Expand the following sections for details.
+both general and ChromeOS-specific extensions APIs. Expand the following sections for details.
 
 {% Details %}
 {% DetailsSummary %}
@@ -185,7 +215,7 @@ prototype now also support promises. The following APIs are affected by this cha
 
 {% Details %}
 {% DetailsSummary %}
-Chrome OS APIs
+ChromeOS APIs
 {% endDetailsSummary %}
 
 - [`chrome.certificateProvider`](/docs/extensions/reference/certificateProvider)

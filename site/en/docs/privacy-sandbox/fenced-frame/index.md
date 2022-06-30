@@ -8,13 +8,16 @@ description: |
 authors:
   - jackjey
   - alexandrawhite
+  - kevinkiklee
 date: 2022-03-07
+updated: 2022-05-10
 ---
 
 ## Implementation status
 
 This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
+*  Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M105. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
 *  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 *  This feature is [available behind a Chrome flag](#try-fenced-frames).
@@ -53,18 +56,23 @@ is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
-Chrome teams are working on [storage 
-partitioning](https://github.com/privacycg/storage-partitioning), which separates 
-browser storage per-site.  This means iframes embedded on sites with the same 
-eTLD+1, such as `frame.example` and `site.example`, could share browser storage. 
-Iframes embedded on sites that have different hostnames, such as `frame.example` 
-and `site.other`, won't share browser storage.
+Chrome is working on [storage
+partitioning](https://github.com/privacycg/storage-partitioning), which
+separates browser storage per-site. Currently, if an iframe from `shoes.example`
+is embedded on `news.example`, and that iframe stores a value into storage,
+then that value can be read from the `shoes.example` site. When storage has been
+partitioned, cross-site iframes will no longer share storage, therefore
+`shoes.example` will not be able to access information stored by the iframe. If
+the iframe is served from `*.shoes.example` and embedded on
+`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
+
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/ss7wjBshEJcwdQXcXGov.png", alt="A comparison of before and after state of storage partitinoing.", width="800", height="613" %}
 
 Storage partitioning will be applied to standard storage APIs including
-LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
-across first-party storage will be significantly reduced.
+LocalStorage, IndexedDB, and cookies. In a partitioned world, information
+leakage across first-party storage will be significantly reduced.
 
-### Work with cross-ste data {: #cross-site-data }
+### Work with cross-site data {: #cross-site-data }
 
 Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
 which suggests top-level sites should partition data. Many Privacy Sandbox
@@ -172,7 +180,7 @@ Current candidates for this combination include:
    storage](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage).
 
 For more details, refer to the [Fenced Frames
-explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md)).
+explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md).
 
 
 ### Examples

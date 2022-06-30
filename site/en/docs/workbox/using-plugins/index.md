@@ -62,6 +62,10 @@ A Workbox plugin needs to implement one or more callback functions. When you add
 
 All of these callback are [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), and therefore will require `await` to be used whenever a cache or fetch event reaches the relevant point for the callback concerned.
 
+{% Aside %}
+When some of the callbacks are invoked, the body of the `request` parameter _may_ have already been read, depending on the ordering of cache and network operations in your strategy. If you need to make use of the request's body from within your callback code, you can [use a `requestWillFetch` callback](https://github.com/GoogleChrome/workbox/issues/3075#issuecomment-1115261299) to store a [`clone()`](https://developer.mozilla.org/docs/Web/API/Request/clone) of the request in the `state` parameter. This cloned request will then be available for use in other callbacks run after the request is sent to the network.
+{% endAside %}
+
 If a plugin used all of the above callbacks, this would be the resulting code:
 
 ```js
@@ -108,7 +112,7 @@ const myPlugin = {
   },
   fetchDidFail: async ({originalRequest, request, error, event, state}) => {
     // No return expected.
-    // NOTE: `originalRequest` is the browser's request, `request` is the
+    // Note: `originalRequest` is the browser's request, `request` is the
     // request after being passed through plugins with
     // `requestWillFetch` callbacks, and `error` is the exception that caused
     // the underlying `fetch()` to fail.
@@ -135,8 +139,8 @@ const myPlugin = {
     // Can report any data here.
   },
   handlerDidError: async ({request, event, error, state}) => {
-    // Return `response`, a different `Response` object as a fallback, or `null`.
-    return response;
+    // Return a `Response` to use as a fallback, or `null`.
+    return fallbackResponse;
   },
 };
 ```

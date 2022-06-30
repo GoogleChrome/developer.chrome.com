@@ -58,12 +58,12 @@ setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-setCatchHandler(async ({event}) => {
+setCatchHandler(async ({request}) => {
   // The warmStrategyCache recipe is used to add the fallback assets ahead of
   // time to the runtime cache, and are served in the event of an error below.
   // Use `event`, `request`, and `url` to figure out how to respond, or
   // use request.destination to match requests for specific resource types.
-  switch (event.request.destination) {
+  switch (request.destination) {
     case 'document':
       return FALLBACK_STRATEGY.handle({event, request: FALLBACK_HTML_URL});
 
@@ -93,21 +93,19 @@ setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-setCatchHandler(async ({event}) => {
+setCatchHandler(async ({request}) => {
   // Fallback assets are precached when the service worker is installed, and are
   // served in the event of an error below. Use `event`, `request`, and `url` to
   // figure out how to respond, or use request.destination to match requests for
   // specific resource types.
-  switch (event.request.destination) {
+  switch (request.destination) {
     case 'document':
       // FALLBACK_HTML_URL must be defined as a precached URL for this to work:
       return matchPrecache(FALLBACK_HTML_URL);
-    break;
 
     case 'image':
       // FALLBACK_IMAGE_URL must be defined as a precached URL for this to work:
       return matchPrecache(FALLBACK_IMAGE_URL);
-    break;
 
     default:
       // If we don't have a fallback, return an error response.
@@ -122,7 +120,7 @@ An example use case for the second fallback setup is if a page was cached ahead 
 
 Workbox maintains separate caches for precaching and runtime caches, and there may be situations where you want to cache something ahead of time without relying on precaching, since updates to the precache manifest will require you to deploy an updated service worker.
 
-To prime the runtime cache ahead of time with assets, you can do using so using the `warmStrategyCache` recipe from [`workbox-recipes`](LINK UP TO MODULE DOC). Under the hood, this strategy calls [`Cache.addAll`](https://developer.mozilla.org/docs/Web/API/Cache/addAll) in a service worker's `install` event.
+To prime the runtime cache ahead of time with assets, you can do using so using the `warmStrategyCache` recipe from [`workbox-recipes`](/docs/workbox/modules/workbox-recipes/). Under the hood, this strategy calls [`Cache.addAll`](https://developer.mozilla.org/docs/Web/API/Cache/addAll) in a service worker's `install` event.
 
 ```js
 import {warmStrategyCache} from 'workbox-recipes';

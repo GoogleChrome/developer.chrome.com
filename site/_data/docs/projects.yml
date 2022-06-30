@@ -1,6 +1,7 @@
 tools:
   - url: devtools
   - url: workbox
+  - url: puppeteer
 crx:
   - url: extensions
   - url: webstore
@@ -10,5 +11,6 @@ architecture:
   - url: native-client
   - url: multidevice
   - url: android
+  - url: web-platform
 infrastructure:
   - url: versionhistory

@@ -108,7 +108,7 @@ collection are not accepted.
 
 ### How can I provide support for users of my extension? {: #faq-gen-27 }
 
-First you must "Enable User Feedback" in your developer dashboard Account settings. 
+First you must "Enable User Feedback" in your developer dashboard Account settings.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="700", height="85" %}
 
@@ -158,7 +158,7 @@ pushed out to users over the next few hours.
 
 ### Can I host my own extension? {: #faq-dev-03 }
 
-You can host your own extensions in limited cases, such as for Linux or Chrome OS users. Consider [enterprise publishing][cws-enterprise] or developer mode.
+You can host your own extensions in limited cases, such as for Linux or ChromeOS users. Consider [enterprise publishing][cws-enterprise] or developer mode.
 
 ## Creating a listing
 
@@ -243,7 +243,7 @@ to only users of the "en-GB" Chrome Web Store.
 ### My item's status says "pending review." What does this mean? {: #faq-listing-08 }
 
 This means that you've submitted your item for publishing and it is currently in the queue to be
-[reviewed][cws-review]. The item will not appear in the store until it passes this review. 
+[reviewed][cws-review]. The item will not appear in the store until it passes this review.
 
 ### How long will it take to review my item? {: #faq-listing-108 }
 
@@ -285,7 +285,7 @@ or egregious policy violations may result in [termination of your developer acco
   this information in the [Status Tab][comply-policies] of your item.
 - Please make the appropriate
   changes so your extension complies with all [Developer Program Policies][program-policies], [Branding
-  Guidelines][branding] and [Terms of Services][terms-of-services]. For additional help, see the 
+  Guidelines][branding] and [Terms of Services][terms-of-services]. For additional help, see the
   [Troubleshooting violations FAQ][troubleshoot-violations].
 - Once you have remedied the violation you can
   resubmit via your developer dashboard.
