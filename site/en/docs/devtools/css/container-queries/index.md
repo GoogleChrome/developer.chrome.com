@@ -51,7 +51,6 @@ To understand when you can inspect `@container` declarations on [this demo page]
 }
 
 @container (inline-size > 600px) {
-
   .coffee {
     display: grid;
     grid-template-columns: 280px auto;
