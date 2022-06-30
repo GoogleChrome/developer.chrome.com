@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Inspect and debug CSS container queries"
 authors:
   - sofiayem
+  - jecelynyeen
 date: 2022-06-30
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to inspect, modify, and debug CSS container queries."
