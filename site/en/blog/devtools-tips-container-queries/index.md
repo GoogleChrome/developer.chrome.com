@@ -20,7 +20,7 @@ tags:
 
 {% YouTube id='X4TYXlvbb2E' %}
 
-Chrome DevTools is here to help you adopt new layout design patterns and stay on top of the latest trends. With the support of this CSS feature, you can now inspect and debug your container queries in DevTools.
+[Chrome DevTools](/docs/devtools) is here to help you adopt new layout design patterns and stay on top of the latest trends. With the support of this CSS feature, you can now inspect and debug your container queries in DevTools.
 
 Discover container elements and their descendants with the corresponding badge that toggles a dotted-line overlay.
 
