@@ -1,6 +1,6 @@
 ---
 title: >
-  DevTools Tips: Inspect CSS container queries
+  DevTools Tips: How to inspect CSS container queries
 description: >
   Inspect and debug CSS container queries with DevTools.
 layout: 'layouts/blog-post.njk'
