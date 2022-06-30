@@ -104,5 +104,5 @@ In this example, the container's width is `500px`. The paragraph (`p`) element a
 
 
 [1]: /docs/devtools/open
-[2]: https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design
+[2]: https://web.dev/learn/design/intro/
 [3]: https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries
