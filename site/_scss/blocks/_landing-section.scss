@@ -1,4 +1,5 @@
 .landing-section {
+  color: var(--color-secondary-text);
   gap: get-size(400);
   grid-template-columns: 1fr;
   padding: get-size(300);
@@ -14,6 +15,10 @@
     min-width: px-to-rem(200px);
     overflow: hidden;
     position: relative;
+
+    .color-primary {
+      color: #{get-color('blue-600')};
+    }
 
     .item {
       padding-left: 3.125rem;
@@ -48,7 +53,7 @@
     }
 
     &::before {
-      background-color: var(--secondary-color);
+      background-color: var(--dot-color);
       content: '';
       display: block;
       height: 100%;
@@ -106,8 +111,7 @@
     }
 
     .item__title {
-      font-size: 1.1em;
-      font-weight: normal;
+      font-size: 1.2em;
     }
 
     .item::before {
@@ -127,7 +131,28 @@
     }
   }
 
-  &--top {
+  &--top-3 {
+    .landing-section__links {
+      /* stylelint-disable max-nesting-depth */
+      @include media-query('md') {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  &--top-4 {
+    .landing-section__links {
+      /* stylelint-disable max-nesting-depth */
+      @include media-query('md') {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  &--top-3,
+  &--top-4 {
     .landing-deco__inner {
       display: grid;
       grid-template-columns: 1fr;
@@ -139,9 +164,12 @@
       /* stylelint-enable max-nesting-depth */
     }
 
+    .item__title {
+      font-size: 1.2em;
+    }
+
     .landing-section__links {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
       /* stylelint-disable max-nesting-depth */
       &::before {
@@ -155,7 +183,7 @@
     }
 
     .item__outer::before {
-      background-color: var(--secondary-color);
+      background-color: var(--dot-color);
       content: '';
       display: block;
       height: 1.75em;
@@ -176,7 +204,7 @@
 
     .item {
       margin-top: 1.75em;
-      padding: 1em 1em 0 0;
+      padding: 1em 3em 3em 0;
     }
 
     .item::before {

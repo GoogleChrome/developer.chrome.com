@@ -2,34 +2,19 @@
 layout: 'layouts/landing.njk'
 title: 'Workbox'
 description: 'Production-ready service worker libraries and tooling.'
-project_key: workbox
 sections:
-  resources:
-    - url: /docs/workbox/service-worker-overview
-      title: 1 Faster multipage applications with streams
-      description: Introducing Workbox, a set of modules r multipage applications wit.
-    - url: /docs/workbox/service-worker-overview
-      title: 2 Faster multipage applications with streams
-      description: Workbox, a set of modules.
-    - url: /docs/workbox/service-worker-overview
-      title: 3 Faster multipage applications
-      description: r multipage applications wit of modules.
-    - url: /docs/workbox/service-worker-overview
-      title: 4 Faster multipage applications with applications with streams
-      description: Introducing Workbox, r multipage applications wit set of modules.
   intro:
-    - url: /docs/workbox/service-worker-overview
-      title: Faster multipage applications with streams
-      description: Introducing Workbox, a set of modules that simplify common service worker routing and caching.
-    - url: /docs/workbox/service-worker-overview
-      title: Faster multipage applications with streams
-      description: Introducing Workbox, a set of modules that simplify common service worker routing and caching.
-  featured:
     - url: /docs/workbox/service-worker-overview
     - url: /docs/workbox/service-worker-lifecycle
     - url: /docs/workbox/caching-strategies-overview
+    - url: /docs/workbox/what-is-workbox
+  how_to_use:
+    - url: /docs/workbox/the-ways-of-workbox
+    - url: /docs/workbox/precaching-with-workbox
+    - url: /docs/workbox/using-workbox-without-precaching
+    - url: /docs/workbox/framework-integrations
     - url: /blog/progress-in-the-privacy-sandbox-2022-04
-  how_to:
+  know:
     - url: /docs/workbox/service-worker-deployment
     - url: /docs/workbox/remove-buggy-service-workers
     - url: /docs/workbox/improving-development-experience
@@ -40,6 +25,29 @@ sections:
     - url: /docs/workbox/faster-multipage-applications-with-streams
     - url: /docs/workbox/precaching-dos-and-donts
     - url: /docs/workbox/understanding-storage-quota
+  use_cases:
+    - url: /docs/workbox/using-workbox-window
+    - url: /docs/workbox/caching-resources-during-runtime
+    - url: /docs/workbox/forcing-a-network-timeout
+    - url: /docs/workbox/access-caches-from-the-window
+    - url: /docs/workbox/serving-cached-audio-and-video
+    - url: /docs/workbox/managing-fallback-responses
+    - url: /docs/workbox/handling-service-worker-updates
+    - url: /docs/workbox/retrying-requests-when-back-online
+    - url: /docs/workbox/using-plugins
+  resources:
+    - url: /docs/workbox/modules
+      title: Workbox Modules
+      description: Dig deeper into specific Workbox modules.
+    - url: /docs/workbox/reference
+      title: API Reference
+      description: Browse the API reference to get information on available methods in the Workbox API, broken down by module.
+    - url: /docs/workbox/migration
+      title: Migration Guides
+      description: How-to guides on migrating from older versions of Workbox.
+    - url: https://github.com/GoogleChrome/workbox
+      title: Workbox on GitHub
+      description: File issues, read release notes, and browse the source code.
 ---
 
 {% from 'macros/cards/hero-card.njk' import heroCard with context %}
@@ -48,46 +56,77 @@ sections:
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 
+{# Special style, needed only for Workbox hero card. #}
+<style>
+.hero-card {
+  background-image: url(https://wd.imgix.net/image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kyRn8vjNdySIzbkaxFRr.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+}
+</style>
+
 {{ heroCard(
   'Workbox',
   "Production-ready service worker libraries and tooling.",
-  "Start building",
-    "/docs/",
-  "image/QMjXarRXcMarxQddwrEdPvHVM242/uyy9OtWHTcxH5sK5VuRA.png",
-  "Construction crane lifting a resource into a Chrome tab",
-  "yellow"
+  "Get started",
+  "/docs/workbox",
+  "",
+  "",
+  "yellow",
+  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg"
   ) }}
 
-{# $colors: 'blue', 'yellow', 'red', 'green', 'purple', 'pink', 'cyan'; #}
+{{ landingSection(
+  'Introduction to Workbox and service workers',
+  'Learn how service workers can progressively enhance your website and how Workbox makes it easy.',
+  sections.intro,
+  'green',
+  'top-4',
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
+  'Waving hand icon',
+  333,
+  165
+  )
+}}
 
 {{ landingSection(
-  'blue What you need to know',
-  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since th',
-  sections.how_to,
+  'How to use Workbox',
+  "There's more than one way to use Workbox so you can use the right integration for your project",
+  sections.how_to_use,
   'blue',
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/uQ39Xo2WiQTO7YuVtsMq.svg',
-  'alt',
-  'top')
+  'left',
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/DoFpXgJqk97W0lokcSCf.svg',
+  'Arrow icon',
+  429,
+  278
+  )
 }}
 
 {{ landingSection(
   'What you need to know',
-  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`)',
-  sections.intro,
-  'green',
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/uQ39Xo2WiQTO7YuVtsMq.svg',
-  'alt',
-  'left')
+  'Guidance to consider when building a service worker',
+  sections.know,
+  'yellow',
+  'right',
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/rTbChNDzLjBFvBFMNONh.svg',
+  'Graduation cap',
+  284,
+  193
+  )
 }}
 
 {{ landingSection(
-  'Introduction to Workbox and service workers',
-  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since th',
-  sections.intro,
-  'blue',
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/uQ39Xo2WiQTO7YuVtsMq.svg',
-  'alt',
-  'right')
+  'Use cases and recipes',
+  'Learn how to handle different use cases to get the most out of workbox',
+  sections.use_cases,
+  'green',
+  'top-3',
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
+  'Docs folder icon',
+  333,
+  165
+  )
 }}
 
 <div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
@@ -104,19 +143,12 @@ sections:
       </div>
     </div>
   {% endfor %}
-  {{ landingDeco('Useful links', 'em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been', 'yellow', 'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/uQ39Xo2WiQTO7YuVtsMq.svg', 'alt') }}
+  {{ landingDeco(
+    'Useful links',
+    'em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    'alt',
+     291,
+     251) }}
 </div>
-
-{# <div class="landing-section landing-section--cards rounded-lg width-full display-grid gap-top-500">
-  {% for item in sections.featured %}
-    {% set post = null %}
-    {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-    {% if post %}
-      {{ blogCard(post) }}
-    {% endif %}
-  {% endfor %}
-</div> #}
-
-
-
-
