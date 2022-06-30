@@ -49,8 +49,6 @@ To understand when you can inspect `@container` declarations on [this demo page]
 }
 
 @container (inline-size > 600px) {
-    margin-left: 20px;
-  }
 
   .coffee {
     display: grid;
@@ -74,7 +72,7 @@ In this example, if the container's width exceeds the following number of pixels
 To inspect the first `@container` declaration:
 
 1. In the **Elements** panel, set the container's width to `500px`. The `p` element appears.
-1. Select the `p` element. In the **Styles** pane, you can see the `@ container` declaration along with a link to the parent container `article.card`.
+1. Select the `p` element. In the **Styles** pane, you can see the `@container` declaration along with a link to the parent container `article.card`.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/c0jBYWpVuerGxsF0YSBc.png", alt="@container declaration.", width="800", height="569" %}
 
@@ -93,6 +91,15 @@ When hovered over, the name turns into a link to the element in the **Elements**
 ## Modify container queries {: #modify }
 
 To debug a query, you can modify it as any other CSS declaration in the **Styles** pane as described in [View and change CSS](/docs/devtools/css/).
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdeunIEJzVJ9BSmAyaR0.mp4", autoplay=true, loop=true, class="screenshot" %}
+
+In this example, the container's width is `500px`. The paragraph (`p`) element appears on the page. 
+
+1. Select the `p` element. In the **Styles** pane, you can see the `@container (inline-size > 400px)` declaration.
+2. Change the `inline-size` from `400px` to `520px`.
+3. The paragraph (`p`) element disappears from the page because it did not full fill the querying criteria.
+
 
 [1]: /docs/devtools/open
 [2]: https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design
