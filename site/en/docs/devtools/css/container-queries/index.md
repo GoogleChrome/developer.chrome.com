@@ -97,10 +97,9 @@ To debug a query, you can modify it as any other CSS declaration in the **Styles
 
 In this example, the container's width is `500px`. The paragraph (`p`) element appears on the page. 
 
-1. Select the `p` element. In the **Styles** pane, you can see the `@container (inline-size > 400px)` declaration.
+1. Select the `p` element. In the **Styles** pane. You can see the `@container (inline-size > 400px)` declaration.
 2. Change the `inline-size` from `400px` to `520px`.
-3. The paragraph (`p`) element disappears from the page because it did not full fill the querying criteria.
-
+3. The paragraph (`p`) element disappears from the page because it did not fulfill the query criteria.
 
 [1]: /docs/devtools/open
 [2]: https://web.dev/learn/design/intro/
