@@ -22,6 +22,14 @@ May 26, 2022
 Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
 informs developers to accurately self-declare their trader/non-trader status.
 
+### Chrome 103: Wasm in Manifest V3 requires wasm-unsafe-eval {: #m103-wasm-csp }
+
+May 12, 2022
+
+Chrome no longer grants extensions `script-src: wasm-unsafe-eval` by default. Extensions that use
+WebAssembly must now explicitly add this directive and value to `extension_pages` in their
+`content_security_policy` declarations.
+
 ### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
 
 April 28, 2022
