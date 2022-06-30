@@ -14,6 +14,8 @@ tags:
 
 This guide shows you how to inspect and debug CSS container queries in the **Elements** panel in Chrome DevTools.
 
+{% YouTube id='X4TYXlvbb2E' %}
+
 [CSS container queries][3] allow you to manipulate the element's styles based on its parent container properties. This capability shifts the concept of [responsive web design][2] from page-based to [container-based](https://web.dev/new-responsive/).
 
 {% Aside %}
