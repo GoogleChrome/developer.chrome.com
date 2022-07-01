@@ -40,6 +40,7 @@
         {% if tweets and tweets.length %}
           {{ featuredTweetCard() }}
         {% endif %}
+        {% include 'partials/featured-gdg-card.njk' %}
         {% include 'partials/report-a-bug.njk' %}
       </div>
     </div>
