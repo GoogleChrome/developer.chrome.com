@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Reading time'
-description: 'Learn how to insert an element on a specific set of pages.'
+description: 'Insert an element on a specific set of pages.'
 subhead: 'Create your first extension by inserting an element on specific sites.'
 date: 2022-07-15
 # updated: 2022-06-13
@@ -46,7 +46,7 @@ This is what the final file structure of this project will look like:
         └── icon-128.png
 ```
 
-If you rather download the complete source code, it is available on [Github][gh-reading-time].
+If you rather download the complete source code, it is available on [Github][github-reading-time].
 
 ## Build the extension {: #build }
 
@@ -85,7 +85,10 @@ file in the _root_ of the project and add the following code:
 
 Although [icons][doc-icons] are optional during development, we recommend you include them because
 they appear in the extension management page, the permissions warning, the Chrome web store, and
-favicon. Add the following code to declare the icons:
+favicon. 
+
+Create an `images/` folder and place the icons inside. You can download the icons
+[here][github-rt-icons]. Add the following code to declare the icons:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -213,14 +216,13 @@ if (article) {
 
 {% Details %}
 {% DetailsSummary %}
-💡 **TIPS: Interesting JavaScript used in this code**
+💡 **Interesting JavaScript used in this code**
 {% endDetailsSummary %}
 
 - [Regular expressions](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern) to count only the words.
 - [InsertAdjacentElement](https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement)
  to insert the reading time node after the element.
-- Some other interesting thing here.
-
+- [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to add css class names to the element class attribute.
 
 {% endDetails %}
 
@@ -284,11 +286,10 @@ Continue developing your skills by completing other tutorials on this series:
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
 [doc-match]:/docs/extensions/mv3/match_patterns/
-[gh-reading-time]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
+[github-reading-time]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
+[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
-[tut-focus-mode]: /docs/extensions/mv3/getstarted/focus-mode
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
-[tut-tabs-manager]: /docs/extensions/mv3/getstarted/tabs-manager
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
 [workbox]: https://developer.chrome.com/docs/workbox/
