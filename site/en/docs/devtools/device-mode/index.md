@@ -190,9 +190,8 @@ You can also set network throttling from the **Performance** panel. Click **Capt
 
 ## Override geolocation {: #geolocation }
 
-To open the geolocation overriding UI click **Customize and control DevTools**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %}
-and then select **More tools** > **Sensors**.
+To open the geolocation overriding UI, click **Customize and control DevTools**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.
 
 {% Img src="image/admin/eb1Ahn7tFUrvfwsj1FQd.png", alt="Sensors", width="800", height="648" %}
 
@@ -209,7 +208,7 @@ geolocation is in an error state.
 
 ## Set orientation {: #orientation }
 
-To open the orientation UI click **Customize and control DevTools**
+To open the orientation UI, click **Customize and control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize and control DevTools.", width="20", height="20" %} and then select **More tools** > **Sensors**.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JXJf08VxTePcH96fxMCB.png", alt="Sensors", width="800", height="648" %}
