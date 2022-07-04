@@ -56,13 +56,17 @@ sections:
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 
-{# Special style, needed only for Workbox hero card. #}
+{# unique styles, needed only for Workbox hero card. #}
 <style>
 .hero-card {
   background-image: url(https://wd.imgix.net/image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kyRn8vjNdySIzbkaxFRr.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
+}
+
+.material-button.bg-yellow-medium {
+  color: #000;
 }
 </style>
 

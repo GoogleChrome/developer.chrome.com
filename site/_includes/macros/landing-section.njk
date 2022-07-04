@@ -4,7 +4,7 @@
 {% macro landingSection(title, desc, items, color, type, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) %}
 <section
   class="landing-section landing-section--{{type}} hairline rounded-lg width-full display-grid gap-top-400"
-  style="--primary-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
 
   {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
 

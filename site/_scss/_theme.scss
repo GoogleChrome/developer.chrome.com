@@ -44,7 +44,7 @@
   --color-blue-darkest: #{get-color('blue-900')};
   --rgb-blue-darkest: 23, 78, 166;
 
-  --color-yellow-lightest: #{rgb(get-color('yellow-50'), 0.4)};
+  --color-yellow-lightest: #{rgb(get-color('yellow-50'), 0.3)};
   --color-yellow-lighter: #{get-color('yellow-100')};
   --color-yellow-medium: #{get-color('yellow-700')};
   --color-yellow-darkest: #{darken(get-color('yellow-900'), 1%)}; // darken to meet a11y contrast

@@ -129,7 +129,7 @@
     }
 
     .item::before {
-      background-color: var(--primary-color);
+      background-color: var(--number-color);
       border-radius: 50%;
       color: #f3f9f5;
       content: counter(section);
@@ -146,7 +146,7 @@
 
     .item__title a,
     .item__title a:visited {
-      color: var(--primary-color);
+      color: var(--number-color);
       text-decoration: none;
     }
   }
