@@ -13,14 +13,14 @@ description: >
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
-  - josephmedley
+  - joemedley
 
 # Required
 date: 2020-09-03
 
 # Optional
 # Include an updated date when you update your post
-updated: 2020-09-03
+updated: 2022-07-04
 
 # Optional
 # How to add a new tag
