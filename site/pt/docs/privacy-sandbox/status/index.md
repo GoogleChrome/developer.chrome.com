@@ -4,9 +4,9 @@ title: Já está pronto?
 subhead: Status de implementação das APIs do Privacy Sandbox.
 description: Status de implementação das APIs do Privacy Sandbox. Última atualização em 2021-05-18.
 date: 2021-05-18
-updated: 2021-08-18
+updated: 2022-07-04
 authors:
-  - Samdutton
+  - samdutton
 ---
 
 {% Aside 'caution' %} Pode haver múltiplos períodos de ensaio de origem separados para cada API. {% endAside %}
