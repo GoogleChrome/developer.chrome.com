@@ -24,6 +24,3 @@ project_contribute:
 
 resources_protocol:
   en: 'DevTools Protocol APIs'
-
-resources_try:
-  en: 'Try Puppeteer!'
