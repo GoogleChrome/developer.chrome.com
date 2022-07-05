@@ -840,3 +840,8 @@ pauljensen:
     en: 'Paul Jensen'
   description:
     en: 'Software Engineer, Google Chrome'
+alinavarkki:
+  title:
+    en: 'Alina Varkki'
+  description:
+    end: 'Software Engineering Intern working on Chrome DevTools.'
