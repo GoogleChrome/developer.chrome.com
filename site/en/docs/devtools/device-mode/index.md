@@ -82,7 +82,7 @@ of cursor you see when you hover over the page. **Events fired** refers to wheth
 
 To simulate the dimensions of a specific mobile device, select the device from the **Dimensions** list.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2JDEYmYANUwYnNUrbe1e.png", alt="The Dimentions list.", width="800", height="507" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2JDEYmYANUwYnNUrbe1e.png", alt="The Dimensions list.", width="800", height="507" %}
 
 For more information, see [Add a custom mobile device](#cusom).
 
