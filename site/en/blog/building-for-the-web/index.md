@@ -226,7 +226,8 @@ Platforms that produces virtual reality headsets, has announced that PWAs would 
   <p>
     If your users are on one of the platforms whose stores accept PWAs, you can just publish your app
     to the stores in question. Else, remember linkability as one of the web's super powers. Your app
-    is discoverable, advertisable, and linkable from the web, too.
+    is discoverable, advertisable, and linkable from the web, too. Investing in a memorable domain
+    name can sometimes even be better for discoverability.
   </p>
 </details>
 
@@ -237,7 +238,7 @@ as in-app purchases (for example, items in a game app) or by selling subscriptio
 regular courses in a fitness app). If the developer integrates with payment providers, all of this
 is available to web apps as well, but the smooth integration of stores and their related payment
 systems makes this a lot more attractive for platform-specific apps, albeit at a 15–30% commission.
-For apps built using [Trusted web Activities](/docs/android/trusted-web-activity/) and delivered
+For apps built using [Trusted Web Activities](/docs/android/trusted-web-activity/) and delivered
 through the Google Play Store, developers can now use the
 [Payment Request API](https://developer.mozilla.org/docs/Web/API/Payment_Request_API) and the new
 [Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/) to integrate
@@ -246,7 +247,9 @@ with Google Play Billing.
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    When you profit from the convenience of app store billing or in-app purchases, at the same time
+    you also leave a part of your benefits on the table as a commission. As a matter of fact, some
+    apps that _are_ published to app stores even ask their users to make the purchase off-store.
   </p>
 </details>
 
@@ -263,7 +266,10 @@ requires a high level of specialization that not all web developers can offer.
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    In the current economic situation, hiring _any_ kind of developer is hard. Hiring for someone
+    with web development skills is in comparison to other skills still easier, which (in part) also
+    explains the popularity of app frameworks like React Native, Ionic, Flutter, and others that
+    are based on web technologies.
   </p>
 </details>
 
@@ -278,7 +284,10 @@ have an existing website, appears very unattractive in comparison, but sometimes
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    Vanity is vanity, but once you have set up new, potentially more meaningful, tracking metrics
+    than number of app installs, like, for example,
+    [increase of indicators of purchase intent](https://web.dev/betty-crocker/#results), you can
+    start tracking those instead.
   </p>
 </details>
 
@@ -304,7 +313,10 @@ planning.
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    Compatibility is top of mind for web developers and browser vendors alike. Initiatives like
+    Interop and Compat demonstrate a clear concerted effort to improve the situation, and the
+    [dashboard](https://wpt.fyi/interop-2022) shows that it's working. With feature testing
+    and progressive enhancement, impressive apps that behave well on all browsers can be built.
   </p>
 </details>
 
@@ -320,7 +332,12 @@ keeping up with a large number of new and existing tools or frameworks were ment
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    The tooling and framework situation in the web development world is infamous for being
+    confusing and hard to keep up with. In practice, though, companies would use one technology
+    and tooling stack and stay true for it for many years. The world of tech Twitter is one thing,
+    the reality in enterprises, where the _decades_-old jQuery is still (and by a large amount) the
+    [most popular framework](https://almanac.httparchive.org/en/2021/javascript#libraries-and-frameworks),
+    is the other.
   </p>
 </details>
 
@@ -339,7 +356,9 @@ all platforms, so it is mostly a security theater at this point.
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    As outlined above, certificate pinning mostly just increases the effort an attacker has to
+    put into sniffing your traffic and reverse-engineer the functioning of your app, but it
+    doesn't make it impossible.
   </p>
 </details>
 
@@ -362,7 +381,12 @@ like [Quake](http://www.quakejs.com) (thanks to
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-
+    There are two types of performance problems: those where truly every frame counts, as in gaming
+    or WebXR experiences, and those where apps feel "janky". For the latter, new APIs like the
+    [Shared Element Transition API](https://developer.chrome.com/blog/shared-element-transition-for-spas/)
+    can help. For the former, WebGPU is probably the most promising API on the horizon.
+    Very rarely, but admittedly sometimes, a device may just be too slow to render a certain experience,
+    which, obviously, happens with native apps, too.
   </p>
 </details>
 
