@@ -15,7 +15,7 @@ description: >
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  CrUX data can be accessed via BigQuery. Learn more about data structure and example queries.
+  Learn how CrUX data is structured on BigQuery.
 
 # Required
 date: 2022-06-23
@@ -58,7 +58,7 @@ CrUX data on BigQuery is released on the second Tuesday of the following month. 
     - all
         - [YYYYMM](#schema_raw_tables)
     - country_CC
-    - [YYYYMM](#schema_raw_tables)
+        - [YYYYMM](#schema_raw_tables)
     - [experimental](#schema_experimental)
         - [country](#schema-experimental-country)
         - [global](#schema-experimental-global)
@@ -74,7 +74,7 @@ CrUX data on BigQuery is released on the second Tuesday of the following month. 
 
 The raw tables for each country and the `all` dataset have the following schema:
 
-- origin
+- `origin`
 - effective_connection_type
 - form_factor
 - first_paint
@@ -145,7 +145,7 @@ Materialized tables are provided for easy access to summary data by a number of 
 </tbody>
 </table></div>
 
-This shows that in the 202204 dataset over 90% of experiences on `https://example.com` met the criteria for good LCP ([less than 2,500ms](https://web.dev/defining-core-web-vitals-thresholds/#refresher:-core-web-vitals-metrics-and-thresholds)), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
+This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/defining-core-web-vitals-thresholds/#refresher:-core-web-vitals-metrics-and-thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
 
 Four materialized tables are provided:
 
@@ -215,7 +215,7 @@ The `origin_summary` table contains a list of all origins in the CrUX dataset; i
 
 ## Experimental dataset {: #schema-experimental }
 
-Experimental datasets are aggregated from the raw data to provide simpler queries for specific use cases.
+Tables in the experimental dataset are exact copies of the default `YYYYMM` tables, but they make use of newer and more advanced BigQuery features like [partitioning](https://cloud.google.com/bigquery/docs/partitioned-tables) and [clustering](https://cloud.google.com/bigquery/docs/clustered-tables) that enable you to write faster, simpler, and cheaper queries.
 
 ### Country {: #schema-experimental-country }
 

@@ -15,7 +15,7 @@ description: >
 # Optional
 # This appears below the title and is an optional teaser
 subhead: >
-  The Chrome UX Report API gives low-latency access to aggregated Real User Metrics (RUM) from the Chrome User Experience Report.
+  The CrUX API gives low-latency access to aggregated real-user experience data at page and origin granularity.
 
 # Required
 date: 2022-06-23
@@ -36,11 +36,10 @@ tags:
   - web-vitals
 ---
 
-The Chrome UX Report API gives low-latency access to aggregated Real User Metrics (RUM) from the Chrome User Experience Report.
 
 ## Common use case
 
-The Chrome UX Report API allows for the querying of user experience metrics for a specific URI like "Get metrics for the `https://example.com` origin."
+The CrUX API allows for the querying of user experience metrics for a specific URI like "Get metrics for the `https://example.com` origin."
 
 ## Data model
 
@@ -52,11 +51,11 @@ A discrete piece of information about a page, or site. A record can have data th
 
 ### Identifiers
 
-Identifiers specify what records should be looked up. In the Chrome UX Report these identifiers are webpages and websites.
+Identifiers specify what records should be looked up. In CrUX these identifiers are webpages and websites.
 
 ### Origin
 
-When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the http://www.example.com origin had pages as laid out by this sitemap:
+When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the `http://www.example.com` origin had pages as laid out by this sitemap:
 
 ```text
 http://www.example.com
@@ -68,7 +67,7 @@ This would mean that when querying the Chrome UX Report with the origin set to `
 
 ### URLs
 
-When the identifier is a url only data for that specific url will be returned. Looking again to the `http://www.example.com` origin sitemap:
+When the identifier is a URL, only data for that specific URL will be returned. Looking again to the `http://www.example.com` origin sitemap:
 
 ```text
 http://www.example.com
@@ -76,7 +75,7 @@ http://www.example.com/foo.html
 http://www.example.com/bar.html
 ```
 
-If the identifier is set to url with the value of `http://www.example.com/foo.html`, only data for that page will be returned.
+If the identifier is set to URL with the value of `http://www.example.com/foo.html`, only data for that page will be returned.
 
 ### Dimensions
 
@@ -91,8 +90,6 @@ The device class that the end-user used to navigate to the page. This is a gener
 [Effective Connection Type](/docs/crux/methodology/#ect-dimension) is the estimated connection quality of the device when navigating to the page. This is a general class split into `offline`, `slow-2G`, `2G`, `3G` and `4G`.
 
 ### Metric
-
-See [metrics](/docs/crux/methodology/#metrics) for more info about the kinds of metrics included in the CrUX dataset.
 
 Metrics are expressed in a histogram, which represents the percent of users that experienced a metric with that value proportionally to all.
 
@@ -288,7 +285,7 @@ Data is updated daily around 04:00 UTC. There is no service level agreement for 
 Data will not differ within the same day after it has been updated around 04:00 UTC, repeated calls will yield the same results.
 {% endAside %}
 
-## API reference
+## Schema
 
 There is a single endpoint for the CrUX API which accepts `POST` HTTP requests. The API returns a `record` which contains one or more `metrics` corresponding to performance data about the requested origin or page.
 

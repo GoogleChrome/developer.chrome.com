@@ -101,11 +101,11 @@ A page is determined to be **sufficiently popular** if it has a minimum number o
 
 Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
 
-A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional anchor-based page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) on web.dev for more information.
+A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) for more information.
 
 ### Accelerated Mobile Pages (AMP)
 
-Pages built with AMP are included in the CrUX dataset like any other web page as of the [June 2020 CrUX release](/docs/crux/release-notes/#202006). Pages served via the [AMP Cache](https://developers.google.com/amp/cache) and / or rendered in the [AMP Viewer](https://developers.google.com/search/docs/advanced/experience/about-amp#about-google-amp-viewer) are also captured, and attributed to the publisher's page URL.
+Pages built with AMP are included in the CrUX dataset like any other web page. As of the [June 2020 CrUX release](/docs/crux/release-notes/#202006), pages served via the [AMP Cache](https://developers.google.com/amp/cache) and / or rendered in the [AMP Viewer](https://developers.google.com/search/docs/advanced/experience/about-amp#about-google-amp-viewer) are also captured, and attributed to the publisher's page URL.
 
 ## Tools
 
@@ -116,7 +116,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <thead>
 <tr>
 <th>Tool</th>
-<th>Timeliness</th>
+<th>Frequency</th>
 <th>Metrics</th>
 <th>Dimensions</th>
 <th>Historical Data</th>
@@ -162,7 +162,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 <td>Subset of key metrics  <a href="#footnote-4"><sup>4</sup></a></td>
 <td>No effective connection type or country dimensions</td>
 <td>No</td>
-<td>Page</td>
+<td>Origin &amp; Page</td>
 </tr>
 <tr>
 <td><a href="#tool-gsc">Google Search Console</a></td>
@@ -176,7 +176,7 @@ The CrUX dataset is made available through a variety of tools maintained by Goog
 </table></div>
 
 <p>
-<a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The first 28 days of each month period are included.<br>
+<a id="footnote-1"><sup>1</sup></a> Monthly data is released on the second Tuesday after each monthly collection period. The last 28 days of each month period are included.<br>
 <a id="footnote-2"><sup>2</sup></a> 28-day rolling average data is updated daily, based on the aggregated data from the previous 28 days.<br>
 <a id="footnote-3"><sup>3</sup></a> Not all metrics are available in all monthly tables, see the <a href="/docs/crux/release-notes">release notes</a> for details.<br>
 <a id="footnote-4"><sup>4</sup></a> The web vital metrics are available in all tools.<br>
@@ -201,21 +201,21 @@ The [CrUX Dashboard](https://web.dev/chrome-ux-report-data-studio-dashboard/) is
 
 The dashboard provides visualization of all CrUX metrics in monthly trends, with data available back to 2017. Data can be split by form factor to compare mobile / tablet / desktop performance and performance goals are available to create red-amber-green visualizations. Effective connection type can be shown as a distribution.
 
-The CrUX dashboard does not support the country dimension, so all global data is presented in the reports. Page-level data is not available and percentile values are calculated from coarse histogram data so are approximate.
+The CrUX Dashboard does not support the country dimension, so all global data is presented in the reports. Page-level data is not available and percentile values are calculated from coarse histogram data so are approximate.
 
 ### CrUX API {: #tool-crux-api}
 
 The [CrUX API](https://web.dev/chrome-ux-report-api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides web vitals metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
+The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
 
 [Read more in the API documentation](/crux/docs/api/).
 
 ### PageSpeed Insights {: #tool-psi}
 
-[PageSpeed Insights](https://pagespeed.web.dev/) uses CrUX data to present field performance statistics alongside the lab statistics calculated at run time.
+[PageSpeed Insights](https://pagespeed.web.dev/) uses CrUX to present real-user performance data alongside performance opportunities powered by [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
 
-The PageSpeed Insights report presents a consolidated view of the Core Web Vitals (plus First Contentful Paint) for the given URL - or origin in case data for the URL is not available. Data is presented by desktop and mobile form factors and can be compared with the lab test results to give a better understanding of your page performance.
+The PageSpeed Insights report presents a consolidated view of the Core Web Vitals for the given URL or origin, plus additional diagnostic metrics. Data is presented by desktop and mobile form factors and can be compared with the lab test results to give a better understanding of your page performance.
 
 PageSpeed Insights does not provide historical data, and does not include country or effective connection type dimensions.
 
@@ -229,7 +229,7 @@ As in the web version, the PageSpeed Insights API has no historical data and is 
 
 ### Search Console {: #tool-gsc}
 
-[Search Console](https://search.google.com/search-console) shows how CrUX data influences the [Page Experience](https://developers.google.com/search/docs/advanced/experience/page-experience) ranking factor by URL and URL group.
+[Search Console](https://search.google.com/search-console) shows how CrUX data influences the [page experience](https://developers.google.com/search/docs/advanced/experience/page-experience) ranking factor by URL and URL group.
 
 Search Console presents Core Web Vitals values as aggregates of [groups of similar pages](https://support.google.com/webmasters/answer/9205520#page_groups). This provides a quick indication of which sections of a site are potentially impacting the page experience ranking factor.
 
@@ -237,7 +237,7 @@ Data is updated daily and is split by mobile and desktop form factors. A maximum
 
 ## Metrics
 
-Metrics provided by the CrUX on Google BigQuery are powered by standard web platform APIs exposed by browsers and aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
+Metrics in CrUX are powered by standard web platform APIs exposed by browsers. In the BigQuery dataset in particular, this data is aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
 
 Most metrics are represented as a histogram aggregation, allowing visualization of the distribution and approximation of percentile values.
 
@@ -413,7 +413,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 <cite><a href="https://web.dev/cls/">web.dev/cls/</a></cite>
 {% endAside %}
 
-### Experimental {: #experimental-metrics }
+### Experimental metrics {: #experimental-metrics }
 
 Experimental metrics are available in the CrUX dataset via [BigQuery](/docs/crux/bigquery/), with some also available in the [CrUX API](/docs/crux/api/). These metrics are likely to change regularly as they evolve based on user feedback. Check the [release notes](/docs/crux/release-notes/) to keep up to date on the latest changes.
 
@@ -450,6 +450,8 @@ Popularity is provided as a guide for broad analysis, e.g. to determine performa
 
 <cite><a href="https://developer.mozilla.org/docs/Web/API/Notifications_API">MDN</a></cite>
 {% endAside %}
+
+For websites that request permission to show users notifications, this metric represents the relative frequency of users' responses to the prompts: accept, deny, ignore, or dismiss.
 
 ## Dimensions
 
@@ -518,7 +520,7 @@ The form factor dimension allows you to query against three separate form factor
 - Tablet
 - Desktop
 
-Form factor is inferred from the device [user-agent string](/docs/multidevice/user-agent/).
+Form factor is inferred from the device [User-Agent string](/docs/multidevice/user-agent/).
 
 ### Country {: #country-dimension }
 
@@ -542,8 +544,7 @@ The CrUX dataset is filtered to ensure that the presented data is statistically 
 
 In addition to the [eligibility criteria](#eligibility) applied to origins and pages, further filtering is applied for segments within the data:
 
-Origins having more than 20% of their total traffic excluded due to ineligible combinations of dimensions are excluded entirely from the dataset.
-Pages having more than 20% of their total traffic excluded due to ineligible combinations of dimensions are excluded entirely from the dataset.
+Origins or pages having more than 20% of their total traffic excluded due to ineligible combinations of dimensions are excluded entirely from the dataset.
 
 Because the global-level dataset encompasses user experiences from all countries, combinations of dimensions that do not meet the popularity criteria at the country level may still be included at the global level, provided that there is sufficient popularity.
 
@@ -559,8 +560,8 @@ Histogram [bin widths are normalized](https://twitter.com/chromeuxreport/status/
 
 ## Feedback and support
 
-We would love to hear your feedback, questions, and suggestions to help us improve the Chrome User Experience Report. Join the conversation on our [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
-We also tweet on [@ChromeUXReport](https://twitter.com/chromeuxreport) with updates.
+We would love to hear your feedback, questions, and suggestions to help us improve CrUX. Join the conversation on our [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
+We also tweet at [@ChromeUXReport](https://twitter.com/chromeuxreport) with updates.
 
 ## License
 
