@@ -131,7 +131,7 @@ To add a custom device:
 
     The [device pixel ratio][9], [user agent string][10], and [device type][11] fields are optional. The device type field is the list that is set to **Mobile** by default.
 
-1. Back in the viewport, select the newly added device from the **Dimentions** list.
+1. Back in the viewport, select the newly added device from the **Dimensions** list.
 
 ### Show rulers {: #rulers }
 
