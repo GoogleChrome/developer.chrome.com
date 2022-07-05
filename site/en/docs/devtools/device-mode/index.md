@@ -38,7 +38,7 @@ actually runs on a mobile device.
 ## Simulate a mobile viewport {: #viewport }
 
 Click **Toggle Device Toolbar**
-{% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} to open
+{% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar.", width="20", height="22" %} to open
 the UI that enables you to simulate a mobile viewport.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CkPWy2neRUswovjY1ql2.png", alt="The Device Toolbar.", width="800", height="562" %}
