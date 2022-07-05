@@ -249,7 +249,7 @@ with Google Play Billing.
   <p>
     When you profit from the convenience of app store billing or in-app purchases, at the same time
     you also leave a part of your benefits on the table as a commission. As a matter of fact, some
-    apps that _are_ published to app stores even ask their users to make the purchase off-store.
+    apps that <em>are</em> published to app stores even ask their users to make the purchase off-store.
   </p>
 </details>
 
@@ -266,7 +266,7 @@ requires a high level of specialization that not all web developers can offer.
 <details>
   <summary>How big of a challenge is this?</summary>
   <p>
-    In the current economic situation, hiring _any_ kind of developer is hard. Hiring for someone
+    In the current economic situation, hiring <em>any</em> kind of developer is hard. Hiring for someone
     with web development skills is in comparison to other skills still easier, which (in part) also
     explains the popularity of app frameworks like React Native, Ionic, Flutter, and others that
     are based on web technologies.
@@ -286,8 +286,8 @@ have an existing website, appears very unattractive in comparison, but sometimes
   <p>
     Vanity is vanity, but once you have set up new, potentially more meaningful, tracking metrics
     than number of app installs, like, for example,
-    [increase of indicators of purchase intent](https://web.dev/betty-crocker/#results), you can
-    start tracking those instead.
+    <a href="https://web.dev/betty-crocker/#results">increase of indicators of purchase intent</a>,
+    you can start tracking those instead.
   </p>
 </details>
 
@@ -315,7 +315,7 @@ planning.
   <p>
     Compatibility is top of mind for web developers and browser vendors alike. Initiatives like
     Interop and Compat demonstrate a clear concerted effort to improve the situation, and the
-    [dashboard](https://wpt.fyi/interop-2022) shows that it's working. With feature testing
+    <a href="https://wpt.fyi/interop-2022">dashboard</a> shows that it's working. With feature testing
     and progressive enhancement, impressive apps that behave well on all browsers can be built.
   </p>
 </details>
@@ -335,8 +335,8 @@ keeping up with a large number of new and existing tools or frameworks were ment
     The tooling and framework situation in the web development world is infamous for being
     confusing and hard to keep up with. In practice, though, companies would use one technology
     and tooling stack and stay true for it for many years. The world of tech Twitter is one thing,
-    the reality in enterprises, where the _decades_-old jQuery is still (and by a large amount) the
-    [most popular framework](https://almanac.httparchive.org/en/2021/javascript#libraries-and-frameworks),
+    the reality in enterprises, where the <em>decades</em>-old jQuery is still (and by a large amount) the
+    <a href="https://almanac.httparchive.org/en/2021/javascript#libraries-and-frameworks">most popular framework</a>,
     is the other.
   </p>
 </details>
@@ -350,7 +350,7 @@ their choice. Clients connecting to that server will treat all other certificate
 refuse to make an HTTPS connection. The hope is that this renders person-in-the-middle attacks
 impossible, so platform-specific apps are more "secure" than web apps, where traffic can easily be
 sniffed with browser DevTools. There are ways to
-[circumvent pinned certificates](https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/) on
+<a href="https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/">circumvent pinned certificates</a> on
 all platforms, so it is mostly a security theater at this point.
 
 <details>
@@ -383,7 +383,7 @@ like [Quake](http://www.quakejs.com) (thanks to
   <p>
     There are two types of performance problems: those where truly every frame counts, as in gaming
     or WebXR experiences, and those where apps feel "janky". For the latter, new APIs like the
-    [Shared Element Transition API](https://developer.chrome.com/blog/shared-element-transition-for-spas/)
+    <a href="https://developer.chrome.com/blog/shared-element-transitions-for-spas/">Shared Element Transition API</a>
     can help. For the former, WebGPU is probably the most promising API on the horizon.
     Very rarely, but admittedly sometimes, a device may just be too slow to render a certain experience,
     which, obviously, happens with native apps, too.
