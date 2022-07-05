@@ -43,7 +43,7 @@ the UI that enables you to simulate a mobile viewport.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CkPWy2neRUswovjY1ql2.png", alt="The Device Toolbar.", width="800", height="562" %}
 
-By default, the Device Toolbar opens in viewport with **Dimentions** set to **Responsive**.
+By default, the Device Toolbar opens in viewport with **Dimensions** set to **Responsive**.
 
 ### Responsive Viewport Mode {: #responsive }
 
