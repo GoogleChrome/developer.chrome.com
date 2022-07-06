@@ -182,6 +182,7 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
 1. Right-click **Leonard** below and select **Inspect**.
 
+     * Penny
      * Howard
      * Rajesh
      * Leonard
