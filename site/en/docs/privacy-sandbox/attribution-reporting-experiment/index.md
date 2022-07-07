@@ -63,39 +63,6 @@ If you notice any unexpected behavior:
 To ask more general questions on how to cover your use cases with the API, see [Discuss the
 API](#discuss-the-api).
 
-## Join the discussion
+{% include 'content/privacysandbox-partials/ar-join-discussion-long.njk' %}
 
-Everyone is welcome to join the discussion. In particular, if you're
-experimenting with the API, your feedback is essential.
-
-### Discuss the API
-
-Like other Privacy Sandbox proposals, this API is documented and discussed publicly on GitHub. 
-[Read this proposal](https://github.com/WICG/conversion-measurement-api/).
-
-*  Join the conversation on [existing  issues](https://github.com/WICG/conversion-measurement-api/issues).
-*  [Open a new Issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask
-   a question, propose a feature, or discuss a use case. Unsure how to
-   formulate your issue? [Review this example](https://github.com/WICG/conversion-measurement-api/issues/147).
-*  [Join the bi-weekly meetings](https://github.com/WICG/conversion-measurement-api/issues/80) (every
-   second week). Everyone is welcome to join. To participate, first you must
-   [join the WICG](https://www.w3.org/community/wicg/). You can actively
-   participate or just listen in!
-
-### Discuss related topics
-
-- Discuss industry use cases in the [Private Advertising Technology Community
-  Group](https://github.com/patcg) or in the [Improving Web Advertising Business
-  Group](https://www.w3.org/community/web-adv/participants).
-- Discuss the [WebKit/Safari Measurement
-  API](https://github.com/privacycg/private-click-measurement) in the [Privacy Community
-  Group](https://www.w3.org/community/privacycg/).
-
-## Get updates
-
-*  To be notified of status changes in the API, join the [mailing list for developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-*  To closely follow all ongoing discussions on the API, click the **Watch**
-   button on the [GitHub proposal](https://github.com/WICG/conversion-measurement-api).
-   This requires you to have or [create a GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
-*  To get overall updates on the Privacy Sandbox, subscribe to the RSS feed
-   [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/).
+{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}
