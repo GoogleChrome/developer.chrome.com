@@ -55,7 +55,7 @@ Any page will **not** meet the discoverability requirement if **any** of the fol
 - The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
 - The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
 
-### Sufficiently Popular {: #popularity-eligibility }
+### Sufficiently popular {: #popularity-eligibility }
 
 A page is determined to be sufficiently popular if it has a minimum number of visitors. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages.
 
