@@ -221,7 +221,7 @@ The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-ap
 
 ### PageSpeed Insights {: #tool-psi}
 
-[PageSpeed Insights](https://pagespeed.web.dev/) uses CrUX to present real-user performance data alongside performance opportunities powered by [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
+[PageSpeed Insights](https://pagespeed.web.dev/) uses CrUX to present real-user performance data alongside performance opportunities powered by [Lighthouse](/docs/lighthouse/overview/).
 
 The PageSpeed Insights report presents a consolidated view of the Core Web Vitals for the given URL or origin, plus additional diagnostic metrics. Data is presented by desktop and mobile form factors and can be compared with the lab test results to give a better understanding of your page performance.
 
