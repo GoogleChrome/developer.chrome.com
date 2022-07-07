@@ -20,14 +20,14 @@ Read on to learn more about these features and how you can leverage them to impr
 
 With this release, Signed Exchanges will now be available for Desktop cross-origin navigations on Chromium browsers. This builds on the existing support for Android mobile and means that now, you can use SXG to also cache and prefetch the desktop version of your site. 
 
-We estimate<sup><a href="#footnote-1">1</sup> that this release will, on average, double SXG's coverage of your site's visits, enabling improved loading and performance for more users. Today on mobile, this speed improvement is between 300 and 400 ms of LCP reduction on average for navigations from Google Search.
+We estimate<sup><a href="#footnote-1">1</a></sup> that this release will, on average, double SXG's coverage of your site's visits, enabling improved loading and performance for more users. Today on mobile, this speed improvement is between 300 and 400 ms of LCP reduction on average for navigations from Google Search.
 
 ### How can you leverage this feature
 
 Enabling Signed Exchanges for the Desktop version of your site does not require any additional work on your part. This feature is already supported on both Cloudflare's easy-to-use [Automatic Signed Exchanges tool](https://support.cloudflare.com/hc/articles/4411075595661-Automatic-Signed-Exchanges-SXGs-Beta) and the [open source SXG tool-kit](https://web.dev/signed-exchanges/#tooling).
 
 <div class="table-wrapper scrollbar">
-  <table>
+  <table></table>
     <tr>
       <th>
         <strong>Existing SXG Mobile Adopters:</strong>
