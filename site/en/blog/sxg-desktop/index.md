@@ -39,8 +39,7 @@ Enabling Signed Exchanges for the Desktop version of your site does not require 
     <tr>
       <th><strong>New Adopters:</strong></th>
       <td>
-        When enabled, SXG is available for both Desktop and Android Mobile navigations, by default.<br><br>
-        Visit the SXG <a href="https://web.dev/signed-exchanges/#tooling" rel="noopener">blog post</a> to learn how you can enable it for your site.</td>
+        When enabled, SXG is available for both Desktop and Android Mobile navigations, by default. Visit the SXG <a href="https://web.dev/signed-exchanges/#tooling" rel="noopener">blog post</a> to learn how you can enable it for your site.</td>
     </tr>
   </table>
 </div>
