@@ -42,7 +42,7 @@ At the core of the CrUX dataset are individual user experiences, which are aggre
 
 Pages and origins will be automatically included or removed from the dataset if their eligibility changes over time. There is not currently a way to manually submit pages or origins for inclusion.
 
-### Publicly Discoverable {: #discoverability-eligibility }
+### Publicly discoverable {: #discoverability-eligibility }
 
 A page must be publicly discoverable to be considered for inclusion in the CrUX dataset.
 
