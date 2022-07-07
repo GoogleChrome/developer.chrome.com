@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-07-06
+updated: 2022-07-07
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -23,7 +23,7 @@ By default, DevTools records all network requests in the **Network** panel, so l
 To stop recording requests:
 
 - Click **Stop recording network log**
-  {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Stop recording network", width="18", height="18" %}
+  {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Stop recording network.", width="18", height="18" %}
   on the **Network** panel. It turns grey to indicate that DevTools is no longer recording requests.
 - Press Command+E (Mac) or Control+E (Windows, Linux) while the **Network** panel is in focus.
 
@@ -33,7 +33,7 @@ Click **Clear**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MadqZsIZpo1sj3qQ3GsZ.svg", alt="Clear.", width="24", height="24" %}
 on the **Network** panel to clear all requests from the **Requests** table.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2P2L80XfBoFWJFxU9TpK.png", alt="The Clear button,", width="800", height="470" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2P2L80XfBoFWJFxU9TpK.png", alt="The Clear button.", width="800", height="470" %}
 
 ### Save requests across page loads {: #preserve-log }
 
@@ -102,7 +102,7 @@ quickly simulate a device that has no data connection.
 
 To simulate a completely offline network experience, select **Offline** from the **Network throttling** drop-down menu next to the **Disable cache** checkbox.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lHvzbNUlrm2Mvd4H1Ywc.png", alt="Offline selected from the drop-down menu", width="800", height="620" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lHvzbNUlrm2Mvd4H1Ywc.png", alt="Offline selected from the drop-down menu.", width="800", height="620" %}
 
 DevTools displays a warning icon next to the **Network** tab to remind you that offline is enabled.
 
@@ -110,7 +110,7 @@ DevTools displays a warning icon next to the **Network** tab to remind you that 
 
 To emulate slow 3G, fast 3G, and other connection speeds, select the corresponding options from the **Throttling** menu.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VSk4XiLkW8TZBCPFzSmE.png", alt="The Network Throttling menu", width="800", height="620" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VSk4XiLkW8TZBCPFzSmE.png", alt="The Network Throttling menu.", width="800", height="620" %}
 
 DevTools displays a warning icon next to the **Network** tab to remind you that throttling is enabled.
 
@@ -122,7 +122,7 @@ custom throttling profiles:
 1. Open the **Throttling** menu and select **Custom** > **Add...**.
 1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
 1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile", width="800", height="426" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile.", width="800", height="426" %}
 1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
 
 DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
@@ -140,7 +140,7 @@ To observe WebSocket throttling:
 1. On the **Network** panel, select the profile and send another message.
 1. Toggle the **WS** filter, click your connection name, open the **Messages** tab, and check the time difference between sent and echoed messages with and without throttling. For example:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tqynaMk7SIL6oIYwuBgM.png", alt="Messages sent and echoed with and without throttling", width="800", height="694" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tqynaMk7SIL6oIYwuBgM.png", alt="Messages sent and echoed with and without throttling.", width="800", height="694" %}
 
 #### Emulate slow network connections from the Network conditions drawer {: #throttling-network-conditions }
 
@@ -410,10 +410,10 @@ order they were received:
 Sometimes the **Headers** tab shows the `Provisional headers are shown...` warning message. This may be due to the following reasons:
 
 - The request wasn't sent over the network but was served from a local cache, which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message", width="800", height="517" %}
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
 - The network resource isn't valid. For example, execute `fetch("https://jec.fyi.com/unknown-url/")` in the **Console**.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message", width="800", height="517" %}
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
 DevTools can also display only provisional headers due to security reasons.
 
@@ -512,13 +512,11 @@ that, that higher request is the initiator of the initiator. And so on.
 DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the
 **Network** panel. The `DOMContentLoaded` event is colored blue, and the `load` event is red.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FzH6gwuHgXuGnasATVOH.svg", alt="The locations of the DOMContentLoaded and load events on the Network panel.", width="585", height="450" %}
-
-**Figure 29**. The locations of the `DOMContentLoaded` and `load` events in the **Network** panel
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3PdgVRzrO1ujiTIHrx1B.png", alt="The locations of the DOMContentLoaded and load events on the Network panel.", width="800", height="476" %}
 
 ### View the total number of requests {: #total-number }
 
-The total number of requests is listed in the Summary pane, at the bottom of the **Network** panel.
+The total number of requests is listed in the **Summary** pane, at the bottom of the **Network** panel.
 
 {% Aside "caution" %}
 
@@ -527,14 +525,11 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% endAside %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ce9YHacO35q8t5wbmFp9.svg", alt="The total number of requests since DevTools was opened", width="705", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/20mIck1GaPzmjeHtrnbd.png", alt="The total number of requests since DevTools was opened.", width="800", height="428" %}
 
-**Figure 30**. The total number of requests since DevTools was opened
+### View the total size of transferred and loaded resources {: #total-size }
 
-### View the total download size {: #total-size }
-
-The total download size of requests is listed in the Summary pane, at the bottom of the Network
-panel.
+DevTools lists the total size of transferred and loaded (uncompressed) resources in the **Summary** pane, at the bottom of the **Network** panel.
 
 {% Aside "caution" %}
 
@@ -543,32 +538,25 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% endAside %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlTa0Pu0GRSTt1yuantk.svg", alt="The total download size of requests", width="705", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oSUzbdlzdwgvsgeRQr6.png", alt="The total size of transferred and loaded resources.", width="800", height="428" %}
 
-**Figure 31**. The total download size of requests
-
-See [View the uncompressed size of a resource][25] to see how large resources are after the browser
-uncompresses them.
+See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them. 
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
 When a JavaScript statement causes a resource to be requested, hover over the **Initiator** column
 to view the stack trace leading up to the request.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tAENLxUdEAUkxHpAysBL.png", alt="The stack trace leading up to a resource request", width="800", height="455" %}
-
-**Figure 32**. The stack trace leading up to a resource request
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x4z1d0vaP4Copn4Bqb4R.png", alt="The stack trace leading up to a resource request.", width="800", height="439" %}
 
 ### View the uncompressed size of a resource {: #uncompressed }
 
-Click **Use Large Request Rows**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use Large Request Rows", width="28", height="20" %}
-and then look at the bottom value of the **Size** column.
+Check **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > **Use large request rows** and then look at the bottom value of the **Size** column.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of uncompressed resources.", width="800", height="478" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/na2zXsl9y3f8FqYcdMsT.png", alt="An example of uncompressed resources.", width="800", height="500" %}
 
-**Figure 33**. The compressed size of the `jquery-bundle.js` file that was sent over the network was
-`30.9 KB`, whereas the uncompressed size was `86.3 KB`
+In this example, the compressed size of the `www.google.com` document that was sent over the network was
+`43.8 KB`, whereas the uncompressed size was `136 KB`.
 
 ## Export requests data {: #export }
 
@@ -576,32 +564,34 @@ and then look at the bottom value of the **Size** column.
 
 To save all network requests to a HAR file:
 
-1.  Right-click any request in the Requests table.
-2.  Select **Save as HAR with Content**. DevTools saves all requests that have occurred since you
+1.  Right-click any request in the **Requests** table.
+2.  Select **Save all as HAR with content**. DevTools saves all requests that have occurred since you
     opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
     request.
 
 Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
-the HAR file into the Requests table. See also [HAR Analyzer][26].
+the HAR file into the **Requests** table. See also [HAR Analyzer][26].
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjVMRBNwMyIlkUElRzYI.png", alt="Selecting Save as HAR with Content.", width="800", height="490" %}
-
-**Figure 34**. Selecting **Save as HAR with Content**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
 
 ### Copy one or more requests to the clipboard {: #copy }
 
 Under the **Name** column of the Requests table, right-click a request, hover over **Copy**, and
 select one of the following options:
 
-- **Copy Link Address**. Copy the request's URL to the clipboard.
-- **Copy Response**. Copy the response body to the clipboard.
+- **Copy link address**. Copy the request's URL to the clipboard.
+- **Copy response**. Copy the response body to the clipboard.
+- **Copy as PowerShell**. Copy the request as a PowerShell command.
+- **Copy as fetch**. Copy the request as a fetch call.
+- **Copy as Node.js fetch**. Copy the request as a Node.js fetch call.
 - **Copy as cURL**. Copy the request as a cURL command.
-- **Copy All as cURL**. Copy all requests as a chain of cURL commands.
-- **Copy All as HAR**. Copy all requests as HAR data.
+- **Copy all as PowerShell**. Copy all requests as a chain of PowerShell commands.
+- **Copy all as fetch**. Copy all requests as a chain of fetch calls.
+- **Copy all as Node.js fetch**. Copy all requests as a chain of Node.js fetch calls.
+- **Copy all as cURL**. Copy all requests as a chain of cURL commands.
+- **Copy all as HAR**. Copy all requests as HAR data.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FCQLdbRS9UMc4eFHzYvI.png", alt="Selecting Copy Response.", width="800", height="514" %}
-
-**Figure 35**. Selecting Copy Response
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/R9WBfJe2pdJihGYfcDbV.png", alt="Selecting Copy options.", width="800", height="455" %}
 
 ## Change the layout of the Network panel {: #change_the_layout_of_the_network_panel }
 
@@ -610,12 +600,10 @@ Expand or collapse sections of the **Network** panel UI to focus on what's impor
 ### Hide the Filters pane {: #hide-filters }
 
 By default, DevTools shows the [Filters pane][27]. Click **Filter**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter", width="28", height="24" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter.", width="28", height="24" %}
 to hide it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zN18ngzI6ejSpoKMYKJG.svg", alt="The Hide Filters button", width="705", height="450" %}
-
-**Figure 36**. Hide Filters, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5OSQ3dUijdXDHsj9iZIA.png", alt="The Hide Filters button.", width="800", height="498" %}
 
 ### Use large request rows {: #request-rows }
 
@@ -623,22 +611,18 @@ Use large rows when you want more whitespace in your network requests table. Som
 provide a little more information when using large rows. For example, the bottom value of the
 **Size** column is the uncompressed size of a request.
 
-Open **Settings** and click **Use large request rows** to enable large rows.
+Open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} and click **Use large request rows** to enable large rows.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png",
-  alt="The use large request rows checkbox", width="800", height="614" %}
-
-**Figure 37**. Large Request Rows, outlined in blue
+  alt="The use large request rows checkbox.", width="800", height="614" %}
 
 ### Hide the Overview pane {: #hide-overview }
 
-By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show
+By default, DevTools shows the [Overview pane][28]. Open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} and uncheck the **Show
 overview** checkbox to hide it.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/uWWJfuFbpiClEFjPTdVD.png",
-  alt="The show overview checkbox", width="800", height="614" %}
-
-**Figure 38**. Hide Overview, outlined in blue
+  alt="The show overview checkbox.", width="800", height="614" %}
 
 [1]: #network-conditions
 [2]: https://web.dev/progressive-web-apps
