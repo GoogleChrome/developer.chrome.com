@@ -3,7 +3,7 @@
 layout: 'layouts/doc-post.njk'
 
 # Required
-title: CrUX Methodology
+title: CrUX methodology
 
 # Required
 # This appears in the ToC of the project landing page at
@@ -38,9 +38,54 @@ tags:
 
 ## Eligibility
 
-At the core of the CrUX dataset are individual user experiences, which are aggregated into page-level and origin-level distributions. This section documents user eligibility and the requirements for pages and origins to be included in the dataset. All eligibility criteria must be satisfied in order for an experience to be included in page-level data available in PageSpeed Insights and the CrUX API: [User](#user-eligibility), [Origin](#origin-eligibility) and [Page](#page-eligibility). Experiences which meet the User and Origin criteria (but not Page) will be included in the origin-level data available in all CrUX data sources.
+At the core of the CrUX dataset are individual user experiences, which are aggregated into page-level and origin-level distributions. This section documents user eligibility and the requirements for pages and origins to be included in the dataset. All eligibility criteria must be satisfied in order for an experience to be included in page-level data available in PageSpeed Insights and the CrUX API: [User](#user-eligibility), [Origin](#origin-eligibility) and [Page](#page-eligibility). Experiences which meet the User and Origin criteria but not Page will be included in the origin-level data available in all CrUX data sources.
 
 Pages and origins will be automatically included or removed from the dataset if their eligibility changes over time. There is not currently a way to manually submit pages or origins for inclusion.
+
+### Publicly Discoverable {: #discoverability-eligibility }
+
+A page must be publicly discoverable to be considered for inclusion in the CrUX dataset.
+
+A page is determined to be publicly discoverable using the same [indexability](https://developers.google.com/search/docs/advanced/crawling/block-indexing) and [crawlability](https://developers.google.com/search/docs/advanced/robots/intro) criteria as search engines.
+
+Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
+
+- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200` (after redirects).
+- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation).
+- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
+- The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
+
+### Sufficiently Popular {: #popularity-eligibility }
+
+A page is determined to be sufficiently popular if it has a minimum number of visitors. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages.
+
+Pages and origins that do not meet the popularity threshold are not included in the CrUX dataset.
+
+### Origin {: #origin-eligibility }
+
+An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents an entire website, addressable by a URL like `https://www.example.com`. For an origin to be included in the CrUX dataset it must meet two requirements:
+
+1. [Publicly discoverable](#discoverability-eligibility)
+2. [Sufficiently popular](#popularity-eligibility)
+
+You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+
+If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
+
+For querying purposes, note that all origins in the CrUX dataset are lowercase.
+
+### Page {: #page-eligibility}
+
+The requirements for a **page** to be included in the CrUX dataset are the same as origins:
+
+1. [Publicly discoverable](#discoverability-eligibility)
+2. [Sufficiently popular](#popularity-eligibility)
+
+You can verify that a page is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+
+Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
+
+A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional anchor-based page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) on web.dev for more information.
 
 ### User {: #user-eligibility}
 
@@ -63,45 +108,6 @@ There are a few notable exceptions that do not provide data to the CrUX dataset:
 - Other Chromium browsers (for example [Microsoft Edge](https://www.microsoft.com/edge)).
 
 Chrome does not publish data about the proportions of users that meet these criteria. You can learn more about the data we collect in the [Chrome Privacy Whitepaper](https://www.google.com/chrome/privacy/whitepaper.html#usagestats).
-
-### Origin {: #origin-eligibility }
-
-An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents an entire website, addressable by a URL like `https://www.example.com`. For an origin to be included in the CrUX dataset it must meet two requirements:
-
-1. Publicly discoverable
-2. Sufficiently popular
-
-An origin is considered to be publicly discoverable if its **root page** is discoverable. For example, the root page of the origin `https://www.example.com` would have a URL of `https://www.example.com/`. If the root page has any HTTP redirects, the origin will be assessed based on the redirected page as experienced by real users.
-
-Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
-
-- The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200` (after redirects).
-- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation).
-- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
-- The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
-
-You can verify that your origin is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
-
-If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement: an origin is determined to be **sufficiently popular** if it has a minimum number of visitors. We don't disclose an exact number, but it has been chosen to ensure that we have enough samples to be confident in the statistical distribution. Origins that do not meet the popularity criteria are not included in the CrUX dataset.
-
-For querying purposes, note that all origins in the CrUX dataset are lowercase.
-
-### Page {: #page-eligibility}
-
-The requirements for a **page** to be included in the CrUX dataset are the same as origins:
-
-1. Publicly discoverable
-2. Sufficiently popular
-
-A page is determined to be **publicly discoverable** using the same [indexability](https://developers.google.com/search/docs/advanced/crawling/block-indexing) and [crawlability](https://developers.google.com/search/docs/advanced/robots/intro) criteria as search engines.
-
-You can verify that a page is discoverable by running a [Lighthouse audit](https://web.dev/measure/) with the SEO category enabled. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
-
-A page is determined to be **sufficiently popular** if it has a minimum number of visitors. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages.
-
-Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
-
-A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) for more information.
 
 ### Accelerated Mobile Pages (AMP)
 
@@ -205,9 +211,11 @@ The CrUX Dashboard does not support the country dimension, so all global data is
 
 ### CrUX API {: #tool-crux-api}
 
-The [CrUX API](https://web.dev/chrome-ux-report-api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
+The [CrUX API](/docs/crux/api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
 The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window, no historical data is available via the API.
+
+The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-api) but does not include the additional [Lighthouse data](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by) provided by PageSpeed Insights.
 
 [Read more in the API documentation](/crux/docs/api/).
 
@@ -223,7 +231,7 @@ PageSpeed Insights does not provide historical data, and does not include countr
 
 The [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started) offers programmatic access to the data shown in PageSpeed Insights, including Core Web Vitals data from CrUX.
 
-This API integrates well into existing SEO tooling and workflows, allowing CrUX data to be included in automated reports and analyses.
+This API integrates well into existing SEO tooling and workflows, allowing CrUX data to be included in automated reports and analyses. The PageSpeed Insights API returns slower than the [CrUX API](#tools-crux-api), but includes additional data provided by [Lighthouse](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by).
 
 As in the web version, the PageSpeed Insights API has no historical data and is limited to the Core Web Vitals. Country and effective connection type dimensions are not included.
 
@@ -240,122 +248,6 @@ Data is updated daily and is split by mobile and desktop form factors. A maximum
 Metrics in CrUX are powered by standard web platform APIs exposed by browsers. In the BigQuery dataset in particular, this data is aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
 
 Most metrics are represented as a histogram aggregation, allowing visualization of the distribution and approximation of percentile values.
-
-<div class="responsive-table">
-<table class="with-heading-tint width-full fixed-table">
-<thead>
-<tr>
-<th>Metric</th>
-<th>CrUX Field Name</th>
-<th>Unit</th>
-<th>Purpose</th>
-<th>Available in CrUX API</th>
-<th>Aggregation</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="#fp-metric">First Paint</a></td>
-<td><code>first_paint</code></td>
-<td>Milliseconds (ms)</td>
-<td>Render performance</td>
-<td>No</td>
-<td>Histogram</td>
-<td><code>start: 400, end: 500, density: 0.02</code></td>
-</tr>
-<tr>
-<td><a href="#fcp-metric">First Contentful Paint</a></td>
-<td><code>first_contentful_paint</code></td>
-<td>Milliseconds (ms)</td>
-<td>Render performance</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#dcl-metric">DOM Content Loaded</a></td>
-<td><code>dom_content_loaded</code></td>
-<td>Milliseconds (ms)</td>
-<td>Page performance</td>
-<td>No</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#lcp-metric">Largest Contentful Paint</a></td>
-<td><code>largest_contentful_paint</code></td>
-<td>Milliseconds (ms)</td>
-<td>Render performance</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#ol-metric">Onload</a></td>
-<td><code>onload</code></td>
-<td>Milliseconds (ms)</td>
-<td>Page performance</td>
-<td>No</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#fid-metric">First Input Delay</a></td>
-<td><code>first_input</code></td>
-<td>Milliseconds (ms)</td>
-<td>Responsiveness</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#cls-metric">Cumulative Layout Shift</a></td>
-<td><code>layout_instability.cumulative_layout_shift</code></td>
-<td>Numeric (0 - ∞)</td>
-<td>Experience / visual stability</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td><code>start: 0.15, end: 0.2, density: 0.0011</code></td>
-</tr>
-<tr>
-<td><a href="#ttfb-metric">Time to First Byte</a></td>
-<td><code>experimental.time_to_first_byte</code></td>
-<td>Milliseconds (ms)</td>
-<td>Back-end performance</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="#inp-metric">Interaction to Next Paint</a></td>
-<td><code>experimental.interaction_to_next_paint</code></td>
-<td>Milliseconds (ms)</td>
-<td>Responsiveness</td>
-<td>Yes</td>
-<td>Histogram</td>
-<td><code>start: 50, end: 75, density: 0.005</code></td>
-</tr>
-<tr>
-<td><a href="#popularity-metric">Popularity</a></td>
-<td><code>experimental.popularity.rank</code></td>
-<td>Rank</td>
-<td>Origin popularity</td>
-<td>No</td>
-<td>log10 intervals from 1k</td>
-<td><code>rank: 100000</code></td>
-</tr>
-<tr>
-<td><a href="#notification-permissions-metric">Notification Permissions</a></td>
-<td><code>experimental.permission.notifications</code></td>
-<td>Fraction</td>
-<td>Permission opt-in</td>
-<td>No</td>
-<td>Fraction</td>
-<td><code>accept: 0.006, deny: 0.0191, ignore: 0.086, dismiss: 0.0068</code></td>
-</tr>
-</tbody>
-</table></div>
 
 ### First Paint {: #fp-metric }
 
@@ -441,7 +333,7 @@ Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022]
 
 The [popularity rank](/blog/crux-rank-magnitude/) metric is a relative measure of site popularity within the CrUX dataset, measured by the total number of navigations on the origin. Rank is on a log10 scale (e.g. top 1k, 10k, 100k, 1M, etc.) with each rank excluding the previous (e.g. top 10k is actually 9k URLs, excluding top 1k). The upper limit is dynamic as the dataset grows.
 
-Popularity is provided as a guide for broad analysis, e.g. to determine performance by country for the top 1,000 origins. It should not be used to determine an origin's overall popularity on the web.
+Popularity is provided as a guide for broad analysis, e.g. to determine performance by country for the top 1,000 origins.
 
 #### Notification Permissions {: #notification-permissions-metric }
 
@@ -562,6 +454,20 @@ Histogram [bin widths are normalized](https://twitter.com/chromeuxreport/status/
 
 We would love to hear your feedback, questions, and suggestions to help us improve CrUX. Join the conversation on our [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
 We also tweet at [@ChromeUXReport](https://twitter.com/chromeuxreport) with updates.
+
+There are a number of channels to receive support, depending on the type of support required:
+
+[chrome-ux-report](https://stackoverflow.com/questions/tagged/chrome-ux-report) on Stack Overflow
+ : For questions about particular queries.
+
+[CrUX discussion](https://groups.google.com/a/chromium.org/g/chrome-ux-report) on Google Groups
+ : For general questions about the dataset.
+
+[HTTPArchive discussion forum](https://discuss.httparchive.org/)
+ : To share observations about the data.
+
+[GCP support](https://console.cloud.google.com/support)
+ : For formal BigQuery support.
 
 ## License
 

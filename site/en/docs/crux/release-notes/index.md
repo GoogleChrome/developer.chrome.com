@@ -3,7 +3,7 @@
 layout: 'layouts/doc-post.njk'
 
 # Required
-title: Release Notes
+title: Release notes
 
 # Required
 # This appears in the ToC of the project landing page at
@@ -14,8 +14,7 @@ description: >
 
 # Optional
 # This appears below the title and is an optional teaser
-subhead: >
-  Details on the latest changes to the Chrome User Experience Report.
+subhead:
 
 # Required
 date: 2017-10-01

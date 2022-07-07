@@ -224,22 +224,3 @@ The `experimental.country` dataset contains aggregated data from the `country_CC
 ### Global {: #schema-experimental-global }
 
 The `experimental.global` dataset contains aggregated data from the `all` dataset with an additional `yyyymm` column for the dataset date. The schema is identical to [raw tables](#schema_raw_tables) with the addition of the date, allowing for comparison over time queries to be executed without joining the monthly tables.
-
-## Support
-
-There are a number of channels to receive support, depending on the type of support required:
-
-[chrome-ux-report](https://stackoverflow.com/questions/tagged/chrome-ux-report) on Stack Overflow
- : For questions about particular queries.
-
-[CrUX Discuss Google group](https://groups.google.com/a/chromium.org/g/chrome-ux-report)
- : For general questions about the dataset.
-
-[@ChromeUXReport](https://twittter.com/ChromeUXReport) on Twitter
- : For informal questions.
-
-[HTTPArchive Discussion Forum](https://discuss.httparchive.org/)
- : To share observations about the data.
-
-[GCP Support](https://console.cloud.google.com/support)
- : For formal BigQuery support.
