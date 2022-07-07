@@ -13,14 +13,7 @@ authors:
 
 {% YouTube id='UGA74CIcom8' %}
 
-{% Aside %}
-
-This API is a proposal. It is being incubated, discussed and developed in the open.
-This API is evolving over time, as ecosystem feedback is gathered.
-
-Participation is welcome and encouraged. Learn about the ways you can participate in [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
-
-{% endAside %}
+{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
 
 ## Who is this article for?
 
