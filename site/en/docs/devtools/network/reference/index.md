@@ -25,7 +25,7 @@ To stop recording requests:
 - Click **Stop recording network log**
   {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Stop recording network.", width="18", height="18" %}
   on the **Network** panel. It turns grey to indicate that DevTools is no longer recording requests.
-- Press Command+E (Mac) or Control+E (Windows, Linux) while the **Network** panel is in focus.
+- Press <kbd>Command</kbd>> + <kbd>E</kbd> (Mac) or <kbd>Control</kbd> + <kbd>E</kbd> (Windows, Linux) while the **Network** panel is in focus.
 
 ### Clear requests {: #clear }
 
@@ -267,7 +267,7 @@ Click the header of any column in the **Requests** table to sort requests by tha
 
 ### Sort by activity phase {: #sort-by-activity }
 
-To change how the Waterfall sorts requests, right-click the header of the Requests table, hover over
+To change how the **Waterfall** sorts requests, right-click the header of the Requests table, hover over
 **Waterfall**, and select one of the following options:
 
 - **Start Time**. The first request that was initiated is at the top.
@@ -280,7 +280,7 @@ To change how the Waterfall sorts requests, right-click the header of the Reques
 These descriptions assume that each respective option is ranked from shortest to longest. Clicking
 on the **Waterfall** column's header reverses the order.
 
-In this example, the Waterfall is sorted by total duration. The lighter portion of each bar is time
+In this example, the **Waterfall** is sorted by total duration. The lighter portion of each bar is time
 spent waiting. The darker portion is time spent downloading bytes.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uZ9aJ5DdZR91THhaVYD5.png", alt="Sorting the Waterfall by total duration.", width="800", height="655" %}
