@@ -5,6 +5,7 @@ description: >
   Announcing Signed Exchanges Support for Chromium Browser on Desktop along with other recent feature launches.
 date: 2022-07-08
 authors:
+  - sidlall
   - twifkak
 ---
 
