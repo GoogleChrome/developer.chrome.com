@@ -13,7 +13,7 @@ description: >
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
-  - josephmedley
+  - joemedley
 
 # Required
 date: 2020-09-03
