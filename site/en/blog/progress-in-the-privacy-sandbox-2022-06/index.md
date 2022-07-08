@@ -18,10 +18,10 @@ tags:
 ---
 
 Welcome to this edition of "**[Progress in the Privacy
-Sandbox](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/)**",
-covering May and June 2022, as we track the milestones on the path to phasing
-out third-party cookies in Chrome and working towards a more private web. In
-each edition, we share an overview of the updates and news across the [Privacy
+Sandbox](/tags/progress-in-the-privacy-sandbox/)**", covering May and June 2022,
+as we track the milestones on the path to phasing out third-party cookies in
+Chrome and working towards a more private web. In each edition, we share an
+overview of the updates and news across the [Privacy
 Sandbox](https://privacysandbox.com/open-web/).
 
 
@@ -55,25 +55,22 @@ you can expect to see continued regular updates to the code as we respond to
 feedback, issues, and expand the available functionality.
 
 You can **[sign up for the origin trial
-now](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441)**.
-We have **[full instructions on how to join, how to test, demos to explore, and
-where to provide
-feedback](https://developer.chrome.com/blog/privacy-sandbox-unified-origin-trial/)**
-for the different aspects of the trial.
+now](/origintrials/#/view_trial/771241436187197441)**. We have **[full
+instructions on how to join, how to test, demos to explore, and where to provide
+feedback](/blog/privacy-sandbox-unified-origin-trial/)** for the different
+aspects of the trial.
 
 
 ## Feedback
 
 Feedback from a diverse set of stakeholders across the web ecosystem is critical
 to the Privacy Sandbox initiative as a whole. The **dedicated [feedback
-section](https://developer.chrome.com/docs/privacy-sandbox/feedback/)** provides
-an overview of the existing public channels, where you can follow or contribute
-to discussion, along with a feedback form to ensure you can always reach the
-Chrome team directly.
+section](/docs/privacy-sandbox/feedback/)** provides an overview of the existing
+public channels, where you can follow or contribute to discussion, along with a
+feedback form to ensure you can always reach the Chrome team directly.
 
 We compiled a summary of your feedback and our responses in a **[2022 Q1
-feedback overview
-report](https://developer.chrome.com/docs/privacy-sandbox/feedback/report-2022-q1/)**.
+feedback overview report](/docs/privacy-sandbox/feedback/report-2022-q1/)**.
 There's a lot there—so you’d be forgiven for not reading the whole thing!
 Hopefully though you can get a feeling for the types of questions and issues
 being raised along with how we then deal with those. We aim to make these
@@ -107,16 +104,15 @@ take on your site.
 #### CHIPS
 
 [CHIPS (Cookies Having Independent Partitioned
-State)](https://developer.chrome.com/docs/privacy-sandbox/chips/) allows
-developers to opt a cookie into "partitioned" storage, with a separate cookie
-jar per top-level site. We are [extending the current origin
+State)](/docs/privacy-sandbox/chips/) allows developers to opt a cookie into
+"partitioned" storage, with a separate cookie jar per top-level site. We are
+[extending the current origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY)
 through to the end of Chrome 104 around the end of August. You can sign up for
-the **[CHIPS origin trial
-now](https://developer.chrome.com/origintrials/#/view_trial/1239615797433729025)**
-and we have **[developer instructions
-available](https://developer.chrome.com/blog/chips-origin-trial/)** so you can
-test cookies with the `Partitioned` attribute on your own production site.
+the **[CHIPS origin trial now](/origintrials/#/view_trial/1239615797433729025)**
+and we have **[developer instructions available](/blog/chips-origin-trial/)** so
+you can test cookies with the `Partitioned` attribute on your own production
+site.
 
 
 #### Additional cookie updates
@@ -149,11 +145,10 @@ allowing use cases such as A/B testing over a campaign.
 The **[I2E for Shared
 Storage](https://groups.google.com/a/chromium.org/g/blink-dev/c/jDx8z5a6ovk)**
 makes it available for testing as part of the wider [Privacy Sandbox Relevance
-and Measurement origin
-trial](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441).
+and Measurement origin trial](/origintrials/#/view_trial/771241436187197441).
 **[Developer documentation is
-available](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)**
-covering use cases and testing.
+available](/docs/privacy-sandbox/shared-storage/)** covering use cases and
+testing.
 
 
 ## Preventing covert tracking
@@ -167,10 +162,9 @@ fingerprinting or covert tracking of users.
 
 We continue to incrementally reduce the information passively available in
 [Chrome's user-agent string and providing alternative User-Agent Client Hints
-(UA-CH)](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) for
-sites that need to actively request that information. The initial phase of
-reducing the minor version number to zeroes is now **[fully rolled out to Chrome
-101 and
+(UA-CH)](/docs/privacy-sandbox/user-agent/) for sites that need to actively
+request that information. The initial phase of reducing the minor version number
+to zeroes is now **[fully rolled out to Chrome 101 and
 above](https://groups.google.com/a/chromium.org/g/blink-dev/c/dcTStiBZVoQ/m/xDC3QIjgBQAJ)**.
 
 {% Compare 'worse', 'old' %} <span style="font-family: monospace">Mozilla/5.0
@@ -232,12 +226,11 @@ data without sharing it with the embedding context. For example, in FLEDGE the
 intent is for ads to be displayed within a fenced frame.
 
 You can read the [new developer overview
-content](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/). We
-published the **[I2E for fenced
+content](/docs/privacy-sandbox/fenced-frame/). We published the **[I2E for
+fenced
 frames](https://groups.google.com/a/chromium.org/g/blink-dev/c/y6G3cvKXjlg)**
 and you can now sign up as part of the wider [Privacy Sandbox Relevance and
-Measurement origin
-trial](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441).
+Measurement origin trial](/origintrials/#/view_trial/771241436187197441).
 
 
 ## Show relevant content and ads
@@ -249,14 +242,13 @@ without continuing to enable cross-site tracking.
 
 ### Topics
 
-The [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/) is a
-proposal to enable interest-based advertising without cross-site tracking. We
-sent an [I2E to include
+The [Topics API](/docs/privacy-sandbox/topics/) is a proposal to enable
+interest-based advertising without cross-site tracking. We sent an [I2E to
+include
 Topics](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) as
 part of the Privacy Sandbox Relevance and Measurement origin trial. We also have
 new [developer guidance for the testing and providing feedback on
-Topics](https://developer.chrome.com/docs/privacy-sandbox/topics-experiment/)
-during the origin trial.
+Topics](/docs/privacy-sandbox/topics-experiment/) during the origin trial.
 
 As this is early stage testing, we are actively discovering and addressing
 issues in the code as they come up. On Topics, we discovered a [crashing
@@ -270,15 +262,14 @@ part of the overall origin trial.
 
 ### FLEDGE
 
-[FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/) enables
-remarketing and custom audience use cases, as in advertising that can make use
-of sites or products previously visited, without relying on an individual
-identifier. We sent an [I2E for
+[FLEDGE](/docs/privacy-sandbox/fledge/) enables remarketing and custom audience
+use cases, as in advertising that can make use of sites or products previously
+visited, without relying on an individual identifier. We sent an [I2E for
 FLEDGE](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg),
 again to enable it as part of the wider Privacy Sandbox Relevance and
 Measurement origin trial. And likewise, there's [matching developer
 documentation for the experiment
-available](https://developer.chrome.com/docs/privacy-sandbox/fledge-experiment/).
+available](/docs/privacy-sandbox/fledge-experiment/).
 
 
 ## Measure digital ads
@@ -290,18 +281,17 @@ privacy-preserving tools to measure the effectiveness of those ads.
 ### Attribution Reporting API
 
 The **[Attribution Reporting
-API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)**
-allows adtech and advertisers to measure events on one site, like clicking or
-viewing an ad, that lead to a conversion on another site—without enabling
-cross-site tracking. As you may have guessed, there was also an [I2E for
-Attribution
+API](/docs/privacy-sandbox/attribution-reporting/)** allows adtech and
+advertisers to measure events on one site, like clicking or viewing an ad, that
+lead to a conversion on another site—without enabling cross-site tracking. As
+you may have guessed, there was also an [I2E for Attribution
 Reporting](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y)
 to continue expanding its testing as part of the Privacy Sandbox Relevance and
 Measurement origin trial.
 
 During the initial stage of the origin trial we are focused on feedback around
 the developer experience and integration, such as
-[debugging](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#debugging),
+[debugging](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#debugging),
 and this will expand to cover end-to-end testing across event-level and summary
 reports.
 
