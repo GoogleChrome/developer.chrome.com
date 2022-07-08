@@ -15,9 +15,9 @@ tags:
 
 With the **Changes** tab, track the changes you make to:
 
-- HTML in [**Sources**](docs/devtools/javascript/sources/#edit) with enabled [Local overrides](blog/new-in-devtools-65/#overrides)
-- CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](docs/devtools/javascript/sources/#edit)
-- JavaScript in [**Sources**](docs/devtools/javascript/sources/#edit)
+- HTML in [**Sources**](/docs/devtools/javascript/sources/#edit) with enabled [Local overrides](blog/new-in-devtools-65/#overrides)
+- CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](/docs/devtools/javascript/sources/#edit)
+- JavaScript in [**Sources**](/docs/devtools/javascript/sources/#edit)
 
 The **Changes** tab shows changes you made within DevTools. If you reload either DevTools or your page, the changes disappear.
 
@@ -50,9 +50,9 @@ To view your changes:
 1. [Open DevTools](/docs/devtools/open/).
 1. Make changes to your sources:
 
-   - HTML: First, enable [Local overrides](blog/new-in-devtools-65/#overrides), then make changes in **Sources**
-   - CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](docs/devtools/javascript/sources/#edit)
-   - JavaScript in [**Sources**](docs/devtools/javascript/sources/#edit)
+   - HTML: First, enable [Local overrides](/blog/new-in-devtools-65/#overrides), then make changes in **Sources**
+   - CSS in [**Elements** > **Styles**](/docs/devtools/css/#declarations) or [**Sources**](/docs/devtools/javascript/sources/#edit)
+   - JavaScript in [**Sources**](/docs/devtools/javascript/sources/#edit)
 
 1. [Open the **Changes** tab](#open-changes) and select a file in the right-hand side of the tab.
 1. Observe a `diff` output that highlights the following:
