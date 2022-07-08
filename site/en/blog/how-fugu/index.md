@@ -102,7 +102,7 @@ bar moves up a little and your browser has gained a new capability or two.
 
 Building for the web is more viable than ever, and new features keep being added to the platform at
 an amazing pace. The web is not your only choice for building your app, but I hope with this article
-I have convinced you to give the [capable web](https://developer.chrome.com/blog/fugu-showcase/) a
+I have convinced you to give the [capable web](/blog/fugu-showcase/) a
 second look if you have not considered it so far. It has come a long way.
 
 {% Aside %} This is part two of a two part mini series on the capable web. Be sure to also read

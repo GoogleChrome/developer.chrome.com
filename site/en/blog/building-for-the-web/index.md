@@ -288,7 +288,7 @@ existing website, appears very unattractive in comparison, but sometimes it does
 #### Compatibility with relevant browsers
 
 Web compatibility is still the
-main[ issue](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2020.html#needs-assessment-top-ten-needs)
+[main issue](https://insights.developer.mozilla.org/reports/mdn-web-developer-needs-assessment-2020.html#needs-assessment-top-ten-needs)
 mentioned in developer surveys like Mozilla's, but also in internal surveys that Google has run.
 Having to support specific browsers, avoiding or removing a feature that doesn't work across
 browsers, or making a design look or work the same across browsers are frequently brought up as
