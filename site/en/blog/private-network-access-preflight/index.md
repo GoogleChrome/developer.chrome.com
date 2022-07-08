@@ -6,17 +6,19 @@ authors:
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-04-27
+updated: 2022-07-07
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
   - chrome-102
+  - chrome-104
   - security
 ---
 
 **Updates**
 
+- **July 7, 2022**: Updated current status and add IP address space defination.
 - **April 27, 2022**: Updated timeline announcement.
 - **March 7, 2022**: Announced rollback after issues were discovered in
   Chrome 98.
@@ -45,7 +47,7 @@ allowing attackers to redirect them to malicious servers.
 Chrome will roll this change out in two phases to give websites time to notice
 the change and adjust accordingly.
 
-1. In Chrome 102:
+1. In Chrome 104:
     * Chrome experiments by sending preflight requests ahead of private network
       subresource
       requests.
@@ -54,7 +56,7 @@ the change and adjust accordingly.
     * Chrome gathers compatibility data and reaches out to the largest
       affected websites.
     * We expect this to be broadly compatible with existing websites.
-1. In Chrome 105 at the earliest:
+1. In Chrome 107 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing
@@ -64,11 +66,11 @@ the change and adjust accordingly.
       time extension. The trial will last for at least 6 months.
 
 {% Aside %}
-An earlier attempt was made to roll out warnings in Chrome 98, previously
-announced by this blog post. This was rolled back after stability and
+An earlier attempt was made to roll out warnings in Chrome 98 and Chrome 102,
+previously announced by this blog post. This was rolled back after stability and
 compatibility issues were discovered during the rollout.
 
-The identified issues were fixed for Chrome 102.
+The identified issues were fixed for Chrome 104.
 {% endAside %}
 
 ## What is Private Network Access (PNA)
@@ -93,6 +95,30 @@ a request from a public website (`https://example.com`) to a private website
 (`http://router.local`), or a request from a private website to localhost.
 {% endAside %}
 
+### How does PNA classify IP addresses and identify a private network 
+
+The IP addresses are classified into three IP address spaces: 
+- `public`
+- `private`
+- `local`
+
+**Local IP address space** contains IP addresses that are either IPv4
+loopback addresses (`127.0.0.0/8`) defined in section 3.2.1.3 of [RFC1122](https://tools.ietf.org/html/rfc1122)
+or IPv6 loopback addresses (`::1/128`) defined in section 2.5.3 of [RFC4291](https://tools.ietf.org/html/rfc4291).
+
+**Private IP address space** contains IP addresses that have meaning only
+within the current network, including `10.0.0.0/8`, `172.16.0.0/12` and
+`192.168.0.0/16` defined in [RFC1918](https://tools.ietf.org/html/rfc1918),
+link-local addresses `169.254.0.0/16` defined in [RFC3927](https://tools.ietf.org/html/rfc3927),
+unique local IPv6 unicast addresses `fc00::/7` defined in [RFC4193](https://datatracker.ietf.org/doc/html/rfc4193),
+link-local IPv6 unicast addresses `fe80::/10` defined in section 2.5.6 of [RFC4291](https://tools.ietf.org/html/rfc4291)
+and IPv4-mapped IPv6 addresses where the mapped IPv4 address is itself private.
+
+**Public IP Address space** contains all other addresses not mentioned previously.
+
+A local IP address is considered more private than a private IP address which
+is considered more private than a public IP address.
+
 <figure>
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/5bLcN5HBih35ykCSpj0z.jpg",
@@ -108,7 +134,6 @@ a request from a public website (`https://example.com`) to a private website
 </figure>
 
 Learn more at [Feedback wanted: CORS for private networks (RFC1918)](https://web.dev/cors-rfc1918-feedback/).
-
 
 ## Preflight requests
 
@@ -254,7 +279,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ## How to know if your website is affected
 
-Starting in Chrome 102, if a private network request is detected, a preflight
+Starting in Chrome 104, if a private network request is detected, a preflight
 request will be sent ahead of it. If this preflight request fails, the final
 request will still be sent, but a warning will be surfaced in the DevTools
 issues panel.
@@ -305,7 +330,7 @@ the same way as warnings using the DevTools panels mentioned above.
 
 ## What to do if your website is affected
 
-When this change rolls out in Chrome 102, it is not expected to break any
+When this change rolls out in Chrome 104, it is not expected to break any
 website. However, we strongly encourage you to update affected request paths to
 ensure your website keeps running as expected.
 
@@ -363,10 +388,10 @@ the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess`.
 Next up, Chrome will extend Private Network Access checks to cover
 [web workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API):
 dedicated workers, shared workers and service workers. We're tentatively aiming
-for Chrome 104 to begin showing warnings.
+for Chrome 107 to begin showing warnings.
 
 Then, Chrome will extend Private Network Access checks to cover navigations,
-including iframes and popups. We're tentatively aiming for Chrome 105 to start
+including iframes and popups. We're tentatively aiming for Chrome 108 to start
 showing warnings.
 
 In both cases, we will be proceeding cautiously with a similar phased rollout,
