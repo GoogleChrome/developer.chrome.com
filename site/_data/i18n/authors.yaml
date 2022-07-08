@@ -844,4 +844,9 @@ alinavarkki:
   title:
     en: 'Alina Varkki'
   description:
-    end: 'Software Engineering Intern working on Chrome DevTools.'
+    en: 'Software Engineering Intern working on Chrome DevTools.'
+sidlall:
+  title:
+    en: Sid Lall
+  description:
+    en: Product Manager at Google
