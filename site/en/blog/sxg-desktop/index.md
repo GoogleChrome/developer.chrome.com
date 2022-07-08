@@ -53,7 +53,7 @@ You can opt out of this if you want using the supported-media meta tag. Learn mo
 
 Several global brands and sites have already benefited from Signed Exchanges. Let's look at a few case studies for current SXG adopters on Android mobile:
 
-Cloudflare, a leading Content Distribution Network (CDNs), ran an experiment to measure the impact of Signed Exchanges for its customers of the 500 sites they tested:
+Cloudflare, a leading Content Distribution Network (CDNs), [ran an experiment](https://blog.cloudflare.com/automatic-signed-exchanges-desktop-android) to measure the impact of Signed Exchanges for its customers of the 500 sites they tested:
 
 - **85%** saw an **improvement in LCP**.
 - **98%** observed reduced **Time to First Byte (TTFB)**.
