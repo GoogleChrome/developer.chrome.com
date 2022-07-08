@@ -174,7 +174,7 @@ Safari/537.36</span> {% endCompare %}
 
 {% Compare 'better', 'new' %} <span style="font-family: monospace">Mozilla/5.0
 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/100.<span style="background: #a5d6a7">0.0.0</span> Mobile
+Chrome/101.<span style="background: #a5d6a7">0.0.0</span> Mobile
 Safari/537.36</span> {% endCompare %}
 
 We are continuing to refine and update the general Client Hints behavior. This
