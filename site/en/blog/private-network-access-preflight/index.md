@@ -95,16 +95,18 @@ a request from a public website (`https://example.com`) to a private website
 (`http://router.local`), or a request from a private website to localhost.
 {% endAside %}
 
-### How do PNA classify IP addresses and identify private network 
+### How does PNA classify IP addresses and identify a private network 
 
-The IP addresses are classified into three IP address spaces: `public`,
-`private` and `local`.
+The IP addresses are classified into three IP address spaces: 
+- `public`
+- `private`
+- `local`
 
-**A local IP address space** contains IP addresses which is either an IPv4
-loopback address (`127.0.0.0/8`) defined in section 3.2.1.3 of [RFC1122](https://tools.ietf.org/html/rfc1122)
-or an IPv6 loopback address (`::1/128`) defined in section 2.5.3 of [RFC4291](https://tools.ietf.org/html/rfc4291).
+**Local IP address space** contains IP addresses that are either IPv4
+loopback addresses (`127.0.0.0/8`) defined in section 3.2.1.3 of [RFC1122](https://tools.ietf.org/html/rfc1122)
+or IPv6 loopback addresses (`::1/128`) defined in section 2.5.3 of [RFC4291](https://tools.ietf.org/html/rfc4291).
 
-**A private IP address space** contains IP addresses that have meaning only
+**Private IP address space** contains IP addresses that have meaning only
 within the current network, including `10.0.0.0/8`, `172.16.0.0/12` and
 `192.168.0.0/16` defined in [RFC1918](https://tools.ietf.org/html/rfc1918),
 link-local addresses `169.254.0.0/16` defined in [RFC3927](https://tools.ietf.org/html/rfc3927),
@@ -112,7 +114,7 @@ unique local IPv6 unicast addresses `fc00::/7` defined in [RFC4193](https://data
 link-local IPv6 unicast addresses `fe80::/10` defined in section 2.5.6 of [RFC4291](https://tools.ietf.org/html/rfc4291)
 and IPv4-mapped IPv6 addresses where the mapped IPv4 address is itself private.
 
-**A public IP Address space** contains all the other addresses not mentioned previously.
+**Public IP Address space** contains all other addresses not mentioned previously.
 
 A local IP address is considered more private than a private IP address which
 is considered more private than a public IP address.
