@@ -221,7 +221,7 @@ applications. Meanwhile, on other stores such as Apple's App Store, the situatio
 less welcoming, and apps
 [may or may not](https://blog.pwabuilder.com/posts/publish-your-pwa-to-the-ios-app-store/) make it
 into the App Store, depending on the outcome of the app review. Recently, Oculus, a division of Meta
-Platforms that produces virtual reality headsets, has announced that PWAs would be accepted viaon
+Platforms that produces virtual reality headsets, has announced that PWAs would be accepted into
 the [Oculus Store](https://developer.oculus.com/pwa/).
 
 <details>
@@ -258,8 +258,8 @@ to integrate with Google Play Billing.
 From personal experience through talking to many of Google's partners, a lot of
 [companies struggle with hiring great web developers](https://medium.com/javascript-scene/why-hiring-is-so-hard-in-tech-c462c3230017).
 The talent shortage is real, and recruiting costs are high, which is why startups commonly hire
-in-house recruiters who often approach recruiting with a shotgun approach that has not helped the
-guild's reputation with IT professionals. Also, companies often already employ teams of Android
+in-house recruiters who often approach recruiting with a shotgun approach that has not has not helped
+the reputation of recruiters with IT professionals. Also, companies often already employ teams of Android
 and/or iOS developers that they cannot just retrain to become web developers. Creating a PWA
 requires a high level of specialization that not all web developers can offer.
 
@@ -299,7 +299,7 @@ to enable individual sites to run successfully in Firefox. WebKit maintains a
 [quirks list](https://trac.webkit.org/browser/webkit/trunk/Source/WebCore/page/Quirks.cpp) and
 [hires WebKit Web Compatibility Analysts](https://jobs.apple.com/search?search=%22WebKit%20Web%20Compatibility%20Analyst%22&sort=relevance).
 Most importantly though, the browser vendors themselves have joined forces to improve web
-compatibility in core areas in the context of the [Compat 2021](https://web.dev/compat2021/) and the
+compatibility in core areas in the context of the [Compat 2021](https://web.dev/compat2021/) and
 [Interop 2022](https://web.dev/interop-2022/) efforts, with
 [Interop 2023](https://github.com/web-platform-tests/interop-2022/issues/78) already in the
 planning.
