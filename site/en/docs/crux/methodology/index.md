@@ -57,7 +57,7 @@ Any page will **not** meet the discoverability requirement if **any** of the fol
 
 ### Sufficiently popular {: #popularity-eligibility }
 
-A page is determined to be sufficiently popular if it has a minimum number of visitors. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages.
+A page is determined to be sufficiently popular if it has a minimum number of visitors. An origin is determined to be sufficiently popular if it has a minimum number of visitors across all of its pages. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages. The minimum number is the same for pages and origins.
 
 Pages and origins that do not meet the popularity threshold are not included in the CrUX dataset.
 
