@@ -33,6 +33,7 @@ updated: 2022-06-14
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - web-vitals
+  - crux
 ---
 
 The CrUX dataset on BigQuery is updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.

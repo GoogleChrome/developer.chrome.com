@@ -154,7 +154,7 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
-  
+
 chrome49:
   en: Chrome 49
 
@@ -193,19 +193,19 @@ chrome61:
 
 chrome64:
   en: Chrome 64
-  
+
 chrome65:
   en: Chrome 65
 
 chrome66:
   en: Chrome 66
- 
+
 chrome67:
   en: Chrome 67
-  
+
 chrome68:
   en: Chrome 68
-  
+
 chrome69:
   en: Chrome 69
 
@@ -218,6 +218,9 @@ insider:
 web-vitals:
   en: Web Vitals
   zh: 网页指标
+
+crux:
+  en: CrUX
 
 #####
 # These are for Privacy Sandbox
@@ -242,6 +245,6 @@ payments:
 
 spc:
   en: Secure Payment Confirmation
-  
+
 webauthn:
   en: WebAuthn

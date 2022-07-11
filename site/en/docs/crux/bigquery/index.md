@@ -34,6 +34,7 @@ date: 2022-06-23
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - web-vitals
+  - crux
 ---
 
 ## Introduction

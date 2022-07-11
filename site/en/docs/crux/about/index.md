@@ -34,6 +34,7 @@ date: 2022-06-23
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - web-vitals
+  - crux
 ---
 
 CrUX is the official dataset of the [Web Vitals](https://web.dev/vitals/) program. All user-centric Core Web Vitals metrics will be represented in the dataset.
