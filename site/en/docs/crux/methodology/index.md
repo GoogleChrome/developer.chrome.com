@@ -51,8 +51,8 @@ A page is determined to be publicly discoverable using the same [indexability](h
 Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
 
 - The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200` (after redirects).
-- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation).
-- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
+- The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation) or equivalent.
+- The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) or equivalent.
 - The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
 
 ### Sufficiently popular {: #popularity-eligibility }
