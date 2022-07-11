@@ -1,5 +1,4 @@
-/*
- * Copyright 2021 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,21 +11,4 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
-
-// Included for types only.
-// eslint-disable-next-line no-unused-vars
-const express = require('express');
-
-/**
- * @type {express.RequestHandler}
- */
-const healthCheckHandler = (req, res, next) => {
-  if (req.url === '/_check') {
-    res.send('Ok');
-    return res.end();
-  }
-  return next();
-};
-
-module.exports = healthCheckHandler;
+ 
