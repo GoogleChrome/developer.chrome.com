@@ -428,6 +428,12 @@ titouan:
     en: 'Titouan Rigoudy'
   description:
     en: 'Titouan is a Software Engineer working on the Web Platform.'
+lyf:
+  title:
+    en: 'Yifan Luo'
+    zh: '罗一凡'
+  description:
+    en: 'Yifan is a Software Engineer working on the Web Platform.'
 jecelynyeen:
   title:
     en: 'Jecelyn Yeen'
