@@ -137,7 +137,7 @@ redirects:
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
-  to: /docs/extensions/reference/#platform-apis
+  to: /docs/extensions/reference/#platform_apps_apis
 
 - from: /apps/app_codelab1_setup
   to: /docs/apps/app_codelab_intro
