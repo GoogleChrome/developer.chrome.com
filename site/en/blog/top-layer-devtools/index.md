@@ -1,11 +1,12 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Top Layer  and it's support in Chrome DevTools"
+title: "Top Layer tooling in Chrome DevTools"
 description: >
     What is top layer, how it is supported by Chrome DevTools and how we implemented Top Layer support.
 authors:
     - alinavarkki
-date: 2022-07-08
+date: 2022-07-12
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/56D6d9pfdEWRPQdima0W.jpg'
 tags:
     - devtools-engineering
     - devtools
@@ -15,9 +16,10 @@ tags:
 
 [Chrome DevTools](/docs/devtools/) is adding support for top layer elements, making it easier for developers to debug their code that makes use of top layer elements. This article describes what top layer elements are, how DevTools help to visualize the top layer content to understand and debug DOM structure that contains top layer elements, and how DevTools top layer support is implemented.
 
+
 ## What is the top layer and top layer elements?
 
-What exactly happens internally when you open a ```<dialog>``` as a modal? 🤔
+What exactly happens internally when you open a `<dialog>` as a modal? 🤔
 It is put into a top layer. Top layer content renders on top of all other content. Since a modal dialog needs to appear on top of all other DOM content, the browser does this automatically by rendering those elements in a ‘top layer’ instead of forcing authors to manually battle z-index. A top layer element will appear even on top of an element with the highest z-index.
 
 The [top layer](https://fullscreen.spec.whatwg.org/#new-stacking-layer) can be described as ‘the highest stacking layer’. Each document has one associated viewport and therefore also one top layer. 
@@ -25,26 +27,30 @@ The [top layer](https://fullscreen.spec.whatwg.org/#new-stacking-layer) can be d
 Multiple elements can be inside the top layer at the same time .When that happens they stack on top of each other, the last one on top. In other words, all of the top layer elements are placed in a last-in/first out (LIFO) stack in the top layer 📚.
 Dialog is not the only element that gets rendered into a top layer. Currently, top layer elements are [popup](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [modal dialog](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) and elements in [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
 Dialog implementation:
-``` html
+
+```html
 <main>
     <button onclick="window.dialog.showModal();">Open Dialog</button>
 </main>
 <dialog id="dialog"></dialog>
 ```
+
 Here is a demo with a couple of dialogs that have styles applied to their backdrops (backdrops described below):
+
 {% Glitch { id: 'solid-tidal-captain', height: 1000 } %}
 
 ### What is a backdrop?
 
 Luckily, there is also a way to customize the content beneath the top layer element.
 
-Every element in the top layer has a [CSS pseudo-element](https://www.w3.org/TR/CSS22/selector.html#pseudo-elements)  called [backdrop](https://developer.mozilla.org/docs/Web/CSS/::backdrop).
+Every element in the top layer has a [CSS pseudo-element](https://www.w3.org/TR/CSS22/selector.html#pseudo-elements) called [backdrop](https://developer.mozilla.org/docs/Web/CSS/::backdrop).
+
 Backdrop is a box the size of the viewport which is rendered immediately beneath any top layer element. The ::backdrop pseudo-element makes it possible to obscure, style, or completely hide everything located below the element when it's the topmost one in the top layer.
 When multiple elements have been made modal, the backdrop is drawn immediately beneath the frontmost such element, and on top of the older fullscreen elements.
 
 Here is how you style a backdrop:
 
-``` css
+```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
     background: rgba(255,0,0,.25);
@@ -54,10 +60,13 @@ dialog::backdrop {
 ### How to only show the first backdrop?
 
 Every top layer element has a backdrop that belongs to a top layer stack. These backdrops are designed to overlap each other so if the opacity of a backdrop is not a ‘100%’, the backdrops underneath are visible.
+
 In a use case when only the first backdrop in the top layer stack needs to be visible, it is possible to achieve this with JavaScript code that keeps track of the top layer stack items ids. 
+
 If the element added is not the first top layer element, a class making the :’:backdrop’ hidden is applied. This class is removed when the element is removed from the top layer.
 Example demo with code:
-{% Glitch { id: 'season-dust-money, height: 1000 } %}
+
+{% Glitch { id: 'season-dust-money', height: 1000 } %}
 
 ### Top layer DevTools support design
 
@@ -78,7 +87,6 @@ To help visualize top layer elements, a ‘top layer container’ has been added
 This container allows observing which elements are in the top layer stack at any time. Essentially, the top layer container is a list of links to the top layer elements and their backdrops. The top layer representation stack changes dynamically as elements are added/removed from the top layer.
 To easily find top layer elements within the elements tree or the top layer container, there are links from the top layer element representation in the top layer container to the same element in the element tree and vice versa.
 
-
 To jump from the top layer container element to the top layer tree element, click the ‘reveal’ word next to the element in the top layer container.
 
 {% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/NPG3v0Nc1pzkbzZAjVPJ.gif", alt="jumping from the top layer container link to the element", width="600", height="318" %}
@@ -92,7 +100,6 @@ It is possible to turn off any badge, including the ‘top-layer’ badge. In ca
 
 {% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/poAY4zTO6wnFkAvIIauQ.gif", alt="turning the badge off", width="600", height="226" %}
  
-
 Top layer container only appears when there is content rendered in the top layer stack.
 
 
@@ -122,6 +129,7 @@ To achieve desired placement, TopLayerContainer is attached as the last child of
 
 A new top layer badge has been added to indicate that the element is in the top layer and serve as a link to the shortcut of this element in the TopLayerContainer element.
 
+
 #### Initial design
 
 At first, the plan was to duplicate top layer elements into the top layer container instead of creating a list of links to the elements. This solution was not implemented because of the way fetching an elements’ children is implemented in DevTools. Each element has a parent pointer that is used in fetching children and it is impossible to have multiple pointers. Therefore, we can not have a node that will properly expand and contain all children in multiple places in the tree. 
@@ -134,10 +142,12 @@ Initial design:
 
 {% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/NuSiLL05niVPnklxtwCy.png", alt="Initial design", width="800", height="698" %}
 
+
 ### Chrome DevTools Protocol(CDP) changes
 
 To implement top layer support, it was required to make changes to CDP(https://chromedevtools.github.io/devtools-protocol/). CDP stands for Chrome DevToolsProtocol and it serves as a communication protocol between DevTools and Chromium.
 A new command and an event had to be added. A command can be called from the frontend at any time while an event is triggered on the frontend from the backend side.
+
 
 #### CDP: DOM.getTopLayerElements - command
 
@@ -152,6 +162,7 @@ In order to display current top layer elements, we need a new experimental CDP c
       # NodeIds of top layer elements
       array of NodeId nodeIds
 ```
+
 
 #### CDP: DOM.topLayerElementsUpdated - event
 
