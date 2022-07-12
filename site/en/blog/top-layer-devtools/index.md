@@ -143,8 +143,7 @@ A new command and an event had to be added. A command can be called from the fro
 
 In order to display current top layer elements, we need a new experimental CDP command that returns a list of NodeIDs of the elements that are in the top layer.  This command is called whenever DevTools are opened or when top layer elements change. The command looks as following:
 
-```
-
+```bash
   # Returns NodeIds of current top layer elements.
   # Top layer is rendered closest to the user within a viewport, therefore its elements always 
   # appear on top of all other content.
@@ -157,7 +156,8 @@ In order to display current top layer elements, we need a new experimental CDP c
 #### CDP: DOM.topLayerElementsUpdated - event
 
 To get the up to date list of top layer elements, we need an experimental CDP event that is triggered every time top layer elements change. This event informs the frontend of the change which, thereafter, calls the DOM.getTopLayerElements command and receives the new elements list. The event looks a following:
-```
+
+```bash
   # Called when top layer elements are changed.
   experimental event topLayerElementsUpdated
 ```
