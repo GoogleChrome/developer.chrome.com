@@ -88,7 +88,7 @@ You can find simple examples of using page actions in the [examples/api/pageActi
 For other examples and for help in viewing the source code, see [Samples][8].
 
 [1]: /docs/extensions/browserAction
-[2]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv3/manifest
 [3]: /docs/extensions/browserAction#ui
 [4]: #method-show
 [5]: #method-hide

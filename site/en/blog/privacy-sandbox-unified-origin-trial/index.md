@@ -5,7 +5,7 @@ description: >
   unified experimentation across the Privacy Sandbox relevance and measurement APIs: Topics, FLEDGE, and Attribution Reporting.
 layout: 'layouts/blog-post.njk'
 date: 2022-03-31
-updated: 2022-07-27
+updated: 2022-06-27
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/1Eh5fSHWhurUuED3WGU1.png'

@@ -1,5 +1,6 @@
 ---
 api: history
+has_warning: Yes. See <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">permissions with warnings</a> for details.
 ---
 
 ## Manifest
@@ -33,7 +34,7 @@ The following table describes each transition type.
 For examples of using this API, see the [history sample directory][8] and the [history API test
 directory][9]. For other examples and for help in viewing the source code, see [Samples][10].
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: #tt_generated
 [3]: #tt_manual_subframe
 [4]: #tt_typed
