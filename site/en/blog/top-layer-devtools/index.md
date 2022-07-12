@@ -7,6 +7,7 @@ authors:
     - alinavarkki
 date: 2022-07-12
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/56D6d9pfdEWRPQdima0W.jpg'
+alt: ''
 tags:
     - devtools-engineering
     - devtools
