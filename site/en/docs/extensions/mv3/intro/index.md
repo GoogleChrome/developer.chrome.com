@@ -1,27 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Welcome to Manifest V3
-
-# This appears below the title and is an optional teaser
 subhead: 'A step in the direction of security, privacy, and performance.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'An introduction to Manifest V3'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
 # updated: 2020-10-16
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
 ---
 
 This site introduces Manifest V3 for Chrome Extensions (Manifest V3). It presents the background and
