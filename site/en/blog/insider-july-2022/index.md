@@ -96,7 +96,7 @@ _Working with the ecosystem has proven to be critical to any success we've had i
 
 **Nicole:** First, I'm constantly in awe of the projects developers build on the web. From the tiniest library to full on frameworks, developers are building amazing things. It's a fantastic community of makers. And Chrome is taking a bunch of steps to be more connected to these projects. 
 
-For instance, a few years ago we started working with JavaScript Frameworks such as React and Angular. And metaframeworks—for example Next, Nuxt, and Gatsby. Last year, we started to do the same with UI tools and frameworks such as Sass, Bootstrap, and Material. I hope this coming year we can collaborate with Greensock and other tools that make developers' lives easier. I just saw Cassie Evans from Greensocks speak at Smashing Conference and it got me really excited about working with folks in the animation space.
+For instance, a few years ago we started working with JavaScript Frameworks such as React and Angular. And metaframeworks—for example Next, Nuxt, and Gatsby. Last year, we started to do the same with UI tools and frameworks such as Sass, Bootstrap, and Material. I hope this coming year we can collaborate with GreenSock and other tools that make developers' lives easier. I just saw Cassie Evans from GreenSock speak at Smashing Conference and it got me really excited about working with folks in the animation space.
 
 _So where do we see the biggest opportunity for the Web UI ecosystem?_
 
@@ -112,7 +112,7 @@ We're also working on some of the most requested APIs, like [container queries](
 
 Scroll linked animations is another fun area. I really like Steve Gardner's [demo](https://codepen.io/ste-vg/pen/GRooLza). He has buttery smooth scrolling and cool airplane animations triggered on scroll. While these are fun, it can be tricky to get them right, especially with accessibility in mind. So we're running user testing for accessibility on the feature now.
 
-The thing I'm personally most excited about is built-in web UI controls. Developers keep building the same tabset over and over again, I think the browser can help. Over at [Open UI](https://open-ui.org/), we're working on components like selectmenu, popup, tooltip, tabs, nav, accordion, and toggle. We are exploring what it would look like to bake accessibility into these browser primitives so the web could, over time, become accessible by default. Developers can then focus on the more complex and nuanced problems, while the basics like, how do tabs tab, can be supported by the browser. This probably needs its own post, so I'll stop there for now!  
+The thing I'm personally most excited about is built-in web UI controls. Developers keep building the same tabset over and over again, I think the browser can help. Over at [Open UI](https://open-ui.org/), we're working on components like selectmenu, popup, tooltip, tabs, nav, accordion, and toggle. We are exploring what it would look like to bake accessibility into these browser primitives so the web could, over time, become accessible by default. Developers can then focus on the more complex and nuanced problems, while the basics such as how do tabs tab, can be supported by the browser. This probably needs its own post, so I'll stop there for now!  
 
 Finally, we'll continue to invest in **interop** between browsers. It's been great working with folks at WebKit and Gecko to bring consistency to the developer experience. We heard developers loud and clear that they want this!
 
