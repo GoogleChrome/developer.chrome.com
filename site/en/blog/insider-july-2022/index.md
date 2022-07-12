@@ -80,7 +80,7 @@ _Let's talk a bit more about LAPIs. What happened there?_
 
 _So we've learned a lot. And I know there were other initiatives in this space, such as [CSS Houdini](https://developer.mozilla.org/docs/Web/Guide/Houdini). What's the story?_
 
-**Una:**_Yeah CSS Houdini is another place where we've learned from the community. There are a ton of useful [Houdini features](https://developer.mozilla.org/docs/Web/Guide/Houdini#the_houdini_apis), but many were too low-level to gain wider adoption and support. We realized that implementing low-level APIs didn't necessarily reduce friction for developers. Instead, focusing on higher-level solutions and needs has helped garner cross-browser support and the landings necessary to move the needle in the ecosystem. We're currently tracking progress at [https://ishoudinireadyyet.com](https://ishoudinireadyyet.com)/.
+**Una:** Yeah CSS Houdini is another place where we've learned from the community. There are a ton of useful [Houdini features](https://developer.mozilla.org/docs/Web/Guide/Houdini#the_houdini_apis), but many were too low-level to gain wider adoption and support. We realized that implementing low-level APIs didn't necessarily reduce friction for developers. Instead, focusing on higher-level solutions and needs has helped garner cross-browser support and the landings necessary to move the needle in the ecosystem. We're currently tracking progress at [https://ishoudinireadyyet.com](https://ishoudinireadyyet.com)/.
 
 _Speaking of cross-browser support, initiatives like Interop 2022 and Open UI seem to be delivering significant positive outcomes for the community. What are you hearing from developers?_
 
