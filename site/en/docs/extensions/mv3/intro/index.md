@@ -22,14 +22,16 @@ privacy. The pages in this section provide an overview of Manifest V3, the reaso
 how to approach it:
 
 
-* [Platform vision](platform-vision) explains how the Manifest V3 changes fit into the big picture
-  of where the platform is going.
-* [Overview of Manifest V3](mv3-overview) summarizes the technical changes introduced with Manifest
-  V3.
-* [Migration guide](mv3-migration) tells you how to get started updating Manifest V2 extensions so
-  they work in Manifest V3.
+* [Platform vision][vision] explains how the Manifest V3 changes fit into the big picture of where
+  the platform is going.
+* [Overview of Manifest V3][overview] summarizes the technical changes introduced with Manifest V3.
+* [Migration guide][migration] tells you how to get started updating Manifest V2 extensions so they
+  work in Manifest V3.
 
 We're excited about the improvements that Manifest V3 brings to the extensions platform. Look for
 further announcements on the [Chromium Blog](https://blog.chromium.org/) and the [Chromium
 Extensions forum](https://groups.google.com/a/chromium.org/g/chromium-extensions).
 
+[migration]: /docs/extensions/mv3/intro/mv3-migration
+[overview]: /docs/extensions/mv3/intro/mv3-overview
+[vision]: /docs/extensions/mv3/intro/platform-vision
