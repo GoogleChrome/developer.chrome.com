@@ -202,6 +202,21 @@ represents which function DevTools is currently highlighting.
 
 {% endAside %}
 
+### Restart function execution (frame) {: #restart-frame }
+
+To observe function behavior carefully and even apply edits to its body, you can restart function execution when the function is paused.
+
+In other words, you can restart the function's frame in the call stack. A stack frame is a function call together with its argument data.
+
+1. When you pause function execution at breakpoint, right-click a function in the **Stack** pane.
+1. Select **Restart frame** from the dropdown menu. 
+
+Function execution starts again but no variables are reset.
+
+WebAssembly, async functions and generator functions can’t be restarted.
+
+Do not change call stack sequence when changing code on the fly.
+
 ### Copy stack trace {: #copy-stack-trace }
 
 Right-click anywhere in the Call Stack pane and select **Copy stack trace** to copy the current call
