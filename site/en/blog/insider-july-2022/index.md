@@ -24,7 +24,7 @@ alt: >
 
 Welcome to the second edition of Chrome Dev Insider where we share updates on what's new and exciting in the community and here at Chrome. This is a new episode of insider stories on how we approach our work, and a quick glance at some of the most important updates that you should pay attention to.
 
-I'm Rachel Andrew, the Content Lead for [web.dev](https://web.dev) and [developer.chrome.com](https://developer.chrome.com), as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group. 
+I'm Rachel Andrew, the Content Lead for [web.dev](https://web.dev) and [developer.chrome.com](/), as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group. 
 
 Two months ago, we wrapped up [Google I/O](https://io.google/2022/products/web/) where we [shared](https://www.youtube.com/watch?v=qBkyU1TJKDg&t=1452s) some of the most important updates about how we're supporting developers in making the web faster and more powerful while keeping user information safe and private.
 
@@ -64,7 +64,7 @@ With 2022 turning out to be an exciting year for CSS features, we thought it a g
 
 _Let's start with you both. Tell us a bit more about yourselves?_
 
-**Nicole:** I'm the product manager for Web UI on Chrome. I focus specifically on new CSS and HTML APIs and on developers and designers who build UI. It's an exciting space with some really important APIs coming out like [Container Queries](https://web.dev/new-responsive/#responsive-to-the-container), [Scope](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope), and (hopefully!) [vertical rhythm](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists#handling_list_spacing).
+**Nicole:** I'm the product manager for Web UI on Chrome. I focus specifically on new CSS and HTML APIs and on developers and designers who build UI. It's an exciting space with some really important APIs coming out like [Container Queries](https://web.dev/new-responsive/#responsive-to-the-container), [Scope](https://developer.mozilla.org/docs/Web/CSS/:scope), and (hopefully!) [vertical rhythm](https://developer.mozilla.org/docs/Learn/CSS/Styling_text/Styling_lists#handling_list_spacing).
 
 **Una:** I lead the Web UI and DevTools DevRel teams. We focus on supporting UI engineers on the web platform and make sure they have the tools they need to be successful. This includes CSS APIs and HTML components along with DevTools features to see active changes and feedback.
 
