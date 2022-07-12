@@ -437,9 +437,11 @@ redirects:
     - /docs/apps/manifest/...
     - /docs/apps/...
 
-# Temporary Chrome Dev Insider collection page placeholder
-- from: /insider/
-  to: /blog/insider-april-2022/
+- from: /insider-july-2022/
+  to: /blog/insider-july-2022/
+
+- from: /insider/...
+  to: /tags/insider/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

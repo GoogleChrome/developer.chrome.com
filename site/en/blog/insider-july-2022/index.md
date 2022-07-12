@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/blog-post.njk'
 
-title: Introducing Chrome Dev Insider
+title: 'Chrome Dev Insider: Supporting CSS and UI developers'
 
 description: >
-  A new series by Chrome’s Web Platform team where we take developers behind the scenes to share perspectives, conversations and updates.
+  An update from Chrome’s Web Platform team where we take developers behind the scenes to share perspectives, conversations and updates.
 
 date: 2022-07-12
 
@@ -14,9 +14,9 @@ authors:
 tags:
   - insider
  
-hero: 'image/C8ys09lNbQOJLokQMhRtN2A0YU12/RPMWTGEBXQXVHozgFlIG.png'
+hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/5pfwyFL3CsjaWdvjG7DM.png'
 
-thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Hfx3C2heobFhRJJejstK.png'
+thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/zyzFnduh7jWqPJJFZ1KJ.png'
 
 alt: >
   Chrome Dev Insider
@@ -24,7 +24,7 @@ alt: >
 
 Welcome to the second edition of Chrome Dev Insider where we share updates on what's new and exciting in the community and here at Chrome. This is a new episode of insider stories on how we approach our work, and a quick glance at some of the most important updates that you should pay attention to.
 
-I'm Rachel Andrew, the Content Lead for web.dev and developer.chrome.com, as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group. 
+I'm Rachel Andrew, the Content Lead for [web.dev](https://web.dev) and [developer.chrome.com](https://developer.chrome.com), as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group. 
 
 Two months ago, we wrapped up [Google I/O](https://io.google/2022/products/web/) where we [shared](https://www.youtube.com/watch?v=qBkyU1TJKDg&t=1452s) some of the most important updates about how we're supporting developers in making the web faster and more powerful while keeping user information safe and private.
 
@@ -36,15 +36,25 @@ In the first [Chrome Dev Insider](/blog/insider-april-2022/), we shared some upd
 
 While this may not be news to most, it's exciting to see the progress we've already made across browsers.
 
+{% Columns %}
+
+{% Column %}
 <figure>
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/jiqMtucYLQGaqC3KI7Sp.png", alt="Chrome Dev at 71, Firefox Nightly at 74, Safari TP at 73.", width="380", height="240" %}
 
-![image](insert_image_url_here)
+<figcaption>Scores for experimental browsers in March 2022.</figcaption>
+</figure>
+{% endColumn %}
 
-![image](insert_image_url_here)
+{% Column %}
+<figure>
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/I33rbM3T4NA5rmac5kxo.png", alt="Chrome Dev at 77, Firefox Nightly at 80, Safari TP at 80.", width="380", height="240" %}
 
-(The progress made from March 2022 to July 2022, for Interop 2022 features landed in experimental browsers. Source: [wpt.fyi/interop-2022](wpt.fyi/interop-2022))
+<figcaption>Scores from experimental browsers in July 2022. <a href="https://wpt.fyi/interop-2022">See the latest scores</a>.</figcaption>
+</figure>
+{% endColumn %}
 
-</figcaption>
+{% endColumns %}
 
 Earlier last month, we saw Safari [announce a bumper release](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/) with Safari 16.0 Beta that includes exciting features like [Container Queries](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries), [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid), and a [flexbox inspector](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/#flexbox-inspector). Recent releases of Firefox and Chrome have included a number of exciting features and fixes—I'm covering the key things in stable and beta browsers each month in my [new to the web platform](https://web.dev/tags/new-to-the-web/) series of posts.
 
@@ -70,15 +80,17 @@ _Let's talk a bit more about LAPIs. What happened there?_
 
 _So we've learned a lot. And I know there were other initiatives in this space, such as [CSS Houdini](https://developer.mozilla.org/docs/Web/Guide/Houdini). What's the story?_
 
-**_Una:**_Yeah CSS Houdini is another place where we've learned from the community. There are a ton of useful [Houdini features](https://developer.mozilla.org/docs/Web/Guide/Houdini#the_houdini_apis), but many were too low-level to gain wider adoption and support. We realized that implementing low-level APIs didn't necessarily reduce friction for developers. Instead, focusing on higher-level solutions and needs has helped garner cross-browser support and the landings necessary to move the needle in the ecosystem. We're currently tracking progress at [https://ishoudinireadyyet.com](https://ishoudinireadyyet.com)/.
+**Una:**_Yeah CSS Houdini is another place where we've learned from the community. There are a ton of useful [Houdini features](https://developer.mozilla.org/docs/Web/Guide/Houdini#the_houdini_apis), but many were too low-level to gain wider adoption and support. We realized that implementing low-level APIs didn't necessarily reduce friction for developers. Instead, focusing on higher-level solutions and needs has helped garner cross-browser support and the landings necessary to move the needle in the ecosystem. We're currently tracking progress at [https://ishoudinireadyyet.com](https://ishoudinireadyyet.com)/.
 
 _Speaking of cross-browser support, initiatives like Interop 2022 and Open UI seem to be delivering significant positive outcomes for the community. What are you hearing from developers?_
 
 **Una:** One of the top pain points we hear from developers is "making design work the same across browsers." We've tackled this by working with other browser vendors to prioritize and land some of the top-requested developer features. And the feedback we've heard from the community has been overwhelmingly positive. Additionally, through a large re-architecture effort called [RenderingNG](/articles/renderingng/), it's become possible to land some of these features a lot more performantly. Developers are excited that these long-anticipated features they've been asking for years are finally being worked on and landing cross-browser.
 
-**Nicole:** The excitement in the community is palpable. You can see it on [Twitter](https://twitter.com/stubbornella/status/1532420756683952128) :)
+**Nicole:** The excitement in the community is palpable. You can see it on [Twitter](https://twitter.com/stubbornella/status/1532420756683952128). :)
 
-![image](insert_image_url_here)
+<figure>
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/mYFmIKp6hSEL99cd2ogv.png", alt="The tweet mentioned in the previous paragraph.", width="800", height="558" %}
+</figure>
 
 _Working with the ecosystem has proven to be critical to any success we've had in making developers' lives easier. I know that your team has been doing a lot of work there. Care to share some details?_
 
