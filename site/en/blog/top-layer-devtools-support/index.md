@@ -4,7 +4,7 @@ title: "Top Layer  and it's support in Chrome DevTools"
 description: >
     What is top layer, how it is supported by Chrome DevTools and how we implemented Top Layer support.
 authors:
-    -alinavarkki
+    - alinavarkki
 date: 2022-07-08
 tags:
     - devtools-engineering
