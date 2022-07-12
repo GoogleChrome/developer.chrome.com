@@ -11,7 +11,6 @@ tags:
     - devtools
 ---
 
-
 ## What is the Top Layer and how DevTools supports it?
 
 [Chrome DevTools](/docs/devtools/) is adding support for top layer elements, making it easier for developers to debug their code that makes use of top layer elements. This article describes what top layer elements are, how DevTools help to visualize the top layer content to understand and debug DOM structure that contains top layer elements, and how DevTools top layer support is implemented.
@@ -20,7 +19,9 @@ tags:
 
 What exactly happens internally when you open a ```<dialog>``` as a modal? 🤔
 It is put into a top layer. Top layer content renders on top of all other content. Since a modal dialog needs to appear on top of all other DOM content, the browser does this automatically by rendering those elements in a ‘top layer’ instead of forcing authors to manually battle z-index. A top layer element will appear even on top of an element with the highest z-index.
+
 The [top layer](https://fullscreen.spec.whatwg.org/#new-stacking-layer) can be described as ‘the highest stacking layer’. Each document has one associated viewport and therefore also one top layer. 
+
 Multiple elements can be inside the top layer at the same time .When that happens they stack on top of each other, the last one on top. In other words, all of the top layer elements are placed in a last-in/first out (LIFO) stack in the top layer 📚.
 Dialog is not the only element that gets rendered into a top layer. Currently, top layer elements are [popup](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [modal dialog](https://developer.mozilla.org/docs/Web/HTML/Element/dialog) and elements in [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
 Dialog implementation:
