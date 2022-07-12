@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 
-title: 'Chrome Dev Insider: Supporting CSS and UI developers'
+title: 'Chrome Dev Insider: The CSS and UI edition'
 
 description: >
   An update from Chrome’s Web Platform team where we take developers behind the scenes to share perspectives, conversations and updates.
