@@ -4,7 +4,7 @@ title: Streaming requests with the fetch API
 authors:
   - jakearchibald
 description: >
-  Chrome now supports upload streaming as of version 95, which means
+  Chromium now supports upload streaming as of version 105, which means
   you can start a request before you have the whole body available.
 date: 2020-07-22
 updated: 2022-07-13
@@ -12,7 +12,7 @@ tags:
   - capabilities
 ---
 
-From Chrome 105, you can start a request before you have the whole body available by using the streams API.
+From Chromium 105, you can start a request before you have the whole body available by using the streams API.
 
 You could use this to:
 
@@ -86,7 +86,7 @@ await fetch(url, {
 });
 ```
 
-Previously, you needed the whole body ready to go before you could start the request, but now in Chrome 105, you can provide your own `ReadableStream` of data:
+Previously, you needed the whole body ready to go before you could start the request, but now in Chromium 105, you can provide your own `ReadableStream` of data:
 
 ```js
 function wait(milliseconds) {
