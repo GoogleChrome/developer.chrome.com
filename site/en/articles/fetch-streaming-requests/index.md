@@ -1,15 +1,15 @@
 ---
-layout: 'layouts/doc-post.njk'
+layout: 'layouts/blog-post.njk'
 title: Streaming requests with the fetch API
 authors:
   - jakearchibald
 description: >
   Chromium now supports upload streaming as of version 105, which means
   you can start a request before you have the whole body available.
+hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/Szy6o6TSfz3BEXJO3670.jpg
+alt: A stream flowing through a lush green forest.
 date: 2020-07-22
 updated: 2022-07-13
-tags:
-  - capabilities
 ---
 
 From Chromium 105, you can start a request before you have the whole body available by using the [Streams API](https://developer.mozilla.org/docs/Web/API/Streams_API).
