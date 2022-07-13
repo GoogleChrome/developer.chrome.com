@@ -43,7 +43,7 @@ Chromium issue: [1306756](https://crbug.com/1306756)
 
 ## Build an extension for the Recorder panel {: #recorder-extension }
 
-You can now build or install a Chrome extension to export replay scripts in your favorite format. See [Recorder extension API](https://developer.chrome.com/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
+You can now build or install a Chrome extension to export replay scripts in your favorite format. See [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
 
 To install a demo extension, follow [these steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation. 
 
@@ -89,7 +89,7 @@ Slotted elements in the **Elements** panel have a new `slot` badge. When debuggi
 
 This [example](https://mdn.github.io/web-components-examples/slotted-pseudo-element/) contains cards with a few named slots. Inspect the `person-occupation` slot of a card, click the `slot` badge next to it to reveal its assigned slot.
 
-[Learn](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots) how to use [<template>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template) and [<slot>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) elements to create a flexible template that can then be used to populate the shadow DOM of a web component.
+[Learn](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots) how to use [<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) and [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) elements to create a flexible template that can then be used to populate the shadow DOM of a web component.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7uQGHp9WoMCG1RIAkgIF.png", alt="Reveal assigned slot of an element", width="800", height="486" %}
 
