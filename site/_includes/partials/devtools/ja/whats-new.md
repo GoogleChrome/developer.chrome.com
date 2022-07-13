@@ -3,12 +3,28 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/ja/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/ja/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/ja/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/ja/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/ja/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/ja/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/ja/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/ja/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/ja/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/ja/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/ja/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-104/#misc) -->
+
 ### Chrome 103 {: #chrome103 }
 
 * [Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ](/ja/blog/new-in-devtools-103/#recorder)
 * [Lighthouse パネルでの新しいタイムスパンモードとスナップショットモード](/ja/blog/new-in-devtools-103/#lighthouse)
 * [Performance Insights パネルでの改善されたズーム制御](/ja/blog/new-in-devtools-103/#zoom)
 * [パフォーマンスレコーディングの削除確認](/ja/blog/new-in-devtools-103/#delete)
+* [Element パネルでのペインの並び替え](/ja/blog/new-in-devtools-103/#reorder-pane)
 * [ブラウザ外でのカラーピッキング](/ja/blog/new-in-devtools-103/#color)
 * [デバッグ中の改善されたインラインでの値のプレビュー](/ja/blog/new-in-devtools-103/#inline-preview)
 * [仮想認証器での大きな blob サポート](/ja/blog/new-in-devtools-103/#webauthn)
