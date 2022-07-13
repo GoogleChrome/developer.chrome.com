@@ -12,7 +12,7 @@ tags:
   - capabilities
 ---
 
-From Chromium 105, you can start a request before you have the whole body available by using the streams API.
+From Chromium 105, you can start a request before you have the whole body available by using the [Streams API](https://developer.mozilla.org/docs/Web/API/Streams_API).
 
 You could use this to:
 
