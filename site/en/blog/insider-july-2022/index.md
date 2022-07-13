@@ -16,7 +16,7 @@ tags:
  
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/5pfwyFL3CsjaWdvjG7DM.png'
 
-thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/zyzFnduh7jWqPJJFZ1KJ.png'
+thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/FEhZwqV3W5kVUciPDV29.png'
 
 alt: >
   Chrome Dev Insider
