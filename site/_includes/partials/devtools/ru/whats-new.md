@@ -4,12 +4,28 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/ru/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/ru/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/ru/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/ru/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/ru/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/ru/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/ru/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/ru/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/ru/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/ru/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/ru/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-104/#misc) -->
+
 ### Chrome 103 {: #chrome103 }
 
 * [Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder](/ru/blog/new-in-devtools-103/#recorder)
 * [Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse](/ru/blog/new-in-devtools-103/#lighthouse)
 * [Улучшено управление масштабированием во вкладке Performance Insights](/ru/blog/new-in-devtools-103/#zoom)
 * [Подтверждение удаления записи производительности](/ru/blog/new-in-devtools-103/#delete)
+* [Изменение порядка панелей во вкладке Элементы (Elements)](/ru/blog/new-in-devtools-103/#reorder-pane)
 * [Выбор цвета вне браузера](/ru/blog/new-in-devtools-103/#color)
 * [Улучшен предварительный просмотр значений в строке при отладке](/ru/blog/new-in-devtools-103/#inline-preview)
 * [Поддержка больших объектов BLOB для виртуальных аутентификаторов](/ru/blog/new-in-devtools-103/#webauthn)

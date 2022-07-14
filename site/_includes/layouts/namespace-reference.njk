@@ -81,6 +81,19 @@
                   {{ extra_permissions_html | safe }}
                 </div>
               </li>
+              <li>
+                <div class="code-sections__label">Has warning?</div>
+                <div>    
+                  {{ has_warning | safe }}
+                </div>
+              </li>
+            {% else %}
+            <li>
+                <div class="code-sections__label">Permission</div>
+                <div>
+                {{ special_permissions_html | safe }}
+                </div>
+              </li>
             {% endif %}
 
             {% if f.manifestKeys.length %}

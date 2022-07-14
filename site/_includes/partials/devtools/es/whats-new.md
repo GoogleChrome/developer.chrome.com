@@ -3,12 +3,29 @@
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/es/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/es/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/es/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/es/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/es/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/es/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/es/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/es/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/es/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/es/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/es/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-104/#misc) -->
+
+
 ### Chrome 103 {: #chrome103 }
 
 * [Captura de eventos de doble-click y clic derecho en el panel Grabación](/es/blog/new-in-devtools-103/#recorder)
 * [Nuevos modos de tiempo e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-103/#lighthouse)
 * [Mejora en el control de zoom en el panel de Consejos de Rendimiento](/es/blog/new-in-devtools-103/#zoom)
 * [Confirmar para eliminar de una grabación de rendimiento](/es/blog/new-in-devtools-103/#delete)
+* [Reordene los paneles en el panel de elementos](/es/blog/new-in-devtools-103/#reorder-pane)
 * [Eligiendo un color fuera del navegador](/es/blog/new-in-devtools-103/#color)
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)

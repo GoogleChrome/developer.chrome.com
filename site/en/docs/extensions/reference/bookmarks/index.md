@@ -1,5 +1,7 @@
 ---
 api: bookmarks
+has_warning: Yes. See <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">permissions with warnings</a> for details.
+
 ---
 
 ![Clicking the star adds a bookmark](bookmarks.png)
@@ -68,7 +70,7 @@ chrome.bookmarks.create({
 For an example of using this API, see the [basic bookmarks sample][5]. For other examples and for
 help in viewing the source code, see [Samples][6].
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: #type-BookmarkTreeNode
 [3]: #method-create
 [4]: #type-BookmarkTreeNode

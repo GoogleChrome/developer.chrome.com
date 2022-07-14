@@ -1,18 +1,34 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+<!-- ### Chrome 104 {: #chrome104 }
 
-<!-- ### Chrome 103 {: #chrome103 }
+* [Restart frame during debugging](/zh/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/zh/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/zh/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/zh/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/zh/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/zh/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/zh/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/zh/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/zh/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-104/#misc) -->
 
-* [Capture double-click and right-click events in the Recorder panel](/zh/blog/new-in-devtools-103/#recorder)
-* [New timespan and snapshot mode in the Lighthouse panel](/zh/blog/new-in-devtools-103/#lighthouse)
-* [Improved zoom control in the Performance Insights panel](/zh/blog/new-in-devtools-103/#zoom)
-* [Confirm to delete a performance recording](/zh/blog/new-in-devtools-103/#delete)
-* [Picking a color outside of the browser](/zh/blog/new-in-devtools-103/#color)
-* [Improved inline value preview during debugging](/zh/blog/new-in-devtools-103/#inline-preview)
-* [Support large blobs for virtual authenticators](/zh/blog/new-in-devtools-103/#webauthn)
-* [New keyboard shortcuts in the Sources panel](/zh/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/zh/blog/new-in-devtools-103/#sourcemaps) -->
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder 面板捕获双击和右击事件](/zh/blog/new-in-devtools-103/#recorder)
+* [Lighthouse 面板支持 timespan 和 snapshot 新模式](/zh/blog/new-in-devtools-103/#lighthouse)
+* [改进 Performance Insights 面板的缩放控制问题](/zh/blog/new-in-devtools-103/#zoom)
+* [对删除性能记录的操作进行确认](/zh/blog/new-in-devtools-103/#delete)
+* [重新排列 Elements 面板中的窗格](/zh/blog/new-in-devtools-103/#reorder-pane)
+* [支持在浏览器外面选择颜色](/zh/blog/new-in-devtools-103/#color)
+* [改进调试期间的 inline 值预览问题](/zh/blog/new-in-devtools-103/#inline-preview)
+* [Virtual authenticators 支持大型 blob](/zh/blog/new-in-devtools-103/#webauthn)
+* [Sources 面板支持新的键盘快捷键](/zh/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps 改进](/zh/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }

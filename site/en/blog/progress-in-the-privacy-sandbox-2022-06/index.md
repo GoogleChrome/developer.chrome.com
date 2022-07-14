@@ -199,7 +199,7 @@ site response should then specify the `Content-Language` of the response and
 indicate if there are multiple languages available by using the `Vary` and
 `Variants` headers. For example:
 
-```plaintext
+```diff
 Get / HTTP/1.1
 Host: example.com
 Accept-Language: fr
