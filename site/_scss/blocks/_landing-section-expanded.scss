@@ -39,7 +39,8 @@
           width: 1.75em;
           z-index:-1;
         }
-        .landing-section__links::before {
+	
+        .usecases.landing-section__links::before {
           background:none;
           /* stylelint-disable property-no-vendor-prefix */
           -webkit-mask-image:'';

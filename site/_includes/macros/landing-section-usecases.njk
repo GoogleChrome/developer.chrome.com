@@ -5,13 +5,13 @@
 {% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) %}
 
 <section
-  class="landing-section usecases landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
+  class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
   style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
 
   {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
 
   <div class="gap-top-200 gap-left-200 gap-right-200">
-    <div class="landing-section__links">
+    <div class="landing-section__links usecases">
 	 
       {% if useCase1items %}
 		<h3>{{ useCase1Title }}</h3>
