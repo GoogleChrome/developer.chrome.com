@@ -2,12 +2,30 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/pt/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/pt/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/pt/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/pt/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/pt/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/pt/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/pt/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/pt/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/pt/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/pt/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/pt/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-104/#misc) -->
+
+
 ### Chrome 103 {: #chrome103 }
 
 * [Gravação de eventos de clique duplo e clique com o botão direito do mouse](/pt/blog/new-in-devtools-103/#recorder)
 * [Novo intervalo de tempo e modo de instantâneo no painel Lighthouse](/pt/blog/new-in-devtools-103/#lighthouse)
 * [Controle de zoom aprimorado no painel Performance Insights](/pt/blog/new-in-devtools-103/#zoom)
 * [Confirmação para excluir uma gravação de apresentação](/pt/blog/new-in-devtools-103/#delete)
+* [Reordenar painéis no painel Elementos](/pt/blog/new-in-devtools-103/#reorder-pane)
 * [Escolhendo uma cor fora do navegador](/pt/blog/new-in-devtools-103/#color)
 * [Visualização aprimorada do valor inline durante a depuração](/pt/blog/new-in-devtools-103/#inline-preview)
 * [Suporte a blobs grandes para autenticadores virtuais](/pt/blog/new-in-devtools-103/#webauthn)

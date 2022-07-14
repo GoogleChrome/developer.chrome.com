@@ -134,6 +134,6 @@ See [Edit Files With Workspaces][12] to get started.
 [7]: https://html.spec.whatwg.org/multipage/origin.html#origin
 [8]: #workspace
 [9]: /docs/devtools/command-menu/
-[10]: /docs/devtools/snippets
+[10]: /docs/devtools/javascript/snippets
 [11]: /docs/devtools/javascript
 [12]: /docs/devtools/workspaces
