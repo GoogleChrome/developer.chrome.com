@@ -66,24 +66,9 @@ sections:
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 {% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
 
-{# unique styles, added for Privacy Sandbox and expanded landing section. Should be added to main style sheet. #}
-<style>
-.related-articles ul {
-	list-style:none;
-	padding:0;
-}
-.related-articles ul .related-item {
-	margin-bottom:6px;
-}
-.related-articles ul .related-item a {
-	display: inline-flex; align-items: center; gap: 0.5ch;
-}
-.related-articles ul .related-item p {
-	line-height:2em;
-}
-.landing-section .icon {height:auto; width:auto;}
-</style>
+{# landing-page-expanded has unique styles, added for Privacy Sandbox and expanded landing section. #}
 
 {{ heroCard(
   "The Privacy Sandbox",
@@ -92,7 +77,7 @@ sections:
   "/docs/privacy-sandbox",
   "",
   "",
-  "blue",
+  "",
   "image/VbsHyyQopiec0718rMq2kTE1hke2/i1wLexi7cwRpdfIkBYAX.svg"
   ) }}
   
@@ -141,27 +126,16 @@ sections:
   )
 }}
 
-{{ landingSection(
+{{ landingSectionUseCases(
   "Show relevant content",
   "Proposals to encourage an engaging web with free access to information.",
+  "Topics",
   sections.show_relevant_content_topics,
+  "FLEDGE",
+  sections.show_relevant_content_fledge,
+  sections.show_relevant_content,
   "blue",
   "right",
-  false,
-  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
-  "Docs folder icon",
-  284,
-  193,
-  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg"
-  )
-}}
-
-{{ landingSectionExpanded(
-  "FLEDGE",
-  "A Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites.",
-  sections.show_relevant_content_fledge,
-  "blue",
-  "top-3",
   true,
   "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
   "Docs folder icon",
@@ -190,15 +164,15 @@ sections:
 
 {{ landingSection(
   "Fight spam and fraud",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "Proposals to separate invalid clicks and impressions from legitimate ones.",
   sections.fight_spam,
   "yellow",
   "top-3",
   false,
-  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg",
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg",
   "Docs folder icon",
   284,
   193,
-  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg"
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg"
   )
 }}
