@@ -54,7 +54,7 @@ Cookie 関連の提案が進展するにつれて、自社サイトの `SameSite
 
 #### Cookie に関するその他の更新
 
-また、プライバシーサンドボックスバナーの下にある変更に加えて、Cookie の一般的なデフォルト機能のクリーンアップと改善も続けています。 **[デフォルトでオリジンにバインドされた Cookie に関する I2P（Intent to Prototype）](https://groups.google.com/a/chromium.org/g/blink-dev/c/xKTem_X2LU8)** を提出済みです。これにより、Cookie のデフォルト設定がより安全になります。 以前の `SameSite= Lax` のデフォルトの変更により、Cookie はデフォルトで同一サイト（または「ファーストパーティ」）に制限されていましたが、それでも異なるポートまたは URL スキームを介せば送信できます。 この更新では、Cookie は、`Domain` 属性で明示的に許可されていない限り、設定されたの正確なオリジンにのみ送信されます。
+また、プライバシーサンドボックスの旗印の下にある変更に加えて、Cookie の一般的なデフォルト機能のクリーンアップと改善も続けています。 **[デフォルトでオリジンにバインドされた Cookie に関する I2P（Intent to Prototype）](https://groups.google.com/a/chromium.org/g/blink-dev/c/xKTem_X2LU8)** を提出済みです。これにより、Cookie のデフォルト設定がより安全になります。 以前の `SameSite= Lax` のデフォルトの変更により、Cookie はデフォルトで同一サイト（または「ファーストパーティ」）に制限されていましたが、それでも異なるポートまたは URL スキームを介せば送信できます。 この更新では、Cookie は、`Domain` 属性で明示的に許可されていない限り、設定されたの正確なオリジンにのみ送信されます。
 
 また、**[アウトバウンドのフェッチリクエストで `Set-Cookie` ヘッダーをブロック](https://groups.google.com/a/chromium.org/g/blink-dev/c/SyHAsPfO004)** することで、Chrome を Fetch の仕様に一致するようにしています。 レポートによると、この機能の使用率は非常に低いことが示されていますが、この機能に依存している場合、これらの Cookie はすぐに設定されなくなることに注意してください。
 
