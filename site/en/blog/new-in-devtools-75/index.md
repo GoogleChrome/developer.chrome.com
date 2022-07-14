@@ -189,6 +189,6 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [23]: /blog/new-in-devtools-73#inspect
 [24]: /docs/devtools/customize/#settings
 [25]: https://crbug.com/948417
-[26]: /docs/devtools/sources#edit
+[26]: /docs/devtools/javascript/sources#edit
 [27]: /docs/devtools/customize/#settings
 [28]: /docs/devtools/accessibility/navigation

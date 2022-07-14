@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-06-15
+updated: 2022-07-06
 authors:
   - samdutton
 ---
@@ -220,10 +220,11 @@ order.
 The Topics explainer proposes that each topic object in the array returned by
 `document.browsingTopics()` would have three properties:
 
--  `value`: a number identifying the topic in the taxonomy
+-  `configVersion`: a string identifying the current configuration
+-  `modelVersion`: a string identifying the machine-learning classifier used to infer site
 -  `taxonomyVersion`: a string identifying the set of topics currently in use by the browser
--  `classifierVersion`: a string identifying the machine-learning classifier used to infer site
-topics from hostnames
+-  `topic`: a number identifying the topic in the [taxonomy](#how-would-topics-be-curated-and-selected)
+-  `version`: a string combining the `configVersion` and the `modelVersion`
 
 {% Aside %}
 

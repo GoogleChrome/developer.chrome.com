@@ -2,10 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'FLEDGE latency best practices'
 subhead: >
-  Get the best performance from FLEDGE
+  Maximise auction efficiency
 description: >
   Review a collection of best practices to improve FLEDGE auction latency.
 date: 2022-06-27
+updated: 2022-07-04
 authors:
   - pauljensen
 ---

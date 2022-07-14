@@ -81,17 +81,7 @@ to measure ad conversions.
 
 ## How is user data captured and aggregated?
 
-{% Aside %}
-This API is a work in progress and will evolve over time, dependent on
-ecosystem feedback and input.
-
-All features that the Attribution Reporting API supports are proposals. Each of
-these proposals is open to discussion and feedback, including those that have
-an initial browser implementation ready.
-
-This API is being incubated and developed in the open. [Consider participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)
-in the discussion.
-{% endAside %}
+{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
 
 With the Attribution Reporting API, an individual user's detailed activity
 across sites, and potentially the user's identity across sites, is kept
@@ -288,18 +278,7 @@ reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
 is the proposed format for summary reports.
 
-## Engage and share feedback
-
-*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
-*  Read the [Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
-*  Read the [client-side
-   proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)
-   and [aggregation service
-   proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md),
-   ask questions, and suggest feedback.
-*  Developer support: ask questions and join discussions on the [Privacy
-   Sandbox Developer Support
-   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+{% include 'content/privacysandbox-partials/ar-engage.njk' %}
 
 ## Find out more
 

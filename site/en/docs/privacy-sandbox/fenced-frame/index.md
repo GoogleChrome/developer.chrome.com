@@ -133,8 +133,14 @@ publisher&mdash;aren't available in fenced frames.
 
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
-(such as a browser tab). The characteristics of fenced frames are further
-detailed in the [explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
+(such as a browser tab). Although a fenced frame in [certain modes](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md#fenced-frame-modes)
+(such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
+group), the frame cannot access unpartitioned storage or cookies. An
+`opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
+partition.
+
+The characteristics of fenced frames are further detailed in the
+[explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
 
 ### How do fenced frames compare to iframes? {: #compare }
 
@@ -147,9 +153,9 @@ to existing iframe features.
 | Embedded content can access embedding context DOM | Yes | No |
 | Embedding context can access embedded content DOM | Yes | No | 
 | Observable attributes, such as `name` | Yes | No |
-| URLs (`http://example.com`) | Yes | Yes (mode-dependent) |
+| URLs (`http://example.com`) | Yes | Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md)) |
 | Browser-managed opaque source (`urn:uuid`) | No | Yes |
-| Access to unpartitioned storage | No | Yes |
+| Access to cross-site data | No | Yes (mode-dependent) |
 
 Fenced frames support fewer external communication options to preserve privacy.
 

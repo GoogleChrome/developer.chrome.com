@@ -428,6 +428,12 @@ titouan:
     en: 'Titouan Rigoudy'
   description:
     en: 'Titouan is a Software Engineer working on the Web Platform.'
+lyf:
+  title:
+    en: 'Yifan Luo'
+    zh: '罗一凡'
+  description:
+    en: 'Yifan is a Software Engineer working on the Web Platform.'
 jecelynyeen:
   title:
     en: 'Jecelyn Yeen'
@@ -840,3 +846,13 @@ pauljensen:
     en: 'Paul Jensen'
   description:
     en: 'Software Engineer, Google Chrome'
+alinavarkki:
+  title:
+    en: 'Alina Varkki'
+  description:
+    en: 'Software Engineering Intern working on Chrome DevTools.'
+sidlall:
+  title:
+    en: Sid Lall
+  description:
+    en: Product Manager at Google
