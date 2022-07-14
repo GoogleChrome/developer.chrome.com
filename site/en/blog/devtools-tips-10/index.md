@@ -18,7 +18,7 @@ tags:
 
 [User preference media features](https://web.dev/new-responsive/#responsive-to-the-user) give you the ability to style web experiences that align with the user's own specific preferences and needs. In other words, preference media features allow you to adapt your user experiences to your user's expectations.
 
-{% YouTube id='[gOkM1L6azEI](https://youtu.be/gOkM1L6azEI)' %}
+{% YouTube id='gOkM1L6azEI' %}
 
 You can enhance the user experience of your website by taking the following three steps:
 
