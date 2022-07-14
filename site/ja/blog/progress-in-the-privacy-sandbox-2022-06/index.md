@@ -49,7 +49,7 @@ Cookie 関連の提案が進展するにつれて、自社サイトの `SameSite
 
 #### CHIPS
 
-[CHIPS（独立して分割された状態を持つ Cookie）](/docs/privacy-sandbox/chips/)を使用すると、トップレベルサイトごとに個別のクッキージャーを用意し、Cookie を「パーティション化された」ストレージにオプトインすることができます。 現在、[現行のオリジントライアルを Charome 104 の最後（8 月末ごろ）まで延長](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY)しようとしています。 **[CHIPS オリジントライアルに今すぐ](/origintrials/#/view_trial/1239615797433729025)** 登録しましょう。**[開発者向けの指示書](/blog/chips-origin-trial/)** が提供されているため、独自の本番サイトで `Partitioned` 属性を使った Cookie をテストできます。
+[CHIPS (Cookies Having Independent Partitioned State)](/docs/privacy-sandbox/chips/) を使用すると、トップレベルサイトごとに個別のクッキージャーを用意し、Cookie を「パーティション化された」ストレージにオプトインすることができます。 現在、[現行のオリジントライアルを Charome 104 の最後（8 月末ごろ）まで延長](https://groups.google.com/a/chromium.org/g/blink-dev/c/kZRtetS8jsY)しようとしています。 **[CHIPS オリジントライアルに今すぐ](/origintrials/#/view_trial/1239615797433729025)** 登録しましょう。**[開発者向けの指示書](/blog/chips-origin-trial/)** が提供されているため、独自の本番サイトで `Partitioned` 属性を使った Cookie をテストできます。
 
 
 #### Cookie に関するその他の更新
