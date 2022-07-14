@@ -86,6 +86,7 @@ sections:
   sections.intro,
   'green',
   'top-4',
+  true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
   'Waving hand icon',
   333,
@@ -100,6 +101,7 @@ sections:
   sections.how_to_use,
   'blue',
   'left',
+  true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/DoFpXgJqk97W0lokcSCf.svg',
   'Arrow icon',
   429,
@@ -114,6 +116,7 @@ sections:
   sections.know,
   'yellow',
   'right',
+  true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/rTbChNDzLjBFvBFMNONh.svg',
   'Graduation cap',
   284,
@@ -128,6 +131,7 @@ sections:
   sections.use_cases,
   'green',
   'top-3',
+  false,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/n9vOrhzQ2QEwhI2MQ7G3.svg',
   'Docs folder icon',
   333,
@@ -145,14 +149,11 @@ sections:
         </a>
       </h2>
       <p class="flex-1">{{ item.description }}</p>
-      <div class="gap-top-200 color-primary">
-        <a href="#">{{ icon('blog') }}</a>
-      </div>
     </div>
   {% endfor %}
   {{ landingDeco(
-    'Useful links',
-    'em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been',
+    'Additional resources',
+    'Dive deeper into Workbox modules, source code, and more',
     'yellow',
     'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
     'alt',
