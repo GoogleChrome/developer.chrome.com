@@ -26,6 +26,7 @@ Here is an example [`manifest.json`][3] file for a theme:
 
 ```json
 {
+  "manifest_version": 3,
   "version": "2.6",
   "name": "camo theme",
   "theme": {
