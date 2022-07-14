@@ -861,3 +861,13 @@ sidlall:
     en: Sid Lall
   description:
     en: Product Manager at Google
+argyle:
+  title:
+    en: 'Adam Argyle'
+  description:
+    en: 'Developer Relations Engineer working on Chrome CSS, UI, & DevTools.'
+miriamsuzanne:
+  title:
+    en: 'Miriam Suzanne'
+  description:
+    en: 'Ruining the web, one complexity at a time…'
