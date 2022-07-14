@@ -15,7 +15,7 @@ alt: A hand and several hanging chains, symbolizing links.
 ---
 
 {% Aside 'caution' %} Declarative Link Capturing was part of the
-[capabilities project](https://developer.chrome.com/blog/fugu-status/). The engineering team has decided that Declarative Link
+[capabilities project](/blog/fugu-status/). The engineering team has decided that Declarative Link
 Capturing will _not_ launch with its current design. Instead, the feature has been redesigned as
 described in [Control how your app is launched](/docs/launch-handler/). If your app implements the
 Declarative Link Capturing API, you should
@@ -133,8 +133,8 @@ site to navigate an existing window to a new page, overriding the default HTML n
 ## Migrate to Launch Handler API {: #migration }
 
 The Declarative Link Capturing API
-[origin trial](https://developer.chrome.com/origintrials/#/view_trial/4285175045443026945) is set to
-[expire on March&nbsp;30, 2022](https://groups.google.com/a/chromium.org/g/blink-dev/c/2c4bul4V3GQ/m/Anluh1txBQAJ)
+[origin trial](/origintrials/#/view_trial/4285175045443026945) 
+[expired on March&nbsp;30, 2022](https://groups.google.com/a/chromium.org/g/blink-dev/c/2c4bul4V3GQ/m/Anluh1txBQAJ)
 for Chromium&nbsp;97 and below. It will be replaced by a set of
 [new features and APIs](https://docs.google.com/document/d/1w9qHqVJmZfO07kbiRMd9lDQMW15DeK5o-p-rZyL7twk/edit)
 in Chromium&nbsp;98 and above, which includes user-enabled link capturing and
@@ -163,7 +163,7 @@ decide how a web app launches in various situations such as link capturing, shar
 handling, etc. To migrate from the Declarative Link Capturing API to the Launch Handler API:
 
 1.  Register your site for the
-    [Launch Handler origin trial](https://developer.chrome.com/origintrials/#/view_trial/2978005253598740481)
+    [Launch Handler origin trial](/origintrials/#/view_trial/2978005253598740481)
     and place the origin trial key into your web app.
 1.  Add a `"launch_handler"` entry to your site's manifest.
 
