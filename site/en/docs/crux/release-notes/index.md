@@ -43,6 +43,20 @@ The CrUX dataset on BigQuery is generally updated on the second Tuesday of every
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
 
+## 202206
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/_DiKAAqqKPE)
+
+Publication date
+ : July 13, 2022
+
+What's new
+ : - The number of origins covered by the CrUX dataset increases once again in this release due to the optional dimensions feature introduced in the previous release. We expect the size to be much more stable from here. Please see the [announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/_DiKAAqqKPE) as well.
+
+Notable stats
+ : - 16,230,572 origins
+ : - 41.3% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+
 ## 202205
 
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/A_LAY_lYxQk)
