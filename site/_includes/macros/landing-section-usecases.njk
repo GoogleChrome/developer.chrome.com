@@ -63,8 +63,8 @@
 	{% endif %}
 
       {% if items %}
-		<h3>More documentation for {{title}}</h3>
-		<div class="more-docs {% if ordered %} use-case--ordered {% endif %}">
+		<h3>More proposals</h3>
+		<div class="more-docs {% if ordered %} use-case--unordered {% endif %}">
       {% for item in items %}
         {% set post = null %} {# Reset #}
         {% if item.url and item.title and item.description %}

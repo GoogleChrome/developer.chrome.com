@@ -11,6 +11,13 @@
       counter-reset: section;
 	padding-bottom:10px;
     }
+  .use-case--unordered {
+  	counter-reset: section;
+	.item::before {
+		content:'';
+	}
+  }
+  
 	 
     .landing-section__links h3 {
         background:#fff;
@@ -39,7 +46,6 @@
           width: 1.75em;
           z-index:-1;
         }
-	
         .usecases.landing-section__links::before {
           background:none;
           /* stylelint-disable property-no-vendor-prefix */
