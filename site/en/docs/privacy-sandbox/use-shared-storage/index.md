@@ -6,7 +6,7 @@ subhead: >
 description: >
   Examine use cases and code samples for Shared Storage.
 date: 2022-06-28
-updated: 2022-06-28
+updated: 2022-07-14
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -58,7 +58,7 @@ flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 ### Use the demo
 
-The demo can be accessed at [goo.gle/ss-demo](http://goo.gle/ss-demo),
+The demo can be accessed at [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo),
 and the code is available on
 [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
