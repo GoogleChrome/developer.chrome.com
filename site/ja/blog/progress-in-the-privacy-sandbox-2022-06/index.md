@@ -133,7 +133,7 @@ Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案�
 
 ### Attribution Reporting API
 
-**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** を使うと、アドテクや広告主は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できるようになります。 これについても、プライバシーサンドボックスの関連性と測定のオリジントライアルの一環としてテストを拡張し続けるための、[Attribution Reporting の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を提出しました。
+**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** を使うと、アドテクや広告主は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できるようになります。 これについても、プライバシーサンドボックスの関連性と測定のオリジントライアルの一環としてテストを拡張し続けるための、[アトリビューションレポート の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を提出しました。
 
 オリジントライアルの初期フェーズでは、[デバッグ](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#debugging)など、開発者のエクスペリエンスと統合に関するフィードバックに焦点を当てていますが、これは、イベントレベルレポートと要約レポート全体のエンドツーエンドテストを網羅するように拡張されます。
 
