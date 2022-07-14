@@ -28,8 +28,8 @@
     border-radius: 0.75rem 0.75rem 0 0;
 
     @include media-query('md') {
-      display: initial;
       border-radius: 0.75rem;
+      display: initial;
     }
 
     .landing-deco__icon {
@@ -73,8 +73,8 @@
     }
 
     .item:not(:last-child) {
-      margin-bottom: get-size(400);
       border-bottom: 1px solid var(--color-hairline);
+      margin-bottom: get-size(400);
 
       @include media-query('md') {
         border-bottom: 0;
@@ -147,7 +147,7 @@
         border: 0;
 
         &::before {
-        @include media-query('md') {
+          @include media-query('md') {
             background-color: var(--dot-color);
             content: '';
             display: block;
@@ -266,12 +266,12 @@
     .item__outer {
       position: relative;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid var(--color-hairline);
-      }
-
       @include media-query('md') {
         border-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-hairline);
       }
     }
 
