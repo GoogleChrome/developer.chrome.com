@@ -6,6 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - sadym
 date: 2021-07-29
+updated: 2022-07-14
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kKvmeye2fJ1mUhYD9oOX.jpg'
 alt: ''
 tags:
