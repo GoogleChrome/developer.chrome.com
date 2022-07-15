@@ -204,13 +204,7 @@ represents which function DevTools is currently highlighting.
 
 ### Restart a frame (function) in a call stack {: #restart-frame }
 
-To carefully observe function behavior, you can restart the function's execution when the function is paused. In other words, you can restart the function's frame in the call stack.
-
-A stack frame is a function call together with its argument data. However, frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function and allows you to re-run the statements inside the function's body.
-
-{% Aside 'caution' %}
-During live editing, don't change the order of the call stack frames. This may cause unexpected errors.
-{% endAside %}
+To observe the behavior of a function and re-run its body without having to restart the entire debugging process, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
 
 To restart a frame:
 
@@ -245,6 +239,9 @@ The `foo()` function takes `0` as an argument, logs it, and calls the `bar()` fu
 Try restarting the frames of both functions in the following way:
 
 1. Copy the code above to a [new snippet](/docs/devtools/javascript/snippets/#createsources) and [run it](/docs/devtools/javascript/snippets/#runsources). The execution stops at the `debugger` [line-of-code breakpoint](/docs/devtools/javascript/breakpoints/#debugger).
+   {% Aside 'caution' %}
+   When the execution is paused, don't programmatically change the order of the call stack frames. This may cause unexpected errors.
+   {% endAside %}
 1. Notice that the debugger shows you the current value next to function declaration: `value = 1`.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/i3Offlw9RToaew8APV4C.png", alt="The current value next to function declaration.", width="800", height="497" %}
 1. Restart the `bar()` frame.
@@ -254,12 +251,20 @@ Try restarting the frames of both functions in the following way:
    Notice that the current value increases: `value = 2`.
 1. Try restarting the `bar()` frame several more times. The value continues to increase.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
-   The debugger doesn't "remember" the initial argument value. The current value persists in memory across restarts of the same function.
+   
+   {% Aside 'gotchas' %}
+   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
+
+   Therefore, the current argument value persists in memory across restarts of the same function.
+   {% endAside %}
+
 1. Now, restart the `foo()` frame in the **Call Stack**.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Fo5JQWKNVhlXPMDkyh6F.png", alt="Restarting the foo() frame.", width="800", height="497" %}
    Notice that the value is `0` again.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ufMoE3upIrSCQRGMaeLI.png", alt="ALT_TEXT_HERE", width="800", height="497" %}
+   {% Aside 'gotchas' %}
    In JavaScript, changes to arguments are not visible (reflected) outside the function. Nested functions receive values, not their locations in memory.
+   {% endAside %}
 1. Resume script execution (`F8`) to complete this tutorial.
 
 ### Copy stack trace {: #copy-stack-trace }
