@@ -4,7 +4,7 @@ title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Short explanations of key concepts.
 date: 2021-05-18
-updated: 2022-07-14 
+updated: 2022-07-15 
 authors:
   - samdutton
   - alexandrawhite
