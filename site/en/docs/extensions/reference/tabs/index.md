@@ -6,7 +6,7 @@ api: tabs
 
 The Tabs API not only offers features for manipulating and managing tabs, but can also detect the
 [language][tabs-detect-language] of the tab, take a [screenshot][tabs-capture], and
-[communicate][tabs-message] with a content script. 
+[communicate][tabs-message] with a tab's content scripts. 
 
 {% Aside %}
 
@@ -24,14 +24,16 @@ Most functions don't require any permission, like, for example: [creating][tabs-
 A permission is only required to access the `url`, `pendingUrl`, `title`, and `favIconUrl` of
 [`tabs.Tab`][tab] or to capture a screenshot. Consider the following when requesting permissions:
 
-[Host permissions][doc-match] : With host permissions, the extension has access to the tab data of
-the URL match patterns and the ability to capture screenshots.
+[Host permissions][doc-match] : Host permissions grant an extension the ability to interact with
+sensitive properties on matching tabs. They also allow an extension to perform more dangerous Tabs
+API actions that require user consent such as [injecting content scripts](#method-executeScript),
+[inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS, and [capturing
+screenshots](#method-captureVisibleTab) on matching pages.
 
 {% Aside %}
 
 A better alternative for capturing the visible tab or current tab data, is the `"activeTab"`
-permission, which doesn't trigger any warnings. See the [activeTab][doc-activetab] for usage
-details.
+permission, which doesn't trigger any warnings. See [activeTab][doc-activetab] for usage details.
 
 {% endAside %}
 
@@ -83,7 +85,6 @@ installed. The following example shows how to do this.
 {% Label %}background.js:{% endLabel %}
 
 ```js
-
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({
@@ -102,7 +103,7 @@ This example doesn't require any [permissions][section-manifest].
 
 ### Get the current tab
 
-This example demonstrates how the extension service worker can retrieve the active tab from the
+This example demonstrates how an extension's service worker can retrieve the active tab from the
 currently-focused window (or most recently-focused window, if no Chrome windows are focused). This
 can usually be thought of as the user's current tab.
 
@@ -145,12 +146,11 @@ This example shows how an extension can toggle the muted state for a given tab.
   <web-tab  title="Manifest V3 (promise)">
 
   ```js
-  function toggleMuteState(tabId) {
-    chrome.tabs.get(tabId, async (tab) => {
-      let muted = !tab.mutedInfo.muted;
-      await chrome.tabs.update(tabId, { muted });
-      console.log(`Tab ${tab.id} is ${ muted ? 'muted' : 'unmuted' }`);
-    });
+  async function toggleMuteState(tabId) {
+    const tab = await chrome.tabs.get(tabId);
+    const muted = !tab.mutedInfo.muted;
+    await chrome.tabs.update(tabId, {muted});
+    console.log(`Tab ${tab.id} is ${muted ? 'muted' : 'unmuted'}`);
   }
   ```
 
@@ -161,7 +161,7 @@ This example shows how an extension can toggle the muted state for a given tab.
   function toggleMuteState(tabId) {
     chrome.tabs.get(tabId, (tab) => {
       let muted = !tab.mutedInfo.muted;
-      chrome.tabs.update(tabId, { muted }, () => {
+      chrome.tabs.update(tabId, {muted}, () => {
         console.log(`Tab ${tab.id} is ${muted ? 'muted' : 'unmuted'}`);
       });
     });
@@ -181,7 +181,7 @@ a drag may be in progress.
   <web-tab  title="Manifest V3 (promise)">
 
   ```js
-  chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
+  chrome.tabs.onActivated.addListener(moveToFirstPosition);
 
   async function moveToFirstPosition(activeInfo) {
     try {
@@ -190,6 +190,8 @@ a drag may be in progress.
     } catch (error) {
       if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
         setTimeout(() => moveToFirstPosition(activeInfo), 50);
+      } else {
+        console.error(error);
       }
     }
   }
@@ -205,19 +207,14 @@ populates chrome.runtime.lastError is not unchecked.
   <web-tab title="Manifest V2 (callback)">
 
 ```js
-chrome.tabs.onActivated.addListener((activeInfo) =>
-  moveToFirstPositionMV2(activeInfo)
-);
+chrome.tabs.onActivated.addListener(moveToFirstPositionMV2);
 
 function moveToFirstPositionMV2(activeInfo) {
   chrome.tabs.move(activeInfo.tabId, { index: 0 }, () => {
     if (chrome.runtime.lastError) {
       const error = chrome.runtime.lastError;
-      if (
-        error ==
-        'Error: Tabs cannot be edited right now (user may be dragging a tab).'
-      ) {
-        setTimeout(() => moveToFirstPositionMV3(activeInfo), 50);
+      if (error == 'Error: Tabs cannot be edited right now (user may be dragging a tab).') {
+        setTimeout(() => moveToFirstPositionMV2(activeInfo), 50);
       } else {
         console.error(error);
       }
