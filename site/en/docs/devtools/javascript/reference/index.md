@@ -249,6 +249,8 @@ Try restarting the frames of both functions in the following way:
 1. Step through the value increment statement by pressing `F9`.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jno28U2OaVMnc2s6xtRZ.png", alt="Incrementing current value.", width="800", height="497" %}
    Notice that the current value increases: `value = 2`.
+1. Optionally, in the **Scope** pane, double-click the value to edit it and set the desired value.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bduFchfauez6IjMrXOm3.png", alt="Editing the value in the Scopes pane.", width="800", height="497" %}
 1. Try restarting the `bar()` frame several more times. The value continues to increase.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
    
