@@ -10,7 +10,7 @@ date: 2022-07-15
 ## Overview {: #overview }
 
 Chrome extensions enhance the browsing experience by adding features and functionality to Chrome.
-This page will briefly introduce extension development concepts and provide links to step-by-step
+This page introduces extension development concepts and provides links to step-by-step
 [beginner tutorials][section-tutorials]. 
 
 ## Web technologies {: #web-tech }
@@ -28,7 +28,8 @@ Before moving forward, we recommend you become familiar with these technologies.
 
 ## Chrome extension APIs {: #chrome-apis }
 
-What makes extensions more powerful than a web app is their access to various [Chrome APIs][doc-apis]. The following are just a few examples of what extensions can do with these APIs:
+What makes extensions more powerful than a web app is their access to various [Chrome
+APIs][doc-apis]. The following are just a few examples of what extensions can do with these APIs:
 
 * Change the functionality or behavior of a website. 
 * Allow users to collect and organize information across websites.

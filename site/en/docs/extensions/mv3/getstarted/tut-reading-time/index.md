@@ -9,30 +9,30 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-This extension tutorial teaches how to add the expected reading time to Chrome extension
-and Chrome web store documentation pages. 
+This tutorial teaches how to create a chrome extension that adds the expected reading time to Chrome
+extension and Chrome web store documentation pages. 
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VczSGe8eh0Xv7nTXxhxg.png", 
 alt="Reading time extension in the extension Welcome page", width="500", height="116", class="screenshot" %}
   <figcaption>
-  Extension Welcome page with the Reading time extension
+  Reading time extension on Chrome extension welcome page. 
   </figcaption>
 </figure>
 
 In this guide, we’re going to cover the following concepts:
 
-- What is the extension manifest.
-- Which icon sizes should an extension include.
-- How do content scripts work.
-- What are match pattern.
+- The extension manifest.
+- Recommended icon sizes for extensions.
+- Injecting a content script.
+- Using match patterns.
 
 ## Before you start {: #prereq }
 
-If you have not already, make sure you check out [Development Basics][doc-dev-basics], which covers
-what to expect during the development of an extension.
+If you have not already, check out [Development Basics][doc-dev-basics] to learn what to expect
+during the development of an extension.
 
-This is what the final file structure of this project will look like: 
+The following is the final file structure of this project: 
 
 ```text
 └── Reading time/
@@ -54,9 +54,9 @@ If you rather download the complete source code, it is available on [Github][git
 
 ### Step 1: Add information about the extension {: #step-1 }
 
-The `manifest.json` is the only required extension file. It contains important information about the
-extension; we will continue adding more fields as we go along. For now, create a `manifest.json`
-file in the _root_ of the project and add the following code:
+The manifest JSON file is the only required extension file. It contains important information about
+the extension. We'll start by adding the extensions metadata. Create a `manifest.json` file in the
+_root_ of the project and add the following code:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -70,9 +70,11 @@ file in the _root_ of the project and add the following code:
 }
 ```
 
+<!-- Explain more these fields -->
+
 {% Details %}
 {% DetailsSummary %}
-💡 **Interesting details about the Manifest JSON file**
+💡 **Other facts about the extension Manifest**
 {% endDetailsSummary %}
 
 - It must be located at the **root** of the project.  
@@ -83,12 +85,12 @@ file in the _root_ of the project and add the following code:
 
 ### Step 2: Provide the icons {: #step-2 }
 
-Although [icons][doc-icons] are optional during development, we recommend you include them because
-they appear in the extension management page, the permissions warning, the Chrome web store, and
-favicon. 
+So, why do we need icons? Although [icons][doc-icons] are optional during development, we recommend
+include them since they will appear in places like the extension management page, the Chrome web
+store listing, and others. 
 
-Create an `images/` folder and place the icons inside. You can download the icons
-[here][github-rt-icons]. Add the following code to declare the icons:
+Create an `images` folder and place the icons inside. You can download the icons
+on [Github][github-rt-icons]. Add the following code to declare the icons in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -105,8 +107,8 @@ Create an `images/` folder and place the icons inside. You can download the icon
 }
 ```
 
-We recommend using PNG files, but other file formats are allowed; SVG files are not supported. To
-help you design a great icon for your extension, check out [Icons best practices][cws-icons].
+We recommend using PNG files, but other file formats are allowed, except for SVG files. Need help
+designing your extension icons? Check out the [icon guidelines and best practices][cws-icons].
 
 {% Details %}
 {% DetailsSummary %}
@@ -122,12 +124,11 @@ help you design a great icon for your extension, check out [Icons best practices
 
 {% endDetails %}
 
-### Step 3: Declare the content scripts {: #step-3 }
+### Step 3: Declare the content script {: #step-3 }
 
 Extensions can run scripts that read and modify the content of the pages. These are called _content
-scripts_. Add the following code to the `manifest.json` to load a content script called `content.js`.
-You can choose which sites the script will be injected into by adding one or more match patterns to
-an array in the `“matches”` field.
+scripts_. But before we can start writing code, we need to register it. Add the following code to
+the `manifest.json` to load a content script called `content.js`.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -147,21 +148,24 @@ an array in the `“matches”` field.
 }
 ```
 
-
-Match patterns consist of three parts `<scheme>://<host><path>`. They can contain '`*`' characters. Check out [Match Patterns][doc-match] for more details.
+You can choose which sites the script will be injected into by adding one or more match patterns to
+an array in the `“matches”` field. Match patterns consist of three parts `<scheme>://<host><path>`.
+They can contain '`*`' characters. For more details, see [Match Patterns][doc-match].
 
 When the user installs your extension, the browser will let them know which sites your extension
 will be running on. In this example, the user would see the following permission warning:
 
+<!-- Add screenshot with permission warning -->
+
 {% Details %}
 {% DetailsSummary %}
-💡 **Tip on manifest file paths**
+💡 **A note on file paths in the manifest**
 {% endDetailsSummary %}
 
 All files included in the manifest should be _relative_ to the manifest file and start with the file name,
 not with a leading `/` or `./`. 
 
-For example, If `content.js` was not in a folder, it would be registered like this:
+For instance, if `content.js` was not in a folder, it would be registered like this:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -183,9 +187,9 @@ For example, If `content.js` was not in a folder, it would be registered like th
 Content scripts use the standard [Document Object Model][mdn-dom] (DOM) to read details of the web
 pages and make changes. 
 
-Add a folder called **scripts** and in it a file called `content.js`. The following code finds the
-element that contains the `article` node and creates an element that will display how long it should
-take to read the content of the article. 
+Create a new folder called **scripts**. Within it add a file called `content.js`. The following code
+first checks if the page contains the `article` element. Then, it counts all the words within the
+article and creates an paragraph that displays the total reading time.
 
 {% Label %}content.js:{% endLabel %}
 
@@ -195,7 +199,7 @@ const article = document.querySelector("article");
 // `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {
   const text = article.textContent;
-  const wordMatchRegExp = /[^\s]+/g; // Use a regular expression to count only words
+  const wordMatchRegExp = /[^\s]+/g; // Regular expression
   const words = text.matchAll(wordMatchRegExp);
   // matchAll returns an iterator, convert to array to get word count
   const wordCount = [...words].length;
@@ -219,13 +223,15 @@ if (article) {
 💡 **Interesting JavaScript used in this code**
 {% endDetailsSummary %}
 
-- [Regular expressions](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern) to count only the words.
+- [Regular
+  expressions](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern)
+  to count only the words.
 - [InsertAdjacentElement](https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement)
  to insert the reading time node after the element.
-- [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to add css class names to the element class attribute.
+- [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to add css class
+  names to the element class attribute.
 
 {% endDetails %}
-
 
 ## Test that it works {: #try-out }
 

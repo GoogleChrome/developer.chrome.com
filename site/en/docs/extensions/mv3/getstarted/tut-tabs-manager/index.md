@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Tabs Manager'
-subhead: 'Build a tabs manager for the extension docs.'
+subhead: 'Build your first tabs manager.'
 description: 'Learn how to create a tabs manager.'
 date: 2022-07-15
 # updated: 2022-06-13
@@ -130,9 +130,9 @@ script tags, but can't run inline JavaScript. Create a popup HTML file and add t
 </html>
 ```
 
-💡 Adding “type: module” to the script tag allows us to use [top level await][mdn-top-level] in the popup.js file.
+💡 Adding “type: module” to the script tag allows us to use [top level await][mdn-top-level] in the "popup.js" file.
 
-Now let's style the popup. Create a popup CSS file and include the following code:
+Next, let's style the popup. Create a popup CSS file and include the following code:
 
 {% Label %}popup.css:{% endLabel %}
 
@@ -167,8 +167,8 @@ p {
 
 #### Query the tabs {: #query }
 
-This example only displays a list of extension and the web store pages; use the `tabs.query()`to
-retrieve only tabs from these URLs call. Create a popup JS file and add the following code:
+This example displays a list of extension and the web store pages; use the `tabs.query()`to
+only retrieve tabs from these URLs. Create a `popup.js` file and add the following code:
 
 {% Label %}popup.js:{% endLabel %}
 
