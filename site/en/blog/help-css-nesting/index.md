@@ -83,10 +83,10 @@ occur following `@nest`, so there's no append only convenience pattern. Removing
 ambiguity of choice, creating one easy to remember way to nest, but sacrifices
 terseness in favor of convention.
 
-{% Aside %} It's worth noting that the less restricted `@nest` syntax could use
-a linter to enforce a usage rule across a team, in case they together decided
-they didn't like the ambiguity or terseness. Changing the spec may be an extreme
-measure. {% endAside %}
+{% Aside %} It's worth noting that the less restricted `@nest` syntax (Option 1)
+could use a linter to enforce a usage rule across a team, in case they together
+decided they didn't like the ambiguity or terseness. Changing the spec may be an
+extreme measure. {% endAside %}
 
 ### Option 3: Brackets
 
