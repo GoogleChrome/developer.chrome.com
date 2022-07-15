@@ -182,7 +182,7 @@ The `capture_links` field and Declarative Link Capturing origin trial registrati
 March&nbsp;30, 2022. This will ensure users on Chromium&nbsp;97 and below can still launch the
 web app at a captured link.
 
-For more details, check out [Control how your app is launched](/launch-handler/).
+For more details, check out [Control how your app is launched](/docs/web-platform/launch-handler/).
 
 ## Feedback {: #feedback }
 
