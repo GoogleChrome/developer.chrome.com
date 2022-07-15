@@ -6,7 +6,7 @@ api: tabs
 
 The Tabs API not only offers features for manipulating and managing tabs, but can also detect the
 [language][tabs-detect-language] of the tab, take a [screenshot][tabs-capture], and
-[communicate][tabs-message] with a tab's content scripts. 
+[communicate][tabs-message] with a tab's content scripts.
 
 {% Aside %}
 
@@ -63,8 +63,8 @@ The following are examples of how to declare each permission in the [manifest][d
   }
   ```
   </web-tab>
-    <web-tab title="Tabs permission (Manifest)">
-   
+  <web-tab title="Tabs permission (Manifest)">
+
   ```json
   {
     "name": "My extension",
@@ -132,7 +132,7 @@ can usually be thought of as the user's current tab.
   function getCurrentTab(callback) {
     let queryOptions = { active: true, lastFocusedWindow: true };
     chrome.tabs.query(queryOptions, ([tab]) => {
-      if (chrome.runtime.lastError) 
+      if (chrome.runtime.lastError)
       console.error(chrome.runtime.lastError);
       // `tab` will either be a `tabs.Tab` instance or `undefined`.
       callback(tab);
@@ -206,7 +206,7 @@ a drag may be in progress.
 {% Aside 'success' %}
 
 The use of catch(error) in a Promise context is a way to ensure that an error that otherwise
-populates chrome.runtime.lastError is not unchecked. 
+populates chrome.runtime.lastError is not unchecked.
 
 {% endAside %}
   </web-tab>
@@ -240,7 +240,7 @@ For more Tabs API extensions demos, explore any of the following:
 - [Manifest V2 - Tabs API extensions][mv2-tabs-samples].
 - [Manifest V3 - Tabs Manager][mv3-tabs-manager].
 
-[doc-activetab]:/docs/extensions/mv3/manifest/activeTab/ 
+[doc-activetab]:/docs/extensions/mv3/manifest/activeTab/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-perms]: /docs/extensions/mv3/permission_warnings/
