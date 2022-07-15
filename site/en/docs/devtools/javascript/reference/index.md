@@ -204,7 +204,7 @@ represents which function DevTools is currently highlighting.
 
 ### Restart a frame (function) in a call stack {: #restart-frame }
 
-To carefully observe function behavior and even make live changes to code, you can restart the function's execution when the function is paused. In other words, you can restart the function's frame in the call stack.
+To carefully observe function behavior, you can restart the function's execution when the function is paused. In other words, you can restart the function's frame in the call stack.
 
 A stack frame is a function call together with its argument data. However, frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function and allows you to re-run the statements inside the function's body.
 
