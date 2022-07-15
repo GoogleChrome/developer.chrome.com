@@ -4,9 +4,11 @@
 
 - title: i18n.docs.web-platform.shipped
   sections:
-    - url: /docs/web-platform/region-capture
     - url: /docs/web-platform/capture-handle
+    - url: /docs/web-platform/handwriting-recognition
     - url: /docs/web-platform/navigation-api
+    - url: /docs/web-platform/region-capture
+    - url: /docs/web-platform/virtual-keyboard
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
@@ -14,7 +16,10 @@
     - url: /docs/web-platform/webgpu
 
 - title: i18n.docs.web-platform.developer-trials
+  sections:
+    - url: /docs/web-platform/compute-pressure
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:
+    - url: /docs/web-platform/declarative-link-capturing
     - url: /docs/web-platform/storage-foundation
