@@ -244,7 +244,7 @@ The `foo()` function takes `0` as an argument, logs it, and calls the `bar()` fu
 
 Try restarting the frames of both functions in the following way:
 
-1. Copy the code to a [new snippet](/docs/devtools/javascript/snippets/#createsources) and [run it](/docs/devtools/javascript/snippets/#runsources). The execution stops at the `debugger` [line-of-code breakpoint](/docs/devtools/javascript/breakpoints/#debugger).
+1. Copy the code above to a [new snippet](/docs/devtools/javascript/snippets/#createsources) and [run it](/docs/devtools/javascript/snippets/#runsources). The execution stops at the `debugger` [line-of-code breakpoint](/docs/devtools/javascript/breakpoints/#debugger).
 1. Notice that the debugger shows you the current value next to function declaration: `value = 1`.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/i3Offlw9RToaew8APV4C.png", alt="The current value next to function declaration.", width="800", height="497" %}
 1. Restart the `bar()` frame.
