@@ -33,8 +33,8 @@ screenshots](#method-captureVisibleTab) on matching pages.
 
 {% Aside %}
 
-A better alternative for capturing the visible tab or current tab data, is the `"activeTab"`
-permission, which doesn't trigger any warnings. See [activeTab][doc-activetab] for usage details.
+A better alternative for capturing the visible tab or current tab data, is the [`"activeTab"`][doc-activetab]
+permission, which doesn't trigger any warnings.
 
 {% endAside %}
 
