@@ -6,6 +6,8 @@ description: >
 subhead: >
   Control how your app is launched.
 date: 2021-12-14
+authors:
+  - thomassteiner
 updated: 2022-04-22
 ---
 
