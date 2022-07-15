@@ -433,7 +433,7 @@ To view the source string, on the **Payload** tab, click **view source**.
 
 #### View URL-decoded arguments of query string parameters {: #query-string-encodings }
 
-To disable URL-encoding for arguments, on the **Payload** tab, click **decoded**.
+To disable URL-encoding for arguments, on the **Payload** tab, click **view decoded / view URL-encoded**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vkVfdFfCcTjSHu4TugOR.png", alt="Decoded arguments.", width="800", height="418" %}
 
