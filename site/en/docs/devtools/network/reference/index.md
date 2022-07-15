@@ -417,25 +417,25 @@ Sometimes the **Headers** tab shows the `Provisional headers are shown...` warni
 
 DevTools can also display only provisional headers due to security reasons.
 
-### View query string parameters (request payload) {: #query-string }
+### View request payload {: #payload }
 
-To view the query string parameters of a URL, that is, the request payload, select a request from the **Requests** table and open the **Payload** tab.
+To view the request's payload, that is, its query string parameters and form data, select a request from the **Requests** table and open the **Payload** tab.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uFtdJIkRemIYVsYzCp12.png", alt="The Query String Parameters tab.", width="800", height="418" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CphRGKa7PnCOQtaTcUiP.png", alt="The Payload tab.", width="800", height="570" %}
 
-#### View query string parameters source {: #query-string-source }
+#### View payload source {: #payload-source }
 
-By default, DevTools shows the parameters in a human-readable form.
+By default, DevTools shows the payload in a human-readable form.
 
-To view the source string, on the **Payload** tab, click **view source**.
+To view the sources of query string parameters and form data, on the **Payload** tab, click **view source** next to the **Query String Parameters** or **Form Data** sections.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1o1ukljKJNORmbulgXiM.png", alt="The source string of the request payload.", width="800", height="418" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H7hbmfoT9PSUezdmHNyH.png", alt="The view source buttons.", width="800", height="570" %}
 
-#### View URL-decoded arguments of query string parameters {: #query-string-encodings }
+#### View URL-decoded arguments of query string parameters {: #payload-encodings }
 
-To disable URL-encoding for arguments, on the **Payload** tab, click **view decoded / view URL-encoded**.
+To toggle URL-encoding for arguments, on the **Payload** tab, click **view decoded** or **view URL-encoded**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vkVfdFfCcTjSHu4TugOR.png", alt="Decoded arguments.", width="800", height="418" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gLU4MbYYgb80DfHKd52R.png", alt="Toggle URL-encoding.", width="800", height="570" %}
 
 ### View cookies {: #cookies }
 
@@ -642,8 +642,8 @@ overview** checkbox to hide it.
 [14]: #sort-by-activity
 [15]: #headers
 [16]: #headers
-[17]: #query-string
-[18]: #query-string
+[17]: #payload
+[18]: #payload
 [19]: /docs/devtools/storage/cookies/#fields
 [20]: #timing-preview
 [21]: #timing-explanation
