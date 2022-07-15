@@ -204,7 +204,7 @@ represents which function DevTools is currently highlighting.
 
 ### Restart a frame (function) in a call stack {: #restart-frame }
 
-To observe the behavior of a function and re-run its body without having to restart the entire debugging flow, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
+To observe the behavior of a function and re-run it without having to restart the entire debugging flow, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
 
 To restart a frame:
 
