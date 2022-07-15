@@ -95,7 +95,9 @@ In this example, the header origin list lets only your site (`self`) and `https:
 Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 ```
 
-A `Permissions-Policy` header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin. Separate multiple features in the header with a comma. Separate multiple origins in the origin list with a space between. If the origin is a cross-origin, the iframe tag must include the `allow` attribute along with being added to the origin list. 
+Use a `Permissions-Policy` header in the response from the server to set the allowed origins for a feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
+
+If your header is for multiple features, separate the features with a comma. If you list multiple origins, separate each origin in the origin list with a space. For headers which list an origin that's a cross-origin request, the iframe tag must include the `allow` attribute. 
 
 Here are some example key-value pairs:
 
