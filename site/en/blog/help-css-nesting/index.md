@@ -66,7 +66,7 @@ community. The following sections will help describe the three possible versions
 we're evaluating. We'll then go over some examples of usage for comparison, and
 at the end there will be a light survey asking you which you preferred overall.
 
-### @nest
+### Option 1: @nest
 
 This is the current specified syntax in [CSS Nesting
 1](https://www.w3.org/TR/css-nesting-1/). It offers a convenient way to nest
@@ -75,7 +75,7 @@ appending styles by starting new nested selectors with `&`. It also offers
 when you're not just appending subjects. It's flexible and minimal but at the
 expense of needing to remember `@nest` or `&` depending on your use case.
 
-### @nest restricted
+### Option 2: @nest restricted
 
 This is a stricter alternative, in an attempt to reduce the expense mentioned of
 remembering two nesting methods. This restricted syntax only allows nesting to
@@ -88,7 +88,7 @@ a linter to enforce a usage rule across a team, in case they together decided
 they didn't like the ambiguity or terseness. Changing the spec may be an extreme
 measure. {% endAside %}
 
-### Brackets
+### Option 3: Brackets
 
 In order to avoid the double-syntax or extra clutter involved with the `@nest`
 proposals, [Miriam Suzanne](https://www.miriamsuzanne.com/) and [Elika
