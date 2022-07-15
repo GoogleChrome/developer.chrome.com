@@ -96,7 +96,7 @@ Etemad](https://twitter.com/fantasai) proposed an [alternative
 syntax](https://github.com/w3c/csswg-drafts/issues/4748#issuecomment-924118287)
 that instead relies on additional curly-brackets. This provides syntax clarity,
 with only two extra characters, and no new at-rules. It also allows nested rules
-to be ‘grouped’ by the type of nesting required, as a way of simplifying
+to be grouped by the type of nesting required, as a way of simplifying
 multiple similarly nested selectors.
 
 <style>
