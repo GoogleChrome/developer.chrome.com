@@ -55,6 +55,8 @@ Any page will **not** meet the discoverability requirement if **any** of the fol
 - The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation) or equivalent.
 - The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) or equivalent.
 
+Refer to [Google Search Console](https://search.google.com/search-console/about) for an overview of your site's indexing status.
+
 ### Sufficiently popular {: #popularity-eligibility }
 
 A page is determined to be sufficiently popular if it has a minimum number of visitors. An origin is determined to be sufficiently popular if it has a minimum number of visitors across all of its pages. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages. The minimum number is the same for pages and origins.
