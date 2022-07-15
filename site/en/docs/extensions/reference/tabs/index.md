@@ -25,9 +25,9 @@ One of the following permissions is required to access sensitive [`tabs.Tab`][ta
 the `url`, `pendingUrl`, `title`, and `favIconUrl` or to capture a screenshot:
 
 [Host permissions][doc-match] 
-: Host permissions grant an extension the ability to interact with
-sensitive Tab properties on matching tabs. They also allow an extension to perform more dangerous Tabs
-API actions that require user consent such as [injecting content scripts](#method-executeScript),
+: Host permissions grant access to sensitive Tab properties on matching tabs. They also allow an
+extension to perform more intrusive actions that require user consent such as [injecting
+content scripts](#method-executeScript),
 [inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS, and [capturing
 screenshots](#method-captureVisibleTab) on matching pages.
 
@@ -39,9 +39,9 @@ permission, which doesn't trigger any warnings. See [activeTab][doc-activetab] f
 {% endAside %}
 
 Tabs permission 
-: The `"tabs"` permission only allows access to sensitive [`tabs.Tab`][tab] properties of all the tabs.
+: The `"tabs"` permission allows access to sensitive Tab properties.
 
-The following are examples of how to declare each permission in the [manifest][doc-manifest].
+The following are examples of how to declare each permission in the [manifest][doc-manifest]:
 
 <web-tabs>
   <web-tab title="Host Permissions (Manifest)">
@@ -94,7 +94,6 @@ chrome.runtime.onInstalled.addListener((reason) => {
     });
   }
 });
-
 ```
 
 {% Aside 'success' %}
