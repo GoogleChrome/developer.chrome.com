@@ -84,7 +84,7 @@ because requests are served from the browser cache on repeat visits.
 If you want to disable the cache while working in other DevTools panels, use the **Network conditions**
 drawer.
 
-1.  Open the [Network Conditions drawer][1].
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Check or uncheck the **Disable cache** checkbox.
 
 ### Manually clear the browser cache {: #clear-cache }
@@ -147,7 +147,7 @@ To observe WebSocket throttling:
 If you want to throttle the network connection while working in other DevTools panels, use the
 **Network conditions** drawer.
 
-1.  Open the [Network conditions drawer][4].
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Select your desired connection speed from the **Network throttling** menu.
 
 ### Manually clear browser cookies {: #clear-cookies }
@@ -161,7 +161,7 @@ To manually clear browser cookies at any time, right-click anywhere in the **Req
 
 To manually override the user agent:
 
-1.  Open the [Network conditions drawer][5].
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Uncheck **Select automatically**.
 3.  Choose a user agent option from the menu, or enter a custom one in the text box.
 
@@ -446,7 +446,9 @@ To view the cookies sent in a request's HTTP header:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/y55aBxOJQCA4cOERdvXJ.png", alt="The Cookies tab.", width="800", height="286" %}
 
-See [Fields][19] for a description of each of the columns.
+For a description of each of the columns, see [Fields][19].
+
+To modify cookies, see [View, edit, and delete cookies](/docs/devtools/storage/cookies).
 
 ### View the timing breakdown of a request {: #timing }
 
@@ -498,7 +500,7 @@ Here's more information about each of the phases you may see in the **Timing** t
 
 ### View initiators and dependencies {: #initiators-dependencies }
 
-To view the initiators and dependencies of a request, hold Shift and hover over the request in the
+To view the initiators and dependencies of a request, hold <kbd>Shift</kbd> and hover over the request in the
 Requests table. DevTools colors initiators green, and dependencies red.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mZ595sGwSfA6lZMzWbXy.png", alt="Viewing the initiators and dependencies of a request.", width="800", height="388" %}
