@@ -21,11 +21,12 @@ Most functions don't require any permission, like, for example: [creating][tabs-
 
 ### Permissions {: #perms }
 
-A permission is only required to access the `url`, `pendingUrl`, `title`, and `favIconUrl` of
-[`tabs.Tab`][tab] or to capture a screenshot. Consider the following when requesting permissions:
+One of the following permissions is required to access sensitive [`tabs.Tab`][tab] properties, like
+the `url`, `pendingUrl`, `title`, and `favIconUrl` or to capture a screenshot:
 
-[Host permissions][doc-match] : Host permissions grant an extension the ability to interact with
-sensitive properties on matching tabs. They also allow an extension to perform more dangerous Tabs
+[Host permissions][doc-match] 
+: Host permissions grant an extension the ability to interact with
+sensitive Tab properties on matching tabs. They also allow an extension to perform more dangerous Tabs
 API actions that require user consent such as [injecting content scripts](#method-executeScript),
 [inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS, and [capturing
 screenshots](#method-captureVisibleTab) on matching pages.
@@ -37,7 +38,8 @@ permission, which doesn't trigger any warnings. See [activeTab][doc-activetab] f
 
 {% endAside %}
 
-Tabs permission : Use the `"tabs"` permission to access the tab data of all tabs.
+Tabs permission 
+: The `"tabs"` permission only allows access to sensitive [`tabs.Tab`][tab] properties of all the tabs.
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest].
 
