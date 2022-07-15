@@ -204,7 +204,7 @@ represents which function DevTools is currently highlighting.
 
 ### Restart a frame (function) in a call stack {: #restart-frame }
 
-To observe the behavior of a function and re-run its body without having to restart the entire debugging process, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
+To observe the behavior of a function and re-run its body without having to restart the entire debugging flow, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
 
 To restart a frame:
 
@@ -253,6 +253,8 @@ Try restarting the frames of both functions in the following way:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
    
    {% Aside 'gotchas' %}
+   Why the value doesn't reset to `0`?
+
    Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
 
    Therefore, the current argument value persists in memory across restarts of the same function.
@@ -263,6 +265,8 @@ Try restarting the frames of both functions in the following way:
    Notice that the value is `0` again.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ufMoE3upIrSCQRGMaeLI.png", alt="ALT_TEXT_HERE", width="800", height="497" %}
    {% Aside 'gotchas' %}
+   Why the value is resets to `0`?
+
    In JavaScript, changes to arguments are not visible (reflected) outside the function. Nested functions receive values, not their locations in memory.
    {% endAside %}
 1. Resume script execution (`F8`) to complete this tutorial.
