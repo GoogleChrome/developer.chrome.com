@@ -253,7 +253,7 @@ Try restarting the frames of both functions in the following way:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
    
    {% Aside 'gotchas' %}
-   Why the value doesn't reset to `0`?
+   Why is the value not reset to `0`?
 
    Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
 
@@ -265,7 +265,7 @@ Try restarting the frames of both functions in the following way:
    Notice that the value is `0` again.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ufMoE3upIrSCQRGMaeLI.png", alt="ALT_TEXT_HERE", width="800", height="497" %}
    {% Aside 'gotchas' %}
-   Why the value is resets to `0`?
+   Why is the value reset to `0`?
 
    In JavaScript, changes to arguments are not visible (reflected) outside the function. Nested functions receive values, not their locations in memory.
    {% endAside %}
