@@ -24,21 +24,26 @@ Most functions don't require any permission, like, for example: [creating][tabs-
 One of the following permissions is required to access sensitive [`tabs.Tab`][tab] properties, like
 the `url`, `pendingUrl`, `title`, and `favIconUrl` or to capture a screenshot:
 
-[Host permissions][doc-match] 
-: Host permissions grant access to sensitive Tab properties on matching tabs. They also allow an
-extension to perform more intrusive actions that require user consent such as [injecting
-content scripts](#method-executeScript),
-[inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS, and [capturing
-screenshots](#method-captureVisibleTab) on matching pages.
+[Host permissions][doc-match]
 
-{% Aside %}
+: <div class="stack">
 
-A better alternative for capturing the visible tab or current tab data, is the [`"activeTab"`][doc-activetab]
-permission, which doesn't trigger any warnings.
+  Host permissions grant access to sensitive Tab properties on matching tabs. They also allow an
+  extension to perform more intrusive actions that require user consent such as [injecting content
+  scripts](#method-executeScript), [inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS,
+  and [capturing screenshots](#method-captureVisibleTab) on matching pages.
 
-{% endAside %}
+  {% Aside %}
 
-Tabs permission 
+  A better alternative for capturing the visible tab or current tab data, is the [`"activeTab"`][doc-activetab]
+  permission, which doesn't trigger any warnings.
+
+  {% endAside %}
+
+  </div>
+
+Tabs permission
+
 : The `"tabs"` permission allows access to sensitive Tab properties.
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest]:
