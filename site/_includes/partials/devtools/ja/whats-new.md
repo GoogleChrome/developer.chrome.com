@@ -3,20 +3,20 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/ja/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/ja/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/ja/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/ja/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/ja/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/ja/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/ja/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/ja/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/ja/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/ja/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/ja/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-104/#misc) -->
+* [デバッグ中のフレーム再起動](/ja/blog/new-in-devtools-104/#restart-frame)
+* [Recorder パネルでのスロー再生オプション](/ja/blog/new-in-devtools-104/#recorder)
+* [Recorder パネル用の拡張機能を構築](/ja/blog/new-in-devtools-104/#recorder-extension)
+* [Sources パネルで Authored / Deployed でファイルをグループ化する](/ja/blog/new-in-devtools-104/#authored-deployed)
+* [Performance insights パネルの新しい User Timings トラック](/ja/blog/new-in-devtools-104/#performance)
+* [要素に割り当てられたスロットの表示](/ja/blog/new-in-devtools-104/#slot)
+* [パフォーマンス計測のためのハードウェア並列度シミュレーション](/ja/blog/new-in-devtools-104/#simulate)
+* [CSS 変数のオートコンプリート時に色以外の値のプレビュー](/ja/blog/new-in-devtools-104/#css-var)
+* [Back/forward cache ペインでブロックしているフレームの特定](/ja/blog/new-in-devtools-104/#bfcache)
+* [JavaScript オブジェクトのオートコンプリート候補の改善](/ja/blog/new-in-devtools-104/#autocomplete)
+* [ソースマップの改善](/ja/blog/new-in-devtools-104/#sourcemaps)
+* [その他のハイライト](/ja/blog/new-in-devtools-104/#misc)
 
 ### Chrome 103 {: #chrome103 }
 
