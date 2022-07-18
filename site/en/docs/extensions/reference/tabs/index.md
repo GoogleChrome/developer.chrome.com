@@ -21,30 +21,31 @@ Most functions don't require any permission, like, for example: [creating][tabs-
 
 ### Permissions {: #perms }
 
-One of the following permissions is required to access sensitive [`tabs.Tab`][tab] properties, like
-the `url`, `pendingUrl`, `title`, and `favIconUrl` or to capture a screenshot:
+Most features of the Tabs API do not require special permissions to use. For example, extensions can
+call `chrome.tabs.create()` without declaring any permissions.
 
-[Host permissions][doc-match]
+There are three permissions developers should be aware of when working with the tabs API.
 
-: <div class="stack">
+The `tabs` permission
 
-  Host permissions grant access to sensitive Tab properties on matching tabs. They also allow an
-  extension to perform more intrusive actions that require user consent such as [injecting content
-  scripts](#method-executeScript), [inserting](#method-insertCSS)/[removing](#method-removeCSS) CSS,
-  and [capturing screenshots](#method-captureVisibleTab) on matching pages.
+: This permission does not give the extension access to the `chrome.tabs` namespace. Instead, it
+  grants an extension the ability to read and call [`tabs.query()`](#method-query) against four
+  sensitive properties on [`tabs.Tab`][tab] instances: `url`, `pendingUrl`, `title`, and
+  `favIconUrl`.
 
-  {% Aside %}
+Host permissions
 
-  A better alternative for capturing the visible tab or current tab data, is the [`"activeTab"`][doc-activetab]
-  permission, which doesn't trigger any warnings.
+: [Host permissions][doc-match] allow an extension to read and query a matching tab's four sensitive
+  `tabs.Tab` properties. They also grant an extension the ability to interact directly
+  with a matching tabs using methods such as
+  [`tabs.captureVisibleTab()`](#method-captureVisibleTab),
+  [`tabs.executeScript()`](#method-executeScript), [`tabs.insertCSS()`](#method-insertCSS), and
+  [`tabs.removeCSS()`](#method-removeCSS).
 
-  {% endAside %}
+The `activeTab` permission
 
-  </div>
-
-Tabs permission
-
-: The `"tabs"` permission allows access to sensitive Tab properties.
+: [`activeTab`][doc-activetab] allows an extension to receive a temporary host permission grant in
+  response to a user invocation. Unlike host permissions, `activeTab` does not trigger any warnings.
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest]:
 
