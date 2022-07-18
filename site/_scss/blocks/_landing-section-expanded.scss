@@ -1,6 +1,5 @@
 /* stylelint-disable max-nesting-depth */
 .landing-section {
-
   .icon {
     height: auto;
     width: auto;
@@ -23,7 +22,7 @@
     .landing-section__links h3 {
       background: #fff;
       line-height: 2em;
-      padding-bottom:6px;
+      padding-bottom: 6px;
     }
 
     &.landing-section--right,
@@ -87,7 +86,8 @@
 
 }
 
-.landing-section--top-3, .landing-section--top-4 {
+.landing-section--top-3,
+.landing-section--top-4 {
   .landing-deco__inner {
     align-items: center;
   }
