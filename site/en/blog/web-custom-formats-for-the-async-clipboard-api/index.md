@@ -93,7 +93,7 @@ version&nbsp;104.
   <iframe
     src="https://glitch.com/embed/#!/embed/custom-async-clipboard?path=script.js&previewSize=100"
     title="custom-async-clipboard on Glitch"
-    allow="clipboard;"
+    allow="clipboard-read; clipboard-write;"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
