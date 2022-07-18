@@ -172,6 +172,7 @@ uncaught exception.
     It turns blue when enabled.
 
 {% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
+
 **Figure 8**: The **Pause on exceptions** button
 
 3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
