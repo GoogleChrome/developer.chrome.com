@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-# updated: 2020-10-16
+updated: 2022-07-16
 
 # Optional
 # How to add a new author
@@ -41,6 +41,14 @@ tags:
 ## Common use case
 
 The CrUX API allows for the querying of user experience metrics for a specific URI like "Get metrics for the `https://example.com` origin."
+
+## CrUX API Key
+
+Using CrUX requires a Google Cloud API key. You can create one in the [Credentials page](https://console.developers.google.com/apis/credentials) and permission it for `Chrome UX Report API` usage.
+
+After you have an API key, your application can append the query parameter key=yourAPIKey to all request URLs.
+
+The API key is safe for embedding in URLs; it doesn't need any encoding.
 
 ## Data model
 
