@@ -63,7 +63,9 @@ privacy-preserving way, without third-party cookies.
 
 In contrast to Attribution Reporting API's event-level reports, which associate
 singular events (such as clicks or views) to [coarse
-data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased). summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased).
+data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide
+aggregated data (such as the number of users who converted) attached to
+detailed conversion data (such as what specific product the users purchased).
 
 {% Aside 'key-term' %}
 Adtechs [run an aggregation service](#aggregation-service) that processes
