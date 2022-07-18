@@ -15,9 +15,10 @@ authors:
 
 ## Implementation status
 
-*  This API is available in the [ads relevance and measurement origin trial]/blog/privacy-sandbox-unified-origin-trial/).
-*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
+*  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
 ## What is an Attribution Reporting summary report?
 
