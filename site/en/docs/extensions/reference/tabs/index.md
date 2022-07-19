@@ -10,47 +10,56 @@ The Tabs API not only offers features for manipulating and managing tabs, but ca
 
 {% Aside %}
 
-The Tabs API can be used in the service worker and extension pages, but not in content scripts.
+The Tabs API can be used by the service worker and extension pages, but not content scripts.
 
 {% endAside %}
 
-## Manifest {: #manifest }
+## Permissions {: #perms }
 
-Most functions don't require any permission, like, for example: [creating][tabs-create] a new tab,
+Most features do not require any permissions to use. For example: [creating][tabs-create] a new tab,
 [reloading][tabs-reload] a tab, [navigating][tabs-update] to another URL, etc.
 
-### Permissions {: #perms }
+There are three permissions developers should be aware of when working with the Tabs API.
 
-Most features of the Tabs API do not require special permissions to use. For example, extensions can
-call `chrome.tabs.create()` without declaring any permissions.
+The "tabs" permission
 
-There are three permissions developers should be aware of when working with the tabs API.
-
-The `tabs` permission
-
-: This permission does not give the extension access to the `chrome.tabs` namespace. Instead, it
-  grants an extension the ability to read and call [`tabs.query()`](#method-query) against four
+: This permission does not give access to the `chrome.tabs` namespace. Instead, it
+  grants an extension the ability to call [`tabs.query()`](#method-query) against four
   sensitive properties on [`tabs.Tab`][tab] instances: `url`, `pendingUrl`, `title`, and
   `favIconUrl`.
 
 Host permissions
 
 : [Host permissions][doc-match] allow an extension to read and query a matching tab's four sensitive
-  `tabs.Tab` properties. They also grant an extension the ability to interact directly
-  with a matching tabs using methods such as
-  [`tabs.captureVisibleTab()`](#method-captureVisibleTab),
+  `tabs.Tab` properties. They can also interact directly with the matching tabs using methods  such
+  as [`tabs.captureVisibleTab()`](#method-captureVisibleTab),
   [`tabs.executeScript()`](#method-executeScript), [`tabs.insertCSS()`](#method-insertCSS), and
   [`tabs.removeCSS()`](#method-removeCSS).
 
-The `activeTab` permission
+The "activeTab" permission
 
-: [`activeTab`][doc-activetab] allows an extension to receive a temporary host permission grant in
+: [`activeTab`][doc-activetab] grants an extension temporary host permission for the current tab in
   response to a user invocation. Unlike host permissions, `activeTab` does not trigger any warnings.
+
+## Manifest {: #manifest }
 
 The following are examples of how to declare each permission in the [manifest][doc-manifest]:
 
 <web-tabs>
-  <web-tab title="Host Permissions (Manifest)">
+  <web-tab title="Tabs permission">
+
+  ```json
+  {
+    "name": "My extension",
+    ...
+    "permissions": [
+      "tabs"
+    ],
+    ...
+  }
+  ```
+  </web-tab>
+  <web-tab title="Host Permissions">
 
   ```json
   {
@@ -64,22 +73,20 @@ The following are examples of how to declare each permission in the [manifest][d
   }
   ```
   </web-tab>
-  <web-tab title="Tabs permission (Manifest)">
+  <web-tab title="activeTab permission">
 
   ```json
   {
     "name": "My extension",
     ...
     "permissions": [
-      "tabs"
+      "activeTab"
     ],
     ...
   }
   ```
-
   </web-tab>
 </web-tabs>
-
 
 ## Use cases {: #examples }
 
