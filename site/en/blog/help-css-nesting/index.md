@@ -59,6 +59,35 @@ a split in preference that we'd like to employ the help of the community to
 break the tie. The rest of this post will be introducing the syntax options so
 you can feel informed to take a survey at the end.
 
+### Why can't the exact nesting example shown above be the syntax for CSS nesting?
+
+There are a few reasons the most popular nesting syntax can't be used as is:
+
+1. <b>Ambiguous parsing</b>
+<br>
+Preprocessors have times where they need to resolve very complex nesting and
+they're able to resolve and manage them at build time in their own special ways.
+Browser engines won't have the same affordances, selectors needs to never be
+loosely interpreted.
+<br>
+
+1. <b>Preprocessor parsing conflicts</b>
+<br>
+The CSS way of nesting [shouldn't break
+preprocessors](https://github.com/sass/sass/issues/3030) or existing developer
+nesting workflows. This would be disruptive and inconsiderate to those
+ecocystems and communities.
+<br>
+
+1. <b>Waiting for [`:is()`](https://web.dev/css-is-and-where/)</b>
+<br>
+Basic nesting doesn't need `:is()` but more complex nesting does. See [Example
+#3](#example-3-selector-lists-and-nesting) for a light introduction to selector
+lists and nesting. Imagine that selector list was in the middle of a selector
+instead of at the beginning, in those cases `:is()` is required in order to
+group the selectors in the middle of another selector.
+<br>
+
 ## Overview of what we're comparing
 
 We want to get CSS nesting right, and in that spirit we're including the
