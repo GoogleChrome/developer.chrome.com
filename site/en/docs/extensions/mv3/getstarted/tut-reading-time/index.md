@@ -9,7 +9,7 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-This tutorial teaches how to create a chrome extension that adds the expected reading time to Chrome
+This tutorial build an extension that adds the expected reading time to Chrome
 extension and Chrome web store documentation pages. 
 
 <figure>
@@ -261,7 +261,7 @@ alt="Reading time extension in the extension Welcome page", width="500", height=
 
 ## 🎯 Potential enhancements {: #challenge }
 
-Based on what you’ve learned today, try to support any of the following features:
+Based on what you’ve learned today, try to implement any of the following:
 
 - Add another **match pattern** in the manifest.json to support other [chrome developer][dev-chrome]
   pages, like for example, the [devtool][devtools] or [workbox][workbox].

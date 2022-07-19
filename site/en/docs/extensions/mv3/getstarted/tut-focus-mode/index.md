@@ -9,7 +9,7 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-This tutorial will build an extension that will change the style of the chrome extension and Chrome
+This tutorial builds an extension that changes the style of the Chrome extension and
 web store documentation pages. 
 
 In this guide, we’re going to cover the following concepts:
@@ -22,8 +22,8 @@ In this guide, we’re going to cover the following concepts:
 
 ## Before you start {: #prereq }
 
-If you have not already, make sure you check out [Development Basics][doc-dev-basics], which covers
-what to expect during the development of an extension.
+If you have not already, check out [Development Basics][doc-dev-basics] to learn what to expect
+during the development of an extension.
 
 This is what the final file structure of this project will look like: 
 
@@ -42,7 +42,7 @@ Focus mode/
 If you rather download the complete source code, it is available on [Github][github-focus-mode].
 
 ## Build the extension {: #build }
-
+<!-- Intro here? -->
 ### Step 1: Add the extension data and icons {: #step-1 }
 
 Create a file called `manifest.json` and include the following code.
@@ -68,14 +68,21 @@ Create a file called `manifest.json` and include the following code.
 These manifest keys are explained in more detail in the [Reading time
 tutorial][tut-reading-time-step2]. 
 
-Create an `images/` folder and place the icons inside. You can download the icons
+Create an `images` folder and place the icons inside. You can download the icons
 [here][github-focus-mode-icons].
 
-### Step 2: Register the extension service worker {: #step-2 }
+### Step 2: Initialize the extension {: #step-2 }
+<!-- TODO: Make sense of the mess below -->
+Extensions monitor browser events using the extension service worker, which then reacts with
+specified instructions. Service workers are a special execution environment; they are started to
+handle events they're interested in and are terminated when they're no longer needed.
 
-#### Update the manifest
+<!-- Events are actions or occurrences that happen in the system. The system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken when the event occurs. -->
 
-To run the extension's [service worker][doc-sw] in the background, register it in the manifest JSON:
+#### Specify the service worker {: #step2-b}
+
+To load the extension [service worker][doc-sw] in the background, first we need to register it in
+the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -91,13 +98,15 @@ To run the extension's [service worker][doc-sw] in the background, register it i
 
 #### Set the initial state
 
-The main role of a service worker is to respond to browser events. The first event on this example
-is [`runtime.onInstalled()`][runtime-oninstalled]. This way, the extension can complete some initial
-tasks when the user installs the extension.
+The first event the service worker will listen to is [`runtime.onInstalled()`][runtime-oninstalled].
+This method allows the extension to set an initial state or complete some tasks on installation. Since our extension will only handle two states (ON and OFF), we will track each tab's state by checking the _extension badge_.
 
-This extension has only two states (ON and OFF), which will be tracked using the badge text associated
-with each tab. Create a file called `background.js` and add the following code to set the initial
-state to “OFF”:
+{% Aside 'key-term' %}
+The extension badge is a colored banner on top of the extension action (toolbar icon).
+
+{% endAside %}
+
+Create a file called `background.js` and add the following code to set the initial state to “OFF”:
 
 {% Label %}background.js:{% endLabel %}
 
@@ -115,7 +124,7 @@ chrome.runtime.onInstalled.addListener(() => {
 💡 **What if I have a more complex state?**
 {% endDetailsSummary %}
 
-You can use the [Storage API][api-storage] to save initial data. 
+You can use the [Storage API][api-storage] to store state data.
 
 {% endDetails %}
 
@@ -142,6 +151,33 @@ a popup. Add the following code to declare the extension action in the manifest:
 }
 ```
 
+#### Using the activeTab permission
+
+The activeTab permission grants the extension _temporary_ permission to execute code on the current tab. It also allows access to sensitive Tab properties of the current tab:
+`url`, `pendingUrl`, `title`, or `favIconUrl`.
+
+This permission is **_triggered_** whenever the user interacts with the extension through a specific action. In our case, by clicking on the extension action (icon toolbar).
+
+{% Details %}
+{% DetailsSummary %}
+💡 **What are other ways to trigger the activeTab?**
+{% endDetailsSummary %}
+
+Others user gestures that can trigger the activeTab permission are the following:
+
+- By pressing a keyboard shortcut combination.
+- By selecting a context menu item.
+- By hitting enter when using the omnibox.
+- By opening an extension popup.
+
+{% endDetails %}
+
+The `“activetab”` permission allows users to _purposefully_ choose to run the extension on the
+currently focused tab; this way, it protects the user’s privacy. 
+
+Another benefit, is that the [activeTab][doc-active-tab] permission does not trigger a [permission
+warning][doc-perms-warning].
+
 #### Declare the activeTab permission
 
 To use the activetab permission, add it to manifest's permission array.
@@ -156,33 +192,13 @@ To use the activetab permission, add it to manifest's permission array.
 }
 ```
 
-The activeTab permission grants access to the following browsing information of the current tab:
-`url`, `pendingUrl`, `title`, or `favIconUrl`. It also grants you _temporary_ permission to execute
-code on the current tab.
-
-This permission is **_triggered_** whenever the user interacts with the extension through any of the
-following:
-
-- Clicking on the extension action.
-- Pressing a keyboard shortcut combination.
-- Selecting a context menu item.
-- Hitting enter when using the omnibox.
-- Opening an extension popup.
-
-The `“activetab”` permission allows users to _purposefully_ choose to run the extension on the
-currently focused tab; this way, it protects the user’s privacy. 
-
-{% Aside 'success' %}
-
-The [activeTab][doc-active-tab] permission does not trigger a [permission
-warning][doc-perms-warning].
-
-{% endAside %}
-
 ### Step 4: Track the state of the current tab {: #step-4 }
 
-When the user clicks on the extension action, if the URL matches an extension or web store page,
-you'll check the current state of the tab and set the next state. 
+The `action.onClicked` listener allows us to run code when the user clicks on the extension action.
+If the URL matches an extension or web store documentation page, we will check the state of the
+current tab and set the next state by setting the badge text. 
+
+Add the following code to `background.js`:
 
 {% Label %}background.js:{% endLabel %}
 
@@ -204,7 +220,8 @@ you'll check the current state of the tab and set the next state.
 
 ### Step 5: Add or remove the stylesheet {: #step-5 }
 
-First, create the stylesheet `focus-mode.css` and include the following code:
+Now it's time to change the page's layout. So first, create a stylesheet named
+`focus-mode.css` and include the following code:
 
 {% Label %}focus-mode.css:{% endLabel %}
 
@@ -222,9 +239,8 @@ main > :last-child {
 }
 ```
 
-Great! Now that you know if the extension is on or off, you can insert or remove the CSS stylesheet
-using the [Scripting][api-scripting] API.  Add the `"scripting"` permission, next to the `"activeTab"`
-permission in the manifest:
+Great! Let's insert or remove the CSS stylesheet using the [Scripting][api-scripting] API. To
+use the Scripting API, declare the `"scripting"` permission:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -242,7 +258,7 @@ The Scripting API does not trigger a [permission warning][doc-perms-warning].
 
 {% endAside %}
 
-Finally, add the following code to change the layout of the page:
+Finally, in `background.js` add the following code to change the layout of the page:
 
 {% Label %}background.js:{% endLabel %}
 
@@ -268,8 +284,8 @@ Finally, add the following code to change the layout of the page:
 
 ### _Optional: Assign a keyboard shortcut_ {: #step-6 }
 
-As a bonus, add a shortcut to make it easier to enable or disable focus mode. Add the
-“commands” key to the manifest.json.
+As a bonus, let's add a shortcut to make it easier to enable or disable focus mode. Add the
+`“commands”` key to the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -287,8 +303,8 @@ As a bonus, add a shortcut to make it easier to enable or disable focus mode. Ad
 }
 ```
 
-The `“_execute_action”` key runs the same code as the `onClicked()` event, so no additional code is
-needed. 
+The `“_execute_action”` key runs the same code as the `action.onClicked()` event, so no additional
+code is needed!
 
 ## Test that it works {: #try-out }
 
@@ -308,7 +324,7 @@ Go to any of the following pages:
 Then, click on the extension action or press the keyboard shortcut `Ctrl + U` or `Cmd + U`.
 
 It should look like this:
-
+<!-- TODO: Change! It also has the reading time extension enabled -->
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/6jSxXwVmjVv10NvwJ2Iu.png", 
 alt="Focus Mode extension in Welcome page", width="800", height="378", class="screenshot" %}
@@ -319,17 +335,17 @@ alt="Focus Mode extension in Welcome page", width="800", height="378", class="sc
 
 ## Potential enhancements {: #challenge }
 
-Based on what you’ve learned today, try to add any of the following features:
+Based on what you’ve learned today, try to implement any of the following:
 
 - Improve the CSS stylesheet.
-- Assign another keyboard shortcut.
-- Add a new stylesheet to your favorite blog or another documentation site.
+- Assign a different keyboard shortcut.
+- Change the layout of your favorite blog or documentation site.
 
 ## Keep building! {: #continue }
 
 Congratulations on finishing this tutorial 🎉. 
 
-Continue developing your skills by completing other tutorials on this series:
+Continue leveling up your skills by completing other tutorials on this series:
 
 | Extension                        | What you will learn                               |
 |----------------------------------|---------------------------------------------------|

@@ -9,8 +9,8 @@ date: 2022-07-15
 
 ## Overview {: #overview }
 
-This tutorial will build an extension that displays a list of all the open tabs of the extension and
-web store documentation pages in a popup. 
+This tutorial builds an extension popup that lists all the Chrome extension and
+Chrome web store documentation tabs. 
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8q5ps3dqw4p2BOZRpIJT.png", 
@@ -29,8 +29,8 @@ In this guide, we’re going to cover the following concepts
 
 ## Before you start {: #prereq }
 
-If you have not already, make sure you check out [Development Basics][doc-dev-basics], which covers
-what to expect during the development of an extension.
+If you have not already, check out [Development Basics][doc-dev-basics] to learn what to expect
+during the development of an extension.
 
 This is what the final file structure of this project will look like: 
 
@@ -77,13 +77,16 @@ Create a file called `manifest.json` and include the following code:
 These manifest keys are explained in more detail in the [Reading time
 tutorial][tut-reading-time-step2]. 
 
-Create an `images/` folder and place the icons inside. You can download the icons
+Create an `images` folder and place the icons inside. You can download the icons
 [here][github-tabs-manager-icons].
 
 ### Step 2: Create and style the popup {: #step-2 }
 
-The [Action][api-action] API controls the extension action (toolbar icon), which, in this case will
-open a popup that will display a list of open tabs. Declare the popup in the manifest:
+The [Action][api-action] API controls the extension action (toolbar icon). When the user clicks on
+the extension action it wil either run some code (like in the Focus mode tutorial), or open a popup.
+
+In this case, it will open a popup that displays a set of tabs. Let's start by declaring
+the popup in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -96,9 +99,8 @@ open a popup that will display a list of open tabs. Declare the popup in the man
   ...
 }
 ```
-<!-- TENTATIVE: Did you know the extension action can also execute some code? Learn more about this in the Focus Mode tutorial -->
-A popup is very similar to a web page with one exception; it can contain links to stylesheets and
-script tags, but can't run inline JavaScript. Create a popup HTML file and add the following code:
+
+A popup is very similar to a web page with one exception: it can't run inline JavaScript. Create a popup HTML file and add the following code:
 
 {% Label %}popup.html:{% endLabel %}
 
@@ -130,7 +132,11 @@ script tags, but can't run inline JavaScript. Create a popup HTML file and add t
 </html>
 ```
 
-💡 Adding “type: module” to the script tag allows us to use [top level await][mdn-top-level] in the "popup.js" file.
+{% Aside 'success' %}
+
+Adding `type="module”` to the script tag allows us to use [top level await][mdn-top-level] in the `popup.js` file.
+
+{% endAside %}
 
 Next, let's style the popup. Create a popup CSS file and include the following code:
 
@@ -165,10 +171,11 @@ p {
 
 ### Step 3: Manage the tabs {: #step-3 }
 
+<!-- TODO: The Tabs API allows us to blah blah . In this example, we -->
+
 #### Query the tabs {: #query }
 
-This example displays a list of extension and the web store pages; use the `tabs.query()`to
-only retrieve tabs from these URLs. Create a `popup.js` file and add the following code:
+This example displays a list of extension and the web store pages. The `tabs.query()` method allows us to retrieve the tabs from these URLs. Create a `popup.js` file and add the following code:
 
 {% Label %}popup.js:{% endLabel %}
 
@@ -187,14 +194,14 @@ const tabs = await chrome.tabs.query({
 💡 **Can I use Chrome APIs directly in the popup?**
 {% endDetailsSummary %}
 
-A popup and other extension pages have direct access to any of the Chrome APIs because they are
+A popup and other extension pages can call any of the Chrome APIs because they are
 served from the chrome schema. For example `chrome-extension://EXTENSION_ID/popup.html`.
-<!-- Consider explaining how the session starts and ends when the popup opens and closes  -->
+
 {% endDetails %}
 
 #### Request narrow permissions {: #narrow }
 
-To protect user privacy, we are requesting narrow host permissions, which will give us access to the
+To protect user privacy, we are requesting narrow [host permissions][doc-match], which will give us access to the
 title and URL of **specific sites**. Add the following code to the manifest JSON file:
 
 {% Label %}manifest.json:{% endLabel %}
@@ -215,22 +222,23 @@ Read and change your data on `developer.chrome.com`
 
 {% Details %}
 {% DetailsSummary %}
-💡 **Why are we not requesting "tabs" permission?**
+💡 **Why don't we request "tabs" permission to use the Tabs API?**
 {% endDetailsSummary %}
 
-The `"tabs"` permission grants access to the URL, title, favicon, and pendingURL of **all** the open tabs.
-When you don't require access to browsing data of every tab, we recommend requesting narrow host permissions instead.
+The `"tabs"` permission grants access to the URL, title, favicon, and pendingURL of **all** the open
+tabs. When you don't require access to sensitive tab data, we recommend requesting narrow
+host permissions instead.
 
 {% endDetails %}
 
 #### Focus on a tab {: #focus}
 
-First, let’s sort the list of tabs alphabetically to make it easier to locate an item. When you
-click on a list item, the extension will focus on the tab using `tabs.update()` and bring to the window to the front using `windows.update()`. Add the following code to popup.js:
+First, let’s sort the list of tabs alphabetically. When you click on an link, the extension will focus on the tab using `tabs.update()` and bring the window to the front using `windows.update()`. Add the following code to popup.js:
 
 {% Label %}popup.js:{% endLabel %}
 
 ```js
+...
 const collator = new Intl.Collator();
 tabs.sort((a, b) => collator.compare(a.title, b.title));
 
@@ -276,6 +284,7 @@ into the current window.
 {% Label %}popup.js:{% endLabel %}
 
 ```js
+...
 const button = document.querySelector("button");
 button.addEventListener("click", async () => {
   const group = await chrome.tabs.group({ tabIds: tabs.map(({ id }) => id) });
@@ -322,9 +331,9 @@ alt="Tabs Manager extension popup", width="600", height="230", class="screenshot
 
 ## Potential enhancements {: #challenge }
 
-Based on what you’ve learned today, try to add any of the following features:
+Based on what you’ve learned today, try to implement any of the following:
 
-- Modify the CSS stylesheet.
+- Improve the popup stylesheet.
 - Change the color and title of the tab group.
 - Manage the tabs of another documentation site.
 
@@ -341,7 +350,7 @@ Continue developing your skills by completing other tutorials on this series:
 
 ## Continue exploring
 
-You finished creating three extensions that have helped kick-off your extension development journey. We
+You completed three extensions that kicked-off your extension development journey. We
 hope you continue using these extensions to improve your experience as you learn more
 advanced Chrome extension concepts.
 
@@ -349,13 +358,14 @@ advanced Chrome extension concepts.
 
 To level up your extension skills, we recommend the following learning path:
  
+[api-action]: /docs/extensions/reference/action
+[api-tabgroups]: /docs/extensions/reference/tabGroups
+[api-tabs]: /docs/extensions/reference/tabs
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
+[doc-match]:/docs/extensions/mv3/match_patterns/
 [github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager/images
 [github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
 [mdn-top-level]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await#top_level_await
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
-[api-tabs]: /docs/extensions/reference/tabs
-[api-action]: /docs/extensions/reference/action
-[api-tabgroups]: /docs/extensions/reference/tabGroups

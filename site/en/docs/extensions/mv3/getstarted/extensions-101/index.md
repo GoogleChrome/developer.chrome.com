@@ -10,15 +10,14 @@ date: 2022-07-15
 ## Overview {: #overview }
 
 Chrome extensions enhance the browsing experience by adding features and functionality to Chrome.
-This page introduces extension development concepts and provides links to step-by-step
-[beginner tutorials][section-tutorials]. 
+This page helps you get started with Chrome extension development and provides links to step-by-step [beginner tutorials][section-tutorials]. 
 
 ## Web technologies {: #web-tech }
 
 Extensions are written with the same web technologies used to create web applications:
 
 * [HTML][mdn-html] is used as a content markup language.
-* [CSS](https://web.dev/learn/css/) is used for styling.
+* [CSS][web-dev-css] is used for styling.
 * [JavaScript][mdn-js] is used for scripting and logic.
 * Extensions can use all the [JavaScript APIs][js-apis] that the browser provides.
 
@@ -73,7 +72,7 @@ create a _Hello World_ extension and familiarize yourself with the extension dev
 
 When you start designing your extension and choosing which features to support, make sure it
 fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
-This will allow your extension to be distributed through the Chrome Web Store.
+This will ensure your extension is allowed to be distributed through the Chrome Web Store.
 
 {% Details %}
 {% DetailsSummary %}
@@ -145,3 +144,4 @@ As a bonus, these tutorials were designed to improve your experience when readin
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
+[web-dev-css]: https://web.dev/learn/css/
