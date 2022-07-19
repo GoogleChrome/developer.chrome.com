@@ -1,6 +1,6 @@
 ---
 api: ttsEngine
-has_warning: Yes. See <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">permissions with warnings</a> for details.
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 ## Overview
