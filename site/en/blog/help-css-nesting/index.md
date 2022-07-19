@@ -59,7 +59,10 @@ a split in preference that we'd like to employ the help of the community to
 break the tie. The rest of this post will be introducing the syntax options so
 you can feel informed to take a survey at the end.
 
-### Why can't the exact nesting example shown above be the syntax for CSS nesting?
+{% Details %}
+{% DetailsSummary %}
+Why can't the exact nesting example shown above be the syntax for CSS nesting?
+{% endDetailsSummary %}
 
 There are a few reasons the most popular nesting syntax can't be used as is:
 
@@ -87,6 +90,8 @@ lists and nesting. Imagine that selector list was in the middle of a selector
 instead of at the beginning, in those cases `:is()` is required in order to
 group the selectors in the middle of another selector.
 <br>
+
+{% endDetails %}
 
 ## Overview of what we're comparing
 
