@@ -3,7 +3,7 @@ api: declarativeNetRequest
 extra_permissions_html:
   <code>declarativeNetRequestFeedback</code><br/>
   <a href="/docs/extensions/mv3/declare_permissions#host-permissions">host permissions</a><br />
-has_warning: Yes. See <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">permissions with warnings</a> for details.
+has_warning: One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 
 ---
 
