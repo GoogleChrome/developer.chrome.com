@@ -151,7 +151,7 @@ expression `new RegExp('https://cdn\\.third-party-site\\.com.*/styles/.*\\.css')
 
 If you wanted to match both local and third parties you can use a wildcard
 at the start of your regular expression, but this should be done with caution
-to ensure it doesn't cause unexpected behaviors in you web app.
+to ensure it doesn't cause unexpected behaviors in your web app.
 
 ## How to Register a Navigation Route
 
