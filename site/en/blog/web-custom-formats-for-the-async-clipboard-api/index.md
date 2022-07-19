@@ -21,6 +21,12 @@ it's crucial for the copied data to be identical with the pasted data. For such 
 Clipboard API now supports web custom formats that let developers write arbitrary data to the
 clipboard.
 
+## Browser support
+
+The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Custom
+formats for the Async Clipboard API are supported on desktop and on mobile Chromium as of
+version&nbsp;104.
+
 ## Writing web custom formats to the clipboard
 
 Writing web custom formats to the clipboard is almost identical to
@@ -81,19 +87,13 @@ applications understand (since they would expect `image/jpeg`), there is the exp
 over time add support for such formats as an opt-in if their developers deem
 support for web custom formats to be relevant for their users.
 
-## Browser support
-
-The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Custom
-formats for the Async Clipboard API are supported on desktop and on mobile Chromium as of
-version&nbsp;104.
-
 ## Demo
 
 <div class="glitch-embed-wrap" style="height: 1500px; width: 100%;">
   <iframe
-    src="https://glitch.com/embed/#!/embed/custom-async-clipboard?path=script.js&previewSize=100"
+    src="https://custom-async-clipboard.glitch.me/"
     title="custom-async-clipboard on Glitch"
-    allow="clipboard-read; clipboard-write;"
+    allow="clipboard-read; clipboard-write"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
