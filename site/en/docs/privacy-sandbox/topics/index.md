@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-07-06
+updated: 2022-07-18
 authors:
   - samdutton
 ---
@@ -521,7 +521,7 @@ one or more hostnames.
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
   alt="Screenshot of chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
-
+  
 {% Aside %}
 The current implementation of the Topics API infers topics from hostnames only: not any other part
 of a URL.
@@ -529,7 +529,23 @@ of a URL.
 Use hostnames only (without protocol or path) to view inferred topics from the
 `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you
 attempt to include a  "/" in the Host field.
- {% endAside %}
+{% endAside %}
+ 
+#### Access the tflite classifier model file {: #access-tflite-file}
+
+The **Classifier** tab of the `chrome://topics-internals` page also provides the file path for the tflite 
+model used by the Topics API. 
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", 
+  alt="Screenshot of chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.", 
+  width="800", height="696" %}
+
+You can download the file and load the model with the [Topics Model Execution Demo colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn). (A colab—or colaboratory—is a data 
+analysis tool that combines code, output, and descriptive text into one collaborative document.) 
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OWOHUKsrvv7ZPtBP9i85.png", 
+  alt="Sceenshot of the Topics API Model Execution Demo colab.", 
+  width="800", height="565" %}
 
 ####  View Topics API information {: #view-api-information}
 
