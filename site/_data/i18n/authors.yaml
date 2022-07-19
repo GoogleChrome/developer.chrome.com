@@ -861,3 +861,20 @@ sidlall:
     en: Sid Lall
   description:
     en: Product Manager at Google
+tunetheweb:
+  title:
+    en: Barry Pollard
+    es: Barry Pollard
+    ja: Barry Pollard
+    ko: Barry Pollard
+    pt: Barry Pollard
+    ru: Barry Pollard
+    zh: Barry Pollard
+  description:
+    en: Web Performance Developer Advocate for Google
+    es: Rendimiento web aesarrollador partidario para Google
+    ja: Google を対象とした Developer Advocate
+    ko: Google의 개발자 애드버킷
+    pt: Developer Advocate para o Google
+    ru: Developer Advocate по вопросам Google
+    zh: 负责 Google 的开发技术推广工程师
