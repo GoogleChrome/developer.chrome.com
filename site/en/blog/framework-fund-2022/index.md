@@ -4,7 +4,7 @@ description: >
   We are sharing an update on recipients of Chrome's web framework funding
 layout:
   'layouts/blog-post.njk'
-date: 2022-06-19
+date: 2022-07-19
 authors:
   - addyosmani
 hero: 'image/1L2RBhCLSnXjCnSlevaDjy3vba73/xHPqj5xUmOnkYzSIusQe.png'
