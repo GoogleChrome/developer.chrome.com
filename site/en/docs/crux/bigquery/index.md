@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-18
+updated: 2022-07-19
 
 # Optional
 # How to add a new author
@@ -47,7 +47,7 @@ The data is structured by monthly release, as well as a number of summary tables
 
 ## Accessing the dataset in GCP
 
-Using BigQuery requires a [GCP project](https://developers.google.com/web/tools/chrome-user-experience-report/getting-started#getting-started) and basic knowledge of SQL. The [CrUX dataset on BigQuery](https://console.cloud.google.com/bigquery?p=chrome-ux-report&d=all&page=dataset) is free to access and explore up to the limits of the [free tier](https://cloud.google.com/bigquery/pricing#queries), which is renewed monthly and provided by BigQuery. Additionally, new GCP users may be eligible for a [signup credit](https://cloud.google.com/free/docs/frequently-asked-questions#free-trial) to cover expenses beyond the free tier. Note that a credit card must be provided for the GCP project, see [Why do I need to provide a credit card?](https://cloud.google.com/free/docs/frequently-asked-questions#why-credit-card).
+Using BigQuery requires a [GCP project](https://cloud.google.com/) and basic knowledge of SQL. The [CrUX dataset on BigQuery](https://console.cloud.google.com/bigquery?p=chrome-ux-report&d=all&page=dataset) is free to access and explore up to the limits of the [free tier](https://cloud.google.com/bigquery/pricing#queries), which is renewed monthly and provided by BigQuery. Additionally, new GCP users may be eligible for a [signup credit](https://cloud.google.com/free/docs/frequently-asked-questions#free-trial) to cover expenses beyond the free tier. Note that a credit card must be provided for the GCP project, see [Why do I need to provide a credit card?](https://cloud.google.com/free/docs/frequently-asked-questions#why-credit-card).
 
 If this is your first time using BigQuery then follow below steps to set up a project:
 1. Navigate to [Google Cloud Platform](https://console.cloud.google.com/projectcreate).

@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-16
+updated: 2022-07-19
 
 # Optional
 # How to add a new author
@@ -284,7 +284,7 @@ The CrUX dataset is processed through a pipeline to consolidate, aggregate and f
 
 The data in the Chrome UX Report is a 28-day rolling average of aggregated metrics. This means that the data presented in the Chrome UX Report at any given time is actually data for the past 28 days aggregated together.
 
-This is similar to how the [CrUX dataset on BigQuery](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/getting-started) aggregates monthly reports.
+This is similar to how the [CrUX dataset on BigQuery](../bigquery/) aggregates monthly reports.
 
 ### Daily updates
 
