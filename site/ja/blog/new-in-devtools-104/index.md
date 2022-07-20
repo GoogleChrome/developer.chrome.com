@@ -45,7 +45,7 @@ Chromium issue: [1303521](https://crbug.com/1303521)
 ## Recorder パネルでのスロー再生オプション {: #recorder }
 
 <!-- You can now replay user flows at a slower speed — slow, very slow, and extremely slow. These options let you better observe each step replay on screen. -->
-ユーザーフローを低速、超低速、超低速で再生できるようになりました。これらのオプションにより、各ステップのリプレイを画面上でよりよく観察することができます。
+ユーザーフローをさらに低速に再生できるようになりました（slow, very slow, extremely slow）。これらのオプションにより、各ステップのリプレイを画面上でよりよく観察することができます。
 
 <!-- [Open](/docs/devtools/recorder/#open) the **Recorder** panel and [start a new recording](/docs/devtools/recorder/#record). Once the recording is done, click on the **Replay** dropdown button. Select a speed to start a replay. -->
 **Recorder** パネルを[開き](/docs/devtools/recorder/#open)、[レコーディングを開始します](/docs/devtools/recorder/#record)。レコーディングが完了したら、 **Replay** ドロップダウンボタンをクリックします。リプレイを開始する速度を選択しましょう。
@@ -76,7 +76,7 @@ Chromium issue: [1325751](https://crbug.com/1325751)
 新しい **Group files by Authored / Deployed** オプションを有効にして、 Sources パネルでファイルを整理します。フレームワーク（ React、 Angular など）で Web アプリケーションを開発する場合、ビルドツール（ Webpack 、 Vite など）が生成する minified ファイルによって、ソースファイルをナビゲートするのが困難になることがあります。
  
 <!-- With this checkbox, you can group files into 2 categories for quicker file search: -->
-このチェックボックスをオンにすると、ファイルを2つのカテゴリーに分類して、より迅速に検索することができます。
+このチェックボックスをオンにすると、ファイルを2つのカテゴリーに分類して、より迅速に検索できます。
  
 <!-- - **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps (provided by your build tools).
 - **Deployed**. The actual files that the browser reads. Usually these files are minified. -->
@@ -187,7 +187,7 @@ JavaScript オブジェクトのプロパティのオートコンプリートは
 4. 継承された列挙可能ではないプロパティ
 
 <!-- Previously, developers found it harder to find relevant properties because the suggestion only favored own properties over inherited properties, and all inherited properties were given equal priority. -->
-これまで、開発者は関連するプロパティを見つけることが困難でした。なぜなら、サジェストでは継承されたプロパティよりも自身のプロパティが優先され、継承されたプロパティはすべて等しく優先されたからです。
+これまで、開発者は関連するプロパティを見つけることが困難でした。なぜなら、サジェストでは継承されたプロパティよりも自身のプロパティが優先され、継承されたプロパティはすべて同じ優先度を持っていたからです。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IvFTcOWrBOTTMRHqn8u4.png", alt="JavaScript オブジェクトのオートコンプリート候補の改善", width="800", height="563" %}
 
