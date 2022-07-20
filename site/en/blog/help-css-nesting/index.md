@@ -807,4 +807,4 @@ options we're evaluating. Please review them carefully and let us know which you
 prefer below. We appreciate you helping us advance CSS nesting to a syntax we
 all will come to know and love!
 
-<a class="material-button button-filled color-bg bg-primary" href="https://forms.gle/HgNuBjmMR21FvSa7A">Take the survey!</a>
+<a class="material-button button-filled color-bg bg-primary" href="https://google.qualtrics.com/jfe/preview/SV_cvX4JasHF4HVtmS?Q_CHL=preview&Q_SurveyVersionID=current&previewID=2939a0df-46c5-467b-b49b-8b2f79d30cd1">Take the survey!</a>
