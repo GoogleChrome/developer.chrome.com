@@ -31,7 +31,7 @@ The "tabs" permission
 Host permissions
 
 : [Host permissions][doc-match] allow an extension to read and query a matching tab's four sensitive
-  `tabs.Tab` properties. They can also interact directly with the matching tabs using methods  such
+  `tabs.Tab` properties. They can also interact directly with the matching tabs using methods such
   as [`tabs.captureVisibleTab()`](#method-captureVisibleTab),
   [`tabs.executeScript()`](#method-executeScript), [`tabs.insertCSS()`](#method-insertCSS), and
   [`tabs.removeCSS()`](#method-removeCSS).
@@ -189,7 +189,7 @@ This example shows how an extension can toggle the muted state for a given tab.
 
 This example shows how to move a tab while a drag may or may not be in progress. While this example
 uses `chrome.tabs.move`, you can use the same waiting pattern for other calls that modify tabs while
-a drag may be in progress.
+a drag is in progress.
 
 <web-tabs>
   <web-tab  title="Manifest V3 (promise)">
@@ -213,7 +213,7 @@ a drag may be in progress.
 
 {% Aside 'success' %}
 
-The use of catch(error) in a Promise context is a way to ensure that an error that otherwise
+Using catch(error) in a Promise context is a way to ensure that an error that otherwise
 populates chrome.runtime.lastError is not unchecked.
 
 {% endAside %}
