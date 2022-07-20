@@ -62,7 +62,7 @@ Chromium issue: [1306756](https://crbug.com/1306756)
 リプレイスクリプトを好きなフォーマットでエクスポートするための Chrome 拡張機能をビルドまたはインストールできるようになりました。構築方法については、[Recorder extension API](/docs/extensions/reference/devtools_recorder/) のドキュメントを参照してください。
 
 <!-- To install a demo extension, follow [these steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.  -->
-デモ用エクステンションをインストールするには、ドキュメントに記載されている[これらの手順](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards)に従ってください。
+デモ用の拡張機能をインストールするには、ドキュメントに記載されている[これらの手順](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards)に従ってください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Recorder パネル用のカスタム拡張機能", width="800", height="486" %}
 
@@ -120,7 +120,7 @@ Chromium issue: [1322808](https://crbug.com/1322808)
 この[例](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)には、いくつかの名前付きスロットを持つカードが含まれています。あるカードの `person-occupation` スロットを検査し、その横にある `slot` バッジをクリックすると、そのカードに割り当てられたスロットが表示されます。
 
 <!-- [Learn](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots) how to use [<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) and [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) elements to create a flexible template that can then be used to populate the shadow DOM of a web component. -->
-[<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) と [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) 要素を使って柔軟なテンプレートを作成し、それを Web コンポーネントの Shadow DOM に入力する方法を学びましょう。
+[<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) と [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) 要素を使って柔軟なテンプレートを作成し、それを Web コンポーネントの Shadow DOM に入力する方法を [学びましょう](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots) 。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7uQGHp9WoMCG1RIAkgIF.png", alt="要素に割り当てられたスロットの表示", width="800", height="486" %}
 
@@ -149,7 +149,7 @@ Chromium issue: [1297439](https://crbug.com/1297439)
 ## CSS 変数のオートコンプリート時に色以外の値のプレビュー {: #css-var }
 
 <!-- When autocompleting CSS variables, DevTools now populates the non-color variable with a meaningful value so that you can preview what kind of change the value will have on the node. -->
-CSS変数のオートコンプリートの際、 DevTools は色以外の変数に意味のある値を与えるようになり、その値がノードにどのような変化を与えるかをプレビューできるようになりました。
+CSS 変数のオートコンプリートの際、 DevTools は色以外の変数に意味のある値を与えるようになり、その値がノードにどのような変化を与えるかをプレビューできるようになりました。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/V4slwNtX9HwLPdAyr8JF.png", alt="CSS 変数のオートコンプリート時に色以外の値のプレビュー", width="800", height="431" %}
 
@@ -162,7 +162,7 @@ Chromium issue: [1285091](https://crbug.com/1285091)
 ## Back/forward cache ペインでブロックしているフレームの特定 {: #bfcache }
 
 <!-- The [Back/forward cache](/docs/devtools/application/back-forward-cache/) pane in the **Application** panel has new **frames** section to help you identify blocking frames that may be preventing the page from being eligible for bfcache. -->
-**Application** パネルの [Back/forward cache](/docs/devtools/application/back-forward-cache/) ペインに新しい **frames** セクションが追加されました。 bfcache の対象からページを妨げている可能性があるブロック フレームを識別するのに役立ちます。
+**Application** パネルの [Back/forward cache](/docs/devtools/application/back-forward-cache/) ペインに新しい **frames** セクションが追加されました。 ページが bfcache の対象となるのを妨げている可能性がある、ブロックしているフレームを特定するのに役立ちます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UaRYEoYYoXhjSIn9seYK.png", alt="Back/forward cache ペインでブロックしているフレームの特定", width="800", height="486" %}
  
@@ -182,9 +182,9 @@ JavaScript オブジェクトのプロパティのオートコンプリートは
 3. Inherited enumerable properties
 4. Inherited non-enumerable properties -->
 1. 自身の列挙可能なプロパティ
-2. 自身の非列挙型プロパティ
+2. 自身の列挙可能ではないプロパティ
 3. 継承された列挙可能なプロパティ
-4. 継承された非列挙型プロパティ
+4. 継承された列挙可能ではないプロパティ
 
 <!-- Previously, developers found it harder to find relevant properties because the suggestion only favored own properties over inherited properties, and all inherited properties were given equal priority. -->
 これまで、開発者は関連するプロパティを見つけることが困難でした。なぜなら、サジェストでは継承されたプロパティよりも自身のプロパティが優先され、継承されたプロパティはすべて等しく優先されたからです。
