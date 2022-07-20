@@ -80,7 +80,7 @@ Chromium issue: [1325751](https://crbug.com/1325751)
  
 <!-- - **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps (provided by your build tools).
 - **Deployed**. The actual files that the browser reads. Usually these files are minified. -->
-- **Authored**: IDE で表示するソースファイルに似ています。 DevTools はソースマップ(ビルドツールによって提供される)に基づいてこれらのファイルを生成します。
+- **Authored**: IDE で表示するソースファイルに似ています。 DevTools はソースマップ（ビルドツールによって提供される）に基づいてこれらのファイルを生成します。
 - **Deployed**: ブラウザが読み取る実際のファイル。通常、これらのファイルは最小化されています。
  
 <!-- Try it yourself with this [React demo](https://reactjs.org/)! -->
