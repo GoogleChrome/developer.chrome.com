@@ -62,7 +62,7 @@ Issue relacionada: [1306756](https://crbug.com/1306756)
 Agora você pode criar ou instalar uma extensão do Chrome para exportar scripts de repetição em seu formato favorito. Consulte a documentação da [API de extensão do gravador](/docs/extensions/reference/devtools_recorder/) para saber como criar uma.
 
 <!-- To install a demo extension, follow [these steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.  -->
-Para instalar uma extensão de demonstração, siga [estas etapas](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) descrito na documentação .
+Para instalar uma extensão de demonstração, siga [estas etapas](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) descritas na documentação .
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Crie uma extensão para o painel Recorder", width="800", height="486" %}
 
@@ -103,7 +103,7 @@ Visualize marcas `performance.measure()` em sua gravação com a nova trilha **T
 Por exemplo, esta [página da web](https://jec.fyi/demo/perf-measure) usa o [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) para calcular o tempo decorrido do carregamento do texto.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
-Quando você começa [medindo o carregamento da página] (/docs/devtools/performance-insights/#record), a trilha **User Timings** é exibida na gravação. Clique no item de tempos para ver seus detalhes no painel lateral.
+Quando você começa [medindo o carregamento da página](/docs/devtools/performance-insights/#record), a trilha **User Timings** é exibida na gravação. Clique no item de tempos para ver seus detalhes no painel lateral.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="Nova trilha de Tempos de Usuários no painel de Performance insights", width="800", height="499" %}
 
