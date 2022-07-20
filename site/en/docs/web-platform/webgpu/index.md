@@ -77,7 +77,7 @@ origin trial is expected to end in Chrome&nbsp;109 (Feb 1, 2023).
 
 {% Aside 'caution' %}
 The origin trial is expected to [pause for 2 weeks](https://groups.google.com/a/chromium.org/g/blink-dev/c/gBMsYQ1Aurw/m/xl1znc7fAAAJ)
-starting in Chrome&nbsp;106 (Sep 20, 2022).
+starting in Chrome&nbsp;106 (Sep 27, 2022).
 {% endAside %}
 
 {% include 'content/origin-trials.njk' %}
