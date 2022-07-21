@@ -72,11 +72,11 @@ Every top layer element has a backdrop that belongs to a top layer stack. These 
 
 If only the first backdrop in the top layer stack needs to be visible, you can achieve this by keeping track of the item identifiers in the top layer stack.
 
-If the added element is not the first one in the top layer, the function called when the element is put into the top layer applies a hiddenBackdrop class to the  `::backdrop`. This class is removed when the element is removed from the top layer.
+If the added element is not the first one in the top layer, the function called when the element is put into the top layer applies a `hiddenBackdrop` class to the  `::backdrop`. This class is removed when the element is removed from the top layer.
 
 Check out the code in this example demo:
 
-{% Glitch { id: 'season-dust-money, height: 1000 } %}
+{% Glitch { id: 'season-dust-money', height: 1000 } %}
 
 ### Top layer support design in DevTools
 
@@ -89,10 +89,9 @@ Moreover, DevTools top layer support helps to visualize the position of the back
  
 With the top layer support features, you can:
 
-Observe which elements are in the top layer stack at any time. The top layer representation stack changes dynamically as elements are added or removed from the top layer.
-See the element position in the top layer stack.
-
-Jump from the top layer element or elements' backdrop pseudo-element in the tree to the element or backdrop pseudo-element in the top layer representation container and back.
+1. Observe which elements are in the top layer stack at any time. The top layer representation stack changes dynamically as elements are added or removed from the top layer.
+1. See the element position in the top layer stack.
+1. Jump from the top layer element or elements' backdrop pseudo-element in the tree to the element or backdrop pseudo-element in the top layer representation container and back.
 
 Let's see how to use these features!
 
@@ -201,7 +200,7 @@ The event looks like the following:
 #### CDP considerations
 
 There were multiple options on how the CDP support of the top layer could be implemented. Another option we considered was making an event that would return the list of the top layer elements instead of just informing the front end about an addition or removal of a top layer element. 
- 
+
 Alternatively, we could make two events instead of the command: `topLayerElementAdded` and `topLayerElementRemoved`. In this case, we would be receiving an element and would need to manage the array of the top layer elements on the front end.
 
 Currently, a frontend event calls the `getTopLayerElements` command to get a list of updated elements. If we were to send a list of elements or a specific element that caused the change every time an event is triggered, we could avoid one step of calling the command.
