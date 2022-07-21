@@ -1,10 +1,10 @@
 ---
 layout: layouts/blog-post.njk
-title: Help CSS nesting pick syntax
+title: Help pick a syntax for CSS nesting
 description: >
-  Two competing syntaxes need your help in determining which should be championed through to a spec candidate.
+  Two competing syntaxes need your help in determining which should be championed through to a specification candidate.
 subhead: >
-  Two competing syntaxes need your help in determining which should be championed through to a spec candidate.
+  Two competing syntaxes need your help in determining which should be championed through to a specification candidate.
 date: 2022-07-14
 authors:
   - argyle
@@ -423,7 +423,7 @@ figure > figcaption > p {
 }
 ```
 
-## Example 6 - Mixing direct and parent Nesting
+## Example 6 - Mixing direct and parent nesting
 
 ### @nest
 
