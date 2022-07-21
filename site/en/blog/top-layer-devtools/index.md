@@ -13,7 +13,7 @@ tags:
     - devtools
 ---
 
-[Chrome DevTools](https://developer.chrome.com/docs/devtools/) is adding support for top layer elements, making it easier for developers to debug their code that makes use of top layer elements.
+[Chrome DevTools](/docs/devtools/) is adding support for top layer elements, making it easier for developers to debug their code that makes use of top layer elements.
 
 {% Aside %}
 **Note**: This is a preview feature available in [Chrome Canary](https://www.google.com/chrome/canary/) from version 105.
