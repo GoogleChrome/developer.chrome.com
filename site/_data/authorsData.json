@@ -106,7 +106,10 @@
     "twitter": "devnook"
   },
   "addyosmani": {
-    "twitter": "addyosmani"
+    "country": "USA",
+    "twitter": "addyosmani",
+    "github": "addyosmani",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/LJyNTOzyWbowv2mrlzPS.jpeg"
   },
   "paullewis": {
     "homepage": "https://aerotwist.com/",
@@ -340,6 +343,10 @@
   "titouan": {
     "country": "FR",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/vdjz5azkSvwbgq3lrg9X.jpeg"
+  },
+  "lyf": {
+    "github": "ivanlish",
+    "image": "image/DLKYfvmcBoO4o7kmxoNBYhucroy1/S9Tz7VYL3vENKp9VXE7W.jpeg"
   },
   "jecelynyeen": {
     "country": "DE",
@@ -697,6 +704,13 @@
     "country": "US",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/iy1Y4UTfdXCdXqdnveqi.jpg"
   },
+  "simonhearne": {
+    "country": "UK",
+    "twitter": "SimonHearne",
+    "github": "SimonHearne",
+    "linkedin": "https://www.linkedin.com/in/simonhearne/",
+    "homepage": "https://simonhearne.com"
+  },
   "jarhar": {
     "country": "US",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/xHYktxBPGfDHbzmEufy9.jpeg",
@@ -761,5 +775,20 @@
   "sidlall": {
     "image": "image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/vsYvKkANii5XrJVjwsJQ.jpg",
     "twitter": "SiddharthLall1"
+  },
+  "christianliebel": {
+    "country": "DE",
+    "homepage": "https://christianliebel.com/",
+    "twitter": "christianliebel",
+    "github": "christianliebel",
+    "glitch": "christianliebel",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/pguQ0oykD0nNu9jM5OcP.jpeg"
+  },
+  "tunetheweb": {
+    "country": "IE",
+    "twitter": "tunetheweb",
+    "github": "tunetheweb",
+    "homepage": "https://www.tunetheweb.com",
+    "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/FzCdsVVLfgdqxfgs6BDc.jpeg"
   }
 }

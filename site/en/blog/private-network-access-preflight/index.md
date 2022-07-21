@@ -4,6 +4,7 @@ title: "Private Network Access: introducing preflights"
 authors:
   - titouan
   - agektmr
+  - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
 updated: 2022-07-07

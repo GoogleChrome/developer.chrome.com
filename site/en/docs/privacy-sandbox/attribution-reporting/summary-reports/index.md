@@ -15,9 +15,10 @@ authors:
 
 ## Implementation status
 
-*  This API is available in the [ads relevance and measurement origin trial]/blog/privacy-sandbox-unified-origin-trial/).
-*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
+*  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
 ## What is an Attribution Reporting summary report?
 
@@ -62,7 +63,9 @@ privacy-preserving way, without third-party cookies.
 
 In contrast to Attribution Reporting API's event-level reports, which associate
 singular events (such as clicks or views) to [coarse
-data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased). summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased).
+data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide
+aggregated data (such as the number of users who converted) attached to
+detailed conversion data (such as what specific product the users purchased).
 
 {% Aside 'key-term' %}
 Adtechs [run an aggregation service](#aggregation-service) that processes
@@ -100,11 +103,10 @@ The proposed process to create a summary report is as follows:
 
 1. Aggregatable reports are sent to the _reporting origin_, operated by an
    adtech provider.
-   *  For example, these reports may include location details, number of
-      clicks, value of the conversion (such as a purchase price), or other
-      metrics defined by the adtech provider. Since the reports are encrypted,
-      adtech providers cannot see or access the content of any individual
-      report.
+   *  These reports may include location details, number of clicks, value of
+	 the conversion (such as a purchase price), or other metrics defined by the
+	 adtech provider. Reports are encrypted, so adtechs cannot see or access the
+	 content of any individual report.
 1. Once the adtech reporting origin receives the aggregatable reports, the
    adtech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
    *  In our initial implementation, the [aggregation
@@ -147,8 +149,7 @@ audit. These safeguards are meaningful to:
 *  Adtechs, who can verify that the aggregation process uses valid data and
    can be monitored appropriately
 
-
-### Proposal for an aggregation service {: #aggregation-service}
+### Generate reports with the Aggregation Service {: #aggregation-service}
 
 {% Aside 'key-term' %}
 A _Trusted Execution Environment_ is a special configuration of computer
@@ -252,16 +253,15 @@ start with one individual's browser actions.
       height="209"
    %}
    
-## How will adtech providers create a summary report?
+## Create a summary report
 
 For adtech providers to retrieve a summary report, the following steps must be
 taken:
 
-1. The adtech provider collects aggregatable reports from individual users'
-   browsers.
+1. The adtech collects aggregatable reports from individual users' browsers.
    {% Aside %}
-   The adtech provider can only decrypt these reports in the aggregation
-   service.
+   Adtechs can only decrypt these reports in the aggregation service. The
+   decrypted data is not available outside of the TEE.
    {% endAside %}
 1. The adtech provider batches the aggregatable reports and sends the batches
    to the aggregation service.
