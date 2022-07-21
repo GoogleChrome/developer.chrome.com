@@ -97,7 +97,7 @@ Let's see how to use these features!
 
 #### Top layer container
 
-To help visualize the top layer elements, DevTools adds a _top layer container_ to the elements tree. It resides at the end of the `<body>` tag.
+To help visualize the top layer elements, DevTools adds a _top layer container_ to the elements tree. It resides after the closing `</html>` tag.
 
 This container allows you to observe the elements in the top layer stack at any time. The top layer container is a list of links to the top layer elements and their backdrops. The top layer representation stack changes dynamically as elements are added or removed from the top layer.
 
@@ -105,15 +105,15 @@ To find top layer elements within the elements tree or the top layer container, 
 
 To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element in the top layer container.
 
-{% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/NPG3v0Nc1pzkbzZAjVPJ.gif", alt="Jumping from the top layer container link to the element.", width="600", height="318" %}
+{% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/36Yck7O77zDipSNGNNbB.gif", alt="Jumping from the top layer container link to the element.", width="800", height="461" %}
 
 To jump from the top layer tree element to the link in the top layer container, click the **top layer** badge next to the element.
 
-{% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/QIyNqWWscZJEo53NDXrK.gif", alt="Jumping from an element to the top layer container link.", width="600", height="238" %}
+{% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/7azKIV0O938QVIc6YcE3.gif", alt="Jumping from an element to the top layer container link.", width="800", height="274" %}
 
 You can turn off any badge, including the **top-layer** one. To disable the badges, right-click on any badge, choose **Badge settings** and clear the ticks next to badges you want to hide.
 
-{% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/poAY4zTO6wnFkAvIIauQ.gif", alt="Turning the badge off.", width="600", height="226" %}
+{% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/FJydb49bYgzMh22sAHHC.gif", alt="Turning the badge off.", width="800", height="438" %}
  
 {% Aside %}
 **Note**: The top layer container appears only when the top layer stack contains rendered content.
@@ -127,7 +127,7 @@ The badges next to the tree elements indicate whether the elements belong to the
 
 In this screenshot, the top layer stack consists of two elements, with the second element at the top of the stack. If you remove the second element, the first one moves to the top.
 
-{% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/flRQ3QprqBGGSUpmrjDZ.png", alt="The order of elements in the stack.", width="800", height="267" %}
+{% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/BhKkmX9qazfUJB0A9p5W.png", alt="The order of elements in the stack.", width="800", height="243" %}
 
 #### Backdrops in the top layer container
 
@@ -135,8 +135,8 @@ As mentioned above, every top layer element has a CSS pseudo-element called back
 
 In the elements tree, a backdrop element resides before the closing tag of the element it belongs to. However, in the top layer container, a backdrop link is listed right above the top layer element it belongs to.
 
-{% Img src="image/ChqWwaDOcpfo1hIcJvU9ZaNbWOB2/AXuiUTG7wZxCgcTOSS1b.png", alt="Backdrops stack position.", width="800", height="316" %}
- 
+{% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/pplexicnM74T4jDf9B8B.png", alt="Backdrops stack position.", width="800", height="421" %}
+
 ### Changes to the DOM tree
 
 `ElementsTreeElement`, the class responsible for creating and managing individual DOM tree elements in DevTools, was not sufficient to implement a top layer container. 
@@ -147,7 +147,7 @@ The top layer container node, that has a list of links to top layer elements, ne
 
 To create a frontend node that represents the top layer, we added a new type of frontend node that is created without a `DOMNode`. This top layer container element is the first frontend node that does not have a `DOMNode`, meaning it exists only on the frontend and the backend does not 'know' about it. To have the same behavior as other nodes, we created a new [`TopLayerContainer`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/devtools-frontend/src/front_end/panels/elements/TopLayerContainer.ts;l=23?q=TopLayerContainer&sq=&ss=chromium) class that extends the [`UI.TreeOutline.TreeElement`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/devtools-frontend/src/front_end/ui/legacy/Treeoutline.ts;l=431;drc=6bc65d0595702fc826ca87e2cfe519a134b62d90) class which is responsible for the behavior of frontend nodes.
 
-To achieve the desired placement, the class that renders an element attaches `TopLayerContainer` as the last child of the `<body>` tag.
+To achieve the desired placement, the class that renders an element attaches `TopLayerContainer` as the next sibling of the `<html>` tag.
 
 A new top layer badge indicates that the element is in the top layer and serves as a link to the shortcut of this element in the `TopLayerContainer` element.
 
