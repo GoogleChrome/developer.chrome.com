@@ -321,7 +321,7 @@ Including the `{observe: false}` argument means that topics can be returned, but
 cause the current page to be included in the weekly epoch calculation, nor will it update the list
 of topics observed for the caller.
 
-### Use headers to access topics
+### Use a header to access topics
 
 Instead of calling `document.browsingTopics()`, topics can be retrieved via a request header, and
 marked as observed and eligible for topics calculation via response headers.
@@ -329,16 +329,15 @@ marked as observed and eligible for topics calculation via response headers.
 This is likely to be considerably more performant than using the JavaScript API.
 
 The request header will be sent on document requests if the list of topics is non-empty and the
-request is allowable: for example, the appropriate [permission
-policy](https://developer.chrome.com/docs/privacy-sandbox/topics/#site-opt-out) is in play, and the
-context is secure.
+request is allowable: for example, the appropriate [permission policy](#site-opt-out) is in play,
+and the context is secure.
 
 #### Request header example
 
 ``` text
 Sec-Browsing-Topics: 123;model=1;taxonomy=1;version=2, 2;model=1;taxonomy=1;version=2
 ```
-This example has two topics from the
+This header includes two topics from the
 [taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 123 and 2,
 along with their version information.
 
