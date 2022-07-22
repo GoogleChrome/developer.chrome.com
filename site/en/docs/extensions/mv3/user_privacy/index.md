@@ -132,7 +132,7 @@ function saveTabData(tab) {
 }
 ```
 
-[1]: /docs/webstore/program_policies#userdata
+[1]: /docs/webstore/program-policies#userdata
 [2]: /docs/extensions/mv3/manifest
 [3]: #optional_permissions
 [4]: /docs/extensions/mv3/manifest/activeTab

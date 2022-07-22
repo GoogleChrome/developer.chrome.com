@@ -186,7 +186,7 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [crx-group]: http://groups.google.com/a/chromium.org/group/chromium-extensions
 [cws]: https://chrome.google.com/webstore
 [cws-docs]: /docs/webstore
-[cws-policies]: /docs/webstore/program_policies/
+[cws-policies]: /docs/webstore/program-policies/
 [cws-publish]: /docs/webstore/publish/
 [devmode]: /docs/extensions/mv3/getstarted/#manifest
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole

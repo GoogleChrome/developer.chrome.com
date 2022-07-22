@@ -12,7 +12,7 @@ Ratings are not intended to reflect the quality or complexity of your extension.
 As the developer, you are ultimately responsible for rating your extension appropriately. Use the
 following rules as guidance in determining whether your extension should be rated "Mature." When
 determining your extension's rating, consider all the content in your extension, including user
-generated content and ads, and content that your extension links to. 
+generated content and ads, and content that your extension links to.
 
 {% Aside 'caution' %}
 
@@ -55,5 +55,5 @@ Extensions that focus on the consumption or sale of drugs, alcohol or tobacco sh
 Illegal activity or alcohol, tobacco, or drug content that is targeted at minors is not allowed in
 the Chrome Web Store.
 
-[content-policies]: /docs/webstore/program_policies/#content_policies 
+[content-policies]: /docs/webstore/program-policies/#content_policies
 [developer-agreement]:/docs/webstore/terms/

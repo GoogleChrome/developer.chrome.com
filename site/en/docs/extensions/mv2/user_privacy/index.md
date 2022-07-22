@@ -107,7 +107,7 @@ All requested user data should be treated with care. Store and retrieve data in 
 a registered domain. Always use HTTPS to connect and avoid keeping sensitive user data in the client
 side of an extension as extension storage is not encrypted.
 
-[1]: /docs/webstore/program_policies#userdata
+[1]: /docs/webstore/program-policies#userdata
 [2]: /docs/extensions/mv2/manifest
 [3]: #optional_permissions
 [4]: /docs/extensions/mv2/manifest/activeTab

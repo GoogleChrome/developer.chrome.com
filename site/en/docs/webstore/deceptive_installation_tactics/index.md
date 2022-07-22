@@ -138,5 +138,5 @@ process FAQ][complaint-faq].
 [ads-misrepresentation]: https://support.google.com/adspolicy/answer/6020955
 [complaint-faq]: /docs/webstore/complaint-faq
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[program-policies]: /docs/webstore/program_policies
+[program-policies]: /docs/webstore/program-policies
 
