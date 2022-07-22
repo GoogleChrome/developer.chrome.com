@@ -333,6 +333,7 @@ and the context is secure.
 ``` text
 Sec-Browsing-Topics: 123;model=1;taxonomy=1;version=2, 2;model=1;taxonomy=1;version=2
 ```
+
 This header includes two topics from the
 [taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 123 and 2,
 along with their version information.
@@ -342,6 +343,7 @@ A Topics request header can also be provided with a `fetch()` request:
 ``` javascript
 fetch(<url>, {browsingTopics: true})
 ```
+
 #### Response header example
 
 ``` text
