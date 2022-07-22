@@ -31,9 +31,8 @@ This document outlines a new proposal for interest-based advertising: the Topics
 ## Take part in a Topics origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
-made available in Chrome Beta 101.0.4951.26 and above on desktop for the
-Topics, [FLEDGE](/docs/privacy-sandbox/fledge) and
-[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics,
+[FLEDGE](/docs/privacy-sandbox/fledge) and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
 
@@ -57,8 +56,8 @@ that provide a valid trial token:
     document.head.append(otMeta);
     ```
 
-An iframe running Topics code&mdash;such as a `document.browsingTopics()` call to observe topics&mdash;will
-need to provide a token that matches its origin.
+An iframe running Topics code&mdash;such as a `document.browsingTopics()` call to observe
+topics&mdash;will need to provide a token that matches its origin.
 
 {% Aside 'caution' %}
 
@@ -66,8 +65,8 @@ Not all users are eligible for the Privacy Sandbox Relevance and Measurement
 origin trial, even on pages that provide a valid trial token.
 
 [Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
-explains why this is, and shows how you can (and should) detect if an origin
-trial feature is available before attempting to use it.
+explains why this is, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
 
 {% endAside %}
 
@@ -80,17 +79,16 @@ You can try out the Topics API for a single user running Chrome 101 or above:
 *  Enable `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-explains how to set flags when running Chrome and other Chromium-based
-browsers from the command line.
+explains how to set flags when running Chrome and other Chromium-based browsers from the command
+line.
 
 {% Aside %}
 
-This is an in-progress version of the API for early testing, so it should
-not be considered feature complete or indicative of the final implementation.
+This is an in-progress version of the API for early testing, so it should not be considered feature
+complete or indicative of the final implementation.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides
-implementation timing information for FLEDGE and other Privacy Sandbox
-proposals.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
+information for FLEDGE and other Privacy Sandbox proposals.
 
 {% endAside %}
 
@@ -116,16 +114,15 @@ being used. To protect user privacy, there is no way to check for this programma
 
 ## Why do we need this API?
 
-The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
-for a mechanism to enable interest-based advertising, without having to
-resort to tracking the sites a user visits.
+The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal for a mechanism to
+enable interest-based advertising, without having to resort to tracking the sites a user visits.
 
 {% Aside %}
 
 **Interest-based advertising (IBA)** is a form of personalized advertising in which an ad is
 selected for a user based on their interests, inferred from the sites they've recently visited.
-This is different from contextual advertising, which aims to match content
-on the page the user is visiting.
+This is different from contextual advertising, which aims to match content on the page the user is
+visiting.
 
 IBA can help advertisers to reach potential customers and help fund websites that cannot
 otherwise easily monetize visits to their site purely via contextual advertising. IBA can also
@@ -140,11 +137,11 @@ appropriate advertisements.
 
 The Topics API has three main tasks:
 
--  Map website hostnames to topics of interest. For example, a yoga website
-   might be classified as being related to "Fitness".
+-  Map website hostnames to topics of interest. For example, a yoga website might be classified as
+   being related to "Fitness".
 -  Calculate the top topics for a user based on their recent browsing activity.
--  Provide a JavaScript API to provide topics currently of interest to the
-   user, to help select the appropriate ads.
+-  Provide a JavaScript API to provide topics currently of interest to the user, to help select the
+   appropriate ads.
 
 The Topics API can help facilitate robust user controls, as the API is built on top of recognizable,
 high-level topics. Chrome plans to offer users the option to remove individual topics, and to show
@@ -179,10 +176,9 @@ visited.
 View the topics inferred for hostnames [from the `chrome://topics internal` page](#view-inferred-topics).
 {% endAside %}
 
-The diagram below outlines a simplified example, to demonstrate how the
-Topics API might help an adtech platform to select an appropriate ad. The
-example assumes that the user's browser already has a
-model to map website hostnames to topics.
+The diagram below outlines a simplified example, to demonstrate how the Topics API might help an
+adtech platform to select an appropriate ad. The example assumes that the user's browser already
+has a model to map website hostnames to topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
   alt="Diagram showing the stages in the Topics API lifecycle, from a user visiting websites to an ad
