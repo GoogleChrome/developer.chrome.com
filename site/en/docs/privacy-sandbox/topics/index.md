@@ -6,7 +6,7 @@ subhead: >
 description: >
  A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-07-18
+updated: 2022-07-22
 authors:
   - samdutton
 ---
@@ -31,7 +31,7 @@ This document outlines a new proposal for interest-based advertising: the Topics
 ## Take part in a Topics origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
-made available in Chrome Beta 101.0.4951.26 and above on desktop for the 
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the
 Topics, [FLEDGE](/docs/privacy-sandbox/fledge) and
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
@@ -62,11 +62,11 @@ need to provide a token that matches its origin.
 
 {% Aside 'caution' %}
 
-Not all users are eligible for the Privacy Sandbox Relevance and Measurement 
+Not all users are eligible for the Privacy Sandbox Relevance and Measurement
 origin trial, even on pages that provide a valid trial token.
 
 [Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
-explains why this is, and shows how you can (and should) detect if an origin 
+explains why this is, and shows how you can (and should) detect if an origin
 trial feature is available before attempting to use it.
 
 {% endAside %}
@@ -80,16 +80,16 @@ You can try out the Topics API for a single user running Chrome 101 or above:
 *  Enable `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-explains how to set flags when running Chrome and other Chromium-based 
+explains how to set flags when running Chrome and other Chromium-based
 browsers from the command line.
 
 {% Aside %}
 
-This is an in-progress version of the API for early testing, so it should 
+This is an in-progress version of the API for early testing, so it should
 not be considered feature complete or indicative of the final implementation.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides 
-implementation timing information for FLEDGE and other Privacy Sandbox 
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides
+implementation timing information for FLEDGE and other Privacy Sandbox
 proposals.
 
 {% endAside %}
@@ -117,14 +117,14 @@ being used. To protect user privacy, there is no way to check for this programma
 ## Why do we need this API?
 
 The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
-for a mechanism to enable interest-based advertising, without having to 
+for a mechanism to enable interest-based advertising, without having to
 resort to tracking the sites a user visits.
 
 {% Aside %}
 
 **Interest-based advertising (IBA)** is a form of personalized advertising in which an ad is
 selected for a user based on their interests, inferred from the sites they've recently visited.
-This is different from contextual advertising, which aims to match content 
+This is different from contextual advertising, which aims to match content
 on the page the user is visiting.
 
 IBA can help advertisers to reach potential customers and help fund websites that cannot
@@ -140,10 +140,10 @@ appropriate advertisements.
 
 The Topics API has three main tasks:
 
--  Map website hostnames to topics of interest. For example, a yoga website 
+-  Map website hostnames to topics of interest. For example, a yoga website
    might be classified as being related to "Fitness".
 -  Calculate the top topics for a user based on their recent browsing activity.
--  Provide a JavaScript API to provide topics currently of interest to the 
+-  Provide a JavaScript API to provide topics currently of interest to the
    user, to help select the appropriate ads.
 
 The Topics API can help facilitate robust user controls, as the API is built on top of recognizable,
@@ -179,8 +179,8 @@ visited.
 View the topics inferred for hostnames [from the `chrome://topics internal` page](#view-inferred-topics).
 {% endAside %}
 
-The diagram below outlines a simplified example, to demonstrate how the 
-Topics API might help an adtech platform to select an appropriate ad. The 
+The diagram below outlines a simplified example, to demonstrate how the
+Topics API might help an adtech platform to select an appropriate ad. The
 example assumes that the user's browser already has a
 model to map website hostnames to topics.
 
@@ -289,7 +289,7 @@ be returned.
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
 {% Aside 'warning' %}
-This snippet of code is provided only to show how the Topics JavaScript API 
+This snippet of code is provided only to show how the Topics JavaScript API
 might be used. API design is subject to change.
 {% endAside %}
 
@@ -311,6 +311,58 @@ const creative = await response.json();
 
 // Display ad.
 ```
+
+#### Access topics without modifying state {: #observe-false}
+
+A caller can specify that they would like to retrieve topics without modifying state by calling
+`document.browsingTopics({observe: false})`.
+
+Including the `{observe: false}` argument means that topics can be returned, but the call will not
+cause the current page to be included in the weekly epoch calculation, nor will it update the list
+of topics observed for the caller.
+
+### Use headers to access topics
+
+Instead of calling `document.browsingTopics()`, topics can be retrieved via a request header, and
+marked as observed and eligible for topics calculation via response headers.
+
+This is likely to be considerably more performant than using the JavaScript API.
+
+The request header will be sent on document requests if the list of topics is non-empty and the
+request is allowable: for example, the appropriate [permission
+policy](https://developer.chrome.com/docs/privacy-sandbox/topics/#site-opt-out) is in play, and the
+context is secure.
+
+#### Request header example
+
+``` text
+Sec-Browsing-Topics: 123;model=1;taxonomy=1;version=2, 2;model=1;taxonomy=1;version=2
+```
+This example has two topics from the
+[taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 123 and 2,
+along with their version information.
+
+A Topics request header can also be provided with a `fetch()` request:
+
+``` javascript
+fetch(<url>, {browsingTopics: true})
+```
+#### Response header example
+
+``` text
+Observe-Browsing-Topics: 1
+```
+
+#### Notes
+
+-  Redirects will be followed, and the topics sent in the redirect request will be specific to
+    the redirect URL.
+-  The request header will not modify state for the caller unless there is a corresponding
+    response header. That is, the topic of the page won't be considered observed, nor will it
+    affect the user's topic calculation for the next epoch.
+-  The response header will only be honored if the corresponding request included the topics
+    header (or would have included the header if it wasn't empty).
+-  The registrable domain used for topic observation is that of the URL of the request.
 
 ### How does the Topics API decide which callers can see which topic?
 
