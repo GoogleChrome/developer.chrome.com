@@ -288,11 +288,6 @@ be returned.
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
-{% Aside 'warning' %}
-This snippet of code is provided only to show how the Topics JavaScript API
-might be used. API design is subject to change.
-{% endAside %}
-
 ```javascript
 // Get the array of top topics for this user.
 const topics = await document.browsingTopics();
@@ -311,6 +306,11 @@ const creative = await response.json();
 
 // Display ad.
 ```
+
+{% Aside 'warning' %}
+This snippet of code is provided only to show how the Topics JavaScript API
+might be used. API design is subject to change.
+{% endAside %}
 
 #### Access topics without modifying state {: #observe-false}
 
