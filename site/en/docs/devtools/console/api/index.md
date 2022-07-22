@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2016-03-21
-updated: 2022-06-28
+updated: 2022-06-22
 description: "Use the Console API to write messages to the Console."
 ---
 
