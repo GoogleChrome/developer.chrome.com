@@ -5,7 +5,7 @@ description: "With :has() landing in Chromium 105. Let's take a look at some of 
 authors:
   - jheyy
 hero: "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/SLbZGkpDT3AG1E11MMFy.jpg"
-alt: "Image of a neon sign displaying the words \"Good times\""
+alt: "Image of a neon sign displaying the words Good times"
 tags:
   - css
 date: 2022-07-25
