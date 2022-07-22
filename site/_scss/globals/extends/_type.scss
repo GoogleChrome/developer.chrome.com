@@ -27,7 +27,7 @@
     @extend %type--headline;
     font-size: 10vw;
     line-height: 1.2em;
-    
+
     @include media-query('md') {
       font-size: 6vw;
       line-height: 1.2em;
@@ -43,7 +43,7 @@
     @extend %type--headline;
     font-size: 8vw;
     line-height: 1.2em;
-    
+
     @include media-query('md') {
       font-size: 5vw;
       line-height: 1.2em;
@@ -207,7 +207,7 @@
     @include list-styles(56px);
     counter-reset: ol-step-counter;
   }
-  
+
   &--ordered-list-item {
     counter-increment: ol-step-counter;
     margin-top: 0.5em;
@@ -221,7 +221,7 @@
       @extend %type--caption;
       background: get-color('grey-100');
       border-radius: 50%;
-      content: counter(ol-step-counter);
+      content: counter(ol-step-counter, var(--ol-type, decimal));
       display: inline-flex;
       flex-shrink: 0;
       height: $bullet-size;

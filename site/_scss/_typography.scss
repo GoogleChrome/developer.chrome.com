@@ -98,6 +98,37 @@
     @extend %type--list-item;
   }
 
+  ol[type='a'],
+  &--ordered-list {
+    --ol-type: lower-alpha;
+    @extend %type--list-item;
+  }
+
+  ol[type='A'],
+  &--ordered-list {
+    --ol-type: upper-alpha;
+    @extend %type--list-item;
+  }
+
+  ol[type='i'],
+  &--ordered-list {
+    --ol-type: lower-roman;
+    @extend %type--list-item;
+  }
+
+  ol[type='I'],
+  &--ordered-list {
+    --ol-type: upper-roman;
+    @extend %type--list-item;
+  }
+
+  ol[type='1'],
+  ol:not([type]),
+  &--ordered-list {
+    --ol-type: decimal;
+    @extend %type--list-item;
+  }
+
   ol:not([class]),
   &--ordered-list {
     @extend %type--ordered-list;
