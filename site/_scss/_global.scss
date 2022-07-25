@@ -23,9 +23,9 @@ main:focus {
 }
 
 video {
-  width: 100%;
-  height: auto;
   // These custom properties are set by the Video shortcode if both the width
   // and height attributes are set.
   aspect-ratio: var(--vid-width) / var(--vid-height);
+  height: auto;
+  width: 100%;
 }
