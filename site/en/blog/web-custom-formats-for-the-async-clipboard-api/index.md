@@ -43,7 +43,7 @@ const [jpegBlob, gifBlob] = await Promise.all([
 try {
   // Write the image data to the clipboard, prepending the blobs' actual
   // types (`"image/jpeg"` and "image/gif") with the string `"web "`, so
-  // it becomes `"web image/jpeg"` and `"web image/gif"` respectively.
+  // they become `"web image/jpeg"` and `"web image/gif"` respectively.
   const clipboardItem = new ClipboardItem({
     [`web ${jpegBlob.type}`]: jpegBlob,
     [`web ${gifBlob.type}`]: gifBlob,
