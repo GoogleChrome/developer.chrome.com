@@ -324,8 +324,8 @@ marked as observed and eligible for topics calculation via response headers.
 
 This is likely to be much more performant than using the JavaScript API.
 
-The request header will be sent on document requests if the list of topics is non-empty and the
-request is allowable: for example, the appropriate [permission policy](#site-opt-out) is in play,
+The request header will be sent on document requests, if the list of topics is non-empty and the
+request is allowable. For example, when the appropriate [permission policy](#site-opt-out) is in play,
 and the context is secure.
 
 #### Request header example
