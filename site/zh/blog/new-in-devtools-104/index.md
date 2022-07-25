@@ -14,7 +14,7 @@ tags:
   - chrome-104
 ---
 
-*感谢 [Jim Lim @xyugroup](https://github.com/xyugroup) 提供的翻译*。
+*感谢 [Jim Lim @xyugroup](https://github.com/xyugroup, {# https://www.linkedin.com/in/jim-lim-539a5638" #}) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
 
@@ -35,7 +35,7 @@ tags:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7f6749f5cbbfc7d3c89cb2b6b3557d0ff33536ad #}
 
-Chromium issue: [1303521](https://crbug.com/1303521)
+Chromium 议题: [1303521](https://crbug.com/1303521)
 
 
 ## 录制面板中的慢速复盘选项 {: #recorder  } 
@@ -46,7 +46,7 @@ Chromium issue: [1303521](https://crbug.com/1303521)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="录制面板上的慢速复盘选项", width="800", height="486" %}
 
-Chromium issue: [1306756](https://crbug.com/1306756)
+Chromium 议题: [1306756](https://crbug.com/1306756)
 
 
 ## 为录制面板创建扩展 {: #recorder-extension } 
@@ -57,7 +57,7 @@ Chromium issue: [1306756](https://crbug.com/1306756)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="为录制面板客制化扩展", width="800", height="486" %}
 
-Chromium issue: [1325751](https://crbug.com/1325751)
+Chromium 议题: [1325751](https://crbug.com/1325751)
 
 
 ## 使用面板中的撰写/部署来进行分组 {: #authored-deployed } 
@@ -75,7 +75,7 @@ Chromium issue: [1325751](https://crbug.com/1325751)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6bc65d0595702fc826ca87e2cfe519a134b62d90 #}
  
-Chromium issue: [960909](https://crbug.com/960909)
+Chromium 议题: [960909](https://crbug.com/960909)
 
 
 ## 性能洞察面板中的新功能 - 用户计时追踪 {: #performance }
@@ -88,7 +88,7 @@ Chromium issue: [960909](https://crbug.com/960909)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="性能洞察面板中的用户计时追踪", width="800", height="499" %}
 
-Chromium issue: [1322808](https://crbug.com/1322808)
+Chromium 议题: [1322808](https://crbug.com/1322808)
 
  
 ## 显示元素的分配槽 {: #slot } 
@@ -103,7 +103,7 @@ Chromium issue: [1322808](https://crbug.com/1322808)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/164e238dabefc08018318a981131eedf2e81736b #}
 
-Chromium issue: [1018906](https://crbug.com/1018906)
+Chromium 议题: [1018906](https://crbug.com/1018906)
 
 
 ## 模拟性能录制的硬件并发 {: #simulate  } 
@@ -116,7 +116,7 @@ Chromium issue: [1018906](https://crbug.com/1018906)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b26de259d74a45e700d989ad9178c5e3a8b73145 #}
  
-Chromium issue: [1297439](https://crbug.com/1297439)
+Chromium 议题: [1297439](https://crbug.com/1297439)
 
 
 ## 在自动填充层叠样式表（CSS）时预览非颜色数值的值 {: #css-var } 
@@ -127,7 +127,7 @@ Chromium issue: [1297439](https://crbug.com/1297439)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/977cc58cb5654a2b68142ef8ac1b3f9ac2822694 #}
 
-Chromium issue: [1285091](https://crbug.com/1285091)
+Chromium 议题: [1285091](https://crbug.com/1285091)
 
         
 ## 识别退后/前进缓存面板中的阻塞帧 {: #bfcache } 
@@ -138,7 +138,7 @@ Chromium issue: [1285091](https://crbug.com/1285091)
  
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/897799b24fff0639d483111dd2d957288ba2bd06 #}
  
-Chromium issue: [1288158](https://crbug.com/1288158) 
+Chromium 议题: [1288158](https://crbug.com/1288158) 
  
  
 ## 改良JavaScript对象的自动填充建议 {: #autocomplete } 
@@ -156,7 +156,7 @@ JavaScript对象属性的自动填充现在可以根据这个规律显示:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cee5205ae93c95b1dce49e220b9ebfa8c998d5a6 #}
  
-Chromium issue: [1299241](https://crbug.com/1299241)
+Chromium 议题: [1299241](https://crbug.com/1299241)
 
  
 ## 源图改良 {: #sourcemaps }
@@ -169,7 +169,7 @@ Chromium issue: [1299241](https://crbug.com/1299241)
 - 调试器现在可以解析带有源图的的**范围**视图中的块箭头函数的变量. 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CZk0xjwMQAqknkW5G4Xf.png", alt="解析箭头函数中的变量", width="800", height="479" %}
 
-Chromium issues: [1329113](https://crbug.com/1329113), [1322115](https://crbug.com/1322115)
+Chromium 议题: [1329113](https://crbug.com/1329113), [1322115](https://crbug.com/1322115)
  
  
 ## 其他亮点 {: #misc } 
