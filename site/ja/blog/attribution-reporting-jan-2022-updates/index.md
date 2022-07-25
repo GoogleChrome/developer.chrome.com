@@ -1,20 +1,27 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'アトリビューション レポートの提案: 2022 年 1 月のアップデート'
+title: 'アトリビューション レポートの提案 2022 年 1 月のアップデート'
+description: >
+  Learn about changes made to Attribution Reporting to reflect community feedback.
+layout: 'layouts/blog-post.njk'
 date: 2022-01-27
-updated: 2022-01-27
+updated: 2022-06-15
+hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/0ZWxOTHGZIp5fRzDBLTx.jpg'
+alt: >
+  Measuring tape.
 authors:
   - maudn
+  - alexandrawhite
+tags:
+  - privacy
+  - experiment
 ---
 
-このアトリビューション
-レポートの提案には、コミュニティからのフィードバックに対応するため、API
-メカニズムの変更から新機能まで、さまざまな変更が反映されています。
-
 {% Aside %}
-これらの変更についてフィードバックをお寄せください。さまざまなユースケースに対する解決策をオープンに議論するには、エコシステムからのアイデアが不可欠です。
+このコンテンツは当初 Attribution Reporting API ドキュメントの一部として公開されました。今後の更新情報はより詳しい情報へのリンクを含む、[アップデート](/docs/privacy-sandbox/attribution-reporting-updates)に公開していきます。
+{% endAside %}
 
-議論に参加するには、この投稿の「**公開ディスカッションに参加**」の下にあるリンクでコメントするか、新しいイシューを作成してください。[参加の詳細についてご確認ください](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。{% endAside %}
+このアトリビューション レポートの提案には、コミュニティからのフィードバックに対応するため、API
+メカニズムの変更から新機能まで、さまざまな変更が反映されています。
 
 ## 変更履歴
 
@@ -264,6 +271,10 @@ HTTP リダイレクトを利用できます。
 {% Aside %}
 不正行為を防止するため、レポートに関する明示的な制限が追加されました。詳しくは、[プライバシー保護の変更](#privacy-protection-changes)をご覧ください。
 {% endAside %}
+
+#### Register multiple triggers without redirects
+
+コンバージョン側に（トリガーごとに）複数のピクセル要素を追加することで、リダイレクトなしに複数のアトリビューション トリガーを登録することも可能です。
 
 #### 公開ディスカッションに参加 {: #3p-reporting-discuss }
 
@@ -548,5 +559,8 @@ API
 
 ## アトリビューション レポート: すべてのリソース {: #resources }
 
-[アトリビューション
-レポート](/docs/privacy-sandbox/attribution-reporting-introduction)をご覧ください。
+*  [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-introduction).
+*  [API ハンドブック](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit?usp=sharing)
+   と [API について知っておくべきこと](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit?usp=sharing).
+
+_The header image is from <a href="https://unsplash.com/@diana_pole">Diana Polekhina</a> on <a href="https://unsplash.com/">Unsplash</a>._
