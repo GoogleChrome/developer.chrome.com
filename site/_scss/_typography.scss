@@ -100,32 +100,32 @@
 
   ol[type='a'],
   &--ordered-list {
-    --ol-type: lower-alpha;
+    --ol-counter-style: lower-alpha;
     @extend %type--list-item;
   }
 
   ol[type='A'],
   &--ordered-list {
-    --ol-type: upper-alpha;
+    --ol-counter-style: upper-alpha;
     @extend %type--list-item;
   }
 
   ol[type='i'],
   &--ordered-list {
-    --ol-type: lower-roman;
+    --ol-counter-style: lower-roman;
     @extend %type--list-item;
   }
 
   ol[type='I'],
   &--ordered-list {
-    --ol-type: upper-roman;
+    --ol-counter-style: upper-roman;
     @extend %type--list-item;
   }
 
   ol[type='1'],
   ol:not([type]),
   &--ordered-list {
-    --ol-type: decimal;
+    --ol-counter-style: decimal;
     @extend %type--list-item;
   }
 
