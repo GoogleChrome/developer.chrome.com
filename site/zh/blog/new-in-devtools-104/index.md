@@ -12,7 +12,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-104
-draft: false
 ---
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
