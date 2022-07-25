@@ -67,10 +67,7 @@ try {
       if (!type.startsWith('web ')) {
         continue;
       }
-      const webBlob = await clipboardItem.getType(type);
-      const blob = new Blob([webBlob], {
-        type: webBlob.type.replace('web ', ''),
-      });
+      const blob = await clipboardItem.getType(type);
       // Sanitize the blob if you need to, then process it in your app.
     }
   }
