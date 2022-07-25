@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Mature & Sexually Explicit Material"
 date: 2022-07-21
-articleClasses: test
+articleClasses: cws-policy
 ---
 
 <!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->

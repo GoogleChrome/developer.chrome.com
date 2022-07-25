@@ -1,0 +1,9 @@
+.cws-policy {
+  .type {
+    ol:not([class]),
+    &--ordered-list {
+      margin-top: get-size(300);
+      margin-bottom: get-size(300);
+    }
+  }
+}

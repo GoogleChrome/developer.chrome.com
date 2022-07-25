@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Listing Requirements"
 date: 2022-07-21
+articleClasses: cws-policy
 ---
 
 <!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->

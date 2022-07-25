@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Additional Requirements for Manifest V3"
 date: 2022-07-21
+articleClasses: cws-policy
 ---
 
 <!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
@@ -63,6 +64,9 @@ key)
 
 </li>
 </ol>
+
+</li>
+<li>
 
 If our reviewers are unable to determine the full functionality of your extension during the review
 process, we may reject your submission or remove it from the store.
