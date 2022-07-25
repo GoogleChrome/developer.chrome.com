@@ -21,11 +21,12 @@ But, it's more than a "parent" selector. That's a nice way to market it. The not
 
 Before we go any further, it's worth mentioning browser support. It's not quite there yet. But, it's getting closer. No Firefox support yet, it’s on the roadmap. But it's already in Safari and due for release in Chromium 105. All the demos in this article will tell you if they aren't supported in the browser used.
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'RwMgZpw',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'RwMgZpw',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 ## How to use :has
@@ -119,11 +120,12 @@ Take a classic card demo. We could display any information in our card, for exam
 </li>
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'yLKXoMP',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'yLKXoMP',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 What happens when you want to introduce some media? For this design the card could split into two columns. Before, you might create a new class to represent this behavior, for example `card--with-media` or `card--two-columns`. These class names not only become hard to conjure up, but also become hard to maintain and remember.
@@ -141,11 +143,12 @@ With `:has()`, you can detect that the card has some media and do the appropriat
 </li>
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'rNdwzyK',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'rNdwzyK',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 
@@ -163,11 +166,12 @@ And you don't need to leave it there. You could get creative with it. How might 
 
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'JjLJyWx',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'JjLJyWx',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 What if a featured card with a banner wiggles for attention?
@@ -193,11 +197,12 @@ What if a featured card with a banner wiggles for attention?
 
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'dymRzvB',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'dymRzvB',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 So many possibilities.
@@ -240,11 +245,12 @@ input {
 
 Try it out in this example: Try entering valid and invalid values and taking the focus on and off.
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'OJvgjmX',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'OJvgjmX',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 You could also use `:has()` to show and hide the error message for a field. Take our “email” field group and add an error message to it.
@@ -278,20 +284,22 @@ But when the field becomes `:invalid` and isn’t focussed, you can show the mes
 }
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'WNzOEjj',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'WNzOEjj',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 No reason you couldn't add a tasteful dash of whimsy for when your users interact with your form. Consider this example. Watch when you enter a valid value for the micro-interaction. An `:invalid` value will cause the form group to shake. But, only if the user has no motion preferences.
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'ZExyJKx',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'ZExyJKx',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 
@@ -317,11 +325,12 @@ figure:has(figcaption) img {
 
 This example contains figures. When they have no `figcaption`, they float within the content. When a `figcaption` is present, they occupy full width and get extra margin.
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'abYwyWQ',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'abYwyWQ',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 
@@ -337,11 +346,12 @@ body {
 }
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'YzaQxQK',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'YzaQxQK',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 
@@ -382,29 +392,32 @@ As mentioned above, `:has()` encourages you to break the mental model. It's an o
 
 ```
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'BarZdZL',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'BarZdZL',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 And that opens up interesting possibilities. You could use that to traverse a form with transforms.
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'QWmgMgg',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'QWmgMgg',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 And for fun, how about the classic buzz wire game? The mechanic is easier to create with `:has()`. If the wire gets hovered over, the game is over. Yes, we can create some of these game mechanics with things like the sibling [combinators](https://web.dev/learn/css/selectors/#combinators) (`+` and `~`). But, `:has()` is a way to achieve those same results without having to use interesting markup "tricks".
 
-{% Codepen
-  user: 'web-dot-dev'
-  id: 'rNdwzwK',
-  height: 450,
-  tab: 'result'
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'rNdwzwK',
+    height: 450,
+    tab: 'result'
+  }
 %}
 
 Although you won’t be dropping these into production any time soon, they highlight ways in which you can use the primitive. Such as being able to chain a `:has()`.
