@@ -5,17 +5,17 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 104 {: #chrome104 }
 
-* [Reiniciar el frame durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
+* [Reiniciar el marco durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
 * [Opciones de reproducción lenta en el panel Grabador](/es/blog/new-in-devtools-104/#recorder)
 * [Cree una extensión para el panel de la grabadora](/es/blog/new-in-devtools-104/#recorder-extension)
 * [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-104/#authored-deployed)
 * [Nueva pista de tiempos de usuario en el panel de información de rendimiento](/es/blog/new-in-devtools-104/#performance)
 * [Revelar el slot asignado de un elemento](/es/blog/new-in-devtools-104/#slot)
 * [Simule la concurrencia de hardware en las grabaciones de rendimiento](/es/blog/new-in-devtools-104/#simulate)
-* [Vista previa del valor non-color al autocompletar variables CSS](/es/blog/new-in-devtools-104/#css-var)
-* [Identifique los frames de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
+* [Vista previa del valor sin color al autocompletar variables CSS](/es/blog/new-in-devtools-104/#css-var)
+* [Identifique los marcos de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
 * [Sugerencias de autocompletado mejoradas para objetos de JavaScript](/es/blog/new-in-devtools-104/#autocomplete)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-104/#sourcemaps)
+* [Mejoras en los mapas de origen](/es/blog/new-in-devtools-104/#sourcemaps)
 * [Destacados varios](/es/blog/new-in-devtools-104/#misc)
 
 
