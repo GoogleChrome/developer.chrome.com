@@ -68,10 +68,10 @@ There are a few reasons the most popular nesting syntax can't be used as is:
 
 1. <b>Ambiguous parsing</b>
 <br>
-Some nested selectors can look exactly like properties and preprocessors are
-able to resolve and manage them at build time. Browser engines won't have the
-same affordances, selectors needs to never be loosely interpreted.
-<br>
+Some nested selectors can [look exactly like properties and
+preprocessors](https://www.w3.org/TR/css-nesting-1/#:~:text=Why%20can%E2%80%99t%20everything%20be%20directly%20nested%3F)
+are able to resolve and manage them at build time. Browser engines won't have
+the same affordances, selectors needs to never be loosely interpreted. <br>
 
 1. <b>Preprocessor parsing conflicts</b>
 <br>
