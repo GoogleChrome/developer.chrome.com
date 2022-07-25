@@ -31,7 +31,7 @@ version&nbsp;104.
 
 Writing web custom formats to the clipboard is almost identical to
 [writing sanitized formats](<https://web.dev/async-clipboard/#write()>), except for the requirement to prepend the
-string `" web"` (including the trailing space) to the blob's MIME type.
+string `"web "` (including the trailing space) to the blob's MIME type.
 
 ```js
 // Fetch a remote JPEG image and obtain its blob representation.
