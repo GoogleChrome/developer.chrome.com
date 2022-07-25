@@ -18,7 +18,7 @@ Picture-in-Picture (PiP) allows users to watch videos in a floating window
 (always on top of other windows) so they can keep an eye on what they’re
 watching while interacting with other sites, or applications.
 
-With the [Picture-in-Picture Web API], you can initiate and control
+With the [Picture-in-Picture Web API], you can start and control
 Picture-in-Picture for video elements on your website. Try it out on our
 official [Picture-in-Picture sample].
 
@@ -350,7 +350,7 @@ API are currently implemented in Chrome and other browsers.
 Here's what you can expect to see in the near future:
 
 - Web developers will be able to [add custom Picture-in-Picture controls].
-- A [new Web API] will be provided to display arbitrary `HTMLElement`s in a floating window.
+- A [new Web API] will be provided to display arbitrary `HTMLElement` objects in a floating window.
 
 ## Browser support
 
