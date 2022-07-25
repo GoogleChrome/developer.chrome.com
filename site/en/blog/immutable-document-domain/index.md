@@ -18,8 +18,8 @@ alt: >
 
 **Updates**
 
-- **July 25, 2022**: Updated with the new timeline - we'll remove
-  `document.domain` setter by default starting from Chrome 109.
+- **July 25, 2022**: Updated timeline—`document.domain` setter will be removed
+    by default starting from Chrome 109.
 - **February 4, 2022**: Updated with the new timeline - we'll show a warning in
   the Issues panel starting from Chrome 100, removing `document.domain` setter
   by default starting from Chrome 106.
