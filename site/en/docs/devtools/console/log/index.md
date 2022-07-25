@@ -44,7 +44,7 @@ you physically follow along, you're more likely to remember the workflows later.
 
 ## View messages logged from JavaScript {: #javascript }
 
-Most messages that you see in the Console come from the web developers who wrote the page's
+Most messages that you see in the **Console** come from the web developers who wrote the page's
 JavaScript. The goal of this section is to introduce you to the different message types that you're
 likely to see in the Console, and explain how you can log each message type yourself from your own
 JavaScript.
@@ -53,18 +53,18 @@ JavaScript.
 
     {% Img src="image/admin/lSamfDnGqrNC6rau3zvT.png", alt="The Console after clicking Log Info.", width="800", height="503" %}
 
-2.  Next to the `Hello, Console!` message in the Console click **log.js:2**. The **Sources** panel opens
+2.  Next to the `Hello, Console!` message in the **Console**, click **log.js:2**. The **Sources** panel opens
     and highlights the line of code that caused the message to get logged to the Console. 
 
     {% Img src="image/admin/VjLF6UMfP0uWeDahvUVo.png", alt="DevTools opens the Sources panel after you click log.js:2.", width="800", height="503" %}
 
     The message was logged when the page's JavaScript called `console.log('Hello, Console!')`.
 
-3.  Navigate back to the Console using any of the following workflows:
+3.  Navigate back to the **Console** using any of the following workflows:
 
     - Click the **Console** tab.
     - Press <kbd>Control</kbd>+<kbd>[</kbd> or <kbd>Command</kbd>+<kbd>[</kbd> (Mac) until the
-      Console panel is in focus.
+      **Console** is in focus.
     - [Open the Command Menu][4], start typing `Console`, select the **Show Console Panel** command,
       and then press <kbd>Enter</kbd>.
 
@@ -76,7 +76,7 @@ JavaScript.
     Messages formatted like this are warnings.
 
 5.  Optional: Click **log.js:12** to view the code that caused the message to get formatted like
-    this, and then navigate back to Console when you're finished. Do this whenever you want to see
+    this, and then navigate back to **Console** when you're finished. Do this whenever you want to see
     the code that caused a message to get logged a certain way.
 6.  Click the **Expand** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand.", width="20", height="20" %} icon in
     front of `Abandon Hope All Ye Who Enter`. DevTools shows the [stack trace][5] leading up to the
@@ -109,7 +109,7 @@ JavaScript.
 
     {% Img src="image/admin/azaXNJ5WC6rN1NVFAN3m.png", alt="A message with custom formatting in the Console.", width="800", height="490" %}
 
-The main idea here is that when you want to log messages to the Console from your JavaScript, you
+The main idea here is that when you want to log messages to the **Console** from your JavaScript, you
 use one of the `console` methods. Each method formats messages differently.
 
 There are even more methods than what has been demonstrated in this section. At the end of the
@@ -130,9 +130,9 @@ page.
 
     {% Img src="image/admin/lMl9U6EJBQDLBVYKbxX9.png", alt="A TypeError in the Console.", width="800", height="518" %}
 
-3.  Click the **Log Levels** dropdown and enable the **Verbose** option if it's disabled. You'll
+3.  Click the **Log Levels** drop-down and enable the **Verbose** option if it's disabled. You'll
     learn more about filtering in the next section. You need to do this to make sure that the next
-    message you log is visible. **Note:** If the Default Levels dropdown is disabled, you may need
+    message you log is visible. **Note:** If the Default Levels drop-down is disabled, you may need
     to close the Console Sidebar. Filter by Message Source below for more information about the
     Console Sidebar.
 
@@ -146,22 +146,34 @@ page.
 
 ## Filter messages {: #filter }
 
-On some pages you'll see the Console get flooded with messages. DevTools provides many different
+On some pages you'll see the **Console** get flooded with messages. DevTools provides many different
 ways to filter out messages that aren't relevant to the task at hand.
+
+{% Aside 'gotchas' %}
+The **Console** filters out only the output messages, all inputs that you typed into the **Console** stay there.
+{% endAside %}
 
 ### Filter by log level {: #level }
 
-Each `console` method is assigned a severity level: `Verbose`, `Info`, `Warning`, or `Error`. For
-example, `console.log()` is an `Info`\-level message, whereas `console.error()` is an `Error`\-level
-message.
+Each `console.*` method is assigned a severity level: `Verbose`, `Info`, `Warning`, or `Error`. For example, `console.log()` is an `Info`\-level message, whereas `console.error()` is an `Error`\-level message.
 
-1.  Click the **Log Levels** dropdown and disable **Errors**. A level is disabled when there is no
+{% Aside %}
+**Note**: For a full list of `console.*` methods and their severity levels, see the [Console API reference](/docs/devtools/console/api/).
+{% endAside %}
+
+To filter by log level:
+
+1.  Click the **Log Levels** drop-down and disable **Errors**. A level is disabled when there is no
     longer a checkmark next to it. The `Error`\-level messages disappear.
 
     {% Img src="image/admin/t1U5iAP8oKCS0nlwaOZy.png", alt="Disabling Error-level messages in the Console.", width="800", height="518" %}
 
-2.  Click the **Log Levels** dropdown again and re-enable **Errors**. The `Error`\-level messages
+2.  Click the **Log Levels** drop-down again and re-enable **Errors**. The `Error`\-level messages
     reappear.
+
+{% Aside 'gotchas' %}
+The **Console** always remembers the drop-down filter you apply. It persists across all pages as well as page, DevTools, and Chrome reloads. To quickly apply a temporary filter, use the [Sidebar](#source).
+{% endAside %}
 
 ### Filter by text {: #text }
 
@@ -191,6 +203,10 @@ use a [regular expression][6].
 
 When you want to only view the messages that came from a certain URL, use the **Sidebar**.
 
+{% Aside 'gotchas' %}
+Sidebar filters are temporary. The **Console** doesn't persist such filters across all pages as well as page, DevTools, and Chrome reloads.
+{% endAside %}
+
 1.  Click **Show Console Sidebar**
     {% Img src="image/admin/WCuENTqHgjAR2Be3Hdqq.png", alt="Show Console Sidebar.", width="25", height="20" %}.
 
@@ -216,22 +232,22 @@ messages_. You can use the **Sidebar** to filter out browser messages and only s
 
 2.  Click **12 Messages** to show all messages again.
 
-## Use the Console alongside any other panel {: #drawer }
+## Use the **Console** alongside any other panel {: #drawer }
 
-What if you're editing styles, but you need to quickly check the Console log for something? Use the
+What if you're editing styles, but you need to quickly check the **Console** log for something? Use the
 Drawer.
 
 1.  Click the **Elements** tab.
-2.  Press <kbd>Escape</kbd>. The Console tab of the **Drawer** opens. It has all of the features of
-    the Console panel that you've been using throughout this tutorial.
+2.  Press <kbd>Escape</kbd>. The **Console** tab of the **Drawer** opens. It has all of the features of
+    the **Console** that you've been using throughout this tutorial.
 
-    {% Img src="image/admin/99RTlD6HWxthbGdiHtrw.png", alt="The Console tab in the Drawer.", width="800", height="602" %}
+    {% Img src="image/admin/99RTlD6HWxthbGdiHtrw.png", alt="The **Console** tab in the Drawer.", width="800", height="602" %}
 
 ## Next steps {: #next }
 
 Congratulations, you have completed the tutorial. Click **Dispense Trophy** to receive your trophy.
 
-- See [Console Reference][8] to explore more features and workflows related to the Console UI.
+- See [Console Reference][8] to explore more features and workflows related to the **Console** UI.
 - See [Console API Reference][9] to learn more about all of the `console` methods that were
   demonstrated in [View messages logged from JavaScript][10] and explore the other `console` methods
   that weren't covered in this tutorial.

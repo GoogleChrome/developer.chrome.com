@@ -28,7 +28,7 @@ You can open the Console as a [panel][4] or as a [tab in the Drawer][5].
 Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
 <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac).
 
-{% Img src="image/admin/yA07vZPXixZWv2jHdE6W.png", alt="The Console panel.", width="800", height="493" %}
+{% Img src="image/admin/yA07vZPXixZWv2jHdE6W.png", alt="The Console.", width="800", height="493" %}
 
 To open the Console panel from the [Command Menu][6], start typing `Console` and then run the **Show
 Console** command that has the **Panel** badge next to it.

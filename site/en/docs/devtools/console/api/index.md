@@ -9,14 +9,14 @@ updated: 2022-07-22
 description: "Use the Console API to write messages to the Console."
 ---
 
-Use the Console API to write messages to the Console from your JavaScript. See [Get Started With
-Logging Messages To The Console][1] for an interactive introduction to the topic.
+Use the Console API to write messages to the Console from your JavaScript. See [Get started with
+logging messages to the Console][1] for an interactive introduction to the topic.
 
 {% Aside 'gotchas' %}
 DevTools assigns a severity level to most of the `console.*` methods. These levels allow you to filter logged messages. For more information, see [Filter by log level](/docs/devtools/console/reference/#level).
 {% endAside %}
 
-See [Console Utilities API Reference][2] if you're looking for the convenience methods like `debug(function)` or
+See [Console utilities API reference][2] if you're looking for the convenience methods like `debug(function)` or
 `monitorEvents(node)` which are only available from the Console.
 
 ## console.assert(expression, object) {: #assert }
@@ -135,6 +135,23 @@ console.groupEnd(label);
 ```
 
 {% Img src="image/admin/nXx5Fyu0l3p3jm3ooD77.png", alt="The result of the console.group() example above.", width="800", height="513" %}
+
+Additionally, you can nest groups.
+
+```js
+const timeline1 = 'New York 2012';
+const timeline2 = 'Camp Lehigh 1970';
+console.group(timeline1);
+console.info('Mind');
+console.info('Time');
+console.group(timeline2);
+console.info('Space');
+console.info('Extra Pym Particles');
+console.groupEnd(timeline2);
+console.groupEnd(timeline1);
+```
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yxxuBrVHlHj7kIEYLSJB.png", alt="Nested groups.", width="800", height="549" %}
 
 ## console.groupCollapsed(label) {: #groupcollapsed }
 
