@@ -322,7 +322,7 @@ of topics observed for the caller.
 Instead of calling `document.browsingTopics()`, topics can be retrieved via a request header, and
 marked as observed and eligible for topics calculation via response headers.
 
-This is likely to be considerably more performant than using the JavaScript API.
+This is likely to be much more performant than using the JavaScript API.
 
 The request header will be sent on document requests if the list of topics is non-empty and the
 request is allowable: for example, the appropriate [permission policy](#site-opt-out) is in play,
