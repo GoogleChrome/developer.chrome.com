@@ -359,7 +359,7 @@ Observe-Browsing-Topics: 1
     affect the user's topic calculation for the next epoch.
 -  The response header will only be honored if the corresponding request included the topics
     header (or would have included the header if it wasn't empty).
--  The registrable domain used for topic observation is that of the URL of the request.
+-  The URL of this request provides the registrable domain used for topic observation.
 
 ### How does the Topics API decide which callers can see which topic?
 
