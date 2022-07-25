@@ -6,7 +6,7 @@ subtitle: >
   format applications can opt in to if they wish to support such payloads.
 authors:
   - thomassteiner
-date: 2022-07-18
+date: 2022-07-25
 ---
 
 Up until now, the [Async Clipboard API](/async-clipboard/) supported a limited set of MIME types to
@@ -30,18 +30,21 @@ version&nbsp;104.
 ## Writing web custom formats to the clipboard
 
 Writing web custom formats to the clipboard is almost identical to
-[writing sanitized formats](<https://web.dev/async-clipboard/#write()>), except for the requirement to prepend the
-string `"web "` (including the trailing space) to the blob's MIME type.
+[writing sanitized formats](<https://web.dev/async-clipboard/#write()>), except for the requirement
+to prepend the string `"web "` (including the trailing space) to the blob's MIME type.
 
 ```js
-// Fetch a remote JPEG image and obtain its blob representation.
-const blob = await fetch('image.jpg').then((response) => response.blob());
+// Fetch remote JPEG and GIF images and obtain their blob representations.
+const jpegBlob = await fetch('image.jpg').then((response) => response.blob());
+const gifBlob = await fetch('image.gif').then((response) => response.blob());
+
 try {
-  // Write the image data to the clipboard, prepending the blob's actual
-  // type (`"image/jpeg"`) with the string `"web "`, so it becomes
-  // (`"web image/jpeg"`).
+  // Write the image data to the clipboard, prepending the blobs' actual
+  // types (`"image/jpeg"` and "image/gif") with the string `"web "`, so
+  // it becomes `"web image/jpeg"` and `"web image/gif"` respectively.
   const clipboardItem = new ClipboardItem({
-    [`web ${blob.type}`]: blob,
+    [`web ${jpegBlob.type}`]: jpegBlob,
+    [`web ${gifBlob.type}`]: gifBlob,
   });
   await navigator.clipboard.write([clipboardItem]);
 } catch (err) {
@@ -52,10 +55,8 @@ try {
 ## Reading web custom formats from the clipboard
 
 Similar to writing, reading web custom formats from the clipboard is almost identical to
-[reading sanitized formats](<https://web.dev/async-clipboard/#read()>). The only difference is that the app now
-needs to look for clipboard items whose type starts with `"web "`. Since the pasted blob is of a
-pseudo type (like `"web image/jpeg"`) that likely your app doesn't understand, you need to re-encode
-the blob using the original MIME type.
+[reading sanitized formats](<https://web.dev/async-clipboard/#read()>). The only difference is that
+the app now needs to look for clipboard items whose type starts with `"web "`.
 
 ```js
 try {
@@ -80,8 +81,8 @@ try {
 
 Since web custom formats like `web image/jpeg` are not something that typical platform-specific
 applications understand (since they would expect `image/jpeg`), there is the expectation for them to
-over time add support for such formats as an opt-in if their developers deem
-support for web custom formats to be relevant for their users.
+over time add support for such formats as an opt-in if their developers deem support for web custom
+formats to be relevant for their users.
 
 ## Demo
 
