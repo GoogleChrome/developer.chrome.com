@@ -41,8 +41,8 @@ try {
   // type (`"image/jpeg"`) with the string `"web "`, so it becomes
   // (`"web image/jpeg"`).
   const clipboardItem = new ClipboardItem({
-      [`web ${blob.type}`]: blob,
-    });
+    [`web ${blob.type}`]: blob,
+  });
   await navigator.clipboard.write([clipboardItem]);
 } catch (err) {
   console.error(err.name, err.message);
