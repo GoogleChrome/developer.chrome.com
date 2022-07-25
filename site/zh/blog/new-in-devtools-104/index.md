@@ -25,7 +25,7 @@ tags:
 <!-- + 4. Translate all the <img> alt text -->
 <!-- + 5. Update the whats-new.md file -->
 
-<!-- ## 在调试时进行帧重启 {: #restart-frame  } -->
+## 在调试时进行帧重启 {: #restart-frame  }
 
 <!-- **帧重启** 功能回归了! 你可以在函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在Chrome 92版本被弃用。  -->
 
