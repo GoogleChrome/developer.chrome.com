@@ -1,0 +1,42 @@
+.policy-principals {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: get-size(400) get-size(600);
+  margin-bottom: get-size(1000);
+
+  h3:not([class^=type--var]) {
+    font-weight: 500;
+  }
+
+  // Anchor handling
+  .heading-link {
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+
+  h3:hover .heading-link {
+    opacity: $heading-link-opacity-default;
+  }
+
+  .heading-link:hover {
+    opacity: 1;
+  }
+
+  // First row
+  > :nth-child(1),
+  > :nth-child(2) strong {
+    color: #{get-color('blue-500')};
+  }
+
+  // Second row
+  > :nth-child(3),
+  > :nth-child(4) strong {
+    color: #{get-color('red-500')};
+  }
+
+  // Third row
+  > :nth-child(5),
+  > :nth-child(6) strong {
+    color: #{get-color('green-500')};
+  }
+}

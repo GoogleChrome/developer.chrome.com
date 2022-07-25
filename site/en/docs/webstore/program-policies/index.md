@@ -4,36 +4,11 @@ title: "Developer Program Policies"
 date: 2014-02-28
 updated: 2022-07-21
 description: Chrome Web Store developer program policies.
-articleClasses: cws-policy
 ---
 
 [Branding Guidelines][branding] | [Rating Guidelines][rating] | **Program Policies** | [User Data
 FAQ][user-data] | [Developer Agreement][developer-agreement]
 
-<style>
-.cws-policy .card {
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
-  padding: 30px 40px 40px;
-}
-.cws-policy .type .card:not(.best-practices) li::before {
-  content: none;
-}
-.cws-policy .type .card:not(.best-practices) ul {
-  margin-left: 0;
-  display: grid;
-  max-width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px 10px;
-}
-.cws-policy .type .card:not(.best-practices) li {
-  margin: 0;
-}
-.cws-policy .policy-principals {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-</style>
 
 The Chrome Web Store is committed to providing a safe and secure environment for users, built on
 trust and transparency. For these reasons, the Chrome Web Store requires all developers to comply
@@ -74,7 +49,7 @@ provide little to no utility to users, or do not provide the reasonably expected
 Chrome will also strive to provide useful tools to developers to help encourage innovation.
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Best Practices and Guidelines {: #group-best-practices }
 
@@ -86,7 +61,7 @@ that often delay the review process.
 * [Best Practices and Guidelines][best-practices]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Fostering a Safe Ecosystem {: #group-safe-ecosystem }
 
@@ -99,7 +74,7 @@ which contain objectionable content or place users at risk are strictly prohibit
 * [Regulated Goods and Services][regulated-goods-and-services]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Protecting User Privacy {: #group-user-privacy }
 
@@ -114,7 +89,7 @@ product's design is critical.
 * [Handling Requirements][data-handling]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Ensuring Responsible Marketing and Monetization {: #group-marketing }
 
@@ -129,7 +104,7 @@ people's work.
 * [Ads][ads]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Building Quality Products {: #group-quality }
 
@@ -147,7 +122,7 @@ experience. Spamming the store may lead to your removal as a developer from the 
 * [Packaged Apps][chrome-apps]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Technical Requirements {: #group-tech-reqs }
 
@@ -160,7 +135,7 @@ extensions must follow certain technical guidelines to ensure a positive user ex
 * [Two Step Authentication][two-step-verification]
 
 </div>
-<div class="card stack">
+<div class="policy-card policy-card--policies stack">
 
 ## Enforcement {: #group-enforcement }
 
@@ -172,7 +147,7 @@ violations.
 * [Repeat Abuse][repeat-abuse]
 
 </div>
-<div class="card stack best-practices">
+<div class="policy-card stack best-practices">
 
 ## Best Practices and Guidelines {: #best-practices }
 

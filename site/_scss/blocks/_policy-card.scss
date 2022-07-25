@@ -1,0 +1,41 @@
+.policy-card {
+  border-radius: 30px;
+  padding: get-size(500) get-size(600) get-size(600);
+  @include elevation(1);
+
+  [id] {
+    scroll-margin-top: get-size(500);
+  }
+
+  .heading-link {
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+
+  &:hover .heading-link {
+    opacity: $heading-link-opacity-default;
+  }
+
+  .heading-link:hover {
+    opacity: 1;
+  }
+
+  &--policies {
+    // ":not([class])" required in order to match the specificity of "ul:not([class])" from _typography.scss
+    ul:not([class]) {
+      margin-left: 0;
+      display: grid;
+      max-width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: get-size(400) get-size(200);
+
+      > li {
+        margin: 0;
+      }
+
+      > li::before {
+        content: none;
+      }
+    }
+  }
+}
