@@ -6,7 +6,7 @@ subhead: >
 description: >
   個々のデータを明らかにすることなく、ユーザー全体で集計された広告コンバージョンを測定します。 以前は集計レポートと呼ばれていました。
 date: 2022-02-16
-updated: 2022-03-16
+updated: 2022-06-06
 authors:
   - alexandrawhite
 ---
@@ -15,7 +15,11 @@ authors:
 
 *  最初の提案（[クライアントサイド](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)、[サーバーサイド](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)）および初期のディスカッション段階
 *  Attribution Reporting [API 仕様](https://wicg.github.io/conversion-measurement-api/)
+
 *  [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5762222527610880)
+*  この API は [広告効果と測定オリジントライアルで利用できます](/blog/privacy-sandbox-unified-origin-trial/)。
+*  [Attribution Reporting: テストとディスカッション](/docs/privacy-sandbox/attribution-reporting-experiment/)。
+*  [API の変更点](/docs/privacy-sandbox/attribution-reporting-updates/) を追跡する。
 
 ## Attribution Reporting の要約レポートとは？
 
@@ -33,7 +37,7 @@ _概要レポート_（以前は集計レポートと呼ばれていました）
 
 今日では、広告コンバージョンの測定の多くが[サードパーティ Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies) に依存しています。 一方ブラウザは、サードパーティ Cookie へのアクセスを制限することで、サイト間でのユーザーの追跡をより困難にし、ユーザーのプライバシーを向上させています。 Attribution Reporting API を使用すれば、アドテクはサードパーティ Cookie を使用しなくても、プライバシーを保護しながらコンバージョンを測定できるようになります。
 
-単一のイベント（クリックやビューなど）を[粗粒データ](/docs/privacy-sandbox/glossary/#coarse-data)に関連付ける Attribution Reporting API のイベントレベルレポートとは対照的に、要約レポートは、詳細なコンバージョンデータ（ユーザーが購入した具体的な商品など）に紐づけられた集計データ（コンバージョンされたユーザー数など）を提供します。 要約レポートは、詳細なコンバージョンデータ（ユーザーが購入した具体的な商品など）に紐づけられた集計データ（コンバージョンしたユーザー数など）を提供します。
+単一のイベント（クリックやビューなど）を[粗粒データ](/docs/privacy-sandbox/glossary/#coarse-data)に関連付ける Attribution Reporting API のイベントレベルレポートとは対照的に、要約レポートは、詳細なコンバージョンデータ（ユーザーが購入した具体的な商品など）に紐づけられた集計データ（コンバージョンされたユーザー数など）を提供します。 
 
 {% Aside 'key-term' %}
 アドテクは、ブラウザのイベントを処理する[集計サービス](#aggregation-service)を実行します。 イベントにレポートされるほとんどのデータポイントには[ノイズは](https://en.wikipedia.org/wiki/Additive_noise_mechanisms)が追加されるため、要約レポートで個別のデータが検出されることはありません。
@@ -45,13 +49,7 @@ _集計データ_は、コンバージョンされたユーザー数など、コ
 
 ## ユーザーデータの収集と集計方法
 
-{% Aside %}
-この API は開発中であり、エコシステムのフィードバックや意見に応じて、時間の経過とともに進化するでしょう。
-
-Attribution Reporting API がサポートしている機能はすべて提案です。 これらの提案はそれぞれ、ブラウザへの最初の実装準備ができているものを含め、ディスカッションとフィードバックを受け付けています。
-
-この API のインキュベーションと開発は公開で行われています。 ディスカッションへの[参加をご検討ください](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)。
-{% endAside %}
+{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
 
 Attribution Reporting API を使用すると、サイト間の個々のユーザーの詳細なアクティビティや、場合によってはユーザーの ID が、ユーザーのデバイス上のブラウザーに非公開で維持されます。 このデータは集計可能なレポートで収集でき、各レポートはさまざまなパーティが基盤データにアクセスできないように暗号化されます。
 
@@ -62,7 +60,7 @@ _集計可能なレポート_ は、個々のユーザーのブラウザから�
 要約レポートを作成するためのプロセスは、以下のように提案されています。
 
 1. 集計可能なレポートが、アドテクプロバイダーが運営する _レポートオリジン_ に送信されます。
-   *  たとえば、これらのレポートには、位置情報、クリック数、コンバージョンの値（購入価格など）、アドテクプロバイダーが定義するその他の指標などが含まれる場合があります。 レポートは暗号化されているため、アドテクプロバイダーは、個々のレポートのコンテンツの表示やそれにアクセスすることはできません。
+   *  これらのレポートには、位置情報、クリック数、コンバージョンの値（購入価格など）、アドテクプロバイダーが定義するその他の指標などが含まれる場合があります。 レポートは暗号化されているため、アドテクプロバイダーは、個々のレポートのコンテンツの表示やそれにアクセスすることはできません。
 1. アドテクレポートオリジンが集計可能なレポートを受信すると、アドテクはそのレポートを[_集計サービス_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)に送信します。
    *  最初の実装では、[集計 サービス](#aggregation-service)は、クラウドでホストされている信頼できる実行環境（TEE）を備えたアドテクプロバイダー によって運用されています。 _コーディネーター_ は、確認済みのエンティティのみが復号化キーにアクセスし、他の仲介者（アドテク、クラウドプロバイダー、またはその他のパーティ）は集計プロセスの外部で機密データにアクセスして復号化できないように保証します。
 1. 集計サービスは、復号化されたデータを結合し、 _要約レポート_ をアドテクプロバイダーに出力します。
@@ -88,7 +86,7 @@ _集計可能なレポート_ は、個々のユーザーのブラウザから�
 *  アドテク。集計プロセスが有効なデータを使用していることを検証し、適切に監視することができます。
 
 
-### 集計サービスの提案 {: #aggregation-service}
+### 集計サービスでレポートを生成する {: #aggregation-service}
 
 {% Aside 'key-term' %}
 _信頼できる実行環境_（TEE）は、外部パーティがコンピューターで実行されているソフトウェアの正確なバージョンを確認できるようにする、コンピューターのハードウェアとソフトウェアの特別な構成です。 TEE を使用すると、外部パーティは、ソフトウェアがソフトウェアメーカーが主張していることを過不足なく正確に実行していることを確認できます。
@@ -97,9 +95,9 @@ _信頼できる実行環境_（TEE）は、外部パーティがコンピュー
 [最初の提案](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)では、各アドテクプロバイダーに、必要なセキュリティ機能をサポートするクラウドサービスにデプロイされた信頼できる実行環境（TEE）で独自の集計サービスのインスタンスを動作することが求められています。
 
 {% Aside %}
-集計サービスの最初の[オリジントライアル](/blog/origin-trials/)では、まず Amazon Web Services が提供する信頼できる実行環境（TEE）がサポートされる予定です。
+みなさんは、ローカルテストおよび Amazon Web Services が提供する信頼できる実行環境（TEE）がサポートされる集計サービスを含むアトリビューション レポートの[オリジントライアルに参加することができます](/docs/privacy-sandbox/attribution-reporting-experiment/)。[集計サービスのセットアップ方法](https://github.com/google/trusted-execution-aggregation-service/#set-up-aggregation-service-for-aggregatable-reports)をご覧ください.
 
-初回オリジントライアルにおいては、開発者はテストに TEE を使用する必要はありません。集計サービスのセキュリティ要件を満たす他の選択されたクラウドプロバイダーのサポートは、将来のテストで追加される予定です。
+将来的に、集計サービスのセキュリティ要件に見合った他のクラウドプロバイダーも追加する予定です。
 {% endAside %}
 
 TEE のコードは、集計サービスで生のレポートにアクセスできる唯一の場所です。このコードは、セキュリティ研究者、プライバシーアドボケート、およびアドテクによって監査可能になります。 TEE が承認済みの実際のソフトウェアを実行しており、データが保護されていることを確認するために、コーディネーターはアテステーションを実行します。
@@ -131,13 +129,13 @@ TEE のコードは、集計サービスで生のレポートにアクセスで�
 1. ブラウザはこのデータを暗号化し、少し遅れてから、収集を行うアドテクサーバーに送信します。 アドテクサーバーがこれらの集計可能なレポートから集計されたインサイトにアクセスには、集計サービスに依存する必要があります。
 {% Img class="screehshot", src="image/VbsHyyQopiec0718rMq2kTE1hke2/gGKktJZoaKXTX4YG9udv.jpg", alt="", width="564", height="209" %}
 
-## アドテクプロバイダーが要約レポートを作成するには？
+## 要約レポートを作成する
 
 アドテクプロバイダーが要約レポートを取得するには、以下の手順を実行する必要があります。
 
-1. アドテクプロバイダーは、個々のユーザーのブラウザから集計可能なレポートを収集します。
+1. アドテクは、個々のユーザーのブラウザから集計可能なレポートを収集します。
    {% Aside %}
-   アドテクプロバイダーは、集計サービスでのみこれらのレポートを復号化できます。
+   アドテクは、集計サービスでのみこれらのレポートを復号化できます。複合されたデータは信頼できる実行環境（TEE）外では利用できません。
    {% endAside %}
 1. アドテクプロバイダーは、集計可能なレポートをバッチ処理し、そのバッチを集計サービスに送信します。
 1. 集計サービスは、データを集計するようにワーカーをスケジュールします。
@@ -149,13 +147,10 @@ TEE のコードは、集計サービスで生のレポートにアクセスで�
 
 アドテクは要約レポートを使用して入札の通知と自社顧客へのレポート提供を行えます。 [JSON エンコードされたスキーム](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)は、要約レポート用に提案されている形式です。
 
-## 貢献とフィードバックの共有
-
-*  GitHub: [クライアントサイドの提案](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)と[集計サービスの提案](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)を読み、質問や提案を行ってください。
-*  開発者サポート: [Privacy Sandbox Developer Support（プライバシーサンドボックス開発者サポート）リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
+{% include 'content/privacysandbox-partials/ar-engage.njk' %}
 
 ## 詳細について
 
 *  [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/) をお読みください。
-*  [集計サービスの Explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md) をお読みください。
+*  [集計サービスの Explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md) および [詳細なセットアップ方法](https://github.com/google/trusted-execution-aggregation-service/)をお読みください。
 *  [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)
