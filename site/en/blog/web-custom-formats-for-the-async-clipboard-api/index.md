@@ -35,8 +35,10 @@ to prepend the string `"web "` (including the trailing space) to the blob's MIME
 
 ```js
 // Fetch remote JPEG and GIF images and obtain their blob representations.
-const jpegBlob = await fetch('image.jpg').then((response) => response.blob());
-const gifBlob = await fetch('image.gif').then((response) => response.blob());
+const [jpegBlob, gifBlob] = await Promise.all([
+  fetch('image.jpg').then((response) => response.blob()),
+  fetch('image.gif').then((response) => response.blob()),
+]);
 
 try {
   // Write the image data to the clipboard, prepending the blobs' actual
