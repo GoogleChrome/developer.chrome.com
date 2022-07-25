@@ -8,6 +8,7 @@ hero: "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/SLbZGkpDT3AG1E11MMFy.jpg"
 alt: "Image of a neon sign displaying the words Good times"
 tags:
   - css
+  - chrome-105
 date: 2022-07-25
 ---
 
