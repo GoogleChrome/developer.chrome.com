@@ -80,7 +80,11 @@ article:has(img:not([alt])) { … }
 ```
 Select the `documentElement` where some state is present in the DOM
 ```css
-  :root:has(.menu-toggle[aria-pressed=”true”]) { … }
+:root:has(.menu-toggle[aria-pressed=”true”]) { … }
+```
+Select the layout container with an odd number of children
+```css
+.container:has(> .container__item:last-of-type:nth-of-type(odd)) { ... }
 ```
 Select every solo `a` within a paragraph that has a direct sibling `hr` element
 ```css
