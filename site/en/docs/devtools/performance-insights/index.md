@@ -25,7 +25,7 @@ This is a preview feature in Chrome 102. Our team is actively working on this fe
 The new **Performance insights** panel is an experiment to address these 3 developer pain points when working with the existing **Performance** panel:
 
 - **Too much information**. With the redesigned UI, the **Performance insights** panel streamlines the data and displays only relevant information.
-- **Hard to distinguish between use cases**. The **Performance insights** panel supports use-case-driven analysis. It only supports page load use-case at the moment, with more to come in the future based on your [feedback](https://crbug.com/1270700), for example, interactivity.
+- **Hard to distinguish between use cases**. The **Performance insights** panel supports use-case-driven analysis. It only supports page load use-case at the moment, with more to come in the future based on your [feedback](https://crbug.com/1270700), for example, [interactivity](https://web.dev/inp).
 - **Requires deep expertise of how browsers work to use effectively**. The **Performance insights** panel highlights the key insights in the **Insights** pane, with actionable feedback on how to fix issues.
 
 
