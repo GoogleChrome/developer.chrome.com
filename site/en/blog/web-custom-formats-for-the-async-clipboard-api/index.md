@@ -44,6 +44,8 @@ try {
   // Write the image data to the clipboard, prepending the blobs' actual
   // types (`"image/jpeg"` and "image/gif") with the string `"web "`, so
   // they become `"web image/jpeg"` and `"web image/gif"` respectively.
+  // The code elegantly makes use of computed property names:
+  // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names.
   const clipboardItem = new ClipboardItem({
     [`web ${jpegBlob.type}`]: jpegBlob,
     [`web ${gifBlob.type}`]: gifBlob,
