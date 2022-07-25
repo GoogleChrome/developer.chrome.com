@@ -3,20 +3,20 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/pt/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/pt/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/pt/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/pt/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/pt/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/pt/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/pt/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/pt/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/pt/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/pt/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/pt/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-104/#misc) -->
+* [Reinicialização de frame durante o debugging](/pt/blog/new-in-devtools-104/#restart-frame)
+* [Opção de replay lento no painel de gravação](/pt/blog/new-in-devtools-104/#recorder)
+* [Construa uma extensão para o painel de gravação](/pt/blog/new-in-devtools-104/#recorder-extension)
+* [Agrupar arquivos por Autoral/Publicado no painel Sources](/pt/blog/new-in-devtools-104/#authored-deployed)
+* [Nova trilha de Tempos de Usuários no painel de Performance insights](/pt/blog/new-in-devtools-104/#performance)
+* [Revelar o slot atribuído de um elemento](/pt/blog/new-in-devtools-104/#slot)
+* [Simular a concorrência de hardware para gravações de desempenho](/pt/blog/new-in-devtools-104/#simulate)
+* [Visualize valores de non-color ao preencher automaticamente as variáveis CSS](/pt/blog/new-in-devtools-104/#css-var)
+* [Identifique os quadros de bloqueio no painel de Back/forward cache](/pt/blog/new-in-devtools-104/#bfcache)
+* [Melhorias nas sugestões de autocomplete para objetos JavaScript](/pt/blog/new-in-devtools-104/#autocomplete)
+* [Melhorias em sourcemaps](/pt/blog/new-in-devtools-104/#sourcemaps)
+* [Outras melhorias](/pt/blog/new-in-devtools-104/#misc)
 
 
 ### Chrome 103 {: #chrome103 }
