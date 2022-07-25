@@ -23,9 +23,9 @@ clipboard.
 
 ## Browser support
 
-The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Custom
-formats for the Async Clipboard API are supported on desktop and on mobile Chromium as of
-version&nbsp;104.
+The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Web
+custom formats for the Async Clipboard API are supported on desktop and on mobile Chromium
+as of version&nbsp;104.
 
 ## Writing web custom formats to the clipboard
 
