@@ -35,7 +35,7 @@ string `" web"` (including the trailing space) to the blob's MIME type.
 
 ```js
 // Fetch a remote JPEG image and obtain its blob representation.
-const blob = await fetch('image.jpg').then((response) => response.blob);
+const blob = await fetch('image.jpg').then((response) => response.blob());
 try {
   // Write the image data to the clipboard, prepending the blob's actual
   // type (`"image/jpeg"`) with the string `"web "`, so it becomes
