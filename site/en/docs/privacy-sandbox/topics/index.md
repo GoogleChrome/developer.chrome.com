@@ -357,8 +357,8 @@ Observe-Browsing-Topics: 1
 -  The request header will not modify state for the caller unless there is a corresponding
     response header. That is, the topic of the page won't be considered observed, nor will it
     affect the user's topic calculation for the next epoch.
--  The response header will only be honored if the corresponding request included the topics
-    header (or would have included the header if it wasn't empty).
+-  The response header is only honored if the corresponding request included the topics
+    header (or would have included the header, if the request wasn't empty).
 -  The URL of this request provides the registrable domain used for topic observation.
 
 ### How does the Topics API decide which callers can see which topic?
