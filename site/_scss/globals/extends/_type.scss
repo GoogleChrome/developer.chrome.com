@@ -221,8 +221,9 @@
       @extend %type--caption;
       background: get-color('grey-100');
       border-radius: 50%;
-      // When unspecified, <counter-style> (second argument of `counter()`) defaults to `decimal`.
-      // Since this value can't be inherited, we must manually set it using a custom property.
+      // By default the second property of counter() is <counter-style>. This
+      // value cannot be set to 'inherit', so we use a custom property to
+      // emulate this behavior.
       content: counter(ol-step-counter, var(--ol-counter-style, decimal));
       display: inline-flex;
       flex-shrink: 0;
