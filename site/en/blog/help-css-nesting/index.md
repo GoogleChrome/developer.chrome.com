@@ -433,7 +433,6 @@ figure > figcaption > p {
   @nest .bar & {
     color: red;
 
-
     &.baz {
       color: green;
     }
@@ -449,7 +448,6 @@ figure > figcaption > p {
 
   @nest .bar & {
     color: red;
-
 
     @nest &.baz {
       color: green;
