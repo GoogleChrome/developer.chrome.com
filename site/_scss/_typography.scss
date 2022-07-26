@@ -141,13 +141,25 @@
   }
 
   &--ordered-list {
-    --ol-counter-style: decimal;
-    @extend %type--list-item;
-  }
+    &.decimal {
+      --ol-counter-style: decimal;
+    }
 
-  ol:not([class]),
-  &--ordered-list {
-    @extend %type--ordered-list;
+    &.roman-lower {
+      --ol-counter-style: lower-roman;
+    }
+
+    &.roman-upper {
+      --ol-counter-style: upper-roman;
+    }
+
+    &.alpha-lower {
+      --ol-counter-style: lower-alpha;
+    }
+
+    &.alpha-upper {
+      --ol-counter-style: upper-alpha;
+    }
   }
 
   ol:not([class]) > li,
