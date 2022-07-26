@@ -13,8 +13,8 @@ authors:
 
 ## Implementation status
 
-*  [Origin trial completed](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 103
-*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 to Chrome 112
+*  [Origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 103
+*  [Deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 to Chrome 112
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  Review the [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
 
@@ -271,4 +271,3 @@ features in Chromium. At this time, ALPS is only
   snippets to transform the current user-agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-
