@@ -5,7 +5,7 @@ description: >
   Two competing syntaxes need your help in determining which should be championed through to a specification candidate.
 subhead: >
   Two competing syntaxes need your help in determining which should be championed through to a specification candidate.
-date: 2022-07-22
+date: 2022-07-26
 authors:
   - argyle
   - miriamsuzanne
