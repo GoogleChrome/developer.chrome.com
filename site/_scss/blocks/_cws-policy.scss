@@ -5,5 +5,21 @@
       margin-top: get-size(300);
       margin-bottom: get-size(300);
     }
+
+    ol {
+      --ol-counter-style: upper-roman;
+    }
+
+    ol ol {
+      --ol-counter-style: upper-alpha;
+    }
+
+    ol ol ol {
+      --ol-counter-style: decimal;
+    }
+
+    ol ol ol ol {
+      --ol-counter-style: lower-alpha;
+    }
   }
 }
