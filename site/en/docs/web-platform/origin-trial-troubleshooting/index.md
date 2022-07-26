@@ -198,7 +198,7 @@ include the scheme, hostname, or port.<br>
 * **Malformed**: Token is malformed and could not be parsed.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=88)
 
-{% Aside 'important' %}
+{% Aside 'caution' %}
 For **InvalidSignature** or **Malformed** errors, the token may conform to a valid format but not be
 recognized by the current browser or browser version. It is possible that the token is usable by a
 different browser.
