@@ -4,20 +4,19 @@ title: 'User-Agent reduction'
 subhead: >
   Limit browser data shared to remove sensitive information and reduce fingerprinting.
 description: >
-  The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
+  Limit browser data shared to remove sensitive information and reduce fingerprinting.
 date: 2021-11-09
-updated: 2022-02-11
+updated: 2022-07-27
 authors:
   - alexandrawhite
 ---
 
 ## Implementation status
 
-*  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
-*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 100 to Chrome 112
-*  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
+*  [Origin trial completed](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 103
+*  [In deprecation trial](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 to Chrome 112
 *  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
-*  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
+*  Review the [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
 
 ## What is User-Agent reduction?
 
@@ -146,8 +145,7 @@ for more information.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
-As we get closer to scaled availability of the reduced User-Agent string in
-Chrome Stable, [review your site
+As we get closer to scaled availability of the reduced User-Agent string, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
@@ -256,10 +254,7 @@ features in Chromium. At this time, ALPS is only
 
 ## Engage and share feedback
 
-*  **Origin trial**:
-   [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
-   to opt-in for the reduced user-agent, and
-   [share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
+*  **Origin trial**: [Share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).
@@ -268,7 +263,6 @@ features in Chromium. At this time, ALPS is only
 
 ## Find out more
 
-*  [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
 *  [Improving user privacy and developer experience](https://web.dev/user-agent-client-hints/):
    an overview for web developers
 *  [Migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/): a
