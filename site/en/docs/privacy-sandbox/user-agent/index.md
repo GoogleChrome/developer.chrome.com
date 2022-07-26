@@ -206,6 +206,53 @@ sites. When you register for the Chrome origin trial, select the "third-party
 matching" option to allow the script to be injected when your site is embedded
 on third-parties.
 
+## Support for Client Hints and critical hints
+
+There are three [default Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data)
+returned to the server, including browser name and major version, a boolean
+which indicates if the browser is on a mobile device, and the operating system
+name. These are sent after the TLS handshake. These are already available and
+supported in your browser.
+
+However, there may be some times when you need to retrieve critical information
+for your site to render.
+
+### Optimize critical hints
+
+{% Aside 'warning' %}
+
+Using critical hints should be rare, so make sure you've reviewed the reason
+for implementation. The question to ask yourself is, do you require extended
+data on the initial page load? Will your page fail to load without this
+information?
+
+{% endAside %}
+
+A Transport Layer Security protocol (TLS) handshake is the first step to create
+a secure connection between the browser and web server. Without an
+intervention, the
+[Critical-CH response header](https://www.ietf.org/archive/id/draft-davidben-http-client-hint-reliability-03.html#name-the-critical-ch-response-he)
+was designed to tell the browser to immediately retry the request if the first
+one was sent without a critical hint.
+
+<figure>
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/omskjfeqwb5F4D7pZfur.svg", alt="Sequence diagram for Critical Hints", width="800", height="933" %}
+  <figcaption>When a critical hint is requested by the server, the client will retry sending the first request for the webpage with the critical hint. In this example, the hint for <code>Sec-CH-UA-Model</code> is requested twice: once as a Client Hint with <code>Accept-CH</code> and again as a critical hint with <code>Critical-CH</code>.</figcaption>
+</figure>
+
+To optimize critical hints ([`Critical-CH` header](https://groups.google.com/a/chromium.org/g/blink-dev/c/zPYGbULXn7o/m/q3OJ2kZAAQAJ)),
+you must intercept this handshake and provide a model for Client Hints. These
+steps may be complex, and require advanced knowledge.
+
+The [`ACCEPT_CH` HTTP/2 and HTTP/3 frames](https://datatracker.ietf.org/doc/html/draft-davidben-http-client-hint-reliability-02#section-4),
+combined with the [TLS ALPS extension](https://github.com/vasilvv/tls-alps),
+are a connection-level optimization to deliver the server’s Client Hint
+preferences in time for the first HTTP request. These require complex
+configuration, and we recommend only using this for truly critical information.
+BoringSSL (a fork of OpenSSL) helps you work with Google’s experimental
+features in Chromium. At this time, ALPS is only
+[implemented in BoringSSL](https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Application-layer-protocol-settings).
+
 ## Engage and share feedback
 
 *  **Origin trial**:
