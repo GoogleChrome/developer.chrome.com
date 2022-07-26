@@ -98,32 +98,48 @@
     @extend %type--list-item;
   }
 
-  ol[type='a'],
+  ol:not([class]),
   &--ordered-list {
+    @extend %type--ordered-list;
+  }
+
+  // Emulate HTML 3 ordered list types.
+  //
+  // NOTE: The case sensitivity of CSS attribute value selectors is determined
+  // by the host document. HTML 5 attributes are case insensitive, so [type='a']
+  // will not work as desired. In order to 100% emulate HTML 3 behavior, we need
+  // to use case sensitive attribute matching (specified in Selectors Level 4).
+  // https://www.w3.org/TR/selectors-4/#attribute-case
+  ol[type='a'] {
     --ol-counter-style: lower-alpha;
-    @extend %type--list-item;
   }
 
-  ol[type='A'],
-  &--ordered-list {
+  ol[type='A'] {
     --ol-counter-style: upper-alpha;
-    @extend %type--list-item;
   }
 
-  ol[type='i'],
-  &--ordered-list {
+  // Use case sensitive matching in supporting browsers
+  ol[type='a' s] {
+    --ol-counter-style: lower-alpha;
+  }
+
+  ol[type='i'] {
     --ol-counter-style: lower-roman;
-    @extend %type--list-item;
   }
 
-  ol[type='I'],
-  &--ordered-list {
+  ol[type='I'] {
     --ol-counter-style: upper-roman;
-    @extend %type--list-item;
   }
 
-  ol[type='1'],
-  ol:not([type]),
+  // Use case sensitive matching in supporting browsers
+  ol[type='i' s] {
+    --ol-counter-style: lower-roman;
+  }
+
+  ol[type='1'] {
+    --ol-counter-style: decimal;
+  }
+
   &--ordered-list {
     --ol-counter-style: decimal;
     @extend %type--list-item;
