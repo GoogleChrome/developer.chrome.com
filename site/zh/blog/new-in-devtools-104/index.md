@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-07-13
 updated: 2022-07-13
-description: "在调试时进行帧重启, 录制面板中的慢速复盘选项与更多。"
+description: "在调试时进行帧重启、录制面板中的慢速复盘选项与更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VojSLwN9rFRkALzi6RZh.jpg'
 alt: ''
 tags:
