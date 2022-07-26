@@ -119,7 +119,7 @@ experience. Spamming the store may lead to your removal as a developer from the 
 * [Quality Guidelines][quality-guidelines]
 * [Listing Requirements][listing-requirements]
 * [Minimum Functionality][minimum-functionality]
-* [Packaged Apps][chrome-apps]
+* [Chrome Apps][chrome-apps]
 
 </div>
 <div class="policy-card policy-card--policies stack">
