@@ -5,49 +5,24 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1. Extensions must be marketed responsibly. The set of functionalities promised by the extension
+   must be stated clearly and in a transparent manner. The outcome of any user interaction should
+   match the reasonable expectations that were set with the user. Extensions that use or benefit
+   from deceptive installation tactics will be removed from the Chrome Web Store. Deceptive
+   installation tactics include:
 
-Extensions must be marketed responsibly. The set of functionalities promised by the extension must
-be stated clearly and in a transparent manner. The outcome of any user interaction should match the
-reasonable expectations that were set with the user. Extensions that use or benefit from deceptive
-installation tactics will be removed from the Chrome Web Store. Deceptive installation tactics
-include:
+    1. Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
+       product listing.
 
-<ol type="A">
-<li>
+    1. Misleading interactive elements as part of your distribution flow. This includes misleading
+       call-to-action buttons or forms that imply an outcome other than the installation of an
+       extension.
 
-Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store product
-listing.
+    1. Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding extension metadata from the user.
 
-</li>
-<li>
+    1. Bundling other extensions or offers within the same installation flow.
 
-Misleading interactive elements as part of your distribution flow. This includes misleading
-call-to-action buttons or forms that imply an outcome other than the installation of an extension.
-
-</li>
-<li>
-
-Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
-extension metadata from the user.
-
-</li>
-<li>
-
-Bundling other extensions or offers within the same installation flow.
-
-</li>
-<li>
-
-Requiring unrelated user action to access advertised functionality.
-
-</li>
-</ol>
-
-</li>
-</ol>
+    1. Requiring unrelated user action to access advertised functionality.
 
 For more information about this policy, please see the [Developer FAQ][faq].
 

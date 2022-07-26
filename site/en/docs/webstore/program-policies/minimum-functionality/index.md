@@ -5,17 +5,7 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
-
-Do not post an extension with a single purpose of installing or launching another app, theme,
+1. Do not post an extension with a single purpose of installing or launching another app, theme,
 webpage, or extension.
 
-</li>
-<li>
-
-Extensions with broken functionality—such as dead sites or non-functioning features—are not allowed.
-
-</li>
-</ol>
+1. Extensions with broken functionality—such as dead sites or non-functioning features—are not allowed.

@@ -5,46 +5,20 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1. If your product has a blank description field or is missing an icon or screenshots, it will be rejected.
 
-If your product has a blank description field or is missing an icon or screenshots, it will be
-rejected.
+1. Keyword Spam is the practice of including irrelevant or excessive keywords in an extensions
+   description in an attempt to manipulate its ranking, resulting in a spammy, negative user
+   experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
+   irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
+   description, developer name, title, icon, screenshots, and promotional images. Developers should
+   focus on providing a clear and well-written description that uses keywords appropriately and in
+   context. Some examples of Keyword Spam include:
 
-</li>
-<li>
+    1. Lists of sites/brands/keywords without substantial added value
 
-Keyword Spam is the practice of including irrelevant or excessive keywords in an extensions
-description in an attempt to manipulate its ranking, resulting in a spammy, negative user
-experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
-irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
-description, developer name, title, icon, screenshots, and promotional images. Developers should
-focus on providing a clear and well-written description that uses keywords appropriately and in
-context. Some examples of Keyword Spam include:
+    1. Lists of regional locations
 
-<ol type="A">
-<li>
+    1. Unnatural repetition of the same keyword more than 5 times
 
-Lists of sites/brands/keywords without substantial added value
-
-</li>
-<li>
-
-Lists of regional locations
-
-</li>
-<li>
-
-Unnatural repetition of the same keyword more than 5 times
-
-</li>
-</ol>
-
-</li>
-<li>
-
-We don’t allow unattributed or anonymous user testimonials in the product's description.
-
-</li>
-</ol>
+1. We don’t allow unattributed or anonymous user testimonials in the product's description.

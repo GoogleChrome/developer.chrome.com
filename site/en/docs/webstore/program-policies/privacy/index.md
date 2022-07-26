@@ -5,40 +5,17 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1. If your Product handles any user data , then you must post an accurate and up to date privacy policy.
 
-If your Product handles any user data , then you must post an accurate and up to date privacy policy.
+1. The privacy policy must, together with any in-Product disclosures, comprehensively disclose:
 
-</li>
-<li>
+    1. How your Product collects, uses and shares user data
 
-The privacy policy must, together with any in-Product disclosures, comprehensively disclose:
+    1. All parties the user data will be shared with.
 
-<ol type="A">
-<li>
-
-How your Product collects, uses and shares user data
-
-</li>
-<li>
-
-All parties the user data will be shared with.
-
-</li>
-</ol>
-</li>
-<li>
-
-You must make the policy accessible by providing a link in the designated Chrome Web Store Developer Dashboard field.
-
-</li>
-<li>
+1. You must make the policy accessible by providing a link in the designated Chrome Web Store
+   Developer Dashboard field.
 
 For more information on this policy, please see the Developer [FAQ][faq].
-
-</li>
-</ol>
 
 [faq]: /docs/webstore/user_data/

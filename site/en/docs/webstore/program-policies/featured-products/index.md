@@ -5,77 +5,34 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1. The Chrome Web Store features products that align with our standards, values, and that we believe
+   will produce valuable user experiences. Certain products that don't meet these standards, but
+   which do not explicitly violate CWS policies - such as VPN extensions and Video Downloaders - may
+   be restricted from feature in the Store, but will still be available to users. For example, the
+   following products are currently not featured in the CWS Store:
 
-The Chrome Web Store features products that align with our standards, values, and that we believe
-will produce valuable user experiences. Certain products that don't meet these standards, but which
-do not explicitly violate CWS policies - such as VPN extensions and Video Downloaders - may be
-restricted from feature in the Store, but will still be available to users. For example, the
-following products are currently not featured in the CWS Store:
+    1. Religious or political content
 
-<ol type="A">
-<li>
+    1. VPNs
 
-Religious or political content
+    1. Video Downloaders
 
-</li>
-<li>
+    1. Anti-Virus tools
 
-VPNs
+    1. Content deemed not family friendly
 
-</li>
-<li>
+    1. Bots
 
-Video Downloaders
+    1. Cryptocurrency
 
-</li>
-<li>
+    1. Non-production builds
 
-Anti-Virus tools
+    1. Prohibited products
 
-</li>
-<li>
+    1. Gambling content
 
-Content deemed not family friendly
-
-</li>
-<li>
-
-Bots
-
-</li>
-<li>
-
-Cryptocurrency
-
-</li>
-<li>
-
-Non-production builds
-
-</li>
-<li>
-
-Prohibited products
-
-</li>
-<li>
-
-Gambling content
-
-</li>
-<li>
-
-Extensions whose developers have questionable reputations, such as historically misleading or
-malicious extensions.
-
-</li>
-</ol>
-
-</li>
-</ol>
+    1. Extensions whose developers have questionable reputations, such as historically misleading or
+       malicious extensions.
 
 For information about Product ranking, please see [these FAQs][faq].
 

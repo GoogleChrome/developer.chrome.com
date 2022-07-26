@@ -5,19 +5,9 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1.  In the event that your Product is removed from the Chrome Web Store, you will receive an email
+    notification to that effect, with further instructions if applicable.
 
-In the event that your Product is removed from the Chrome Web Store, you will receive an email
-notification to that effect, with further instructions if applicable.
-
-</li>
-<li>
-
-Please verify that the associated publisher account with your Product can receive emails from
-external parties and not get flagged as Spam to ensure that you receive all communications in a
-timely manner.
-
-</li>
-</ol>
+1. Please verify that the associated publisher account with your Product can receive emails from
+   external parties and not get flagged as Spam to ensure that you receive all communications in a
+   timely manner.

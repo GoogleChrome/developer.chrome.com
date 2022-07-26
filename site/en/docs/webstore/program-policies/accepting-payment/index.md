@@ -8,42 +8,23 @@ articleClasses: cws-policy
 If you collect sensitive personal information through your Product for sales, you must follow these
 requirements:
 
-<!-- Atypical formatting is necessary to enable markdown formatting for LI contents -->
-<ol type="I">
-<li>
+1. You must securely collect, store and transmit all credit card and other sensitive personal
+   information in accordance with privacy and data security laws and payment card industry rules.
 
-You must securely collect, store and transmit all credit card and other sensitive personal
-information in accordance with privacy and data security laws and payment card industry rules.
+1. You must avoid misleading users. For example, clearly and honestly describe the products or
+   services that you are selling and conspicuously post your terms of sale (including any refund and
+   return policies).
 
-</li>
-<li>
+1. If your Product requires the user to pay to obtain basic functionality, you must make that clear
+   in the description that the user sees when choosing whether to install it.
 
-You must avoid misleading users. For example, clearly and honestly describe the products or services
-that you are selling and conspicuously post your terms of sale (including any refund and return
-policies).
+1. You must clearly identify that you, not Google, are the seller of the products or services.
 
-</li>
-<li>
-
-If your Product requires the user to pay to obtain basic functionality, you must make that clear in
-the description that the user sees when choosing whether to install it.
-
-</li>
-<li>
-
-You must clearly identify that you, not Google, are the seller of the products or services.
-
-</li>
-<li>
-
-Regardless of the method of payment, you may not process payment transactions that are prohibited
-for Google Checkout under the [Google Checkout Seller Terms of Service][checkout-terms]. This
-includes any illegal transaction or the sale or exchange of any illegal or prohibited goods or
-services, including the prohibited products set forth in the [Content Policies for Google
-Checkout][checkout-policies].
-
-</li>
-</ol>
+1. Regardless of the method of payment, you may not process payment transactions that are prohibited
+   for Google Checkout under the [Google Checkout Seller Terms of Service][checkout-terms]. This
+   includes any illegal transaction or the sale or exchange of any illegal or prohibited goods or
+   services, including the prohibited products set forth in the [Content Policies for Google
+   Checkout][checkout-policies].
 
 [checkout-terms]: http://checkout.google.com/termsOfService?type=Seller
 [checkout-policies]: http://checkout.google.com/seller/content_policies.html
