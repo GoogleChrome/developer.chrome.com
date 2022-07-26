@@ -264,7 +264,7 @@ h3 + pre.language-css {
   color: blue;
 
   @nest & + .baz,
-  @nest &.qux {
+  &.qux {
     color: red;
   }
 }
