@@ -82,28 +82,29 @@ break (though it will return less data), and you'll need to migrate to UA-CH
 if your site [needs specific information
 information](https://wicg.github.io/ua-client-hints/#use-cases).
 
-## How do the reduced UA and UA-CH work?
+## How does the reduced UA and UA-CH work?
 
 Here is a brief example of how the reduced User-Agent string and UA-CH work.
 For a more in-depth example, review [Improving user privacy and developer
 experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/#example-exchange).
 
-1. A user opens the browser and enters `example.com` into the address bar.
+A user opens the browser and enters `example.com` into the address bar:
+
 1. The browser sends a request to load the webpage.
    1. The browser includes the `User-Agent` header with the reduced User-Agent
       string. For example:
       `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML,
-      like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
-   1. The browser includes that same information in the default User-Agent Client
-      Hint headers. For example:
+      like Gecko) Chrome/98.0.0.0 Mobile Safari/537.36`
+   1. The browser includes that same information in the default User-Agent
+      Client Hint headers. For example:
       ```powershell
-      Sec-CH-UA: "Chrome"; v="93"
+      Sec-CH-UA: "Chrome"; v="98"
       Sec-CH-UA-Mobile: ?1
       Sec-CH-UA-Platform: "Android"
       ```
 1. The server can ask the browser to send additional client hints with the
-   `Accept-CH` response header. For example:
-   `Accept-CH: Sec-CH-UA-Arch`
+   `Accept-CH` response header, such as the device model. For example:
+   `Accept-CH: Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Model`
 1. The browser applies policies and user configuration to determine what data
    is allowed to return to the server in subsequent request headers. For
    example:
@@ -111,7 +112,7 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
    Sec-CH-UA: "Chrome"; v="93"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Arch: "arm"
+   Sec-CH-UA-Model: "Pixel 2"
    ```
 
 ### Critical Client Hints
