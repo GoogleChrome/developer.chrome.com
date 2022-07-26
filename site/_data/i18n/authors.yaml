@@ -861,6 +861,16 @@ sidlall:
     en: Sid Lall
   description:
     en: Product Manager at Google
+argyle:
+  title:
+    en: 'Adam Argyle'
+  description:
+    en: 'Developer Relations Engineer working on Chrome CSS, UI, & DevTools.'
+miriamsuzanne:
+  title:
+    en: 'Miriam Suzanne'
+  description:
+    en: 'Co-Founder of OddBird and CSS Working Group Invited Expert'
 tunetheweb:
   title:
     en: Barry Pollard
