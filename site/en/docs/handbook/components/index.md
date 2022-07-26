@@ -663,26 +663,144 @@ for unordered lists.
 
 ### Ordered list
 
+Ordered lists require a four-space indentation.
+
 ```md
 1. Lorem ipsum dolor sit amet…
+    1. Lorem ipsum dolor sit amet…
+        1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
+    1. Lorem ipsum dolor sit amet…
+    1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
 ```
 
+1. Lorem ipsum dolor sit amet
+    1. Lorem ipsum dolor sit amet
+        1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
+    1. Lorem ipsum dolor sit amet…
+    1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
-1. Lorem ipsum dolor sit amet…
+
+#### Uppercase Roman numerals (type)
+
+```md
+<ol type="I">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol type="I">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+
+#### Lowercase Roman numerals (type)
+
+```md
+<ol type="i">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol type="i">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+
+#### Lowercase Roman numerals (classes)
+
+```md
+<ol class="type--ordered-list roman-lower">
+<li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol class="type--ordered-list roman-lower">
+<li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+</ol>
+
+#### Uppercase ASCII letters (type)
+
+```md
+<ol type="A">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol type="A">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+
+
+#### Lowercase ASCII letters (type)
+
+```md
+<ol type="a">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol type="a">
+<li>Lorem ipsum dolor sit amet…</li>
+<li>Lorem ipsum dolor sit amet…</li>
+</ol>
+
+
+#### Additional notes
+
+```md
+<ul>
+<li>
+
+A line break before and after the `<li>`
+content will render the content as Markdown.
+
+</li>
+<li>
+Content written inline or with a single
+line break **will not** be rendered as HTML.
+</li>
+</ul>
+```
+
+<ul>
+<li>
+
+A line break before and after the `<li>`
+content will render the content as Markdown.
+
+</li>
+<li>
+Content written inline or with a single
+line break **will not** be rendered as HTML.
+</li>
+</ul>
 
 ### Unordered list
 
 ```md
 - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
+    - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 ```
 
 - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
+    - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
+  - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 
 ### Definition list
@@ -694,6 +812,8 @@ First Term
 Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
+
+  Additional content in a term must be indented.
 ```
 
 First Term
@@ -702,6 +822,8 @@ First Term
 Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
+
+  Additional content in a term must be indented.
 
 ## Tabs
 
