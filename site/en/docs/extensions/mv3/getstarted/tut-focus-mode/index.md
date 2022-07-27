@@ -17,7 +17,7 @@ In this guide, we’re going to explain how to do the following:
 - Use the extension service worker as the event coordinator.
 - Preserve user privacy through the `activeTab` permission.
 - Run code when the user clicks the extension toolbar icon.
-- Insert and remove a stylesheet using the **Scripting API**.
+- Insert and remove a stylesheet using the [Scripting][api-scripting] API.
 - Use a keyboard shortcut to execute code.
 
 ## Before you start {: #prereq }

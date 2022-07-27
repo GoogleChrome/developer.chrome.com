@@ -21,12 +21,12 @@ alt="Tabs Manager extension popup", width="500", height="230", class="screenshot
 
 In this guide, we’re going to explain how to do the following:
 
-- Create an extension popup using the **Action API**.
-- Query for specific tabs using the **Tabs API**.
+- Create an extension popup using the [Action][api-action] API.
+- Query for specific tabs using the [Tabs][api-tabs] API.
 - Preserve user privacy through narrow host permissions.
 - Change the focus of the tab.
 - Move tabs to the same window and group them.
-- Rename tabs group using the **GroupTabs API**.
+- Rename tabs group using the [TabGroups][api-tabgroups] API.
 
 ## Before you start {: #prereq }
 

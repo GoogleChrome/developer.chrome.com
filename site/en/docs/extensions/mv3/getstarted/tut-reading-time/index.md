@@ -24,7 +24,7 @@ In this guide, we’re going to explain the following concepts:
 
 - The extension manifest.
 - What icon sizes an extension uses.
-- How to inject code on pages using **content scripts**.
+- How to inject code on pages using [content scripts][doc-cs].
 - How to use match patterns.
 - Extension permissions
 
