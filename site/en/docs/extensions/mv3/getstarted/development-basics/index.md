@@ -1,61 +1,53 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Development basics'
-subhead: 'What to expect during the development of a Chrome Extension.'
-description: 'What to expect during the development of a Chrome Extension.'
-date: 2022-07-15
+subhead: 'Learn what the development of a Chrome extension will look like.'
+description: 'What to expect during the development of a Chrome extension.'
+date: 2022-08-10
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This page describes the process of developing an extension. We will create a demo extension, load it
-locally and share tips that will improve your chrome extension development experience. 
+This page describes the extension development workflow. We will create a "Hello, Extensions"
+example, load it locally and share tips that will improve your extension development experience. 
 
-## Building the extension {: #build }
+## Hello Extensions {: #build }
 
-Let’s create an extension that displays a “Hello, world!” heading on a popup. If you prefer, you can
-download the files hosted on [Github][sample-hello-world].
+This extension will display “Hello Extensions” when the user clicks on the extension toolbar icon.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
-alt="hello world extension", width="206", height="130", class="screenshot" %}
+alt="Hello extension", width="206", height="130", class="screenshot" %}
   <figcaption>
-  Hello World extension
+  Hello Extension popup
   </figcaption>
 </figure>
 
-Create a directory to store the extension files. Next, add a file called `manifest.json` and include
-the following code:
+Start by creating a new directory to store extension files. If you prefer, you can download the full
+source code hosted on [Github][sample-hello-world].
+
+Next, create a new file called `manifest.json` and add the following code:
 
 {% Label %}manifest.js:{% endLabel %}
 
 ```json
 {
+  "manifest_version": 3,
   "name": "Hello Extensions",
- "description": "Base Level Extension",
- "version": "1.0",
- "manifest_version": 3
-}
-```
-
-Every extension requires a manifest; above, we defined the extension’s metadata. Now let's add a
-popup by declaring it under the [action][api-action] key:
-
-{% Label %}manifest.js:{% endLabel %}
-
-```json
-{
-  ...
- "action": {
-   "default_popup": "hello.html",
-   "default_icon": "hello_extensions.png"
- ...
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
  }
 }
 ```
 
-Create a file titled `hello.html`, and add the following code:
+The first fields contain the metadata of the extension. Under the `"action"` key, the extension
+declares the popup and icon. You can download the icon [here][hello-icon]. 
+
+For the popup, create a file named `hello.html`, and add the following code:
 
 {% Label %}hello.html{% endLabel %}
 
@@ -63,7 +55,7 @@ Create a file titled `hello.html`, and add the following code:
 <html>
   <body>
     <h1>Hello Extensions</h1>
- </body>
+  </body>
 </html>
 ```
 
@@ -75,12 +67,13 @@ it on Chrome by loading it locally.
 To load an unpacked extension in developer mode, follow these steps:
 
 1. Go to the Extension Management page by navigating to `chrome://extensions`.
-    * Alternatively, click on the Extensions menu puzzle button and select **Manage Extensions** at the bottom of the menu.
-    * Or, click on the Chrome menu, hovering over **More Tools,** then select **Extensions**.
+    - Alternatively, click on the Extensions menu puzzle button and select **Manage Extensions** at the bottom of the menu.
+    - Or, click on the Chrome menu, hovering over **More Tools,** then select **Extensions**.
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the extension directory.
     <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Chrome Extension Management page", width="500", height="283",  class="screenshot" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Chrome Extension Management page", 
+    width="400", height="183",  class="screenshot" %}
 
       <figcaption>
       Chrome Management (chrome://extensions)
@@ -92,7 +85,10 @@ manifest, a generic icon will be created for the extension.
 
 ## Pinning the extension {: #pin }
 
-By default, when you load your extension locally, it will appear in the **extensions menu** {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24", height="24" %}. To access your extension quickly during development, pin your extension to the toolbar.
+By default, when you load your extension locally, it will appear in the **extensions menu** {% Img
+src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24",
+height="24" %}. To access your extension quickly during development, pin your extension to the
+toolbar.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LahIugYHQW3QpHM0z1qZ.png", 
@@ -114,7 +110,7 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
 
 ## Reloading the extension {: #reload }
 
-Let’s go back to the code and change the `H1` element in your HTML file.
+Let’s go back to the code and change the content of the `H1` element in your HTML file.
 
 {% Label %}hello.html{% endLabel %}
 
@@ -126,20 +122,24 @@ Let’s go back to the code and change the `H1` element in your HTML file.
 </html>
 ```
 
-After saving the file, go to the extension management page. You can see your changes by clicking on
+After saving the file, go to the Extension Management page. You can see the changes made by clicking on
 the refresh icon next to the **on/off** toggle:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QNtwZICbwsGO3gacCJEd.png", 
 alt="Reload an extension", width="500", height="233", class="screenshot" %}
 
-💡 Remember to refresh your extension every time you make any changes!
+{% Aside %}
 
-## Finding console logs and errors {: #logs}
+💡 **TIP**: Remember to refresh your extension every time you make any change.
 
-### Console logs
+{% endAside %}
 
-During development, you may want to debug your scripts by accessing the browser console logs. Let’s
-start by adding a script tag to `hello.html`.
+## Finding console logs and errors {: #logs }
+
+### Console logs {: #console}
+
+During development, you can debug your code by accessing the browser console logs. In this case, we
+are going to locate the logs for the popup. Start by adding a script tag to `hello.html`.
 
 {% Label %}hello.html{% endLabel %}
 
@@ -154,7 +154,7 @@ start by adding a script tag to `hello.html`.
 </html>
 ```
 
-Create a `popup.js` file and add a console.log():
+Create a `popup.js` file and add the following code to output the log to the console:
 
 {% Label %}popup.js{% endLabel %}
 
@@ -162,43 +162,55 @@ Create a `popup.js` file and add a console.log():
 console.log("This is a popup!")
 ```
 
-Refresh the extension. Open the popup, right-click and select **Inspect**. The **Elements** panel of DevTools will open. Navigate to the **Console** panel to see the console log.
+To see this message logged in the Console, complete the following steps:
 
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/WgZW1LIGR8dvSx1Zkhia.png", 
-alt="Inspecting the extension popup", width="400", height="294", class="screenshot" %}
-  <figcaption>
-  Inspecting an extension popup 
-  </figcaption>
-</figure>
+  1. Refresh the extension
+  2. Open the popup
+  3. Right-click on the popup
+  4. Select **Inspect**. 
+      <figure> 
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
+      alt="Inspecting the popup", width="322", height="262", class="screenshot" %}
+        <figcaption>
+        Inspecting a popup 
+        </figcaption>
+      </figure>
+  5. In the [DevTools][dev-tools], navigate to the **Console** panel.
+    <figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
+    alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
+      <figcaption>
+      DevTools Console Panel 
+      </figcaption>
+    </figure>
 
-### Error 
+### Error logs {: #errors }
 
-Now let's break the extension by throwing a syntax error in the `popup.js` file:
+Now let's try breaking the extension. We can throw a syntax error by removing the closing quote in the `popup.js` file:
 
 {% Label %}popup.js{% endLabel %}
 
 ```js
-console.log("This is a popup!)
+console.log("This is a popup!) // broken code
 ```
 
-Go to the extension management page and open the popup. An **Errors** button will appear.
+Go to the Extension Management page and open the popup. An **Errors** button will appear.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
-alt="Extension Management page with error button", width="500", height="226", class="screenshot" %}
+alt="Extension Management page with error button", width="300", height="226", class="screenshot" %}
 
-Click on the **Errors** button to see details of the error:
+Click on the **Errors** button to learn more about the error:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", 
-alt="Extension error details", width="500", height="281", class="screenshot" %}
+alt="Extension error details", width="400", height="281", class="screenshot" %}
 
-To learn more about debugging the service worker, options
-page, and content scripts, check out [Debugging extensions][doc-debug].
+To learn more about debugging the service worker, options page, and content scripts, see
+[Debugging extensions][doc-debug].
 
 ## Structuring an extension project {: #structure }
 
 There are many ways to structure an extension project, however, you should always place the
-manifest.json file in the root of the project. Here’s a structure example:
+manifest.json file in the **root** of the project. The following is a structure example:
 
 
 ```text
@@ -221,29 +233,35 @@ manifest.json file in the root of the project. Here’s a structure example:
 
 ## Using Typescript {: #types }
 
-If you are developing using an [IDE][mdn-ide] like VSCode, Atom, Sublime, etc... you can use the npm
+If you are developing using a [code editor][mdn-ide] such as VSCode or Atom, you can use the npm
 package [chrome-types][npm-chrome-types] to take advantage of autocompletion for the [Chrome
-API][doc-apis]. This npm package is published automatically and is updated when the Chromium source
+API][doc-apis]. This npm package is updated automatically when the Chromium source code
 changes.
 
-💡 Make sure you upgrade this npm package to the latest version frequently!
+{% Aside %}
+
+💡 **TIP**: Make sure to upgrade this npm package to the latest version frequently.
+
+{% endAside %}
 
 ## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step tutorials to begin your extension development journey. 
+Choose any of the following step-by-step tutorials to begin your extension learning journey. 
 
-| Extension                        | What you will learn                                                    |
-|----------------------------------|------------------------------------------------------------------------|
-| [Reading time][tut-reading-time] | To insert an element on every page automatically.                      |
-| [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
-| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
+| Extension                        | What you will learn                                                     |
+|----------------------------------|-------------------------------------------------------------------------|
+| [Reading time][tut-reading-time] | To insert an element on every page automatically.                       |
+| [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                            |
 
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome
-Extension and Chrome Web store documentation.
+extension and Chrome Web store documentation.
 
 [api-action]: /docs/extensions/reference/action/
+[dev-tools]: /docs/devtools
 [doc-apis]: /docs/extensions/reference/
 [doc-debug]: /docs/extensions/mv3/tut_debugging/
+[hello-icon]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [mdn-ide]: https://developer.mozilla.org/docs/Glossary/IDE
 [npm-chrome-types]: https://www.npmjs.com/package/chrome-types
 [sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world

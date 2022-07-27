@@ -1,72 +1,75 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Extensions 101'
-subhead: 'Explore basic concepts of Chrome Extension development.'
-description: 'Explore basic concepts of Chrome Extension development.'
-date: 2022-07-15
+subhead: 'Explore basic concepts of Chrome extension development.'
+description: 'Explore basic concepts of Chrome extension development.'
+date: 2022-08-10
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
 Chrome extensions enhance the browsing experience by adding features and functionality to Chrome.
-This page helps you get started with Chrome extension development and provides links to step-by-step [beginner tutorials][section-tutorials]. 
+This page is an introduction to Chrome extension development and provides links to step-by-step
+[beginner tutorials][section-tutorials]. 
 
 ## Web technologies {: #web-tech }
 
 Extensions are written with the same web technologies used to create web applications:
 
-* [HTML][mdn-html] is used as a content markup language.
-* [CSS][web-dev-css] is used for styling.
-* [JavaScript][mdn-js] is used for scripting and logic.
-* Extensions can use all the [JavaScript APIs][js-apis] that the browser provides.
+- [HTML][mdn-html] is used as a content markup language.
+- [CSS][web-dev-css] is used for styling.
+- [JavaScript][mdn-js] is used for scripting and logic.
+- Extensions can use all the [JavaScript APIs](https://developer.mozilla.org/docs/Web/API) that the browser provides.
 
-<!-- Should we use https://developer.chrome.com/docs/extensions/api_other/ or https://developer.mozilla.org/en-US/docs/Web/API -->
+<!-- Should we use https://developer.chrome.com/docs/extensions/api_other/ ?-->
 
-Before moving forward, we recommend you become familiar with these technologies.
+Before moving forward, we recommend that you become familiar with these technologies.
 
 ## Chrome extension APIs {: #chrome-apis }
 
-What makes extensions more powerful than a web app is their access to various [Chrome
-APIs][doc-apis]. The following are just a few examples of what extensions can do with these APIs:
+What makes extensions more powerful than a web app is their access to [Chrome
+APIs][doc-apis]. The following are just a few examples of what extensions can do:
 
-* Change the functionality or behavior of a website. 
-* Allow users to collect and organize information across websites.
-* Add features to the Chrome Dev Tools.
+- Change the functionality or behavior of a website. 
+- Allow users to collect and organize information across websites.
+- Add features to the Chrome Dev Tools.
 
-For a complete list of APIs, see the [Extension development Overview][doc-dev-overview].
+See [Extension development Overview][doc-dev-overview] for a complete list of API capabilities.
 
 ## Extension files {: #extension-files }
 
-The following are the most frequently used extension files:
+Extensions contain different files, depending on the functionality provided. The
+following are some of the most frequently used files:
 
-[The Manifest][doc-manifest]
-: The manifest is the only required file. It is a [JSON][mdn-json] file that records important
-metadata, defines resources, declares permissions, and identifies which files to run in the
-background and what files to run on the page.
+The Manifest
+: The [manifest][doc-manifest] is the only required file. It is a [JSON][mdn-json] file that records
+important metadata, defines resources, declares permissions, and identifies which files to run in
+the background and on the page.
 
-[The service worker][doc-service-worker]
-: The extension service worker handles and listens for browser events, such as navigating to a new
-page, removing a bookmark, or closing a tab. It can access all the [Chrome APIs][doc-apis], but it
-cannot directly access the content of web pages; that’s the job of content scripts.
+The service worker
+: The extension [service worker][doc-service-worker] handles and listens for browser events. There
+are many types of events, such as navigating to a new page, removing a bookmark, or closing a tab.
+It can use all the [Chrome APIs][doc-apis], but it cannot interact directly with the content of web
+pages; that’s the job of content scripts.
 
-[Content scripts][doc-content-scripts]
-: Content scripts can execute Javascript in the context of a web page. They can also read and modify
-the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome APIs][doc-reference], but
-can indirectly access the rest by exchanging messages with the extension service worker.
+Content scripts
+: [Content scripts][doc-content-scripts] can execute Javascript in the context of a web page. They
+can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome
+APIs][doc-reference], but can indirectly access the rest by exchanging messages with the extension
+service worker.
 
-Extension popup and other pages
-: An extension can include various html files: a [popup][doc-popup], an [options page][doc-options]
-and [other html pages][doc-ext-pages]. All these pages can use [Chrome APIs][doc-apis].
+The popup and other pages
+: An extension can include various HTML files, such as a [popup][doc-popup], an [options page][doc-options]
+and [other html pages][doc-ext-pages]. All these pages have access to [Chrome APIs][doc-apis].
 
-Visit [Extensions Architecture][doc-arch] for a more in-depth description and [Designing the
-user interface][doc-ui] for UI and design guidelines for Chrome Extensions.
+Visit [Extensions Architecture][doc-arch] and [Designing the user interface][doc-ui] to dive deeper.
 
 ## Developing your extension {: #development }
 
-Even though web applications and extensions share the same technologies, the developer experience
-for creating an extension is different. Check out [Development Basics][doc-dev-basics] to
-create a _Hello World_ extension and familiarize yourself with the extension development workflow.
+Even though web applications and extensions share the same technologies, the extension development
+experience is different. Check out [Development Basics][doc-dev-basics] to create a "Hello, Extensions"
+example and familiarize yourself with the extension development workflow.
 
 ## Designing your extension features {: #quality }
 
@@ -77,7 +80,7 @@ This will ensure your extension is allowed to be distributed through the Chrome 
 {% Details %}
 {% DetailsSummary %}
 
-**What exactly does "single purpose" mean?**
+**💡 What exactly does "single purpose" mean?**
 
 {% endDetailsSummary %}
 
@@ -98,24 +101,24 @@ See [Extension quality guidelines][doc-single-purpose] for additional details.
 
 ## Distributing your extension {: #distribution }
 
-You can register a developer account with the [Chrome Web Store][chrome-web-store] to host and distribute your
-extension. One thing to keep in mind, is that extensions must adhere to the [Chrome Web Store
-developer policies][doc-cws-policy]. 
+You can setup a developer account with the [Chrome Web Store][chrome-web-store] to host and
+distribute your extension. Bare in mind that extensions must adhere to the [developer program
+policies][doc-cws-policy]. 
 
-Visit [Publish in the Chrome Web Store][doc-cws-publish] to learn how to publish your extension.
+See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribute your extension.
 
 ## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step beginner tutorials to kick-off your Chrome extension
-development journey. 
+Choose any of the following step-by-step tutorials to begin your extension learning journey. 
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
 | [Reading time][tut-reading-time] | To insert an element on every page automatically.                      |
-| [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
+| [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 | [Tabs Manager][tut-tabs-manager]     | To create a popup that manages browser tabs.                           |
 
-As a bonus, these tutorials were designed to improve your experience when reading the Chrome Extension and Chrome Web store documentation.
+As a bonus, these tutorials were designed to improve your experience when reading the Chrome
+extension and Chrome Web Store documentation.
 
 
 [chrome-web-store]: https://chrome.google.com/webstore/

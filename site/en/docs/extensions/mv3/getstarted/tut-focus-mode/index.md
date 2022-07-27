@@ -2,47 +2,34 @@
 layout: 'layouts/doc-post.njk'
 title: 'Focus Mode'
 subhead: 'Change the aspect of the current page by clicking the extension toolbar icon.'
-description: 'Learn how to run code on the current page when clicking on the extension toolbar icon.'
-date: 2022-07-15
+description: 'Learn how to run code on the current active tab.'
+date: 2022-08-10
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This tutorial builds an extension that changes the style of the Chrome extension and
-web store documentation pages. 
+This tutorial builds an extension that changes the aspect of the Chrome extension and
+Web store documentation pages so that they are easier to read.
 
-In this guide, we’re going to cover the following concepts:
+In this guide, we’re going to explain how to do the following:
 
-- The role of the extension service worker.
-- How to preserve user privacy with the activeTab permission.
-- How to run code when the user clicks the extension toolbar icon.
-- How to insert and remove a CSS stylesheet.
-- How to add a keyboard shortcut.
+- Use the extension service worker as the event coordinator.
+- Preserve user privacy through the `activeTab` permission.
+- Run code when the user clicks the extension toolbar icon.
+- Insert and remove a stylesheet using the **Scripting API**.
+- Use a keyboard shortcut to execute code.
 
 ## Before you start {: #prereq }
 
-If you have not already, check out [Development Basics][doc-dev-basics] to learn what to expect
-during the development of an extension.
-
-This is what the final file structure of this project will look like: 
-
-```text
-Focus mode/
-├── manifest.json
-├── background.js
-├── focus-mode.css
-└── images/
-    ├── icon-16.png
-    ├── icon-32.png
-    ├── icon-48.png
-    └── icon-128.png
-```
-
-If you rather download the complete source code, it is available on [Github][github-focus-mode].
+This guide assumes that you have basic web development experience. We recommend checking out
+[Development Basics][doc-dev-basics] for an introduction to the extension development workflow.
 
 ## Build the extension {: #build }
-<!-- Intro here? -->
+
+To start, create a new directory called `Focus Mode` that will hold the extension's files. If you
+prefer, you can download the complete source code on [Github][github-focus-mode].
+
 ### Step 1: Add the extension data and icons {: #step-1 }
 
 Create a file called `manifest.json` and include the following code.
@@ -66,23 +53,18 @@ Create a file called `manifest.json` and include the following code.
 ```
 
 These manifest keys are explained in more detail in the [Reading time
-tutorial][tut-reading-time-step2]. 
+tutorial][tut-reading-time-step1]. 
 
 Create an `images` folder and place the icons inside. You can download the icons
 [here][github-focus-mode-icons].
 
 ### Step 2: Initialize the extension {: #step-2 }
-<!-- TODO: Make sense of the mess below -->
-Extensions monitor browser events using the extension service worker, which then reacts with
-specified instructions. Service workers are a special execution environment; they are started to
-handle events they're interested in and are terminated when they're no longer needed.
 
-<!-- Events are actions or occurrences that happen in the system. The system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken when the event occurs. -->
+Extensions monitor browser events using the [extension service worker][doc-sw]. Service workers have
+a special JavaScript environment; they load to handle events, and the browser terminates a service
+worker when it's no longer needed.
 
-#### Specify the service worker {: #step2-b}
-
-To load the extension [service worker][doc-sw] in the background, first we need to register it in
-the manifest:
+Start by adding the following code to register the service worker in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -96,13 +78,15 @@ the manifest:
 }
 ```
 
-#### Set the initial state
-
-The first event the service worker will listen to is [`runtime.onInstalled()`][runtime-oninstalled].
-This method allows the extension to set an initial state or complete some tasks on installation. Since our extension will only handle two states (ON and OFF), we will track each tab's state by checking the _extension badge_.
+The first event the service worker will listen for is
+[`runtime.onInstalled()`][runtime-oninstalled]. This method allows the extension to set an initial
+state or complete some tasks on installation. Since this example will only handle two states (ON and
+OFF), it will track each tab's state through the _extension badge_.
 
 {% Aside 'key-term' %}
-The extension badge is a colored banner on top of the extension action (toolbar icon).
+
+The [extension badge][action-badge] is a colored banner on top of the extension action (toolbar
+icon).
 
 {% endAside %}
 
@@ -131,8 +115,8 @@ You can use the [Storage API][api-storage] to store state data.
 ### Step 3: Enable the extension action {: #step-3 }
 
 The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the
-extension action, it will either run some code on the page (like in this example) or it can display
-a popup. Add the following code to declare the extension action in the manifest:
+extension action, it will either run some code (like in this example) or display a popup. Add the
+following code to declare the extension action in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -151,36 +135,34 @@ a popup. Add the following code to declare the extension action in the manifest:
 }
 ```
 
-#### Using the activeTab permission
+#### Use the activeTab permission to protect user privacy {: #active-tab}
 
-The activeTab permission grants the extension _temporary_ permission to execute code on the current tab. It also allows access to sensitive Tab properties of the current tab:
-`url`, `pendingUrl`, `title`, or `favIconUrl`.
+The [`activeTab`][doc-active-tab] permission grants the extension _temporary_ ability to execute code
+on the currently active tab. It also allows access to [sensitive properties][active-tab-allows] of
+the current tab.
 
-This permission is **_triggered_** whenever the user interacts with the extension through a specific action. In our case, by clicking on the extension action (icon toolbar).
+This permission is enabled when the user **_invokes_** the extension. In this case, the user invokes the
+extension by clicking on the extension action.
 
 {% Details %}
 {% DetailsSummary %}
-💡 **What are other ways to trigger the activeTab?**
+💡 **What other user interactions enable the activeTab permission?**
 {% endDetailsSummary %}
 
-Others user gestures that can trigger the activeTab permission are the following:
+Other user gestures that enable the activeTab permission are the following:
 
-- By pressing a keyboard shortcut combination.
-- By selecting a context menu item.
-- By hitting enter when using the omnibox.
-- By opening an extension popup.
+- Pressing a keyboard shortcut combination.
+- Selecting a context menu item.
+- Accepting a suggestion from the omnibox.
+- Opening an extension popup.
 
 {% endDetails %}
 
-The `“activetab”` permission allows users to _purposefully_ choose to run the extension on the
-currently focused tab; this way, it protects the user’s privacy. 
+The `activetab` permission allows users to _purposefully_ choose to run the extension on the
+currently focused tab; this way, it protects the user’s privacy. Another benefit is that it does not
+trigger a [permission warning][doc-perms-warning].
 
-Another benefit, is that the [activeTab][doc-active-tab] permission does not trigger a [permission
-warning][doc-perms-warning].
-
-#### Declare the activeTab permission
-
-To use the activetab permission, add it to manifest's permission array.
+To use the activetab permission, add it to the manifest's permission array:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -194,11 +176,9 @@ To use the activetab permission, add it to manifest's permission array.
 
 ### Step 4: Track the state of the current tab {: #step-4 }
 
-The `action.onClicked` listener allows us to run code when the user clicks on the extension action.
-If the URL matches an extension or web store documentation page, we will check the state of the
-current tab and set the next state by setting the badge text. 
-
-Add the following code to `background.js`:
+After the user clicks on the extension action, the extension will check if the URL matches a
+documentation page. Next, it will check the state of the current tab and set the next state. Add the
+following code to `background.js`:
 
 {% Label %}background.js:{% endLabel %}
 
@@ -220,12 +200,12 @@ Add the following code to `background.js`:
 
 ### Step 5: Add or remove the stylesheet {: #step-5 }
 
-Now it's time to change the page's layout. So first, create a stylesheet named
-`focus-mode.css` and include the following code:
+Now it's time to change the layout of the page. Create a file named `focus-mode.css` and include the
+following code:
 
 {% Label %}focus-mode.css:{% endLabel %}
 
-```css
+```js
 body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
 main > :not(:last-child),
 main > :last-child > navigation-tree,
@@ -239,8 +219,8 @@ main > :last-child {
 }
 ```
 
-Great! Let's insert or remove the CSS stylesheet using the [Scripting][api-scripting] API. To
-use the Scripting API, declare the `"scripting"` permission:
+Great! Let's insert or remove the stylesheet using the [Scripting][api-scripting] API. Start by
+declaring the `"scripting"` permission in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -280,11 +260,19 @@ Finally, in `background.js` add the following code to change the layout of the p
     }
   });
 ```
-<!-- Can I execute a file instead of inserting a CSS file? -->
+
+{% Details %}
+{% DetailsSummary %}
+💡 **Can I use the Scripting API to inject code instead of a stylesheet?**
+{% endDetailsSummary %}
+
+Yes! You can use [`scripting.executeScript()`][api-scripting-es] to inject JavaScript. 
+
+{% endDetails %}
 
 ### _Optional: Assign a keyboard shortcut_ {: #step-6 }
 
-As a bonus, let's add a shortcut to make it easier to enable or disable focus mode. Add the
+Just for fun, let's add a shortcut to make it easier to enable or disable focus mode. Add the
 `“commands”` key to the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
@@ -308,23 +296,37 @@ code is needed!
 
 ## Test that it works {: #try-out }
 
+Verify that the file structure of your project looks like the following: 
+
+```text
+Focus mode/
+├── manifest.json
+├── background.js
+├── focus-mode.css
+└── images/
+    ├── icon-16.png
+    ├── icon-32.png
+    ├── icon-48.png
+    └── icon-128.png
+```
+
 ### Load your extension locally {: #locally }
 
 To load an unpacked extension in developer mode, follow the steps in [Development
-Basics][doc-dev-basics].
+Basics][doc-dev-basics-unpacked].
 
 ### Open an extension documentation page {: #open-sites }
 
 Go to any of the following pages:
 
 - [Welcome to the Chrome Extension documentation][doc-welcome]
-- [Using promises][doc-promises]
+- [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
 Then, click on the extension action or press the keyboard shortcut `Ctrl + U` or `Cmd + U`.
 
 It should look like this:
-<!-- TODO: Change! It also has the reading time extension enabled -->
+
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/6jSxXwVmjVv10NvwJ2Iu.png", 
 alt="Focus Mode extension in Welcome page", width="800", height="378", class="screenshot" %}
@@ -335,7 +337,7 @@ alt="Focus Mode extension in Welcome page", width="800", height="378", class="sc
 
 ## Potential enhancements {: #challenge }
 
-Based on what you’ve learned today, try to implement any of the following:
+Based on what you’ve learned today, try to accomplish any of the following:
 
 - Improve the CSS stylesheet.
 - Assign a different keyboard shortcut.
@@ -343,27 +345,31 @@ Based on what you’ve learned today, try to implement any of the following:
 
 ## Keep building! {: #continue }
 
-Congratulations on finishing this tutorial 🎉. 
+Congratulations on finishing this tutorial 🎉. Continue leveling up your skills by completing other
+tutorials on this series:
 
-Continue leveling up your skills by completing other tutorials on this series:
+| Extension                        | What you will learn                                            |
+|----------------------------------|----------------------------------------------------------------|
+| [Reading time][tut-reading-time] | To insert an element on a specific set of pages automatically. |
+| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                   |
 
-| Extension                        | What you will learn                               |
-|----------------------------------|---------------------------------------------------|
-| [Reading time][tut-reading-time] | To insert an element on every page automatically. |
-| [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.      |
-
+[action-badge]: /docs/extensions/reference/action/#badge
+[active-tab-allows]: /docs/extensions/mv3/manifest/activeTab/#what-activeTab-allows
+[api-scripting-es]: /docs/extensions/reference/scripting/#injected-code
 [api-scripting]: /docs/extensions/reference/scripting/
 [api-storage]: /docs/extensions/reference/storage
+[cws-publish]: /docs/webstore/publish
 [doc-active-tab]: /docs/extensions/mv3/manifest/activeTab/
+[doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-perms-warning]: /docs/extensions/mv3/permission_warnings/#required_permissions
 [doc-promises]: /docs/extensions/mv3/promises/
-[doc-sw]: /docs/extensions/mv3/migrating_to_service_workers/
+[doc-sw]: /docs/extensions/mv3/service_workers/
 [doc-welcome]: /docs/extensions/mv3/
 [github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode/images
 [github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
-[tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
+[tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
 

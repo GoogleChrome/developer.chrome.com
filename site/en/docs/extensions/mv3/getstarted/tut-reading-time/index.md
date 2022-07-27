@@ -1,62 +1,47 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Reading time'
-description: 'Insert an element on a specific set of pages.'
-subhead: 'Create your first extension by inserting an element on specific sites.'
-date: 2022-07-15
+description: 'Learn how to insert an element on each page.'
+subhead: 'Create your first extension that inserts a new element on the page.'
+date: 2022-08-10
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This tutorial build an extension that adds the expected reading time to Chrome
-extension and Chrome web store documentation pages. 
+This tutorial builds an extension that adds the expected reading time to any Chrome extension and
+Chrome web store documentation page. 
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VczSGe8eh0Xv7nTXxhxg.png", 
 alt="Reading time extension in the extension Welcome page", width="500", height="116", class="screenshot" %}
   <figcaption>
-  Reading time extension on Chrome extension welcome page. 
+  Reading time extension on the extension's Welcome page. 
   </figcaption>
 </figure>
 
-In this guide, we’re going to cover the following concepts:
+In this guide, we’re going to explain the following concepts:
 
 - The extension manifest.
-- Recommended icon sizes for extensions.
-- Injecting a content script.
-- Using match patterns.
+- What icon sizes an extension uses.
+- How to inject code on pages using **content scripts**.
+- How to use match patterns.
+- Extension permissions
 
 ## Before you start {: #prereq }
 
-If you have not already, check out [Development Basics][doc-dev-basics] to learn what to expect
-during the development of an extension.
-
-The following is the final file structure of this project: 
-
-```text
-└── Reading time/
-    ├── manifest.json
-    ├── scripts/
-    │   └── content.js
-    └── images/
-        ├── icon-16.png
-        ├── icon-32.png
-        ├── icon-48.png
-        └── icon-128.png
-```
-
-If you rather download the complete source code, it is available on [Github][github-reading-time].
+This guide assumes that you have basic web development experience. We recommend checking out
+[Development Basics][doc-dev-basics] for an introduction to the extension development workflow.
 
 ## Build the extension {: #build }
 
-<!-- TODO: Add friendly intro -->
+To start, create a new directory called `Reading time` that will hold the extension's files. If you
+prefer, you can download the complete source code on [Github][github-reading-time].
 
 ### Step 1: Add information about the extension {: #step-1 }
 
-The manifest JSON file is the only required extension file. It contains important information about
-the extension. We'll start by adding the extensions metadata. Create a `manifest.json` file in the
-_root_ of the project and add the following code:
+The manifest JSON file is the only required extension file. It holds important information about the
+extension. Create a `manifest.json` file in the _root_ of the project and add the following code:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -70,27 +55,30 @@ _root_ of the project and add the following code:
 }
 ```
 
-<!-- Explain more these fields -->
+These keys contain basic metadata for the extension. It appears in the Extension Management page
+and, when published, in the Chrome Web Store listing. To dive deeper, check out the
+[`"name"`][man-name], [`"version"`][man-ver] and [`"description"`][man-desc] keys on the
+[Manifest][doc-manifest] overview page.
 
 {% Details %}
 {% DetailsSummary %}
 💡 **Other facts about the extension Manifest**
 {% endDetailsSummary %}
 
-- It must be located at the **root** of the project.  
-- It only supports comments (`//`) during development, not in the Chrome Web Store.
-- The metadata is displayed in the Extension manager and the Chrome Web Store.
+- It must be located at the **root** of the project.
+- The only required keys are the `"manifest_version"`, `"name"` and `"version"`.
+- It supports comments (`//`) during development but not in the Chrome Web Store.
 
 {% endDetails %}
 
 ### Step 2: Provide the icons {: #step-2 }
 
-So, why do we need icons? Although [icons][doc-icons] are optional during development, we recommend
-include them since they will appear in places like the extension management page, the Chrome web
-store listing, and others. 
+So, why do we need icons? Although [icons][doc-icons] are optional during development, they are
+required if you plan to distribute your extension on the Chrome Web Store. They also appear in other
+places like the Extension Management page.
 
-Create an `images` folder and place the icons inside. You can download the icons
-on [Github][github-rt-icons]. Add the following code to declare the icons in the manifest:
+Create an `images` folder and place the icons inside. You can download the icons on
+[Github][github-rt-icons]. Next, add the following code to declare the icons in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -112,14 +100,14 @@ designing your extension icons? Check out the [icon guidelines and best practice
 
 {% Details %}
 {% DetailsSummary %}
-💡 **Where do all these icons sizes appear?**
+💡 **Where are these icon sizes displayed?**
 {% endDetailsSummary %}
 
 | Icon Size | Icon Use                                               |
 |-----------|--------------------------------------------------------|
 | 16x16     | Favicon on the extension's pages and context menu icon.|
 | 32x32     | Windows computers often require this size.             |
-| 48x48     | Displays on the extension management page.             |
+| 48x48     | Displays on the Extension Management page.             |
 | 128x128   | Displays on installation and in the Chrome Web Store.  |
 
 {% endDetails %}
@@ -127,8 +115,8 @@ designing your extension icons? Check out the [icon guidelines and best practice
 ### Step 3: Declare the content script {: #step-3 }
 
 Extensions can run scripts that read and modify the content of the pages. These are called _content
-scripts_. But before we can start writing code, we need to register it. Add the following code to
-the `manifest.json` to load a content script called `content.js`.
+scripts_. Add the following code to the `manifest.json` to register a content script called
+`content.js`.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -144,52 +132,41 @@ the `manifest.json` to load a content script called `content.js`.
         ]
       }
     ]
-  ...
 }
 ```
 
-You can choose which sites the script will be injected into by adding one or more match patterns to
-an array in the `“matches”` field. Match patterns consist of three parts `<scheme>://<host><path>`.
-They can contain '`*`' characters. For more details, see [Match Patterns][doc-match].
-
-When the user installs your extension, the browser will let them know which sites your extension
-will be running on. In this example, the user would see the following permission warning:
-
-<!-- Add screenshot with permission warning -->
+The `“matches”` field can have one or more [match patterns][doc-match]. These allow the browser to
+identify which sites to inject the content scripts into. Match patterns consist of three parts
+`<scheme>://<host><path>`. They can contain '`*`' characters.
 
 {% Details %}
 {% DetailsSummary %}
-💡 **A note on file paths in the manifest**
+💡 **Does this extension display a permission warning?**
 {% endDetailsSummary %}
 
-All files included in the manifest should be _relative_ to the manifest file and start with the file name,
-not with a leading `/` or `./`. 
+When a user installs an extension, the browser informs them what the extension has the capacity to
+do. Content scripts request permission to run on the sites that meet the match pattern criteria. 
 
-For instance, if `content.js` was not in a folder, it would be registered like this:
+In this example, the user would see the following permission warning:
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rKDdOyri9x8VkhTEXbO6.png", alt="Permission warning the user will see when installing the Reading time extension", width="338", height="175", class="screenshot" %}
+  <figcaption>
+  Reading time permission warning. 
+  </figcaption>
+</figure>
 
-{% Label %}manifest.json:{% endLabel %}
-
-```json
-{
-  "content_scripts": [
-        {
-          "js": ["content.js"],
-          ...
-        }
-      ]
-}
-```
+To dive deeper on extension permissions, see [Declaring permissions and warn users][doc-perms]. 
 
 {% endDetails %}
 
 ### Step 4: Calculate and insert the reading time {: #step-4 }
 
-Content scripts use the standard [Document Object Model][mdn-dom] (DOM) to read details of the web
-pages and make changes. 
+Content scripts can use the standard [Document Object Model][mdn-dom] (DOM) to read and change the
+content of a page. The extension will first check if the page contains the `<article>` element.
+Then, it will count all the words within this element and create a paragraph that displays the total
+reading time.
 
-Create a new folder called **scripts**. Within it add a file called `content.js`. The following code
-first checks if the page contains the `article` element. Then, it counts all the words within the
-article and creates an paragraph that displays the total reading time.
+Create a new folder called `scripts`. Add a file called `content.js` and include the following code: 
 
 {% Label %}content.js:{% endLabel %}
 
@@ -225,35 +202,49 @@ if (article) {
 
 - [Regular
   expressions](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern)
-  to count only the words.
-- [InsertAdjacentElement](https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement)
- to insert the reading time node after the element.
-- [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to add css class
-  names to the element class attribute.
+  are used to count only the words inside the `<article>` element.
+- [InsertAdjacentElement()](https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement)
+ is used to insert the reading time node after the element.
+- The [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) property is
+  used to add CSS class names to the element class attribute.
 
 {% endDetails %}
 
 ## Test that it works {: #try-out }
 
+Verify that the file structure of your project looks like the following: 
+
+```text
+└── Reading time/
+    ├── manifest.json
+    ├── scripts/
+    │   └── content.js
+    └── images/
+        ├── icon-16.png
+        ├── icon-32.png
+        ├── icon-48.png
+        └── icon-128.png
+```
+
 ### Load your extension locally {: #locally }
 
-To load an unpacked extension in developer mode, follow the steps in [Development Basics][doc-dev-basics-unpacked].
+To load an unpacked extension in developer mode, follow the steps in [Development
+Basics][doc-dev-basics-unpacked].
 
-<!-- Explore including steps as a detail dropdown -->
+### Open an extension or Chrome Web Store documentation {: #open-sites }
 
-### Open an extension documentation {: #open-sites }
+Here are a few pages you can open to see how long each article will take to read. 
 
-Here are a few pages you can open to see how long each article  will take to read. 
-
-* [Welcome to the Chrome Extension documentation][doc-welcome]
-* [Using promises][doc-promises]
-* [Understanding Content Scripts][doc-cs]
+- [Welcome to the Chrome Extension documentation][doc-welcome]
+- [Publish in the Chrome Web Store][cws-publish]
+- [Understanding Content Scripts][doc-cs]
 
 It should look like this:
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VczSGe8eh0Xv7nTXxhxg.png", 
-alt="Reading time extension in the extension Welcome page", width="500", height="116", class="screenshot" %}
+alt="Reading time running on the Welcome page", 
+width="500", height="116", class="screenshot" %}
   <figcaption>
   Extension Welcome page with the Reading time extension
   </figcaption>
@@ -264,38 +255,49 @@ alt="Reading time extension in the extension Welcome page", width="500", height=
 Based on what you’ve learned today, try to implement any of the following:
 
 - Add another **match pattern** in the manifest.json to support other [chrome developer][dev-chrome]
-  pages, like for example, the [devtool][devtools] or [workbox][workbox].
+  pages, like for example, the [Chrome devtools][devtools] or [workbox][workbox].
 - Add a new content script that calculates the reading time to any of your favorite blogs or
   documentation sites. 
 
-💡 TIP: [Viewing the DOM][devtools-dom] explains how to use the Chrome devtools to find out which element to query for.
+{% Aside %}
+
+💡 **HINT**: You can use the Devtools to [inspect DOM elements][devtools-dom].
+
+{% endAside %}
 
 ## Keep building! {: #continue }
 
-Congratulations on finishing this tutorial 🎉. 
-
-Continue developing your skills by completing other tutorials on this series:
+Congratulations on finishing this tutorial 🎉. Continue np your skills by completing other
+tutorials on this series:
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|
-| [Focus Mode][tut-focus-mode]     | To run code on the current page when clicking on the extension action. |
+| [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
 [cws-icons]: /docs/webstore/images/#icons
+[cws-publish]: /docs/webstore/publish/
 [dev-chrome]: https://developer.chrome.com/docs/
 [devtools-dom]: https://developer.chrome.com/docs/devtools/dom/
 [devtools]: https://developer.chrome.com/docs/devtools/
 [doc-cs]: /docs/extensions/mv3/content_scripts/
-[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-icons]: /docs/extensions/mv3/manifest/icons/
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-match]:/docs/extensions/mv3/match_patterns/
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
-[doc-match]:/docs/extensions/mv3/match_patterns/
-[github-reading-time]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
-[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
+[doc-perms]:/docs/extensions/mv3/permission_warnings/
+[github-reading-time]:
+    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
+[github-rt-icons]:
+    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
+[man-desc]: /docs/extensions/mv3/manifest/description
+[man-name]: /docs/extensions/mv3/manifest/name/
+[man-ver]: /docs/extensions/mv3/manifest/version
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
-[workbox]: https://developer.chrome.com/docs/workbox/
+[workbox]: /docs/workbox/
