@@ -109,7 +109,7 @@ window.addEventListener('resize', function() {
 });
 ```
 
-[supported in chrome]: https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture
-[android 0 supports picture-in-picture]: https://developer.android.com/about/versions/oreo/android-8.0.html#opip
-[picture-in-picture web api]: https://wicg.github.io/picture-in-picture/
-[picture-in-picture wicg repository]: https://github.com/WICG/picture-in-picture
+[supported in Chrome]: https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture
+[Android O supports Picture-in-Picture]: https://developer.android.com/about/versions/oreo/android-8.0.html#opip
+[Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
+[Picture-in-Picture WICG repository]: https://github.com/WICG/picture-in-picture
