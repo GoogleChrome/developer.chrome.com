@@ -141,6 +141,24 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Will `SameSite` become irrelevant after third-party cookies are deprecated?
+
+- `SameSite=Lax` is the current default. While it does not strictly *need* to
+   be included, it's good practice to specify it for cross-browser consistency.
+- `SameSite=Strict` continues to be a more restrictive option, for cookies that
+   must only be sent when the user is already on the site. This is and remains
+   a good security practice for cookies that are part of managing particularly
+   sensitive access.
+- `SameSite=None` should continue to be sent for cross-browser consistency. However,
+   Chrome's proposed change to phase out third-party cookies would result in those
+   cookies no longer being sent as is in cross-site contexts.
+
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
+
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
 In short, no, you cannot opt-out of an origin trial for specific regions.
