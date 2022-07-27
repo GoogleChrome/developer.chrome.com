@@ -55,7 +55,7 @@ services are affected, and know which proposals and features you should be
 following.
 
 Let's break down the current status and look at what you need to know to
-continue providing feedback, testing, and preparing for features on the path to
+continue to test, provide feedback, and prepare for features on the path to
 launch.
 
 ## Expanding the Privacy Sandbox Relevance and Measurement origin trial
@@ -70,7 +70,7 @@ frames](/docs/privacy-sandbox/fenced-frame/), and we will be adding [Shared
 Storage](/docs/privacy-sandbox/shared-storage/) soon. The trial is currently
 [enabled for 50% of Chrome Beta
 users](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/NTItmgLMAQAJ)
-which has enabled us to actively address early developer feedback and issues
+which has helped us to actively address early developer feedback and issues
 without disrupting users too much.
 
 As the origin trial progresses, we want to give developers the opportunity to
@@ -166,12 +166,13 @@ to still use their own cookies in these specific cross-site but first-party
 contexts.
 
 Based on the feedback we received during discussion and testing of the feature,
-we're proposing a number of changes that aim to both address those issues and
-still satisfy the needs of the ecosystem. Specifically, we are proposing that
-sets be defined in terms of use-case-specific "subsets". We also propose that
-sites use the Storage Access API along with a potential extension to request
-cross-site cookie access. This replaces the proposal for the `SameParty`
-attribute.
+[we're proposing a number of
+changes](https://github.com/WICG/first-party-sets/issues/92) that aim to both
+address those issues and still satisfy the needs of the ecosystem. Specifically,
+we are proposing that sets be defined in terms of use-case-specific "subsets".
+We also propose that sites use the Storage Access API along with a potential
+extension to request cross-site cookie access. This replaces the proposal for
+the `SameParty` attribute.
 
 {% Aside %}
 
