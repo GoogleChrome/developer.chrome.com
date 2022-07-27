@@ -201,11 +201,11 @@ if (article) {
 {% endDetailsSummary %}
 
 - [Regular
-  expressions](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern)
+  expressions][mdn-regular-expressions]
   are used to count only the words inside the `<article>` element.
-- [InsertAdjacentElement()](https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement)
+- [InsertAdjacentElement()][mdn-insert-adjacent]
  is used to insert the reading time node after the element.
-- The [Classlist](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) property is
+- The [Classlist][mdn-classlist] property is
   used to add CSS class names to the element class attribute.
 
 {% endDetails %}
@@ -286,18 +286,19 @@ tutorials on this series:
 [doc-icons]: /docs/extensions/mv3/manifest/icons/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-match]:/docs/extensions/mv3/match_patterns/
+[doc-perms]:/docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
-[doc-perms]:/docs/extensions/mv3/permission_warnings/
-[github-reading-time]:
-    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
-[github-rt-icons]:
-    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
+[github-reading-time]:https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time
+[github-rt-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/reading-time/images
 [man-desc]: /docs/extensions/mv3/manifest/description
 [man-name]: /docs/extensions/mv3/manifest/name/
 [man-ver]: /docs/extensions/mv3/manifest/version
+[mdn-classlist]: https://developer.mozilla.org/docs/Web/API/Element/classList
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
+[mdn-insert-adjacent]: https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
+[mdn-regular-expressions]: https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
 [workbox]: /docs/workbox/
