@@ -1,12 +1,12 @@
 ---
-title: "@container + :has(): two powerful new responsive APIs landing in Chromium 105"
+title: "@container and :has(): two powerful new responsive APIs landing in Chromium 105"
 description: >
   "Container queries and :has() are a match made in responsive heaven. Luckily, both of these features are landing together in Chromium 105. This is a huge release with two highly-requested features for responsive interfaces!"
 layout: 'layouts/blog-post.njk'
 date: 2022-07-25
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/KBYS0gF3R7mdhjVBwvbn.jpg'
 alt: >
-  Image of a rocketship from SpaceX via Unsplash
+  Image of a rocketship from SpaceX.
 tags:
   - chrome-105
   - css
@@ -32,7 +32,7 @@ Container queries are [currently supported](https://caniuse.com/css-container-qu
 
 To build with container queries, you must first set containment on a parent element. Do this by setting a `container-type` on the parent container. You might have a card with an image and some text content that looks like this:
 
-{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/xR7RmgS1TUZmZ9ntOFrV.png", alt="single two-column card", width="795", height="182" %}
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/xR7RmgS1TUZmZ9ntOFrV.png", alt="Single two-column card.", width="795", height="182" %}
 
 To create a container query, set `container-type` on the card container:
 
@@ -42,7 +42,7 @@ To create a container query, set `container-type` on the card container:
 }
 ```
 
-Setting the `container-type` to `inline-size` says we want to query for the inline-direction size of the parent. In latin languages like english, this would be the width of the card, since the text flows inline from left to right.
+Setting the `container-type` to `inline-size` queries the inline-direction size of the parent. In latin languages like english, this would be the width of the card, since the text flows inline from left to right.
 
 Now, we can use that container to apply styles to any of its children using `@container`:
 
@@ -76,11 +76,11 @@ For example, `p:has(span)` indicates a paragraph (`p`) selector, which has a `sp
 Current [browser support](https://caniuse.com/css-has) for `:has()` includes Chromium and Safari.
 {% endAside %}
 
-## Container queries + :has()
+## Container queries and `:has()`
 
 You can combine the parent selection powers of `:has()` with the parent querying powers of container queries to create some really dynamic intrinsic styles.
 
-Let’s expand on the first example with the rocket card. What if we had a card without an image? Maybe we’d want to increase the size of the title and adjust the grid layout to single column so that it looks more intentional without the image.
+Let’s expand on the first example with the rocket card. What if you had a card without an image? Maybe you want to increase the size of the title and adjust the grid layout to single column so that it looks more intentional without the image.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/ymghfPKOBExwvSFQIdrY.png", alt="Larger text on the card without the image, and it shows in a column.", width="795", height="503" %}
 
@@ -100,7 +100,7 @@ You’re looking for an element with a class of `visual` to apply the two-column
 }
 ```
 
-In the above code, you are writing a selector that styles an `h1` within a card that does not contain a `visual` class. This is how we can very clearly adjust the font size.
+In the above code, you are writing a selector that styles an `h1` within a card that does not contain a `visual` class. This is how you can very clearly adjust the font size.
 
 {% Codepen {
   user: 'una',
