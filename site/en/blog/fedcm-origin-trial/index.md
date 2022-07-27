@@ -673,10 +673,10 @@ alt="login API call", width="800", height="419", class="type--full-bleed"
 
 FedCM is designed to not inform the RP of the user's IdP sign-in state until the
 user explicitly confirms to **Continue as** and signs in or the user explicitly
-rejects by clicking on the cancel button on the dialog. This means RPs aren't
-informed of connection to the FedCM API if: the user isn't signed into the IdP,
-the accounts list endpoint returns an empty list, or the endpoint returns an
-error.
+rejects by clicking on the cancel button on the dialog (or swiping the dialog on
+Android). This means RPs aren't informed of connection to the FedCM API if: the
+user isn't signed into the IdP, the accounts list endpoint returns an empty
+list, or the endpoint returns an error.
 
 RPs are expected to support browsers which don't support FedCM, therefore
 users should be able to use an existing, non-FedCM sign-in process. Until
