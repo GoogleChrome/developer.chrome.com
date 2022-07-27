@@ -1,7 +1,7 @@
 .policy-card {
+  @include elevation(1);
   border-radius: 30px;
   padding: get-size(500) get-size(600) get-size(600);
-  @include elevation(1);
 
   [id] {
     scroll-margin-top: get-size(500);
@@ -19,23 +19,24 @@
   .heading-link:hover {
     opacity: 1;
   }
+}
 
-  &--policies {
-    // ":not([class])" required in order to match the specificity of "ul:not([class])" from _typography.scss
-    ul:not([class]) {
-      margin-left: 0;
-      display: grid;
-      max-width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-gap: get-size(400) get-size(200);
+.policy-card--policies {
+  // ":not([class])" required in order to match the specificity of
+  // "ul:not([class])" from _typography.scss
+  ul:not([class]) {
+    display: grid;
+    grid-gap: get-size(400) get-size(200);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-left: 0;
+    max-width: 100%;
 
-      > li {
-        margin: 0;
-      }
+    > li {
+      margin: 0;
+    }
 
-      > li::before {
-        content: none;
-      }
+    > li::before {
+      content: none;
     }
   }
 }

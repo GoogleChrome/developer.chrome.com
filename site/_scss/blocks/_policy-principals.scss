@@ -1,7 +1,7 @@
 .policy-principals {
   display: grid;
-  grid-template-columns: auto 1fr;
   gap: get-size(400) get-size(600);
+  grid-template-columns: auto 1fr;
   margin-bottom: get-size(1000);
 
   h3:not([class^=type--var]) {
