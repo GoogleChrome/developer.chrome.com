@@ -78,7 +78,7 @@ the same affordances, selectors needs to never be loosely interpreted. <br>
 The CSS way of nesting [shouldn't break
 preprocessors](https://github.com/sass/sass/issues/3030) or existing developer
 nesting workflows. This would be disruptive and inconsiderate to those
-ecocystems and communities.
+ecosystems and communities.
 <br>
 
 1. <b>Waiting for [`:is()`](https://web.dev/css-is-and-where/)</b>
