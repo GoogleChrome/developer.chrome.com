@@ -181,14 +181,14 @@ console.log('log');
 
 **Figure 9**. The result of the `console.log()` example above.
 
-## console.table(array) {: #table }
+## console.table(array [, columns]) {: #table }
 
 [Log level][19]: `Info`
 
 Logs an array of objects as a table.
 
 ```js
-console.table([
+var people = [
   {
     first: 'René',
     last: 'Magritte',
@@ -202,12 +202,17 @@ console.table([
     first: 'Henri',
     last: 'Matisse',
   }
-]);
+];
+console.table(people);
 ```
 
-{% Img src="image/admin/RDdME5SuTCjNFtXKxTUh.png", alt="The result of the console.table() example above.", width="800", height="488" %}
+The result of the `console.table()` example above:
 
-**Figure 10**. The result of the `console.table()` example above.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VWHZBsZYJIhdoSh2efcu.png", alt="The result of the console.table() example above.", width="800", height="455" %}
+
+By default, `table.console()` logs all table data. To display a single column or a subset of columns, you can use the second optional parameter and specify column name or names as a string or an array of strings. For example:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S3lXtYbN6K0IqFBvKj19.png", alt="A subset of columns in a table logged with console.table().", width="800", height="455" %}
 
 ## console.time(\[label\]) {: #time }
 

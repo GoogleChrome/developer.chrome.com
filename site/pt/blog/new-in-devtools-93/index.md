@@ -49,13 +49,13 @@ O recurso de web-bundle é atualmente experimental. Habilite a sinalização `#e
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc80786632c188b6029b2f2ac7b7 #}
 
-Issue relacionada: [1182537](https://crbug.com/1182537) 
+Issue relacionada: [1182537](https://crbug.com/1182537)
 
 ## Depuração da Attribution Reporting API {: #attribution-reporting }
 
 Os erros da Attribution Reporting API agora são relatados na guia **Issues**.
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) é uma nova API para ajudá-lo a medir quando uma ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores entre sites.
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) é uma nova API para ajudá-lo a medir quando uma ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores entre sites.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 
@@ -108,9 +108,9 @@ Issue relacionada: [772558](https://crbug.com/772558)
 
 ## Exibir o novo URL da nota no painel Manifest {: #new-note-url }
 
-O painel Manifest agora exibe o [URL da nova nota](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
+O painel Manifest agora exibe o [URL da nova nota](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Atualmente no Chrome OS (CrOS), os aplicativos Chrome e aplicativos Android que declaram um recurso de "nova nota", podem ser selecionados como um aplicativo de anotações nas configurações da caneta (aparece se o dispositivo CrOS foi usado com uma caneta). 
+Atualmente no ChromeOS (CrOS), os aplicativos Chrome e aplicativos Android que declaram um recurso de "nova nota", podem ser selecionados como um aplicativo de anotações nas configurações da caneta (aparece se o dispositivo CrOS foi usado com uma caneta).
 
 Quando selecionado como um aplicativo de anotações, ele pode ser iniciado a partir do botão **"Criar Anotação"** da paleta da caneta. Para adicionar a aplicação web como uma das opções de aplicativo de anotação você precisará adicionar o campo `new-note-url` no manifesto web do aplicativo.
 
@@ -145,7 +145,7 @@ Abra uma resposta JSON no painel **Network**, clique no ícone `{}` para transfo
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
-Bug relacionado: [998674](https://crbug.com/998674) 
+Bug relacionado: [998674](https://crbug.com/998674)
 
 {% include 'partials/devtools/pt/reach-out.md' %}
 {% include 'partials/devtools/pt/whats-new.md' %}

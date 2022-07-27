@@ -292,11 +292,11 @@ on the Chromium site.
 [do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [https://airhorner.com]: https://airhorner.com/progressive-web-apps/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
+[permissions policy]: /docs/privacy-sandbox/permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
 [policy list]: https://chromeenterprise.google/policies/
 [progressive-web-apps]: https://web.dev/progressive-web-apps/
-[promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[promise]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [pull request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [rejected]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
-[web audio api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+[web audio api]: https://developer.mozilla.org/docs/Web/API/Web_Audio_API

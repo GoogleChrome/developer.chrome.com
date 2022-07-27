@@ -209,4 +209,6 @@ they were scheduled to be sent soon.
 
 ## Attribution Reporting: all resources
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+
+{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}

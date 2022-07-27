@@ -2,11 +2,11 @@
 layout: "layouts/doc-post.njk"
 title: "Updated Privacy Policy & Secure Handling Requirements"
 date: 2016-04-23
-updated: 2020-11-19
+updated: 2021-01-28
 description: Frequently asked questions about Chrome Web Store's user data policy.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. ChromeOS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="/apps/migration">migrating your app</a>.</div>
 
 <div class="aside aside--caution"><b>Important:</b> The new requirements for Minimum Permission and updated User Data policy will be enforced starting <strong>10/15/2019</strong>.</div>
 

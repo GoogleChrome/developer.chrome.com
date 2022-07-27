@@ -6,6 +6,8 @@ authors:
 date: 2015-04-13
 #updated: YYYY-MM-DD
 description: "Organize resources by frame, domain, type, or other criteria."
+tags:
+  - find-issues
 ---
 
 This guide teaches you how to use Chrome DevTools to view a web page's resources. Resources are the
@@ -143,11 +145,11 @@ See [Filter by resource type][8].
 
 **Figure 12**. Filtering for CSS in the Network Log
 
-[1]: https://developer.mozilla.org/en-US/docs/Learn
+[1]: https://developer.mozilla.org/docs/Learn
 [2]: /docs/devtools/overview/#start
 [3]: /docs/devtools/network#details
 [4]: #browse
 [5]: /docs/devtools/network#load
-[6]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+[6]: https://developer.mozilla.org/docs/Web/HTML/Element/iframe
 [7]: #directory
 [8]: /docs/devtools/network#type

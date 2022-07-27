@@ -78,6 +78,10 @@ codelab:
   en: 'Codelab'
   es: 'Codelab'
 
+objective:
+  en: 'Objective'
+  es: 'Objective'
+
 see_all_articles:
   en: 'See all articles'
   es: 'Ver todos los articulos'
@@ -103,6 +107,10 @@ documentation:
 
 blog:
   en: 'Blog'
+
+articles:
+  en: 'Articles'
+  es: 'Artículos'
 
 skip_to_content:
   en: 'Skip to content'
@@ -166,3 +174,6 @@ authors:
 
 website:
   en: Website
+
+featured:
+  en: Featured

@@ -47,7 +47,7 @@ const cspHandler = (_req, res, next) => {
   res.setHeader(
     'Content-Security-Policy-Report-Only',
     "object-src 'none'; " +
-      "script-src 'self' 'unsafe-inline' https://www.google-analytics.com; " +
+      "script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdnjs.cloudflare.com https://www.gstatic.com https://www.google.com https://*.firebaseio.com;" +
       "base-uri 'none'; " +
       "frame-ancestors 'self'; " +
       'report-uri https://csp.withgoogle.com/csp/chrome-apps-doc'

@@ -31,6 +31,10 @@ declare global {
   }
 
   export interface FeatureInfo {
+    /**
+     * Default value of a attribute.
+     */
+    default?: string;
     platformAppsOnly?: true;
     disallowServiceWorkers?: true;
     deprecated?: {
@@ -43,12 +47,14 @@ declare global {
     channel: string;
     permissions?: string[];
     manifestKeys?: string[];
+    chromeOsOnly?: true;
   }
 
   /**
    * This is something referencing another type, so include a {@link _href} where possible.
    */
-  export interface ExtendedReferenceType extends typedoc.JSONOutput.ReferenceType {
+  export interface ExtendedReferenceType
+    extends typedoc.JSONOutput.ReferenceType {
     _href?: string;
   }
 
@@ -56,7 +62,8 @@ declare global {
    * Contains extended information about a DeclarationReflection that makes it easy to render by
    * our Nunjucks templates.
    */
-  export interface ExtendedReflection extends typedoc.JSONOutput.DeclarationReflection {
+  export interface ExtendedReflection
+    extends typedoc.JSONOutput.DeclarationReflection {
     _name: string;
     _feature: FeatureInfo;
 
@@ -104,7 +111,7 @@ declare global {
   }
 
   export interface TypesEnumPair {
-    value: string|number;
+    value: string | number;
     description: string;
   }
 }

@@ -727,7 +727,7 @@ Ready to continue onto the next step? Go to [Step 3 - Add alarms and notificatio
 [13]:
   /docs/extensions/reference/storage#method-StorageArea-get
   "Read 'chrome.storage.local.get()' in the Chrome developer docs"
-[14]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [15]: http://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Read_After_Write_.28RAW.29
 [16]: /docs/extensions/reference/storage#method-StorageArea-remove
 [17]: /apps/contentSecurityPolicy "Read 'Content Security Policy' in the Chrome developer docs"

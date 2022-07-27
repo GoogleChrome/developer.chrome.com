@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API'
+title: '[Obsolete] Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API'
 subhead: >
   The Conversion Measurement API is changing in Chrome 92.
 date: 2021-06-22
@@ -187,3 +187,7 @@ redirect.<br><br>
 </tr>
 </tbody>
 </table>
+
+## Attribution Reporting: all resources
+
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).

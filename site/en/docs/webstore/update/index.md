@@ -143,7 +143,7 @@ status", width="700", height="84" %}
 
 After you submit the item for review, it will undergo a review process. This is essentially the same
 review as new items receive; the time for this review depends on the nature of your item and the
-extent of your changes. See the [FAQ on review times][review-times] for more details.
+extent of your changes. See [review times][review-times] for more details.
 
 ## Update your percent rollout {: #update-rollout }
 
@@ -162,11 +162,18 @@ Changing the %rollout does *not* trigger a new review.
 
 {% endAside %}
 
+## Additional resources
+
+- Learn how to [Manage your Chrome Web Store Item][cws-manage].
+- Understand the [Chrome Web Store Review Process][cws-review].
+
+[cws-manage]: /docs/webstore/manage/
+[cws-review]: /docs/webstore/review-process/
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution
 [cws-listing]: /docs/webstore/cws-dashboard-listing
 [cws-privacy]: /docs/webstore/cws-dashboard-privacy
 [dev-console]: https://chrome.google.com/webstore/devconsole
-[review-times]: /docs/webstore/faq#faq-listing-108
+[review-times]: /docs/webstore/review-process/#review-time
 [partial-rollout]: #partial-rollout
 [unpublish]: /docs/webstore/faq/#faq-listing-03
 [update-rollout]: #update-rollout

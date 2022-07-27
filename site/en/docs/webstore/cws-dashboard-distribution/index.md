@@ -26,7 +26,7 @@ Use the **Visibility** settings to configure who can see your item in the Chrome
   typically used for testing before public launch of an item.
 
 {% Aside 'gotchas' %}
-All visibility settings have the same policy requirements and will go through the same review process.
+All visibility settings have the same policy requirements and will go through the same [review process][cws-review].
 {% endAside %}
 
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
@@ -115,10 +115,10 @@ see [Repetitive Content Spam Policy][repetitive-content].
 
 After filling out the [Listing][listing] tab and the [Privacy][privacy] tab, you can now [publish your item][publish].
 
-
-[private-google-groups]: #private-visibility-google-groups
+[cws-review]: /docs/webstore/review-process/
 [enterprise]: /docs/webstore/cws-enterprise/
 [listing]: /docs/webstore/cws-dashboard-listing/
-[publish]: /docs/webstore/publish/#publish-item
 [privacy]: /docs/webstore/cws-dashboard-privacy/
+[private-google-groups]: #private-visibility-google-groups
+[publish]: /docs/webstore/publish/#publish-item
 [repetitive-content]: /docs/webstore/spam-faq/#repetitive-content

@@ -6,6 +6,8 @@ authors:
 date: 2019-03-14
 #updated: YYYY-MM-DD
 description: "How to view and edit localStorage with the Local Storage pane and the Console."
+tags:
+  - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to view, edit, and delete [`localStorage`][2]
@@ -85,7 +87,7 @@ JavaScript contexts, it's possible to interact with `localStorage` from the **Co
     **Figure 8**. Interacting with `localStorage` from the **Console**
 
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[2]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [3]: #view
 [4]: #view
 [5]: #view

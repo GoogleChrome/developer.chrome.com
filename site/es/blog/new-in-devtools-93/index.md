@@ -58,7 +58,7 @@ Chromium issue: [1182537](https://crbug.com/1182537)
 
 Los errores de la API de Informes de Atribución ahora son notificados en la pestaña **Problemas**.
 
-[Informes de Atribución](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) es una nueva API que te ayuda a medir cuando una acción de usuario (como un clic a un anuncio o una visualización) conduce a una conversión, sin necesidad de usar identificadores de sitios cruzados.
+[Informes de Atribución](/docs/privacy-sandbox/attribution-reporting/) es una nueva API que te ayuda a medir cuando una acción de usuario (como un clic a un anuncio o una visualización) conduce a una conversión, sin necesidad de usar identificadores de sitios cruzados.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Errores de la API de Informes de Atribución en el panel Problemas", width="800", height="501" %}
 
@@ -117,7 +117,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 El panel **Manifiesto** ahora muestra una [nueva nota URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Actualmente en Chrome OS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
+Actualmente en ChromeOS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Nueva nota URL en el panel de Manifiesto", width="800", height="477" %}
 

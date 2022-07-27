@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2021-07-22
+updated: 2022-04-25
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
@@ -36,8 +36,10 @@ following code.
 }
 ```
 
+### Load an unpacked extension {: #unpacked }
+
 The directory holding the manifest file can be added as an extension in developer mode in its
-current state.
+current state. To load an unpacked extension in developer mode, follow these steps:
 
 1.  Open the Extension Management page by navigating to `chrome://extensions`.
     - Alternatively, open this page by clicking on the Extensions menu button and selecting **Manage
@@ -182,7 +184,7 @@ button.current {
 }
 ```
 
-Designation for toolbar icons is also included under `action` in the `default_icons` field.
+Designation for toolbar icons is also included under `action` in the `default_icon` field.
 Download the images folder [here][18], unzip it, and place it in the extension's directory. Update
 the manifest so the extension knows how to use the images.
 
@@ -352,8 +354,8 @@ Start by creating a file in the directory named `options.html` and include the f
     <div>
       <p>Choose a different background color!</p>
     </div>
+    <script src="options.js"></script>
   </body>
-  <script src="options.js"></script>
 </html>
 ```
 

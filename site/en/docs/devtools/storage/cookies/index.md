@@ -6,6 +6,8 @@ authors:
 date: 2015-04-13
 updated: 2021-09-11
 description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
+tags:
+  - storage
 ---
 
 [HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,
@@ -79,8 +81,8 @@ cookies.
 
 **Figure 5**. Clearing all cookies
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+[1]: https://developer.mozilla.org/docs/Web/HTTP/Cookies
 [2]: /docs/devtools/open
 [3]: /docs/privacy-sandbox/first-party-sets/
-[6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#define_the_lifetime_of_a_cookie
+[6]: https://developer.mozilla.org/docs/Web/HTTP/Cookies#define_the_lifetime_of_a_cookie
 [10]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693

@@ -5,6 +5,7 @@
 const dtsParse = require('./lib/dts-parse.js');
 const tmp = require('tmp');
 const fs = require('fs');
+const mvdir = require('mvdir');
 const path = require('path');
 const childProcess = require('child_process');
 
@@ -12,6 +13,7 @@ const childProcess = require('child_process');
 const workboxPackages = [
   'workbox-background-sync',
   'workbox-broadcast-update',
+  'workbox-build',
   'workbox-cacheable-response',
   'workbox-core',
   'workbox-expiration',
@@ -23,6 +25,8 @@ const workboxPackages = [
   'workbox-routing',
   'workbox-strategies',
   'workbox-streams',
+  'workbox-webpack-plugin',
+  'workbox-window',
 ];
 
 /**
@@ -50,11 +54,29 @@ async function fetchAndPrepare(packages, targetDir) {
 async function run() {
   const t = tmp.dirSync();
   try {
+    // webpack is a peerDependency of workbox-webpack-plugin, and needs to be
+    // manually installed.
+    childProcess.execFileSync('npm', ['install', 'webpack'], {
+      cwd: t.name,
+      stdio: 'inherit',
+    });
     await fetchAndPrepare(workboxPackages, t.name);
 
-    const sources = workboxPackages.map(packageName => {
-      return path.join(t.name, 'node_modules', packageName, 'index.d.ts');
-    });
+    const sources = [];
+    for (const packageName of workboxPackages) {
+      const packagePath = path.join(t.name, 'node_modules', packageName);
+      const packageJsonPath = path.join(packagePath, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+      const typesPathParsed = path.parse(packageJson.types || 'index.d.ts');
+
+      const isNotTopLevel = !!typesPathParsed.dir;
+      if (isNotTopLevel) {
+        const typesOutputPath = path.join(packagePath, typesPathParsed.dir);
+        await mvdir(typesOutputPath, packagePath, {overwrite: true});
+      }
+
+      sources.push(path.join(packagePath, 'index.d.ts'));
+    }
 
     const defs = await dtsParse({sources, mode: 'workbox'});
     const outputFile = path.join(__dirname, '../data/workbox-types.json');

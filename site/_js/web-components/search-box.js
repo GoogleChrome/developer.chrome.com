@@ -26,7 +26,7 @@ import {BaseElement} from './base-element';
 
 import {activateSearch, deactivateSearch} from '../actions/search';
 
-const client = algoliasearch('0PPZV3EY55', 'f08cd9d7ead266781a7c2455b5f4a7b2');
+const client = algoliasearch('0PPZV3EY55', 'c0da407ed02cbe9874b8bea05d2c2983');
 const index = client.initIndex('prod_developer_chrome');
 
 export class SearchBox extends BaseElement {
@@ -35,6 +35,7 @@ export class SearchBox extends BaseElement {
       active: {type: Boolean, reflect: true},
       buttonLabel: {type: String},
       docsLabel: {type: String},
+      articlesLabel: {type: String},
       blogLabel: {type: String},
       locale: {type: String},
       placeholder: {type: String},
@@ -69,6 +70,7 @@ export class SearchBox extends BaseElement {
     this._active = false;
     this.buttonLabel = 'open search';
     this.docsLabel = 'Documentation';
+    this.articlesLabel = 'Articles';
     this.blogLabel = 'Blog';
     this.locale = 'en';
     this.placeholder = 'Search';
@@ -322,6 +324,7 @@ export class SearchBox extends BaseElement {
 
       // Further categorize results into docs and blog posts.
       this.docsResults = this.results.filter(r => r.type === 'doc');
+      this.articlesResults = this.results.filter(r => r.type === 'article');
       this.blogResults = this.results.filter(r => r.type === 'blogPost');
     } catch (err) {
       console.error(err);
@@ -416,6 +419,14 @@ export class SearchBox extends BaseElement {
                 ${this.blogLabel.toUpperCase()}
               </div>
               ${this.blogResults.map(this.renderResult)}
+            `
+          : ''}
+        ${this.articlesResults?.length
+          ? html`
+              <div class="search-box__result-heading type--label">
+                ${this.articlesLabel.toUpperCase()}
+              </div>
+              ${this.articlesResults.map(this.renderResult)}
             `
           : ''}
         ${this.docsResults.length

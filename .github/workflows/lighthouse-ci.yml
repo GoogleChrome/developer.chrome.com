@@ -16,22 +16,16 @@ jobs:
     if: ${{ github.repository == 'GoogleChrome/developer.chrome.com' }}
     runs-on: ubuntu-latest
     env:
-      # Increase RAM limit, and make uncaught exceptions crash (default in 16+).
-      NODE_OPTIONS: --max_old_space_size=4096 --unhandled-rejections=strict
+      # Increase RAM limit.
+      NODE_OPTIONS: --max_old_space_size=8192
     steps:
       - name: Checkout
-        uses: actions/checkout@v1.0.0
+        uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
-      - name: Cache node_modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 'v16.14.2'
+          cache: 'npm'
       - name: Install
         run: npm ci
       - name: Build

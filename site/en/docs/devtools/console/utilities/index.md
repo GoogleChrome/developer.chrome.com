@@ -54,7 +54,7 @@ selected element, while `$1` returns the previously selected one:
 
 {% Img src="image/admin/ET1JJFtUIXvaoPCGQ94C.png", alt="Example of $1", width="800", height="318" %}
 
-## \$(selector, \[startNode\]) {: #querySelector-function }
+## \$(selector \[, startNode\]) {: #querySelector-function }
 
 `$(selector)` returns the reference to the first DOM element with the specified CSS selector. When
 called with one argument, this function is an alias for the [document.querySelector()][2] function.
@@ -86,7 +86,7 @@ overwritten, and `$` will correspond to that library's implementation.
 
 {% endAside %}
 
-## \$\$(selector, \[startNode\]) {: #querySelectorAll-function }
+## \$\$(selector \[, startNode\]) {: #querySelectorAll-function }
 
 `$$(selector)` returns an array of elements that match the given CSS selector. This command is
 equivalent to calling [document.querySelectorAll()][3].
@@ -125,7 +125,7 @@ a new line without executing the script.
 
 {% endAside %}
 
-## \$x(path, \[startNode\]) {: #xpath-function }
+## \$x(path \[, startNode\]) {: #xpath-function }
 
 `$x(path)` returns an array of DOM elements that match the given XPath expression.
 
@@ -275,7 +275,7 @@ monitor(sum);
 
 Use `unmonitor(function)` to cease monitoring.
 
-## monitorEvents(object\[, events\]) {: #monitorEvents-function }
+## monitorEvents(object \[, events\]) {: #monitorEvents-function }
 
 When one of the specified events occurs on the specified object, the Event object is logged to the
 console. You can specify a single event to monitor, an array of events, or one of the generic events
@@ -361,7 +361,7 @@ with the specified constructor. For example:
 
 The scope of `queryObjects()` is the currently-selected execution context in the console.
 
-## table(data\[, columns\]) {: #table-function }
+## table(data \[, columns\]) {: #table-function }
 
 Log object data with table formatting by passing in a data object in with optional column headings.
 For example, to display a list of names using a table in the console, you would do:
@@ -394,7 +394,7 @@ undebug(getData);
 unmonitor(getData);
 ```
 
-## unmonitorEvents(object\[, events\]) {: #unmonitorEvents-function }
+## unmonitorEvents(object \[, events\]) {: #unmonitorEvents-function }
 
 `unmonitorEvents(object[, events])` stops monitoring events for the specified object and events. For
 example, the following stops all event monitoring on the window object:
@@ -422,8 +422,8 @@ values(object);
 ```
 
 [1]: /docs/devtools/console/api
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+[2]: https://developer.mozilla.org/docs/Web/API/Document/querySelector
+[3]: https://developer.mozilla.org/docs/Web/API/Document/querySelectorAll
 [4]: /docs/devtools/javascript/breakpoints
 [console-dir]: /docs/devtools/console/api/#dir
 [console-dirxml]: /docs/devtools/console/api/#dirxml

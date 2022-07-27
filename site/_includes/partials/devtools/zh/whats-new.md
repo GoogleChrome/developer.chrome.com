@@ -1,36 +1,131 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/zh/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/zh/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/zh/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/zh/blog/new-in-devtools-97/#debugging) -->
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/zh/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/zh/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/zh/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/zh/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/zh/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/zh/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/zh/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/zh/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/zh/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-104/#misc) -->
+
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder 面板捕获双击和右击事件](/zh/blog/new-in-devtools-103/#recorder)
+* [Lighthouse 面板支持 timespan 和 snapshot 新模式](/zh/blog/new-in-devtools-103/#lighthouse)
+* [改进 Performance Insights 面板的缩放控制问题](/zh/blog/new-in-devtools-103/#zoom)
+* [对删除性能记录的操作进行确认](/zh/blog/new-in-devtools-103/#delete)
+* [重新排列 Elements 面板中的窗格](/zh/blog/new-in-devtools-103/#reorder-pane)
+* [支持在浏览器外面选择颜色](/zh/blog/new-in-devtools-103/#color)
+* [改进调试期间的 inline 值预览问题](/zh/blog/new-in-devtools-103/#inline-preview)
+* [Virtual authenticators 支持大型 blob](/zh/blog/new-in-devtools-103/#webauthn)
+* [Sources 面板支持新的键盘快捷键](/zh/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps 改进](/zh/blog/new-in-devtools-103/#sourcemaps)
+
+
+### Chrome 102 {: #chrome102 }
+
+* [预览功能：新的 Performance insights 面板](/zh/blog/new-in-devtools-102/#perf)
+* [新的模拟浅色和深色主题的快捷方式](/zh/blog/new-in-devtools-102/#emulation)
+* [提升网络预览标签页的安全性](/zh/blog/new-in-devtools-102/#network-preview)
+* [提升在断点处的重新加载](/zh/blog/new-in-devtools-102/#debugger)
+* [控制台更新](/zh/blog/new-in-devtools-102/#console)
+* [在用户流程录制开始时取消](/zh/blog/new-in-devtools-102/#recorder)
+* [在样式边栏中展示继承的高亮伪元素](/zh/blog/new-in-devtools-102/#pseudo)
+* [其它亮点](/zh/blog/new-in-devtools-102/#misc)
+* [[实验阶段] 复制 CSS 更改](/zh/blog/new-in-devtools-102/#copy)
+* [[实验阶段] 在浏览器外选择颜色](/zh/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [导入以及导出用户流程为 JSON 文件](/zh/blog/new-in-devtools-101/#recorder)
+* [样式边栏查看级联层](/zh/blog/new-in-devtools-101/#layer)
+* [支持 hwb() 颜色函数](/zh/blog/new-in-devtools-101/#hwb)
+* [改进私有属性的显示问题](/zh/blog/new-in-devtools-101/#private-props)
+* [其他的更新](/zh/blog/new-in-devtools-101/#misc)
+* [[实验阶段] Lighthouse 面板新增 timespan 和快照模式](/zh/blog/new-in-devtools-101/#lighthouse)
+
+### Chrome 100 {: #chrome100 }
+
+* [在样式边栏中查看并修改](/zh/blog/new-in-devtools-100/#supports)
+* [默认支持常用选择器](/zh/blog/new-in-devtools-100/#selector)
+* [自定义一段录制内容的选择器](/zh/blog/new-in-devtools-100/#customize-selector)
+* [重命名一段录制内容](/zh/blog/new-in-devtools-100/#recorder-rename)
+* [在悬停时预览类/函数属性](/zh/blog/new-in-devtools-100/#properties)
+* [性能面板中的部分呈现帧](/zh/blog/new-in-devtools-100/#perf)
+* [其他的更新](/zh/blog/new-in-devtools-100/#misc)
+
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocket 请求限速](/zh/blog/new-in-devtools-99/#websocket)
+* [应用面板里面的 报告 API （Reportng API）新边栏](/zh/blog/new-in-devtools-99/#reporting-api)
+* [支持 Recorder 面板一直处于等待状态，直到元素可见或可点击](/zh/blog/new-in-devtools-99/#recorder)
+* [更好的控制台样式，格式化和过滤](/zh/blog/new-in-devtools-99/#console)
+* [使用 sourcemap 文件来调试 Chrome 扩展](/zh/blog/new-in-devtools-99/#extension)
+* [优化 Sources 面板里面源文件夹树的显示问题](/zh/blog/new-in-devtools-99/#source-tree)
+* [Sources 面板里面显示 Worker 源文件](/zh/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome 自动深色模式的更新](/zh/blog/new-in-devtools-99/#auto-dark-mode)
+* [颜色选择器和分割面板支持触摸](/zh/blog/new-in-devtools-99/#touch-friendly)
+* [其他的更新](/zh/blog/new-in-devtools-99/#misc)
+
+
+### Chrome 98 {: #chrome98 }
+* [预览功能：整页无障碍功能树](/zh/blog/new-in-devtools-98/#a11y-tree)
+* [在变更标签页中显示更精确的更改](/zh/blog/new-in-devtools-98/#changes)
+* [为用户操作流的录制设置更长的超时时间](/zh/blog/new-in-devtools-98/#recorder-timeout)
+* [使用“往返缓存”选项卡确保您的页面可缓存](/zh/blog/new-in-devtools-98/#bfcache)
+* [新的属性边栏过滤器](/zh/blog/new-in-devtools-98/#properties)
+* [模拟 CSS forced-colors 媒体功能](/zh/blog/new-in-devtools-98/#forced-colors)
+* [在鼠标指针悬停时显示标尺](/zh/blog/new-in-devtools-98/#show-rulers)
+* [在 Flexbox 编辑器中支持 `row-reverse` 和 `column-reverse`](/zh/blog/new-in-devtools-98/#flexbox-editor)
+* [新增“重放 XHR “和“扩展所有搜索结果”的键盘快捷键](/zh/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
+* [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
+* [其他的更新](/zh/blog/new-in-devtools-98/#misc)
+* [[实验阶段] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
+
+
+### Chrome 97 {: #chrome97 }
+* [预览特性：新的录制器面板](/zh/blog/new-in-devtools-97/#recorder)
+* [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
+* [修改 HTML 时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
+* [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
+* [[实验阶段] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
-* [预览特性: 新的 CSS 概览面板](/blog/new-in-devtools-96/#css-overview)
-* [修复以及改善 CSS 长度编辑与复制的体验](/blog/new-in-devtools-96/#length) 
-* [模拟 CSS prefers-contrast 媒体特性](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/blog/new-in-devtools-96/#auto-dark-mode)
-* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/blog/new-in-devtools-96/#copy-as-js)
-* [网络面板新增载荷（Payload）边栏](/blog/new-in-devtools-96/#payload)
-* [优化属性窗格里面的属性展示](/blog/new-in-devtools-96/#properties)
-* [新增选项，用于隐藏控制台里面的 CORS 错误](/blog/new-in-devtools-96/#hide-cors-errors)
-* [控制台正确预览以及执行 `Intl` 对象](/blog/new-in-devtools-96/#intl)
-* [统一的异步堆栈信息](/blog/new-in-devtools-96/#async)
-* [保留控制台侧边栏](/blog/new-in-devtools-96/#console-sidebar)
-* [弃用应用程序面板里面的应用程序缓存窗格](/blog/new-in-devtools-96/#capp-cache)
-* [[实验] 应用程序面板里面新增 Reporting API 窗格](/blog/new-in-devtools-96/#reporting-api)
+* [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
+* [修复以及改善 CSS 长度编辑与复制的体验](/zh/blog/new-in-devtools-96/#length) 
+* [模拟 CSS prefers-contrast 媒体特性](/zh/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/zh/blog/new-in-devtools-96/#auto-dark-mode)
+* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/zh/blog/new-in-devtools-96/#copy-as-js)
+* [网络面板新增载荷（Payload）边栏](/zh/blog/new-in-devtools-96/#payload)
+* [优化属性窗格里面的属性展示](/zh/blog/new-in-devtools-96/#properties)
+* [新增选项，用于隐藏控制台里面的 CORS 错误](/zh/blog/new-in-devtools-96/#hide-cors-errors)
+* [控制台正确预览以及执行 `Intl` 对象](/zh/blog/new-in-devtools-96/#intl)
+* [统一的异步堆栈信息](/zh/blog/new-in-devtools-96/#async)
+* [保留控制台侧边栏](/zh/blog/new-in-devtools-96/#console-sidebar)
+* [弃用应用程序面板里面的应用程序缓存窗格](/zh/blog/new-in-devtools-96/#capp-cache)
+* [[实验阶段] 应用程序面板里面新增 Reporting API 窗格](/zh/blog/new-in-devtools-96/#reporting-api)
 
 
 ### Chrome 95 {: #chrome95 }
-* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#length)
-* [在“问题”标签页隐藏问题](/blog/new-in-devtools-95/#hide-issues)
-* [改善属性展示](/blog/new-in-devtools-95/#properties)
-* [Lighthouse 面板中的 Lighthouse 8.4](/blog/new-in-devtools-95/#lighthouse)
-* [在“来源”面板中排序代码段](/blog/new-in-devtools-95/#snippets)
-* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/blog/new-in-devtools-95/#localized)
-* [DevTools 命令菜单的用户交互优化](/blog/new-in-devtools-95/#command-menu)
+* [新的 CSS 长度编辑工具](/zh/blog/new-in-devtools-95/#length)
+* [在“问题”标签页隐藏问题](/zh/blog/new-in-devtools-95/#hide-issues)
+* [改善属性展示](/zh/blog/new-in-devtools-95/#properties)
+* [Lighthouse 面板中的 Lighthouse 8.4](/zh/blog/new-in-devtools-95/#lighthouse)
+* [在“来源”面板中排序代码段](/zh/blog/new-in-devtools-95/#snippets)
+* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/zh/blog/new-in-devtools-95/#localized)
+* [DevTools 命令菜单的用户交互优化](/zh/blog/new-in-devtools-95/#command-menu)
 
 ### Chrome 94 {: #chrome94 }
 

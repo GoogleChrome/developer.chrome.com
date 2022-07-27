@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Override the user agent string"
+title: "Network conditions: Override the user agent string"
 authors:
   - kaycebasques
 date: 2018-12-14
@@ -8,12 +8,15 @@ date: 2018-12-14
 description:
   "Open the Network conditions tab, disable Select automatically, and choose from the list
   or enter a custom string."
+tags:
+  - emulate
+  - test
 ---
 
 To override the [user agent][1] string from Chrome DevTools:
 
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
+    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the
     **Command Menu**.
 
     {% Img src="image/admin/6zZ617vix5m8hDk4OZQn.png", alt="The Command Menu.", width="800", height="632" %}
@@ -30,4 +33,4 @@ To override the [user agent][1] string from Chrome DevTools:
 
 4.  Select a user agent string from the list, or enter your own custom string.
 
-[1]: https://developer.mozilla.org/en-US/docs/Glossary/User_agent
+[1]: https://developer.mozilla.org/docs/Glossary/User_agent

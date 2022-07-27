@@ -234,8 +234,8 @@ DevTools теперь отображает стек трассировки `asyn
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## Устаревшая панель Кэш приложения на вкладке Приложение {: #app-cache }
 
-<!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-Панель [Кеш приложений](https://developer.chrome.com/docs/devtools/storage/applicationcache/) (Application cache) на вкладке Приложение (Application) удалена, поскольку [AppCache](https://web.dev/appcache-removal/) больше не поддерживается в Chrome и других браузерах на основе Chromium.
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+Панель [Кеш приложений](/docs/devtools/storage/applicationcache/) (Application cache) на вкладке Приложение (Application) удалена, поскольку [AppCache](https://web.dev/appcache-removal/) больше не поддерживается в Chrome и других браузерах на основе Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

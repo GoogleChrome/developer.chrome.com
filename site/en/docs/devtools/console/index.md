@@ -7,6 +7,9 @@ date: 2019-04-18
 #updated: YYYY-MM-DD
 description:
   "The main uses of the Chrome DevTools Console are logging messages and running JavaScript."
+tags:
+  - get-started
+  - javascript
 ---
 
 This page explains how the Chrome DevTools Console makes it easier to develop web pages. The Console
@@ -106,7 +109,7 @@ the Console.
 [3]: /docs/devtools/console/log
 [4]: /docs/devtools/console/api
 [5]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Window
+[6]: https://developer.mozilla.org/docs/Web/API/Window
 [7]: /docs/devtools/console/utilities#debug
-[8]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [9]: /docs/devtools/console/javascript

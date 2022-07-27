@@ -3,12 +3,12 @@ layout: 'layouts/doc-post.njk'
 title: Add an author
 description: 'Add an author to a post.'
 date: 2020-12-07
-updated: 2021-09-08
+updated: 2022-04-15
 ---
 
 ## Add yourself to the authors list
 
-1. Add a new object to [`authors.yml`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/authors.yml) with the following structure. Make sure to choose a unique author slug.
+1. Add a new object to [`authors.yaml`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/authors.yaml) with the following structure. Make sure to choose a unique author slug.
 
    ```yml
    authorslug:

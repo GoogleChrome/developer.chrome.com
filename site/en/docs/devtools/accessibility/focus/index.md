@@ -8,6 +8,8 @@ date: 2018-12-14
 description:
   "Open the Console, create a Live Expression, and set the expression to
   document.activeElement."
+tags:
+  - accessibility
 ---
 
 Suppose that you're testing the keyboard navigation accessibility of a page. When navigating the
@@ -20,7 +22,7 @@ focus is hidden. To track the focused element in DevTools:
 
     {% Img src="image/admin/3iWMW3uh7GaqUWxv8uB1.png", alt="Creating a Live Expression.", width="800", height="516" %}
 
-    **Figure 1**. Creating a **Live Expression**.
+    For more information, see [Watch JavaScript values in real-time with Live Expressions](/docs/devtools/console/live-expressions/).
 
 3.  Type `document.activeElement`.
 4.  Click outside of the **Live Expression** UI to save.

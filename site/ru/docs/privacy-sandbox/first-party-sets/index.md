@@ -14,7 +14,7 @@ authors:
 ## Статус реализации
 
 - [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 89 по 93.
-- [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/988540118207823873).
 - [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Проекты Chromium](https://www.chromium.org/updates/first-party-sets).
 
@@ -69,7 +69,7 @@ authors:
 
 ## Участвуйте и делитесь отзывами
 
-- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](/origintrials/#/view_trial/988540118207823873).
 - **GitHub**: ознакомьтесь с [текстом предложения](https://github.com/privacycg/first-party-sets) и [обсуждением, где можно задать свои вопросы](https://github.com/privacycg/first-party-sets/issues).
 - **Поддержка разработчиков**: задавайте вопросы и участвуйте в обсуждениях в [репозитории поддержки разработчиков Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 

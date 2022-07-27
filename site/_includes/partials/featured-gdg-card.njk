@@ -1,0 +1,20 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<div class="featured-card hairline rounded-lg width-full">
+  <div class="card-title-bar color-blue-medium">
+    {{ icon('gdg', {hidden: true}) }}
+    <span class="gap-left-300 flex-1 user-select-none">
+      Google Developer Groups
+    </span>
+  </div>
+
+  <p class="gap-top-200">
+    Connect with fellow developers and startups in your area, hear from industry experts, share your skills, and learn. 
+  </p>
+
+  <div class="gap-top-400">
+    <a href="https://developers.google.com/community/gdg" class="material-button button-text display-inline-flex color-primary">
+      Find your local group
+    </a>
+  </div>
+</div>

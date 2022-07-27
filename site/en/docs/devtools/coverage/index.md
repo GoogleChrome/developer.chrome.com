@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find Unused JavaScript And CSS With The Coverage Tab"
+title: "Coverage: Find unused JavaScript and CSS"
 authors:
   - kaycebasques
 date: 2019-07-09
 updated: 2020-07-10
 description: "How to find and analyze unused JavaScript and CSS code in Chrome DevTools."
+tags:
+  - find-issues
 ---
 
 The Coverage tab in Chrome DevTools can help you find unused JavaScript and
@@ -89,7 +91,7 @@ reasons:
 The table in the **Coverage** tab shows you what resources were analyzed,
 and how much code is used within each resource. Click a row to open that
 resource in the **Sources** panel and see a line-by-line breakdown of used
-code and unused code.
+code and unused code. Any unused lines of code will have a red line at the beginning.
 
 <figure>
   {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IzpB7injykyaq8PRDVwF.png", alt="A code coverage report.", width="800", height="667" %}

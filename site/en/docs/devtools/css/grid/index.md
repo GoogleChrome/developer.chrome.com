@@ -6,10 +6,15 @@ authors:
 date: 2021-06-08
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to view and change a page's CSS."
+tags:
+  - prototype-fixes
+  - css
 ---
 
 This guide shows you how to discover CSS grids on a page, examining them and debugging layout issues
 in the **Elements** panel of Chrome DevTools.
+
+{% YouTube id='M8SlBgul8ao' %}
 
 The examples shown in the screenshots appearing in this article are from these two web pages: [Fruit
 box][1] and [Snack box][2].

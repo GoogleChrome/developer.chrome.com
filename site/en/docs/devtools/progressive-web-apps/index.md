@@ -8,6 +8,8 @@ date: 2016-07-25
 description:
   "Use the Application panel to inspect, modify, and debug web app manifests, service workers, and
   service worker caches."
+tags:
+  - progressive-web-apps
 ---
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
@@ -198,7 +200,7 @@ Related Guides:
 [9]: /docs/devtools/command-menu/
 [10]: https://developers.google.com/web/fundamentals/push-notifications/how-push-works
 [11]: #clear-storage
-[12]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+[12]: https://developer.mozilla.org/docs/Web/API/Cache
 [13]: https://developers.google.com/web/fundamentals/glossary#opaque-response
 [14]: https://developers.google.com/web/fundamentals/glossary#CDN
 [15]: https://fetch.spec.whatwg.org/#http-cors-protocol

@@ -60,7 +60,7 @@ particular Shared Modules:
 
 ## Accessing resources {: #accessing_resources }
 
-Shared Module resources are accessed by a reserved path _\_modules/<shared_module_id>_ in the root
+Shared Module resources are accessed by a reserved path _\_modules/SHARED\_MODULE\_ID_ in the root
 of your importing extension. For example, to include the script 'foo.js' from a Shared Module with
 ID "cccccccccccccccccccccccccccccccc", use this path from the root of your extension:
 

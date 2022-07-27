@@ -29,7 +29,7 @@ Generally, _hidden_ means a different tab is active, or the window has been
 minimized, but browsers may consider a page hidden whenever its content is
 totally not-visible. Some browsers go further than others here, but you can
 always use the [page visibility
-API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) to
+API](https://developer.mozilla.org/docs/Web/API/Page_Visibility_API) to
 track when the browser thinks visibility has changed.
 
 ### JavaScript timers
@@ -131,18 +131,18 @@ checking. Look to see if there's an event that achieves the same thing.
 Some examples:
 
 - If you need to know when an element enters in the viewport, use
-  [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+  [`IntersectionObserver`](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API).
 - If you need to know when an element changes size, use
   [`ResizeObserver`](https://web.dev/resize-observer/).
 - If you need to know when the DOM changes, use
-  [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver),
+  [`MutationObserver`](https://developer.mozilla.org/docs/Web/API/MutationObserver),
   or maybe [custom element lifecycle
-  callbacks](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+  callbacks](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements).
 - Rather than poll a server, consider [web
-  sockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API),
+  sockets](https://developer.mozilla.org/docs/Web/API/WebSockets_API),
   [server-sent
-  events](https://developer.mozilla.org/en-US/docs/Web/API/EventSource), [push
-  messages](https://developer.mozilla.org/en-US/docs/Web/API/Push_API), or
+  events](https://developer.mozilla.org/docs/Web/API/EventSource), [push
+  messages](https://developer.mozilla.org/docs/Web/API/Push_API), or
   [fetch
   streams](https://web.dev/fetch-upload-streaming/#previously-on-the-exciting-adventures-of-fetch-streams).
 - If you need to react to stage changes in audio/video, [use events like
@@ -158,7 +158,7 @@ you want to show a notification at a particular time.
 
 Animation is a visual thing, so it shouldn't use CPU time when the page is _hidden_.
 
-[`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
+[`requestAnimationFrame`](https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame)
 is much better at scheduling animation work than JavaScript timers. It
 synchronizes with the refresh rate of the device, ensuring you only get one
 callback per displayable frame, and you get the maximum amount of time to
@@ -166,9 +166,9 @@ construct that frame. Also, `requestAnimationFrame` will wait for the page to be
 visible, so it doesn't use any CPU when the page is hidden.
 
 If you can declare your whole animation up-front, consider using [CSS
-animations](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) or the
+animations](https://developer.mozilla.org/docs/Web/CSS/animation) or the
 [web animations
-API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API). These
+API](https://developer.mozilla.org/docs/Web/API/Web_Animations_API). These
 have the same advantages as `requestAnimationFrame`, but the browser can perform
 additional optimizations like automatic compositing, and they're generally
 easier to use.

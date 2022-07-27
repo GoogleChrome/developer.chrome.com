@@ -41,4 +41,4 @@ See the [Cross-origin isolation overview][doc-coi] for more information about th
 
 [doc-coi]: /docs/extensions/mv3/cross-origin-isolation/
 [doc-coop]: /docs/extensions/mv3/manifest/cross_origin_opener_policy/
-[mdn-coep]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
+[mdn-coep]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy

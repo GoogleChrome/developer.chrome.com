@@ -12,7 +12,7 @@ authors:
 ## 구현 현황
 
 - [최초 평가판](https://web.dev/origin-trials/) Chrome 84 ~ 94
-- [평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)
+- [평가판에 등록](/origintrials/#/view_trial/2479231594867458049)
 - [데모](https://trust-token-demo.glitch.me/)
 - [Chrome DevTools 통합](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)
 - [Chrome 플랫폼 현황](https://www.chromestatus.com/feature/5078049450098688)
@@ -40,7 +40,7 @@ authors:
 
 Trust Tokens API를 사용하면 웹사이트에서 신뢰하는 사용자에게 암호화 토큰을 발행할 수 있으며 나중에 다른 곳에서 이 토큰을 사용할 수 있습니다. 토큰은 사용자의 브라우저에 안전하게 저장되며 사용자의 진위를 확인하기 위해 다른 컨텍스트에서 사용할 수 있습니다. 이를 통해 사용자를 식별하거나 사이트 간에 ID를 연결하지 않고 한 웹사이트(예: 소셜 미디어 사이트 또는 이메일 서비스)에서 사용자의 신뢰를 다른 웹사이트(예: 게시자 또는 온라인 상점)로 전달할 수 있습니다.
 
-{% Aside 'key-term' %} [핑거프린팅](https://w3c.github.io/fingerprinting-guidance/#passive)을 사용하면 사이트에서 장치, 운영 체제 및 브라우저 설정(예: 언어 기본 설정, [사용자 에이전트](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) 및 사용 가능한 글꼴) 또는 장치 상태 변경에 대한 데이터를 가져와 개별 사용자를 식별하고 추적할 수 있습니다. 이 작업은 요청 헤더를 확인하여 서버에서, 또는 JavaScript를 사용하여 클라이언트에서 수행할 수 있습니다.
+{% Aside 'key-term' %} [핑거프린팅](https://w3c.github.io/fingerprinting-guidance/#passive)을 사용하면 사이트에서 장치, 운영 체제 및 브라우저 설정(예: 언어 기본 설정, [사용자 에이전트](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent) 및 사용 가능한 글꼴) 또는 장치 상태 변경에 대한 데이터를 가져와 개별 사용자를 식별하고 추적할 수 있습니다. 이 작업은 요청 헤더를 확인하여 서버에서, 또는 JavaScript를 사용하여 클라이언트에서 수행할 수 있습니다.
 
 핑거프린팅은 사용자가 인식하지 못하고 제어할 수 없는 메커니즘을 사용합니다. 지문 데이터를 결합하여 개인을 식별하는 방법을 알아보려면 [Panopticlick](https://panopticlick.eff.org/) 및 [amiunique.org](https://amiunique.org/)와 같은 사이트를 참조하세요. {% endAside %}
 
@@ -68,7 +68,7 @@ Trust Tokens API를 사용하면 웹사이트에서 신뢰하는 사용자에게
 
 ## 참여 및 피드백 공유
 
-- **최초 평가판**: 등록 후, [Chrome 최초 평가판](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)에 참여하세요.
+- **최초 평가판**: 등록 후, [Chrome 최초 평가판](/origintrials/#/view_trial/2479231594867458049)에 참여하세요.
 - **데모**: 신뢰 토큰 [발행 및 회수](https://trust-token-demo.glitch.me/)를 사용해 보세요.
 - **GitHub**: [제안](https://github.com/WICG/trust-token-api)을 읽고 [질문을 제기하고 토론에 참여하세요](https://github.com/WICG/trust-token-api/issues).
 - **W3C**: [웹 광고 개선 비즈니스 그룹](https://www.w3.org/community/web-adv/participants)에서 업계 사용 사례에 대해 논의하세요.

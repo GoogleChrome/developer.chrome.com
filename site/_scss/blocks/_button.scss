@@ -4,6 +4,10 @@
   border: 0;
   cursor: pointer;
   text-decoration: none;
+
+  svg {
+    vertical-align: middle;
+  }
 }
 
 %material-button,

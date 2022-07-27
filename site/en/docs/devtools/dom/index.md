@@ -1,11 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started With Viewing And Changing The DOM"
+title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-#updated: YYYY-MM-DD
+updated: 2022-06-09
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
+  - sofiayem
+tags:
+  - get-started
+  - prototype-fixes
+  - html
+  - dom
 ---
 
 Complete these interactive tutorials to learn the basics of viewing and
@@ -24,26 +30,16 @@ When you're interested in a particular DOM node, **Inspect** is a fast way to op
 and investigate that node.
 
 1. Right-click **Michelangelo** below and select **Inspect**.
-
      * Michelangelo
      * Raphael
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/psbHIPohm8wsZkGA7WXl.png", alt="Inspecting a node", width="800", height="780" %}
-
      The **Elements** panel of DevTools opens.
      `<li>Michelangelo</li>` is highlighted in the **DOM Tree**.
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Cz2LKMmJ3sVjkDdfW4i8.png", alt="Highlighting the Michelangelo< node", width="800", height="483" %}
-
-[inspect]: /web/tools/chrome-devtools/images/shared/inspect.png
-
-1. Click the **Inspect** ![Inspect][inspect]{: .inline-icon } icon in the top-left corner of
+1. Click the **Inspect** icon in the top-left corner of
    DevTools.
-
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2canqdvrgnHBayY1VsLM.png", alt="The Inspect icon", width="800", height="545" %}
-
 1. Click the **Tokyo** text below.
-
      * Tokyo
      * Beirut
 
@@ -94,6 +90,19 @@ lets you quickly reposition the viewport so that you can see the node.
    The instructions continue there.
 
 After completing the instructions at the bottom of the page you should jump back up to here.
+
+### Show rulers {: #rulers }
+
+With rulers above and to the left of your viewport, you can measure the width and height of an element when you hover over it in the **Elements** panel.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DsBqSHZFNeUcr1a1oKd7.png", alt="Rulers.", width="800", height="552" %}
+
+Enable the rulers in one of two ways:
+
+- Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the **Command menu**, type `Show rulers on hover`, and press <kbd>Enter</kbd>.
+- Check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Elements** > **Show rulers on hover**.
+
+The sizing unit of the rulers is pixels.
 
 ### Search for nodes {: #search }
 
@@ -167,6 +176,37 @@ To edit a node's type, double-click the type and then type in the new type.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nbdyNWefo9fqESvfWdha.png", alt="Changing the node type to button", width="800", height="545" %}
 
+### Edit as HTML {: #as-html }
+
+To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit as HTML** from the node's drop-down menu.
+
+1. Right-click **Leonard** below and select **Inspect**.
+
+     * Penny
+     * Howard
+     * Rajesh
+     * Leonard
+
+1. In the **Elements** panel, right-click the current node and select **Edit as HTML** from the drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2If7eY0I3aNpQcb1fAZg.png", alt="The drop-down menu of a node.", width="800", height="747" %}
+
+1. Press <kbd>Enter</kbd> to start a new line and start typing `<l`. DevTool highlights HTML syntax and autocompletes tags for you.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/B7kQKGGUGf3S2ERmF5dc.png", alt="Autocompletion of HTML tags.", width="800", height="645" %}
+
+    {% Aside %}
+    **Note**: Additionally, DevTools can autocomplete DOM properties.
+    {% endAside %}
+
+1. Select the `li` element from the autocomplete menu and type `>`. DevTools automatically adds the closing `</li>` tag after the cursor.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/26XrzZDhuvL4KcUGDSvU.png", alt="DevTools closes the tag automatically.", width="800", height="678" %}
+
+1. Type `Sheldon` inside the tag and press <kbd>Control</kbd> / <kbd>Command</kbd> + <kbd>Enter</kbd> to apply changes.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/unvKWSLDvzoh7kHZoWbK.png", alt="Applying changes.", width="800", height="678" %}
+
 ### Reorder DOM nodes {: #reorder }
 
 Drag nodes to reorder them.
@@ -206,11 +246,11 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Right-click **The Lord of the Flies** above and select **Inspect**.
 
-[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
-
 1. Right-click `<li class="demo--hover">The Lord of the Flies</li>` and select **Force
    State** > **:hover**. See [Appendix: Missing options](#options) if you don't see this option.
    The background color remains orange even though you're not actually hovering over the node.
+
+[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
 
 ### Hide a node {: #hide }
 
@@ -392,7 +432,7 @@ The page's HTML is now different than its DOM. In other words, HTML represents
 initial page content, and the DOM represents current page content. When JavaScript
 adds, removes, or edits nodes, the DOM becomes different than the HTML.
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[mdn]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction
 
 See [Introduction to the DOM][mdn]{: .external } to learn more.
 

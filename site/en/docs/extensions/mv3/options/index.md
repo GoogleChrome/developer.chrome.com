@@ -79,6 +79,19 @@ document.getElementById('save').addEventListener('click',
     save_options);
 ```
 
+Finally, add the `"storage"` permission to the extension's `manifest.json`:
+
+```json/4
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "storage"
+  ]
+  ...
+}
+```
+
 ## Declare options page behavior {: #declare_options }
 
 There are two available types of extension options pages, [full page][2] and [embedded][3]. The type

@@ -38,7 +38,7 @@ A [`CustomTabsIntent.Builder`][4] can be used to configure a Custom Tab. Once re
 Url with [`CustomTabsIntent.launchUrl`][7].
 
 ```java
-String url = ¨https://paul.kinlan.me/¨;
+String url = "https://google.com/";
 CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
 CustomTabsIntent customTabsIntent = builder.build();
 customTabsIntent.launchUrl(this, Uri.parse(url));
@@ -294,7 +294,7 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 }
 ```
 
-Android 11 has introduced [package visiblity changes][31]. If your Android app is targeting API
+Android 11 has introduced [package visibility changes][31]. If your Android app is targeting API
 level 30 or above, adding a `queries` section to `AndroidManifest.xml` is needed, otherwise the
 code snippet above won't return results:
 

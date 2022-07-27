@@ -1,6 +1,6 @@
 .release-card__icon {
   align-items: center;
-  background: var(--color-green-lighter);
+  background: var(--color-green-lightest);
   border-radius: 128px;
   color: var(--color-green-darkest);
   display: flex;
@@ -18,11 +18,11 @@
 }
 
 .release-card__icon-pending {
-  background: var(--color-yellow-lighter);
+  background: var(--color-yellow-lightest);
   color: var(--color-yellow-darkest);
 }
 
 .release-card__icon-beta {
-  background: var(--color-blue-lighter);
+  background: var(--color-blue-lightest);
   color: var(--color-blue-darkest);
 }

@@ -55,7 +55,7 @@ Chromium 议题: [1182537](https://crbug.com/1182537)
 ## Attribution Reporting API 调试 {: #attribution-reporting }
 现在，Attribution Reporting API 错误会显示在**问题**标签页那里。
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)是一个新的 API，旨在帮助您在没有使用跨站标识符的情况下，评估用户行为（比如点击或者查看广告）所导致的转化率。
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)是一个新的 API，旨在帮助您在没有使用跨站标识符的情况下，评估用户行为（比如点击或者查看广告）所导致的转化率。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="显示在问题标签页里的 Attribution Reporting API 错误信息", width="800", height="501" %}
 
@@ -110,7 +110,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 ## 在 Manifest 窗格展示新的 note 链接 {: #new-note-url }
 现在，Manifest 窗格可以显示[新的 note 链接](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)。
 
-目前，那些有声明 "new-note" 能力 的 Chrome OS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 "创建 Note" 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
+目前，那些有声明 "new-note" 能力 的 ChromeOS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 "创建 Note" 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Manifest 窗格里的新 note 链接", width="800", height="477" %}
 

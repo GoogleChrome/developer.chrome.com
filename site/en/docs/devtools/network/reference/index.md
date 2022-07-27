@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Network features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2015-04-13
-updated: 2021-08-12
+updated: 2022-04-01
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -78,7 +79,10 @@ Once captured, you can interact with screenshots in the following ways:
 
 ### Replay XHR request {: #replay-xhr }
 
-To replay an XHR request, right-click the request in the Requests table and select **Replay XHR**.
+To replay an XHR request, do one of the following in the **Requests** table:
+
+- Select the request and press <kbd>R</kbd>.
+- Right-click the request and select **Replay XHR**.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q78sXBNcIyDKpzm3nQja.png", alt="Selecting Replay XHR.", width="800", height="625" %}
 
@@ -119,25 +123,49 @@ There's a new class of web apps, called [Progressive Web Apps][2], which can fun
 the help of [service workers][3]. When you're building this type of app, it's useful to be able to
 quickly simulate a device that has no data connection.
 
-Check the **Offline** checkbox to simulate a completely offline network experience.
+To simulate a completely offline network experience, select **Offline** from the **Network throttling** dropdown menu next to the **Disable cache** checkbox.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2GrWegpdEJMfsnEYNkq6.svg", alt="The Offline checkbox", width="684", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lHvzbNUlrm2Mvd4H1Ywc.png", alt="Offline selected from the dropdown menu", width="800", height="620" %}
 
-**Figure 8**. The Offline checkbox, outlined in blue
+**Figure 8**. Offline selected from the dropdown menu
+
+DevTools displays a warning icon next to the **Network** tab to remind you that offline is enabled.
 
 ### Emulate slow network connections {: #throttling }
 
-Emulate 2G, 3G, and other connection speeds from the **Network Throttling** menu.
+Emulate slow 3G, fast 3G, and other connection speeds from the **Throttling** menu.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7LD09urCKiCrkJcsYhiA.svg", alt="The Network Throttling menu.", width="753", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VSk4XiLkW8TZBCPFzSmE.png", alt="The Network Throttling menu", width="800", height="620" %}
 
-**Figure 9**. The Network Throttling menu, outlined in blue
+**Figure 9**. The Throttling menu, outlined in blue
 
-You can select from a variety of presets, such as Regular or Good 2G. You can also add your own
-custom presets by opening the Network Throttling menu and selecting **Custom** > **Add**.
+#### Create custom throttling profiles {: #throttling-profile}
 
-DevTools displays a warning icon next to the **Network** tab to remind you that throttling is
+In addition to presets, such as slow or fast 3G, you can also add your own
+custom throttling profiles:
+
+1. Open the **Throttling** menu and select **Custom** > **Add...**.
+1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
+1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile", width="800", height="426" %}
+1. Back on the **Network** panel, select your new profile from the **Throttling** dropdown menu.
+
+DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
 enabled.
+
+#### Throttle WebSocket connections {: #throttle-websocket}
+
+In addition to HTTP requests, DevTools throttles WebSocket connections since version 99.
+
+To observe WebSocket throttling:
+
+1. Initiate a new connection, for example, by using a [test tool](https://www.piesocket.com/websocket-tester).
+1. On the **Network** panel, select **No throttling** and send a message through the connection.
+1. Create a very slow [custom throttling profile](#throttling-profile), for example, `10 kbit/s`. Such a slow profile will help you notice the difference.
+1. On the **Network** panel, select the profile and send another message.
+1. Toggle the **WS** filter, click your connection name, open the **Messages** tab, and check the time difference between sent and echoed messages with and without throttling. For example:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tqynaMk7SIL6oIYwuBgM.png", alt="Messages sent and echoed with and without throttling", width="800", height="694" %}
 
 #### Emulate slow network connections from the Network Conditions drawer {: #throttling-network-conditions }
 
@@ -523,7 +551,7 @@ Here's more information about each of the phases you may see in the Timing tab:
 - **Waiting (TTFB)**. The browser is waiting for the first byte of a response. TTFB stands for Time
   To First Byte. This timing includes 1 round trip of latency and the time the server took to
   prepare the response.
-- **Content Download**. The browser is receiving the response.
+- **Content Download**. The browser is receiving the response, either directly from the network or from a service worker. This value is the total amount of time spent reading the response body. Larger than expected values could indicate a slow network, or that the browser is busy performing other work which delays the response from being read.
 - **Receiving Push**. The browser is receiving data for this response via HTTP/2 Server Push.
 - **Reading Push**. The browser is reading the local data previously received.
 
@@ -679,12 +707,12 @@ overview** checkbox to hide it.
 [4]: #network-conditions
 [5]: #network-conditions
 [6]: #hide-filters
-[7]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[8]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[9]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[10]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[7]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[8]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[9]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[10]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
 [11]: #hide-filters
-[12]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+[12]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 [13]: #waterfall
 [14]: #sort-by-activity
 [15]: #headers

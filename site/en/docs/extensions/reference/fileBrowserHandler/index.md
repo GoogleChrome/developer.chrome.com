@@ -2,7 +2,7 @@
 api: fileBrowserHandler
 ---
 
-The Chrome OS file browser comes up when the user either presses Alt+Shift+M or connects an external storage device, such as an SD card, USB key, external drive, or digital camera. Besides showing the files on external devices, the file browser can also display files that the user has previously saved to the system.
+The ChromeOS file browser comes up when the user either presses Alt+Shift+M or connects an external storage device, such as an SD card, USB key, external drive, or digital camera. Besides showing the files on external devices, the file browser can also display files that the user has previously saved to the system.
 
 When the user selects one or more files, the file browser adds buttons representing the valid handlers for those files. For example, in the following screenshot, selecting a file with a ".png" suffix results in an "Save to Gallery" button that the user can click.
 
@@ -47,7 +47,7 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
 
 ## Implementing a file browser handler
 
-To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [File System API](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry) to get access to the file contents. Here is an example:
+To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [File System API](https://developer.mozilla.org/docs/Web/API/FileSystemFileEntry) to get access to the file contents. Here is an example:
 
 ```js
 chrome.fileBrowserHandler.onExecute.addListener(async (id, details) => {

@@ -45,7 +45,7 @@ Chrome 团队开发的主要提案如下。
 ### 限制数据收集
 
 - [**隐私预算**](https://www.youtube.com/watch?v=0STgfjSA6T8)：允许网站获取有关用户浏览器或设备的信息，但浏览器可以对网站可访问的信息总量设置配额，从而无法识别用户身份。
-- [**用户代理客户端提示**](https://web.dev/user-agent-client-hints/)：[用户代理](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) 字符串是一个重要的被动["指纹"收集](https://w3c.github.io/fingerprinting-guidance/#passive)图面，并且难以处理。客户端提示使开发者能够主动请求其确切需要的用户设备或条件相关信息，而不需要从用户代理字符串中解析这些数据。
+- [**用户代理客户端提示**](https://web.dev/user-agent-client-hints/)：[用户代理](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) 字符串是一个重要的被动["指纹"收集](https://w3c.github.io/fingerprinting-guidance/#passive)图面，并且难以处理。客户端提示使开发者能够主动请求其确切需要的用户设备或条件相关信息，而不需要从用户代理字符串中解析这些数据。
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness)：限制通过访问个人用户 IP 地址来识别个人用户身份的能力。提案包含两部分：[<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) 为网站提供了一种使浏览器知晓其并未将 IP 地址与用户相联系的方式；以及 [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) 允许用户组通过同一个私有化服务器发送其流量，从而有效地对网站主机隐藏其 IP 地址。Gnatcatcher 还可确保需要出于合法目的（例如防止滥用）而访问 IP 地址的网站可以在获得认证和审核的情况下予以访问。
 
 ### 身份

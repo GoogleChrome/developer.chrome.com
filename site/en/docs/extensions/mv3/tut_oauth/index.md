@@ -79,40 +79,7 @@ Add an HTML file called `index.html` and include the following code. <!-- Or dow
 </html>
 ```
 
-## Upload to the developer dashboard {: #upload_to_dashboard }
-
-Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
-Dashboard][dev-console] without publishing it:
-
-1.  At the Developer Dashboard, click **Add new item**.
-2.  Click **Browse files**, select the `.zip` extension and upload it.
-3.  Go to the **Package** tab and click on **View public key**.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", alt="Developer Dashboard Package tab", width="296", height="121" %}
-
-From the popup, copy the
-public key and add it to the manifest inside the unzipped directory under the [`"key"`][manifest-key] field.
-
-
-```json
-{
-  "name": "OAuth Tutorial FaceBlock",
-...
-  "key": "ThisKeyIsGoingToBeVeryLong/go8GGC2u3UD9WI3MkmBgyiDPP2OreImEQhPvwpliioUMJmERZK3zPAx72z8MDvGp7Fx7ZlzuZpL4yyp4zXBI+MUhFGoqEh32oYnm4qkS4JpjWva5Ktn4YpAWxd4pSCVs8I4MZms20+yx5OlnlmWQEwQiiIwPPwG1e1jRw0Ak5duPpE3uysVGZXkGhC5FyOFM+oVXwc1kMqrrKnQiMJ3lgh59LjkX4z1cDNX3MomyUMJ+I+DaWC2VdHggB74BNANSd+zkPQeNKg3o7FetlDJya1bk8ofdNBARxHFMBtMXu/ONfCT3Q2kCY9gZDRktmNRiHG/1cXhkIcN1RWrbsCkwIDAQAB"
-}
-```
-
-## Compare IDs {: #extension_management }
-
-Open the Extensions Management page at `chrome://extensions`, ensure developer mode is enabled and
-upload the unpackaged extension directory. Compare the extension ID on the extensions management
-page to the Item ID in the Developer Dashboard. They should match.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7T1Ko139zBRENzSyKpgB.png", 
-alt="Extension Ids matching", width="350", height="250" %}
-
-The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
-single ID is essential for API registration.
+{% include 'partials/extensions/reusing-prod-extension-id.md' %}
 
 ## Create OAuth client ID {: #oauth_client }
 
@@ -153,7 +120,7 @@ Register the [`identity`][identity-api] permission in the manifest.
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlock",
+  "name": "OAuth Tutorial FriendBlock",
   ...
   "permissions": [
     "identity"
@@ -204,7 +171,7 @@ Add the [Google People API][people-api] client library to `"scopes"` in the exte
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlock",
+  "name": "OAuth Tutorial FriendBlock",
   ...
   "oauth2": {
     "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
@@ -243,7 +210,7 @@ window.onload = function() {
         'contentType': 'json'
       };
       fetch(
-          'https://people.googleapis.com/v1/contactGroups/all?maxMembers=20&key=<API_Key_Here>',
+          'https://people.googleapis.com/v1/contactGroups/all?maxMembers=20&key=API_KEY',
           init)
           .then((response) => response.json())
           .then(function(data) {
@@ -254,7 +221,7 @@ window.onload = function() {
 };
 ```
 
-Replace `<API_Key_Here>` with the API key generated from the Google API console. The extension
+Replace <var>API_KEY</var> with the API key generated from the Google API console. The extension
 should log a JSON object that includes an array of `people/account_id`s under the
 `memberResourceNames` field.
 
@@ -288,7 +255,7 @@ window.onload = function() {
             for (let i = 0; i < returnedContacts.length; i++) {
               fetch(
                   'https://people.googleapis.com/v1/' + returnedContacts[i] +
-                      '?personFields=photos&key=<API_Key_Here>',
+                      '?personFields=photos&key=API_KEY',
                   init)
                   .then((response) => response.json())
                   .then(function(data) {

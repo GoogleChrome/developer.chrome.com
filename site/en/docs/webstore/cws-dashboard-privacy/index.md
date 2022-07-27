@@ -49,7 +49,7 @@ code and do not declare and justify it using the field shown above will be rejec
 
 {% Aside 'warning' %}
 
-In **MV3** you can no longer load and execute a [remotely hosted file][remote-code].
+In **Manifest V3** you can no longer load and execute a [remotely hosted file][remote-code].
 
 {% endAside %}
 

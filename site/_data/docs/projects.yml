@@ -1,7 +1,8 @@
 tools:
   - url: devtools
-# TODO: Uncomment when launched.
-#  - url: workbox
+  - url: workbox
+  - url: puppeteer
+  - url: crux
 crx:
   - url: extensions
   - url: webstore
@@ -11,5 +12,6 @@ architecture:
   - url: native-client
   - url: multidevice
   - url: android
+  - url: web-platform
 infrastructure:
   - url: versionhistory

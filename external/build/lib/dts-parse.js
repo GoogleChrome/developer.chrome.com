@@ -348,7 +348,12 @@ class Transform {
     }
 
     if (node.type?.type === 'reference') {
-      if (chromeEventRefTypes.includes(node.type.name)) {
+      // Only upgrade node if not a workbox type
+      // The upgrade Event node should only be applied to Chrome specific events
+      if (
+        this.mode !== 'workbox' &&
+        chromeEventRefTypes.includes(node.type.name)
+      ) {
         // This is actually a reference to a Chrome event type. This returns the parameters of the
         // `addListener` method, so they can be upgraded too.
         const {children, isDeclarative} = this.upgradeEventNode(node);
@@ -703,10 +708,16 @@ class Transform {
       channel: 'stable',
     };
 
+    // See https://github.com/GoogleChrome/developer.chrome.com/issues/2298
+    let chromeOsOnly = undefined;
+
     tags.forEach(({tag, text}) => {
       text = text.trim(); // some show up with extra \n
 
       switch (tag) {
+        case 'default':
+          out.default = text;
+          break;
         case 'chrome-platform-apps':
           out.platformAppsOnly = true;
           break;
@@ -741,8 +752,23 @@ class Transform {
         case 'chrome-disallow-service-workers':
           out.disallowServiceWorkers = true;
           break;
+        case 'chrome-platform':
+          // If chromeos is the platform, and chromeOsOnly is undefined because
+          // we haven't seen any other platforms, this might be chromeOsOnly.
+          if (text === 'chromeos' && chromeOsOnly === undefined) {
+            chromeOsOnly = true;
+          } else {
+            // The first time we see a platform that's not chromeos, we know the
+            // feature isn't chromeOsOnly.
+            chromeOsOnly = false;
+          }
+          break;
       }
     });
+
+    if (chromeOsOnly === true) {
+      out.chromeOsOnly = true;
+    }
 
     return out;
   }
@@ -799,6 +825,7 @@ module.exports = async function parse({silent, sources, mode}) {
   /** @type {typedoc.TypeScript.CompilerOptions} */
   const typescriptOptions = {
     declaration: true,
+    esModuleInterop: true,
   };
 
   /** @type {Partial<typedoc.TypeDocOptions>} */

@@ -1,11 +1,14 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Optimize website speed"
+title: "Lighthouse: Optimize website speed"
 authors:
   - kaycebasques
 date: 2018-06-18
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to find ways to make your websites load faster."
+tags:
+  - get-started
+  - performance
 ---
 
 ## Goal of tutorial {: #goal_of_tutorial }
@@ -70,7 +73,7 @@ But first, you need to set up the site so that you can make changes to it later:
 
     **Figure 4**. The demo tab
 
-6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, Chrome OS). Chrome DevTools opens
+6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, ChromeOS). Chrome DevTools opens
     up alongside the demo.
 
     {% Img src="image/admin/QyoSneXNo8Npiy28nJlU.png", alt="DevTools and the demo.", width="800", height="476" %}
@@ -78,7 +81,7 @@ But first, you need to set up the site so that you can make changes to it later:
     **Figure 5**. DevTools and the demo
 
 For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
-can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open
+can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open
 the Command Menu, typing `Undock`, and then selecting **Undock into separate window**.
 
 {% Img src="image/admin/YgPOzT6Re0aIGezSKPZr.png", alt="Undocked DevTools.", width="800", height="514" %}
@@ -380,7 +383,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
     **Figure 29**. More information about the _Reduce render-blocking resources_ opportunity
 
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
     Menu, start typing `Coverage`, and then select **Show Coverage**.
 
     {% Img src="image/admin/Cy7cW3nb11D7A2ndQcsS.png", alt="Opening the Command Menu from the Audits panel.", width="800", height="438" %}
@@ -419,7 +422,7 @@ Are the `jquery.js` and `lodash.js` files even needed to load the page? The Requ
 show you what happens when resources aren't available.
 
 1.  Click the **Network** tab.
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
+2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open the Command
     Menu again.
 3.  Start typing `blocking` and then select **Show Request Blocking**.
 
@@ -633,18 +636,18 @@ Tony's fans love how fast the site feels now, and Tony is very thankful for your
 
 [1]: https://www.coursera.org/learn/web-development#syllabus
 [2]: https://glitch.com/edit/#!/tony
-[3]: /web/tools/lighthouse
+[3]: /docs/lighthouse/overview/
 [4]: https://support.google.com/chrome/answer/95464
-[5]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding#Directives
+[5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives
 [6]: https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#relative_sized_images
 [7]: https://images.guide/
 [8]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path
 [9]:
   https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript#use_async_or_defer
 [10]: https://webpack.js.org/guides/tree-shaking/
-[11]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+[11]: https://developer.mozilla.org/docs/Web/API/User_Timing_API
 [12]: /docs/devtools/evaluate-performance/reference
-[13]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+[13]: https://developer.mozilla.org/docs/Web/API/User_Timing_API
 [14]: #feedback
 [15]: #feedback
 [16]: https://github.com/google/webfundamentals/issues/new

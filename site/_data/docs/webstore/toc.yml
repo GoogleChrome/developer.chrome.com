@@ -15,8 +15,10 @@
     - url: /docs/webstore/publish/
     - url: /docs/webstore/manage/
     - url: /docs/webstore/update/
+    - url: /docs/webstore/review-process/
     - url: /docs/webstore/troubleshooting/
     - url: /docs/webstore/branding/
+    - url: /docs/webstore/rating/
     - url: /docs/webstore/group-publishers/
     - url: /docs/webstore/account-deletion/
     - url: /docs/webstore/cws-payments-deprecation/
@@ -28,10 +30,12 @@
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
     - url: /docs/webstore/cws-enterprise/
+- url: /docs/webstore/discovery/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
     - url: /docs/webstore/program_policies/
+    - url: /docs/webstore/trader-disclosure/
     - url: /docs/webstore/spam-faq/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/

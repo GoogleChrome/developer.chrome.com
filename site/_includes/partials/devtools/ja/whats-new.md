@@ -2,13 +2,112 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/ja/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/ja/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/ja/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/ja/blog/new-in-devtools-97/#debugging) -->
+
+### Chrome 104 {: #chrome104 }
+
+* [デバッグ中のフレーム再起動](/ja/blog/new-in-devtools-104/#restart-frame)
+* [Recorder パネルでのスロー再生オプション](/ja/blog/new-in-devtools-104/#recorder)
+* [Recorder パネル用の拡張機能を構築](/ja/blog/new-in-devtools-104/#recorder-extension)
+* [Sources パネルで Authored / Deployed でファイルをグループ化する](/ja/blog/new-in-devtools-104/#authored-deployed)
+* [Performance insights パネルの新しい User Timings トラック](/ja/blog/new-in-devtools-104/#performance)
+* [要素に割り当てられたスロットの表示](/ja/blog/new-in-devtools-104/#slot)
+* [パフォーマンス計測のためのハードウェア並列度シミュレーション](/ja/blog/new-in-devtools-104/#simulate)
+* [CSS 変数のオートコンプリート時に色以外の値のプレビュー](/ja/blog/new-in-devtools-104/#css-var)
+* [Back/forward cache ペインでブロックしているフレームの特定](/ja/blog/new-in-devtools-104/#bfcache)
+* [JavaScript オブジェクトのオートコンプリート候補の改善](/ja/blog/new-in-devtools-104/#autocomplete)
+* [ソースマップの改善](/ja/blog/new-in-devtools-104/#sourcemaps)
+* [その他のハイライト](/ja/blog/new-in-devtools-104/#misc)
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder パネルでのダブルクリックイベントや右クリックイベントのキャプチャ](/ja/blog/new-in-devtools-103/#recorder)
+* [Lighthouse パネルでの新しいタイムスパンモードとスナップショットモード](/ja/blog/new-in-devtools-103/#lighthouse)
+* [Performance Insights パネルでの改善されたズーム制御](/ja/blog/new-in-devtools-103/#zoom)
+* [パフォーマンスレコーディングの削除確認](/ja/blog/new-in-devtools-103/#delete)
+* [Element パネルでのペインの並び替え](/ja/blog/new-in-devtools-103/#reorder-pane)
+* [ブラウザ外でのカラーピッキング](/ja/blog/new-in-devtools-103/#color)
+* [デバッグ中の改善されたインラインでの値のプレビュー](/ja/blog/new-in-devtools-103/#inline-preview)
+* [仮想認証器での大きな blob サポート](/ja/blog/new-in-devtools-103/#webauthn)
+* [Sources パネルでの新しいキーボードショートカット](/ja/blog/new-in-devtools-103/#shortcuts)
+* [ソースマップの改善](/ja/blog/new-in-devtools-103/#sourcemaps)
+
+
+### Chrome 102 {: #chrome102 }
+
+* [プレビュー機能: 新しいパフォーマンスインサイトパネル](/ja/blog/new-in-devtools-102/#perf)
+* [ライトテーマとダークテーマをエミュレートする新しいショートカット](/ja/blog/new-in-devtools-102/#emulation)
+* [Network Preview タブのセキュリティ改善](/ja/blog/new-in-devtools-102/#network-preview)
+* [ブレークポイントのリロード改善](/ja/blog/new-in-devtools-102/#debugger)
+* [コンソールの更新](/ja/blog/new-in-devtools-102/#console)
+* [ユーザーフローレコーディングを開始時にキャンセル](/ja/blog/new-in-devtools-102/#recorder)
+* [Styles ペインで継承されたハイライト疑似要素を表示](/ja/blog/new-in-devtools-102/#pseudo)
+* [その他のハイライト](/ja/blog/new-in-devtools-102/#misc)
+* [[実験的] CSS の変更をコピー](/ja/blog/new-in-devtools-102/#copy)
+* [[実験的] ブラウザ外の色を抽出](/ja/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [記録されたユーザーフローをJSONファイルとしてインポート/エクスポート](/ja/blog/new-in-devtools-101/#recorder)
+* [Styles ペインでカスケードレイヤーを表示する](/ja/blog/new-in-devtools-101/#layer)
+* [hwb() カラー関数のサポート](/ja/blog/new-in-devtools-101/#hwb)
+* [プライベートプロパティの表示を改善](/ja/blog/new-in-devtools-101/#private-props)
+* [その他のハイライト](/ja/blog/new-in-devtools-101/#misc)
+* [[実験的] Lighthouse パネルに新しいタイムスパンとスナップショットのモードを追加](/ja/blog/new-in-devtools-101/#lighthouse)
+
+
+### Chrome 100 {: #chrome100 }
+
+* [Styles ペインでの @supports アットルールの表示と編集](/ja/blog/new-in-devtools-100/#supports)
+* [デフォルトで共通セレクタをサポート](/ja/blog/new-in-devtools-100/#selector)
+* [レコーディングのセレクタをカスタマイズする](/ja/blog/new-in-devtools-100/#customize-selector)
+* [レコーディングのリネーム](/ja/blog/new-in-devtools-100/#recorder-rename)
+* [ホバーでクラスや関数のプロパティをプレビューする](/ja/blog/new-in-devtools-100/#properties)
+* [Performance パネルでの Partially presented frames](/ja/blog/new-in-devtools-100/#perf)
+* [その他のハイライト](/ja/blog/new-in-devtools-100/#misc)
+
+
+### Chrome 99 {: #chrome99 }
+
+* [WebSocketリクエスト数の制限](/ja/blog/new-in-devtools-99/#websocket)
+* [Application パネル内に新しく追加されたReporting API ペイン](/ja/blog/new-in-devtools-99/#reporting-api)
+* [Recorder パネルに要素が可視／クリック可能になるまで待機する機能が追加](/ja/blog/new-in-devtools-99/#recorder)
+* [コンソールのスタイル設定、フォーマット、フィルタの改善](/ja/blog/new-in-devtools-99/#console)
+* [ソースマップファイルを使用した Chrome 拡張機能のデバッグ](/ja/blog/new-in-devtools-99/#extension)
+* [Sources パネルのソースフォルダツリーの改善](/ja/blog/new-in-devtools-99/#source-tree)
+* [Sources パネルにワーカーのソースファイルを表示](/ja/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome の自動ダークテーマの更新](/ja/blog/new-in-devtools-99/#auto-dark-mode)
+* [タッチ操作で使いやすいカラーピッカーとスプリットペイン](/ja/blog/new-in-devtools-99/#touch-friendly)
+* [その他のハイライト](/ja/blog/new-in-devtools-99/#misc)
+
+
+### Chrome 98 {: #chrome98 }
+
+* [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
+* [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
+* [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)
+* [Back/forward cache タブでページがキャッシュ可能であることを確認する](/ja/blog/new-in-devtools-98/#bfcache)
+* [新しい Properties ペインのフィルター](/ja/blog/new-in-devtools-98/#properties)
+* [CSS の force-colors メディア機能のエミュレート](/ja/blog/new-in-devtools-98/#forced-colors)
+* [ホバー時にルーラーを表示するコマンド](/ja/blog/new-in-devtools-98/#show-rulers)
+* [Flexbox エディターで `row-reverse` と `column-reverse` をサポート](/ja/blog/new-in-devtools-98/#flexbox-editor)
+* [XHR のリプレイと全検索結果の展開に新しいキーボードショートカットを追加](/ja/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse パネルの Lighthouse 9](/ja/blog/new-in-devtools-98/#lighthouse)
+* [Sources パネルの改善](/ja/blog/new-in-devtools-98/#sources)
+* [その他のハイライト](/ja/blog/new-in-devtools-98/#misc)
+* [[実験的] Reporting API ペインに Endpoints を追加](/ja/blog/new-in-devtools-98/#reporting-api)
+
+
+### Chrome 97 {: #chrome97 }
+
+* [プレビュー機能: 新しい Recorder パネル](/ja/blog/new-in-devtools-97/#recorder)
+* [デバイスモードでのデバイス一覧の更新](/ja/blog/new-in-devtools-97/#device)
+* [Edit as HTML でのオートコンプリート](/ja/blog/new-in-devtools-97/#code-completion)
+* [改善されたコードデバッグ体験](/ja/blog/new-in-devtools-97/#debugging)
+* [デバイスを横断した DevTools 設定の同期](/ja/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
+
 * [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
 <!-- * [Restored and improved CSS length edit and copy experince](/ja/blog/new-in-devtools-966/#length) -->
 * [CSS の prefers-contrast メディア機能のエミュレート](/ja/blog/new-in-devtools-96/#prefers-contrast)
@@ -24,6 +123,7 @@
 * [[実験的] Application パネルの新しい Reporting API ペイン](/ja/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
+
 * [新しいCSSの長さ編集ツール](/ja//blog/new-in-devtools-95/#length)
 * [Issues タブで問題を隠す](/ja/blog/new-in-devtools-95/#hide-issues)
 * [プロパティの表示の改善](/ja/blog/new-in-devtools-95/#properties)

@@ -37,7 +37,7 @@ high, and the experience for developers consistent:
     *   Unnatural repetition of the same keyword more than 5 times
     *   Unattributed or anonymous user testimonials in the product's description.
 
-More guidance on the Keyword Spam policy can be found in our [FAQs](https://developer.chrome.com/docs/webstore/spam-faq/).
+More guidance on the Keyword Spam policy can be found in our [FAQs](/docs/webstore/spam-faq/).
 
 ## Enforcement Circumvention
 

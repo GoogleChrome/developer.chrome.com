@@ -1,0 +1,25 @@
+intro:
+  en: 'Workbox Modules'
+intro_description:
+  en: |
+    Documentation for all Workbox modules.
+sw:
+  en: 'Service Worker Packages'
+sw_description:
+  en: |
+    Below is the list of service worker packages that Workbox provides. Each packages serves a specific need and can be used together or on its own.
+window:
+  en: 'Window Packages'
+window_description:
+  en: |
+    Workbox provides modules that run in the window context and complement the service worker packages.
+node:
+  en: 'Node Modules'
+node_description:
+  en: |
+    Workbox provides a set of Node modules that make it easy to generate a list of files to precache in your service worker or create a complete service worker that you can use without writing any code.
+loader:
+  en: 'Loader (CDN)'
+loader_description:
+  en: |
+    Workbox provides a way to load its service worker packages from a CDN (or custom endpoint). This makes it easy to get started with Workbox without having to set up a build process.

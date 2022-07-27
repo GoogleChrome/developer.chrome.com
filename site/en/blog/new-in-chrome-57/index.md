@@ -33,7 +33,7 @@ I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for
 
 Flexbox is a powerful layout tool. It makes many complex layouts possible,
 but it can only do layout in one dimension. Chrome 57 adds support for
-[`display: grid`](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids) -
+[`display: grid`](https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Grids) -
 the new [CSS Grid Layout specification](https://www.w3.org/TR/css3-grid-layout/),
 adding a powerful new tool for creating two-dimensional grid-based layout
 systems, optimized for responsive user interface design.
@@ -79,21 +79,21 @@ And there's lots more!
   [`caret-color`](https://www.chromestatus.com/feature/5720917787279360)
   property.
 * Visual effects such as line color and style can be specified with new
-  [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+  [`text-decoration`](https://developer.mozilla.org/docs/Web/CSS/text-decoration)
   properties.
-* The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-  [Response class](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+* The [Fetch API](https://developer.mozilla.org/docs/Web/API/Fetch_API)
+  [Response class](https://developer.mozilla.org/docs/Web/API/Response)
   now supports the
-  [`.redirected`](https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected)
+  [`.redirected`](https://developer.mozilla.org/docs/Web/API/Response/redirected)
   attribute to help avoid untrustworthy responses and reduce the risk of open
   redirectors.
-* All `-webkit-` prefixed [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* All `-webkit-` prefixed [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
   global aliases have been removed, after
   their deprecation in M38.
 * And one of my favorites &mdash; new
-  [`padStart`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
+  [`padStart`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
   and
-  [`padEnd`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
+  [`padEnd`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
   formatting methods that simplify string padding when aligning console output
   or printing numbers with a fixed number of digits.
 

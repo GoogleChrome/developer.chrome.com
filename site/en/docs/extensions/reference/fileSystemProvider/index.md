@@ -46,7 +46,7 @@ Files app uses above information in order to render related UI elements appropri
 
 ## Overview
 
-File System Provider API allows extensions to support virtual file systems, which are available in the file manager on Chrome OS. Use cases include decompressing archives and accessing files in a cloud service other than Drive.
+File System Provider API allows extensions to support virtual file systems, which are available in the file manager on ChromeOS. Use cases include decompressing archives and accessing files in a cloud service other than Drive.
 
 ## Mounting file systems
 

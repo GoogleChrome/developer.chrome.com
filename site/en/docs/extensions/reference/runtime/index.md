@@ -33,7 +33,7 @@ Managing extension lifecycle and options
 
 Device restart support
 
-: These methods are available only on Chrome OS, and exist mainly to support kiosk implementations.
+: These methods are available only on ChromeOS, and exist mainly to support kiosk implementations.
   Methods in this category include
   [restart](/docs/extensions/reference/runtime/#method-restart) and
   [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).
@@ -67,9 +67,9 @@ scripts are responsible for injecting extension assets.
 This example shows how a [content script][content] can add an image in the extension's package to
 the page that the content script has been [injected][content-inject] into.
 
-```js
-//// content.js ////
+{% Label %}content.js:{% endLabel %}
 
+```js
 { // Block used to avoid setting global variables
   const img = document.createElement('img');
   img.src = chrome.runtime.getURL('logo.png');
@@ -88,9 +88,9 @@ In this example, the content script needs some data from the extension's backgro
 to initialize its UI. To get this data, it passes a `get-user-data` message to the background, and
 the background responds with a copy of the user's information.
 
-```js
-//// content.js ////
+{% Label %}content.js:{% endLabel %}
 
+```js
 // 1. Send the background a message requesting the user's data
 chrome.runtime.sendMessage('get-user-data', (response) => {
   // 3. Got an asynchronous response with the data from the background
@@ -99,9 +99,9 @@ chrome.runtime.sendMessage('get-user-data', (response) => {
 });
 ```
 
-```js
-//// background.js ////
+{% Label %}background.js:{% endLabel %}
 
+```js
 // Example of a simple user data object
 const user = {
   username: 'demo-user'

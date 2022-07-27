@@ -65,7 +65,7 @@ View iframe details by right clicking on the iframe element in the Elements pane
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="Show frame details", width="800", height="486" %}
 
-This takes you to a view of the iframe's details in the Application panel where you can examine document details, security & isolation status, permissions policy, and more to debug potential issues.
+This takes you to a view of the iframe's details in the Application panel where you can examine document details, security & isolation status, [permissions policy](/docs/privacy-sandbox/permissions-policy/), and more to debug potential issues.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hEsg9Mc95n7w2tPrv6KH.png", alt="Frame details view", width="800", height="516" %}
 

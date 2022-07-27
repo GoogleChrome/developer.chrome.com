@@ -1,0 +1,26 @@
+version: 1
+mergeable:
+  - when: pull_request.*, pull_request_review.*
+    name: 'Approval check'
+    validate:
+      - do: approvals
+        min:
+          count: 1
+        must_include:
+          regex: 'site/**/*.md'
+        limit:
+          teams: [ 'GoogleChrome/web-dev-eng' ]
+    pass:
+      - do: checks
+        status: 'success'
+        payload:
+          title: 'Mergeable Run have been Completed!'
+          summary: "All the validators have returned 'pass'!"
+          text: "This is checks text"
+    fail:
+      - do: checks
+        status: 'failure'
+        payload:
+          title: 'Mergeable Run have been Completed!'
+          summary: "All the validators have returned 'pass'!"
+          text: "This is checks text"   

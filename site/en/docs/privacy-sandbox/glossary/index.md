@@ -4,9 +4,11 @@ title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Short explanations of key concepts.
 date: 2021-05-18
-updated: 2021-11-04 
+updated: 2022-07-25 
 authors:
   - samdutton
+  - alexandrawhite
+  - mihajlija
 ---
 
 
@@ -22,6 +24,22 @@ A company that provides services to deliver ads.
 ## Advertiser {: #advertiser }
 
 A company that pays to advertise its products.
+
+## Aggregatable reports
+
+Encrypted reports sent from individual user devices. These reports contain
+data about cross-site user behavior and conversions. Conversions (sometimes
+called attribution trigger events) and associated metrics are defined by the
+advertiser or adtech. Each report is encrypted to prevent various parties
+from accessing the underlying data.
+
+## Attestation
+
+A mechanism to authenticate software identity, usually with [cryptographic
+hashes](https://en.wikipedia.org/wiki/Cryptographic_hash_function) or
+signatures. For the aggregation service proposal, attestation matches the
+code running in the adtech-operated aggregation service with the open
+source code.
 
 ## Attribution {: #attribution }
 
@@ -49,6 +67,13 @@ See also [impression](#impression).
 
 A conversion attributed to an ad that was 'clicked'.
 
+## Coarse data
+
+Limited information provided by Attribution Reporting API event-level reports.
+This is limited to 3 pieces of conversion data for clicks and 1 piece for
+views. Specific, granular conversion data (such as specific prices of items
+and timestamps)  are not included.
+
 ## Conversion
 
 The completion of some desired goal following action by a user.
@@ -67,6 +92,10 @@ For example, an online store can retain shopping cart details even if a user is
 not logged in, or the site could record the user's browsing activity on their
 site. See [First-party cookie](#first-party-cookie) and
 [Third-party cookie](#third-party-cookie).
+
+## Coordinator
+
+An entity responsible for key management and aggregatable report accounting. The coordinator maintains a list of hashes of approved aggregation service configurations and configures access to decryption keys.
 
 ## Differential privacy  {: #differential-privacy }
 
@@ -138,7 +167,7 @@ Something that can be used (probably in combination with other surfaces) to
 identify a particular user or device.
 
 For example, the `navigator.userAgent()` JavaScript method and the `User-Agent`
-HTTP request header provide access to a fingerprinting surface (the user agent
+HTTP request header provide access to a fingerprinting surface (the User-Agent
 string).
 
 ## First-party {: #first-party }
@@ -160,6 +189,30 @@ See also [Third-party](#third-party).
 For example, an online store might ask a browser to store a cookie in order to
 retain shopping cart details for a user who is not logged in. See also
 [Third-party cookies](#third-party-cookie). 
+
+## I2P {: #i2p }
+
+Intent to Prototype. The first stage in
+[developing a new feature](/blog/progress-in-the-privacy-sandbox-2021-12/#chromium-development-process)
+in [Blink](#blink). The announcement is posted to the [blink-dev mailing
+list](https://groups.google.com/a/chromium.org/g/blink-dev) with a link to the
+proposal for discussion.
+
+## I2E {: #i2e }
+
+Intent to Experiment. Announcement of a plan to make a new [Blink](#blink)
+feature available to users for testing, typically through an [origin
+trial](#origin-trial).
+
+## I2EE {: #i2ee }
+
+Intent to Extend Experiment. Announcement of a plan to extend the duration of an
+[origin trial](#origin-trial).
+
+## I2S {: #i2s }
+
+Intent to Ship. Announcement of a plan to make a new feature of [Blink](#blink)
+available to users in stable versions of Chrome.
 
 ## Impression {: #impression }
 
@@ -207,15 +260,15 @@ Find out more:
 
 ## Passive surface {: #passive-surface }
 
-Some fingerprinting surfaces, such as user agent strings, IP addresses and
-accept-language headers, that are available to every website whether the site
-asks for them or not.
+Some [fingerprinting surfaces](#fingerprinting-surface)&mdash;such as 
+User-Agent strings, IP addresses, and Accept-Language headers&mdash;that are
+available to every website, whether the site asks for them or not.
 
 Passive surfaces can easily consume a site's privacy budget.
 
 The Privacy Sandbox initiative proposes replacing passive surfaces with active
 ways to get specific information, for example using Client Hints a single time
-to get the user's language rather than having an accept-language header for
+to get the user's language rather than having an Accept-Language header for
 every response to every server.
 
 ## Publisher
@@ -232,11 +285,28 @@ the ad.
 Reaching people on other sites who have previously visited your site.
 
 For example, an online store could show ads for a toy sale to people who
-previously viewed toys on their site. 
+previously viewed toys on their site.
+
+## Reporting origin
+
+The entity that receives aggregatable reports&mdash;in other words, the adtech
+that called the Attribution Reporting API. Aggregatable reports are sent from
+user devices to a [well-known](#well-known) URL associated with the reporting
+origin.
 
 ## Site
 
 See [Top-Level Domain](#tld) and [eTLD](#etld).
+
+## Summary report {: #aggregate-report}
+
+An Attribution Reporting API report type. A [summary
+report](/docs/privacy-sandbox/attribution-reporting/summary-reports/) includes
+aggregated user data and detailed conversion data, resulting from noisy
+aggregation applied to aggregatable reports. The summary
+includes aggregated user data and detailed conversion data.
+
+Summary reports were formerly known as aggregate reports.
 
 ## Surface
 
@@ -271,13 +341,29 @@ Top-level domains such as .com and .org are listed in the
 Note that some 'sites' are actually just subdomains. For example,
 `translate.google.com` and `maps.google.com` are subdomains of `google.com`. These subdomains are [eTLD + 1](#etld).
 
+## Trusted Execution Environment (TEE) {: #tee }
+
+A special configuration of computer hardware and software that allows external
+parties to verify the exact versions of software running on the computer. TEEs
+allow external parties to verify that the software does exactly what the
+software manufacturer claims it does—nothing more or less.
+
+## User-Agent string {: #user-agent }
+
+An HTTP header used by servers and network peers to request indentifying
+information about an application, operating system, vendor, or version of a
+user agent. The User-Agent string broadcasts a large string of data, which is
+problematic for user privacy. [User-Agent
+reduction](/docs/privacy-sandbox/user-agent/) is proposed to remove sensitive
+information and reduce passive fingerprinting.
+
 ## User-Agent Client Hints (UA-CH) {: #ua-ch }
 
-Provide specific pieces of user-agent data on explicit request. This helps
-reduce passively exposed information which may lead to user identification or
-covert tracking.
+Provide specific pieces of the User-Agent string on explicit request. This
+helps reduce [passive surfaces](#passive-surface) in the User-Agent string
+which may lead to user identification or covert tracking.
 
-UA-CH are sometimes referred to as "Client Hints."
+UA-CH is sometimes referred to as "Client Hints."
 
 ## .well-known {: #well-known }
 

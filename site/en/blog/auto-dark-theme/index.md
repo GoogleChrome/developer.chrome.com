@@ -14,7 +14,7 @@ tags:
   - origin-trials
 ---
 
-Chrome 96 introduces an [origin trial](https://developer.chrome.com/blog/origin-trials/) for Auto Dark Themes on Android.
+Chrome 96 introduces an [origin trial](/blog/origin-trials/) for Auto Dark Themes on Android.
 With this feature, the browser applies an automatically generated dark theme to light themed sites,
 when the user has opted into dark themes in the operating system.
 Users can opt-out of dark themes by either disabling the option on the OS level or in a specific setting in Chrome.
@@ -123,7 +123,7 @@ Then, use CSS to customize elements as needed:
 
 The per-element customization API is still in early development.
 We're working with the standards teams to provide developers with a more expressive API for opt-out.
-You follow the conversation on [this GitHub issue](https://github.com/w3c/csswg-drafts/issues/6664).
+You can follow the conversation on [this GitHub issue](https://github.com/w3c/csswg-drafts/issues/6664).
 
 ## How to opt-out of Auto Dark Theme
 

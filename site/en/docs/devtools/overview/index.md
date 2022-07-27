@@ -22,9 +22,9 @@ of the DevTools UI.
 
 - When you want to work with the DOM or CSS, right-click an element on the page and select
   **Inspect** to jump into the **Elements** panel. Or press Command+Option+C (Mac) or
-  Control+Shift+C (Windows, Linux, Chrome OS).
+  Control+Shift+C (Windows, Linux, ChromeOS).
 - When you want to see logged messages or run JavaScript, press Command+Option+J (Mac) or
-  Control+Shift+J (Windows, Linux, Chrome OS) to jump straight into the **Console** panel.
+  Control+Shift+J (Windows, Linux, ChromeOS) to jump straight into the **Console** panel.
 
 See [Open Chrome DevTools][2] for more details and workflows.
 
@@ -192,12 +192,12 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [3]: /docs/devtools/dom
 [4]: /docs/devtools/css
 [5]: /docs/devtools/javascript
-[6]: /docs/devtools/console/get-started
+[6]: /docs/devtools/console
 [7]: /docs/devtools/speed/get-started
 [8]: /docs/devtools/network
 [9]: /docs/devtools/device-mode
-[10]: /docs/devtools/device-mode/emulate-mobile-viewports
-[11]: /docs/devtools/device-mode/device-input-and-sensors
+[10]: /docs/devtools/device-mode/#viewport
+[11]: /docs/devtools/device-mode/#geolocation
 [12]: /docs/devtools/dom
 [13]: /docs/devtools/css
 [14]: /docs/devtools/css/#view
@@ -205,30 +205,30 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [16]: /docs/devtools/dom/#edit
 [17]: /docs/devtools/css/animations
 [18]: /docs/devtools/coverage
-[19]: /docs/devtools/console/get-started
+[19]: /docs/devtools/console
 [20]: /docs/devtools/console
-[21]: /docs/devtools/console/command-line-reference
-[22]: /docs/devtools/console/console-reference
+[21]: /docs/devtools/console/utilities
+[22]: /docs/devtools/console/api
 [23]: /docs/devtools/javascript
 [24]: /docs/devtools/javascript/breakpoints
-[25]: /web/tools/setup/setup-workflow
-[26]: /docs/devtools/snippets
+[25]: /docs/devtools/workspaces
+[26]: /docs/devtools/javascript/snippets
 [27]: /docs/devtools/javascript/reference
 [28]: /blog/new-in-devtools-65#overrides
 [29]: /docs/devtools/coverage
 [30]: /docs/devtools/network
-[31]: /docs/devtools/network/issues
+[31]: /docs/devtools/issues
 [32]: /docs/devtools/network/reference
 [33]: /docs/devtools/speed/get-started
 [34]: /docs/devtools/evaluate-performance
 [35]: /docs/devtools/evaluate-performance/reference
-[36]: /docs/devtools/rendering-tools
-[37]: /docs/devtools/rendering-tools/forced-synchronous-layouts
+[36]: /docs/devtools/evaluate-performance
+[37]: /docs/devtools/evaluate-performance/#find_the_bottleneck
 [38]: /docs/devtools/memory-problems
 [39]: /docs/devtools/rendering-tools/js-execution
 [40]: /docs/devtools/progressive-web-apps
-[41]: /docs/devtools/manage-data/local-storage
-[42]: /docs/devtools/manage-data/cookies
+[41]: /docs/devtools/storage/localstorage
+[42]: /docs/devtools/storage/cookies
 [43]: /docs/devtools/resources
 [44]: /docs/devtools/security
 [45]: https://crbug.com/new

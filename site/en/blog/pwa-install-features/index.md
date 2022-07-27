@@ -168,7 +168,7 @@ Richer Install UI, collapsed and expanded states.
 </figcaption>
 </figure>
 
-Earlier this year, we launched [Richer Install](https://developer.chrome.com/blog/richer-pwa-installation/), 
+Earlier this year, we launched [Richer Install](/blog/richer-pwa-installation/), 
 an extended install UI on Chrome on Android that allows developers to
 add screenshots to their manifest. Developers can also add a
 description, which is recommended but not necessary. Due to this

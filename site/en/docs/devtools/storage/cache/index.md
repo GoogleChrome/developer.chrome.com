@@ -6,6 +6,8 @@ authors:
 date: 2019-03-25
 #updated: YYYY-MM-DD
 description: "How to view Cache data from the Application panel of Chrome DevTools."
+tags:
+  - storage
 ---
 
 This guide shows you how to use [Chrome DevTools][1] to inspect [Cache][2] data.
@@ -91,8 +93,8 @@ column of the **Network Log** has the information you're looking for. See [Log n
     **Figure 9**. The **Clear Site Data** button.
 
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
-[3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+[2]: https://developer.mozilla.org/docs/Web/API/Cache
+[3]: https://developer.mozilla.org/docs/Web/HTTP/Caching
 [4]: /docs/devtools/network#load
 [5]: #view
 [6]: #view

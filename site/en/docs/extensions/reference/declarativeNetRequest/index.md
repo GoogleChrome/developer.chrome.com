@@ -2,7 +2,9 @@
 api: declarativeNetRequest
 extra_permissions_html:
   <code>declarativeNetRequestFeedback</code><br/>
-  <a href="declare_permissions#host-permissions">host permissions</a><br />
+  <a href="/docs/extensions/mv3/declare_permissions#host-permissions">host permissions</a><br />
+has_warning: One or more of these permissions <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
+
 ---
 
 ## Manifest
@@ -364,7 +366,7 @@ is determined based on the priority of each rule and the operations specified.
   matching rules.
 - Consider a navigation to `"https://abcd.com"`. The rule with id (5) matches. Since rule (5)
   specifies an extension path, the request is redirected to
-  `"chrome-extension://<extension-id>/a.jpg"`.
+  `"chrome-extension://EXTENSION_ID/a.jpg"`.
 - Consider a navigation to `"http://example.com/path"`. The rule with id (6) matches. Since rule (6)
   specifies a url transform, the request is redirected to `"https://new.example.com/path"`.
 - Consider a navigation to `"https://www.abc.xyz.com/path"`. The rule with id (7) matches. The
@@ -387,8 +389,8 @@ is determined based on the priority of each rule and the operations specified.
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
-[1]: /docs/extensions/mv2/tabs
-[2]: /docs/extensions/mv2/declare_permissions
+[1]: /docs/extensions/mv3/manifest
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #type-Ruleset
 [4]: #type-Ruleset
 [5]: #property-MAX_NUMBER_OF_STATIC_RULESETS

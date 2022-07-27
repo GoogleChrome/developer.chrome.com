@@ -2,86 +2,8 @@
 title: Components
 layout: 'layouts/doc-post.njk'
 date: 2021-01-12
-updated: 2021-01-27
+updated: 2022-06-17
 ---
-
-## Details
-
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-The details shortcode also supports using headers in the summary.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}
 
 ## Asides
 Use asides to provide information that's related to but distinct from the
@@ -502,6 +424,84 @@ var x = 0;
 ```
 {% endCompare %}
 
+## Details
+
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
+
 ## Glitches {: #glitches }
 
 ### Create a Glitch
@@ -554,7 +554,7 @@ Shortcode object fields allow for modifying how the embed is presented:
 
 Images should always use the {% raw %}`{% Img %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your image to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
@@ -635,7 +635,26 @@ place the `Img` shortcode snippet inside:
   </figcaption>
 </figure>
 
+## Labels
+
+Labels can be used to display a filename associated with a [code](https://web.dev/handbook/markup-code/) snippet.
+
+````text
+{% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}
+
+```js
+console.log('hello');
+```
+````
+
+{% Label %}filename.js:{% endLabel %}
+
+```js
+console.log('hello');
+```
+
 ## Lists
+
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
 
@@ -1059,7 +1078,7 @@ responsive. To prevent this from happening add the `fixed-table` class.
 
 Videos should always use the {% raw %}`{% Video %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your video to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
@@ -1072,7 +1091,7 @@ Note that the video `src` property can either be a string or an array of strings
 for multiple sources.
 {% endAside %}
 
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/).
 
 ## YouTube
 

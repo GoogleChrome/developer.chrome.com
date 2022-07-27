@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Spam policy FAQ"
 date: 2020-05-01
-updated: 2021-08-25
+updated: 2021-09-28
 description: Frequently asked questions about Chrome Web Store's spam policy.
 ---
 
@@ -132,7 +132,7 @@ This depends on how relevant the keywords are in context, however, it's best to 
 specific keyword to under 5. Keywords must be relevant to the extension's purpose and not
 unnecessarily repeat in an unnatural way. Including more than 5 instances of a single keyword may
 result in increased scrutiny of your extensions, but will be allowed if its use is considered
-appropriate and relevant. 
+appropriate and relevant.
 
 When listing supported websites or brands in the description, do not list more than five. To provide
 a longer list of brands or websites, provide a link that users can refer to or embed the list in one

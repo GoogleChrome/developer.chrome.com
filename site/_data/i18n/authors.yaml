@@ -1,3 +1,343 @@
+ryanseddon:
+  title:
+    en: 'Ryan Seddon'
+  description:
+    en: 'Front-end developer thecssninja.com'
+timstatler:
+  title:
+    en: 'Tim Statler'
+  description:
+    en: 'Technical Writer'
+deannarubin:
+  title:
+    en: 'Deanna Rubin'
+  description:
+    en: 'Developer Relations Google'
+pearlchen:
+  title:
+    en: 'Pearl Chen'
+  description:
+    en: 'Developer Relations Google'
+arthurevans:
+  title:
+    en: 'Arthur Evans'
+  description:
+    en: 'Arthur writes words about code'
+jbingham:
+  title:
+    en: 'Jonathan Bingham'
+  description:
+    en: 'Jonathan is a Product Manager at Google'
+justinfagnani:
+  title:
+    en: 'Justin Fagnani'
+  description:
+    en: 'Justin is a Software Engineer on the Polymer Project'
+sahel:
+  title:
+    en: 'Sahel Sharify'
+  description:
+    en: 'Sahel is a contributor to Chrome Developers'
+mustaqahmed:
+  title:
+    en: 'Mustaq Ahmed'
+  description:
+    en: 'Mustaq is a contributor to Chrome Developers'
+shampson:
+  title:
+    en: 'Seth Hampson'
+  description:
+    en: 'Software Engineer at Google working on WebRTC'
+mlamouri:
+  title:
+    en: 'Mounir Lamouri'
+  description:
+    en: 'Software Engineer for Web Media Experience'
+tomgreenaway:
+  title:
+    en: 'Tom Greenaway'
+  description:
+    en: 'Chrome & Web Developer Relations Games Lead'
+kinukoyasuda:
+  title:
+    en: 'Kinuko Yasuda'
+  description:
+    en: 'Software Engineer at Google working on the web platform'
+tdresser:
+  title:
+    en: 'Tim Dresser'
+  description:
+    en: 'Software Engineer working on performance metrics at Google'
+victorcostan:
+  title:
+    en: 'Victor Costan'
+  description:
+    en: 'Tech Lead, Chrome Storage'
+rezaali:
+  title:
+    en: 'Reza Ali'
+  description:
+    en: 'Reza is a software developer'
+jeremywagner:
+  title:
+    en: 'Jeremy Wagner'
+  description:
+    en: 'Jeremy is a contributor to Chrome Developers'
+sunyunjia:
+  title:
+    en: 'Sandra Sun'
+  description:
+    en: 'Software Engineer working on Chromium'
+majidvp:
+  title:
+    en: 'Majid Valipour'
+  description:
+    en: 'Software Engineer working on Chromium'
+yangguo:
+  title:
+    en: 'Yang Guo'
+  description:
+    en: 'Yang is an engineer working on V8'
+jgruber:
+  title:
+    en: 'Jakob Gruber'
+  description:
+    en: 'Jakob is an engineer working on V8'
+smcgruer:
+  title:
+    en: 'Stephen McGruer'
+  description:
+    en: 'Stephen is a contributor to Chrome Developers'
+dtapuska:
+  title:
+    en: 'Dave Tapuska'
+  description:
+    en: 'Dave is a contributor to Chrome Developers'
+bokan:
+  title:
+    en: 'David Bokan'
+  description:
+    en: 'David is a contributor to Chrome Developers'
+mcasas:
+  title:
+    en: 'Miguel Casas-Sanchez'
+  description:
+    en: 'Miguel is an engineer in the Chrome team'
+sgomes:
+  title:
+    en: 'Sérgio Gomes'
+  description:
+    en: 'Web DevRel at Google'
+ericlawrence:
+  title:
+    en: 'Eric Lawrence'
+  description:
+    en: 'Eric is a contributor to Chrome Developers'
+flackr:
+  title:
+    en: 'Robert Flack'
+  description:
+    en: 'Robert is a contributor to Chrome Developers'
+mco:
+  title:
+    en: 'Marc Cohen'
+  description:
+    en: 'Eng Manager, Web Developer Relations'
+owencm:
+  title:
+    en: 'Owen Campbell-Moore'
+  description:
+    en: 'Owen is a contributor to Chrome Developers'
+wdenniss:
+  title:
+    en: 'William Denniss'
+  description:
+    en: 'Google Identity Product Manager'
+kenchris:
+  title:
+    en: 'Kenneth Christiansen'
+  description:
+    en: 'Kenneth is an Engineer at Intel'
+emilystark:
+  title:
+    en: 'Emily Stark'
+  description:
+    en: 'Emily is a contributor to Chrome Developers'
+heathermahan:
+  title:
+    en: 'Heather Mahan'
+  description:
+    en: 'Heather Mahan is a developer'
+ewagasperowicz:
+  title:
+    en: 'Ewa Gasperowicz'
+  description:
+    en: 'Ewa is a contributor to Chrome Developers'
+addyosmani:
+  title:
+    en: 'Addy Osmani'
+  description:
+    en: 'Senior Staff Engineering Manager, Chrome'
+paullewis:
+  title:
+    en: 'Paul Lewis'
+  description:
+    en: 'Paul is a Design and Perf Advocate'
+glenshires:
+  title:
+    en: 'Glen Shires'
+  description:
+    en: 'Glen is a contributor to Chrome Developers'
+tomwiltzius:
+  title:
+    en: 'Tom Wiltzius'
+  description:
+    en: 'Tom is a contributor to Chrome Developers'
+chriswilson:
+  title:
+    en: 'Chris Wilson'
+  description:
+    en: 'Chris is a contributor to Chrome Developers'
+renatomangini:
+  title:
+    en: 'Renato Mangini'
+  description:
+    en: 'Renato is a contributor to Chrome Developers'
+ilmariheikkinen:
+  title:
+    en: 'Ilmari Heikkinen'
+  description:
+    en: 'Ilmari is a contributor to Chrome Developers'
+alexdanilo:
+  title:
+    en: 'Alex Danilo'
+  description:
+    en: 'Alex is a contributor to Chrome Developers'
+borissmus:
+  title:
+    en: 'Boris Smus'
+  description:
+    en: 'Boris is a contributor to Chrome Developers'
+sethladd:
+  title:
+    en: 'Seth Ladd'
+  description:
+    en: 'Seth is a contributor to Chrome Developers'
+mikemahemoff:
+  title:
+    en: 'Michael Mahemoff'
+  description:
+    en: 'Michael is a contributor to Chrome Developers'
+mikewest:
+  title:
+    en: 'Mike West'
+  description:
+    en: 'Mike is a contributor to Chrome Developers'
+johannes:
+  title:
+    en: 'Johannes Henkel'
+  description:
+    en: 'Software Engineer working on the Chrome User Experience Report at Google.'
+maudnalpas:
+  title:
+    en: 'Maud Nalpas'
+  description:
+    en: 'Developer advocate at Google, working on Chrome privacy and security'
+rowanmerewood:
+  title:
+    en: 'Rowan Merewood'
+  description:
+    en: 'Rowan is a Developer Advocate'
+emilaeklund:
+  title:
+    en: 'Emil Eklund'
+  description:
+    en: 'Chrome Rendering tech lead and manager.'
+housseindjirdeh:
+  title:
+    en: 'Houssein Djirdeh'
+  description:
+    en: 'Developer Advocate'
+katiehempenius:
+  title:
+    en: 'Katie Hempenius'
+  description:
+    en: 'Katie is a contributor to Chrome Developers'
+ossu:
+  title:
+    en: 'Oskar Sundbom'
+  description:
+    en: 'Software Engineer working on WebRTC and Audio in Chromium'
+cbrand:
+  title:
+    en: 'Christiaan Brand'
+  description:
+    en: 'Security Product Manager'
+vinamratasingal:
+  title:
+    en: 'Vinamrata Singal'
+  description:
+    en: 'Lighthouse Product Manager'
+paulirish:
+  title:
+    en: 'Paul Irish'
+  description:
+    en: 'Paul is a contributor to Chrome Developers'
+rviscomi:
+  title:
+    en: 'Rick Viscomi'
+  description:
+    en: 'Rick is a contributor to Chrome Developers'
+ilyagrigorik:
+  title:
+    en: 'Ilya Grigorik'
+  description:
+    en: 'Ilya is a Developer Advocate and Web Perf Guru'
+philipwalton:
+  title:
+    en: 'Philip Walton'
+  description:
+    en: 'Engineer at Google working on the Web Platform'
+hongchanchoi:
+  title:
+    en: 'Hongchan Choi'
+  description:
+    en: 'Software Engineer working on Web Audio in Chromium'
+jeffposnick:
+  title:
+    en: 'Jeff Posnick'
+  description:
+    en: 'Web DevRel at Google'
+mattgaunt:
+  title:
+    en: 'Matt Gaunt'
+  description:
+    en: 'Matt is a contributor to Chrome Developers'
+kosamari:
+  title:
+    en: 'Mariko Kosaka'
+  description:
+    en: 'Mariko is a drawsplainer'
+mscales:
+  title:
+    en: 'Mat Scales'
+  description:
+    en: 'Mat is a contributor to Chrome Developers'
+ericbidelman:
+  title:
+    en: 'Eric Bidelman'
+  description:
+    en: 'Engineer at Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
+joemedley:
+  title:
+    en: 'Joe Medley'
+  description:
+    en: 'Technical Writer'
+paulkinlan:
+  title:
+    en: 'Paul Kinlan'
+  description:
+    en: 'Paul is a Developer Advocate'
 jakearchibald:
   title:
     en: 'Jake Archibald'
@@ -82,12 +422,18 @@ agektmr:
   title:
     en: 'Eiji Kitamura'
   description:
-    en: 'Developer Advocate for security, identity and payment on the web.'
+    en: 'Developer Advocate for identity, security, privacy and payment on the web.'
 titouan:
   title:
     en: 'Titouan Rigoudy'
   description:
     en: 'Titouan is a Software Engineer working on the Web Platform.'
+lyf:
+  title:
+    en: 'Yifan Luo'
+    zh: '罗一凡'
+  description:
+    en: 'Yifan is a Software Engineer working on the Web Platform.'
 jecelynyeen:
   title:
     en: 'Jecelyn Yeen'
@@ -95,7 +441,7 @@ jecelynyeen:
     en: 'Developer advocate working on Chrome DevTools at Google.'
     es: 'Developer advocate, trabajando en Chrome DevTools en Google.'
     zh: '现为谷歌 Chrome DevTools 的开发技术推广工程师。'
-    ru: 'Developer advocate, rabotayushchiy nad Chrome DevTools v Google.'
+    ru: 'Developer Advocate, работающая над Chrome DevTools в Google.'
     pt: 'Developer Advocate trabalhando no Chrome DevTools no Google.'
     ko: 'Google 의 Chrome DevTools 팀에서 일하는 Developer Advocate 입니다'
     ja: 'Google で Chrome DevTools に取り組んでいる Developer Advocate です。'
@@ -138,7 +484,7 @@ jobay:
   title:
     en: 'Johan Bay'
   description:
-    en: 'Software Development Intern working on Puppeteer'
+    en: 'Googler working on Chrome DevTools.'
 mathiasbynens:
   title:
     en: 'Mathias Bynens'
@@ -209,6 +555,16 @@ beaufortfrancois:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+cwallez:
+  title:
+    en: Corentin Wallez
+  description:
+    en: Graphics plumber at Google
+eladalon:
+  title:
+    en: 'Elad Alon'
+  description:
+    en: 'Rushes in where angels fear to tread'
 atotic:
   title:
     en: 'Aleks Totic'
@@ -253,7 +609,7 @@ joycetoh:
   title:
     en: 'Joyce Toh'
   description:
-    en: 'Joyce is a Developer Relations Engineer for Chrome OS.'
+    en: 'Joyce is a Developer Relations Engineer for ChromeOS.'
 yigu:
   title:
     en: 'Yi Gu'
@@ -344,3 +700,191 @@ alexandrawhite:
     en: 'Alexandra White'
   description:
     en: 'Technical Writer, Google Chrome'
+drott:
+  title:
+    en: 'Dominik Röttsches'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rsheeter:
+  title:
+    en: 'Rod Sheeter'
+  description:
+    en: 'Tech Lead, Google Fonts'
+aaronhk:
+  title:
+    en: 'Aaron Krajeski'
+  description:
+    en: 'Software Engineer at Google.'
+victortan:
+  title:
+    en: 'Victor Tan'
+  description:
+    en: 'Software Engineer, Google Chrome'
+umarhansa:
+  title:
+    en: 'Umar Hansa'
+  description:
+    en: 'Umar is a front-end web developer'
+pbakaus:
+  title:
+    en: 'Paul Bakaus'
+  description:
+    en: 'Open Web Developer Advocate at Google • Tools, Performance, Animation, UX'
+jackjey:
+  title:
+    en: 'Jack J'
+  description:
+    en: 'Developer Advocate for Web'
+sofiayem:
+  title:
+    en: 'Sofia Emelianova'
+  description:
+    en: "Technical Writer, Google Chrome"
+kevinkiklee:
+  title:
+    en: 'Kevin K. Lee'
+    ko: '이경인'
+  description:
+    en: 'Developer Relations Engineer, Google Chrome'
+    ko: 'Google Chrome의 개발자 관계 엔지니어'
+stefanzager:
+  title:
+    en: 'Stefan Zager'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rachelandrew:
+  title:
+    en: 'Rachel Andrew'
+  description:
+    en: 'Technical writer at Google, content lead for the Chrome Developers site.'
+bgalbs:
+  title:
+    en: 'Ben Galbraith'
+  description:
+    en: "Ben is the Senior Director of Product Management for Chrome's Web Platform team."
+twifkak:
+  title:
+    en: 'Devin Mullins'
+  description:
+    en: 'Software engineer at Google, signed exchanges integration lead in Search'
+jhey:
+  title:
+    en: 'Jhey Tompkins'
+    es: 'Jhey Tompkins'
+    it: 'Jhey Tompkins'
+    ja: 'Jhey Tompkins'
+    ko: 'Jhey Tompkins'
+    pt: 'Jhey Tompkins'
+    ru: 'Jhey Tompkins'
+    zh: 'Jhey Tompkins'
+  description:
+    en: 'Whimsy Dev Supreme! Developer Relations Engineer @ Google'
+    es: '¡Extravagante Dev Supremo! Ingeniero de Relaciones con los Desarrolladores @ Google'
+    it: 'Stravagante Dev Supremo! Ingegnere relazioni con gli sviluppatori @ Google'
+    ja: '気まぐれな開発最高！開発者関係エンジニア@Google'
+    ko: '변덕스러운 데브 슈프림! 개발자 관계 엔지니어 @ Google'
+    pt: 'Excêntrico Dev Supremo! Engenheiro de relações com desenvolvedores @ Google'
+    ru: 'Причудливый Дев Высший! Инженер по связям с разработчиками @ Google'
+    zh: '奇思妙想的开发者至尊！开发者关系工程师 @ Google'
+mariahhart:
+  title:
+    en: 'Mariah Hart'
+  description:
+    en: 'Technical Program Manager, Google'
+simonhearne:
+  title:
+    en: 'Simon Hearne'
+  description:
+    en: "Simon is an independent web performance consultant"
+jarhar:
+  title:
+    en: 'Joey Arhar'
+  description:
+    en: 'Software engineer, Google'
+emmatwersky:
+  title:
+    en: 'Emma Twersky'
+  description:
+    en: 'Developer Relations Engineer, Google'
+pfaffe:
+  title:
+    en: 'Philip Pfaffe'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+sbc:
+  title:
+    en: 'Sam Clegg'
+  description:
+    en: 'Software engineer, Google'
+ericsl:
+  title:
+    en: 'Eric Leese'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+rkochman:
+  title:
+    en: 'Rob Kochman'
+  description:
+    en: "Rob is a product manager on Chrome's Web Platform team."
+kenjibaheux:
+  title:
+    en: Kenji Baheux
+  description:
+    en: Kenji is a product manager on the Chrome team.
+buettner:
+  title:
+    en: Michael Buettner
+  description:
+    en: Michael is a software engineer on the Chrome team.
+egsweeny:
+  title:
+    en: Elizabeth Sweeny
+  description:
+    en: Elizabeth is a product manager working on developer tooling for Chrome Web Platform.
+samthor:
+  title:
+    en: Sam Thorogood
+  description:
+    en: Sam was a developer relations engineer at Google.
+pauljensen:
+  title:
+    en: 'Paul Jensen'
+  description:
+    en: 'Software Engineer, Google Chrome'
+alinavarkki:
+  title:
+    en: 'Alina Varkki'
+  description:
+    en: 'Software Engineering Intern working on Chrome DevTools.'
+sidlall:
+  title:
+    en: Sid Lall
+  description:
+    en: Product Manager at Google
+argyle:
+  title:
+    en: 'Adam Argyle'
+  description:
+    en: 'Developer Relations Engineer working on Chrome CSS, UI, & DevTools.'
+miriamsuzanne:
+  title:
+    en: 'Miriam Suzanne'
+  description:
+    en: 'Co-Founder of OddBird and CSS Working Group Invited Expert'
+tunetheweb:
+  title:
+    en: Barry Pollard
+    es: Barry Pollard
+    ja: Barry Pollard
+    ko: Barry Pollard
+    pt: Barry Pollard
+    ru: Barry Pollard
+    zh: Barry Pollard
+  description:
+    en: Web Performance Developer Advocate for Google
+    es: Rendimiento web aesarrollador partidario para Google
+    ja: Google を対象とした Developer Advocate
+    ko: Google의 개발자 애드버킷
+    pt: Developer Advocate para o Google
+    ru: Developer Advocate по вопросам Google
+    zh: 负责 Google 的开发技术推广工程师

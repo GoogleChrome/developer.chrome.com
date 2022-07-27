@@ -2,11 +2,109 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+
+### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/blog/new-in-devtools-104/#misc)
+
+
+### Chrome 103 {: #chrome103 }
+
+* [Capture double-click and right-click events in the Recorder panel](/blog/new-in-devtools-103/#recorder)
+* [New timespan and snapshot mode in the Lighthouse panel](/blog/new-in-devtools-103/#lighthouse)
+* [Improved zoom control in the Performance Insights panel](/blog/new-in-devtools-103/#zoom)
+* [Confirm to delete a performance recording](/blog/new-in-devtools-103/#delete)
+* [Reorder panes in the Elements panel](/blog/new-in-devtools-103/#reorder-pane)
+* [Picking a color outside of the browser](/blog/new-in-devtools-103/#color)
+* [Improved inline value preview during debugging](/blog/new-in-devtools-103/#inline-preview)
+* [Support large blobs for virtual authenticators](/blog/new-in-devtools-103/#webauthn)
+* [New keyboard shortcuts in the Sources panel](/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps improvements](/blog/new-in-devtools-103/#sourcemaps)
+
+### Chrome 102 {: #chrome102 }
+
+* [Preview feature: New Performance insights panel](/blog/new-in-devtools-102/#perf)
+* [New shortcuts to emulate light and dark themes](/blog/new-in-devtools-102/#emulation)
+* [Improved security on the Network Preview tab](/blog/new-in-devtools-102/#network-preview)
+* [Improved reloading at breakpoint](/blog/new-in-devtools-102/#debugger)
+* [Console updates](/blog/new-in-devtools-102/#console)
+* [Cancel user flow recording at the start](/blog/new-in-devtools-102/#recorder)
+* [Display inherited highlight pseudo-elements in the Styles pane](/blog/new-in-devtools-102/#pseudo)
+* [Miscellaneous highlights](/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copy CSS changes](/blog/new-in-devtools-102/#copy)
+* [[Experimental] Picking color outside of browser](/blog/new-in-devtools-102/#color-picker)
+
+
+### Chrome 101 {: #chrome101 }
+
+* [Import and export recorded user flows as a JSON file](/blog/new-in-devtools-101/#recorder)
+* [View cascade layers in the Styles pane](/blog/new-in-devtools-101/#layer)
+* [Support for the hwb() color function](/blog/new-in-devtools-101/#hwb)
+* [Improved the display of private properties](/blog/new-in-devtools-101/#private-props)
+* [Miscellaneous highlights](/blog/new-in-devtools-101/#misc)
+* [[Experimental] New timespan and snapshot mode in the Lighthouse panel](/blog/new-in-devtools-101/#lighthouse)
+
+
+### Chrome 100 {: #chrome100 }
+
+* [View and edit @supports at rules in the Styles pane](/blog/new-in-devtools-100/#supports)
+* [Support common selectors by default](/blog/new-in-devtools-100/#selector)
+* [Customize the recording’s selector](/blog/new-in-devtools-100/#customize-selector)
+* [Rename a recording](/blog/new-in-devtools-100/#recorder-rename)
+* [Preview class/function properties on hover](/blog/new-in-devtools-100/#properties)
+* [Partially presented frames in the Performance panel](/blog/new-in-devtools-100/#perf)
+* [Miscellaneous highlights](/blog/new-in-devtools-100/#misc)
+
+
+### Chrome 99 {: #chrome99 }
+
+* [Throttling WebSocket requests](/blog/new-in-devtools-99/#websocket)
+* [New Reporting API pane in the Application panel](/blog/new-in-devtools-99/#reporting-api)
+* [Support wait until element is visible/clickable in the Recorder panel](/blog/new-in-devtools-99/#recorder)
+* [Better console styling, formatting and filtering](/blog/new-in-devtools-99/#console)
+* [Debug Chrome extension with sourcemap files](/blog/new-in-devtools-99/#extension)
+* [Improved source folder tree in the Sources panel](/blog/new-in-devtools-99/#source-tree)
+* [Display worker source files in the Sources panel](/blog/new-in-devtools-99/#worker-sourcemap)
+* [Chrome’s Auto Dark Theme updates](/blog/new-in-devtools-99/#auto-dark-mode)
+* [Touch-friendly color-picker and split pane](/blog/new-in-devtools-99/#touch-friendly)
+* [Miscellaneous highlights](/blog/new-in-devtools-99/#misc)
+
+
+### Chrome 98 {: #chrome98 }
+
+* [Preview feature: Full-page accessibility tree](/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/blog/new-in-devtools-98/#reporting-api)
+
+
 ### Chrome 97 {: #chrome97 }
+
 * [Preview feature: New Recorder panel](/blog/new-in-devtools-97/#recorder)
 * [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/blog/new-in-devtools-97/#code-completion)
 * [Improved code debugging experience](/blog/new-in-devtools-97/#debugging)
+* [Syncing DevTools settings across devices](/blog/new-in-devtools-97/#sync)
 
 
 ### Chrome 96 {: #chrome96 }

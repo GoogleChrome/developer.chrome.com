@@ -9,6 +9,9 @@ description:
   "Snippets are small scripts that you can author and execute within the Sources panel of Chrome
   DevTools. You can access and run them from any page. When you run a Snippet, it executes from the
   context of the currently open page."
+tags:
+  - javascript
+  - prototype-fixes
 ---
 
 If you find yourself running the same code in the [**Console**][1] repeatedly, consider saving the
@@ -148,9 +151,9 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 2.  Right-click the Snippet name and select **Remove**.
 
 [1]: /docs/devtools/console
-[2]: /docs/devtools/sources
+[2]: /docs/devtools/javascript/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
-[4]: https://developer.mozilla.org/en-US/docs/Tools/Scratchpad
+[4]: https://developer.mozilla.org/docs/Tools/Scratchpad
 [5]: #open
 [6]: #rename
 [7]: #open

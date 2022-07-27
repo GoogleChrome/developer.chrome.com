@@ -93,7 +93,7 @@ change as discussion progresses.
 
 The Federated Credentials Management API overlaps with and builds on some of the
 functionality already present in the [Credential Management
-API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API).
+API](https://developer.mozilla.org/docs/Web/API/Credential_Management_API).
 
 {% endAside %}
 
@@ -217,7 +217,7 @@ conversion on another site&mdash;without enabling cross-site tracking.
 
 We would like to continue testing the Attribution Reporting API and we plan
 on **[extending the origin
-trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)**
+trial](/origintrials/#/view_trial/3411476717733150721)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
 

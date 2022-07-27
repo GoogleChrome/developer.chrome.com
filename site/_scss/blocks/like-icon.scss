@@ -1,0 +1,18 @@
+like-icon {
+  height: 20px;
+
+  svg {
+    color: #000;
+    fill: none;
+    height: 20px;
+    margin-top: -3px;
+    vertical-align: middle;
+    width: 20px;
+  }
+
+  .likes {
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 3em;
+  }
+}

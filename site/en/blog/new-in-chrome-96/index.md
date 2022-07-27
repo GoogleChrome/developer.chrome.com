@@ -213,7 +213,7 @@ tell you what's new in Chrome!
 
 [dcc]: /blog/
 [manifest-id]: /blog/pwa-manifest-id/
-[mdn-regph]: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler
+[mdn-regph]: https://developer.mozilla.org/docs/Web/API/Navigator/registerProtocolHandler
 [wd-phreg]: https://web.dev/url-protocol-handler/
 [wd-phints]: https://web.dev/priority-hints/
 [ph-ot]: /origintrials/#/view_trial/365917469723852801
