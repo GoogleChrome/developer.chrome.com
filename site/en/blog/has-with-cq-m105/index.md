@@ -70,7 +70,7 @@ Now, we can use that container to apply styles to any of its children using `@co
 
 The CSS `:has()` pseudo-class enables developers to check if a parent element contains children with specific parameters. 
 
-For example, `p:has(span)` indicates a paragraph (`p`) selector, which has a `span` inside of it. You can use this to style the parent paragraph itself, *or* style anything within it. One useful example is `figure:has(figcaption)` to style a `figure` element that contains a caption. You can see much more about `:has()` in [this article by Jhey Tompkins](__TODO__).
+For example, `p:has(span)` indicates a paragraph (`p`) selector, which has a `span` inside of it. You can use this to style the parent paragraph itself, *or* style anything within it. One useful example is `figure:has(figcaption)` to style a `figure` element that contains a caption. You can see much more about `:has()` in [this article by Jhey Tompkins](/blog/has-m105/).
 
 {% Aside 'caution' %}
 Current [browser support](https://caniuse.com/css-has) for `:has()` includes Chromium and Safari.
