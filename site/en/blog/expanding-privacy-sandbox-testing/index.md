@@ -80,17 +80,17 @@ August](https://chromiumdash.appspot.com/schedule), we will be **expanding the
 trial to desktop users on Chrome Stable**. We plan to extend the trial to mobile
 users starting from [Chrome 105
 Stable](https://chromiumdash.appspot.com/schedule) on Android. The origin trial
-is scheduled to conclude at the end of the 104 Stable period—**we will be
-requesting an extension through to [Chrome 107 (late
+is scheduled to conclude at the end of the 104 Stable period—**[we are
+requesting an
+extension](https://groups.google.com/a/chromium.org/g/blink-dev/c/SD8Ot2gpz4g/m/Cc0TGPhoAAAJ)
+through to [Chrome 107 (late
 October)](https://chromiumdash.appspot.com/schedule) to enable further
 testing.** This follows the standard practice of requesting origin trial
 extensions in three-milestone increments.  We're committed to supporting testing
 through to launching the APIs for general availability.
 
-You can follow the [blink-dev mailing
-list](https://groups.google.com/a/chromium.org/g/blink-dev/) where **we will
-post the official request to extend the [Intent to Experiment
-(I2E)](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ)**.
+You can follow **the official [request to extend the Intent to Experiment
+(I2E)](https://groups.google.com/a/chromium.org/g/blink-dev/c/SD8Ot2gpz4g/m/Cc0TGPhoAAAJ)**.
 We will also update the [Privacy Sandbox documentation](/docs/privacy-sandbox/)
 with implementation and testing guides.
 
