@@ -3,7 +3,7 @@ layout: layouts/doc-post.njk
 title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
-date: 2021-09-21
+date: 2021-04-12
 updated: 2022-07-27
 authors:
   - samdutton
