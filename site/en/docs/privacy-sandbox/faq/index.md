@@ -153,7 +153,11 @@ Chrome on iOS and iPadOS does not support Chrome origin trials.
    Chrome's proposed change to phase out third-party cookies would result in those
    cookies no longer being sent as is in cross-site contexts.
 
-The exception is cookies that are modified by either the [CHIPS](https://developer.chrome.com/docs/privacy-sandbox/chips/) or [First-Party Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) proposal. These allow for a subset of cross-site use cases. As these proposals are under active discussion, the final formats and functionality may change.
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
 
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
