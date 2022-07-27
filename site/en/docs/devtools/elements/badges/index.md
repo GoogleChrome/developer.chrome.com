@@ -115,7 +115,7 @@ Toggle the container overlay with the `container` badge on the following preview
 
 1. [Inspect the element in the preview][1].
 1. In the DOM tree, click the `container` badge next to the element.
-1. Try resizing the element by dragging its bottom-left corner and observe the layout change and overlay.
+1. Try resizing the element by dragging its bottom-right corner and observe the layout change and overlay.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/D1fMidi9ihzOANGjP51J.png", alt="Container overlay.", width="800", height="583" %}
 
