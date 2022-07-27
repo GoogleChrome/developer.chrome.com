@@ -18,8 +18,6 @@ tags:
 
 **Update, July 2022**
 
-Shipping FedCM is postponed to Chrome 106.
-
 Starting Chrome 105:
 * The top-level manifest is renamed from `/.well-known/fedcm.json` to
   `/.well-known/web-identity`.
@@ -30,22 +28,23 @@ Starting Chrome 105:
 * Revocation endpoint in the manifest is no longer in effect.
 * Use `identity` type instead of `federated` type for
   `navigator.credentials.get()` call.
-* `url` now must be a full URL of the manifest json file instead of a path for
-  `navigator.credentials.get()` call.
+* `url` is now `configUrl` and must be a full URL of the manifest json file
+  instead of a path for `navigator.credentials.get()` call.
 * `nonce` is now an optional parameter for `navigator.credentials.get()` call.
 * `hint` is no longer available as an option for `navigator.credentials.get()`
   call.
 
 ```js
-await navigator.credentials.get({
+const credential = await navigator.credentials.get({
   identity: {
     providers: [{
-      url: 'https://idp.example/fedcm.json',
+      configUrl: 'https://idp.example/anything.json',
       clientId: '********',
       nonce: '******'
     }]
   }
 });
+const { token } = credential;
 ```
 
 **Update, June 2022**
@@ -222,7 +221,7 @@ devices](/docs/devtools/remote-debugging/).
 You integrate with FedCM by creating a [manifest and
 endpoints](#manifest-endpoints) for [client
 metadata](#client-metadata-endpoint), [accounts list](#accounts-list-endpoint),
-and [ID token issuance](#id-token-endpoint).
+and [token issuance](#id-token-endpoint).
 
 From there, FedCM exposes JavaScript APIs that RPs can use to [sign
 in](#sign-into-rp) from the IdP.
@@ -239,17 +238,18 @@ The manifest file's URL is determined by the values provided to the
 const credential = await navigator.credentials.get({
   identity: {
     providers: [{
-      url: 'https://idp.example/fedcm.json',
+      url: 'https://idp.example/anything.json',
       clientId: '********',
       nonce: '******'
     }]
   }
-})
+});
+const { token } = credential;
 ```
 
-Specify a full URL of the IdP manifest file location as a `url`. When
+Specify a full URL of the IdP manifest file location as a `configUrl`. When
 [`navigator.credentials.get()` is called](#sign-into-rp) on the RP, the browser
-fetches the manifest file with a `GET` request with the `Referer` header. The
+fetches the manifest file with a `GET` request without the `Referer` header. The
 request doesn’t have cookies and doesn’t follow redirects. This effectively
 prevents the IdP from learning who made the request and which RP is attempting
 to connect. For example:
@@ -315,7 +315,7 @@ following properties:
      <td>Branding option which sets the icon object, displayed in the sign-in dialog. The icon object is an array with two parameters:
         <ul>
            <li><code>url</code> (required): URL of the icon image. This does not support SVG images.<li>
-           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution. This number must be greater than 25.</li>
+           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution. This number must be greater or equal to 25.</li>
          </ul>
       </td>
   </tr>
@@ -378,8 +378,8 @@ with the following content:
 ```
 
 The JSON file must contain the `provider_urls` property with an array of URL
-strings that can be [specified as a path part of `url` in
-`navigator.credentials.get` by RPs](#sign-into-rp). he number of URL strings
+strings that can be [specified as a path part of `configUrl` in
+`navigator.credentials.get` by RPs](#sign-into-rp). The number of URL strings
 in the array is limited to one, but this may change with [your
 feedback](#next-steps) in the future.
 
@@ -597,12 +597,13 @@ For example:
 const credential = await navigator.credentials.get({
   identity: {
     providers: [{
-      url: 'https://idp.example/fedcm.json',
+      configUrl: 'https://idp.example/anything.json',
       clientId: '********',
       nonce: '******'
     }]
   }
-})
+});
+const { token } = credential;
 ```
 
 The `providers` property takes an array of [`IdentityProvider`
@@ -638,8 +639,8 @@ The browser handles sign-up and sign-in use cases differently depending on the
 existence of `approved_clients` in the response from [the accounts list
 endpoint](#accounts-list-endpoint). The browser will only display [the RP's
 privacy policy and terms of service](#client-metadata-endpoint) in the dialog if
-`approved_clients` isn't provided and the user hasn't previously signed up for
-the RP in this browser.
+`approved_clients` isn't provided or does not include the RP's `clientId` and
+the user hasn't previously signed up for the RP in this browser.
 
 <figure class="float-right screenshot" style="max-width:300px">
 {% Video
