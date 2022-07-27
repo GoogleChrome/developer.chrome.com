@@ -161,6 +161,7 @@ Application panel. You may need to reload Chrome DevTools (not the page).
 For examples of pages that _do_ include an origin trial token, see the [demos](#demos) listed above.
 {% endAside %}
 
+
 ## Chrome DevTools status codes {: #devtools-status}
 
 * **Success**: The token is well-formed, has not expired, matches an origin trial feature, and is
@@ -171,18 +172,15 @@ requested from an expected origin.<br>
 'embedder': a browser such as Chrome or Edge, a WebView, or some other user agent.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=258)
 
-* **Insecure**: The request origin is insecure, and the trial is not enabled for insecure origins.<br>
+* **Insecure**: The request origin is insecure, and the trial is not enabled for insecure origins.
+As explained in the [origin trial token validator code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200):
+'For third-party tokens, both the current origin and the script origin must be secure. Due to
+subdomain matching, the token origin might not be an exact match for one of the provided script
+origins, and the result doesn't indicate which specific origin was matched. This means it's not a
+direct lookup to find the appropriate script origin. To avoid re-doing all the origin comparisons,
+there are shortcuts that depend on how many script origins were provided. There must be at least
+one, or the third party token would not be validated successfully.'<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200)
-
-{% Aside %}
-The following comment is taken from the [origin trial token validator code]
-(https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200): 'For third-party tokens, both the current origin and the script
-origin must be secure. Due to subdomain matching, the token origin might not be an exact match for
-one of the provided script origins, and the result doesn't indicate which specific origin was
-matched. This means it's not a direct lookup to find the appropriate script origin. To avoid
-re-doing all the origin comparisons, there are shortcuts that depend on how many script origins were
-provided. There must be at least one, or the third party token would not be validated successfully.'
-{% endAside %}
 
 * **Expired**: Token has passed its expiration date. The token will need to be renewed, to
 generate a new token with a new expiration date.<br>
