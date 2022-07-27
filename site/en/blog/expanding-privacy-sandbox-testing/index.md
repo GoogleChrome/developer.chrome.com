@@ -5,7 +5,7 @@ description: >
   extending the Privacy Sandbox Relevance and Measurement origin trial and how
   you can test and give feedback to shape the future of the APIs.
 layout: 'layouts/blog-post.njk'
-date: 2022-07-28
+date: 2022-07-27
 authors:
   - rowan_m
   - barbsmith
@@ -20,11 +20,11 @@ Today we shared an [updated plan and timeline for Privacy Sandbox for the
 web](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/)
 and the path towards phasing out third-party cookies. **Your feedback as web
 developers and site owners** has been instrumental in demonstrating the
-importance of spending more time to get the proposals right and ensure there's
-sufficient opportunity to test, integrate, and optimize the new solutions. In
-this post, we have more detail on testing plans, including our intent to
-increase the traffic volume in the unified Privacy Sandbox Relevance and
-Measurement origin trial in August, and extend the duration of the trial.
+importance of spending more time to get the proposals right and ensuring there's
+enough opportunity to test, integrate, and optimize the new solutions. This post
+includes more detail on testing plans, including our intent to increase the
+traffic volume in the unified Privacy Sandbox Relevance and Measurement origin
+trial in August, and extend the duration of the trial.
 
 {% Aside %}
 
@@ -42,17 +42,17 @@ Keep it coming!
 
 {% endAside %}
 
-As a project, the Privacy Sandbox represents a broad and ambitious set of
-changes that propose to **tackle cross-site tracking for the web as a
-whole**—open standards everyone can implement rather than browser-specific
-features while ensuring that sites can use third-party services in a safe and
-private way. While **phasing out third-party cookies represents a major
-milestone** in overall project progress, that goal of addressing all forms of
-cross-site tracking is much wider! You should still expect the individual
-proposals and features to launch throughout that journey. It is likely that your
-site will be impacted in some way; you will want to ensure you understand how
-your sites and services are affected, and know which proposals and features you
-should be following.
+The Privacy Sandbox project represents a broad and ambitious set of changes that
+aim to **tackle cross-site tracking for the web as a whole.** It proposes open
+standards everyone can implement rather than browser-specific features while
+ensuring that sites can use third-party services in a safe and private way.
+While **phasing out third-party cookies represents a major milestone** in
+overall project progress, that goal of addressing all forms of cross-site
+tracking is much wider! You should still expect the individual proposals and
+features to launch throughout that journey. It is likely that your site will be
+impacted in some way; you will want to ensure you understand how your sites and
+services are affected, and know which proposals and features you should be
+following.
 
 Let's break down the current status and look at what you need to know to
 continue providing feedback, testing, and preparing for features on the path to
@@ -66,28 +66,31 @@ unified tests for technical stability and developer experience across
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/),
 [FLEDGE](/docs/privacy-sandbox/fledge/),
 [Topics](/docs/privacy-sandbox/topics/), [fenced
-frames](/docs/privacy-sandbox/fenced-frame/), and [Shared
-Storage](/docs/privacy-sandbox/shared-storage/). The trial is currently [enabled
-for 50% of Chrome Beta
+frames](/docs/privacy-sandbox/fenced-frame/), and we will be adding [Shared
+Storage](/docs/privacy-sandbox/shared-storage/) soon. The trial is currently
+[enabled for 50% of Chrome Beta
 users](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/NTItmgLMAQAJ)
 which has enabled us to actively address early developer feedback and issues
-without overly affecting users.
+without disrupting users too much.
 
 As the origin trial progresses, we want to give developers the opportunity to
 test the utility and effectiveness of the APIs with a meaningful proportion of
 real-world traffic. With the [Chrome 104 Stable launch at the start of
 August](https://chromiumdash.appspot.com/schedule), we will be **expanding the
-trial to desktop users on Chrome Stable**. The origin trial is scheduled to
-conclude at the end of the 104 Stable period—**we will be requesting an
-extension through to the end of [Chrome 114 or around June,
-2023](https://chromiumdash.appspot.com/schedule)**. This will also allow us to
-bring the trial to mobile users starting from [Chrome 105
-Stable](https://chromiumdash.appspot.com/schedule).
+trial to desktop users on Chrome Stable**. We plan to extend the trial to mobile
+users starting from [Chrome 105
+Stable](https://chromiumdash.appspot.com/schedule) on Android. The origin trial
+is scheduled to conclude at the end of the 104 Stable period—**we will be
+requesting an extension through to [Chrome 107 (late
+October)](https://chromiumdash.appspot.com/schedule) to enable further
+testing.** This follows the standard practice of requesting origin trial
+extensions in three-milestone increments.  We're committed to supporting testing
+through to launching the APIs for general availability.
 
 You can follow the [blink-dev mailing
-list](https://groups.google.com/a/chromium.org/g/blink-dev/) where we will post
-the official request to the [Intent to Experiment
-(I2E)](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ).
+list](https://groups.google.com/a/chromium.org/g/blink-dev/) where **we will
+post the official request to extend the [Intent to Experiment
+(I2E)](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ)**.
 We will also update the [Privacy Sandbox documentation](/docs/privacy-sandbox/)
 with implementation and testing guides.
 
@@ -109,10 +112,10 @@ needs. There is no need for expertise in web standards or browser
 development—just your existing experience in your own field.
 
 Once we reach a point where core functionality is sound and complete **we plan
-to start shipping the APIs for general availability, likely at some point from
-April, 2023**. Over the course of the origin trial there is, by design, scope
-for the APIs to evolve based on testing and feedback. Individual features may
-launch while the overall origin trial is still ongoing. After launching we will
+to start shipping the APIs for general availability, likely in early to mid
+2023**. Over the course of the origin trial there is, by design, scope for the
+APIs to evolve based on testing and feedback. Individual features may launch
+while the overall origin trial is still ongoing. After launching we will
 continue to refine the APIs as we proceed through initial adoption and long-term
 testing.
 
@@ -135,10 +138,10 @@ attribute to enable easier migration for sites using cookies across subdomains,
 such as `shop.example.com` and `blog.example.com`.
 
 With this positive feedback on both the proposal and the trial, we are **hoping
-to ship CHIPS shortly after the conclusion of the trial**. As per the usual
-process, you can follow the [blink-dev mailing
-list](https://groups.google.com/a/chromium.org/g/blink-dev/) where we will post
-the official [Intent to Ship
+to ship CHIPS after the conclusion of the trial**. As per the official process,
+you can follow the [blink-dev mailing
+list](https://groups.google.com/a/chromium.org/g/blink-dev/) for when we post
+the [Intent to Ship
 (I2S)](https://www.chromium.org/blink/launching-features/#step-6-prepare-to-ship)
 message.
 
@@ -164,9 +167,11 @@ contexts.
 
 Based on the feedback we received during discussion and testing of the feature,
 we're proposing a number of changes that aim to both address those issues and
-still satisfy the needs of the ecosystem. Specifically, we are **looking to
-extend the existing Storage Access API** to enable sites to request cross-site
-cookie access. This supersedes the proposal for the `SameParty` attribute.
+still satisfy the needs of the ecosystem. Specifically, we are proposing that
+sets be defined in terms of use-case-specific "subsets". We also propose that
+sites use the Storage Access API along with a potential extension to request
+cross-site cookie access. This replaces the proposal for the `SameParty`
+attribute.
 
 {% Aside %}
 
@@ -289,9 +294,8 @@ There are a number of public forums across the W3C, GitHub, mailing lists where
 you can share directly with other stakeholders. This might be as simple as
 stating that you're actively participating in an origin trial, whether or not
 you had all the material you needed to implement, or detailed analysis of the
-results of your tests. You can also, of course, publish to your own sites,
-blogs, or social accounts—especially where you have a specific audience you want
-to talk to.
+results of your tests. You can also publish to your own sites, blogs, or social
+accounts—especially where you have a specific audience you want to talk to.
 
 {% Aside %}
 
@@ -299,7 +303,7 @@ Feedback highlights:
 
 *   **Yahoo! Japan**
     [whitepaper](https://github.com/WICG/attribution-reporting-api/issues/201)
-    on results from early Attribution Reporting testing
+    on results from early Attribution Reporting testing.
 *   **Google Ad Manager** initial plans for [Topics
     ](https://support.google.com/admanager/answer/12270543)origin trial.
 
