@@ -687,100 +687,125 @@ Ordered lists require a four-space indentation.
 
 ```md
 <ol type="I">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 ```
 
 <ol type="I">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 
 #### Lowercase Roman numerals (type)
 
+{% Aside 'warning' %}
+This only works in browsers that support case sensitive selectors (`[type='a'
+s]`), which were introduced in [Selectors Level
+4](https://www.w3.org/TR/selectors-3/#attribute-case). See
+[caniuse.com](https://caniuse.com/mdn-css_selectors_attribute_case_sensitive_modifier)
+for compatibility information.
+{% endAside %}
+
 ```md
 <ol type="i">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 ```
 
 <ol type="i">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 
-#### Lowercase Roman numerals (classes)
+#### Lowercase Roman numerals (class)
+
+This approach works in all browsers because it does not rely on the document's
+handling of case sensitivity.
 
 ```md
 <ol class="type--ordered-list roman-lower">
-<li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
 </ol>
 ```
 
 <ol class="type--ordered-list roman-lower">
-<li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
 </ol>
 
 #### Uppercase ASCII letters (type)
 
 ```md
 <ol type="A">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 ```
 
 <ol type="A">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 
 
 #### Lowercase ASCII letters (type)
 
+{% Aside 'warning' %}
+This only works in browsers that support case sensitive selectors (`[type='a'
+s]`), which were introduced in [Selectors Level
+4](https://www.w3.org/TR/selectors-3/#attribute-case). See
+[caniuse.com](https://caniuse.com/mdn-css_selectors_attribute_case_sensitive_modifier)
+for compatibility information.
+{% endAside %}
+
 ```md
 <ol type="a">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 ```
 
 <ol type="a">
-<li>Lorem ipsum dolor sit amet…</li>
-<li>Lorem ipsum dolor sit amet…</li>
+  <li>Lorem ipsum dolor sit amet…</li>
 </ol>
 
+#### Lowercase ASCII letters (class)
+
+This approach works in all browsers because it does not rely on the document's
+handling of case sensitivity.
+
+```md
+<ol class="type--ordered-list alpha-lower">
+  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+</ol>
+```
+
+<ol class="type--ordered-list alpha-lower">
+  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
+</ol>
 
 #### Additional notes
 
 ```md
 <ul>
-<li>
+  <li>
 
-A line break before and after the `<li>`
-content will render the content as Markdown.
+    A line break before and after the `<li>`
+    content will render the content as Markdown.
 
-</li>
-<li>
-Content written inline or with a single
-line break **will not** be rendered as HTML.
-</li>
+  </li>
+  <li>
+    Content written inline or with a single
+    line break **will not** be rendered as HTML.
+  </li>
 </ul>
 ```
 
 <ul>
-<li>
+  <li>
 
-A line break before and after the `<li>`
-content will render the content as Markdown.
+    A line break before and after the `<li>`
+    content will render the content as Markdown.
 
-</li>
-<li>
-Content written inline or with a single
-line break **will not** be rendered as HTML.
-</li>
+  </li>
+  <li>
+    Content written inline or with a single
+    line break **will not** be rendered as HTML.
+  </li>
 </ul>
 
 ### Unordered list
@@ -832,23 +857,23 @@ Attribute `title` becomes the title of the corresponding tab panel.
 
 ````html
 <web-tabs>
-  <web-tab title="Tab 1 (html)">
+  <web-tab title="Tab 1 (HTML)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markdown)">
+  <web-tab title="Tab 2 (Markdown)">
 
-    Here goes content of Tab 2. Now **with** some _markdown_.
+    Here goes content of Tab 2. Now **with** some _Markdown_.
 
-    You must include a line break between the html and markdown to get the
-    markdown to work (this is a limiation of markdown parsers).
+    You must include a line break between the html and Markdown to get the
+    Markdown to work (this is a limiation of Markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    You must include a line break between the html and teh markdown to get the
-    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    You must include a line break between the html and teh Markdown to get the
+    Markdown to work. Also, be sure to unindent the Markdown otherwise syntax
     highlighting will not work.
 
 ```js
@@ -860,23 +885,23 @@ const hello = 'world';
 ````
 
 <web-tabs>
-  <web-tab title="Tab 1 (html)">
+  <web-tab title="Tab 1 (HTML)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markdown)">
+  <web-tab title="Tab 2 (Markdown)">
 
-    Here goes content of Tab 2. Now **with** some _markdown_.
+    Here goes content of Tab 2. Now **with** some _Markdown_.
 
-    You must include a line break between the html and markdown to get the
-    markdown to work (this is a limiation of markdown parsers).
+    You must include a line break between the html and Markdown to get the
+    Markdown to work (this is a limiation of Markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    You must include a line break between the html and teh markdown to get the
-    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    You must include a line break between the html and teh Markdown to get the
+    Markdown to work. Also, be sure to unindent the Markdown otherwise syntax
     highlighting will not work.
 
 ```js
