@@ -7,7 +7,7 @@ subhead: >
 description: >
   Quarterly report for 2022 Q2 summarising the ecosystem feedback received on
   Privacy Sandbox proposals and Chrome's response.
-date: 2022-07-28
+date: 2022-07-27
 authors:
   - rowan_m
 ---
