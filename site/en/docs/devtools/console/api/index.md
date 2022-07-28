@@ -3,14 +3,22 @@ layout: "layouts/doc-post.njk"
 title: "Console API reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2016-03-21
-#updated: YYYY-MM-DD
+updated: 2022-07-22
 description: "Use the Console API to write messages to the Console."
 ---
 
-Use the Console API to write messages to the Console from your JavaScript. See [Get Started With
-Logging Messages To The Console][1] for an interactive introduction to the topic. See [Console
-Utilities API Reference][2] if you're looking for the convenience methods like `debug(function)` or
+Use the Console API to write messages to the Console from your JavaScript. See [Get started with
+logging messages to the Console][1] for an interactive introduction to the topic.
+
+{% YouTube id='76U0gtuV9AY' %}
+
+{% Aside 'gotchas' %}
+DevTools assigns a severity level to most of the `console.*` methods. These levels allow you to filter logged messages. For more information, see [Filter by log level](/docs/devtools/console/reference/#level).
+{% endAside %}
+
+See [Console utilities API reference][2] if you're looking for the convenience methods like `debug(function)` or
 `monitorEvents(node)` which are only available from the Console.
 
 ## console.assert(expression, object) {: #assert }
@@ -28,8 +36,6 @@ console.assert(x < y, {x, y, reason});
 
 {% Img src="image/admin/cS62AuHJfLVVaDYf3OEL.png", alt="The result of the console.assert() example above.", width="800", height="447" %}
 
-**Figure 1**. The result of the `console.assert()` example above.
-
 ## console.clear() {: #clear }
 
 Clears the console.
@@ -40,7 +46,7 @@ console.clear();
 
 If [**Preserve Log**][5] is enabled, `console.clear()` is disabled.
 
-See also: [Clear the Console][6]
+Alternatively, you can [Clear the Console][6] by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Nh5W7S7oEdlTcjarzxKC.svg", alt="ALT_TEXT_HERE", width="20", height="20" %} icon.
 
 ## console.count(\[label\]) {: #count }
 
@@ -57,8 +63,6 @@ console.count();
 ```
 
 {% Img src="image/admin/XNCvcoyyu8TabN0K1pjL.png", alt="The result of the console.count() example above.", width="800", height="507" %}
-
-**Figure 2**. The result of the `console.count()` example above.
 
 ## console.countReset(\[label\]) {: #countreset }
 
@@ -81,8 +85,6 @@ console.debug('debug');
 
 {% Img src="image/admin/GuN0auKEMAdVW9j8wW7J.png", alt="The result of the console.debug() example above.", width="800", height="526" %}
 
-**Figure 3**. The result of the `console.debug()` example above.
-
 ## console.dir(object) {: #dir }
 
 [Log level][11]: `Info`
@@ -94,8 +96,6 @@ console.dir(document.head);
 ```
 
 {% Img src="image/admin/2aLQxuFHsyzYIuBzz5Mp.png", alt="The result of the console.dir() example above.", width="800", height="590" %}
-
-**Figure 4**. The result of the `console.dir()` example above.
 
 ## console.dirxml(node) {: #dirxml }
 
@@ -109,8 +109,6 @@ console.dirxml(document);
 
 {% Img src="image/admin/JIDSgSq8UQf7YIt6w1vw.png", alt="The result of the console.dirxml() example above.", width="800", height="561" %}
 
-**Figure 5**. The result of the `console.dirxml()` example above.
-
 ## console.error(object \[, object, ...\]) {: #error }
 
 [Log level][13]: `Error`
@@ -122,8 +120,6 @@ console.error("I'm sorry, Dave. I'm afraid I can't do that.");
 ```
 
 {% Img src="image/admin/Pfsjy00hVaI53iAhOhNt.png", alt="The result of the console.error() example above.", width="800", height="550" %}
-
-**Figure 6**. The result of the `console.error()` example above.
 
 ## console.group(label) {: #group }
 
@@ -142,12 +138,27 @@ console.groupEnd(label);
 
 {% Img src="image/admin/nXx5Fyu0l3p3jm3ooD77.png", alt="The result of the console.group() example above.", width="800", height="513" %}
 
-**Figure 7**. The result of the `console.group()` example above.
+Additionally, you can nest groups.
+
+```js
+const timeline1 = 'New York 2012';
+const timeline2 = 'Camp Lehigh 1970';
+console.group(timeline1);
+console.info('Mind');
+console.info('Time');
+console.group(timeline2);
+console.info('Space');
+console.info('Extra Pym Particles');
+console.groupEnd(timeline2);
+console.groupEnd(timeline1);
+```
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yxxuBrVHlHj7kIEYLSJB.png", alt="Nested groups.", width="800", height="549" %}
 
 ## console.groupCollapsed(label) {: #groupcollapsed }
 
 Same as [`console.group(label)`][14], except the group is initially collapsed when it's logged to
-the Console.
+the **Console**.
 
 ## console.groupEnd(label) {: #groupend }
 
@@ -165,8 +176,6 @@ console.info('info');
 
 {% Img src="image/admin/tIWshweM0G6hiTKzhfCw.png", alt="The result of the console.info() example above.", width="800", height="477" %}
 
-**Figure 8**. The result of the `console.info()` example above.
-
 ## console.log(object \[, object, ...\]) {: #log }
 
 [Log level][18]: `Info`
@@ -178,8 +187,6 @@ console.log('log');
 ```
 
 {% Img src="image/admin/4NsJDaAjDpipnzkmkfDU.png", alt="The result of the console.log() example above.", width="800", height="477" %}
-
-**Figure 9**. The result of the `console.log()` example above.
 
 ## console.table(array [, columns]) {: #table }
 
@@ -206,11 +213,13 @@ var people = [
 console.table(people);
 ```
 
-The result of the `console.table()` example above:
-
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VWHZBsZYJIhdoSh2efcu.png", alt="The result of the console.table() example above.", width="800", height="455" %}
 
 By default, `table.console()` logs all table data. To display a single column or a subset of columns, you can use the second optional parameter and specify column name or names as a string or an array of strings. For example:
+
+```js
+console.table(people, ['last'], 'birthday');
+```
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S3lXtYbN6K0IqFBvKj19.png", alt="A subset of columns in a table logged with console.table().", width="800", height="455" %}
 
@@ -228,8 +237,6 @@ console.timeEnd();
 ```
 
 {% Img src="image/admin/9yLfjQpQZ9fBNdRCI7U1.png", alt="The result of the console.time() example above.", width="800", height="514" %}
-
-**Figure 11**. The result of the `console.time()` example above.
 
 ## console.timeEnd(\[label\]) {: #timeend }
 
@@ -253,8 +260,6 @@ first();
 
 {% Img src="image/admin/uO2xhv9WrEjpUHpT3lLN.png", alt="The result of the console.trace() example above.", width="800", height="498" %}
 
-**Figure 12**. The result of the `console.trace()` example above.
-
 ## console.warn(object \[, object, ...\]) {: #warn }
 
 [Log level][23]: `Warning`
@@ -266,8 +271,6 @@ console.warn('warn');
 ```
 
 {% Img src="image/admin/CsGNmsnQn4GnJRaR339w.png", alt="The result of the console.warn() example above.", width="800", height="481" %}
-
-**Figure 13**. The result of the `console.warn()` example above.
 
 [1]: /docs/devtools/console/log
 [2]: /docs/devtools/console/utilities
