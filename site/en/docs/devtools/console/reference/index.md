@@ -35,7 +35,7 @@ Console** command that has the **Panel** badge next to it.
 
 {% Img src="image/admin/QXom109Oiui7fgVBj38Y.png", alt="The command for showing the Console panel.", width="800", height="413" %}
 
-### Open the Console tab in the Drawer {: #drawer }
+### Open the Console in the Drawer {: #drawer }
 
 Press <kbd>Escape</kbd> or click **Customize And Control DevTools**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Customize And Controls DevTools.", width="24", height="24" %} and then
