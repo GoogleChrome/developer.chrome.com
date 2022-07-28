@@ -9,8 +9,8 @@ authors:
   - dsli
   - crystalwang
 date: 2022-07-28
-# hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HD1U7BxDVRDcTxNaQJ4C.jpg'
-# alt: ''
+hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/wSy3XR59pIlrti6XMw8J.png'
+alt: ''
 tags:
   - extensions
   - cws
