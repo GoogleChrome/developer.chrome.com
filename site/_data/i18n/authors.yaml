@@ -377,7 +377,7 @@ dotproto:
   title:
     en: 'Simeon Vincent'
   description:
-    en: 'Extensions whisperer'
+    en: 'Developer Advocate for Chrome Extensions'
 marshallvale:
   title:
     en: 'Marshall Vale'
@@ -604,7 +604,7 @@ dsli:
   title:
     en: 'David Li'
   description:
-    en: 'Product Manager, Chrome Extensions & Chrome Web Store'
+    en: 'Product Manager at Google'
 joycetoh:
   title:
     en: 'Joyce Toh'
@@ -893,3 +893,8 @@ barbsmith:
     en: Barb Smith
   description:
     en: Barb leads Chrome's Privacy Sandbox Partnerships team
+crystalwang:
+  title:
+    en: 'Crystal Wang'
+  description:
+    en: 'UX Designer at Google'
