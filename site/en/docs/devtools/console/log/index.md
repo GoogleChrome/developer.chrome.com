@@ -13,6 +13,7 @@ tags:
 This interactive tutorial shows you how to log and filter messages in the [Chrome DevTools][1]
 Console.
 
+{% YouTube id='76U0gtuV9AY' %}
 {% Img src="image/admin/aF8rn6sy0FguTyfh8LXU.png", alt="Messages in the Console.", width="800", height="536" %}
 
 This tutorial is intended to be completed in order. It assumes that you understand the fundamentals
