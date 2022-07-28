@@ -12,6 +12,8 @@ description: "Use the Console API to write messages to the Console."
 Use the Console API to write messages to the Console from your JavaScript. See [Get started with
 logging messages to the Console][1] for an interactive introduction to the topic.
 
+{% YouTube id='76U0gtuV9AY' %}
+
 {% Aside 'gotchas' %}
 DevTools assigns a severity level to most of the `console.*` methods. These levels allow you to filter logged messages. For more information, see [Filter by log level](/docs/devtools/console/reference/#level).
 {% endAside %}
