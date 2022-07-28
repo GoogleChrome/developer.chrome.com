@@ -30,7 +30,7 @@ Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
 
 {% Img src="image/admin/yA07vZPXixZWv2jHdE6W.png", alt="The Console.", width="800", height="493" %}
 
-To open the Console panel from the [Command Menu][6], start typing `Console` and then run the **Show
+To open the Console from the [Command Menu][6], start typing `Console` and then run the **Show
 Console** command that has the **Panel** badge next to it.
 
 {% Img src="image/admin/QXom109Oiui7fgVBj38Y.png", alt="The command for showing the Console panel.", width="800", height="413" %}
