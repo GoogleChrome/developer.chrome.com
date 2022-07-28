@@ -7,9 +7,9 @@ description: "Toggle various overlays and speed up DOM tree navigation with badg
 authors:
   - sofiayem
 tags:
-  - html
   - dom
   - css
+  - html
 ---
 
 Toggle various overlays and speed up DOM tree navigation with this comprehensive reference of badges in the **Elements** panel.
@@ -23,9 +23,7 @@ To show or hide badges:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xpRsrsvl9BxxANM4Xuiy.png", alt="Badge settings.", width="800", height="337" %}
 1. Select or clear checkboxes next to the desired badges.
 
-The **Elements** panel shows the selected badges next to the appropriate elements in the DOM tree.
-
-The next section explain what every badge does.
+The **Elements** panel shows the selected badges next to the appropriate elements in the DOM tree. The next sections explain every badge.
 
 ## Grid
 
@@ -116,6 +114,11 @@ The overlay shows element positions and snap points.
 
 An HTML element is a [container](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries) if it has the `container-type` CSS property. Such elements have `container` badges next to them that toggle the corresponding overlays.
 
+{% Aside %}
+CSS container queries is an experimental feature. To enable its support in DevTools, under [`chrome://flags`](chrome://flags), set the `Enable CSS Container Queries` experiment to `Enabled`.
+Otherwise, the preview below doesn't work.
+{% endAside %}
+
 Toggle the overlay on the following preview:
 
 {% Codepen {
@@ -138,6 +141,10 @@ To learn how to debug container queries, see [Inspect and debug CSS container qu
 ## Slot
 
 The [`<slot>` HTML element](https://developer.mozilla.org/docs/Web/HTML/Element/slot) is a placeholder that you can fill with your own content. Together with the `<template>` element,  `<slot>` lets you create separate DOM trees and present them together. Slot content elements have {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Slot.", width="20", height="20" %}`slot` badges next to them that serve as links to the corresponding slots.
+
+{% Aside %}
+The slot badge is a new DevTools feature available from Chrome version 104. In earlier versions, the preview below doesn't work.
+{% endAside %}
 
 Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Slot.", width="20", height="20" %}`slot` badge in the following preview:
 
