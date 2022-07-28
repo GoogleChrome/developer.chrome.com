@@ -16,6 +16,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='4RXWfw7Xg_Y' %}
 
 ## Restart frame during debugging {: #restart-frame }
 
