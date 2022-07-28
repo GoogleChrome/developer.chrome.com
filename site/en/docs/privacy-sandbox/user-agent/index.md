@@ -6,7 +6,7 @@ subhead: >
 description: >
   Limit browser data shared to remove sensitive information and reduce fingerprinting.
 date: 2021-11-09
-updated: 2022-07-27
+updated: 2022-07-28
 authors:
   - alexandrawhite
 ---
@@ -251,6 +251,9 @@ configuration, and we recommend only using this for truly critical information.
 BoringSSL (a fork of OpenSSL) helps you work with Google’s experimental
 features in Chromium. At this time, ALPS is only
 [implemented in BoringSSL](https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Application-layer-protocol-settings).
+
+If you need to use critical hints, refer to our guide on
+[critical hints reliability and optimization](https://docs.google.com/document/d/1HQd3vosjFls2jp6DwpkNMUN4CBdmmxZJJz0WhhcqOPw/edit?usp=sharing).
 
 ## Engage and share feedback
 
