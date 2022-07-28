@@ -49,7 +49,7 @@ To learn how to debug grid layout, see [Inspect CSS grid](/docs/devtools/css/gri
 
 ## Flex
 
-An HTML element is a [flexbox](https://developer.mozilla.org/docs/Web/CSS/CSS_Flexible_Box_Layout) if its `display` CSS property is set to `flex` or `inline-flex`. Such elements have `flex` badges next to them that toggle the corresponding overlays.
+An HTML element is a [flex container](https://developer.mozilla.org/docs/Web/CSS/CSS_Flexible_Box_Layout) if its `display` CSS property is set to `flex` or `inline-flex`. Such elements have `flex` badges next to them that toggle the corresponding overlays.
 
 Toggle the overlay on the following preview:
 
