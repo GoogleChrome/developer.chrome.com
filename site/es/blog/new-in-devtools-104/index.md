@@ -18,6 +18,7 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y  p
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='4RXWfw7Xg_Y' %}
 <!-- start: translation instructions -->
 <!-- + 1. Remove the "draft: true" tag above when submitting PR -->
 <!-- + 2. Provide translations under each of the English commented original content -->
