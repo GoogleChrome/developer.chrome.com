@@ -197,6 +197,10 @@ And here's the result:
   <figcaption>Shared axis transition. <a href="https://simple-set-demos.glitch.me/3-shared-axis/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=3-shared-axis%2Fstyles.css%3A25%3A1">Source</a>.</figcaption>
 </figure>
 
+{% Aside %}
+In this example, the animation always moves from right to left, which doesn't feel natural when clicking the back button. How to change the animation depending on the direction of navigation is covered [later in the article](#changing-on-navigation-type).
+{% endAside %}
+
 ## Transitioning multiple elements
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
@@ -553,7 +557,7 @@ You could chose to prevent any transitions for these users:
 
 However, a preference for 'reduced motion' doesn't mean the user wants _no motion_. Instead of the above, you could choose a more subtle animation, but one that still expresses the relationship between elements, and the flow of data.
 
-## Changing the transition depending on the type of navigation
+## Changing the transition depending on the type of navigation {:#changing-on-navigation-type}
 
 Sometimes a navigation from one particular type of page to another should have a specifically tailored transition. Or, a 'back' navigation should be different to a 'forward' navigation.
 
