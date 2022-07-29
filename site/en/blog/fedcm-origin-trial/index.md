@@ -18,7 +18,7 @@ tags:
 
 **Update, July 2022**
 
-Starting Chrome 105:
+Starting from Chrome 105:
 * The top-level manifest is renamed from `/.well-known/fedcm.json` to
   `/.well-known/web-identity`.
 * APIs `login()`, `logout()` and `revoke()` on `FederatedCredential` instance
@@ -28,7 +28,7 @@ Starting Chrome 105:
 * Revocation endpoint in the manifest is no longer in effect.
 * Use `identity` type instead of `federated` type for
   `navigator.credentials.get()` call.
-* `url` is now `configURL` and must be a full URL of the manifest json file
+* `url` is now `configURL` and must be a full URL of the manifest JSON file
   instead of a path for `navigator.credentials.get()` call.
 * `nonce` is now an optional parameter for `navigator.credentials.get()` call.
 * `hint` is no longer available as an option for `navigator.credentials.get()`
@@ -572,7 +572,7 @@ The browser expects a JSON response that includes the following property:
   </thead>
   <tr>
     <td><code>token</code> (required)</td>
-    <td>A token is a security token (string) that contains claims about the authentication.</td>
+    <td>A token is a string that contains claims about the authentication.</td>
   </tr>
 </table>
 
