@@ -7,7 +7,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 * [Reiniciar el marco durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
 * [Opciones de reproducción lenta en el panel Grabador](/es/blog/new-in-devtools-104/#recorder)
-* [Cree una extensión para el panel de la grabadora](/es/blog/new-in-devtools-104/#recorder-extension)
+* [Crear una extensión para el panel de la grabadora](/es/blog/new-in-devtools-104/#recorder-extension)
 * [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-104/#authored-deployed)
 * [Nueva pista de tiempos de usuario en el panel de información de rendimiento](/es/blog/new-in-devtools-104/#performance)
 * [Revelar el slot asignado de un elemento](/es/blog/new-in-devtools-104/#slot)
