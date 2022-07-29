@@ -60,7 +60,7 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Enter "coffee checkout" in the **Recording name** textbox.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
    {% Aside %}
-   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](#customize-selector).
+   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](/docs/devtools/recorder/reference/#customize-selector).
 
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
