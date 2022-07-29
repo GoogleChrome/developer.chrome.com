@@ -68,4 +68,4 @@ Chrome.
 
 Congratulations! You've successfully unlocked the power of Chrome DevTools. Next, watch the following video to learn some useful shortcuts and settings for quicker DevTools navigation.
 
-{% YouTube id="H0XScE08hy8" %}
+{% YouTube id="xHusjrb_34A" %}
