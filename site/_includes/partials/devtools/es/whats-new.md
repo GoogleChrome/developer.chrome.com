@@ -11,7 +11,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-104/#authored-deployed)
 * [Nueva pista de tiempos de usuario en el panel de información de rendimiento](/es/blog/new-in-devtools-104/#performance)
 * [Revelar el slot asignado de un elemento](/es/blog/new-in-devtools-104/#slot)
-* [Simule la concurrencia de hardware en las grabaciones de rendimiento](/es/blog/new-in-devtools-104/#simulate)
+* [Simular la concurrencia de hardware en las grabaciones de rendimiento](/es/blog/new-in-devtools-104/#simulate)
 * [Vista previa del valor sin color al autocompletar variables CSS](/es/blog/new-in-devtools-104/#css-var)
 * [Identifique los marcos de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
 * [Sugerencias de autocompletado mejoradas para objetos de JavaScript](/es/blog/new-in-devtools-104/#autocomplete)
