@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Signed Exchanges launched for desktop sites 
 description: >
-  Announcing igned Exchanges support for Chromium browsers on desktop along with other recent feature launches.
+  Announcing Signed Exchanges support for Chromium browsers on desktop along with other recent feature launches.
 date: 2022-07-08
 authors:
   - sidlall
@@ -63,7 +63,7 @@ Cloudflare, a leading Content Distribution Network (CDNs), [ran an experiment](h
 
 - **41% LCP improvement** for Narcity.
 - **27% increase in sessions per user** for Paper Magazine.
-- **21% decrease in loading time** for MLT blog.
+- **21% decrease in loading time** for MTL blog.
 {% endAside %}
 
 ## Google Search support for Top Stories and News
