@@ -73,6 +73,18 @@ You can do the following with each export option:
 - **@puppeteer/replay:** Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a @puppeteer/replay script, the steps remain a JSON object. This option is perfect if you want to integrate with your CI/CD pipeline but still have the flexibility to edit the steps as JSON, later convert and import them back into the **Recorder**.
 - **Puppeteer script:** Replay the script with [Puppeteer](https://pptr.dev/). Since the steps are converted into JavaScript, you can have more fine-grained customization, for example, looping the steps. One caveat, you can't import this script back into the **Recorder**.
 
+#### Export in a custom format by extending the Recorder {: #recorder-extension }
+
+{% Aside %}
+**Note**: This feature is available from Chrome version 104.
+{% endAside %}
+
+You can build or install a Chrome extension to export replay scripts in your favorite format. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
+
+To install a demo extension, follow [the steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
+
 ### Import a user flow {: #import-flows }
 
 To import a user flow:
