@@ -13,7 +13,7 @@ alt: A layout plan for a web page.
 
 The Shared Element Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#document-transition` flag in Chrome 104+. You can also experiment with it in production via the [origin trial](https://developer.chrome.com/origintrials/#/view_trial/1762033354208706561).
+It's currently behind the `chrome://flags/#document-transition` flag in Chrome 104+. You can also experiment with it in production via the [origin trial](/origintrials/#/view_trial/1762033354208706561).
 
 <style>
   .video-full-demo {
@@ -24,8 +24,6 @@ It's currently behind the `chrome://flags/#document-transition` flag in Chrome 1
 <figure>
   {% Video
     src="video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/hgnJfPFUbGlucFegEEtl.mp4",
-    width="1520",
-    height="1054",
     class="video-full-demo",
     loop="true",
     autoplay="true",
@@ -39,7 +37,7 @@ It's currently behind the `chrome://flags/#document-transition` flag in Chrome 1
 
 Page transitions look great, but they also communicate direction of flow, and make it clear which elements are related from page to page. They can even happen during data fetching, leading to a faster perception of performance.
 
-But, we already have animation tools on the web, such as [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions), [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations), and the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API), so why do we need a new thing to move stuff around?
+But, we already have animation tools on the web, such as [CSS transitions](https://developer.mozilla.org/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions), [CSS animations](https://developer.mozilla.org/docs/Web/CSS/CSS_Animations/Using_CSS_animations), and the [Web Animation API](https://developer.mozilla.org/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API), so why do we need a new thing to move stuff around?
 
 The truth is, state transitions are hard, even with the tools we already have.
 
@@ -115,7 +113,7 @@ Once that's complete, the callback passed to `.start()` is called. That's where 
 
 Once the state is captured, the API constructs a pseudo-element tree like this:
 
-```
+```plain
 ::page-transition
 └─ ::page-transition-container(root)
    └─ ::page-transition-image-wrapper(root)
@@ -203,10 +201,10 @@ And here's the result:
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
 
-To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `page-transition-tag` to the element, and giving the element [`paint` containment](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Containment#paint_containment).
+To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `page-transition-tag` to the element, and giving the element [`paint` containment](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment).
 
 {% Aside %}
-The paint containment requirement is being relaxed in future iterations of this API, where only [`layout` containment](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Containment#layout_containment) is required.
+The paint containment requirement is being relaxed in future iterations of this API, where only [`layout` containment](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) is required.
 {% endAside %}
 
 ```css
@@ -235,7 +233,7 @@ Now the header stays in place and cross-fades.
 
 That CSS declaration caused the pseudo-element tree to change:
 
-```
+```plain
 ::page-transition
 ├─ ::page-transition-container(root)
 │  └─ ::page-transition-image-wrapper(root)
@@ -269,7 +267,7 @@ That hasn't mattered until now, as the header is the same size and position both
 
 So now we have three parts to play with:
 
-```
+```plain
 ::page-transition
 ├─ ::page-transition-container(root)
 │  └─ …
@@ -633,7 +631,7 @@ A couple of parts of this transition can't be achieved with CSS alone:
 - The animation starts from the click location.
 - The animation ends with the circle having a radius to the farthest corner. Although, hopefully this will be possible with CSS [in future](https://github.com/w3c/csswg-drafts/issues/824#issuecomment-1157549393).
 
-Thankfully, you can create transitions using the [Web Animation API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)!
+Thankfully, you can create transitions using the [Web Animation API](https://developer.mozilla.org/docs/Web/API/Web_Animations_API)!
 
 ```js
 let lastClick;
