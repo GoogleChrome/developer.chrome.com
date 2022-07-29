@@ -53,8 +53,6 @@ if (!isProduction || isCI) {
   if (process.env.ELEVENTY_IGNORE_BLOG) {
     console.log(warning('Ignoring BLOG.'));
     ignores.push('site/**/blog/**/*');
-  } else {
-    ignores.push('site/**/blog/!(shared-element-transitions-for-spas)/*');
   }
 
   // Ignore /docs/
