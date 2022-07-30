@@ -31,10 +31,10 @@ tags:
 ## Перезапуск фрейма во время отладки {: #restart-frame }
 
 <!-- The **Restart frame** feature is back! You can re-run the preceding code when paused somewhere in a function. Previously, this feature was deprecated and removed in Chrome 92 due to stability issues.  -->
-Фукция **Перезапустить фрейм** (Restart frame) вернулась! Вы можете повторно выполнить предшествующий код до места остановки. Ранее эта функция была удалена в Chrome 92 из-за проблем со стабильностью.
+Фукция **Перезапустить фрейм** (Restart frame) вернулась! Вы можете повторно выполнить предшествующий код до места остановки в функции. Ранее эта функция была удалена в Chrome 92 из-за проблем со стабильностью.
 
 <!-- In this [example](https://jec.fyi/), the debugger initially paused at the breakpoint (line 343) near the end of the `toggleColorScheme` function. To restart the debugging from the beginning of the `toggleColorScheme` function, expand the **Call stack** section in the **Debugger** pane, right click on `toggleColorScheme` and select **Restart frame**.  -->
-В этом [примере](https://jec.fyi) в отладчике установлена точка останова (строка 343) почти в конце функции `toggleColorScheme`. Чтобы запустить в отладчике функцию `toggleColorScheme` с начала разверните раздел **Стэк вызовов** (Call stack) в панели **Отладчик** (Debugger), нажмите правой клавишей мыши на `toggleColorScheme` и выберите **Перезапустить фрейм** (Restart frame).
+В этом [примере](https://jec.fyi) отладчик изначально остановился на точке останова (строка 343) ближе к концу функции `toggleColorScheme`. Чтобы перезапустить отладку с начала функции `toggleColorScheme`, разверните раздел **Стек вызовов** (Call stack) в панели **Отладчик** (Debugger), нажмите правой клавишей мыши на `toggleColorScheme` и выберите **Перезапустить фрейм** (Restart frame).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uBcTkuIaoHHTgJCiGNED.png", alt="Перезапуск фрейма во время отладки", width="800", height="499" %}
 
@@ -47,7 +47,7 @@ tags:
 ## Опции замедленного воспроизведения во вкладке Recorder {: #recorder }
 
 <!-- You can now replay user flows at a slower speed — slow, very slow, and extremely slow. These options let you better observe each step replay on screen. -->
-Теперь вы можете воспроизвести пользовательский сценарий с замедлением — медленно (slow), очень медленно (very slow) и чрезвычайно медленно (extremely slow). Эти опции позволят вам лучше рассмотреть каждый воспроизводимый шаг.
+Теперь вы можете воспроизводить пользовательские сценарии на более низкой скорости — медленно (slow), очень медленно (very slow) и чрезвычайно медленно (extremely slow). Эти опции позволят вам лучше рассмотреть каждый воспроизводимый шаг.
 
 <!-- [Open](/docs/devtools/recorder/#open) the **Recorder** panel and [start a new recording](/docs/devtools/recorder/#record). Once the recording is done, click on the **Replay** dropdown button. Select a speed to start a replay. -->
 
@@ -60,10 +60,10 @@ tags:
 ## Создание расширений для вкладки Recorder {: #recorder-extension }
 
 <!-- You can now build or install a Chrome extension to export replay scripts in your favorite format. See [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one. -->
-Теперь вы можете создать или установить расширение Chrome для экспорта сценариев воспроизведения в удобный для вас формат. Обратитесь к документации по [Recorder extension API](/docs/extensions/reference/devtools_recorder/) чтобы узнать как разработать собственное решение.
+Теперь вы можете создать или установить расширение Chrome, чтобы экспортировать сценарии воспроизведения в удобном для вас формате. Обратитесь к документации по [Recorder extension API](/docs/extensions/reference/devtools_recorder/), чтобы узнать как разработать собственное решение.
 
 <!-- To install a demo extension, follow [these steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.  -->
-Чтобы установить тестовое расширение, выполните описанные в документации [шаги](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards).
+Чтобы установить тестовое расширение, следуйте шагам, описанным в [документации](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Пользовательское расширение для вкладки Recorder", width="800", height="486" %}
 
@@ -74,7 +74,7 @@ tags:
 ## Группировка по Авториским (Authored) и Развёрнутым (Deployed) файлам во вкладке Источники (Sources) {: #authored-deployed }
 
 <!-- Enable the new **Group files by Authored / Deployed** option to organize your files in the Sources panel. When developing web applications with frameworks (for example, React, Angular), it can be difficult to navigate the source files due to the minified files generated by the build tools (for example, Webpack, Vite).  -->
-Включите новую опцию **Group files by Authored / Deployed** чтобы упорядочить файлы во вкладке Источники (Sources). Когда приложение разрабатывается с использованием фреймворков (например, React, Angular) бывает сложно ориентироваться в минифицированных исходных файлах, которые генерируются инструментами сборки (например, Webpack, Vite).
+Включите новую опцию **Group files by Authored / Deployed**, чтобы упорядочить файлы во вкладке Источники (Sources). При разработке приложения с использованием фреймворков (например, React, Angular) бывает сложно ориентироваться в минифицированных исходных файлах, которые генерируются инструментами сборки (например, Webpack, Vite).
  
 <!-- With this checkbox, you can group files into 2 categories for quicker file search: -->
 С этим чекбоксом вы можете группировать файлы по двум категориям для ускорения поиска:
@@ -115,10 +115,10 @@ tags:
 ## Отображение элемента с назначенным слотом {: #slot }
 
 <!-- Slotted elements in the **Elements** panel have a new `slot` badge. When debugging layout issues, use this feature to identify the element which affects the node's layout quicker.  -->
-Элемент, у которого есть дочерние элементы-слоты, во владке **Элементы** (Elements) теперь обозначается значком `slot`. При отладке проблем раскладки используйте эту функцию, чтобы быстрее определить элементы, влияющие на раскладку узлов.
+Элемент, у которого есть дочерние элементы-слоты, во вкладке **Элементы** (Elements) теперь обозначается значком `slot`. При отладке проблем раскладки используйте эту функцию, чтобы быстрее определить элементы, влияющие на раскладку узлов.
 
 <!-- This [example](https://mdn.github.io/web-components-examples/slotted-pseudo-element/) contains cards with a few named slots. Inspect the `person-occupation` slot of a card, click the `slot` badge next to it to reveal its assigned slot. -->
-В этом [примере](https://mdn.github.io/web-components-examples/slotted-pseudo-element/) есть несколько карточек с именованными слотами. Проинспектируйте слоты в карточках `person-occupation`, нажмите на значок `slot` чтобы отображить элементы-слоты.
+Этот [пример](https://mdn.github.io/web-components-examples/slotted-pseudo-element/) содержит карточки с несколькими именованными слотами. Проинспектируйте слот `person-occupation` в карточке, нажмите на значок `slot`, чтобы отобразить назначенный ему элеменет-слот.
 
 <!-- [Learn](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots) how to use [<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) and [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) elements to create a flexible template that can then be used to populate the shadow DOM of a web component. -->
 [Изучите](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots) как использовать элементы [<template>](https://developer.mozilla.org/docs/Web/HTML/Element/template) и [<slot>](https://developer.mozilla.org/docs/Web/HTML/Element/slot) для создания гибкого шаблона, который затем может быть использован в теневом DOM веб-компонента.
@@ -134,10 +134,10 @@ tags:
 ## Симуляция аппаратного параллелизма при записи Производительности (Performance) {: #simulate }
  
 <!-- The new **Hardware concurrency** setting in the **Performance** panel allows developers to configure the value reported by `navigator.hardwareConcurrency`. -->
-Новая настройка **Аппаратный параллелизм** (Hardware concurrency) во вкладке **Производительность** (Performance) позволяет разработчикам настраивать значение, записываемое в `navigator.hardwareConcurrency`.
+Новая настройка **Аппаратный параллелизм** (Hardware concurrency) во вкладке **Производительность** (Performance) позволяет разработчикам настраивать значение, сообщаемое `navigator.hardwareConcurrency`.
  
 <!-- Some applications use `navigator.hardwareConcurrency` to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size. With this feature, developers can test their application performance with different core counts. -->
-Некоторые приложения используют `navigator.hardwareConcurrency` чтобы контролировать степень параллелизма. Например, чтобы контролировать размер пула pthread Emscripten. С этой настройкой разработчики могут тестировать производительность своих придложений с разными количеством ядер. 
+Некоторые приложения используют `navigator.hardwareConcurrency`, чтобы контролировать степень параллелизма. Например, чтобы контролировать размер пула Emscripten pthread. С помощью этой функции разработчики могут тестировать производительность своих приложений с разными количеством ядер. 
  
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PyykGRv29FZbBKJAwWOW.png", alt="Симуляция аппаратного параллелизма при записи Производительности (Performance)", width="800", height="536" %}
 
@@ -160,10 +160,10 @@ tags:
 
         
 <!-- ## Identify blocking frames in the Back/forward cache pane {: #bfcache } -->
-## Определение блокирующего фрейса на панели Возвратного кэша (Back/forward cache) {: #bfcache }
+## Определение блокирующего фрейма на панели Возвратного кэша (Back/forward cache) {: #bfcache }
 
 <!-- The [Back/forward cache](/docs/devtools/application/back-forward-cache/) pane in the **Application** panel has new **frames** section to help you identify blocking frames that may be preventing the page from being eligible for bfcache. -->
-Панель [Возвратный кэш (Back/forward cache)](/docs/devtools/application/back-forward-cache/) во вкладке **Приложение** (Application) теперь содержит раздел **Фреймы** (frames). Это поможет определить блокирующие фреймы, которые могут препятствовать загрузке страницы из кэша.
+Панель [Возвратный кэш (Back/forward cache)](/docs/devtools/application/back-forward-cache/) во вкладке **Приложение** (Application) теперь содержит раздел **Фреймы** (frames). Это поможет определить блокирующие фреймы, которые могут препятствовать доступу страницы к возвратному кэшу.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UaRYEoYYoXhjSIn9seYK.png", alt="Определение блокирующего фрейса на панели Возвратного кэша (Back/forward cache)", width="800", height="486" %}
  
@@ -201,10 +201,10 @@ tags:
 ## Улучшение карт источников {: #sourcemaps }
  
 <!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-Внесено несколько улучшений в карты источников с целью улучшения опыта отладки:
+Внесено несколько исправлений в карты источников, чтобы улучшить опыт отладки:
  
 <!-- - Breakpoints now work in inline `<script>` with sourceURL annotations. -->
-- Точки останова теперь работают в инлайновых `<script>` с пояснениями sourceURL.
+- Точки останова теперь работают во встроенных `<script>` с аннотациями sourceURL.
 <!-- - The debugger now resolves block scoped variables in the **Scope** view with source maps. -->
 - Отладчик теперь вычисляет переменные с блочной областью видимости в представлении **Scope** с помощью карт исходников.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gv9cGnDMF7OVlXPWntII.png", alt="Вычисленная перемення с блочной областью видимости", width="800", height="532" %}
@@ -224,13 +224,13 @@ tags:
 <!-- - Fixed the **Auto-completion** setting for the **Sources** panel. Previously, the auto-complete always on even the setting is disabled. ([1323286](https://crbug.com/1323286)) -->
 - Исправлена работа настройки **Автодополнение** (Auto-completion) во вкладке **Источники** (Sources). Ранее автодополнение срабатывало всегда, даже если соответствующая настройка была выключена. ([1323286](https://crbug.com/1323286))
 <!-- - Updated the **Manifest** tab in the **Application** panel to parse the latest color scheme format. ([1318305](https://crbug.com/1318305)) -->
-- Исправлена панель **Манифест** (Manifest) во вкладке **Приложение** (Application), теперь на ней отображается последняя цветовая схема. ([1318305](https://crbug.com/1318305))
+- Исправлена вкладка **Манифест** (Manifest) во вкладке **Приложение** (Application), теперь на ней отображается последний формат цветовой схемы. ([1318305](https://crbug.com/1318305))
 <!-- - Improved the suggestions for the `<script async>` rendering blocking issues in the **Performance insights** panel. Previously,  DevTools suggested to `add async attribute to the script tag` even though the script is already marked as async. ([1334096](https://crbug.com/1334096)) -->
-- Улучшены сообщения о проблемах блокировки рендеринга `<script async>` в панели **Performance insights**. Ранее в DevTools выводилось сообщение `add async attribute to the script tag` даже когда скрипт уже был помечен как асинхронный. ([1334096](https://crbug.com/1334096))
+- Улучшены предложения по проблемам блокировки рендеринга `<script async>` во вкладке **Performance insights**. Ранее в DevTools выводилось предложение `add async attribute to the script tag` даже когда скрипт уже был помечен как асинхронный. ([1334096](https://crbug.com/1334096))
 <!-- - The **Performance insights** panel now detects iframes as potential causes for layout shifts. You can view the iframe details in the **Details** pane. ([1328873](https://crbug.com/1328873)) -->
 - Вкладка **Performance insights** теперь определяет iframe-ы как потенциальную причину скачков раскладки. Вы можете просматривать детали iframe-ов в панели **Details**. ([1328873](https://crbug.com/1328873))
 <!-- - When [open file](/docs/devtools/resources/#open) in the **Command menu**, the authored files (files generated by sourcemaps) are now ranked higher so they appear above similarly named deployed scripts. ([1312929](https://crbug.com/1312929))  --> 
-- При [открытии файлов](/docs/devtools/resources/#open) в **Command menu** авторские файлы (файлы, сгенерированные на основе карт источников) теперь находятся выше в списке, над развёрнутыми файлами с аналогичными именами. ([1312929](https://crbug.com/1312929))
+- При [открытии файлов](/docs/devtools/resources/#open) в **Command menu** авторские файлы (файлы, сгенерированные на основе карт источников) теперь находятся выше в списке чем развёрнутые файлы с аналогичными именами. ([1312929](https://crbug.com/1312929))
 
 
 {% include 'partials/devtools/ru/reach-out.md' %}
