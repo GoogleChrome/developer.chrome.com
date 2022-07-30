@@ -138,7 +138,7 @@ Cookie はクロスサイトトラッキングで最も多く使用される機�
 フィードバックのハイライト:
 
 *   **Yahoo! Japan** 初期のアトリビューションレポートテストの結果に関する[ホワイトペーパー](https://github.com/WICG/attribution-reporting-api/issues/201)。
-*   [Topics ](https://support.google.com/admanager/answer/12270543) オリジントライアルに関する **Google Ad Manager** 初期計画。
+*   [Topics](https://support.google.com/admanager/answer/12270543) オリジントライアルに関する **Google Ad Manager** 初期計画。
 
 {% endAside %}
 
