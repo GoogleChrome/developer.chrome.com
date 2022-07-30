@@ -50,6 +50,7 @@ tags:
 Теперь вы можете воспроизводить пользовательские сценарии на более низкой скорости — медленно (slow), очень медленно (very slow) и чрезвычайно медленно (extremely slow). Эти опции позволят вам лучше рассмотреть каждый воспроизводимый шаг.
 
 <!-- [Open](/docs/devtools/recorder/#open) the **Recorder** panel and [start a new recording](/docs/devtools/recorder/#record). Once the recording is done, click on the **Replay** dropdown button. Select a speed to start a replay. -->
+[Откройте](/docs/devtools/recorder/#open) вкладку **Recorder** и [начните новую запись](/docs/devtools/recorder/#record). Когда закончите запись, нажмите на выпадающий список **Replay**. Выберите подходящую скорость воспроизведения.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="Опции замедленного воспроизведения во вкладке Recorder", width="800", height="486" %}
 
@@ -104,7 +105,7 @@ tags:
 Например, на [этой странице](https://jec.fyi/demo/perf-measure) используется метод [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) для подсчёта времени, затраченного на загрузку текста.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
-Когда вы запускаете [измерение загрузки страницы](/docs/devtools/performance-insights/#record), трек **User Timings** отображается в записи.
+Когда вы запускаете [измерение загрузки страницы](/docs/devtools/performance-insights/#record), трек **User Timings** отображается в записи. Кликните на элемент хронометража, чтообы увидеть подробности о нём в боковой панели.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="Трек User Timings во вкладке Performance insights", width="800", height="499" %}
 
