@@ -40,7 +40,7 @@ tags:
 {% Aside %}
 
 *   [はじめに: プライバシーサンドボックスの関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)
-*   [開発者ガイド: Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/)
+*   [開発者ガイド: アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/)
 *   [開発者ガイド: FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
 *   [開発者ガイド: Topics API](/docs/privacy-sandbox/topics-experiment/)
 
