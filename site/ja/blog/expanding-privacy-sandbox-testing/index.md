@@ -56,7 +56,7 @@ Cookies Having Independent Partitioned State（CHIPS）および First-Party Set
 
 ### CHIPS
 
-CHIPS を使用すると、開発者は、トップレベルサイトごとに個別のクッキージャーで **「分割された」ストレージに Cookie を入れる** ことができます。 現在のオリジントライアル中の開発者からのフィードバックに基づいて多数の修正と改良を行うとともに、 **このトライアル期間を 8 月末の [Chrome Stable 104](https://chromiumdash.appspot.com/schedule) 最終日まで延長** しました。 具体的には、`shop.example.com` や `blog.example.com` などのサブドメイン間で Cookie を使用するサイトの移行を容易にするために、`__Host` プレフィックスに対する **より厳しい要件** が[削除](https://github.com/privacycg/CHIPS/pull/46)され、`Domain` 属性がなくなりました。
+CHIPS を使用すると、開発者は、トップレベルサイトごとに個別のクッキージャーで **「分割された」ストレージに Cookie を入れる** ことができます。 現在のオリジントライアル中の開発者からのフィードバックに基づいて多数の修正と改良を行うとともに、 **このトライアル期間を 8 月末の [Chrome 安定版 104](https://chromiumdash.appspot.com/schedule) 最終日まで延長** しました。 具体的には、`shop.example.com` や `blog.example.com` などのサブドメイン間で Cookie を使用するサイトの移行を容易にするために、`__Host` プレフィックスに対する **より厳しい要件** が[削除](https://github.com/privacycg/CHIPS/pull/46)され、`Domain` 属性がなくなりました。
 
 この提案とトライアルの両方において肯定的なフィードバックを得たことから、**トライアル終了後に CHIPS を公開できると考えています**。 正式なプロセスのとおり、[blink-dev メーリングリスト](https://groups.google.com/a/chromium.org/g/blink-dev/)をフォローすることで、[Intent to Ship（I2S）](https://www.chromium.org/blink/launching-features/#step-6-prepare-to-ship) メッセージ投稿のお知らせをご確認いただけます。
 
