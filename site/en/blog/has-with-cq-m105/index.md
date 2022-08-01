@@ -3,7 +3,7 @@ title: "@container and :has(): two powerful new responsive APIs landing in Chrom
 description: >
   "Container queries and :has() are a match made in responsive heaven. Luckily, both of these features are landing together in Chromium 105. This is a huge release with two highly-requested features for responsive interfaces!"
 layout: 'layouts/blog-post.njk'
-date: 2022-07-25
+date: 2022-08-03
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/KBYS0gF3R7mdhjVBwvbn.jpg'
 alt: >
   Image of a rocketship from SpaceX.
@@ -58,8 +58,8 @@ Now, we can use that container to apply styles to any of its children using `@co
 ```
 
 {% Codepen {
-  user: 'una',
-  id: 'wvyXQXY',
+  user: 'web-dot-dev',
+  id: 'dymdbpg',
   height: 450,
   tab: 'css, result'
 } %}
@@ -101,8 +101,8 @@ You’re looking for an element with a class of `visual` to apply the two-column
 In the above code, you are writing a selector that styles an `h1` within a card that does not contain a `visual` class. This is how you can very clearly adjust the font size.
 
 {% Codepen {
-  user: 'una',
-  id: 'WNMyYBB',
+  user: 'web-dot-dev',
+  id: 'JjLpPKv',
   height: 450,
   tab: 'css, result'
 } %}
@@ -115,8 +115,8 @@ The above demo shows a combination of `:has()`, `:not()`, and `@container`, but 
 
 
 {% Codepen {
-  user: 'una',
-  id: 'abqPdQv',
+  user: 'web-dot-dev',
+  id: 'XWEZrje',
   height: 450,
   tab: 'css, result'
 } %}
