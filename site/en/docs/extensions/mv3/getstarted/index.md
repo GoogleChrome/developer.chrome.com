@@ -254,12 +254,14 @@ The last step for the popup UI is adding color to the button. Create and add a f
 `popup.js` with the following code to the extension's directory.
 
 ```js
-// Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+window.onload = () => {
+    // Initialize button with user's preferred color
+    let changeColor = document.getElementById("changeColor");
 
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
-});
+    chrome.storage.sync.get("color", ({ color }) => {
+        changeColor.style.backgroundColor = color;
+    });
+}
 ```
 
 This code grabs the button from `popup.html` and requests the color value from storage. It then
@@ -271,10 +273,10 @@ applies the color as the background of the button. Include a script tag to `popu
 <html>
   <head>
     <link rel="stylesheet" href="button.css">
+    <script src="popup.js"></script>
   </head>
   <body>
     <button id="changeColor"></button>
-    <script src="popup.js"></script>
   </body>
 </html>
 ```
@@ -285,7 +287,7 @@ Reload the extension to view the green button.
 
 The extension now has a custom icon and a popup, and it colors the popup button based on a value
 saved to the extension's storage. Next, it needs logic for further user interaction. Update
-`popup.js` by adding the following to the end of the file.
+`popup.js` by adding the following to the end of the `window.onload` function.
 
 ```js
 // When the button is clicked, inject setPageBackgroundColor into current page
@@ -347,6 +349,7 @@ Start by creating a file in the directory named `options.html` and include the f
 <html>
   <head>
     <link rel="stylesheet" href="button.css">
+    <script src="options.js"></script>
   </head>
   <body>
     <div id="buttonDiv">
@@ -354,7 +357,6 @@ Start by creating a file in the directory named `options.html` and include the f
     <div>
       <p>Choose a different background color!</p>
     </div>
-    <script src="options.js"></script>
   </body>
 </html>
 ```
@@ -377,52 +379,54 @@ The last step is to add the options logic. Create a file named `options.js` in t
 directory with the following code.
 
 ```js
-let page = document.getElementById("buttonDiv");
-let selectedClassName = "current";
-const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
+window.onload = () => {
+    let selectedClassName = "current";
+    let page = document.getElementById("buttonDiv");
+    const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
 
-// Reacts to a button click by marking the selected button and saving
-// the selection
-function handleButtonClick(event) {
-  // Remove styling from the previously selected color
-  let current = event.target.parentElement.querySelector(
-    `.${selectedClassName}`
-  );
-  if (current && current !== event.target) {
-    current.classList.remove(selectedClassName);
-  }
+    // Reacts to a button click by marking the selected button and saving
+    // the selection
+    function handleButtonClick(event) {
+        // Remove styling from the previously selected color
+        let current = event.target.parentElement.querySelector(
+            `.${selectedClassName}`
+        );
+        if (current && current !== event.target) {
+            current.classList.remove(selectedClassName);
+        }
 
-  // Mark the button as selected
-  let color = event.target.dataset.color;
-  event.target.classList.add(selectedClassName);
-  chrome.storage.sync.set({ color });
-}
-
-// Add a button to the page for each supplied color
-function constructOptions(buttonColors) {
-  chrome.storage.sync.get("color", (data) => {
-    let currentColor = data.color;
-    // For each color we were provided…
-    for (let buttonColor of buttonColors) {
-      // …create a button with that color…
-      let button = document.createElement("button");
-      button.dataset.color = buttonColor;
-      button.style.backgroundColor = buttonColor;
-
-      // …mark the currently selected color…
-      if (buttonColor === currentColor) {
-        button.classList.add(selectedClassName);
-      }
-
-      // …and register a listener for when that button is clicked
-      button.addEventListener("click", handleButtonClick);
-      page.appendChild(button);
+        // Mark the button as selected
+        let color = event.target.dataset.color;
+        event.target.classList.add(selectedClassName);
+        chrome.storage.sync.set({ color });
     }
-  });
-}
 
-// Initialize the page by constructing the color options
-constructOptions(presetButtonColors);
+    // Add a button to the page for each supplied color
+    function constructOptions(buttonColors) {
+        chrome.storage.sync.get("color", (data) => {
+            let currentColor = data.color;
+            // For each color we were provided…
+            for (let buttonColor of buttonColors) {
+                // …create a button with that color…
+                let button = document.createElement("button");
+                button.dataset.color = buttonColor;
+                button.style.backgroundColor = buttonColor;
+
+                // …mark the currently selected color…
+                if (buttonColor === currentColor) {
+                    button.classList.add(selectedClassName);
+                }
+
+                // …and register a listener for when that button is clicked
+                button.addEventListener("click", handleButtonClick);
+                page.appendChild(button);
+            }
+        });
+    }
+
+    // Initialize the page by constructing the color options
+    constructOptions(presetButtonColors);
+}
 ```
 
 Four color options are provided then generated as buttons on the options page with onclick event
