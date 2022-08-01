@@ -185,7 +185,7 @@ As mentioned, one of the critical points is making BiDi implementable. To unbloc
 Another important aspect of BiDi is Web Platform Tests. Currently they cover WebDriver, and de-facto is a source-of-truth for all the implementations. It’s a cornerstone for cross-browser protocol implementation, and intended to be run and to be passed against any implementation.
 
 ## What is the current state?
-The current state of our implementation and the specification can be tracked here: [WebDriver BiDi prototyping progress](https://github.com/GoogleChromeLabs/chromium-bidi/milestones)
+To track the current state of our implementation and the specification, see the [WebDriver BiDi prototyping progress](https://github.com/GoogleChromeLabs/chromium-bidi/milestones).
 
 {% include 'partials/devtools/en/reach-out.md' %}
 {% include 'partials/devtools/en/engineering-blog.md' %}
