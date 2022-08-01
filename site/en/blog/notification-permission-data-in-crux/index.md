@@ -22,19 +22,19 @@ date: 2020-02-11
 
 # Optional
 # Include an updated date when you update your post
-updated: 2020-02-11
+updated: 2022-07-19
 
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 #tags:
-  
+
 
 ---
 
 Chrome 80 introduced [quieter permission UI for notifications][quieter-not-post].
 To help site owners understand notification permission metrics, we’re adding this
-data to the [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/)
+data to the [Chrome User Experience Report](/docs/crux/)
 (CrUX) in the [202001 dataset][202001-crux-dataset], released on February 11,
 2020. This will allow site owners gain a better understanding of typical user
 notification permission responses for their sites and comparable sites in
@@ -74,17 +74,17 @@ table below.
       <td><i>Dismiss</i></td>
       <td>
         The user closes the permission prompt without any explicit
-        response. Tab close counts as a dismiss.  On mobile, tab switch also 
-        counts as a dismiss action, and the quiet UI has an explicit user 
-		    dismiss option.  
+        response. Tab close counts as a dismiss.  On mobile, tab switch also
+        counts as a dismiss action, and the quiet UI has an explicit user
+		    dismiss option.
       </td>
     </tr>
     <tr>
       <td><i>Ignore</i></td>
       <td>
         The user does not interact with the prompt at all. Navigation events
-        also count as an ignore, such as the back button or navigation using the 
-        omnibox.  
+        also count as an ignore, such as the back button or navigation using the
+        omnibox.
       </td>
     </tr>
   </tbody>
@@ -109,17 +109,17 @@ are a clear indicator that the website should review the
 
 It is normal and expected that different types of sites will have different
 Accept and Block rates. For example, a chat app or email app has a very strong
-use case and we could expect Accept rates to be quite high. 
+use case and we could expect Accept rates to be quite high.
 
-It’s also normal that rates for the same site may vary significantly between 
-desktop and mobile, as the use cases can be different and users may have a 
-strong preference for notification on one type of device over the other. The 
-large variance between mobile and desktop is the reason that automatic site 
-enrollment in quiet notification permission UI is separated by device type. 
-Some sites may be enrolled in quiet UI only on mobile or only on desktop.  
+It’s also normal that rates for the same site may vary significantly between
+desktop and mobile, as the use cases can be different and users may have a
+strong preference for notification on one type of device over the other. The
+large variance between mobile and desktop is the reason that automatic site
+enrollment in quiet notification permission UI is separated by device type.
+Some sites may be enrolled in quiet UI only on mobile or only on desktop.
 
 As more users enroll in quieter notifications UI we expect that Ignore
-rates will increase over time relative to other metrics. You should view this 
+rates will increase over time relative to other metrics. You should view this
 trend as normal and expected.
 
 
@@ -130,7 +130,7 @@ trend as normal and expected.
 Let your users take the initiative and turn on notifications at their own
 pace. Introduce toggles or buttons discretely as part of preexisting UI
 surfaces so that they are shown at steps of the user’s workflow where there
-is good reason to believe that they might want to opt in to receiving timely 
+is good reason to believe that they might want to opt in to receiving timely
 updates.
 
 Avoid showing prompts and/or overlays without context or immediately after a

@@ -2,14 +2,15 @@
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting: テストとディスカッション'
 date: 2022-03-31
+updated: 2022-06-23
 authors:
   - maudn
+  - alexandrawhite
 ---
 
 ## 基礎を学ぶ
 
-[Attribution
-Reporting](/docs/privacy-sandbox/attribution-reporting/)
+[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)と[最新のアップデート](/docs/privacy-sandbox/attribution-reporting-updates/)
 をお読みください。
 
 ## API を試す
@@ -17,17 +18,20 @@ Reporting](/docs/privacy-sandbox/attribution-reporting/)
 1. [デモ](https://goo.gle/attribution-reporting-demo)をお試しになれます。
 2. 今すぐ API を試す方法については、[API のステータス](/docs/privacy-sandbox/attribution-reporting/#status)で確認できます。
 3. API をテストできます。
-    * 任意）2021 年にこの API のオリジン トライアルを実施している場合は、[移行ガイド](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit)に沿って今後のオリジン トライアルの準備を行ってください。
+    * 任意）2021 年にこの API のオリジン トライアルを実施した場合は、[移行ガイド](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit)に沿って最新のオリジン トライアルにご参加ください。
     * API をテストするには、以下のガイドを参照してください。
         * [Attribution Reporting API に関する必知事項](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/)
         * [ハンドブック](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/):
         デモ、詳細なコードサンプル、（ローカルの）デバッグに関するヒントが掲載されています。
-4. [概要レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)をテストできます。
-    * （任意）Trusted Execution Environment（TEE）で動作する集計サービスのテストや、復号済みデバッグ レポートに基づくローカルテストのための追加インストラクションがまもなく提供される予定です。
+4. [要約レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)をテストできます。
+    *  アドテクは集計サービスで要約レポートを生成することができます。[ローカルテスト](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)および [Amazon Web Services（AWS）上での本番環境でのテスト](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports)のセットアップ方法について学んでください:    
+        *  [AWS アカウント](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) を作る、または用意する。
+        *  プライバシーサンドボックスの関連性と測定オリジン トライアルに[登録します](/origintrials/#/view_trial/771241436187197441)。
+        *  集計サービスの[オンボーディング フォーム](https://forms.gle/EHoecersGKhpcLPNA)を完了します。フォームが提出されたら、確認メールと手順書をお送りします。
+   *  [要約レポートのストラテジーとコツ](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing) を参照してください。
+
 
 ## サポートを受ける
-
-{% Aside %} API のテストを妨げている障害がある場合は、ぜひご連絡ください。{% endAside %}
 
 ご使用の実装、[デモ](https://goo.gle/attribution-reporting-demo)、ドキュメントについて質問がある場合:
 
@@ -42,30 +46,6 @@ Reporting](/docs/privacy-sandbox/attribution-reporting/)
 API のユースケースに関する一般的な質問がある場合は、[API
 についてディスカッションする](/docs/privacy-sandbox/attribution-reporting-experiment/#discuss-the-api)をご覧ください。
 
-## ディスカッションに参加する
+{% include 'content/privacysandbox-partials/ar-join-discussion-long.njk' %}
 
-どなたでもディスカッションに参加できます。特に、あなたが API
-をテストしている場合、あなたのフィードバックはとても重要です。
-
-### API についてディスカッションする
-
-{% Aside %} プライバシー サンドボックスに関する他の提案と同様に、この API についても
-_GitHub_ にドキュメントを掲載し、公開ディスカッションを行っています。[こちらの提案](https://github.com/WICG/conversion-measurement-api/)をご覧ください。
-{% endAside %}
-
-- [既存のイシュー](https://github.com/WICG/conversion-measurement-api/issues)に関するやり取りに参加できます。
-- [新しいイシューを投稿](https://github.com/WICG/conversion-measurement-api/issues/new)して質問したり、機能を提案したり、ユースケースについてディスカッションしたりすることができます。イシューの投稿方法が不明な場合は、[こちらの例](https://github.com/WICG/conversion-measurement-api/issues/147)をご覧ください。
-- [隔週開催のミーティングに参加](https://github.com/WICG/conversion-measurement-api/issues/80)できます。どなたでもご参加になれます。参加するには、まず [WICG に参加](https://www.w3.org/community/wicg/)してください。積極的な活動はもちろん、閲覧のみの参加も歓迎いたします。
-
-### 関連トピックについてディスカッションする
-
-- 業界のユースケースについては、[Private Advertising Technology コミュニティ グループ](https://github.com/patcg)または [Improve
-  Web Advertising ビジネス グループ](https://www.w3.org/community/web-adv/participants)でディスカッションすることができます。
-- [WebKit/Safari Measurement API](https://github.com/privacycg/private-click-measurement) については、[Privacy コミュニティ
-   グループ](https://www.w3.org/community/privacycg/)でディスカッションすることができます。
-
-## 最新情報を入手する
-
-- API のステータス変更について通知を受け取るには、[デベロッパー向けのメーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)に参加してください。
-- API に関する進行中のディスカッションをつぶさにチェックするには、[GitHub の提案ページ](https://github.com/WICG/conversion-measurement-api)で **Watch** ボタンをクリックしてください。そのためには、[GitHub アカウントを持っているか作成する](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)必要があります。
-- プライバシー サンドボックスに関する最新情報全般を入手するには、[プライバシー サンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)の RSS フィードを購読してください。
+{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}

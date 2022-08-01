@@ -1,5 +1,6 @@
 ---
 api: management
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 ## Manifest
@@ -21,7 +22,7 @@ API. For example:
 [`management.getPermissionWarningsByManifest`][2], [`management.uninstallSelf`][3], and
 [`management.getSelf`][4] do not require the management permission.
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: #method-getPermissionWarningsByManifest
 [3]: #method-uninstallSelf
 [4]: #method-getSelf

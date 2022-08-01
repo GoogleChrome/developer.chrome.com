@@ -2,12 +2,30 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+
+### Chrome 104 {: #chrome104 }
+
+* [Reinicialização de frame durante o debugging](/pt/blog/new-in-devtools-104/#restart-frame)
+* [Opção de replay lento no painel de gravação](/pt/blog/new-in-devtools-104/#recorder)
+* [Construa uma extensão para o painel de gravação](/pt/blog/new-in-devtools-104/#recorder-extension)
+* [Agrupar arquivos por Autoral/Publicado no painel Sources](/pt/blog/new-in-devtools-104/#authored-deployed)
+* [Nova trilha de Tempos de Usuários no painel de Performance insights](/pt/blog/new-in-devtools-104/#performance)
+* [Revelar o slot atribuído de um elemento](/pt/blog/new-in-devtools-104/#slot)
+* [Simular a concorrência de hardware para gravações de desempenho](/pt/blog/new-in-devtools-104/#simulate)
+* [Visualize valores de non-color ao preencher automaticamente as variáveis CSS](/pt/blog/new-in-devtools-104/#css-var)
+* [Identifique os quadros de bloqueio no painel de Back/forward cache](/pt/blog/new-in-devtools-104/#bfcache)
+* [Melhorias nas sugestões de autocomplete para objetos JavaScript](/pt/blog/new-in-devtools-104/#autocomplete)
+* [Melhorias em sourcemaps](/pt/blog/new-in-devtools-104/#sourcemaps)
+* [Outras melhorias](/pt/blog/new-in-devtools-104/#misc)
+
+
 ### Chrome 103 {: #chrome103 }
 
 * [Gravação de eventos de clique duplo e clique com o botão direito do mouse](/pt/blog/new-in-devtools-103/#recorder)
 * [Novo intervalo de tempo e modo de instantâneo no painel Lighthouse](/pt/blog/new-in-devtools-103/#lighthouse)
 * [Controle de zoom aprimorado no painel Performance Insights](/pt/blog/new-in-devtools-103/#zoom)
 * [Confirmação para excluir uma gravação de apresentação](/pt/blog/new-in-devtools-103/#delete)
+* [Reordenar painéis no painel Elementos](/pt/blog/new-in-devtools-103/#reorder-pane)
 * [Escolhendo uma cor fora do navegador](/pt/blog/new-in-devtools-103/#color)
 * [Visualização aprimorada do valor inline durante a depuração](/pt/blog/new-in-devtools-103/#inline-preview)
 * [Suporte a blobs grandes para autenticadores virtuais](/pt/blog/new-in-devtools-103/#webauthn)

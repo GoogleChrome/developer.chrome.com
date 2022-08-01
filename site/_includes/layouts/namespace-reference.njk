@@ -79,6 +79,7 @@
                     <code>{{ permission }}</code><br />
                   {% endfor %}
                   {{ extra_permissions_html | safe }}
+                  {{ has_warning | safe }}
                 </div>
               </li>
             {% endif %}

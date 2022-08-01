@@ -15,12 +15,7 @@ authors:
 The Attribution Reporting proposal [has changed](#changelog) to address
 community feedback, from API mechanism changes to new functionality.
 
-{% Aside %}
-Feedback on these changes is greatly appreciated. Ecosystem input helps ensure
-that solutions to various use cases are discussed in the open.
-
-[Learn more about participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate).
-{% endAside %}
+{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
 
 ## Who are these updates for?
 

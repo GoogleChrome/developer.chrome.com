@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-06-21
+date: 2022-07-20
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/05M2IjnWmaeFbIDWaznm.jpeg
 alt: A woman holding her hands up and making a frame with her fingers. Above her the sky is blue with a few clouds.
 tags:
@@ -85,7 +85,7 @@ if ("CropTarget" in self && "fromElement" in CropTarget) {
 
 Let's focus on the Element called `mainContentArea`. To derive a `CropTarget` from it, call `CropTarget.fromElement(mainContentArea)`. The returned Promise will be resolved with a new `CropTarget` object if successful. Otherwise it will be rejected if either:
 
-- The type for `mainContentArea` is not supported. (At the time of writing, Chrome has only implemented support for `<div>` and iframes. As a workaround, put the element in a `<div>`.)
+- The type for `mainContentArea` is not supported. (At the time of writing, Chrome has only implemented support for `<div>` and iframes. As a workaround, put the element in a `<div>`. In [Chrome 105], you can turn on experimental support for all `HTMLElement`s  by enabling the `about:flags/#region-capture-experimental-subtypes` flag.)
 - You have minted an unreasonable number of `CropTarget` objects.
 
 ```js
@@ -211,6 +211,7 @@ Thanks to [Joe Medley] for reviewing this article.
 
 [`element`]: https://developer.mozilla.org/docs/Web/API/Element
 [bounding box]: https://developer.mozilla.org/docs/Glossary/bounding_box
+[chrome 105]: https://chromiumdash.appspot.com/commit/a27db816fd0765161dd7c501983251ef5f777666
 [serializable]: https://developer.mozilla.org/docs/Glossary/Serializable_object
 [`window.postmessage()`]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [`browsercapturemediastreamtrack`]: https://w3c.github.io/mediacapture-region/#browser-capture-media-stream-track
