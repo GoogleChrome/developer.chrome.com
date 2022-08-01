@@ -215,7 +215,7 @@ console.table(people);
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VWHZBsZYJIhdoSh2efcu.png", alt="The result of the console.table() example above.", width="800", height="455" %}
 
-By default, `table.console()` logs all table data. To display a single column or a subset of columns, you can use the second optional parameter and specify column name or names as a string or an array of strings. For example:
+By default, `console.table()` logs all table data. To display a single column or a subset of columns, you can use the second optional parameter and specify column name or names as a string or an array of strings. For example:
 
 ```js
 console.table(people, ['last', 'birthday']);
