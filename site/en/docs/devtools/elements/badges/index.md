@@ -71,7 +71,7 @@ To learn how to debug flex layouts, see [Inspect and debug CSS flexbox](/docs/de
 
 ## Ad
 
-DevTools can detect most ad frames. Such frames have `ad` badges next to them. 
+DevTools can detect some [ad frames and tag them](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md). Such frames have `ad` badges next to them. 
 
 Discover an ad in the following preview:
 
@@ -151,7 +151,7 @@ Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix
 {% Codepen {
   user: 'sofiayem',
   id: 'OJvxyzB',
-  height: 150,
+  height: 250,
   allow: ['geolocation']
 } %}
 
