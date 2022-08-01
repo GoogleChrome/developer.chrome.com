@@ -32,7 +32,7 @@ event.transitionWhile((async () => {
 })());
 ```
 
-This is functionally equivalent to the code below. It causes some portion of the navigation to run before API is aware that the developer intends to intercept the navigation.
+This is functionally equivalent to the code below. It causes some portion of the navigation to run before the API is aware that the developer intends to intercept the navigation.
 
 ```js
 doSyncStuff();
@@ -51,7 +51,7 @@ The `transitionWhile()` method is still available, but it has been deprecated an
 
 ### Using intercept()
 
-The `NavigateEvent.intercept()` has the same restrictions as `transitionWhile()`, as in it cannot be called on all navigation events. Cross-origin navigations cannot be intercepted, neither can cross-document traversals. Doing so will throw a [`DOMException`](https://developer.mozilla.org/docs/Web/API/DOMException) of the `"SecurityError"` type.
+The `NavigateEvent.intercept()` has the same restrictions as `transitionWhile()`, as in it cannot be called on all navigation events. Cross-origin navigations cannot be intercepted, and neither can cross-document traversals. Doing so will throw a [`DOMException`](https://developer.mozilla.org/docs/Web/API/DOMException) of the `"SecurityError"` type.
 
 To use `intercept()`, simply pass your custom handler when calling it. 
 
@@ -78,7 +78,7 @@ In single page apps, you can now control whether the browser handles scrolling t
 
 By default, the browser will attempt to handle scrolling automatically, once the intercept hander has fulfilled. If you want to handle the scrolling yourself, set `scroll` to `"manual"`, then call `NavigateEvent.scroll()` when the browser should attempt to set the scroll position.
 
-```js/4,6
+```js/2,8
 navigation.addEventListener("manual", event => {
   scroll: "manual",
   event.intercept({
