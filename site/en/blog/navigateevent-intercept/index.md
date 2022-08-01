@@ -15,7 +15,7 @@ authors:
   - joemedley
 ---
 
-Chrome 105 introduces two new methods on the `NavigateEvent` of the Navigation API (introduced in 102) to improve on methods that have proved problematic in practice. `Intercept()`, which let's developers control the state following the navigation, replaces `transitionWhile()`, which proved difficult to use. The `scroll()` method, which scrolls to an anchor specified in the URL, replaces `restoreScroll()` which does not work for all types of navigation. 
+Chrome 105 introduces two new methods on the `NavigateEvent` of the Navigation API (introduced in 102) to improve on methods that have proved problematic in practice. `intercept()`, which let's developers control the state following the navigation, replaces `transitionWhile()`, which proved difficult to use. The `scroll()` method, which scrolls to an anchor specified in the URL, replaces `restoreScroll()` which does not work for all types of navigation. 
 
 In this article, I'll explain the problems with both and how the new methods fix those problems.
 
@@ -32,7 +32,7 @@ event.transitionWhile((async () => {
 })());
 ```
 
-This is functionally equivalent to the code below. It causes some portion of the navigation to run before the navigation is even finished.
+This is functionally equivalent to the code below. It causes some portion of the navigation to run before API is aware that the developer intends to intercept the navigation.
 
 ```js
 doSyncStuff();
@@ -41,25 +41,26 @@ event.transitionWhile((async () => {
 })());
 ```
 
-One example where this can mess up an app is in scroll restoration logic where it acts on the DOM before the navigation transition instead of after. 
+One example where this can mess up an app is in scroll restoration logic where it captures scroll positions after the DOM change, rather than before. 
 
 ### What's changed
 
-To replace `transitionWhile()`, the current spec introduces `NavigateEvent.intercept()`. The new method takes a handler in addition to the `focusReset` and `scrollRestoration` properties supported by `transitionWhile()`. The new handler always runs after the navigation completes, avoiding the problems with `transitionWhile()`.
+To replace `transitionWhile()`, the current spec introduces `NavigateEvent.intercept()`. The new method takes a handler in addition to the `focusReset` and `scrollRestoration` properties supported by `transitionWhile()`. The new handler always runs after the navigation commits, and things like scroll positions have been captured, avoiding the problems with `transitionWhile()`.
 
 The `transitionWhile()` method is still available, but it has been deprecated and will be removed in Chrome 108.
 
 ### Using intercept()
 
-The `NavigateEvent.intercept()` cannot be used on all events. If the current `Document` object has a URL that can be rewritten to a destination URL, `intercept()` may be called. You can't call it on cross-document back/forward navigations. Doing so will throw a [`DOMException`](https://developer.mozilla.org/docs/Web/API/DOMException) of the `"SecurityError"` type.
+The `NavigateEvent.intercept()` has the same restrictions as `transitionWhile()`, as in it cannot be called on all navigation events. Cross-origin navigations cannot be intercepted, neither can cross-document traversals. Doing so will throw a [`DOMException`](https://developer.mozilla.org/docs/Web/API/DOMException) of the `"SecurityError"` type.
 
 To use `intercept()`, simply pass your custom handler when calling it. 
 
 ```js
 navigation.addEventListener("navigate", event => {
   event.intercept({
-    handler() {
-      return new Promise(resolve => setTimeout(resolve, 1000));
+    async handler() {
+      doSyncStuff();
+      await doAsyncStuff();
     }
   });
 });
@@ -75,29 +76,18 @@ In single page apps, you can now control whether the browser handles scrolling t
 
 ### Using scroll()
 
-To let the browser handle the scrolling, first pass the `scroll` property to `intercept()` with a value of `"after-transition"`. For example:
-
-```js/5
-navigation.addEventListener("navigate", event => {
-  event.intercept({
-    handler() {
-      // Handle it;
-    },
-    scroll: "after-transition"
-  });
-});
-```
-
-If you want to handle the scrolling yourself, set `scroll` to `"manual"`, then call `NavigateEvent.scroll()`.
+By default, the browser will attempt to handle scrolling automatically, once the intercept hander has fulfilled. If you want to handle the scrolling yourself, set `scroll` to `"manual"`, then call `NavigateEvent.scroll()` when the browser should attempt to set the scroll position.
 
 ```js/4,6
 navigation.addEventListener("manual", event => {
+  scroll: "manual",
   event.intercept({
-    handler() {
-      // Handle it;
-      this.scroll();
-    },
-    scroll: "after-transition"
+    async handler() {
+      doSyncStuff();
+      // Handle scrolling earlier than by default:
+      event.scroll();
+      await doAsyncStuff();
+    }
   });
 });
 ```
