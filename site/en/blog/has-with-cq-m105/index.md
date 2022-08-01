@@ -20,7 +20,7 @@ Container queries and :has() are a match made in responsive heaven. Luckily, bot
 
 Container queries enable developers to query a parent selector for its size and styling information, making it possible for a child element to own its responsive styling logic, no matter where it lives on a web page.
 
-Instead of relying on the viewport for styling input such as available space, developers now have the ability to query the size of in-page elements too.. This capability means that a component owns its responsive styling logic. This makes the component much more resilient, as the styling logic is attached to it, no matter where it appears on the page.
+Instead of relying on the viewport for styling input such as available space, developers now have the ability to query the size of in-page elements too. This capability means that a component owns its responsive styling logic. This makes the component much more resilient, as the styling logic is attached to it, no matter where it appears on the page.
 
 {% Aside 'caution' %}
 Container queries are [currently supported](https://caniuse.com/css-container-queries) in Chromium and Safari TP.
