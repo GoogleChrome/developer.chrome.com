@@ -214,7 +214,7 @@ Something to keep in mind is that `IntersectionObservers` are intentionally
 neither pixel perfect nor low latency. Using them to implement endeavours
 like scroll-dependent animations are bound to fail, as the data will be
 – strictly speaking – out of date by the time you’ll get to use it.
-The [explainer](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md)
+The [explainer](https://github.com/w3c/IntersectionObserver/blob/main/explainer.md)
 has more details about the original use cases for `IntersectionObserver`.
 
 ### How much work can I do in the callback?
