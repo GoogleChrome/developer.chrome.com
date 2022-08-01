@@ -35,7 +35,7 @@ Writing web custom formats to the clipboard is almost identical to
 [writing sanitized formats](<https://web.dev/async-clipboard/#write()>), except for the requirement
 to prepend the string `"web "` (including the trailing space) to the blob's MIME type.
 
-```js/14-15
+```js/13-14
 // Fetch remote JPEG and GIF images and obtain their blob representations.
 const [jpegBlob, gifBlob] = await Promise.all([
   fetch('image.jpg').then((response) => response.blob()),
@@ -64,7 +64,7 @@ As with writing, reading web custom formats from the clipboard is almost identic
 [reading sanitized formats](<https://web.dev/async-clipboard/#read()>). The only difference is that
 the app now needs to look for clipboard items whose type starts with `"web "`.
 
-```js
+```js/6
 try {
   // Iterate over all clipboard items.
   const clipboardItems = await navigator.clipboard.read();
@@ -106,4 +106,5 @@ You can try the demo below and
 
 ## Acknowledgements
 
-This article was reviewed by [Joe Medley](https://github.com/jpmedley).
+This article was reviewed by [Joe Medley](https://github.com/jpmedley)
+and [François Beaufort](https://github.com/beaufortfrancois).
