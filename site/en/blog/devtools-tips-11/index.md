@@ -32,4 +32,4 @@ With the Console API, you can:
 
 For a more hands-on learning experience, follow the [Log messages in the Console](/docs/devtools/console/log/) interactive tutorial.
 
-For a comprehensive list of all the Console API methods, see the [Console API reference](/docs/devtools/rendering/emulate-css/).
+For a comprehensive list of all the Console API methods, see the [Console API reference](/docs/devtools/console/api/).
