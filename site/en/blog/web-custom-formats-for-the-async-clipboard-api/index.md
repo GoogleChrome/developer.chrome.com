@@ -2,30 +2,32 @@
 layout: 'layouts/blog-post.njk'
 title: Web custom formats for the Async Clipboard API
 subtitle: >
-  Web custom formats let websites read and write arbitrary unsanitized payloads using a standardized
+  Web custom formats let websites read and write arbitrary unsanitized payloads using a standard
   format applications can opt in to if they wish to support such payloads.
 authors:
   - thomassteiner
-date: 2022-07-25
+date: 2022-08-01
 ---
 
-Up until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of MIME types to
-be copied to and pasted from the system clipboard. Namely, these types are `text/plain`,
-`text/html`, and `image/png`, which the browser typically will sanitize, for example, to remove
-embedded `script` elements or `javascript:` links from an HTML string, or to prevent PNG
+Until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of
+MIME types to be copied to and pasted from the system clipboard, specifically: `text/plain`,
+`text/html`, and `image/png`. The browser typically sanitizes this to, for example, remove embedded
+`script` elements or `javascript:` links from an HTML string, or to prevent PNG
 [decompression bomb](https://en.wikipedia.org/wiki/Zip_bomb) attacks.
 
-In some cases, though, it can be desirable to support unsanitized content on the clipboard, for
-example, when the application the data is thought for deals itself with the sanitization and where
-it's crucial for the copied data to be identical with the pasted data. For such cases, the Async
-Clipboard API now supports web custom formats that let developers write arbitrary data to the
-clipboard.
+In some cases, though, it can be desirable to support unsanitized content on the clipboard:
+
+- Situations where the application deals with the sanitization itself.
+- Situations where it's crucial for the copied data to be identical with the pasted data.
+
+For such cases, the Async Clipboard API now supports web custom formats that let developers write
+arbitrary data to the clipboard.
 
 ## Browser support
 
-The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Web
-custom formats for the Async Clipboard API are supported on desktop and on mobile Chromium
-as of version&nbsp;104.
+The Async Clipboard API per se with image support is supported as of Chromium&nbsp;76. Web custom
+formats for the Async Clipboard API are supported on desktop and on mobile Chromium as of
+version&nbsp;104.
 
 ## Writing web custom formats to the clipboard
 
@@ -33,7 +35,7 @@ Writing web custom formats to the clipboard is almost identical to
 [writing sanitized formats](<https://web.dev/async-clipboard/#write()>), except for the requirement
 to prepend the string `"web "` (including the trailing space) to the blob's MIME type.
 
-```js
+```js/14-15
 // Fetch remote JPEG and GIF images and obtain their blob representations.
 const [jpegBlob, gifBlob] = await Promise.all([
   fetch('image.jpg').then((response) => response.blob()),
@@ -58,7 +60,7 @@ try {
 
 ## Reading web custom formats from the clipboard
 
-Similar to writing, reading web custom formats from the clipboard is almost identical to
+As with writing, reading web custom formats from the clipboard is almost identical to
 [reading sanitized formats](<https://web.dev/async-clipboard/#read()>). The only difference is that
 the app now needs to look for clipboard items whose type starts with `"web "`.
 
@@ -83,12 +85,15 @@ try {
 
 ## Interoperability with platform-specific apps
 
-Since web custom formats like `web image/jpeg` are not something that typical platform-specific
-applications understand (since they would expect `image/jpeg`), there is the expectation for them to
-over time add support for such formats as an opt-in if their developers deem support for web custom
-formats to be relevant for their users.
+Web custom formats like `web image/jpeg` are not something that typical platform-specific
+applications understand (since they would expect `image/jpeg`). Over time, concerned apps are
+expected to add support for such formats as an opt-in if their developers deem support for web
+custom formats to be relevant for their users.
 
 ## Demo
+
+You can try the demo below and
+[view the source code](https://glitch.com/edit/#!/custom-async-clipboard) to see how the demo works.
 
 <div class="glitch-embed-wrap" style="height: 1500px; width: 100%;">
   <iframe
@@ -98,3 +103,7 @@ formats to be relevant for their users.
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
+
+## Acknowledgements
+
+This article was reviewed by [Joe Medley](https://github.com/jpmedley).
