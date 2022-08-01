@@ -18,6 +18,7 @@ The `:has()` CSS pseudo-class represents an element if any of the selectors pass
 
 But, it's more than a "parent" selector. That's a nice way to market it. The not so appealing way might be the "conditional environment" selector. But that doesn't have quite the same ring to it. How about the "family" selector?
 
+
 ## Browser Support
 
 Before we go any further, it's worth mentioning browser support. It's not quite there yet. But, it's getting closer. No Firefox support yet, it’s on the roadmap. But it's already in Safari and due for release in Chromium 105. All the demos in this article will tell you if they aren't supported in the browser used.
@@ -113,10 +114,14 @@ figure:not(:has(figcaption)) + p { … }
 
 What interesting use cases can you think of for `:has()`? The fascinating thing here is that has encourages you to break your mental model. It makes you think "Could I approach these styles in a different way?".
 
+
 ## Examples
+
 Let's go through some examples of how we could use it.
 
+
 ### Cards
+
 Take a classic card demo. We could display any information in our card, for example: a title, subtitle, or some media. Here's the basic card.
 
 ```html
@@ -216,6 +221,7 @@ What if a featured card with a banner wiggles for attention?
 
 So many possibilities.
 
+
 ### Forms
 
 How about forms? They're known for being tricky to style. One such example of this is styling inputs and their labels. How do we signal that a field is valid for example? With `:has()`, this gets much easier. We can hook into the relevant form pseudo-classes, for example  `:valid` and `:invalid`.
@@ -313,6 +319,7 @@ No reason you couldn't add a tasteful dash of whimsy for when your users interac
 
 
 ### Content
+
 We touched upon this in the code examples. But, how could you use `:has()` in your document flow? It throws up ideas about how we could style typography around media for example. 
 
 ```css
@@ -344,6 +351,7 @@ This example contains figures. When they have no `figcaption`, they float within
 
 
 ### Reacting to State
+
 How about making your styles reactive to some state in our markup. Consider an example with the "classic" sliding nav bar. If you have a button that toggles opening the nav, it may use the `aria-expanded` attribute. JavaScript could be used to update the appropriate attributes. When `aria-expanded` is `true`, use `:has()` to detect this and update the styles for the sliding nav. JavaScript does its part and CSS can do what it wants with that information. No need to shuffle the markup around or add extra class names, etc. (Note: This isn’t a production ready example).
 
 ```css
@@ -368,12 +376,16 @@ body {
 We aren't adding a "Light dismiss" for the menu here. This would need implementing. But, with `popup`, we will get features like this for free. Check [this demo](https://codepen.io/jh3y/pen/yLKMQPX) out in Chrome Canary to see how the new "popup" attribute could help simplify things.
 {% endAside %}
 
+
 ## Can :has help to avoid user error?
+
 What do all these examples have in common? Aside from the fact they show ways to use `:has()`, none of them required modifying class names. They each inserted new content and updated an attribute. This is a great benefit of `:has()`, in that it can help mitigate user error. With `:has()` CSS is able to take on the responsibility of adjusting to modifications in the DOM. You don't need to juggle class names in JavaScript, creating less potential for developer error. We've all been there when we typo a class name and have to resort to keeping them in `Object` lookups.
 
 It's an interesting thought and does it lead us towards cleaner markup and less code? Less JavaScript as we aren't doing as many JavaScript adjustments. Less HTML as you no longer need classes like `card card--has-media`, etc.
 
+
 ## Thinking outside the box
+
 As mentioned above, `:has()` encourages you to break the mental model. It's an opportunity to try different things. One such way to try and push the boundaries is by making game mechanics with CSS alone. You could create a step based mechanic with forms and CSS for example.
 
 ```html
@@ -441,7 +453,9 @@ Although you won’t be dropping these into production any time soon, they highl
 These examples show some interesting things enabled by `:has()`. However, any new feature of the platform needs careful assessment in terms of potential accessibility issues, especially where interaction is concerned.
 {% endAside %}
 
+
 ## Performance and limitations
+
 Before we go, what can't you do with `:has()`? There are some restrictions with `:has()`. The main ones arise due to the performance hits.
 
 - You can't `:has()` a `:has()`. But you can chain a `:has()`.
@@ -471,7 +485,9 @@ Before we go, what can't you do with `:has()`? There are some restrictions with 
 
 For actual performance metrics related to `:has()`, check out this [Glitch](https://has-pseudo-class-performance.glitch.me/). Credit to Byungwoo for sharing these insights and details around the implementation.
 
+
 ## That’s it!
+
 Get ready for `:has()`. Tell your friends about it and share this post, it’s going to be a game changer for how we approach CSS.
 
 All the demos are available in this [CodePen colllection](https://codepen.io/collection/xKzYaq).
