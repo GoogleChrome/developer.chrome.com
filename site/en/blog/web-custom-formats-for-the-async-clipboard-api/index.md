@@ -7,6 +7,8 @@ subtitle: >
 authors:
   - thomassteiner
 date: 2022-08-01
+hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/qF12zl6xHIIrHw3S5WfW.jpg
+alt: The clip of a clipboard.
 tags:
   - chrome-104
 ---
@@ -110,3 +112,5 @@ You can try the demo below and
 
 This article was reviewed by [Joe Medley](https://github.com/jpmedley)
 and [François Beaufort](https://github.com/beaufortfrancois).
+Hero image by [Neon Tommy](https://www.flickr.com/photos/42757699@N04), used under a
+[CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) license.
