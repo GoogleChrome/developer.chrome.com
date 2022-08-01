@@ -86,6 +86,10 @@ Select the layout container with an odd number of children
 ```css
 .container:has(> .container__item:last-of-type:nth-of-type(odd)) { ... }
 ```
+Select all items in a grid that are not hovered
+```css
+.grid:has(.grid__item:hover) .grid__item:not(:hover) { ... }
+```
 Select every solo `a` within a paragraph that has a direct sibling `hr` element
 ```css
 p:has(+ hr) a:only-child { … }
