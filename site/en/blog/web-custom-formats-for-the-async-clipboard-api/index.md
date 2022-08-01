@@ -7,6 +7,8 @@ subtitle: >
 authors:
   - thomassteiner
 date: 2022-08-01
+tags:
+  - chrome-104
 ---
 
 Until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of
