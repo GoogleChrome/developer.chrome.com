@@ -153,7 +153,13 @@ With `:has()`, you can detect that the card has some media and do the appropriat
   </h2>
   <p class="card__blurb">Here's a description for this awesome article.</p>
   <small class="card__author">Chrome DevRel</small>
-  <img class="card__media" alt="" width="400" height="400" src="./team-awesome.png" />
+  <img
+    class="card__media"
+    alt=""
+    width="400"
+    height="400"
+    src="./team-awesome.png"
+  />
 </li>
 ```
 
@@ -197,7 +203,13 @@ What if a featured card with a banner wiggles for attention?
   </h2>
   <p class="card__blurb">Here's a description for this awesome article.</p>
   <small class="card__author">Chrome DevRel</small>
-  <img class="card__media" alt="" width="400" height="400" src="./team-awesome.png" />
+  <img
+    class="card__media"
+    alt=""
+    width="400"
+    height="400"
+    src="./team-awesome.png"
+  />
   <div class="card__banner"></div>
 </li>
 
