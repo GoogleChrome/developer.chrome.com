@@ -373,7 +373,7 @@ body {
 
 
 {% Aside %}
-We aren't adding a "Light dismiss" for the menu here. This would need implementing. But, with `popup`, we will get features like this for free. Check [this demo](https://codepen.io/jh3y/pen/yLKMQPX) out in Chrome Canary to see how the new "popup" attribute could help simplify things.
+We aren't adding a "Light dismiss" for the menu here. This would need implementing. But, with `popup`, we will get features like this for free. Check [this demo](https://codepen.io/web-dot-dev/pen/KKoQRmY) out in Chrome Canary to see how the new "popup" attribute could help simplify things.
 {% endAside %}
 
 
@@ -421,7 +421,7 @@ As mentioned above, `:has()` encourages you to break the mental model. It's an o
   }
 %}
 
-And that opens up interesting possibilities. You could use that to traverse a form with transforms.
+And that opens up interesting possibilities. You could use that to traverse a form with transforms. Note, this demo is best viewed in a separate browser tab.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -431,7 +431,7 @@ And that opens up interesting possibilities. You could use that to traverse a fo
   }
 %}
 
-And for fun, how about the classic buzz wire game? The mechanic is easier to create with `:has()`. If the wire gets hovered over, the game is over. Yes, we can create some of these game mechanics with things like the sibling [combinators](https://web.dev/learn/css/selectors/#combinators) (`+` and `~`). But, `:has()` is a way to achieve those same results without having to use interesting markup "tricks".
+And for fun, how about the classic buzz wire game? The mechanic is easier to create with `:has()`. If the wire gets hovered over, the game is over. Yes, we can create some of these game mechanics with things like the sibling [combinators](https://web.dev/learn/css/selectors/#combinators) (`+` and `~`). But, `:has()` is a way to achieve those same results without having to use interesting markup "tricks". Note, this demo is best viewed in a separate browser tab.
 
 {% Codepen {
     user: 'web-dot-dev',
