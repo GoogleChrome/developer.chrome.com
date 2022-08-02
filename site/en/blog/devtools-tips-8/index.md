@@ -11,7 +11,7 @@ hero: ''
 alt: >
   DevTools Tips hero logo
 tags:
-  - css
+  - performance
   - devtools
   - devtools-tips
 ---
@@ -33,9 +33,9 @@ The new **Performance insights** panel does the following:
 
 With the **Performance insights** panel, boost the performance of your website in three steps:
 
-- Record the performance.
-- Get a straightforward overview.
-- Identify performance issues at a glance and get a list of actionable insights on how to fix them.
+1. Record the performance.
+2. Get a straightforward overview.
+3. Identify performance issues at a glance and get a list of actionable insights on how to fix them.
 
 Watch the video above to learn how to record the performance, navigate the overview, and get insights.
 
