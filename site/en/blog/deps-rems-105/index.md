@@ -4,7 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 105 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2022-08-04
-hero: 'image/'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/ffGHwaPUVn8VxZrnrpzA.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
