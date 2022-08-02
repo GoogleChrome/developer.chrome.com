@@ -298,11 +298,6 @@ bugs and invite interested developers to fix them. Mozilla operates a
 to enable individual sites to run successfully in Firefox. WebKit maintains a
 [quirks list](https://trac.webkit.org/browser/webkit/trunk/Source/WebCore/page/Quirks.cpp) and
 [hires WebKit Web Compatibility Analysts](https://jobs.apple.com/search?search=%22WebKit%20Web%20Compatibility%20Analyst%22&sort=relevance).
-Most importantly though, the browser vendors themselves have joined forces to improve web
-compatibility in core areas in the context of the [Compat 2021](https://web.dev/compat2021/) and
-[Interop 2022](https://web.dev/interop-2022/) efforts, with
-[Interop 2023](https://github.com/web-platform-tests/interop-2022/issues/78) already in the
-planning.
 
 <details>
   <summary>How big a challenge is this?</summary>
