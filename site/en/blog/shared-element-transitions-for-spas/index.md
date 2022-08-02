@@ -113,7 +113,7 @@ Once that's complete, the callback passed to `.start()` is called. That's where 
 
 Once the state is captured, the API constructs a pseudo-element tree like this:
 
-```plain
+```diff
 ::page-transition
 └─ ::page-transition-container(root)
    └─ ::page-transition-image-wrapper(root)
@@ -237,7 +237,7 @@ Now the header stays in place and cross-fades.
 
 That CSS declaration caused the pseudo-element tree to change:
 
-```plain
+```diff
 ::page-transition
 ├─ ::page-transition-container(root)
 │  └─ ::page-transition-image-wrapper(root)
@@ -271,7 +271,7 @@ That hasn't mattered until now, as the header is the same size and position both
 
 So now we have three parts to play with:
 
-```plain
+```diff
 ::page-transition
 ├─ ::page-transition-container(root)
 │  └─ …
