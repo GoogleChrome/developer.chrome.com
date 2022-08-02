@@ -50,13 +50,13 @@ Set up a shared bidding script for separate interest groups. This prevents the b
 
 ### Reuse `trustedBiddingSignalsUrls`
 
-Network latency and resource usage can be very significant. Fewer real-time trusted bidding signals fetches can help reduce this latency.
+Network latency and resource usage can be very significant. Fewer real-time bidding signals fetches can help reduce this latency.
 
-As the explainer notes, the [trusted bidding signal fetches can be combined](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups) when the `trustedBiddingSignalsUrl` is reused amongst multiple interest groups, so be sure to use the same `trustedBiddingSignalsUrl` between interest groups when possible.
+As the explainer notes, the [bidding signal fetches can be combined](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups) when the `trustedBiddingSignalsUrl` is reused amongst multiple interest groups, so be sure to use the same `trustedBiddingSignalsUrl` between interest groups when possible.
 
-### Smaller real-time trusted bidding signals fetches
+### Smaller real-time bidding signals fetches
 
-Network latency can be very significant, and this is directly impacted by how much data is transferred during the real-time trusted bidding signal fetches. Prefer storing ad-specific or interest-group-specific data in the interest group, rather than on the real-time trusted bidding signal server. Reserve the real-time trusted bidding signal data for only those truly real-time signals, like campaign budgeting or kill-switches.
+Network latency can be very significant, and this is directly impacted by how much data is transferred during the real-time bidding signal fetches. Prefer storing ad-specific or interest-group-specific data in the interest group, rather than on the real-time bidding signal server. Reserve the real-time bidding signal data for only those truly real-time signals, like campaign budgeting or kill-switches.
 
 Any signal that can be updated on a daily or longer basis should be stored in the interest group and updated via the daily updates.
 
