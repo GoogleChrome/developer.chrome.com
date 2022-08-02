@@ -2,12 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Deprecating Web SQL
 description: >
-  The Web SQL Database standard was first proposed in April 2009 and abandoned in November 2010.
-  While it was implemented in WebKit and remained active in Blink, Gecko never implemented this
-  feature and WebKit deprecated it in 2019. The W3C encourages those needing web databases to adopt
-  Web Storage or Indexed Database. Web SQL has been deprecated and removed for third-party contexts
-  in Chromium 97. Now Chromium 105 deprecates Web SQL in insecure contexts. The complete removal of
-  the feature is planned for Chromium 107.
+  Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented it and WebKit deprecated it in 2019. Those needing web databases can use Web Storage or Indexed Database. Web SQL was removed for third-party contexts in Chromium 97. Chromium 105 deprecates Web SQL in insecure contexts. Complete removal is planned for Chromium 107.
 authors:
   - thomassteiner
 date: 2022-08-02
