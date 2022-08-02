@@ -104,7 +104,7 @@ When calling the `navigator.runAdAuction()` function, the seller provides code t
 `scoreAd()` function. This function is run for each bidder in the auction: to score each of the bids
 returned by `generateBid()`. During the ad auction, the bidding code run for each buyer
 (`generateBid()`) and the ad scoring code run for the seller (`scoreAd()`) can receive realtime data
-from a [trusted server](#trusted-server).
+from a [FLEDGE service](#fledge-service).
 
 The bid with the highest score wins the auction. The ad associated with the bid is displayed in
 a [`<fencedframe>`](#fenced-frame) element, using the ad URL specified by the bid (which must be one of the ad URLs from the list provided in the interest group's configuration information).
@@ -264,18 +264,20 @@ give it a score and choose the most desirable bid.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 5. The seller and participating buyers receive realtime data from trusted servers
+### 5. The seller and participating buyers receive realtime data
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
-  alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place, with a participant getting data from a trusted
-  server.", width="600", height="189" %}
+  alt="A person views a news website in a browser on their laptop. An ad
+  auction using the FLEDGE API is taking place, with a participant getting data
+  from a FLEDGE service.",
+  width="600", height="189"
+%}
 
 During the ad auction, the ad-space [seller](#seller) or bidding ad-space [buyers](#buyer) may need
 to access realtime data. For example, the seller may be required to check that [ad creatives](#creative)
 comply with publisher policies, or bidders may need to calculate the remaining budget in an ad
 campaign. To meet the privacy requirements of FLEDGE, this data is supplied using
-[trusted servers](#trusted-server).
+[FLEDGE services](#fledge-services).
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
@@ -429,7 +431,7 @@ JavaScript function `navigator.joinAdInterestGroup()`) the buyer provides the br
 * A URL for bidding code, that will be used when the [seller](#seller) runs an [ad auction](#ad-auction).
 * Potentially, URLs for [ad creatives](#creative) for the interest group. (Ad URLs may be added
 later via an update.)
-* A list of data [keys](#key-value), and the URL of the buyer's [trusted server](#trusted-server),
+* A list of data [keys](#key-value), and the URL of the buyer's [FLEDGE service](#fledge-services),
 to enable bidding code to get realtime data during an auction.
 
 The buyer's code can also include a `reportWin()` function to report the auction outcome.
@@ -502,7 +504,7 @@ owner of an interest group.
 The seller provides the browser with code to score bids, which includes each bid's value, the
 [ad creative](#creative) URL, and other data returned from each buyer. During the auction, bidding
 code from buyers and bid-scoring code from the seller can receive data from their
-[trusted servers](#trusted-server). Once an ad is chosen and displayed (in a
+[FLEDGE service](#fledge-service). Once an ad is chosen and displayed (in a
 [fenced frame](#fenced-frame) to preserve privacy) the seller and the winning bidder can report the
 auction result.
 
@@ -522,7 +524,7 @@ As explained in [How does FLEDGE work?](#joinAdInterestGroup), each interest gro
 URL for code that can be used to bid in an ad auction, when the group owner called
 `navigator.joinAdInterestGroup()`. That code must include a `generateBid()` function, which returns
 a numerical bid and a URL for an [ad creative](#creative), along with other data. Bidding code can
-receive realtime data from each bidder's [trusted server](#trusted-server), such as remaining ad
+receive realtime data from each bidder's [FLEDGE service](#FLEDGE-service), such as remaining ad
 campaign budget.
 
 ### 4. The seller's code evaluates each buyer's bid
@@ -532,7 +534,7 @@ once for each ad and accompanying bid, to determine its desirability. The `score
 run for every candidate ad, in the auction logic JavaScript code provided by the seller. This
 function uses the bid value and other data returned by the `generateBid()` function in each buyer's
 code (in the previous step). The seller may also receive realtime data from its
-[trusted server](#trusted-server).
+[FLEDGE service](#fledge-services).
 
 For each ad, the `scoreAd()` function returns a number indicating its desirability. The most
 desirable ad is the winner. Before an auction starts, the seller finds the best contextual ad for
@@ -560,22 +562,21 @@ A reporting mechanism for losing bidders is [under discussion](https://github.co
 
 {% endDetails %}
 
-
-{: #trusted-server-detail}
+{: #trusted-server-detail} {: #fledge-service-detail}
 
 {% Details %}
 
 {% DetailsSummary %}
-## What is a trusted server?
+## What is a FLEDGE service?
 
 {% endDetailsSummary %}
 
-In the context of the Privacy Sandbox, a trusted server is a secure environment to enable access to
-data, while preserving privacy. A request to a trusted server cannot result in event-level logging,
-or have other side effects.
+A FLEDGE service is a secure environment on the cloud which provides access to
+data, while preserving privacy. A request to a FLEDGE service cannot result in
+event-level logging, or have other side effects.
 
-To enable a party (such as a web browser during a FLEDGE auction) to ask questions that might reveal
-sensitive information, a trusted server must provide:
+To allow a party (such as a web browser during a FLEDGE auction) to ask questions that might reveal
+sensitive information, a FLEDGE service must provide:
 
 -  **Policy approaches** such as mandatory code audits, or usage of servers only from trusted
    third parties.
@@ -597,13 +598,13 @@ data. For example, bidders may want to calculate the remaining budget in an ad c
 seller may be required to check ad creatives against publisher policies.
 
 To meet the privacy requirements of FLEDGE, realtime data required during an ad auction is provided
-by [trusted servers](#trusted-server-detail). When each buyer calls `navigator.joinAdInterestGroup()`,
-the buyer specifies a trusted server URL and specifies the data it will require from the
+by [FLEDGE service](#fledge-services). When each buyer calls `navigator.joinAdInterestGroup()`,
+the buyer specifies the service's URL and specifies the data it will require from the
 server during an auction. Likewise, when the seller runs an ad auction by calling
-`navigator.runAdAuction()`, the seller provides a URL for its trusted server, and specifies the
+`navigator.runAdAuction()`, the seller provides a URL for its FLEDGE service, and specifies the
 data that will be required from the server.
 
-The role and the ownership of the trusted server is still under discussion, so initial testing of
+The role and the ownership of the FLEDGE service is still under discussion, so initial testing of
 FLEDGE temporarily uses a ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)
 model.
 
@@ -699,7 +700,7 @@ the user's browser to join their interest group.
 
 ### Key-value
 
-See [Trusted server](#key-value).
+See [FLEDGE service](#key-value).
 
 ### Publisher
 
@@ -735,19 +736,22 @@ An adtech service used to automate selling ad inventory. SSPs allow publishers t
 inventory (empty rectangles where ads will go) to multiple ad exchanges, DSPs, and networks. This
 enables a wide range of potential buyers to bid for ad space.
 
-{: #trusted-server}
+{: #trusted-server} {: #fledge-service}
 
-### Trusted server
+### FLEDGE services
 
-A server used to provide data, but with major restrictions to safeguard privacy, backed by technical
-and policy guarantees. A request to a trusted server—such as a bidder in a FLEDGE ad auction
-checking on the remaining budget for an ad campaign—cannot result in event-level logging, or have
-other side effects.
+A service run in the cloud, used to provide data, but with major restrictions to safeguard privacy, backed by technical
+and policy guarantees. 
+
+Requests to FLEDGE services cannot result in event-logging or have other side
+effects. For example, bidders may want to check on the remaining budget for an
+ad campaign. This request will be secure.
 
 {: #key-value}
 
-When a buyer or seller makes a request to a trusted server, they specify the data they require from
-the server as a list of 'keys'. The trusted server responds with a value for each key.
+When a buyer or seller makes a request to the FLEDGE Key/Value server, a FLEDGE
+service, they specify the data they require as a list of 'keys'. The FLEDGE
+service responds with a value for each key.
 
 {: #worklet}
 
