@@ -302,7 +302,7 @@ to enable individual sites to run successfully in Firefox. WebKit maintains a
 <details>
   <summary>How big a challenge is this?</summary>
   <p>
-    Compatibility is the top priority for web developers and browser vendors alike. Initiatives like Interop and Compat demonstrate a clear, concerted effort to improve the situation, and the <a href="https://wpt.fyi/interop-2022">dashboard</a> shows that it's working. With feature testing and progressive enhancement, impressive apps which behave well on all browsers can be built.
+    Compatibility is the top priority for web developers and browser vendors alike. With feature testing and progressive enhancement, impressive apps which behave well on all browsers can be built.
   </p>
 </details>
 
