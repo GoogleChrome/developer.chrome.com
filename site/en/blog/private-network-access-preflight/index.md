@@ -61,8 +61,8 @@ the change and adjust accordingly.
 To limit the influence to the websites not already supporting preflights, we
 restrict the timeout to 200 milliseconds in M104. The restriction is only applied
 in warning mode. The special timeout limit would be removed after enabling
-the enforce mode by switching “Respect the result of Private Network Access 
-preflights” to “Enabled” in `chrome://flags` and the default limit is 5 seconds.
+the enforce mode by switching "Respect the result of Private Network Access 
+preflights" to "Enabled" in `chrome://flags` and the default limit is 5 seconds.
 {% endAside %}
 1. In Chrome 107 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
