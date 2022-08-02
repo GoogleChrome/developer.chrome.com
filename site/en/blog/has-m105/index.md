@@ -9,7 +9,7 @@ alt: "Image of a neon sign displaying the words Good times"
 tags:
   - css
   - chrome-105
-date: 2022-07-25
+date: 2022-08-03
 ---
 
 Since time began (In CSS terms), we've worked with a cascade in various senses. Our styles compose a "Cascading Style Sheet". And our selectors cascade too. They can go sideways. In most cases they go downwards. But never upwards. For years, we've fantasized about a "Parent selector". And now it's finally coming! In the shape of a `:has()` pseudo selector.
