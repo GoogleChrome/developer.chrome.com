@@ -191,17 +191,19 @@ anywhere in a page, even from cross-domain iframes. In the future, once site own
 to adjust their cross-domain iframe [permissions policies](/docs/privacy-sandbox/permissions-policy/), the plan is to disallow calls from
 cross-domain iframes, as the explainer describes.
 
-#### Trusted servers
+{: #trusted-servers} {: #fledge-service} 
+
+#### FLEDGE services
 
 As part of a FLEDGE ad auction, the browser can access a
-[trusted server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
+[FLEDGE service ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server) (which may be referred to as a trusted service)
 that returns simple key-value pairs to provide information to an ad buyer, such as remaining
 campaign budget. The FLEDGE proposal [mandates](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements)
 that this server "performs no event-level logging and has no other side effects based on these
 requests".  However, in the current initial experimental phase for testing FLEDGE, the seller
-and buyers can run trusted servers themselves (a
+and buyers can run FLEDGE services themselves (a
 "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server)"
-model). Discussion is underway about how trusted servers are managed and owned.
+model). Discussion is underway about how FLEDGE services are managed and owned.
 
 ### Detect feature support
 
@@ -512,13 +514,13 @@ In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
         <td style="vertical-align: top;"><code>trustedBiddingSignalsUrl</code>**</td>
         <td style="vertical-align: top;">Optional</td>
         <td style="vertical-align: top;"><code>'https://dsp.example/trusted/bidding-signals'</code></td>
-        <td style="vertical-align: top;">Base URL for key-value requests to bidder's trusted server.</td>
+        <td style="vertical-align: top;">Base URL for key-value requests to bidder's FLEDGE service.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>trustedBiddingSignalsKeys</code></td>
         <td style="vertical-align: top;">Optional</td>
         <td style="vertical-align: top;"><code>['key1', 'key2' ...]</code></td>
-        <td style="vertical-align: top;">Keys for requests to key-value trusted server.</td>
+        <td style="vertical-align: top;">Keys for requests to key-value FLEDGE service.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>userBiddingSignals</code></td>
@@ -686,7 +688,7 @@ The `browserSignals` object has the following properties:
   bidCount: 17,
   prevWins: [[time1,ad1],[time2,ad2],...],
   wasmHelper: ... /* WebAssembly.Module object based on interest group's biddingWasmHelperUrl. */
-  dataVersion: 1, /* Data-Version value from the trusted bidding signals server's response(s). */
+  dataVersion: 1, /* Data-Version value from the bidding signals server's response(s). */
 }
 ```
 
@@ -785,7 +787,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or
 the publisher itself. The purpose of the auction is to select the most appropriate ad for a single
 available ad slot on the current page. The auction takes into account the interest groups the
-browser is a member of, along with data from ad-space buyers and the seller—from trusted servers in
+browser is a member of, along with data from ad-space buyers and the seller—from FLEDGE service in
 the next step.
 
 The ad-space **seller** makes a request to the user's browser to begin an ad auction by calling
@@ -872,7 +874,7 @@ metadata, one at a time, and then assigns it a numerical desirability score.
         <td style="vertical-align: top;"><code>trustedScoringSignalsUrl</code></td>
         <td style="vertical-align: top;">Optional</td>
         <td style="vertical-align: top;"><code>'https://ssp.example/scoring-signals'</code></td>
-        <td style="vertical-align: top;">URL of seller's trusted server.</td>
+        <td style="vertical-align: top;">URL of seller's FLEDGE service.</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>interestGroupBuyers*</code></td>
@@ -953,7 +955,7 @@ A numerical bid value.
 * `auctionConfig`<br>
 The auction configuration object passed to `navigator.runAdAuction()`.
 * `trustedScoringSignals`<br>
-Values retrieved at auction time from the seller's trusted server,
+Values retrieved at auction time from the seller's FLEDGE service,
 representing the seller's opinion of the ad.
 * `browserSignals`<br>
 An object constructed by the browser, including information that the browser
@@ -966,7 +968,7 @@ knows and which the seller's auction script might want to verify:
   renderUrl: 'https://cdn.example/render',
   adComponents: ['https://cdn.com/ad-component-1', ...],
   biddingDurationMsec: 12,
-  dataVersion: 1 /* Data-Version value from the trusted scoring signals server response. */
+  dataVersion: 1 /* Data-Version value from the scoring signals server response. */
 }
 ```
 
@@ -975,30 +977,31 @@ its `scoreAd()` logic is to reject any ad that can't beat the contextual winner.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 5. The seller and participating buyers receive realtime data from trusted servers
+### 5. The seller and participating buyers receive realtime data
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
-  alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place, with a participant getting data from a trusted
-  server.", width="400", height="126" %}
+  alt="A person views a news website in a browser on their laptop. An ad
+  auction using the FLEDGE API is taking place, with a participant getting data from a FLEDGE service.",
+  width="400", height="126"
+%}
 
 **Explainer section:** [Fetching Real-Time Data from a Trusted Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
 
 During an ad auction, the ad-space **seller** can get realtime data about specific ad creatives by
-making a request to a trusted server using the `trustedScoringSignalsUrl` property of
+making a request to a FLEDGE service using the `trustedScoringSignalsUrl` property of
 [auction configuration](#ad-auction) argument passed to `navigator.runAdAuction()`, along with the keys
 from the `renderUrl` properties of all entries in the `ads` and `adComponents` fields of all
 interest groups in the auction.
 
-Likewise, an ad-space **buyer** can request realtime data from a trusted server using the
+Likewise, an ad-space **buyer** can request realtime data from a FLEDGE service using the
 `trustedBiddingSignalsUrl` and `trustedBiddingSignalsKeys` properties of the interest group argument
 passed to `navigator.joinAdInterestGroup()`.
 
-When  `runAdAuction()` is called, the browser makes a request to each ad buyer's trusted server. The
+When  `runAdAuction()` is called, the browser makes a request to each ad buyer's FLEDGE service. The
 URL for the request might look like this:
 
 ```javascript
-https://trusted-server.example/getvalues?hostname=publisher.example&keys=key1,key2
+https://fledge-service.example/getvalues?hostname=publisher.example&keys=key1,key2
 ```
 
 * The base URL comes from `trustedBiddingSignalsUrl`.
@@ -1172,7 +1175,7 @@ The diagram below outlines each stage of a FLEDGE [ad auction](#ad-auction):
 
 <br>
 
-
+## Frequently asked questions {:#faqs}
 
 {% Details %}
 
@@ -1196,7 +1199,7 @@ FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifica
 
 -   In [SPARROW](https://github.com/WICG/sparrow):
    [Criteo](https://www.admonsters.com/what-is-sparrow/) proposed the addition of a trusted-server
-   ("Gatekeeper") model.  FLEDGE includes a more limited use of trusted servers, for real-time data
+   ("Gatekeeper") model.  FLEDGE includes a more limited use of servers, for real-time data
    lookup and aggregated reporting.
 -  NextRoll's [TERN](https://github.com/WICG/turtledove/blob/main/TERN.md) and Magnite's
    [PARRROT](https://github.com/prebid/identity-gatekeeper/blob/master/proposals/PARRROT.md)
