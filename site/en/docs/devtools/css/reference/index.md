@@ -403,7 +403,7 @@ To add a new style rule:
 
 1.  [Select an element][21].
 2.  Click **New Style Rule**
-    {% Img src="image/admin/XcURsD5IoAJqI4TwgY4w.png", alt="New Style Rule", width="20", height="20" %}. DevTools inserts a
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="New Style Rule.", width="20", height="20" %}. DevTools inserts a
     new rule beneath the **element.style** rule.
 
 {% Img src="image/admin/yAkLVkP6eeeBihslr7oy.png", alt="Adding a new style rule", width="800", height="599" %}
@@ -414,7 +414,7 @@ Rule**
 #### Choose which stylesheet to add a rule to {: #style-rule-stylesheet }
 
 When [adding a new style rule][22], click and hold **New Style Rule**
-![New Style Rule](/docs/devtools/css/imgs/new-style-rule.png) to choose which stylesheet
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="New Style Rule.", width="20", height="20" %} to choose which stylesheet
 to add the style rule to.
 
 {% Img src="image/admin/QEehBhl9E7tfEwyfdWgO.png", alt="Choosing a stylesheet", width="800", height="599" %}
