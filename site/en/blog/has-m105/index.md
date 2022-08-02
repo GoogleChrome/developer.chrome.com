@@ -229,7 +229,15 @@ How about forms? They're known for being tricky to style. One such example of th
 ```html
 <div class="form-group">
   <label for="email" class="form-label">Email</label>
-  <input required type="email" id="email" class="form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter valid email address" placeholder="Enter valid email address"/>   
+  <input
+    required
+    type="email"
+    id="email"
+    class="form-input"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+    title="Enter valid email address"
+    placeholder="Enter valid email address"
+  />   
 </div
 ```
 ```css
@@ -276,7 +284,15 @@ You could also use `:has()` to show and hide the error message for a field. Take
     Email
   </label>
   <div class="form-group__input">
-    <input required type="email" id="email" class="form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter valid email address" placeholder="Enter valid email address"/>   
+    <input
+      required
+      type="email"
+      id="email"
+      class="form-input"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      title="Enter valid email address"
+      placeholder="Enter valid email address"
+    />   
     <div class="form-group__error">Enter a valid email address</div>
   </div>
 </div>
@@ -444,7 +460,8 @@ And for fun, how about the classic buzz wire game? The mechanic is easier to cre
 Although you won’t be dropping these into production any time soon, they highlight ways in which you can use the primitive. Such as being able to chain a `:has()`.
 
 ```css
-:root:has(#start:checked):has(.game__success:hover, .screen--win:hover) .screen--win {
+:root:has(#start:checked):has(.game__success:hover, .screen--win:hover)
+.screen--win {
   --display-win: 1;
 }
 
