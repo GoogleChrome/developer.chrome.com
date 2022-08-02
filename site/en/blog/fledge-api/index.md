@@ -196,11 +196,11 @@ cross-domain iframes, as the explainer describes.
 #### FLEDGE services
 
 As part of a FLEDGE ad auction, the browser can access a
-[FLEDGE service ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server) (which may be referred to as a trusted service)
-that returns simple key-value pairs to provide information to an ad buyer, such as remaining
+[FLEDGE service](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
+that returns key-value pairs to provide information to an ad buyer, such as remaining
 campaign budget. The FLEDGE proposal [mandates](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements)
-that this server "performs no event-level logging and has no other side effects based on these
-requests".  However, in the current initial experimental phase for testing FLEDGE, the seller
+that this service "performs no event-level logging and has no other side effects based on these
+requests". However, in the current initial experimental phase for testing FLEDGE, the seller
 and buyers can run FLEDGE services themselves (a
 "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server)"
 model). Discussion is underway about how FLEDGE services are managed and owned.
