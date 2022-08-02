@@ -15,14 +15,13 @@ tags:
 
 {% include 'partials/see-all-dep-rem.md' %}
 
-Chrome 105 beta was released on August 4, 2022 and is expected to become the
-stable version in late August, 2022.
+Chrome 105 beta was released on August 4, 2022 and is expected to become the stable version in late August, 2022.
 
 ## Remove WebSQL in non-secure contexts
 
-WebSQL in non-secure contexts [is now removed](https://www.chromestatus.com/feature/5175124599767040). The Web SQL Database standard was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented this feature and WebKit deprecated it in 2019. The W3C encourages Web Storage and Indexed Database for those needing alternatives.
+WebSQL in non-secure contexts is deprecated. The Web SQL Database standard was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented this feature and WebKit deprecated it in 2019. The W3C encourages [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API) and [IndexedDb](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) for those needing alternatives.
 
-Developers should expect that WebSQL itself will be deprecated and removed when usage is low enough.
+Developers should expect that WebSQL itself will be deprecated and removed when usage is low enough. For more information, see [Deprecating Web SQL](https://developer.chrome.com/blog/deprecating-web-sql).
 
 ## CSS default keyword is disallowed in custom identifiers
 
