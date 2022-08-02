@@ -14,14 +14,18 @@ date: 2022-08-02
 # updated: 2022-08-02
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
+tags:
+  - deprecations
+  - removals
+  - storage
 ---
 
-The [Web SQL Database](https://www.w3.org/TR/webdatabase/) proposal was first
+The [Web SQL Database](https://www.w3.org/TR/webdatabase/) proposal was
 [introduced in April 2009](https://www.w3.org/TR/2009/WD-webdatabase-20091222/) and
 [abandoned in November 2010](https://www.w3.org/TR/webdatabase/#status-of-this-document). While it
-was implemented in the WebKit browser engine (that powers Safari and early versions of Chrome) and
-remained active in the Blink engine (that powers Chrome after the switch from WebKit), the Gecko
-engine (that powers Firefox) never implemented this feature and
+was implemented in WebKit (which powers Safari and early versions of Chrome) and
+remained active in the Blink engine (that powers Chrome after the switch from WebKit), Gecko
+(which powers Firefox) never implemented this feature and
 [WebKit deprecated it in 2019](https://lists.webkit.org/pipermail/webkit-dev/2019-November/030968.html).
 The World Wide Web Consortium (W3C)
 [encourages](https://www.w3.org/TR/webdatabase/#:~:text=The%20Web%20Applications%20Working%20Group%20continues%20work%20on%20two%20other%20storage%2Drelated%20specifications%3A%20Web%20Storage%20and%20Indexed%20Database%20API.)
@@ -31,10 +35,10 @@ those needing web databases to adopt
 
 ## Web SQL deprecation steps
 
-Now, in the Chromium project that browsers like Chrome and Edge are built upon, we're taking steps
-to deprecate Web SQL for good, too:
+Now, in Chromium, which powers Chrome and Edge among others, we're 
+deprecating Web SQL for good:
 
-- Web SQL has been deprecated and removed for **third-party contexts** in **Chromium&nbsp;97**.
+- Web SQL was deprecated and removed for **third-party contexts** in **Chromium&nbsp;97**.
 - Web SQL access in **insecure contexts** is deprecated as of **Chromium&nbsp;105**.
 - The **complete removal** of the feature is planned for **Chromium&nbsp;107**.
 
@@ -122,15 +126,14 @@ openDatabase(
 
 {% Aside 'warning' %} This code is obsolete. Don't use it in practice. {% endAside %}
 
-If you run this code and
-[inspect the created table with Chrome DevTools](/docs/devtools/storage/websql/), this is the result
-that you get:
+If you were to run this code and
+[inspect the created table with Chrome DevTools](/docs/devtools/storage/websql/), this is the result:
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/MnkvXruPWsb89lFTynqX.png", alt="Inspecting the Web SQL section in Chrome DevTools shows a database called mydatabase with a table called rainstorms with the columns mood (textual) and severity (integer) that has one entry with a mood of somber and a severity of six.", width="800", height="187" %}
 
 ### Lack of implementor support
 
-Apart from the, from a today's point of view, arcane API shape, Mozilla had a lot of
+Apart from the arcane API shape (at least from today's point of view), Mozilla had many
 [concerns](https://hacks.mozilla.org/2010/06/beyond-html5-database-apis-and-the-road-to-indexeddb/)
 about Web SQL being built upon SQLite:
 
@@ -139,7 +142,7 @@ all because there isn't a credible, widely accepted standard that subsets SQL in
 Additionally, we don't want changes to SQLite to affect the web later, and don't think harnessing
 major browser releases (and a web standard) to SQLite is prudent."_
 
-You can read up more on Mozilla's concerns in
+You can read about Mozilla's concerns in
 [former Mozillan Vladimir Vukićević's blog post](https://web.archive.org/web/20090412154147/http://blog.vlad1.com/2009/04/06/html5-web-storage-and-sql/).
 For some more history, check out the
 [W3C Web Applications Working Group minutes](http://www.w3.org/2009/11/02-webapps-minutes.html#item10)
@@ -168,8 +171,8 @@ on the [blink-dev mailing list](https://groups.google.com/a/chromium.org/g/blink
 this group is open to anyone, and anyone is allowed to post.
 
 ## Related links
-
-- ChromeStatus entry
+ - [All deprecations and removals in Chromium](/tags/removals/)
+- ChromeStatus entry: 
   [Deprecate and remove WebSQL in third-party contexts](https://chromestatus.com/feature/5684870116278272)
 - ChromeStatus entry
   [Deprecate and remove WebSQL in non-secure contexts](https://chromestatus.com/feature/5175124599767040)
