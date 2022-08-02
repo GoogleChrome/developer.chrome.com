@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Deprecating Web SQL
+title: Deprecating and removing Web SQL
 description: >
   Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented
   it and WebKit deprecated it in 2019. Those needing web databases can use Web Storage or Indexed
