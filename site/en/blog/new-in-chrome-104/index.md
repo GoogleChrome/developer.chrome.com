@@ -1,10 +1,10 @@
 ---
 title: New in Chrome 104
 description: >
-  Chrome 104 is rolling out now! With region capture, you can now specify a
-  crop area when using getDisplayMedia to capture the current tab. Media
+  Chrome 104 is rolling out now! Region capture specifies a
+  crop area when using getDisplayMedia() to capture the current tab. Media
   query syntax can be written using mathematical comparison operators.
-  Shared Element Transitions start a new origin trial. And there's plenty
+  Shared Element Transitions starts an origin trial. And there's plenty
   more.
 layout: 'layouts/blog-post.njk'
 date: 2022-08-02
@@ -23,10 +23,10 @@ tags:
 Here's what you need to know:
 
 * You can now specify a crop area using [region capture](#region-capture)
-  when using `getDisplayMedia` to capture the current tab.
+  when using `getDisplayMedia()` to capture the current tab.
 * Media query syntax can be written using
   [mathematical comparison operators](#mq-math).
-* [Shared Element Transitions](#shared-element-transitions) start a new
+* [Shared Element Transitions](#shared-element-transitions) starts an
   origin trial.
 * And there's plenty [more](#more).
 
@@ -35,7 +35,7 @@ see what's new for developers in Chrome 104.
 
 ## Specify a crop area with region capture {: #region-capture }
 
-`getDisplayMedia` makes it possible to create a video stream from the current
+`getDisplayMedia()` makes it possible to create a video stream from the current
 tab. But, there are times when you don’t want the entire tab, only a small
 portion of it. Until now, the only way to do that was to manually crop each
 video frame.
@@ -45,14 +45,14 @@ wants to share. For example, Google Slides could allow you to stay in the
 standard editing view, and share the current slide.
 
 <figure>
-  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/L87rANm3IfsVZiMHfbH2.png", alt="Screenshot of a browser window featuring a web app highlighting the main content area and cross-origin iframe.", width="800", height="568" %}
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/L87rANm3IfsVZiMHfbH2.png", alt="Screenshot of a browser window featuring a web app highlighting the main content area and a cross-origin iframe.", width="800", height="568" %}
   <figcaption>
     The main content area is in blue and the cross-origin iframe is in red.
   </figcaption>
 </figure>
 
 To use it, select the element to share, then create a new `CropTarget` based on
-that element. Next, start screen sharing by calling `getDisplayMedia()`, that
+that element. Next, start screen sharing by calling `getDisplayMedia()`. That
 prompts the user for permission to share their screen. Then, call
 `track.cropTo()` and pass the `cropTarget` created earlier.
 
@@ -131,7 +131,7 @@ harsh, and sometimes means a momentary blank screen. For a single page app,
 it can be better, but transitions are still hard.
 
 Shared Element Transitions, starting a new [origin trial][set-ot] in Chrome
-104, allow you to provide smooth transitions, regardless of whether the
+104, allows you to provide smooth transitions, regardless of whether the
 transitions are cross-document (for example in a multi-page app), or
 intra-document (for example in a single page app).
 
@@ -162,7 +162,7 @@ async function spaNavigate(path) {
 
 {% Columns %}
 {% Column %}
-Under the hood, Shared Element Transitions use CSS Animations, so you can
+Under the hood, Shared Element Transitions uses CSS Animations, so you can
 change from a fade in effect, to slide in, or whatever you want.
 {% endColumn %}
 
@@ -207,4 +207,4 @@ tell you what's new in Chrome!
 
 [mq-l4-se]: https://www.w3.org/TR/mediaqueries-4/#mq-range-context
 [set-explainer]: https://github.com/WICG/shared-element-transitions/blob/main/explainer.md
-[set-ot]: https://developer.chrome.com/origintrials/#/view_trial/1762033354208706561
+[set-ot]: /origintrials/#/view_trial/1762033354208706561
