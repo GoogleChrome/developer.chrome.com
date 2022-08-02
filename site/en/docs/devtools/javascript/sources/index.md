@@ -38,7 +38,7 @@ How the **Page** pane is organized:
 - The second-level, such as `developers.google.com` on the screenshot above, represents an [origin][7].
 - The third-level, fourth-level, and so on, represent directories and resources that were loaded
   from that origin. For example, on the screenshot above, the full path to the resource 
-  `devsite-googler-button` is `developers.google.com/_static/19aa27122b/css/devsite-googler-button`
+  `devsite-googler-button` is `developers.google.com/_static/19aa27122b/css/devsite-googler-button`.
 
 Click a file in the **Page** pane to view its contents in the **Editor** pane. You can view any type
 of file. For images, you see a preview of the image.
