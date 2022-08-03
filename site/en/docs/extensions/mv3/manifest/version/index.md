@@ -9,9 +9,10 @@ description: Reference documentation for the version property of manifest.json.
 One to four dot-separated integers identifying the version of this extension. A couple of rules
 apply to the integers:
 
-- They must be between 0 and 65535, inclusive.
-- Non-zero integers can't start with 0. For example, 99999 and 032 are both invalid.
-- They must not be all zero. For example, 0.0 and 0.0.0.0 are invalid versions.
+- They must be between 0 and 65535, inclusive. For example, 99999 is invalid because it is too
+  large.
+- Non-zero integers can't start with 0. For example, 032 is invalid because it starts with a zero.
+- They must not be all zero. For example, 0 and 0.0.0.0 are invalid while 0.1.0.0 is valid.
 
 Here are some examples of valid versions:
 
