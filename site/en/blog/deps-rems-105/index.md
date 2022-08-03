@@ -25,7 +25,7 @@ Developers should expect that WebSQL itself will be deprecated and removed when 
 
 ## CSS default keyword is disallowed in custom identifiers
 
-The CSS keyword ['default' is no longer allowed](https://chromestatus.com/feature/5096490737860608) within CSS custom identifiers, which are used for many types of user-defined names in CSS (for example, names created by @keyframes rules, counters, @container names, custom layout or paint names). This adds `'default'` to the list of names that are restricted from use in custom identifiers, specifically `'inherit'`, `'initial'`, `'unset'`, `'revert'`, and `'revert-layer'`.
+The CSS keyword ['default' is no longer allowed](https://chromestatus.com/feature/5096490737860608) within CSS custom identifiers, which are used for many types of user-defined names in CSS (for example, names created by `@keyframes` rules, counters, `@container` names, custom layout or paint names). This adds `'default'` to the list of names that are restricted from use in custom identifiers, specifically `'inherit'`, `'initial'`, `'unset'`, `'revert'`, and `'revert-layer'`.
 
 ## Deprecations in the Navigation API
 
