@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-07-26
+updated: 2022-08-02
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -66,8 +66,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-token-third" class="w-ml--l"><a href="#token-third">Third-party script uses a 
     third-party token</a></label>
   <br>
-  <input class="w-checkbox" type="checkbox" id="check-token-third-first">
-  <label for="check-token-third-first" class="w-ml--l"><a href="#token-third-first">Third-party token is not used in a first-party context</a></label>
+  <input class="w-checkbox" type="checkbox" id="check-token-third-script">
+  <label for="check-token-third-script" class="w-ml--l"><a href="#token-third-script">Third-party 
+token is provided via an external script, not a meta tag or inline script</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
@@ -395,12 +396,17 @@ function addTrialToken(tokenContents) {
 }
 ```
 
-### Third-party token is not used in a first-party context {: #token-third-first}
+### Third-party token is provided via an external script, not a meta tag or inline script {: #token-third-script}
 
-Don't use third-party tokens in a first-party context. If you use a token with third-party 
-matching enabled, it will not work in first-party contexts. For example, if you embed an 
-iframe which includes code that accesses a trial feature, provide a 'normal' token with the 
-iframe document: a token registered with third-party matching _not_ enabled.
+Third-party tokens are validated against the origin of the script that injected them, but inline
+scripts and `<meta>` tags in static markup do not have an origin (i.e. a source URL). 
+
+This means that a third-party token must be provided via an external script, not in a `<meta>` tag
+or inline script. It doesn't matter if the external script that injects the token comes from the
+same origin as the containing page, or a different origin, as long as the origin of the script matches 
+an origin registered for the trial.
+
+You can see a demo of this at [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me).  
 
 {% Aside %}
 If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
@@ -590,4 +596,3 @@ parent document.
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
-
