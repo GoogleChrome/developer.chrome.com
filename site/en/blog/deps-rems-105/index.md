@@ -29,7 +29,7 @@ The CSS keyword ['default' is no longer allowed](https://chromestatus.com/featur
 
 ## Deprecations in the Navigation API
 
-The `transitionWhile()` and `restoreScroll()` methods are also deprecated in this release, and we expect to remove them in 108. Developers who need this functionality should use the new `intercept()` and `scroll()` methods. For explanations of the problems with the existing methods and examples of using the new, see [link here].
+The `transitionWhile()` and `restoreScroll()` methods are also deprecated in this release, and we expect to remove them in 108. Developers who need this functionality should use the new `intercept()` and `scroll()` methods. For explanations of the problems with the existing methods and examples of using the new, see [Changes to NavigateEvent](https://developer.chrome.com/blog/navigateevent-intercept/).
 
 ## Deprecate non-ASCII characters in cookie domain attributes
 
