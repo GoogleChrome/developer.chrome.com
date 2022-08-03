@@ -111,7 +111,7 @@ In the above code, you are writing a selector that styles an `h1` within a card 
 
 The above demo shows a combination of `:has()`, `:not()`, and `@container`, but container queries really shine when you can see the same element used in multiple places. Let’s add a touch of styling and showcase these cards in a grid alongside each other.
 
-{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/Kjy1kzYSyhq6PA5dWm4G.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
+{% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/N2cngWWFNWGLA7HYZiw2.mov", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
 
 {% Codepen {
