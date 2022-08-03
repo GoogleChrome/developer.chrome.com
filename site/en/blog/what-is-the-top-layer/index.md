@@ -19,7 +19,6 @@ To cut a long story short, the top layer sits above its related `document` in th
 The important things to remember:
 - Top layer is outside of the `document` flow
 - `z-index` has no bearing in the top layer
-- Elements in the top layer can be matched with the `:top-layer` pseudo-selector. For example; `[popup]:top-layer`
 - Each element in the top layer has a styleable `::backdrop` pseudo-element
 - Elements in the top layer are stacked in the order they appear in the set. The last one in, appears on top. If you want to promote an element, remove it, and add it again.
 
