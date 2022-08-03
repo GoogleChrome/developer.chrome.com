@@ -7,7 +7,7 @@ layout: 'layouts/blog-post.njk'
 date: 2022-08-04
 authors:
   - sofiayem
-hero: ''
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FPQRIsEoMZpK0IkTNBRt.png'
 alt: >
   DevTools Tips hero logo
 tags:
