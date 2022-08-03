@@ -235,7 +235,7 @@ was designed to tell the browser to immediately retry the request if the first
 one was sent without a critical hint.
 
 <figure>
-   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/2HXNm4tcNZzOWIzy7pH0.png", alt="Sequence diagram for Client Hints with critical hints", width="800", height="934" %}
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Ce0SL7g881Kjoa0VyhUc.png", alt="Sequence diagram for Client Hints with critical hints", width="800", height="939" %}
   <figcaption>When a critical hint is requested by the server, the client will retry sending the first request for the webpage with the critical hint. In this example, the hint for <code>Sec-CH-UA-Model</code> is requested twice: once as a Client Hint with <code>Accept-CH</code> and again as a critical hint with <code>Critical-CH</code>.</figcaption>
 </figure>
 
