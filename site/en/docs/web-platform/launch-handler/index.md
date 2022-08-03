@@ -59,7 +59,7 @@ Queues launches until they are handled by the specified consumer.
 ## The `launch_handler` manifest member
 
 To declaratively specify the launch behavior of your app, add the `launch_handler` manifest member
-to your manifest. It has one sub-field called `route_to`. It lets you control whether a new or an
+to your manifest. It has one sub-field called `client_mode`. It lets you control whether a new or an
 existing client should be launched and if this client should be navigated. The Web App Manifest
 excerpt below shows a file with exemplary values that would always route all launches to a new
 client.
@@ -67,32 +67,32 @@ client.
 ```json
 {
   "launch_handler": {
-    "route_to": "new-client"
+    "client_mode": "navigate-new"
   }
 }
 ```
 
-If unspecified, `launch_handler` defaults to `{"route_to": "auto"}`. The allowed values for the
+If unspecified, `launch_handler` defaults to `{"client_mode": "auto"}`. The allowed values for the
 sub-fields are as follows:
 
-- `route_to`:
-  - `new-client`: A new browsing context is created in a web app window to load the launch's target
+- `client_mode`:
+  - `navigate-new`: A new browsing context is created in a web app window to load the launch's target
     URL.
-  - `existing-client-navigate`: The most recently interacted with browsing context in a web app
+  - `navigate-existing`: The most recently interacted with browsing context in a web app
     window is navigated to the launch's target URL.
-  - `existing-client-retain`: The most recently interacted with browsing context in a web app window
+  - `focus-existing`: The most recently interacted with browsing context in a web app window
     is chosen to handle the launch. A new `LaunchParams` object with its `targetURL` set to the
     launch URL will be enqueued in the document's `window.launchQueue`.
   - `auto`: The behavior is up to the user agent to decide what works best for the platform. For
     example, mobile devices only support single clients and would use `existing-client`, while
-    desktop devices support multiple windows and would use `new-client` to avoid data loss.
+    desktop devices support multiple windows and would use `navigate-new` to avoid data loss.
 
-The `route_to` property also accepts a list (array) of values, where the first valid value will be
+The `client_mode` property also accepts a list (array) of values, where the first valid value will be
 used. This is to allow new values to be added to the spec without breaking backwards compatibility
 with existing implementations.
 
 For example, if the hypothetical value `"matching-url-client"` were added, sites would specify
-`"route_to": ["matching-url-client", "existing-client-navigate"]` to continue to control the
+`"client_mode": ["matching-url-client", "navigate-existing"]` to continue to control the
 behavior of older browsers that did not support `"matching-url-client"`.
 
 ## Examples
