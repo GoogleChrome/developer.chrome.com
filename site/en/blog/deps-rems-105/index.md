@@ -33,7 +33,7 @@ The `transitionWhile()` and `restoreScroll()` methods are also deprecated in thi
 
 ## Deprecate non-ASCII characters in cookie domain attributes
 
-To align with the latest spec ([RFC 6265bis](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis/#section-5.5)), [Chromium will soon reject](https://www.chromestatus.com/feature/5534966262792192) cookies with a "Domain" attribute that contains a non-ASCII character (for example, Domain=éxample.com).\
+To align with the latest spec ([RFC 6265bis](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis/#section-5.5)), [Chromium will soon reject](https://www.chromestatus.com/feature/5534966262792192) cookies with a "Domain" attribute that contains a non-ASCII character (for example, Domain=éxample.com).
 Support for IDN domain attributes in cookies has been long unspecified, with Chromium, Safari, and Firefox all behaving differently. This change standardizes Firefox's behavior of rejecting cookies with non-ASCII domain attributes.
 
 Since Chromium has previously accepted non-ASCII characters and tried to convert them to normalized punycode for storage, we will now apply stricter rules and require valid ASCII (punycode if applicable) domain attributes.
