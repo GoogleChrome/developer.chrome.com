@@ -31,8 +31,6 @@ Handling API.
 
 </div>
 
-{% Aside %}
-
 ### Try out the Launch Handler API
 
 During the trial phase you can test the API by one of two methods.
