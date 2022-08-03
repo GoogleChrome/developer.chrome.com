@@ -4,7 +4,7 @@ title: Changes to NavigateEvent in Chrome 105
 description: >
   The Navigation API gets two new methods on NavigateEvent: intercept() replaces transitionWhile() and scroll() replaces restoreScroll().
 layout: 'layouts/blog-post.njk'
-date: 2022-08-04
+date: 2022-08-03
 tags:
   - chrome-105
   - capabilities
