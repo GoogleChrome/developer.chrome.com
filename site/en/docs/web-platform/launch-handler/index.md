@@ -46,8 +46,6 @@ Starting in Chromium 98, the Launch Handler API is available as an
 in Chromium 106 (October&nbsp;26, 2022).
 [Register here](https://developers.chrome.com/origintrials/#/trials/active).
 
-{% endAside %}
-
 ## Interfaces
 
 The Launch Handler API defines two new interfaces.
