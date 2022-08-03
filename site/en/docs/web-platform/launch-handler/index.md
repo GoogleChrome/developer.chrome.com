@@ -13,9 +13,8 @@ authors:
 ---
 
 The Launch Handler API lets you control how your app is launched, for example, whether it uses an
-existing or a new window and whether the chosen window is navigated to the launch URL. This also
-enqueues a `LaunchParams` object in the launched page's `window.launchQueue`, similar to the File
-Handling API.
+existing or a new window and whether the chosen window is navigated to the launch URL. As with
+the File Handing API, this also enqueues a `LaunchParams` object in the launched page's `window.launchQueue`.
 
 ## Current status
 
@@ -42,9 +41,9 @@ To experiment with the Launch Handler API locally, without an origin trial token
 
 #### Register for the origin trial
 
-Starting in Chromium 98, the Launch Handler API will be available as an
+Starting in Chromium 98, the Launch Handler API is available as an
 [origin trial](/docs/web-platform/origin-trials/) in Chromium. The origin trial is expected to end
-in Chromium 106 (October 26, 2022).
+in Chromium 106 (October&nbsp;26, 2022).
 [Register here](https://developers.chrome.com/origintrials/#/trials/active).
 
 {% endAside %}
@@ -53,15 +52,15 @@ in Chromium 106 (October 26, 2022).
 
 The Launch Handler API defines two new interfaces.
 
-`launchParams` : An object containing the targetURL to be handled by the consumer. `launchQueue` :
-Queues launches until they are handled by the specified consumer.
+`LaunchParams` : An object containing the `targetURL` to be handled by the consumer.
+`LaunchQueue` : Queues launches until they are handled by the specified consumer.
 
 ## The `launch_handler` manifest member
 
 To declaratively specify the launch behavior of your app, add the `launch_handler` manifest member
 to your manifest. It has one sub-field called `client_mode`. It lets you control whether a new or an
-existing client should be launched and if this client should be navigated. The Web App Manifest
-excerpt below shows a file with exemplary values that would always route all launches to a new
+existing client should be launched and if this client should be navigated. The example
+below shows a file with exemplary values that would always route all launches to a new
 client.
 
 ```json
@@ -73,7 +72,7 @@ client.
 ```
 
 If unspecified, `launch_handler` defaults to `{"client_mode": "auto"}`. The allowed values for the
-sub-fields are as follows:
+sub-fields are:
 
 - `client_mode`:
   - `navigate-new`: A new browsing context is created in a web app window to load the launch's target
@@ -107,8 +106,8 @@ if ('launchQueue' in window && 'targetURL' in LaunchParams.prototype) {
 
 ### Using window.launchQueue
 
-In the following code, the function `extractSongID()` is used to extract a `songID` from the URL
-passed on launch. This is then used to play a song in a music player PWA.
+In the following code, the function `extractSongID()` extracts a `songID` from the URL
+passed on launch. This is used to play a song in a music player PWA.
 
 ```js
 launchQueue.setConsumer((launchParams) => {
