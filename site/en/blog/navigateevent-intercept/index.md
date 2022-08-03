@@ -1,4 +1,3 @@
-
 ---
 title: Changes to NavigateEvent in Chrome 105
 description: >
