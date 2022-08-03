@@ -70,7 +70,7 @@ await track.cropTo(cropTarget);
 Check out [Better tab sharing with Region Capture](/docs/web-platform/region-capture/)
 for more details.
 
-## Easier media queries with level 4 syntax and evaulation {: #mq-math }
+## Easier media queries with level 4 syntax and evaluation {: #mq-math }
 
 Media Queries are critical to responsive design, allowing you to define
 specific styles for different viewport sizes. But, unless you use them every
