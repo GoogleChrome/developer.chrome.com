@@ -12,7 +12,7 @@ authors:
 ---
 
 {% Aside 'caution' %}
-First-Party Sets proposal is being updated with a [new design based on
+First-Party Sets proposal is being updated with a [new design based on use case specific definition and 
 the Storage Access API](https://github.com/WICG/first-party-sets/issues/92). You can [follow the discussion in the repo](https://github.com/WICG/first-party-sets/issues)
 and we will update this content as the work progresses.
 {% endAside %}
