@@ -7,7 +7,7 @@ description: >
 subhead: >
   Control how your app is launched.
 date: 2021-12-14
-updated: 2022-08-03
+updated: 2022-08-04
 authors:
   - thomassteiner
 ---
@@ -88,9 +88,9 @@ The `client_mode` property also accepts a list (array) of values, where the firs
 used. This is to allow new values to be added to the spec without breaking backwards compatibility
 with existing implementations.
 
-For example, if the hypothetical value `"matching-url-client"` were added, sites would specify
-`"client_mode": ["matching-url-client", "navigate-existing"]` to continue to control the
-behavior of older browsers that did not support `"matching-url-client"`.
+For example, if the hypothetical value `"focus-matching-url"` were added, sites would specify
+`"client_mode": ["focus-matching-url", "navigate-existing"]` to continue to control the
+behavior of older browsers that did not support `"focus-matching-url"`.
 
 ## Examples
 
