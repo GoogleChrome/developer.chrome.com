@@ -91,6 +91,10 @@ Select all items in a grid that are not hovered
 ```css
 .grid:has(.grid__item:hover) .grid__item:not(:hover) { ... }
 ```
+Select the container that contains a custom element `<todo-list>`
+```css
+main:has(todo-list) { ... }
+```
 Select every solo `a` within a paragraph that has a direct sibling `hr` element
 ```css
 p:has(+ hr) a:only-child { … }
@@ -246,7 +250,6 @@ How about forms? They're known for being tricky to style. One such example of th
     type="email"
     id="email"
     class="form-input"
-    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
     title="Enter valid email address"
     placeholder="Enter valid email address"
   />   
@@ -301,7 +304,6 @@ You could also use `:has()` to show and hide the error message for a field. Take
       type="email"
       id="email"
       class="form-input"
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
       title="Enter valid email address"
       placeholder="Enter valid email address"
     />   
