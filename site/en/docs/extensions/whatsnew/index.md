@@ -15,6 +15,14 @@ updated: 2022-06-15
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Blog post: Chrome Web Store Analytics Revamp {: #cws-analytics-revamp }
+
+July 28, 2022
+
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
+Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
+information upfront. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
 May 26, 2022
