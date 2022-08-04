@@ -21,7 +21,7 @@ tags:
 The new **Performance insights** panel in DevTools is an experiment that addresses your pain points when boosting the performance of your website.
 
 {% Aside %}
-This is a preview feature in Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
+This is a preview feature from Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
 {% endAside %}
 
 The new **Performance insights** panel does the following:
