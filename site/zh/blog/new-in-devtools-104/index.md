@@ -133,7 +133,7 @@ Chromium 议题: [1285091](https://crbug.com/1285091)
         
 ## 识别退后/前进缓存面板中的阻塞帧 {: #bfcache } 
 
-[退后/前进缓存](/docs/devtools/application/back-forward-cache/) 面板中的**应用程序** 有新的 **帧** 分部来帮助你识别阻止页面符合bcache条件的阻塞帧 . 
+[退后/前进缓存](/docs/devtools/application/back-forward-cache/) 面板中的**应用程序** 有新的 **帧** 分部来帮助你识别阻止页面符合bfcache条件的阻塞帧 . 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UaRYEoYYoXhjSIn9seYK.png", alt="识别退后/前进缓存面板中的阻塞帧", width="800", height="486" %}
  
