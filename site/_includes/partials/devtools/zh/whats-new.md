@@ -13,7 +13,7 @@
 * [模拟性能录制的硬件并发](/zh/blog/new-in-devtools-104/#css-var)
 * [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
 * [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
-* [源图改良](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
 * [其他亮点](/zh/blog/new-in-devtools-104/#misc) 
 
 
