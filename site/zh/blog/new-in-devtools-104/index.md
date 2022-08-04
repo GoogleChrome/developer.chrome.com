@@ -14,7 +14,7 @@ tags:
   - chrome-104
 ---
 
-*感谢 [Jim Lim @xyugroup](https://github.com/xyugroup, {# https://www.linkedin.com/in/jim-lim-539a5638" #}) 提供的翻译*。
+*感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
 
