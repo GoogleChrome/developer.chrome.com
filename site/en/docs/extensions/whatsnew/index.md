@@ -15,7 +15,7 @@ updated: 2022-08-04
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 105: Promises for the Identity API
+### Chrome 105: promises for the Identity API
 
 July 15, 2022
 
@@ -26,13 +26,13 @@ asynchronous return set to a promise based call will have "token" and "grantedSc
 on a single object (as opposed to the callback version receiving them as separate arguments to the
 callback).
 
-### Blog post: Chrome Web Store Analytics Revamp {: #cws-analytics-revamp }
+### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
 
 July 28, 2022
 
 Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
 Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
-information upfront. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
