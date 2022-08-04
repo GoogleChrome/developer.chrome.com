@@ -17,7 +17,6 @@
 * [其他亮点](/zh/blog/new-in-devtools-104/#misc) 
 
 
-
 ### Chrome 103 {: #chrome103 }
 
 * [Recorder 面板捕获双击和右击事件](/zh/blog/new-in-devtools-103/#recorder)
