@@ -36,6 +36,11 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+# FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
+# redirect destination will be ignored
+- from: /docs/extensions/mv3/manifest/content_security_policy
+  to: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
+
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
@@ -68,7 +73,7 @@ redirects:
 
 - from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
   to: /docs/privacy-sandbox/attribution-reporting-experiment/
-  
+
 - from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
   to: /blog/attribution-reporting-jan-2022-updates/
 
