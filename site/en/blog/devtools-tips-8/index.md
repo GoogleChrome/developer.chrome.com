@@ -29,7 +29,7 @@ The new **Performance insights** panel does the following:
 - Streamlines performance data and focuses on three key metrics: [Core Web Vitals](https://web.dev/vitals/).
 - Supports use-case-driven analysis.
 - Identifies issues and suggests actionable insights.
-- Doesn’t require browser expertise to use.
+- Doesn't require browser expertise to use.
 
 With the **Performance insights** panel, boost the performance of your website in three steps:
 
