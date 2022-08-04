@@ -28,13 +28,13 @@ For more information on how to share the recorded user flows, edit them and thei
 ## Open the Recorder panel {: #open }
 
 1. [Open DevTools](/docs/devtools/open).
-2. Click on **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **More tools** > **Recorder**.
+2. Click on **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More.", width="4", height="20" %} &nbsp; > **More tools** > **Recorder**.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cB1LClVmLAMMlI5cqUnQ.png", alt="Recorder in the menu", width="800", height="486" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cB1LClVmLAMMlI5cqUnQ.png", alt="Recorder in the menu.", width="800", height="486" %}
 
     Alternatively, use the [Command Menu](/docs/devtools/command-menu/) to open the **Recorder** panel.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hHVfQmGBi3vhK2mVrvHt.png", alt="Show Recorder command in the Command menu", width="800", height="486" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hHVfQmGBi3vhK2mVrvHt.png", alt="Show Recorder command in the Command menu.", width="800", height="486" %}
 
 
 ## Introduction {: #intro }
@@ -58,30 +58,30 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording", width="800", height="520" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording.", width="800", height="520" %}
    {% Aside %}
-   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](#customize-selector).
+   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](/docs/devtools/recorder/reference/#customize-selector).
 
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress", width="800", height="528" %} 
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress.", width="800", height="528" %} 
 1. Click on *Cappuccino* to add it to the cart.
 1. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="steps in the Recorder panel", width="800", height="519" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="Steps in the Recorder panel.", width="800", height="519" %}
 1. Go to the cart page.
 1. Remove *Americano* from the cart.
 1. Click on the *Total: $19.00* button to start the checkout process.
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="payment details form", width="800", height="519" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
 1. Click on the *Submit* button to complete the checkout process.
-1. In the **Recorder** panel. Click **End recording** button to end the recording.
+1. In the **Recorder** panel. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/atK0ZIkmafgOnagKckde.svg", alt="End recording.", width="20", height="20" %} **End recording** button to end the recording.
 
 
 ## Replay a user flow {: #replay }
 
-After recording a user flow, you can replay it by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}**Replay** button.
+After recording a user flow, you can replay it by clicking on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/0fLvDBSUaiEwL8kJG2Kx.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZDWWSq8muswhFL2hAng.mp4" , autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
@@ -89,8 +89,28 @@ You can see the user flow replay on the page. The replay progress is shown in th
 When replaying a user flow recording, the **Recorder** waits until the element is visible or clickable in the viewport or tries to automatically scroll the element into the viewport before replaying the corresponding step.
 {% endAside %}
 
+### Slow down the replay
+
+By default, the **Recorder** replays the user flow as fast as it can. To understand what is happening in the recording, you can slow down the replay speed:
+
+1. Open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** drop-down menu.
+1. Choose one of the replay speed options:
+   - Normal (Default)
+   - Slow
+   - Very slow
+   - Extremely slow
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/40FyhHaVhPjQGatqUFij.png", alt="Slow replay.", width="800", height="525" %}
+
+{% Aside 'gotchas' %}
+You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
+{% endAside %}
+
+### Simulate slow network
+
 You can simulate a slow network connection by configuring the **Replay settings**. For example, expand the **Replay settings**, select **Slow 3G** in the **Network** drop-down.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SSoCLGi4xdaVHKO9D0ec.png", alt="replay settings", width="800", height="528" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WmVmiXkrXKngHn5MUgPD.png", alt="Replay settings.", width="800", height="525" %}
 
 More settings might be supported in the future. [Share with us](https://goo.gle/recorder-feedback) the replay settings you would like to have!
 
@@ -105,7 +125,7 @@ Clicking on the **Measure performance** button will first trigger a replay of th
 
 Learn how to [analyze your page's runtime performance](/devtools/evaluate-performance/) with the **Performance** panel. You can enable the [Web Vitals checkbox](/blog/new-in-devtools-88/#web-vitals) in the **Performance** panel, to view the [Web Vitals](https://web.dev/vitals) metrics, identify opportunities to improve your user browsing experience.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/L8tS8YwGRgmqCrSwx5ro.png", alt="Performance panel", width="800", height="531" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/L8tS8YwGRgmqCrSwx5ro.png", alt="Performance panel.", width="800", height="531" %}
 
 ## Edit steps {: #edit-steps }
 
@@ -128,7 +148,7 @@ For example, if the **Recorder** successfully queries the element with the first
 
 You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappuccino` is sufficient in this case. Hover over the *selector #2* and click on **`-`** to remove it.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ivZru7CFneS6fu5BAcIJ.png", alt="The DevTools recorder panel shows an option to remove a selector", width="800", height="758" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ivZru7CFneS6fu5BAcIJ.png", alt="The DevTools recorder panel shows an option to remove a selector.", width="800", height="758" %}
 
 ### Edit selectors in a step {: #edit-selectors}
 
@@ -136,9 +156,9 @@ The **selector** is editable too.  For example, if you want to select *Mocha* in
 
 1. Edit the selector value to *aria/Mocha* instead.
 
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %}
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="Edit a selector.", width="800", height="663" %}
 
-   Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button", width="24", height="22" %} button and then click *Mocha* on the page.
+   Alternatively, click the **Select**{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ihbO22H4EA0HfrNX6gV1.png", alt="Select button.", width="24", height="22" %} button and then click *Mocha* on the page.
 
    {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/ab7PcmmkoYnoR3RRZ8M1.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -155,11 +175,11 @@ There are options to add and remove steps too. This is useful if you want to add
 1. For example, the *Scroll* event after the *Mocha* step is not necessary. You can select **Remove step** to remove it.
 2. Say you want to **wait until the 9 coffees** display on the page before performing any steps.
 3. In the *Mocha* step menu, select **Add step before**.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited", width="800", height="663" %} 
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="A new step named Assert Element was added and can now be edited.", width="800", height="663" %} 
 5. In *Assert Element*, edit the new step with the following details:
     - type: **waitForElement**
     - selector #1: **.cup**
     - operator: **==** (click **add operator** button)
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
-6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
+6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
