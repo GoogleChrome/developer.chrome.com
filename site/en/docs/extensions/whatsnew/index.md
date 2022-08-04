@@ -15,6 +15,17 @@ updated: 2022-06-15
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Chrome 105: Promises for the Identity API
+
+July 15, 2022
+
+Functions on the [Identity API](/docs/extensions/reference/identity/#method-getAuthToken) now
+support promise based calls. This comes with a slight change to the surface for
+[`identity.getAuthToken()`](/docs/extensions/reference/identity/#method-getAuthToken), where the
+asynchronous return set to a promise based call will have "token" and "grantedScopes" as parameters
+on a single object (as opposed to the callback version receiving them as separate arguments to the
+callback).
+
 ### Blog post: Chrome Web Store Analytics Revamp {: #cws-analytics-revamp }
 
 July 28, 2022
