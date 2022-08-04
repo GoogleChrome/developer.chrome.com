@@ -10,7 +10,7 @@
 * [性能洞察面板中的新功能 - 用户计时追踪](/zh/blog/new-in-devtools-104/#performance)
 * [显示元素的分配槽](/zh/blog/new-in-devtools-104/#slot)
 * [模拟性能录制所需的硬件并发功能](/zh/blog/new-in-devtools-104/#simulate)
-* [模拟性能录制的硬件并发](/zh/blog/new-in-devtools-104/#css-var)
+* [在自动填充层叠样式表（CSS）时预览非颜色数值的值](/zh/blog/new-in-devtools-104/#css-var)
 * [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
 * [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
 * [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
