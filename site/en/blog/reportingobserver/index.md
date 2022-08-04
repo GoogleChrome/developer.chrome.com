@@ -190,7 +190,7 @@ for catching all types of issues in JS. Imagine one API to catch everything
 that goes wrong in your app:
 
 - [Browser interventions][interventions]
-- deprecations-removals
+- Deprecations
 - [Feature Policy][featurepolicy] violations. See [crbug.com/867471](https://bugs.chromium.org/p/chromium/issues/detail?id=867471).
 - JS exceptions and errors (currently serviced by `window.onerror`).
 - Unhandled JS promise rejections (currently serviced by `window.onunhandledrejection`)
