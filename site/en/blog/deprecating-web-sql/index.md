@@ -8,7 +8,7 @@ description: >
   SQL in insecure contexts. Complete removal is planned for Chromium 107.
 authors:
   - thomassteiner
-date: 2022-08-02
+date: 2022-08-04
 # updated: 2022-08-02
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
