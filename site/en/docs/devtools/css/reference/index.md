@@ -289,6 +289,52 @@ The Coverage tab shows you what CSS a page actually uses.
 
 See [Force DevTools Into Print Preview Mode][11].
 
+## Copy CSS {: #copy-css }
+
+From a single drop-down menu in the **Styles** pane, you can copy separate [CSS rules, declarations, properties, values](https://www.w3schools.com/css/css_syntax.asp), and more.
+
+Additionally, you can copy CSS properties in JavaScript syntax. This option is handy if you're using [CSS-in-JS](/blog/css-in-js/) libraries.
+
+To copy CSS:
+
+1. In the **Elements** > **Styles** pane, right-click a CSS property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4yGdaGVOMESwoiAiHIj4.png", alt="Copy CSS drop-down menu.", width="800", height="618" %}
+1. Select one of the following options from the drop-down menu:
+
+   - **Copy declaration**. Copies the property and its value in CSS syntax:
+     ```css
+     property: value;
+     ```
+   - **Copy property**. Copies only the `property` name.
+   - **Copy value**. Copies only the `value`.
+   - **Copy rule**. Copies the entire CSS rule: 
+     ```css
+     selector[, selector] {
+         property: value;
+         property: value;
+         ...
+     }
+     ```
+   - **Copy declaration as JS**. Copies the property and its value in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value'
+     ```
+   - **Copy all declarations**. Copies all properties and their values in the CSS rule:
+     ```css
+     property: value;
+     property: value;
+     ...
+     ```
+   - **Copy all declarations as JS**. Copies all properties and their values in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value',
+     propertyInCamelCase: 'value',
+     ...
+
+     ```
+   - **Copy all CSS changes**. [Copies the changes](#copy-css-changes) you make in the **Styles** pane across all declarations.
+   - **View computed value**. Takes you to the [**Computed** pane](#computed).
+
 ## Change CSS {: #change }
 
 ### Add a CSS declaration to an element {: #add-declaration }
@@ -565,7 +611,7 @@ To open the **Shadow Editor**:
    - **Spread** (only for `box-shadow`). Drag the slider or specify a value.
 1. Observe the changes applied to the [element](#shadow-element).
 
-### (Experimental) Copy CSS changes {: #copy-css-changes }
+## (Experimental) Copy CSS changes {: #copy-css-changes }
 
 {% Aside %}
 To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
