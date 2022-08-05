@@ -167,7 +167,8 @@ function shouldNotIntercept(navigationEvent) {
 
 When your code calls `intercept({ handler })` from within its "navigate" listener, it informs the browser that it's now preparing the page for the new, updated state; and that the navigation may take some time.
 
-The browser begins by capturing the scroll position for the current state, so it can be optionally restored later, then it calls your `handler` callback. If your `handler` returns a promise (which happens automatically with [async functions](https://web.dev/async-functions/)), that promise tells the browser how long the navigation takes, and whether it's successful.
+The browser begins by capturing the scroll position for the current state, so it can be optionally restored later, then it calls your `handler` callback.
+If your `handler` returns a promise (which happens automatically with [async functions](https://web.dev/async-functions/)), that promise tells the browser how long the navigation takes, and whether it's successful.
 
 ```js
 navigation.addEventListener('navigate', navigateEvent => {
@@ -191,7 +192,9 @@ Chrome, for example, activates its native loading indicator, and allows the user
 
 ### Navigation committing
 
-When intercepting navigations, the new URL will take effect just before your `handler` callback is called. If you don't update the DOM immediately, this creates a period where the old content is displayed along with the new URL. This impacts things like relative URL resolution when fetching data or loading new subresources.
+When intercepting navigations, the new URL will take effect just before your `handler` callback is called.
+If you don't update the DOM immediately, this creates a period where the old content is displayed along with the new URL.
+This impacts things like relative URL resolution when fetching data or loading new subresources.
 
 A way to delay the URL change is being [discussed on GitHub](https://github.com/WICG/navigation-api/issues/66), but it's generally recommended to immediately update the page with some sort of placeholder for the incoming content:
 
@@ -218,9 +221,11 @@ This not only avoids URL resolution issues, it also feels fast because you're in
 
 ### Abort Signals
 
-Since you're able to do asynchronous work in an `intercept()` handler, it's possible for the navigation to become redundant. This happens when:
+Since you're able to do asynchronous work in an `intercept()` handler, it's possible for the navigation to become redundant.
+This happens when:
 
-- The user clicks another link, or some code performs another navigation. In this case the old navigation is abandoned in favour of the new navigation.
+- The user clicks another link, or some code performs another navigation.
+  In this case the old navigation is abandoned in favour of the new navigation.
 - The user clicks the 'stop' button in the browser.
 
 To deal with any of these possibilities, the event passed to the "navigate" listener contains a `signal` property, which is an `AbortSignal`.
@@ -290,7 +295,8 @@ navigation.addEventListener('navigate', navigateEvent => {
 ```
 
 {% Aside %}
-Although `scroll()` looks like a single call, the browser may try to set the scroll position multiple times asynchronously. The means the browser can still scroll to the correct place, even if the content arrives slightly later, or moves around due to layout shifting.
+Although `scroll()` looks like a single call, the browser may try to set the scroll position multiple times asynchronously.
+The means the browser can still scroll to the correct place, even if the content arrives slightly later, or moves around due to layout shifting.
 {% endAside %}
 
 Alternatively, you can opt out of automatic scroll handling entirely by setting the `scroll` option of `intercept()` to `"manual"`:
@@ -306,7 +312,7 @@ navigateEvent.intercept({
 
 ### Focus handling
 
-Once the promise returned by your `handler` resolves, the browser will focus the first element with the [`autofocus` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus) set, or the `<body>` element if no element has that attribute.
+Once the promise returned by your `handler` resolves, the browser will focus the first element with the [`autofocus` attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autofocus) set, or the `<body>` element if no element has that attribute.
 
 You can opt out of this behavior by setting the `focusReset` option of `intercept()` to `"manual"`:
 
@@ -411,7 +417,7 @@ navigation.navigate(url, {state: newState});
 navigation.reload({state: newState});
 ```
 
-Where `newState` can be any [clonable object](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
+Where `newState` can be any [clonable object](https://developer.mozilla.org/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
 
 If you want to update the state of the current entry, it's best to perform a navigation that replaces the current entry:
 
@@ -442,14 +448,17 @@ navigation.addEventListener('currententrychange', () => {
 });
 ```
 
-However, this splits your state-handing code between the `"navigate"` event and the `"currententrychange"` event. It's generally better to handle state in one place, the `"navigate"` event.
+However, this splits your state-handing code between the `"navigate"` event and the `"currententrychange"` event.
+It's generally better to handle state in one place, the `"navigate"` event.
 {% endAside %}
 
 #### State vs URL params
 
-Because state can be a structured object, it's tempting to use it for all your application state. However, in many cases it's better to store that state in the URL.
+Because state can be a structured object, it's tempting to use it for all your application state.
+However, in many cases it's better to store that state in the URL.
 
-If you would expect the state to be retained when the user shares the URL with another user, store it in the URL. Otherwise, the state object is the better option.
+If you would expect the state to be retained when the user shares the URL with another user, store it in the URL.
+Otherwise, the state object is the better option.
 
 ### Access all entries
 
