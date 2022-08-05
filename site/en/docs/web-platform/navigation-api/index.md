@@ -108,7 +108,7 @@ Links might come and go on your page, and they're not the only way users can nav
 E.g., they may submit a form or even use an [image map].
 Your page might deal with these, but there's a long tail of possibilities which could just be simplified—something that the new Navigation API achieves.
 
-Additionally, the above doesn't handle back/forward navigation. There's another event for that, but when it does and doesn't fire is a bit… subtle.
+Additionally, the above doesn't handle back/forward navigation. There's another event for that, `"popstate"`.
 
 Personally, the History API often _feels_ like it could go some way to help with these possibilities.
 However, it really only has two surface areas: responding if the user presses Back or Forward in their browser, plus pushing and replacing URLs.
