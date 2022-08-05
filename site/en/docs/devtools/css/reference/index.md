@@ -297,6 +297,7 @@ Additionally, you can copy CSS properties in JavaScript syntax. This option is h
 
 To copy CSS:
 
+1. [Select an element][15].
 1. In the **Elements** > **Styles** pane, right-click a CSS property.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4yGdaGVOMESwoiAiHIj4.png", alt="Copy CSS drop-down menu.", width="800", height="618" %}
 1. Select one of the following options from the drop-down menu:
