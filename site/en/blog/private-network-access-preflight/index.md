@@ -7,7 +7,7 @@ authors:
   - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-07-07
+updated: 2022-07-26
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
@@ -57,6 +57,13 @@ the change and adjust accordingly.
     * Chrome gathers compatibility data and reaches out to the largest
       affected websites.
     * We expect this to be broadly compatible with existing websites.
+{% Aside 'warning' %}
+To limit the influence to the websites not already supporting preflights, we
+restrict the timeout to 200 milliseconds in M104. The restriction is only applied
+in warning mode. The special timeout limit would be removed after enabling
+the enforce mode by switching "Respect the result of Private Network Access 
+preflights" to "Enabled" in `chrome://flags` and the default limit is 5 seconds.
+{% endAside %}
 1. In Chrome 107 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
