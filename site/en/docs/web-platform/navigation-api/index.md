@@ -516,7 +516,7 @@ In fact, it will always be `undefined` in those cases.
     height="320",
     muted="true" %}
   <figcaption>
-    <a href="https://wiry-tricolor-lipstick.glitch.me" target="_blank">Demo of opening from left or right</a>
+    <a href="https://gigantic-honored-octagon.glitch.me/" target="_blank">Demo of opening from left or right</a>
   </figcaption>
 </figure>
 
