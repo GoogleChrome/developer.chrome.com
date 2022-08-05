@@ -28,7 +28,7 @@ authors:
 
 1. Topics API の実装状況に関する最新情報については、プライバシーサンドボックスの[ステータスページ](/docs/privacy-sandbox/status/#topics)を確認してください。
 2. API を使って実験する:
-   * [Topics API ](/docs/privacy-sandbox/topics/#origin-trial) には、プライバシーサンドボックスの関連性と測定のオリジントライアルに参加する方法が説明されています。
+   * [Topics API](/docs/privacy-sandbox/topics/#origin-trial) には、プライバシーサンドボックスの関連性と測定のオリジントライアルに参加する方法が説明されています。
    * Chrome 101 以降で `chrome://flags/#privacy-sandbox-ads-apis` を有効にするか、コマンドラインから `--enable-features=PrivacySandboxAdsAPIsOverride` [機能フラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)を指定して Chrome を実行し、単一ユーザーに対して Topics を試してください。
    * 「[Topics JavaScript API を使ってトピックにアクセスする](/docs/privacy-sandbox/topics/#access-topics)」には、API を使用して現在のユーザーで観察されたトピックにアクセスする方法を説明する短いコードサンプルが含まれています。
    * 「[Topics API の仕組み](/docs/privacy-sandbox/topics/#what-might-the-topics-javascript-api-look-like)」には、API によって返される値の概要と、機能のサポートと制約に関する詳細情報が示されています。
