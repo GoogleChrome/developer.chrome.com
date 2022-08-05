@@ -5,6 +5,8 @@ description: 'Enabling the most amazing apps on the web.'
 sections:
   intro:
     - url: https://fugu-tracker.web.app
+      title: Fugu API Tracker
+      description: Get an overview of all the APIs we work on in the context of Project Fugu.
     - url: /blog/fugu-showcase/
     - url: /blog/fugu-status/
 ---
@@ -14,20 +16,6 @@ sections:
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
-
-{# unique styles, needed only for Capabilities hero card. #}
-<style>
-.hero-card {
-  background-image: url(https://wd.imgix.net/image/8WbTDNrhLsU0El80frMBGE4eMCD3/lD9tSNG70nGO94nSNAI3.svg);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: contain;
-}
-
-.material-button.bg-green-medium {
-  color: #fff;
-}
-</style>
 
 {{ heroCard(
   'Capabilities',
