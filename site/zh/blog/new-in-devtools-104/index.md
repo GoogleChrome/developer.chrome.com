@@ -81,7 +81,7 @@ Chromium 议题: [960909](https://crbug.com/960909)
 
 ## Performance insights 面板新增了用户计时轨道 {: #performance }
 
-使用**性能洞察**面板中的新功能 - **用户计时**追踪进行录制以对 `performance.measure()` 的分数进行视觉化。 
+您现在可以透过 **Performance insights** 面板新增的**用户计时**轨道来查看您 performance recording 的 `performance.measure()` 标记。 
 
 例如, 这个 [网页](https://jec.fyi/demo/perf-measure) 使用 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure())方法进行文字载入耗时的计算。
 
