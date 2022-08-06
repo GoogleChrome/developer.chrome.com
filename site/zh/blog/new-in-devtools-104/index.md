@@ -160,7 +160,7 @@ JavaScript对象属性的自动填充现在可以根据这个规律显示:
 Chromium 议题: [1299241](https://crbug.com/1299241)
 
  
-## 源图改良 {: #sourcemaps }
+## 源图优化 {: #sourcemaps }
  
 以下是列出了几个源图的修复，这些修复改进了整体调试体验: 
  
