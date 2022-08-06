@@ -28,7 +28,7 @@ tags:
 
 ## 在调试时进行帧重启 {: #restart-frame  }
 
-**帧重启** 功能回归了! 您可以在函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在 Chrome 92 版本被弃用。  
+**帧重启** 功能回归了! 您可以在调试时的函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在 Chrome 92 版本被弃用。  
 
 在这个 [例子](https://jec.fyi/), 调试器暂停在这个靠近`toggleColorScheme`函数尾端的断点（343 行) 。 在函数 `toggleColorScheme`开始处重启调试器, 扩展在**调试器**面板中的 **调用** 部分, 在`toggleColorScheme`上右点击并选取**帧重启**。  
 
@@ -41,18 +41,18 @@ Chromium 议题: [1303521](https://crbug.com/1303521)
 
 ## 录制面板中的慢速重播选项 {: #recorder  } 
 
-您现在可以对用户流程进行慢速复盘 - 慢、很慢和极慢. 这些选项使您能在屏幕上更加详细地观察到每一个复盘的步骤。 
+您现在可以对用户流程进行慢速重播 - 慢、很慢和极慢. 这些选项使您能在屏幕上更加详细地观察到每一个重播的步骤。 
 
-[打开](/docs/devtools/recorder/#open) **录制** 面板，然后[开始一个新的录制](/docs/devtools/recorder/#record)。 录制完成后，在**复盘**的下拉按钮上点击， 选择一个速率来进行重播流程。 
+[打开](/docs/devtools/recorder/#open) **录制** 面板，然后[开始一个新的录制](/docs/devtools/recorder/#record)。 录制完成后，在**重播**的下拉按钮上点击， 选择一个速率来进行重播流程。 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="录制面板上的慢速复盘选项", width="800", height="486" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="录制面板上的慢速重播选项", width="800", height="486" %}
 
 Chromium 议题: [1306756](https://crbug.com/1306756)
 
 
 ## 为录制面板创建 extension {: #recorder-extension } 
 
-您可以创建或安装一个Chrome扩展来使用您喜爱的格式来导出复盘脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个扩展。
+您可以创建或安装一个Chrome扩展来使用您喜爱的格式来导出重播脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个Extension。
 
 按照[这些步骤](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) 安装一个演示扩展。 
 
@@ -61,18 +61,18 @@ Chromium 议题: [1306756](https://crbug.com/1306756)
 Chromium 议题: [1325751](https://crbug.com/1325751)
 
 
-## 使用面板中的撰写/部署来进行分组 {: #authored-deployed } 
+## 使用面板中的已编写/已部署来进行分组 {: #authored-deployed } 
 
-启用新的**撰写/部署**来进行分组以组织您的源面板中的文件。当使用框架(例如, React, Angular)来开发网络应用程序, 在浏览源文件的时候会非常困难，那是因为由构建工具(例如, Webpack, Vite)所产生的缩图造成的。  
+启用新的**已编写/已部署**来进行分组以组织您的源面板中的文件。当使用框架(例如, React, Angular)来开发网络应用程序, 在浏览源文件的时候会非常困难，那是因为由构建工具(例如, Webpack, Vite)所产生的缩图造成的。  
  
 使用这个复选框, 您可以将文件分组成两个类别以进行快速搜索: 
 
-- **撰写**. 类似您在集成开发环境(IDE)中的源文件。 DevTools 根据您的源图产生这些文件 (由您的构建工具DevTools所提供).
+- **已编写 (Authored)**. 类似您在集成开发环境(IDE)中的源文件。 DevTools 根据您的源图产生这些文件 (由您的构建工具DevTools所提供).
 - **已部署（deployed）** - 浏览器读取的真正文件。 通常这些是已压缩的文件。 
  
 您可以自己做一个尝试，用这个链接 [React demo](https://reactjs.org/)! 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="使用源面板中的编写/部署进行分组", width="800", height="521" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="使用源面板中的已编写/已部署进行分组", width="800", height="521" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6bc65d0595702fc826ca87e2cfe519a134b62d90 #}
  
@@ -162,7 +162,7 @@ Chromium 议题: [1299241](https://crbug.com/1299241)
  
 ## 源图优化 {: #sourcemaps }
  
-以下是列出了几个源图的修复，这些修复改进了整体调试体验: 
+以下是列出了几个源图的修复，这些优化改进了整体调试体验: 
  
 - 您现在可以在带有 sourceURL 注释的内联的 `<script>`脚本中设置断点。 
 - 调试器现在可以解析带有源图的**范围**视图中的块作用域变量。 
