@@ -50,7 +50,7 @@ Chromium 议题: [1303521](https://crbug.com/1303521)
 Chromium 议题: [1306756](https://crbug.com/1306756)
 
 
-## 为录制面板创建扩展 {: #recorder-extension } 
+## 为录制面板创建 extension {: #recorder-extension } 
 
 您可以创建或安装一个Chrome扩展来使用您喜爱的格式来导出复盘脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个扩展。
 
