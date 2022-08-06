@@ -79,7 +79,7 @@ Chromium 议题: [1325751](https://crbug.com/1325751)
 Chromium 议题: [960909](https://crbug.com/960909)
 
 
-## 性能洞察面板中的新功能 - 用户计时追踪 {: #performance }
+## Performance insights 面板新增了用户计时轨道 {: #performance }
 
 使用**性能洞察**面板中的新功能 - **用户计时**追踪进行录制以对 `performance.measure()` 的分数进行视觉化。 
 
