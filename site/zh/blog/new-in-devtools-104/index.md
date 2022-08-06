@@ -54,7 +54,7 @@ Chromium 议题: [1306756](https://crbug.com/1306756)
 
 您可以创建或安装一个Chrome扩展来使用您喜爱的格式来导出复盘脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个扩展。
 
-安装一个演示扩展, 按照 [这些步骤](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) 文档中的大纲。 
+按照[这些步骤](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) 安装一个演示扩展。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="为录制面板客制化扩展", width="800", height="486" %}
 
