@@ -6,15 +6,46 @@ authors:
 description: >
   A Web Platform API that allows users to login to websites with their federated accounts in a privacy preserving manner.
 date: 2022-04-25
-updated: 2022-06-20
+updated: 2022-07-29
 tags:
   - privacy
   - security
   - origin-trials
+  - identity
 ---
 
 {% Aside %}
 
+**Update, July 2022**
+
+Starting from Chrome 105:
+* The top-level manifest is renamed from `/.well-known/fedcm.json` to
+  `/.well-known/web-identity`.
+* APIs `login()`, `logout()` and `revoke()` on `FederatedCredential` instance
+  are no longer available.
+* Use `IdentityCredential` instead of `FederatedCredential`.
+* Move login functionality to `navigator.credentials.get()`.
+* Revocation endpoint in the manifest is no longer in effect.
+* Use `identity` type instead of `federated` type for
+  `navigator.credentials.get()` call.
+* `url` is now `configURL` and must be a full URL of the manifest JSON file
+  instead of a path for `navigator.credentials.get()` call.
+* `nonce` is now an optional parameter for `navigator.credentials.get()` call.
+* `hint` is no longer available as an option for `navigator.credentials.get()`
+  call.
+
+```js
+const credential = await navigator.credentials.get({
+  identity: {
+    providers: [{
+      configURL: 'https://idp.example/anything.json',
+      clientId: '********',
+      nonce: '******'
+    }]
+  }
+});
+const { token } = credential;
+```
 
 **Update, June 2022**
 
@@ -170,7 +201,7 @@ To check if FedCM is available, wrap this code around your FedCM
 implementation:
 
 ```javascript
-if (window.FederatedCredential || FederatedCredential.prototype.login) {
+if ('IdentityCredential' in window) {
   // If the feature is available, take action
 }
 ```
@@ -190,10 +221,10 @@ devices](/docs/devtools/remote-debugging/).
 You integrate with FedCM by creating a [manifest and
 endpoints](#manifest-endpoints) for [client
 metadata](#client-metadata-endpoint), [accounts list](#accounts-list-endpoint),
-[ID token issuance](#id-token-endpoint), and [token
-revocation](#revocation-endpoint).
+and [token issuance](#id-token-endpoint).
 
-From there, FedCM exposes JavaScript APIs that RPs can use to [sign in](#sign-into-rp), [sign out](#signout-rp), and [revoke tokens](#revoke-rp-access) from the IdP.
+From there, FedCM exposes JavaScript APIs that RPs can use to [sign
+in](#sign-into-rp) from the IdP.
 
 ### Create an IdP manifest and endpoints {: #manifest-endpoints }
 
@@ -201,30 +232,27 @@ The IdP manifest provides a list of required endpoints for the browser. IdPs
 will host this manifest and the required endpoints.
 
 The manifest file's URL is determined by the values provided to the
-[`navigator.credentials.get` call executed on an RP](#get-fedcm-object).
+[`navigator.credentials.get` call executed on an RP](#sign-into-rp).
 
 ```javascript
 const credential = await navigator.credentials.get({
-  federated: {
+  identity: {
     providers: [{
-      url: 'https://idp.example',
-      clientId: '********'
+      configURL: 'https://idp.example/anything.json',
+      clientId: '********',
+      nonce: '******'
     }]
   }
-})
+});
+const { token } = credential;
 ```
 
-For example, if the IdP `url` is specified as `https://idp.example`, the
-browser appends `/fedcm.json` to it to create the manifest URL:
-`https://idp.example/fedcm.json`. The `url` can include a path as well, for
-example `https://idp.example/sub/` specifies a URL with a subdirectly. In 
-this case, the manifest URL is `https://idp.example/sub/fedcm.json`.
-
-When [a FedCM `login()` is called](#sign-into-rp) on the RP, the browser
-fetches the manifest file with a `GET` request with the `Referer` header.
-The request doesn’t have cookies and doesn’t follow redirects. This
-effectively prevents the IdP from learning who made the request and which RP
-is attempting to connect. For example:
+Specify a full URL of the IdP manifest file location as a `configURL`. When
+[`navigator.credentials.get()` is called](#sign-into-rp) on the RP, the browser
+fetches the manifest file with a `GET` request without the `Referer` header. The
+request doesn’t have cookies and doesn’t follow redirects. This effectively
+prevents the IdP from learning who made the request and which RP is attempting
+to connect. For example:
 
 ```http
 GET /fedcm.json HTTP/1.1
@@ -263,10 +291,6 @@ following properties:
      <td>URL for the <a href="#id-token-endpoint">ID token endpoint</a>.</td>
   </tr>
   <tr>
-     <td><code>revocation_endpoint</code> (required)</td>
-     <td>URL for the <a href="#revocation-endpoint">revocation endpoint</a>.</td>
-  </tr>
-  <tr>
      <td><code>branding</code> (optional)</td>
      <td>Object which contains various branding options.</td>
   </tr>
@@ -291,7 +315,7 @@ following properties:
      <td>Branding option which sets the icon object, displayed in the sign-in dialog. The icon object is an array with two parameters:
         <ul>
            <li><code>url</code> (required): URL of the icon image. This does not support SVG images.<li>
-           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution.</li>
+           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution. This number must be greater or equal to 25.</li>
          </ul>
       </td>
   </tr>
@@ -308,13 +332,12 @@ Here's an example response body from the IdP:
   "accounts_endpoint": "/accounts.php",
   "client_metadata_endpoint": "/metadata.php",
   "id_token_endpoint": "/idtokens.php",
-  "revocation_endpoint": "/revocation.php",
   "branding": {
     "background_color": "green",
     "color": "0xFFEEAA",
     "icons": [{
       "url": "https://idp.example/icon.ico",
-      "size": 10
+      "size": 25
     }]
   }
 }
@@ -323,7 +346,7 @@ Here's an example response body from the IdP:
 Once the browser fetches the manifest, it sends subsequent requests to the IdP endpoints:
 
 {%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/4SLjHA1LipB0Wh52yUl6.png", alt="IdP endpoints", width="800", height="419", class="type--full-bleed"
+  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/bAAYmwYIG1OSteRQ2Tzu.png", alt="IdP endpoints", width="800", height="419", class="type--full-bleed"
 %}
 
 {% Aside 'caution' %}
@@ -339,13 +362,13 @@ and icon image URLs described in the manifest.
 
 To prevent [trackers from abusing the
 API](https://github.com/fedidcg/FedCM/issues/230), an additional manifest
-file must be served from `/.well-known/fedcm.json` of
+file must be served from `/.well-known/web-identity` of
 [eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) of the
 IdP.
 
 For example, if an IdP serves [an IdP Manifest](#manifest-endpoints) at
 `https://accounts.idp.example/sub/fedcm.json`, they must also serve a
-top-level domain manifest at `https://idp.example/.well-known/fedcm.json`
+top-level domain manifest at `https://idp.example/.well-known/web-identity`
 with the following content:
 
 ```json
@@ -355,8 +378,10 @@ with the following content:
 ```
 
 The JSON file must contain the `provider_urls` property with an array of URL
-strings that can be [specified in `navigator.credentials.get` by
-RPs](#get-fedcm-object). he number of URL strings in the array is limited to one, but this may change with [your feedback](#next-steps) in the future.
+strings that can be [specified as a path part of `configURL` in
+`navigator.credentials.get` by RPs](#sign-into-rp). The number of URL strings
+in the array is limited to one, but this may change with [your
+feedback](#next-steps) in the future.
 
 #### Client metadata endpoint {: #client-metadata-endpoint }
 
@@ -365,11 +390,11 @@ the RP's privacy policy and terms of service. RPs should provide links to their
 privacy policy and terms of service to the IdP in advance. These links are
 displayed in the sign-in dialog when the user hasn't registered with the RP yet.
 
-The browser sends a `GET` request using the `client_id` 
-[`navigator.credentials.get`](#get-fedcm-object) without cookies. For example:
+The browser sends a `GET` request using the `client_id`
+[`navigator.credentials.get`](#sign-into-rp) without cookies. For example:
 
 ```http
-GET /client_medata.php?client_id=1234 HTTP/1.1
+GET /metadata.php?client_id=1234 HTTP/1.1
 Host: idp.example
 Referer: https://rp.example/
 Accept: application/json
@@ -418,7 +443,7 @@ parameter and the `Referer` header. This effectively prevents the IdP from
 learning which RP the user is trying to sign in to. For example:
 
 ```http
-GET /accounts_list.php HTTP/1.1
+GET /accounts.php HTTP/1.1
 Host: idp.example
 Accept: application/json
 Cookie: 0x23223
@@ -490,12 +515,11 @@ available to the RP.
 
 #### ID token endpoint {: #id-token-endpoint }
 
-The IdP's ID token endpoint returns an [ID
-token](https://openid.net/specs/openid-connect-core-1_0.html#IDToken) for
-their signed-in user. When the user signs in to an RP website using [a FedCM `login()`
-call](#sign-into-rp), the browser sends a `POST` request with cookies and a 
-content type of `application/x-www-form-urlencoded` to this endpoint with 
-the following information:
+The IdP's ID token endpoint returns a token for their signed-in user. When the
+user signs in to an RP website using [`navigator.credentials.get()`
+call](#sign-into-rp), the browser sends a `POST` request with cookies and a
+content type of `application/x-www-form-urlencoded` to this endpoint with the
+following information:
 
 <table class="with-heading-tint with-borders">
   <thead>
@@ -525,7 +549,7 @@ the following information:
 Example HTTP header:
 
 ```http
-POST /fedcm_token_endpoint HTTP/1.1
+POST /idtokens.php HTTP/1.1
 Host: idp.example
 Referer: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
@@ -535,14 +559,7 @@ account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 
 On the server, the IdP should confirm if the claimed account ID matches the 
-ID for the account that is already signed in. The IdP should store the 
-user's registration status for the RP to a database. This way, the IdP can 
-revoke the token by changing the registration status via the [revocation
-endpoint](#revocation-endpoint) or by manually removing the database entry. 
-
-{% Aside %}
-Revoking the IdP’s token by itself won't remove the user’s account on the RP.
-{% endAside %}
+ID for the account that is already signed in. 
 
 The browser expects a JSON response that includes the following property:
 
@@ -554,102 +571,44 @@ The browser expects a JSON response that includes the following property:
     </tr>
   </thead>
   <tr>
-    <td><code>id_token</code> (required)</td>
-    <td><a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken"><code>IDToken</code></a> is a security token (string) that contains claims about the authentication.</td>
+    <td><code>token</code> (required)</td>
+    <td>A token is a string that contains claims about the authentication.</td>
   </tr>
 </table>
 
 ```json
 {
-  "id_token": "eyJ********"
+  "token": "eyJ********"
 }
 ```
 
-The returned ID token is passed to the RP by the browser, so that the RP can
+The returned token is passed to the RP by the browser, so that the RP can
 validate the authentication.
 
-#### Revocation endpoint {: #revocation-endpoint }
-
-The IdP's revocation endpoint provides a way for RPs to revoke the user's 
-tokens on the IdP. The URL of the revocation endpoint is declared by [the
-manifest](#manifest-endpoints).
-
-Once [FedCM `revoke()`](#revoke-rp-access) is called on the RP, the browser
-sends a `POST` request with cookies and a content type of
-`application/x-www-form-urlencoded`, along with the following properties:
-
-<table class="with-heading-tint with-borders">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tr>
-    <td><code>client_id</code> (required)</td>
-    <td>The RP's client identifier.</td>
-  </tr>
-  <tr>
-     <td><code>hint</code> (required)</td>
-     <td>The user ID hint provided to the JavaScript call for revocation.</td>
-  </tr>
-</table>
-
-Example HTTP header:
-
-```http
-POST /fedcm_revocation_endpoint HTTP/1.1
-Host: idp.example
-Referer: https://rp.example/
-Content-Type: application/x-www-form-urlencoded
-Cookie: 0x23223
-Sec-FedCM-CSRF: ?1
-client_id=client1234&hint=user@idp.example
-```
-
-On the server, the IdP should confirm if the `hint` matches one of the 
-signed in users' ID (because FedCM supports multiple signed in users). The 
-IdP should then revoke the token of the user by changing the registration 
-status.
-
-If successful, send an HTTP code `204` with an empty body.
-
-### Request the FedCM object for the relying party {: #get-fedcm-object }
+### Sign in to the identity provider from the relying party {: #sign-into-rp }
 
 Once the IdP’s configuration and endpoints are available, RPs can call
-`navigator.credentials.get()` to request the `FederatedCredential` object
-for the RP. With this object, the RP can:
-
-*  Allow [users sign in to the RP](#sign-into-rp) and store the sign-in state to
-   the browser.
-*  Allow [users to sign out from the RP](#signout-rp), which clears the sign-in
-   state from the browser.
-*  Request to [revoke tokens](#revoke-rp-access) at the IdP.
+`navigator.credentials.get()` to request allowing users to sign in to the IdP
+from the RP.
 
 For example:
 
 ```javascript
 const credential = await navigator.credentials.get({
-  federated: {
+  identity: {
     providers: [{
-      url: 'https://idp.example',
-      clientId: '********'
+      configURL: 'https://idp.example/anything.json',
+      clientId: '********',
+      nonce: '******'
     }]
   }
-})
+});
+const { token } = credential;
 ```
 
-{% Aside %}
-
-`FederatedCredential` is an extension of the [Credential Management API's
-`FederatedCredential`](https://developers.google.com/web/fundamentals/security/credential-management/retrieve-credentials#federated_login).
-These serve different purposes, but are designed with backwards compatibility.
-
-{% endAside %}
-
-The `providers` property takes an array of [`FederatedIdentityProvider`
-objects](https://fedidcg.github.io/FedCM/#dictdef-federatedidentityprovider)
-that must have the following properties:
+The `providers` property takes an array of [`IdentityProvider`
+objects](https://fedidcg.github.io/FedCM/#dictdef-identityprovider) that must
+have the following properties:
 
 <table class="with-heading-tint with-borders">
   <thead>
@@ -659,47 +618,13 @@ that must have the following properties:
     </tr>
   </thead>
   <tr>
-    <td><code>url</code> (required)</td>
-    <td>The URL of the IdP.</td>
+    <td><code>configURL</code> (required)</td>
+    <td>A full path of the IdP manifest file.</td>
   </tr>
   <tr>
      <td><code>clientId</code> (required)</td>
      <td>The RP's client identifier, issued by the IdP.</td>
   </tr>
-  <tr>
-     <td><code>hint</code> (optional)</td>
-     <td>A unique user ID that matches the one in the <a href="#accounts-list-endpoint">accounts list endpoint</a></td>
-  </tr>
-</table>
-
-This object provides the RP a method for users to [sign-in](#sign-into-rp),
-[sign-out](#signout-rp), or [revoke tokens provided by the
-IdP](#revoke-rp-access).
-
-#### Allow users to sign in {: #sign-into-rp}
-
-Call `FederatedCredential.login()` for both sign-up and sign-in dialogs. The
-browser handles these use cases differently depending on the existence of
-`approved_clients` in the response from [the accounts list
-endpoint](#accounts-list-endpoint). The browser will only display [the RP's
-privacy policy and terms of service](#client-metadata-endpoint) in the dialog if
-`approved_clients` isn't provided and the user hasn't previously signed up for
-the RP in this browser.
-
-```javascript
-const nonce = '15863786';
-const { id_token } = await credential.login({ nonce });
-```
-
-The `login()` call takes the following properties:
-
-<table class="with-heading-tint with-borders">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tr>
     <td><code>nonce</code> (optional)</td>
     <td>A random string to ensure the response is issued for this specific request. Prevents replay attacks.</td>
@@ -710,6 +635,13 @@ The `login()` call takes the following properties:
   </tr>
 </table>
 
+The browser handles sign-up and sign-in use cases differently depending on the
+existence of `approved_clients` in the response from [the accounts list
+endpoint](#accounts-list-endpoint). The browser will only display [the RP's
+privacy policy and terms of service](#client-metadata-endpoint) in the dialog if
+`approved_clients` isn't provided or does not include the RP's `clientId` and
+the user hasn't previously signed p for the RP in this browser.
+
 <figure class="float-right screenshot" style="max-width:300px">
 {% Video
    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qx48SEGIEqi5OtPE9ogn.mp4",
@@ -718,29 +650,32 @@ The `login()` call takes the following properties:
   <figcaption>A user signs into an RP using FedCM</figcaption>
 </figure>
 
-When the RP calls `login()`, the following activities take place:
+When the RP calls `navigator.credentials.get()`, the following activities take
+place:
 
 1. The browser sends requests and fetches several documents:
     1. [An IdP manifest](#manifest-endpoints) which stores declared endpoints.
-    2. URLs for the RP's privacy policy and terms of service, retrieved from the [client metadata endpoint](#client-metadata-endpoint).
+    2. URLs for the RP's privacy policy and terms of service, retrieved from the
+       [client metadata endpoint](#client-metadata-endpoint).
     3. [An accounts list](#accounts-list-endpoint).
-2. The browser displays the list of accounts that the user can use to sign-in, as well as the terms of service and privacy policy.
-3. Once the user chooses an account to sign in with, a request to [the ID token endpoint](#id-token-endpoint)
-   is sent to the IdP to retrieve an ID token.
-4. The RP can validate the ID token to authenticate the user.
+2. The browser displays the list of accounts that the user can use to sign-in,
+   as well as the terms of service and privacy policy.
+3. Once the user chooses an account to sign in with, a request to [the ID token
+   endpoint](#id-token-endpoint) is sent to the IdP to retrieve a token.
+4. The RP can validate the token to authenticate the user.
 
 {%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/4SLjHA1LipB0Wh52yUl6.png",
+  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/bAAYmwYIG1OSteRQ2Tzu.png",
 alt="login API call", width="800", height="419", class="type--full-bleed"
 %}
 
 {% Aside 'caution' %}
 
-FedCM is designed to not inform the RP of the user's IdP sign-in state until
-the user explicitly confirms to **Continue as** and signs in.
-This means RPs aren't informed of connection to the FedCM API if:
-the user isn't signed into the IdP, the accounts list endpoint returns an
-empty list, or the endpoint returns an error.
+FedCM is designed to not inform the RP of the user's IdP sign-in state until the
+user explicitly confirms to **Continue as** and signs in. This means RPs aren't
+informed of connection to the FedCM API if: the user isn't signed into the IdP,
+the accounts list endpoint returns an empty list, or the endpoint returns an
+error.
 
 RPs are expected to support browsers which don't support FedCM, therefore
 users should be able to use an existing, non-FedCM sign-in process. Until
@@ -749,68 +684,8 @@ non-problematic.
 
 {% endAside %}
 
-Once the ID token is validated by the RP server, the RP may register the 
-user or let them sign-in and start a new session.
-
-#### Allow user sign out  {: #signout-rp }
-
-To sign out a user from the RP, the [initialized `FederatedCredential`
-object](#get-fedcm-object) must include the account ID of the signed-in user as
-the `hint` property in addition to the IdP URL and the RP’s client ID. The
-account ID must match the ID returned by [accounts list
-endpoint](#accounts-list-endpoint). Once a credential is returned, use the
-`logout()` call to let the user sign-out from the RP.
-
-{%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/Wf7MgBbBxXpKhen6i1xS.png",
-alt="Sign-out process for FederatedCredential", width="800", height="419", class="type--full-bleed"
-%}
-
-```javascript
-const credential = await navigator.credentials.get({
-  federated: {
-    providers: [{
-      url: 'https://idp.example',
-      clientId: '********',
-      hint: 'john_doe@idp.example'
-    }]
-  }
-});
-await credential.logout();
-```
-
-The FedCM `logout()` call doesn't take any arguments. With this call, the
-browser clears the user's sign-in state, but session termination such as
-erasing a session cookie must be performed by the RP.
-
-#### Revoke tokens for RP access {: #revoke-rp-access }
-
-To allow revocation, the [`FederatedCredential` object](#get-fedcm-object)
-must include the IdP URL and the RP’s client ID. Once a credential is
-returned, use the `revoke()` call with the user ID to request the IdP to
-revoke the user's tokens.
-
-```javascript
-const credential = await navigator.credentials.get({
-  federated: {
-    providers: [{
-      url: 'https://idp.example',
-      clientId: '********',
-    }]
-  }
-});
-await credential.revoke('john_doe@idp.example');
-```
-
-With this call, the browser sends a request to the [revocation
-endpoint](#revocation-endpoint).
-
-{%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/Yrlcc9VTsZPfHqZvyeAT.png",
-alt="Revoke tokens with FederatedCredential", width="800", height="419", class="type--full-bleed"
-%}
-
-Once the returned promise is resolved, the user's tokens are revoked from the IdP.
+Once the token is validated by the RP server, the RP may register the user or
+let them sign-in and start a new session.
 
 ## Test in production with the origin trial {: #origin-trial}
 
