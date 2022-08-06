@@ -6,7 +6,7 @@
 * [在调试时进行帧重启](/zh/blog/new-in-devtools-104/#restart-frame)
 * [录制面板中的慢速重播选项](/zh/blog/new-in-devtools-104/#recorder)
 * [为录制面板创建扩展](/zh/blog/new-in-devtools-104/#recorder-extension)
-* [使用面板中的撰写/部署来进行分组](/zh/blog/new-in-devtools-104/#authored-deployed)
+* [使用面板中的编写/部署来进行分组](/zh/blog/new-in-devtools-104/#authored-deployed)
 * [性能洞察面板中的新功能 - 用户计时追踪](/zh/blog/new-in-devtools-104/#performance)
 * [显示元素的分配槽](/zh/blog/new-in-devtools-104/#slot)
 * [模拟性能录制所需的硬件并发功能](/zh/blog/new-in-devtools-104/#simulate)
