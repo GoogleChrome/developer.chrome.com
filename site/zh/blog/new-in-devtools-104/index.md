@@ -164,7 +164,7 @@ Chromium 议题: [1299241](https://crbug.com/1299241)
  
 以下是列出了几个源图的修复，这些修复改进了整体调试体验: 
  
-- 断点现在可以作用在带有sourceURL注释的内联的 `<script>`脚本中。 
+- 您现在可以在带有 sourceURL 注释的内联的 `<script>`脚本中设置断点。 
 - 调试器现在可以解析带有源图的**范围**视图中的块作用域变量。 
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gv9cGnDMF7OVlXPWntII.png", alt="解析块作用域变量lock scoped variables", width="800", height="532" %}
 - 调试器现在可以解析带有源图的的**范围**视图中的块箭头函数的变量. 
