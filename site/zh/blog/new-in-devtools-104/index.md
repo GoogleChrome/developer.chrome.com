@@ -43,7 +43,7 @@ Chromium 议题: [1303521](https://crbug.com/1303521)
 
 您现在可以对用户流程进行慢速复盘 - 慢、很慢和极慢. 这些选项使您能在屏幕上更加详细地观察到每一个复盘的步骤。 
 
-[打开](/docs/devtools/recorder/#open) **录制** 面板和 [开始一个新的录制](/docs/devtools/recorder/#record)。 当这个录制被完成时，在**复盘**的下拉按钮上点击， 选择一个你想要速率来进行复盘。 
+[打开](/docs/devtools/recorder/#open) **录制** 面板，然后[开始一个新的录制](/docs/devtools/recorder/#record)。 录制完成后，在**复盘**的下拉按钮上点击， 选择一个速率来进行重播流程。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="录制面板上的慢速复盘选项", width="800", height="486" %}
 
