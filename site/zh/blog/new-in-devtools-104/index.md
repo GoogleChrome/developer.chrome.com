@@ -87,7 +87,7 @@ Chromium 议题: [960909](https://crbug.com/960909)
 
 当您开始 [测量页面载入](/docs/devtools/performance-insights/#record), **用户计时** 追踪显示在录制中。在旁侧面板中点击计时物件检视计时细节. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="性能洞察面板中的用户计时追踪", width="800", height="499" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="Performance insights 面板新增了用户计时轨道", width="800", height="499" %}
 
 Chromium 议题: [1322808](https://crbug.com/1322808)
 
