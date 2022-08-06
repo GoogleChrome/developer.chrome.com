@@ -28,7 +28,7 @@ tags:
 
 ## 在调试时进行帧重启 {: #restart-frame  }
 
-**帧重启** 功能回归了! 你可以在函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在 Chrome 92 版本被弃用。  
+**帧重启** 功能回归了! 您可以在函数中途从头开始重启当前代码行之前的代码。这个功能曾经因为稳定性问题在 Chrome 92 版本被弃用。  
 
 在这个 [例子](https://jec.fyi/), 调试器暂停在这个靠近`toggleColorScheme`函数尾端的断点（343 行) 。 在函数 `toggleColorScheme`开始处重启调试器, 扩展在**调试器**面板中的 **调用** 部分, 在`toggleColorScheme`上右点击并选取**帧重启**。  
 
@@ -41,7 +41,7 @@ Chromium 议题: [1303521](https://crbug.com/1303521)
 
 ## 录制面板中的慢速复盘选项 {: #recorder  } 
 
-你现在可以对用户流程进行慢速复盘 - 慢、很慢和极慢. 这些选项使你能在屏幕上更加详细地观察到每一个复盘的步骤。 
+您现在可以对用户流程进行慢速复盘 - 慢、很慢和极慢. 这些选项使您能在屏幕上更加详细地观察到每一个复盘的步骤。 
 
 [打开](/docs/devtools/recorder/#open) **录制** 面板和 [开始一个新的录制](/docs/devtools/recorder/#record)。 当这个录制被完成时，在**复盘**的下拉按钮上点击， 选择一个你想要速率来进行复盘。 
 
@@ -52,7 +52,7 @@ Chromium 议题: [1306756](https://crbug.com/1306756)
 
 ## 为录制面板创建扩展 {: #recorder-extension } 
 
-你可以创建或安装一个Chrome扩展来使用你喜爱的格式来导出复盘脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个扩展。
+您可以创建或安装一个Chrome扩展来使用您喜爱的格式来导出复盘脚本。 看 [录制扩展应用程序界面API](/docs/extensions/reference/devtools_recorder/) 文档来学习如何自己创建一个扩展。
 
 安装一个演示扩展, 按照 [这些步骤](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) 文档中的大纲。 
 
@@ -63,14 +63,14 @@ Chromium 议题: [1325751](https://crbug.com/1325751)
 
 ## 使用面板中的撰写/部署来进行分组 {: #authored-deployed } 
 
-启用新的**撰写/部署**来进行分组以组织你的源面板中的文件。当使用框架(例如, React, Angular)来开发网络应用程序, 在浏览源文件的时候会非常困难，那是因为由构建工具(例如, Webpack, Vite)所产生的缩图造成的。  
+启用新的**撰写/部署**来进行分组以组织您的源面板中的文件。当使用框架(例如, React, Angular)来开发网络应用程序, 在浏览源文件的时候会非常困难，那是因为由构建工具(例如, Webpack, Vite)所产生的缩图造成的。  
  
-使用这个复选框, 你可以将文件分组成两个类别以进行快速搜索: 
+使用这个复选框, 您可以将文件分组成两个类别以进行快速搜索: 
 
-- **撰写**. 类似你在集成开发环境(IDE)中的源文件。 DevTools 根据你的源图产生这些文件 (由你的构建工具DevTools所提供).
+- **撰写**. 类似您在集成开发环境(IDE)中的源文件。 DevTools 根据您的源图产生这些文件 (由您的构建工具DevTools所提供).
 - **部署**. 浏览器读取的真正文件。 通常这些文件都会被缩小(minified)。 
  
-你可以自己做一个尝试，用这个链接 [React demo](https://reactjs.org/)! 
+您可以自己做一个尝试，用这个链接 [React demo](https://reactjs.org/)! 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="使用源面板中的撰写/部署进行分组", width="800", height="521" %}
 
@@ -85,7 +85,7 @@ Chromium 议题: [960909](https://crbug.com/960909)
 
 例如, 这个 [网页](https://jec.fyi/demo/perf-measure) 使用 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure())方法进行文字载入耗时的计算。
 
-当你开始 [测量页面载入](/docs/devtools/performance-insights/#record), **用户计时** 追踪显示在录制中。在旁侧面板中点击计时物件检视计时细节. 
+当您开始 [测量页面载入](/docs/devtools/performance-insights/#record), **用户计时** 追踪显示在录制中。在旁侧面板中点击计时物件检视计时细节. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="性能洞察面板中的用户计时追踪", width="800", height="499" %}
 
