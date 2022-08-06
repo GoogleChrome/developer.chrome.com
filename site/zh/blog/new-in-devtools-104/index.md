@@ -72,7 +72,7 @@ Chromium 议题: [1325751](https://crbug.com/1325751)
  
 您可以自己做一个尝试，用这个链接 [React demo](https://reactjs.org/)! 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="使用源面板中的撰写/部署进行分组", width="800", height="521" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5E1qbkl0Gx1REx7FdqEr.png", alt="使用源面板中的编写/部署进行分组", width="800", height="521" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6bc65d0595702fc826ca87e2cfe519a134b62d90 #}
  
