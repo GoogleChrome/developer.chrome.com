@@ -22,8 +22,8 @@ alt: A collection of padlocks.
 **Update, Aug 2022**
 
 To secure more time to reliably relax the requirement to enable cross-origin
-isolation, we've decided to extend the deprecation trial of `SharedArrayBuffer`
-on desktop further until Chrome 109. 
+isolation, the deprecation trial of `SharedArrayBuffer`
+on desktop will be extended until Chrome 109. 
 
 **Update, May 2022**
 
