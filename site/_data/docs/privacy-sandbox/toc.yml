@@ -45,6 +45,8 @@
 - title: i18n.docs.privacy-sandbox.measure
   sections:
     - url: /docs/privacy-sandbox/attribution-reporting
+    - url: /docs/privacy-sandbox/attribution-reporting/system-overview
+      title: i18n.docs.privacy-sandbox.attribution-reporting-system
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
       title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
     - url: /docs/privacy-sandbox/attribution-reporting-updates
