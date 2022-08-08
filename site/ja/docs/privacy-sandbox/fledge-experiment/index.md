@@ -15,7 +15,7 @@ authors:
 
 * 開発者またはソフトウェア エンジニアの方は、この提案に関する詳細な技術リファレンスとして、[FLEDGE API 開発者ガイド](/blog/fledge-api)をご覧ください。
 
-* [FLEDGE API](/docs/privacy-sandbox/fledge) の内容はそれほど技術的でなく、span>[用語集](/docs/privacy-sandbox/fledge#glossary)も提供されています。
+* [FLEDGE API](/docs/privacy-sandbox/fledge) の内容はそれほど技術的でなく、[用語集](/docs/privacy-sandbox/fledge#glossary)も提供されています。
 
 
 ## API を試す
