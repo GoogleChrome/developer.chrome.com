@@ -37,6 +37,8 @@ attribution-reporting-changing:
   en: 'API updates'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
+attribution-reporting-system:
+  en: 'End-to-end system overview'
 attribution-reporting-summary:
   en: 'Summary reports'
 tracking-prevention:
