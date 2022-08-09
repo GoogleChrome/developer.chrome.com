@@ -116,7 +116,7 @@ It doesn't have an analogy to "navigate", except if you manually set up listener
 
 ## Deciding how to handle a navigation
 
-The `navigateEvent` contains a lot of information about the navigation that you can use to decide whether to intercept a particular navigation.
+The `navigateEvent` contains a lot of information about the navigation that you can use to decide how to deal with a particular navigation.
 
 The key properties are:
 
