@@ -220,7 +220,7 @@ process can take place on the same server which acts as your reporting endpoint.
 Batches should contain many reports to ensure the signal-to-noise ratio is high.
 
 <figure class="screenshot">
-	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/umMjFaWpFL4GXNz6y2PP.jpg", alt="Larger time periods lead to less noisy results.", width="614", height="317" %}
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/hjs2hU2e7N51a1CyNvsB.png", alt="Larger time periods lead to less noisy results.", width="614", height="317" %}
 	<figcaption>
 		<strong>Figure 3</strong>. Compare waiting 1 day and 1 week. In 1
 		hour, you'll have a smaller summary value with likely more noisy results.
