@@ -122,7 +122,7 @@ The key properties are:
 
 `canIntercept`
 : If this is false, you can't intercept the navigation.
-Cross-origin navigations, and cross-document traversals cannot be intercepted.
+Cross-origin navigations and cross-document traversals cannot be intercepted.
 
 `destination.url`
 : Probably the most important piece of information to consider when handling the navigation.
