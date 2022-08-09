@@ -81,7 +81,7 @@ Scripts from customer support/marketing providers that offer chat and contact so
       <td><br>
 Hosting</td>
       <td><br>
-Scripts from web hosting platforms</td>
+Scripts from web hosting platforms.</td>
     </tr>
     <tr>
       <td><br>
