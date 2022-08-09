@@ -19,7 +19,7 @@ tags:
 
 When both first party and third parties on a web page work in harmony, we have a very performant outcome and a great user experience. However, this requires significant effort from both engineering and business teams and is often overlooked, resulting in less than performant web pages and a [negative impact](https://web.dev/third-party-javascript/#performance) to user-centric metrics such as the [Core Web Vitals](https://web.dev/vitals/). This is detrimental to both parties and creates missed opportunities in businesses. Could we do better here?
 
-We have a future vision of the web where third-party scripts and resources provide the intended business value with minimal regression to the performance or user experience of websites that use them in the browser. This would allow users to experience, ideally, faster page loads.
+We have a future vision of the web where third-party scripts and resources provide the intended business value with minimal regression to the performance or user experience of websites that use them in the browser. This would allow users to ideally experience faster page loads.
 
 Over the last year, we have considered, discussed, and experimented with many possibilities that can potentially protect web user experience from the detrimental impact of third-party scripts without reducing their business value to site-owners.
 
