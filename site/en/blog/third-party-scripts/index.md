@@ -211,7 +211,7 @@ We have performed some initial experiments to develop features that can be enabl
 
 1.  **LazyEmbeds**
 
-Chrome would previously [lazy-load](https://blog.chromium.org/2019/10/automatically-lazy-loading-offscreen.html) offscreen images and iframes for our [lite-mode](https://support.google.com/chrome/answer/2392284?hl=en&co=GENIE.Platform%3DAndroid) users. This feature could be extended to all users to defer the loading of iframes determined to be third-party embeds until the user scrolls near them. This could speed up the loading of other parts of the page, improve Core Web Vitals, reduce memory usage and save data.
+Chrome would previously [lazy-load](https://blog.chromium.org/2019/10/automatically-lazy-loading-offscreen.html) offscreen `<img>` and `<iframe>` elements for our [lite-mode](https://support.google.com/chrome/answer/2392284?hl=en&co=GENIE.Platform%3DAndroid) users. This feature could be extended to all users to defer the loading of `<iframe>` elements determined to be third-party embeds until the user scrolls near them. This could speed up the loading of other parts of the page, improve Core Web Vitals, reduce memory usage and save data.
 
 Here is a demo using LazyEmbeds to lazy load YouTube videos on a page. A single YouTube video embed typically adds 500-600KB of JavaScript to the page. We tried to optimize a [blog post](https://officeplaton.hatenablog.com/entry/2016/07/19/231529) with 14 such video embeds using LazyEmbeds. The results were promising for both data and time.
 
