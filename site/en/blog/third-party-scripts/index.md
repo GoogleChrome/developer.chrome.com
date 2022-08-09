@@ -93,7 +93,7 @@ Scripts from marketing tools that add popups, newsletters, etc</td>
       <td><br>
 Social</td>
       <td><br>
-Scripts that enable social features</td>
+Scripts that enable social features.</td>
     </tr>
     <tr>
       <td><br>
