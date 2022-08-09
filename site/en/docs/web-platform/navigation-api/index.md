@@ -58,7 +58,7 @@ navigation.addEventListener('navigate', navigateEvent => {
 });
 ```
 
-You can intercept the navigation in one of two ways:
+You can deal with the navigation in one of two ways:
 
 - Calling `intercept({ handler })` (as described above) to handle the navigation.
 - Calling `preventDefault()`, which can cancel the navigation completely.
