@@ -9,7 +9,7 @@ authors:
   - addyosmani
 hero: 'image/1L2RBhCLSnXjCnSlevaDjy3vba73/kng4NSnIkUQ9BU4RLT3p.jpeg'
 alt: >
-  ALT TEXT
+  A mechanic standing in front of a car with the hood open. The mechanic has turned to the camera for a smile.
 tags:
   - performance
   - news
