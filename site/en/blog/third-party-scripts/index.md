@@ -87,7 +87,7 @@ Scripts from web hosting platforms</td>
       <td><br>
 Marketing</td>
       <td><br>
-Scripts from marketing tools that add popups, newsletters, etc</td>
+Scripts from marketing tools that add popups, newsletters, and others.</td>
     </tr>
     <tr>
       <td><br>
