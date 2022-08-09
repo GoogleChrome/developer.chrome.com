@@ -51,7 +51,7 @@ Publication date
  : August 09, 2022
 
 What's new
- : - This release includes a change which records the CLS metric at the first OnHidden in addition to tab close. Please see the details in the [CLS changelog](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/aJ4ni2LNVsU).
+ : - This release includes a change which records the CLS metric at the first OnHidden in addition to tab close. See the [CLS changelog](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/aJ4ni2LNVsU) for details.
  : - We have identified a bug in our origin filtering which unfortunately affects a small number of origins, including some popular ones, which are missing from this release. We hope to get this fixed for future releases.
 
 Notable stats
