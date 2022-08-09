@@ -257,7 +257,7 @@ We are also working on enhancing RUM APIs to include information that would be r
 
 # Further updates
 
-We are still experimenting with many such ideas and hope to publish GitHub explainers and specification drafts for changes as we move along. Third-parties and site-owners who wish to partner with us or leave feedback can contribute to discussions through these. Third-parties can also start focussing on optimizing for Core Web Vitals and INP metrics to ensure that poor CWV/INP data is not attributed to them.
+We are still experimenting with many such ideas and hope to publish GitHub explainers and specification drafts for changes as we move along. Third-parties and site-owners who wish to partner with us or leave feedback can contribute to discussions through these. Third-parties can also start focussing on optimizing for Core Web Vitals and INP metrics to ensure that poor Core Web Vitals/INP data is not attributed to them.
 
 For now, those actively looking for updates can refer to posts on the [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev) group.
 
