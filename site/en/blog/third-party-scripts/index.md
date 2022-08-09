@@ -148,7 +148,7 @@ As a consequence of the above, third-parties can affect any or all components of
 
 "Across top ~4 million sites, ~2700 origins account for ~57% of all script execution time with the top 50 entities already accounting for ~47%". - [third-party-web](https://github.com/patrickhulce/third-party-web)
 
-Pages that render quickly and become interactive within a reasonable timeframe are essential to a good user experience as measured by the CWV. Good UX often translates to good business for websites, which can mean good business for third-parties being used. Working together to reduce the impact of third-parties can be a win for everyone in the chain.
+Pages that render quickly and become interactive within a reasonable timeframe are essential to a good user experience as measured by the Core Web Vitals. Good UX often translates to good business for websites, which can mean good business for third-parties being used. Working together to reduce the impact of third-parties can be a win for everyone in the chain.
 
 We acknowledge that Google vends a number of commonly used third-party scripts, including Google Tag Manager, YouTube embeds, and ReCaptcha to name a few. We acknowledge that a number of our scripts could have a lighter performance impact on the Core Web Vitals, and we are committed to exploring ways to improve this impact where possible.
 
