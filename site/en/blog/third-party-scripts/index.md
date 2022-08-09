@@ -105,7 +105,7 @@ Scripts that load many other scripts and initiate many tasks.</td>
       <td><br>
 Analytics</td>
       <td><br>
-Scripts that measure or track users and their actions. </td>
+Scripts that measure or track users and their actions.</td>
     </tr>
     <tr>
       <td><br>
