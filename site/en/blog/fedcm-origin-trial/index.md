@@ -6,7 +6,7 @@ authors:
 description: >
   A Web Platform API that allows users to login to websites with their federated accounts in a privacy preserving manner.
 date: 2022-04-25
-updated: 2022-07-29
+updated: 2022-08-08
 tags:
   - privacy
   - security
@@ -20,7 +20,8 @@ tags:
 
 Starting from Chrome 105:
 * The top-level manifest is renamed from `/.well-known/fedcm.json` to
-  `/.well-known/web-identity`.
+  `/.well-known/web-identity` and the URL specified in `provider_urls` should
+  be full manifest URLs rather than paths.
 * APIs `login()`, `logout()` and `revoke()` on `FederatedCredential` instance
   are no longer available.
 * Use `IdentityCredential` instead of `FederatedCredential`.
@@ -255,7 +256,7 @@ prevents the IdP from learning who made the request and which RP is attempting
 to connect. For example:
 
 ```http
-GET /fedcm.json HTTP/1.1
+GET /anything.json HTTP/1.1
 Host: idp.example
 Accept: application/json
 Sec-FedCM-CSRF: ?1
@@ -367,13 +368,13 @@ file must be served from `/.well-known/web-identity` of
 IdP.
 
 For example, if an IdP serves [an IdP Manifest](#manifest-endpoints) at
-`https://accounts.idp.example/sub/fedcm.json`, they must also serve a
+`https://accounts.idp.example/sub/anything.json`, they must also serve a
 top-level domain manifest at `https://idp.example/.well-known/web-identity`
 with the following content:
 
 ```json
 {
-  "provider_urls": ["https://accounts.idp.example/sub/"]
+  "provider_urls": ["https://accounts.idp.example/sub/anything.json"]
 }
 ```
 
