@@ -117,7 +117,7 @@ Scripts that allow sites to obtain the user consent (GDPR, ePR, CCPA) in an info
       <td><br>
 Utility</td>
       <td><br>
-Scripts that are developer utilities (API clients, site monitoring, fraud detection, etc.</td>
+Scripts that are developer utilities (API clients, site monitoring, fraud detection, and others.</td>
     </tr>
     <tr>
       <td><br>
