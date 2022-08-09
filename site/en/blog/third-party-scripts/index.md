@@ -184,7 +184,7 @@ We propose a three-pronged approach for achieving these outcomes..
 
 ## Goals
 
-We will know we have contributed significantly to reducing the impact of third-parties on CWV when we have achieved the following goals.
+We will know we have contributed significantly to reducing the impact of third-parties on Core Web Vitals when we have achieved the following goals.
 
 -   50% decrease in partner origins who struggle to hit Core Web Vitals because of third-parties.
 -   50% of third-parties identified as most problematic for Core Web Vitals have a well-lit path solution.
