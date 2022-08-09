@@ -194,7 +194,7 @@ We will know we have contributed significantly to reducing the impact of third-p
 An effort of this magnitude is not without challenges. Some of the key challenges we have to consider are.
 
 -   Third-parties are a cross-cutting problem involving ads, analytics, tag management, utilities, and many others. Each area requires consideration of a unique set of requirements and trade-offs. For example,
--   The decision to optimize the loading of ads depends on a trade-off between revenue and user experience. Too early—they block valuable content; too late—the user would miss seeing them.
+-   The decision to optimize the loading of ads depends on a trade-off between revenue and user experience. Too early, they block valuable content; too late, the user would miss seeing them.
 -   Analytics scripts add to the page weight but provide valuable data about user actions to the business.
 
 We hope to partner with various categories of third-parties, grasp the nuances involved, resolve trade-offs, and develop incentives that work for all. We realize that we have to work separately with entities in every area for our strategy to be effective. This includes our internal partners such as Google Tag Manager, Google Ads, and YouTube.
