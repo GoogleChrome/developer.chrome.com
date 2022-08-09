@@ -219,7 +219,7 @@ navigation.addEventListener('navigate', navigateEvent => {
 
 This not only avoids URL resolution issues, it also feels fast because you're instantly responding to the user.
 
-### Abort Signals
+### Abort signals
 
 Since you're able to do asynchronous work in an `intercept()` handler, it's possible for the navigation to become redundant.
 This happens when:
