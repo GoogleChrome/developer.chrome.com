@@ -239,7 +239,7 @@ Here is a demo using LazyEmbeds to lazy load YouTube videos on a page. A single 
 
 {% YouTube id='Ptf-eK3R3nA' %}
 
-To learn more about this work, see our Explainer and blink-dev [intent-to-experiment thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/PhLkO3KITyw) and [experiment extension](https://groups.google.com/a/chromium.org/g/blink-dev/c/DjYa9xaoHhs).
+To learn more about this work, see our explainer and blink-dev [intent-to-experiment thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/PhLkO3KITyw) and [experiment extension](https://groups.google.com/a/chromium.org/g/blink-dev/c/DjYa9xaoHhs).
 
 2.  **Targeted third-party Throttling**
 
