@@ -21,7 +21,7 @@ When both first party and third parties on a web page work in harmony, we have a
 
 We have a future vision of the web where third-party scripts and resources provide the intended business value with minimal regression to the performance or user experience of websites that use them in the browser. This would allow users to ideally experience faster page loads.
 
-Over the last year, we have considered, discussed, and experimented with many possibilities that can potentially protect web user experience from the detrimental impact of third-party scripts without reducing their business value to site-owners.
+Over the last year, we have considered, discussed, and experimented with many possibilities that can potentially protect the user experience from the detrimental impact of third-party scripts without reducing their business value to site owners.
 
 Through this post, we wish to share information about some of our experiments. We hope this is the beginning of a process that will encourage transparency and visibility between user agents, businesses, and third-party providers and pave the path to a faster web.
 
