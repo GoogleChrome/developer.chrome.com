@@ -34,7 +34,7 @@ If you come across unfamiliar terms, refer to the
 You should read this article if:
 
 *  You're an adtech or advertiser's **technical decision-maker**. You may work
-   in operations, devops, data science, IT, marketing, or another role where
+   in operations, DevOps, data science, IT, marketing, or another role where
    you make technical implementation decisions. You're wondering how the many
    proposals for Attribution Reporting systems work together to build a tool
    for privacy-preserving measurement.
@@ -107,7 +107,7 @@ for Attribution Reporting API.
 ## Website to browser communication {: #web-browser-communication }
 
 {% Aside %}
-While this API is in testing, your code must confirm the API is available and set the appropriate Permissions Policy.
+While this API is in testing, your code must confirm the API is available and set the appropriate Permissions-Policy.
 {% endAside %}
 
 <figure class="screenshot">
@@ -205,7 +205,7 @@ Service adds noise to protect user privacy and returns the final summary report.
 		by the Aggregation Service. A
 		<a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator">coordinator</a>
 		gives the decryption keys only to attested versions of the Aggregation
-		Service. The Aggregation Service then decrypts the data, aggregate
+		Service. The Aggregation Service then decrypts the data, aggregates
 		it, and add noise before returning the results as a summary report.
 	</figcaption>
 </figure>
