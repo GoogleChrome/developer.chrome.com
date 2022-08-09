@@ -63,7 +63,7 @@ Scripts that enable video player and streaming functionality.</td>
       <td><br>
 Hosted libraries</td>
       <td><br>
-A mixture of publicly hosted open source libraries </td>
+A mixture of publicly hosted open source libraries.</td>
     </tr>
     <tr>
       <td><br>
