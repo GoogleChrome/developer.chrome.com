@@ -16,7 +16,7 @@ tags:
   - devtools-tips
 ---
 
-The Chrome DevTools **Animations** tab is a powerful tool that helps you slow down, replay, nail CSS animation timings, and see the results right away.
+The Chrome DevTools **Animations** tab is a powerful tool that helps you slow down, replay, adjust CSS animation timings, and see the results right away.
 
 {% YouTube id='lVLzkleL_CE' %}
 
