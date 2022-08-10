@@ -62,6 +62,7 @@ sections:
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
+  --title-icon-color: var(--color-project-workbox);
 }
 
 .material-button.bg-yellow-medium {
@@ -70,8 +71,8 @@ sections:
 </style>
 
 {{ heroCard(
-  'Workbox',
-  "Production-ready service worker libraries and tooling.",
+  title,
+  description,
   "Documentation",
   "/docs/workbox",
   "",
