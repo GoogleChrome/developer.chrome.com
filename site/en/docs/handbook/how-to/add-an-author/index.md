@@ -30,7 +30,7 @@ updated: 2022-04-15
        es: Una descripción relevante traducida por Google sobre usted que le gustaría compartir.
    ```
 
-2. If you want links to your online accounts to appear in your author lockup add a new object to [`authorsData.json`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/authorsData.json) with the following structure. Make sure to use the same author slug used in the [`authors.yml`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/authors.yml).
+2. If you want links to your online accounts to appear in your author lockup add a new object to [`authorsData.json`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/authorsData.json) with the following structure. Make sure to use the same author slug used in the [`authors.yaml`](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/authors.yaml).
 
    ```json
    "jaimiesmith": {
