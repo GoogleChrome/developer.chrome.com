@@ -16,6 +16,8 @@ Inspect and modify animations with the Chrome DevTools **Animations** drawer tab
 
 {% YouTube id='lVLzkleL_CE' %}
 
+{% YouTube id='lVLzkleL_CE' %}
+
 ## Overview {: #overview }
 
 To capture animations, open the **Animations** tab. It automatically detects animations and sorts them into groups.
