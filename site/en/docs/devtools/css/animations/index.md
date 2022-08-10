@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Animations: How to inspect and modify CSS animations"
+title: "Animations: Inspect and modify CSS animation effects"
 authors:
   - kaycebasques
   - sofiayem
