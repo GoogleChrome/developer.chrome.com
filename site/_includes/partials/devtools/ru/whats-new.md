@@ -4,20 +4,20 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/ru/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/ru/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/ru/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/ru/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/ru/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/ru/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/ru/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/ru/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/ru/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/ru/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/ru/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-104/#misc) -->
+* [Перезапуск фрейма во время отладки](/ru/blog/new-in-devtools-104/#restart-frame)
+* [Опции замедленного воспроизведения во вкладке Recorder](/ru/blog/new-in-devtools-104/#recorder)
+* [Создание расширений для вкладки Recorder](/ru/blog/new-in-devtools-104/#recorder-extension)
+* [Группировка по Авторским (Authored) и Развёрнутым (Deployed) файлам во вкладке Источники (Sources)](/ru/blog/new-in-devtools-104/#authored-deployed)
+* [Новый трек User Timings во вкладке Performance insights](/ru/blog/new-in-devtools-104/#performance)
+* [Отображение элемента с назначенным слотом](/ru/blog/new-in-devtools-104/#slot)
+* [Симуляция аппаратного параллелизма при записи Производительности (Performance)](/ru/blog/new-in-devtools-104/#simulate)
+* [Предпросмотр нецветовых значений при автодополнении переменных CSS](/ru/blog/new-in-devtools-104/#css-var)
+* [Определение блокирующего фрейма на панели Возвратного кэша (Back/forward cache)](/ru/blog/new-in-devtools-104/#bfcache)
+* [Улучшены подсказки автодополнения для объектов JavaScript](/ru/blog/new-in-devtools-104/#autocomplete)
+* [Улучшение карт источников](/ru/blog/new-in-devtools-104/#sourcemaps)
+* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc) -->
 
 ### Chrome 103 {: #chrome103 }
 
