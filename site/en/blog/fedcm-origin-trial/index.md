@@ -18,7 +18,7 @@ tags:
 
 **Update, August 2022**
 
-* Added an important security information that the IdP needs to check if the
+* Added an important security information. The identity provider (IdP) needs to check if the
   `Referer` header matches the origin the RP registered in advance on [the ID
   token endpoint](#id-token-endpoint).
 
@@ -563,11 +563,11 @@ Sec-FedCM-CSRF: ?1
 account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 
-On the server, the IdP should confirm:
+On the server, the IdP should confirm that:
 
-1. that the claimed account ID matches the ID for the account that is already
+1. The claimed account ID matches the ID for the account that is already
    signed in. 
-2. that the `Referer` header matches the origin the RP registered in advance
+2. The `Referer` header matches the origin the RP, registered in advance
    for the given client ID.
 
 {% Aside 'caution' %}
