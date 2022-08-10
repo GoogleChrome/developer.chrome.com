@@ -249,7 +249,7 @@ To view a page in print mode:
 
 1.  Open the [Command Menu][10].
 2.  Start typing `Rendering` and select `Show Rendering`.
-3.  For the **Emulate CSS Media** dropdown, select **print**.
+3.  For the **Emulate CSS Media** drop-down, select **print**.
 
 ### View used and unused CSS with the Coverage tab {: #coverage }
 
@@ -291,7 +291,7 @@ See [Force DevTools Into Print Preview Mode][11].
 
 ## Copy CSS {: #copy-css }
 
-From a single drop-down menu in the **Styles** pane, you can copy separate [CSS rules, declarations, properties, values](https://www.w3schools.com/css/css_syntax.asp), and more.
+From a single drop-down menu in the **Styles** pane, you can copy separate [CSS rules, declarations, properties, values](https://developer.mozilla.org/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
 
 Additionally, you can copy CSS properties in JavaScript syntax. This option is handy if you're using [CSS-in-JS](/blog/css-in-js/) libraries.
 
