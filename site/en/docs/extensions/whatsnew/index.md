@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-06-15
+updated: 2022-08-04
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -14,6 +14,25 @@ updated: 2022-06-15
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Chrome 105: promises for the Identity API
+
+July 15, 2022
+
+Functions on the [Identity API](/docs/extensions/reference/identity/#method-getAuthToken) now
+support promise based calls. This comes with a slight change to the surface for
+[`identity.getAuthToken()`](/docs/extensions/reference/identity/#method-getAuthToken), where the
+asynchronous return set to a promise based call will have "token" and "grantedScopes" as parameters
+on a single object (as opposed to the callback version receiving them as separate arguments to the
+callback).
+
+### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
+
+July 28, 2022
+
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
+Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
+information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
@@ -44,7 +63,7 @@ April 14, 2022
 
 Dynamically registered content scripts can now specify the
 [world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
-[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+[`scripting.registerContentScripts()`](/docs/extensions/reference/scripting/#method-registerContentScripts)
 for details.
 
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
@@ -138,7 +157,7 @@ January 5, 2022
 
 Content scripts can now specify the `match_origin_as_fallback` key to inject into frames that are
 related to a matching frame, including frames with `about:`, `data:`, `blob:`, and `filesystem:`
-URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
+URLs. See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
 ### Chrome 99: extension service worker support for file: schemes in Canary {: #canary-file-access }
@@ -172,8 +191,8 @@ policy](/docs/webstore/program_policies/) enforcement is handled.
 November 9, 2021
 
 The Scripting API's [`executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
-and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept multiple
-files. Previously these methods required an array with a single file entry.
+and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept
+multiple files. Previously these methods required an array with a single file entry.
 
 ### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 
