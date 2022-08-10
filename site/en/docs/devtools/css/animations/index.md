@@ -124,7 +124,7 @@ There are three ways you can modify an animation with the **Animations** tab:
 - Start time delay.
 
 {% Aside 'gotchas' %}
-Any changes you apply in the **Animations** tab apply inline styles to the corresponding elements, so you can see and replay the resulting animations right away.
+Any changes you make in the **Animations** tab apply inline styles to the corresponding elements, so you can see and replay the resulting animations right away.
 {% endAside %}
 
 For this section, suppose that the screenshot below represents the original animation:

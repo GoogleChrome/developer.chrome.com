@@ -23,7 +23,7 @@ The Chrome DevTools **Animations** tab is a powerful tool that helps you slow do
 The **Animations** tab, while open, records animations automatically, conveniently groups them, and lets you:
 
 - Replay and slow down animations to better inspect them.
-- Adjust timings and delays by dragging points in a timeline instead of guessing and setting CSS values manually.
+- Adjust durations, timings, and delays by dragging points in a timeline instead of guessing and setting CSS values manually.
 
 Additionally, you can edit the easing timings and set custom `cubic-bezier` curve values with the **Easing Editor** in the **Elements** > **Styles** pane. To learn more, see [Edit animation and transition timings with the **Easing Editor**](/docs/devtools/css/reference/#edit-easing).
 
