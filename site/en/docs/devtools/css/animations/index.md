@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Animations: Inspect and modify CSS animation effects"
+title: "Animations: How to inspect and modify CSS animations"
 authors:
   - kaycebasques
   - sofiayem
@@ -13,6 +13,8 @@ tags:
 ---
 
 Inspect and modify animations with the Chrome DevTools **Animations** drawer tab.
+
+{% YouTube id='lVLzkleL_CE' %}
 
 ## Overview {: #overview }
 
@@ -121,6 +123,10 @@ There are three ways you can modify an animation with the **Animations** tab:
 - Keyframe timings.
 - Start time delay.
 
+{% Aside 'gotchas' %}
+Any changes you apply in the **Animations** tab apply inline styles to the corresponding elements, so you can see and replay the resulting animations right away.
+{% endAside %}
+
 For this section, suppose that the screenshot below represents the original animation:
 
 <div class="elevation--4">{% Img src="image/admin/XKgSjsvRLNrQkapxpekI.png", alt="Original animation before modification.", width="800", height="423" %}</div>
@@ -134,6 +140,6 @@ Click and drag one of these to change the timing of the keyframe.
 
 <div class="elevation--4">{% Img src="image/admin/jJHtenLps4VT8RYWUDxS.png", alt="Modified keyframe.", width="800", height="421" %}</div>
 
-To add a delay to an animation, click and drag it anywhere except the circles.
+To add a delay to an animation, click the animation itself, not the circles, then drag it anywhere.
 
 <div class="elevation--4">{% Img src="image/admin/D7OuXdLLAb1iBgPazKd0.png", alt="Modified delay.", width="800", height="421" %}</div>
