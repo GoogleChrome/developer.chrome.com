@@ -657,7 +657,7 @@ To change the values with the **Easing Editor**:
 </tbody>
 </table>
 
-Alternatively, in the **Curve editor**, drag the purple circles to set a custom [`cubic-bezier(x1,y1,x2,y2)`](https://www.w3schools.com/cssref/func_cubic-bezier.asp) value.
+Alternatively, in the **Curve editor**, drag the purple circles to set a custom [`cubic-bezier(x1,y1,x2,y2)`](https://developer.mozilla.org/docs/Glossary/Bezier_curve) value.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrpIeYlQURppXdbUXV6C.png", alt="Curve editor.", width="800", height="584" %}
 
