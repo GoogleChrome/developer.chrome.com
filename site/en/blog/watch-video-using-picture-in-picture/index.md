@@ -4,7 +4,7 @@ title: Watch video using Picture-in-Picture
 description: >
   Control Picture-in-Picture for video elements on your website.
 date: 2018-10-19
-updated: 2022-08-08
+updated: 2022-07-20
 authors:
   - beaufortfrancois
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/8wfOD3xpMPTZ2KxvZUaz.png'
