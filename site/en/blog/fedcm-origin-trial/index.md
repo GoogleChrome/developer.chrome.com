@@ -567,7 +567,8 @@ On the server, the IdP should confirm:
 
 1. that the claimed account ID matches the ID for the account that is already
    signed in. 
-2. that the `Referer` header matches the origin the RP registered in advance.
+2. that the `Referer` header matches the origin the RP registered in advance
+   for the given client ID.
 
 {% Aside 'caution' %}
 
