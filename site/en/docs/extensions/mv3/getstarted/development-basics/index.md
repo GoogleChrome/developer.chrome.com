@@ -10,7 +10,8 @@ date: 2022-08-10
 ## Overview {: #overview }
 
 This page describes the extension development workflow. We will create a "Hello, Extensions"
-example, load it locally and share tips that will improve your extension development experience. 
+example, load the extension locally, locate logs and errors and share other development
+recommendations.
 
 ## Hello Extensions {: #build }
 
@@ -45,7 +46,7 @@ Next, create a new file called `manifest.json` and add the following code:
 ```
 
 The first fields contain the metadata of the extension. Under the `"action"` key, the extension
-declares the popup and icon. You can download the icon [here][hello-icon]. 
+declares the popup and action icon. You can download the icon [here][hello-icon]. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -59,8 +60,8 @@ For the popup, create a file named `hello.html`, and add the following code:
 </html>
 ```
 
-The extension now displays a popup when the extension action (toolbar icon) is clicked. Let’s test
-it on Chrome by loading it locally.
+The extension now displays a popup when the extension action (toolbar icon) is clicked. Let's test
+it on Chrome by loading it locally. Ensure all files are saved.
 
 ## Loading an unpacked extension {: #load-unpacked }
 
@@ -80,15 +81,15 @@ To load an unpacked extension in developer mode, follow these steps:
       </figcaption>
     </figure>
 
-Ta-da! The extension has been successfully installed. Because no icons were included in the
-manifest, a generic icon will be created for the extension.
+Ta-da! The extension has been successfully installed. Because no extension icons were included in
+the manifest, a generic icon will be created for the extension.
 
 ## Pinning the extension {: #pin }
 
 By default, when you load your extension locally, it will appear in the **extensions menu** {% Img
 src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24",
-height="24" %}. To access your extension quickly during development, pin your extension to the
-toolbar.
+height="24" %}. Pin your extension to the toolbar to quickly access your extension during
+development.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LahIugYHQW3QpHM0z1qZ.png", 
@@ -98,7 +99,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   </figcaption>
 </figure>
 
-Now when you click on the extension’s action (toolbar icon), you should see a popup.
+Click on the extension’s action (toolbar icon); you should see a popup.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
@@ -122,15 +123,15 @@ Let’s go back to the code and change the content of the `H1` element in your H
 </html>
 ```
 
-After saving the file, go to the Extension Management page. You can see the changes made by clicking on
-the refresh icon next to the **on/off** toggle:
+After saving the file, go to the Extension Management page. You can see the changes made by clicking
+on the refresh icon next to the **on/off** toggle:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QNtwZICbwsGO3gacCJEd.png", 
 alt="Reload an extension", width="500", height="233", class="screenshot" %}
 
 {% Aside %}
 
-💡 **TIP**: Remember to refresh your extension every time you make any change.
+💡 **TIP**: Remember to refresh your extension every time you make changes.
 
 {% endAside %}
 
@@ -139,7 +140,7 @@ alt="Reload an extension", width="500", height="233", class="screenshot" %}
 ### Console logs {: #console}
 
 During development, you can debug your code by accessing the browser console logs. In this case, we
-are going to locate the logs for the popup. Start by adding a script tag to `hello.html`.
+will locate the logs for the popup. Start by adding a script tag to `hello.html`.
 
 {% Label %}hello.html{% endLabel %}
 
@@ -186,7 +187,7 @@ To see this message logged in the Console, complete the following steps:
 
 ### Error logs {: #errors }
 
-Now let's try breaking the extension. We can throw a syntax error by removing the closing quote in the `popup.js` file:
+Now let's break the extension. We can do so by removing the closing quote in the `popup.js` file:
 
 {% Label %}popup.js{% endLabel %}
 
@@ -204,13 +205,13 @@ Click on the **Errors** button to learn more about the error:
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", 
 alt="Extension error details", width="400", height="281", class="screenshot" %}
 
-To learn more about debugging the service worker, options page, and content scripts, see
-[Debugging extensions][doc-debug].
+To learn more about debugging the service worker, options page, and content scripts, see [Debugging
+extensions][doc-debug].
 
 ## Structuring an extension project {: #structure }
 
-There are many ways to structure an extension project, however, you should always place the
-manifest.json file in the **root** of the project. The following is a structure example:
+There are many ways to structure an extension project; however, you should always place the
+manifest.json file at the **root**. The following is a structure example:
 
 
 ```text
@@ -234,13 +235,13 @@ manifest.json file in the **root** of the project. The following is a structure 
 ## Using Typescript {: #types }
 
 If you are developing using a [code editor][mdn-ide] such as VSCode or Atom, you can use the npm
-package [chrome-types][npm-chrome-types] to take advantage of autocompletion for the [Chrome
+package [chrome-types][npm-chrome-types] to take advantage of auto-completion for the [Chrome
 API][doc-apis]. This npm package is updated automatically when the Chromium source code
 changes.
 
 {% Aside %}
 
-💡 **TIP**: Make sure to upgrade this npm package to the latest version frequently.
+💡 **TIP**: Upgrade this npm package frequently to work with the latest Chromium version.
 
 {% endAside %}
 

@@ -9,8 +9,8 @@ date: 2022-08-10
 
 ## Overview {: #overview }
 
-Chrome extensions enhance the browsing experience by adding features and functionality to Chrome.
-This page is an introduction to Chrome extension development and provides links to step-by-step
+Chrome extensions enhance the browsing experience by adding features and functionality to the Chrome
+browser. This page introduces Chrome extension development and provides links to step-by-step
 [beginner tutorials][section-tutorials]. 
 
 ## Web technologies {: #web-tech }
@@ -20,7 +20,8 @@ Extensions are written with the same web technologies used to create web applica
 - [HTML][mdn-html] is used as a content markup language.
 - [CSS][web-dev-css] is used for styling.
 - [JavaScript][mdn-js] is used for scripting and logic.
-- Extensions can use all the [JavaScript APIs](https://developer.mozilla.org/docs/Web/API) that the browser provides.
+- Extensions can use all the [JavaScript APIs](https://developer.mozilla.org/docs/Web/API) that the
+  browser provides.
 
 <!-- Should we use https://developer.chrome.com/docs/extensions/api_other/ ?-->
 
@@ -28,8 +29,8 @@ Before moving forward, we recommend that you become familiar with these technolo
 
 ## Chrome extension APIs {: #chrome-apis }
 
-What makes extensions more powerful than a web app is their access to [Chrome
-APIs][doc-apis]. The following are just a few examples of what extensions can do:
+What makes extensions more powerful than a web app is their access to [Chrome APIs][doc-apis]. The
+following are just a few examples of what extensions can do:
 
 - Change the functionality or behavior of a website. 
 - Allow users to collect and organize information across websites.
@@ -39,46 +40,46 @@ See [Extension development Overview][doc-dev-overview] for a complete list of AP
 
 ## Extension files {: #extension-files }
 
-Extensions contain different files, depending on the functionality provided. The
-following are some of the most frequently used files:
+Extensions contain different files, depending on the functionality provided. The following are some
+of the most frequently used files:
 
-The Manifest
-: The [manifest][doc-manifest] is the only required file. It is a [JSON][mdn-json] file that records
-important metadata, defines resources, declares permissions, and identifies which files to run in
-the background and on the page.
+The Manifest 
+: The [manifest][doc-manifest] is the only required file. It is a [JSON][mdn-json] file
+that records important metadata, defines resources, declares permissions, and identifies which files
+to run in the background and on the page.
 
-The service worker
-: The extension [service worker][doc-service-worker] handles and listens for browser events. There
-are many types of events, such as navigating to a new page, removing a bookmark, or closing a tab.
-It can use all the [Chrome APIs][doc-apis], but it cannot interact directly with the content of web
-pages; that’s the job of content scripts.
+The service worker 
+: The extension [service worker][doc-service-worker] handles and listens for
+browser events. There are many types of events, such as navigating to a new page, removing a
+bookmark, or closing a tab. It can use all the [Chrome APIs][doc-apis], but it cannot interact
+directly with the content of web pages; that’s the job of content scripts.
 
-Content scripts
-: [Content scripts][doc-content-scripts] can execute Javascript in the context of a web page. They
-can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of the [Chrome
-APIs][doc-reference], but can indirectly access the rest by exchanging messages with the extension
-service worker.
+Content scripts 
+: [Content scripts][doc-content-scripts] can execute Javascript in the context of a
+web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of
+the [Chrome APIs][doc-reference] but can indirectly access the rest by exchanging messages with the
+extension service worker.
 
-The popup and other pages
-: An extension can include various HTML files, such as a [popup][doc-popup], an [options page][doc-options]
-and [other html pages][doc-ext-pages]. All these pages have access to [Chrome APIs][doc-apis].
+The popup and other pages 
+: An extension can include various HTML files, such as a [popup][doc-popup], an [options
+page][doc-options], and [other HTML pages][doc-ext-pages]. All these pages have access to [Chrome
+APIs][doc-apis].
 
 Visit [Extensions Architecture][doc-arch] and [Designing the user interface][doc-ui] to dive deeper.
 
 ## Developing your extension {: #development }
 
 Even though web applications and extensions share the same technologies, the extension development
-experience is different. Check out [Development Basics][doc-dev-basics] to create a "Hello, Extensions"
-example and familiarize yourself with the extension development workflow.
+experience is different. Check out [Development Basics][doc-dev-basics] to create a "Hello,
+Extensions" example and familiarize yourself with the extension development workflow.
 
 ## Designing your extension features {: #quality }
 
 When you start designing your extension and choosing which features to support, make sure it
-fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
-This will ensure your extension is allowed to be distributed through the Chrome Web Store.
+fulfills a [single purpose][doc-policy-sp] that is narrowly defined and easy to understand.
+This will allow your extension to be distributed through the Chrome Web Store.
 
-{% Details %}
-{% DetailsSummary %}
+{% Details %} {% DetailsSummary %}
 
 **💡 What exactly does "single purpose" mean?**
 
@@ -101,7 +102,7 @@ See [Extension quality guidelines][doc-single-purpose] for additional details.
 
 ## Distributing your extension {: #distribution }
 
-You can setup a developer account with the [Chrome Web Store][chrome-web-store] to host and
+You can set up a developer account with the [Chrome Web Store][chrome-web-store] to host and
 distribute your extension. Bare in mind that extensions must adhere to the [developer program
 policies][doc-cws-policy]. 
 
@@ -129,17 +130,17 @@ extension and Chrome Web Store documentation.
 [doc-cws-publish]: /docs/webstore/publish/
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-overview]: /docs/extensions/mv3/devguide
-[doc-ext-pages]: /docs/extensions/mv3/user_interface/
+[doc-ext-pages]: /docs/extensions/mv3/architecture-overview/#html-files
 [doc-manifest]: /docs/extensions/mv3/manifest/
-[doc-options]: /docs/extensions/mv3/user_interface/
-[doc-popup]: /docs/extensions/mv3/user_interface/
+[doc-options]: /docs/extensions/mv3/options/
+[doc-policy-sp]: /docs/webstore/program_policies/#single-purpose
+[doc-popup]: /docs/extensions/mv3/user_interface/#popup
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
 [doc-single-purpose]: /docs/extensions/mv3/single_purpose/
-[doc-single-purpose]: /docs/webstore/program_policies/#single-purpose
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
-[mdn-dom]: https://developer.mozilla.org/d`ocs/Web/API/Document_Object_Model
+[mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
