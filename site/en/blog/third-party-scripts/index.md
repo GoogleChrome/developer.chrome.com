@@ -154,7 +154,7 @@ We acknowledge that Google vends a number of commonly used third-party scripts, 
 
 # How can Chrome help?
 
-Third-party resources being poor for performance is often a tragedy of the commons requiring a step-change in the underlying ecosystem dynamics. Chrome wants to drive innovation to achieve the following outcomes:
+Third-party resources being poor for performance is regularly a challenge for developers, requiring a step-change in the underlying ecosystem dynamics. Chrome wants to drive innovation to achieve the following outcomes:
 
 1.  ***Find better ways of loading third-party resources on the web while not regressing user-experience or business outcomes.***
 
@@ -245,7 +245,7 @@ To learn more about this work, see our explainer and blink-dev [intent-to-experi
 
 Third-party scripts are often added by various teams without holistic oversight processes. The engineering team at [The Telegraph](https://medium.com/the-telegraph-engineering/improving-third-party-web-performance-at-the-telegraph-a0a1000be5) articulated that "everyone wants 'that tag' on a page which will make the organization money". This can continuously increase the burden of managing the performance impact.
 
-Targeted 3P throttling proposes to throttle very specific kinds of third-parties to mitigate their impact. This would allow browsers to load key content + critical 3Ps early, while those safe to load later are throttled.
+Targeted third-party script throttling proposes to throttle very specific kinds of third-parties to mitigate their impact. This would allow browsers to load key content + critical third-parties early, while those safe to load later are throttled.
 
 {% YouTube id='oU-TRpghG20' %}
 
