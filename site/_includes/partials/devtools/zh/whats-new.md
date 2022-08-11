@@ -1,20 +1,20 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/zh/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/zh/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/zh/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/zh/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/zh/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/zh/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/zh/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/zh/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/zh/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/zh/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-104/#misc) -->
+* [在调试时进行帧重启](/zh/blog/new-in-devtools-104/#restart-frame)
+* [录制面板中的慢速重播选项](/zh/blog/new-in-devtools-104/#recorder)
+* [为录制面板创建扩展](/zh/blog/new-in-devtools-104/#recorder-extension)
+* [使用面板中的编写/部署来进行分组](/zh/blog/new-in-devtools-104/#authored-deployed)
+* [性能洞察面板中的新功能 - 用户计时追踪](/zh/blog/new-in-devtools-104/#performance)
+* [显示元素的分配槽](/zh/blog/new-in-devtools-104/#slot)
+* [模拟性能录制所需的硬件并发功能](/zh/blog/new-in-devtools-104/#simulate)
+* [在自动填充层叠样式表（CSS）时预览非颜色数值的值](/zh/blog/new-in-devtools-104/#css-var)
+* [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
+* [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
+* [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [其他的更新](/zh/blog/new-in-devtools-104/#misc) 
 
 
 ### Chrome 103 {: #chrome103 }
