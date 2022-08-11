@@ -39,7 +39,7 @@ You can also edit the recording's name by clicking the edit button {% Img src="i
 
 ## Share user flows {: #share-flows }
 
-You can export and import user flows. This is useful for bug reporting because you can share an exact record of the steps that reproduce a bug.
+You can export and import user flows in the Recorder. This is useful for bug reporting because you can share an exact record of the steps that reproduce a bug. You can also export and replay it with external libraries. 
 
 ### Export a user flow {: #export-flows }
 
@@ -53,19 +53,6 @@ To export a user flow:
     - **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
     - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
 1. Save the file.
-
-{% Aside 'gotchas' %}
-The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of [Puppeteer](https://pptr.dev/). It is also a command line tool, so you can replay JSON files with it too.
-
-**Advance use case: Integrate with the Puppeteer Replay library**
-
-You can build your own library on top of the Puppeteer Replay library to replay or "stringify" the user flow JSON files, that is, convert them to something else.
-
-For example, [@cypress/chrome-recorder](https://github.com/cypress-io/cypress-chrome-recorder) is a library built on top of Puppeteer Replay. You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
-
-Learn more about the [stringify feature in Puppeteer Replay](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script).
-
-{% endAside %}
 
 You can do the following with each export option:
 
@@ -93,6 +80,26 @@ To import a user flow:
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LdIrYNYuKa2OA7PnYVjf.png", alt="Import recording.", width="800", height="490" %}
 1. Select the JSON file with the recorded user flow.
 1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button to run the imported user flow.
+
+
+### Replay with external libraries
+
+The [Puppeteer Replay](https://github.com/puppeteer/replay) is an open source library maintained by the Chrome DevTools team. It is built on top of [Puppeteer](https://pptr.dev/). It is a command line tool, you can replay JSON files with it.
+
+Apart from that, you can replay JSON files with the following 3rd party libraries:
+
+- [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
+- [Replay with Testcafe](https://testcafe.io/documentation/403998/guides/experimental-capabilities/chrome-replay-support). You can use TestCafe to replay user flow JSON files and generate test reports for these recordings.
+- [Replay with Sauce Labs](https://saucelabs.com/blog/how-to-create-test-scripts-using-chrome-devtools). You can replay the JSON files on [Sauce Labs](https://saucelabs.com/) using [saucectl](https://github.com/saucelabs/saucectl-replay-example).
+
+{% Aside 'gotchas' %} 
+
+**Advance use case: Integrate with the Puppeteer Replay library**
+
+Similar to the 3rd party libraries above, you can build your own library on top of the [Puppeteer Replay](https://github.com/puppeteer/replay) too. The  Puppeteer Replay library provide ways for you to [customize how a recording is run](https://github.com/puppeteer/replay#2-customize-replay) and ["stringify" the user flow JSON files](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script), that is, convert them to something else. 
+
+{% endAside %}
+
 
 ## Edit steps {: #edit-steps }
 
