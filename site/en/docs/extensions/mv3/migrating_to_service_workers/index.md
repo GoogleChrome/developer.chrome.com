@@ -203,13 +203,13 @@ to access the [`DOMParser`][9] API or create an `<iframe>` to parse and traverse
 Extension developers have two ways to work around this limitation: create a new tab or use a
 library. Which you choose will depend on your use case.
 
-Libraries such as [`jsdom`][10] can be used to emulate a typical browser window environment,
+Libraries such as [`linkedom`][linkedom] can be used to emulate a typical browser window environment,
 complete with DOMParser, event propagation, and other capabilities like `requestAnimationFrame`.
-Lighter-weight alternatives like [`undom`][11] provide just enough DOM to power many frontend
+Lighter-weight alternatives like [`undom`][undom] provide just enough DOM to power many frontend
 frameworks and libraries.
 
 Extensions that need a full native browser environment can use the [`chrome.windows.create()`][12]
-and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window. 
+and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window.
 Additionally, an extension's popup still provides a full (temporary) window environment.
 
 ### Audio/video playback and capture {: #audio_vidio }
@@ -260,8 +260,8 @@ Operations with a Web Worker][18].
 [7]: https://developer.mozilla.org/docs/Web/API/Window
 [8]: https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope
 [9]: https://developer.mozilla.org/docs/Web/API/DOMParser
-[10]: https://github.com/jsdom/jsdom
-[11]: https://github.com/developit/undom
+[linkedom]: https://github.com/WebReflection/linkedom
+[undom]: https://github.com/developit/undom
 [12]: /docs/extensions/reference/windows#method-create
 [13]: /docs/extensions/reference/tabs#method-create
 [16]: /docs/extensions/mv3/messaging
