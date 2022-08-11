@@ -710,7 +710,7 @@ Alternatively, in the **Curve editor**, drag the purple circles to set a custom 
 
 Any change triggers a ball animation in the **Preview** at the top of editor.
 
-### (Experimental) Copy CSS changes {: #copy-css-changes }
+## (Experimental) Copy CSS changes {: #copy-css-changes }
 
 {% Aside %}
 To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
