@@ -60,9 +60,9 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
 
-<!-- In a [performance recording](https://developer.chrome.com/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
+<!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 
-<!-- See [Performance Insights](https://developer.chrome.com/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
+<!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
 
@@ -104,7 +104,7 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](https://developer.chrome.com/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 
 <!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
 
