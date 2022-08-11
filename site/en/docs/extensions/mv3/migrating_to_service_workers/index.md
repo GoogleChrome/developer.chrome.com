@@ -76,9 +76,9 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 });
 ```
 
-While this approach works in a persistent background page, it is _not_ guaranteed to work in a service
-worker due to the asynchronous nature of the [Storage APIs][storage]. When a service worker is
-terminated, so are the event listeners associated with it. And since events are dispatched when a
+While this approach works in a persistent background page, it is _not_ guaranteed to work in a
+service worker due to the asynchronous nature of the [Storage APIs][storage]. When a service worker
+is terminated, so are the event listeners associated with it. And since events are dispatched when a
 service worker starts, asynchronously registering events results in them being dropped because
 there's no listener registered when it is first spun up.
 
@@ -129,9 +129,9 @@ chrome.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-If we port this code directly to Manifest V3, requiring service workers, it's possible that the code will be
-terminated between when the name is set and the user clicks the browser action. If this happens, the
-set name will have been lost&mdash;and `savedName` will again be `undefined`.
+If we port this code directly to Manifest V3, requiring service workers, it's possible that the code
+will be terminated between when the name is set and the user clicks the browser action. If this
+happens, the set name will have been lost&mdash;and `savedName` will again be `undefined`.
 
 We can fix this bug by treating the [Storage APIs][storage] as our source of truth:
 
@@ -191,7 +191,8 @@ exposes the capabilities that web developers are used to working with: `window`,
 `cookie`, `localStorage`, etc.
 
 The [global scope for service worker][8] is significantly more limited and doesn't have many of
-these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link].
+these features. Most notably, service workers don't have access to the DOM. Workers no longer
+provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link].
 
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.
@@ -203,10 +204,10 @@ to access the [`DOMParser`][9] API or create an `<iframe>` to parse and traverse
 Extension developers have two ways to work around this limitation: create a new tab or use a
 library. Which you choose will depend on your use case.
 
-Libraries such as [`linkedom`][linkedom] can be used to emulate a typical browser window environment,
-complete with DOMParser, event propagation, and other capabilities like `requestAnimationFrame`.
-Lighter-weight alternatives like [`undom`][undom] provide just enough DOM to power many frontend
-frameworks and libraries.
+Libraries such as [`linkedom`][linkedom] can be used to emulate a typical browser window
+environment, complete with DOMParser, event propagation, and other capabilities like
+`requestAnimationFrame`. Lighter-weight alternatives like [`undom`][undom] provide just enough DOM
+to power many frontend frameworks and libraries.
 
 Extensions that need a full native browser environment can use the [`chrome.windows.create()`][12]
 and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window.
