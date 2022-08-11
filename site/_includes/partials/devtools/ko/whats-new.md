@@ -2,6 +2,19 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+<!-- ### Chrome 105 {: #chrome105 }
+
+* [Step-by-step replay in the Recorder](/ko/blog/new-in-devtools-105/#recorder)
+* [Support mouse over event in the Recorder panel](/ko/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) in the Performance insights panel](/ko/blog/new-in-devtools-105/#lcp)
+* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ko/blog/new-in-devtools-105/#foit-fout)
+* [Top layer badge in the Elements panel](/ko/blog/new-in-devtools-105/#top-layer)
+* [Attach Wasm debugging information at runtime](/ko/blog/new-in-devtools-105/#wasm)
+* [Support live edit during debugging](/ko/blog/new-in-devtools-105/#live-edit)
+* [View and edit @scope at rules in the Styles pane](/ko/blog/new-in-devtools-105/#scope)
+* [Sourcemap improvements](/ko/blog/new-in-devtools-105/#sourcemaps)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-105/#misc) -->
+
 
 <!-- ### Chrome 104 {: #chrome104 }
 
