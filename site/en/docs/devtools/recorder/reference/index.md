@@ -61,7 +61,10 @@ The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built 
 
 You can build your own library on top of the Puppeteer Replay library to replay or "stringify" the user flow JSON files, that is, convert them to something else.
 
-For example, [@cypress/chrome-recorder](https://github.com/cypress-io/cypress-chrome-recorder) is a library built on top of Puppeteer Replay. You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
+Here are some examples:
+
+- [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
+- [Replay with Testcafe](https://testcafe.io/documentation/403998/guides/experimental-capabilities/chrome-replay-support). You can use TestCafe to replay user flow JSON files and generate test reports for these recordings.
 
 Learn more about the [stringify feature in Puppeteer Replay](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script).
 
