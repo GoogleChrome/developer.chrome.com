@@ -41,6 +41,10 @@ updated: 2022-04-15
    }
    ```
 
+{% Aside %}
+When you add an author, the author profile won't show on the [relevant page](/authors) immediately. You have to associate some content with the profile to see any changes to the authors' page.
+{% endAside %}
+
 ## Create a profile image
 
 1. Follow the [Images and video](/docs/handbook/how-to/add-media/) guide to upload your photo to the CDN.
