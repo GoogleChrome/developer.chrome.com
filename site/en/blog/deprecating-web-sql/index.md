@@ -3,12 +3,13 @@ layout: 'layouts/blog-post.njk'
 title: Deprecating and removing Web SQL
 description: >
   Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented
-  it and WebKit deprecated it in 2019. Those needing web databases can use Web Storage or Indexed
-  Database. Web SQL was removed for third-party contexts in Chromium 97. Chromium 105 deprecates Web
-  SQL in insecure contexts. Complete removal is planned for Chromium 107.
+  it and WebKit deprecated it in 2019. Web SQL was removed for third-party contexts in Chromium 97.
+  Now Chromium 105 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
+  panel when the feature is used. Complete removal in insecure contexts and eventually all contexts
+  is planned for later Chromium releases.
 authors:
   - thomassteiner
-date: 2022-08-04
+date: 2022-08-12
 # updated: 2022-08-04
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
@@ -28,16 +29,60 @@ never implemented this feature and
 The World Wide Web Consortium (W3C)
 [encourages](https://www.w3.org/TR/webdatabase/#:~:text=The%20Web%20Applications%20Working%20Group%20continues%20work%20on%20two%20other%20storage%2Drelated%20specifications%3A%20Web%20Storage%20and%20Indexed%20Database%20API.)
 those needing web databases to adopt
-[Web Storage](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) or
-[Indexed Database](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+[Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) technologies like
+[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage) and
+[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), or
+[IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+
+{% Aside 'celebration' %} Our intention is to empower developers to create their own solutions for
+structured storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html)
+team to create a SQLite implementation over WebAssembly. This solution will replace Web SQL.
+{% endAside %}
 
 ## Web SQL deprecation steps
 
-Now, in Chromium, which powers Chrome and Edge among others, we're deprecating Web SQL for good:
+- (✅ Done.) Web SQL was deprecated and removed for **third-party contexts** in
+  **Chromium&nbsp;97**.
+- (📍 We are here.) Web SQL access in **insecure contexts** is deprecated as of
+  **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
+  panel.
 
-- Web SQL was deprecated and removed for **third-party contexts** in **Chromium&nbsp;97**.
-- Web SQL access in **insecure contexts** is deprecated as of **Chromium&nbsp;105**.
-- The **complete removal** of the feature is planned for **Chromium&nbsp;107**.
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Please use Web Storage or Indexed Database.", width="800", height="158" %}
+
+- (🔮 In the future.) Web SQL access in **insecure contexts** will be completely removed in a later
+  milestone.
+- (🔮 In the future.) The final step will be to remove Web SQL completely **in all contexts**, but
+  no date has been set for this step yet.
+
+## Where to go from here
+
+As pointed out in the introduction,
+[Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) technologies like
+[`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage) and
+[`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), or the
+[IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB) standard are
+good alternatives in many cases.
+
+We're also working on a replacement for Web SQL based on SQLite implemented in WebAssembly (Wasm),
+which will be released in the near future. For developers looking for a drop-in replacement, we're
+investigating if a shim script can be provided. The article will be updated once the replacement is
+ready.
+
+### Rationale for leaving storage to the client-side
+
+With the advent of Wasm, SQL or NoSQL solutions can come to the web. One example is
+[DuckDB-Wasm](https://duckdb.org/2021/10/29/duckdb-wasm.html), another is
+[absurd-sql](https://github.com/jlongster/absurd-sql). We feel that the developer community can
+iterate on and create new storage solutions faster than browser vendors.
+
+We're not planning to just remove Web SQL. In fact, we're planning to replace it with something that
+will be maintained by the open-source community, served as a package that can be updated at
+will—without the burden of introducing fixes and new features into browsers.
+
+What's more, we're hoping that this example will help a new ecosystem of open-source databases to
+flourish! The release of
+[file system access handles](https://web.dev/file-system-access/#accessing-files-optimized-for-performance-from-the-origin-private-file-system)
+finally provides the new primitive on which custom storage solutions can be built.
 
 ## Reasons for deprecating Web SQL
 
@@ -129,7 +174,7 @@ result:
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/MnkvXruPWsb89lFTynqX.png", alt="Inspecting the Web SQL section in Chrome DevTools shows a database called mydatabase with a table called rainstorms with the columns mood (textual) and severity (integer) that has one entry with a mood of somber and a severity of six.", width="800", height="187" %}
 
-### Lack of implementor support
+### Lack of implementer support
 
 Apart from the arcane API shape (at least from today's point of view), Mozilla had many
 [concerns](https://hacks.mozilla.org/2010/06/beyond-html5-database-apis-and-the-road-to-indexeddb/)
@@ -150,17 +195,6 @@ For some more history, check out the
 Additionally,
 [Nolan Lawson's blog post](https://nolanlawson.com/2014/04/26/web-sql-database-in-memoriam/)
 provides a good overview of what happened.
-
-## Where to go from here
-
-As pointed out in the introduction, the
-[Web Storage](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) and the
-[Indexed Database](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-standards are good alternatives in many cases.
-
-We're also working on a replacement for Web SQL based on SQLite implemented in Wasm, which will be
-released in the near future. For developers looking for a drop-in replacement, we're investigating
-if a shim script can be provided. The article will be updated once the replacement is ready.
 
 ## Feedback
 
@@ -188,6 +222,7 @@ this group is open to anyone, and anyone is allowed to post.
 
 ## Acknowledgements
 
-This article was reviewed by [Joe Medley](https://github.com/jpmedley). Hero image by
+This article was reviewed by [Joe Medley](https://github.com/jpmedley) and
+[Ben Morss](https://github.com/morsssss). Hero image by
 [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
 [Unsplash](https://unsplash.com/photos/lRoX0shwjUQ).
