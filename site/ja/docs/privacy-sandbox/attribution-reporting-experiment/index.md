@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting: テストとディスカッション'
+title: 'アトリビューション レポート: テストとディスカッション'
 date: 2022-03-31
 updated: 2022-06-23
 authors:
@@ -36,7 +36,7 @@ authors:
 ご使用の実装、[デモ](https://goo.gle/attribution-reporting-demo)、ドキュメントについて質問がある場合:
 
 * [privacy-sandbox-dev-support リポジトリに新しいイシューを投稿](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)してください。イシュー テンプレートについては  **Attribution Reporting** を選択してください。
-* または、[デベロッパー向けの Attribution Reporting メーリング リストに参加](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)して質問してください。
+* または、[デベロッパー向けのアトリビューション レポート メーリング リストに参加](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)して質問してください。
 
 予期しない動作が発生した場合:
 
