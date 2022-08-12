@@ -34,7 +34,7 @@ those needing web databases to adopt
 [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), or
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
-{% Aside 'celebration' %} Our intention is to empower developers to create their own solutions for
+{% Aside %} Our intention is to empower developers to create their own solutions for
 structured storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html)
 team to create a SQLite implementation over WebAssembly. This solution will replace Web SQL.
 {% endAside %}
