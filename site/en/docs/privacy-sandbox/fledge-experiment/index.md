@@ -49,9 +49,9 @@ implementation status of the FLEDGE API.
    provides a starting point for your own experimentation.
    * [Debug FLEDGE worklets](/blog/fledge-api/#debugging)
    explains how to use Chrome DevTools to help debug FLEDGE bidding and auction code.
-   * The [developer guide](/blog/fledge-api/#what-features-are-supported-behind-these-feature-flags-in-the-latest-version-of-chrome)
-   details the features supported in the latest version of Chrome. [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
-   about feature support and constraints.
+   * The [developer guide](/blog/fledge-api) details the features supported in the latest version of Chrome. 
+   [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)about feature 
+   support and constraints.
 
 ## Get support
 
