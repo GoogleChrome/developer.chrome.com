@@ -41,17 +41,17 @@ team to create a SQLite implementation over WebAssembly. This solution will repl
 
 ## Web SQL deprecation steps
 
-- (✅ Done.) Web SQL was deprecated and removed for **third-party contexts** in
+- [✅ Done.] Web SQL was deprecated and removed for **third-party contexts** in
   **Chromium&nbsp;97**.
-- (📍 We are here.) Web SQL access in **insecure contexts** is deprecated as of
+- [📍 We are here.] Web SQL access in **insecure contexts** is deprecated as of
   **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
   panel.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Please use Web Storage or Indexed Database.", width="800", height="158" %}
 
-- (🔮 In the future.) Web SQL access in **insecure contexts** will be completely removed in a later
+- [🔮 In the future.] Web SQL access in **insecure contexts** will be completely removed in a later
   milestone.
-- (🔮 In the future.) The final step will be to remove Web SQL completely **in all contexts**, but
+- [🔮 In the future.] The final step will be to remove Web SQL completely **in all contexts**, but
   no date has been set for this step yet.
 
 ## Where to go from here
