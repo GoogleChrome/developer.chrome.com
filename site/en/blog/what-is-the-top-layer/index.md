@@ -12,7 +12,7 @@ tags:
 date: 2022-08-14
 ---
 
-To cut a long story short, the top layer sits above its related `document` in the browser viewport. And each document has one associated top layer. Thus, elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes further in-depth on this. And [that API](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before `dialog` [support came](https://caniuse.com/dialog) along.
+To cut a long story short, the top layer sits above its related `document` in the browser viewport. And each document has one associated top layer. Thus, elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes further in-depth on this. And [that API](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before `dialog` [support came](https://caniuse.com/dialog) along.
 
 The top layer helps solve the problem of rendering content above the rest of the `document`.
 
@@ -55,7 +55,7 @@ And that brings us onto DevTools support. Chrome DevTools are adding support for
 ![GIF of DevTools top layer support being demonstrated](https://wd.imgix.net/image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/36Yck7O77zDipSNGNNbB.gif?auto=format&w=1600
 )
 
-Alina Varkki has a [great article](https://developer.chrome.com/blog/top-layer-devtools/) that goes in-depth on using these tools. They're currently available as a preview feature in Chrome Canary version 105.
+Alina Varkki has a [great article](/blog/top-layer-devtools/) that goes in-depth on using these tools. They're currently available as a preview feature in Chrome Canary version 105.
 
 
 ## That’s it!
@@ -68,6 +68,6 @@ A brief intro to the top layer. Making it possible to say "Bye!" to things like:
 }
 ```
 
-What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI pop-up API](https://open-ui.org/components/popup.research.explainer)? Let us know!
+What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI pop-up API](https://open-ui.org/components/popup.research.explainer)? Let us know!
 
 
