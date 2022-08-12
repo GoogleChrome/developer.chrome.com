@@ -1,6 +1,20 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+### Chrome 105 {: #chrome105 }
+
+* [Step-by-step replay in the Recorder](/zh/blog/new-in-devtools-105/#recorder)
+* [Support mouse over event in the Recorder panel](/zh/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) in the Performance insights panel](/zh/blog/new-in-devtools-105/#lcp)
+* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/zh/blog/new-in-devtools-105/#foit-fout)
+* [Top layer badge in the Elements panel](/zh/blog/new-in-devtools-105/#top-layer)
+* [Attach Wasm debugging information at runtime](/zh/blog/new-in-devtools-105/#wasm)
+* [Support live edit during debugging](/zh/blog/new-in-devtools-105/#live-edit)
+* [View and edit @scope at rules in the Styles pane](/zh/blog/new-in-devtools-105/#scope)
+* [Sourcemap improvements](/zh/blog/new-in-devtools-105/#sourcemaps)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-105/#misc)
+
+
 ### Chrome 104 {: #chrome104 }
 
 * [在调试时进行帧重启](/zh/blog/new-in-devtools-104/#restart-frame)

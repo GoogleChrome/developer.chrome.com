@@ -3,6 +3,19 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 
+<!-- ### Chrome 105 {: #chrome105 }
+
+* [Step-by-step replay in the Recorder](/ja/blog/new-in-devtools-105/#recorder)
+* [Support mouse over event in the Recorder panel](/ja/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) in the Performance insights panel](/ja/blog/new-in-devtools-105/#lcp)
+* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ja/blog/new-in-devtools-105/#foit-fout)
+* [Top layer badge in the Elements panel](/ja/blog/new-in-devtools-105/#top-layer)
+* [Attach Wasm debugging information at runtime](/ja/blog/new-in-devtools-105/#wasm)
+* [Support live edit during debugging](/ja/blog/new-in-devtools-105/#live-edit)
+* [View and edit @scope at rules in the Styles pane](/ja/blog/new-in-devtools-105/#scope)
+* [Sourcemap improvements](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-105/#misc) -->
+
 ### Chrome 104 {: #chrome104 }
 
 * [デバッグ中のフレーム再起動](/ja/blog/new-in-devtools-104/#restart-frame)

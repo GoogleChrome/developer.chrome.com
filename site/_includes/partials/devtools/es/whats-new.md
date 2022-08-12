@@ -3,6 +3,19 @@
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 
+### Chrome 105 {: #chrome105 }
+
+* [Step-by-step replay in the Recorder](/es/blog/new-in-devtools-105/#recorder)
+* [Support mouse over event in the Recorder panel](/es/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) in the Performance insights panel](/es/blog/new-in-devtools-105/#lcp)
+* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/es/blog/new-in-devtools-105/#foit-fout)
+* [Top layer badge in the Elements panel](/es/blog/new-in-devtools-105/#top-layer)
+* [Attach Wasm debugging information at runtime](/es/blog/new-in-devtools-105/#wasm)
+* [Support live edit during debugging](/es/blog/new-in-devtools-105/#live-edit)
+* [View and edit @scope at rules in the Styles pane](/es/blog/new-in-devtools-105/#scope)
+* [Sourcemap improvements](/es/blog/new-in-devtools-105/#sourcemaps)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-105/#misc)
+
 ### Chrome 104 {: #chrome104 }
 
 * [Reiniciar el marco durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
