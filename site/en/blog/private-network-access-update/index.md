@@ -15,7 +15,8 @@ tags:
 
 **Updates**
 
-- **August 12, 2022**: Updated timeline announcement. 
+- **August 12, 2022**: The  timeline has been updated, and deprecation
+   will not occur until Chrome 109.
 
 - **February 10, 2022**: An updated article is published at [Private Network
   Access: introducing preflights](/blog/private-network-access-preflight)
