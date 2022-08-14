@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-105
-draft: true
 ---
 
 *感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*。
