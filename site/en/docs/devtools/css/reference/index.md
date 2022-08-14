@@ -249,7 +249,7 @@ To view a page in print mode:
 
 1.  Open the [Command Menu][10].
 2.  Start typing `Rendering` and select `Show Rendering`.
-3.  For the **Emulate CSS Media** dropdown, select **print**.
+3.  For the **Emulate CSS Media** drop-down, select **print**.
 
 ### View used and unused CSS with the Coverage tab {: #coverage }
 
@@ -288,6 +288,53 @@ The Coverage tab shows you what CSS a page actually uses.
 ### Force print preview mode {: #print }
 
 See [Force DevTools Into Print Preview Mode][11].
+
+## Copy CSS {: #copy-css }
+
+From a single drop-down menu in the **Styles** pane, you can copy separate [CSS rules, declarations, properties, values](https://developer.mozilla.org/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
+
+Additionally, you can copy CSS properties in JavaScript syntax. This option is handy if you're using [CSS-in-JS](/blog/css-in-js/) libraries.
+
+To copy CSS:
+
+1. [Select an element][15].
+1. In the **Elements** > **Styles** pane, right-click a CSS property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4yGdaGVOMESwoiAiHIj4.png", alt="Copy CSS drop-down menu.", width="800", height="618" %}
+1. Select one of the following options from the drop-down menu:
+
+   - **Copy declaration**. Copies the property and its value in CSS syntax:
+     ```css
+     property: value;
+     ```
+   - **Copy property**. Copies only the `property` name.
+   - **Copy value**. Copies only the `value`.
+   - **Copy rule**. Copies the entire CSS rule: 
+     ```css
+     selector[, selector] {
+         property: value;
+         property: value;
+         ...
+     }
+     ```
+   - **Copy declaration as JS**. Copies the property and its value in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value'
+     ```
+   - **Copy all declarations**. Copies all properties and their values in the CSS rule:
+     ```css
+     property: value;
+     property: value;
+     ...
+     ```
+   - **Copy all declarations as JS**. Copies all properties and their values in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value',
+     propertyInCamelCase: 'value',
+     ...
+
+     ```
+   - **Copy all CSS changes**. [Copies the changes](#copy-css-changes) you make in the **Styles** pane across all declarations.
+   - **View computed value**. Takes you to the [**Computed** pane](#computed).
 
 ## Change CSS {: #change }
 
@@ -663,7 +710,7 @@ Alternatively, in the **Curve editor**, drag the purple circles to set a custom 
 
 Any change triggers a ball animation in the **Preview** at the top of editor.
 
-### (Experimental) Copy CSS changes {: #copy-css-changes }
+## (Experimental) Copy CSS changes {: #copy-css-changes }
 
 {% Aside %}
 To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
