@@ -15,7 +15,7 @@ tags:
   - chrome-105
 ---
 
-*感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*。
+*感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
 
