@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "What's a \"Top layer\"?"
-description: "With new native components and APIs coming to the platform, what is this \"Top layer\" that they enable us to use?"
+description: "With new built-in components and APIs coming to the platform, what is this \"Top layer\" that they enable us to use?"
 authors:
   - jheyy
 hero: "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/kogMUEiTkiI5gKqaxrsJ.jpg"
@@ -12,7 +12,7 @@ tags:
 date: 2022-08-15
 ---
 
-The top layer sits above its related `document` in the browser viewport, and each document has one associated top layer. This means that elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes into more details as [Fullscreen](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before [`dialog` support](https://caniuse.com/dialog) came along.
+The top layer sits above its related `document` in the browser viewport, and each `document` has one associated top layer. This means that elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes into more details as [Fullscreen](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before [`dialog` support](https://caniuse.com/dialog) came along.
 
 The top layer helps solve the problem of rendering content above the rest of the `document`.
 
@@ -35,7 +35,7 @@ How have we mimicked the top layer until now? Well, it's not uncommon to see dev
 %}
 
 
-With new components and APIs like `dialog` and `pop-up`, you won't need to resort to these workarounds. You can promote content to the top layer. 
+With new built-in components and APIs like `dialog` and `pop-up`, you won't need to resort to these workarounds. You can promote content to the top layer. 
 
 UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
