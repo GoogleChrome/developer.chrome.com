@@ -434,6 +434,10 @@ redirects:
 - from: /blog/videong/...
   to: /articles/videong/...
 
+# Redirecting the intersection observer post from d.c.c. to web.dev
+- from: /intersectionobserver/
+  to: https://web.dev/intersectionobserver/
+
 # Generic
 
 - from: /...
