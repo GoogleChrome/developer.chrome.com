@@ -9,7 +9,7 @@ alt: "Layered mountains."
 tags:
   - css
   - html
-date: 2022-08-14
+date: 2022-08-15
 ---
 
 To cut a long story short, the top layer sits above its related `document` in the browser viewport. And each document has one associated top layer. Thus, elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes further in-depth on this. And [that API](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before `dialog` [support came](https://caniuse.com/dialog) along.
