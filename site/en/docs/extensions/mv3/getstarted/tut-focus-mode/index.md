@@ -372,5 +372,3 @@ tutorials on this series:
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
-
-
