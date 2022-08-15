@@ -5,7 +5,7 @@ description: "With new native components and APIs coming to the platform, what i
 authors:
   - jheyy
 hero: "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/kogMUEiTkiI5gKqaxrsJ.jpg"
-alt: "Image of layered mountains"
+alt: "Layered mountains."
 tags:
   - css
   - html
