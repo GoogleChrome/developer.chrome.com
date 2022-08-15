@@ -32,7 +32,7 @@ Reading time
 Focus Mode
 : Removing extra clutter from a page allows our minds to concentrate on the most relevant information. Focus Mode changes the style of the page to help you better digest the content of extension documentation pages.
 
-Tabs Manager:
+Tabs Manager
 : Do you have multiple tabs on different windows? Tabs Manager uses an extension popup to display a list of all the open extension documentation pages. It can also gather them all into one neat group. 
 
 Each tutorial includes the following sections:
@@ -52,7 +52,7 @@ We are excited to hear from you! Here are four ways you can contribute to the ne
 ### Improve the tutorials
 If you see something wrong or unclear, please open an issue in our documentation Github repository.
 
-### Request a beginner tutorial.
+### Request a beginner tutorial
 <!-- TODO: Create a process for requesting a new tutorial: a github issue template? Currently there is a new content issue template, but may need to be adapted or create one for new extension content?
 Tentative -->
 - Create issue on Github repo
