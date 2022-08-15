@@ -35,7 +35,9 @@ How have we mimicked the top layer until now? Well, it's not uncommon to see dev
 %}
 
 
-But, with new native components and APIs like `dialog` and `pop-up`. Developers won't need to resort to these workarounds. We can promote content to the top layer. UI frameworks allow us to co-locate promoted elements with their component counterparts. But, then often get separated in the DOM when it comes to rendering.
+With new components and APIs like `dialog` and `pop-up`, you won't need to resort to these workarounds. You can promote content to the top layer. 
+
+UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
 By using the top layer, promoted elements are where you put them in your source code (for example, a `dialog`). It doesn't matter how many layers down in the DOM the element is. It will get promoted to the top layer and you can inspect it where you expect it to be, co-located with your component HTML. This makes it easier to inspect both the trigger element and the promoted element in the DOM at the same time. Particularly useful if your trigger element is making attribute updates, for example.
 
