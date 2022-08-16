@@ -134,9 +134,9 @@ By default, the **Recorder** replays the user flow as fast as it can. To underst
 You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
 {% endAside %}
 
-### Set breakpoints and step through replays {: #breakpoints-and-step-through }
+### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
 
-To set a breakpoint and step through the execution:
+To set a breakpoint and execute step by step:
 
 1. Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zhUoD4aBvxnMuS6pPYXO.svg", alt="Step.", width="20", height="20" %} circle next to any step in a recording. The circle turns into a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon.
 1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon and [replay the recording](/docs/devtools/recorder/#replay). The executions pauses at the breakpoint.
