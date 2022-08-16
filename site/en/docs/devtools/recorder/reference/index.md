@@ -68,11 +68,11 @@ You can do the following with each export option:
 
 You can install a Chrome extension to export replay scripts in your favorite format. 
 
-For example, the [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) let’s you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/). See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
+For example, the [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) let's you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/). See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
 
 {% Aside 'gotchas' %} 
 
-**Advance use case: Build an extension**
+**Advanced use case: Build an extension**
 
 You can build your own Recorder extension too. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
 
@@ -105,12 +105,44 @@ Apart from that, you can replay JSON files with the following 3rd party librarie
 
 {% Aside 'gotchas' %} 
 
-**Advance use case: Integrate with the Puppeteer Replay library**
+**Advanced use case: Integrate with the Puppeteer Replay library**
 
 Similar to the 3rd party libraries above, you can build your own library on top of the [Puppeteer Replay](https://github.com/puppeteer/replay) too. The  Puppeteer Replay library provide ways for you to [customize how a recording is run](https://github.com/puppeteer/replay#2-customize-replay) and ["stringify" the user flow JSON files](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script), that is, convert them to something else. 
 
 {% endAside %}
 
+## Debug user flows {: #debug-user-flows }
+
+Like any code, sometimes you have to debug the recorded user flows.
+
+To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, and step through the execution.
+
+### Slow down the replay
+
+By default, the **Recorder** replays the user flow as fast as it can. To understand what happens in the recording, you can slow down the replay speed:
+
+1. Open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** drop-down menu.
+1. Choose one of the replay speed options:
+   - Normal (Default)
+   - Slow
+   - Very slow
+   - Extremely slow
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/40FyhHaVhPjQGatqUFij.png", alt="Slow replay.", width="800", height="525" %}
+
+{% Aside 'gotchas' %}
+You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
+{% endAside %}
+
+### Set breakpoints and step through replays {: #breakpoints-and-step-through }
+
+To set a breakpoint and step through the execution:
+
+1. Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zhUoD4aBvxnMuS6pPYXO.svg", alt="Step.", width="20", height="20" %} circle next to any step in a recording. The circle turns into a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon.
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon and [replay the recording](/docs/devtools/recorder/#replay). The executions pauses at the breakpoint.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6xMG2ZEGgrrs8dQg7gFc.png", alt="Execution pause.", width="800", height="647" %}
+1. To step through the execution, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4ahE6ZJK3Rp5HXouFOtH.png", alt="Execute one step.", width="25", height="18" %} **Execute one step** button on the action bar at the top of the **Recorder** panel.
+1. To stop the replay, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E4DiaFpjvozAUMoUQgB1.svg", alt="Pause.", width="24", height="24" %} **Cancel replay**.
 
 ## Edit steps {: #edit-steps }
 
