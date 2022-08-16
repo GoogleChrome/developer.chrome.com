@@ -261,4 +261,4 @@ We are still experimenting with many such ideas and hope to publish GitHub expla
 
 For now, those actively looking for updates can refer to posts on the [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev) group.
 
-*With special thanks to Leena Sohoni-Kasture, Jeremy Wagner, Gilberto Cocchi, Kenji Baheux, Alex N. Jose, Melissa Mitchell, Yoav Weiss, Kouhei Ueno, Kentaro Hara for their feedback and contributions.*
+*With special thanks to Leena Sohoni-Kasture, Jeremy Wagner, Gilberto Cocchi, Kenji Baheux, Kouhei Ueno, Kentaro Hara, Alex N. Jose, Melissa Mitchell, Yoav Weiss, Shunya Shishido, and Minoru Chikamune for their feedback and contributions.*
