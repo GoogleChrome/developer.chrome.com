@@ -14,7 +14,7 @@ launched a decade ago. Manifest V3 extensions will enjoy enhancements in securit
 performance; they can also use more contemporary Open Web technologies such as service workers and
 promises. 
 
-The pages in this section provide an overview of Manifest V3, the reasons behind it, and how to
+The following articles provide an overview of Manifest V3, the reasons behind it, and how to
 approach it:
 
 - [Platform vision][mv3-platform] explains how the Manifest V3 changes fit into the big picture of where the platform is going.
