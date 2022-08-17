@@ -482,6 +482,10 @@ To toggle a single declaration on or off:
 
 **Figure 20**. The `color` property for the currently-selected element has been toggled off
 
+### Align grid items and their content with the Grid Editor {: #grid-editor }
+
+See the corresponding [section in Inspect CSS grid](/docs/devtools/css/grid/#grid-editor).
+
 ### Change colors with the Color Picker {: #color-picker }
 
 {% YouTube id='TuR27BxCRVk' %}
