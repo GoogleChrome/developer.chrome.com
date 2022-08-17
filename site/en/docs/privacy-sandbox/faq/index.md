@@ -141,6 +141,38 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
+
+In short, no, you cannot opt-out of an origin trial for specific regions.
+Origin trials are active on pages which
+[contain the token](/blog/origin-trials/#take-part-in-an-origin-trial),
+included via HTTP headers (server-side) or HTML meta tags
+(client-side). 
+
+If you can determine the user's location, then you could write code which
+opts to include the origin trial token based on that location information.
+For example, you could attempt to use IP addresses to determine a user's
+location. IP addresses can be spoofed, so this is not a guaranteed solution.
+
+However, a geographic-specific origin can set a
+[Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
+to control what features are usable. For example, `us.example.com` and
+`uk.example.com` are geographic-specific origins which can be controlled.
+This does not mean that a region has opted-out of the origin trial.
+
+With a Permissions Policy, a site adds a little snippet of code to their 
+pages that provides instructions to the browser. When the page loads, the browser 
+reads the Permission Policy instructions and will allow or block features (or APIs)
+as outlined in the Permissions Policy. If a site wants to restrict an API in a 
+specific region, the developer could set a policy for all pages requested from that region.
+
+{% Aside 'warning' %}
+Users may choose to visit an origin from a region that's different
+from where they are. In other words, a user in the United States may be
+able to visit `uk.example.com`. Those users would see features and functions
+for the United States site that were blocked for the United Kingdom site.
+{% endAside %}
+
 ## Trust Tokens
 
 ### How can I ask a question about this feature?
@@ -162,6 +194,14 @@ Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
 [Getting started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
+### How do publishers handle tokens from multiple trusted issuers?
+
+The publisher can check a user's browser for valid tokens with
+`document.hasTrustToken()` for one issuer at a time. If this returns `true`
+and a token is available, the publisher can redeem the token and stop
+looking for other tokens.
+
+The publisher must decide which token issuers to check and in what order.
 
 ## Topics
 
@@ -191,6 +231,17 @@ Yes. You can use the Permission Policy header to control third-party access to t
 Use `self` and any domains you would like to allow access to the API as parameters.
 
 For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 'Permissions-Policy: geolocation=(self "https://example.com")`
+
+### Can Topics API be used with on websites with `prebid.js`?
+
+Yes. Topics are available to API callers when the `document.browsingTopics()` call
+to access topics is made from a document with the
+[same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin)
+as the call to observe topics. 
+
+For example, a call to observe topics could be made from an iframe whose `src` is
+same-origin as the source of the Topics API call to access topics. You can try out an
+example at [topics-demo.glitch.me](https://topics-demo.glitch.me).
 
 ## FLEDGE
 

@@ -1,3 +1,23 @@
+ryanseddon:
+  title:
+    en: 'Ryan Seddon'
+  description:
+    en: 'Front-end developer thecssninja.com'
+timstatler:
+  title:
+    en: 'Tim Statler'
+  description:
+    en: 'Technical Writer'
+deannarubin:
+  title:
+    en: 'Deanna Rubin'
+  description:
+    en: 'Developer Relations Google'
+pearlchen:
+  title:
+    en: 'Pearl Chen'
+  description:
+    en: 'Developer Relations Google'
 arthurevans:
   title:
     en: 'Arthur Evans'
@@ -402,7 +422,7 @@ agektmr:
   title:
     en: 'Eiji Kitamura'
   description:
-    en: 'Developer Advocate for security, identity and payment on the web.'
+    en: 'Developer Advocate for identity, security, privacy and payment on the web.'
 titouan:
   title:
     en: 'Titouan Rigoudy'
@@ -415,7 +435,7 @@ jecelynyeen:
     en: 'Developer advocate working on Chrome DevTools at Google.'
     es: 'Developer advocate, trabajando en Chrome DevTools en Google.'
     zh: '现为谷歌 Chrome DevTools 的开发技术推广工程师。'
-    ru: 'Developer advocate, rabotayushchiy nad Chrome DevTools v Google.'
+    ru: 'Developer Advocate, работающая над Chrome DevTools в Google.'
     pt: 'Developer Advocate trabalhando no Chrome DevTools no Google.'
     ko: 'Google 의 Chrome DevTools 팀에서 일하는 Developer Advocate 입니다'
     ja: 'Google で Chrome DevTools に取り組んでいる Developer Advocate です。'
@@ -529,6 +549,16 @@ beaufortfrancois:
     en: 'François Beaufort'
   description:
     en: 'Dives into Chromium source code'
+cwallez:
+  title:
+    en: Corentin Wallez
+  description:
+    en: Graphics plumber at Google
+eladalon:
+  title:
+    en: 'Elad Alon'
+  description:
+    en: 'Rushes in where angels fear to tread'
 atotic:
   title:
     en: 'Aleks Totic'
@@ -755,3 +785,53 @@ mariahhart:
     en: 'Mariah Hart'
   description:
     en: 'Technical Program Manager, Google'
+jarhar:
+  title:
+    en: 'Joey Arhar'
+  description:
+    en: 'Software engineer, Google'
+emmatwersky:
+  title:
+    en: 'Emma Twersky'
+  description:
+    en: 'Developer Relations Engineer, Google'
+pfaffe:
+  title:
+    en: 'Philip Pfaffe'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+sbc:
+  title:
+    en: 'Sam Clegg'
+  description:
+    en: 'Software engineer, Google'
+ericsl:
+  title:
+    en: 'Eric Leese'
+  description:
+    en: 'Software Engineer working on Chrome DevTools at Google.'
+rkochman:
+  title:
+    en: 'Rob Kochman'
+  description:
+    en: "Rob is a product manager on Chrome's Web Platform team."
+kenjibaheux:
+  title:
+    en: Kenji Baheux
+  description:
+    en: Kenji is a product manager on the Chrome team.
+buettner:
+  title:
+    en: Michael Buettner
+  description:
+    en: Michael is a software engineer on the Chrome team.
+egsweeny:
+  title:
+    en: Elizabeth Sweeny
+  description:
+    en: Elizabeth is a product manager working on developer tooling for Chrome Web Platform.
+samthor:
+  title:
+    en: Sam Thorogood
+  description:
+    en: Sam was a developer relations engineer at Google.

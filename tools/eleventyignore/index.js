@@ -29,9 +29,10 @@ require('dotenv').config();
 const fs = require('fs');
 const chalk = require('chalk');
 const warning = chalk.black.bgYellow;
+const locales = require('../../site/_data/site.json').locales;
 
 // Default files that should always be ignored.
-const ignores = ['node_modules', '**/README.md', '**/_example', '*.swp'];
+let ignores = ['node_modules', '**/README.md', '**/_example', '*.swp'];
 
 const isProduction = process.env.NODE_ENV === 'production';
 // This will automatically be set to true by GitHub Actions.
@@ -39,6 +40,21 @@ const isCI = process.env.CI;
 
 // Only use ignore environment variables during dev and CI builds.
 if (!isProduction || isCI) {
+  // Ignore translated documents
+  if (!process.env.ELEVENTY_INCLUDE_TRANSLATED) {
+    console.log(warning('Ignoring TRANSLATED docs.'));
+    const translated = locales
+      .filter(locale => locale !== 'en')
+      .map(locale => `site/${locale}/**/*`);
+    ignores = [...ignores, ...translated];
+  }
+
+  // Ignore /blog/
+  if (process.env.ELEVENTY_IGNORE_BLOG) {
+    console.log(warning('Ignoring BLOG.'));
+    ignores.push('site/**/blog/**/*');
+  }
+
   // Ignore /docs/
   if (process.env.ELEVENTY_IGNORE_DOCS) {
     console.log(warning('Ignoring ALL docs.'));

@@ -56,7 +56,7 @@ cannot, communicate that to the user.
     - If your extension requires an account or special network environment, make sure that
       requirement is communicated to the user. If these conditions are not met, consider ways that
       you can make the user aware that the extension will not work as expected.
-    - Test your experience on an unreliable internet connection (e.g. [lie-fi][wiki-li-fi]). The
+    - Test your experience on an unreliable internet connection (e.g. [lie-fi][lie-fi]). The
       extension's UI should gracefully handle request timeouts, HTTP 400 and 500 errors, certificate
       timeouts, and other such error conditions.
 - If you cannot determine why the reviewer thought that your extension was not working as expected,
@@ -1194,6 +1194,7 @@ Code Readability Requirements:
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
 [docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
 [docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/docs/Web/API/Cookie_Store_API
 [mdn-document-cookie]: https://developer.mozilla.org/docs/Web/API/Document/cookie

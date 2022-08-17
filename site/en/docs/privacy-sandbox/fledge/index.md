@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-04-19
+updated: 2022-05-23
 authors:
   - samdutton
 ---
@@ -38,9 +38,7 @@ about how to [engage and share feedback](#engage).
 {% endAside %}
 
 
-{: #what}
-
-## What is FLEDGE?
+## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
 [remarketing](#remarketing) and custom audience use cases, designed so that it cannot be used by
@@ -55,9 +53,7 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 information for FLEDGE and other Privacy Sandbox proposals.
 
 
-{: #overview}
-
-## FLEDGE in one minute
+## FLEDGE in one minute {: #overview}
 
 <br>
 
@@ -117,9 +113,7 @@ To report the auction outcome, the seller's code can include a `reportResult()` 
 buyer's code can include a `reportWin()` function.
 
 
-{: #try-fledge}
-
-## How can I try FLEDGE?
+## How can I try FLEDGE? {: #try-fledge}
 
 * [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to take part in the
 Privacy Sandbox Relevance and Measurement origin trial and how to try out FLEDGE for a single user
@@ -135,9 +129,8 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
   id='znDD0gkdJyM'
 %}
 
-{: #user-controls}
 
-## What browser configuration is available?
+## What browser configuration is available? {: #user-controls}
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
 the top-level setting in chrome://settings/privacySandbox.  During initial testing, people will be
@@ -153,10 +146,15 @@ In the future, we plan to offer more granular settings to manage FLEDGE and asso
 API callers can't access group membership when users browse in Incognito mode, and membership is
 removed when users clear their site data.
 
+{: #opt-out-site}
 
-{: #why}
+## How can I opt out of FLEDGE? {: #opt-out}
 
-## Why do we need FLEDGE?
+The FLEDGE API developer guide explains how you can [block access to the FLEDGE API](/blog/fledge-api#opt-out) 
+either as a site owner, or as an individual user.
+
+
+## Why do we need FLEDGE? {: #why}
 
 Understanding user interests can enable more relevant ads than simply choosing ads based on site
 content (contextual targeting) or by using information that the user provided to the site on which
@@ -185,9 +183,8 @@ implemented and what's still in progress.
 
 <br>
 
-{: #how}
 
-## How does FLEDGE work?
+## How does FLEDGE work? {: #how}
 
 Here's an example of how a user's interest groups inform ad selection as the user visits different
 sites.
@@ -208,9 +205,8 @@ bike maker with a [remarketing](#remarketing) opportunity.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-{: #joinAdInterestGroup}
 
-### 2. The user's browser is asked to add an interest group
+### 2. The user's browser is asked to add an interest group {: #joinAdInterestGroup}
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png",
   alt="Illustration showing a person viewing a site in a browser on their laptop. JavaScript

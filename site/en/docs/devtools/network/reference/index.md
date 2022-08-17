@@ -79,7 +79,10 @@ Once captured, you can interact with screenshots in the following ways:
 
 ### Replay XHR request {: #replay-xhr }
 
-To replay an XHR request, right-click the request in the Requests table and select **Replay XHR**.
+To replay an XHR request, do one of the following in the **Requests** table:
+
+- Select the request and press <kbd>R</kbd>.
+- Right-click the request and select **Replay XHR**.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q78sXBNcIyDKpzm3nQja.png", alt="Selecting Replay XHR.", width="800", height="625" %}
 

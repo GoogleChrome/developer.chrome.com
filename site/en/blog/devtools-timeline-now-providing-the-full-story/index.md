@@ -10,7 +10,7 @@ updated: 2019-03-16
 ---
 
 
-he DevTools [Timeline panel](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
+The DevTools [Timeline panel](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
 
 We’ve added the following features:
 
@@ -45,7 +45,7 @@ Use WASD to zoom and pan through the Flame Chart. Shift-drag to draw a selection
 
 ## Frame Viewer
 
-The art of [layer compositing](https://www.html5rocks.com/tutorials/speed/layers/) is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using the Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
+The art of [layer compositing](https://www.html5rocks.com/tutorials/speed/layers/) is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
 
 When you select a gray frame bar above the __Main Thread__, its __Layers__ panel provides a visual model of the layers that compose your app.
 
@@ -87,7 +87,7 @@ If you really want to dive in, switch over to the __Paint Profiler__ pane. This 
 </figcaption>
 </figure>
 
-The mini-timeline across the top of the pane lets you play back the painting process and get a sense of which operations are expensive for the browser to perform. Drawing operations are color-coded as follows: <strong style="color: #ffa181;">pink</strong> (shapes), <strong style="color: #88c4ff;">blue</strong> (bitmap), <strong style="color: #b4ff89;">green</strong> (text), <strong style="color: #cea0ff;">purple</strong> (misc.). Bar height indicates call duration, so investigating tall bars can help you understand what about a particular paint was costly.
+The mini-timeline across the top of the pane lets you play back the painting process and get a sense of which operations are expensive for the browser to perform. Drawing operations are color-coded as follows: <strong style="color: #ffa181;">pink</strong> (shapes), <strong style="color: #88c4ff;">blue</strong> (bitmap), <strong style="color: #b4ff89;">green</strong> (text), and <strong style="color: #cea0ff;">purple</strong> (misc.). Bar height indicates call duration, so investigating tall bars can help you understand what about a particular paint was costly.
 
 {% YouTube id="vcjcykN6smw" %}
 
