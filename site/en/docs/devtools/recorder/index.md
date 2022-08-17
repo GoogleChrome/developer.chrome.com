@@ -185,8 +185,9 @@ There are options to add and remove steps too. This is useful if you want to add
 6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
 
 ## Next steps {: #next }
+
 Congratulations, you have completed the tutorial!
 
-- See [Recorder Reference](/docs/devtools/recorder/reference) to explore more features and workflows (e.g. import and export) related to the Recorder.
+To explore more features and workflows (for example, import and export) related to the **Recorder**, see the [Recorder features reference](/docs/devtools/recorder/reference).
 
 
