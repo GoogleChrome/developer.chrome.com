@@ -10,7 +10,7 @@ authors:
   - samdutton
 ---
 
-This page provides information about forthcoming events and links to resources for events that have
+Learn about forthcoming events and get access to resources for events that have
 already taken place.
 
 ## Future events
