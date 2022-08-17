@@ -21,7 +21,9 @@
     - url: /docs/devtools/css/
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/flexbox/
+    - url: /docs/devtools/css/container-queries/
     - url: /docs/devtools/css/reference/
+    - url: /docs/devtools/elements/badges/
 - title: i18n.docs.devtools.console
   sections:
     - url: /docs/devtools/console/
@@ -78,7 +80,10 @@
 - url: /docs/devtools/media-panel/
 - url: /docs/devtools/memory-inspector/
 - url: /docs/devtools/device-mode/override-user-agent/
-- url: /docs/devtools/recorder/
+- title: i18n.docs.devtools.recorder
+  sections:
+    - url: /docs/devtools/recorder/
+    - url: /docs/devtools/recorder/reference
 - title: i18n.docs.devtools.rendering
   sections:
     - url: /docs/devtools/rendering/

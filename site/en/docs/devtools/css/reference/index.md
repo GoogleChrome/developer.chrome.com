@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2017-06-09
-#updated: YYYY-MM-DD
+updated: 2022-06-21
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
 tags:
   - css
@@ -249,7 +249,7 @@ To view a page in print mode:
 
 1.  Open the [Command Menu][10].
 2.  Start typing `Rendering` and select `Show Rendering`.
-3.  For the **Emulate CSS Media** dropdown, select **print**.
+3.  For the **Emulate CSS Media** drop-down, select **print**.
 
 ### View used and unused CSS with the Coverage tab {: #coverage }
 
@@ -288,6 +288,53 @@ The Coverage tab shows you what CSS a page actually uses.
 ### Force print preview mode {: #print }
 
 See [Force DevTools Into Print Preview Mode][11].
+
+## Copy CSS {: #copy-css }
+
+From a single drop-down menu in the **Styles** pane, you can copy separate [CSS rules, declarations, properties, values](https://developer.mozilla.org/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
+
+Additionally, you can copy CSS properties in JavaScript syntax. This option is handy if you're using [CSS-in-JS](/blog/css-in-js/) libraries.
+
+To copy CSS:
+
+1. [Select an element][15].
+1. In the **Elements** > **Styles** pane, right-click a CSS property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4yGdaGVOMESwoiAiHIj4.png", alt="Copy CSS drop-down menu.", width="800", height="618" %}
+1. Select one of the following options from the drop-down menu:
+
+   - **Copy declaration**. Copies the property and its value in CSS syntax:
+     ```css
+     property: value;
+     ```
+   - **Copy property**. Copies only the `property` name.
+   - **Copy value**. Copies only the `value`.
+   - **Copy rule**. Copies the entire CSS rule: 
+     ```css
+     selector[, selector] {
+         property: value;
+         property: value;
+         ...
+     }
+     ```
+   - **Copy declaration as JS**. Copies the property and its value in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value'
+     ```
+   - **Copy all declarations**. Copies all properties and their values in the CSS rule:
+     ```css
+     property: value;
+     property: value;
+     ...
+     ```
+   - **Copy all declarations as JS**. Copies all properties and their values in JavaScript syntax:
+     ```js
+     propertyInCamelCase: 'value',
+     propertyInCamelCase: 'value',
+     ...
+
+     ```
+   - **Copy all CSS changes**. [Copies the changes](#copy-css-changes) you make in the **Styles** pane across all declarations.
+   - **View computed value**. Takes you to the [**Computed** pane](#computed).
 
 ## Change CSS {: #change }
 
@@ -466,7 +513,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
 **Figure 26**. The **Color Picker**, annotated
 
 1.  **Shades**.
-2.  **Eyedropper**. See [Sample a color off the page with the Eyedropper][25].
+2.  **Eyedropper**. See [Sample a color anywhere with the Eyedropper][25].
 3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
 4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
 5.  **Color Palette**. Click one of these squares to change the color to that square.
@@ -481,35 +528,22 @@ Here's a description of each of the UI elements of the **Color Picker**:
     or a page colors palette. DevTools generates the page color palette based on the colors that it
     finds in your stylesheets.
 
-#### Sample a color (anywhere) with the Eyedropper {: #eyedropper }
+#### Sample a color anywhere with the Eyedropper {: #eyedropper }
 
 When you open the **Color Picker**, the **Eyedropper**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
 
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and, with a corresponding experiment enabled, from anywhere on the screen:
+The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
 
-- Pick a color from the page:
+To pick a color from anywhere on the screen:
 
-    1.  Hover over the target color in the viewport.
-    1.  Click to confirm.
+1.  Hover over the target color.
+1.  Click to confirm.
 
-        {% Img src="image/admin/7g1d1iGpJgm98vIHA6pA.png", alt="Using the Eyedropper on the page.", width="800", height="529" %}
+    <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
 
-    The **Color Picker** shows a current color value of `#212121`, which is close to black. This color changes to the blue that's highlighted in the viewport once you click the blue.
-
-- (Experimental) Pick a color from anywhere on the screen:
-
-    {% Aside %}
-    To enable this experimental feature, check **Enable color picking outside the browser window** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
-    {% endAside %}
-
-    1. Hover over the target color on your screen.
-    1. Click to confirm.
-
-       <div class="elevation--2" style="margin-top: 20px; margin-bottom: 20px;">
-       {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
-
-    The **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to the pink from outside the browser window once you click the pink.
+In the example above, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click it.
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
@@ -542,7 +576,7 @@ To open the **Angle Clock**:
 
 The **Shadow Editor** provides a GUI for changing `text-shadow` and `box-shadow` CSS declarations.
 
-To open the **Shadow Editor**:
+To change shadows with the **Shadow Editor**:
 
 1. [Select an element][27] with a shadow declaration. For example, select the element below. {: #shadow-element }
 
@@ -561,7 +595,7 @@ To open the **Shadow Editor**:
       }
     </style>
 
-1. In the **Styles** tab, find a shadow icon next to the `text-shadow` or `box-shadow` declaration.
+1. In the **Styles** tab, find a shadow {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cunvJgztQzUZabOjseC.png", alt="Shadow.", width="24", height="24" %} icon next to the `text-shadow` or `box-shadow` declaration.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oDpRxRK9of3pxQFkFwgc.png", alt="Shadow icons", width="800", height="513" %}
 
@@ -578,7 +612,105 @@ To open the **Shadow Editor**:
    - **Spread** (only for `box-shadow`). Drag the slider or specify a value.
 1. Observe the changes applied to the [element](#shadow-element).
 
-### (Experimental) Copy CSS changes {: #copy-css-changes }
+### Edit animation and transition timings with the Easing Editor {: #edit-easing }
+
+The **Easing Editor** provides a GUI for changing the easing values of [`transition-timing-function`][36] and [`animation-timing-function`][37].
+
+To change the values with the **Easing Editor**:
+
+1. [Select an element][27] with a timing function declaration, like the `<body>` element on this page.
+1. In the **Styles** tab, find the purple {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Ease.", width="22", height="22" %} icon next to the `transition-timing-function` or `animation-timing-function` declarations.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ulG0cDcH3SnYS13kJbuB.png", alt="Ease icon.", width="800", height="434" %}
+1. Click the icon to open the **Easing Editor**:
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JujOC1By7NK2YzfHT7lD.png", alt="The Easing Editor.", width="800", height="584" %}
+1. To set a [keyword value][38], click one of the picker buttons:
+   - **ease-in-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/a0WRju7wMXvxVXiCqFuc.png", alt="The ease-in-out button.", width="24", height="24" %}
+   - **ease-in** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3kjLNBHixVNDmxarpnqF.png", alt="The ease-in button.", width="24", height="24" %}
+   - **ease-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jlueFxpe3WZ05X2lxp20.png", alt="The ease-out button.", width="24", height="24" %}
+1. In the **Presets switcher**, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/79O9ggoDdHGLL73Q1tdG.svg", alt="Left.", width="24", height="24" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/19mp1EDARktd9LnrvI5L.svg", alt="Right.", width="24", height="24" %} buttons to pick one of the following presets:
+
+<table>
+<thead>
+  <tr>
+    <th>Easing type</th>
+    <th>Preset</th>
+    <th>Bezier equivalent</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="5">ease-in-out</td>
+    <td>In Out, Sine</td>
+    <td><code>cubic-bezier(0.45, 0.05, 0.55, 0.95)</code></td>
+  </tr>
+  <tr>
+    <td>In Out, Quadratic</td>
+    <td><code>cubic-bezier(0.46, 0.03, 0.52, 0.96)</code></td>
+  </tr>
+  <tr>
+    <td>In Out, Cubic</td>
+    <td><code>cubic-bezier(0.65, 0.05, 0.36, 1)</code></td>
+  </tr>
+  <tr>
+    <td>Fast Out, Slow In</td>
+    <td><code>cubic-bezier(0.4, 0, 0.2, 1)</code></td>
+  </tr>
+  <tr>
+    <td>In Out, Back</td>
+    <td><code>cubic-bezier(0.68, -0.55, 0.27, 1.55)</code></td>
+  </tr>
+  <tr>
+    <td rowspan="5">ease-in</td>
+    <td>In, Sine</td>
+    <td><code>cubic-bezier(0.47, 0, 0.75, 0.72)</code></td>
+  </tr>
+  <tr>
+    <td>In, Quadratic</td>
+    <td><code>cubic-bezier(0.55, 0.09, 0.68, 0.53)</code></td>
+  </tr>
+  <tr>
+    <td>In, Cubic</td>
+    <td><code>cubic-bezier(0.55, 0.06, 0.68, 0.19)</code></td>
+  </tr>
+  <tr>
+    <td>In, Back</td>
+    <td><code>cubic-bezier(0.6, -0.28, 0.74, 0.05)</code></td>
+  </tr>
+  <tr>
+    <td>Fast Out, Linear In</td>
+    <td><code>cubic-bezier(0.4, 0, 1, 1)</code></td>
+  </tr>
+  <tr>
+    <td rowspan="5">ease-out</td>
+    <td>Out, Sine</td>
+    <td><code>cubic-bezier(0.39, 0.58, 0.57, 1)</code></td>
+  </tr>
+  <tr>
+    <td>Out, Quadratic</td>
+    <td><code>cubic-bezier(0.25, 0.46, 0.45, 0.94)</code></td>
+  </tr>
+  <tr>
+    <td>Out, Cubic</td>
+    <td><code>cubic-bezier(0.22, 0.61, 0.36, 1)</code></td>
+  </tr>
+  <tr>
+    <td>Linear Out, Slow In</td>
+    <td><code>cubic-bezier(0, 0, 0.2, 1)</code></td>
+  </tr>
+  <tr>
+    <td>Out, Back</td>
+    <td><code>cubic-bezier(0.18, 0.89, 0.32, 1.28)</code></td>
+  </tr>
+</tbody>
+</table>
+
+Alternatively, in the **Curve editor**, drag the purple circles to set a custom [`cubic-bezier(x1,y1,x2,y2)`](https://developer.mozilla.org/docs/Glossary/Bezier_curve) value.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrpIeYlQURppXdbUXV6C.png", alt="Curve editor.", width="800", height="584" %}
+
+Any change triggers a ball animation in the **Preview** at the top of editor.
+
+## (Experimental) Copy CSS changes {: #copy-css-changes }
 
 {% Aside %}
 To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
@@ -631,3 +763,6 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/
+[36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function
+[37]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function
+[38]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function#values

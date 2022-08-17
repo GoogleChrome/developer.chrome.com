@@ -102,7 +102,7 @@ Fenced Frames は、他のプライバシーサンドボックス提案と連携
 
 この組み合わせの現在の候補は次のとおりです。
 
-* [TURTLEDOVE API](https://github.com/WICG/turtledove) ファミリー (FLEDGE の基礎) から、Fenced Frames は、[共有ストレージ](https://github.com/pythagoraskitty/shared-storage)を使用して、[コンバージョンリフト測定](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)と連動します。
+* [TURTLEDOVE API](https://github.com/WICG/turtledove) ファミリー (FLEDGE の基礎) から、Fenced Frames は、[共有ストレージ](https://github.com/pythagoraskitty/shared-storage)を使用して、[コンバージョン リフト測定](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)と連動します。
 * もう一つのオプションは、Fenced Frames を[読み取り専用](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#read-only)にするか、[パーティション分割されていないストレージにアクセス](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md#unpartitioned-storage)できるようにすることです。
 
 詳細については、[Fenced Frames Explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/modes.md) を参照してください。

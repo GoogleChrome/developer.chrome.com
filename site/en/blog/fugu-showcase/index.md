@@ -42,7 +42,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
   <iframe
     title="Fugu showcase"
     name="showcase"
-    style="min-height: 1000px;width: 100%;border: solid 1px var(--color-hairline);"
+    style="min-height: 1200px;width: 100%;border: solid 1px var(--color-hairline);"
     src="https://googlechromelabs.github.io/fugu-showcase/data/"
     allow="web-share; clipboard-write; clipboard"
     onload="this.contentWindow.postMessage({hash:location.hash.substr(1),search:location.search.substr(1)},'*');"

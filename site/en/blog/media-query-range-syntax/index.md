@@ -40,7 +40,7 @@ Testing for a maximum width:
 
 ```css
 @media (max-width: 30em) {
-  // Styles for viewports with a width of 30em or greater.
+  // Styles for viewports with a width of 30em or less.
 }
 ```
 
@@ -48,7 +48,7 @@ And, the version using the level 4 syntax:
 
 ```css
 @media (width <= 30em) {
-  // Styles for viewports with a width of 30em or greater.
+  // Styles for viewports with a width of 30em or less.
 }
 ```
 

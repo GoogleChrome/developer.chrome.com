@@ -6,6 +6,7 @@ description: >
   the same entity to be treated as first-party in situations where first party and
   third party are otherwise treated differently. 
 date: 2021-08-26
+updated: 2022-08-04
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
   example.rs, and example.co.uk. The other set containts brandx.site,
@@ -17,6 +18,11 @@ authors:
   - mihajlija
 ---
 
+{% Aside 'caution' %}
+First-Party Sets proposal is being updated with a [new design based on use case specific definition and 
+the Storage Access API](https://github.com/WICG/first-party-sets/issues/92). You can [follow the discussion in the repo](https://github.com/WICG/first-party-sets/issues)
+and we will update this content as the work progresses.
+{% endAside %}
 
 Many organizations have related sites with different domain names, such as
 `brandx.site` and `fly-brandx.site`—or domains for different countries such as

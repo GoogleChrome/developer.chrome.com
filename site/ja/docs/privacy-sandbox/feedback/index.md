@@ -32,6 +32,9 @@ Chrome
 に関する最新情報は、定期的にこのサイトで公開されています。特に、この最新情報では、API
 固有の一般的なフィードバック テーマの概要を紹介します。
 
+ * [フィードバックレポート - 2022 年第 1 四半
+   期](/docs/privacy-sandbox/feedback/report-2022-q1/)
+
 基本的に公開のフィードバック
 チャネルを推奨しますが、公開チャネル（GitHub など）とダイレクト
 チャネル（フィードバック フォームなど）の両方が利用可能です。Chrome
@@ -421,9 +424,9 @@ Reporting API
   </tr>
 </table>
 
-#### Attribution Reporting API のサマリー レポート
+#### Attribution Reporting API の要約レポート
 
-_サマリー レポートは詳細なコンバージョン
+_要約レポートは詳細なコンバージョン
 データを集約して確認するのに有用です。データ内の個別のユーザーを特定することなく、レポートに含めたい重要な情報を保持できます。[Attribution
 Reporting API
 の詳細](/docs/privacy-sandbox/attribution-reporting/)をご覧ください。_

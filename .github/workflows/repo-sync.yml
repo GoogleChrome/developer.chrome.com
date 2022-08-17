@@ -21,4 +21,4 @@ jobs:
           source_repo: 'GoogleChrome/developer.chrome.com'
           source_branch: 'main'
           destination_branch: 'main'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.REPO_SYNC_PAT }}

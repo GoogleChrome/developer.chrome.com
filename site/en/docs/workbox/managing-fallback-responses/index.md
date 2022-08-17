@@ -58,12 +58,12 @@ setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-setCatchHandler(async ({event}) => {
+setCatchHandler(async ({request}) => {
   // The warmStrategyCache recipe is used to add the fallback assets ahead of
   // time to the runtime cache, and are served in the event of an error below.
   // Use `event`, `request`, and `url` to figure out how to respond, or
   // use request.destination to match requests for specific resource types.
-  switch (event.request.destination) {
+  switch (request.destination) {
     case 'document':
       return FALLBACK_STRATEGY.handle({event, request: FALLBACK_HTML_URL});
 
@@ -93,12 +93,12 @@ setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-setCatchHandler(async ({event}) => {
+setCatchHandler(async ({request}) => {
   // Fallback assets are precached when the service worker is installed, and are
   // served in the event of an error below. Use `event`, `request`, and `url` to
   // figure out how to respond, or use request.destination to match requests for
   // specific resource types.
-  switch (event.request.destination) {
+  switch (request.destination) {
     case 'document':
       // FALLBACK_HTML_URL must be defined as a precached URL for this to work:
       return matchPrecache(FALLBACK_HTML_URL);
