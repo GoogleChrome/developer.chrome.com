@@ -202,6 +202,77 @@ represents which function DevTools is currently highlighting.
 
 {% endAside %}
 
+### Restart a frame (function) in a call stack {: #restart-frame }
+
+To observe the behavior of a function and re-run it without having to restart the entire debugging flow, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
+
+To restart a frame:
+
+1. [Pause function execution at a breakpoint](#breakpoints). The **Call Stack** pane records the order of function calls.
+1. In the **Call Stack** pane, right-click a function and select **Restart frame** from the drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/h54JUoqTr2AvSNesZQI0.png", alt="Selecting Restart frame from the drop-down menu.", width="800", height="497" %}
+
+   {% Aside %}
+   **Note**: You can restart any function frame in the **Call Stack**, except WebAssembly, async, and generator functions.
+   {% endAside %}
+
+To understand how **Restart frame** works, consider the following code:
+
+```js
+function foo(value) {
+    console.log(value);
+    bar(value);
+}
+ 
+function bar(value) {
+    value++;
+    console.log(value);
+    debugger;
+}
+
+foo(0);
+```
+
+The `foo()` function takes `0` as an argument, logs it, and calls the `bar()` function. The `bar()` function, in turn, increments the argument.
+
+Try restarting the frames of both functions in the following way:
+
+1. Copy the code above to a [new snippet](/docs/devtools/javascript/snippets/#createsources) and [run it](/docs/devtools/javascript/snippets/#runsources). The execution stops at the `debugger` [line-of-code breakpoint](/docs/devtools/javascript/breakpoints/#debugger).
+   {% Aside 'caution' %}
+   When the execution is paused, don't programmatically change the order of the call stack frames. This may cause unexpected errors.
+   {% endAside %}
+1. Notice that the debugger shows you the current value next to function declaration: `value = 1`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/i3Offlw9RToaew8APV4C.png", alt="The current value next to function declaration.", width="800", height="497" %}
+1. Restart the `bar()` frame.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sMDXhnV3Ft02evS0PBQR.png", alt="Restarting the bar() frame.", width="800", height="497" %}
+1. Step through the value increment statement by pressing `F9`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jno28U2OaVMnc2s6xtRZ.png", alt="Incrementing current value.", width="800", height="497" %}
+   Notice that the current value increases: `value = 2`.
+1. Optionally, in the **Scope** pane, double-click the value to edit it and set the desired value.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bduFchfauez6IjMrXOm3.png", alt="Editing the value in the Scopes pane.", width="800", height="497" %}
+1. Try restarting the `bar()` frame several more times. The value continues to increase.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
+   
+   {% Aside 'gotchas' %}
+   Why is the value not reset to `0`?
+
+   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
+
+   Therefore, the current argument value persists in memory across restarts of the same function.
+   {% endAside %}
+
+1. Now, restart the `foo()` frame in the **Call Stack**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Fo5JQWKNVhlXPMDkyh6F.png", alt="Restarting the foo() frame.", width="800", height="497" %}
+   Notice that the value is `0` again.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ufMoE3upIrSCQRGMaeLI.png", alt="ALT_TEXT_HERE", width="800", height="497" %}
+   {% Aside 'gotchas' %}
+   Why is the value reset to `0`?
+
+   In JavaScript, changes to arguments are not visible (reflected) outside the function. Nested functions receive values, not their locations in memory.
+   {% endAside %}
+1. Resume script execution (`F8`) to complete this tutorial.
+
 ### Copy stack trace {: #copy-stack-trace }
 
 Right-click anywhere in the Call Stack pane and select **Copy stack trace** to copy the current call

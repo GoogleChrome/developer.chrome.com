@@ -21,7 +21,7 @@ _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y [Carlos Caballe
 {% YouTube id='LyMts4yfQu8' %}
 
 <!-- ## Capture double-click and right-click events in the Recorder panel {: #recorder } -->
-## Captura de eventos de doble-click y clic derecho en el panel Grabación {: #recorder }
+## Captura de eventos de doble-click y clic derecho en el panel Grabación {: #recorder }
 
 <!-- The **Recorder** panel can now capture double-click and right-click events. -->
 El panel **Grabación** puede capturar ahora eventos de doble-click y clic derecho.
@@ -48,7 +48,7 @@ Chromium issues: [1300839](https://crbug.com/1300839), [1322879](https://crbug.c
 
 
 <!-- ## New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
-## Nuevos modos de tiempo e instantánea en el panel Lighthouse {: #lighthouse }
+## Nuevos modos de tiempo e instantánea en el panel Lighthouse {: #lighthouse }
 
 <!-- You can now use **Lighthouse** to measure your website’s performance beyond page load. -->
 Ahora puedes usar **Lighthouse** para medir el rendimiento de su sitio web más allá del tiempo de carga de página.
@@ -82,7 +82,7 @@ Chromium issue: [1291284](https://crbug.com/1291284)
 ## Actualizaciones en Consejos de Rendimiento {: #performance } -->
 
 <!-- ### Improved zoom control in the Performance Insights panel {: #zoom } -->
-### Mejora en el control de zoom en el panel de Consejos de Rendimiento {: #zoom }
+### Mejora en el control de zoom en el panel de Consejos de Rendimiento {: #zoom }
 
 <!-- DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away.  -->
 DevTools ahora ampliará según el cursor de su ratón en vez de la posición de la reproducción. Con la última ampliación basada en el cursor, puede mover el ratón en cualquier parte en la pista, y [ampliar](/docs/devtools/performance-insights/#navigate) hasta el área deseada inmediatamente.
