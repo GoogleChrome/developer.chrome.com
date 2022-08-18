@@ -18,6 +18,7 @@ const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
+const {previewHandler} = require('./preview');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
@@ -77,6 +78,7 @@ if (isGAEProd) {
   handlers.unshift(compression());
 }
 
+app.get('/:sanity_slug/preview', previewHandler);
 app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
