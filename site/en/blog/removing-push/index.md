@@ -26,7 +26,7 @@ Push was not implemented in many HTTP/3 servers and clients—even though it was
 
 ## Alternatives to HTTP/2 Server Push
 
-[103 Early Hints](https://developer.chrome.com/blog/early-hints/) is a much less error-prone alternative with many of the same upsides as Push, and a lot less of the downsides. Rather than the server pushing _resources_, 103 Early Hints sends only _hints_ to the browser of resources that it may benefit from requesting immediately. This leaves the browser in control of deciding whether it needs these or not—for example if it already has those resources in the HTTP cache.
+[103 Early Hints](/blog/early-hints/) is a much less error-prone alternative with many of the same upsides as Push, and a lot less of the downsides. Rather than the server pushing _resources_, 103 Early Hints sends only _hints_ to the browser of resources that it may benefit from requesting immediately. This leaves the browser in control of deciding whether it needs these or not—for example if it already has those resources in the HTTP cache.
 
 [Preloading critical resources](https://web.dev/preload-critical-assets/) is another alternative that allows the page and the browser to work together to preemptively load critical resources early in the page load. While this does require the page itself to be sent first—so is not quite as fast as either Server Push nor Early Hints—it has the added benefit of not delaying that critical page resource, which can happen with both of those solutions.
 
