@@ -19,14 +19,6 @@ sections:
       title: Frequently Asked Questions
     - url: /docs/privacy-sandbox/feedback
       title: Share and review feedback
-  strengthen_privacy_boundaries:
-    - url: /docs/privacy-sandbox/chips
-    - url: /docs/privacy-sandbox/permissions-policy
-    - url: /docs/privacy-sandbox/fedcm
-    - url: /docs/privacy-sandbox/first-party-sets
-    - url: /docs/privacy-sandbox/fenced-frame
-    - url: /docs/privacy-sandbox/shared-storage
-    - url: /docs/privacy-sandbox/use-shared-storage
   prevent_covert_tracking_useragent:
     - url: /docs/privacy-sandbox/user-agent
     - url: /docs/privacy-sandbox/user-agent/snippets
@@ -39,20 +31,20 @@ sections:
   show_relevant_content_fledge:
     - url: /docs/privacy-sandbox/fledge
       title: Overview
-      description: Read a high-level explanation of the FLEDGE API, use cases, features, and intended audience.
+      description:  A proposal for on-device auctions to serve custom audiences. Choose relevant ads from websites the user has previously visited without third-party tracking.
     - url: /docs/privacy-sandbox/fledge-best-practices
       title: Best practices
       description: Improve FLEDGE auction latency with these best practices.
     - url: /docs/privacy-sandbox/fledge-experiment
       title: Experiment and participate
-      description: A step-by-step guide to implement and test the API. Play with demo code and share your feedback.  
+      description: Quick guide to implement and test the API. Play with demo code and share your feedback.  
   measure_ads:
     - url: /docs/privacy-sandbox/attribution-reporting
       title: Attribution Reporting
-      description: Read a high-level explanation of the API, use cases, features, and intended audience.
+      description: A proposal to measure ad conversions without cross-site third-party tracking.
     - url: /docs/privacy-sandbox/attribution-reporting/system-overview
       title: System overview
-      description: Review how services connect end-to-end for Attribution Reporting.
+      description: Understand how each service connects end-to-end for Attribution Reporting.
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
       title: Experiment and participate
       description: A step-by-step guide to implement and test the API. Play with demo code and share your feedback.
@@ -64,6 +56,14 @@ sections:
       title: Summary reports overview
     - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
       title: Impact of user-initiated data clearing
+  strengthen_privacy_boundaries:
+    - url: /docs/privacy-sandbox/chips
+    - url: /docs/privacy-sandbox/permissions-policy
+    - url: /docs/privacy-sandbox/fedcm
+    - url: /docs/privacy-sandbox/first-party-sets
+    - url: /docs/privacy-sandbox/fenced-frame
+    - url: /docs/privacy-sandbox/shared-storage
+    - url: /docs/privacy-sandbox/use-shared-storage
   fight_spam:
     - url: /docs/privacy-sandbox/trust-tokens
       title: Trust Tokens
@@ -110,7 +110,7 @@ sections:
 
 {{ landingSectionUseCases(
   "Prevent covert tracking",
-  "Proposals to prevent covert tracking.",
+  "Proposals to prevent third-parties from fingerprinting or collecting unlimited sensitive data.",
   "User-Agent reduction",
   sections.prevent_covert_tracking_useragent,
   "",
@@ -149,7 +149,7 @@ sections:
 
 {{ landingSectionExpanded(
   "Measure digital ads",
-  "Collect accurate and useful measurement of digital ads, so you can get messages to the right people at the right time.",
+  "Proposals to collect accurate and useful measurement of digital ads, so you can get messages to the right people at the right time.",
   sections.measure_ads,
   "green",
   "top-4",
@@ -166,7 +166,7 @@ sections:
 
 {{ landingSection(
   "Strengthen privacy boundaries",
-  "Proposals dedicated to creating and strengthening cross-site privacy, so that information collected on one site is not necessarily shared with another site, unless there’s explicit consent from the user.",
+  "Proposals to create and strengthen cross-site privacy. This means information collected on one site is not automatically shared with another site, unless the user explicitly consents.",
   sections.strengthen_privacy_boundaries,
   "yellow",
   "top-3",

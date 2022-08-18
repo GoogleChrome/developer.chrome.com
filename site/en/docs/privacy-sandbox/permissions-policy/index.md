@@ -2,7 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Controlling browser features with Permissions Policy'
 subhead: >
-  Manage how your page and third-party iframes on your page have access to browser features
+  Manage how your page and third-party iframes on your page have access to browser features.
+description: >
+  A proposal to manage how your page and embedded third-party iframes access to browser features.
 date: 2022-04-20
 authors:
   - kevinkiklee

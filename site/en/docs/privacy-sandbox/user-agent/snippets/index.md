@@ -4,7 +4,7 @@ title: 'User-Agent reduction snippets'
 subhead: >
   Code snippets to transform the current Chrome user-agent to the reduced format.
 description: >
-  Test your own sites and services against the reduced Chrome user-agent format by using a regular expression to transform the current Chrome user-agent to the reduced format.
+  Test your sites and services against the reduced Chrome user-agent with regular expressions.
 date: 2021-11-26
 authors:
   - rowan_m
