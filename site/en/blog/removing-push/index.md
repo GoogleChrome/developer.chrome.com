@@ -22,7 +22,7 @@ HTTP/2 Server Push allowed websites to proactively send resources needed by the 
 
 Analysis of the use of HTTP/2 Server Push has mixed results ([Chrome](https://github.com/httpwg/wg-materials/blob/gh-pages/ietf102/chrome_push.pdf), [Akamai](https://github.com/httpwg/wg-materials/blob/gh-pages/ietf102/akamai-server-push.pdf)), without a clear net performance gain and in many cases performance regressions.
 
-Push was not implemented in many HTTP/3 servers and clients—even though it was included in [the specification](https://www.rfc-editor.org/rfc/rfc9114.html#name-server-push). In fact, experience from HTTP/2 led the IETF to make Push off by default in the specification of HTTP/3. For much of the web [that is using the newer HTTP/3](https://httparchive.org/reports/state-of-the-web#h3), Push has effectively been retired already. When rerunning that analysis more recently, we see that 1.25% HTTP/2 support by sites dropped to 0.7%.
+Push was not implemented in many HTTP/3 servers and clients—even though it was included in [the specification](https://www.rfc-editor.org/rfc/rfc9114.html#name-server-push). For much of the web [that is using the newer HTTP/3](https://httparchive.org/reports/state-of-the-web#h3), Push has effectively been retired already. When rerunning that analysis more recently, we see that 1.25% HTTP/2 support by sites dropped to 0.7%.
 
 ## Alternatives to HTTP/2 Server Push
 
