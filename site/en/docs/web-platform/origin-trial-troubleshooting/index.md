@@ -494,10 +494,6 @@ don't inherit access to features enabled for pages that contain them.
 A demo showing access to an origin trial feature in an iframe is available at 
 [ot-iframe.glitch.me](https://ot-iframe.glitch.me).
 
-{% Aside 'gotchas' %}
-Provide a 'normal' token (not a third-party token) in an iframe which includes code that accesses a trial feature. See [Third-party token is not used in a first-party context](#token-third-first) for more information.
-{% endAside %}
-
 ### Permissions policies are correctly configured {: #permissions-policies}
 
 Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
