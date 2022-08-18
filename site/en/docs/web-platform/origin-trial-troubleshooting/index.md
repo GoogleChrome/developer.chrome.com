@@ -103,7 +103,7 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <input class="w-checkbox" type="checkbox" id="check-workers">
   <label for="check-workers" class="w-ml--l"><a href="#workers">Worker access is enabled</a></label>
   <br>
-  <input class="w-checkbox" type="checkbox" id="token-before-access">
+  <input class="w-checkbox" type="checkbox" id="check-token-before-access">
   <label for="token-before-access" class="w-ml--l"><a href="#token-before-access">Token is provided before feature is accessed</a></label>
 </div>
 
