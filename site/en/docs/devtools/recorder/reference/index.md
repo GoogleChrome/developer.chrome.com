@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Recorder features reference"
 authors:
   - sofiayem
+  - jecelynyeen
 date: 2022-06-21
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of Chrome DevTools Recorder panel features."
@@ -39,7 +40,7 @@ You can also edit the recording's name by clicking the edit button {% Img src="i
 
 ## Share user flows {: #share-flows }
 
-You can export and import user flows. This is useful for bug reporting because you can share an exact record of the steps that reproduce a bug.
+You can export and import user flows in the Recorder. This is useful for bug reporting because you can share an exact record of the steps that reproduce a bug. You can also export and replay it with external libraries. 
 
 ### Export a user flow {: #export-flows }
 
@@ -54,36 +55,37 @@ To export a user flow:
     - **Export as a Puppeteer script**. Download the recording as a [Puppeteer](https://pptr.dev/) script.
 1. Save the file.
 
-{% Aside 'gotchas' %}
-The [@puppeteer/replay](https://github.com/puppeteer/replay) is a library built on top of [Puppeteer](https://pptr.dev/). It is also a command line tool, so you can replay JSON files with it too.
-
-**Advance use case: Integrate with the Puppeteer Replay library**
-
-You can build your own library on top of the Puppeteer Replay library to replay or "stringify" the user flow JSON files, that is, convert them to something else.
-
-For example, [@cypress/chrome-recorder](https://github.com/cypress-io/cypress-chrome-recorder) is a library built on top of Puppeteer Replay. You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
-
-Learn more about the [stringify feature in Puppeteer Replay](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script).
-
-{% endAside %}
-
 You can do the following with each export option:
 
 - **JSON:** Edit the human-readable JSON object and [import](#import-flows) the JSON file back to the **Recorder**.
 - **@puppeteer/replay:** Replay the script with the [Puppeteer Replay](https://github.com/puppeteer/replay) library. When exporting as a @puppeteer/replay script, the steps remain a JSON object. This option is perfect if you want to integrate with your CI/CD pipeline but still have the flexibility to edit the steps as JSON, later convert and import them back into the **Recorder**.
 - **Puppeteer script:** Replay the script with [Puppeteer](https://pptr.dev/). Since the steps are converted into JavaScript, you can have more fine-grained customization, for example, looping the steps. One caveat, you can't import this script back into the **Recorder**.
 
-#### Export in a custom format by extending the Recorder {: #recorder-extension }
+#### Export in a custom format by installing an extension {: #recorder-extension }
 
 {% Aside %}
 **Note**: This feature is available from Chrome version 104.
 {% endAside %}
 
-You can build or install a Chrome extension to export replay scripts in your favorite format. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
-
-To install a demo extension, follow [the steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.
+You can install a Chrome extension to export replay scripts in your favorite format. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
+
+For example, 
+
+- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) let’s you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
+- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) let's you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
+
+{% Aside 'gotchas' %} 
+
+**Advance use case: Build an extension**
+
+You can build your own Recorder extension too. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
+
+You can also refer to this [extension example](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension) and install it following [the steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.
+
+{% endAside %}
+
 
 ### Import a user flow {: #import-flows }
 
@@ -93,6 +95,32 @@ To import a user flow:
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LdIrYNYuKa2OA7PnYVjf.png", alt="Import recording.", width="800", height="490" %}
 1. Select the JSON file with the recorded user flow.
 1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** button to run the imported user flow.
+
+
+### Replay with external libraries
+
+The [Puppeteer Replay](https://github.com/puppeteer/replay) is an open source library maintained by the Chrome DevTools team. It is built on top of [Puppeteer](https://pptr.dev/). It is a command line tool, you can replay JSON files with it.
+
+Apart from that, you can transform and replay JSON files with the following 3rd party libraries.
+
+Transform JSON user flows to custom scripts:
+
+- [Cypress Chrome Recorder](https://github.com/cypress-io/cypress-chrome-recorder). You can use it to convert user flow JSON files to Cypress test scripts. Watch this [demo](https://youtu.be/4qYs2bMz4GI) to see it in action.
+- [Nightwatch Chrome Recorder](https://github.com/nightwatchjs/nightwatch-chrome-recorder). You can use it to convert user flow JSON files to Nightwatch test scripts. 
+
+Replay JSON user flows:
+
+- [Replay with Testcafe](https://testcafe.io/documentation/403998/guides/experimental-capabilities/chrome-replay-support). You can use TestCafe to replay user flow JSON files and generate test reports for these recordings.
+- [Replay with Sauce Labs](https://saucelabs.com/blog/how-to-create-test-scripts-using-chrome-devtools). You can replay the JSON files on [Sauce Labs](https://saucelabs.com/) using [saucectl](https://github.com/saucelabs/saucectl-replay-example).
+
+{% Aside 'gotchas' %} 
+
+**Advance use case: Integrate with the Puppeteer Replay library**
+
+Similar to the 3rd party libraries above, you can build your own library on top of the [Puppeteer Replay](https://github.com/puppeteer/replay) too. The  Puppeteer Replay library provide ways for you to [customize how a recording is run](https://github.com/puppeteer/replay#2-customize-replay) and ["stringify" the user flow JSON files](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script), that is, convert them to something else. 
+
+{% endAside %}
+
 
 ## Edit steps {: #edit-steps }
 

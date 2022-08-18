@@ -6,7 +6,8 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-07-20
+date: 2022-06-21
+updated: 2022-08-04
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/05M2IjnWmaeFbIDWaznm.jpeg
 alt: A woman holding her hands up and making a frame with her fingers. Above her the sky is blue with a few clouds.
 tags:
@@ -173,7 +174,7 @@ Here's a sneak peek of what to expect in the near future that will improve scree
 - Region Capture will support all Element types.
 - Region Capture will support captures of other tabs.
 - [Conditional Focus] will allow the capturing web app to instruct the browser to either switch focus to the captured display surface, or to avoid such a focus change.
-- An Element-level Capture API might be provided.
+- An [Element-level Capture API] might be provided.
 
 ## Feedback {: #feedback }
 
@@ -223,6 +224,7 @@ Thanks to [Joe Medley] for reviewing this article.
 [demo]: https://region-capture-demo.glitch.me/
 [check out the source code]: https://glitch.com/edit/#!/region-capture-demo?path=iframe.js
 [conditional focus]: https://wicg.github.io/conditional-focus
+[element-level capture api]: https://bugs.chromium.org/p/chromium/issues/detail?id=1350054
 [issues]: https://github.com/w3c/mediacapture-region/issues
 [@chromiumdev]: https://twitter.com/ChromiumDev
 [spec]: https://w3c.github.io/mediacapture-region/

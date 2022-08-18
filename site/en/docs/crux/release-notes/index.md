@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-06-19
+updated: 2022-08-09
 
 # Optional
 # How to add a new author
@@ -42,6 +42,21 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202207
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/N5B3F9QVOmY)
+
+Publication date
+ : August 09, 2022
+
+What's new
+ : - This release includes a change which records the CLS metric when the tab is backgrounded in addition to tab close. See the [CLS changelog](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2021_11_cls.md) for details.
+ : - We have identified a bug in our origin filtering which unfortunately affects a small number of origins, including some popular ones, which are missing from this release. We hope to get this fixed for future releases.
+
+Notable stats
+ : - 16,190,453 origins
+ : - 40.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202206
 
