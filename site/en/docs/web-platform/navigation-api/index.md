@@ -66,11 +66,11 @@ You can deal with the navigation in one of two ways:
 {% Aside %}
 An earlier version of this API used `navigateEvent.transitionWhile(promise)` rather than `navigateEvent.intercept({ handler })`.
 
-`intercept` landed in Chrome 105.
+`intercept` is available from Chrome 105.
 `transitionWhile` is deprecated, and will be removed in Chrome 108.
 {% endAside %}
 
-This example calls `intecept()` on the event.
+This example calls `intercept()` on the event.
 The browser calls your `handler` callback, which should configure the next state of your site.
 This will create a transition object, `navigation.transition`, which other code can use to track the progress of the navigation.
 
@@ -112,7 +112,7 @@ Additionally, the above doesn't handle back/forward navigation. There's another 
 
 Personally, the History API often _feels_ like it could go some way to help with these possibilities.
 However, it really only has two surface areas: responding if the user presses Back or Forward in their browser, plus pushing and replacing URLs.
-It doesn't have an analogy to `"navigate"`, except if you manually set up listeners for, e.g., click events, as demonstrated above.
+It doesn't have an analogy to `"navigate"`, except if you manually set up listeners for click events for example, as demonstrated above.
 
 ## Deciding how to handle a navigation
 
@@ -234,7 +234,7 @@ For more information see [Abortable fetch][abortable-fetch].
 
 The short version is it basically provides an object that fires an event when you should stop your work.
 Notably, you can pass an `AbortSignal` to any calls you make to `fetch()`, which will cancel in-flight network requests if the navigation is preempted.
-This will both save the user's bandwidth, and reject the `Promise` returned by `fetch()`, preventing any following code from e.g., updating the DOM to show a now invalid page navigation.
+This will both save the user's bandwidth, and reject the `Promise` returned by `fetch()`, preventing any following code from actions such as updating the DOM to show a now invalid page navigation.
 
 Here's the previous example, but with `getArticleContent` inlined, showing how the `AbortSignal` can be used with `fetch()`:
 
