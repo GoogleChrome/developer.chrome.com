@@ -3,7 +3,7 @@
 - title: i18n.docs.privacy-sandbox.overview
   sections:
     - url: /docs/privacy-sandbox/overview
-    - url: /tags/privacy/
+    - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
