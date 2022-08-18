@@ -170,16 +170,14 @@ uncaught exception.
 2.  Click **Pause on exceptions**
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ko2qtw41xR12rOnCfQzt.png", alt="Pause on exceptions", width="28", height="28" %}.
     It turns blue when enabled.
-
-    {% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
-    **Figure 8**: The **Pause on exceptions** button
-
+    <figure>{% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
+    <figcaption><strong>Figure 8</strong>: The <strong>Pause on exceptions</strong> button</figcaption>
+    </figure>
 3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
     exceptions, in addition to uncaught ones.
-
-{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
-
-**Figure 9**: Paused on an uncaught exception
+    <figure>{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
+    <figcaption><strong>Figure 9</strong>: Paused on an uncaught exception</figcaption>
+    </figure>
 
 ## Function breakpoints {: #function }
 

@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-# updated: 2020-10-16
+updated: 2022-07-15
 
 # Optional
 # How to add a new author
@@ -47,14 +47,15 @@ Pages and origins will be automatically included or removed from the dataset if 
 
 A page must be publicly discoverable to be considered for inclusion in the CrUX dataset.
 
-A page is determined to be publicly discoverable using the same [indexability](https://developers.google.com/search/docs/advanced/crawling/block-indexing) and [crawlability](https://developers.google.com/search/docs/advanced/robots/intro) criteria as search engines.
+A page is determined to be publicly discoverable using the same [indexability](https://developers.google.com/search/docs/advanced/crawling/block-indexing) criteria as search engines.
 
 Any page will **not** meet the discoverability requirement if **any** of the following conditions are met, including root pages for the origin dataset:
 
 - The page is served with an HTTP [status code](https://developer.mozilla.org/docs/Web/HTTP/Status) other than `200` (after redirects).
 - The page is served with an HTTP `X-Robots-Tag: noindex` [header](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#xrobotstag-implementation) or equivalent.
 - The document includes a `<meta name="robots" content="noindex">` [meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) or equivalent.
-- The URL is disallowed by [robots.txt](https://developers.google.com/search/docs/advanced/robots/intro).
+
+Refer to [Google Search Console](https://search.google.com/search-console/about) for an overview of your site's indexing status.
 
 ### Sufficiently popular {: #popularity-eligibility }
 

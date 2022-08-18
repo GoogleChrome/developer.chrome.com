@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-06-14
+updated: 2022-08-09
 
 # Optional
 # How to add a new author
@@ -42,6 +42,21 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202207
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/N5B3F9QVOmY)
+
+Publication date
+ : August 09, 2022
+
+What's new
+ : - This release includes a change which records the CLS metric when the tab is backgrounded in addition to tab close. See the [CLS changelog](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2021_11_cls.md) for details.
+ : - We have identified a bug in our origin filtering which unfortunately affects a small number of origins, including some popular ones, which are missing from this release. We hope to get this fixed for future releases.
+
+Notable stats
+ : - 16,190,453 origins
+ : - 40.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202206
 
@@ -470,8 +485,8 @@ Notable stats
  : - 5,821,306 origins
 
 What's new
- : - The [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) metric was moved from `experimental.first_input_delay` to `first_input.delay`
- : - The [CLS](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#cumulative-layout-shift) metric was moved from `experimental.cumulative_layout_shift` to `layout_instability.cumulative_layout_shift`
+ : - The [FID](/docs/crux/methodology/#fid-metric) metric was moved from `experimental.first_input_delay` to `first_input.delay`
+ : - The [CLS](/docs/crux/methodology/#cls-metric) metric was moved from `experimental.cumulative_layout_shift` to `layout_instability.cumulative_layout_shift`
 
 ## 201910
 
@@ -484,8 +499,8 @@ Notable stats
  : - 6,008,004 origins
 
 What's new
- : - The [LCP](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#largest-contentful-paint) metric was launched as `largest_contentful_paint`
- : - [CLS](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#cumulative-layout-shift) was updated to take [move distance](https://github.com/WICG/layout-instability/blob/main/README.md#distance-fraction) into account. Coverage may be lower while Chrome users upgrade to the latest version of the Layout Instability API
+ : - The [LCP](/docs/crux/methodology/#lcp-metric) metric was launched as `largest_contentful_paint`
+ : - [CLS](/docs/crux/methodology/#cls-metric) was updated to take [move distance](https://github.com/WICG/layout-instability/blob/main/README.md#distance-fraction) into account. Coverage may be lower while Chrome users upgrade to the latest version of the Layout Instability API
 
 ## 201908
 
@@ -493,7 +508,7 @@ Notable stats
  : - 6,011,463 origins
 
 What's new
- : - [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) coverage has returned to normal
+ : - [FID](/docs/crux/methodology/#fid-metric) coverage has returned to normal
  : - The average percent of fast experiences for most metrics dropped by about 2%, this appears to be due to a [bug in Chrome](https://chromium.googlesource.com/chromium/src/+/main/docs/speed/metrics_changelog/2019_12_fcp.md)
 
 ## 201907
@@ -502,7 +517,7 @@ Notable stats
  : - 5,612,504 origins
 
 What's new
- : - There was an [incremental update](https://chromium.googlesource.com/chromium/src/+/main/docs/speed/metrics_changelog/2019_07_fid.md) to Chrome's [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) implementation, which included pointer events on mobile. Coverage will be lower while Chrome users update to the latest version
+ : - There was an [incremental update](https://chromium.googlesource.com/chromium/src/+/main/docs/speed/metrics_changelog/2019_07_fid.md) to Chrome's [FID](/docs/crux/methodology/#fid-metric) implementation, which included pointer events on mobile. Coverage will be lower while Chrome users update to the latest version
 
 ## 201906
 
@@ -510,7 +525,7 @@ Notable stats
  : - 5,624,797 origins
 
 What's new
- : - The [TTFB](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#time-to-first-byte) metric was added to the list of experimental metrics as `experimental.time_to_first_byte`
+ : - The [TTFB](/docs/crux/methodology/#ttfb-metric) metric was added to the list of experimental metrics as `experimental.time_to_first_byte`
 
 ## 201905
 
@@ -518,7 +533,7 @@ Notable stats
  : - 5,884,155 origins
 
 What's new
- : - The [CLS](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#cumulative-layout-shift) metric was added to the list of experimental metrics as `experimental.cumulative_layout_shift`
+ : - The [CLS](/docs/crux/methodology/#cls-metric) metric was added to the list of experimental metrics as `experimental.cumulative_layout_shift`
 
 ## 201904
 
@@ -526,7 +541,7 @@ Notable stats
  : - 5,744,982 origins
 
 What's new
- : - There was an incremental update to Chrome's [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) implementation. Coverage will be lower while Chrome users update to the latest version
+ : - There was an incremental update to Chrome's [FID](/docs/crux/methodology/#fid-metric) implementation. Coverage will be lower while Chrome users update to the latest version
 
 ## 201903
 
@@ -534,7 +549,7 @@ Notable stats
  : - 5,703,255 origins
 
 What's new
- : - There was an incremental update to Chrome's [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) implementation. Coverage will be lower while Chrome users update to the latest version
+ : - There was an incremental update to Chrome's [FID](/docs/crux/methodology/#fid-metric) implementation. Coverage will be lower while Chrome users update to the latest version
 
 ## 201902
 
@@ -585,7 +600,7 @@ Notable stats
  : - 4,134,123 origins
 
 What's new
- : - The [FID](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/#first-input-delay) metric was added to the list of experimental metrics as `experimental.first_input_delay` ([learn more](https://developers.google.com/web/updates/2018/07/first-input-delay-in-crux))
+ : - The [FID](/docs/crux/methodology/#fid-metric) metric was added to the list of experimental metrics as `experimental.first_input_delay` ([learn more](https://developers.google.com/web/updates/2018/07/first-input-delay-in-crux))
 
 ## 201805
 

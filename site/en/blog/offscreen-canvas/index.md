@@ -66,7 +66,7 @@ to calculate a gradient color in a worker:
         ctx.fillRect(0, 0, ctx.canvas.width, 1);
         const imgd = ctx.getImageData(0, 0, ctx.canvas.width, 1);
         const colors = imgd.data.slice(percent * 4, percent * 4 + 4);
-        return `rgba(${colors[0]}, ${colors[1]}, ${colors[2]}, ${colors[])`;
+        return `rgba(${colors[0]}, ${colors[1]}, ${colors[2]}, ${colors[3]})`;
     }
 
     getGradientColor(40);  // rgba(152, 0, 104, 255 )

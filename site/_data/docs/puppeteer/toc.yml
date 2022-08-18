@@ -11,8 +11,6 @@
     - url: /blog/headless-karma-mocha-chai/
     - url: https://chromedevtools.github.io/devtools-protocol/
       title: i18n.docs.puppeteer.resources_protocol
-    - url: https://try-puppeteer.appspot.com/
-      title: i18n.docs.puppeteer.resources_try
 
 - title: i18n.docs.puppeteer.project
   sections:

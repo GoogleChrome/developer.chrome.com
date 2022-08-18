@@ -4,10 +4,11 @@ title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Short explanations of key concepts.
 date: 2021-05-18
-updated: 2022-04-04 
+updated: 2022-07-25 
 authors:
   - samdutton
   - alexandrawhite
+  - mihajlija
 ---
 
 
@@ -188,6 +189,30 @@ See also [Third-party](#third-party).
 For example, an online store might ask a browser to store a cookie in order to
 retain shopping cart details for a user who is not logged in. See also
 [Third-party cookies](#third-party-cookie). 
+
+## I2P {: #i2p }
+
+Intent to Prototype. The first stage in
+[developing a new feature](/blog/progress-in-the-privacy-sandbox-2021-12/#chromium-development-process)
+in [Blink](#blink). The announcement is posted to the [blink-dev mailing
+list](https://groups.google.com/a/chromium.org/g/blink-dev) with a link to the
+proposal for discussion.
+
+## I2E {: #i2e }
+
+Intent to Experiment. Announcement of a plan to make a new [Blink](#blink)
+feature available to users for testing, typically through an [origin
+trial](#origin-trial).
+
+## I2EE {: #i2ee }
+
+Intent to Extend Experiment. Announcement of a plan to extend the duration of an
+[origin trial](#origin-trial).
+
+## I2S {: #i2s }
+
+Intent to Ship. Announcement of a plan to make a new feature of [Blink](#blink)
+available to users in stable versions of Chrome.
 
 ## Impression {: #impression }
 
