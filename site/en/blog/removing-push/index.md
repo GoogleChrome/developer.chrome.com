@@ -38,7 +38,7 @@ All solutions that attempt to load resources early can cause performance degrada
 
 ## Conclusion
 
-The web needs to be able to try things, and discard them when they are not used. Although the potential for Push sounded great, in reality using it was more problematic than envisaged, so it is time to say goodbye to Push from the web browser.
+The web needs to be able to try things, and discard them when they are not used. Although the potential for Push sounded great, in reality using it was more problematic than envisaged. However, we learned a lot from Push that went into the design of 103 Early Hints. Now it's time to complete the progression and move away from Push.
 
 ## Acknowledgements
 
