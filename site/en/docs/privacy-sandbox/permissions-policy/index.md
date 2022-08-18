@@ -8,16 +8,30 @@ authors:
   - kevinkiklee
 ---
 
-Permissions Policy allows the developer to control the browser features available to a page, its iframes, and subresources, by declaring a set of policies for the browser to enforce. The policies are applied to origins provided in a response header origin list. The origin list can contain same-origins and/or cross-origins, and it enables the developer to control first-party and third-party access to browser features. The user has the final decision to allow access to more powerful features, and needs to provide explicit permission via a prompt. 
+Permissions Policy, formerly known as Feature Policy, allows the developer to
+control the browser features available to a page, its iframes, and
+subresources, by declaring a set of policies for the browser to enforce. These
+policies are applied to origins provided in a response header origin list.
+The origin list can contain same-origins and/or cross-origins, and it allows
+the developer to control first-party and third-party access to browser features.
 
-Permissions Policy allows the top-level site to define what it and its third parties intend to use, and removes the burden from the user of determining whether the feature access request is legitimate or not. For example, by blocking the geolocation feature for all third parties via Permissions Policy, the developer can be certain that no third party will gain access to the user's geolocation. 
+The user has the final decision to allow access to more powerful features, and needs to provide explicit permission via a prompt. 
+
+Permissions Policy allows the top-level site to define what it and its third
+parties intend to use, and removes the burden from the user of determining
+whether the feature access request is legitimate or not. For example, by
+blocking the geolocation feature for all third parties via Permissions Policy,
+the developer can be certain that no third party will gain access to the user's
+geolocation. 
 
 {% Aside %}
-[Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms. Privacy Sandbox APIs, such as [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) and the [Topics API](/docs/privacy-sandbox/topics/), are managed by Permissions Policy in the same way that features like `geolocation` and `camera` are managed. For a list of web platform APIs that rely on Permissions Policy, see the [feature list](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md) (The list may not be always up to date).
+[Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
+
+Privacy Sandbox APIs, such as [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) and the [Topics API](/docs/privacy-sandbox/topics/), are managed by Permissions Policy in the same way that features like `geolocation` and `camera` are managed. For a list of web platform APIs that rely on Permissions Policy, see the [feature list](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md). Note, this list may not be current.
 {% endAside %}
 
 
-## Changes to Permissions Policy, formerly Feature Policy
+## Changes to Permissions Policy
 
 Permissions Policy was previously known as Feature Policy. The key concepts remain the same, but there are some important changes along with the name.
 
@@ -277,6 +291,9 @@ Feature-Policy:
   camera 'self' 'https://trusted-site.example';
   fullscreen 'none';	
 ```
+  {% CompareCaption %}
+    Before with Feature Policy.
+  {% endCompareCaption %}
 {% endCompare %}
 
 {% Compare 'better', 'new' %}
@@ -287,6 +304,9 @@ Permissions-Policy:
   camera=(self "https://trusted-site.example"),
   fullscreen=()
 ```
+  {% CompareCaption %}
+    Now with Permissions Policy.
+  {% endCompareCaption %}
 {% endCompare %}
 
 ### Update `document.allowsFeature(feature, origin)` usage
