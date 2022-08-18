@@ -4,17 +4,47 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
-<!-- ### Chrome 103 {: #chrome103 }
+<!-- ### Chrome 105 {: #chrome105 }
 
-* [Capture double-click and right-click events in the Recorder panel](/ru/blog/new-in-devtools-103/#recorder)
-* [New timespan and snapshot mode in the Lighthouse panel](/ru/blog/new-in-devtools-103/#lighthouse)
-* [Improved zoom control in the Performance Insights panel](/ru/blog/new-in-devtools-103/#zoom)
-* [Confirm to delete a performance recording](/ru/blog/new-in-devtools-103/#delete)
-* [Picking a color outside of the browser](/ru/blog/new-in-devtools-103/#color)
-* [Improved inline value preview during debugging](/ru/blog/new-in-devtools-103/#inline-preview)
-* [Support large blobs for virtual authenticators](/ru/blog/new-in-devtools-103/#webauthn)
-* [New keyboard shortcuts in the Sources panel](/ru/blog/new-in-devtools-103/#shortcuts)
-* [Sourcemaps improvements](/ru/blog/new-in-devtools-103/#sourcemaps) -->
+* [Step-by-step replay in the Recorder](/ru/blog/new-in-devtools-105/#recorder)
+* [Support mouse over event in the Recorder panel](/ru/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) in the Performance insights panel](/ru/blog/new-in-devtools-105/#lcp)
+* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ru/blog/new-in-devtools-105/#foit-fout)
+* [Top layer badge in the Elements panel](/ru/blog/new-in-devtools-105/#top-layer)
+* [Attach Wasm debugging information at runtime](/ru/blog/new-in-devtools-105/#wasm)
+* [Support live edit during debugging](/ru/blog/new-in-devtools-105/#live-edit)
+* [View and edit @scope at rules in the Styles pane](/ru/blog/new-in-devtools-105/#scope)
+* [Sourcemap improvements](/ru/blog/new-in-devtools-105/#sourcemaps)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-105/#misc) -->
+
+
+### Chrome 104 {: #chrome104 }
+
+* [Перезапуск фрейма во время отладки](/ru/blog/new-in-devtools-104/#restart-frame)
+* [Опции замедленного воспроизведения во вкладке Recorder](/ru/blog/new-in-devtools-104/#recorder)
+* [Создание расширений для вкладки Recorder](/ru/blog/new-in-devtools-104/#recorder-extension)
+* [Группировка по Авторским (Authored) и Развёрнутым (Deployed) файлам во вкладке Источники (Sources)](/ru/blog/new-in-devtools-104/#authored-deployed)
+* [Новый трек User Timings во вкладке Performance insights](/ru/blog/new-in-devtools-104/#performance)
+* [Отображение элемента с назначенным слотом](/ru/blog/new-in-devtools-104/#slot)
+* [Симуляция аппаратного параллелизма при записи Производительности (Performance)](/ru/blog/new-in-devtools-104/#simulate)
+* [Предпросмотр нецветовых значений при автодополнении переменных CSS](/ru/blog/new-in-devtools-104/#css-var)
+* [Определение блокирующего фрейма на панели Возвратного кэша (Back/forward cache)](/ru/blog/new-in-devtools-104/#bfcache)
+* [Улучшены подсказки автодополнения для объектов JavaScript](/ru/blog/new-in-devtools-104/#autocomplete)
+* [Улучшение карт источников](/ru/blog/new-in-devtools-104/#sourcemaps)
+* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc) -->
+
+### Chrome 103 {: #chrome103 }
+
+* [Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder](/ru/blog/new-in-devtools-103/#recorder)
+* [Новые режимы Анализа временного диапазона (timespan) и Сводки (snapshot) во вкладке Lighthouse](/ru/blog/new-in-devtools-103/#lighthouse)
+* [Улучшено управление масштабированием во вкладке Performance Insights](/ru/blog/new-in-devtools-103/#zoom)
+* [Подтверждение удаления записи производительности](/ru/blog/new-in-devtools-103/#delete)
+* [Изменение порядка панелей во вкладке Элементы (Elements)](/ru/blog/new-in-devtools-103/#reorder-pane)
+* [Выбор цвета вне браузера](/ru/blog/new-in-devtools-103/#color)
+* [Улучшен предварительный просмотр значений в строке при отладке](/ru/blog/new-in-devtools-103/#inline-preview)
+* [Поддержка больших объектов BLOB для виртуальных аутентификаторов](/ru/blog/new-in-devtools-103/#webauthn)
+* [Новые сочетания клавиш во вкладке Источники (Sources)](/ru/blog/new-in-devtools-103/#shortcuts)
+* [Улучшения карты исходников](/ru/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }

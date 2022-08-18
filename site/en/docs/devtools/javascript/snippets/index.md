@@ -151,7 +151,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 2.  Right-click the Snippet name and select **Remove**.
 
 [1]: /docs/devtools/console
-[2]: /docs/devtools/sources
+[2]: /docs/devtools/javascript/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
 [4]: https://developer.mozilla.org/docs/Tools/Scratchpad
 [5]: #open

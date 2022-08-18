@@ -3,10 +3,10 @@ layout: layouts/doc-post.njk
 title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
-date: 2021-09-21
-updated: 2021-04-12
+date: 2021-04-12
+updated: 2022-07-27
 authors:
-	- samdutton
+  - samdutton
 ---
 
 Here you'll find common questions about the Privacy Sandbox. The range of
@@ -45,7 +45,8 @@ The Privacy Sandbox is a set of proposed web standards.
 Chrome and other browser vendors, as well as ad companies and other
 stakeholders, have offered more than 30 proposals to date. These proposals can
 be found in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo) and cover a wide variety of use cases and requirements.
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
+and cover a wide variety of use cases and requirements.
 
 ### How can I keep track of changes and progress in the Privacy Sandbox?
 
@@ -140,6 +141,24 @@ For more detailed information, see
 [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
+
+### Will `SameSite` become irrelevant after third-party cookies are deprecated?
+
+- `SameSite=Lax` is the current default. While it does not strictly *need* to
+   be included, it's good practice to specify it for cross-browser consistency.
+- `SameSite=Strict` continues to be a more restrictive option, for cookies that
+   must only be sent when the user is already on the site. This is and remains
+   a good security practice for cookies that are part of managing particularly
+   sensitive access.
+- `SameSite=None` should continue to be sent for cross-browser consistency. However,
+   Chrome's proposed change to phase out third-party cookies would result in those
+   cookies no longer being sent as is in cross-site contexts.
+
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
 
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
@@ -269,7 +288,8 @@ have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
 attribute.
 
 At auction time, the browser communicates with the trusted server to
-fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
+fetch the values for those keys, and then makes those values available
+to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
 
 ### Can the Topics API be used with the FLEDGE API? 
@@ -380,6 +400,21 @@ regardless of how that origin is defined on the DNS side. Delegation must be
 handled via `Permissions-Policy` for any cross-origin subresource or obtained
 via JavaScript which executes in the cross-origin context.
 
+### How does User-Agent reduction affect bot detection?
+
+Chrome's change to its user-agent string does not directly impact the
+user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced
+information Chrome sends, but that is entirely their implementation
+choice. Chrome is still sending the same user-agent format, and bots
+that append their own identifier to the end of a Chrome user-agent
+string can continue to do so.
+
+For any concerns with specific bots, it may be worth reaching out
+directly to the owners to ask if they have any plans to change their
+user-agent string.
+
 ## Shared storage
 
 ### How can I ask a question about this feature?
@@ -431,7 +466,7 @@ that will allow new APIs to isolate themselves from their embedders. This
 prevents cross-site recognition.
 
 For ads use cases, see
-[Fenced frames for Ads Design Doc](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
+[Fenced frames for Ads design document](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
 
 ## Network State Partitioning
 
@@ -456,9 +491,8 @@ For ads use cases, see
 
 ### What is FedCM?
 
-FedCM (Federated Credential Management) is a proposal for a privacy-preserving approach to federated
+[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
+is a proposal for a privacy-preserving approach to federated
 identity services (such as "Sign in with&nbsp;...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
-
-FedCM is still [in incubation in the W3C](https://github.com/WICG/FedCM).

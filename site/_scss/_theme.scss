@@ -9,7 +9,6 @@
   --rgb-primary: 26, 115, 232;
   --color-primary-shade: #{get-color('blue-700')};
   --color-secondary: #{get-color('blue-50')};
-  
   --color-hairline: #{get-color('grey-300')};
 
   --color-footer-bg: #{get-color('grey-50')};
@@ -40,15 +39,15 @@
   --color-project-lighthouse: #06f;
 
   --color-blue-lightest: #{rgb(get-color('blue-50'), 0.4)};
-  --color-blue-lighter: #{rgb(get-color('blue-50'), 0.54)};
+  --color-blue-lighter: #{get-color('blue-100')};
   --color-blue-medium: #{get-color('blue-700')};
   --color-blue-darkest: #{get-color('blue-900')};
   --rgb-blue-darkest: 23, 78, 166;
 
-  --color-yellow-lightest: #{rgb(get-color('yellow-50'), 0.4)};
-  --color-yellow-lighter: #{rgb(get-color('yellow-50'), 0.5)};
+  --color-yellow-lightest: #{rgb(get-color('yellow-50'), 0.3)};
+  --color-yellow-lighter: #{get-color('yellow-100')};
   --color-yellow-medium: #{get-color('yellow-700')};
-  --color-yellow-darkest: #{darken(get-color('yellow-900'), 10%)}; // darken to meet a11y contrast
+  --color-yellow-darkest: #{darken(get-color('yellow-900'), 1%)}; // darken to meet a11y contrast
   --rgb-yellow-darkest: 227, 117, 0;
 
   --color-red-lightest: #{rgb(get-color('red-50'), 0.4)};
@@ -58,7 +57,7 @@
   --rgb-red-darkest: 165, 14, 14;
 
   --color-green-lightest: #{rgb(get-color('green-50'), 0.4)};
-  --color-green-lighter: #{rgb(get-color('green-50'), 0.5)};
+  --color-green-lighter: #{get-color('green-100')};
   --color-green-medium: #{get-color('green-700')};
   --color-green-darkest: #{get-color('green-900')};
   --rgb-green-darkest: 13, 101, 45;

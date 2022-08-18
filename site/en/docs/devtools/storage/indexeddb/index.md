@@ -156,7 +156,7 @@ edits an IndexedDB database.
 [7]: #refresh
 [8]:
   https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator
-[9]: /docs/devtools/snippets
+[9]: /docs/devtools/javascript/snippets
 [10]: #view
 [11]: #view
 [12]: #view

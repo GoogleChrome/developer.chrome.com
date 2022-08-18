@@ -95,7 +95,9 @@ In this example, the header origin list lets only your site (`self`) and `https:
 Permissions-Policy: &lt;feature&gt;=(&lt;token&gt;|&lt;origin(s)&gt;)
 ```
 
-A `Permissions-Policy` header in the response from the server is used to set the allowed origins for the feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin. Separate multiple features in the header with a comma. Separate multiple origins in the origin list with a space between. 
+Use a `Permissions-Policy` header in the response from the server to set the allowed origins for a feature. The header value can take a combination of tokens and strings of origins. The [available tokens](https://w3c.github.io/webappsec-permissions-policy/#structured-header-serialization) are `*` for all origins and `self` for same-origin.
+
+If your header is for multiple features, separate the features with a comma. If you list multiple origins, separate each origin in the origin list with a space. For headers which list an origin that's a cross-origin request, the iframe tag must include the `allow` attribute. 
 
 Here are some example key-value pairs:
 
@@ -105,13 +107,14 @@ Here are some example key-value pairs:
 * Syntax: `[FEATURE]=(self)`
   * Policy applied to same-origin
   * Example: `geolocation=(self)`
-* Syntax: `[FEATURE]=([ORIGIN(s)])` 
-  * Policy applied to the specified origins
-  * Example: `geolocation=("https://a.example" "https://b.example")`
-  * In addition to adding the origin to the origin list in the header, the iframe with that origin must set the allow attribute in the tag. The origin list header provides a list of valid origins for the allow attribute to consume. 
 * Syntax: `[FEATURE]=(self [ORIGIN(s)])`
   * Policy applied to same origin and the specified origins
   * Example: `geolocation=(self "https://a.example" "https://b.example")`
+  * `self` is a shorthand for `https://your-site.example`
+* Syntax: `[FEATURE]=([ORIGIN(s)])` 
+  * Policy applied to same origin and the specified origins
+  * Example: `geolocation=("https://your-site.example" "https://a.example" "https://b.example")`
+  * When using this syntax, one of the origins should be the origin of the embedder. If the embedder page itself is not granted the permissions, the iframes embedded in that page will be also blocked even though they are added to the origin list because Permissions Policy delegates permissions. You can also use the `self` token.
 * Syntax: `[FEATURE]=()` 
   * Feature blocked for all origins
   * Example: `geolocation=()`
@@ -214,6 +217,10 @@ Permissions-Policy: geolocation=()
 ```
 
 With an empty origin list, the feature is blocked for all origins. This setup can be seen in the [demo](https://permissions-policy-demo.glitch.me/demo/none-allowed). 
+
+{% Aside 'gotchas' %}
+It isn't possible to allow the feature for embedded cross-origins if the feature is blocked for same-origin. Since the permissions applied to the parent page are delegated to the embedded iframes, the feature must be enabled for same-origin if the feature is to be allowed for cross-origins.
+{% endAside %}
 
 ## Use the JavaScript API
 

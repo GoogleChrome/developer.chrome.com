@@ -177,7 +177,7 @@ addyosmani:
   title:
     en: 'Addy Osmani'
   description:
-    en: 'Eng Manager, Web Developer Relations'
+    en: 'Senior Staff Engineering Manager, Chrome'
 paullewis:
   title:
     en: 'Paul Lewis'
@@ -377,7 +377,7 @@ dotproto:
   title:
     en: 'Simeon Vincent'
   description:
-    en: 'Extensions whisperer'
+    en: 'Developer Advocate for Chrome Extensions'
 marshallvale:
   title:
     en: 'Marshall Vale'
@@ -428,6 +428,12 @@ titouan:
     en: 'Titouan Rigoudy'
   description:
     en: 'Titouan is a Software Engineer working on the Web Platform.'
+lyf:
+  title:
+    en: 'Yifan Luo'
+    zh: '罗一凡'
+  description:
+    en: 'Yifan is a Software Engineer working on the Web Platform.'
 jecelynyeen:
   title:
     en: 'Jecelyn Yeen'
@@ -598,7 +604,7 @@ dsli:
   title:
     en: 'David Li'
   description:
-    en: 'Product Manager, Chrome Extensions & Chrome Web Store'
+    en: 'Product Manager at Google'
 joycetoh:
   title:
     en: 'Joyce Toh'
@@ -761,7 +767,7 @@ twifkak:
     en: 'Devin Mullins'
   description:
     en: 'Software engineer at Google, signed exchanges integration lead in Search'
-jhey:
+jheyy:
   title:
     en: 'Jhey Tompkins'
     es: 'Jhey Tompkins'
@@ -785,6 +791,11 @@ mariahhart:
     en: 'Mariah Hart'
   description:
     en: 'Technical Program Manager, Google'
+simonhearne:
+  title:
+    en: 'Simon Hearne'
+  description:
+    en: "Simon is an independent web performance consultant"
 jarhar:
   title:
     en: 'Joey Arhar'
@@ -835,3 +846,65 @@ samthor:
     en: Sam Thorogood
   description:
     en: Sam was a developer relations engineer at Google.
+pauljensen:
+  title:
+    en: 'Paul Jensen'
+  description:
+    en: 'Software Engineer, Google Chrome'
+alinavarkki:
+  title:
+    en: 'Alina Varkki'
+  description:
+    en: 'Software Engineering Intern working on Chrome DevTools.'
+sidlall:
+  title:
+    en: Sid Lall
+  description:
+    en: Product Manager at Google
+argyle:
+  title:
+    en: 'Adam Argyle'
+  description:
+    en: 'Developer Relations Engineer working on Chrome CSS, UI, & DevTools.'
+miriamsuzanne:
+  title:
+    en: 'Miriam Suzanne'
+  description:
+    en: 'Co-Founder of OddBird and CSS Working Group Invited Expert'
+tunetheweb:
+  title:
+    en: Barry Pollard
+    es: Barry Pollard
+    ja: Barry Pollard
+    ko: Barry Pollard
+    pt: Barry Pollard
+    ru: Barry Pollard
+    zh: Barry Pollard
+  description:
+    en: Web Performance Developer Advocate for Google
+    es: Rendimiento web aesarrollador partidario para Google
+    ja: Google を対象とした Developer Advocate
+    ko: Google의 개발자 애드버킷
+    pt: Developer Advocate para o Google
+    ru: Developer Advocate по вопросам Google
+    zh: 负责 Google 的开发技术推广工程师
+barbsmith:
+  title:
+    en: Barb Smith
+  description:
+    en: Barb leads Chrome's Privacy Sandbox Partnerships team
+crystalwang:
+  title:
+    en: Crystal Wang
+  description:
+    en: UX Designer at Google
+anusmitaray:
+  title:
+    en: Anusmita Ray
+  description:
+    en: Technical Writer, Google Chrome
+joelewis:
+  title:
+    en: Joseph Lewis
+  description:
+    en: Technical Writer, Android DevRel
