@@ -16,6 +16,8 @@ tags:
   - removals
 ---
 
+Following on from [the previous announcement](https://groups.google.com/a/chromium.org/g/blink-dev/c/K3rYLvmQUBY/m/vOWBKZGoAQAJ), support of HTTP/2 Server Push will be disabled by default in Chrome 106 and other Chromium-based browsers in their next releases.
+
 ## Why is this being removed?
 
 HTTP/2 Server Push allowed websites to proactively send resources needed by the page instead of waiting for them to be requested. However, it was problematic as Jake Archibald [wrote about previously](https://jakearchibald.com/2017/h2-push-tougher-than-i-thought), and the performance benefits were often difficult to realize. As a result, it was not used much with [only 1.25% of HTTP/2 sites making use of this feature.](https://almanac.httparchive.org/en/2021/http#fig-19)
