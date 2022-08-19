@@ -494,7 +494,7 @@ Their signatures aren't modified in any way (i.e., they won't now return a `Prom
 {% endAside %}
 
 The `navigation.navigate()` method returns a object which contains two `Promise` instances in `{ committed, finished }`.
-This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationHistoryEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
+This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationHistoryEntry` is available) or "finished" (all promises returned by `intercept({ handler })` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
 
 The `navigate` method also has an options object, where you can set:
 
