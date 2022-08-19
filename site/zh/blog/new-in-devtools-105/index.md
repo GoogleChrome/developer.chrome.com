@@ -192,7 +192,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- These are some noteworthy fixes in this release: -->
 以下是此版本中一些值得注意的修复：
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
-- 删除时，从 **Application** > **Local Storage** 窗格中的表中正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
+- 从 **Application** > **Local Storage** 窗格中的表正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
 - 在源代码面板中查看 CSS 文件时，正确显示颜色预览。 此前，它们的位置错位了。 ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
