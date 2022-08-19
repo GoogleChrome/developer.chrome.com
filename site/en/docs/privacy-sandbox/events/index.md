@@ -17,7 +17,7 @@ already taken place.
 
 ### W3C WICG calls
 
-Please make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
+Make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
 if you plan on participating.
 
 * [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
