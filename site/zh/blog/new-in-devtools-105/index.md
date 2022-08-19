@@ -196,7 +196,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
 - 在源代码面板中查看 CSS 文件时，正确显示颜色预览。 此前，它们的位置错位了。 ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
-- 在 **Layout** 窗格中始终显示 CSS flex 和 grid 项，并在 **Elements** 面板中将它们显示为徽章。 以前，flex 和 grid 项目在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
+- 在 **Layout** 边栏中始终显示 CSS flex 和 grid 元素，并在 **元素** 面板中将它们显示为徽章。 以前，flex 和 grid 元素会在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - 新增 **Creator Ad Script** 链接可用于 [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)。 如果 DevTools 搜索到了导致框架被标记为广告的脚本。 您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
 
