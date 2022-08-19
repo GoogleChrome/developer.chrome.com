@@ -5,13 +5,25 @@ subhead: >
   Information and resources for online and in-person events.
 description: >
   Information and resources for online and in-person events.
-date: 2022-08-17
+date: 2022-08-19
 authors:
   - samdutton
 ---
 
 Learn about forthcoming events, and get access to resources for events that have
 already taken place.
+
+## Ongoing events
+
+### W3C WICG calls
+
+Please make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
+if you plan on participating.
+
+* [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
+* [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings)
+
+----
 
 ## Future events
 
