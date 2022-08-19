@@ -198,7 +198,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
 - 在 **Layout** 边栏中始终显示 CSS flex 和 grid 元素，并在 **元素** 面板中将它们显示为徽章。 以前，flex 和 grid 元素会在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
-- 新增 **Creator Ad Script** 链接可用于 [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)。 如果 DevTools 搜索到了导致框架被标记为广告的脚本。 您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
+- [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)里新增 **Creator Ad Script** 链接。 当 DevTools 搜索到了导致框架被标记为广告的脚本时，您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
 
 {% include 'partials/devtools/zh/reach-out.md' %}
 {% include 'partials/devtools/zh/whats-new.md' %}
