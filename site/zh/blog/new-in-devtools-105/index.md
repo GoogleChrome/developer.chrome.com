@@ -194,7 +194,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
 - 删除时，从 **Application** > **Local Storage** 窗格中的表中正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
-- 在 **Sources** 面板中查看 CSS 文件时，现在可以正确显示颜色预览。 此前，他们的位置错位了。 ([1340062](https://crbug.com/1340062))
+- 在源代码面板中查看 CSS 文件时，正确显示颜色预览。 此前，它们的位置错位了。 ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
 - 在 **Layout** 窗格中始终显示 CSS flex 和 grid 项，并在 **Elements** 面板中将它们显示为徽章。 以前，flex 和 grid 项目在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
