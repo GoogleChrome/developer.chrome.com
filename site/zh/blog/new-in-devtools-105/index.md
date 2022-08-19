@@ -45,7 +45,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
 ## 支持录制面板中的鼠标悬浮事件 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-录制面板现在支持在录制中手动加入鼠标越过（悬停）步骤。
+录制面板现在支持在录制中手动加入鼠标悬停步骤。
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
 [此演示](https://jec.fyi/demo/menu-hover) 显示悬停时的弹出菜单. 尝试录制用户流程和单击菜单项。
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
