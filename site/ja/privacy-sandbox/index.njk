@@ -1,18 +1,12 @@
 ---
 layout: 'layouts/landing.njk'
-title: 'The Privacy Sandbox'
-description: 'A series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.'
+title: プライバシーサンドボックス
+description: プライバシーサンドボックスは、サードパーティの Cookie やその他の追跡メカニズムを使用せずにクロスサイトのユースケースを満たすことを目指す一連の提案です。
 sections:
   intro:
     - url: /docs/privacy-sandbox/overview
-      title: What is the Privacy Sandbox?
-      description: What's in it, how to get involved, and what it's for.
     - url: /docs/privacy-sandbox/glossary
-      title: Glossary
-      description: Short explanations of key concepts.
     - url: /docs/privacy-sandbox/proposal-lifecycle
-      title: Life of a proposal
-      description: How we collaborate with stakeholders to discuss, test, and adopt privacy-preserving technologies.
     - url: /docs/privacy-sandbox/status
   intro_related:
     - url: /docs/privacy-sandbox/faq
@@ -30,32 +24,16 @@ sections:
     - url: /docs/privacy-sandbox/topics-experiment
   show_relevant_content_fledge:
     - url: /docs/privacy-sandbox/fledge
-      title: Overview
-      description:  A proposal for on-device auctions to serve custom audiences. Choose relevant ads from websites the user has previously visited without third-party tracking.
     - url: /docs/privacy-sandbox/fledge-best-practices
-      title: Best practices
-      description: Improve FLEDGE auction latency with these best practices.
     - url: /docs/privacy-sandbox/fledge-experiment
-      title: Experiment and participate
-      description: Quick guide to implement and test the API. Play with demo code and share your feedback.  
   measure_ads:
     - url: /docs/privacy-sandbox/attribution-reporting
-      title: Attribution Reporting
-      description: A proposal to measure ad conversions without cross-site third-party tracking.
     - url: /docs/privacy-sandbox/attribution-reporting/system-overview
-      title: System overview
-      description: Understand how each service connects end-to-end for Attribution Reporting.
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
-      title: Experiment and participate
-      description: A step-by-step guide to implement and test the API. Play with demo code and share your feedback.
     - url: /docs/privacy-sandbox/attribution-reporting-updates
-      title: API updates
-      description: A quick reference to how the proposal has changed to address community feedback.
   related_measurement:
     - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
-      title: Summary reports overview
     - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
-      title: Impact of user-initiated data clearing
   strengthen_privacy_boundaries:
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/permissions-policy
@@ -79,8 +57,8 @@ sections:
 {# landing-page-expanded has unique styles, added for Privacy Sandbox and expanded landing section. #}
 
 {{ heroCardWide(
-  "The Privacy Sandbox",
-  "A series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.",
+  "プライバシーサンドボックス",
+  "プライバシーサンドボックスは、サードパーティの Cookie やその他の追跡メカニズムを使用せずにクロスサイトのユースケースを満たすことを目指す一連の提案です。",
   "Read the documentation",
   "/docs/privacy-sandbox",
   "",
@@ -90,7 +68,7 @@ sections:
   ) }}
 
 {{ landingSectionExpanded(
-  "Introduction",
+  "はじめに",
   "",
   sections.intro,
   "blue",
@@ -107,7 +85,7 @@ sections:
 }}
 
 {{ landingSectionUseCases(
-  "Prevent covert tracking",
+  "隠されたトラッキングを防ぐ",
   "Proposals to prevent third-parties from fingerprinting or collecting unlimited sensitive data.",
   "User-Agent reduction",
   sections.prevent_covert_tracking_useragent,
@@ -127,7 +105,7 @@ sections:
 
 
 {{ landingSectionUseCases(
-  "Show relevant content",
+  "コンテンツを最適化する",
   "Proposals to encourage an engaging web with free access to information.",
   "Topics",
   sections.show_relevant_content_topics,
@@ -146,7 +124,7 @@ sections:
 }}
 
 {{ landingSectionExpanded(
-  "Measure digital ads",
+  "デジタル広告を計測する",
   "Proposals to collect accurate and useful measurement of digital ads, so you can get messages to the right people at the right time.",
   sections.measure_ads,
   "green",
@@ -163,7 +141,7 @@ sections:
 }}
 
 {{ landingSection(
-  "Strengthen privacy boundaries",
+  "プライバシーの境界線を強化する",
   "Proposals to create and strengthen cross-site privacy. This means information collected on one site is not automatically shared with another site, unless the user explicitly consents.",
   sections.strengthen_privacy_boundaries,
   "yellow",
@@ -178,7 +156,7 @@ sections:
 }}
 
 {{ landingSection(
-  "Fight spam and fraud",
+  "スパムや詐欺に対抗する",
   "Proposals to separate invalid clicks and impressions from legitimate ones.",
   sections.fight_spam,
   "yellow",
