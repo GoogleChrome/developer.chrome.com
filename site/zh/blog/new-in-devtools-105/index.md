@@ -190,7 +190,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- ## Miscellaneous highlights {: #misc } -->
  ## 其他亮点 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
-这里是一些本版本中需要注意的修复:
+以下是此版本中一些值得注意的修复：
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
 - 删除时，从 **Application** > **Local Storage** 窗格中的表中正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
