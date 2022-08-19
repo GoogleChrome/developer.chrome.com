@@ -6,7 +6,7 @@ authors:
   - samthor
   - jakearchibald
 date: 2021-08-25
-updated: 2022-08-18
+updated: 2022-08-19
 hero: image/QMjXarRXcMarxQddwrEdPvHVM242/aDcKXxmGtrMVmwZK43Ta.jpg
 alt: 'Sculpture adorning the General Post Office, Sydney, Australia'
 description: 'Learn about the Navigation API, a new API which adds improved functionality to build single-page applications.'
