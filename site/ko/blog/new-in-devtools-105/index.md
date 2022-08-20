@@ -5,8 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-08-12
 updated: 2022-08-12
-description: "Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more.
-"
+description: "Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oc4swlP62b8h9zBnfHpa.jpg'
 alt: ''
 tags:
@@ -16,7 +15,7 @@ tags:
 draft: true
 ---
 
-*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi) 님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi) 님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
@@ -29,39 +28,40 @@ draft: true
 
 
 <!-- ## Step-by-step replay in the Recorder {: #recorder } -->
-
+## Recorder의 단계별 재생 기능 {: #recorder }
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
-
+이제 **Recorder** 패널에서 브레이크포인트를 설정하고, 유저 플로우를 단계별로 재생할 수 있습니다.
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-
+브레이크포인트를 설정하기 위해, 각 단계 옆에 있는 파란색 점을 클릭합니다. 여러분의 유저 플로우가 재생되며, 각 단계를 실행하기 전에 재생이 잠시 정지되며, 이 때 여려분은 재생을 계속하거나, 각 단계를 실행하거나, 혹은 재생을 취소할 수 있습니다.
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
-
+이 기능은 여러분들로 하여금 여러분의 유저 플로우를 보다 쉽게 시각화할 수 있으며, 디버깅을 보다 용이하게 할 수 있습니다.
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
-
+자세한 설명은 [Recorder features reference](/docs/devtools/recorder/reference/) 를 참고하세요.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
-
+## Recorder 패널에서 마우스 오버 이벤트 기능 지원 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-
+**Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다. 
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-
+[데모](https://jec.fyi/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
-
+녹화 중에 **Recorder** 가 마우스 오버 이벤트를 자동적으로 감지하기 않기 때문에 지금 당신이 유저 플로우를 재생한다고 할지라도 재생이 실패할 것입니다. 이 문제를 해결하기 위해서, 메뉴 항목을 클릭하기 전에 [이 단계를 수동으로 추가](/docs/devtools/recorder/reference/#add-and-remove-steps)하여 셀렉터 위로 마우스를 올릴 수 있습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
-
+## Performance insights 패널의 Largest Contentful Paint (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-
+LCP 는 [인지적 로딩 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
+여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
-
+[performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 뱃지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
