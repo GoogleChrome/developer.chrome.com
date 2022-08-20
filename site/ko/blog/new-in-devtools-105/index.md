@@ -6,16 +6,16 @@ authors:
 date: 2022-08-12
 updated: 2022-08-12
 description: "Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more."
+description: "단계별 재생 기능 및 Recorder에서 마우스오버 이벤트 제공, Performance insights 패널 내의 LCP 및 그 외."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oc4swlP62b8h9zBnfHpa.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-105
-draft: true
 ---
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi) 님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
@@ -37,7 +37,7 @@ draft: true
 이 기능은 여러분들로 하여금 여러분의 유저 플로우를 보다 쉽게 시각화할 수 있으며, 디버깅을 보다 용이하게 할 수 있습니다.
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
 자세한 설명은 [Recorder features reference](/docs/devtools/recorder/reference/) 를 참고하세요.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Recorder의 단계별 재생 기능", width="800", height="547" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
@@ -50,7 +50,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 [데모](https://jec.fyi/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 녹화 중에 **Recorder** 가 마우스 오버 이벤트를 자동적으로 감지하기 않기 때문에 지금 당신이 유저 플로우를 재생한다고 할지라도 재생이 실패할 것입니다. 이 문제를 해결하기 위해서, 메뉴 항목을 클릭하기 전에 [이 단계를 수동으로 추가](/docs/devtools/recorder/reference/#add-and-remove-steps)하여 셀렉터 위로 마우스를 올릴 수 있습니다.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Recorder 에서 마우스오버 기능 지원", width="800", height="488" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
@@ -61,11 +61,11 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 LCP 는 [인지 로딩 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
 여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
-[performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 뱃지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
+[performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 배지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
 [Performance Insights](/docs/devtools/performance-insights/) 를 통해 실행 가능한 다각도의 해법을 얻는 방법과, 여러분의 웹사이트 성능 개선을 어떻게 할 수 있는지를 알아보세요.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="Performance insights 패널에서의 LCP", width="800", height="751" %}
 
 Chromium issue: [1326481](https://crbug.com/1326481)
 
@@ -78,7 +78,7 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 레이아웃 변경의 잠재적 근본 원인을 찾아보기 위해서, **Layout shifts** 트랙 내의 스크린샷을 클릭하세요.
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
 [WebFont 로딩 및 렌더링 최적화](https://web.dev/optimize-webfont-loading/)에서 레이아웃 변경을 방지하기 위한 기술들을 배워 보세요.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="Performance insights 패널에서의 FOUT", width="800", height="497" %}
 
 Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
 
@@ -97,7 +97,7 @@ URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 �
 <!-- For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.  -->
 간단한 예시로, [데모 PWA 앱](https://protocol-handler.glitch.me/)을 설치해 보세요. 그리고 **프로토콜 핸들러** 섹션에서 "americano" 를 입력하고 **Test protocol** 를 클릭하여 PWA 앱의 커피 페이지를 엽니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="매니페스트 창의 프로토콜 핸들러", width="800", height="402" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cc2291cce5c5d199540334d01fcfe27207bc5962 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1aa36584d580ed5aa2caf7a8533f2c89b16ab66b #}
@@ -106,7 +106,7 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 
 <!-- ## Top layer badge in the Elements panel {: #top-layer } -->
-## 요소 패널의 Top layer 뱃지 {: #top-layer }
+## 요소 패널의 Top layer 배지 {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
 
@@ -123,9 +123,9 @@ top layer 요소를 시각화하기 위해, DevTools는 top layer 컨테이너 (
 top layer 컨테이너 요소로부터 top layer 트리 요소로 이동하려면 top layer 트리 요소 또는 top layer 컨테이너의 배경 옆에 있는 **reveal** 버튼을 클릭하세요.
 
 <!-- Next to the top layer tree element (for example, the dialog element), click the **top-layer** badge to jump to the top layer container. -->
-top layer 트리 요소 옆에 있는 (예: dialog 요소) **top-layer** 뱃지를 클릭하여 top layer 컨테이너로 이동합니다.
+top layer 트리 요소 옆에 있는 (예: dialog 요소) **top-layer** 배지를 클릭하여 top layer 컨테이너로 이동합니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="Top layer badge in the Elements panel", width="800", height="538" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="요소 패널의 Top layer 배지", width="800", height="538" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a8d58fa6e258423aef2b00ead3aea563629eef43 #}
 
@@ -159,7 +159,7 @@ Chrome 104 에서, DevTools는 [restart frame](/blog/new-in-devtools-104/) 기�
 - 일시중지된 상태에서 최상위 함수만 편집할 수 있습니다.
 <!-- - No recursive call on the same function further down the stack -->
 - 스택 아래에서 동일 함수의 재귀호출이 허용되지 않습니다.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="live edit during debugging", width="800", height="560" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="디버깅 중의 라이브 에디트 지원", width="800", height="560" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b41deeb8b0b228ea4628a49e79a7ce4d8ab32ffa #}
 
@@ -167,7 +167,7 @@ Chromium issue: [1334484](https://crbug.com/1334484)
 
 
 <!-- ## View and edit @scope at rules in the Styles pane {: #scope } -->
-## 스타일 창의 규칙에서의 @scope 보기 및 편집하기 {: #scope }
+## 스타일 창에서의 @scope at rules 보기 및 편집하기 {: #scope }
 <!-- You can now view and edit the [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) in the **Styles** pane.  -->
 여러분은 이제 [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule)를 **스타일** 창에서 보고 편집할 수 있습니다.
 <!-- The `@scope` at rules is part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow developers to scope style rules in CSS. -->
@@ -180,7 +180,7 @@ Chromium issue: [1334484](https://crbug.com/1334484)
 CSS `@scope` 는 현재 개발중이므로, `chrome://flags/#enable-experimental-web-platform-features`를 통해 **Experimental Web Platform features** 플래그를 활성화하여 이 기능을 테스트할 수 있습니다.
 {% endAside %}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="@scope at rules in the Styles pane", width="800", height="464" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="스타일 창의 @scope at rules", width="800", height="464" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8b2309caa9ea358bc07d4d48eb976cc3dc6884cd #}
 
@@ -203,13 +203,16 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
- 
+ ## 기타 하이라이트 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
-
+이번 릴리스에는 몇몇 주목할 만한 수정사항이 포함되어 있습니다.
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
+- 로컬 스토리지의 키-밸류 쌍이 삭제되었을 때, **애플리케이션** > **로컬 스토리지** 창의 테이블로부터 적절하게 제거합니다.([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
+- **소스** 패널에서 CSS파일을 볼 때, 색상 미리보기가 현재 바르게 표시됩니다. ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
+- **레이아웃** 창에서 CSS Flex 와 grid item 을 일관되게 표시하고 이들을 **요소**패널에 배지로서 표시합니다. 이전에는 flex item과 grid item 이 양쪽 모두에서 무작위로 누락되었습니다. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
-
+- DevTools 가 특정 프레임을 광고로서 표시하도록 하는 스크립트를 발견한 경우, [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)에 대해 새로운 **Creator Ad Script** 링크가 이용가능해집니다. 여러분은 **애플리케이션** > **프레임** 을 통해 프레임을 열 수 있습니다. ([1217041](https://crbug.com/1217041))
 {% include 'partials/devtools/ko/reach-out.md' %}
 {% include 'partials/devtools/ko/whats-new.md' %}
