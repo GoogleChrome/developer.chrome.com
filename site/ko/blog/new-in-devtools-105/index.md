@@ -58,11 +58,12 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insights 패널의 Largest Contentful Paint (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP 는 [인지적 로딩 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
+LCP 는 [인지 로딩 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
 여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 [performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 뱃지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
+[Performance Insights](/docs/devtools/performance-insights/) 를 통해 실행 가능한 다각도의 해법을 얻는 방법과, 여러분의 웹사이트 성능 개선을 어떻게 할 수 있는지를 알아보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
 
@@ -70,27 +71,31 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
-
+## 레이아웃 변경에 대한 잠재적인 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-
+이제 **Performance insights** 패널에서, 레이아웃 변경에 대한 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/preload-optional-fonts/#font-rendering)을 감지할 수 있습니다.
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
-
+레이아웃 변경의 잠재적 근본 원인을 찾아보기 위해서, **Layout shifts** 트랙 내의 스크린샷을 클릭하세요.
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-
+[WebFont 로딩 및 렌더링 최적화](https://web.dev/optimize-webfont-loading/)에서 레이아웃 변경을 방지하기 위한 기술들을 배워 보세요.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
 
 Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
 
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
-
+## 매니페스트 창의 프로토콜 핸들러
 <!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
+이제 여러분은 DevTools를 이용하여 [프로그레시브 웹 앱(PWA)](https://web.dev/learn/pwa/)에 대한 [URL 프로토콜 핸들러 등록](https://web.dev/url-protocol-handler/)을 테스트할 수 있습니다.
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
+URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 웹 앱)이 특정한 프로토콜 (예: [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) 를 핸들링하도록 할 수 있으며, 이는 더욱 통합된 경험을 위해서입니다.
 
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
+여러분은 **애플리케이션** > **매니페스트** 창을 통해 **프로토콜 핸들러** 로 들어갈 수 있으며, 여기서 모든 이용가능한 프로토콜을 확인하고 테스트할 수 있습니다.
 
 <!-- For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.  -->
+
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %}
 
