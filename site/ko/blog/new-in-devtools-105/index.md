@@ -133,10 +133,12 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
-
+## 런타임에 Wasm 디버깅 정보 연결하기 {: #wasm }
 <!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+여러분은 이제 런타임에 wasm 에 대한 DWARF 디버깅 정보를 연결할 수 있습니다. 이전에는 **소스** 패널만이 소스맵을 자바스크립트와 Wasm 파일에 연결할 수 있었습니다.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
+**소스** 패널에서 Wasm 파일을 엽니다. 편집기에서 마우스 오른쪽을 클릭한 후, **Add DWARF debugging info…** 를 선택하여 필요한 디버깅 정보를 연결합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="ALT_TEXT_HERE", width="800", height="559" %}
 
@@ -146,16 +148,17 @@ Chromium issue: [1341255](https://crbug.com/1341255)
 
 
 <!-- ## Support live edit during debugging {: #live-edit } -->
-
+## 디버깅 중의 라이브 에디트 지원 {: #live-edit }
 <!-- You can now edit the top-most function on the stack without restarting the debugger. -->
-
+이제 여러분은 디버거를 재시작하지 않고도 스택 내의 최상위 함수를 편집할 수 있습니다.
 <!-- In Chrome 104, DevTools brings back the [restart frame](/blog/new-in-devtools-104/) feature. However, you weren't able to edit the function you are currently paused in. It is common for developers to break in a function and then edit that function while paused.  -->
-
+Chrome 104 에서, DevTools는 [restart frame](/blog/new-in-devtools-104/) 기능을 부활시켰습니다. 그러나 여러분은 현재 일시정지된 함수를 편집할 수 없었습니다. 한편, 개발자가 함수를 중단한 다음 일시 중지된 동안 해당 기능을 편집하는 것이 일반적입니다.
 <!-- With this update, the debugger automatically restarts the function with the following restrictions: -->
-
+이번 업데이트에서, 디버거가 자동적으로 다음의 제한 사항과 함께 함수를 재시작합니다.
 <!-- - Only the top-most function can be edited while paused -->
+- 일시중지된 상태에서 최상위 함수만 편집할 수 있습니다.
 <!-- - No recursive call on the same function further down the stack -->
-
+- 스택 아래에서 동일 함수의 재귀호출이 허용되지 않습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="live edit during debugging", width="800", height="560" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b41deeb8b0b228ea4628a49e79a7ce4d8ab32ffa #}
@@ -164,15 +167,17 @@ Chromium issue: [1334484](https://crbug.com/1334484)
 
 
 <!-- ## View and edit @scope at rules in the Styles pane {: #scope } -->
-
+## 스타일 창의 규칙에서의 @scope 보기 및 편집하기 {: #scope }
 <!-- You can now view and edit the [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) in the **Styles** pane.  -->
-
+여러분은 이제 [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule)를 **스타일** 창에서 보고 편집할 수 있습니다.
 <!-- The `@scope` at rules is part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow developers to scope style rules in CSS. -->
-
+`@scope` at rules는  [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/)의 한 부분이며, 이러한 규칙을 통해 개발자는 CSS에서 스타일 규칙의 범위를 지정할 수 있습니다.
 <!-- Open [this demo page](https://codepen.io/miriamsuzanne/details/ZErXZVY) and inspect the hyperlink within the `<div class=”dark-theme”>` element. In the **Styles** pane, view the `@scope` at-rules. Click the rule declaration to edit it. -->
+[데모 페이지](https://codepen.io/miriamsuzanne/details/ZErXZVY)를 열고 `<div class=”dark-theme”>` 요소 내부의 하이퍼링크를 검사합니다. **스타일** 창에서, `@scope` at-rules 를 볼 수 있으며 이를 편집하기 위해 규칙 선언을 클릭합니다.
 
 {% Aside %}
 <!-- The CSS `@scope` is currently under development. To test this feature, enable the **Experimental Web Platform features** flag via `chrome://flags/#enable-experimental-web-platform-features`. -->
+CSS `@scope` 는 현재 개발중이므로, `chrome://flags/#enable-experimental-web-platform-features`를 통해 **Experimental Web Platform features** 플래그를 활성화하여 이 기능을 테스트할 수 있습니다.
 {% endAside %}
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="@scope at rules in the Styles pane", width="800", height="464" %}
@@ -183,14 +188,16 @@ Chromium issue: [1337777](https://crbug.com/1337777)
 
 
 <!-- ## Sourcemap improvements {: #sourcemaps } -->
-
+## 소스맵 개선 {: #sourcemaps }
 <!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-
+전반적인 디버깅 경험을 개선하기 위한 소스맵에 대한 몇 가지 수정 사항입니다:
 <!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+DevTools는 현재 구두점을 통해 소스맵 식별자를 적절하게 해결합니다. 몇몇 모던한 축소자는 일부 현대식 축소자(예: [esbuild](https://esbuild.github.io/)) 는 식별자를 후속 구두점과 병합하는 소스맵을 생성합니다.
 <!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+DevTools는 현재 `super`를 호출하는 생성자에 대한 소스맵 이름 문제를 해결합니다.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
-
+중복된 표준 URL에 대한 소스 맵 URL 인덱싱을 수정했습니다. 이전에는 중복된 표준 URL로 인해 일부 파일에서 중단점이 활성화되지 않았습니다.
 
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
