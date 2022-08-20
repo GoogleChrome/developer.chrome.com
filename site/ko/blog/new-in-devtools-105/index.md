@@ -84,7 +84,7 @@ Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
-## 매니페스트 창의 프로토콜 핸들러
+## 매니페스트 창의 프로토콜 핸들러 {: #manifest }
 <!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
 이제 여러분은 DevTools를 이용하여 [프로그레시브 웹 앱(PWA)](https://web.dev/learn/pwa/)에 대한 [URL 프로토콜 핸들러 등록](https://web.dev/url-protocol-handler/)을 테스트할 수 있습니다.
 
@@ -95,7 +95,7 @@ URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 �
 여러분은 **애플리케이션** > **매니페스트** 창을 통해 **프로토콜 핸들러** 로 들어갈 수 있으며, 여기서 모든 이용가능한 프로토콜을 확인하고 테스트할 수 있습니다.
 
 <!-- For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.  -->
-
+간단한 예시로, [데모 PWA 앱](https://protocol-handler.glitch.me/)을 설치해 보세요. 그리고 **프로토콜 핸들러** 섹션에서 "americano" 를 입력하고 **Test protocol** 를 클릭하여 PWA 앱의 커피 페이지를 엽니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %}
 
@@ -106,18 +106,24 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 
 <!-- ## Top layer badge in the Elements panel {: #top-layer } -->
-
+## 요소 패널의 Top layer 뱃지 {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
+[top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
 
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+[`<dialog>` 요소](https://web.dev/building-a-dialog-component/) 가 최근에 웹 브라우저들에 대해 안정화되었습니다. 여러분이 다이얼로그를 열 때, 이는 [top layer](/blog/top-layer-devtools/)에 위치하게 됩니다. 최상위 레벨 컨텐츠는 기타 다른 컨텐츠 위에 렌더링됩니다.
 
 <!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
+주어진 [데모](https://jec.fyi/demo/dialog) 페이지에서 **Open dialog**를 클릭합니다.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
+top layer 요소를 시각화하기 위해, DevTools는 top layer 컨테이너 (`#top-layer`) 를 DOM 트리에 추가하며, 이는 `</html>` 태그 다음에 위치합니다.
 
 <!-- To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element or its backdrop in the top layer container. -->
+top layer 컨테이너 요소로부터 top layer 트리 요소로 이동하려면 top layer 트리 요소 또는 top layer 컨테이너의 배경 옆에 있는 **reveal** 버튼을 클릭하세요.
 
 <!-- Next to the top layer tree element (for example, the dialog element), click the **top-layer** badge to jump to the top layer container. -->
+top layer 트리 요소 옆에 있는 (예: dialog 요소) **top-layer** 뱃지를 클릭하여 top layer 컨테이너로 이동합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="Top layer badge in the Elements panel", width="800", height="538" %}
 
