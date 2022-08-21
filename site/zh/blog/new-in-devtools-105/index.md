@@ -32,7 +32,7 @@ tags:
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
 您现在可以**录制**面板中对用户流程进行逐步重播和设置断点。
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-点击步骤侧边的蓝点以设置断点，然后重播您的用户流程。重播将在执行该步骤前暂停。 从这里，您可以选择继续重播、执行一个步骤或取消重播。
+点击步骤侧边的蓝点以设置断点，然后重放您的用户流程。该重放动作将在执行该步骤前暂停。 从这里，您可以选择继续重放、执行一个步骤或取消重放。
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
 借助此功能，您可以完全控制用户流程的重播，令调试更方便。
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
