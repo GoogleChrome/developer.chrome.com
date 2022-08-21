@@ -23,7 +23,7 @@ authors:
 
 ## Topics オリジントライアルに参加する {: #origin-trial}
 
-Topics、[FLEDGE](/docs/privacy-sandbox/fledge)、および [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/blog/origin-trials/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
+Topics、[FLEDGE](/docs/privacy-sandbox/fledge)、および [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/) API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/blog/origin-trials/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
 
 参加するには、[オリジントライアルトークンに登録](/origintrials/#/view_trial/771241436187197441)してください。
 
@@ -432,7 +432,7 @@ Topics API の現在の実装は、ホスト名からのみトピックを推測
     <tr>
       <td><code>PrivacySandboxAdsAPIsOverride</code></td>
       <td>有効</td>
-      <td>広告の API（Attribution Reporting、FLEDGE、Topics、Fenced Frames）を有効にします。</td>
+      <td>広告の API（アトリビューション レポート、FLEDGE、Topics、Fenced Frames）を有効にします。</td>
     </tr>
     <tr>
       <td><code>PrivacySandboxSettings3</code></td>
