@@ -13,10 +13,9 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-105
-draft: true
 ---
 
-*感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*。
+*感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
 
@@ -29,13 +28,13 @@ draft: true
 
 
 <!-- ## Step-by-step replay in the Recorder {: #recorder } -->
-## 录制面板中的逐步重播 {: #recorder }
+## 录制面板中的分步重放 {: #recorder }
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
-您现在可以**录制**面板中对用户流程进行逐步重播和设置断点
+您现在可以**录制**面板中对用户流程进行逐步重播和设置断点。
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-要设置断点，请单击步骤侧边的蓝点。 重播您的用户流程，重播将在执行该步骤前暂停。 从这里，您可以继续重播、执行一个步骤或取消重播。
+点击步骤侧边的蓝点以设置断点，然后重放您的用户流程。该重放动作将在执行该步骤前暂停。 从这里，您可以选择继续重放、执行一个步骤或取消重放。
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
-借助此功能，您可以轻松地完全可视化和调试用户流程。
+借助此功能，您可以完全控制用户流程的重播，令调试更方便。
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
 有关详细信息，请参阅[录制面板功能参考](/docs/devtools/recorder/reference/)。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %}
@@ -46,7 +45,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
 ## 支持录制面板中的鼠标悬浮事件 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-录制面板现在支持在录制中手动加入鼠标越过（悬停）步骤。
+录制面板现在支持在录制中手动加入鼠标悬停步骤。
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
 [此演示](https://jec.fyi/demo/menu-hover) 显示悬停时的弹出菜单. 尝试录制用户流程和单击菜单项。
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
@@ -191,15 +190,15 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- ## Miscellaneous highlights {: #misc } -->
  ## 其他亮点 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
-这里是一些本版本中需要注意的修复:
+以下是此版本中一些值得注意的修复：
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
-- 删除时，从 **Application** > **Local Storage** 窗格中的表中正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
+- 从 **Application** > **Local Storage** 窗格中的表正确删除本地存储键值对。 ([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
-- 在 **Sources** 面板中查看 CSS 文件时，现在可以正确显示颜色预览。 此前，他们的位置错位了。 ([1340062](https://crbug.com/1340062))
+- 在源代码面板中查看 CSS 文件时，正确显示颜色预览。 此前，它们的位置错位了。 ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
-- 在 **Layout** 窗格中始终显示 CSS flex 和 grid 项，并在 **Elements** 面板中将它们显示为徽章。 以前，flex 和 grid 项目在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
+- 在 **Layout** 边栏中始终显示 CSS flex 和 grid 元素，并在 **元素** 面板中将它们显示为徽章。 以前，flex 和 grid 元素会在这两个地方都随机丢失。 ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
-- 新增 **Creator Ad Script** 链接可用于 [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)。 如果 DevTools 搜索到了导致框架被标记为广告的脚本。 您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
+- [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)里新增 **Creator Ad Script** 链接。 当 DevTools 搜索到了导致框架被标记为广告的脚本时，您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
 
 {% include 'partials/devtools/zh/reach-out.md' %}
 {% include 'partials/devtools/zh/whats-new.md' %}
