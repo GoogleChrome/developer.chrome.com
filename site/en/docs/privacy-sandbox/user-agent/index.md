@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'User-Agent reduction'
 subhead: >
-  Limit browser data shared to remove sensitive information and reduce fingerprinting.
+  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
 description: >
-  Limit browser data shared to remove sensitive information and reduce fingerprinting.
+  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
 date: 2021-11-09
 updated: 2022-07-28
 authors:

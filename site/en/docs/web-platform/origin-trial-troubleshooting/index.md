@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-08-02
+updated: 2022-08-18
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -103,6 +103,9 @@ token is provided via an external script, not a meta tag or inline script</a></l
   <br>
   <input class="w-checkbox" type="checkbox" id="check-workers">
   <label for="check-workers" class="w-ml--l"><a href="#workers">Worker access is enabled</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-before-access">
+  <label for="token-before-access" class="w-ml--l"><a href="#token-before-access">Token is provided before feature is accessed</a></label>
 </div>
 
 
@@ -516,6 +519,7 @@ Information about usage restrictions and availability will be provided for each 
 As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 to confirm that an origin trial feature is supported before you use it.
 
+
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
 
 By default, an origin trial feature will be enabled on any page that has a valid token for the trial.
@@ -555,6 +559,7 @@ don't inherit access to features enabled for pages that contain them.
 A demo showing access to an origin trial feature in an iframe is available at 
 [ot-iframe.glitch.me](https://ot-iframe.glitch.me).
 
+
 ### Permissions policies are correctly configured {: #permissions-policies}
 
 Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
@@ -577,6 +582,13 @@ Origin trials features can be made available to service workers, shared workers,
 workers. However, the only way to enable access for service workers and shared workers is to provide 
 a token in an `Origin-Trial` header. Dedicated workers inherit access to features enabled by their 
 parent document.
+
+
+###  Token is provided before feature is accessed {: #token-before-access}
+
+Make sure that an origin trial token is provided _before_ a trial feature is accessed. 
+For example, if a page provides a token via JavaScript, make sure the code to provide the token 
+is run before code that attempts to access the trial feature.
 
 
 ## Origin trial demos

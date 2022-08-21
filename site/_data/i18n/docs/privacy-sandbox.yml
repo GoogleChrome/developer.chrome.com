@@ -28,6 +28,9 @@ start:
 timeline:
   en: 'Timeline'
   ja: 'タイムライン'
+events:
+  en: 'Events'
+  ja: 'イベント'
 blog:
   en: 'Blog'
   ja: 'ブログ'
