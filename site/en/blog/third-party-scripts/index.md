@@ -37,92 +37,92 @@ From helping to generate revenue (via ads) to providing better marketing opportu
 
 Source: [Third-parties by category](https://github.com/patrickhulce/third-party-web/#third-parties-by-category).
 
-<table>
+<table class="with-heading-tint">
   <thead>
     <tr>
-      <th><br>
+      <th>
 <strong>Category</strong></th>
-      <th><br>
+      <th>
 <strong>Definition</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><br>
+      <td>
 Advertising</td>
-      <td><br>
+      <td>
 Scripts used for serving ads or measuring ad performance.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Video</td>
-      <td><br>
+      <td>
 Scripts that enable video player and streaming functionality.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Hosted libraries</td>
-      <td><br>
+      <td>
 A mixture of publicly hosted open source libraries.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Content</td>
-      <td><br>
+      <td>
 Scripts from content providers or publishing-specific affiliate tracking.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Customer Success</td>
-      <td><br>
+      <td>
 Scripts from customer support/marketing providers that offer chat and contact solutions.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Hosting</td>
-      <td><br>
+      <td>
 Scripts from web hosting platforms.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Marketing</td>
-      <td><br>
+      <td>
 Scripts from marketing tools that add popups, newsletters, and others.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Social</td>
-      <td><br>
+      <td>
 Scripts that enable social features.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Tag Manager</td>
-      <td><br>
+      <td>
 Scripts that load many other scripts and initiate many tasks.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Analytics</td>
-      <td><br>
+      <td>
 Scripts that measure or track users and their actions.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Cookie Consent Platform</td>
-      <td><br>
+      <td>
 Scripts that allow sites to obtain the user consent (GDPR, ePR, CCPA) in an informed and transparent way.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Utility</td>
-      <td><br>
+      <td>
 Scripts that are developer utilities (API clients, site monitoring, fraud detection, and others.</td>
     </tr>
     <tr>
-      <td><br>
+      <td>
 Other</td>
-      <td><br>
+      <td>
 Miscellaneous scripts delivered via a shared origin with no precise category or attribution.</td>
     </tr>
   </tbody>
