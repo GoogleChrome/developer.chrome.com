@@ -28,7 +28,7 @@ tags:
 
 
 <!-- ## Step-by-step replay in the Recorder {: #recorder } -->
-## 录制面板中的逐步重播 {: #recorder }
+## 录制面板中的分步重放 {: #recorder }
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
 您现在可以**录制**面板中对用户流程进行逐步重播和设置断点。
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
