@@ -20,17 +20,14 @@ Extensions are written with the same web technologies used to create web applica
 - [HTML][mdn-html] is used as a content markup language.
 - [CSS][web-dev-css] is used for styling.
 - [JavaScript][mdn-js] is used for scripting and logic.
-- Extensions can use all the [JavaScript APIs](https://developer.mozilla.org/docs/Web/API) that the
-  browser provides.
-
-<!-- Should we use https://developer.chrome.com/docs/extensions/api_other/ ?-->
 
 Before moving forward, we recommend that you become familiar with these technologies.
 
 ## Chrome extension APIs {: #chrome-apis }
 
-What makes extensions more powerful than a web app is their access to [Chrome APIs][doc-apis]. The
-following are just a few examples of what extensions can do:
+Extensions can use all the [JavaScript APIs](https://developer.mozilla.org/docs/Web/API) that the
+browser provides. What makes extensions more powerful than a web app is their access to [Chrome
+APIs][doc-apis]. The following are just a few examples of what extensions can do:
 
 - Change the functionality or behavior of a website. 
 - Allow users to collect and organize information across websites.

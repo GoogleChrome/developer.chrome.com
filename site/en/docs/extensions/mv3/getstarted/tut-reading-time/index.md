@@ -35,7 +35,7 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-To start, create a new directory called `Reading time` that will hold the extension's files. If you
+To start, create a new directory called `reading-time` that will hold the extension's files. If you
 prefer, you can download the complete source code on [Github][github-reading-time].
 
 ### Step 1: Add information about the extension {: #step-1 }
@@ -95,8 +95,7 @@ Create an `images` folder and place the icons inside. You can download the icons
 }
 ```
 
-We recommend using PNG files, but other file formats are allowed, except for SVG files. Need help
-designing your extension icons? Check out the [icon guidelines and best practices][cws-icons].
+We recommend using PNG files, but other file formats are allowed, except for SVG files.
 
 {% Details %}
 {% DetailsSummary %}

@@ -35,7 +35,7 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-To start, create a new directory called `Tabs Manager` that will hold the extension's files. If you
+To start, create a new directory called `tabs-manager` that will hold the extension's files. If you
 prefer, you can download the complete source code on [Github][github-tabs-manager].
 
 ### Step 1: Add the extension data and icons {: #step-1 }
