@@ -41,12 +41,12 @@ Next, create a new file called `manifest.json` and add the following code:
   "action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
- }
+  }
 }
 ```
 
-The first fields contain the metadata of the extension. Under the `"action"` key, the extension
-declares the popup and action icon. You can download the icon [here][hello-icon]. 
+This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
+declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. You can download the icon [here][hello-icon]. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -146,12 +146,10 @@ will locate the logs for the popup. Start by adding a script tag to `hello.html`
 
 ```html
 <html>
- <head>
-   </head>
- <body>
-   <h1>Hello Extensions of the world! 👋/h1>
-   <script src="popup.js"></script>
- </body>
+  <body>
+    <h1>Hello Extensions of the world! 👋</h1>
+    <script src="popup.js"></script>
+  </body>
 </html>
 ```
 
@@ -210,8 +208,8 @@ extensions][doc-debug].
 
 ## Structuring an extension project {: #structure }
 
-There are many ways to structure an extension project; however, you should always place the
-manifest.json file at the **root**. The following is a structure example:
+There are many ways to structure an extension project; however, you must place the
+manifest.json file in the extension's **root directory**. The following is a structure example:
 
 
 ```text
@@ -220,7 +218,7 @@ manifest.json file at the **root**. The following is a structure example:
     ├── background.js
     ├── scripts/
     │   └── content.js
-    │   └── jquery-min.js
+    │   └── react.production.min.js
     ├── popup/
     │   └── popup.html
     │   └── popup.js
