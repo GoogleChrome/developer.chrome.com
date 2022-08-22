@@ -122,7 +122,7 @@ perform their tasks.
 	key, hosted on a key management system, to encrypt these requests. The
 	FLEDGE service relies on key management systems to decrypt the requests and
 	encrypt their response.<br><br>
-	Refer to <a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#system-overview)">systems overview in the FLEDGE services explainer</a>.
+	Refer to <a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#system-overview">systems overview in the FLEDGE services explainer</a>.
     </figcaption>
 </figure>
 
