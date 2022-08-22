@@ -10,7 +10,7 @@ date: 2022-08-10
 ## Overview {: #overview }
 
 This tutorial builds an extension that adds the expected reading time to any Chrome extension and
-Chrome web store documentation page. 
+Chrome Web Store documentation page. 
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VczSGe8eh0Xv7nTXxhxg.png", 
@@ -26,7 +26,7 @@ In this guide, we’re going to explain the following concepts:
 - What icon sizes an extension uses.
 - How to inject code on pages using [content scripts][doc-cs].
 - How to use match patterns.
-- Extension permissions
+- Extension permissions.
 
 ## Before you start {: #prereq }
 
@@ -135,7 +135,7 @@ scripts_. Add the following code to the `manifest.json` to register a content sc
 }
 ```
 
-The `“matches”` field can have one or more [match patterns][doc-match]. These allow the browser to
+The `"matches"` field can have one or more [match patterns][doc-match]. These allow the browser to
 identify which sites to inject the content scripts into. Match patterns consist of three parts
 `<scheme>://<host><path>`. They can contain '`*`' characters.
 
@@ -255,19 +255,19 @@ width="500", height="116", class="screenshot" %}
 Based on what you’ve learned today, try to implement any of the following:
 
 - Add another **match pattern** in the manifest.json to support other [chrome developer][dev-chrome]
-  pages, like for example, the [Chrome devtools][devtools] or [workbox][workbox].
+  pages, like for example, the [Chrome DevTools][devtools] or [Workbox][workbox].
 - Add a new content script that calculates the reading time to any of your favorite blogs or
   documentation sites. 
 
 {% Aside %}
 
-💡 **HINT**: You can use the Devtools to [inspect DOM elements][devtools-dom].
+💡 **HINT**: You can use the DevTools to [inspect DOM elements][devtools-dom].
 
 {% endAside %}
 
 ## Keep building! {: #continue }
 
-Congratulations on finishing this tutorial 🎉. Continue np your skills by completing other
+Congratulations on finishing this tutorial 🎉. Continue building your skills by completing other
 tutorials on this series:
 
 | Extension                        | What you will learn                                                    |
