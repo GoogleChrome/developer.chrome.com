@@ -114,7 +114,9 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 ### Step 3: Declare the content script {: #step-3 }
 
 Extensions can run scripts that read and modify the content of the pages. These are called _content
-scripts_. Add the following code to the `manifest.json` to register a content script called
+scripts_. Content scripts live in an [isolated world][doc-isolated], which means they can make changes to their JavaScript environment without conflicting with their host page or other extension's content scripts.
+
+Add the following code to the `manifest.json` to register a content script called
 `content.js`.
 
 {% Label %}manifest.json:{% endLabel %}
@@ -148,7 +150,8 @@ do. Content scripts request permission to run on the sites that meet the match p
 
 In this example, the user would see the following permission warning:
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rKDdOyri9x8VkhTEXbO6.png", alt="Permission warning the user will see when installing the Reading time extension", width="338", height="175", class="screenshot" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rKDdOyri9x8VkhTEXbO6.png", 
+alt="Permission warning the user will see when installing the Reading time extension", width="338", height="175", class="screenshot" %}
   <figcaption>
   Reading time permission warning. 
   </figcaption>
@@ -274,7 +277,6 @@ tutorials on this series:
 | [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
-[cws-icons]: /docs/webstore/images/#icons
 [cws-publish]: /docs/webstore/publish/
 [dev-chrome]: https://developer.chrome.com/docs/
 [devtools-dom]: https://developer.chrome.com/docs/devtools/dom/
@@ -283,6 +285,7 @@ tutorials on this series:
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-icons]: /docs/extensions/mv3/manifest/icons/
+[doc-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-match]:/docs/extensions/mv3/match_patterns/
 [doc-perms]:/docs/extensions/mv3/permission_warnings/
