@@ -104,9 +104,15 @@ than services which run on-device.
 There are several entities that interact so that the FLEDGE services can
 perform their tasks.
 
-* **[Clients](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#clients)** (Android devices and the Chrome browser) send encrypted requests to the FLEDGE service.
-* A **[cloud platform](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#cloud-platform)** hosts FLEDGE services in virtual machines backed by a trusted execution environment (TEE), which prevents services from sharing information with third-parties.
-* **[Key management systems](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#key-management-systems)** include services and databases that generate and distribute public and private keys to ensure end-to-end encryption of client-service communication.
+* **[Clients](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#clients)**
+  (Android devices and the Chrome browser) send encrypted requests to the
+  FLEDGE service.
+* A **[cloud platform](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#cloud-platform)**
+  hosts FLEDGE services in virtual machines backed by a trusted execution
+  environment (TEE), which prevents services from sharing information with third-parties.
+* **[Key management systems](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#key-management-systems)**
+  include services and databases that generate and distribute public and
+  private keys to ensure end-to-end encryption of client-service communication.
 
 <figure class="screenshot">
 	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/5XMXkDmG1Tx07DPdHHIR.jpg", alt="System communication for FLEDGE services.", width="770", height="415" %}
@@ -116,7 +122,8 @@ perform their tasks.
 	key, hosted on a key management system, to encrypt these requests. The
 	FLEDGE service relies on key management systems to decrypt the requests and
 	encrypt their response.<br><br>
-	Refer to <a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#system-overview)">systems overview in the FLEDGE services explainer</a>.</figcaption>
+	Refer to <a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#system-overview)">systems overview in the FLEDGE services explainer</a>.
+    </figcaption>
 </figure>
 
 ## Privacy and security considerations
