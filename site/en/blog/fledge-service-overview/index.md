@@ -96,6 +96,10 @@ With the **[Bidding and auction service](https://github.com/privacysandbox/fledg
 ad space buyers and sellers can offload the execution of ad bidding and
 auctions to services running in trusted execution environments in the cloud.
 
+We look forward to [hearing feedback](#engage-and-share-feedback) from testers
+who are participating in the
+[ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
+
 ## Infrastructure for FLEDGE services
 
 These service proposals present privacy-focused cloud-based services, rather
@@ -180,7 +184,14 @@ tools they need to leverage interest-based advertising.
 
 To learn more about the Privacy Sandbox initiative:
 
-*  **GitHub**: Read the [FLEDGE services proposal](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md), [raise questions, and follow the discussions](https://github.com/privacysandbox/fledge-docs/issues).
+*  **GitHub**:
+   * Read the [FLEDGE services proposal](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md),
+   [raise questions, and follow the discussions](https://github.com/privacysandbox/fledge-docs/issues).
+   * Read the [Bidding and auction service proposal](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md),
+     [raise questions and follow discussions](https://github.com/privacysandbox/fledge-docs/issues).
+     In particular, we’re interested in hearing from participants of the ads
+     relevance and measurement origin trial. What do you think of this proposal
+     as compared to the current on-device design?
 *  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business Group,](https://www.w3.org/community/web-adv/participants) and discuss FLEDGE design in the Web Platform Incubation Community Group's [FLEDGE GitHub repository and regular calls](https://github.com/WICG/turtledove/issues/88).
 *  **Developer support**: Ask questions and join discussions in:
     *  [Chrome's Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
