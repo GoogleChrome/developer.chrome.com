@@ -35,7 +35,7 @@ How have we mimicked the top layer until now? Well, it's not uncommon to see dev
 %}
 
 
-With new built-in components and APIs like `<dialog>` and [`<pop-up>`](https://open-ui.org/components/popup.research.explainer), you won't need to resort to these workarounds. You can promote content to the top layer. 
+With new built-in components and APIs like `<dialog>` and ["Pop-up"](https://open-ui.org/components/popup.research.explainer), you won't need to resort to these workarounds. You can promote content to the top layer. 
 
 UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
@@ -90,6 +90,6 @@ A brief intro to the top layer. Making it possible to say "Bye!" to things like:
 }
 ```
 
-What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI pop-up API](https://open-ui.org/components/popup.research.explainer)? Let us know!
+What would you push into the Top Layer? Have you tried out [`dialog`](https://developer.mozilla.org/docs/Web/HTML/Element/dialog)? Or checked out the [OpenUI Pop-up API](https://open-ui.org/components/popup.research.explainer)? Let us know!
 
 
