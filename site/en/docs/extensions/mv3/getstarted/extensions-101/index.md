@@ -36,7 +36,7 @@ following are just a few examples of what extensions can do:
 - Allow users to collect and organize information across websites.
 - Add features to the Chrome Dev Tools.
 
-See [Extension development Overview][doc-dev-overview] for a complete list of API capabilities.
+See [Extension development overview][doc-dev-overview] for a complete list of API capabilities.
 
 ## Extension files {: #extension-files }
 
@@ -56,7 +56,7 @@ directly with the content of web pages; that’s the job of content scripts.
 
 Content scripts 
 : [Content scripts][doc-content-scripts] can execute Javascript in the context of a
-web page. They can also read and modify the [DOM][mdn-dom]. Content Scripts can only use a subset of
+web page. They can also read and modify the [DOM][mdn-dom] of the pages they're injected into. Content Scripts can only use a subset of
 the [Chrome APIs][doc-reference] but can indirectly access the rest by exchanging messages with the
 extension service worker.
 
@@ -69,7 +69,7 @@ Visit [Extensions Architecture][doc-arch] and [Designing the user interface][doc
 
 ## Developing your extension {: #development }
 
-Even though web applications and extensions share the same technologies, the extension development
+Even though web applications and extensions share many of the same technologies, the extension development
 experience is different. Check out [Development Basics][doc-dev-basics] to create a "Hello,
 Extensions" example and familiarize yourself with the extension development workflow.
 
