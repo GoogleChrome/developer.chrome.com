@@ -39,7 +39,7 @@ With new built-in components and APIs like `dialog` and `pop-up`, you won't need
 
 UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
-By using the top layer, promoted elements are where you put them in your source code (for example, a `dialog`). It doesn't matter how many layers down in the DOM the element is. It will get promoted to the top layer and you can inspect it where you expect it to be, co-located with your component HTML. This makes it easier to inspect both the trigger element and the promoted element in the DOM at the same time. Particularly useful if your trigger element is making attribute updates, for example.
+By using the top layer, promoted elements are where you put them in your source code (for example, a `dialog`). It doesn't matter how many layers down in the DOM the element is. It will get promoted to the top layer and you can inspect it where you expect it to be, co-located with your component HTML. This makes it easier to inspect both the trigger element and the promoted element in the DOM at the same time. Particularly useful if your trigger element is making attribute updates, for example. This also has an added benefit for accessibility now that the elements are co-located.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -49,6 +49,26 @@ By using the top layer, promoted elements are where you put them in your source 
   }
 %}
 
+To illustrate the top layer versus high `z-index`, consider this demo.
+
+{% Codepen {
+    user: 'web-dot-dev',
+    id: 'MWVxmKK',
+    height: 450,
+    tab: 'result'
+  }
+%}
+
+In this demo, you can open a SweetAlert popup and also open a top layer `Dialog`. Open the `Dialog`, and then try opening the SweetAlert popup. You'll see that it appears underneath our top layer element. And the root of our SweetAlert popup is using a `z-index` of 10000 with `position: fixed`.
+
+```css
+.swal-overlay {
+  z-index: 10000;
+  position: fixed;
+}
+```
+
+You don't need to apply any styles to the `Dialog` to make it appear above all other content.
 
 ## DevTools
 
