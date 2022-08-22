@@ -163,18 +163,60 @@ in all cases. Including the terminal slash makes links more robust.
 ## Code formatting {: #code-formatting }
 
 Code samples in extensions documentation should be formatted using the Chromium project's `git cl
-format` command. To use this command, you must first install [depot_tools][depot-tools]. See [Using
-clang-format][clang-format] for additional details.
+format` command. To use this command, you must first install [setup][setup] chromium's tools
+locally. See [Using clang-format][clang-format] for additional details.
 
 ```bash
-# Use this command to format JS files and code samples
-git cl format --js <filename>
+# Format a specific JS file
+clang-format -i <file>
+
+# Format all JS files in a directory
+clang-format -i <directory>/**/*.js
 ```
 
+## Tool setup {: #setup }
+
+### Minimal setup
+
+Use this setup process if you only want to use Chromium's code formatting tools (clang-format).
+
+1. Install `depot_tools` as described in the depot_tools [Setting Up][depot-tools-setup] guide.
+2. Install `buildtools`
+    1. Clone the buildtools repo into the same directory that contains depot_tools.
+
+        ```bash
+        git clone https://chromium.googlesource.com/chromium/src/buildtools
+        ```
+    2. Like depot_tools, you'll need to export an environment variable to make this directory
+       available to the resources in `depot_tools` directory. Unlike depot_tools, though, we do this
+       by setting a custom environment variable rather than prefixing the PATH variable.
+
+       Assuming you cloned `buildtools` into `/path/to/buildtools`:
+
+       ```bash
+       export CHROMIUM_BUILDTOOLS_PATH=/path/to/buildtools:$PATH
+       ```
+
+       <!-- NOTE: The pathing used in the above snippet comes from the build_tools docs -->
+
+At this point your Chromium tools should be set up and ready to use. Test it out by executing the
+following command:
+
+```bash
+clang-format --version
+```
+
+### Maximal setup
+
+If you will be modifying content in the dynamically generated section of the Extensions API
+documentation, you will need to make commits directly against the Chromium project. See the
+official Chromium [checkout and build][chromium] documentation for guidance.
+
+[chromium]: https://chromium.googlesource.com/chromium/src/+/main/docs/README.md#Checking-Out-and-Building
 [clang-format]: https://chromium.googlesource.com/chromium/src/+/main/docs/clang_format.md
-[depot-tools]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html
+[depot-tools-setup]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [kebab-case]: https://en.wikipedia.org/wiki/Letter_case#Kebab_case
 [line-wrapping]: #line-wrapping
-
+[setup]: #setup
 [add-a-doc]: /docs/handbook/how-to/add-a-doc/
 [add-a-blog]: /docs/handbook/how-to/add-a-blog-post/
