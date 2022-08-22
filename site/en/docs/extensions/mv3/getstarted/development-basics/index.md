@@ -28,7 +28,7 @@ alt="Hello extension", width="206", height="130", class="screenshot" %}
 Start by creating a new directory to store extension files. If you prefer, you can download the full
 source code hosted on [Github][sample-hello-world].
 
-Next, create a new file called `manifest.json` and add the following code:
+Next, create a new file in this directory called `manifest.json` and add the following code:
 
 {% Label %}manifest.js:{% endLabel %}
 
@@ -163,9 +163,9 @@ console.log("This is a popup!")
 
 To see this message logged in the Console, complete the following steps:
 
-  1. Refresh the extension
-  2. Open the popup
-  3. Right-click on the popup
+  1. Refresh the extension.
+  2. Open the popup.
+  3. Right-click on the popup.
   4. Select **Inspect**. 
       <figure> 
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
@@ -212,8 +212,8 @@ There are many ways to structure an extension project; however, you must place t
 manifest.json file in the extension's **root directory**. The following is a structure example:
 
 
-```text
-└── my extension/
+```text/1
+└── my-extension/
     ├── manifest.json
     ├── background.js
     ├── scripts/
