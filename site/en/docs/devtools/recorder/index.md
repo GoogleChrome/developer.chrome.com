@@ -25,6 +25,8 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 
 For more information on how to share the recorded user flows, edit them and their steps, see the [Recorder features reference](/docs/devtools/recorder/reference/).
 
+This is feature is only available in Chrome, not in Chromium.
+
 ## Open the Recorder panel {: #open }
 
 1. [Open DevTools](/docs/devtools/open).
