@@ -45,7 +45,7 @@ To make your documentation more resilient to change, authors should manually dec
 {% CompareCaption %}
 
 Automatically generated IDs are brittle. If this header were renamed in a future revision, it would
-be given a new ID and all existing links to this section would break. 
+be given a new ID and all existing links to this section would break.
 
 {% endCompareCaption %}
 {% endCompare %}
@@ -61,15 +61,15 @@ By convention, extensions docs strongly prefer named footer links over inline li
 have a couple of advantages over inline links.
 
 - **Named links are typically shorter.** This makes it much easier to read and work with the source
-  markdown file. 
+  markdown file.
 - **Named links are easier to maintain.** Authors can edit one link definition and update all uses
-  of that link links across a given document. 
+  of that link links across a given document.
 
 {% Compare 'better' %}
 
 ```md
 Lorem ipsum dolor [sit amet][mdn-global], consectetur adipiscing elit.
-Quisque aliquam rutrum pellentesque. Ut tincidunt purus ex, eget 
+Quisque aliquam rutrum pellentesque. Ut tincidunt purus ex, eget
 congue lacus aliquet quis.
 
 [mdn-global]: https://developer.mozilla.org/en-US/docs/Glossary/Global_object
@@ -131,12 +131,12 @@ we test against when authoring or reviewing changes.
 {% CompareCaption %}
 
 Page-relative paths are harder to find and update than their root-relative counterparts. This makes
-them making them more likely to break when reorganizing site content.
+them more likely to break when reorganizing site content.
 
 {% endCompareCaption %}
 {% endCompare %}
 
-Internal links should include a terminal slash. 
+Internal links should include a terminal slash.
 
 {% Compare 'better' %}
 ```md
