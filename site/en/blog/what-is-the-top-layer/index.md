@@ -86,7 +86,7 @@ A brief intro to the top layer. Making it possible to say "Bye!" to things like:
 
 ```css
 .popup-container {
-  z-index: 9999;
+  z-index: 10000;
 }
 ```
 
