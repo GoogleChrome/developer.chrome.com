@@ -9,7 +9,7 @@ alt: "Layered mountains."
 tags:
   - css
   - html
-date: 2022-08-18
+date: 2022-08-22
 ---
 
 The top layer sits above its related `document` in the browser viewport, and each `document` has one associated top layer. This means that elements promoted to the top layer needn't worry about `z-index` or DOM hierarchy. They also get a neat `::backdrop` pseudo-element to play with. The [Fullscreen API](https://fullscreen.spec.whatwg.org/#new-stacking-layer) spec goes into more details as [Fullscreen](https://developer.mozilla.org/docs/Web/API/Element/requestFullScreen) was a great example of the top layer in use before [`dialog` support](https://caniuse.com/dialog) came along.
@@ -35,11 +35,11 @@ How have we mimicked the top layer until now? Well, it's not uncommon to see dev
 %}
 
 
-With new built-in components and APIs like `dialog` and `pop-up`, you won't need to resort to these workarounds. You can promote content to the top layer. 
+With new built-in components and APIs like `<dialog>` and [`<pop-up>`](https://open-ui.org/components/popup.research.explainer), you won't need to resort to these workarounds. You can promote content to the top layer. 
 
 UI frameworks allow us to co-locate promoted elements with their component counterparts. But, they often get separated in the DOM when it comes to rendering.
 
-By using the top layer, promoted elements are where you put them in your source code (for example, a `dialog`). It doesn't matter how many layers down in the DOM the element is. It will get promoted to the top layer and you can inspect it where you expect it to be, co-located with your component HTML. This makes it easier to inspect both the trigger element and the promoted element in the DOM at the same time. Particularly useful if your trigger element is making attribute updates, for example. This also has an added benefit for accessibility now that the elements are co-located.
+By using the top layer, promoted elements are where you put them in your source code (for example, a `<dialog>`). It doesn't matter how many layers down in the DOM the element is. It will get promoted to the top layer and you can inspect it where you expect it to be, co-located with your component HTML. This makes it easier to inspect both the trigger element and the promoted element in the DOM at the same time. Particularly useful if your trigger element is making attribute updates, for example. This also has an added benefit for accessibility now that the elements are co-located.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -59,7 +59,7 @@ To illustrate the top layer versus high `z-index`, consider this demo.
   }
 %}
 
-In this demo, you can open a SweetAlert popup and also open a top layer `Dialog`. Open the `Dialog`, and then try opening the SweetAlert popup. You'll see that it appears underneath our top layer element. And the root of our SweetAlert popup is using a `z-index` of 10000 with `position: fixed`.
+In this demo, you can open a SweetAlert popup and also open a top layer `<dialog>`. Open the `<dialog>`, and then try opening the SweetAlert popup. You'll see that it appears underneath our top layer element. And the root of our SweetAlert popup is using a `z-index` of 10000 with `position: fixed`.
 
 ```css
 .swal-overlay {
@@ -68,7 +68,7 @@ In this demo, you can open a SweetAlert popup and also open a top layer `Dialog`
 }
 ```
 
-You don't need to apply any styles to the `Dialog` to make it appear above all other content.
+You don't need to apply any styles to the `<dialog>` to make it appear above all other content.
 
 ## DevTools
 
