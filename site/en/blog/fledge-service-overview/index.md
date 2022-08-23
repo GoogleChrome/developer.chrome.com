@@ -159,10 +159,10 @@ FLEDGE for Chrome currently allows a
 for the Key/Value service, which will need to be migrated to TEEs in the future.
 The BYOS model is not in scope for [Bidding and Auction services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md).
 
-To ease the migration from the BYOS model, we'll be providing new open source
-APIs, documentation, server implementation, and explainers with additional
-capabilities beyond those already proposed. The APIs intend to allow custom
-scripts and adtech-defined code which can be run on TEEs.
+To ease the migration from the BYOS model, we're providing new [open source
+APIs, documentation, server implementation, and explainers](/blog/open-sourcing-fledge-key-value-service/)
+with additional capabilities beyond those already proposed. The APIs intend to
+allow custom scripts and adtech-defined code which can be run on TEEs.
 
 Chrome and Android will be open sourcing a Key/Value service so that adtech
 platforms can monitor development and potentially contribute to the codebase.
