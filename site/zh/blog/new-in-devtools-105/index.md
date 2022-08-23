@@ -18,6 +18,7 @@ tags:
 *感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
+{% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
 <!-- + 1. Remove the "draft: true" tag above when submitting PR -->
