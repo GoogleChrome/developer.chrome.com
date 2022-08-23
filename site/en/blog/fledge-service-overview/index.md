@@ -39,7 +39,7 @@ going to change, and platforms that use FLEDGE will eventually need to
 *  If you're a **developer**, the explainers will link to and provide more
    in-depth technical details and setup.
 
-These services have been built for supply-side providers (SSPs) and demand-side
+These services are designed for supply-side providers (SSPs) and demand-side
 suppliers (DSPs). No action is currently required from website and application
 content publishers, though an SSP may reach out directly to coordinate efforts.
 
@@ -58,7 +58,7 @@ with a new trust model for cloud implementation. If you're familiar with the
 "Bring Your Own Server" model, we've provided
 [migration details and timeline updates](#byos-to-tee). 
 
-The second service proposed under the FLEDGE umbrella is the
+The second service is newly proposed under the FLEDGE umbrella: 
 **[Bidding and auction service](#bidding-auction-service)**. This new proposal,
 offloads bidding and ad auctions from the client into the cloud, while
 preserving privacy of the ad auction and bidding service.  We welcome feedback
@@ -83,9 +83,9 @@ look-ups and other advanced queries.
 By implementing a cloud service, adtechs can securely store data for their use
 and keep it up-to-date as the ad campaign progresses.
 
-### Bidding and auction service {: #bidding-auction-service }
+### Bidding and auction service proposal {: #bidding-auction-service }
 
-The initial proposal of FLEDGE, proposes ad bidding and auction execution to happen on-device.
+The initial proposal for FLEDGE proposes ad bidding and auction execution to happen on-device.
 
 FLEDGE bidding and auction processes may be compute intensive and involve
 several calls over the network. Migrating these computations to the cloud can
@@ -96,9 +96,12 @@ With the **[Bidding and auction service](https://github.com/privacysandbox/fledg
 ad space buyers and sellers can offload the execution of ad bidding and
 auctions to services running in trusted execution environments in the cloud.
 
-We look forward to [hearing feedback](#engage-and-share-feedback) from testers
-who are participating in the
+{% Aside %}
+This is a brand new proposal for a cloud service, which
+[needs your feedback](#engage-and-share-feedback).
+We especially hope to hear from our testers participating in the
 [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
+{% endAside %}
 
 ## Infrastructure for FLEDGE services
 
@@ -154,6 +157,7 @@ Sensitive data will not be exfiltrated from any service, either by adtech, Googl
 FLEDGE for Chrome currently allows a
 ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) (BYOS) model
 for the Key/Value service, which will need to be migrated to TEEs in the future.
+The BYOS model is not in scope for [Bidding and Auction services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md).
 
 To ease the migration from the BYOS model, we'll be providing new open source
 APIs, documentation, server implementation, and explainers with additional
@@ -172,9 +176,9 @@ development.
 We aim to have an initial implementation of FLEDGE services by the end of 2022.
 
 Further, we're aiming to provide user-defined function API and other
-integrations by mid-2023. Once that is ready, adtechs can develop more advanced
-logic. We welcome [your contributions](#feedback) to make this implementation
-better and best meet your needs.
+integrations for the Key/Value service by mid-2023. Once that is ready, adtechs
+can develop more advanced logic. We welcome [your contributions](#feedback) to
+make this implementation better and best meet your needs.
 
 ## Engage and share feedback {: #feedback}
 
@@ -191,7 +195,7 @@ To learn more about the Privacy Sandbox initiative:
      [raise questions and follow discussions](https://github.com/privacysandbox/fledge-docs/issues).
      In particular, we’re interested in hearing from participants of the ads
      relevance and measurement origin trial. What do you think of this proposal
-     as compared to the current on-device design?
+    as compared to the current on-device design?
 *  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business Group,](https://www.w3.org/community/web-adv/participants) and discuss FLEDGE design in the Web Platform Incubation Community Group's [FLEDGE GitHub repository and regular calls](https://github.com/WICG/turtledove/issues/88).
 *  **Developer support**: Ask questions and join discussions in:
     *  [Chrome's Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
