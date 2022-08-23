@@ -224,7 +224,7 @@ Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experie
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Devtools resuelve correctamente los nombres de mapas de código fuente", width="800", height="441" %}
 
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
-- Arreglado el índice de URL de mapa de código fuente para URLs duplicadas. Antes, los puntos de ruptura no se activaban en algunos archivos porque tenían URLs duplicadas.
+- Se arregló el índice de URL de mapa de código fuente para URLs duplicadas. Antes, los puntos de ruptura no se activaban en algunos archivos porque tenían URLs duplicadas.
 
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
