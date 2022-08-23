@@ -10,7 +10,7 @@
 * [Manifest 窗格中的协议处理程序](/zh/blog/new-in-devtools-105/#manifest)
 * [元素面板中的顶层徽章](/zh/blog/new-in-devtools-105/#top-layer)
 * [在运行时附加 Wasm 调试信息](/zh/blog/new-in-devtools-105/#wasm)
-* [调试时支持实时编辑 ](/zh/blog/new-in-devtools-105/#live-edit)
+* [调试时支持实时编辑](/zh/blog/new-in-devtools-105/#live-edit)
 * [在样式窗格的规则中查看和编辑@scope](/zh/blog/new-in-devtools-105/#scope)
 * [Sourcemap 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
 * [其他亮点](/zh/blog/new-in-devtools-105/#misc)
