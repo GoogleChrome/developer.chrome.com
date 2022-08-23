@@ -34,7 +34,7 @@ _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisió
 Ahora puede establecer un punto de interrupción y reproducir un flujo de usuario paso a paso en el panel de **Recorder**.
 
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-Para establecer un punto de ruptura, haga clic en el punto azul al lado de un paso. Reprodúzca su flujo de usuario, la reproducción se detendrá antes de ejecutar el paso. Desde aquí, puede continuar la reproducción, ejecutar un paso o cancelar la reproducción.
+Para establecer un punto de interrupción, haga clic en el punto azul al lado de un paso. Reprodúzca su flujo de usuario, la reproducción se detendrá antes de ejecutar el paso. Desde aquí, puede continuar la reproducción, ejecutar un paso o cancelar la reproducción.
 
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
 Con esta función, puede visualizar y depurar fácilmente su flujo de usuario.
