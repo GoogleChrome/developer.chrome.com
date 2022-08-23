@@ -194,7 +194,7 @@ Ahora puede ver y editar las [reglas de CSS `@scope`](https://drafts.csswg.org/c
 Las reglas de `@scope` son parte de la [especificación de nivel de cascada y herencia de CSS Cascading and Inheritance Level 6](https://drafts.csswg.org/css-cascade-6/). Estas reglas permiten a los desarrolladores limitar las reglas de estilo en CSS.
 
 <!-- Open [this demo page](https://codepen.io/miriamsuzanne/details/ZErXZVY) and inspect the hyperlink within the `<div class=”dark-theme”>` element. In the **Styles** pane, view the `@scope` at-rules. Click the rule declaration to edit it. -->
-Abra [esta página de demostración](https://codepen.io/miriamsuzanne/details/ZErXZVY) y inspecifique el enlace dentro del elemento `<div class=”dark-theme”>`. En el panel de **Estilos**, vea las reglas de `@scope`. Haga clic en la declaración de la regla para editarla.
+Abra [esta página de demostración](https://codepen.io/miriamsuzanne/details/ZErXZVY) e inspeccione el enlace dentro del elemento `<div class=”dark-theme”>`. En el panel de **Estilos**, vea las reglas de `@scope`. Haga clic en la declaración de la regla para editarla.
 
 {% Aside %}
 
