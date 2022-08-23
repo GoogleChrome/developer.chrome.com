@@ -12,7 +12,7 @@ tags:
   - privacy
   - proposal
 ---
-The [FLEDGE Key/Value service code](https://github.com/privacysandbox/fledge-trusted-key-value-service) is now available in a Privacy Sandbox GitHub repository. This service can be used by Chrome and Android developers.
+The [FLEDGE Key/Value service code](https://github.com/privacysandbox/fledge-key-value-service) is now available in a Privacy Sandbox GitHub repository. This service can be used by Chrome and Android developers.
 
 ## What is FLEDGE?
 
