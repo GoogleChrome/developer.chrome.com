@@ -110,9 +110,11 @@ and `chrome.extension.getViews()`.*
 There are some changes you may need to make based on changes in security policy. This section lists these changes.
 
 ### Are you making CORS requests in content scripts? {: #security-cors }
+
 - Move these requests to the background service worker.
 
 ### Are you using a custom `content_security_policy` in manifest.json? {: #security-csp }
+
 - Replace `content_security_policy` with `content_security_policy.extension_pages`
   or `content_security_policy.sandbox` as appropriate.
 - Remove references to external domains in `script-src`, `worker-src`, `object-src`, and
