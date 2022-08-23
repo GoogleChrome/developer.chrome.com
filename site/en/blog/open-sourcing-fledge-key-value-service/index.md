@@ -18,7 +18,7 @@ The [FLEDGE Key/Value service code](https://github.com/privacysandbox/fledge-key
 
 [FLEDGE](/docs/privacy-sandbox/fledge/) is a proposal to serve remarketing and custom audience use cases while protecting user’s privacy. When FLEDGE executes the ad auction between buyers (DSP) and sellers (SSP), the client receives real-time signals from the FLEDGE Key/Value services. Real-time signals are critical because they provide information, such as the budget for a buyer, when a bid is calculated. They can also provide information about an ad creative to a seller, to help decide which ad is shown to the user. Without these signals, buyers and sellers are not able to conduct basic operations that the ad industry relies on. 
 
-When the auction is executed, [FLEDGE Key/Value services](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_server_API.md) are queried and values become available for buyers and sellers. When a buyer is making a bid, the DSP Key/Value service can be queried to receive real-time information to help determine the bid. When a seller is making a decision about the bids, the SSP Key/Value service can be queried with the creative render URL to receive any information about the creative to help score the ad. 
+When the auction is executed, [FLEDGE Key/Value services](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) are queried and values become available for buyers and sellers. When a buyer is making a bid, the DSP Key/Value service can be queried to receive real-time information to help determine the bid. When a seller is making a decision about the bids, the SSP Key/Value service can be queried with the creative render URL to receive any information about the creative to help score the ad. 
 
 ## Operate the FLEDGE Key/Value service
 
@@ -48,7 +48,7 @@ The FLEDGE Key/Value service is publicly queryable and does not authenticate cal
 
 The FLEDGE Key/Value service proposal is under active discussion and subject to change in the future. If you try this system and have feedback, we'd love to hear it:
 * **Discussions and questions**
-  * Read the [trust model](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_server.md) and [attend the FLEDGE WICG meeting](https://github.com/WICG/turtledove/issues/88).
+  * Read the [trust model](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md) and [attend the FLEDGE WICG meeting](https://github.com/WICG/turtledove/issues/88).
   * [Raise questions and participate in discussion in the GitHub repository](https://github.com/WICG/turtledove/issues)
 * **Developer support**: Ask questions and join discussions on
   * [Privacy Sandbox for the Web Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
