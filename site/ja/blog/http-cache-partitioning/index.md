@@ -1,9 +1,7 @@
 ---
 layout: layouts/blog-post.njk
-title: Gaining security and privacy by partitioning the cache
-description: |2
-
- "Chrome's HTTP cache partitioning helps with better security and privacy."
+title: キャッシュをパーティション化してセキュリティとプライバシーを確保する
+description: Chrome の HTTP キャッシュ パーティションは、セキュリティとプライバシーの向上に役立ちます。
 authors:
   - agektmr
 date: '2020-10-06'
@@ -34,19 +32,19 @@ Chrome では、キャッシュの仕組みがさまざまな方法で使用さ�
 
 この仕組みは、パフォーマンスの観点からは長い間うまく機能してきましたが、ウェブサイトが HTTP リクエストに応答するのにかかる時間によって、ブラウザが過去に同じリソースにアクセスしたことが明らかになるため、ブラウザが次のようなセキュリティとプライバシー攻撃にさらされる可能性がでてきました。
 
-- **Detect if a user has visited a specific site**: An adversary can detect a user's browsing history by checking if the cache has a resource which might be specific to a particular site or cohort of sites.
+- **ユーザーが特定のサイトにアクセスしたかどうかを検出**: 攻撃者は、特定のサイトまたはサイト郡に固有のリソース キャッシュがあるかどうかを確認することで、ユーザーの閲覧履歴を検出できます。
 - **[クロスサイト検索攻撃](https://portswigger.net/daily-swig/new-xs-leak-techniques-reveal-fresh-ways-to-expose-user-information)**: 攻撃者は、特定のウェブサイトで使用される「検索結果なし」の画像がブラウザのキャッシュにあるかどうかを確認することで、ユーザーの検索結果に任意の文字列が含まれているかどうかを検出できます。
 - **クロスサイトトラッキング**: クロスサイトトラッキングの仕組みとして、Cookie のような識別子を格納するためにキャッシュを使用できます。
 
 これらのリスクを軽減するために、Chrome は Chrome 86 以降、HTTP キャッシュを分割することにしました。
 
-## How will cache partitioning affect Chrome's HTTP Cache?
+## キャッシュのパーティション化は Chrome の HTTP キャッシュにどのように影響しますか？
 
-With cache partitioning, cached resources will be keyed using a new "Network Isolation Key" in addition to the resource URL. The Network Isolation Key is composed of the top-level site and the current-frame site.
+キャッシュ パーティションでは、キャッシュされたリソースは、リソース URL に加えて新しい「ネットワーク分離キー」を使用するキーとなります。ネットワーク分離キーは、トップレベルサイトと現在のフレームのサイトで構成されます。
 
 {% Aside %} 「サイト」は「[scheme://eTLD+1](https://web.dev/same-site-same-origin/)」を使用して認識されるため、リクエストが異なるページからのものであっても、同じスキームと有効なトップレベルドメイン+1 を持つ場合、同じキャッシュ分割が使用されます。詳細については、「[「same-site」と「same-origin」を理解する](https://web.dev/same-site-same-origin/)」をご覧ください。 {% endAside %}
 
-Look again at the previous example to see how cache partitioning works in different contexts:
+前の例をもう一度見て、さまざまなコンテキストでキャッシュ パーティションがどのように機能するかを確認しましょう。
 
 <figure class="float-left">{% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/zqkRCKG9jR3uBtcEwPgV.png", alt="キャッシュキー { https://a.example, https://a.example, https://x.example/doge.png}" , width="570", height="433" %}<figcaption><b>キャッシュキー</b>: { <code>https://a.example</code>, <code>https://a.example</code>, <code>https://x.example/doge.png</code> }</figcaption></figure>
 
@@ -97,11 +95,11 @@ iframe が何度もネストされている場合はどうでしょうか？ユ�
 
 ログファイルの出力が表示されます。
 
-On the same page, find `SplitCacheByNetworkIsolationKey`. If it is followed by `Experiment_[****]`, HTTP Cache partitioning is enabled on your Chrome. If it is followed by `Control_[****]` or `Default_[****]`, it is not enabled.
+同じページで、`SplitCacheByNetworkIsolationKey` を探します。後に `Experiment_[****]` が続く場合、Chrome で HTTP キャッシュのパーティション化が有効になっています。`Control_[****]` または `Default_[****]` が続く場合は、有効になっていません。
 
-### How can I test HTTP Cache partitioning on my Chrome?
+### Chrome で HTTP キャッシュのパーティション化をテストするには？
 
-To test HTTP Cache partitioning on your Chrome, you need to launch Chrome with a command line flag: `--enable-features=SplitCacheByNetworkIsolationKey`. Follow the instruction at [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to learn how to launch Chrome with a command line flag on your platform.
+Chrome で HTTP キャッシュのパーティション化をテストするには、`--enable-features=SplitCacheByNetworkIsolationKey` というコマンドラインフラグを使用して Chrome を起動する必要があります。ご利用のプラットフォームでコマンドラインフラグを指定して Chrome を起動する方法については、「[フラグを指定して Chromium を実行する](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)」の手順をご覧ください。
 
 ### ウェブ開発者はこの変更に応じて何らかのアクションが必要ですか？
 
@@ -117,7 +115,7 @@ To test HTTP Cache partitioning on your Chrome, you need to launch Chrome with a
 
 ### これは標準化されていますか？他のブラウザの動作は異なりますか？
 
-"HTTP cache partitions" is [standardized in the fetch spec](https://fetch.spec.whatwg.org/#http-cache-partitions) though browsers behave differently:
+「HTTP キャッシュ パーティション」は[フェッチ仕様で標準化されています](https://fetch.spec.whatwg.org/#http-cache-partitions)が、ブラウザの動作はそれぞれに異なります。
 
 - **Chrome**: トップレベルの scheme://eTLD+1 とフレームの scheme://eTLD+1 を使用
 - **Safari**: [トップレベル eTLD+1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/) を使用
