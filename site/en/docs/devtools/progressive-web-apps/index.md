@@ -16,7 +16,7 @@ tags:
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
 service worker caches.
 
-[Progressive Web Apps (PWAs)][1]are modern, high quality applications built using web technology. 
+[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology. 
 PWAs offer similar capabilities to iOS, Android, and desktop apps. They are:
 
 - Reliable even in unstable network conditions.
