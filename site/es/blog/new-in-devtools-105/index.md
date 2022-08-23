@@ -17,6 +17,7 @@ tags:
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io)._
 
 {% include 'partials/devtools/es/banner.md' %}
+{% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
 <!-- + 1. Remove the "draft: true" tag above when submitting PR -->
