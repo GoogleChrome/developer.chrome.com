@@ -36,7 +36,7 @@ tags:
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
 借助此功能，您可以完全控制用户流程的重播，令调试更方便。
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
-有关详细信息，请参阅[录制面板功能参考](/docs/devtools/recorder/reference/)。
+参阅[录制面板功能参考](/docs/devtools/recorder/reference/)以获取更多相关信息，。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %}
 
 Chromium 议题: [1257499](https://crbug.com/1257499)
