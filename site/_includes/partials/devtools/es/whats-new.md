@@ -5,7 +5,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 105 {: #chrome105 }
 
-* [Reproducción paso a paso en la grabadora](/es/blog/new-in-devtools-105/#recorder)
+* [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
 * [Soporte de eventos de ratón en el panel de la grabadora](/es/blog/new-in-devtools-105/#recorder-hover)
 * [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
 
