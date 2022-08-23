@@ -66,7 +66,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 ## Largest Contentful Paint (LCP) en el panel Performance Insights {: #lcp }
 
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP es una métrica importante, centrada en el usuario, para medir [la carga de rendimiento](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Ahora puede conocer los caminos críticos y las causas raíz de un [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
+LCP es una métrica importante, centrada en el usuario, para medir [velocidad de carga percibida](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Ahora puede conocer los caminos críticos y las causas raíz de un [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
 
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 En una grabación de rendimiento, haga clic en el sello LCP en la **Línea de tiempo**. En el panel de detalles, puede ver la puntuación del LCP, aprender cómo arreglar recursos que ralentizan el LCP y ver el camino crítico para el recurso LCP.
