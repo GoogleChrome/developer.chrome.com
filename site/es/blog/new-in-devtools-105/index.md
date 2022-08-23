@@ -91,7 +91,7 @@ Para ver las causas principales de un desplazamiento de diseño, haga clic en un
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
 Vea [Optimizar carga de fuentes web y pintado](https://web.dev/optimize-webfont-loading/) para aprender la técnica para evitar desplazamientos de diseño.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT en el panel de percepciones de rendimiento", width="800", height="497" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT en el panel Performance Insights", width="800", height="497" %}
 
 Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
 
