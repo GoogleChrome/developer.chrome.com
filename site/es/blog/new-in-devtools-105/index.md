@@ -5,8 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-08-12
 updated: 2022-08-12
-description: "Soporte de repetición paso a paso y de eventos "mouse over" (hover) en el panel Recorder, LCP en el panel Performance Insights y más.
-"
+description: "Soporte de repetición paso a paso y de eventos "mouse over" (hover) en el panel Recorder, LCP en el panel Performance Insights y más."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QCPLdRlFAqZuqPQG27yT.jpg'
 alt: ''
 tags:
@@ -56,7 +55,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 [Esta demo](https://jec.fyi/demo/menu-hover) muestra un menu flotante al pasar el ratón por encima. Intente grabar un flujo de usuario y haga clic en un elemento del menú.
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
-Si reproduce el flujo de usuario ahora, fallará porque la **Grabadora** no captura automáticamente los eventos de ratón al grabar. Para resolver esto, [añada un paso manualmente](/docs/devtools/recorder/reference/#add-and-remove-steps) para pasar el ratón por encima del selector antes de hacer clic en el elemento del menú.
+Si reproduce el flujo de usuario ahora, fallará porque **Recorder** no captura automáticamente los eventos de ratón al grabar. Para resolver esto, [añada un paso manualmente](/docs/devtools/recorder/reference/#add-and-remove-steps) para pasar el ratón por encima del selector antes de hacer clic en el elemento del menú.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Soporte de eventos de ratón en la Grabadora", width="800", height="488" %}
 
