@@ -47,7 +47,7 @@ Visite [la referencia de características de la Grabadora](/docs/devtools/record
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
-## Soporte de eventos de ratón en el panel de la grabadora {: #recorder-hover }
+## Soporte de eventos de ratón en el panel Recorder {: #recorder-hover }
 
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 La **Grabadora** ahora soporta añadir un paso de pasar el ratón por encima (hover) manualmente en una grabación.
