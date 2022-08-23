@@ -50,7 +50,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 ## Soporte de eventos de ratón en el panel Recorder {: #recorder-hover }
 
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-La **Grabadora** ahora soporta añadir un paso de pasar el ratón por encima (hover) manualmente en una grabación.
+**Recorder** ahora soporta añadir un paso de pasar el ratón por encima (hover) manualmente en una grabación.
 
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
 [Esta demo](https://jec.fyi/demo/menu-hover) muestra un menu flotante al pasar el ratón por encima. Intente grabar un flujo de usuario y haga clic en un elemento del menú.
