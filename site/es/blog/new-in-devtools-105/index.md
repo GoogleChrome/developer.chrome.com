@@ -72,7 +72,7 @@ LCP es una métrica importante, centrada en el usuario, para medir [la carga de 
 En una grabación de rendimiento, haga clic en el sello LCP en la **Línea de tiempo**. En el panel de detalles, puede ver la puntuación del LCP, aprender cómo arreglar recursos que ralentizan el LCP y ver el camino crítico para el recurso LCP.
 
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
-Vea el panel de [Percepción de Rendimiento](/docs/devtools/performance-insights) para saber cómo conseguir ideas accionables y mejorar el rendimiento de su sitio con el panel.
+Vea [el panel Performance Insights](/docs/devtools/performance-insights) para saber cómo conseguir ideas accionables y mejorar el rendimiento de su sitio con el panel.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP en el panel de percepción de rendimiento", width="800", height="751" %}
 
