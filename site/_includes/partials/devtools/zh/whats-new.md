@@ -7,7 +7,7 @@
 * [支持录制面板中的鼠标悬浮事件](/zh/blog/new-in-devtools-105/#recorder-hover)
 * [性能洞察面板中的最大内容绘制 （LCP）](/zh/blog/new-in-devtools-105/#lcp)
 * [将闪烁的文本（FOIT、FOUT）识别为布局变化的潜在根本原因](/zh/blog/new-in-devtools-105/#foit-fout)
-* [Manifest 窗格中的协议处理程序] (/zh/blog/new-in-devtools-105/#manifest)
+* [Manifest 窗格中的协议处理程序](/zh/blog/new-in-devtools-105/#manifest)
 * [元素面板中的顶层徽章](/zh/blog/new-in-devtools-105/#top-layer)
 * [在运行时附加 Wasm 调试信息](/zh/blog/new-in-devtools-105/#wasm)
 * [调试时支持实时编辑 ](/zh/blog/new-in-devtools-105/#live-edit)
