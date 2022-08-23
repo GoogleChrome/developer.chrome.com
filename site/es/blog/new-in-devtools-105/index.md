@@ -63,7 +63,7 @@ Si reproduce el flujo de usuario ahora, fallará porque la **Grabadora** no capt
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
-## Largest Contentful Paint (LCP) en el panel de percepción de Rendimiento {: #lcp }
+## Largest Contentful Paint (LCP) en el panel Performance Insights {: #lcp }
 
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
 LCP es una métrica importante, centrada en el usuario, para medir [la carga de rendimiento](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Ahora puede conocer los caminos críticos y las causas raíz de un [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
