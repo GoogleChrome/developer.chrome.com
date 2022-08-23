@@ -7,7 +7,8 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 * [Reproducción paso a paso en la grabadora](/es/blog/new-in-devtools-105/#recorder)
 * [Soporte de eventos de ratón en el panel de la grabadora](/es/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) en el panel de percepción de Rendimiento](/es/blog/new-in-devtools-105/#lcp)
+* [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
+
 * [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
 * [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
 * [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
