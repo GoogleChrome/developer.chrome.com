@@ -40,7 +40,7 @@ Para establecer un punto de interrupción, haga clic en el punto azul al lado de
 Con esta función, puede visualizar y depurar fácilmente su flujo de usuario.
 
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
-Visite [la referencia de características de la Grabadora](/docs/devtools/recorder/reference/) para más información.
+Visite [la referencia de características del panel Recorder](/docs/devtools/recorder/reference/) para más información.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Reproducción paso a paso en la grabadora", width="800", height="547" %}
 
