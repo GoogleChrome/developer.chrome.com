@@ -83,7 +83,7 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 ## Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño {: #foit-fout }
 
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-El panel de [Percepción de Rendimiento](/docs/devtools/performance-insights/) ahora detecta [parpadeos de texto invisible (FOIT) y parpadeos de texto sin estilos (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) como causas potenciales de desplazamientos de diseño.
+El [panel Performance Insights](/docs/devtools/performance-insights/) ahora detecta [parpadeos de texto invisible (FOIT) y parpadeos de texto sin estilos (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) como causas potenciales de desplazamientos de diseño.
 
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 Para ver las causas principales de un desplazamiento de diseño, haga clic en una captura de pantalla en la pista de **Desplazamientos de diseño**.
