@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-08-12
 updated: 2022-08-12
-description: "Soporte de repetición paso a paso y eventos Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more.
+description: "Soporte de repetición paso a paso y de eventos "mouse over" (hover) en el panel Recorder, LCP en el panel Performance Insights y más.
 "
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QCPLdRlFAqZuqPQG27yT.jpg'
 alt: ''
