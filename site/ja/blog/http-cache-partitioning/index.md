@@ -14,7 +14,7 @@ updated: '2020-10-24'
 
 Chrome では、キャッシュの仕組みがさまざまな方法で使用されています。HTTP キャッシュはその一例です。
 
-## How Chrome's HTTP Cache currently works
+## Chrome の HTTP キャッシュの現在の仕組み
 
 バージョン 85 の時点では、Chrome はネットワークから取得したリソースをキャッシュし、それぞれのリソース URL をキャッシュ キーとして使用します（キャッシュキーは、キャッシュされたリソースを識別するために使用されます）。
 
@@ -82,7 +82,7 @@ iframe が何度もネストされている場合はどうでしょうか？ユ�
 
 トップフレーム（`https://a.example`）とリソースを読み込むフレームそのもの（`https://c.example`）からキーが取得されるため、キャッシュヒットが発生します。
 
-## FAQs
+## よくある質問
 
 ### Chrome で既に有効になっていますか？どうすれば確認できますか？
 
@@ -95,7 +95,7 @@ iframe が何度もネストされている場合はどうでしょうか？ユ�
 5. `https://netlog-viewer.appspot.com/#import` に移動します。
 6. **Choose File** を押して、保存したログファイルを指定します。
 
-You will see the output of the log file.
+ログファイルの出力が表示されます。
 
 On the same page, find `SplitCacheByNetworkIsolationKey`. If it is followed by `Experiment_[****]`, HTTP Cache partitioning is enabled on your Chrome. If it is followed by `Control_[****]` or `Default_[****]`, it is not enabled.
 
