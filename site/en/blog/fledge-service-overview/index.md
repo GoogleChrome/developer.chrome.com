@@ -25,12 +25,6 @@ previous mobile app or web engagement, in ways that limit third-party data
 sharing. FLEDGE services provide real-time information to advertisers and
 adtechs.
 
-Up until now, Chrome's FLEDGE API has allowed
-["Bring Your Own Servers"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)
-for the Key/Value service to provide adtechs real-time information. That's
-going to change, and platforms that use FLEDGE will eventually need to
-[deploy their Key/Value service in a trusted execution environment](#byos-to-tee).
-
 ## Who should read these updates? {: #who}
 
 *  If you work in **adtech**, **advertising**, or **ad mediation**, this
@@ -172,7 +166,7 @@ Adtech platforms who have implemented the BYOS model can consider migrating to
 a TEE-based Key/Value service implementation while FLEDGE is still in
 development. 
 
-## Timeline
+#### Timeline
 
 We aim to have an initial implementation of FLEDGE services by the end of 2022.
 
