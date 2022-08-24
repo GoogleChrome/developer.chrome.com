@@ -9,6 +9,8 @@ description: >
   this change, websites and services that rely on the User-Agent string for
   certain information may need to take action. This post gives some background on what's
   happening, why Chrome is making this change, and what you can do to prepare.
+hero: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/LSV0dVu9tz6GWlyQ2yKm.png'
+alt: "Timeline of User-Agent Reduction changes."
 authors:
   - jney
 date: 2022-08-24
