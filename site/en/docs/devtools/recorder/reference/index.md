@@ -139,18 +139,35 @@ You can edit any step in the recording by clicking the {% Img src="image/NJdAV9U
 
 You can also add missing steps and remove accidentally recorded ones as described below.
 
-### Add and remove steps {: #add-and-remove-steps }
+### Add steps {: #add-steps }
 
-To add a step:
+Sometimes, you may need to add steps manually. For example, the **Recorder** doesn't automatically capture `hover` events because this pollutes the recording and not all such events are useful. However, UI elements such as drop-down menus can appear only on `hover`. You can manually add `hover` steps to user flows that depend on such elements.
 
-1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="20", height="20" %} three-dot button next to any existing step.
+To manually add a step:
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vBETaaLND6v4PVtOvPzv.png", alt="Three-dot menu.", width="800", height="842" %}
+1. Open this [demo page](https://jec.fyi/demo/menu-hover) and start a new recording.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m1wPaIzCZFOpxF2kViEh.png", alt="Start a recording to capture a hover event.", width="800", height="570" %}
+1. Hover over the element in the viewport. An action menu pops up.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RP5HSO8LhXBIfWqDMw5Y.png", alt="Hovering over the element.", width="800", height="570" %}
+1. Pick an action from the menu and end the recording. The **Recorder** captures only the click event.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0SrnKHS6AnGzokWdkzMK.png", alt="Clicking an action and ending the recording.", width="800", height="632" %}
+1. Try to replay the recording by clicking {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %} **Replay**. The replay fails after a timeout because the **Recorder** can't access the element in the menu.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P05L4w4OWNAYNIPLCJsZ.png", alt="Replay fail.", width="800", height="595" %}
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot button next to the **Click** step and select **Add step before**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3hLZgQye5efWBcMcLQH6.png", alt="Adding a step before Click.", width="800", height="595" %}
+1. Expand the new step. By default, it has the `waitForElement` type. Click the value next to `type` and select `hover`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vPGY8RwmPZVt0j1sC4As.png", alt="Selecting hover.", width="800", height="730" %}
+1. Next, set an appropriate selector for the new step. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Select.", width="22", height="22" %} **Select**, then click an area on the `Hover over me!` element that's outside the pop-up menu. The selector is set to `#clickable`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X2E6JPm7A5qbJzaR2U58.png", alt="Setting the selector.", width="800", height="616" %}
+1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
-1. Select **Add step before** or **Add step after** from the drop-down menu.
-1. [Configure the new step](#configure-steps) by specifying its properties.
+### Remove steps {: #remove-steps }
 
-To remove a step, select **Remove** from the same three-dot menu.
+To remove an accidentally recorded step, select **Remove step** from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot menu next to the step.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOPYGEUDal764qxj8YBB.png", alt="Remove a step.", width="800", height="601" %}
+
 
 ### Configure steps {: #configure-steps }
 
