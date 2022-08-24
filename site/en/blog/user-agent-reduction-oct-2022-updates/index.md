@@ -17,12 +17,12 @@ tags:
 ---
 
 In October Chrome will take the next step in reducing the information
-available in the browser's User-Agent string, to improve privacy for users. With
+available in the browser's User-Agent (UA) string, to improve privacy for users. With
 this change, websites and services that rely on the User-Agent string for
 certain information may need to take action. Here's some background on what's
 happening, why Chrome is making this change, and what you can do to prepare.
 
-The User-Agent (UA) string includes information about the browser and the type
+The User-Agent string includes information about the browser and the type
 of device a person is using. The UA string has played an [instrumental
 role](https://www.rfc-editor.org/rfc/rfc1945#section-10.15) for websites that
 want to customize user experiences as well as for anti-fraud providers who rely
@@ -44,19 +44,21 @@ this plan in January 2020 and shared a
 in May 2021. This change aligns Chrome with other browsers in limiting
 information in the UA string.
 
-Chrome began removing parts of the UA string to improve privacy in late April,
-first by beginning with the [minor
+## Phased approach
+
+Chrome began removing parts of the UA string to improve privacy in late April, 
+beginning with the [minor
 version](https://chromestatus.com/feature/6311349754789888). This is what we've
 been calling the
 [UA Reduction](/docs/privacy-sandbox/user-agent/).
 
-As part of our newest phase, Chrome will begin reducing other information like
+As part of the latest phase, Chrome will begin reducing other information like
 the OS version and device platform in the UA string for browsers on desktop
 beginning in late October 2022. As is standard in our testing approach, we will
 do a phased rollout to Chrome users over time. The next phase will occur in
-February 2023 for Chrome browsers on mobile. The complete timeline is available
+February 2023 for Chrome browsers on mobile. The complete [timeline is available
 on
-[Chromium.org](https://www.chromium.org/updates/ua-reduction/#proposed-rollout-plan).
+Chromium.org](https://www.chromium.org/updates/ua-reduction/#proposed-rollout-plan).
 
 ## Feedback and testing
 
@@ -80,7 +82,7 @@ If you operate a website or service that might be using the User-Agent string,
 this is a great time to test. Chrome has extended the
 [User-Agent Reduction origin trial](/blog/user-agent-reduction-origin-trial/)
 to run until the end of the middle of October 2022 (M106) and local testing is
-also available via feature flags using chrome://flags/#reduce-user-agent.
+also available via feature flags using `chrome://flags/#reduce-user-agent`.
 
 If you need additional time to migrate to the UA-CH API, you can opt-in to the
 [User-Agent Reduction Deprecation origin trial](blog/user-agent-reduction-deprecation-trial/),
