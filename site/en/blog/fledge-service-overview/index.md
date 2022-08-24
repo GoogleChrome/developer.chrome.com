@@ -165,7 +165,8 @@ with additional capabilities beyond those already proposed. The APIs intend to
 allow custom scripts and adtech-defined code which can be run on TEEs.
 
 Chrome and Android will be open sourcing a Key/Value service so that adtech
-platforms can monitor development and potentially contribute to the codebase.
+platforms can monitor development and potentially contribute to the data
+plane’s codebase.
 
 Adtech platforms who have implemented the BYOS model can consider migrating to
 a TEE-based Key/Value service implementation while FLEDGE is still in
