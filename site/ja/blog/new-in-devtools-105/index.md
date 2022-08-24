@@ -16,7 +16,7 @@ tags:
 draft: true
 ---
 
-*翻訳者の [lacolaco](https://github.com/lacolaco) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [technohippy](https://github.com/technohippy) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
+*翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
 {% include 'partials/devtools/ja/banner.md' %}
 
@@ -29,70 +29,101 @@ draft: true
 
 
 <!-- ## Step-by-step replay in the Recorder {: #recorder } -->
+## Recorder パネルでのステップ・バイ・ステップ再生 {: #recorder }
 
 <!-- You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel. -->
+**Recorder** パネルでブレークポイントを設定して、ステップ・バイ・ステップでユーザーフローを再生できるようになりました。
 
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
+ブレークポイントを設定するには、ステップの横にある青い点をクリックします。ユーザーフローを再生すると、そのステップを実行する寸前で再生が一時停止します。そこから、再生の継続や、ステップ実行、再生のキャンセルが可能です。
 
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
+この機能を用いれば、ユーザーフローを完全に可視化して簡単にデバッグできます。
 
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
+更に詳細な情報は [Recorder 機能リファレンス](/docs/devtools/recorder/reference/) を参照してください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Step-by-step replay in the Recorder", width="800", height="547" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Recorder パネルでのステップ・バイ・ステップ再生", width="800", height="547" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
+## Recorder パネルでのマウスオーバーイベントのサポート {: #recorder-hover }
 
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
+**Recorder** パネルがレコーディング中の手動でのマウスオーバー（ホバー）ステップの追加をサポートするようになりました。
 
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[このデモ](https://jec.fyi/demo/menu-hover)はホバーするとポップアップメニューを表示します。ユーザーフローを記録しながらメニューアイテムをクリックしてみてください。
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
+ここでユーザーフローを再生しようとすると、**Recorder** は記録中にマウスオーバーイベントを自動でキャプチャしないので失敗します。この問題を解決するには、メニューアイテムをクリックする前にそのセレクタのホバーオーバーのための[ステップを手動で追加](/docs/devtools/recorder/reference/#add-and-remove-steps)してください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
+
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}-->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Recorder パネルでのマウスオーバーイベントのサポート", width="800", height="488" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
+## Performance insight パネルに Largest Contentful Paint (LCP) を追加 {: #lcp }
 
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
+LCP は[認識される読み込み速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)を測定する重要なユーザー中心メトリクスです。これからはクリティカルパスと [Largest Contentful Paint (LCP)](https://web.dev/lcp/) の主な要因を見つけることができるようになりました。
 
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
+[performance recording](/docs/devtools/performance-insights/#record)で、**Timeline** にある LCP バッジをクリックしてください。**Details** ペインで、LCP スコアを見て、LCP を遅滞させているリソースをどのように修正すればいいかを学び、LCP リソースのクリティカルパスを確認できます。
 
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
+パネルで実行可能なアドバイスを確認してウェブサイトのパフォーマンスを向上させる方法を学ぶには、[Performance Insights](/docs/devtools/performance-insights/) を参照してください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="Performance insight パネルの LCP", width="800", height="751" %}
 
 Chromium issue: [1326481](https://crbug.com/1326481)
 
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
+## レイアウトシフトの潜在的な主要因としてテキストのフラッシュ（FOIT、FOUT）を識別 {: #foit-fout }
 
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
+**Performance insights** パネルはレイアウトシフトの潜在的な主要因として [flash of invisible text (FOIT) と flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) を検出できるようになりました。
 
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
+レイアウトシフトの潜在的な主要因を確認するには、**Layout shifts** トラックのスクリーンショットをクリックしてください。
 
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
+レイアウトシフトを避けるテクニックについて学ぶには [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) を参照してください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="Performance insights パネルの FOUT", width="800", height="497" %}
 
 Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
 
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
+## Manifest ペインの Protocol ハンドラ {: #manifest }
 
 <!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
+DevTools を使用して [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/) のための [URL protocol handler registration](https://web.dev/url-protocol-handler/) をテストできるようになりました。
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
+URL protocol handler registration を使用すると
+特定のプロトコル（例、[`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme)、`web+example`）を使用する
+インストールされた PWA の handle links 
+より統一感のある体験
 
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
+**Application** > **Manifest** パネルから **Protocol Handlers** を開いてください。ここで利用可能なすべてのプロトコルを確認し、テストできます。
 
 <!-- For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.  -->
+例えば、[デモ PWA](https://protocol-handler.glitch.me/)をインストールしてください。**Protocol Handlers** セクションで、`"americano"` と入力し、**Test protocol** をクリックすると PWA 内でコーヒーのページが開きます。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Protocol handlers in the Manifest pane", width="800", height="402" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DuH2YwkYGPpYjnUKln8m.png", alt="Manifest ペインの Protocol ハンドラ", width="800", height="402" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cc2291cce5c5d199540334d01fcfe27207bc5962 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1aa36584d580ed5aa2caf7a8533f2c89b16ab66b #}
@@ -101,20 +132,28 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 
 <!-- ## Top layer badge in the Elements panel {: #top-layer } -->
+## Elements パネルの Top layer バッジ {: #top-layer }
 
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
+トップレイヤのコンセプトを理解して、トップレイヤ内容の変更をどのように可視化するかを理解するには [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) を使用してください。
 
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+[`<dialog>` 要素](https://web.dev/building-a-dialog-component/)は最近ブラウザ内で安定版になりました。ダイアログを開くと、それは [top layer](/blog/top-layer-devtools/) に配置されます。トップレベルコンテンツはその他すべてのコンテンツの上に描画されます。
 
 <!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
+この[デモ](https://jec.fyi/demo/dialog)で、**Open dialog** をクリックしてください。
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
+トップレイヤ要素の可視化を補助するために、DevTools は DOM ツリーにトップレイヤコンテナ（`#top-layer`）を追加します。
 
 <!-- To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element or its backdrop in the top layer container. -->
+トップレイヤコンテナ要素からトップレイヤツリー要素に割り込むには、トップレイヤコンテナ内の、要素の横にある **reveal** ボタンかその背景をクリックしてください。
 
 <!-- Next to the top layer tree element (for example, the dialog element), click the **top-layer** badge to jump to the top layer container. -->
+トップレイヤツリー要素（例えば、`dialog` 要素）の次の、トップレイヤコンテナに割り込むには **top-layer** バッジをクリックします。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="Top layer badge in the Elements panel", width="800", height="538" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="Top layer badge in the Elements panel", width="800", height="538" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pGMsiKw0IhplBMd4hZCv.png", alt="Elements パネルの Top layer バッジ", width="800", height="538" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a8d58fa6e258423aef2b00ead3aea563629eef43 #}
 
@@ -122,10 +161,13 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
+## 実行時に WASM のデバッグ情報をアタッチ {: #wasm }
 
 <!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+実行時に WASM に DWARF デバッグ情報をアタッチできるようになりました。これまでは、**Sources** パネルが JavaScript と WASM ファイルへのソースマップのアタッチをサポートしているだけでした。
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
+
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="ALT_TEXT_HERE", width="800", height="559" %}
 
