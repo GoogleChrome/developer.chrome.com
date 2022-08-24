@@ -162,13 +162,14 @@ Chrome and Android will be open sourcing a Key/Value service so that adtech
 platforms can monitor development and potentially contribute to the data
 plane’s codebase.
 
+#### Timeline
+
 Adtech platforms who have implemented the BYOS model can consider migrating to
 a TEE-based Key/Value service implementation while FLEDGE is still in
 development. 
 
-#### Timeline
-
-We aim to have an initial implementation of FLEDGE services by the end of 2022.
+We aim to have an initial TEE-based version of the Key/Value service available
+for experimentation by the end of 2022.
 
 Further, we're aiming to provide user-defined function API and other
 integrations for the Key/Value service by mid-2023. Once that is ready, adtechs
