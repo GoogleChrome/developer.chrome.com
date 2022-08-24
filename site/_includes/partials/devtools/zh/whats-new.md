@@ -13,7 +13,7 @@
 * [调试时支持实时编辑](/zh/blog/new-in-devtools-105/#live-edit)
 * [在样式窗格的规则中查看和编辑@scope](/zh/blog/new-in-devtools-105/#scope)
 * [Sourcemap 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
-* [其他亮点](/zh/blog/new-in-devtools-105/#misc)
+* [其他的更新](/zh/blog/new-in-devtools-105/#misc)
 
 
 ### Chrome 104 {: #chrome104 }
