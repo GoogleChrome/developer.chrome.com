@@ -767,7 +767,7 @@ twifkak:
     en: 'Devin Mullins'
   description:
     en: 'Software engineer at Google, signed exchanges integration lead in Search'
-jhey:
+jheyy:
   title:
     en: 'Jhey Tompkins'
     es: 'Jhey Tompkins'
@@ -895,6 +895,38 @@ barbsmith:
     en: Barb leads Chrome's Privacy Sandbox Partnerships team
 crystalwang:
   title:
-    en: 'Crystal Wang'
+    en: Crystal Wang
   description:
-    en: 'UX Designer at Google'
+    en: UX Designer at Google
+anusmitaray:
+  title:
+    en: Anusmita Ray
+  description:
+    en: Technical Writer, Google Chrome
+joelewis:
+  title:
+    en: Joseph Lewis
+  description:
+    en: Technical Writer, Android DevRel
+bramus:
+  title:
+    en: Bramus
+    es: Bramus
+    ja: Bramus
+    ko: Bramus
+    pt: Bramus
+    ru: Bramus
+    zh: Bramus
+  description:
+    en: Developer Advocate for CSS, UI, and DevTools at Chrome
+    es: Desarrollador partidario para CSS, UI y DevTools en Chrome
+    ja: Chrome の CSS、UI、DevTools を対象とした Developer Advocate
+    ko: Chrome의 CSS, UI 및 DevTools 개발자 애드버킷
+    pt: Developer Advocate para CSS, UI e DevTools no Chrome
+    ru: Developer Advocate по вопросам CSS, UI и DevTools в команде Chrome
+    zh: Chrome 的 CSS、UI 和 DevTools 开发技术推广工程师
+victorporof:
+  title:
+    en: Victor Porof
+  description:
+    en: Software Engineer working on Chrome DevTools at Google

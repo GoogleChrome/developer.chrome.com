@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2021-09-30
+updated: 2022-05-26
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -1193,6 +1193,7 @@ Code Readability Requirements:
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
 [docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-service-workers]: /docs/extensions/mv3/service_workers/
 [docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
 [lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content

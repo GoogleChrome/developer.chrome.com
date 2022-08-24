@@ -14,11 +14,11 @@ later.
 
 ## Homepage, search provider, and startup pages {: #others }
 
-Here is an example how [homepage][1], [search provider][2] and [startup pages][3] can be modified in
-the [extension manifest][4]. Web sites used in the settings API must be [verified][5] (via Webmaster
-Tools) as being associated with that item in the Chrome Web Store. Note that if you verify ownership
-for a domain (for example, https://example.com) you can use any subdomain or page (for example,
-https://app.example.com or https://example.com/page.html) within your extension.
+Here is an example how [homepage][1], [search provider][2] and [startup pages][3] can be modified 
+in the [extension manifest][4]. Any domain used in the settings API must be [verified][5] (via 
+Google Search Console) by the same developer account publishing the extension. Note that if you 
+verify ownership for a domain (for example, https://example.com) you can use any subdomain or page 
+(for example, https://app.example.com or https://example.com/page.html) within your extension.
 
 ```json
 {

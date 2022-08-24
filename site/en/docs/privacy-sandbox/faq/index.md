@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
-date: 2021-09-21
-updated: 2021-04-12
+date: 2021-04-12
+updated: 2022-07-27
 authors:
   - samdutton
 ---
@@ -45,7 +45,8 @@ The Privacy Sandbox is a set of proposed web standards.
 Chrome and other browser vendors, as well as ad companies and other
 stakeholders, have offered more than 30 proposals to date. These proposals can
 be found in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo) and cover a wide variety of use cases and requirements.
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
+and cover a wide variety of use cases and requirements.
 
 ### How can I keep track of changes and progress in the Privacy Sandbox?
 
@@ -287,7 +288,8 @@ have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
 attribute.
 
 At auction time, the browser communicates with the trusted server to
-fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
+fetch the values for those keys, and then makes those values available
+to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
 
 ### Can the Topics API be used with the FLEDGE API? 
@@ -464,7 +466,7 @@ that will allow new APIs to isolate themselves from their embedders. This
 prevents cross-site recognition.
 
 For ads use cases, see
-[Fenced frames for Ads Design Doc](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
+[Fenced frames for Ads design document](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
 
 ## Network State Partitioning
 
@@ -489,9 +491,8 @@ For ads use cases, see
 
 ### What is FedCM?
 
-FedCM (Federated Credential Management) is a proposal for a privacy-preserving approach to federated
+[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
+is a proposal for a privacy-preserving approach to federated
 identity services (such as "Sign in with&nbsp;...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
-
-FedCM is still [in incubation in the W3C](https://github.com/WICG/FedCM).

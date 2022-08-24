@@ -382,7 +382,7 @@ involved in the [standardization effort].
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
 [applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [feature support]: #feature-support
-[feature policy]: /feature-policy
+[feature policy]: /blog/feature-policy
 [video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
 [media session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
@@ -398,7 +398,7 @@ involved in the [standardization effort].
 [https://github.com/gbentaieb/pip-polyfill/]: https://github.com/gbentaieb/pip-polyfill/
 [standardization effort]: https://github.com/WICG/picture-in-picture/issues?utf8=%E2%9C%93&q=
 [jennifer apacible]: https://twitter.com/japacible
-[media session api]: /media-session
+[media session api]: https://web.dev/media-session
 [audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
 [new web api]: https://github.com/steimelchrome/document-pip-explainer/blob/main/explainer.md
 [mdn]: https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API#browser_compatibility
