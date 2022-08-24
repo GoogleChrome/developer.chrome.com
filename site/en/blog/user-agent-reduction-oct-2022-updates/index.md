@@ -24,6 +24,8 @@ this change, websites and services that rely on the User-Agent string for
 certain information may need to take action. Here's some background on what's
 happening, why Chrome is making this change, and what you can do to prepare.
 
+## Why is User-Agent string changing
+
 The User-Agent string includes information about the browser and the type
 of device a person is using. The UA string has played an [instrumental
 role](https://www.rfc-editor.org/rfc/rfc1945#section-10.15) for websites that
