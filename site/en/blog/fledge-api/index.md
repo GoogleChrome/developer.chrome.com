@@ -690,7 +690,7 @@ The `browserSignals` object has the following properties:
   bidCount: 17,
   prevWins: [[time1,ad1],[time2,ad2],...],
   wasmHelper: ... /* WebAssembly.Module object based on interest group's biddingWasmHelperUrl. */
-  dataVersion: 1, /* Data-Version value from the trusted bidding signals server's response(s). */
+  dataVersion: 1, /* Data-Version value from the buyer's Key/Value service response(s). */
 }
 ```
 
@@ -969,7 +969,7 @@ knows and which the seller's auction script might want to verify:
   renderUrl: 'https://cdn.example/render',
   adComponents: ['https://cdn.com/ad-component-1', ...],
   biddingDurationMsec: 12,
-  dataVersion: 1 /* Data-Version value from the Key/Value service response. */
+  dataVersion: 1 /* Data-Version value from the seller's Key/Value service response. */
 }
 ```
 
@@ -1207,7 +1207,7 @@ FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifica
    [Product-level](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) TURTLEDOVE
    modifications improved the anonymity model and personalization capabilities of the on-device auction
 -  [PARAKEET](https://github.com/WICG/privacy-preserving-ads/blob/main/Parakeet.md) is
-   Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy server turnning in a TEE
+   Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy server running in a TEE
    between the browser and the adtech providers, to anonymize ad requests and enforce privacy
    properties.  FLEDGE has not adopted this proxying model.  We are bringing the JavaScript APIs
    for PARAKEET and FLEDGE into alignment, in support of future work to further combine the best
