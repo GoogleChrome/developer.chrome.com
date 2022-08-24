@@ -820,5 +820,18 @@
     "country": "US",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/aS7reiLcBKY52w1HUU3m.jpeg",
     "github": "sanbeiji"
+  },
+  "bramus": {
+    "homepage": "https://www.bram.us/",
+    "twitter": "bramus",
+    "github": "bramus",
+    "country": "BE",
+    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg"
+  },
+  "victorporof": {
+    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/ltT5ZFZLzSdlecQmoxMK.jpg",
+    "github": "victorporof",
+    "twitter": "victorporof",
+    "country": "DE"
   }
 }
