@@ -8,7 +8,7 @@ hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/Hw1FzR5OI1KbQMQVzO3c.png'
 alt: 'Privacy Sandbox FLEDGE services overview.'
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
-date: 2022-08-22
+date: 2022-08-24
 tags:
   - privacy
   - proposal
