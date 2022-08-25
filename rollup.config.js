@@ -56,6 +56,7 @@ const productionConfig = {
     nodeResolve(),
     commonjs(),
     svg(),
+    json(),
     terser({
       format: {
         // Remove all comments, including @license comments,
