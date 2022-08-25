@@ -4,7 +4,7 @@ title: >
 description: >
   Use the shortcuts provided by the Console Utilities API to quickly refer to recent elements, query objects, monitor events and function calls, and more.
 layout: 'layouts/blog-post.njk'
-date: 2022-08-28
+date: 2022-08-25
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x53sMyWfj17FMN9LfPQC.png'

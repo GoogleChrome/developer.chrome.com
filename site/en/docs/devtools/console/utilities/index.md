@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-08-28
+updated: 2022-08-25
 description: "A reference of convenience functions available in the Chrome DevTools Console."
 ---
 
