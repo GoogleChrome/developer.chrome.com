@@ -77,6 +77,8 @@ look-ups and other advanced queries.
 By implementing a cloud service, adtechs can securely store data for their use
 and keep it up-to-date as the ad campaign progresses.
 
+The TEE-based [FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) has been [open sourced](/blog/open-sourcing-fledge-key-value-service/).
+
 ### Bidding and auction service proposal {: #bidding-auction-service }
 
 The initial proposal for FLEDGE proposes ad bidding and auction execution to happen on-device.
@@ -86,7 +88,7 @@ several calls over the network. Migrating these computations to the cloud can
 free up computational resources and network bandwidth for the device, and
 optimize overall ad rendering latency.
 
-With the [Bidding and auction service](https://github.com/privacysandbox/fledge-docs/blob/bidding_auction_services_api.md),
+With the [Bidding and auction service](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md),
 ad space buyers and sellers can offload the execution of ad bidding and
 auctions to services running in trusted execution environments in the cloud.
 
@@ -153,10 +155,11 @@ FLEDGE for Chrome currently allows a
 for the Key/Value service, which will need to be migrated to TEEs in the future.
 The BYOS model is not in scope for [Bidding and Auction services](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md).
 
-To ease the migration from the BYOS model, we're providing new [open source
-APIs, documentation, server implementation, and explainers](/blog/open-sourcing-fledge-key-value-service/)
-with additional capabilities beyond those already proposed. The APIs intend to
-allow custom scripts and adtech-defined code which can be run on TEEs.
+To ease the migration from the BYOS model, we're providing new [open source APIs,
+documentation, server implementation, and explainers](/blog/open-sourcing-fledge-key-value-service/)
+for the FLEDGE Key/Value service with additional capabilities beyond those
+already proposed. These APIs intend to allow custom scripts and
+custom code by adtechs, which can be run on TEEs.
 
 Chrome and Android will be open sourcing a Key/Value service so that adtech
 platforms can monitor development and potentially contribute to the data
@@ -164,12 +167,16 @@ plane’s codebase.
 
 #### Timeline
 
-Adtech platforms who have implemented the BYOS model can consider migrating to
-a TEE-based Key/Value service implementation while FLEDGE is still in
-development. 
+Adtech platforms who have implemented the BYOS model can consider migrating
+to a TEE-based Key/Value service implementation while FLEDGE is still in development.
 
-We aim to have an initial TEE-based version of the Key/Value service available
-for experimentation by the end of 2022.
+In the long-term, adtechs will need to use the open source FLEDGE
+Key/Value services running in trusted execution environments (TEEs)
+for retrieving real-time data. To ensure that the ecosystem has sufficient
+time to test, we don’t expect to require the use of the open-source
+Key/Value services or TEEs until sometime after third-party cookie
+deprecation. We will provide substantial notice for developers to begin
+testing and adoption before this transition takes place.
 
 Further, we're aiming to provide user-defined function API and other
 integrations for the Key/Value service by mid-2023. Once that is ready, adtechs
