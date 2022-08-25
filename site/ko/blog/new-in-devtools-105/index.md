@@ -6,7 +6,7 @@ authors:
 date: 2022-08-12
 updated: 2022-08-12
 description: "Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more."
-description: "단계별 재생 기능 및 Recorder에서 마우스오버 이벤트 제공, Performance insights 패널 내의 LCP 및 그 외."
+description: "Recorder에서의 단계별 재생 기능 및 마우스오버 이벤트 제공, Performance insights 패널 내의 LCP 및 그 외의 업데이트들"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oc4swlP62b8h9zBnfHpa.jpg'
 alt: ''
 tags:
@@ -35,7 +35,7 @@ tags:
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
 브레이크포인트를 설정하기 위해, 각 단계 옆에 있는 파란색 점을 클릭합니다. 여러분의 유저 플로우가 재생되며, 각 단계를 실행하기 전에 재생이 잠시 정지되며, 이 때 여려분은 재생을 계속하거나, 각 단계를 실행하거나, 혹은 재생을 취소할 수 있습니다.
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
-이 기능은 여러분들로 하여금 여러분의 유저 플로우를 보다 쉽게 시각화할 수 있으며, 디버깅을 보다 용이하게 할 수 있습니다.
+이 기능은 유저 플로우를 보다 쉽게 시각화할 수 있고, 디버깅을 용이하게 할 수 있습니다.
 <!-- See [Recorder features reference](/docs/devtools/recorder/reference/) for more information. -->
 자세한 설명은 [Recorder features reference](/docs/devtools/recorder/reference/) 를 참고하세요.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5RqFNkPTbtEXSC4KovNF.png", alt="Recorder의 단계별 재생 기능", width="800", height="547" %}
@@ -59,7 +59,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insights 패널의 Largest Contentful Paint (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP 는 [인지 로딩 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
+LCP 는 [인지 로 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
 여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 [performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 배지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
@@ -72,9 +72,9 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
-## 레이아웃 변경에 대한 잠재적인 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별
+## 레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-이제 **Performance insights** 패널에서, 레이아웃 변경에 대한 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/preload-optional-fonts/#font-rendering)을 감지할 수 있습니다.
+이제 **Performance insights** 패널에서, 레이아웃 변경의 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/preload-optional-fonts/#font-rendering)을 감지할 수 있습니다.
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 레이아웃 변경의 잠재적 근본 원인을 찾아보기 위해서, **Layout shifts** 트랙 내의 스크린샷을 클릭하세요.
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
@@ -90,7 +90,7 @@ Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 이제 여러분은 DevTools를 이용하여 [프로그레시브 웹 앱(PWA)](https://web.dev/learn/pwa/)에 대한 [URL 프로토콜 핸들러 등록](https://web.dev/url-protocol-handler/)을 테스트할 수 있습니다.
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
-URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 웹 앱)이 특정한 프로토콜 (예: [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) 를 핸들링하도록 할 수 있으며, 이는 더욱 통합된 경험을 위해서입니다.
+URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 웹 앱)이 특정한 프로토콜 (예: [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) 핸들링하도록 할 수 있으며, 이는 더욱 통합된 경험을 위해서입니다.
 
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
 여러분은 **애플리케이션** > **매니페스트** 창을 통해 **프로토콜 핸들러** 로 들어갈 수 있으며, 여기서 모든 이용가능한 프로토콜을 확인하고 테스트할 수 있습니다.
@@ -107,7 +107,7 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 
 
 <!-- ## Top layer badge in the Elements panel {: #top-layer } -->
-## 요소 패널의 Top layer 배지 {: #top-layer }
+## 요소 패널의 Top layer badge {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
 
@@ -155,7 +155,7 @@ Chromium issue: [1341255](https://crbug.com/1341255)
 <!-- In Chrome 104, DevTools brings back the [restart frame](/blog/new-in-devtools-104/) feature. However, you weren't able to edit the function you are currently paused in. It is common for developers to break in a function and then edit that function while paused.  -->
 Chrome 104 에서, DevTools는 [restart frame](/blog/new-in-devtools-104/) 기능을 부활시켰습니다. 그러나 여러분은 현재 일시정지된 함수를 편집할 수 없었습니다. 한편, 개발자가 함수를 중단한 다음 일시 중지된 동안 해당 기능을 편집하는 것이 일반적입니다.
 <!-- With this update, the debugger automatically restarts the function with the following restrictions: -->
-이번 업데이트에서, 디버거가 자동적으로 다음의 제한 사항과 함께 함수를 재시작합니다.
+이번 업데이트에서, 다음과 같은 제한 조건에서 디버거가 자동적으로 함수를 재시작합니다.
 <!-- - Only the top-most function can be edited while paused -->
 - 일시중지된 상태에서 최상위 함수만 편집할 수 있습니다.
 <!-- - No recursive call on the same function further down the stack -->
@@ -208,7 +208,7 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 <!-- These are some noteworthy fixes in this release: -->
 이번 릴리스에는 몇몇 주목할 만한 수정사항이 포함되어 있습니다.
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
-- 로컬 스토리지의 키-밸류 쌍이 삭제되었을 때, **애플리케이션** > **로컬 스토리지** 창의 테이블로부터 적절하게 제거합니다.([1339280](https://crbug.com/1339280))
+- 로컬 스토리지의 키- 쌍이 삭제되었을 때, **애플리케이션** > **로컬 스토리지** 창의 테이블로부터 적절하게 제거합니다.([1339280](https://crbug.com/1339280))
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
 - **소스** 패널에서 CSS파일을 볼 때, 색상 미리보기가 현재 바르게 표시됩니다. ([1340062](https://crbug.com/1340062))
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
