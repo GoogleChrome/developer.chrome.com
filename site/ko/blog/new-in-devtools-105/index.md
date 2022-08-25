@@ -109,7 +109,7 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- ## Top layer badge in the Elements panel {: #top-layer } -->
 ## 요소 패널의 Top layer badge {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
-[top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
+[Top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
 
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 [`<dialog>` 요소](https://web.dev/building-a-dialog-component/) 가 최근에 웹 브라우저들에 대해 안정화되었습니다. 여러분이 다이얼로그를 열 때, 이는 [top layer](/blog/top-layer-devtools/)에 위치하게 됩니다. 최상위 레벨 컨텐츠는 기타 다른 컨텐츠 위에 렌더링됩니다.
