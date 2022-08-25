@@ -47,8 +47,7 @@ Create a file called `manifest.json` and include the following code.
     "32": "images/icon-32.png",
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
-  },
-  ...
+  }
 }
 ```
 
@@ -60,9 +59,9 @@ Create an `images` folder and place the icons inside. You can download the icons
 
 ### Step 2: Initialize the extension {: #step-2 }
 
-Extensions monitor browser events using the [extension service worker][doc-sw]. Service workers have
-a special JavaScript environment; they load to handle events, and the browser terminates a service
-worker when it's no longer needed.
+Extensions can monitor browser events in the background using the [extension's service
+worker][doc-sw]. Service workers are special JavaScript environments that are loaded to handle
+events and terminated when they're no longer needed.
 
 Start by adding the following code to register the service worker in the manifest:
 
@@ -78,7 +77,7 @@ Start by adding the following code to register the service worker in the manifes
 }
 ```
 
-The first event the service worker will listen for is
+The first event our service worker will listen for is
 [`runtime.onInstalled()`][runtime-oninstalled]. This method allows the extension to set an initial
 state or complete some tasks on installation. Since this example will only handle two states (ON and
 OFF), it will track each tab's state through the _extension badge_.
@@ -100,7 +99,6 @@ chrome.runtime.onInstalled.addListener(() => {
     text: "OFF",
   });
 });
-...
 ```
 
 {% Details %}
@@ -273,7 +271,7 @@ Yes! You can use [`scripting.executeScript()`][api-scripting-es] to inject JavaS
 ### _Optional: Assign a keyboard shortcut_ {: #step-6 }
 
 Just for fun, let's add a shortcut to make it easier to enable or disable focus mode. Add the
-`“commands”` key to the manifest.
+`"commands"` key to the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -291,7 +289,7 @@ Just for fun, let's add a shortcut to make it easier to enable or disable focus 
 }
 ```
 
-The `“_execute_action”` key runs the same code as the `action.onClicked()` event, so no additional
+The `"_execute_action"` key runs the same code as the `action.onClicked()` event, so no additional
 code is needed!
 
 ## Test that it works {: #try-out }
@@ -299,7 +297,7 @@ code is needed!
 Verify that the file structure of your project looks like the following: 
 
 ```text
-Focus mode/
+focus-mode/
 ├── manifest.json
 ├── background.js
 ├── focus-mode.css
