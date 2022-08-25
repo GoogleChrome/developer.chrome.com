@@ -142,9 +142,7 @@ window.addEventListener(
    */
   e => {
     if (e.persisted) {
-      ga(
-        'set', dimensions.NAVIGATION_TYPE, 'back-forward-cache'
-      );
+      ga('set', dimensions.NAVIGATION_TYPE, 'back-forward-cache');
       ga('send', 'pageview');
     }
   }
