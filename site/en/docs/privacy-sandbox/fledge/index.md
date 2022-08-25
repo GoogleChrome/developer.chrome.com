@@ -568,13 +568,13 @@ A reporting mechanism for losing bidders is [under discussion](https://github.co
 
 {% endDetailsSummary %}
 
-FLEDGE Key/Value service allows adtechs to query for realtime data when a bid is made by the buyer or when an ad is scored by the seller while preserving privacy. FLEDGE Key/Value service is one of the [FLEDGE services](/blog/fledge-service-overview/). 
+FLEDGE Key/Value service allows adtechs to query for realtime data when a bid is made by the buyer, and for sellers to score ads while preserving privacy. FLEDGE Key/Value service is one of the [FLEDGE services](/blog/fledge-service-overview/). 
 
-The Key/Value service is deployed to the adtech's own cloud infrastructure, and the service runs on a [trusted execution environment](#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allows adtechs to execute their own custom logic within the Key/Value service. 
+The Key/Value service is deployed to the adtech's own cloud infrastructure, and the service runs on a [trusted execution environment](#trusted-execution-environment). A request to a Key/Value service cannot result in event-level logging or have other side effects. The Key/Value service will also support [user-defined functions (UDFs)](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs) that allow adtechs to execute their own custom logic within the Key/Value service. 
 
 {: #key-value}
 
-When a buyer or seller makes a request to a FLEDGE Key/Value service, they specify the data they require from the server as a list of 'keys'. The Key/Value service responds with a value for each key.
+A buyer or seller provides a list of 'keys' to specify the data they require from a FLEDGE Key/Value service. The Key/Value service responds with a value for each key.
 
 The FLEDGE Key/Value service code is now available in a [Privacy Sandbox GitHub repository](https://github.com/privacysandbox/fledge-key-value-service). This service can be used by Chrome and Android developers. 
 

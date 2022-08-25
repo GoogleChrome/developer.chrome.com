@@ -789,7 +789,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or
 the publisher itself. The purpose of the auction is to select the most appropriate ad for a single
 available ad slot on the current page. The auction takes into account the interest groups the
-browser is a member of, along with data from ad-space buyers and the sellers from the [Key/Value services].
+browser is a member of, along with data from ad-space buyers and the sellers from the [Key/Value services](#keyvalue-service).
 
 The ad-space **seller** makes a request to the user's browser to begin an ad auction by calling
 `navigator.runAdAuction()`.
@@ -1198,7 +1198,7 @@ FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifica
 
 -   In [SPARROW](https://github.com/WICG/sparrow):
    [Criteo](https://www.admonsters.com/what-is-sparrow/) proposed the addition of a
-   ("Gatekeeper") service model running in a [trusted execution environment](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment).  FLEDGE includes a more limited use of TEEs, for real-time data lookup and aggregated reporting.
+   ("Gatekeeper") service model running in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment).  FLEDGE includes a more limited use of TEEs, for real-time data lookup and aggregated reporting.
 -  NextRoll's [TERN](https://github.com/WICG/turtledove/blob/main/TERN.md) and Magnite's
    [PARRROT](https://github.com/prebid/identity-gatekeeper/blob/master/proposals/PARRROT.md)
    proposals described the different roles that buyers and sellers had in the on-device auction.
