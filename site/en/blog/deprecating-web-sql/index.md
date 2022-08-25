@@ -229,6 +229,6 @@ this group is open to anyone, and anyone is allowed to post.
 ## Acknowledgements
 
 This article was reviewed by [Joe Medley](https://github.com/jpmedley) and
-[Ben Morss](https://github.com/morsssss). Hero image by
-[Jan Antonin Kolar](https://unsplash.com/@jankolar) on
+[Ben Morss](https://github.com/morsssss), and [Joshua Bell](https://github.com/inexorabletash). Hero
+image by [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
 [Unsplash](https://unsplash.com/photos/lRoX0shwjUQ).
