@@ -3,14 +3,14 @@ layout: 'layouts/blog-post.njk'
 title: Deprecating and removing Web SQL
 description: >
   Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented
-  it and WebKit deprecated it in 2019. Web SQL was removed for third-party contexts in Chromium 97.
-  Now Chromium 105 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
+  it and WebKit removed it in 2019. Web SQL was removed for third-party contexts in Chromium 97. Now
+  Chromium 105 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
   panel when the feature is used. Complete removal in insecure contexts and eventually all contexts
   is planned for later Chromium releases.
 authors:
   - thomassteiner
-date: 2022-08-12
-# updated: 2022-08-04
+date: 2022-08-25
+# updated: 2022-08-25
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -19,13 +19,14 @@ tags:
   - storage
 ---
 
-The [Web SQL Database](https://www.w3.org/TR/webdatabase/) proposal was
+The [Web SQL Database API](https://www.w3.org/TR/webdatabase/), which allows you to store data in a
+structured manner on the user's computer internally based on the SQLite database engine, was
 [introduced in April 2009](https://www.w3.org/TR/2009/WD-webdatabase-20091222/) and
 [abandoned in November 2010](https://www.w3.org/TR/webdatabase/#status-of-this-document). While it
 was implemented in WebKit (which powers Safari and early versions of Chrome) and remained active in
 the Blink engine (that powers Chrome after the switch from WebKit), Gecko (which powers Firefox)
 never implemented this feature and
-[WebKit deprecated it in 2019](https://lists.webkit.org/pipermail/webkit-dev/2019-November/030968.html).
+[WebKit removed it in 2019](https://lists.webkit.org/pipermail/webkit-dev/2019-November/030968.html).
 The World Wide Web Consortium (W3C)
 [encourages](https://www.w3.org/TR/webdatabase/#:~:text=The%20Web%20Applications%20Working%20Group%20continues%20work%20on%20two%20other%20storage%2Drelated%20specifications%3A%20Web%20Storage%20and%20Indexed%20Database%20API.)
 those needing web databases to adopt
@@ -34,10 +35,13 @@ those needing web databases to adopt
 [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), or
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
-{% Aside %} Our intention is to empower developers to create their own solutions for
-structured storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html)
-team to create a SQLite implementation over WebAssembly. This solution will replace Web SQL.
-{% endAside %}
+These technologies show their strenghts when it comes to key/value stores and structured data, but
+acknowledgely also have weaknesses like the lack of a strong query language. People want SQL on the
+web for a reason.
+
+{% Aside %} Our intention is to empower developers to create their own solutions for structured
+storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html) team to
+create a SQLite implementation over WebAssembly. This solution will replace Web SQL. {% endAside %}
 
 ## Web SQL deprecation steps
 
@@ -63,12 +67,12 @@ As pointed out in the introduction,
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB) standard are
 good alternatives in many cases.
 
-We're also working on a replacement for Web SQL based on SQLite implemented in WebAssembly (Wasm),
-which will be released in the near future. For developers looking for a drop-in replacement, we're
-investigating if a shim script can be provided. The article will be updated once the replacement is
-ready.
+We're also working with the SQLite community on a replacement for Web SQL based on SQLite
+implemented in WebAssembly (Wasm), which will be released in the near future. For developers looking
+for a drop-in replacement, we're investigating if a shim script can be provided. The article will be
+updated once the replacement is ready.
 
-### Rationale for leaving storage to the client-side
+### Rationale for leaving storage to web developers
 
 With the advent of Wasm, SQL or NoSQL solutions can come to the web. One example is
 [DuckDB-Wasm](https://duckdb.org/2021/10/29/duckdb-wasm.html), another is
@@ -77,7 +81,8 @@ iterate on and create new storage solutions faster than browser vendors.
 
 We're not planning to just remove Web SQL. In fact, we're planning to replace it with something that
 will be maintained by the open-source community, served as a package that can be updated at
-will—without the burden of introducing fixes and new features into browsers.
+will—without the burden of introducing fixes and new features into browsers. Our objective really is
+to let developers bring their own database to the web.
 
 What's more, we're hoping that this example will help a new ecosystem of open-source databases to
 flourish! The release of
@@ -88,12 +93,13 @@ finally provides the new primitive on which custom storage solutions can be buil
 
 ### Sustainability and security concerns
 
-The Web SQL specification cannot be implemented sustainably. The last version of the standard
-literally [states](https://www.w3.org/TR/webdatabase/#web-sql) _"User agents must implement the SQL
-dialect supported by Sqlite 3.6.19"_. SQLite was not initially designed to run malicious SQL
-statements, yet implementing Web SQL means browsers have to do exactly this. The need to keep up
-with security and stability fixes dictates updating SQLite in Chromium. This comes in direct
-conflict with Web SQL's requirement of behaving exactly as SQLite 3.6.19.
+The Web SQL specification cannot be implemented sustainably, which limits innovation and new
+functionality. The last version of the standard literally
+[states](https://www.w3.org/TR/webdatabase/#web-sql) _"User agents must implement the SQL dialect
+supported by Sqlite 3.6.19"_. SQLite was not initially designed to run malicious SQL statements, yet
+implementing Web SQL means browsers have to do exactly this. The need to keep up with security and
+stability fixes dictates updating SQLite in Chromium. This comes in direct conflict with Web SQL's
+requirement of behaving exactly as SQLite 3.6.19.
 
 ### API shape
 
