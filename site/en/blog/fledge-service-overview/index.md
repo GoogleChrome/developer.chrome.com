@@ -86,7 +86,7 @@ several calls over the network. Migrating these computations to the cloud can
 free up computational resources and network bandwidth for the device, and
 optimize overall ad rendering latency.
 
-With the [Bidding and auction service](https://github.com/privacysandbox/fledge-docs/blob/bidding_auction_services_api.md),
+With the [Bidding and auction service](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md),
 ad space buyers and sellers can offload the execution of ad bidding and
 auctions to services running in trusted execution environments in the cloud.
 
