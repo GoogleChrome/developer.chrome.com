@@ -140,12 +140,16 @@ window.addEventListener(
   /**
    * @param {PageTransitionEvent} e
    */
-  (e) => {
+  e => {
     if (e.persisted) {
-      ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', 'back-forward-cache');
+      ga(
+        'set',
+        '{{ analytics.dimensions.NAVIGATION_TYPE }}',
+        'back-forward-cache'
+      );
       ga('send', 'pageview');
     }
-  },
+  }
 );
 
 onCLS(sendToGoogleAnalytics);
