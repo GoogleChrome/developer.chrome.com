@@ -77,7 +77,7 @@ look-ups and other advanced queries.
 By implementing a cloud service, adtechs can securely store data for their use
 and keep it up-to-date as the ad campaign progresses.
 
-The [FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) that is TEE-based has been [open sourced](/blog/open-sourcing-fledge-key-value-service/), and the source code can be found in the [Privacy Sandbox Github Repository](https://github.com/privacysandbox/fledge-key-value-service).
+The TEE-based [FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) has been [open sourced](/blog/open-sourcing-fledge-key-value-service/).
 
 ### Bidding and auction service proposal {: #bidding-auction-service }
 
