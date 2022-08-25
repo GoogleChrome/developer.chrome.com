@@ -13,7 +13,7 @@ hero: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/LSV0dVu9tz6GWlyQ2yKm.png'
 alt: "Timeline of User-Agent Reduction changes."
 authors:
   - jney
-date: 2022-08-24
+date: 2022-08-25
 tags:
   - privacy
 ---
