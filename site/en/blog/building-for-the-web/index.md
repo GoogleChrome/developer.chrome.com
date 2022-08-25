@@ -201,12 +201,11 @@ applications [update automatically](https://www.electronjs.org/docs/latest/api/a
 the web, [Web Bundles](https://web.dev/web-bundles/) are the next best alternative in Chrome.) This
 list is not exhaustive, and Electron.js is mentioned as a representative framework out of many.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    There are undeniably a number of capabilities that are missing from the web. In many cases, they are "nice-to-have", but not necessarily required for a still great experience. Carefully assess if a capability can be seen as a progressive enhancement.
-  </p>
-</details>
+##### How big a challenge is this?
+
+There are undeniably a number of capabilities that are missing from the web. In many cases, they are "nice-to-have", but not necessarily required for a still great experience. Carefully assess if a capability can be seen as a progressive enhancement. For an example of this approach, check out the article
+[Progressively enhance your Progressive Web App](https://web.dev/progressively-enhance-your-pwa/).
+
 
 #### Discoverability in stores
 
@@ -224,12 +223,11 @@ into the App Store, depending on the outcome of the app review. Recently, Oculus
 Platforms that produces virtual reality headsets, has announced that PWAs would be accepted into
 the [Oculus Store](https://developer.oculus.com/pwa/).
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    If your users are on one of the platforms whose stores accept PWAs, you can publish your app to the stores in question. Remember linkability as one of the web's super powers. Your app is discoverable, advertisable, and linkable from the web, too. Investing in a memorable domain name can sometimes be even better for discoverability.
-  </p>
-</details>
+##### How big a challenge is this?
+
+If your users are on one of the platforms whose stores accept PWAs, you can publish your app to the stores in question. Remember linkability as one of the web's super powers. Your app is discoverable, advertisable, and linkable from the web, too. Investing in a memorable domain name can sometimes actually be better for discoverability. Even for app stores, people still rely most on recommendations from friends and
+family members to discover new apps according to
+[research done by Google](https://www.thinkwithgoogle.com/_qs/documents/331/how-users-discover-use-apps-google-research.pdf).
 
 #### Monetization of apps and in-app content
 
@@ -246,12 +244,10 @@ new
 [Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/)
 to integrate with Google Play Billing.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    When you profit from the convenience of app store billing or in-app purchases, at the same time you also leave a part of your benefits on the table as a commission. As a matter of fact, some apps that <em>are</em> published to app stores even ask their users to make the purchase off-store.
-  </p>
-</details>
+##### How big a challenge is this?
+
+When you profit from the convenience of app store billing or in-app purchases, at the same time you also leave a part of your benefits on the table as a commission. As a matter of fact, some apps that <em>are</em> published to app stores even ask their users to make the purchase off-store. One well-known example
+is [Netflix with their external subscriptions](https://9to5mac.com/2022/07/22/netflix-external-subscription-ios/).
 
 #### Hiring or retraining developers
 
@@ -263,12 +259,11 @@ the reputation of recruiters with IT professionals. Also, companies often alread
 and/or iOS developers that they cannot just retrain to become web developers. Creating a PWA
 requires a high level of specialization that not all web developers can offer.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    In the current economic situation, hiring <em>any</em> kind of developer is difficult. Hiring someone with web development skills is, in comparison to other web technology skills, still easier, which (in part) also explains the popularity of app frameworks such as React Native, Ionic, Flutter, and others that are based on web technologies.
-  </p>
-</details>
+##### How big a challenge is this?
+
+In the current economic situation, hiring <em>any</em> kind of developer is difficult. Hiring someone with web development skills is, in comparison to other platform-specific coding skills, still easier
+[according to StackOverflow surveys](https://insights.stackoverflow.com/survey/2021#most-popular-technologies-language-prof),
+which (in part) also explains the popularity of app frameworks such as React Native, Ionic, Flutter, and others that are based on web technologies.
 
 #### Existing apps legacy (and migrating the user base)
 
@@ -278,12 +273,9 @@ install statistics), is not easy. Apparently, starting from scratch, even when a
 existing website, appears very unattractive in comparison, but sometimes it does
 [happen](https://www.glossy.co/ecommerce/gone-fishin-patagonia-bids-farewell-to-mobile-app/).
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    Vanity is vanity, but once you have set up new, potentially more meaningful, tracking metrics than number of app installs such as <a href="https://web.dev/betty-crocker/#results">increase of indicators of purchase intent</a>, you can start tracking those instead.
-  </p>
-</details>
+##### How big a challenge is this?
+
+Vanity is vanity, but once you have set up new, potentially more meaningful, tracking metrics than number of app installs such as <a href="https://web.dev/betty-crocker/#results">increase of indicators of purchase intent</a>, you can start tracking those instead.
 
 #### Compatibility with relevant browsers
 
@@ -299,12 +291,11 @@ to enable individual sites to run successfully in Firefox. WebKit maintains a
 [quirks list](https://trac.webkit.org/browser/webkit/trunk/Source/WebCore/page/Quirks.cpp) and
 [hires WebKit Web Compatibility Analysts](https://jobs.apple.com/search?search=%22WebKit%20Web%20Compatibility%20Analyst%22&sort=relevance).
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    Compatibility is the top priority for web developers and browser vendors alike. With feature testing and progressive enhancement, impressive apps which behave well on all browsers can be built.
-  </p>
-</details>
+##### How big a challenge is this?
+
+Compatibility is the top priority for web developers and browser vendors alike. With feature testing and progressive enhancement, impressive apps which behave well on all browsers can be built.
+For an example of this approach, check out the article
+[Progressively enhance your Progressive Web App](https://web.dev/progressively-enhance-your-pwa/).
 
 #### Tools and framework support
 
@@ -315,12 +306,9 @@ in the same code base, understanding and implementing security measures, plus ou
 documentation for frameworks and libraries, and keeping up with the large number of new and existing
 tools or frameworks were all cited.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    The tooling and framework situation in the web development world is infamous for being confusing and hard to keep up with. In practice, though, companies would use one technology and tooling stack and stay true to it for many years. The world of tech Twitter is one thing, the reality in businesses, where the decades-old jQuery is still (and by a large amount) the <a href="https://almanac.httparchive.org/en/2021/javascript#libraries-and-frameworks">most popular framework</a>, is the other.
-  </p>
-</details>
+##### How big a challenge is this?
+
+The tooling and framework situation in the web development world is infamous for being confusing and hard to keep up with. In practice, though, companies would use one technology and tooling stack and stay true to it for many years. The world of tech Twitter is one thing, the reality in businesses, where the decades-old jQuery is still (and by a large amount) the <a href="https://almanac.httparchive.org/en/2021/javascript#libraries-and-frameworks">most popular framework</a>, is the other.
 
 #### Security (or rather, the theater of security with certificate pinning)
 
@@ -334,12 +322,9 @@ sniffed with browser DevTools. There are ways to
 [circumvent pinned certificates](https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/) on
 all platforms, so it is mostly the theater of security at this point.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    As outlined earlier, certificate pinning mostly just increases the effort an attacker has to put into sniffing your traffic and reverse-engineering the functioning of your app; but it doesn't make it impossible.
-  </p>
-</details>
+##### How big a challenge is this?
+
+As outlined [earlier](https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/), certificate pinning mostly just increases the effort an attacker has to put into sniffing your traffic and reverse-engineering the functioning of your app; but it doesn't make it impossible.
 
 #### Performance limitations
 
@@ -358,12 +343,10 @@ graphics-intensive games like [Quake](http://www.quakejs.com) (thanks to
 [WebGPU](https://gpuweb.github.io/gpuweb/) in the future), the boundaries are being pushed at a
 rapid rate.
 
-<details>
-  <summary>How big a challenge is this?</summary>
-  <p>
-    There are two types of performance problems: those where truly every frame counts, as in gaming or WebXR experiences, and those where apps feel "janky", or unreliable. For the latter, new APIs such as the <a href="/blog/shared-element-transitions-for-spas/">Shared Element Transition API</a> can help. For the former, WebGPU is probably the most promising API on the horizon. Very rarely, but admittedly sometimes, a device may just be too slow to render a certain experience, which clearly happens with native apps, too.
-  </p>
-</details>
+##### How big a challenge is this?
+
+There are two types of performance problems: those where truly every frame counts, as in gaming or WebXR experiences, and those where apps feel "janky", or unreliable. For the latter, new APIs such as the <a href="/blog/shared-element-transitions-for-spas/">Shared Element Transition API</a> can help. For the former, WebGPU is probably the most promising API on the horizon. Very rarely, but admittedly sometimes, a device may just be too slow to render a given experience, which clearly happens with native apps, too,
+where developers can specify [minimum required device capabilities](https://developer.apple.com/support/required-device-capabilities/).
 
 ### Why is Flutter so popular?
 
