@@ -174,7 +174,7 @@ The team worked with partners to validate the image directive's performance impa
 
 One of these partners was [Land's End](https://www.landsend.com/). It was expected that their site would be a good test case for results that real applications might see.
 
-[Lighthouse lab testing](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/) was performed on one of their routes before and after using the image directive. On desktop, their median LCP decreased from 12.0s to 3.0s, a 75% improvement in LCP. On mobile, the median LCP decreased from 20.2s to 12.0s (40.6% improvement). 
+[Lighthouse lab testing](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/) was performed on their QA environment before and after using the image directive. On desktop, their median LCP decreased from 12.0s to 3.0s, a 75% improvement in LCP. On mobile, the median LCP decreased from 20.2s to 12.0s (40.6% improvement). 
 
 {% Aside %}
 It's important to note that the lab testing above is only intended as a general demonstration of the potential of the directive. [Field data](https://web.dev/lab-and-field-data-differences/#field-data) is much preferred to validate performance impact. The Aurora team is currently working with a few production partners to attain this data, and the blog post will be updated as soon as it's available.
