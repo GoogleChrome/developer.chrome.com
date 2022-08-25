@@ -1,4 +1,11 @@
-import {onCLS, onFCP, onFID, onLCP, onTTFB, onINP} from 'web-vitals/attribution';
+import {
+  onCLS,
+  onFCP,
+  onFID,
+  onLCP,
+  onTTFB,
+  onINP,
+} from 'web-vitals/attribution';
 import {dimensions} from '../_data/analytics.json';
 
 // Events missing from DevSite include:
@@ -107,7 +114,7 @@ document.addEventListener(
   /**
    * @param {WMouseEvent} e
    */
-  (e) => {
+  e => {
     const clickableEl = e.target.closest('a[href], .gc-analytics-event');
     if (!clickableEl) {
       return;
@@ -119,7 +126,7 @@ document.addEventListener(
     }
 
     trackEvent(data);
-  },
+  }
 );
 
 /**
@@ -128,18 +135,18 @@ document.addEventListener(
  * to distinguish them from regular pageviews).
  * https://web.dev/bfcache/#how-bfcache-affects-analytics-and-performance-measurement
  */
-// window.addEventListener(
-//   'pageshow',
-//   /**
-//    * @param {PageTransitionEvent} e
-//    */
-//   (e) => {
-//     if (e.persisted) {
-//       ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', 'bfcache');
-//       ga('send', 'pageview');
-//     }
-//   },
-// );
+window.addEventListener(
+  'pageshow',
+  /**
+   * @param {PageTransitionEvent} e
+   */
+  (e) => {
+    if (e.persisted) {
+      ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', 'back-forward-cache');
+      ga('send', 'pageview');
+    }
+  },
+);
 
 onCLS(sendToGoogleAnalytics);
 onFCP(sendToGoogleAnalytics);
