@@ -86,7 +86,7 @@ If you don't see the export option after installing the extension, do the follow
 
 - The extension only work on web pages (e.g. The export option is not available for `chrome://` pages like `chrome://extensions`)
 - Always open a new browser tab after installing the extension. 
-- There is an [issue](https://crbug.com/1351416) in Chrome 104 and 105 which prevent the export option to show if you open the Recorder as the first DevTools panel. As a workaround, open other panel (e.g. Console) first before opening the Recorder panel. The [issue] is fixed in Chrome 106.
+- There is an [issue](https://crbug.com/1351416) in Chrome 104 and 105 which prevents the export option showing if you open the Recorder as the first DevTools panel. As a workaround, open another panel (for example, Console) first before opening the Recorder panel. The [issue] is fixed in Chrome 106.
 
 
 **Advance use case: Build an extension**
