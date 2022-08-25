@@ -164,12 +164,13 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 ## 実行時に WASM のデバッグ情報をアタッチ {: #wasm }
 
 <!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
-実行時に WASM に DWARF デバッグ情報をアタッチできるようになりました。これまでは、**Sources** パネルが JavaScript と WASM ファイルへのソースマップのアタッチをサポートしているだけでした。
+実行時に wasm に DWARF デバッグ情報をアタッチできるようになりました。これまでは、**Sources** パネルが JavaScript と Wasm ファイルへのソースマップのアタッチをサポートしているだけでした。
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
+**Sources** パネルで Wasm ファイルを開いてください。
+エディタ内で右クリックし、**Add DWARF debugging info…** を選択して、必要なときにデバッグ情報をアタッチできます。
 
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="ALT_TEXT_HERE", width="800", height="559" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="実行時に WASM のデバッグ情報をアタッチ", width="800", height="559" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/112d6ec238ea3b1cb12f1cabc5b988afc74022db  #}
 
@@ -177,17 +178,24 @@ Chromium issue: [1341255](https://crbug.com/1341255)
 
 
 <!-- ## Support live edit during debugging {: #live-edit } -->
+## デバッグ中のライブ編集をサポート {: #live-edit }
 
 <!-- You can now edit the top-most function on the stack without restarting the debugger. -->
+デバッガをリスタートすることなく、スタック上で最上位にある関数を編集できるようになりました。
 
 <!-- In Chrome 104, DevTools brings back the [restart frame](/blog/new-in-devtools-104/) feature. However, you weren't able to edit the function you are currently paused in. It is common for developers to break in a function and then edit that function while paused.  -->
+Chrome 104 の DevTools で [restart frame](/blog/new-in-devtools-104/) 機能が復活しましたが、そのとき停止している関数を編集することはできませんでした。関数を中断し、停止中にその関数を編集することは開発者にとって普通のことです。
 
 <!-- With this update, the debugger automatically restarts the function with the following restrictions: -->
+次のような制限がありますが、今回のアップデートでデバッガは自動的に関数を再起動します。
 
 <!-- - Only the top-most function can be edited while paused -->
 <!-- - No recursive call on the same function further down the stack -->
+- 一時停止中は最上位の関数だけが編集可能
+- スタックを深くする同一関数の再帰呼び出しは禁止
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="live edit during debugging", width="800", height="560" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="live edit during debugging", width="800", height="560" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="デバッグ中のライブ編集", width="800", height="560" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b41deeb8b0b228ea4628a49e79a7ce4d8ab32ffa #}
 
@@ -195,18 +203,24 @@ Chromium issue: [1334484](https://crbug.com/1334484)
 
 
 <!-- ## View and edit @scope at rules in the Styles pane {: #scope } -->
+## Styles ペインで @scope at-rule の閲覧と編集 {: #scope }
 
 <!-- You can now view and edit the [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) in the **Styles** pane.  -->
+**Styles** ペインで [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) の閲覧と編集が可能になりました。
 
 <!-- The `@scope` at rules is part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow developers to scope style rules in CSS. -->
+`@scope` at-rule は [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/) に含まれます。これらのルールを使用すると開発者が CSS 内でスタイルのルールのスコープを制限できます。
 
 <!-- Open [this demo page](https://codepen.io/miriamsuzanne/details/ZErXZVY) and inspect the hyperlink within the `<div class=”dark-theme”>` element. In the **Styles** pane, view the `@scope` at-rules. Click the rule declaration to edit it. -->
+[このデモページ](https://codepen.io/miriamsuzanne/details/ZErXZVY)を開き、`<div class=”dark-theme”>` 要素内のハイパーリンクをインスペクトしてください。**Styles** ペインで、`@scope` at-rule を確認できます。また、ルール宣言をクリックすると編集も可能です。
 
 {% Aside %}
 <!-- The CSS `@scope` is currently under development. To test this feature, enable the **Experimental Web Platform features** flag via `chrome://flags/#enable-experimental-web-platform-features`. -->
+CSS `@scope` は現在開発中です。この機能を確認するには、`chrome://flags/#enable-experimental-web-platform-features` から **Experimental Web Platform features** フラグを有効にしてください。
 {% endAside %}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="@scope at rules in the Styles pane", width="800", height="464" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="@scope at rules in the Styles pane", width="800", height="464" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="Styles ペインの @scope at-rule", width="800", height="464" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8b2309caa9ea358bc07d4d48eb976cc3dc6884cd #}
 
@@ -214,26 +228,50 @@ Chromium issue: [1337777](https://crbug.com/1337777)
 
 
 <!-- ## Sourcemap improvements {: #sourcemaps } -->
+## Sourcemap の改善 {: #sourcemaps }
 
 <!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+デバッグ体験全体を改善するためにソースマップにいくつかの修正が加えられました。
 
 <!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+- 句読点を含むソースマップの識別子を DevTools で適切に解決できるようになりました。いくつかのモダンなミニファイア（例、[esbuild](https://esbuild.github.io/)）は識別子を連続した句読点（カンマ、括弧、セミコロン）で結合したソースマップを生成します。
+
 <!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
+- DevTools は `super` 呼び出しを含むコンストラクタのソースマップ名を解決できます。？？？
+
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Sourcemap の改善", width="800", height="441" %}
+
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
+- 重複したカノニカル URL のソースマップでの URL インデクシングの修正。これまでは重複したカノニカル URL が原因でブレークポイントがいくつかのファイルで有効にならないことがありました。
 
 
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
+## その他のハイライト {: #misc }
  
 <!-- These are some noteworthy fixes in this release: -->
+今回のリリースの目立った改善点には次のようなものがあります。
 
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
+- **Application** > **Local Storage** ペインのテーブルからローカルストレージのキー値ペアを適切に削除できるようになりました。（[1339280](https://crbug.com/1339280)）
 <!-- - The color previews are now correctly displayed when viewing CSS files in the **Sources** panel. Previously, their positions were misplaced. ([1340062](https://crbug.com/1340062)) -->
+- **Sources** パネルで CSS ファイルを閲覧するときにカラープレビューが正しく表示されるようになりました。
+これまでは、間違った位置に表示されていました。（[1340062](https://crbug.com/1340062)）
 <!-- - Consistently display the CSS flex and grid items in the **Layout** pane, as well as display them as badges in the **Elements** panel. Previously, the flex and grid items were randomly missing in both places. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992)) -->
+- 
+**Layout** ペインで
+CSS の flex アイテムと grid アイテム
+が
+一貫性のある表示
+**Elements** パネルではバッジとして表示されるとともに
+これまでは、
+flex と grid アイテムはいずれの場所でもランダムに表示されないことがありました。
+（[1340441](https://crbug.com/1340441)、[1273992](https://crbug.com/1273992)）
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
+- DevTools が広告としてラベル付けされるフレームの原因となるスクリプトを見つけると、[ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) のために、**Creator Ad Script** リンクが新しく利用できるようになりました。**Application** > **Frames** からフレームを開くことができます。（[1217041](https://crbug.com/1217041)）
 
 {% include 'partials/devtools/ja/reach-out.md' %}
 {% include 'partials/devtools/ja/whats-new.md' %}
