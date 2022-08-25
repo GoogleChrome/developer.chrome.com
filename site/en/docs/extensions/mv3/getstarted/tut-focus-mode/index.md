@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Focus Mode'
-subhead: 'Change the aspect of the current page by clicking the extension toolbar icon.'
+subhead: 'Simplify the styling of the current page by clicking the extension toolbar icon.'
 description: 'Learn how to run code on the current active tab.'
 date: 2022-08-10
 # updated: 2022-06-13
@@ -9,7 +9,7 @@ date: 2022-08-10
 
 ## Overview {: #overview }
 
-This tutorial builds an extension that changes the aspect of the Chrome extension and
+This tutorial builds an extension that simplify the styling of the Chrome extension and
 Web store documentation pages so that they are easier to read.
 
 In this guide, we’re going to explain how to do the following:
@@ -71,7 +71,7 @@ Start by adding the following code to register the service worker in the manifes
 {
   ...
   "background": {
-      "service_worker": "background.js"
+    "service_worker": "background.js"
   },
   ...
 }
@@ -313,23 +313,32 @@ focus-mode/
 To load an unpacked extension in developer mode, follow the steps in [Development
 Basics][doc-dev-basics-unpacked].
 
-### Open an extension documentation page {: #open-sites }
+### Test the extension on a documentation page {: #open-sites }
 
-Go to any of the following pages:
+First, open any of the following pages:
 
 - [Welcome to the Chrome Extension documentation][doc-welcome]
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action or press the keyboard shortcut `Ctrl + U` or `Cmd + U`.
+Then, click on the extension action. If you setup a keyboard shortcut (link), you can test it by pressing `Ctrl + U` or `Cmd + U`.
 
-It should look like this:
+It should go from this:
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/6jSxXwVmjVv10NvwJ2Iu.png", 
-alt="Focus Mode extension in Welcome page", width="800", height="378", class="screenshot" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/q9DOiy5Y6m8eTp182PgP.png", alt="Focus Mode extension OFF", width="600", height="378", class="screenshot" %}
   <figcaption>
-  Extension Welcome page with the Focus Mode extension enabled
+  Focus Mode extension off
+  </figcaption>
+</figure>
+
+To this:
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e7y4UD1rjmk1yqiVmnoP.png", 
+alt="Focus Mode extension ON", width="600", height="378", class="screenshot" %}
+  <figcaption>
+  Focus Mode extension on
   </figcaption>
 </figure>
 
