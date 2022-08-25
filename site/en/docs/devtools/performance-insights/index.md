@@ -131,7 +131,7 @@ Hover over the insights on the **Timeline** to learn more about the metrics.
 
 ## Discover delays of the largest contentful paint {: #largest-contentful-paint }
 
-[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is one of the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) metrics that reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
+[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is one of the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) metrics. It reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
 
 {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/elqsdYqQEefWJbUM2qMO.svg", alt="LCP thresholds.", width="800", height="212" %}
 
