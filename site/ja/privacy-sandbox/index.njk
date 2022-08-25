@@ -1,0 +1,168 @@
+---
+layout: 'layouts/landing.njk'
+title: プライバシーサンドボックス
+description: プライバシーサンドボックスは、サードパーティの Cookie やその他の追跡メカニズムを使用せずにクロスサイトのユースケースを満たすことを目指す一連の提案です。
+sections:
+  intro:
+    - url: /docs/privacy-sandbox/overview
+    - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/proposal-lifecycle
+    - url: /docs/privacy-sandbox/status
+  intro_related:
+    - url: /docs/privacy-sandbox/faq
+    - url: /docs/privacy-sandbox/feedback
+  prevent_covert_tracking_useragent:
+    - url: /docs/privacy-sandbox/user-agent
+    - url: /docs/privacy-sandbox/user-agent/snippets
+  prevent_covert_tracking:
+    - url: /docs/privacy-sandbox/gnatcatcher
+    - url: /docs/privacy-sandbox/privacy-budget
+  show_relevant_content_topics:
+    - url: /docs/privacy-sandbox/topics
+    - url: /docs/privacy-sandbox/topics-experiment
+  show_relevant_content_fledge:
+    - url: /docs/privacy-sandbox/fledge
+    - url: /docs/privacy-sandbox/fledge-best-practices
+    - url: /docs/privacy-sandbox/fledge-experiment
+  measure_ads:
+    - url: /docs/privacy-sandbox/attribution-reporting
+    - url: /docs/privacy-sandbox/attribution-reporting/system-overview
+    - url: /docs/privacy-sandbox/attribution-reporting-experiment
+    - url: /docs/privacy-sandbox/attribution-reporting-updates
+  related_measurement:
+    - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
+    - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
+  strengthen_privacy_boundaries:
+    - url: /docs/privacy-sandbox/chips
+    - url: /docs/privacy-sandbox/permissions-policy
+    - url: /docs/privacy-sandbox/fedcm
+    - url: /docs/privacy-sandbox/first-party-sets
+    - url: /docs/privacy-sandbox/fenced-frame
+    - url: /docs/privacy-sandbox/shared-storage
+    - url: /docs/privacy-sandbox/use-shared-storage
+  fight_spam:
+    - url: /docs/privacy-sandbox/trust-tokens
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+
+{# landing-page-expanded has unique styles, added for Privacy Sandbox and expanded landing section. #}
+
+{{ heroCardWide(
+  "プライバシーサンドボックス",
+  "プライバシーサンドボックスは、サードパーティの Cookie やその他の追跡メカニズムを使用せずにクロスサイトのユースケースを満たすことを目指す一連の提案です。",
+  "ドキュメントを読む",
+  "/ja/docs/privacy-sandbox",
+  "",
+  "",
+  "",
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/i1wLexi7cwRpdfIkBYAX.svg"
+  ) }}
+
+{{ landingSectionExpanded(
+  "はじめに",
+  "",
+  sections.intro,
+  "blue",
+  "top-4",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "Graduation cap.",
+  200,
+  129,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "その他のドキュメント",
+  sections.intro_related
+  )
+}}
+
+{{ landingSectionUseCases(
+  "隠されたトラッキングを防ぐ",
+  "サードパーティーによるフィンガープリンティングやデータ収集を防ぐための提案です。",
+  "User-Agent の情報量削減",
+  sections.prevent_covert_tracking_useragent,
+  "",
+  "",
+  sections.prevent_covert_tracking,
+  "green",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg",
+  "Click icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "コンテンツを最適化する",
+  "情報へのアクセスを与えることでエンゲージメントの高いウェブを実現するための提案です。",
+  "Topics",
+  sections.show_relevant_content_topics,
+  "FLEDGE",
+  sections.show_relevant_content_fledge,
+  sections.show_relevant_content,
+  "blue",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
+  "People icon.",
+  284,
+  193,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg"
+  )
+}}
+
+{{ landingSectionExpanded(
+  "デジタル広告を計測する",
+  "正確で有益なデジタル広告の計測値を集めることで、適切な人々に適切なタイミングでメッセージを届けられるようにする提案です。",
+  sections.measure_ads,
+  "green",
+  "top-4",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/cT27jgN3G7aYl9ftM0lt.svg",
+  "Analytics icon.",
+  250,
+  124,
+  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg",
+  "その他のドキュメント",
+  sections.related_measurement
+  )
+}}
+
+{{ landingSection(
+  "プライバシーの境界線を強化する",
+  "クロスサイトのプライバシーを作り出し、強化してくれる提案です。これにより、ユーザーが明示的に許可しない限り、ひとつのサイトで集められた情報が、自動的に他のサイトに渡ることがなくなります。",
+  sections.strengthen_privacy_boundaries,
+  "yellow",
+  "top-3",
+  false,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg",
+  "Fence icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/tCE6xv0QdnKWNSEJQUbA.svg"
+  )
+}}
+
+{{ landingSection(
+  "スパムや詐欺に対抗する",
+  "不正なクリックやインプレッションを正当なものと区別できるようにする提案です。",
+  sections.fight_spam,
+  "yellow",
+  "top-3",
+  false,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg",
+  "Shield icon.",
+  250,
+  124,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/YSCPsUMCff5dlVbBCf7b.svg"
+  )
+}}
