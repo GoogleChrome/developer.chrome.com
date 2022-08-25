@@ -59,7 +59,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insights 패널의 Largest Contentful Paint (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP 는 [인지 로 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
+LCP 는 [인지 로드 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
 여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 [performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 배지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
