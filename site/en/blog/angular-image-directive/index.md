@@ -6,6 +6,7 @@ description:
 date: 2022-08-25
 authors:
   - karaerickson
+  - leenasohoni
 hero: 'image/IypihH3o5cSpEMVp5i08dp69otp2/ZKPh5cWm0KrZ9XYK7UDV.jpg'
 alt: >
   Two people looking at a website with images displayed.
