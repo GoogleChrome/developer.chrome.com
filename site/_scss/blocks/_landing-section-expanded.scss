@@ -8,7 +8,6 @@
   &--ordered {
     .use-case--ordered {
       counter-reset: section;
-      padding-bottom: 10px;
     }
 
     .use-case--unordered {
@@ -22,7 +21,7 @@
     .landing-section__links h3 {
       background: #fff;
       line-height: 2em;
-      padding-bottom: 6px;
+      padding: 6px 0;
     }
 
     &.landing-section--right,
