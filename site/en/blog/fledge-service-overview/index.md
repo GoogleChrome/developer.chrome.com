@@ -167,7 +167,16 @@ plane’s codebase.
 
 #### Timeline
 
-Adtech platforms who have implemented the BYOS model can consider migrating to a TEE-based Key/Value service implementation while FLEDGE is still in development. In the long-term, adtechs will need to use the open source FLEDGE Key/Value services running in trusted execution environments (TEEs) for retrieving real-time data. To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or TEEs until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
+Adtech platforms who have implemented the BYOS model can consider migrating
+to a TEE-based Key/Value service implementation while FLEDGE is still in development.
+
+In the long-term, adtechs will need to use the open source FLEDGE
+Key/Value services running in trusted execution environments (TEEs)
+for retrieving real-time data. To ensure that the ecosystem has sufficient
+time to test, we don’t expect to require the use of the open-source
+Key/Value services or TEEs until sometime after third-party cookie
+deprecation. We will provide substantial notice for developers to begin
+testing and adoption before this transition takes place.
 
 Further, we're aiming to provide user-defined function API and other
 integrations for the Key/Value service by mid-2023. Once that is ready, adtechs
