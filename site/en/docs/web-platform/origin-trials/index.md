@@ -5,12 +5,14 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-05-13
+updated: 2022-08-25
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid.
 tags:
   - origin-trials
 ---
+
+{% YouTube "v_gI8wcsPUA" %}
 
 Origin trials give you access to a new or experimental feature, to build
 functionality your users can try out for a limited time before the feature
