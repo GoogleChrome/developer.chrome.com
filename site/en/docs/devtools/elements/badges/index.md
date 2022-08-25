@@ -165,7 +165,7 @@ Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix
 
 ## Top layer
 
-This badge helps you understand the concept of the top layer and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/building-a-dialog-component/) using the [`.showModal()` method][3], the browser puts it into the top layer.
+This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/building-a-dialog-component/) using the [`.showModal()` method][3], the browser puts it into the top layer.
 
 To help you visualize top layer elements, the **Elements** panel adds a `#top-layer` container to the DOM tree after the closing `</html>` tag.
 
