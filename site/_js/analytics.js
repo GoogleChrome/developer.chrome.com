@@ -143,9 +143,7 @@ window.addEventListener(
   e => {
     if (e.persisted) {
       ga(
-        'set',
-        '{{ analytics.dimensions.NAVIGATION_TYPE }}',
-        'back-forward-cache'
+        'set', dimensions.NAVIGATION_TYPE, 'back-forward-cache'
       );
       ga('send', 'pageview');
     }
