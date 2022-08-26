@@ -13,6 +13,7 @@ alt: >
 tags:
   - performance
   - news
+  - aurora-project
 ---
 
 In May 2022, the [Aurora](https://web.dev/introducing-aurora/) and Angular teams announced that they would collaborate on an [image directive](https://angular.io/guide/roadmap#improve-image-performance) for Angular. The directive was recently released for developer preview as part of Angular v14.2. This post talks about how the new image directive, `NgOptimizedImage`, supports image optimization in Angular.
