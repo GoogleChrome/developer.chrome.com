@@ -36,7 +36,7 @@ const decompressedReadableStream = compressedReadableStream.pipeThrough(new Deco
 
 ## Browser support
 
-{% BrowserCompat 'api.CompressionStream' %}
+The Compression Streams API is supported since Chromium&nbsp;80 and Safari Technology Preview&nbsp;152.
 
 ## Acknowledgements
 
