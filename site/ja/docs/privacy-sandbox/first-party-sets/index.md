@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: First-Party Sets
-subhead: |2
-
-  同じ組織が所有、運用する関連するドメイン名が同じファーストパーティに属することを宣言できる。
-description: |2
-
-  First-Party Sets を使用すると、同じ組織が所有、運用する関連ドメイン名が、同じファーストパーティに属することを宣言できる。
+subhead: 同じ組織が所有、運用する関連するドメイン名が同じファーストパーティに属することを宣言できる。
+description: First-Party Sets を使用すると、同じ組織が所有、運用する関連ドメイン名が、同じファーストパーティに属することを宣言できる。
 date: 2021-05-18
 updated: 2022-08-04
 authors:
