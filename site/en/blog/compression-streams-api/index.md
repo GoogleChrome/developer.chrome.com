@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Compression and decompression in the browser with the Compression Streams API
 subhead: >
   Write smaller web apps that don't need to ship their owm compression or decompression library
