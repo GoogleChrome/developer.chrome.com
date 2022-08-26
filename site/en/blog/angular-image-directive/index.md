@@ -70,7 +70,7 @@ The highlights of the design are as follows:
 
 	The image directive acts on two fronts when images are marked as priority.
 
-    * It sets the `[fetchpriority](https://web.dev/priority-hints/#increase-the-priority-of-the-lcp-image)` of the image to `"high"` so that the browser knows that it should download the image with a high priority.
+    * It sets the [fetchpriority](https://web.dev/priority-hints/#increase-the-priority-of-the-lcp-image) of the image to `"high"` so that the browser knows that it should download the image with a high priority.
     * In development mode, a runtime check confirms that a `preconnect` resource hint has been included corresponding to the image's origin.
 
     In development mode, the directive also uses the [PerformanceObserver API](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) to verify that the [LCP image](https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/element) has been marked `priority` as expected. If it's not marked `priority`, an error is thrown, instructing the developer to add the `priority` attribute to the LCP image.
@@ -88,22 +88,20 @@ The highlights of the design are as follows:
 
 
     ``` html
-        // in module providers:
-        provideImgixLoader('https://mysite.net/assets/')
+    // in module providers:
+    provideImgixLoader('https://mysite.net/assets/')
 
-        // in markup
-        <img rawSrc="image.png" >
-        <img rawSrc="image2.png" >
+    // in markup
+    <img rawSrc="image.png" >
+    <img rawSrc="image2.png" >
     ```
-
-
 
     This is equivalent to including the following image tags and reduces the markup developers must include for every image.
 
 
     ``` html
-        <img src="https://mysite.net/assets/image.png">
-        <img src="https://mysite.net/assets/image2.png">
+    <img src="https://mysite.net/assets/image.png">
+    <img src="https://mysite.net/assets/image2.png">
     ```
 
     The image directive provides built-in loaders with optimal configuration for the most popular image CDNs. These loaders will format image URLs automatically to ensure that the recommended image format and compression settings are used for each CDN.  
