@@ -28,7 +28,7 @@ The Aurora team believes in leveraging the power of frameworks to provide baked-
 
 The first set of results from Next.js user [Leboncoin](https://medium.com/leboncoin-engineering-blog/how-we-are-improving-our-web-performance-9f850d59d810) was encouraging. Leboncoin saw a significant LCP improvement (from 2.4s to 1.7s) after they started using `next/image`. The subsequent adoption of next/image in the community played a role in the increase of Next.js origins meeting LCP thresholds. Soon there were [requests](https://github.com/angular/angular/issues/42765) for similar features in other frameworks, one of them being [Angular](https://angular.io/).  
 
-As a result, Aurora consulted with [Angular](https://github.com/NG-ZORRO/ng-zorro-antd/issues/6514.) and [Nuxt](https://nuxtjs.org/) to prototype image components for these frameworks. The [Nuxt image component](https://image.nuxtjs.org/) was released last year. Now the Angular image directive (`NgOptimizedImage`) has been released to h bring image optimization defaults to Angular. 
+As a result, Aurora consulted with [Angular](https://github.com/NG-ZORRO/ng-zorro-antd/issues/6514) and [Nuxt](https://nuxtjs.org/) to prototype image components for these frameworks. The [Nuxt image component](https://image.nuxtjs.org/) was released last year. Now the Angular image directive (`NgOptimizedImage`) has been released to h bring image optimization defaults to Angular. 
 
 
 ## Opportunity
