@@ -31,7 +31,7 @@ const decompressedReadableStream = compressedReadableStream.pipeThrough(new Deco
 
 ## Demo
 
-{% Glitch 'compressionstream-demo' %}
+{% Glitch { id: 'compressionstream-demo' } %}
 
 ## Browser support
 
