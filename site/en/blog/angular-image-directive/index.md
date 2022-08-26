@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Optimizing Images with the Angular Image Directive
 description: 
   Introducing the new Angular image directive (NgOptimizedImage) that brings built-in performance optimization techniques to images in Angular apps.
-date: 2022-08-25
+date: 2022-08-26
 authors:
   - karaerickson
   - leenasohoni
@@ -86,7 +86,7 @@ The highlights of the design are as follows:
     The directive encourages using image CDNs by providing an especially appealing developer experience (DX) to configure them in the app. It supports a loader API that allows you to define the CDN provider and your base URL in your configuration. Once configured, you only have to define the asset name in the markup. For example, 
 
 
-    ```
+    ``` html
         // in module providers:
         provideImgixLoader('https://mysite.net/assets/')
 
@@ -100,7 +100,7 @@ The highlights of the design are as follows:
     This is equivalent to including the following image tags and reduces the markup developers must include for every image.
 
 
-    ```
+    ``` html
         <img src="https://mysite.net/assets/image.png">
         <img src="https://mysite.net/assets/image2.png">
     ```
@@ -209,7 +209,7 @@ This is only the first installment of the design for the Angular image directive
 
 ## Conclusion
 
-The Angular image directive will be available to developers in stages, starting with the developer preview version in v14.2.0. Please give  `NgOptimizedImage` a try and leave feedback!  
+The Angular image directive will be available to developers in stages, starting with the developer preview version in v14.2.0. Do give `NgOptimizedImage` a try and leave feedback!  
 
 
 *With special thanks to Katie Hempenius and Alex Castle for their contribution.*
