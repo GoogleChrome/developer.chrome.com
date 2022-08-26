@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Compression and decompression in the browser with the Compression Streams API
 subhead: >
-  Write smaller web apps that don't need to ship their owm compression or decompression library
+  Write smaller web apps that don't need to ship their own compression or decompression library
 date: 2022-08-26
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/koW7cNlWa6BUlJsQR4wI.jpg
 alt: Clamp to symbolize how data gets compressed.
@@ -17,17 +17,23 @@ deflate (or deflate-raw) formats.
 
 Built in compression means that JavaScript applications will not need to include a compression
 library, which makes the download size of the application smaller. After Chrome, now Safari, too,
-supports this useful API. You can use it as shown in the snippet below.
+supports this useful API. To compress, you can use the API as shown in the snippet below.
 
 ```js
-const readableStream = await fetch('lorem.txt').then((response) => response.body);
-const compressedReadableStream = readableStream.pipeThrough(new CompressionStream('gzip'));
+const readableStream = await fetch('lorem.txt').then(
+  (response) => response.body
+);
+const compressedReadableStream = readableStream.pipeThrough(
+  new CompressionStream('gzip')
+);
 ```
 
 To decompress, pipe the compressed stream through the decompression stream.
 
 ```js
-const decompressedReadableStream = compressedReadableStream.pipeThrough(new DecompressionStream('gzip'));
+const decompressedReadableStream = compressedReadableStream.pipeThrough(
+  new DecompressionStream('gzip')
+);
 ```
 
 ## Demo
@@ -37,6 +43,7 @@ const decompressedReadableStream = compressedReadableStream.pipeThrough(new Deco
 ## Browser support
 
 The Compression Streams API is supported since Chromium&nbsp;80 and Safari Technology Preview&nbsp;152.
+For other browsers, check [CanIUse](https://caniuse.com/mdn-api_compressionstream).
 
 ## Acknowledgements
 
