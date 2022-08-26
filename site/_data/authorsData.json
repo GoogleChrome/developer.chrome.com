@@ -841,13 +841,15 @@
     "twitter": "victorporof",
     "country": "DE"
   },
-  "leenasohoni": {
-    "country": "Singapore",
-    "twitter": "leena_sohoni",
-    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG"
-  },
   "karaerickson": {
-    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/Az2VaHZ4nQ6ovvTvzCD3.jpeg"
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/Az2VaHZ4nQ6ovvTvzCD3.jpeg",
+    "twitter": "karaforthewin",
+    "country": "US"
+  },
+  "leenasohoni": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
+    "twitter": "leena_sohoni",
+    "country": "US"
   },
   "mgechev": {
     "country": "US",
@@ -870,4 +872,5 @@
     "image": "image/Or7Bgsqru3MxJHvMtp68LKOjxkH3/UbfmJ8kJwfT9FVLHjX3r.jpeg",
     "github": "kyliau"
   }
+  
 }
