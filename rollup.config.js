@@ -13,7 +13,7 @@ import {terser} from 'rollup-plugin-terser';
 // A Rollup plugin for copying files.
 import copy from 'rollup-plugin-copy';
 
-// A Rollup plugin for copying files.
+// A Rollup plugin for reading JSON files.
 import json from '@rollup/plugin-json';
 
 const devConfig = {
