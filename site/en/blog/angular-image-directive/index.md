@@ -119,7 +119,7 @@ The highlights of the design are as follows:
    
     3. **Oversized images:** If the image does not define a `srcset `and the intrinsic image is significantly larger than the rendered image, the directive will display a warning suggesting the use of the `srcset` and `sizes` attributes.
     
-    4. **Image density:** The directive will throw an error if you try to include an image in the `srcset` with a pixel density of more than `3x`. Descriptors higher than `2x` are generally not recommended because it has the unintended consequence of forcing high-resolution mobile devices to download huge images. Moreover, the human eye can't actually tell much of a difference [above 2x](https://web.dev/uses-rel-preconnect/).
+    4. **Image density:** The directive will throw an error if you try to include an image in the `srcset` with a pixel density of more than `3x`. Descriptors higher than `2x` are generally not recommended because it has the unintended consequence of forcing high-resolution mobile devices to download huge images. Moreover, [the human eye can't actually tell much of a difference above 2x](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/capping-image-fidelity-on-ultra-high-resolution-devices#:~:text=3x%20resolution%20screens%20are%20wasteful).
 
 
 ## Challenges
