@@ -115,7 +115,7 @@ into a web app.
 ## The slow decline of interest in cross-platform app frameworks and the rise of Flutter
 
 The web isn't the only platform that promises "write once, run anywhere". Cross-platform frameworks
-_à la_ Electron.js do, too. With the web becoming powerful enough to drive apps such as Photoshop
+such as Electron.js do, too. With the web becoming powerful enough to drive apps such as Photoshop
 that were thought to be impossible, we can, however, observe a slow decline of interest in
 cross-platform desktop app frameworks such as [Electron.js](https://www.electronjs.org/) and
 [NW.js](https://nwjs.io/), and mobile app frameworks such as [Cordova](https://cordova.apache.org/)
