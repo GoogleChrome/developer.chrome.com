@@ -908,6 +908,11 @@ joelewis:
     en: Joseph Lewis
   description:
     en: Technical Writer, Android DevRel
+jney:
+  title:
+    en: Jeremy Ney
+  description:
+    en: Strategic Partner Development Manager, Google Chrome
 bramus:
   title:
     en: Bramus
@@ -981,7 +986,6 @@ mgechev:
     pt: Nossas últimas notícias, atualizações e histórias de Minko Gechev.
     ru: Последние новости и статьи от Minko Gechev.
     zh: Minko Gechev 撰写我们的最新资讯、动态和故事。
-
 alexcastle:
   title:
     en: Alex Castle
@@ -1033,3 +1037,4 @@ keenyeeliau:
     pt: Engenheiro de software da equipe Aurora no Chrome.
     ru: Инженер-программист в команде Aurora в Chrome.
     zh: Chrome 公司 Aurora 团队的软件工程师。
+

@@ -219,7 +219,7 @@ This setup can be seen in the [demo](https://permissions-policy-demo.glitch.me/d
 Permissions-Policy: geolocation=(self "https://trusted-site.example")
 ```
 
-This syntax allows the usage of geolocation to both self (`https://your-site.example`) and `https://trusted-site.example`. Remember to explicitly add the allow attribute to the iframe tag. If there is another iframe with `<iframe src="https://ad.example” allow="geolocation">`, then `https://ad.example` will not have access to the geolocation feature. Only the original page and `https://trusted-site.example` that is listed in the origin list along with having the allow attribute in the iframe tag will have access to the user's feature. 
+This syntax allows the usage of geolocation to both self (`https://your-site.example`) and `https://trusted-site.example`. Remember to explicitly add the allow attribute to the iframe tag. If there is another iframe with `<iframe src="https://ad.example" allow="geolocation">`, then `https://ad.example` will not have access to the geolocation feature. Only the original page and `https://trusted-site.example` that is listed in the origin list along with having the allow attribute in the iframe tag will have access to the user's feature. 
 
 This setup can be seen in the [demo](https://permissions-policy-demo.glitch.me/demo/some-allowed). 
 
