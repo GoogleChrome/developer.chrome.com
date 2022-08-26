@@ -4,7 +4,7 @@ title: "Prepare for User-Agent Reduction changes in October"
 subhead: > 
   What's happening with the User-Agent string, why Chrome is making this change, and what you can do to prepare.
 description: >
-  In October Chrome will take the next step in reducing the information
+  In October, Chrome will take the next step in reducing the information
   available in the browser's User-Agent string, to improve privacy for users. With
   this change, websites and services that rely on the User-Agent string for
   certain information may need to take action. This post gives some background on what's
@@ -18,13 +18,15 @@ tags:
   - privacy
 ---
 
-In October Chrome will take the next step in reducing the information
+In October, Chrome will take the next step in reducing the information
 available in the browser's User-Agent (UA) string, to improve privacy for users. With
 this change, websites and services that rely on the User-Agent string for
-certain information may need to take action. Here's some background on what's
-happening, why Chrome is making this change, and what you can do to prepare.
+certain information may need to take action.
 
-## Why is User-Agent string changing
+Here's some background on what's happening, why Chrome is making this change,
+and what you can do to prepare.
+
+## Why is the User-Agent string changing
 
 The User-Agent string includes information about the browser and the type
 of device a person is using. The UA string has played an [instrumental
