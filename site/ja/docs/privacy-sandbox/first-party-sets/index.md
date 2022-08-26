@@ -7,8 +7,8 @@ subhead: |2
 description: |2
 
   First-Party Sets を使用すると、同じ組織が所有、運用する関連ドメイン名が、同じファーストパーティに属することを宣言できる。
-date: '2021-05-18'
-updated: '2022-08-04'
+date: 2021-05-18
+updated: 2022-08-04
 authors:
   - samdutton
 ---
