@@ -163,7 +163,9 @@
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
     "twitter": "hdjirdeh",
-    "github": "housseindjirdeh"
+    "github": "housseindjirdeh",
+    "glitch": "housseindjirdeh",
+    "image": "image/admin/BibySYHD7JweNcHZCCOe.jpg"
   },
   "katiehempenius": {
     "twitter": "katiehempenius",
@@ -848,6 +850,27 @@
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
     "twitter": "leena_sohoni",
     "country": "US"
+  },
+  "mgechev": {
+    "country": "US",
+    "homepage": "https://blog.mgechev.com/",
+    "twitter": "mgechev",
+    "github": "mgechev",
+    "glitch": "mgechev",
+    "image": "image/admin/OPpZ9x8KCVcxvqgdWXM5.jpg"
+  },
+  "alexcastle": {
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/ofc2dLwuNURvRIMvTdIv.jpeg"
+  },
+  "shubhie": {
+    "github": "spanicker",
+    "twitter": "shubhie",
+    "country": "US",
+    "image": "image/0SXGYLkliuPQY3aSy3zWvdv7RqG2/sInJ1hYQTzeVJUGaOjlk.jpeg"
+  },
+  "keenyeeliau": {
+    "image": "image/Or7Bgsqru3MxJHvMtp68LKOjxkH3/UbfmJ8kJwfT9FVLHjX3r.jpeg",
+    "github": "kyliau"
   }
   
 }
