@@ -4,7 +4,7 @@ title: Deprecating and removing Web SQL
 description: >
   Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented
   it and WebKit removed it in 2019. Web SQL was removed for third-party contexts in Chromium 97. Now
-  Chromium 106 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
+  Chromium 105 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
   panel when the feature is used. Complete removal in insecure contexts and eventually all contexts
   is planned for later Chromium releases.
 authors:
@@ -51,7 +51,7 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
 - [✅ Done.] Web SQL was deprecated and removed for **third-party contexts** in
   **Chromium&nbsp;97**.
 - [📍 We are here.] Web SQL access in **insecure contexts** is deprecated as of
-  **Chromium&nbsp;106** at which time a warning message will be shown in the Chrome DevTools Issue
+  **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
   panel.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Please use Web Storage or Indexed Database.", width="800", height="158" %}
