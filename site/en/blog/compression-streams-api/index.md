@@ -7,7 +7,7 @@ hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/koW7cNlWa6BUlJsQR4wI.jpg
 alt: Clamp to symbolize how data gets compressed.
 author: thomassteiner
 tags:
-  - blog
+  - capabilities
 ---
 
 The [Compression Streams API](https://developer.mozilla.org/docs/Web/API/Compression_Streams_API)
