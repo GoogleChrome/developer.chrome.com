@@ -5,16 +5,16 @@
 
 <!-- ### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/ja/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/ja/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/ja/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ja/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/ja/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/ja/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/ja/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/ja/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/ja/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-105/#misc) -->
+* [Recorder パネルでのステップ・バイ・ステップ再生](/ja/blog/new-in-devtools-105/#recorder)
+* [Recorder パネルでのマウスオーバーイベントのサポート](/ja/blog/new-in-devtools-105/#recorder-hover)
+* [Performance insight パネルに Largest Contentful Paint (LCP) を追加](/ja/blog/new-in-devtools-105/#lcp)
+* [レイアウトシフトの潜在的な主要因であるテキストのフラッシュ（FOIT、FOUT）を識別](/ja/blog/new-in-devtools-105/#foit-fout)
+* [Elements パネルの Top layer バッジ](/ja/blog/new-in-devtools-105/#top-layer)
+* [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
+* [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
+* [Styles ペインで @scope at-rule の閲覧と編集](/ja/blog/new-in-devtools-105/#scope)
+* [Sourcemap の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [その他のハイライト](/ja/blog/new-in-devtools-105/#misc) -->
 
 ### Chrome 104 {: #chrome104 }
 
