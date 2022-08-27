@@ -112,7 +112,7 @@ DevTools を使用して [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/
 URL protocol handler registration を使用するとインストールされた PWA が特定のプロトコル（例、[`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme)、`web+example`）が使用されたリンクを処理して、より統一感のある体験を提供できます。
 
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
-**Application** > **Manifest** パネルから **Protocol Handlers** を開いてください。ここで利用可能なすべてのプロトコルの確認が、テストが可能です。
+**Application** > **Manifest** パネルから **Protocol Handlers** を開いてください。ここで利用可能なすべてのプロトコルの確認と、テストが可能です。
 
 <!-- For example, install [this demo PWA](https://protocol-handler.glitch.me/). In the **Protocol Handlers** section, type “americano” and click **Test protocol** to open the coffee page in the PWA.  -->
 例えば、[デモ PWA](https://protocol-handler.glitch.me/)をインストールしてください。**Protocol Handlers** セクションで、`"americano"` と入力し、**Test protocol** をクリックすると PWA 内でコーヒーのページが開きます。
