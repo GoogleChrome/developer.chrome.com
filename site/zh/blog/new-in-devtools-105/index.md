@@ -63,7 +63,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 在 [性能录制](/docs/devtools/performance-insights/#record) 中，单击 **时间线** 中的 LCP 徽章。 在 **细节** 边栏中，您可以查看 LCP 分数，了解如何修复降低 LCP 速度的资源并查看 LCP 资源的关键路径。
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
-请参阅 [绩效洞察](/docs/devtools/performance-insights/)了解如何通过面板获得可操作的见解并提高网站的性能。
+参阅 [Performance insights](/docs/devtools/performance-insights/) 文档以了解如何通过此面板获得可行性的建议并提高网站的性能。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP in the Performance insights panel", width="800", height="751" %}
 
 Chromium 议题: [1326481](https://crbug.com/1326481)
