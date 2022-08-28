@@ -57,7 +57,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
-## 性能洞察面板中的最大内容绘制 (LCP) {: #lcp }
+## Performance insights 面板中的最大内容绘制 (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
 最大内容绘制 (LCP) 是测量[感知加载速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)的一个以用户为中心的重要指标。 您现在可以找出 [最大内容绘制 (LCP)](https://web.dev/lcp/) 的关键路径和根本原因。
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
