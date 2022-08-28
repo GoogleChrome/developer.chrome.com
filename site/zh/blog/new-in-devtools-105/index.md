@@ -76,7 +76,7 @@ Chromium 议题: [1326481](https://crbug.com/1326481)
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 如要查看布局偏移的潜在根本原因，请单击 **Layout shifts** 轨道中的屏幕截图。
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-请参阅 [优化 WebFont 加载和渲染](https://web.dev/optimize-webfont-loading/) 以了解防止布局变化的技术。
+请参阅 [优化 WebFont 加载和渲染](https://web.dev/optimize-webfont-loading/) 以了解防止布局偏移的技术。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
 
 Chromium 议题: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
