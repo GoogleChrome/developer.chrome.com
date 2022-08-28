@@ -85,7 +85,7 @@ Chromium 议题: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## Manifest 窗格中的协议处理程序 {: #manifest }
 <!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-您现在可以使用 DevTools 测试 [渐进式网络应用 (PWA)](https://web.dev/learn/pwa/) 的 [URL 协议处理程序注册](https://web.dev/url-protocol-handler/)。
+您现在可以使用 DevTools 测试[渐进式网络应用 (PWA)](https://web.dev/learn/pwa/) 的 [URL 协议处理程序注册](https://web.dev/url-protocol-handler/)。
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 URL 协议处理程序注册允许已安装的 PWA 处理使用特定协议的链接（例如 [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme)、`web+example`）以获得更集成的体验。
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
