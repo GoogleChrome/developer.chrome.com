@@ -74,7 +74,7 @@ Chromium 议题: [1326481](https://crbug.com/1326481)
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
 **Performance insights**面板现在可以检测 [flash of invisible text (FOIT) 和 flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) 作为布局偏移的根本原因。
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
-如要查看布局偏移的潜在根本原因，请单击 **Layout shifts** 轨道中的屏幕截图。
+单击 **Layout shifts** 轨道中的屏幕截图，以便查看布局偏移的潜在根本原因。
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
 请参阅 [优化 WebFont 加载和渲染](https://web.dev/optimize-webfont-loading/) 以了解防止布局偏移的技术。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
