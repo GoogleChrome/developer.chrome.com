@@ -189,7 +189,7 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
- ## 其他亮点 {: #misc }
+ ## 其他的更新 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
 以下是此版本中一些值得注意的修复：
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
