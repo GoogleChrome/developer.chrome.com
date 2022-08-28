@@ -6,7 +6,7 @@ authors:
 date: 2022-08-12
 updated: 2022-08-12
 description: "Supports step-by-step replay and mouse over events in the Recorder, LCP in the Performance insights panel and more."
-description: "Recorder에서의 단계별 재생 기능 및 마우스오버 이벤트 제공, Performance insights 패널 내의 LCP 및 그 외의 업데이트들"
+description: "Recorder 에서의 단계별 재생 기능 및 마우스오버 이벤트 제공, Performance insights 패널 내의 LCP 및 그 외의 업데이트들"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oc4swlP62b8h9zBnfHpa.jpg'
 alt: ''
 tags:
