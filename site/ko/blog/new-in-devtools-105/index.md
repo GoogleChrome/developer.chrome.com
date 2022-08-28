@@ -72,7 +72,7 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
-## 레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별
+## 레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별 {: #foit-fout }
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
 이제 **Performance insights** 패널에서, 레이아웃 변경의 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/preload-optional-fonts/#font-rendering)을 감지할 수 있습니다.
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
