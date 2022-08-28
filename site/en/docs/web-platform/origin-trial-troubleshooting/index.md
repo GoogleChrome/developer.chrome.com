@@ -15,7 +15,6 @@ tags:
 {% Aside %}
 This guide assumes a working knowledge of origin trials in Chrome.
 
-
 * [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) explains the basics.
 * [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#faq) 
 provides a detailed FAQ. 
@@ -248,8 +247,7 @@ iOS and iPadOS [must use WebKit](https://developer.apple.com/app-store/review/gu
 the same engine used by Safari. Chrome on iOS and iPadOS is built on [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview).
 {% endAside %}
 
-Microsoft Edge has its own [origin trial framework](https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/). 
-Enrollment in an Edge origin trial won't enable a feature in Chrome.
+Origin trials are also available for [Firefox](https://wiki.mozilla.org/Origin_Trials) and [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/). Enrollment in a Firefox or Edge origin trial won't enable a feature in Chrome.
 
 
 ### The origin trial is enabled for the Chrome versions accessing your site {: #version}
@@ -608,3 +606,5 @@ is run before code that attempts to access the trial feature.
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
+-  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+-  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)
