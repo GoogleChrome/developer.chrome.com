@@ -5,16 +5,17 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/es/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/es/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/es/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/es/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/es/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/es/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/es/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/es/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/es/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-105/#misc)
+* [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
+* [Soporte de eventos de ratón en el panel Recorder](/es/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
+
+* [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
+* [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
+* [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
+* [Soporte para edición en vivo durante la depuración](/es/blog/new-in-devtools-105/#live-edit)
+* [Ver y editar las reglas de @scope en el panel de Estilos](/es/blog/new-in-devtools-105/#scope)
+* [Mejoras en los mapas de código fuente](/es/blog/new-in-devtools-105/#sourcemaps)
+* [Otros detalles destacados](/es/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }
 
