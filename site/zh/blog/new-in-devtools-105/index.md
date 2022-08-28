@@ -59,7 +59,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## 性能洞察面板中的最大内容绘制 (LCP) {: #lcp }
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-最大内容绘制是一个重要的、以用户为中心的衡量指标，用于衡量 [感知加载速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)。 您现在可以找出 [最大内容绘制 (LCP)](https://web.dev/lcp/) 的关键路径和根本原因。
+最大内容绘制 (LCP) 是测量[感知加载速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)的一个以用户为中心的重要指标。 您现在可以找出 [最大内容绘制 (LCP)](https://web.dev/lcp/) 的关键路径和根本原因。
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 在 [性能录制](/docs/devtools/performance-insights/#record) 中，单击 **时间线** 中的 LCP 徽章。 在 **细节** 窗格中，您可以查看 LCP 分数，了解如何修复降低 LCP 速度的资源并查看 LCP 资源的关键路径。
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
