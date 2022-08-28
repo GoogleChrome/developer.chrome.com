@@ -33,7 +33,7 @@ tags:
 **Recorder** パネルでブレークポイントを設定して、ステップ・バイ・ステップでユーザーフローを再生できるようになりました。
 
 <!-- To set a breakpoint, click on the blue dot next to a step. Replay your user flow, the replay will pause before executing the step. From here, you can continue the replay, execute a step, or cancel the replay. -->
-ブレークポイントを設定するには、ステップの横にある青い点をクリックします。ユーザーフローを再生すると、そのステップを実行する寸前で再生が一時停止します。そこから、再生の継続や、ステップ実行、再生のキャンセルが可能です。
+ブレークポイントを設定するには、ステップの横にある青い点をクリックします。ユーザーフローを再生すると、そのステップを実行する直前で再生が一時停止します。そこから、再生の継続や、ステップ実行、再生のキャンセルが可能です。
 
 <!-- With this feature, you can fully visualize and debug your user flow with ease. -->
 この機能を用いれば、ユーザーフローを完全に可視化できデバッグが簡単になります。
