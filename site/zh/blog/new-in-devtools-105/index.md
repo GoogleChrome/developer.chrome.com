@@ -50,7 +50,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
 [此演示](https://jec.fyi/demo/menu-hover) 显示悬停时的弹出菜单. 在录制用户流程时，单击菜单项。
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
-如果您现在重播用户流程，它将失败，因为 **录制面板** 在录制期间不会自动捕获鼠标悬停事件。 要解决此问题，请 [手动添加步骤](/docs/devtools/recorder/reference/#add-and-remove-steps) 在单击菜单项之前将鼠标悬停在选择器上。
+现在，如果您重播用户流程，它将会失败。因为 **录制面板** 在录制期间并没有自动捕获鼠标悬停事件。 要解决此问题，请 [手动添加步骤](/docs/devtools/recorder/reference/#add-and-remove-steps) ，在单击菜单项之前，将鼠标悬停在选择器上。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
 
 Chromium 议题: [1257499](https://crbug.com/1257499)
