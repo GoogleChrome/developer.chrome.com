@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Compression and decompression in the browser with the Compression Streams API
 subhead: >
   Write smaller web apps that don't need to ship their own compression or decompression library
-date: 2022-08-26
+date: 2022-08-29
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/koW7cNlWa6BUlJsQR4wI.jpg
 alt: Clamp to symbolize how data gets compressed.
 author: thomassteiner
