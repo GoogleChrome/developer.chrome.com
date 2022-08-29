@@ -35,11 +35,11 @@ CMA へのコミットメントの一環として、Google は、プライバシ
 <dt>UA-CH</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/user-agent/">User-Agent Client Hints</a></p></dd>
 <dt>IP</dt>     <dd>インターネット プロトコル アドレス</dd>
 <dt>WIPB</dt>   <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/gnatcatcher/">Willful IP Blindness</a></p></dd>
-<dt>IAB</dt>    <dd><p data-md-type="paragraph"><a href="https://www.iab.com/">Interactive Advertising Bureau</a></p></dd>
+<dt>IAB</dt>    <dd><p data-md-type="paragraph"><a href="https://www.iab.com/">インタラクティブ広告協会</a></p></dd>
 <dt>openRTB</dt>
 <dd><p data-md-type="paragraph"><a href="https://iabtechlab.com/standards/openrtb/#:~:text=OpenRTB%20is%20the%20communication%20protocol,in%20the%20digital%20advertising%20industry.">リアルタイム入札</a></p></dd>
-<dt>CHIPS</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/chips/">Cookies Having Independent Partitioned State</a></p></dd>
-<dt>FPS</dt>    <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/first-party-sets/">First Party Sets</a></p></dd>
+<dt>CHIPS</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/chips/">独立してパーティション化された状態を持つ Cookie</a></p></dd>
+<dt>FPS</dt>    <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/first-party-sets/">First-Party Sets</a></p></dd>
 <dt>FedCM</dt>  <dd><p data-md-type="paragraph"><a href="/docs/privacy-sandbox/fedcm/">Federated Credential Management</a></p></dd>
 <dt>IDP</dt>    <dd>ID プロバイダー</dd>
 </dl>
@@ -440,7 +440,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   <tr>
    <td>FPS のエコシステムサポート</td>
    <td>プライバシー CG 以外の FPS を開発し続けるためのサポートと懸念の収集</td>
-   <td>While we would have preferred that the First-Party Sets proposal remain in the PrivacyCG, we look forward to continuing to pursue the proposal in the WICG. We were also encouraged by the numerous statements of support for continued discussion of First-Party Sets and the use cases it is intended to address. Google remains committed to finding solutions that allows the web to continue to grow and thrive in a way that protects and respects user privacy.    </td>
+   <td>First-Party Sets の提案が PrivacyCG に残ることを望んでいましたが、WICG での提案を引き続き追求することを楽しみにしています。また、First-Party Sets とそれが対処することを意図しているユースケースについての継続的なディスカッションを支持する多くの声にも励まされました。Google は、ユーザーのプライバシーを保護し、尊重しながら、ウェブが成長し、繁栄し続けることを可能にするソリューションを見つけることに引き続き取り組んでいます。</td>
   </tr>
   <tr>
    <td>ブラウザの相互運用性</td>
@@ -551,7 +551,7 @@ CMA へのコミットメントの一環として、Google は、プライバシ
   </tr>
 </table>
 
-### Web Identity API, fka FedCM
+### Federated Credential Management
 
 <table>
   <tr>
