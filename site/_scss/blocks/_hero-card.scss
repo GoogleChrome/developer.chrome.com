@@ -16,3 +16,11 @@
     grid-template-columns: 2fr 3fr;
   }
 }
+
+.hero-card__inner-wide {
+
+  @include media-query('masonry') {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+}

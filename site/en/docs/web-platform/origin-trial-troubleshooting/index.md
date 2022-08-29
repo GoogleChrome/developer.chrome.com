@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-08-02
+updated: 2022-08-18
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -14,7 +14,6 @@ tags:
 
 {% Aside %}
 This guide assumes a working knowledge of origin trials in Chrome.
-
 
 * [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) explains the basics.
 * [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#faq) 
@@ -103,6 +102,9 @@ token is provided via an external script, not a meta tag or inline script</a></l
   <br>
   <input class="w-checkbox" type="checkbox" id="check-workers">
   <label for="check-workers" class="w-ml--l"><a href="#workers">Worker access is enabled</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-before-access">
+  <label for="token-before-access" class="w-ml--l"><a href="#token-before-access">Token is provided before feature is accessed</a></label>
 </div>
 
 
@@ -245,8 +247,7 @@ iOS and iPadOS [must use WebKit](https://developer.apple.com/app-store/review/gu
 the same engine used by Safari. Chrome on iOS and iPadOS is built on [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview).
 {% endAside %}
 
-Microsoft Edge has its own [origin trial framework](https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/). 
-Enrollment in an Edge origin trial won't enable a feature in Chrome.
+Origin trials are also available for [Firefox](https://wiki.mozilla.org/Origin_Trials) and [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/). Enrollment in a Firefox or Edge origin trial won't enable a feature in Chrome.
 
 
 ### The origin trial is enabled for the Chrome versions accessing your site {: #version}
@@ -516,6 +517,7 @@ Information about usage restrictions and availability will be provided for each 
 As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 to confirm that an origin trial feature is supported before you use it.
 
+
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
 
 By default, an origin trial feature will be enabled on any page that has a valid token for the trial.
@@ -555,6 +557,7 @@ don't inherit access to features enabled for pages that contain them.
 A demo showing access to an origin trial feature in an iframe is available at 
 [ot-iframe.glitch.me](https://ot-iframe.glitch.me).
 
+
 ### Permissions policies are correctly configured {: #permissions-policies}
 
 Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
@@ -579,6 +582,13 @@ a token in an `Origin-Trial` header. Dedicated workers inherit access to feature
 parent document.
 
 
+###  Token is provided before feature is accessed {: #token-before-access}
+
+Make sure that an origin trial token is provided _before_ a trial feature is accessed. 
+For example, if a page provides a token via JavaScript, make sure the code to provide the token 
+is run before code that attempts to access the trial feature.
+
+
 ## Origin trial demos
 
 -  [Token in a meta tag](https://ot-meta.glitch.me)
@@ -596,3 +606,5 @@ parent document.
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
+-  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+-  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)

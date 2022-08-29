@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting: 要約レポート'
+title: 'アトリビューション レポート: 要約レポート'
 subhead: >
   個々のデータを明らかにすることなく、ユーザー全体で集計された広告コンバージョンを測定します。 以前は集計レポートと呼ばれていました。
 description: >
@@ -14,14 +14,14 @@ authors:
 ## 実装状況
 
 *  最初の提案（[クライアントサイド](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)、[サーバーサイド](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)）および初期のディスカッション段階
-*  Attribution Reporting [API 仕様](https://wicg.github.io/conversion-measurement-api/)
+*  [Attribution Reporting API 仕様](https://wicg.github.io/conversion-measurement-api/)
 
 *  [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5762222527610880)
 *  この API は [広告効果と測定オリジントライアルで利用できます](/blog/privacy-sandbox-unified-origin-trial/)。
-*  [Attribution Reporting: テストとディスカッション](/docs/privacy-sandbox/attribution-reporting-experiment/)。
+*  [アトリビューション レポート: テストとディスカッション](/docs/privacy-sandbox/attribution-reporting-experiment/)。
 *  [API の変更点](/docs/privacy-sandbox/attribution-reporting-updates/) を追跡する。
 
-## Attribution Reporting の要約レポートとは？
+## アトリビューション レポートの要約レポートとは？
 
 Attribution Reporting API を使用すると、広告のクリックまたはビューが、販売やサインアップなどの広告主サイトでのコンバージョンにつながるタイミングを測定できます。 この API は、サイト全体で個々のユーザーを識別するために使用できるサードパーティ Cookie や仕組みには依存しません。
 
@@ -74,7 +74,7 @@ _集計可能なレポート_ は、個々のユーザーのブラウザから�
    width="800", height="168"
 %}
   <figcaption>
-    完全なシーケンス図については、<a href="/docs/privacy-sandbox/attribution-reporting-introduction/#aggregate-reports">Attribution Reporting の紹介</a>をご覧ください。
+    完全なシーケンス図については、<a href="/docs/privacy-sandbox/attribution-reporting-introduction/#aggregate-reports">アトリビューション レポートの紹介</a>をご覧ください。
   </figcaption>
 </figure>
 
@@ -151,6 +151,6 @@ TEE のコードは、集計サービスで生のレポートにアクセスで�
 
 ## 詳細について
 
-*  [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/) をお読みください。
+*  [アトリビューション レポート (Conversion Measurement) の概要](/docs/privacy-sandbox/attribution-reporting-introduction/) をお読みください。
 *  [集計サービスの Explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md) および [詳細なセットアップ方法](https://github.com/google/trusted-execution-aggregation-service/)をお読みください。
 *  [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)

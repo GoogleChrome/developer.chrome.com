@@ -424,9 +424,9 @@ Reporting API
   </tr>
 </table>
 
-#### Attribution Reporting API のサマリー レポート
+#### Attribution Reporting API の要約レポート
 
-_サマリー レポートは詳細なコンバージョン
+_要約レポートは詳細なコンバージョン
 データを集約して確認するのに有用です。データ内の個別のユーザーを特定することなく、レポートに含めたい重要な情報を保持できます。[Attribution
 Reporting API
 の詳細](/docs/privacy-sandbox/attribution-reporting/)をご覧ください。_

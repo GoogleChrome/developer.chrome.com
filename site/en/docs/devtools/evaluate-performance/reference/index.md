@@ -407,19 +407,6 @@ View raster activity in the **Raster** section.
 
 **Figure 21**. The **Raster** section, outlined in blue
 
-### View interactions {: #interactions }
-
-Use the **Interactions** section to find and analyze user interactions that happened during the
-recording.
-
-{% Img src="image/admin/RLvocLiAoWSxDrSIM0U8.svg", alt="The Interactions section", width="800", height="816" %}
-
-**Figure 22**. The **Interactions** section, outlined in blue
-
-A red line at the bottom of an interaction represents time spent waiting for the main thread.
-
-Click an interaction to view more information about it in the **Summary** tab.
-
 ### Analyze frames per second (FPS) {: #fps }
 
 DevTools provides numerous ways to analyze frames per second:

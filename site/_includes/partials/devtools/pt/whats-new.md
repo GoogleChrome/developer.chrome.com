@@ -3,6 +3,19 @@
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
 
+### Chrome 105 {: #chrome105 }
+
+* [Replay passo a passo no Recorder](/pt/blog/new-in-devtools-105/#recorder)
+* [Suporte ao evento do mouse over no painel do Recorder](/pt/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) no painel de insights de desempenho](/pt/blog/new-in-devtools-105/#lcp)
+* [Identificação de flashes de texto (FOIT, FOUT) como possíveis causas-raiz para mudanças de layout](/pt/blog/new-in-devtools-105/#foit-fout)
+* [Selo da camada superior no painel Elementos](/pt/blog/new-in-devtools-105/#top-layer)
+* [Anexar informações de depuração do Wasm em tempo de execução](/pt/blog/new-in-devtools-105/#wasm)
+* [Suporta edição ao vivo durante a depuração](/pt/blog/new-in-devtools-105/#live-edit)
+* [Visualize e edite @scope em regras no painel Estilos](/pt/blog/new-in-devtools-105/#scope)
+* [Melhorias no Sourcemap](/pt/blog/new-in-devtools-105/#sourcemaps)
+* [Outras mudanças](/pt/blog/new-in-devtools-105/#misc)
+
 ### Chrome 104 {: #chrome104 }
 
 * [Reinicialização de frame durante o debugging](/pt/blog/new-in-devtools-104/#restart-frame)
