@@ -12,12 +12,12 @@ tags:
 ---
 
 The [Compression Streams API](https://developer.mozilla.org/docs/Web/API/Compression_Streams_API)
-provides a JavaScript API for compressing and decompressing streams of data using the gzip or
+is for compressing and decompressing streams of data using the gzip or
 deflate (or deflate-raw) formats.
 
 With built in compression JavaScript applications do not need to include a compression
-library, making the download size of the application smaller. Chrome and Safari Technology Preview now
-support this useful API. To compress, you can use the API as shown in the snippet below.
+library, making the download size of the application smaller. Stable Chrome and Safari Technology Preview now
+support this useful API. Compressing data is shown below.
 
 ```js
 const readableStream = await fetch('lorem.txt').then(
@@ -28,7 +28,7 @@ const compressedReadableStream = readableStream.pipeThrough(
 );
 ```
 
-To decompress, pipe the compressed stream through the decompression stream.
+To decompress, pipe a compressed stream through the decompression stream.
 
 ```js
 const decompressedReadableStream = compressedReadableStream.pipeThrough(
