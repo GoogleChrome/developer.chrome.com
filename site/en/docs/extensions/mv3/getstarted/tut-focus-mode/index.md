@@ -79,12 +79,12 @@ Start by adding the following code to register the service worker in the manifes
 
 The first event our service worker will listen for is
 [`runtime.onInstalled()`][runtime-oninstalled]. This method allows the extension to set an initial
-state or complete some tasks on installation. Since this example will only handle two states (ON and
-OFF), it will track each tab's state through the _extension badge_.
+state or complete some tasks on installation. Extensions can use the [Storage API][api-storage] and
+[IndexedDB][mdn-indexeddb] to store the application state. In this case, though, since we're only handling two states, we will use the the _action's badge_ text itself to track whether the extension is 'ON' or 'OFF'.
 
 {% Aside 'key-term' %}
 
-The [extension badge][action-badge] is a colored banner on top of the extension action (toolbar
+The [action's badge][action-badge] is a colored banner on top of the extension action (toolbar
 icon).
 
 {% endAside %}
@@ -101,14 +101,6 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 ```
 
-{% Details %}
-{% DetailsSummary %}
-💡 **What if I have a more complex state?**
-{% endDetailsSummary %}
-
-You can use the [Storage API][api-storage] to store state data.
-
-{% endDetails %}
 
 ### Step 3: Enable the extension action {: #step-3 }
 
@@ -181,19 +173,19 @@ following code to `background.js`:
 {% Label %}background.js:{% endLabel %}
 
 ```js
-  chrome.action.onClicked.addListener(async (tab) => {
-    if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
-      // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
-      const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
-      // Next state will always be the opposite
-      const nextState = prevState === 'ON' ? 'OFF' : 'ON'
-  
-      // Set the action badge to the next state
-      await chrome.action.setBadgeText({
-        tabId: tab.id,
-        text: nextState,
-      });
-  ...
+chrome.action.onClicked.addListener(async (tab) => {
+  if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
+    // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
+    const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
+    // Next state will always be the opposite
+    const nextState = prevState === 'ON' ? 'OFF' : 'ON'
+
+    // Set the action badge to the next state
+    await chrome.action.setBadgeText({
+      tabId: tab.id,
+      text: nextState,
+    });
+...
 ```
 
 ### Step 5: Add or remove the stylesheet {: #step-5 }
@@ -242,21 +234,21 @@ Finally, in `background.js` add the following code to change the layout of the p
 
 ```js
   ...
-      if (nextState === "ON") {
-        // Insert the CSS file when the user turns the extension on
-        await chrome.scripting.insertCSS({
-          files: ["focus-mode.css"],
-          target: { tabId: tab.id },
-        });
-      } else if (nextState === "OFF") {
-        // Remove the CSS file when the user turns the extension off
-        await chrome.scripting.removeCSS({
-          files: ["focus-mode.css"],
-          target: { tabId: tab.id },
-        });
-      }
+    if (nextState === "ON") {
+      // Insert the CSS file when the user turns the extension on
+      await chrome.scripting.insertCSS({
+        files: ["focus-mode.css"],
+        target: { tabId: tab.id },
+      });
+    } else if (nextState === "OFF") {
+      // Remove the CSS file when the user turns the extension off
+      await chrome.scripting.removeCSS({
+        files: ["focus-mode.css"],
+        target: { tabId: tab.id },
+      });
     }
-  });
+  }
+});
 ```
 
 {% Details %}
@@ -375,6 +367,7 @@ tutorials on this series:
 [doc-welcome]: /docs/extensions/mv3/
 [github-focus-mode-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode/images
 [github-focus-mode]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/focus-mode
+[mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
