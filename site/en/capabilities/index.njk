@@ -6,16 +6,41 @@ sections:
   intro:
     - url: https://fugu-tracker.web.app
       title: Fugu API Tracker
-      description: Get an overview of all the APIs we work on in the context of Project Fugu.
+      description: Get an overview of all the APIs we work on in the context of Project Fugu. Learn about the status of each proposal and where it is in the process.
     - url: /blog/fugu-showcase/
     - url: /blog/fugu-status/
+  hardware:
+    - url: https://web.dev/hid/
+      title: Connecting to uncommon HID devices
+      description: The WebHID API allows websites to access alternative auxiliary keyboards and exotic gamepads.
+    - url: https://web.dev/bluetooth/
+      title: Communicating with Bluetooth devices over JavaScript
+      description: The Web Bluetooth API allows websites to communicate with Bluetooth devices.
+    - url: https://web.dev/serial/
+      title: Read from and write to a serial port
+      description: The Web Serial API allows websites to communicate with serial devices.
+    - url: https://web.dev/usb/
+      title: Access USB Devices on the Web
+      description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
+    - url: https://web.dev/gamepad/
+      title: Play the Chrome dino game with your gamepad
+      description: Learn how to use the Gamepad API to push your web games to the next level.
+  media:
+    - url: https://web.dev/tags/media/
+      title: Media APIs on web.dev
+      description: Our latest news, updates, and stories about Media.
+    - url: /tags/media/
+      title: Media APIs on developer.chrome.com
+      description: Our latest news, updates, and stories about Media.
 ---
 
-{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
 {% from 'macros/cards/blog-card.njk' import blogCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
 
 {{ heroCardWide(
   'Capabilities',
@@ -33,13 +58,43 @@ sections:
   'About capabilities, aka. Project Fugu',
   'Learn about the cross-company effort around enabling the most amazing apps on the web.',
   sections.intro,
-  'red',
+  'blue',
   'top-3',
   true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
   'Waving hand icon',
   333,
   165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Hardware APIs',
+  'Learn about the hardware APIs we work on in the context of Project Fugu.',
+  sections.hardware,
+  'yellow',
+  'top-5',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/cqI5jaJQwsvjeDXsNDJ8.svg',
+  'Conection icon',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Media APIs',
+  'Learn about the media APIs we work on in the context of Project Fugu.',
+  sections.media,
+  'green',
+  'top-2',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/0G9FOqSFCpiJOU7LUFyi.svg',
+  'Media icon',
+  150,
+  150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
   )
 }}
