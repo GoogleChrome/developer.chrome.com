@@ -50,11 +50,11 @@ Blog][devs-blog].
 
 
 [devs-blog]: https://developer.chrome.com/tags/extensions/
+[doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-new]: /docs/extensions/whatsnew/
+[manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
 [mv2-sunset]: /docs/extensions/mv3/mv2-sunset/
+[mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist/
 [mv3-migration]: /docs/extensions/mv3/intro/mv3-migration/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [mv3-platform]: /docs/extensions/mv3/intro/platform-vision/
-[mv3-checklist]: /docs/extensions/mv3/mv3-migration-checklist/
-[doc-manifest]: /docs/extensions/mv3/manifest/
-[manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
