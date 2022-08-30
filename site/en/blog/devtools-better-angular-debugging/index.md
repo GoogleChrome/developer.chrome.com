@@ -193,7 +193,7 @@ In Angular it’s not uncommon to see call frames with names such as `AppCompone
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/uZRLE8JDRbS0YUTplPxt.png", alt="Screenshot of stack trace with an auto-generated function name.", width="800", height="529" %}
 
-To address this, Chrome DevTools now supports renaming these functions through source maps: if a source map has a name entry for the start of a function scope (that is, the left paren of the parameter list) of a function, the call frame should display that name in the stack trace.
+To address this, Chrome DevTools now supports renaming these functions through source maps. If a source map has a name entry for the start of a function scope (that is, the left paren of the parameter list), the call frame should display that name in the stack trace.
 
 ### Friendly Call Frames in Angular
 
