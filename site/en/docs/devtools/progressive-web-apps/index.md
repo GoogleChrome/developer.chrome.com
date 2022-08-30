@@ -88,7 +88,7 @@ DevTools via [remote debugging][6]. To trigger the installation on the connected
 
 ### Test URL protocol handler registration {: #test-protocol-handler }
 
-The registration of such a handler lets installed PWAs handle links that use the URL protocol.
+PWAs can handle links that use a specific protocol for a more integrated experience.
 To learn how to create a handler, see [URL protocol handler registration for PWAs](https://web.dev/url-protocol-handler/).
 
 To test your handler:
