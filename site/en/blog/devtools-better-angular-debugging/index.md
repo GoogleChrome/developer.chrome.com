@@ -209,4 +209,4 @@ For example, if a function for an event listener is generated and its name is ei
 
 Using Angular as a test pilot to verify our work has been a wonderful experience. We would love to hear from framework developers and [provide us feedback on these extension points](https://goo.gle/call-stacks-feedback).
 
-There are more areas that we would like to explore, in particular how to improve the profiling experience in DevTools.
+There are more areas that we would like to explore. In particular, how to improve the profiling experience in DevTools.
