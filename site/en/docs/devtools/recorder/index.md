@@ -85,11 +85,11 @@ After recording a user flow, you can replay it by clicking on the {% Img src="im
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
+If you made a misclick during recording or something doesn't work, you can [debug your user flow](/docs/devtools/recorder/reference/#debug-user-flows): slow down its replay, set a breakpoint, and execute it step by step.
+
 {% Aside 'gotchas' %}
 When replaying a user flow recording, the **Recorder** waits until the element is visible or clickable in the viewport or tries to automatically scroll the element into the viewport before replaying the corresponding step.
 {% endAside %}
-
-If you made a misclick during recording or something doesn't work, you can [debug your user flow](/docs/devtools/recorder/reference/#debug-user-flows): slow down its replay, set a breakpoint, and execute it step by step.
 
 ### Simulate slow network
 
