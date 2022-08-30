@@ -167,7 +167,7 @@ task.run(f);
 
 The asynchronous operations can also be nested, and the “root causes” will be displayed in the stack trace in sequence.
 
-Tasks can be run any number of times, and the work payload can differ between each run. The call stack at the scheduling site will be remembered until the task object is garbage collected.
+Tasks can be run any number of times and the work payload can differ between each run. The call stack at the scheduling site will be remembered until the task object is garbage collected.
 
 {% Aside %}
 This example is covered in more detail in [“Modern web debugging in Chrome DevTools: Linked Stack Traces”](/blog/devtools-modern-web-debugging#linked-stack-traces).
