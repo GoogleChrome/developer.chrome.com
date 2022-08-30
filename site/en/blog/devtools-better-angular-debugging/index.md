@@ -45,7 +45,7 @@ The outcome for authors is covered in more detail in [“Modern web debugging in
 In source maps, the new `x_google_ignoreList` field refers to the `sources` array, and lists the indices of all the known third-party sources in that source map. When parsing the source map, **Chrome DevTools will use this to figure out which sections of the code should be ignore-listed.**
 
 {% Aside %}
-You can learn more about source map extensions [here](https://sourcemaps.info/spec.html#h.ghqpj1ytqjbm)
+Learn more about [source map extensions](https://sourcemaps.info/spec.html#h.ghqpj1ytqjbm).
 {% endAside %}
 
 
