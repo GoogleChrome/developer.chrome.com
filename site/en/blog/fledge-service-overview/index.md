@@ -70,7 +70,7 @@ could be used in a number ways:
 *  Sellers may be required to check ad creatives against publisher policies.
 
 The Key/Value service will have APIs for developers that allow for
-[custom, user-defined functions](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md%23support-for-user-defined-functions-udfs&sa=D&source=docs&ust=1660249938418410&usg=AOvVaw0LxUz3bUu-yM01vQ8gqj_d).
+[custom, user-defined functions](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_trust_model.md#support-for-user-defined-functions-udfs).
 This allows developers to execute their own logic for tasks such as multiple
 look-ups and other advanced queries.
 
