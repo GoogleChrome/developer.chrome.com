@@ -47,7 +47,7 @@ Create a file called `manifest.json` and include the following code:
 ```json
 {
   "manifest_version": 3,
-  "name": "Tab Manager for Google Dev Docs",
+  "name": "Tab Manager for Chrome Dev Docs",
   "version": "1.0",
   "icons": {
     "16": "images/icon-16.png",
@@ -249,7 +249,7 @@ document.querySelector("ul").append(...elements);
 💡 **Interesting JavaScript used in this code**
 {% endDetailsSummary %}
 
-- The [Collator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) is used to sort the tabs array by title in any language.
+- The [Collator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) is used to sort the tabs array by the user's preferred language.
 - The [template tag](https://web.dev/webcomponents-template/) is used to
   define an HTML element that can be cloned instead of using `document.createElement()` to create each item.
 - The [URL constructor](https://developer.mozilla.org/docs/Web/API/URL/URL) is used to create and parse URLs.
@@ -288,10 +288,10 @@ color. Add the `“tabGroups”` permission to the manifest by adding the follow
 
 ## Test that it works {: #try-out }
 
-Verify that the file structure of your project looks like the following: 
+Verify that the file structure of your project matches the following directory tree: 
 
 ```text
-└── Tabs-manager/
+└── tabs-manager/
     ├── manifest.json
     ├── popup.js
     ├── popup.css
@@ -334,9 +334,10 @@ alt="Tabs Manager extension popup", width="600", height="230", class="screenshot
 
 Based on what you’ve learned today, try to implement any of the following:
 
-- Improve the popup stylesheet.
+- Customize the popup stylesheet.
 - Change the color and title of the tab group.
 - Manage the tabs of another documentation site.
+- Add support for ungrouping the grouped tabs.
 
 ## Keep building! {: #continue }
 
