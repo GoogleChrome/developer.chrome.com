@@ -123,7 +123,7 @@ compilation.updateAsset(name, new RawSource(JSON.stringify(map)));
 
 ## Linked stack traces
 
-Stack traces answer the question of _“how did I get here”_, but oftentimes this is from the machine’s perspective, and not necessarily something that matches the developer’s perspective or their mental model of the application runtime. This is especially true when some operations are scheduled to happen asynchronously later: it could still be interesting to know the “root cause” or the scheduling side of such operations, but that’s exactly something that won’t be part of a synchronous stack trace.
+Stack traces answer the question of _“how did I get here”_, but oftentimes this is from the machine’s perspective, and not necessarily something that matches the developer’s perspective or their mental model of the application runtime. This is especially true when some operations are scheduled to happen asynchronously later: it could still be interesting to know the “root cause” or the scheduling side of such operations, but that’s exactly something that won’t be part of an asynchronous stack trace.
 
 V8 internally has a mechanism for keeping track of such asynchronous tasks when standard browser scheduling primitives are used, such as `setTimeout`. This is done by default in those cases, so the developers can inspect these already! But in more complex projects, it’s not as simple as that, especially when using a framework with more advanced scheduling mechanisms—for example, one that performs zone tracking, custom task queueing, or that splits updates into several units of work that are run over time.
 
