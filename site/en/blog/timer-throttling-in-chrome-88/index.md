@@ -234,7 +234,7 @@ Since timers are a source of excessive CPU use, we're going to continue to look 
 ways we can throttle them without breaking web content, and APIs we can
 add/change to meet use-cases. Personally, I'd like to eliminate the need for
 `animationInterval` in favor of efficient low-frequency animation callbacks. If
-you have any questions, [reach out to me on
+you have any questions, please [reach out to me on
 Twitter](https://twitter.com/jaffathecake/)!
 
 Header photo by [Heather Zabriskie](https://unsplash.com/@heatherz) on
