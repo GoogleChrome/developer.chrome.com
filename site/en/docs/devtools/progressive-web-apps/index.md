@@ -94,6 +94,7 @@ To learn how to create a handler, see [URL protocol handler registration for PWA
 To test your handler:
 
 1. [Open DevTools](/docs/devtools/open/) on the landing page of your PWA. For example, check out this [demo page](https://protocol-handler.glitch.me/).
+1. From the demo page, install the PWA and reload the app after the installation. The browser has now registered the PWA as a handler for the `web+coffee` protocol with the operating system.
 1. In the **Application** > **Manifest** > **Protocol Handler** section, enter the URL you want the handler to test and click **Test protocol**.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eV8j54Q0sK8Rf8FbVx2Y.png", alt="Testing the handler.", width="800", height="415" %}
    In this example, the handler can process `americano`, `chai`, and `latte-macchiato`.
