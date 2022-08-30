@@ -62,7 +62,7 @@ We plan to enable this experiment by default soon. Send us feedback [here](https
 ## “Just my code”
 
 {% Aside %}
-Note: This is a preview feature available in Chrome Canary from version 106.
+**Note**: This is a preview feature available in [Chrome Canary](https://www.google.com/chrome/canary/) from version 106.
 {% endAside %}
 
 When using dependencies or building on top of a framework, the third party files can get in your way. Most of the time you only want to see just your code, not that of some third-party library tucked away in the `node_modules` folder.
