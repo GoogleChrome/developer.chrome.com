@@ -2,12 +2,12 @@
 layout: layouts/doc-post.njk
 title: Privacy Sandbox events
 subhead: >
-  Information and resources for online and in-person events.
+ Information and resources for online and in-person events.
 description: >
-  Information and resources for online and in-person events.
+ Information and resources for online and in-person events.
 date: 2022-08-30
 authors:
-  - samdutton
+ - samdutton
 ---
 
 Learn about forthcoming events, and get access to resources for events that have
@@ -19,26 +19,26 @@ already taken place.
 
 The Google Chrome team will be hosting our next two Office Hours sessions, providing an
 overview and a demo of the Topics API, as well as a Q&A session with DevRel, Product and Engineering
-leads.   
+leads. 
 
-Join us to learn more about our approach to the Topics API, and to get your questions answered.  
+Join us to learn more about our approach to the Topics API, and to get your questions answered. 
 
-**Session 1 with English-language demo**  
-* Tuesday, September 6th  
-* 8:00–9:30 am PDT   
-* Video call link: [meet.google.com/xnp-mxct-qvd](https://meet.google.com/xnp-mxct-qvd)  
-* Or dial: ‪(US) +1 651-867-0444‬ PIN: ‪530 909 558‬#  
-* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397)  
+**Session 1 with English-language demo** 
+* Tuesday, September 6 
+* 8:00–9:30 am PDT 
+* Video call link: [meet.google.com/xnp-mxct-qvd](https://meet.google.com/xnp-mxct-qvd) 
+* Or dial: (US) +1 651-867-0444 PIN: 530 909 558 # 
+* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397) 
 
-**Session 2 with Japanese-language demo**  
-* PDT: Tuesday, September 13, 6–7:30 pm  
-  JST: Wednesday, September 14, 10–11:30 am  
-* Video call link: [meet.google.com/xnp-mxct-qvd](http://meet.google.com/xnp-mxct-qvd)  
-* Or dial: ‪Japan (JP) +81 3-4545-0450    984 065 402 5397#  
-* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397)  
+**Session 2 with Japanese-language demo** 
+* PDT: Tuesday, September 13, 6–7:30 pm 
+ JST: Wednesday, September 14, 10–11:30 am 
+* Video call link: [meet.google.com/xnp-mxct-qvd](http://meet.google.com/xnp-mxct-qvd) 
+* Or dial: Japan (JP) +81 3-4545-0450 984 065 402 5397# 
+* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397) 
 
 A recording of the overview presentation and demo will be shared after the events​​ via the [Chrome
-Developer YouTube channel](https://www.youtube.com/c/GoogleChromeDevelopers).  
+Developer YouTube channel](https://www.youtube.com/c/GoogleChromeDevelopers). 
 We hope this is a helpful forum, and welcome your feedback and suggestions on how to make these
 events most useful for you as we experiment with different approaches.
 
@@ -76,7 +76,7 @@ announcements are also made on [this issue](https://github.com/WICG/attribution-
 * [Video of presentation](https://drive.google.com/file/d/1EVCw6MTz3JIdkno2lICN6q7gNrmZBYGf/view?pli=1)
 * [Find out more](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev/c/NLbPwiwj3BE)
 
-### Learn about Chrome origin trials  {: #oh01}
+### Learn about Chrome origin trials {: #oh01}
 **Privacy Sandbox Developer Office Hours #1**
 
 * April 20, 27 and 28, 2022
