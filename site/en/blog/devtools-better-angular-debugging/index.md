@@ -78,7 +78,7 @@ There is one additional piece of information that can now be included in source 
 
 The new `x_google_ignoreList` field contains a single index referring to the `sources` array: 1. This specifies that the regions mapped to `lib.js` are in fact third-party code that should be automatically added to the ignore list.
 
-In a more complex example the indices 2, 4 and 5 specify that regions mapped to `lib1.ts`, `lib2.coffee` and `hmr.js` are all third-party code that should be automatically added to the ignore list.
+In a more complex example the indices 2, 4, and 5 specify that regions mapped to `lib1.ts`, `lib2.coffee`, and `hmr.js` are all third-party code that should be automatically added to the ignore list.
 
 ```json/3
 {
