@@ -86,7 +86,7 @@ The following example shows how to declare the `nativeMessaging` permission in t
 
 For a web page to access an asset hosted on another domain, it must specify the resource's full URL
 (e.g. `<img src="https://example.com/logo.png">`). The same is true to include an extension asset on
-a web page. The two main differences here are that the extension's assets must be exposed as [web
+a web page. The two differences are that the extension's assets must be exposed as [web
 accessible resources][doc-war] and that typically content scripts are responsible for injecting
 extension assets.
 
