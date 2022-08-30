@@ -179,7 +179,7 @@ additional changes in Chrome 105.
 * [What's new in Chrome DevTools (105)](/blog/new-in-devtools-105/)
 * [Chrome 105 deprecations and removals](/blog/deps-rems-105/)
 * [ChromeStatus.com updates for Chrome 105](https://www.chromestatus.com/features#milestone%3D105)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/104.0.5112.84..105.0.TODO.84)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/104.0.5112.84..105.0.5195.74)
 * [Chrome release calendar](https://chromiumdash.appspot.com/schedule)
 
 ## Subscribe
