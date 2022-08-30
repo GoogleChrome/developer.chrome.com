@@ -167,6 +167,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
+  to: /docs/devtools/progressive-web-apps/#trigger-installation
+
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
 
