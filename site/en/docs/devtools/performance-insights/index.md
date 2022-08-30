@@ -141,7 +141,7 @@ If the largest contentful paint on your page takes longer to render, in the time
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ftLjLtpo9Lki9JGbhHpB.png", alt="The LCP badge.", width="800", height="580" %}
 
-Click the badge to open the **Details** pane. In the pane, you can discover potential causes for the delays and suggestions on how to fix them.
+To open the **Details** pane, click the LCP badge on the timeline or on the **Insights** pane on the right. In the pane, you can discover potential causes for the delays and suggestions on how to fix them.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wnl6w6KOnqUQsXSWu0xN.png", alt="The details pane.", width="800", height="627" %}
 
