@@ -61,13 +61,14 @@ Click **Console Settings**
 
 The links below explain each setting:
 
-- [**Hide Network**][8]
-- [**Preserve Log**][9]
-- [**Selected Context Only**][10]
-- [**Group Similar**][11]
-- [**Log XmlHttpRequests**][12]
-- [**Eager Evaluation**][13]
-- [**Autocomplete From History**][14]
+- [**Hide network**][8]
+- [**Preserve log**][9]
+- [**Selected context only**][10]
+- [**Group similar messages in console**][11]
+- [**Show CORS errors in console**][48]
+- [**Log XMLHttpRequests**][12]
+- [**Eager evaluation**][13]
+- [**Autocomplete from history**][14]
 
 ### Open the Console Sidebar {: #sidebar }
 
@@ -115,6 +116,13 @@ To hide network messages:
 
 1.  [Open Console Settings][21].
 2.  Enable the **Hide Network** checkbox.
+
+### Hide CORS errors {: #cors-errors }
+
+To reduce clutter in the **Console** you can hide [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors):
+
+1.  [Open Console Settings][21].
+2.  Clear the **Show CORS errors in the console** checkbox.
 
 ## Filter messages {: #filter }
 
@@ -394,3 +402,4 @@ You can use any of the following workflows to clear the Console:
 [45]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function*
 [46]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [47]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+[48]: #cors-errors
