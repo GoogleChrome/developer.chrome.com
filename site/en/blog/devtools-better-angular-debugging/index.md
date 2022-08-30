@@ -92,7 +92,7 @@ In a more complex example the indices 2, 4 and 5 specify that regions mapped to 
 If you’re a framework or bundler developer, make sure the source maps generated during the build process include this field in order to hook into these new capabilities in Chrome DevTools.
 
 {% Aside %}
-There may be regions in the generated code that aren’t mapped to any original code at all. We are open to exploring the possibility of such granular ignore-listing regions. Please reach out if your framework or bundler would benefit from fine-grained ignore-listing!
+There may be regions in the generated code that aren’t mapped to any original code at all. We are open to exploring the possibility of such granular ignore-listing regions. Reach out if your framework or bundler would benefit from fine-grained ignore-listing!
 {% endAside %}
 
 ### `x_google_ignoreList` in Angular
