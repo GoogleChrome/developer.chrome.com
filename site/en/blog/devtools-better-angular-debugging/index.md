@@ -203,7 +203,7 @@ While parsing the HTML templates that authors have written, the Angular compiler
 
 As part of this code generation process, source maps are also created. We are currently exploring ways of including function names in the “names” field of source maps, and referencing those names in the mappings between the generated code and original code.
 
-For example, if a function for an event listener is generated and its name is either unfriendly or removed during minification, source maps can now include the more friendly name for this function in the “names” field, and the mapping for the beginning of the function scope can now refer to this name (that is, the left paren of the parameter list). Chrome DevTools will then use these names to rename call frames in stack traces.
+For example, if a function for an event listener is generated and its name is either unfriendly or removed during minification, source maps can now include the more friendly name for this function in the “names” field and the mapping for the beginning of the function scope can now refer to this name (that is, the left paren of the parameter list). Chrome DevTools will then use these names to rename call frames in stack traces.
 
 ## Looking ahead
 
