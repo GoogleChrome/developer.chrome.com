@@ -10,15 +10,15 @@ can use:
 Message passing
 
 : Your extension can communicate with different contexts within your extension and also with other extensions using these methods and events: 
-[connect][method-connect],
+[connect()][method-connect],
 [onConnect][method-onconnect], 
 [onConnectExternal][method-onconnectexternal],
-[sendMessage][method-sendmessage], 
+[sendMessage()][method-sendmessage], 
 [onMessage][method-onconnect] and
 [onMessageExternal][method-onmessageexternal]. 
 In addition, your extension can pass messages to native applications on the user's device using 
-[connectNative][method-connectnative] and
-[sendNativeMessage][method-sendnativemessage]. 
+[connectNative()][method-connectnative] and
+[sendNativeMessage()][method-sendnativemessage]. 
 
 {% Aside %}
 
@@ -30,8 +30,8 @@ Accessing extension and platform metadata
 
 : These methods let you retrieve several specific pieces of metadata about the extension and the
   platform. Methods in this category include
-  [getManifest][method-getmanifest], and
-  [getPlatformInfo][method-getplatforminfo].
+  [getManifest()][method-getmanifest], and
+  [getPlatformInfo()][method-getplatforminfo].
 
 Managing extension lifecycle and options
 
@@ -39,16 +39,16 @@ Managing extension lifecycle and options
 Methods and events in this category include
   [onInstalled][method-oninstalled],
   [onStartup][method-onstartup],
-  [openOptionsPage][method-openoptionspage],
-  [reload][method-reload],
-  [requestUpdateCheck][method-requestupdatecheck], and
-  [setUninstallURL][method-setuninstallurl]
+  [openOptionsPage()][method-openoptionspage],
+  [reload()][method-reload],
+  [requestUpdateCheck()][method-requestupdatecheck], and
+  [setUninstallURL()][method-setuninstallurl].
 
 Helper utilities
 
 : These methods provide utility such as the conversion of internal resource representations to
   external formats. Methods in this category include
-  [getURL][method-geturl].
+  [getURL()][method-geturl].
 
 Kiosk mode utilities
 
@@ -84,8 +84,11 @@ The following example shows how to declare the `nativeMessaging` permission in t
 
 ### Add an image to a web page {: #example-get-url }
 
-For a web page to access an asset hosted on another domain, it must specify the resource's
-full URL (e.g. `<img src="https://example.com/logo.png">`). The same is true to include an extension asset on a web page. The two main differences here are that the extension's assets must be exposed as [web accessible resources][doc-war] and that typically content scripts are responsible for injecting extension assets.
+For a web page to access an asset hosted on another domain, it must specify the resource's full URL
+(e.g. `<img src="https://example.com/logo.png">`). The same is true to include an extension asset on
+a web page. The two main differences here are that the extension's assets must be exposed as [web
+accessible resources][doc-war] and that typically content scripts are responsible for injecting
+extension assets.
 
 In this example, the extension will add `logo.png` to the page that the [content
 script][doc-content] is being [injected][content-inject] into by using `runtime.getURL()` to create a
