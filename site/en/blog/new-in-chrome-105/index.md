@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 105
 description: >
-  Chrome 105 is rolling out now! Container queries and :has() are a match made in responsive heaven. The new Sanitizer API provides a robust processor for arbitrary strings to help reduce cross site scripting vulnerabilities. We’re taking another step towards deprecating WebSQL. And there's plenty more.
+  Chrome 105 is rolling out now. Container queries and :has() are a match made in responsive heaven. The new Sanitizer API provides a robust processor for arbitrary strings to help reduce cross site scripting vulnerabilities. We’re taking another step towards deprecating WebSQL. And there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-08-30
 authors:
@@ -42,7 +42,7 @@ a container  instead of the size of the viewport.
 {% endColumn %}
 
 {% Column %}
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EJRlvQDHiNP4515gtWhm.png", width="627", height="453", alt="Container query vs media query" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EJRlvQDHiNP4515gtWhm.png", width="627", height="453", alt="Container query vs media query." %}
 {% endColumn %}
 {% endColumns %}
 
