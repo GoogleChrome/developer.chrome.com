@@ -446,7 +446,7 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [Other
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [web
 APIs][44].
 
 [Give us feedback!][45] Your comments and suggestions help us improve the APIs.
@@ -489,5 +489,5 @@ You can find examples that use DevTools APIs in [Samples][42].
 [40]: https://github.com/thomasboyt/coquette-inspect
 [42]: https://github.com/GoogleChrome/chrome-extensions-samples
 [43]: /docs/extensions/reference/
-[44]: /docs/extensions/api_other/
+[44]: https://developer.mozilla.org/docs/Web/API
 [45]: http://groups.google.com/group/google-chrome-developer-tools/topics
