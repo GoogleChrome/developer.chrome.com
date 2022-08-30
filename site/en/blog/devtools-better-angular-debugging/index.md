@@ -187,7 +187,7 @@ The [PR to use this updated version also in `angular-cli`](https://github.com/an
 
 ## Friendly Call Frames
 
-Frameworks often generate code from all kinds of templating languages when building a project, such as Angular templates, or JSX templates, that turn HTML-looking code into plain JavaScript code that eventually runs in the browser. Sometimes, these kinds of generated functions are given names that aren’t very friendly – either single letter names after they’re minified, or some obscure or unfamiliar name even when they’re not.
+Frameworks often generate code from all kinds of templating languages when building a project, such as Angular or JSX templates that turn HTML-looking code into plain JavaScript that eventually runs in the browser. Sometimes, these kinds of generated functions are given names that aren’t very friendly — either single letter names after they’re minified or some obscure or unfamiliar names even when they’re not.
 
 In Angular it’s not uncommon to see call frames with names such as `AppComponent_Template_app_button_handleClick_1_listener` in stack traces.
 
