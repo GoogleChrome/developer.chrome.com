@@ -63,7 +63,11 @@ Below is a source map for a generated file `out.js`. There are two original `sou
 }
 ```
 
-The `sourcesContent` is included for both of these original sources, and Chrome DevTools would display these files by default across the Debugger: as files in the Sources tree, as results in the Quick Open dialog, or as mapped call frame locations in error stack traces, while paused on a breakpoint, and while stepping.
+The `sourcesContent` is included for both of these original sources and Chrome DevTools would display these files by default across the Debugger: 
+
+- As files in the Sources tree.
+- As results in the Quick Open dialog.
+-  As mapped call frame locations in error stack traces while paused on a breakpoint and while stepping.
 
 There is one additional piece of information that can now be included in source maps to identify which of those sources is first or third-party code:
 
