@@ -73,7 +73,7 @@ sharing their insights on UA Reduction and the new UA-CH API. This type of
 feedback allows others to collectively benefit from learnings while also
 encouraging an open conversation about how to improve privacy on the web.
 
-For example, Brazilian eCommerce site [VTEX
+For example, Brazilian digital commerce platform [VTEX
 has published their testing results](https://github.com/WICG/ua-client-hints/issues/314)
 for UA Reduction and found no impact on their payments gateway. ClearSale, a
 Brazilian anti-fraud provider, similarly published their results and
