@@ -446,7 +446,7 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [Other
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [web
 APIs][44].
 
 [Give us feedback!][45] Your comments and suggestions help us improve the APIs.
