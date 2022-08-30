@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "Case Study: Better Angular Debugging with DevTools"
-Authors:
+authors:
   - victorporof
   - bramus
 description: >
