@@ -158,7 +158,7 @@ This deprecation will currently only affect sites that use WebSQL via
 If you’re using WebSQL in non-secure contexts, you should migrate to IndexDB,
 or another local storage container as soon as possible. For more information
 about this deprecation and the planned deprecation of WebSQL see
-[TODO: post title][dcc-websql-dep].
+[Deprecating and removing Web SQL][dcc-websql-dep].
 
 ## And more! {: #more }
 
@@ -194,4 +194,4 @@ tell you what's new in Chrome!
 [dcc-has-with-cq-m105]: /blog/has-with-cq-m105/
 [dompurify]: https://github.com/cure53/DOMPurify
 [wd-sanitizer]: https://web.dev/sanitizer/
-[dcc-websql-dep]: https://google.com/TODO
+[dcc-websql-dep]: /blog/deprecating-web-sql/
