@@ -17,7 +17,8 @@
       width="192",
       class="rounded-full display-inline-block",
       sizes="(min-width: 481px) 192px, 128px",
-      options={minWidth: 128}
+      options={minWidth: 128},
+      fetchpriority="high"
     %}
     <h1 class="lg:gap-top-400 type--h4">{{ paged.title | i18n(locale) }}</h1>
     <p class="type gap-top-300">{{ paged.description | i18n(locale) }}</p>
