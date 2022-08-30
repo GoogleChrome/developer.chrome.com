@@ -11,7 +11,7 @@ alt: ''
 tags:
   - extensions
 ---
-
+<!-- TODO: Change image -->
 In this post, we're excited to share some significant improvements to the Chrome extensions Getting Started experience and a few ways you can be part of this dream.
 
 ## First attempt
