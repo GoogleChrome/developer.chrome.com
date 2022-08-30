@@ -1,24 +1,22 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'First-Party Sets'
-subhead: >
-  同じ組織が所有、運用する関連するドメイン名が同じファーストパーティに属することを宣言できる。
-description: >
-  First-Party Sets を使用すると、同じ組織が所有、運用する関連ドメイン名が、同じファーストパーティに属することを宣言できる。
+layout: layouts/doc-post.njk
+title: First-Party Sets
+subhead: 同じ組織が所有、運用する関連するドメイン名が同じファーストパーティに属することを宣言できる。
+description: First-Party Sets を使用すると、同じ組織が所有、運用する関連ドメイン名が、同じファーストパーティに属することを宣言できる。
 date: 2021-05-18
-updated: 2021-10-18
+updated: 2022-08-04
 authors:
   - samdutton
 ---
 
-<!--lint disable no-smart-quotes-->
+{% Aside 'caution' %} First-Party Sets の提案は、[ユースケース別の定義と Storage Access API を基に、新しいデザインに更新](https://github.com/WICG/first-party-sets/issues/92)されています。[レポジトリで議論をご覧頂くこともできますし](https://github.com/WICG/first-party-sets/issues)、進捗があればこちらの内容も更新していきます。{% endAside %}
 
 ## 実装状況
 
-* First-Party Sets と SameParty の最初の[オリジントライアル](/origintrials/#/view_trial/988540118207823873)は Chrome バージョン 89 ～ 93 で公開されていましたが、現在は終了しています。
-* [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5640066519007232)
-* [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)
-
+- First-Party Sets の[デザイン変更提案、2022 年 7 月](https://github.com/WICG/first-party-sets/issues/92)。
+- First-Party Sets と SameParty の最初の[オリジン トライアル](/origintrials/#/view_trial/988540118207823873)は、Chrome のバージョン 89 から 93 で利用できましたが、現在は終了しています。
+- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)。
+- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
 
 ## First-Party Sets が必要な理由
 
@@ -67,19 +65,17 @@ First-Party Sets を補完する提案は、`SameParty` Cookie 属性です。 C
 
 つまり、b.example または c.example の訪問者が a.example に対してリクエストを行うと、`セッション` Cookie がそのリクエストに含まれます。
 
-
 ---
 
 ## 貢献とフィードバックの共有
 
-* **オリジントライアル**: First-Party Sets と SameParty の最初の[オリジントライアル](/origintrials/#/view_trial/988540118207823873)は Chrome バージョン 89 ～ 93 で公開されていましたが、現在は終了しています。
-* **GitHub**: [提案](https://github.com/privacycg/first-party-sets)を読んで、[質問を挙げ、ディスカッションをフォロー](https://github.com/privacycg/first-party-sets/issues)できます。
-* **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
-
+- **オリジントライアル**: First-Party Sets と SameParty の最初の[オリジントライアル](/origintrials/#/view_trial/988540118207823873)は Chrome バージョン 89 ～ 93 で公開されていましたが、現在は終了しています。
+- **GitHub**: [提案](https://github.com/privacycg/first-party-sets)を読んで、[質問を挙げ、ディスカッションをフォロー](https://github.com/privacycg/first-party-sets/issues)できます。
+- **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
 
 ## 詳細
 
-* [First-Party Sets 属性と sameParty 属性](/blog/first-party-sets-sameparty/)
-* [First-Party Sets の技術 Explainer](https://github.com/privacycg/first-party-sets)
-* [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5640066519007232)
-* [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)
+- [First-Party Sets 属性と sameParty 属性](/blog/first-party-sets-sameparty/)
+- [First-Party Sets の技術 Explainer](https://github.com/privacycg/first-party-sets)
+- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5640066519007232)
+- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)
