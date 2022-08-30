@@ -49,7 +49,7 @@ You can learn more about source map extensions [here](https://sourcemaps.info/sp
 {% endAside %}
 
 
-Shown below is a source map for a generated file `out.js`. There are two original `sources` that contributed to generating the output file, namely `foo.js` and `lib.js`, the former being something that the web site developer wrote, and the latter being a framework that they used.
+Below is a source map for a generated file `out.js`. There are two original `sources` that contributed to generating the output file: `foo.js` and `lib.js`. The former is something a web site developer wrote and the latter is a framework they used.
 
 ```json
 {
