@@ -54,7 +54,7 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
   **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
   panel.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Please use Web Storage or Indexed Database.", width="800", height="158" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
 - [🔮 In the future.] Web SQL access in **insecure contexts** will be completely removed in a later
   milestone.
