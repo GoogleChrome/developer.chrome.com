@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Issues: Find and fix problems"
 authors:
   - samdutton
+  - sofiayem
 date: 2020-05-14
-#updated: YYYY-MM-DD
+updated: 2022-08-31
 description: "Use the Issues Tab to find and fix problems with your website."
 tags:
   - find-issues
@@ -16,11 +17,12 @@ content.
 
 {% Aside %}
 
-In Chrome 84, the Issues tab supports three types of issue:
+Starting from Chrome 92, the **Issues** tab supports the following types of issues:
 
 - [Cookie problems][1]
 - [Mixed content][2]
 - [COEP issues][3]
+- [CORS errors][6]
 
 Future versions of Chrome will support more issue types.
 
@@ -87,3 +89,5 @@ way.
 [3]: https://web.dev/coop-coep/
 [4]: https://samesite-sandbox.glitch.me/
 [5]: /docs/devtools/open
+[6]: https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors
+

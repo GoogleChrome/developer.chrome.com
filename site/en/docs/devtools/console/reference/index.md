@@ -54,10 +54,13 @@ Console** command that has the **Drawer** badge next to it.
 
 ### Open Console Settings {: #settings }
 
-Click **Console Settings**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Console Settings.", width="24", height="24" %}.
+Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Console Settings** in the top-right corner of the **Console**. 
 
-{% Img src="image/admin/MMPCv1S2FqQVG6qJvByI.png", alt="Console Settings.", width="800", height="541" %}
+{% Aside 'gotchas' %}
+Not to be confused with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **DevTools Settings** above and next to the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu.
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3TK0o3niI3ZMeqMpjU5X.png", alt="Console Settings.", width="800", height="495" %}
 
 The links below explain each setting:
 
@@ -117,12 +120,23 @@ To hide network messages:
 1.  [Open Console Settings][21].
 2.  Enable the **Hide Network** checkbox.
 
-### Hide CORS errors {: #cors-errors }
+### Show or hide CORS errors {: #cors-errors }
 
-To reduce clutter in the **Console** you can hide [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors):
+The **Console** can show [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors) if network requests fail due to [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/docs/Web/HTTP/CORS).
+
+To show or hide CORS errors:
 
 1.  [Open Console Settings][21].
-2.  Clear the **Show CORS errors in the console** checkbox.
+2.  Check or clear the **Show CORS errors in the console** checkbox.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UHUIHBUpRRHHeRrp7oIX.png", alt="Show CORS errors in the console.", width="800", height="543" %}
+
+If the console is set to show CORS errors and you encounter them, you can click the following buttons next to errors:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/A3O2e55NMBoRtTwDGqml.png", alt="Network and Issues buttons.", width="800", height="553" %}
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4Ff7QbpSsyddZ9FDPmZw.png", alt="Network.", width="22", height="22" %} to open the request with a CORS-related `TypeError` in the **Network** panel.
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TDnjxpWHnj9MOmmmVpos.png", alt="Issues.", width="22", height="23" %} to get a [potential solution on the **Issues** tab](/docs/devtools/issues/#view-issues).
 
 ## Filter messages {: #filter }
 
