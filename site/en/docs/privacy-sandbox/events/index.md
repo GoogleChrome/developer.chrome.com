@@ -5,7 +5,8 @@ subhead: >
  Information and resources for online and in-person events.
 description: >
  Information and resources for online and in-person events.
-date: 2022-08-30
+date: 2022-08-19
+updated: 2022-08-31
 authors:
  - samdutton
 ---
