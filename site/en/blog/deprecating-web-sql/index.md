@@ -9,8 +9,8 @@ description: >
   is planned for later Chromium releases.
 authors:
   - thomassteiner
-date: 2022-08-26
-# updated: 2022-08-26
+date: 2022-08-31
+# updated: 2022-08-31
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -54,7 +54,7 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
   **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
   panel.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
 - [🔮 In the future.] Web SQL access in **insecure contexts** will be completely removed in a later
   milestone.
