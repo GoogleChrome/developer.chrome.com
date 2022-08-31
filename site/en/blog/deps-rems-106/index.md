@@ -32,6 +32,6 @@ Chrome has [removed the ability](https://www.chromestatus.com/feature/6302414934
 
 The `window.PERSISTENT` quota type in `webkitRequestFileSystem()` [is now deprecated](https://www.chromestatus.com/feature/5176235376246784).
 
-Support for the `PERSISTENT` quota type contributes some amount of complexity to the quota system, but `webkitRequestFileSystem()` is the only consumer, with relatively low usage. 
+Support for the `PERSISTENT` quota type contributes some amount of complexity to the quota system, but `webkitRequestFileSystem()` is the only consumer, and it's a form of storage that never caught on and is very seldom used.
 
 {% include 'partials/deprecations-policy.md' %}
