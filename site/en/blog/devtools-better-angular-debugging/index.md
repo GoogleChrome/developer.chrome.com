@@ -12,6 +12,7 @@ alt: Better Angular Debugging with DevTools
 tags:
   - javascript
   - devtools
+  - devtools-engineering
 ---
 
 ## An improved debugging experience
