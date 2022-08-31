@@ -24,7 +24,7 @@ Support for IDN domain attributes in cookies has been long unspecified, with Chr
 
 Since Chromium has previously accepted non-ASCII characters and tried to convert them to normalized punycode for storage, we will now apply stricter rules and require valid ASCII (punycode if applicable) domain attributes.
 
-## Remove HTTP/2 push {#remove-http-2-push}
+## Remove HTTP/2 push
 
 Chrome has [removed the ability](https://www.chromestatus.com/feature/6302414934114304) to receive, keep in memory, and use HTTP/2 push streams sent by the server. See [Removing HTTP/2 Server Push from Chrome](/blog/removing-push/) for details and suggested alternative APIs.
 
