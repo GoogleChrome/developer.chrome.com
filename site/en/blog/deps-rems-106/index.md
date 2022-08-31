@@ -16,7 +16,7 @@ tags:
 
 Chrome 106 beta was released on September 1, 2022 and is expected to become the stable version in late September, 2022.
 
-## Remove non-ASCII characters in cookie domain attributes {#remove-non-ascii-characters-in-cookie-domain-attributes}
+## Remove non-ASCII characters in cookie domain attributes
 
 To align with the latest spec ([RFC 6265bis](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis/#section-5.5)), [Chromium now rejects](https://www.chromestatus.com/feature/5534966262792192) cookies with a `Domain` attribute that contains non-ASCII characters (for example, `éxample.com`).
 
