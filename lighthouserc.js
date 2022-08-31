@@ -1,5 +1,8 @@
 module.exports = {
   ci: {
+    upload: {
+      target: 'temporary-public-storage',
+    },
     collect: {
       startServerCommand: 'npm start',
       startServerTimeout: 60 * 1000, // allow our build to take 60s
