@@ -175,7 +175,7 @@ generate a new token with a new expiration date.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=100)
 
 * **FeatureDisabledForUser**: This token has been designated as disabled for the current user via an
-alternative usage restriction. See the "User Subset Exclusions" section of [design doc](https://docs.google.com/document/d/1xALH9W7rWmX0FpjudhDeS2TNTEOXuPn4Tlc9VmuPdHA).<br>
+alternative usage restriction. See the "User Subset Exclusions" section of the [design doc](https://docs.google.com/document/d/1xALH9W7rWmX0FpjudhDeS2TNTEOXuPn4Tlc9VmuPdHA).<br>
 [Source code 1](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=106)<br>
 [Source code 2](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/origin_trials/trial_token.h;l=155)
 
@@ -212,7 +212,7 @@ requested from an expected origin.<br>
 * **TokenDisabled**: Token has been marked as disabled and cannot be used.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=103)
 
-* **TrialNotAllowed**: The origin trial is [not available for the current user](https://developer.chrome.com/docs/web-platform/origin-trial-troubleshooting/#user).<br>
+* **TrialNotAllowed**: The origin trial is [not available for the current user](/docs/web-platform/origin-trial-troubleshooting/#user).<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/origin_trials/origin_trial_context.cc;drc=96a0ae6d349eb7dd0288df76491b717cb65422f9;l=486)
 
 * **UnknownTrial**: The token specifies a feature name that does not match any known trial.<br>
