@@ -121,6 +121,7 @@ async function run() {
             url: api.replace(/.*?\((https.*)\)/g, '$1'),
           };
         }),
+        isElectronApp: row[4].toLowerCase() === 'yes',
         screenshot: `${fileNamifyURL(row[1])}.${
           SCREENSHOT_OPTIONS.type
         }`.replace(/#/g, ''),

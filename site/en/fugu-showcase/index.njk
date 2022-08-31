@@ -95,6 +95,9 @@ alt: Blowfish swarm swimming in the ocean.
                 </div>
                 <div>
                   <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.appURL }}" rel="noopener" target="_blank">Launch app</a>
+                  {% if item.isElectronApp %}
+                    (Electron.js)
+                  {% endif %}
                   {% if item.sourceURL %}
                     <a class="material-button button-filled button-round display-inline-flex color-bg bg-primary gap-top-400" href="{{ item.sourceURL }}" rel="noopener" target="_blank">Source code</a>
                   {% endif %}
