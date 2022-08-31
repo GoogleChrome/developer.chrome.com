@@ -45,13 +45,11 @@ Currently, when navigating the file tree in the [Sources Panel](/docs/devtools/j
 
 This is not very handy and often hard to grasp. As an author, you want to see and debug the code that you wrote, not the _Deployed Code_.
 
-To make up for it, you can now have the tree show the _Authored Code_ instead. They are similar to the source files you get to see in your IDE and separated from the _Deployed Code_.
+To make up for it, you can now have the tree show the _Authored Code_ instead. This makes the tree more closely resemble source files you get to see in your IDE, and these files are now separated from the _Deployed Code_.
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/MtGlolFG9ucxykvbOEB9.png", alt="Screenshot of the file tree in Chrome DevTools showing the Authored Code.", width="800", height="479" %}
 
 To enable this option in Chrome DevTools, go to **Settings** > **Experiments** and check **Group sources into Authored and Deployed trees**.
-
-With the option enabled, the file tree now looks like this:
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/XCJVoG5N9DY4Uav7cTa1.png", alt="Screenshot of DevTools’s Settings.", width="800", height="465" %}
 
@@ -89,7 +87,7 @@ One place where these ignore-listed files no longer show up is in stack traces. 
 
 Should you want to see all call frames of the stack trace, you can always click the **Show more frames** link.
 
-The same applies for the call stacks that you see while [debugging and stepping through your code](/docs/devtools/javascript/). DevTools now hides all irrelevant call frames and jumps over any ignore-listed code while step-debugging.
+The same applies for the call stacks that you see while [debugging and stepping through your code](/docs/devtools/javascript/). When frameworks or bundlers inform DevTools about third-party scripts, DevTools automatically hides all irrelevant call frames and jumps over any ignore-listed code while step-debugging.
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/DAKhEbhZjni4VKoAr9NA.png", alt="Screenshot of the DevTools Sources Debugger while debugging.", width="800", height="529" %}
 

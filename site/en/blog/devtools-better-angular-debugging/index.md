@@ -16,9 +16,7 @@ tags:
 
 ## An improved debugging experience
 
-Over the past few months the Chrome DevTools team collaborated with the Angular team to launch improvements to the debugging experience in Chrome DevTools.
-
-As a result, Chrome DevTools [now allows developers to debug and profile web applications from the authoring perspective](/blog/devtools-modern-web-debugging): in terms of their source language and project structure, with access to information that is familiar and relevant to them.
+Over the past few months the Chrome DevTools team collaborated with the Angular team to launch improvements to the debugging experience in Chrome DevTools. People from both teams worked together and took steps towards [enabling developers to debug and profile web applications from the **authoring perspective**](/blog/devtools-modern-web-debugging): in terms of their source language and project structure, with access to information that is familiar and relevant to them.
 
 This post takes a look under the hood to see which changes in Angular and Chrome DevTools were required to achieve this. Even though some of these changes are demonstrated through Angular, they can be applied to other frameworks as well. The Chrome DevTools team encourages other frameworks to adopt the new console APIs and source map extension points so they too can offer a better debugging experience to their users.
 
@@ -82,7 +80,7 @@ There is one additional piece of information that can now be included in source 
 
 The new `x_google_ignoreList` field contains a single index referring to the `sources` array: 1. This specifies that the regions mapped to `lib.js` are in fact third-party code that should be automatically added to the ignore list.
 
-In a more complex example the indices 2, 4, and 5 specify that regions mapped to `lib1.ts`, `lib2.coffee`, and `hmr.js` are all third-party code that should be automatically added to the ignore list.
+In a more complex example, shown below, the indices 2, 4, and 5 specify that regions mapped to `lib1.ts`, `lib2.coffee`, and `hmr.js` are all third-party code that should be automatically added to the ignore list.
 
 ```json/3
 {
