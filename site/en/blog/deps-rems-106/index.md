@@ -28,7 +28,7 @@ Since Chromium has previously accepted non-ASCII characters and tried to convert
 
 Chrome has [removed the ability](https://www.chromestatus.com/feature/6302414934114304) to receive, keep in memory, and use HTTP/2 push streams sent by the server. See [Removing HTTP/2 Server Push from Chrome](/blog/removing-push/) for details and suggested alternative APIs.
 
-## Remove Persistent Quota  {#remove-persistent-quota}
+## Remove Persistent Quota
 
 The `window.PERSISTENT` quota type in `webkitRequestFileSystem()` [is now deprecated](https://www.chromestatus.com/feature/5176235376246784).
 
