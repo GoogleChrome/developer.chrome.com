@@ -30,6 +30,7 @@ async function limit(tasks, concurrency) {
       try {
         results[index] = await task();
       } catch (error) {
+        // @ts-ignore
         results[index] = new Error(`Failed with: ${error.message}`);
       }
     }
@@ -63,6 +64,7 @@ const createScreenshots = async (data, overrideType = null) => {
       } else {
         data[i - length].screenshotDark = filename;
       }
+      // @ts-ignore
       return captureWebsite.buffer(url, SCREENSHOT_OPTIONS).then(buffer => {
         const fileLocation = 'site/en/fugu-showcase';
         if (!overrideType) {
