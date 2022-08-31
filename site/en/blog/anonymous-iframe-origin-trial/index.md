@@ -95,25 +95,18 @@ iframes:
 1.  [Request a token](/origintrials/#/view_trial/537054255563931649)
     for your origin.
 1.  Use the token in one of the following ways:
-    -  In your HTML:
-
+    -  In your HTML:      
       `<meta http-equiv="Origin-Trial" content="TOKEN_GOES_HERE">`
-
     -  In your Javascript:
-
       ```js
         const meta = document.createElement('meta');
         meta.httpEquiv = 'Origin-Trial';
         meta.content = 'TOKEN_GOES_HERE';
         document.head.append(meta);
       ```
-
     -  In the HTTP headers:
-
      `Origin-Trial: TOKEN_GOES_HERE`
-
 1.  Add an anonymous iframe to your page:
-
      `<iframe anonymous src="https://example.com">`
 
 If you have any feedback on this feature, file an issue in the [GitHub
