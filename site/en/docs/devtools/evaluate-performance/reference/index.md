@@ -92,7 +92,7 @@ expose more settings related to how DevTools captures performance recordings.
 By default, the **Main** section of a recording displays detailed call stacks of JavaScript
 functions that were called during the recording. To disable these call stacks:
 
-1.  Open the **Capture settings** menu. See [Show recording settings][3].
+1. Open the **Capture settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} menu. See [Show recording settings][3].
 2.  Enable the **Disable JavaScript Samples** checkbox.
 3.  Take a recording of the page.
 
@@ -112,14 +112,14 @@ the JavaScript call stacks.
 
 To throttle the network while recording:
 
-1.  Open the **Capture settings** menu. See [Show recording settings][4].
+1. Open the **Capture settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} menu. See [Show recording settings][4].
 2.  Set **Network** to the desired level of throttling.
 
 ### Throttle the CPU while recording {: #cpu-throttle }
 
 To throttle the CPU while recording:
 
-1.  Open the **Capture settings** menu. See [Show recording settings][5].
+1. Open the **Capture settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} menu. See [Show recording settings][5].
 2.  Set **CPU** to the desired level of throttling.
 
 Throttling is relative to your computer's capabilities. For example, the **2x slowdown** option
@@ -131,11 +131,25 @@ desktops and laptops.
 
 To view detailed paint instrumentation:
 
-1.  Open the **Capture settings** menu. See [Show recording settings][6].
+1.  Open the **Capture settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} menu. See [Show recording settings][6].
 2.  Check the **Enable advanced paint instrumentation** checkbox.
 
 To learn how to interact with the paint information, see [View layers][7] and [View paint
 profiler][8].
+
+### Emulate hardware concurrency {: #hardware-concurrency }
+
+To test application performance with different numbers of processor cores, you can configure the value reported by the [`navigator.hardwareConcurrency`](https://developer.mozilla.org/docs/Web/API/Navigator/hardwareConcurrency) property. Some applications use this property to control the degree of parallelism of their application, for example, to control Emscripten pthread pool size. 
+
+To emulate hardware concurrency:
+
+1. Open the **Capture settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} menu. See [Show recording settings][6].
+1. Check **Hardware concurrency** and set the number of cores in the text box.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SjBgvDM57GzK6Jn3B0nY.png", alt="Hardware concurrency.", width="800", height="497" %}
+
+DevTools displays a warning icon {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} next to the **Performance** tab to remind you that hardware concurrency emulation is enabled.
+
+To revert to the default value of `10`, click the **Revert** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tby5LrQzKTKzHia2fEBO.svg", alt="Revert.", width="24", height="24" %} button.
 
 ## Save a recording {: #save }
 
@@ -393,19 +407,6 @@ View raster activity in the **Raster** section.
 
 **Figure 21**. The **Raster** section, outlined in blue
 
-### View interactions {: #interactions }
-
-Use the **Interactions** section to find and analyze user interactions that happened during the
-recording.
-
-{% Img src="image/admin/RLvocLiAoWSxDrSIM0U8.svg", alt="The Interactions section", width="800", height="816" %}
-
-**Figure 22**. The **Interactions** section, outlined in blue
-
-A red line at the bottom of an interaction represents time spent waiting for the main thread.
-
-Click an interaction to view more information about it in the **Summary** tab.
-
 ### Analyze frames per second (FPS) {: #fps }
 
 DevTools provides numerous ways to analyze frames per second:
@@ -631,7 +632,7 @@ See [Layer borders](/docs/devtools/rendering#layer-borders).
 Use **Scrolling Performance Issues** to identify elements of the page that have event listeners related to scrolling that may harm the performance of the page. DevTools outlines the
 potentially-problematic elements in teal.
 
-See [Scrolling performace issues](/docs/devtools/rendering#scrolling-performance-issues).
+See [Scrolling performance issues](/docs/devtools/rendering#scrolling-performance-issues).
 
 [1]: /docs/devtools/evaluate-performance
 [2]: #view-screenshot

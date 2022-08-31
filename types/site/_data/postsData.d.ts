@@ -52,6 +52,8 @@ declare global {
     api?: string;
     extra_permissions?: string[];
     extra_permissions_html?: string;
+    special_permissions_html?: string;
+    has_warning?: string;
     // The following properties are added dynamically
     locale: string;
     url: string;

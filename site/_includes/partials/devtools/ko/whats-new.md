@@ -2,18 +2,62 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 102 {: #chrome102 }
+### Chrome 105 {: #chrome105 }
 
-* [Preview feature: New Performance insights panel](/ko/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/ko/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/ko/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/ko/blog/new-in-devtools-102/#debugger)
-* [Console updates](/ko/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/ko/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/ko/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/ko/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/ko/blog/new-in-devtools-102/#color-picker) -->
+* [Recorder의 단계별 재생 기능](/ko/blog/new-in-devtools-105/#recorder)
+* [Recorder 패널에서 마우스 오버 이벤트 기능 지원](/ko/blog/new-in-devtools-105/#recorder-hover)
+* [Performance insights 패널의 Largest Contentful Paint (LCP)](/ko/blog/new-in-devtools-105/#lcp)
+* [레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별](/ko/blog/new-in-devtools-105/#foit-fout)
+* [매니페스트 창의 프로토콜 핸들러](/ko/blog/new-in-devtools-105/#manifest)
+* [요소 패널의 Top layer badge](/ko/blog/new-in-devtools-105/#top-layer)
+* [런타임에 Wasm 디버깅 정보 연결하기](/ko/blog/new-in-devtools-105/#wasm)
+* [디버깅 중의 라이브 에디트 지원](/ko/blog/new-in-devtools-105/#live-edit)
+* [스타일 창에서의 @scope at rules 보기 및 편집하기](/ko/blog/new-in-devtools-105/#scope)
+* [소스맵 개선](/ko/blog/new-in-devtools-105/#sourcemaps)
+* [기타 하이라이트](/ko/blog/new-in-devtools-105/#misc)
+
+
+<!-- ### Chrome 104 {: #chrome104 }
+
+* [Restart frame during debugging](/ko/blog/new-in-devtools-104/#restart-frame)
+* [Slow replay options in the Recorder panel](/ko/blog/new-in-devtools-104/#recorder)
+* [Build an extension for the Recorder panel](/ko/blog/new-in-devtools-104/#recorder-extension)
+* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-104/#authored-deployed)
+* [New User Timings track in the Performance insights panel](/ko/blog/new-in-devtools-104/#performance)
+* [Reveal assigned slot of an element](/ko/blog/new-in-devtools-104/#slot)
+* [Simulate hardware concurrency for Performance recordings](/ko/blog/new-in-devtools-104/#simulate)
+* [Preview non-color value when autocompleting CSS variables](/ko/blog/new-in-devtools-104/#css-var)
+* [Identify blocking frames in the Back/forward cache pane](/ko/blog/new-in-devtools-104/#bfcache)
+* [Improved autocomplete suggestions for JavaScript objects](/ko/blog/new-in-devtools-104/#autocomplete)
+* [Sourcemaps improvements](/ko/blog/new-in-devtools-104/#sourcemaps)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-104/#misc) -->
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder 패널에서 더블 클릭 & 우 클릭 이벤트 캡쳐하기](/ko/blog/new-in-devtools-103/#recorder)
+* [Lighthouse 패널에서 새로 출시된 timspan 과 snapshot 모드](/ko/blog/new-in-devtools-103/#lighthouse)
+* [Performance Insights 패널에서 zoom 컨트롤 개선](/ko/blog/new-in-devtools-103/#zoom)
+* [성능 레코딩 삭제 확인](/ko/blog/new-in-devtools-103/#delete)
+* [요소 패널에서 창 재배치하기](/ko/blog/new-in-devtools-103/#reorder-pane)
+* [브라우저 밖의 색상 선택하기](/ko/blog/new-in-devtools-103/#color)
+* [디버깅 중 인라인 값 미리보기 개선](/ko/blog/new-in-devtools-103/#inline-preview)
+* [가상 인증자를 위한 대규모 Blob 지원](/ko/blog/new-in-devtools-103/#webauthn)
+* [소스 패널에서 새로운 키보드 단축키 지원](/ko/blog/new-in-devtools-103/#shortcuts)
+* [소스맵 개선](/ko/blog/new-in-devtools-103/#sourcemaps)
+
+
+### Chrome 102 {: #chrome102 }
+
+* [미리보기 기능: 새로운 Performance insights 창](/ko/blog/new-in-devtools-102/#perf)
+* [새 바로가기 메뉴 -  라이트 테마 및 다크 테마 에뮬레이팅하기](/ko/blog/new-in-devtools-102/#emulation)
+* [네트워크 창의 미리보기 탭의 보안 개선](/ko/blog/new-in-devtools-102/#network-preview)
+* [브레이크 포인트에서의 재로딩 개선](/ko/blog/new-in-devtools-102/#debugger)
+* [콘솔 업데이트](/ko/blog/new-in-devtools-102/#console)
+* [시작 전에 유저 플로우 녹화 취소하기](/ko/blog/new-in-devtools-102/#recorder)
+* [스타일 창에 상속된 하이라이트 의사 속성들 표시하기](/ko/blog/new-in-devtools-102/#pseudo)
+* [기타 하이라이트](/ko/blog/new-in-devtools-102/#misc)
+* [[실험 기능] CSS에서의 변경사항 복사](/ko/blog/new-in-devtools-102/#copy)
+* [[실험 기능] 브라우저 바깥의 색상 선택하기](/ko/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }

@@ -2,18 +2,63 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 102 {: #chrome102 }
 
-* [Preview feature: New Performance insights panel](/es/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/es/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/es/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/es/blog/new-in-devtools-102/#debugger)
-* [Console updates](/es/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/es/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/es/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/es/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/es/blog/new-in-devtools-102/#color-picker) -->
+### Chrome 105 {: #chrome105 }
+
+* [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
+* [Soporte de eventos de ratón en el panel Recorder](/es/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
+
+* [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
+* [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
+* [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
+* [Soporte para edición en vivo durante la depuración](/es/blog/new-in-devtools-105/#live-edit)
+* [Ver y editar las reglas de @scope en el panel de Estilos](/es/blog/new-in-devtools-105/#scope)
+* [Mejoras en los mapas de código fuente](/es/blog/new-in-devtools-105/#sourcemaps)
+* [Otros detalles destacados](/es/blog/new-in-devtools-105/#misc)
+
+### Chrome 104 {: #chrome104 }
+
+* [Reiniciar el marco durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
+* [Opciones de reproducción lenta en el panel Grabador](/es/blog/new-in-devtools-104/#recorder)
+* [Crear una extensión para el panel de la grabadora](/es/blog/new-in-devtools-104/#recorder-extension)
+* [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-104/#authored-deployed)
+* [Nueva pista de tiempos de usuario en el panel de información de rendimiento](/es/blog/new-in-devtools-104/#performance)
+* [Revelar el slot asignado de un elemento](/es/blog/new-in-devtools-104/#slot)
+* [Simular la concurrencia de hardware en las grabaciones de rendimiento](/es/blog/new-in-devtools-104/#simulate)
+* [Vista previa del valor sin color al autocompletar variables CSS](/es/blog/new-in-devtools-104/#css-var)
+* [Identificar los marcos de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
+* [Sugerencias de autocompletado mejoradas para objetos de JavaScript](/es/blog/new-in-devtools-104/#autocomplete)
+* [Mejoras en los mapas de origen](/es/blog/new-in-devtools-104/#sourcemaps)
+* [Destacados varios](/es/blog/new-in-devtools-104/#misc)
+
+
+### Chrome 103 {: #chrome103 }
+
+* [Captura de eventos de doble-click y clic derecho en el panel Grabación](/es/blog/new-in-devtools-103/#recorder)
+* [Nuevos modos de tiempo e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-103/#lighthouse)
+* [Mejora en el control de zoom en el panel de Consejos de Rendimiento](/es/blog/new-in-devtools-103/#zoom)
+* [Confirmar para eliminar de una grabación de rendimiento](/es/blog/new-in-devtools-103/#delete)
+* [Reordene los paneles en el panel de elementos](/es/blog/new-in-devtools-103/#reorder-pane)
+* [Eligiendo un color fuera del navegador](/es/blog/new-in-devtools-103/#color)
+* [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
+* [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
+* [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
+* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps) -->
+
+
+### Chrome 102 {: #chrome102 }
+
+* [Función de vista previa: nuevo panel de información de rendimiento](/es/blog/new-in-devtools-102/#perf)
+* [Nuevos atajos para emular temas claros y oscuros](/es/blog/new-in-devtools-102/#emulation)
+* [Mejore la seguridad en la pestaña Vista previa de la red](/es/blog/new-in-devtools-102/#network-preview)
+* [Recarga mejorada en el punto de interrupción](/es/blog/new-in-devtools-102/#debugger)
+* [Actualizaciones de la consola](/es/blog/new-in-devtools-102/#console)
+* [Cancelar registro de flujo de usuario al inicio](/es/blog/new-in-devtools-102/#recorder)
+* [Mostrar pseudoelementos heredados resaltados en el panel Estilos](/es/blog/new-in-devtools-102/#pseudo)
+* [Destacados varios](/es/blog/new-in-devtools-102/#misc)
+* [[Experimental] Copiar cambios de CSS](/es/blog/new-in-devtools-102/#copy)
+* [[Experimental] Selección de color fuera del navegador](/es/blog/new-in-devtools-102/#color-picker)
 
 ### Chrome 101 {: #chrome101 }
 
@@ -22,7 +67,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Soporte para la función de color hwb()](/es/blog/new-in-devtools-101/#hwb)
 * [Mejorada la visualización de las propiedades privadas](/es/blog/new-in-devtools-101/#private-props)
 * [Varios aspectos destacados](/es/blog/new-in-devtools-101/#misc)
-* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse) -->
+* [[Experimental] Nuevos modos tiempo de espera e instantánea en el panel Lighthouse](/es/blog/new-in-devtools-101/#lighthouse)
 
 
 ### Chrome 100 {: #chrome100 }

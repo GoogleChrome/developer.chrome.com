@@ -1,19 +1,63 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+### Chrome 105 {: #chrome105 }
 
-<!-- ### Chrome 102 {: #chrome102 }
+* [录制面板中的分步重放](/zh/blog/new-in-devtools-105/#recorder)
+* [支持录制面板中的鼠标悬浮事件](/zh/blog/new-in-devtools-105/#recorder-hover)
+* [性能洞察面板中的最大内容绘制 （LCP）](/zh/blog/new-in-devtools-105/#lcp)
+* [将闪烁的文本（FOIT、FOUT）识别为布局变化的潜在根本原因](/zh/blog/new-in-devtools-105/#foit-fout)
+* [Manifest 窗格中的协议处理程序](/zh/blog/new-in-devtools-105/#manifest)
+* [元素面板中的顶层徽章](/zh/blog/new-in-devtools-105/#top-layer)
+* [在运行时附加 Wasm 调试信息](/zh/blog/new-in-devtools-105/#wasm)
+* [调试时支持实时编辑](/zh/blog/new-in-devtools-105/#live-edit)
+* [在样式窗格的规则中查看和编辑@scope](/zh/blog/new-in-devtools-105/#scope)
+* [Sourcemap 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
+* [其他的更新](/zh/blog/new-in-devtools-105/#misc)
 
-* [Preview feature: New Performance insights panel](/zh/blog/new-in-devtools-102/#perf)
-* [New shortcuts to emulate light and dark themes](/zh/blog/new-in-devtools-102/#emulation)
-* [Improve security on the Network Preview tab](/zh/blog/new-in-devtools-102/#network-preview)
-* [Improved reloading at breakpoint](/zh/blog/new-in-devtools-102/#debugger)
-* [Console updates](/zh/blog/new-in-devtools-102/#console)
-* [Cancel user flow recording at the start](/zh/blog/new-in-devtools-102/#recorder)
-* [Display inherited highlight pseudo-elements in the Styles pane](/zh/blog/new-in-devtools-102/#pseudo)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-102/#misc)
-* [[Experimental] Copy CSS changes](/zh/blog/new-in-devtools-102/#copy)
-* [[Experimental] Picking color outside of browser[Experimental] Picking color outside of browser](/zh/blog/new-in-devtools-102/#color-picker) -->
+
+### Chrome 104 {: #chrome104 }
+
+* [在调试时进行帧重启](/zh/blog/new-in-devtools-104/#restart-frame)
+* [录制面板中的慢速重播选项](/zh/blog/new-in-devtools-104/#recorder)
+* [为录制面板创建扩展](/zh/blog/new-in-devtools-104/#recorder-extension)
+* [使用面板中的编写/部署来进行分组](/zh/blog/new-in-devtools-104/#authored-deployed)
+* [性能洞察面板中的新功能 - 用户计时追踪](/zh/blog/new-in-devtools-104/#performance)
+* [显示元素的分配槽](/zh/blog/new-in-devtools-104/#slot)
+* [模拟性能录制所需的硬件并发功能](/zh/blog/new-in-devtools-104/#simulate)
+* [在自动填充层叠样式表（CSS）时预览非颜色数值的值](/zh/blog/new-in-devtools-104/#css-var)
+* [识别退后/前进缓存面板中的阻塞帧](/zh/blog/new-in-devtools-104/#bfcache)
+* [优化 JavaScript 对象的自动填充建议功能](/zh/blog/new-in-devtools-104/#autocomplete)
+* [优化 Sourcemaps 功能](/zh/blog/new-in-devtools-104/#sourcemaps)
+* [其他的更新](/zh/blog/new-in-devtools-104/#misc) 
+
+
+### Chrome 103 {: #chrome103 }
+
+* [Recorder 面板捕获双击和右击事件](/zh/blog/new-in-devtools-103/#recorder)
+* [Lighthouse 面板支持 timespan 和 snapshot 新模式](/zh/blog/new-in-devtools-103/#lighthouse)
+* [改进 Performance Insights 面板的缩放控制问题](/zh/blog/new-in-devtools-103/#zoom)
+* [对删除性能记录的操作进行确认](/zh/blog/new-in-devtools-103/#delete)
+* [重新排列 Elements 面板中的窗格](/zh/blog/new-in-devtools-103/#reorder-pane)
+* [支持在浏览器外面选择颜色](/zh/blog/new-in-devtools-103/#color)
+* [改进调试期间的 inline 值预览问题](/zh/blog/new-in-devtools-103/#inline-preview)
+* [Virtual authenticators 支持大型 blob](/zh/blog/new-in-devtools-103/#webauthn)
+* [Sources 面板支持新的键盘快捷键](/zh/blog/new-in-devtools-103/#shortcuts)
+* [Sourcemaps 改进](/zh/blog/new-in-devtools-103/#sourcemaps)
+
+
+### Chrome 102 {: #chrome102 }
+
+* [预览功能：新的 Performance insights 面板](/zh/blog/new-in-devtools-102/#perf)
+* [新的模拟浅色和深色主题的快捷方式](/zh/blog/new-in-devtools-102/#emulation)
+* [提升网络预览标签页的安全性](/zh/blog/new-in-devtools-102/#network-preview)
+* [提升在断点处的重新加载](/zh/blog/new-in-devtools-102/#debugger)
+* [控制台更新](/zh/blog/new-in-devtools-102/#console)
+* [在用户流程录制开始时取消](/zh/blog/new-in-devtools-102/#recorder)
+* [在样式边栏中展示继承的高亮伪元素](/zh/blog/new-in-devtools-102/#pseudo)
+* [其它亮点](/zh/blog/new-in-devtools-102/#misc)
+* [[实验阶段] 复制 CSS 更改](/zh/blog/new-in-devtools-102/#copy)
+* [[实验阶段] 在浏览器外选择颜色](/zh/blog/new-in-devtools-102/#color-picker)
 
 
 ### Chrome 101 {: #chrome101 }

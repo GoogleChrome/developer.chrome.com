@@ -6,7 +6,7 @@ subhead: >
 description: >
   Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 date: 2022-02-28
-updated: 2022-05-17
+updated: 2022-07-27
 authors:
   - rowan_m
 ---
@@ -32,6 +32,7 @@ Regular updates for each Privacy Sandbox API are published on this site. In
 particular, these updates will cover a summary of common feedback themes per
 API.
 
+ * [Feedback report for 2022 Q2](/docs/privacy-sandbox/feedback/report-2022-q2/)
  * [Feedback report for 2022 Q1](/docs/privacy-sandbox/feedback/report-2022-q1/)
 
 While public feedback channels are preferred, both public (e.g., GitHub) and

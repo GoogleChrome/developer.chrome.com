@@ -6,6 +6,7 @@ description: >
 subhead: >
   How to measure and optimize signed exchanges to get the most improvement out of them
 date: 2022-04-21
+updated: 2022-06-09
 authors:
   - twifkak
 tags:
@@ -68,7 +69,6 @@ Generate a test without SXG as follows:
 - Go to [WebPageTest](https://www.webpagetest.org/) and sign in. Signing in saves your test history for easier comparison later.
 - Enter the URL you want to test.
 - Go to **Advanced Configuration**. (You will need Advanced Configuration for the SXG test, so using it here helps ensure the test options are the same.)
-- Under **Browser**, choose an Android phone under "Chrome Device Emulation". (This is also for parity with the "with SXG" test. Currently, Google Search only supports SXG on Android.)
 - In the **Test Settings** tab, it may be helpful to set Connection to 4G and increase "Number of Tests to Run" to 7.
 - Click **Start Test**.
 
@@ -189,10 +189,10 @@ If the SXG is present and valid, you will see a human readable printout of the S
 
 ### Indexing
 
-Make sure your SXGs are successfully [indexed](https://support.google.com/webmasters/answer/7645831) by Google Search. Open Chrome DevTools, enable mobile-emulation mode and select an Android device. Then, perform a Google Search for your page. If it has been indexed as an SXG, Google will link to webpkgcache.com's copy of your page:
+Make sure your SXGs are successfully [indexed](https://support.google.com/webmasters/answer/7645831) by Google Search. Open Chrome DevTools, then perform a Google Search for your page. If it has been indexed as an SXG, Google's link to your page will include a `data-sxg-url` pointing to webpkgcache.com's copy:
 
 <figure>
-  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/Qu2qWl2LES3N8tiqnskP.png", alt="Google Search results with DevTools showing an <a> that points to webpkgcache.com", width="800", height="635" %}
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/FyEewbwER5YRRsDCCYXn.png", alt="Google Search results with DevTools showing an <a> that points to webpkgcache.com", width="800", height="457" %}
 </figure>
 
 If Google Search thinks the user is likely to click on the result, it will also prefetch it:
@@ -302,7 +302,7 @@ Now, clicking on "After", I saw that the prefetched LCP **drops to 1.3s**:
   </web-tab>
 </web-tabs>
 
-Right now, SXGs are only enabled for Android, but we will soon enable them for desktop OSes. To prepare for the future, ensure that one of these is true:
+SXGs are enabled for all form factors. To prepare for that, ensure that one of these is true:
 
 - Your page doesn't `Vary` by `User-Agent` (e.g. it uses [responsive design](https://developers.google.com/search/mobile-sites/mobile-seo/responsive-design) or [separate mobile/desktop URLs](https://developers.google.com/search/mobile-sites/mobile-seo/separate-urls)).
 - If your page uses [dynamic serving](https://developers.google.com/search/mobile-sites/mobile-seo/dynamic-serving), it annotates itself as mobile- or desktop-only using [`<meta name=supported-media content=...>`](https://github.com/google/webpackager/blob/main/docs/supported_media.md).
@@ -343,8 +343,7 @@ Instead, I find it helpful to "zoom in" on the potentially affected page loads, 
 
 Currently, SXG prefetch only happens under certain conditions:
 
-- Chromium browser (e.g. Chrome or Edge except on [iOS](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/ios/user_agent.md)), version M87 or higher
-- Android OS
+- Chromium browser (e.g. Chrome or Edge except on [iOS](https://chromium.googlesource.com/chromium/src.git/+/HEAD/docs/ios/user_agent.md)), version M98 or higher
 - `Referer: google.com` or other [Google search domains](https://source.chromium.org/chromium/chromium/src/+/main:components/google/core/common/google_tld_list.h;l=13-42;drc=bea0acf022da996a8ff1dbdee378667a66c768e4). (Note that in Google Analytics, a referral tag applies to [all page views in the session](https://support.google.com/analytics/answer/6205762?hl=en#flowchart&zippy=%2Cin-this-article), whereas SXG prefetch only applies to the first page view, directly linked from Google Search.)
 
 {% Aside %}
@@ -372,12 +371,11 @@ Create a custom segment named "SXG counterfactual" with the following filters AN
 
 - `referrer` starts with `https://www.google.`
 - `Browser` exactly matches `Chrome`
-- `Browser` Version matches regex `^(8[7-9]|9[0-9]|[0-9]{3})`
-- `Operating System` exactly matches `Android`
+- `Browser` Version matches regex `^(9[8-9]|[0-9]{3})`
 - `isSXG` exactly matches `false`
 
 <figure>
-  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/tqpW8Jy95f1jYJeV5Opx.png", alt="Google Analytics segment editor with recommended filters", width="800", height="441" %}
+  {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/yuJYbCjBljA6hwhfC6ZF.png", alt="Google Analytics segment editor with recommended filters", width="800", height="391" %}
 </figure>
 
 Create a copy of this segment, named "SXG", except with `isSXG` exactly matches `true`.

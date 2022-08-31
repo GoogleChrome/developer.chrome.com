@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2021-09-07
+updated: 2022-08-18
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -15,7 +15,7 @@ tags:
 {% Aside %}
 This guide assumes a working knowledge of origin trials in Chrome.
 
-* [Getting started with Chrome's origin trials](/docs/experimental/origin-trials/) explains the basics.
+* [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/) explains the basics.
 * [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#faq) 
 provides a detailed FAQ. 
 
@@ -65,6 +65,10 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-token-third" class="w-ml--l"><a href="#token-third">Third-party script uses a 
     third-party token</a></label>
   <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-third-script">
+  <label for="check-token-third-script" class="w-ml--l"><a href="#token-third-script">Third-party 
+token is provided via an external script, not a meta tag or inline script</a></label>
+  <br>
   <input class="w-checkbox" type="checkbox" id="check-token-method">
   <label for="check-token-method" class="w-ml--l"><a href="#token-method">Origin trial feature access 
   is supported for the method used to provide a trial token</a></label>
@@ -81,9 +85,8 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <label for="check-trial-ended" class="w-ml--l"><a href="#trial-ended">The origin trial hasn't 
     ended</a></label>
   <br>
-  <input class="w-checkbox" type="checkbox" id="check-region">
-  <label for="check-region" class="w-ml--l"><a href="#region">The origin trial is available in your 
-    region</a></label>
+  <input class="w-checkbox" type="checkbox" id="check-user">
+  <label for="check-user" class="w-ml--l"><a href="#user">The origin trial is available for the current user</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-usage-restrictions">
   <label for="check-usage-restrictions" class="w-ml--l"><a href="#usage-restrictions">Origin trial 
@@ -99,6 +102,9 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <br>
   <input class="w-checkbox" type="checkbox" id="check-workers">
   <label for="check-workers" class="w-ml--l"><a href="#workers">Worker access is enabled</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-token-before-access">
+  <label for="token-before-access" class="w-ml--l"><a href="#token-before-access">Token is provided before feature is accessed</a></label>
 </div>
 
 
@@ -129,7 +135,8 @@ iframe provides a token.
 
 * **Token Status**: Whether the page has a valid token. Note that for some origin trials there may be 
 other factors, such as geographical restrictions, that mean the origin trial feature is not 
-available, despite the presence of a valid token.
+available, despite the presence of a valid token. [Chrome DevTools status codes](#devtools-status)
+explains the meaning of each of the codes for origin trials.
 * **Origin**: The [Web Origin](https://web.dev/same-site-same-origin/#origin) registered for the 
 token.
 * **Expiry Time**: the maximum (latest) possible expiry date/time for the token, which will normally 
@@ -144,8 +151,8 @@ be accessed on multiple sites from third-party scripts.
 is enabled for the token. This enables an origin trial feature to be tested on multiple 
 subdomains of an origin, without requiring a different token for every subdomain.
 
-Chrome DevTools will display a warning next to the trial name if the trial is not available in your 
-region, the token has expired, or if there are other restrictions.
+Chrome DevTools will display a warning next to the trial name if the trial is not available 
+for the current user, the token has expired, or if there are other restrictions.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iW93yyW0wFk7qCeIkqLx.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing expired token", width="800", height="424" %}
@@ -157,6 +164,63 @@ Application panel. You may need to reload Chrome DevTools (not the page).
 For examples of pages that _do_ include an origin trial token, see the [demos](#demos) listed above.
 {% endAside %}
 
+
+## Chrome DevTools status codes {: #devtools-status}
+
+* **Success**: The token is well-formed, has not expired, matches an origin trial feature, and is
+requested from an expected origin.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=84)
+
+* **NotSupported**: The origin trial defined by the token is not supported in the Chromium
+'embedder': a browser such as Chrome or Edge, a WebView, or some other user agent.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=258)
+
+* **Insecure**: The request origin is insecure, and the trial is not enabled for insecure origins.
+As explained in the [origin trial token validator code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200):
+'For third-party tokens, both the current origin and the script origin must be secure. Due to
+subdomain matching, the token origin might not be an exact match for one of the provided script
+origins, and the result doesn't indicate which specific origin was matched. This means it's not a
+direct lookup to find the appropriate script origin. To avoid re-doing all the origin comparisons,
+there are shortcuts that depend on how many script origins were provided. There must be at least
+one, or the third party token would not be validated successfully.'<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200)
+
+* **Expired**: Token has passed its expiration date. The token will need to be renewed, to
+generate a new token with a new expiration date.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=97)
+
+* **WrongOrigin**: The request origin does not match the origin specified in the token. This can
+include the scheme, hostname, or port.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;drc=610603f89f0dd4da794848e4f8670a179efbcf38;l=262)
+
+* **InvalidSignature**: The token has an invalid or malformed signature.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator_unittest.cc;l=105)
+
+* **Malformed**: Token is malformed and could not be parsed.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=88)
+
+{% Aside 'caution' %}
+For **InvalidSignature** or **Malformed** errors, the token may conform to a valid format but not be
+recognized by the current browser or browser version. It is possible that the token is usable by a
+different browser.
+{% endAside %}
+
+* **WrongVersion**: Wrong token version: only token version 2 and 3 are currently supported.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=137)
+
+* **FeatureDisabled**: Trial is currently disabled for use.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=100)
+
+* **TokenDisabled**: Token has been marked as disabled and cannot be used.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=103)
+
+* **FeatureDisabledForUser**: This token has been designated as disabled for the current user via an
+alternative usage restriction. See the "User Subset Exclusions" section of [design doc](https://docs.google.com/document/d/1xALH9W7rWmX0FpjudhDeS2TNTEOXuPn4Tlc9VmuPdHA).<br>
+[Source code 1](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=106)<br>
+[Source code 2](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/origin_trials/trial_token.h;l=155)
+
+* **UnknownTrial**: The token specifies a feature name that does not match any known trial.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=178)
 
 ---
 
@@ -183,8 +247,7 @@ iOS and iPadOS [must use WebKit](https://developer.apple.com/app-store/review/gu
 the same engine used by Safari. Chrome on iOS and iPadOS is built on [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview).
 {% endAside %}
 
-Microsoft Edge has its own [origin trial framework](https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/). 
-Enrollment in an Edge origin trial won't enable a feature in Chrome.
+Origin trials are also available for [Firefox](https://wiki.mozilla.org/Origin_Trials) and [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/). Enrollment in a Firefox or Edge origin trial won't enable a feature in Chrome.
 
 
 ### The origin trial is enabled for the Chrome versions accessing your site {: #version}
@@ -334,6 +397,23 @@ function addTrialToken(tokenContents) {
 }
 ```
 
+### Third-party token is provided via an external script, not a meta tag or inline script {: #token-third-script}
+
+Third-party tokens are validated against the origin of the script that injected them, but inline
+scripts and `<meta>` tags in static markup do not have an origin (i.e. a source URL). 
+
+This means that a third-party token must be provided via an external script, not in a `<meta>` tag
+or inline script. It doesn't matter if the external script that injects the token comes from the
+same origin as the containing page, or a different origin, as long as the origin of the script matches 
+an origin registered for the trial.
+
+You can see a demo of this at [ot-iframe-3p.glitch.me](https://ot-iframe-3p.glitch.me).  
+
+{% Aside %}
+If need be, you can [provide multiple tokens](/blog/origintrials#multiple) on the same page, 
+for the same origin trial or for different trials.
+{% endAside %}
+
 
 ### Origin trial feature access is supported for the method used to provide a trial token {: #token-method}
 
@@ -422,15 +502,21 @@ status of the feature you're testing.
 {% endAside %}
 
 
-### The origin trial is available in your region {: #region}
+### The origin trial is available for the current user {: #user}
 
-Not all origin trials are supported in all geographical regions.
+Some origin trials are unavailable to certain users, even if a valid token is provided.
 
-If a trial isn't supported in your region, Chrome DevTools will display a `TrialNotAllowed` warning:
+If a trial isn't available for the current user, Chrome DevTools will display a `TrialNotAllowed` warning:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jToK0McIe9AgqCS3rymo.png", alt="Chrome DevTools 
 origin trials information in the Application panel showing TrialNotAllowed warning", width="800", 
 height="424" %}
+
+Information about usage restrictions and availability will be provided for each origin trial.
+
+As with any web platform feature, you should use [feature detection](https://developer.mozilla.org/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+to confirm that an origin trial feature is supported before you use it.
+
 
 ### Origin trial usage restrictions haven't been exceeded {: #usage-restrictions}
 
@@ -471,9 +557,10 @@ don't inherit access to features enabled for pages that contain them.
 A demo showing access to an origin trial feature in an iframe is available at 
 [ot-iframe.glitch.me](https://ot-iframe.glitch.me).
 
+
 ### Permissions policies are correctly configured {: #permissions-policies}
 
-Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) 
+Some origin trial features may be affected by a [`Permissions-Policy`](/docs/privacy-sandbox/permissions-policy/) 
 header (previously known as a `Feature-Policy` header). You can check for this in the 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=subject%3Aintent%20subject%3Ato%20subject%3Aexperiment) 
 for the trial feature, or in developer documentation for the feature on [web.dev](https://web.dev) 
@@ -495,15 +582,29 @@ a token in an `Origin-Trial` header. Dedicated workers inherit access to feature
 parent document.
 
 
+###  Token is provided before feature is accessed {: #token-before-access}
+
+Make sure that an origin trial token is provided _before_ a trial feature is accessed. 
+For example, if a page provides a token via JavaScript, make sure the code to provide the token 
+is run before code that attempts to access the trial feature.
+
+
+## Origin trial demos
+
+-  [Token in a meta tag](https://ot-meta.glitch.me)
+-  [Token in a header](https://ot-header.glitch.me)
+-  [Feature accessed in an iframe](https://ot-iframe.glitch.me)
+-  [Token injected by third-party script](https://ot-3p.glitch.me)
+
+
 ## Find out more
 
--  [Getting started with Chrome's origin trials](/blog/origin-trials/)
--  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/)
+-  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
----
-
-Photo by [Bill Oxford](https://unsplash.com/@bill_oxford) on [Unsplash](https://unsplash.com/photos/tR0PPLuN6Pw).
+-  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+-  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)

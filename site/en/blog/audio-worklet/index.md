@@ -43,7 +43,7 @@ article introduces its concept and usage for those who are eager to create a
 custom audio processor with JavaScript code. Please take a look at the [live
 demos](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) on
 GitHub. Also the next article in series, [Audio Worklet Design
-Pattern](/web/updates/2018/06/audio-worklet-design-pattern), might be an
+Pattern](/blog/audio-worklet-design-pattern/), might be an
 interesting read for building an advanced audio app.
 
 ## Background: ScriptProcessorNode

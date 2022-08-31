@@ -16,7 +16,7 @@ to implement different UI elements within an extension.
 
 ## The extension action {: #action }
 
-The [`action` API][api-action] controls the extension's action (toolbar icon). It can either open a
+The [Action API][api-action] controls the extension's action (toolbar icon). It can either open a
 [popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. 
 
 Users can trigger an extension's action by expanding the extension menu and selecting the desired
@@ -51,7 +51,7 @@ width="400", height="382", class="screenshot" %}
 
 ### Register the action {: #browser }
 
-To use the `action` API, the extension's [manifest][manifest-file] must contain an `"action"`
+To use the Action API, the extension's [manifest][manifest-file] must contain an `"action"`
 key. This informs the browser that the extension will customize the action.
 
 ```json
@@ -65,12 +65,12 @@ key. This informs the browser that the extension will customize the action.
 }
 ```
 
-See the [manifest section][action-manifest] of the `action` API docs for a full description on the
+See the [manifest section][action-manifest] of the Action API docs for a full description on the
 optional properties of this field.
 
 ###  Activate the action conditionally  {: #activate_pages }
 
-The [declarativeContent API][api-declarativecontent] allows you to enable the extension's action
+The [DeclarativeContent API][api-declarativecontent] allows you to enable the extension's action
 based on the page URL or if the CSS selectors match the elements on the page.
 
 When an extension is disabled, the icon is grayed out. If the user clicks the disabled extension,
@@ -277,13 +277,13 @@ chrome.action.onClicked.addListener(function(tab) {
 
 ### Omnibox {: #omnibox }
 
-Users can invoke extension functionality through the [`omnibox` API][api-omnibox]. Include the `"omnibox"`
+Users can invoke extension functionality through the [Omnibox API][api-omnibox]. Include the `"omnibox"`
 field in the manifest and designate a keyword. The [Omnibox New Tab Search][sample-new-tab-search]
 sample extension uses <kbd>nt</kbd> as the keyword.
 
 ```json/3
 {
-  "name": "Omnibox New Tab Search",\
+  "name": "Omnibox New Tab Search",
   ...
   "omnibox": { "keyword" : "nt" },
   "default_icon": {
@@ -313,7 +313,7 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
 
 ### Context menu {: #context_menu }
 
-You can use the [`contextMenus` API][api-context-menu] by granting the `"contextMenus"` permission in the
+You can use the [ContextMenus API][api-context-menu] by granting the `"contextMenus"` permission in the
 manifest.
 
 ```json/4
@@ -381,7 +381,7 @@ Menus will Collapse", height="306", width="500", class="screenshot" %}
 
 ### Commands {: #commands }
 
-Extensions can define specific [`commands` API][api-commands] and bind them to a key combination. Register
+Extensions can define specific [Commands API][api-commands] and bind them to a key combination. Register
 one or more shortcuts in the manifest under the `"commands"` key.
 
 ```json
@@ -481,11 +481,12 @@ pages.
 You can communicate relevant information to users by displaying notifications directly in their
 system tray.
 
-To use the [`notifications` API][api-notif], you must declare the `"notifications"` permission in
+To use the [Notifications API][api-notif], you must declare the `"notifications"` permission in
 the manifest.
 
 ```json/5
-{ //manifest.json
+// manifest.json
+{ 
   "name": "Drink Water Event Popup",
 ...
   "permissions": [
@@ -526,7 +527,7 @@ alt="Mac OS notification", width="500", height="150", class="screenshot" %}
 
 ## Internationalize the UI {: #localize }
 
-You can use the [`chrome.i18n` API][api-i18n] to internationalize your extension. Create directories
+You can use the [I18n API][api-i18n] to internationalize your extension. Create directories
 to house language specific messages within a folder called `_locales/`, like this:
 
 - `_locales/en/messages.json`
@@ -538,6 +539,7 @@ following code localizes the tooltip:
 {% Columns %}
 
 {% Column %}
+
 Located in  `_locales/en/messages.json`:
 ```json
 {
@@ -551,7 +553,9 @@ Located in  `_locales/en/messages.json`:
 {% endColumn %}
 
 {% Column %}
+
 Located in `_locales/es/messages.json`:
+
 ```json
 {
   "__MSG_tooltip__": {
@@ -565,10 +569,11 @@ Located in `_locales/es/messages.json`:
 
 {% endColumns %}
 
-Specify the name of the message in the `"default_title"` field. The `"default_locale"` field must be
-defined.
+Specify the name of the message in the `"default_title"` field of the manifest. The
+`"default_locale"` field must be defined.
 
 ```json
+// manifest.json
 {
   "name": "Tab Flipper",
   ...

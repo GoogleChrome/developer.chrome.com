@@ -18,6 +18,9 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/navigation-preload/
+  to: https://web.dev/navigation-preload/
+
 - from: /activeTab
   to: /docs/extensions/reference/activeTab
 
@@ -32,6 +35,11 @@ redirects:
 
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
+
+# FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
+# redirect destination will be ignored
+- from: /docs/extensions/mv3/manifest/content_security_policy
+  to: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
 
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
@@ -66,6 +74,12 @@ redirects:
 - from: /docs/privacy-sandbox/attribution-reporting-event-introduction/
   to: /docs/privacy-sandbox/attribution-reporting-experiment/
 
+- from: /docs/privacy-sandbox/attribution-reporting-changes-january-2022/
+  to: /blog/attribution-reporting-jan-2022-updates/
+
+- from: /blog/capture-handle/
+  to: /docs/web-platform/capture-handle/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/
@@ -79,6 +93,15 @@ redirects:
 
 - from: /multidevice/webview/overview/
   to: /multidevice/webview/
+
+- from: /blog/origin-trials/
+  to: /docs/web-platform/origin-trials/
+
+- from: /blog/origin-trial-troubleshooting/
+  to: /docs/web-platform/origin-trial-troubleshooting/
+
+- from: /blog/third-party-origin-trials/
+  to: /docs/web-platform/third-party-origin-trials/
 
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
@@ -143,6 +166,9 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
+  to: /docs/devtools/progressive-web-apps/#trigger-installation
 
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
@@ -345,6 +371,17 @@ redirects:
     - /docs/apps/manifest/...
   else: /docs/extensions/...
 
+- from: /docs/extensions/...
+  try:
+    - /docs/extensions/reference/...
+    - /docs/extensions/mv3/manifest/...
+    - /docs/extensions/mv3/...
+    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/...
+    - /docs/apps/...
+    - /docs/apps/manifest/...
+  else: /docs/extensions/...
+
 - from: /manifest/...
   try:
     - /docs/extensions/mv3/manifest/...
@@ -356,8 +393,8 @@ redirects:
 - from: /native-client/...
   to: /docs/native-client/...
 
-- from: /privacy-sandbox/...
-  to: /docs/privacy-sandbox/...
+# - from: /privacy-sandbox/...
+#  to: /docs/privacy-sandbox/...
 
 - from: /webstore/...
   to: /docs/webstore/...
@@ -373,8 +410,11 @@ redirects:
 - from: /blog/blinkng/...
   to: /articles/blinkng/...
 
-- from: /blog/faster-wasm-debugging/...
-  to: /articles/faster-wasm-debugging/...
+- from: /articles/faster-wasm-debugging/...
+  to: /blog/faster-wasm-debugging/...
+
+- from: /articles/performance-insights/...
+  to: /blog/performance-insights/...
 
 - from: /blog/hidden-until-found/...
   to: /articles/hidden-until-found/...
@@ -397,6 +437,10 @@ redirects:
 - from: /blog/videong/...
   to: /articles/videong/...
 
+# Redirecting the intersection observer post from d.c.c. to web.dev
+- from: /intersectionobserver/
+  to: https://web.dev/intersectionobserver/
+
 # Generic
 
 - from: /...
@@ -408,9 +452,19 @@ redirects:
     - /docs/apps/manifest/...
     - /docs/apps/...
 
-# Temporary Chrome Dev Insider collection page placeholder
-- from: /insider/
-  to: /blog/insider-april-2022/
+- from: /insider-july-2022/
+  to: /blog/insider-july-2022/
+
+- from: /insider/...
+  to: /tags/insider/
+
+# Tag Redirects
+
+- from: https://developer.chrome.com/tags/removals/
+  to: https://developer.chrome.com/tags/deprecations-removals/
+
+- from: https://developer.chrome.com/tags/deprecations/
+  to: https://developer.chrome.com/tags/deprecations-removals/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

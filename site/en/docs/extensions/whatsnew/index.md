@@ -1,10 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
-
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-04-11
+updated: 2022-08-04
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -16,13 +15,55 @@ updated: 2022-04-11
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 102: {: #m102-registercontentscripts-main-world }
+### Chrome 105: promises for the Identity API
+
+July 15, 2022
+
+Functions on the [Identity API](/docs/extensions/reference/identity/#method-getAuthToken) now
+support promise based calls. This comes with a slight change to the surface for
+[`identity.getAuthToken()`](/docs/extensions/reference/identity/#method-getAuthToken), where the
+asynchronous return set to a promise based call will have "token" and "grantedScopes" as parameters
+on a single object (as opposed to the callback version receiving them as separate arguments to the
+callback).
+
+### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
+
+July 28, 2022
+
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
+Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
+information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+
+### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
+
+May 26, 2022
+
+Added the [trader/non-trader developer identification](/docs/webstore/trader-disclosure) that
+informs developers to accurately self-declare their trader/non-trader status.
+
+### Chrome 103: Wasm in Manifest V3 requires wasm-unsafe-eval {: #m103-wasm-csp }
+
+May 12, 2022
+
+Chrome no longer grants extensions `script-src: wasm-unsafe-eval` by default. Extensions that use
+WebAssembly must now explicitly add this directive and value to `extension_pages` in their
+`content_security_policy` declarations.
+
+### Chrome 103: Changing MV3 shortcuts take effect immediately {: #m103-keyboard-shortcut }
+
+April 28, 2022
+
+When changing a Manifest V3 extension's keyboard shortcut on `chrome://extensions/shortcuts`,
+updates are now applied immediately. Previously the extension would have to be reloaded before the
+change would take effect.
+
+### Chrome 102: Dynamic content scripts in main world {: #m102-registercontentscripts-main-world }
 
 April 14, 2022
 
 Dynamically registered content scripts can now specify the
 [world](/docs/extensions/mv3/content_scripts/#isolated_world) that assets will be injected into. See
-[scripting.registerContentScripts()](/docs/extensions/reference/scripting/#method-registerContentScripts)
+[`scripting.registerContentScripts()`](/docs/extensions/reference/scripting/#method-registerContentScripts)
 for details.
 
 ### Chrome 102: New manifest field "optional_host_permissions" {: #m102-optional-host-permissions }
@@ -84,8 +125,15 @@ window could fail.
 
 February 9, 2022
 
+{% Aside 'warning' %}
+
+This change did not fully address the underlying issue. We will share another update when we are
+confident that native messaging ports are behaving as intended.
+
+{% endAside %}
+
 Connecting to a native messaging host using `chrome.runtime.connectNative()` in an extension's
-service worker will keep the service worker alive as long as the port is open.
+service worker should keep the service worker alive as long as the port is open.
 
 ### Chrome 100: omnibox.setDefaultSuggestion() supports promises and callbacks {: #m100-omnibox-setdefault }
 
@@ -109,7 +157,7 @@ January 5, 2022
 
 Content scripts can now specify the `match_origin_as_fallback` key to inject into frames that are
 related to a matching frame, including frames with `about:`, `data:`, `blob:`, and `filesystem:`
-URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
+URLs. See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
 documentation for details.
 
 ### Chrome 99: extension service worker support for file: schemes in Canary {: #canary-file-access }
@@ -143,8 +191,8 @@ policy](/docs/webstore/program_policies/) enforcement is handled.
 November 9, 2021
 
 The Scripting API's [`executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
-and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept multiple
-files. Previously these methods required an array with a single file entry.
+and [`insertCSS()`](/docs/extensions/reference/scripting/#method-insertCSS) methods now accept
+multiple files. Previously these methods required an array with a single file entry.
 
 ### Docs update: review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 

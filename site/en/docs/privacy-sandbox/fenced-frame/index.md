@@ -56,16 +56,21 @@ is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
-Chrome teams are working on [storage 
-partitioning](https://github.com/privacycg/storage-partitioning), which separates 
-browser storage per-site.  This means iframes embedded on sites with the same 
-eTLD+1, such as `frame.example` and `site.example`, could share browser storage. 
-Iframes embedded on sites that have different hostnames, such as `frame.example` 
-and `site.other`, won't share browser storage.
+Chrome is working on [storage
+partitioning](https://github.com/privacycg/storage-partitioning), which
+separates browser storage per-site. Currently, if an iframe from `shoes.example`
+is embedded on `news.example`, and that iframe stores a value into storage,
+then that value can be read from the `shoes.example` site. When storage has been
+partitioned, cross-site iframes will no longer share storage, therefore
+`shoes.example` will not be able to access information stored by the iframe. If
+the iframe is served from `*.shoes.example` and embedded on
+`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
+
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/ss7wjBshEJcwdQXcXGov.png", alt="A comparison of before and after state of storage partitinoing.", width="800", height="613" %}
 
 Storage partitioning will be applied to standard storage APIs including
-LocalStorage, IndexedDB, and cookies. In a partitioned world, information leakage
-across first-party storage will be significantly reduced.
+LocalStorage, IndexedDB, and cookies. In a partitioned world, information
+leakage across first-party storage will be significantly reduced.
 
 ### Work with cross-site data {: #cross-site-data }
 
@@ -128,8 +133,14 @@ publisher&mdash;aren't available in fenced frames.
 
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
-(such as a browser tab). The characteristics of fenced frames are further
-detailed in the [explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
+(such as a browser tab). Although a fenced frame in [certain modes](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md#fenced-frame-modes)
+(such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
+group), the frame cannot access unpartitioned storage or cookies. An
+`opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
+partition.
+
+The characteristics of fenced frames are further detailed in the
+[explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
 
 ### How do fenced frames compare to iframes? {: #compare }
 
@@ -142,9 +153,9 @@ to existing iframe features.
 | Embedded content can access embedding context DOM | Yes | No |
 | Embedding context can access embedded content DOM | Yes | No | 
 | Observable attributes, such as `name` | Yes | No |
-| URLs (`http://example.com`) | Yes | Yes (mode-dependent) |
+| URLs (`http://example.com`) | Yes | Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md)) |
 | Browser-managed opaque source (`urn:uuid`) | No | Yes |
-| Access to unpartitioned storage | No | Yes |
+| Access to cross-site data | No | Yes (mode-dependent) |
 
 Fenced frames support fewer external communication options to preserve privacy.
 

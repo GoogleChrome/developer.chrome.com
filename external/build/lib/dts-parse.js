@@ -708,6 +708,9 @@ class Transform {
       channel: 'stable',
     };
 
+    // See https://github.com/GoogleChrome/developer.chrome.com/issues/2298
+    let chromeOsOnly = undefined;
+
     tags.forEach(({tag, text}) => {
       text = text.trim(); // some show up with extra \n
 
@@ -749,8 +752,23 @@ class Transform {
         case 'chrome-disallow-service-workers':
           out.disallowServiceWorkers = true;
           break;
+        case 'chrome-platform':
+          // If chromeos is the platform, and chromeOsOnly is undefined because
+          // we haven't seen any other platforms, this might be chromeOsOnly.
+          if (text === 'chromeos' && chromeOsOnly === undefined) {
+            chromeOsOnly = true;
+          } else {
+            // The first time we see a platform that's not chromeos, we know the
+            // feature isn't chromeOsOnly.
+            chromeOsOnly = false;
+          }
+          break;
       }
     });
+
+    if (chromeOsOnly === true) {
+      out.chromeOsOnly = true;
+    }
 
     return out;
   }

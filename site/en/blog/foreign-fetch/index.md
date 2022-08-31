@@ -100,7 +100,7 @@ During development, you'll probably want to confirm that your foreign fetch serv
 
 #### Are the proper response headers being sent?
 
-In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference) of DevTools:
+In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](/docs/devtools/network/reference/) of DevTools:
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/nu5BmyqcttlEyasOXWlT.png", alt="Headers displayed in the Network panel.", width="800", height="445" %}
@@ -108,7 +108,7 @@ In order to register the foreign fetch service worker, you need to set a Link he
 
 #### Is the Foreign Fetch service worker properly registered?
 
-You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
+You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](/docs/devtools/storage/localstorage/) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/SorZMt5c0SiSsAvRB4rn.png", alt="The foreign fetch service worker in the Applications panel.", width="800", height="278" %}

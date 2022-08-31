@@ -45,13 +45,13 @@
 
   &::before {
     filter: saturate(90%) contrast(0.9) brightness(1.4);
-    transform: translate3D(0, 0, -1em) scale(0.95);
+    transform: translate3D(0, 0, -1rem) scale(0.95);
     z-index: -1;
   }
 
   &::after {
     filter: saturate(50%) contrast(0.7) brightness(2);
-    transform: translate3D(0, 0, -2em) scale(0.9);
+    transform: translate3D(0, 0, -2rem) scale(0.9);
     z-index: -2;
   }
 }
@@ -61,7 +61,7 @@
     &::before {
       transform: translate3D(0, 0, -0.25em) scale(1);
     }
-  
+
     &::after {
       transform: translate3D(0, 0, -0.5em) scale(1);
     }

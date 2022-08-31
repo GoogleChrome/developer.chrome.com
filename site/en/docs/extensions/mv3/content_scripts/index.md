@@ -172,6 +172,7 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
 </table>
 
 {% if false %}
+
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
 {% Aside 'caution' %}
@@ -212,15 +213,16 @@ chrome.scripting.unregisterContentScript(idArray, callback);
 Use programmatic injection for content scripts that need to run in response to events or on specific
 occasions.
 
-In order to inject a content script programmatically, your extension needs host permissions for
-the page it's trying to inject scripts into. Host permissions can be granted either by
+To inject a content script programmatically, your extension needs host permissions for
+the page it's trying to inject scripts into. Host permissions can either be granted by
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 
 Below we'll look at different versions of an activeTab-based extension.
 
+{% Label %}manifest.json:{% endLabel %}
+
 ```json/4-6
-//// manifest.json ////
 {
   "name": "My extension",
   ...
@@ -235,13 +237,15 @@ Below we'll look at different versions of an activeTab-based extension.
 
 Content scripts can be injected as files…
 
+{% Label %}content-script.js:{% endLabel %}
+
 ```js
-//// content-script.js ////
 document.body.style.backgroundColor = 'orange';
 ```
 
+{% Label %}background.js:{% endLabel %}
+
 ```js
-//// background.js ////
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
@@ -252,8 +256,9 @@ chrome.action.onClicked.addListener((tab) => {
 
 …or a function body can be injected and executed as a content script.
 
+{% Label %}background.js:{% endLabel %}
+
 ```js
-//// background.js ////
 function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
@@ -321,7 +326,7 @@ registration.
       <td>array of string</td>
       <td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this
         glob. Intended to emulate the <a
-          href="https://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code></a>
+          href="https://wiki.greasespot.net/Metadata_Block#.40exclude"><code>@exclude</code></a>
         Greasemonkey keyword.</td>
     </tr>
   </tbody>
@@ -579,8 +584,8 @@ themselves match the script's specified patterns.
 
 This is the case when an extension wants to inject in frames with URLs that
 have `about:`, `data:`, `blob:`, and `filesystem:` schemes. In these cases, the
-URL will not match the content script's pattern (and, in the case of `about:`,
-`data:`, and `blob:`, do not even include the parent URL or origin in the URL
+URL will not match the content script's pattern (and, in the case of `about:` and
+`data:`, do not even include the parent URL or origin in the URL
 at all, as in `about:blank` or `data:text/html,<html>Hello, World!</html>`).
 However, these frames can still be associated with the creating frame.
 

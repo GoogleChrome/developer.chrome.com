@@ -1,7 +1,9 @@
 {
   "id": "UA-41980257-1",
   "dimensions": {
-    "TRACKING_VERSION": "dimension1"
+    "TRACKING_VERSION": "dimension1",
+    "NAVIGATION_TYPE": "dimension2",
+    "WEB_VITALS_DEBUG": "dimension3"
   },
-  "TRACKING_VERSION": "2.0"
+  "TRACKING_VERSION": "3.0"
 }

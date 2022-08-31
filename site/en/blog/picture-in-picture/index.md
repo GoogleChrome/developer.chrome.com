@@ -10,12 +10,14 @@ updated: 2018-10-19
 ---
 
 {% Aside 'success' %}
-The Picture-in-Picture Web API is now [supported in Chrome].
+The Picture-in-Picture Web API is now [supported in
+Chrome](https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture).
 {% endAside %}
 
-Since April 2017, Chrome for [Android O supports Picture-in-Picture]. It allows
-users to play a `<video>` element in a small overlay window that isn't blocked
-by other windows, so that they can watch while doing other things.
+Since April 2017, Chrome for [Android O supports
+Picture-in-Picture](https://developer.android.com/about/versions/oreo/android-8.0.html#opip).
+It allows users to play a `<video>` element in a small overlay window that isn't
+blocked by other windows, so that they can watch while doing other things.
 
 Here's how it works: open Chrome, go to a website that contains a video and
 play it fullscreen. From there, press the Home button to go to your Android
@@ -33,9 +35,10 @@ Picture-in-Picture. That's all! Pretty cool right?
 It is, but, what about desktop? What if the website wants to control that
 experience?
 
-The good news is that a [Picture-in-Picture Web API] specification is being
-drafted as we speak. This spec aims to allow websites to initiate and control
-this behavior by exposing the following set of properties to the API:
+The good news is that a [Picture-in-Picture Web
+API](https://wicg.github.io/picture-in-picture/) specification is being drafted
+as we speak. This spec aims to allow websites to initiate and control this
+behavior by exposing the following set of properties to the API:
 
 - Notify the website when a video enters and leaves Picture-in-Picture mode.
 - Allow the website to trigger Picture-in-Picture on a video element via a user gesture.
@@ -79,7 +82,9 @@ The code above is not implemented by browsers yet.
 ## Feedback
 
 So what do you think? Please submit your feedback and raise issues in the
-[Picture-in-Picture WICG repository]. We're eager to hear your thoughts!
+[Picture-in-Picture WICG
+repository](https://github.com/WICG/picture-in-picture). We're eager to hear
+your thoughts!
 
 ## Preventing Android's default PIP behavior
 
@@ -108,8 +113,3 @@ window.addEventListener('resize', function() {
     }
 });
 ```
-
-[supported in chrome]: https://developers.google.com/web/updates/2018/10/watch-video-using-picture-in-picture
-[android 0 supports picture-in-picture]: https://developer.android.com/about/versions/oreo/android-8.0.html#opip
-[picture-in-picture web api]: https://wicg.github.io/picture-in-picture/
-[picture-in-picture wicg repository]: https://github.com/WICG/picture-in-picture
