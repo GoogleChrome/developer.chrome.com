@@ -24,7 +24,7 @@ mitigate that risk, browsers offer an opt-in-based isolated environment called
 [cross-origin isolation](https://web.dev/coop-coep/), which, among other things,
 requires deploying COEP. This allows websites to use privileged features
 including
-[`SharedArrayBuffer`](https://developer.chrome.com/blog/enabling-shared-array-buffer/),
+[`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/),
 [`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/),
 and
 [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
@@ -92,7 +92,7 @@ origin trial.
 Register for the origin trial to enable your website to use Anonymous
 iframes:
 
-1.  [Request a token](https://developer.chrome.com/origintrials/#/view_trial/537054255563931649)
+1.  [Request a token](/origintrials/#/view_trial/537054255563931649)
     for your origin.
 1.  Use the token in one of the following ways:
     -  In your HTML:
@@ -125,7 +125,7 @@ The origin trial is also available to third party scripts. It means it can be
 enabled by scripts embedded on the page.
 
 Leran more about how to
-[register for a third-party origin trial](https://developer.chrome.com/en/docs/web-platform/third-party-origin-trials/#register-for-a-third-party-origin-trial).
+[register for a third-party origin trial](/docs/web-platform/third-party-origin-trials/#register-for-a-third-party-origin-trial).
 
 
 ## FAQ
@@ -155,5 +155,5 @@ anonymous iframe.
 -   [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/)
 -   [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/)
 -   [A guide to enable cross-origin isolation](https://web.dev/cross-origin-isolation-guide/)
--   [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
--   [Load cross-origin resources without CORP headers using `COEP: credentialless`](https://developer.chrome.com/blog/coep-credentialless-origin-trial/)
+-   [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](/blog/enabling-shared-array-buffer/)
+-   [Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/)
