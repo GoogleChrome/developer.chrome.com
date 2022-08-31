@@ -17,7 +17,7 @@ tags:
 
 To improve privacy, Chrome is changing how storage and communication APIs will
 behave in future releases. Read more about the upcoming change in
-[Storage Partitioning](https://developer.chrome.com/docs/privacy-sandbox/storage-partitioning/).
+[Storage Partitioning](/docs/privacy-sandbox/storage-partitioning/).
 
 The initial implementation has been available behind a flag in Chrome 105,
 since July 2022. Starting in Chrome Beta 106, from September 2022, the new
