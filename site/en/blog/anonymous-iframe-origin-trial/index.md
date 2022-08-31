@@ -2,7 +2,8 @@
 layout: 'layouts/blog-post.njk'
 title: "Anonymous iframe origin trial: Easily embed iframes in COEP environments"
 description: >
-  Describe your example post with a couple sentences.
+  Developers using COEP can now embed third party iframes that do not use COEP themselves.
+  Anonymous iframe origin trial is available for testing in Chrome from version 106 to 108.
 subhead: >
   Developers using COEP can now embed third party iframes that do not use COEP themselves.
 date: 2022-09-01
@@ -11,9 +12,6 @@ authors:
 tags:
   - privacy
   - security
-hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
-alt: >
-  An alternative text description of your hero or social image.
 ---
 
 ## Why we need COEP
@@ -96,18 +94,24 @@ iframes:
     for your origin.
 1.  Use the token in one of the following ways:
     -  In your HTML:      
-      `<meta http-equiv="Origin-Trial" content="TOKEN_GOES_HERE">`
+        ```html
+        <meta http-equiv="Origin-Trial" content="TOKEN_GOES_HERE">
+        ```
     -  In your Javascript:
-      ```js
-        const meta = document.createElement('meta');
-        meta.httpEquiv = 'Origin-Trial';
-        meta.content = 'TOKEN_GOES_HERE';
-        document.head.append(meta);
-      ```
+        ```js
+          const meta = document.createElement('meta');
+          meta.httpEquiv = 'Origin-Trial';
+          meta.content = 'TOKEN_GOES_HERE';
+          document.head.append(meta);
+        ```
     -  In the HTTP headers:
-     `Origin-Trial: TOKEN_GOES_HERE`
+        ```text
+        Origin-Trial: TOKEN_GOES_HERE
+        ```
 1.  Add an anonymous iframe to your page:
-     `<iframe anonymous src="https://example.com">`
+      ```html
+      <iframe anonymous src="https://example.com">
+      ```
 
 If you have any feedback on this feature, file an issue in the [GitHub
 repository](https://github.com/WICG/anonymous-iframe).
