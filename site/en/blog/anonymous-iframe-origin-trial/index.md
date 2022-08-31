@@ -32,7 +32,7 @@ and
 To enable cross-origin isolation, websites must send the following two HTTP
 headers:
 
-```
+```text
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
@@ -59,7 +59,7 @@ partition and it isn't subject to COEP restrictions anymore.
 
 Example:
 
-```
+```html
 <iframe anonymous src="https://example.com">
 ```
 
@@ -101,7 +101,7 @@ iframes:
 
     -  In your Javascript:
 
-      ```
+      ```js
         const meta = document.createElement('meta');
         meta.httpEquiv = 'Origin-Trial';
         meta.content = 'TOKEN_GOES_HERE';
