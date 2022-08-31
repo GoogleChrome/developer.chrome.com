@@ -9,7 +9,7 @@ updated: 2022-09-02
 
 This site introduces Manifest V3, short for Manifest Version 3, which is the latest iteration of the Chrome extension platform. It shares the background and reasons for introducing Manifest V3 and the vision for the platform's future, along with resources on how to migrate.
 
-## What is a Manifest?
+## What is a manifest?
 
 An extension [manifest][doc-manifest] gives the browser information about the extension, such as
 the most important files and the capabilities the extension might use. The extension platform features change when there's a new [manifest version][manifest-version].
