@@ -5,7 +5,7 @@ authors:
   - bramus
   - victorporof
 description: >
-  We are releasing a set of features to improve your debugging and profiling experience in Chrome DevTools.
+  Take a look at some of the recent changes in Chrome DevTools which improve your debugging and profiling experience when working with bundlers, frameworks, and third party code.
 date: 2022-08-31
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/p5rc94lS6rpR6xBwzT8k.jpg'
 alt: Modern web debugging in Chrome DevTools
@@ -54,7 +54,7 @@ To enable this option in Chrome DevTools, go to **Settings** > **Experiments** a
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/XCJVoG5N9DY4Uav7cTa1.png", alt="Screenshot of DevTools’s Settings.", width="800", height="465" %}
 
 {% Aside %}
-We plan to enable this experiment by default soon. Send us feedback [here](https://bugs.chromium.org/p/chromium/issues/detail?id=1334670).
+The Chrome DevTools team plans to enable this experiment by default soon. Send us feedback [here](https://bugs.chromium.org/p/chromium/issues/detail?id=1334670).
 {% endAside %}
 
 ## “Just my code”
@@ -76,7 +76,7 @@ As of [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1
 As an author, you don’t need to do anything to enable this new behavior. It is up to the framework to implement this change.
 
 {% Aside %}
-The ignore-listing is enabled by populating an extra `x_google_ignoreList` field in the source map that Angular generates when compiling the project. We encourage other framework authors to implement a similar change. Refer to the [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging) post for more details.
+The ignore-listing is enabled by populating an extra `x_google_ignoreList` field in the source map that Angular generates when compiling the project. The Chrome DevTools team encourages other framework authors to implement a similar change. Refer to the [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging) post for more details.
 {% endAside %}
 
 ### Ignore-listed code in stack traces
@@ -241,6 +241,6 @@ As an author, you don’t need to do anything to enable this new behavior. It is
 
 ## Looking ahead
 
-Thanks to the additions outlined in this post, we can offer you a better debugging experience in Chrome DevTools. There are more areas that we would like to explore. In particular, how to improve the profiling experience in DevTools.
+Thanks to the additions outlined in this post, Chrome DevTools can offer you a better debugging experience. There are more areas that the team would like to explore. In particular, how to improve the profiling experience in DevTools.
 
-We encourage framework authors to adopt these new capabilities. The [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging) offers guidance on how to implement this.
+The Chrome DevTools team encourages framework authors to adopt these new capabilities. The [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging) offers guidance on how to implement this.
