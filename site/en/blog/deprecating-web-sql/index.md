@@ -38,7 +38,7 @@ those needing web databases to adopt
 [`localStorage`](https://developer.mozilla.org/docs/Web/API/Window/localStorage) and
 [`sessionStorage`](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage), or
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB). These
-technologies show their strenghts when it comes to key/value stores and structured data, but
+technologies show their strengths when it comes to key/value stores and structured data, but
 acknowledgely also have weaknesses like the lack of a strong query language. People want SQL on the
 web for a reason.
 
