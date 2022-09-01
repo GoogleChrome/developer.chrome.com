@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: "Federated Credential Management API (FedCM) origin trial extended"
 description: >
-  FedCM origin trial will now be available until the release of Chrome 107, scheduled for October 18, 2022.
+  FedCM origin trial will now be available until the release of Chrome 108, scheduled for November 23, 2022.
 subhead: >
-  FedCM origin trial will now be available until the release of Chrome 107, scheduled for October 18, 2022. 
+  FedCM origin trial will now be available until the release of Chrome 108, scheduled for November 23, 2022.
 date: 2022-09-01
 authors:
   - mihajlija
