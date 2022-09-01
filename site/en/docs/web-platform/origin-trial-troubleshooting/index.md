@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2022-08-18
+updated: 2022-08-31
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -167,13 +167,17 @@ For examples of pages that _do_ include an origin trial token, see the [demos](#
 
 ## Chrome DevTools status codes {: #devtools-status}
 
-* **Success**: The token is well-formed, has not expired, matches an origin trial feature, and is
-requested from an expected origin.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=84)
+* **Expired**: Token has passed its expiration date. The token will need to be renewed, to
+generate a new token with a new expiration date.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=97)
 
-* **NotSupported**: The origin trial defined by the token is not supported in the Chromium
-'embedder': a browser such as Chrome or Edge, a WebView, or some other user agent.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=258)
+* **FeatureDisabled**: Trial is currently disabled for use.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=100)
+
+* **FeatureDisabledForUser**: This token has been designated as disabled for the current user via an
+alternative usage restriction. See the "User Subset Exclusions" section of the [design doc](https://docs.google.com/document/d/1xALH9W7rWmX0FpjudhDeS2TNTEOXuPn4Tlc9VmuPdHA).<br>
+[Source code 1](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=106)<br>
+[Source code 2](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/origin_trials/trial_token.h;l=155)
 
 * **Insecure**: The request origin is insecure, and the trial is not enabled for insecure origins.
 As explained in the [origin trial token validator code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200):
@@ -184,14 +188,6 @@ direct lookup to find the appropriate script origin. To avoid re-doing all the o
 there are shortcuts that depend on how many script origins were provided. There must be at least
 one, or the third party token would not be validated successfully.'<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=200)
-
-* **Expired**: Token has passed its expiration date. The token will need to be renewed, to
-generate a new token with a new expiration date.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=97)
-
-* **WrongOrigin**: The request origin does not match the origin specified in the token. This can
-include the scheme, hostname, or port.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;drc=610603f89f0dd4da794848e4f8670a179efbcf38;l=262)
 
 * **InvalidSignature**: The token has an invalid or malformed signature.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator_unittest.cc;l=105)
@@ -205,22 +201,30 @@ recognized by the current browser or browser version. It is possible that the to
 different browser.
 {% endAside %}
 
-* **WrongVersion**: Wrong token version: only token version 2 and 3 are currently supported.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=137)
+* **NotSupported**: The origin trial defined by the token is not supported in the Chromium
+'embedder': a browser such as Chrome or Edge, a WebView, or some other user agent.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=258)
 
-* **FeatureDisabled**: Trial is currently disabled for use.<br>
-[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=100)
+* **Success**: The token is well-formed, has not expired, matches an origin trial feature, and is
+requested from an expected origin.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=84)
 
 * **TokenDisabled**: Token has been marked as disabled and cannot be used.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=103)
 
-* **FeatureDisabledForUser**: This token has been designated as disabled for the current user via an
-alternative usage restriction. See the "User Subset Exclusions" section of [design doc](https://docs.google.com/document/d/1xALH9W7rWmX0FpjudhDeS2TNTEOXuPn4Tlc9VmuPdHA).<br>
-[Source code 1](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=106)<br>
-[Source code 2](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/common/origin_trials/trial_token.h;l=155)
+* **TrialNotAllowed**: The origin trial is [not available for the current user](/docs/web-platform/origin-trial-troubleshooting/#user).<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/origin_trials/origin_trial_context.cc;drc=96a0ae6d349eb7dd0288df76491b717cb65422f9;l=486)
 
 * **UnknownTrial**: The token specifies a feature name that does not match any known trial.<br>
 [Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token_validator.cc;l=178)
+
+* **WrongOrigin**: The request origin does not match the origin specified in the token. This can
+include the scheme, hostname, or port.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;drc=610603f89f0dd4da794848e4f8670a179efbcf38;l=262)
+
+* **WrongVersion**: Wrong token version: only token version 2 and 3 are currently supported.<br>
+[Source code](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/common/origin_trials/trial_token.cc;l=137)
+
 
 ---
 
