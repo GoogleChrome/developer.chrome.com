@@ -89,5 +89,5 @@ owners have the support they need.
 ## Reporting bugs
 
 The best way to give feedback is to file a
-[new issue](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage),
+[new issue](https://bugs.chromium.org/p/chromium/issues/entry?labels=Proj-StoragePartitioningTrial&components=Blink%3EStorage),
 either with a link to a publicly accessible URL or a reduced test case.
