@@ -210,5 +210,11 @@ This is only the first installment of the design for the Angular image directive
 
 The Angular image directive will be available to developers in stages, starting with the developer preview version in v14.2.0. Do give `NgOptimizedImage` a try and leave feedback!  
 
+## Further Read 
+
+Have a look at the detailed tutorial about `NgOptimizedImage` directive in Angular.
+
+[Use NgOptimizedImage to improve image loading performance in Angular](https://www.angularjswiki.com/angular/use-ngoptimizedimage-to-improve-image-loading-performance-in-angular/)
+
 
 *With special thanks to Katie Hempenius and Alex Castle for their contribution.*
