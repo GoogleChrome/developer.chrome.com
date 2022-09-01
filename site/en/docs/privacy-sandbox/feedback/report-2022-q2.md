@@ -786,7 +786,7 @@ We will discuss this requirement in the Privacy Community Group as part of stand
 
 
 
-### Web Identity API, fka FedCM
+### FedCM
 
 
 <table>
