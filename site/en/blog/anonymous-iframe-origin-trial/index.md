@@ -132,7 +132,7 @@ Leran more about how to
 -   Mozilla Request for position:
     [Pending](https://github.com/mozilla/standards-positions/issues/628)
 -   Webkit Request for position:
-    [No signal](https://lists.webkit.org/pipermail/webkit-dev/2022-April/032205.html)
+    [No signal](https://github.com/WebKit/standards-positions/issues/45)
 -   [W3C TAG](https://www.w3.org/2001/tag/) Request for position:
     [satisfied](https://github.com/w3ctag/design-reviews/issues/639)
 
