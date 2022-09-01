@@ -90,7 +90,7 @@ origin trial.
 Register for the origin trial to enable your website to use Anonymous
 iframes:
 
-1.  [Request a token](/origintrials/#/view_trial/537054255563931649)
+1.  [Request a token](/origintrials/#/view_trial/2518638091606949889)
     for your origin.
 1.  Use the token in one of the following ways:
     -  In your HTML:      
