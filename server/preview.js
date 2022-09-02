@@ -15,38 +15,29 @@
  */
 
 const Eleventy = require("@11ty/eleventy");
-const fs = require('fs');
 const path = require('path');
-// TODO: move to top level.
+const toMarkdown = require('@sanity/block-content-to-markdown')
 const sanity = require('../sanity_utils/sanityClient.js')
+const client = require('../sanity_utils/sanityClient.js');
+const serializers = require('../sanity_utils/serializers');
 
 const querySanity = async function (slug) {
-  console.log(slug)
   const query = `*[_type == "post" && slug.current == '${slug}']`;
   const result = await sanity.fetch(query);
-
-  console.log(result[0])
   if (result.length == 1) {
     return result[0];
   }
-
   return result;
 };
 
-const toMarkdown = require('@sanity/block-content-to-markdown')
-const client = require('../sanity_utils/sanityClient.js');
-const baseSerializers = require('../sanity_utils/serializers')
-
-const serializers = {
-  types: {
-    ...baseSerializers.types,
-    code: props => '```' + props.node.language + '\n' + props.node.code + '\n```',
-    aside: props =>
-      `{% Aside '${props.node.type}' %}` +
-      `${toMarkdown(props.node.text)}` +
-      `{% endAside %}`
-  }
-}
+const formatDoc = async function(doc) {
+  return {
+    // TODO: Better date formatting
+    date: doc.publishedAt.split('T')[0],
+    title: doc.title,
+    slug: doc.slug.current,
+  };
+};
 
 const formatBody = async function(body) {
   const out = await toMarkdown(body, {
@@ -61,7 +52,6 @@ const formatBody = async function(body) {
  * @type {express.RequestHandler}
  */
 const previewHandler = async (req, res, next) => {
-
   // TODO: Add locales support. Defaults to 'en' at the moment.
   // TODO: add noindex / norobots header
   // TODO: Add /preview template to eleventyignore.
@@ -71,13 +61,14 @@ const previewHandler = async (req, res, next) => {
   // TODO: support full path and not only slug.
   const slug = req.params[0].split('/').pop();
 
-  const post = await querySanity(slug);
-  if (!post || !post?.body) {
+  const doc = await querySanity(slug);
+  if (!doc || !doc?.body) {
     next();
     return;
   }
 
-  const body =  await formatBody(post.body);
+  const post =  await formatDoc(doc);
+  const body =  await formatBody(doc.body);
 
   let elev = new Eleventy(inputPath, 'dist', {
     configPath: ".eleventy.js",
@@ -85,8 +76,9 @@ const previewHandler = async (req, res, next) => {
     config: function(eleventyConfig) {
       eleventyConfig.addGlobalData('isPreview', true)
       eleventyConfig.addGlobalData('previewSource', 'sanity')
-      eleventyConfig.addGlobalData('portableText', post)
+      eleventyConfig.addGlobalData('post', post)
       eleventyConfig.addGlobalData('content', body)
+      eleventyConfig.addGlobalData('date', post.date)
     },
   });
   const out = await elev.toJSON();
