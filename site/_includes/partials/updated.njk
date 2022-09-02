@@ -1,8 +1,14 @@
 <p class="color-secondary-text type--caption">
   {% if updated %}
-    Last updated: <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    Last updated:
+    <time datetime="{{ helpers.formatDateNumeric(updated) }}">
+      {{ helpers.formatDateLong(updated, locale) }}
+    </time>
   {% elif date %}
-    Last updated: <time>{{ helpers.formatDateLong(date, locale) }}</time>
+    Last updated:
+    <time datetime="{{ helpers.formatDateNumeric(date) }}">
+      {{ helpers.formatDateLong(date, locale) }}
+    </time>
     <span>•</span>
   {% endif %}
   <a href="{{ page.inputPath | githubLink }}">
