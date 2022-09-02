@@ -17,50 +17,87 @@
 const Eleventy = require("@11ty/eleventy");
 const fs = require('fs');
 const path = require('path');
+// TODO: move to top level.
+const sanity = require('../sanity_utils/sanityClient.js')
 
-const getDirectories = source =>
-  fs.readdirSync(source, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name)
+const querySanity = async function (slug) {
+  console.log(slug)
+  const query = `*[_type == "post" && slug.current == '${slug}']`;
+  const result = await sanity.fetch(query);
 
-const getTranslatedLangDirs = () => {
-  return getDirectories(path.join(__dirname, '..', 'site'))
-    .filter(dirName => {
-      return !dirName.startsWith('_') && dirName !== 'en';
-    })
-    .map(dir => path.join('site', dir, '**', '*'))
+  console.log(result[0])
+  if (result.length == 1) {
+    return result[0];
+  }
+
+  return result;
+};
+
+const toMarkdown = require('@sanity/block-content-to-markdown')
+const client = require('../sanity_utils/sanityClient.js');
+const baseSerializers = require('../sanity_utils/serializers')
+
+const serializers = {
+  types: {
+    ...baseSerializers.types,
+    code: props => '```' + props.node.language + '\n' + props.node.code + '\n```',
+    aside: props =>
+      `{% Aside '${props.node.type}' %}` +
+      `${toMarkdown(props.node.text)}` +
+      `{% endAside %}`
+  }
 }
 
-// TODO: Use fastglob instead of a heuristic here.
-const getDirsWithException = (baseDir, exception) => {
-  return getDirectories(path.join(__dirname, '..', 'site', baseDir))
-    .filter(dirName => {
-      return !dirName.startsWith('_') && dirName !== exception;
-    })
-    .map(dir => path.join('site', baseDir, dir, '**', '*'))
-}
+const formatBody = async function(body) {
+  const out = await toMarkdown(body, {
+    serializers,
+    ...client.config()
+  });
+  return out;
+};
 
 
 /**
  * @type {express.RequestHandler}
  */
 const previewHandler = async (req, res, next) => {
-  const eleventyIgnorePatterns = [
-    ...getTranslatedLangDirs(),
-    ...getDirsWithException('en', 'sanity'),
-  ];
 
-  let elev = new Eleventy('./site', 'dist', {
+  // TODO: Add locales support. Defaults to 'en' at the moment.
+  // TODO: add noindex / norobots header
+  // TODO: Add /preview template to eleventyignore.
+  // TODO: right now it supports only 1 content type.
+  const inputPath = path.join('./site/en/', 'preview', 'index.md');
+
+  // TODO: support full path and not only slug.
+  const slug = req.params[0].split('/').pop();
+
+  const post = await querySanity(slug);
+  if (!post || !post?.body) {
+    next();
+    return;
+  }
+
+  const body =  await formatBody(post.body);
+
+  let elev = new Eleventy(inputPath, 'dist', {
     configPath: ".eleventy.js",
+    inputDir: './site',
     config: function(eleventyConfig) {
-      eleventyIgnorePatterns.forEach(entry => {
-        eleventyConfig.ignores.add(entry);
-      })
+      eleventyConfig.addGlobalData('isPreview', true)
+      eleventyConfig.addGlobalData('previewSource', 'sanity')
+      eleventyConfig.addGlobalData('portableText', post)
+      eleventyConfig.addGlobalData('content', body)
     },
   });
-  await elev.write();
+  const out = await elev.toJSON();
 
-  res.redirect(`/sanity/${req.params.sanity_slug}`);
+  // Preview for this path was not found.
+  if (!out.length || !out[0]?.content) {
+    next();
+    return;
+  }
+
+  res.send(out[0].content)
 };
 
 module.exports = {previewHandler};

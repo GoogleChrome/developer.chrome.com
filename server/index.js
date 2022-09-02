@@ -78,7 +78,7 @@ if (isGAEProd) {
   handlers.unshift(compression());
 }
 
-app.get('/:sanity_slug/preview', previewHandler);
+app.get('/**/preview', previewHandler);
 app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {

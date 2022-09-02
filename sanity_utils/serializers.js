@@ -9,3 +9,4 @@ module.exports = {
     mainImage: ({node}) => `![${node.alt}](${imageUrl(node).width(600).url()})`
   }
 }
+

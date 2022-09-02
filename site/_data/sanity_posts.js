@@ -1,8 +1,8 @@
 const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const groq = require('groq')
-const client = require('../_sanity_utils/sanityClient.js')
-const serializers = require('../_sanity_utils/serializers')
-const overlayDrafts = require('../_sanity_utils/overlayDrafts')
+const client = require('../../sanity_utils/sanityClient.js')
+const serializers = require('../../sanity_utils/serializers')
+const overlayDrafts = require('../../sanity_utils/overlayDrafts')
 const { title } = require('process')
 const hasToken = !!client.config().token
 
@@ -51,7 +51,6 @@ async function getPosts () {
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)
   const preparePosts = reducedDocs.map(generatePost)
-  console.log(docs.map(doc => doc.title));
   return preparePosts
 }
 

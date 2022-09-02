@@ -3,7 +3,7 @@ require('dotenv').config({
 })
 const sanityClient = require("@sanity/client");
 
-const { sanity } = require('../../sanity-client-config')
+const { sanity } = require('../sanity-client-config')
 
 /**
  * Set manually. Find configuration in
@@ -18,4 +18,9 @@ const sanity = {
 }
 */
 
-module.exports = sanityClient({...sanity, useCdn: !process.env.SANITY_READ_TOKEN, token: process.env.SANITY_READ_TOKEN});
+module.exports = sanityClient({
+  ...sanity,
+  apiVersion: '2022-08-30',
+  useCdn: !process.env.SANITY_READ_TOKEN,
+  token: process.env.SANITY_READ_TOKEN
+});
