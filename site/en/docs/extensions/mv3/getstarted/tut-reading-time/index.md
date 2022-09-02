@@ -276,9 +276,10 @@ tutorials on this series:
 | [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
+
 ## Continue exploring
 
-We hope you enjoyed building these Chrome extensions and are excited to continue your Chrome
+We hope you enjoyed building this Chrome extension and are excited to continue your Chrome
 development learning journey. We recommend the following learning path:
 
 - The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
