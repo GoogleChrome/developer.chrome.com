@@ -636,7 +636,7 @@ Tony's fans love how fast the site feels now, and Tony is very thankful for your
 
 [1]: https://www.coursera.org/learn/web-development#syllabus
 [2]: https://glitch.com/edit/#!/tony
-[3]: /web/tools/lighthouse
+[3]: /docs/lighthouse/overview/
 [4]: https://support.google.com/chrome/answer/95464
 [5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives
 [6]: https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#relative_sized_images

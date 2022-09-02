@@ -67,7 +67,7 @@ Multiple background scripts can be registered for modularized code.
 
 The only occasion to keep a background script persistently active is if the extension uses
 [chrome.webRequest][4] API to block or modify network requests. The webRequest API is incompatible
-with non-persistent background pages.
+with non-persistent background pages. By default, `"persistent"` is set to true.
 
 {% endAside %}
 

@@ -36,7 +36,7 @@ tags:
 利用新的**录制器**面板来录制、重放、以及测量用户操作的性能。
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
-打开**录制器**面板(/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
+[打开**录制器**面板](/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
 
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
 例如，您可以在这个[点咖啡](https://coffee-cart.netlify.app/)应用上录制一次咖啡购买的过程。在添加一杯咖啡并填写支付信息之后，您可以结束录制，重放这个过程，或点击**测量性能**按钮来在**性能**面板中测量用户操作的性能。

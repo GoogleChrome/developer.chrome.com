@@ -6,15 +6,13 @@ authors:
 date: 2022-06-14
 updated: 2022-06-14
 description: "Record double-click and right-click events, new options to measure user flow in Lighthouse and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KDGrFqdw3eSDcZ00qt72.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TWCiJaqb6IKBRsOyqYBo.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-103
 ---
-
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zDmJK6jWRUal7SAiezJl.jpg -->
 
 {% include 'partials/devtools/en/banner.md' %}
 

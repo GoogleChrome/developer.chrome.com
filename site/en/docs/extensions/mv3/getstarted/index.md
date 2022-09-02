@@ -52,7 +52,7 @@ Each tutorial includes the following sections:
 - Step-by-step instructions. 
 - How to load and test the extension.
 
-In addition, If you are up for a challenge, we include a few ways you can add other features to the
+In addition, If you are up for a challenge, we included a few ways you can add other features to the
 extension.
 
 ## Share your feedback {: #share-feedback}
@@ -68,14 +68,6 @@ If you see something wrong or unclear, please submit an issue in our documentati
 
 <!-- TODO: Add instructions inline or send to guideline doc -->
 
-### Share a code sample {: #code-tut}
-
-<!-- TODO: Add instructions inline or send to guideline doc -->
-
-
-### Write a tutorial {: #submit-tut}
-
-<!-- TODO: Add instructions inline or send to guideline doc -->
 
 We hope the new Getting Started collection helps you feel confident and supported as you embark on your extension development journey.
 

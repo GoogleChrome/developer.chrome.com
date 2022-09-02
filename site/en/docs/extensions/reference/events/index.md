@@ -192,8 +192,8 @@ To achieve maximum performance, you should keep the following guidelines in mind
 
 Filtered events are a mechanism that allows listeners to specify a subset of events that they are
 interested in. A listener that makes use of a filter won't be invoked for events that don't pass the
-filter, which makes the listening code more declarative and efficient - an [event page][17] page
-need not be woken up to handle events it doesn't care about.
+filter, which makes the listening code more declarative and efficient - a [service worker][17] need
+not be woken up to handle events it doesn't care about.
 
 Filtered events are intended to allow a transition from manual filtering code like this:
 
@@ -237,5 +237,5 @@ capabilities as expressible with a [`events.UrlFilter`][18], except for scheme a
 [14]: /docs/extensions/reference/runtime#property-lastError
 [15]: /docs/extensions/reference/runtime#event-onInstalled
 [16]: #type-UrlFilter
-[17]: /docs/extensions/mv2/event_pages
+[17]: /docs/extensions/mv3/service_workers
 [18]: #type-UrlFilter

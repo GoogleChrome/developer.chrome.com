@@ -21,20 +21,20 @@ date: 2021-03-09
 
 # Optional
 # Include an updated date when you update your post
-updated: 2021-03-09
+updated: 2022-07-19
 
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 #tags:
-  
+
 
 ---
 
 Starting with the [February 2021
-dataset](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/changelog#202101),
+dataset](/docs/crux/release-notes/#202101),
 we’re adding an experimental metric to the [CrUX report in
-BigQuery](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/getting-started)
+BigQuery](/docs/crux/bigquery/)
 which distinguishes the popularity of origins by orders of magnitude: The top 1k
 origins, top 10k, top 100k, top 1M, ... Let’s see how this looks in practice:
 

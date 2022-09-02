@@ -386,7 +386,7 @@ window.addEventListener('message', function(event) {
 
   // Only accept messages that we know are ours
   if (typeof message !== 'object' || message === null ||
-      !message.source === 'my-devtools-extension') {
+      message.source !== 'my-devtools-extension') {
     return;
   }
 
@@ -457,7 +457,8 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index].
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index] and [web
+APIs][mdn-web-apis].
 
 [Give us feedback!][group-devtools] Your comments and suggestions help us improve the APIs.
 
@@ -496,3 +497,5 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [header-injecting]: #injecting
 [header-selected-element]: #selected-element
 [mdn-postmessage]: https://developer.mozilla.org/docs/Web/API/Window.postMessage
+[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+

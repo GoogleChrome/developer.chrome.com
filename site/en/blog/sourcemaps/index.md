@@ -33,10 +33,6 @@ Firefox 23+ has source maps enabled by default in the built in dev tools. See sc
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/zBVmQq2jpigsAanmtWA2.png", alt="How to enable source maps in Firefox dev tools.", width="609", height="224" %}
 </figure>
 
-That Source Map query demo is cool and all but what about a real world use case? Take a look at the special build of font dragr at [dev.fontdragr.com](http://dev.fontdragr.com/) in Chrome Canary, WebKit nightly or Firefox 23+, with source mapping enabled, and you'll notice that the JavaScript isn't compiled and you can see all the individual JavaScript files it references. This is using source mapping, but behind the scenes actually running the compiled code. Any errors, logs and breakpoints will map to the dev code for awesome debugging! So in effect it gives you the illusion that you're running a dev site in production.
-
-[Demo: View scripts panel (with source maps) on fontdragr.com](http://dev.fontdragr.com)
-
 ## Why should I care about source maps?
 
 Right now source mapping is only working between uncompressed/combined JavaScript to compressed/uncombined JavaScript, but the future is looking bright with talks of compiled-to-JavaScript languages such as CoffeeScript and even the possibility of adding support for CSS preprocessors like SASS or LESS.

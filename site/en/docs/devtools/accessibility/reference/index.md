@@ -4,7 +4,7 @@ title: "Accessibility features reference"
 authors:
   - kaycebasques
   - sofiayem
-date: 2018-07-13
+date: 2022-06-09
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
 tags:
@@ -39,7 +39,7 @@ a keyboard or screen reader yourself. See [How To Do An Accessibility Review][4]
 
 ## Audit a page's accessibility {: #audits }
 
-In general, use the Audits panel to determine if:
+In general, use the accessibility checks under the **Lighthouse** panel to determine if:
 
 - A page is properly marked up for screen readers.
 - The text elements on a page have sufficient contrast ratios. See also [View the contrast ratio of
@@ -48,17 +48,18 @@ In general, use the Audits panel to determine if:
 To audit a page:
 
 1.  Go to the URL that you want to audit.
-2.  In DevTools, click the **Audits** tab. DevTools shows you various configuration options.
+2.  In DevTools, click the **Lighthouse** tab. DevTools shows you various configuration options.
 
-    {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring audits.", width="800", height="1053" %}
+    {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring an accessabillity scan in Lighthouse panel.", width="800", height="1053" %}
 
     **Figure 1**. Configuring audits
 
     {% Aside %}
 
-    **Note**: The screenshots in this section were taken with version 69 of Chrome. You can check
-    what version you're running at `chrome://version`. The Audits panel UI looks different in
-    earlier versions of Chrome, but the general workflow is the same.
+    **Note**: The screenshots in this section were taken with Chrome 69. In the screenshots, the tab
+    is still named **Audits** but it was [renamed into Lighthouse in Chrome 83](/blog/new-in-devtools-83/#lighthouse)
+    You can check what version you're running at `chrome://version`. The **Audits** panel UI will look different in
+    some earlier or later versions of Chrome, but the general workflow is the same.
 
     {% endAside %}
 
@@ -66,7 +67,7 @@ To audit a page:
     differently your user agent string and resizes the viewport. If the mobile version of the page
     displays differently than the desktop version, this option could have a significant effect on
     the results of your audit.
-4.  In the **Audits** section, make sure that **Accessibility** is enabled. Disable the other
+4.  In the **Lighthouse** section, make sure that **Accessibility** is enabled. Disable the other
     categories if you want to exclude them from your report. Leave them enabled if you want to
     discover other ways to improve the quality of your page.
 5.  The **Throttling** section lets you throttle the network and CPU, which is useful when analyzing
@@ -75,7 +76,7 @@ To audit a page:
 6.  The **Clear Storage** checkbox lets you clear all storage before loading the page, or preserve
     storage between page loads. This option is also probably irrelevant to your accessibility score,
     so you can use whatever you prefer.
-7.  Click **Run Audits**. After 10 to 30 seconds, DevTools provides a report. Your report gives you
+7.  Click **Generate Report**. After 10 to 30 seconds, DevTools provides a report. Your report gives you
     various tips on how to improve the page's accessibility.
 
     {% Img src="image/admin/62KIEtieXbeJl36cN0kQ.png", alt="A report.", width="800", height="983" %}
@@ -96,8 +97,8 @@ To audit a page:
 
 ### See also: aXe extension {: #axe }
 
-You may prefer to use the [aXe extension][6] rather than the Audits panel. They generally provide
-the same information, since aXe is the underlying engine that powers the Audits panel. The aXe
+You may prefer to use the [aXe extension][6] or [Lighthouse extension][14] rather than the Lighthouse panel that is available by default in Chrome.
+They generally provide the same information, since aXe is the underlying engine that powers the Lighthouse panel. The aXe
 extension has a different UI and describes audits slightly differently. One advantage that the aXe
 extension has over the Audits panel is that it lets you inspect and highlight failing nodes.
 
@@ -242,3 +243,4 @@ The Color Picker can help you make sure that your text meets recommended contras
 [11]: #pane
 [12]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [13]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
+[14]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
