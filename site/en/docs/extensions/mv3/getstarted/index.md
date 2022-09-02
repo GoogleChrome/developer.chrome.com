@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'The Getting Started Collection'
+title: 'Welcome'
 subhead: 'Welcome to the Getting Started Guides.'
 description: 'Welcome to the Getting Started Guides.'
 date: 2022-08-20
@@ -8,11 +8,11 @@ date: 2022-08-20
 ---
 
 
-Welcome to the Getting Started guides collection! The purpose of this page is to describe each article and how you can contribute to this collection.
+Welcome to the Getting Started Guides! The purpose of this page is to describe each article and how you can contribute to this collection.
 
 ## Begin your journey
 
-The following articles will kick-start your Chrome extension development journey:
+The following articles will provide guidance as you start your Chrome extension development journey:
 
 ### Extension development concepts {: #concepts }
 
@@ -28,7 +28,7 @@ structure, and using Typescript.
 
 ### Beginner tutorials {: #tutorials }
 
-The following step-by-step tutorials cover some common Chrome extension use-cases. In addition,
+The following step-by-step tutorials cover some common Chrome extension use cases. In addition,
 using these extensions will improve your experience with the extension documentation.
 
 [Reading time][tut-reading-time]
@@ -46,30 +46,30 @@ list of all the open extension documentation pages. It can also gather them all 
 
 Each tutorial includes the following sections:
 
-- What the extension does.
-- What you will learn.
+- The task the extension will perform. 
+- The lessons that will be covered.
 - What you need to know before starting.
-- Step-by-step instructions. 
+- Step-by-step instructions to build the extension. 
 - How to load and test the extension.
 
-In addition, If you are up for a challenge, we included a few ways you can add other features to the
-extension.
+In addition, If you are up for a challenge, we include a section with ideas on how to customize or add other features to your extension.
 
 ## Share your feedback {: #share-feedback}
 
-We are excited to hear from you! Here are four ways you can contribute to the new Getting Started
-collection:
+We are excited to hear from you! There are two ways you can contribute to this collection:
 
 ### Improve the tutorials {: #improve-tut}
 
-If you see something wrong or unclear, please submit an issue in our documentation [Github repository][github-ext-doc].
+If you see something wrong or unclear, please submit an issue in our [Github repository][github-ext-doc].
 
 ### Request a beginner tutorial {: #request-tut}
 
-<!-- TODO: Add instructions inline or send to guideline doc -->
+If you have an idea for another beginner tutorial, you can let us know by following these steps:
+- Create an issue on the Github repo.
+- Choose “New extension guide request”.
+- Fill out and submit the form.
 
-
-We hope the new Getting Started collection helps you feel confident and supported as you embark on your extension development journey.
+We hope the new Getting Started Guides help you feel confident and supported as you embark on your extension development journey.
 
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics

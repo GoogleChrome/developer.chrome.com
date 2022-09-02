@@ -2,6 +2,7 @@
 - url: /docs/extensions/whatsnew
 - title: i18n.docs.extensions.get-started
   sections:
+  - url: /docs/extensions/mv3/getstarted/
   - url: /docs/extensions/mv3/getstarted/extensions-101
   - url: /docs/extensions/mv3/getstarted/development-basics
   - url: /docs/extensions/mv3/getstarted/tut-reading-time
