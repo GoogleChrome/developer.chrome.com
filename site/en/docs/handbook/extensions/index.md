@@ -203,12 +203,6 @@ chrome.runtime.sendMessage('<extension id>', <message>, function() {
 }
 ```
 
-{% CompareCaption %}
-
-Automatically generated IDs are brittle. If this header were renamed in a future revision, it would
-be given a new ID and all existing links to this section would break. 
-
-{% endCompareCaption %}
 {% endCompare %}
 
 
