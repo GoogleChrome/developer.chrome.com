@@ -161,14 +161,13 @@ browser.
 
 #### Request permission {: #narrow }
 
-Many features in the Tabs API do not require any permissions to use. However, in our case, we need
-to declare a permission to access two sensitive properties: the `title` and the `URL`. 
+You can use many methods in the Tabs API without requesting any permission. However, we need access to the `title` and the `URL` of the tabs; these sensitive properties require permission.
 
-We could request `"tabs"` permission, which would allow us to see the sensitive properties of all
-the browser tabs. However, to protect user privacy, we will request narrow [host
-permissions][doc-match], giving us access _only_ to the title and URL of **specific sites**.
+We could request `"tabs"` permission, but this would allow access to the sensitive properties of **all** browser tabs. Since we are only managing tabs of a particular site, we will request narrow host permissions. 
 
-Add the following code to the manifest JSON file:
+Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities.
+
+Add the following code to the `manifest.json` file:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -181,6 +180,8 @@ Add the following code to the manifest JSON file:
   ...
 }
 ```
+
+<!-- TODO: Details with each permission warning -->
 
 #### Query the tabs {: #query }
 
@@ -249,28 +250,15 @@ document.querySelector("ul").append(...elements);
 💡 **Interesting JavaScript used in this code**
 {% endDetailsSummary %}
 
-- The [Collator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) is used to sort the tabs array by the user's preferred language.
-- The [template tag](https://web.dev/webcomponents-template/) is used to
+- The [Collator][mdn-collator] used to sort the tabs array by the user's preferred language.
+- The [template tag][webdev-template-tag] used to
   define an HTML element that can be cloned instead of using `document.createElement()` to create each item.
-- The [URL constructor](https://developer.mozilla.org/docs/Web/API/URL/URL) is used to create and parse URLs.
+- The [URL constructor][mdn-url-constructor] used to create and parse URLs.
+- The [Spread syntax][mdn-spread-syntax] used to convert the Set of elements into arguments in the `append()` call.
 
 {% endDetails %}
 
 #### Group the tabs {: #group}
-
-Add the following code to create a button that will group all the tabs using [`tabs.group()`]() and
-move them into the current window.
-
-{% Label %}popup.js:{% endLabel %}
-
-```js
-...
-const button = document.querySelector("button");
-button.addEventListener("click", async () => {
-  const group = await chrome.tabs.group({ tabIds: tabs.map(({ id }) => id) });
-  await chrome.tabGroups.update(group, { title: "DOCS" });
-});
-```
 
 The [TabGroups][api-tabgroups] API allows the extension to name the group and choose a background
 color. Add the `“tabGroups”` permission to the manifest by adding the following code:
@@ -284,6 +272,21 @@ color. Add the `“tabGroups”` permission to the manifest by adding the follow
     "tabGroups"
   ]
 }
+```
+
+Add the following code to create a button that will group all the tabs using [`tabs.group()`][api-tabgroups] and
+move them into the current window.
+
+{% Label %}popup.js:{% endLabel %}
+
+```js
+...
+const button = document.querySelector("button");
+button.addEventListener("click", async () => {
+  const tabIds = tabs.map(({ id }) => id);
+  const group = await chrome.tabs.group({ tabIds });
+  await chrome.tabGroups.update(group, { title: "DOCS" });
+});
 ```
 
 ## Test that it works {: #try-out }
@@ -319,7 +322,6 @@ Open the following docs in different windows:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Welcome to Chrome Extension Development][doc-welcome]
 
-
 Click on the popup. It should look like this:
 
 <figure>
@@ -327,6 +329,17 @@ Click on the popup. It should look like this:
 alt="Tabs Manager extension popup", width="600", height="230", class="screenshot" %}
   <figcaption>
   Tabs Manager extension popup
+  </figcaption>
+</figure>
+
+Click on the "Group tabs" button. It should look like this:
+
+
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Cqi828zTxJUQnXtBzM62.png", 
+alt="Tabs Manager Grouped tabs", width="600", height="450" %}
+  <figcaption>
+  Grouped tabs using the Tabs Manager extension
   </figcaption>
 </figure>
 
@@ -366,18 +379,22 @@ development learning journey. We recommend the following learning path:
 [api-tabs]: /docs/extensions/reference/tabs
 [cws-discovery]: /docs/webstore/discovery/
 [cws-publish]: /docs/webstore/publish
-[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
-[doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
-[doc-manifest]: /docs/extensions/mv3/manifest
 [doc-apis]: /docs/extensions/reference
-[doc-match]: /docs/extensions/mv3/match_patterns/
+[doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-devguide]: /docs/extensions/mv3/devguide/
+[doc-manifest]: /docs/extensions/mv3/manifest
+[doc-match]: /docs/extensions/mv3/match_patterns/
 [doc-overview]: /docs/extensions/mv3/architecture-overview/
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [doc-welcome]: /docs/extensions/mv3/
 [github-tabs-manager-icons]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager/images
 [github-tabs-manager]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/tabs-manager
+[mdn-collator]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+[mdn-spread-syntax]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [mdn-top-level]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await#top_level_await
+[mdn-url-constructor]: https://developer.mozilla.org/docs/Web/API/URL/URL
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
+[webdev-template-tag]: https://web.dev/webcomponents-template/

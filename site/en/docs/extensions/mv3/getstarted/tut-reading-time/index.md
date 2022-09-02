@@ -62,12 +62,12 @@ and, when published, in the Chrome Web Store listing. To dive deeper, check out 
 
 {% Details %}
 {% DetailsSummary %}
-💡 **Other facts about the extension Manifest**
+💡 **Other facts about the extension manifest**
 {% endDetailsSummary %}
 
 - It must be located at the **root** of the project.
 - The only required keys are the `"manifest_version"`, `"name"` and `"version"`.
-- It supports comments (`//`) during development but not in the Chrome Web Store.
+- It supports comments (`//`) during development, but these must be removed before uploading your code to the Chrome Web Store.
 
 {% endDetails %}
 
@@ -203,12 +203,11 @@ if (article) {
 {% endDetailsSummary %}
 
 - [Regular
-  expressions][mdn-regular-expressions]
-  are used to count only the words inside the `<article>` element.
-- [InsertAdjacentElement()][mdn-insert-adjacent]
- is used to insert the reading time node after the element.
-- The [Classlist][mdn-classlist] property is
-  used to add CSS class names to the element class attribute.
+  expressions][mdn-regular-expressions] used to count only the words inside the `<article>` element.
+- [InsertAdjacentElement()][mdn-insert-adjacent] used to insert the reading time node after the element.
+- The [Classlist][mdn-classlist] property used to add CSS class names to the element class attribute.
+- [Optional chaining][mdn-optional-chaining] used to access a property in an object that may be undefined or null.
+- [Nullish coalescing][mdn-nullish-coalescing] returns the `<heading>` if the `<date>` is null or undefined.
 
 {% endDetails %}
 
@@ -217,7 +216,7 @@ if (article) {
 Verify that the file structure of your project looks like the following: 
 
 ```text
-└── Reading time/
+└── reading-time/
     ├── manifest.json
     ├── scripts/
     │   └── content.js
@@ -277,17 +276,32 @@ tutorials on this series:
 | [Focus Mode][tut-focus-mode]     | To run code on the current page after clicking on the extension action. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                           |
 
+## Continue exploring
+
+We hope you enjoyed building these Chrome extensions and are excited to continue your Chrome
+development learning journey. We recommend the following learning path:
+
+- The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
+  about the Extensions architecture in general.
+- The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
+  relevant to advanced extension creation.
+- Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
+  The [chrome.\* APIs documentation][doc-apis] will walk through each API.
+
 [cws-publish]: /docs/webstore/publish/
 [dev-chrome]: https://developer.chrome.com/docs/
 [devtools-dom]: https://developer.chrome.com/docs/devtools/dom/
 [devtools]: https://developer.chrome.com/docs/devtools/
+[doc-apis]: /docs/extensions/reference
 [doc-cs]: /docs/extensions/mv3/content_scripts/
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
+[doc-devguide]: /docs/extensions/mv3/devguide/
 [doc-icons]: /docs/extensions/mv3/manifest/icons/
 [doc-isolated]: /docs/extensions/mv3/content_scripts/#isolated_world
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-match]:/docs/extensions/mv3/match_patterns/
+[doc-overview]: /docs/extensions/mv3/architecture-overview/
 [doc-perms]:/docs/extensions/mv3/permission_warnings/
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-welcome]:/docs/extensions/mv3/
@@ -300,6 +314,8 @@ tutorials on this series:
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
 [mdn-insert-adjacent]: https://developer.mozilla.org/docs/Web/API/Element/insertAdjacentElement
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
+[mdn-nullish-coalescing]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+[mdn-optional-chaining]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [mdn-regular-expressions]: https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#writing_a_regular_expression_pattern
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager

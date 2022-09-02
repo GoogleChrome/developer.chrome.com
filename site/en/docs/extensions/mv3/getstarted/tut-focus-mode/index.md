@@ -51,8 +51,7 @@ Create a file called `manifest.json` and include the following code.
 }
 ```
 
-These manifest keys are explained in more detail in the [Reading time
-tutorial][tut-reading-time-step1]. 
+To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
 
 Create an `images` folder and place the icons inside. You can download the icons
 [here][github-focus-mode-icons].
@@ -101,7 +100,6 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 ```
 
-
 ### Step 3: Enable the extension action {: #step-3 }
 
 The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the
@@ -139,7 +137,7 @@ extension by clicking on the extension action.
 💡 **What other user interactions enable the activeTab permission?**
 {% endDetailsSummary %}
 
-Other user gestures that enable the activeTab permission are the following:
+The following are other user gestures your extension can use to invoke the activeTab permission:
 
 - Pressing a keyboard shortcut combination.
 - Selecting a context menu item.
@@ -148,11 +146,11 @@ Other user gestures that enable the activeTab permission are the following:
 
 {% endDetails %}
 
-The `activetab` permission allows users to _purposefully_ choose to run the extension on the
+The `activeTab` permission allows users to _purposefully_ choose to run the extension on the
 currently focused tab; this way, it protects the user’s privacy. Another benefit is that it does not
 trigger a [permission warning][doc-perms-warning].
 
-To use the activetab permission, add it to the manifest's permission array:
+To use the `activeTab` permission, add it to the manifest's permission array:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -352,6 +350,18 @@ tutorials on this series:
 | [Reading time][tut-reading-time] | To insert an element on a specific set of pages automatically. |
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                   |
 
+## Continue exploring
+
+We hope you enjoyed building these Chrome extensions and are excited to continue your Chrome
+development learning journey. We recommend the following learning path:
+
+- The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
+  about the Extensions architecture in general.
+- The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
+  relevant to advanced extension creation.
+- Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
+  The [chrome.\* APIs documentation][doc-apis] will walk through each API.
+
 [action-badge]: /docs/extensions/reference/action/#badge
 [active-tab-allows]: /docs/extensions/mv3/manifest/activeTab/#what-activeTab-allows
 [api-scripting-es]: /docs/extensions/reference/scripting/#injected-code
@@ -359,8 +369,11 @@ tutorials on this series:
 [api-storage]: /docs/extensions/reference/storage
 [cws-publish]: /docs/webstore/publish
 [doc-active-tab]: /docs/extensions/mv3/manifest/activeTab/
+[doc-apis]: /docs/extensions/reference
 [doc-dev-basics-unpacked]: /docs/extensions/mv3/getstarted/development-basics#load-unpacked
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
+[doc-devguide]: /docs/extensions/mv3/devguide/
+[doc-overview]: /docs/extensions/mv3/architecture-overview/
 [doc-perms-warning]: /docs/extensions/mv3/permission_warnings/#required_permissions
 [doc-promises]: /docs/extensions/mv3/promises/
 [doc-sw]: /docs/extensions/mv3/service_workers/
@@ -370,5 +383,6 @@ tutorials on this series:
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [runtime-oninstalled]: /docs/extensions/reference/runtime#event-onInstalled
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
+[tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
