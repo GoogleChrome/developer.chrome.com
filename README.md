@@ -116,6 +116,17 @@ npm run lint
 To do a production build of the site and start the local server
 run `npm run production && npm start`.
 
+### .env variables
+
+Some of the necessary env variables are stored in Cloud Secret manager.
+To fetch needed variables, make sure you have sufficient priviledges, and run:
+
+```bash
+gcloud auth application-default login
+gcloud config set project chrome-apps-doc
+PROJECT_ID=chrome-apps-doc npm run cloud-secrets
+```
+
 ## Staging 🕺
 
 When you send in a pull request it will be automatically staged for you. Keep an
