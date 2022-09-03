@@ -12,32 +12,29 @@ tags:
   - css
 ---
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
 Discover new workflows in this comprehensive reference of Chrome DevTools features related to
 viewing and changing CSS.
 
-See [Get Started with Viewing and Changing CSS][1] to learn the basics.
+See [View and change CSS][1] to learn the basics.
 
 ## Select an element {: #select }
 
-The **Elements** panel of DevTools lets you view or change the CSS of one element at a time. The
-selected element is highlighted blue in the **DOM Tree**. The element's styles are shown in the
-**Styles** pane. See [View an element's CSS][2] for a tutorial.
+The **Elements** panel of DevTools lets you view or change the CSS of one element at a time.
 
-{% Img src="image/admin/Iganvpf9K9dEOpSb6wIA.png", alt="An example of a selected element", width="800", height="503" %}
+{% Img src="image/admin/Iganvpf9K9dEOpSb6wIA.png", alt="An example of a selected element.", width="800", height="503" %}
 
-**Figure 1**. The `h1` element that's highlighted blue in the **DOM Tree** is the selected element.
+The `h1` element that's highlighted blue in the **DOM Tree** above is the selected element.
 To the right, the element's styles are shown in the **Styles** pane. To the left, the element is
 highlighted in the viewport, but only because the mouse is currently hovering over it in the **DOM
-Tree**
+Tree**.
+
+See [View an element's CSS][2] for a tutorial.
 
 There are many ways to select an element:
 
 - In your viewport, right-click the element and select **Inspect**.
 - In DevTools, click **Select an element**
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7HgaRejtWu4NfpPOTtJU.png", alt="Select an element", width="26", height="26" %}
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7HgaRejtWu4NfpPOTtJU.png", alt="Select an element", width="20", height="20" %}
   or press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Mac) or
   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux), and then click the element in
   the viewport.
@@ -52,43 +49,30 @@ There are many ways to select an element:
 In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
 defines the rule.
 
-If the stylesheet is minified, see [Make a minified file readable][3].
-
 {% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
 
-**Figure 2**. Clicking `devsite-google-blue.css:487` takes you to line 487 of
-`devsite-google-blue.css`, where the `.devsite-article h1:first-of-type` CSS rule is defined.
+If the stylesheet is minified, see [Make a minified file readable][3].
 
 ### View only the CSS that's actually applied to an element {: #computed }
 
-The **Styles** tab shows you all of the rules that apply to an element, including declarations that
+The **Styles** pane shows you all of the rules that apply to an element, including declarations that
 have been overridden. When you're not interested in overridden declarations, use the **Computed**
 tab to view only the CSS that's actually being applied to an element.
 
 1.  [Select an element][4].
-2.  Go to the **Computed** tab in the **Elements** panel.
+2.  Go to the **Computed** pane in the **Elements** panel.
 
-{% Aside %}
-
-**Note:** On a wide DevTools window, the **Computed** tab does not exist. The contents of the
-**Computed** tab are shown on the **Styles** tab.
-
-{% endAside %}
+{% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab.", width="800", height="488" %}
 
 Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
 
-{% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab", width="800", height="488" %}
-
-**Figure 3**. The **Computed** tab shows the CSS properties being applied to the currently-selected
-`h1` element
-
 ### View CSS properties in alphabetical order {: #alphabetical }
 
-Use the **Computed** tab. See [View only the CSS that's actually applied to an element][5].
+Use the **Computed** pane. See [View only the CSS that's actually applied to an element][5].
 
 ### View inherited CSS properties {: #inherited }
 
-Check the **Show All** checkbox in the **Computed** tab. See [View only the CSS that's actually
+Check the **Show All** checkbox in the **Computed** pane. See [View only the CSS that's actually
 applied to an element][6].
 
 Alternatively, scroll down the **Styles** pane and find sections named `Inherited from <element_name>`.
@@ -97,7 +81,7 @@ Alternatively, scroll down the **Styles** pane and find sections named `Inherite
 
 ### View `@supports` at-rules {: #supports }
 
-The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
+The **Styles** pane shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
 
 <div class="box"></div>
 <style>
@@ -120,7 +104,7 @@ The **Styles** tab shows you the `@supports` CSS at-rules if they are applied to
 }
 </style>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lw1ZveiO2lxVFDgylmnC.png", alt="View @supports at-rules", width="800", height="453" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Lw1ZveiO2lxVFDgylmnC.png", alt="View @supports at-rules.", width="800", height="453" %}
 
 If your browser supports the `lab()` function, the element is green, otherwise it's purple.
 
@@ -128,33 +112,56 @@ If your browser supports the `lab()` function, the element is green, otherwise i
 **Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
 {% endAside %}
 
+### View `@scope` at-rules {: #scope }
+
+The **Styles** pane shows you [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) if they are applied to an element.
+
+The new `@scope` at-rules are a part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow you to scope CSS styles, in other words, explicitly apply styles to specific elements.
+
+{% Aside %}
+**Note**: The `@scope` at-rule feature is experimental. To test it, enable the **Experimental Web Platform features** flag in `chrome://flags/#enable-experimental-web-platform-features`. Otherwise, the preview below doesn't work.
+{% endAside %}
+
+View the `@scope` rule in the following preview:
+
+{% Codepen {
+ user: 'sofiayem',
+ id: 'YzaBqOo',
+ height: 270,
+ allow: ['geolocation']
+} %}
+
+1. [Inspect the text][39] on the card in the preview.
+1. On the **Styles** pane, find the `@scope` rule.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W3Ogu3zoFBFUaPN8JDU7.png", alt="The @scope rule.", width="800", height="660" %}
+
+In this example, the `@scope` rule overrides the global CSS `background-color` declaration for all `<p>` elements inside elements with a `card` class.
+
+To edit the `@scope` rule, double-click it.
+
 ### View an element's box model {: #box-model }
 
-To view [the box model][7] of an element, go to the **Styles** tab. If your DevTools window is
-narrow, the **Box Model** diagram is at the bottom of the tab.
+To view [the box model][7] of an element, go to the **Styles** pane and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ARurwNZrSDIYQwsVPuUC.png", alt="Show sidebar.", width="22", height="20" %} **Show sidebar** button in the action bar.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m25vYLlffgUxgGJpqvWF.png", alt="he Box Model diagram.", width="800", height="505" %}
 
 To change a value, double-click on it.
 
-{% Img src="image/admin/3M83x7zsgaeJctz6B3iu.png", alt="The Box Model diagram", width="800", height="592" %}
-
-**Figure 4**. The **Box Model** diagram in the **Styles** tab shows the box model for the currently
-selected `h1` element
-
 ### Search and filter an element's CSS {: #filter }
 
-Use the **Filter** text box on the **Styles** and **Computed** tabs to search for specific CSS
+Use the **Filter** text box on the **Styles** and **Computed** panes to search for specific CSS
 properties or values.
 
-To also search inherited properties in the **Computed** tab, check the **Show All** checkbox.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dVowC6jA4kBhp8bqARLw.png", alt="Filtering the Styles pane.", width="800", height="505" %}
 
-{% Img src="image/admin/2wXKvRxuWUObC2uNfIJ5.png", alt="Filtering the Styles tab", width="800", height="460" %}
+To also search inherited properties in the **Computed** pane, check the **Show All** checkbox.
 
-**Figure 5**. Filtering the **Styles** tab to only show rules that include the search query `color`
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xe0Rwpze9CKabBVXWKgz.png", alt="Filtering inherited properties in the Computed pane.", width="800", height="505" %}
 
-{% Img src="image/admin/sORR9WlEYpkRtltoSHp8.png", alt="Filtering the Computed tab", width="800", height="460" %}
+To navigate the **Computed** pane, group the filtered properties in collapsible categories by checking **Group**.
 
-**Figure 6**. Filtering the **Computed** tab to only show declarations that include the search query
-`100%`
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LhNHQarq0y1FuhhJduUE.png", alt="Grouping filtered properties.", width="800", height="505" %}
 
 ### Toggle a pseudo-class {: #pseudo-class }
 
@@ -162,15 +169,13 @@ To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus
 `focus-visible`:
 
 1.  [Select an element][8].
-2.  On the **Elements** panel, go to the **Styles** tab.
+2.  On the **Elements** panel, go to the **Styles** pane.
 3.  Click **:hov**.
 4.  Check the pseudo-class that you want to enable.
 
-{% Img src="image/admin/Ag3tYHtZr72Op5Xf1J1A.png", alt="Toggling the :hover pseudo-class", width="800", height="523" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Tpu0KZakPrbC89KoYNBs.png", alt="Toggling the hover pseudostate on an element.", width="800", height="505" %}
 
-**Figure 7**. Toggling the `:hover` pseudo-class. In the viewport you can see that the
-`background-color: cornflowerblue` declaration is being applied to the element, even though the
-element is not actually being hovered over
+In the viewport, you can see that DevTools applies the `background-color` declaration to the element, even though the element is not actually hovered over.
 
 See [Add a pseudostate to a class][9] for an interactive tutorial.
 
@@ -237,9 +242,9 @@ To view cascade layers, [inspect](/docs/devtools/open/#elements) the element bel
 
 In the **Styles** pane, view the 3 cascade layers and their styles: `page`, `component` and `base`.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers", width="800", height="638" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NAXkykrJcC23cZ1jWCin.png", alt="Cascade layers.", width="800", height="638" %}
 
-To view the layer order, click the layer name or the **Toggle CSS layers view**<span class="material-icons">layers</span> button.
+To view the layer order, click the layer name or the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gq5kdwO6HBF7cGv8pkCH.svg", alt="Toggle layers.", width="20", height="20" %} **Toggle CSS layers view** button.
 
 The `page` layer has the highest specificity, therefore the element's background is green.
 
@@ -258,32 +263,27 @@ The Coverage tab shows you what CSS a page actually uses.
 1.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) while DevTools is
     in focus to open the Command Menu.
-2.  Start typing `coverage` and select **Show Coverage**. The Coverage tab appears.
+2.  Start typing `coverage`.
 
     {% Img src="image/admin/w4EnEqO6dqj8nGQEMq6j.png", alt="Opening the Coverage tab from the Command Menu.", width="800", height="526" %}
 
-    **Figure 8**. Opening the Coverage tab from the Command Menu
+2.  Select **Show Coverage**. The Coverage tab appears.
 
     {% Img src="image/admin/WiWn2DPIl3HGsiM9hxNa.png", alt="The Coverage tab.", width="800", height="575" %}
 
-    **Figure 9**. The Coverage tab
-
-3.  Click **Start Instrumenting Coverage And Reload Page**
-    {% Img src="image/admin/7Nr8n3jly53lAoufh6Tn.png", alt="Start Instrumenting Coverage And Reload Page", width="24", height="25" %}.
-    The page reloads and the Coverage tab provides an overview of how much CSS (and JavaScript) is
-    used from each file that the browser loads. Green represents used CSS. Red represents unused
-    CSS.
+3.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Start Instrumenting Coverage And Reload Page.", width="20", height="20" %} **Reload**.
+    The page reloads and the **Coverage** tab provides an overview of how much CSS (and JavaScript) is
+    used from each file that the browser loads.
 
     {% Img src="image/admin/pvGdoYTcYTA5lO0mptQy.png", alt="An overview of how much CSS (and JavaScript) is used and unused.", width="800", height="575" %}
 
-    **Figure 10**. An overview of how much CSS (and JavaScript) is used and unused
+    Green represents used CSS. Red represents unused CSS.
 
-4.  Click a CSS file to see a line-by-line breakdown of what CSS it uses.
+4.  Click a CSS file to see a line-by-line breakdown of what CSS it uses in the preview above.
 
     {% Img src="image/admin/rA1y59EuQv5COtnFX8d7.png", alt="A line-by-line breakdown of used and unused CSS.", width="800", height="646" %}
 
-    **Figure 11**. Lines 55 to 57 and 65 to 67 of `devsite-google-blue.css` are unused, whereas
-    lines 59 to 63 are used
+    On the screenshot above, lines 55 to 57 and 65 to 67 of `devsite-google-blue.css` are unused, whereas lines 59 to 63 are used.
 
 ### Force print preview mode {: #print }
 
@@ -365,11 +365,9 @@ To add an inline declaration:
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>. In the **DOM Tree**, you can
     see that a `style` attribute has been added to the element.
 
-{% Img src="image/admin/aUviBexUPdpxXvUbSUxS.png", alt="Adding inline declarations", width="800", height="645" %}
+   {% Img src="image/admin/aUviBexUPdpxXvUbSUxS.png", alt="Adding inline declarations.", width="800", height="645" %}
 
-**Figure 12**. The `margin-top` and `background-color` properties have been applied to the selected
-element. In the **DOM Tree** you can see the declarations reflected in the element's `style`
-attribute
+   On the screenshot above, the `margin-top` and `background-color` properties have been applied to the selected element. In the **DOM Tree** you can see the declarations reflected in the element's `style` attribute.
 
 #### Add a declaration to a style rule {: #add-declaration-to-rule }
 
@@ -381,22 +379,19 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
-{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration.", width="800", height="547" %}
 
-**Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
-
+On the screenshot above, a style rule gets the new `border-bottom-style:groove` declaration.
 
 ### Change a declaration name or value {: #change-declaration }
 
-Double-click a declaration's name or value to change it. See [Change declaration values with
+Double-click a declaration's name or value to change it. See [Change enumerable values with
 keyboard shortcuts][17] for shortcuts for quickly incrementing or decrementing a value by 0.1, 1,
 10, or 100 units.
 
+### Change enumerable values with keyboard shortcuts {: #values-shortcuts }
 
-### Change declaration values with keyboard shortcuts {: #values-shortcuts }
-
-While editing the value of a declaration, you can use the following keyboard shortcuts to increment
-the value by a fixed amount:
+While editing an enumerable value of a declaration, for example, `font-size`, you can use the following keyboard shortcuts to increment the value by a fixed amount:
 
 - <kbd>Option</kbd>+<kbd>Up</kbd> (Mac) or <kbd>Alt</kbd>+<kbd>Up</kbd> (Windows, Linux) to
   increment by 0.1.
@@ -408,6 +403,28 @@ the value by a fixed amount:
 Decrementing also works. Just replace each instance of <kbd>Up</kbd> mentioned above with
 <kbd>Down</kbd>.
 
+### Change length values {: #change-length-value }
+
+You can use your pointer to change any property with length, such as width, height, padding, margin, or border.
+
+To change the length unit:
+
+1. Hover over the unit name and notice that it's underlined.
+1. Click on the unit name to select a unit from the drop-down.
+   
+   <div style="margin-top: 20px;">
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}</div>
+
+To change the length value:
+
+1. Hover over the unit value and notice that your pointer changes to a horizontal double-headed arrow.
+1. Drag horizontally to increase or decrease the value.
+   
+   <div style="margin-top: 20px;">
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}</div>
+
+To adjust the value by 10, hold <kbd>Shift</kbd> when dragging.
+
 ### Add a class to an element {: #add-class }
 
 To add a class to an element:
@@ -417,9 +434,7 @@ To add a class to an element:
 3.  Enter the name of the class in the **Add New Class** text box.
 4.  Press <kbd>Enter</kbd>.
 
-{% Img src="image/admin/US4gZWGNdDcz4MswYkV3.svg", alt="The Element Classes pane", width="800", height="460" %}
-
-**Figure 14**. The **Element Classes** pane
+{% Img src="image/admin/US4gZWGNdDcz4MswYkV3.svg", alt="The Element Classes pane.", width="800", height="460" %}
 
 ### Emulate light and dark theme preferences and enable automatic dark mode {: #emulate-light-dark-themes }
 
@@ -450,23 +465,20 @@ To add a new style rule:
 
 1.  [Select an element][21].
 2.  Click **New Style Rule**
-    {% Img src="image/admin/XcURsD5IoAJqI4TwgY4w.png", alt="New Style Rule", width="20", height="20" %}. DevTools inserts a
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="New Style Rule.", width="20", height="20" %}. DevTools inserts a
     new rule beneath the **element.style** rule.
 
-{% Img src="image/admin/yAkLVkP6eeeBihslr7oy.png", alt="Adding a new style rule", width="800", height="599" %}
+{% Img src="image/admin/yAkLVkP6eeeBihslr7oy.png", alt="Adding a new style rule.", width="800", height="599" %}
 
-**Figure 15**. DevTools adds the `h1.devsite-page-title` style rule after clicking **New Style
-Rule**
+On the screenshot above, DevTools adds the `h1.devsite-page-title` style rule after clicking **New Style Rule**.
 
 #### Choose which stylesheet to add a rule to {: #style-rule-stylesheet }
 
 When [adding a new style rule][22], click and hold **New Style Rule**
-![New Style Rule](/docs/devtools/css/imgs/new-style-rule.png) to choose which stylesheet
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="New Style Rule.", width="20", height="20" %} to choose which stylesheet
 to add the style rule to.
 
-{% Img src="image/admin/QEehBhl9E7tfEwyfdWgO.png", alt="Choosing a stylesheet", width="800", height="599" %}
-
-**Figure 16**. Choosing a stylesheet
+{% Img src="image/admin/QEehBhl9E7tfEwyfdWgO.png", alt="Choosing a stylesheet.", width="800", height="599" %}
 
 ### Toggle a declaration {: #toggle-declaration }
 
@@ -478,9 +490,13 @@ To toggle a single declaration on or off:
 3.  Check or uncheck the checkbox next to the declaration. When you uncheck a declaration, DevTools
     crosses it out to indicate that it's no longer active.
 
-{% Img src="image/admin/Z36P2RuDUFAFIp8kTZ6N.png", alt="Toggling a declaration", width="800", height="608" %}
+{% Img src="image/admin/Z36P2RuDUFAFIp8kTZ6N.png", alt="Toggling a declaration.", width="800", height="608" %}
 
-**Figure 20**. The `color` property for the currently-selected element has been toggled off
+On the screenshot above, the `color` property for the currently-selected element is toggled off.
+
+### Align grid items and their content with the Grid Editor {: #grid-editor }
+
+See the corresponding [section in Inspect CSS grid](/docs/devtools/css/grid/#grid-editor).
 
 ### Change colors with the Color Picker {: #color-picker }
 
@@ -491,26 +507,22 @@ The **Color Picker** provides a GUI for changing `color` and `background-color` 
 To open the **Color Picker**:
 
 1.  [Select an element][24].
-2.  In the **Styles** tab, find the `color` or `background-color` declaration that you want to
+2.  In the **Styles** pane, find the `color` or `background-color` declaration that you want to
     change. To the left of the `color` or `background-color` value, there is a small square which is
     a preview of the color.
 
-    {% Img src="image/admin/SuJ1WT25iaaOgt8iWQzj.png", alt="Color preview", width="800", height="517" %}
+    {% Img src="image/admin/SuJ1WT25iaaOgt8iWQzj.png", alt="Color preview.", width="800", height="517" %}
 
-    **Figure 24**. The small blue square to the left of `rgb(123, 170, 247)` is a preview of that
-    color
+    The small blue square to the left of `rgb(123, 170, 247)` is a preview of that
+    color.
 
 3.  Click the preview to open the **Color Picker**.
 
-    {% Img src="image/admin/i8pU9ALTZwhbvrhlXGm7.png", alt="The Color Picker", width="800", height="624" %}
-
-    **Figure 25**. The **Color Picker**
+    {% Img src="image/admin/i8pU9ALTZwhbvrhlXGm7.png", alt="The Color Picker.", width="800", height="624" %}
 
 Here's a description of each of the UI elements of the **Color Picker**:
 
-{% Img src="image/admin/kAtu8Uoi2x8IFvaX561h.svg", alt="The Color Picker, annotated", width="800", height="548" %}
-
-**Figure 26**. The **Color Picker**, annotated
+{% Img src="image/admin/kAtu8Uoi2x8IFvaX561h.svg", alt="The Color Picker, annotated.", width="800", height="548" %}
 
 1.  **Shades**.
 2.  **Eyedropper**. See [Sample a color anywhere with the Eyedropper][25].
@@ -533,7 +545,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
 When you open the **Color Picker**, the **Eyedropper**
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
 
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
+The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
 
 To pick a color from anywhere on the screen:
 
@@ -552,18 +564,16 @@ The **Angle Clock** provides a GUI for changing `<angle>`s in CSS property value
 To open the **Angle Clock**:
 
 1.  [Select an element][27] with angle declaration. For example, select the text below.
-2.  In the **Styles** tab, find the `transform` or `background` declaration that you want to change.
+2.  In the **Styles** pane, find the `transform` or `background` declaration that you want to change.
     Click on the **Angle Preview** box next to the angle value.
 
-    {% Img src="image/admin/EjXqoXmADgOgKMRQSBsP.png", alt="Angle preview", width="800", height="661" %}
+    {% Img src="image/admin/EjXqoXmADgOgKMRQSBsP.png", alt="Angle preview.", width="800", height="661" %}
 
-    **Figure 28**. The small clock to the left of `-5deg` and `0.25turn` are preview of the angle.
+    The small clocks to the left of `-5deg` and `0.25turn` are the angle previews.
 
 3.  Click the preview to open the **Angle Clock**.
 
-    {% Img src="image/admin/CykQzGfW2DfCt2VUmTcR.png", alt="Angle clock", width="800", height="723" %}
-
-    **Figure 29**. The Angle Clock.
+    {% Img src="image/admin/CykQzGfW2DfCt2VUmTcR.png", alt="Angle clock.", width="800", height="723" %}
 
 4.  Change the angle value by clicking on the **Angle Clock** circle or scroll your mouse to
     increase / decrease the angle value by 1.
@@ -595,15 +605,13 @@ To change shadows with the **Shadow Editor**:
       }
     </style>
 
-1. In the **Styles** tab, find a shadow {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cunvJgztQzUZabOjseC.png", alt="Shadow.", width="24", height="24" %} icon next to the `text-shadow` or `box-shadow` declaration.
+1. In the **Styles** pane, find a shadow {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cunvJgztQzUZabOjseC.png", alt="Shadow.", width="24", height="24" %} icon next to the `text-shadow` or `box-shadow` declaration.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oDpRxRK9of3pxQFkFwgc.png", alt="Shadow icons", width="800", height="513" %}
-
-   **Figure 29**. The shadow icon to the left of the `text-shadow` and `box-shadow` values.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oDpRxRK9of3pxQFkFwgc.png", alt="Shadow icons.", width="800", height="513" %}
 
 1. Click the shadow icon to open the **Shadow editor**.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rp36OO9l2xg2dHW1i35t.png", alt="Shadow editor", width="800", height="513" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Rp36OO9l2xg2dHW1i35t.png", alt="Shadow editor.", width="800", height="513" %}
 
 1. Change the shadow properties:
    - **Type** (only for `box-shadow`). Pick **Outset** or **Inset**.
@@ -713,7 +721,7 @@ Any change triggers a ball animation in the **Preview** at the top of editor.
 ## (Experimental) Copy CSS changes {: #copy-css-changes }
 
 {% Aside %}
-To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
+To enable this experimental feature, check **Sync CSS changes in the Styles pane** under {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bGxcjrhJIjemksd4PcbJ.svg", alt="Settings.", width="20", height="20" %} **Settings** > **Experiments** and reload DevTools.
 {% endAside %}
 
 With this experiment enabled, the **Styles** pane highlights your CSS changes in green.
@@ -766,3 +774,4 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function
 [37]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function
 [38]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function#values
+[39]: /docs/devtools/open/#elements

@@ -163,7 +163,9 @@
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
     "twitter": "hdjirdeh",
-    "github": "housseindjirdeh"
+    "github": "housseindjirdeh",
+    "glitch": "housseindjirdeh",
+    "image": "image/admin/BibySYHD7JweNcHZCCOe.jpg"
   },
   "katiehempenius": {
     "twitter": "katiehempenius",
@@ -820,5 +822,64 @@
     "country": "US",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/aS7reiLcBKY52w1HUU3m.jpeg",
     "github": "sanbeiji"
+  },
+  "jney": {
+    "country": "US",
+    "twitter": "jeremybney",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TAnCBPCUpoC4X3jwXN7Y.webp"
+  },
+  "bramus": {
+    "homepage": "https://www.bram.us/",
+    "twitter": "bramus",
+    "github": "bramus",
+    "country": "BE",
+    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg"
+  },
+  "victorporof": {
+    "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/ltT5ZFZLzSdlecQmoxMK.jpg",
+    "github": "victorporof",
+    "twitter": "victorporof",
+    "country": "DE"
+  },
+  "karaerickson": {
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/Az2VaHZ4nQ6ovvTvzCD3.jpeg",
+    "twitter": "karaforthewin",
+    "country": "US"
+  },
+  "leenasohoni": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
+    "twitter": "leena_sohoni",
+    "country": "US"
+  },
+  "mgechev": {
+    "country": "US",
+    "homepage": "https://blog.mgechev.com/",
+    "twitter": "mgechev",
+    "github": "mgechev",
+    "glitch": "mgechev",
+    "image": "image/admin/OPpZ9x8KCVcxvqgdWXM5.jpg"
+  },
+  "alexcastle": {
+    "image": "image/IypihH3o5cSpEMVp5i08dp69otp2/ofc2dLwuNURvRIMvTdIv.jpeg"
+  },
+  "shubhie": {
+    "github": "spanicker",
+    "twitter": "shubhie",
+    "country": "US",
+    "image": "image/0SXGYLkliuPQY3aSy3zWvdv7RqG2/sInJ1hYQTzeVJUGaOjlk.jpeg"
+  },
+  "keenyeeliau": {
+    "image": "image/Or7Bgsqru3MxJHvMtp68LKOjxkH3/UbfmJ8kJwfT9FVLHjX3r.jpeg",
+    "github": "kyliau"
+  },
+  "arthursonzogni": {
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/BUJhEkgRYkRGIo3GPUfj.png"
+  },
+  "michalpitr": {
+    "image": "image/Pd9q3xrQ8jTnoXTXNDT1eN6CWLJ3/mioFNQIt6Z4uohUwczfV.jpg",
+    "github": "michalpitr",
+    "linkedin": "https://www.linkedin.com/in/michal-pitr-a7156b127",
+    "twiter": "pitrmichal"
   }
+  
 }

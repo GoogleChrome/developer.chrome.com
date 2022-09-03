@@ -167,6 +167,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
+  to: /docs/devtools/progressive-web-apps/#trigger-installation
+
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
 
@@ -390,8 +393,8 @@ redirects:
 - from: /native-client/...
   to: /docs/native-client/...
 
-- from: /privacy-sandbox/...
-  to: /docs/privacy-sandbox/...
+# - from: /privacy-sandbox/...
+#  to: /docs/privacy-sandbox/...
 
 - from: /webstore/...
   to: /docs/webstore/...
@@ -454,6 +457,14 @@ redirects:
 
 - from: /insider/...
   to: /tags/insider/
+
+# Tag Redirects
+
+- from: https://developer.chrome.com/tags/removals/
+  to: https://developer.chrome.com/tags/deprecations-removals/
+
+- from: https://developer.chrome.com/tags/deprecations/
+  to: https://developer.chrome.com/tags/deprecations-removals/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

@@ -129,6 +129,23 @@ Hover over the insights on the **Timeline** to learn more about the metrics.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/23onsIV7BvDJpMI4mnMZ.mp4", controls="true", muted="true", class="screenshot" %}
 
+## Discover delays of the largest contentful paint {: #largest-contentful-paint }
+
+[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is one of the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) metrics. It reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
+
+{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/elqsdYqQEefWJbUM2qMO.svg", alt="LCP thresholds.", width="800", height="212" %}
+
+A [good LCP score](https://web.dev/lcp/#what-is-a-good-lcp-score?) is 2.5 seconds or less.
+
+If the largest contentful paint on your page takes longer to render, in the timeline, you will see the LCP badge with a yellow square or red triangle.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ftLjLtpo9Lki9JGbhHpB.png", alt="The LCP badge.", width="800", height="580" %}
+
+To open the **Details** pane, click the LCP badge on the timeline or on the **Insights** pane on the right. In the pane, you can discover potential causes for the delays and suggestions on how to fix them.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wnl6w6KOnqUQsXSWu0xN.png", alt="The details pane.", width="800", height="627" %}
+
+In this example, a request blocks rendering and you can apply critical styles inline to fix it. To learn more, see [Eliminate render-blocking resources](https://web.dev/render-blocking-resources/).
 
 ## View layout shifts activity {: #layout-shifts }
 

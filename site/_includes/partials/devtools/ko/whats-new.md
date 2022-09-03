@@ -2,18 +2,19 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 105 {: #chrome105 }
+### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/ko/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/ko/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/ko/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ko/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/ko/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/ko/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/ko/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/ko/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/ko/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-105/#misc) -->
+* [Recorder의 단계별 재생 기능](/ko/blog/new-in-devtools-105/#recorder)
+* [Recorder 패널에서 마우스 오버 이벤트 기능 지원](/ko/blog/new-in-devtools-105/#recorder-hover)
+* [Performance insights 패널의 Largest Contentful Paint (LCP)](/ko/blog/new-in-devtools-105/#lcp)
+* [레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별](/ko/blog/new-in-devtools-105/#foit-fout)
+* [매니페스트 창의 프로토콜 핸들러](/ko/blog/new-in-devtools-105/#manifest)
+* [요소 패널의 Top layer badge](/ko/blog/new-in-devtools-105/#top-layer)
+* [런타임에 Wasm 디버깅 정보 연결하기](/ko/blog/new-in-devtools-105/#wasm)
+* [디버깅 중의 라이브 에디트 지원](/ko/blog/new-in-devtools-105/#live-edit)
+* [스타일 창에서의 @scope at rules 보기 및 편집하기](/ko/blog/new-in-devtools-105/#scope)
+* [소스맵 개선](/ko/blog/new-in-devtools-105/#sourcemaps)
+* [기타 하이라이트](/ko/blog/new-in-devtools-105/#misc)
 
 
 <!-- ### Chrome 104 {: #chrome104 }
