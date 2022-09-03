@@ -28,7 +28,7 @@ const purifyCss = async (content, outputPath) => {
   // For dynamic content (e.g. serverless), outputPath is false.
   if (outputPath) {
     // outputPath exists, but it's not HTML content.
-    if  (!outputPath.endsWith('.html')) {
+    if (!outputPath.endsWith('.html')) {
       return content;
     }
   }
