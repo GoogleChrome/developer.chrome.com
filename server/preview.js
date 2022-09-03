@@ -55,6 +55,7 @@ const previewHandler = async (req, res, next) => {
   const inputPath = path.join('./site/en/', 'preview', 'index.njk');
 
   // TODO: support full path and not only slug.
+  // TODO: user-provided: sanitize input!
   const slug = req.params[0].split('/').pop();
 
   const doc = await querySanity(slug);
