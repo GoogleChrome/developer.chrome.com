@@ -70,26 +70,32 @@ const previewHandler = async (req, res, next) => {
   const post =  await formatDoc(doc);
   const body =  await formatBody(doc.body);
 
-  let elev = new Eleventy(inputPath, 'dist', {
-    configPath: ".eleventy.js",
-    inputDir: './site',
-    config: function(eleventyConfig) {
-      eleventyConfig.addGlobalData('isPreview', true)
-      eleventyConfig.addGlobalData('previewSource', 'sanity')
-      eleventyConfig.addGlobalData('post', post)
-      eleventyConfig.addGlobalData('content', body)
-      eleventyConfig.addGlobalData('date', post.date)
-    },
-  });
-  const out = await elev.toJSON();
+  try {
+    let elev = new Eleventy(inputPath, 'dist', {
+      configPath: ".eleventy.js",
+      inputDir: './site',
+      config: function(eleventyConfig) {
+        eleventyConfig.addGlobalData('isPreview', true)
+        eleventyConfig.addGlobalData('previewSource', 'sanity')
+        eleventyConfig.addGlobalData('post', post)
+        eleventyConfig.addGlobalData('content', body)
+        eleventyConfig.addGlobalData('date', post.date)
+      },
+    });
+    const out = await elev.toJSON();
 
-  // Preview for this path was not found.
-  if (!out.length || !out[0]?.content) {
+    // Preview for this path was not found.
+    if (!out.length || !out[0]?.content) {
+      next();
+      return;
+    }
+
+    res.send(out[0].content)
+  } catch(e) {
+    console.error(e);
     next();
     return;
   }
-
-  res.send(out[0].content)
 };
 
 module.exports = {previewHandler};

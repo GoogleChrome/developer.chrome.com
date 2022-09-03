@@ -10,7 +10,7 @@ const {getLocalizedPaths} = require('../_filters/urls');
  */
 function Hreflang(url, site, collections) {
   if (!url) {
-    return;
+    return '';
   }
   const hreflangs = getLocalizedPaths(url, site.locales).filter(hreflang =>
     findByUrl(collections.all, hreflang[0])
