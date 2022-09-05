@@ -2,8 +2,8 @@
 title: プライバシーサンドボックス広告の関連性と測定 API をテストする
 description: プライバシーサンドボックスの関連性と測定の API（Topics、FLEDGE、アトリビューション レポート）を統括して実験するための開発者テストと今後のオリジントライアルについて説明します。
 layout: layouts/blog-post.njk
-date: '2022-03-31'
-updated: '2022-06-27'
+date: 2022-03-31
+updated: 2022-06-27
 authors:
   - rowan_m
 hero: image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/1Eh5fSHWhurUuED3WGU1.png
