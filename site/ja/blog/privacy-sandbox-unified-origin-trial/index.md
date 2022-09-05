@@ -1,9 +1,6 @@
 ---
 title: プライバシーサンドボックス広告の関連性と測定 API をテストする
-description: |2
-
-  Learn about developer testing and the upcoming origin trial allowing for
-  unified experimentation across the Privacy Sandbox relevance and measurement APIs: Topics, FLEDGE, and Attribution Reporting.
+description: プライバシーサンドボックスの関連性と測定の API（Topics、FLEDGE、アトリビューション レポート）を統括して実験するための開発者テストと今後のオリジントライアルについて説明します。
 layout: layouts/blog-post.njk
 date: '2022-03-31'
 updated: '2022-06-27'
@@ -28,9 +25,9 @@ tags:
 - **[FLEDGE](/docs/privacy-sandbox/fledge/)**: ブラウザのインタレストグループを管理し、それらのグループやその他のシグナルに基づいて広告の入札と選択を行います。
     - このオリジントライアルでは、FLEDGE はデスクトップで利用でき、提案されたすべての機能の特定のサブセットが含まれています。詳細については、[FLEDGE オリジントライアルの詳細](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)をお読みください。
 - **[Fenced frames](https://github.com/WICG/fenced-frame/blob/master/explainer/opaque_src.md)**: [FLEDGE 広告オークションの落札者](/docs/privacy-sandbox/fenced-frame/)の[不透明な URL](https://github.com/WICG/fenced-frame/blob/master/explainer/opaque_src.md) をレンダリングします。
-- **[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)** to measure and report on the performance over the ad lifecycle.
+- **[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)**: 広告ライフサイクル全体のパフォーマンスを測定してレポートします。
     - アトリビューション レポートの一部として、要約レポートを生成するには、集計可能なレポートを処理し、[集計サービス](/docs/privacy-sandbox/attribution-reporting/summary-reports/#aggregation-service)によって集計する必要があります。ローカルおよびオリジントライアルのテストに関する追加のツールとガイドを近日中に公開する予定です。
-    - If you have participated in previous origin trials for Attribution Reporting, be aware that you will need to update inline with the latest API changes. Refer to the [Migration guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#) for details.
+    - アトリビューション レポートの以前のオリジントライアルに参加したことがある場合は、最新の API の変更に合わせて更新する必要があることに注意してください。詳細については、[移行ガイド](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)をご覧ください。
 
 このセットアップでは、これらすべての API にわたって統一のテストを行うことができますが、実装する側面を、必要に応じて選択することができます。
 
@@ -56,7 +53,7 @@ document.querySelector('head').appendChild(otMeta);
 
 ## 開発者によるローカルテスト {: #local-testing}
 
-The individual developer documentation for [Topics](/docs/privacy-sandbox/topics-experiment/), [FLEDGE](/docs/privacy-sandbox/fledge-experiment/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/) provide specific guidance on local developer testing for each API. The APIs are not on by default and must be [enabled with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) for testing.
+[Topics](/docs/privacy-sandbox/topics-experiment/)、[FLEDGE](/docs/privacy-sandbox/fledge-experiment/)、および [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/) の個々の開発者ドキュメントには、各 API のローカル開発者テストに関する具体的なガイダンスが記載されています。API はデフォルトではオンになっていないため、テスト用の[フラグを使って有効にする](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)必要があります。
 
 テスト用に API を有効にするには、以下を行います。
 
@@ -142,6 +139,6 @@ if ('attributionReporting' in window && document.featurePolicy.allowsFeature('at
 
 ## フィードバックの提供先とサポート
 
-The [feedback overview page](/docs/privacy-sandbox/feedback/) details the various routes for giving feedback on different aspects of the Privacy Sandbox. There are specific sections for [Topics](/docs/privacy-sandbox/feedback/#topics-api), [FLEDGE](/docs/privacy-sandbox/feedback/#fledge-api), and [Attribution Reporting](/docs/privacy-sandbox/feedback/#measure-digital-ads) which provide the individual links for each API.
+[フィードバックの概要ページ](/docs/privacy-sandbox/feedback/)には、プライバシーサンドボックスのさまざまな側面に関するフィードバックを提供するためのさまざまな方法が詳しく説明されています。[Topics](/docs/privacy-sandbox/feedback/#topics-api)、[FLEDGE](/docs/privacy-sandbox/feedback/#fledge-api)、および [アトリビューション レポート](/docs/privacy-sandbox/feedback/#measure-digital-ads) には、各 API の個別のリンクを提供する特定のセクションがあります。
 
 また、重要なニュースの概要を提供する[プライバシーサンドボックスの進行状況](/tags/progress-in-the-privacy-sandbox/)に関する定期的な更新も提供しています。
