@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc-post.njk
 title: 'アトリビューション レポート: システムの全概要'
-subhead: 'アトリビューション レポートのコネクテッド サービスの概要 
+subhead: 'アトリビューション レポートのコネクテッド サービスの概要
 技術的な意思決定者を対象としています。'
 description: 技術的な意思決定者を対象としたアトリビューション レポートのコネクテッド サービスの概要
 date: 2022-08-09
@@ -9,7 +9,9 @@ authors:
   - alexandrawhite
 ---
 
-&lt;style type="text/css"&gt; .type figcaption {text-align:left;} &lt;/style&gt;
+<style type="text/css">
+	.type figcaption {text-align:left;}
+</style>
 
 Attribution Reporting API を使用すると、アドテックや広告主は、広告クリックやビューが購入などのコンバージョンにつながったタイミングを測定できます。この API は、ビジネスニーズに応じて、クライアントサイドとサーバーサイドの統合の組み合わせに依存しています。
 
@@ -85,7 +87,7 @@ Attribution Reporting API は多数のサービスで構成されており、特
 
 ブラウザがアトリビューション トリガーのレスポンスを受信すると、ブラウザはローカルストレージにアクセスして、アトリビューション トリガーのオリジンとそのページ URL の [eTLD+1](https://web.dev/same-site-same-origin/#site) の両方に一致するソースを見つけます。
 
-たとえば、ブラウザが code1}shoes.example/shoes123 の `adtech.example` からアトリビューション トリガーを受け取ると、ブラウザはローカルストレージで `adtech.example` と `shoes.example` の両方に一致するソースを探します。
+たとえば、ブラウザが `shoes.example/shoes123` の `adtech.example` からアトリビューション トリガーを受け取ると、ブラウザはローカルストレージで `adtech.example` と `shoes.example` の両方に一致するソースを探します。
 
 *フィルター*（またはカスタムルール）を設定して、トリガーが特定のソースに一致するタイミングを決定できます。たとえば、特定の商品カテゴリのコンバージョンのみをカウントし、他のすべてのカテゴリを無視するようにフィルターを設定します。フィルターと優先順位付けモデルにより、より高度なアトリビューション レポートが可能になります。
 
