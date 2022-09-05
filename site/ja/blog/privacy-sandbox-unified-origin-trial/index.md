@@ -59,11 +59,11 @@ document.querySelector('head').appendChild(otMeta);
 
 - **Chrome 101 [ベータ版](https://www.google.com/chrome/beta/)以降を使用してください**。
     - FLEDGE にはデスクトップ版の Chrome が必要です。
-    - APIs are not available on iOS versions of Chrome.
+    - API は Chrome の iOS バージョンでは使用できません。
 - **API の有効化**には、`chrome://flags/#privacy-sandbox-ads-apis` フラグを使用します。
     - このフラグは、テストをより簡単に行えるように API を強制的にオンにします。対象のオリジントライアルユーザーを複製して、追加の設定で API を無効にできるようにするには、`--enable-features=BrowsingTopics,InterestGroupStorage,AllowURNsInIframes,PrivacySandboxAdsAPIs` という CLI フラグを使用して Chrome を起動する必要があります:。
-    - Individual APIs may have more additional flags for more fine-grained configuration, check the individual guides for details.
-    - Additional flags may conflict with this one, so consider only setting this one flag if you encounter issues.
+    - 個々の API には、よりきめ細かい設定を行うための追加のフラグがある場合があります。詳細については、個々のガイドを確認してください。
+    - 追加のフラグはこれと競合する可能性があるため、問題が発生した場合は、この 1 つのフラグのみを設定することを検討してください。
 - Chrome 設定で **設定** &gt; **セキュリティとプライバシー** &gt; **プライバシー サンドボックス** に移動し、**プライバシーサンドボックスのトライアルを有効にします**。これには `chrome://settings/privacySandbox` からもアクセスできます。
 - Chrome の設定で **設定** &gt; **セキュリティとプライバシー** に移動し、**サードパーティ Cookie を有効**にします。**Cookie とその他のサイト データ**を「すべての Cookie を許可する」または「シークレットモードでサードパーティの Cookie をブロックする」に設定します。これには `chrome://settings/cookies` からもアクセスできます。
 - 標準のブラウジング セッションを開始します。シークレット モードは使用しないでください。
@@ -93,7 +93,7 @@ DevTools は、「アプリケーション」タブの「フレーム」にオ�
 - 「設定」&gt;「セキュリティとプライバシー」&gt;「プライバシー サンドボックス」で**プライバシーサンドボックスのトライアルが有効**であること。`chrome://settings/privacySandbox` からもアクセスできます。
 - 「設定」&gt;「セキュリティとプライバシー」&gt;「Cookie とその他のサイトデータ」で**サードパーティ Cookie を有効**にし、「すべての Cookie を許可する」または「シークレットモードでサードパーティ Cookie をブロックする」に設定していること。これには `chrome://settings/cookies` からもアクセスできます。
 - 標準のブラウジング セッションを開始しており、**シークレット モードは使用していない**こと。
-- be within the **active experiment group in Chrome**.
+- **Chrome のアクティブな実験グループ**に属していること。
 
 ## 開発者の機能が API サポートを検出する仕組み
 
@@ -127,7 +127,7 @@ if ('runAdAuction' in navigator && document.featurePolicy.allowsFeature('run-ad-
 }
 ```
 
-### Attribution Reporting
+### アトリビューション レポート
 
 `window` 内の `attributionReporting` オブジェクトと、「attribution-reporting」のアクセス許可ポリシーを確認してください。
 
