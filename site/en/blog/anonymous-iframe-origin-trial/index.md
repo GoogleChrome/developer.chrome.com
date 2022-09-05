@@ -31,7 +31,7 @@ To enable cross-origin isolation, websites must send the following two HTTP
 headers:
 
 ```text
-Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Embedder-Policy: require-coep
 Cross-Origin-Opener-Policy: same-origin
 ```
 {% Aside %}
