@@ -6,7 +6,7 @@ description: Chrome 101 以降、User-Agent 文字列で利用できる情報量
 authors:
   - abeyad
   - victortan
-date: '2022-02-24'
+date: 2022-02-24
 tags:
   - privacy
   - origin-trials
