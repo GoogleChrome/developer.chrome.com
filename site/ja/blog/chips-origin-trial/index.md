@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Cookies Having Independent Partitioned State (CHIPS) origin trial
+title: Cookies Having Independent State（CHIPS）オリジントライアル
 subhead: Chrome 100 以降、CHIPS オリジントライアルでは、トップレベル サイトごとに個別の Cookie ジャーを使用して、「パーティション化された」ストレージに Cookie をオプトインできます。
 description: Chrome 100 以降、CHIPS オリジントライアルでは、トップレベル サイトごとに個別の Cookie ジャーを使用して、「パーティション化された」ストレージに Cookie をオプトインできます。パーティション化された Cookie はサードパーティのサービスによって設定できますが、最初に設定されたトップレベルサイトのコンテキスト内でのみ読み取られます。
 date: '2022-03-17'
@@ -20,7 +20,7 @@ tags:
 
 ## CHIPS とは？
 
-[Cookies Having Independent Partitioned State (CHIPS)](/docs/privacy-sandbox/chips/) is a Privacy Sandbox proposal that allows developers to opt a cookie into "partitioned" storage, with separate cookie jars per top-level site.
+[Cookies Having Independent State（CHIPS）](/docs/privacy-sandbox/chips/)は、プライバシーサンドボックスの提案であり、開発者が Cookie を「パーティション化された」ストレージにオプトし、トップレベルサイトごとに個別の Cookie ジャーを使用できるようにします。
 
 パーティション化されたサードパーティ Cookie は、最初に設定されたトップレベルサイトに関連付けられ、他の場所からはアクセスできません。目的は、サードパーティサービスによって Cookie が設定されることを許可することですが、最初に設定されたトップレベルサイトのコンテキスト内でのみ読み取られるようにします。
 
