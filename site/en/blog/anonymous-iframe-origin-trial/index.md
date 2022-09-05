@@ -30,8 +30,12 @@ and
 To enable cross-origin isolation, websites must send the following two HTTP
 headers:
 
+{% Aside %}
+The header value `require-corp` below is not a typo. COEP does require CORP for third-party resources to opt-in.
+{% endAside %}
+
 ```text
-Cross-Origin-Embedder-Policy: require-coep
+Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 {% Aside %}
