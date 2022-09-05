@@ -9,7 +9,7 @@
 * [Пошаговое воспроизведение в Recorder](/ru/blog/new-in-devtools-105/#recorder)
 * [Поддержка события mouse over во вкладке Recorder](/ru/blog/new-in-devtools-105/#recorder-hover)
 * [Самое крупное существенное отображение (LCP) во вкладке Performance Insights](/ru/blog/new-in-devtools-105/#lcp)
-* [Определение вспышки текста (FOIT, FOUT) как потенциальных первопричин сдвигов раскладки](/ru/blog/new-in-devtools-105/#foit-fout)
+* [Определение миганий текста (FOIT, FOUT) как потенциальных первопричин сдвигов раскладки](/ru/blog/new-in-devtools-105/#foit-fout)
 * [Обработчик протоколов в панели Манифест](/ru/blog/new-in-devtools-105/#manifest)
 * [Значок верхнего слоя во вкладке Элементы](/ru/blog/new-in-devtools-105/#top-layer)
 * [Прикрепление сведений для отладки Wasm во время исполнения](/ru/blog/new-in-devtools-105/#wasm)

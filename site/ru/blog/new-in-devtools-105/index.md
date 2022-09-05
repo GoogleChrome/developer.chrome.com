@@ -63,13 +63,13 @@ tags:
 ## Самое крупное существенное отображение (LCP) во вкладке Performance Insights {: #lcp }
 
 <!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP это важная, ориентированная на пользователя метрика, замеряющая [ощущаемую скорость нагрузки](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Теперь вы можете отследить критические моменты и первопричины задержки отрисовки [крупного существенного отображения (LCP)](https://web.dev/lcp/).
+LCP – это важная, ориентированная на пользователя метрика, замеряющая [ощущаемую скорость нагрузки](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Теперь вы можете отследить критические моменты и первопричины задержки отрисовки [крупного существенного отображения (LCP)](https://web.dev/lcp/).
 
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 В [записи производительности](/docs/devtools/performance-insights/#record) кликните на значок LPC в **Таймлайне** (Timeline). В панели **Details** вы можете увидеть оценку LCP, узнать как поправить ресурсы, которые замедляют LPC, и посмотреть критический путь для ресурса LCP.
 
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
-Читайте документацию [Performance Insights](/docs/devtools/performance-insights/), чтобы узнать, как получить полезные сведения и улучшить производительность вашего сайта с помощью вкладки. 
+Изучите документацию [Performance Insights](/docs/devtools/performance-insights/), чтобы узнать, как получить полезные сведения и улучшить производительность вашего сайта с помощью вкладки. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NZZJ1FzXxqj2U2NR0U53.png", alt="LCP во вкладке Performance Insights", width="800", height="751" %}
 
@@ -77,16 +77,16 @@ LCP это важная, ориентированная на пользоват�
 
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
-## Определение вспышки текста (FOIT, FOUT) как потенциальных первопричин сдвигов раскладки {: #foit-fout }
+## Определение миганий текста (FOIT, FOUT) как потенциальных первопричин сдвигов раскладки {: #foit-fout }
 
 <!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-Во вкладке **Performance Insights** теперь распознаются [вспышки невидимого текста (FOIT) и вспышки нестилизованного текста (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) как потенциальные причины сдвига раскладки.
+Во вкладке **Performance Insights** теперь распознаются [мигания невидимого текста (FOIT) и мигания нестилизованного текста (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) как потенциальные причины сдвига раскладки.
 
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 Чтобы увидеть потенциальные причины сдвига раскладки кликните на скриншот в **Layout shifts**.
 
 <!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-Читайте [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) чтобы узнать о техниках предотвращения сдвигв раскладки.
+Изучите статью [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/), чтобы узнать о техниках предотвращения сдвига раскладки.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT во вкладке Performance insights", width="800", height="497" %}
 
@@ -120,7 +120,7 @@ LCP это важная, ориентированная на пользоват�
 ## Значок верхнего слоя во вкладке Элементы {: #top-layer }
 
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
-Используйте [значок верхнего слоя](/blog/top-layer-devtools/#top-layer-support-design-in-devtools), чтобы понять концепцию верхнего слоя и визуализировать как меняется его контент.
+Используйте [значок верхнего слоя](/blog/top-layer-devtools/#top-layer-support-design-in-devtools), чтобы понять концепцию верхнего слоя и визуализировать, как меняется его контент.
 
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 Элемент [`<dialog>`](https://web.dev/building-a-dialog-component/) недавно стал стабилен во всех браузерах. Когда вы открываете диалог, он помещается в [верхний слой](/blog/top-layer-devtools/). Контент верхнего уровня отображается поверх всего остального контента. 
@@ -151,7 +151,7 @@ LCP это важная, ориентированная на пользоват�
 Теперь вы можете прикрепить отладочную информацию DWARF для wasm во время исполнения файла. Раньше на вкладке **Источники** (Sources) можно было прикрепить только карту источников для файлов JavaScript и Wasm.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
-Откройте файл Wasm во вкладке **Источники** (Sources). Кликните правой клавишей мыши в области редактора и выберите **Добавить сведения для отладки DWARF…** (Add DWARF debugging info…) чтобы прикрепить отладочную информацию по запросу.
+Откройте файл Wasm во вкладке **Источники** (Sources). Кликните правой клавишей мыши в области редактора и выберите **Добавить сведения для отладки DWARF…** (Add DWARF debugging info…), чтобы прикрепить отладочную информацию по запросу.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5DMV6DFNGRYkrXyBtlg.png", alt="Прикрепление сведений для отладки Wasm во время исполнения", width="800", height="559" %}
 
@@ -177,7 +177,7 @@ LCP это важная, ориентированная на пользоват�
 - Только функция самого верхнего уровня может быть отредактирована во время паузы.
 - Ниже по стеку нет рекурсивных вызовов этой же функции.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="редактирование во время отладки", width="800", height="560" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0PG2PnQUh5bnpIulyj7m.png", alt="Редактирование во время отладки", width="800", height="560" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b41deeb8b0b228ea4628a49e79a7ce4d8ab32ffa #}
 
@@ -201,7 +201,7 @@ LCP это важная, ориентированная на пользоват�
 Поддержка `@scope` в настоящее время находится в стадии разработки. Чтобы протестировать эту функцию, включите флаг **Experimental Web Platform features** на странице `chrome://flags/#enable-experimental-web-platform-features`.
 {% endAside %}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="директива @scope на вкладке Стили", width="800", height="464" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LnkBUWoEl11HGiAD4ag7.png", alt="Директива @scope на вкладке Стили", width="800", height="464" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8b2309caa9ea358bc07d4d48eb976cc3dc6884cd #}
 
@@ -218,7 +218,7 @@ LCP это важная, ориентированная на пользоват�
 - DevTools теперь правильно распознает идентификаторы карт источников с пунктуацией. Некоторые современные минификаторы (например, [esbuild](https://esbuild.github.io/)) создают карты источников, объединяющие идентификаторы с помощью знаков препинания (запятая, круглые скобки, точка с запятой).
 <!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
 - DevTools теперь распознает имена карт источников для конструкторов с вызовом `super`. 
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="правильное распознание вызова super", width="800", height="441" %}
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Правильное распознание вызова super", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
 - Исправлено индексирование URL карт источников при дублирующихся канонических URL. Ранее точки останова не активировались в некоторых файлах из-за дублирования канонических URL.
 
