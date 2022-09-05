@@ -1,14 +1,11 @@
 ---
 layout: layouts/doc-post.njk
-title: 'Attribution Reporting: full system overview'
+title: 'アトリビューション レポート: システムの全概要'
 subhead: |2
 
   アトリビューション レポートのコネクテッド サービスの概要
   技術的な意思決定者を対象としています。
-description: |2
-
-  High-level overview of connected services for Attribution Reporting,
-  aimed at technical decision makers.
+description: 技術的な意思決定者を対象としたアトリビューション レポートのコネクテッド サービスの概要
 date: '2022-08-09'
 authors:
   - alexandrawhite
@@ -16,127 +13,127 @@ authors:
 
 &lt;style type="text/css"&gt; .type figcaption {text-align:left;} &lt;/style&gt;
 
-The Attribution Reporting API allows adtechs and advertisers to measure when an ad click or view leads to a conversion, such as a purchase. This API relies on a combination of client-side and server-side integrations, depending on your business needs.
+Attribution Reporting API を使用すると、アドテックや広告主は、広告クリックやビューが購入などのコンバージョンにつながったタイミングを測定できます。この API は、ビジネスニーズに応じて、クライアントサイドとサーバーサイドの統合の組み合わせに依存しています。
 
 Before continuing, make sure to read the [Attribution Reporting overview](/docs/privacy-sandbox/attribution-reporting). This will help you understand the API's purpose and the flow of the different output reports ([event-level report](/docs/privacy-sandbox/attribution-reporting/#event-level-reports) and [summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)). If you come across unfamiliar terms, refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
-## Who is this article for?
+## この記事の対象者
 
-You should read this article if:
+以下に該当する方は、この記事を読むことをお勧めします。
 
-- You're an adtech or advertiser's **technical decision-maker**. You may work in operations, DevOps, data science, IT, marketing, or another role where you make technical implementation decisions. You're wondering how the many proposals for Attribution Reporting systems work together to build a tool for privacy-preserving measurement.
-- You're a **technical practitioner** (such as a developer, system operator, system architect, or data scientist) who will be setting up experiments with this API and Aggregation Service environment.
+- アドテックまたは広告主の**技術的意思決定者**。運用、DevOps、データ サイエンス、IT、マーケティングなどの部門で、実装に関する技術的な決定を行うことがあり、アトリビューション レポート システムに関する多くの提案がどのように連携して、プライバシーを保護する測定ツールを構築しているのかを知りたい方にお勧めです。
+- あなたは、この API と Aggregation Service 環境を使用して実験をセットアップする**技術者**（開発者、システム オペレーター、システム アーキテクト、データ サイエンティストなど) です。
 
-{% Aside %} Right now, publishers don't have to take any action with this API. If this changes, this article will be updated accordingly. {% endAside %}
+{% Aside %} 現時点では、サイト運営者はこの API を使用して何らかの措置をとる必要はありません。これが変更された場合、この記事はそれに応じて更新されます。 {% endAside %}
 
-In this article, you'll read a high-level, end-to-end explanation of how the services work for the Attribution Reporting API. If you're a technical practitioner, you can [experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/) locally or in production with the [unified Privacy Sandbox Relevance and Measurement Origin Trial](/blog/privacy-sandbox-unified-origin-trial/).
+この記事では、サービスが Attribution Reporting API でどのように機能するかについて、概要をエンドツーエンドで説明します。技術者は、[統合されたプライバシーサンドボックスの関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)を使用して、ローカルまたは本番環境で[この API を試す](/docs/privacy-sandbox/attribution-reporting-experiment/)ことができます。
 
 ## 概要
 
-The Attribution Reporting API consists of many services, which require specific setup, client-side configurations, and server deployments. To determine what you need, first:
+Attribution Reporting API は多数のサービスで構成されており、特定のセットアップ、クライアントサイドの構成、およびサーバーのデプロイが必要となります。何が必要かを特定するために、まず以下を行ってください。
 
-- **[Make design decisions](#design-decisions)**. Define what information you want to collect, identify what conversions you expect from any given campaign, and determine which report type to collect. The final output is one or both of the two report types: event-level reports and summary reports.
+- **[設計上の決定](#design-decisions)**。収集する情報を定義し、特定のキャンペーンで期待するコンバージョンを特定し、どの種類のレポートを収集するかを決定します。最終的な出力は、イベントレベルレポートと要約レポートのいずれかまたは両方です。
 
-There are always two (and sometimes three) components which work together to support reporting:
+レポート機能をサポートするために、以下の 2 つ（場合によっては 3 つ）の要素が必ず存在します。
 
-- **[Website to browser communication](#web-browser-communication)**.  In cookie-based systems, information for conversions and ad engagements is attached to an identifier that allows you or an analytics service to join these events later. With this API, the browser associates conversions with ad clicks/views, based on your instructions, before it’s delivered for analysis. Therefore, your ad rendering code and conversion tracking must:
+- **[ウェブサイトからブラウザへの通信](#web-browser-communication)**。Cookie ベースのシステムでは、コンバージョンと広告エンゲージメントの情報が ID に結び付けられ、後でこれらのイベントにユーザーまたは分析サービスを結合できます。この API を使用すると、ブラウザは分析用に配信される前に、ユーザーの指示に基づいてコンバージョンを広告のクリック/ビューに関連付けます。したがって、広告レンダリングコードとコンバージョントラッキングは以下のことを行う必要があります。
     - どのコンバージョンをどの広告クリックまたはインプレッションに関連付けるべきかをブラウザに伝えます。
-    - Signal any other data to include in the final reports.
-- **[Data collection](#data-collection)**. You'll need a collector endpoint to receive the reports, generated in users' browsers. The output from browsers could be one of two possible reports: event-level reports and aggregatable reports (which are encrypted, used to generate summary reports).
+    - 最終レポートに含めるその他のデータを伝達します。
+- **[データ収集](#data-collection)**。ユーザーのブラウザで生成されたレポートを受信するためのコレクターエンドポイントが必要です。ブラウザからの出力は、イベントレベルのレポートと集計可能なレポート（暗号化され、要約レポートの生成に使用される）のいずれかです。
 
-If you collected aggregatable reports, you'll need a third component:
+集計可能なレポートを収集した場合は、以下の 3 つ目の要素が必要になります。
 
-- **[Summary report generation](#summary-report-generation)**. Batch aggregatable reports and use the Aggregation Service to process the reports to generate a summary report.
+- **[要約レポートの生成](#summary-report-generation)**。集計可能なレポートをバッチ化し、集計サービスを使用してレポートの処理を行い、要約レポートを生成します。
 
 ## 設計上の決定
 
-A key principle of Attribution Reporting is early design decisions. You decide what data to collect in what categories and how frequently to process that data. The output reports provide insights on your campaigns or business.
+アトリビューション レポートの重要な原則は、早い段階で設計を決定することです。どのカテゴリでどのデータを収集し、どれくらいの頻度でそのデータを処理するかを決定します。出力レポートからキャンペーンまたはビジネスに関するインサイトを得られます。
 
-The output report can be:
+以下の出力レポートを取得できます。
 
-- *Event-level reports* associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by limiting the joining of user identity across sites, conversion-side data is very limited, and the data is noisy (meaning that for a small percentage of cases, random data is sent instead of real reports).
-- *[Summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)* are not tied to a specific event on the ad side. These reports offer more detailed conversion data and flexibility for joining click and view data with conversion data.
+- *イベントレベルレポート*: 特定の広告クリックまたはビュー（広告側）をコンバージョン側のデータと関連付けます。サイト間でのユーザー ID の結合を制限することでユーザーのプライバシーを保護できるように、コンバージョン側のデータは非常に限られており、データにはノイズが含まれています（ごく一部のケースでは、実際のレポートではなくランダムなデータが送信されます）。
+- *[要約レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)*: 広告側の特定のイベントに関連付けられていません。これらのレポートには、より詳細なコンバージョン データと、クリックとビューデータをコンバージョンデータに結合するための柔軟性があります。
 
 レポートの選択によって、収集する必要があるデータが決まります。
 
-You can also think of the final output as an input for the tools you use to make decisions. For example, if you generate summary reports to determine how many conversions led to some total spend value, that may help your team decide what your next ad campaign should target to generate a higher total spend.
+最終的な出力は、意思決定に使用するツールへの入力と考えることができます。たとえば、要約レポートを生成して、総支出額につながったコンバージョン数を特定する場合、チームが総支出額を増やすことのできる次の広告キャンペーンのターゲットを決定するのに役立ちます。
 
-Once you've decided what you want to measure, you can set up the client-side for Attribution Reporting API.
+何を測定するかを決定したら、Attribution Reporting API のクライアントサイドをセットアップできます。
 
 ## ウェブサイトからブラウザへの通信 {: #web-browser-communication }
 
-{% Aside %} While this API is in testing, your code must confirm the API is available and set the appropriate Permissions-Policy. {% endAside %}
+{% Aside %} この API はテスト中ではありますが、コードで API が使用可能であることを確認し、適切な Permissions-Policy を設定する必要があります。 {% endAside %}
 
-<figure class="screenshot"> {% 	Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/wO7uPRjjBsSoUGNN8M9B.png", 	alt="Attribution sources on a publisher's website connect with triggers on an advertiser's website.", 	width="800", height="275" %} <figcaption><strong>Figure 1</strong>.</figcaption> </figure>
+<figure class="screenshot">{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/wO7uPRjjBsSoUGNN8M9B.png", alt="サイト運営者のウェブサイトのアトリビューション ソースは、広告主のウェブサイトのトリガーに接続します。", width="800", height="275" %}<figcaption><strong>図 1</strong> .</figcaption></figure>
 
-### Attribution sources (publisher's website) {: #attribution-sources}
+### アトリビューション ソース（サイト運営者のウェブサイト） {: #attribution-sources}
 
-An *[attribution source](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)* is an ad-related event (a click or view), to which an adtech can attach the following kinds of information:
+*[アトリビューション ソース](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)*は、広告関連のイベント（クリックまたはビュー）であり、アドテックは以下の種類の情報を添付できます。
 
-- Contextual reporting data, such as the ad creative ID, information about the campaign, or geography.
-- A conversion target, as in the site that is the target of the ad where you hope the user will end. This tells the browser what source events correspond to specific conversions.
+- 広告クリエイティブ ID、キャンペーンに関する情報、地理情報などのコンテキストレポートデータ。
+- ユーザーに終着してほしい広告のターゲットであるサイトのコンバージョンターゲット。これにより、特定のコンバージョンに対応するソースイベントがブラウザに通知されます。
 
-Once the data is collected for the attribution source, the browser adds the data to local storage, so it can later be matched with an attribution trigger.
+アトリビューション ソースのデータが収集されると、ブラウザはデータをローカルストレージに追加するため、後でアトリビューション トリガーと照合できます。
 
-### Attribution triggers (advertiser's website)
+### アトリビューション トリガー（広告主のウェブサイト）
 
 *[アトリビューション トリガー](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)*は、コンバージョンを取得するよう API に指示するイベントです。
 
-We recommend capturing the conversions that are most important to the advertiser, such as purchases. Multiple conversion types and metadata can be captured in summary reports.
+購入など、広告主にとって最も重要なコンバージョンをキャプチャすることをお勧めします。要約レポートには、複数のコンバージョン タイプとメタデータを取り込むことができます。
 
 これにより、これらのイベントの集計結果が詳細かつ正確になります。
 
-### Match sources to triggers
+### ソースとトリガーの照合
 
-When a browser receives an attribution trigger response, the browser accesses local storage to find a source that matches both the attribution trigger's origin and that page URL's [eTLD+1](https://web.dev/same-site-same-origin/#site).
+ブラウザがアトリビューション トリガーのレスポンスを受信すると、ブラウザはローカルストレージにアクセスして、アトリビューション トリガーのオリジンとそのページ URL の [eTLD+1](https://web.dev/same-site-same-origin/#site) の両方に一致するソースを見つけます。
 
-For example, when the browser receives an attribution trigger from `adtech.example` on `shoes.example/shoes123`, the browser looks for a source in local storage that matches both `adtech.example` and `shoes.example`.
+たとえば、ブラウザが code1}shoes.example/shoes123 の `adtech.example` からアトリビューション トリガーを受け取ると、ブラウザはローカルストレージで `adtech.example` と `shoes.example` の両方に一致するソースを探します。
 
-*Filters* (or custom rules) can be set to determine when a trigger is matched to a specific source. For example, set a filter to count only conversions for a specific product category and ignore all other categories. Filters and prioritization models allow for more advanced attribution reporting.
+*フィルター*（またはカスタムルール）を設定して、トリガーが特定のソースに一致するタイミングを決定できます。たとえば、特定の商品カテゴリのコンバージョンのみをカウントし、他のすべてのカテゴリを無視するようにフィルターを設定します。フィルターと優先順位付けモデルにより、より高度なアトリビューション レポートが可能になります。
 
 ローカル ストレージに複数の属性ソースが見つかった場合、ブラウザは最近保存されたものを選択します。アトリビューション ソースに優先度が割り当てられている場合、ブラウザは最も優先度の高いソースを選択します。
 
 ## データ収集
 
-Together, an attribution trigger matched to a corresponding source, are sent as a report by the browser to a reporting endpoint on an adtech-owned server (sometimes referred to as a collection endpoint or collection service). These reports can be event-level reports or aggregatable reports.
+同時に、対応するソースに一致するアトリビューション トリガーは、ブラウザによってアドテックが所有するサーバー上のレポートエンドポイント（収集エンドポイントまたは収集サービスと呼ばれることもあります）にレポートとして送信されます。これらのレポートは、イベントレベルレポートまたは集計可能なレポートです。
 
-*[Aggregatable reports](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregatable-reports)* are used to generate summary reports. An aggregatable report is a combination of data gathered from the ad (on a publisher's site) and conversion data (from the advertiser's site) which is generated and encrypted by the browser on a user's device before it's collected by the adtech.
+*[集計可能なレポート](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregatable-reports)*は、要約レポートの生成に使用されます。集計可能なレポートは、（サイト運営者のサイトで）広告から収集されたデータと（広告主のサイトからの）コンバージョンデータを組み合わせたもので、アドテックによって収集される前に、ユーザーのデバイスのブラウザによって生成され暗号化されます。
 
-Event-level reports are delayed between 2 and 30 days. Aggregatable reports are sent with a random delay within one hour and the events must fit within the *[contribution budget](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#contribution-bounding-and-budgeting)*. These choices protect privacy and prevent exploitation of any individual user's actions.
+イベントレベルレポートには 2 ～ 30 日の遅延があります。集計可能なレポートは 1 時間以内にランダムな遅延で送信され、イベントは*[コントリビューション予算](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#contribution-bounding-and-budgeting)*内に収まる必要があります。これらの選択により、プライバシーが保護され、個々のユーザーのアクションの悪用が防止されます。
 
-If you're only interested in event-level reports, this is the last piece of infrastructure you need. However, if you want to generate summary reports, you'll need to process the aggregatable reports with an additional service.
+イベントレベルレポートのみに関心がある場合は、これが最後に必要となるインフラストラクチャの部分です。ただし、要約レポートを生成する場合は、追加のサービスを使用して集計可能なレポートを処理する必要があります。
 
 ## 要約レポートの生成
 
-To generate summary reports, you'll use the [Aggregation Service](https://github.com/google/trusted-execution-aggregation-service) (operated by the adtech) to process the aggregatable reports. The Aggregation Service adds noise to protect user privacy and returns the final summary report.
+要約レポートを生成するには、 [集計サービス](https://github.com/google/trusted-execution-aggregation-service)（アドテックが運営）を使用して、集計可能なレポートを処理します。集計サービスは、ユーザーのプライバシーを保護するためにノイズを追加してから、最終的な要約レポートを返します。
 
-<figure class="screenshot"> 	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="Aggregatable reports are collected, batched, and sent to the adtech environtment.", width="800", height="464" %} 	<figcaption> 		<strong>Figure 2</strong>. This diagram represents the asynchronous flow 		of data from the collection endpoint, batching reports, through 		processing on the adtech-owned Aggregation Service.<br><br> 		After batching the collected aggregatable reports the batch is processed 		by the Aggregation Service. A 		<a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator">coordinator</a> 		gives the decryption keys only to attested versions of the Aggregation 		Service. The Aggregation Service then decrypts the data, aggregates 		it, and add noise before returning the results as a summary report. 	</figcaption> </figure>
+<figure class="screenshot">{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="集計可能なレポートが収集されると、バッチ化されてからアドテック環境に送信されます。", width="800", height="464" %}<figcaption> <strong>図 2</strong>. この図は、収集エンドポイントからアドテックが所有する集計サービスでの処理を通じてレポートのバッチ化を行う、データの非同期フローを表しています。<br><br> 収集された集計可能なレポートをバッチ化した後、バッチは集計サービスによって処理されます。<a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator">コーディネーター</a>は、集計サービスの認証済みバージョンにのみ復号化キーを提供します。次に、集計サービスはデータを復号化して集約し、ノイズを追加してから結果を要約レポートとして返します。</figcaption></figure>
 
-### Batched aggregatable reports
+### バッチ化された集計可能なレポート
 
-Before the aggregatable reports are processed, they must be batched. A batch consists of strategically grouped aggregatable reports. Your strategy will most likely be reflective of a specific time period (such as daily or weekly). This process can take place on the same server which acts as your reporting endpoint.
+集計可能なレポートは、処理される前にバッチ化される必要があります。バッチは、戦略的にグループ化された集計可能なレポートで構成されます。この戦略は、特定の期間（毎日または毎週など）を反映することがほとんどです。この処理は、レポートエンドポイントとして機能する同じサーバーで実行できます。
 
-Batches should contain many reports to ensure the signal-to-noise ratio is high.
+シグナル対ノイズの比が高くなるように、バッチには多くのレポートを含める必要があります。
 
-<figure class="screenshot">   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/hjs2hU2e7N51a1CyNvsB.png", alt="Larger time periods lead to less noisy results.", width="614", height="317" %} 	<figcaption> 		<strong>Figure 3</strong>. Compare waiting 1 day and 1 week. In 1 		hour, you'll have a smaller summary value with likely more noisy results. 		In one day, you'll have a larger summary value so it's likely to be less 		noisy. 	</figcaption> </figure>
+<figure class="screenshot">{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/hjs2hU2e7N51a1CyNvsB.png", alt="期間が長いほどは結果に含まれるノイズが少なくなります。", width="614", height="317" %}<figcaption> <strong>図3</strong>. 1 日と 1 週間の待機期間を比較。1 時間後には、集計値が小さくなり、結果に含まれるノイズが多くなる可能性があります。1 日で集計値が大きくなるため、ノイズが少なくなる可能性があります。</figcaption></figure>
 
-Batch periods can change at any time to ensure you capture specific events where you expect higher volume, such as for an annual sale. The batching period can be changed without needing to change attribution sources or triggers.
+年に一度のセールなど、ボリュームがより高くなることが予想される特定のイベントを確実にキャプチャできるように、バッチ期間はいつでも変更できるようになっています。バッチ期間の変更は、アトリビューション ソースやトリガーを変更せずに行えます。
 
 ### 集計サービス
 
-The Aggregation Service is responsible for processing aggregatable reports to generate a summary report. Aggregatable reports are encrypted and can only be read by the Aggregation Service, which runs on a trusted execution environment (TEE).
+集計サービスには、集計可能なレポートを処理して要約レポートを生成する役割があります。集計可能なレポートは暗号化されており、信頼できる実行環境（TEE）で実行される集計サービスによってのみ読み取られます。
 
-The Aggregation Service [requests decryption keys from the coordinator](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator) to decrypt and aggregate the data. Once decrypted and aggregated, the results are noised to preserve privacy and returned as a summary report.
+集計サービスは、[コーディネーターに復号化キーを要求](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator)してデータの復号化と集計を行います。復号化と集計が完了すると、プライバシーを保護するために結果をノイズ処理し、要約レポートとして返します。
 
-Practitioners can generate aggregatable cleartext reports to [test the Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing). Or, you can [test with encrypted reports on AWS with Nitro Enclaves](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports).
+[集計サービスをローカルでテスト](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing)するには、技術者は集計可能なクリアテキスト形式のレポートを生成できます。または、[Nitro Enclaves を使用して AWS で暗号化されたレポートをテスト](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports)することも可能です。
 
-## What's next?
+## 今後の予定
 
-We want to engage in conversations with you to ensure we build an API that works for everyone.
+すべての人にとって機能する API を確実に構築できるように、皆さんとの対話を持ちたいと考えています。
 
-### Discuss the API
+### この API に関するディスカッション
 
-Like other Privacy Sandbox proposals, this API is documented and [discussed publicly](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion).
+他のプライバシーサンドボックス提案と同様に、この API は文書化され、[公に議論](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion)されています。
 
 ### API を試す
 
