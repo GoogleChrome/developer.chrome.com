@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: Cookies Having Independent State（CHIPS）オリジントライアル
 subhead: Chrome 100 以降、CHIPS オリジントライアルでは、トップレベル サイトごとに個別の Cookie ジャーを使用して、「パーティション化された」ストレージに Cookie をオプトインできます。
 description: Chrome 100 以降、CHIPS オリジントライアルでは、トップレベル サイトごとに個別の Cookie ジャーを使用して、「パーティション化された」ストレージに Cookie をオプトインできます。パーティション化された Cookie はサードパーティのサービスによって設定できますが、最初に設定されたトップレベルサイトのコンテキスト内でのみ読み取られます。
-date: '2022-03-17'
-updated: '2022-06-10'
+date: 2022-03-17
+updated: 2022-06-10
 authors:
   - mihajlija
 tags:
