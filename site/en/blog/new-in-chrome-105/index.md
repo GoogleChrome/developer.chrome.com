@@ -4,6 +4,7 @@ description: >
   Chrome 105 is rolling out now. Container queries and :has() are a match made in responsive heaven. The new Sanitizer API provides a robust processor for arbitrary strings to help reduce cross site scripting vulnerabilities. We’re taking another step towards deprecating WebSQL. And there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-08-30
+updated: 2022-08-31
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Oqph8RjTs2sFEmuXJiKs.png'
@@ -22,7 +23,7 @@ Here's what you need to know:
   in responsive heaven.
 * The new [Sanitizer API](#sanitizer-api) provides a robust processor for
   arbitrary strings to help reduce cross site scripting vulnerabilities.
-* We’re taking another step towards [deprecating WebSQL](#websql-deprecation).
+* We’re taking another step towards [deprecating Web SQL](#web-sql-deprecation).
 * And there's plenty [more](#more).
 
 I'm [Pete LePage](https://petelepage.com). Let's dive in and
@@ -144,21 +145,19 @@ const mySanitizer = new Sanitizer(config);
 Check out [Safe DOM manipulation with the Sanitizer API][wd-sanitizer]
 for more details.
 
-## Deprecating WebSQL for non-secure contexts {: #websql-deprecation }
+## Deprecating Web SQL for non-secure contexts {: #web-sql-deprecation }
 
-Some time ago, we announced our plans to deprecate WebSQL. Starting in
-Chrome 105, WebSQL will be deprecated in *non-secure* contexts.
+Some time ago, we announced our plans to deprecate Web SQL. Starting in
+Chrome 105, Web SQL will be deprecated in *non-secure* contexts.
 
 {% Aside 'warning' %}
-This deprecation will currently only affect sites that use WebSQL via
+This deprecation will currently only affect sites that use Web SQL via
 `http://`, for example, some intranet or enterprise scenarios. It will
-**not** affect sites that use WebSQL via `https://`.
+**not** affect sites that use Web SQL via `https://`.
 {% endAside %}
 
-If you’re using WebSQL in non-secure contexts, you should migrate to IndexDB,
-or another local storage container as soon as possible. For more information
-about this deprecation and the planned deprecation of WebSQL see
-[Deprecating and removing Web SQL][dcc-websql-dep].
+If you’re using Web SQL in non-secure contexts, you should migrate to IndexDB,
+or another local storage container as soon as possible.
 
 ## And more! {: #more }
 
