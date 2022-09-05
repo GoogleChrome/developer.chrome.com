@@ -15,7 +15,7 @@ authors:
 
 Attribution Reporting API を使用すると、アドテックや広告主は、広告クリックやビューが購入などのコンバージョンにつながったタイミングを測定できます。この API は、ビジネスニーズに応じて、クライアントサイドとサーバーサイドの統合の組み合わせに依存しています。
 
-Before continuing, make sure to read the [Attribution Reporting overview](/docs/privacy-sandbox/attribution-reporting). This will help you understand the API's purpose and the flow of the different output reports ([event-level report](/docs/privacy-sandbox/attribution-reporting/#event-level-reports) and [summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)). If you come across unfamiliar terms, refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
+読み進める前に、「[アトリビューション レポートの概要](/docs/privacy-sandbox/attribution-reporting)」を必ずお読みください。これは、API の目的と、さまざまな出力レポート（[イベントレベルレポート](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)と[要約レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)）のフローを理解するのに役立ちます。なじみのない用語に遭遇した場合は、「[プライバシー サンドボックス用語集](/docs/privacy-sandbox/glossary/)」をご覧ください。
 
 ## この記事の対象者
 
