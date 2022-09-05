@@ -24,15 +24,15 @@ Chrome 101 以降、User-Agent（UA）文字列で利用できる情報量は、
 デプリケーション トライアルに登録すると、サイトは引き続き `navigator.userAgent` で完全な UA 文字列を受け取り、関連する `navigator.platform` および `navigator.appVersion` JavaScript ゲッターで削減されていない値を受け取ることができます。
 
 - `User-Agent` HTTP リクエストヘッダー
-- The `navigator.userAgent` Javascript getter
-- The `navigator.platform` Javascript getter
-- The `navigator.appVersion` Javascript getter
+- `navigator.userAgent` Javascript ゲッター
+- `navigator.platform` Javascript ゲッター
+- `navigator.appVersion` Javascript ゲッター
 
 サイトは引き続き User-Agent ヘッダーと関連する API の使用状況を監査し、必要に応じてデプリケーション トライアルが終了する前に [User-Agent Client Hints に移行](https://web.dev/migrate-to-ua-ch/)する準備をする必要があります。[User-Agent 削減のロールアウト](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)が完了したら、このデプリケーション トライアルを終了することが目的です。
 
 ## User-Agent 削減デプリケーション トライアルへの参加方法
 
-### Register for the trial
+### トライアルに登録する
 
 オリジントライアルに登録してドメインのトークンを取得するには、[User Agent 削減デプリケーション トライアルのページ](/origintrials/#/view_trial/2608710084154359809)にアクセスしてください。
 
@@ -52,7 +52,7 @@ Chrome 101 以降、User-Agent（UA）文字列で利用できる情報量は、
         - メタタグの `*` を使用して、すべてのサードパーティドメインにデリゲートすることはできません。
 5. Chrome 100（またはそれ以降）でウェブサイトをロードし、完全な User-Agent 文字列を引き続き受け取ります。
 
-### Demo
+### デモ
 
 トライアルのデモ（ソース コード付き）については、[https://uard-ot-demo.glitch.me](https://uard-ot-demo.glitch.me) をご覧ください。
 
