@@ -1,6 +1,6 @@
 ---
 layout: layouts/blog-post.njk
-title: Cookies Having Independent State (CHIPS) origin trial extended
+title: Cookies Having Independent State（CHIPS）オリジントライルの延長
 description: CHIPS は、トップレベルサイトごとにパーティション化されたサードパーティ Cookie の使用にオプトインする仕組みを導入するプライバシーサンドボックスの提案です。Chrome 100 で開始されたオリジントライアルは、2022 年 8 月 30 日に予定されている Chrome 105 のリリースまで利用できるようになりました。
 subhead: オリジン トライアルは、2022 年 8 月 30 日に予定されている Chrome 105 のリリースまで利用できるようになりました。
 date: '2022-05-26'
