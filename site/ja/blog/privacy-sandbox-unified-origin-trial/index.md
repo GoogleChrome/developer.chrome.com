@@ -101,7 +101,7 @@ DevTools は、「アプリケーション」タブの「フレーム」にオ�
 
 ### Topics
 
-`document` 内の `browsingTopics()` 関数と、「browsing-topics」のアクセス許可ポリシー（/docs/privacy-sandbox/permissions-policy/#featurepolicyallowsfeaturefeature）を確認してください。
+`document` 内の `browsingTopics()` 関数と、「browsing-topics」の[アクセス許可ポリシー](/docs/privacy-sandbox/permissions-policy/#featurepolicyallowsfeaturefeature)を確認してください。
 
 ```javascript
 if ('browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics')) {
