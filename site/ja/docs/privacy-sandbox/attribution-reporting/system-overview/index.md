@@ -68,7 +68,7 @@ Attribution Reporting API は多数のサービスで構成されており、特
 
 ### アトリビューション ソース（サイト運営者のウェブサイト） {: #attribution-sources}
 
-*[アトリビューション ソース](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)*は、広告関連のイベント（クリックまたはビュー）であり、アドテックは以下の種類の情報を添付できます。
+*[アトリビューション ソース](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)* は、広告関連のイベント（クリックまたはビュー）であり、アドテックは以下の種類の情報を添付できます。
 
 - 広告クリエイティブ ID、キャンペーンに関する情報、地理情報などのコンテキストレポートデータ。
 - ユーザーに終着してほしい広告のターゲットであるサイトのコンバージョンターゲット。これにより、特定のコンバージョンに対応するソースイベントがブラウザに通知されます。
