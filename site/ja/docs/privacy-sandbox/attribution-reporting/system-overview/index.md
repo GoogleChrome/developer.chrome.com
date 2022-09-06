@@ -99,7 +99,7 @@ Attribution Reporting API は多数のサービスで構成されており、特
 
 *[集計可能なレポート](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregatable-reports)* は、要約レポートの生成に使用されます。集計可能なレポートは、（サイト運営者のサイトで）広告から収集されたデータと（広告主のサイトからの）コンバージョンデータを組み合わせたもので、アドテックによって収集される前に、ユーザーのデバイスのブラウザによって生成され暗号化されます。
 
-イベントレベルレポートには 2 ～ 30 日の遅延があります。集計可能なレポートは 1 時間以内にランダムな遅延で送信され、イベントは*[コントリビューション予算](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#contribution-bounding-and-budgeting)*内に収まる必要があります。これらの選択により、プライバシーが保護され、個々のユーザーのアクションの悪用が防止されます。
+イベントレベルレポートには 2 ～ 30 日の遅延があります。集計可能なレポートは 1 時間以内にランダムな遅延で送信され、イベントは *[コントリビューション予算](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#contribution-bounding-and-budgeting)* 内に収まる必要があります。これらの選択により、プライバシーが保護され、個々のユーザーのアクションの悪用が防止されます。
 
 イベントレベルレポートのみに関心がある場合は、これが最後に必要となるインフラストラクチャの部分です。ただし、要約レポートを生成する場合は、追加のサービスを使用して集計可能なレポートを処理する必要があります。
 
