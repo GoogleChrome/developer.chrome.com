@@ -53,11 +53,11 @@ User-Agent 削減は、Chrome ブラウザのパッシブ フィンガープリ�
 
 1. オリジントライアルに登録してドメインのトークンを取得するには、[User Agent 削減のトライアルのページ](/origintrials/#/view_trial/-7123568710593282047)にアクセスしてください。
 
-    {% Aside %} トライアル用のドメインをサードパーティの埋め込みとして登録するには、[別のトークンが必要](#enroll-third-party)です。 {% endAside %}
+{% Aside %} トライアル用のドメインをサードパーティの埋め込みとして登録するには、[別のトークンが必要](#enroll-third-party)です。 {% endAside %}
 
 2. HTTP レスポンスヘッダーを以下のように更新します。
 
-    1. `Origin-Trial: <ORIGIN TRIAL TOKEN>` を HTTP レスポンスヘッダーに追加します。<`ORIGIN TRIAL TOKEN`>には、オリジントライアル登録時に取得したトークンが含まれています。
+    1. `Origin-Trial: <ORIGIN TRIAL TOKEN>` を HTTP レスポンスヘッダーに追加します。<`ORIGIN TRIAL TOKEN`> には、オリジントライアル登録時に取得したトークンが含まれています。
     2. `Accept-CH: Sec-CH-UA-Reduced` を HTTP レスポンスヘッダーに追加します。
     3. `Accept-CH`を設定すると、縮小された User-Agent 文字列のみがオリジンへの後続のリクエストで送信されます。 User-Agent 文字列を縮小して最初のナビゲーション リクエストを再送信するには、 `Accept-CH`ヘッダーと`Origin-Trial`ヘッダーに加えて、 `Critical-CH: Sec-CH-UA-Reduced`を HTTP 応答ヘッダーに追加します。
     4. 注意: レスポンスヘッダーに有効な `Origin-Trial` トークンと `Accept-CH: Sec-CH-UA-Reduced` が含まれている場合、すべてのサブリソース リクエスト（画像やスタイルシートなど）とサブナビゲーション（iframe など）は、これらのリクエストのオリジンがオリジントライアルに登録されていない場合でも、削減された UA 文字列を送信します。
