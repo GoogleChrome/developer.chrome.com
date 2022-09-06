@@ -6,8 +6,8 @@ description: Chrome 95 ベータ版以降、オリジントライアルにより
 authors:
   - arichiv
   - abeyad
-date: '2021-09-14'
-updated: '2022-01-07'
+date: 2021-09-14
+updated: 2022-01-07
 tags:
   - privacy
   - origin-trials
