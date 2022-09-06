@@ -100,6 +100,22 @@ module.exports = collections => {
       enumerable: true,
     });
 
+    // Add API types to algolia doc to allow fully qualified searches,
+    // like chrome.webRequest.onBeforeSendHeaders instead of just being
+    // able to search onBeforeSendHeaders which also appears in the content
+    if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
+      const apiData = item.data.chromeApiNamespaces[item.data.api];
+
+      const contents = [];
+      for (const group of apiData.groups) {
+        for (const content of group.contents) {
+          contents.push(content._name);
+        }
+      }
+
+      algoliaCollectionItem.apiContents = contents;
+    }
+
     if (item.data.type) {
       algoliaCollectionItem.type = item.data.type;
     }
