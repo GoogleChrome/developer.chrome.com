@@ -218,7 +218,7 @@ to Experiment (I2E)</a> post.</td>
 To activate the origin trial on your site, you will need to register
 and embed the assigned origin trial token (a time-based string
 for your specific access to the origin trial). Learn more in the
-[Getting started with Chrome's origin trials](/blog/origin-trials/).  
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials).  
 
 {% Aside %}
 Register for the [Privacy Sandbox Relevance and Measurement trial](/origintrials/#/view_trial/771241436187197441). 
