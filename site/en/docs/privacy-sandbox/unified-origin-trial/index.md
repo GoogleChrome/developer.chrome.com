@@ -229,13 +229,15 @@ at any time.
 
 For every page where you want to use the origin trial, you will need to include a trial token with that specific page's HTML or response.
 
-Use a `<meta>` tag in the top-level page's `<head>`: 
-	
-`<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`. 
+Use a `<meta>` tag in the top-level page's `<head>`: 	
+```html
+<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
+```
 
 Alternatively, include the following HTTP header in the top-level page response: 
-
-`Origin-Trial: TOKEN_GOES_HERE`  
+```http
+Origin-Trial: TOKEN_GOES_HERE
+``` 
 
 {% Aside %}
 If you're using origin trial features within an iframe (such as FLEDGE's
