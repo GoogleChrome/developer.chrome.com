@@ -259,10 +259,10 @@ As mentioned earlier, the pop-up API covers more than only our historical notion
 Some of those scenarios need different interaction patterns. Interactions like hover. The use of a `popuphovertarget` attribute was experimented with but isn't currently implemented.
 
 ```html
-<button popuphovertarget="hover-pop-up">Hover for Code</button>
+<div popuphovertarget="hover-pop-up">Hover for Code</div>
 ```
 
-The idea being that you hover an element to show the target. This behavior could get configured via CSS properties. These CSS properties would define the window of time for hovering on and off an element that a pop-up reacts to. The default behavior experimented with had a pop-up show after an explicit `0.5s` of `:hover`. Then it would need a light dismiss or the opening of another pop-up (More on this coming up).
+The idea being that you hover an element to show the target. This behavior could get configured via CSS properties. These CSS properties would define the window of time for hovering on and off an element that a pop-up reacts to. The default behavior experimented with had a pop-up show after an explicit `0.5s` of `:hover`. Then it would need a light dismiss or the opening of another pop-up to dismiss (More on this coming up). This was due to the pop-up hide duration being set to `Infinity`.
 
 In the meantime, you could use JavaScript to polyfill that functionality.
 
