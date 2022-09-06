@@ -104,16 +104,16 @@ module.exports = collections => {
     // like chrome.webRequest.onBeforeSendHeaders instead of just being
     // able to search onBeforeSendHeaders which also appears in the content
     if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
-      const apiData = item.data.chromeApiNamespaces[item.data.api];
+      const apiNamespace = item.data.chromeApiNamespaces[item.data.api];
 
-      const contents = [];
-      for (const group of apiData.groups) {
+      const apiNamespacePaths = [];
+      for (const group of apiNamespace.groups) {
         for (const content of group.contents) {
-          contents.push(content._name);
+          apiNamespacePaths.push(content._name);
         }
       }
 
-      algoliaCollectionItem.apiContents = contents;
+      algoliaCollectionItem.apiNamespacePaths = apiNamespacePaths;
     }
 
     if (item.data.type) {
