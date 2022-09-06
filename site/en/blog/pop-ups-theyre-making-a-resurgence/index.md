@@ -59,7 +59,7 @@ There are some accessibility considerations. It's advised to use "[a11y-dialog](
 
 You could also use one of the many pop-up, alert, or tooltip based libraries out there. Many of these tend to work in a similar way.
 
-- Append some container to the body for showing popups.
+- Append some container to the body for showing pop-ups.
 - Style it so that it sits above everything else.
 - Create an element and append it to the container to show a pop-up.
 - Hide it by removing the pop-up element from the DOM.
