@@ -104,7 +104,7 @@ origin-trial トークンを含む最初のレスポンスヘッダーは以下�
 
 トライアル期間中の任意の時点で参加を中止すると、完全な User-Agent 文字列を受け取ることができます。参加を中止するには、以下のようにします。
 
-1. `Accept-CH` ヘッダーに `Sec-CH-UA-Reduced` を <strong>含めずに</strong>、HTTP レスポンスを送信します。注意: サイトが他の Client Hints をリクエストしない場合、空の値を持つ `Accept-CH` は、これを達成するための有効な方法です。
+1. `Accept-CH` ヘッダーに `Sec-CH-UA-Reduced` を **含めずに**、HTTP レスポンスを送信します。注意: サイトが他の Client Hints をリクエストしない場合、空の値を持つ `Accept-CH` は、これを達成するための有効な方法です。
 2. User-Agent 削減トライアルの `Origin-Trial` ヘッダーを HTTP レスポンスから削除します。
 3. HTTP レスポンスの `Critical-CH` ヘッダーに `Sec-CH-UA-Reduced` が設定されている場合は、それを削除します。
 
