@@ -77,7 +77,7 @@ Attribution Reporting API は多数のサービスで構成されており、特
 
 ### アトリビューション トリガー（広告主のウェブサイト）
 
-*[アトリビューション トリガー](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)*は、コンバージョンを取得するよう API に指示するイベントです。
+*[アトリビューション トリガー](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)* は、コンバージョンを取得するよう API に指示するイベントです。
 
 購入など、広告主にとって最も重要なコンバージョンをキャプチャすることをお勧めします。要約レポートには、複数のコンバージョン タイプとメタデータを取り込むことができます。
 
