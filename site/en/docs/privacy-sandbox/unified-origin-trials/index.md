@@ -2,15 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox relevance and measurement unified origin trials'
 subhead: >
-   The Privacy Sandbox Relevance and Measurement origin trial
-   provides a single trial allowing sites to run unified experiments
-   across Attribution Reporting, FLEDGE, Topics, Fenced Frames,
-   and Shared Storage.
+   Run unified experiments across Attribution Reporting, FLEDGE,
+   Topics, Fenced Frames, and Shared Storage.
 description: >
-   The Privacy Sandbox Relevance and Measurement origin trial
-   provides a single trial allowing sites to run unified experiments
-   across Attribution Reporting, FLEDGE, Topics, Fenced frames,
-   and Shared Storage.
+   Run unified experiments across Attribution Reporting, FLEDGE,
+   Topics, Fenced Frames, and Shared Storage.
 authors:
   - anusmitaray
   - rowan_m
@@ -94,7 +90,7 @@ See the FLEDGE guidance for origin trial usage.</td>
 href="/docs/privacy-sandbox/shared-storage/">Shared
 Storage</a></td>
       <td>
-Shared Storage added to the origin trial in only M105+ Canary/Dev/Beta for now.
+Shared Storage added to the origin trial in only M105+ Canary, Dev, and Beta for now.
 	  </td>
     </tr>
   </tbody>
@@ -102,6 +98,7 @@ Shared Storage added to the origin trial in only M105+ Canary/Dev/Beta for now.
 
 {% Details %}
 {% DetailsSummary %}
+
 ### Previous updates
 
 Check out previous updates on origin trials.
@@ -217,8 +214,10 @@ to Experiment (I2E)</a> post.</td>
 
 ## Sign up for and configure the origin trial {: #configure}
 
-To activate the origin trial on your site, you will need to register and embed the assigned origin trial token (a time-based string for your specific access to the origin trial). Learn more in the
-[guide to getting started with Chrome's origin trials](/blog/origin-trials/).  
+To activate the origin trial on your site, you will need to register
+and embed the assigned origin trial token (a time-based string
+for your specific access to the origin trial). Learn more in the
+[Getting started with Chrome's origin trials](/blog/origin-trials/).  
 
 {% Aside %}
 Register for the [Privacy Sandbox Relevance and Measurement trial](/origintrials/#/view_trial/771241436187197441). 
@@ -360,7 +359,7 @@ The APIs are not on by default and must be
 for testing. You should ensure that you have the same configuration settings
 enabled above and then:
 
--  be using a **version and channel of Chrome** where the features are
+-  Use a **version and channel of Chrome** where the features are
     available.
 -  Enable the `chrome://flags/#privacy-sandbox-ads-apis` flag.
     -  Additional flags may conflict with this one, so consider only
