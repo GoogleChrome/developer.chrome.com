@@ -33,9 +33,9 @@ User-Agent 削減は、Chrome ブラウザのパッシブ フィンガープリ�
 サイトは、削減された UA 文字列を受け取る準備をし、オリジントライアルへの参加を検討する必要があります（詳細は以下をご覧ください）。削減された User Agent値は以下の場所に表示されます。
 
 - `User-Agent` HTTP リクエストヘッダー
-- The `navigator.userAgent` Javascript getter
-- The `navigator.platform` Javascript getter
-- The `navigator.appVersion` Javascript getter
+- `navigator.userAgent` Javascript ゲッター
+- `navigator.platform` Javascript ゲッター
+- `navigator.appVersion` Javascript ゲッター
 
 削減された User-Agent によって共有されるものよりも多くのクライアント情報を受け取るには、サイトを新しい User-Agent [Client Hints](https://web.dev/migrate-to-ua-ch/) API に移行する必要があります。移行戦略の詳細については、「[User-Agent Client Hints への移行](https://web.dev/migrate-to-ua-ch/)」をご覧ください。
 
@@ -59,7 +59,7 @@ User-Agent 削減は、Chrome ブラウザのパッシブ フィンガープリ�
 
     1. `Origin-Trial: <ORIGIN TRIAL TOKEN>` を HTTP レスポンスヘッダーに追加します。&lt; `ORIGIN TRIAL TOKEN` &gt;には、オリジントライアル登録時に取得したトークンが含まれています。
     2. `Accept-CH: Sec-CH-UA-Reduced` を HTTP レスポンスヘッダーに追加します。
-    3. Setting `Accept-CH` will only cause the reduced User-Agent string to be sent on subsequent requests to the origin; to resend the first navigation request with the reduced User-Agent string, add `Critical-CH: Sec-CH-UA-Reduced` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
+    3. `Accept-CH`を設定すると、縮小された User-Agent 文字列のみがオリジンへの後続のリクエストで送信されます。 User-Agent 文字列を縮小して最初のナビゲーション リクエストを再送信するには、 `Accept-CH`ヘッダーと`Origin-Trial`ヘッダーに加えて、 `Critical-CH: Sec-CH-UA-Reduced`を HTTP 応答ヘッダーに追加します。
     4. 注意: レスポンスヘッダーに有効な `Origin-Trial` トークンと `Accept-CH: Sec-CH-UA-Reduced` が含まれている場合、すべてのサブリソース リクエスト（画像やスタイルシートなど）とサブナビゲーション（iframe など）は、これらのリクエストのオリジンがオリジントライアルに登録されていない場合でも、削減された UA 文字列を送信します。
 
 3. ウェブサイトを Chrome M95（またはそれ以降）に読み込み、削減された UA 文字列の受信を開始します。
@@ -72,7 +72,7 @@ User-Agent 削減は、Chrome ブラウザのパッシブ フィンガープリ�
 
 Chrome 96 以降、サードパーティの埋め込み（別のサイト内の iframe など）は、トップレベル サイトを登録せずに、オリジントライアルに参加できます。
 
-To enroll as a third-party embed:
+サードパーティの埋め込みとして登録するには:
 
 1. [User Agent 削減のトライアル](/origintrials/#/view_trial/-7123568710593282047)にアクセスし、「**登録**」をクリックします。
 2. トークンを作成するときは、必ず「`Third-party matching`」チェックボックスを選択してください。
