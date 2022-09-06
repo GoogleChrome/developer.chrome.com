@@ -112,6 +112,34 @@ If your browser supports the `lab()` function, the element is green, otherwise i
 **Note**: At the time of writing, only Safari [supports the CIELAB color space](https://caniuse.com/?search=lab).
 {% endAside %}
 
+### View `@scope` at-rules {: #scope }
+
+The **Styles** pane shows you [CSS `@scope` at-rules](https://drafts.csswg.org/css-cascade-6/#scope-atrule) if they are applied to an element.
+
+The new `@scope` at-rules are a part of the [CSS Cascading and Inheritance Level 6 specification](https://drafts.csswg.org/css-cascade-6/). These rules allow you to scope CSS styles, in other words, explicitly apply styles to specific elements.
+
+{% Aside %}
+**Note**: The `@scope` at-rule feature is experimental. To test it, enable the **Experimental Web Platform features** flag in `chrome://flags/#enable-experimental-web-platform-features`. Otherwise, the preview below doesn't work.
+{% endAside %}
+
+View the `@scope` rule in the following preview:
+
+{% Codepen {
+ user: 'sofiayem',
+ id: 'YzaBqOo',
+ height: 270,
+ allow: ['geolocation']
+} %}
+
+1. [Inspect the text][39] on the card in the preview.
+1. On the **Styles** pane, find the `@scope` rule.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W3Ogu3zoFBFUaPN8JDU7.png", alt="The @scope rule.", width="800", height="660" %}
+
+In this example, the `@scope` rule overrides the global CSS `background-color` declaration for all `<p>` elements inside elements with a `card` class.
+
+To edit the `@scope` rule, double-click it.
+
 ### View an element's box model {: #box-model }
 
 To view [the box model][7] of an element, go to the **Styles** pane and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ARurwNZrSDIYQwsVPuUC.png", alt="Show sidebar.", width="22", height="20" %} **Show sidebar** button in the action bar.
@@ -746,3 +774,4 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function
 [37]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function
 [38]: https://developer.mozilla.org/docs/Web/CSS/animation-timing-function#values
+[39]: /docs/devtools/open/#elements

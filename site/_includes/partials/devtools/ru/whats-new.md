@@ -4,18 +4,19 @@
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
-<!-- ### Chrome 105 {: #chrome105 }
+### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/ru/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/ru/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/ru/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ru/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/ru/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/ru/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/ru/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/ru/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/ru/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-105/#misc) -->
+* [Пошаговое воспроизведение в Recorder](/ru/blog/new-in-devtools-105/#recorder)
+* [Поддержка события mouse over во вкладке Recorder](/ru/blog/new-in-devtools-105/#recorder-hover)
+* [Самое крупное существенное отображение (LCP) во вкладке Performance Insights](/ru/blog/new-in-devtools-105/#lcp)
+* [Определение миганий текста (FOIT, FOUT) как потенциальных первопричин сдвигов раскладки](/ru/blog/new-in-devtools-105/#foit-fout)
+* [Обработчик протоколов в панели Манифест](/ru/blog/new-in-devtools-105/#manifest)
+* [Значок верхнего слоя во вкладке Элементы](/ru/blog/new-in-devtools-105/#top-layer)
+* [Прикрепление сведений для отладки Wasm во время исполнения](/ru/blog/new-in-devtools-105/#wasm)
+* [Поддержка редактирования во время отладки](/ru/blog/new-in-devtools-105/#live-edit)
+* [Отображение и редактирование директивы @scope в панели Стили](/ru/blog/new-in-devtools-105/#scope)
+* [Улучшения карты источников](/ru/blog/new-in-devtools-105/#sourcemaps)
+* [Другие важные моменты](/ru/blog/new-in-devtools-105/#misc)
 
 
 ### Chrome 104 {: #chrome104 }
