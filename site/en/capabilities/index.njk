@@ -4,11 +4,31 @@ title: 'Capabilities'
 description: 'Enabling the most amazing apps on the web.'
 sections:
   intro:
-    - url: https://fugu-tracker.web.app
-      title: Fugu API Tracker
-      description: Get an overview of all the APIs we work on in the context of Project Fugu. Learn about the status of each proposal and where it is in the process.
+    - url: https://www.chromium.org/teams/web-capabilities-fugu/
+      title: 'What is Project Fugu?'
+      description: "Project Fugu is an effort to close gaps in the web's capabilities enabling new classes of applications to run on the web."
+      image: '/images/fugu.png'
+    - url: https://www.youtube.com/watch?v=GSiUzuB-PoI
+      title: Why is Project Fugu important?
+      description: "To close the capability gap between the web and platform-specific apps to provide a solid foundation for modern applications delivered on the web."
+    - url: https://goo.gle/fugu-status
+      title: Where are we on our journey?
+      description: "Project Fugu is a work in progress. We are currently working on a number of exciting capabilities."
+  links:
     - url: /blog/fugu-showcase/
-    - url: /blog/fugu-status/
+    - url: https://web.dev/ps-on-the-web/
+      title: Photoshop's journey to the web
+      description: The idea of running software as complex as Photoshop directly in the browser would have been hard to imagine just a few years ago. However, by using various new web technologies, Adobe has now brought a public beta of Photoshop to the web.
+  case_studies:
+    - url: https://web.dev/mishipay/
+      title: MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing
+      description: Learn how switching to PWA helped MishiPay's business.
+    - url: https://web.dev/kapwing/
+      title: "Kapwing: Powerful video editing for the web"
+      description: Creators can now edit high-quality video content on the web with Kapwing, thanks to powerful APIs (like IndexedDB and WebCodecs) and performance tools.
+    - url: https://web.dev/deprecating-excalidraw-electron/
+      title: Deprecating Excalidraw Electron in favor of the web version
+      description: Learn why the Excalidraw project decided to deprecate their Electron wrapper in favor of the web version.
   hardware:
     - url: https://web.dev/hid/
       title: Connecting to uncommon HID devices
@@ -68,7 +88,7 @@ sections:
   'About capabilities, aka. Project Fugu',
   'Learn about the cross-company effort around enabling the most amazing apps on the web.',
   sections.intro,
-  'blue',
+  'green',
   'top-3',
   true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
@@ -80,16 +100,46 @@ sections:
 }}
 
 {{ landingSection(
+  'What do developers build with Fugu APIs?',
+  'See what people have built: browse the Project Fugu API Showcase and read about Photoshop on the web!',
+  sections.links,
+  'blue',
+  'top-2',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg',
+  'Fugu fish swarm.',
+  964,
+  289,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Case studies',
+  'Learn how leading developers have used Fugu APIs to build innovative web experiences.',
+  sections.case_studies,
+  'red',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/hj30wCIWiTvQSxNI9g5i.svg',
+  'Application icon.',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
   'Hardware APIs',
-  'Learn about the hardware APIs we work on in the context of Project Fugu.',
+  'Learn about the hardware APIs we work on in the context of Project Fugu that allow you to access physical devices to the web.',
   sections.hardware,
   'yellow',
   'left',
   true,
-  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/cqI5jaJQwsvjeDXsNDJ8.svg',
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/tW1JUm47jbq27jpXon37.jpg',
   'Conection icon',
-  150,
-  150,
+  180,
+  600,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
   )
 }}
@@ -98,7 +148,7 @@ sections:
   'Fugu talk videos',
   'Watch some talks about Project Fugu APIs to get a better understanding of the kind of apps we want to enable.',
   sections.videos,
-  'green',
+  'blue',
   'right',
   true,
   'image/8WbTDNrhLsU0El80frMBGE4eMCD3/j5ZqHuEoD6OlA5gRK3IF.svg',
