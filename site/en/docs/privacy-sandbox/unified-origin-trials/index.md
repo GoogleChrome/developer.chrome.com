@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Privacy Sandbox relevance and measurement unified origin trials'
+title: 'Privacy Sandbox relevance and measurement unified origin trial'
 subhead: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
@@ -101,7 +101,7 @@ Shared Storage added to the origin trial in only M105+ Canary, Dev, and Beta for
 
 ### Previous updates
 
-Check out previous updates on origin trials.
+Check out previous updates on the origin trial.
 {% endDetailsSummary %}
 
 #### May 2022
@@ -229,9 +229,11 @@ at any time.
 For every page where you want to use the origin trial, you will need to include a trial token with that specific page's HTML or response.
 
 Use a `<meta>` tag in the top-level page's `<head>`: 
+	
 `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`. 
 
 Alternatively, include the following HTTP header in the top-level page response: 
+
 `Origin-Trial: TOKEN_GOES_HERE`  
 
 {% Aside %}
@@ -334,7 +336,7 @@ For a user to be eligible for the trial, they must:
 
 For a user to be eligible for the trial, they must also:
 
--  have the **Privacy Sandbox trials enabled** via Settings > Security and
+-  have the **Privacy Sandbox trial enabled** via Settings > Security and
     privacy > Privacy Sandbox, also accessible via
     `chrome://settings/privacySandbox`.
 -  have **third-party cookies enabled** via Settings > Security and privacy > Cookies and other site data set to either "Allow all cookies" or "Block
