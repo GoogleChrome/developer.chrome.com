@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Privacy Sandbox relevance and measurement unified origin trial'
+title: 'Relevance and measurement unified origin trial'
 subhead: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
