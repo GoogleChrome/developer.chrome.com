@@ -83,7 +83,11 @@ This is all you need.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/9v0oPLhQUYkitHgE2Ns0.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/9v0oPLhQUYkitHgE2Ns0.mp4"
+  }
+%}
 
 But, what is happening here?
 
@@ -106,7 +110,11 @@ What else do you get with pop-up? Let's take the example further. Consider this 
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aZtRNylbFkLDkLr3PiLs.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aZtRNylbFkLDkLr3PiLs.mp4"
+  }
+%}
 
 That floating action button has fixed positioning with a high `z-index`.
 
@@ -146,7 +154,11 @@ Let's turn our attention to styling the pop-up. By default, a pop-up has a fixed
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/u2i7C6POVKE67wdjoZBK.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/u2i7C6POVKE67wdjoZBK.mp4"
+  }
+%}
 
 If you want a pop-up to be shown on load, you can use the `defaultopen` attribute.
 
@@ -162,7 +174,11 @@ If you want a pop-up to be shown on load, you can use the `defaultopen` attribut
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IuseCtWYY3PzX1KJJRaZ.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IuseCtWYY3PzX1KJJRaZ.mp4"
+  }
+%}
 
 Regardless of how you promote your pop-up, once you promote a pop-up to the top layer, you may need to lay it out or position it. You can't target the top layer and do something like
 
@@ -203,7 +219,11 @@ You could also use your root pop-up element as a container that fills the viewpo
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/xEH6wMbhZyvwUXE4y06l.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/xEH6wMbhZyvwUXE4y06l.mp4"
+  }
+%}
 
 If you tried that demo out, you'll notice that the pop-up is now transitioning in and out. You can transition pop-ups in and out by using the `:open` pseudo-selector. The `:open` pseudo-selector matches pop-ups that are showing (and therefore in the top layer).
 
@@ -259,7 +279,11 @@ Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NbC6trJxnq3VeCetns8x.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NbC6trJxnq3VeCetns8x.mp4"
+  }
+%}
 
 
 {% Aside %}
@@ -318,7 +342,11 @@ Try out this demo where you can hover the target with the window set to `0.5s`.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/OrK7xnTNTnVgxDhyMdlL.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/OrK7xnTNTnVgxDhyMdlL.mp4"
+  }
+%}
 
 ---
 
@@ -350,7 +378,11 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/fNTiTFOzvNCnyrndJXPf.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/fNTiTFOzvNCnyrndJXPf.mp4"
+  }
+%}
 
 `[popup=hint]`
 - Singleton. Can only show one pop-up of type hint at a time. Other pop-up types remain open. Check out the demo below. Even though there are ancestral pop-ups, they’re dismissed when a different pop-up gets shown.
@@ -365,7 +397,11 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JOhSvvJKY3J0YYrQHNq0.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JOhSvvJKY3J0YYrQHNq0.mp4"
+  }
+%}
 
 `[popup=manual]`
 - Doesn't close other pop-ups.
@@ -380,7 +416,11 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/tm4gE8y7VggCVZNKVlHb.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/tm4gE8y7VggCVZNKVlHb.mp4"
+  }
+%}
 
 ## JavaScript API
 
@@ -438,7 +478,11 @@ This demo has pop-ups with audible pops, so we'll need JavaScript to play the au
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ktev8qjvfHh7OftQ2kY9.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ktev8qjvfHh7OftQ2kY9.mp4"
+  }
+%}
 
 ## Accessibility
 
@@ -455,7 +499,11 @@ For focus management, you can use the autofocus attribute to move focus to an el
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/PFRetrvfpKIzamADSxGN.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/PFRetrvfpKIzamADSxGN.mp4"
+  }
+%}
 
 You'll need to open the "[full screen version](https://codepen.io/web-dot-dev/full/GRxLjxM)" of this demo to see it work.
 
@@ -479,7 +527,11 @@ This demo uses the Anchoring API in its current state. The position of the boat 
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IDGKq82jfm205AB3gAhR.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IDGKq82jfm205AB3gAhR.mp4"
+  }
+%}
 
 Here's a snippet of the CSS making this demo work. No JavaScript required.
 
@@ -526,7 +578,11 @@ This demo shows a "Copy to clipboard" notification.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/mAzX3rXnYGQcEZ8pMJ0a.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/mAzX3rXnYGQcEZ8pMJ0a.mp4"
+  }
+%}
 
 ### Toasts
 
@@ -545,7 +601,11 @@ This demo uses the top layer to show toast style notifications.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NAWYyeoxfx8ZYaP6Ra19.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NAWYyeoxfx8ZYaP6Ra19.mp4"
+  }
+%}
 
 ### Nested menu
 
@@ -577,7 +637,11 @@ Remember, because this demo uses `autofocus`, it will need to be opened in "[ful
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/37R1rw2Q36JYPHDzeg0u.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/37R1rw2Q36JYPHDzeg0u.mp4"
+  }
+%}
 
 ### Media pop-up
 
@@ -595,7 +659,11 @@ This demo shows how you might pop media up.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/00J6agKtb6F0hQHqzT1h.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/00J6agKtb6F0hQHqzT1h.mp4"
+  }
+%}
 
 ### Wiki style pop-ups
 
@@ -613,7 +681,11 @@ This demos shows how you might create inline content tooltips that contain media
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/a02RVUTQIzTt8IzAFQU5.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/a02RVUTQIzTt8IzAFQU5.mp4"
+  }
+%}
 
 
 ### Navigation Drawer
@@ -631,7 +703,11 @@ This demo creates a navigation drawer using a pop-up.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Jt1a8npf9LSo6SGSvhgv.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Jt1a8npf9LSo6SGSvhgv.mp4"
+  }
+%}
 
 ### Managing backdrops
 
@@ -648,7 +724,11 @@ This demo shows how you might manage backdrops for mutliple pop-ups where you on
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ftbCjSLOjAJ669qJK9ur.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ftbCjSLOjAJ669qJK9ur.mp4"
+  }
+%}
 
 ### Custom cursor pop-up
 
@@ -665,7 +745,11 @@ This demo shows how to use `popup` to promote a `canvas` to the top layer and us
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/puMGGAKrwQkbpeBxOj4d.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/puMGGAKrwQkbpeBxOj4d.mp4"
+  }
+%}
 
 ### Actionsheet pop-up
 
@@ -684,7 +768,11 @@ This demo shows how you could use a pop-up as an actionsheet.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Aj5p20t8eUdBq0LpAUzl.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Aj5p20t8eUdBq0LpAUzl.mp4"
+  }
+%}
 
 ### Keyboard activated pop-up
 
@@ -704,7 +792,11 @@ This demo shows how you could use pop-up for command palette style UI.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/YZYZwDE0PQB9Qte16F7R.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/YZYZwDE0PQB9Qte16F7R.mp4"
+  }
+%}
 
 ### Timed pop-up
 
@@ -721,7 +813,11 @@ This demo shows an inactivity pop-up after four seconds. A UI pattern often used
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/64Y6icmuQmhGebvG4UtF.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/64Y6icmuQmhGebvG4UtF.mp4"
+  }
+%}
 
 ### Screensaver
 
@@ -738,7 +834,11 @@ Similar to the previous demo, you could add a dash of whimsy to your site and ad
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/p0s3yxsRWfIiSM33IBuG.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/p0s3yxsRWfIiSM33IBuG.mp4"
+  }
+%}
 
 ### Caret follow
 
@@ -757,7 +857,11 @@ This demo shows how you could have a pop-up follow an input caret.
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/7OiDVe9iMuc3b9hmihWQ.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/7OiDVe9iMuc3b9hmihWQ.mp4"
+  }
+%}
 
 ### Floating action button menu
 
@@ -778,7 +882,11 @@ This demo shows how you could use pop-up to implement a floating action button m
   }
 %}
 
-{% Video controls="true" src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aHLaTobx48u08uA5NU4E.mp4" %}
+{% Video {
+    controls="true",
+    src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aHLaTobx48u08uA5NU4E.mp4"
+  }
+%}
 
 ## That's it!
 
