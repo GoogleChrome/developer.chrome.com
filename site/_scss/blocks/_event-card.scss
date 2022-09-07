@@ -1,0 +1,29 @@
+.event-card {
+  background: get-color('grey-50');
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  figure {
+    aspect-ratio: 1/1;
+    width: 225px;
+  }
+
+  .type--h5 {
+    color: #{get-color('black')};
+  }
+
+  &__meta {
+    svg {
+      fill: get-color('blue-500');
+      height: auto;
+      margin-right: get-size(100);
+      width: 22px;
+    }
+  }
+
+  .material-button {
+    align-self: flex-start;
+  }
+}
