@@ -31,7 +31,7 @@ The built-in pop-up API has a [variety of goals](https://open-ui.org/components/
 
 You can check out the full spec for pop-ups on the [OpenUI site](https://open-ui.org/components/popup.research.explainer).
 
-## Browser Compatibility
+## Browser compatibility
 
 Where can you use the built-in pop-up API now? It's supported in Chrome Canary behind the "Experimental web platform features" flag at the time of writing.
 
@@ -47,7 +47,7 @@ You can check for pop-up support with:
 const supported = Element.prototype.hasOwnProperty("popUp");
 ```
 
-## Current Solutions
+## Current solutions
 
 What can you currently do to promote your content above everything else? If it's supported in your browser, you could use the [HTML Dialog element](https://developer.mozilla.org/docs/Web/HTML/Element/dialog). You'd need to use it in "Modal" form. And this requires JavaScript to use.
 
@@ -55,7 +55,7 @@ What can you currently do to promote your content above everything else? If it's
 Dialog.showModal();
 ```
 
-There are some accessibility considerations. It's advised to use "[a11y-dialog](https://a11y-dialog.netlify.app/)" for example if catering for users of Safari below version 15.4. 
+There are some accessibility considerations. It's advised to use [a11y-dialog](https://a11y-dialog.netlify.app/) for example if catering for users of Safari below version 15.4. 
 
 You could also use one of the many pop-up, alert, or tooltip based libraries out there. Many of these tend to work in a similar way.
 
@@ -66,7 +66,7 @@ You could also use one of the many pop-up, alert, or tooltip based libraries out
 
 This requires an extra dependency and more decisions for developers. It also requires research to find an offering that provides everything you need. The pop-up API, although named pop-up, aims to cater for many scenarios including tooltips. The goal being to cover all those common scenarios, saving developers from having to make yet another decision so they can focus on building their experiences.
 
-## Your first Pop-Up
+## Your first pop-up
 
 This is all you need.
 
@@ -83,6 +83,8 @@ This is all you need.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/9v0oPLhQUYkitHgE2Ns0.mp4" %}
+
 But, what is happening here?
 
 - You don’t have to put the pop-up element into a container or anything—it's hidden by default.
@@ -94,7 +96,7 @@ But, what is happening here?
 
 - You get "Light Dismiss" out of the box. By that, we mean you can close the pop-up with a close signal, such as clicking outside the pop-up, keyboard-navigating to another element, or pressing the **Esc** key. Open it up again and try it out!
 
-What else do you get with pop-up? Let's take our example further. Consider this demo where we have some content on the page.
+What else do you get with pop-up? Let's take the example further. Consider this demo with some content on the page.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -103,6 +105,8 @@ What else do you get with pop-up? Let's take our example further. Consider this 
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aZtRNylbFkLDkLr3PiLs.mp4" %}
 
 That floating action button has fixed positioning with a high `z-index`.
 
@@ -114,12 +118,12 @@ That floating action button has fixed positioning with a high `z-index`.
 ```
 
 {% Aside %}
-The floating action button could also be a pop-up.
+The floating action button could also be a pop-up. But, here we are showing off the power of having access to the top layer. More on floating action buttons as pop-ups later.
 {% endAside %}
 
-Our pop-up content is nested in the DOM, but when you open the pop-up, it gets promoted above that fixed position element. We didn’t need to set any styles.
+The pop-up content is nested in the DOM, but when you open the pop-up, it gets promoted above that fixed position element. You don’t need to set any styles.
 
-You may also notice that our pop-up now has a `::backdrop` pseudo-element. All elements that are in the top layer get a styleable `::backdrop` pseudo-element. For our example, we've set a reduced alpha background color and a backdrop filter, which  blurs out the underlying content.
+You may also notice that the pop-up now has a `::backdrop` pseudo-element. All elements that are in the top layer get a styleable `::backdrop` pseudo-element. This example  styles `::backdrop` with a reduced alpha background color and a backdrop filter, which  blurs out the underlying content.
 
 {% Aside %}
 By default, the `::backdrop` on a pop-up has `pointer-events: none` set.
@@ -142,6 +146,8 @@ Let's turn our attention to styling the pop-up. By default, a pop-up has a fixed
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/u2i7C6POVKE67wdjoZBK.mp4" %}
+
 If you want a pop-up to be shown on load, you can use the `defaultopen` attribute.
 
 ```html
@@ -155,6 +161,8 @@ If you want a pop-up to be shown on load, you can use the `defaultopen` attribut
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IuseCtWYY3PzX1KJJRaZ.mp4" %}
 
 Regardless of how you promote your pop-up, once you promote a pop-up to the top layer, you may need to lay it out or position it. You can't target the top layer and do something like
 
@@ -195,6 +203,8 @@ You could also use your root pop-up element as a container that fills the viewpo
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/xEH6wMbhZyvwUXE4y06l.mp4" %}
+
 If you tried that demo out, you'll notice that the pop-up is now transitioning in and out. You can transition pop-ups in and out by using the `:open` pseudo-selector. The `:open` pseudo-selector matches pop-ups that are showing (and therefore in the top layer).
 
 {% Aside %}
@@ -202,7 +212,7 @@ To check whether an element is open with JavaScript, use:
 `element.matches(':open')`. Note that this may change as the spec evolves.
 {% endAside %}
 
-In this example, we use a custom property to drive the transition. And you can apply a transition to the pop-up’s `::backdrop` too.
+This example uses a custom property to drive the transition. And you can apply a transition to the pop-up’s `::backdrop` too.
 
 ```css
 [popup] {
@@ -232,7 +242,7 @@ A tip here is to group transitions and animations under a media query for motion
 }
 ```
 
-Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up. To dismiss it, we're using "Light dismiss". But, you also get `popupshowtarget` and `popuphidetarget` attributes you can use. Let's add a button to a pop-up that hides it and change our toggle button to use `popupshowtarget`.
+Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up. To dismiss it, we're using "Light dismiss". But, you also get `popupshowtarget` and `popuphidetarget` attributes you can use. Let's add a button to a pop-up that hides it and change the toggle button to use `popupshowtarget`.
 
 ```html
 <div id="code-pop-up" popup>
@@ -249,20 +259,31 @@ Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NbC6trJxnq3VeCetns8x.mp4" %}
+
 
 {% Aside %}
 You may also notice that the transition in and out has changed. It's now powered by separate animations to enter from one side and exit on the other. This means you can do things like enter on one axis and exit on another. Make sure you set `animation-fill-mode` if your `::backdrop` and `[popup]` timings are different.
 {% endAside %}
 
-As mentioned earlier, the pop-up API covers more than only our historical notion of pop-ups. You could build for all types of scenarios such as notifications, menus, tooltips etc. 
+As mentioned earlier, the pop-up API covers more than only our historical notion of pop-ups. You could build for all types of scenarios such as notifications, menus, tooltips etc.
 
 Some of those scenarios need different interaction patterns. Interactions like hover. The use of a `popuphovertarget` attribute was experimented with but isn't currently implemented.
+{% Aside %}
+You can get involved with the discussion about hover interactions for pop-ups [here](https://github.com/openui/open-ui/issues/526).
+{% endAside %}
+
 
 ```html
 <div popuphovertarget="hover-pop-up">Hover for Code</div>
 ```
 
 The idea being that you hover an element to show the target. This behavior could get configured via CSS properties. These CSS properties would define the window of time for hovering on and off an element that a pop-up reacts to. The default behavior experimented with had a pop-up show after an explicit `0.5s` of `:hover`. Then it would need a light dismiss or the opening of another pop-up to dismiss (More on this coming up). This was due to the pop-up hide duration being set to `Infinity`.
+
+{% Aside ‘warning' %}
+The use of `popuphovertarget` is something __not__ standardized or currently implemented.
+{% endAside %}
+
 
 In the meantime, you could use JavaScript to polyfill that functionality.
 
@@ -297,9 +318,11 @@ Try out this demo where you can hover the target with the window set to `0.5s`.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/OrK7xnTNTnVgxDhyMdlL.mp4" %}
+
 ---
 
-Before we go through some common use cases and examples, let’s go over a few things.
+Before exploring some common use cases and examples, let’s go over a few things.
 
 ---
 
@@ -327,6 +350,8 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/fNTiTFOzvNCnyrndJXPf.mp4" %}
+
 `[popup=hint]`
 - Singleton. Can only show one pop-up of type hint at a time. Other pop-up types remain open. Check out the demo below. Even though there are ancestral pop-ups, they’re dismissed when a different pop-up gets shown.
 - Light dismiss.
@@ -340,6 +365,8 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JOhSvvJKY3J0YYrQHNq0.mp4" %}
+
 `[popup=manual]`
 - Doesn't close other pop-ups.
 - No light dismiss.
@@ -352,6 +379,8 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/tm4gE8y7VggCVZNKVlHb.mp4" %}
 
 ## JavaScript API
 
@@ -409,6 +438,8 @@ This demo has pop-ups with audible pops, so we'll need JavaScript to play the au
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ktev8qjvfHh7OftQ2kY9.mp4" %}
+
 ## Accessibility
 
 Accessibility is at the forefront of thinking with the pop-up API. Accessibility mappings associate the pop-up with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popuptoggletarget`.
@@ -424,19 +455,21 @@ For focus management, you can use the autofocus attribute to move focus to an el
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/PFRetrvfpKIzamADSxGN.mp4" %}
+
 You'll need to open the "[full screen version](https://codepen.io/web-dot-dev/full/GRxLjxM)" of this demo to see it work.
 
-In this demo, the focussed element gets a green outline. Try tabbing around the interface with your keyboard. Note where the focus gets returned when a pop-up gets closed. You may also notice that if you tabbed about, the pop-up closed. That's by design. Although pop-ups have focus management, they don't trap focus. And keyboard navigation identifies as a close signal when the focus moves out of the pop-up.
+In this demo, the focussed element gets a green outline. Try tabbing around the interface with your keyboard. Note where the focus gets returned when a pop-up gets closed. You may also notice that if you tabbed about, the pop-up closed. That's by design. Although pop-ups have focus management, they don't trap focus. And keyboard navigation identifies a close signal when the focus moves out of the pop-up.
 
 
-## Anchoring (WIP)
+## Anchoring (under development)
 
 When it comes to pop-ups, a tricky pattern to cater for is anchoring the element to its trigger. For example, if a tooltip is set to show above its trigger but the document gets scrolled. That tooltip could get cut off by the viewport. There are current JavaScript offerings to deal with this such as "[Floating UI](https://floating-ui.com/)". They will reposition the tooltip for you to stop this happening and rely on a desired position order.
 
 
 But, we want you to be able to define this with your styles. There is a companion API under development alongside the pop-up API to tackle this. The "[CSS Anchor Positioning](https://tabatkins.github.io/specs/css-anchor-position)" API will allow you to tether elements to other elements, and it will do this in a manner that re-positions elements so that they aren't cut off by the viewport.
 
-This demo uses the Anchoring API in it's current state. The position of the boat responds to the anchor's position is in the viewport.
+This demo uses the Anchoring API in its current state. The position of the boat responds to the anchor's position in the viewport.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -445,6 +478,8 @@ This demo uses the Anchoring API in it's current state. The position of the boat
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IDGKq82jfm205AB3gAhR.mp4" %}
 
 Here's a snippet of the CSS making this demo work. No JavaScript required.
 
@@ -491,6 +526,8 @@ This demo shows a "Copy to clipboard" notification.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/mAzX3rXnYGQcEZ8pMJ0a.mp4" %}
+
 ### Toasts
 
 This demo uses the top layer to show toast style notifications.
@@ -507,6 +544,8 @@ This demo uses the top layer to show toast style notifications.
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/NAWYyeoxfx8ZYaP6Ra19.mp4" %}
 
 ### Nested menu
 
@@ -538,6 +577,8 @@ Remember, because this demo uses `autofocus`, it will need to be opened in "[ful
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/37R1rw2Q36JYPHDzeg0u.mp4" %}
+
 ### Media pop-up
 
 This demo shows how you might pop media up. 
@@ -553,6 +594,8 @@ This demo shows how you might pop media up.
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/00J6agKtb6F0hQHqzT1h.mp4" %}
 
 ### Wiki style pop-ups
 
@@ -570,6 +613,8 @@ This demos shows how you might create inline content tooltips that contain media
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/a02RVUTQIzTt8IzAFQU5.mp4" %}
+
 
 ### Navigation Drawer
 
@@ -586,6 +631,8 @@ This demo creates a navigation drawer using a pop-up.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Jt1a8npf9LSo6SGSvhgv.mp4" %}
+
 ### Managing backdrops
 
 This demo shows how you might manage backdrops for mutliple pop-ups where you only want one `::backdrop` to be visible.
@@ -601,9 +648,11 @@ This demo shows how you might manage backdrops for mutliple pop-ups where you on
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/ftbCjSLOjAJ669qJK9ur.mp4" %}
+
 ### Custom cursor pop-up
 
-This demo shows how you could you use `popup` to promote a `canvas` to the top layer and use it to show a custom cursor.
+This demo shows how to use `popup` to promote a `canvas` to the top layer and use it to show a custom cursor.
 
 - Promote `canvas` to top layer with `defaultopen` and `[popup=manual]`.
 - When other pop-ups are opened, hide and show the `canvas` pop-up to make sure it's on top.
@@ -616,9 +665,11 @@ This demo shows how you could you use `popup` to promote a `canvas` to the top l
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/puMGGAKrwQkbpeBxOj4d.mp4" %}
+
 ### Actionsheet pop-up
 
-This demos shows how you could you a pop-up as an actionsheet.
+This demo shows how you could use a pop-up as an actionsheet.
 
 - Have the pop-up shown by default overriding `display`.
 - Actionsheet is opened with the pop-up trigger.
@@ -633,11 +684,13 @@ This demos shows how you could you a pop-up as an actionsheet.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/Aj5p20t8eUdBq0LpAUzl.mp4" %}
+
 ### Keyboard activated pop-up
 
 This demo shows how you could use pop-up for command palette style UI.
 
-- Use `cmd + j` to show the pop-up.
+- Use **cmd + j** to show the pop-up.
 - The `input` is focused with `autofocus`.
 - The combo box is a second `pop-up` positioned under the main input.
 - Light dismiss closes the palette if the dropdown is not present.
@@ -651,11 +704,13 @@ This demo shows how you could use pop-up for command palette style UI.
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/YZYZwDE0PQB9Qte16F7R.mp4" %}
+
 ### Timed pop-up
 
-This demo shows an inactivity pop-up after 4 seconds. A UI pattern often used in apps that hold secure information about a user to show a logout modal.
+This demo shows an inactivity pop-up after four seconds. A UI pattern often used in apps that hold secure information about a user to show a logout modal.
 
-- Use JavaScript to show pop-up after period of inactivity.
+- Use JavaScript to show the pop-up after a period of inactivity.
 - On pop-up show, reset the timer.
 
 {% Codepen {
@@ -666,11 +721,13 @@ This demo shows an inactivity pop-up after 4 seconds. A UI pattern often used in
   }
 %}
 
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/64Y6icmuQmhGebvG4UtF.mp4" %}
+
 ### Screensaver
 
 Similar to the previous demo, you could add a dash of whimsy to your site and add a screensaver.
 
-- Use JavaScript to show pop-up after a period of inactivity.
+- Use JavaScript to show the pop-up after a period of inactivity.
 - Light dismiss to hide and reset the timer.
 
 {% Codepen {
@@ -680,6 +737,8 @@ Similar to the previous demo, you could add a dash of whimsy to your site and ad
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/p0s3yxsRWfIiSM33IBuG.mp4" %}
 
 ### Caret follow
 
@@ -697,6 +756,8 @@ This demo shows how you could have a pop-up follow an input caret.
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/7OiDVe9iMuc3b9hmihWQ.mp4" %}
 
 ### Floating action button menu
 
@@ -716,6 +777,8 @@ This demo shows how you could use pop-up to implement a floating action button m
     tab: 'result'
   }
 %}
+
+{% Video src="video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/aHLaTobx48u08uA5NU4E.mp4" %}
 
 ## That's it!
 
