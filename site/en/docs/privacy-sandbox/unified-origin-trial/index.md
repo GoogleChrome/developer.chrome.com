@@ -235,7 +235,7 @@ Use a `<meta>` tag in the top-level page's `<head>`:
 <meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
 ```
 
-Alternatively, include the following HTTP header in the top-level page response: 
+Alternatively, include the following HTTP header in the page response: 
 
 ```http
 Origin-Trial: TOKEN_GOES_HERE
