@@ -79,6 +79,13 @@ sections:
     - url: https://www.youtube.com/watch?v=kcvfyQh6J-0
       title: "SVGcode: A PWA to convert raster images to SVG vector graphics"
       description: SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format. It uses the File System Access API, the Async Clipboard API, and the File Handling API, and also makes use of Window Controls Overlay customization.
+  resources:
+    - url: /docs/web-platform/
+      title: Web Platform
+      description: Documentation for Web Platform APIs. Some of them are currently in an experimental status in Chrome. For example, origin and developer trials, or features only found in Canary. The current status of each API is detailed in the documentation.
+    - url: https://bit.ly/new-fugu-request
+      title: Request a new capability
+      description: If you have an idea for a new web capability, please let us know. We are always looking for new ideas to improve the web platform.
 ---
 
 {% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
@@ -91,13 +98,13 @@ sections:
 
 {{ heroCardWide(
   'Capabilities',
-  "Enabling the most amazing apps on the web.",
-  "All capabilities",
-  "/tags/capabilities/",
-  "",
-  "",
-  "red",
-  "image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg"
+  'Enabling the most amazing apps on the web.',
+  'All capabilities',
+  '/tags/capabilities/',
+  '',
+  '',
+  'red',
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg'
   )
 }}
 
@@ -109,7 +116,7 @@ sections:
   'top-3',
   true,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
-  'Waving hand icon',
+  '',
   333,
   165,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
@@ -139,7 +146,7 @@ sections:
   'top-3',
   true,
   'image/8WbTDNrhLsU0El80frMBGE4eMCD3/hj30wCIWiTvQSxNI9g5i.svg',
-  'Application icon.',
+  '',
   150,
   150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
@@ -154,7 +161,7 @@ sections:
   'top-3',
   true,
   'image/8WbTDNrhLsU0El80frMBGE4eMCD3/luZO0VUIF4eGhPr4KfIb.svg',
-  'Weight lifter.',
+  '',
   150,
   150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
@@ -163,7 +170,7 @@ sections:
 
 {{ landingSection(
   'Hardware APIs',
-  'Learn about the hardware APIs we work on in the context of Project Fugu that allow you to access physical devices to the web.',
+  'Learn about the hardware APIs we work on in the context of Project Fugu that allow you to access physical devices from the web.',
   sections.hardware,
   'yellow',
   'left',
@@ -184,9 +191,32 @@ sections:
   'right',
   true,
   'image/8WbTDNrhLsU0El80frMBGE4eMCD3/j5ZqHuEoD6OlA5gRK3IF.svg',
-  'Video icon',
+  '',
   150,
   150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
   )
 }}
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {% for item in sections.resources %}
+    <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+      <h2 class="type--h4">
+        <a class="surface display-inline-flex color-text" href="{{item.url}}">
+          {{ item.title }}
+        </a>
+      </h2>
+      <p class="flex-1">{{ item.description }}</p>
+    </div>
+  {% endfor %}
+  {{ landingDeco(
+    'Additional resources',
+    'Other noteworthy links.',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    '',
+     50,
+     50,
+     'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+     ) }}
+</div>
