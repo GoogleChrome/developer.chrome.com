@@ -8,11 +8,11 @@ date: 2022-08-20
 ---
 
 
-Welcome to the Getting Started Guides! The purpose of this page is to describe each article and how you can contribute to this collection.
+Welcome to the Getting Started Guides! The purpose of this page is to describe each article and how to share feedback about this collection.
 
-## Begin your journey
+## Begin your journey {: #begin }
 
-The following articles will provide guidance as you start your Chrome extension development journey:
+The following articles will provide guidance as you start your extension development journey:
 
 ### Extension development concepts {: #concepts }
 
@@ -29,34 +29,38 @@ structure, and using Typescript.
 ### Beginner tutorials {: #tutorials }
 
 The following step-by-step tutorials cover some common Chrome extension use cases. In addition,
-using these extensions will improve your experience with the extension documentation.
+these extensions improve your experience while browsing the extension and Chrome Web store
+documentation pages.
 
 [Reading time][tut-reading-time]
-: It’s nice to know how much time we need to spend reading an article. Reading time teaches you how
-to insert an element containing the estimated reading time on every page.
+: It’s nice to know how much time we need to spend reading an article. Learn how to insert an
+element with the estimated reading time on Chrome extension and Chrome Web store documentation
+pages.
 
 [Focus Mode][tut-focus-mode]
 : Removing extra clutter from a page allows our minds to concentrate on the most relevant
 information. Focus Mode changes the style of the page to help you better digest the content of
-extension documentation pages.
+extension and Chrome Web store documentation pages.
 
 [Tabs Manager][tut-tabs-manager]
-: Do you have multiple tabs on different windows? Tabs Manager uses an extension popup to display a
-list of all the open extension documentation pages. It can also gather them all into one neat group. 
+: While researching extension development you can end up with many tabs across multiple windows.
+Learn how to organize your Chrome extension and Chrome Web store documentation tabs with this Tabs
+Manager.
 
 Each tutorial includes the following sections:
 
 - The task the extension will perform. 
 - The lessons that will be covered.
 - What you need to know before starting.
-- Step-by-step instructions to build the extension. 
+- Step-by-step instructions on how to build the extension. 
 - How to load and test the extension.
 
-In addition, If you are up for a challenge, we include a section with ideas on how to customize or add other features to your extension.
+In addition, if you are up for a challenge, we include a section with ideas on how to customize or
+add features to your extension.
 
 ## Share your feedback {: #share-feedback}
 
-We are excited to hear from you! There are two ways you can contribute to this collection:
+We are excited to hear from you! There are two ways you can contribute to the Getting Started guides:
 
 ### Improve the tutorials {: #improve-tut}
 
@@ -66,10 +70,10 @@ If you see something wrong or unclear, please submit an issue in our [Github rep
 
 If you have an idea for another beginner tutorial, you can let us know by following these steps:
 - Create an issue on the Github repo.
-- Choose “New extension guide request”.
+- Choose “Request extension tutorial”.
 - Fill out and submit the form.
 
-We hope the new Getting Started Guides help you feel confident and supported as you embark on your extension development journey.
+We hope the new Getting Started guides help you feel confident and supported as you embark on your extension development journey.
 
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
