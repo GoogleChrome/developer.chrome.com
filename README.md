@@ -119,7 +119,7 @@ run `npm run production && npm start`.
 ### .env variables
 
 Some of the necessary env variables are stored in Cloud Secret manager.
-To fetch needed variables, make sure you have sufficient priviledges, and run:
+To fetch needed variables, make sure you have sufficient privileges, and run:
 
 ```bash
 gcloud auth application-default login
