@@ -229,7 +229,7 @@ at any time.
 
 For every page where you want to use the origin trial, you will need to include a trial token with that specific page's HTML or response.
 
-Use a `<meta>` tag in the top-level page's `<head>`: 
+Use a `<meta>` tag in the page's `<head>` section: 
 
 ```html
 <meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
