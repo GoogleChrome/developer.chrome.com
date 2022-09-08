@@ -735,11 +735,11 @@
   "sbc": {
     "country": "US",
     "github": "sbc100"
-   },
-   "ericsl": {
-     "country": "DE",
-     "github": "ericsl"
-   },
+  },
+  "ericsl": {
+    "country": "DE",
+    "github": "ericsl"
+  },
   "rkochman": {
     "country": "US",
     "twitter": "rkochman",
@@ -847,7 +847,7 @@
     "country": "US"
   },
   "leenasohoni": {
-    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
+    "image": "image/lKgJZH2YLpV46uAKAtfp4jfvXhx2/oALg7ACRUlSyXj7xGbOR.jpeg",
     "twitter": "leena_sohoni",
     "country": "US"
   },
@@ -881,5 +881,4 @@
     "linkedin": "https://www.linkedin.com/in/michal-pitr-a7156b127",
     "twiter": "pitrmichal"
   }
-  
 }
