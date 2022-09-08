@@ -20,6 +20,7 @@ const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
+const {languageRedirectHandler} = require('./language-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
 const healthCheckHandler = require('./health-check');
 
@@ -61,6 +62,7 @@ const cspHandler = (_req, res, next) => {
 const handlers = [
   cspHandler,
   immutableRootHandler,
+  languageRedirectHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
