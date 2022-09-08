@@ -81,7 +81,7 @@ guide for the origin trial</a>.</td>
       <td>
 <a
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
-Frames</a></td>
+frames</a></td>
       <td>
 See the FLEDGE guidance for origin trial usage.</td>
     </tr>
@@ -154,9 +154,9 @@ origin trial due to a <a href="https://bugs.chromium.org/p/chromium/issues/detai
       <td>
 <a
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
-Frames</a></td>
+frames</a></td>
       <td>
-Fenced Frames added to the origin trial. See the FLEDGE guidance
+Fenced frames added to the origin trial. See the FLEDGE guidance
 for experiment usage.</td>
     </tr>
   </tbody>
