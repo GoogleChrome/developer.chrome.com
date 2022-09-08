@@ -13,11 +13,10 @@ tags:
 
 In Chrome 92, we introduced the **Memory Inspector**, a tool for inspecting linear memory buffers. In this article, we'll discuss how we've improved the Inspector for C/C++ debugging and the technical challenges encountered along the way.
 
-Do you use C/C++ to create WebAssembly apps? Read on to learn more about the new Memory Inspector features related to C/C++.
+These are a few relevant blog posts if you are new to C/C++ debugging and the **Memory Inspector**:
 
-Interested in deep memory debugging? See [Introducing the Memory Inspector](/blog/memory-inspector/).
-
-Want an introduction to the full C/C++ debugging suite of tools? See [Debugging WASM with modern tools](/blog/wasm-debugging-2020/) and [Debugging WebAssembly Faster](/blog/faster-wasm-debugging/).
+- Interested in deep memory debugging? See [Introducing the Memory Inspector](/blog/memory-inspector/).
+- Want an introduction to the full C/C++ debugging suite of tools? See [Debugging WASM with modern tools](/blog/wasm-debugging-2020/) and [Debugging WebAssembly Faster](/blog/faster-wasm-debugging/).
 
 ## Introduction
 
