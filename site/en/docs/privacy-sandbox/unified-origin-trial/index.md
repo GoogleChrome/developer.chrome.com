@@ -3,10 +3,10 @@ layout: 'layouts/doc-post.njk'
 title: 'Relevance and measurement unified origin trial'
 subhead: >
    Run unified experiments across Attribution Reporting, FLEDGE,
-   Topics, fenced frames, and Shared Storage.
+   Topics, Fenced Frames, and Shared Storage.
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
-   Topics, fenced frames, and Shared Storage.
+   Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
 authors:
   - anusmitaray
@@ -20,7 +20,7 @@ for developers to evaluate and provide feedback on new web technologies through
 real-world testing. The
 [Privacy Sandbox Relevance and Measurement](/origintrials/#/view_trial/771241436187197441)
 origin trial provides a single trial allowing sites to run unified experiments
-across Attribution Reporting, FLEDGE, Topics, fenced frames, and Shared Storage.  
+across Attribution Reporting, FLEDGE, Topics, Fenced Frames, and Shared Storage.  
 
 Developers can sign up for this single origin trial that
 allows you to test across the Topics, FLEDGE, and Attribution Reporting
@@ -81,7 +81,7 @@ guide for the origin trial</a>.</td>
       <td>
 <a
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
-frames</a></td>
+Frames</a></td>
       <td>
 See the FLEDGE guidance for origin trial usage.</td>
     </tr>
@@ -154,9 +154,9 @@ origin trial due to a <a href="https://bugs.chromium.org/p/chromium/issues/detai
       <td>
 <a
 href="/docs/privacy-sandbox/fenced-frame/">Fenced
-frames</a></td>
+Frames</a></td>
       <td>
-Fenced frames added to the origin trial. See the FLEDGE guidance
+Fenced Frames added to the origin trial. See the FLEDGE guidance
 for experiment usage.</td>
     </tr>
   </tbody>
