@@ -3,11 +3,11 @@ layout: 'layouts/doc-post.njk'
 title: 'Relevance and measurement unified origin trial'
 subhead: >
    Run unified experiments across Attribution Reporting, FLEDGE,
-   Topics, Fenced Frames, and Shared Storage.
+   Topics, fenced frames, and Shared Storage.
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
-   Topics, Fenced Frames, and Shared Storage.
-date: 2022-09-06
+   Topics, fenced frames, and Shared Storage.
+date: 2022-09-08
 authors:
   - anusmitaray
   - rowan_m
@@ -20,7 +20,7 @@ for developers to evaluate and provide feedback on new web technologies through
 real-world testing. The
 [Privacy Sandbox Relevance and Measurement](/origintrials/#/view_trial/771241436187197441)
 origin trial provides a single trial allowing sites to run unified experiments
-across Attribution Reporting, FLEDGE, Topics, Fenced frames, and Shared Storage.  
+across Attribution Reporting, FLEDGE, Topics, fenced frames, and Shared Storage.  
 
 Developers can sign up for this single origin trial that
 allows you to test across the Topics, FLEDGE, and Attribution Reporting
