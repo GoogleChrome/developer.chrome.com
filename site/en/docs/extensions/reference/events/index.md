@@ -128,7 +128,7 @@ To achieve maximum performance, you should keep the following guidelines in mind
 **Register and unregister rules in bulk.** After each registration or unregistration, Chrome needs to
 update internal data structures. This update is an expensive operation.
 
-Instead of
+Instead of:
 
 ```js
 var rule1 = {...};
@@ -137,7 +137,7 @@ chrome.declarativeWebRequest.onRequest.addRules([rule1]);
 chrome.declarativeWebRequest.onRequest.addRules([rule2]);
 ```
 
-prefer to write
+prefer:
 
 ```js
 var rule1 = {...};
