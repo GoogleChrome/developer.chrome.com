@@ -1,7 +1,7 @@
 ---
 title: "Container queries begin to land in stable browsers while the polyfill gets a big update"
 description: >
-  "TBD"
+  "Container queries enable components to own their responsive styling information based on the space they fit within. This feature is starting to roll out to modern browsers, and there's been a big update for polyfill support."
 layout: 'layouts/blog-post.njk'
 date: 2022-09-09
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/8NcncbrOEEUqTRR1UaoE.jpg'
@@ -207,12 +207,12 @@ The updated container query polyfill no longer supports outdated legacy size que
 
 If you are using the container query polyfill, there are a few missing features to watch out for:
 
-1. The Shadow DOM is not yet supported.
-2. Container Relative Units (for example, `cqw` and `cqh`) are not supported in `@media` query conditions.
+- The Shadow DOM is not yet supported.
+- Container Relative Units (for example, `cqw` and `cqh`) are not supported in `@media` query conditions.
   - Safari: Container Relative Units are not supported in animation keyframes prior to 15.4.
-3. `calc()`, `min()`, `max()`, or other mathematical functions are not yet supported in query conditions.
-4. This polyfill only works with inline and same-origin CSS. Cross origin stylesheets, and stylesheets in iframes (unless a polyfill is manually loaded) are not supported.
-5. `layout` and `style` containment requires underlying browser support:
+- `calc()`, `min()`, `max()`, or other mathematical functions are not yet supported in query conditions.
+- This polyfill only works with inline and same-origin CSS. Cross origin stylesheets, and stylesheets in iframes (unless a polyfill is manually loaded) are not supported.
+- `layout` and `style` containment requires underlying browser support:
   - Safari 15.4+
   - Firefox does not support style containment at this time, but is [working](https://bugzilla.mozilla.org/show_bug.cgi?id=1463600) on it.
 
