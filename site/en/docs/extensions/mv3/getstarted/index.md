@@ -43,7 +43,7 @@ information. Focus Mode changes the style of the page to help you better digest 
 extension and Chrome Web store documentation pages.
 
 [Tabs Manager][tut-tabs-manager]
-: While researching extension development you can end up with many tabs across multiple windows.
+: While researching extension development you can end up with many documentation tabs across multiple windows.
 Learn how to organize your Chrome extension and Chrome Web store documentation tabs with this Tabs
 Manager.
 
