@@ -237,7 +237,7 @@ package [chrome-types][npm-chrome-types] to take advantage of auto-completion fo
 API][doc-apis]. This npm package is updated automatically when the Chromium source code
 changes.
 
-{% Aside  'important'  %}
+{% Aside  'gotchas' %}
 
 Upgrade this npm package frequently to work with the latest Chromium version.
 
