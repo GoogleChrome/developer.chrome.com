@@ -65,7 +65,7 @@ it in Chrome by loading it locally. Ensure all files are saved.
 
 ## Loading an unpacked extension {: #load-unpacked }
 
-To load an unpacked extension in developer mode, follow these steps:
+To load an unpacked extension in developer mode:
 
 1. Go to the Extension Management page by navigating to `chrome://extensions`.
     - Alternatively, click on the Extensions menu puzzle button and select **Manage Extensions** at the bottom of the menu.
