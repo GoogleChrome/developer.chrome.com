@@ -4,7 +4,9 @@ title: Extending the Memory Inspector for C/C++ debugging
 authors:
   - michalpitr
 description: >
-    Learn how we improved debugging C/C++ WebAssembly apps with the Memory Inspector.
+    Learn how we improved debugging C/C++ WebAssembly apps with the Memory Inspector
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UWLghnj8M1chllDY0Iir.jpg'
+alt: 'Learn how we improved debugging C/C++ WebAssembly apps with the Memory Inspector'
 date: 2022-09-09
 tags:
     - devtools-engineering
