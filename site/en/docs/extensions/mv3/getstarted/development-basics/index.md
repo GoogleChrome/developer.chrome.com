@@ -245,7 +245,7 @@ Upgrade this npm package frequently to work with the latest Chromium version.
 
 ## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step tutorials to begin your extension learning journey. 
+Choose any of the following tutorials to begin your extension learning journey. 
 
 | Extension                        | What you will learn                                                     |
 |----------------------------------|-------------------------------------------------------------------------|

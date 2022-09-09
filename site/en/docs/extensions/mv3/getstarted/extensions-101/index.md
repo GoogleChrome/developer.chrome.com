@@ -108,7 +108,7 @@ See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribut
 
 ## 🚀 Ready to start building? {: #building }
 
-Choose any of the following step-by-step tutorials to begin your extension learning journey. 
+Choose any of the following tutorials to begin your extension learning journey. 
 
 | Extension                        | What you will learn                                                    |
 |----------------------------------|------------------------------------------------------------------------|

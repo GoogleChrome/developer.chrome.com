@@ -28,7 +28,7 @@ structure, and using Typescript.
 
 ### Beginner tutorials {: #tutorials }
 
-The following step-by-step tutorials cover some common Chrome extension use cases. In addition,
+The following tutorials cover some common Chrome extension use cases. In addition,
 these extensions improve your experience while browsing the extension and Chrome Web store
 documentation pages.
 
