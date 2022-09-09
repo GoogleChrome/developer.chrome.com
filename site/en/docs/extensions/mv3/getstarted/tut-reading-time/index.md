@@ -14,7 +14,7 @@ Chrome Web Store documentation page.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VczSGe8eh0Xv7nTXxhxg.png", 
-alt="Reading time extension in the extension Welcome page", width="500", height="116", class="screenshot" %}
+alt="Reading time extension in the extension's Welcome page", width="500", height="116", class="screenshot" %}
   <figcaption>
   Reading time extension on the extension's Welcome page. 
   </figcaption>
@@ -24,7 +24,7 @@ In this guide, we’re going to explain the following concepts:
 
 - The extension manifest.
 - What icon sizes an extension uses.
-- How to inject code on pages using [content scripts][doc-cs].
+- How to inject code into pages using [content scripts][doc-cs].
 - How to use match patterns.
 - Extension permissions.
 
@@ -35,8 +35,8 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-To start, create a new directory called `reading-time` that will hold the extension's files. If you
-prefer, you can download the complete source code on [Github][github-reading-time].
+To start, create a new directory called `reading-time` to hold the extension's files. If you
+prefer, you can download the complete source code from [Github][github-reading-time].
 
 ### Step 1: Add information about the extension {: #step-1 }
 
@@ -51,7 +51,6 @@ extension. Create a `manifest.json` file in the _root_ of the project and add th
   "name": "Reading time",
   "version": "1.0",
   "description": "Add the reading time to Chrome Extension documentation articles",
-  ...
 }
 ```
 
@@ -66,7 +65,7 @@ and, when published, in the Chrome Web Store listing. To dive deeper, check out 
 {% endDetailsSummary %}
 
 - It must be located at the **root** of the project.
-- The only required keys are the `"manifest_version"`, `"name"` and `"version"`.
+- The only required keys are the `"manifest_version"`, `"name"`, and `"version"`.
 - It supports comments (`//`) during development, but these must be removed before uploading your code to the Chrome Web Store.
 
 {% endDetails %}
@@ -99,10 +98,10 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 
 {% Details %}
 {% DetailsSummary %}
-💡 **Where are these icon sizes displayed?**
+💡 **Where are these differently-sized icons displayed?**
 {% endDetailsSummary %}
 
-| Icon Size | Icon Use                                               |
+| Icon size | Icon use                                               |
 |-----------|--------------------------------------------------------|
 | 16x16     | Favicon on the extension's pages and context menu icon.|
 | 32x32     | Windows computers often require this size.             |

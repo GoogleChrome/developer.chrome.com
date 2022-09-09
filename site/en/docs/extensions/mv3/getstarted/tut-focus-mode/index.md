@@ -2,14 +2,14 @@
 layout: 'layouts/doc-post.njk'
 title: 'Focus Mode'
 subhead: 'Simplify the styling of the current page by clicking the extension toolbar icon.'
-description: 'Learn how to run code on the current active tab.'
+description: 'Learn how to run code in the active tab.'
 date: 2022-08-10
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This tutorial builds an extension that simplify the styling of the Chrome extension and
+This tutorial builds an extension that simplifies the styling of the Chrome extension and
 Web store documentation pages so that they are easier to read.
 
 In this guide, we’re going to explain how to do the following:
@@ -53,8 +53,7 @@ Create a file called `manifest.json` and include the following code.
 
 To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
 
-Create an `images` folder and place the icons inside. You can download the icons
-[here][github-focus-mode-icons].
+Create an `images` folder then [download the icons][github-focus-mode-icons] into it.
 
 ### Step 2: Initialize the extension {: #step-2 }
 
@@ -147,7 +146,7 @@ The following are other user gestures your extension can use to invoke the activ
 {% endDetails %}
 
 The `activeTab` permission allows users to _purposefully_ choose to run the extension on the
-currently focused tab; this way, it protects the user’s privacy. Another benefit is that it does not
+focused tab; this way, it protects the user’s privacy. Another benefit is that it does not
 trigger a [permission warning][doc-perms-warning].
 
 To use the `activeTab` permission, add it to the manifest's permission array:
@@ -311,7 +310,7 @@ First, open any of the following pages:
 - [Publish in the Chrome Web Store][cws-publish]
 - [Scripting API][api-scripting]
 
-Then, click on the extension action. If you setup a keyboard shortcut (link), you can test it by pressing `Ctrl + U` or `Cmd + U`.
+Then, click on the extension action. If you set up a keyboard shortcut (link), you can test it by pressing `Ctrl + U` or `Cmd + U`.
 
 It should go from this:
 
@@ -353,7 +352,7 @@ tutorials on this series:
 ## Continue exploring
 
 We hope you enjoyed building this Chrome extension and are excited to continue your Chrome
-development learning journey. We recommend the following learning path:
+development learning journey. We recommend the following learning paths:
 
 - The [Chrome Extension Architecture][doc-overview] backs up a bit and fills in a lot of detail
   about the Extensions architecture in general.

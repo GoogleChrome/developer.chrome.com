@@ -31,7 +31,7 @@ APIs][doc-apis]. The following are just a few examples of what extensions can do
 
 - Change the functionality or behavior of a website. 
 - Allow users to collect and organize information across websites.
-- Add features to the Chrome Dev Tools.
+- Add features to Chrome DevTools.
 
 See [Extension development overview][doc-dev-overview] for a complete list of API capabilities.
 
@@ -86,7 +86,7 @@ This will allow your extension to be distributed through the Chrome Web Store.
 "Single purpose" can refer to one of two aspects of an extension:
 
 1. An extension can have a single purpose limited to a narrow _focus area_ or _subject matter_. For
-example, "news headlines", "weather", "comparison shopping").
+example, "news headlines", "weather", "comparison shopping".
 
 2. Or, an extension can have a single purpose limited to a narrow _browser function_. For example,
 "new tab page", "tab management", or "search provider".

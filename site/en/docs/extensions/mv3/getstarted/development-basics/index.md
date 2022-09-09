@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Development basics'
-subhead: 'Learn what the development of a Chrome extension will look like.'
+subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
 date: 2022-08-10
 # updated: 2022-06-13
@@ -26,7 +26,7 @@ alt="Hello extension", width="206", height="130", class="screenshot" %}
 </figure>
 
 Start by creating a new directory to store extension files. If you prefer, you can download the full
-source code hosted on [Github][sample-hello-world].
+source code from [Github][sample-hello-world].
 
 Next, create a new file in this directory called `manifest.json` and add the following code:
 
@@ -61,7 +61,7 @@ For the popup, create a file named `hello.html`, and add the following code:
 ```
 
 The extension now displays a popup when the extension action (toolbar icon) is clicked. Let's test
-it on Chrome by loading it locally. Ensure all files are saved.
+it in Chrome by loading it locally. Ensure all files are saved.
 
 ## Loading an unpacked extension {: #load-unpacked }
 
@@ -69,7 +69,7 @@ To load an unpacked extension in developer mode, follow these steps:
 
 1. Go to the Extension Management page by navigating to `chrome://extensions`.
     - Alternatively, click on the Extensions menu puzzle button and select **Manage Extensions** at the bottom of the menu.
-    - Or, click on the Chrome menu, hovering over **More Tools,** then select **Extensions**.
+    - Or, click the Chrome menu, hover over **More Tools,** then select **Extensions**.
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the extension directory.
     <figure>
@@ -111,14 +111,14 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
 
 ## Reloading the extension {: #reload }
 
-Let’s go back to the code and change the content of the `H1` element in your HTML file.
+Let’s go back to the code and change the content of the `<h1>` element in your HTML file.
 
 {% Label %}hello.html{% endLabel %}
 
 ```html
 <html>
  <body>
-   <h1>Hello Extensions of the world! 👋</h1>
+   <h1>Hello, Extensions of the world! 👋</h1>
  </body>
 </html>
 ```
@@ -153,7 +153,7 @@ will locate the logs for the popup. Start by adding a script tag to `hello.html`
 </html>
 ```
 
-Create a `popup.js` file and add the following code to output the log to the console:
+Create a `popup.js` file and add the following code:
 
 {% Label %}popup.js{% endLabel %}
 
@@ -161,7 +161,7 @@ Create a `popup.js` file and add the following code to output the log to the con
 console.log("This is a popup!")
 ```
 
-To see this message logged in the Console, complete the following steps:
+To see this message logged in the Console:
 
   1. Refresh the extension.
   2. Open the popup.
@@ -198,7 +198,7 @@ Go to the Extension Management page and open the popup. An **Errors** button wil
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
 alt="Extension Management page with error button", width="300", height="226", class="screenshot" %}
 
-Click on the **Errors** button to learn more about the error:
+Click the **Errors** button to learn more about the error:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", 
 alt="Extension error details", width="400", height="281", class="screenshot" %}
