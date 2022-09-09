@@ -26,6 +26,7 @@ Container queries are a part of the [css-contain-3 specification](https://www.w3
 ## What are container queries?
 [Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a CSS feature which enables you to write styling logic that targets features of a parent element to style its children.  You can create truly component-based responsive design by querying for a parent’s size. This is much more granular and useful information than something like [media queries](https://web.dev/learn/design/media-queries/) that only provide size information about the viewport.
 
+{% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/Sw2dY4cpYjc8GBJVmCrK.png", alt="ALT_TEXT_HERE", width="800", height="372" %}
 
 With container queries, you can write reusable components that can appear differently based on where they live in the page. This makes them much more resilient and responsive across pages and templates.
 
