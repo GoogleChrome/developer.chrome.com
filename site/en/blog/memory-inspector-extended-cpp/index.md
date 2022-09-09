@@ -5,7 +5,7 @@ authors:
   - michalpitr
 description: >
     Learn how we improved debugging C/C++ WebAssembly apps with the Memory Inspector.
-date: 2022-09-08
+date: 2022-09-09
 tags:
     - devtools-engineering
     - devtools
