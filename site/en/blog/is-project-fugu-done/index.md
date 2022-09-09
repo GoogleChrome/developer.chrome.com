@@ -72,7 +72,7 @@ shipped:
       <tr><td><a href="https://crbug.com/897297">WebCodecs</a></td><td>Chrome 93</td></tr>
       <tr><td><a href="https://crbug.com/878979">Idle Detection</a></td><td>Chrome 94</td></tr>
       <tr><td><a href="https://crbug.com/897309">EyeDropper API</a></td><td>Chrome 95</td></tr>
-      <tr><td><a href="https://crbug.com/1069293">App Icon Shortcut menu for PWAs on macOS and Linux</a></td><td>Chrome 96</td></tr>
+      <tr><td><a href="https://crbug.com/1069293">App Shortcut menu for PWAs on macOS and Linux</a></td><td>Chrome 96</td></tr>
       <tr><td><a href="https://crbug.com/1019239">URL Protocol Handler Registration for PWAs </a></td><td>Chrome 96</td></tr>
       <tr><td><a href="https://crbug.com/1011392">WebTransport</a></td><td>Chrome 97</td></tr>
       <tr><td><a href="https://crbug.com/698793">Clipboard: Pasting retina-images loses pHYs metadata.</a></td><td>Chrome 98</td></tr>
