@@ -17,7 +17,7 @@ authors:
 
 ## Container queries are here!
 
-Exciting news—one of the most highly requested developer features has begun to land in web browsers. As of [Chromium 105](/blog/new-in-chrome-105/), you can now create size-based [container queries](https://developer.chrome.com/blog/has-with-cq-m105/) and use [container query unit values](https://ishadeed.com/article/container-query-units/) in stable Chrome and Edge browsers. Equally exciting, Safari also has these features available in Safari 16 beta. To make it even easier to use size-based container queries and `cq` units, the Aurora team at Chrome has been hard at work updating the [Container Query Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) to support more browsers and use cases so you can feel confident using this powerful feature today.
+Exciting news—one of the most highly requested developer features has begun to land in web browsers. As of [Chromium 105](/blog/new-in-chrome-105/), you can now create size-based [container queries](/blog/has-with-cq-m105/) and use [container query unit values](https://ishadeed.com/article/container-query-units/) in stable Chrome and Edge browsers. Equally exciting, Safari also has these features available in Safari 16 beta. To make it even easier to use size-based container queries and `cq` units, the Aurora team at Chrome has been hard at work updating the [Container Query Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) to support more browsers and use cases so you can feel confident using this powerful feature today.
 
 {% Aside %}
 Container queries are a part of the [css-contain-3 specification](https://www.w3.org/TR/css-contain-3/). This specification covers new unit values and both size and style container types, though browsers are initially launching with only the support of size-containment. Because of this, we’ll focus on size containment in this article.
@@ -186,7 +186,7 @@ The updated polyfill supports:
 - Nested `@container` rules.
 - Nesting `@container` rules under `@supports` and `@media` queries and vice versa is supported.
 - Conditional CSS such as `@supports (container-type: inline-size)` will pass after the polyfill loads.
-- Full CSS syntax support (there is no longer any issue with putting /* comments */ anywhere that they are syntactically valid).
+- Full CSS syntax support (there is no longer any issue with putting comments anywhere that they are syntactically valid).
 - Vertical writing modes (via writing-mode).
 - Container Relative Units (`cqw`, `cqh`, etc) are supported within query conditions, property declarations, and animation keyframes.
 `rem` and `em` are supported in query conditions.
