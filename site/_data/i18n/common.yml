@@ -177,3 +177,13 @@ website:
 
 featured:
   en: Featured
+
+cookie_banner:
+  explainer:
+    en: |
+      We serve cookies on this site to analyze traffic, remember your preferences,
+      and optimize your experience.
+  learn_more:
+    en: More details
+  accept:
+    en: Ok, Got it.
