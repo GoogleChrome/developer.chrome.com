@@ -16,7 +16,7 @@ already taken place.
 
 ## Future events
 
-### Topics API Office Hours
+### Topics API Office Hours {: #oh04}
 
 The Google Chrome team will be hosting our next two Office Hours sessions, providing an
 overview and a demo of the Topics API, as well as a Q&A session with DevRel, Product and Engineering
@@ -27,9 +27,6 @@ Join us to learn more about our approach to the Topics API, and to get your ques
 **Session 1 with English-language demo** (event now completed)
 * Tuesday, September 6 
 * 8:00–9:30 am PDT 
-* Video call link: [meet.google.com/xnp-mxct-qvd](https://meet.google.com/xnp-mxct-qvd) 
-* Or dial: (US) +1 651-867-0444 PIN: 530 909 558 # 
-* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397) 
 * Videos of event: [presentation](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF), 
 [demo](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV)
 
