@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 의 새로운 기능 (Chrome 99)'
+layout: "layouts/blog-post.njk"
+title: "DevTools 의 새로운 기능 (Chrome 99)"
 authors:
   - jecelynyeen
 date: 2022-02-21
 updated: 2022-02-21
-description: '웹 소켓 요청 쓰로틀링, 새로운 Reporting API 창, console 스타일링 등'
+description:
+  "웹 소켓 요청 쓰로틀링, 새로운 Reporting API 창, console 스타일링 등"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iStno9LHU3f6DJe6hOIb.jpg'
 alt: ''
 tags:
@@ -14,9 +15,9 @@ tags:
   - chrome-99
 ---
 
-_이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ko/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -29,6 +30,7 @@ _이 게시글의 번역에는 [조은](https://developers.google.com/community/
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZHJibovD0IRQ7KrWb0aD.png", alt="웹 소켓 요청 쓰로틀링", width="800", height="540" %}
 
 Chromium 이슈: [423246](https://crbug.com/423246)
+
 
 ## 애플리케이션 패널에 Reporting API 창 추가 {: #reporting-api }
 
@@ -49,6 +51,7 @@ Reporting API 를 사용하고자 하는 페이지에 접속하세요 (예시: [
 
 Chromium 이슈: [1205856](https://crbug.com/1205856)
 
+
 ## Recorder 패널에서 요소가 클릭 가능 / 표시될 때까지 대기 지원 {: #recorder }
 
 사용자 흐름에 대한 기록을 재생할 때, **Recorder** 패널은 이제 특정 요소가 뷰포트에 표시되거나 클릭 가능할 때까지 기다리거나 다음 단계를 재생하기 전에 요소를 뷰포트 내로 자동으로 스크롤하고자 시도합니다. 이전에는 재생이 즉시 실패했습니다.
@@ -58,6 +61,7 @@ Chromium 이슈: [1205856](https://crbug.com/1205856)
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
 Chromium 이슈: [1257499](https://crbug.com/1257499#c38)
+
 
 ## 콘솔 스타일링, 포매팅, 필터링 개선 {: #console }
 
@@ -78,6 +82,7 @@ DevTools를 이용한 콘솔 메시지의 포매팅 및 스타일링에 대한 �
 
 Chromium 이슈: [1282837](https://crbug.com/1282837), [1282076](https://crbug.com/1282076)
 
+
 ### `%s`, `%d`, `%i`, `%f` 형식 지정자 지원 {: #console-format }
 
 이제 **콘솔** 에서 [콘솔 표준](https://console.spec.whatwg.org/) 에 정의된 `%s`, `%d`, `%i`, `%f` 형식 지정자를 지원합니다.
@@ -87,6 +92,7 @@ Chromium 이슈: [1282837](https://crbug.com/1282837), [1282076](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ec299d49c6ab2c185df660766b1fb827db87f8a #}
 
 Chromium 이슈: [1277944](https://crbug.com/1277944), [1282076](https://crbug.com/1282076)
+
 
 ### 보다 직관적인 콘솔 그룹 필터 {: #console-filter }
 
@@ -100,6 +106,7 @@ Chromium 이슈: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 
 Chromium 이슈: [1068788](https://crbug.com/1068788)
 
+
 ## 소스맵 개선 {: #sourcemap }
 
 ### 소스맵 파일을 이용한 Chrome extension 디버깅 {: #extension }
@@ -112,6 +119,7 @@ Chromium 이슈: [1068788](https://crbug.com/1068788)
 
 Chromium 이슈: [212374](https://crbug.com/212374)
 
+
 ### 소스 패널에서 소스 폴더 트리 개선 {: #source-tree }
 
 **소스** 패널의 소스 폴더 트리가 폴더 구조 및 네이밍 (“../”, “./”, 등)을 덜 복잡하게 보여주도록 개선되었습니다. 내부적으로 소스맵의 절대 소스 URL을 정규화한 결과입니다.
@@ -122,6 +130,7 @@ Chromium 이슈: [212374](https://crbug.com/212374)
 
 Chromium 이슈: [1284737](https://crbug.com/1284737)
 
+
 ### 소스 패널에서 워커 소스 파일 표시 {: #worker-sourcemap }
 
 소스 패널에서 [워커](https://web.dev/workers-overview/) (예: 웹 워커, 서비스 워커) 소스 파일 및 연관된 sourceURL이 보입니다. 이전에는 워커 소스 파일이 제대로 제어되지 않았습니다.
@@ -130,13 +139,17 @@ Chromium 이슈: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
+
 Chromium 이슈: [1277002](https://crbug.com/1277002)
+
 
 ## Chrome 자동 다크 테마 개선 {: #auto-dark-mode }
 
 [자동 다크 테마 에뮬레이션](/blog/new-in-devtools-96/#auto-dark-mode) UI가 간소화되었습니다. 기존 드롭다운 메뉴에서 체크박스로 전환되었습니다.
 
+
 그 외에도 [자동 다크 테마](/blog/auto-dark-theme/) 가 활성화되면 **Emulate prefers-color-scheme** 드롭다운 메뉴가 비활성화되고 **prefers-color-scheme: dark** 가 자동으로 지정됩니다.
+
 
 Android Chrome 96에서 [자동 다크 테마](/blog/auto-dark-theme/) 를 [시험적 기능](/blog/origin-trials/) 으로 소개했었습니다. 이 기능을 사용하면 사용자가 운영 체제에서 다크 테마를 선택하면 브라우저가 자동으로 생성된 다크 테마를 라이트 테마 사이트에도 적용합니다.
 
@@ -145,6 +158,7 @@ Android Chrome 96에서 [자동 다크 테마](/blog/auto-dark-theme/) 를 [시�
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8443d2894b6401695ce94657e6afd5ad399eef28 #}
 
 Chromium 이슈: [1243309](https://crbug.com/1243309)
+
 
 ## 터치에 친화적인 컬러 피커와 창 분리 {: #touch-friendly }
 
@@ -159,6 +173,8 @@ Chromium 이슈: [1243309](https://crbug.com/1243309)
 
 Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
+
+
 ## 기타 하이라이트 {: #misc }
 
 이번 릴리스에서 주목할만한 수정 사항들입니다:
@@ -171,5 +187,6 @@ Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - **소스** 패널에서 브레이크포인트를 제거하면 브레이크포인트 편집 다이얼로그를 닫습니다. ([922513](https://crbug.com/922513))
 - DevTools에서 [라이트 / 다크 테마 선택](/docs/devtools/customize/dark-theme/) 시에 다시 불러올 필요가 없어졌습니다. ([1278738](https://crbug.com/1278738))
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/ko/reach-out.md' %}
+{% partial 'devtools/ko/whats-new.md' %}

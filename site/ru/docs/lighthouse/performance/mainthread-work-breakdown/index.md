@@ -22,7 +22,7 @@ updated: 2019-10-04
 
 Чтобы помочь вам определить источники загрузки основного потока, Lighthouse показывает, на что было потрачено время ЦП, пока браузер загружал вашу страницу.
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как минимизировать работу основного потока
 

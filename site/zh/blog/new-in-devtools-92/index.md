@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 新功能（Chrome 92）'
+layout: "layouts/blog-post.njk"
+title: "DevTools 新功能（Chrome 92）"
 authors:
   - jecelynyeen
 date: 2021-06-02
 updated: 2021-06-02
-description: 'CSS 网格编辑器、支持控制台中的 const 重声明、来源顺序查看器以及更多。'
+description:
+  "CSS 网格编辑器、支持控制台中的 const 重声明、来源顺序查看器以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BnPX5Sm6bpsxg4Rv0hV8.jpg'
 alt: ''
 tags:
@@ -14,11 +15,11 @@ tags:
   - chrome-92
 ---
 
-_感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译_。
+*感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译*。
+
 
 <!-- lint disable no-smart-quotes -->
-
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/zh/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -33,6 +34,7 @@ _感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译_。
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 
 Chromium 议题: [1203241](https://crbug.com/1203241)
+
 
 ## 支持控制台中的 const 重声明 {: #const-redeclaration }
 
@@ -51,6 +53,7 @@ Chromium 议题: [1203241](https://crbug.com/1203241)
 
 Chromium 议题: [1076427](https://crbug.com/1076427)
 
+
 ## 来源顺序查看器 {: #source-order }
 
 您现在可以在屏幕上查看元素的来源顺序，从而更好地检查无障碍功能。
@@ -62,6 +65,7 @@ Chromium 议题: [1076427](https://crbug.com/1076427)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7f83e4b0190ed2dbc32feef6d8b0315279ad7d07 #}
 
 Chromium 议题: [1094406](https://crbug.com/1094406)
+
 
 ## 查看 iframe 详细信息的新快捷方式 {: #frame-details }
 
@@ -76,6 +80,7 @@ Chromium 议题: [1094406](https://crbug.com/1094406)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/30ba780ff36307473aee2e2c959287ea8d0b3bd7 #}
 
 Chromium 议题: [1192084](https://crbug.com/1192084)
+
 
 ## 优化跨域资源共享的调试支持 {: #cors }
 
@@ -99,6 +104,7 @@ Chromium 议题: [1192084](https://crbug.com/1192084)
 
 Chromium 议题: [1141824](https://crbug.com/1141824)
 
+
 ## **网络**面板的更新 {: #network }
 
 ### 重命名 XHR 标签为 Fetch/XHR {: #fetch-xhr }
@@ -111,6 +117,7 @@ XHR 标签现被重命名为 **Fetch/XHR**。 这项更新可以让开发者更�
 
 Chromium 议题: [1201398](https://crbug.com/1201398)
 
+
 ### 在**网络**面板中过滤 Wasm 资源类型 {: #wasm }
 
 您现在可以点击新的 **Wasm** 按钮来过滤 Wasm 网络请求。
@@ -120,6 +127,7 @@ Chromium 议题: [1201398](https://crbug.com/1201398)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/db3b40161aeb0856d33e0e4545b2b5bd8e79fb86 #}
 
 Chromium 议题: [1103638](https://crbug.com/1103638)
+
 
 ### **网络状况**面板中设备的用户代理客户端提示 {: #sec-ua-ch }
 
@@ -132,6 +140,7 @@ Chromium 议题: [1103638](https://crbug.com/1103638)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2b0c3b6c6e093649c35b6824004284ca4c2bd4a #}
 
 Chromium 议题: [1174299](https://crbug.com/1174299)
+
 
 ## 在**问题**面板中报告怪异模式问题 {: #quirks-mode }
 
@@ -147,6 +156,7 @@ DevTools 现在会报告[怪异模式 （quirks mode）](https://quirks.spec.wha
 
 Chromium 议题: [622660](https://crbug.com/622660)
 
+
 ## 在**性能**面板中添加"计算相交部分" {: #computed-intersections }
 
 DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/intersectionobserver-v2/) 事件，并调试这些事件潜在的性能开销。
@@ -156,6 +166,7 @@ DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新�
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/03f91c46e7920e768eba5192b7f902e916b9cac3 #}
 
 Chromium 议题: [1199137](https://crbug.com/1199137)
+
 
 ## Lighthouse 面板中的 Lighthouse 7.5 {: #lighthouse }
 
@@ -168,6 +179,7 @@ Chromium 议题: [1199137](https://crbug.com/1199137)
 
 Chromium 议题: [772558](https://crbug.com/772558)
 
+
 ## 在"调用堆栈"边栏中弃用上下文菜单的 "Restart frame" 项 {: #restart-frame }
 
 此 **Restart frame** 菜单项现已被弃用。该功能需要进一步的开发，现在它经常无法正常运作。
@@ -177,6 +189,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4494098b6840f608347c1edf3c048691056eada4 #}
 
 Chromium 议题: [1203606](https://crbug.com/1203606)
+
 
 ## [实验阶段] 协议监视器 {: #protocol-monitor }
 
@@ -195,10 +208,11 @@ Chrome DevTools 使用 [Chrome DevTools 协议 (CDP)](https://chromedevtools.git
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="协议监视器", width="800", height="496" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #} 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/006e20c4226a7b2e5fde4026191b1eaf05bf8b8e #}
 
 Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
+
 
 ## [实验阶段] Puppeteer Recorder {: #puppeteer-recorder }
 
@@ -216,10 +230,10 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kh1Z4jcWxbO6rYCSoIPn.png", alt="Puppeteer Recorder", width="800", height="557" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #} 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/zh/reach-out.md' %}
+{% partial 'devtools/zh/whats-new.md' %}

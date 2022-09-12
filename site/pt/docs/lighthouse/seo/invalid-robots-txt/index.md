@@ -33,7 +33,7 @@ Erros comuns incluem:
 
 O Lighthouse não verifica se o `robots.txt` está no local correto. Para funcionar corretamente, o arquivo deve estar na raiz do seu domínio ou subdomínio.
 
-{% partial 'lighthouse-seo/scoring.md' %}
+{% partial 'lighthouse-seo/scoring.njk' %}
 
 ## Como corrigir problemas com o `robots.txt`
 

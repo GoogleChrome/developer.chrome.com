@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'Новинки DevTools (Chrome 93)'
+layout: "layouts/blog-post.njk"
+title: "Новинки DevTools (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-08-19
 updated: 2021-08-19
-description: 'Редактируемые выражения от контейнера, предварительный просмотр веб-бандлов, улучшенная обработка строк в консоли и многое другое.'
+description:
+  "Редактируемые выражения от контейнера, предварительный просмотр веб-бандлов, улучшенная обработка строк в консоли и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lF3ZTjr5zftuNIMofL6g.jpg'
 alt: ''
 tags:
@@ -16,9 +17,9 @@ tags:
 
 <!-- lint disable no-dash-spaces -->
 
-_Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru)._
+*Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ru/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -28,11 +29,13 @@ _Переводы предоставлены [Alena Batitskaya](https://github.c
 контейнера](https://web.dev/new-responsive/#responsive-to-the-container) в
 панели **Styles**.
 
+
 Выражения от контейнера обеспечивают более динамичный подход к адаптивному
 дизайну. Директива `@container` работает аналогично медиавыражению с `@media`.
 Однако вместо того, чтобы запрашивать информацию о вьюпорте браузера,
 `@container` запрашивает информацию у родительского контейнера, соответствующего
 определённым критериям.
+
 
 В панели **Elements** кликните на DOM-элемент с директивой `@container`, и в
 панели **Styles** DevTools отобразится информация о `@container`. Кликните на
@@ -57,6 +60,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/ef157dab2ccf32194
 
 Задача в трекере Chromium: [1146422](https://crbug.com/1146422)
 
+
 ## Предварительный просмотр веб-бандлов во вкладке Network {: #web-bundle }
 
 [Веб-бандлы](https://web.dev/web-bundles/) — это способ инкапсуляции одного или
@@ -76,6 +80,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc807
 
 Задача в трекере Chromium: [1182537](https://crbug.com/1182537)
 
+
 ## Отладка Attribution Reporting API {: #attribution-reporting }
 
 Ошибки, связанные с Attribution Reporting API, теперь отображаются во вкладке
@@ -92,6 +97,7 @@ alt="Ошибки, связанные с Attribution Reporting API, во вкл�
 width="800", height="501" %}
 
 Задача в трекере Chromium: [1190735](https://crbug.com/1190735)
+
 
 ## Улучшенная работа со строками в консоли {: #string }
 
@@ -124,6 +130,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/29236e333a856ae5a
 
 Задача в трекере Chromium: [1208389](https://crbug.com/1208389)
 
+
 ## Улучшенная отладка CORS {: #cors }
 
 TypeErrors, связанные с CORS, во вкладке **Console** теперь связаны с
@@ -137,6 +144,7 @@ TypeErrors, связанные с CORS, во вкладке **Console** тепе
 alt="Иконки рядом с текстом ошибки CORS", width="800", height="485" %}
 
 Задача в трекере Chromium: [1213393](https://crbug.com/1213393)
+
 
 ## Lighthouse 8.1 {: #lighthouse }
 
@@ -167,6 +175,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/16d96a25f24c934ef
 
 Задача в трекере Chromium: [772558](https://crbug.com/772558)
 
+
 ## Отображение `new_note_url` в панели Manifest {: #new-note-url }
 
 В панели Manifest теперь отображается
@@ -189,6 +198,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/51f8aaf568db256f3
 
 Задача в трекере Chromium: [1185678](https://crbug.com/1185678)
 
+
 ## Исправление соответствия селекторам CSS {: #matching-selectors }
 
 DevTools исправил отображение соответствия селекторам CSS, в прошлой версии это не работало.
@@ -208,6 +218,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/123eac3c8ceeb2e78
 
 Задача в трекере Chromium: [1219153](https://crbug.com/1219153)
 
+
 ## Форматирование ответов JSON во вкладке Network {: #pretty-print-json }
 
 Теперь вы можете отформатировать ответы JSON во вкладке **Network**.
@@ -224,5 +235,5 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283c
 
 Задача в трекере Chromium: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/ru/reach-out.md' %}
+{% partial 'devtools/ru/whats-new.md' %}

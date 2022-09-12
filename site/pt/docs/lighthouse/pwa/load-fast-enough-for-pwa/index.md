@@ -25,11 +25,11 @@ Por exemplo, se uma página parecer visualmente completa depois de um segundo, m
 
 O Lighthouse calcula qual seria o valor do TTI numa conexão de rede 4G lenta. Se o tempo de interação for superior a 10 segundos, a auditoria falhará.
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como melhorar o tempo de carregamento da sua página
 
-{% partial 'lighthouse-performance/improve.md' %}
+{% partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

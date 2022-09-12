@@ -32,7 +32,7 @@ Lighthouse flags the following generic link text:
 - `more`
 - `learn more`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to add descriptive link text
 

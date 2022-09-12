@@ -49,7 +49,7 @@ Esta tabla muestra cómo interpretar su puntaje TBT:
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo mejorar su puntaje TBT
 
@@ -62,7 +62,7 @@ En general, las causas más comunes de tareas largas son:
 
 {% Aside %} La carga, el análisis o la ejecución innecesarios de JavaScript suelen ser una oportunidad mucho mayor de mejora en la mayoría de los sitios. {% endAside %}
 
-{% partial 'lighthouse-performance/improve.md' %}
+{% partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

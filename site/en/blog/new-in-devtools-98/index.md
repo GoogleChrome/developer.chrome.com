@@ -15,7 +15,7 @@ tags:
   - chrome-98
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id='YqkIS88VulM' %}
 
@@ -223,6 +223,6 @@ Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor secu
 Chromium issue: [1200732](https://crbug.com/1200732)
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 

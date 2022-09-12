@@ -38,11 +38,11 @@ Quando seu JavaScript leva muito tempo para ser executado, ele desacelera o dese
 
 Para ajudá-lo a identificar os maiores contribuintes para o tempo de execução, o Lighthouse relata o tempo gasto na execução, avaliação e análise de cada arquivo JavaScript que sua página carrega.
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como acelerar a execução do JavaScript
 
-{% partial 'lighthouse-performance/js-perf.md' %}
+{% partial 'lighthouse-performance/js-perf.njk' %}
 
 ## Recursos
 

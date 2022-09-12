@@ -14,7 +14,7 @@ Especificar un doctype evita que el navegador cambie al [modo quirks](https://de
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="En la auditoría de Lighthouse se muestra que falta el doctype", width="800", height="76" %}</figure>
 
-{% partial 'lighthouse-best-practices/scoring.md' %}
+{% partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Cómo agregar una declaración doctype
 

@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/es/banner.md' %}
 
 {% YouTube id='YqkIS88VulM' %}
 
@@ -91,6 +91,7 @@ Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
 Podemos usar la nueva configuración de **Tiempo de espera** para arreglar esto. Expanda el paso en el que hacemos clic en el elemento del menú. [Edite el paso](/docs/devtools/recorder/#edit-steps) mediante **Add timeout** y configúrelo en **6000** milisegundos (igual a 6s).
+
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 
@@ -258,7 +259,6 @@ Consulte [Novedades de Lighthouse 9.0](/blog/lighthouse-9-0/) para obtener más 
 Chromium issue: [772558](https://crbug.com/772558)
 
 <!-- ## Improved Sources panel {: #sources } -->
-
 ## Panel Fuentes mejorado {: #sources }
 
 <!-- Loads of stability improvements in the **Sources** panel as we upgraded it to use [CodeMirror 6](https://codemirror.net/6/). Here are few notable improvements: -->
@@ -302,9 +302,7 @@ Estas son algunas correcciones notables en esta versión:
 ### [Experimental] Endpoints en el panel de informes de API {: #reporting-api }
 
 {% Aside %}
-
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
-
 Para habilitar el experimento, marque la casilla de verificación **Enable Reporting API panel in the Application panel** en **Configuración** > **Experimentos**.
 {% endAside %}
 
@@ -326,5 +324,5 @@ Aprenda a usar la [API de informes](https://web.dev/reporting-api/) para monitor
 
 Chromium issue: [1200732](https://crbug.com/1200732)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/es/reach-out.md' %}
+{% partial 'devtools/es/whats-new.md' %}

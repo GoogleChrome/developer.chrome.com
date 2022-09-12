@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 의 새로운 기능 (Chrome 96)'
+layout: "layouts/blog-post.njk"
+title: "DevTools 의 새로운 기능 (Chrome 96)"
 authors:
   - jecelynyeen
 date: 2021-10-25
 updated: 2021-10-25
-description: '새로운 CSS 개요 영역, CSS 의 prefers-contrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들.'
+description:
+  "새로운 CSS 개요 영역, CSS 의 prefers-contrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/61LuaWeAzEc2dbdFjnWm.jpg'
 alt: ''
 tags:
@@ -22,9 +23,9 @@ tags:
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-_이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 리뷰를 맡아 주셨습니다._
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 리뷰를 맡아 주셨습니다.*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ko/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -35,7 +36,7 @@ _이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)
 
 여러분은 CSS의 정보들을 더욱 깊이 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 열어 볼 수 있습니다.
 
-**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback)이 필요합니다.
+**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback)이 필요합니다. 
 
 **CSS 개요** 에 대해 좀 더 알고 싶으시다면 [더보기](/docs/devtools/css-overview)를 클릭하여 첨부된 문서를 읽어 보세요.
 
@@ -44,6 +45,7 @@ _이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
 
 Chromium issue: [1254557](https://crbug.com/1254557)
+
 
 ## 복원 및 개선된 CSS 길이 편집 및 복사 기능 {: #length }
 
@@ -64,7 +66,8 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
-## 렌더링 탭의 업데이트
+
+## 렌더링 탭의 업데이트 
 
 ### CSS 의 prefers-contrast 미디어 기능 에뮬레이션 {: #prefers-contrast }
 
@@ -77,6 +80,7 @@ Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
 Chromium issue: [1139777](https://crbug.com/1139777)
+
 
 ### 크롬의 자동 어두운 테마 기능 에뮬레이션 {: #auto-dark-mode }
 
@@ -92,8 +96,8 @@ DevTools 를 사용하여 자동 어두운 테마를 에뮬레이션할 수 있�
 
 Chromium issue: [1243309](https://crbug.com/1243309)
 
-<!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
 
+<!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
 ## 스타일 영역에서 선언을 자바스크립트로 복사하기 {: #copy-as-js }
 
 쉽게 CSS 규칙을 자바스크립트 프로퍼티로 복사하기 위한 새로운 두 개의 옵션이 컨텍스트 메뉴에 추가되었습니다. 이 바로가기 옵션들은 개발자들, 특히 [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)라이브러리를 사용하는 개발자들에게 편리합니다.
@@ -108,8 +112,8 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 
 Chromium issue: [1253635](https://crbug.com/1253635)
 
-<!-- ## New Payload tab in the Network panel {: #payload } -->
 
+<!-- ## New Payload tab in the Network panel {: #payload } -->
 ## 네트워크 패널의 새로운 페이로드 탭 {: #payload }
 
 페이로드가 있는 네트워크 요청을 조사할 때, **네트워크** 패널에 새로이 추가된 **페이로드** 탭을 사용하세요. 이전 버전에서, 페이로드 정보는 **헤더** 탭에서 사용 가능했습니다.
@@ -120,8 +124,8 @@ Chromium issue: [1253635](https://crbug.com/1253635)
 
 Chromium issue: [1214030](https://crbug.com/1214030)
 
-<!-- ## Improved the display of properties in the Properties pane {: #properties } -->
 
+<!-- ## Improved the display of properties in the Properties pane {: #properties } -->
 ## 속성 영역 내의 속성 표시 방법의 개선 {: #properties }
 
 **속성** 영역은 인스턴스의 모든 속성을 표시하는 대신, 오직 관련된 속성값들만을 표시합니다. DOM 프로토타입과 메소드들은 현재 제거되었습니다.
@@ -131,13 +135,14 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium issue: [1226262](https://crbug.com/1226262)
+Chromium issue: [1226262](https://crbug.com/1226262) 
+
 
 ## 콘솔 업데이트
 
 ### 콘솔의 CORS 에러 숨김 옵션 {: #hide-cors-errors }
 
-**콘솔** 에서 CORS 오류를 숨길 수 있습니다. CORS 오류들은 현재 이슈 탭에 리포트되고 있으므로, **콘솔** 에서 이들을 숨기는 것은 콘솔 내부에 어지럽게 흩어진 오류들을 줄이는 데 도움을 줄 수 있습니다.
+**콘솔** 에서 CORS 오류를 숨길 수 있습니다. CORS 오류들은 현재 이슈 탭에 리포트되고 있으므로, **콘솔** 에서 이들을 숨기는 것은 콘솔 내부에 어지럽게 흩어진 오류들을 줄이는 데 도움을 줄 수 있습니다. 
 
 **콘솔**에서 **설정** 아이콘을 클릭한 다음 **콘솔에 CORS 오류 표시** 체크박스를 해제합니다.
 
@@ -147,9 +152,10 @@ Chromium issue: [1226262](https://crbug.com/1226262)
 
 Chromium issue: [1251176](https://crbug.com/1251176)
 
+
 ### 콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별 {: #intl }
 
-[Intl](https://tc39.es/ecma402/#intl-object)객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다.
+[Intl](https://tc39.es/ecma402/#intl-object)객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다. 
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
 
@@ -157,15 +163,17 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 Chromium issue: [1073804](https://crbug.com/1073804)
 
+
 ### 일관적인 async 스택 추적 {: #async }
 
 다른 비동기 태스크와 일관성을 유지하기 위해, 이제 DevTools 는 `async` 함수에 대한 `async` 스택 트레이스를 보여 줍니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec  #}
 
 Chromium issue: [1254259](https://crbug.com/1254259)
+
 
 ### 콘솔 사이드바 유지 {: #console-sidebar }
 
@@ -178,13 +186,15 @@ Chromium issue: [1254259](https://crbug.com/1254259)
 
 Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.com/1255586)
 
+
 ## 애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정 {: #app-cache }
 
 [AppCache](https://web.dev/appcache-removal/)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium issue: [1084190](https://crbug.com/1084190)
+Chromium issue: [1084190](https://crbug.com/1084190) 
+
 
 ## [실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역 {: #reporting-api }
 
@@ -205,5 +215,5 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/ko/reach-out.md' %}
+{% partial 'devtools/ko/whats-new.md' %}

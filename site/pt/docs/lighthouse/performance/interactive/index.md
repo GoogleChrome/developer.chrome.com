@@ -55,7 +55,7 @@ A tabela abaixo mostra como interpretar sua pontuação TTI:
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação TTI
 
@@ -72,7 +72,7 @@ Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, c
 
 {% Aside %} TTI pode ser difícil de rastrear em campo. Rastrear o [First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay) pode ser um bom proxy para TTI. {% endAside %}
 
-{% partial 'lighthouse-performance/improve.md' %}
+{% partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

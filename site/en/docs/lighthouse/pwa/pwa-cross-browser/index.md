@@ -33,7 +33,7 @@ of features that are missing from certain browsers:
 
 Learn more in [Workbox: your high-level service worker toolkit](/docs/workbox/).
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Resources
 

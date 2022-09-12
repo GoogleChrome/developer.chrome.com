@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 의 새로운 기능 (Chrome 93)'
+layout: "layouts/blog-post.njk"
+title: "DevTools 의 새로운 기능 (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
-description: '수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 소식'
+description:
+  "수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 소식"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Cs7C4adVQQjG54wEmBch.jpg'
 alt: ''
 tags:
@@ -14,14 +15,13 @@ tags:
   - chrome-93
 ---
 
-_이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [이지웅](https://bit.ly/JiwoongLeePortfolio) 님이 리뷰어로 참여했습니다!_
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [이지웅](https://bit.ly/JiwoongLeePortfolio) 님이 리뷰어로 참여했습니다!*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ko/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Styles 영역에서 CSS 컨테이너 쿼리를 수정할 수 있습니다 {: #container-queries }
-
 이제 **Styles** 영역에서 [CSS 컨테이너 쿼리](https://web.dev/new-responsive/#responsive-to-the-container) 를 보고 수정할 수 있습니다.
 
 컨테이너 쿼리는 반응형 디자인을 구현하기 위해 더 다양한 접근 방식을 제공합니다.
@@ -43,8 +43,8 @@ _이 게시글의 번역에는 [조은](https://developers.google.com/community/
 
 Chromium issue: [1146422](https://crbug.com/1146422)
 
-## Network 패널에서 Web bundle 미리보기 {: #web-bundle }
 
+## Network 패널에서 Web bundle 미리보기 {: #web-bundle }
 [Web bundle](https://web.dev/web-bundles/) 여러개의 HTTP 리소스를 하나의 파일로 묶은 파일 포맷입니다. 이제 **Network** 패널에서 web bundle 의 내용을 미리볼 수 있습니다.
 
 web bundle은 현재 실험 기능입니다. `chrome://flags` 에서 `#enable-experimental-web-platform-features` 플래그를 활성화한 상태로 테스트하세요.
@@ -55,8 +55,8 @@ web bundle은 현재 실험 기능입니다. `chrome://flags` 에서 `#enable-ex
 
 Chromium issue: [1182537](https://crbug.com/1182537)
 
-## Attribution Reporting API 디버깅 {: #attribution-reporting }
 
+## Attribution Reporting API 디버깅 {: #attribution-reporting }
 Attribution Reporting API 에러가 **Issues** 탭에 노출됩니다.
 
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) 은 크로스 사이트 식별자를 사용하지 않고 광고 클릭이나 노출같은 사용자 액션을 측정하는 데 도움을 주는 새로운 API 입니다.
@@ -65,8 +65,8 @@ Attribution Reporting API 에러가 **Issues** 탭에 노출됩니다.
 
 Chromium issue: [1190735](https://crbug.com/1190735)
 
-## Console 에서 더 나은 문자열 (string) 제어 {: #string }
 
+## Console 에서 더 나은 문자열 (string) 제어 {: #string }
 **Console** 의 새로운 컨텍스트 메뉴를 사용하면 **Console** 내 모든 문자열을 콘텐츠, JavaScript 리터럴 또는 JSON 리터럴로 복사할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="Console의 새로운 컨텍스트 메뉴", width="800", height="477" %}
@@ -81,8 +81,8 @@ Chrome 90에서 DevTools는 **Console** 이 [문자열 출력을 언제나 유�
 
 Chromium issue: [1208389](https://crbug.com/1208389)
 
-## CORS 디버깅 개선 {: #cors }
 
+## CORS 디버깅 개선 {: #cors }
 이제 **Console** 에서 CORS 관련 TypeErrors 는 Network 패널과 Issues 탭으로 연결됩니다.
 
 CORS 관련 에러 메시지 옆에 있는 두 개의 새 아이콘을 클릭하여 network 요청을 보거나, 에러 메시지를 상세하게 살펴보고 Issues 탭에서 더 나은 해결법을 찾을 수도 있습니다.
@@ -91,8 +91,8 @@ CORS 관련 에러 메시지 옆에 있는 두 개의 새 아이콘을 클릭하
 
 Chromium issue: [1213393](https://crbug.com/1213393)
 
-## Lighthouse 8.1 {: #lighthouse }
 
+## Lighthouse 8.1 {: #lighthouse }
 **Lighthouse** 패널이 이제 Lighthouse 8.1로 업데이트 되었습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
@@ -110,8 +110,8 @@ Chromium issue: [1213393](https://crbug.com/1213393)
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-## Manifest 영역에서 new note URL을 보여줍니다 {: #new-note-url }
 
+## Manifest 영역에서 new note URL을 보여줍니다 {: #new-note-url }
 이제 Manifest 영역에서 [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)을 보여줍니다.
 
 현재 ChromeOS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다. 메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
@@ -122,8 +122,8 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 Chromium issue: [1185678](https://crbug.com/1185678)
 
-## CSS 매칭 셀렉터 수정 {: #matching-selectors }
 
+## CSS 매칭 셀렉터 수정 {: #matching-selectors }
 DevTools 에서 CSS 매칭 셀렉터를 수정했지만, 마지막 릴리즈에서 제대로 동작하지 않았습니다.
 
 **Styles** 영역에서 쉼표로 구분된 셀렉터는 선택된 DOM 노드와의 매칭 여부에 따라 색상이 다르게 지정됩니다.
@@ -137,8 +137,8 @@ DevTools 에서 CSS 매칭 셀렉터를 수정했지만, 마지막 릴리즈에�
 
 Chromium issue: [1219153](https://crbug.com/1219153)
 
-## Network 영역에서 JSON 응답 Pretty-printing 하기 {: #pretty-print-json }
 
+## Network 영역에서 JSON 응답 Pretty-printing 하기 {: #pretty-print-json }
 이제 **Network** 영역에서 JSON 응답을 Pretty-print 하여 보여줄 수 있습니다.
 
 **Network** 영역에서 JSON 응답을 실행하고, `{}` 아이콘을 클릭하면 Pretty-print 하여 보여줍니다.
@@ -149,5 +149,5 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/ko/reach-out.md' %}
+{% partial 'devtools/ko/whats-new.md' %}

@@ -28,7 +28,7 @@ O Lighthouse sinaliza o seguinte texto de link genérico:
 - `mais`
 - `saiba mais`
 
-{% partial 'lighthouse-seo/scoring.md' %}
+{% partial 'lighthouse-seo/scoring.njk' %}
 
 ## Como adicionar texto de link descritivo
 

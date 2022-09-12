@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 의 새로운 기능 (Chrome 97)'
+layout: "layouts/blog-post.njk"
+title: "DevTools 의 새로운 기능 (Chrome 97)"
 authors:
   - jecelynyeen
 date: 2021-11-29
 updated: 2021-11-29
-description: '새로운 Recorder 패널, Device Mode 의 기기 목록 갱신 등'
+description:
+  "새로운 Recorder 패널, Device Mode 의 기기 목록 갱신 등"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4oKuqdeNrPY27y4pg3St.jpg'
 alt: ''
 tags:
@@ -14,9 +15,9 @@ tags:
   - chrome-97
 ---
 
-_이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ko/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -48,6 +49,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 Chromium issue: [1223525](https://crbug.com/1223525)
 
+
 ## HTML로 수정에서 자동완성 {: #code-completion }
 
 **HTML로 수정** UI 에서 자동 완성과 문법 강조를 지원합니다. **요소** 패널의 요소에서 우클릭한 뒤, **HTML로 수정** 을 선택하세요. DOM 속성 (예시: `id`, `aria`)을 작성해보세요, 자동 완성은 여러분이 찾고 있는 속성명을 찾는데 도움이 될 것입니다.
@@ -57,6 +59,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f467de3e756f998b0e9dd222ce286cb2b7cbaca0 #}
 
 Chromium issue: [1215072](https://crbug.com/1215072)
+
 
 ## 코드 디버깅 경험 개선 {: #debugging }
 
@@ -68,6 +71,7 @@ Chromium issue: [1215072](https://crbug.com/1215072)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/277ee38b0701e6e5b36c9626d109b62b0361ced6 #}
 
 Chromium issue: [1073064](https://crbug.com/1073064)
+
 
 ## [실험실 기능] 여러 기기 사이의 DevTools 설정 동기화 {: #sync }
 
@@ -83,5 +87,5 @@ Chrome 프로필 동기화를 활성화하였을 때 DevTools 설정이 기본�
 
 Chromium issue: [1245541](https://crbug.com/1245541)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/ko/reach-out.md' %}
+{% partial 'devtools/ko/whats-new.md' %}

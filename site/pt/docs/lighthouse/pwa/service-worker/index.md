@@ -30,11 +30,11 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza pá
 
 O Lighthouse verifica se o [protocolo de depuração remota do Chrome](https://github.com/ChromeDevTools/devtools-protocol) retorna uma versão do service worker. Do contrário, a auditoria falha.
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como registrar um service worker
 
-{% partial 'reliable/workbox.md' %}
+{% partial 'reliable/workbox.njk' %}
 
 O registro de um service worker envolve apenas algumas linhas de código, mas o único motivo pelo qual você utilizaria um ervice worker é para possibilitar a implementação de um dos recursos do PWA descritos acima. Na verdade, a implementação desses recursos requer mais trabalho:
 

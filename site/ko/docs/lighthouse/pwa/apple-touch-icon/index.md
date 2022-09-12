@@ -19,7 +19,7 @@ iOS Safari 사용자가 홈 화면에 [PWA(Progressive Web App)](https://web.dev
 
 Lighthouse는 아이콘이 실제로 존재하는지, 또는 아이콘이 올바른 크기인지 확인하지 않습니다.
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Apple 터치 아이콘을 추가하는 방법
 

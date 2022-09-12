@@ -24,7 +24,7 @@ LighthouseがページのHTMLで`theme-color`メタタグを検出せず、[Web�
 
 Lighthouseは、値が有効なCSSカラー値であるかどうかをテストしないことに注意してください。
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## アドレスバーのテーマの色を設定する方法
 

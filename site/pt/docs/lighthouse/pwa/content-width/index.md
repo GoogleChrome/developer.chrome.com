@@ -18,7 +18,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza pá
 
 A auditoria falhará se `window.innerWidth` não for igual a `window.outerWidth` .
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como ajustar sua página em telas de celular
 

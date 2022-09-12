@@ -43,7 +43,7 @@ Cuando una página no aprueba la auditoría, Lighthouse muestra los resultados e
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo almacenar en caché los recursos estáticos mediante el almacenamiento HTTP
 

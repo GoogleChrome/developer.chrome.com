@@ -1,22 +1,24 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'Qué hay de nuevo en DevTools (Chrome 96)'
+layout: "layouts/blog-post.njk"
+title: "Qué hay de nuevo en DevTools (Chrome 96)"
 authors:
   - jecelynyeen
 date: 2021-10-25
 updated: 2021-10-25
-description: 'Nuevo panel de Descripción General de CSS, emule la función multimedia CSS de contraste, emula la función de tema oscuro automático de Chrome y mucho más.'
+description:
+  "Nuevo panel de Descripción General de CSS, emule la función multimedia CSS de contraste, emula la función de tema oscuro automático de Chrome y mucho más."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nGhNBHKztHdRnnNLikve.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-96
+
 ---
 
-_Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
+*Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/es/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -37,11 +39,11 @@ Lea [este artículo](/docs/devtools/css-overview) para obtener más información
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-## Recuperada y mejorada las acciones de copiar y editar propiedades CSS con logintud {: #length }
+## Recuperada y mejorada las acciones de copiar y editar propiedades CSS con logintud {: #length } 
 
 Las acciones de **copiar CSS** y **editar como texto** se restauran para las propiedades CSS con longitud. Estas características dejaron de funcionar en la última versión.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} 
 
 Además, puede arrastrar para ajustar el valor de la unidad y actualizar el tipo de unidad a través del menú desplegable. Esta funcionalidad no debería afectar a la experiencia de usuario en la acción principal editar como texto.
 
@@ -70,6 +72,7 @@ Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **
 
 Chromium issue: [1139777](https://crbug.com/1139777)
 
+
 ### Emula la función de tema oscuro automático de Chrome {: #auto-dark-mode }
 
 Use DevTools para emular el tema oscuro automático para ver fácilmente cómo se ve su página cuando el [Tema oscuro automático](/blog/auto-dark-theme/) de Chrome está habilitado.
@@ -84,6 +87,7 @@ Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **
 
 Chromium issue: [1243309](https://crbug.com/1243309)
 
+
 ## Copiar declaraciones como JavaScript en el panel Estilos {: #copy-as-js }
 
 Se agregan dos nuevas opciones en el menú contextual para que pueda copiar fácilmente las reglas CSS como propiedades de JavaScript. Estas opciones de atajos son útiles especialmente para los desarrolladores que están trabajando con bibliotecas [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js).
@@ -97,6 +101,7 @@ Por ejemplo, el siguiente ejemplo copiará `padding-left: '1.5rem'` al portapape
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca17a55104e6baf8d4ab360b484111bfa93c9b7f #}
 
 Chromium issue: [1253635](https://crbug.com/1253635)
+
 
 ## Nueva pestaña de Payload en el panel Red {: #payload }
 
@@ -120,6 +125,7 @@ Junto con las mejoras del panel [**Propiedades**](/blog/new-in-devtools-95/#prop
 
 Chromium issue: [1226262](https://crbug.com/1226262)
 
+
 ## Actualizaciones de la consola
 
 ### Opción para ocultar errores CORS en la consola {: #hide-cors-errors }
@@ -128,11 +134,13 @@ Puede ocultar los errores de CORS en la **Consola**. Como los errores de CORS ah
 
 En **Consola**, haz clic en el ícono **Configuración** y desmarca la casilla de verificación **Mostrar errores de CORS en la consola**.
 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m3ZzZI5VkYSYCfCLDHUi.png", alt="Opción para ocultar errores CORS en la consola", width="800", height="502" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/82873eeb1c1430790ad3a2cd2a698135bd6eb3de #}
 
 Chromium issue: [1251176](https://crbug.com/1251176)
+
 
 ### Vista previa y evaluación adecuadas de los objetos `Intl` en la consola {: #intl }
 
@@ -148,11 +156,13 @@ Chromium issue: [1073804](https://crbug.com/1073804)
 
 DevTools ahora informa de las trazas de las pilas `async` para que las funciones `async` sean consistentes con otras tareas asincrónicas.
 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="Trazas de la pila asíncrona", width="800", height="427" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec  #}
 
 Chromium issue: [1254259](https://crbug.com/1254259)
+
 
 ### Mantener la barra lateral de la consola {: #console-sidebar }
 
@@ -166,13 +176,14 @@ Ahora tenemos suficientes comentarios sobre el aviso de desactivación y trabaja
 
 Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.com/1255586)
 
-## Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación {: #app-cache } -->
+## Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación  {: #app-cache } -->
 
 El panel [Caché de la aplicación](/docs/devtools/storage/applicationcache/) en el panel de Aplicación se eliminó pues el soporte para [AppCache](https://web.dev/appcache-removal/) se ha eliminado de Chrome y otros navegadores basados ​​en Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
 Chromium issue: [1084190](https://crbug.com/1084190)
+
 
 ## [Experimental] Nuevo panel de la API de informes en el panel de la aplicación {: #reporting-api }
 
@@ -188,11 +199,13 @@ Tenga en cuenta que la sección **Endpoints** se encuentra actualmente en desarr
 
 Obtenga más información sobre la **API de informes** con [este artículo](https://web.dev/reporting-api/).
 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Panel de la API de informes en el panel de la aplicación", width="800", height="476" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c0516bfc7d4cee077452d31b1550ea1d3c594705 #}
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/es/reach-out.md' %}
+{% partial 'devtools/es/whats-new.md' %}
+

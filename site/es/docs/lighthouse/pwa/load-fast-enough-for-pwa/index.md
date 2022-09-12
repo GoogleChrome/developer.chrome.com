@@ -27,9 +27,9 @@ Por ejemplo, si una página aparece visualmente completa después de 1 segundo, 
 
 Lighthouse calcula lo que sería el TTI en una conexión de red 4G lenta. Si el tiempo para interactuar es más de 10 segundos, la auditoría falla.
 
-{% partial 'lighthouse-pwa/scoring.md' %}
+{% partial 'lighthouse-pwa/scoring.njk' %}
 
-{% partial 'lighthouse-performance/improve.md' %}
+{% partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

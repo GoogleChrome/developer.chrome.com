@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: 'DevTools 의 새로운 기능 (Chrome 95)'
+layout: "layouts/blog-post.njk"
+title: "DevTools 의 새로운 기능 (Chrome 95)"
 authors:
   - jecelynyeen
 date: 2021-09-20
 updated: 2021-09-20
-description: '새 CSS 길이 작성 도구, 문제 탭에서 문제 숨기기 기능, 속성 표시 방법 개선 및 다른 새로운 기능들.'
+description:
+  "새 CSS 길이 작성 도구, 문제 탭에서 문제 숨기기 기능, 속성 표시 방법 개선 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/j60zqojAh4GHLDEeiqJU.jpg'
 alt: ''
 tags:
@@ -14,9 +15,9 @@ tags:
   - chrome-95
 ---
 
-_이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [최원영](https://www.linkedin.com/in/toruchoi)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [최원영](https://www.linkedin.com/in/toruchoi)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/ko/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -43,6 +44,7 @@ DevTools 에 CSS 길이를 더 쉽고 유연하게 변경할 수 있는 방법�
 
 Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.com/1172993)
 
+
 ## 문제 탭에서 문제 숨기기 {: #hide-issues }
 
 문제 탭에서 특정 문제를 숨김으로써 중요한 문제에만 집중할 수 있습니다.
@@ -59,6 +61,7 @@ Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.c
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
+
 ## 속성 표시 개선 {: #properties }
 
 DevTools 에서 속성을 표시하는 방식을 개선했습니다.
@@ -73,7 +76,7 @@ DevTools 에서 속성을 표시하는 방식을 개선했습니다.
 
 const link = new URL('https://goo.gle/devtools-blog');
 
-link.user = {id: 1, name: 'Jane Doe'};
+link.user = { id: 1, name: 'Jane Doe' };
 link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
@@ -95,9 +98,10 @@ link.search = `?access=${link.access}`;
 
 Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.com/1119900)
 
+
 ## Lighthouse 8.4 {: #lighthouse }
 
-Lighthouse 패널이 이제 Lighthouse 8.4로 업데이트 되었습니다.
+Lighthouse 패널이 이제 Lighthouse 8.4로 업데이트 되었습니다. 
 이제 Lighthouse에서 [Largest Containful Paint (LCP)](https://web.dev/lcp) 요소가 레이지 로딩된 이미지인지 감지하고
 해당 요소에서 `loading` 속성을 제거할 것을 권장합니다.
 
@@ -109,9 +113,10 @@ Lighthouse 패널이 이제 Lighthouse 8.4로 업데이트 되었습니다.
 
 Chromium issue: [772558](https://crbug.com/772558)
 
+
 ## 소스 패널에서 스니펫 정렬 {: #snippets }
 
-**소스** 패널 안에 있는 **스니펫** 영역의 [스니펫](/docs/devtools/javascript/snippets/) 들은 이제 알파벳 순으로 정렬됩니다.
+**소스** 패널 안에 있는 **스니펫** 영역의 [스니펫](/docs/devtools/javascript/snippets/) 들은 이제 알파벳 순으로 정렬됩니다. 
 
 커맨드를 통해 더 빠르게 스니펫 기능을 실행할 수 있습니다. [tip](https://youtu.be/NOal2gTzftI?t=176) (영문) 영상을 참고하세요!
 
@@ -120,6 +125,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="소스 패널에서 스니펫 정렬", width="800", height="475" %}
 
 Chromium issue: [1243976](https://crbug.com/1243976)
+
 
 ## 번역된 릴리즈 정보와 번역 오류 제보를 위한 링크들 {: #localized }
 
@@ -133,7 +139,8 @@ Chrome 94 부터 DevTools 에서 [선호하는 언어를 설정](/ko/blog/new-in
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/312e43a6c50bc29f279f9eac2f91b723b36c7ee9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dcd3ae13ebc5d340b2abb07e9dc99cfa74caea35 #}
 
-Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.com/1245481)
+Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.com/1245481) 
+
 
 ## DevTools 커맨드 메뉴 UI 개선 {: #command-menu }
 
@@ -152,5 +159,5 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/ko/reach-out.md' %}
+{% partial 'devtools/ko/whats-new.md' %}

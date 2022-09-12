@@ -46,7 +46,7 @@ table with three columns:
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to fix your tap targets
 

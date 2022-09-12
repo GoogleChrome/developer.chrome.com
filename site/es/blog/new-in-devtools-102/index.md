@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: 'Nuevo panel de información de rendimiento, accesos directos para emular temas claros/oscuros y más.'
+description: "Nuevo panel de información de rendimiento, accesos directos para emular temas claros/oscuros y más."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4CYWnER9C02aV3UBOVkN.jpg'
 alt: ''
 tags:
@@ -14,9 +14,10 @@ tags:
   - chrome-102
 ---
 
-_Gracias por la traducción [Carlos Caballero](https://carloscaballero.io) y [Miguel Ángel](https://midu.dev) por la revisión._
+_Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/es/banner.md' %}
+
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -50,11 +51,13 @@ Use el panel **Performance Insights** para obtener información procesable y bas
 
 Una vez que se completa la grabación, se obtiene información sobre el rendimiento en el panel **Insights**. Haga clic en cada elemento de información (por ejemplo, solicitudes de red que bloquean el renderizado, cambio de diseño) para comprender el problema y las posibles soluciones.
 
+
 Vaya al panel de **Perspectivas de rendimiento** [documentación](/docs/devtools/performance-insights/) para obtener más información con el tutorial paso a paso.
 
 Esta es una función de vista previa para ayudar a los desarrolladores web (especialmente a los expertos en rendimiento) a identificar y solucionar posibles problemas de rendimiento. Nuestro equipo está trabajando activamente en esta función y esperamos sus [comentarios](https://crbug.com/1270700) para realizar más mejoras.
 
 Chromium issue: [1270700](https://crbug.com/1270700)
+
 
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 
@@ -73,6 +76,7 @@ Anteriormente, se necesitaban más pasos para [emular temas](/docs/devtools/rend
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/34c39bcabca71195024f1312ec29eecf464a633d #}
 
 Chromium issue: [1314299](https://crbug.com/1314299)
+
 
 <!-- ## Improve security on the Network Preview tab {: #network-preview } -->
 
@@ -96,6 +100,7 @@ El navegador bloqueó la solicitud de la hoja de estilo de forma predeterminada.
 
 Chromium issue: [833147](https://crbug.com/833147)
 
+
 <!-- ## Improved reloading at breakpoint {: #debugger } -->
 
 <!-- The debugger now terminates script execution when reloading at breakpoint. -->
@@ -118,13 +123,14 @@ Continuar ejecutando JavaScript está causando muchos problemas a los desarrolla
 
 Chromium issues: [1014415](https://crbug.com/1014415), [1004038](https://crbug.com/1004038), [1112863](https://crbug.com/1112863), [1134899](https://crbug.com/1134899)
 
+
 <!-- ## Console updates  {: #console } -->
 
 <!-- ### Handle script execution errors in the Console {: #errors } -->
 
 <!-- Errors during script evaluation in the Console now generate proper error events that trigger the `window.onerror` handler and are dispatched as `"error"` events on the window object. -->
 
-## Actualizaciones de la consola {: #console }
+## Actualizaciones de la consola  {: #console }
 
 ### Manejar errores de ejecución de scripts en la Consola {: #errors }
 
@@ -135,6 +141,7 @@ Los errores durante la evaluación del script en la consola ahora generan evento
 {# https://chromium.googlesource.com/v8/v8/+/56cfdd68c731c53d016326b890b56b5c30098998 #}
 
 Chromium issue: [1295750](https://crbug.com/1295750)
+
 
 <!-- ### Commit live expression with Enter {: #live-expression } -->
 
@@ -166,6 +173,7 @@ Puede cancelar la grabación durante el inicio de la grabación del flujo de usu
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
+
 <!-- ## Display inherited highlight pseudo-elements in the Styles pane {: #pseudo } -->
 
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
@@ -179,7 +187,6 @@ Vea los pseudoelementos heredados resaltados (por ejemplo, `::selection`, `::spe
 Como se menciona en la [especificación](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), cuando varios estilos entran en conflicto, la cascada determina el estilo ganador. Esta nueva función ayuda a comprender la herencia y la prioridad de las reglas.
 
 {% Aside %}
-
 <!-- At the moment, you need to run Chrome with the `--enable-blink-features=HighlightInheritance` flag to enable this feature. -->
 
 Por el momento, debe ejecutar Chrome con el flag `--enable-blink-features=HighlightInheritance` para habilitar esta función.
@@ -190,6 +197,7 @@ Por el momento, debe ejecutar Chrome con el flag `--enable-blink-features=Highli
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bfe1683fe8b2eaa9ea2960dedca2e4a0bbc73546 #}
 
 Chromium issue: [1024156](https://crbug.com/1024156)
+
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 
@@ -214,12 +222,13 @@ Estas son algunas correcciones notables en esta versión:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6616b9f0cd3e9f1138fb0f409fbe91206d5c8640 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9751653723e15073588f985ba53ba5204475b8c5 #}
 
+
 <!-- ## [Experimental] Copy CSS changes {: #copy } -->
 
 ## [Experimental] Copiar cambios de CSS {: #copy }
 
-{% Aside %}
 
+{% Aside %}
 <!-- To enable the experiment, check **Sync CSS changes in the Styles pane** under **Settings** > **Experiments**. -->
 
 Para habilitar el experimento, marque **Sincronizar cambios de CSS en el panel Estilos** en **Configuración** > **Experimentos**.
@@ -245,14 +254,14 @@ Aparte de eso, puede copiar todos los cambios de CSS en las declaraciones hacien
 
 Chromium issue: [1268754](https://crbug.com/1268754)
 
+
 <!-- ## [Experimental] Picking color outside of browser {: #color-picker } -->
 
 ## [Experimental] Selección de color fuera del navegador{: #color-picker }
 
+
 {% Aside %}
-
 <!-- To enable the experiment, check **Enable color picking outside the browser window** under **Settings** > **Experiments**. -->
-
 Para habilitar el experimento, marque **Habilitar selección de color fuera de la ventana del navegador** en **Configuración** > **Experimentos**.
 {% endAside %}
 
@@ -270,5 +279,6 @@ En el panel **Estilos**, haga clic en cualquier vista previa de color para abrir
 
 Chromium issue: [1245191](https://crbug.com/1245191)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/es/reach-out.md' %}
+{% partial 'devtools/es/whats-new.md' %}

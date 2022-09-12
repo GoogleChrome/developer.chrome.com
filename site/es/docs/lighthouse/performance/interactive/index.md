@@ -57,7 +57,7 @@ Esta tabla muestra cómo interpretar tu puntaje TTI:
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.md' %}
+{% partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo mejorar tu puntaje TTI
 
@@ -74,7 +74,7 @@ Para saber cómo medir cuándo ocurre realmente el TTI en los dispositivos de su
 
 {% Aside %} El TTI puede ser difícil de rastrear en un ambiente real. El seguimiento del [First Input Delay (FID): Demora de la primera entrada](https://developers.google.com/web/updates/2018/05/first-input-delay) puede ser un buen indicador directo del TTI. {% endAside %}
 
-{% partial 'lighthouse-performance/improve.md' %}
+{% partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

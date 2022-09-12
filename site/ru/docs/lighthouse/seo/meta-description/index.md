@@ -23,7 +23,7 @@ updated: 2021-04-08
 
 Lighthouse не оценивает качество вашего описания.
 
-{% partial 'lighthouse-seo/scoring.md' %}
+{% partial 'lighthouse-seo/scoring.njk' %}
 
 ## Как добавить метаописание
 

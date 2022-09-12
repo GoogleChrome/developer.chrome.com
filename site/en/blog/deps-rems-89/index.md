@@ -12,8 +12,8 @@ tags:
   - deprecations-removals
   - chrome-89
 ---
-{% partial '
-{% include 'partials/see-all-dep-rem.md' %}
+
+{% partial 'see-all-dep-rem.md' %}
 
 Chrome 89 beta was released on January 28, 2021 and is expected to become the
 stable version in the first week of March 2021.
@@ -34,5 +34,5 @@ namespace. This brings Chrome in conformance with the HTML specification.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5679997870145536) &#124;
 [Chromium Bug](https://crbug.com/771959)
-{% partial '
-{% include 'partials/deprecations-policy.md' %}
+
+{% partial 'deprecations-policy.md' %}

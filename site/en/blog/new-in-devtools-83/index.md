@@ -191,9 +191,9 @@ to cover it in What's New In DevTools (Chrome 81).
 
 {% endAside %}
 
-{% partial '
+
 {% partial 'devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: /docs/devtools/evaluate-performance/reference#rendering
 [2]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/
