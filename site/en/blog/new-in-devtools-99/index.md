@@ -14,7 +14,7 @@ tags:
   - chrome-99
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -168,5 +168,5 @@ These are some noteworthy fixes in this release:
 - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)
 - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

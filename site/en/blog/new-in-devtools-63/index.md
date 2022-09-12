@@ -14,7 +14,7 @@ tags:
   - chrome-63
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
@@ -125,8 +125,8 @@ now you can send custom tags:
 **Figure 3**. After clicking **Sync**, DevTools sends a background sync event with the custom tag
 `update-content` to the service worker
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #multi-client
 [2]: #workspaces

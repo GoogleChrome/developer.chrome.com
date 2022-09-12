@@ -14,7 +14,7 @@ tags:
   - chrome-97
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -80,5 +80,5 @@ This feature is experimental at the moment, the team is still actively working o
 
 Chromium issue: [1245541](https://crbug.com/1245541)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

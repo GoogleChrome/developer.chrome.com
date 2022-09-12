@@ -14,7 +14,7 @@ tags:
   - chrome-73
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Here's what's new in DevTools in Chrome 73.
 
@@ -268,8 +268,8 @@ The **Frames** tab has been renamed to the **Messages** tab. This tab is only av
 
 See [Chromium issue #802182][13] to report bugs or suggest improvements.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4#a4f3
 [2]: https://alligator.io/js/object-property-shorthand-es6/

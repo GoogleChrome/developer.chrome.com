@@ -16,7 +16,7 @@ tags:
   - chrome-79
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 ## New features for cookies {: #cookies }
 
@@ -152,8 +152,8 @@ Control+N to move your cursor to the line below.
 
 Chromium issue [#983874][19]
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: https://web.dev/samesite-cookies-explained#changes-to-the-default-behavior-without-samesite
 [2]: https://chromedevtools.github.io/devtools-protocol/

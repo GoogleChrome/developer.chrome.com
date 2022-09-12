@@ -14,7 +14,7 @@ tags:
   - chrome-83
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="MLNERCykDPg" %}
 
@@ -190,8 +190,8 @@ to cover it in What's New In DevTools (Chrome 81).
 
 {% endAside %}
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools/evaluate-performance/reference#rendering
 [2]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/

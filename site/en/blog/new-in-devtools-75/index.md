@@ -14,7 +14,7 @@ tags:
   - chrome-75
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
@@ -159,8 +159,8 @@ used for indentation. To override the default behavior and use <kbd>Tab</kbd> to
 There's been a lot of work recently around making the DevTools UI itself more keyboard navigable.
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/CSS/filter

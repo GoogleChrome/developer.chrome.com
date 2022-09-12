@@ -4,6 +4,6 @@ title: Policies
 description: Foo bar baz
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% partial 'extensions/mv2-legacy-page.md' %}
 
 Extension policies

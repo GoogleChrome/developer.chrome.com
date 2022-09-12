@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it's different from regular CSS that has been supported by DevTools for a long time.
 
@@ -152,5 +152,5 @@ To recap our story here, we went through the relevant use cases related to CSS-i
 
 For more background, check out [our design proposal](https://goo.gle/devtools-css-in-js) or the Chromium [tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=946975) which references all related patches.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

@@ -14,7 +14,7 @@ tags:
   - chrome-102
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -172,5 +172,5 @@ In the **Styles** pane, click on any color preview to open the color picker. Use
 
 Chromium issue: [1245191](https://crbug.com/1245191)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

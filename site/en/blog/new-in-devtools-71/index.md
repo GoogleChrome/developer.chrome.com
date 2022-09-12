@@ -14,7 +14,7 @@ tags:
   - chrome-71
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 New features and major changes coming to Chrome DevTools in Chrome 71 include:
 
@@ -179,8 +179,8 @@ Other supported types are `key`, `touch`, and `control`.
 
 Check out [Command Line Reference][16] for other handy functions that you can call from the Console.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #hover
 [2]: #store

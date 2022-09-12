@@ -14,7 +14,7 @@ tags:
   - chrome-96
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -192,5 +192,5 @@ Learn more about the **Reporting API** with [this article](https://web.dev/repor
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

@@ -14,7 +14,7 @@ tags:
   - chrome-61
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 61 include:
 
@@ -98,8 +98,8 @@ ES6 Modules are shipping natively in Chrome 61. There's not much going on here w
 DevTools, other than that debugging works as you'd expect it to. Try setting some breakpoints in and
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #throttling
 [2]: #storage
