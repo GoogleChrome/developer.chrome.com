@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% partial 'devtools/pt/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -141,5 +141,5 @@ Estas são algumas correções dignas de nota nesta versão:
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - O painel **Sources** agora restaura a posição de rolagem corretamente no carregamento da página. Anteriormente, a posição não era restaurada corretamente causando transtornos na depuração. ([1294422](https://crbug.com/1294422))
 
-{% partial 'devtools/pt/reach-out.md' %}
-{% partial 'devtools/pt/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

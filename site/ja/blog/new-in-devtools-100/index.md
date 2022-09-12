@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% partial 'devtools/ja/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -150,5 +150,5 @@ Chromium issue: [1261130](https://crbug.com/1261130)
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - **Sources** パネルは、ページの読み込み時にスクロール位置を正しく復元するようになりました。以前は、位置が正しく復元されなかったために、デバッグ時に不便さがありました。 ([1294682](https://crbug.com/1294682))
 
-{% partial 'devtools/ja/reach-out.md' %}
-{% partial 'devtools/ja/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

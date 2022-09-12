@@ -17,7 +17,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% partial 'devtools/pt/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -210,5 +210,5 @@ Estas são algumas correções dignas de nota nesta versão:
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 
 
-{% partial 'devtools/pt/reach-out.md' %}
-{% partial 'devtools/pt/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

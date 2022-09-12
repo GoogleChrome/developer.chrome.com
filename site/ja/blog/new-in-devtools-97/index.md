@@ -17,7 +17,7 @@ tags:
 
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんと [technohippy](https://github.com/technohippy) さんに感謝いたします。*
 
-{% partial 'devtools/ja/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -103,5 +103,5 @@ Chrome プロファイル同期を有効にしている際は、DevTools 設定�
 
 Chromium issue: [1245541](https://crbug.com/1245541)
 
-{% partial 'devtools/ja/reach-out.md' %}
-{% partial 'devtools/ja/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

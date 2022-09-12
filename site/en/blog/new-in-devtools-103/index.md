@@ -14,7 +14,7 @@ tags:
   - chrome-103
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -169,5 +169,5 @@ Here are a few fixes on sourcemaps to improve the overall debugging experience:
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

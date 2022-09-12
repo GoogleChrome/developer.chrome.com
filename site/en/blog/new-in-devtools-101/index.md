@@ -14,7 +14,7 @@ tags:
   - chrome-101
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -108,5 +108,5 @@ Each mode has its own unique use cases, benefits, and limitations. Please refer 
 Chromium issue: [772558](https://crbug.com/772558)
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

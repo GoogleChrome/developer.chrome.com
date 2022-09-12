@@ -14,7 +14,7 @@ tags:
   - chrome-60
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Welcome! New features and major changes coming to DevTools in Chrome 60 include:
 
@@ -218,8 +218,8 @@ been working on over the past year and the big themes that they're tackling in t
 
 {% YouTube id="PjjlwAvV8Jg" %}
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #lighthouse
 [2]: #badges

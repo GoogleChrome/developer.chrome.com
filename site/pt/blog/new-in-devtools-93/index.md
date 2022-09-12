@@ -17,7 +17,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](http://info.lsantos.dev)*
 
-{% partial 'devtools/pt/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -147,5 +147,5 @@ Abra uma resposta JSON no painel **Network**, clique no ícone `{}` para transfo
 
 Bug relacionado: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/pt/reach-out.md' %}
-{% partial 'devtools/pt/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

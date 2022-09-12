@@ -14,7 +14,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
@@ -187,5 +187,5 @@ Another important aspect of BiDi is Web Platform Tests. Currently they cover Web
 ## What is the current state?
 To track the current state of our implementation and the specification, see the [WebDriver BiDi prototyping progress](https://github.com/GoogleChromeLabs/chromium-bidi/milestones).
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

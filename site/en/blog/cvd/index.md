@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
@@ -340,5 +340,5 @@ What’s unique about this implementation is that our HTML/CSS/SVG prototype end
 
 For more background, check out [our design proposal](https://goo.gle/devtools-cvd) or [the Chromium tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1003700) which references all related patches.
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

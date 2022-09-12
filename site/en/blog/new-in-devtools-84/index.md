@@ -14,7 +14,7 @@ tags:
   - chrome-84
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="dgYAlcJonxo" %}
 
@@ -154,8 +154,8 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1KUD1snHJ1sVaaZo3BRK.png", alt="App shortcuts in the Manifest pane.", width="800", height="534" %}
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools/issues
 [2]: https://crbug.com/1068116

@@ -14,7 +14,7 @@ tags:
   - devtools-architecture
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
@@ -172,5 +172,5 @@ Overall, using ESLint rules for this migration was really helpful as we were abl
 
 So far, all the web components in Chromium DevTools have been migrated to use the new CSS infrastructure instead of using inline styles. Most of the legacy usages of `registerRequiredCSS` have also been migrated to use the new system. All that is left is to remove as many `module.json` files as possible and then migrate this current infrastructure to implement CSS Module Scripts in the future!
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

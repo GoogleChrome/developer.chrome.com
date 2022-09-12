@@ -15,7 +15,7 @@ tags:
   - chrome-95
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -148,5 +148,5 @@ The UI improvements of the **Command Menu** is still ongoing, stay tuned for mor
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

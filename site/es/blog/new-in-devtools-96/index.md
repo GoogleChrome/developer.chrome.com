@@ -18,7 +18,7 @@ tags:
 
 *Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
 
-{% partial 'devtools/es/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -206,6 +206,6 @@ Obtenga más información sobre la **API de informes** con [este artículo](http
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% partial 'devtools/es/reach-out.md' %}
-{% partial 'devtools/es/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 

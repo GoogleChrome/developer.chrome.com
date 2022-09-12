@@ -14,7 +14,7 @@ tags:
   - chrome-59
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Welcome to another installment of the DevTools release notes. Watch the video
 below or read on to see what's new in Chrome DevTools in Chrome 59!
@@ -131,7 +131,7 @@ Menu has been unified with the **Open File** menu, which is
 <kbd>Command</kbd>+<kbd>O</kbd> (Mac), or <kbd>Control</kbd>+<kbd>O</kbd>
 (Windows, Linux).
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 

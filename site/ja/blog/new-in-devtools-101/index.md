@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [lacolaco](https://github.com/lacolaco) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [yoichiro](https://github.com/yoichiro) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% partial 'devtools/ja/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -139,5 +139,5 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-{% partial 'devtools/ja/reach-out.md' %}
-{% partial 'devtools/ja/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

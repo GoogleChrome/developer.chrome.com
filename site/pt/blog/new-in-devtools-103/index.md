@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Lucas Santos](https://lsantos.dev). Revisão por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% partial 'devtools/pt/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -212,5 +212,5 @@ Aqui estão algumas correções nos sourcesmaps para melhorar a experiência ger
 
 Issues relacionadas: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
-{% partial 'devtools/pt/reach-out.md' %}
-{% partial 'devtools/pt/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

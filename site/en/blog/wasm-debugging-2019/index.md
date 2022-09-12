@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 ## Background
 
@@ -90,5 +90,5 @@ Stay tuned for future updates!
 The original blog post used to state that Emscripten doesn't support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
 {% endAside %}
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

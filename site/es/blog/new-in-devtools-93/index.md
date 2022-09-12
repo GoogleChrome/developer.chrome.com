@@ -17,7 +17,7 @@ tags:
 
 *Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
 
-{% partial 'devtools/es/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -154,5 +154,5 @@ Abre la respuesta JSON en el panel de **Red**, haz clic en el botón `{}` para f
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/es/reach-out.md' %}
-{% partial 'devtools/es/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

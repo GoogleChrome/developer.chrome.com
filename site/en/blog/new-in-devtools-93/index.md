@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -142,5 +142,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

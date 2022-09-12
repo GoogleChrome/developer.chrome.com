@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='VBMHswhun-s' %}
 
@@ -429,5 +429,5 @@ Meanwhile, please help us out by trying the current beta on your own code and re
 issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

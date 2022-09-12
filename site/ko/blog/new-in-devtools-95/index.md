@@ -17,7 +17,7 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [최원영](https://www.linkedin.com/in/toruchoi)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% partial 'devtools/ko/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -159,5 +159,5 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/ko/reach-out.md' %}
-{% partial 'devtools/ko/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

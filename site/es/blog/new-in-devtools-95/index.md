@@ -24,7 +24,7 @@ tags:
 
 *Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
 
-{% partial 'devtools/es/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -190,5 +190,5 @@ Las mejoras de la interfaz de usuario del **Menú de comandos** aún están en p
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/es/reach-out.md' %}
-{% partial 'devtools/es/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

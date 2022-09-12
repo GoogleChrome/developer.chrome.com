@@ -16,7 +16,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% partial 'devtools/ru/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -225,5 +225,5 @@ DevTools теперь поддерживают возможность выбра
 Задачи в трекере Chromium: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
 
 
-{% partial 'devtools/ru/reach-out.md' %}
-{% partial 'devtools/ru/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

@@ -18,7 +18,7 @@ tags:
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
 
 
-{% partial 'devtools/ja/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -246,5 +246,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% partial 'devtools/ja/reach-out.md' %}
-{% partial 'devtools/ja/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

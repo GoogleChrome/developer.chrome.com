@@ -14,7 +14,7 @@ tags:
   - devtools-architecture
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 As you might know, [Chrome DevTools](/docs/devtools/) is a web application written using HTML, CSS and JavaScript.
 Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
@@ -254,5 +254,5 @@ Transferring that domain knowledge to others working in the same codebase is not
 Knowing what to share and what details not to share is an art, but a necessary one.
 It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/engineering-blog.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/engineering-blog.md' %}

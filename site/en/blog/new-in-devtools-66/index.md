@@ -14,7 +14,7 @@ tags:
   - chrome-66
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 66 include:
 
@@ -160,8 +160,8 @@ where I really wanted to pause all along.
 **Figure 8**. The `click` breakpoint now pauses on the app's listener code
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #ignore-script
 [2]: #auto-adjust

@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Chrome DevTools is launching a full accessibility tree making it easier for developers to get an overview of the whole tree. In this post find out how this tree is created and how to use it in your work.
 

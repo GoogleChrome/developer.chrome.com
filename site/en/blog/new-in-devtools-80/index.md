@@ -16,7 +16,7 @@ tags:
   - chrome-80
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="2EiPb1opH3g" %}
 
@@ -165,8 +165,8 @@ and V8's garbage collector has cleaned it up.
 Chromium issue [#1004203][14]
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/

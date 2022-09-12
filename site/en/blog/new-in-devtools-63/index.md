@@ -15,7 +15,7 @@ tags:
   - chrome-63
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
@@ -127,8 +127,8 @@ now you can send custom tags:
 `update-content` to the service worker
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: #multi-client
 [2]: #workspaces

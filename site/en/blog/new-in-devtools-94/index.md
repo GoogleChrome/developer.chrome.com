@@ -15,7 +15,7 @@ tags:
   - chrome-94
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -165,5 +165,5 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

@@ -25,7 +25,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% partial 'devtools/pt/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -105,5 +105,5 @@ Este recurso é experimental no momento, a equipe ainda está trabalhando ativam
 
 Issue Relacionada: [1245541](https://crbug.com/1245541)
 
-{% partial 'devtools/pt/reach-out.md' %}
-{% partial 'devtools/pt/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

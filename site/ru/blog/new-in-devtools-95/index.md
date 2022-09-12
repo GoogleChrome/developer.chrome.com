@@ -25,7 +25,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% partial 'devtools/ru/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -216,5 +216,5 @@ Windows и Linux или <kbd>Command</kbd>+<kbd>P</kbd> на MacOS.
 
 Задача в трекере Chromium: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/ru/reach-out.md' %}
-{% partial 'devtools/ru/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

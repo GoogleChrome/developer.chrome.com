@@ -14,7 +14,7 @@ tags:
   - chrome-76
 ---
 
-{% partial 'devtools/en/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 76.
 
@@ -168,8 +168,8 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 {% YouTube id="MbnATLCuKI4" %}
 
 
-{% partial 'devtools/en/reach-out.md' %}
-{% partial 'devtools/en/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://crbug.com/931145

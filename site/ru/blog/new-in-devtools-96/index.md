@@ -25,7 +25,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% partial 'devtools/ru/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -268,5 +268,5 @@ DevTools теперь отображает стек трассировки `asyn
 
 Задача в трекере Chromium: [1205856](https://crbug.com/1205856)
 
-{% partial 'devtools/ru/reach-out.md' %}
-{% partial 'devtools/ru/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}
