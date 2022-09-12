@@ -59,7 +59,7 @@ This table shows how to interpret your TBT score:
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your TBT score
 
@@ -81,7 +81,7 @@ Unnecessary JavaScript loading, parsing, or execution is usually a much bigger o
 on most sites.
 {% endAside %}
 
-{% partial 'lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

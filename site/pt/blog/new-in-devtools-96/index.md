@@ -25,7 +25,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -243,5 +243,5 @@ Saiba mais sobre a **API de relatórios** com [este artigo](https://web.dev/repo
 
 Issue relacionada: [1205856](https://crbug.com/1205856)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

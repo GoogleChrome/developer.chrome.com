@@ -32,7 +32,7 @@ In order to pass the audit:
   You'll need to manually verify that the image displays well.
 {% endAside %}
 
-{% partial 'lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to add maskable icon support to your PWA
 

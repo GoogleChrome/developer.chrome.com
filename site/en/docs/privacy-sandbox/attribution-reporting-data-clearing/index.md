@@ -211,4 +211,4 @@ they were scheduled to be sent soon.
 
 See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
 
-{% partial 'privacysandbox-partials/ar-get-updates.njk' %}
+{% Partial 'privacysandbox-partials/ar-get-updates.njk' %}

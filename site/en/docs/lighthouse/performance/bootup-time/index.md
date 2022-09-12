@@ -50,11 +50,11 @@ To help you identify the biggest contributors to execution time,
 Lighthouse reports the time spent executing, evaluating, and parsing
 each JavaScript file that your page loads.
 
-{% partial 'lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to speed up JavaScript execution
 
-{% partial 'lighthouse-performance/js-perf.njk' %}
+{% Partial 'lighthouse-performance/js-perf.njk' %}
 
 ## Resources
 

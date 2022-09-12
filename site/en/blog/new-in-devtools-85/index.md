@@ -15,7 +15,7 @@ tags:
   - chrome-85
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="NOal2gTzftI" %}
 
@@ -186,8 +186,8 @@ differentiate conditional breakpoints and logpoints.
 Chromium issue [#1041830][30]
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: https://drafts.csswg.org/cssom/
 [2]: https://developers.google.com/web/updates/2019/02/constructable-stylesheets

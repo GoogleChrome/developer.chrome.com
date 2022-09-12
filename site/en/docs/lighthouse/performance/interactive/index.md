@@ -79,7 +79,7 @@ This table shows how to interpret your TTI score:
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your TTI score
 
@@ -109,7 +109,7 @@ Tracking [First Input Delay](https://developers.google.com/web/updates/2018/05/f
 can be a good proxy for TTI.
 {% endAside %}
 
-{% partial 'lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

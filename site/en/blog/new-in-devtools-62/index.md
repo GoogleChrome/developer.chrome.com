@@ -16,7 +16,7 @@ tags:
   - chrome-62
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 New features and changes coming to DevTools in Chrome 62:
 
@@ -201,8 +201,8 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #await
 [2]: #screenshot-areas

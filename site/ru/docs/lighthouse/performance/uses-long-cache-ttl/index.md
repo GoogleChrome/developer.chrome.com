@@ -43,7 +43,7 @@ Lighthouse считает ресурс кешируемым, если выпол
   </table>
 </div>
 
-{% partial 'lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как кешировать статические ресурсы с помощью HTTP-кеширования
 

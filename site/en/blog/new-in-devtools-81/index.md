@@ -14,7 +14,7 @@ tags:
   - chrome-81
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="HJNaNDspffM" %}
 
@@ -118,8 +118,8 @@ the **Sources** panel.
 Here's a [GIF of the feature][14].
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools/device-mode#viewport
 [2]: /docs/devtools/device-mode#frame

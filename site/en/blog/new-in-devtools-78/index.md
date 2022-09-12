@@ -15,7 +15,7 @@ tags:
   - chrome-78
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="VNkctDLYP6o" %}
 
@@ -133,8 +133,8 @@ your bug or implement your feature request!
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: /blog/new-in-devtools-59#block-requests
 [2]: /blog/new-in-devtools-65#overrides

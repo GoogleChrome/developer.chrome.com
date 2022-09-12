@@ -16,7 +16,7 @@ tags:
   - chrome-72
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 New features and major changes coming to Chrome DevTools in Chrome 72 include:
 
@@ -89,8 +89,8 @@ Also, you can now access the Audits panel from the Command Menu by typing `Light
 **Figure 5**. Typing `lighthouse` into the Command Menu
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #metrics
 [2]: #highlight

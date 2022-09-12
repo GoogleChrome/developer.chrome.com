@@ -13,7 +13,7 @@ authors:
 
 {% YouTube id='UGA74CIcom8' %}
 
-{% partial 'privacysandbox-partials/feedback-aside.njk' %}
+{% Partial 'privacysandbox-partials/feedback-aside.njk' %}
 
 ## Who is this article for?
 

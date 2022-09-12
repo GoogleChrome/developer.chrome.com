@@ -14,7 +14,7 @@ tags:
   - chrome-65
 ---
 
-{% partial 'devtools/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 New features coming to DevTools in Chrome 65 include:
 
@@ -298,8 +298,8 @@ You can also use Puppeteer to expose DevTools features while browsing without ev
 opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for an example.
 
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #overrides
 [2]: #a11y

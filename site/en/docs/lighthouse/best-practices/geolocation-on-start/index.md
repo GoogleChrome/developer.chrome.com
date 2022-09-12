@@ -31,7 +31,7 @@ before running the audit.
 Lighthouse reports the URL and line number
 of each request for geolocation permission.
 
-{% partial 'lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to ask for users' locations responsibly
 Remove all calls to `geolocation.getCurrentPosition()` and

@@ -29,7 +29,7 @@ To detect vulnerable libraries, Lighthouse:
 - Checks the list of detected libraries against
 [snyk's Vulnerability DB](https://snyk.io/vuln?packageManager=all).
 
-{% partial 'lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Stop using insecure JavaScript libraries
 

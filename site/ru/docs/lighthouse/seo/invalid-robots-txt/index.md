@@ -31,7 +31,7 @@ updated: 2020-05-29
 
 Lighthouse не проверяет правильность расположения файла `robots.txt`. Для правильной работы файл должен находиться в корне вашего домена или субдомена.
 
-{% partial 'lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Как исправить проблемы с `robots.txt`
 

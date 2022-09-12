@@ -84,7 +84,7 @@ to measure ad conversions.
 
 ## How is user data captured and aggregated?
 
-{% partial 'privacysandbox-partials/feedback-aside.njk' %}
+{% Partial 'privacysandbox-partials/feedback-aside.njk' %}
 
 With the Attribution Reporting API, an individual user's detailed activity
 across sites, and potentially the user's identity across sites, is kept
@@ -278,7 +278,7 @@ reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
 is the proposed format for summary reports.
 
-{% partial 'privacysandbox-partials/ar-engage.njk' %}
+{% Partial 'privacysandbox-partials/ar-engage.njk' %}
 
 ## Find out more
 
