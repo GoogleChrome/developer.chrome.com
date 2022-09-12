@@ -10,27 +10,28 @@ description: >
 
 *Background pages* have been a fundamental component of the Chrome Extension platform since its
 introduction. To put it simply, background pages provide extension authors with an environment that
-lives independent of any other window or tab. This allows extensions to observe and take action in
+lives independently of any other window or tab. This allows extensions to observe and take action in
 response to events.
 
-In Manifest V3, the Chrome extension platform moves from background pages to *service workers*. As
+In Manifest V3, the Chrome extension platform moves from background pages to a single *service worker*. As
 stated in [Service Workers: an Introduction][2], a "service worker is a script that your browser
 runs in the background, separate from a web page, opening the door to features that don't need a web
 page or user interaction." This is the technology that enables native-like experiences such as push
-notifications, rich offline support, background sync, and "Add to Home Screen" on the open web.
-Service workers were inspired in part by background pages in Chrome Extensions, but they iterate and
-improve on this model by tuning it for web-scale.
+notifications, rich offline support, and background sync on the open web (and a few other things extensions
+doesn't support). Service workers were inspired in part by background pages in Chrome Extensions, but they
+iterate and improve on this model by tuning it for web-scale.
 
-When migrating to this new background context, you'll need to keep two main things in mind. First,
+When migrating to this new background context, you'll need to keep two things in mind. First,
 service workers are terminated when not in use and restarted when needed (similar to event pages).
-Second, service workers don't have access to DOM. We'll explore how to adapt to these challenges in
+Second, service workers don't have access to the DOM. We'll explore how to adapt to these challenges in
 the [Thinking with Events][3] and [Working with Workers][4] sections below, respectively.
 
 ## Update your manifest {: #manifest }
 
 Extensions register their background service workers in the [manifest][3] under the `"background"`
 field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
-In Manifest V2, this field was called `"scripts"` and allowed multiple scripts.
+In Manifest V2, this field was called `"scripts"` and allowed multiple scripts. If you need
+multiple scripts, call `importScripts()` in your service worker.
 
 ```json/3-6
 {
@@ -47,9 +48,9 @@ Find out more on the [Manage events with service workers][manage-sw] reference p
 
 ## Thinking with events {: #events }
 
-Like event pages, service workers are a special execution environment that are started to handle
-events they're interested in and are terminated when they're no longer needed. The following
-sections provide recommendations for writing code in an ephemeral, evented execution context.
+Like event pages, a service worker is a special execution environment that is started to handle
+events it's interested in and is terminated when it's no longer needed. The following
+sections provide recommendations for writing code in an ephemeral, event-driven execution context.
 
 {% Aside %}
 Several of these concepts are covered in the Manifest V2 page, [Migrate to Event Driven Background
@@ -58,11 +59,11 @@ Scripts][eventbgscripts].
 
 ## Top-level event listeners {: #event_listeners }
 
-In order for Chrome to successfully dispatch events to the appropriate listeners, extensions must
+For Chrome to successfully dispatch events to the appropriate listeners, extensions must
 register listeners in the first turn of the event loop. The most straightforward way to achieve this
 is to move event registration to the top-level of your service worker script.
 
-The below snippet shows how an existing extension initializes its browser action listener in a
+The snippet below shows how a Manifest V2 extension initializes its browser action listener in a
 persistent background page.
 
 ```js
@@ -152,8 +153,8 @@ chrome.action.onClicked.addListener((tab) => {
 
 ### Moving from timers to alarms {: #alarms }
 
-It's common for web developers to perform delayed or periodic operations using the `setTimeout` or
-`setInterval` methods. These APIs can fail in service workers, though, because the scheduler will
+It's common for web developers to perform delayed or periodic operations using the `setTimeout()` or
+`setInterval()` methods. These APIs can fail in service workers, though, because the scheduler will
 cancel the timers when the service worker is terminated.
 
 ```js
@@ -187,10 +188,10 @@ chrome.alarms.onAlarm.addListener(() => {
 [Service workers][5] are a specialized kind of [web worker][6], which are quite different from the
 web pages most web developers are used to working with. On a typical web page (or extension
 background page), the global execution context for JavaScript is of type [`Window`][7]. This object
-exposes the capabilities that web developers are used to working with: `window`, element, IndexedDB,
+exposes the capabilities that web developers are used to working with: `window`, element,
 `cookie`, `localStorage`, etc.
 
-The [global scope for service worker][8] is significantly more limited and doesn't have many of
+The [global scope for a service worker][8] is significantly more limited and doesn't have many of
 these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link].
 
 The following sections cover some of the major use cases impacted by the move to service workers and
@@ -198,32 +199,32 @@ recommendations on how to adapt.
 
 ### Parsing and traversing with XML/HTML {: #documents }
 
-Since service workers don't have access to DOM, it's not possible for an extension's service worker
+Since service workers don't have access to the DOM, it's not possible for an extension's service worker
 to access the [`DOMParser`][9] API or create an `<iframe>` to parse and traverse documents.
 Extension developers have two ways to work around this limitation: create a new tab or use a
-library. Which you choose will depend on your use case.
+library. Which you choose depends on your use case.
 
 Libraries such as [`jsdom`][10] can be used to emulate a typical browser window environment,
-complete with DOMParser, event propagation, and other capabilities like `requestAnimationFrame`.
+complete with DOMParser, event propagation, and other capabilities like `requestAnimationFrame()`.
 Lighter-weight alternatives like [`undom`][11] provide just enough DOM to power many frontend
 frameworks and libraries.
 
 Extensions that need a full native browser environment can use the [`chrome.windows.create()`][12]
-and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window. 
+and [`chrome.tabs.create()`][13] methods from inside a service worker to create a real browser window. 
 Additionally, an extension's popup still provides a full (temporary) window environment.
 
 ### Audio/video playback and capture {: #audio_vidio }
 
-It's not currently possible to play or capture media directly in a service worker. In order for a
+It's not currently possible to play or capture media directly in a service worker. For a
 Manifest V3 extension to leverage the web's media playback and capture capabilities, the extension
-will need to create a window environment using either [`chrome.windows.create()`][12] or
+needs to create a window environment using either [`chrome.windows.create()`][12] or
 [`chrome.tabs.create()`][13]. Once created, the extension can use [message passing][16] to
-coordinate between the playback document and service worker.
+coordinate between the playback document and the service worker.
 
 ### Rendering to a canvas {: #canvas }
 
 In some cases developers use background pages to render content for display in other contexts or to
-create and cache assets. While service workers don't have access to DOM and therefore cannot use
+create and cache assets. While service workers don't have access to the DOM and therefore cannot use
 `<canvas>` elements, service workers do have access to the [OffscreenCanvas API][17].
 
 ```js
