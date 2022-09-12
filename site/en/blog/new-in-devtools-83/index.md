@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 83)"
 authors:
   - kaycebasques
 date: 2020-03-10
 updated: 2022-05-18
-description:
-  "Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more."
+description: 'Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZYa1YaBoE4bmPPGd1sN2.jpg'
 alt: ''
 tags:
@@ -15,7 +14,7 @@ tags:
   - chrome-83
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="MLNERCykDPg" %}
 
@@ -93,7 +92,7 @@ Send feedback to [Chromium issue #1051466][9].
 
 The **Sources** panel has new icons for breakpoints, conditional breakpoints, and logpoints:
 
-- [Breakpoints][10] 
+- [Breakpoints][10]
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bB8RsXECQym7qfO16kaj.png", alt="Breakpoint", width="100", height="100" %}
   are represented by red circles.
 - [Conditional Breakpoints][11]
@@ -191,9 +190,8 @@ to cover it in What's New In DevTools (Chrome 81).
 
 {% endAside %}
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: /docs/devtools/evaluate-performance/reference#rendering
 [2]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/
@@ -202,8 +200,7 @@ to cover it in What's New In DevTools (Chrome 81).
 [5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language
 [6]: https://mathiasbynens.be/demo/locale
 [7]: https://crbug.com/1051822
-[8]:
-  https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2
+[8]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2
 [9]: https://crbug.com/1051466
 [10]: /docs/devtools/javascript/breakpoints#loc
 [11]: /docs/devtools/javascript/breakpoints#conditional-loc
@@ -220,10 +217,8 @@ to cover it in What's New In DevTools (Chrome 81).
 [22]: /blog/new-in-devtools-65#overrides
 [23]: https://crbug.com/1016501
 [24]: https://web.dev/long-tasks-devtools/#what-are-long-tasks
-[25]:
-  https://web.dev/long-tasks-devtools/#are-there-long-tasks-in-my-page-that-could-delay-interactivity
+[25]: https://web.dev/long-tasks-devtools/#are-there-long-tasks-in-my-page-that-could-delay-interactivity
 [26]: https://crbug.com/1054447
 [27]: https://web.dev/maskable-icon/
 [28]: https://web.dev/progressive-web-apps
 [29]: https://web.dev/maskable-icon/#are-my-current-icons-ready
-

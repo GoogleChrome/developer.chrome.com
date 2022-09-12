@@ -1,11 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 81)"
 authors:
   - kaycebasques
 date: 2020-01-29
 #updated: YYYY-MM-DD
-description: "Moto G4 in Device Mode, new cookie-related features, and more."
+description: 'Moto G4 in Device Mode, new cookie-related features, and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/F1FaxjoLJGCQb5XXvX5m.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-81
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="HJNaNDspffM" %}
 
@@ -117,9 +117,8 @@ the **Sources** panel.
 
 Here's a [GIF of the feature][14].
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: /docs/devtools/device-mode#viewport
 [2]: /docs/devtools/device-mode#frame

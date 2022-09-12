@@ -1,11 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 68)"
 authors:
   - kaycebasques
 date: 2018-05-21
 #updated: YYYY-MM-DD
-description: "Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more."
+description: 'Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A6jdcAj9DNG0CvdD96e2.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-68
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 New to DevTools in Chrome 68:
 
@@ -163,9 +163,8 @@ path to watch** to add that property to the Watch pane.
 The **Show timestamps** checkbox previously in **Console Settings**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jYHojXbVbXa7SfX2r5zA.png", alt="The Console Settings button", width="28", height="28" %} has moved to [Settings][15].
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: #eagerevaluation
 [2]: #hints

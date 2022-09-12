@@ -1,11 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 84)"
 authors:
   - kaycebasques
 date: 2020-05-12
 #updated: YYYY-MM-DD
-description: "The new Issues tab, accessibility information in the Inspect Mode tooltip, and more."
+description: 'The new Issues tab, accessibility information in the Inspect Mode tooltip, and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OW8UpZGnXiuvi6WbhRku.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-84
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="dgYAlcJonxo" %}
 
@@ -153,9 +153,8 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1KUD1snHJ1sVaaZo3BRK.png", alt="App shortcuts in the Manifest pane.", width="800", height="534" %}
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: /docs/devtools/issues
 [2]: https://crbug.com/1068116

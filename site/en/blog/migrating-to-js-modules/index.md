@@ -1,8 +1,8 @@
 ---
-title: "DevTools architecture refresh: migrating to JavaScript modules"
+title: 'DevTools architecture refresh: migrating to JavaScript modules'
 description: >
   How we migrate Chrome DevTools to JavaScript modules.
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 authors:
   - tvanderlippe
 date: 2020-09-08
@@ -14,10 +14,10 @@ tags:
   - devtools-architecture
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 As you might know, [Chrome DevTools](/docs/devtools/) is a web application written using HTML, CSS and JavaScript.
-Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
+Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform.
 While DevTools has expanded over the years, its architecture largely resembles the original architecture when it was still part of [WebKit](https://webkit.org/web-inspector/).
 
 This post is part of [a series of blog posts](/tags/devtools-architecture/) describing **the changes we are making to DevTools' architecture and how it is built**.
@@ -25,6 +25,7 @@ We will explain how DevTools has historically worked, what the benefits and limi
 Therefore, let's dive deep into module systems, how to load code and how we ended up using JavaScript modules.
 
 ## In the beginning, there was nothing {: #beginning }
+
 While the current frontend landscape has a variety of module systems with tools built around them, as well as the [now-standardized JavaScript modules format](https://v8.dev/features/modules), none of these existed when DevTools was first built.
 DevTools is built on top of code that initially shipped in WebKit more than 12 years ago.
 
@@ -126,14 +127,15 @@ The transformation would be automated, by [running a script per folder](https://
 Given the following symbol would exist in the `module.json` world:
 
 ```js
-Module.File1.exported = function() {
+Module.File1.exported = function () {
   console.log('exported');
   Module.File1.localFunctionInFile();
 };
-Module.File1.localFunctionInFile = function() {
+Module.File1.localFunctionInFile = function () {
   console.log('Local');
 };
 ```
+
 (Here, `Module` is the name of the module and `File1` the name of the file. In our sourcetree, that would be `front_end/module/file1.js`.)
 
 This would be transformed to the following:
@@ -198,16 +200,16 @@ moduleScoped();
 However, there were some caveats with this approach:
 
 1. Not every symbol was named as `Module.File.symbolName`.
-Some symbols were named solely `Module.File` or even `Module.CompletelyDifferentName`.
-This inconsistency meant that we had to create an internal mapping from the old global object to the new imported object.
+   Some symbols were named solely `Module.File` or even `Module.CompletelyDifferentName`.
+   This inconsistency meant that we had to create an internal mapping from the old global object to the new imported object.
 2. Sometimes there would be clashes between moduleScoped names.
-Most prominently, we used a pattern of declaring certain types of `Events`, where each symbol was named just `Events`.
-This meant that if you were listening for multiple types of events declared in different files, a nameclash would occur on the `import`-statement for those `Events`.
+   Most prominently, we used a pattern of declaring certain types of `Events`, where each symbol was named just `Events`.
+   This meant that if you were listening for multiple types of events declared in different files, a nameclash would occur on the `import`-statement for those `Events`.
 3. As it turned out, there were circular dependencies between files.
-This was fine in a global scope context, as the usage of the symbol was after all code was loaded.
-However, if you require an `import`, the circular dependency would be made explicit.
-This isn't a problem immediately, unless you have side-effect function calls in your global scope code, which DevTools also had.
-All in all, it required some surgery and refactoring to make the transformation safe.
+   This was fine in a global scope context, as the usage of the symbol was after all code was loaded.
+   However, if you require an `import`, the circular dependency would be made explicit.
+   This isn't a problem immediately, unless you have side-effect function calls in your global scope code, which DevTools also had.
+   All in all, it required some surgery and refactoring to make the transformation safe.
 
 ## A whole new world with JavaScript modules {: #new-world }
 
@@ -237,22 +239,22 @@ You can see the full journey (not all CLs are attached to this bug, but most of 
 ## What we learned {: #learned }
 
 1. Decisions made in the past can have a long-lasting impact on your project.
-Even though JavaScript modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
-Deciding when to and when not to migrate is difficult and based on educated guesses.
+   Even though JavaScript modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
+   Deciding when to and when not to migrate is difficult and based on educated guesses.
 2. Our initial time estimates were in weeks rather than months.
-This largely stems from the fact that we found more unexpected problems than we anticipated in our initial cost analysis.
-Even though the migration plan was solid, technical debt was (more often than we would have liked) the blocker.
+   This largely stems from the fact that we found more unexpected problems than we anticipated in our initial cost analysis.
+   Even though the migration plan was solid, technical debt was (more often than we would have liked) the blocker.
 3. The JavaScript modules migration included a large amount of (seemingly unrelated) technical debt cleanups.
-The migration to a modern standardized module format allowed us to realign our coding best practices with modern day web development.
-For example, we were able to replace our custom Python bundler with a minimal Rollup configuration.
+   The migration to a modern standardized module format allowed us to realign our coding best practices with modern day web development.
+   For example, we were able to replace our custom Python bundler with a minimal Rollup configuration.
 4. Despite the large impact on our codebase (~20% of code changed), very few regressions were reported.
-While we did have numerous issues migrating the first couple of files, after a while we had a solid, partially automated, workflow.
-This meant that negative user impact for our stable users was minimal for this migration.
+   While we did have numerous issues migrating the first couple of files, after a while we had a solid, partially automated, workflow.
+   This meant that negative user impact for our stable users was minimal for this migration.
 5. Teaching the intricacies of a particular migration to fellow maintainers is difficult and sometimes impossible.
-Migrations of this scale are difficult to follow and require a lot of domain knowledge.
-Transferring that domain knowledge to others working in the same codebase is not desirable per se for the job they are doing.
-Knowing what to share and what details not to share is an art, but a necessary one.
-It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
+   Migrations of this scale are difficult to follow and require a lot of domain knowledge.
+   Transferring that domain knowledge to others working in the same codebase is not desirable per se for the job they are doing.
+   Knowing what to share and what details not to share is an art, but a necessary one.
+   It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

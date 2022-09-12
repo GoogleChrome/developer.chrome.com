@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "Qué hay de nuevo en DevTools (Chrome 92)"
+layout: 'layouts/blog-post.njk'
+title: 'Qué hay de nuevo en DevTools (Chrome 92)'
 authors:
   - jecelynyeen
 date: 2021-07-26
 updated: 2021-07-26
-description:
-  "Editor de CSS Grid, Soporte para la redeclaración de const en la consola, Visor de orden de los elementos y más."
+description: 'Editor de CSS Grid, Soporte para la redeclaración de const en la consola, Visor de orden de los elementos y más.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNkvli3QcoNTlZiuJfHk.jpg'
 alt: ''
 tags:
@@ -15,9 +14,9 @@ tags:
   - chrome-92
 ---
 
-*Traducción cedida por [Miguel Ángel](https://twitter.com/midudev).*
+_Traducción cedida por [Miguel Ángel](https://twitter.com/midudev)._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -27,7 +26,7 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="Editor de CSS Grid", width="800", height="486" %}
 
-Cuando un elemento HTML de la página tiene un `display: grid` o `display: inline-grid` aplicado a él, verás que aparece un icono al lado de la declaración en el panel de *Styles*.
+Cuando un elemento HTML de la página tiene un `display: grid` o `display: inline-grid` aplicado a él, verás que aparece un icono al lado de la declaración en el panel de _Styles_.
 
 Haz clic en ese icono para abrir el editor de CSS Grid. Desde ahí puedes previsualizar un cambio en la declaración del Grid (por ejemplo, puedes ver cómo quedaría el `justify-content: space-around`) y aplicar los cambios con solo un clic.
 
@@ -37,7 +36,7 @@ Chromium issue: [1203241](https://crbug.com/1203241)
 
 ## Soporte para la redeclaración de `const` en la consola {: #const-redeclaration }
 
-La pestaña de *Consola*  ahora soporta la redeclaración de variables `const`, sumándose así a las redeclaraciones de [`let` y `class` que ya existían.](/blog/new-in-devtools-80/#redeclarations).
+La pestaña de _Consola_ ahora soporta la redeclaración de variables `const`, sumándose así a las redeclaraciones de [`let` y `class` que ya existían.](/blog/new-in-devtools-80/#redeclarations).
 
 Esto permite a los desarrolladores hacer un copiado y pegado de código en la consola de DevTools para ver cómo funciona o experimentar, hacer pequeños cambios en el código y repetir el proceso sin necesidad de refrescar la página. Anteriormente, DevTools mostraban un error de sintaxis al intentar redeclarar una variable `const` en la consola.
 
@@ -80,7 +79,7 @@ Chromium issue: [1192084](https://crbug.com/1192084)
 
 ## Mejor soporte para depurar CORS {: #cors }
 
-Los errores de *Cross-origin resource sharing (CORS)* ahora aparecen en la pestaña de *Issues* y, además, se muestran las diferentes razones por las que se producen los errores. Puedes hacer click en cada *Issue* para ver el detalle de las potenciales causas y las soluciones.
+Los errores de _Cross-origin resource sharing (CORS)_ ahora aparecen en la pestaña de _Issues_ y, además, se muestran las diferentes razones por las que se producen los errores. Puedes hacer click en cada _Issue_ para ver el detalle de las potenciales causas y las soluciones.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UpiZQCNnlENB8ZluzeFt.png", alt="Problemas de CORS en la pestaña Issues", width="800", height="490" %}
 
@@ -112,9 +111,9 @@ La etiqueta XHR ha sido renombrada a **Fetch/XHR**. Este cambio ahora deja más 
 
 Chromium issue: [1201398](https://crbug.com/1201398)
 
-### Filtra los recursos de tipo Wasm en el panel de *Network* {: #wasm }
+### Filtra los recursos de tipo Wasm en el panel de _Network_ {: #wasm }
 
-Ahora puedes filtrar los recursos de red de Web Assembly usando el botón *Wasm* en el panel de *Network*.
+Ahora puedes filtrar los recursos de red de Web Assembly usando el botón _Wasm_ en el panel de _Network_.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vuTMcfCjDWFfVtDN6Dpf.png", alt="Filtro para Wasm", width="800", height="515" %}
 
@@ -122,7 +121,7 @@ Ahora puedes filtrar los recursos de red de Web Assembly usando el botón *Wasm*
 
 Chromium issue: [1103638](https://crbug.com/1103638)
 
-### User-Agent Client Hints por dispositivo en la pestaña de condiciones  {: #sec-ua-ch }
+### User-Agent Client Hints por dispositivo en la pestaña de condiciones {: #sec-ua-ch }
 
 Ahora los [User-Agent Client Hints](https://web.dev/user-agent-client-hints) son aplicados por dispositivo en el campo User Agent debajo de la pestaña de **Network Conditions**.
 
@@ -222,5 +221,5 @@ Ten en cuenta que este experimento está en sus primeras etapas de desarrollo. H
 
 Chromium issue: [1199787](https://crbug.com/1199787)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

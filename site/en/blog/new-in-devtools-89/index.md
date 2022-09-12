@@ -1,13 +1,13 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 89)"
 authors:
   - jecelynyeen
 date: 2021-01-19
 updated: 2021-02-24
 description:
-  "Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new
-  Trust Tokens tab for network requests and more."
+  'Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new
+  Trust Tokens tab for network requests and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/brc7vpdKlH1gHEk9aJM6.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-89
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="msHeKmMEeHU" %}
 
@@ -447,16 +447,14 @@ background), and context (ambient light, surroundings, intended purpose of the t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gYQKfU4hyzKlrK9w7wBr.png", alt="APCA in Color Picker", width="800", height="537" %}
 
-The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485). 
+The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485).
 
 Chromium issue: [1121900][50]
 
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
-
-[1]:
-  https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458
+[1]: https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458
 [2]: https://github.com/w3c/webappsec-trusted-types
 [3]: https://web.dev/trusted-types/
 [4]: https://tt-enforced.glitch.me/

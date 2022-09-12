@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -29,7 +29,8 @@ _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Mi
 <!-- end: translation instructions -->
 
 <!-- ## Chrome 100  {: #m100 } -->
-## Chrome 100  {: #m100 }
+
+## Chrome 100 {: #m100 }
 
 <!-- Here's to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What's New** tab to celebrate the milestones. -->
 
@@ -41,11 +42,9 @@ Como de costumbre, puede ver el último [video de Novedades en DevTools](https:/
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/u8sn7ubuxjJoyPgbfNJs.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
-
 <!-- ## View and edit @supports at rules in the Styles pane {: #supports } -->
 
 ## Ver y editar reglas @supports en el panel Estilos {: #supports }
-
 
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 
@@ -61,8 +60,8 @@ Abra esta [página de demostración](https://jec.fyi/demo/at-support), [inspecci
 
 Chromium issues: [1222574](https://crbug.com/1222574), [1222573](https://crbug.com/1222573)
 
-
 <!-- ## Recorder panel improvements {: #recorder } -->
+
 ## Mejoras en el panel de la grabadora {: #recorder }
 
 <!-- ### Support common selectors by default {: #selector } -->
@@ -89,23 +88,19 @@ Los atributos anteriores son selectores comunes utilizados en la automatización
 
 Por ejemplo, [inicie una nueva grabación](/docs/devtools/recorder/#record) con esta [página de demostración](https://jec.fyi/demo/recorder). Complete una dirección de correo electrónico y observe el valor del selector.
 
-
 <!-- Since the email element has `data-testid` defined, it's used as the selector automatically instead of the `id` or `class` attributes. -->
 
 Dado que el elemento de correo electrónico tiene definido `data-testid`, se usa como selector automáticamente en lugar de los atributos `id` o `class`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4diI81kpscXznWLrB6a9.png", alt="Soporta selectores comunes de forma predeterminada", width="800", height="585" %}
 
-
 <!-- ### Customize the recording's selector {: #customize-selector } -->
 
 ### Personaliza el selector de grabaciones {: #customize-selector }
 
-
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 
 Puede personalizar el selector de una grabación si no utiliza los [selectores comunes](/docs/devtools/recorder/#selector).
-
 
 <!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 
@@ -115,18 +110,15 @@ Por ejemplo, esta [página de demostración](https://jec.fyi/demo/recorder) usa 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/X8r52vWEu6aC8QHFuknp.png", alt="El resultado de la selección del selector personalizado", width="800", height="579" %}
 
-
 <!-- ### Rename a recording {: #recorder-rename } -->
 
 ### Cambiar el nombre de una grabación {: #recorder-rename }
-
 
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording's title. -->
 
 Ahora puede cambiar el nombre de una grabación en el panel [Grabadora](/docs/devtools/recorder/) con el botón de edición (icono de lápiz) junto al título de la grabación.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Pn9Xsrq9lnStmtjpe0jt.png", alt="Cambiar el nombre de una grabación", width="800", height="502" %}
-
 
 <!-- ## Preview class/function properties on hover {: #properties } -->
 
@@ -143,11 +135,9 @@ Ahora puede pasar el cursor sobre una clase o función en el panel **Fuentes** d
 
 Chromium issue: [1049947](https://crbug.com/1049947)
 
-
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
 
 ## Fotogramas presentados parcialmente en el panel Rendimiento {: #perf }
-
 
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
 
@@ -181,12 +171,11 @@ Estas son algunas correcciones notables en esta versión:
 
 <!-- - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553)) -->
 
- - Actualizadas las cadenas de caracteres de `user agent` en iPhone para [dispositivos emulados](/docs/devtools/device-mode/#device). Todas las versiones de iPhone posteriores a la 5 tienen una cadena de `user agent` con iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
+- Actualizadas las cadenas de caracteres de `user agent` en iPhone para [dispositivos emulados](/docs/devtools/device-mode/#device). Todas las versiones de iPhone posteriores a la 5 tienen una cadena de `user agent` con iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 
 - Ahora puede guardar [fragmento de código fuente](/docs/devtools/javascript/snippets/) como un archivo JavaScript directamente. Anteriormente, necesitaba agregar la extensión de archivo `.js` manualmente. ([1137218](https://crbug.com/1137218))
-
 
 <!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
 
@@ -196,5 +185,5 @@ Estas son algunas correcciones notables en esta versión:
 
 - El panel **Fuentes** ahora restaura la posición de desplazamiento correctamente al cargar la página. Anteriormente, la posición no se restauraba correctamente, lo que generaba inconvenientes en la depuración. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

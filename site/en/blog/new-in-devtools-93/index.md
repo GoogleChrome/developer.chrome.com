@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
-description:
-  "Editable CSS container queries, web bundle preview, better string handling in the Console and more."
+description: 'Editable CSS container queries, web bundle preview, better string handling in the Console and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
 alt: ''
 tags:
@@ -15,11 +14,12 @@ tags:
   - chrome-93
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
+
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
 
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
@@ -36,8 +36,8 @@ The container queries feature is experimental currently. Please turn on the `#en
 
 Chromium issue: [1146422](https://crbug.com/1146422)
 
-
 ## Web bundle preview in the Network panel {: #web-bundle }
+
 [Web bundle](https://web.dev/web-bundles/) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
 
 The web bundle feature is experimental currently. Please enable `#enable-experimental-web-platform-features` flag under `chrome://flags` to test it.
@@ -48,8 +48,8 @@ The web bundle feature is experimental currently. Please enable `#enable-experim
 
 Chromium issue: [1182537](https://crbug.com/1182537)
 
-
 ## Attribution Reporting API debugging {: #attribution-reporting }
+
 Attribution Reporting API errors are now reported in the **Issues** tab.
 
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
@@ -58,8 +58,8 @@ Attribution Reporting API errors are now reported in the **Issues** tab.
 
 Chromium issue: [1190735](https://crbug.com/1190735)
 
-
 ## Better string handling in the Console {: #string }
+
 New context menu in the **Console** allows you to copy any string in as content, JavaScript literal or JSON literal.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="New context menu in the Console", width="800", height="477" %}
@@ -74,8 +74,8 @@ The **Console** now formats string outputs as valid JavaScript litera, and furth
 
 Chromium issue: [1208389](https://crbug.com/1208389)
 
-
 ## Improved CORS debugging {: #cors }
+
 CORS-related TypeErrors in the **Console** are now linked to the Network panel and Issues tab.
 
 Click on the two new icons next to the CORS-related error message to view the network request, or understand the error message further and get potential solutions in the Issues tab.
@@ -84,8 +84,8 @@ Click on the two new icons next to the CORS-related error message to view the ne
 
 Chromium issue: [1213393](https://crbug.com/1213393)
 
-
 ## Lighthouse 8.1 {: #lighthouse }
+
 The **Lighthouse** panel is now running Lighthouse 8.1.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
@@ -103,8 +103,8 @@ Check out the [release notes](https://github.com/GoogleChrome/lighthouse/release
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-
 ## Display new note URL in the Manifest pane {: #new-note-url }
+
 The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
 Currently on ChromeOS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
@@ -115,8 +115,8 @@ Currently on ChromeOS (CrOS), Chrome Apps and Android Apps that declare a "new-n
 
 Chromium issue: [1185678](https://crbug.com/1185678)
 
-
 ## Fixed CSS matching selectors {: #matching-selectors }
+
 DevTools fixed the CSS matching selectors, it was not working in the last release.
 
 The comma separated selectors in the **Styles** pane are colored differently depending on whether they match the selected DOM node:
@@ -130,8 +130,8 @@ The comma separated selectors in the **Styles** pane are colored differently dep
 
 Chromium issue: [1219153](https://crbug.com/1219153)
 
-
 ## Pretty-printing JSON responses in the Network panel {: #pretty-print-json }
+
 You can now pretty print JSON responses in the **Network** panel.
 
 Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-print it.
@@ -142,5 +142,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

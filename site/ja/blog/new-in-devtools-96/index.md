@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "DevTools の新機能 (Chrome 96)"
+layout: 'layouts/blog-post.njk'
+title: 'DevTools の新機能 (Chrome 96)'
 authors:
   - jecelynyeen
 date: 2021-10-25
 updated: 2021-10-25
-description:
-  "新しい CSS Overview パネル, SS の prefers-contrast メディア機能のエミュレート, Chrome の Auto Dark Theme 機能のエミュレートなど"
+description: '新しい CSS Overview パネル, SS の prefers-contrast メディア機能のエミュレート, Chrome の Auto Dark Theme 機能のエミュレートなど'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oyz4gDei2COAJ84nRJC8.jpg'
 alt: ''
 tags:
@@ -23,9 +22,9 @@ tags:
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-*翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんと [yoichiro](https://github.com/yoichiro) さんに感謝いたします。*
+_翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんと [yoichiro](https://github.com/yoichiro) さんに感謝いたします。_
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -67,7 +66,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 <!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
 
-**copy CSS** と **edit as text** の対象がCSS プロパティと長さを合わせたものに戻されました。これらの挙動は直近のリリースでは壊れていました。
+**copy CSS** と **edit as text** の対象が CSS プロパティと長さを合わせたものに戻されました。これらの挙動は直近のリリースでは壊れていました。
 
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
 
@@ -122,7 +121,6 @@ Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.c
 
 Chromium issue: [1139777](https://crbug.com/1139777)
 
-
 <!-- ### Emulate the Chrome’s Auto Dark Theme feature {: #auto-dark-mode } -->
 
 ### Chrome の Auto Dark Theme 機能のエミュレート {: #auto-dark-mode }
@@ -149,14 +147,13 @@ Chrome 96 は Android で [Auto Dark Theme](/blog/auto-dark-theme/) の [Origin 
 
 Chromium issue: [1243309](https://crbug.com/1243309)
 
-
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
 
 ## Styles ペインで JavaScript として宣言をコピー {: #copy-as-js }
 
 <!-- Two new options are added in the context menu  for you to easily copy CSS rules as JavaScript properties. These shortcuts options are handy especially for developers who are working with [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)  libraries. -->
 
-コンテキストメニューにCSS ルールを JavaScript プロパティとして簡単にコピーできる新しいオプションが2つ追加されました。これらのショートカットオプションは特に[CSS-in-JS](/blog/css-in-js/#what-is-css-in-js) ライブラリを利用している開発者にとって便利でしょう。
+コンテキストメニューに CSS ルールを JavaScript プロパティとして簡単にコピーできる新しいオプションが 2 つ追加されました。これらのショートカットオプションは特に[CSS-in-JS](/blog/css-in-js/#what-is-css-in-js) ライブラリを利用している開発者にとって便利でしょう。
 
 <!-- In the **Styles** pane, right click on a CSS rule. You can select **Copy declaration as JS** to copy a single rule or **Copy all declarations as JS** to copy all rules. -->
 
@@ -173,7 +170,6 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca17a55104e6baf8d4ab360b484111bfa93c9b7f #}
 
 Chromium issue: [1253635](https://crbug.com/1253635)
-
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
 
@@ -193,7 +189,6 @@ Chromium issue: [1253635](https://crbug.com/1253635)
 
 Chromium issue: [1214030](https://crbug.com/1214030)
 
-
 <!-- ## Improved the display of properties in the Properties pane {: #properties } -->
 
 ## Properties ペインのプロパティ表示の改善 {: #properties }
@@ -204,7 +199,7 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 <!-- Together with the **Properties** pane [enhancements](/blog/new-in-devtools-95/#properties) in Chrome 95, you can now locate the relevant properties easier. -->
 
-これからはChrome 95 での **Properties** ペインの [拡張](/blog/new-in-devtools-95/#properties) と合わせて、関係するプロパティをより容易に指定できます。
+これからは Chrome 95 での **Properties** ペインの [拡張](/blog/new-in-devtools-95/#properties) と合わせて、関係するプロパティをより容易に指定できます。
 
 <!--
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hs4KfBZOBeyWHF42Xsuq.png", alt="The display of properties in the Properties pane", width="800", height="387" %}
@@ -214,8 +209,7 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium issue: [1226262](https://crbug.com/1226262) 
-
+Chromium issue: [1226262](https://crbug.com/1226262)
 
 <!-- ## Console updates -->
 
@@ -243,7 +237,6 @@ Chromium issue: [1226262](https://crbug.com/1226262)
 
 Chromium issue: [1251176](https://crbug.com/1251176)
 
-
 <!-- ### Proper `Intl` objects preview and evaluation in the Console {: #intl } -->
 
 ### Console での適切な `Intl` オブジェクトのプレビューと評価 {: #intl } -->
@@ -260,7 +253,6 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 Chromium issue: [1073804](https://crbug.com/1073804)
 
-
 <!-- ### Consistent async stack traces {: #async } -->
 
 ### 一貫性のある async スタックトレース {: #async }
@@ -275,10 +267,9 @@ Chromium issue: [1073804](https://crbug.com/1073804)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec  #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec #}
 
 Chromium issue: [1254259](https://crbug.com/1254259)
-
 
 <!-- ### Retain the Console sidebar {: #console-sidebar } -->
 
@@ -302,7 +293,6 @@ Console のサイドバーは維持されます。Chrome 94 で、[Console の�
 
 Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.com/1255586)
 
-
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 
 ## Application パネルの Application cache ペインの廃止 {: #app-cache }
@@ -313,14 +303,14 @@ Chrome やその他の Chromium ベースのブラウザから [AppCache](https:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium issue: [1084190](https://crbug.com/1084190) 
-
+Chromium issue: [1084190](https://crbug.com/1084190)
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
 
 ## [実験的] Application パネルの新しい Reporting API ペイン {: #reporting-api }
 
 {% Aside %}
+
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
 
 実験的な機能を有効にするには、**Settings** > **Experiments** の中の **Enable Reporting API panel in the Application panel** チェックボックスをチェックしてください。
@@ -328,7 +318,7 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はページのセキュリティ違反や廃止されたAPIの利用などの監視を助けるように用意されています。
+[Reporting API](https://web.dev/reporting-api/) はページのセキュリティ違反や廃止された API の利用などの監視を助けるように用意されています。
 
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
 
@@ -352,5 +342,5 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "DevTools 의 새로운 기능 (Chrome 94)"
+layout: 'layouts/blog-post.njk'
+title: 'DevTools 의 새로운 기능 (Chrome 94)'
 authors:
   - jecelynyeen
 date: 2021-08-24
 updated: 2021-08-24
-description:
-  "DevTools 를 원하는 언어로 사용할 수 있습니다. 그 외 새 Nest Hub 기기들, 새 CSS 컨테이너 쿼리 배지 등 많은 새 기능들을 확인해보세요."
+description: 'DevTools 를 원하는 언어로 사용할 수 있습니다. 그 외 새 Nest Hub 기기들, 새 CSS 컨테이너 쿼리 배지 등 많은 새 기능들을 확인해보세요.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jQ7c8hUZLtFYoN2Xvuyx.jpg'
 alt: ''
 tags:
@@ -15,10 +14,9 @@ tags:
   - chrome-94
 ---
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+_이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
 
-
-{% include 'partials/devtools/ko/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -26,7 +24,7 @@ tags:
 
 Chrome DevTools는 80개 이상 언어를 제공하여, 여러분들의 기호에 맞는 언어를 골라서 사용할 수 있습니다.
 
-[Settings](/docs/devtools/customize/#settings) 메뉴를 열고, **Preferences** > **Language** 드롭다운 메뉴에서 여러분들이 원하는 언어를 선택한 다음  DevTools 를 새로고침해 줍니다.
+[Settings](/docs/devtools/customize/#settings) 메뉴를 열고, **Preferences** > **Language** 드롭다운 메뉴에서 여러분들이 원하는 언어를 선택한 다음 DevTools 를 새로고침해 줍니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gfNZHj7vJTQELSiz78d2.png", alt="Settings > Preferences 에서 언어를 선택하세요", width="800", height="519" %}
 
@@ -38,7 +36,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 이제 [기기 모드](/docs/devtools/device-mode/)에서 Nest Hub 및 Nest Hub Max의 화면크기로 시뮬레이션할 수 있습니다.
 
-[Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) 를 클릭한 다음,&nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="토글 디바이스 툴바", width="20", height="22" %}&nbsp;,  기기 목록에서  Nest Hub 혹은 Nest Hub Max 를 선택하세요.
+[Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) 를 클릭한 다음,&nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="토글 디바이스 툴바", width="20", height="22" %}&nbsp;, 기기 목록에서 Nest Hub 혹은 Nest Hub Max 를 선택하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KytKWMiC4cbFfVUOBzlm.png", alt="기기 모드의 Nest Hub device", width="800", height="549" %}
 
@@ -46,14 +44,13 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 Chromium issue: [1223525](https://crbug.com/1223525)
 
-
 ## 프레임 상세 화면에서 Origin trials 가 제공됩니다 {: #origin-trials }
 
-이제 웹사이트의 [origin trials](/blog/origin-trials/)  에 대한 정보를 애플리케이션 패널 하단의 프레임 상세 화면에서 볼 수 있습니다.
+이제 웹사이트의 [origin trials](/blog/origin-trials/) 에 대한 정보를 애플리케이션 패널 하단의 프레임 상세 화면에서 볼 수 있습니다.
 
 여러분들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험적인 기능을 이들이 안정화되기 전에 제한적인 시간 동안 시도 및 적용해 볼 수 있습니다.
 
-Origin trials 가 포함된 페이지 (예시:  [demo page](https://mediastreamtrack.glitch.me))를 엽니다. **애플리케이션** 패널에서 스크롤을 **프레임** 섹션까지 내린 후 top 프레임을 선택합니다.
+Origin trials 가 포함된 페이지 (예시: [demo page](https://mediastreamtrack.glitch.me))를 엽니다. **애플리케이션** 패널에서 스크롤을 **프레임** 섹션까지 내린 후 top 프레임을 선택합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="프레임 상세 화면에서의 Origin trials", width="800", height="465" %}
 
@@ -61,17 +58,15 @@ Origin trials 가 포함된 페이지 (예시:  [demo page](https://mediastreamt
 
 Chromium issue: [607555](https://crbug.com/607555)
 
-
 ## 새로운 CSS 컨테이너 쿼리 배지 {: #container-queries }
 
-**컨테이너** 배지가 컨테이너 요소 옆에 새롭게 추가되었습니다. (```@container``` 규칙의 조건과 부합하는 조상 요소를 의미합니다.), 배지를 클릭하여 페이지에서 선택한 컨테이너 및 모든 쿼리의 하위 항목의 오버레이 표시를 보여주거나 숨길 수 있습니다.
+**컨테이너** 배지가 컨테이너 요소 옆에 새롭게 추가되었습니다. (`@container` 규칙의 조건과 부합하는 조상 요소를 의미합니다.), 배지를 클릭하여 페이지에서 선택한 컨테이너 및 모든 쿼리의 하위 항목의 오버레이 표시를 보여주거나 숨길 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS 컨테이너 쿼리 배지", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6f2632929afd7f74a2f1bf6fd83bb1d8818c3234 #}
 
 Chromium issue: [1146422](https://crbug.com/1146422)
-
 
 ## 네트워크 필터 반전을 위한 새로운 체크박스 추가 {: #invert-network-filter }
 
@@ -85,7 +80,6 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 Chromium issue: [1054464](https://crbug.com/1054464)
 
-
 ## 콘솔 사이드바 제거 예정 {: #deprecated }
 
 필터 UI를 툴바로 옮기기 위해, 콘솔 사이드바가 더 이상 사용되지 않고 제거될 예정입니다. 우려사항이나 피드백이 있다면 [이슈 트래커](https://crbug.com/1232937)를 통해 알려 주세요.
@@ -96,12 +90,11 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 Chromium issue: [1232937](https://crbug.com/1232937)
 
-
 ## 문제 탭과 네트워크 패널에서 Raw Set-Cookie 헤더 표시 {: #raw-cookies }
 
-DevTools 의 **문제** 탭에서 이제 Raw ```Set-Cookie``` 헤더를 볼 수 있습니다.
+DevTools 의 **문제** 탭에서 이제 Raw `Set-Cookie` 헤더를 볼 수 있습니다.
 
-이전에는 쿠키가 형식에 맞지 않았을 때 (올바르지 않은 ```Set-Cookie``` 헤더) DevTools의 네트워크 패널에 표시되지 않았습니다. **네트워크** 패널에서 새로 추가된 ```response-header-set-cookie``` 를 사용하면 Raw ```Set-Cookie``` 헤더 응답을 걸러낼 수 있습니다. DevTools 는 **문제** 탭의 Raw ```Set-Cookie``` 헤더 응답을 **네트워크** 패널로 연결합니다.
+이전에는 쿠키가 형식에 맞지 않았을 때 (올바르지 않은 `Set-Cookie` 헤더) DevTools의 네트워크 패널에 표시되지 않았습니다. **네트워크** 패널에서 새로 추가된 `response-header-set-cookie` 를 사용하면 Raw `Set-Cookie` 헤더 응답을 걸러낼 수 있습니다. DevTools 는 **문제** 탭의 Raw `Set-Cookie` 헤더 응답을 **네트워크** 패널로 연결합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="문제 탭과 네트워크 패널의 Raw 'Set-Cookie' 헤더", width="800", height="563" %}
 
@@ -110,13 +103,11 @@ DevTools 의 **문제** 탭에서 이제 Raw ```Set-Cookie``` 헤더를 볼 수 
 
 Chromium issue: [1179186](https://crbug.com/1179186)
 
-
 ## 고유한 속성인 네이티브 접근자를 콘솔에서 일관성 있게 표시 {: #native-accessors }
 
 이제 **콘솔**에서 네이티브 접근자를 고유한 속성으로서 일관성 있게 표시합니다.
 
-
-예를 들면 **콘솔**에서 `new Int8Array([1, 2, 3])` 코드를 표시할 때,  ```length```, ```byteOffset``` 네이티브 접근자들을 미리보기에서 표시하지 않았지만, 이번 업데이트를 통해 네이티브 접근자를 미리보기에서 확인할 수 있으며, 확장 시에 값들이 빠르게 표시됩니다.
+예를 들면 **콘솔**에서 `new Int8Array([1, 2, 3])` 코드를 표시할 때, `length`, `byteOffset` 네이티브 접근자들을 미리보기에서 표시하지 않았지만, 이번 업데이트를 통해 네이티브 접근자를 미리보기에서 확인할 수 있으며, 확장 시에 값들이 빠르게 표시됩니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VcUiEcUXdWc00Q8595n6.png", alt="고유한 속성인 네이티브 접근자를 콘솔에서 일관성 있게 ", width="800", height="459" %}
 
@@ -124,12 +115,11 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 
 Chromium issues: [1076820](https://crbug.com/1076820), [1199247](https://crbug.com/1199247)
 
-
 ## #sourceURL이 있는 인라인 스크립트에 적합한 오류 스택 추적 {: #inline-script }
 
-DevTools 는 이제 ```#sourceURL```을 사용하여 인라인 스크립트를 올바르게 해결하고 디버깅을 위한 적절한 오류 스택 추적을 표시합니다.
+DevTools 는 이제 `#sourceURL`을 사용하여 인라인 스크립트를 올바르게 해결하고 디버깅을 위한 적절한 오류 스택 추적을 표시합니다.
 
-이전에 DevTools는 여는 ```<script>``` 태그가 아닌 주변 문서를 기준으로 `#sourceURL`이 있는 인라인 스크립트에 대해 잘못된 위치를 표시했습니다.
+이전에 DevTools는 여는 `<script>` 태그가 아닌 주변 문서를 기준으로 `#sourceURL`이 있는 인라인 스크립트에 대해 잘못된 위치를 표시했습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="#sourceURL이 있는 인라인 스크립트에 대한 적절한 오류 스택 추적", width="800", height="425" %}
 
@@ -159,7 +149,6 @@ Chromium issue: [1226371](https://crbug.com/1226371)
 
 Chromium issue: [1223391](https://crbug.com/1223391)
 
-
 ## [실험실 기능] 문제 탭에서 이슈들을 숨기기 {: #hide-issues }
 
 {% Aside %}
@@ -171,12 +160,11 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 **문제** 탭에서 이슈에 hover 하여 우측에 있는 이슈 메뉴 {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="더보기", width="4", height="20" %} 를 클릭한 뒤,
 **Hide issues like this** 를 클릭하면 이슈를 감출 수 있습니다.
 
-
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GGJzvwvMYSrkirU44STQ.png", alt="실험적인 hide issue context menu", width="800", height="494" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0200fc96fecec0e209e84c21359ab53393860978 #}
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

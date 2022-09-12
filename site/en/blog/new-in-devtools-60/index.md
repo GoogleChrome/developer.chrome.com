@@ -1,11 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 60)"
 authors:
   - kaycebasques
 date: 2017-05-23
 #updated: YYYY-MM-DD
-description: "New features and changes coming to DevTools in Chrome 60."
+description: 'New features and changes coming to DevTools in Chrome 60.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EOSOQXLWBQ5la6UyCCT6.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-60
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 Welcome! New features and major changes coming to DevTools in Chrome 60 include:
 
@@ -218,8 +218,8 @@ been working on over the past year and the big themes that they're tackling in t
 
 {% YouTube id="PjjlwAvV8Jg" %}
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: #lighthouse
 [2]: #badges

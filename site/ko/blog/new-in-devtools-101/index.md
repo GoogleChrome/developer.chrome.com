@@ -1,11 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "DevTools 의 새로운 기능 (Chrome 101)"
+layout: 'layouts/blog-post.njk'
+title: 'DevTools 의 새로운 기능 (Chrome 101)'
 authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: "유저 플로우를 JSON 파일로 내보내고 불러오기, hwb() 컬러 포맷 지원, 스타일 창에서 cascade 레이어 보기 등"
+description: '유저 플로우를 JSON 파일로 내보내고 불러오기, hwb() 컬러 포맷 지원, 스타일 창에서 cascade 레이어 보기 등'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LS1IRAAIO7A8Qu3ZLM2a.jpg'
 alt: ''
 tags:
@@ -14,9 +14,9 @@ tags:
   - chrome-101
 ---
 
-*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+_이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -31,7 +31,7 @@ tags:
 그 외에도 녹화물을 내보낼 수도 있습니다. [유저 플로우를 녹화](/docs/devtools/recorder/#record) 한 뒤에 export 버튼을 클릭하세요. 다음과 같은 3가지 옵션이 있습니다:
 
 - **JSON 파일로 내보내기**. 녹화본을 JSON 파일로 다운로드합니다.
-- **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다. 
+- **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다.
 - **Puppeteer 스크립트로 내보내기** . 녹화본을 [Puppeteer](https://pptr.dev/) 스크립트로 다운로드합니다.
 
 이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자 한다면 [문서](/docs/devtools/recorder/#export-flows) 를 참고하세요.
@@ -39,7 +39,6 @@ tags:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcbKR5hpCNXUmdGp4UDP.png", alt="Recorder 패널의 export 옵션", width="800", height="556" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
-
 
 ## 스타일 창에서 cascade 레이어 보기 {: #layer }
 
@@ -55,7 +54,6 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 Chromium issue: [1240596](https://crbug.com/1240596)
 
-
 ## hwb() 색상 함수 지원 {: #hwb }
 
 DevTools에서 [HWB 색상 포맷](https://drafts.csswg.org/css-color/#the-hwb-notation) 을 보고 수정할 수 있습니다.
@@ -65,7 +63,6 @@ DevTools에서 [HWB 색상 포맷](https://drafts.csswg.org/css-color/#the-hwb-n
 혹은 [컬러 피커](/docs/devtools/css/reference/#color-picker) 를 사용하여 HWB 색상 포맷을 변경할 수도 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jW7PXLu6Q5myiKLrsoD3.png", alt="hwb() 색상 함수", width="800", height="508" %}
-
 
 ## private 속성 표시 개선 {: #private-props }
 
@@ -79,7 +76,6 @@ DevTools에서 private 접근자를 적절하게 평가하고 표시합니다. �
 
 Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/1303407](1303407)
 
-
 ## 기타 하이라이트 {: #misc }
 
 이번 릴리스에서 주목할만한 수정 사항들입니다:
@@ -90,7 +86,6 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 - **소스** 패널에서 주석 키보드 단축키를 수정하였습니다. ([1296535](https://crbug.com/1296535))
 - **소스** 패널에서 **Alt** (Options) 키를 사용해 여러 곳을 선택하는 기능을 다시 지원합니다. ([1304070](https://crbug.com/1304070))
 
- 
 ## [실험실 기능] Lighthouse 패널의 새로운 시간 범위 (timespan) 및 스냅샷 (snapshot) 모드 {: #lighthouse }
 
 {% Aside %}
@@ -109,5 +104,5 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

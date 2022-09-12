@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "DevTools の新機能 (Chrome 99)"
+layout: 'layouts/blog-post.njk'
+title: 'DevTools の新機能 (Chrome 99)'
 authors:
   - jecelynyeen
 date: 2022-02-21
 updated: 2022-02-21
-description:
-  "WebSocketリクエスト数の制限、新しいReporting APIペイン、コンソールのスタイル指定など"
+description: 'WebSocketリクエスト数の制限、新しいReporting APIペイン、コンソールのスタイル指定など'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gE3lh8nJmOF9y3jzAhyI.jpg'
 alt: ''
 tags:
@@ -15,9 +14,9 @@ tags:
   - chrome-99
 ---
 
-*翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro)さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
+_翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro)さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。_
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -31,7 +30,7 @@ tags:
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
 
-## WebSocketリクエスト数の制限 {: #websocket }
+## WebSocket リクエスト数の制限 {: #websocket }
 
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
 
@@ -47,10 +46,9 @@ tags:
 
 Chromium issue: [423246](https://crbug.com/423246)
 
-
 <!-- ## New Reporting API pane in the Application panel {: #reporting-api } -->
 
-## Application パネル内に新しく追加されたReporting API ペイン {: #reporting-api }
+## Application パネル内に新しく追加された Reporting API ペイン {: #reporting-api }
 
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 
@@ -58,7 +56,7 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
+[Reporting API](https://web.dev/reporting-api/) はセキュリティ違反や廃止される API の呼び出しなどを監視できるように設計されています。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 
@@ -80,7 +78,6 @@ Reporting API を使用しているページ（例、 [デモページ](https://
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-
 <!-- ## Support wait until element is visible/clickable in the Recorder panel {: #recorder } -->
 
 ## Recorder パネルに要素が可視／クリック可能になるまで待機する機能が追加 {: #recorder }
@@ -96,7 +93,6 @@ Chromium issue: [1205856](https://crbug.com/1205856)
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
 Chromium issue: [1257499](https://crbug.com/1257499#c38)
-
 
 <!-- ## Better console styling, formatting and filtering {: #console } -->
 
@@ -120,8 +116,7 @@ Chromium issue: [1257499](https://crbug.com/1257499#c38)
 
 <!-- To learn more about formatting & styling console messages with DevTools, go to [format and style messages in the Console](/docs/devtools/console/format-style) documentation. -->
 
-DevToolsのコンソールメッセージのフォーマット指定やスタイル設定についてさらに学びたければ、[Format and style messages in the Console](/docs/devtools/console/format-style) ドキュメントを参照してください。
-
+DevTools のコンソールメッセージのフォーマット指定やスタイル設定についてさらに学びたければ、[Format and style messages in the Console](/docs/devtools/console/format-style) ドキュメントを参照してください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6Lu7Js1rgSmjV0cnhDlH.png", alt="コンソールスタイル設定", width="800", height="547" %}
 
@@ -129,7 +124,6 @@ DevToolsのコンソールメッセージのフォーマット指定やスタイ
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22a372d445c3f8cff00c2cfe48cb7373165bcd9d #}
 
 Chromium issues: [1282837](https://crbug.com/1282837), [1282076](https://crbug.com/1282076)
-
 
 <!-- ### Properly support `%s`, `%d`, `%i` and `%f` format specifiers {: #console-format } -->
 
@@ -146,7 +140,6 @@ Chromium issues: [1282837](https://crbug.com/1282837), [1282076](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ec299d49c6ab2c185df660766b1fb827db87f8a #}
 
 Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.com/1282076)
-
 
 <!-- ### More intuitive console group filter {: #console-filter } -->
 
@@ -168,7 +161,6 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 
 Chromium issue: [1068788](https://crbug.com/1068788)
 
-
 <!-- ## Sourcemaps improvements {: #sourcemap } -->
 
 ## ソースマップの改善 {: #sourcemap }
@@ -189,14 +181,13 @@ Chromium issue: [1068788](https://crbug.com/1068788)
 
 Chromium issue: [212374](https://crbug.com/212374)
 
-
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 
 ### Sources パネルのソースフォルダツリーの改善 {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
 
-**Sources** パネルのソースフォルダツリーがフォルダ構造と名前付け（例、"../"、"./"など）により乱れにくく改善されました。内部的には、ソースマップ内の絶対ソースURLが正規化された結果が使用されています。
+**Sources** パネルのソースフォルダツリーがフォルダ構造と名前付け（例、"../"、"./"など）により乱れにくく改善されました。内部的には、ソースマップ内の絶対ソース URL が正規化された結果が使用されています。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Improved source folder tree in the Sources panel", width="800", height="444" %} -->
 
@@ -205,7 +196,6 @@ Chromium issue: [212374](https://crbug.com/212374)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/68613ab02f6d556a2c5ac68ea08f466a534c6bd9 #}
 
 Chromium issue: [1284737](https://crbug.com/1284737)
-
 
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 
@@ -221,8 +211,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Chromium issue: [1277002](https://crbug.com/1277002) 
-
+Chromium issue: [1277002](https://crbug.com/1277002)
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
@@ -248,14 +237,13 @@ Chrome 96 で Android の [Auto Dark Theme](/blog/auto-dark-theme/) の[オリ�
 
 Chromium issue: [1243309](https://crbug.com/1243309)
 
-
 <!-- ## Touch-friendly color-picker and split pane {: #touch-friendly } -->
 
 ## タッチ操作で使いやすいカラーピッカーとスプリットペイン {: #touch-friendly }
 
 <!-- You can now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices. -->
 
-タッチ画面デバイスで指やスタイラスを使用してDevTools上で色を選択したり、[Drawer](/docs/devtools/customize/#drawer) をリサイズできるようになりました。
+タッチ画面デバイスで指やスタイラスを使用して DevTools 上で色を選択したり、[Drawer](/docs/devtools/customize/#drawer) をリサイズできるようになりました。
 
 <!-- Here is an example captured with the [Google Pixelbook](https://www.google.com/chromebook/device/google-pixelbook/) device touchscreen. -->
 
@@ -266,8 +254,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
-
+Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 
@@ -278,6 +265,7 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 今回のリリースでは、以下のような注目の修正点があります。
 
 <!-- - Fixed the [edit cookies](/docs/devtools/storage/cookies/#edit) issue in the **Cookies** pane. ([1290196](https://crbug.com/1290196)) -->
+
 - **Cookies** ペインの [Cookie 編集](/docs/devtools/storage/cookies/#edit)に関する問題が修正されました。 ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - [コマンドメニュー](/docs/devtools/command-menu/)で `Shift` + `Tab` を使用して以前のコマンドを選択できます。 ([1278743](https://crbug.com/1278743))
@@ -292,6 +280,5 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 - DevTools で[ライト／ダークテーマを切り替え](/docs/devtools/customize/dark-theme/)たときに、リロードが不要になりました。 ([1278738](https://crbug.com/1278738))
 
-
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

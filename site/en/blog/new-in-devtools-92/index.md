@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 92)"
 authors:
   - jecelynyeen
 date: 2021-06-02
 updated: 2021-06-02
-description:
-  "CSS grid editor, support for const redeclaration in console, source order viewer and more."
+description: 'CSS grid editor, support for const redeclaration in console, source order viewer and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XtJztwxzQqOWhOHrKmhM.jpg'
 alt: ''
 tags:
@@ -15,23 +14,24 @@ tags:
   - chrome-92
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
 ## CSS grid editor {: #grid-editor }
-A highly requested feature. You can now preview and author CSS Grid with the new CSS Grid editor! 
+
+A highly requested feature. You can now preview and author CSS Grid with the new CSS Grid editor!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS Grid editor", width="800", height="486" %}
 
-When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click. 
+When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 
 Chromium issue: [1203241](https://crbug.com/1203241)
 
-
 ## Support for `const` redeclarations in the Console {: #const-redeclaration }
+
 The Console now supports redeclaration of `const` statement, in addition to the existing [`let` and `class` redeclarations](/blog/new-in-devtools-80/#redeclarations). The inability to redeclare was a common annoyance for web developers who use the Console to experiment with new JavaScript code.
 
 This allows developers to copy-paste code into the DevTools console to see how it works or experiment, make small changes to the code, and repeat the process without refreshing the page. Previously, DevTools threw a syntax error if the code redeclared a `const` binding.
@@ -47,21 +47,21 @@ Refer to the example below. `const` redeclaration is supported **across separate
 
 Chromium issue: [1076427](https://crbug.com/1076427)
 
-
 ## Source order viewer {: #source-order }
+
 You can now view the order of source elements on screen for better accessibility inspection.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2QoBtjGjFxgDAkKaO3y2.png", alt="Source order viewer", width="800", height="515" %}
 
-The order of content in an HTML document is important for search engine optimization and accessibility. The newer CSS features allow developers to create content that looks very different in its on-screen order than what is in the HTML document. This is a big accessibility problem as screen reader users would get a different, most likely confusing experience than sighted users. 
+The order of content in an HTML document is important for search engine optimization and accessibility. The newer CSS features allow developers to create content that looks very different in its on-screen order than what is in the HTML document. This is a big accessibility problem as screen reader users would get a different, most likely confusing experience than sighted users.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7f83e4b0190ed2dbc32feef6d8b0315279ad7d07 #}
 
 Chromium issue: [1094406](https://crbug.com/1094406)
 
-
 ## New shortcut to view frame details {: #frame-details }
-View iframe details by right clicking on the iframe element in the Elements panel, and select **Show frame details**. 
+
+View iframe details by right clicking on the iframe element in the Elements panel, and select **Show frame details**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="Show frame details", width="800", height="486" %}
 
@@ -73,9 +73,9 @@ This takes you to a view of the iframe's details in the Application panel where 
 
 Chromium issue: [1192084](https://crbug.com/1192084)
 
-
 ## Enhanced CORS debugging support {: #cors }
-Cross-origin resource sharing (CORS) errors are now surfaced in the Issues tab. There are various reasons causing CORS errors. Click to expand each issue to understand the potential causes and solutions. 
+
+Cross-origin resource sharing (CORS) errors are now surfaced in the Issues tab. There are various reasons causing CORS errors. Click to expand each issue to understand the potential causes and solutions.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UpiZQCNnlENB8ZluzeFt.png", alt="CORS issues in the Issues tab", width="800", height="490" %}
 
@@ -95,10 +95,10 @@ Cross-origin resource sharing (CORS) errors are now surfaced in the Issues tab. 
 
 Chromium issue: [1141824](https://crbug.com/1141824)
 
-
 ## Network panel updates {: #network }
 
 ### Rename XHR label to Fetch/XHR {: #fetch-xhr }
+
 The XHR label is now renamed to **Fetch/XHR**. This change makes it clearer that this filter includes both [`XMLHttpRequest`](https://xhr.spec.whatwg.org/) and [Fetch API](https://fetch.spec.whatwg.org/) network requests.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/I0QOVTO52JRpl0jJO6Zt.png", alt="Fetch/XHR label", width="800", height="516" %}
@@ -107,8 +107,8 @@ The XHR label is now renamed to **Fetch/XHR**. This change makes it clearer that
 
 Chromium issue: [1201398](https://crbug.com/1201398)
 
-
 ### Filter Wasm resource type in the Network panel {: #wasm }
+
 You can now click on the new **Wasm** button to filter the Wasm network requests.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vuTMcfCjDWFfVtDN6Dpf.png", alt="Filter by Wasm", width="800", height="515" %}
@@ -117,8 +117,8 @@ You can now click on the new **Wasm** button to filter the Wasm network requests
 
 Chromium issue: [1103638](https://crbug.com/1103638)
 
-
 ### User-Agent Client Hints for devices in the Network conditions tab {: #sec-ua-ch }
+
 [User-Agent Client Hints](https://web.dev/user-agent-client-hints) are now applied for devices in the **User agent** field under **Network conditions** tab.
 
 User-Agent Client Hints are a new expansion to the Client Hints API, that enables developers to access information about a user's browser in a privacy-preserving and ergonomic way.
@@ -128,7 +128,6 @@ User-Agent Client Hints are a new expansion to the Client Hints API, that enable
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2b0c3b6c6e093649c35b6824004284ca4c2bd4a #}
 
 Chromium issue: [1174299](https://crbug.com/1174299)
-
 
 ## Report Quirks mode issues in the Issues tab {: #quirks-mode }
 
@@ -144,9 +143,9 @@ When debugging layout issues, developers might think they are caused by user-aut
 
 Chromium issue: [622660](https://crbug.com/622660)
 
-
 ## Include Compute Intersections in the Performance panel {: #computed-intersections }
-DevTools now show the **Compute Intersections** in the flame chart. These changes help you to identify the [intersection observers](https://web.dev/intersectionobserver-v2/) events and debug on its potential performance overheads. 
+
+DevTools now show the **Compute Intersections** in the flame chart. These changes help you to identify the [intersection observers](https://web.dev/intersectionobserver-v2/) events and debug on its potential performance overheads.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Nx3K0Lpst0lICGbtpzsW.png", alt="Compute Intersections in the Performance panel", width="800", height="496" %}
 
@@ -154,10 +153,9 @@ DevTools now show the **Compute Intersections** in the flame chart. These change
 
 Chromium issue: [1199137](https://crbug.com/1199137)
 
-
 ## Lighthouse 7.5 in the Lighthouse panel {: #lighthouse }
 
-The Lighthouse panel is now running Lighthouse 7.5. The "missing explicit width and height" warning is now removed for images with `aspect-ratio` defined in CSS. Previously, Lighthouse showed warnings for images without width and height defined. 
+The Lighthouse panel is now running Lighthouse 7.5. The "missing explicit width and height" warning is now removed for images with `aspect-ratio` defined in CSS. Previously, Lighthouse showed warnings for images without width and height defined.
 
 Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v7.5.0) for a full list of changes.
 
@@ -166,17 +164,15 @@ Check out the [release notes](https://github.com/GoogleChrome/lighthouse/release
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-
 ## Deprecated "Restart frame" context menu in the call stack {: #restart-frame }
 
-The **Restart frame** option is now deprecated. This feature requires further development to work well, it is currently broken and often crashes.  
+The **Restart frame** option is now deprecated. This feature requires further development to work well, it is currently broken and often crashes.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Alvnt4FkoEFoP0SkdKgi.png", alt="Deprecated Restart frame context menu", width="800", height="486" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4494098b6840f608347c1edf3c048691056eada4 #}
 
 Chromium issue: [1203606](https://crbug.com/1203606)
-
 
 ## [Experimental] Protocol monitor {: #protocol-monitor }
 
@@ -195,11 +191,10 @@ Two new functions added to facilitate the testing of CDP:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="Protocol monitor", width="800", height="496" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/006e20c4226a7b2e5fde4026191b1eaf05bf8b8e #}
 
 Chromium issues: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
-
 
 ## [Experimental] Puppeteer Recorder {: #puppeteer-recorder }
 
@@ -217,11 +212,10 @@ Please note that this is an early-stage experiment. We plan to improve and expan
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kh1Z4jcWxbO6rYCSoIPn.png", alt="Puppeteer Recorder", width="800", height="557" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium issue: [1199787](https://crbug.com/1199787)
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

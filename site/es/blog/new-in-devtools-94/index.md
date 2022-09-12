@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "Qué hay de nuevo en DevTools (Chrome 94)"
+layout: 'layouts/blog-post.njk'
+title: 'Qué hay de nuevo en DevTools (Chrome 94)'
 authors:
   - jecelynyeen
 date: 2021-08-24
 updated: 2021-08-24
-description:
-  "Usa DevTools en tu idioma preferido, nuevos dispositivos Nest Hub, nueva insignia de consultas de contenedor CSS y más novedades."
+description: 'Usa DevTools en tu idioma preferido, nuevos dispositivos Nest Hub, nueva insignia de consultas de contenedor CSS y más novedades.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GzZ1YTEeHlnhUrbPBzmr.jpg'
 alt: ''
 tags:
@@ -15,18 +14,17 @@ tags:
   - chrome-94
 ---
 
-*Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
+_Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
-
 
 ## Utiliza DevTools en tu idioma preferido {: #localized }
 
 Chrome DevTools ahora soporta más de 80 idiomas, lo que permite que lo puedas utilizar en tu idioma preferido.
 
-Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiendo la ruta  **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
+Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiendo la ruta **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vqO0Xvjei3KxTds87PJc.png", alt="Cambia el idioma en Configuración > Preferencias", width="800", height="519" %}
 
@@ -34,19 +32,17 @@ Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selec
 
 Chromium issue: [1163928](https://crbug.com/1163928)
 
-
 ## Nest Hub en la lista de dispositivos {: #nest-hub }
 
 Ahora puedes simular las dimensiones físicas de Nest Hub y Nest Hub Max utilizando el [modo dispositivo](/docs/devtools/device-mode/).
 
-Clic [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, selecciona Nest Hub o Nest Hub Max en la lista de dispositivos. 
+Clic [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, selecciona Nest Hub o Nest Hub Max en la lista de dispositivos.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KytKWMiC4cbFfVUOBzlm.png", alt="Nest Hub en el modo dispositivo", width="800", height="549" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d13f911f7d98751cce659898936511b5ccda96cd #}
 
 Chromium issue: [1223525](https://crbug.com/1223525)
-
 
 ## Pruebas de origen en la vista de detalle de Frame {: #origin-trials }
 
@@ -62,7 +58,6 @@ Abre una página con prueba de origen (por ejemplo [demo page](https://mediastre
 
 Chromium issue: [607555](https://crbug.com/607555)
 
-
 ## Nueva insignia de consultas de contenedor CSS {: #container-queries }
 
 Una nueva insignia **container** se agrega junto a los elementos del contenedor (los elementos ancestros que coinciden con los criterios de las reglas at `@container`). Haga clic en la insignia para alternar la visualización del contenedor elegido y todos sus descendientes en la página.
@@ -72,7 +67,6 @@ Una nueva insignia **container** se agrega junto a los elementos del contenedor 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6f2632929afd7f74a2f1bf6fd83bb1d8818c3234 #}
 
 Chromium issue: [1146422](https://crbug.com/1146422)
-
 
 ## Nuevo checkbox para invertir los filtros del panel de Red {: #invert-network-filter }
 
@@ -86,7 +80,6 @@ Por ejemplo, puedes escribir "status-code: 404" para filtrar las peticiones de l
 
 Chromium issue: [1054464](https://crbug.com/1054464)
 
-
 ## Eliminación próxima (`deprecated`) de la barra lateral de la Consola {: #deprecated }
 
 La barra lateral de la consola será eliminada en favor de mover los filtros de UI a la barra de herramientas. ¿Tiene alguna duda o comentario? Háganoslo saber a través de este [issue tracker](https://crbug.com/1232937).
@@ -96,7 +89,6 @@ La barra lateral de la consola será eliminada en favor de mover los filtros de 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f34c62f543c29ffd4be95c4e93b453aa34644897 #}
 
 Chromium issue: [1232937](https://crbug.com/1232937)
-
 
 ## Mostrar cabecera `Set-Cookie` sin procesar en la pestaña Problemas y el panel Red {: #raw-cookies }
 
@@ -111,20 +103,17 @@ Anteriormente, DevTools no mostraba cookies con formato incorrecto (cabecera "Se
 
 Chromium issue: [1179186](https://crbug.com/1179186)
 
-
 ## Visualización coherente de los descriptores de acceso nativos como propiedades propias en la consola {: #native-accessors }
 
 La **Consola** ahora muestra los descriptores de acceso nativos como sus propias propiedades de manera coherente.
 
 Por ejemplo, al evaluar la expresión `new Int8Array([1, 2, 3])` en la **Consola**, los descriptores de acceso nativos como `length`,`byteOffset` no se mostraban en la vista previa. Con esta última actualización, los descriptores de acceso nativos se muestran en la vista previa y los valores se evalúan por adelantado cuando se expanden.
 
-
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VcUiEcUXdWc00Q8595n6.png", alt="Visualización coherente de los descriptores de acceso nativos como propiedades propias en la consola", width="800", height="459" %}
 
 {# https://chromium.googlesource.com/v8/v8/+/ce8cef36aa7f386937a6b7bf1907e93b69cad1bd #}
 
 Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://crbug.com/1199247)
-
 
 ## Pila de error más adecuada para scripts en línea con #sourceURL {: #inline-script }
 
@@ -162,11 +151,10 @@ Después de volver a ponderar los beneficios de las implementaciones personaliza
 
 Chromium issue: [1223391](https://crbug.com/1223391)
 
-
 ## [Experimental] Ocultar problemas en la pestaña de Problemas {: #hide-issues }
 
 {% Aside %}
-Para habilitar esta característica experimental, marca el checkbox **Habilitar ocultar menú de problemas** que se encuentra en  **Configuración** > **Experimental**.
+Para habilitar esta característica experimental, marca el checkbox **Habilitar ocultar menú de problemas** que se encuentra en **Configuración** > **Experimental**.
 {% endAside %}
 
 Habilita el **menú ocultar problemas** experimental para ocultar problemas en la pestaña **Problemas**. De este modo, puede centrarse en los problemas que le importan.
@@ -179,5 +167,5 @@ En la pestaña **Issue**, sitúe el ratón en un problema, haga click en el men�
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

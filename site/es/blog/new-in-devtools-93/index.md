@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "Qué hay de nuevo en DevTools (Chrome 93)"
+layout: 'layouts/blog-post.njk'
+title: 'Qué hay de nuevo en DevTools (Chrome 93)'
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
-description:
-  "Consultas de contenedores CSS editables, previsualización de paquetes web, mejor manejo de cadenas de texto en la Consola y más."
+description: 'Consultas de contenedores CSS editables, previsualización de paquetes web, mejor manejo de cadenas de texto en la Consola y más.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mQKfpWjFiRKd6kgzQzJA.jpg'
 alt: ''
 tags:
@@ -15,9 +14,9 @@ tags:
   - chrome-93
 ---
 
-*Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
+_Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -25,8 +24,7 @@ tags:
 
 Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/new-responsive/#responsive-to-the-container) en el panel de **Estilos**.
 
-
-Las consultas de contenedor (*container queries*) ofrecen una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (*media queries*). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
+Las consultas de contenedor (_container queries_) ofrecen una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (_media queries_). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
 
 En el panel de **Elementos**, haz clic en el elemento del DOM que tenga la regla `@container`, DevTools ahora muestra la información de `@container` en el panel de **Estilos**. Clica en él para editar su tamaño. El panel **Estilos** también muestra la información correspondiente al contenedor. Coloca el puntero del mouse encima para resaltar el elemento contenedor en la página y revisa el tamaño del contenedor. Haz clic en él para seleccionar el elemento contenedor.
 
@@ -40,7 +38,6 @@ Actualmente la característica de consultas de contenedor es experimental. Por f
 
 Chromium issue: [1146422](https://crbug.com/1146422)
 
-
 ## Previsualización de paquetes Web en el panel de Red {: #web-bundle }
 
 [Un paquete Web](https://web.dev/web-bundles/) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
@@ -53,7 +50,6 @@ Actualmente la característica de paquete web es experimental. Por favor, activa
 
 Chromium issue: [1182537](https://crbug.com/1182537)
 
-
 ## Depuración de la API de Informes de Atribución {: #attribution-reporting }
 
 Los errores de la API de Informes de Atribución ahora son notificados en la pestaña **Problemas**.
@@ -63,7 +59,6 @@ Los errores de la API de Informes de Atribución ahora son notificados en la pes
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Errores de la API de Informes de Atribución en el panel Problemas", width="800", height="501" %}
 
 Chromium issue: [1190735](https://crbug.com/1190735)
-
 
 ## Mejor manejo de cadenas de texto en la Consola {: #string }
 
@@ -81,7 +76,6 @@ La **Consola** ahora formatea la salida de la cadena de texto como un literal Ja
 
 Chromium issue: [1208389](https://crbug.com/1208389)
 
-
 ## Mejoras en la depuración de CORS {: #cors }
 
 Los errores relacionados CORS de TypeErrors en la **Consola** ahora están enlazados al panel **Red** y la pestaña **Problemas**.
@@ -92,14 +86,13 @@ Haz clic en los dos nuevos iconos al lado de los mensajes de error relacionados 
 
 Chromium issue: [1213393](https://crbug.com/1213393)
 
-
 ## Lighthouse 8.1 {: #lighthouse }
 
 El panel de **Lighthouse** ahora usa Lighthouse 8.1.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
 
-Si tu sitio expone mapas de código fuente (*source maps*) a Lighthouse, revisa el botón **Ver mapa de árbol** para ver un desglose del JavaScript que has enviado, filtrable por tamaño y cobertura al ser cargado.
+Si tu sitio expone mapas de código fuente (_source maps_) a Lighthouse, revisa el botón **Ver mapa de árbol** para ver un desglose del JavaScript que has enviado, filtrable por tamaño y cobertura al ser cargado.
 
 El reporte también incluye una nueva métrica para filtrar (Revisa la captura de pantalla sobre el filtro **Mostrar auditorías relevantas a**). Selecciona una métrica para enfocarte en las oportunidades y diagnósticos más relevantes para mejorar esa métrica.
 
@@ -112,19 +105,17 @@ Revisa las [notas de lanzamiento](https://github.com/GoogleChrome/lighthouse/rel
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-
 ## Muestra una nueva nota URL en el panel de Manifiesto {: #new-note-url }
 
 El panel **Manifiesto** ahora muestra una [nueva nota URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Actualmente en ChromeOS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
+Actualmente en ChromeOS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de _Stylus_ (se muestra si el dispositivo CrOS ha sido usado con un _stylus_). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del _stylus_. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Nueva nota URL en el panel de Manifiesto", width="800", height="477" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/51f8aaf568db256f3390c37393d294c82017565e #}
 
 Chromium issue: [1185678](https://crbug.com/1185678)
-
 
 ## Se arreglaron los selectores CSS coincidentes {: #matching-selectors }
 
@@ -141,7 +132,6 @@ Los selectores separados por coma en el panel de **Estilos** tienen colores dife
 
 Chromium issue: [1219153](https://crbug.com/1219153)
 
-
 ## Mostrando las respuestas JSON con formato legible {: #pretty-print-json }
 
 Ahora puedes ver las respuestas JSON en el panel de **Red** en un formato legible.
@@ -154,5 +144,5 @@ Abre la respuesta JSON en el panel de **Red**, haz clic en el botón `{}` para f
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

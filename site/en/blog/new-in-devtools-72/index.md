@@ -1,13 +1,13 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 72)"
 authors:
   - kaycebasques
 date: 2018-11-27
 #updated: YYYY-MM-DD
 description:
-  "Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits
-  panel updates."
+  'Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits
+  panel updates.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YH7j2OcMe2sg9VI5QXFQ.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-72
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 New features and major changes coming to Chrome DevTools in Chrome 72 include:
 
@@ -69,7 +69,7 @@ it for any DOM node.
 DevTools copies an expression like the one below to your clipboard:
 
 ```js
-document.querySelector('#demo1').shadowRoot.querySelector('p:nth-child(2)')
+document.querySelector('#demo1').shadowRoot.querySelector('p:nth-child(2)');
 ```
 
 ## Audits panel updates {: #audits }
@@ -88,17 +88,15 @@ Also, you can now access the Audits panel from the Command Menu by typing `Light
 
 **Figure 5**. Typing `lighthouse` into the Command Menu
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: #metrics
 [2]: #highlight
 [3]: #copy
 [4]: #audits
 [5]: /docs/devtools/speed/get-started
-[6]:
-  https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
+[6]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
 [7]: https://pptr.dev/#?product=Puppeteer&version=v1.9.0&show=api-pageclickselector-options
 [8]: https://developers.google.com/web/fundamentals/web-components/shadowdom
 [9]: https://github.com/GoogleChrome/lighthouse/releases/tag/v3.2.0

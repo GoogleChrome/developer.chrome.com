@@ -1,8 +1,8 @@
 ---
-title: "Migrating Puppeteer to TypeScript"
+title: 'Migrating Puppeteer to TypeScript'
 description: >
   How we migrate Puppeteer to TypeScript.
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 authors:
   - jackfranklin
 date: 2021-01-21
@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 We're big fans of TypeScript on the DevTools team—so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.
 
@@ -35,7 +35,6 @@ At this point we had our migration ready to go and a robust CI server full of te
 
 Additionally going file by file (and with regular Puppeteer releases, so all the changes didn't ship in the same npm version) kept the risk down. [We picked `DeviceDescriptors.js` as the first file](https://github.com/puppeteer/puppeteer/pull/5595), because it was one of the most straightforward files in the codebase. It can feel slightly underwhelming to do all this prep work and land such a small change, but the goal isn't to make huge changes immediately, but to proceed with caution and methodically file by file. Time spent validating the approach definitely saves time later on in the migration when you hit those more complicated files.
 
-
 ## Prove the pattern and repeat
 
 Thankfully the change to `DeviceDescriptors.js` successfully made it into the codebase, and the plan worked as we'd hoped it would! At this point you're ready to knuckle down and get on with it, which is [exactly what we did](https://github.com/puppeteer/puppeteer/issues?q=label%3Atypescript-migration+is%3Aclosed). Using a GitHub label is a really nice way to group all pull requests together, and we found that useful to track progress.
@@ -49,15 +48,14 @@ For any individual JavaScript file our process was:
 3. **Fix** any issues.
 4. Create the **pull request**.
 
-
 Most of the work in these initial pull requests was to extract TypeScript interfaces for existing data structures. In the case of the [first pull request](https://github.com/puppeteer/puppeteer/pull/5595) that migrated `DeviceDescriptors.js` that we discussed previously, the code went from:
 
 ```js
 module.exports = [
-  { 
+  {
     name: 'Pixel 4',
     … // Other fields omitted to save space
-  }, 
+  },
   …
 ]
 ```
@@ -87,5 +85,5 @@ By migrating the tests to TypeScript (following the same process, going file by 
 
 We've already benefited hugely from TypeScript as engineers who work on the Puppeteer codebase. Coupled with our much improved CI environment, it's enabled us to become more productive when working on Puppeteer and have TypeScript catch bugs that otherwise would have made it into an npm release. We're excited to get high quality TypeScript definitions shipped to enable all the developers using Puppeteer to benefit from this work too.
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

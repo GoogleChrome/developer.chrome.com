@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "O que há de novo no DevTools (Chrome 94)"
+layout: 'layouts/blog-post.njk'
+title: 'O que há de novo no DevTools (Chrome 94)'
 authors:
   - jecelynyeen
 date: 2021-08-24
 updated: 2021-08-24
-description:
-  "Utilize o DevTools em seu idioma preferido, novos dispositivos Nest Hub, novo badge de consultas de contêiner CSS e muito mais."
+description: 'Utilize o DevTools em seu idioma preferido, novos dispositivos Nest Hub, novo badge de consultas de contêiner CSS e muito mais.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kTSL9x5E2JRNenbqZtMO.jpg'
 alt: ''
 tags:
@@ -15,9 +14,9 @@ tags:
   - chrome-94
 ---
 
-*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
+_Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)_
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -59,7 +58,6 @@ Abra a página com o origin trials (exemplo [nessa página demo](https://mediast
 
 Issue relacionada: [607555](https://crbug.com/607555)
 
-
 ## Novo ícone de consultas de contêiner CSS {: #container-queries }
 
 Um novo ícone de **container** foi adicionado próximo aos elementos do contêiner (os elementos antecessores que correspondem aos critérios de regras `@container`). Clique no ícone para alternar a exibição de uma sobreposição do contêiner escolhido e todos os seus descendentes de consulta na página.
@@ -70,19 +68,17 @@ Um novo ícone de **container** foi adicionado próximo aos elementos do contêi
 
 Issue relacionada: [1146422](https://crbug.com/1146422)
 
-
 ## Nova caixa de seleção para inverter os filtros de rede {: #invert-network-filter }
 
 Use a nova caixa de seleção **Invert** para inverter os filtros no painel Rede.
 
-Por exemplo, você pode digitar  "status-code: 404" para filtrar as requisições de rede com status 404. Habilite a caixa de seleção **Invert** para negar o filtro (mostrar todas as requisições de rede que não estão com status 404).
+Por exemplo, você pode digitar "status-code: 404" para filtrar as requisições de rede com status 404. Habilite a caixa de seleção **Invert** para negar o filtro (mostrar todas as requisições de rede que não estão com status 404).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xx1ju91Mu3qflyG6E40W.png", alt="Inverta os filtros de rede", width="800", height="474" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/66878d6044df77ba6264a576483bf5aae6b5f3d9 #}
 
 Issue relacionada: [1054464](https://crbug.com/1054464)
-
 
 ## Depreciação da barra lateral do Console {: #deprecated }
 
@@ -93,7 +89,6 @@ A barra lateral do Console será removida em favor de mudar a interface do usuá
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f34c62f543c29ffd4be95c4e93b453aa34644897 #}
 
 Issue relacionada: [1232937](https://crbug.com/1232937)
-
 
 ## Exibição dos cabeçalhos `Set-Cookie` na guia Issues e no painel Network {: #raw-cookies }
 
@@ -108,7 +103,6 @@ Anteriormente, o DevTools não mostrava cookies malformados (cabeçalho `Set-Coo
 
 Issue relacionada: [1179186](https://crbug.com/1179186)
 
-
 ## Exibição consistente dos métodos de acesso nativos como propriedades no Console {: #native-accessors }
 
 O **Console** agora mostra métodos de acesso nativos como propriedades de forma consistente.
@@ -120,7 +114,6 @@ Por exemplo, ao avaliar a expressão `new Int8Array ([1, 2, 3])` no **Console**,
 {# https://chromium.googlesource.com/v8/v8/+/ce8cef36aa7f386937a6b7bf1907e93b69cad1bd #}
 
 Issue relacionadas: [1076820](https://crbug.com/1076820), ​​[1199247](https://crbug.com/1199247)
-
 
 ## Adequação dos stacks traces para scripts inline com #sourceURL {: #inline-script }
 
@@ -134,7 +127,7 @@ Anteriormente, o DevTools exibia a localização incorreta para scripts inline c
 
 Issue relacionadas: [1183990](https://crbug.com/1183990), ​​[578269](https://crbug.com/578269)
 
-## Alteração do formato da configuração da cor no painel Computed  {: #color-unit }
+## Alteração do formato da configuração da cor no painel Computed {: #color-unit }
 
 Você agora pode alterar o formato da cor de qualquer elemento no painel Computed segurando a tecla <kbd>Shift</kbd> e clicando na visualização da cor.
 
@@ -158,11 +151,10 @@ Depois de ponderar novamente os benefícios das implementações customizadas, d
 
 Issue relacionada: [1223391](https://crbug.com/1223391)
 
-
 ## [Experimental] Ocultar problemas na guia Issues {: #hide-issues }
 
 {% Aside %}
-Para ativar o experimento, marque a caixa de seleção **Enable hide issues menu**  em **Settings** > **Experimentos**.
+Para ativar o experimento, marque a caixa de seleção **Enable hide issues menu** em **Settings** > **Experimentos**.
 {% endAside %}
 
 Ative o experimento **hide issues menu** para ocultar problemas na guia **Issues**. Dessa forma, você pode se concentrar nos problemas importantes para você.
@@ -175,5 +167,5 @@ Na guia **Issues**, passe o mouse sobre um problema e clique no menu do problema
 
 Issue relacionada: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}

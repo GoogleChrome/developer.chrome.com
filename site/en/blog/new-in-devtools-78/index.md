@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 78)"
 authors:
   - kaycebasques
 date: 2019-09-03
 #updated: YYYY-MM-DD
-description:
-  "Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel."
+description: 'Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/F9JYjkwY0iWr3tA3Y66T.jpg'
 alt: ''
 tags:
@@ -15,7 +14,7 @@ tags:
   - chrome-78
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="VNkctDLYP6o" %}
 
@@ -132,9 +131,8 @@ your bug or implement your feature request!
 
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: /blog/new-in-devtools-59#block-requests
 [2]: /blog/new-in-devtools-65#overrides

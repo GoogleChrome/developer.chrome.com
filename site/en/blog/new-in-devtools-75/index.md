@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 75)"
 authors:
   - kaycebasques
 date: 2019-04-17
 #updated: YYYY-MM-DD
-description:
-  "Meaningful autocomplete preset values, clear site data from the Command Menu, and more."
+description: 'Meaningful autocomplete preset values, clear site data from the Command Menu, and more.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hiLhrNbs3RQTcUscbhKr.jpg'
 alt: ''
 tags:
@@ -15,7 +14,7 @@ tags:
   - chrome-75
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
@@ -160,9 +159,8 @@ used for indentation. To override the default behavior and use <kbd>Tab</kbd> to
 There's been a lot of work recently around making the DevTools UI itself more keyboard navigable.
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
-
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/CSS/filter

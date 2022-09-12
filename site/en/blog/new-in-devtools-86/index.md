@@ -1,13 +1,13 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 86)"
 authors:
   - jecelynyeen
 date: 2020-08-20
 #updated: YYYY-MM-DD
 description:
-  "New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts,
-  inactive users and prefers-reduced-data."
+  'New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts,
+  inactive users and prefers-reduced-data.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VYCJO5yoVwSN3v8f1XSm.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-86
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="koUsK58dpNo" %}
 
@@ -279,12 +279,10 @@ you have input.
 
 Chromium issue: [1067184][38]
 
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
-
-[1]:
-  https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
+[1]: https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
 [2]: /docs/devtools/media-panel
 [3]: https://crbug.com/1018414
 [4]: https://crbug.com/1100253

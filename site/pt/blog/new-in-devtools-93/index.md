@@ -1,12 +1,11 @@
 ---
-layout: "layouts/blog-post.njk"
-title: "O que há de novo no DevTools (Chrome 93)"
+layout: 'layouts/blog-post.njk'
+title: 'O que há de novo no DevTools (Chrome 93)'
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
-description:
-  "Consultas de contêiner CSS editáveis, prévia de web-bundles, melhor manejo de strings no Console e muito mais."
+description: 'Consultas de contêiner CSS editáveis, prévia de web-bundles, melhor manejo de strings no Console e muito mais.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TiDoAuzLse9uUSoylxNA.jpg'
 alt: ''
 tags:
@@ -15,9 +14,9 @@ tags:
   - chrome-93
 ---
 
-*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](http://info.lsantos.dev)*
+_Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](http://info.lsantos.dev)_
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -39,7 +38,7 @@ Atualmente o recurso de consultas de contêiner é experimental. Ative a sinaliz
 
 Issue relacionada: [1146422](https://crbug.com/1146422)
 
-## Prévia do web-bundle no painel Network  {: #web-bundle }
+## Prévia do web-bundle no painel Network {: #web-bundle }
 
 [Web bundle](https://web.dev/web-bundles/) é um formato de arquivo para encapsular um ou mais recursos HTTP em um único arquivo. Agora você pode visualizar o conteúdo do web bundle no painel **Network**.
 
@@ -147,5 +146,5 @@ Abra uma resposta JSON no painel **Network**, clique no ícone `{}` para transfo
 
 Bug relacionado: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
