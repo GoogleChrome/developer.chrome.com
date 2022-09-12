@@ -1,6 +1,5 @@
 const yaml = require('js-yaml');
-const path = require('path');
-const {filterOutDrafts} = require('./site/_utils/drafts');
+const {addCollectionByDirectory} = require('./site/_utils/addCollectionByDirectory');
 
 // Filters
 const {
@@ -88,20 +87,6 @@ module.exports = eleventyConfig => {
   // Add plugins
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-
-  function addCollectionByDirectory(config, locale, dir) {
-    config.addCollection(`${dir}-${locale}`, collections => {
-      let collection = collections
-        .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
-        .filter(filterOutDrafts)
-        .reverse();
-      // If we're running inside of Percy then just show the first six posts.
-      if (process.env.PERCY_BRANCH) {
-        collection = collection.slice(collection.length - 6);
-      }
-      return collection;
-    })
-  }
 
   // Add collections
   locales.forEach(locale => {
