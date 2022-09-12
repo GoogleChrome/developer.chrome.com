@@ -213,7 +213,7 @@ bug_report:
     en: Verify the bug
   search:
     en: Search the bug base
-  create:
+  test:
     en: Create a test case
   report:
     en: Report the bug
