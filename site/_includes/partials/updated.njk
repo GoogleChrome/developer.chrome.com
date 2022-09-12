@@ -1,11 +1,12 @@
 <p class="color-secondary-text type--caption">
   {% if updated %}
-    Last updated: <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    {{ 'i18n.common.updated_on' | i18n(locale) }} <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    <span>•</span>
   {% elif date %}
-    Last updated: <time>{{ helpers.formatDateLong(date, locale) }}</time>
+    {{ 'i18n.common.updated_on' | i18n(locale) }} <time>{{ helpers.formatDateLong(date, locale) }}</time>
     <span>•</span>
   {% endif %}
   <a href="{{ page.inputPath | githubLink }}">
-    Improve article
+    {{ 'i18n.common.improve_article' | i18n(locale) }}
   </a>
 </p>
