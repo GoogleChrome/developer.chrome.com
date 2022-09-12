@@ -59,7 +59,7 @@ chrome.action.onClicked.addListener(function() {
 });
 ```
 
-{% include 'partials/extensions/reusing-prod-extension-id.md' %}
+{% partial 'extensions/reusing-prod-extension-id.md' %}
 
 ## Get the OAuth client ID {: #get-client-id}
 

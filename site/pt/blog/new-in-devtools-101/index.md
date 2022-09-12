@@ -16,7 +16,7 @@ tags:
 
 _Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)_
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -158,5 +158,5 @@ Cada modo tem seus próprios casos de uso, benefícios e limitações. Consulte 
 
 Issue relacionada: [772558](https://crbug.com/772558)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

@@ -33,7 +33,7 @@ Para os usos mais problemáticos, o Chrome bloqueará solicitações para `docum
 
 O Lighthouse relata todas as solicitações restantes para `document.write()` porque ele afeta negativamente o desempenho independentemente de como é usado, e há alternativas melhores.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% partial 'lighthouse-best-practices/scoring.md' %}
 
 ## Evite `document.write()`
 

@@ -16,7 +16,7 @@ tags:
 
 _Переводы предоставлены [Alena Batitskaya](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru)._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='YqkIS88VulM' %}
 
@@ -337,5 +337,5 @@ _Переводы предоставлены [Alena Batitskaya](https://twitter.
 
 Задача в трекере Chromium: [1200732](https://crbug.com/1200732)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

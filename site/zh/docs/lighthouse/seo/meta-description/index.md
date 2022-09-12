@@ -21,7 +21,7 @@ updated: 2021-04-08
 
 Lighthouse 并不会评估描述的质量。
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## 如何添加描述标签
 

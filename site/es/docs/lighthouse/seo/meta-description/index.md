@@ -23,7 +23,7 @@ La auditoría falla si:
 
 Lighthouse no evalúa la calidad de su descripción.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## Cómo agregar una metadescripción
 

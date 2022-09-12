@@ -34,11 +34,11 @@ JavaScript를 실행하는 데 시간이 오래 걸리면 여러 가지 방법�
 
 Lighthouse는 실행 시간에 가장 큰 영향을 미치는 요인을 식별하는 데 도움이 되도록 페이지에서 로드하는 각 JavaScript 파일을 실행, 평가 및 구문 분석하는 데 소요된 시간을 보고합니다.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## JavaScript 실행 속도를 높이는 방법
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% partial 'lighthouse-performance/js-perf.md' %}
 
 ## 참고 자료
 

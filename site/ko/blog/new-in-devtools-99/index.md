@@ -16,7 +16,7 @@ tags:
 
 _이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -171,5 +171,5 @@ Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - **소스** 패널에서 브레이크포인트를 제거하면 브레이크포인트 편집 다이얼로그를 닫습니다. ([922513](https://crbug.com/922513))
 - DevTools에서 [라이트 / 다크 테마 선택](/docs/devtools/customize/dark-theme/) 시에 다시 불러올 필요가 없어졌습니다. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

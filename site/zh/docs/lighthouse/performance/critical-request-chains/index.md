@@ -16,7 +16,7 @@ updated: 2020-04-29
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Lighthouse 最小化关键请求深度审计的截图", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## Lighthouse 如何识别关键请求链
 

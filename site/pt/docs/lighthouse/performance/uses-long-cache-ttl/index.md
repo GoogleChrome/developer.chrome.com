@@ -43,7 +43,7 @@ Quando uma página falha na auditoria, o Lighthouse lista os resultados numa tab
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## Como armazenar recursos estáticos em cache usando o cache HTTP
 

@@ -16,7 +16,7 @@ tags:
 
 _感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译_。
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='4RXWfw7Xg_Y' %}
 
@@ -173,5 +173,5 @@ Chromium 议题: [1329113](https://crbug.com/1329113), [1322115](https://crbug.c
 - **性能洞察**面板现在将 iframes 检测为布局变化的潜在原因。 你可以检看**细节**面板 中的 iframe 细节。 ([1328873](https://crbug.com/1328873))
 - 当**命令菜单**中 [打开文件](/docs/devtools/resources/#open) , 编写文件 (源图产生的文件) 的排名会更加高，因此他们会出现在被相似命名的部署脚本之上。 ([1312929](https://crbug.com/1312929))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

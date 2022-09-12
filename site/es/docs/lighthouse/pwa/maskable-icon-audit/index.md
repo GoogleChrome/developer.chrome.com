@@ -23,7 +23,7 @@ Para aprobar la auditoría:
 
 {% Aside 'caution' %} Lighthouse no inspecciona la imagen que se especifica como el ícono enmascarable. Deberá verificar manualmente que la imagen se muestre bien. {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% partial 'lighthouse-best-practices/scoring.md' %}
 
 ## Cómo agregar compatibilidad con íconos enmascarables a su PWA
 

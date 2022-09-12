@@ -24,7 +24,7 @@ updated: 2020-06-17
 
 При этом Lighthouse не проверяет, являются ли найденные значения допустимыми цветами CSS.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Как установить цвет темы для адресной строки
 

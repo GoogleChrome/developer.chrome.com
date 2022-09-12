@@ -16,7 +16,7 @@ tags:
 
 _Gracias por la traducción [Carlos Caballero](https://carloscaballero.io) y por la revisión [Miguel Ángel](https://midu.dev)._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='4RXWfw7Xg_Y' %}
 
@@ -274,5 +274,5 @@ Estas son algunas correcciones notables en esta versión:
 
 - Cuando [abrir archivo](/docs/devtools/resources/#open) en el **Menú de comandos**, los archivos creados (archivos generados por mapas de origen) ahora se clasifican más alto para que aparezcan encima de los scripts implementados con nombres similares. ([1312929](https://crbug.com/1312929))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

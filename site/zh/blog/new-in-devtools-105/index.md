@@ -17,7 +17,7 @@ tags:
 
 _感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译_。
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -279,5 +279,5 @@ Chromium 议题: [1335338](https://crbug.com/1335338), [1333411](https://crbug.c
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - [广告框架] (https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)里新增 **Creator Ad Script** 链接。 当 DevTools 搜索到了导致框架被标记为广告的脚本时，您可以通过 **Application** > **Frames** 打开框架。 ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

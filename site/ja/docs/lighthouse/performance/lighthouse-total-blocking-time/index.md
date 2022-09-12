@@ -49,7 +49,7 @@ TBTは、マウスのクリック、画面のタップ、キーボードの押�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## TBTスコアを改善する方法
 

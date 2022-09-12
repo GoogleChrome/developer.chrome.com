@@ -16,7 +16,7 @@ tags:
 
 _感谢 [韩昌浩](https://github.com/hanselfmu) 提供的翻译_。
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -270,5 +270,5 @@ Chromium 议题: [1268754](https://crbug.com/1268754)
 
 Chromium 议题: [1245191](https://crbug.com/1245191)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

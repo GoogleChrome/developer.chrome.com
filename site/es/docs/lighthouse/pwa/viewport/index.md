@@ -26,7 +26,7 @@ Una página no pasa la auditoría a menos que se cumplan todas las siguientes co
 
 Lighthouse *no* comprueba que el `width` sea igual al `device-width`. Tampoco busca un par clave-valor de `initial-scale`. Sin embargo, aún debes de incluir ambos para que tu página se muestre correctamente en dispositivos móviles.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Cómo agregar una metaetiqueta de ventana gráfica
 

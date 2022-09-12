@@ -25,9 +25,9 @@ updated: 2020-06-10
 
 Lighthouseは、低速の4Gネットワーク接続でTTIがどうなると計算します。操作可能までの時間が10秒を超える場合、監査は失敗します。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% partial 'lighthouse-performance/improve.md' %}
 
 ## リソース
 

@@ -34,11 +34,11 @@ tags:
 
 为了帮助您确定对执行时间影响最大的因素，Lighthouse 报告了执行、评估和解析页面加载的每个 JavaScript 文件所花费的时间。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## 如何加速 JavaScript 执行
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% partial 'lighthouse-performance/js-perf.md' %}
 
 ## 资源
 

@@ -28,7 +28,7 @@ Lighthouse は、次の一般的な link テキストにフラグを立てます
 - `more`
 - `learn more`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## 説明できる link テキストを追加する方法
 

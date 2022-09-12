@@ -21,7 +21,7 @@ updated: 2020-06-04
 - 运行[适用于 Chrome 的库检测器](https://www.npmjs.com/package/js-library-detector)。
 - [根据 snyk 的漏洞数据库](https://snyk.io/vuln?packageManager=all)检查检测到的库列表。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% partial 'lighthouse-best-practices/scoring.md' %}
 
 ## 停止使用不安全的 JavaScript 库
 

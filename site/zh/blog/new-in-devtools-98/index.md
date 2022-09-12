@@ -16,7 +16,7 @@ tags:
 
 _感谢 [阮贝琪 @jecelynyeen](https://github.com/jecelynyeen) 和 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译_。
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='YqkIS88VulM' %}
 
@@ -330,5 +330,5 @@ Chromium 议题： [1241848](https://crbug.com/1241848)
 
 Chromium 议题： [1200732](https://crbug.com/1200732)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

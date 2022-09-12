@@ -16,7 +16,7 @@ tags:
 
 _Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)_
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -167,5 +167,5 @@ Na guia **Issues**, passe o mouse sobre um problema e clique no menu do problema
 
 Issue relacionada: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

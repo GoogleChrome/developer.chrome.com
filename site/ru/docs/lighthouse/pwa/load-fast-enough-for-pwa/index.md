@@ -27,9 +27,9 @@ updated: 2020-06-10
 
 Lighthouse вычисляет, каким будет TTI при медленном сетевом подключении 4G. Если время загрузки для взаимодействия превышает 10 секунд, аудит считается непройденным.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% partial 'lighthouse-performance/improve.md' %}
 
 ## Материалы
 

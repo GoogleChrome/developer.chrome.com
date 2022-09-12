@@ -34,11 +34,11 @@ tags:
 
 Чтобы помочь вам выявить главные причины медленного выполнения кода, Lighthouse сообщает о времени, затрачиваемом на выполнение, оценку и обработку каждого файла JavaScript, загружаемого страницей.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## Как ускорить выполнение JavaScript
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% partial 'lighthouse-performance/js-perf.md' %}
 
 ## Ресурсы
 

@@ -26,11 +26,11 @@ Todos los navegadores principales, excepto Internet Explorer, son compatibles co
 
 Lighthouse comprueba si el [Protocolo de depuración remota de Chrome](https://github.com/ChromeDevTools/devtools-protocol) devuelve una versión del service worker. Si no es así, la auditoría falla.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Cómo registrar un service worker
 
-{% include 'content/reliable/workbox.njk' %}
+{% partial 'reliable/workbox.md' %}
 
 El registro de un trabajador del servicio implica solo unas pocas líneas de código, pero la única razón por la que usaría un service worker es para hacer posible la implementación de una de las características de la PWA descritas anteriormente. La implementación real de esas características requiere más trabajo:
 

@@ -39,7 +39,7 @@ updated: 2019-08-21
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## Как исправить цели касания
 

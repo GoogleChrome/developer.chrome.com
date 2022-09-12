@@ -26,11 +26,11 @@ updated: 2020-06-10
 
 Lighthouse проверяет, возвращает ли [Chrome Remote Debugging Protocol](https://github.com/ChromeDevTools/devtools-protocol) номер версии сервис-воркера. Если этого не происходит, проверка завершается неудачей.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Как зарегистрировать сервис-воркер
 
-{% include 'content/reliable/workbox.njk' %}
+{% partial 'reliable/workbox.md' %}
 
 Для регистрации сервис-воркера требуется всего несколько строк кода, но смысл в ней есть только в том случае, если вы собираетесь реализовать одну из функций PWA, перечисленных выше. Это потребует более серьезных усилий:
 

@@ -16,7 +16,7 @@ tags:
 
 _Gracias por la traducción [Carlos Caballero](https://carloscaballero.io) y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -270,5 +270,5 @@ En el panel **Estilos**, haga clic en cualquier vista previa de color para abrir
 
 Chromium issue: [1245191](https://crbug.com/1245191)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

@@ -36,11 +36,11 @@ Cuando su JavaScript tarda mucho en ejecutarse, ralentiza el rendimiento de su p
 
 Para ayudarlo a identificar los mayores contribuyentes al tiempo de ejecución, Lighthouse informa el tiempo dedicado a ejecutar, evaluar y analizar cada archivo JavaScript que carga su página.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## Cómo acelerar la ejecución de JavaScript
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% partial 'lighthouse-performance/js-perf.md' %}
 
 ## Recursos
 

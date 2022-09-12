@@ -23,7 +23,7 @@ tags:
 
 _感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。_
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -294,5 +294,5 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 
 Chromium 议题：[1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

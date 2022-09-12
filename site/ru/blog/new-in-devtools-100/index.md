@@ -16,7 +16,7 @@ tags:
 
 _Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru)._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -179,5 +179,5 @@ _Переводы предоставлены [Alena Batitskaia](https://twitter.
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - Вкладка **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

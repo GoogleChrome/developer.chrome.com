@@ -27,11 +27,11 @@ updated: 2020-06-10
 
 Lighthouse 会计算慢速 4G 网络连接上的 TTI。如果交互时间超过 10 秒，则审计失败。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## 如何改进页面的加载时间
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% partial 'lighthouse-performance/improve.md' %}
 
 ## 资源
 

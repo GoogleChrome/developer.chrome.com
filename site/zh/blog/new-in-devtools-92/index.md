@@ -18,7 +18,7 @@ _感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译_。
 
 <!-- lint disable no-smart-quotes -->
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -221,5 +221,5 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

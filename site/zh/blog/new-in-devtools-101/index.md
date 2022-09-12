@@ -16,7 +16,7 @@ tags:
 
 _感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译_。
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
@@ -159,5 +159,5 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 Chromium 议题: [772558](https://crbug.com/772558)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

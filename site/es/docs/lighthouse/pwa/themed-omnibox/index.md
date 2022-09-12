@@ -24,7 +24,7 @@ La auditoría falla si Lighthouse no encuentra una meta tag `theme-color` en el 
 
 Tenga en cuenta que Lighthouse no verifica si los valores son valores de color CSS válidos.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Cómo establecer un color de tema para la barra de direcciones
 

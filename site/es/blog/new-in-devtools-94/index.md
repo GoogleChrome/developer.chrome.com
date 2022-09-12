@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -167,5 +167,5 @@ En la pestaña **Issue**, sitúe el ratón en un problema, haga click en el men�
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

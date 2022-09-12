@@ -16,7 +16,7 @@ tags:
 
 _翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro)さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。_
 
-{% include 'partials/devtools/banner.md' %}
+{% partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -280,5 +280,5 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 - DevTools で[ライト／ダークテーマを切り替え](/docs/devtools/customize/dark-theme/)たときに、リロードが不要になりました。 ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% partial 'devtools/reach-out.md' %}
+{% partial 'devtools/whats-new.md' %}

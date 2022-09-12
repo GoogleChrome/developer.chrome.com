@@ -16,11 +16,11 @@ Si el navegador no recibe una [respuesta HTTP 200](https://developer.mozilla.org
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ZR8gYzKNpBkrXEgQQnbl.png", alt="La auditoría Lighthouse que muestra que la URL de inicio no responde con 200 cuando está sin conexión", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% partial 'lighthouse-pwa/scoring.md' %}
 
 ## Cómo asegurarse de que tu página esté disponible sin conexión
 
-{% include 'content/reliable/workbox.njk' %}
+{% partial 'reliable/workbox.md' %}
 
 1. Si aún no tienes uno, [agrega un manifiesto de aplicación web](https://web.dev/add-manifest/).
 2. Verifica que el `start_url` en tu manifiesto esté correcto.

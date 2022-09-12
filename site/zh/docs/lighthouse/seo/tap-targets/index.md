@@ -39,7 +39,7 @@ updated: 2019-08-21
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## 如何修复您的点击目标
 

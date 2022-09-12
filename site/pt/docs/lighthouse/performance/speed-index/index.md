@@ -49,7 +49,7 @@ A tabela abaixo mostra como interpretar sua pontuação Speed Index:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## Como melhorar sua pontuação Speed Index
 
@@ -59,7 +59,7 @@ Embora qualquer coisa que você faça para melhorar a velocidade de carregamento
 - [Reduza o tempo de execução do JavaScript](/docs/lighthouse/performance/bootup-time/)
 - [Garanta que o texto permanece visível durante o carregamento das fontes web](https://web.dev/font-display/)
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% partial 'lighthouse-performance/improve.md' %}
 
 ## Recursos
 

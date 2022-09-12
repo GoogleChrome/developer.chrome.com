@@ -16,13 +16,13 @@ Lighthouse는 TTI를 초 단위로 표시합니다.
 
 ## TTI로 측정되는 내용
 
-TTI는 페이지가 *완전히* 상호 작용 가능하게 되는 데 걸리는 시간을 측정합니다. 다음과 같은 경우에 페이지가 완전한 상호 작용 가능한 것으로 간주됩니다.
+TTI는 페이지가 _완전히_ 상호 작용 가능하게 되는 데 걸리는 시간을 측정합니다. 다음과 같은 경우에 페이지가 완전한 상호 작용 가능한 것으로 간주됩니다.
 
 - 페이지에 [첫 번째 콘텐츠풀 페인트](https://web.dev/fcp/)에 의해 측정되는 유용한 콘텐츠가 표시됩니다.
 - 가장 많이 보이는 페이지 요소에 이벤트 핸들러가 등록됩니다.
 - 페이지가 50밀리초 이내에 사용자 상호 작용에 응답합니다.
 
-{% Aside %} [첫 번째 CPU 유휴](/docs/lighthouse/performance/first-cpu-idle/) 및 TTI는 모두 페이지가 사용자 입력에 준비되는 시기를 측정합니다. 첫 번째 CPU 유휴는 사용자가 페이지와 상호 작용을 *시작*할 수 있을 때 발생합니다. TTI는 사용자가 페이지와 *완전히* 상호 작용할 수 있을 때 발생합니다. 각 메트릭에 대한 정확한 계산에 관심이 있다면 Google의 [첫 상호 작용 및 지속적 상호 작용](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)을 참조하세요. {% endAside %}
+{% Aside %} [첫 번째 CPU 유휴](/docs/lighthouse/performance/first-cpu-idle/) 및 TTI는 모두 페이지가 사용자 입력에 준비되는 시기를 측정합니다. 첫 번째 CPU 유휴는 사용자가 페이지와 상호 작용을 *시작*할 수 있을 때 발생합니다. TTI는 사용자가 페이지와 _완전히_ 상호 작용할 수 있을 때 발생합니다. 각 메트릭에 대한 정확한 계산에 관심이 있다면 Google의 [첫 상호 작용 및 지속적 상호 작용](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)을 참조하세요. {% endAside %}
 
 ## Lighthouse가 TTI 점수를 결정하는 방법
 
@@ -55,7 +55,7 @@ TTI 점수는 [HTTP 아카이브의 데이터](https://httparchive.org/reports/l
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% partial 'lighthouse-performance/scoring.md' %}
 
 ## TTI 점수를 높이는 방법
 
@@ -72,7 +72,7 @@ TTI가 실제로 사용자의 기기에서 발생하는 시점을 측정하는 �
 
 {% Aside %} TTI는 실제 상황에서 추적하기 어려울 수 있습니다. [첫 번째 입력 지연](https://developers.google.com/web/updates/2018/05/first-input-delay)을 추적하면 TTI를 간접적으로 가늠해볼 수 있습니다. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% partial 'lighthouse-performance/improve.md' %}
 
 ## 리소스
 

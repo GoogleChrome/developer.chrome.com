@@ -23,7 +23,7 @@ updated: 2021-04-08
 
 Lighthouse は記述の質を評価しません。
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% partial 'lighthouse-seo/scoring.md' %}
 
 ## メタ記述を追加する方法
 

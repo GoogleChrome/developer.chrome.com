@@ -80,11 +80,11 @@ The origin trial is expected to [pause for 2 weeks](https://groups.google.com/a/
 starting in Chrome&nbsp;106 (Sep 27, 2022).
 {% endAside %}
 
-{% include 'content/origin-trials.njk' %}
+{% partial 'origin-trials.md' %}
 
 ### Register for the origin trial {: #register-for-ot }
 
-{% include 'content/origin-trial-register.njk' %}
+{% partial 'origin-trial-register.md' %}
 
 ### Feature detection {: #feature-detection }
 

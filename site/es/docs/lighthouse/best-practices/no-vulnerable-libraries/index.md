@@ -21,7 +21,7 @@ Para detectar bibliotecas vulnerables, Lighthouse:
 - Ejecuta el [detector de bibliotecas para Chrome](https://www.npmjs.com/package/js-library-detector).
 - Compara la lista de bibliotecas detectadas con la [base de datos de vulnerabilidades de Snyk](https://snyk.io/vuln?packageManager=all).
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% partial 'lighthouse-best-practices/scoring.md' %}
 
 ## Deje de usar bibliotecas JavaScript inseguras
 
