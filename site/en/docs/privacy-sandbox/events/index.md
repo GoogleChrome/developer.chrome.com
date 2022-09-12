@@ -6,7 +6,7 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2022-08-31
+updated: 2022-09-12
 authors:
  - samdutton
 ---
@@ -24,12 +24,14 @@ leads.
 
 Join us to learn more about our approach to the Topics API, and to get your questions answered. 
 
-**Session 1 with English-language demo** 
+**Session 1 with English-language demo** (event now completed)
 * Tuesday, September 6 
 * 8:00–9:30 am PDT 
 * Video call link: [meet.google.com/xnp-mxct-qvd](https://meet.google.com/xnp-mxct-qvd) 
 * Or dial: (US) +1 651-867-0444 PIN: 530 909 558 # 
 * More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397) 
+* Videos of event: [presentation](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF), 
+[demo](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV)
 
 **Session 2 with Japanese-language demo** 
 * PDT: Tuesday, September 13, 6–7:30 pm 
