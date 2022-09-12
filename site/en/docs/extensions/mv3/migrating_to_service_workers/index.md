@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: "Migrating from background pages to service workers"
 date: 2020-07-29
-updated: 2020-10-06
+updated: 2022-09-12
 description: >
   How to migrate your Chrome Extension from background pages to service workers,
   which is a prerequisite for using Manifest V3.
