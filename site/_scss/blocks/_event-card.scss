@@ -11,7 +11,7 @@
   }
 
   .type--h5 {
-    color: #{get-color('black')};
+    color: get-color('black');
   }
 
   &__meta {
@@ -23,7 +23,42 @@
     }
   }
 
+  p {
+    font-size: 1.125em;
+    line-height: 1.333em;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    line-height: 1.333em;
+    font-family: #{$font-google-sans};
+    font-weight: 400;
+  }
+
+  &__sub-title {
+    line-height: 1.75em;
+    font-family: #{$font-google-sans};
+    font-weight: 500;
+  }
+
   .material-button {
     align-self: flex-start;
+  }
+}
+
+.event-participant-card {
+  border-radius: 12px;
+  border: 1px solid get-color('grey-300');
+
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+
+  svg {
+    fill: get-color('blue-500');
+    height: auto;
+    margin-right: 6px;
+    width: 20px;
   }
 }
