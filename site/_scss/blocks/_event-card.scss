@@ -15,11 +15,13 @@
   }
 
   &__meta {
+    margin-top: 0.7em;
+
     svg {
       fill: get-color('blue-500');
       height: auto;
-      margin-right: get-size(100);
-      width: 22px;
+      margin-right: get-size(200);
+      width: 16px;
     }
   }
 
