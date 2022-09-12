@@ -178,6 +178,16 @@ website:
 featured:
   en: Featured
 
+featured_cards:
+  gdg:
+    title:
+      en: Google Developer Groups
+    body:
+      en: |
+        Connect with fellow developers and startups in your area, 
+        hear from industry experts, share your skills, and learn.
+    cta:
+      en: Find your local group
 cookie_banner:
   explainer:
     en: |
@@ -190,3 +200,23 @@ cookie_banner:
 
 draft_warning:
   en: This page is a draft and will not be published with the rest of the site.
+
+bug_report:
+  category:
+    en: Docs
+  title:
+    en: How to report a Chrome bug
+  verify:
+    en: Verify the bug
+  search:
+    en: Search the bug base
+  create:
+    en: Create a test case
+  report:
+    en: Report the bug
+  image_alt:
+    en: A green bug on a stylized report card with a speech bubble tip
+  learn_more:
+    en: Learn more
+  report:
+    en: Report a bug.
