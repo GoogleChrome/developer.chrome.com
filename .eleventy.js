@@ -116,6 +116,91 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
 
+  eleventyConfig.addCollection("events", function() {
+    return [
+      {
+        title: 'Event name goes here',
+        summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        location: 'Dublin, Ireland',
+        date: '2022-01-24',
+        talks: [
+          {
+            speaker: 'John Doe',
+            title: 'Web performance measurement',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            topic: 'Performance',
+            time: '8:00am - 10:00am'
+          },
+          {
+            speaker: 'Jane Doe',
+            title: 'First input delay',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            topic: 'Performance',
+            time: '10:00am - 11:00am'
+          }
+        ],
+        participant_groups: [
+          {
+            participants: [
+              {
+                name: 'Jane Smith'
+              }
+            ],
+            topic: 'Performance',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever Lorem Ipsum is simply dummy text.'
+          },
+          {
+            participants: [
+              {
+                name: 'John Doe'
+              }
+            ],
+            topic: 'Performance',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          },
+          {
+            participants: [
+              {
+                name: 'Jennie Kim'
+              },
+              {
+                name: 'Jane Smith'
+              },
+              {
+                name: 'Joe Bloggs'
+              }
+            ],
+            topic: null,
+            description: 'Multiple Googlers are participating in this event. Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          },
+        ],
+      },
+      {
+        title: 'Event name goes here Event name goes here Event name goes here Event name goes here Event name goes here Event name goes here Event name goes here Event name goes here',
+        summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        location: 'Dublin, Ireland',
+        date: '2022-01-29',
+        talks: [
+          {
+            speaker: 'John Doe',
+            title: 'Web performance measurement',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            topic: 'Performance',
+            time: '8:00am - 10:00am'
+          },
+          {
+            speaker: 'Jane Doe',
+            title: 'First input delay',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            topic: 'Performance',
+            time: '10:00am - 11:00am'
+          }
+        ],
+        participant_groups: [],
+      }
+    ]
+  });
+
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('embededDoc', embededDoc);

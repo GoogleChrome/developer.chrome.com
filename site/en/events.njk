@@ -1,10 +1,12 @@
 ---
-layout: 'layouts/landing.njk'
+layout: 'layouts/events.njk'
 title: 'Workbox'
 description: 'Production-ready service worker libraries and tooling.'
 ---
 
 {% from 'macros/icon.njk' import icon with context %}
+
+{% include 'partials/events-hero.njk' %}
 
 {% for item in collections.events %}
   {% EventCard item %}

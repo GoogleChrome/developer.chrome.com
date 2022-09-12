@@ -27,3 +27,7 @@
 @import 'utilities/surface';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
+
+.events-container {
+  max-width: calc(1290px + 3rem);
+}
