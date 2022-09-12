@@ -221,5 +221,7 @@ bug_report:
     en: A green bug on a stylized report card with a speech bubble tip
   learn_more:
     en: Learn more
+  learn_more_hint:
+    en: about reporting a bug.
   report_cta:
     en: Report a bug.
