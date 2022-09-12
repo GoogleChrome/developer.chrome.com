@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 90)"
 authors:
   - jecelynyeen
 date: 2021-02-28
 updated: 2021-03-01
 description:
-  'Debugging support for CSS Flexbox, performance heads-up display on page, issues tab updates and
-  more.'
+  "Debugging support for CSS Flexbox, performance heads-up display on page, issues tab updates and
+  more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lB7dsXtKeasPNZXiUFfu.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-90
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="UyXPdYLQVQk" %}
 
@@ -269,8 +269,9 @@ over time.
 
 Chromium issue: [887173][41]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699

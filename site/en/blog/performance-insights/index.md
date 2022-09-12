@@ -1,8 +1,8 @@
 ---
-title: 'How and why we built Performance Insights'
+title: "How and why we built Performance Insights"
 description: >
   How and why we built the Performance Insights panel.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - jackfranklin
 date: 2022-06-01
@@ -13,11 +13,12 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 In [Chrome 102](/blog/new-in-devtools-102/) you’ll notice a new experimental panel, [Performance Insights](/docs/devtools/performance-insights/), in your DevTools. In this post we’ll discuss not only why we’ve been working on a new panel, but also the technical challenges that faced us and the decisions we’ve made along the way.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cTJojLBtE39WtARpWfqj.png", alt="ALT_TEXT_HERE", width="800", height="568" %}
+
 
 ## Why build another panel?
 
@@ -35,7 +36,7 @@ This panel is experimental and we want your feedback! Please let us know if you 
 
 ## How we built Performance Insights
 
-Like the rest of DevTools, we built Performance Insights in [TypeScript](/blog/migrating-to-typescript/) and used [web components](/blog/migrating-to-web-components/), backed by [lit-html](https://lit.dev/), to build the user interface. Where Performance Insights differs is that the primary UI interface is [an HTML `canvas` element](https://developer.mozilla.org/docs/Web/HTML/Element/canvas), and the timeline is drawn onto this canvas. A lot of the complexity comes from managing this canvas: not only drawing the right details in the right place, but managing mouse events (for example: where did the user click on the canvas? Did they click on an event we’ve drawn?) and ensure that we re-render the canvas effectively.
+Like the rest of DevTools, we built Performance Insights in [TypeScript](/blog/migrating-to-typescript/ ) and used [web components](/blog/migrating-to-web-components/), backed by [lit-html](https://lit.dev/), to build the user interface. Where Performance Insights differs is that the primary UI interface is [an HTML `canvas` element](https://developer.mozilla.org/docs/Web/HTML/Element/canvas), and the timeline is drawn onto this canvas. A lot of the complexity comes from managing this canvas: not only drawing the right details in the right place, but managing mouse events (for example: where did the user click on the canvas? Did they click on an event we’ve drawn?) and ensure that we re-render the canvas effectively.
 
 {% Aside 'gotchas' %}
 Note that because this panel is an experimental feature, the code for the panel is not open source, but it may become open source in the future.
@@ -61,11 +62,7 @@ Using one `canvas` for the entire UI meant we needed to figure out how to ensure
 ```js
 canvasContext.beginPath();
 canvasContext.rect(
-  trackVisibleWindow.x,
-  trackVisibleWindow.y,
-  trackVisibleWindow.width,
-  trackVisibleWindow.height
-);
+    trackVisibleWindow.x, trackVisibleWindow.y, trackVisibleWindow.width, trackVisibleWindow.height);
 canvasContext.clip();
 ```
 
@@ -77,6 +74,7 @@ canvasContext.rect(0, 0, 10, 10); // draw a rectangle at (0, 0) that’s 10px hi
 ```
 
 Despite the `rect` code setting `0, 0` as the position, the overall translation applied will cause the rectangle to be rendered at `0, 10`. This allows us to work on a track basis as if we’re rendering at (0, 0), and have our track manager translate as it renders each track to ensure each track is rendered correctly below the previous.
+
 
 ## Off-screen canvases for tracks and highlights
 
@@ -92,6 +90,7 @@ To fix this we split our UI up into two **off-screen** canvases: the “main” 
 
 Doing this means that removing a highlight doesn’t cause the main canvas to be redrawn: instead we can clear the on-screen canvas, and then _copy the main canvas_ onto the visible canvas. The act of copying a canvas is cheap, it’s the drawing that is expensive; so by moving highlights onto a separate canvas, we avoid that cost when turning highlights on and off.
 
+
 ## Comprehensively tested trace parsing
 
 One of the benefits of building a new feature from scratch is that you can reflect on the technical choices made previously and make improvements. One of the things we wanted to improve on was to explicitly split our code into two, almost entirely distinct parts:
@@ -101,7 +100,8 @@ Render a set of tracks.
 
 Keeping the parsing (part 1) separate from the UI work (part 2) enabled us to build a solid parsing system; each trace is run through a series of _Handlers_ which are responsible for different concerns: a `LayoutShiftHandler` calculates all the information we need for Layout Shifts and a `NetworkRequestsHandler` exclusively tackles pulling out network requests. Having this explicit parsing step where we have different handlers responsible for different parts of the trace has also been beneficial: trace parsing can get very complicated, and it helps being able to focus on one concern at a time.
 
-We’ve also been able to comprehensively test our trace parsing by taking recordings in DevTools, saving them and then loading them in as part of our test suite. This is great because we can test with real traces, and not build up huge amounts of fake trace data that could become obsolete.
+We’ve also been able to comprehensively test our trace parsing by taking recordings in DevTools, saving them and then loading them in as part of our test suite. This is great because we can test with real traces, and not build up huge amounts of fake trace data that could become obsolete. 
+
 
 ## Screenshot testing for canvas UI
 
@@ -117,5 +117,6 @@ Building the new Performance Insights panel has been a very enjoyable, education
 
 To learn more about the Performance Insights panel, see [Performance insights: Get actionable insights on your website's performance](/docs/devtools/performance-insights/).
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

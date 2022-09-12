@@ -10,10 +10,10 @@ alt: >
   Deprecations and Removals hero logo
 tags:
   - deprecations-removals
-  - chrome-92
+{% partial '
 ---
 
-{% partial 'see-all-dep-rem.md' %}
+{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 92 beta was released on June 3, 2021 and is expected to become the
 stable version in late July, 2021.
@@ -22,7 +22,7 @@ stable version in late July, 2021.
 
 This feature, which enabled web-based payment handlers to receive `paymentrequest`
 events with non-URL, but standardized payment method identifiers, such as
-`"basic-card"` or `"tokenized-card"`, [has been
+{% partial 'okenized-card"`, [has been
 removed](https://www.chromestatus.com/feature/5717324021628928).
 
-{% partial 'deprecations-policy.md' %}
+{% include 'partials/deprecations-policy.md' %}

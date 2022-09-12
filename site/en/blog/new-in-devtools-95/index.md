@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 95)"
 authors:
   - jecelynyeen
 date: 2021-09-20
 updated: 2021-09-20
-description: 'New CSS length authoring tools, hide issues in the Issues tab, improved the display of properties, and more.'
+description:
+  "New CSS length authoring tools, hide issues in the Issues tab, improved the display of properties, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Z98rfRfuNDjERrDwXnrD.jpg'
 alt: ''
 tags:
@@ -14,7 +15,7 @@ tags:
   - chrome-95
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -40,15 +41,16 @@ You can still edit the unit value as text — just click on the value and start 
 
 Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.com/1172993)
 
+
 ## Hide issues in the Issues tab {: #hide-issues }
 
 You can now hide specific issues in the Issues tab to focus only on those issues that matter to you.
 
-In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**.
+In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="Hide issues menu", width="800", height="488" %}
 
-All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one.
+All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Hidden issues pane", width="800", height="488" %}
 
@@ -56,11 +58,12 @@ All hidden issues will be added under the **Hidden issues** pane. Expand the pan
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
+
 ## Improved the display of properties {: #properties }
 
 DevTools improve the display of properties by:
 
-- Always bold and sort own properties first in the **Console**, **Sources** panel and **Properties** pane.
+- Always bold and sort own properties first in the **Console**, **Sources** panel and **Properties** pane. 
 - Flatten the properties display in the **Properties** pane.
 
 For example, the snippet below creates an [`URL`](https://developer.mozilla.org/docs/Web/API/URL) object `link` with 2 own properties: `user` and `access`, and updates the value of an inherited property `search`.
@@ -70,7 +73,7 @@ For example, the snippet below creates an [`URL`](https://developer.mozilla.org/
 
 const link = new URL('https://goo.gle/devtools-blog');
 
-link.user = {id: 1, name: 'Jane Doe'};
+link.user = { id: 1, name: 'Jane Doe' };
 link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
@@ -79,7 +82,7 @@ Try logging `link` in the **Console**. Own properties are now bold and sorted fi
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="Own properties are bold and sorted first", width="800", height="561" %}
 
-Apart from these changes, the properties in the **Properties** pane are also flattened now for better DOM properties debugging experience, especially for [Web components](https://www.webcomponents.org/introduction).
+Apart from these changes, the properties in the  **Properties** pane are also flattened now for better DOM properties debugging experience, especially for [Web components](https://www.webcomponents.org/introduction). 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hIQGKlYkWKJzljHZaaM9.png", alt="Flatten properties", width="800", height="449" %}
 
@@ -88,6 +91,7 @@ Apart from these changes, the properties in the **Properties** pane are also fla
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
 Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.com/1119900)
+
 
 ## Lighthouse 8.4 in the Lighthouse panel {: #lighthouse }
 
@@ -101,6 +105,7 @@ Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more d
 
 Chromium issue: [772558](https://crbug.com/772558)
 
+
 ## Sort snippets in the Sources panel {: #snippets }
 
 The [snippets](/docs/devtools/javascript/snippets/) in the **Snippets** pane under the **Sources** panel are now sorted alphabetically. Previously, it’s not sorted.
@@ -112,22 +117,24 @@ Utilize the snippets feature to run commands quicker. Watch this video for a [ti
 
 Chromium issue: [1243976](https://crbug.com/1243976)
 
+
 ## New links to translated release notes and report a translation bug {: #localized }
 
-You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95) via the What’s new tab.
+You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95)  via the What’s new tab. 
 
-Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.
+Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/312e43a6c50bc29f279f9eac2f91b723b36c7ee9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dcd3ae13ebc5d340b2abb07e9dc99cfa74caea35 #}
 
-Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.com/1245481)
+Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.com/1245481) 
+
 
 ## Improved UI for DevTools command menu {: #command-menu }
 
-Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced!
+Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced! 
 
 Open the **Command Menu** to search for a file with keyboard shortcut <kbd>Control</kbd>+<kbd>P</kbd> in Windows and Linux, or <kbd>Command</kbd>+<kbd>P</kbd> in MacOS.
 
@@ -141,5 +148,5 @@ The UI improvements of the **Command Menu** is still ongoing, stay tuned for mor
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}

@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 62)"
 authors:
   - kaycebasques
 date: 2017-08-29
 #updated: YYYY-MM-DD
 description:
-  'Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and
-  more.'
+  "Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and
+  more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SZvKcTh58DvCQoqImLW0.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-62
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features and changes coming to DevTools in Chrome 62:
 
@@ -200,8 +200,9 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #await
 [2]: #screenshot-areas

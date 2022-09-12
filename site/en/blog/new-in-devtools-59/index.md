@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 59)"
 authors:
   - kaycebasques
 date: 2017-04-12
 #updated: YYYY-MM-DD
-description: 'New features and changes coming to DevTools in Chrome 59.'
+description: "New features and changes coming to DevTools in Chrome 59."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oviDwq8lfrwvWogIIVcN.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-59
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 Welcome to another installment of the DevTools release notes. Watch the video
 below or read on to see what's new in Chrome DevTools in Chrome 59!
@@ -23,17 +23,19 @@ Note: You can check which version of Chrome you're running at `chrome://help`.
 
 {% YouTube id='4mx1m7UbBR0' %}
 
+
 ## Highlights {: #highlights }
 
-- [**CSS and JS code coverage**](#coverage). Find unused CSS and JS with
+* [**CSS and JS code coverage**](#coverage). Find unused CSS and JS with
   the new Coverage tab.
-- [**Full-page screenshots**](#screenshots). Take a screenshot of the
+* [**Full-page screenshots**](#screenshots). Take a screenshot of the
   entire page, from the top of the viewport to the bottom.
-- [**Block requests**](#block-requests). Manually disable individual
+* [**Block requests**](#block-requests). Manually disable individual
   requests in the Network panel.
-- [**Step over async await**](#async). Step through async functions predictably.
-- [**Unified Command Menu**](#command-menu). Execute commands and open files
+* [**Step over async await**](#async). Step through async functions predictably.
+* [**Unified Command Menu**](#command-menu). Execute commands and open files
   from the newly-unified Command Menu.
+
 
 ## New features {: #new-features }
 
@@ -53,9 +55,9 @@ of which lines of code executed.
 
 Each line of code is color-coded:
 
-- Solid green means that line of code executed.
-- Solid red means it did not execute.
-- A line of code that is both red and green, such as line 3 in the screenshot above,
+* Solid green means that line of code executed.
+* Solid red means it did not execute.
+* A line of code that is both red and green, such as line 3 in the screenshot above,
   means that only some code on that line executed. For example, a ternary
   expression like `var b = (a > 0) ? a : 0` is colored both red and green.
 
@@ -91,33 +93,33 @@ async code like `test()`, DevTools steps from the first to last line with
 consistency.
 
 ```js
-function wait(ms) {
-  return new Promise(r => setTimeout(r, ms)).then(() => 'Yay');
-}
+  function wait(ms) {
+    return new Promise(r => setTimeout(r, ms)).then(() => "Yay");
+  }
 
-// do some work in background.
-setInterval(() => 42, 200);
+  // do some work in background.
+  setInterval(() => 42, 200);
 
-async function test() {
-  debugger;
-  const hello = 'world';
-  const response = await fetch('index.html');
-  const tmp = await wait(1000);
-  console.log(tmp);
-  return hello;
-}
+  async function test() {
+    debugger;
+    const hello = "world";
+    const response = await fetch('index.html');
+    const tmp = await wait(1000);
+    console.log(tmp);
+    return hello;
+  }
 
-async function runTest() {
-  let result = await test();
-  console.log(result);
-}
+  async function runTest() {
+    let result = await test();
+    console.log(result);
+  }
 ```
 
 P.S. want to level up your debugging skills? Check out these new-ish docs:
 
-- [Get Started With Debugging JS](/docs/devtools/javascript/)
-- [Pause Your Code With Breakpoints](/devtools/javascript/breakpoints/)
-- [JS Debugging Reference](/docs/devtools/javascript/reference/)
+* [Get Started With Debugging JS](/docs/devtools/javascript/)
+* [Pause Your Code With Breakpoints](/devtools/javascript/breakpoints/)
+* [JS Debugging Reference](/docs/devtools/javascript/reference/)
 
 ## Changes {: #changes }
 
@@ -129,5 +131,7 @@ Menu has been unified with the **Open File** menu, which is
 <kbd>Command</kbd>+<kbd>O</kbd> (Mac), or <kbd>Control</kbd>+<kbd>O</kbd>
 (Windows, Linux).
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
+
+

@@ -1,8 +1,8 @@
 ---
-title: 'Improved WebAssembly debugging in Chrome DevTools'
+title: "Improved WebAssembly debugging in Chrome DevTools"
 description: >
   Step over code, set breakpoints, and resolve stack traces in your source languages from within DevTools.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - ingvarstepanyan
 date: 2019-12-05
@@ -13,22 +13,22 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 ## Background
 
-Until recently, the only WebAssembly debugging that Chrome DevTools supported was viewing
-raw WebAssembly stack traces, and stepping over individual instructions in a
+Until recently, the only WebAssembly debugging that Chrome DevTools supported was viewing 
+raw WebAssembly stack traces, and stepping over individual instructions in a 
 disassembled WebAssembly text format.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXC6Bckkc9hmT7Ga8LS5.png", alt="A screenshot of the previously limited WebAssembly debugging support in
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXC6Bckkc9hmT7Ga8LS5.png", alt="A screenshot of the previously limited WebAssembly debugging support in 
             Chrome DevTools.", width="800", height="390" %}
 
 While this works with any WebAssembly module and helps somewhat with debugging small, isolated functions, it's not very practical for larger apps where the mapping between the disassembled code and your sources is less obvious.
 
 ### A temporary workaround
 
-To work around this problem, Emscripten and DevTools have temporarily adapted the existing
+To work around this problem, Emscripten and DevTools have temporarily adapted the existing 
 [source maps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) format to WebAssembly. This allowed mappings
 between binary offsets in the compiled module to original locations in source files.
 
@@ -73,22 +73,22 @@ This new DevTools integration with DWARF already covers support for stepping ove
 ## The future
 
 There is still quite a bit of work to do though.
-For example, on the tooling side, ~~Emscripten (Binaryen) and~~ wasm-pack (wasm-bindgen) doesn't support updating DWARF information on transformations they perform yet. For now, they won't benefit from this integration.
+For example, on the tooling side, ~~Emscripten (Binaryen) and~~ wasm-pack (wasm-bindgen) doesn't support updating DWARF information on transformations they perform yet. For now, they won't benefit from this integration. 
 
-And on the Chrome DevTools side, we'll be evolving integration more over time to ensure a seamless debugging experience, including:
+And on the Chrome DevTools side, we'll be evolving integration more over time to ensure a seamless debugging experience, including: 
 
-- Resolving variable names
-- Pretty-printing types
-- Evaluating expressions in source languages
-- …and much more!
+* Resolving variable names
+* Pretty-printing types
+* Evaluating expressions in source languages
+* …and much more!
 
 Stay tuned for future updates!
 
 {% Aside %}
-_Updated 2020-06-19_:
+*Updated 2020-06-19*: 
 
 The original blog post used to state that Emscripten doesn't support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
 {% endAside %}
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

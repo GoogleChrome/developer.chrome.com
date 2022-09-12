@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 71)"
 authors:
   - kaycebasques
 date: 2018-10-10
 #updated: YYYY-MM-DD
-description: 'Highlight DOM nodes from Live expressions, store nodes as global variables, and more.'
+description: "Highlight DOM nodes from Live expressions, store nodes as global variables, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gnfb6rY6bc6nLDRgyenT.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-71
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features and major changes coming to Chrome DevTools in Chrome 71 include:
 
@@ -179,8 +179,9 @@ Other supported types are `key`, `touch`, and `control`.
 
 Check out [Command Line Reference][16] for other handy functions that you can call from the Console.
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #hover
 [2]: #store

@@ -12,8 +12,8 @@ tags:
   - chrome-97
 ---
 
-{% partial 'see-all-dep-rem.md' %}
-
+{% include 'partials/see-all-dep-rem.md' %}
+{% partial '
 Chrome 97 beta was released on November 18, 2021 and is expected to become the
 stable version in late December, 2021.
 
@@ -44,4 +44,5 @@ been implemented with two different dialects in Chromium: Unified Plan and Plan
 B. Plan B is not cross-browser compatible and [is hereby
 removed](https://www.chromestatus.com/features/5823036655665152).
 
-{% partial 'deprecations-policy.md' %}
+{% include 'partials/deprecations-policy.md' %}
+{% partial '

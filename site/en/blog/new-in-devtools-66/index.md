@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 66)"
 authors:
   - kaycebasques
 date: 2018-02-26
 #updated: YYYY-MM-DD
-description: 'Ignore script in the Network panel, auto-adjust zooming in Device Mode, and more.'
+description: "Ignore script in the Network panel, auto-adjust zooming in Device Mode, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3K94BKdNuYeQQpXJgwxF.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-66
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 66 include:
 
@@ -159,8 +159,9 @@ where I really wanted to pause all along.
 
 **Figure 8**. The `click` breakpoint now pauses on the app's listener code
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #ignore-script
 [2]: #auto-adjust

@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 76)"
 authors:
   - kaycebasques
 date: 2019-05-28
 #updated: YYYY-MM-DD
-description: 'Autocomplete with CSS values, a new UI for network settings, and more.'
+description: "Autocomplete with CSS values, a new UI for network settings, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iVFoEmqr84KwT6vPMkMH.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-76
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 76.
 
@@ -38,7 +38,7 @@ Send feedback on this new feature to [Chromium issue #931145][2].
 
 The Network panel previously had a usability issue where options like the throttling menu were
 unreachable when the DevTools window was narrow. To fix this issue and de-clutter the Network panel,
-a few lesser-used options have been moved behind the new **Network Settings**
+a few lesser-used options have been moved behind the new **Network Settings** 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3EpuB5jJTei9QCxkfqFU.png", alt="The Network Settings button", width="28", height="28" %}
 pane.
 
@@ -167,8 +167,9 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 
 {% YouTube id="MbnATLCuKI4" %}
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://crbug.com/931145
@@ -179,7 +180,8 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 [7]: /blog/new-in-devtools-64#perf-monitor
 [8]: https://crbug.com/958177
 [9]: https://crbug.com/601286
-[10]: https://medium.com/google-developer-experts/background-fetch-api-get-ready-to-use-it-69cca522cd8f
+[10]:
+  https://medium.com/google-developer-experts/background-fetch-api-get-ready-to-use-it-69cca522cd8f
 [11]: https://developers.google.com/web/updates/2015/12/background-sync
 [12]: https://background-fetch.glitch.me
 [13]: https://twitter.com/webmaxru

@@ -1,8 +1,8 @@
 ---
-title: 'DevTools architecture refresh: migrating DevTools to TypeScript'
+title: "DevTools architecture refresh: migrating DevTools to TypeScript"
 description: >
   How we migrate Chrome DevTools from the Closure Compiler type checker to TypeScript.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - tvanderlippe
 date: 2021-04-08
@@ -14,11 +14,11 @@ tags:
   - devtools-architecture
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
-This post is part of [a series of blog posts](/tags/devtools-architecture/) describing the changes we are making to DevTools' architecture and how it is built.
+This post is part of [a series of blog posts](/tags/devtools-architecture/) describing the changes we are making to DevTools' architecture and how it is built. 
 
 Following up on our [migration to JavaScript modules](/blog/migrating-to-js-modules/) and [migration to Web Components](/blog/migrating-to-web-components/), today we are continuing our blog post series on **the changes we are making to Devtools' architecture and how it is built**.
 (If you have not seen it already, we posted a video on our work of [Upgrading DevTools’ architecture to the modern web](https://www.youtube.com/watch?v=BHogHiiyuQk), with 14 tips on how to make improvements to your web projects.)
@@ -101,7 +101,7 @@ We also knew that running TypeScript on our codebase would uncover thousands of 
 We evaluated multiple options:
 
 1. **Obtain all TypeScript errors and compare them to a "golden" output**.
-   This approach would be similar to what the TypeScript team has. The biggest downside of this approach is the high occurrence of merge conflicts, since dozens of engineers work in the same codebase.
+This approach would be similar to what the TypeScript team has. The biggest downside of this approach is the high occurrence of merge conflicts, since dozens of engineers work in the same codebase.
 2. **Set all problematic types to `any`.** This would essentially make TypeScript suppress errors. We did not choose this option, as our goal for the migration was type correctness which suppression would undermine.
 3. **Fix all TypeScript errors manually.** This would involve fixing thousands of errors, which is time-consuming.
 
@@ -145,7 +145,7 @@ One of our engineers built an analysis graph to show the progress of "TypeScript
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vxsdG9lI4YjuWi8ibZr9.png", alt="TypeScript Migration progress", width="800", height="639" %}
 
-_TypeScript Migration progress - Tracking lines of code remaining that need migrating_
+*TypeScript Migration progress - Tracking lines of code remaining that need migrating*
 
 Estimations when we would hit zero lines remaining ranged from July 2021 to December 2021, almost a year past our deadline.
 After discussions with management and other engineers, we agreed to increase the amount of engineers working on migrating to TypeScript compiler support.
@@ -171,5 +171,5 @@ Sadly, the solutions that are available to us today are not always suitable for 
 
 At this moment, we have removed the Closure compiler type checker from our codebase and solely rely on the TypeScript compiler. We are able to write TypeScript-authored files and make use of TypeScript-specific features (such as interfaces, generics, etc...), which helps us on a daily basis. We have increased confidence that the TypeScript compiler will catch type errors and regressions, which is what we’d hoped would happen when we first started work on this migration. This migration, like so many, was slow, nuanced, and oftentimes challenging, but as we yield the benefits, we believe it was worth it.
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

@@ -1,8 +1,8 @@
 ---
-title: 'How we built the Chrome DevTools Issues tab'
+title: "How we built the Chrome DevTools Issues tab"
 description: >
   How we built the Chrome DevTools Issues tab to improve developer experience on issues discovery and solution.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - janscheffler
   - sigurds
@@ -14,9 +14,9 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
-In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior.
+In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 
 
 While researching the tools that DevTools already provides, we often found ourselves in a situation like the following:
 
@@ -26,13 +26,13 @@ While researching the tools that DevTools already provides, we often found ourse
 
 If you also use the console for messages from your own application, you'll sometimes have a hard time finding them between all the messages from the browser.
 
-As well as humans, it's also difficult for automated processes to interact with console messages. For example, developers might use Chrome Headless and Puppeteer in a Continuous Integration/Continuous Deployment scenario. Because console messages are just strings, developers need to write regular expressions or some other parser to extract actionable information.
+As well as humans, it's also difficult for automated processes to interact with console messages. For example, developers might use Chrome Headless and Puppeteer in a Continuous Integration/Continuous Deployment scenario. Because console messages are just strings, developers need to write regular expressions or some other parser to extract actionable information. 
 
 ## The solution: structured and actionable issue reporting
 
 To find a better solution to the problems we discovered, we first started thinking about the requirements and collected them in a [Design Doc](https://docs.google.com/document/d/1F6R5Bpb3qHNzGPNBSXwEJ_eP8L-anIj0WinxOIyAh54).
 
-Our goal is to present issues in a way that clearly **explains the problem**, and **how to fix it**.
+Our goal is to present issues in a way that clearly **explains the problem**, and **how to fix it**. 
 From our design process we realised that each issue should contain the following four parts:
 
 - Title
@@ -48,9 +48,9 @@ Every issue contains more detailed information in a description, which explains 
 
 An important part of each issue is the **affected resources** section, which links to other parts of DevTools and makes it easy to investigate further. For the cookie issue example, there should be a list of network requests that triggered the issue, and clicking on the request directly takes you to the Network panel. We hope that this is not only convenient, but also reinforces which panels and tools inside DevTools can be used to debug a certain kind of issue.
 
-Thinking about developer interaction with the Issues tab long-term, we imagine the following evolution of developer interaction:
+Thinking about developer interaction with the Issues tab long-term, we imagine the following evolution of developer interaction: 
 
-- When encountering a particular issue for the first time, a web developer would read the article to understand the issue in-depth.
+- When encountering a particular issue for the first time, a web developer would read the article to understand the issue in-depth. 
 - When encountering the issue the second time, we hope that the issue description would be enough to remind the developer of what the issue was about, and allow them to immediately investigate and take action to resolve it.
 - After encountering an issue for a couple of times, we hope that the issue title is enough for a developer to recognize the type of issue.
 
@@ -58,21 +58,22 @@ Another important aspect we wanted to improve is **aggregation**. For example, i
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aEsF2ZvSF2LdRJu1Jl02.png", alt="Aggregated issues", width="800", height="323" %}
 
+
 ## The implementation
 
 With those requirements in mind, the team started to look into how to implement the new feature. Projects for Chrome DevTools usually span three different areas:
 
-- [Chromium](https://chromium.googlesource.com/chromium/src), the open-source project written in C++ behind Google Chrome
+- [Chromium](https://chromium.googlesource.com/chromium/src), the open-source project written in C++ behind Google Chrome 
 - [DevTools frontend](https://github.com/ChromeDevTools/devtools-frontend), the JavaScript implementation of Chrome DevTools
 - [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP), the layer connecting the two
 
 Implementation was then comprised of three tasks:
 
-- Inside **Chromium**, we had to identify the components that have the information we want to surface and make that information accessible to the DevTools Protocol without compromising speed or security.
-- We then needed to design the **Chrome DevTools Protocol** (CDP) to define the API that exposes the information to clients, such as the DevTools frontend.
+- Inside **Chromium**, we had to identify the components that have the information we want to surface and make that information accessible to the DevTools Protocol without compromising speed or security. 
+- We then needed to design the **Chrome DevTools Protocol** (CDP) to define the API that exposes the information to clients, such as the DevTools frontend. 
 - Finally, we needed to implement a component in **DevTools frontend** that requests the information from the browser via CDP and displays it in an appropriate UI such that developers can easily interpret and interact with the information.
 
-For the browser side, we first looked into how console messages were handled, because their behavior is very similar to what we had in mind for issues. [CodeSearch](https://source.chromium.org/chromium/chromium/src/+/master:content/public/browser/console_message.h) is usually a good starting point for explorations like these. It allows you to search and explore the whole source code of the Chromium project online. That way, we learned about the implementation of console messages and could build up a [parallel, but more structured way](https://chromium-review.googlesource.com/c/chromium/src/+/1991507) around the requirements we collected for the issues.
+For the browser side, we first looked into how console messages were handled, because their behavior is very similar to what we had in mind for issues. [CodeSearch](https://source.chromium.org/chromium/chromium/src/+/master:content/public/browser/console_message.h) is usually a good starting point for explorations like these. It allows you to search and explore the whole source code of the Chromium project online. That way, we learned about the implementation of console messages and could build up a [parallel, but more structured way](https://chromium-review.googlesource.com/c/chromium/src/+/1991507) around the requirements we collected for the issues. 
 
 The work here is especially challenging because of all the security implications we always have to keep in mind. The Chromium project goes a long way to separate things into different processes and have them only communicate through controlled communication channels to prevent information leaks. Issues may contain sensitive information, so we have to take care to not send that information to a part of the browser that shouldn't know about it.
 
@@ -88,7 +89,7 @@ With that in mind, our UX designer understood what we were aiming at, and protot
 
 After a lot of discussion around the best solution, we started implementing the design and reiterating decisions to gradually arrive at what the Issues tab looks like today.
 
-Another very important factor was the **discoverability** of the Issues tab. In the past, many great Devtools features were not discoverable without the developer knowing what specifically to look for. For the Issues tab, we decided to highlight issues in multiple different areas to make sure developers wouldn't miss important issues.
+Another very important factor was the **discoverability** of the Issues tab. In the past, many great Devtools features were not discoverable without the developer knowing what specifically to look for. For the Issues tab, we decided to highlight issues in multiple different areas to make sure developers wouldn't miss important issues. 
 
 We decided to add a notification to the console panel, because certain console messages are now removed in favor of issues. We also added an icon to the warnings and errors counter in the top right of the DevTools window.
 
@@ -98,6 +99,7 @@ Finally, the Issues tab not only links to other DevTools panels, but resources t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IGICsHeiFPcmzeOYFh7a.png", alt="Related issues", width="800", height="487" %}
 
+
 ### In the protocol
 
 The communication between the frontend and the backend works over a protocol called [Chromium DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP). The CDP can be thought of as the back-end of the web app that is Chrome DevTools. The CDP is subdivided into multiple domains and every domain contains a number of commands and events.
@@ -105,6 +107,7 @@ The communication between the frontend and the backend works over a protocol cal
 For the Issues tab, we decided to add a new [event](https://chromedevtools.github.io/devtools-protocol/tot/Audits/#event-issueAdded) to the Audits domain that triggers whenever a new issue is encountered. To make sure that we can also report on issues that arise while DevTools is not yet opened, the Audits domain stores the most recent issues and dispatches them as soon as DevTools connects. DevTools then collects all those issues and aggregates them.
 
 The CDP also enables other protocol clients, such as [Puppeteer](https://pptr.dev/), to receive and process issues. We hope the [structured issue information](https://chromedevtools.github.io/devtools-protocol/tot/Audits/#type-InspectorIssue) sent over the CDP will enable and simplify integration into existing continuous integration infrastructure. This way, issues can be detected and fixed even before the page is deployed!
+
 
 ## Future
 
@@ -120,5 +123,5 @@ To keep issues actionable, we want to make it easier to discover which part of a
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

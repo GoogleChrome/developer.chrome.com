@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 99)"
 authors:
   - jecelynyeen
 date: 2022-02-21
 updated: 2022-02-21
-description: 'Throttling WebSocket requests, new Reporting API pane, console styling and more.'
+description: "Throttling WebSocket requests, new Reporting API pane, console styling and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5UIQl4sIWMT0UD4O1GmJ.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-99
 ---
 
-{% partial 'devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -27,6 +27,7 @@ Open the **Network** panel, click on a web socket request and open the **Message
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZHJibovD0IRQ7KrWb0aD.png", alt="Throttling WebSocket requests", width="800", height="540" %}
 
 Chromium issue: [423246](https://crbug.com/423246)
+
 
 ## New Reporting API pane in the Application panel {: #reporting-api }
 
@@ -46,6 +47,7 @@ The **Endpoints** section gives you an overview of all the endpoints configured 
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
+
 ## Support wait until element is visible/clickable in the Recorder panel {: #recorder }
 
 When replaying a user flow recording, the **Recorder** panel will now wait until the element is visible or clickable in the viewport or try to automatically scroll the element into the viewport before replaying the step. Previously, the replay would fail immediately.
@@ -55,6 +57,7 @@ Here is an example of an off-screen menu positioned outside of the viewport and 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qf8f2x1u1y5FEMSmkB3A.mp4", class="screenshot", autoplay=true, controls=true, loop=true, muted=true %}
 
 Chromium issue: [1257499](https://crbug.com/1257499#c38)
+
 
 ## Better console styling, formatting and filtering {: #console }
 
@@ -75,6 +78,7 @@ To learn more about formatting & styling console messages with DevTools, go to [
 
 Chromium issues: [1282837](https://crbug.com/1282837), [1282076](https://crbug.com/1282076)
 
+
 ### Properly support `%s`, `%d`, `%i` and `%f` format specifiers {: #console-format }
 
 The **Console** now properly performs the `%s`, `%d`, `%i`, and `%f` type conversions as specified in the [Console Standard](https://console.spec.whatwg.org/). Previously, the conversation result was inconsistent.
@@ -84,6 +88,7 @@ The **Console** now properly performs the `%s`, `%d`, `%i`, and `%f` type conver
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ec299d49c6ab2c185df660766b1fb827db87f8a #}
 
 Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.com/1282076)
+
 
 ### More intuitive console group filter {: #console-filter }
 
@@ -97,6 +102,7 @@ In addition, if a console message is shown, the group (or the ancestor group) it
 
 Chromium issue: [1068788](https://crbug.com/1068788)
 
+
 ## Sourcemaps improvements {: #sourcemap }
 
 ### Debug Chrome extension with sourcemap files {: #extension }
@@ -109,6 +115,7 @@ You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) 
 
 Chromium issue: [212374](https://crbug.com/212374)
 
+
 ### Improved source folder tree in the Sources panel {: #source-tree }
 
 The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps.
@@ -119,6 +126,7 @@ The source folder tree in the **Sources** panel is now improved with less clutte
 
 Chromium issue: [1284737](https://crbug.com/1284737)
 
+
 ### Display worker source files in the Sources panel {: #worker-sourcemap }
 
 [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly.
@@ -128,6 +136,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
 Chromium issue: [1277002](https://crbug.com/1277002)
+
 
 ## Chrome’s Auto Dark Theme updates {: #auto-dark-mode }
 
@@ -143,6 +152,7 @@ Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Them
 
 Chromium issue: [1243309](https://crbug.com/1243309)
 
+
 ## Touch-friendly color-picker and split pane {: #touch-friendly }
 
 You can now select color, and resize the [Drawer](/docs/devtools/customize/#drawer) in DevTools with fingers or stylus on touchscreen devices.
@@ -156,6 +166,7 @@ Here is an example captured with the [Google Pixelbook](https://www.google.com/c
 
 Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes in this release:
@@ -168,5 +179,5 @@ These are some noteworthy fixes in this release:
 - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)
 - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738))
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

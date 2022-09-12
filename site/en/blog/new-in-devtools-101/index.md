@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 101)"
 authors:
   - jecelynyeen
 date: 2022-04-12
 updated: 2022-04-12
-description: 'Import and export user flow as JSON, support hwb() colors, view cascade layers in the Styles pane and more.'
+description: "Import and export user flow as JSON, support hwb() colors, view cascade layers in the Styles pane and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B5K95d3OAmyytzJVCyr1.jpg'
 alt: ''
 tags:
@@ -14,11 +14,11 @@ tags:
   - chrome-101
 ---
 
-{% partial 'devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id='u9GRAliBrM8' %}
 
-## Import and export recorded user flows as a JSON file {: #recorder }
+## Import and export recorded user flows as a JSON file  {: #recorder }
 
 The [Recorder](/docs/devtools/recorder) panel now supports importing and exporting user flow recordings as a JSON file. This addition makes it easier to share user flows and can be useful for bug reporting.
 
@@ -29,7 +29,7 @@ For example, download this [JSON file](https://storage.googleapis.com/web-dev-up
 Apart from that, you can export the recording as well. After [recording a user flow](/docs/devtools/recorder/#record), click on the export button. There are 3 export options:
 
 - **Export as a JSON file**. Download the recording as a JSON file.
-- **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script.
+- **Export as a @puppeteer/replay script**. Download the recording as a [Puppeteer Replay](https://github.com/puppeteer/replay) script. 
 - **Export as a Puppeteer script** . Download the recording as [Puppeteer](https://pptr.dev/) script.
 
 Consult [the documentation](/docs/devtools/recorder/#export-flows) to learn more about the differences between these options.
@@ -38,19 +38,21 @@ Consult [the documentation](/docs/devtools/recorder/#export-flows) to learn more
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
+
 ## View cascade layers in the Styles pane {: #layer }
 
 [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications.
 
 In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles.
 
-Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.
+Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A0yHsGUcqVCIO3fzKhEz.png", alt="View cascade layers in the Styles pane", width="800", height="490" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/52f5be82ff6ba59343ba65ab7d8e215e46d44d3b #}
 
 Chromium issue: [1240596](https://crbug.com/1240596)
+
 
 ## Support for the hwb() color function {: #hwb }
 
@@ -61,6 +63,7 @@ In the **Styles** pane, hold the **Shift** key and click on any color preview to
 Alternatively, you can change the color format to HWB in the [color picker](/docs/devtools/css/reference/#color-picker).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jW7PXLu6Q5myiKLrsoD3.png", alt="hwb() color function", width="800", height="508" %}
+
 
 ## Improved the display of private properties {: #private-props }
 
@@ -74,6 +77,7 @@ DevTools now properly evaluates and displays private accessors. Previously, you 
 
 Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/1303407](1303407)
 
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes in this release:
@@ -84,6 +88,7 @@ These are some noteworthy fixes in this release:
 - Fixed comment keyboard shortcut in the **Sources** panel. ([1296535](https://crbug.com/1296535))
 - Re-enable support for using **Alt** (Options) key for multi selection in the **Sources** panel. ([1304070](https://crbug.com/1304070))
 
+ 
 ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse }
 
 {% Aside %}
@@ -102,5 +107,6 @@ Each mode has its own unique use cases, benefits, and limitations. Please refer 
 
 Chromium issue: [772558](https://crbug.com/772558)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

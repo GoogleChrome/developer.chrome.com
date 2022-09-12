@@ -1,8 +1,8 @@
 ---
-title: 'Debugging WebAssembly with modern tools'
+title: "Debugging WebAssembly with modern tools"
 description: >
   Step-by-step overview of the new debugging experience for WebAssembly in Chrome DevTools.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - ingvarstepanyan
 date: 2020-12-10
@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id='VBMHswhun-s' %}
 
@@ -261,7 +261,8 @@ debugging experience, too.
 
 First of all, if you used raw WebAssembly debugging before, you might
 notice that the entire disassembly is now shown in a single file-no
-more guessing which function a **Sources** entry `wasm-53834e3e/ wasm-53834e3e-7` possibly corresponds to.
+more guessing which function a **Sources** entry `wasm-53834e3e/
+wasm-53834e3e-7` possibly corresponds to.
 
 ### New name generation scheme {: #names }
 
@@ -428,5 +429,5 @@ Meanwhile, please help us out by trying the current beta on your own code and re
 issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

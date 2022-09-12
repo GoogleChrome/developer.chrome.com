@@ -12,8 +12,8 @@ tags:
   - deprecations-removals
   - chrome-90
 ---
-
-{% partial 'see-all-dep-rem.md' %}
+{% partial '
+{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 90 beta was released on March 11, 2021 and is expected to become the
 stable version in mid April, 2021.
@@ -39,5 +39,5 @@ Chrome
 With the removal of Flash, there is no longer the need to return anything for
 these properties.
 
-
-{% partial 'deprecations-policy.md' %}
+{% partial '
+{% include 'partials/deprecations-policy.md' %}

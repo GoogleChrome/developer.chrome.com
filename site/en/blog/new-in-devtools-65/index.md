@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 65)"
 authors:
   - kaycebasques
 date: 2018-01-17
 #updated: YYYY-MM-DD
-description: 'Local Overrides, accessibility tools, performance and SEO audits, and more.'
+description: "Local Overrides, accessibility tools, performance and SEO audits, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CkUbVNFvO8lq77aAbawF.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-65
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features coming to DevTools in Chrome 65 include:
 
@@ -271,11 +271,11 @@ such as capturing screenshots:
 ```js
 const puppeteer = require('puppeteer');
 (async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com');
-  await page.screenshot({path: 'example.png'});
-  await browser.close();
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://example.com');
+  await page.screenshot({path: 'example.png'});
+  await browser.close();
 })();
 ```
 
@@ -284,11 +284,11 @@ It also has APIs for lots of generally useful automation tasks, such as generati
 ```js
 const puppeteer = require('puppeteer');
 (async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://news.ycombinator.com', {waitUntil: 'networkidle2'});
-  await page.pdf({path: 'hn.pdf', format: 'A4'});
-  await browser.close();
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://news.ycombinator.com', {waitUntil: 'networkidle2'});
+  await page.pdf({path: 'hn.pdf', format: 'A4'});
+  await browser.close();
 })();
 ```
 
@@ -297,8 +297,9 @@ See [Quick Start][21] to learn more.
 You can also use Puppeteer to expose DevTools features while browsing without ever explicitly
 opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for an example.
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #overrides
 [2]: #a11y

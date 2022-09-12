@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 77)"
 authors:
   - kaycebasques
 date: 2019-07-22
 #updated: YYYY-MM-DD
-description: 'Copy element styles, visualize layout shifting, and more.'
+description: "Copy element styles, visualize layout shifting, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/8kbcGjb0LbEQZIE80gLY.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-77
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="R8KzoMoKhnM" %}
 
@@ -144,13 +144,15 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 
 [Chromium issue #927726][24]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: https://twitter.com/argyleink
 [2]: https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
 [3]: https://twitter.com/argyleink/status/1142216452184821760
-[4]: https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video#layout_shifting_and_placeholders
+[4]:
+  https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video#layout_shifting_and_placeholders
 [5]: /docs/devtools/command-menu
 [6]: https://crbug.com/961846
 [7]: /blog/new-in-devtools-76

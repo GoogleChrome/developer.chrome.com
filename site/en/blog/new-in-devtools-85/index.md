@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 85)"
 authors:
   - jecelynyeen
 date: 2020-07-01
 #updated: YYYY-MM-DD
-description: 'Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more.'
+description:
+  "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VLstNJeC67163SBU8484.jpg'
 alt: ''
 tags:
@@ -14,7 +15,7 @@ tags:
   - chrome-85
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="NOal2gTzftI" %}
 
@@ -184,8 +185,9 @@ differentiate conditional breakpoints and logpoints.
 
 Chromium issue [#1041830][30]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: https://drafts.csswg.org/cssom/
 [2]: https://developers.google.com/web/updates/2019/02/constructable-stylesheets

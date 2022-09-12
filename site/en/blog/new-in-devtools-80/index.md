@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 80)"
 authors:
   - kaycebasques
 date: 2019-12-05
 #updated: YYYY-MM-DD
 description:
-  'Support for let and class redeclarations in the Console, improved WebAssembly debugging, and
-  more.'
+  "Support for let and class redeclarations in the Console, improved WebAssembly debugging, and
+  more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SdD71qEn4fqf8LF5kH2H.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-80
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="2EiPb1opH3g" %}
 
@@ -164,8 +164,9 @@ and V8's garbage collector has cleaned it up.
 
 Chromium issue [#1004203][14]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/
@@ -178,6 +179,7 @@ Chromium issue [#1004203][14]
 [9]: /docs/devtools/command-menu
 [10]: /docs/devtools/device-mode#viewport
 [11]: https://crbug.com/1029031
-[12]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
+[12]:
+  https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
 [13]: /docs/devtools/coverage
 [14]: https://crbug.com/1004203

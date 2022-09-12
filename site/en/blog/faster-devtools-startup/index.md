@@ -1,8 +1,8 @@
 ---
-title: 'Improving DevTools startup time'
+title: "Improving DevTools startup time"
 description: >
   Reduce DevTools performance overhead of message dispatch in the front-end.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - sadym
 date: 2021-02-04
@@ -13,15 +13,13 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
-
 TL;DR; The result is achieved by removing a redundant serialization.
 
 ## Overview
-
-While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine](https://v8.dev/).
+While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine](https://v8.dev/). 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Cj4F4MSl0yvhWmELEHIQ.svg", alt="DevTools starting up process", width="800", height="240" %}
 
@@ -35,7 +33,7 @@ Let us dive into how the `mojo` mechanism works!
 
 There is a mojo command `EvaluateScript` which runs the JS command. It serializes the whole JS command including the `arguments` into a string of JavaScript source code that can be `eval()`. As you might imagine, these strings can become quite long and expensive. After the command is received by V8, these strings of JavaScript code are deserialized before running. This process of serializing and deserializing for every single message creates significant overhead.
 
-Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped.
+Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole  **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped. 
 
 Technical details: [`RenderFrameHostImpl::ExecuteJavaScript`](https://source.chromium.org/chromium/chromium/src/+/master:content/browser/renderer_host/render_frame_host_impl.cc;drc=df872ce8fcce25af51aa6b0f9fe8b1135b687524;l=1677)
 
@@ -51,7 +49,6 @@ For technical details on how we implemented this optimization, consult these two
 2. [CL 2442012: [devtools] Use `ExecuteJavaScriptMethod` in DevTools](https://chromium-review.googlesource.com/c/chromium/src/+/2442012)
 
 ## Impact
-
 To measure the effectiveness of the change, we ran some measurements comparing Chromium revisions [cb971089a058](https://chromium.googlesource.com/chromium/src/+/cb971089a058160601940d2b2a12d360115f66e5) and [4f213b39d581](https://chromium.googlesource.com/chromium/src/+/4f213b39d581eaa69a6d70378c91de2768e0004a) (before and after the change).
 
 For both revisions, we ran the following scenario 5 times:
@@ -119,5 +116,5 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 
 As a result, DevTools opens and **works faster with less CPU usage**. 🎉
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

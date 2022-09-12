@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 103)"
 authors:
   - jecelynyeen
 date: 2022-06-14
 updated: 2022-06-14
-description: 'Record double-click and right-click events, new options to measure user flow in Lighthouse and more.'
+description: "Record double-click and right-click events, new options to measure user flow in Lighthouse and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TWCiJaqb6IKBRsOyqYBo.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-103
 ---
 
-{% partial 'devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -24,7 +24,7 @@ The **Recorder** panel can now capture double-click and right-click events.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Capture double-click and right-click events in the Recorder panel", width="800", height="572" %}
 
-In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:
+In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps: 
 
 - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu
@@ -36,13 +36,14 @@ To understand how **Recorder** captured these events, expand the steps:
 
 Chromium issues: [1300839](https://crbug.com/1300839), [1322879](https://crbug.com/1322879), [1299701](https://crbug.com/1299701), [1323688](https://crbug.com/1323688)
 
+
 ## New timespan and snapshot mode in the Lighthouse panel {: #lighthouse }
 
 You can now use **Lighthouse** to measure your website’s performance beyond page load.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="New timespan and snapshot mode in the Lighthouse panel", width="800", height="507" %}
 
-The **Lighthouse** panel now supports 3 modes of user flow measurement:
+The **Lighthouse** panel now supports 3 modes of user flow measurement: 
 
 - [Navigation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#navigation) reports analyze a single page load. Navigation is the most common report type. All Lighthouse reports before the current version are navigation reports.
 - [Timespans](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#timespan) reports analyze an arbitrary time period, typically containing user interactions.
@@ -52,23 +53,25 @@ For example, let’s measure the performance of adding items to cart on this [de
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pq9Vg8xOUzplWAlXGJEa.png", alt="Timespan mode", width="800", height="549" %}
 
-See [User flows in Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) to learn about the unique use cases, benefits, and limitations of each mode.
+See [User flows in Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) to learn about the unique use cases, benefits, and limitations of each mode. 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/70d4a90431dc6c881209f605411ce0bd2272d6d1 #}
 
 Chromium issue: [1291284](https://crbug.com/1291284)
 
+
 ## Performance Insights updates {: #performance }
 
 ### Improved zoom control in the Performance Insights panel {: #zoom }
 
-DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away.
+DevTools will now zoom in based on your mouse cursor rather than the playhead position.With the latest cursor-based zoom, you can move your mouse to anywhere in the track, and [zoom in](/docs/devtools/performance-insights/#navigate) to the desired area right away. 
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/U8d1PjOFZuGkyOXHQ5Z8.mp4", autoplay=true, loop=true, class="screenshot" %}
 
 See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel.
 
 Chromium issue: [1313382](https://crbug.com/1313382)
+
 
 ### Confirm to delete a performance recording {: #delete }
 
@@ -77,6 +80,7 @@ DevTools now shows a confirmation dialog before [deleting a performance recordin
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/DaoCroAA60WmMLpuVU9P.png", alt="Confirm to delete a performance recording", width="800", height="549" %}
 
 Chromium issue: [1318087](https://crbug.com/1318087)
+
 
 ## Reorder panes in the Elements panel {: #reorder-pane }
 
@@ -90,6 +94,7 @@ For example, when you open DevTools on a narrow screen, the [Accessibility](/doc
 
 Chromium issue: [1146146](https://crbug.com/1146146)
 
+
 ## Picking a color outside of the browser {: #color }
 
 DevTools now supports picking a color outside of the browser. Previously, you could only pick a color within the browser.
@@ -102,17 +107,19 @@ In the **Styles** pane, click on any color preview to open a color picker. Use t
 
 Chromium issue: [1245191](https://crbug.com/1245191)
 
+
 ## Improved inline value preview during debugging {: #inline-preview }
 
 The debugger now shows the inline values preview correctly.
 
-In this example, the `double` function has an input parameter `a` and a variable `x`. Put a breakpoint at the `return` line and run the code. The inline preview shows values `a` and `x` correctly. Previously, the debugger did not show the value `x` in the inline preview.
+In this example, the `double` function has an input parameter  `a` and a variable `x`. Put a breakpoint at the `return` line and run the code. The inline preview shows values `a` and `x` correctly. Previously, the debugger did not show the value `x` in the inline preview.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XMHyRsyK24fWLK7o72K7.png", alt="Improved inline value preview during debugging", width="800", height="534" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8e1a99324bde8d093e32ede5c8d1bf50110fac66 #}
 
-Chromium issue: [1316340](https://crbug.com/1316340)
+Chromium issue: [1316340](https://crbug.com/1316340) 
+
 
 ## Support large blobs for virtual authenticators {: #webauthn }
 
@@ -124,11 +131,12 @@ This checkbox is disabled by default. You can enable it only for the authenticat
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/519350816e99a82142712b2e5b6781984a77e39c #}
 
-Chromium issue: [1321803](https://crbug.com/1321803)
+Chromium issue: [1321803](https://crbug.com/1321803) 
+
 
 ## New keyboard shortcuts in the Sources panel {: #shortcuts }
 
-Two new keyboard shortcuts are now available in the **Sources** panel:
+Two new keyboard shortcuts are now available in the  **Sources** panel:
 
 - Toggle **navigation** sidebar (left) with <kbd>Control / Command</kbd> + <kbd>Shift</kbd> + <kbd>Y</kbd>
 - Toggle **debugger** sidebar (right) with <kbd>Control / Command</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>
@@ -139,25 +147,27 @@ Two new keyboard shortcuts are now available in the **Sources** panel:
 
 Chromium issues: [1226363](https://crbug.com/1226363)
 
+
 ## Sourcemaps improvements {: #sourcemaps }
-
+ 
 Previously, developers experience random failure during:
-
+ 
 - Debugging with [Codepen](https://codepen.io/) example
 - Identifying source location of performance issues in a [Codepen](https://codepen.io/) example
 - Missing **Component** tab when [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) is enabled
-
+ 
 Here are a few fixes on sourcemaps to improve the overall debugging experience:
-
+ 
 - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
-- Properly resolve relative urls with frame's URL
-
+- Properly resolve relative urls with frame's URL  
+ 
 {# https://chromium.googlesource.com/v8/v8/+/d821a6a373ecf086a2ef0d233ace7f3431e47732 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9d3d33e0bde8357d58a3c4981dd016e9b9c553f3 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/04a58f2837c1ec9e78bd722bbe81e9cd7ab38727 #}
 
-Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
+Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

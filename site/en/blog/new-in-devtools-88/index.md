@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 88)"
 authors:
   - jecelynyeen
 date: 2020-11-12
 #updated: YYYY-MM-DD
 description:
-  'New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web
-  Vitals lane and more.'
+  "New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web
+  Vitals lane and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OcPfMxTKFgMh9mipiPu3.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-88
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="3tUXV\_n3yng" %}
 
@@ -296,10 +296,12 @@ to customize the chords shortcut.
 
 Chromium issue: [174309][31]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
 
-[1]: https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
+
+[1]:
+  https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
 [2]: https://crbug.com/1029427
 [3]: /docs/devtools/css/reference#angle-clock
 [4]: https://crbug.com/1126178

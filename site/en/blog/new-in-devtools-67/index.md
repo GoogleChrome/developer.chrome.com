@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 67)"
 authors:
   - kaycebasques
 date: 2018-04-11
 #updated: YYYY-MM-DD
 description:
-  'Search across network headers, copy requests as fetch, audit pages using desktop conditions, and
-  much more.'
+  "Search across network headers, copy requests as fetch, audit pages using desktop conditions, and
+  much more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/edO2lzkhF5E6uCQ85tv9.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-67
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 67 include:
 
@@ -98,14 +98,14 @@ Right-click a network request then select **Copy** > **Copy As Fetch** to copy t
 DevTools produces code like the following:
 
 ```js
-fetch('https://preload.glitch.me/styles.css', {
-  credentials: 'omit',
-  headers: {},
-  referrer: 'https://preload.glitch.me/after/',
-  referrerPolicy: 'no-referrer-when-downgrade',
-  body: null,
-  method: 'GET',
-  mode: 'cors',
+fetch("https://preload.glitch.me/styles.css", {
+  "credentials": "omit",
+  "headers": {},
+  "referrer": "https://preload.glitch.me/after/",
+  "referrerPolicy": "no-referrer-when-downgrade",
+  "body": null,
+  "method": "GET",
+  "mode": "cors"
 });
 ```
 
@@ -227,8 +227,9 @@ each process so that you can see the total work that each process is causing.
 
 **Figure 13**. Per-process flame charts in a Performance recording
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #network-search
 [2]: #vars

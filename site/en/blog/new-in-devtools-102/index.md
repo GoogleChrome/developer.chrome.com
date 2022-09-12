@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 102)"
 authors:
   - jecelynyeen
 date: 2022-05-10
 updated: 2022-05-10
-description: 'New Performance insights panel, shortcuts to emulate light/dark themes, and more.'
+description: "New Performance insights panel, shortcuts to emulate light/dark themes, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1ai2SfNkWhFS0BT58WKy.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-102
 ---
 
-{% partial 'devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -26,25 +26,27 @@ Use the **Performance insights** panel to get actionable and use-case-driven ins
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="New Performance insights panel", width="800", height="585" %}
 
-Once the recording is complete, you get the performance insights on the **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.
+Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes. 
 
-Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.
+Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial. 
 
 This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements.
 
 Chromium issue: [1270700](https://crbug.com/1270700)
 
+
 ## New shortcuts to emulate light and dark themes {: #emulation }
 
 You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane.
 
-Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.
+Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.  
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="New shortcuts to emulate light and dark themes", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/34c39bcabca71195024f1312ec29eecf464a633d #}
 
 Chromium issue: [1314299](https://crbug.com/1314299)
+
 
 ## Improved security on the Network Preview tab {: #network-preview }
 
@@ -60,11 +62,12 @@ The browser blocked the stylesheet request by default. However, when you opened 
 
 Chromium issue: [833147](https://crbug.com/833147)
 
+
 ## Improved reloading at breakpoint {: #debugger }
 
 The debugger now terminates script execution when reloading at breakpoint.
 
-For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.
+For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop. 
 
 Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox.
 
@@ -74,7 +77,8 @@ Continuing to execute JavaScript is causing a lot of trouble for developers and 
 
 Chromium issues: [1014415](https://crbug.com/1014415), [1004038](https://crbug.com/1004038), [1112863](https://crbug.com/1112863), [1134899](https://crbug.com/1134899)
 
-## Console updates {: #console }
+
+## Console updates  {: #console }
 
 ### Handle script execution errors in the Console {: #errors }
 
@@ -86,9 +90,10 @@ Errors during script evaluation in the Console now generate proper error events 
 
 Chromium issue: [1295750](https://crbug.com/1295750)
 
+
 ### Commit live expression with Enter {: #live-expression }
 
-Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools.
+Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools. 
 
 To add a new line in the **live expression** editor, use `Shift` + `Enter` instead.
 
@@ -98,6 +103,7 @@ To add a new line in the **live expression** editor, use `Shift` + `Enter` inste
 
 Chromium issue: [1260744](https://crbug.com/1260744)
 
+
 ## Cancel user flow recording at the start {: #recorder }
 
 You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording.
@@ -106,9 +112,10 @@ You can cancel the recording during the start of user flow recording. Previously
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
+
 ## Display inherited highlight pseudo-elements in the Styles pane {: #pseudo }
 
-View the inherited highlight pseudo-elements (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed.
+View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed.
 
 As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules.
 
@@ -122,6 +129,7 @@ At the moment, you need to run Chrome with the `--enable-blink-features=Highligh
 
 Chromium issue: [1024156](https://crbug.com/1024156)
 
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes in this release:
@@ -131,10 +139,12 @@ These are some noteworthy fixes in this release:
 - Fixed the CSS formatting logic in the **Sources** panel that caused multiple blank lines when editing CSS. ([1309588](https://crbug.com/1309588))
 - Cap the **Expand recursively** option of an object in the **Console** to maximum 100 so it does not go on forever for circular objects. ([1272450](https://crbug.com/1272450))
 
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4240f8bc96a3ebd2dc2a5b316fd41c24e20fb3c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cf09d1de8a0277dbaa9e2000a8d2fcca69e7128e #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6616b9f0cd3e9f1138fb0f409fbe91206d5c8640 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9751653723e15073588f985ba53ba5204475b8c5 #}
+
 
 ## [Experimental] Copy CSS changes {: #copy }
 
@@ -152,9 +162,10 @@ A new **Copy** button is added to the [Changes](/docs/devtools/changes/) tab as 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
 
 Chromium issue: [1268754](https://crbug.com/1268754)
+
 
 ## [Experimental] Picking color outside of browser {: #color-picker }
 
@@ -164,7 +175,7 @@ To enable the experiment, check **Enable color picking outside the browser windo
 
 Enable this experiment to pick a color outside of the browser with the color picker. Previously, you could only pick a color within the browser.
 
-In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere.
+In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="Picking color outside of browser", width="800", height="450" %}
 
@@ -172,5 +183,6 @@ In the **Styles** pane, click on any color preview to open the color picker. Use
 
 Chromium issue: [1245191](https://crbug.com/1245191)
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

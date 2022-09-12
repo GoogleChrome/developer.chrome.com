@@ -1,8 +1,8 @@
 ---
-title: 'Introducing the Memory Inspector'
+title: "Introducing the Memory Inspector"
 description: >
   This article introduces the Memory Inspector that has landed in Chrome 91. It allows you to inspect your ArrayBuffer, TypedArray, DataView, and Wasm Memory.
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 authors:
   - kimanh
 date: 2021-06-11
@@ -13,11 +13,12 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
-This article introduces the Memory Inspector that has landed in Chrome 91. It allows you to inspect your ArrayBuffer, TypedArray, DataView, and Wasm Memory.
+This article introduces the Memory Inspector that has landed in Chrome 91. It allows you to inspect your ArrayBuffer, TypedArray, DataView, and Wasm Memory. 
+
 
 ## Introduction
 
@@ -25,7 +26,8 @@ Ever wanted to make sense of the data in your ArrayBuffer? Prior to the Memory I
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SUDWzfUA2n6KopYBHxKh.png", alt="Scope view in DevTools", width="800", height="441" %}
 
-Navigating to a certain range within the buffer was a pain point, requiring the user to scroll down to finally get to that index. But even if navigating to a position would be easy, this way of actually _inspecting_ values are cumbersome: it is difficult to tell what these numbers mean. Especially, what if they should not be interpreted as single bytes, but e.g. as 32-bit Integers?
+Navigating to a certain range within the buffer was a pain point, requiring the user to scroll down to finally get to that index. But even if navigating to a position would be easy, this way of actually *inspecting* values are cumbersome: it is difficult to tell what these numbers mean. Especially, what if they should not be interpreted as single bytes, but e.g. as 32-bit Integers? 
+
 
 ## Inspecting values using the Memory Inspector
 
@@ -37,6 +39,7 @@ With Chrome 91 we are introducing the Memory Inspector, a tool to inspect array 
 
 Want to try it out? To learn how to open the Memory Inspector and view your array buffer (or TypedArray, DataView, or Wasm Memory) and more information on how to use it, head over to [our documentation on the Memory Inspector](/docs/devtools/memory-inspector/). Give it a try on [these toy examples](http://memory-inspector.glitch.me/) (for JS, Wasm, and C++).
 
+
 ## Designing the Memory Inspector
 
 In this part we’ll have a look at how the Memory Inspector is designed using Web Components, and we’ll show one of the design goals that we had and how we implemented it. If you are curious and want to see more, have a look at our [design doc](https://docs.google.com/document/d/1LUOat3Q3pQ08IsnBQLrvL-4zWXSTgIuArb5ig3lEm-Y) for the Memory Inspector.
@@ -45,10 +48,10 @@ You might have seen our blogpost on [Migrating to Web Components](/blog/migratin
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ACJlqjKcViEXjd1IYhd2.png", alt="Web Components", width="622", height="410" %}
 
-The `LinearMemoryInspector` component is the parent component that combines the subcomponents that build up all elements in the Memory Inspector. It basically takes a `Uint8Array` and an `address`, and on each change of either it propagates the data to its children, which triggers a re-render. The `LinearMemoryInspector` itself renders three subcomponents:
+The `LinearMemoryInspector` component is the parent component that combines the subcomponents that build up all elements in the Memory Inspector. It basically takes a `Uint8Array` and an `address`, and on each change of either it propagates the data to its children, which triggers a re-render. The `LinearMemoryInspector` itself renders three subcomponents: 
 
-1. `LinearMemoryViewer` (showing the values),
-2. `LinearMemoryNavigator` (allowing the navigation), and
+1. `LinearMemoryViewer` (showing the values), 
+2. `LinearMemoryNavigator` (allowing the navigation), and 
 3. `LinearMemoryValueInterpreter` (showing different type interpretations of the underlying data).
 
 The latter one is itself a parent component, which renders the `ValueInterpreterDisplay` (showing the values), and the `ValueInterpreterSettings` (selecting which types to see in the display).
@@ -59,24 +62,26 @@ Each of the components is designed to only represent one small component of the 
 
 The `LinearMemoryInspector` adds itself as a listener on the `LinearMemoryNavigator`. The `addressChanged` function is to be triggered on an `address-changed` event. As soon as the user is now editing the address input, this sends out the aforementioned event, such that the `addressChanged` function is called. This function now saves the address internally, and updates its subcomponents using the a `data(address, ..)` setter. The subcomponents save the address internally and re-render their views, showing the content at that particular address.
 
+
 ### Design goal: making performance and memory consumption independent of the buffer size
 
 One aspect during the design of the Memory Inspector that we had in mind was that the performance of the Memory Inspector should be independent of the buffer size.
 
 As you have seen in the previous part, the `LinearMemoryInspector` component takes a `UInt8Array` to render the values. At the same time we wanted to make sure that the Memory Inspector would not need to keep hold of the whole data, as the Memory Inspector only shows a part of it (e.g. Wasm Memory can be as big as 4GB, and we do not want to store 4GB within the Memory Inspector).
 
-So in order to ensure that the speed and the memory consumption of the Memory Inspector is independent of the actual buffer that we show, we let the `LinearMemoryInspector` component only keep a _subrange_ of the original buffer.
+So in order to ensure that the speed and the memory consumption of the Memory Inspector is independent of the actual buffer that we show, we let the `LinearMemoryInspector` component only keep a *subrange* of the original buffer. 
 
-For this to work, the `LinearMemoryInspector` first needs to take two more arguments: a `memoryOffset` and an `outerMemoryLength`. The `memoryOffset` indicates the offset, _at which the passed Uint8Array_ starts, and is required to render the correct data addresses. The `outerMemoryLength` is the length of the original buffer, and is required to understand what range we can show:
+For this to work, the `LinearMemoryInspector` first needs to take two more arguments: a `memoryOffset` and an `outerMemoryLength`. The `memoryOffset` indicates the offset, *at which the passed Uint8Array* starts, and is required to render the correct data addresses. The `outerMemoryLength` is the length of the original buffer, and is required to understand what range we can show:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aqZwQH4is1fwBSVBMP6o.png", alt="buffer", width="624", height="234" %}
 
 With this information we can ensure that we can still render the same view as before (the content around the `address`), without actually having all the data in place. So what to do if a different address is requested, which falls into a different range? In that case, the `LinearMemoryInspector` triggers a `RequestMemoryEvent`, which updates the current range that is kept; an example is shown below:
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dn2lqBJdF84zIv45KsFL.png", alt="Event trigger flow diagram", width="624", height="180" %}
+ {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dn2lqBJdF84zIv45KsFL.png", alt="Event trigger flow diagram", width="624", height="180" %}
 
 In this example, the user navigates the memory page (the Memory Inspector is using paging for showing chunks of data), which triggers a `PageNavigationEvent`, which itself triggers a `RequestMemoryEvent`.
 That event kicks off fetching the new range, which is then propagated to the `LinearMemoryInspector` component through setting the data. As a result, we show the newly fetched data.
+
 
 ## Oh, and did you know? You can even inspect memory in Wasm and C/C++ code
 
@@ -84,9 +89,10 @@ The Memory Inspector is not only available for `ArrayBuffers` in JavaScript, but
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GcHy7qArrsUhF8UaJVIT.png", alt="Inspect memory in C++", width="800", height="441" %}
 
+
 ## Conclusion
 
 This article presented the Memory Inspector and showed a glimpse of its design. We hope that the Memory Inspector will help you to understand what’s happening in your ArrayBuffer :-). If you have suggestions to improve it let us know and [file a bug](https://crbug.com/new)!
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/engineering-blog.md' %}
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/engineering-blog.md' %}

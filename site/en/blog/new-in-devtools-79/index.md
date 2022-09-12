@@ -1,13 +1,13 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 79)"
 authors:
   - kaycebasques
 date: 2019-10-15
 #updated: YYYY-MM-DD
 description:
-  'Debug why cookies were blocked, simulate prefers-color-scheme: dark, code coverage
-  updates, and more.'
+  "Debug why cookies were blocked, simulate prefers-color-scheme: dark, code coverage
+  updates, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VpChegha4JnMfgnkLChs.jpg'
 alt: ''
 tags:
@@ -16,7 +16,7 @@ tags:
   - chrome-79
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 ## New features for cookies {: #cookies }
 
@@ -152,8 +152,9 @@ Control+N to move your cursor to the line below.
 
 Chromium issue [#983874][19]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: https://web.dev/samesite-cookies-explained#changes-to-the-default-behavior-without-samesite
 [2]: https://chromedevtools.github.io/devtools-protocol/

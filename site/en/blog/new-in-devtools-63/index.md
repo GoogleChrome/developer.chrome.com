@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 63)"
 authors:
   - kaycebasques
 date: 2017-11-28
 #updated: YYYY-MM-DD
-description: 'Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0.'
+description:
+  "Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xV71BolvPqA7eZZaWCsD.jpg'
 alt: ''
 tags:
@@ -14,7 +15,7 @@ tags:
   - chrome-63
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
@@ -125,8 +126,9 @@ now you can send custom tags:
 **Figure 3**. After clicking **Sync**, DevTools sends a background sync event with the custom tag
 `update-content` to the service worker
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #multi-client
 [2]: #workspaces

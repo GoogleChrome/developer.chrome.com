@@ -10,10 +10,10 @@ alt: >
   Deprecations and Removals hero logo
 tags:
   - deprecations-removals
-  - chrome-93
+{% partial '
 ---
 
-{% partial 'see-all-dep-rem.md' %}
+{% include 'partials/see-all-dep-rem.md' %}
 
 Chrome 93 beta was released on July 29, 2021 and is expected to become the
 stable version in late August, 2021.
@@ -42,7 +42,7 @@ published around 19 years ago, and there have been several iterations since.
 
 WebAssembly module sharing between cross-origin but same-site environments [will
 be deprecated](https://chromestatus.com/feature/5650158039597056) to allow agent
-clusters to be scoped to origins long term. This follows a WebAssembly
+{% partial ' to origins long term. This follows a WebAssembly
 specification change, which has an impact on the platform as well.
 
-{% partial 'deprecations-policy.md' %}
+{% include 'partials/deprecations-policy.md' %}

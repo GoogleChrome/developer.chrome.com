@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 61)"
 authors:
   - kaycebasques
 date: 2017-07-10
 #updated: YYYY-MM-DD
-description: 'New features and changes coming to DevTools in Chrome 61.'
+description: "New features and changes coming to DevTools in Chrome 61."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pkmry1VcHxSk2Wx96Ee6.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-61
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 61 include:
 
@@ -98,8 +98,9 @@ ES6 Modules are shipping natively in Chrome 61. There's not much going on here w
 DevTools, other than that debugging works as you'd expect it to. Try setting some breakpoints in and
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #throttling
 [2]: #storage

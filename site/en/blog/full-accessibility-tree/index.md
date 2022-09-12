@@ -13,11 +13,12 @@ tags:
   - devtools
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 Chrome DevTools is launching a full accessibility tree making it easier for developers to get an overview of the whole tree. In this post find out how this tree is created and how to use it in your work.
 
 {% Video src="video/gGNVLl64MBQvhaYBXAAuRiOs3r92/XQNBCFrPG8YqNSOloDE8.mp4", autoplay="true", muted="false", loop="true", class="screenshot" %}
+
 
 ## What is the accessibility tree?
 
@@ -27,23 +28,24 @@ In [Chrome DevTools](/docs/devtools/), we provide the accessibility pane to help
 
 {% Img src="image/gGNVLl64MBQvhaYBXAAuRiOs3r92/NiCDcnAxDts5kG4ZgOeg.png", alt="The Chrome DevTools accessibility pane.", width="535", height="547" %}
 
+
 ## How is the tree created?
 
 Before we get to what this new full tree view looks like in DevTools, let us briefly go over what the accessibility tree is in more tangible terms. The accessibility tree is a derivative of the DOM tree. Its structure is roughly the same, but simplified to remove nodes with no semantic content such as a `<div>` element purely used for styling. Each node in the tree has a role such as `Button` or `Heading`, and often a name that can be either from ARIA attributes or derived from the node’s contents. If we look at an HTML document:
 
 ```html
 <html>
-  <head>
-    <title>How old are you?</title>
-  </head>
-  <body>
-    <label for="age">Age</label>
-    <input id="age" type="number" name="age" value="42" />
-    <div>
-      <button>Back</button>
-      <button>Next</button>
-    </div>
-  </body>
+<head>
+  <title>How old are you?</title>
+</head>
+<body>
+  <label for="age">Age</label>
+  <input id="age" type="number" name="age" value="42">
+  <div>
+    <button>Back</button>
+    <button>Next</button>
+  </div>
+</body>
 </html>
 ```
 
@@ -71,9 +73,11 @@ Note that this representation contains multiple superfluous nodes with role `gen
 The HTML example was borrowed from [here](https://source.chromium.org/chromium/chromium/src/+/main:docs/accessibility/browser/how_a11y_works.md) which also contains more information about how accessibility works in Chromium.
 {% endAside%}
 
+
 ## Full accessibility tree in DevTools
 
 The new, full accessibility tree synchronized with the DOM tree so developers can switch back and forth between the two trees. We hope that the new tree will prove more explorable, useful, and easier to use.
+
 
 Now that you know how the accessibility tree works, you can use DevTools to see how the new tree view looks. The following HTML document with a title, heading, and two buttons is used to show the tree.
 
@@ -95,11 +99,13 @@ Now, when you toggle the new tree, it replaces the DOM tree view and allows you 
 
 {% Img src="image/gGNVLl64MBQvhaYBXAAuRiOs3r92/WRTWNLDbxMPm3HwoHmhb.png", alt="The new tree view in DevTools.", width="800", height="488" %}
 
+
 ### Lazy tree construction
 
 To make the tree performant even for larger sites, the tree is lazily constructed on the frontend as it is explored. Once a node is expanded in the tree, the children for the nodes are fetched through Chrome DevTools Protocol (CDP) and the tree is rebuilt.
 
 {% Img src="image/gGNVLl64MBQvhaYBXAAuRiOs3r92/fpzVAuTVolMbVjiLMt0A.png", alt="The new accessibility tree showing the result for a large page.", width="800", height="488" %}
+
 
 ### Live
 
@@ -108,18 +114,22 @@ In practice, the CDP backend listens for updates to the tree, keeps track of whi
 
 {% Video src="video/gGNVLl64MBQvhaYBXAAuRiOs3r92/vLXJU0FMF41pqKqVJ61D.mp4", autoplay="true", muted="false", loop="true", class="screenshot" %}
 
+
 ## The tale of many trees
 
 In the description of [what the accessibility tree is](#what-is-the-accessibility-tree) you learned how Blink constructs an accessibility tree for the DOM it is rendering, and DevTools fetches this tree through CDP. While this is true, we left out some complications in this description. In reality, there are quite a lot of [different ways to experience](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant) the accessibility tree in Chromium.
 When designing the new tree view for DevTools, we have made some choices along the way about what part of Chromium’s accessibility internals we wanted to surface.
 
+
 ### Platforms
 
 Every platform has a different accessibility API and while the shape of the tree is the same across all platforms, the API for interacting with the tree is different, and the names of attributes can differ. DevTools shows Chromium’s internal tree where roles and attributes tend to match those defined in the [ARIA](https://www.w3.org/TR/wai-aria-1.1/) specification.
 
+
 ### Multiple frames and site isolation
 
 Since Chromium not only puts the content of every tab in different renderer processes but also [isolates cross-site documents in different renderer processes](https://www.chromium.org/developers/design-documents/site-isolation), we have to connect to each out-of-process child document separately over CDP and fetch its accessibility tree. We then stitch these subtrees together on the frontend to give the illusion of one coherent tree, although they live in different renderer processes in Chromium.
+
 
 ### Ignored and uninteresting nodes
 
@@ -136,17 +146,21 @@ On the frontend, we construct the full tree including ignored nodes and only pru
 - **It makes it much simpler to handle node updates from the backend**, since we have the same tree structure on both endpoints. For example, if the node B is removed in the example, we would receive an update for node X (since its children have changed), but if we had pruned that node we would struggle to figure out what to update.
 - **It ensures that all DOM nodes have a corresponding accessibility node.** When the tree is toggled, we select the node corresponding to the node currently selected in the DOM tree. So for the previous example, if the user toggles the tree while the DOM node corresponding to X is selected, we inject X between the nodes A and B and select X in the tree. This allows the user to inspect the accessibility node for all DOM nodes and help determine why the node is ignored.
 
+
 ## Future ideas
 
 Launching the new accessibility tree is just the start. We have a few ideas for future projects we could build on top of the new view, but we are also eager to [hear your feedback](https://goo.gle/devtools-a11y-tree-feedback)!
+
 
 ### Alternative filterings
 
 As explained above, we currently filter out nodes that are deemed uninteresting. We could provide a way to disable this behavior and show all nodes, or provide alternative filterings such as **Show landmark nodes** or **Show headings**.
 
+
 ### Highlight a11y issues
 
 We could incorporate an “accessibility best practice” analysis with the tree and highlight accessibility issues directly on the offending nodes.
+
 
 ### Surface accessibility actions in DevTools
 

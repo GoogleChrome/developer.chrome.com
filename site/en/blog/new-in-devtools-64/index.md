@@ -1,11 +1,11 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 64)"
 authors:
   - kaycebasques
 date: 2017-12-28
 #updated: YYYY-MM-DD
-description: 'Performance Monitor, Console Sidebar, and Console groupings.'
+description: "Performance Monitor, Console Sidebar, and Console groupings."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qydNN6rx1qbTZj2Uroyn.jpg'
 alt: ''
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-64
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 Welcome back! New features coming to DevTools in Chrome 64 include:
 
@@ -122,8 +122,9 @@ This feature is shipping in Chrome 65, which will land approximately 6 weeks aft
 out [Local Overrides][11] to learn more. If you're on Windows or Mac, you can try Chrome 65 now by
 downloading [Chrome Canary][12].
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
+
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
 
 [1]: #perf-monitor
 [2]: #console-sidebar

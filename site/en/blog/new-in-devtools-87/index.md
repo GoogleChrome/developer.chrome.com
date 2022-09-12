@@ -1,11 +1,12 @@
 ---
-layout: 'layouts/blog-post.njk'
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 87)"
 authors:
   - jecelynyeen
 date: 2020-10-01
 #updated: YYYY-MM-DD
-description: 'New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane.'
+description:
+  "New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Eg1jG2rZWv9Mc4UOhwvs.jpg'
 alt: ''
 tags:
@@ -14,7 +15,7 @@ tags:
   - chrome-87
 ---
 
-{% partial 'devtools/banner.md' %}
+{% partial 'devtools/en/banner.md' %}
 
 {% YouTube id="bE3O6EhLjPc" %}
 
@@ -220,10 +221,12 @@ To reset all shortcuts, click on **Restore default shortcuts**.
 
 Chromium issue: [174309][28]
 
-{% partial 'devtools/reach-out.md' %}
-{% partial 'devtools/whats-new.md' %}
 
-[1]: https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
+{% partial 'devtools/en/reach-out.md' %}
+{% partial 'devtools/en/whats-new.md' %}
+
+[1]:
+  https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
 [2]: /docs/devtools/css/grid
 [3]: https://crbug.com/1047356
 [4]: https://w3c.github.io/webauthn/
