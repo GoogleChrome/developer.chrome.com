@@ -11,17 +11,27 @@ function EventCard(event) {
   return html`
     <article class="event-card pad-400 gap-bottom-400">
         <div class="display-flex">
-          <figure class="gap-right-400 flex-shrink-none">
+          <figure class="event-card__desktop-image gap-right-400 flex-shrink-none">
               <!--Todo - handle images-->
               <img src="https://via.placeholder.com/250"
                    alt="placeholder"
                    loading="lazy"
+                   width="225"
                    decoding="async"/>
           </figure>
 
           <div class="display-flex direction-column justify-content-between">
             <div>
-              <h4 class="event-card__title gap-bottom-200">
+              <h4 class="event-card__title">
+                <figure class="event-card__image gap-right-200 flex-shrink-none">
+                  <!--Todo - handle images-->
+                  <img src="https://via.placeholder.com/250"
+                       alt="placeholder"
+                       loading="lazy"
+                       width="38"
+                       decoding="async"/>
+                </figure>
+
                 ${event.title}
               </h4>
 
@@ -50,7 +60,7 @@ function EventCard(event) {
           </div>
         </div>
 
-        <div class="gap-top-400 display-grid grid-cols-2 grid-gap-400">
+        <div class="gap-top-400 display-grid grid-cols-1 grid-gap-400 lg:grid-cols-2">
             ${event.talks.map((talk) => (
               EventParticipantCard(html`
                 <h5 class="event-card__title gap-bottom-300 display-flex align-center">

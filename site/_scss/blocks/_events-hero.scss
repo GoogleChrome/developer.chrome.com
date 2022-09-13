@@ -21,6 +21,7 @@
 
     @include media-query('lg') {
       margin-bottom: get-size(400);
+      white-space: nowrap;
     }
   }
 

@@ -5,9 +5,23 @@
     margin-bottom: 0;
   }
 
-  figure {
+  &__image {
+    width: 38px;
     aspect-ratio: 1/1;
+
+    @include media-query('lg') {
+      display: none;
+    }
+  }
+
+  &__desktop-image {
+    display: none;
     width: 225px;
+    aspect-ratio: 1/1;
+
+    @include media-query('lg') {
+      display: block;
+    }
   }
 
   .type--h5 {
@@ -15,7 +29,7 @@
   }
 
   &__meta {
-    margin-top: 0.7em;
+    margin-top: 0.7rem;
 
     svg {
       fill: get-color('blue-500');
@@ -26,21 +40,39 @@
   }
 
   p {
-    font-size: 1.125em;
-    line-height: 1.333em;
+    font-size: 0.875rem;
+    line-height: 1.333;
+
+    @include media-query('lg') {
+      font-size: 1.125rem;
+    }
   }
 
   &__title {
-    font-size: 1.5em;
-    line-height: 1.333em;
+    display: flex;
+    align-items: center;
+    line-height: 1.333;
+    font-size: 1rem;
     font-family: #{$font-google-sans};
     font-weight: 400;
+    margin-bottom: 0.875rem;
+    color: #{get-color('grey-900')};
+
+    @include media-query('lg') {
+      font-size: 1.5rem;
+    }
   }
 
   &__sub-title {
-    line-height: 1.75em;
+    line-height: 1.75rem;
     font-family: #{$font-google-sans};
     font-weight: 500;
+    font-size: 0.875rem;
+    color: #{get-color('grey-900')};
+
+    @include media-query('lg') {
+      font-size: 1rem;
+    }
   }
 
   .material-button {
@@ -51,10 +83,19 @@
 .event-participant-card {
   border-radius: 12px;
   border: 1px solid get-color('grey-300');
+  padding:1.25rem 1.125rem;
+
+  @include media-query('lg') {
+    padding:2rem;
+  }
 
   p {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    @include media-query('lg') {
+      font-size: 1rem;
+    }
   }
 
   svg {
