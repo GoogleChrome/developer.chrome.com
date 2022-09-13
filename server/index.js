@@ -16,7 +16,11 @@
 
 const {isGAEProd} = require('./env');
 const express = require('express');
+const path = require('path');
 const compression = require('compression');
+const proxy = require('express-http-proxy');
+const { createProxyMiddleware, responseInterceptor } = require('http-proxy-middleware');
+
 const {notFoundHandler} = require('./not-found');
 const {previewHandler} = require('./preview');
 const {buildRedirectHandler} = require('./redirect');
@@ -37,6 +41,7 @@ const uniqueRedirectHandler = buildUniqueRedirectHandler();
 // If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
 const immutableRootMatch = /^\/fonts\//;
 const immutableRootHandler = (req, res, next) => {
+  console.log('Immutable handler', req.url)
   if (immutableRootMatch.test(req.url)) {
     res.setHeader('Cache-Control', 'max-age=31536000,immutable');
   }
@@ -44,6 +49,7 @@ const immutableRootHandler = (req, res, next) => {
 };
 
 const cspHandler = (_req, res, next) => {
+  console.log('CSP handler', _req.url)
   // TODO(samthor): This is an unsuitable policy but included as a start.
   res.setHeader(
     'Content-Security-Policy-Report-Only',
@@ -60,8 +66,8 @@ const cspHandler = (_req, res, next) => {
 };
 
 const handlers = [
-  cspHandler,
-  immutableRootHandler,
+  cspHandler, //sets header
+  immutableRootHandler, //sets fonts header
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
@@ -77,6 +83,68 @@ if (isGAEProd) {
   // so that audits are happy.
   handlers.unshift(compression());
 }
+
+const proxyFilter = function (pathname, req) {
+  // TODO: Proxy only e.g. blog.
+  const isHtml =
+    // Pretty url
+    !path.extname(pathname) ||
+    // Ends in .html
+    path.extname(pathname) === '.html';
+  return isHtml && req.method === 'GET';
+};
+
+const {Storage} = require('@google-cloud/storage');
+
+const storage = new Storage();
+
+const bucketName = 'web-dev-staging_cloudbuild';
+const fileName = 'dist/en/blog/storage-partitioning-dev-trial/index.html';
+
+const storageHandler = async (_req, res, next) => {
+  console.log('Storage handler', _req.url);
+  console.log(__dirname);
+
+  const destFileName = 'dist/en/blog/storage-partitioning-dev-trial/index.html';
+
+  const contents = await storage.bucket(bucketName).file(fileName).download();
+
+
+
+  console.log(
+    `gs://${bucketName}/${fileName} downloaded to ${destFileName}.`
+  );
+  res.send(contents.toString());
+
+  // next();
+};
+
+app.use('/', storageHandler);
+
+// https://storage.cloud.google.com/web-dev-staging_cloudbuild/dist/en/blog/storage-partitioning-dev-trial/index.html
+
+// app.use('/', createProxyMiddleware(proxyFilter, {
+//   target: 'https://storage.cloud.google.com/web-dev-staging_cloudbuild/dist/en',
+//   // target: 'https://storage.googleapis.com/web-dev-staging_cloudbuild/dist/en/',
+//   changeOrigin: true,
+//   pathRewrite: function (pathname, req) {
+//     // TODO: rewrite /en/
+//     if (!path.extname(pathname)) {
+//       return path.join(pathname, 'index.html');
+//     }
+//     return pathname;
+//   },
+//   onProxyRes: (proxyRes, req, res) => {
+//     console.log('responseInterceptor');
+//     console.log(proxyRes.rawHeaders, proxyRes.statusCode);
+//     return
+
+//     // const response = responseBuffer.toString('utf8'); // convert buffer to string
+//     // return response.replace('Hello', 'Goodbye'); // manipulate response and return the result
+//   },
+
+// }));
+// https://storage.googleapis.com/web-dev-staging_cloudbuild/dist/en/blog/12/index.html
 
 app.get('/**/preview', previewHandler);
 app.use(...handlers);
