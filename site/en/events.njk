@@ -8,8 +8,10 @@ description: 'Production-ready service worker libraries and tooling.'
 
 {% include 'partials/events-hero.njk' %}
 
-{% for item in collections.events %}
-  {% EventCard item %}
-{% endfor %}
+<div class="display-grid grid-cols-1 grid-gap-400">
+  {% for item in collections.events %}
+    {% EventCard item %}
+  {% endfor %}
+</div>
 
 

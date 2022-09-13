@@ -1,8 +1,15 @@
 .event-card {
   background: get-color('grey-50');
 
-  &:last-child {
-    margin-bottom: 0;
+  &[show-details="1"] {
+    .event-card__details {
+      display: grid;
+    }
+
+    .event-card__overview button:not(:focus) {
+      background: #{get-color('blue-50')};
+      color: #{get-color('blue-600')}
+    }
   }
 
   &__image {
@@ -75,8 +82,16 @@
     }
   }
 
-  .material-button {
+  &__overview button {
     align-self: flex-start;
+
+    &:not(:focus) {
+      background: #{get-color('blue-700')};
+    }
+  }
+
+  &__details {
+    display: none;
   }
 }
 
