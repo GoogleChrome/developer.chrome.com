@@ -12,6 +12,18 @@
     }
   }
 
+  &.no-js {
+    &:is(:hover, :focus) {
+      .event-card__details {
+        display: grid;
+      }
+    }
+
+    .event-card__overview button {
+      visibility: hidden;
+    }
+  }
+
   &__image {
     width: 38px;
     aspect-ratio: 1/1;

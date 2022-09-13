@@ -10,7 +10,7 @@ const pinIcon =  fs.readFileSync(`site/_includes/icons/pin.svg`, 'utf-8');
 function EventCard(event) {
   return html`
     <enhanced-event-card>
-      <article class="event-card pad-400 no-js" show-details="0">
+      <article class="event-card pad-400 no-js" tabindex="0" show-details="0">
           <div class="display-flex">
             <figure class="event-card__desktop-image gap-right-400 flex-shrink-none">
                 <!--Todo - handle images-->

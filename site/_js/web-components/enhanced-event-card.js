@@ -26,6 +26,7 @@ export class EnhancedEventCard extends BaseElement {
 
     this.detailsButton.addEventListener('click', this.toggleEventDetails);
 
+    this.card.removeAttribute('tabindex');
     this.card.classList.remove('no-js');
   }
 
