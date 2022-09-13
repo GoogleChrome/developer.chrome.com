@@ -9,7 +9,7 @@ alt: "Low angle photo of pink and orange balloons"
 tags:
   - css
   - html
-date: 2022-09-06
+date: 2022-09-13
 ---
 
 The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier for developers to make great user experiences. To do this, we are trying to tackle the more problematic patterns that developers face. We can do this by providing better platform built-in APIs and components.
