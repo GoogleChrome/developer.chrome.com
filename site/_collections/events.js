@@ -28,6 +28,8 @@ module.exports = collections => {
   return collections
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .map((event) => {
+      event.data.id = event.fileSlug;
+
       event.data.talks = event.data.talks
         .map((talk) => {
           talk.speaker = getAuthorData(talk.speaker)

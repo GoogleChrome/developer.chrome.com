@@ -21,7 +21,10 @@ function EventCard(event) {
 
   return html`
     <enhanced-event-card>
-      <article class="event-card pad-400 no-js" tabindex="0" show-details="0">
+      <article id="${event.id}"
+               class="event-card pad-400 no-js"
+               tabindex="0"
+               show-details="0">
           <div class="display-flex">
             <figure class="event-card__desktop-image gap-right-500 flex-shrink-none">
               ${image}
