@@ -24,13 +24,13 @@ User-Agent 文字列には、ブラウザとユーザーが使用しているデ
 
 そのため、Chrome では UA 文字列でデフォルトで共有される情報を削減し、サイトやサービスが必要な情報のみをリクエストできるようにうする User-Agent Client Hints（UA-CH）という[新しい API](https://web.dev/user-agent-client-hints/) を導入しています。この計画を最初に[発表](https://groups.google.com/a/chromium.org/g/blink-dev/c/-2JIRNMWJ7s/m/yHe4tQNLCgAJ)したのは 2020 年 1 月で、 [段階的なロードマップ](https://blog.chromium.org/2021/05/update-on-user-agent-string-reduction.html)を 2021 年 5 月に共有しました。この変更により、UA 文字列の情報の制限において、Chrome と他のブラウザの機能が同調されます。
 
-## Phased approach
+## 段階的アプローチ
 
 Chrome は 4 月下旬、[マイナー バージョン](https://chromestatus.com/feature/6311349754789888)を筆頭にプライバシー改善を目的とした UA 文字列の一部の除去作業を開始しました。この作業が、私たちが[UA 削減](/docs/privacy-sandbox/user-agent/)と呼んでいるプロジェクトです。
 
 直近のフェーズの一環では、Chrome は 2022 年 10 月下旬から、デスクトップのブラウザの UA 文字列に含まれる OS バージョンやデバイス プラットフォームなどの情報を削減し始める予定となっています。Google の標準のテスト アプローチと同様に、期間を設けて Chrome ユーザーへの段階的なロールアウトを行います。次のフェーズは 2023 年 2 月を予定としており、モバイルの Chrome ブラウザを対象としています。完全な [タイムラインは Chromium.org をご覧ください](https://www.chromium.org/updates/ua-reduction/#proposed-rollout-plan)。
 
-## Feedback and testing
+## フィードバックとテスト
 
 企業がこれらの変更による影響を評価し、UA 削減と新しい UA-CH API に関するインサイトを共有していただけるのを楽しみにしています。この種のフィードバックによって、他の人がその学習から集合的に利益を得られるのと同時に、ウェブ上のプライバシーを改善する方法についてオープンな会話を活性化させることができます。
 
@@ -42,7 +42,7 @@ UA-CH API への移行にさらに時間が必要な場合は、 [User-Agent 削
 
 最後に、これらの変更によって、UA 文字列情報を使用してサービスを提供するサードパーティ パートナーに影響があると思われる場合のために、Chrome は、サードパーティ ベンダーが顧客サイトに影響を与えずにテストできる[新しいツール](/docs/privacy-sandbox/user-agent/#prepare-and-test)をいくつか開発しました。
 
-## Engage and share feedback
+## エンゲージメントとフィードバックの共有
 
 - **オリジントライアル**: [フィードバックをお寄せください](https://github.com/miketaylr/user-agent-reduction/issues)。
 - **デモ**: [User-Agent 削減のデモ](https://uar-ot.glitch.me/)をお試しください。
