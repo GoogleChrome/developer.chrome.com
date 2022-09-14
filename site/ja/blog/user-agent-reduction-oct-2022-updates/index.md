@@ -7,7 +7,7 @@ hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/LSV0dVu9tz6GWlyQ2yKm.png
 alt: User-Agent 削減への変更作業のタイムライン。
 authors:
   - jney
-date: '2022-08-25'
+date: 2022-08-25
 tags:
   - privacy
 ---
