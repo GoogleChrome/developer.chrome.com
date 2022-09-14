@@ -29,13 +29,13 @@ function EventCard(event) {
 
             <div class="event-card__overview display-flex direction-column justify-content-between">
               <div>
-                <h4 class="event-card__title">
+                <div class="event-card__title">
                   <figure class="event-card__image gap-right-200 flex-shrink-none">
                     ${image}
                   </figure>
 
                   ${event.title}
-                </h4>
+                </div>
 
                 <p>
                   ${event.summary}
@@ -63,7 +63,7 @@ function EventCard(event) {
           <div class="event-card__details gap-top-400 grid-cols-1 grid-gap-400 lg:grid-cols-2">
               ${event.talks.map((talk) => (
                 EventParticipantCard(html`
-                    <h5 class="event-card__title gap-bottom-300 display-flex align-center">
+                    <div class="event-card__title gap-bottom-300 display-flex align-center">
                         ${Img({
                           src: talk.speaker.image,
                           width: 40,
@@ -72,7 +72,7 @@ function EventCard(event) {
                           class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
                         })}
                         ${i18n(talk.speaker.title)}
-                    </h5>
+                    </div>
 
                     <p class="event-card__sub-title gap-bottom-200">${talk.title}</p>
 
