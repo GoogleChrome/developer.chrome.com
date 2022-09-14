@@ -30,7 +30,7 @@ source code from [Github][sample-hello-world].
 
 Next, create a new file in this directory called `manifest.json` and add the following code:
 
-{% Label %}manifest.js:{% endLabel %}
+{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -111,33 +111,45 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
 
 ## Reloading the extension {: #reload }
 
-Let’s go back to the code and change the content of the `<h1>` element in your HTML file.
+Let’s go back to the code and change the name of the extension to "Hello Extensions of the world!".
 
-{% Label %}hello.html{% endLabel %}
+{% Label %}manifest.json{% endLabel %}
 
-```html
-<html>
- <body>
-   <h1>Hello, Extensions of the world! 👋</h1>
- </body>
-</html>
+```json
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions of the world!",
+  ...
+}
 ```
 
-After saving the file, go to the Extension Management page. You can see the changes made by clicking
-on the refresh icon next to the **on/off** toggle:
+After saving the file, to see this change in the browser you also have to refresh the extension. Go
+to the Extension Management page and click the refresh icon next to the **on/off** toggle:
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QNtwZICbwsGO3gacCJEd.png", 
-alt="Reload an extension", width="500", height="233", class="screenshot" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/4Ph3qL9aUyswxmhauRFB.png", alt="Reload an extension", width="500", height="544", class="screenshot" %}
 
-{% Aside %}
+{% Details %}
+{% DetailsSummary %}
+💡 **Do I always have to refresh the extension to see my changes?**
+{% endDetailsSummary %}
 
-💡 **TIP**: Remember to refresh your extension every time you make changes.
+Not all components require the extension to reload. The following table shows which components need to be reloaded:
 
-{% endAside %}
+| Extension component        | Requires extension reload |
+|----------------------------|:-------------------------:|
+| The manifest               |            Yes            |
+| Service worker             |            Yes            |
+| Content Scripts            | Yes (plus the host page)  |
+| The popup                  |            No             |
+| Options page               |            No             |
+| Other extension HTML pages |            No             |
+
+
+{% endDetails %}
 
 ## Finding console logs and errors {: #logs }
 
-### Console logs {: #console}
+### Console logs {: #console }
 
 During development, you can debug your code by accessing the browser console logs. In this case, we
 will locate the logs for the popup. Start by adding a script tag to `hello.html`.
@@ -254,7 +266,12 @@ Choose any of the following tutorials to begin your extension learning journey.
 | [Tabs Manager][tut-tabs-manager] | To create a popup that manages browser tabs.                            |
 
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome
-extension and Chrome Web store documentation.
+extension and Chrome Web store documentation:
+
+- Reading time adds the expected reading time to each documentation articles.
+- Focus more changes the style of the page to help you concentrate on the documentation content.
+- Tabs manager allows you to organize your extension documentation tabs.
+
 
 [api-action]: /docs/extensions/reference/action/
 [dev-tools]: /docs/devtools

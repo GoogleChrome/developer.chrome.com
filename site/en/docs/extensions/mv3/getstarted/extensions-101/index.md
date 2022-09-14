@@ -53,7 +53,7 @@ It can use all the [Chrome APIs][doc-apis], but it cannot interact directly with
 pages; that’s the job of content scripts.
 
 Content scripts 
-: [Content scripts][doc-content-scripts] can execute Javascript in the context of a web page. They
+: [Content scripts][doc-content-scripts] execute Javascript in the context of a web page. They
 can also read and modify the [DOM][mdn-dom] of the pages they're injected into. Content Scripts can
 only use a subset of the [Chrome APIs][doc-reference] but can indirectly access the rest by
 exchanging messages with the extension service worker.
@@ -117,7 +117,11 @@ Choose any of the following tutorials to begin your extension learning journey.
 | [Tabs Manager][tut-tabs-manager]     | To create a popup that manages browser tabs.                           |
 
 As a bonus, these tutorials were designed to improve your experience when reading the Chrome
-extension and Chrome Web Store documentation.
+extension and Chrome Web store documentation:
+
+- Reading time adds the expected reading time to each documentation articles.
+- Focus more changes the style of the page to help you concentrate on the documentation content.
+- Tabs manager allows you to organize your extension documentation tabs.
 
 
 [chrome-web-store]: https://chrome.google.com/webstore/

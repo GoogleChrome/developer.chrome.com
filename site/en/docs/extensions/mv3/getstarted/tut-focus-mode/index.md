@@ -133,10 +133,10 @@ extension by clicking on the extension action.
 
 {% Details %}
 {% DetailsSummary %}
-💡 **What other user interactions enable the activeTab permission?**
+💡 **What other user interactions enable the activeTab permission on my extension?**
 {% endDetailsSummary %}
 
-The following are other user gestures your extension can use to invoke the activeTab permission:
+Use the following gestures to invoke the `activeTab` permission
 
 - Pressing a keyboard shortcut combination.
 - Selecting a context menu item.
@@ -206,7 +206,7 @@ main > :last-child {
 }
 ```
 
-Great! Let's insert or remove the stylesheet using the [Scripting][api-scripting] API. Start by
+Let's insert or remove the stylesheet using the [Scripting][api-scripting] API. Start by
 declaring the `"scripting"` permission in the manifest:
 
 {% Label %}manifest.json:{% endLabel %}
@@ -359,7 +359,7 @@ development learning journey. We recommend the following learning paths:
 - The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [chrome.\* APIs documentation][doc-apis] will walk through each API.
+  The [Chrome APIs documentation][doc-apis] will walk through each API.
 
 [action-badge]: /docs/extensions/reference/action/#badge
 [active-tab-allows]: /docs/extensions/mv3/manifest/activeTab/#what-activeTab-allows

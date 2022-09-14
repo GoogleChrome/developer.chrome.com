@@ -372,7 +372,7 @@ development learning journey. We recommend the following learning path:
 - The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [chrome.\* APIs documentation][doc-apis] will walk through each API.
+  The [Chrome APIs documentation][doc-apis] will walk through each API.
 
 [api-action]: /docs/extensions/reference/action
 [api-tabgroups]: /docs/extensions/reference/tabGroups
