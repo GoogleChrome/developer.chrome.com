@@ -46,7 +46,7 @@ Next, create a new file in this directory called `manifest.json` and add the fol
 ```
 
 This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
-declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. You can download the icon [here][hello-icon]. 
+declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
