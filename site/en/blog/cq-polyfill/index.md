@@ -3,7 +3,7 @@ title: "Container queries begin to land in stable browsers while the polyfill ge
 description: >
   "Container queries enable components to own their responsive styling information based on the space they fit within. This feature is starting to roll out to modern browsers, and there's been a big update for polyfill support."
 layout: 'layouts/blog-post.njk'
-date: 2022-09-09
+date: 2022-09-14
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/8NcncbrOEEUqTRR1UaoE.jpg'
 alt: >
   Laptop with vivid colors as a reflective background.
