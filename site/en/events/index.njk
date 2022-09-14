@@ -10,8 +10,6 @@ description: 'Production-ready service worker libraries and tooling.'
 
 <div class="display-grid grid-cols-1 grid-gap-400">
   {% for item in collections.events %}
-    {% EventCard item %}
+    {% EventCard item.data %}
   {% endfor %}
 </div>
-
-
