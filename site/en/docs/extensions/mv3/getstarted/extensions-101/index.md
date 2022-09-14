@@ -65,6 +65,17 @@ APIs][doc-apis].
 
 Visit [Extensions Architecture][doc-arch] and [Designing the user interface][doc-ui] to dive deeper.
 
+{% Details %}
+{% DetailsSummary %}
+💡 **Do all extensions have a popup?**
+{% endDetailsSummary %}
+
+Many extension use a popup to customize the user experience, however this is _not_ required.
+For example, the [reading time][tut-reading-time] and [focus mode][tut-focus-mode] extension
+tutorials do not include a popup.
+
+{% endDetails %}
+
 ## Developing your extension {: #development }
 
 Even though web applications and extensions share many of the same technologies, the extension development

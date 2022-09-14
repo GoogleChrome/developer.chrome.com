@@ -179,7 +179,24 @@ Add the highlighted code to the `manifest.json` file:
 }
 ```
 
-<!-- TODO: Details with each permission warning -->
+{% Details %}
+{% DetailsSummary %}
+💡 **What are the main differences between the tabs permission and host permissions?**
+{% endDetailsSummary %}
+
+Both the "tabs" permission and host permissions have drawbacks.
+
+The "tabs" permission grants an extension the ability to read sensitive data on all tabs. Over time, this information could be used to collect a user's browsing history. As such, if you request this permission Chrome will display the following warning message at install time:
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Zq5KIiqzVbKyoc1sa3vN.png", alt="Tabs permission warning dialog", width="458", height="190" %}
+
+Host permissions allow an extension to read and query a matching tab's sensitive properties, plus inject scripts on these tabs. Users will see the following warning message at install time:
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KeXXloMAS8HfX7F2spTv.png", alt="Host permission warning dialog", width="459", height="193" %}
+
+These warning can be alarming for users. For a better onboarding experience, we recommend implementing [optional permissions][api-permissions]. 
+
+{% endDetails %} 
 
 #### Query the tabs {: #query }
 
@@ -373,6 +390,7 @@ development learning journey. We recommend the following learning path:
   The [Chrome APIs documentation][doc-apis] will walk through each API.
 
 [api-action]: /docs/extensions/reference/action
+[api-permissions]: /docs/extensions/reference/permissions/
 [api-tabgroups]: /docs/extensions/reference/tabGroups
 [api-tabs]: /docs/extensions/reference/tabs
 [cws-discovery]: /docs/webstore/discovery/
