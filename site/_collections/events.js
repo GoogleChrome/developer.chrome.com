@@ -26,7 +26,7 @@ const PLACEHOLDER_IMG =
  */
 module.exports = collections => {
   return collections
-    .getFilteredByGlob('./site/en/events/**/*.md')
+    .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .map((event) => {
       event.data.talks = event.data.talks
         .map((talk) => {
