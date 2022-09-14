@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+const authorsData = require('../_data/authorsData.json');
+const PLACEHOLDER_IMG =
+  'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
+
 /**
  * Returns a list of events
  * *
@@ -21,8 +25,35 @@
  * @returns {EleventyCollectionItem[]}
  */
 module.exports = collections => {
-  const out = collections
-    .getFilteredByGlob('./site/en/events/**/*.md');
+  return collections
+    .getFilteredByGlob('./site/en/events/**/*.md')
+    .map((event) => {
+      event.data.talks = event.data.talks
+        .map((talk) => {
+          talk.speaker = getAuthorData(talk.speaker)
+          return talk;
+        });
 
-  return out;
+      event.data.participant_groups = event.data.participant_groups
+        .map((group) => {
+          group.participants = group.participants.map((p) => {
+            return getAuthorData(p);
+          });
+          return group;
+        });
+
+      return event;
+    });
 };
+
+function getAuthorData(authorHandle)
+{
+  if (typeof authorsData[authorHandle] === 'undefined') {
+    throw new Error(`Invalid author: ${authorHandle}`);
+  }
+
+  return {
+    image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
+    title: `i18n.authors.${authorHandle}.title`
+  };
+}

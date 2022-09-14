@@ -2,35 +2,36 @@ const fs = require('fs');
 const { formatDateShort } = require('../_data/lib/date');
 const { EventParticipantCard } = require('./EventParticipantCard')
 const {html} = require('common-tags');
+const {i18n} = require('../_filters/i18n');
+const {Img} = require('./Img');
 
 const calendarIcon =  fs.readFileSync(`site/_includes/icons/calendar.svg`, 'utf-8');
 const clockIcon =  fs.readFileSync(`site/_includes/icons/clock.svg`, 'utf-8');
 const pinIcon =  fs.readFileSync(`site/_includes/icons/pin.svg`, 'utf-8');
+const PLACEHOLDER_IMG =
+  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
 function EventCard(event) {
+  const image = Img({
+    src: event.image ?? PLACEHOLDER_IMG,
+    width: 225,
+    height: 225,
+    alt: event.title,
+  });
+
   return html`
     <enhanced-event-card>
       <article class="event-card pad-400 no-js" tabindex="0" show-details="0">
           <div class="display-flex">
-            <figure class="event-card__desktop-image gap-right-400 flex-shrink-none">
-                <!--Todo - handle images-->
-                <img src="https://via.placeholder.com/250"
-                     alt="placeholder"
-                     loading="lazy"
-                     width="225"
-                     decoding="async"/>
+            <figure class="event-card__desktop-image gap-right-500 flex-shrink-none">
+              ${image}
             </figure>
 
             <div class="event-card__overview display-flex direction-column justify-content-between">
               <div>
                 <h4 class="event-card__title">
                   <figure class="event-card__image gap-right-200 flex-shrink-none">
-                    <!--Todo - handle images-->
-                    <img src="https://via.placeholder.com/250"
-                         alt="placeholder"
-                         loading="lazy"
-                         width="38"
-                         decoding="async"/>
+                    ${image}
                   </figure>
 
                   ${event.title}
@@ -62,19 +63,15 @@ function EventCard(event) {
           <div class="event-card__details gap-top-400 grid-cols-1 grid-gap-400 lg:grid-cols-2">
               ${event.talks.map((talk) => (
                 EventParticipantCard(html`
-                  <h5 class="event-card__title gap-bottom-300 display-flex align-center">
-                    <!--Todo - handle images-->
-                    <img alt="Milica Mihajlija"
-                         class="flex-shrink-none height-600 width-600 rounded-full gap-right-300"
-                         decoding="async"
-                         height="40"
-                         width="40"
-                         loading="lazy"
-                         sizes="40px"
-                         src="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format"
-                         srcset="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=40 40w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=46 46w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=52 52w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=59 59w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=68 68w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=77 77w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=88 88w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=100 100w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=114 114w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=120 120w"
-                      />
-                      ${talk.speaker}
+                    <h5 class="event-card__title gap-bottom-300 display-flex align-center">
+                        ${Img({
+                          src: talk.speaker.image,
+                          width: 40,
+                          height: 40,
+                          alt: i18n(talk.speaker.title),
+                          class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                        })}
+                        ${i18n(talk.speaker.title)}
                     </h5>
 
                     <p class="event-card__sub-title gap-bottom-200">${talk.title}</p>
@@ -92,46 +89,46 @@ function EventCard(event) {
                 `)
               ))}
 
-              ${event.participant_groups.map((group) => (
-                EventParticipantCard(html`
+              ${event.participant_groups.map((group) => {
+                const icon = group.participants.length === 1 ? group.participants[0].image : 'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
+                const title = group.participants.length === 1 ? i18n(group.participants[0].title) : 'Multiple participants';
+
+                return EventParticipantCard(html`
                     <h5 class="event-card__title gap-bottom-300 display-flex align-center">
-                      <!--Todo - handle images-->
-                      <img alt="Milica Mihajlija"
-                           class="flex-shrink-none height-600 width-600 rounded-full gap-right-300"
-                           decoding="async"
-                           height="40"
-                           width="40"
-                           loading="lazy"
-                           sizes="40px"
-                           src="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format"
-                           srcset="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=40 40w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=46 46w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=52 52w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=59 59w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=68 68w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=77 77w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=88 88w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=100 100w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=114 114w, https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg?auto=format&amp;w=120 120w"
-                        />
-                        ${group.participants.length === 1 ? group.participants[0].name : 'Multiple participants'}
-                      </h5>
+                        ${Img({
+                          src: icon,
+                          width: 40,
+                          height: 40,
+                          alt: title,
+                          class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                        })}
 
-                      ${group.participants.length > 1 && (
-                        html`
+                        ${title}
+                    </h5>
+
+                    ${group.participants.length > 1 && (
+                      html`
                           <p class="event-card__sub-title gap-bottom-200">Participants</p>
-                          <p class="gap-bottom-300">${group.participants.map(p => p.name).join(', ')}</p>
+                          <p class="gap-bottom-300">${group.participants.map(p => i18n(p.title)).join(', ')}</p>
                         `
-                      )}
+                    )}
 
-                      <p class="event-card__sub-title gap-bottom-200">Participant details</p>
+                    <p class="event-card__sub-title gap-bottom-200">Participant details</p>
 
-                      <div class="gap-bottom-200">
+                    <div class="gap-bottom-200">
                         <p>${group.description}</p>
-                      </div>
+                    </div>
 
-                      ${group.topic && (
-                        html`
+                    ${group.topic && (
+                      html`
                           <a href="/todo"
                              class="surface color-secondary-text decoration-none hairline rounded-lg tag-pill type--label weight-regular">
                             ${group.topic}
                           </a>
-                        `
-                      )}
-                  `)
-              ))}
+                      `
+                    )}
+                `);
+              })}
           </div>
       </article>
     </enhanced-event-card>
