@@ -167,7 +167,7 @@ chrome.runtime.onMessage.addListener((message, callback) => {
 
 ## Unload background scripts {: #unloading }
 
-TODO
+Unlike [event pages in Manifest V2][event-page-unload], extension service workers do not receive a `runtime.onSuspend` event before they are stopped. This is because documents have [`unload`][mdn-unload] and [`beforeUnload`][mdn-beforeunload] events, but web workers (and by extension service workers) do not have an equivalent event.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
@@ -187,4 +187,7 @@ TODO
 [16]: /docs/extensions/reference/runtime#event-onSuspend
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
+[event-page-unload]: https://developer.chrome.com/docs/extensions/mv2/background_pages/
+[mdn-beforeunload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
+[mdn-unload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
 [sw-module]: https://web.dev/es-modules-in-sw/
