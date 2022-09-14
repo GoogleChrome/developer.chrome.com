@@ -26,7 +26,7 @@ In this guide, we’re going to explain how to do the following:
 - Preserve user privacy through narrow host permissions.
 - Change the focus of the tab.
 - Move tabs to the same window and group them.
-- Rename tabs group using the [TabGroups][api-tabgroups] API.
+- Rename tab groups using the [TabGroups][api-tabgroups] API.
 
 ## Before you start {: #prereq }
 
@@ -35,12 +35,12 @@ This guide assumes that you have basic web development experience. We recommend 
 
 ## Build the extension {: #build }
 
-To start, create a new directory called `tabs-manager` that will hold the extension's files. If you
+To start, create a new directory called `tabs-manager` to hold the extension's files. If you
 prefer, you can download the complete source code on [Github][github-tabs-manager].
 
 ### Step 1: Add the extension data and icons {: #step-1 }
 
-Create a file called `manifest.json` and include the following code:
+Create a file called `manifest.json` and add the following code:
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -55,15 +55,13 @@ Create a file called `manifest.json` and include the following code:
     "48": "images/icon-48.png",
     "128": "images/icon-128.png"
   },
-  ...
 }
 ```
 
 These manifest keys are explained in more detail in the [Reading time
 tutorial][tut-reading-time-step1]. 
 
-Create an `images` folder and place the icons inside. You can download the icons
-[here][github-tabs-manager-icons].
+Create an `images` folder then [download the icons][github-tabs-manager-icons] into it.
 
 ### Step 2: Create and style the popup {: #step-2 }
 
@@ -123,7 +121,7 @@ tag.
 
 {% endAside %}
 
-Next, let's style the popup. Create a popup CSS file and include the following code:
+Next, let's style the popup. Create a popup CSS file and add the following code:
 
 {% Label %}popup.css:{% endLabel %}
 
@@ -167,11 +165,11 @@ We could request `"tabs"` permission, but this would allow access to the sensiti
 
 Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities.
 
-Add the following code to the `manifest.json` file:
+Add the highlighted code to the `manifest.json` file:
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json
+```json/2-3
 {
   ...
   "host_permissions": [
@@ -212,7 +210,7 @@ chrome schema. For example `chrome-extension://EXTENSION_ID/popup.html`.
 
 #### Focus on a tab {: #focus}
 
-First, the extension will sort the list alphabetically. Then, when a list item is clicked, it will
+First, the extension will sort tab names (the titles of the contained HTML pages) alphabetically. Then, when a list item is clicked, it will
 focus on that tab using `tabs.update()` and bring the window to the front using `windows.update()`.
 Add the following code to `popup.js`:
 
@@ -261,11 +259,11 @@ document.querySelector("ul").append(...elements);
 #### Group the tabs {: #group}
 
 The [TabGroups][api-tabgroups] API allows the extension to name the group and choose a background
-color. Add the `“tabGroups”` permission to the manifest by adding the following code:
+color. Add the `“tabGroups”` permission to the manifest by adding the highlighted code:
 
 {% Label %}manifest.json:{% endLabel %}
 
-```json
+```json/2-4
 {
   ...
   "permissions": [
