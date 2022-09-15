@@ -52,7 +52,9 @@ These tutorials not only teach you how to build real-world extensions but also s
 
 [Tabs Manager][tut-tabs-manager]
 
-: Do you have multiple tabs on different windows distributed across several desktops? Tabs Manager explains how to create an extension popup that displays a list of all the open extension documentation pages. It can also gather them all into a neat group. 
+: While researching extension development you can end up with many documentation tabs across multiple windows.
+Learn how to organize your Chrome extension and Chrome Web store documentation tabs with this Tabs
+Manager.
 
 ## What to expect {: #sections }
 
