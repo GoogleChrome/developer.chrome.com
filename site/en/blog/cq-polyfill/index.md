@@ -3,7 +3,7 @@ title: "Container queries begin to land in stable browsers while the polyfill ge
 description: >
   "Container queries enable components to own their responsive styling information based on the space they fit within. This feature is starting to roll out to modern browsers, and there's been a big update for polyfill support."
 layout: 'layouts/blog-post.njk'
-date: 2022-09-14
+date: 2022-09-15
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/8NcncbrOEEUqTRR1UaoE.jpg'
 alt: >
   Laptop with vivid colors as a reflective background.
@@ -17,7 +17,7 @@ authors:
 
 ## Container queries are here!
 
-Exciting news—one of the most highly requested developer features has begun to land in web browsers. As of [Chromium 105](/blog/new-in-chrome-105/), you can now create size-based [container queries](/blog/has-with-cq-m105/) and use [container query unit values](https://ishadeed.com/article/container-query-units/) in stable Chrome and Edge browsers. Equally exciting, Safari also has these features available in Safari 16 beta. To make it even easier to use size-based container queries and `cq` units, the Aurora team at Chrome has been hard at work updating the [Container Query Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) to support more browsers and use cases so you can feel confident using this powerful feature today.
+Exciting news—one of the most highly requested developer features has begun to land in web browsers! As of [Chromium 105](/blog/new-in-chrome-105/) and [Safari 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/), you can now create size-based [container queries](/blog/has-with-cq-m105/) and use [container query unit values](https://ishadeed.com/article/container-query-units/) in these browsers. To make it even easier to use size-based container queries and `cq` units, the Aurora team at Chrome has been hard at work updating the [Container Query Polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) to support more browsers and use cases so you can feel confident using this powerful feature today.
 
 {% Aside %}
 Container queries are a part of the [css-contain-3 specification](https://www.w3.org/TR/css-contain-3/). This specification covers new unit values and both size and style container types, though browsers are initially launching with only the support of size-containment. Because of this, we’ll focus on size containment in this article.
