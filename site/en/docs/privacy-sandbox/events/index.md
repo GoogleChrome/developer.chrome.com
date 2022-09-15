@@ -6,7 +6,7 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2022-09-12
+updated: 2022-09-14
 authors:
  - samdutton
 ---
@@ -16,33 +16,9 @@ already taken place.
 
 ## Future events
 
-### Topics API Office Hours {: #oh04}
+There are no new events confirmed right now. 
 
-The Google Chrome team will be hosting our next two Office Hours sessions, providing an
-overview and a demo of the Topics API, as well as a Q&A session with DevRel, Product and Engineering
-leads. 
-
-Join us to learn more about our approach to the Topics API, and to get your questions answered. 
-
-**Session 1 with English-language demo** (event now completed)
-* Tuesday, September 6 
-* 8:00–9:30 am PDT 
-* Videos of event: [presentation](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF), 
-[demo](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV)
-
-**Session 2 with Japanese-language demo** 
-* PDT: Tuesday, September 13, 6–7:30 pm 
- JST: Wednesday, September 14, 10–11:30 am 
-* Video call link: [meet.google.com/xnp-mxct-qvd](http://meet.google.com/xnp-mxct-qvd) 
-* Or dial: Japan (JP) +81 3-4545-0450 984 065 402 5397# 
-* More telephone numbers: [tel.meet/xnp-mxct-qvd?pin=9840654025397](https://tel.meet/xnp-mxct-qvd?pin=9840654025397) 
-
-A recording of the overview presentation and demo will be shared after the events​​ via the [Chrome
-Developer YouTube channel](https://www.youtube.com/c/GoogleChromeDevelopers). 
-We hope this is a helpful forum, and welcome your feedback and suggestions on how to make these
-events most useful for you as we experiment with different approaches.
-
-Subscribe to the following mailing lists to be notified of other events:
+Check back here for updates, or subscribe to the following mailing lists to be notified of events:
 
 * [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev)
 * [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce)
@@ -60,6 +36,29 @@ if you plan on participating.
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 
 ## Past events
+
+### Topics API Office Hours {: #oh04}
+
+The Google Chrome team will be hosting our next two Office Hours sessions, providing an
+overview and a demo of the Topics API, as well as a Q&A session with DevRel, Product and Engineering
+leads. 
+
+Join us to learn more about our approach to the Topics API, and to get your questions answered. 
+
+**Session 1 with English-language demo**
+* Tuesday, September 6 
+* 8:00–9:30 am PDT 
+* Videos of event: [presentation](https://drive.google.com/file/d/1831_uKSlTwnSzYNjpp9pkDEniDA_Q9lF), 
+[demo](https://drive.google.com/file/d/1dmpMKLJcGNe56M6ECRdRYhuITTv9YUDV)
+
+**Session 2 with Japanese-language demo** 
+* PDT: Tuesday, September 13, 6–7:30 pm • JST: Wednesday, September 14, 10–11:30 am 
+* Links to videos from the event will be posted here 
+
+A recording of the overview presentation and demo will be shared after the events​​ via the [Chrome
+Developer YouTube channel](https://www.youtube.com/c/GoogleChromeDevelopers). 
+We hope this is a helpful forum, and welcome your feedback and suggestions on how to make these
+events most useful for you as we experiment with different approaches.
 
 ### Attribution end-to-end demo with summary reports {: #oh03}
 **Privacy Sandbox Developer Office Hours #3**
