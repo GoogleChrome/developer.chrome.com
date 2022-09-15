@@ -113,6 +113,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
+  eleventyConfig.addCollection('partials', (collections) => {
+    return collections
+        .getFilteredByGlob('./site/*/_partials/**/*')
+        .filter(filterOutDrafts)
+        .reverse();
+  });
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
@@ -150,7 +156,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
-  eleventyConfig.addShortcode('Partial', Partial);
+  eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
