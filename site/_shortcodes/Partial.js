@@ -10,6 +10,7 @@ const basePath = '_partials';
  * @param {string} partialPath Partial path
  */
 async function Partial(partialPath) {
+  // @ts-ignore: `this` has type of `any`
   const locale = this.ctx.locale || defaultLocale;
 
   partialPath = path.join('/', basePath, partialPath);
@@ -18,6 +19,7 @@ async function Partial(partialPath) {
   partialPath = partialPath.replace(/(index)?.(md|njk|html)$/, '');
 
   const partial = findByFilePath(
+    // @ts-ignore: `this` has type of `any`
     this.ctx.collections.partials,
     partialPath,
     locale
@@ -33,6 +35,7 @@ async function Partial(partialPath) {
   const template = partial.template;
   template.wrapWithLayouts = false;
 
+  // @ts-ignore: `this` has type of `any`
   const templateContent = await template.render(this.ctx);
   return templateContent;
 }
