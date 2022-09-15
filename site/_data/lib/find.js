@@ -81,8 +81,6 @@ const findByFilePath = (collection, filePath, locale = '') => {
     throw new Error(`Paths should not end in file extensions: ${filePath}`);
   }
 
-  ('/en/_partials/extensions/mv2-legacy-page');
-
   // Ensure urls are always absolute. This is because eleventy's collection
   // urls are always absolute so if we try to match against a relative url
   // we'll always miss.
