@@ -1,49 +1,40 @@
 const path = require('path');
 
-const cacheKey = Symbol('find-cache');
-const alreadyNotifiedKey = Symbol('already-notified');
+const urlCacheKey = Symbol('find-cache-url');
+const pathCacheKey = Symbol('find-cache-path');
+
+const defaultLocale = 'en';
 
 /**
- * Builds and uses a cache to ensure fast lookup of Eleventy pages.
+ * Builds and uses a cache to ensure fast lookup of Eleventy pages by
+ * a specified key.
  *
  * @param {EleventyCollectionItem[]} collection
- * @param {string} urlToFind
+ * @param {unique symbol} cacheKey
+ * @param {string} key
+ * @param {string} needle
  * @return {EleventyCollectionItem|undefined}
  */
-const internalFind = (collection, urlToFind) => {
-  /** @type {{[url: string]: EleventyCollectionItem}} */
+const internalFind = (collection, cacheKey, key, needle) => {
   let cache = collection[cacheKey];
   if (cache === undefined) {
     cache = {};
     for (const entry of collection) {
-      if (entry.url) {
-        cache[entry.url] = entry;
+      if (entry[key]) {
+        cache[entry[key]] = entry;
       }
     }
     collection[cacheKey] = cache;
   }
 
-  if (urlToFind in cache) {
-    return cache[urlToFind];
+  if (needle in cache) {
+    return cache[needle];
   }
 
   // Otherwise, be slow, since we think this is probably pretty rare.
-  const result = collection.find(item => item.url === urlToFind);
+  const result = collection.find(item => item[key] === needle);
   if (result) {
     return result;
-  }
-
-  /** @type {Set<string>} */
-  let notifiedCache = collection[alreadyNotifiedKey];
-  if (notifiedCache === undefined) {
-    notifiedCache = new Set();
-    collection[alreadyNotifiedKey] = notifiedCache;
-  }
-
-  // If this is the first time we've looked up this URL, notify the user.
-  if (!notifiedCache.has(urlToFind)) {
-    // console.warn('Could not find URL:', urlToFind);
-    notifiedCache.add(urlToFind);
   }
 
   return undefined;
@@ -74,7 +65,7 @@ const findByUrl = (collection, url, locale = '') => {
   }
 
   const urlToFind = path.join(locale, url);
-  return internalFind(collection, urlToFind);
+  return internalFind(collection, urlCacheKey, 'url', urlToFind);
 };
 
 const findByProjectKey = (collection, projectKey, locale) => {
@@ -82,7 +73,48 @@ const findByProjectKey = (collection, projectKey, locale) => {
     return undefined;
   }
   const urlToFind = path.join('/', locale, '/docs/', projectKey, '/');
-  return internalFind(collection, urlToFind);
+  return internalFind(collection, urlCacheKey, 'url', urlToFind);
 };
 
-module.exports = {findByUrl, findByProjectKey};
+const findByFilePath = (collection, filePath, locale = '') => {
+  if (path.extname(filePath)) {
+    throw new Error(`Paths should not end in file extensions: ${filePath}`);
+  }
+
+  ('/en/_partials/extensions/mv2-legacy-page');
+
+  // Ensure urls are always absolute. This is because eleventy's collection
+  // urls are always absolute so if we try to match against a relative url
+  // we'll always miss.
+  if (!path.isAbsolute(filePath)) {
+    filePath = path.join('/', filePath);
+  }
+
+  // Make sure language paths are absolute (ja becomes /ja).
+  // These don't need to end in a trailing slash because they'll be prepended
+  // to the url which already starts with a trailing slash.
+  // e.g. /ja/docs/extensions/
+  if (locale && !path.isAbsolute(locale)) {
+    locale = path.join('/', locale);
+  }
+
+  let filePathToFind = path.join(locale, filePath);
+  const result = internalFind(
+    collection,
+    pathCacheKey,
+    'filePathStem',
+    filePathToFind
+  );
+
+  // If something has been found or nothing has been found while
+  // not specifying a locale, end here. If a locale has been defined
+  // we want to try searching again with the default locale
+  if (result || !locale) {
+    return result;
+  }
+
+  filePathToFind = path.join('/', defaultLocale, filePath);
+  return internalFind(collection, pathCacheKey, 'filePathStem', filePathToFind);
+};
+
+module.exports = {findByUrl, findByProjectKey, findByFilePath};
