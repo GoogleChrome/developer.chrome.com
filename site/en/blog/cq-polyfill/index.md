@@ -97,7 +97,7 @@ Then rewrite the previous code as:
 
 To make container queries even more useful, you can use container-based unit values as well. The following table shows the possible container unit values and how they correspond to a container’s size:
 
-<table><thead><tr><th>unit</th><th>relative to</th></tr></thead><tbody><tr><td><code>qw</code></td><td>1% of a query container’s width</td></tr><tr><td><code>qh</code></td><td>1% of a query container’s height</td></tr><tr><td><code>qi</code></td><td>1% of a query container’s inline size</td></tr><tr><td><code>qb</code></td><td>1% of a query container’s block size</td></tr><tr><td><code>qmin</code></td><td>The smaller value of qi or qb</td></tr><tr><td><code>qmax</code></td><td>The larger value of qi or qb</td></tr></tbody></table>
+<table><thead><tr><th>unit</th><th>relative to</th></tr></thead><tbody><tr><td><code>cqw</code></td><td>1% of a query container’s width</td></tr><tr><td><code>cqh</code></td><td>1% of a query container’s height</td></tr><tr><td><code>cqi</code></td><td>1% of a query container’s inline size</td></tr><tr><td><code>cqb</code></td><td>1% of a query container’s block size</td></tr><tr><td><code>cqmin</code></td><td>The smaller value of cqi or cqb</td></tr><tr><td><code>cqmax</code></td><td>The larger value of cqi or cqb</td></tr></tbody></table>
 
 One example for how you would use container-based units is responsive typography. The viewport-based units (such as `vh`, `vb`, `vw`, and `vi`) can be used to size any element on the screen. 
 
