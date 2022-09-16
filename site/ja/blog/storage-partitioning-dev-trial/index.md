@@ -23,7 +23,7 @@ tags:
 
 1. Chrome ベータ版 106 以降を使用していることを確認します。
 2. `chrome://flags/#third-party-storage-partitioning` に移動します。
-3. Enable the "Experimental Third-party Storage Partitioning" flag.
+3. 「Experimental Third-party Storage Partitioning」フラグを有効にします。
 
 初期のテストに参加し、安定版のリリース前に Chrome チームが予期しない動作を特定して修正できるようにて[バグを報告](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)してください。
 
@@ -49,12 +49,12 @@ tags:
 次の API は活発に開発されており、安定版に出荷される前にパーティション化されます。
 
 - Blob URL
-- Clear-Site-Data header
+- Clear-Site-Data ヘッダー
 
 ## この機能がデフォルトでリリースされる時期
 
 安定性と互換性に応じて、2023 年初めに機能のリリースを開始したいと考えています。サードパーティのストレージ パーティションを今すぐテストし、バグを報告していただくと、Chrome はエコシステムからフィードバックを基に開発者やサイト所有者が必要なサポートを受けられるようにすることができます。
 
-## Reporting bugs
+## バグの報告
 
 フィードバックを提供する場合は、公開されている URL へのリンクまたは縮小されたテストケースのいずれかを使用して[新しいイシュー](https://bugs.chromium.org/p/chromium/issues/entry?labels=Proj-StoragePartitioningTrial&components=Blink%3EStorage)を提出してください。
