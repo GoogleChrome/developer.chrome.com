@@ -7,6 +7,7 @@ subtitle: >
 authors:
   - thomassteiner
 date: 2022-08-01
+updated: 2022-09-16
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/qF12zl6xHIIrHw3S5WfW.jpg
 alt: The clip of a clipboard.
 tags:
@@ -92,7 +93,11 @@ try {
 Web custom formats like `web image/jpeg` are not something that typical platform-specific
 applications understand (since they would expect `image/jpeg`). Over time, concerned apps are
 expected to add support for such formats as an opt-in if their developers deem support for web
-custom formats to be relevant for their users.
+custom formats to be relevant for their users. On the operating system clipboard, the various
+formats are present in multiple formats ready for consumption, as can be seen in the
+screenshot below, in the concrete case for macOS.
+
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/iYfa9lvLpLQU086GhurF.png", alt="Clipboard expector on macOS showing a custom format map listing two web custom formats.", width="800", height="357" %}
 
 ## Demo
 
