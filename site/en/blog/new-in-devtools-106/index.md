@@ -100,7 +100,7 @@ To view all frames, enable **Show ignore-listed frames**. Previously, DevTools d
 Chromium bug: [1352488](https://crbug.com/1352488)
 
 
-## Hiding ignore-listed sources in the Sources panel {: #hide-source }
+## Hiding ignore-listed sources in the Sources panel {: #ignore-nav }
 
 Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code.
 
