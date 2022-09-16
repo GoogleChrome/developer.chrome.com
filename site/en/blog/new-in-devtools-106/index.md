@@ -111,7 +111,7 @@ Open this [demo](https://ng-devtools.netlify.app/). In the **Sources** panel. Th
 Chromium bug: [1352488](https://crbug.com/1352488)
 
 
-## Hiding ignore-listed files in the Command Menu {: #ignore-nav }
+## Hiding ignore-listed files in the Command Menu {: #ignore-search }
 
 With the **hide ignore-listed sources** setting, you can find your file quicker with the [Command Menu](/docs/devtools/command-menu/). Previously, searching files in the **Command Menu** returns third-party files that might not be relevant to you.
 
