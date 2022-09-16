@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: 共有ストレージを使用する
-subhead: |2
-
-  Examine use cases and code samples for Shared Storage.
-description: |2
-
-  Examine use cases and code samples for Shared Storage.
+subhead: 共有ストレージのユースケースとコード サンプルを検証します。
+description: 共有ストレージのユースケースとコード サンプルを検証します。
 date: '2022-06-28'
 updated: '2022-07-14'
 authors:
