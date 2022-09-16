@@ -46,7 +46,6 @@ async increment() {
     …
 }
 ```
-
 Previously, the stack trace only showed the timeout operation. It did not show the “root cause” of the operation. 
 
 With the latest changes, DevTools now shows the operation originates from the `onClick` event in the button component, then the `increment` function, followed by the timeout operation.
