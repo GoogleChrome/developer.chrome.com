@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Use Shared Storage
+title: 共有ストレージを使用する
 subhead: |2
 
   Examine use cases and code samples for Shared Storage.
@@ -20,7 +20,7 @@ Chrome 104 では、以下の機能をテストできます。
 
 - [**URL の選択**](#url-selection): ワークレットスクリプトを実行して、保存されたデータに基づいて、提供されたリストから URL を選択し、それを Fenced Frame にレンダリングできます。これには、フリークエンシーキャップに達したときに新しい広告を選択するなど、多数の潜在的な使用方法があります。
 - [**A/B テスト**](#ab-testing): ユーザーを実験グループに割り当てたら、そのグループを共有ストレージに保存して、サイト間でアクセスできるようにすることができます。
-- [**Creative rotation**](#creative-rotation): You can store the creative rotation mode, and other metadata, to rotate the creatives across different sites.
+- [**クリエイティブ ローテーション**](#creative-rotation): クリエイティブ ローテーション モードとその他のメタデータを保存して、異なるサイト間でクリエイティブをローテーションできます。
 - [**決済プロバイダーの既知の顧客**](#known-customer): ユーザーがサイトに登録したかどうかを共有ストレージに保存し、その保存されたステータスに基づいて別の要素をレンダリングできます。
 
 以下のユースケースは、Chrome ベータ版ではテストできませんが、今後サポートされる予定です。
@@ -29,13 +29,13 @@ Chrome 104 では、以下の機能をテストできます。
 
 これらは、共有ストレージのユースケースの一部にすぎません。[フィードバックを受け取り](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)、新しいユースケースが見つかるたびに、例を追加し続けます。
 
-## Try the Shared Storage API
+## 共有ストレージ API を試す
 
 `chrome://flags/#privacy-sandbox-ads-apis` で**プライバシーサンドボックス広告 API 実験**フラグを有効にすると、Fenced Frames を使用した共有ストレージ API を Chrome 104（バージョン 104.0.5086.0 以降）でテストできます。
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="これらの API を使用するには、プライバシー サンドボックス広告 API の実験を有効に設定してください", width="744", height="124" %}
 
-### Use the demo
+### デモを使用する
 
 デモは [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo) でアクセスできます。また、コードは [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo) で入手できます。
 
@@ -43,7 +43,7 @@ Chrome 104 では、以下の機能をテストできます。
 
 デモには、フリークエンシーキャップ、クリエイティブ ローテーション、既知の顧客、および A/B テストのユース ケースが含まれています。
 
-## Experiment with code samples
+## コードサンプルを試す
 
 {% Aside %}
 
@@ -51,7 +51,7 @@ Chrome 104 では、以下の機能をテストできます。
 
 {% endAside %}
 
-### URL selection {: #url-selection }
+### URL 選択 {: #url-selection }
 
 不透明な URL を選択して作成するには、ワークレットモジュールを登録して、共有ストレージデータを読み取ります。ワークレットクラスは、最大 8 つの URL のリストを受け取り、選択した URL のインデックスを返します。
 
@@ -116,7 +116,7 @@ class SelectURLOperation {
 register('frequency-cap', SelectURLOperation);
 ```
 
-### A/B testing {: #ab-testing }
+### A/B テスト {: #ab-testing }
 
 実験が望ましい効果をもたらすかどうかを確認するには、複数のサイトで A/B テストを実行できます。広告主は、ユーザーが割り当てられているグループに基づいて、異なる広告を表示することを選択できます。グループの割り当ては共有ストレージに保存されます。
 
@@ -188,9 +188,9 @@ class SelectURLOperation {
 register('ab-testing', SelectURLOperation);
 ```
 
-### Creative rotation {: #creative-rotation }
+### クリエイティブ ローテーション {: #creative-rotation }
 
-An advertiser may want to apply different strategies to an ad campaign, and rotate the creatives to increase effectiveness of the ads. Shared storage can be used to run different rotation strategies, such as sequential rotation and evenly-distributed rotation, across different sites.
+広告主は、広告キャンペーンにさまざまな戦略を適用し、クリエイティブをローテーションして広告の効果を高めたい場合があります。共有ストレージを使用して、異なるサイト間で順次ローテーションや均等分散ローテーションなどのさまざまなローテーション戦略を実行できます。
 
 この例では以下が使用されています。
 
@@ -303,7 +303,7 @@ class SelectURLOperation {
 register('creative-rotation', SelectURLOperation);
 ```
 
-### Known customer {: #known-customer }
+### 既知の顧客 {: #known-customer }
 
 ユーザーが別のサイトで表示されたかどうかに基づいて、別の要素をレンダリングすることができます。たとえば、決済プロバイダーは、ユーザーが決済プロバイダーのサイトに登録したかどうかに基づいて、［登録］または［今すぐ購入］ボタンをレンダリングする必要がある場合があります。共有ストレージを使用して、ユーザーのステータスを設定できます。
 
@@ -409,16 +409,16 @@ class SendReachReportOperation {
 registerOperation("send-reach-report", SendReachReportOperation);
 ```
 
-### User consent status {: #user-content-status }
+### ユーザーの同意ステータス {: #user-content-status }
 
-Adtech companies often have cross-site consent statuses that they need to keep track of. For example, an adtech company may want to store if a user consents to an adtech's terms or service or policies related to regulations, such as GDPR.
+アドテック企業は、多くの場合、追跡する必要があるクロスサイトの同意ステータスを持っています。たとえば、アドテック企業は、GDPR などの規制に関連するアドテックの条件やサービス、またはポリシーにユーザーが同意したかどうかを保存する必要がある場合があります。
 
 このユースケースでは、主に以下の 2 つの理由から共有ストレージは推奨されません。
 
 1. ユーザーがプライバシーサンドボックス API の使用をオプトアウトすると、組織は共有ストレージをまったく使用できなくなるため。
 2. 現在の出力ゲートでは、オリジントライアルの後で k-匿名性または追加のノイズが必要になるため。これは、同意ステータスがすべてのケースで 100% 正確に表されない可能性がゼロではないことを意味します。
 
-## Engage and share feedback
+## エンゲージメントとフィードバックの共有
 
 共有ストレージの提案は現在も検討中であるため、今後変更される可能性があります。 この API を試して、フィードバックがある場合は、ぜひお聞かせください。
 
