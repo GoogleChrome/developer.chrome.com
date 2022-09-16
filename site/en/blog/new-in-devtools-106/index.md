@@ -36,7 +36,7 @@ When some operations are scheduled to happen asynchronously, the stack traces in
 
 For example, open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. In our source code, the operation includes an async `timeout` operation.
 
-```
+```js
 // application.component.ts
 
 async increment() {
@@ -91,7 +91,7 @@ Chromium bug: [1352488](https://crbug.com/1352488)
 
 Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code.
 
-Open this [demo](https://ng-devtools.netlify.app/). In the **Sources** panel. The ** `node_modules` and `webpack` are the third-party scripts. Click on the 3-dot menu and select **hide ignore-listed sources** to hide them from the pane.
+Open this [demo](https://ng-devtools.netlify.app/). In the **Sources** panel. The `node_modules` and `webpack` are the third-party scripts. Click on the 3-dot menu and select **hide ignore-listed sources** to hide them from the pane.
 
 ## Hiding ignore-listed files in the Command Menu {: #ignore-nav }
 
@@ -140,7 +140,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 ## Miscellaneous highlights {: #misc }
 
 - Previously,  [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time.   ([1351416](https://crbug.com/1351416))
-- The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096))
+- The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096))
 - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019))
 - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390))
 
