@@ -6,7 +6,7 @@ authors:
 date: 2022-09-16
 updated: 2022-09-16
 description: "Better support for modern web debugging, LCP timings breakdown in the Performance Insights, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XCDqHkWVeQ03WpwmgQq5.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/E4CsREgOkGDdOfu6qCCs.jpg'
 alt: ''
 tags:
   - new-in-devtools
