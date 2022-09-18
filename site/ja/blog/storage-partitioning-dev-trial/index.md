@@ -6,7 +6,7 @@ description: プライバシーを改善するために、Chrome は今後スト
 authors:
   - miketaylr
   - mihajlija
-date: '2022-09-01'
+date: 2022-09-01
 tags:
   - privacy
 ---

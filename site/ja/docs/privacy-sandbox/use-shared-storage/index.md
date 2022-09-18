@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: 共有ストレージを使用する
 subhead: 共有ストレージのユースケースとコード サンプルを検証します。
 description: 共有ストレージのユースケースとコード サンプルを検証します。
-date: '2022-06-28'
-updated: '2022-07-14'
+date: 2022-06-28
+updated: 2022-07-14
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -383,7 +383,7 @@ await window.sharedStorage.runOperation("send-reach-report", {
 class SendReachReportOperation {
   async function run(data) {
     const report_sent_for_campaign = "report-sent-" + data["campaign-id"];
-    
+
     // このキャンペーンで以前にレポートが送信されていない
 	 // ユーザーのリーチのみを計算します。
     // 現在のサイト以外のサイトで、このキャンペーンで以前に
@@ -398,7 +398,7 @@ class SendReachReportOperation {
       bucket: data["campaign-id"];
       value: 128,  // 事前決定済みの固定値。「Private Aggregation API の Explainer: 値のスケーリング」をご覧ください。
       });
-      
+
     await this.sharedStorage.set(report_sent_for_campaign, "yes");
   }
 }
