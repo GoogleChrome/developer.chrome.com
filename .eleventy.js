@@ -1,5 +1,4 @@
 const yaml = require('js-yaml');
-const {addCollectionByDirectory} = require('./site/_utils/addCollectionByDirectory');
 
 // Filters
 const {
@@ -54,6 +53,7 @@ const locales = require('./site/_data/site.json').locales;
 const algoliaCollection = require('./site/_collections/algolia');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
+const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
 
 // Create a helpful environment flags
@@ -90,8 +90,8 @@ module.exports = eleventyConfig => {
 
   // Add collections
   locales.forEach(locale => {
-    addCollectionByDirectory(eleventyConfig, locale, 'blog');
-    addCollectionByDirectory(eleventyConfig, locale, 'articles');
+    directoryCollection.add(eleventyConfig, locale, 'blog');
+    directoryCollection.add(eleventyConfig, locale, 'articles');
   });
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);

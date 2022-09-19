@@ -22,11 +22,11 @@
  */
 
 const path = require('path');
-const {filterOutDrafts} = require('./drafts');
+const {filterOutDrafts} = require('../_utils/drafts');
 
 const defaultLocale = 'en';
 
-function addCollectionByDirectory(config, locale, dir) {
+function add(config, locale, dir) {
   config.addCollection(`${dir}-${locale}`, collections => {
     const baseCollection = collections
       .getFilteredByGlob(
@@ -85,4 +85,4 @@ function addCollectionByDirectory(config, locale, dir) {
   });
 }
 
-module.exports = {addCollectionByDirectory};
+module.exports = {add};
