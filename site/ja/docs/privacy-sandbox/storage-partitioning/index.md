@@ -34,13 +34,13 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 
 1. Chrome Canary バージョン 105 以降を使用します。
 2. `chrome://flags/#third-party-storage-partitioning` にアクセスします。
-3. Enable the "Experimental Third-party Storage Partitioning" flag.
+3. 「Experimental Third-party Storage Partitioning」フラグを有効にします。
 
 初期のテストに参加して、安定版のリリース前に Chrome チームが予期しない動作を特定して修正できるように[バグを報告](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)してください。Blob URL と Clear-Site-Data ヘッダー API は開発中であり、まだテストには使用できません。
 
-## Updated APIs
+## 更新された API
 
-### Storage APIs
+### ストレージ API
 
 [クォータ システム](https://web.dev/storage-for-the-web/#how-much): クォータ システムは、ストレージに割り当てられるディスク容量を決定するために使用されます。各パーティションはクォータ システムによって個別のバケットとして管理され、許可される容量と、クリアされる時期が決定されます。: `navigator.storage.estimate()` はパーティションの情報を返します。`window.webkitStorageInfo` や `navigator.webkitTemporaryStorage` などの Chrome 専用 API は使用廃止になります。: [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) と [キャッシュ ストレージ](https://web.dev/cache-api-quick-guide)は、新しいパーティション クォータ システムを使用します。
 
@@ -54,7 +54,7 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 
 [Blob URL](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) ストア : [blob](https://developer.mozilla.org/docs/Web/API/Blob) は、処理される生データを含むオブジェクトであり、リソースにアクセスするために blob URL を生成できます。トップレベル コンテキストで任意の Blob URL に移動するユースケースをサポートするために（[ディスカッション](https://github.com/w3c/FileAPI/issues/153)）、Blob URL ストアはトップレベル サイトではなくエージェント クラスターによってパーティションされます。この機能はまだテストできません。また、パーティションの仕組みが今後変更される可能性があります。
 
-### Communication APIs
+### 通信 API
 
 ストレージ API とともに、1 つのコンテキストがオリジンの境界を越えて通信できるようにする通信 API もパーティションされます。この変更は主に、ブロードキャストまたは同一オリジン ランデブーを介して他のコンテキストを検出できるようにする API に影響します。
 
@@ -70,13 +70,13 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 
 [Service Worker API](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)は、バックグラウンドでタスクを実行するためのインターフェースを提供します。サイトがイベントに応答するための新しいワーカー コンテキストを作成する永続的な登録を作成すると、そのワーカーは任意の同一オリジン コンテキストと通信できるようになります。また、ServiceWorker API はナビゲーション リクエストのタイミングを変更できるため、[履歴スニッフィング](https://www.ndss-symposium.org/wp-content/uploads/ndss2021_1C-2_23104_paper.pdf)などのクロスサイト情報漏えいの可能性につながる可能性があります。したがって、サードパーティのコンテキストから登録される Service Worker はパーティションされます。
 
-### Extension APIs
+### 拡張 API
 
 [拡張機能](/docs/extensions/mv3/)は、ユーザーのブラウジング エクスペリエンスをカスタマイズするプログラムです。Manifest V2 では、拡張機能は拡張機能のオリジンを持つ[バックグラウンド ページ](/docs/extensions/mv2/background_pages/)を作成できますが、ウェブコンテンツのオリジンを持つ iframe を埋め込むことができます。ストレージをパーティションすると一部のユース ケースが無効になるため、緩和策が提供される予定です。拡張機能に iframe オリジンの [host_permissions](/docs/extensions/mv2/runtime_host_permissions/) がある場合、iframe は拡張機能ページではなくトップレベル フレームとして扱われます。
 
 Manifest V2 は[使用廃止](/docs/extensions/mv3/mv2-sunset/)となっており、削除されることに注意してください。[Manifest V3 に移行](/docs/extensions/mv3/intro/mv3-migration/)することをお勧めします。
 
-## Engage and share feedback
+## エンゲージメントとフィードバックの共有
 
 共有ストレージの提案は現在も検討中であるため、今後変更される可能性があります。 この API を試して、フィードバックがある場合は、ぜひお聞かせください。
 
