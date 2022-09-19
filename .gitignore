@@ -12,6 +12,7 @@ Thumbs.db
 .lighthouseci
 .idea*
 .python-version
+_temp
 
 # Code coverage generated files
 .nyc_output
