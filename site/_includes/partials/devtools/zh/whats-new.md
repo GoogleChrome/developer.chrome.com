@@ -1,6 +1,21 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/zh/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/zh/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/zh/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/zh/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/zh/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/zh/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/zh/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/zh/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-106/#misc) -->
+
+
 ### Chrome 105 {: #chrome105 }
 
 * [录制面板中的分步重放](/zh/blog/new-in-devtools-105/#recorder)

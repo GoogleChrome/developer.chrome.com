@@ -2,6 +2,21 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/ko/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/ko/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/ko/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/ko/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/ko/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/ko/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/ko/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/ko/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-106/#misc) -->
+
+
 ### Chrome 105 {: #chrome105 }
 
 * [Recorder의 단계별 재생 기능](/ko/blog/new-in-devtools-105/#recorder)
