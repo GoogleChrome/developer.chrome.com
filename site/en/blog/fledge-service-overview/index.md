@@ -122,9 +122,9 @@ perform their tasks.
   (Android devices and the Chrome browser) send encrypted requests to the
   FLEDGE service.
 * A **[cloud platform](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#cloud-platform)**,
-  which has the necessary security features, hosts FLEDGE services in virtual
-  machines backed by a trusted execution environment (TEE), which prevents
-  services from sharing information with third-parties.
+  hosts FLEDGE services in virtual machines backed by a trusted execution
+  environment (TEE), which prevents FLEDGE services from sharing information
+  with third-parties.
 * **[Key management systems](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#key-management-systems)**
   include services and databases that generate and distribute public and
   private keys to ensure end-to-end encryption of client-service communication.
