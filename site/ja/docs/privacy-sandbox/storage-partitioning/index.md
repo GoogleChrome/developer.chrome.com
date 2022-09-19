@@ -2,11 +2,7 @@
 layout: layouts/blog-post.njk
 title: ストレージ パーティション
 subhead: 特定の種類のサイドチャネル クロスサイト トラッキングを防止するために、Chrome はサードパーティのコンテキストでストレージと通信の API をパーティション化します。
-description: |2
-
-  Without storage partitioning, a site can join data across different sites to track the
-  user across the web. To prevent certain types of side-channel cross-site tracking, Chrome is
-  partitioning storage and communications APIs in third-party contexts.
+description: ストレージ パーティションがない場合、サイトは異なるサイト間でデータを結合してウェブ全体で追跡できます。特定の種類のサイドチャネル クロスサイト トラッキングを防止するために、Chrome はサードパーティのコンテキストでストレージと通信の API をパーティション化しています。
 authors:
   - kevinkiklee
 date: '2022-08-24'
@@ -18,7 +14,7 @@ tags:
 
 特定の種類のサイドチャネル クロスサイト トラッキングを防止するために、Chrome はストレージと通信の API をサードパーティのコンテキストでパーティション化しています。ストレージ パーティションがない場合、サイトは異なるサイト間でデータを結合して、ウェブ全体でユーザーを追跡できます。また、埋め込みサイトは、[タイミング攻撃](https://dl.acm.org/doi/10.1145/352600.352606)、 [XS-Leaks](https://github.com/xsleaks/xsleaks)、[COSI](https://arxiv.org/pdf/1908.02204.pdf) などのサイドチャネル手法を使用して、トップレベル サイトのユーザーに関する特定の状態を推測できます。
 
-Historically, storage has been keyed only by origin. This means that if an iframe from `example.com` is embedded on `a.com` and `b.com`, it could learn about your browsing habits for those two sites by storing and successfully retrieving an ID from storage. With third-party storage partitioning enabled, storage for `example.com` exists in two different partitions, one for `a.com` and the other for `b.com`. Partitioning generally means that data stored by storage APIs like local storage and IndexedDB by an iframe will no longer be accessible to all contexts in the same origin. Instead, the data will only be available to contexts with the same origin and same top-level site.
+これまで、ストレージはオリジンによってのみキー化されてきました。これは、`example.com` の iframe が `a.com` と `b.com` に埋め込まれている場合、それが ID を保存してストレージから正しく取得することで、これら 2 つのトップレベル サイトのブラウジング習慣を学習できる可能性があることを意味します。サードパーティのストレージ パーティションを有効にすると、`example.com` のストレージは、`a.com` 用と `b.com` 用の 2 つの異なるパーティションに存在することになります。パーティション化すれば通常は、ローカルストレージや IndexedDB などのストレージ API によって保存されるデータは、同一オリジンのあらゆるコンテキストにもアクセスできなくなり、データは同一オリジンと同一トップレベルサイトのコンテキストにのみアクセス可能となります。
 
 ### パーティション ストレージ有効前
 
@@ -40,7 +36,7 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 2. `chrome://flags/#third-party-storage-partitioning` にアクセスします。
 3. Enable the "Experimental Third-party Storage Partitioning" flag.
 
-Participate in early testing and [report bugs](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage) to help the Chrome team identify and fix any unexpected behavior before the stable launch. Blob URL and Clear-Site-Data header APIs are under active development and are not available for testing yet.
+初期のテストに参加して、安定版のリリース前に Chrome チームが予期しない動作を特定して修正できるように[バグを報告](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)してください。Blob URL と Clear-Site-Data ヘッダー API は開発中であり、まだテストには使用できません。
 
 ## Updated APIs
 
