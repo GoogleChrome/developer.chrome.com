@@ -26,8 +26,17 @@ overview:
   zh: 这些检查能够突出可以改进您的 Web 应用无障碍功能的机会。只有一部分无障碍功能问题可以被自动检测到，所以我们也鼓励您进行人工测试。
 
 topics:
-  a11y_overview:
+  article:
     en: Accessibility Overview
+
+  article_description:
+    en: Accessible to all
+    es: Accesible para todos
+    ja: すべてのユーザーをアクセス可能に
+    ko: 누구나 이용 가능
+    pt: Acessível a todos
+    ru: Доступность для всех
+    zh: 让所有人都能访问
 
   audit_scoring:
     en: Audit scoring
@@ -37,6 +46,9 @@ topics:
     pt: Pontuação de auditoria
     ru: Оценка результатов аудита
     zh: 审核得分
+
+  audit_scoring_description:
+    en: Lighthouse accessibility scoring
 
   additional_items_to_manually_check:
     en: Additional items to manually check

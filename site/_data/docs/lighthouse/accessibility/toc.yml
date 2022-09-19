@@ -1,3 +1,9 @@
+- url: https://web.dev/accessible/
+  title: i18n.docs.lighthouse-accessibility.topics.article
+  description: i18n.docs.lighthouse-accessibility.topics.article_description
+- url: /docs/lighthouse/accessibility/scoring/
+  title: i18n.docs.lighthouse-accessibility.topics.audit_scoring
+  description: i18n.docs.lighthouse-accessibility.topics.audit_scoring_description
 - title: i18n.docs.lighthouse-accessibility.topics.additional_items_to_manually_check
   sections:
     - url: /docs/lighthouse/accessibility/custom-control-roles/
