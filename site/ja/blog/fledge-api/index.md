@@ -229,11 +229,11 @@ Chrome DevTools の [アプリケーション] パネルから、FLEDGE イン�
 
 FLEDGE が有効になっているブラウザで [FLEDGE のデモショッピングサイト](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)にアクセスすると、DevTools に `join` イベントに関する情報が表示されます。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="Chrome Canary の DevTools [アプリケーション] パネル。FLEDGE インタレストグループ参加イベントに関する情報が表示されています。", width="800", height="402" % }
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="Chrome Canary の DevTools [アプリケーション] パネル。FLEDGE インタレストグループ参加イベントに関する情報が表示されています。", width="800", height="402" %}
 
 これで、FLEDGE が有効になっているブラウザで[FLEDGE のデモサイト運営者サイト](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)にアクセスすると、DevTools は `bid` イベントと `win` イベントに関する情報を表示します。
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="Chrome Canary の DevTools [アプリケーション] パネル。FLEDGE オークションの入札および落札イベントに関する情報が表示されます。", width="800", height="482" % }
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wMvNrY9GrcD2p3Q6wTsw.png", alt="Chrome Canary の DevTools [アプリケーション] パネル。FLEDGE オークションの入札および落札イベントに関する情報が表示されます。", width="800", height="482" %}
 
 {% Aside %}
 
