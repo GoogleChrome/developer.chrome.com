@@ -4,7 +4,7 @@ title: FLEDGE API 開発者ガイド
 authors:
   - samdutton
   - kevinkiklee
-description: "\nFLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. \n"
+description: FLEDGE は、リマーケティングおよびカスタム オーディエンスのユースケースに対応するためのプライバシーサンドボックスの提案であり、サードパーティがサイトを跨いでユーザーのブラウジング行動を追跡できないように設計されています。
 date: '2022-01-27'
 updated: '2022-08-24'
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
@@ -28,7 +28,7 @@ tags:
 
 ## FLEDGEとは {: #what}
 
-FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve [remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use cases, designed so that it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads for websites the user has previously visited.
+FLEDGE は、[リマーケティング](/docs/privacy-sandbox/fledge#remarketing)およびカスタム オーディエンスのユースケースに対応するための[プライバシーサンドボックス](/docs/privacy-sandbox/overview)の提案であり、サードパーティがサイトを跨いでユーザーのブラウジング行動を追跡できないように設計されています。この API は、ブラウザによるオンデバイス オークションを有効にし、ユーザーが以前にアクセスしたウェブサイトに関連する広告を選択します。
 
 FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提案の中で Chromium に実装された最初の実験です。
 
@@ -38,7 +38,7 @@ FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提
 
 <br>
 
-## How can I try FLEDGE? {: #try-fledge}
+## FLEDGE を試すには {: #try-fledge}
 
 ### FLEDGE デモ {: #demo}
 
@@ -925,7 +925,7 @@ FLEDGE はまだ、ユーザーがどの広告を見たかをウェブサイト�
 
 {% endDetailsSummary %}
 
-Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling the top-level setting in chrome://settings/privacySandbox.  During initial testing, people will be able to use this high-level Privacy Sandbox setting to opt out of FLEDGE. Chrome plans to allow users to see and manage the list of interest groups that they have been added to across the web sites they have visited.  As with the Privacy Sandbox technologies themselves, user settings may evolve with feedback from users, regulators and others.
+ユーザーは、chrome://settings/privacySandbox の最上位の設定を有効または無効にすることで、Chrome のプライバシーサンドボックス トライアルへの参加を調整できます。初期のテストでは、ユーザーはこの高レベルのプライバシーサンドボックス設定を通じて FLEDGE をオプトアウトできます。Chrome では、ユーザーがアクセスしたウェブサイト全てで、自分が追加されたインタレストグループのリストを表示および管理できるようにする予定です。プライバシーサンドボックスのテクノロジー自体と同様に、ユーザー設定は、ユーザー、規制当局などからのフィードバックによって進化する可能性があります。
 
 [テストとフィードバックに基づいて](/docs/privacy-sandbox/cds21-update/#collaborate)、FLEDGE の提案が進むにつれて、Chrome で利用可能な設定を更新し続けます。将来的には、FLEDGE と関連データを管理するためのより詳細な設定を提供する予定です。
 
