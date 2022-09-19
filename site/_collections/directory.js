@@ -23,6 +23,10 @@
 
 const path = require('path');
 const {filterOutDrafts} = require('../_utils/drafts');
+const {
+  sortCollectionByDate,
+  sortCollectionByFileSlug,
+} = require('../_utils/sort');
 
 const defaultLocale = 'en';
 
@@ -33,7 +37,7 @@ function add(config, locale, dir) {
         path.join('.', 'site', defaultLocale, dir, '*', '*.md')
       )
       .filter(filterOutDrafts)
-      .reverse();
+      .sort(sortCollectionByFileSlug);
 
     // Test case: if we're running inside of Percy then don't care
     // about translations. Just show the first six posts.
@@ -50,7 +54,7 @@ function add(config, locale, dir) {
     const localeCollection = collections
       .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
       .filter(filterOutDrafts)
-      .reverse();
+      .sort(sortCollectionByFileSlug);
 
     // If there aren't any translations for that directory there is no
     // sense in trying to merge them, just return the English articles then
@@ -59,7 +63,9 @@ function add(config, locale, dir) {
     }
 
     // Otherwise walk through the English collection while looking
-    // for matches in the locale collection and if it's a match, replace
+    // for matches in the locale collection and if it's a match, replace.
+    // Beware: this works as long as there is no page that only exists in
+    // a non-english language and fileSlugs match across collections
     let localeIndex = 0;
     let collection = [];
     for (let index = 0; index < baseCollection.length; index++) {
@@ -80,6 +86,10 @@ function add(config, locale, dir) {
         break;
       }
     }
+
+    // Bring the collection back into 11ty's natural order,
+    // which is by date, newest first
+    collection.sort(sortCollectionByDate);
 
     return collection;
   });
