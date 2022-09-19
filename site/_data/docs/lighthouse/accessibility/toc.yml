@@ -1,0 +1,12 @@
+- title: i18n.docs.lighthouse-accessibility.topics.additional_items_to_manually_check
+  sections:
+    - url: /docs/lighthouse/accessibility/custom-control-roles/
+    - url: /docs/lighthouse/accessibility/custom-controls-labels/
+    - url: /docs/lighthouse/accessibility/focus-traps/
+    - url: /docs/lighthouse/accessibility/focusable-controls/
+    - url: /docs/lighthouse/accessibility/interactive-element-affordance/
+    - url: /docs/lighthouse/accessibility/logical-tab-order/
+    - url: /docs/lighthouse/accessibility/managed-focus/
+    - url: /docs/lighthouse/accessibility/offscreen-content-hidden/
+    - url: /docs/lighthouse/accessibility/use-landmarks/
+    - url: /docs/lighthouse/accessibility/visual-order-follows-dom/
