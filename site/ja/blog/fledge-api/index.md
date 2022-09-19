@@ -5,8 +5,8 @@ authors:
   - samdutton
   - kevinkiklee
 description: FLEDGE は、リマーケティングおよびカスタム オーディエンスのユースケースに対応するためのプライバシーサンドボックスの提案であり、サードパーティがサイトを跨いでユーザーのブラウジング行動を追跡できないように設計されています。
-date: '2022-01-27'
-updated: '2022-08-24'
+date: 2022-01-27
+updated: 2022-08-24
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: 米国ニュージャージー州ミドルタウンの砂浜で、雛と一緒に鳴く千鳥の写真。
 tags:
