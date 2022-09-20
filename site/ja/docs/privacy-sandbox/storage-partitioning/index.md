@@ -68,7 +68,9 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 
 以下の通信 API については、サードパーティの iframe は同一オリジン コンテキストと通信できなくなります。
 
-[Broadcast Channel](/blog/broadcastchannel/) : Broadcast Channel API を使用すると、[ブラウジング コンテキスト](https://developer.mozilla.org/docs/Glossary/Browsing_context)（ウィンドウ、タブ、または iframe）と同じオリジンのワーカー間の通信が可能になります。: コンテキスト間の関係が明確に定義されているクロスサイト iframe の `postMessage()` は、変更が提案されていません。
+[Broadcast Channel](/blog/broadcastchannel/)
+:   Broadcast Channel API を使用すると、[ブラウジング コンテキスト](https://developer.mozilla.org/docs/Glossary/Browsing_context)（ウィンドウ、タブ、または iframe）と同じオリジンのワーカー間の通信が可能になります。
+:   コンテキスト間の関係が明確に定義されているクロスサイト iframe の `postMessage()` は、変更が提案されていません。
 
 [SharedWorker](https://developer.mozilla.org/docs/Web/API/SharedWorker) : SharedWorker API は、同一オリジンのブラウジング コンテキスト間でアクセスできるワーカーを提供します。
 
