@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { BaseElement } from './base-element'
-import { truncateString } from '../utils/truncate-string'
+import {BaseElement} from './base-element';
+import {truncateString} from '../utils/truncate-string';
 
 /* eslint-disable require-jsdoc */
 export class TruncateText extends BaseElement {
@@ -25,32 +25,34 @@ export class TruncateText extends BaseElement {
     };
   }
 
-  connectedCallback () {
+  connectedCallback() {
     super.connectedCallback();
 
     this.maxLength = this.maxLength ?? 200;
     this.fullText = this.innerText;
 
-    if (this.fullText.length === 0 || this.fullText.length <= this.maxLength) return;
+    if (this.fullText.length === 0 || this.fullText.length <= this.maxLength)
+      return;
 
     this.truncatedText = truncateString(this.fullText, this.maxLength);
 
-    this.innerHTML = this.truncatedText + " <button class='button button-text truncate-text-button'>see more</button>"
+    this.innerHTML =
+      this.truncatedText +
+      " <button class='button button-text truncate-text-button'>see more</button>";
 
     this.addClickHandler();
   }
 
-  addClickHandler()
-  {
+  addClickHandler() {
     const button = this.querySelector('.truncate-text-button');
 
     if (!button) return;
 
-    button.addEventListener('click', (e) => {
+    button.addEventListener('click', e => {
       e.preventDefault();
       // @ts-ignore
       this.innerHTML = this.fullText;
-    })
+    });
   }
 }
 
