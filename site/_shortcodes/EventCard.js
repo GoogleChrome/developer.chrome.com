@@ -79,9 +79,13 @@ function EventCard(event) {
 
                     <p class="event-card__sub-title gap-bottom-200">${session.title}</p>
 
-                    <div class="gap-bottom-200">
-                      <p><truncate-text maxLength="100">${session.description}</truncate-text></p>
-                    </div>
+                    ${session.description.length > 0 && (html`
+                      <div class="gap-bottom-200">
+                        <p>
+                          <truncate-text maxLength="100">${session.description}</truncate-text>
+                        </p>
+                      </div>
+                    `)}
 
                     ${session.topics.map((topic) => (topicHtml(topic)))}
 
@@ -106,18 +110,20 @@ function EventCard(event) {
                         ${title}
                     </h5>
 
-                    ${session.participants.length > 1 && (
-                      html`
-                          <p class="event-card__sub-title gap-bottom-200">Participants</p>
-                          <p class="gap-bottom-300">${session.participants.map(p => i18n(p.title)).join(', ')}</p>
-                        `
-                    )}
+                    ${session.participants.length > 1 && (html`
+                      <p class="event-card__sub-title gap-bottom-200">Participants</p>
+                      <p class="gap-bottom-300">${session.participants.map(p => i18n(p.title)).join(', ')}</p>
+                    `)}
 
                     <p class="event-card__sub-title gap-bottom-200">Participant details</p>
 
-                    <div class="gap-bottom-200">
-                        <p><truncate-text maxLength="200">${session.description}</truncate-text></p>
-                    </div>
+                    ${session.description.length > 0 && (html`
+                      <div class="gap-bottom-200">
+                        <p>
+                          <truncate-text maxLength="100">${session.description}</truncate-text>
+                        </p>
+                      </div>
+                    `)}
 
                     ${session.topics.map((topic) => (topicHtml(topic)))}
                 `);
