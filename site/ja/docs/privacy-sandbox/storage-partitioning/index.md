@@ -50,7 +50,8 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API)
 :   Web Storage API は、ブラウザがキーと値のペアを保存できる [Local Storage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) と [Session Storage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) の 2 つの仕組みを提供します。これらは現在クォータで管理されていませんが、引き続きパーティション化されます。
 
-[Origin Private File System](https://web.dev/file-system-access/#accessing-the-origin-private-file-system) : [File System Access API](https://web.dev/file-system-access)を使用すると、ユーザーがアクセスを許可した後、サイトはデバイス上のファイルやフォルダの変更を直接読み取ったり保存したりできます。Origin Private File System を使用すると、オリジンは、ユーザーが簡単にアクセスできるディスクに非公開コンテンツを保存でき、パーティション化されます。
+[Origin Private File System](https://web.dev/file-system-access/#accessing-the-origin-private-file-system)
+:   [File System Access API](https://web.dev/file-system-access)を使用すると、ユーザーがアクセスを許可した後、サイトはデバイス上のファイルやフォルダの変更を直接読み取ったり保存したりできます。Origin Private File System を使用すると、オリジンは、ユーザーが簡単にアクセスできるディスクに非公開コンテンツを保存でき、パーティション化されます。
 
 [Storage Bucket API](https://wicg.github.io/storage-buckets/explainer.html) : Storage Bucket API は、バケットと呼ばれる新しい概念を使用して、IndexedDB や localStorage などのさまざまなストレージ API を統合する [Storage Standard](https://storage.spec.whatwg.org/) 用に開発されています。バケットに格納されたデータとバケットに関連付けられたメタデータはパーティションされます。
 
