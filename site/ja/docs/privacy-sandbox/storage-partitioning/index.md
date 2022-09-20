@@ -53,7 +53,8 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 [Origin Private File System](https://web.dev/file-system-access/#accessing-the-origin-private-file-system)
 :   [File System Access API](https://web.dev/file-system-access)を使用すると、ユーザーがアクセスを許可した後、サイトはデバイス上のファイルやフォルダの変更を直接読み取ったり保存したりできます。Origin Private File System を使用すると、オリジンは、ユーザーが簡単にアクセスできるディスクに非公開コンテンツを保存でき、パーティション化されます。
 
-[Storage Bucket API](https://wicg.github.io/storage-buckets/explainer.html) : Storage Bucket API は、バケットと呼ばれる新しい概念を使用して、IndexedDB や localStorage などのさまざまなストレージ API を統合する [Storage Standard](https://storage.spec.whatwg.org/) 用に開発されています。バケットに格納されたデータとバケットに関連付けられたメタデータはパーティションされます。
+[Storage Bucket API](https://wicg.github.io/storage-buckets/explainer.html)
+:   Storage Bucket API は、バケットと呼ばれる新しい概念を使用して、IndexedDB や localStorage などのさまざまなストレージ API を統合する [Storage Standard](https://storage.spec.whatwg.org/) 用に開発されています。バケットに格納されたデータとバケットに関連付けられたメタデータはパーティションされます。
 
 [Clear-Site-Data ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Clear-Site-Data) : 応答に `Clear-Site-Data` ヘッダーを含めると、サーバーはユーザーのブラウザに保存されているデータを消去するように要求できます。キャッシュ、Cookie、および DOM ストレージをクリアできます。ヘッダーを使用すると、1 つのパーティション内のストレージのみがクリアされます。
 
