@@ -2,6 +2,18 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/ja/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/ja/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/ja/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/ja/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/ja/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ja/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-107/#misc)
+ -->
 
 <!-- ### Chrome 106 {: #chrome106 }
 

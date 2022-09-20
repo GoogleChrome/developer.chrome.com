@@ -2,6 +2,18 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+<!-- $content -->
+
+### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/blog/new-in-devtools-107/#misc)
+
 
 ### Chrome 106 {: #chrome106 }
 

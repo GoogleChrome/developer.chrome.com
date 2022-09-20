@@ -2,6 +2,18 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/es/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/es/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/es/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/es/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/es/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/es/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-107/#misc)
+ -->
 
 <!-- ### Chrome 106 {: #chrome106 }
 
