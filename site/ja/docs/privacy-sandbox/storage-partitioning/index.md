@@ -75,7 +75,8 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 [SharedWorker](https://developer.mozilla.org/docs/Web/API/SharedWorker)
 :   SharedWorker API は、同一オリジンのブラウジング コンテキスト間でアクセスできるワーカーを提供します。
 
-[Web Locks](https://developer.mozilla.org/docs/Web/API/Web_Locks_API) : Web Locks API を使用すると、同一オリジンの 1 つのタブまたはワーカーで実行されているコードが、何らかの作業の実行中に共有リソースのロックを取得できます。
+[Web Locks](https://developer.mozilla.org/docs/Web/API/Web_Locks_API)
+:   Web Locks API を使用すると、同一オリジンの 1 つのタブまたはワーカーで実行されているコードが、何らかの作業の実行中に共有リソースのロックを取得できます。
 
 ### Service Worker API
 
