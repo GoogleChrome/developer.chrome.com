@@ -80,7 +80,7 @@ function EventCard(event) {
                     <p class="event-card__sub-title gap-bottom-200">${session.title}</p>
 
                     <div class="gap-bottom-200">
-                      <p><truncate-text maxLength="200">${session.description}</truncate-text></p>
+                      <p><truncate-text maxLength="100">${session.description}</truncate-text></p>
                     </div>
 
                     ${session.topics.map((topic) => (topicHtml(topic)))}
