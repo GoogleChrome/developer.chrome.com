@@ -27,38 +27,37 @@ const PLACEHOLDER_IMG =
 module.exports = collections => {
   return collections
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
-    .map((event) => {
+    .map(event => {
       event.data.id = event.fileSlug;
 
-      event.data.sessions = event.data.sessions
-        .map((session) => {
-          if (session.type === 'speaker') {
-            session.speaker = getAuthorData(session.speaker)
-          }
+      event.data.sessions = event.data.sessions.map(session => {
+        if (session.type === 'speaker') {
+          session.speaker = getAuthorData(session.speaker);
+        }
 
-          if (session.type === 'participant') {
-            session.participants = session.participants.map((p) => {
-              return getAuthorData(p);
-            });
-          }
-          return session;
-        });
+        if (session.type === 'participant') {
+          session.participants = session.participants.map(p => {
+            return getAuthorData(p);
+          });
+        }
+
+        return session;
+      });
 
       return event;
     })
-    .sort((a,b) => {
+    .sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 };
 
-function getAuthorData(authorHandle)
-{
+function getAuthorData(authorHandle) {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
 
   return {
     image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
-    title: `i18n.authors.${authorHandle}.title`
+    title: `i18n.authors.${authorHandle}.title`,
   };
 }

@@ -23,5 +23,5 @@
  * @returns {string}
  */
 export const truncateString = (string, desiredLength) => {
-  return string.substring(0, (string + ' ').lastIndexOf(' ', desiredLength))
+  return string.substring(0, (string + ' ').lastIndexOf(' ', desiredLength));
 };

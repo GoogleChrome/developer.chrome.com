@@ -15,4 +15,4 @@
  */
 
 import './web-components/enhanced-event-card';
-import './web-components/truncate-text'
+import './web-components/truncate-text';

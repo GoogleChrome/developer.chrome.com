@@ -1,13 +1,16 @@
 const fs = require('fs');
-const { formatDateShort } = require('../_data/lib/date');
-const { EventSessionCard } = require('./EventSessionCard')
+const {formatDateShort} = require('../_data/lib/date');
+const {EventSessionCard} = require('./EventSessionCard');
 const {html} = require('common-tags');
 const {i18n} = require('../_filters/i18n');
 const {Img} = require('./Img');
 
-const calendarIcon =  fs.readFileSync(`site/_includes/icons/calendar.svg`, 'utf-8');
-const clockIcon =  fs.readFileSync(`site/_includes/icons/clock.svg`, 'utf-8');
-const pinIcon =  fs.readFileSync(`site/_includes/icons/pin.svg`, 'utf-8');
+const calendarIcon = fs.readFileSync(
+  'site/_includes/icons/calendar.svg',
+  'utf-8'
+);
+const clockIcon = fs.readFileSync('site/_includes/icons/clock.svg', 'utf-8');
+const pinIcon = fs.readFileSync('site/_includes/icons/pin.svg', 'utf-8');
 const PLACEHOLDER_IMG =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
@@ -64,84 +67,117 @@ function EventCard(event) {
           </div>
 
           <div class="event-card__details gap-top-400 grid-cols-1 grid-gap-400 lg:grid-cols-2">
-              ${event.sessions.filter((session) => session.type === 'speaker').map((session) => (
-                EventSessionCard(html`
-                    <div class="event-card__title gap-bottom-300 display-flex align-center">
-                        ${Img({
-                          src: session.speaker.image,
-                          width: 40,
-                          height: 40,
-                          alt: i18n(session.speaker.title),
-                          class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                        })}
-                        ${i18n(session.speaker.title)}
+              ${event.sessions
+                .filter(session => session.type === 'speaker')
+                .map(session =>
+                  EventSessionCard(html`
+                    <div
+                      class="event-card__title gap-bottom-300 display-flex align-center"
+                    >
+                      ${Img({
+                        src: session.speaker.image,
+                        width: 40,
+                        height: 40,
+                        alt: i18n(session.speaker.title),
+                        class:
+                          'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                      })}
+                      ${i18n(session.speaker.title)}
                     </div>
 
-                    <p class="event-card__sub-title gap-bottom-200">${session.title}</p>
+                    <p class="event-card__sub-title gap-bottom-200">
+                      ${session.title}
+                    </p>
 
-                    ${session.description.length > 0 && (html`
+                    ${session.description.length > 0 &&
+                    html`
                       <div class="gap-bottom-200">
                         <p>
-                          <truncate-text maxLength="100">${session.description}</truncate-text>
+                          <truncate-text maxLength="100"
+                            >${session.description}</truncate-text
+                          >
                         </p>
                       </div>
-                    `)}
+                    `}
+                    ${session.topics.map(topic => topicHtml(topic))}
 
-                    ${session.topics.map((topic) => (topicHtml(topic)))}
+                    <p class="display-flex align-center gap-top-300">
+                      ${clockIcon} ${session.time}
+                    </p>
+                  `)
+                )}
 
-                    <p class="display-flex align-center gap-top-300">${clockIcon} ${session.time}</p>
-                `)
-              ))}
+              ${event.sessions
+                .filter(talk => talk.type === 'participant')
+                .map(session => {
+                  const icon =
+                    session.participants.length === 1
+                      ? session.participants[0].image
+                      : 'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
+                  const title =
+                    session.participants.length === 1
+                      ? i18n(session.participants[0].title)
+                      : 'Multiple participants';
 
-              ${event.sessions.filter((talk) => talk.type === 'participant').map((session) => {
-                const icon = session.participants.length === 1 ? session.participants[0].image : 'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
-                const title = session.participants.length === 1 ? i18n(session.participants[0].title) : 'Multiple participants';
-
-                return EventSessionCard(html`
-                    <h5 class="event-card__title gap-bottom-300 display-flex align-center">
-                        ${Img({
-                          src: icon,
-                          width: 40,
-                          height: 40,
-                          alt: title,
-                          class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                        })}
-
-                        ${title}
+                  return EventSessionCard(html`
+                    <h5
+                      class="event-card__title gap-bottom-300 display-flex align-center"
+                    >
+                      ${Img({
+                        src: icon,
+                        width: 40,
+                        height: 40,
+                        alt: title,
+                        class:
+                          'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                      })}
+                      ${title}
                     </h5>
 
-                    ${session.participants.length > 1 && (html`
-                      <p class="event-card__sub-title gap-bottom-200">Participants</p>
-                      <p class="gap-bottom-300">${session.participants.map(p => i18n(p.title)).join(', ')}</p>
-                    `)}
+                    ${session.participants.length > 1 &&
+                    html`
+                      <p class="event-card__sub-title gap-bottom-200">
+                        Participants
+                      </p>
+                      <p class="gap-bottom-300">
+                        ${session.participants
+                          .map(p => i18n(p.title))
+                          .join(', ')}
+                      </p>
+                    `}
 
-                    <p class="event-card__sub-title gap-bottom-200">Participant details</p>
+                    <p class="event-card__sub-title gap-bottom-200">
+                      Participant details
+                    </p>
 
-                    ${session.description.length > 0 && (html`
+                    ${session.description.length > 0 &&
+                    html`
                       <div class="gap-bottom-200">
                         <p>
-                          <truncate-text maxLength="100">${session.description}</truncate-text>
+                          <truncate-text maxLength="100"
+                            >${session.description}</truncate-text
+                          >
                         </p>
                       </div>
-                    `)}
-
-                    ${session.topics.map((topic) => (topicHtml(topic)))}
-                `);
-              })}
+                    `}
+                    ${session.topics.map(topic => topicHtml(topic))}
+                  `);
+                })}
           </div>
       </article>
     </enhanced-event-card>
   `;
 }
 
-function topicHtml(topic)
-{
+function topicHtml(topic) {
   return html`
-    <a href="/todo"
-       class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100">
+    <a
+      href="/todo"
+      class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
+    >
       ${topic}
     </a>
-  `
+  `;
 }
 
 module.exports = {EventCard};
