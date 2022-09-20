@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'What's New In DevTools (Chrome 107)'
+title: "What's New In DevTools (Chrome 107)"
 authors:
   - jecelynyeen
 date: 2022-09-20
