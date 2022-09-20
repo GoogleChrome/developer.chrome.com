@@ -44,20 +44,20 @@
 * [기타 하이라이트](/ko/blog/new-in-devtools-105/#misc)
 
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/ko/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/ko/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/ko/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/ko/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/ko/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/ko/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/ko/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/ko/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/ko/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/ko/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-104/#misc) -->
+* [디버깅 중에 frame 재시작하기](/ko/blog/new-in-devtools-104/#restart-frame)
+* [Recorder 패널의 느리게 다시보기 옵션들](/ko/blog/new-in-devtools-104/#recorder)
+* [Recorder 패널을 위한 확장 도구 만들기](/ko/blog/new-in-devtools-104/#recorder-extension)
+* [소스 패널에서 작성자 / 배포 순 그룹하기](/ko/blog/new-in-devtools-104/#authored-deployed)
+* [Performance insights 패널에서 새로운 User Timings 추적](/ko/blog/new-in-devtools-104/#performance)
+* [요소의 할당된 슬롯 표시](/ko/blog/new-in-devtools-104/#slot)
+* [성능 기록을 위한 하드웨어 동시성 시뮬레이션](/ko/blog/new-in-devtools-104/#simulate)
+* [CSS 변수 자동 완성 시 색상이 아닌 값 미리보기](/ko/blog/new-in-devtools-104/#css-var)
+* [뒤로-앞으로 캐시 창에서 차단 프레임 식별](/ko/blog/new-in-devtools-104/#bfcache)
+* [자바스크립트 객체 자동완성 제안 기능 개선](/ko/blog/new-in-devtools-104/#autocomplete)
+* [소스맵 개선](/ko/blog/new-in-devtools-104/#sourcemaps)
+* [기타 하이라이트](/ko/blog/new-in-devtools-104/#misc)
 
 ### Chrome 103 {: #chrome103 }
 
