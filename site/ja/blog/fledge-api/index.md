@@ -702,7 +702,7 @@ const auctionResultPromise = navigator.runAdAuction(auctionConfig);
 
 \* セラーは、`interestGroupBuyers: '*'` を指定することで、すべてのインタレストグループが入札できるようにすることができます。すると、インタレストグループのオーナーが含まれていること以外の基準に基づいて、広告が承認または拒否されます。たとえば、セラーは広告クリエイティブをレビューして、ポリシーへの準拠を確認することがあります。
 
-** `additionalBids` は、FLEDGE の現在の実装ではサポートされていません。詳細については、FLEDGE Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをお読みください。
+\*\* `additionalBids` は、FLEDGE の現在の実装ではサポートされていません。詳細については、FLEDGE Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをお読みください。
 
 #### 広告の選択方法
 
