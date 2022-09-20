@@ -208,7 +208,7 @@ console.log("This is a popup!) // broken code
 Go to the Extensions page and open the popup. An **Errors** button will appear.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
-alt="Extension Management page with error button", width="300", height="226", class="screenshot" %}
+alt="Extensions page with error button", width="300", height="226", class="screenshot" %}
 
 Click the **Errors** button to learn more about the error:
 
