@@ -612,7 +612,7 @@ const auctionResultPromise = navigator.runAdAuction(auctionConfig);
 
 `runAdAuction()` は、広告オークションの結果を表す [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns)（`urn:uuid:<something>`）に解決される promise を返します。これは、レンダリングのために [Fenced Frame](/docs/privacy-sandbox/fledge#fenced-frame) に渡された場合にのみ、ブラウザによってデコードできます。したがってサイト運営者のページは、落札した広告を検査できません。
 
-{% Aside %} <code>joinAdInterestGroup()</code> の呼び出し元コンテキストのオリジンは、インタレストグループのオーナーのオリジンと一致する必要があるため、`joinAdInterestGroup()` は、インタレストグループのオーナーのオリジンと現在のドキュメントのオリジンが一致しない限り（たとえば、独自のインタレストグループを持つウェブサイト）、iframe から呼び出す必要があります。
+{% Aside %} [`joinAdInterestGroup()`](#joinadinterestgroup) の呼び出し元コンテキストのオリジンは、インタレストグループのオーナーのオリジンと一致する必要があるため、`joinAdInterestGroup()` は、インタレストグループのオーナーのオリジンと現在のドキュメントのオリジンが一致しない限り（たとえば、独自のインタレストグループを持つウェブサイト）、iframe から呼び出す必要があります。
 
 [`runAdAuction`](#ad-auction) には同じ要件がないため、&lt;script&gt; タグから `runAdAuction()` を呼び出すと、おそらくクロスオリジン iframe よりもはるかにパフォーマンスが向上します。{% endAside %}
 
