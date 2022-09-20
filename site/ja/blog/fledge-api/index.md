@@ -460,7 +460,7 @@ JSON で指定されていないフィールドは上書きされず、JSON で�
 
 #### バイヤーの入札方法 {: #generatebid}
 
-インタレストグループのオーナーが提供する `biddingLogicUrl` のスクリプトには、`generateBid()` 関数が含まれている必要があります。[広告スペースのセラーが `navigator.runAdAuction()` を呼び出す]]（#ad-auction）際にインタレストグループのオーナーが入札に招待されていれば、ブラウザがメンバーであるインタレストグループごとに `generatedBid()` 関数が 1 回呼び出されます。つまり、`generateBid()` は候補広告ごとに 1 回呼び出されます。セラーは、`navigator.runAdAuction()` に渡されるオークション構成パラメーターで `decisionLogicUrl` プロパティを提供します。この URL のコードには、`generateBid()` によって返される各入札をスコアリングするために、オークションの各入札者に対して実行される `scoreAd()` 関数を含める必要があります。
+インタレストグループのオーナーが提供する `biddingLogicUrl` のスクリプトには、`generateBid()` 関数が含まれている必要があります。[広告スペースのセラーが `navigator.runAdAuction()` を呼び出す](#ad-auction)際にインタレストグループのオーナーが入札に招待されていれば、ブラウザがメンバーであるインタレストグループごとに `generatedBid()` 関数が 1 回呼び出されます。つまり、`generateBid()` は候補広告ごとに 1 回呼び出されます。セラーは、`navigator.runAdAuction()` に渡されるオークション構成パラメーターで `decisionLogicUrl` プロパティを提供します。この URL のコードには、`generateBid()` によって返される各入札をスコアリングするために、オークションの各入札者に対して実行される `scoreAd()` 関数を含める必要があります。
 
 {% Aside %}
 
