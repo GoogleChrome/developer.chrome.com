@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-07-13
 updated: 2022-07-13
-description: "Restart frame during debugging, slow replay options in the Recorder panel, and more."
+description: "디버깅 중에 frame 재시작하기, Recorder 패널의 느리게 다시보기 옵션들, 등"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/doPgfbmwel0LDhSkjP0t.jpg'
 alt: ''
 tags:
