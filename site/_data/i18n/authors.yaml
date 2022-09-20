@@ -1042,6 +1042,11 @@ michalpitr:
     en: 'Michal Pitr'
   description:
     en: 'Software Engineering Intern on the Chrome DevTools team'
+patmeenan:
+  title:
+    en: 'Patrick Meenan'
+  description:
+    en: 'Web performance @googlechrome'
 gbmonaco:
   title:
     en: Gerald Monaco
