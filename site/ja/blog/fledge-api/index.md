@@ -416,7 +416,7 @@ FLEDGE API メソッドのパラメーターとして使用されるすべての
 
 \* `owner` と `name` を除くすべてのプロパティはオプションです。 `biddingLogicUrl` および `ads` プロパティはオプションですが、オークションに参加するには必須です。これらのプロパティを使用せずにインタレストグループを作成するユースケースもあるかもしれません。たとえば、インタレストグループ オーナーがまだ実行していないキャンペーンもしくは将来的な他の用途のインタレストグループにブラウザを追加したいと考える可能性があります。または、一時的に広告バジェットが不足している可能性も考えられます。
 
-** FLEDGE の現在の実装では、`biddingLogicUrl`、`biddingWasmHelperUrl`、`dailyUpdateUrl`、`trustedBiddingSignalsUrl` にはオーナーとして同じオリジンを持つ必要があります。これは長期的な制約ではない可能性があり、`ads` と `adComponents` の URL にはそのような制約はありません。
+\*\* FLEDGE の現在の実装では、`biddingLogicUrl`、`biddingWasmHelperUrl`、`dailyUpdateUrl`、`trustedBiddingSignalsUrl` にはオーナーとして同じオリジンを持つ必要があります。これは長期的な制約ではない可能性があり、`ads` と `adComponents` の URL にはそのような制約はありません。
 
 #### インタレストグループの属性を更新する {: #update-interest-group}
 
