@@ -54,8 +54,7 @@ extension. Create a `manifest.json` file in the _root_ of the project and add th
 }
 ```
 
-These keys contain basic metadata for the extension. It appears in the Extension Management page
-and, when published, in the Chrome Web Store listing. To dive deeper, check out the
+These keys contain basic metadata for the extension. They control how the extension appears on the Extensions page and, when published, on the Chrome Web Store. To dive deeper, check out the
 [`"name"`][man-name], [`"version"`][man-ver] and [`"description"`][man-desc] keys on the
 [Manifest][doc-manifest] overview page.
 
@@ -74,7 +73,7 @@ and, when published, in the Chrome Web Store listing. To dive deeper, check out 
 
 So, why do we need icons? Although [icons][doc-icons] are optional during development, they are
 required if you plan to distribute your extension on the Chrome Web Store. They also appear in other
-places like the Extension Management page.
+places like the Extensions page.
 
 Create an `images` folder and place the icons inside. You can download the icons on
 [Github][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
@@ -105,7 +104,7 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 |-----------|--------------------------------------------------------|
 | 16x16     | Favicon on the extension's pages and context menu icon.|
 | 32x32     | Windows computers often require this size.             |
-| 48x48     | Displays on the Extension Management page.             |
+| 48x48     | Displays on the Extensions page.             |
 | 128x128   | Displays on installation and in the Chrome Web Store.  |
 
 {% endDetails %}

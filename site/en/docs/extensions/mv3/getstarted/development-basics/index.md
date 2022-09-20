@@ -67,7 +67,7 @@ it in Chrome by loading it locally. Ensure all files are saved.
 
 To load an unpacked extension in developer mode:
 
-1. Go to the Extension Management page by navigating to `chrome://extensions`.
+1. Go to the Extensions page by entering `chrome://extensions` in a new tab. (By design `chrome://` URLs are not linkable.)
     - Alternatively, click on the Extensions menu puzzle button and select **Manage Extensions** at the bottom of the menu.
     - Or, click the Chrome menu, hover over **More Tools,** then select **Extensions**.
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
@@ -205,7 +205,7 @@ Now let's break the extension. We can do so by removing the closing quote in the
 console.log("This is a popup!) // broken code
 ```
 
-Go to the Extension Management page and open the popup. An **Errors** button will appear.
+Go to the Extensions page and open the popup. An **Errors** button will appear.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
 alt="Extension Management page with error button", width="300", height="226", class="screenshot" %}
