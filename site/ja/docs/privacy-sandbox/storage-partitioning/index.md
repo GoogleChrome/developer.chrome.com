@@ -56,7 +56,8 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 [Storage Bucket API](https://wicg.github.io/storage-buckets/explainer.html)
 :   Storage Bucket API は、バケットと呼ばれる新しい概念を使用して、IndexedDB や localStorage などのさまざまなストレージ API を統合する [Storage Standard](https://storage.spec.whatwg.org/) 用に開発されています。バケットに格納されたデータとバケットに関連付けられたメタデータはパーティションされます。
 
-[Clear-Site-Data ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Clear-Site-Data) : 応答に `Clear-Site-Data` ヘッダーを含めると、サーバーはユーザーのブラウザに保存されているデータを消去するように要求できます。キャッシュ、Cookie、および DOM ストレージをクリアできます。ヘッダーを使用すると、1 つのパーティション内のストレージのみがクリアされます。
+[Clear-Site-Data ヘッダー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Clear-Site-Data)
+:   応答に `Clear-Site-Data` ヘッダーを含めると、サーバーはユーザーのブラウザに保存されているデータを消去するように要求できます。キャッシュ、Cookie、および DOM ストレージをクリアできます。ヘッダーを使用すると、1 つのパーティション内のストレージのみがクリアされます。
 
 [Blob URL](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) ストア : [blob](https://developer.mozilla.org/docs/Web/API/Blob) は、処理される生データを含むオブジェクトであり、リソースにアクセスするために blob URL を生成できます。トップレベル コンテキストで任意の Blob URL に移動するユースケースをサポートするために（[ディスカッション](https://github.com/w3c/FileAPI/issues/153)）、Blob URL ストアはトップレベル サイトではなくエージェント クラスターによってパーティションされます。この機能はまだテストできません。また、パーティションの仕組みが今後変更される可能性があります。
 
