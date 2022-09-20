@@ -2,6 +2,18 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/ko/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/ko/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/ko/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/ko/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/ko/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ko/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-107/#misc)
+ -->
 
 <!-- ### Chrome 106 {: #chrome106 }
 

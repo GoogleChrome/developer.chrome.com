@@ -1,6 +1,18 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/zh/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/zh/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/zh/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/zh/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/zh/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/zh/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-107/#misc)
+ -->
 
 <!-- ### Chrome 106 {: #chrome106 }
 
