@@ -7,7 +7,7 @@
 
 {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
 {% set authorDescription = 'i18n.authors.' + authorId + '.description' %}
-{% set authorImage = authorsData[authorId].image or site.avatarPlaceholderImg %}
+{% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
 
 <div class="display-flex align-start">
   {% if authorImage %}
