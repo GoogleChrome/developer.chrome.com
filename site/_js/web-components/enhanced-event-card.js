@@ -30,10 +30,6 @@ export class EnhancedEventCard extends BaseElement {
     this.card.classList.remove('no-js');
   }
 
-  disconnectedCallback () {
-    super.disconnectedCallback();
-  }
-
   toggleEventDetails = () =>  {
     // @ts-ignore
     const visible = this.card.getAttribute('show-details') === "1" ? "0" : "1";

@@ -80,15 +80,10 @@ function EventCard(event) {
                     <p class="event-card__sub-title gap-bottom-200">${session.title}</p>
 
                     <div class="gap-bottom-200">
-                      <p>${session.description}</p>
+                      <p><truncate-text maxLength="200">${session.description}</truncate-text></p>
                     </div>
 
-                    ${session.topics.map((topic) => (html`
-                      <a href="/todo"
-                         class="surface color-secondary-text decoration-none hairline rounded-lg tag-pill type--label weight-regular gap-right-100">
-                        ${topic}
-                      </a>
-                    `))}
+                    ${session.topics.map((topic) => (topicHtml(topic)))}
 
                     <p class="display-flex align-center gap-top-300">${clockIcon} ${session.time}</p>
                 `)
@@ -121,21 +116,26 @@ function EventCard(event) {
                     <p class="event-card__sub-title gap-bottom-200">Participant details</p>
 
                     <div class="gap-bottom-200">
-                        <p>${session.description}</p>
+                        <p><truncate-text maxLength="200">${session.description}</truncate-text></p>
                     </div>
 
-                    ${session.topics.map((topic) => (html`
-                      <a href="/todo"
-                         class="surface color-secondary-text decoration-none hairline rounded-lg tag-pill type--label weight-regular gap-right-100">
-                        ${topic}
-                      </a>
-                    `))}
+                    ${session.topics.map((topic) => (topicHtml(topic)))}
                 `);
               })}
           </div>
       </article>
     </enhanced-event-card>
   `;
+}
+
+function topicHtml(topic)
+{
+  return html`
+    <a href="/todo"
+       class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100">
+      ${topic}
+    </a>
+  `
 }
 
 module.exports = {EventCard};
