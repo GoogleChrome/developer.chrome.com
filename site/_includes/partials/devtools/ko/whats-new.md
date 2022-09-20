@@ -121,6 +121,7 @@
 * [기타 하이라이트](/ko/blog/new-in-devtools-99/#misc)
 
 ### Chrome 98 {: #chrome98 }
+
 * [미리보기 기능: 전체 페이지 접근성 트리](/ko/blog/new-in-devtools-98/#a11y-tree)
 * [변경 탭에서의 더욱 정교한 변화들](/ko/blog/new-in-devtools-98/#changes)
 * [유저 플로우 레코딩을 위한 더 긴 타임아웃 설정](/ko/blog/new-in-devtools-98/#recorder-timeout)
