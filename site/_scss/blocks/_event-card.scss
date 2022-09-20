@@ -116,7 +116,7 @@
   }
 }
 
-.event-participant-card {
+.event-session-card {
   border-radius: 12px;
   border: 1px solid get-color('grey-300');
   padding:1.25rem 1.125rem;
@@ -134,10 +134,22 @@
     }
   }
 
+  button{
+    color: get-color('blue-700');
+
+    &:hover {
+      color: get-color('blue-900');
+    }
+  }
+
   svg {
     fill: get-color('blue-500');
     height: auto;
     margin-right: 6px;
     width: 20px;
+  }
+
+  .tag-pill {
+    white-space: nowrap;
   }
 }
