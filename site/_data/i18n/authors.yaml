@@ -1052,6 +1052,11 @@ anniesullie:
     en: 'Annie Sullivan'
   description:
     en: 'Senior Staff Software Engineer at Google'
+mmocny:
+  title:
+    en: 'Michal Mocny'
+  description:
+    en: 'Web Vitals, Speed Metrics and Web performance at Google'
 gbmonaco:
   title:
     en: Gerald Monaco
