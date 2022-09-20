@@ -17,18 +17,8 @@
 const Eleventy = require('@11ty/eleventy');
 const path = require('path');
 const toMarkdown = require('@sanity/block-content-to-markdown');
-const sanity = require('../sanity_utils/sanityClient.js');
 const client = require('../sanity_utils/sanityClient.js');
 const serializers = require('../sanity_utils/serializers');
-
-const querySanity = async function (slug) {
-  const query = `*[_type == "post" && slug.current == '${slug}']`;
-  const result = await sanity.fetch(query);
-  if (result.length === 1) {
-    return result[0];
-  }
-  return result;
-};
 
 const formatDoc = async function (doc) {
   return {
@@ -65,23 +55,14 @@ const ignorePatterns = [
   'site/**/workbox/',
 ];
 
-const previewHandler = async (req, res, next) => {
+const webhookHandler = async (req, res, next) => {
   // TODO: Add locales support. Defaults to 'en' at the moment.
   // TODO: add noindex / norobots header
   // TODO: Add /preview template to eleventyignore.
   // TODO: right now it supports only 1 content type.
   const inputPath = path.join('./site/en/', 'preview', 'index.njk');
 
-  // TODO: support full path and not only slug.
-  // TODO: user-provided: sanitize input!
-  const slug = req.params[0].split('/').pop();
-
-  const doc = await querySanity(slug);
-  if (!doc || !doc?.body) {
-    next();
-    return;
-  }
-
+  const doc = req.body;
   const post = await formatDoc(doc);
   const body = await formatBody(doc.body);
 
@@ -117,4 +98,4 @@ const previewHandler = async (req, res, next) => {
   }
 };
 
-module.exports = {previewHandler};
+module.exports = {webhookHandler};

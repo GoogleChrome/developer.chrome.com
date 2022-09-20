@@ -11,7 +11,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-runtime: nodejs14
+runtime: nodejs16
+
+instance_class: F4_1G
 
 handlers:
 - url: /.*

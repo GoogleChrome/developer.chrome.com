@@ -19,6 +19,7 @@ const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {previewHandler} = require('./preview');
+const {webhookHandler} = require('./webhook');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
@@ -78,6 +79,8 @@ if (isGAEProd) {
   handlers.unshift(compression());
 }
 
+app.use(express.json());
+app.post('/**/webhook', webhookHandler);
 app.get('/**/preview', previewHandler);
 app.use(...handlers);
 
