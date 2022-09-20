@@ -42,7 +42,10 @@ Chrome ベータ版 105.0.5195.17 以降では、ストレージ パーティシ
 
 ### ストレージ API
 
-[クォータ システム](https://web.dev/storage-for-the-web/#how-much): クォータ システムは、ストレージに割り当てられるディスク容量を決定するために使用されます。各パーティションはクォータ システムによって個別のバケットとして管理され、許可される容量と、クリアされる時期が決定されます。: `navigator.storage.estimate()` はパーティションの情報を返します。`window.webkitStorageInfo` や `navigator.webkitTemporaryStorage` などの Chrome 専用 API は使用廃止になります。: [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) と [キャッシュ ストレージ](https://web.dev/cache-api-quick-guide)は、新しいパーティション クォータ システムを使用します。
+[クォータ システム](https://web.dev/storage-for-the-web/#how-much)
+:   クォータ システムは、ストレージに割り当てられるディスク容量を決定するために使用されます。各パーティションはクォータ システムによって個別のバケットとして管理され、許可される容量と、クリアされる時期が決定されます。
+:   `navigator.storage.estimate()` はパーティションの情報を返します。`window.webkitStorageInfo` や `navigator.webkitTemporaryStorage` などの Chrome 専用 API は使用廃止になります。
+:   [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) と [キャッシュ ストレージ](https://web.dev/cache-api-quick-guide)は、新しいパーティション クォータ システムを使用します。
 
 [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) : Web Storage API は、ブラウザがキーと値のペアを保存できる [Local Storage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) と [Session Storage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) の 2 つの仕組みを提供します。これらは現在クォータで管理されていませんが、引き続きパーティション化されます。
 
