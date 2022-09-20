@@ -5,14 +5,14 @@ image: null
 location: 'Vancouver, Canada'
 date: '2022-09-13'
 url: 'https://www.w3.org/2022/09/meetup/index.html'
-talks: [
+sessions: [
  {
    'speaker':'rachelandrew',
    'title':'Interop 2022',
    'description':"",
    'topics': ['Interop'],
    'time':'TBC',
+   'type': 'speaker',
  },
 ]
-participant_groups: []
 ---

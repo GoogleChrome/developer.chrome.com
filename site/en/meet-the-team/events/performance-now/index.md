@@ -5,8 +5,7 @@ image: null
 location: 'Amsterdam, Netherlands'
 date: '2022-10-27'
 url: 'https://perfnow.nl/'
-talks: []
-participant_groups: [
+sessions: [
   {
     'topics': ['Performance'],
     'description': 'The Chrome team will be available at the event at the "Performance Help Desk" at the event.',
@@ -30,6 +29,7 @@ participant_groups: [
       'milutinkristofic',
       'marcdoerrenhaus',
     ],
+    'type': 'participant'
   },
 ]
 ---

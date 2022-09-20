@@ -1,6 +1,6 @@
 const {html} = require('common-tags');
 
-function EventParticipantCard(content) {
+function EventSessionCard(content) {
   return html`
     <article class="event-participant-card bg-bg">
         ${content}
@@ -8,4 +8,4 @@ function EventParticipantCard(content) {
   `;
 }
 
-module.exports = {EventParticipantCard};
+module.exports = {EventSessionCard};

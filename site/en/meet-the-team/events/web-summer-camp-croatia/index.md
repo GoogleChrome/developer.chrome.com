@@ -5,14 +5,14 @@ image: null
 location: 'Šibenik, Croatia'
 date: '2022-09-02'
 url: 'https://2022.websummercamp.com'
-talks: [
+sessions: [
   {
    'speaker':'samdutton',
    'title':'What is the Privacy Sandbox?',
    'description':"",
    'topics': ['Privacy'],
    'time':'TBC',
+   'type': 'speaker',
  },
 ]
-participant_groups: []
 ---

@@ -5,14 +5,14 @@ image: null
 location: 'Nantes, France'
 date: '2022-10-20'
 url: 'https://devfest2022.gdgnantes.com/'
-talks: [
+sessions: [
   {
    'speaker':'maudnalpas',
    'title':"The hitchhiker's guide to web privacy",
    'description':"",
    'topics': ['Privacy'],
    'time':'TBC',
+   'type': 'speaker',
  },
 ]
-participant_groups: []
 ---

@@ -30,18 +30,18 @@ module.exports = collections => {
     .map((event) => {
       event.data.id = event.fileSlug;
 
-      event.data.talks = event.data.talks
-        .map((talk) => {
-          talk.speaker = getAuthorData(talk.speaker)
-          return talk;
-        });
+      event.data.sessions = event.data.sessions
+        .map((session) => {
+          if (session.type === 'speaker') {
+            session.speaker = getAuthorData(session.speaker)
+          }
 
-      event.data.participant_groups = event.data.participant_groups
-        .map((group) => {
-          group.participants = group.participants.map((p) => {
-            return getAuthorData(p);
-          });
-          return group;
+          if (session.type === 'participant') {
+            session.participants = session.participants.map((p) => {
+              return getAuthorData(p);
+            });
+          }
+          return session;
         });
 
       return event;
