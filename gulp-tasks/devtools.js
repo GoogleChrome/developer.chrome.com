@@ -106,7 +106,7 @@ const createWndtBlogPosts = async version => {
     // TODO: Update replace image with CDN url
     let output = template
       .replaceAll('$title', translation.title[lang])
-      .replaceAll('$thankful', translation.thankful[lang])
+      .replaceAll('$thankful', translation.thankful[lang] || '$thankful')
       .replaceAll('$date', getToday())
       .replaceAll(langholder, lang)
       .replaceAll(verholder, version);
@@ -114,6 +114,7 @@ const createWndtBlogPosts = async version => {
     if (lang === 'en') {
       output = output
         .replaceAll('draft: true\n', '')
+        .replaceAll('$thankful\n', '')
         .replaceAll(
           /( )*<!-- Translation instructions((.*)|[^<]*|[^!]*|[^-]*|[^>]*)-->\n*/g,
           ''
@@ -161,12 +162,35 @@ const createWndtTranslationsGitHubIssues = async (version, dueDate) => {
 };
 
 /**
+ * Extract WNDT content outline
+ */
+const createWndtOutline = async version => {
+  const fileName = dest.replace(langholder, 'en').replace(verholder, version);
+  const content = readFileSync(fileName, 'utf-8');
+  const regex = /^(## |### )(.*)$/gm;
+
+  console.log(content.match(regex));
+
+  const output = content.match(regex).map(x => {
+    const title = x.match(/(?<=## )(.*?)(?= {:)/gm);
+    const hash = x.match(/(?<={: )(.*?)(?= })/g);
+
+    return `* [${title}](/blog/new-in-devtools-${version}/${hash})`;
+  });
+
+  console.log(output.join('\n'));
+
+  console.log(`Extract ${langs.length} WNDT outline successfully.`);
+};
+
+/**
  * Run it, take a version parameter
  */
 
-createWndtBanners(process.env.DEVTOOLS_VERSION);
-createWndtBlogPosts(process.env.DEVTOOLS_VERSION);
-createWndtTranslationsGitHubIssues(
-  process.env.DEVTOOLS_VERSION,
-  process.env.DEVTOOLS_TRANSLATE_DUE
-);
+// createWndtBanners(process.env.DEVTOOLS_VERSION);
+// createWndtBlogPosts(process.env.DEVTOOLS_VERSION);
+// createWndtTranslationsGitHubIssues(
+//   process.env.DEVTOOLS_VERSION,
+//   process.env.DEVTOOLS_TRANSLATE_DUE
+// );
+// createWndtOutline(process.env.DEVTOOLS_VERSION);
