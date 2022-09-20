@@ -33,37 +33,37 @@ tags:
 Chromium issue: [1303521](https://crbug.com/1303521)
 
 
-## Recorder 패널에서 더 다양한 느린 속도 다시보기 옵션 {: #recorder }
+## Recorder 패널의 느리게 다시보기 옵션들 {: #recorder }
 
 이제 유저 플로우를 더 느린 속도 (느리게, 매우 느리게, 아주 느리게)로 다시볼 수 있습니다. 이러한 옵션을 통해 화면을 다시 보기할 때 각 단계를 더 면밀히 살펴볼 수 있게 합니다.
 
-**Recorder** 패널을 [열고](/docs/devtools/recorder/#open), [start a new recording](/docs/devtools/recorder/#record) 을 클릭하세요. 녹화가 끝나고 나서 **Replay** 드롭다운 버튼을 클릭하세요. 다시 보기를 할 때 속도를 선택할 수 있습니다.
+**Recorder** 패널을 [열고](/docs/devtools/recorder/#open), [start a new recording](/docs/devtools/recorder/#record) 을 클릭하세요. 녹화가 끝나고 나서 **Replay** 드롭다운 버튼을 클릭하세요. or 다시 보기를 선택했을 때 속도를 선택할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yLIIMlaew0EWfEYdDbXJ.png", alt="Recorder 패널에서 더 다양한 느린 속도 다시보기 옵션", width="800", height="486" %}
 
 Chromium issue: [1306756](https://crbug.com/1306756)
 
 
-## Recorder panel을 위한 확장 도구 만들기 {: #recorder-extension }
+## Recorder 패널을 위한 확장 도구 만들기 {: #recorder-extension }
 
 선호하는 포맷으로 다시보기 스크립트를 추출하기 위해 Chrome 확장 도구를 만들거나 설치할 수 있습니다. 제작하는 방법에 대해 자세히 알고싶다면 [Recorder extension API](/docs/extensions/reference/devtools_recorder/) 문서를 참고하세요.
 
 데모 확장도구를 설치하려면 문서에 존재하는 [다음 스텝](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) 을 따라하세요.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Recorder panel을 위한 확장 도구 만들기", width="800", height="486" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Recorder 패널을 위한 확장 도구 만들기", width="800", height="486" %}
 
 Chromium issue: [1325751](https://crbug.com/1325751)
 
 
-## 소스 패널에서 작성자 / 배포 순 그룹하기 {: #authored-deployed }
+## 소스 패널에서 작성자 순/배포 순으로 파일 그룹핑하기 {: #authored-deployed }
 
 
-소스 패널에서 **작성자 / 배포 순 그룹하기** 옵션을 사용하여 파일을 묶을 수 있습니다. 프레임워크 (React, Angular 등)을 이용해 웹 애플리케이션을 개발할 때, 빌드 도구 (Webpack, Vite)를 통해 생성된 압축된 파일들을 소스 파일에서 살펴보기 어려울 수 있기 때문입니다.
+소스 패널에서 **작성자 순/배포 순으로 파일 그룹핑하기** 옵션을 사용하여 파일을 묶을 수 있습니다. 프레임워크 (React, Angular 등)을 이용해 웹 애플리케이션을 개발할 때, 빌드 도구 (Webpack, Vite)를 통해 생성된 압축된 파일들을 소스 파일에서 살펴보기 어려울 수 있기 때문입니다.
 
 이 체크박스를 이용해, 파일을 2가지 카테고리로 그룹하여 빠르게 찾을 수 있습니다. 
  
 - **Authored**. IDE에서 보는 것과 비슷하게 소스 파일을 봅니다. DevTools 는 (빌드 도구에서 제공한) 소스맵을 바탕으로 이 파일들을 생성합니다.
-- **Deployed**. 브라우저에서 읽어들인 실제 파일들입니다. 보통 이 파일들은 압축되어 있습니다.
+- **Deployed**. 브라우저에서 읽어들인 실제 파일들입니다. 보통 이 파일들은 경량화되어있습니다.
  
 다음 [React 데모](https://reactjs.org/) 에서 한 번 해보세요!
 
@@ -74,7 +74,7 @@ Chromium issue: [1325751](https://crbug.com/1325751)
 Chromium issue: [960909](https://crbug.com/960909)
 
 
-## Performance insights 패널에서 새로운 User Timings 트래킹 {: #performance }
+## Performance insights 패널에서 새로운 User Timings 추적 {: #performance }
 
 **Performance insights** 패널 안에서 새로운 **User Timings** 트랙을 사용하여 녹화본 내의 `performance.measure()` 마크를 시각화할 수 있습니다.
 
@@ -82,7 +82,7 @@ Chromium issue: [960909](https://crbug.com/960909)
 
 [measuring the page load](/docs/devtools/performance-insights/#record) 를 시작하면, 녹화본에서 **User Timings** 트랙이 보일 것입니다. 타이밍 아이템을 클릭하면 사이드 영역에서 상세한 내용을 볼 수 있습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="Performance insights 패널에서 새로운 User Timings 트래킹", width="800", height="499" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nxPCp6UaiGWJCWWx4Laa.png", alt="Performance insights 패널에서 새로운 User Timings 추적", width="800", height="499" %}
 
 Chromium issue: [1322808](https://crbug.com/1322808)
 
@@ -138,7 +138,7 @@ Chromium issue: [1285091](https://crbug.com/1285091)
 Chromium issue: [1288158](https://crbug.com/1288158) 
  
  
-## 자바스크립트 객체 자동완성 제안 개선 {: #autocomplete }
+## 자바스크립트 객체 자동완성 제안 기능 개선 {: #autocomplete }
 
 자바스크립트 객체 속성 자동 완성이 다음 순서대로 노출됩니다.
 
@@ -147,9 +147,9 @@ Chromium issue: [1288158](https://crbug.com/1288158)
 3. 상속받은 열거 가능한 속성
 4. 상속받은 열거 불가능한 속성
 
-이전에는 자동완성 제안이 상속된 속성보다 자체 속성을 선호하고, 모든 상속된 속성에는 동일한 우선순위가 부여되었기 때문에 개발자가 관련 속성을 찾기가 더 어려웠습니다.
+이전에는 자동완성 제안 기능이 상속된 속성보다 자체 속성을 선호하고, 모든 상속된 속성에는 동일한 우선순위가 부여되었기 때문에 개발자가 관련 속성을 찾기가 더 어려웠습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IvFTcOWrBOTTMRHqn8u4.png", alt="자바스크립트 객체 자동완성 제안 개선", width="800", height="563" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IvFTcOWrBOTTMRHqn8u4.png", alt="자바스크립트 객체 자동완성 제안 기능 개선", width="800", height="563" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cee5205ae93c95b1dce49e220b9ebfa8c998d5a6 #}
  
@@ -171,9 +171,9 @@ Chromium issues: [1329113](https://crbug.com/1329113), [1322115](https://crbug.c
  
 ## 기타 하이라이트 {: #misc }
  
-이번 릴리즈에서 수정된 사항들입니다.
+이번 릴리스에서 수정된 사항들입니다.
  
-- **소스** 패널에서 **자동 완성** 설정 수정, 이전에는 설정이 비활성화된 경우에도 자동 완성이 항상 켜져있었습니다. ([1323286](https://crbug.com/1323286))
+- **소스** 패널에서 **자동 완성** 설정 수정, 이전에는 설정이 비활성화된 경우에도 자동 완성이 항상 켜져 있었습니다. ([1323286](https://crbug.com/1323286))
 - **애플리케이션** 패널 내 **Manifest** 탭에서 최신 색상 스킴 포맷으로 파싱하도록 개선 ([1318305](https://crbug.com/1318305))
 - **Performance insights** 패널에서 `<script async>` 렌더링 차단 이슈를 위한 제안을 개선. 이전에는 DevTools가 script가 이미 async 속성을 가지고 있어도 `script 태그에 async 속성을 추가하세요` 라고 제안했습니다. ([1334096](https://crbug.com/1334096))
 - **Performance insights** 패널에서 레이아웃 시프트를 유발할 가능성이 있는 iframe을 감지해냅니다. **Details** 창에서 iframe 상세를 볼 수 있습니다. ([1328873](https://crbug.com/1328873))

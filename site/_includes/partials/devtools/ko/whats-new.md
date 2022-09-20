@@ -19,15 +19,15 @@
 ### Chrome 104 {: #chrome104 }
 
 * [디버깅 중에 frame 재시작하기](/ko/blog/new-in-devtools-104/#restart-frame)
-* [Recorder 패널에서 더 다양한 느린 속도 다시보기 옵션](/ko/blog/new-in-devtools-104/#recorder)
-* [Recorder panel을 위한 확장 도구 만들기](/ko/blog/new-in-devtools-104/#recorder-extension)
+* [Recorder 패널의 느리게 다시보기 옵션들](/ko/blog/new-in-devtools-104/#recorder)
+* [Recorder 패널을 위한 확장 도구 만들기](/ko/blog/new-in-devtools-104/#recorder-extension)
 * [소스 패널에서 작성자 / 배포 순 그룹하기](/ko/blog/new-in-devtools-104/#authored-deployed)
-* [Performance insights 패널에서 새로운 User Timings 트래킹](/ko/blog/new-in-devtools-104/#performance)
+* [Performance insights 패널에서 새로운 User Timings 추적](/ko/blog/new-in-devtools-104/#performance)
 * [요소의 할당된 슬롯 표시](/ko/blog/new-in-devtools-104/#slot)
 * [성능 기록을 위한 하드웨어 동시성 시뮬레이션](/ko/blog/new-in-devtools-104/#simulate)
 * [CSS 변수 자동 완성 시 색상이 아닌 값 미리보기](/ko/blog/new-in-devtools-104/#css-var)
 * [뒤로-앞으로 캐시 창에서 차단 프레임 식별](/ko/blog/new-in-devtools-104/#bfcache)
-* [자바스크립트 객체 자동완성 제안 개선](/ko/blog/new-in-devtools-104/#autocomplete)
+* [자바스크립트 객체 자동완성 제안 기능 개선](/ko/blog/new-in-devtools-104/#autocomplete)
 * [소스맵 개선](/ko/blog/new-in-devtools-104/#sourcemaps)
 * [기타 하이라이트](/ko/blog/new-in-devtools-104/#misc)
 
