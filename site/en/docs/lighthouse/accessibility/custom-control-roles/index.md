@@ -47,13 +47,14 @@ For example, replace a `<div>` that's acting like a button
 with an actual `<button>`.
 
 If you must keep the `<div>`,
-then add `role="button"` and `aria-pressed="false"` to the `<div>`:
+then add `role="button"` and `aria-pressed="false"` to the `<div>`.
 
-{% Glitch {
+<!-- This glitch requires chromevox-lite, see https://github.com/GoogleChrome/developer.chrome.com/pull/3768/files#r974761125 -->
+{# Glitch {
   id: 'gorgeous-raven',
   path: 'example.html:13:39',
   height: 346
-} %}
+} #}
 
 Now screen readers will announces the role and interactive state for the `<div>`.
 
