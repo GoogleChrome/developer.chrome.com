@@ -211,10 +211,10 @@ const createWndtOutline = async version => {
  * Run it, take a version parameter
  */
 
-// createWndtBanners(process.env.DEVTOOLS_VERSION);
-// createWndtBlogPosts(process.env.DEVTOOLS_VERSION);
-// createWndtTranslationsGitHubIssues(
-//   process.env.DEVTOOLS_VERSION,
-//   process.env.DEVTOOLS_TRANSLATE_DUE
-// );
-// createWndtOutline(process.env.DEVTOOLS_VERSION);
+createWndtBanners(process.env.DEVTOOLS_VERSION);
+createWndtBlogPosts(process.env.DEVTOOLS_VERSION);
+createWndtTranslationsGitHubIssues(
+  process.env.DEVTOOLS_VERSION,
+  process.env.DEVTOOLS_TRANSLATE_DUE
+);
+createWndtOutline(process.env.DEVTOOLS_VERSION);
