@@ -10,6 +10,8 @@ const langholder = '$lang';
 const src = './site/_data/templates/devtools/new-in-devtools.md';
 const dest = `./site/${langholder}/blog/new-in-devtools-${verholder}/index.md`;
 
+const outlineSrc = `./site/_includes/partials/devtools/${langholder}/whats-new.md`;
+
 const bannerSrc = './site/_data/templates/devtools/new-in-devtools-banner.svg';
 const bannerDest = `./_temp/new-in-devtools-banner-${langholder}.svg`;
 
@@ -169,16 +171,38 @@ const createWndtOutline = async version => {
   const content = readFileSync(fileName, 'utf-8');
   const regex = /^(## |### )(.*)$/gm;
 
-  console.log(content.match(regex));
-
-  const output = content.match(regex).map(x => {
+  const list = content.match(regex).map(x => {
     const title = x.match(/(?<=## )(.*?)(?= {:)/gm);
     const hash = x.match(/(?<={: )(.*?)(?= })/g);
 
-    return `* [${title}](/blog/new-in-devtools-${version}/${hash})`;
+    return `* [${title}]($lang/blog/new-in-devtools-${version}/${hash})`;
   });
 
-  console.log(output.join('\n'));
+  const output =
+    `### Chrome ${version} {: #chrome${version} }\n\n` + list.join('\n') + '\n';
+
+  for (const lang of langs) {
+    const contentHolder = '<!-- $content -->';
+
+    const outlineFileName = outlineSrc.replace(langholder, lang);
+    const outlineRaw = readFileSync(outlineFileName, 'utf-8');
+
+    let langOutput = output.replaceAll(
+      langholder,
+      lang === 'en' ? '' : `/${lang}`
+    );
+
+    if (lang !== 'en') {
+      langOutput = `<!-- ${langOutput} -->`;
+    }
+
+    const outline = outlineRaw.replace(
+      contentHolder,
+      contentHolder + '\n\n' + langOutput
+    );
+
+    writeFileSync(outlineFileName, outline, 'utf-8');
+  }
 
   console.log(`Extract ${langs.length} WNDT outline successfully.`);
 };
