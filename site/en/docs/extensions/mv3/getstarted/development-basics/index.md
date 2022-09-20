@@ -86,7 +86,7 @@ the manifest, a generic icon will be created for the extension.
 
 ## Pinning the extension {: #pin }
 
-By default, when you load your extension locally, it will appear in the **extensions menu** {% Img
+By default, when you load your extension locally, it will appear in the extensions menu {% Img
 src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24",
 height="24" %}. Pin your extension to the toolbar to quickly access your extension during
 development.
