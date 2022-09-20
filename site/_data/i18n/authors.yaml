@@ -1112,3 +1112,13 @@ amysteam:
     en: 'Amy Steam'
   description:
     en: 'Amy writes about Chrome extensions 🧩.'
+milutinkristofic:
+  title:
+    en: 'Milutin Kristofic'
+  description:
+    en: 'Software Engineer at Google'
+marcdoerrenhaus:
+  title:
+    en: 'Marc Doerrenhaus'
+  description:
+    en: 'Google Cloud, Sales Operations, Strategy & Operations Manager at Google'
