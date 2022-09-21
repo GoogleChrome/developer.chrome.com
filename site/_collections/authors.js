@@ -18,15 +18,14 @@
  * @fileoverview Collection of authors associated with posts they've written.
  */
 
+const authorsData = require('../_data/authorsData.json');
+const site = require('../_data/site.json');
 /**
  * @param {EleventyCollectionObject} collections
  * @returns {Authors}
  */
 module.exports = collections => {
   const items = collections.getAllSorted();
-  // Access 11ty Global Data using one of the items in the collection.
-  const authorsData = {...items[0].data.authorsData};
-  const defaultAvatar = items[0].data.site.defaultAvatarImg;
   // Enhance each author in authorsData with posts they have written.
   items.reduce((authors, item) => {
     if (item.data.authors?.length) {
@@ -38,7 +37,8 @@ module.exports = collections => {
           authors[authorId].title = `i18n.authors.${authorId}.title`;
           authors[authorId].key = authorId;
           authors[authorId].url = `/authors/${authorId}/`;
-          authors[authorId].image = authors[authorId].image || defaultAvatar;
+          authors[authorId].image =
+            authors[authorId].image || site.defaultAvatarImg;
           const element = {
             title: item.data.title,
             description: item.data.description,
