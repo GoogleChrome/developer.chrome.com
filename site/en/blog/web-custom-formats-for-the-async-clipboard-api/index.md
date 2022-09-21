@@ -95,7 +95,7 @@ applications understand (since they would expect `image/jpeg`). Over time, conce
 expected to add support for such formats as an opt-in if their developers deem support for web
 custom formats to be relevant for their users. On the operating system clipboard, the various
 formats are present in multiple formats ready for consumption, as can be seen in the
-screenshot below, in the concrete case for macOS.
+screenshot for macOS below.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/iYfa9lvLpLQU086GhurF.png", alt="Clipboard expector on macOS showing a custom format map listing two web custom formats.", width="800", height="357" %}
 
