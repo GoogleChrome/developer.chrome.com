@@ -89,6 +89,14 @@
     margin-bottom: 0.875rem;
     color: #{get-color('grey-900')};
 
+    a {
+      color: #{get-color('blue-600')};
+
+      &:hover {
+        color: #{get-color('blue-800')};
+      }
+    }
+
     @include media-query('lg') {
       font-size: 1.5rem;
     }
