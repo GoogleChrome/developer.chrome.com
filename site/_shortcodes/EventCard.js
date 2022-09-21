@@ -24,7 +24,7 @@ function EventCard(event) {
   return html`
     <enhanced-event-card>
       <article id="${event.id}"
-               class="event-card pad-400 no-js"
+               class="event-card pad-400 lg:pad-500 no-js"
                tabindex="0"
                show-details="0">
           <div class="display-flex">
