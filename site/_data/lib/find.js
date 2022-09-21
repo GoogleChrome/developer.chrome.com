@@ -3,16 +3,20 @@ const path = require('path');
 const urlCacheKey = Symbol('find-cache-url');
 const pathCacheKey = Symbol('find-cache-path');
 
-const defaultLocale = 'en';
+const {defaultLocale} = require('../../_data/site.json');
 
 /**
  * Builds and uses a cache to ensure fast lookup of Eleventy pages by
  * a specified key.
  *
  * @param {EleventyCollectionItem[]} collection
- * @param {unique symbol} cacheKey
- * @param {string} key
+ * @param {typeof urlCacheKey | typeof pathCacheKey} cacheKey
+ * @param {keyof EleventyCollectionItem} key
+ * Should either be "url" or "filePathStem" or any other key
+ * available on a collection item
  * @param {string} needle
+ * Either a URL path, including locale prefix,
+ * or a file path to the source document
  * @return {EleventyCollectionItem|undefined}
  */
 const internalFind = (collection, cacheKey, key, needle) => {
@@ -31,12 +35,8 @@ const internalFind = (collection, cacheKey, key, needle) => {
     return cache[needle];
   }
 
-  // Otherwise, be slow, since we think this is probably pretty rare.
-  const result = collection.find(item => item[key] === needle);
-  if (result) {
-    return result;
-  }
-
+  // The cache contains all available pages, so if a needle is not
+  // found in cache a page for that needle does not exist
   return undefined;
 };
 
