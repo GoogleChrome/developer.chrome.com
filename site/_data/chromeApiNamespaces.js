@@ -19,7 +19,6 @@
  */
 
 const path = require('path');
-const groupTypes = require('../_utils/group-types.js');
 
 module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
@@ -30,6 +29,7 @@ module.exports = () => {
     __dirname,
     '../../external/data/chrome-types.json'
   );
+  const groupTypes = require('../_utils/group-types.js');
 
   return groupTypes(chromeTypesFile);
 };
