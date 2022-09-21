@@ -58,9 +58,31 @@ To help you navigate sources, the **Sources** > **Page** pane can group the file
 - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps provided by your build tools.
 - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KDnkz7biIKbfQktK3HXX.svg", alt="Deployed icon.", width="22", height="22" %} **Deployed**. The actual files that the browser reads. Usually these files are minified.
 
-To enable grouping, check **Group files by Authored/Deployed** at the top of the **Page** pane.
+To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Group files by Authored/Deployed** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} option under the three-dot menu at the top of the **Navigation** pane.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SWqVMO6BUHncb2GjlvLq.png", alt="Grouping files by Authored / Deployed.", width="800", height="433" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z5zD5HFsOLJRpzAGPz3k.png", alt="Grouping files by Authored / Deployed.", width="800", height="528" %}
+
+### Hide ignore-listed sources {: #hide-ignore-listed }
+
+{% Aside %}
+**Note**: This is an {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} experimental feature available in Chrome from version 106.
+{% endAside %}
+
+To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the **Navigation** tree.
+
+{% Aside 'gotchas' %}
+By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+{% endAside %}
+
+To hide known third-party scripts:
+
+1. Make sure the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting is enabled.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4aIHYQjq5gxgrPF9MbkD.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="496" %}
+
+1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
+
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Hide ignore-listed sources.", width="800", height="449" %}
 
 ## Edit CSS and JavaScript {: #edit }
 
