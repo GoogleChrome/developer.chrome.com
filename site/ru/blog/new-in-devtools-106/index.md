@@ -19,6 +19,8 @@ draft: true
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id='5gBqTXctxO8' %}
+
 <!-- ## Group files by Authored / Deployed in the Sources panel {: #authored } -->
 
 <!-- The **Group files by Authored / Deployed** is now shown under the 3-dot menu. Previously, it showed directly on the navigation pane. -->

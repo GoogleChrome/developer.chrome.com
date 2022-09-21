@@ -16,6 +16,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='5gBqTXctxO8' %}
 
 ## Group files by Authored / Deployed in the Sources panel {: #authored }
 
