@@ -1,8 +1,8 @@
 {% macro authorCard(authorId) %}
 
-{% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
-{% set authorDescription = 'i18n.authors.' + authorId + '.description' %}
-{% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
+{% set authorTitle = 'i18n.authors.' + authorId + '.title' | i18n(locale) %}
+{% set authorDescription = 'i18n.authors.' + authorId + '.description' | i18n(locale) %}
+{% set authorImage = authorsData[authorId].image %}
 
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full text-align-center">
   {% if authorImage %}
@@ -10,7 +10,7 @@
       <a translate="no" class="display-block" href="/authors/{{ authorId }}/">
         {% Img
           src=authorImage,
-          alt=authorTitle | i18n(locale),
+          alt=authorTitle,
           height="192",
           width="192",
           class="rounded-full display-inline-block",
@@ -23,12 +23,12 @@
 
   <h2 class="type--h5">
     <a translate="no" class="surface display-inline-flex color-text" href="/authors/{{ authorId }}">
-      {{ authorTitle | i18n(locale) }}
+      {{ authorTitle  }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ authorDescription | i18n(locale) }}
+    {{ authorDescription }}
   </p>
 </div>
 {% endmacro %}
