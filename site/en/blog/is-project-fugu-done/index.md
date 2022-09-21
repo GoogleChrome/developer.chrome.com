@@ -4,25 +4,25 @@ title: Is Project Fugu "done"?
 subtitle: >
   Now that the Project Fugu team has implemented the basic building blocks for creating advanced web
   app experiences, a natural question that arises is whether the project is "done". Spoiler alert:
-  no!
+  It's not!
 description:
   This article focuses on the shifted focus of the Project Fugu team from implementing new
   capabilities to refining and improving the existing ones.
 authors:
   - thomassteiner
-date: 2022-09-07
-# updated: 2022-09-07
+date: 2022-09-21
+# updated: 2022-09-21
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
   - capabilities
 ---
 
-With one of the Project Fugu team's objectives being to make it possible for developers to do
-anything on the web that platform-specific apps can, the team has been incredibly busy with adding
-missing features web developers needed to "close this app gap". If you don't believe me, just look
-at the ["Shipped" section](https://fugu-tracker.web.app/#shipped) on the Fugu API tracker. Here are
-all the 55(!) shipped at the time of this writing APIs in order of least recently to most recently
+With one of the Project Fugu team's objectives being to _make it possible for developers to do
+anything on the web that platform-specific apps can_, the team has been incredibly busy with adding
+missing features web developers needed to close this app gap. If you don't believe me, just look at
+the ["Shipped" section](https://fugu-tracker.web.app/#shipped) of the Fugu API tracker. Here are all
+the 55(!) at the time of this writing shipped APIs in order of least recently to most recently
 shipped:
 
 <div class="table-wrapper scrollbar">
@@ -95,3 +95,70 @@ shipped:
     </caption>
   </table>
 </div>
+
+It's a really long list, and there is more on our plate. There are still a couple of APIs and
+features that are currently in [developer trial](https://fugu-tracker.web.app/#developer-trial)
+(that is, implemented, but behind a feature flag), some that we have
+[started](https://fugu-tracker.web.app/#started) to work on, and many that are
+[under consideration](https://fugu-tracker.web.app/#under-consideration). As you can see, there's no
+reason to lean back and say we're done.
+
+## Synchronous file methods for the origin private file system
+
+Quite the opposite, rather than declaring our effort as completed, we're actually just getting
+started. For example, consider the chart below that shows
+[skyrocketing relative usage growth](https://chromestatus.com/metrics/feature/timeline/popularity/3428)
+of the
+[`navigator.storage.getDirectory()`](https://fs.spec.whatwg.org/#dom-storagemanager-getdirectory)
+method used as an entry point to the origin private file system (OPFS). This method is used, for
+example, for
+[Photoshop's high performance storage](https://web.dev/ps-on-the-web/#high-performance-storage)
+needs, and which the storage community is
+[highly interested in](/blog/deprecating-web-sql/#rationale-for-leaving-storage-to-web-developers)
+since the started deprecation of Web SQL and even before.
+
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/16nfpJWzOwGgL9YX1AYn.svg", alt="Chart showing the skyrocketing relative usage of the navigator.storage.getDirectory method.", width="600", height="371" %}
+
+Now that more people use the OPFS, additional requirements have emerged, for example, for having a
+fully synchronous set of file methods in a worker context (see
+[whatwg/fs#7](https://github.com/whatwg/fs/issues/7) for background). While new web APIs are
+generally asynchronous, having synchronous methods would make working with the OPFS a lot simpler in
+a Wasm context, and since this is happening in a worker, the main thread can't be blocked.
+
+## Privacy improvements for the hardware APIs
+
+Another example are the [hardware APIs](https://web.dev/tags/devices/) that allow you to connect to
+[HID](https://web.dev/hid/), [serial](https://web.dev/serial/), [USB](https://web.dev/usb/),
+[Bluetooth](https://web.dev/bluetooth/), and [NFC](https://web.dev/nfc/) devices. While some of
+these APIs have been around for a while, until recently there was no way to forget a device that you
+had previously connected to. Now there is thanks to the
+[`forget()`](https://wicg.github.io/serial/#forget-method) methods for some of the APIs. For
+example, here's how to forget a previously connected to serial device, which improves the privacy of
+the API.
+
+```js
+// Request a serial port.
+const port = await navigator.serial.requestPort();
+// Then later revoke permission to the serial port.
+await port.forget();
+```
+
+## Refinements for the Multi-Screen Window Placement API
+
+A final example is the
+[Multi-Screen Window Placement API](https://web.dev/multi-screen-window-placement/), where, based on
+developer feedback, the previously generic screen labels like `"Internal Display 1"` were replaced
+with more meaningful labels like `"Built-in Retina Display"` so users can more easily associate
+these labels with the screens of their multi-screen setup.
+
+## Conclusions
+
+As you can see from just these three examples, Project Fugu is far from being done. Keep or start
+using our APIs and send feedback. Since all Fugu specs are developed in the open on GitHub, you can
+always file a spec issue on the corresponding GitHub repo or add your thoughts to an existing issue.
+Did you find a bug with Chrome's implementation or is the implementation different from the spec?
+File a bug at [new.crbug.com](https://new.crbug.com). Be sure to include as much detail as you can
+and provide simple instructions for reproducing. This is not a sprint. This is a journey. Oh, and by
+the way, Fugu APIs make for great progressive enhancements. See my article
+[SVGcode: a PWA to convert raster images to SVG vector graphics](https://web.dev/svgcode/) for
+inspiration.
