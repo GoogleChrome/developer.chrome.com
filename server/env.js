@@ -29,16 +29,6 @@ const isGAEProd = Boolean(process.env.GAE_APPLICATION);
 const siteDomain = 'developer.chrome.com';
 
 /**
- * The directory 11ty is building to
- */
-const rootDir = 'dist';
-
-/**
- * Default locale
- */
-const defaultLocale = 'en';
-
-/**
  * @param {express.Response} res
  * @param {number} code
  * @param {string} target
@@ -51,4 +41,4 @@ function doRedirect(res, target, code = 301) {
   res.redirect(code, target);
 }
 
-module.exports = {isGAEProd, doRedirect, siteDomain, rootDir, defaultLocale};
+module.exports = {isGAEProd, doRedirect, siteDomain};
