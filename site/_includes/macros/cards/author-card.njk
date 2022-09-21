@@ -1,7 +1,7 @@
 {% macro authorCard(authorId) %}
 
-{% set authorTitle = 'i18n.authors.' + authorId + '.title' | i18n(locale) %}
-{% set authorDescription = 'i18n.authors.' + authorId + '.description' | i18n(locale) %}
+{% set authorTitle = ('i18n.authors.' + authorId + '.title') | i18n(locale) %}
+{% set authorDescription = ('i18n.authors.' + authorId + '.description') | i18n(locale) %}
 {% set authorImage = authorsData[authorId].image %}
 
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full text-align-center">
