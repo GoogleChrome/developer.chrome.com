@@ -27,7 +27,7 @@ const site = require('../_data/site.json');
 module.exports = collections => {
   const items = collections.getAllSorted();
   // Enhance each author in authorsData with posts they have written.
-  let authors = {};
+  const authors = {};
   items.reduce((authors, item) => {
     if (item.data.authors?.length) {
       item.data.authors.forEach(authorId => {
