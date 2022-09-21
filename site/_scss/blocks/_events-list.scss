@@ -1,0 +1,31 @@
+.events-list {
+  [role=tab] {
+    font-family: #{$font-google-sans};
+    font-size: 1.125rem;
+    cursor: pointer;
+
+    &[aria-selected="true"] {
+      color: get-color('grey-900');
+      font-weight: 500;
+      cursor: initial;
+    }
+
+    @include media-query('lg') {
+      flex: 0 0 auto;
+      font-size: 2rem;
+      height: auto;
+
+      &:last-child {
+        margin-left: get-size(1000);
+      }
+    }
+  }
+
+  [role=tablist] {
+    @include media-query('lg') {
+      display: inline-flex;
+      width: auto;
+      margin-bottom: get-size(400);
+    }
+  }
+}

@@ -58,7 +58,7 @@ const authors = require('./site/_collections/authors');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const extensionsReferenceCollection = require('./site/_collections/reference');
-const eventsCollection = require('./site/_collections/events');
+const { pastEvents, currentEvents } = require('./site/_collections/events');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
@@ -116,7 +116,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
-  eleventyConfig.addCollection('events', eventsCollection);
+  eleventyConfig.addCollection('currentEvents', currentEvents);
+  eleventyConfig.addCollection('pastEvents', pastEvents);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
