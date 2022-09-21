@@ -7,6 +7,8 @@ image: null
 location: 'Sydney, Australia'
 date: '2022-01-12'
 externalUrl: 'https://webdirections.org/summit/'
+slidesURL: https://oo.gle/fronteers-22-privacy
+videoUrl: null
 sessions:
   - speaker: bramus
     title: 'CSS Architecture with Layers, Scope, and Nesting'

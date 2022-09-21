@@ -10,6 +10,9 @@ const calendarIcon = fs.readFileSync(
   'utf-8'
 );
 const pinIcon = fs.readFileSync('site/_includes/icons/pin.svg', 'utf-8');
+const slidesIcon = fs.readFileSync('site/_includes/icons/slides.svg', 'utf-8');
+const videoIcon = fs.readFileSync('site/_includes/icons/video.svg', 'utf-8');
+
 const PLACEHOLDER_IMG =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
@@ -102,6 +105,7 @@ function EventCard(event) {
                         </p>
                       </div>
                     `}
+                    ${linksHtml(event)}
                     ${session.topics.map(topic => topicHtml(topic))}
                   `)
                 )}
@@ -168,7 +172,43 @@ function EventCard(event) {
   `;
 }
 
-function topicHtml(topic) {
+const linksHtml = event => {
+  if (!event.slidesUrl && !event.videoUrl) {
+    return '';
+  }
+
+  const slidesLink = event.slidesUrl
+    ? html`
+        <a
+          href="${event.slidesUrl}"
+          class="display-flex align-center gap-right-300 decoration-none"
+        >
+          ${slidesIcon} Slides
+        </a>
+      `
+    : '';
+
+  const videoLink = event.videoUrl
+    ? html`
+        <a
+          href="${event.videoUrl}"
+          class="display-flex align-center decoration-none"
+        >
+          ${videoIcon} Video
+        </a>
+      `
+    : '';
+
+  return html`
+    <div class="event-card__sub-title gap-bottom-100">Link to Talk</div>
+
+    <div class="event-card__links display-flex gap-bottom-300">
+      ${slidesLink} ${videoLink}
+    </div>
+  `;
+};
+
+const topicHtml = topic => {
   return html`
     <a
       href="/todo"
@@ -177,6 +217,6 @@ function topicHtml(topic) {
       ${topic}
     </a>
   `;
-}
+};
 
 module.exports = {EventCard};

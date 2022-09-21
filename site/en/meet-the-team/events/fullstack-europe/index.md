@@ -8,6 +8,8 @@ image: null
 location: 'Antwerp, Belgium'
 date: '2022-10-06'
 externalUrl: 'https://fullstackeurope.com/2022'
+slidesURL: null
+videoUrl: null
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)

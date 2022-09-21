@@ -125,6 +125,28 @@
   &__details {
     display: none;
   }
+
+  &__links {
+    a {
+      color: #{get-color('blue-600')};
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+
+      svg {
+        width: auto;
+        height: 1.5rem;
+        margin-right: 0.25rem;
+      }
+
+      &:hover {
+        color: #{get-color('blue-800')};
+
+        svg path {
+          fill:#{get-color('blue-800')};
+        }
+      }
+    }
+  }
 }
 
 .event-session-card {

@@ -7,6 +7,8 @@ image: null
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
 externalUrl: 'https://fronteersconf.org/'
+slidesURL: https://www.bram.us/2022/09/13/css-in-2022-and-beyond-2022-09-09-fronteers-conf/
+videoUrl: null
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)
