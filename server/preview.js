@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -66,6 +66,7 @@ const ignorePatterns = [
 ];
 
 const previewHandler = async (req, res, next) => {
+  process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
   // TODO: Add locales support. Defaults to 'en' at the moment.
   // TODO: add noindex / norobots header
   // TODO: Add /preview template to eleventyignore.

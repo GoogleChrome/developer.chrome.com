@@ -56,6 +56,8 @@ const ignorePatterns = [
 ];
 
 const webhookHandler = async (req, res, next) => {
+  process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
+
   // TODO: Add locales support. Defaults to 'en' at the moment.
   // TODO: add noindex / norobots header
   // TODO: Add /preview template to eleventyignore.
