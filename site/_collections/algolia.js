@@ -46,10 +46,27 @@ function limitText(content, limit = 7500) {
 }
 
 /**
+ * Walks over the groups of a Chrome API namespace and builds
+ * API namespace paths split by dot
+ * @param {RenderNamespace} apiNamespace
+ * @returns A list of API paths like: chrome.alarms.onAlarm
+ */
+function getChromeApiNamespacePaths(apiNamespace) {
+  const apiNamespacePaths = [];
+  for (const group of apiNamespace.groups) {
+    for (const content of group.contents) {
+      apiNamespacePaths.push(`${apiNamespace.name}.${content.name}`);
+    }
+  }
+
+  return apiNamespacePaths;
+}
+
+/**
  * @param {EleventyCollectionObject} collections
  * @returns {AlgoliaCollectionItem[]}
  */
-module.exports = collections => {
+const algoliaCollection = collections => {
   const toIndex = collections.getAllSorted().filter(item => {
     const {data} = item;
 
@@ -105,13 +122,8 @@ module.exports = collections => {
     // able to search onBeforeSendHeaders which also appears in the content
     if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
       const apiNamespace = item.data.chromeApiNamespaces[item.data.api];
-      const apiNamespacePaths = [];
-      for (const group of apiNamespace.groups) {
-        for (const content of group.contents) {
-          apiNamespacePaths.push(`${apiNamespace.name}.${content.name}`);
-        }
-      }
-
+      const apiNamespacePaths = getChromeApiNamespacePaths(apiNamespace);
+      console.log(item.data.api, apiNamespacePaths);
       algoliaCollectionItem.apiNamespacePaths = apiNamespacePaths;
     }
 
@@ -121,4 +133,9 @@ module.exports = collections => {
 
     return algoliaCollectionItem;
   });
+};
+
+module.exports = {
+  getChromeApiNamespacePaths,
+  algoliaCollection,
 };

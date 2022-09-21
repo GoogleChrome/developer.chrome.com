@@ -52,7 +52,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const locales = require('./site/_data/site.json').locales;
 
 // Collections
-const algoliaCollection = require('./site/_collections/algolia');
+const {algoliaCollection} = require('./site/_collections/algolia');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const extensionsReferenceCollection = require('./site/_collections/reference');
