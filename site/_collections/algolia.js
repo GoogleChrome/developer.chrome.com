@@ -105,11 +105,10 @@ module.exports = collections => {
     // able to search onBeforeSendHeaders which also appears in the content
     if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
       const apiNamespace = item.data.chromeApiNamespaces[item.data.api];
-
       const apiNamespacePaths = [];
       for (const group of apiNamespace.groups) {
         for (const content of group.contents) {
-          apiNamespacePaths.push(content._name);
+          apiNamespacePaths.push(`${apiNamespace.name}.${content.name}`);
         }
       }
 
