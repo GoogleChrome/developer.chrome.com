@@ -1,21 +1,17 @@
-require('dotenv').config();
-
-const {dirname} = require('path');
-const {readFileSync, writeFileSync, mkdirSync} = require('fs');
-const {Octokit} = require('octokit');
+import {readFileSync, writeFileSync, mkdirSync} from 'fs';
+import {Octokit} from 'octokit';
+import {dirname} from 'path';
 
 const verholder = '$version';
 const langholder = '$lang';
 
-const src = './site/_data/templates/devtools/new-in-devtools.md';
-const dest = `./site/${langholder}/blog/new-in-devtools-${verholder}/index.md`;
+const blogTemplate = './tools/devtools/templates/new-in-devtools.md';
+const bannerTemplate = './tools/devtools/templates/new-in-devtools-banner.svg';
 
-const outlineSrc = `./site/_includes/partials/devtools/${langholder}/whats-new.md`;
-
-const bannerSrc = './site/_data/templates/devtools/new-in-devtools-banner.svg';
+const blogDest = `./site/${langholder}/blog/new-in-devtools-${verholder}/index.md`;
+const outlineDest = `./site/_includes/partials/devtools/${langholder}/whats-new.md`;
 const bannerDest = `./_temp/new-in-devtools-banner-${langholder}.svg`;
 
-const langs = ['en', 'es', 'ja', 'ko', 'pt', 'ru', 'zh'];
 const translation = {
   language: {
     es: 'Spanish',
@@ -61,19 +57,25 @@ const translation = {
   },
 };
 
-const getToday = () => {
+/**
+ * Get Today's date in ISO 8601
+ * @returns YYYY-MM-DD
+ */
+function getToday() {
   const dateObj = new Date();
   const year = dateObj.getUTCFullYear();
   const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
   const date = dateObj.getUTCDate().toString().padStart(2, '0');
 
   return `${year}-${month}-${date}`;
-};
+}
 
 /**
- * Create DevTools WNDT banners for 7 languages
+ * Generate What's New in DevTools blog post banner
+ * @param {String} version - release version
+ * @param {String[]} langs - languages you want to generate
  */
-const createWndtBanners = async version => {
+export async function createWndtBanners(version, langs) {
   for (const lang of langs) {
     const fileName = bannerDest.replace(langholder, lang);
 
@@ -81,7 +83,7 @@ const createWndtBanners = async version => {
       recursive: true,
     });
 
-    const template = readFileSync(bannerSrc, 'utf-8');
+    const template = readFileSync(bannerTemplate, 'utf-8');
     const output = template
       .replaceAll('$banner', translation.banner[lang])
       .replaceAll(verholder, version);
@@ -89,21 +91,25 @@ const createWndtBanners = async version => {
     // TODO: Upload images to CDN
     writeFileSync(fileName, output, 'utf-8');
   }
-  console.log(`Created ${langs.length} WNDT banners successfully.`);
-};
+  console.log(`Created WNDT banners for: ${langs.join(', ')}`);
+}
 
 /**
- * Create DevTools WNDT blog posts templates for 7 languages
+ * Generate What's New in DevTools blog posts templates
+ * @param {String} version - release version
+ * @param {String[]} langs - languages you want to generate
  */
-const createWndtBlogPosts = async version => {
+export async function createWndtBlogPosts(version, langs) {
   for (const lang of langs) {
-    const fileName = dest.replace(langholder, lang).replace(verholder, version);
+    const fileName = blogDest
+      .replace(langholder, lang)
+      .replace(verholder, version);
 
     mkdirSync(dirname(fileName), {
       recursive: true,
     });
 
-    const template = readFileSync(src, 'utf-8');
+    const template = readFileSync(blogTemplate, 'utf-8');
 
     // TODO: Update replace image with CDN url
     let output = template
@@ -125,52 +131,22 @@ const createWndtBlogPosts = async version => {
 
     writeFileSync(fileName, output, 'utf-8');
   }
-  console.log(`Created ${langs.length} WNDT blog posts successfully.`);
-};
+  console.log(`Created WNDT blog posts for: ${langs.join(', ')}`);
+}
 
 /**
- * Create GitHub Issues for 6 DevTools WNDT translations
+ * Append What's New in DevTools outline in 7 languages
+ * @param {String} version - release version
+ * @param {String[]} langs - languages you want to generate
  */
-const createWndtTranslationsGitHubIssues = async (version, dueDate) => {
-  // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-  const octokit = new Octokit({
-    auth: process.env.GITHUB_TOKEN,
-  });
-
-  const {data} = await octokit.rest.users.getAuthenticated();
-  console.log(`Login to GitHub successfully: ${data.login}`);
-
-  for (const lang of langs) {
-    if (lang === 'en') continue;
-
-    const {status} = await octokit.request(
-      'POST /repos/GoogleChrome/developer.chrome.com/issues',
-      {
-        owner: 'GoogleChrome',
-        repo: 'developer.chrome.com',
-        title: `[devtools-translate] ${translation.language[lang]} - What's New in DevTools (Chrome ${version})`,
-        body: `Post: https://developer.chrome.com/blog/new-in-devtools-${version}/\nTranslated by: ${dueDate}\n\nTranslator: ...\nReviewers: ${translation.reviewers[
-          lang
-        ].join(', ')}`,
-        assignees: ['jecfish'],
-        labels: ['devtools-translate', 'content', 'translation'],
-      }
-    );
-
-    console.log(
-      `Created Github issue for WNDT ${translation.language[lang]}: status ${status}`
-    );
-  }
-};
-
-/**
- * Extract WNDT content outline
- */
-const createWndtOutline = async version => {
-  const fileName = dest.replace(langholder, 'en').replace(verholder, version);
+export async function createWndtOutline(version, langs) {
+  const fileName = blogDest
+    .replace(langholder, 'en')
+    .replace(verholder, version);
   const content = readFileSync(fileName, 'utf-8');
   const regex = /^(## |### )(.*)$/gm;
 
+  // @ts-ignore
   const list = content.match(regex).map(x => {
     const title = x.match(/(?<=## )(.*?)(?= {:)/gm);
     const hash = x.match(/(?<={: )(.*?)(?= })/g);
@@ -184,7 +160,7 @@ const createWndtOutline = async version => {
   for (const lang of langs) {
     const contentHolder = '<!-- $content -->';
 
-    const outlineFileName = outlineSrc.replace(langholder, lang);
+    const outlineFileName = outlineDest.replace(langholder, lang);
     const outlineRaw = readFileSync(outlineFileName, 'utf-8');
 
     let langOutput = output.replaceAll(
@@ -204,17 +180,38 @@ const createWndtOutline = async version => {
     writeFileSync(outlineFileName, outline, 'utf-8');
   }
 
-  console.log(`Extract ${langs.length} WNDT outline successfully.`);
-};
+  console.log(`Append WNDT outlines for: ${langs.join(', ')}`);
+}
 
 /**
- * Run it, take a version parameter
+ * Create Github Issues for translators to work on
+ * @param {*} version - release version
+ * @param {*} dueDate - due date to translate
+ * @param {Array} langs - languages you want to generate
+ * @param {String} auth - GitHub Token
  */
+export async function createGitHubIssues(version, dueDate, langs, auth) {
+  // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+  const octokit = new Octokit({auth});
 
-createWndtBanners(process.env.DEVTOOLS_VERSION);
-createWndtBlogPosts(process.env.DEVTOOLS_VERSION);
-createWndtTranslationsGitHubIssues(
-  process.env.DEVTOOLS_VERSION,
-  process.env.DEVTOOLS_TRANSLATE_DUE
-);
-createWndtOutline(process.env.DEVTOOLS_VERSION);
+  const {data} = await octokit.rest.users.getAuthenticated();
+  console.log(`Login to GitHub successfully: ${data.login}`);
+
+  for (const lang of langs) {
+    const {status} = await octokit.request(
+      'POST /repos/GoogleChrome/developer.chrome.com/issues',
+      {
+        owner: 'GoogleChrome',
+        repo: 'developer.chrome.com',
+        title: `[devtools-translate] ${translation.language[lang]} - What's New in DevTools (Chrome ${version})`,
+        body: `Post: https://developer.chrome.com/blog/new-in-devtools-${version}/\nTranslated by: ${dueDate}\n\nTranslator: ...\nReviewers: ${translation.reviewers[lang].join(', ')}`,
+        assignees: ['jecfish'],
+        labels: ['devtools-translate', 'content', 'translation'],
+      }
+    );
+
+    console.log(
+      `Created Github issue for WNDT ${translation.language[lang]}: status ${status}`
+    );
+  }
+}
