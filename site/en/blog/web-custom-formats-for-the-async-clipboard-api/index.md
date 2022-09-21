@@ -11,6 +11,7 @@ hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/qF12zl6xHIIrHw3S5WfW.jpg
 alt: The clip of a clipboard.
 tags:
   - chrome-104
+  - capabilities
 ---
 
 Until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of
