@@ -17,11 +17,14 @@
   h1 {
     color: get-color('blue-700');
     margin-bottom: get-size(200);
-    font-size: clamp(2rem, 5vw, 5.125rem);
+    font-size: clamp(2rem, 5vw, 4.25rem);
 
     @include media-query('lg') {
       margin-bottom: get-size(400);
-      white-space: nowrap;
+
+      span {
+        white-space: nowrap;
+      }
     }
   }
 
@@ -34,6 +37,7 @@
     @include media-query('lg') {
       max-width: 400px;
       margin: initial;
+      font-size: clamp(0.9rem, 1.25vw, 1rem);
     }
   }
 
