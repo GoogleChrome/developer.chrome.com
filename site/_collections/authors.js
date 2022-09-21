@@ -22,15 +22,17 @@ const authorsData = require('../_data/authorsData.json');
 const site = require('../_data/site.json');
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {Authors}
+ * @returns {Authors | {}}
  */
 module.exports = collections => {
   const items = collections.getAllSorted();
   // Enhance each author in authorsData with posts they have written.
+  let authors = {};
   items.reduce((authors, item) => {
     if (item.data.authors?.length) {
       item.data.authors.forEach(authorId => {
-        if (authors[authorId]) {
+        if (authorsData[authorId]) {
+          authors[authorId] = authors[authorId] || {};
           authors[
             authorId
           ].description = `i18n.authors.${authorId}.description`;
@@ -38,7 +40,7 @@ module.exports = collections => {
           authors[authorId].key = authorId;
           authors[authorId].url = `/authors/${authorId}/`;
           authors[authorId].image =
-            authors[authorId].image || site.defaultAvatarImg;
+            authorsData[authorId].image || site.defaultAvatarImg;
           const element = {
             title: item.data.title,
             description: item.data.description,
@@ -57,7 +59,7 @@ module.exports = collections => {
       });
     }
     return authors;
-  }, authorsData);
+  }, authors);
 
-  return authorsData;
+  return authors;
 };
