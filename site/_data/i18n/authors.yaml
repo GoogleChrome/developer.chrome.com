@@ -243,11 +243,6 @@ maudnalpas:
     en: 'Maud Nalpas'
   description:
     en: 'Developer advocate at Google, working on Chrome privacy and security'
-rowanmerewood:
-  title:
-    en: 'Rowan Merewood'
-  description:
-    en: 'Rowan is a Developer Advocate'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -1037,7 +1032,7 @@ keenyeeliau:
     pt: Engenheiro de software da equipe Aurora no Chrome.
     ru: Инженер-программист в команде Aurora в Chrome.
     zh: Chrome 公司 Aurora 团队的软件工程师。
-arthursonzogni: 
+arthursonzogni:
   title:
     en: Arthur Sonzogni
   description:
@@ -1047,3 +1042,23 @@ michalpitr:
     en: 'Michal Pitr'
   description:
     en: 'Software Engineering Intern on the Chrome DevTools team'
+gbmonaco:
+  title:
+    en: Gerald Monaco
+  description:
+    en: Software Engineer on the Chrome team.
+greenido:
+  title:
+    en: Ido Green
+  description:
+    en: ''
+christianliebel:
+  title:
+    en: Christian Liebel
+  description:
+    en: ''
+jonathangarbee:
+  title:
+    en: Jonathan Garbee
+  description:
+    en: ''

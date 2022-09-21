@@ -156,10 +156,6 @@
     "twitter": "maudnals",
     "github": "maudnals"
   },
-  "rowanmerewood": {
-    "twitter": "rowan_m",
-    "github": "rowan-m"
-  },
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
     "twitter": "hdjirdeh",
@@ -735,11 +731,11 @@
   "sbc": {
     "country": "US",
     "github": "sbc100"
-   },
-   "ericsl": {
-     "country": "DE",
-     "github": "ericsl"
-   },
+  },
+  "ericsl": {
+    "country": "DE",
+    "github": "ericsl"
+  },
   "rkochman": {
     "country": "US",
     "twitter": "rkochman",
@@ -847,7 +843,7 @@
     "country": "US"
   },
   "leenasohoni": {
-    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/VXCjCzLEGWApTkZkNZkR.JPG",
+    "image": "image/lKgJZH2YLpV46uAKAtfp4jfvXhx2/oALg7ACRUlSyXj7xGbOR.jpeg",
     "twitter": "leena_sohoni",
     "country": "US"
   },
@@ -880,6 +876,10 @@
     "github": "michalpitr",
     "linkedin": "https://www.linkedin.com/in/michal-pitr-a7156b127",
     "twiter": "pitrmichal"
+  },
+  "gbmonaco": {
+    "twitter": "devknoll",
+    "github": "devknoll",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/hDqTBczSpBYv3BZkYRFz.jpeg"
   }
-  
 }

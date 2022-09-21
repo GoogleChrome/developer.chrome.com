@@ -3,6 +3,7 @@ tools:
   - url: workbox
   - url: puppeteer
   - url: crux
+  - url: lighthouse
 crx:
   - url: extensions
   - url: webstore

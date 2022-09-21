@@ -12,6 +12,7 @@
     - url: /docs/privacy-sandbox/proposal-lifecycle
 - title: i18n.docs.privacy-sandbox.start
   sections:
+    - url: /docs/privacy-sandbox/unified-origin-trial  
     - url: /docs/privacy-sandbox/feedback
     - url: /docs/privacy-sandbox/glossary
     - url: /docs/privacy-sandbox/status
