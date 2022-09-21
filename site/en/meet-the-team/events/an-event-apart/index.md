@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Denver, USA'
 date: '2022-09-09'
-url: 'https://aneventapart.com/event/denver-2022'
+externalUrl: 'https://aneventapart.com/event/denver-2022'
 sessions:
   - speaker: rachelandrew
     title: >-

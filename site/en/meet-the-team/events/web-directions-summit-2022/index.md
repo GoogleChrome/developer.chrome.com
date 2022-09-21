@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Sydney, Australia'
 date: '2022-01-12'
-url: 'https://webdirections.org/summit/'
+externalUrl: 'https://webdirections.org/summit/'
 sessions:
   - speaker: bramus
     title: 'CSS Architecture with Layers, Scope, and Nesting'

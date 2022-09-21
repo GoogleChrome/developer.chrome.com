@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Šibenik, Croatia'
 date: '2022-09-02'
-url: 'https://2022.websummercamp.com'
+externalUrl: 'https://2022.websummercamp.com'
 sessions:
   - speaker: samdutton
     title: What is the Privacy Sandbox?

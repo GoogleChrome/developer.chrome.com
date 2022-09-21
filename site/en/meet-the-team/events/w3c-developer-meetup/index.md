@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Vancouver, Canada'
 date: '2022-09-13'
-url: 'https://www.w3.org/2022/09/meetup/index.html'
+externalUrl: 'https://www.w3.org/2022/09/meetup/index.html'
 sessions:
   - speaker: rachelandrew
     title: Interop 2022

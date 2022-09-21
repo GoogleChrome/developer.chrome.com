@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Amsterdam, Netherlands'
 date: '2022-10-27'
-url: 'https://perfnow.nl/'
+externalUrl: 'https://perfnow.nl/'
 sessions:
   - topics:
       - Performance

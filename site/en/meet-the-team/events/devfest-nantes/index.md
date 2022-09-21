@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Nantes, France'
 date: '2022-10-20'
-url: 'https://devfest2022.gdgnantes.com/'
+externalUrl: 'https://devfest2022.gdgnantes.com/'
 sessions:
   - speaker: maudnalpas
     title: The hitchhiker's guide to web privacy

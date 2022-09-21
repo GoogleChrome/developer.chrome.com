@@ -6,7 +6,7 @@ summary: >-
 image: null
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
-url: 'https://fronteersconf.org/'
+externalUrl: 'https://fronteersconf.org/'
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)
