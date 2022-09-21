@@ -9,7 +9,6 @@ const calendarIcon = fs.readFileSync(
   'site/_includes/icons/calendar.svg',
   'utf-8'
 );
-const clockIcon = fs.readFileSync('site/_includes/icons/clock.svg', 'utf-8');
 const pinIcon = fs.readFileSync('site/_includes/icons/pin.svg', 'utf-8');
 const PLACEHOLDER_IMG =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
@@ -100,10 +99,6 @@ function EventCard(event) {
                       </div>
                     `}
                     ${session.topics.map(topic => topicHtml(topic))}
-
-                    <p class="display-flex align-center gap-top-300">
-                      ${clockIcon} ${session.time}
-                    </p>
                   `)
                 )}
 
