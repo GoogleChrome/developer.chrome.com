@@ -1,4 +1,4 @@
-{% from 'macros/cards/frontmatter-card.njk' import frontMatterCard with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
 {% from 'macros/icon.njk' import icon with context %}
 
 {% extends "layouts/base.njk" %}
@@ -54,7 +54,20 @@
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
       {% for fm in paged.pagination.items %}
-        {{ frontMatterCard(fm) }}
+        {% set post = {
+          data: {
+            thumbnail: fm.hero,
+            title: fm.title,
+            alt: fm.title,
+            description: fm.description,
+            tags: fm.tags,
+            authors: fm.authors,
+            date: fm.date
+
+          },
+          url: fm.url
+        } %}
+        {{ blogCard(post) }}
       {% endfor %}
     </div>
     {% include 'partials/pagination.njk' %}

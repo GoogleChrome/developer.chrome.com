@@ -37,6 +37,4 @@ jobs:
           ELEVENTY_ENV: production
         run: |
           npx lhci autorun \
-          --config=./lighthouserc.js \
-          --upload.serverBaseUrl=${{ secrets.LHCI_SERVER }} \
-          --upload.token=${{ secrets.LHCI_TOKEN }}
+          --config=./lighthouserc.js

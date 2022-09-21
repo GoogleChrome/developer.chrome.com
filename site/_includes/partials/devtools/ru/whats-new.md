@@ -3,6 +3,32 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/ru/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/ru/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/ru/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/ru/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ru/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/ru/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/ru/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/ru/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/ru/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/ru/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/ru/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/ru/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/ru/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/ru/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-106/#misc) -->
+
 
 ### Chrome 105 {: #chrome105 }
 

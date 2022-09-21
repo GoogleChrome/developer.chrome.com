@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-07-29
+updated: 2022-09-12
 authors:
   - agektmr
 ---
@@ -18,7 +18,7 @@ Credential Management API (FedCM).
 
 *  The [FedCM proposal](https://github.com/fedidcg/FedCM) has entered [public
    discussion](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 105
+*  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 107
    on Android. Chrome on desktop support starts in Chrome 103. Other browsers
    don't support it yet.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides
@@ -224,7 +224,7 @@ third-party origin trial](/blog/fedcm-origin-trial) for FedCM for support detail
 ## Engage and share feedback {: #share-feedback}
 
 *  **Origin trial**: an [origin trial for
-   FedCM](/origintrials/#/view_trial/3977804370874990593) is available in Chrome from version 101 to 105. Learn more about [the origin trial](/blog/fedcm-origin-trial).
+   FedCM](/origintrials/#/view_trial/3977804370874990593) is available in Chrome from version 101 to 107. Learn more about [the origin trial](/blog/fedcm-origin-trial).
 *  **GitHub**: Read the
    [proposal](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md),
    [raise issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
