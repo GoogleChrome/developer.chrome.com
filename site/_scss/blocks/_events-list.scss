@@ -22,10 +22,11 @@
   }
 
   [role=tablist] {
+    margin-bottom: get-size(400);
+
     @include media-query('lg') {
       display: inline-flex;
       width: auto;
-      margin-bottom: get-size(400);
     }
   }
 }

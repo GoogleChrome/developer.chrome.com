@@ -1,7 +1,7 @@
 .events-hero {
   background: get-color('blue-50');
   border-radius:12px;
-  padding:get-size(400);
+  padding:get-size(500) get-size(400);
   text-align: center;
   margin-bottom: 1.1875rem;
 
@@ -18,9 +18,11 @@
     color: get-color('blue-700');
     margin-bottom: get-size(200);
     font-size: clamp(2rem, 5vw, 4.25rem);
+    line-height: 1.5;
 
     @include media-query('lg') {
       margin-bottom: get-size(400);
+      line-height: 1.2;
 
       span {
         white-space: nowrap;
@@ -42,6 +44,7 @@
   }
 
   &__image {
+    display: none;
     position: relative;
     color: #F57C00;
     span {
@@ -54,6 +57,10 @@
       z-index: 1;
       font-weight: 400;
       letter-spacing: 0.3px;
+    }
+
+    @include media-query('lg') {
+      display: initial;
     }
   }
 }
