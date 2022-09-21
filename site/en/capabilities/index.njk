@@ -33,9 +33,9 @@ sections:
     - url: https://web.dev/file-system-access/
       title: "The File System Access API: simplifying access to local files"
       description: The File System Access API allows web apps to read or save changes directly to files and folders on the user's device.
-    - url: https://web.dev/async-clipboard/
-      title: Unblocking clipboard access
-      description: Safer, unblocked clipboard access for text and images
+    - url: https://web.dev/badging-api/
+      title: Badging for app icons
+      description: The App Badging API allows installed web apps to set an application-wide badge on the app icon.
     - url: /blog/web-custom-formats-for-the-async-clipboard-api/
     - url: https://web.dev/local-fonts/
       title: Use advanced typography with local fonts
@@ -96,26 +96,14 @@ sections:
 {% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
 {% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
 
-{{ heroCardWide(
-  'Capabilities',
-  'Enabling the most amazing apps on the web.',
-  'All capabilities',
-  '/tags/capabilities/',
-  '',
-  '',
-  'red',
-  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg'
-  )
-}}
-
 {{ landingSection(
-  'About capabilities, aka. Project Fugu',
+  'Capabilities, aka. Project Fugu',
   'Learn about the cross-company effort around enabling the most amazing apps on the web.',
   sections.intro,
   'green',
   'top-3',
   true,
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg',
   '',
   333,
   165,
@@ -134,21 +122,6 @@ sections:
   'Fugu fish swarm.',
   964,
   289,
-  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
-  )
-}}
-
-{{ landingSection(
-  'Case studies',
-  'Learn how leading developers have used Fugu APIs to build innovative web experiences.',
-  sections.case_studies,
-  'red',
-  'top-3',
-  true,
-  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/hj30wCIWiTvQSxNI9g5i.svg',
-  '',
-  150,
-  150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
   )
 }}
@@ -179,6 +152,21 @@ sections:
   'Arduino board and many electronic components.',
   400,
   600,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Case studies',
+  'Learn how leading developers have used Fugu APIs to build innovative web experiences.',
+  sections.case_studies,
+  'red',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/hj30wCIWiTvQSxNI9g5i.svg',
+  '',
+  150,
+  150,
   'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
   )
 }}
