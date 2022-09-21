@@ -15,15 +15,8 @@
  */
 
 declare global {
-  export interface AuthorsItem extends VirtualCollectionItem, AuthorsDataItem {}
-
-  export interface Authors {
-    [key: string]: AuthorsItem;
-  }
-
   /**
-   * Represents the FrontMatter of most Markdown files.
-   * These fields come from the `.md` files themselves.
+   * Represents the fields in the FrontMatter of posts' Markdown files.
    */
   export interface FrontMatterData {
     title: string;
@@ -57,14 +50,6 @@ declare global {
     // The following properties are added dynamically
     locale: string;
     url: string;
-  }
-
-  export interface FrontMatterDataCollection {
-    [url: string]: FrontMatterData;
-  }
-
-  export interface PostsData {
-    authors: Authors;
   }
 }
 

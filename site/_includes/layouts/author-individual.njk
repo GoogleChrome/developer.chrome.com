@@ -53,19 +53,18 @@
 
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
-      {% for fm in paged.pagination.items %}
+      {% for item in paged.pagination.items %}
         {% set post = {
           data: {
-            thumbnail: fm.hero,
-            title: fm.title,
-            alt: fm.title,
-            description: fm.description,
-            tags: fm.tags,
-            authors: fm.authors,
-            date: fm.date
-
+            thumbnail: item.thumbnail,
+            title: item.title,
+            alt: item.title,
+            description: item.description,
+            tags: item.tags,
+            authors: item.authors,
+            date: item.date
           },
-          url: fm.url
+          url: item.url
         } %}
         {{ blogCard(post) }}
       {% endfor %}
