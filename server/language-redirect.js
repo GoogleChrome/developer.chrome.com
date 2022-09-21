@@ -23,8 +23,13 @@ const fs = require('fs');
 
 const Negotiator = require('negotiator');
 
-const {rootDir, defaultLocale, doRedirect} = require('./env');
+const {doRedirect} = require('./env');
+const {defaultLocale, locales} = require('../site/_data/site.json');
 
+/**
+ * List of parent directories this handler simply skips in
+ * order to save time, as that's language unspecific content
+ */
 const ignoredPathPrefixes = [
   '_static',
   'fonts',
@@ -33,6 +38,12 @@ const ignoredPathPrefixes = [
   'css',
   'feeds',
 ];
+
+let rootDir = path.resolve(__dirname, '../dist');
+
+if (process.env.NODE_ENV === 'test') {
+  rootDir = path.resolve(__dirname, '../tests/server/fixtures');
+}
 
 /**
  * @type {express.RequestHandler}
@@ -46,7 +57,7 @@ const languageRedirectHandler = (req, res, next) => {
   // not contain pages, let express.static take over
   if (
     pathParts.length === 1 ||
-    pathPrefix.length === 2 ||
+    locales.includes(pathPrefix) ||
     ignoredPathPrefixes.includes(pathPrefix)
   ) {
     return next();
