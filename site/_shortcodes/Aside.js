@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const {i18n} = require('../_filters/i18n');
 
 /**
@@ -7,8 +8,12 @@ const {i18n} = require('../_filters/i18n');
  * load.
  * @return {string} The SVG file contents.
  */
-const loadIcon = name =>
-  fs.readFileSync(`site/_includes/icons/${name}.svg`, 'utf-8');
+function loadIcon(name) {
+  const iconPath = path.resolve(
+    path.join(__dirname, `../_includes/icons/${name}.svg`)
+  );
+  return fs.readFileSync(iconPath, 'utf-8');
+}
 
 const icons = {
   caution: loadIcon('error'),
