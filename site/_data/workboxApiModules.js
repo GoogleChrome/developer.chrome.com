@@ -21,12 +21,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const workboxModules = process.env.ELEVENTY_IGNORE_EXTENSIONS ? fs
-  .readdirSync(path.join(__dirname, '../en/docs/workbox/modules'), {
-    withFileTypes: true,
-  })
-  .filter(d => d.isDirectory())
-  .map(d => d.name) : [];
+const workboxModules = process.env.ELEVENTY_IGNORE_EXTENSIONS
+  ? fs
+      .readdirSync(path.join(__dirname, '../en/docs/workbox/modules'), {
+        withFileTypes: true,
+      })
+      .filter(d => d.isDirectory())
+      .map(d => d.name)
+  : [];
 
 module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
