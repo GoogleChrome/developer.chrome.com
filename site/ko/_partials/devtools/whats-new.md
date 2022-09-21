@@ -2,6 +2,33 @@
 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/ko/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/ko/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/ko/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/ko/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/ko/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ko/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/ko/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/ko/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/ko/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/ko/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/ko/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/ko/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/ko/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/ko/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-106/#misc) -->
+
+
 ### Chrome 105 {: #chrome105 }
 
 * [Recorder의 단계별 재생 기능](/ko/blog/new-in-devtools-105/#recorder)
@@ -17,20 +44,20 @@
 * [기타 하이라이트](/ko/blog/new-in-devtools-105/#misc)
 
 
-<!-- ### Chrome 104 {: #chrome104 }
+### Chrome 104 {: #chrome104 }
 
-* [Restart frame during debugging](/ko/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/ko/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/ko/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/ko/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/ko/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/ko/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/ko/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/ko/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/ko/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/ko/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-104/#misc) -->
+* [디버깅 중에 frame 재시작하기](/ko/blog/new-in-devtools-104/#restart-frame)
+* [Recorder 패널의 느리게 다시보기 옵션들](/ko/blog/new-in-devtools-104/#recorder)
+* [Recorder 패널을 위한 확장 도구 만들기](/ko/blog/new-in-devtools-104/#recorder-extension)
+* [소스 패널에서 작성자 / 배포 순 그룹하기](/ko/blog/new-in-devtools-104/#authored-deployed)
+* [Performance insights 패널에서 새로운 User Timings 추적](/ko/blog/new-in-devtools-104/#performance)
+* [요소의 할당된 슬롯 표시](/ko/blog/new-in-devtools-104/#slot)
+* [성능 기록을 위한 하드웨어 동시성 시뮬레이션](/ko/blog/new-in-devtools-104/#simulate)
+* [CSS 변수 자동 완성 시 색상이 아닌 값 미리보기](/ko/blog/new-in-devtools-104/#css-var)
+* [뒤로-앞으로 캐시 창에서 차단 프레임 식별](/ko/blog/new-in-devtools-104/#bfcache)
+* [자바스크립트 객체 자동완성 제안 기능 개선](/ko/blog/new-in-devtools-104/#autocomplete)
+* [소스맵 개선](/ko/blog/new-in-devtools-104/#sourcemaps)
+* [기타 하이라이트](/ko/blog/new-in-devtools-104/#misc)
 
 ### Chrome 103 {: #chrome103 }
 
@@ -94,6 +121,7 @@
 * [기타 하이라이트](/ko/blog/new-in-devtools-99/#misc)
 
 ### Chrome 98 {: #chrome98 }
+
 * [미리보기 기능: 전체 페이지 접근성 트리](/ko/blog/new-in-devtools-98/#a11y-tree)
 * [변경 탭에서의 더욱 정교한 변화들](/ko/blog/new-in-devtools-98/#changes)
 * [유저 플로우 레코딩을 위한 더 긴 타임아웃 설정](/ko/blog/new-in-devtools-98/#recorder-timeout)
