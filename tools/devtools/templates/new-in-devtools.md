@@ -25,7 +25,9 @@ $thankful
   4. Translate all the <img> alt text
   5. Update the whats-new.md file -->
 
-<!-- Content starts here -->
+<!-- $contentStart -->
+
+<!-- $contentEnd -->
 
 {% include 'partials/devtools/$lang/reach-out.md' %}
 {% include 'partials/devtools/$lang/whats-new.md' %}

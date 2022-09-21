@@ -2,6 +2,7 @@ import {
   createWndtBanners,
   createWndtBlogPosts,
   createGitHubIssues,
+  populateTranslationContent,
 } from './utils.mjs';
 import {config} from 'dotenv';
 
@@ -20,29 +21,14 @@ if (!process.env.GITHUB_TOKEN) {
   Follow the instruction here to generate: https://github.com/settings/tokens/new?scopes=repo';
 }
 
-// @ts-ignore
-createWndtBanners(process.env.DEVTOOLS_VERSION, [
-  'es',
-  'ja',
-  'ko',
-  'pt',
-  'ru',
-  'zh',
-]);
-// @ts-ignore
-createWndtBlogPosts(process.env.DEVTOOLS_VERSION, [
-  'es',
-  'ja',
-  'ko',
-  'pt',
-  'ru',
-  'zh',
-]);
+const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
 
+createWndtBanners(process.env.DEVTOOLS_VERSION, languages);
+createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
+populateTranslationContent(process.env.DEVTOOLS_VERSION, languages);
 createGitHubIssues(
   process.env.DEVTOOLS_VERSION,
   process.env.DEVTOOLS_TRANSLATE_DUE,
   ['es', 'ja', 'ko', 'pt', 'ru', 'zh'],
-  // @ts-ignore
   process.env.GITHUB_TOKEN
 );

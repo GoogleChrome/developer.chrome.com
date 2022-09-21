@@ -135,6 +135,51 @@ export async function createWndtBlogPosts(version, langs) {
 }
 
 /**
+ * Populate What's New in DevTools blog posts content to translation templates
+ * @param {String} version - release version
+ * @param {String[]} langs - languages you want to generate
+ */
+export async function populateTranslationContent(version, langs) {
+  const enFileName = blogDest
+    .replace(langholder, 'en')
+    .replace(verholder, version);
+
+  const contentRegex =
+    /(?<=<!-- \$contentStart -->)(.+?)(?=<!-- \$contentEnd -->)/s;
+  const descRegex = /(?<=description: )(.*)/gm;
+  const enFile = readFileSync(enFileName, 'utf-8');
+  const enDesc = enFile.match(descRegex)?.[0] || '""';
+  let enContent = enFile.match(contentRegex)?.[0] || '';
+
+  const paragraphRegex =
+    /(?<=\n)((?!{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm; // /^(\n)((?!{%|{#|<!-- \$content).*)\n$/gm;
+
+  // @ts-ignore
+  for (const p of enContent.match(paragraphRegex).filter(x => x)) {
+    if (p.startsWith('```'))
+      console.warn(
+        "Output contains code sample. Please check if it's commented correctly."
+      );
+    enContent = enContent.replace(p, `<!-- ${p} -->`);
+  }
+
+  for (const lang of langs) {
+    const fileName = blogDest
+      .replace(langholder, lang)
+      .replace(verholder, version);
+
+    const fileContent = readFileSync(fileName, 'utf-8');
+
+    // TODO: Update replace image with CDN url
+    let output = fileContent.replace(descRegex, enDesc);
+    output = output.replace(contentRegex, enContent);
+
+    writeFileSync(fileName, output, 'utf-8');
+  }
+  console.log(`Populated commented content for: ${langs.join(', ')}`);
+}
+
+/**
  * Append What's New in DevTools outline in 7 languages
  * @param {String} version - release version
  * @param {String[]} langs - languages you want to generate
@@ -185,9 +230,9 @@ export async function createWndtOutline(version, langs) {
 
 /**
  * Create Github Issues for translators to work on
- * @param {*} version - release version
- * @param {*} dueDate - due date to translate
- * @param {Array} langs - languages you want to generate
+ * @param {String} version - release version
+ * @param {String} dueDate - due date to translate
+ * @param {String[]} langs - languages you want to generate
  * @param {String} auth - GitHub Token
  */
 export async function createGitHubIssues(version, dueDate, langs, auth) {
