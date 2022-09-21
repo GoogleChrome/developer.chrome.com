@@ -40,6 +40,14 @@ const internalFind = (collection, cacheKey, key, needle) => {
   return undefined;
 };
 
+/**
+ *
+ * @param {EleventyCollectionItem[]} collection
+ * @param {string} url
+ * A URL as built by 11ty from the permalink key, locale prefix is optional.
+ * @param {string} locale One of the available locales, like en, es, ...
+ * @return {EleventyCollectionItem|undefined}
+ */
 const findByUrl = (collection, url, locale = '') => {
   if (path.extname(url)) {
     throw new Error(`Page urls should not end in file extensions: ${url}`);
@@ -76,16 +84,25 @@ const findByProjectKey = (collection, projectKey, locale) => {
   return internalFind(collection, urlCacheKey, 'url', urlToFind);
 };
 
-const findByFilePath = (collection, filePath, locale = '') => {
-  if (path.extname(filePath)) {
-    throw new Error(`Paths should not end in file extensions: ${filePath}`);
+/**
+ *
+ * @param {EleventyCollectionItem[]} collection
+ * @param {string} filePathStem
+ * The filePathStem as exposed on the collection item. The relative path
+ * to the source document's parent directory
+ * @param {string} locale One of the available locales, like en, es, ...
+ * @return {EleventyCollectionItem|undefined}
+ */
+const findByFilePath = (collection, filePathStem, locale = '') => {
+  if (path.extname(filePathStem)) {
+    throw new Error(`Paths should not end in file extensions: ${filePathStem}`);
   }
 
   // Ensure urls are always absolute. This is because eleventy's collection
   // urls are always absolute so if we try to match against a relative url
   // we'll always miss.
-  if (!path.isAbsolute(filePath)) {
-    filePath = path.join('/', filePath);
+  if (!path.isAbsolute(filePathStem)) {
+    filePathStem = path.join('/', filePathStem);
   }
 
   // Make sure language paths are absolute (ja becomes /ja).
@@ -96,7 +113,7 @@ const findByFilePath = (collection, filePath, locale = '') => {
     locale = path.join('/', locale);
   }
 
-  let filePathToFind = path.join(locale, filePath);
+  let filePathToFind = path.join(locale, filePathStem);
   const result = internalFind(
     collection,
     pathCacheKey,
@@ -111,7 +128,7 @@ const findByFilePath = (collection, filePath, locale = '') => {
     return result;
   }
 
-  filePathToFind = path.join('/', defaultLocale, filePath);
+  filePathToFind = path.join('/', defaultLocale, filePathStem);
   return internalFind(collection, pathCacheKey, 'filePathStem', filePathToFind);
 };
 
