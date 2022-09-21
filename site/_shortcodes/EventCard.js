@@ -39,7 +39,9 @@ function EventCard(event) {
                     ${image}
                   </figure>
 
-                  <a href="${event.externalUrl}" target="_blank">
+                  <a href="${event.externalUrl}"
+                     class="decoration-none"
+                     target="_blank">
                     ${event.title}
                   </a>
                 </div>
