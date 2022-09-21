@@ -133,7 +133,7 @@ Another example are the [hardware APIs](https://web.dev/tags/devices/) that allo
 these APIs have been around for a while, until recently there was no way to forget a device that you
 had previously connected to. Now there is thanks to the
 [`forget()`](https://wicg.github.io/serial/#forget-method) methods for some of the APIs. For
-example, here's how to forget a previously connected to serial device, which improves the privacy of
+example, here's how to forget a previously connected serial device, which improves the privacy of
 the API.
 
 ```js
