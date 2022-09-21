@@ -14,27 +14,31 @@
  * limitations under the License.
  */
 
-import { BaseElement } from './base-element'
+import {BaseElement} from './base-element';
 
 /* eslint-disable require-jsdoc */
 export class EnhancedEventCard extends BaseElement {
   connectedCallback() {
     super.connectedCallback();
 
-    this.card = this.getCardElement()
-    this.detailsButton = this.getButtonElement(this.card)
+    this.card = this.getCardElement();
+    this.detailsButton = this.getButtonElement(this.card);
 
-    this.detailsButton.addEventListener('click', this.toggleEventDetails);
+    this.detailsButton.addEventListener(
+      'click',
+      this.toggleEventDetails.bind(this)
+    );
 
     this.card.removeAttribute('tabindex');
     this.card.classList.remove('no-js');
   }
 
-  toggleEventDetails = () => {
+  toggleEventDetails() {
     // @ts-ignore
-    const visible = this.card.getAttribute('show-details') === "1" ? "0" : "1";
+    const visible = this.card.getAttribute('show-details') === '1' ? '0' : '1';
 
-    this.detailsButton.innerHTML = visible === "1" ? 'Hide event details' : 'See event details';
+    this.detailsButton.innerHTML =
+      visible === '1' ? 'Hide event details' : 'See event details';
 
     // @ts-ignore
     this.card.setAttribute('show-details', visible);

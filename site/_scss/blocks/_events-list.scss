@@ -1,23 +1,19 @@
 .events-list {
   [role=tab] {
+    cursor: pointer;
     font-family: #{$font-google-sans};
     font-size: 1.125rem;
-    cursor: pointer;
-
-    &[aria-selected="true"] {
-      color: get-color('grey-900');
-      font-weight: 500;
-      cursor: initial;
-    }
 
     @include media-query('lg') {
       flex: 0 0 auto;
       font-size: 2rem;
       height: auto;
+    }
 
-      &:last-child {
-        margin-left: get-size(1000);
-      }
+    &[aria-selected='true'] {
+      color: get-color('grey-900');
+      cursor: initial;
+      font-weight: 500;
     }
   }
 
@@ -27,6 +23,12 @@
     @include media-query('lg') {
       display: inline-flex;
       width: auto;
+    }
+  }
+
+  [role=tab]:last-child {
+    @include media-query('lg') {
+      margin-left: get-size(1000);
     }
   }
 }

@@ -1,66 +1,69 @@
 .events-hero {
   background: get-color('blue-50');
-  border-radius:12px;
-  padding:get-size(500) get-size(400);
-  text-align: center;
+  border-radius: 12px;
   margin-bottom: 1.1875rem;
+  padding: get-size(500) get-size(400);
+  text-align: center;
 
   @include media-query('lg') {
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: get-size(400);
     padding-left: get-size(800);
     text-align: left;
-    margin-bottom: get-size(400);
   }
 
   h1 {
     color: get-color('blue-700');
-    margin-bottom: get-size(200);
     font-size: clamp(2rem, 5vw, 4.25rem);
     line-height: 1.5;
+    margin-bottom: get-size(200);
 
     @include media-query('lg') {
-      margin-bottom: get-size(400);
       line-height: 1.2;
+      margin-bottom: get-size(400);
+    }
+  }
 
-      span {
-        white-space: nowrap;
-      }
+  h1 span {
+    @include media-query('lg') {
+      white-space: nowrap;
     }
   }
 
   p {
     font-size: get-size(300);
-    line-height: get-size(400);
     font-weight: 400;
+    line-height: get-size(400);
     margin: 0 auto;
 
     @include media-query('lg') {
-      max-width: 400px;
-      margin: initial;
       font-size: clamp(0.9rem, 1.25vw, 1rem);
+      margin: initial;
+      max-width: 400px;
     }
   }
 
   &__image {
+    color: #f57c00;
     display: none;
     position: relative;
-    color: #F57C00;
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: #{$font-google-sans};
-      font-size: clamp(5rem, 11vw, 9.375rem);
-      z-index: 1;
-      font-weight: 400;
-      letter-spacing: 0.3px;
-    }
 
     @include media-query('lg') {
       display: initial;
+    }
+
+    span {
+      font-family: #{$font-google-sans};
+      font-size: clamp(5rem, 11vw, 9.375rem);
+      font-weight: 400;
+      left: 50%;
+      letter-spacing: 0.3px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
     }
   }
 }

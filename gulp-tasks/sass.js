@@ -24,7 +24,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 // but gulp requires all tasks to return a promise.
 const sass = async () => {
   // nb. No need to catch errors because gulp handles that for us and logs them.
-  entrypoints.forEach((entrypoint) => {
+  entrypoints.forEach(entrypoint => {
     const result = sassProcessor.renderSync({
       file: entrypoint.src,
       // nb. Sass doesn't actually write to this outFile, the caller must do that
@@ -43,7 +43,7 @@ const sass = async () => {
     if (!isProduction) {
       writeFileSync(entrypoint.dest + '.map', result.map.toString(), 'utf8');
     }
-  })
+  });
 };
 
 module.exports = sass;
