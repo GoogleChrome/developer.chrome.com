@@ -43,8 +43,6 @@ prefer, you can download the complete source code from [Github][github-reading-t
 The manifest JSON file is the only required extension file. It holds important information about the
 extension. Create a `manifest.json` file in the _root_ of the project and add the following code:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   "manifest_version": 3,
@@ -77,8 +75,6 @@ places like the Extensions page.
 
 Create an `images` folder and place the icons inside. You can download the icons on
 [Github][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
-
-{% Label %}manifest.json:{% endLabel %}
 
 ```json/2-7
 {
@@ -116,8 +112,6 @@ scripts_. Content scripts live in an [isolated world][doc-isolated], which means
 
 Add the following code to the `manifest.json` to register a content script called
 `content.js`.
-
-{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -167,8 +161,6 @@ Then, it will count all the words within this element and create a paragraph tha
 reading time.
 
 Create a new folder called `scripts`. Add a file called `content.js` and include the following code: 
-
-{% Label %}content.js:{% endLabel %}
 
 ```js
 const article = document.querySelector("article");

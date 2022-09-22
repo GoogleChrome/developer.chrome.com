@@ -34,8 +34,6 @@ prefer, you can download the complete source code on [Github][github-focus-mode]
 
 Create a file called `manifest.json` and include the following code.
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   "manifest_version": 3,
@@ -63,8 +61,6 @@ events and terminated when they're no longer needed.
 
 Start by adding the following code to register the service worker in the manifest:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   ...
@@ -89,8 +85,6 @@ icon).
 
 Create a file called `background.js` and add the following code to set the initial state to “OFF”:
 
-{% Label %}background.js:{% endLabel %}
-
 ```js
 chrome.runtime.onInstalled.addListener(() => {
   chrome.action.setBadgeText({
@@ -104,8 +98,6 @@ chrome.runtime.onInstalled.addListener(() => {
 The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the
 extension action, it will either run some code (like in this example) or display a popup. Add the
 following code to declare the extension action in the manifest:
-
-{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {
@@ -151,8 +143,6 @@ trigger a [permission warning][doc-perms-warning].
 
 To use the `activeTab` permission, add it to the manifest's permission array:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   ...
@@ -166,8 +156,6 @@ To use the `activeTab` permission, add it to the manifest's permission array:
 After the user clicks on the extension action, the extension will check if the URL matches a
 documentation page. Next, it will check the state of the current tab and set the next state. Add the
 following code to `background.js`:
-
-{% Label %}background.js:{% endLabel %}
 
 ```js
 chrome.action.onClicked.addListener(async (tab) => {
@@ -190,8 +178,6 @@ chrome.action.onClicked.addListener(async (tab) => {
 Now it's time to change the layout of the page. Create a file named `focus-mode.css` and include the
 following code:
 
-{% Label %}focus-mode.css:{% endLabel %}
-
 ```js
 body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
 main > :not(:last-child),
@@ -209,8 +195,6 @@ main > :last-child {
 Let's insert or remove the stylesheet using the [Scripting][api-scripting] API. Start by
 declaring the `"scripting"` permission in the manifest:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   ...
@@ -226,8 +210,6 @@ The Scripting API does not trigger a [permission warning][doc-perms-warning].
 {% endAside %}
 
 Finally, in `background.js` add the following code to change the layout of the page:
-
-{% Label %}background.js:{% endLabel %}
 
 ```js
   ...
@@ -261,8 +243,6 @@ Yes! You can use [`scripting.executeScript()`][api-scripting-es] to inject JavaS
 
 Just for fun, let's add a shortcut to make it easier to enable or disable focus mode. Add the
 `"commands"` key to the manifest.
-
-{% Label %}manifest.json:{% endLabel %}
 
 ```json
 {

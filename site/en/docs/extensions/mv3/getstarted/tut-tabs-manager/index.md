@@ -42,8 +42,6 @@ prefer, you can download the complete source code on [Github][github-tabs-manage
 
 Create a file called `manifest.json` and add the following code:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   "manifest_version": 3,
@@ -69,8 +67,6 @@ The [Action][api-action] API controls the extension action (toolbar icon). When 
 the extension action, it will either run some code or open a popup, like in this case. Start by
 declaring the popup in the manifest:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   ...
@@ -83,8 +79,6 @@ declaring the popup in the manifest:
 
 A popup is similar to a web page with one exception: it can't run inline JavaScript. Create a popup
 HTML file and add the following code:
-
-{% Label %}popup.html:{% endLabel %}
 
 ```html
 <!DOCTYPE html>
@@ -122,8 +116,6 @@ tag.
 {% endAside %}
 
 Next, let's style the popup. Create a popup CSS file and add the following code:
-
-{% Label %}popup.css:{% endLabel %}
 
 ```css
 body {
@@ -167,8 +159,6 @@ Narrow [host permissions][doc-match] allow us to protect user privacy by grantin
 
 Add the highlighted code to the `manifest.json` file:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json/2-3
 {
   ...
@@ -203,8 +193,6 @@ These warning can be alarming for users. For a better onboarding experience, we 
 You can retrieve the tabs from specific URLs using the `tabs.query()` method. Create a `popup.js`
 file and add the following code:
 
-{% Label %}popup.js:{% endLabel %}
-
 ```js
 const tabs = await chrome.tabs.query({
   url: [
@@ -230,8 +218,6 @@ chrome schema. For example `chrome-extension://EXTENSION_ID/popup.html`.
 First, the extension will sort tab names (the titles of the contained HTML pages) alphabetically. Then, when a list item is clicked, it will
 focus on that tab using `tabs.update()` and bring the window to the front using `windows.update()`.
 Add the following code to `popup.js`:
-
-{% Label %}popup.js:{% endLabel %}
 
 ```js
 ...
@@ -278,8 +264,6 @@ document.querySelector("ul").append(...elements);
 The [TabGroups][api-tabgroups] API allows the extension to name the group and choose a background
 color. Add the `“tabGroups”` permission to the manifest by adding the highlighted code:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json/2-4
 {
   ...
@@ -289,10 +273,8 @@ color. Add the `“tabGroups”` permission to the manifest by adding the highli
 }
 ```
 
-Add the following code to create a button that will group all the tabs using [`tabs.group()`][api-tabgroups] and
+In `popup.js`, add the following code to create a button that will group all the tabs using [`tabs.group()`][api-tabgroups] and
 move them into the current window.
-
-{% Label %}popup.js:{% endLabel %}
 
 ```js
 ...

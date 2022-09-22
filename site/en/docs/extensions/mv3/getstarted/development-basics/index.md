@@ -30,8 +30,6 @@ source code from [Github][sample-hello-world].
 
 Next, create a new file in this directory called `manifest.json` and add the following code:
 
-{% Label %}manifest.json:{% endLabel %}
-
 ```json
 {
   "manifest_version": 3,
@@ -49,8 +47,6 @@ This JSON object describes the extension's capabilities and configuration. For e
 declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
-
-{% Label %}hello.html{% endLabel %}
 
 ``` html
 <html>
@@ -111,9 +107,7 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
 
 ## Reloading the extension {: #reload }
 
-Let’s go back to the code and change the name of the extension to "Hello Extensions of the world!".
-
-{% Label %}manifest.json{% endLabel %}
+Let’s go back to the code and change the name of the extension to "Hello Extensions of the world!" in the manifest.
 
 ```json
 {
@@ -154,8 +148,6 @@ Not all components require the extension to reload. The following table shows wh
 During development, you can debug your code by accessing the browser console logs. In this case, we
 will locate the logs for the popup. Start by adding a script tag to `hello.html`.
 
-{% Label %}hello.html{% endLabel %}
-
 ```html
 <html>
   <body>
@@ -166,8 +158,6 @@ will locate the logs for the popup. Start by adding a script tag to `hello.html`
 ```
 
 Create a `popup.js` file and add the following code:
-
-{% Label %}popup.js{% endLabel %}
 
 ```js
 console.log("This is a popup!")
@@ -198,8 +188,6 @@ To see this message logged in the Console:
 ### Error logs {: #errors }
 
 Now let's break the extension. We can do so by removing the closing quote in the `popup.js` file:
-
-{% Label %}popup.js{% endLabel %}
 
 ```js
 console.log("This is a popup!) // broken code
