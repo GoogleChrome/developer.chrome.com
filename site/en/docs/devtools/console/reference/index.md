@@ -97,11 +97,15 @@ To view a stack trace, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/
 
 #### Async stack traces {: #async-stack-traces }
 
-If supported by the framework you are using, DevTools can trace async operations by linking both parts of the async code together. See [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces) to learn more.
+If supported by the framework you are using, DevTools can trace async operations by linking both parts of the async code together.
 
 In this case, the stack trace shows the "full story" of the async operation.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hyeBPwNtQQ933gjh7Sp7.png", alt="Async stack trace.", width="800", height="861" %}
+
+{% Aside 'gotchas' %}
+DevTools implements this "Async Stack Tagging" feature based on the `console.createTask()` API method. It is up to frameworks to implement the API. For example, [Angular supports this feature](/blog/devtools-better-angular-debugging/#the-async-stack-tagging-api-in-angular).
+{% endAside %}
 
 #### Show known third-party frames in stack traces {: #show-third-party }
 

@@ -71,7 +71,7 @@ To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5
 To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the **Navigation** tree.
 
 {% Aside 'gotchas' %}
-By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 {% endAside %}
 
 To hide known third-party sources:
