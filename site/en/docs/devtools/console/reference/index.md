@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2019-04-18
-updated: 2022-07-22
+updated: 2022-09-22
 description:
   "A comprehensive reference on every feature and behavior related to the Console UI in Chrome
   DevTools."

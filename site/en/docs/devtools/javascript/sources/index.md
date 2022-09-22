@@ -124,7 +124,7 @@ To provide you with the modern web debugging experience, DevTools does the follo
   - [The **Console** hides such frames from stack traces](/docs/devtools/console/reference/#show-third-party).
   - [The **Open File** menu hides such files from search results](/docs/devtools/command-menu/#open-ignore-listed-files).
 
-Additionally, if supported by frameworks, the **Call Stack** in the debugger and [stack traces in the **Console**](/docs/devtools/console/reference/#async-stack-traces) show the full history of asynchronous operations.
+Additionally, if supported by frameworks, the [**Call Stack** in the debugger](/docs/devtools/javascript/reference/#async-frames) and [stack traces in the **Console**](/docs/devtools/console/reference/#async-stack-traces) show the full history of asynchronous operations.
 
 To learn more, see:
 

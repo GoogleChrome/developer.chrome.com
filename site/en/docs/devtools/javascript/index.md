@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-09-22
+updated: 2022-08-30
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
 tags:
   - get-started
