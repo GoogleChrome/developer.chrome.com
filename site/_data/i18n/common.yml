@@ -26,6 +26,12 @@ compare_old:
 compare_new:
   en: 'New'
 
+compare_before:
+  en: 'Before'
+
+compare_after:
+  en: 'After'
+
 menu:
   en: 'menu'
   es: 'menu'
