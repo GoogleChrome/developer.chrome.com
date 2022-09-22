@@ -14,7 +14,7 @@ tags:
 
 In this post, we're excited to share some significant improvements to the Chrome extensions Getting Started experience and a few ways you can be part of this dream.
 
-## First attempt {: #former-guide }
+## The old guide {: #former-guide }
 
 Previously, the Chrome Extension Getting Started tutorial was a basic extension example that would change the background color of the current page by clicking on a button in the extension popup. It also included an options page where you could pick one of four colors.
 
@@ -22,13 +22,13 @@ The thought was to teach a variety of core extension concepts and development wo
 
 ## A new approach {: #new-guides }
 
-It was time for a change. We know developers rely on our documentation to begin their Chrome extension learning journey, and our goal is to provide a path that is accessible, beginner-friendly, and relevant.
+ We know developers rely on our documentation to begin their Chrome extension learning journey, and our goal is to provide a path that is accessible, beginner-friendly, and relevant.
 
 Instead of trying to improve the existing tutorial example, we decided to start from scratch. We researched the most frequently asked questions that developers had when creating their first Chrome extension and came up with the following set of documents.
 
 Introducing the new and improved Getting Started collection:
 
-## A few essentials {: #conceptual }
+### A few essentials {: #conceptual }
 
 [Extensions 101][doc-ext-101]
 
@@ -38,7 +38,7 @@ Introducing the new and improved Getting Started collection:
 
 : Introduces the extension development workflow by creating a _Hello, Extensions_ example. It walks through loading the extension during development, locating logs and errors, choosing a project structure, and using Typescript.
 
-## The tutorials {: #tutorials }
+### The tutorials {: #tutorials }
 
 These tutorials not only teach you how to build real-world extensions but also strive to share development tips and best practices. In addition, using these extensions will improve your experience while reading the extension documentation.
 
@@ -82,7 +82,7 @@ If you have an idea for another beginner tutorial, you can let us know by follow
 - Choose “New extension guide request”.
 - Fill out and submit the form.
 
-We still have work to do, but this is a step in the right direction. We're excited to continue expanding and collaborating with the extension developer community.
+We think this new getting started guide is a big improvement over the old one, but we're not stopping here; we'll keep working to improve and expand our documentation to better serve all extension developers. We're excited to continue collaborating with the extension developer community.
 
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
