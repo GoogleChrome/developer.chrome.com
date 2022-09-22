@@ -95,7 +95,7 @@ To view a stack trace, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TINzuAQUw7Ug3g2pOljm.png", alt="Stack traces.", width="800", height="401" %}
 
-#### Async stack traces {: #async-stack-traces }
+#### View async stack traces {: #async-stack-traces }
 
 If supported by the framework you are using, DevTools can trace async operations by linking both parts of the async code together.
 

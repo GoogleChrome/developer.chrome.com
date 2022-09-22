@@ -47,7 +47,7 @@ Alternatively, you can go straight to the **Open File** menu in one of the follo
 **Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available in Chrome from version 106.
 {% endAside %}
 
-By default, DevTools hides the files of known third-parties. To open such files from the menu, disable the [Hide ignore-listed sources](/docs/devtools/javascript/sources/#hide-ignore-listed) option in the **Sources** panel.
+By default, DevTools hides the files of known third-parties. To open such files from the menu, disable the [Hide ignore-listed sources](/docs/devtools/javascript/reference/#hide-ignore-listed) option in the **Sources** panel.
 
 ## See other available actions {: #help }
 
