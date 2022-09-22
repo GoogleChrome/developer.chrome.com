@@ -69,11 +69,11 @@ To load an unpacked extension in developer mode:
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the extension directory.
     <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Chrome Extension Management page", 
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Extensions page", 
     width="400", height="183",  class="screenshot" %}
 
       <figcaption>
-      Chrome Management (chrome://extensions)
+      Extensions page (chrome://extensions)
       </figcaption>
     </figure>
 
@@ -211,24 +211,7 @@ extensions][doc-debug].
 There are many ways to structure an extension project; however, you must place the
 manifest.json file in the extension's **root directory**. The following is a structure example:
 
-
-```text/1
-└── my-extension/
-    ├── manifest.json
-    ├── background.js
-    ├── scripts/
-    │   └── content.js
-    │   └── react.production.min.js
-    ├── popup/
-    │   └── popup.html
-    │   └── popup.js
-    │   └── popup.css
-    └── images/
-        ├── icon-16.png
-        ├── icon-32.png
-        ├── icon-48.png
-        └── icon-128.png
-```
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hjccQNanPjTDpIajkhPU.png", alt="The contents of an extension folder: manifest.json, background.js, scripts folder, popup folder, and images folder.", width="700", height="468" %}
 
 ## Using Typescript {: #types }
 

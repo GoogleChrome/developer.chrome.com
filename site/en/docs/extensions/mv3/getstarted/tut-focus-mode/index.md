@@ -265,17 +265,9 @@ code is needed!
 
 Verify that the file structure of your project looks like the following: 
 
-```text
-focus-mode/
-├── manifest.json
-├── background.js
-├── focus-mode.css
-└── images/
-    ├── icon-16.png
-    ├── icon-32.png
-    ├── icon-48.png
-    └── icon-128.png
-```
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/S86ooJMjFm5uvf906u9a.png", 
+alt="The contents of the focus mode folder: manifest.json, background.js, 
+focus-mode.css, and images folder.", width="700", height="468" %}
 
 ### Load your extension locally {: #locally }
 

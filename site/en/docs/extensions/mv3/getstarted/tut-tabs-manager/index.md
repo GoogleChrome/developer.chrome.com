@@ -290,18 +290,7 @@ button.addEventListener("click", async () => {
 
 Verify that the file structure of your project matches the following directory tree: 
 
-```text
-└── tabs-manager/
-    ├── manifest.json
-    ├── popup.js
-    ├── popup.css
-    ├── popup.html
-    └── images/
-        ├── icon-16.png
-        ├── icon-32.png
-        ├── icon-48.png
-        └── icon-128.png
-```
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/JpuMfgSxQL9Y7XLymf1r.png", alt="The contents of the tabs manager folder: manifest.json, popup.js, popup.css, popup.html, and images folder.", width="700", height="324" %}
 
 ### Load your extension locally {: #locally }
 

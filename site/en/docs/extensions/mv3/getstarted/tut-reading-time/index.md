@@ -205,17 +205,8 @@ if (article) {
 
 Verify that the file structure of your project looks like the following: 
 
-```text
-└── reading-time/
-    ├── manifest.json
-    ├── scripts/
-    │   └── content.js
-    └── images/
-        ├── icon-16.png
-        ├── icon-32.png
-        ├── icon-48.png
-        └── icon-128.png
-```
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/clhDe13hHGwiNyuRczzk.png", 
+alt="The contents of the reading time folder: manifest.json, content.js in scripts folder, and images folder.", width="700", height="294" %}
 
 ### Load your extension locally {: #locally }
 
