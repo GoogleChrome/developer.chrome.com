@@ -4,8 +4,8 @@ description: >
   TBA
 layout: "layouts/blog-post.njk"
 authors:
-  - dotproto
-date: 2022-09-10
+  - amysteam
+date: 2022-09-25
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9mMec0BTzXrg4uMqJF63.jpg'
 alt: ''
 tags:
