@@ -22,22 +22,16 @@ const {defaultLocale} = require('../../_data/site.json');
 const internalFind = (collection, cacheKey, key, needle) => {
   let cache = collection[cacheKey];
   if (cache === undefined) {
-    cache = {};
+    cache = new Map();
     for (const entry of collection) {
       if (entry[key]) {
-        cache[entry[key]] = entry;
+        cache.set(entry[key], entry);
       }
     }
     collection[cacheKey] = cache;
   }
 
-  if (needle in cache) {
-    return cache[needle];
-  }
-
-  // The cache contains all available pages, so if a needle is not
-  // found in cache a page for that needle does not exist
-  return undefined;
+  return cache.get(needle);
 };
 
 /**
