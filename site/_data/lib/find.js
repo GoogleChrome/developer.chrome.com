@@ -87,42 +87,27 @@ const findByProjectKey = (collection, projectKey, locale) => {
  * @param {string} locale One of the available locales, like en, es, ...
  * @return {EleventyCollectionItem|undefined}
  */
-const findByFilePath = (collection, filePathStem, locale = '') => {
+const findByFilePath = (collection, filePathStem, locale = defaultLocale) => {
   if (path.extname(filePathStem)) {
     throw new Error(`Paths should not end in file extensions: ${filePathStem}`);
   }
 
-  // Ensure urls are always absolute. This is because eleventy's collection
-  // urls are always absolute so if we try to match against a relative url
-  // we'll always miss.
+  // Ensure paths are always absolute. This is because 11ty file path stems
+  // paths are always absolute so if we try to match against a relative path
+  // it will always miss.
   if (!path.isAbsolute(filePathStem)) {
     filePathStem = path.join('/', filePathStem);
   }
 
   // Make sure language paths are absolute (ja becomes /ja).
   // These don't need to end in a trailing slash because they'll be prepended
-  // to the url which already starts with a trailing slash.
+  // to the path which already starts with a trailing slash.
   // e.g. /ja/docs/extensions/
-  if (locale && !path.isAbsolute(locale)) {
+  if (!path.isAbsolute(locale)) {
     locale = path.join('/', locale);
   }
 
-  let filePathToFind = path.join(locale, filePathStem);
-  const result = internalFind(
-    collection,
-    pathCacheKey,
-    'filePathStem',
-    filePathToFind
-  );
-
-  // If something has been found or nothing has been found while
-  // not specifying a locale, end here. If a locale has been defined
-  // we want to try searching again with the default locale
-  if (result || !locale) {
-    return result;
-  }
-
-  filePathToFind = path.join('/', defaultLocale, filePathStem);
+  const filePathToFind = path.join(locale, filePathStem);
   return internalFind(collection, pathCacheKey, 'filePathStem', filePathToFind);
 };
 
