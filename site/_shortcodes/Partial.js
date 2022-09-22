@@ -1,8 +1,8 @@
 const path = require('path');
 
 const {findByFilePath} = require('../_data/lib/find');
+const {defaultLocale} = require('../_data/site.json');
 
-const defaultLocale = 'en';
 const basePath = '_partials';
 
 /**
