@@ -144,7 +144,7 @@ Pseudo-elements are always bound to a real element in the DOM, called the [origi
 
 Instead of being transformed to `#foo::before:where([cq-XYZ~="123"])` (which would be invalid), the conditional selector is moved to the end of the originating element, `#foo`.
 
-However, that’s not all that is needed. A container isn’t allowed to modify anything not contained _within_ it (and a container can’t be inside of itself), but consider that is exactly what would happen if #foo was itself the container element being queried. The `#foo[cq-XYZ]` attribute would be erroneously changed, and any `#foo` rules would be erroneously applied.
+However, that’s not all that is needed. A container isn’t allowed to modify anything not contained _within_ it (and a container can’t be inside of itself), but consider that is exactly what would happen if `#foo` was itself the container element being queried. The `#foo[cq-XYZ]` attribute would be erroneously changed, and any `#foo` rules would be erroneously applied.
 
 To correct this, the polyfill actually uses _two_ attributes: one that can only be applied to an element by a parent, and one that an element can apply to itself. The latter attribute is used for selectors that target pseudo-elements.
 
@@ -174,7 +174,7 @@ Since a container will never apply the first attribute (`cq-XYZ-A`) to itself, t
 
 ### Container relative units
 
-Container queries also come with [a few new units](https://www.w3.org/TR/css-contain-3/#container-lengths) that you can use in your CSS, such as `cqw` and `cqh` for 1% of the width and height (respectively) of the closest appropriate parent container. To support these, the unit is transformed into a `calc(...)` expression using CSS Custom Properties. The polyfill will set the values for these properties via inline styles on the container element.
+Container queries also come with [a few new units](https://www.w3.org/TR/css-contain-3/#container-lengths) that you can use in your CSS, such as `cqw` and `cqh` for 1% of the width and height (respectively) of the closest appropriate parent container. To support these, the unit is transformed into a `calc(...)` expression using [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*). The polyfill will set the values for these properties via inline styles on the container element.
 
 {% Compare 'worse', 'before' %}
 ```css
@@ -194,7 +194,7 @@ Container queries also come with [a few new units](https://www.w3.org/TR/css-con
 ```
 {% endCompare %}
 
-There are also logical units, like `cqi` and `cqb` for inline size and block size (respectively). These are a little bit more complicated, because the inline and block axes are determined by the [writing-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) of _the element using the unit_, not the element being queried. To support this, the polyfill applies an inline style to any element whose `writing-mode` differs from its parent.
+There are also logical units, like `cqi` and `cqb` for inline size and block size (respectively). These are a little bit more complicated, because the inline and block axes are determined by the [`writing-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) of _the element using the unit_, not the element being queried. To support this, the polyfill applies an inline style to any element whose `writing-mode` differs from its parent.
 
 ```css
 /* Element with a horizontal writing mode */
@@ -248,7 +248,7 @@ These properties are transformed whenever they’re discovered, allowing the pol
 ```
 {% endCompare %}
 
-By default, CSS Custom Properties are inherited, meaning that e.g. any child of `.card` will take on the value of `--cq-XYZ-container-name` and `--cq-XYZ-container-type`. That’s definitely not how the native properties behave. To solve this, the polyfill will insert the following rule before any user styles, ensuring that every element receives the initial values, unless intentionally overridden by another rule.
+By default, CSS Custom Properties are inherited, meaning for example that any child of `.card` will take on the value of `--cq-XYZ-container-name` and `--cq-XYZ-container-type`. That’s definitely not how the native properties behave. To solve this, the polyfill will insert the following rule before any user styles, ensuring that every element receives the initial values, unless intentionally overridden by another rule.
 
 ```css
 * {
