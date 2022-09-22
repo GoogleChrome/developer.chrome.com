@@ -9,15 +9,15 @@ authors:
   - gbmonaco
 ---
 
-# Inside the container query polyfill
+## Inside the container query polyfill
 
 [Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a new CSS feature that enables you to write styling logic that targets features of a parent element (for example, its width or height) to style its children. Recently, a [big update](https://developer.chrome.com/blog/cq-polyfill/) to the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) was released, coinciding with support landing in browsers.
 
 In this post, you will be able to take a peek inside how the polyfill works, the challenges it overcomes, and the best practices when using it to provide a great user experience for your visitors.
 
-# Under the hood
+## Under the hood
 
-## Transpilation
+### Transpilation
 
 When the CSS parser inside a browser encounters an unknown at-rule, like the brand new `@container` rule, it will simply discard it as if it never existed. Therefore, the first and most important thing the polyfill must do is transpile an `@container` query into something that won’t be discarded.
 
@@ -122,7 +122,7 @@ This has a number of benefits:
 
 During transpilation, the polyfill will replace this dummy with the attribute selector with the same specificity. To avoid any surprises, the polyfill uses both selectors: the original source selector is used to determine if the element should receive the polyfill attribute, and the transpiled selector is used for styling.
 
-## Pseudo-elements
+### Pseudo-elements
 
 One question you might be asking yourself is: if the polyfill sets some `cq-XYZ` attribute on an element to include the unique container ID `123`, how can pseudo-elements, which can’t have attributes set on them, be supported?
 
@@ -182,7 +182,7 @@ To correct this, the polyfill actually uses _two_ attributes: one that can only 
 
 Since a container will never apply the first attribute (`cq-XYZ-A`) to itself, the first selector will only match if a _different_ parent container has met the container conditions and applied it.
 
-## Container relative units
+### Container relative units
 
 Container queries also come with [a few new units](https://www.w3.org/TR/css-contain-3/#container-lengths) that you can use in your CSS, such as `cqw` and `cqh` for 1% of the width and height (respectively) of the closest appropriate parent container. To support these, the unit is transformed into a `calc(...)` expression using CSS Custom Properties. The polyfill will set the values for these properties via inline styles on the container element.
 
@@ -218,7 +218,7 @@ There are also logical units, like `cqi` and `cqb` for inline size and block siz
 
 Now, the units can be transformed into the appropriate CSS Custom Property just as before.
 
-## Properties
+### Properties
 
 Container queries also add a few new CSS properties like [`container-type`](https://www.w3.org/TR/css-contain-3/#container-type) and [`container-name`](https://www.w3.org/TR/css-contain-3/#container-name). Since APIs like `getComputedStyle(...)` can’t be used with unknown or invalid properties, these are also transformed to CSS Custom Properties _after being parsed_. If a property can’t be parsed (for example, because it contains an invalid or unknown value), it’s simply left alone for the browser to handle.
 
@@ -267,7 +267,7 @@ By default, CSS Custom Properties are inherited, meaning that e.g. any child of 
 }
 ```
 
-# Best practices
+## Best practices
 
 While it’s expected that most visitors will be running browsers with built-in container query support sooner rather than later, it’s still important to give your remaining visitors a good experience.
 
@@ -297,7 +297,7 @@ This approach is recommended for a number of reasons:
 * After the polyfill loads, this `@supports` condition will stop passing, and your content will be revealed.
 * On browsers with built-in support for container queries, the condition will never pass, and so the page will be displayed on the first-paint as expected.
 
-# Conclusion
+## Conclusion
 
 If you're interested in using container queries on older browsers, give the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) a try. Don't hesitate to [file an issue](https://github.com/GoogleChromeLabs/container-query-polyfill/issues/new) if you run into any problems.
 
