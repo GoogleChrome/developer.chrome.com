@@ -9,8 +9,6 @@ authors:
   - gbmonaco
 ---
 
-## Inside the container query polyfill
-
 [Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a new CSS feature that enables you to write styling logic that targets features of a parent element (for example, its width or height) to style its children. Recently, a [big update](https://developer.chrome.com/blog/cq-polyfill/) to the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) was released, coinciding with support landing in browsers.
 
 In this post, you will be able to take a peek inside how the polyfill works, the challenges it overcomes, and the best practices when using it to provide a great user experience for your visitors.
@@ -47,7 +45,6 @@ Before container queries, CSS didn’t have a way for an author to arbitrarily e
 
 {% Compare 'worse', 'before' %}
 ```css
-/* Before */
 @container (width > 300px) {
   .card {
     /* ... */
@@ -58,7 +55,6 @@ Before container queries, CSS didn’t have a way for an author to arbitrarily e
 
 {% Compare 'better', 'after' %}
 ```css
-/* After */
 @media all {
   .card:where([cq-XYZ~="123"]) {
     /* ... */
@@ -87,7 +83,6 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
 
 {% Compare 'worse', 'before' %}
 ```css
-/* Before */
 @container (width > 300px) {
   .card {
     color: blue;
@@ -102,7 +97,6 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
 
 {% Compare 'better', 'after' %}
 ```css
-/* After */
 @container (width > 300px) {
   .card:not(.container-query-polyfill) {
     color: blue;
@@ -130,7 +124,6 @@ Pseudo-elements are always bound to a real element in the DOM, called the [origi
 
 {% Compare 'worse', 'before' %}
 ```css
-/* Before */
 @container (width > 300px) {
   #foo::before {
     /* ... */
@@ -141,7 +134,6 @@ Pseudo-elements are always bound to a real element in the DOM, called the [origi
 
 {% Compare 'better', 'after' %}
 ```css
-/* After */
 @media all {
   #foo:where([cq-XYZ~="123"])::before {
     /* ... */
@@ -158,7 +150,6 @@ To correct this, the polyfill actually uses _two_ attributes: one that can only 
 
 {% Compare 'worse', 'before' %}
 ```css
-/* Before */
 @container (width > 300px) {
   #foo,
   #foo::before {
@@ -170,7 +161,6 @@ To correct this, the polyfill actually uses _two_ attributes: one that can only 
 
 {% Compare 'better', 'after' %}
 ```css
-/* After */
 @media all {
   #foo:where([cq-XYZ-A~="123"]),
   #foo:where([cq-XYZ-B~="123"])::before {
