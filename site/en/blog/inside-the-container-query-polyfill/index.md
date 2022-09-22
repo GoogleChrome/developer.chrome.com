@@ -63,7 +63,7 @@ Before container queries, CSS didn’t have a way for an author to arbitrarily e
 ```
 {% endCompare %}
 
-Notice the use of the `:where(...)` pseudo-class. Normally, including an additional attribute selector would increase the [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) of the selector. With the pseudo-class, the extra condition can be applied while preserving the original specificity. To see why this is crucial, consider the following example:
+Notice the use of the [`:where(...)`](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) pseudo-class. Normally, including an additional attribute selector would increase the [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) of the selector. With the pseudo-class, the extra condition can be applied while preserving the original specificity. To see why this is crucial, consider the following example:
 
 ```css
 @container (width > 300px) {
