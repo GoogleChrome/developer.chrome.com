@@ -262,15 +262,11 @@ Try restarting the frames of both functions in the following way:
 
 ### Show ignore-listed frames {: #show-ignore-listed-frames }
 
-{% Aside %}
-**Note**: This is an {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} experimental feature available in Chrome from version 106.
-{% endAside %}
-
 With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
 
-To view the full call stack including third-party code, enable **Show ignore-listed frames** under the **Call Stack** section.
+To view the full call stack including third-party frames, enable **Show ignore-listed frames** under the **Call Stack** section.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1STrMhMqSyUGYXbCMymU.png", alt="Show ignore-listed frames.", width="800", height="422" %}
 

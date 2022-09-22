@@ -44,7 +44,7 @@ Alternatively, you can go straight to the **Open File** menu in one of the follo
 ### Open ignore-listed files {: show-ignore-listed }
 
 {% Aside %}
-**Note**: This is an {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} experimental feature available in Chrome from version 106.
+**Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available in Chrome from version 106.
 {% endAside %}
 
 By default, DevTools hides the files of known third-parties. To open such files from the menu, disable the [Hide ignore-listed sources](/docs/devtools/javascript/sources/#hide-ignore-listed) option in the **Sources** panel.
