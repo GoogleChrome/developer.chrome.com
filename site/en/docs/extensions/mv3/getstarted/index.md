@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Welcome'
 subhead: 'Welcome to the Getting Started Guides.'
 description: 'Welcome to the Getting Started Guides.'
-date: 2022-08-20
+date: 2022-10-05
 # updated: 2022-06-13
 ---
 
@@ -64,12 +64,12 @@ We are excited to hear from you! There are two ways you can contribute to the Ge
 
 ### Improve the tutorials {: #improve-tut}
 
-If you see something wrong or unclear, please submit an issue in our [Github repository][github-ext-doc].
+If you see something wrong or unclear, please submit an issue on our [Github repository][github-ext-doc].
 
 ### Request a beginner tutorial {: #request-tut}
 
 If you have an idea for another beginner tutorial, you can let us know by following these steps:
-- Create an issue on the Github repo.
+- Create an issue in our [Github repository][github-ext-doc].
 - Choose “Request extension tutorial”.
 - Fill out and submit the form.
 

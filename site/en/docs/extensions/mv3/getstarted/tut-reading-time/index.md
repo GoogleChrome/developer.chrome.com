@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Reading time'
 description: 'Learn how to insert an element on each page.'
 subhead: 'Create your first extension that inserts a new element on the page.'
-date: 2022-08-10
+date: 2022-10-05
 # updated: 2022-06-13
 ---
 

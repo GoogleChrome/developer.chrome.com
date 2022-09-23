@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Development basics'
 subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
-date: 2022-08-10
+date: 2022-10-05
 # updated: 2022-06-13
 ---
 

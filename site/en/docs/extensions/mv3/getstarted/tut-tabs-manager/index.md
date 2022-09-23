@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Tabs Manager'
 subhead: 'Build your first tabs manager.'
 description: 'Learn how to create a tabs manager.'
-date: 2022-08-10
+date: 2022-10-05
 # updated: 2022-06-13
 ---
 
