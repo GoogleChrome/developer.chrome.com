@@ -6,17 +6,18 @@ subhead: >
 description: >
   Starting in Chrome 100, CHIPS origin trial allows opting cookies in to "partitioned" storage, with a separate cookie jar per top-level site. Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-03-17
-updated: 2022-06-10
+updated: 2022-09-23
 authors:
   - mihajlija  
 tags:
  - origin-trials
  - cookies
- - privacy  
+ - privacy
 ---
 
 ## Changes
 
+- **September 2022**:  See the [updated information on extending the origin trial through Chrome 106](/blog/chips-origin-trial-extended).
 - **June 2022**:  As of Chrome 104, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute.
 - **May 2022**: As of Chrome 103, sending `Accept-CH: Sec-CH-Partitioned-Cookies` header is no longer required for opting into the origin trial.
 
