@@ -243,11 +243,6 @@ maudnalpas:
     en: 'Maud Nalpas'
   description:
     en: 'Developer advocate at Google, working on Chrome privacy and security'
-rowanmerewood:
-  title:
-    en: 'Rowan Merewood'
-  description:
-    en: 'Rowan is a Developer Advocate'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -908,3 +903,167 @@ joelewis:
     en: Joseph Lewis
   description:
     en: Technical Writer, Android DevRel
+jney:
+  title:
+    en: Jeremy Ney
+  description:
+    en: Strategic Partner Development Manager, Google Chrome
+bramus:
+  title:
+    en: Bramus
+    es: Bramus
+    ja: Bramus
+    ko: Bramus
+    pt: Bramus
+    ru: Bramus
+    zh: Bramus
+  description:
+    en: Developer Advocate for CSS, UI, and DevTools at Chrome
+    es: Desarrollador partidario para CSS, UI y DevTools en Chrome
+    ja: Chrome の CSS、UI、DevTools を対象とした Developer Advocate
+    ko: Chrome의 CSS, UI 및 DevTools 개발자 애드버킷
+    pt: Developer Advocate para CSS, UI e DevTools no Chrome
+    ru: Developer Advocate по вопросам CSS, UI и DevTools в команде Chrome
+    zh: Chrome 的 CSS、UI 和 DevTools 开发技术推广工程师
+victorporof:
+  title:
+    en: Victor Porof
+  description:
+    en: Software Engineer working on Chrome DevTools at Google
+leenasohoni:
+  title:
+    en: Leena Sohoni
+    es: Leena Sohoni
+    ja: Leena Sohoni
+    ko: Leena Sohoni
+    pt: Leena Sohoni
+    ru: Leena Sohoni
+    zh: Leena Sohoni
+  description:
+    en: Freelance technical analyst and writer
+    es: Analista técnica / escritora independiente
+    ja: フリーランスのテクニカルアナリスト/ライター。
+    ko: 프리랜서 기술 분석가/작가
+    pt: Analista / redator técnico freelance.
+    ru: Технический аналитик / писатель-фрилансер.
+    zh: 自由技术分析师/作家。
+karaerickson:
+  title:
+    en: Kara Erickson
+    es: Kara Erickson
+    ja: Kara Erickson
+    ko: Kara Erickson
+    pt: Kara Erickson
+    ru: Kara Erickson
+    zh: Kara Erickson
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniera de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师。
+mgechev:
+  title:
+    en: Minko Gechev
+    es: Minko Gechev
+    ja: Minko Gechev
+    ko: Minko Gechev
+    pt: Minko Gechev
+    ru: Minko Gechev
+    zh: Minko Gechev
+  description:
+    en: Our latest news, updates, and stories by Minko Gechev.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Minko Gechev.
+    ja: Minko Gechev による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Minko Gechev의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias de Minko Gechev.
+    ru: Последние новости и статьи от Minko Gechev.
+    zh: Minko Gechev 撰写我们的最新资讯、动态和故事。
+alexcastle:
+  title:
+    en: Alex Castle
+    es: Alex Castle
+    ja: Alex Castle
+    ko: Alex Castle
+    pt: Alex Castle
+    ru: Alex Castle
+    zh: Alex Castle
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniero de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师
+shubhie:
+  title:
+    en: Shubhie Panicker
+    es: Shubhie Panicker
+    ja: Shubhie Panicker
+    ko: Shubhie Panicker
+    pt: Shubhie Panicker
+    ru: Shubhie Panicker
+    zh: Shubhie Panicker
+  description:
+    en: Tech Lead Manager on the Chrome Web Platform team
+    es: Gerente principal de tecnología de la plataforma web de Chrome
+    ja: Chrome Web プラットフォームチームのテクニカルリードマネージャー
+    ko: Chrome 웹 플랫폼 팀의 기술 수석 관리자
+    pt: Gerente líder técnico na equipe de plataforma web do Chrome
+    ru: Технический руководитель команды веб-платформы Chrome
+    zh: Chrome 网络平台团队的技术主管经理
+keenyeeliau:
+  title:
+    en: Keen Yee Liau
+    es: Keen Yee Liau
+    ja: Keen Yee Liau
+    ko: Keen Yee Liau
+    pt: Keen Yee Liau
+    ru: Keen Yee Liau
+    zh: Keen Yee Liau
+  description:
+    en: Software Engineer on the Aurora team at Chrome.
+    es: Ingeniera de software en el equipo de Aurora en Chrome.
+    ja: ChromeのAuroraチームのソフトウェアエンジニア。
+    ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
+    pt: Engenheiro de software da equipe Aurora no Chrome.
+    ru: Инженер-программист в команде Aurora в Chrome.
+    zh: Chrome 公司 Aurora 团队的软件工程师。
+arthursonzogni:
+  title:
+    en: Arthur Sonzogni
+  description:
+    en: Software Engineer at Google.
+michalpitr:
+  title:
+    en: 'Michal Pitr'
+  description:
+    en: 'Software Engineering Intern on the Chrome DevTools team'
+gbmonaco:
+  title:
+    en: Gerald Monaco
+  description:
+    en: Software Engineer on the Chrome team.
+greenido:
+  title:
+    en: Ido Green
+  description:
+    en: ''
+christianliebel:
+  title:
+    en: Christian Liebel
+  description:
+    en: ''
+jonathangarbee:
+  title:
+    en: Jonathan Garbee
+  description:
+    en: ''
+amysteam:
+  title:
+    en: 'Amy Steam'
+  description:
+    en: 'Amy writes about Chrome extensions 🧩.'

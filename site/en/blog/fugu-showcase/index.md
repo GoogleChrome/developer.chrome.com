@@ -4,6 +4,7 @@ title: Project Fugu API showcase
 subhead: >
   The Project Fugu API Showcase is a collection of apps that make use of APIs that were conceived in
   the context of Project Fugu.
+description: The Project Fugu API Showcase is a collection of apps that use APIs created in the context of Project Fugu.
 authors:
   - thomassteiner
 date: 2022-04-25
@@ -51,7 +52,7 @@ in the Project Fugu API Showcase</a>. Happy browsing!
 
 <!-- TODO: @tomayac
   Remove this inline script once a stand-alone has been implemented.
---> 
+-->
 <script>
   const SHOWCASE_URL = 'https://googlechromelabs.github.io/fugu-showcase/data/';
   window.addEventListener('message', (event) => {

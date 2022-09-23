@@ -2,19 +2,45 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+<!-- $content -->
 
-<!-- ### Chrome 105 {: #chrome105 }
+<!-- ### Chrome 107 {: #chrome107 }
 
-* [Step-by-step replay in the Recorder](/ja/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/ja/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/ja/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/ja/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/ja/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/ja/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/ja/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/ja/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/ja/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-105/#misc) -->
+* [Customize keyboard shortcuts in DevTools](/ja/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/ja/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/ja/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/ja/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/ja/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ja/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/ja/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/ja/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/ja/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/ja/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/ja/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/ja/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/ja/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/ja/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/ja/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-106/#misc) -->
+
+
+### Chrome 105 {: #chrome105 }
+
+* [Recorder パネルでのステップ・バイ・ステップ再生](/ja/blog/new-in-devtools-105/#recorder)
+* [Recorder パネルでのマウスオーバーイベントのサポート](/ja/blog/new-in-devtools-105/#recorder-hover)
+* [Performance insight パネルに Largest Contentful Paint (LCP) を追加](/ja/blog/new-in-devtools-105/#lcp)
+* [レイアウトシフトの潜在的な主要因であるテキストのフラッシュ（FOIT、FOUT）を識別](/ja/blog/new-in-devtools-105/#foit-fout)
+* [Elements パネルの Top layer バッジ](/ja/blog/new-in-devtools-105/#top-layer)
+* [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
+* [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
+* [Styles ペインで @scope at-rule の閲覧と編集](/ja/blog/new-in-devtools-105/#scope)
+* [Sourcemap の改善](/ja/blog/new-in-devtools-105/#sourcemaps)
+* [その他のハイライト](/ja/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }
 

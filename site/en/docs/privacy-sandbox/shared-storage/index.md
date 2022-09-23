@@ -19,11 +19,12 @@ Storage API.
 
 *  The [Shared Storage proposal](https://github.com/WICG/shared-storage)
    has entered [public discussion](https://github.com/WICG/shared-storage/issues).
-*  We're [implementing this API in Chrome version 104](#try-the-shared-storage-api).
-   *  The initial origin trial will only include the
-      `runURLSelectionOperation`. Support for the Private Aggregation API will
-      come shortly after.
-   *  The `selectURL` API is available for testing in Chrome Canary as of M104.
+*  The API is available in the [Privacy Sandbox unified origin trial](/blog/expanding-privacy-sandbox-testing/)
+   on Chrome Canary/Dev/Beta M105 or later.
+*  Only the URL Selection (`selectURL`) output gate is available for
+   testing at the moment. Support for the Private Aggregation API will
+   come soon.
+*  You can also [locally test the API with a flag](#try-the-shared-storage-api) on Chrome M104 or later.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline)
    provides implementation timings for the Shared Storage API and other
    Privacy Sandbox proposals.
@@ -98,7 +99,11 @@ The shared storage data can be used for:
 
 ## Try the Shared Storage API
 
-Shared Storage API with Fenced Frames can be tested in Chrome 104 (version
+The API is available in the [Privacy Sandbox unified origin trial](/blog/expanding-privacy-sandbox-testing/)
+on Chrome Canary, Dev, and Beta M105 or later. Learn how you can
+register for a [third-party origin trial](/docs/web-platform/third-party-origin-trials/).
+
+The Shared Storage API with Fenced Frames can be locally tested in Chrome 104 or later (version
 104.0.5086.0 or later) by enabling the **Privacy Sandbox Ads APIs experiment**
 flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 

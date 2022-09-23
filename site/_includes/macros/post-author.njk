@@ -5,15 +5,17 @@
 #}
 {% macro postAuthor(authorId, locale) %}
 
-{% set author = postsData.authors[authorId] %}
+{% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
+{% set authorDescription = 'i18n.authors.' + authorId + '.description' %}
+{% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
 
 <div class="display-flex align-start">
-  {% if author.image %}
-    <a href="{{ author.url }}" translate="no" class="card-authors__image">
+  {% if authorImage %}
+    <a href="/authors/{{authorId}}/" translate="no" class="card-authors__image">
       {% Img
         class="flex-shrink-none width-600 height-600",
-        src=author.image,
-        alt=author.title | i18n(locale),
+        src=authorImage,
+        alt=authorTitle | i18n(locale),
         width="40",
         height="40",
         options={minWidth: 40, maxWidth: 120}
@@ -21,9 +23,9 @@
     </a>
   {% endif %}
   <div class="display-flex direction-column align-start gap-left-300 type--small">
-    {% if author %}
-      <a href="{{ author.url }}" translate="no" class="surface display-inline-flex color-text">{{ author.title | i18n(locale) }}</a>
-      <p class="color-secondary-text">{{ author.description | i18n(locale) }}</p>
+    {% if authorsData[authorId] %}
+      <a href="/authors/{{authorId}}/" translate="no" class="surface display-inline-flex color-text">{{ authorTitle | i18n(locale) }}</a>
+      <p class="color-secondary-text">{{ authorDescription | i18n(locale) }}</p>
     {% else %}
       <p>{{ authorId }}</p>
     {% endif %}

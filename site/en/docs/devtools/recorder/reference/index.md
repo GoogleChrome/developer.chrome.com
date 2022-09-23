@@ -71,21 +71,29 @@ You can install a Chrome extension to export replay scripts in your favorite for
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xRO1d79tBe0ILcBoD0oh.png", alt="Custom extension for the Recorder panel.", width="800", height="486" %}
 
-For example, 
+For example:
 
-- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) let’s you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
-- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) let's you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
+- [Cypress extension](https://chrome.google.com/webstore/detail/cypress-chrome-recorder/fellcphjglholofndfmmjmheedhomgin) lets you export JSON user flows as [Cypress test script](https://github.com/cypress-io/cypress-recorder-extension). [Cypress](https://cypress.io) is a front end testing tool built for the modern web.
+- [WebPageTest extension](https://chrome.google.com/webstore/detail/webpagetest-recorder-exte/eklpnjohdjknellndlnepihjnhpaimok) lets you export user flows from the Recorder directly as [WebPageTest Custom scripts](https://docs.webpagetest.org/scripting/) to measure site's performance. See [Converting user flows to WebPageTest custom scripts](https://blog.webpagetest.org/posts/introducing-the-new-webpagetest-recorder-chrome-extension/) to learn more. 
+- [Nightwatch extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/) lets you export JSON user flows as [Nightwatch test script](https://github.com/nightwatchjs/nightwatch-recorder-extension). [Nightwatch](https://nightwatchjs.org/) is an end-to-end testing solution for web applications and websites.
+- [Testing Library extension](https://chrome.google.com/webstore/detail/testing-library-recorder/pnobfbfcnoeealajjgnpeodbkkhgiici) lets you export JSON user flows as [Testing Library script](https://github.com/nickmccurdy/testing-library-recorder-extension). [Testing Library](https://testing-library.com/) has simple and complete testing utilities that encourage good testing practices.
+- [WebdriverIO extension](https://chrome.google.com/webstore/detail/webdriverio-chrome-record/pllimkccefnbmghgcikpjkmmcadeddfn) lets you export JSON user flows as [WebdriverIO test script](https://github.com/webdriverio/recorder-extension). [WebdriverIO](https://webdriver.io/) is an end-to-end testing solution for web, mobile and IoT applications and websites.
+
+##### Troubleshooting {: #extension-troubleshooting }
+
+If you don't see the export option after installing the extension, do the following:
+
+- The extension only works on web pages. For example, the export option is not available for `chrome://` pages like `chrome://extensions`.
+- Always open a new browser tab after installing the extension.
+- There is an [issue](https://crbug.com/1351416) in Chrome 104 and 105 that prevents the export option showing if you open the **Recorder** as the first DevTools panel. As a workaround, open another panel (for example, **Console**) first before opening the **Recorder**. The issue is fixed in Chrome 106.
 
 {% Aside 'gotchas' %} 
-
-**Advance use case: Build an extension**
+**Advanced use case: Build an extension**
 
 You can build your own Recorder extension too. See the [Recorder extension API](/docs/extensions/reference/devtools_recorder/) documentation to learn how to build one.
 
 You can also refer to this [extension example](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension) and install it following [the steps](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards) outlined in the documentation.
-
 {% endAside %}
-
 
 ### Import a user flow {: #import-flows }
 
@@ -115,12 +123,44 @@ Replay JSON user flows:
 
 {% Aside 'gotchas' %} 
 
-**Advance use case: Integrate with the Puppeteer Replay library**
+**Advanced use case: Integrate with the Puppeteer Replay library**
 
 Similar to the 3rd party libraries above, you can build your own library on top of the [Puppeteer Replay](https://github.com/puppeteer/replay) too. The  Puppeteer Replay library provide ways for you to [customize how a recording is run](https://github.com/puppeteer/replay#2-customize-replay) and ["stringify" the user flow JSON files](https://github.com/puppeteer/replay#stringify-a-recording-as-a-puppeteer-script), that is, convert them to something else. 
 
 {% endAside %}
 
+## Debug user flows {: #debug-user-flows }
+
+Like any code, sometimes you have to debug the recorded user flows.
+
+To help you debug, the **Recorder** panel lets you slow down the replays, set breakpoints, and step through the execution.
+
+### Slow down the replay
+
+By default, the **Recorder** replays the user flow as fast as it can. To understand what happens in the recording, you can slow down the replay speed:
+
+1. Open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** drop-down menu.
+1. Choose one of the replay speed options:
+   - Normal (Default)
+   - Slow
+   - Very slow
+   - Extremely slow
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/40FyhHaVhPjQGatqUFij.png", alt="Slow replay.", width="800", height="525" %}
+
+{% Aside 'gotchas' %}
+You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
+{% endAside %}
+
+### Set breakpoints and execute step by step {: #breakpoints-and-step-through }
+
+To set a breakpoint and execute step by step:
+
+1. Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zhUoD4aBvxnMuS6pPYXO.svg", alt="Step.", width="20", height="20" %} circle next to any step in a recording. The circle turns into a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon.
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CsjCuL4zNf4tlwL9sFq9.svg", alt="Breakpoint.", width="20", height="20" %} breakpoint icon and [replay the recording](/docs/devtools/recorder/#replay). The executions pauses at the breakpoint.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6xMG2ZEGgrrs8dQg7gFc.png", alt="Execution pause.", width="800", height="647" %}
+1. To step through the execution, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4ahE6ZJK3Rp5HXouFOtH.png", alt="Execute one step.", width="25", height="18" %} **Execute one step** button on the action bar at the top of the **Recorder** panel.
+1. To stop the replay, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E4DiaFpjvozAUMoUQgB1.svg", alt="Pause.", width="24", height="24" %} **Cancel replay**.
 
 ## Edit steps {: #edit-steps }
 
@@ -128,18 +168,35 @@ You can edit any step in the recording by clicking the {% Img src="image/NJdAV9U
 
 You can also add missing steps and remove accidentally recorded ones as described below.
 
-### Add and remove steps {: #add-and-remove-steps }
+### Add steps {: #add-steps }
 
-To add a step:
+Sometimes, you may need to add steps manually. For example, the **Recorder** doesn't automatically capture `hover` events because this pollutes the recording and not all such events are useful. However, UI elements such as drop-down menus can appear only on `hover`. You can manually add `hover` steps to user flows that depend on such elements.
 
-1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="20", height="20" %} three-dot button next to any existing step.
+To manually add a step:
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vBETaaLND6v4PVtOvPzv.png", alt="Three-dot menu.", width="800", height="842" %}
+1. Open this [demo page](https://jec.fyi/demo/menu-hover) and start a new recording.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m1wPaIzCZFOpxF2kViEh.png", alt="Start a recording to capture a hover event.", width="800", height="570" %}
+1. Hover over the element in the viewport. An action menu pops up.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RP5HSO8LhXBIfWqDMw5Y.png", alt="Hovering over the element.", width="800", height="570" %}
+1. Pick an action from the menu and end the recording. The **Recorder** captures only the click event.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0SrnKHS6AnGzokWdkzMK.png", alt="Clicking an action and ending the recording.", width="800", height="632" %}
+1. Try to replay the recording by clicking {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %} **Replay**. The replay fails after a timeout because the **Recorder** can't access the element in the menu.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P05L4w4OWNAYNIPLCJsZ.png", alt="Replay fail.", width="800", height="595" %}
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot button next to the **Click** step and select **Add step before**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3hLZgQye5efWBcMcLQH6.png", alt="Adding a step before Click.", width="800", height="595" %}
+1. Expand the new step. By default, it has the `waitForElement` type. Click the value next to `type` and select `hover`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vPGY8RwmPZVt0j1sC4As.png", alt="Selecting hover.", width="800", height="730" %}
+1. Next, set an appropriate selector for the new step. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Select.", width="22", height="22" %} **Select**, then click an area on the `Hover over me!` element that's outside the pop-up menu. The selector is set to `#clickable`.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X2E6JPm7A5qbJzaR2U58.png", alt="Setting the selector.", width="800", height="616" %}
+1. Try replaying the recording again. With the added hover step, the **Recorder** successfully replays the flow.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/P8YGHbff2vGgCKOkEth6.png", alt="Replay success.", width="800", height="567" %}
 
-1. Select **Add step before** or **Add step after** from the drop-down menu.
-1. [Configure the new step](#configure-steps) by specifying its properties.
+### Remove steps {: #remove-steps }
 
-To remove a step, select **Remove** from the same three-dot menu.
+To remove an accidentally recorded step, select **Remove step** from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot button.", width="22", height="22" %} three-dot menu next to the step.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QOPYGEUDal764qxj8YBB.png", alt="Remove a step.", width="800", height="601" %}
+
 
 ### Configure steps {: #configure-steps }
 

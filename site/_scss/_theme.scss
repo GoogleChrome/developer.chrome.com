@@ -3,8 +3,8 @@
   --color-mode: 'light';
   --color-bg: #{get-color('white')};
   --color-bg-shade: #{get-color('grey-100')};
-  --color-text: #{get-color('grey-800')};
-  --color-secondary-text: #{get-color('grey-700')};
+  --color-text: #{get-color('grey-900')};
+  --color-secondary-text: #{get-color('grey-800')};
   --color-primary: #{get-color('blue-600')};
   --rgb-primary: 26, 115, 232;
   --color-primary-shade: #{get-color('blue-700')};
@@ -24,7 +24,7 @@
   --rgb-button-overlay: 60, 64, 67;
 
   --color-code-bg: #{get-color('grey-50')};
-  --color-code-comment: #{get-color('grey-500')};
+  --color-code-comment: #{get-color('blue-900')};
   --color-code-string: #{get-color('blue-900')};
   --color-code-tag: #{get-color('green-600')};
   --color-code-number: #{get-color('blue-700')};

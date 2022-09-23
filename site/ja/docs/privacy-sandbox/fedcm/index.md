@@ -6,7 +6,7 @@ subhead: >
 description: >
   ユーザーがブラウザのプライバシーの向上と互換性のある方法で、フェデレーションアカウントを使用してウェブサイトにログインできるようにするウェブプラットフォーム API。
 date: 2022-04-25
-updated: 2022-05-23
+updated: 2022-09-12
 authors:
   - agektmr
 ---
@@ -16,7 +16,7 @@ authors:
 このドキュメントでは、ID 連携の新しい提案である Federated Credential Management API（FedCM）の概要を説明します。
 
 *  [FedCM 提案](https://github.com/fedidcg/FedCM)の[公開ディスカッション](https://github.com/fedidcg/FedCM/issues)が開始しました。
-*  [FedCM のオリジントライアル](/blog/fedcm-origin-trial)は、Android の Chrome 101 から 105で利用できます。 デスクトップ版 Chrome では、Chrome 103 以降でサポートされています。 他のブラウザでは 未対応です。
+*  [FedCM のオリジントライアル](/blog/fedcm-origin-trial)は、Android の Chrome 101 から 107 で利用できます。 デスクトップ版 Chrome では、Chrome 103 以降でサポートされています。 他のブラウザでは 未対応です。
 *  [プライバシーサンドボックスのタイムライン](http://privacysandbox.com/timeline)では、FedCMおよびプライバシーサンドボックスのその他の提案の実装時期を提供しています。
 *  [Chrome プラットフォームの状況](https://chromestatus.com/feature/6438627087220736)
 
@@ -155,7 +155,7 @@ RP が FedCM をサポートしていないブラウザをサポートする可�
 
 ## 貢献とフィードバックの共有 {: #share-feedback}
 
-*  **オリジンライアル**: [FedCM のオリジントライアル](/origintrials/#/view_trial/3977804370874990593)は、バージョン 101 から 105 までの Chrome で利用可能です。 [オリジントライアル](/blog/fedcm-origin-trial)について、詳細をご覧ください。
+*  **オリジンライアル**: [FedCM のオリジントライアル](/origintrials/#/view_trial/3977804370874990593)は、バージョン 101 から 107 までの Chrome で利用可能です。 [オリジントライアル](/blog/fedcm-origin-trial)について、詳細をご覧ください。
 *  **GitHub**: [提案](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md)を読み、[イシューを投稿し、ディスカッションをフォロー](https://github.com/fedidcg/FedCM/issues)できます。
 *  **開発者サポート**: [Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)リポジトリで質問をしたり、ディスカッションに参加したりできます。
 

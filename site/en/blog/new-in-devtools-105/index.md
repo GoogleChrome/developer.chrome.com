@@ -16,6 +16,8 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='bHw_56RiVsg' %}
+
 ## Step-by-step replay in the Recorder {: #recorder }
 
 You can now set a breakpoint and replay a user flow step by step in the **Recorder** panel.

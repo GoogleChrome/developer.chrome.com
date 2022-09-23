@@ -1,18 +1,47 @@
 ## 更多 DevTools 的功能 {: #whats-new }
+
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
+
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/zh/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/zh/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/zh/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/zh/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/zh/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/zh/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/zh/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/zh/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/zh/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/zh/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/zh/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/zh/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/zh/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/zh/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-106/#misc) -->
+
 
 ### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/zh/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/zh/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/zh/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/zh/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/zh/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/zh/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/zh/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/zh/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/zh/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-105/#misc)
+* [录制面板中的分步重放](/zh/blog/new-in-devtools-105/#recorder)
+* [支持录制面板中的鼠标悬浮事件](/zh/blog/new-in-devtools-105/#recorder-hover)
+* [性能洞察面板中的最大内容绘制 （LCP）](/zh/blog/new-in-devtools-105/#lcp)
+* [将闪烁的文本（FOIT、FOUT）识别为布局变化的潜在根本原因](/zh/blog/new-in-devtools-105/#foit-fout)
+* [Manifest 窗格中的协议处理程序](/zh/blog/new-in-devtools-105/#manifest)
+* [元素面板中的顶层徽章](/zh/blog/new-in-devtools-105/#top-layer)
+* [在运行时附加 Wasm 调试信息](/zh/blog/new-in-devtools-105/#wasm)
+* [调试时支持实时编辑](/zh/blog/new-in-devtools-105/#live-edit)
+* [在样式窗格的规则中查看和编辑@scope](/zh/blog/new-in-devtools-105/#scope)
+* [Sourcemap 改进](/zh/blog/new-in-devtools-105/#sourcemaps)
+* [其他的更新](/zh/blog/new-in-devtools-105/#misc)
 
 
 ### Chrome 104 {: #chrome104 }
@@ -94,6 +123,7 @@
 
 
 ### Chrome 98 {: #chrome98 }
+
 * [预览功能：整页无障碍功能树](/zh/blog/new-in-devtools-98/#a11y-tree)
 * [在变更标签页中显示更精确的更改](/zh/blog/new-in-devtools-98/#changes)
 * [为用户操作流的录制设置更长的超时时间](/zh/blog/new-in-devtools-98/#recorder-timeout)
@@ -110,6 +140,7 @@
 
 
 ### Chrome 97 {: #chrome97 }
+
 * [预览特性：新的录制器面板](/zh/blog/new-in-devtools-97/#recorder)
 * [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
 * [修改 HTML 时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
@@ -117,6 +148,7 @@
 * [[实验阶段] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
+
 * [预览特性: 新的 CSS 概览面板](/zh/blog/new-in-devtools-96/#css-overview)
 * [修复以及改善 CSS 长度编辑与复制的体验](/zh/blog/new-in-devtools-96/#length) 
 * [模拟 CSS prefers-contrast 媒体特性](/zh/blog/new-in-devtools-96/#prefers-contrast)
@@ -133,6 +165,7 @@
 
 
 ### Chrome 95 {: #chrome95 }
+
 * [新的 CSS 长度编辑工具](/zh/blog/new-in-devtools-95/#length)
 * [在“问题”标签页隐藏问题](/zh/blog/new-in-devtools-95/#hide-issues)
 * [改善属性展示](/zh/blog/new-in-devtools-95/#properties)

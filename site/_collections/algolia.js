@@ -20,9 +20,12 @@
  */
 
 const {createHash} = require('crypto');
+const striptags = require('striptags');
 const {generateImgixSrc} = require('../_shortcodes/Img');
 const {stripDefaultLocale} = require('../_filters/urls');
-const striptags = require('striptags');
+const {
+  getChromeApiNamespacePaths,
+} = require('../_utils/getChromeApiNamespacePaths');
 
 /**
  * Shrink the size of the given fulltext to fit within a certain limit, at the
@@ -49,7 +52,7 @@ function limitText(content, limit = 7500) {
  * @param {EleventyCollectionObject} collections
  * @returns {AlgoliaCollectionItem[]}
  */
-module.exports = collections => {
+const algoliaCollection = collections => {
   const toIndex = collections.getAllSorted().filter(item => {
     const {data} = item;
 
@@ -100,6 +103,15 @@ module.exports = collections => {
       enumerable: true,
     });
 
+    // Add API types to algolia doc to allow fully qualified searches,
+    // like chrome.webRequest.onBeforeSendHeaders instead of just being
+    // able to search onBeforeSendHeaders which also appears in the content
+    if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
+      const apiNamespace = item.data.chromeApiNamespaces[item.data.api];
+      const apiNamespacePaths = getChromeApiNamespacePaths(apiNamespace);
+      algoliaCollectionItem.apiNamespacePaths = apiNamespacePaths;
+    }
+
     if (item.data.type) {
       algoliaCollectionItem.type = item.data.type;
     }
@@ -107,3 +119,5 @@ module.exports = collections => {
     return algoliaCollectionItem;
   });
 };
+
+module.exports = algoliaCollection;

@@ -2,19 +2,46 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- $content -->
+
+<!-- ### Chrome 107 {: #chrome107 }
+
+* [Customize keyboard shortcuts in DevTools](/es/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/es/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/es/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/es/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/es/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/es/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/es/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/es/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/es/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/es/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/es/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/es/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/es/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/es/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/es/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-106/#misc) -->
+
 
 ### Chrome 105 {: #chrome105 }
 
-* [Step-by-step replay in the Recorder](/es/blog/new-in-devtools-105/#recorder)
-* [Support mouse over event in the Recorder panel](/es/blog/new-in-devtools-105/#recorder-hover)
-* [Largest Contentful Paint (LCP) in the Performance insights panel](/es/blog/new-in-devtools-105/#lcp)
-* [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/es/blog/new-in-devtools-105/#foit-fout)
-* [Top layer badge in the Elements panel](/es/blog/new-in-devtools-105/#top-layer)
-* [Attach Wasm debugging information at runtime](/es/blog/new-in-devtools-105/#wasm)
-* [Support live edit during debugging](/es/blog/new-in-devtools-105/#live-edit)
-* [View and edit @scope at rules in the Styles pane](/es/blog/new-in-devtools-105/#scope)
-* [Sourcemap improvements](/es/blog/new-in-devtools-105/#sourcemaps)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-105/#misc)
+* [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
+* [Soporte de eventos de ratón en el panel Recorder](/es/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
+
+* [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
+* [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
+* [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
+* [Soporte para edición en vivo durante la depuración](/es/blog/new-in-devtools-105/#live-edit)
+* [Ver y editar las reglas de @scope en el panel de Estilos](/es/blog/new-in-devtools-105/#scope)
+* [Mejoras en los mapas de código fuente](/es/blog/new-in-devtools-105/#sourcemaps)
+* [Otros detalles destacados](/es/blog/new-in-devtools-105/#misc)
 
 ### Chrome 104 {: #chrome104 }
 
