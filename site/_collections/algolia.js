@@ -109,7 +109,6 @@ const algoliaCollection = collections => {
     if (item.data.api && item.data.chromeApiNamespaces[item.data.api]) {
       const apiNamespace = item.data.chromeApiNamespaces[item.data.api];
       const apiNamespacePaths = getChromeApiNamespacePaths(apiNamespace);
-      console.log(item.data.api, apiNamespacePaths);
       algoliaCollectionItem.apiNamespacePaths = apiNamespacePaths;
     }
 
