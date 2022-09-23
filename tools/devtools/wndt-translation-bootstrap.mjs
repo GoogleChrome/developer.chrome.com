@@ -1,9 +1,3 @@
-import {
-  createWndtBanners,
-  createWndtBlogPosts,
-  createGitHubIssues,
-  populateTranslationContent,
-} from './utils.mjs';
 import {config} from 'dotenv';
 
 config();
@@ -21,14 +15,27 @@ if (!process.env.GITHUB_TOKEN) {
   Follow the instruction here to generate: https://github.com/settings/tokens/new?scopes=repo';
 }
 
+import {
+  createWndtBanners,
+  createWndtBlogPosts,
+  // @ts-ignore
+  createGitHubIssues,
+  populateTranslationContent,
+} from './utils.mjs';
+
 const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
 
-createWndtBanners(process.env.DEVTOOLS_VERSION, languages);
-createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
-populateTranslationContent(process.env.DEVTOOLS_VERSION, languages);
-createGitHubIssues(
-  process.env.DEVTOOLS_VERSION,
-  process.env.DEVTOOLS_TRANSLATE_DUE,
-  ['es', 'ja', 'ko', 'pt', 'ru', 'zh'],
-  process.env.GITHUB_TOKEN
-);
+(async () => {
+  // @ts-ignore
+  await createWndtBanners(process.env.DEVTOOLS_VERSION, languages);
+  // @ts-ignore
+  await createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
+  // @ts-ignore
+  await populateTranslationContent(process.env.DEVTOOLS_VERSION, languages);
+  // createGitHubIssues(
+  //   process.env.DEVTOOLS_VERSION,
+  //   process.env.DEVTOOLS_TRANSLATE_DUE,
+  //   languages,
+  //   process.env.GITHUB_TOKEN
+  // );
+})();
