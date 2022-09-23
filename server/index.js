@@ -30,7 +30,7 @@ const app = express();
 // see whether redirects will be successful.
 let staticPaths = ['dist', 'dist/en'];
 
-if (process.env.NODE_ENV === 'test' || true) {
+if (process.env.NODE_ENV === 'test') {
   staticPaths = ['tests/server/fixtures', 'tests/server/fixtures/en'];
 }
 
