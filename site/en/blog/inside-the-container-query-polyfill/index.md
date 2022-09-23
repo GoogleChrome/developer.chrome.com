@@ -294,3 +294,8 @@ This approach is recommended for a number of reasons:
 If you're interested in using container queries on older browsers, give the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) a try. Don't hesitate to [file an issue](https://github.com/GoogleChromeLabs/container-query-polyfill/issues/new) if you run into any problems.
 
 We can't wait to see and experience the amazing things you will build with it.
+
+
+## Acknowledgements
+
+Hero image by [Dan Cristian Pădureț](https://unsplash.com/@dancristianpaduret) on [Unsplash](https://unsplash.com/photos/XC7lc8biINg).
