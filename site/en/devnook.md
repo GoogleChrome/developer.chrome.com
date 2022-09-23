@@ -1,4 +1,4 @@
 ---
 permalink: "/devnook.txt"
 ---
-Devnook test 2
+Devnook test 3
