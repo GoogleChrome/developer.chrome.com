@@ -1,4 +1,4 @@
-import {readFileSync, writeFileSync, mkdirSync} from 'fs';
+import {readFile, writeFile, mkdir} from 'fs/promises';
 import {Octokit} from 'octokit';
 import {dirname} from 'path';
 
@@ -10,7 +10,7 @@ const bannerTemplate = './tools/devtools/templates/new-in-devtools-banner.svg';
 
 const blogDest = `./site/${langholder}/blog/new-in-devtools-${verholder}/index.md`;
 const outlineDest = `./site/_includes/partials/devtools/${langholder}/whats-new.md`;
-const bannerDest = `./_temp/new-in-devtools-banner-${langholder}.svg`;
+const bannerDest = `./tools/devtools/_temp/new-in-devtools-banner-${langholder}.svg`;
 
 const translation = {
   language: {
@@ -62,12 +62,11 @@ const translation = {
  * @returns YYYY-MM-DD
  */
 function getToday() {
-  const dateObj = new Date();
-  const year = dateObj.getUTCFullYear();
-  const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
-  const date = dateObj.getUTCDate().toString().padStart(2, '0');
-
-  return `${year}-${month}-${date}`;
+  return new Intl.DateTimeFormat('fr-CA', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(Date.now());
 }
 
 /**
@@ -79,17 +78,15 @@ export async function createWndtBanners(version, langs) {
   for (const lang of langs) {
     const fileName = bannerDest.replace(langholder, lang);
 
-    mkdirSync(dirname(fileName), {
-      recursive: true,
-    });
+    await mkdir(dirname(fileName), {recursive: true});
 
-    const template = readFileSync(bannerTemplate, 'utf-8');
+    const template = await readFile(bannerTemplate, 'utf-8');
     const output = template
       .replaceAll('$banner', translation.banner[lang])
       .replaceAll(verholder, version);
 
     // TODO: Upload images to CDN
-    writeFileSync(fileName, output, 'utf-8');
+    await writeFile(fileName, output, 'utf-8');
   }
   console.log(`Created WNDT banners for: ${langs.join(', ')}`);
 }
@@ -105,11 +102,9 @@ export async function createWndtBlogPosts(version, langs) {
       .replace(langholder, lang)
       .replace(verholder, version);
 
-    mkdirSync(dirname(fileName), {
-      recursive: true,
-    });
+    await mkdir(dirname(fileName), {recursive: true});
 
-    const template = readFileSync(blogTemplate, 'utf-8');
+    const template = await readFile(blogTemplate, 'utf-8');
 
     // TODO: Update replace image with CDN url
     let output = template
@@ -129,7 +124,7 @@ export async function createWndtBlogPosts(version, langs) {
         );
     }
 
-    writeFileSync(fileName, output, 'utf-8');
+    await writeFile(fileName, output, 'utf-8');
   }
   console.log(`Created WNDT blog posts for: ${langs.join(', ')}`);
 }
@@ -147,7 +142,7 @@ export async function populateTranslationContent(version, langs) {
   const contentRegex =
     /(?<=<!-- \$contentStart -->)(.+?)(?=<!-- \$contentEnd -->)/s;
   const descRegex = /(?<=description: )(.*)/gm;
-  const enFile = readFileSync(enFileName, 'utf-8');
+  const enFile = await readFile(enFileName, 'utf-8');
   const enDesc = enFile.match(descRegex)?.[0] || '""';
   let enContent = enFile.match(contentRegex)?.[0] || '';
 
@@ -168,13 +163,13 @@ export async function populateTranslationContent(version, langs) {
       .replace(langholder, lang)
       .replace(verholder, version);
 
-    const fileContent = readFileSync(fileName, 'utf-8');
+    const fileContent = await readFile(fileName, 'utf-8');
 
     // TODO: Update replace image with CDN url
     let output = fileContent.replace(descRegex, enDesc);
     output = output.replace(contentRegex, enContent);
 
-    writeFileSync(fileName, output, 'utf-8');
+    await writeFile(fileName, output, 'utf-8');
   }
   console.log(`Populated commented content for: ${langs.join(', ')}`);
 }
@@ -188,7 +183,7 @@ export async function createWndtOutline(version, langs) {
   const fileName = blogDest
     .replace(langholder, 'en')
     .replace(verholder, version);
-  const content = readFileSync(fileName, 'utf-8');
+  const content = await readFile(fileName, 'utf-8');
   const regex = /^(## |### )(.*)$/gm;
 
   // @ts-ignore
@@ -206,7 +201,7 @@ export async function createWndtOutline(version, langs) {
     const contentHolder = '<!-- $content -->';
 
     const outlineFileName = outlineDest.replace(langholder, lang);
-    const outlineRaw = readFileSync(outlineFileName, 'utf-8');
+    const outlineRaw = await readFile(outlineFileName, 'utf-8');
 
     let langOutput = output.replaceAll(
       langholder,
@@ -222,10 +217,10 @@ export async function createWndtOutline(version, langs) {
       contentHolder + '\n\n' + langOutput
     );
 
-    writeFileSync(outlineFileName, outline, 'utf-8');
+    await writeFile(outlineFileName, outline, 'utf-8');
   }
 
-  console.log(`Append WNDT outlines for: ${langs.join(', ')}`);
+  console.log(`Appended WNDT outlines for: ${langs.join(', ')}`);
 }
 
 /**
