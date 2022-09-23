@@ -4,11 +4,10 @@ title: Cookies Having Independent State (CHIPS) origin trial extended
 description: >
   CHIPS is a Privacy Sandbox proposal that introduces a mechanism to opt-in to
   having third-party cookies partitioned by top-level site. The origin trial
-  that started in Chrome 100, will now be available until the release of Chrome
-  107, scheduled for October 25, 2022.
+  that started in Chrome 100, will now be available until October 25, 2022
+  around the end of the Chrome 106 Stable release.
 subhead: >
-  The origin trial will now be available until the release of Chrome 107,
-  scheduled for October 25, 2022.
+  The origin trial will now be available until October 25, 2022.
 date: 2022-05-26
 updated: 2022-09-23
 authors:
@@ -26,9 +25,10 @@ top-level site using a new cookie attribute, `Partitioned`.
 {% Aside %}
 
 **Update:** To give developers more time to test the feature and gather more
-feedback, an [extension to the experiment will run through Chrome
-106](https://groups.google.com/a/chromium.org/g/blink-dev/c/MKQODOL0Fso/m/S3ss7A8jCAAJ)
-until the release of Chrome 107, on October 25, 2022.
+feedback, an [extension to the experiment will run until October 25, 2022 around
+the end of the Chrome 106 Stable
+release](https://groups.google.com/a/chromium.org/g/blink-dev/c/MKQODOL0Fso/m/S3ss7A8jCAAJ)
+.
 
 {% endAside %}
 
