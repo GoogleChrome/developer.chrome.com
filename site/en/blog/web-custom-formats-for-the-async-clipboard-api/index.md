@@ -4,6 +4,9 @@ title: Web custom formats for the Async Clipboard API
 subtitle: >
   Web custom formats let websites read and write arbitrary unsanitized payloads using a standard
   format applications can opt in to if they wish to support such payloads.
+description: >
+  Web custom formats let websites read and write arbitrary unsanitized payloads using a standard
+  format applications can opt in to if they wish to support such payloads.
 authors:
   - thomassteiner
 date: 2022-08-01

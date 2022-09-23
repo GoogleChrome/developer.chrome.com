@@ -2,6 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: New capabilities status
 subhead: Web apps should be able to do anything iOS, Android, or desktop apps can. The members of the cross-company capabilities project want to make it possible for you to build and deliver apps on the open web that have never been possible before.
+description: Web apps should be able to do anything platform-specific apps can. We want to make it possible for you to build and deliver apps on the web that weren't possible before.
 date: 2018-11-12
 updated: 2022-04-22
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
