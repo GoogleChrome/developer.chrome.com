@@ -12,8 +12,8 @@ As Manifest V3 approaches full feature parity with Manifest V2, we'll be progres
 specifies the timetable for this deprecation and describes the meaning of each milestone.
 
 <figure data-size="full">
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8CSuHWLXlQfi8s3LSUMk.png", alt="ALT_TEXT_HERE", width="800", height="357" %}
-  <figcaption>A summary of the Manifest V2 support timeline.</figcaption>
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8CSuHWLXlQfi8s3LSUMk.png", alt="Summary of the Manifest V2 support timeline.", width="800", height="357" %}
+  <figcaption>Summary of the Manifest V2 support timeline.</figcaption>
 </figure>
 
 {% Aside %}
