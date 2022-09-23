@@ -20,9 +20,12 @@
  */
 
 const {createHash} = require('crypto');
+const striptags = require('striptags');
 const {generateImgixSrc} = require('../_shortcodes/Img');
 const {stripDefaultLocale} = require('../_filters/urls');
-const striptags = require('striptags');
+const {
+  getChromeApiNamespacePaths,
+} = require('../_utils/getChromeApiNamespacePaths');
 
 /**
  * Shrink the size of the given fulltext to fit within a certain limit, at the
@@ -43,23 +46,6 @@ function limitText(content, limit = 7500) {
     newlineIndex = limit;
   }
   return content.slice(0, newlineIndex);
-}
-
-/**
- * Walks over the groups of a Chrome API namespace and builds
- * API namespace paths split by dot
- * @param {RenderNamespace} apiNamespace
- * @returns A list of API paths like: chrome.alarms.onAlarm
- */
-function getChromeApiNamespacePaths(apiNamespace) {
-  const apiNamespacePaths = [];
-  for (const group of apiNamespace.groups) {
-    for (const content of group.contents) {
-      apiNamespacePaths.push(`${apiNamespace.name}.${content.name}`);
-    }
-  }
-
-  return apiNamespacePaths;
 }
 
 /**
