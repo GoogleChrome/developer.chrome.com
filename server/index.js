@@ -80,7 +80,7 @@ if (isGAEProd) {
 }
 
 app.use(express.json());
-app.post('/**/webhook', webhookHandler);
+app.post('/_webhook', webhookHandler);
 app.get('/**/preview', previewHandler);
 app.use(...handlers);
 
