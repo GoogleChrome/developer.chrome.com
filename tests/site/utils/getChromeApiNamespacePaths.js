@@ -3,7 +3,7 @@ const test = require('ava');
 const getChromeApiNamespaces = require('../../../site/_data/chromeApiNamespaces.js');
 const {
   getChromeApiNamespacePaths,
-} = require('../../../site/_collections/algolia.js');
+} = require('../../../site/_utils/getChromeApiNamespacePaths.js');
 
 const apiNamespaces = getChromeApiNamespaces();
 

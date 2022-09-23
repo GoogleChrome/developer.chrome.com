@@ -120,7 +120,4 @@ const algoliaCollection = collections => {
   });
 };
 
-module.exports = {
-  getChromeApiNamespacePaths,
-  algoliaCollection,
-};
+module.exports = algoliaCollection;

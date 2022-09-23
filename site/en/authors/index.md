@@ -8,7 +8,7 @@ i18n:
   headings:
     latest-news: 'Authors'
 pagination:
-  data: postsData.authors
+  data: authorsData
   size: 24
-  resolve: values
+  resolve: keys
 ---

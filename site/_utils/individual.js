@@ -14,23 +14,31 @@
  * limitations under the License.
  */
 
-const {index, individual} = require('./utils');
-
 /**
- * @param {AuthorsItem[]} authors
- * @param {string} locale
- * @return {AuthorsItem[]}
+ * Reusable hooks for generating single pages for collections, e.g. authors.
  */
-const authorsIndex = (authors, locale) => index(authors, locale);
+
+const addPagination = require('../_utils/add-pagination');
+const filterByLocale = require('../_filters/filter-by-locale');
 
 /**
- * @param {AuthorsItem[]} authors
- * @param {string} locale
+ * @param {VirtualCollectionItem[]} items
+ * @param {string} [locale]
  * @return {PaginatedPage[]}
  */
-const authorsIndividual = (authors, locale) => individual(authors, locale);
+const individual = (items, locale) => {
+  /** @type PaginatedPage[] */
+  let paginated = [];
+  for (const item of items) {
+    if (item.elements?.length > 0) {
+      paginated = paginated.concat(
+        addPagination(filterByLocale(item.elements, locale), item)
+      );
+    }
+  }
+  return paginated;
+};
 
 module.exports = {
-  index: authorsIndex,
-  individual: authorsIndividual,
+  individual,
 };
