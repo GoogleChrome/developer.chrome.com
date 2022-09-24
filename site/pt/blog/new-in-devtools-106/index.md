@@ -87,7 +87,7 @@ Issue do Chromium: [1334585](https://crbug.com1334585)
 ### Ignorar os scripts de terceiros conhecidos automaticamente {: #auto-ignore }
 
 <!-- Identify issues in your code quicker during debugging because DevTools now automatically adds known third-party scripts to the ignore list. -->
-identifique problemas no seu código mais rapidamente durante o debug porque o DevTools agora adiciona automaticamente todos os scripts de terceiros que são conhecidos à sua lista de ignorados.
+Identifique problemas no seu código mais rapidamente durante o debug porque o DevTools agora adiciona automaticamente todos os scripts de terceiros que são conhecidos à sua lista de ignorados.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. The stack trace shows only your code (e.g. `app.component.ts` `button.component.ts`). Click **Show more frames** to view the full stack trace. -->
 Abra essa [demo](https://ng-devtools.netlify.app/) e clique no botão de incremento. Expanda a mensagem de erro no *Console*. O stack trace vai mostrar apenas o seu código (`app.component.ts`, `button.component.ts`). Clique em **Mostrar mais frames** para ver o stack trace completo.
