@@ -33,6 +33,7 @@ const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
   // @ts-ignore
   await populateTranslationContent(process.env.DEVTOOLS_VERSION, languages);
   createGitHubIssues(
+    // @ts-ignore
     process.env.DEVTOOLS_VERSION,
     process.env.DEVTOOLS_TRANSLATE_DUE,
     languages,
