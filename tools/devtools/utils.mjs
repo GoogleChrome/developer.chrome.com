@@ -4,7 +4,10 @@ import nunjucks from 'nunjucks';
 import {Octokit} from 'octokit';
 import {dirname} from 'path';
 
-nunjucks.configure({autoescape: false});
+nunjucks.configure({
+  autoescape: false,
+  tags: {blockStart: '<%', blockEnd: '%>'},
+});
 
 const blogTemplate = './tools/devtools/templates/new-in-devtools.md';
 const bannerTemplate = './tools/devtools/templates/new-in-devtools-banner.svg';
@@ -97,13 +100,17 @@ export async function createWndtBanners(version, langs) {
  */
 export async function createWndtBlogPosts(version, langs) {
   for (const lang of langs) {
-    const output = nunjucks.render(blogTemplate, {
-      title: nunjucks.renderString(translation.title[lang], {version}),
-      thankful: translation.thankful[lang] || '',
-      date: getToday(),
-      lang: lang,
-      version: version,
-    });
+    const output = nunjucks
+      .render(blogTemplate, {
+        title: nunjucks.renderString(translation.title[lang], {version}),
+        thankful: translation.thankful[lang] || '',
+        date: getToday(),
+        lang: lang,
+        version: version,
+        desc: lang === 'en' ? '""' : '{{desc}}',
+        content: lang === 'en' ? '' : '{{content}}',
+      })
+      .replaceAll('\n\n\n', '\n');
 
     const fileName = nunjucks.renderString(blogDest, {lang, version});
 
@@ -120,34 +127,38 @@ export async function createWndtBlogPosts(version, langs) {
  */
 export async function populateTranslationContent(version, langs) {
   const enFileName = nunjucks.renderString(blogDest, {lang: 'en', version});
-
-  const contentRegex =
-    /(?<=<!-- \$contentStart -->)(.+?)(?=<!-- \$contentEnd -->)/s;
-  const descRegex = /(?<=description: )(.*)/gm;
   const enFile = await readFile(enFileName, 'utf-8');
-  const enDesc = enFile.match(descRegex)?.[0] || '""';
-  let enContent = enFile.match(contentRegex)?.[0] || '';
 
-  const paragraphRegex =
-    /(?<=\n)((?!{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm; // /^(\n)((?!{%|{#|<!-- \$content).*)\n$/gm;
+  // Extract English description and content paragraph
+  const enDesc = enFile.match(/(?<=description: )(.*)/gm)?.[0] || '""';
+  let enContent =
+    enFile.match(
+      /(?<=<!-- \$contentStart -->)(.+?)(?=<!-- \$contentEnd -->)/s
+    )?.[0] || '';
 
-  // @ts-ignore
-  for (const p of (enContent.match(paragraphRegex) || []).filter(x => x)) {
+  const enParagraphs = (
+    enContent.match(
+      /(?<=\n)((?!{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm
+    ) || []
+  ).filter(x => x);
+
+  for (const p of enParagraphs) {
     if (p.startsWith('```'))
       console.warn(
         "Output contains code sample. Please check if it's commented correctly."
       );
+
     enContent = enContent.replace(p, `<!-- ${p} -->`);
   }
 
+  // Append the English description and commented content to translation files
   for (const lang of langs) {
     const fileName = nunjucks.renderString(blogDest, {lang, version});
 
-    const fileContent = await readFile(fileName, 'utf-8');
-
-    // TODO: Update replace image with CDN url
-    let output = fileContent.replace(descRegex, enDesc);
-    output = output.replace(contentRegex, enContent);
+    const output = nunjucks.render(fileName, {
+      desc: enDesc,
+      content: enContent,
+    });
 
     await writeFile(fileName, output, 'utf-8');
   }
@@ -160,12 +171,12 @@ export async function populateTranslationContent(version, langs) {
  * @param {String[]} langs - languages you want to generate
  */
 export async function createWndtOutline(version, langs) {
+  // Read the file
   const fileName = nunjucks.renderString(blogDest, {lang: 'en', version});
   const content = await readFile(fileName, 'utf-8');
-  const regex = /^(## |### )(.*)$/gm;
 
-  // @ts-ignore
-  const list = content.match(regex).map(x => {
+  // Abstract the title and hash id
+  const list = (content.match(/^(## |### )(.*)$/gm) || []).map(x => {
     const title = x.match(/(?<=## )(.*?)(?= {:)/gm);
     const hash = x.match(/(?<={: )(.*?)(?= })/g);
 
@@ -177,6 +188,7 @@ export async function createWndtOutline(version, langs) {
     list.join('\n') +
     '\n';
 
+  // Append outline to translation files
   for (const lang of langs) {
     let langOutput = nunjucks.renderString(output, {
       hashLang: lang === 'en' ? '' : `/${lang}`,
@@ -205,7 +217,7 @@ export async function createWndtOutline(version, langs) {
  * @param {String} dueDate - due date to translate
  * @param {String[]} langs - languages you want to generate
  * @param {String} auth - GitHub Token
- * @param {Object} translators - Translators { en: 'githubHandler' }
+ * @param {Object} translators - Translators of different locales { en: 'githubHandler' }
  */
 export async function createGitHubIssues(
   version,
