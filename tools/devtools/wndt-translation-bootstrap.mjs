@@ -24,6 +24,13 @@ import {
 } from './utils.mjs';
 
 const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
+const translators = {};
+
+languages.forEach(
+  lang =>
+    (translators[lang] =
+      process.env['DEVTOOLS_TRANSLATOR_' + lang.toUpperCase()] || '')
+);
 
 (async () => {
   // @ts-ignore
@@ -37,6 +44,7 @@ const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
     process.env.DEVTOOLS_VERSION,
     process.env.DEVTOOLS_TRANSLATE_DUE,
     languages,
-    process.env.GITHUB_TOKEN
+    process.env.GITHUB_TOKEN,
+    translators
   );
 })();

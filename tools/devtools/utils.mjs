@@ -40,12 +40,12 @@ const translation = {
     zh: '*感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*',
   },
   reviewers: {
-    es: ['@Caballerog', '@midudev', '@and-oli'],
-    ja: ['@yoichiro', '@yoshiko-pg', '@technohippy', '@lacolaco'],
-    ko: ['@techhtml', '@TORU0239', '@cwdoh'],
-    pt: ['@khaosdoctor', '@alvarocamillont'],
-    ru: ['@solarrust', '@webmaxru', '@kateryna-prokopenko'],
-    zh: ['@louisyoong', '@liuliangsir', '@xyugroup', '@aquaMAX', '@hanselfmu'],
+    es: ['midudev', 'Caballerog', 'and-oli'],
+    ja: ['yoshiko-pg', 'lacolaco', 'technohippy', 'yoichiro'],
+    ko: ['techhtml', 'TORU0239', 'cwdoh'],
+    pt: ['alvarocamillont', 'khaosdoctor'],
+    ru: ['solarrust', 'webmaxru', 'kateryna-prokopenko'],
+    zh: ['xyugroup', 'aquaMAX', 'liuliangsir', 'louisyoong', 'hanselfmu'],
   },
   banner: {
     en: "What's new in",
@@ -205,8 +205,15 @@ export async function createWndtOutline(version, langs) {
  * @param {String} dueDate - due date to translate
  * @param {String[]} langs - languages you want to generate
  * @param {String} auth - GitHub Token
+ * @param {Object} translators - Translators { en: 'githubHandler' }
  */
-export async function createGitHubIssues(version, dueDate, langs, auth) {
+export async function createGitHubIssues(
+  version,
+  dueDate,
+  langs,
+  auth,
+  translators = {}
+) {
   // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
   const octokit = new Octokit({auth});
 
@@ -214,13 +221,23 @@ export async function createGitHubIssues(version, dueDate, langs, auth) {
   console.log(`Login to GitHub successfully: ${data.login}`);
 
   for (const lang of langs) {
+    const translator = translators[lang] ? `@${translators[lang]}` : '...';
+    const reviewers = translation.reviewers[lang]
+      .map(r => `@${r}`)
+      .filter(r => r !== translator);
+
     const {status} = await octokit.request(
       'POST /repos/GoogleChrome/developer.chrome.com/issues',
       {
         owner: 'GoogleChrome',
         repo: 'developer.chrome.com',
         title: `[devtools-translate] ${translation.language[lang]} - What's New in DevTools (Chrome ${version})`,
-        body: `Post: https://developer.chrome.com/blog/new-in-devtools-${version}/\nTranslated by: ${dueDate}\n\nTranslator: ...\nReviewers: ${translation.reviewers[lang].join(', ')}`,
+        body:
+          `Post: https://developer.chrome.com/blog/new-in-devtools-${version}/\n` +
+          `Translated by: ${dueDate}\n` +
+          '\n' +
+          `Translator: ${translator}\n` +
+          `Reviewers: ${reviewers.join(', ')}`,
         assignees: ['jecfish'],
         labels: ['devtools-translate', 'content', 'translation'],
       }
