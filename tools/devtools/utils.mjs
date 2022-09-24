@@ -1,6 +1,10 @@
 import {readFile, writeFile, mkdir} from 'fs/promises';
+// eslint-disable-next-line node/no-extraneous-import
+import nunjucks from 'nunjucks';
 import {Octokit} from 'octokit';
 import {dirname} from 'path';
+
+nunjucks.configure({autoescape: false});
 
 const verholder = '$version';
 const langholder = '$lang';
@@ -22,13 +26,13 @@ const translation = {
     zh: 'Chinese',
   },
   title: {
-    en: "What's New in DevTools (Chrome $version)",
-    es: 'Qué hay de nuevo en DevTools (Chrome $version)',
-    ja: 'DevTools の新機能 (Chrome $version)',
-    ko: 'DevTools 의 새로운 기능 (Chrome $version)',
-    pt: 'O que há de novo no DevTools (Chrome $version)',
-    ru: 'Новинки DevTools (Chrome $version)',
-    zh: 'DevTools 新功能（Chrome $version）',
+    en: "What's New in DevTools (Chrome {{version}})",
+    es: 'Qué hay de nuevo en DevTools (Chrome {{version}})',
+    ja: 'DevTools の新機能 (Chrome {{version}})',
+    ko: 'DevTools 의 새로운 기능 (Chrome {{version}})',
+    pt: 'O que há de novo no DevTools (Chrome {{version}})',
+    ru: 'Новинки DevTools (Chrome {{version}})',
+    zh: 'DevTools 新功能（Chrome {{version}}）',
   },
   thankful: {
     es: '*Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io).*',
@@ -76,16 +80,14 @@ function getToday() {
  */
 export async function createWndtBanners(version, langs) {
   for (const lang of langs) {
-    const fileName = bannerDest.replace(langholder, lang);
-
-    await mkdir(dirname(fileName), {recursive: true});
-
-    const template = await readFile(bannerTemplate, 'utf-8');
-    const output = template
-      .replaceAll('$banner', translation.banner[lang])
-      .replaceAll(verholder, version);
+    const output = nunjucks.render(bannerTemplate, {
+      banner: translation.banner[lang],
+      version: version,
+    });
 
     // TODO: Upload images to CDN
+    const fileName = bannerDest.replace(langholder, lang);
+    await mkdir(dirname(fileName), {recursive: true});
     await writeFile(fileName, output, 'utf-8');
   }
   console.log(`Created WNDT banners for: ${langs.join(', ')}`);
@@ -98,32 +100,18 @@ export async function createWndtBanners(version, langs) {
  */
 export async function createWndtBlogPosts(version, langs) {
   for (const lang of langs) {
+    const output = nunjucks.render(blogTemplate, {
+      title: nunjucks.renderString(translation.title[lang], {version}),
+      thankful: translation.thankful[lang] || '',
+      date: getToday(),
+      lang: lang,
+      version: version,
+    });
+
     const fileName = blogDest
       .replace(langholder, lang)
       .replace(verholder, version);
-
     await mkdir(dirname(fileName), {recursive: true});
-
-    const template = await readFile(blogTemplate, 'utf-8');
-
-    // TODO: Update replace image with CDN url
-    let output = template
-      .replaceAll('$title', translation.title[lang])
-      .replaceAll('$thankful', translation.thankful[lang] || '$thankful')
-      .replaceAll('$date', getToday())
-      .replaceAll(langholder, lang)
-      .replaceAll(verholder, version);
-
-    if (lang === 'en') {
-      output = output
-        .replaceAll('draft: true\n', '')
-        .replaceAll('$thankful\n', '')
-        .replaceAll(
-          /( )*<!-- Translation instructions((.*)|[^<]*|[^!]*|[^-]*|[^>]*)-->\n*/g,
-          ''
-        );
-    }
-
     await writeFile(fileName, output, 'utf-8');
   }
   console.log(`Created WNDT blog posts for: ${langs.join(', ')}`);
@@ -150,7 +138,7 @@ export async function populateTranslationContent(version, langs) {
     /(?<=\n)((?!{%|{#|Chromium issue: |Chromium issues: ).*)(?=\n)$/gm; // /^(\n)((?!{%|{#|<!-- \$content).*)\n$/gm;
 
   // @ts-ignore
-  for (const p of enContent.match(paragraphRegex).filter(x => x)) {
+  for (const p of (enContent.match(paragraphRegex) || []).filter(x => x)) {
     if (p.startsWith('```'))
       console.warn(
         "Output contains code sample. Please check if it's commented correctly."
@@ -191,33 +179,31 @@ export async function createWndtOutline(version, langs) {
     const title = x.match(/(?<=## )(.*?)(?= {:)/gm);
     const hash = x.match(/(?<={: )(.*?)(?= })/g);
 
-    return `* [${title}]($lang/blog/new-in-devtools-${version}/${hash})`;
+    return `* [${title}]({{hashLang}}/blog/new-in-devtools-{{version}}/${hash})`;
   });
 
   const output =
-    `### Chrome ${version} {: #chrome${version} }\n\n` + list.join('\n') + '\n';
+    '### Chrome {{version}} {: #chrome{{version}} }\n\n' +
+    list.join('\n') +
+    '\n';
 
   for (const lang of langs) {
-    const contentHolder = '<!-- $content -->';
-
-    const outlineFileName = outlineDest.replace(langholder, lang);
-    const outlineRaw = await readFile(outlineFileName, 'utf-8');
-
-    let langOutput = output.replaceAll(
-      langholder,
-      lang === 'en' ? '' : `/${lang}`
-    );
+    let langOutput = nunjucks.renderString(output, {
+      hashLang: lang === 'en' ? '' : `/${lang}`,
+      version,
+    });
 
     if (lang !== 'en') {
       langOutput = `<!-- ${langOutput} -->`;
     }
 
-    const outline = outlineRaw.replace(
-      contentHolder,
-      contentHolder + '\n\n' + langOutput
-    );
+    const outlineFileName = outlineDest.replace(langholder, lang);
+    const contentHolder = '{{content}}';
+    const out = nunjucks.render(outlineFileName, {
+      content: contentHolder + '\n\n' + langOutput,
+    });
 
-    await writeFile(outlineFileName, outline, 'utf-8');
+    await writeFile(outlineFileName, out, 'utf-8');
   }
 
   console.log(`Appended WNDT outlines for: ${langs.join(', ')}`);
