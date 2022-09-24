@@ -16,14 +16,13 @@ if (!process.env.GITHUB_TOKEN) {
 }
 
 import {
-  createWndtBanners,
   createWndtBlogPosts,
-  // @ts-ignore
   createGitHubIssues,
   populateTranslationContent,
+  locales,
 } from './utils.mjs';
 
-const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
+const languages = locales.filter(x => !x.isDefault).map(x => x.lang);
 const translators = {};
 
 languages.forEach(
@@ -33,8 +32,6 @@ languages.forEach(
 );
 
 (async () => {
-  // @ts-ignore
-  await createWndtBanners(process.env.DEVTOOLS_VERSION, languages);
   // @ts-ignore
   await createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
   // @ts-ignore
