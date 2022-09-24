@@ -6,15 +6,12 @@ import {dirname} from 'path';
 
 nunjucks.configure({autoescape: false});
 
-const verholder = '$version';
-const langholder = '$lang';
-
 const blogTemplate = './tools/devtools/templates/new-in-devtools.md';
 const bannerTemplate = './tools/devtools/templates/new-in-devtools-banner.svg';
 
-const blogDest = `./site/${langholder}/blog/new-in-devtools-${verholder}/index.md`;
-const outlineDest = `./site/_includes/partials/devtools/${langholder}/whats-new.md`;
-const bannerDest = `./tools/devtools/_temp/new-in-devtools-banner-${langholder}.svg`;
+const blogDest = './site/{{lang}}/blog/new-in-devtools-{{version}}/index.md';
+const outlineDest = './site/_includes/partials/devtools/{{lang}}/whats-new.md';
+const bannerDest = './tools/devtools/_temp/new-in-devtools-banner-{{lang}}.svg';
 
 const translation = {
   language: {
@@ -86,7 +83,7 @@ export async function createWndtBanners(version, langs) {
     });
 
     // TODO: Upload images to CDN
-    const fileName = bannerDest.replace(langholder, lang);
+    const fileName = nunjucks.renderString(bannerDest, {lang});
     await mkdir(dirname(fileName), {recursive: true});
     await writeFile(fileName, output, 'utf-8');
   }
@@ -108,9 +105,8 @@ export async function createWndtBlogPosts(version, langs) {
       version: version,
     });
 
-    const fileName = blogDest
-      .replace(langholder, lang)
-      .replace(verholder, version);
+    const fileName = nunjucks.renderString(blogDest, {lang, version});
+
     await mkdir(dirname(fileName), {recursive: true});
     await writeFile(fileName, output, 'utf-8');
   }
@@ -123,9 +119,7 @@ export async function createWndtBlogPosts(version, langs) {
  * @param {String[]} langs - languages you want to generate
  */
 export async function populateTranslationContent(version, langs) {
-  const enFileName = blogDest
-    .replace(langholder, 'en')
-    .replace(verholder, version);
+  const enFileName = nunjucks.renderString(blogDest, {lang: 'en', version});
 
   const contentRegex =
     /(?<=<!-- \$contentStart -->)(.+?)(?=<!-- \$contentEnd -->)/s;
@@ -147,9 +141,7 @@ export async function populateTranslationContent(version, langs) {
   }
 
   for (const lang of langs) {
-    const fileName = blogDest
-      .replace(langholder, lang)
-      .replace(verholder, version);
+    const fileName = nunjucks.renderString(blogDest, {lang, version});
 
     const fileContent = await readFile(fileName, 'utf-8');
 
@@ -168,9 +160,7 @@ export async function populateTranslationContent(version, langs) {
  * @param {String[]} langs - languages you want to generate
  */
 export async function createWndtOutline(version, langs) {
-  const fileName = blogDest
-    .replace(langholder, 'en')
-    .replace(verholder, version);
+  const fileName = nunjucks.renderString(blogDest, {lang: 'en', version});
   const content = await readFile(fileName, 'utf-8');
   const regex = /^(## |### )(.*)$/gm;
 
@@ -197,7 +187,7 @@ export async function createWndtOutline(version, langs) {
       langOutput = `<!-- ${langOutput} -->`;
     }
 
-    const outlineFileName = outlineDest.replace(langholder, lang);
+    const outlineFileName = nunjucks.renderString(outlineDest, {lang});
     const contentHolder = '{{content}}';
     const out = nunjucks.render(outlineFileName, {
       content: contentHolder + '\n\n' + langOutput,

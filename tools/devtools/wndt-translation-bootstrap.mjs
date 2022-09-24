@@ -32,10 +32,10 @@ const languages = ['es', 'ja', 'ko', 'pt', 'ru', 'zh'];
   await createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
   // @ts-ignore
   await populateTranslationContent(process.env.DEVTOOLS_VERSION, languages);
-  // createGitHubIssues(
-  //   process.env.DEVTOOLS_VERSION,
-  //   process.env.DEVTOOLS_TRANSLATE_DUE,
-  //   languages,
-  //   process.env.GITHUB_TOKEN
-  // );
+  createGitHubIssues(
+    process.env.DEVTOOLS_VERSION,
+    process.env.DEVTOOLS_TRANSLATE_DUE,
+    languages,
+    process.env.GITHUB_TOKEN
+  );
 })();
