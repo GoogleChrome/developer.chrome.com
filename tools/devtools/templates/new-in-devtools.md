@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: {{date}}
 description: {{desc}}
-hero: 'image/to_be_updated.jpg'
+hero: '{{image}}'
 alt: ''
 tags:
   - new-in-devtools

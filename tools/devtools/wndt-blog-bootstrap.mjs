@@ -14,7 +14,13 @@ import {createWndtBlogPosts, locales} from './utils.mjs';
 
 const languages = locales.filter(x => x.isDefault).map(x => x.lang);
 
+const images = {};
+languages.forEach(
+  lang =>
+    (images[lang] = process.env['DEVTOOLS_IMAGE_' + lang.toUpperCase()] || '')
+);
+
 (async () => {
   // @ts-ignore
-  await createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages);
+  await createWndtBlogPosts(process.env.DEVTOOLS_VERSION, languages, images);
 })();

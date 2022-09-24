@@ -108,7 +108,7 @@ export async function createWndtBanners(version, langs) {
  * @param {String} version - release version
  * @param {String[]} langs - languages you want to generate
  */
-export async function createWndtBlogPosts(version, langs) {
+export async function createWndtBlogPosts(version, langs, images = {}) {
   for (const lang of langs) {
     const output = nunjucks
       .render(blogTemplate, {
@@ -117,6 +117,7 @@ export async function createWndtBlogPosts(version, langs) {
         date: getToday(),
         lang: lang,
         version: version,
+        image: images[lang] || '{{image}}',
         desc: lang === 'en' ? '""' : '{{desc}}',
         content: lang === 'en' ? '' : '{{content}}',
       })
