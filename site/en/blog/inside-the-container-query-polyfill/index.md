@@ -11,7 +11,7 @@ authors:
   - gbmonaco
 ---
 
-[Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a new CSS feature that enables you to write styling logic that targets features of a parent element (for example, its width or height) to style its children. Recently, a [big update](https://developer.chrome.com/blog/cq-polyfill/) to the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) was released, coinciding with support landing in browsers.
+[Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a new CSS feature that enables you to write styling logic that targets features of a parent element (for example, its width or height) to style its children. Recently, a [big update](/blog/cq-polyfill/) to the [polyfill](https://github.com/GoogleChromeLabs/container-query-polyfill) was released, coinciding with support landing in browsers.
 
 In this post, you will be able to take a peek inside how the polyfill works, the challenges it overcomes, and the best practices when using it to provide a great user experience for your visitors.
 
@@ -22,10 +22,10 @@ In this post, you will be able to take a peek inside how the polyfill works, the
 When the CSS parser inside a browser encounters an unknown at-rule, like the brand new `@container` rule, it will simply discard it as if it never existed. Therefore, the first and most important thing the polyfill must do is transpile an `@container` query into something that won’t be discarded.
 
 {% Aside %}
-This sort of transpilation often occurs at build-time, as part of a post-processing step. However, the polyfill does this at runtime instead, for two reasons: you and your visitors. With support for container queries already in [Chromium 105](https://developer.chrome.com/blog/new-in-chrome-105/) and [Safari 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/), it’s expected that most of your visitors will likely be running browsers with built-in support sooner rather than later. Offline transpilation would effectively tax you (for having to maintain this offline post-processing step) _and_ your visitors (for having to download transpiled code that may never be used).
+This sort of transpilation often occurs at build-time, as part of a post-processing step. However, the polyfill does this at runtime instead, for two reasons: you and your visitors. With support for container queries already in [Chromium 105](/blog/new-in-chrome-105/) and [Safari 16](https://webkit.org/blog/13152/webkit-features-in-safari-16-0/), it’s expected that most of your visitors will likely be running browsers with built-in support sooner rather than later. Offline transpilation would effectively tax you (for having to maintain this offline post-processing step) _and_ your visitors (for having to download transpiled code that may never be used).
 {% endAside %}
 
-The first step in transpilation is to convert the top-level `@container` rule into an [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) query. This mostly ensures that the content remains grouped together. For example, when using [CSSOM](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model) APIs and when viewing the CSS source.
+The first step in transpilation is to convert the top-level `@container` rule into an [@media](https://developer.mozilla.org/docs/Web/CSS/@media) query. This mostly ensures that the content remains grouped together. For example, when using [CSSOM](https://developer.mozilla.org/docs/Web/API/CSS_Object_Model) APIs and when viewing the CSS source.
 
 {% Compare 'worse', 'before' %}
 ```css
@@ -65,7 +65,7 @@ Before container queries, CSS didn’t have a way for an author to arbitrarily e
 ```
 {% endCompare %}
 
-Notice the use of the [`:where(...)`](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) pseudo-class. Normally, including an additional attribute selector would increase the [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) of the selector. With the pseudo-class, the extra condition can be applied while preserving the original specificity. To see why this is crucial, consider the following example:
+Notice the use of the [`:where(...)`](https://developer.mozilla.org/docs/Web/CSS/:where) pseudo-class. Normally, including an additional attribute selector would increase the [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) of the selector. With the pseudo-class, the extra condition can be applied while preserving the original specificity. To see why this is crucial, consider the following example:
 
 ```css
 @container (width > 300px) {
@@ -176,7 +176,7 @@ Since a container will never apply the first attribute (`cq-XYZ-A`) to itself, t
 
 ### Container relative units
 
-Container queries also come with [a few new units](https://www.w3.org/TR/css-contain-3/#container-lengths) that you can use in your CSS, such as `cqw` and `cqh` for 1% of the width and height (respectively) of the closest appropriate parent container. To support these, the unit is transformed into a `calc(...)` expression using [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*). The polyfill will set the values for these properties via inline styles on the container element.
+Container queries also come with [a few new units](https://www.w3.org/TR/css-contain-3/#container-lengths) that you can use in your CSS, such as `cqw` and `cqh` for 1% of the width and height (respectively) of the closest appropriate parent container. To support these, the unit is transformed into a `calc(...)` expression using [CSS Custom Properties](https://developer.mozilla.org/docs/Web/CSS/--*). The polyfill will set the values for these properties via inline styles on the container element.
 
 {% Compare 'worse', 'before' %}
 ```css
@@ -196,7 +196,7 @@ Container queries also come with [a few new units](https://www.w3.org/TR/css-con
 ```
 {% endCompare %}
 
-There are also logical units, like `cqi` and `cqb` for inline size and block size (respectively). These are a little bit more complicated, because the inline and block axes are determined by the [`writing-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) of _the element using the unit_, not the element being queried. To support this, the polyfill applies an inline style to any element whose `writing-mode` differs from its parent.
+There are also logical units, like `cqi` and `cqb` for inline size and block size (respectively). These are a little bit more complicated, because the inline and block axes are determined by the [`writing-mode`](https://developer.mozilla.org/docs/Web/CSS/writing-mode) of _the element using the unit_, not the element being queried. To support this, the polyfill applies an inline style to any element whose `writing-mode` differs from its parent.
 
 ```css
 /* Element with a horizontal writing mode */
@@ -232,7 +232,7 @@ Container queries also add a few new CSS properties like [`container-type`](http
 ```
 {% endCompare %}
 
-These properties are transformed whenever they’re discovered, allowing the polyfill to play nicely with other CSS features like [`@supports`](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports). This functionality is the basis of the best practices for using the polyfill, as covered below.
+These properties are transformed whenever they’re discovered, allowing the polyfill to play nicely with other CSS features like [`@supports`](https://developer.mozilla.org/docs/Web/CSS/@supports). This functionality is the basis of the best practices for using the polyfill, as covered below.
 
 {% Compare 'worse', 'before' %}
 ```css
