@@ -4,11 +4,11 @@ description: >
   "A conversation with Technical Program Managers on the Chrome release team, learning how they ensure each release goes smoothly."
 layout: 'layouts/blog-post.njk'
 date: 2022-09-26
-hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/UwZB3SiZ6IFTR6OmosPL.jpg'
+hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/hlWZ6vcwjIBjagdnkVUS.jpeg'
 alt: >
-  A train approaching through fall trees.
+  People working at screens pointing to Chrome logos and a calendar.
 authors:
-  - joshcruz
+  - noraoneill
 ---
 
 Every month, we release a new version of Chrome to make sure our billions of global users and businesses get the freshest features, security updates and performance upgrades. And now, we're able to make improvements and fix issues quicker than ever before with a faster release cycle—meaning you'll get the latest updates even more often.
