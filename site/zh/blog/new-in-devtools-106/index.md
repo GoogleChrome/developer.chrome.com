@@ -22,26 +22,20 @@ draft: true
 {% YouTube id='5gBqTXctxO8' %}
 
 <!-- start: translation instructions -->
-开始：翻译使用说明
 <!-- + 1. Remove the "draft: true" tag above when submitting PR -->
-1.当提交 PR 时去掉上面的“draft: true”标签
 <!-- + 2. Provide translations under each of the English commented original content -->
-2.提供每条英文评论原文下的翻译
 <!-- + 3. Translate the "description" tag above -->
-3.翻译上面的“描述”标签
 <!-- + 4. Translate all the <img> alt text -->
-4.翻译所有 <img> alt 文本
 <!-- + 5. Update the whats-new.md file -->
-5.更新 whats-new.md 文件
 
 <!-- ## Group files by Authored / Deployed in the Sources panel {: #authored } -->
-在 Sources 面板中按照 Authored / Deployed 对文件进行分组 {: #authored }
+## 在 Sources 面板中按照 Authored / Deployed 对文件进行分组 {: #authored }
 
 <!-- The **Group files by Authored / Deployed** is now shown under the 3-dot menu. Previously, it showed directly on the navigation pane. -->
-现在**Authored / Deployed 分组文件** 是显示在三点式菜单下。 以前，它是显示在导航窗格上。
+现在 **已创作/ 已部署** （Authored / Deployed）选项将显示在三点式菜单下。 以前，它是显示在导航边栏上。
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). Enable the **Group files by Authored / Deployed** setting to view your original source code (Authored) first and navigate to them quicker. -->
-打开这个[演示](https://ng-devtools.netlify.app/)。启用**按 "已创作/已部署 "分组的设置，以便首先查看你的原始源代码（已创作）并更快地浏览它们。
+打开这个[演示](https://ng-devtools.netlify.app/)。启用**已创作/已部署分组**的设置，以便首先查看你的原始源代码（已创作）并更快地浏览它们。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HI12Jz3K7CCy0cm01jBk.png", alt="Group files by Authored / Deployed", width="800", height="405" %}
 
