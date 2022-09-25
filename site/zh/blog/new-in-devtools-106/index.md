@@ -32,27 +32,27 @@ draft: true
 ## 在 Sources 面板中按照 Authored / Deployed 对文件进行分组 {: #authored }
 
 <!-- The **Group files by Authored / Deployed** is now shown under the 3-dot menu. Previously, it showed directly on the navigation pane. -->
-现在 **已创作/ 已部署** （Authored / Deployed）选项将显示在三点式菜单下。 以前，它是显示在导航边栏上。
+现在 **已创作/ 已部署** `(Authored / Deployed)` 选项将显示在三点式菜单下。 以前，它是显示在导航边栏上。
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). Enable the **Group files by Authored / Deployed** setting to view your original source code (Authored) first and navigate to them quicker. -->
-打开这个[演示](https://ng-devtools.netlify.app/)。启用**已创作/已部署分组**的设置，以便首先查看你的原始源代码（已创作）并更快地浏览它们。
+打开这个[演示] (https://ng-devtools.netlify.app/)。 启用**已创作/已部署分组**的设置，以便首先查看你的原始源代码（已创作）并更快地浏览它们。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HI12Jz3K7CCy0cm01jBk.png", alt="Group files by Authored / Deployed", width="800", height="405" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/73c559d02676e4329645120e657416e7f15de42b #}
 
 Chromium bug: [1352488](https://crbug.com/1352488)
-Chromium 漏洞: [1352488](https://crbug.com/1352488)
+Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Improved stack traces {: #stack-traces } -->
-改进堆栈痕迹 {: #stack-traces }
+## 改进堆栈痕迹 {: #stack-traces }
 
 <!-- ### Linked stack traces for asynchronous operations  {: #async } -->
-异步操作的链接堆栈痕迹 {: #async }
+### 异步操作的链接堆栈痕迹 {: #async }
 
 <!-- When some operations are scheduled to happen asynchronously, the stack traces in DevTools now tell the “full story” of the operation. Previously, it tells only part of the story. -->
-当进行某些操作被安排为异步发生时，DevTools中的堆栈跟踪现在可以讲述操作的 "完整故事"。相对起以前，它只讲述了故事的一部分。
+当进行某些操作被安排为异步发生时，DevTools中的堆栈跟踪现在可以讲述操作的”完整故事“。相对起以前，它只讲述了故事的一部分。
 
 <!-- For example, open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. In our source code, the operation includes an async `timeout` operation. -->
 例如，打开这个[演示](https://ng-devtools.netlify.app/)，点击增量按钮。展开**控制台中的错误信息。在我们的源代码中，该操作包括一个异步`超时`操作。
@@ -67,10 +67,10 @@ async increment() {
 ```
 
 <!-- Previously, the stack trace only showed the timeout operation. It did not show the “root cause” of the operation.  -->
-相对以前，堆栈跟踪只显示超时操作。它没有显示该操作的 "根本原因"。
+相对以前，堆栈跟踪只显示超时操作。它没有显示该操作的“根本原因”。
 
 <!-- With the latest changes, DevTools now shows the operation originates from the `onClick` event in the button component, then the `increment` function, followed by the timeout operation. -->
-随着最新的变化，DevTools现在显示操作源于按钮组件中的`onClick`事件，然后是`increment`函数，接着是超时操作。
+随着最新的变化，DevTools现在显示操作源于按钮组件中的 `onClick` 事件，然后是 `increment` 函数，接着是超时操作。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2jAETpw8QWzsg1Wqk0Ya.png", alt="Linked stack traces for asynchronous operations", width="800", height="442" %}
 
@@ -83,11 +83,11 @@ async increment() {
 {# https://chromium.googlesource.com/v8/v8/+/c53c20fe64b5b21f5a4838ebcfdb96357189fc76 #}
 
 Chromium bug: [1334585](https://crbug.com1334585)
-Chromium 漏洞: [1334585](https://crbug.com1334585)
+Chromium 议题: [1334585](https://crbug.com1334585)
 
 
 <!-- ### Automatically ignore known third-party scripts {: #auto-ignore } -->
-自动忽略已知的第三方脚本 {: #auto-ignore }
+### 自动忽略已知的第三方脚本 {: #auto-ignore }
 
 <!-- Identify issues in your code quicker during debugging because DevTools now automatically adds known third-party scripts to the ignore list. -->
 在调试过程中更快地识别代码中的问题，因为 DevTools 现在会自动将已知的第三方脚本添加到忽略列表中。
@@ -113,11 +113,11 @@ Chromium 漏洞: [1334585](https://crbug.com1334585)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e09e489c2b1233ab424d562abc22f297c6322878 #}
 
 Chromium bug: [1323199](https://crbug.com/1323199)
-Chromium 漏洞: [1323199](https://crbug.com/1323199)
+Chromium 议题: [1323199](https://crbug.com/1323199)
 
 
 <!-- ## Improved call stack during debugging  {: #call-stack } -->
-在调试过程中改进调用堆栈 {: #call-stack }
+## 在调试过程中改进调用堆栈 {: #call-stack }
 
 <!-- With the **Automatically add known third-party scripts to ignore list** setting, the call stack now shows only frames that are relevant to your code. -->
 通过**自动添加已知的第三方脚本到忽略列表**设置，现在调用栈只显示与你的代码相关的框架。
@@ -133,11 +133,11 @@ Chromium 漏洞: [1323199](https://crbug.com/1323199)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/73c559d02676e4329645120e657416e7f15de42b #}
 
 Chromium bug: [1352488](https://crbug.com/1352488)
-Chromium 漏洞: [1352488](https://crbug.com/1352488)
+Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Hiding ignore-listed sources in the Sources panel {: #ignore-nav } -->
-在来源面板中隐藏被忽略的来源 {: #忽略-nav }
+## 在来源面板中隐藏被忽略的来源 {: #忽略-nav }
 
 <!-- Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code. -->
 启用**隐藏忽略列表中的来源**，在**导航**窗格中隐藏不相关的文件。这样，你就可以只关注你的代码。
@@ -152,7 +152,7 @@ Chromium 漏洞: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Hiding ignore-listed files in the Command Menu {: #ignore-search } -->
-在命令菜单中隐藏被忽略的文件 {: #忽略的搜索 }
+## 在命令菜单中隐藏被忽略的文件 {: #忽略的搜索 }
 
 <!-- With the **hide ignore-listed sources** setting, you can find your file quicker with the [Command Menu](/docs/devtools/command-menu/). Previously, searching files in the **Command Menu** returns third-party files that might not be relevant to you. -->
 通过 **hide ignore-listed sources** 设置，您可以使用 [Command Menu](/docs/devtools/command-menu/) 更快地找到您的文件。 在以前，**Command Menu** 中搜索文件会返回可能与您无关的第三方文件。
@@ -166,11 +166,11 @@ Chromium 漏洞: [1352488](https://crbug.com/1352488)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c010ce7baa6930cb633372b5d8024a18b3f7ed66 #}
 
 Chromium bug: [1336604](https://crbug.com/1336604)
-Chromium 漏洞: [1336604](https://crbug.com/1336604)
+Chromium 议题: [1336604](https://crbug.com/1336604)
 
 
 <!-- ## New Interactions track in the Performance panel  {: #performance } -->
-性能面板中的新互动轨道 {: #performance } 
+## 性能面板中的新互动轨道 {: #performance } 
 
 <!-- Use the new **Interactions** track in the **Performance** panel to visualize interactions and track down potential responsiveness issues.  -->
 使用**性能**面板中新的**互动**轨道来可视化互动并追踪潜在的响应性问题。
@@ -183,11 +183,11 @@ Chromium 漏洞: [1336604](https://crbug.com/1336604)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6d97228951a6c8884b3ac4b712e966e79f2bdc3c #}
 
 Chromium bug: [1347390](https://crbug.com/1347390)
-Chromium 漏洞: [1347390](https://crbug.com/1347390)
+Chromium 议题: [1347390](https://crbug.com/1347390)
 
 
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
-性能洞察面板中的LCP时序分解 {: #insights }
+## 性能洞察面板中的LCP时序分解 {: #insights }
 
 <!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 **性能洞察**面板现在显示了[时间表分类](web.dev/optimize-lcp/#lcp-breakdown)中的[Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint)。 并使用这些时间信息来了解和提高LCP性能的机会。
@@ -197,11 +197,11 @@ Chromium 漏洞: [1347390](https://crbug.com/1347390)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/883542a3727a5bc1415ffee7c7bc7f7218d9e2a5 #}
 
 Chromium bug: [1351735](https://crbug.com/1351735)
-Chromium 漏洞: [1351735](https://crbug.com/1351735)
+Chromium 议题: [1351735](https://crbug.com/1351735)
 
 
 <!-- ## Auto-generate default name for recordings in the Recorder panel {: #recorder } -->
-在录音机面板中自动生成录音的默认名称 {: #recorder }
+## 在录音机面板中自动生成录音的默认名称 {: #recorder }
 
 <!-- The **Recorder** panel now automatically generates a name for new recordings. -->
 **录音机**面板将会自动为新录音生成一个名称。
@@ -211,20 +211,21 @@ Chromium 漏洞: [1351735](https://crbug.com/1351735)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fbf1466b00d1ff2c36fce81fde1b21f33b689a76 #}
 
 Chromium bug: [1351383](https://crbug.com/1351383)
-Chromium 漏洞: [1351383](https://crbug.com/1351383)
+Chromium 议题: [1351383](https://crbug.com/1351383)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-杂项亮点 {: #misc }
+## 其他的更新 {: #misc }
 
 <!-- - Previously, [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time. ([1351416](https://crbug.com/1351416)) -->
-以前的状况，[录音机扩展](/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在**录音机**面板上显示出来。([1351416](https://crbug.com/1351416))
+以前的状况，[Recorder 扩展](/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在 **Recorder** 面板上显示出来。
 
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
-**样式**窗格现在显示[SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop)元素的`stop-color`属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
+**样式**边栏现在显示 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 元素的 `stop-color` 属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
+
 
 <!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-在**性能洞察力**面板中，识别导致[布局](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019)) 
+在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019)) 
 
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 在**性能洞察力**面板中显示LCP网页字体的关键路径。 ([1350390](https://crbug.com/1350390))
