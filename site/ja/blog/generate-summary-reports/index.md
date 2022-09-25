@@ -6,7 +6,7 @@ authors:
 description: アトリビューション レポートの概要レポートを生成する集計サービスを試して設定します。
 date: '2022-06-06'
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/ASAZM31nd8FvgV22LTvJ.jpg
-alt: Cords plugged into the server, which represents service set up.
+alt: サーバーに接続されたコード。サービスのセットアップを表します。
 tags:
   - privacy
   - experiment
@@ -18,7 +18,7 @@ tags:
 
 {% Aside %} 2021 年にこの API でオリジントライアルを実行した場合は、[移行ガイド](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit?usp=sharing)に従って、最新のオリジントライアルの準備を行ってください。 {% endAside %}
 
-## Key terms
+## 重要な用語
 
 [アトリビューション レポートの概要](/docs/privacy-sandbox/attribution-reporting-introduction/)と[要約レポート](/docs/privacy-sandbox/attribution-reporting/summary-reports/)の詳細をまだお読みでない場合は、集計サービスのセットアップについて学習する前に、それらに目を通しておくことをお勧めします。
 
@@ -44,11 +44,11 @@ tags:
 
 要約レポートを生成するには、[Terraform](https://www.terraform.io/) を使用して AWS に集計サービスをセットアップする必要があります。Terraform は、AWS [Nitro Enclave インスタンス](https://aws.amazon.com/ec2/nitro/nitro-enclaves/)における集約サービスのプロビジョニング、管理、廃止を支援します。
 
-1. [Install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and [set up](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) the latest AWS client.
-2. [Set up Terraform](https://github.com/google/trusted-execution-aggregation-service/#set-up-terraform).
-3. Download the [aggregation service dependencies](https://github.com/google/trusted-execution-aggregation-service/#download-dependencies).
-4. Set up a [deployment environment](https://github.com/google/trusted-execution-aggregation-service/#set-up-your-deployment-environment).
-5. [Test your system](https://github.com/google/trusted-execution-aggregation-service/#testing-the-system).
+1. 最新の AWS クライアントを[インストール](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)して[セットアップ](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)します。
+2. [Terraform をセットアップ](https://github.com/google/trusted-execution-aggregation-service/#set-up-terraform)します。
+3. [集約サービスの依存関係](https://github.com/google/trusted-execution-aggregation-service/#download-dependencies)をダウンロードします。
+4. [デプロイメント環境](https://github.com/google/trusted-execution-aggregation-service/#set-up-your-deployment-environment)をセットアップします。
+5. [システムをテスト](https://github.com/google/trusted-execution-aggregation-service/#testing-the-system)します。
 
 ## サポートを受ける
 
@@ -60,5 +60,5 @@ Attribution Reporting API のサポートがさらに必要な場合は、以下
 予期しない動作に遭遇した場合は、以下を行ってください。
 
 - API 実装に関して報告された [Chrome のイシューを表示](https://bugs.chromium.org/p/chromium/issues/list?q=component%3AInternals%3EConversionMeasurement)します。
-- Open a [Chrome bug](https://crbug.com/new).
+- [Chrome のバグ](https://crbug.com/new)を開きます。
 - [Trusted Execution Aggregation Service](https://github.com/google/trusted-execution-aggregation-service/issues)（信頼できる実行集計サービス）に関する新しいイシューを提起します。
