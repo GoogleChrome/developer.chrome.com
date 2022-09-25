@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: 'アトリビューション レポート: 更新情報'
 subhead: Attribution Reporting API の最新の変更を確認します。
 description: Attribution Reporting API の最新の変更を確認します。
-date: '2022-06-15'
-updated: '2022-06-23'
+date: 2022-06-15
+updated: 2022-06-23
 authors:
   - maudn
   - alexandrawhite

@@ -4,7 +4,7 @@ title: 集計サービスを使用して要約レポートを生成する
 authors:
   - alexandrawhite
 description: アトリビューション レポートの概要レポートを生成する集計サービスを試して設定します。
-date: '2022-06-06'
+date: 2022-06-06
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/ASAZM31nd8FvgV22LTvJ.jpg
 alt: サーバーに接続されたコード。サービスのセットアップを表します。
 tags:

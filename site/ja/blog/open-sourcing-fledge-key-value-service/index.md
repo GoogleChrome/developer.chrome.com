@@ -2,7 +2,7 @@
 title: FLEDGE Key/Value サービスのオープンソース化
 description: FLEDGE Key/Value サービス
 layout: layouts/blog-post.njk
-date: '2022-08-23'
+date: 2022-08-23
 hero: image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/FQx2L0MGnXgrcAOzkVmm.png
 alt: ''
 authors:
