@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: 'Attribution Reporting: updates'
-subhead: |2
-
-  Review the latest changes to the Attribution Reporting API.
-description: |2
-
-  Review the latest changes to the Attribution Reporting API.
+subhead: Attribution Reporting API の最新の変更を確認します。
+description: Attribution Reporting API の最新の変更を確認します。
 date: '2022-06-15'
 updated: '2022-06-23'
 authors:
@@ -18,31 +14,31 @@ authors:
 
 {% include 'content/privacysandbox-partials/feedback-aside.njk' %}
 
-## Who are these updates for?
+## この更新の対象者
 
-These updates are for you if:
+これらの更新は、次のユーザーを対象としています。
 
-- You already are familiar with the API—for example, if you've been observing or participating in the discussions on the WICG repository and want to understand the changes made to the API.
-- You're using the Attribution Reporting API in a demo or in experiments.
+- API にすでに精通している方: たとえば、WICG リポジトリのディスカッションを閲覧またはそれに参加しており、API に加えられた変更を理解したい場合など。
+- Attribution Reporting API をデモまたは実験で使用している方。
 
 この API を初めて使用する場合、またはまだ試したことがない場合は、[Attribution Reporting API の概要を](/docs/privacy-sandbox/attribution-reporting-introduction/)お読みください。
 
 ## 変更ログ
 
 - **June 23, 2022**: Several updates have been detailed in the [Attribution Reporting updates in June 2022 blog post](/blog/attribution-reporting-updates-june-2022). Additionally:
-    - The  [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit) was updated.
+    - [API ハンドブック](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)が更新されました。
     - We've published [Experiment with Attribution Reporting: Strategy and tips](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing) for summary reports.
-- **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API.
-- **February 7, 2022**: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
-- **January 27, 2022**: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:
-    - [API mechanism changes](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)
+- **2022 年 3 月 31 日**: [広告の関連性と測定 API のオリジン トライアル](/blog/privacy-sandbox-unified-origin-trial/)を新規公開。これには Attribution Reporting API が含まれます。
+- **2022 年 2 月 7 日**: [ヘッダー トリガー リダイレクト](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect)のドキュメントが追加されました。
+- **2022 年 1 月 27 日**: [API 更新の移行](/blog/attribution-reporting-jan-2022-updates/)が公開されました。以下の内容が含まれます。
+    - [API の仕組みの変更](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)
     - 新しい[機能と測定](/blog/attribution-reporting-jan-2022-updates/#new-features)
     - [プライバシー保護の変更](/blog/attribution-reporting-jan-2022-updates/#privacy-changes)
-- **Early 2021**: Aggregate reports and view-through measurement are added to the proposal.
-- **Early 2021**: The API is renamed to "Attribution Reporting API".
+- **2021 年早期**: 集計レポートとビュースルー測定が提案に追加されました。
+- **2021 年早期**: API の名前が「Attribution Reporting API」に変更されました。
 
 ## すべてのリソース
 
 - [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-introduction/)の概要をお読みください。
-- [Experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
+- [実験と参加](/docs/privacy-sandbox/attribution-reporting-experiment/)
 - [API ハンドブックを読む](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit?usp=sharing)
