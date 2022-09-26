@@ -1,7 +1,7 @@
 ---
 title: DevFest Nantes
 summary: >-
-  The Devfest (i.e Developers Festival), is a technical conference destined to
+  The Devfest (Developers Festival), is a technical conference destined to
   developers. It's meant for students, professionals, or any curious techie.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Nantes, France'
