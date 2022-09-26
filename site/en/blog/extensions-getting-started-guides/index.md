@@ -4,7 +4,7 @@ description: "We created a better way to start the Chrome developer learning jou
 layout: "layouts/blog-post.njk"
 authors:
   - amysteam
-date: 2022-09-27
+date: 2022-10-08
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9mMec0BTzXrg4uMqJF63.jpg'
 alt: 'Two puzzle pieces coming together'
 tags:
@@ -15,17 +15,15 @@ In this post, we're excited to share some significant improvements to the Chrome
 
 ## The old guide {: #former-guide }
 
-Previously, the Chrome Extension Getting Started tutorial was a basic extension example that would change the background color of the current page by clicking on a button in the extension popup. It also included an options page where you could pick one of four colors.
+Previously, the Chrome Extension Getting Started tutorial was a very basic extension example that would change the background color of the current page by clicking on a button in the extension popup. It also included an options page where you could pick one of four colors.
 
-The thought was to teach a variety of core extension concepts and development workflow in a single tutorial while also providing a real-world example. This proved to be an ambitious endeavor.
+This basic example didn't demonstrate how to add some popular capabilities featured in real-world extensions. It was time for a revamp.
 
 ## A new approach {: #new-guides }
 
 We know developers rely on our documentation to begin their Chrome extension learning journey, and our goal is to provide a path that is accessible, beginner-friendly, and relevant.
 
-Instead of trying to improve the existing tutorial example, we decided to start from scratch.
-
-Introducing the new and improved Getting Started collection:
+Instead of trying to improve the existing tutorial example, we decided to start from scratch. Introducing the new and improved Getting Started collection:
 
 [Extensions 101][doc-ext-101]
 
