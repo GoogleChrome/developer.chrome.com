@@ -1,6 +1,7 @@
 {% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/project-icon.njk' import projectIcon with context %}
 
-{% macro heroCardWide(title, text, actionText, actionLink, imgSrc, imgAlt, color, titleIcon) %}
+{% macro heroCardWide(title, text, actionText, actionLink, imgSrc, imgAlt, color, titleIcon,  projectName) %}
   {% set color = color or 'blue' %}
 <div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-1000 masonry:pad-bottom-1000 masonry:pad-left-500">
   <div class="hero-card__inner hero-card__inner-wide">
@@ -19,6 +20,9 @@
               %}
             </div>
           </div>
+        {% endif %}
+        {% if projectName %}
+          {{ projectIcon(projectName) }}
         {% endif %}
         {{ title }}
       </h1>
