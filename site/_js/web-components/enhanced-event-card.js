@@ -38,7 +38,7 @@ export class EnhancedEventCard extends BaseElement {
     const visible = this.card.getAttribute('show-details') === '1' ? '0' : '1';
 
     this.detailsButton.innerHTML =
-      visible === '1' ? 'Hide event details' : 'See event details';
+      visible === '1' ? 'Hide details' : "See who's joining";
 
     // @ts-ignore
     this.card.setAttribute('show-details', visible);

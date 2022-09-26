@@ -67,7 +67,7 @@ function EventCard(event) {
               </div>
 
               <button class="material-button button-filled button-round color-bg">
-                See event details
+                See who's joining
               </a>
             </div>
           </div>
@@ -92,11 +92,17 @@ function EventCard(event) {
                     </div>
 
                     <p class="event-card__sub-title gap-bottom-200">
-                      ${session.title}
+                      Talk title
                     </p>
+
+                    <p class="gap-bottom-200">${session.title}</p>
 
                     ${session.description.length > 0 &&
                     html`
+                      <p class="event-card__sub-title gap-bottom-200">
+                        Details
+                      </p>
+
                       <div class="gap-bottom-200">
                         <p>
                           <truncate-text maxLength="100"
