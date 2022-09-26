@@ -5,7 +5,7 @@ summary: >-
   digital design, UX, content, code, and more
 image: null
 location: 'Denver, USA'
-date: '2022-09-09'
+date: '2022-10-10'
 externalUrl: 'https://aneventapart.com/event/denver-2022'
 slidesURL: null
 videoUrl: null
