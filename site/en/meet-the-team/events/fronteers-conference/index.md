@@ -24,7 +24,12 @@ sessions:
     type: speaker
   - speaker: maudnalpas
     title: Debugging web privacy
-    description: ''
+    description: >-
+      Checkout flows that ask for too much data, cookie notices that hurt site performance,
+      maddening location permission requests... Privacy decisions don't only have an impact
+      on user trust: they also determine the user experience! In her talk, Maud will
+      walk you through concrete tips and code examples you can use today to improve the
+      privacy of your users - while delivering a great user experience.
     topics:
       - Privacy
     time: TBC
