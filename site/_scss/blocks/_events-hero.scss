@@ -1,8 +1,7 @@
 .events-hero {
-  background: get-color('blue-50');
+  background: #fdf7df;
   border-radius: 12px;
   margin-bottom: 1.1875rem;
-  padding: get-size(500) get-size(400);
   text-align: center;
 
   @include media-query('lg') {
@@ -10,8 +9,15 @@
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: get-size(400);
-    padding-left: get-size(800);
     text-align: left;
+  }
+
+  &__content {
+    padding: get-size(500) get-size(400);
+
+    @include media-query('lg') {
+      padding: get-size(500) 0 get-size(500) get-size(800);
+    }
   }
 
   h1 {
@@ -52,18 +58,6 @@
 
     @include media-query('lg') {
       display: initial;
-    }
-
-    span {
-      font-family: #{$font-google-sans};
-      font-size: clamp(5rem, 11vw, 9.375rem);
-      font-weight: 400;
-      left: 50%;
-      letter-spacing: 0.3px;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
     }
   }
 }
