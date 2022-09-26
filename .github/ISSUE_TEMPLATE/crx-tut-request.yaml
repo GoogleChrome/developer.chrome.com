@@ -2,11 +2,11 @@ name: Extension tutorial request
 description: Use this form to request a new Chrome Extension tutorial
 title: "[EXT-TUTORIAL] <title>"
 labels: [content, extensions]
-assignees: AmySteam
+assignees: amysteam
 body:
 - type: markdown
   attributes:
-    value: "## Thank you for sharing your feedback, please fill out the following form so that we can better understand the extension tutorial you are looking for:"
+    value: "## Thank you for sharing your feedback. Please fill out this form so that we can better understand what extension tutorial you are looking for:"
 - type: textarea
   attributes:
     label: What would this extension do?
