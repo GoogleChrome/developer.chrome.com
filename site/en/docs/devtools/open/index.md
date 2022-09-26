@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Open Chrome DevTools"
 authors:
   - kaycebasques
+  - jecelynyeen
 date: 2018-12-14
 #updated: YYYY-MM-DD
 description: "All of the ways that you can open Chrome DevTools."
@@ -61,3 +62,10 @@ Chrome.
 
 [1]: /docs/devtools/css
 [2]: /docs/devtools/console
+
+
+## What's next?
+
+Congratulations! You've successfully unlocked the power of Chrome DevTools. Next, watch the following video to learn some useful shortcuts and settings for quicker DevTools navigation.
+
+{% YouTube id="xHusjrb_34A" %}

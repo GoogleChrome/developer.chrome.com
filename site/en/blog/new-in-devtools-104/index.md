@@ -16,6 +16,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id='4RXWfw7Xg_Y' %}
 
 ## Restart frame during debugging {: #restart-frame }
 
@@ -135,7 +136,7 @@ Chromium issue: [1288158](https://crbug.com/1288158)
  
 ## Improved autocomplete suggestions for JavaScript objects {: #autocomplete }
 
-The the autocompletion for JavaScript object properties now display based on this order:
+The autocompletion for JavaScript object properties now display based on this order:
 
 1. Own enumerable properties
 2. Own non-enumerable properties

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2022-04-25
+updated: 2022-05-19
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
@@ -129,7 +129,7 @@ green`"
 
 ## Introduce a user interface {: #user_interface }
 
-Extensions can have many forms of a [user interface][4]; this one will use a [popup][15]. Create and
+[User interfaces][4] for extensions can have many forms; this one will use a [popup][15]. Create and
 add a file named `popup.html` to the extension's directory. This extension uses a button to change
 the background color.
 
@@ -294,7 +294,7 @@ changeColor.addEventListener("click", async () => {
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: setPageBackgroundColor,
+    func: setPageBackgroundColor,
   });
 });
 

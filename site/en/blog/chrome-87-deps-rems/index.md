@@ -26,8 +26,7 @@ updated: 2020-12-04
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
 
 
 

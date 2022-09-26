@@ -41,7 +41,7 @@ tags:
 
 
 <!-- ## View and edit @supports at rules in the Styles pane {: #supports } -->
-## 在**样式**边栏中查看并修改 @supports at-rule {: #supports }
+## 在**样式**边栏中查看并修改 `@supports` at-rule {: #supports }
 
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 您现在可以在**样式**边栏中查看并修改 CSS `@supports` at-rule 了。这些改动可以让实时实验 @supports at-rules 更容易。

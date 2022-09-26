@@ -23,6 +23,7 @@
     - url: /docs/devtools/css/flexbox/
     - url: /docs/devtools/css/container-queries/
     - url: /docs/devtools/css/reference/
+    - url: /docs/devtools/elements/badges/
 - title: i18n.docs.devtools.console
   sections:
     - url: /docs/devtools/console/

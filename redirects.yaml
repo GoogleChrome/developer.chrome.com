@@ -36,6 +36,11 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+# FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
+# redirect destination will be ignored
+- from: /docs/extensions/mv3/manifest/content_security_policy
+  to: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
+
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
@@ -161,6 +166,9 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
+  to: /docs/devtools/progressive-web-apps/#trigger-installation
 
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
@@ -388,8 +396,8 @@ redirects:
 - from: /native-client/...
   to: /docs/native-client/...
 
-- from: /privacy-sandbox/...
-  to: /docs/privacy-sandbox/...
+# - from: /privacy-sandbox/...
+#  to: /docs/privacy-sandbox/...
 
 - from: /webstore/...
   to: /docs/webstore/...
@@ -432,6 +440,10 @@ redirects:
 - from: /blog/videong/...
   to: /articles/videong/...
 
+# Redirecting the intersection observer post from d.c.c. to web.dev
+- from: /intersectionobserver/
+  to: https://web.dev/intersectionobserver/
+
 # Generic
 
 - from: /...
@@ -448,6 +460,14 @@ redirects:
 
 - from: /insider/...
   to: /tags/insider/
+
+# Tag Redirects
+
+- from: https://developer.chrome.com/tags/removals/
+  to: https://developer.chrome.com/tags/deprecations-removals/
+
+- from: https://developer.chrome.com/tags/deprecations/
+  to: https://developer.chrome.com/tags/deprecations-removals/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

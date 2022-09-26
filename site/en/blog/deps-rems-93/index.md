@@ -9,8 +9,7 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/wzKRtZO1LCra0FDRk1jY.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-93
 ---
 

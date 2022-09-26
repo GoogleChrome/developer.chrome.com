@@ -69,7 +69,7 @@ There are also three toggles at the top that aid in development.
 
 1. **Offline** simulates offline conditions. This helps when testing if an active service worker is serving offline content.
 2. **Update on reload**: when toggled, refetches and replaces the current service worker any time the page is reloaded.
-3. **Bypass for network**, when toggled, circumvents any code in a server worker's `fetch` event and always fetches content from the network.
+3. **Bypass for network**, when toggled, circumvents any code in a service worker's `fetch` event and always fetches content from the network.
 
 {% Aside 'caution' %}
 It may be tempting to rely on the "Update for reload" checkbox during local development. 

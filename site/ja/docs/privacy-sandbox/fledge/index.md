@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE は、リマーケティングとカスタムオーディエンスのユースケースを提供するプライバシーサンドボックスの提案で、第三者がサイト全体でユーザーの閲覧行動を追跡するために使用できないように設計されています。 このAPIにより、ブラウザによるオンデバイスのオークションが可能になり、ユーザーが以前に訪問したウェブサイトから関連性の高い広告を選択できます。
 date: 2022-01-27
-updated: 2022-03-31
+updated: 2022-05-23
 authors:
   - samdutton
 ---
@@ -30,9 +30,7 @@ authors:
 {% endAside %}
 
 
-{: #what}
-
-## FLEDGE とは
+## FLEDGE とは {: #what}
 
 FLEDGE は、[リマーケティング](#remarketing)とカスタムオーディエンスのユースケースを提供する[プライバシーサンドボックス](/docs/privacy-sandbox/overview)の提案で、第三者がサイト全体でユーザーの閲覧行動を追跡するために使用できないように設計されています。
 
@@ -41,9 +39,7 @@ FLEDGE は、[リマーケティング](#remarketing)とカスタムオーディ
 FLEDGE は、 [TURTLEDOVE](https://github.com/WICG/turtledove) ファミリーの提案の中で Chromium に実装された最初の実験です。 [プライバシーサンドボックスのタイムライン](https://privacysandbox.com/timeline)には、FLEDGE とその他のプライバシーサンドボックス提案の実装時期に関する情報が提供されています。
 
 
-{: #overview}
-
-## 一分で説明する FLEDGE
+## 一分で説明する FLEDGE {: #overview}
 
 <br>
 
@@ -81,9 +77,7 @@ FLEDGE では、「[インタレストグループ](#interest-group-detail)」�
 オークションの結果を報告するには、セラーのコードには `reportResult()` 関数を、各バイヤーのコードには `reportWin()` 関数を含めることができます。
 
 
-{: #try-fledge}
-
-## FLEDGE を試すには
+## FLEDGE を試すには {: #try-fledge}
 
 * 「[FLEDGE API 開発者ガイド](/blog/fledge-api#try-fledge)」には、[機能フラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)を使用してコマンドラインから Chrome を実行し、API を手動で有効にすることで、シングルユーザー向けに FLEDGE を試す方法が説明されています。
 
@@ -93,9 +87,7 @@ FLEDGE では、「[インタレストグループ](#interest-group-detail)」�
 
 {% YouTube id='znDD0gkdJyM' %}
 
-{: #user-controls}
-
-## 利用可能なブラウザ構成
+## 利用可能なブラウザ構成 {: #user-controls}
 
 ユーザーは chrome://settings/privacySandbox のトップレベル設定を有効または無効にすることで、Chrome でのプライバシーサンドボックスのトライアルへの参加を調整できます。  初回テスト中には、この高レベルのプライバシーサンドボックス設定を使用して、FLEDGE からオプトアウトすることが可能です。 Chrome では、アクセスしたウェブサイト全体に追加されたインタレストグループのリストの表示や管理をユーザー実行できるようにすることを予定しています。  プライバシーサンドボックステクノロジー自体と同様に、ユーザー設定は、ユーザーや規制当局などからのフィードバックによって進化する可能性があります。
 
@@ -103,10 +95,13 @@ FLEDGE の提案が進展するにつれ、[テストやフィードバックに
 
 API 呼び出し元は、ユーザーがシークレットモードで閲覧している場合はグループメンバーシップにアクセスできません。また、ユーザーがサイトデータを消去するとメンバーシップは削除されます。
 
+{: #opt-out-site}
 
-{: #why}
+## FLEDGE からオプトアウトする方法 {: #opt-out}
 
-## FLEDGE が必要である理由
+FLEDGE API デベロッパー ガイドにサイトオーナー、もしくはいちユーザーとして [FLEDGE API へのアクセスをブロックする方法](/blog/fledge-api#opt-out) が記載されています。
+
+## FLEDGE が必要である理由 {: #why}
 
 ユーザーの興味を理解することで、サイトのコンテンツに基づいて広告を選択する（コンテキストターゲティング）、または広告が表示されるサイトにユーザーが提供した情報を使用する（ファーストパーティデータターゲティング）よりも関連性の高い広告を有効にできます。
 
@@ -124,9 +119,7 @@ FLEDGE の機能は、実装作業が進むにつれて追加される予定で�
 
 <br>
 
-{: #how}
-
-## FLEDGE の仕組み
+## FLEDGE の仕組み {: #how}
 
 以下では、ユーザーがさまざまなサイトを訪問したときに、ユーザーのインタレストグループが広告選択にどのように影響するかを例示します。
 
@@ -140,9 +133,7 @@ FLEDGE の機能は、実装作業が進むにつれて追加される予定で�
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇ ︎</p>
 
-{: #joinAdInterestGroup}
-
-### 2. ユーザーのブラウザにインタレストグループの追加が求められる
+### 2. ユーザーのブラウザにインタレストグループの追加が求められる {: #joinAdInterestGroup}
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png", alt="ノートパソコンのブラウザでサイトを閲覧するユーザーのイラスト。 JavaScript コードの joinadInterestGroup() がブラウザで実行されている。", width="400", height="187" %}
 

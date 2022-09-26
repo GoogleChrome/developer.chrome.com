@@ -6,15 +6,21 @@ subhead: >
 description: >
   First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 date: 2021-05-18
-updated: 2021-10-18
+updated: 2022-08-04
 authors:
   - samdutton
 ---
 
-<!--lint disable no-smart-quotes-->
+{% Aside 'caution' %}
+First-Party Sets proposal is being updated with a [new design based on use case specific definition and 
+the Storage Access API](https://github.com/WICG/first-party-sets/issues/92). You can [follow the discussion in the repo](https://github.com/WICG/first-party-sets/issues)
+and we will update this content as the work progresses.
+{% endAside %}
+
 
 ## Implementation status
 
+* First-Party Sets [design change proposal, July 2022](https://github.com/WICG/first-party-sets/issues/92).
 * The initial [origin trial](/origintrials/#/view_trial/988540118207823873) 
 for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
@@ -111,6 +117,6 @@ follow discussion](https://github.com/privacycg/first-party-sets/issues).
 ## Find out more
 
 * [First-Party Sets and the SameParty attribute](/blog/first-party-sets-sameparty/)
-* [First-Party Sets technical explainer](https://github.com/privacycg/first-party-sets)
-* [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-* [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+* [First-Party Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
+* [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
+* [Chromium Projects](https://www.chromium.org/updates/first-party-sets)

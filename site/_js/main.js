@@ -16,6 +16,7 @@
 
 // Utilities
 import './store.js';
+import './analytics.js';
 
 // Web Components
 // These are components that appear on _every_ page.

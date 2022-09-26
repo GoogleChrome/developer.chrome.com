@@ -9,6 +9,7 @@ description: >
   plenty more!
 layout: 'layouts/blog-post.njk'
 date: 2021-11-16
+updated: 2022-08-24
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/gyhkrKnrs5TxwcF0Ybke.jpg'
@@ -131,6 +132,10 @@ Priority Hints are an experimental feature, available as an
 [origin trial][ph-ot] starting in Chrome 96, and can help optimize the Core
 Web Vitals. The `importance` attribute allows you to specify the priority
 for resource types such as CSS, fonts, scripts, images, and iframes.
+
+{% Aside 'warning' %}
+The `importance` attribute has been renamed `fetchpriority`. Read [Optimizing resource loading with Priority Hints](https://web.dev/priority-hints/) for the latest on this feature.
+{% endAside %}
 
 ```html
 <!-- We don't want a high priority for this above-the-fold image -->

@@ -304,7 +304,7 @@ The steps you should follow to ensure this are:
 [30]: #faq-fea-01
 [31]: #faq-fea-02
 [32]: /docs/extensions/mv2/getstarted
-[33]: /docs/extensions/api_other
+[33]: https://developer.mozilla.org/docs/Web/API
 [34]: http://omahaproxy.appspot.com
 [35]: /docs/extensions/mv2/xhr
 [36]: http://json.org/js.html

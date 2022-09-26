@@ -444,7 +444,7 @@ To include an external library, save the file locally and add it to the files ar
 ...
 chrome.scripting.executeScript({
   target: {tabId: tab.id},
-  files: ['jquery-min.js, content-script.js']
+  files: ['jquery-min.js', 'content-script.js']
 });
 ...
 ```

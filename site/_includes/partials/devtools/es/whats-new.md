@@ -2,21 +2,61 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- $content -->
 
-<!-- ### Chrome 104 {: #chrome104 }
+<!-- ### Chrome 107 {: #chrome107 }
 
-* [Restart frame during debugging](/es/blog/new-in-devtools-104/#restart-frame)
-* [Slow replay options in the Recorder panel](/es/blog/new-in-devtools-104/#recorder)
-* [Build an extension for the Recorder panel](/es/blog/new-in-devtools-104/#recorder-extension)
-* [Group files by Authored / Deployed in the Sources panel](/es/blog/new-in-devtools-104/#authored-deployed)
-* [New User Timings track in the Performance insights panel](/es/blog/new-in-devtools-104/#performance)
-* [Reveal assigned slot of an element](/es/blog/new-in-devtools-104/#slot)
-* [Simulate hardware concurrency for Performance recordings](/es/blog/new-in-devtools-104/#simulate)
-* [Preview non-color value when autocompleting CSS variables](/es/blog/new-in-devtools-104/#css-var)
-* [Identify blocking frames in the Back/forward cache pane](/es/blog/new-in-devtools-104/#bfcache)
-* [Improved autocomplete suggestions for JavaScript objects](/es/blog/new-in-devtools-104/#autocomplete)
-* [Sourcemaps improvements](/es/blog/new-in-devtools-104/#sourcemaps)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-104/#misc) -->
+* [Customize keyboard shortcuts in DevTools](/es/blog/new-in-devtools-107/#shortcuts)
+* [Toggle light and dark themes with keyboard shortcut](/es/blog/new-in-devtools-107/#toggle-themes)
+* [Highlight C/C++ objects in the Memory Inspector](/es/blog/new-in-devtools-107/#memory)
+* [Support full initiator information for HAR import](/es/blog/new-in-devtools-107/#har)
+* [Start DOM search after pressing `Enter`](/es/blog/new-in-devtools-107/#search-type)
+* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/es/blog/new-in-devtools-107/#flexbox)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-107/#misc)
+ -->
+
+<!-- ### Chrome 106 {: #chrome106 }
+
+* [Group files by Authored / Deployed in the Sources panel](/es/blog/new-in-devtools-106/#authored)
+* [Linked stack traces for asynchronous operations](/es/blog/new-in-devtools-106/#async)
+* [Automatically ignore known third-party scripts](/es/blog/new-in-devtools-106/#auto-ignore)
+* [Improved call stack during debugging](/es/blog/new-in-devtools-106/#call-stack)
+* [Hiding ignore-listed sources in the Sources panel](/es/blog/new-in-devtools-106/#ignore-nav)
+* [Hiding ignore-listed files in the Command Menu](/es/blog/new-in-devtools-106/#ignore-search)
+* [New Interactions track in the Performance panel](/es/blog/new-in-devtools-106/#performance)
+* [LCP timings breakdown in the Performance Insights panel](/es/blog/new-in-devtools-106/#insights)
+* [Auto-generate default name for recordings in the Recorder panel](/es/blog/new-in-devtools-106/#recorder)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-106/#misc) -->
+
+
+### Chrome 105 {: #chrome105 }
+
+* [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
+* [Soporte de eventos de ratón en el panel Recorder](/es/blog/new-in-devtools-105/#recorder-hover)
+* [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
+
+* [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
+* [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
+* [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
+* [Soporte para edición en vivo durante la depuración](/es/blog/new-in-devtools-105/#live-edit)
+* [Ver y editar las reglas de @scope en el panel de Estilos](/es/blog/new-in-devtools-105/#scope)
+* [Mejoras en los mapas de código fuente](/es/blog/new-in-devtools-105/#sourcemaps)
+* [Otros detalles destacados](/es/blog/new-in-devtools-105/#misc)
+
+### Chrome 104 {: #chrome104 }
+
+* [Reiniciar el marco durante la depuración](/es/blog/new-in-devtools-104/#restart-frame)
+* [Opciones de reproducción lenta en el panel Grabador](/es/blog/new-in-devtools-104/#recorder)
+* [Crear una extensión para el panel de la grabadora](/es/blog/new-in-devtools-104/#recorder-extension)
+* [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-104/#authored-deployed)
+* [Nueva pista de tiempos de usuario en el panel de información de rendimiento](/es/blog/new-in-devtools-104/#performance)
+* [Revelar el slot asignado de un elemento](/es/blog/new-in-devtools-104/#slot)
+* [Simular la concurrencia de hardware en las grabaciones de rendimiento](/es/blog/new-in-devtools-104/#simulate)
+* [Vista previa del valor sin color al autocompletar variables CSS](/es/blog/new-in-devtools-104/#css-var)
+* [Identificar los marcos de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
+* [Sugerencias de autocompletado mejoradas para objetos de JavaScript](/es/blog/new-in-devtools-104/#autocomplete)
+* [Mejoras en los mapas de origen](/es/blog/new-in-devtools-104/#sourcemaps)
+* [Destacados varios](/es/blog/new-in-devtools-104/#misc)
 
 
 ### Chrome 103 {: #chrome103 }

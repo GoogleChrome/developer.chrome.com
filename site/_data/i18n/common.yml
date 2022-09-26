@@ -97,6 +97,7 @@ follow:
 toc:
   en: 'Table of contents'
   es: 'Tabla de contenido'
+  ja: '目次'
 
 tags:
   en: 'Tags'
@@ -161,12 +162,15 @@ release_beta:
 
 translated_to:
   en: 'Translated to:'
+  ja: '翻訳先言語：'
 
 published_on:
   en: 'Published on'
+  ja: '公開日'
 
 updated_on:
   en: 'Updated on'
+  ja: '更新日'
 
 authors:
   en: 'Authors'
@@ -177,3 +181,11 @@ website:
 
 featured:
   en: Featured
+
+last_updated:
+  en: 'Last updated:'
+  ja: '最終更新日：'
+
+improve_article:
+  en: 'Improve article'
+  ja: '記事を改善する'

@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Attribution Reporting'
-subhead: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
-description: The Attribution Reporting API makes it possible to measure when an ad click or view leads to a conversion such as a purchase on an advertiser site. It's designed so it cannot be used by third parties to track user browsing behavior across sites.
+subhead: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+description: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 date: 2021-05-18
 updated: 2022-06-23
 authors:
@@ -89,7 +89,7 @@ At the time of this writing, you can try Attribution Reporting:
 - An _origin trial_ is a way to test a new or experimental web platform feature
   with end users, and give feedback to the web standards
   community on the feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/).
-  Multiple rounds of origin trials are run, to improve and adjust the API 
+  Multiple rounds of origin trials are run, to improve and adjust the API
   based on ecosystem feedback.
 
 {% endAside %}
@@ -190,11 +190,12 @@ conversion data is too coarse)—is an area of active research.
 
 ### Other features
 
-Other features proposed in this API include: 
-*  [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
-   see or click an ad in an app and convert on the web.
-*  [Cross-device attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md):
-   see or click an ad on mobile and convert on desktop.
+Other features proposed in this API include:
+
+- [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
+  see or click an ad in an app and convert on the web.
+- [Cross-device attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md):
+  see or click an ad on mobile and convert on desktop.
 
 {% Aside %}
 In a future without third-party cookies, this API would be combined with other privacy-preserving
@@ -202,7 +203,7 @@ ads APIs to cover end-to-end use cases:
 
 - Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see [Topics](/docs/privacy-sandbox/topics/)
-{% endAside %}
+  {% endAside %}
 
 ## Browser support
 

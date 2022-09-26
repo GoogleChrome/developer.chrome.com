@@ -62,6 +62,7 @@ sections:
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
+  --title-icon-color: var(--color-project-workbox);
 }
 
 .material-button.bg-yellow-medium {
@@ -70,18 +71,19 @@ sections:
 </style>
 
 {{ heroCard(
-  'Workbox',
-  "Production-ready service worker libraries and tooling.",
+  title,
+  description,
   "Documentation",
   "/docs/workbox",
   "",
   "",
   "yellow",
   "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg"
-  ) }}
+  )
+}}
 
 {{ landingSection(
-  'Introduction service workers',
+  'Introduction to service workers',
   'Learn how service workers can progressively enhance your website and how Workbox makes it easy.',
   sections.intro,
   'green',
@@ -141,6 +143,17 @@ sections:
 }}
 
 <div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {{ landingDeco(
+    'Additional resources',
+    'Dive deeper into Workbox modules, source code, and more',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    'alt',
+    291,
+    251,
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+    )
+  }}
   {% for item in sections.resources %}
     <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
       <h2 class="type--h4">
@@ -151,14 +164,4 @@ sections:
       <p class="flex-1">{{ item.description }}</p>
     </div>
   {% endfor %}
-  {{ landingDeco(
-    'Additional resources',
-    'Dive deeper into Workbox modules, source code, and more',
-    'yellow',
-    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
-    'alt',
-     291,
-     251,
-     'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
-     ) }}
 </div>

@@ -3,10 +3,11 @@ layout: 'layouts/blog-post.njk'
 title: FLEDGE API developer guide
 authors:
   - samdutton
+  - kevinkiklee
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-05-13
+updated: 2022-08-24
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -191,17 +192,20 @@ anywhere in a page, even from cross-domain iframes. In the future, once site own
 to adjust their cross-domain iframe [permissions policies](/docs/privacy-sandbox/permissions-policy/), the plan is to disallow calls from
 cross-domain iframes, as the explainer describes.
 
-#### Trusted servers
+#### Key/Value service
 
 As part of a FLEDGE ad auction, the browser can access a
-[trusted server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
+[key/value service](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
 that returns simple key-value pairs to provide information to an ad buyer, such as remaining
 campaign budget. The FLEDGE proposal [mandates](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements)
 that this server "performs no event-level logging and has no other side effects based on these
-requests".  However, in the current initial experimental phase for testing FLEDGE, the seller
-and buyers can run trusted servers themselves (a
-"[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server)"
-model). Discussion is underway about how trusted servers are managed and owned.
+requests".  
+
+The FLEDGE Key/Value service code is now available in a [Privacy Sandbox GitHub repository](https://github.com/privacysandbox/fledge-key-value-service). This service can be used by Chrome and Android developers. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update. Learn more about the FLEDGE Key/Value service from the [API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md).  
+
+For initial testing, ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long-term, adtechs will need to use the open-source FLEDGE Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
+
+To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or TEEs until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
 
 ### Detect feature support
 
@@ -686,7 +690,7 @@ The `browserSignals` object has the following properties:
   bidCount: 17,
   prevWins: [[time1,ad1],[time2,ad2],...],
   wasmHelper: ... /* WebAssembly.Module object based on interest group's biddingWasmHelperUrl. */
-  dataVersion: 1, /* Data-Version value from the trusted bidding signals server's response(s). */
+  dataVersion: 1, /* Data-Version value from the buyer's Key/Value service response(s). */
 }
 ```
 
@@ -785,8 +789,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or
 the publisher itself. The purpose of the auction is to select the most appropriate ad for a single
 available ad slot on the current page. The auction takes into account the interest groups the
-browser is a member of, along with data from ad-space buyers and the seller—from trusted servers in
-the next step.
+browser is a member of, along with data from ad-space buyers and the sellers from the [Key/Value services](#keyvalue-service).
 
 The ad-space **seller** makes a request to the user's browser to begin an ad auction by calling
 `navigator.runAdAuction()`.
@@ -966,7 +969,7 @@ knows and which the seller's auction script might want to verify:
   renderUrl: 'https://cdn.example/render',
   adComponents: ['https://cdn.com/ad-component-1', ...],
   biddingDurationMsec: 12,
-  dataVersion: 1 /* Data-Version value from the trusted scoring signals server response. */
+  dataVersion: 1 /* Data-Version value from the seller's Key/Value service response. */
 }
 ```
 
@@ -975,22 +978,21 @@ its `scoreAd()` logic is to reject any ad that can't beat the contextual winner.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 5. The seller and participating buyers receive realtime data from trusted servers
+### 5. The seller and participating buyers receive realtime data from the Key/Value service
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
   alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place, with a participant getting data from a trusted
-  server.", width="400", height="126" %}
+  auction using the FLEDGE API is taking place, with a participant getting data from the Key/Value service.", width="400", height="126" %}
 
-**Explainer section:** [Fetching Real-Time Data from a Trusted Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server)
+**Explainer section:** [Fetching Real-Time Data from the FLEDGE Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#31-fetching-real-time-data-from-a-trusted-server).
 
 During an ad auction, the ad-space **seller** can get realtime data about specific ad creatives by
-making a request to a trusted server using the `trustedScoringSignalsUrl` property of
+making a request to a [Key/Value service](#keyvalue-service) using the `trustedScoringSignalsUrl` property of
 [auction configuration](#ad-auction) argument passed to `navigator.runAdAuction()`, along with the keys
 from the `renderUrl` properties of all entries in the `ads` and `adComponents` fields of all
 interest groups in the auction.
 
-Likewise, an ad-space **buyer** can request realtime data from a trusted server using the
+Likewise, an ad-space **buyer** can request realtime data from the Key/Value service using the
 `trustedBiddingSignalsUrl` and `trustedBiddingSignalsKeys` properties of the interest group argument
 passed to `navigator.joinAdInterestGroup()`.
 
@@ -998,7 +1000,7 @@ When  `runAdAuction()` is called, the browser makes a request to each ad buyer's
 URL for the request might look like this:
 
 ```javascript
-https://trusted-server.example/getvalues?hostname=publisher.example&keys=key1,key2
+https://kv-service.example/getvalues?hostname=publisher.example&keys=key1,key2
 ```
 
 * The base URL comes from `trustedBiddingSignalsUrl`.
@@ -1161,11 +1163,11 @@ see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/F
 {: #auction-diagram}
 
 The diagram below outlines each stage of a FLEDGE [ad auction](#ad-auction):
-<a href="https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/roes4NP2gaUcEFD2uVlW.png?auto=format&w=1600"
+<a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
   target="_blank">view a larger version</a>.
 
 <figure class="w-figure">
-  {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/roes4NP2gaUcEFD2uVlW.png", alt="Illustration providing
+  {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="Illustration providing
   an overview of each stage of a FLEDGE ad auction",
   width="800", height="481" %}
 </figure>
@@ -1195,9 +1197,8 @@ The TURTLEDOVE effort is about offering a new API to address this use case while
 FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifications to better served the developers who would be using the API:
 
 -   In [SPARROW](https://github.com/WICG/sparrow):
-   [Criteo](https://www.admonsters.com/what-is-sparrow/) proposed the addition of a trusted-server
-   ("Gatekeeper") model.  FLEDGE includes a more limited use of trusted servers, for real-time data
-   lookup and aggregated reporting.
+   [Criteo](https://www.admonsters.com/what-is-sparrow/) proposed the addition of a
+   ("Gatekeeper") service model running in a [trusted execution environment (TEE)](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment).  FLEDGE includes a more limited use of TEEs, for real-time data lookup and aggregated reporting.
 -  NextRoll's [TERN](https://github.com/WICG/turtledove/blob/main/TERN.md) and Magnite's
    [PARRROT](https://github.com/prebid/identity-gatekeeper/blob/master/proposals/PARRROT.md)
    proposals described the different roles that buyers and sellers had in the on-device auction.
@@ -1206,7 +1207,7 @@ FLEDGE grew out of TURTLEDOVE and a collection of related proposals for modifica
    [Product-level](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) TURTLEDOVE
    modifications improved the anonymity model and personalization capabilities of the on-device auction
 -  [PARAKEET](https://github.com/WICG/privacy-preserving-ads/blob/main/Parakeet.md) is
-   Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a trusted proxy server
+   Microsoft's proposal for a TURTLEDOVE-like ad service that relies on a proxy server running in a TEE
    between the browser and the adtech providers, to anonymize ad requests and enforce privacy
    properties.  FLEDGE has not adopted this proxying model.  We are bringing the JavaScript APIs
    for PARAKEET and FLEDGE into alignment, in support of future work to further combine the best

@@ -13,6 +13,9 @@ import {terser} from 'rollup-plugin-terser';
 // A Rollup plugin for copying files.
 import copy from 'rollup-plugin-copy';
 
+// A Rollup plugin for reading JSON files.
+import json from '@rollup/plugin-json';
+
 const devConfig = {
   input: [
     'site/_js/main.js',
@@ -31,6 +34,7 @@ const devConfig = {
     nodeResolve(),
     commonjs(),
     svg(),
+    json(),
     copy({
       // Legacy docs, like those at /docs/native-client/, rely on the old
       // prettify.js code for syntax highlighting.
@@ -52,6 +56,7 @@ const productionConfig = {
     nodeResolve(),
     commonjs(),
     svg(),
+    json(),
     terser({
       format: {
         // Remove all comments, including @license comments,

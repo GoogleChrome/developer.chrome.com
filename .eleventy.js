@@ -53,6 +53,7 @@ const locales = require('./site/_data/site.json').locales;
 
 // Collections
 const algoliaCollection = require('./site/_collections/algolia');
+const authors = require('./site/_collections/authors');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const extensionsReferenceCollection = require('./site/_collections/reference');
@@ -109,6 +110,7 @@ module.exports = eleventyConfig => {
     addCollectionByDirectory(eleventyConfig, locale, 'articles');
   });
   eleventyConfig.addCollection('algolia', algoliaCollection);
+  eleventyConfig.addCollection('authors', authors);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);

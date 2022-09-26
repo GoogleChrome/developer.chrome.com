@@ -7,7 +7,7 @@ authors:
   - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-07-07
+updated: 2022-07-26
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
@@ -50,14 +50,24 @@ the change and adjust accordingly.
 
 1. In Chrome 104:
     * Chrome experiments by sending preflight requests ahead of private network
-      subresource
-      requests.
+      subresource requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
-    * Chrome gathers compatibility data and reaches out to the largest
-      affected websites.
+    * Chrome gathers compatibility data and reaches out to the largest affected
+      websites.
     * We expect this to be broadly compatible with existing websites.
-1. In Chrome 107 at the earliest:
+
+    {% Aside 'warning' %}
+
+    To limit the effects on websites that do not already support preflights, the
+    timeout is restricted to 200 milliseconds in Chrome 104. The restriction is only
+    applied in warning mode. The special timeout limit would be removed after
+    enabling the enforce mode by switching "Respect the result of Private Network
+    Access preflights" to "Enabled" in `chrome://flags` and the default limit is 5
+    seconds.
+    {% endAside %}
+
+2. In Chrome 107 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing
@@ -67,11 +77,13 @@ the change and adjust accordingly.
       time extension. The trial will last for at least 6 months.
 
 {% Aside %}
+
 An earlier attempt was made to roll out warnings in Chrome 98 and Chrome 102,
 previously announced by this blog post. This was rolled back after stability and
 compatibility issues were discovered during the rollout.
 
 The identified issues were fixed for Chrome 104.
+
 {% endAside %}
 
 ## What is Private Network Access (PNA)

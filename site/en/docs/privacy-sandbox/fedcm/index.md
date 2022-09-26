@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-05-23
+updated: 2022-09-12
 authors:
   - agektmr
 ---
@@ -18,7 +18,7 @@ Credential Management API (FedCM).
 
 *  The [FedCM proposal](https://github.com/fedidcg/FedCM) has entered [public
    discussion](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 105
+*  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 107
    on Android. Chrome on desktop support starts in Chrome 103. Other browsers
    don't support it yet.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides
@@ -154,8 +154,6 @@ FedCM is designed to be protocol-agnostic and offers the following
 authentication-related functionalities.
 
 * [Use an identity provider to sign-in to a relying party](#sign-in)
-* [Sign-out from a relying party](#sign-out)
-* [Revoke tokens for authentication](#revoke-tokens)
 
 [Check out our demo](https://fedcm-rp-demo.glitch.me) to see how it works.
 
@@ -199,18 +197,6 @@ RPs are expected to support browsers which don't support FedCM. Users should
 be able to use an existing, non-FedCM sign-in process. Learn more about [how
 sign-in works in the FedCM origin trial](/blog/fedcm-origin-trial#sign-into-rp).
 
-### Sign out from an RP {: #sign-out}
-
-When the user signs out from the RP, FedCM clears the sign-in state from the
-browser.
-
-### Revoke tokens  {: #revocation}
-
-The user may decide to revoke their tokens on the relying party (e.g.
-unregister from the relying party). The RP can use FedCM to request the IdP
-to revoke the user's tokens if the user is signed in to the IdP. At the same
-time, FedCM clears the sign-in state on the RP from the browser.
-
 ### Setting to enable or disable FedCM {: #user-settings}
 
 Users can enable or disable FedCM in settings on Chrome on Android. Go to
@@ -238,7 +224,7 @@ third-party origin trial](/blog/fedcm-origin-trial) for FedCM for support detail
 ## Engage and share feedback {: #share-feedback}
 
 *  **Origin trial**: an [origin trial for
-   FedCM](/origintrials/#/view_trial/3977804370874990593) is available in Chrome from version 101 to 105. Learn more about [the origin trial](/blog/fedcm-origin-trial).
+   FedCM](/origintrials/#/view_trial/3977804370874990593) is available in Chrome from version 101 to 107. Learn more about [the origin trial](/blog/fedcm-origin-trial).
 *  **GitHub**: Read the
    [proposal](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md),
    [raise issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
