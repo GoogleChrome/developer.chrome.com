@@ -12,7 +12,13 @@ videoUrl: null
 sessions:
   - speaker: samdutton
     title: What is the Privacy Sandbox?
-    description: ''
+    description: >-
+      The Privacy Sandbox is a series of proposals to satisfy cross-site use cases
+      without third-party cookies or other tracking mechanisms. In this session, you'll
+      get an overview of the Privacy Sandbox project: the APIs, timeline, and progress
+      with rollout. You'll learn how new web platform features are developed,
+      implemented, refined, and released. We'll also explain the basics of origin
+      trials, release channels, Chrome Variations, and feature flags.
     topics:
       - Privacy
     time: TBC
