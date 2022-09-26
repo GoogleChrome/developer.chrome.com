@@ -12,7 +12,13 @@ videoUrl: null
 sessions:
   - speaker: rachelandrew
     title: Interop 2022
-    description: ''
+    description: >-
+      For the first time ever, all major browser vendors, and other stakeholders, have come together to solve
+      the top browsers compatibility issues identified by web developers.
+
+      Interop 2022 will improve the experience of developing for the web in 15 key areas. In this talk, you'll
+      find out how we got here, what the project focuses on, how success will be measured, and how you can
+      track progress.
     topics:
       - Interop
     time: TBC
