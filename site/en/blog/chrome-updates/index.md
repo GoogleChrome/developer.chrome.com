@@ -39,5 +39,5 @@ Chrome also provides a range of update controls to schools and businesses. Admin
 
 **Harry:** We're always looking for ways to improve Chrome for our users and developers, especially when it comes to shortening the release cycle. By doing so, users will see a more stable Chrome with faster bug fixes and new features. We also know that our engineers and product managers benefit from increased development velocity due to faster feature development, faster iteration cycles, and increased code health. Let's say a product manager wants to launch a feature to all Chrome users. It can take up to 16 weeks from when the feature is "done" to when it's generally available. By shortening the release cycle by just a couple of weeks, we can significantly reduce the lead time to launch a new feature.
 
-_Hero image by [Balazs Busznyak](https://unsplash.com/@balazsbusznyak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)._
+
   
