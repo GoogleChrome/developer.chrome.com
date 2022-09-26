@@ -3,7 +3,7 @@ title: 'Web Summer Camp, Croatia'
 summary: >-
   An event for professionals in the web community, focused on practical learning
   and peer experience sharing, with a grain of fun.
-image: null
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Šibenik, Croatia'
 date: '2022-09-02'
 externalUrl: 'https://2022.websummercamp.com'

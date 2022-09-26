@@ -4,7 +4,7 @@ summary: >-
   A conference for whole teams covering topics such as Machine Learning,
   Accessibility, Next.js, Linux, Serverless, Varnish, Graph Databases and much
   more.
-image: null
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Antwerp, Belgium'
 date: '2022-10-06'
 externalUrl: 'https://fullstackeurope.com/2022'

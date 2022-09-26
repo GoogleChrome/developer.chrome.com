@@ -3,7 +3,7 @@ title: Web Directions Summit 2022
 summary: >-
   A conference covering the entire digital team–featuring product, design,
   front-end engineering, and more.
-image: null
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Sydney, Australia'
 date: '2022-12-01'
 externalUrl: 'https://webdirections.org/summit/'
