@@ -105,7 +105,7 @@ function EventCard(event) {
 
                     <p class="gap-bottom-300">${session.title}</p>
 
-                    ${session.description.length > 0 &&
+                    ${Boolean(session.description) &&
                     html`
                       <p class="event-card__sub-title gap-bottom-200">
                         Details
