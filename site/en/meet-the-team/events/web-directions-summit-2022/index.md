@@ -24,14 +24,21 @@ sessions:
       - Web UI and CSS,
       - Advanced Apps and Project Fugu
       - Web Developer Tools
-    time: TBC
+    time: null
+    type: speaker
+  - speaker: bramus
+    title: 'CSS Architecture with Layers, Scope, and Nesting'
+    description: ''
+    topics:
+      - Web UI and CSS
+    time: null
     type: speaker
   - speaker: alexandrawhite
     title: 'Technically speaking: Improve your code with documentation'
     description: ''
     topics:
       - Documentation
-    time: TBC
+    time: null
     type: speaker
   - speaker: thomassteiner
     title: Building amazing apps with Project Fugu APIs
@@ -41,7 +48,7 @@ sessions:
       - Web UI and CSS
       - Advanced Apps and Project Fugu
       - Web Developer Tools
-    time: TBC
+    time: null
     type: speaker
   - speaker: rachelandrew
     title: >-
@@ -64,6 +71,6 @@ sessions:
     topics:
       - Web UI and CSS
       - Interop
-    time: TBC
+    time: null
     type: speaker
 ---
