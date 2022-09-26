@@ -143,31 +143,28 @@ function EventCard(event) {
                       ${title}
                     </h5>
 
-                    ${session.participants.length > 1 &&
-                    html`
-                      <p class="event-card__sub-title gap-bottom-200">
-                        Participants
-                      </p>
-                      <p class="gap-bottom-300">
-                        ${session.participants
-                          .map(p => i18n(p.title))
-                          .join(', ')}
-                      </p>
-                    `}
-
                     <p class="event-card__sub-title gap-bottom-200">
                       Participant details
                     </p>
 
                     ${session.description.length > 0 &&
                     html`
-                      <div class="gap-bottom-200">
+                      <div class="gap-bottom-300">
                         <p>
                           <truncate-text maxLength="100"
                             >${session.description}</truncate-text
                           >
                         </p>
                       </div>
+                    `}
+                    ${session.participants.length > 1 &&
+                    html`
+                      <p class="event-card__sub-title gap-bottom-200">
+                        Participants
+                      </p>
+                      <p class="gap-bottom-300">
+                        ${participantHTML(session.participants)}
+                      </p>
                     `}
                     ${session.topics.map(topic => topicHtml(topic))}
                   `);
@@ -177,6 +174,30 @@ function EventCard(event) {
     </enhanced-event-card>
   `;
 }
+
+const participantHTML = participants => {
+  const processed = participants.map(participant => {
+    const title = i18n(participant.title);
+
+    if (participant.twitter) {
+      return html`
+        <a href="https://twitter.com/${participant.twitter}" target="_blank"
+          >${title}</a
+        >
+      `;
+    }
+
+    if (participant.linkedin) {
+      return html`
+        <a href="${participant.linkedin}" target="_blank">${title}</a>
+      `;
+    }
+
+    return html` ${title}`;
+  });
+
+  return processed.join(', ');
+};
 
 const linksHtml = event => {
   if (!event.slidesUrl && !event.videoUrl) {

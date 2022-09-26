@@ -69,6 +69,8 @@ const getAuthorData = authorHandle => {
   return {
     image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
     title: `i18n.authors.${authorHandle}.title`,
+    twitter: authorsData[authorHandle].twitter,
+    linkedin: authorsData[authorHandle].linkedin,
   };
 };
 
