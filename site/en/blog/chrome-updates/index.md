@@ -13,7 +13,7 @@ authors:
 
 Every month, we release a new version of Chrome to make sure our billions of global users and businesses get the freshest features, security updates and performance upgrades. And now, we're able to make improvements and fix issues quicker than ever before with a faster release cycle—meaning you'll get the latest updates even more often.
 
-We chatted with Technical Program Managers Ben Henry, Krishna Govind, Harry Souders, and Brandon Heenan on the Chrome release team for an inside look at how they coordinate with Google teams across the world to ensure each release goes smoothly. 
+We chatted with Technical Program Managers Ben Henry, Krishna Govind, Harry Souders, Srinivas Sista, and Brandon Heenan on the Chrome release team for an inside look at how they coordinate with Google teams across the world to ensure each release goes smoothly. 
 
 **Q. How does your team prepare for each Chrome release?**
 
@@ -23,7 +23,7 @@ Then, we do several rounds of testing to detect any quality issues, first using 
 
 **Q. Can you share a recent example of feedback from an outside developer that was valuable in ensuring you shipped the best possible version?**
 
-**Harry:** We always rely on our web developers for feedback and early adoption of features, such as new APIs, or spec changes with Chrome on iOS. With our major milestone change from two digits to three digits (99 to 100), we shared guidelines with web developers to test things out ahead of the actual change to ensure we incorporated their feedback and more importantly, didn't break their sites. This helped us successfully roll out the change without any major issues for M100 roll out. 
+**Srinivas:** We always rely on our web developers for feedback and early adoption of features, such as new APIs, or spec changes with Chrome on iOS. With our major milestone change from two digits to three digits (99 to 100), we shared guidelines with web developers to test things out ahead of the actual change to ensure we incorporated their feedback and more importantly, didn't break their sites. This helped us successfully roll out the change without any major issues for M100 roll out. 
 
 **Q. What happens if you catch a bug or security issue during the roll out of a Chrome update?**
 
