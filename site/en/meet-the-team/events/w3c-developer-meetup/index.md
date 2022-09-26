@@ -7,8 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Vancouver, Canada'
 date: '2022-09-13'
 externalUrl: 'https://www.w3.org/2022/09/meetup/index.html'
-slidesURL: https://noti.st/rachelandrew/ycqiM9/interop-2022
-videoUrl: null
 sessions:
   - speaker: rachelandrew
     title: Interop 2022
@@ -23,4 +21,6 @@ sessions:
       - Interop
     time: TBC
     type: speaker
+    slidesUrl: https://noti.st/rachelandrew/ycqiM9/interop-2022
+    videoUrl: null
 ---

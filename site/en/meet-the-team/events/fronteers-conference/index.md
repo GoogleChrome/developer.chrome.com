@@ -7,8 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
 externalUrl: 'https://fronteersconf.org/'
-slidesURL: https://www.bram.us/2022/09/13/css-in-2022-and-beyond-2022-09-09-fronteers-conf/
-videoUrl: null
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)
@@ -22,6 +20,8 @@ sessions:
       - Web UI and CSS
     time: TBC
     type: speaker
+    slidesUrl: https://www.bram.us/2022/09/13/css-in-2022-and-beyond-2022-09-09-fronteers-conf/
+    videoUrl: null
   - speaker: maudnalpas
     title: Debugging web privacy
     description: >-
@@ -34,4 +34,6 @@ sessions:
       - Privacy
     time: TBC
     type: speaker
+    slidesUrl: https://oo.gle/fronteers-22-privacy
+    videoUrl: null
 ---

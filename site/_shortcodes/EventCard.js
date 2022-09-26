@@ -12,6 +12,7 @@ const calendarIcon = fs.readFileSync(
 const pinIcon = fs.readFileSync('site/_includes/icons/pin.svg', 'utf-8');
 const slidesIcon = fs.readFileSync('site/_includes/icons/slides.svg', 'utf-8');
 const videoIcon = fs.readFileSync('site/_includes/icons/video.svg', 'utf-8');
+const launchIcon = fs.readFileSync('site/_includes/icons/launch.svg', 'utf-8');
 
 const PLACEHOLDER_IMG =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
@@ -77,19 +78,26 @@ function EventCard(event) {
                 .filter(session => session.type === 'speaker')
                 .map(session =>
                   EventSessionCard(html`
-                    <div
-                      class="event-card__title gap-bottom-300 display-flex align-center"
+                    <a
+                      href="${event.externalUrl}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
                     >
-                      ${Img({
-                        src: session.speaker.image,
-                        width: 40,
-                        height: 40,
-                        alt: i18n(session.speaker.title),
-                        class:
-                          'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                      })}
-                      ${i18n(session.speaker.title)}
-                    </div>
+                      <div class="display-flex align-center">
+                        ${Img({
+                          src: session.speaker.image,
+                          width: 40,
+                          height: 40,
+                          alt: i18n(session.speaker.title),
+                          class:
+                            'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                        })}
+                        ${i18n(session.speaker.title)}
+                      </div>
+
+                      ${launchIcon}
+                    </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
                       Talk title
@@ -111,7 +119,7 @@ function EventCard(event) {
                         </p>
                       </div>
                     `}
-                    ${linksHtml(event)}
+                    ${linksHtml(session)}
                     ${session.topics.map(topic => topicHtml(topic))}
                   `)
                 )}
@@ -181,7 +189,10 @@ const participantHTML = participants => {
 
     if (participant.twitter) {
       return html`
-        <a href="https://twitter.com/${participant.twitter}" target="_blank"
+        <a
+          href="https://twitter.com/${participant.twitter}"
+          target="_blank"
+          rel="noopener noreferrer"
           >${title}</a
         >
       `;
@@ -189,7 +200,12 @@ const participantHTML = participants => {
 
     if (participant.linkedin) {
       return html`
-        <a href="${participant.linkedin}" target="_blank">${title}</a>
+        <a
+          href="${participant.linkedin}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >${title}</a
+        >
       `;
     }
 
@@ -199,15 +215,17 @@ const participantHTML = participants => {
   return processed.join(', ');
 };
 
-const linksHtml = event => {
-  if (!event.slidesUrl && !event.videoUrl) {
+const linksHtml = session => {
+  if (!session.slidesUrl && !session.videoUrl) {
     return '';
   }
 
-  const slidesLink = event.slidesUrl
+  const slidesLink = session.slidesUrl
     ? html`
         <a
-          href="${event.slidesUrl}"
+          href="${session.slidesUrl}"
+          target="_blank"
+          rel="noopener noreferrer"
           class="display-flex align-center gap-right-300 decoration-none"
         >
           ${slidesIcon} Slides
@@ -215,10 +233,12 @@ const linksHtml = event => {
       `
     : '';
 
-  const videoLink = event.videoUrl
+  const videoLink = session.videoUrl
     ? html`
         <a
-          href="${event.videoUrl}"
+          href="${session.videoUrl}"
+          target="_blank"
+          rel="noopener noreferrer"
           class="display-flex align-center decoration-none"
         >
           ${videoIcon} Video

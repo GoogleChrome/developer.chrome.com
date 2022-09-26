@@ -7,8 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: 'Amsterdam, Netherlands'
 date: '2022-10-27'
 externalUrl: 'https://perfnow.nl/'
-slidesURL: null
-videoUrl: null
 sessions:
   - topics:
       - Performance
@@ -35,5 +33,7 @@ sessions:
       - milutinkristofic
       - marcdoerrenhaus
     type: participant
+    slidesUrl: null
+    videoUrl: null
 
 ---

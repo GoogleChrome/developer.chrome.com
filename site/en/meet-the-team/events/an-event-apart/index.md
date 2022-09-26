@@ -7,8 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Denver, USA'
 date: '2022-10-10'
 externalUrl: 'https://aneventapart.com/event/denver-2022'
-slidesURL: null
-videoUrl: null
 sessions:
   - speaker: rachelandrew
     title: >-
@@ -33,5 +31,7 @@ sessions:
       - Interop
     time: TBC
     type: speaker
+    slidesUrl: null
+    videoUrl: null
 
 ---

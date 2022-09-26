@@ -7,8 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Sydney, Australia'
 date: '2022-12-01'
 externalUrl: 'https://webdirections.org/summit/'
-slidesURL: https://oo.gle/fronteers-22-privacy
-videoUrl: null
 sessions:
   - speaker: pjmclachlan
     title: 'The future of apps on the web'
@@ -26,6 +24,8 @@ sessions:
       - Web Developer Tools
     time: null
     type: speaker
+    slidesUrl: null
+    videoUrl: null
   - speaker: bramus
     title: 'CSS Architecture with Layers, Scope, and Nesting'
     description: ''
@@ -33,6 +33,8 @@ sessions:
       - Web UI and CSS
     time: null
     type: speaker
+    slidesUrl: null
+    videoUrl: null
   - speaker: alexandrawhite
     title: 'Technically speaking: Improve your code with documentation'
     description: ''
@@ -40,6 +42,8 @@ sessions:
       - Documentation
     time: null
     type: speaker
+    slidesUrl: null
+    videoUrl: null
   - speaker: thomassteiner
     title: Building amazing apps with Project Fugu APIs
     description: ''
@@ -50,6 +54,8 @@ sessions:
       - Web Developer Tools
     time: null
     type: speaker
+    slidesUrl: null
+    videoUrl: null
   - speaker: rachelandrew
     title: >-
       When new CSS features collide: possibility and complexity at the
@@ -73,4 +79,6 @@ sessions:
       - Interop
     time: null
     type: speaker
+    slidesUrl: null
+    videoUrl: null
 ---
