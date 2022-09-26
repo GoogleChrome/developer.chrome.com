@@ -20,8 +20,8 @@ const PLACEHOLDER_IMG =
 function EventCard(event) {
   const image = Img({
     src: event.image ?? PLACEHOLDER_IMG,
-    width: 225,
-    height: 225,
+    width: 400,
+    height: 400,
     alt: event.title,
   });
 
@@ -103,7 +103,7 @@ function EventCard(event) {
                       Talk title
                     </p>
 
-                    <p class="gap-bottom-200">${session.title}</p>
+                    <p class="gap-bottom-300">${session.title}</p>
 
                     ${session.description.length > 0 &&
                     html`
@@ -111,7 +111,7 @@ function EventCard(event) {
                         Details
                       </p>
 
-                      <div class="gap-bottom-200">
+                      <div class="gap-bottom-300">
                         <p>
                           <truncate-text maxLength="100"
                             >${session.description}</truncate-text
