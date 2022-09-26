@@ -21,7 +21,7 @@ const PLACEHOLDER_IMG =
 const endOfDay = new Date();
 endOfDay.setHours(23, 59, 59, 999);
 
-const getEvents = (collections, filter) => {
+const getEvents = (collections, filter, sort) => {
   return collections
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .filter(filter)
@@ -44,21 +44,31 @@ const getEvents = (collections, filter) => {
 
       return event;
     })
-    .sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    });
+    .sort(sort);
 };
 
 const pastEvents = collections => {
-  return getEvents(collections, event => {
-    return new Date(event.date).getTime() < endOfDay.getTime();
-  });
+  return getEvents(
+    collections,
+    event => {
+      return new Date(event.date).getTime() < endOfDay.getTime();
+    },
+    (a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    }
+  );
 };
 
 const currentEvents = collections => {
-  return getEvents(collections, event => {
-    return new Date(event.date).getTime() >= endOfDay.getTime();
-  });
+  return getEvents(
+    collections,
+    event => {
+      return new Date(event.date).getTime() >= endOfDay.getTime();
+    },
+    (a, b) => {
+      return new Date(a.date).getTime() - new Date(b.date).getTime();
+    }
+  );
 };
 
 const getAuthorData = authorHandle => {
