@@ -216,12 +216,11 @@ const linksHtml = event => {
 
 const topicHtml = topic => {
   return html`
-    <a
-      href="/todo"
+    <span
       class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
     >
       ${topic}
-    </a>
+    </span>
   `;
 };
 
