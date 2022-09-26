@@ -5,16 +5,25 @@ summary: >-
   front-end engineering, and more.
 image: null
 location: 'Sydney, Australia'
-date: '2022-01-12'
+date: '2022-12-01'
 externalUrl: 'https://webdirections.org/summit/'
 slidesURL: https://oo.gle/fronteers-22-privacy
 videoUrl: null
 sessions:
-  - speaker: bramus
-    title: 'CSS Architecture with Layers, Scope, and Nesting'
-    description: ''
+  - speaker: pjmclachlan
+    title: 'The future of apps on the web'
+    description: >-
+      Technical & business decision makers & product leads will get a quick recap of app history
+      on the web platform, where we stand today and where we're going. Emphasis will be on
+      recent and upcoming changes to how apps running in the browser can be discovered by
+      users, how they are presented to users and on new capabilities that is making complex flow
+      control in web apps possible for a new generation of powerful applications powered by the
+      browser and running standalone or in a tab.
     topics:
-      - Web UI and CSS
+      - Performance
+      - Web UI and CSS,
+      - Advanced Apps and Project Fugu
+      - Web Developer Tools
     time: TBC
     type: speaker
   - speaker: alexandrawhite
