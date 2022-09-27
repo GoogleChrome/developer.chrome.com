@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 106
 description: >
-  Chrome 106 is rolling out now. There are new Intl APIs to give you more control when formatting numbers. There’s an origin trial for the new Pop Up API, making it easy to surface critical content to the user. There are a handful of CSS improvements. And there’s plenty more
+  Chrome 106 is rolling out now. There are new Intl APIs to give you more control when formatting numbers. There’s an origin trial for the new Pop Up API, making it easy to surface critical content to the user. There are a handful of CSS improvements. And there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2022-09-27
 authors:
