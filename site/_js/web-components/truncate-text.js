@@ -19,6 +19,12 @@ import {truncateString} from '../utils/truncate-string';
 
 /* eslint-disable require-jsdoc */
 export class TruncateText extends BaseElement {
+  constructor() {
+    super();
+    this.fullText = '';
+    this.truncatedText = '';
+  }
+
   static get properties() {
     return {
       maxLength: {type: Number, reflect: true},
@@ -50,7 +56,6 @@ export class TruncateText extends BaseElement {
 
     button.addEventListener('click', e => {
       e.preventDefault();
-      // @ts-ignore
       this.innerHTML = this.fullText;
     });
   }
