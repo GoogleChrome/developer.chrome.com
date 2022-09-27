@@ -4,7 +4,7 @@ title: What's new in Chrome extensions
 
 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-08-04
+updated: 2022-09-27
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
