@@ -4,7 +4,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
-updated: 2022-09-26
+updated: 2022-09-27
 
 ---
 
@@ -12,7 +12,7 @@ As Manifest V3 approaches full feature parity with Manifest V2, we'll be progres
 specifies the timetable for this deprecation and describes the meaning of each milestone.
 
 <figure data-size="full">
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8CSuHWLXlQfi8s3LSUMk.png", alt="Summary of the Manifest V2 support timeline.", width="800", height="357" %}
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8CSuHWLXlQfi8s3LSUMk.png", alt="Summary of the Manifest V2 support timeline.", width="800", height="357" class="screenshot" %}
   <figcaption>Summary of the Manifest V2 support timeline.</figcaption>
 </figure>
 
@@ -42,9 +42,8 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><strong>June&nbsp;2022</strong>
     </td>
     <td><ul>
-
       <li>Chrome Web Store stops accepting new Manifest V2 extensions with visibility set to “Public" or "Unlisted”</li>
-      <li> All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</li></ul>
+      </ul>
     </td>
     <td><i>no change</i>
     </td>
@@ -72,6 +71,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
     <td><ul>
       <li>Manifest V2 extensions no longer function in Chrome even with the use of enterprise policy </li>
+      <li> All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</li>
       <li>Starting in June in <strong>Chrome 115</strong>, Chrome may run experiments to turn off support for Manifest V2 extensions in all channels, including stable channel.</li></ul>
     </td>
   </tr>
