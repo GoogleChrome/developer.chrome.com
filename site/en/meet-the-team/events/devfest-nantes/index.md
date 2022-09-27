@@ -3,7 +3,7 @@ title: DevFest Nantes
 summary: >-
   The Devfest (Developers Festival), is a technical conference destined to
   developers. It's meant for students, professionals, or any curious techie.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Nantes, France'
 date: '2022-10-20'
 externalUrl: 'https://devfest2022.gdgnantes.com/'

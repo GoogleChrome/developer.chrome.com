@@ -2,7 +2,7 @@
 title: Munich Frontend meetup
 summary: >-
   A front end developers meetup happening in Munich.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: Munich, Germany
 date: 2022-10-20
 externalUrl: https://www.meetup.com/munich-frontend-developers/events/288578416/

@@ -4,11 +4,11 @@ summary: >-
   An Event Apart Denver is a three-day conference with an intense focus on
   digital design, UX, content, code, and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
-location: Munich. Germany
+location: Munich, Germany
 date: 2022-10-05
 externalUrl: https://gdg.community.dev/events/details/google-gdg-cloud-munich-presents-october-gathering-1/
 sessions:
-  - speaker: rachelandrew
+  - speaker: jecelynyeen
     title: >-
       Chrome DevTools Recorder and Cloud Run jobs
     description: >-

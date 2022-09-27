@@ -3,7 +3,7 @@ title: Fronteers Conference
 summary: >-
   Fronteers Conference is one of Europe’s premiere conferences on front-end web
   development.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
 externalUrl: 'https://fronteersconf.org/'
@@ -34,6 +34,6 @@ sessions:
       - Privacy
     time: TBC
     type: speaker
-    slidesUrl: https://oo.gle/fronteers-22-privacy
+    slidesUrl: https://goo.gle/fronteers-22-privacy
     videoUrl: null
 ---

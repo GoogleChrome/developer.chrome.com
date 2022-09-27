@@ -67,7 +67,7 @@ function EventCard(event) {
                 </div>
               </div>
 
-              <button class="material-button button-filled button-round color-bg">
+              <button class="material-button button-filled button-round">
                 See who's joining
               </a>
             </div>
@@ -84,7 +84,7 @@ function EventCard(event) {
                       rel="noopener noreferrer"
                       class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
                     >
-                      <div class="display-flex align-center">
+                      <span class="display-flex align-center">
                         ${Img({
                           src: session.speaker.image,
                           width: 40,
@@ -94,7 +94,7 @@ function EventCard(event) {
                             'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
                         })}
                         ${i18n(session.speaker.title)}
-                      </div>
+                      </span>
 
                       ${launchIcon}
                     </a>
@@ -137,19 +137,26 @@ function EventCard(event) {
                       : 'Multiple participants';
 
                   return EventSessionCard(html`
-                    <h5
-                      class="event-card__title gap-bottom-300 display-flex align-center"
+                    <a
+                      href="${event.externalUrl}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
                     >
-                      ${Img({
-                        src: icon,
-                        width: 40,
-                        height: 40,
-                        alt: title,
-                        class:
-                          'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                      })}
-                      ${title}
-                    </h5>
+                      <span class="display-flex align-center">
+                        ${Img({
+                          src: icon,
+                          width: 40,
+                          height: 40,
+                          alt: title,
+                          class:
+                            'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+                        })}
+                        ${title}
+                      </span>
+
+                      ${launchIcon}
+                    </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
                       Participant details
