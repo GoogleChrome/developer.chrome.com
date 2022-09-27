@@ -122,8 +122,8 @@
 
   &__overview button {
     align-self: flex-start;
-    color:#{get-color('white')};
     background: #{get-color('blue-700')};
+    color: #{get-color('white')};
   }
 
   &__overview button::before {
