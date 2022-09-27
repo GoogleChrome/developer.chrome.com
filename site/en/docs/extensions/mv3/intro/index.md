@@ -40,7 +40,7 @@ approach it:
 
 ## Start the conversion
 
-As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V2 extensions. We strongly recommend migrating your extensions to Manifest V3 as soon as possible; this will become mandatory after [Manifest V2 is phased out][mv2-sunset] in 2023.
+As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V2 extensions. We strongly recommend migrating your extensions to Manifest V3 as soon as possible; this will become mandatory after [Manifest V2 is phased out][mv2-sunset] in 2024.
 
 ## Keep up with the latest news
 
