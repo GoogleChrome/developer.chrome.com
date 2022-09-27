@@ -18,7 +18,7 @@
  * @fileoverview A component that truncates nested text to the maxLength provided
  */
 import {BaseElement} from './base-element';
-import {truncateString} from '../utils/truncate-string';
+import truncateString from '../utils/truncate-string';
 
 export class TruncateText extends BaseElement {
   constructor() {

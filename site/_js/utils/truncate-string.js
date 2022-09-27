@@ -22,6 +22,14 @@
  * @param {number} desiredLength
  * @returns {string}
  */
-export const truncateString = (string, desiredLength) => {
-  return string.substring(0, (string + ' ').lastIndexOf(' ', desiredLength));
+const truncateString = (string, desiredLength) => {
+  let closestSpace = (string + ' ').lastIndexOf(' ', desiredLength);
+
+  if (closestSpace === -1) {
+    closestSpace = string.indexOf(' ');
+  }
+
+  return string.substring(0, closestSpace);
 };
+
+module.exports = truncateString;
