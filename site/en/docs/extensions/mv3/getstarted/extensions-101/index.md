@@ -17,7 +17,7 @@ browser. This page introduces Chrome extension development and provides links to
 
 Extensions are written with the same web technologies used to create web applications:
 
-- [HTML][mdn-html] is used as a content markup language.
+- [HTML][web-dev-html] is used as a content markup language.
 - [CSS][web-dev-css] is used for styling.
 - [JavaScript][mdn-js] is used for scripting and logic.
 
@@ -154,7 +154,6 @@ extension and Chrome Web store documentation:
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
-[mdn-html]: https://developer.mozilla.org/docs/Learn/html
 [mdn-js]: https://developer.mozilla.org/docs/Learn/JavaScript
 [mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
 [section-tutorials]: #building
@@ -162,3 +161,5 @@ extension and Chrome Web store documentation:
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
 [web-dev-css]: https://web.dev/learn/css/
+[web-dev-html]: https://web.dev/learn/html/
+
