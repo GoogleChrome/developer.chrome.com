@@ -59,7 +59,7 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><ul>
       <li>Chrome stops running Manifest V2 extensions
       <li>Enterprise policy can let Manifest V2 extensions run on Chrome deployments
-      <a href="https://support.google.com/chrome/a/answer/9296680?hl=en">within the organization</a>.
+      <a href="https://support.google.com/chrome/a/answer/9296680?hl=en">within an organization</a>.
       </li>
       <li>Staring in <strong>Chrome 112</strong>, Chrome may run experiments to turn off support for Manifest V2 extensions in Canary, Dev, and Beta channels.
       </li></ul>
