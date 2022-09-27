@@ -163,8 +163,8 @@ you *know* that container will contain at most 10 full width glyphs,
 no matter the font-size. Check it out in the following example:
 
 {% Codepen {
-    user: 'tropicadri',
-    id: 'OJZmgOg',
+    user: 'web-dot-dev',
+    id: 'eYrybaj',
     height: 450,
     tab: 'result'
   }
