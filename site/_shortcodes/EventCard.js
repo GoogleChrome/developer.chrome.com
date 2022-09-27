@@ -30,7 +30,7 @@ function EventCard(event) {
       <article id="${event.id}"
                class="event-card pad-400 lg:pad-500 no-js"
                tabindex="0"
-               show-details="0">
+               show-details="">
           <div class="display-flex">
             <figure class="event-card__desktop-image gap-right-500 flex-shrink-none">
               ${image}

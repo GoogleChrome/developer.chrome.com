@@ -35,13 +35,14 @@ export class EnhancedEventCard extends BaseElement {
 
   toggleEventDetails() {
     // @ts-ignore
-    const visible = this.card.getAttribute('show-details') === '1' ? '0' : '1';
+    const visible = Boolean(this.card.getAttribute('show-details'));
 
-    this.detailsButton.innerHTML =
-      visible === '1' ? 'Hide details' : "See who's joining";
+    this.detailsButton.innerHTML = visible
+      ? "See who's joining"
+      : 'Hide details';
 
     // @ts-ignore
-    this.card.setAttribute('show-details', visible);
+    this.card.setAttribute('show-details', visible ? '' : 'show-details');
   }
 
   getCardElement() {
