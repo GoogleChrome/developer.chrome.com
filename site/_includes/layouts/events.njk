@@ -2,7 +2,8 @@
 
 {% block content %}
   <div class="events-container width-full pad-400">
-    {{ content | safe }}
+    {% include 'partials/events-hero.njk' %}
+    {% include 'partials/events-list.njk' %}
   </div>
 {% endblock %}
 
