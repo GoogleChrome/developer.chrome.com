@@ -38,9 +38,7 @@ Previously, Manifest V3 calling async APIs could provide an invalid final argume
 
 July 28, 2022
 
-Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
-Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
-information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
 
 ### Chrome 105: promises for the Identity API {: #105-identity-promise }
 
