@@ -170,7 +170,7 @@ no matter the font-size. Check it out in the following example:
   }
 %}
 
-CSS Grid support for interpolation for `grid-template-columns` and `grid-template-rows` is coming, it was planned for 106, but is delayed and will be launched in Chrome 107, you can still try it out in Chrome Beta. Here is Bramu’s code as an example:
+CSS Grid support for interpolation for `grid-template-columns` and `grid-template-rows` is coming, it was planned for 106, but is delayed and will be launched in Chrome 107, you can still try it out in Chrome Beta. Here is Bramus' code as an example:
 
 {% Codepen {
     user: 'bramus',
