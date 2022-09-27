@@ -174,7 +174,7 @@ CSS Grid support for interpolation for `grid-template-columns` and `grid-templat
 
 {% Codepen {
     user: 'web-dot-dev',
-    id: 'XWqVowx'
+    id: 'XWqVowx',
     height: 450,
     tab: 'result'
   }
