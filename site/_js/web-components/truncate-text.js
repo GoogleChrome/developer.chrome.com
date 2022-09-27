@@ -14,15 +14,18 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview A component that truncates nested text to the maxLength provided
+ */
 import {BaseElement} from './base-element';
 import {truncateString} from '../utils/truncate-string';
 
-/* eslint-disable require-jsdoc */
 export class TruncateText extends BaseElement {
   constructor() {
     super();
     this.fullText = '';
     this.truncatedText = '';
+    this.onClick = this.onClick.bind(this);
   }
 
   static get properties() {
@@ -46,18 +49,22 @@ export class TruncateText extends BaseElement {
       this.truncatedText +
       " <button class='button button-text truncate-text-button'>see more</button>";
 
-    this.addClickHandler();
+    this.button = this.querySelector('.truncate-text-button');
+
+    if (!this.button) return;
+
+    this.button.addEventListener('click', this.onClick);
   }
 
-  addClickHandler() {
-    const button = this.querySelector('.truncate-text-button');
+  disconnectedCallback() {
+    if (!this.button) return;
 
-    if (!button) return;
+    this.button.removeEventListener('click', this.onClick);
+  }
 
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      this.innerHTML = this.fullText;
-    });
+  onClick(e) {
+    e.preventDefault();
+    this.innerHTML = this.fullText;
   }
 }
 

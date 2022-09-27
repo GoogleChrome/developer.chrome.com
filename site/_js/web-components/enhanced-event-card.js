@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,23 +14,35 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview A component that Enhances the event card nested within,
+ * offering better UX to js users.
+ */
 import {BaseElement} from './base-element';
 
-/* eslint-disable require-jsdoc */
 export class EnhancedEventCard extends BaseElement {
+  constructor() {
+    super();
+
+    this.toggleEventDetails = this.toggleEventDetails.bind(this);
+  }
+
   connectedCallback() {
     super.connectedCallback();
 
     this.card = this.getCardElement();
     this.detailsButton = this.getButtonElement(this.card);
 
-    this.detailsButton.addEventListener(
-      'click',
-      this.toggleEventDetails.bind(this)
-    );
+    this.detailsButton.addEventListener('click', this.toggleEventDetails);
 
     this.card.removeAttribute('tabindex');
     this.card.classList.remove('no-js');
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+
+    this.detailsButton.removeEventListener('click', this.toggleEventDetails);
   }
 
   toggleEventDetails() {
