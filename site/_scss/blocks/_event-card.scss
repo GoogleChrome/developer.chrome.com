@@ -1,7 +1,7 @@
 .event-card {
   background: get-color('grey-50');
 
-  &[show-details="show-details"] {
+  &[show-details='show-details'] {
     .event-card__details {
       display: grid;
     }
