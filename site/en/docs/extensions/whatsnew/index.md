@@ -16,19 +16,19 @@ updated: 2022-09-27
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome Web Store: "large promo tile" image upload removed
+### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
 
 August 17, 2022
 
 Chrome Web Store has removed the "large promo tile" upload UI from the item Store Listing tab in the developer dashboard. This change does not affect the end user experience as these images were not used in the consumer UI. See this chromium-extensions post for additional details.
 
-### Chrome 106: Allow pages on file:// urls to access web accessible resources
+### Chrome 106: Allow pages on file:// urls to access web accessible resources {: #m106-file-pages }
 
 August 15, 2022
 
 Opaque origins such as sandboxed iframes and dynamic import should also be able to access web accessible resources, according to [crbug.com/1219825#c11](https://crbug.com/1219825#c11).
 
-### Chrome 106: Fixed bug allowing incorrect final arguments on some async API functions {: #106-async-arg-fix }
+### Chrome 106: Fixed bug allowing incorrect final arguments on some async API functions {: #m106-async-arg-fix }
 
 August 8, 2022
 
@@ -40,7 +40,7 @@ July 28, 2022
 
 Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
 
-### Chrome 105: promises for the Identity API {: #105-identity-promise }
+### Chrome 105: promises for the Identity API {: #m105-identity-promise }
 
 July 15, 2022
 
@@ -51,7 +51,7 @@ asynchronous return set to a promise based call will have "token" and "grantedSc
 on a single object (as opposed to the callback version receiving them as separate arguments to the
 callback).
 
-### Chrome 104: New favicons API for Manifest V3 {: #104-favicon-api }
+### Chrome 104: New favicons API for Manifest V3 {: #m104-favicon-api }
 
 June 08, 2022
 
