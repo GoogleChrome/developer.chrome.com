@@ -18,7 +18,7 @@ and related policy or other changes.
 
 September 28, 2022
 
-[This blog post](/blog/more-mv2-transition/) provides clarifications on the Manifest V2 deprecation timeline. The [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) has also been updated to reflect this information.
+We have [clarified the Manifest V2 deprecation timeline](/blog/more-mv2-transition/). The [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) has also been updated to reflect this information.
 
 ### Docs update: Known issues when migrating to Manifest V3 {: #known-issues }
 
