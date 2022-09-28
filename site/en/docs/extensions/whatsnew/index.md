@@ -3,17 +3,28 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-09-27
+updated: 2022-09-28
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
-
 ---
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Blog post: More details on the transition to Manifest V3 {: #blog-mv3-transition-details }
+
+September 28, 2022
+
+We have [clarified the Manifest V2 deprecation timeline](/blog/more-mv2-transition/). The [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) has also been updated to reflect this information.
+
+### Docs update: Known issues when migrating to Manifest V3 {: #known-issues }
+
+September 28, 2022
+
+We've put together a list of [major features currently in development and open bugs](/docs/extensions/mv3/known-issues/). Our goal with this page is to help developers better understand the current state of the platform and what features they can target as they prepare for the future.
 
 ### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
 
