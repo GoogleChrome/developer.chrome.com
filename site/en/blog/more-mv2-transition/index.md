@@ -33,7 +33,7 @@ We also have a few updates on how the phase-out will look on the Chrome Web Stor
 
 In addition, we have been working with extension developers to improve Manifest V3 and to incorporate feedback from our community. Based on developer feedback, in recent months we’ve supplemented service worker functionality, introduced new APIs, and made a number of other platform improvements. 
 
-We know that some members of our community are paying close attention to in-progress feature additions and bug fixes to the Manifest V3 platform. To provide greater transparency to our community, we are also adding a [progress page](https://developer.chrome.com/docs/extensions/mv3/known-issues) for interested developers to keep track of top priority issues Chrome is tackling before the turn-down experiments.
+We know that some members of our community are paying close attention to in-progress feature additions and bug fixes to the Manifest V3 platform. To provide greater transparency to our community, we are also adding a [progress page](/docs/extensions/mv3/known-issues) for interested developers to keep track of top priority issues Chrome is tackling before the turn-down experiments.
 
 We thank all of our developers who have provided valuable feedback over the past year as they’ve migrated their extensions to Manifest V3. We're excited to see the growth of adoption from developers who are creating new extensions and migrating existing ones. We also want to thank the many developers in our community who have stepped up to provide guidance to others with similar questions. If you have feedback or comments, please continue to let us know by posting to the [chromium-extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions) Google Group.
 
