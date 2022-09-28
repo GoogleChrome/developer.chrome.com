@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2022-08-04
+updated: 2022-09-27
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -15,7 +15,31 @@ updated: 2022-08-04
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
-### Chrome 105: promises for the Identity API
+### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
+
+August 17, 2022
+
+Chrome Web Store has removed the "large promo tile" upload UI from the item Store Listing tab in the developer dashboard. This change does not affect the end user experience as these images were not used in the consumer UI. See this chromium-extensions post for additional details.
+
+### Chrome 106: Allow pages on file:// urls to access web accessible resources {: #m106-file-pages }
+
+August 15, 2022
+
+Opaque origins such as sandboxed iframes and dynamic import should also be able to access web accessible resources, according to [crbug.com/1219825#c11](https://crbug.com/1219825#c11).
+
+### Chrome 106: Fixed bug allowing incorrect final arguments on some async API functions {: #m106-async-arg-fix }
+
+August 8, 2022
+
+Previously, Manifest V3 calling async APIs could provide an invalid final argument and Chrome would not error. With this fix Chrome will now correctly error and report that there was no matching signature. Developers are encouraged to check their extensions on Canary for any errors in case they accidentally using incorrect signature for an API call that will be broken by this bug fix.
+
+### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
+
+July 28, 2022
+
+Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+
+### Chrome 105: promises for the Identity API {: #m105-identity-promise }
 
 July 15, 2022
 
@@ -26,13 +50,11 @@ asynchronous return set to a promise based call will have "token" and "grantedSc
 on a single object (as opposed to the callback version receiving them as separate arguments to the
 callback).
 
-### Blog post: Chrome Web Store analytics revamp {: #cws-analytics-revamp }
+### Chrome 104: New favicons API for Manifest V3 {: #m104-favicon-api }
 
-July 28, 2022
+June 08, 2022
 
-Chrome Web Store has a revamped item analytics experience for the Chrome Web Store Developer
-Dashboard. The new dashboard is easier to understand at a glance and consolidates the most useful
-information up front. [Read the blog post](/blog/cws-analytics-revamp/) for more information.
+ Manifest V3 extensions can now access favicons using a new URL pattern: `chrome-extension://<id>/_favicon/`, where <id> is the ID of your extension. This replaces the Manifest V2 platform's `chrome://favicons` API. See the Favicon API docs for more information.
 
 ### Docs update: Developer trader/non-trader disclosure {: #cws-trader-disclosure-doc }
 
