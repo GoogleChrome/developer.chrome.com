@@ -1072,3 +1072,8 @@ amysteam:
     en: 'Amy Steam'
   description:
     en: 'Amy writes about Chrome extensions 🧩.'
+rouslan:
+  title:
+    en: 'Rouslan Solomakhin'
+  description:
+    en: 'Software Engineer on the Chrome team.'
