@@ -109,7 +109,7 @@ And Chrome doesn't launch an external app for a given Intent URI in the followin
 [2]: http://developer.android.com/guide/components/intents-filters.html#extras
 [3]:
   https://code.google.com/p/android-source-browsing/source/browse/core/java/android/content/Intent.java?repo=platform--frameworks--base#6514
-[4]: https://code.google.com/p/zxing/source/browse/trunk/android/AndroidManifest.xml#97
+[4]: https://github.com/zxing/zxing/blob/fa19d4758f38daa5d0ea6557af9a64721cfcce07/android/AndroidManifest.xml#L97
 [5]: http://developer.android.com/guide/components/intents-filters.html#extras
 [6]: http://developer.android.com/reference/android/content/Intent.html#CATEGORY_BROWSABLE
 [7]: http://developer.android.com/guide/components/intents-filters.html
