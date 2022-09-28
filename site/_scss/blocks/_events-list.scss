@@ -3,6 +3,7 @@
     cursor: pointer;
     font-family: #{$font-google-sans};
     font-size: 1.125rem;
+    padding: 0 get-size(300);
 
     @include media-query('lg') {
       flex: 0 0 auto;
@@ -23,12 +24,6 @@
     @include media-query('lg') {
       display: inline-flex;
       width: auto;
-    }
-  }
-
-  [role=tab]:last-child {
-    @include media-query('lg') {
-      margin-left: get-size(1000);
     }
   }
 }
