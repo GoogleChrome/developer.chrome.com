@@ -24,7 +24,7 @@ We have [clarified the Manifest V2 deprecation timeline](/blog/more-mv2-transiti
 
 September 28, 2022
 
-[This new article](/docs/extensions/mv3/known-issues/) provides an overview of major features currently in development and open bugs.
+We've put together a list of [major features currently in development and open bugs](/docs/extensions/mv3/known-issues/).
 
 ### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
 
