@@ -1,8 +1,6 @@
 ---
 title: Test Flix 2022
-summary: >-
-  An Event Apart Denver is a three-day conference with an intense focus on
-  digital design, UX, content, code, and more.
+summary: A global software testing event held virtually.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: Virtual
 date: 2022-10-08

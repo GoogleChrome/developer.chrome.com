@@ -1,8 +1,6 @@
 ---
 title: GDG Cloud Munich October meetup
-summary: >-
-  An Event Apart Denver is a three-day conference with an intense focus on
-  digital design, UX, content, code, and more.
+summary: A multi-track get-together with the GDG-Cloud-Munich community.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Munich, Germany
 date: 2022-10-05
