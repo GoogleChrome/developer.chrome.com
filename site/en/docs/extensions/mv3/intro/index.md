@@ -4,7 +4,7 @@ title: Welcome to Manifest V3
 subhead: 'A step in the direction of security, privacy, and performance.'
 description: 'An introduction to Manifest V3'
 date: 2020-11-09
-updated: 2022-09-02
+updated: 2022-09-28
 ---
 
 This site introduces Manifest V3, short for Manifest Version 3, which is the latest iteration of the Chrome extension platform. It shares the background and reasons for introducing Manifest V3 and the vision for the platform's future, along with resources on how to migrate.
@@ -36,7 +36,7 @@ approach it:
 
 ## Start the conversion {: #start-the-conversion }
 
-As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V2 extensions. We strongly recommend migrating your extensions to Manifest V3 as soon as possible; this will become mandatory after [Manifest V2 is phased out][mv2-sunset] in 2023.
+As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V2 extensions. We strongly recommend migrating your extensions to Manifest V3 as soon as possible; this will become mandatory after [Manifest V2 is phased out][mv2-sunset] in 2024.
 
 ## Keep up with the latest news {: #keep-up-with-the-latest-news }
 
