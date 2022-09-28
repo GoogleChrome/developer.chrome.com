@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Android Intents with Chrome
-date: 2014-02-28
+date: 2022-09-28
 description: How to launch Android apps directly from a web page.
 ---
 
