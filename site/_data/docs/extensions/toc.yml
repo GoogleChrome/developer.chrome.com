@@ -101,11 +101,6 @@
         - url: /docs/extensions/mv2/tut_oauth
         - url: /docs/extensions/mv2/override
         - url: /docs/extensions/mv2/richNotifications
-    - title: i18n.docs.extensions.modernize
-      sections:
-        - url: /docs/extensions/mv2/background_migration
-        - url: /docs/extensions/mv2/migrating_to_service_workers
-        - url: /docs/extensions/mv2/migrating_to_manifest_v3
     - title: i18n.docs.extensions.quality
       sections:
         - url: /docs/extensions/mv2/user_privacy
