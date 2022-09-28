@@ -7,6 +7,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Virtual
 date: 2022-10-05
 externalUrl: https://pwasummit.org
+algoliaUrl: /en/meet-the-team/#pwa-summit
 sessions:
   - speaker: adrianajara
     title: >-

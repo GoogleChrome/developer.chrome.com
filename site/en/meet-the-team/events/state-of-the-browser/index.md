@@ -7,6 +7,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: London, UK
 date: 2022-10-22
 externalUrl: https://2022.stateofthebrowser.com/
+algoliaUrl: /en/meet-the-team/#state-of-the-browser
 sessions:
   - speaker: jakearchibald
     title: >-

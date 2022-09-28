@@ -7,6 +7,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Amsterdam, Netherlands'
 date: '2022-10-27'
 externalUrl: 'https://perfnow.nl/'
+algoliaUrl: /en/meet-the-team/#performance-now
 sessions:
   - topics:
       - Performance

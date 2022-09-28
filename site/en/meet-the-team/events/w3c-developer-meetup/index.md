@@ -7,6 +7,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Vancouver, Canada'
 date: '2022-09-13'
 externalUrl: 'https://www.w3.org/2022/09/meetup/index.html'
+algoliaUrl: /en/meet-the-team/#w3c-developer-meetup
 sessions:
   - speaker: rachelandrew
     title: Interop 2022

@@ -6,6 +6,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Virtual
 date: 2022-10-24
 externalUrl: https://fitc.ca/event/webu22/
+algoliaUrl: /en/meet-the-team/#web-unleashed
 sessions:
   - speaker: rachelandrew
     title: >-

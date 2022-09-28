@@ -8,6 +8,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: 'Antwerp, Belgium'
 date: '2022-10-06'
 externalUrl: 'https://fullstackeurope.com/2022'
+algoliaUrl: /en/meet-the-team/#fullstack-europe
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)

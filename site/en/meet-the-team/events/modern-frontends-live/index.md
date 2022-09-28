@@ -8,6 +8,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
 location: London, UK
 date: 2022-11-17
 externalUrl: https://www.modernfrontends.live/
+algoliaUrl: /en/meet-the-team/#modern-frontends-live
 sessions:
   - speaker: thomassteiner
     title: Fugu APIs at the example of the SVGcode app

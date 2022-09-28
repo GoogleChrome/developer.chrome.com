@@ -7,6 +7,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Seoul, Korea
 date: 2022-09-16
 externalUrl: https://2022.jsconf.kr/en
+algoliaUrl: /en/meet-the-team/#jsconf-korea
 sessions:
   - speaker: jeremywagner
     title: >-

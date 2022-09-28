@@ -62,7 +62,7 @@ const algoliaCollection = collections => {
       data.disable_algolia ||
       data.noindex ||
       data.draft ||
-      (data.permalink === false && data.canLinkToList !== true)
+      (data.permalink === false && data.isVirtualItem !== true)
     ) {
       return false;
     }
@@ -75,9 +75,7 @@ const algoliaCollection = collections => {
       ? generateImgixSrc(item.data.hero, {w: 100, auto: 'format'})
       : '';
 
-    const url = item.data.canLinkToList
-      ? `${item.data.listUrl}#${item.fileSlug}`
-      : item.url;
+    const url = item.data.algoliaUrl || item.url;
 
     /** @type {AlgoliaCollectionItem} */
     const algoliaCollectionItem = {

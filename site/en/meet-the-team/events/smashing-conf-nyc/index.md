@@ -6,6 +6,7 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: New York, US
 date: 2022-10-11
 externalUrl: https://smashingconf.com/ny-2022
+algoliaUrl: /en/meet-the-team/#smashing-conf-nyc
 sessions:
   - speaker: adrianajara
     title: >-
