@@ -90,7 +90,7 @@ function EventCard(event) {
               </div>
 
               <button class="material-button button-filled button-round">
-                ${i18n('i18n.common.see_whos_joining')}
+                ${i18n('i18n.events.see_whos_joining')}
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@ function EventCard(event) {
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
-                      ${i18n('i18n.common.talk_title')}
+                      ${i18n('i18n.events.talk_title')}
                     </p>
 
                     <p class="gap-bottom-300">${session.title}</p>
@@ -130,7 +130,7 @@ function EventCard(event) {
                     ${Boolean(session.description) &&
                     html`
                       <p class="event-card__sub-title gap-bottom-200">
-                        ${i18n('i18n.common.details')}
+                        ${i18n('i18n.events.details')}
                       </p>
 
                       <div class="gap-bottom-300">
@@ -156,7 +156,7 @@ function EventCard(event) {
                   const title =
                     session.participants.length === 1
                       ? i18n(session.participants[0].title)
-                      : i18n('i18n.common.multiple_participants');
+                      : i18n('i18n.events.multiple_participants');
 
                   return EventSessionCard(html`
                     <a
@@ -181,7 +181,7 @@ function EventCard(event) {
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
-                      ${i18n('i18n.common.participant_details')}
+                      ${i18n('i18n.events.participant_details')}
                     </p>
 
                     ${session.description.length > 0 &&
@@ -197,7 +197,7 @@ function EventCard(event) {
                     ${session.participants.length > 1 &&
                     html`
                       <p class="event-card__sub-title gap-bottom-200">
-                        ${i18n('i18n.common.participants')}
+                        ${i18n('i18n.events.participants')}
                       </p>
                       <p class="gap-bottom-300">
                         ${participantHTML(session.participants)}
@@ -257,7 +257,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center gap-right-300 decoration-none"
         >
-          ${slidesIcon} ${i18n('i18n.common.slides')}
+          ${slidesIcon} ${i18n('i18n.events.slides')}
         </a>
       `
     : '';
@@ -270,7 +270,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center decoration-none"
         >
-          ${videoIcon} ${i18n('i18n.common.video')}
+          ${videoIcon} ${i18n('i18n.events.video')}
         </a>
       `
     : '';
