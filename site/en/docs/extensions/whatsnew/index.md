@@ -24,7 +24,7 @@ September 28, 2022
 
 September 28, 2022
 
-[This new article](/docs/extensions/mv3/intro/) provides an overview of major features currently in development and open bugs.
+[This new article](/docs/extensions/mv3/known-issues/) provides an overview of major features currently in development and open bugs.
 
 ### Chrome Web Store: "large promo tile" image upload removed {: #cws-large-promo-tile }
 
