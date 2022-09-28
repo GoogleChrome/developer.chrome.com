@@ -7,7 +7,7 @@ location: New York, US
 date: 2022-10-11
 externalUrl: https://smashingconf.com/ny-2022
 sessions:
-  - speaker: adrianajara
+  - speaker: unakravets
     title: >-
       Web UI
     description: >-

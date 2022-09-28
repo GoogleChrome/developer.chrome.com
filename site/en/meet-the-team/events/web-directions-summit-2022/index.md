@@ -37,7 +37,12 @@ sessions:
     videoUrl: null
   - speaker: alexandrawhite
     title: 'Technically speaking: Improve your code with documentation'
-    description: ''
+    description: >-
+      Well-written instructions, informative code comments, thoughtful READMEs,
+      and content strategy can take complex code and make it accessible to all
+      developers. Documentation is the key to teaching the next generation
+      of developers, passing work to successors, and helping developers
+      better understand their own work.
     topics:
       - Documentation
     time: null
