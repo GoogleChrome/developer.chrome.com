@@ -6,7 +6,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: Munich, Germany
 date: 2022-10-20
 externalUrl: https://www.meetup.com/munich-frontend-developers/events/288578416/
-algoliaUrl: /en/meet-the-team/#munich-frontend-meetup
 sessions:
   - participants:
       - jecelynyeen

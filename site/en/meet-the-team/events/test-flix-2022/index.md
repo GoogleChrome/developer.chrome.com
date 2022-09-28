@@ -7,7 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: Virtual
 date: 2022-10-08
 externalUrl: https://www.thetesttribe.com/testflix-2022/
-algoliaUrl: /en/meet-the-team/#test-flix-2022
 sessions:
   - speaker: jecelynyeen
     title: >-

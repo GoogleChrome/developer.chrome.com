@@ -7,7 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
 externalUrl: 'https://fronteersconf.org/'
-algoliaUrl: /en/meet-the-team/#fronteers-conference
 sessions:
   - speaker: bramus
     title: CSS in 2022 (and beyond)

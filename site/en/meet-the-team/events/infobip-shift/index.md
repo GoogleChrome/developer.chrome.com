@@ -8,7 +8,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Zadar, Croatia
 date: 2022-09-19
 externalUrl: https://shift.infobip.com/
-algoliaUrl: /en/meet-the-team/#infobip-shift
 sessions:
   - speaker: unakravets
     title: >-

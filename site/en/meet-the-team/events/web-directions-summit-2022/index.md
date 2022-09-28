@@ -7,7 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: 'Sydney, Australia'
 date: '2022-12-01'
 externalUrl: 'https://webdirections.org/summit/'
-algoliaUrl: /en/meet-the-team/#web-directions-summit-2022
 sessions:
   - speaker: pjmclachlan
     title: 'The future of apps on the web'

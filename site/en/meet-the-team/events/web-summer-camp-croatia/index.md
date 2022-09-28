@@ -7,7 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: 'Šibenik, Croatia'
 date: '2022-09-02'
 externalUrl: 'https://2022.websummercamp.com'
-algoliaUrl: /en/meet-the-team/#web-summer-camp-croatia
 sessions:
   - speaker: samdutton
     title: What is the Privacy Sandbox?

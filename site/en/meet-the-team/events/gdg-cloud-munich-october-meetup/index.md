@@ -7,7 +7,6 @@ image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
 location: Munich, Germany
 date: 2022-10-05
 externalUrl: https://gdg.community.dev/events/details/google-gdg-cloud-munich-presents-october-gathering-1/
-algoliaUrl: /en/meet-the-team/#gdg-cloud-munich-october-meetup
 sessions:
   - speaker: jecelynyeen
     title: >-
