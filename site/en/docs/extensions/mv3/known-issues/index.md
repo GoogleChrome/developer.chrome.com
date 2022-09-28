@@ -23,7 +23,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
-**Estimated timeline:** Targeting 108 Canary support around October, 2022.
+**Estimated timeline:** Canary support around October, 2022.
 
 ### Increased quota for session storage in the Storage API
 
