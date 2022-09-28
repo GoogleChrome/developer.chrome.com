@@ -69,7 +69,7 @@ To check the URLs of the requests sent from the Payment Handler API:
 1. Enable  `chrome://flags/#web-payment-api-csp`.
 2. Go to your checkout page and open Chrome’s Developer Tools.
 3. Look for error messages like the following:
-    ```error
+    ```text
     RangeError: Failed to construct 'PaymentRequest': https://example.com/pay payment method identifier violates Content Security Policy.
     ```
 4. Add the specified method identifier to your CSP.
