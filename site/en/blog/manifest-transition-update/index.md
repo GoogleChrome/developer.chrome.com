@@ -25,12 +25,12 @@ Specifically:
 
 For developers who still own extensions running Manifest V2, we recommend completing migration to Manifest V3 well ahead of the release of these Chrome versions because those extensions may stop working at any time following the aforementioned dates.
 
-For enterprises, we are extending Manifest V2 support via [the ExtensionManifestV2Availability enterprise policy](https://bugs.chromium.org/p/chromium/issues/detail?id=1347794) to January 2024. Additional details may be found on our [Manifest V2 support timeline page](https://developer.chrome.com/docs/extensions/mv3/mv2-sunset/).
+For enterprises, we are extending Manifest V2 support via [the ExtensionManifestV2Availability enterprise policy](https://bugs.chromium.org/p/chromium/issues/detail?id=1347794) to January 2024. Additional details may be found on our [Manifest V2 support timeline page](/docs/extensions/mv3/mv2-sunset/).
 
 We also have a few updates on how the phase-out will look on the Chrome Web Store:
 
 -  In **January 2023**, use of Manifest V3 will become a prerequisite for the [Featured badge](https://blog.google/products/chrome/find-great-extensions-new-chrome-web-store-badges/) as we raise the security bar for extensions we highlight in the store.
--  In **June 2023**, the Chrome Web Store will no longer allow Manifest V2 items to be published with [visibility](https://developer.chrome.com/docs/webstore/cws-dashboard-distribution/#setting-the-visibility) set to Public. All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.
+-  In **June 2023**, the Chrome Web Store will no longer allow Manifest V2 items to be published with [visibility](/docs/webstore/cws-dashboard-distribution/#setting-the-visibility) set to Public. All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.
 -  In **January 2024**, following the expiry of the Manifest V2 enterprise policy, the Chrome Web Store will remove all remaining Manifest V2 items from the store.
 
 In addition, we have been working with extension developers to improve Manifest V3 and to incorporate feedback from our community. Based on developer feedback, in recent months we've supplemented service worker functionality, introduced new APIs, and made a number of other platform improvements. 
