@@ -13,7 +13,7 @@ how to optimize your extensions to use Manifest V3.
 
 Manifest V3 represents one of the biggest shifts in the extensions platform since it launched a
 decade ago. Extensions using Manifest V3 enjoy enhancements in security, privacy, and
-performance; they can also use more contemporary Open Web technologies adopted in Manifest V3, such
+performance; they can also use more contemporary open web technologies adopted in Manifest V3, such
 as service workers and promises. Developers can update their extensions today to take advantage of
 these Manifest V3 features; this will become mandatory as we phase out Manifest V2 in the future.
 
