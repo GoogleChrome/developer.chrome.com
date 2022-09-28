@@ -121,7 +121,7 @@ for more about how to work with this change.
 
 ### Promises {: #promises }
 
-Manifest V3 provides first-class support for promises: many popular APIs support
+Manifest V3 provides first-class support for promises. Many popular APIs support
 promises now, and we will eventually support promises on all appropriate
 methods.
 
@@ -130,7 +130,8 @@ to an API method, this prevents the promise from being returned. Therefore you
 can defer this part of your migration until you're ready, or begin using
 promises immediately.
 
-Some scenarios, such as event listeners, will still require callbacks.
+Some scenarios, such as event listeners, will still require callbacks. For
+more information, see [Promises on MDN][3].
 
 
 ## Other features {: #other-features }
@@ -153,3 +154,4 @@ Look for announcements of these and other Manifest V3 features as they become av
 
 [1]: /docs/extensions/reference/scripting/
 [2]: /docs/extensions/reference/storage/#property-session
+[3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
