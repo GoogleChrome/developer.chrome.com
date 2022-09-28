@@ -42,6 +42,7 @@ As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V
 
 We're excited about the improvements that Manifest V3 brings to the platform. Look for new announcements in [What's new in Chrome Extensions][doc-new] and the [Chrome Developer Blog][devs-blog].
 
+
 [devs-blog]: https://developer.chrome.com/tags/extensions/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-new]: /docs/extensions/whatsnew/
