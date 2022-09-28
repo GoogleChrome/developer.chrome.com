@@ -2,25 +2,58 @@
 api: storage
 ---
 
-## Overview
+## Overview {: #overview }
 
-This API has been optimized to meet the specific storage needs of extensions. It provides the same
-storage capabilities as the [localStorage API][local-storage] with the following key differences:
+The Storage API provides an extension-specific way to persist extension data and state. It's similar to, but different from the web platform's storage APIs (IndexedDB, localStorage), it has been optimized to meet the specific storage needs of extensions: 
 
-- User data can be automatically synced with Chrome sync (using `storage.sync`).
-- Your extension's content scripts can directly access user data without the need for a background
-  page.
+- Storage data persists when the user clears their browsing history and cache.
+- All extension context can access the data, including content scripts and service workers.
 - A user's extension settings can be persisted even when using [split incognito
   behavior][incognito].
-- It's asynchronous with bulk read and write operations, and therefore faster than the blocking and
-  serial `localStorage API`.
-- User data can be stored as objects (the `localStorage API` stores data in strings).
-- Enterprise policies configured by the administrator for the extension can be read (using
-  `storage.managed` with a [schema][api-storage]).
+- Data is serialized as JSON strings and stored as objects.
+- It's asynchronous with bulk read and write operations.
+- Offers exclusive read-only storage area for enterprise policies.
+
+The Storage API is divided into 4 different buckets ("storage areas"). The following are a few features of each storage area: 
+
+### Local
+
+- Data is stored locally on the computer that Chrome is running the extension.
+- Storage quota can be expanded with the `"unlimitedStorage"` permission.
+- Removing the extension clears the data stored in local storage.
+- Quota limitation is 5 MB approx. 
+- Consider using it when you need to store larger amounts of data.
+
+### Sync
+
+- If the user has sync enabled, the stored data will be synced to any Chrome browser that the user is logged into.
+- Quota limitation is 100 KB approx, 8 KB per item
+- Consider using it to preserve user preferences across synced browsers. 
+
+{% Aside 'warning' %}
+
+Confidential user data should not be stored in local and sync, unless you restrict the [access level](www.todo.com). The storage area isn't encrypted. Another alternative is using sessions storage.
+
+{% endAside %}
+
+### Sessions
+
+Say something clever here, the following blah:
+
+- Holds small amounts of data in memory for the duration of a browser session.
+- Secure (not available for Content Scripts)
+- Quota limitation is 1 MB approx.
+- Consider using it to store global variables or confidential user information.
+
+### Managed
+
+- Administrator can configure enterprise policies for the extension with a [schema][api-storage].
+- Storage is read-only.
+
 
 ## Manifest
 
-You must declare the "storage" permission in the [extension manifest][doc-manifest] to use the storage
+You must declare the `"storage"` permission in the [extension manifest][doc-manifest] to use the storage
 API. For example:
 
 ```json
@@ -34,46 +67,55 @@ API. For example:
 }
 ```
 
-## Usage
+## Usage {: #usage }
 
-To store user data for your extension, you can use either `storage.sync`:
+The following code samples demonstrate how to use `storage.local`, `storage.sync`, and
+`storage.sessions`:
+
+
+
+
+### Local {: #usage-local }
 
 ```js
-chrome.storage.sync.set({key: value}, function() {
-  console.log('Value is set to ' + value);
+chrome.storage.local.set({ key: value }).then(() => {
+  console.log("Value is set to " + value);
 });
 
-chrome.storage.sync.get(['key'], function(result) {
-  console.log('Value currently is ' + result.key);
+chrome.storage.local.get(["key"]).then((result) => {
+  console.log("Value currently is " + result.key);
 });
 ```
 
-or `storage.local`:
-
-```js
-chrome.storage.local.set({key: value}, function() {
-  console.log('Value is set to ' + value);
-});
-
-chrome.storage.local.get(['key'], function(result) {
-  console.log('Value currently is ' + result.key);
-});
-```
+### Sync {: #usage-sync}
 
 When using `storage.sync`, the stored data will automatically be synced to any Chrome browser that
-the user is logged into, provided the user has sync enabled.
+the user is logged into, provided the user has sync enabled. If a user disables syncing, then `storage.sync` will still work, but will behave like `storage.local`.
+
+```js
+chrome.storage.sync.set({ key: value }).then(() => {
+  console.log("Value is set to " + value);
+});
+
+chrome.storage.sync.get(["key"]).then((result) => {
+  console.log("Value currently is " + result.key);
+});
+```
 
 When Chrome is offline, Chrome stores the data locally. The next time the browser is online, Chrome
-syncs the data. Even if a user disables syncing, `storage.sync` will still work. In this case, it
-will behave identically to `storage.local`.
+will sync the data. 
 
-{% Aside 'warning' %}
+### Sessions {: #usage-sessions }
 
-Confidential user information should not be stored! The storage area isn't encrypted.
+```js
+chrome.storage.session.set({ key: value }).then(() => {
+  console.log("Value is set to " + value);
+});
 
-{% endAside %}
-
-The `storage.managed` storage is read-only.
+chrome.storage.session.get(["key"]).then((result) => {
+  console.log("Value currently is " + result.key);
+});
+```
 
 ## Storage and throttling limits
 
