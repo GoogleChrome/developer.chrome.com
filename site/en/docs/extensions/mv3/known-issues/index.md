@@ -59,7 +59,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### Service workers are not started in response to webRequest events
 
-**Summary:** Manifest V3 extensions will only receive Web Request API events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
+**Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
 
 **Estimated timeline**: Targeting Canary support before October, 2022.
 
