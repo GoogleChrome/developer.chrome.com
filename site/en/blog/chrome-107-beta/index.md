@@ -1,7 +1,9 @@
 ---
 title: Chrome 107 beta
 description: >
-  A round up of the deprecations and removals in Chrome 89 to help you plan.
+  Additions to the Screen Capture API, CSS grid-template properties interpolation, and more.
+subhead: >
+  Additions to the Screen Capture API, CSS grid-template properties interpolation, and more.
 layout: 'layouts/blog-post.njk'
 date: 2022-09-29
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/ib7vJvBRPcmYPg1ZYuaf.png'
@@ -18,7 +20,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 In CSS Grid, the `grid-template-columns` and `grid-template-rows` properties allow developers to define line names and track sizing of grid columns and rows, respectively. Thanks to our contributors at Microsoft, we now [support interpolation](https://www.chromestatus.com/feature/6037871692611584) for these properties. Grid layouts can now smoothly transition between states, instead of snapping at the halfway point of an animation or transition. 
 
-## Additions to the Screen Capture API
+## Privacy preserving screen sharing controls
 
 The [Screen Capture API]([https://w3c.github.io/mediacapture-screen-share/](https://w3c.github.io/mediacapture-screen-share/)) introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. In this beta some new features are added to this API.
 
@@ -48,7 +50,7 @@ When `getDisplayMedia()` is called, the browser offers the user a choice of disp
 
 Adds a field to [`PerfomanceResourceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceResourceTiming) to indicate the render blocking status of a resource. Currently from a developer perspective, the only way to determine which resources were actually render blocking is to rely on complex heuristics. The new field would instead provide a direct signal regarding the same.
 
-## Wildcards in Permissions Policy Origins
+## Wildcards in permissions policy origins
 
 This feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, https://*.foo.com/) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, https://foo.com/). This requires that HOST is at least eTLD+1 (a registrable domain). This means that `https://*.bar.foo.com/` works but `https://*.com/` won't. Wildcards in the scheme and port section will be unsupported and `https://*.foo.com/` does not delegate to `https://foo.com/`. Before, a permissions policy might need to look like: 
 
@@ -82,7 +84,7 @@ This feature allows pages to disable the running of unload event handlers. The g
 
 This trial is expected to run until Chrome 109. [Register for the trial here](/origintrials/#/view_trial/1012184016251518977).
 
-## Deprecations and Removals
+## Deprecations and removals
 
 This version of Chrome introduces the deprecations and removals listed below. Visit ChromeStatus.com for lists of planned deprecations, current deprecations and previous removals.
 
