@@ -224,7 +224,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 - El panel **Estilos** ahora muestra un selector de color para la propiedad `stop-color` del elemento [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) . ([1351096](https://crbug.com/1351096))
 
 <!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- Identifique el script que está provocando que el [diseño](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como las posibles causas fundamentales de los cambios de diseño en el panel **Perspectivas de rendimiento**. ([1343019](https://crbug.com/1343019))
+- Identifique el script que está provocando la ejecución de [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como una posible causa fundamental de cambios de diseño con el panel **Performance Insights**. ([1343019](https://crbug.com/1343019))
 
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - Muestre la ruta crítica para las fuentes web LCP en el panel **Perpectiva de Rendimiento**. ([1350390](https://crbug.com/1350390))
