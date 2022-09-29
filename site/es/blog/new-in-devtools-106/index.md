@@ -205,7 +205,7 @@ Chromium bug: [1351735](https://crbug.com/1351735)
 
 
 <!-- The **Recorder** panel now automatically generates a name for new recordings. -->
-El panel **Grabadora** ahora genera automáticamente un nombre para las nuevas grabaciones.
+El panel **Recorder** ahora genera automáticamente un nombre para las nuevas grabaciones.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0TMJgVqyk7AeoWIR6Vee.png", alt="Nombre predeterminado para las grabaciones en el panel Recorder", width="800", height="565" %}
 
