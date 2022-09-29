@@ -17,7 +17,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 ### Chrome 106 {: #chrome106 }
 
-* [Agrupar archivos por Autoría/Implementación en el panel Orígenes](/es/blog/new-in-devtools-106/#authored)
+* [Agrupar archivos por Autoría/Desplegado en el panel Fuentes](/es/blog/new-in-devtools-106/#authored)
 * [Rastreos de pila vinculados para operaciones asincrónicas](/es/blog/new-in-devtools-106/#async)
 * [Ignorar automáticamente los scripts de terceros conocidos](/es/blog/new-in-devtools-106/#auto-ignore)
 * [Pila de llamadas mejorada durante la depuración](/es/blog/new-in-devtools-106/#call-stack)
