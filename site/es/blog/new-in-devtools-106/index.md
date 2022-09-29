@@ -28,7 +28,7 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y po
 <!-- + 5. Update the whats-new.md file -->
 
 <!-- ## Group files by Authored / Deployed in the Sources panel {: #authored } -->
-## Agrupar archivos por Autoría/Implementación en el panel Orígenes {: #authored }
+## Agrupar archivos por Autoría/Desplegado en el panel Fuentes {: #authored }
 
 
 <!-- The **Group files by Authored / Deployed** is now shown under the 3-dot menu. Previously, it showed directly on the navigation pane. -->
