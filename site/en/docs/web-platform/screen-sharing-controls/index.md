@@ -56,7 +56,7 @@ Note that we don’t offer the option to pre-select a specific window or screen.
 One of the top-cited reasons for sharing the entire screen, is the desire to seamlessly switch between sharing different surfaces during a session. To address this, Chrome now exposes a button that lets a user dynamically switch between sharing different tabs. This "Share this tab instead" button has previously been available to Chrome extensions, and can now be used by any web app which calls [`getDisplayMedia()`].
 
 <figure>
-  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/NdHrtlD1vZAcrcnLSprF.png", alt="Screenshot of the button used to dynamically switch between sharing different tabs", width="800", height="524" %}
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/Q0bg9d0YrZHDXFxnWcN0.png", alt="Screenshot of the button used to dynamically switch between sharing different tabs", width="800", height="328" %}
   <figcaption>
     The "Share this tab instead" button in Chrome.
   </figcaption>
@@ -88,7 +88,7 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 ```
 
 <figure>
-  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/CtF2KFIwXjCantVBhmMR.png", alt="Screenshot of the media picker excluding the current tab", width="800", height="524" %}
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/2inHAZj84X6WZ0ew0vaM.png", alt="Screenshot of the media picker excluding the current tab", width="800", height="432" %}
   <figcaption>
     The current tab is excluded, only the second tab is present. 
   </figcaption>
