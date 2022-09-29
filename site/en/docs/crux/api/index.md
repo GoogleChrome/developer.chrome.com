@@ -251,7 +251,7 @@ Queries are submitted as JSON objects via a POST request to `https://chromeuxrep
 }
 ```
 
-For example, this can be called from `curl` with the following command line (replacing API_KEY with your key):
+For example, this can be called from `curl` with the following command line (replacing `API_KEY` with your key):
 
 ```bash
 curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
