@@ -227,7 +227,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 - Identifique el script que está provocando la ejecución de [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como una posible causa fundamental de cambios de diseño con el panel **Performance Insights**. ([1343019](https://crbug.com/1343019))
 
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
-- Muestre la ruta crítica para las fuentes web LCP en el panel **Perpectiva de Rendimiento**. ([1350390](https://crbug.com/1350390))
+- Se muestra la ruta crítica para las fuentes web LCP en el panel **Performance Insights**. ([1350390](https://crbug.com/1350390))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/50a84ca8e5b556e27bb285477f21a99f0ccb7050 #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/2687a701a67e543faeff3f936f215534bf8221bf #}
