@@ -218,7 +218,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 ## Destacados varios {: #misc }
 
 <!-- - Previously, [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time. ([1351416](https://crbug.com/1351416)) -->
-- Anteriormente, [Extensiones de grabadora](/docs/devtools/recorder/reference/#extension-troubleshooting) no aparecían en el panel de **Grabadora** de vez en cuando. ([1351416](https://crbug.com/1351416))
+- Anteriormente, [Las extensiones para  el panel **Recorder**](/docs/devtools/recorder/reference/#extension-troubleshooting) no aparecían en el panel de vez en cuando. ([1351416](https://crbug.com/1351416))
 
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - El panel **Estilos** ahora muestra un selector de color para la propiedad `stop-color` del elemento [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) . ([1351096](https://crbug.com/1351096))
