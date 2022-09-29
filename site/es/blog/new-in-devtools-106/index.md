@@ -70,7 +70,7 @@ async increment() {
 ```
 
 <!-- Previously, the stack trace only showed the timeout operation. It did not show the “root cause” of the operation.  -->
-Anteriormente, el seguimiento de la pila solo mostraba la operación de `timeout`. No mostró la "causa raíz" de la operación.
+Anteriormente, el seguimiento de la pila solo mostraba la operación de `timeout`. No mostraba la "causa raíz" de la operación.
 
 <!-- With the latest changes, DevTools now shows the operation originates from the `onClick` event in the button component, then the `increment` function, followed by the timeout operation. -->
 Con los últimos cambios, DevTools ahora muestra que la operación se origina en el evento `onClick` en el componente del botón, luego se ejecuta la función `increment`, seguida de la operación de `timeout`.
