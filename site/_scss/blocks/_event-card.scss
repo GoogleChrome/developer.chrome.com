@@ -48,7 +48,9 @@
 
   &__image,
   &__desktop-image {
+    /* stylelint-disable property-no-unknown */
     aspect-ratio: 1/1;
+    /* stylelint-enable property-no-unknown */
     position: relative;
 
     img {
