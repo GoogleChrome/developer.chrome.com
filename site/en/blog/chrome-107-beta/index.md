@@ -42,7 +42,7 @@ The Share this tab instead button allows users to seamlessly switch which tab th
 
 When `getDisplayMedia()` is called, the browser offers the user a choice of display surfaces: tabs, windows, or monitors. Using the displaySurface constraint, the Web application may now hint to the browser if it prefers that a certain surface type be more prominently offered to the user. 
 
-[Find out more about how these features will help to avoid accidental oversharing.](https://developer.chrome.com/blog/avoiding-oversharing-when-screen-sharing/)
+[Find out more about how these features will help to avoid accidental oversharing.](/blog/avoiding-oversharing-when-screen-sharing/)
 
 ## Render blocking status in Resource Timing
 
@@ -68,19 +68,19 @@ This feature adds the `rel` attribute to form elements, which makes it possible 
 
 ## Origin Trials
 
-This release of Chrome had 2 new [origin trials](https://developer.chrome.com/docs/web-platform/origin-trials/).
+This release of Chrome had 2 new [origin trials](/docs/web-platform/origin-trials/).
 
 ### Declarative PendingBeacon API
 
 A stateful beacon API that lets the browser control when beacons are sent. A _beacon_ is a bundle of data sent to a backend server, without expecting a particular response. It's often desirable to send these at the end of a user's visit to a page, but there's no good time for that "send" call to be made. This API delegates the sending to the browser itself, so it can support beacons on page unload or on page hide, without the developer having to implement send calls at exactly the right times.
 
-This trial is expected to run until Chrome 109. [Register for the trial here](https://developer.chrome.com/origintrials/#/register_trial/1581889369113886721).
+This trial is expected to run until Chrome 109. [Register for the trial here](/origintrials/#/register_trial/1581889369113886721).
 
 ### Permissions-Policy: unload
 
 This feature allows pages to disable the running of unload event handlers. The goal is to allow sites that have removed all unload handlers to ensure they do not accidentally add new ones. This will help sites migrate off unload event handlers and thereby [improve BFCache hit-rate](https://web.dev/bfcache/#never-use-the-unload-event).
 
-This trial is expected to run until Chrome 109. [Register for the trial here](https://developer.chrome.com/origintrials/#/view_trial/1012184016251518977).
+This trial is expected to run until Chrome 109. [Register for the trial here](/origintrials/#/view_trial/1012184016251518977).
 
 ## Deprecations and Removals
 
@@ -90,6 +90,6 @@ This release of Chrome deprecates one feature.
 
 ### Expect-CT
 
-Expect-CT is an HTTP header that allowed websites to opt in to Certificate Transparency enforcement before it was enforced by default. It also has reporting functionality to help developers discover CT misconfigurations.
+`Expect-CT` is an HTTP header that allowed websites to opt in to Certificate Transparency enforcement before it was enforced by default. It also has reporting functionality to help developers discover CT misconfigurations.
 
-The Expect-CT HTTP header was designed to help transition to universal Certificate Transparency (CT) enforcement, by allowing high-value websites to opt in to CT enforcement or reporting for better security before CT enforcement was required (by Chrome) on all public websites. However, Expect-CT has now outlived its usefulness. Chrome requires CT on all public websites now, so there is no security value to Expect-CT anymore. No other browser has implemented Expect-CT so removing it is not an interoperability concern.
+The `Expect-CT` HTTP header was designed to help transition to universal Certificate Transparency (CT) enforcement, by allowing high-value websites to opt in to CT enforcement or reporting for better security before CT enforcement was required (by Chrome) on all public websites. However, `Expect-CT` has now outlived its usefulness. Chrome requires CT on all public websites now, so there is no security value to `Expect-CT` anymore. No other browser has implemented `Expect-CT` so removing it is not an interoperability concern.
