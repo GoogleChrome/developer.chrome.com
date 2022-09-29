@@ -131,7 +131,8 @@ can defer this part of your migration until you're ready, or begin using
 promises immediately.
 
 Some scenarios, such as event listeners, will still require callbacks. For
-more information, see [Promises on MDN][3].
+information on using promises, see [Promises on MDN][3]. For information on 
+converting callbacks to promises, see [our ouwn article][4].
 
 
 ## Other features {: #other-features }
@@ -155,3 +156,4 @@ Look for announcements of these and other Manifest V3 features as they become av
 [1]: /docs/extensions/reference/scripting/
 [2]: /docs/extensions/reference/storage/#property-session
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[4]: /docs/extensions/mv3/promises#compare-to-callback
