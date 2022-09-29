@@ -8,7 +8,7 @@ authors:
   - rouslan
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/BDMyj4VRZDXXLXQiDq1C.jpg
 alt: 'Using a ATM - Hand pressing number'
-date: 2022-09-28
+date: 2022-09-29
 ---
 
 [The Payment Handler API](https://web.dev/web-based-payment-apps-overview/)
