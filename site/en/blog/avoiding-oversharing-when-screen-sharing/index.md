@@ -17,10 +17,10 @@ tags:
 Sharing tabs, windows, and screens is already possible on the web platform thanks to [`getDisplayMedia()`]. We’re now shipping the following improvements that guide the user away from accidental oversharing:
 
 - Sharing tabs is now the default option, rather than sharing screens.
-- The `displaySurface` option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
-- The `surfaceSwitching` option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
-- The `selfBrowserSurface` option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
-- The `systemAudio` option ensures Chrome only offers relevant audio-capture to the user.
+- The [`displaySurface`] option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
+- The [`surfaceSwitching`] option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
+- The [`selfBrowserSurface`] option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
+- The [`systemAudio`] option ensures Chrome only offers relevant audio-capture to the user.
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/SRzjjJ9AQVQVyjTCXskh.png", alt="Screenshot of the media picker prompt upon calling getDisplayMedia().", width="800", height="524" %}
@@ -31,7 +31,7 @@ Sharing tabs, windows, and screens is already possible on the web platform thank
 
 ## Reordering the selection offered to the user {: #reordering }
 
-When [`getDisplayMedia()`] is called, users are presented with a media picker which allows them to share whichever display surface they would like any tab, window, or screen. Experience shows that the ordering of the offering affects the users’ selection. We are experimenting in Chrome&nbsp;107 on desktop with reordering the picker in order to nudge users towards tabs, which is the best option in the majority of cases.
+When [`getDisplayMedia()`] is called, users are presented with a media picker which allows them to share whichever display surface they would like. Experience shows that the ordering of the offering affects the users’ selection. We are experimenting in Chrome&nbsp;107 with reordering the picker in order to nudge users towards tabs, which is the best option in the majority of cases.
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/7z4i2ZI77UZA80WRg4Rc.jpg", alt="Screenshots of the old and new media picker prompts.", width="800", height="556" %}
@@ -44,7 +44,7 @@ The expected benefits are as follows:
 
 ### Privacy
 
-Previously, screens were offered as the most prominent option. This is the least privacy-preserving option, as users may end up exposing more personal information than they had originally intended. Such as:
+Previously, screens were offered as the default option. This is the least privacy-preserving option, as users may end up exposing more personal information than they had originally intended. Such as:
 - Timezone (via the system clock)
 - Language
 - System notifications
@@ -83,6 +83,8 @@ Check out [Privacy-preserving screen sharing controls] for more information.
 
 ## What's next {: #future }
 
+The [`suppressLocalAudioPlayback`] option will indicate whether the audio playing in a tab would be played out of the user’s local speakers.
+
 [Conditional Focus] will allow the capturing web app to instruct the browser to either switch focus to the captured display surface, or to avoid such a focus change.
 
 ## Acknowledgements
@@ -92,9 +94,14 @@ Hero image by [Jelleke Vanooteghem].
 Thanks to [Rachel Andrew] for reviewing this article.
 
 [`getdisplaymedia()`]: https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia
+[`displaysurface`]: /docs/web-platform/screen-sharing-controls/#displaySurface
+[`surfaceswitching`]: /docs/web-platform/screen-sharing-controls/#surfaceSwitching
+[`selfbrowsersurface`]: /docs/web-platform/screen-sharing-controls/#selfBrowserSurface
+[`systemaudio`]: /docs/web-platform/screen-sharing-controls/#systemAudio
 [capture handle]: /docs/web-platform/capture-handle/
 [region capture]: /docs/web-platform/region-capture/
 [privacy-preserving screen sharing controls]: /docs/web-platform/screen-sharing-controls/
 [conditional focus]: https://wicg.github.io/conditional-focus/
+[`suppresslocalaudioplayback`]: https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-suppresslocalaudioplayback 
 [jelleke vanooteghem]: https://unsplash.com/photos/kabtmcdcAbk
 [rachel andrew]: https://github.com/rachelandrew

@@ -10,7 +10,6 @@ date: 2022-09-29
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
-  - chrome-105
   - chrome-107
 ---
 
@@ -38,7 +37,8 @@ The values for the [`displaySurface`] option are:
 ```js
 const stream = await navigator.mediaDevices.getDisplayMedia({
   video: true,
-  displaySurface: "window", // Pre-select the "Window" pane in the media picker.
+  // Pre-select the "Window" pane in the media picker.
+  displaySurface: "window",
 });
 ```
 
