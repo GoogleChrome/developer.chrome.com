@@ -69,7 +69,7 @@ async increment() {
 舞台裏では、DevTools に新しい "Async Stack Tagging" 機能が導入されました。非同期コードの両方の部分を新しい `console.createTask()` メソッドと一緒にリンクすることで、処理の全体像を伝えることができます。詳細については、 [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces) を参照してください。
 
 <!-- Does it sound complicated? Not at all. Most of the time, the framework you are using handles the scheduling and async execution. In that case, it is up to the framework to implement the API, you don’t need to worry about it. (e.g. Angular implemented these [changes](https://chromium-review.googlesource.com/c/v8/v8/+/3776678)) -->
-複雑に聞こえますか？全くそんなことはありません。ほとんどの場合、使用しているフレームワークがスケジューリングと非同期実行を処理します。その場合、API を実装するのはフレームワーク次第なので、心配する必要はありません。 (例: Angular はこれらの [変更]((https://chromium-review.googlesource.com/c/v8/v8/+/3776678)) を実装しました)
+複雑に聞こえますか？全くそんなことはありません。ほとんどの場合、使用しているフレームワークがスケジューリングと非同期実行を処理します。その場合、API を実装するのはフレームワーク次第なので、心配する必要はありません。 (例: Angular はこれらの [変更](https://chromium-review.googlesource.com/c/v8/v8/+/3776678) を実装しました)
 
 {# https://chromium.googlesource.com/v8/v8/+/c53c20fe64b5b21f5a4838ebcfdb96357189fc76 #}
 
