@@ -16,11 +16,11 @@ tags:
 
 Sharing tabs, windows, and screens is already possible on the web platform thanks to [`getDisplayMedia()`]. We’re now shipping the following improvements that guide the user away from accidental oversharing:
 
-- Sharing tabs is now the default option, rather than sharing screens.
-- The [`displaySurface`] option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
-- The [`surfaceSwitching`] option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
-- The [`selfBrowserSurface`] option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
-- The [`systemAudio`] option ensures Chrome only offers relevant audio-capture to the user.
+1. Sharing tabs is now the default option, rather than sharing screens.
+2. The [`displaySurface`] option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
+3. The [`surfaceSwitching`] option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
+4. The [`selfBrowserSurface`] option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
+5. The [`systemAudio`] option ensures Chrome only offers relevant audio-capture to the user.
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/SRzjjJ9AQVQVyjTCXskh.png", alt="Screenshot of the media picker prompt upon calling getDisplayMedia().", width="800", height="524" %}

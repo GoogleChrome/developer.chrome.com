@@ -16,10 +16,10 @@ tags:
 The [Screen Capture API] introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. This documentation introduces some changes to the API to better preserve privacy, and prevent accidental sharing of personal information.
 
 Here’s a list of controls you can use for privacy preserving screen sharing:
-- The `displaySurface` option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
-- The `surfaceSwitching` option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
-- The `selfBrowserSurface` option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
-- The `systemAudio` option ensures Chrome only offers relevant audio-capture to the user.
+1. The `displaySurface` option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
+2. The `surfaceSwitching` option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
+3. The `selfBrowserSurface` option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
+4. The `systemAudio` option ensures Chrome only offers relevant audio-capture to the user.
 
 ## Changes to `getDisplayMedia()`
 
