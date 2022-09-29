@@ -67,7 +67,7 @@ Tab sharing is more feature-complete:
   - [Capture Handle] allows the identification of the captured tab and establishment of a communications channel with it.
   - [Region Capture] allows further scoping down of captured content.
 
-### Performance and User Experience
+### Performance and user experience
 
 When a user intends to share another web app, it’s preferable to directly share the tab running that app, rather than its Chrome window, or even the entire screen.
 - The tab will continue being shared even if the user interacts with another app.
