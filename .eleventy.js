@@ -25,6 +25,7 @@ const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
+const {EventCard} = require('./site/_shortcodes/EventCard');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -57,6 +58,7 @@ const authors = require('./site/_collections/authors');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const extensionsReferenceCollection = require('./site/_collections/reference');
+const { pastEvents, currentEvents } = require('./site/_collections/events');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
@@ -114,6 +116,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
+  eleventyConfig.addCollection('currentEvents', currentEvents);
+  eleventyConfig.addCollection('pastEvents', pastEvents);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
@@ -148,6 +152,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
+  eleventyConfig.addShortcode('EventCard', EventCard);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
