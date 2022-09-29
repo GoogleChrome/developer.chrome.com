@@ -32,7 +32,7 @@ _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y po
 
 
 <!-- The **Group files by Authored / Deployed** is now shown under the 3-dot menu. Previously, it showed directly on the navigation pane. -->
-Ahora, los **archivos agrupados por autor/implementación** se muestran en el menú de 3 puntos. Anteriormente, se mostraban directamente en el panel de navegación.
+Ahora, los **archivos agrupados por autor/despliegue** se muestran en el menú de 3 puntos. Anteriormente, se mostraban directamente en el panel de navegación.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). Enable the **Group files by Authored / Deployed** setting to view your original source code (Authored) first and navigate to them quicker. -->
 Abra esta [demo](https://ng-devtools.netlify.app/). Habilite la opción **Agrupar archivos por Autor/Implementación** para ver su código fuente original (por autor) primero y navegar más rápido.
