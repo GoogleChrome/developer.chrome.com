@@ -66,7 +66,9 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><strong>June&nbsp;2023</strong>
     </td>
     <td>
-      <p>All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</p>
+      <ul>
+        <li>All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</li>
+      </ul>
     </td>
     <td><ul>
       <li>Starting in June in <strong>Chrome 115</strong>, Chrome may run experiments to turn off support for Manifest V2 extensions in all channels, including stable channel.</li></ul>
@@ -82,7 +84,9 @@ Check this page for any updates and for more specific dates as these milestones 
       </ul>
     </td>
     <td>
-      <p>Manifest V2 enterprise policy expires.</p>
+      <ul>
+        <li>Manifest V2 enterprise policy expires.</li>
+      </ul>
     </td>
   </tr>
 </table>
