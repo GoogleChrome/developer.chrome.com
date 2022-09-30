@@ -328,6 +328,12 @@ The request header will be sent on document requests, if the list of topics is n
 request is allowable. For example, when the appropriate [permission policy](#site-opt-out) is in play,
 and the context is secure.
 
+{% Aside 'caution' %}
+Topic retrieval via a header has not yet been implemented by Chrome. Implementation is 
+[proposed for Chrome 108](https://github.com/patcg-individual-drafts/topics/pull/81#issuecomment-1260846931), 
+but this is not guaranteed.
+{% endAside %}
+
 #### Request header example
 
 ``` text
