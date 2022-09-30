@@ -329,7 +329,7 @@ request is allowable. For example, when the appropriate [permission policy](#sit
 and the context is secure.
 
 {% Aside 'caution' %}
-This feature is not yet available for testing within the [Privacy Sandbox Relevance and Measurement origin trial](https://developer.chrome.com/origintrials/#/view_trial/771241436187197441). It will be made available in the future, 
+This feature is not yet available for testing within the [Privacy Sandbox Relevance and Measurement origin trial](/origintrials/#/view_trial/771241436187197441). It will be made available in the future, 
 and is currently [targeted for Chrome 108](https://github.com/patcg-individual-drafts/topics/pull/81#issuecomment-1260846931), 
 but that is subject to change.
 {% endAside %}
