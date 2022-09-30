@@ -6,14 +6,14 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-09-29
+date: 2022-09-30
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
   - chrome-107
 ---
 
-The [Screen Capture API] introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. This documentation introduces some changes to the API to better preserve privacy, and prevent accidental sharing of personal information.
+Sharing tabs, windows, and screens is already possible on the web platform with the [Screen Capture API]. In short, [`getDisplayMedia()`] allows the user to select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. This documentation introduces some changes to the API to better preserve privacy, and prevent accidental sharing of personal information.
 
 Here’s a list of controls you can use for privacy preserving screen sharing:
 - The `displaySurface` option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
