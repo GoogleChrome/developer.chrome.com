@@ -36,9 +36,8 @@ The values for the [`displaySurface`] option are:
 
 ```js
 const stream = await navigator.mediaDevices.getDisplayMedia({
-  video: true,
   // Pre-select the "Window" pane in the media picker.
-  displaySurface: "window",
+  video: {displaySurface: "window"}
 });
 ```
 
