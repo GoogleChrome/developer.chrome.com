@@ -22,7 +22,7 @@ In CSS Grid, the `grid-template-columns` and `grid-template-rows` properties all
 
 ## Privacy preserving screen sharing controls
 
-The [Screen Capture API]([https://w3c.github.io/mediacapture-screen-share/](https://w3c.github.io/mediacapture-screen-share/)) introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. In this beta some new features are added to this API.
+The [Screen Capture API](https://w3c.github.io/mediacapture-screen-share/) introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. In this beta some new features are added to this API.
 
 {% Aside %}  
 Learn more about the Screen Capture API in the MDN guide to [Using the Screen Capture API](https://developer.mozilla.org/docs/Web/API/Screen_Capture_API/Using_Screen_Capture).   
