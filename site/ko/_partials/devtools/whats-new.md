@@ -15,18 +15,18 @@
 * [기타 하이라이트](/ko/blog/new-in-devtools-107/#misc)
 
 
-<!-- ### Chrome 106 {: #chrome106 }
+### Chrome 106 {: #chrome106 }
 
-* [Group files by Authored / Deployed in the Sources panel](/ko/blog/new-in-devtools-106/#authored)
-* [Linked stack traces for asynchronous operations](/ko/blog/new-in-devtools-106/#async)
-* [Automatically ignore known third-party scripts](/ko/blog/new-in-devtools-106/#auto-ignore)
-* [Improved call stack during debugging](/ko/blog/new-in-devtools-106/#call-stack)
-* [Hiding ignore-listed sources in the Sources panel](/ko/blog/new-in-devtools-106/#ignore-nav)
-* [Hiding ignore-listed files in the Command Menu](/ko/blog/new-in-devtools-106/#ignore-search)
-* [New Interactions track in the Performance panel](/ko/blog/new-in-devtools-106/#performance)
-* [LCP timings breakdown in the Performance Insights panel](/ko/blog/new-in-devtools-106/#insights)
-* [Auto-generate default name for recordings in the Recorder panel](/ko/blog/new-in-devtools-106/#recorder)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-106/#misc) -->
+* [소스 패널에서 저작/배포 단위로 파일 그룹화하기](/ko/blog/new-in-devtools-106/#authored)
+* [비동기 동작들에 대해 연결된 스택 추적](/ko/blog/new-in-devtools-106/#async)
+* [알려진 서드파티 스크립트를 자동으로 무시하기](/ko/blog/new-in-devtools-106/#auto-ignore)
+* [개선된 호출 스택 디버깅](/ko/blog/new-in-devtools-106/#call-stack)
+* [소스 패널에서 무시 목록에 포함된 소스들 숨기기](/ko/blog/new-in-devtools-106/#ignore-nav)
+* [명령 메뉴에서 무시 목록에 포함된 소스들 숨기기](/ko/blog/new-in-devtools-106/#ignore-search)
+* [성능 패널의 새로운 상호 작용 추적](/ko/blog/new-in-devtools-106/#performance)
+* [성능 인사이트 패널의 LCP 타이밍 세부 분석](/ko/blog/new-in-devtools-106/#insights)
+* [기록 패널의 기록 이름 자동 생성](/ko/blog/new-in-devtools-106/#recorder)
+* [기타 하이라이트](/ko/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }

@@ -14,7 +14,6 @@
 * [CSS のフレックスボックスプロパティ `align-content` に `start` と `end` のアイコンを表示](/ja/blog/new-in-devtools-107/#flexbox)
 * [その他のハイライト](/ja/blog/new-in-devtools-107/#misc)
 
-
 ### Chrome 106 {: #chrome106 }
 
 * [Sources パネルでの Authored / Deployed によるファイルのグループ化](/ja/blog/new-in-devtools-106/#authored)
