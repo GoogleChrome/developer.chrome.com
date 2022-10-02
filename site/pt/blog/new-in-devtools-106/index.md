@@ -3,8 +3,6 @@ layout: "layouts/blog-post.njk"
 title: "O que há de novo no DevTools (Chrome 106)"
 authors:
   - jecelynyeen
-  - khaosdoctor
-  - alvarocamillont
 date: 2022-09-16
 updated: 2022-09-16
 description: "Melhorias no suporte para debugging na Web moderna, Detalhes dos tempos de LCP no Performance Insights e mais."
