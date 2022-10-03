@@ -1,3 +1,10 @@
+---
+layout: "layouts/doc-post.njk"
+title: "Manifest - Content Security Policy"
+date: 2022-10-03
+updated: 2022-10-03
+description: Reference documentation for the content security policy properties of manifest.json.
+---
 ## Manifest - Content Security Policy 
 
 ## 

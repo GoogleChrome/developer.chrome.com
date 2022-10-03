@@ -1,3 +1,10 @@
+---
+layout: "layouts/doc-post.njk"
+title: "Manifest - Author"
+date: 2022-10-03
+updated: 2022-10-03
+description: Reference documentation for the author name property of manifest.json.
+---
 ## Manifest - Author
 
 ## 
