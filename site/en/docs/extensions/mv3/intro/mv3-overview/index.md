@@ -132,7 +132,7 @@ promises immediately.
 
 Some scenarios, such as event listeners, will still require callbacks. For
 information on using promises, see [Promises on MDN][3]. For information on 
-converting callbacks to promises, see [our ouwn article][4].
+converting callbacks to promises, see [our own article][4].
 
 
 ## Other features {: #other-features }
