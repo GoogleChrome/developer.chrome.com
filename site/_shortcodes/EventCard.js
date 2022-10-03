@@ -47,6 +47,10 @@ function EventCard(event) {
     alt: event.title,
   });
 
+  const buttonLabel = event.isPastEvent
+    ? i18n('i18n.events.see_details')
+    : i18n('i18n.events.see_whos_joining');
+
   return html`
     <enhanced-event-card>
       <article id="${event.id}"
@@ -90,7 +94,7 @@ function EventCard(event) {
               </div>
 
               <button class="material-button button-filled button-round">
-                ${i18n('i18n.events.see_whos_joining')}
+                ${buttonLabel}
               </a>
             </div>
           </div>

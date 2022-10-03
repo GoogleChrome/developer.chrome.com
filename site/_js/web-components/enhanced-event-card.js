@@ -30,51 +30,67 @@ export class EnhancedEventCard extends BaseElement {
   connectedCallback() {
     super.connectedCallback();
 
-    this.card = this.getCardElement();
-    this.detailsButton = this.getButtonElement(this.card);
-
-    this.detailsButton.addEventListener('click', this.toggleEventDetails);
-
-    this.card.removeAttribute('tabindex');
-    this.card.classList.remove('no-js');
+    this.card = this.getCard();
+    this.card.enhance();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    this.detailsButton.removeEventListener('click', this.toggleEventDetails);
+    this.card?.handleDisconnect();
   }
 
   toggleEventDetails() {
-    // @ts-ignore
-    const visible = Boolean(this.card.getAttribute('show-details'));
-
-    this.detailsButton.innerHTML = visible
-      ? "See who's joining"
-      : 'Hide details';
-
-    // @ts-ignore
-    this.card.setAttribute('show-details', visible ? '' : 'show-details');
+    this.card?.toggleOpen();
   }
 
-  getCardElement() {
+  getCard() {
     const card = this.querySelector('.event-card');
 
     if (!card) {
       throw new Error('Missing event card');
     }
 
-    return card;
+    const button = this.getButton();
+
+    return {
+      enhance() {
+        card.removeAttribute('tabindex');
+        card.classList.remove('no-js');
+        button.addEventListener();
+      },
+      handleDisconnect() {
+        button.removeEventListener();
+      },
+      isOpen: () => Boolean(card.getAttribute('show-details')),
+      toggleOpen() {
+        const open = this.isOpen();
+        button.toggleLabel(open);
+        card.setAttribute('show-details', open ? '' : 'show-details');
+      },
+    };
   }
 
-  getButtonElement(card) {
-    const button = card.querySelector('.event-card__overview button');
+  getButton() {
+    const button = this.querySelector('.event-card__overview button');
 
     if (!button) {
       throw new Error('Event card is missing the details button');
     }
 
-    return button;
+    const originalLabel = button.innerHTML;
+
+    return {
+      toggleLabel: detailsVisible => {
+        button.innerHTML = detailsVisible ? originalLabel : 'Hide details';
+      },
+      addEventListener: () => {
+        button.addEventListener('click', this.toggleEventDetails);
+      },
+      removeEventListener: () => {
+        button.removeEventListener('click', this.toggleEventDetails);
+      },
+    };
   }
 }
 

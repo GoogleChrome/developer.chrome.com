@@ -21,12 +21,16 @@ const PLACEHOLDER_IMG =
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
+/**
+ * @returns {EleventyCollectionItem[]}
+ */
 const getEvents = (collections, filter, sort) => {
   return collections
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .filter(filter)
     .map(event => {
       event.data.id = event.fileSlug;
+      event.data.isPastEvent = isPastEvent(event);
 
       event.data.sessions = event.data.sessions.map(session => {
         if (session.type === 'speaker') {
@@ -47,30 +51,38 @@ const getEvents = (collections, filter, sort) => {
     .sort(sort);
 };
 
+/**
+ * @param {EleventyCollectionObject} collections
+ * @returns {EleventyCollectionItem[]}
+ */
 const pastEvents = collections => {
   return getEvents(
     collections,
-    event => {
-      return new Date(event.date).getTime() < startOfDay.getTime();
-    },
+    event => isPastEvent(event),
     (a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     }
   );
 };
 
+/**
+ * @param {EleventyCollectionObject} collections
+ * @returns {EleventyCollectionItem[]}
+ */
 const currentEvents = collections => {
   return getEvents(
     collections,
-    event => {
-      return new Date(event.date).getTime() >= startOfDay.getTime();
-    },
+    event => isPastEvent(event) === false,
     (a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime();
     }
   );
 };
 
+/**
+ * @param authorHandle
+ * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
+ */
 const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
@@ -85,9 +97,11 @@ const getAuthorData = authorHandle => {
 };
 
 /**
- * Returns a list of events
- * *
- * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @param event
+ * @returns {boolean}
  */
+const isPastEvent = event => {
+  return new Date(event.date).getTime() < startOfDay.getTime();
+};
+
 module.exports = {currentEvents, pastEvents};
