@@ -18,8 +18,8 @@ const authorsData = require('../_data/authorsData.json');
 const PLACEHOLDER_IMG =
   'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
 
-const endOfDay = new Date();
-endOfDay.setHours(23, 59, 59, 999);
+const startOfDay = new Date();
+startOfDay.setHours(0, 0, 0, 0);
 
 const getEvents = (collections, filter, sort) => {
   return collections
@@ -51,7 +51,7 @@ const pastEvents = collections => {
   return getEvents(
     collections,
     event => {
-      return new Date(event.date).getTime() < endOfDay.getTime();
+      return new Date(event.date).getTime() < startOfDay.getTime();
     },
     (a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -63,7 +63,7 @@ const currentEvents = collections => {
   return getEvents(
     collections,
     event => {
-      return new Date(event.date).getTime() >= endOfDay.getTime();
+      return new Date(event.date).getTime() >= startOfDay.getTime();
     },
     (a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime();
