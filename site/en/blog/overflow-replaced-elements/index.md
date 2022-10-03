@@ -44,7 +44,7 @@ img {
 }
 ```
 
-Setting `inherit: all` and causing all elements to inherit, including `overflow`.
+Setting `inherit: all` and causing all properties to inherit, including `overflow`.
 
 ```css
 img {
@@ -54,7 +54,7 @@ img {
 
 ## Solution
 
-If this change means you see unwanted overflow, and overriding the overflow property to visible is not intentional, inspect the CSS applied to the element via DevTools. This should allow you to identify the CSS declaration which is overriding the overflow property to `visible` and update it to `clip`.
+If this change means you see unwanted overflow, and overriding the overflow property to visible is not intentional, inspect the CSS applied to the element via DevTools. This should allow you to identify the CSS declaration which is overriding the overflow property to `visible` and remove it or update it to `clip`.
 
 ```css
 img {
