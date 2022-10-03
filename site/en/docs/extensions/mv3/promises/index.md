@@ -38,7 +38,7 @@ They are an important feature of modern JavaScript, providing benefits such as:
 * A simple "fork and join" syntax for invoking concurrent functions
 
 In Manifest V2 extension developers could use libraries to "promisify" Chrome's extensions APIs.
-With the introduction of Manifest V3 many of Chrome's extensions APIs can now return promises. The
+With the introduction of Manifest V3 many of Chrome's extensions APIs now return promises. The
 Chrome team is also progressively adding promise support to additional APIs.
 
 {% Aside 'gotchas' %}
