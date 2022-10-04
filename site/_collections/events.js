@@ -29,7 +29,6 @@ const getEvents = (collections, filter, sort) => {
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .filter(filter)
     .map(event => {
-      event.data.id = event.fileSlug;
       event.data.isPastEvent = isPastEvent(event);
 
       event.data.sessions = event.data.sessions.map(session => {
