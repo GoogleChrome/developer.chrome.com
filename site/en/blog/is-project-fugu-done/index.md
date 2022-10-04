@@ -10,8 +10,8 @@ description:
   capabilities to refining and improving the existing ones.
 authors:
   - thomassteiner
-date: 2022-09-21
-# updated: 2022-09-21
+date: 2022-10-04
+# updated: 2022-10-04
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -19,11 +19,10 @@ tags:
 ---
 
 With one of the Project Fugu team's objectives being to _make it possible for developers to do
-anything on the web that platform-specific apps can_, the team has been incredibly busy with adding
-missing features web developers needed to close this app gap. If you don't believe me, just look at
-the ["Shipped" section](https://fugu-tracker.web.app/#shipped) of the Fugu API tracker. Here are all
-the 55(!) at the time of this writing shipped APIs in order of least recently to most recently
-shipped:
+anything on the web that platform-specific apps can_, the team has been busy adding missing features
+web developers needed to close this app gap. If you don't believe me, just look at the
+["Shipped" section](https://fugu-tracker.web.app/#shipped) of the Fugu API tracker. Here are the 55
+shipped APIs, in order of least to most recently shipped:
 
 <div class="table-wrapper scrollbar">
   <table>
@@ -96,12 +95,11 @@ shipped:
   </table>
 </div>
 
-It's a really long list, and there is more on our plate. There are still a couple of APIs and
-features that are currently in [developer trial](https://fugu-tracker.web.app/#developer-trial)
-(that is, implemented, but behind a feature flag), some that we have
-[started](https://fugu-tracker.web.app/#started) to work on, and many that are
-[under consideration](https://fugu-tracker.web.app/#under-consideration). As you can see, there's no
-reason to lean back and say we're done.
+It's a long list, and there is more on our plate. There are still a couple of APIs and features
+currently in [developer trial](https://fugu-tracker.web.app/#developer-trial) (that is, implemented,
+but behind a feature flag), some that we have [started](https://fugu-tracker.web.app/#started) to
+work on, and many [under consideration](https://fugu-tracker.web.app/#under-consideration). As you
+can see, it's not time to lean back and say we're done.
 
 ## Synchronous file methods for the origin private file system
 
@@ -110,7 +108,7 @@ started. For example, consider the chart below that shows
 [skyrocketing relative usage growth](https://chromestatus.com/metrics/feature/timeline/popularity/3428)
 of the
 [`navigator.storage.getDirectory()`](https://fs.spec.whatwg.org/#dom-storagemanager-getdirectory)
-method used as an entry point to the origin private file system (OPFS). This method is used, for
+method, used as an entry point to the origin private file system (OPFS). This method is used, for
 example, for
 [Photoshop's high performance storage](https://web.dev/ps-on-the-web/#high-performance-storage)
 needs, and which the storage community is
@@ -119,7 +117,7 @@ since the started deprecation of Web SQL and even before.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/16nfpJWzOwGgL9YX1AYn.svg", alt="Chart showing the skyrocketing relative usage of the navigator.storage.getDirectory method.", width="600", height="371" %}
 
-Now that more people use the OPFS, additional requirements have emerged, for example, for having a
+Now that more people use the OPFS, additional requirements have emerged. For example, the need for a
 fully synchronous set of file methods in a worker context (see
 [whatwg/fs#7](https://github.com/whatwg/fs/issues/7) for background). While new web APIs are
 generally asynchronous, having synchronous methods would make working with the OPFS a lot simpler in
@@ -155,10 +153,12 @@ these labels with the screens of their multi-screen setup.
 
 As you can see from just these three examples, Project Fugu is far from being done. Keep or start
 using our APIs and send feedback. Since all Fugu specs are developed in the open on GitHub, you can
-always file a spec issue on the corresponding GitHub repo or add your thoughts to an existing issue.
-Did you find a bug with Chrome's implementation or is the implementation different from the spec?
-File a bug at [new.crbug.com](https://new.crbug.com). Be sure to include as much detail as you can
-and provide simple instructions for reproducing. This is not a sprint. This is a journey. Oh, and by
-the way, Fugu APIs make for great progressive enhancements. See my article
+file a spec issue on the corresponding GitHub repo or add your thoughts to an existing issue. If you
+find a bug with Chrome's implementation, or discover that the implementation is different to the
+spec, then file a bug at [new.crbug.com](https://new.crbug.com). Be sure to include as much detail
+as you can and provide simple instructions for reproducing.
+
+And, if you are concerned about browser support, many Fugu APIs make for great progressive
+enhancements. See my article
 [SVGcode: a PWA to convert raster images to SVG vector graphics](https://web.dev/svgcode/) for
 inspiration.
