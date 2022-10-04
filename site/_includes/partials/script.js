@@ -38,6 +38,11 @@
     '{{ analytics.dimensions.TRACKING_VERSION }}',
     '{{ analytics.TRACKING_VERSION }}'
   );
+  try {
+    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', performance.getEntriesByType('navigation')[0].type);
+  } catch (error) {
+    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
+  }
 
   ga('send', 'pageview');
 
