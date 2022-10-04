@@ -54,7 +54,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 ### 异步操作的链接堆栈痕迹 {: #async }
 
 <!-- When some operations are scheduled to happen asynchronously, the stack traces in DevTools now tell the “full story” of the operation. Previously, it tells only part of the story. -->
-当进行某些操作被安排为异步发生时，DevTools 中的堆栈跟踪现在可以讲述操作的”完整故事“。相对起以前，它只讲述了故事的一部分。
+当进行某些操作被安排为异步发生时，DevTools 中的堆栈跟踪现在可以讲述操作的“完整故事”。相对起以前，它只讲述了故事的一部分。
 
 <!-- For example, open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. In our source code, the operation includes an async `timeout` operation. -->
 例如，打开这个[演示](https://ng-devtools.netlify.app/)，点击增量按钮。展开**控制台**中的错误信息。在我们的源代码中，该操作包括一个异步`超时`操作。
