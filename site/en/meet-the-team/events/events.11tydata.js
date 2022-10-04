@@ -7,7 +7,7 @@ module.exports = {
   isVirtualItem: true,
   eleventyComputed: {
     id: data => data.page.fileSlug,
-    algoliaUrl: data => {
+    deepLink: data => {
       return `/meet-the-team#${data.id}`;
     },
   },

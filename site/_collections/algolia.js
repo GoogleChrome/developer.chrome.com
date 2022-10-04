@@ -75,7 +75,7 @@ const algoliaCollection = collections => {
       ? generateImgixSrc(item.data.hero, {w: 100, auto: 'format'})
       : '';
 
-    const url = item.data.algoliaUrl || item.url;
+    const url = item.data.deepLink || item.url;
 
     /** @type {AlgoliaCollectionItem} */
     const algoliaCollectionItem = {
