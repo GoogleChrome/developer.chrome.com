@@ -5,6 +5,7 @@ authors:
   - titouan
   - agektmr
   - lyf
+  - phao
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
 updated: 2022-07-26
@@ -67,7 +68,7 @@ the change and adjust accordingly.
     seconds.
     {% endAside %}
 
-2. In Chrome 107 at the earliest:
+2. In ~~Chrome 107 at the earliest~~ Chrome 109:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing

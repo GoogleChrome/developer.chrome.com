@@ -429,6 +429,11 @@ lyf:
     zh: '罗一凡'
   description:
     en: 'Yifan is a Software Engineer working on the Web Platform.'
+phao:
+  title:
+    en: 'Jonathan Hao'
+  description:
+    en: 'Software Engineer at Google working on the Web Platform Security.'
 jecelynyeen:
   title:
     en: 'Jecelyn Yeen'
