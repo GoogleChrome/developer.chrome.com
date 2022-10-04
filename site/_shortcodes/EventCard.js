@@ -291,7 +291,7 @@ const linksHtml = session => {
 const topicHtml = topic => {
   return html`
     <span
-      class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
+      class="display-inline-block color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
     >
       ${topic}
     </span>
