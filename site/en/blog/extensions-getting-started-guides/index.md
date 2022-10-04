@@ -4,7 +4,7 @@ description: "We created a better way to start the Chrome developer learning jou
 layout: "layouts/blog-post.njk"
 authors:
   - amysteam
-date: 2022-10-08
+date: 2022-10-04
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9mMec0BTzXrg4uMqJF63.jpg'
 alt: 'Two puzzle pieces coming together'
 tags:
