@@ -238,11 +238,8 @@ Chromium 议题: [1351383](https://crbug.com/1351383)
 
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - **样式**边栏现在显示 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 元素的 `stop-color` 属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
-
-
 <!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
 - 在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019)) 
-
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - 在 **Performance Insights** 面板中显示 LCP 网页字体的关键路径。 ([1350390](https://crbug.com/1350390))
 
