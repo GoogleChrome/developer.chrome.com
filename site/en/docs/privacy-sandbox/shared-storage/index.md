@@ -109,6 +109,8 @@ flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
 
+Shared Storage can be also enabled with the `--enable-features=PrivacySandboxAdsAPIsOverride,SharedStorageAPI,FencedFrames` flag from the command line. 
+
 Check out the [example use cases and code samples](/docs/privacy-sandbox/use-shared-storage).
 
 ## Engage and share feedback
