@@ -43,7 +43,7 @@ draft: true
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/73c559d02676e4329645120e657416e7f15de42b #}
 
-Chromium bug: [1352488](https://crbug.com/1352488)
+<!-- Chromium bug: [1352488](https://crbug.com/1352488) -->
 Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
@@ -85,7 +85,7 @@ async increment() {
 
 {# https://chromium.googlesource.com/v8/v8/+/c53c20fe64b5b21f5a4838ebcfdb96357189fc76 #}
 
-Chromium bug: [1334585](https://crbug.com1334585)
+<!-- Chromium bug: [1334585](https://crbug.com1334585) -->
 Chromium 议题: [1334585](https://crbug.com1334585)
 
 
@@ -118,7 +118,7 @@ Chromium 议题: [1334585](https://crbug.com1334585)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e09e489c2b1233ab424d562abc22f297c6322878 #}
 
-Chromium bug: [1323199](https://crbug.com/1323199)
+<!-- Chromium bug: [1323199](https://crbug.com/1323199) -->
 Chromium 议题: [1323199](https://crbug.com/1323199)
 
 
@@ -139,7 +139,7 @@ Chromium 议题: [1323199](https://crbug.com/1323199)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/73c559d02676e4329645120e657416e7f15de42b #}
 
-Chromium bug: [1352488](https://crbug.com/1352488)
+<!-- Chromium bug: [1352488](https://crbug.com/1352488) -->
 Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
@@ -156,7 +156,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="面板中隐藏忽略列出的资源", width="800", height="449" %}
 
 
-Chromium bug: [1352488](https://crbug.com/1352488)
+<!-- Chromium bug: [1352488](https://crbug.com/1352488) -->
 Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
@@ -175,7 +175,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9144105ce3efd70babe74c19e808616864be631b #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c010ce7baa6930cb633372b5d8024a18b3f7ed66 #}
 
-Chromium bug: [1336604](https://crbug.com/1336604)
+<!-- Chromium bug: [1336604](https://crbug.com/1336604) -->
 Chromium 议题: [1336604](https://crbug.com/1336604)
 
 
@@ -194,7 +194,7 @@ Chromium 议题: [1336604](https://crbug.com/1336604)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6d97228951a6c8884b3ac4b712e966e79f2bdc3c #}
 
-Chromium bug: [1347390](https://crbug.com/1347390)
+<!-- Chromium bug: [1347390](https://crbug.com/1347390) -->
 Chromium 议题: [1347390](https://crbug.com/1347390)
 
 
@@ -210,7 +210,7 @@ Chromium 议题: [1347390](https://crbug.com/1347390)
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/883542a3727a5bc1415ffee7c7bc7f7218d9e2a5 #}
 
-Chromium bug: [1351735](https://crbug.com/1351735)
+<!-- Chromium bug: [1351735](https://crbug.com/1351735) -->
 Chromium 议题: [1351735](https://crbug.com/1351735)
 
 
@@ -226,7 +226,7 @@ Chromium 议题: [1351735](https://crbug.com/1351735)
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fbf1466b00d1ff2c36fce81fde1b21f33b689a76 #}
 
-Chromium bug: [1351383](https://crbug.com/1351383)
+<!-- Chromium bug: [1351383](https://crbug.com/1351383) -->
 Chromium 议题: [1351383](https://crbug.com/1351383)
 
 
