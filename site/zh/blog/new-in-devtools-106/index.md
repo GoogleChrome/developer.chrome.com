@@ -157,7 +157,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 Chromium bug: [1352488](https://crbug.com/1352488)
-Chromium 漏洞: [1352488](https://crbug.com/1352488)
+Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Hiding ignore-listed files in the Command Menu {: #ignore-search } -->
@@ -167,7 +167,7 @@ Chromium 漏洞: [1352488](https://crbug.com/1352488)
 通过 **hide ignore-listed sources** 设置，您可以使用 [Command Menu](/docs/devtools/command-menu/) 更快地找到您的文件。 在以前，**Command Menu** 中搜索文件会返回可能与您无关的第三方文件。
 
 <!-- For example, enable the **hide ignore-listed sources** setting and click on the 3-dot menu. Select **Open file**. Type “ton” to search for button components. Previously, the results include files from `node_modules`, one of the `node_modules` files even shown up as the first result.  -->
-例如，启用**隐藏忽略列出的来源**设置，并点击三点式菜单。选择**打开文件**。输入 “ton” 来搜索按钮组件。以前的情况，结果包括了来自`node_modules`的文件，其中一个`node_modules`的文件甚至显示为第一个结果。
+例如，启用 **hide ignore-listed sources** 设置，并点击三点式菜单。选择**打开文件**。输入 “ton” 来搜索按钮组件。以前的情况，结果包括了来自`node_modules`的文件，其中一个`node_modules`的文件甚至显示为第一个结果。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vi0yhKte5KN511F57FQM.png", alt="Hiding ignore-listed files in the Command Menu", width="800", height="425" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vi0yhKte5KN511F57FQM.png", alt="在命令菜单中隐藏被忽略的文件", width="800", height="425" %}
