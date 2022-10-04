@@ -15,7 +15,7 @@ tags:
 draft: true
 ---
 
-*感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*。
+*感谢 [Yoong Sin Yi (Louis)](https://www.linkedin.com/in/louis-yoong-a2370ab7/) 提供的翻译*。
 
 {% include 'partials/devtools/zh/banner.md' %}
 
