@@ -30,7 +30,7 @@ A small team here at Chrome has been working on a project called [Aurora](/blog/
 
 For the third edition of the Chrome Dev Insider, I spoke with [Addy Osmani](https://twitter.com/addyosmani), [Kara Erickson](https://twitter.com/karaforthewin), and [Houssein Djirdeh](https://twitter.com/hdjirdeh) from the Project Aurora team to learn more about how they've been approaching this project and what lies ahead for them.
 
-### Insider scoop: Working with third party frameworks 
+## Insider scoop: Working with third party frameworks 
 
 _**Let's start with the genesis of this project. How did it come about?**_
 
@@ -107,7 +107,7 @@ Our work has inspired other frameworks and tools to implement similar optimizati
 
 **Addy:** Many of the performance optimizations Aurora collaborates on can be replicated by any framework. Take a look behind our Image or Script component efforts for example, they often codify an existing set of best practices. We try to [document](/tags/aurora-project/) the "how" of building such components and what they look like in each framework. Hopefully this is a good start for copying the idea.
 
-We've seen some good success with taking the learnings from one ecosystem (for example, React and Next.js) and bring them to others. For example, the new [Angular Image Directive](/blog/angular-image-directive/) (built on our learnings building the Next.js Image Component) or [Gatsby shipping our approach to granular JavaScript chunking. ](https://github.com/gatsbyjs/gatsby/pull/22253)
+We've seen some good success with taking the learnings from one ecosystem (for example, React and Next.js) and bring them to others. For example, the new [Angular Image Directive](/blog/angular-image-directive/) (built on our learnings building the Next.js Image Component) or [Gatsby shipping our approach to granular JavaScript chunking.](https://github.com/gatsbyjs/gatsby/pull/22253)
 
 At the same time, we understand that not every framework will have the bandwidth or funding for contributors to build out similar performance features or invest in other optimizations they believe are important for their users. The [Chrome Web Frameworks Fund](https://opencollective.com/chrome) is a way for us to sponsor performance work in the JavaScript ecosystem to enable projects to pay their contributors and enable performance work to scale further in the ecosystem.
 
