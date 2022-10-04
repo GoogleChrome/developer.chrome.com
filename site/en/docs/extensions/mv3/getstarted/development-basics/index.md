@@ -3,15 +3,14 @@ layout: 'layouts/doc-post.njk'
 title: 'Development basics'
 subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
 This page describes the extension development workflow. We will create a "Hello, Extensions"
-example, load the extension locally, locate logs and errors and share other development
-recommendations.
+example, load the extension locally, locate logs, and explore other recommendations.
 
 ## Hello Extensions {: #build }
 
@@ -118,7 +117,7 @@ Let’s go back to the code and change the name of the extension to "Hello Exten
 ```
 
 After saving the file, to see this change in the browser you also have to refresh the extension. Go
-to the Extension Management page and click the refresh icon next to the **on/off** toggle:
+to the Extensions page and click the refresh icon next to the **on/off** toggle:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/4Ph3qL9aUyswxmhauRFB.png", alt="Reload an extension", width="500", height="544", class="screenshot" %}
 
@@ -127,7 +126,7 @@ to the Extension Management page and click the refresh icon next to the **on/off
 💡 **Do I always have to refresh the extension to see my changes?**
 {% endDetailsSummary %}
 
-Not all components require the extension to reload. The following table shows which components need to be reloaded:
+Not all components need to be reloaded to see changes made, as shown in the following table:
 
 | Extension component        | Requires extension reload |
 |----------------------------|:-------------------------:|
@@ -137,7 +136,6 @@ Not all components require the extension to reload. The following table shows wh
 | The popup                  |            No             |
 | Options page               |            No             |
 | Other extension HTML pages |            No             |
-
 
 {% endDetails %}
 
@@ -151,7 +149,7 @@ will locate the logs for the popup. Start by adding a script tag to `hello.html`
 ```html
 <html>
   <body>
-    <h1>Hello Extensions of the world! 👋</h1>
+    <h1>Hello Extensions</h1>
     <script src="popup.js"></script>
   </body>
 </html>
@@ -187,10 +185,10 @@ To see this message logged in the Console:
 
 ### Error logs {: #errors }
 
-Now let's break the extension. We can do so by removing the closing quote in the `popup.js` file:
+Now let's break the extension. We can do so by removing the closing quote in `popup.js`:
 
 ```js
-console.log("This is a popup!) // broken code
+console.log("This is a popup!) // ❌ broken code
 ```
 
 Go to the Extensions page and open the popup. An **Errors** button will appear.
@@ -240,7 +238,7 @@ As a bonus, these tutorials were designed to improve your experience when readin
 extension and Chrome Web store documentation:
 
 - Reading time adds the expected reading time to each documentation articles.
-- Focus more changes the style of the page to help you concentrate on the documentation content.
+- Focus mode changes the style of the page to help you concentrate on the documentation content.
 - Tabs manager allows you to organize your extension documentation tabs.
 
 

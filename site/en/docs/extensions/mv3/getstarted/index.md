@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Welcome'
 subhead: 'Welcome to the Getting Started Guides.'
 description: 'Welcome to the Getting Started Guides.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
@@ -17,15 +17,15 @@ Welcome to the Getting Started Guides! The purpose of this page is to describe e
 [Development Basics][doc-dev-basics]
 : Introduces the extension development workflow by creating a _Hello, Extensions_ example. It walks through loading the extension during development, locating logs and errors, choosing a project structure, and using Typescript.
 
-## Step-by-step extension tutorials {: #tutorial } 
+## Extension tutorials {: #tutorial } 
 
 [Reading time][tut-reading-time]
-: It’s nice to know how much time we need to finish reading an article. Reading Time teaches you how to insert an element containing the estimated reading time on every extension documentation page.
+: It’s nice to know how much time we need to finish reading an article. Reading time teaches you how to insert an element containing the estimated reading time on every extension documentation page.
 
-[Focus Mode][tut-focus-mode]
-: Removing extra clutter from a page allows our minds to concentrate on the most relevant information. Focus Mode demonstrates how to change the style of extension documentation pages and hides a few distracting elements.
+[Focus mode][tut-focus-mode]
+: Removing extra clutter from a page allows our minds to concentrate on the most relevant information. Focus mode demonstrates how to change the style of extension documentation pages and hides a few distracting elements.
 
-[Tabs Manager][tut-tabs-manager]
+[Tabs manager][tut-tabs-manager]
 : While researching extension development, you can end up with many documentation tabs across multiple windows. Tabs Manager organizes your Chrome extension and Chrome Web store documentation tabs.
 
 These tutorials not only teach you how to build real-world extensions but also strive to share development tips and best practices. In addition, using these extensions will improve your experience while reading the extension documentation.
@@ -42,10 +42,10 @@ If you are up for a challenge, we included a section with a few ideas on how to 
 
 ## Share your feedback {: #share-feedback}
 
-We are excited to hear from you! There are two ways you can contribute to the new Getting Started guides:
+We are excited to hear from you! Here are two ways you can contribute:
 
 Improve the existing tutorials
-: If you see something wrong or unclear in these guides, please report a bug on our [GitHub repository][github-ext-doc-issue].
+: If you see something wrong or unclear, report a bug on our [GitHub repository][github-ext-doc-issue].
 
 Request a beginner tutorial
 : If you have an idea for another beginner tutorial, create an issue on our [GitHub repository][github-ext-doc-issue], choose "Extension tutorial request", and fill out the form.

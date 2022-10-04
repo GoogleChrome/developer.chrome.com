@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Focus Mode'
 subhead: 'Simplify the styling of the current page by clicking the extension toolbar icon.'
 description: 'Learn how to run code in the active tab.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
@@ -59,7 +59,7 @@ Extensions can monitor browser events in the background using the [extension's s
 worker][doc-sw]. Service workers are special JavaScript environments that are loaded to handle
 events and terminated when they're no longer needed.
 
-Start by adding the following code to register the service worker in the manifest:
+Start by registering the service worker in the `manifest.json` file:
 
 ```json
 {
@@ -69,6 +69,16 @@ Start by adding the following code to register the service worker in the manifes
   },
   ...
 }
+```
+
+Create a file called `background.js` and add the following code:
+
+```js
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.action.setBadgeText({
+    text: "OFF",
+  });
+});
 ```
 
 The first event our service worker will listen for is
@@ -83,21 +93,11 @@ icon).
 
 {% endAside %}
 
-Create a file called `background.js` and add the following code to set the initial state to “OFF”:
-
-```js
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.action.setBadgeText({
-    text: "OFF",
-  });
-});
-```
-
 ### Step 3: Enable the extension action {: #step-3 }
 
 The _extension action_ controls the extension’s toolbar icon. So whenever the user clicks on the
 extension action, it will either run some code (like in this example) or display a popup. Add the
-following code to declare the extension action in the manifest:
+following code to declare the extension action in the `manifest.json` file:
 
 ```json
 {
@@ -125,10 +125,8 @@ extension by clicking on the extension action.
 
 {% Details %}
 {% DetailsSummary %}
-💡 **What other user interactions enable the activeTab permission on my extension?**
+💡 **What other user interactions enable the activeTab permission in my own extension?**
 {% endDetailsSummary %}
-
-Use the following gestures to invoke the `activeTab` permission
 
 - Pressing a keyboard shortcut combination.
 - Selecting a context menu item.
@@ -303,7 +301,7 @@ alt="Focus Mode extension ON", width="600", height="378", class="screenshot" %}
   </figcaption>
 </figure>
 
-## Potential enhancements {: #challenge }
+## 🎯 Potential enhancements {: #challenge }
 
 Based on what you’ve learned today, try to accomplish any of the following:
 
@@ -330,8 +328,8 @@ development learning journey. We recommend the following learning paths:
   about the Extensions architecture in general.
 - The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
-- Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [Chrome APIs documentation][doc-apis] will walk through each API.
+- Extensions have access to powerful APIs beyond what's available on the open web.
+  The [Chrome APIs documentation][doc-apis] walks through each API.
 
 [action-badge]: /docs/extensions/reference/action/#badge
 [active-tab-allows]: /docs/extensions/mv3/manifest/activeTab/#what-activeTab-allows

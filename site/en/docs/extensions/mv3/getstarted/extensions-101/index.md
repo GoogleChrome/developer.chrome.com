@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
@@ -70,7 +70,7 @@ Visit [Extensions Architecture][doc-arch] and [Designing the user interface][doc
 💡 **Do all extensions have a popup?**
 {% endDetailsSummary %}
 
-Many extension use a popup to customize the user experience, however this is _not_ required.
+Many extensions use a popup to customize the user experience, however this is _not_ required.
 For example, the [reading time][tut-reading-time] and [focus mode][tut-focus-mode] extension
 tutorials do not include a popup.
 
@@ -131,7 +131,7 @@ As a bonus, these tutorials were designed to improve your experience when readin
 extension and Chrome Web store documentation:
 
 - Reading time adds the expected reading time to each documentation articles.
-- Focus more changes the style of the page to help you concentrate on the documentation content.
+- Focus mode changes the style of the page to help you concentrate on the documentation content.
 - Tabs manager allows you to organize your extension documentation tabs.
 
 

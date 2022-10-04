@@ -3,13 +3,13 @@ layout: 'layouts/doc-post.njk'
 title: 'Tabs Manager'
 subhead: 'Build your first tabs manager.'
 description: 'Learn how to create a tabs manager.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
 ## Overview {: #overview }
 
-This tutorial builds a tabs manager for Chrome extension and Chrome Web store documentation pages.
+This tutorial builds a tabs manager to organize your Chrome extension and Chrome Web store documentation tabs.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8q5ps3dqw4p2BOZRpIJT.png", 
@@ -56,8 +56,7 @@ Create a file called `manifest.json` and add the following code:
 }
 ```
 
-These manifest keys are explained in more detail in the [Reading time
-tutorial][tut-reading-time-step1]. 
+To learn more about these manifest keys, check out the Reading time tutorial that explains the extension's [metadata][tut-reading-time-step1] and [icons][tut-reading-time-step2] in more detail.
 
 Create an `images` folder then [download the icons][github-tabs-manager-icons] into it.
 
@@ -65,7 +64,7 @@ Create an `images` folder then [download the icons][github-tabs-manager-icons] i
 
 The [Action][api-action] API controls the extension action (toolbar icon). When the user clicks on
 the extension action, it will either run some code or open a popup, like in this case. Start by
-declaring the popup in the manifest:
+declaring the popup in the `manifest.json`:
 
 ```json
 {
@@ -77,8 +76,7 @@ declaring the popup in the manifest:
 }
 ```
 
-A popup is similar to a web page with one exception: it can't run inline JavaScript. Create a popup
-HTML file and add the following code:
+A popup is similar to a web page with one exception: it can't run inline JavaScript. Create a `popup.html` file and add the following code:
 
 ```html
 <!DOCTYPE html>
@@ -115,7 +113,7 @@ tag.
 
 {% endAside %}
 
-Next, let's style the popup. Create a popup CSS file and add the following code:
+Next, let's style the popup. Create a `popup.css` file and add the following code:
 
 ```css
 body {
@@ -151,13 +149,9 @@ browser.
 
 #### Request permission {: #narrow }
 
-You can use many methods in the Tabs API without requesting any permission. However, we need access to the `title` and the `URL` of the tabs; these sensitive properties require permission.
+Many methods in the Tabs API can be used without requesting any permission. However, we need access to the `title` and the `URL` of the tabs; these sensitive properties require permission. We could request `"tabs"` permission, but this would give access to the sensitive properties of **all** tabs. Since we are only managing tabs of a specific site, we will request narrow host permissions. 
 
-We could request `"tabs"` permission, but this would allow access to the sensitive properties of **all** browser tabs. Since we are only managing tabs of a particular site, we will request narrow host permissions. 
-
-Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities.
-
-Add the highlighted code to the `manifest.json` file:
+Narrow [host permissions][doc-match] allow us to protect user privacy by granting elevated permission to **specific sites**. This will grant access to the `title`, and `URL` properties, as well as additional capabilities. Add the highlighted code to the `manifest.json` file:
 
 ```json/2-3
 {
@@ -174,9 +168,9 @@ Add the highlighted code to the `manifest.json` file:
 💡 **What are the main differences between the tabs permission and host permissions?**
 {% endDetailsSummary %}
 
-Both the "tabs" permission and host permissions have drawbacks.
+Both the `"tabs"` permission and host permissions have drawbacks.
 
-The "tabs" permission grants an extension the ability to read sensitive data on all tabs. Over time, this information could be used to collect a user's browsing history. As such, if you request this permission Chrome will display the following warning message at install time:
+The `"tabs"` permission grants an extension the ability to read sensitive data on all tabs. Over time, this information could be used to collect a user's browsing history. As such, if you request this permission Chrome will display the following warning message at install time:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Zq5KIiqzVbKyoc1sa3vN.png", alt="Tabs permission warning dialog", width="458", height="190" %}
 
@@ -217,7 +211,7 @@ chrome schema. For example `chrome-extension://EXTENSION_ID/popup.html`.
 
 First, the extension will sort tab names (the titles of the contained HTML pages) alphabetically. Then, when a list item is clicked, it will
 focus on that tab using `tabs.update()` and bring the window to the front using `windows.update()`.
-Add the following code to `popup.js`:
+Add the following code to the `popup.js` file:
 
 ```js
 ...
@@ -329,7 +323,7 @@ alt="Tabs Manager Grouped tabs", width="600", height="450" %}
   </figcaption>
 </figure>
 
-## Potential enhancements {: #challenge }
+## 🎯 Potential enhancements {: #challenge }
 
 Based on what you’ve learned today, try to implement any of the following:
 
@@ -357,8 +351,8 @@ development learning journey. We recommend the following learning path:
   about the Extensions architecture in general.
 - The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
-- Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [Chrome APIs documentation][doc-apis] will walk through each API.
+- Extensions have access to powerful APIs beyond what's available on the open web.
+  The [Chrome APIs documentation][doc-apis] walks through each API.
 
 [api-action]: /docs/extensions/reference/action
 [api-permissions]: /docs/extensions/reference/permissions/
@@ -383,5 +377,6 @@ development learning journey. We recommend the following learning path:
 [mdn-url-constructor]: https://developer.mozilla.org/docs/Web/API/URL/URL
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time-step1]: /docs/extensions/mv3/getstarted/tut-reading-time#step-1
+[tut-reading-time-step2]: /docs/extensions/mv3/getstarted/tut-reading-time#step-2
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [webdev-template-tag]: https://web.dev/webcomponents-template/

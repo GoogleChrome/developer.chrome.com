@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Reading time'
 description: 'Learn how to insert an element on each page.'
 subhead: 'Create your first extension that inserts a new element on the page.'
-date: 2022-10-05
+date: 2022-10-04
 # updated: 2022-06-13
 ---
 
@@ -40,7 +40,7 @@ prefer, you can download the complete source code from [Github][github-reading-t
 
 ### Step 1: Add information about the extension {: #step-1 }
 
-The manifest JSON file is the only required extension file. It holds important information about the
+The manifest JSON file is the only required file. It holds important information about the
 extension. Create a `manifest.json` file in the _root_ of the project and add the following code:
 
 ```json
@@ -107,8 +107,8 @@ We recommend using PNG files, but other file formats are allowed, except for SVG
 
 ### Step 3: Declare the content script {: #step-3 }
 
-Extensions can run scripts that read and modify the content of the pages. These are called _content
-scripts_. Content scripts live in an [isolated world][doc-isolated], which means they can make changes to their JavaScript environment without conflicting with their host page or other extension's content scripts.
+Extensions can run scripts that read and modify the content of a page. These are called _content
+scripts_. They live in an [isolated world][doc-isolated], meaning they can make changes to their JavaScript environment without conflicting with their host page or other extension's content scripts.
 
 Add the following code to the `manifest.json` to register a content script called
 `content.js`.
@@ -137,8 +137,7 @@ identify which sites to inject the content scripts into. Match patterns consist 
 💡 **Does this extension display a permission warning?**
 {% endDetailsSummary %}
 
-When a user installs an extension, the browser informs them what the extension has the capacity to
-do. Content scripts request permission to run on the sites that meet the match pattern criteria. 
+When a user installs an extension, the browser informs them what the extension can do. Content scripts request permission to run on sites that meet the match pattern criteria. 
 
 In this example, the user would see the following permission warning:
 <figure>
@@ -160,7 +159,7 @@ content of a page. The extension will first check if the page contains the `<art
 Then, it will count all the words within this element and create a paragraph that displays the total
 reading time.
 
-Create a new folder called `scripts`. Add a file called `content.js` and include the following code: 
+Create a file called `content.js` inside a folder called `scripts` and add the following code: 
 
 ```js
 const article = document.querySelector("article");
@@ -196,7 +195,7 @@ if (article) {
   expressions][mdn-regular-expressions] used to count only the words inside the `<article>` element.
 - [InsertAdjacentElement()][mdn-insert-adjacent] used to insert the reading time node after the element.
 - The [Classlist][mdn-classlist] property used to add CSS class names to the element class attribute.
-- [Optional chaining][mdn-optional-chaining] used to access a property in an object that may be undefined or null.
+- [Optional chaining][mdn-optional-chaining] used to access an object property that may be undefined or null.
 - [Nullish coalescing][mdn-nullish-coalescing] returns the `<heading>` if the `<date>` is null or undefined.
 
 {% endDetails %}
@@ -267,8 +266,8 @@ development learning journey. We recommend the following learning path:
   about the Extensions architecture in general.
 - The [developer's guide][doc-devguide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
-- Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [Chrome APIs documentation][doc-apis] will walk through each API.
+- Extensions have access to powerful APIs beyond what's available on the open web.
+  The [Chrome APIs documentation][doc-apis] walks through each API.
 
 [cws-publish]: /docs/webstore/publish/
 [dev-chrome]: https://developer.chrome.com/docs/
