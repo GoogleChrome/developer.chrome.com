@@ -52,7 +52,6 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><strong>January&nbsp;2023</strong>
     </td>
     <td><ul>
-      <li>Chrome Web Store stops accepting updates to existing Manifest V2 extensions</li>
       <li>Manifest V3 will become a prerequisite for the <a href="https://blog.google/products/chrome/find-great-extensions-new-chrome-web-store-badges/">Featured badge</a>.</li></ul>
     </td>
     <td><ul>
@@ -67,7 +66,9 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><strong>June&nbsp;2023</strong>
     </td>
     <td>
-      <p>All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</p>
+      <ul>
+        <li>All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.</li>
+      </ul>
     </td>
     <td><ul>
       <li>Starting in June in <strong>Chrome 115</strong>, Chrome may run experiments to turn off support for Manifest V2 extensions in all channels, including stable channel.</li></ul>
@@ -78,11 +79,14 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
     <td>
       <ul>
+        <li>Chrome Web Store stops accepting updates to existing Manifest V2 extensions</li>
         <li>Following the expiration of the Manifest V2 enterprise policy, the Chrome Web Store will remove all remaining Manifest V2 items from the store.</li>
       </ul>
     </td>
     <td>
-      <p>Manifest V2 enterprise policy expires.</p>
+      <ul>
+        <li>Manifest V2 enterprise policy expires.</li>
+      </ul>
     </td>
   </tr>
 </table>
