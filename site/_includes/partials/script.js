@@ -42,7 +42,7 @@
     ga(
       'set',
       '{{ analytics.dimensions.NAVIGATION_TYPE }}',
-      performance.getEntriesByType('navigation')[0].type
+      performance.getEntriesByType('navigation')[0].type.replace(/_/g, '-')
     );
   } catch (error) {
     ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
