@@ -38,6 +38,7 @@
       title: i18n.docs.privacy-sandbox.gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
       title: i18n.docs.privacy-sandbox.privacy-budget
+    - url: /docs/privacy-sandbox/bounce-tracking-mitigations
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics
