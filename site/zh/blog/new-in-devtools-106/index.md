@@ -234,7 +234,7 @@ Chromium 议题: [1351383](https://crbug.com/1351383)
 ## 其他的更新 {: #misc }
 
 <!-- - Previously, [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time. ([1351416](https://crbug.com/1351416)) -->
-以前的状况，[Recorder 扩展] (/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在 **Recorder** 面板上显示出来。
+之前，[Recorder 扩展] (/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在 **Recorder** 面板上不被显示出来。
 
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 **样式**边栏现在显示 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 元素的 `stop-color` 属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
