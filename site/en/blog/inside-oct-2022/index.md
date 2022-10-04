@@ -121,7 +121,7 @@ At the same time, we understand that not every framework will have the bandwidth
 
 You can follow our progress on [this site](/tags/aurora-project/).
 
-### In the news
+## In the news
 
 Before I sign off, I wanted to leave you with a couple of interesting updates from the world of frameworks happening within Google.
 
