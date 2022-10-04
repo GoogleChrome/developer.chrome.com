@@ -78,7 +78,7 @@ async increment() {
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2jAETpw8QWzsg1Wqk0Ya.png", alt="异步操作的链接堆栈跟踪", width="800", height="442" %}
 
 <!-- Behind the scenes, DevTools introduced a new “Async Stack Tagging” feature. You can tell the whole story of the operation by linking both parts of the async code together with the new `console.createTask()` method. See [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces) to learn more.  -->
-在幕后，DevTools 引入了一个新的 "异步堆栈标签" 功能。您可以通过新的`console.createTask()`方法将异步代码的两部分联系在一起，来讲述操作的整个故事。参见[ DevTools 中的现代调试](/blog/devtools-modern-web-debugging/#linked-stack-traces)以了解更多。
+在幕后，DevTools 引入了一个新的 "异步堆栈标签" 功能。您可以通过新的`console.createTask()`方法将异步代码的两部分联系在一起，来讲述操作的整个故事。参阅[ DevTools 中的现代调试](/blog/devtools-modern-web-debugging/#linked-stack-traces)以了解更多。
 
 <!-- Does it sound complicated? Not at all. Most of the time, the framework you are using handles the scheduling and async execution. In that case, it is up to the framework to implement the API, you don’t need to worry about it. (e.g. Angular implemented these [changes](https://chromium-review.googlesource.com/c/v8/v8/+/3776678)) -->
 这听起来很复杂吗？一点也不。大多数情况下，您所使用的框架会处理调度和异步执行。在这种情况下，要由框架来实现 API，您不需要担心这个问题。(例如 Angular 实现了这些[变化](https://chromium-review.googlesource.com/c/v8/v8/+/3776678))
