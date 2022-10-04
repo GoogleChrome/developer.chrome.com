@@ -14,6 +14,8 @@ The **Issues** tab in Chrome DevTools reduces the notification fatigue and clutt
 Use it to find solutions to problems detected by the browser, such as cookie issues and mixed
 content.
 
+{% YouTube id='1TbkSxQb4bI' %}
+
 {% Aside %}
 
 In Chrome 84, the Issues tab supports three types of issue:
