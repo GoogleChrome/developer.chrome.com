@@ -23,26 +23,26 @@ sessions:
   - topics:
       - Performance
     description: >-
-        The Chrome team will be available at the event at the "Performance Help
-        Desk" at the event.
+      The Chrome team will be available at the event at the "Performance Help
+      Desk" at the event.
     participants:
-        - rviscomi
-        - tunetheweb
-        - jeremywagner
-        - egsweeny
-        - paulirish
-        - patmeenan
-        - anniesullie
-        - yoavweiss
-        - mmocny
-        - ianclelland
-        - roydeepanjan
-        - karaerickson
-        - katiehempenius
-        - diklla
-        - gilberto_cocchi
-        - harrytheodoulou
-        - milutinkristofic
+      - rviscomi
+      - tunetheweb
+      - jeremywagner
+      - egsweeny
+      - paulirish
+      - patmeenan
+      - anniesullie
+      - yoavweiss
+      - mmocny
+      - ianclelland
+      - roydeepanjan
+      - karaerickson
+      - katiehempenius
+      - diklla
+      - gilberto_cocchi
+      - harrytheodoulou
+      - milutinkristofic
     type: participant
     slidesUrl: null
     videoUrl: null
