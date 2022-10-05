@@ -1,5 +1,5 @@
 ---
-layout: layouts/blank.njk
+layout: layouts/test.njk
 title: Aside with inline markdown
 ---
 {% Aside %}

@@ -1,5 +1,5 @@
 ---
-layout: layouts/blank.njk
+layout: layouts/test.njk
 title: A caution aside
 ---
 {% Aside 'caution' %}
