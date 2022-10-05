@@ -73,6 +73,8 @@ export class EnhancedSelect extends BaseElement {
     value.forEach(value => data.append(this.name, value));
 
     this.internals.setFormValue(data);
+
+    this.dispatchEvent(new Event('change', {bubbles: true, cancelable: true}));
   }
 
   firstUpdated(_changedProperties) {
