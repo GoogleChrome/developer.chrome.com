@@ -161,7 +161,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Hiding ignore-listed files in the Command Menu {: #ignore-search } -->
-## 在命令菜单中隐藏被忽略的文件 {: #忽略的搜索 }
+## 在命令菜单中隐藏被忽略的文件 {: #ignore-search }
 
 <!-- With the **hide ignore-listed sources** setting, you can find your file quicker with the [Command Menu](/docs/devtools/command-menu/). Previously, searching files in the **Command Menu** returns third-party files that might not be relevant to you. -->
 通过 **hide ignore-listed sources** 设置，您可以使用 [Command Menu](/docs/devtools/command-menu/) 更快地找到您的文件。 在以前，**Command Menu** 中搜索文件会返回可能与您无关的第三方文件。
