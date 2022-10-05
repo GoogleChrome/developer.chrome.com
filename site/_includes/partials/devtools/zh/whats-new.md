@@ -26,7 +26,7 @@
 * [性能面板中的新互动轨道](/zh/blog/new-in-devtools-106/#performance)
 * [性能洞察面板中的LCP时序分解](/zh/blog/new-in-devtools-106/#insights)
 * [在 Recorder 面板中自动生成录音的默认名称](/zh/blog/new-in-devtools-106/#recorder)
-* [其他的更新](/zh/blog/new-in-devtools-106/#misc) -->
+* [其他的更新](/zh/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }
