@@ -126,13 +126,13 @@ Chromium 议题: [1323199](https://crbug.com/1323199)
 ## 在调试过程中改进调用堆栈 {: #call-stack }
 
 <!-- With the **Automatically add known third-party scripts to ignore list** setting, the call stack now shows only frames that are relevant to your code. -->
-通过**自动添加已知的第三方脚本到忽略列表**设置，现在调用栈只显示与你的代码相关的框架。
+通过**自动添加已知的第三方脚本到忽略列表**设置，现在调用栈只显示与你的代码相关的堆栈帧。
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and set a breakpoint at the `increment()` function in `app.component.ts`. Click the increment button on the page to trigger the breakpoint. The call stack shows only frames from your code (e.g.  `app.component.ts` and `button.component.ts`).  -->
 打开这个 [demo] (https://ng-devtools.netlify.app/)，在`app.component.ts`中的`increment()`函数处设置一个断点。点击页面上的increment按钮来触发断点。调用堆栈只显示您的代码中的框架（例如，`app.component.ts`和`button.component.ts`）。
 
 <!-- To view all frames, enable **Show ignore-listed frames**. Previously, DevTools displayed all frames by default.  -->
-要查看所有的框架，请启用**显示被忽略的框架**。对比以前，DevTools 默认显示所有框架。
+要查看所有的框架，请启用**显示被忽略的堆栈帧**。对比以前，DevTools 默认显示所有堆栈帧。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PdjPrBAV7TXn8FHcRR6R.png", alt="Improved call stack during debugging", width="800", height="601" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PdjPrBAV7TXn8FHcRR6R.png", alt="调试期间改进的调用堆栈", width="800", height="601" %}
