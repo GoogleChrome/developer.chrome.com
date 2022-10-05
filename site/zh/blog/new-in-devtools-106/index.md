@@ -144,7 +144,7 @@ Chromium 议题: [1352488](https://crbug.com/1352488)
 
 
 <!-- ## Hiding ignore-listed sources in the Sources panel {: #ignore-nav } -->
-## 在来源面板中隐藏被忽略的来源 {: #忽略-nav }
+## 在来源面板中隐藏被忽略的来源 {: #ignore-nav }
 
 <!-- Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code. -->
 启用**隐藏忽略列表中的来源**，在**导航**窗格中隐藏不相关的文件。这样，你就可以只关注你的代码。
