@@ -1,6 +1,6 @@
 type: info
-text: 'PWA Summit 22 is ready for you, with talks from the community and organizers along with workshops and more.'
+text: 'PWA Summit 22 is live today!'
 actions:
-  - text: Get your ticket today
-    href: https://pwasummit.org/register
+  - text: Watch live
+    href: https://pwasummit.org/
   - text: Dismiss
