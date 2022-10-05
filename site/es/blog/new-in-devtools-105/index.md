@@ -229,7 +229,7 @@ Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experie
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## Otros detalles destacados {: #misc }
+## Otros detalles destacados {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
 Estos son algunos arreglos destacados en esta versión:
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
