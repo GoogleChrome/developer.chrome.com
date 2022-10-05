@@ -215,13 +215,13 @@ Chromium 议题: [1351735](https://crbug.com/1351735)
 
 
 <!-- ## Auto-generate default name for recordings in the Recorder panel {: #recorder } -->
-## 在录音机面板中自动生成录音的默认名称 {: #recorder }
+## 在 Recorder 面板中自动生成录音的默认名称 {: #recorder }
 
 <!-- The **Recorder** panel now automatically generates a name for new recordings. -->
-**录音机**面板将会自动为新录音生成一个名称。
+**Recorder** 面板将会自动为新录音生成一个名称。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0TMJgVqyk7AeoWIR6Vee.png", alt="Default name for recordings in the Recorder panel", width="800", height="565" %} -->
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0TMJgVqyk7AeoWIR6Vee.png", alt="录音机面板中录音的默认名称", width="800", height="565" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0TMJgVqyk7AeoWIR6Vee.png", alt="Recorder 面板中录音的默认名称", width="800", height="565" %}
 
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fbf1466b00d1ff2c36fce81fde1b21f33b689a76 #}
