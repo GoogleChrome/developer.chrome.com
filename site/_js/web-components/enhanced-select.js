@@ -15,7 +15,8 @@
  */
 
 /**
- * @fileoverview Wraps a native select element, offering custom ux.
+ * @fileoverview Progressively enhances the select element. Supports
+ * both single and multi select.
  */
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
@@ -24,65 +25,109 @@ import arrowDownIcon from '../../_includes/icons/arrow-down.svg';
 import {generateIdSalt} from '../utils/salt';
 
 export class EnhancedSelect extends BaseElement {
+  static get formAssociated() {
+    return true;
+  }
+
   constructor() {
     super();
 
-    this.onClick = this.onClick.bind(this);
-    this.onFocusOut = this.onFocusOut.bind(this);
+    // @ts-ignore
+    this.internals = this.attachInternals();
+
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleFocusOut = this.handleFocusOut.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
 
     this.classList.add('enhanced-select');
-    this._dropdownId = `enhanced-select-dropdown-${generateIdSalt(
-      'enhanced-select-dropdown-'
-    )}`;
+
+    const nativeSelect = this._getSelect();
+
+    this.name = this.name || this._getName(nativeSelect);
+    this.multiple = this.multiple || nativeSelect.hasAttribute('multiple');
+    this.label = this._getLabel();
+    this.options = this._getOptions();
+    this._dropdownId = this._generateId('dropdown');
+    this._labelId = this._generateId('label');
+    this._elements = {};
+
+    this.setValue(this.getSelectedValues());
   }
 
   static get properties() {
     return {
+      name: {type: String, reflect: true},
+      label: {type: String, reflect: false},
+      value: {type: Array, reflect: true},
       open: {type: Boolean, reflect: true},
+      multiple: {type: Boolean, reflect: true},
+      options: {type: Array, reflect: false},
     };
   }
 
-  connectedCallback() {
-    super.connectedCallback();
+  setValue(value) {
+    this.value = value;
 
-    this._label = this._getLabel();
-    this._select = this._getSelect();
-    this._options = this._getOptions(this._select);
+    const data = new FormData();
 
-    this.addEventListener('focusout', this.onFocusOut);
+    value.forEach(value => data.append(this.name, value));
+
+    this.internals.setFormValue(data);
+  }
+
+  firstUpdated(_changedProperties) {
+    super.firstUpdated(_changedProperties);
+
+    this._elements.label = this.querySelector(`#${this._labelId}`);
+    this._elements.buttons = this.querySelector(`#${this._dropdownId} button`);
+
+    this.addEventListener('focusout', this.handleFocusOut);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    this.removeEventListener('focusout', this.onFocusOut);
+    this.removeEventListener('focusout', this.handleFocusOut);
+
+    this._elements.label?.removeEventListener('click', this.handleOpen);
+    this._elements.label?.removeEventListener('keypress', this.handleOpen);
+    Array.from(this._elements.buttons).forEach(button =>
+      button.removeEventListener('click', this.handleSelection)
+    );
   }
 
   render() {
     return html`
-      <div class="enhanced-select__wrapper" ?open="${this.open}">
+      <div
+        class="enhanced-select__wrapper display-flex align-center"
+        ?open="${this.open}"
+      >
         <label
+          id="${this._labelId}"
           class="display-flex align-center"
           aria-controls="${this._dropdownId}"
-          @click="${this.onClick}"
-          @keypress="${this.onClick}"
           tabindex="0"
+          @click="${this.handleOpen}"
+          @keypress="${this.handleOpen}"
         >
-          ${this._label} ${unsafeSVG(arrowDownIcon)}
+          ${this.label} ${unsafeSVG(arrowDownIcon)}
         </label>
 
         <ul id="${this._dropdownId}" class="enhanced-select__options">
-          ${this._options?.map(
-            o => html`
-              <button class="button width-full gap-bottom-100">
-                ${o.label}
+          ${this.options.map(
+            option => html`
+              <button
+                class="button width-full gap-bottom-100"
+                @click="${this.handleSelection}"
+                ?selected="${this.value.includes(option.value)}"
+                id="${option.id}"
+              >
+                ${option.label}
               </button>
             `
           )}
         </ul>
       </div>
-
-      <div class="enhanced-select__select">${this._select}</div>
     `;
   }
 
@@ -94,10 +139,18 @@ export class EnhancedSelect extends BaseElement {
     const element = this.querySelector('label');
 
     if (!element || !element.firstChild) {
-      throw new Error('Please provide a populated label element');
+      throw new Error('Missing element: label');
     }
 
     return element.firstChild.nodeValue;
+  }
+
+  _getName(nativeSelect) {
+    if (!nativeSelect.hasAttribute('name')) {
+      throw new Error('Missing attribute: name');
+    }
+
+    return nativeSelect.getAttribute('name');
   }
 
   /**
@@ -108,33 +161,43 @@ export class EnhancedSelect extends BaseElement {
     const element = this.querySelector('select');
 
     if (!element || !element.firstChild) {
-      throw new Error('Please provide a select element');
+      throw new Error('Missing element: select');
     }
 
     return element;
   }
 
   /**
-   * @param selectElement
-   * @returns {{label: string, value: string}[]}
+   * @returns {{id, label: *, value: *, selected: *}[]}
    * @private
    */
-  _getOptions(selectElement) {
-    const elements = selectElement.querySelectorAll('option');
+  _getOptions() {
+    const elements = this.querySelectorAll('option');
 
     if (elements.length === 0) {
-      throw new Error('Please provide one or more option elements');
+      throw new Error('Missing element: option');
     }
 
-    return Array.from(elements).map(option => {
-      return {
-        label: option.innerText,
-        value: option.getAttribute('value'),
-      };
-    });
+    return Array.from(elements).map((option, index) => ({
+      id: option.id || this._generateId(`option-${index}`),
+      label: option.label,
+      value: option.value,
+      selected: option.selected,
+    }));
   }
 
-  onClick(e) {
+  /**
+   * @param {string} element
+   * @returns {string}
+   * @private
+   */
+  _generateId(element) {
+    const prefix = `enhanced-select-${element}`;
+
+    return `${prefix}-${generateIdSalt(prefix)}`;
+  }
+
+  handleOpen(e) {
     if (e.type === 'keypress' && e.keyCode !== 13) {
       return;
     }
@@ -142,10 +205,32 @@ export class EnhancedSelect extends BaseElement {
     this.open = !this.open;
   }
 
-  onFocusOut(e) {
+  handleFocusOut(e) {
     if (this.contains(e.relatedTarget)) return;
 
     this.open = false;
+  }
+
+  handleSelection(e) {
+    e.preventDefault();
+
+    const option = this.options.find(option => e.target.id === option.id);
+
+    if (!option) {
+      throw new Error(`Missing option: ${e.target.id}`);
+    }
+
+    this.multiple
+      ? (option.selected = !option.selected)
+      : this.options.map(o => (o.selected = o === option));
+
+    this.setValue(this.getSelectedValues());
+
+    this.open = this.multiple;
+  }
+
+  getSelectedValues() {
+    return this.options.filter(o => o.selected).map(o => o.value);
   }
 }
 

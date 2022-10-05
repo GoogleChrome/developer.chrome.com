@@ -1,6 +1,8 @@
 .enhanced-select {
   &__wrapper {
-    padding: 0.6em 0.8em;
+    border: 1px solid var(--color-hairline);
+    height: 100%;
+    padding: 0 0.8em;
   }
 
   label {
@@ -14,15 +16,18 @@
 
   &__options {
     background: get-color('white');
+    bottom: 0;
     box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
     display: none;
     left: calc(50% - 0.75rem);
     list-style: none;
+    margin: 0;
     max-height: 24.5rem;
     min-width: 18rem;
     overflow-y: auto;
     padding: 1.125rem 0;
     position: absolute;
+    transform: translateY(100%);
 
     &::-webkit-scrollbar-thumb {
       background: get-color('grey-200');
@@ -43,7 +48,12 @@
       text-align: left;
     }
 
-    button:hover {
+    button[selected] {
+      background: get-color('grey-50');
+      color: get-color('grey-400');
+    }
+
+    button:hover:not([selected]) {
       background: get-color('blue-50');
       color: get-color('blue-700');
     }
@@ -60,7 +70,7 @@
 
 .enhanced-select[open] {
   .enhanced-select__options {
-    display: inherit;
+    display: block;
   }
 }
 
@@ -71,6 +81,6 @@ enhanced-select {
   position: relative;
 
   select {
-    border: 0;
+    max-height: 100%;
   }
 }
