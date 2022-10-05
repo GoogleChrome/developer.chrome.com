@@ -4,13 +4,18 @@ title: Web custom formats for the Async Clipboard API
 subtitle: >
   Web custom formats let websites read and write arbitrary unsanitized payloads using a standard
   format applications can opt in to if they wish to support such payloads.
+description: >
+  Web custom formats let websites read and write arbitrary unsanitized payloads using a standard
+  format applications can opt in to if they wish to support such payloads.
 authors:
   - thomassteiner
 date: 2022-08-01
+updated: 2022-09-16
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/qF12zl6xHIIrHw3S5WfW.jpg
 alt: The clip of a clipboard.
 tags:
   - chrome-104
+  - capabilities
 ---
 
 Until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of
@@ -92,7 +97,11 @@ try {
 Web custom formats like `web image/jpeg` are not something that typical platform-specific
 applications understand (since they would expect `image/jpeg`). Over time, concerned apps are
 expected to add support for such formats as an opt-in if their developers deem support for web
-custom formats to be relevant for their users.
+custom formats to be relevant for their users. On the operating system clipboard, the various
+formats are present in multiple formats ready for consumption, as can be seen in the
+screenshot for macOS below.
+
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/iYfa9lvLpLQU086GhurF.png", alt="Clipboard expector on macOS showing a custom format map listing two web custom formats.", width="800", height="357" %}
 
 ## Demo
 

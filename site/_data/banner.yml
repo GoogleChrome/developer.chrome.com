@@ -1,0 +1,6 @@
+type: info
+text: 'PWA Summit 22 is live today!'
+actions:
+  - text: Watch live
+    href: https://pwasummit.org/
+  - text: Dismiss
