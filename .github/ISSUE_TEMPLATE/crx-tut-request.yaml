@@ -9,8 +9,8 @@ body:
     value: "## Thank you for sharing your feedback. Please fill out this form so that we can better understand what extension tutorial you are looking for:"
 - type: textarea
   attributes:
-    label: What would this extension do?
-    description: A concise description of how the extension would work.
+    label: What would this tutorial do?
+    description: A concise description of what the tutorial should teach.
   validations:
     required: true
 - type: textarea
@@ -58,4 +58,4 @@ body:
     required: false
 - type: markdown
   attributes:
-    value: "Thanks again for sharing your extension tutorial ideas with us!" 
+    value: "Thanks again for sharing your extension tutorial ideas with us." 
