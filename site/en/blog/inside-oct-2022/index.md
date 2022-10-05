@@ -119,15 +119,13 @@ At the same time, we understand that not every framework will have the bandwidth
 - **Debugging INP:** Now that the [Interaction to Next Paint (INP)](https://web.dev/inp/) metric has been released, we're working with frameworks to investigate the most common root causes of INP issues for their communities and suggest fixes. We've been partnering closely with Angular on this and hope to have some results to share soon!
 -  **Optimizing common 3P scripts:** Loading third-party scripts at the wrong time can have a substantial negative impact on performance. Since there are a few 3Ps that are very common, we are looking into whether we can offer some wrappers for these to ensure they are loaded optimally with frameworks and don't block the main thread. We are using the Next.js script component we built as a starting point for this investigation.
 
-You can follow our progress on [this site](/tags/aurora-project/).
+Developers can follow our progress on [this site](/tags/aurora-project/).
 
 ## In the news
 
 Before I sign off, I wanted to leave you with a couple of interesting updates from the world of frameworks happening within Google.
 
 In July, the Chrome team announced the latest round of funding of $500K for the [Frameworks and tools fund](/blog/framework-fund-2022/) that focuses on funding projects that aim to help improve the performance, user-experience and developer-experience on the web. Future funding will consider new projects so remember to [submit your request](https://forms.gle/BbshCNVaDFK7NJoU6).
-
-Over in Angular world, the Aurora team also collaborated with them to launch an image directive aimed at improving image performance. This launched for developer preview as part of Angular v14.2 last month and we're excited to see the [positive impact](/blog/angular-image-directive/#impact) of this work already.
 
 And, of course, there's also a TON of amazing things happening in the community. The ecosystem is ripe with new frameworks like Deno's [Fresh](https://fresh.deno.dev/), and awesome experiences like Svelte's [onboarding tutorial](https://learn.svelte.dev/tutorial/welcome-to-svelte) that is not only an in-browser demo but also uses the Web Container API to run Node.js natively in the browser. So much good stuff!
 
