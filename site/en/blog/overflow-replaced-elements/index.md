@@ -5,7 +5,7 @@ description: >
 subhead: >
   An advanced warning of a change to CSS behavior that may cause unwanted overflow.
 layout: 'layouts/blog-post.njk'
-date: 2022-09-30
+date: 2022-10-05
 thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/oI3hVjUYyUSZalrSNHWr.jpg'
 alt: >
   Water.
