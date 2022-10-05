@@ -4,22 +4,21 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist extension data and state. It's similar from the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but has been optimized to meet the storage needs of extensions: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but has been optimized to meet the storage needs of extensions. The following are a few key features: 
 
 - Data is serialized as JSON strings and stored as objects.
 - Storage is asynchronous with bulk read and write operations.
-- Storage data persists when the user clears cache and browsing history.
-- Can be used by content scripts, service worker, and other extension contexts.
-- A user's extension settings persist even when using [split incognito
-  behavior][incognito].
-- Offers an exclusive read-only managed storage area for enterprise policies.
+- Storage data persists when the user clears the cache and browsing history.
+- Available in the service worker, content scripts, and other extension contexts.
+- A user's extension settings persist even when using [split incognito][incognito].
+- Offers an exclusive read-only [managed storage area][manifest-storage] for enterprise policies.
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can I use localStorage in my extension?
+💡 Can extensions use Windows.localStorage?
 {% endDetailsSummary %}
 
-Even though extensions can use [Window.localStorage][mdn-localstorage] in certain contexts (popup and other HTML pages), it is not recommended for the following reasons:
+Even though extensions can access [Window.localStorage][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
 
 - The service worker cannot access localStorage API.
 - Content scripts share the localStorage of the host page.
@@ -29,25 +28,22 @@ Even though extensions can use [Window.localStorage][mdn-localstorage] in certai
 
 ### Storage areas
 
-The Storage API is divided into four buckets ("storage areas"): 
+The Storage API is divided into the following four buckets ("storage areas"): 
 
 - [**storage.local**][prop-local]
-  - Data is stored locally.
-  - Quota can be increased with the `"unlimitedStorage"` permission.
-  - Removing the extension clears the storage data.
-  - Quota limitation is 5 MB approx. 
+  - Data is stored locally, which is cleared when the extension is removed.
+  - Quota limitation is approx 5 MB, but can be increased by requesting the `"unlimitedStorage"` permission.
   - Consider using it to store larger amounts of data.
 
 - [**storage.sync**][prop-sync]
-  - If syncing is enabled, the data is synced to any Chrome browser that the user is logged into.
-  - When the browser is offline, Chrome stores the data locally. Once back online the data will be synced.
-  - If syncing is disabled, it behaves like `storage.local`. 
+  - If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`.
+  - When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online.
   - Quota limitation is 100 KB approx, 8 KB per item
   - Consider using it to preserve user settings across synced browsers. 
 
 {% Aside 'warning' %}
 
-Confidential user data should not be saved in `storage.local` and `storage.sync` because they are not encrypted. For sensitive data, we recommend the `session` storage area, which is not stored in local disk.
+Local and sync storage areas should not store confidential user data because they are not encrypted. We recommend using the `session` storage area, which is not saved on disk for sensitive data.
 
 {% endAside %}
 
@@ -61,10 +57,10 @@ Confidential user data should not be saved in `storage.local` and `storage.sync`
   - Administrator can use a [schema][manifest-storage] to configure enterprise policies.
   - Storage is read-only.
 
-## Manifest
+## Manifest {: #manifest}
 
-You must declare the `"storage"` permission in the [extension manifest][doc-manifest] to use the storage
-API. For example:
+To use the storage API, you must declare the `"storage"` permission in the extension
+[manifest][doc-manifest]. For example:
 
 ```json
 {
@@ -124,17 +120,26 @@ The following samples demonstrate the `local`, `sync`, and
   </web-tab>
 </web-tabs>
 
-<!-- ---  -->
-For `managed` storage area usage details, see [Manifest for storage areas][manifest-storage].
+The Storage API is promisified and can use async/await like in the following example:
 
-## Storage and throttling limits
+```js
+await chrome.storage.session.set({ key: value });
+console.log("Value is set to " + value);
+
+const result = await chrome.storage.session.get(["key"]);
+console.log("Value currently is " + result.key);
+```
+
+To learn more about the `managed` storage area, see [Manifest for storage areas][manifest-storage].
+
+
+## Storage and throttling limits {: #storage-and-throttling-limits}
 
 The Storage API is not a big truck. It's a series of tubes. And if you don't understand, those
 tubes can be filled, and if they are filled when you put your message in, it gets in line, and it's
 going to be delayed by anyone that puts into that tube enormous amounts of material.
 
-For details on the current limits of the storage API, and what happens when those limits are
-exceeded, please see the quota information for [sync][prop-sync] and [local][prop-local].
+For details on storage area limitations and what happens when they are exceed, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
 
 ## Use cases {: #examples}
 
@@ -142,7 +147,7 @@ The following sections demonstrate some common use cases for the Storage API.
 
 ### Synchronous response to storage updates
 
-To track changes made to a data object, you can add a listener to its `onChanged` event. When anything changes in storage, that event fires. The sample code listens for these changes:
+To track changes made to storage, you can add a listener to its `onChanged` event. When anything changes in storage, that event will fire. The sample code listens for these changes:
 
 {% Label %}background.js:{% endLabel %}
 
@@ -157,14 +162,14 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 });
 ```
 
-We can take this idea even further. In this example we have an [options page][options-page] that
-allows the user to toggle a "debug mode" in the extension (implementation not shown here). Changes
-to this setting are immediately saved to sync storage by the options page and the service worker uses `storage.onChanged` to apply the setting as soon as possible.
+We can take this idea even further. In this example, we have an [options page][options-page] that
+allows the user to toggle a "debug mode" (implementation not shown here).  The options page immediately saves the new settings to `storage.sync`, and the service worker uses `storage.onChanged` to apply the setting as soon as possible.
 
 {% Label %}options.html:{% endLabel %}
 
 ```html
-<script defer src="options.js"></script>
+<!-- type="module" allows you to use top level await -->
+<script defer src="options.js" type="module"></script>
 <form id="optionsForm">
   <label for="debug">
     <input type="checkbox" name="debug" id="debug">
@@ -178,17 +183,17 @@ to this setting are immediately saved to sync storage by the options page and th
 ```js
 // In-page cache of the user's options
 const options = {};
+const optionsForm = document.getElementById("optionsForm");
 
 // Initialize the form with the user's option settings
-chrome.storage.sync.get('options', (data) => {
-  Object.assign(options, data.options);
-  optionsForm.debug.checked = Boolean(options.debug);
-});
+const data = await chrome.storage.sync.get("options");
+Object.assign(options, data.options);
+optionsForm.debug.checked = Boolean(options.debug);
 
 // Immediately persist options changes
-optionsForm.debug.addEventListener('change', (event) => {
+optionsForm.debug.addEventListener("change", (event) => {
   options.debug = event.target.checked;
-  chrome.storage.sync.set({options});
+  chrome.storage.sync.set({ options });
 });
 ```
 
@@ -205,7 +210,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 });
 ```
 
-### Asynchronous preload from storage
+### Asynchronous preload from storage {: #asynchronous-preload-from-storage}
 
 Since service workers are not always running, Manifest V3 extensions sometimes need to
 asynchronously load data from storage before they execute their event handlers. To do this, the
