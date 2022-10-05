@@ -19,7 +19,6 @@
 const express = require('express');
 
 const path = require('path');
-const fs = require('fs');
 
 const Negotiator = require('negotiator');
 
@@ -39,22 +38,14 @@ const ignoredPathPrefixes = [
   'feeds',
 ];
 
-let rootDir = path.resolve(__dirname, '../dist');
-
-if (process.env.NODE_ENV === 'test') {
-  rootDir = path.resolve(__dirname, '../tests/server/fixtures');
-}
-
 /**
  * @type {express.RequestHandler}
  */
 const languageRedirectHandler = (req, res, next) => {
   const pathParts = req.path.substring(1).split('/');
   const pathPrefix = pathParts[0];
-
-  // If the request path is is a root level path, starts with two chars
-  // (what for our setup is a language code) or any directory that does
-  // not contain pages, let express.static take over
+  // If the request path is a root level path, is one of the known locales
+  // or any directory that does not contain pages, let express.static take over
   if (
     pathParts.length === 1 ||
     locales.includes(pathPrefix) ||
@@ -64,31 +55,20 @@ const languageRedirectHandler = (req, res, next) => {
   }
 
   const negotiator = new Negotiator(req);
-  const preferredLanguages = negotiator.languages();
+  const preferredLanguage = negotiator.language();
 
-  for (const language of preferredLanguages) {
-    // If in the list of user preferences we reached the default locale
-    // there is no sense in looking further
-    if (language === defaultLocale) {
-      return next();
-    }
-
-    const translatedPath = path.join(
-      rootDir,
-      language,
-      ...pathParts,
-      'index.html'
-    );
-    try {
-      fs.accessSync(translatedPath);
-      return doRedirect(res, path.join('/', language, ...pathParts));
-    } catch (e) {
-      // That's fine. That just means there is no file for
-      // the tested language
-    }
+  // If the preferred language is the default language,
+  // none is set (meaning *) or the path prefix already
+  // matches the preferred language just go ahead
+  if (
+    preferredLanguage === defaultLocale ||
+    preferredLanguage === '*' ||
+    preferredLanguage === pathPrefix
+  ) {
+    return next();
   }
 
-  next();
+  return doRedirect(res, path.join('/', preferredLanguage, ...pathParts));
 };
 
 module.exports = {languageRedirectHandler};
