@@ -36,7 +36,7 @@
   ga(
     'set',
     '{{ analytics.dimensions.TRACKING_VERSION }}',
-    '{{ analytics.TRACKING_VERSION }}'
+    '{{ analytics.version }}'
   );
   try {
     ga(
