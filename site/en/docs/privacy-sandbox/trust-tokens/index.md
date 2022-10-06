@@ -6,10 +6,16 @@ subhead: >
 description: >
   An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
-updated: 2022-03-31
+updated: 2022-10-06
 authors:
   - samdutton
 ---
+
+{% Aside %}
+The [Trust Tokens origin trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049) is now closed.
+
+API status updates will be provided here and on [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+{% endAside %}
 
 ## Implementation status
 
