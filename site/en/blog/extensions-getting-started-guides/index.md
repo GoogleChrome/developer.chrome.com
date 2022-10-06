@@ -60,13 +60,7 @@ If you are up for a challenge, we included a section with a few ideas on how to 
 
 ## We want your help {: #help-wanted }
 
-We are excited to hear from you! There are two ways you can contribute to the new Getting Started guides:
-
-Improve the existing tutorials
-: If you see something wrong or unclear in these guides, please report a bug on our [GitHub repository][github-ext-doc-issue].
-
-Request a beginner tutorial
-: If you have an idea for another beginner tutorial, create an issue on our [GitHub repository][github-ext-doc-issue], choose "Extension tutorial request", and fill out the form. 
+We are excited to hear from you! If you see something wrong or unclear in these guides, please report a bug on our [GitHub repository][github-ext-doc-issue].
 
 We think this new getting started guide is a significant improvement over the old one, but we're not stopping here; we'll keep working to improve and expand our documentation to serve all extension developers better.
 
