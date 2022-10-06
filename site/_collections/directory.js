@@ -57,7 +57,9 @@ function mergeCollections(baseCollection, localeCollection) {
     // If there are no items left to potentially localize then simply
     // append the rest of the articles and stop
     if (localeIndex === localeCollection.length) {
-      collection = collection.concat(baseCollection.items.slice(index + 1));
+      collection = collection.concat(
+        baseCollection.getAllSorted().slice(index + 1)
+      );
       break;
     }
   }
