@@ -12,7 +12,7 @@ authors:
 ---
 
 {% Aside %}
-The [Trust Tokens origin trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049) is now closed.
+The [Trust Tokens origin trial](/origintrials/#/view_trial/2479231594867458049) is now closed.
 
 API status updates will be provided here and on [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 {% endAside %}
@@ -113,7 +113,7 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 ## Engage and share feedback
 
-* **Origin trial**: Now [closed](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* **Origin trial**: Now [closed](/origintrials/#/view_trial/2479231594867458049).
 * **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view code for trust token issuance and redemption.
 * **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and 
 follow discussion](https://github.com/WICG/trust-token-api/issues).
