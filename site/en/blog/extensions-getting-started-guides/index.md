@@ -1,23 +1,23 @@
 ---
-title: "A new way to start your Chrome extension development journey"
+title: "A new way to start your Chrome Extension development journey"
 description: "We created a better way to start the Chrome developer learning journey."  
 layout: "layouts/blog-post.njk"
 authors:
   - amysteam
-date: 2022-10-04
+date: 2022-10-06
 hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/9mMec0BTzXrg4uMqJF63.jpg'
 alt: 'Two puzzle pieces coming together'
 tags:
   - extensions
 ---
 
-In this post, we're excited to share some significant improvements to the Chrome extensions getting started experience and a few ways you can be part of this dream.
+In this post, we're excited to share some significant improvements to the Chrome Extension getting started experience and a few ways you can be part of this dream.
 
 ## The old guide {: #former-guide }
 
 Previously, the Chrome Extension Getting Started tutorial was a basic extension example that changed the background color of the current page when the user clicked a button in the extension popup. It also included an options page where you could pick one of four colors.
 
-This basic example didn't demonstrate how to add some popular capabilities featured in real-world extensions. It was time for a revamp.
+This basic example didn't demonstrate how to add popular capabilities featured in real-world extensions. It was time for a revamp.
 
 ## A new approach {: #new-guides }
 
@@ -45,7 +45,7 @@ Introducing the new and improved Getting Started collection:
 
 : While researching extension development, you can end up with many documentation tabs across multiple windows. Tabs Manager organizes your Chrome extension and Chrome Web store documentation tabs.
 
-These tutorials not only teach you how to build real-world extensions but also strive to share development tips and best practices. In addition, using these extensions will improve your experience while reading the extension documentation.
+These tutorials not only teach you how to build real-world extensions but also share development tips and best practices. In addition, using these extensions will improve your experience while reading the extension documentation.
 
 ## What to expect {: #sections }
 
