@@ -32,7 +32,7 @@ const defaultLocale = 'en';
 
 /**
  *
- * @param {EleventyCollectionObject} baseCollection
+ * @param {EleventyCollectionItem[]} baseCollection
  * @param {EleventyCollectionObject} localeCollection
  * @returns {EleventyCollectionItem[]}
  */
@@ -57,9 +57,7 @@ function mergeCollections(baseCollection, localeCollection) {
     // If there are no items left to potentially localize then simply
     // append the rest of the articles and stop
     if (localeIndex === localeCollection.length) {
-      collection = collection.concat(
-        baseCollection.getAllSorted().slice(index + 1)
-      );
+      collection = collection.concat(baseCollection.slice(index + 1));
       break;
     }
   }
