@@ -30,6 +30,43 @@ const {
 
 const defaultLocale = 'en';
 
+/**
+ *
+ * @param {EleventyCollectionObject} baseCollection
+ * @param {EleventyCollectionObject} localeCollection
+ * @returns {EleventyCollectionItem[]}
+ */
+function mergeCollections(baseCollection, localeCollection) {
+  // Otherwise walk through the English collection while looking
+  // for matches in the locale collection and if it's a match, replace.
+  // Beware: this works as long as there is no page that only exists in
+  // a non-english language and fileSlugs match across collections
+  let localeIndex = 0;
+  let collection = [];
+  for (let index = 0; index < baseCollection.length; index++) {
+    const item = baseCollection[index];
+    const localizedItem = localeCollection[localeIndex];
+
+    if (item.fileSlug === localizedItem.fileSlug) {
+      collection.push(localeCollection[localeIndex]);
+      localeIndex++;
+    } else {
+      collection.push(baseCollection[index]);
+    }
+
+    // If there are no items left to potentially localize then simply
+    // append the rest of the articles and stop
+    if (localeIndex === localeCollection.length) {
+      collection = collection.concat(baseCollection.items.slice(index + 1));
+      break;
+    }
+  }
+
+  // Bring the collection back into 11ty's natural order,
+  // which is by date, newest first
+  return collection.sort(sortCollectionByDate);
+}
+
 function add(config, locale, dir) {
   config.addCollection(`${dir}-${locale}`, collections => {
     const baseCollection = collections
@@ -62,37 +99,10 @@ function add(config, locale, dir) {
       return baseCollection;
     }
 
-    // Otherwise walk through the English collection while looking
-    // for matches in the locale collection and if it's a match, replace.
-    // Beware: this works as long as there is no page that only exists in
-    // a non-english language and fileSlugs match across collections
-    let localeIndex = 0;
-    let collection = [];
-    for (let index = 0; index < baseCollection.length; index++) {
-      const item = baseCollection[index];
-      const localizedItem = localeCollection[localeIndex];
-
-      if (item.fileSlug === localizedItem.fileSlug) {
-        collection.push(localeCollection[localeIndex]);
-        localeIndex++;
-      } else {
-        collection.push(baseCollection[index]);
-      }
-
-      // If there are no items left to potentially localize then simply
-      // append the rest of the articles and stop
-      if (localeIndex === localeCollection.length) {
-        collection = collection.concat(baseCollection.slice(index + 1));
-        break;
-      }
-    }
-
-    // Bring the collection back into 11ty's natural order,
-    // which is by date, newest first
-    collection.sort(sortCollectionByDate);
+    const collection = mergeCollections(baseCollection, localeCollection);
 
     return collection;
   });
 }
 
-module.exports = {add};
+module.exports = {mergeCollections, add};
