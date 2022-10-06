@@ -243,11 +243,6 @@ maudnalpas:
     en: 'Maud Nalpas'
   description:
     en: 'Developer advocate at Google, working on Chrome privacy and security'
-rowanmerewood:
-  title:
-    en: 'Rowan Merewood'
-  description:
-    en: 'Rowan is a Developer Advocate'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -1037,7 +1032,7 @@ keenyeeliau:
     pt: Engenheiro de software da equipe Aurora no Chrome.
     ru: Инженер-программист в команде Aurora в Chrome.
     zh: Chrome 公司 Aurora 团队的软件工程师。
-arthursonzogni: 
+arthursonzogni:
   title:
     en: Arthur Sonzogni
   description:
@@ -1047,3 +1042,98 @@ michalpitr:
     en: 'Michal Pitr'
   description:
     en: 'Software Engineering Intern on the Chrome DevTools team'
+patmeenan:
+  title:
+    en: 'Patrick Meenan'
+  description:
+    en: 'Web performance @googlechrome'
+anniesullie:
+  title:
+    en: 'Annie Sullivan'
+  description:
+    en: 'Senior Staff Software Engineer at Google'
+mmocny:
+  title:
+    en: 'Michal Mocny'
+  description:
+    en: 'Web Vitals, Speed Metrics and Web performance at Google'
+ianclelland:
+  title:
+    en: 'Ian Clelland'
+  description:
+    en: 'Software Engineer at Google'
+roydeepanjan:
+  title:
+    en: 'Deep Roy'
+  description:
+    en: 'Software Engineer at Google'
+diklla:
+  title:
+    en: 'Dikla Cohen'
+  description:
+    en: 'Web consultant at Google'
+gilberto_cocchi:
+  title:
+    en: 'Gilberto Cocchi'
+  description:
+    en: 'Web Ecosystem Technical Consultant at Google'
+harrytheodoulou:
+  title:
+    en: 'Harry Theodoulou'
+  description:
+    en: 'Web Ecosystem Consultant at Google'
+gbmonaco:
+  title:
+    en: Gerald Monaco
+  description:
+    en: Software Engineer on the Chrome team.
+greenido:
+  title:
+    en: Ido Green
+  description:
+    en: ''
+christianliebel:
+  title:
+    en: Christian Liebel
+  description:
+    en: ''
+jonathangarbee:
+  title:
+    en: Jonathan Garbee
+  description:
+    en: ''
+noraoneill:
+  title:
+    en: "Nora O'Neill"
+  description:
+    en: 'Product Marketing Manager, Chrome.'
+amysteam:
+  title:
+    en: 'Amy Steam'
+  description:
+    en: 'Amy writes about Chrome extensions 🧩.'
+milutinkristofic:
+  title:
+    en: 'Milutin Kristofic'
+  description:
+    en: 'Software Engineer at Google'
+marcdoerrenhaus:
+  title:
+    en: 'Marc Doerrenhaus'
+  description:
+    en: 'Google Cloud, Sales Operations, Strategy & Operations Manager at Google'
+ergunsh:
+  title:
+    en: Ergün Erdogmus
+  description:
+    en: 'Software Engineer at Google'
+markallenthompson:
+  title:
+    en: Mark Thompson
+  description:
+    en: 'Sr. Developer Relations Engineer at Google'
+rouslan:
+  title:
+    en: 'Rouslan Solomakhin'
+  description:
+    en: 'Software Engineer on the Chrome team.'

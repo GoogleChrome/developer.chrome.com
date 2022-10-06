@@ -31,6 +31,7 @@
     - url: /docs/privacy-sandbox/user-agent/snippets
     - url: /docs/privacy-sandbox/gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
+    - url: /docs/privacy-sandbox/bounce-tracking-mitigations
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics

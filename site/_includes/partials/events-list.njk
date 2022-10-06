@@ -1,0 +1,17 @@
+<web-tabs class="events-list">
+  <web-tab title="Upcoming events">
+    <div class="display-grid grid-cols-1 grid-gap-400">
+      {% for item in collections.currentEvents %}
+        {% EventCard item.data %}
+      {% endfor %}
+    </div>
+  </web-tab>
+
+  <web-tab title="Past events">
+    <div class="display-grid grid-cols-1 grid-gap-400">
+      {% for item in collections.pastEvents %}
+        {% EventCard item.data %}
+      {% endfor %}
+    </div>
+  </web-tab>
+</web-tabs>

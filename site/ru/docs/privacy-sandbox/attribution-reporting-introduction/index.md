@@ -86,7 +86,7 @@ Attribution Reporting API позволяет отслеживать, когда 
 - Отчеты на уровне событий, только клики:
 
     - [живая демонстрация](https://goo.gle/sppi-devrel-eventlevel);
-    - [исходный код](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement) этой демонстрации, который при необходимости можно [разветвить и настроить](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize).
+    - [исходный код](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting) этой демонстрации, который при необходимости можно [разветвить и настроить](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize).
 
 ## Варианты использования и возможности
 

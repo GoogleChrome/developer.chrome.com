@@ -304,7 +304,7 @@ chrome.tabs.query(queryOptions)
 
 // async-await
 async function queryTab() {
-  let tabs = await chrome.tabs.query(queryOptions});
+  let tabs = await chrome.tabs.query(queryOptions);
   chrome.tabs.update(tabs[0].id, {url: newUrl});
   someOtherFunction();
 }

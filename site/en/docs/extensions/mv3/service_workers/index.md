@@ -20,7 +20,7 @@ examples include:
 - Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage`][2].
 
 Once it has been loaded, an extension's service worker generally keeps running as long as it is
-performing an action, such as calling a Chrome API or issuing a network request. 
+performing an action, such as calling a Chrome API or issuing a network request.
 
 {% Aside %}
 
@@ -167,50 +167,7 @@ chrome.runtime.onMessage.addListener((message, callback) => {
 
 ## Unload background scripts {: #unloading }
 
-Data should be persisted periodically so that important information is not lost if an extension
-crashes without receiving `onSuspend`. Use the [storage][11] API to assist with this.
-
-```js
-chrome.storage.local.set({variable: variableInformation});
-```
-
-If an extension uses [message passing][12], ensure all ports are closed. The background script will
-not unload until all message ports have shut. Listening to the [`runtime.Port.onDisconnect`][13]
-event will give insight to when open ports are closing. Manually close them with
-[`runtime.Port.disconnect`][14].
-
-```js
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message === 'hello') {
-    sendResponse({greeting: 'welcome!'})
-  } else if (message === 'goodbye') {
-    chrome.runtime.Port.disconnect();
-  }
-});
-```
-
-The lifetime of a background service worker is observable by monitoring when an entry for the
-extension appears and disappears from Chrome's task manager.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
-       alt="Chrome with an extension's popup open.", height="623", width="730" %}
-
-Open the task manager by clicking the Chrome menu, hovering over more tools and selecting "Task
-Manager".
-
-Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup is
-required, listen to the [`runtime.onSuspend`][15] event.
-
-```js
-chrome.runtime.onSuspend.addListener(() => {
-  console.log("Unloading.");
-  chrome.browserAction.setBadgeText({text: ""});
-});
-```
-
-However, persisting data in the storage API should be preferred over relying on
-[`runtime.onSuspend`][16]. It doesn't allow for as much cleanup as may be needed and will not help
-in case of a crash.
+Unlike [event pages in Manifest V2][event-page-unload], extension service workers do not receive a `runtime.onSuspend` event before they are stopped. This is because documents have [`unload`][mdn-unload] and [`beforeUnload`][mdn-beforeunload] events, but web workers (and by extension service workers) do not have an equivalent event.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
@@ -230,4 +187,7 @@ in case of a crash.
 [16]: /docs/extensions/reference/runtime#event-onSuspend
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
+[event-page-unload]: https://developer.chrome.com/docs/extensions/mv2/background_pages/
+[mdn-beforeunload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
+[mdn-unload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
 [sw-module]: https://web.dev/es-modules-in-sw/

@@ -56,6 +56,8 @@ flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 	width="744", height="124"
 %}
 
+You can also enable Shared Storage with the `--enable-features=PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting,SharedStorageAPI,FencedFrames` flag in the command line. 
+
 ### Use the demo
 
 The demo can be accessed at [goo.gle/shared-storage-demo](http://goo.gle/shared-storage-demo),

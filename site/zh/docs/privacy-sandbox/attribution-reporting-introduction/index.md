@@ -86,7 +86,7 @@ authors:
 - 事件级报告，仅限点击型转化：
 
     - [实时演示](https://goo.gle/sppi-devrel-eventlevel)。
-    - 该演示的[源代码](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement)，您可以根据需要[进行复刻和自定义](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize)。
+    - 该演示的[源代码](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)，您可以根据需要[进行复刻和自定义](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize)。
 
 ## 用例和功能
 
