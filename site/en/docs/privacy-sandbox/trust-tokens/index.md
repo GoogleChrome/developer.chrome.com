@@ -19,9 +19,8 @@ API status updates will be provided here and on [Chrome Platform Status](https:/
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101.
-* [Register for the trial](/origintrials/#/view_trial/2479231594867458049).
-* [Demo](https://trust-token-demo.glitch.me/).
+* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101: [now closed](/origintrials/#/view_trial/2479231594867458049).
+* [Demo](https://trust-token-demo.glitch.me/): this is not working, since the origin trial is now closed, but you can still view the code.
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 
@@ -114,8 +113,8 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 ## Engage and share feedback
 
-* **Origin trial**: Register and take part in the [Chrome origin trial](/origintrials/#/view_trial/2479231594867458049).
-* **Demo**: Try out trust token [issuance and redemption](https://trust-token-demo.glitch.me/).
+* **Origin trial**: Now [closed](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view code for trust token issuance and redemption.
 * **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and 
 follow discussion](https://github.com/WICG/trust-token-api/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
