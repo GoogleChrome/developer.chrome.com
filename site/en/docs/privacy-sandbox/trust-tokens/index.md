@@ -11,6 +11,14 @@ authors:
   - samdutton
 ---
 
+{% Aside %}
+The Trust Tokens [origin trial](/origintrials/#/view_trial/2479231594867458049) is now closed.
+
+Implementation status updates for the API will be provided here and on 
+[Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+{% endAside %}
+
+
 ## Implementation status
 
 * [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101.
