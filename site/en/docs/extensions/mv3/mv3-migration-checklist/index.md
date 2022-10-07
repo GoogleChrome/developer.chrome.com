@@ -14,7 +14,7 @@ descriptions of these changes see the [Manifest V3 migration guide][mv3-migratio
 
 ## API checklist {: #api_checklist }
 
-This sectrion lists changes you may need to make based on changes to the API surface.
+This section lists changes you may need to make based on changes to the API surface.
 
 ### Do you have host permissions in your manifest? {: #api-host-perms}
 
