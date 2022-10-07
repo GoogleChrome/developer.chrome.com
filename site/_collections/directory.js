@@ -23,10 +23,7 @@
 
 const path = require('path');
 const {filterOutDrafts} = require('../_utils/drafts');
-const {
-  sortCollectionByDate,
-  sortCollectionByFileSlug,
-} = require('../_utils/sort');
+const {sortCollectionByDate} = require('../_utils/sort');
 
 const defaultLocale = 'en';
 
