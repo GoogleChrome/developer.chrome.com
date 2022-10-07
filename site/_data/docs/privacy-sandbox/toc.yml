@@ -8,11 +8,10 @@
     - url: https://privacysandbox.com/timeline
       title: i18n.docs.privacy-sandbox.timeline
     - url: /docs/privacy-sandbox/events
-      title: i18n.docs.privacy-sandbox.events
     - url: /docs/privacy-sandbox/proposal-lifecycle
 - title: i18n.docs.privacy-sandbox.start
   sections:
-    - url: /docs/privacy-sandbox/unified-origin-trial  
+    - url: /docs/privacy-sandbox/unified-origin-trial
     - url: /docs/privacy-sandbox/feedback
     - url: /docs/privacy-sandbox/glossary
     - url: /docs/privacy-sandbox/status
@@ -22,12 +21,8 @@
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
-      title: i18n.docs.privacy-sandbox.fenced-frame
     - url: /docs/privacy-sandbox/fedcm
-      title: i18n.docs.privacy-sandbox.fedcm
     - url: /docs/privacy-sandbox/permissions-policy
-      title: i18n.docs.privacy-sandbox.permissions-policy
-      description: i18n.docs.privacy-sandbox.permissions-policy-description
     - url: /docs/privacy-sandbox/shared-storage
     - url: /docs/privacy-sandbox/use-shared-storage
 - title: i18n.docs.privacy-sandbox.tracking-prevention
@@ -35,9 +30,7 @@
     - url: /docs/privacy-sandbox/user-agent
     - url: /docs/privacy-sandbox/user-agent/snippets
     - url: /docs/privacy-sandbox/gnatcatcher
-      title: i18n.docs.privacy-sandbox.gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
-      title: i18n.docs.privacy-sandbox.privacy-budget
     - url: /docs/privacy-sandbox/bounce-tracking-mitigations
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
@@ -50,13 +43,9 @@
   sections:
     - url: /docs/privacy-sandbox/attribution-reporting
     - url: /docs/privacy-sandbox/attribution-reporting/system-overview
-      title: i18n.docs.privacy-sandbox.attribution-reporting-system
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
-      title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
     - url: /docs/privacy-sandbox/attribution-reporting-updates
-      title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
-      title: i18n.docs.privacy-sandbox.attribution-reporting-summary
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
     - url: /docs/privacy-sandbox/trust-tokens
