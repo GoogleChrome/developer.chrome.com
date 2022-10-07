@@ -17,7 +17,7 @@
 const Eleventy = require('@11ty/eleventy');
 const path = require('path');
 const yaml = require('js-yaml');
-const xss = require('xss');
+const xss = require('xss').filterXSS;
 const {EleventyRenderPlugin} = require('@11ty/eleventy');
 const {OAuth2Client} = require('google-auth-library');
 
@@ -48,11 +48,15 @@ async function verifyLogin(token) {
     audience: CLIENT_ID,
   });
   const payload = ticket.getPayload();
-  return payload['sub']; // userid
+  return payload && payload['sub']; // userid
 }
 
+/**
+ * Escapes and formats frontmatter provided by user to 11ty format.
+ * @param {string} inputFm Frontmatter string
+ */
 const parseFrontmatter = inputFm => {
-  const parsedFm = yaml.load(inputFm) || {};
+  const /** @type {any} */ parsedFm = yaml.load(inputFm) || {};
   const date = parsedFm.date?.toISOString ? parsedFm.date : new Date();
   return {
     layout: xss(parsedFm.layout) || 'layouts/blog-post.njk',
@@ -100,7 +104,10 @@ const renderHandler = async (req, res) => {
 
         eleventyConfig.addAsyncShortcode('render', async function (str) {
           const {renderTemplate} = eleventyConfig.javascriptFunctions;
+          // Ignore ts complaining about the magical 'this' that comes from 11ty
+          // @ts-ignore
           const r = renderTemplate.bind(this);
+          // @ts-ignore
           const out = await r(str, 'njk, md', this.ctx);
           return out;
         });
