@@ -129,25 +129,27 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
 ### What browser configuration is available? {: #user-controls}
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
-the top-level setting in `chrome://settings/privacySandbox`.  During initial testing, people will be
-able to use this high-level Privacy Sandbox setting to opt out of FLEDGE. Chrome plans to allow
-users to see and manage the list of interest groups that they have been added to across the web
-sites they have visited.  As with the Privacy Sandbox technologies themselves, user settings may
-evolve with feedback from users, regulators and others.
+the top-level setting in `chrome://settings/privacySandbox`. During initial testing, people can use the Privacy Sandbox setting to opt out of FLEDGE. 
 
-We'll continue to update the available settings in Chrome as the FLEDGE proposal progresses, [based
-on tests and feedback](/docs/privacy-sandbox/cds21-update/#collaborate).
-In the future, we plan to offer more granular settings to manage FLEDGE and associated data.
+Chrome plans to allow users to see and manage the list of interest groups that
+they've been added to, across the sites they've visited.  As with the Privacy
+Sandbox technologies, user settings may evolve with feedback from users,
+regulators, and others.
 
-API callers can't access group membership when users browse in Incognito mode, and membership is
-removed when users clear their site data.
+We'll update the available settings in Chrome as the FLEDGE proposal
+progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
+In the future, we'll offer more granular settings to manage FLEDGE and
+associated data.
+
+API callers can't access group membership when users browse in Incognito mode,
+and membership is removed when users clear their site data.
 
 {: #opt-out-site}
 
-### How can I opt out of FLEDGE? {: #opt-out}
+### Can I opt out of FLEDGE? {: #opt-out}
 
-The FLEDGE API developer guide explains how you can [block access to the FLEDGE API](/blog/fledge-api#opt-out) 
-either as a site owner, or as an individual user.
+The FLEDGE API developer guide explains how you can [block access to the FLEDGE API](/blog/fledge-api#opt-out),
+either as a site owner or as an individual user.
 
 
 ## Why do we need FLEDGE? {: #why}
@@ -357,9 +359,10 @@ relevant to the interest group, and a URL for JavaScript used in bidding. Intere
 
 {% Aside %}
 
-Interest groups stored in the browser can make bids in FLEDGE in-browser auctions, but are not
-programmatically 'readable'. In other words there is no navigator.getAdInterestGroups(), as this
-would expose cross-site identity.
+Interest groups are stored in the browser and can make bids in FLEDGE
+in-browser auctions, but aren't programmatically 'readable'. In other words
+there's no `navigator.getAdInterestGroups()`, as this would expose cross-site
+identity.
 
 {% endAside %}
 
@@ -400,7 +403,7 @@ The table below provides examples of different types of FLEDGE interest group an
       </tr>
       <tr>
         <td style="vertical-align: top;">Adtech</td>
-        <td style="vertical-align: top;"><a href="#dsp" title="Glossary entry for dsp">DSP</a></td>
+        <td style="vertical-align: top;">DSP</td>
         <td style="vertical-align: top;">Category of products</td>
         <td style="vertical-align: top;">People who showed an interest in cycling gear.</td>
         <td style="vertical-align: top;">An adtech company might create and manage an interest group
@@ -439,8 +442,8 @@ Buyers have three jobs:
 * Choose ads and calculate a bid.
 * Report the auction outcome.
 
-These jobs are done programmatically, in code provided by the buyer that is run during a FLEDGE ad
-auction.
+These jobs are done programmatically, in code provided by the buyer that is run
+during a FLEDGE ad auction.
 
 When a buyer asks a user's browser to add an interest group to the groups it is a member of (by calling the
 JavaScript function `navigator.joinAdInterestGroup()`) the buyer provides the browser with:
@@ -453,7 +456,6 @@ to enable bidding code to get realtime data during an auction.
 The buyer's code can also include a `reportWin()` function to report the auction outcome.
 
 {% endDetails %}
-
 
 {: #seller-detail}
 
@@ -483,7 +485,6 @@ These jobs are done programmatically, in code provided by the seller when it ins
 auction by calling the JavaScript function `navigator.runAdAuction()`.
 
 {% endDetails %}
-
 
 {: #ad-auction}
 
