@@ -2,7 +2,7 @@
 title: "Inside the container query polyfill"
 description: "Learn how the container query polyfill brings container query support to older browsers."
 layout: 'layouts/blog-post.njk'
-date: 2022-10-01
+date: 2022-10-10
 hero: 'image/0Nc53fqpS4cgxOG9PCAyLwS0QwB3/75EKsp0A2SyU8bOWttSd.jpg'
 alt: "An assortment of neatly arranged drafting tools. In the center is a blank sheet of graphing paper."
 tags:
