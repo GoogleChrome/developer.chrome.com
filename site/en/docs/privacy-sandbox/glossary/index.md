@@ -76,7 +76,7 @@ For example, a correlation of ad clicks or views with [conversions](#conversion)
 The [rendering engine](https://en.wikipedia.org/wiki/Browser_engine) used by
 Chrome, developed as part of the [Chromium](#chromium) project.
 
-### Buyer
+## Buyer
 
 A party bidding for ad space in an [ad auction](#ad-auction), likely to be a
 [DSP](#DSP), or maybe the advertiser itself. Ad space buyers own and manage
@@ -139,7 +139,7 @@ they belong to the dataset.
 
 See [Top-Level Domain](#tld) and [eTLD](#etld).
 
-### Demand-side platform (DSP) {: #dsp }
+## Demand-side platform (DSP) {: #dsp }
 
 An adtech service used to automate ad purchasing. DSPs are used by advertisers
 to buy [ad impressions](https://en.wikipedia.org/wiki/Impression_(online_media))
@@ -334,7 +334,7 @@ ads.
 The total number of people who see an ad or who visit a web page that displays
 the ad.
 
-### Real-time bidding (RTB) {: #rtb}
+## Real-time bidding (RTB) {: #rtb}
 
 An automated auction for buying and selling ad impressions on websites,
 completed during page load.

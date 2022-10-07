@@ -34,8 +34,8 @@ At the end of this post, learn how to [engage and share feedback](#engage).
 ## What is FLEDGE? {: #what}
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
-[remarketing](#remarketing) and custom audience use cases, designed so that it cannot be used by
-third parties to track user browsing behavior across sites.
+[remarketing](/docs/privacy-sandbox/glossary/#remarketing) and custom audience
+use cases, designed so that it cannot be used by third parties to track user browsing behavior across sites.
 
 The API enables on-device auctions by the browser, to choose relevant ads from
 websites the user has previously visited.
@@ -46,9 +46,7 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 information for FLEDGE and other Privacy Sandbox proposals.
 
 
-## FLEDGE in one minute {: #overview}
-
-<br>
+### FLEDGE in one minute {: #overview}
 
 <figure class="w-figure">
   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="Illustration providing
@@ -87,8 +85,7 @@ Later, when the user visits a site that sells ad space, the ad space seller
 (most likely the site's 
 [SSP](/docs/privacy-sandbox/glossary/#ssp), or the site itself) can use
 FLEDGE to run an ad auction to select the most appropriate ads to display to the user. The seller
-calls the `navigator.runAdAuction() `function, providing a list of interest group owners who are
-invited to bid.
+calls the `navigator.runAdAuction() `function, which provides a list of interest group owners who are invited to bid.
 
 Bidding code is only run for interest groups that the browser is a member of, and
 whose owners have been invited to bid.
@@ -96,7 +93,7 @@ whose owners have been invited to bid.
 Bidding code is retrieved from the URL provided in the configuration information for the interest
 group. This code must include a `generateBid()` function, which is passed data about the interest
 group, and information from the seller, along with contextual data about the page and from the
-browser. Each bidder is called a [buyer](#buyer).
+browser. Each bidder is called a buyer.
 
 When calling the `navigator.runAdAuction()` function, the seller provides code that includes a
 `scoreAd()` function. This function is run for each bidder in the auction: to score each of the bids
@@ -104,8 +101,10 @@ returned by `generateBid()`. During the ad auction, the bidding code run for eac
 (`generateBid()`) and the ad scoring code run for the seller (`scoreAd()`) can receive realtime data
 from the [FLEDGE Key/Value service](#key-value-service-detail).
 
-The bid with the highest score wins the auction. The ad associated with the bid is displayed in
-a [`<fencedframe>`](#fenced-frame) element, using the ad URL specified by the bid (which must be one of the ad URLs from the list provided in the interest group's configuration information).
+The bid with the highest score wins the auction. The ad associated with the bid
+is displayed in a `<fencedframe>`, using the ad URL specified by the bid (which
+must be one of the ad URLs from the list provided in the interest group's
+configuration information).
 
 To report the auction outcome, the seller's code can include a `reportResult()` function and each
 buyer's code can include a `reportWin()` function.
@@ -192,57 +191,64 @@ from the bike maker.
 
 ### 1. A user visits an advertiser site
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/lrC3QOqthGpWyI6Ou9Eb.png", alt="Illustration showing
-  a person visiting the site of a custom bike maker in a browser on their laptop.",
-  width="400", height="190" %}
+<figure>
+{% Img
+  src="image/80mq7dk16vVEg8BBhsVe42n6zn82/lrC3QOqthGpWyI6Ou9Eb.png", alt="A person visits a custom bike maker's site in a browser on their laptop.",
+  width="400", height="190"
+%}
+</figure>
 
-Imagine that a user visits the website of a custom bike maker (the [advertiser](#advertiser) in
-this example) and spends some time on the product page for a handmade steel bike. This provides the
-bike maker with a [remarketing](#remarketing) opportunity.
+Imagine that a user visits the website of a custom bike maker (the advertiser)
+and spends some time on the product page for a handmade steel bike. This provides the bike maker with a remarketing opportunity.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-
 ### 2. The user's browser is asked to add an interest group {: #joinAdInterestGroup}
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/vF5beSa9j6VJBTtEcyC1.png",
-  alt="Illustration showing a person viewing a site in a browser on their laptop. JavaScript
-  code joinAdInterestGroup() is running in the browser.", width="400", height="187" %}
+  alt="A person views a site in a browser on their laptop. The JavaScript code joinAdInterestGroup() is running in the browser.", width="400", height="187"
+%}
+</figure>
 
-The advertiser's [DSP](#dsp) (or the advertiser itself) makes a JavaScript call
+The advertiser's [DSP](/docs/privacy-sandbox/glossary/#dsp) (or the advertiser itself) makes a JavaScript call
 `navigator.joinAdInterestGroup()` to ask the browser to add an interest group to the groups it is a
 member of. In this example, the group might be named `custom-bikes`. The interest group owner is
-an ad space buyer in the ad auction described in [step 4](#ad-auction). The owner provides
+an ad space buyer in the ad auction (described in step 4). The owner provides
 configuration information to enable the browser to access bidding code, ad code, and
 realtime data for the group when an ad auction is run.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 3. The user visits a site that sells ad space
+### 3. The user visits a site with ad space
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/95tUp50coQWLsqzxQhgi.png",
-  alt="Illustration showing a person visiting a news website in a browser on their laptop. The site
-  has an empty ad slot.", width="400", height="182" %}
+  alt="A person visits a news website in a browser on their laptop. The site
+  has an empty ad slot.", width="400", height="182"
+%}
+</figure>
 
-The user visits a news website (a [**publisher**](#publisher)) that uses FLEDGE to select ads.
+The user visits a news website (a [_publisher_](/docs/privacy-sandbox/glossary/#publisher)) that uses FLEDGE to select ads.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 4. An ad auction is run in the browser
+### 4. An ad auction runs in the browser
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fP9qHtCjfk8IwrJLtOpo.png",
-  alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place.", width="500", height="228" %}
+<figure>
+{% Img
+  src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fP9qHtCjfk8IwrJLtOpo.png",
+  alt="A person visits a news website in a browser on their laptop. A FLEDGE API adauction is taking place.",
+  width="500", height="228" %}
+</figure>
 
 An ad auction is run on the user's device to select the most appropriate ad for a specific
 available ad space on the publisher site. The code to run the auction is likely to be provided by
-the publisher site's [supply-side platform (SSP)](#ssp) or by the site itself.
+the publisher site's [supply-side platform (SSP)](/docs/privacy-sandbox/glossary/#ssp) or by the site itself.
 
 {% Aside %}
 
-In FLEDGE, the party running an ad auction is called the **seller**.
-
-Parties invited by the seller to bid in the auction are called **buyers**.
+In FLEDGE, the party running an ad auction is called the _seller_. Parties invited by the seller to bid in the auction are called _buyers_.
 
 Each buyer is an interest group owner: each bid in an auction represents an interest group. In
 other words, each bidder is an ad space buyer and also an interest group owner.
@@ -261,28 +267,30 @@ give it a score and choose the most desirable bid.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
-### 5. The seller and participating buyers receive realtime data from the Key/Value service
+### 5. The seller and participating buyers receive realtime data
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
-  alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  auction using the FLEDGE API is taking place, with a participant getting data from the Key/Value service.", width="600", height="189" %}
+  alt="A person visits a news website in a browser on their laptop. A FLEDGE API ad auction is taking place. Meanwhile, auction participants retrieve data from the Key/Value service.", width="600", height="189" %}
+</figure>
 
-During the ad auction, the ad space [seller](#seller) or bidding ad space [buyers](#buyer) may need
-to access realtime data. For example, the seller may be required to check that [ad creatives](#creative)
-comply with publisher policies, or bidders may need to calculate the remaining budget in an ad
-campaign. To meet the privacy requirements of FLEDGE, this data is supplied using
-[Key/Value service](#key-value-service-detail).
+During the ad auction, the ad space seller or ad space buyers (sometimes referred to as bidders) may need
+to access realtime data. For example, the seller may be required to check that
+[ad creatives](/docs/privacy-sandbox/glossary/#creative)
+comply with publisher policies, or bidders may need to calculate the remaining
+budget in an ad campaign. To meet the privacy requirements of FLEDGE, this data
+is supplied using [Key/Value service](#key-value-service-detail).
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 6. The winning ad is displayed
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wlkJ84sb3tRjJXHkCDfE.png",
-  alt="Illustration showing a person viewing a news website in a browser on their laptop. An ad
-  for a bike (20% off) is displayed—with a lock above to show that the ad is displayed in a
-  fenced frame.", width="400", height="192" %}
+  alt="On a news website, an ad for a 20% off a bike is displayed within a fenced frame.", width="400", height="192" %}
+</figure>
 
-The value returned by `navigator.runAdAuction()` in step 5 is passed to a [fenced frame](#fenced-frame)
+The value returned by `navigator.runAdAuction()` in step 5 is passed to a [fenced frame](/docs/privacy-sandbox/fenced-frame)
 for rendering, and the site displays the winning ad. A fenced frame prevents ad code from
 interacting with the surrounding page.
 
@@ -290,27 +298,36 @@ interacting with the surrounding page.
 
 ### 7. The auction result is reported
 
+<figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OPSYyEPotB8G1CUeDV0Q.png",
-  alt="Illustration representing the result of a FLEDGE ad auction being reported to the ad seller
+  alt="The result of the FLEDGE ad auction is reported to the ad seller
   and ad buyers.", width="600", height="173" %}
+</figure>
 
-The `reportResult()` and `reportWin()` functions are called in auction code provided by the
-[seller](#seller) and the winning buyer respectively, so each has an opportunity to perform logging
-and reporting about the auction result.
+The `reportResult()` and `reportWin()` functions are called in auction code
+provided by the seller and the winning buyer respectively, so each has an
+opportunity to perform logging and reporting about the auction result.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 8. An ad click is reported
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rDAkvTMMDjwc7MuMjzqw.png", alt="Illustration showing
-a person clicking on an ad for a bike, inside a fenced frame, on a news website, with report
-data going to seller and buyers.", width="600", height="220" %}
+<figure>
+{% Img
+  src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rDAkvTMMDjwc7MuMjzqw.png",
+  alt="A person clicks on the ad for a bike (hosted ina fenced frame). A report about this action is sent to seller and buyers.",
+  width="600", height="220"
+%}
+</figure>
 
-A click on an ad rendered in a fenced frame is reported. To learn more about how this might work,
+Once a user clicks on an ad rendered in a fenced frame, the click is reported. To learn more about how this might work,
 see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#reportevent).
 
-<br>
+{: #glossary}
 
+## Key concepts
+
+Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 {: #interest-group-detail}
 
@@ -321,7 +338,7 @@ see [Fenced Frames Ads Reporting](https://github.com/WICG/turtledove/blob/main/F
 {% endDetailsSummary %}
 
 A FLEDGE interest group represents a group of people with a common interest, corresponding to a
-[remarketing](#remarketing) list.
+[remarketing](/docs/privacy-sandbox/glossary/#remarketing) list.
 
 Every FLEDGE interest group has an owner. Different types of owners will create different types of
 interest groups with different use cases.
@@ -477,7 +494,7 @@ title="Click to view a larger version of image" target="_blank">view a larger ve
 <figure class="w-figure">
   {% Img
     src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png",
-    alt="There are six stages in a FLEDGE ad auction",
+    alt="Six stages in a FLEDGE ad auction",
     width="800", height="481"
     %}
 </figure>
@@ -505,7 +522,7 @@ auction result.
 #### 2. The seller starts an auction
 
 The **seller** calls the JavaScript function `navigator.runAdAuction()` to start an auction for an
-available ad slot. The seller is likely to be the site's [SSP](#ssp), or the site itself. In the
+available ad slot. The seller is likely to be the site's [SSP](/docs/privacy-sandbox/glossary/#ssp), or the site itself. In the
 auction configuration value passed to the function, the seller specifies which ad space is for
 sale and who can bid, and provides a URL for code that scores bids.
 
@@ -514,7 +531,7 @@ sale and who can bid, and provides a URL for code that scores bids.
 As explained in [How does FLEDGE work?](#joinAdInterestGroup), each interest group owner provides a
 URL for code that can be used to bid in an ad auction, when the group owner called
 `navigator.joinAdInterestGroup()`. That code must include a `generateBid()` function, which returns
-a numerical bid and a URL for an [ad creative](#creative), along with other data. Each bidding script can receive realtime data from its [Key/Value service](#key-value-service-detail) that was defined in the interest group config. The Key/Value service can be queried for data such as remaining ad campaign budget.
+a numerical bid and a URL for an ad creative, along with other data. Each bidding script can receive realtime data from its [Key/Value service](#key-value-service-detail) that was defined in the interest group config. The Key/Value service can be queried for data such as remaining ad campaign budget.
 
 #### 4. The seller's code evaluates each buyer's bid
 
@@ -532,9 +549,9 @@ contextual winner.
 
 #### 5. The ad is displayed
 
-For the winning ad, the auction code returns an *opaque* value, which can only be passed to a
-[fenced frame](#fenced-frame) to render the ad. Neither the party selling the ad space nor the site
-displaying the ad can inspect this value.
+For the winning ad, the auction code returns an *opaque* value, which can only be passed to a [fenced frame](/docs/privacy-sandbox/fenced-frame/) to render
+the ad. Neither the party selling the ad space nor the site displaying the ad
+can inspect this value.
 
 #### 6. The auction result is reported by the seller and buyers
 
@@ -595,20 +612,7 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 
 {% endDetails %}
 
-### Glossary
-
-Looking for more information on FLEDGE terminology? Refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/)
-
 {: #engage}
-
-## Engage and share feedback
-
--  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
-   [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
--  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
-   Group](https://www.w3.org/community/web-adv/participants).
--  **Developer support**: Ask questions and join discussions on the
-   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
@@ -620,6 +624,11 @@ explains how the demo code works, and shows how to use Chrome DevTools for FLEDG
 -  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
-<hr />
+## Engage and share feedback
 
-_Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/)._
+-  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
+   [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
+-  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business
+   Group](https://www.w3.org/community/web-adv/participants).
+-  **Developer support**: Ask questions and join discussions on the
+   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
