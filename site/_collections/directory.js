@@ -74,7 +74,7 @@ function add(config, locale, dir) {
         path.join('.', 'site', defaultLocale, dir, '*', '*.md')
       )
       .filter(filterOutDrafts)
-      .sort(sortCollectionByFileSlug);
+      .sort(sortCollectionByDate);
 
     // Test case: if we're running inside of Percy then don't care
     // about translations. Just show the first six posts.
@@ -91,7 +91,7 @@ function add(config, locale, dir) {
     const localeCollection = collections
       .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
       .filter(filterOutDrafts)
-      .sort(sortCollectionByFileSlug);
+      .sort(sortCollectionByDate);
 
     // If there aren't any translations for that directory there is no
     // sense in trying to merge them, just return the English articles then
