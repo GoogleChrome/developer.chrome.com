@@ -119,6 +119,21 @@ breakage period may be skipped [upon request](https://sites.google.com/a/chromiu
 
 {% endAside %}
 
+### Renew origin trial enrollment {: #renew}
+
+If an origin trial is extended, you will receive an email warning that you need to renew
+registration and provide a new token, for each origin enrolled in the trial.
+
+1. Navigate to the [My Registrations](/origintrials/#/trials/my) page.
+
+2. For each origin registered for the extended trial, click the **RENEW** button.
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/cyYunVjVUSnDGYZQaC4v.png",
+   alt="Screenshot of Chrome origin trial My Registrations page, showing RENEW buttons",
+   width="800", height="358" %}
+
+3. Copy the new token and make it available for every page that should remain enrolled in the trial.
+You can provide multiple tokens if necessary: Chrome will ignore invalid or expired tokens.
+
 
 ## View origin trial information in Chrome DevTools {: #devtools}
 
