@@ -1,0 +1,24 @@
+name: Repo Sync
+
+on:
+  schedule:
+    # Every 3 hours
+    - cron: '0 */3 * * *'
+  # Allow the action to be manually run
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    if: ${{ github.repository == 'GoogleChrome/dcc-private' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: repo-sync
+        uses: repo-sync/github-sync@v2
+        with:
+          source_repo: 'GoogleChrome/developer.chrome.com'
+          source_branch: 'main'
+          destination_branch: 'main'
+          github_token: ${{ secrets.REPO_SYNC_PAT }}
