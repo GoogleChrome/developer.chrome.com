@@ -6,7 +6,7 @@ subhead: >
 description: >
   A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-10-05
+updated: 2022-10-07
 authors:
   - samdutton
 ---
@@ -75,7 +75,8 @@ available before attempting to use it.
 
 You can try out the Topics API for a single user running Chrome 101 or above:
 
-*  Set the `--enable-features=PrivacySandboxAdsAPIsOverride` flag from the command line
+*  Set the `--enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting` 
+flags from the command line
 *  Enable `chrome://flags/#privacy-sandbox-ads-apis`
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
