@@ -83,9 +83,10 @@ function add(config, locale, dir) {
     }
 
     // If we are building the collection for the default locale,
-    // there also is no need to compare with English itself
+    // there also is no need to compare with English itself but
+    // sort the collection by date again, to match 11ty's natural behaviour
     if (locale === defaultLocale) {
-      return baseCollection;
+      return baseCollection.sort(sortCollectionByDate);
     }
 
     const localeCollection = collections
