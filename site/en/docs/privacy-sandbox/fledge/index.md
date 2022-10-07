@@ -166,13 +166,13 @@ interested in.
 
 {% Aside 'warning' %}
 
-Not all features described in this post have been implemented (or fully implemented) in the version
+Not all features described here have been implemented (in part or in full) in the version
 of the FLEDGE API currently being tested in Chrome. The [FLEDGE API developer guide](/blog/fledge-api#try-fledge)
 explains what FLEDGE features are currently available for testing in Chrome run from the command line
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
-We expect the features of FLEDGE will be added over time as work on implementation continues. During
-the origin trial stage, we'll regularly update a list of which features are already
+Features of FLEDGE will be added over time. While the [origin trial](/docs/privacy-sandbox/unified-origin-trial/)
+is active, we'll regularly update a list of which features are already
 implemented and what's still in progress.
 
 {% endAside %}
