@@ -6,7 +6,7 @@ subhead: >
 description: >
   A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-09-30
+updated: 2022-10-05
 authors:
   - samdutton
 ---
@@ -353,7 +353,7 @@ fetch(<url>, {browsingTopics: true})
 #### Response header example
 
 ``` text
-Observe-Browsing-Topics: 1
+Observe-Browsing-Topics: ?1
 ```
 
 #### Notes
