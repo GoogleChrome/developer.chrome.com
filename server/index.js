@@ -20,6 +20,7 @@ const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
+const {languageRedirectHandler} = require('./language-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
 const healthCheckHandler = require('./health-check');
 
@@ -27,7 +28,11 @@ const app = express();
 
 // The site serves from both roots. We pass this to our redirects handler to
 // see whether redirects will be successful.
-const staticPaths = ['dist', 'dist/en'];
+let staticPaths = ['dist', 'dist/en'];
+
+if (process.env.NODE_ENV === 'test') {
+  staticPaths = ['tests/server/fixtures', 'tests/server/fixtures/en'];
+}
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 const uniqueRedirectHandler = buildUniqueRedirectHandler();
@@ -61,6 +66,7 @@ const cspHandler = (_req, res, next) => {
 const handlers = [
   cspHandler,
   immutableRootHandler,
+  languageRedirectHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
@@ -82,3 +88,5 @@ app.use(...handlers);
 const listener = app.listen(process.env.PORT || 8080, () => {
   console.log('The server is listening at:', listener.address());
 });
+
+module.exports = app;
