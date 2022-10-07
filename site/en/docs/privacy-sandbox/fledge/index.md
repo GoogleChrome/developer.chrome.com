@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'FLEDGE API'
 subhead: >
-  A proposal for on-device ad auctions to serve remarketing and custom audiences, without the need for cross-site third-party tracking.
+  A proposal for on-device ad auctions to serve remarketing and custom audiences, without cross-site third-party tracking.
 description: >
   A Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third-parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
@@ -242,9 +242,10 @@ The user visits a news website (a [_publisher_](/docs/privacy-sandbox/glossary/#
   width="500", height="228" %}
 </figure>
 
-An ad auction is run on the user's device to select the most appropriate ad for a specific
-available ad space on the publisher site. The code to run the auction is likely to be provided by
-the publisher site's [supply-side platform (SSP)](/docs/privacy-sandbox/glossary/#ssp) or by the site itself.
+An ad auction is run in the browser on the user's device to select the most
+appropriate ad for a specific available ad space. The auction code is likely 
+provided by the publisher's
+[supply-side platform (SSP)](/docs/privacy-sandbox/glossary/#ssp) or by the site itself.
 
 {% Aside %}
 
@@ -255,15 +256,18 @@ other words, each bidder is an ad space buyer and also an interest group owner.
 
 {% endAside %}
 
-Bidding code is run for all of the browser's interest groups—as long as the owner of that group is
-on the list of invited bidders passed to `navigator.runAdAuction()`.
+Bidding code is run for all of the browser's interest groups—as long as the
+owner of that group is on the list of invited bidders passed to
+`navigator.runAdAuction()`.
 
-The auction is initiated when the seller calls the JavaScript function `navigator.runAdAuction()`.
-This function uses code from the seller and each invited bidder. Each bidder's code (from the
-URL provided in step 2) must include a `generateBid()` function to submit a bid. This function uses
-data about the ad space available in order to choose whether to bid and to calculate a bid amount.
-The seller's auction code must include a `scoreAd()` function, which is run once for each bid to
-give it a score and choose the most desirable bid.
+The auction is initiated when the seller calls `navigator.runAdAuction()`. This
+JavaScript function includes data from the seller and each invited buyer. Each
+buyer's code (from the URL provided in step 2) must include a `generateBid()`
+function to submit a bid. This function uses data about the ad space available
+to inform the buyer what creative to bid and calculate a bid value.
+
+The seller's auction includes a `scoreAd()` function, which is run
+once for each bid, to score and select the most desirable bid.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
@@ -271,15 +275,18 @@ give it a score and choose the most desirable bid.
 
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rn0slzXLZNSzGHMm6w7Y.png",
-  alt="A person visits a news website in a browser on their laptop. A FLEDGE API ad auction is taking place. Meanwhile, auction participants retrieve data from the Key/Value service.", width="600", height="189" %}
+  alt="A person visits a news website in a browser on their laptop. A FLEDGE API ad auction is taking place. Meanwhile, auction participants retrieve data from the Key/Value service.", width="600", height="189"
+  %}
 </figure>
 
-During the ad auction, the ad space seller or ad space buyers (sometimes referred to as bidders) may need
-to access realtime data. For example, the seller may be required to check that
+During the ad auction, the ad space seller or ad space buyers may need
+to access real-time data. For example, the seller may be required to check that
 [ad creatives](/docs/privacy-sandbox/glossary/#creative)
 comply with publisher policies, or bidders may need to calculate the remaining
-budget in an ad campaign. To meet the privacy requirements of FLEDGE, this data
-is supplied using [Key/Value service](#key-value-service-detail).
+budget in an ad campaign.
+
+To meet the privacy requirements of FLEDGE, this data is supplied by a 
+[Key/Value service](#key-value-service-detail).
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
