@@ -8,7 +8,7 @@ description: A quick reference on migrating your Chrome Extensions from Manifest
 ---
 
 This page provides a quick reference to help you identify changes you need to
-make to an Manifest V2 extension so that it works under Manifest V3. For
+make to a Manifest V2 extension so that it works under Manifest V3. For
 descriptions of these changes see the [Manifest V3 migration guide][mv3-migration-guide].
 
 
