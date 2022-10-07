@@ -1,6 +1,13 @@
 - url: /docs/extensions/mv3
 - url: /docs/extensions/whatsnew
-- url: /docs/extensions/mv3/getstarted
+- title: i18n.docs.extensions.get-started
+  sections:
+  - url: /docs/extensions/mv3/getstarted/
+  - url: /docs/extensions/mv3/getstarted/extensions-101
+  - url: /docs/extensions/mv3/getstarted/development-basics
+  - url: /docs/extensions/mv3/getstarted/tut-reading-time
+  - url: /docs/extensions/mv3/getstarted/tut-focus-mode
+  - url: /docs/extensions/mv3/getstarted/tut-tabs-manager
 - title: i18n.docs.extensions.mv3
   sections:
     - url: /docs/extensions/mv3/intro

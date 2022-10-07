@@ -15,18 +15,18 @@
 * [Miscellaneous highlights](/ja/blog/new-in-devtools-107/#misc)
  -->
 
-<!-- ### Chrome 106 {: #chrome106 }
+### Chrome 106 {: #chrome106 }
 
-* [Group files by Authored / Deployed in the Sources panel](/ja/blog/new-in-devtools-106/#authored)
-* [Linked stack traces for asynchronous operations](/ja/blog/new-in-devtools-106/#async)
-* [Automatically ignore known third-party scripts](/ja/blog/new-in-devtools-106/#auto-ignore)
-* [Improved call stack during debugging](/ja/blog/new-in-devtools-106/#call-stack)
-* [Hiding ignore-listed sources in the Sources panel](/ja/blog/new-in-devtools-106/#ignore-nav)
-* [Hiding ignore-listed files in the Command Menu](/ja/blog/new-in-devtools-106/#ignore-search)
-* [New Interactions track in the Performance panel](/ja/blog/new-in-devtools-106/#performance)
-* [LCP timings breakdown in the Performance Insights panel](/ja/blog/new-in-devtools-106/#insights)
-* [Auto-generate default name for recordings in the Recorder panel](/ja/blog/new-in-devtools-106/#recorder)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-106/#misc) -->
+* [Sources パネルでの Authored / Deployed によるファイルのグループ化](/ja/blog/new-in-devtools-106/#authored)
+* [非同期処理にリンクされたスタックトレース](/ja/blog/new-in-devtools-106/#async)
+* [既知のサードパーティスクリプトを自動的に無視する](/ja/blog/new-in-devtools-106/#auto-ignore)
+* [デバッグ中の改善されたコールスタック](/ja/blog/new-in-devtools-106/#call-stack)
+* [Sources パネルで無視リストに含まれるソースを非表示にする](/ja/blog/new-in-devtools-106/#ignore-nav)
+* [Command Menu で無視リストにあるファイルを非表示にする](/ja/blog/new-in-devtools-106/#ignore-search)
+* [Performance パネルの新しい Interactions トラック](/ja/blog/new-in-devtools-106/#performance)
+* [Performance Insights パネルでの LCP タイミングの内訳](/ja/blog/new-in-devtools-106/#insights)
+* [Recorder パネルでの記録のデフォルト名称の自動生成](/ja/blog/new-in-devtools-106/#recorder)
+* [その他のハイライト](/ja/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }

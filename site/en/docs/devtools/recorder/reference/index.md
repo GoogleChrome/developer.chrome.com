@@ -12,6 +12,8 @@ tags:
   - performance
 ---
 
+{% YouTube id='LBgzmqzp7ew' %}
+
 Discover ways to share user flows, edit them and their steps in this comprehensive features reference of the Chrome DevTools **Recorder** panel.
 
 To learn the basics of working with the **Recorder** panel, see [Record, replay, and measure user flows](/docs/devtools/recorder/).

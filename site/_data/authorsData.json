@@ -216,7 +216,8 @@
   },
   "paulkinlan": {
     "homepage": "https://paul.kinlan.me/",
-    "twitter": "paul_kinlan"
+    "twitter": "paul_kinlan",
+    "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg"
   },
   "joemedley": {
     "github": "jpmedley",
@@ -939,5 +940,9 @@
   "markallenthompson": {
     "linkedin": "https://www.linkedin.com/in/markallenthompson/",
     "country": "US"
+  },
+  "rouslan": {
+    "github": "rsolomakhin",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dZOnFhReaU2NKpk1Rr9f.jpg"
   }
 }
