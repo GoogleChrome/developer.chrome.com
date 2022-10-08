@@ -31,7 +31,6 @@ This document outlines a new proposal for interest-based advertising: the Topics
 ## Try the demo {: #demo}
 
 There is a demo of the Topics API at [topics-demo.glitch.me](https://topics-demo.glitch.me/). 
-
 This explains how to try out and debug the API for a single user.
 
 
@@ -578,7 +577,7 @@ You can view information about topics observed for your browser during the curre
 epochs.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
-  alt="Screenshot of chrome://topics-internal page with Topics State panel selected.",
+  alt="chrome://topics-internal page with Topics State panel selected.",
   width="800", height="697" %}
 
 In this example, recently visited sites included
@@ -598,7 +597,7 @@ You can view the topics inferred by the Topics
 one or more hostnames.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
-  alt="Screenshot of chrome://topics-internal page with Classifier panel selected.",
+  alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
 
 {% Aside %}
@@ -616,7 +615,7 @@ The **Classifier** tab of the `chrome://topics-internals` page also provides the
 classifier model `.tflite` file used by the Topics API.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png",
-  alt="Screenshot of chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.",
+  alt="chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.",
   width="800", height="696" %}
 
 {: #colab}
@@ -625,7 +624,7 @@ You can download the `.tflite` file and load the model with the [Topics Model Ex
 analysis tool that combines code, output, and descriptive text into one collaborative document.)
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OWOHUKsrvv7ZPtBP9i85.png",
-  alt="Screenshot of the Topics API Model Execution Demo colab.",
+  alt="Topics API Model Execution Demo colab.",
   width="800", height="565" %}
 
 1. On the Colab page, click on the folder icon.
@@ -633,12 +632,12 @@ analysis tool that combines code, output, and descriptive text into one collabor
 2. Click the Upload icon and upload the `.tflite` model file from your computer. For this colab, you'll need to
 rename the file to `topics_model.tflite`.
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jb8YbQoAd9zE28SMerfX.png",
-  alt="Screenshot of FLEDGE colab page, upload icon highlighted.", width="800", height="457" %}
+  alt="FLEDGE colab page, upload icon highlighted.", width="800", height="457" %}
 
 You can then run all the colab steps, by selecting **Run all** from the **Runtime** menu.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/JJNMu6AJiMlvqSuDt7ju.png",
-  alt="Screenshot of FLEDGE colab page, showing 'Run all' selected form the Runtime menu.", width="800", height="457" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/uBPkzjGipfvxc5hf52vs.png",
+  alt="FLEDGE colab page, with 'Run all' selected form the Runtime menu.", width="800", height="457" %}
 
 This does the following:
 
@@ -648,7 +647,7 @@ This does the following:
 4. Run each of the Model Execution Demo steps to show how classification works for two example domains.
 
 You'll see a green tick next to each step that completes successfully. (Each step can also be run individually,
-by clicking the play button next to it.)
+by clicking the Play button next to it.)
 
 For each of the domains defined, you can see the topic scores inferred by the classifier. Try listing different
 domains to see how they compare.
@@ -673,7 +672,7 @@ in the example below, `time_period_per_epoch` has been set to 15 seconds (the de
 days).
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
-  alt="Screenshot of chrome://topics-internal page with Features and Parameters panel selected.",
+  alt="chrome://topics-internal page with Features and Parameters panel selected.",
   width="800", height="695" %}
 
 The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally 
