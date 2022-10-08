@@ -105,6 +105,11 @@ Note that `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCur
 
 In the future, it may be possible to exclude some audio sources from the capture. But for now, video conferencing web apps often find it best to just avoid capturing system audio. This could previously be done by checking what display surface the user chose, and stopping the audio track if they chose to share a screen. However, this raises a small issue, in that some users are confused when they explicitly check the checkbox to share system audio, and are then told by remote participants that no audio is incoming.
 
+Note
+
+- `getDisplayMedia()` **_does not_** capture audio output of Web Speech API `speechSynthesis.speak(new SpeechSynthesisUtterance('Test'))` executed on the same Tab.
+- When `echoCancellation: false` **_is not_** passed as an audio constraint `channelCount` will be `1`.
+
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/G6ipYLLSEMTutcu1wtJJ.jpg", alt="Screenshots of media pickers featuring tab audio sharing", width="800", height="556" %}
   <figcaption>
