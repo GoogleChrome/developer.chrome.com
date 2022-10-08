@@ -65,6 +65,8 @@
       })();
     </script>
     {% endif %}
+    
+    {% block chromescripts %}{% endblock %}
   </head>
   <body>
     <div class="scaffold">
@@ -91,8 +93,6 @@
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}
-
-    {% block chromescripts %}{% endblock %}
 
     {% block chromeanalytics %}{% endblock %}
   </body>
