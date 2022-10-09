@@ -15,18 +15,18 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Miscellaneous highlights](/es/blog/new-in-devtools-107/#misc)
  -->
 
-<!-- ### Chrome 106 {: #chrome106 }
+### Chrome 106 {: #chrome106 }
 
-* [Group files by Authored / Deployed in the Sources panel](/es/blog/new-in-devtools-106/#authored)
-* [Linked stack traces for asynchronous operations](/es/blog/new-in-devtools-106/#async)
-* [Automatically ignore known third-party scripts](/es/blog/new-in-devtools-106/#auto-ignore)
-* [Improved call stack during debugging](/es/blog/new-in-devtools-106/#call-stack)
-* [Hiding ignore-listed sources in the Sources panel](/es/blog/new-in-devtools-106/#ignore-nav)
-* [Hiding ignore-listed files in the Command Menu](/es/blog/new-in-devtools-106/#ignore-search)
-* [New Interactions track in the Performance panel](/es/blog/new-in-devtools-106/#performance)
-* [LCP timings breakdown in the Performance Insights panel](/es/blog/new-in-devtools-106/#insights)
-* [Auto-generate default name for recordings in the Recorder panel](/es/blog/new-in-devtools-106/#recorder)
-* [Miscellaneous highlights](/es/blog/new-in-devtools-106/#misc) -->
+* [Agrupar archivos por Autoría/Desplegado en el panel Fuentes](/es/blog/new-in-devtools-106/#authored)
+* [Rastreos de pila vinculados para operaciones asincrónicas](/es/blog/new-in-devtools-106/#async)
+* [Ignorar automáticamente los scripts de terceros conocidos](/es/blog/new-in-devtools-106/#auto-ignore)
+* [Pila de llamadas mejorada durante la depuración](/es/blog/new-in-devtools-106/#call-stack)
+* [Ocultar fuentes ignoradas en el panel Fuentes](/es/blog/new-in-devtools-106/#ignore-nav)
+* [Ocultar archivos ignorados en el menú de comandos](/es/blog/new-in-devtools-106/#ignore-search)
+* [Nueva pista de interacciones en el panel Rendimiento](/es/blog/new-in-devtools-106/#performance)
+* [Desglose de tiempos de LCP en el panel Perspectivas de Rendimiento](/es/blog/new-in-devtools-106/#insights)
+* [Generar automáticamente el nombre predeterminado para las grabaciones en el panel Grabadora](/es/blog/new-in-devtools-106/#recorder)
+* [Destacados varios](/es/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }
