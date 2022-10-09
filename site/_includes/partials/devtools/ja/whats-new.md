@@ -4,16 +4,16 @@
 
 <!-- $content -->
 
-<!-- ### Chrome 107 {: #chrome107 }
+### Chrome 107 {: #chrome107 }
 
-* [Customize keyboard shortcuts in DevTools](/ja/blog/new-in-devtools-107/#shortcuts)
-* [Toggle light and dark themes with keyboard shortcut](/ja/blog/new-in-devtools-107/#toggle-themes)
-* [Highlight C/C++ objects in the Memory Inspector](/ja/blog/new-in-devtools-107/#memory)
-* [Support full initiator information for HAR import](/ja/blog/new-in-devtools-107/#har)
-* [Start DOM search after pressing `Enter`](/ja/blog/new-in-devtools-107/#search-type)
-* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ja/blog/new-in-devtools-107/#flexbox)
-* [Miscellaneous highlights](/ja/blog/new-in-devtools-107/#misc)
- -->
+* [DevTools のキーボードショートカットのカスタマイズ](/ja/blog/new-in-devtools-107/#shortcuts)
+* [キーボードショートカットでのライトテーマとダークテーマの切り替え](/ja/blog/new-in-devtools-107/#toggle-themes)
+* [Memory Inspector で C/C++ オブジェクトをハイライト表示](/ja/blog/new-in-devtools-107/#memory)
+* [HAR インポート時の完全な Initiator 情報をサポート](/ja/blog/new-in-devtools-107/#har)
+* [`Enter` を押した時にのみ DOM 検索を開始](/ja/blog/new-in-devtools-107/#search-type)
+* [CSS のフレックスボックスプロパティ `align-content` に `start` と `end` のアイコンを表示](/ja/blog/new-in-devtools-107/#flexbox)
+* [その他のハイライト](/ja/blog/new-in-devtools-107/#misc)
+
 
 ### Chrome 106 {: #chrome106 }
 
