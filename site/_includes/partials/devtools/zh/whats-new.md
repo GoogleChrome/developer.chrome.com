@@ -15,18 +15,18 @@
 * [Miscellaneous highlights](/zh/blog/new-in-devtools-107/#misc)
  -->
 
-<!-- ### Chrome 106 {: #chrome106 }
+### Chrome 106 {: #chrome106 }
 
-* [Group files by Authored / Deployed in the Sources panel](/zh/blog/new-in-devtools-106/#authored)
-* [Linked stack traces for asynchronous operations](/zh/blog/new-in-devtools-106/#async)
-* [Automatically ignore known third-party scripts](/zh/blog/new-in-devtools-106/#auto-ignore)
-* [Improved call stack during debugging](/zh/blog/new-in-devtools-106/#call-stack)
-* [Hiding ignore-listed sources in the Sources panel](/zh/blog/new-in-devtools-106/#ignore-nav)
-* [Hiding ignore-listed files in the Command Menu](/zh/blog/new-in-devtools-106/#ignore-search)
-* [New Interactions track in the Performance panel](/zh/blog/new-in-devtools-106/#performance)
-* [LCP timings breakdown in the Performance Insights panel](/zh/blog/new-in-devtools-106/#insights)
-* [Auto-generate default name for recordings in the Recorder panel](/zh/blog/new-in-devtools-106/#recorder)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-106/#misc) -->
+* [在 Sources 面板中按照 Authored / Deployed 对文件进行分组](/zh/blog/new-in-devtools-106/#authored)
+* [异步操作的链接堆栈痕迹](/zh/blog/new-in-devtools-106/#async)
+* [自动忽略已知的第三方脚本](/zh/blog/new-in-devtools-106/#auto-ignore)
+* [在调试过程中改进调用堆栈](/zh/blog/new-in-devtools-106/#call-stack)
+* [在来源面板中隐藏被忽略的来源](/zh/blog/new-in-devtools-106/#ignore-nav)
+* [在命令菜单中隐藏被忽略的文件](/zh/blog/new-in-devtools-106/#ignore-search)
+* [性能面板中的新互动轨道](/zh/blog/new-in-devtools-106/#performance)
+* [性能洞察面板中的LCP时序分解](/zh/blog/new-in-devtools-106/#insights)
+* [在 Recorder 面板中自动生成录音的默认名称](/zh/blog/new-in-devtools-106/#recorder)
+* [其他的更新](/zh/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }
