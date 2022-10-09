@@ -32,7 +32,7 @@ Chromium issues: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 
 ## 키보드 단축키로 라이트 / 다크 테마 전환하기 {: #toggle-themes }
 
-편리하게 [라이트 / 다크 테마](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) 를 전환하는 키보드 단축키를 설정할 수 있습니다. 기본적으로는 이 전환 액션에 대한 키보드 단축키가 설정되어있지 않습니다.
+편리하게 [라이트 / 다크 테마](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) 를 전환하는 키보드 단축키를 설정할 수 있습니다. 기본적으로는 이 전환 액션에 대한 키보드 단축키가 설정되어 있지 않습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="키보드 단축키로 라이트 / 다크 테마 전환하기", width="800", height="576" %}
 
@@ -44,7 +44,7 @@ Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 
 ## 메모리 인스펙터에서 C/C++ 객체 하이라이팅 {: #memory }
 
-[메모리 인스펙터](/docs/devtools/memory-inspector/) 에서 모든 C/C++ 메모리 객체의 바이트를 하이라이팅합니다.
+[메모리 인스펙터](/docs/devtools/memory-inspector/) 에서 모든 C/C++ 메모리 객체의 바이트를 강조 표시합니다.
 
 웹 어셈블리 주변 메모리에서 객체의 바이트를 인식하는 건 골칫거리였습니다. 기존에는 객체의 시작부터 객체의 크기와 바이트를 알아야 했습니다.
 
@@ -76,7 +76,7 @@ Chromium issue: [1343185](https://crbug.com/1343185)
 
 <kbd>Enter</kbd> 키를 누른 후 항상 DOM 검색을 시작하는 **Search as you type** 설정을 비활성화할 수 있습니다.
 
-**요소** 패널에서 <kbd>Control</kbd> 이나 <kbd>Command</kbd> + <kbd>F</kbd> 키를 통해 검색바를 전환합니다. 검색 입력창에서 쿼리를 입력하면 기본 동작으로 DOM 트리가 첫번째로 일치한 요소로 이동하고 하이라이트합니다.
+**요소** 패널에서 <kbd>Control</kbd> 이나 <kbd>Command</kbd> + <kbd>F</kbd> 키를 통해 검색바를 전환합니다. 검색 입력창에서 쿼리를 입력하면 기본 동작으로 DOM 트리가 첫번째로 일치한 요소로 이동하고 강조 표시합니다.
 
 사용자, 특히 항상 긴 검색 쿼리로 작업하는 테스터들에게는 이 동작이 적합하지 않습니다. DOM 트리가 긴 검색 쿼리 (예시: `//div[@id="example"]`)로 인해 여러번 이동할 수 있습니다. 이러한 동작은 불필요한 움직임을 만듭니다.
 
