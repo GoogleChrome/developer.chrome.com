@@ -49,9 +49,9 @@ element][mv3-host-perms]; you don't specify them in
 *This API is [replaced by `declarativeNetRequest`][mv3-network-request] in Manifest V3.*
 
 {% Aside %}
-This only applies to user-installed extensions; force installed extensions (extensions distributed using
-[ExtensionInstallForcelist][chromium-force-install]).
-These extensions &mdash; typically used in an enterprise setting &mdash; can
+This only applies to user-installed extensions. Force installed extensions (extensions distributed using
+[ExtensionInstallForcelist][chromium-force-install]
+and typically used in an enterprise setting) can
 still use the blocking version of `chrome.webRequest`. 
 {% endAside %}
 
