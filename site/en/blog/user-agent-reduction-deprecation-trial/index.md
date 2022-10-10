@@ -22,7 +22,7 @@ Starting from Chrome 101, the information available in the User-Agent (UA) strin
 
 The registration for the deprecation trial will begin with the [Chrome 100](https://chromiumdash.appspot.com/schedule) Beta. It will allow sites to receive the full User-Agent string ahead of the Chrome 101 release, where the minor version string will be reduced. If you would like to test the origin trial on Chrome 100 Beta before it launches to the stable channel, be sure to register and test before the release date for Chrome 100 ([currently scheduled for March 31st, 2022](https://chromiumdash.appspot.com/schedule)).
 
-Below is an overview of the deprecation trial and what to expect. If you have feedback to share or you encounter any issues throughout this trial let us know in the [UA Reduction Github repository](https://github.com/miketaylr/user-agent-reduction/issues).
+Below is an overview of the deprecation trial and what to expect. If you have feedback to share or you encounter any issues throughout this trial let us know in the [UA Reduction GitHub repository](https://github.com/miketaylr/user-agent-reduction/issues).
 
 ## What does this mean for web developers?
 
@@ -96,4 +96,4 @@ The UA Reduction deprecation trial will run from Chrome 100 to Chrome 112. Chrom
 
 ## How do I share feedback for the User-Agent Reduction depreciation trial?
 
-Submit any issues or feedback to the [User-Agent Reduction Github repository](https://github.com/miketaylr/user-agent-reduction/issues).
+Submit any issues or feedback to the [User-Agent Reduction GitHub repository](https://github.com/miketaylr/user-agent-reduction/issues).

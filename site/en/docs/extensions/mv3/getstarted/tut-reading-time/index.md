@@ -74,7 +74,7 @@ required if you plan to distribute your extension on the Chrome Web Store. They 
 places like the Extensions page.
 
 Create an `images` folder and place the icons inside. You can download the icons on
-[Github][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
+[GitHub][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
 
 ```json/2-7
 {

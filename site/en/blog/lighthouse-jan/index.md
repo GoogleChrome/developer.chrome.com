@@ -188,7 +188,7 @@ That's it for now!
 
 For all the details on the latest in Lighthouse, see the
 [full release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/1.5.0)
-over on Github. As always,
+over on GitHub. As always,
 [hit us up](https://github.com/GoogleChrome/lighthouse/graphs/contributors)
 to [report bugs](https://github.com/GoogleChrome/lighthouse/issues), file
 feature requests, or brainstorm
