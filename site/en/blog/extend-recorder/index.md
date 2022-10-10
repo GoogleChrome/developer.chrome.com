@@ -20,7 +20,7 @@ tags:
 
 Let’s admit it, writing automated tests is not the most fun thing in a developer’s life. As developers, we want to write features, fix bugs, and improve the world! However, when we don’t have automated testing in our workflows, in the long term, things can get quite buggy. So, we also think that writing automated tests is important.
 
-With the [Recorder](/docs/devtools/recorder/) panel in Chrome DevTools, you can record and replay user flows, export it to various formats (e.g. test scripts) through different 3-party extensions and libraries, customize the user flows with [Puppeteer Replay](https://github.com/puppeteer/replay) library, and integrate them with your existing workflows.
+With the [Recorder](/docs/devtools/recorder/) panel in Chrome DevTools, you can record and replay user flows, export it to various formats (e.g. test scripts) through different 3rd-party extensions and libraries, customize the user flows with [Puppeteer Replay](https://github.com/puppeteer/replay) library, and integrate them with your existing workflows.
 
 In this blog post, we’re going to discuss: 
 
