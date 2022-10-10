@@ -23,6 +23,7 @@ import {html} from 'lit-element';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
 import arrowDownIcon from '../../_includes/icons/arrow-down.svg';
 import {generateIdSalt} from '../utils/salt';
+import closeIcon from '../../_includes/icons/close.svg';
 
 const keyReg = new RegExp('^(Key|Digit|Numpad)', 'i');
 
@@ -133,19 +134,22 @@ export class EnhancedSelect extends BaseElement {
           class="enhanced-select__options"
           @keydown="${this.handleListKeydown}"
         >
-          ${this.options.map(
-            option => html`
+          ${this.options.map(option => {
+            const selected = this.value?.includes(option.value);
+
+            return html`
               <li
-                class="button width-full gap-bottom-100"
+                class="button width-full gap-bottom-100 display-flex align-center justify-content-between"
                 id="${option.id}"
                 tabindex="0"
                 @click="${this.handleSelection}"
-                ?selected="${this.value?.includes(option.value)}"
+                ?selected="${selected}"
               >
                 ${option.label}
+                ${this.multiple && selected ? unsafeSVG(closeIcon) : ''}
               </li>
-            `
-          )}
+            `;
+          })}
         </ul>
       </div>
     `;
@@ -281,7 +285,7 @@ export class EnhancedSelect extends BaseElement {
     e.preventDefault();
 
     // @ts-ignore
-    const id = e.target?.getAttribute('id') || null;
+    const id = e.target.closest('li').getAttribute('id') || null;
 
     const option = this.options.find(option => id === option.id);
 

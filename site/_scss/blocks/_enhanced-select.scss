@@ -39,7 +39,6 @@
 
     li {
       border-radius: 0 100px 100px 0;
-      display: block;
       font-family: 'Google Sans', sans-serif;
       font-size: 0.875rem;
       font-weight: 500;
@@ -51,6 +50,11 @@
     li[selected] {
       background: get-color('grey-50');
       color: get-color('grey-400');
+    }
+
+    li[selected] svg {
+      fill: get-color('grey-500');
+      margin-right: calc(-2.75rem/2);
     }
 
     li:hover:not([selected]) {
