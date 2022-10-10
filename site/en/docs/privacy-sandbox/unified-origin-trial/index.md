@@ -7,7 +7,7 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-09-08
+date: 2022-10-10
 authors:
   - anusmitaray
   - rowan_m
@@ -29,6 +29,12 @@ tells you how to validate your configuration, and provides further resources for
 testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
+
+### October 2022
+
+-  Origin trial [extended to Chrome 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8). 
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/#renew) 
+explains how to renew origin trial enrollment.
 
 ### August 2022
 
