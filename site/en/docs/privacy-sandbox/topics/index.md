@@ -79,7 +79,7 @@ available before attempting to use it.
 
 ## Test with `chrome://flags` or feature flags {: #feature-flags}
 
-There are two ways can try out the Topics API for a single user running Chrome 101 or above:
+There are two ways to try the Topics API as a single user, running Chrome 101 or above:
 
 *  Enable `chrome://flags/#privacy-sandbox-ads-apis`
 *  Run Chrome from the command line with the following flags: 
