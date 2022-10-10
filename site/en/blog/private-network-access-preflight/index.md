@@ -19,7 +19,7 @@ tags:
 
 **Updates**
 
-- **July 7, 2022**: Updated current status and add IP address space defination.
+- **July 7, 2022**: Updated current status and added IP address space definition.
 - **April 27, 2022**: Updated timeline announcement.
 - **March 7, 2022**: Announced rollback after issues were discovered in
   Chrome 98.
