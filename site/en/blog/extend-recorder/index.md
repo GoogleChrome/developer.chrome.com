@@ -36,7 +36,7 @@ By default, the Recorder gives you the ability to export these recordings as a [
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fohgHrLdvct9FtdGzstn.png", alt="Export options.", width="800", height="544" %}
 
-Once you export the user flows as JSON files, you have the options to import it back to the Recorder panel and replay it, or use external libraries to replay it. [Puppeteer Replay](https://goo.gle/puppeteer-replay) library is one of the libraries.
+Once you export the user flows as JSON files, you have the options to [import it back](/docs/devtools/recorder/reference/#import-flows)) to the Recorder panel and replay it, or use external libraries to replay it. [Puppeteer Replay](https://goo.gle/puppeteer-replay) library is one of the libraries.
 
 ### Replay with Puppeteer Replay {: #pptr-replay }
 
