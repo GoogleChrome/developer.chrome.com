@@ -20,7 +20,7 @@ tags:
 
 Let’s admit it, writing automated tests is not the most fun thing in a developer’s life. As developers, we want to write features, fix bugs, and improve the world! However, when we don’t have automated testing in our workflows, in the long term, things can get quite buggy. So, we also think that writing automated tests is important.
 
-With the [Recorder](https://goo.gle/devtools-recorder) panel in Chrome DevTools, you can record and replay user flows, export it to various formats (e.g. test scripts) through different 3-party extensions and libraries, customize the user flows with [Puppeteer Replay](/docs/devtools/recorder/) library, and integrate them with your existing workflows.
+With the [Recorder](/docs/devtools/recorder/) panel in Chrome DevTools, you can record and replay user flows, export it to various formats (e.g. test scripts) through different 3-party extensions and libraries, customize the user flows with [Puppeteer Replay](https://github.com/puppeteer/replay) library, and integrate them with your existing workflows.
 
 In this blog post, we’re going to discuss: 
 
@@ -28,7 +28,7 @@ In this blog post, we’re going to discuss:
 - how to customize your user flows with the help of Puppeteer Replay
 - how to integrate with your [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) workflows
 
-This blog post assumes you know the basics of Recorder. If you are new, follow this [short introductory tutorial and video guide](https://goo.gle/devtools-recorder) to get started.
+This blog post assumes you know the basics of Recorder. If you are new, follow this [short introductory tutorial and video guide](/docs/devtools/recorder/) to get started.
 
 ## Export user flows and replay programmatically {: #export-json }
 
