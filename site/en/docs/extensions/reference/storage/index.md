@@ -6,7 +6,7 @@ api: storage
 
 The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but has been optimized to meet the storage needs of extensions. The following are a few key features: 
 
-- Data is serialized as JSON strings and stored as objects.
+- Stores JSON serializable values as object properties.
 - Storage is asynchronous with bulk read and write operations.
 - Storage data persists when the user clears the cache and browsing history.
 - Available in the service worker, content scripts, and other extension contexts.
@@ -15,7 +15,7 @@ The Storage API provides an extension-specific way to persist user data and stat
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can extensions use Windows.localStorage?
+💡 Can extensions use Window.localStorage?
 {% endDetailsSummary %}
 
 Even though extensions can access [Window.localStorage][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
@@ -120,15 +120,6 @@ The following samples demonstrate the `local`, `sync`, and
   </web-tab>
 </web-tabs>
 
-The Storage API is promisified and can use async/await like in the following example:
-
-```js
-await chrome.storage.session.set({ key: value });
-console.log("Value is set to " + value);
-
-const result = await chrome.storage.session.get(["key"]);
-console.log("Value currently is " + result.key);
-```
 
 To learn more about the `managed` storage area, see [Manifest for storage areas][manifest-storage].
 
@@ -214,7 +205,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 Since service workers are not always running, Manifest V3 extensions sometimes need to
 asynchronously load data from storage before they execute their event handlers. To do this, the
-below snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
+following snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
 global to be populated before executing its logic.
 
 {% Label %}background.js:{% endLabel %}
