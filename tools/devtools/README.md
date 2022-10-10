@@ -55,7 +55,7 @@ Run these script in sequence.
   node ./tools/devtools/wndt-blog-bootstrap.mjs
   ```
 4. Write your English WNDT blog post. Please write your content between `<!-- $contentStart -->` and `<!-- $contentEnd -->`.
-5. Generate translation WNDT blog posts.
+5. Generate translation WNDT blog posts. Optional prompt to generate GitHub issues.
   ```bash
   node ./tools/devtools/wndt-translation-bootstrap.mjs
   ```
