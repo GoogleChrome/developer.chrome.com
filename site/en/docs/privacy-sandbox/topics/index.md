@@ -90,7 +90,7 @@ There are two ways to try the Topics API as a single user, running Chrome 101 or
 
 The [Topics demo](#demo) shows how to use additional flags to adjust settings such as epoch 
 length. If you access the Topics API by running Chrome with command-line flags, don't 
-set `chrome://flags`, since these can override command-line settings. 
+set `chrome://flags`, as these can override command-line settings. 
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 explains how to set flags when running Chrome and other Chromium-based browsers from the command
