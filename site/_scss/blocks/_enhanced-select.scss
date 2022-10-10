@@ -37,7 +37,7 @@
       width: 0.375rem;
     }
 
-    button {
+    li {
       border-radius: 0 100px 100px 0;
       display: block;
       font-family: 'Google Sans', sans-serif;
@@ -48,17 +48,17 @@
       text-align: left;
     }
 
-    button[selected] {
+    li[selected] {
       background: get-color('grey-50');
       color: get-color('grey-400');
     }
 
-    button:hover:not([selected]) {
+    li:hover:not([selected]) {
       background: get-color('blue-50');
       color: get-color('blue-700');
     }
 
-    button:last-child {
+    li:last-child {
       margin-bottom: 0;
     }
   }

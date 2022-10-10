@@ -24,6 +24,8 @@ import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
 import arrowDownIcon from '../../_includes/icons/arrow-down.svg';
 import {generateIdSalt} from '../utils/salt';
 
+const keyReg = new RegExp('^(Key|Digit|Numpad)', 'i');
+
 export class EnhancedSelect extends BaseElement {
   static get formAssociated() {
     return true;
@@ -35,9 +37,11 @@ export class EnhancedSelect extends BaseElement {
     // @ts-ignore
     this.internals = this.attachInternals();
 
-    this.handleOpen = this.handleOpen.bind(this);
+    this.handleLabelClick = this.handleLabelClick.bind(this);
+    this.handleLabelKeydown = this.handleLabelKeydown.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
+    this.handleListKeydown = this.handleListKeydown.bind(this);
 
     this.classList.add('enhanced-select');
 
@@ -50,6 +54,7 @@ export class EnhancedSelect extends BaseElement {
     this._dropdownId = this._generateId('dropdown');
     this._labelId = this._generateId('label');
     this._elements = {};
+    this.focusedIndex = -1;
 
     this.setValue(this.getSelectedValues());
   }
@@ -65,6 +70,35 @@ export class EnhancedSelect extends BaseElement {
     };
   }
 
+  firstUpdated(_changedProperties) {
+    super.firstUpdated(_changedProperties);
+
+    this._elements.label = this.querySelector(`#${this._labelId}`);
+    this._elements.list = this.querySelector(`#${this._dropdownId}`);
+    this._elements.listItems = this.querySelector(`#${this._dropdownId} li`);
+
+    this.addEventListener('focusout', this.handleFocusOut);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+
+    this.removeEventListener('focusout', this.handleFocusOut);
+
+    this._elements.label.removeEventListener('click', this.handleLabelClick);
+    this._elements.label.removeEventListener(
+      'keydown',
+      this.handleLabelKeydown
+    );
+    Array.from(this._elements.listItems).forEach(item =>
+      item.removeEventListener('click', this.handleSelection)
+    );
+    this._elements.list.removeEventListener('keydown', this.handleSelection);
+  }
+
+  /**
+   * @param {String[]} value
+   */
   setValue(value) {
     this.value = value;
 
@@ -75,27 +109,6 @@ export class EnhancedSelect extends BaseElement {
     this.internals.setFormValue(data);
 
     this.dispatchEvent(new Event('change', {bubbles: true, cancelable: true}));
-  }
-
-  firstUpdated(_changedProperties) {
-    super.firstUpdated(_changedProperties);
-
-    this._elements.label = this.querySelector(`#${this._labelId}`);
-    this._elements.buttons = this.querySelector(`#${this._dropdownId} button`);
-
-    this.addEventListener('focusout', this.handleFocusOut);
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-
-    this.removeEventListener('focusout', this.handleFocusOut);
-
-    this._elements.label?.removeEventListener('click', this.handleOpen);
-    this._elements.label?.removeEventListener('keypress', this.handleOpen);
-    Array.from(this._elements.buttons).forEach(button =>
-      button.removeEventListener('click', this.handleSelection)
-    );
   }
 
   render() {
@@ -109,23 +122,28 @@ export class EnhancedSelect extends BaseElement {
           class="display-flex align-center"
           aria-controls="${this._dropdownId}"
           tabindex="0"
-          @click="${this.handleOpen}"
-          @keypress="${this.handleOpen}"
+          @click="${this.handleLabelClick}"
+          @keydown="${this.handleLabelKeydown}"
         >
           ${this.label} ${unsafeSVG(arrowDownIcon)}
         </label>
 
-        <ul id="${this._dropdownId}" class="enhanced-select__options">
+        <ul
+          id="${this._dropdownId}"
+          class="enhanced-select__options"
+          @keydown="${this.handleListKeydown}"
+        >
           ${this.options.map(
             option => html`
-              <button
+              <li
                 class="button width-full gap-bottom-100"
-                @click="${this.handleSelection}"
-                ?selected="${this.value.includes(option.value)}"
                 id="${option.id}"
+                tabindex="0"
+                @click="${this.handleSelection}"
+                ?selected="${this.value?.includes(option.value)}"
               >
                 ${option.label}
-              </button>
+              </li>
             `
           )}
         </ul>
@@ -147,11 +165,17 @@ export class EnhancedSelect extends BaseElement {
     return element.firstChild.nodeValue;
   }
 
+  /**
+   * @param {HTMLSelectElement} nativeSelect
+   * @returns {string}
+   * @private
+   */
   _getName(nativeSelect) {
     if (!nativeSelect.hasAttribute('name')) {
       throw new Error('Missing attribute: name');
     }
 
+    // @ts-ignore
     return nativeSelect.getAttribute('name');
   }
 
@@ -170,7 +194,7 @@ export class EnhancedSelect extends BaseElement {
   }
 
   /**
-   * @returns {{id, label: *, value: *, selected: *}[]}
+   * @returns {{id:string, label: string, value: string, selected: boolean}[]}
    * @private
    */
   _getOptions() {
@@ -199,29 +223,183 @@ export class EnhancedSelect extends BaseElement {
     return `${prefix}-${generateIdSalt(prefix)}`;
   }
 
-  handleOpen(e) {
-    if (e.type === 'keypress' && e.keyCode !== 13) {
-      return;
-    }
-
-    this.open = !this.open;
+  handleLabelClick() {
+    this.toggleOpen();
   }
 
+  /**
+   * @param {KeyboardEvent} e
+   */
+  handleLabelKeydown(e) {
+    if (e.code !== 'Tab') {
+      e.preventDefault();
+    }
+
+    switch (e.code) {
+      case 'Enter':
+      case 'Escape':
+        this.toggleOpen();
+        break;
+      case 'ArrowDown':
+        this.focusByIndex(this.focusedIndex + 1);
+        break;
+      case 'Tab':
+        if (this.open) {
+          this.focusedIndex = 0;
+        }
+        break;
+      case 'Home':
+      case 'PageUp':
+        this.focusByIndex(0);
+        break;
+      case 'End':
+      case 'PageDown':
+        this.focusByIndex(this.options.length - 1);
+        break;
+      default:
+        if (keyReg.test(e.code)) {
+          this.focusByEventKey(e.key);
+        }
+        break;
+    }
+  }
+
+  /**
+   * @param {FocusEvent} e
+   */
   handleFocusOut(e) {
+    // @ts-ignore
     if (this.contains(e.relatedTarget)) return;
 
     this.open = false;
   }
 
+  /**
+   * @param {MouseEvent} e
+   */
   handleSelection(e) {
     e.preventDefault();
 
-    const option = this.options.find(option => e.target.id === option.id);
+    // @ts-ignore
+    const id = e.target?.getAttribute('id') || null;
+
+    const option = this.options.find(option => id === option.id);
 
     if (!option) {
-      throw new Error(`Missing option: ${e.target.id}`);
+      throw new Error(`Missing option: ${id}`);
     }
 
+    this.selectOption(option);
+  }
+
+  /**
+   * @param {KeyboardEvent} e
+   */
+  handleListKeydown(e) {
+    if (!this.open) {
+      return;
+    }
+
+    if (e.code !== 'Tab') {
+      e.preventDefault();
+    }
+
+    switch (e.code) {
+      case 'Enter':
+      case 'Escape':
+        this.selectByIndex(this.focusedIndex);
+        break;
+      case 'ArrowDown':
+        this.focusByIndex(this.focusedIndex + 1);
+        break;
+      case 'ArrowUp':
+        this.focusByIndex(this.focusedIndex - 1);
+        break;
+      case 'Tab':
+        this.incrementFocus();
+        break;
+      case 'Home':
+      case 'PageUp':
+        this.focusByIndex(0);
+        break;
+      case 'End':
+      case 'PageDown':
+        this.focusByIndex(this.options.length - 1);
+        break;
+      default:
+        if (keyReg.test(e.code)) {
+          this.focusByEventKey(e.key);
+        }
+        break;
+    }
+  }
+
+  /**
+   * @param {String} eventKey
+   */
+  focusByEventKey(eventKey) {
+    const normalized = String(eventKey).toLowerCase();
+
+    const index = this.options.findIndex(option =>
+      option.label.toLowerCase().startsWith(normalized)
+    );
+
+    if (index === -1) {
+      return;
+    }
+
+    this.focusByIndex(index);
+  }
+
+  toggleOpen() {
+    this.open = !this.open;
+  }
+
+  /**
+   * @param {number} i
+   */
+  focusByIndex(i) {
+    if (this.open) {
+      if (i < 0) {
+        i = 0;
+      } else if (i >= this.options.length) {
+        i = this.options.length - 1;
+      }
+      const lis = this.querySelectorAll('li');
+      lis[i].focus();
+      this.focusedIndex = i;
+    }
+  }
+
+  incrementFocus() {
+    const newValue = this.focusedIndex + 1;
+
+    if (newValue > this.options.length - 1) return;
+
+    this.focusedIndex = newValue;
+  }
+
+  /**
+   * Selects option by index and emits result.
+   *
+   * @param {number} i
+   */
+  selectByIndex(i) {
+    if (i < 0) {
+      i = 0;
+    }
+
+    if (i >= this.options.length) {
+      i = this.options.length - 1;
+    }
+
+    this.selectOption(this.options[i]);
+  }
+
+  /**
+   * @param {{id:string, label: string, value: string, selected: boolean}} option
+   */
+  selectOption(option) {
     this.multiple
       ? (option.selected = !option.selected)
       : this.options.map(o => (o.selected = o === option));
@@ -231,6 +409,9 @@ export class EnhancedSelect extends BaseElement {
     this.open = this.multiple;
   }
 
+  /**
+   * @returns {String[]}
+   */
   getSelectedValues() {
     return this.options.filter(o => o.selected).map(o => o.value);
   }
