@@ -184,10 +184,10 @@ Thanks to [Rachel Andrew] for reviewing this article.
 [issues]: https://github.com/w3c/mediacapture-screen-share/issues/
 [@chromiumdev]: https://twitter.com/chromiumdev
 [spec]: https://w3c.github.io/mediacapture-screen-share/
-[`displaysurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/displaysurface_constraint_explainer.md
-[`surfaceswitching` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/surfaceswitching_explainer.md
-[`selfbrowsersurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/selfbrowsersurface_explainer.md
-[`systemaudio` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/systemaudio_explainer.md
+[`displaysurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/displaySurface_Constraint_Explainer.md
+[`surfaceswitching` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/surfaceSwitching_Explainer.md
+[`selfbrowsersurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/selfBrowserSurface_Explainer.md
+[`systemaudio` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/systemAudio_Explainer.md
 [tag]: https://github.com/w3ctag/design-reviews/issues/744
 [john schnobrich]: https://unsplash.com/photos/2FPjlAyMQTA
 [rachel andrew]: https://github.com/rachelandrew
