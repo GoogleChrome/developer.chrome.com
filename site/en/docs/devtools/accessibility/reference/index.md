@@ -52,8 +52,6 @@ To audit a page:
 
     {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring an accessabillity scan in Lighthouse panel.", width="800", height="1053" %}
 
-    **Figure 1**. Configuring audits
-
     {% Aside %}
 
     **Note**: The screenshots in this section were taken with Chrome 69. In the screenshots, the tab
@@ -81,30 +79,24 @@ To audit a page:
 
     {% Img src="image/admin/62KIEtieXbeJl36cN0kQ.png", alt="A report.", width="800", height="983" %}
 
-    **Figure 2**. A report
-
 8.  Click an audit to learn more about it.
 
     {% Img src="image/admin/rlUAzlrnHlt2dAfTtsAL.png", alt="More information about an audit.", width="800", height="586" %}
-
-    **Figure 3**. More information about an audit
 
 9.  Click **Learn More** to view that audit's documentation.
 
     {% Img src="image/admin/uLnvFFpu1Aqksuh5JxdJ.png", alt="Viewing an audit's documentation.", width="800", height="728" %}
 
-    **Figure 4**. Viewing an audit's documentation
-
 ### See also: aXe extension {: #axe }
 
 You may prefer to use the [aXe extension][6] or [Lighthouse extension][14] rather than the Lighthouse panel that is available by default in Chrome.
 They generally provide the same information, since aXe is the underlying engine that powers the Lighthouse panel. The aXe
-extension has a different UI and describes audits slightly differently. One advantage that the aXe
-extension has over the Audits panel is that it lets you inspect and highlight failing nodes.
+extension has a different UI and describes audits slightly differently.
 
 {% Img src="image/admin/XUIvZ0Hmn8stW6KxQCF3.png", alt="The aXe extension.", width="800", height="626" %}
 
-**Figure 5**. The aXe extension
+One advantage that the aXe
+extension has over the Audits panel is that it lets you inspect and highlight failing nodes.s
 
 ## The Accessibility pane {: #pane }
 
@@ -120,8 +112,6 @@ To open the Accessibility pane:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SyQG3AhymPvIohoZfizN.png", alt="Inspecting an h1 element of the DevTools homepage in the Accessibility pane.", width="800", height="466" %}
 
-**Figure 6**. Inspecting the `h1` element of the DevTools homepage in the Accessibility pane
-
 ### View an element's position in the accessibility tree {: #tree }
 
 [The accessibility tree][7] is a subset of the DOM tree. It only contains elements from the DOM tree
@@ -130,8 +120,6 @@ that are relevant and useful for displaying the page's contents in a screen read
 Inspect an element's position in the accessibility tree from the [Accessibility pane][8].
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mTkkFUVuQ64mAY5iXCE3.png", alt="The Accessibility Tree section", width="800", height="524" %}
-
-**Figure 7**. The Accessibility Tree section
 
 This view allows you to explore only a single node and its ancestors. To explore the whole accessibility tree, follow the steps below.
 
@@ -168,8 +156,6 @@ View an element's ARIA attributes in [the Accessibility pane][9].
 
 {% Img src="image/admin/5gOS8Kz2Qdxu3FbaKZ6W.png", alt="The ARIA Attributes section", width="800", height="506" %}
 
-**Figure 8**. The ARIA Attributes section
-
 ### View an element's computed accessibility properties {: #computed }
 
 {% Aside %}
@@ -184,8 +170,6 @@ viewed in the **Computed Properties** section of the **Accessibility** pane.
 View an element's computed accessibility properties in [the Accessibility pane][11].
 
 {% Img src="image/admin/KhrNElIocLRywp4Na7x7.png", alt="The Computed (Accessibility) Properties section.", width="800", height="506" %}
-
-**Figure 9**. The Computed (Accessibility) Properties section
 
 ## View the contrast ratio of a text element in the Color Picker {: #contrast }
 
@@ -204,13 +188,9 @@ The Color Picker can help you make sure that your text meets recommended contras
 
     {% Img src="image/admin/I2op86IuFtozDrACGUYb.png", alt="Inspecting a paragraph in the DOM Tree.", width="800", height="516" %}
 
-    **Figure 10**. Inspecting a paragraph in the DOM Tree
-
 3.  In the **Styles** pane, click the color square next to the element's `color` value.
 
     {% Img src="image/admin/FspNZHSagZlSOAOqtCqG.png", alt="The color property of the element.", width="800", height="516" %}
-
-    **Figure 11**. The `color` property of the element
 
 4.  Check the **Contrast Ratio** section of the Color Picker. One checkmark means that the element
     meets the [minimum recommendation][12]. Two checkmarks means that it meets the [enhanced
@@ -218,8 +198,7 @@ The Color Picker can help you make sure that your text meets recommended contras
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mwC8fcpEcDQoDO0ZqJ4G.png", alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of 16.10.", width="800", height="516" %}
 
-    **Figure 12**. The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of
-    `16.10`
+    The Contrast Ratio section of the **Color Picker** in the example above shows two checkmarks and a value of `16.10`.
 
 5.  Click the **Contrast Ratio** section to see more information. A line appears in the visual
     picker at the top of the Color Picker. If the current color meets recommendations, then anything
@@ -227,8 +206,6 @@ The Color Picker can help you make sure that your text meets recommended contras
     recommendations, then anything on the same side also does not meet recommendations.
 
     {% Img src="image/admin/Jw8dX2kSVDdPUtfDHT5F.png", alt="The Contrast Ratio Line in the visual picker.", width="800", height="516" %}
-
-    **Figure 13**. The Contrast Ratio Line in the visual picker
 
 [1]: https://developers.google.com/web/fundamentals/accessibility
 [2]: /docs/devtools/accessibility/navigation
