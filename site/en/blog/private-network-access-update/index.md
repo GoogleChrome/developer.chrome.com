@@ -170,7 +170,7 @@ console](/origintrials/#/view_trial/4081387162304512001),
 and obtain a trial token for each affected origin. Then configure your web
 servers to attach the origin-specific `Origin-Trial: $token` header on
 responses. Note that this header need only be set on main resource and
-navigation responses, and then only when the resulting document will make use of
+navigation responses, and only then will the resulting document make use of
 the deprecated feature. It is useless (though harmless) to attach this header to
 subresource responses.
 
