@@ -36,7 +36,7 @@ This guide assumes that you have basic web development experience. We recommend 
 ## Build the extension {: #build }
 
 To start, create a new directory called `reading-time` to hold the extension's files. If you
-prefer, you can download the complete source code from [Github][github-reading-time].
+prefer, you can download the complete source code from [GitHub][github-reading-time].
 
 ### Step 1: Add information about the extension {: #step-1 }
 
@@ -74,7 +74,7 @@ required if you plan to distribute your extension on the Chrome Web Store. They 
 places like the Extensions page.
 
 Create an `images` folder and place the icons inside. You can download the icons on
-[Github][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
+[GitHub][github-rt-icons]. Next, add the highlighted code to your manifest to declare icons:
 
 ```json/2-7
 {
