@@ -50,7 +50,7 @@ export class EnhancedSelect extends BaseElement {
 
     this.name = this.name || this._getName(nativeSelect);
     this.multiple = this.multiple || nativeSelect.hasAttribute('multiple');
-    this.label = this._getLabel();
+    this.label = this.label || '';
     this.options = this._getOptions();
     this._dropdownId = this._generateId('dropdown');
     this._labelId = this._generateId('label');
@@ -63,7 +63,7 @@ export class EnhancedSelect extends BaseElement {
   static get properties() {
     return {
       name: {type: String, reflect: true},
-      label: {type: String, reflect: false},
+      label: {type: String, reflect: true},
       value: {type: Array, reflect: true},
       open: {type: Boolean, reflect: true},
       multiple: {type: Boolean, reflect: true},
@@ -120,13 +120,13 @@ export class EnhancedSelect extends BaseElement {
       >
         <label
           id="${this._labelId}"
-          class="display-flex align-center"
+          class="display-flex align-center justify-content-between"
           aria-controls="${this._dropdownId}"
           tabindex="0"
           @click="${this.handleLabelClick}"
           @keydown="${this.handleLabelKeydown}"
         >
-          ${this.label} ${unsafeSVG(arrowDownIcon)}
+          <span>${this.label}</span> ${unsafeSVG(arrowDownIcon)}
         </label>
 
         <ul
@@ -153,20 +153,6 @@ export class EnhancedSelect extends BaseElement {
         </ul>
       </div>
     `;
-  }
-
-  /**
-   * @returns {string|null}
-   * @private
-   */
-  _getLabel() {
-    const element = this.querySelector('label');
-
-    if (!element || !element.firstChild) {
-      throw new Error('Missing element: label');
-    }
-
-    return element.firstChild.nodeValue;
   }
 
   /**
