@@ -8,18 +8,20 @@ authors:
   - phao
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-07-26
+updated: 2022-10-10
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
   - chrome-102
   - chrome-104
+  - chrome-109
   - security
 ---
 
 **Updates**
 
+- **Oct 10, 2022**: Updated deprecation trial timeline.
 - **July 7, 2022**: Updated current status and add IP address space defination.
 - **April 27, 2022**: Updated timeline announcement.
 - **March 7, 2022**: Announced rollback after issues were discovered in
@@ -68,9 +70,7 @@ the change and adjust accordingly.
     seconds.
     {% endAside %}
 
-2. In ~~Chrome 107 at the earliest~~ Chrome 109:
-    * This will begin _only_ if and when compatibility data indicates that the
-      change is safe enough and we've outreached directly when necessary.
+2. In Chrome 109:
     * Chrome enforces that preflight requests must succeed, otherwise failing
       the requests.
     * [A deprecation trial](/blog/origin-trials/#deprecation-trials) starts at
