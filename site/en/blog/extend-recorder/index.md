@@ -32,7 +32,7 @@ This blog post assumes you know the basics of Recorder. If you are new, follow t
 
 ## Export user flows and replay programmatically {: #export-json }
 
-By default, the Recorder gives you the ability to export these recordings as a Puppeteer or Puppeteer Replay script, or as a plain JSON file.
+By default, the Recorder gives you the ability to export these recordings as a [Puppeteer](https://pptr.dev/) or [Puppeteer Replay](https://github.com/puppeteer/replay) script, or as a plain JSON file.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fohgHrLdvct9FtdGzstn.png", alt="Export options.", width="800", height="544" %}
 
