@@ -188,9 +188,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Desglose de tiempos de LCP en el panel de pespectiva de rendimiento {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-El panel **Perspectiva de Rendimiento** ahora muestra el [desglose de tiempos](web.dev/optimize-lcp/#lcp-breakdown) de la [`Largest Containful Paint` (LCP)](/docs/devtools/performance-insights/#mayor-contenido-pintura). Utilice esta información de tiempos para comprender e identificar una oportunidad para mejorar el rendimiento de LCP.
-
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Desglose de tiempos de LCP en el panel Perspectiva de Rendimiento", width="800", height="523" %}

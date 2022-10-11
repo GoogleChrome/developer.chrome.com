@@ -1,4 +1,4 @@
----	
+---
 layout: "layouts/blog-post.njk"
 title: "DevTools 新功能（Chrome 106）"
 authors:
@@ -201,12 +201,11 @@ Chromium 议题: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## 性能洞察面板中的LCP时序分解 {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 **性能洞察**面板现在显示了[时间表分类](web.dev/optimize-lcp/#lcp-breakdown)中的[Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint)。 并使用这些时间信息来了解和提高 LCP 性能的机会。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="LCP timings breakdown in the Performance Insights panel", width="800", height="523" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Performance Insights 面板中的 LCP 计时细分", width="800", height="523" %}
-
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/883542a3727a5bc1415ffee7c7bc7f7218d9e2a5 #}
 
