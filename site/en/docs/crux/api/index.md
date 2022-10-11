@@ -237,7 +237,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 
 ### Collection Period
 
-As of October 2022, the CrUX API contains a `collectionPeriod` object listing the `firstDate` and `endDate` included in the collection. An example is provided below:
+As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
 
 ```json
     "collectionPeriod": {
