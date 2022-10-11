@@ -303,6 +303,6 @@ Equally, if your app already relies on JavaScript for its animations, you may be
 being at least consistent with your existing codebase.
 
 If you want to have a look through the code for this effect, take a look at the
-[UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip)
+[UI Element Samples GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip)
 and, as always, let us know how you get on in the comments below.
 

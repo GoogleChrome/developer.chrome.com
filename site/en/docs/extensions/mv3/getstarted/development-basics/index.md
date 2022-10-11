@@ -25,7 +25,7 @@ alt="Hello extension", width="206", height="130", class="screenshot" %}
 </figure>
 
 Start by creating a new directory to store extension files. If you prefer, you can download the full
-source code from [Github][sample-hello-world].
+source code from [GitHub][sample-hello-world].
 
 Next, create a new file in this directory called `manifest.json` and add the following code:
 

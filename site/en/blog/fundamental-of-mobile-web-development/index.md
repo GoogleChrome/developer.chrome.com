@@ -42,7 +42,7 @@ Box](https://the-pastry-box-project.net/addy-osmani/2014-January-19).
 If you do spot any issues with the site or it's content or you'd like Web
 Fundamentals to cover a particular topic, then please do let us know by
 [submitting feedback on
-Github](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20for:%20/fundamentals/index.html).
+GitHub](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20for:%20/fundamentals/index.html).
 
 ## Build
 

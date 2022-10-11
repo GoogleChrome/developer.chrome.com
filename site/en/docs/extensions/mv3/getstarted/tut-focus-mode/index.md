@@ -28,7 +28,7 @@ This guide assumes that you have basic web development experience. We recommend 
 ## Build the extension {: #build }
 
 To start, create a new directory called `focus-mode` that will hold the extension's files. If you
-prefer, you can download the complete source code on [Github][github-focus-mode].
+prefer, you can download the complete source code on [GitHub][github-focus-mode].
 
 ### Step 1: Add the extension data and icons {: #step-1 }
 
