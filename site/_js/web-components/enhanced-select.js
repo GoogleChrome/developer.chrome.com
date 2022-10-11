@@ -50,7 +50,8 @@ export class EnhancedSelect extends BaseElement {
 
     this.name = this.name || this._getName(nativeSelect);
     this.multiple = this.multiple || nativeSelect.hasAttribute('multiple');
-    this.label = this.label || '';
+    this.label = '';
+    this.fixedLabel = false;
     this.options = this._getOptions();
     this._dropdownId = this._generateId('dropdown');
     this._labelId = this._generateId('label');
@@ -68,17 +69,30 @@ export class EnhancedSelect extends BaseElement {
       open: {type: Boolean, reflect: true},
       multiple: {type: Boolean, reflect: true},
       options: {type: Array, reflect: false},
+      fixedLabel: {type: Boolean, reflect: true},
     };
   }
 
   firstUpdated(_changedProperties) {
     super.firstUpdated(_changedProperties);
-
     this._elements.label = this.querySelector(`#${this._labelId}`);
     this._elements.list = this.querySelector(`#${this._dropdownId}`);
     this._elements.listItems = this.querySelector(`#${this._dropdownId} li`);
 
     this.addEventListener('focusout', this.handleFocusOut);
+  }
+
+  get displayLabel() {
+    // @ts-ignore
+    if (this.value.length === 0 || this.fixedLabel) return this.label;
+
+    if (this.multiple) {
+      // @ts-ignore
+      return `${this.value.length} items selected`;
+    }
+
+    // @ts-ignore
+    return this.options.find(option => option.value === this.value[0]).label;
   }
 
   disconnectedCallback() {
@@ -126,7 +140,7 @@ export class EnhancedSelect extends BaseElement {
           @click="${this.handleLabelClick}"
           @keydown="${this.handleLabelKeydown}"
         >
-          <span>${this.label}</span> ${unsafeSVG(arrowDownIcon)}
+          <span>${this.displayLabel}</span> ${unsafeSVG(arrowDownIcon)}
         </label>
 
         <ul
@@ -198,7 +212,7 @@ export class EnhancedSelect extends BaseElement {
       id: option.id || this._generateId(`option-${index}`),
       label: option.label,
       value: option.value,
-      selected: option.selected,
+      selected: option.hasAttribute('selected'),
     }));
   }
 
