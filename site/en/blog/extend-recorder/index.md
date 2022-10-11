@@ -115,7 +115,7 @@ For example, you can record and export the user flows as [WebPageTest custom scr
 In addition to that, If you already have testing tools in place, there are extensions to export user flows to different test scripts like Cypress, Nightwatch, WebdriverIO, Testing Library, and more. Here is the [full list](/docs/devtools/recorder/reference/#recorder-extension). This could help your and your team bootstrap tests quicker.
 
 
-### Transform to different test scripts programmatically {: #pptr-replay }
+### Transform to different test scripts programmatically {: #transform }
 
 On top of the extensions, most of these test providers also [published libraries](https://github.com/puppeteer/replay#getting-started-with-puppeteer-replay) to help you convert multiple JSON user flows programmatically.
 
