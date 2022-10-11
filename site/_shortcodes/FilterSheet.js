@@ -42,7 +42,7 @@ function FilterSheet(content) {
  * @param {String} content
  * @param {String} title
  *
- * @returns {*}
+ * @returns {String}
  */
 function FilterSheetSection(content, title) {
   return html`
@@ -59,7 +59,7 @@ function FilterSheetSection(content, title) {
  *
  * @param {String} content
  *
- * @returns {*}
+ * @returns {String}
  */
 function FilterSheetButtons(content) {
   return html`
