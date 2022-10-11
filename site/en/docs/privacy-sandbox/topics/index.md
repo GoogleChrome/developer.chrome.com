@@ -6,7 +6,7 @@ subhead: >
 description: >
   A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-07-18
+updated: 2022-10-08
 authors:
   - samdutton
 ---
@@ -28,12 +28,17 @@ This document outlines a new proposal for interest-based advertising: the Topics
 
 ---
 
+## Try the demo {: #demo}
+
+There is a demo of the Topics API at [topics-demo.glitch.me](https://topics-demo.glitch.me/). 
+This explains how to try out and debug the API for a single user.
+
+
 ## Take part in a Topics origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/blog/origin-trials/) has been
-made available in Chrome Beta 101.0.4951.26 and above on desktop for the 
-Topics, [FLEDGE](/docs/privacy-sandbox/fledge) and
-[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics,
+[FLEDGE](/docs/privacy-sandbox/fledge) and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
 
@@ -57,42 +62,51 @@ that provide a valid trial token:
     document.head.append(otMeta);
     ```
 
-An iframe running Topics code&mdash;such as a `document.browsingTopics()` call to observe topics&mdash;will
-need to provide a token that matches its origin.
+An iframe running Topics code&mdash;such as a `document.browsingTopics()` call to observe
+topics&mdash;will need to provide a token that matches its origin.
 
 {% Aside 'caution' %}
 
-Not all users are eligible for the Privacy Sandbox Relevance and Measurement 
+Not all users are eligible for the Privacy Sandbox Relevance and Measurement
 origin trial, even on pages that provide a valid trial token.
 
 [Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
-explains why this is, and shows how you can (and should) detect if an origin 
-trial feature is available before attempting to use it.
+explains why this is, and shows how you can (and should) detect if an origin trial feature is
+available before attempting to use it.
 
 {% endAside %}
 
 
 ## Test with `chrome://flags` or feature flags {: #feature-flags}
 
-You can try out the Topics API for a single user running Chrome 101 or above:
+There are two ways to try the Topics API as a single user, running Chrome 101 or above:
 
-*  Set the `--enable-features=PrivacySandboxAdsAPIsOverride` flag from the command line
 *  Enable `chrome://flags/#privacy-sandbox-ads-apis`
+*  Run Chrome from the command line with the following flags: 
+
+``` text
+--enable-features=BrowsingTopics,PrivacySandboxAdsAPIsOverride,OverridePrivacySandboxSettingsLocalTesting
+``` 
+
+The [Topics demo](#demo) shows how to use additional flags to adjust settings such as epoch 
+length. If you access the Topics API by running Chrome with command-line flags, don't 
+set `chrome://flags`, as these can override command-line settings. 
 
 [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-explains how to set flags when running Chrome and other Chromium-based 
-browsers from the command line.
+explains how to set flags when running Chrome and other Chromium-based browsers from the command
+line. 
+
 
 {% Aside %}
 
-This is an in-progress version of the API for early testing, so it should 
-not be considered feature complete or indicative of the final implementation.
+This is an in-progress version of the API for early testing, so it should not be considered feature
+complete or indicative of the final implementation.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides 
-implementation timing information for FLEDGE and other Privacy Sandbox 
-proposals.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing
+information for FLEDGE and other Privacy Sandbox proposals.
 
 {% endAside %}
+
 
 ## Detect feature support
 
@@ -116,16 +130,15 @@ being used. To protect user privacy, there is no way to check for this programma
 
 ## Why do we need this API?
 
-The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal
-for a mechanism to enable interest-based advertising, without having to 
-resort to tracking the sites a user visits.
+The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) proposal for a mechanism to
+enable interest-based advertising, without having to resort to tracking the sites a user visits.
 
 {% Aside %}
 
 **Interest-based advertising (IBA)** is a form of personalized advertising in which an ad is
 selected for a user based on their interests, inferred from the sites they've recently visited.
-This is different from contextual advertising, which aims to match content 
-on the page the user is visiting.
+This is different from contextual advertising, which aims to match content on the page the user is
+visiting.
 
 IBA can help advertisers to reach potential customers and help fund websites that cannot
 otherwise easily monetize visits to their site purely via contextual advertising. IBA can also
@@ -140,11 +153,11 @@ appropriate advertisements.
 
 The Topics API has three main tasks:
 
--  Map website hostnames to topics of interest. For example, a yoga website 
-   might be classified as being related to "Fitness".
+-  Map website hostnames to topics of interest. For example, a yoga website might be classified as
+   being related to "Fitness".
 -  Calculate the top topics for a user based on their recent browsing activity.
--  Provide a JavaScript API to provide topics currently of interest to the 
-   user, to help select the appropriate ads.
+-  Provide a JavaScript API to provide topics currently of interest to the user, to help select the
+   appropriate ads.
 
 The Topics API can help facilitate robust user controls, as the API is built on top of recognizable,
 high-level topics. Chrome plans to offer users the option to remove individual topics, and to show
@@ -176,13 +189,17 @@ based on the [hostnames](https://web.dev/same-site-same-origin/#origin) of the s
 visited.
 
 {% Aside %}
-View the topics inferred for hostnames [from the `chrome://topics internal` page](#view-inferred-topics).
+Chrome's implementation of the Topics API downloads a [TensorFlow Lite](tensorflow.org/lite/guide)
+file representing the model, so it can be used locally on your device. The model file is in an efficient,
+portable format known as FlatBuffers, which has the `.tflite` filename extension.
+
+Access the TensorFlow Lite model file, and the topics inferred for hostnames,
+[from the `chrome://topics internal` page](#view-inferred-topics).
 {% endAside %}
 
-The diagram below outlines a simplified example, to demonstrate how the 
-Topics API might help an adtech platform to select an appropriate ad. The 
-example assumes that the user's browser already has a
-model to map website hostnames to topics.
+The diagram below outlines a simplified example, to demonstrate how the Topics API might help an
+adtech platform to select an appropriate ad. The example assumes that the user's browser already
+has a model to map website hostnames to topics.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/u9e1VvzblNVHCfyk1hRY.png",
   alt="Diagram showing the stages in the Topics API lifecycle, from a user visiting websites to an ad
@@ -288,11 +305,6 @@ be returned.
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
 
-{% Aside 'warning' %}
-This snippet of code is provided only to show how the Topics JavaScript API 
-might be used. API design is subject to change.
-{% endAside %}
-
 ```javascript
 // Get the array of top topics for this user.
 const topics = await document.browsingTopics();
@@ -311,6 +323,70 @@ const creative = await response.json();
 
 // Display ad.
 ```
+
+{% Aside 'warning' %}
+This snippet of code is provided only to show how the Topics JavaScript API
+might be used. API design is subject to change.
+{% endAside %}
+
+#### Access topics without modifying state {: #observe-false}
+
+A caller can specify that they would like to retrieve topics without modifying state by calling
+`document.browsingTopics({observe: false})`.
+
+Including the `{observe: false}` argument means that topics can be returned, but the call will not
+cause the current page to be included in the weekly epoch calculation, nor will it update the list
+of topics observed for the caller.
+
+### Use a header to access topics
+
+Instead of calling `document.browsingTopics()`, topics can be retrieved via a request header, and
+marked as observed and eligible for topics calculation via response headers.
+
+This is likely to be much more performant than using the JavaScript API.
+
+The request header will be sent on document requests, if the list of topics is non-empty and the
+request is allowable. For example, when the appropriate [permission policy](#site-opt-out) is in play,
+and the context is secure.
+
+{% Aside 'caution' %}
+This feature is not yet available for testing within the [Privacy Sandbox Relevance and Measurement origin trial](/origintrials/#/view_trial/771241436187197441). It will be made available in the future,
+and is currently [targeted for Chrome 108](https://github.com/patcg-individual-drafts/topics/pull/81#issuecomment-1260846931),
+but that is subject to change.
+{% endAside %}
+
+#### Request header example
+
+``` text
+Sec-Browsing-Topics: 123;model=1;taxonomy=1;version=2, 2;model=1;taxonomy=1;version=2
+```
+
+This header includes two topics from the
+[taxonomy](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md), 123 and 2,
+along with their version information.
+
+A Topics request header can also be provided with a `fetch()` request:
+
+``` javascript
+fetch(<url>, {browsingTopics: true})
+```
+
+#### Response header example
+
+``` text
+Observe-Browsing-Topics: ?1
+```
+
+#### Notes
+
+-  Redirects will be followed, and the topics sent in the redirect request will be specific to
+    the redirect URL.
+-  The request header will not modify state for the caller unless there is a corresponding
+    response header. That is, the topic of the page won't be considered observed, nor will it
+    affect the user's topic calculation for the next epoch.
+-  The response header is only honored if the corresponding request included the topics
+    header (or would have included the header, if the request wasn't empty).
+-  The URL of this request provides the registrable domain used for topic observation.
 
 ### How does the Topics API decide which callers can see which topic?
 
@@ -431,7 +507,9 @@ is still under consideration.
 
 #### Where can I find the current classifier model?
 
-Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at`chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
+{: #manually-curated}
+
+Topics are manually curated for 10,000 top domains, and this curation is used to train the classifier. This list can be found in `override_list.pb.gz`, which is available at `chrome://topics-internals/` under the current model in the "Classifier" tab. The domain-to-topics associations in the list are used by the API in lieu of the output of the model itself.
 
 To run the model directly, refer to [TensorFlow's guide to running a model](https://www.tensorflow.org/lite/guide/inference#running_a_model).
 
@@ -499,7 +577,7 @@ You can view information about topics observed for your browser during the curre
 epochs.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/M253GclVFDCnvPJlTSVR.png",
-  alt="Screenshot of chrome://topics-internal page with Topics State panel selected.",
+  alt="chrome://topics-internal page with Topics State panel selected.",
   width="800", height="697" %}
 
 In this example, recently visited sites included
@@ -519,9 +597,9 @@ You can view the topics inferred by the Topics
 one or more hostnames.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/SOTuE2ljC55PaYll1UP1.png",
-  alt="Screenshot of chrome://topics-internal page with Classifier panel selected.",
+  alt="chrome://topics-internal page with Classifier panel selected.",
   width="800", height="695" %}
-  
+
 {% Aside %}
 The current implementation of the Topics API infers topics from hostnames only: not any other part
 of a URL.
@@ -530,22 +608,58 @@ Use hostnames only (without protocol or path) to view inferred topics from the
 `chrome://topics-internals` Classifier. `chrome://topics-internals` will display an error if you
 attempt to include a  "/" in the Host field.
 {% endAside %}
- 
+
 #### Access the tflite classifier model file {: #access-tflite-file}
 
-The **Classifier** tab of the `chrome://topics-internals` page also provides the file path for the tflite 
-model used by the Topics API. 
+The **Classifier** tab of the `chrome://topics-internals` page also provides the file path for the TensorFlow Lite
+classifier model `.tflite` file used by the Topics API.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png", 
-  alt="Screenshot of chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.", 
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/txujKqPgnQdbwmTfdPZT.png",
+  alt="chrome://topics-internal page with Classifier panel selected and tflite file path highlighted.",
   width="800", height="696" %}
 
-You can download the file and load the model with the [Topics Model Execution Demo colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn). (A colab—or colaboratory—is a data 
-analysis tool that combines code, output, and descriptive text into one collaborative document.) 
+{: #colab}
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OWOHUKsrvv7ZPtBP9i85.png", 
-  alt="Sceenshot of the Topics API Model Execution Demo colab.", 
+You can download the `.tflite` file and load the model with the [Topics Model Execution Demo colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn). (A colab—or colaboratory—is a data
+analysis tool that combines code, output, and descriptive text into one collaborative document.)
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/OWOHUKsrvv7ZPtBP9i85.png",
+  alt="Topics API Model Execution Demo colab.",
   width="800", height="565" %}
+
+1. On the Colab page, click on the folder icon.
+
+2. Click the Upload icon and upload the `.tflite` model file from your computer. For this colab, you'll need to
+rename the file to `topics_model.tflite`.
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jb8YbQoAd9zE28SMerfX.png",
+  alt="FLEDGE colab page, upload icon highlighted.", width="800", height="457" %}
+
+You can then run all the colab steps, by selecting **Run all** from the **Runtime** menu.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/uBPkzjGipfvxc5hf52vs.png",
+  alt="FLEDGE colab page, with 'Run all' selected form the Runtime menu.", width="800", height="457" %}
+
+This does the following:
+
+1. Install the Python packages used by the colab.
+2. Install the `tflite` libraries and the Topics taxonomy.
+3. Define the taxonomy.
+4. Run each of the Model Execution Demo steps to show how classification works for two example domains.
+
+You'll see a green tick next to each step that completes successfully. (Each step can also be run individually,
+by clicking the Play button next to it.)
+
+For each of the domains defined, you can see the topic scores inferred by the classifier. Try listing different
+domains to see how they compare.
+
+{% Aside 'caution' %}
+For some domains you may notice a difference in topic inference, between the colab and the `chrome://topics-internals` Classifier.
+
+This is because the colab only uses the classifier model to infer topics, whereas `chrome://topics-internals` uses Chrome's
+Topics implementation, which uses a [manually-curated list of topics](#manually-curated) (rather than the classifier model) for
+the top 10,000 sites.
+{% endAside %}
+
 
 ####  View Topics API information {: #view-api-information}
 
@@ -558,7 +672,7 @@ in the example below, `time_period_per_epoch` has been set to 15 seconds (the de
 days).
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/7vFveJtxWgY6yB8gHnW3.png",
-  alt="Screenshot of chrome://topics-internal page with Features and Parameters panel selected.",
+  alt="chrome://topics-internal page with Features and Parameters panel selected.",
   width="800", height="695" %}
 
 The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally 
@@ -708,7 +822,7 @@ significant numbers of users across sites using the Topics API alone:
 -  Topics are updated for a user once each week, which limits the rate at which information can
    be shared.
 -  A topic will only be returned for an API caller that [previously observed the same
-   topic](#observed-topics) for the same user recently. This model helps limit the potential for
+   topic](#observed-topics) for the same user recently. This approach helps limit the potential for
    entities to learn about (or share) information about user interests they have not observed
    firsthand.
 

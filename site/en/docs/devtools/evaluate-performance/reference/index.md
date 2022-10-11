@@ -391,6 +391,21 @@ the **Duration** menu is set to **All**, meaning all activities are shown.
 Disable the **Loading**, **Scripting**, **Rendering**, or **Painting** checkboxes to filter out all
 activities from those categories.
 
+### View interactions {: #interactions }
+
+View user interactions on the **Interactions** track to track down potential responsiveness issues.
+
+To view interactions:
+
+1. [Open DevTools](/docs/devtools/open/), for example, on this [demo page](https://coffee-cart.netlify.app/?ad=1).
+1. Open the **Performance** panel and [start a recording](/docs/devtools/evaluate-performance/#record).
+1. Click an element (coffee) and stop the recording.
+1. Find the **Interactions** track in the timeline.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QtXDPyOntOBbcFwI5QUY.png", alt="The Interactions track.", width="800", height="459" %}
+
+In the example above, the **Interactions** track shows two interactions. Both have the same IDs, indicating that the interactions are triggered by the same user action.
+
 ### View GPU activity {: #gpu }
 
 View GPU activity in the **GPU** section.

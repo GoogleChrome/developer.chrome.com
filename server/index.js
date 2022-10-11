@@ -27,7 +27,11 @@ const app = express();
 
 // The site serves from both roots. We pass this to our redirects handler to
 // see whether redirects will be successful.
-const staticPaths = ['dist', 'dist/en'];
+let staticPaths = ['dist', 'dist/en'];
+
+if (process.env.NODE_ENV === 'test') {
+  staticPaths = ['tests/server/fixtures', 'tests/server/fixtures/en'];
+}
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 const uniqueRedirectHandler = buildUniqueRedirectHandler();
@@ -82,3 +86,5 @@ app.use(...handlers);
 const listener = app.listen(process.env.PORT || 8080, () => {
   console.log('The server is listening at:', listener.address());
 });
+
+module.exports = app;

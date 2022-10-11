@@ -7,7 +7,7 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-09-08
+date: 2022-10-10
 authors:
   - anusmitaray
   - rowan_m
@@ -30,14 +30,11 @@ testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### August 2022
+### October 2022
 
--  Origin trial availability ramps up to
-    [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
-    -  Updates will follow when the availability includes mobile users.
-
--  Pre-stable channels (Canary, Beta) remain at 50% of users.
--  APIs are not available on iOS Chrome.
+-  Origin trial [extended to Chrome 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8). 
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/#renew) 
+explains how to renew origin trial enrollment.
 
 APIs included in the trial:
 
@@ -99,11 +96,19 @@ Shared Storage added to the origin trial in only M105+ Canary, Dev, and Beta for
 
 {% Details %}
 {% DetailsSummary %}
-
 ### Previous updates
 
 Check out previous updates on the origin trial.
 {% endDetailsSummary %}
+
+### August 2022
+
+-  Origin trial availability ramps up to
+    [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
+    -  Updates will follow when the availability includes mobile users.
+
+-  Pre-stable channels (Canary, Beta) remain at 50% of users.
+-  APIs are not available on iOS Chrome.
 
 #### May 2022
 

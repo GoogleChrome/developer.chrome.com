@@ -301,6 +301,9 @@ redirects:
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
 
+- from: /docs/extensions/mv3/getstarted/#unpacked
+  to: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+
 - from: /home
   to: /
 
@@ -436,6 +439,9 @@ redirects:
 
 - from: /blog/videong/...
   to: /articles/videong/...
+
+- from: /blog/inside-oct-2022/...
+  to: /blog/insider-oct-2022/...
 
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/

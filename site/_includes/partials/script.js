@@ -36,8 +36,17 @@
   ga(
     'set',
     '{{ analytics.dimensions.TRACKING_VERSION }}',
-    '{{ analytics.TRACKING_VERSION }}'
+    '{{ analytics.version }}'
   );
+  try {
+    ga(
+      'set',
+      '{{ analytics.dimensions.NAVIGATION_TYPE }}',
+      performance.getEntriesByType('navigation')[0].type.replace(/_/g, '-')
+    );
+  } catch (error) {
+    ga('set', '{{ analytics.dimensions.NAVIGATION_TYPE }}', '(not set)');
+  }
 
   ga('send', 'pageview');
 
