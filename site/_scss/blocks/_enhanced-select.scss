@@ -55,11 +55,6 @@
       color: get-color('grey-400');
     }
 
-    li[selected] svg {
-      fill: get-color('grey-500');
-      margin-right: calc(-2.75rem/2);
-    }
-
     li:hover:not([selected]) {
       background: get-color('blue-50');
       color: get-color('blue-700');
@@ -78,6 +73,21 @@
 .enhanced-select[open] {
   .enhanced-select__options {
     display: block;
+  }
+}
+
+.enhanced-select[multiple] {
+  li[selected] svg {
+    fill: get-color('grey-500');
+    margin-right: calc(-2.75rem/2);
+  }
+
+  li[selected]:hover {
+    color: get-color('grey-600');
+
+    svg {
+      fill: get-color('grey-600');
+    }
   }
 }
 
