@@ -71,7 +71,7 @@ Private Aggregation is a general purpose API for cross-site measurement, and it�
 
 ### With Shared storage
 
-Shared Storage allows you to read and write cross-site data in a secure environment to prevent leakage, and the Private Aggregation API allows you to measure cross-site data stored in Shared Storage. 
+[Shared Storage](/docs/privacy-sandbox/shared-storage/) allows you to read and write cross-site data in a secure environment to prevent leakage, and the Private Aggregation API allows you to measure cross-site data stored in Shared Storage. 
 
 #### Unique reach measurement
 
@@ -81,7 +81,7 @@ You can set a flag in Shared Storage to signify whether the user has already see
 
 #### Demographics measurement
 
-You may want to measure the demographics of the users who have seen your content across different sites. Private Aggregation can provide an answer, such as “Approximately 317 unique users are from the age of 18-45 and are from Germany.” Use [Shared Storage](/en/docs/privacy-sandbox/shared-storage/) to access demographics data from a third-party context. At a later point in time, you can generate a report with Private Aggregation by encoding the age group and country dimensions in the aggregation key. 
+You may want to measure the demographics of the users who have seen your content across different sites. Private Aggregation can provide an answer, such as “Approximately 317 unique users are from the age of 18-45 and are from Germany.” Use Shared Storage to access demographics data from a third-party context. At a later point in time, you can generate a report with Private Aggregation by encoding the age group and country dimensions in the aggregation key. 
 
 #### K+ frequency measurement
 
@@ -97,12 +97,12 @@ The following functions are available in the `privateAggregation` object availab
 
 ### sendHistogramReport()
 
-You can call `privateAggregation.sendHistogramReport({ bucket: &lt;bucket>, value: &lt;value> })` with the _aggregation key_ as `bucket` and the _aggregatable value_ as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
+You can call `privateAggregation.sendHistogramReport({ bucket: <bucket>, value: <value> })` with the _aggregation key_ as `bucket` and the _aggregatable value_ as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
 
 Here is an example of how it may be called in Shared Storage for reach measurement: 
 
 
-`iframe.js`
+#### `iframe.js`
 
 ```js
 // Cross-site iframe code
@@ -117,10 +117,10 @@ async function measureReach() {
  });
 }
 
-`measureReach();`
+measureReach();
 ```
 
-`worklet.js`
+#### `worklet.js`
 
 ```js
 // Shared storage worklet code

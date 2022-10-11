@@ -21,7 +21,7 @@ The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enable
 
 Before reading this article, it will be helpful to familiarize yourself with key terms and concepts. Each of these terms will be described in-depth within this article.
 
-*   An [_aggregation key](#aggregation-key) _(also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget).
+*   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget).
 *   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. In the example where the key is `country`, the value may be `Morocco`.
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
 *   The _Aggregation Service_ processes data from aggregatable reports to create a summary report.
@@ -154,7 +154,7 @@ The aggregatable reports can be inspected from the `chrome://private-aggregation
 
 For testing purposes, the “Send Selected Reports” button can be used to send the report to the server immediately. 
 
-### Collecting and batching aggregatable reports
+### Collect and batch aggregatable reports
 
 The browser sends the aggregatable reports to the origin of the worklet containing the call to the Private Aggregation API, using the listed well-known path:
 
