@@ -31,7 +31,7 @@ export class WebTabs extends BaseElement {
   connectedCallback() {
     super.connectedCallback();
     this._id = `tabs-${generateIdSalt('tabs-')}`;
-    this._selected = this._getDefaultTab();
+    this._selected = this._getSelectedTabIndex();
   }
 
   onSelect(e) {
@@ -88,7 +88,7 @@ export class WebTabs extends BaseElement {
     });
   }
 
-  _getDefaultTab() {
+  _getSelectedTabIndex() {
     const hash = window.location.hash;
 
     if (!hash) {
