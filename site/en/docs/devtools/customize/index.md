@@ -103,7 +103,7 @@ You can sync your DevTools settings across devices. To enable that, you need to:
 
 To edit keyboard shortcuts:
 
-1. [In DevTools](/docs/devtools/open/), click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings", width="24", height="24" %} **Settings**.
+1. [In DevTools](/docs/devtools/open/), click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings**.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LwoUTAEghXYMyYV5EfIy.png", alt="Settings.", width="800", height="445" %}
 
