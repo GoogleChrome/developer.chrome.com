@@ -30,8 +30,6 @@ In this blog post, we’re going to discuss:
 
 This blog post assumes you know the basics of Recorder. If you are new, follow this [short introductory tutorial and video guide](/docs/devtools/recorder/) to get started.
 
-{% YouTube id='rMUayh1QPYs' %}
-
 
 ## Export user flows and replay programmatically {: #export-json}
 
