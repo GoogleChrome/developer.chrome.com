@@ -256,7 +256,7 @@ As of October 2022, the CrUX API contains a `collectionPeriod` object with `firs
 
 This allows better understanding of the data and whether it's been updated yet for that day or is returning the same data as yesterday.
 
-Note that CrUX is approximately 2 days behind today's date since it waits for completed data for the day, and there is some processing time involved before it is available in the API.
+Note that the CrUX API is approximately two days behind today's date since it waits for completed data for the day, and there is some processing time involved before it is available in the API.
 
 ## Example queries
 
