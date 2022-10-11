@@ -117,14 +117,14 @@ Add the following code to the `manifest.json` to register a content script calle
 {
   ...
   "content_scripts": [
-      {
-        "js": ["scripts/content.js"],
-        "matches": [
-          "https://developer.chrome.com/docs/extensions/*",
-          "https://developer.chrome.com/docs/webstore/*"
-        ]
-      }
-    ]
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ]
 }
 ```
 
