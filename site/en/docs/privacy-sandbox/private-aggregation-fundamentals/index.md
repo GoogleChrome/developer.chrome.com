@@ -44,7 +44,7 @@ A _trusted execution environment_ is a special configuration of computer hardwar
 
 The workflow described in this section is similar to the [Attribution Reporting API](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#). However, Attribution Reporting associates data gathered from an impression event and a conversion event, which happen at different times. Private Aggregation measures a single, cross-site event. 
 
-# Aggregation key
+## Aggregation key
 
 An _aggregation key_ (“key” for short) represents the bucket where the aggregatable values will be accumulated. One or more dimensions can be encoded into the key. A dimension represents some aspect that you want to gain more insight on, such as the age group of users or the impression count of an ad campaign. 
 
