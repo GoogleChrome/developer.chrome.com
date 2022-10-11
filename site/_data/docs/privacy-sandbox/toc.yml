@@ -46,6 +46,8 @@
     - url: /docs/privacy-sandbox/attribution-reporting-experiment
     - url: /docs/privacy-sandbox/attribution-reporting-updates
     - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
+    - url: /docs/privacy-sandbox/private-aggregation
+    - url: /docs/privacy-sandbox/private-aggregation-fundamentals
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
     - url: /docs/privacy-sandbox/trust-tokens
