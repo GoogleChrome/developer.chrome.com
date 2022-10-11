@@ -20,7 +20,7 @@ API status updates will be provided here and on [Chrome Platform Status](https:/
 ## Implementation status
 
 * [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101: [now closed](/origintrials/#/view_trial/2479231594867458049).
-* [Demo](https://trust-token-demo.glitch.me/): this is not working, since the origin trial is now closed, but you can still view the code.
+* [Demo](https://trust-token-demo.glitch.me/): this no longer works, as the origin trial is closed. You can still view the code.
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 
