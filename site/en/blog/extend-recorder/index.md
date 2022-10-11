@@ -131,7 +131,6 @@ npx @cypress/chrome-recorder ./recordings/*.json
 ## Build your own extensions or libraries  {: #extend }
 
 Behind the scenes, all extensions and libraries are built on top of the Puppeteer Replay library. Apart from allowing you to replay user flows, Puppeteer Replay offers APIs letting you [customize](https://github.com/puppeteer/replay#2-customize-replay) or [transform](https://github.com/puppeteer/replay#3-transform-recording) user flows replay.
-https://developer.chrome.com/docs/extensions/reference/devtools_recorder/
 
 
 ### Customize user flows replay {: #customize-replay }
@@ -177,7 +176,7 @@ The code is pretty expressive itself. We extend the `PuppeteerRunnerExtension` A
 
 Save the file, then we can run user flows with this extension using the following command:
 
-```
+```bash
 # replay one user flow with plugin 
 npx @puppeteer/replay --extension ./screenshot-plugin.mjs  ./recordings/order-a-coffee.json
 
