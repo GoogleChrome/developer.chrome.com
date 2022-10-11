@@ -174,7 +174,7 @@ To participate with multiple origins (such as `examplepetstore.com` and
    trial token for the participating origin.
 2. Add the origin-specific `Origin-Trial: $token` to your
    [response header](https://developer.mozilla.org/docs/Glossary/Response_header).
-   This header response header need only be set on main resource and navigation
+   This response header need only be set on main resource and navigation
    responses when the resulting document makes use of the deprecated feature.
    It is useless (though harmless) to attach this header to subresource
    responses.
