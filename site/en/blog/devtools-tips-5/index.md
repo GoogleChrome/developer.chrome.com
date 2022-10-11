@@ -16,7 +16,9 @@ tags:
   - devtools-tips
 ---
 
-A significant number of your website users might have color vision deficiencies. Use Chrome DevTools to discover and fix contrast issues and make your website more accessible.
+Low contrast text the top accessibility issue on the web. In February 2022, 83.9% of the top million home pages had this issue. Check out the [WebAIM Million 2022 report](https://webaim.org/projects/million/#wcag) to learn more.
+
+Chrome DevTools lets you discover all contrast issues at a glance and fix them with a click of button.
 
 {% YouTube id='t4pDjqhG6fE' %}
 

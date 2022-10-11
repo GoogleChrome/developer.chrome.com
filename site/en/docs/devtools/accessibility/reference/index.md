@@ -5,10 +5,11 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2022-06-09
-#updated: YYYY-MM-DD
+updated: 2022-10-11
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
 tags:
   - accessibility
+  - find-issues
 ---
 
 This page is a comprehensive reference of accessibility features in Chrome DevTools. It is intended
@@ -171,41 +172,68 @@ View an element's computed accessibility properties in [the Accessibility pane][
 
 {% Img src="image/admin/KhrNElIocLRywp4Na7x7.png", alt="The Computed (Accessibility) Properties section.", width="800", height="506" %}
 
-## View the contrast ratio of a text element in the Color Picker {: #contrast }
+## Discover and fix low contrast text {: #contrast }
 
 {% YouTube id='t4pDjqhG6fE', startTime=38 %}
 
-Some people with low vision don't see areas as very bright or very dark. Everything tends to appear
-at about the same brightness, which makes it hard to distinguish outlines and edges. Contrast ratio
-measures the difference in brightness between the foreground and background of text. If your text
-has a low contrast ratio, then these low vision users may literally experience your site as a blank
-screen.
+{% Aside 'gotchas' %}
+Low contrast text is the top accessibility issue on the web. In February 2022, 83.9% of the top million home pages had this issue. Check out the [WebAIM Million 2022 report](https://webaim.org/projects/million/#wcag) to learn more.
+{% endAside %}
 
-The Color Picker can help you make sure that your text meets recommended contrast ratio levels:
+Low-contrast texts make your website less readable for all users, even more so for users with vision deficiencies.
 
-1.  Click the **Elements** tab.
-2.  In the **DOM Tree**, select the text element that you want to inspect.
+Chrome DevTools lets you:
 
-    {% Img src="image/admin/I2op86IuFtozDrACGUYb.png", alt="Inspecting a paragraph in the DOM Tree.", width="800", height="516" %}
+- [**Discover contrast issues**](#discover-low-contrast) with:
+  - Tooltips in the inspector mode.
+  - The **Color Picker** tool in the **Elements** panel.
+  - The **CSS Overview** and (preview) **Issues** panels.
+- [**Fix contrast issues**](#fix-low-contrast). Select the recommended contrast ratio values that DevTools suggests.
+- **Emulate vision deficiencies**. Look at your site the way your users see it.
 
-3.  In the **Styles** pane, click the color square next to the element's `color` value.
+### Discover low contrast text {: #discover-low-contrast }
 
-    {% Img src="image/admin/FspNZHSagZlSOAOqtCqG.png", alt="The color property of the element.", width="800", height="516" %}
+To discover low contrast text:
 
-4.  Check the **Contrast Ratio** section of the Color Picker. One checkmark means that the element
-    meets the [minimum recommendation][12]. Two checkmarks means that it meets the [enhanced
-    recommendation][13].
+1. [Open DevTools](/docs/devtools/open/) on your page. In this tutorial, you can use [this demo page](https://jec.fyi/demo/cds-quest-cvd).
+1. Get a list of all contrast issues using one of the two panels:
 
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mwC8fcpEcDQoDO0ZqJ4G.png", alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of 16.10.", width="800", height="516" %}
+   - [**CSS Overview**](#overview-contrast)
+   - [(Preview) **Issues**](#issues-contrast)
 
-    The Contrast Ratio section of the **Color Picker** in the example above shows two checkmarks and a value of `16.10`.
+#### Contrast issues in the CSS Overview panel {: #overview-contrast }
 
-5.  Click the **Contrast Ratio** section to see more information. A line appears in the visual
-    picker at the top of the Color Picker. If the current color meets recommendations, then anything
-    on the same side of the line also meets recommendations. If the current color does not meet
-    recommendations, then anything on the same side also does not meet recommendations.
+1. Open [CSS Overview](/docs/devtools/css-overview/#open).
+1. [Capture an overview](/docs/devtools/css-overview/#run).
+1. Open the **Colors** section, scroll to **Contrast issues**, and click an issue, if any.
+1. In the **Contrast issues** table, hover over an element and click the link next to it.
 
-    {% Img src="image/admin/Jw8dX2kSVDdPUtfDHT5F.png", alt="The Contrast Ratio Line in the visual picker.", width="800", height="516" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/661PL2y4oUm6iS5SMYDO.png", alt="Contrast issues in CSS Overview.", width="800", height="412" %}
+
+1. Fix the issue as described in the [next section](#fix-low-contrast).
+
+#### (Preview) Contrast issues in the Issues tab {: #issues-contrast }
+
+{% Aside %}
+**Note**: This is a preview feature disabled by default.
+{% endAside %}
+
+1. Enable contrast issues reporting in the **Issues** panel:
+   1. Open **Settings** > **Experimental**.
+   1. In the filter bar, search for `contrast issue`.
+   1. Check **Enable automatic contrast issue reporting via the Issues panel**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rhhy2iyy1p6SbGIH9QB3.png", alt="Enable contrast issue reporting.", width="800", height="461" %}
+   1. Click **Reload DevTools** in the prompt at the top.
+1. [Open the Issues tab](/docs/devtools/issues/#open).
+1. Expand the contrast issues DevTools found, then expand the elements table, and click a link next to the element.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/crzDEtXBCUVY5HXk8kIS.png", alt="Contrast issues in the Issues tab.", width="800", height="544" %} 
+
+1. Fix the issue as described in the [next section](#fix-low-contrast).
+
+### Fix low contrast text {: #fix-low-contrast }
+
+
 
 [1]: https://developers.google.com/web/fundamentals/accessibility
 [2]: /docs/devtools/accessibility/navigation
