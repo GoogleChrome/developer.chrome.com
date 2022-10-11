@@ -169,7 +169,7 @@ The code is pretty expressive itself. We extend the `PuppeteerRunnerExtension` A
 
 Save the file, then we can run user flows with this extension using the following command:
 
-```
+```bash
 # replay one user flow with plugin 
 npx @puppeteer/replay --extension ./screenshot-plugin.mjs  ./recordings/order-a-coffee.json
 
