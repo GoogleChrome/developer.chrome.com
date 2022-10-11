@@ -26,7 +26,7 @@ Before reading this article, it will be helpful to familiarize yourself with key
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
 *   The _Aggregation Service_ processes data from aggregatable reports to create a summary report.
 *   A _summary report_ is the final output of the aggregation service, and contains noisy aggregated user data and detailed conversion data.
-*   A _[worklet](https://developer.mozilla.org/docs/Web/API/Worklet) _is a piece of infrastructure which allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
+*   A _[worklet](https://developer.mozilla.org/docs/Web/API/Worklet)_ is a piece of infrastructure which allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
 
 ## Private Aggregation workflow
 
@@ -79,7 +79,7 @@ If a dimension has available key space for multiple digits, but the value has fe
 
 The aggregation key can also be generated with a hashing mechanism, such as SHA-256. For example, the string `“WidgetID=3276;CountryID=67”` can be converted to a hex string `c002f0033c108abf3ae0ec654fe38a1792186bfd582380b24ea93ebdeb6395be` which is equivalent to the BigInt `86849257128445315549261263548129498923703362729078813106545648910309959898558n`. 
 
-Some important web APIs that are required to generate a hash, like `[crypto](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API)`, are not currently available within Shared Storage worklets or FLEDGE worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
+Some important web APIs that are required to generate a hash, like [`crypto`](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API), are not currently available within Shared Storage worklets or FLEDGE worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
 
 {% Aside %}
 Although the concepts are similar, the key is constructed differently for the Private Aggregation API than the Attribution Reporting API.  For Attribution Reporting, the key is generated at separate times, during the impression and conversion.  For Private Aggregation, the complete key is specified at the same time, in the JavaScript call.
@@ -89,7 +89,7 @@ Although the concepts are similar, the key is constructed differently for the Pr
 
 Aggregatable values are summed per key across many users to generate aggregated insights in the form of summary values in summary reports. 
 
-Let's return to the example question posed above: “How many of the users who have seen my widget are from France?” The answer to this question will look something like “Approximately 4881 users who have seen my Widget ID 3276 are from France.”  The _aggregatable value_ is 1 for each user, and “4881 users” is the _aggregated_ _value_ that is the sum of all _aggregatable_ _values _for that _aggregation key_. 
+Let's return to the example question posed above: “How many of the users who have seen my widget are from France?” The answer to this question will look something like “Approximately 4881 users who have seen my Widget ID 3276 are from France.”  The _aggregatable value_ is 1 for each user, and “4881 users” is the _aggregated value_ that is the sum of all _aggregatable values_ for that _aggregation key_. 
 
 <table>
   <tr>
@@ -116,7 +116,7 @@ Let's return to the example question posed above: “How many of the users who h
   </tr>
 </table>
 
-For this example, we increment the value by 1 for each user who sees the widget.  In practice, the aggregatable value can be scaled to improve [signal-to-noise ratio](https://docs.google.com/document/d/10p_hqAxFp2LKiMaY9nCG4yrKSAi4E8S_hozJiHC-WHQ/edit?resourcekey=0-WcdCSsE19UDSQUOmXjuITg#heading=h.s9h4edeedak3).
+For this example, we increment the value by 1 for each user who sees the widget.  In practice, the aggregatable value can be scaled to improve [signal-to-noise ratio](#noise-and-scaling).
 
 ### Contribution budget
 
@@ -124,7 +124,7 @@ Each call to the Private Aggregation API is called a _contribution_. To protect 
 
 When you sum all aggregatable values across all aggregation keys, the sum must be less than the contribution budget. The budget is scoped per-worklet [origin](https://web.dev/same-site-same-origin/#origin), per-day, and is separate for FLEDGE and Shared Storage worklets. A rolling window of approximately the last 24 hours is used for the day. If a new aggregatable report would cause the budget to be exceeded, the report is not created.
 
-The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for the current Privacy Sandbox Origin Trial, the contribution budget has been set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](https://docs.google.com/document/d/10p_hqAxFp2LKiMaY9nCG4yrKSAi4E8S_hozJiHC-WHQ/edit?resourcekey=0-WcdCSsE19UDSQUOmXjuITg#bookmark=kix.7cm3k1gmii1w) section below). 
+The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for the current Privacy Sandbox Origin Trial, the contribution budget has been set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](#noise-and-scaling) section below). 
 
 To learn more about contribution budgets, see the [explainer](https://github.com/patcg-individual-drafts/private-aggregation-api#contribution-bounding-and-budgeting). Also, refer to the [Contribution Budget section of the Attribution Reporting strategy guide](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#) for more guidance. 
 
@@ -134,7 +134,7 @@ Once the user invokes the Private Aggregation API, the browser generates aggrega
 
 The contributions are encrypted and not readable outside of Aggregation Service. The Aggregation Service decrypts the reports and generates a summary report. The encryption key for the browser and the decryption key for the Aggregation Service are issued by the coordinator, which acts as the key management service. The coordinator keeps a list of binary hashes of the service image to verify that the caller is allowed to receive the decryption key. 
 
-An example aggregatable report with [debug mode](https://docs.google.com/document/d/1Bou-N1iz_WoQ9xJr6CRbpwRMV6TxH2ohE7HSpC67LDI/edit?resourcekey=0-jsroTC4qkmDYFb_d5KtxNA#bookmark=id.a6i86ca76utk) enabled: 
+An example aggregatable report with [debug mode](/docs/privacy-sandbox/private-aggregation#enabledebugmode) enabled: 
 
 ```js
   "aggregation_service_payloads": [
