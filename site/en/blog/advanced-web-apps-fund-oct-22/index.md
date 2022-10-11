@@ -27,7 +27,7 @@ We've sponsored 11 projects, distributing more than $100k through the
 to recognize the importance of these projects and enable their creators to
 spend time on them. These projects include:
 
-* [Espruino Web IDE](https://www.espruino.com/): makes coding Espurino boards
+* [Espruino Web IDE](https://www.espruino.com/): makes coding Espruino boards
   as easy as opening a web browser.
 * [iPlug2](https://github.com/iPlug2/iPlug2): a free open source framework
   for making audio plugins with minimal code.
