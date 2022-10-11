@@ -96,7 +96,7 @@ You can sync your DevTools settings across devices. To enable that, you need to:
   For example, the following **appearance** settings are synced so you have a consistent experience across devices and don't need to re-define the same settings again.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="The appearance settings.", width="800", height="584" %}
   However, the **dock** settings isn't sync because developers have different dock preferences when debugging on different sites.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="dock", width="426", height="134" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="The dock.", width="426", height="134" %}
 
 
 ## Customize keyboard shortcuts {: #keyboard-shortcuts }
