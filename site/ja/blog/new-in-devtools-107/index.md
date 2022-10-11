@@ -53,10 +53,10 @@ Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 ## Memory Inspector で C/C++ オブジェクトをハイライト表示 {: #memory }
 
 <!-- The [Memory Inspector](/docs/devtools/memory-inspector/) highlights all the bytes of a C/C++ memory object. -->
-[Memory Inspector](/docs/devtools/memory-inspector/) は、 C/C++ メモリオブジェクトの全てのバイトをハイライト表示します。
+[Memory Inspector](/docs/devtools/memory-inspector/) は、 C/C++ メモリオブジェクトの全てのバイト列をハイライト表示します。
 
 <!-- Recognizing an object’s bytes among the surrounding WebAssembly memory was a pain point. You have to know the object’s size and count bytes from the object’s start. -->
-周囲の WebAssembly メモリの中からオブジェクトのバイトを認識するのは面倒でした。オブジェクトのサイズを把握し、オブジェクトの先頭からバイトを数える必要があります。
+周囲の WebAssembly メモリの中からオブジェクトのバイト列を認識するのは面倒でした。オブジェクトのサイズを把握し、オブジェクトの先頭からバイト列を数える必要があります。
 
 <!-- With this feature,  it helps you tell them apart from the surrounding memory. See [Extending the Memory Inspector for C/C++ debugging](/blog/memory-inspector-extended-cpp/) to learn more about the changes. -->
 この機能があれば、周囲のメモリとの区別が楽になります。変更点については、 [C/C++ デバッグのための Memory Inspector の拡張](/blog/memory-inspector-extended-cpp/) を参照してください。
@@ -101,7 +101,7 @@ Chromium issue: [1343185](https://crbug.com/1343185)
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM 検索", width="800", height="505" %}
 
 <!-- Go to **Settings** > **Preferences**, disable **Search as you type**. With this change, the search will start only after you press <kbd>Enter</kbd>. -->
-**Settings** > **Preferences** で **Search as you type** を無効にしてください。この変更により、 <kbd>Enter</kbd> を押した時にのみ検索が開始されます。
+**Settings** > **Preferences** で **Search as you type** を無効にしてみましょう。この変更により、 <kbd>Enter</kbd> を押した時にのみ検索が開始されます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type の設定", width="800", height="449" %}
 
