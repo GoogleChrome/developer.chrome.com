@@ -4,7 +4,7 @@ title: >
 description: >
   Learn how to use Chrome DevTools to discover and fix low contrast text.
 layout: 'layouts/blog-post.njk'
-date: 2022-09-01
+date: 2022-10-11
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wBe88JjzaCRFCybZu2Ia.png'
@@ -30,8 +30,13 @@ Watch the video to learn how to:
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tolxw3v0DlcOHGZhbJPZ.png", alt="Recommended contrast ratio lines.", width="800", height="525" %}
 
-- Discover all contrast issues in the **CSS Overview** or, with a preview feature, in the **Issues** panel.
+- Discover all contrast issues in the **CSS Overview** and (preview) **Issues** panels.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/G1vFeA4jqqbuXHnW6IZK.png", alt="Contrast issues in CSS Overview and Issues panels.", width="800", height="644" %}
+
 - Emulate vision deficiencies to understand what your page looks like for all your users.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QdE5Gr23r68leiaVjfUI.png", alt="Emulating blurred vision.", width="800", height="500" %}
 
 To learn more, see:
 
