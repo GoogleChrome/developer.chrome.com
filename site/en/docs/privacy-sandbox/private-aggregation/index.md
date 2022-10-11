@@ -35,7 +35,7 @@ For example, if you have previously recorded demographic and geographic data in 
 
 When you call the [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api) with an aggregation key and an aggregatable value, the browser generates an aggregatable report. The reports are sent to your server that batches the reports. The batched reports are processed later by the [Aggregation Service](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), and a summary report is generated. 
 
-See the [Private Aggregation API fundamentals](https://docs.google.com/document/d/10p_hqAxFp2LKiMaY9nCG4yrKSAi4E8S_hozJiHC-WHQ/edit) document to learn more about the key concepts involved with the Private Aggregation API.
+See the [Private Aggregation API fundamentals](/docs/privacy-sandbox/private-aggregation-fundamentals) document to learn more about the key concepts involved with the Private Aggregation API.
 
 ### Differences from Attribution Reporting
 
