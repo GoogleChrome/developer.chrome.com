@@ -453,5 +453,45 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
   </div>
 
+  <div class="pad-500" style="background:rgba(0,0,0,0.48); height: 500px;">
+    {% FilterSheet %}
+      <div class="filter-sheet__filters">
+        {% FilterSheetSection 'Topic' %}
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        {% endFilterSheetSection %}
+
+        {% FilterSheetSection 'Location' %}
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        {% endFilterSheetSection %}
+
+        {% FilterSheetSection 'Googler' %}
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        {% endFilterSheetSection %}
+      </div>
+
+      {% FilterSheetButtons %}
+        <button class="material-button button-filled color-primary bg-white">
+          Reset
+        </button>
+
+        <button class="material-button button-filled color-bg bg-primary">
+          Done
+        </button>
+      {% endFilterSheetButtons %}
+    {% endFilterSheet %}
+  </div>
+
 </article>
 {% endblock %}
