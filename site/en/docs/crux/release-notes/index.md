@@ -72,12 +72,6 @@ Notable stats
  : - 17,715,277 origins
  : - 41.4% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
-Other recent CrUX-related updates:
- : - A paper was published [Evaluating the Accuracy of Popular Website Lists](https://zakird.com/papers/toplists.pdf), which noted that [CrUX data is significantly more accurate than other data sources](https://twitter.com/zakirbpd/status/1573344656456310784?s=20&t=EmRR5_RVpK8N8VA2izgh_g).
- : - The [web-vitals](https://github.com/GoogleChrome/web-vitals/) library released v3 which includes the new INP metric, and in-built attribution to help identify elements causing your metric numbers.
- : - [Barry Pollard](https://twitter.com/tunetheweb) wrote [Why is CrUX data different from my RUM data?](https://web.dev/crux-and-rum-differences/) recently to understand why you may see differences in these datasets.
- : - [Jeremy Wagner](https://twitter.com/malchata) wrote a guide on [Optimizing Long Tasks](https://web.dev/optimize-long-tasks/), which can help you improve your FID and INP metrics.
-
 ## 202208
 
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/xKHFbog7-9w)
