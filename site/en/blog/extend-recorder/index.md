@@ -18,18 +18,17 @@ tags:
 
 {% YouTube id='LBgzmqzp7ew' %} 
 
-Let’s admit it, writing automated tests is not the most fun thing in a developer’s life. As developers, we want to write features, fix bugs, and improve the world! However, when we don’t have automated testing in our workflows, in the long term, things can get quite buggy. So, we also think that writing automated tests is important.
+Let’s admit it, writing automated tests is not the most fun thing in a developer’s life. As developers, we want to write features, fix bugs, and improve the world! However, when we don’t have automated testing in our workflows, in the long term, things can get quite “buggy”. So, we also think that writing automated tests is important.
 
-With the [Recorder](/docs/devtools/recorder/) panel in Chrome DevTools, you can record and replay user flows, export it to various formats (e.g. test scripts) through different 3rd-party extensions and libraries, customize the user flows with [Puppeteer Replay](https://github.com/puppeteer/replay) library, and integrate them with your existing workflows.
+With the [Recorder](/docs/devtools/recorder/) panel in Chrome DevTools, you can record and replay user flows, export them to various formats (for example, test scripts) through different third-party extensions and libraries, customize the user flows with [Puppeteer Replay](https://github.com/puppeteer/replay) library, and integrate them with your existing workflows.
 
 In this blog post, we’re going to discuss: 
 
-- how to export and replay user flows programmatically
-- how to customize your user flows with the help of Puppeteer Replay
-- how to integrate with your [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) workflows
+- How to export and replay user flows programmatically.
+- How to customize your user flows with the help of Puppeteer Replay.
+- How to integrate with your [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd) workflows.
 
-This blog post assumes you know the basics of Recorder. If you are new, follow this [short introductory tutorial and video guide](/docs/devtools/recorder/) to get started.
-
+This blog post assumes you already know the basics of Recorder. If you are new to Recorder, follow this [short introductory tutorial and video guide](/docs/devtools/recorder/) to get started.
 
 ## Export user flows and replay programmatically {: #export-json}
 
@@ -38,14 +37,13 @@ By default, the Recorder gives you the ability to export these recordings as a [
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fohgHrLdvct9FtdGzstn.png", alt="Export options.", width="800", height="544" %}
 
-Once you export the user flows as JSON files, you have the options to [import it back](/docs/devtools/recorder/reference/#import-flows) to the Recorder panel and replay it, or use external libraries to replay it. [Puppeteer Replay](https://goo.gle/puppeteer-replay) library is one of the libraries.
-
+Once you export the user flows as JSON files, you have the option to [import it back](/docs/devtools/recorder/reference/#import-flows) to the Recorder panel and replay it, or to use external libraries to replay it. [Puppeteer Replay](https://goo.gle/puppeteer-replay) library is one of the libraries available.
 
 ### Replay with Puppeteer Replay {: #pptr-replay }
 
 [Follow the instructions](https://github.com/puppeteer/replay#installation) on the repository to install Puppeteer Replay. 
 
-Let’s say you save your JSON user flows in the `recordings` folder (e.g. [demo project](https://github.com/jecfish/recorder-demo)), you can use the following command to execute one or more user flows. 
+Let’s say you save your JSON user flows in the `recordings` folder (for example, [demo project](https://github.com/jecfish/recorder-demo)), you can use the following command to execute one or more user flows: 
 
 ```bash
 # replay one user flow
@@ -55,7 +53,7 @@ npx @puppeteer/replay ./recordings/order-a-coffee.json
 npx @puppeteer/replay ./recordings/*.json
 ```
 
-Optionally, you can add an npm script for running the recordings; add this line to the `scripts` field in the `package.json` :
+Optionally, you can add an npm script for running the recordings; add this line to the `scripts` field in the `package.json`:
 
 ```js 
 "replay-all": "replay recordings"
@@ -63,15 +61,15 @@ Optionally, you can add an npm script for running the recordings; add this line 
 
 With that, you can run `npm run replay-all` in the command line to replay all recordings. 
 
-User flows replay without UI by default (a.k.a [headless mode](/blog/headless-chrome/)). If you would like to see the UI, set the `PUPPETEER_HEADLESS` environment variable to false before running the command.
+User flows replay without UI by default (also known as [headless mode](/blog/headless-chrome/)). If you would like to see the UI, set the `PUPPETEER_HEADLESS` environment variable to false before running the command.
 
 ```js
 PUPPETEER_HEADLESS=false npm run replay-all
 ```
 
-### Replay with 3rd-party libraries {: #3rd-party-replay }
+### Replay with third-party libraries {: #3rd-party-replay }
 
-There are some third party libraries you can use to replay beyond Chrome browser. Here is the [full list of libraries](https://github.com/puppeteer/replay#getting-started-with-puppeteer-replay).
+There are some third-party libraries you can use to replay beyond the Chrome browser. Here is the [full list of libraries](https://github.com/puppeteer/replay#getting-started-with-puppeteer-replay).
 
 For example, [TestCafe](https://testcafe.io/documentation/403998/guides/experimental-capabilities/chrome-replay-support) is an end-to-end testing framework. It supports replaying JSON user flows with Safari and more!
 
@@ -110,12 +108,11 @@ Apart from the default options, you can also [install extensions](/docs/devtools
 
 For example, you can record and export the user flows as [WebPageTest custom script](https://bit.ly/wpt-recorder). With the script, you can test the performance of multi-step user flows through your applications. Writing those scripts, however, can sometimes be challenging.
 
-In addition to that, If you already have testing tools in place, there are extensions to export user flows to different test scripts like Cypress, Nightwatch, WebdriverIO, Testing Library, and more. Here is the [full list](/docs/devtools/recorder/reference/#recorder-extension). This could help your and your team bootstrap tests quicker.
-
+Additionally, if you already have testing tools in place, there are extensions to export user flows to different test scripts such as Cypress, Nightwatch, WebdriverIO, Testing Library, and more. Here is the [full list](/docs/devtools/recorder/reference/#recorder-extension). This could help you and your team start writing tests quicker.
 
 ### Transform to different test scripts programmatically {: #transform }
 
-On top of the extensions, most of these test providers also [published libraries](https://github.com/puppeteer/replay#getting-started-with-puppeteer-replay) to help you convert multiple JSON user flows programmatically.
+On top of the extensions, most of these test providers also [publish libraries](https://github.com/puppeteer/replay#getting-started-with-puppeteer-replay) to help you to convert multiple JSON user flows programmatically.
 
 For example, use the [@cypress/chrome-recorder](https://bit.ly/cypress-chrome-recorder) libraries to export user flows to Cypress tests.
 
@@ -125,18 +122,16 @@ npx @cypress/chrome-recorder ./recordings/*.json
 
 ```
 
-
 ## Build your own extensions or libraries  {: #extend }
 
 Behind the scenes, all extensions and libraries are built on top of the Puppeteer Replay library. Apart from allowing you to replay user flows, Puppeteer Replay offers APIs letting you [customize](https://github.com/puppeteer/replay#2-customize-replay) or [transform](https://github.com/puppeteer/replay#3-transform-recording) user flows replay.
 
-
 ### Customize user flows replay {: #customize-replay }
 
-Let’s build a screenshot plugin. For each user flow, we want to:
+Let’s build a screenshot plugin. For each user flow, we want: 
 
-- take a screenshot at the end of every step and save it to the `_screenshots` folder
-- output a message when the user flow execution is completed
+- To take a screenshot at the end of every step and save it to the `_screenshots` folder.
+- To output a message when the user flow execution is completed.
 
 Here is the code snippet. You can download this [demo](https://github.com/jecfish/recorder-demo) and play with it too.
 
@@ -170,11 +165,11 @@ export default class ScreenshotPlugin extends PuppeteerRunnerExtension {
 }
 ```
 
-The code is pretty expressive itself. We extend the `PuppeteerRunnerExtension` API to save the screenshot after each step, and log a message after all the steps.
+The code is pretty expressive itself. We extend the `PuppeteerRunnerExtension` API to save the screenshot after each step, and to log a message after all the steps.
 
 Save the file, then we can run user flows with this extension using the following command:
 
-```bash
+```
 # replay one user flow with plugin 
 npx @puppeteer/replay --extension ./screenshot-plugin.mjs  ./recordings/order-a-coffee.json
 
@@ -194,12 +189,11 @@ Saved screenshot as _screenshots/order-a-coffee-3.png
 Operation completed successfully.
 ```
 
-
 ### Transform user flows {: #customize-transform }
 
-Another way to customize the user flow is to transform it into different formats (e.g. Cypress, Nightwatch test scripts, etc).
+Another way to customize the user flow is to transform it into different formats (for example,Cypress, or Nightwatch test scripts).
 
-For example, your user flow contains a step to navigate to an url. Here is how the JSON file looks like:
+For example, your user flow contains a step to navigate to an url. Here is what the JSON file looks like:
 
 ```json
 {
@@ -214,9 +208,9 @@ For example, your user flow contains a step to navigate to an url. Here is how t
 }
 ```
 
-You can create a stringify plugin, to transform the step to javascript. You can view other existing libraries to see how they do it. 
+You can create a stringify plugin to transform the step to JavaScript. You can also view other existing libraries to see how they do it. 
 
-For example, the code snippet below shows [how WebdriverIO transform the navigation step](https://github.com/webdriverio/chrome-recorder/blob/main/src/stringifyExtension.ts#L58).
+For example, the following code snippet shows [how WebdriverIO transforms the navigation step](https://github.com/webdriverio/chrome-recorder/blob/main/src/stringifyExtension.ts#L58):
 
 ```js
 
@@ -233,17 +227,16 @@ export class StringifyPlugin extends PuppeteerStringifyExtension {
 
 When you run the plugin with the user flows, the navigation line translates into `await browser.url(‘https://coffee-cart.netlify.app/’)`.
 
-
 ### Publish Chrome extensions {: #publish-extension }
 
-Once you customize and transform the user flows, you can package it as a Chrome extension and publish it to the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
+Once you customize and transform the user flows, you can package them as a Chrome extension and publish to the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
 
-Refer to this demo and instructions to [learn how to debug locally and publish a Chrome extension](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards).
+Check out this demo and instructions to [learn how to debug locally and publish a Chrome extension](https://github.com/puppeteer/replay#create-a-chrome-extension-for-recorder-available-from-chrome-104-onwards).
 
 
-## Integrate with your CI / CD pipeline {: #cicd }
+## Integrate with your CI/CD pipeline {: #cicd }
 
-There are multiple ways to do it and there are tons of tools out there. Here is an example of automating it with [GitHub Actions](https://github.com/features/actions). 
+There are multiple ways to do this and there are many tools out there. Here is an example of automating this process with [GitHub Actions](https://github.com/features/actions): 
 
 ```yml
 # .github/node.js.yml
@@ -276,7 +269,7 @@ jobs:
 In this example, we will replay the user flows when:
 
 - new changes push to the `main` branch
-- every day 12:30pm
+- every day at 12:30pm
 
 
 Apart from GitHub Actions, you can integrate with your favorite cloud providers too. Go to [this demo](https://github.com/jecfish/recorder-demo#run-the-examples-with-google-cloud-run-job) to see how you can use [Google Cloud Run Job](https://youtu.be/e07TvWMmVI8) to execute up to 10,000 user flows in parallel!
@@ -284,9 +277,9 @@ Apart from GitHub Actions, you can integrate with your favorite cloud providers 
 
 ## Conclusion {: #conclusion }
 
-In this blog post, we’ve discussed the different options to export user flows as JSON files, customize replays with `PuppeteerReplayExtension`, transform user flows with `PuppeteerStringifyExtension` and integrate them in your CI workflows. 
+In this blog post, we’ve discussed the different options to export user flows as JSON files, customize replays with `PuppeteerReplayExtension`, transform user flows with `PuppeteerStringifyExtension`, and integrate them in your CI workflows. 
 
-I hope this blog post has given you some ideas about how you can use the Recorder panel and the tools provided to make it easier to integrate a testing workflow into your projects. Can’t wait to see what you will build!
+I hope this blog post has given you some ideas about how you can use the Recorder panel and the tools provided to make it easier to integrate a testing workflow into your projects. Can’t wait to see what you’ll build!
 
 
 {% include 'partials/devtools/en/reach-out.md' %}
