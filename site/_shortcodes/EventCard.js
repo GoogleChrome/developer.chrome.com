@@ -60,6 +60,10 @@ function EventCard(event) {
     alt: event.title,
   });
 
+  const buttonLabel = event.isPastEvent
+    ? i18n('i18n.events.see_details')
+    : i18n('i18n.events.see_whos_joining');
+
   return html`
     <enhanced-event-card>
       <article id="${event.id}"
@@ -103,7 +107,7 @@ function EventCard(event) {
               </div>
 
               <button class="material-button button-filled button-round">
-                ${i18n('i18n.events.see_whos_joining')}
+                ${buttonLabel}
               </a>
             </div>
           </div>
@@ -300,7 +304,7 @@ const linksHtml = session => {
 const topicHtml = topic => {
   return html`
     <span
-      class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
+      class="display-inline-block color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
     >
       ${topic}
     </span>
