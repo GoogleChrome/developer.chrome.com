@@ -22,9 +22,18 @@ A significant number of your website users might have color vision deficiencies.
 
 Watch the video to learn how to:
 
-- View contrast ratios and their recommended values with the tooltip while inspecting and element or in the **Color Picker**.
-- In the **Color Picker**, select suggested colors or use the recommended contrast lines to choose a color with a better contrast ratio.
+- View contrast ratios in the inspector mode's tooltip and the recommended ratio values in the **Color Picker**.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/odkqE1ed3sgVxnAypWwF.png", alt="Contrast ratios in a tooltip and Color Picker.", width="800", height="525" %}
+
+- In the **Color Picker**, select suggested colors or pick a color below the contrast ratio lines to comply with the [WebAIM guidelines](https://webaim.org/standards/wcag/).
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tolxw3v0DlcOHGZhbJPZ.png", alt="Recommended contrast ratio lines.", width="800", height="525" %}
+
 - Discover all contrast issues in the **CSS Overview** or, with a preview feature, in the **Issues** panel.
 - Emulate vision deficiencies to understand what your page looks like for all your users.
 
+To learn more, see:
 
+- [Color and contrast accessibility](https://web.dev/color-and-contrast-accessibility/)
+- [WebAIM guidelines](https://webaim.org/standards/wcag/)
