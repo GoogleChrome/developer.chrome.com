@@ -4,7 +4,7 @@ title: >
 description: >
   Learn how to use Chrome DevTools to discover and fix low contrast text.
 layout: 'layouts/blog-post.njk'
-date: 2022-10-11
+date: 2022-10-12
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wBe88JjzaCRFCybZu2Ia.png'

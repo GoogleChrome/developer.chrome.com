@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2022-06-09
-updated: 2022-10-11
+updated: 2022-10-12
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
 tags:
   - accessibility
@@ -51,7 +51,7 @@ To audit a page:
 1.  Go to the URL that you want to audit.
 2.  In DevTools, click the **Lighthouse** tab. DevTools shows you various configuration options.
 
-    {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring an accessabillity scan in Lighthouse panel.", width="800", height="1053" %}
+    {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring an accessibility scan in Lighthouse panel.", width="800", height="1053" %}
 
     {% Aside %}
 
@@ -187,7 +187,7 @@ Chrome DevTools lets you:
 - [**Discover contrast issues**](#discover-low-contrast) with:
   - Tooltips in the inspector mode.
   - The **Color Picker** tool in the **Elements** panel.
-  - The **CSS Overview** and (preview) **Issues** panels.
+  - The **CSS Overview** panel and (preview) **Issues** tab.
 - [**Fix contrast issues**](#fix-low-contrast). Select the recommended contrast ratio values that DevTools suggests.
 - **Emulate vision deficiencies**. Look at your site the way your users see it.
 
@@ -195,7 +195,7 @@ Chrome DevTools lets you:
 
 To discover low contrast text:
 
-1. [Open DevTools](/docs/devtools/open/) on your page. In this tutorial, you can use [this demo page](https://jec.fyi/demo/cds-quest-cvd).
+1. [Open DevTools](/docs/devtools/open/) on your page. In this tutorial, you can use [this demo page][15].
 1. Get a list of all contrast issues using one of the two panels:
 
    - [**CSS Overview**](#overview-contrast)
@@ -208,9 +208,9 @@ To discover low contrast text:
 1. Open the **Colors** section, scroll to **Contrast issues**, and click an issue, if any.
 1. In the **Contrast issues** table, hover over an element and click the link next to it.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/661PL2y4oUm6iS5SMYDO.png", alt="Contrast issues in CSS Overview.", width="800", height="412" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/661PL2y4oUm6iS5SMYDO.png", alt="List of contrast issues in CSS Overview.", width="800", height="412" %}
 
-1. Fix the issue as described in the [next section](#fix-low-contrast).
+1. Fix the issue as described in the [Fix low contrast text](#fix-low-contrast) section.
 
 #### (Preview) Contrast issues in the Issues tab {: #issues-contrast }
 
@@ -218,7 +218,7 @@ To discover low contrast text:
 **Note**: This is a preview feature disabled by default.
 {% endAside %}
 
-1. Enable contrast issues reporting in the **Issues** panel:
+1. Enable contrast issues reporting in the **Issues** tab:
    1. Open **Settings** > **Experimental**.
    1. In the filter bar, search for `contrast issue`.
    1. Check **Enable automatic contrast issue reporting via the Issues panel**.
@@ -227,12 +227,22 @@ To discover low contrast text:
 1. [Open the Issues tab](/docs/devtools/issues/#open).
 1. Expand the contrast issues DevTools found, then expand the elements table, and click a link next to the element.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/crzDEtXBCUVY5HXk8kIS.png", alt="Contrast issues in the Issues tab.", width="800", height="544" %} 
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qKP3NuLPLQhdyMdzA7lA.png", alt="Table of elements with contrast issues in the Issues tab.", width="800", height="556" %}
 
-1. Fix the issue as described in the [next section](#fix-low-contrast).
+1. Fix the issue as described in the [Fix low contrast text](#fix-low-contrast) section.
 
 ### Fix low contrast text {: #fix-low-contrast }
 
+To fix a low contrast issue:
+
+1. [Find a contrast issue](#discover-low-contrast) and click a link to an affected element either on the [**CSS Overview** panel](#overview-contrast) or [**Issues** tab](#issues-contrast). DevTools takes you to the **Elements** panel and selects the corresponding element.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Fjo8Vju3nixmdNTZ7xYF.png", alt="An element with a contrast issue selected in the Elements panel.", width="800", height="490" %}
+   For example, on [this demo page][15], the first affected element is `h1.line1`.
+1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="21" %} **Inspect** at the top-right corner of DevTools and hover over the element in the viewport. DevTools shows a tooltip for this element.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Jth5CZ7BXPUKajXhmgFR.png", alt="The tooltip shows a warning sign next to the contrast value.", width="800", height="507" %}
+
+   Notice the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xk7aqSvZfY5vU66QtCer.svg", alt="Warning.", width="20", height="20" %} warning sign next to the contrast value in the tooltip. The contrast ratio measures the difference in brightness between the foreground (text color) and background colors.
 
 
 [1]: https://developers.google.com/web/fundamentals/accessibility
@@ -249,3 +259,4 @@ To discover low contrast text:
 [12]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [13]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
 [14]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
+[15]: https://jec.fyi/demo/cds-quest-cvd
