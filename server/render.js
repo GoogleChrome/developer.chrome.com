@@ -71,11 +71,13 @@ const supportedLayouts = ['layouts/blog-post.njk', 'layouts/doc-post.njk'];
 
 const renderHandler = async (req, res) => {
   // Check sign in
-  const userId = await verifyLogin(req.body.t).catch(() => {
-    res.sendStatus(403);
-  });
-  if (!userId) {
-    return;
+  try {
+    const userId = await verifyLogin(req.body.t);
+    if (!userId) {
+      return res.sendStatus(401);
+    }
+  } catch (e) {
+    return res.sendStatus(401);
   }
 
   process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
