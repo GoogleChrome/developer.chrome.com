@@ -43,8 +43,7 @@ a keyboard or screen reader yourself. See [How To Do An Accessibility Review][4]
 In general, use the accessibility checks under the **Lighthouse** panel to determine if:
 
 - A page is properly marked up for screen readers.
-- The text elements on a page have sufficient contrast ratios. See also [View the contrast ratio of
-  a text element in the Color Picker][5].
+- The text elements on a page have sufficient contrast ratios. See also [Make your website more readable][5].
 
 To audit a page:
 
@@ -172,7 +171,7 @@ View an element's computed accessibility properties in [the Accessibility pane][
 
 {% Img src="image/admin/KhrNElIocLRywp4Na7x7.png", alt="The Computed (Accessibility) Properties section.", width="800", height="506" %}
 
-## Discover and fix low contrast text {: #contrast }
+## Make your website more readable {: #contrast }
 
 {% YouTube id='t4pDjqhG6fE', startTime=38 %}
 
@@ -185,7 +184,7 @@ Low-contrast texts make your website less readable for all users, even more so f
 Chrome DevTools lets you:
 
 - [**Discover contrast issues**](#discover-low-contrast). Use the **CSS Overview** panel and (preview) **Issues** tab to get a list of all issues.
-- [**Fix contrast issues**](#fix-low-contrast). View the issues with tooltip in inspector mode and select the contrast ratio values that the **Color Picker** suggests.
+- [**Fix contrast issues**](#fix-low-contrast). View the issues with a tooltip in inspector mode and select the contrast ratio values that the **Color Picker** suggests.
 - [**Emulate vision deficiencies**](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies). Look at your site the way your users see it.
 
 ### Discover low contrast text {: #discover-low-contrast }
@@ -247,7 +246,7 @@ To fix a low contrast issue:
 
    The **Color Picker** tells you the contrast ratio doesn't meet neither AA nor AAA levels of [WebAIM guidelines](https://webaim.org/standards/wcag/).
 
-1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5sHRUwsqWoQHF2BiEwlm.png", alt="Use suggested color.", width="54", height="46" %} **Use suggested color** button next to the AAA level. The **Color Picker** applies the text color that complies to the contrast ratio guidelines.
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5sHRUwsqWoQHF2BiEwlm.png", alt="Use suggested color.", width="23", height="20" %} **Use suggested color** button next to the AAA level. The **Color Picker** applies the text color that complies to the contrast ratio guidelines.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N2ab1ckpXSEELloAbDTE.png", alt="The applied color complies with the guidelines.", width="800", height="598" %}
 
