@@ -17,7 +17,9 @@
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 
-{% Hreflang page.url, site, collections %}
+{% if page.url %}
+  {% Hreflang page.url, site, collections %}
+{% endif %}
 
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />

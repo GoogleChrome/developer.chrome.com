@@ -17,6 +17,7 @@
 const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
+const {renderHandler} = require('./render');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
@@ -80,6 +81,11 @@ if (isGAEProd) {
   // so that audits are happy.
   handlers.unshift(compression());
 }
+
+app.use(express.json());
+app.use(express.urlencoded());
+
+app.post('/_render', renderHandler);
 
 app.use(...handlers);
 

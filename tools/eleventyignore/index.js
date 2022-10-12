@@ -32,7 +32,13 @@ const warning = chalk.black.bgYellow;
 const locales = require('../../site/_data/site.json').locales;
 
 // Default files that should always be ignored.
-let ignores = ['node_modules', '**/README.md', '**/_example', '*.swp'];
+let ignores = [
+  'node_modules',
+  '**/README.md',
+  '**/_example',
+  '**/preview/layouts',
+  '*.swp',
+];
 
 const isProduction = process.env.NODE_ENV === 'production';
 // This will automatically be set to true by GitHub Actions.
