@@ -301,6 +301,9 @@ redirects:
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
 
+- from: /docs/extensions/mv3/intro/mv3-migration
+  to: /docs/extensions/mv3/mv3-migration
+
 - from: /docs/extensions/mv3/getstarted/#unpacked
   to: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 

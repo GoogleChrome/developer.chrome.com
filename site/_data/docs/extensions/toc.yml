@@ -13,15 +13,18 @@
     - url: /docs/extensions/mv3/intro
     - url: /docs/extensions/mv3/intro/platform-vision
     - url: /docs/extensions/mv3/intro/mv3-overview
-    - url: /docs/extensions/mv3/intro/mv3-migration
-    - url: /docs/extensions/mv3/mv3-migration-checklist
-    - url: /docs/extensions/mv3/mv2-sunset
 - title: i18n.docs.extensions.overview
   sections:
     - url: /docs/extensions/mv3/overview
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
+- title: i18n.docs.extensions.migrating
+  sections:
+    - url: /docs/extensions/mv3/mv3-migration
+    - url: /docs/extensions/mv3/mv3-migration-checklist
+    - url: /docs/extensions/mv3/migrating_to_service_workers
+    - url: /docs/extensions/mv3/mv2-sunset
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
@@ -54,11 +57,6 @@
     - url: /docs/extensions/mv3/tut_oauth
     - url: /docs/extensions/mv3/override
     - url: /docs/extensions/mv3/richNotifications
-- title: i18n.docs.extensions.modernize
-  sections:
-    - url: /docs/extensions/mv3/background_migration
-    - url: /docs/extensions/mv3/migrating_to_service_workers
-    - url: /docs/extensions/mv3/migrating_to_manifest_v3
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy
@@ -110,11 +108,6 @@
         - url: /docs/extensions/mv2/tut_oauth
         - url: /docs/extensions/mv2/override
         - url: /docs/extensions/mv2/richNotifications
-    - title: i18n.docs.extensions.modernize
-      sections:
-        - url: /docs/extensions/mv2/background_migration
-        - url: /docs/extensions/mv2/migrating_to_service_workers
-        - url: /docs/extensions/mv2/migrating_to_manifest_v3
     - title: i18n.docs.extensions.quality
       sections:
         - url: /docs/extensions/mv2/user_privacy
