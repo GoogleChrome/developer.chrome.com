@@ -40,6 +40,8 @@ Watch the video to learn how to:
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QdE5Gr23r68leiaVjfUI.png", alt="Emulating blurred vision.", width="800", height="500" %}
 
+For a more hands-on learning experience, see the [Discover and fix low contrast text](/docs/devtools/accessibility/reference/#contrast) tutorial.
+
 To learn more, see:
 
 - [Color and contrast accessibility](https://web.dev/color-and-contrast-accessibility/)

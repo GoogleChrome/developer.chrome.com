@@ -184,12 +184,9 @@ Low-contrast texts make your website less readable for all users, even more so f
 
 Chrome DevTools lets you:
 
-- [**Discover contrast issues**](#discover-low-contrast) with:
-  - Tooltips in the inspector mode.
-  - The **Color Picker** tool in the **Elements** panel.
-  - The **CSS Overview** panel and (preview) **Issues** tab.
-- [**Fix contrast issues**](#fix-low-contrast). Select the recommended contrast ratio values that DevTools suggests.
-- **Emulate vision deficiencies**. Look at your site the way your users see it.
+- [**Discover contrast issues**](#discover-low-contrast). Use the **CSS Overview** panel and (preview) **Issues** tab to get a list of all issues.
+- [**Fix contrast issues**](#fix-low-contrast). View the issues with tooltip in inspector mode and select the contrast ratio values that the **Color Picker** suggests.
+- [**Emulate vision deficiencies**](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies). Look at your site the way your users see it.
 
 ### Discover low contrast text {: #discover-low-contrast }
 
@@ -242,8 +239,28 @@ To fix a low contrast issue:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Jth5CZ7BXPUKajXhmgFR.png", alt="The tooltip shows a warning sign next to the contrast value.", width="800", height="507" %}
 
-   Notice the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xk7aqSvZfY5vU66QtCer.svg", alt="Warning.", width="20", height="20" %} warning sign next to the contrast value in the tooltip. The contrast ratio measures the difference in brightness between the foreground (text color) and background colors.
+   Notice the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xk7aqSvZfY5vU66QtCer.svg", alt="Warning.", width="20", height="20" %} warning sign next to the contrast ratio value in the tooltip. The contrast ratio measures the difference in brightness between the foreground (text color) and background colors.
 
+1. [Open the **Color Picker**](/docs/devtools/css/reference/#color-picker) next to the color declaration of the element's text and, in the **Color Picker**, expand the **Contrast ratio** section.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uiUWw7dczJ6VonjO5Gl3.png", alt="The Contrast ratio section of the Color Picker.", width="800", height="598" %}
+
+   The **Color Picker** tells you the contrast ratio doesn't meet neither AA nor AAA levels of [WebAIM guidelines](https://webaim.org/standards/wcag/).
+
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5sHRUwsqWoQHF2BiEwlm.png", alt="Use suggested color.", width="54", height="46" %} **Use suggested color** button next to the AAA level. The **Color Picker** applies the text color that complies to the contrast ratio guidelines.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N2ab1ckpXSEELloAbDTE.png", alt="The applied color complies with the guidelines.", width="800", height="598" %}
+
+1. Alternatively, to pick a color manually, you can drag the circle in the shades preview. To stay within the AA or AAA level, pick a color below the top or bottom line respectively.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/t9W5FRI15uPJtnWglCkY.png", alt="Picking a color shade below the bottom line to stay in AAA level.", width="800", height="598" %}
+
+1. Similarly, fix all the contrast issues you found with the [**CSS Overview** panel](#overview-contrast) or [**Issues** tab](#issues-contrast).
+
+To save the changes you made in DevTools:
+
+- [Copy all CSS changes at once](/docs/devtools/changes/#copy-css-changes) and paste them to your code
+- Consider [setting up a Workspace](/docs/devtools/workspaces/) that lets DevTools save files directly to your sources.
 
 [1]: https://developers.google.com/web/fundamentals/accessibility
 [2]: /docs/devtools/accessibility/navigation
