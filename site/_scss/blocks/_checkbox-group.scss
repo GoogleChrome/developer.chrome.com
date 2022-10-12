@@ -25,9 +25,19 @@ checkbox-group {
   }
 }
 
-checkbox-group[enhanced] {
-  .checkbox-group__mass-select {
-    font-weight: 500;
+.checkbox-group__mass-select {
+  font-weight: 500;
+}
+
+.checkbox-group__show-more {
+  margin-top: 1.25rem;
+
+  svg {
+    margin-right: 0.8125rem;
+
+    path {
+      fill: var(--color-primary);
+    }
   }
 }
 

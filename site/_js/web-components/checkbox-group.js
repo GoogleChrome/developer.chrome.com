@@ -20,6 +20,8 @@
 import {BaseElement} from './base-element';
 import {html} from 'lit-element';
 import {debounce} from '../utils/debounce';
+import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
+import caretIcon from '../../_includes/icons/caret-down.svg';
 
 /**
  * @type {HTMLElement}
@@ -29,6 +31,7 @@ class CheckboxGroup extends BaseElement {
     super();
 
     this._handleMassSelect = this._handleMassSelect.bind(this);
+    this._handleShowMore = this._handleShowMore.bind(this);
     this._handleChange = debounce(this._handleChange.bind(this), 10);
 
     this.setAttribute('enhanced', '');
@@ -39,11 +42,13 @@ class CheckboxGroup extends BaseElement {
     };
 
     this.allSelected = false;
+    this.show = 4;
   }
 
   static get properties() {
     return {
       allSelected: {type: Boolean, reflect: true},
+      show: {type: Number, reflect: true},
     };
   }
 
@@ -52,6 +57,10 @@ class CheckboxGroup extends BaseElement {
 
     this.elements.massSelectButton = this.querySelector(
       '.checkbox-group__mass-select'
+    );
+
+    this.elements.showMoreButton = this.querySelector(
+      '.checkbox-group__show-more'
     );
 
     this.elements.checkboxes.forEach(checkbox => {
@@ -75,13 +84,31 @@ class CheckboxGroup extends BaseElement {
   render() {
     return html`
       <button
-        class="checkbox-group__mass-select button button-text type--h5 color-primary"
+        class="checkbox-group__mass-select button button-text type--h6 color-primary"
         @click="${this._handleMassSelect}"
       >
         ${this.allSelected ? 'Deselect all' : 'Select all'}
       </button>
 
-      ${this.elements.initialChildren}
+      <div>${this.elements.initialChildren.slice(0, this.show)}</div>
+
+      ${this._renderShowMoreButton()}
+    `;
+  }
+
+  /**
+   * @return {TemplateResult|undefined}
+   */
+  _renderShowMoreButton() {
+    if (this.show === this.elements.checkboxes.length) return;
+
+    return html`
+      <button
+        class="checkbox-group__show-more button button-text type--h6 color-primary display-flex align-center"
+        @click="${this._handleShowMore}"
+      >
+        ${unsafeSVG(caretIcon)} More
+      </button>
     `;
   }
 
@@ -93,6 +120,9 @@ class CheckboxGroup extends BaseElement {
     this.allSelected = checked === undefined;
   }
 
+  /**
+   * @param {MouseEvent } e
+   */
   _handleMassSelect(e) {
     e.preventDefault();
 
@@ -109,6 +139,15 @@ class CheckboxGroup extends BaseElement {
       checkbox.checked = !allSelected;
       checkbox.dispatchEvent(new Event('change'));
     });
+  }
+
+  /**
+   * @param {MouseEvent }e
+   */
+  _handleShowMore(e) {
+    e.preventDefault();
+
+    this.show = this.elements.checkboxes.length;
   }
 
   /**
