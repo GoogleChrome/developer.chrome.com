@@ -100,7 +100,7 @@ class CheckboxGroup extends BaseElement {
    * @return {TemplateResult|undefined}
    */
   _renderShowMoreButton() {
-    if (this.show === this.elements.checkboxes.length) return;
+    if (this.show >= this.elements.checkboxes.length) return;
 
     return html`
       <button
