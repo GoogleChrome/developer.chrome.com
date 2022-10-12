@@ -2,10 +2,10 @@
 layout: "layouts/blog-post.njk"
 title: "Storage Partitioning"
 subhead: >
-  Separating storage from communication APIs in third-party contexts to
+  Separate storage from communication APIs in third-party contexts to
   prevent certain types of side-channel cross-site tracking.
 description: >
-  Separating storage from communication APIs in third-party contexts to
+  Separate storage from communication APIs in third-party contexts to
   prevent certain types of side-channel cross-site tracking.
 authors:
  - kevinkiklee
