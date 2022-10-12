@@ -1,0 +1,34 @@
+checkbox-group {
+  label {
+    align-items: center;
+    color: get-color('grey-700');
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+
+    &:has(input:disabled) {
+      color: get-color('grey-400');
+      cursor: initial;
+    }
+  }
+
+  input {
+    cursor: pointer;
+    height: 24px;
+    margin-right: 0.6875rem;
+    width: 24px;
+
+    &:disabled {
+      cursor: initial;
+    }
+  }
+}
+
+checkbox-group[enhanced] {
+  .checkbox-group__mass-select {
+    font-weight: 500;
+  }
+}
+
+
