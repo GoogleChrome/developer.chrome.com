@@ -38,6 +38,8 @@ const ignorePatterns = [
   'site/**/workbox/',
 ];
 
+const supportedLayouts = ['layouts/blog-post.njk', 'layouts/doc-post.njk'];
+
 const CLIENT_ID =
   '636061184119-c4pof3b538r4ibs8bt6g8qdfth958nc9.apps.googleusercontent.com';
 const authClient = new OAuth2Client(CLIENT_ID);
@@ -60,14 +62,12 @@ const parseFrontmatter = inputFm => {
   const date = parsedFm.date?.toISOString ? parsedFm.date : new Date();
   return {
     layout: xss(parsedFm.layout) || 'layouts/blog-post.njk',
-    date: xss(date.toISOString().split('T')[0]),
+    date: date.toISOString().split('T')[0],
     title: xss(parsedFm.title) || 'Test title TBD',
     desciption: xss(parsedFm.description) || 'Test description TBD',
     authors: parsedFm.authors?.map(author => xss(author)) || ['rachelandrew'],
   };
 };
-
-const supportedLayouts = ['layouts/blog-post.njk', 'layouts/doc-post.njk'];
 
 const renderHandler = async (req, res) => {
   // Check sign in
