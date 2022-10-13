@@ -174,8 +174,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Performance Insights パネルでの LCP タイミングの内訳  {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-**Performance Insights** パネルに、 [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint) の [タイミングの内訳](web.dev/optimize-lcp/#lcp-breakdown) が表示されるようになりました。これらのタイミング情報を使用して、LCP パフォーマンスを改善する機会を理解して特定することができます。
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Performance Insights パネルでの LCP タイミングの内訳", width="800", height="523" %}
 

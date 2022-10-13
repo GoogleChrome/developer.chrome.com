@@ -11,7 +11,7 @@ description:
 authors:
   - thomassteiner
 date: 2022-10-04
-# updated: 2022-10-04
+updated: 2022-10-10
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -161,4 +161,6 @@ as you can and provide simple instructions for reproducing.
 And, if you are concerned about browser support, many Fugu APIs make for great progressive
 enhancements. See my article
 [SVGcode: a PWA to convert raster images to SVG vector graphics](https://web.dev/svgcode/) for
-inspiration.
+inspiration. We also don't consider our job done until these APIs are interoperable, and we will
+continue to push for further standardization, testing, and adoption by other browsers.
+

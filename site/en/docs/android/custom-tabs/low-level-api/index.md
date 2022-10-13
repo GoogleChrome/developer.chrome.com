@@ -9,7 +9,7 @@ description: Low Level Custom Tabs API
 Although the recommended method to integrate your application with Custom Tabs is using the
 AndroidX Browser Library, a low level implementation is also available.
 
-The complete implementation of the Support Library is available on [Github][1] and an be used as a
+The complete implementation of the Support Library is available on [GitHub][1] and an be used as a
 start point. It also contains the [AIDL files][2] required to connect to the service, as the ones
 contained in the Chromium repository are not directly usable with Android Studio.
 

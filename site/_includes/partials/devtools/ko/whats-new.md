@@ -4,16 +4,16 @@
 
 <!-- $content -->
 
-<!-- ### Chrome 107 {: #chrome107 }
+### Chrome 107 {: #chrome107 }
 
-* [Customize keyboard shortcuts in DevTools](/ko/blog/new-in-devtools-107/#shortcuts)
-* [Toggle light and dark themes with keyboard shortcut](/ko/blog/new-in-devtools-107/#toggle-themes)
-* [Highlight C/C++ objects in the Memory Inspector](/ko/blog/new-in-devtools-107/#memory)
-* [Support full initiator information for HAR import](/ko/blog/new-in-devtools-107/#har)
-* [Start DOM search after pressing `Enter`](/ko/blog/new-in-devtools-107/#search-type)
-* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ko/blog/new-in-devtools-107/#flexbox)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-107/#misc)
- -->
+* [DevTools에서 키보드 단축키 커스터마이징](/ko/blog/new-in-devtools-107/#shortcuts)
+* [키보드 단축키로 라이트 / 다크 테마 전환하기](/ko/blog/new-in-devtools-107/#toggle-themes)
+* [메모리 인스펙터에서 C/C++ 객체 하이라이팅](/ko/blog/new-in-devtools-107/#memory)
+* [HAR 가져오기에서 전체 이니시에이터 정보 지원](/ko/blog/new-in-devtools-107/#har)
+* [`Enter` 키를 눌러 DOM 검색 시작](/ko/blog/new-in-devtools-107/#search-type)
+* [CSS flexbox `align-content` `start` 및 `end` 아이콘 표시](/ko/blog/new-in-devtools-107/#flexbox)
+* [기타 하이라이트](/ko/blog/new-in-devtools-107/#misc)
+
 
 <!-- ### Chrome 106 {: #chrome106 }
 

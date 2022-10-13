@@ -13,6 +13,10 @@ tags:
 
 Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance.
 
+{% Aside 'note' %}
+This feature is available only in Chrome, not Chromium.
+{% endAside %}
+
 {% YouTube id='5PFmGeCZDvw' %}
 
 {% Aside %}

@@ -7,9 +7,9 @@ date: 2020-11-09
 updated: 2022-06-13
 ---
 
-This guide provides developers with the information they need to begin migrating an extension from
-Manifest V2 to Manifest V3. Some extensions will require very little change to make them Manifest V3
-compliant, while others will need to be redesigned to some degree. For a quick reference guide see
+This guide provides you with the information needed to migrate an extension from
+Manifest V2 to Manifest V3. Some extensions require very little change to make them Manifest V3
+compliant, while others need to be redesigned to some degree. For a quick reference guide see
 the [migration checklist][mv3-checklist].
 
 {% Aside %}
@@ -38,7 +38,7 @@ For a fuller description of these changes, see the [Manifest V3 Overview][mv3-ov
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
 To use the features of Manifest V3, you need to update your [manifest file][doc-manifest].
-Naturally, you'll need to change the manifest version, but there are other changes that will require
+Naturally, you'll need to change the manifest version, but there are other changes that require
 manifest updates. Each of these is explained further on in this document.
 
 - [service worker][section-man-sw]
@@ -75,9 +75,7 @@ determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 ### Service worker  {: #man-sw }
 
-In Manifest V3, background pages are now [*service workers*][mdn-service-workers]. Register the service worker under the
-`"background"` field. This field uses the `"service_worker"` key, which specifies a single
-JavaScript file.
+In Manifest V3, background pages are now [*extension service workers*][mdn-service-workers]. Register the service worker under the `"background"` field, which uses the `"service_worker"` key, which specifies a single JavaScript file.
 
 {% Columns %}
 
