@@ -167,6 +167,21 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/speed/get-started
+  to: /docs/devtools/lighthouse
+
+- from: /docs/devtools/console/live-expressions/docs/devtools/accessibility/focus/
+  to: /docs/devtools/accessibility/focus/
+
+- from: /docs/devtools/changes/blog/new-in-devtools-65/
+  to: /blog/new-in-devtools-65/
+
+- from: /docs/devtools/panels/sources
+  to: /docs/devtools/sources
+
+- from: /docs/devtools/javascript/sources
+  to: /docs/devtools/sources
+
 - from: /docs/devtools/progressive-web-apps/#add-to-homescreen
   to: /docs/devtools/progressive-web-apps/#trigger-installation
 
