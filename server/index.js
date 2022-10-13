@@ -16,6 +16,7 @@
 
 const {isGAEProd} = require('./env');
 const express = require('express');
+const path = require('path');
 const compression = require('compression');
 const {renderHandler} = require('./render');
 const {notFoundHandler} = require('./not-found');
@@ -23,6 +24,7 @@ const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
 const healthCheckHandler = require('./health-check');
+const {createProxyMiddleware} = require('http-proxy-middleware');
 
 const app = express();
 
@@ -63,9 +65,25 @@ const cspHandler = (_req, res, next) => {
   next();
 };
 
+// Only proxy /blog for defaultLocale (en) urls for now.
+const staticProxyFilter = function (pathname, req) {
+  return pathname.match('^/blog') && req.method === 'GET';
+};
+
+const staticProxyHandler = createProxyMiddleware(staticProxyFilter, {
+  target: 'http://storage.googleapis.com/web-dev-staging_cloudbuild/dist/en/',
+  changeOrigin: true,
+  pathRewrite: function (pathName) {
+    return pathName.match('.html$')
+      ? pathName
+      : path.join(pathName, 'index.html');
+  },
+});
+
 const handlers = [
   cspHandler,
   immutableRootHandler,
+  staticProxyHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
