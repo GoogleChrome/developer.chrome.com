@@ -24,6 +24,8 @@ can help you examine a page's accessibility.
 See [Navigating Chrome DevTools With Assistive Technology][2] if you're looking for help on
 navigating DevTools with an assistive technology like a screen reader.
 
+See [Learn Accessibility](https://web.dev/learn/accessibility/) if you'd like to learn how to develop accessible websites.
+
 ## Overview of accessibility features in Chrome DevTools {: #overview }
 
 This section explains how DevTools fits into your overall accessibility toolkit.
