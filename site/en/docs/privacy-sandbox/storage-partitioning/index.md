@@ -54,7 +54,7 @@ the same origin and same top-level site.
 
  {% Column %}
 
-#### Before
+### Before
 
 <figure>
  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="Diagram of storage APIs without partitioning.", width="793", height="415" %}
@@ -66,7 +66,7 @@ the same origin and same top-level site.
 
  {% Column %}
 
-#### After
+### After
  
 <figure>
   {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="Diagram of storage APIs with partitioning.", width="800", height="553" %}
