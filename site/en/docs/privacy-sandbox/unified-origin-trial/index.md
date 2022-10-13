@@ -7,7 +7,7 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-10-11
+date: 2022-10-13
 authors:
   - anusmitaray
   - rowan_m
@@ -109,6 +109,10 @@ Shared Storage added to the origin trial in only M105+ Canary, Dev, and Beta for
 
 Check out previous updates on the origin trial.
 {% endDetailsSummary %}
+
+### September 2022
+
+-  Topics, Fenced Frames, and Attribution Reporting ramped up to 1% of Chrome Stable traffic on Android.
 
 ### August 2022
 
