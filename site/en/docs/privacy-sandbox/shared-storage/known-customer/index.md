@@ -5,7 +5,7 @@ subhead: >
   Use a Shared Storage worklet to identify known customers.
 description: >
   Use a Shared Storage worklet to identify known customers.
-date: 2022-10-15
+date: 2022-10-14
 authors:
   - alexandrawhite
   - kevinkiklee

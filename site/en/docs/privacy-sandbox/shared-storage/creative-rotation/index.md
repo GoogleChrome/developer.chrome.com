@@ -5,7 +5,7 @@ subhead: >
   Use a Shared Storage worklet to rotate creatives across sites.
 description: >
   Use a Shared Storage worklet to rotate creatives across sites.
-date: 2022-10-15
+date: 2022-10-14
 authors:
   - alexandrawhite
   - kevinkiklee

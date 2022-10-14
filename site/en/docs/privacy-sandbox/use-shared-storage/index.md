@@ -6,7 +6,7 @@ subhead: >
 description: >
   Examine use cases and code samples for Shared Storage.
 date: 2022-06-28
-updated: 2022-10-17
+updated: 2022-10-14
 authors:
   - alexandrawhite
   - kevinkiklee

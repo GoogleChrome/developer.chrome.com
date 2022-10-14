@@ -6,7 +6,7 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-10-17
+updated: 2022-10-14
 authors:
   - alexandrawhite
   - kevinkiklee
