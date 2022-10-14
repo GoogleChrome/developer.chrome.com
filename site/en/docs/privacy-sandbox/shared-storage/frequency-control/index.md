@@ -13,10 +13,10 @@ authors:
   - kevinkiklee
 ---
 
-The Shared Storage proposal intends to create a general purpose cross-site
-storage API which supports many possible use cases. One such example is
-frequency control, which is available to test in Chrome Beta 104.0.5086.0 and
-later.
+The [Shared Storage API](/docs/privacy-sandbox/shared-storage/) is a Privacy
+Sandbox proposal for general purpose, cross-site storage, which supports many
+possible use cases. One example is frequency control, which is available to
+test in Chrome Beta 104.0.5086.0 and later.
 
 Run a worklet script to select a URL from a provided list, based on the stored
 data, and then render that URL in a fenced frame. This can be used to select

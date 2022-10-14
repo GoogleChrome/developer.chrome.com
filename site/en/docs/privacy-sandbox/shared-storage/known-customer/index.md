@@ -11,10 +11,10 @@ authors:
   - kevinkiklee
 ---
 
-The Shared Storage proposal intends to create a general purpose cross-site
-storage API which supports many possible use cases. One such example is
-identifying known customers, which is available to test in Chrome 104.0.5086.0
-and later.
+The [Shared Storage API](/docs/privacy-sandbox/shared-storage/) is a Privacy
+Sandbox proposal for general purpose, cross-site storage, which supports many
+possible use cases. One example is identifying known customers, which is
+available to test in Chrome 104.0.5086.0 and later.
 
 You can store whether the user has registered on your site into Shared Storage,
 then render a seperate element based on whether the user's stored status (is
