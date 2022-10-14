@@ -23,8 +23,13 @@
     - url: /docs/privacy-sandbox/fenced-frame
     - url: /docs/privacy-sandbox/fedcm
     - url: /docs/privacy-sandbox/permissions-policy
+- title: i18n.docs.privacy-sandbox.storage
+  sections:
     - url: /docs/privacy-sandbox/shared-storage
-    - url: /docs/privacy-sandbox/use-shared-storage
+    - url: /docs/privacy-sandbox/shared-storage/url-selection
+    - url: /docs/privacy-sandbox/shared-storage/ab-testing
+    - url: /docs/privacy-sandbox/shared-storage/creative-rotation
+    - url: /docs/privacy-sandbox/shared-storage/known-customer
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
