@@ -6,7 +6,7 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-06-28
+updated: 2022-10-14
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -50,8 +50,8 @@ such as [Trust Tokens](/docs/privacy-sandbox/trust-tokens/),
 Many different organizations may benefit from using the Shared Storage API. For
 example:
 
-*  Adtechs to solve many common ads use cases which currently rely on
-   third-party cookies.
+*  Content producers and adtechs to solve many common use cases, which currently
+   rely on third-party cookies.
 *  Payments providers to understand if the user is an existing customer and
    tailor the checkout experience.
 *  Web security companies who use custom on-device logic to flag suspicious or
@@ -62,15 +62,18 @@ example:
 The Shared Storage API intends to support many use cases, replacing several
 existing uses for third-party cookies. This may include:
 
+*  [Frequency control](/docs/privacy-sandbox/shared-storage/frequency-control/)
+*  [A/B or lift experiments](docs/privacy-sandbox/shared-storage/ab-testing/)
+*  [Creative rotation](docs/privacy-sandbox/shared-storage/creative-rotation/)
+*  [Determining known customers](docs/privacy-sandbox/shared-storage/known-customer/)
 *  Recording aggregated statistics, such as demographics, reach, frequency
    measurement, and conversion measurement with the
-   [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api)
-*  Frequency capping
-*  Lift experiments
-*  A/B experiments
-*  Creative rotation
+   [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
 *  Confirm login for payment provider
-*  User consent status
+
+{% Aside %}
+While it is technically possible to configure and collect user consent status with Shared Storage, we don't recommend this use case.
+{% endAside %}
 
 The proposal intends to create a general purpose API which supports many
 possible future use cases. This allows for further experimentation and change,
@@ -78,23 +81,25 @@ to grow alongside the web ecosystem.
 
 ## How will shared storage work?
 
-Shared storage will allow you to make informed decisions based on cross-site
+Shared storage allows you to make informed decisions based on cross-site
 data, without sharing user information (such as browser history or other
-personal details) with an embedding site. You can write to  shared storage at
-any time, like other JavaScript storage APIs (like localStorage or indexedDB).
-Unlike the other storage APIs, you can only read the shared storage values in
-a secure environment, known as a shared storage worklet.
+personal details) with an embedding site.
+
+You can write to shared storage at any time, like other JavaScript storage APIs
+(like localStorage or indexedDB). Unlike the other storage APIs, you can only
+read the shared storage values in a secure environment, known as a shared
+storage worklet.
 
 The shared storage data can be used for:
 
-*  [**URL selection**](/docs/privacy-sandbox/use-shared-storage#url-selection): 
+*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): 
    you can run a worklet script to select a URL from a provided list, based on
    the stored data, and then render that URL in a fenced frame.  The returned
    URL will be an opaque URL, which means the developer and other viewers of
    the code won't know which URL was selected.
-*  [**Noisy aggregation of cross-site data**](/docs/privacy-sandbox/use-shared-storage#aggregated-data):
+*  **Noisy aggregation of cross-site data**:
    you will be able to run a worklet script to send your data through the
-   [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api),
+   [Private Aggregation API](/docs/privacy-sandbox/private-aggregation),
    a Privacy Sandbox proposal, which returns a privacy-preserving report. 
 
 ## Try the Shared Storage API
@@ -113,12 +118,4 @@ You can also enable Shared Storage with the `--enable-features=PrivacySandboxAds
 
 Check out the [example use cases and code samples](/docs/privacy-sandbox/use-shared-storage).
 
-## Engage and share feedback
-
-The shared storage proposal is under active discussion and subject to change
-in the future. If you try this API and have feedback, we'd love to hear it.
-
-*  **GitHub**: Read the
-   [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  **Developer support**: Ask questions and join discussions on the
-   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+{% include 'content/privacysandbox-partials/sharedstorage-engage.njk' %}
