@@ -15,7 +15,8 @@ The Shared Storage proposal intends to create a general purpose cross-site
 storage API which supports many possible use cases. One such example is
 creative rotation, which is available to test in Chrome 104.0.5086.0 and later.
 
-With creative rotation, you can store the creative rotation mode and other metadata to rotate a creative seen by users across different sites. 
+With creative rotation, you can store the creative rotation mode and other
+metadata to rotate a creative seen by users across different sites. 
 
 ## Try creative rotation
 
@@ -37,7 +38,6 @@ The following code samples were created to demonstrate how the API may be used
 for the given use cases. These are not meant to be used in production.
 
 {% endAside %}
-
 
 An advertiser may want to apply different strategies to an ad campaign, and
 rotate the creatives to increase effectiveness of the ads. Shared storage can
@@ -169,10 +169,10 @@ Explore other Shared Storage use cases and code samples:
    uses, such as selecting new  ads when a frequency cap is reached.
 *  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can
    assign a user to an experiment group, then store that group in Shared
-   Storage to be accessed cross-site. 
-*  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
-   You can store the creative rotation mode, and other metadata, to rotate the
-   creatives across different sites. 
+   Storage to be accessed cross-site.
+*  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
+   You can store whether the user has registered on your site into shared
+   storage, then render a different element based on that stored status.
 
 These are only some of the possible use cases for Shared Storage. We'll
 continue to add examples as we

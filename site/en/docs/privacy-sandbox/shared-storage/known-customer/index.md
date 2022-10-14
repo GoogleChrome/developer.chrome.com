@@ -109,11 +109,11 @@ Explore other Shared Storage use cases and code samples:
    data, and then render that URL in a fenced frame. This has many possible
    uses, such as selecting new  ads when a frequency cap is reached.
 *  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can
-   assign a user to an experiment group, then store that group in Shared
-   Storage to be accessed cross-site. 
-*  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
-   You can store whether the user has registered on your site into Shared
-   Storage, then render a different element based on that stored status.
+   assign a user to an experiment group, then store that group in shared
+   storage to be accessed cross-site. 
+*  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
+   You can store the creative rotation mode, and other metadata, to rotate the
+   creatives across different sites. 
 
 These are only some of the possible use cases for Shared Storage. We'll
 continue to add examples as we

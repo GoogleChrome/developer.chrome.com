@@ -127,8 +127,8 @@ Explore other Shared Storage use cases and code samples:
    You can store the creative rotation mode, and other metadata, to rotate the
    creatives across different sites. 
 *  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
-   You can store whether the user has registered on your site into Shared
-   Storage, then render a different element based on that stored status.
+   You can store whether the user has registered on your site into shared
+   storage, then render a different element based on that stored status.
 
 These are only some of the possible use cases for Shared Storage. We'll
 continue to add examples as we
