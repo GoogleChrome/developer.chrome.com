@@ -198,6 +198,7 @@ To discover low contrast text:
 
    - [**CSS Overview**](#overview-contrast)
    - [(Preview) **Issues**](#issues-contrast)
+   - [**Lighthouse**](#lighthouse-contrast)
 
 #### Contrast issues in the CSS Overview panel {: #overview-contrast }
 
@@ -229,11 +230,24 @@ To discover low contrast text:
 
 1. Fix the issue as described in the [Fix low contrast text](#fix-low-contrast) section.
 
+#### Contrast issues in a Lighthouse report {: #lighthouse-contrast}
+
+1. [In DevTools](/docs/devtools/open/), open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XJkvYrQpjC40JNYnoNAw.svg", alt="More tabs.", width="22", height="22" %} **More tabs** > **Lighthouse**.
+1. Generate a Lighthouse report with the following settings:
+   - **Mode**: Navigation (default)
+   - **Categories**: Accessibility
+   - **Device**: Desktop
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lLtaKfELxEnRe6OVxDgP.png", alt="Lighthouse report with Navigation, Accessibility, and Desktop settings.", width="800", height="518" %}
+1. Click **Analyze page load** and wait for Lighthouse to generate the report.
+1. Scroll down to the **Contrast** section and, in the elements list, click a link to an effected element.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/iiyXwoaVaDZvhIAKowBM.png", alt="The Contrast section of the Lighthouse report with a list of elements that have contrast issues.", width="800", height="612" %}
+1. Fix the issue as described in the [Fix low contrast text](#fix-low-contrast) section.
+
 ### Fix low contrast text {: #fix-low-contrast }
 
 To fix a low contrast issue:
 
-1. [Find a contrast issue](#discover-low-contrast) and click a link to an affected element either on the [**CSS Overview** panel](#overview-contrast) or [**Issues** tab](#issues-contrast). DevTools takes you to the **Elements** panel and selects the corresponding element.
+1. [Find a contrast issue](#discover-low-contrast) and click a link to an affected element either on the [**CSS Overview** panel](#overview-contrast), [**Issues** tab](#issues-contrast), or [**Lighthouse** report](#lighthouse-contrast). DevTools takes you to the **Elements** panel and selects the corresponding element.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Fjo8Vju3nixmdNTZ7xYF.png", alt="An element with a contrast issue selected in the Elements panel.", width="800", height="490" %}
    For example, on [this demo page][15], the first affected element is `h1.line1`.
 1. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="21" %} **Inspect** at the top-right corner of DevTools and hover over the element in the viewport. DevTools shows a tooltip for this element.
@@ -256,7 +270,7 @@ To fix a low contrast issue:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/t9W5FRI15uPJtnWglCkY.png", alt="Picking a color shade below the bottom line to stay in AAA level.", width="800", height="598" %}
 
-1. Similarly, fix all the contrast issues you found with the [**CSS Overview** panel](#overview-contrast) or [**Issues** tab](#issues-contrast).
+1. Similarly, fix all the contrast issues you found with the [**CSS Overview** panel](#overview-contrast), [**Issues** tab](#issues-contrast), or [**Lighthouse** report](#lighthouse-contrast).
 
 To save the changes you made in DevTools:
 
