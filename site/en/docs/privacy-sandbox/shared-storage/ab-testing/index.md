@@ -119,10 +119,10 @@ register('ab-testing', SelectURLOperation);
 
 Explore other Shared Storage use cases and code samples:
 
-*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): run
-   a worklet script to select a URL from a provided list, based on the stored
-   data, and then render that URL in a fenced frame. This has many possible
-   uses, such as selecting new  ads when a frequency cap is reached.
+*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
+   run a worklet script to select a URL from a provided list, based on the
+   stored data, and then render that URL in a fenced frame. This has many
+   possible uses, such as selecting new content when a frequency cap is reached.
 *  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
    You can store the creative rotation mode, and other metadata, to rotate the
    creatives across different sites. 

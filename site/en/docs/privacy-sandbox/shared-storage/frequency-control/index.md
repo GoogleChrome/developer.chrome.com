@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'URL Selection'
+title: 'Frequency control'
 subhead: >
   Run a Shared Storage worklet to select a URL and render it
   in a fenced frame.
@@ -14,17 +14,19 @@ authors:
 ---
 
 The Shared Storage proposal intends to create a general purpose cross-site
-storage API which supports many possible use cases. One such example is URL
-selection, which is available to test in Chrome Beta 104.0.5086.0 and later.
+storage API which supports many possible use cases. One such example is
+frequency control, which is available to test in Chrome Beta 104.0.5086.0 and
+later.
 
-With URL selection, you can run a worklet script to select a URL from a
-provided list, based on the stored data, and then render that
-URL in a fenced frame. This has many possible uses, such as selecting new
-ads when a frequency cap is reached.
+Run a worklet script to select a URL from a provided list, based on the stored
+data, and then render that URL in a fenced frame. This can be used to select
+new ads or other content when the frequency cap has been reached.
 
-## Try URL selection
+## Test frequency control
 
-To test URL selection with Shared Storage and fenced frames, confirm you're using Chrome 104.0.5086.0 or later. Then enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+To test frequency control with Shared Storage and Fenced Frames, confirm you're
+using Chrome 104.0.5086.0 or later. Then enable the **Privacy Sandbox Ads APIs experiment**
+flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",

@@ -18,10 +18,10 @@ find code samples to help you get started.
 
 The following features are available to test in Chrome 104:
 
-*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): you can run a worklet script to select
-   a URL from a provided list, based on the stored data, and then render that
-   URL in a fenced frame. This has many possible uses, such as selecting new
-   ads when a frequency cap is reached.
+*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
+   run a worklet script to select a URL from a provided list, based on the
+   stored data, and then render that URL in a fenced frame. This has many
+   possible uses, such as selecting new content when a frequency cap is reached.
 *  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can assign a user to an experiment
    group, then store that group in Shared Storage to be accessed cross-site. 
 *  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation): You can store the creative

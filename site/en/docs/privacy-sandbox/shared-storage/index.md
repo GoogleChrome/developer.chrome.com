@@ -62,16 +62,18 @@ example:
 The Shared Storage API intends to support many use cases, replacing several
 existing uses for third-party cookies. This may include:
 
-*  [URL selection](/docs/privacy-sandbox/shared-storage/url-selection/)
-*  Recording aggregated statistics, such as demographics, reach, frequency
-   measurement, and conversion measurement with the
-   [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
-*  Frequency controls
+*  [Frequency control](/docs/privacy-sandbox/shared-storage/frequency-control/)
 *  [A/B or lift experiments](docs/privacy-sandbox/shared-storage/ab-testing/)
 *  [Creative rotation](docs/privacy-sandbox/shared-storage/creative-rotation/)
 *  [Determining known customers](docs/privacy-sandbox/shared-storage/known-customer/)
+*  Recording aggregated statistics, such as demographics, reach, frequency
+   measurement, and conversion measurement with the
+   [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
 *  Confirm login for payment provider
-*  User consent status
+
+{% Aside %}
+While it is technically possible to configure and collect user consent status with Shared Storage, we don't recommend this use case.
+{% endAside %}
 
 The proposal intends to create a general purpose API which supports many
 possible future use cases. This allows for further experimentation and change,

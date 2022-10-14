@@ -104,10 +104,10 @@ register('known-customer', SelectURLOperation);
 
 Explore other Shared Storage use cases and code samples:
 
-*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): run
-   a worklet script to select a URL from a provided list, based on the stored
-   data, and then render that URL in a fenced frame. This has many possible
-   uses, such as selecting new  ads when a frequency cap is reached.
+*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
+   run a worklet script to select a URL from a provided list, based on the
+   stored data, and then render that URL in a fenced frame. This has many
+   possible uses, such as selecting new content when a frequency cap is reached.
 *  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can
    assign a user to an experiment group, then store that group in shared
    storage to be accessed cross-site. 
