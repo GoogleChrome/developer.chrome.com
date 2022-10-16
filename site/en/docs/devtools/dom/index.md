@@ -70,7 +70,7 @@ keyboard.
 1. Press the <kbd>Left</kbd> arrow key. The `<ul>` list collapses.
 1. Press the <kbd>Left</kbd> arrow key again. The parent of the `<ul>` node
    is selected. In this case it's the `<li>` node containing the instructions for step 1.
-1. Press the <kbd>Down</kbd> arrow key 2 times so that you've re-selected the `<ul>`
+1. Press the <kbd>Down</kbd> arrow key 3 times so that you've re-selected the `<ul>`
    list that you just collapsed. It should look like this: `<ul>...</ul>`
 1. Press the <kbd>Right</kbd> arrow key. The list expands.
 
