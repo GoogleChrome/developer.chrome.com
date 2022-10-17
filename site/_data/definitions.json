@@ -1,0 +1,23 @@
+{
+  "aggregation-service": {
+    "en": {
+      "title": "Aggregation Service",
+      "content": "Aggregation Service generates a <% summary-report %> with noisy aggregated data and runs in a <% trusted-execution-environment %>",
+      "link": "https://developer.chrome.com/blog/generate-summary-reports/"
+    }
+  },
+  "trusted-execution-environment": {
+    "en": {
+      "title": "Trusted Execution Environment",
+      "content": "Trusted Execution Environment (TEE) provides a level of assurance for data integrity, data confidentiality, and code integrity.",
+      "link": "https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment"
+    }
+  },
+  "summary-report": {
+    "en": {
+      "title": "Summary Report",
+      "content": "A report that contains aggregated data that has random noise applied for privacy",
+      "link": "https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/summary-reports/"
+    }
+  }
+}

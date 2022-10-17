@@ -12,6 +12,8 @@ authors:
   - kevinkiklee
 ---
 
+This is an example of a `Definition` tooltip: {% Definition 'aggregation-service' %}
+
 ## Implementation status
 
 This document outlines a new proposal for unpartitioned storage: the Shared
@@ -28,6 +30,7 @@ Storage API.
 *  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline)
    provides implementation timings for the Shared Storage API and other
    Privacy Sandbox proposals.
+
 
 ## Why do we need this API?
 

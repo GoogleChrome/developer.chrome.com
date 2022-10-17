@@ -1,0 +1,31 @@
+.definition,
+.definition__term {
+  display: inline;
+}
+
+.definition__hover-card {
+  display: none;
+}
+
+.definition__term:hover + .definition__hover-card,
+.definition__hover-card:hover {
+  background: #f2f2f2;
+  border: 1px solid rgb(166, 166, 166);
+  display: block;
+  margin-left: 5px;
+  margin-top: -5px;
+  padding: 10px;
+  position: absolute;
+  width: 80%;
+  z-index: 1;
+}
+
+.definition__title {
+  font-weight: bold;
+}
+
+.definition__term {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
