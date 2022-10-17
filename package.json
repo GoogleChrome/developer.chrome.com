@@ -1,10 +1,10 @@
 {
   "name": "developer.chrome.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The source for developer.chrome.com",
   "private": true,
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "scripts": {
     "algolia": "node ./algolia.js",

@@ -2,7 +2,7 @@
 name: 'Stage'
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       netlify:
         type: boolean
@@ -16,7 +16,10 @@ on:
         default: 0
 
 jobs:
+  build:
+    uses: ./.github/workflows/build.yml
   netlify:
+    needs: build
     if: inputs.netlify == 1
     runs-on: ubuntu-latest
     steps:
@@ -29,6 +32,7 @@ jobs:
           name: dist-${{ github.run_id }}
           path: dist
   app_engine:
+    needs: build
     if: inputs.app_engine == 1
     runs-on: ubuntu-latest
     steps:
