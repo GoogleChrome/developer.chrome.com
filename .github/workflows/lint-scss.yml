@@ -1,0 +1,26 @@
+---
+name: 'Lint: SCSS'
+
+on:
+  push:
+    paths:
+      - '**/*.scss'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Linting SCSS files
+        run: |
+          npm run lint:scss

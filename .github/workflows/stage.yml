@@ -1,0 +1,42 @@
+---
+name: 'Stage'
+
+on:
+  workflow_call:
+    inputs:
+      netlify:
+        type: boolean
+        required: true
+        description: 'Defines if the change set should be staged on Netlify'
+        default: 1
+      app_engine:
+        type: boolean
+        required: true
+        description: 'Defines if the change set should also be staged on App Engine'
+        default: 0
+
+jobs:
+  netlify:
+    if: inputs.netlify == 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Downloading build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist
+  app_engine:
+    if: inputs.app_engine == 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Downloading build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist
