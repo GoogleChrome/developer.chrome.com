@@ -108,9 +108,10 @@ In Manifest V3, background pages are now [*extension service workers*][mdn-servi
 
 {% endColumns %}
 
-Even though Manifest V3, does not support multiple background scripts, you can optionally declare
-the service worker as an [ES Module][webdev-esm] by specifying `"type": "module"`, which allows you
-to import further code.
+Even through Manifest V3, multiple background scripts are not supported and only 
+one `service_worker` can be specified.  You can optionally declare the service 
+worker as an [ES Module][webdev-esm] by specifying `"type": "module"`, which 
+allows you to import further code.
 
 ### Host permissions  {: #host-permissions }
 
