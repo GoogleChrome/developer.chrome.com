@@ -29,5 +29,5 @@ jobs:
           path: dist
           if-no-files-found: error
 
-    stage:
-      uses: ./.github/workflows/stage.yml
+  stage:
+    uses: ./.github/workflows/stage.yml
