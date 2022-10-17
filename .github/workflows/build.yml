@@ -28,7 +28,3 @@ jobs:
           name: dist-${{ github.run_id }}
           path: dist
           if-no-files-found: error
-
-  stage:
-    needs: build
-    uses: ./.github/workflows/stage.yml
