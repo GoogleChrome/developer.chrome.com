@@ -30,11 +30,11 @@ when offline:
 Lighthouse emulates an offline connection using the [Chrome Remote Debugging Protocol](https://github.com/ChromeDevTools/devtools-protocol)
 and then attempts to retrieve the page using [`XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest).
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to make your PWA work offline
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 1. Add a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) to your app.
 2. Use the service worker to cache files locally.

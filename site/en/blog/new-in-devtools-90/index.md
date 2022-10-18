@@ -16,7 +16,7 @@ tags:
   - chrome-90
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="UyXPdYLQVQk" %}
 
@@ -270,8 +270,8 @@ over time.
 Chromium issue: [887173][41]
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699

@@ -17,7 +17,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -161,5 +161,5 @@ tags:
 - Вкладка **Источники** (Sources) теперь корректно восстанавливает положение прокрутки при загрузке страницы. Ранее положение восстанавливалось некорректно, что вызывало неудобства при отладке. ([1294422](https://crbug.com/1294422)) 
 
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

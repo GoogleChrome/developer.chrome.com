@@ -1,6 +1,4 @@
 const yaml = require('js-yaml');
-const path = require('path');
-const {filterOutDrafts} = require('./site/_utils/drafts');
 
 // Filters
 const {
@@ -38,6 +36,7 @@ const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
+const {Partial} = require('./site/_shortcodes/Partial');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -57,6 +56,7 @@ const algoliaCollection = require('./site/_collections/algolia');
 const authors = require('./site/_collections/authors');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
+const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
 const { pastEvents, currentEvents } = require('./site/_collections/events');
 
@@ -92,30 +92,20 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  function addCollectionByDirectory(config, locale, dir) {
-    config.addCollection(`${dir}-${locale}`, collections => {
-      let collection = collections
-        .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
-        .filter(filterOutDrafts)
-        .reverse();
-      // If we're running inside of Percy then just show the first six posts.
-      if (process.env.PERCY_BRANCH) {
-        collection = collection.slice(collection.length - 6);
-      }
-      return collection;
-    })
-  }
-
   // Add collections
   locales.forEach(locale => {
-    addCollectionByDirectory(eleventyConfig, locale, 'blog');
-    addCollectionByDirectory(eleventyConfig, locale, 'articles');
+    directoryCollection.add(eleventyConfig, locale, 'blog');
+    directoryCollection.add(eleventyConfig, locale, 'articles');
   });
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('authors', authors);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
+  eleventyConfig.addCollection('partials', (collections) => {
+    return collections
+        .getFilteredByGlob('./site/*/_partials/**/*')
+  });
   eleventyConfig.addCollection('currentEvents', currentEvents);
   eleventyConfig.addCollection('pastEvents', pastEvents);
 
@@ -156,6 +146,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+  eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.

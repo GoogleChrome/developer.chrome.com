@@ -17,7 +17,7 @@ draft: true
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -144,7 +144,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="LCP timings breakdown in the Performance Insights panel", width="800", height="523" %}
 
@@ -176,5 +176,5 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1f6ef0d58292665e06eded4059d8714a2e487e8a #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -24,7 +24,7 @@ Lighthouse가 페이지의 HTML에서 `theme-color` 메타 태그를, [웹앱 �
 
 Lighthouse는 값이 유효한 CSS 색상 값인지 테스트하지 않습니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 주소 표시줄의 테마 색상을 설정하는 방법
 

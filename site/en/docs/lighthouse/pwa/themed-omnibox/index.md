@@ -31,7 +31,7 @@ HTML and a `theme_color` property in the [web app manifest](https://web.dev/add-
 
 Note that Lighthouse doesn't test whether the values are valid CSS color values.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to set a theme color for the address bar
 

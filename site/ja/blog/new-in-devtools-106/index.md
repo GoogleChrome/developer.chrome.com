@@ -16,7 +16,7 @@ tags:
 
 *翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [technohippy](https://github.com/technohippy) さん、 [lacolaco](https://github.com/lacolaco) さん、 [yoshiko-pg](https://github.com/yoshiko-pg) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -174,8 +174,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Performance Insights パネルでの LCP タイミングの内訳  {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-**Performance Insights** パネルに、 [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint) の [タイミングの内訳](web.dev/optimize-lcp/#lcp-breakdown) が表示されるようになりました。これらのタイミング情報を使用して、LCP パフォーマンスを改善する機会を理解して特定することができます。
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Performance Insights パネルでの LCP タイミングの内訳", width="800", height="523" %}
 
@@ -215,5 +214,5 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

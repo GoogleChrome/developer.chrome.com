@@ -23,7 +23,7 @@ updated: 2021-04-08
 
 Lighthouse는 설명의 품질을 평가하지 않습니다.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 메타 설명을 추가하는 방법
 

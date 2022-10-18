@@ -16,7 +16,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 At [Chrome Dev Summit 2020](/blog/wasm-debugging-2020), we demoed [Chrome's debugging support for WebAssembly applications](https://youtu.be/VBMHswhun-s) on the web for the first time. Since then, the team has invested a lot of energy into making the developer experience scale for large and even huge applications. In this post we will show you the knobs we added (or made work) in the different tools and how to use them!
 
@@ -226,5 +226,5 @@ There are several advantages to splitting up the debug information if one is wor
 2. **Faster debugging: The debugger can skip parsing the additional symbols in `.dwo`/`.dwp` files for some symbol lookups**. For some lookups (such as requests on the line mapping of wasm-to-C++ files), we don’t need to look into the additional debug data. This saves us time, not needing to load the and parse the additional debug data.
 
 <sup id="footnote-1">1</sup>: If you don't have a recent version of `llvm-objdump` on your system, and you are using `emsdk`, you can find it in the `emsdk/upstream/bin` directory.
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

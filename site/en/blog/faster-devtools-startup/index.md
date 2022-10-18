@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
 TL;DR; The result is achieved by removing a redundant serialization.
@@ -116,5 +116,5 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 
 As a result, DevTools opens and **works faster with less CPU usage**. 🎉
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

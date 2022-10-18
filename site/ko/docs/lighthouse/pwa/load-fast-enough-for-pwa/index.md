@@ -28,9 +28,9 @@ updated: 2020-06-10
 
 Lighthouse는 느린 4G 네트워크 연결에서 TTI가 무엇인지 계산합니다. 상호 작용 시간이 10초를 초과하면 감사가 실패합니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 참고 자료
 

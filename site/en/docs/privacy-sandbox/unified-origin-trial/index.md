@@ -7,7 +7,7 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-09-08
+date: 2022-10-11
 authors:
   - anusmitaray
   - rowan_m
@@ -30,14 +30,20 @@ testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### August 2022
+### October 2022
 
--  Origin trial availability ramps up to
-    [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
-    -  Updates will follow when the availability includes mobile users.
+-  Origin trial [extended to Chrome 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8). 
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/#renew) 
+explains how to renew origin trial enrollment. This includes providing a new
+token to participating origins, which is the same process followed by any other
+origin trial extension.
 
--  Pre-stable channels (Canary, Beta) remain at 50% of users.
--  APIs are not available on iOS Chrome.
+This extension was granted to give the ecosystem time in Stable channel to
+continue testing and validating API improvements, while providing feedback
+consistent with our existing public timeline. 
+
+The overall
+[Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) remains unchanged.
 
 APIs included in the trial:
 
@@ -99,11 +105,19 @@ Shared Storage added to the origin trial in only M105+ Canary, Dev, and Beta for
 
 {% Details %}
 {% DetailsSummary %}
-
 ### Previous updates
 
 Check out previous updates on the origin trial.
 {% endDetailsSummary %}
+
+### August 2022
+
+-  Origin trial availability ramps up to
+    [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
+    -  Updates will follow when the availability includes mobile users.
+
+-  Pre-stable channels (Canary, Beta) remain at 50% of users.
+-  APIs are not available on iOS Chrome.
 
 #### May 2022
 
@@ -241,12 +255,14 @@ Alternatively, include the following HTTP header in the page response:
 Origin-Trial: TOKEN_GOES_HERE
 ``` 
 
-{% Aside %}
+### Configure with an iframe
+
 If you're using origin trial features within an iframe (such as FLEDGE's
 `joinAdInterestGroup()`), then the token needs to be provided within the iframe
 and match the iframe's origin. 
-{% endAside %}
- 
+
+### Configure cross-site with JavaScript
+
 If you are using origin trial features via cross-site JavaScript, as in you are
 the provider of third-party JavaScript that is included in the top-level page,
 then you will need to:
@@ -321,7 +337,7 @@ if ('sharedStorage' in window) {
 }  
 ```
 
-## Determine which of your users are eligible {: #eligible-users}
+## Determine user eligibility {: #eligible-users}
 
 The origin trial is running for a fraction of Chrome users. They must also
 have the relevant functionality enabled in their settings to be eligible

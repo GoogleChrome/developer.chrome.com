@@ -20,6 +20,8 @@ overview-article:
   en: 'Introduction'
 status:
   en: 'Is it ready yet?'
+storage:
+  en: 'Secure cross-site storage'
 trust-tokens:
   en: 'Trust Tokens'
 start:
