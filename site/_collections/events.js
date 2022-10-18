@@ -16,9 +16,16 @@
 
 const authorsData = require('../_data/authorsData.json');
 const {i18n} = require('../_filters/i18n');
+const {Img} = require('../_shortcodes/Img');
 
-const PLACEHOLDER_IMG =
+const AUTHOR_PLACEHOLDER =
   'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
+
+const PARTICIPANT_PLACEHOLDER =
+  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
+
+const EVENT_PLACEHOLDER =
+  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
@@ -31,30 +38,27 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
     .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
     .filter(filter)
     .map(event => {
-      const sessions = event.data.sessions.map(session => {
-        if (session.type === 'speaker') {
-          session.speaker = getAuthorData(session.speaker, locale);
-        }
+      const sessions = event.data.sessions.map(session =>
+        processSession(session, locale)
+      );
 
-        if (session.type === 'participant') {
-          session.participants = session.participants.map(p => {
-            return getAuthorData(p, locale);
-          });
-        }
-
-        return session;
+      const image = Img({
+        src: event.data.image ?? EVENT_PLACEHOLDER,
+        width: 400,
+        height: 400,
+        alt: event.data.title,
       });
 
       return {
         id: event.data.id,
         title: event.data.title,
-        image: event.data.image,
         externalUrl: event.data.externalUrl,
         summary: event.data.summary,
         location: event.data.location,
         date: event.data.date,
         isPastEvent: isPastEvent(event),
-        sessions: sessions,
+        sessions,
+        image,
       };
     })
     .sort(sort);
@@ -98,12 +102,56 @@ const getAuthorData = (authorHandle, locale) => {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
 
+  const authorData = authorsData[authorHandle];
+
   return {
-    image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
+    image: authorData.image ?? AUTHOR_PLACEHOLDER,
     title: i18n(`i18n.authors.${authorHandle}.title`, locale),
-    twitter: authorsData[authorHandle].twitter,
-    linkedin: authorsData[authorHandle].linkedin,
+    twitter: authorData.twitter,
+    linkedin: authorData.linkedin,
   };
+};
+
+/**
+ * @param session
+ * @param {String} locale
+ * @returns {{title}|*}
+ */
+const processSession = (session, locale) => {
+  if (session.type === 'speaker') {
+    session.speaker = getAuthorData(session.speaker, locale);
+    session.image = Img({
+      src: session.speaker.image,
+      width: 40,
+      height: 40,
+      alt: session.speaker.title ?? session.title,
+      class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+    });
+
+    return session;
+  }
+
+  session.participants = session.participants.map(p => {
+    return getAuthorData(p, locale);
+  });
+
+  session.title =
+    session.participants.length === 1
+      ? session.participants[0].title
+      : i18n('i18n.events.multiple_participants');
+
+  session.image = Img({
+    src:
+      session.participants.length === 1
+        ? session.participants[0].image
+        : PARTICIPANT_PLACEHOLDER,
+    width: 40,
+    height: 40,
+    alt: session.title,
+    class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+  });
+
+  return session;
 };
 
 /**
