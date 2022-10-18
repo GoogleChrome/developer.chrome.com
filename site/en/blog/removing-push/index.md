@@ -7,7 +7,7 @@ description: |
 authors:
   - tunetheweb
 date: 2022-08-18
-#updated: 2022-08-18
+updated: 2022-10-14
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/1h03ZSAhmvQcyWzs1LGC.jpg
 alt: Dust covered button labeled Push
 tags:
@@ -40,6 +40,13 @@ All solutions that attempt to load resources early can cause performance degrada
 ## Conclusion
 
 The web needs to be able to try things, and discard them when they are not used. Although the potential for Push sounded great, in reality using it was more problematic than envisaged. However, we learned a lot from Push that went into the design of 103 Early Hints. Now it's time to complete the progression and move away from Push.
+
+## Related links
+
+- [All deprecations and removals in Chromium](/tags/deprecations-removals/)
+- ChromeStatus entry: [Remove HTTP/2 push](https://chromestatus.com/feature/6302414934114304)
+- Intent to Remove: [HTTP/2 and gQUIC server push](https://groups.google.com/a/chromium.org/g/blink-dev/c/K3rYLvmQUBY/m/vOWBKZGoAQAJ)
+- Chromium issue: [Turn HTTP/2 Push off by default](https://bugs.chromium.org/p/chromium/issues/detail?id=1355929)
 
 ## Acknowledgements
 

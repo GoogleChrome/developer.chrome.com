@@ -300,7 +300,10 @@ hovering over requests reveals more information about them.
 The Requests table displays the following columns by default:
 
 - **Name**. The filename of, or an identifier for, the resource.
-- **Status**. The HTTP status code.
+- **Status**. This column can show the following values:
+  - HTTP status code, for example, `200` or `404`.
+  - [`CORS error`](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors) for requests failed due to Cross-Origin Resource Sharing (CORS).
+  - Generic `(failed)` or `(blocked:origin)` for other requests.
 - **Type**. The MIME type of the requested resource.
 - **Initiator**. The following objects or processes can initiate requests:
   - **Parser**. Chrome's HTML parser.

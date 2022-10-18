@@ -19,7 +19,7 @@ tags:
 
 **Updates**
 
-- **July 7, 2022**: Updated current status and add IP address space defination.
+- **July 7, 2022**: Updated current status and added IP address space definition.
 - **April 27, 2022**: Updated timeline announcement.
 - **March 7, 2022**: Announced rollback after issues were discovered in
   Chrome 98.
@@ -32,7 +32,7 @@ websites as part of the
 specification.
 
 Chrome will start sending a CORS preflight request ahead of any [private
-network request](#what-is-private-network-access) for a subresource, which asks
+network request](#what-is-private-network-access-pna) for a subresource, which asks
 for explicit permission from the target server. This preflight request will
 carry a new header, `Access-Control-Request-Private-Network: true`, and the
 response to it must carry a corresponding header,

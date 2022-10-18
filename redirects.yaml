@@ -167,6 +167,21 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/speed/get-started
+  to: /docs/devtools/lighthouse
+
+- from: /docs/devtools/console/live-expressions/docs/devtools/accessibility/focus/
+  to: /docs/devtools/accessibility/focus/
+
+- from: /docs/devtools/changes/blog/new-in-devtools-65/
+  to: /blog/new-in-devtools-65/
+
+- from: /docs/devtools/panels/sources
+  to: /docs/devtools/sources
+
+- from: /docs/devtools/javascript/sources
+  to: /docs/devtools/sources
+
 - from: /docs/devtools/progressive-web-apps/#add-to-homescreen
   to: /docs/devtools/progressive-web-apps/#trigger-installation
 
@@ -300,6 +315,12 @@ redirects:
 
 - from: /docs/extensions/mv2/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
+
+- from: /docs/extensions/mv3/intro/mv3-migration
+  to: /docs/extensions/mv3/mv3-migration
+
+- from: /docs/extensions/mv3/getstarted/#unpacked
+  to: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
 - from: /home
   to: /
@@ -437,6 +458,9 @@ redirects:
 - from: /blog/videong/...
   to: /articles/videong/...
 
+- from: /blog/inside-oct-2022/...
+  to: /blog/insider-oct-2022/...
+
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
@@ -460,11 +484,11 @@ redirects:
 
 # Tag Redirects
 
-- from: https://developer.chrome.com/tags/removals/
-  to: https://developer.chrome.com/tags/deprecations-removals/
+- from: /tags/removals/
+  to: /tags/deprecations-removals/
 
-- from: https://developer.chrome.com/tags/deprecations/
-  to: https://developer.chrome.com/tags/deprecations-removals/
+- from: /tags/deprecations/
+  to: /tags/deprecations-removals/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
