@@ -22,7 +22,7 @@ updated: 2020-06-17
 
 请注意，Lighthouse 不会测试这些值是否为有效的 CSS 颜色值。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何为地址栏设置主题颜色
 

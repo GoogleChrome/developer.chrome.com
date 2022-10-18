@@ -45,7 +45,7 @@ You might also have `<meta>` elements that block specific crawlers, such as:
 Lighthouse doesn't check for crawler-specific directives like this, but they can
 still make your page harder to discover, so use them with caution.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to ensure search engines can crawl your page
 

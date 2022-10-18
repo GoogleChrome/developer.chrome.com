@@ -16,7 +16,7 @@ tags:
 
 *感谢 [Jim Lim @xyugroup](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='4RXWfw7Xg_Y' %}
 <!-- start: translation instructions -->
@@ -184,5 +184,5 @@ Chromium 议题: [1329113](https://crbug.com/1329113), [1322115](https://crbug.c
 - 当**命令菜单**中 [打开文件](/docs/devtools/resources/#open) , 编写文件 (源图产生的文件) 的排名会更加高，因此他们会出现在被相似命名的部署脚本之上。 ([1312929](https://crbug.com/1312929)) 
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

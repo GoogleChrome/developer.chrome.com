@@ -22,7 +22,7 @@ A auditoria falha se o Lighthouse não encontrar uma meta tag `theme-color` no H
 
 Observe que o Lighthouse não testa se os valores são valores de cor CSS válidos.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como definir uma cor de tema para a barra de endereço
 
