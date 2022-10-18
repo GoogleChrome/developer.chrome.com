@@ -116,12 +116,12 @@ LCP [considers](https://web.dev/lcp/#what-elements-are-considered) the poster im
 
 #### Bringing over improvements from YouTube mWeb to Desktop
 
-After improving LCP on mWeb, YouTube ran both the thumbnail and base64 black placeholder image experiments on Desktop. YouTube decided to launch the thumbnail image as it did not see the same drop in active devices as mWeb. As a result, FCP and LCP were both improved, with lab LCP reducing from approximately 8s to 2s.
+After improving LCP on mWeb, YouTube ran both the thumbnail and base64 black placeholder image experiments on Desktop. YouTube decided to launch the thumbnail image as it did not see the same drop in active devices as mWeb. As a result, FCP and LCP were both improved, with lab LCP reducing from approximately 4.6s to 1.6s.
 
 <figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/Jjk6MXtChCvg5QsiczDh.jpg", alt="A WebPageTest comparison of control, experiment A (black thumbnail) and experiment B (image thumbnail)", width="800", height="415" %}
   <figcaption>
-    Prioritizing showing an Image Thumbnail early helped improve Desktop LCP in the lab from 8s to 2s.
+    Prioritizing showing an Image Thumbnail early helped improve Desktop LCP in the lab from 4.6s to 1.6s.
   </figcaption>
 </figure>
 
