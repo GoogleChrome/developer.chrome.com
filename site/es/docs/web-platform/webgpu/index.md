@@ -67,11 +67,11 @@ Para experimentar con WebGPU localmente, sin un token de prueba de origen, habil
 
 A partir de Chrome 94, WebGPU está disponible como prueba de origen en Chrome. Se espera que la prueba de origen finalice en Chrome 101 (18 de mayo de 2022).
 
-{% include 'content/origin-trials.njk' %}
+{% Partial 'origin-trials.njk' %}
 
 ### Registrarse para la prueba de origen {: #register-for-ot }
 
-{% include 'content/origin-trial-register.njk' %}
+{% Partial 'origin-trial-register.njk' %}
 
 ### Detección de características {: #feature-deployment }
 

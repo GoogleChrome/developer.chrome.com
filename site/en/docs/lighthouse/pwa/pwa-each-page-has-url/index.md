@@ -19,7 +19,7 @@ to make them easily shareable on social media.
 - If building a single-page app,
   make sure the client-side router can reconstruct the app state from a given URL.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Resources
 

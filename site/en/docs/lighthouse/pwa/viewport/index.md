@@ -34,7 +34,7 @@ Lighthouse _doesn't_ check that `width` equals `device-width`. It also doesn't
 check for an `initial-scale` key-value pair. However, you still need to include
 both for your page to render correctly on mobile devices.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to add a viewport meta tag
 

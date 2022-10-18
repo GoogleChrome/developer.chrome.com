@@ -45,7 +45,7 @@ Lighthouse doesn't check that your `robots.txt` file is
 in the correct location. To function correctly, the file must be in the root of
 your domain or subdomain.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to fix problems with `robots.txt`
 

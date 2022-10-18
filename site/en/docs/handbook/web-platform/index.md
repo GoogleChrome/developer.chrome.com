@@ -8,7 +8,7 @@ date: 2022-05-06
 
 Web Platform documentation should follow the conventions outlined in the [Add a Doc][add-a-doc] guide. 
 
-The `toc.yml` file is located at `site/_collections/_data/docs/web-platform/toc.yml`. 
+The `toc.yml` file that defines the table of contents structure is located at `site/_data/docs/web-platform/toc.yml`. 
 Link your new doc in this file in the appropriate category. If your doc moves between Origin and Developer Trials, 
 and when it ships, make a PR to update this file to move it in the list.
 

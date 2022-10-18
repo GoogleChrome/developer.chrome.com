@@ -17,7 +17,7 @@ tags:
 
 *Traducción cedida por [Miguel Ángel](https://twitter.com/midudev).*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -222,5 +222,5 @@ Ten en cuenta que este experimento está en sus primeras etapas de desarrollo. H
 
 Chromium issue: [1199787](https://crbug.com/1199787)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

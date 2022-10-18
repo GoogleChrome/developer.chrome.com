@@ -703,6 +703,16 @@ Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
 
+## Partials
+
+Use partials to reuse the same piece of content across a series of articles without having to rewrite it. Like a banner asking for feedback.
+
+```md
+{% raw %}{% Partial 'devtools/banner.md' %}{% endraw %}
+```
+
+{% Partial 'devtools/banner.md' %}
+
 ## Tabs
 
 Use `web-tabs` component to display information in a form of horizontal tabs.

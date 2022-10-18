@@ -16,7 +16,7 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi) 님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='4RXWfw7Xg_Y' %}
 
@@ -179,5 +179,5 @@ Chromium issues: [1329113](https://crbug.com/1329113), [1322115](https://crbug.c
 - **Performance insights** 패널에서 레이아웃 시프트를 유발할 가능성이 있는 iframe을 감지해냅니다. **Details** 창에서 iframe 상세를 볼 수 있습니다. ([1328873](https://crbug.com/1328873))
 - **커맨드 메뉴** 에서 [파일 열기](/docs/devtools/resources/#open) 할 때, 작성된 파일 (소스맵을 통해 생성된 파일)이 비슷한 이름의 배포된 스크립트보다 더 상위에 노출됩니다. ([1312929](https://crbug.com/1312929)) 
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -17,7 +17,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='bHw_56RiVsg' %}
 
@@ -241,5 +241,5 @@ LCP – это важная, ориентированная на пользов�
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Новая ссылка **Creator Ad Script** теперь доступна для [рекламных фреймов](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker), если DevTools обнаружили скрипт, из-за которого фрейм был помечен как реклама. Вы можете открыть фрейм во вкладке **Приложение** (Application) > **Фреймы** (Frames). ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

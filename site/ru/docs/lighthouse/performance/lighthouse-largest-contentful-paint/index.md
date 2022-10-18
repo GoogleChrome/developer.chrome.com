@@ -47,7 +47,7 @@ LCP измеряет время до вывода на экран самого �
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как улучшить свою оценку LCP
 

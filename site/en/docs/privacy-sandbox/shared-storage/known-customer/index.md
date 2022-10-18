@@ -120,4 +120,4 @@ continue to add examples as we
 [receive feedback](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)
 and discover new use cases.
 
-{% include 'content/privacysandbox-partials/sharedstorage-engage.njk' %}
+{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}

@@ -6,7 +6,7 @@ updated: 2018-03-23
 description: How to package, host, and update crx files from a personal server for Linux users.
 ---
 
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
+{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 Linux is the only platform where Chrome users can install extensions that are hosted outside of the
 [Chrome Web Store][chrome-web-store]. This article describes how to package, host, and update `crx`

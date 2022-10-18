@@ -46,6 +46,6 @@ authors:
 API のユースケースに関する一般的な質問がある場合は、[API
 についてディスカッションする](/docs/privacy-sandbox/attribution-reporting-experiment/#discuss-the-api)をご覧ください。
 
-{% include 'content/privacysandbox-partials/ar-join-discussion-long.njk' %}
+{% Partial 'privacy-sandbox/ar-join-discussion-long.njk' %}
 
-{% include 'content/privacysandbox-partials/ar-get-updates.njk' %}
+{% Partial 'privacy-sandbox/ar-get-updates.njk' %}
