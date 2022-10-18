@@ -12,7 +12,7 @@ authors:
 
 アトリビューション レポートの提案は、API メカニズムの変更から新しい機能まで、コミュニティからのフィードバックに対応するために[変更されました](#changelog)。
 
-{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
+{% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 ## この更新の対象者
 

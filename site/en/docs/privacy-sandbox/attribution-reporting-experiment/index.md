@@ -63,6 +63,6 @@ If you notice any unexpected behavior:
 To ask more general questions on how to cover your use cases with the API, see [Discuss the
 API](#discuss-the-api).
 
-{% Partial 'privacysandbox-partials/ar-join-discussion-long.njk' %}
+{% Partial 'privacy-sandbox/ar-join-discussion-long.njk' %}
 
-{% Partial 'privacysandbox-partials/ar-get-updates.njk' %}
+{% Partial 'privacy-sandbox/ar-get-updates.njk' %}

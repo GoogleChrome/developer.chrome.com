@@ -118,4 +118,4 @@ You can also enable Shared Storage with the `--enable-features=PrivacySandboxAds
 
 Check out the [example use cases and code samples](/docs/privacy-sandbox/use-shared-storage).
 
-{% include 'content/privacysandbox-partials/sharedstorage-engage.njk' %}
+{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}
