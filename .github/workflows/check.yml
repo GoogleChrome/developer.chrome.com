@@ -46,17 +46,17 @@ jobs:
         run: npm ci
 
       - name: Linting JavaScript
-        if: ${{ steps.filter.outputs.js == 'true' }}
+        if: ${{ steps.changes.outputs.js == 'true' }}
         run: |
           npm run lint:js
           npm run lint:types
 
       - name: Linting Markdown
-        if: ${{ steps.filter.outputs.md == 'true' }}
+        if: ${{ steps.changes.outputs.md == 'true' }}
         run: npm run lint:md
 
       - name: Linting SCSS
-        if: ${{ steps.filter.outputs.scss == 'true' }}
+        if: ${{ steps.changes.outputs.scss == 'true' }}
         run: npm run lint:scss
 
   test:
@@ -87,16 +87,9 @@ jobs:
         run: npm ci
 
       - name: Running tests
-        if: ${{ steps.filter.outputs.js == 'true' }}
+        if: ${{ steps.changes.outputs.js == 'true' }}
         run: |
           npm run test
-
-      - name: Storing build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-${{ github.run_id }}
-          path: dist
-          if-no-files-found: error
 
   build:
     needs: queue
@@ -115,6 +108,9 @@ jobs:
         run: npm ci
 
       - name: Building site
+        env:
+          # Increase memory limit as a full build requires around 4GB
+          NODE_OPTIONS: --max_old_space_size=4096
         run: |
           npm run production
 
