@@ -663,169 +663,26 @@ for unordered lists.
 
 ### Ordered list
 
-Ordered lists require a four-space indentation.
-
 ```md
 1. Lorem ipsum dolor sit amet…
-    1. Lorem ipsum dolor sit amet…
-        1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
-    1. Lorem ipsum dolor sit amet…
-    1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
 ```
 
-1. Lorem ipsum dolor sit amet
-    1. Lorem ipsum dolor sit amet
-        1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
-    1. Lorem ipsum dolor sit amet…
-    1. Lorem ipsum dolor sit amet…
 1. Lorem ipsum dolor sit amet…
-
-#### Uppercase Roman numerals (type)
-
-```md
-<ol type="I">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol type="I">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-
-#### Lowercase Roman numerals (type)
-
-{% Aside 'warning' %}
-This only works in browsers that support case sensitive selectors (`[type='a'
-s]`), which were introduced in [Selectors Level
-4](https://www.w3.org/TR/selectors-3/#attribute-case). See
-[caniuse.com](https://caniuse.com/mdn-css_selectors_attribute_case_sensitive_modifier)
-for compatibility information.
-{% endAside %}
-
-```md
-<ol type="i">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol type="i">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-
-#### Lowercase Roman numerals (class)
-
-This approach works in all browsers because it does not rely on the document's
-handling of case sensitivity.
-
-```md
-<ol class="type--ordered-list roman-lower">
-  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol class="type--ordered-list roman-lower">
-  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
-</ol>
-
-#### Uppercase ASCII letters (type)
-
-```md
-<ol type="A">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol type="A">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-
-
-#### Lowercase ASCII letters (type)
-
-{% Aside 'warning' %}
-This only works in browsers that support case sensitive selectors (`[type='a'
-s]`), which were introduced in [Selectors Level
-4](https://www.w3.org/TR/selectors-3/#attribute-case). See
-[caniuse.com](https://caniuse.com/mdn-css_selectors_attribute_case_sensitive_modifier)
-for compatibility information.
-{% endAside %}
-
-```md
-<ol type="a">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol type="a">
-  <li>Lorem ipsum dolor sit amet…</li>
-</ol>
-
-#### Lowercase ASCII letters (class)
-
-This approach works in all browsers because it does not rely on the document's
-handling of case sensitivity.
-
-```md
-<ol class="type--ordered-list alpha-lower">
-  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
-</ol>
-```
-
-<ol class="type--ordered-list alpha-lower">
-  <li class="type--ordered-list-item">Lorem ipsum dolor sit amet…</li>
-</ol>
-
-#### Additional notes
-
-```md
-<ul>
-  <li>
-
-    A line break before and after the `<li>`
-    content will render the content as Markdown.
-
-  </li>
-  <li>
-    Content written inline or with a single
-    line break **will not** be rendered as HTML.
-  </li>
-</ul>
-```
-
-<ul>
-  <li>
-
-    A line break before and after the `<li>`
-    content will render the content as Markdown.
-
-  </li>
-  <li>
-    Content written inline or with a single
-    line break **will not** be rendered as HTML.
-  </li>
-</ul>
+1. Lorem ipsum dolor sit amet…
 
 ### Unordered list
 
 ```md
 - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
-    - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 ```
 
 - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
-    - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
-  - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 
 ### Definition list
@@ -837,8 +694,6 @@ First Term
 Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
-
-  Additional content in a term must be indented.
 ```
 
 First Term
@@ -848,8 +703,6 @@ Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
 
-  Additional content in a term must be indented.
-
 ## Tabs
 
 Use `web-tabs` component to display information in a form of horizontal tabs.
@@ -857,23 +710,23 @@ Attribute `title` becomes the title of the corresponding tab panel.
 
 ````html
 <web-tabs>
-  <web-tab title="Tab 1 (HTML)">
+  <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (Markdown)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2. Now **with** some _Markdown_.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    You must include a line break between the html and Markdown to get the
-    Markdown to work (this is a limiation of Markdown parsers).
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    You must include a line break between the html and teh Markdown to get the
-    Markdown to work. Also, be sure to unindent the Markdown otherwise syntax
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
     highlighting will not work.
 
 ```js
@@ -885,23 +738,23 @@ const hello = 'world';
 ````
 
 <web-tabs>
-  <web-tab title="Tab 1 (HTML)">
+  <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (Markdown)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2. Now **with** some _Markdown_.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    You must include a line break between the html and Markdown to get the
-    Markdown to work (this is a limiation of Markdown parsers).
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    You must include a line break between the html and teh Markdown to get the
-    Markdown to work. Also, be sure to unindent the Markdown otherwise syntax
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
     highlighting will not work.
 
 ```js
