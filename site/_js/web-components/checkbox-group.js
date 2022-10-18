@@ -43,12 +43,14 @@ class CheckboxGroup extends BaseElement {
 
     this.allSelected = false;
     this.show = 4;
+    this.i18n = {};
   }
 
   static get properties() {
     return {
       allSelected: {type: Boolean, reflect: true},
       show: {type: Number, reflect: true},
+      i18n: {type: Object, reflect: true},
     };
   }
 
@@ -87,7 +89,7 @@ class CheckboxGroup extends BaseElement {
         class="checkbox-group__mass-select button button-text type--h6 color-primary"
         @click="${this._handleMassSelect}"
       >
-        ${this.allSelected ? 'Deselect all' : 'Select all'}
+        ${this.allSelected ? this.i18n.reset : this.i18n.select_all}
       </button>
 
       <div>${this.elements.initialChildren.slice(0, this.show)}</div>
@@ -139,6 +141,8 @@ class CheckboxGroup extends BaseElement {
       checkbox.checked = !allSelected;
       checkbox.dispatchEvent(new Event('change'));
     });
+
+    this.show = this.elements.checkboxes.length;
   }
 
   /**
