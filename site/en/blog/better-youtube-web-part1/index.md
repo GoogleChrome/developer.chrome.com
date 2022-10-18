@@ -68,7 +68,7 @@ at 4-6 seconds in some cases. This was substantially higher than their target of
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/uy6hO7M60rRw3bTfXTCH.png", alt="Charts of FCP and LCP showing YouTube Watch page pass rates as well as the YouTube origin", width="800", height="285" %}
 
 To identify areas for improvement, they turned to
-[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to audit
+[Lighthouse](/docs/lighthouse/overview/) to audit
 the YouTube watch pages, revealing a low Lighthouse
 ([lab](https://web.dev/lab-and-field-data-differences/#lab-data)) score with a
 First Contentful Paint (FCP) of 3.5 seconds and a LCP of 8.5 seconds.
