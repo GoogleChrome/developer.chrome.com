@@ -117,7 +117,7 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
 
 As mentioned above, the Search bar also supports CSS and XPath selectors.
 
-The **Elements** panel selects the first matching result in the DOM tree and rolls it into view in the viewport. By default, this happens as you type. If you are, for example, a software tester who is always working with long search queries, you can make DevTools start search only when you press <kbd>Enter</kbd>.
+The **Elements** panel selects the first matching result in the DOM tree and rolls it into view in the viewport. By default, this happens as you type. If you always work with long search queries, you can make DevTools run search only when you press <kbd>Enter</kbd>.
 
 To avoid unnecessary jumps between nodes, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Global** > **Search as you type** checkbox.
 
