@@ -53,10 +53,13 @@ Each object in the array contains these elements:
 
 `"resources"`
 : An array of strings, each containing a relative path to a given resource from the extension's root directory. Resources may contain asterisks (`*`) for wildcard matches. For example, `"/images/*"` exposes everything in the extension's `images/` directory, recursively, while `"*.png"` exposes all PNG files.
+
 `"matches"`
 : An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Paths are ignored. 
+
 `"extension_ids"`
 : An array of strings, each containing the ID of an extension that can access the resources.
+
 `"use_dynamic_url"`
 : If true, only allow resources to be access through a dynamic ID. A dynamic ID is generated per session. That means it is regenerated when the browser restarts or the extension reloads.
 
