@@ -1,0 +1,139 @@
+---
+name: 'Check'
+
+on: pull_request
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    steps:
+      - id: skip
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          concurrent_skipping: 'outdated_runs'
+          cancel_others: true
+          skip_after_successful_duplicate: true
+          do_not_skip: '["workflow_dispatch", "schedule"]'
+  lint:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            js:
+              - '**/*.js'
+              - '**/*.ts'
+              - '**/*.d.ts'
+              - '**/*.json'
+            md:
+              - '**/*.md'
+            scss:
+              - '**/*.scss'
+
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Linting JavaScript
+        if: ${{ steps.filter.outputs.js == 'true' }}
+        run: |
+          npm run lint:js
+          npm run lint:types
+
+      - name: Linting Markdown
+        if: ${{ steps.filter.outputs.md == 'true' }}
+        run: npm run lint:md
+
+      - name: Linting SCSS
+        if: ${{ steps.filter.outputs.scss == 'true' }}
+        run: npm run lint:scss
+
+  test:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            js:
+              - 'package.json'
+              - 'site/**/*.js'
+              - 'server/**.js'
+              - 'tests/**.js'
+
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Running tests
+        if: ${{ steps.filter.outputs.js == 'true' }}
+        run: |
+          npm run test
+
+      - name: Storing build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist
+          if-no-files-found: error
+
+  build:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Building site
+        run: |
+          npm run production
+
+      - name: Storing build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist
+          if-no-files-found: error
+
+  stage:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Downloading build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist
