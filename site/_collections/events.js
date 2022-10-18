@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,16 +22,14 @@ const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
 /**
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const getEvents = (collections, filter, sort) => {
   return collections
     .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
     .filter(filter)
     .map(event => {
-      event.data.isPastEvent = isPastEvent(event);
-
-      event.data.sessions = event.data.sessions.map(session => {
+      const sessions = event.data.sessions.map(session => {
         if (session.type === 'speaker') {
           session.speaker = getAuthorData(session.speaker);
         }
@@ -45,14 +43,24 @@ const getEvents = (collections, filter, sort) => {
         return session;
       });
 
-      return event;
+      return {
+        id: event.data.id,
+        title: event.data.title,
+        image: event.data.image,
+        externalUrl: event.data.externalUrl,
+        summary: event.data.summary,
+        location: event.data.location,
+        date: event.data.date,
+        isPastEvent: isPastEvent(event),
+        sessions: sessions,
+      };
     })
     .sort(sort);
 };
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
   return getEvents(
@@ -66,7 +74,7 @@ const pastEvents = collections => {
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
   return getEvents(
