@@ -63,9 +63,9 @@ The Shared Storage API intends to support many use cases, replacing several
 existing uses for third-party cookies. This may include:
 
 *  [Frequency control](/docs/privacy-sandbox/shared-storage/frequency-control/)
-*  [A/B or lift experiments](docs/privacy-sandbox/shared-storage/ab-testing/)
-*  [Creative rotation](docs/privacy-sandbox/shared-storage/creative-rotation/)
-*  [Determining known customers](docs/privacy-sandbox/shared-storage/known-customer/)
+*  [A/B or lift experiments](/docs/privacy-sandbox/shared-storage/ab-testing/)
+*  [Creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/)
+*  [Determining known customers](/docs/privacy-sandbox/shared-storage/known-customer/)
 *  Recording aggregated statistics, such as demographics, reach, frequency
    measurement, and conversion measurement with the
    [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
