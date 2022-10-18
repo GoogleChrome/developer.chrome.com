@@ -128,11 +128,11 @@ function EventCard(event) {
                           src: session.speaker.image,
                           width: 40,
                           height: 40,
-                          alt: i18n(session.speaker.title),
+                          alt: session.speaker.title,
                           class:
                             'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
                         })}
-                        ${i18n(session.speaker.title)}
+                        ${session.speaker.title}
                       </span>
 
                       ${launchIcon}
@@ -172,7 +172,7 @@ function EventCard(event) {
                       : 'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
                   const title =
                     session.participants.length === 1
-                      ? i18n(session.participants[0].title)
+                      ? session.participants[0].title
                       : i18n('i18n.events.multiple_participants');
 
                   return EventSessionCard(html`
@@ -231,15 +231,13 @@ function EventCard(event) {
 
 const participantHTML = participants => {
   const processed = participants.map(participant => {
-    const title = i18n(participant.title);
-
     if (participant.twitter) {
       return html`
         <a
           href="https://twitter.com/${participant.twitter}"
           target="_blank"
           rel="noopener noreferrer"
-          >${title}</a
+          >${participant.title}</a
         >
       `;
     }
@@ -250,12 +248,12 @@ const participantHTML = participants => {
           href="${participant.linkedin}"
           target="_blank"
           rel="noopener noreferrer"
-          >${title}</a
+          >${participant.title}</a
         >
       `;
     }
 
-    return html` ${title}`;
+    return html` ${participant.title}`;
   });
 
   return processed.join(', ');

@@ -15,6 +15,8 @@
  */
 
 const authorsData = require('../_data/authorsData.json');
+const {i18n} = require('../_filters/i18n');
+
 const PLACEHOLDER_IMG =
   'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
 
@@ -24,19 +26,19 @@ startOfDay.setHours(0, 0, 0, 0);
 /**
  * @returns {EventsCollectionItem[]}
  */
-const getEvents = (collections, filter, sort) => {
+const getEvents = ({collections, filter, sort, locale = 'en'}) => {
   return collections
-    .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
+    .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
     .filter(filter)
     .map(event => {
       const sessions = event.data.sessions.map(session => {
         if (session.type === 'speaker') {
-          session.speaker = getAuthorData(session.speaker);
+          session.speaker = getAuthorData(session.speaker, locale);
         }
 
         if (session.type === 'participant') {
           session.participants = session.participants.map(p => {
-            return getAuthorData(p);
+            return getAuthorData(p, locale);
           });
         }
 
@@ -63,13 +65,13 @@ const getEvents = (collections, filter, sort) => {
  * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event),
-    (a, b) => {
+    filter: event => isPastEvent(event),
+    sort: (a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
-    }
-  );
+    },
+  });
 };
 
 /**
@@ -77,27 +79,28 @@ const pastEvents = collections => {
  * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event) === false,
-    (a, b) => {
+    filter: event => isPastEvent(event) === false,
+    sort: (a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime();
-    }
-  );
+    },
+  });
 };
 
 /**
- * @param authorHandle
+ * @param {String} authorHandle
+ * @param {String} locale
  * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
  */
-const getAuthorData = authorHandle => {
+const getAuthorData = (authorHandle, locale) => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
 
   return {
     image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
-    title: `i18n.authors.${authorHandle}.title`,
+    title: i18n(`i18n.authors.${authorHandle}.title`, locale),
     twitter: authorsData[authorHandle].twitter,
     linkedin: authorsData[authorHandle].linkedin,
   };
