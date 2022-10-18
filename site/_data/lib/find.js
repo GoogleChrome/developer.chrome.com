@@ -107,7 +107,22 @@ const findByFilePath = (collection, filePathStem, locale = defaultLocale) => {
     locale = path.join('/', locale);
   }
 
-  const filePathToFind = path.join(locale, filePathStem);
+  let filePathToFind = path.join(locale, filePathStem);
+  const result = internalFind(
+    collection,
+    pathCacheKey,
+    'filePathStem',
+    filePathToFind
+  );
+
+  // If something has been found or nothing has been found while
+  // not specifying a locale, end here. If a locale has been defined
+  // we want to try searching again with the default locale
+  if (result || !locale) {
+    return result;
+  }
+
+  filePathToFind = path.join('/', defaultLocale, filePathStem);
   return internalFind(collection, pathCacheKey, 'filePathStem', filePathToFind);
 };
 
