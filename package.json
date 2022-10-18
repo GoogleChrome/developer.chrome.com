@@ -1,6 +1,6 @@
 {
   "name": "developer.chrome.com",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The source for developer.chrome.com",
   "private": true,
   "engines": {
