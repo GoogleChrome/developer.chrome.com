@@ -25,9 +25,12 @@ YouTube to share lessons learned along the way in a new series called, "Building
 a better web". The first part of the series will dive into how YouTube built a
 faster web experience.
 
+<figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/hIcVf8Pob6DaLrmNjdNX.png", alt="ALT_TEXT_HERE", width="800", height="450" %}
-
-The YouTube for mobile Web Watch page passing the Core Web Vitals thresholds 
+  <figcaption>
+    The YouTube for mobile web Watch page passing the <a href="https://web.dev/vitals">Core Web Vitals</a> thresholds 
+  </figcaption>
+</figure>
 
 {% Aside %}
 YouTube for mobile web (m.youtube.com) and desktop (YouTube.com) are entirely different websites built on distinct stacks/frameworks. As such, each change here has been discussed in relation to the website it affects.
@@ -70,10 +73,12 @@ the YouTube watch pages, revealing a low Lighthouse
 ([lab](https://web.dev/lab-and-field-data-differences/#lab-data)) score with a
 First Contentful Paint (FCP) of 3.5 seconds and a LCP of 8.5 seconds.
 
+<figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/resJCHngymNUCKwY1uox.png", alt="ALT_TEXT_HERE", width="800", height="371" %}
-
-Chrome sets a target of 1.8s for FCP and 2.5s for LCP as a gold standard. The
-FCP and LCP were clearly in the red at 3.5s and 8.5s, respectively.
+  <figcaption>
+    Chrome sets a target of 1.8s for FCP and 2.5s for LCP as a gold standard. The FCP and LCP were clearly in the yellow and red at 3.5s and 8.5s, respectively.
+  </figcaption>
+</figure>
 
 To optimize FCP and LCP, the YouTube team dove into several experiments,
 resulting in two big discoveries.
@@ -92,10 +97,12 @@ resulting in two big discoveries.
     FCP and LCP showed marked improvement, with field LCP improving from 4.6
 seconds to 2.0 seconds.  
   
-  {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/IVR2OQ7YVJESlA5BgnfT.png", alt="ALT_TEXT_HERE", width="800", height="514" %}
-
-In the lab, we observed an
-    improvement in FCP and LCP from 4.4s to 1.1s after this change landed.   
+<figure>
+{% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/IVR2OQ7YVJESlA5BgnfT.png", alt="ALT_TEXT_HERE", width="800", height="514" %}
+  <figcaption>
+    In the lab, we observed an improvement to the YouTube for mobile watch page FCP and LCP from 4.4s to 1.1s after this change landed. 
+  </figcaption>
+</figure>
 
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/wGjBH4sMWoZEbRon6gBS.png", alt="ALT_TEXT_HERE", width="800", height="408" %}
 
@@ -136,9 +143,12 @@ lab. As new controls were added over time, the pattern of decentralized control
 would often cause circular dependencies and memory leaks, negatively impacting
 watch page performance.
 
+<figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/vCTMilflEoDnkw1p8EuU.png", alt="ALT_TEXT_HERE", width="800", height="202" %}
-
-Chrome dev-tools 4x CPU slow-down performance run
+  <figcaption>
+    Chrome DevTools with a 4x CPU slow-down performance run. 
+  </figcaption>
+</figure>
 
 To fix the issues due to decentralized control, the team updated the player UI
 to synchronize all updates, essentially refactoring the player to one top-level
