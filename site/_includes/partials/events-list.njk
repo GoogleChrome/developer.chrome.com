@@ -1,17 +1,43 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set show = 5 %}
+
 <web-tabs class="events-list">
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
-    <div class="display-grid grid-cols-1 grid-gap-400">
-      {% for event in collections.currentEvents %}
+    <div id="upcoming-events"
+         class="display-grid grid-cols-1 grid-gap-400">
+      {% for event in collections.currentEvents.slice(0,show) %}
         {% EventCard event %}
       {% endfor %}
     </div>
+
+    {% if collections.currentEvents.length > show %}
+      <button id="load-upcoming-events"
+         class="load-more__button type--small display-inline-flex"
+         aria-controls="upcoming-events"
+      >
+        Load more events
+        {{ icon('arrow-forward', {hidden: true}) }}
+      </button>
+    {% endif %}
   </web-tab>
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
-    <div class="display-grid grid-cols-1 grid-gap-400">
-      {% for event in collections.pastEvents %}
+    <div id="past-events"
+         class="display-grid grid-cols-1 grid-gap-400">
+      {% for event in collections.pastEvents.slice(0,show) %}
         {% EventCard event %}
       {% endfor %}
     </div>
+
+    {% if collections.currentEvents.length > show %}
+      <button id="load-past-events"
+         class="load-more__button type--small display-inline-flex"
+         aria-controls="upcoming-events"
+      >
+        Load more events
+        {{ icon('arrow-forward', {hidden: true}) }}
+      </button>
+    {% endif %}
   </web-tab>
 </web-tabs>

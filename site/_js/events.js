@@ -18,3 +18,54 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
+import {RenderEventCard} from './render-event-card';
+import {loadMore} from './behaviors/load-more';
+
+// Todo - abstract to separate file and refactor collection
+const startOfDay = new Date();
+startOfDay.setHours(0, 0, 0, 0);
+const isPastEvent = event => {
+  return new Date(event.date).getTime() < startOfDay.getTime();
+};
+//Todo - end
+
+// Todo - abstract to separate file and refactor collection
+const sortDesc = (a, b) =>
+  new Date(b.date).getTime() - new Date(a.date).getTime();
+const sortAsc = (a, b) =>
+  new Date(a.date).getTime() - new Date(b.date).getTime();
+//Todo - end
+
+const getEvents = async () => {
+  const response = await fetch('/events.json');
+
+  if (response.status !== 200) {
+    throw new Error('Unable to fetch /events.json');
+  }
+
+  const events = await response.json();
+
+  return {
+    upcomingEvents: events.filter(event => !isPastEvent(event)),
+    pastEvents: events.filter(event => isPastEvent(event)),
+  };
+};
+
+(async function () {
+  const {upcomingEvents, pastEvents} = await getEvents();
+
+  //todo:
+  //- ensure elements exist
+
+  loadMore(
+    document.getElementById('load-upcoming-events'),
+    document.getElementById('upcoming-events'),
+    async (skip, take) => {
+      return upcomingEvents
+        .sort(sortAsc)
+        .slice(skip, take + skip)
+        .map(event => RenderEventCard(event));
+    },
+    {skip: 5, take: 1, total: upcomingEvents.length}
+  );
+})();
