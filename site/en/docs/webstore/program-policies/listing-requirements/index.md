@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Listing Requirements"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. If your product has a blank description field or is missing an icon or screenshots, it will be rejected.

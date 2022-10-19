@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Two Step Verification"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. To ensure the security of CWS accounts, Two Step Verification is required for all developer

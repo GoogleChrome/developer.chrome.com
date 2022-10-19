@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Handling Requirements"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. If your product is associated with a security vulnerability that could be exploited to compromise

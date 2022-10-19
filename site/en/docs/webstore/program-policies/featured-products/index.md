@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Featured Products"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. The Chrome Web Store features products that align with our standards, values, and that we believe

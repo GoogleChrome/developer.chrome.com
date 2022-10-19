@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Privacy Policies"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. If your Product handles any user data, then you must post an accurate and up to date privacy policy.

@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Ads"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Ads are considered part of your Product for purposes of content review and compliance with developer terms, and therefore must comply with the above content policies.

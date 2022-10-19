@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "API Use"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Extensions must use existing Chrome APIs for their designated use case. Use of any other method,

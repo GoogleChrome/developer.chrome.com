@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Additional Requirements for Manifest V3"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Extensions using Manifest V3 must meet additional requirements related to the extension's code.

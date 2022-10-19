@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Deceptive Installation Tactics"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Extensions must be marketed responsibly. The set of functionalities promised by the extension

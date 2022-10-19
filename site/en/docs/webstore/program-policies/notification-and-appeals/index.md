@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Notification and Appeals"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1.  In the event that your Product is removed from the Chrome Web Store, you will receive an email

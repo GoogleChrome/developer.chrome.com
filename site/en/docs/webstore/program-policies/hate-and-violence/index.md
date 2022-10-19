@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Hate Speech and Violent Behavior"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Depictions of gratuitous violence are not allowed. Products should not contain materials that

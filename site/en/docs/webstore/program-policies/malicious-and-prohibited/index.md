@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Malicious and Prohibited Products "
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Don't transmit viruses, worms, defects, Trojan horses, malware, or any other products of a destructive nature.

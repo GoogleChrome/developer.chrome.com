@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Limited Use"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. This policy establishes the Chrome Web Store's minimum user data privacy requirements; you or

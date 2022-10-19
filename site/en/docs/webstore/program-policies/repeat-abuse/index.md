@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Repeat Abuse"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Serious or repeated violations of the Chrome Web Store Distribution Agreement or these Program

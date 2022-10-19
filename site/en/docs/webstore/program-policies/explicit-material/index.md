@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Mature & Sexually Explicit Material"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 

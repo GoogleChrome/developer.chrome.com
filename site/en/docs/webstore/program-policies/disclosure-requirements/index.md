@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Disclosure Requirements"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. You must be transparent in how you handle user data (e.g., information provided by a user or

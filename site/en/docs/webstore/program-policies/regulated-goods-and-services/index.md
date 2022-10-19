@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Regulated Goods and Services"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Don't engage in or promote unlawful activities in your product, such as rape, illegal sex work,

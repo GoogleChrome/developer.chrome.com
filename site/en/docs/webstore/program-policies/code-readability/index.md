@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Code Readability Requirements"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. Developers must not obfuscate code or conceal functionality of their extension. This also applies

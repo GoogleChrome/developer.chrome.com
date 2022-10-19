@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Chrome Apps"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 To ensure a great user experience, Chrome Apps distributed through the Chrome Web Store must follow

@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Quality Guidelines"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. An extension must have a single purpose that is narrow and easy to understand. Do not create an

@@ -2,7 +2,6 @@
 layout: "layouts/doc-post.njk"
 title: "Spam and Abuse"
 date: 2022-07-21
-articleClasses: cws-policy
 ---
 
 1. We don't allow any developer, related developer accounts, or their affiliates to submit multiple
