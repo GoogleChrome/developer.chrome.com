@@ -5,7 +5,6 @@ date: 2022-09-14
 articleClasses: cws-policy
 ---
 
-
 1. Extensions should add value to the Chrome Web Store. If your extension is not particularly useful or unique, it doesn’t belong on the Chrome Web Store.
 
 1. No cheating. If you attempt to scam the system (for example, by misleading users, circumventing enforcement, copying the work of other developers, or manipulating your extension’s reviews or ratings) you will be banned from the Chrome Web Store.

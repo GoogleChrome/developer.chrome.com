@@ -21,7 +21,7 @@ articleClasses: cws-policy
     1. Building an interpreter to run complex commands fetched from a remote source, even if those
        commands are fetched as data
 
-1. Communicating with remote servers for certain purposes is still allowed. For instance,
+1. Communicating with remote servers for certain purposes is still allowed. For instance:
 
     1. Syncing user account data with a remote server
 

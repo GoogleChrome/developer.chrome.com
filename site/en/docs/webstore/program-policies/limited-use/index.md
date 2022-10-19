@@ -54,6 +54,6 @@ articleClasses: cws-policy
         1. Transferring, using, or selling user data to determine credit-worthiness or for lending purposes.
 
 1. An affirmative statement that your use of the data complies with the Limited Use restrictions
-   must be disclosed on a website belonging to your extension; e.g., A link on a homepage to a
+   must be disclosed on a website belonging to your extension; e.g., a link on a homepage to a
    dedicated page or privacy policy noting: "The use of information received from Google APIs will
    adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements."

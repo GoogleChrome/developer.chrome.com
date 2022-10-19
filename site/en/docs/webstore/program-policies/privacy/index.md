@@ -5,7 +5,7 @@ date: 2022-07-21
 articleClasses: cws-policy
 ---
 
-1. If your Product handles any user data , then you must post an accurate and up to date privacy policy.
+1. If your Product handles any user data, then you must post an accurate and up to date privacy policy.
 
 1. The privacy policy must, together with any in-Product disclosures, comprehensively disclose:
 

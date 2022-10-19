@@ -14,7 +14,7 @@ articleClasses: cws-policy
 
 1. Google has a zero-tolerance policy against child pornography. If we become aware of content with
    child pornography, we will report it to the appropriate authorities and delete the Google
-   Accounts of those involved with the distribution.
+   accounts of those involved with the distribution.
 
 1. Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
    nudity - is generally allowed, but may impact the visibility of your Product.
