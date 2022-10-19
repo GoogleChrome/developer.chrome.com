@@ -28,6 +28,6 @@ date: 2022-07-21
 
     1. Extensions whose developers have questionable reputations, such as historically misleading or malicious extensions.
 
-For information about Product ranking, please see [these FAQs][faq].
+For information about Product ranking, see [these FAQs][faq].
 
 [faq]: /docs/webstore/faq#faq-gen-24

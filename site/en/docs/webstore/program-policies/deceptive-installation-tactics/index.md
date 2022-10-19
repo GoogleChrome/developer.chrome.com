@@ -16,6 +16,6 @@ date: 2022-07-21
 
     1. Requiring unrelated user action to access advertised functionality.
 
-For more information about this policy, please see the [Developer FAQ][faq].
+For more information about this policy, see the [Developer FAQ][faq].
 
 [faq]: /docs/webstore/deceptive_installation_tactics/

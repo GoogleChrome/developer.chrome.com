@@ -14,6 +14,6 @@ date: 2022-07-21
 
 1. You must make the policy accessible by providing a link in the designated Chrome Web Store Developer Dashboard field.
 
-For more information on this policy, please see the Developer [FAQ][faq].
+For more information on this policy, see the Developer [FAQ][faq].
 
 [faq]: /docs/webstore/user_data/

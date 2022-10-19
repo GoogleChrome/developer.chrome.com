@@ -14,6 +14,6 @@ date: 2022-07-21
 
     1. PDF converters which also aim to change a user’s default search engine.
 
-Please see this [FAQ][faq] for more information.
+See [this FAQ][faq] for more information.
 
 [faq]: /docs/extensions/mv2/single_purpose/
