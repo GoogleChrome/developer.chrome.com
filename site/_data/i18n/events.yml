@@ -42,3 +42,6 @@ chrome_team:
 
 intro:
   en: "We're meeting you where you are. Join us at upcoming web conferences in your region or catch up on the content shared at past events."
+
+load_more:
+  en: "Load more events"

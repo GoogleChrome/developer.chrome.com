@@ -20,6 +20,7 @@ import './web-components/enhanced-select';
 import './web-components/checkbox-group';
 import {RenderEventCard} from './render-event-card';
 import {loadMore} from './behaviors/load-more';
+import memoize from './utils/memoize';
 
 // Todo - abstract to separate file and refactor collection
 const startOfDay = new Date();
@@ -52,20 +53,21 @@ const getEvents = async () => {
 };
 
 (async function () {
-  const {upcomingEvents, pastEvents} = await getEvents();
-
   //todo:
   //- ensure elements exist
+  const getMemoizedEvents = memoize(getEvents);
 
   loadMore(
     document.getElementById('load-upcoming-events'),
     document.getElementById('upcoming-events'),
     async (skip, take) => {
+      const {upcomingEvents} = await getMemoizedEvents();
+
       return upcomingEvents
         .sort(sortAsc)
         .slice(skip, take + skip)
         .map(event => RenderEventCard(event));
     },
-    {skip: 5, take: 1, total: upcomingEvents.length}
+    {skip: 5, take: 1}
   );
 })();

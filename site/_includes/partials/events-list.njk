@@ -5,7 +5,8 @@
 <web-tabs class="events-list">
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <div id="upcoming-events"
-         class="display-grid grid-cols-1 grid-gap-400">
+         class="display-grid grid-cols-1 grid-gap-400"
+         total-items="{{ collections.currentEvents.length }}">
       {% for event in collections.currentEvents.slice(0,show) %}
         {% EventCard event %}
       {% endfor %}
@@ -16,7 +17,7 @@
          class="load-more__button type--small display-inline-flex"
          aria-controls="upcoming-events"
       >
-        Load more events
+        {{ 'i18n.events.load_more' | i18n(locale) }}
         {{ icon('arrow-forward', {hidden: true}) }}
       </button>
     {% endif %}
@@ -24,7 +25,8 @@
 
   <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
     <div id="past-events"
-         class="display-grid grid-cols-1 grid-gap-400">
+         class="display-grid grid-cols-1 grid-gap-400"
+         total-items="{{ collections.pastEvents.length }}">
       {% for event in collections.pastEvents.slice(0,show) %}
         {% EventCard event %}
       {% endfor %}
@@ -35,7 +37,7 @@
          class="load-more__button type--small display-inline-flex"
          aria-controls="upcoming-events"
       >
-        Load more events
+        {{ 'i18n.events.load_more' | i18n(locale) }}
         {{ icon('arrow-forward', {hidden: true}) }}
       </button>
     {% endif %}
