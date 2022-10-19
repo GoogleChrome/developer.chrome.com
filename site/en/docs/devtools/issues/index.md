@@ -49,7 +49,7 @@ Future versions of Chrome will support more issue types.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/flsQZhbMxK2nCosFjvPC.png", alt="The Issues tab with one more issues found after reloading the page.", width="800", height="443" %}
 
-The Console might also show you [issues reported by the browser](/docs/devtools/console/log/#browser). However, you'll notice that such issues (like the cookie warning in the screenshot below) are hard to understand. It's not clear what you need to do to fix it.
+The **Console** might also show you [issues reported by the browser](/docs/devtools/console/log/#browser). However, you'll notice that such issues (like the cookie warning in the screenshot below) are hard to understand. It's not clear what you need to do to fix it.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VIYVuoLscTkbIZ8Nko7o.png", alt="The Console with an obscure cookie warning.", width="800", height="443" %}
 
@@ -72,7 +72,7 @@ way.
       context, such as the **Network**, **Sources**, **Elements**, and other panels.
     - Links to further guidance.
 
-1.  Click on the items in **AFFECTED RESOURCES**to [view issues in context](#issues-devtools).
+1.  Click on the items in **AFFECTED RESOURCES** to [view issues in context](#issues-devtools).
 
 ### Group issues by kind {: #group-by-kind }
 
@@ -94,7 +94,7 @@ To group issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLM
 
 Third-party cookie issues are hidden by default.
 
-To view such issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. You can find them in the **AFFECTED RESOURCES** section without a link.
+To view such issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. You can find third-party cookie issues in the **AFFECTED RESOURCES** section missing a link.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hPAEUH4LTwDFyPoQoPQ0.png", alt="Third-party cookie without a linked resource in the Affected Resources section.", width="800", height="654" %}
 
