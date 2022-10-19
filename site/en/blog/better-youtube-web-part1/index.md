@@ -1,10 +1,10 @@
 ---
-title: 'Building a Better Part 1: Building a faster YouTube on web'
+title: 'Building a Better Web - Part 1: A faster YouTube on web'
 description: >
   This is Part 1 of our new series on Building a Better YouTube Web called "Building a faster YouTube on web"
 layout:
   'layouts/blog-post.njk'
-date: 2022-10-17
+date: 2022-10-19
 authors:
   - addyosmani
   - sriramkrishnan
@@ -114,9 +114,10 @@ showing marked improvement in FCP and LCP, as seen in the above RUM analysis.
 LCP [considers](https://web.dev/lcp/#what-elements-are-considered) the poster image for video elements but not the main video element. YouTube is interested in better optimizing for this measurement gap and the Chrome team is actively working to address it.
 {% endAside %}
 
-#### Bringing over improvements from YouTube mWeb to Desktop
 
-After improving LCP on mWeb, YouTube ran both the thumbnail and base64 black placeholder image experiments on Desktop. YouTube decided to launch the thumbnail image as it did not see the same drop in active devices as mWeb. As a result, FCP and LCP were both improved, with lab LCP reducing from approximately 4.6s to 1.6s.
+#### Applying learnings from mobile to desktop
+
+After improving LCP on YouTube's mobile web properties, YouTube ran both the thumbnail and base64 black placeholder image experiments on their desktop website. YouTube noticed that they did not see the same drop in active devices on desktop than on the earlier mobile web experiments. As a result, they decided to launch the thumbnail image, improving their Core Web Vitals, with lab LCP reducing from approximately 4.6 seconds to 1.6 seconds.
 
 <figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/Jjk6MXtChCvg5QsiczDh.jpg", alt="A WebPageTest comparison of control, experiment A (black thumbnail) and experiment B (image thumbnail)", width="800", height="415" %}
