@@ -29,10 +29,10 @@ require('dotenv').config();
 const fs = require('fs');
 const chalk = require('chalk');
 const warning = chalk.black.bgYellow;
-const locales = require('../../site/_data/site.json').locales;
+const {locales} = require('../../site/_data/site.json');
 
 // Default files that should always be ignored.
-let ignores = [
+const ignores = [
   'node_modules',
   '**/README.md',
   '**/_example',
@@ -46,13 +46,27 @@ const isCI = process.env.CI;
 
 // Only use ignore environment variables during dev and CI builds.
 if (!isProduction || isCI) {
-  // Ignore translated documents
-  if (!process.env.ELEVENTY_INCLUDE_TRANSLATED) {
-    console.log(warning('Ignoring TRANSLATED docs.'));
-    const translated = locales
-      .filter(locale => locale !== 'en')
-      .map(locale => `site/${locale}/**/*`);
-    ignores = [...ignores, ...translated];
+  // Ignore all locales except /en/
+  if (process.env.ELEVENTY_INCLUDE_LOCALES) {
+    if (process.env.ELEVENTY_INCLUDE_LOCALES === 'i18n') {
+      ignores.push('site/en/**/*');
+    } else {
+      const includedLocales = process.env.ELEVENTY_INCLUDE_LOCALES.split(',');
+      for (const locale of locales) {
+        if (!includedLocales.includes(locale)) {
+          ignores.push(`site/${locale}/**/*`);
+        }
+      }
+    }
+  }
+
+  // Ignore all locales except /en/
+  if (process.env.ELEVENTY_IGNORE_I18N) {
+    for (const locale of locales) {
+      if (locale !== 'en') {
+        ignores.push(`site/${locale}/**/*`);
+      }
+    }
   }
 
   // Ignore /blog/

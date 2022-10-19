@@ -94,6 +94,9 @@ jobs:
   build:
     needs: queue
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        included-locales: ['en', 'i18n']
     steps:
       - name: Cloning repository
         uses: actions/checkout@v3
@@ -111,6 +114,7 @@ jobs:
         env:
           # Increase memory limit as a full build requires around 4GB
           NODE_OPTIONS: --max_old_space_size=4096
+          ELEVENTY_INCLUDE_LOCALES:  ${{ matrix.included-locales }}
         run: |
           npm run production
 
@@ -121,7 +125,7 @@ jobs:
       - name: Storing build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist-${{ github.run_id }}
+          name: dist-${{ matrix.included-locales }}
           path: dist.tar.gz
           if-no-files-found: error
 
@@ -129,14 +133,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Cloning repository
-        uses: actions/checkout@v3
-
       - name: Downloading build artifacts
         uses: actions/download-artifact@v3
-        with:
-          name: dist-${{ github.run_id }}
 
       - name: Unpacking built files
         run: |
-          tar xf dist.tar.gz
+          tar xf dist-en.tar.gz
+          tar xf dist-i18n.tar.gz
+          ls -R
