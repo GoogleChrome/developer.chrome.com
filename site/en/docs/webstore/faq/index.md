@@ -55,13 +55,13 @@ the standard [developer registration process][cws-register].
 
 All extensions go through an automated review process and in some cases, an extension will be published without
 further manual review. There may be some instances in which a manual review will be required before
-the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
+the extension is published based on our [program policies][cws-policies]. In some cases, where sensitive permissions
 are requested, review times and/or [approval times may be longer][cws-review-times].
 
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
 While we try to allow most extensions, a small number of extensions are explicitly
-disallowed in our [Developer Terms of Service][terms-of-services] and [Program Policies][program-policies]. Such
+disallowed in our [Developer Terms of Service][terms-of-services] and [Program Policies][cws-policies]. Such
 extensions will be removed when they are brought to our attention.
 
 ### How do I report an abusive extension? {: #faq-gen-23 }
@@ -139,7 +139,7 @@ denied.
 
 As of October 1st 2018, developers must not obfuscate code or conceal functionality of their
 extensions. This also applies to any external code or resource fetched by the extension package. For
-more information, please review our [program policies][program-policies].
+more information, please review our [program policies][cws-policies].
 
 The following are some examples of code obfuscation:
 
@@ -252,7 +252,7 @@ review can take several weeks. Some reasons that an item could require more exte
 include:
 
 - The item is suspected to contain or to be distributed by [malware or unwanted software][malware-policy].
-- The item is suspected to violate one of the [developer program policies][program-policies].
+- The item is suspected to violate one of the [developer program policies][cws-policies].
 - The item may have already been previously removed for a legal or policy violation, and has been
   resubmitted.
 - The item requests powerful permissions that require in-depth review.
@@ -284,7 +284,7 @@ or egregious policy violations may result in [termination of your developer acco
   details in the developer account listed as the owner of the extension. You can also find
   this information in the [Status Tab][comply-policies] of your item.
 - Please make the appropriate
-  changes so your extension complies with all [Developer Program Policies][program-policies], [Branding
+  changes so your extension complies with all [Developer Program Policies][cws-policies], [Branding
   Guidelines][branding] and [Terms of Services][terms-of-services]. For additional help, see the
   [Troubleshooting violations FAQ][troubleshoot-violations].
 - Once you have remedied the violation you can
@@ -326,23 +326,23 @@ Business related issues by contacting [CWS support][cws-support].
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
 [cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
 [cws-images]: /docs/webstore/images/
+[cws-policies]: /docs/webstore/program-policies
 [cws-register]: /docs/webstore/register
-[cws-review]: /docs/webstore/review-process/
 [cws-review-times]: /docs/webstore/review-process/#review-time
+[cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
-[faq-localize-description]: #faq-gen-20
-[faq-localize-screenshots]: #faq-gen-21
 [enterprise]: /docs/webstore/cws-enterprise
 [ext]: /docs/extensions/
 [extension-faq]: /docs/extensions/mv3/faq
+[faq-localize-description]: #faq-gen-20
+[faq-localize-screenshots]: #faq-gen-21
 [google-groups]: https://groups.google.com
 [great-listing]: /docs/webstore/best_listing/
 [internationalize]: /docs/webstore/i18n
 [malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
-[program-policies]: /docs/webstore/program-policies
 [region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [stackoverflow-extensions]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url

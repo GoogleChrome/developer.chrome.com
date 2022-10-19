@@ -15,7 +15,7 @@ matures and we learn from developers' experiences, these recommendations will be
 We encourage you to develop extensions that are of high quality. High-quality extensions conform to
 standards of performance, security, and user experience, as summarized by the following guidelines:
 
-* **Compliance:** Does the extension comply with our [program policies][program policies]?
+* **Compliance:** Does the extension comply with our [program policies][cws-policies]?
   Extensions must not violate any of these policies.
 
 * **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 is the current version of the
@@ -98,16 +98,16 @@ that is most appropriate:
 * Social & Communication
 * Sports
 
-[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
+[cws-policies]: /docs/webstore/program-policies/
 [dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
 [great-listing-page]: /docs/webstore/best_listing/
-[identity-api]: /docs/extensions/reference/identity/
 [identify-user]: /docs/webstore/identify_user
+[identity-api]: /docs/extensions/reference/identity/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
-[program policies]: /docs/webstore/program-policies/
+[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [stay-secure]: /docs/extensions/mv3/security/
 [supplying-images]: /docs/webstore/images/
 [user-data-faq]: /docs/webstore/user_data/

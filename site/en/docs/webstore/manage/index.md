@@ -43,7 +43,7 @@ To stay informed of your item's status, you can:
 ## Comply with Chrome Web Store policies
 
 To ensure a positive experience for your users follow the [developer program
-policies][dev-policies]. These policies may change, so check the [new announcements][whats-new] page
+policies][cws-policies]. These policies may change, so check the [new announcements][whats-new] page
 frequently.
 
 If your extension has been determined to violate one or more terms or policies, you will receive an
@@ -211,10 +211,10 @@ Analytics ID in the **Store listing Tab** under Additional fields.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
 analytics id", width="787", height="121" %}
 
+[cws-policies]: /docs/webstore/program-policies
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
-[dev-policies]: /docs/webstore/program-policies
 [enforcement]: /docs/webstore/review-process/#enforcement
 [support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/

@@ -22,8 +22,8 @@ violate policy.
 ## The basics {: #basics }
 
 When you submit an extension for review, the review team will review the extension for compliance
-with the [developer program policies][doc-dpp] and, if any violations are found, take appropriate
-[enforcement actions][header-enforcement].
+with the [developer program policies][cws-policies] and, if any violations are found, take
+appropriate [enforcement actions][header-enforcement].
 
 Existing items are also reviewed periodically for compliance. We do this because the extension
 ecosystem is constantly evolving; as malicious actors evolve their attacks or exploits are
@@ -343,7 +343,7 @@ Please only open one support request per enforcement action. Multiple support re
 difficult for the agents assisting you to find and keep track of all of the relevant information
 about your issue.
 
-[doc-dpp]: /docs/webstore/program-policies
+[cws-policies]: /docs/webstore/program-policies
 [doc-host-perms]: /docs/extensions/mv3/declare_permissions/
 [doc-lifecycle]: /docs/webstore/manage/#about-the-lifecycle-of-an-item-in-the-chrome-web-store
 [header-basics]: #basics

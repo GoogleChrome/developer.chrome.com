@@ -14,9 +14,9 @@ quickly as possible.
 
 ## State the extension's purpose
 
-The [Extension Quality Guidelines][extension-policies] state that an extension must have a single
-purpose that is narrow and easy to understand. Make sure that this field clearly communicates this
-purpose for your extension.
+The [Extension Quality Guidelines][cws-policies] state that an extension must have a single purpose
+that is narrow and easy to understand. Make sure that this field clearly communicates this purpose
+for your extension.
 
 **Single purpose description**&emsp;Fill out this field to help the reviewers understand the focus
 of your extension.
@@ -90,7 +90,7 @@ If you haven't done so yet, complete your listing by
 -  Filling out your [store listing][listing]
 
 [distribution]: /docs/webstore/cws-dashboard-distribution/
-[extension-policies]: /docs/webstore/program-policies/#extensions
+[cws-policies]: /docs/webstore/program-policies/#extensions
 [listing]: /docs/webstore/cws-dashboard-listing/
 [minimum-permissions]: /docs/extensions/mv3/security/#permissions
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code

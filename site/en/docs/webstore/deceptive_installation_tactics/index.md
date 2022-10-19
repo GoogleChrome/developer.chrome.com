@@ -92,11 +92,8 @@ audio, to interrupt the installation flow.
 
 Not necessarily. While CWS and Ads policies overlap, they are distinct and impact different
 components of your extension. It is the responsibility of the developer to comply with both.
-However, a violation of the [Google Ads
-Misrepresentation][ads-misrepresentation] Policy or [Abusing the ad
-network][abuse-ad] does violate Chrome Web Store
-[Developer Program Policies][program-policies]
-
+However, a violation of the [Google Ads Misrepresentation][ads-misrepresentation] Policy or [Abusing
+the ad network][abuse-ad] does violate Chrome Web Store [Developer Program Policies][cws-policies]
 
 ## What if I use affiliates that independently create and advertise my extensions?
 
@@ -138,5 +135,5 @@ process FAQ][complaint-faq].
 [ads-misrepresentation]: https://support.google.com/adspolicy/answer/6020955
 [complaint-faq]: /docs/webstore/complaint-faq
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[program-policies]: /docs/webstore/program-policies
+[cws-policies]: /docs/webstore/program-policies
 

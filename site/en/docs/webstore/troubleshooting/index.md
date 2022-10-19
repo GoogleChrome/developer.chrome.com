@@ -68,7 +68,7 @@ cannot, communicate that to the user.
 ### Relevant policy {: #does-not-work-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-functionality]:
+Store [developer program policies][policy-functionality]:
 
 {% Aside %}
 
@@ -166,7 +166,7 @@ The storage permission exposes the [chrome.storage][api-storage] API to the exte
 ### Relevant policy {: #excessive-permissions-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-permissions]:
+Store [developer program policies][policy-permissions]:
 
 {% Aside %}
 
@@ -208,7 +208,7 @@ disclose important information may be subject to enforcement action.
 ### Relevant policy
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-impersonation]:
+Store [developer program policies][policy-impersonation]:
 
 {% Aside %}
 
@@ -255,7 +255,7 @@ information specified in the developer dashboard.
 ### Relevant policy {: #deceptive-behavior-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-impersonation]:
+Store [developer program policies][policy-impersonation]:
 
 {% Aside %}
 
@@ -327,7 +327,7 @@ that users are aware of what data is collected, and how it is collected, used, a
 ### Relevant policy {: #udp-disclosure-policy-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-privacy-policy]:
+Store [developer program policies][policy-privacy-policy]:
 
 {% Aside %}
 
@@ -368,7 +368,7 @@ The extension is doing anything illegal. See the policy extract for specific exa
 ### Relevant policy {: #illegal-activities-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-illegal-activities]:
+Store [developer program policies][policy-illegal-activities]:
 
 {% Aside %}
 
@@ -408,7 +408,7 @@ Do not post content or provide services that facilitate online gambling.
 ### Relevant policy {: #gambling-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-gambling]:
+Store [developer program policies][policy-gambling]:
 
 {% Aside %}
 
@@ -450,7 +450,7 @@ for pornography.
 ### Relevant policy {: #pornography-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-sexually-explicit]:
+Store [developer program policies][policy-sexually-explicit]:
 
 {% Aside %}
 
@@ -494,7 +494,7 @@ to spread hateful content.
 ### Relevant policy {: #hate-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-hate-speech]:
+Store [developer program policies][policy-hate-speech]:
 
 {% Aside %}
 
@@ -532,7 +532,7 @@ audience.
 ### Relevant policy {: #not-family-safe-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-content-policies]:
+Store [developer program policies][policy-content-policies]:
 
 {% Aside %}
 
@@ -567,7 +567,7 @@ to spread the content mentioned in the relevant policy text.
 ### Relevant policy {: #violence-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-bullying]:
+Store [developer program policies][policy-bullying]:
 
 {% Aside %}
 
@@ -623,7 +623,7 @@ See the [Single Purpose FAQ][docs-single-purpose-faq] for additional information
 ### Relevant policy {: #single-purpose-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-single-purpose]:
+Store [developer program policies][policy-single-purpose]:
 
 {% Aside %}
 
@@ -657,7 +657,7 @@ the user.
 This section of the policy aims to ensure that users are aware of the data that is being collected
 and that user consent is obtained before data collection. Be aware that extensions may only collect
 data in direct support of their single purpose. See the [Limited Use of User
-Data][docs-dpp-limited-use] policy for additional information.
+Data][policy-limited-use] policy for additional information.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_11 }
 
@@ -682,7 +682,7 @@ Data][docs-dpp-limited-use] policy for additional information.
 ### Relevant policy {: #udp-prominent-disclosure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-prominent-disclosure]:
+Store [developer program policies][policy-prominent-disclosure]:
 
 {% Aside %}
 
@@ -728,7 +728,7 @@ extension makes.
 ### Relevant policy {: #udp-secure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-privacy-policy]:
+Store [developer program policies][policy-privacy-policy]:
 
 {% Aside %}
 
@@ -770,7 +770,7 @@ and is not disclosed publicly.
 ### Relevant policy {: #udp-other-requirements-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-other-userdata]:
+Store [developer program policies][policy-other-userdata]:
 
 {% Aside %}
 
@@ -828,7 +828,7 @@ to mine cryptocurrencies.
 ### Relevant policy {: #cryptocurrency-mining-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-prohibited-products]:
+Store [developer program policies][policy-prohibited-products]:
 
 {% Aside %}
 
@@ -872,7 +872,7 @@ rights.
 ### Relevant policy {: #prohibited-products-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-prohibited-products]:
+Store [developer program policies][policy-prohibited-products]:
 
 {% Aside %}
 
@@ -916,7 +916,7 @@ The following are examples of this type of violation:
 ### Relevant policy {: #keyword-stuffing-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-keyword-spam]:
+Store [developer program policies][policy-keyword-spam]:
 
 {% Aside %}
 
@@ -962,7 +962,7 @@ products from manipulating their placement in the Store
 ### Relevant policy {: #redirection-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-functionality]:
+Store [developer program policies][policy-functionality]:
 
 {% Aside %}
 
@@ -1000,7 +1000,7 @@ that manipulate their placement on the Chrome Web Store.
 ### Relevant policy {: #spam-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-repetitive-content]:
+Store [developer program policies][policy-repetitive-content]:
 
 {% Aside %}
 
@@ -1047,7 +1047,7 @@ The intent of this policy is to ensure quality of the products on the Chrome Web
 ### Relevant policy {: #circumvents-api-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-api-use]:
+Store [developer program policies][policy-api-use]:
 
 {% Aside %}
 
@@ -1084,7 +1084,7 @@ user base.
 ### Relevant policy {: #uws-distribution-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-deceptive-installation]:
+Store [developer program policies][policy-deceptive-installation]:
 
 {% Aside %}
 
@@ -1138,7 +1138,7 @@ The following are some examples of violations of this type of policy:
 ### Relevant policy {: #obfuscation-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-dpp-code-readability]:
+Store [developer program policies][policy-code-readability]:
 
 {% Aside %}
 
@@ -1167,27 +1167,6 @@ Code Readability Requirements:
 [api-tabs]: /docs/extensions/reference/tabs
 [blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
 [dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[docs-dpp-api-use]: /docs/webstore/program-policies/#api-use
-[docs-dpp-bullying]: /docs/webstore/program-policies/#bullying
-[docs-dpp-code-readability]: /docs/webstore/program-policies/#code-readability
-[docs-dpp-content-policies]: /docs/webstore/program-policies/#content_policies
-[docs-dpp-deceptive-installation]: /docs/webstore/program-policies/#deceptive_installation_tactics
-[docs-dpp-functionality]: /docs/webstore/program-policies/#functionality
-[docs-dpp-gambling]: /docs/webstore/program-policies/#gambling
-[docs-dpp-hate-speech]: /docs/webstore/program-policies/#hate-speech
-[docs-dpp-illegal-activities]: /docs/webstore/program-policies/#illegal-activities
-[docs-dpp-impersonation]: /docs/webstore/program-policies/#impersonation
-[docs-dpp-keyword-spam]: /docs/webstore/program-policies/#keyword-spam
-[docs-dpp-limited-use]: /docs/webstore/program-policies/#limited_use
-[docs-dpp-other-userdata]: /docs/webstore/program-policies/#other-userdata
-[docs-dpp-permissions]: /docs/webstore/program-policies/#permissions
-[docs-dpp-privacy-policy]: /docs/webstore/program-policies/#post-privacy-policy
-[docs-dpp-prohibited-products]: /docs/webstore/program-policies/#prohibited-products
-[docs-dpp-prominent-disclosure]: /docs/webstore/program-policies/#prominent-disclosure
-[docs-dpp-repetitive-content]: /docs/webstore/program-policies/#repetitive-content
-[docs-dpp-sexually-explicit]: /docs/webstore/program-policies/#sexually-explicit
-[docs-dpp-single-purpose]: /docs/webstore/program-policies/#single-purpose
-[docs-dpp]: /docs/webstore/program-policies/
 [docs-options]: /docs/extensions/mv3/options/
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
@@ -1203,6 +1182,26 @@ Code Readability Requirements:
 [mdn-safe-http]: https://developer.mozilla.org/docs/Glossary/Safe/HTTP
 [mdn-samesite-cookie]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 [mdn-web-storage]: https://developer.mozilla.org/docs/Web/API/Web_Storage_API
+[policy-api-use]: /docs/webstore/program-policies/api-use/
+[policy-bullying]: /docs/webstore/program-policies/hate-and-violence/
+[policy-code-readability]: /docs/webstore/program-policies/code-readability/
+[policy-content-policies]: /docs/webstore/program-policies/explicit-material/
+[policy-deceptive-installation]: /docs/webstore/program-policies/deceptive-installation-tactics/
+[policy-functionality]: /docs/webstore/program-policies/minimum-functionality/
+[policy-gambling]: /docs/webstore/program-policies/regulated-goods-and-services/
+[policy-hate-speech]: /docs/webstore/program-policies/hate-and-violence/
+[policy-illegal-activities]: /docs/webstore/program-policies/regulated-goods-and-services/
+[policy-impersonation]: /docs/webstore/program-policies/impersonation-and-intellectual-property/
+[policy-keyword-spam]: /docs/webstore/program-policies/spam-and-abuse/
+[policy-limited-use]: /docs/webstore/program-policies/limited-use/
+[policy-other-userdata]: /docs/webstore/program-policies/data-handling/
+[policy-permissions]: /docs/webstore/program-policies/permissions/
+[policy-privacy-policy]: /docs/webstore/program-policies/privacy/
+[policy-prohibited-products]: /docs/webstore/program-policies/malicious-and-prohibited/
+[policy-prominent-disclosure]: /docs/webstore/program-policies/disclosure-requirements/
+[policy-repetitive-content]: /docs/webstore/program-policies/spam-and-abuse/
+[policy-sexually-explicit]: /docs/webstore/program-policies/explicit-material/
+[policy-single-purpose]: /docs/webstore/program-policies/quality-guidelines/
 [section-does-not-work]: #does-not-work
 [section-misunderstood-perms]: #misunderstood-perms
 [webmaster-quality]: https://support.google.com/webmasters/answer/35769#3
