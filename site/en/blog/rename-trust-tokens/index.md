@@ -34,4 +34,4 @@ The API provides a small amount of storage to allow organizations to convey info
 
 -  **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view code for trust token issuance and redemption.
 -  **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and follow discussion](https://github.com/WICG/trust-token-api/issues).
--  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/antifraud/).
+-  **W3C**: Discuss industry use cases in the [Antifraud Community Group](https://www.w3.org/community/antifraud/).
