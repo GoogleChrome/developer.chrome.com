@@ -88,7 +88,7 @@ The **Issues** tab counts the number of affected resources for each issue and sh
 
 To group issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by kind** in the action bar at the top of the **Issues** tab.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OOGt5WUOjWFpfkdwA40J.png", alt="Issues grouped in three kinds: Page errors, Braking changes, and Improvements.", width="800", height="543" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/OOGt5WUOjWFpfkdwA40J.png", alt="Issues grouped in three kinds: Page errors, Breaking changes, and Improvements.", width="800", height="543" %}
 
 ### Include third-party issues {: #include-third-party }
 
