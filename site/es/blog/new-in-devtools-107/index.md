@@ -15,7 +15,9 @@ tags:
 
 *Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io).*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
+
+{% YouTube id='1uwv6HbR8HU' %}
 
 <!-- Content starts here -->
 
