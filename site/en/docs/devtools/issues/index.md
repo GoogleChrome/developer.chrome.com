@@ -25,6 +25,9 @@ Starting from Chrome 92, the **Issues** tab supports the following types of issu
 - [Mixed content][2]
 - [COEP issues][3]
 - [CORS errors][6]
+- [Quirks mode issues][7]
+- (Preview) [Low-contrast issues][8]
+- [Trusted Web Activity issues][9]
 
 Future versions of Chrome will support more issue types.
 
@@ -131,4 +134,6 @@ To investigate an issue:
 [4]: https://samesite-sandbox.glitch.me/
 [5]: /docs/devtools/open
 [6]: https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors
-
+[7]: https://quirks.spec.whatwg.org/
+[8]: /blog/new-in-devtools-90/#low-contrast
+[9]: /docs/android/trusted-web-activity/
