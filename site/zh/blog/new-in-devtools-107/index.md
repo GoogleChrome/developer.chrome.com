@@ -11,7 +11,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-107
-draft: flase
 ---
 
 *感谢 [JimLim]([https://www.linkedin.com/in/zui-yong-poong-1b507b14/](https://www.linkedin.com/in/jim-lim-539a5638)) 提供的翻译*
