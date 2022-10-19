@@ -55,7 +55,7 @@ Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 El [Inspector de Memoria](/docs/devtools/memory-inspector/) resalta todos los bytes de un objeto de memoria C/C++.
 
 <!-- Recognizing an object’s bytes among the surrounding WebAssembly memory was a pain point. You have to know the object’s size and count bytes from the object’s start. -->
-Reconoer los bytes de un objeto entre la memoria WebAssembly era un dolor de cabeza. Tienes que saber el tamaño del objeto y contar los bytes desde el inicio del objeto.
+Reconocer los bytes de un objeto entre la memoria WebAssembly era un dolor de cabeza. Tienes que saber el tamaño del objeto y contar los bytes desde el inicio del objeto.
 
 <!-- With this feature,  it helps you tell them apart from the surrounding memory. See [Extending the Memory Inspector for C/C++ debugging](/blog/memory-inspector-extended-cpp/) to learn more about the changes. -->
 Esta función te ayuda a distinguirlos de la memoria que lo rodea. Consulta [Extender el Inspector de Memoria para depuración C/C++](/blog/memory-inspector-extended-cpp/) para obtener más información sobre los cambios.
