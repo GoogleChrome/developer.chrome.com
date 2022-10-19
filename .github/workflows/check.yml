@@ -91,13 +91,6 @@ jobs:
         run: |
           npm run test
 
-      - name: Storing build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-${{ github.run_id }}
-          path: dist
-          if-no-files-found: error
-
   build:
     needs: queue
     runs-on: ubuntu-latest
@@ -118,11 +111,15 @@ jobs:
         run: |
           npm run production
 
+      - name: Packing up built files
+        run: |
+          tar cfj dist.tar.gz ./dist
+
       - name: Storing build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: dist-${{ github.run_id }}
-          path: dist
+          path: dist.tar.gz
           if-no-files-found: error
 
   stage:
@@ -136,4 +133,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-${{ github.run_id }}
-          path: dist
+
+      - name: Unpacking built files
+        run: |
+          tar xf dist.tar.gz
