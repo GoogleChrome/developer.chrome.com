@@ -103,7 +103,7 @@ To fix a low contrast issue:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uiUWw7dczJ6VonjO5Gl3.png", alt="The Contrast ratio section of the Color Picker.", width="800", height="598" %}
 
-   The **Color Picker** tells you the contrast ratio doesn't meet neither AA nor AAA levels of [WebAIM guidelines](https://webaim.org/standards/wcag/).
+   The **Color Picker** tells you the contrast ratio doesn't meet the AA or AAA levels of [WebAIM guidelines](https://webaim.org/standards/wcag/).
 
 1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5sHRUwsqWoQHF2BiEwlm.png", alt="Use suggested color.", width="23", height="20" %} **Use suggested color** button next to the AAA level. The **Color Picker** applies the text color that complies to the contrast ratio guidelines.
 
