@@ -27,6 +27,7 @@ tags:
 **Group files by Authored / Deployed** が 3 ドットメニューの中に表示されるようになりました。以前は、ナビゲーションペインに直接表示されていました。
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). Enable the **Group files by Authored / Deployed** setting to view your original source code (Authored) first and navigate to them quicker. -->
+この [デモ](https://ng-devtools.netlify.app/) を開いてください。 **Group files by Authored / Deployed** 設定を有効にすることで、最初にオリジナルのソースコード（Authored）を表示してそれらにすばやく移動することができます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HI12Jz3K7CCy0cm01jBk.png", alt="Authored / Deployed によるファイルのグループ化", width="800", height="405" %}
 
@@ -92,6 +93,7 @@ DevTools が既知のサードパーティスクリプトを無視リストに�
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="既知のサードパーティスクリプトを自動的に無視する", width="800", height="425" %}
 
 <!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+舞台裏では、DevTools はソースマップにて新しい `x_google_ignoreList` プロパティに基づいてサードパーティスクリプトを無視します。フレームワークとバンドラは、この情報を提供する必要があります。 [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular) を参照してください。
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
 必要に応じて、完全なスタックトレースを常に表示したい場合は、 **Setting** > **Ignore list** > **Automatically and known third-party scripts to ignore list** にて設定を無効にすることができます。
@@ -172,8 +174,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Performance Insights パネルでの LCP タイミングの内訳  {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-**Performance Insights** パネルに、 [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint) の [タイミングの内訳](web.dev/optimize-lcp/#lcp-breakdown) が表示されるようになりました。これらのタイミング情報を使用して、LCP パフォーマンスを改善する機会を理解して特定することができます。
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Performance Insights パネルでの LCP タイミングの内訳", width="800", height="523" %}
 
