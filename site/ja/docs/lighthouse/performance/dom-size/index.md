@@ -33,7 +33,7 @@ Lighthouse は DOM ツリーのあるページに以下のようなフラグを�
 - Body 要素に約 800 を超えるノードがあることを警告します。
 - Body 要素に約 1,400 を超えるノードがある場合はエラーとなります。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## DOM サイズを最適化するには
 

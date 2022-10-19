@@ -23,7 +23,7 @@ updated: 2020-06-04
 - [Chrome용 라이브러리 감지기](https://www.npmjs.com/package/js-library-detector)를 실행합니다.
 - [snyk의 Vulnerability DB](https://snyk.io/vuln?packageManager=all)에 대해 감지된 라이브러리 목록을 확인합니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 안전하지 않은 JavaScript 라이브러리 사용 중지
 

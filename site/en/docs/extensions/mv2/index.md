@@ -24,7 +24,7 @@ date: 2020-11-09
 
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser. If you're not sure where to begin,

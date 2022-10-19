@@ -28,7 +28,7 @@ Lighthouse reports any `hreflang` links with invalid language codes.
 
 Lighthouse does not check region codes or your [sitemap](https://support.google.com/webmasters/answer/156184).
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to define an `hreflang` link for each version of a page
 

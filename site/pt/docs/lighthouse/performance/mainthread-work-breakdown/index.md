@@ -18,7 +18,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza pá
 
 Para ajudá-lo a identificar as fontes de carregamento do thread principal, o Lighthouse mostra uma análise de onde o tempo da CPU foi gasto enquanto o navegador carregava sua página.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como minimizar o trabalho do thread principal
 

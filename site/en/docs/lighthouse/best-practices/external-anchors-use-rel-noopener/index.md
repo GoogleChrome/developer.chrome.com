@@ -47,7 +47,7 @@ if one page contains a `target="_blank"` link to another page on your site witho
 the performance implications of this audit still apply.
 However, you won't see these links in your Lighthouse results.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to improve your site's performance and prevent security vulnerabilities
 

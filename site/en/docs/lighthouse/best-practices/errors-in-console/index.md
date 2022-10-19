@@ -26,7 +26,7 @@ An `Error` message means there's a problem on your page that you need to resolve
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/AjfKRZm8E4ZUi2QvQtL3.png", alt="Lighthouse audit showing browser errors in the console", width="800", height="247" %}
 </figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to fix browser errors
 

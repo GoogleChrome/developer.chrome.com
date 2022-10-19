@@ -23,7 +23,7 @@ date: 2020-05-06
 
 {% Aside 'caution' %} Lighthouse не проверяет изображение, указанное в качестве маскируемого значка. Вам потребуется вручную проверить, хорошо ли оно отображается. {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Добавление поддержки маскируемых значков в прогрессивное приложение (PWA)
 

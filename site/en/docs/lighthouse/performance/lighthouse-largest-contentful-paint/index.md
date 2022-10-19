@@ -57,7 +57,7 @@ The table below shows how to interpret your LCP score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your LCP score
 

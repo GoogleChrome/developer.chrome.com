@@ -47,7 +47,7 @@ because it adversely affects performance no matter how it's used,
 and there are better alternatives.
 
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Avoid `document.write()`
 

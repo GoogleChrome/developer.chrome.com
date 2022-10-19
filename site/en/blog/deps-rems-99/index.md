@@ -13,7 +13,7 @@ tags:
   - chrome-99
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 99 beta was released on February 3, 2022 and is expected to become the
 stable version in early March, 2022.
@@ -66,4 +66,4 @@ timestamp to zero. This seems helpful, but is problematic if you then send the
 `VideoFrame` to a `VideoEncoder`, where timestamps are used to guide bitrate
 control.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

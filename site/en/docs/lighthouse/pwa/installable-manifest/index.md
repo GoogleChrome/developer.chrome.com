@@ -45,7 +45,7 @@ for installability, see the
 [Discover what it takes to be installable](https://web.dev/progressive-web-apps/#make-it-installable) post.
 {% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to make your PWA installable
 Make sure your app has a manifest that meets the criteria above.

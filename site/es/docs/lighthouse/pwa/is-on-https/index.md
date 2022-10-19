@@ -22,7 +22,7 @@ Para obtener más información sobre por qué todos los sitios deben protegerse 
 
 Lighthouse espera un evento del [Protocolo de depuración remota de Chrome](https://github.com/ChromeDevTools/devtools-protocol) que indica que la página se está ejecutando sobre una conexión segura. Si el evento no se detecta en 10 segundos, la auditoría falla.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo migrar su sitio a HTTPS
 

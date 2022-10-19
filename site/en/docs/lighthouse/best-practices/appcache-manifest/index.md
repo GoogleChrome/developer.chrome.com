@@ -29,7 +29,7 @@ For example, this markup causes the audit to fail:
 </html>
 ```
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Use the Cache API instead of the Application Cache
 
