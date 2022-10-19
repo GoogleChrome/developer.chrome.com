@@ -118,7 +118,7 @@ practical mechanisms to enable browser-based limits on the information a site ca
 
 ### Fight spam and fraud on the web
 
-* [**Trust Tokens**](/docs/privacy-sandbox/trust-tokens): Enable a website to convey a limited amount of 
+* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Enable a website to convey a limited amount of 
 information from one browsing context to another (for example, across sites) to help combat fraud, 
 without passive tracking.
 
@@ -161,7 +161,7 @@ more-private ways to accomplish their goals. You can make comments or ask questi
 tab for each explainer.
 
 * [Privacy Budget](https://github.com/bslassey/privacy-budget)
-* [Trust Tokens](https://github.com/dvorak42/trust-token-api)
+* [Private State Tokens](https://github.com/dvorak42/trust-token-api)
 * [First-Party Sets](https://github.com/privacycg/first-party-sets)
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
@@ -173,7 +173,7 @@ tab for each explainer.
 
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 * [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
-* [Getting started with Trust Tokens](https://web.dev/trust-tokens)
+* [Getting started with Privacy State Tokens](https://web.dev/trust-tokens)
 * [A more private way to measure ad conversions](https://web.dev/conversion-measurement/)
 * [Introducing the Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
 

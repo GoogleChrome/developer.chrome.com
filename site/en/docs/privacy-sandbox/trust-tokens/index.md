@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Trust Tokens'
+title: 'Private State Tokens'
 subhead: >
   An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 description: >
@@ -11,6 +11,12 @@ authors:
   - samdutton
 ---
 
+{% Aside %}
+This article previously referred to Private State Tokens as "Trust Tokens". The Trust Token API has been renamed to the Private State Token API to better showcase its privacy and utility benefits.
+
+Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for more information.
+{% endAside %}
+
 ## Implementation status
 
 * [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101.
@@ -19,13 +25,13 @@ authors:
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 
-## What are Trust Tokens?
+## What are Private State Tokens?
 
 {% YouTube
   id='bXB1Iwq6Eq4' 
 %}
 
-Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to 
+Private State Tokens enable trust in a user's authenticity to be conveyed from one context to another, to 
 help sites combat fraud and distinguish bots from real humans—without passive tracking.
 
 * An **issuer** website can issue tokens to the web browser of a user who shows that they're
@@ -34,18 +40,18 @@ an acceptable [reCAPTCHA score](https://developers.google.com/recaptcha).
 * A **redeemer** website can confirm that a user is not fake by checking if they have tokens from an 
 issuer the redeemer trusts, and then redeeming tokens as necessary.
 
-Trust tokens are encrypted, so it isn't possible to identify an individual or connect trusted and 
+Private State Tokens are encrypted, so it isn't possible to identify an individual or connect trusted and 
 untrusted instances to discover user identity.
 
 {% Aside 'caution' %}
-Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not 
+Private State Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not 
 a user is who they say they are.
 
-Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user.
+Private State Tokens are a way to **convey** trust in a user, not **establish** trust in a user.
 {% endAside %}
 
 
-## Why do we need Trust Tokens?
+## Why do we need Private State Tokens?
 
 The web needs ways to establish and convey trust signals which show that a user is who they say 
 they are, and not a bot pretending to be a human or a malicious third-party defrauding a real person
@@ -57,7 +63,7 @@ interaction with a site is from a real human, for example—take advantage of te
 be used for fingerprinting. Mechanisms to convey trust must preserve privacy, enabling trust to be 
 propagated across sites without individual user tracking.
 
-With the Trust Tokens API, a website can issue cryptographic tokens to a user it trusts, which can 
+With the Private State Token API, a website can issue cryptographic tokens to a user it trusts, which can 
 later be used elsewhere. The tokens are stored securely by the user's browser, and can then be 
 redeemed in other contexts to confirm the user's authenticity. This allows trust of a user on one 
 website (such as a social media site or email service) to be conveyed to another website (such as a 
@@ -75,7 +81,7 @@ fingerprint data can be combined to identify you as an individual.
 {% endAside %} 
 
 
-## How do Trust Tokens work?
+## How do Private State Tokens work?
 
 In this example a publisher website wants to check if a user is a real human, and not a bot, before displaying an ad.
 
@@ -83,15 +89,15 @@ In this example a publisher website wants to check if a user is a real human, an
 1. A user visits a website (known as an **issuer**) and performs actions that lead the site to 
 believe that the user is a real human, such as making purchases, using an email account or 
 successfully completing reCAPTCHA.
-1. The issuer site uses the Trust Tokens JavaScript API to trigger a request for trust tokens for 
+1. The issuer site uses the Private State Token JavaScript API to trigger a request for trust tokens for 
 the user's browser.
 1. The issuer site responds with token data.
 1. The user's browser securely stores data for the trust token.
 1. The user visits a different website (such as a news publisher) that wants to verify if the user 
 is a real human: for example, when displaying ads.
-1. The site uses the Trust Tokens API to check if the user's browser has trust tokens stored for 
+1. The site uses the Private State Token API to check if the user's browser has trust tokens stored for 
 issuers that the site trusts.
-1. Trust tokens are found for the issuer the user visited previously.
+1. Private state tokens are found for the issuer the user visited previously.
 1. The publisher site makes a request to the issuer to redeem the trust tokens.
 1. The issuer site responds with a Redemption Record.
 1. The publisher site makes a request to an ad platform, including the Redemption Record to show 
@@ -121,7 +127,7 @@ follow discussion](https://github.com/WICG/trust-token-api/issues).
 
 ## Find out more
 
-* [Trust Token API technical explainer](https://github.com/dvorak42/trust-token-api)
-* [Getting started with Trust Tokens](https://web.dev/trust-tokens/): an overview for web developers
+* [Private State Token API technical explainer](https://github.com/dvorak42/trust-token-api)
+* [Getting started with Private State Tokens](https://web.dev/trust-tokens/): an overview for web developers
 * [Getting started with Chrome's origin trials](https://web.dev/origin-trials)
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
