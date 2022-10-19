@@ -4,7 +4,7 @@ title: >
 description: >
   Learn how to use Chrome DevTools to discover and fix low contrast text.
 layout: 'layouts/blog-post.njk'
-date: 2022-10-12
+date: 2022-10-19
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wBe88JjzaCRFCybZu2Ia.png'
@@ -40,7 +40,7 @@ Watch the video to learn how to:
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QdE5Gr23r68leiaVjfUI.png", alt="Blurred vision selected in the Rendering tab and emulated in the viewport.", width="800", height="500" %}
 
-For a more hands-on learning experience, see the [Discover and fix low contrast text](/docs/devtools/accessibility/reference/#contrast) tutorial.
+For a more hands-on learning experience, see the [Make your website more readable](/docs/devtools/accessibility/contrast/) tutorial.
 
 To learn more, see:
 
