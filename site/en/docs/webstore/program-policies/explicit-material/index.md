@@ -16,8 +16,8 @@ articleClasses: cws-policy
    child pornography, we will report it to the appropriate authorities and delete the Google
    accounts of those involved with the distribution.
 
-1. Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
-   nudity - is generally allowed, but may impact the visibility of your Product.
+1. Content which contains non-sexual nudity&mdash;such as artistic, educational, scientific, or cultural
+   nudity&mdash;is generally allowed, but may impact the visibility of your Product.
 
 1. Products that include content that may not be suitable for all ages should be marked "Mature" on
    the Developer Dashboard.

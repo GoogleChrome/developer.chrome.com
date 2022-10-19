@@ -37,12 +37,12 @@ articleClasses: cws-policy
         1. the user's explicit consent to read specific data for example, helping a user re-access
            the product or a service after having lost their password) is obtained;
 
-        1. the data is aggregated and anonymized and used for internal operations in accordance with
+        1. The data is aggregated and anonymized and used for internal operations in accordance with
            applicable privacy and other jurisdictional legal requirements;
 
-        1. it's necessary for security purposes (e.g., investigating abuse); or,
+        1. It's necessary for security purposes (e.g., investigating abuse); or,
 
-        1. to comply with applicable laws.
+        1. To comply with applicable laws.
 
     1. All other transfers, uses, or sale of user data is completely prohibited, including:
 
