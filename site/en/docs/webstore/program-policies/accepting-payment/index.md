@@ -6,7 +6,7 @@ date: 2022-07-21
 
 If you collect sensitive personal information through your Product for sales, you must follow these requirements:
 
-1. You must securely collect, store and transmit all credit card and other sensitive personal information in accordance with privacy and data security laws and payment card industry rules.
+1. You must securely collect, store, and transmit all credit card and other sensitive personal information in accordance with privacy and data security laws and payment card industry rules.
 
 1. You must avoid misleading users. For example, clearly and honestly describe the products or services that you are selling and conspicuously post your terms of sale (including any refund and return policies).
 
