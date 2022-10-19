@@ -92,7 +92,7 @@ storage worklet.
 
 The shared storage data can be used for:
 
-*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): 
+*  **URL selection**: 
    you can run a worklet script to select a URL from a provided list, based on
    the stored data, and then render that URL in a fenced frame.  The returned
    URL will be an opaque URL, which means the developer and other viewers of
