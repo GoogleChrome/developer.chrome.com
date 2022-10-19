@@ -14,22 +14,19 @@
  * limitations under the License.
  */
 
-const minify = require('html-minifier').minify;
+const htmlMinifier = require('@minify-html/node');
 
 const minifyHtml = (content, outputPath) => {
   if (outputPath && outputPath.endsWith('.html')) {
     try {
-      content = minify(content, {
-        removeAttributeQuotes: true,
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        removeComments: true,
-        sortClassName: true,
-        sortAttributes: true,
-        html5: true,
-        decodeEntities: true,
-      });
-      return content;
+      return htmlMinifier
+        .minify(Buffer.from(content, 'utf8'), {
+          // See https://docs.rs/minify-html/latest/minify_html/struct.Cfg.html
+          do_not_minify_doctype: true,
+          ensure_spec_compliant_unquoted_attribute_values: true,
+          keep_spaces_between_attributes: true,
+        })
+        .toString('utf-8');
     } catch (err) {
       console.warn('Could not minify html for', outputPath);
     }
