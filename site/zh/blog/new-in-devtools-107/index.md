@@ -29,7 +29,7 @@ draft: flase
 
 ## 客制化 DevTools 的键盘快捷键 {: #shortcuts }
 
-<!-- 您现在可以在DevTools中客制化你喜爱的命令的键盘快捷键 -->
+您现在可以在 DevTools 里客制化您喜爱的键盘快捷键。
 
 <!-- 去到**Settings(设置)** > **Shortcuts(快捷键）**, 将鼠标徘徊在命令上并点击**Edit（编辑）** 按钮 (钢笔图示）来客制化键盘快捷键。您也可以创建组合键 You can create chords (a.k.a 多键点击快捷键)。  -->
 
