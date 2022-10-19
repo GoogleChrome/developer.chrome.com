@@ -20,6 +20,7 @@ const {formatDateShort} = require('../_data/lib/date');
 const {EventSessionCard} = require('./EventSessionCard');
 const {html} = require('common-tags');
 const {i18n} = require('../_filters/i18n');
+const {isPastEvent} = require('../_js/utils/events');
 
 const calendarIcon = fs.readFileSync(
   path.join(__dirname, '../_includes/icons/calendar.svg'),
@@ -49,7 +50,7 @@ const launchIcon = fs.readFileSync(
  * @returns {string}
  */
 function EventCard(event) {
-  const buttonLabel = event.isPastEvent
+  const buttonLabel = isPastEvent(event)
     ? i18n('i18n.events.see_details')
     : i18n('i18n.events.see_whos_joining');
 

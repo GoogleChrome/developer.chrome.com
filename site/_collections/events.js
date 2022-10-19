@@ -18,12 +18,10 @@ const authorsData = require('../_data/authorsData.json');
 const {i18n} = require('../_filters/i18n');
 const {Img} = require('../_shortcodes/Img');
 const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
+const {isPastEvent, sortAsc, sortDesc} = require('../_js/utils/events');
 
 const EVENT_PLACEHOLDER =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
-
-const startOfDay = new Date();
-startOfDay.setHours(0, 0, 0, 0);
 
 /**
  * @returns {EventsCollectionItem[]}
@@ -51,7 +49,6 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         summary: event.data.summary,
         location: event.data.location,
         date: event.data.date,
-        isPastEvent: isPastEvent(event),
         sessions,
         image,
       };
@@ -67,9 +64,7 @@ const pastEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event),
-    sort: (a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    },
+    sort: sortDesc,
   });
 };
 
@@ -81,9 +76,7 @@ const currentEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event) === false,
-    sort: (a, b) => {
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    },
+    sort: sortAsc,
   });
 };
 
@@ -147,14 +140,6 @@ const processSession = (session, locale) => {
   });
 
   return session;
-};
-
-/**
- * @param event
- * @returns {boolean}
- */
-const isPastEvent = event => {
-  return new Date(event.date).getTime() < startOfDay.getTime();
 };
 
 module.exports = {currentEvents, pastEvents};
