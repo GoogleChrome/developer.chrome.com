@@ -4,7 +4,7 @@ title: "Featured Products"
 date: 2022-07-21
 ---
 
-1. The Chrome Web Store features products that align with our standards, values, and that we believe will produce valuable user experiences. Certain products that don't meet these standards, but which do not explicitly violate CWS policies&mdash;such as VPN extensions and video downloaders&mdash;may be restricted from feature in the store, but will still be available to users. For example, the following products are currently not featured in the CWS Store:
+1. The Chrome Web Store features products that align with our standards, values, and that we believe will produce valuable user experiences. Certain products that don't meet these standards, but which do not explicitly violate Chrome Web Store policies&mdash;such as VPN extensions and video downloaders&mdash;may be restricted from feature in the store, but will still be available to users. For example, the following products are currently not featured in the Chrome Web Store:
 
     1. Religious or political content
 
