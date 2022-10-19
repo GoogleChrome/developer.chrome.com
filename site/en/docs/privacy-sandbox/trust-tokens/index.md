@@ -12,7 +12,7 @@ authors:
 ---
 
 {% Aside %}
-We're renaming the Trust Token API to Private State Token API to better showcase its privacy and utility benefits.
+This article previously referred to Private State Tokens as "Trust Tokens". Trust Token API has been renamed to Private State Token API to better showcase its privacy and utility benefits.
 
 Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for more information.
 {% endAside %}
