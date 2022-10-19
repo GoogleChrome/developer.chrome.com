@@ -9,5 +9,5 @@ date: 2019-09-19
 updated: 2019-09-20
 ---
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}
 

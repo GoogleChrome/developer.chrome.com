@@ -26,11 +26,11 @@ Internet Explorer를 제외한 모든 주요 브라우저는 서비스 워커를
 
 Lighthouse는 [Chrome 원격 디버깅 프로토콜](https://github.com/ChromeDevTools/devtools-protocol) 이 서비스 워커 버전을 반환하는지 확인합니다. 그렇지 않으면 감사가 실패합니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 서비스 워커 등록 방법
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 서비스 워커를 등록하는 데는 몇 줄의 코드만 필요하지만 서비스 워커를 사용하는 유일한 이유는 위에 설명된 PWA 기능 중 하나를 구현할 수 있도록 하기 위해서입니다. 실제로 이러한 기능을 구현하려면 더 많은 작업이 필요합니다.
 

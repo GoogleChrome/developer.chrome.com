@@ -59,7 +59,7 @@ TTI измеряет, сколько времени требуется стра�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как улучшить оценку TTI
 
@@ -76,7 +76,7 @@ TTI измеряет, сколько времени требуется стра�
 
 {% Aside %} TTI может быть сложно отследить в естественных условиях. Отслеживая показатель [First Input Delay (задержка первого ввода)](https://developers.google.com/web/updates/2018/05/first-input-delay), можно получить достаточно близкое к TTI значение. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Ресурсы
 

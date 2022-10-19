@@ -19,7 +19,7 @@ Cuando los usuarios de iOS Safari agregan [aplicaciones web progresivas (PWA)](/
 
 Lighthouse no comprueba si el icono realmente existe o si el icono tiene el tamaño correcto.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo agregar un ícono táctil de Apple
 

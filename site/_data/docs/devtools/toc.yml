@@ -36,7 +36,7 @@
     - url: /docs/devtools/console/utilities/
 - title: i18n.docs.devtools.sources
   sections:
-    - url: /docs/devtools/javascript/sources/
+    - url: /docs/devtools/sources/
     - url: /docs/devtools/javascript/
     - url: /docs/devtools/javascript/breakpoints/
     - url: /docs/devtools/javascript/snippets/

@@ -26,7 +26,7 @@ that return an unsuccessful HTTP status code (in the 400s or 500s):
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/omMzgdKyzeYBQjPjQFKa.png", alt="Lighthouse audit showing search engines are struggling to index your page", width="800", height="74", class="w-screenshot" %}
 </figure>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to fix an unsuccessful HTTP status code
 

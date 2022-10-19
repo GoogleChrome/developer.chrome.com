@@ -25,7 +25,7 @@ flags pages whose width isn't equal to the width of the viewport:
 
 The audit fails if `window.innerWidth` does not equal `window.outerWidth`.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to make your page fit on mobile screens
 

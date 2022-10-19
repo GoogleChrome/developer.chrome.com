@@ -20,7 +20,7 @@ which can cause your page to [render in unexpected ways](https://quirks.spec.wha
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="Lighthouse audit showing missing doctype", width="800", height="76" %}
 </figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to add a doctype declaration
 

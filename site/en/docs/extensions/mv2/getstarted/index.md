@@ -6,7 +6,7 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][background], [content scripts][content-scripts], an [options page][options], [UI elements][user-interface] and various logic files.

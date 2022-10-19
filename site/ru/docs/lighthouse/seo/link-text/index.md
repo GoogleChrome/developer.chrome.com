@@ -26,7 +26,7 @@ Lighthouse отмечает следующий типовой текст ссы�
 - `more`
 - `learn more`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Как сделать текст ссылки содержательным
 

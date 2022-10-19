@@ -28,7 +28,7 @@ Lighthouse marca los siguientes textos de enlace genéricos:
 - `more`
 - `learn more`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Cómo agregar texto de enlace descriptivo
 
