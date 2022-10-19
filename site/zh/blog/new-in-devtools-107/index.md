@@ -27,7 +27,7 @@ draft: flase
 
 <!-- Content starts here -->
 
-<!-- ## 客制化DevTools的键盘快捷键 {: #shortcuts } -->
+## 客制化 DevTools 的键盘快捷键 {: #shortcuts }
 
 <!-- 您现在可以在DevTools中客制化你喜爱的命令的键盘快捷键 -->
 
