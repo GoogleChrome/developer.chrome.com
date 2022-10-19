@@ -17,6 +17,8 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
+{% YouTube id='1uwv6HbR8HU' %}
+
 ## DevTools에서 키보드 단축키 커스터마이징 {: #shortcuts }
 
 DevTools 에서 선호하는 명령어에 대한 키보드 단축키를 커스터마이징할 수 있습니다.

@@ -16,6 +16,8 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
+{% YouTube id='1uwv6HbR8HU' %}
+
 <!-- Content starts here -->
 
 ## Customize keyboard shortcuts in DevTools {: #shortcuts }
