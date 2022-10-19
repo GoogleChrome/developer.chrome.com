@@ -16,6 +16,7 @@ tags:
 *感谢 [JimLim]([https://www.linkedin.com/in/zui-yong-poong-1b507b14/](https://www.linkedin.com/in/jim-lim-539a5638)) 提供的翻译*
 
 {% Partial 'devtools/banner.md' %}
+{% YouTube id='1uwv6HbR8HU' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR
