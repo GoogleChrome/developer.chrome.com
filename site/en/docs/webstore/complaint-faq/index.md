@@ -51,7 +51,7 @@ You can fill out the [CWS Support form][cws-support-form] to receive further cla
 or to appeal the removal decision. Within **seven days**, the review team will respond with further
 clarification or provide a decision to any appeal requests. The CWS will only reinstate accounts if
 an error was made, and a re-review finds that your account does not violate the [developer
-terms][cws-policies].
+terms][program-policies].
 
 If after receiving further information or disagreeing with the decision on appeal, and if you are a
 business user based in the EU or the UK, you may also apply to resolve a dispute with mediation. See
@@ -64,5 +64,5 @@ level of investigation needed to determine the root cause/explanation. For examp
 stats on the dashboard, extensions between developers, and developer account recovery have been
 known to require longer investigation times.
 
-[cws-policies]: /docs/webstore/program-policies
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[program-policies]: /docs/webstore/program-policies
