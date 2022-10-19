@@ -12,8 +12,7 @@ date: 2022-07-21
 
     1. All parties the user data will be shared with.
 
-1. You must make the policy accessible by providing a link in the designated Chrome Web Store
-   Developer Dashboard field.
+1. You must make the policy accessible by providing a link in the designated Chrome Web Store Developer Dashboard field.
 
 For more information on this policy, please see the Developer [FAQ][faq].
 

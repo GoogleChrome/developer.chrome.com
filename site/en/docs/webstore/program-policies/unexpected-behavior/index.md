@@ -4,18 +4,10 @@ title: "Misleading or Unexpected Behavior"
 date: 2022-07-21
 ---
 
-1. We do not allow products that deceive or mislead users, including in the content, title,
-   description, or screenshots. If any of your product's content, title, icon, description, or
-   screenshots contains false or misleading information, we may remove it.
+1. We do not allow products that deceive or mislead users, including in the content, title, description, or screenshots. If any of your product's content, title, icon, description, or screenshots contains false or misleading information, we may remove it.
 
-1. Any changes to device settings must be made with the user's knowledge and consent and be easily
-   reversible by the user.
+1. Any changes to device settings must be made with the user's knowledge and consent and be easily reversible by the user.
 
-1. Don't misrepresent the functionality of your product or include non-obvious functionality that
-   doesn't serve the primary purpose of the product. Descriptions of your product must directly
-   state the functionality so that users have a clear understanding of the product they are adding.
-   For example, products should not contain:
+1. Don't misrepresent the functionality of your product or include non-obvious functionality that doesn't serve the primary purpose of the product. Descriptions of your product must directly state the functionality so that users have a clear understanding of the product they are adding. For example, products should not contain:
 
-    1. Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
-       media account") or which are not directly provided by the extension (e.g. file converters
-       which only link to other file conversion services)
+    1. Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social media account") or which are not directly provided by the extension (e.g. file converters which only link to other file conversion services)

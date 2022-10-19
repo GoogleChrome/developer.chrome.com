@@ -4,9 +4,7 @@ title: "Code Readability Requirements"
 date: 2022-07-21
 ---
 
-1. Developers must not obfuscate code or conceal functionality of their extension. This also applies
-   to any external code or resource fetched by the extension package. Minification is allowed,
-   including the following forms:
+1. Developers must not obfuscate code or conceal functionality of their extension. This also applies to any external code or resource fetched by the extension package. Minification is allowed, including the following forms:
 
     1. Removal of whitespace, newlines, code comments, and block delimiters
 
