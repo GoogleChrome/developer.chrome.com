@@ -280,7 +280,7 @@ For example, this can be called from `curl` with the following command line (rep
 curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
-    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics",["largest_contentful_paint", "experimental_time_to_first_byte"]}'
+    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
 ```
 
 
