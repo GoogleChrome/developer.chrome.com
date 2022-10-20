@@ -5,9 +5,6 @@ date: 2022-10-03
 updated: 2022-10-03
 description: Reference documentation for the content security policy properties of manifest.json.
 ---
-## Manifest - Content Security Policy 
-
-## 
 
 An optional Manifest key defining restrictions on the sources, scripts, and objects able to be used by an extension. Within this manifest key, separate policies can be defined for both extension pages and sandboxed extension pages.
 
