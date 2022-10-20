@@ -31,7 +31,7 @@ your configuration, and provides further resources for testing against the APIs.
 
 ### October 2022
 
--  Origin trial [extended to Chrome
+-  Origin trial has been [extended to Chrome
 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8).
 [Getting started with Chrome's origin
 trials](/docs/web-platform/origin-trials/#renew) explains how to renew origin
