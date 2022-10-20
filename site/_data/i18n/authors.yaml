@@ -1137,3 +1137,8 @@ rouslan:
     en: 'Rouslan Solomakhin'
   description:
     en: 'Software Engineer on the Chrome team.'
+chrisdavidmills:
+  title:
+    en: 'Chris Mills'
+  description:
+    en: 'Independent tech writer specializing in web platform docs'
