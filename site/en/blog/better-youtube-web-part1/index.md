@@ -98,19 +98,19 @@ resulting in two big discoveries.
   </figcaption>
 </figure>
 
-While these optimizations did improve LCP, the team felt that the current definition of the LCP metric wasn't fully capturing, from the user's perspective, when the "main content" of the page had loaded—which is the goal of LCP.
-
-To address these concerns, members of the YouTube team partnered with members of the Chrome team to explore ways that the LCP metric could be improved to address their use case. After considering the feasibility and impact of a few options, the teams landed on a [proposal](https://github.com/w3c/largest-contentful-paint/issues/85) to consider the paint time of the first frame of a video element as an LCP candidate.
-
-Once this change lands in Chrome, the YouTube team is excited to continue their work optimizing for LCP. And the updated version of the metric will mean these optimizations will have a more direct impact on real-user experiences.
-
-#### Leveraging new browser APIs
-
+{% Aside%}
 While bringing these optimizations to all platforms, YouTube also took advantage of the new [Priority Hints](https://web.dev/priority-hints/) `fetchpriority` attribute, which we use with `<link rel=preload>` to prioritize discovering and loading the poster image early:
 
 ```html
 <link as="image" rel="preload" href="poster.jpg" fetchpriority="high">
 ```
+{% endAside %}
+
+While these optimizations did improve LCP, the team felt that the current definition of the LCP metric wasn't fully capturing, from the user's perspective, when the "main content" of the page had loaded—which is the goal of LCP.
+
+To address these concerns, members of the YouTube team partnered with members of the Chrome team to explore ways that the LCP metric could be improved to address their use case. After considering the feasibility and impact of a few options, the teams landed on a [proposal](https://github.com/w3c/largest-contentful-paint/issues/85) to consider the paint time of the first frame of a video element as an LCP candidate.
+
+Once this change lands in Chrome, the YouTube team is excited to continue their work optimizing for LCP. And the updated version of the metric will mean these optimizations will have a more direct impact on real-user experiences.
 
 ### Modularization with lazy loading
 
