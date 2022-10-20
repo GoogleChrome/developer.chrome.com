@@ -32,10 +32,6 @@ faster web experience.
   </figcaption>
 </figure>
 
-{% Aside %}
-YouTube for mobile web (m.youtube.com) and desktop (youtube.com) are entirely different websites built on distinct stacks/frameworks. As such, each change here has been discussed in relation to the website it affects.
-{% endAside %}
-
 ## Building a faster web
 
 Performance to YouTube is how fast videos and other content, such as
