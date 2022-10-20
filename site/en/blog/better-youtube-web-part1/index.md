@@ -52,7 +52,7 @@ modernization.
 
 To identify areas of improvement, the YouTube team used the Chrome User
 Experience Report
-([CrUX](https://developers.google.com/web/tools/chrome-user-experience-report))
+([CrUX](https://developer.chrome.com/docs/crux/))
 to see how real users were experiencing video watch and search result pages on
 mobile in [the
 field](https://web.dev/lab-and-field-data-differences/#field-data). They
