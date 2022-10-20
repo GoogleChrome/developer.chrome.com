@@ -93,13 +93,7 @@ resulting in two big discoveries.
 
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/wGjBH4sMWoZEbRon6gBS.png", alt="The black thumbnail was deployed in production for all mobile web users July 2021 showing marked improvement in FCP and LCP, as seen in the above RUM analysis.", width="800", height="408" %}
 
-The black thumbnail was deployed in production for all mobile web users July 2021
-showing marked improvement in FCP and LCP, as seen in the above RUM analysis.
-
-{% Aside %}
-LCP [considers](https://web.dev/lcp/#what-elements-are-considered) the poster image for video elements but not the main video element. YouTube is interested in better optimizing for this measurement gap and the Chrome team is actively working to address it.
-{% endAside %}
-
+Black thumbnail was deployed in production for all mobile web users July 2021 showing marked improvement in FCP and LCP, as seen in the above RUM analysis.
 
 #### Applying learnings from mobile to desktop
 
