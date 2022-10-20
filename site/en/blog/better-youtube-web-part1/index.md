@@ -80,19 +80,9 @@ First Contentful Paint (FCP) of 3.5 seconds and a LCP of 8.5 seconds.
 To optimize FCP and LCP, the YouTube team dove into several experiments,
 resulting in two big discoveries.
 
-1. **The first change was reordering the Player rendering to before the
-    Player's main JavaScript logic.** By moving the Player HTML before the
-    render-blocking script, the team saw improvements in FCP and LCP of all
-    watch pages on cold-loads from 4.4 seconds to 1.1 seconds in the lab.
+1. The first discovery was that they could improve performance by moving the HTML for the Video Player above the script that makes the Video Player interactive. Lab tests indicated that this could improve both FCP and LCP from 4.4 seconds to 1.1 seconds.
 
-1. **The second discovery was realizing the JavaScript-based video player was
-    the most significant element on the page triggering LCP values upwards of
-    4.5 seconds.** To improve LCP, the team experimented with showing the actual video (poster) thumbnail before the player buffered.
-    Although this improved LCP, there was a drop in active users. As a result,
-    the team decided to render a base64 image of black background of the player
-    to communicate to the user the video player is loading as this was believed to be a closer approximation of the lived experience. As a result, both
-    FCP and LCP showed marked improvement, with field LCP improving from 4.6
-seconds to 2.0 seconds.  
+1. The second discovery was that LCP only [considers](https://web.dev/lcp/#what-elements-are-considered) `<video>` element poster images and not frames from the video stream itself. YouTube has traditionally optimized for the fastest time until the video starts playing, so to improve LCP the team started also optimizing how quickly they could deliver their poster image. They experimented with a few variations of poster images and picked the one that scored the best in user testing. As a result of this work, both FCP and LCP showed marked improvement, with field LCP improving from 4.6 seconds to 2.0 seconds.
   
 <figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/e2es1tQ9JJ31pcOMvWhM.jpg", alt="Watch Page LCP Experiment for mobile web showing control, experiment A (image thumbnail) and experiment B (black thumbnail)", width="800", height="514" %}
