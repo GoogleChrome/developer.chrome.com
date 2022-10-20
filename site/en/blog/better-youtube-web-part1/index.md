@@ -104,22 +104,12 @@ To address these concerns, members of the YouTube team partnered with members of
 
 Once this change lands in Chrome, the YouTube team is excited to continue their work optimizing for LCP. And the updated version of the metric will mean these optimizations will have a more direct impact on real-user experiences.
 
+#### Leveraging new browser APIs
 
-#### Applying learnings from mobile to desktop
-
-After improving LCP on YouTube's mobile web properties, YouTube ran both the thumbnail and base64 black placeholder image experiments on their desktop website. YouTube noticed that they did not see the same drop in active devices on desktop than on the earlier mobile web experiments. As a result, they decided to launch the thumbnail image, improving their Core Web Vitals, with lab LCP reducing from approximately 4.6 seconds to 1.6 seconds.
-
-<figure>
-{% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/Jjk6MXtChCvg5QsiczDh.jpg", alt="A WebPageTest comparison of control, experiment A (black thumbnail) and experiment B (image thumbnail)", width="800", height="415" %}
-  <figcaption>
-    Prioritizing showing an Image Thumbnail early helped improve Desktop LCP in the lab from 4.6s to 1.6s.
-  </figcaption>
-</figure>
-
-This work included taking advantage of the new [Priority Hints](https://web.dev/priority-hints/) `fetchpriority` attribute, which we use with Preload to both improve discovery of the thumbnail and prioritize it:
+While bringing these optimizations to all platforms, YouTube also took advantage of the new [Priority Hints](https://web.dev/priority-hints/) `fetchpriority` attribute, which we use with `<link rel=preload>` to prioritize discovering and loading the poster image early:
 
 ```html
-<link as="image" rel="preload" href="thumbnail.jpg" fetchpriority="high">
+<link as="image" rel="preload" href="poster.jpg" fetchpriority="high">
 ```
 
 ### Modularization with lazy loading
