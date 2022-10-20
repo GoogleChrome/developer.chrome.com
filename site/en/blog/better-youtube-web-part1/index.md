@@ -91,9 +91,19 @@ resulting in two big discoveries.
   </figcaption>
 </figure>
 
+<figure>
 {% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/wGjBH4sMWoZEbRon6gBS.png", alt="The black thumbnail was deployed in production for all mobile web users July 2021 showing marked improvement in FCP and LCP, as seen in the above RUM analysis.", width="800", height="408" %}
+  <figcaption>
+    Black thumbnail was deployed in production for all mobile web users July 2021 showing marked improvement in FCP and LCP, as seen in the above RUM analysis.
+  </figcaption>
+</figure>
 
-Black thumbnail was deployed in production for all mobile web users July 2021 showing marked improvement in FCP and LCP, as seen in the above RUM analysis.
+While these optimizations did improve LCP, the team felt that the current definition of the LCP metric wasn't fully capturing, from the user's perspective, when the "main content" of the page had loaded—which is the goal of LCP.
+
+To address these concerns, members of the YouTube team partnered with members of the Chrome team to explore ways that the LCP metric could be improved to address their use case. After considering the feasibility and impact of a few options, the teams landed on a [proposal](https://github.com/w3c/largest-contentful-paint/issues/85) to consider the paint time of the first frame of a video element as an LCP candidate.
+
+Once this change lands in Chrome, the YouTube team is excited to continue their work optimizing for LCP. And the updated version of the metric will mean these optimizations will have a more direct impact on real-user experiences.
+
 
 #### Applying learnings from mobile to desktop
 
@@ -169,22 +179,14 @@ a reduced number of non-fatal errors.
 
 ## Conclusion
 
-As a result of YouTube's investment in performance, watch pages load much faster
-with 76% of YouTube's mobile website URLs now passing Core Web Vitals metric
-thresholds. Interaction and rendering performance of the site, especially on the
-YouTube video player, are seeing up to 75% less time spent in JavaScript
-execution than before.
+As a result of YouTube's investment in performance, watch pages load much faster with 76% of YouTube's mobile website URLs now passing Core Web Vitals metric thresholds in the field. On desktop, lab LCP for the watch page was reduced from approximately 4.6 seconds to 1.6 seconds. Interaction and rendering performance of the site, especially on the YouTube video player, are seeing up to 75% less time spent in JavaScript execution than before.
 
 {% Aside 'success' %}
 76% of YouTube's mobile web URLs now pass the Core Web Vitals metrics, with improvements to business metrics like watch time as a result.
 {% endAside %}
 
-Improvements to the performance of YouTube mobile web over the last year have
-also improved business metrics, including watch time and daily active users. We
-look forward to exploring how more of these performance optimizations can be
-applied to the YouTube desktop site.
+Improvements to the performance of YouTube web over the last year have also improved business metrics, including watch time and daily active users. We look forward to exploring how more of these performance optimizations can be applied to the YouTube desktop site.
 
-In part two of this series, "Building an accessible web", you'll read how
-YouTube made their website more accessible for screen-reader users. 
+In part two of this series, "Building an accessible web", you’ll read how YouTube made their website more accessible for screen-reader users.
 
 _With special thanks to Gilberto Cocchi, Lauren Usui, Benji Bear, Bo Aye, Bogdan Balas, Kenny Tran, Matthew Smith, Jeremy Wagner, Philip Walton, Leena Sahoni and both the YouTube and Chrome teams for their help._
