@@ -401,7 +401,8 @@ be available or active in the page.
 
 ## Renew your token
 
-Origin trial tokens are also only valid for six weeks at a time.
+Origin trial tokens expire six weeks from their issue date (or at the end of the
+trial if that's sooner).
 
 It’s critical that you [renew and deploy your new
 tokens](//docs/web-platform/origin-trials/#renew) within that window for
