@@ -85,9 +85,9 @@ resulting in two big discoveries.
 1. The second discovery was that LCP only [considers](https://web.dev/lcp/#what-elements-are-considered) `<video>` element poster images and not frames from the video stream itself. YouTube has traditionally optimized for the fastest time until the video starts playing, so to improve LCP the team started also optimizing how quickly they could deliver their poster image. They experimented with a few variations of poster images and picked the one that scored the best in user testing. As a result of this work, both FCP and LCP showed marked improvement, with field LCP improving from 4.6 seconds to 2.0 seconds.
   
 <figure>
-{% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/e2es1tQ9JJ31pcOMvWhM.jpg", alt="Watch Page LCP Experiment for mobile web showing control, experiment A (image thumbnail) and experiment B (black thumbnail)", width="800", height="514" %}
+{% Img src="image/1L2RBhCLSnXjCnSlevaDjy3vba73/wJKAgsXRqrexp9yDJ4T1.jpg", alt="Watch Page LCP Experiment for mobile web showing control, experiment A (image thumbnail) and experiment B (black thumbnail)", width="800", height="514" %}
   <figcaption>
-    In the lab, we observed an improvement to the YouTube for mobile watch page FCP and LCP from 4.4s to 1.1s after this change landed. 
+    In the lab, we observed an improvement in FCP and LCP from 4.4s to 1.1s after this change landed. Experiment A: Using the actual video thumbnail works well on pages where the video starts out paused, but for auto-play video pages like the watch page it performed poorly in user studies. It also resulted in a drop in active users. Experiment B: Using a solid black poster image showed the best results in user studies. Users found the transition from solid black to the first frame of the video to be a less-jarring experience for autoplay videos. 
   </figcaption>
 </figure>
 
