@@ -7,7 +7,7 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-10-21
+date: 2022-10-20
 authors:
   - anusmitaray
   - rowan_m
@@ -370,7 +370,7 @@ While the origin trial will only show as active to eligible users, you can also
 use the [developer flags](#test-locally) to test against your own production
 site.
 
-## Control your participation in the origin trial
+## Control your participation in the origin trial {: #control-participation }
 
 {% Aside %}
 
