@@ -179,4 +179,4 @@ Improvements to the performance of YouTube web over the last year have also impr
 
 In part two of this series, "Building an accessible web", you’ll read how YouTube made their website more accessible for screen-reader users.
 
-_With special thanks to Gilberto Cocchi, Lauren Usui, Benji Bear, Bo Aye, Bogdan Balas, Kenny Tran, Matthew Smith, Jeremy Wagner, Philip Walton, Leena Sahoni and both the YouTube and Chrome teams for their help._
+_With special thanks to Gilberto Cocchi, Lauren Usui, Benji Bear, Bo Aye, Bogdan Balas, Kenny Tran, Matthew Smith, Phil Harnish, Leena Sahoni, Jeremy Wagner, Philip Walton, Harleen Batra and both the YouTube and Chrome teams for their contributions to this work._
