@@ -37,7 +37,7 @@ html {
 }
 ```
 
-This technique isn't supported in Firefox, so the viewport tag is much preferred.
+This technique [isn't supported in Safari](https://caniuse.com/?search=touch-action), so the viewport tag is much preferred.
 
 ## Is losing double-tap-to-zoom an accessibility concern?
 
