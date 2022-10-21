@@ -63,7 +63,7 @@ Partial Custom Tabs will inherit the host app's color scheme for the UI componen
 
 These new APIs are available from Chrome M107 and onwards.
 
-```
+```java
 CustomTabsIntent customTabsIntent;
 ...
 customTabsIntent = new CustomTabsIntent.Builder()
