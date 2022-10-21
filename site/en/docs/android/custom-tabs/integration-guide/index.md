@@ -52,7 +52,7 @@ By default, Custom Tabs will launch as a full-window activity. Starting in Chrom
 
 You can also choose to make the Partial Custom Tab non-resizable. In this case, users will not have the ability to resize the Partial Custom Tab. If a value below 50% of the screen height is provided in the intent, Chrome will automatically adjust the Custom Tab to 50% of the screen height. Partial Custom Tabs are not supported when users are in multi-window or landscape mode.
 
-The snippet below changes the launch height of the Custom Tab. CustomTabsIntent.Builder has a new method `setInitialActivityHeightPx(int initialHeightPx)` that allows you to define the initial launch height in pixels. As a prerequisite to using Partial Custom Tabs, you will need to [connect to the Custom Tabs Service](https://developer.chrome.com/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) or launch the custom tabs intent using [Activity#startActivityForResult()](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
+The snippet below changes the launch height of the Custom Tab. CustomTabsIntent.Builder has a new method `setInitialActivityHeightPx(int initialHeightPx)` that allows you to define the initial launch height in pixels. As a prerequisite to using Partial Custom Tabs, you will need to [connect to the Custom Tabs Service](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) or launch the custom tabs intent using [Activity#startActivityForResult()](/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
 There are API's that do not work when building an Intent for Partial Custom Tabs:
 
