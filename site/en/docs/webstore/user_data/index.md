@@ -96,7 +96,7 @@ Product (see our [I/O 2014 talk on HTTPS Everywhere][7]).
 
 Extensions must transmit "personal and sensitive user data" over a secure connection (e.g. HTTPS,
 WSS) and stored at rest using a strong encryption method such as RSA or AES. You should not use any
-cipher suite that is blacklisted by IETF. Our requirements may change over time.
+cipher suite that is denylisted by IETF. Our requirements may change over time.
 
 ## 9\. Does my Product's handling of personal or sensitive user data require a prominent disclosure and affirmative consent? {: #ques_9 }
 
