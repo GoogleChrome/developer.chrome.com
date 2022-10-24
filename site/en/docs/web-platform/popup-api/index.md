@@ -68,7 +68,7 @@ The Pop-Up API also comes with a couple of handy CSS features, a [`::backdrop`](
 ## CSS features
 
 [`::backdrop`](/docs/web-platform/popup-api/backdrop-pseudo-element)
-: Pseudo-element that sits behind an open pop-up in the stacking order, but in front of the rest of the document, and spans the entire width and height of the viewport. Allows the rest of the content to be styled while the pop-up is open — for example you might want to blur or darken it.
+: Pseudo-element that sits behind an open pop-up in the stacking order, but in front of the rest of the document, and spans the entire width and height of the viewport. Allows the rest of the content to be styled while the pop-up is open—for example you might want to blur or darken it.
 
 [`:open`](/docs/web-platform/popup-api/open-pseudo-class)
 : Pseudo-class allowing a pop-up to be styled, but only when it is being shown.
