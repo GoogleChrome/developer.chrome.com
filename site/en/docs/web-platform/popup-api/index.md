@@ -186,7 +186,7 @@ Use JavaScript to programmatically show and hide pop-ups:
   popup.hidePopUp();
 ```
 
-Use event listeners to respond to pop-ups being shown and hidden. Here we are switching the `textContent` of the pop-up trigger button so that it makes sense when the pop-up is in its shown and hidden states:
+Use event listeners to respond to pop-ups being shown and hidden. The following example switches the `textContent` of the pop-up trigger button so that it makes sense when the pop-up is in its shown and hidden states:
 
 ```js
   popup.addEventListener('popupshow', () => {
