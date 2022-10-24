@@ -117,7 +117,7 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 ## Engage and share feedback
 
 * **Origin trial**: Now [closed](/origintrials/#/view_trial/2479231594867458049).
-* **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view code for trust token issuance and redemption.
+* **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view the code.
 * **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and 
 follow discussion](https://github.com/WICG/trust-token-api/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
