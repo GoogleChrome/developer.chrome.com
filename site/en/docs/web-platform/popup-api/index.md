@@ -46,7 +46,7 @@ You can show and dismiss pop-ups in two different ways:
 * Declaratively, using HTML attributes. Add the [`popuptoggletarget`](/docs/web-platform/popup-api/popuptoggletarget-attribute), [`popupshowtarget`](/docs/web-platform/popup-api/popupshowtarget-attribute), or [`popuphidetarget`](/docs/web-platform/popup-api/popuphidetarget-attribute) to an `<input>` or `<button>` element to turn it into a pop-up trigger element. In each case, the attribute value must be the `id` of the pop-up, to associate the two.
 * Programmatically, using JavaScript. The [`showPopUp()`](/docs/web-platform/popup-api/showpopup-method) and [`hidePopUp()`](/docs/web-platform/popup-api/hidepopup-method) methods are used to show and dismiss pop-ups, respectively, and the [`popupshow`](/docs/web-platform/popup-api/popupshow-event) and [`popuphide`](/docs/web-platform/popup-api/popuphide-event) events can be used to react to pop-ups being shown or hidden.
 
-The Pop-Up API also comes with a couple of handy CSS features, a [`::backdrop`](/docs/web-platform/popup-api/backdrop-pseudo-element) pseudo-element to style the document behind the pop-up when it is shown (e.g. you might want to blur or fade the page while showing pop-ups), and an [`:open`](/docs/web-platform/popup-api/open-pseudo-class) pseudo-class to style the pop-up only when it is open.
+The Pop-Up API also comes with a couple of handy CSS features, a [`::backdrop`](/docs/web-platform/popup-api/backdrop-pseudo-element) pseudo-element to style the document behind the pop-up when it is shown (for example, you might want to blur or fade the page while showing pop-ups), and an [`:open`](/docs/web-platform/popup-api/open-pseudo-class) pseudo-class to style the pop-up only when it is open.
 
 ## HTML attributes
 
