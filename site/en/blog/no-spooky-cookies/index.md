@@ -46,7 +46,7 @@ context!
 The problem with third-party cookies is that they can enable cross-site
 tracking. Instead of setting something like a theme, the shared service might
 store a whole identifier in there. That same identifier is then sent when you
-navigate across different sites that include shared services cookie - which
+navigate across different sites that include shared services cookie—which
 means that one service can observe and link your activity across those sites.
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/vSNgfP4EegQGF1WmKGQa.png", alt="A third-party cookie carrying a unique ID which allows the third-party site to track a user around the web", width="800", height="450" %}
@@ -116,7 +116,7 @@ best pumpkin patch tours or trick-or-treating routes. My service uses a cookie
 to let the users store their progress along the route. The problem is, that same
 third-party cookie is going to get sent on the pumpkin patch site as on the
 trick-or-treating site. I don't want to track users between sites, but the
-browser just uses one cookie jar - there's no way for me to separate that usage!
+browser just uses one cookie jar—there's no way for me to separate that usage!
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/APvorz7Y2JFIeplAAtfd.png", alt="Cross-site cookies with SameSite=None still all go into a shared cookie jar", width="800", height="450" %}
 
@@ -138,7 +138,7 @@ Set-Cookie: __Host-route=123;
 Instead of having to share that cookie jar, everyone gets their own! Simpler,
 safer, and more hygienic.
 
-We've just sent our [Intent to
+We've just sent the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/JNOQvsTxecI/m/gmIe7KCBAwAJ)
 for [Cookies Having Independent Partitioned State
 (CHIPS)](/docs/privacy-sandbox/chips/) in Chrome 109 which means they will be
@@ -155,16 +155,16 @@ able to use cookies across them - but not let them be sent in true third-party
 contexts. For example, perhaps you have `pretty-pumpkins.com` and
 `pretty-pumpkins.co.uk`. You might have a cookie-based single-sign on system
 that works across these sites. CHIPS wouldn't work because I'd just have to
-sign-in on both sites - the requirement is that I need the same cookie across
+sign-in on both sites—the requirement is that I need the same cookie across
 these related sites.
 
 We're working on the First-Party Sets proposal to try and make this possible.
 We've been through one origin trial and plenty of community discussion which has
-brought us to our latest version where we'd like to:
+brought us to the latest version that aims to:
 
-*   give organizations a way to define a group of sites that should be
-    same-party to each other;
-*   leverage the Storage Access API to request access to cross-site cookies
+*   Give organizations a way to define a group of sites that should be
+    same-party to each other.
+*   Leverage the Storage Access API to request access to cross-site cookies
     inside that first-party set.
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/CNkxjTyLOOuGJH40haFz.png", alt="First-Party Sets allows a shared cookie jar only between related sites", width="800", height="450" %}
