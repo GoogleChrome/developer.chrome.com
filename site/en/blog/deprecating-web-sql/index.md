@@ -213,7 +213,7 @@ this group is open to anyone, and anyone is allowed to post.
 
 ## Related links
 
-- [All deprecations and removals in Chromium](/tags/removals/)
+- [All deprecations and removals in Chromium](/tags/deprecations-removals/)
 - ChromeStatus entry:
   [Deprecate and remove WebSQL in third-party contexts](https://chromestatus.com/feature/5684870116278272)
 - ChromeStatus entry:

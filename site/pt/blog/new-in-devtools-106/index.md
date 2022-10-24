@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Lucas Santos](https://lsantos.dev). Revisão por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -180,8 +180,7 @@ Issue do Chromium: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Detalhamento de tempos de LCP no painel de Performance Insights {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-O painel **Performance Insights** agora mostra os [detalhamentos de tempos](web.dev/optimize-lcp/#lcp-breakdown) do [Largest Contentful Paint (LCP) ou Maior Conteúdo Renderizado](/docs/devtools/performance-insights/#largest-contentful-paint). Use esses tempos para entender e identificar uma oportunidade de melhorar a performance dessa métrica.
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Detalhamento de tempos de LCP no painel de Performance Insights", width="800", height="523" %}
 
@@ -221,5 +220,5 @@ Issue do Chromium: [1351383](https://crbug.com/1351383)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

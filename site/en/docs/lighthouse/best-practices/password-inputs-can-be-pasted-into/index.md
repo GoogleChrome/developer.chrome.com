@@ -35,7 +35,7 @@ Lighthouse doesn't detect those elements.
 It's also possible to prevent pasting outside of a `paste` event listener.
 Lighthouse doesn't detect that scenario, either.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to enable pasting into password fields
 

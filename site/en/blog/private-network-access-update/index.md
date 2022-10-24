@@ -164,15 +164,20 @@ the circumstances of each affected website.
 
 ### Register for the deprecation trial {: #register-deprecation-trial}
 
-First, register for the "Private Network Access from non-secure contexts" trial
-using [the web developers
-console](/origintrials/#/view_trial/4081387162304512001),
-and obtain a trial token for each affected origin. Then configure your web
-servers to attach the origin-specific `Origin-Trial: $token` header on
-responses. Note that this header need only be set on main resource and
-navigation responses, and then only when the resulting document will make use of
-the deprecated feature. It is useless (though harmless) to attach this header to
-subresource responses.
+{% Aside %}
+To participate with multiple origins (such as `examplepetstore.com` and
+`example-pet-store.com`), repeat these steps for each origin.
+{% endAside %}
+
+1. Click [**Register**](/origintrials/#/view_trial/4081387162304512001) for the
+   Private Network Access from non-secure contexts origin trial to obtain a
+   trial token for the participating origin.
+2. Add the origin-specific `Origin-Trial: $token` to your
+   [response header](https://developer.mozilla.org/docs/Glossary/Response_header).
+   This response header need only be set on main resource and navigation
+   responses when the resulting document makes use of the deprecated feature.
+   It is useless (though harmless) to attach this header to subresource
+   responses.
 
 Since this trial must be enabled or disabled before a document is allowed to
 make any requests, it *cannot* be enabled through a `<meta>` tag. Such tags are

@@ -25,6 +25,10 @@ declare global {
      */
     fileSlug: string;
     /**
+     * Mapped from the input file path
+     */
+    filePathStem: string;
+    /**
      * The full path to the output file to be written for this content
      */
     outputPath: string;

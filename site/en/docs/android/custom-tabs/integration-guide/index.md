@@ -44,6 +44,35 @@ CustomTabsIntent customTabsIntent = builder.build();
 customTabsIntent.launchUrl(this, Uri.parse(url));
 ```
 
+## Specify the launch height of a Custom Tab
+
+By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107, you can use partial Custom Tabs to specify a different launch height such that users can interact with your app while viewing web content. Users will be able to expand the Custom Tab to full-screen by dragging the toolbar handle up and restoring the initial launch height by dragging the handle down.
+
+{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="584", height="1168" %}
+
+You can also choose to make the Custom Tab non-resizable. In this case, users will not have the ability to resize the Custom Tab. If a value below 50% of the screen height is provided in the intent, Chrome automatically adjusts the Custom Tab to 50% of the screen height. Custom Tabs are not supported when users are in multi-window or landscape mode.
+
+The snippet below changes the launch height of the Custom Tab. `CustomTabsIntent.Builder` has a new method `setInitialActivityHeightPx()` that allows you to define the initial launch height in pixels. As a prerequisite to using Custom Tabs, you will need to [connect to the Custom Tabs Service](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) or launch the custom tabs intent using [Activity#startActivityForResult()](/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
+
+There are properties that do not work when building an Intent for partial Custom Tabs:
+
+-   `CustomTabColorScheme.navigationBarColor`
+-   `CustomTabColorScheme.navigationBarDividerColor`
+
+Custom Tabs will inherit the host app's color scheme for the UI properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab.
+
+These new APIs are available from Chrome 107 and onwards.
+
+```java
+CustomTabsIntent customTabsIntent;
+...
+customTabsIntent = new CustomTabsIntent.Builder()
+  .setInitialActivityHeightPx(500)
+  .setCloseButtonPosition(CustomTabsIntent.CLOSE_BUTTON_POSITION_END)
+  ...
+  .build();
+```
+
 ## Configure the color of the address bar
 
 One of the most important (and simplest to implement) aspects of Custom Tabs is the ability
@@ -249,6 +278,21 @@ public static final int TAB_SHOWN = 5;
 * Sent when the tab becomes hidden.
 */
 public static final int TAB_HIDDEN = 6;
+```
+
+```java
+/**
+* Called when Custom Tab's height is resized. This applies when users resize a
+* Custom Tab with {@link CustomTabsIntent#ACTIVITY_HEIGHT_ADJUSTABLE} for the {@link
+* CustomTabsIntent#ActivityResizeBehavior}.
+*/
+private static class ResizeCallback extends CustomTabsCallback {
+    @Override
+    public void onActivityResized(int size, @NonNull Bundle extras) {
+            ...
+        }
+    }
+}
 ```
 
 ## What happens if the user doesn't have a browser that supports Custom Tabs installed?

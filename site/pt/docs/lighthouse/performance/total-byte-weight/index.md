@@ -22,7 +22,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) mostra o tam
 
 Com base nos [dados do arquivo HTTP](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal), a carga útil média da rede está entre 1.700 e 1.900 KiB. Para ajudar a revelar as cargas úteis mais altas, o Lighthouse sinaliza páginas cujo total de solicitações de rede excede 5.000 KiB.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como reduzir o tamanho da carga útil
 

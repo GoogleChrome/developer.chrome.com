@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-19
+updated: 2022-10-20
 
 # Optional
 # How to add a new author
@@ -145,7 +145,7 @@ These percentiles can show specific metric values at the given percentile for th
 Note: The values for each percentile are synthetically derived, it does not imply that any user actually experienced the value indicated, only that some percentage of users experienced a metric value that was less than the value given.
 {% endAside %}
 
-### Metric value types
+#### Metric value types
 
 <div class="responsive-table">
 <table class="with-heading-tint width-full fixed-table">
@@ -197,7 +197,7 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </tbody>
 </table></div>
 
-### BigQuery metric name mapping
+#### BigQuery metric name mapping
 
 <div class="responsive-table">
 <table class="with-heading-tint width-full fixed-table">
@@ -235,6 +235,29 @@ Note: The values for each percentile are synthetically derived, it does not impl
 </tbody>
 </table></div>
 
+### Collection Period
+
+As of October 2022, the CrUX API contains a `collectionPeriod` object with `firstDate` and `endDate` fields representing the beginning and end dates of the aggregation window. An example is provided below:
+
+```json
+    "collectionPeriod": {
+      "firstDate": {
+        "year": 2022,
+        "month": 9,
+        "day": 12
+      },
+      "lastDate": {
+        "year": 2022,
+        "month": 10,
+        "day": 9
+      }
+    }
+```
+
+This allows better understanding of the data and whether it's been updated yet for that day or is returning the same data as yesterday.
+
+Note that the CrUX API is approximately two days behind today's date since it waits for completed data for the day, and there is some processing time involved before it is available in the API. The timezone used is Pacific Standard Time (PST) with no changes for daylight savings.
+
 ## Example queries
 
 Queries are submitted as JSON objects via a POST request to `https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=[YOUR_API_KEY]"` with query data as a JSON object in the POST body, e.g.
@@ -257,7 +280,7 @@ For example, this can be called from `curl` with the following command line (rep
 curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
-    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics",["largest_contentful_paint", "experimental_time_to_first_byte"]}'
+    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
 ```
 
 
@@ -452,6 +475,18 @@ For example, the response to the request body in the above request could be:
         "percentiles": {
           "p75": 651
         }
+      }
+    },
+    "collectionPeriod": {
+      "firstDate": {
+        "year": 2022,
+        "month": 9,
+        "day": 12
+      },
+      "lastDate": {
+        "year": 2022,
+        "month": 10,
+        "day": 9
       }
     }
   }

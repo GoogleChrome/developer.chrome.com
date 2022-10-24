@@ -14,7 +14,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 This blog post is about the implementation of DevTools support for debugging Content Security Policy (CSP) issues with the help of the [recently introduced **Issues** tab](https://developers.google.com/web/updates/2020/09/issues-tab).
 
@@ -213,5 +213,5 @@ Since the issues described here were introduced, the **Issues** tab has undergon
 
 Moving forward, we plan to use the **Issues** tab to surface more problems, which will make it possible to unload the Console of the unreadable error-message flow in the long run.
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

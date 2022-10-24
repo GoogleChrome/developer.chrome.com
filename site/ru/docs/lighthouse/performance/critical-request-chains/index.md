@@ -12,7 +12,7 @@ updated: 2020-04-29
 
 <figure> {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Скриншот проверки Minimize critical request depth («Минимизируйте глубину критических запросов») в Lighthouse", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как Lighthouse выявляет цепочки критических запросов
 

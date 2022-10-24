@@ -38,9 +38,9 @@ users will likely perceive the page load time as 10&nbsp;seconds.
 Lighthouse computes what the TTI would be on a slow 4G network connection.
 If the time to interactive is more than 10&nbsp;seconds, the audit fails.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

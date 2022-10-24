@@ -15,6 +15,7 @@
  */
 
 const fs = require('fs');
+const path = require('path');
 const {formatDateShort} = require('../_data/lib/date');
 const {EventSessionCard} = require('./EventSessionCard');
 const {html} = require('common-tags');
@@ -22,13 +23,25 @@ const {i18n} = require('../_filters/i18n');
 const {Img} = require('./Img');
 
 const calendarIcon = fs.readFileSync(
-  'site/_includes/icons/calendar.svg',
+  path.join(__dirname, '../_includes/icons/calendar.svg'),
   'utf-8'
 );
-const pinIcon = fs.readFileSync('site/_includes/icons/pin.svg', 'utf-8');
-const slidesIcon = fs.readFileSync('site/_includes/icons/slides.svg', 'utf-8');
-const videoIcon = fs.readFileSync('site/_includes/icons/video.svg', 'utf-8');
-const launchIcon = fs.readFileSync('site/_includes/icons/launch.svg', 'utf-8');
+const pinIcon = fs.readFileSync(
+  path.join(__dirname, '../_includes/icons/pin.svg'),
+  'utf-8'
+);
+const slidesIcon = fs.readFileSync(
+  path.join(__dirname, '../_includes/icons/slides.svg'),
+  'utf-8'
+);
+const videoIcon = fs.readFileSync(
+  path.join(__dirname, '../_includes/icons/video.svg'),
+  'utf-8'
+);
+const launchIcon = fs.readFileSync(
+  path.join(__dirname, '../_includes/icons/launch.svg'),
+  'utf-8'
+);
 
 const PLACEHOLDER_IMG =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
@@ -46,6 +59,10 @@ function EventCard(event) {
     height: 400,
     alt: event.title,
   });
+
+  const buttonLabel = event.isPastEvent
+    ? i18n('i18n.events.see_details')
+    : i18n('i18n.events.see_whos_joining');
 
   return html`
     <enhanced-event-card>
@@ -90,7 +107,7 @@ function EventCard(event) {
               </div>
 
               <button class="material-button button-filled button-round">
-                ${i18n('i18n.events.see_whos_joining')}
+                ${buttonLabel}
               </a>
             </div>
           </div>
@@ -287,7 +304,7 @@ const linksHtml = session => {
 const topicHtml = topic => {
   return html`
     <span
-      class="display-inline-block surface color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
+      class="display-inline-block color-secondary-text hairline rounded-lg tag-pill type--label gap-right-100"
     >
       ${topic}
     </span>

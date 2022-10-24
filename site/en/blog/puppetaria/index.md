@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 ## Puppeteer and its approach to selectors {: .intro }
 
@@ -166,5 +166,5 @@ Now, with the CDP endpoint in place, we implemented the query handler on [the Pu
 ## What's next? {: .whats-next }
 The new `aria` handler shipped with [Puppeteer v5.4.0](https://github.com/puppeteer/puppeteer/releases/tag/v5.4.0) as a built-in query handler. We are looking forward to seeing how users adopt it into their test scripts, and we cannot wait to hear your ideas on how we can make this even more useful!
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

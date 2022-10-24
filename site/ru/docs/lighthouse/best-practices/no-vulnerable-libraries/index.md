@@ -19,7 +19,7 @@ updated: 2020-06-04
 - Запускает [детектор библиотек для Chrome](https://www.npmjs.com/package/js-library-detector).
 - Проверяет список обнаруженных библиотек по [базе данных уязвимостей snyk](https://snyk.io/vuln?packageManager=all).
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Прекратите использовать небезопасные библиотеки JavaScript
 

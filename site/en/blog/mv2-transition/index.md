@@ -7,7 +7,7 @@ authors:
   - dsli
 date: 2021-09-23
 updated: 2022-10-03
-hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GoUHyuctM1Zs9wdy5a2s.png
+hero: image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/fjebBemTd8DpKrEe3ya3.png
 alt: Image with extensions logo and text saying Manifest V3 transition timeline
 tags:
   - extensions

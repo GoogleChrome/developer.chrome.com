@@ -12,7 +12,7 @@ tags:
   - chrome-105
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 105 beta was released on August 4, 2022 and is expected to become the stable version in late August, 2022.
 
@@ -45,4 +45,4 @@ A warning is printed to the console starting in 105. Removal is expected in 106.
 
 The gesture scroll DOM events [have been removed from Chrome](https://chromestatus.com/feature/5166018807726080), specifically, `gesturescrollstart`, `gesturescrollupdate` and `gesturescrollend`. These were non-standard APIs that were added to Blink for use in plugins, but had also been exposed to the web. 
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

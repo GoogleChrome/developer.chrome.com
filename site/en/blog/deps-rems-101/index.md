@@ -12,7 +12,7 @@ tags:
   - chrome-101
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 101 beta was released on March 31, 2022 and is expected to become the
 stable version in late April, 2022.
@@ -27,4 +27,4 @@ Chrome is [reducing the amount of information the User-Agent string exposes](htt
 
 Developers should expect that WebSQL itself will be deprecated and removed when usage is low enough.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

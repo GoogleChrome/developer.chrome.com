@@ -69,7 +69,6 @@ jobs:
         run: npm run lint:scss
 
       - name: Build External
-        if: ${{ steps.filter.outputs._external == 'true' }}
         run: npm run build-external
 
       - name: Build Eleventy
