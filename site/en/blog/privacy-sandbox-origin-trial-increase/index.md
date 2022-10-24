@@ -1,11 +1,11 @@
 ---
 title: Increasing the Privacy Sandbox Relevance and Measurement origin trial to 5%
 description: >
-  This week, no sooner than October 26, we will begin increasing the Privacy
+  This week, no sooner than October 26, we'll begin increasing the Privacy
   Sandbox Relevance and Measurement origin trial population towards 5% of
   Chrome Stable users.
 subhead: >
-  This week, no sooner than October 26, we will begin increasing the Privacy
+  This week, no sooner than October 26, we'll begin increasing the Privacy
   Sandbox Relevance and Measurement origin trial population towards 5% of
   Chrome Stable users.
 layout: 'layouts/blog-post.njk'
