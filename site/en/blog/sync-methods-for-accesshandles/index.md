@@ -34,8 +34,7 @@ exposed in Workers. It is not available in the main thread. {% endAside %}
 of its main use cases is applications porting C/C++ code to Wasm; however, asynchronous calls are
 not fully supported on Wasm yet, and using the
 [Asyncify](https://emscripten.ru/docs/porting/asyncify.html) library as an alternative has
-substantially degraded performance. Also, a split async/sync interface is not ergonomic, as
-Wasm-based applications expect a synchronous, POSIX-like file API.
+substantially degraded performance. Making all the methods of the `FileSystemSyncAccessHandle` synchronous matches the synchronous, POSIX-like file API Wasm-based application expect; making the API more ergonomic while bringing substantial performance gains.
 
 ## What's new?
 
