@@ -18,8 +18,8 @@ tags:
   - privacy
 ---
 
-Cookies are always best when they are fresh, so what are the latest recipes to
-ensure you can still enjoy spooky season without any spooky, stale cookies?
+Cookies are best fresh, so what are the latest recipes to ensure you can still
+enjoy spooky season without any stale cookies?
 
 We are on the path towards phasing out third-party cookies across the web
 platform. That's a major milestone in tackling cross-site tracking, but it's
@@ -40,8 +40,10 @@ the one that set it, we call that a third-party cookie. For example, my
 it, but if it's included in an iframe or other cross-site resource as part of a
 different site then it would be a third-party cookie.
 
+{% Aside %}
 **Remember:** first-party or third-party is all about same-site or cross-site
 context!
+{% endAside %}
 
 The problem with third-party cookies is that they can enable cross-site
 tracking. Instead of setting something like a theme, the shared service might
@@ -104,9 +106,11 @@ That will get you a first-party cookie that stays restricted to just one domain,
 secure connections, no access by JavaScript, automatically expires before it
 goes stale, and (of course!) is only allowed in same-site contexts.
 
+{% Aside %}
 **Read more:** There's plenty of tweaking you can do to suit your taste and
 we've got all the details in our [first-party cookie
 recipes](https://web.dev/first-party-cookie-recipes/).
+{% endAside %}
 
 ## Cookies taste better with CHIPS!
 
