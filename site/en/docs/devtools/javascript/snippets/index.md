@@ -23,21 +23,21 @@ alternative to [bookmarklets][3]. Firefox DevTools has a feature similar to snip
 
 For example, the screenshot below shows the DevTools documentation homepage on the left and some snippet source code in the **Sources** > **Snippets** pane on the right.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WFmTgfDWGLE7Evq8Pieq.png", alt="The DevTools documentation homepage before running the snippet. The Run button is highlighted.", width="800", height="483" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TYnLVgJrfZtcqjP9eEyT.png", alt="The DevTools documentation homepage before running the snippet. The Run button is highlighted.", width="800", height="483" %}
 
 Here's the snippet source code that [logs some message](/docs/devtools/console/log/) and replaces the homepage's HTML body with a `<p>` element that contains the message:
 
 ```js
 console.log('Hello, Snippets!');
 document.body.innerHTML = '';
-var p = document.createElement('p');
+const p = document.createElement('p');
 p.textContent = 'Hello, Snippets!';
 document.body.appendChild(p);
 ```
 
 When you click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MaSHbLXzcTFbxhx9K8hX.svg", alt="Run.", width="24", height="24" %} **Run** button, the [**Console** drawer](/docs/devtools/console/) pops up to display the `Hello, Snippets!` message that the snippet logs, and the page's content changes.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/PoyZRfTNlewMGHWY1oHZ.png", alt="The homepage after running the snippet.", width="800", height="538" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vsJ9UtrJHaBTXASCJmVl.png", alt="The homepage after running the snippet.", width="800", height="483" %}
 
 ## Open the Snippets pane {: #open }
 
@@ -56,7 +56,7 @@ The **Snippets** pane lists your snippets. To edit a snippet, open it in one of 
 
 The **Sources** > **Snippets** pane shows you a list of snippets you saved, empty in this example.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wI178YVB3Yj0aPqgCTfb.png", alt="An empty Snippets pane.", width="800", height="455" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anW1OzkdZIl1UGTvZHEC.png", alt="An empty Snippets pane.", width="800", height="397" %}
 
 ## Create snippets {: #create }
 
@@ -87,11 +87,11 @@ See [Rename snippets][6] if you'd like to give your new snippet a custom name.
 1.  [Open the **Snippets** pane][7].
 1.  In the **Snippets** pane, click the name of the snippet that you want to edit. The **Sources** panel opens it in the **Code Editor**.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sZLwcIeZAC6qvGF9bq2G.png", alt="A snippet opened in the Code Editor.", width="800", height="346" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/T3NLtPKuEraxm4QvUdWw.png", alt="A snippet opened in the Code Editor.", width="800", height="334" %}
 
 1.  Use the **Code Editor** to edit code in your snippet. An asterisk next to the snippet name means that you haven't saved your changes yet.
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/R83mvDQybs0LeDAvZ7aB.png", alt="An asterisk next to the snippet name that indicates unsaved code.", width="800", height="346" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NZemthHxlUVsPhuHEGLl.png", alt="An asterisk next to the snippet name that indicates unsaved code.", width="800", height="334" %}
 
 1.   Press <kbd>Control</kbd>+<kbd>S</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>S</kbd> (Mac) to save.
 
@@ -106,7 +106,7 @@ Similar to creating a snippet, you can run it both in the **Snippets** pane and 
 1.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MaSHbLXzcTFbxhx9K8hX.svg", alt="Run.", width="24", height="24" %} **Run** in the action bar at the bottom of the editor,
     or press <kbd>Control</kbd>+<kbd>Enter</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac).
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jwgc6lcKHjevUYi7UEM9.png", alt="The Run button.", width="800", height="346" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ng3ZidWcXAaxLmR6MtDy.png", alt="The Run button.", width="800", height="334" %}
 
 ### Run a snippet from the Command Menu {: #run-command-menu }
 
