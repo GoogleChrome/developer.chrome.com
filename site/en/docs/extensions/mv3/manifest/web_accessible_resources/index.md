@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest - Web Accessible Resources"
 date: 2013-05-12
-updated: 2018-05-14
+updated: 2022-10-18
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
@@ -49,26 +49,21 @@ extension resources to an array of URLs and/or extension IDs that can access tho
 }
 ```
 
-Each object in the array contains these properties:
-<dl>
-  <dt><code>resources</code></dt>
-  <dd>An array of resources to be exposed. Resources are specified as strings and may contain
-  <code>*</code> for wildcard matches. For example, <code>"/images/*"</code> exposes everything in
-  the extension's /images directory recursively while <code>"*.png"</code> exposes all PNG
-  files.</dd>
-  <dt><code>matches</code></dt>
-  <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
-  is used to match URLs. Origins include subdomain matching. Paths are ignored.</dd>
-  <dt><code>extension_ids</code></dt>
-  <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
-  <dt><code>use_dynamic_url</code></dt>
-  <dd>If true, only allow resources to be accessible through dynamic ID. The dynamic ID is
-  generated per session. It's regenerated on browser restart or extension reload.</dd>
-</dl>
+Each object in the array contains these elements:
 
-Each element must include a `"resources"` element and either a `"matches"` or `"extension_ids"`
-element. This establishes a mapping that exposes the specified resources to web pages matching the
-pattern or to specified extensions.
+`"resources"`
+: An array of strings, each containing a relative path to a given resource from the extension's root directory. Resources may contain asterisks (`*`) for wildcard matches. For example, `"/images/*"` exposes everything in the extension's `images/` directory, recursively, while `"*.png"` exposes all PNG files.
+
+`"matches"`
+: An array of strings, each containing a [match pattern](/docs/extensions/mv3/match_patterns/) that specifies which sites can access this set of resources. Only the origin is used to match URLs. Origins include subdomain matching. Paths are ignored. 
+
+`"extension_ids"`
+: An array of strings, each containing the ID of an extension that can access the resources.
+
+`"use_dynamic_url"`
+: If true, only allow resources to be access through a dynamic ID. A dynamic ID is generated per session. That means it is regenerated when the browser restarts or the extension reloads.
+
+Each element must include a `"resources"` element and either a `"matches"` or `"extension_ids"` element. This establishes a mapping that exposes the specified resources to either web pages matching the pattern or to extensions with matching IDs. The `"use_dynamic_url"` element is optional.
 
 ## Navigability of resources
 
