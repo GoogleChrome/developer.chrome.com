@@ -171,7 +171,7 @@ p[popup]:open {
 }
 ```
 
-Use the [`::backdrop`](/docs/web-platform/popup-api/backdrop-pseudo-element) pseudo-element to style the document behind the pop-up while it is being shown — here we are darkening the rest of the content:
+Use the [`::backdrop`](/docs/web-platform/popup-api/backdrop-pseudo-element) pseudo-element to style the document behind the pop-up while it is being shown. The following example darkens the rest of the content:
 
 ```css
 p[popup]::backdrop {
