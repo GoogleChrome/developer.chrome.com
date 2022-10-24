@@ -158,7 +158,7 @@ Declaratively create a single button to toggle the pop-up between shown and hidd
 <button popuptoggletarget="my-popup">Show pop-up</button>
 ```
 
-Use the [`:open`](/docs/web-platform/popup-api/open-pseudo-class) pseudo-class to style the pop-up when it has been shown. In this case we are transitioning the pop-up in from the bottom of the viewport, rather than just having it appear in the center:
+Use the [`:open`](/docs/web-platform/popup-api/open-pseudo-class) pseudo-class to style the pop-up when it has been shown. The following example transitions the pop-up in from the bottom of the viewport, rather than have it appear in the center:
 
 ```css
 p[popup] {
