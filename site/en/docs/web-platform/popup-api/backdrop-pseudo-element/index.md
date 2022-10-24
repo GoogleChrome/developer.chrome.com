@@ -21,7 +21,7 @@ The **`::backdrop`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-e
 
 ## Example
 
-Here we are darkening the rest of the content while the pop-up is shown:
+In the following example the rest of the content is darkened while the pop-up is shown:
 
 ```css
 p[popup]::backdrop {
