@@ -46,13 +46,13 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
-   <td>Available in Stable, increasing to 5% from this week.
+   <td>Available in Stable, increasing to 5% after October 26th.
    </td>
   </tr>
   <tr>
    <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
    </td>
-   <td>Available in Stable, increasing to 5% from this week.
+   <td>Available in Stable, increasing to 5% after October 26th.
    </td>
   </tr>
   <tr>

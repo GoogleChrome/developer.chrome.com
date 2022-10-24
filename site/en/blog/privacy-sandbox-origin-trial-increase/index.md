@@ -1,11 +1,13 @@
 ---
 title: Increasing the Privacy Sandbox Relevance and Measurement origin trial to 5%
 description: >
-  From this week, we will begin increasing the Privacy Sandbox Relevance and
-  Measurement origin trial population towards 5% of Chrome Stable users.
+  This week, no sooner than October 26, we will begin increasing the Privacy
+  Sandbox Relevance and Measurement origin trial population towards 5% of
+  Chrome Stable users.
 subhead: >
-  From this week, we will begin increasing the Privacy Sandbox Relevance and
-  Measurement origin trial population towards 5% of Chrome Stable users.
+  This week, no sooner than October 26, we will begin increasing the Privacy
+  Sandbox Relevance and Measurement origin trial population towards 5% of
+  Chrome Stable users.
 layout: 'layouts/blog-post.njk'
 date: 2022-10-24
 authors:
@@ -17,12 +19,12 @@ tags:
   - privacy
 ---
 
-From this week, we will begin increasing the Privacy Sandbox Relevance and
-Measurement origin trial population towards 5% of Chrome Stable users. We always
-take an incremental approach to increasing limits and actively monitor for
-issues in Chrome origin trials–you can expect to see traffic levels increase
-over a period of a few days. Pre-stable channels, Canary and Beta will continue
-as is with a 50/50 split for origin trial eligibility.
+This week, no sooner than October 26, we will begin increasing the Privacy
+Sandbox Relevance and Measurement origin trial population towards 5% of Chrome
+Stable users. We always take an incremental approach to increasing limits and
+actively monitor for issues in Chrome origin trials–you can expect to see
+traffic levels increase over a period of a few days. Pre-stable channels, Canary
+and Beta will continue as is with a 50/50 split for origin trial eligibility.
 
 We [brought the trial to Chrome Stable in
 August](/blog/expanding-privacy-sandbox-testing/) to enable functional testing
@@ -38,6 +40,7 @@ with the rest of the ecosystem.
 
 {% Aside %}
 ## Feedback
+
 Since the start of the Privacy Sandbox initiative we've heard from hundreds of
 developers, companies, and others across the W3C, industry events, Chrome-hosted
 office hours, proposal repos, and more. In the past six months, we've shared
@@ -116,8 +119,8 @@ of Chrome Stable users, the individual API features within the trial will each
 progress through early channels for stability testing before we graduate them
 into the Beta or Stable origin trial.
 
-A feature will only graduate to later channels if it is being used—this means
-early testing on Canary and Beta, either via the origin trial or with the
+Some features may only graduate to later channels if they are being used—this
+means early testing on Canary and Beta, either via the origin trial or with the
 feature flag, is critical for us to progress those features to Stable. In your
 testing, you should continue to actively use feature detection per API and
 expect to see variation in that functionality over time and over different
@@ -135,8 +138,9 @@ functionality.
 
 Attribution Reporting, Topics, FLEDGE, and Fenced Frames are all currently
 available in Chrome Stable and will be part of the increased traffic. We will
-start increasing traffic for Attribution Reporting and Topics from this week,
-FLEDGE and Fenced Frames will increase from November 9th.
+start increasing traffic for Attribution Reporting and Topics from this week, no
+sooner than October 26. FLEDGE and Fenced Frames will increase from November
+9th.
 
 <table>
   <tr>
@@ -146,13 +150,13 @@ FLEDGE and Fenced Frames will increase from November 9th.
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
    </td>
-   <td>Available in Stable, increasing to 5% from this week.
+   <td>Available in Stable, increasing to 5% after October 26th.
    </td>
   </tr>
   <tr>
    <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
    </td>
-   <td>Available in Stable, increasing to 5% from this week.
+   <td>Available in Stable, increasing to 5% after October 26th.
    </td>
   </tr>
   <tr>
