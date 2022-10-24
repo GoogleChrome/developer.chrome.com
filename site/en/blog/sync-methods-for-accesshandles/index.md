@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Sync methods for AccessHandles
+title: 'Breaking change: sync methods for AccessHandles'
 subtitle: >
   To simplify working with AccessHandles in contexts like Emscripten, we're making the methods of
   the `FileSystemSyncAccessHandle` interface synchronous.
@@ -71,9 +71,9 @@ accessHandle.close();
 ## What do I need to do?
 
 Note that changing methods from asynchronous to synchronous is a web-exposed change with potential
-breakage. While `await`ing synchronous methods is a no-op, any use of `Promise.then()` will break.
-If you were chaining a `then()` call on the result of any of the previously asynchronous and now
-synchronous methods, you will need to change your code.
+breakage. While using `await` in synchronous methods is a no-op, any use of `Promise.then()` will break.
+If you chain a `then()` call on the result of any of the previously asynchronous and now
+synchronous methods, you need to change your code.
 
 ```js
 // (✅) This won't break, but you better remove the superfluous `await`:
