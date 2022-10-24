@@ -11,13 +11,13 @@ authors:
   - samdutton
 ---
 
-This article previously referred to Private State Tokens as "Trust Tokens". The Trust Token API has been renamed to the
-Private State Token API to better showcase its privacy and utility benefits.
+{% Aside %}
+This article previously referred to Private State Tokens as "Trust Tokens". The Trust
+Token API has been renamed to the Private State Token API to better showcase its
+privacy and utility benefits.
 
-Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for more information.
-
-API status updates will be provided here and on [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
-
+Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
+for more information.
 {% endAside %}
 
 ## Implementation status
