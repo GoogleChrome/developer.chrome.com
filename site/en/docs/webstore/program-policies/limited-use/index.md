@@ -26,7 +26,7 @@ date: 2022-07-21
 
     1. Do not allow humans to read user data, unless:
 
-        1. the user's explicit consent to read specific data for example, helping a user re-access the product or a service after having lost their password) is obtained;
+        1. the user's explicit consent to read specific data (for example, helping a user re-access the product or a service after having lost their password) is obtained;
 
         1. The data is aggregated and anonymized and used for internal operations in accordance with applicable privacy and other jurisdictional legal requirements;
 
