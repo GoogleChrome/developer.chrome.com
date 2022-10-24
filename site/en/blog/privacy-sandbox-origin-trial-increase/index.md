@@ -145,7 +145,7 @@ sooner than October 26. FLEDGE and Fenced Frames will increase from November
 <table>
   <tr>
    <th>API</th>
-   <th>Notes</th>
+   <th>Origin trial status</th>
   </tr>
   <tr>
    <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
