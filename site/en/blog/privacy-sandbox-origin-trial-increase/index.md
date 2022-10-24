@@ -39,7 +39,7 @@ importantly as we open up this wider scale—sharing the results of your testing
 with the rest of the ecosystem.
 
 {% Aside %}
-## Feedback
+**Feedback**
 
 Since the start of the Privacy Sandbox initiative we've heard from hundreds of
 developers, companies, and others across the W3C, industry events, Chrome-hosted
