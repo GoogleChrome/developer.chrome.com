@@ -19,7 +19,7 @@ The **`:open`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-class]
 
 ## Example
 
-In this case we are transitioning the pop-up in from the bottom of the viewport, rather than just having it appear in the center:
+The following example transitions the pop-up in from the bottom of the viewport, rather than have it appear in the center:
 
 ```css
 p[popup] {
