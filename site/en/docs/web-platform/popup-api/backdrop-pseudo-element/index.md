@@ -9,7 +9,7 @@ date: 2022-10-19
 updated: 2022-10-19
 ---
 
-The **`::backdrop`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-element](https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements) sits behind an open [pop-up](/docs/web-platform/popup-api/) in the stacking order, but in front of the rest of the document, and spans the entire width and height of the viewport. It allows the rest of the content to be styled while the pop-up is open — for example you might want to blur or darken it.
+The **`::backdrop`** [CSS](https://developer.mozilla.org/docs/Web/CSS) [pseudo-element](https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements) sits behind an open [pop-up](/docs/web-platform/popup-api/) in the stacking order, but in front of the rest of the document, and spans the entire width and height of the viewport. It allows the rest of the content to be styled while the pop-up is open—for example you might want to blur or darken it.
 
 `::backdrop` neither inherits from nor is inherited by any other elements.
 
