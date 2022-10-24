@@ -18,8 +18,7 @@ tags:
 If you find yourself running the same code in the [**Console**][1] repeatedly, consider saving the
 code as a snippet instead. Snippets are scripts that you author in the [**Sources** panel][2]. They
 have access to the page's JavaScript context, and you can run them on any page. Snippets are an
-alternative to [bookmarklets][3]. Firefox DevTools has a feature similar to snippets called
-[Scratchpad][4].
+alternative to [bookmarklets][3].
 
 For example, the screenshot below shows the DevTools documentation homepage on the left and some snippet source code in the **Sources** > **Snippets** pane on the right.
 
@@ -131,7 +130,6 @@ Similar to creating a snippet, you can run it both in the **Snippets** pane and 
 [1]: /docs/devtools/console
 [2]: /docs/devtools/javascript/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
-[4]: https://developer.mozilla.org/docs/Tools/Scratchpad
 [5]: #open
 [6]: #rename
 [7]: #open
