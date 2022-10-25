@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Implementation guide
 date: 2020-02-04
-updated: 2020-12-08
+updated: 2022-10-25
 description: Custom Tabs implementation guide
 ---
 
