@@ -16,16 +16,15 @@ authors:
 This document outlines a new proposal for identity federation: the Federated
 Credential Management API (FedCM).
 
-*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is [being discussed
+*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is [discussed
    publicly](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM's origin trial](/blog/fedcm-origin-trial) has ended in Chrome 107 and
-   FedCM is shipped since Chrome 108.
+*  [FedCM's origin trial](/blog/fedcm-origin-trial) ends in Chrome 107 and FedCM
+   is shipped since Chrome 108.
 *  FedCM isn't supported by other browsers yet, but Mozilla is [implementing a
    prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
    and [WebKit team has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
-   implementation timings for FedCM and other Privacy Sandbox proposals.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
 
 ## Why do we need FedCM?
@@ -36,7 +35,7 @@ as password-less single sign-in), security (such as improved resistance to
 phishing and credential stuffing attacks) and trustworthiness compared to
 per-site usernames and passwords.
 
-With identity federation, a RP (relying party) relies on an IDP (identity
+With identity federation, a RP (relying party) relies on an IdP (identity
 provider) to provide the user an account without requiring a new username
 and password.
 
@@ -64,13 +63,15 @@ levels being shared and prevent unintended abuse.
 ### What do we expect will be affected?
 
 {% Aside 'caution' %}
-We aim to mitigate all tracking vectors on Chrome with the [Privacy
-Sandbox initiative](https://privacysandbox.com/). Our first step is to 
-reduce the impact of third-party cookie phase-out which is already happening 
-on other browsers, and is [planned in Chrome for
-2023](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/).
+
+We aim to mitigate all tracking vectors on Chrome with the [Privacy Sandbox
+initiative](https://privacysandbox.com/). Our first step is to reduce the impact
+of third-party cookie phase-out which is already happening on other browsers,
+and is [planned in Chrome for
+2024](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/).
 While removing these cookies can help reduce third-party tracking, it also
 impacts other cross-site use cases.
+
 {% endAside %}
 
 Through [community
@@ -107,7 +108,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 
 ### You're an IdP {: #idp }
 
-FedCM requires support from an indentity provider. A relying party cannot use
+FedCM requires support from an identity provider. A relying party cannot use
 FedCM independently. If you are a RP, you can ask your IdP to provide
 instructions.
 
@@ -163,14 +164,30 @@ authentication-related functionalities.
 
 In the future, we hope to support more features, including:
 
-*  Automatic sign-in
-*  Authorization prompt
-*  Access and refresh tokens
-*  Front-channel logout: sign-out from the relying party (RP) initiated by
-   the identity provider (IdP)
-*  OpenID Connect (OIDC) session management
-*  Cross-origin iframes
-*  Personalized buttons
+Short-term:
+* **Cross-origin iframe support**: IdP can call FedCM from within a cross-origin
+  iframe.
+* **Personalized button**: IdP can display returning user's identity on the
+  sign-in button from within a cross-origin iframe.
+* **Metrics endpoint**: Provides FedCM performance metrics to the IdP.
+
+Medium-term:
+* **Multiple IdP support**: We are [exploring ways to support multiple
+  independent FedCM calls](https://github.com/fedidcg/FedCM/issues/319) to be
+  unified.
+* **IdP sign-in status API**: To resolve a [timing attack
+  issue](https://github.com/fedidcg/FedCM/issues/230), we are exploring ways for
+  an IdP to proactively notify the browser the user's sign-in status and always
+  showing UI when credentialed network requests are made.
+* **Sign in to IdP**: When a user is not signed in to the IdP, the browser
+  provides a UI for the user to sign in without leaving the RP.
+
+Long-term:
+* **Authorization**: Allows a user to grant access to private resources.
+* **Age verification**: Provides a mechanism to verify age.
+* **Front-channel logout**: Ability for an IdP to send a signal to RPs to
+  logout.
+* **SAML**: Support for SAML (Security Assertion Markup Language) protocol.
 
 {% Aside 'warning' %}
 
@@ -231,32 +248,16 @@ They can do the same for Chrome on desktop by going to
   
 FedCM is supported in Chrome on all platforms.
 
-FedCM isn't supported by other browsers yet, but the [WebKit team has
-expressed general
-support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
-and interest in working together on the FedCM proposal.
-
 FedCM isn't supported by other browsers yet, but Mozilla is [implementing a
 prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox and
-[WebKit team has expressed general
-support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
-and interest in working together on the FedCM proposal.
+[WebKit team has expressed general support and interest in working together on
+the FedCM
+proposal](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html).
 
-## How can identity providers test FedCM?
+## How can identity providers develop FedCM?
 
 You need a secure context (HTTPS or localhost) on Chrome to use the Federated
 Credential Management API.
-
-### Detect whether FedCM is available {: #feature-detection}
-
-First, you need to confirm that FedCM is available before actually using it. To
-check if FedCM is available, wrap this code around your FedCM implementation:
-
-```javascript
-if ('IdentityCredential' in window) {
-  // If the feature is available, take action
-}
-```
 
 ### Debug code on Chrome on Android {: #remote-debug-android}
 
@@ -319,7 +320,7 @@ Sec-Fetch-Dest: webidentity
 All requests sent from the browser via FedCM include a `Sec-Fetch-Dest:
 webidentity` header to prevent [CSRF
 attacks](https://portswigger.net/web-security/csrf). All IdP endpoints must
-confirm this header exists with  `Sec-Fetch-Dest: webidentity`.
+confirm this header is included.
 
 {% endAside %}
 
@@ -386,7 +387,7 @@ Here's an example response body from the IdP:
 {
   "accounts_endpoint": "/accounts.php",
   "client_metadata_endpoint": "/metadata.php",
-  "id_assertion_endpoint": "/idassertions.php",
+  "id_assertion_endpoint": "/id_assertions.php",
   "branding": {
     "background_color": "green",
     "color": "0xFFEEAA",
@@ -605,7 +606,7 @@ following information:
 Example HTTP header:
 
 ```http
-POST /idassertions.php HTTP/1.1
+POST /id_assertions.php HTTP/1.1
 Host: idp.example
 Referer: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
@@ -621,7 +622,7 @@ On the server, the IdP should confirm that:
 2. The `Referer` header matches the origin the RP, registered in advance
    for the given client ID.
 
-{% Aside 'caution' %}
+{% Aside 'warning' %}
 
 Since the domain verification on OAuth or OpenID Connect relies on a browser
 redirect, it's critical in FedCM that the IdP server checks a `Referer` header value
@@ -659,7 +660,20 @@ Once the IdP's configuration and endpoints are available, RPs can call
 `navigator.credentials.get()` to request allowing users to sign in to the IdP
 from the RP.
 
-For example:
+<a name="feature-detection"></a>
+
+Before calling the API, you need to confirm that [FedCM is available on the
+user's browser]. To check if FedCM is available, wrap this code around your
+FedCM implementation:
+
+```javascript
+if ('IdentityCredential' in window) {
+  // If the feature is available, take action
+}
+```
+
+To request allowing users to sign in to the IdP from the RP, do the following,
+for example:
 
 ```javascript
 const credential = await navigator.credentials.get({
@@ -675,8 +689,8 @@ const { token } = credential;
 ```
 
 The `providers` property takes an array of [`IdentityProvider`
-objects](https://fedidcg.github.io/FedCM/#dictdef-identityprovider) that must
-have the following properties:
+objects](https://fedidcg.github.io/FedCM/#dictdef-identityprovider) that have
+the following properties:
 
 <table class="with-heading-tint with-borders">
   <thead>
@@ -696,10 +710,6 @@ have the following properties:
   <tr>
     <td><code>nonce</code> (optional)</td>
     <td>A random string to ensure the response is issued for this specific request. Prevents replay attacks.</td>
-  </tr>
-  <tr>
-     <td><code>signal</code> (optional)</td>
-     <td>An <a href="https://developer.mozilla.org/docs/Web/API/AbortSignal"><code>AbortSignal</code></a> for the RP to terminate the request arbitrarily.</td>
   </tr>
 </table>
 
