@@ -167,9 +167,9 @@ Through [the `interactive-widget` key](https://drafts.csswg.org/css-viewport/#in
 
 Accepted values for `interactive-widget` are:
 
-- `resizes-visual` = Resize only the Visual Viewport but not the Layout Viewport
-- `resizes-content` = Resize both the Visual Viewport and Layout Viewport
-- `overlays-content` = Do not resize any viewport
+- `resizes-visual`: Resize only the Visual Viewport but not the Layout Viewport.
+- `resizes-content`: Resize both the Visual Viewport and Layout Viewport.
+- `overlays-content`: Do not resize any viewport.
 
 Visualized, the settings have this effect on the various viewports:
 
