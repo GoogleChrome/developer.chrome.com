@@ -27,7 +27,6 @@ import './web-components/share-button';
 import './web-components/web-tabs';
 import './web-components/language-select';
 import './third-party/announcement-banner/announcement-banner';
-import './web-components/checkbox-group';
 
 // This is only used on content pages.
 import './web-components/toc-active';
