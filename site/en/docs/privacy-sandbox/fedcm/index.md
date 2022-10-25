@@ -256,7 +256,7 @@ proposal](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html).
 
 ## How can identity providers develop FedCM?
 
-You need a secure context (HTTPS or localhost) on Chrome to use the Federated
+You need a secure context (HTTPS or localhost) in Chrome to use the Federated
 Credential Management API.
 
 ### Debug code on Chrome on Android {: #remote-debug-android}
