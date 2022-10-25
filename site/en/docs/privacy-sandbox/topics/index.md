@@ -13,15 +13,13 @@ authors:
 
 This is a landing page for the latest information about the Topics API for the web.
 
-For technical resources, see the [Topics developer guide](/docs/privacy-sandbox/topics/)
-([Android version here](https://developer.android.com/design-for-safety/privacy-sandbox/guides/topics)).
+- For technical resources, see the developer guides for [web platforms](/docs/privacy-sandbox/topics/) and ([Android](https://developer.android.com/design-for-safety/privacy-sandbox/guides/topics)).
 
-For a non-technical introduction, see the [Topics overview on PrivacySandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
+- For a non-technical introduction, see the [Topics overview on PrivacySandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
 
 ## Latest updates {: #updates}
 
-### October 26th, 2022:<br>
-Responding to industry feedback on Topics
+### October 26th, 2022: <br>Responding to industry feedback on Topics
 
 In recent weeks the Topics API has seen an increased level of testing by a variety of ecosystem
 participants, providing Privacy Sandbox with valuable feedback. We have welcomed the insights shared
@@ -34,7 +32,7 @@ open web.
 
 _Posted by: Leeron Israel. Privacy Sandbox Product Manager for Topics API_
 
-### [Date]: 2022 Q2 feedback report on Topics
+### 2022 Q2 feedback report on Topics
 
 As part of its commitments to the CMA, Google has agreed to publicly provide quarterly reports on
 the stakeholder engagement process for its Privacy Sandbox proposals (see paragraphs 12 and
@@ -82,7 +80,7 @@ stakeholders.
 -  Question + GitHub link to answer
 -  Question + GitHub link to answer
 
-### Topics filtering (Note: Requires testing to answer)
+### Topics filtering
 
 -  Question + GitHub link to answer
 -  Question + GitHub link to answer

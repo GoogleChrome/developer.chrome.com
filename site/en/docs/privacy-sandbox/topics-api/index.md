@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'The Topics API'
+title: 'Topics API developer guide'
 subhead: >
   Enable interest-based advertising, without resorting to tracking the sites a user visits.
 description: >
