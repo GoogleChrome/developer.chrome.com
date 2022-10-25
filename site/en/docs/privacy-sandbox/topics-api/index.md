@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API developer guide'
 subhead: >
-  Enable interest-based advertising, without resorting to tracking the sites a user visits.
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 description: >
-  A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 date: 2022-01-25
 updated: 2022-10-11
 authors:
