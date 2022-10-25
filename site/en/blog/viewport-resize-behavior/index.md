@@ -120,7 +120,7 @@ Browsers that resize both the Visual Viewport and Layout Viewport.
 
 Browsers that resize none of the viewports:
 
-- None by default – In Chrome on Android you can opt in to this behavior by means of [the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
+- None by default – In Chrome on Android you can opt in to this behavior by means of [the VirtualKeyboard API](/docs/web-platform/virtual-keyboard/)
 
 ### Side-effects of each behavior
 
