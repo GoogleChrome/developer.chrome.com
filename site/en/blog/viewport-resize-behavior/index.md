@@ -73,6 +73,8 @@ When doing so, browsers respond in one of the following ways in relation to the 
 - Resize both the Visual Viewport and Layout Viewport.
 - Do not resize any of the Layout Viewport or Visual Viewport, overlaying the virtual keyboard on top of both.
 
+These three behaviors are visualized as follows:
+
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/b531R0BAmxljbdfw3Egn.png", alt="Visualization of all three mentioned behaviors side by side.", width="800", height="450", class="screenshot" %}
   <figcaption>
@@ -80,13 +82,7 @@ When doing so, browsers respond in one of the following ways in relation to the 
   </figcaption>
 </figure>
 
-Each of the listed behaviors differently affects the size and/or position of certain elements on web pages, namely:
-
-- Elements that rely on [viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units).
-- Elements that rely on `position: fixed;`.
-- Elements that are sized to take up the visual space.
-
-Depending on which browser and OS combination a visitor uses, layout changes might occur, beyond your control.
+Depending on which browser and OS combination a visitor uses, one of the behaviors is used, beyond your control.
 
 ## Mapping the various resize behaviors
 
@@ -128,13 +124,13 @@ This difference in how the various viewports get resized when the OSK is shown l
 
 In the browsers from [group 1](#group-one), with the OSK shown:
 
-  - The computed values for viewport-relative units remain the same.
+  - The computed values for [viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units) remain the same.
   - Elements that were designed to take up the full visual space keep their size.
   - Elements that use `position: fixed` remain in place and can be obscured by the OSK.
 
 In the browsers from [group 2](#group-two), with the OSK shown:
 
-  - The computed values for viewport-relative units shrink.
+  - The computed values for [viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units) shrink.
   - Elements that were designed to take up the full visual space shrink.
   - Elements that use `position: fixed` can end up elsewhere in the layout.
 
