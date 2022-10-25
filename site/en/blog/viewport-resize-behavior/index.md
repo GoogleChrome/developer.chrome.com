@@ -5,7 +5,7 @@ authors:
   - bramus
 description: >
   What changes are coming to the viewport resize behavior in Chrome 108, why Chrome is making this change, and what you can do to prepare.
-date: 2022-10-28
+date: 2022-10-25
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/oCyRN5zefrMn8o68pUln.png
 alt: "Viewport Visualizations"
 tags:
