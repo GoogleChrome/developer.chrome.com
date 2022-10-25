@@ -100,7 +100,7 @@ Let's inspect the memory together.
 7. Let's customize the **Value inspector** to show only **floating point**. Click on the **settings** button and check only **Float 32-bit** and **Float 64-bit**.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZJFQAJFXB3GOA1hqVcfd.png", alt="settings to customize value inspector", width="800", height="602" %}
 8. Let's change the encoding from `dec` to `sci`. Notice the value representations are updated accordingly.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="change the encoding", width="800", height="602" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="Change the encoding.", width="800", height="602" %}
 9. Try to navigate the memory buffer with your keyboard or using the navigation bar. Repeat step 4 to observe values changes. 
 
 ## WebAssembly memory inspection {: #wasm }
