@@ -527,7 +527,7 @@ with an array of account information with following properties:
   </tr>
   <tr>
     <td><code>email</code> (required)</td>
-    <td>Email address of the user</td>
+    <td>Email address of the user.</td>
   </tr>
   <tr>
     <td><code>given_name</code> (optional)</td>
@@ -535,11 +535,11 @@ with an array of account information with following properties:
   </tr>
   <tr>
     <td><code>picture</code> (optional)</td>
-    <td>URL of the user avatar image</td>
+    <td>URL of the user avatar image.</td>
   </tr>
   <tr>
     <td><code>approved_clients</code> (optional)</td>
-    <td>An array of RP client IDs which the user has registered with</td>
+    <td>An array of RP client IDs which the user has registered with.</td>
   </tr>
 </table>
 
