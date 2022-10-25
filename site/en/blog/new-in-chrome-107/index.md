@@ -3,7 +3,7 @@ title: New in Chrome 107
 description:
   Chrome 107 is rolling out now! There are new properties in the Screen Capture API that improve the screen sharing experiences.You can now precisely identify whether a resource on your page is render blocking or not.There is a new way to send data to a backend server with the declarative PendingBeacon API in origin trial. And there’s plenty more.
 layout: 'layouts/blog-post.njk'
-date: 2022-09-27
+date: 2022-10-25
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/sTsLWh3hhROVksOU7DYi.png'
