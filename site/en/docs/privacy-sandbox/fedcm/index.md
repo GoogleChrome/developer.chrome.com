@@ -64,9 +64,9 @@ levels being shared and prevent unintended abuse.
 
 {% Aside 'caution' %}
 
-We aim to mitigate all tracking vectors on Chrome with the [Privacy Sandbox
-initiative](https://privacysandbox.com/). Our first step is to reduce the impact
-of third-party cookie phase-out which is already happening on other browsers,
+The aim of the [Privacy Sandbox initiative](https://privacysandbox.com/) 
+is to mitigate all tracking vectors in Chrome. Our first step is to reduce the impact
+of third-party cookie phase-out which is already happening in other browsers,
 and is [planned in Chrome for
 2024](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/).
 While removing these cookies can help reduce third-party tracking, it also
