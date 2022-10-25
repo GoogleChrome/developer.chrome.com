@@ -16,13 +16,13 @@ authors:
 This document outlines a new proposal for identity federation: the Federated
 Credential Management API (FedCM).
 
-*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is [discussed
-   publicly](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM's origin trial](/blog/fedcm-origin-trial) ends in Chrome 107 and FedCM
-   is shipped since Chrome 108.
-*  FedCM isn't supported by other browsers yet, but Mozilla is [implementing a
-   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
-   and [WebKit team has expressed general
+*  The [FedCM proposal](https://github.com/fedidcg/FedCM) is open for [public
+   discussion](https://github.com/fedidcg/FedCM/issues).
+*  [FedCM origin trial](/blog/fedcm-origin-trial) ends in Chrome 107 and FedCM
+   is shipped in Chrome 108.
+*  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
+   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) in Firefox,
+   while the [WebKit team has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
