@@ -62,9 +62,9 @@ If you're a keyboard person, here's a shortcut cheatsheet:
 
 The easy way to memorize the shortcuts:
 
-- **C** stands for CSS
-- **J** for JavaScript
-- **I** designates your choice
+- **C** stands for CSS.
+- **J** for JavaScript.
+- **I** designates your choice.
 
 ## Auto-open DevTools on every new tab
 
