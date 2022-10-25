@@ -3,7 +3,7 @@ title: Link Rel Preload | Perf.Now() pre-event
 summary: >-
   The night before Perf.now(), the community is getting together for
   a night of lightning talks, games and finger foods, on us.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Amsterdam, Netherlands
 date: 2022-10-26
 externalUrl: https://www.meetup.com/front-end-forward/events/288132310/

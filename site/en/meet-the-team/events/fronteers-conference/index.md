@@ -3,7 +3,7 @@ title: Fronteers Conference
 summary: >-
   Fronteers Conference is one of Europe’s premiere conferences on front-end web
   development.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: 'Utrecht, The Netherlands'
 date: '2022-09-09'
 externalUrl: 'https://fronteersconf.org/'

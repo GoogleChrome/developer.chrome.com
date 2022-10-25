@@ -4,7 +4,7 @@ summary: >-
   A developer event in Southeastern Europe that brings together the global
   tech community; devs, software engineers, product owners, founders, startups
   and more.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Zadar, Croatia
 date: 2022-09-19
 externalUrl: https://shift.infobip.com/

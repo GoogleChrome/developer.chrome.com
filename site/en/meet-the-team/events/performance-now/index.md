@@ -3,7 +3,7 @@ title: Performance.now()
 summary: >-
   Performance.now() is a web performance conference that covers topics from
   performance culture, performance budgets to Web Vitals, PWAs and more.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Amsterdam, Netherlands'
 date: '2022-10-27'
 externalUrl: 'https://perfnow.nl/'
