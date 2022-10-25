@@ -188,7 +188,7 @@ Note that this meta tag extension is only supported by Chrome 108 and up at the 
 
 ## Testing and feedback
 
-We expect some minor differences to existing sites, but expect these to be non-block as Chrome 108 on Android will now behave similarly to Safari on iOS. Therefore, websites that work fine on Safari on iOS should also work fine on Chrome 108 on Android.
+We expect some minor differences to existing sites, but expect these to be non-blocking as Chrome 108 on Android will now behave similarly to Safari on iOS. Therefore, websites that work fine on Safari on iOS should also work fine on Chrome 108 on Android.
 
 However, we do encourage website authors to actively test their websites in Chrome 108, which is in beta from October 27th 2022. Specifically look out for elements that use `position: fixed` and/or rely on [Viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units).
 
