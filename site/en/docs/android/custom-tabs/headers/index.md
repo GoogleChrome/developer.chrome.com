@@ -72,7 +72,7 @@ authenticate malicious server transactions that would otherwise not be possible.
 ### Attaching CORS approvelisted headers to Custom Tabs requests
 [Custom Tabs][8] are a special way of launching web pages in a customised browser tab. Custom Tab
 intents can be created using `CustomTabsIntent.Builder()`. You can also attach headers to these
-intents using a `Bundle` with the [`Borwser.EXTRA_HEADERS` flag][9]:
+intents using a `Bundle` with the [`Browser.EXTRA_HEADERS` flag][9]:
 
 
 ```java
