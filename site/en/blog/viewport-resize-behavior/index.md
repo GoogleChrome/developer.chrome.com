@@ -24,7 +24,7 @@ When visiting a website, you don’t get to see the entire page's contents after
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/bcOVfktAlpu36m7aIgdZ.png", alt="Visualization of the Layout Viewport (blue outline) in a browser.", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visualization of the Layout Viewport _(blue outline)_ in a desktop browser.
+    Visualization of the Layout Viewport <em>(blue outline)</em> in a desktop browser.
   </figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ When positioning elements using [`position: fixed`](https://web.dev/learn/css/la
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/7Z5hUpkIquQHf9TelA9Z.png", alt="Visualization of the Layout Viewport (blue outline) in mobile browsers, each with two elements that are laid out using `position: fixed` (blue boxes).", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visualization of the Layout Viewport _(blue outline)_ in mobile browsers, each with two elements that are laid out using `position: fixed` _(blue boxes)_. Shown are (from left to right) Safari on iPhone, Chrome on Android, and Firefox on Android.
+    Visualization of the Layout Viewport <em>(blue outline)</em> in mobile browsers, each with two elements that are laid out using <code>position: fixed</code> <em>(blue boxes)</em>. Shown are (from left to right) Safari on iPhone, Chrome on Android, and Firefox on Android.
   </figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ In addition to this Layout Viewport, the browser also offers a _Visual Viewport_
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/QgNJ9lJ0f4vYurujy4zV.png", alt="Visualization of the Visual Viewport (orange outline).", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visualization of the Visual Viewport _(orange outline)_.
+    Visualization of the Visual Viewport <em>(orange outline)</em>.
   </figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ When pinch-zooming in, you shrink the size of the Visual Viewport in relation to
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/izBJq3csr5nhGw9Z8EYt.png", alt="Visualization of the Visual Viewport on a pinch-zoomed page. Note how the Visual Viewport is contained inside the Layout Viewport.", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visualization of the Visual Viewport (orange outline) on a pinch-zoomed page. Note how the Visual Viewport is contained inside the Layout Viewport.
+    Visualization of the Visual Viewport <em>(orange outline)</em> on a pinch-zoomed page. Note how the Visual Viewport is contained inside the Layout Viewport.
   </figcaption>
 </figure>
 
@@ -120,23 +120,19 @@ Browsers that resize both the Visual Viewport and Layout Viewport.
 
 Browsers that resize none of the viewports:
 
-- None by default _(*)_
-
-{% Aside %}
-_(*)_ Chrome on Android allows you to opt in to this behavior by means of [the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
-{% endAside %}
+- None by default – In Chrome on Android you can opt in to this behavior by means of [the VirtualKeyboard API](https://developer.chrome.com/docs/web-platform/virtual-keyboard/)
 
 ### Side-effects of each behavior
 
 This difference in how the various viewports get resized when the OSK is shown leads to a non-interoperable layout and sizing behavior of websites.
 
-In the browsers from group 1, with the OSK shown:
+In the browsers from [group 1](#group-one), with the OSK shown:
 
   - The computed values for viewport-relative units remain the same
   - Elements that were designed to take up the full visual space keep their size
-  - Elements that use `position: fixed` remain in place, and can be obscured by the OSK
+  - Elements that use `position: fixed` remain in place and can be obscured by the OSK
 
-In the browsers from group 2, with the OSK shown:
+In the browsers from [group 2](#group-two), with the OSK shown:
 
   - The computed values for viewport-relative units shrink
   - Elements that were designed to take up the full visual space shrink
@@ -145,7 +141,7 @@ In the browsers from group 2, with the OSK shown:
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/6ImZDFRlY4pyQoxELETG.png", alt="Visualization of the side-effects in both groups. Note the different position for the elements that use position: fixed (blue boxes)", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visualization of the side-effects in both groups. Note the different positions for the elements that use `position: fixed` _(blue boxes)_. Shown are Safari on iOS (left) and Chrome on Android (center and right).
+    Visualization of the side-effects in both groups. Note the different positions for the elements that use <code>position: fixed</code> <em>(blue boxes)</em>. Shown are Safari on iOS (left) and Chrome on Android (center and right).
   </figcaption>
 </figure>
 
@@ -180,7 +176,7 @@ Visualized, the settings have this effect on the various viewports:
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/diU1PJiyjjujrb2XtNWs.png", alt="Visual comparison of all three values in Chrome 108 on Android. From left left to right: resizes-visual, resizes-content, and overlays-content.", width="800", height="450", class="screenshot" %}
   <figcaption>
-    Visual comparison of all three values in Chrome 108 on Android. From left to right: `resizes-visual`, `resizes-content`, and `overlays-content`.
+    Visual comparison of all three values in Chrome 108 on Android. From left to right: <code>resizes-visual</code>, <code>resizes-content</code>, and <code>overlays-content</code>.
   </figcaption>
 </figure>
 
