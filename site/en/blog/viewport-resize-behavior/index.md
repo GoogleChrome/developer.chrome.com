@@ -180,6 +180,8 @@ Visualized, the settings have this effect on the various viewports:
   </figcaption>
 </figure>
 
+You can try out the effect of each value in your browser on [this demo website](https://viewport-resize-behavior.netlify.app/).
+
 {% Aside %}
 Note that this meta tag extension is only supported by Chrome 108 and up at the time of writing. Support excludes Chrome on iOS and iPadOS, as these versions are powered by Apple’s WebKit instead of Chrome’s Blink rendering engine.
 {% endAside %}
@@ -196,3 +198,4 @@ Feedback can be reported over at [crbug.com](https://crbug.com/). Be sure to inc
 
 - [Chrome Status Entry](https://chromestatus.com/feature/6145225857171456)
 - [Explainer](https://github.com/bramus/viewport-resize-behavior/blob/main/explainer.md)
+- [Demo](https://viewport-resize-behavior.netlify.app/)
