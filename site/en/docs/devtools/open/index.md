@@ -74,9 +74,9 @@ If you prefer keyboard, press a shortcut in Chrome depending on your operating s
 
 Here's an easy way to memorize the shortcuts:
 
-- **C** stands for CSS
-- **J** for JavaScript
-- **I** designates your choice
+- **C** stands for CSS.
+- **J** for JavaScript.
+- **I** designates your choice.
 
 The **C** shortcut opens the **Elements** panel in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="21", height="20" %} inspector mode. This mode shows you helpful tooltips when you hover over elements on a page.
 
