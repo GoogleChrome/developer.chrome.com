@@ -44,7 +44,7 @@ contains examples of both.
 Please try to be consistent with the topic and location fields as they are ultimately
 used to populate the filters on the 'meet-the-team-page'.
 
-The location field should follow the following pattern: 'City, Country' e.g. Denver, USA
+The location field should follow the following pattern: 'City, Country'. For example, Denver, USA.
 
 When adding topics, please review the topics already in use to ensure you are
 not adding multiple variations of the same thing.
