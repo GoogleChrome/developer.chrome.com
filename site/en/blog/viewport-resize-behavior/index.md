@@ -134,9 +134,9 @@ In the browsers from [group 1](#group-one), with the OSK shown:
 
 In the browsers from [group 2](#group-two), with the OSK shown:
 
-  - The computed values for viewport-relative units shrink
-  - Elements that were designed to take up the full visual space shrink
-  - Elements that use `position: fixed` can end up elsewhere in the layout
+  - The computed values for viewport-relative units shrink.
+  - Elements that were designed to take up the full visual space shrink.
+  - Elements that use `position: fixed` can end up elsewhere in the layout.
 
 <figure>
   {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/6ImZDFRlY4pyQoxELETG.png", alt="Visualization of the side-effects in both groups. Note the different position for the elements that use position: fixed (blue boxes).", width="800", height="450", class="screenshot" %}
