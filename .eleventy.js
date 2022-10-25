@@ -24,7 +24,6 @@ const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
 const {EventCard} = require('./site/_shortcodes/EventCard');
-const {FilterSheet, FilterSheetSection, FilterSheetButtons} = require('./site/_shortcodes/FilterSheet');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -139,9 +138,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addShortcode('EventCard', EventCard);
-  eleventyConfig.addPairedShortcode('FilterSheet', FilterSheet);
-  eleventyConfig.addPairedShortcode('FilterSheetSection', FilterSheetSection);
-  eleventyConfig.addPairedShortcode('FilterSheetButtons', FilterSheetButtons);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
