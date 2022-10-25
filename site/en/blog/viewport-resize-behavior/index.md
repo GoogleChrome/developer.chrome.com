@@ -181,7 +181,7 @@ Visualized, the settings have this effect on the various viewports:
 </figure>
 
 {% Aside %}
-Note that this meta tag extension is not supported in Chrome on iOS or iPadOS, as these versions are powered by Apple’s WebKit instead of Chrome’s Blink rendering engine.
+Note that this meta tag extension is only supported by Chrome 108 and up at the time of writing. Support excludes Chrome on iOS and iPadOS, as these versions are powered by Apple’s WebKit instead of Chrome’s Blink rendering engine.
 {% endAside %}
 
 ## Testing and feedback
