@@ -36,7 +36,7 @@ Paste that into the `image` field in your YAML frontmatter.
 
 ### Sessions
 
-There are two types of session: participant and speaker.The sample event(`site/en/meet-the-team/events/_example/`)
+There are two types of session: participant and speaker. The sample event(`site/en/meet-the-team/events/_example/`)
 contains examples of both.
 
 ### Filters
