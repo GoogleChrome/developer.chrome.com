@@ -6,7 +6,7 @@ authors:
   - sofiayem
 date: 2020-08-20
 updated: 2022-10-25
-description: "Use the Memory inspector to inspect an ArrayBuffer, TypedArray, DataView in JavaScript as well as WebAssembly.Memory of C++ Wasm apps."
+description: "Use the Memory inspector to inspect an ArrayBuffer, TypedArray, or DataView in JavaScript as well as WebAssembly.Memory of C++ Wasm apps."
 ---
 
 {% Aside %}
