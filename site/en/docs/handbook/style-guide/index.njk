@@ -471,3 +471,7 @@ line-height: 160%;
 {% block chromescss %}
   <link rel="stylesheet" href="/css/styleguide-main.css">
 {% endblock %}
+
+{% block chromescripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
+{% endblock %}
