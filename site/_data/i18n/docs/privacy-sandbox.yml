@@ -6,8 +6,10 @@ fledge-best-practices:
   en: 'FLEDGE latency best practices'
 floc:
   en: 'Federated Learning of Cohorts (FLoC)'
-topics-api:
+topics:
   en: 'The Topics API'
+topics-api:
+  en: 'Topics API developer guide'
 glossary:
   en: 'Privacy Sandbox glossary'
   ja: 'プライバシー サンドボックスの用語集'
