@@ -139,7 +139,7 @@ In the browsers from [group 2](#group-two), with the OSK shown:
   - Elements that use `position: fixed` can end up elsewhere in the layout
 
 <figure>
-  {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/6ImZDFRlY4pyQoxELETG.png", alt="Visualization of the side-effects in both groups. Note the different position for the elements that use position: fixed (blue boxes)", width="800", height="450", class="screenshot" %}
+  {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/6ImZDFRlY4pyQoxELETG.png", alt="Visualization of the side-effects in both groups. Note the different position for the elements that use position: fixed (blue boxes).", width="800", height="450", class="screenshot" %}
   <figcaption>
     Visualization of the side-effects in both groups. Note the different positions for the elements that use <code>position: fixed</code> <em>(blue boxes)</em>. Shown are Safari on iOS (left) and Chrome on Android (center and right).
   </figcaption>
