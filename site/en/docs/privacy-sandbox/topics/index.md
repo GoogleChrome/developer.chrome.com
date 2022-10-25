@@ -42,7 +42,7 @@ the stakeholder engagement process for its Privacy Sandbox proposals (see paragr
 aggregating feedback received by Chrome from the various sources as listed in the feedback overview,
 including but not limited to: GitHub Issues, the feedback form made available on privacysandbox.com,
 meetings with industry stakeholders, and web standards forums.
-[Here is the section on Topics feedback in the Q2 report.](https://developer.chrome.com/docs/privacy-sandbox/feedback/report-2022-q2/#topics)
+[Here is the section on Topics feedback in the Q2 report.](/docs/privacy-sandbox/feedback/report-2022-q2/#topics)
 
 _Posted by: Joey Trotz, Director. Privacy Sandbox Ecosystems_
 
@@ -105,9 +105,9 @@ use the [Privacy Sandbox feedback form](https://goo.gle/privacy-sandbox-feedback
         retrieve a user's coarse-grained interest topics, in a privacy-friendly manner.
         -  The API provides topics that a user might currently be interested in, based
             on their recent browsing activity. The same API is used to both
-            [observe a topic for a user](https://developer.chrome.com/docs/privacy-sandbox/topics/#api-callers-only-receive-topics-theyve-observed)
+            [observe a topic for a user](/docs/privacy-sandbox/topics/#api-callers-only-receive-topics-theyve-observed)
             and
-            [access the topics](https://developer.chrome.com/docs/privacy-sandbox/topics/#access-topics).
+            [access the topics](/docs/privacy-sandbox/topics/#access-topics).
 
 -  **Feature:** Interest-based advertising and content recommendations
     -  The returned topics, selected from a
@@ -117,7 +117,7 @@ use the [Privacy Sandbox feedback form](https://goo.gle/privacy-sandbox-feedback
 -  **Feature:** Topics Debugging
     -  Publishers can use the `chrome://topics-internals` page to locally debug the API,
         access and run the classifier model file to see the topics assigned to different sites.
-        (See: [Debug Topics](https://developer.chrome.com/docs/privacy-sandbox/topics/#debug) &
+        (See: [Debug Topics](/docs/privacy-sandbox/topics/#debug) &
         [Colab](https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing))
 
 ### In development
@@ -125,14 +125,14 @@ use the [Privacy Sandbox feedback form](https://goo.gle/privacy-sandbox-feedback
 -  **Feature:** Classifier Iterations
     -  Improve the classifier model which produces topics from user's browsing activity.
         (See:
-        [Classifier](https://developer.chrome.com/docs/privacy-sandbox/topics/#how-does-the-api-infer-topics-for-a-site))
+        [Classifier](/docs/privacy-sandbox/topics/#how-does-the-api-infer-topics-for-a-site))
         [Timing: Ongoing]
 
 -  **Feature:** Taxonomy Iterations
     -  Evolve the current taxonomy of around 350 topics with input from the ecosystem. Chrome is
         very interested in feedback on a long-term maintenance and governance model. (See:
-        [Taxonomy](https://developer.chrome.com/docs/privacy-sandbox/topics/#how-would-topics-be-curated-and-selected),
-        [Feedback Report](https://developer.chrome.com/docs/privacy-sandbox/feedback/report-2022-q1/#show-relevant-content-and-ads))
+        [Taxonomy](/docs/privacy-sandbox/topics/#how-would-topics-be-curated-and-selected),
+        [Feedback Report](/docs/privacy-sandbox/feedback/report-2022-q1/#show-relevant-content-and-ads))
         [Timing: Ongoing]
 
 -  **Feature:** Additional flexibility in accessing topics
