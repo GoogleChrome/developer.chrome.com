@@ -9,7 +9,7 @@ description: >
   the FileSystemSyncAccessHandle interface synchronous.
 authors:
   - thomassteiner
-date: 2022-10-24
+date: 2022-10-25
 # updated: 2022-10-21
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/4nSGWCoK9S3nTr0hASGH.png
 alt: Emscripten logo
