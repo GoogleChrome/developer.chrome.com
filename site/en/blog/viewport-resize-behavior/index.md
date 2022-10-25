@@ -128,9 +128,9 @@ This difference in how the various viewports get resized when the OSK is shown l
 
 In the browsers from [group 1](#group-one), with the OSK shown:
 
-  - The computed values for viewport-relative units remain the same
-  - Elements that were designed to take up the full visual space keep their size
-  - Elements that use `position: fixed` remain in place and can be obscured by the OSK
+  - The computed values for viewport-relative units remain the same.
+  - Elements that were designed to take up the full visual space keep their size.
+  - Elements that use `position: fixed` remain in place and can be obscured by the OSK.
 
 In the browsers from [group 2](#group-two), with the OSK shown:
 
