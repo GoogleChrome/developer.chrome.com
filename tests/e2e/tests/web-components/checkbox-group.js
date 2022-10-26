@@ -15,7 +15,7 @@
  */
 
 const test = require('ava');
-const {withPage, addPageScript} = require('../../../puppeteer');
+const {withPage, addPageScript} = require('../../puppeteer');
 const {html} = require('common-tags');
 
 test(
