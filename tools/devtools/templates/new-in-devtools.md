@@ -18,7 +18,7 @@ tags:
 
 {{thankful}}
 
-{% include 'partials/devtools/{{lang}}/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 <% if lang != 'en' -%>
 <!-- Translation instructions:
@@ -26,12 +26,12 @@ tags:
   2. Provide translations under each of the English commented original content
   3. Translate the "description" tag above
   4. Translate all the <img> alt text
-  5. Update the whats-new.md file -->
+  5. Update the sites/{{lang}}/_partials/devtools/whats-new.md file -->
 <%- endif %>
 
 <%- if lang == 'en' -%><!-- $contentStart --><%- endif %>
 {{content}}
 <% if lang == 'en' -%><!-- $contentEnd --><%- endif %>
 
-{% include 'partials/devtools/{{lang}}/reach-out.md' %}
-{% include 'partials/devtools/{{lang}}/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
