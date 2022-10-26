@@ -231,10 +231,11 @@ The usefulness of the API will be explored through testing. As required under pa
 
 <li>sites using self-labelling as a method to encode different (and potentially sensitive) meanings into topics;
 <li>sites misrepresenting their topics for financial gain; 
-<li>sites attacking topics in order to blunt its usefulness for others (e.g., spamming the user's topics with meaningless noise). 
+<li>sites attacking topics in order to blunt its usefulness for others (e.g., spamming the user's topics with meaningless noise). </li>
+</ul>
 
 <p>
-The public can inspect these components, with tooling available via a chrome://topics-internals or this <a href="https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.</li></ul>
+The public can inspect these components, with tooling available via a chrome://topics-internals or this <a href="https://colab.sandbox.google.com/drive/1hIVoz8bRCTpllYvads51MV7YS3zi3prn?usp=sharing">colab</a>. Through testing, we expect classification to improve over time, and we <a href="/docs/privacy-sandbox/feedback/#feedback-routes">welcome feedback</a> of examples of sites that may be miscategorized.
 
    </td>
   </tr>
