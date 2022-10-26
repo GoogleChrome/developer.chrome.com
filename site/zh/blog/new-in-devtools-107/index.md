@@ -111,7 +111,7 @@ Chromium issue: [1344526](https://crbug.com/1344526)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ce2b426818106768d4e6d907cc1f4cd3b9636ca6 #}
 
-Chromium issue: [1139945](https://crbug.com/1139945)
+Chromium 议题: [1139945](https://crbug.com/1139945)
 
 
  ## 其他的更新 {: #misc } 
