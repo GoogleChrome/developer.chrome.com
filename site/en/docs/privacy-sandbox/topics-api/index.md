@@ -165,7 +165,7 @@ The Topics API can help facilitate robust user controls, as the API is built on 
 high-level topics. Chrome plans to offer users the option to remove individual topics, and to show
 the user the topics stored in the browser.
 
-## How would topics be curated and selected?
+### How would topics be curated and selected?
 
 Topics would be selected from a
 [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md): a list of items such as
