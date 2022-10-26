@@ -33,7 +33,7 @@ tags:
 
 去到 **Settings（设置）** > **Shortcuts（快捷键）**, 将鼠标徘徊在命令上并点击 **Edit（编辑）** 按钮 (钢笔图示）来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化DevTools的键盘快捷键。", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化 DevTools 的键盘快捷键。", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d061128ff63a97ab2c6c0d2b5e655e6fcbed829c #}
 
