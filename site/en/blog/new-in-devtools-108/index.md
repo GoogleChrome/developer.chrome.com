@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-10-26
 description: 'Hints for inactive CSS properties, new XPath and text selectors in the Recorder, and more.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/R04Uaz5x81UmGFLrHOSN.png'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2vv0CRyz7xaSiYsoKLaY.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -13,6 +13,7 @@ tags:
   - chrome-108
 ---
 
+<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/R04Uaz5x81UmGFLrHOSN.png -->
 
 {% Partial 'devtools/banner.md' %}
 
