@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-07-07
+updated: 2022-10-25
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -567,17 +567,27 @@ In this example, the compressed size of the `www.google.com` document that was s
 
 ### Save all network requests to a HAR file {: #save-as-har }
 
-To save all network requests to a HAR file:
+[HAR (HTTP Archive)][26] is a file format used by several HTTP session tools to export the captured data. The format is a JSON object with a particular set of fields.
 
-1.  Right-click any request in the **Requests** table.
-2.  Select **Save all as HAR with content**. DevTools saves all requests that have occurred since you
-    opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
-    request.
+You can save all network requests to a HAR file in two ways:
 
-Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
-the HAR file into the **Requests** table. See also [HAR Analyzer][26].
+- Right-click any request in the **Requests** table and select **Save all as HAR with content**.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XEd84LBN4Rjoj6WUnpg2.svg", alt="Export.", width="24", height="24" %} **Export HAR** in the action bar at the top of the **Network** panel.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JaytyulU4VllFs9yH5B0.png", alt="The Export HAR button in the action bar at the top.", width="800", height="528" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+{% Aside %}
+**Note**: DevTools exports all requests that have occurred since you opened DevTools to the HAR file. You can't filter requests to export. To save a single request, see [Copy one or more requests to the clipboard](#copy).
+{% endAside %}
+
+Once you have a HAR file, you can import it back into DevTools for [analysis][26] in two ways:
+
+- Drag-and-drop the HAR file into the **Requests** table.
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oiUyFA6HRhsKOpUyaq0g.svg", alt="Import.", width="24", height="24" %} **Import HAR** in the action bar at the top of the **Network** panel.
+
+{% Aside %}
+**Note**: The **Network** panel reads and shows [initiators](/docs/devtools/network/reference/#requests) for the requests imported from HAR files.
+{% endAside %}
 
 ### Copy one or more requests to the clipboard {: #copy }
 
