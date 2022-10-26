@@ -78,7 +78,7 @@ Here's an easy way to memorize the shortcuts:
 - **J** for JavaScript.
 - **I** designates your choice.
 
-The **C** shortcut opens the **Elements** panel in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="21", height="20" %} inspector mode. This mode shows you helpful tooltips when you hover over elements on a page.
+The **C** shortcut opens the **Elements** panel in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="21", height="20" %} inspector mode. This mode shows you helpful tooltips when you hover over elements on a page. You can also click any element to view its CSS in the **Elements** > **Styles** pane.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j55nQO3vIZKKlu59ID15.png", alt="The Elements panel in inspector mode with a tooltip.", width="800", height="475" %}
 
@@ -126,3 +126,5 @@ Congratulations! You've successfully unlocked the power of Chrome DevTools.
 Next, watch the following video to learn some useful shortcuts and settings for quicker DevTools navigation.
 
 {% YouTube id="xHusjrb_34A" %}
+
+For a more hands-on learning experience, see [how to customize DevTools](/docs/devtools/customize/).
