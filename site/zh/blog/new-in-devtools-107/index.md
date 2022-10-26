@@ -116,7 +116,7 @@ Chromium issue: [1139945](https://crbug.com/1139945)
 
  ## 其他的更新 {: #misc } 
 
- 在**Console(控制台）** 边栏中显示正确的错误计数. 在之前的版本中, 当清除控制台的错误讯息是不会更新错误计数。
+ 在 **Console (控制台）** 边栏中显示正确的错误计数. 在之前的版本中, 当清除控制台的错误讯息是不会更新错误计数。
 ([1343311](https://crbug.com/1343311)) 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
