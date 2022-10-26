@@ -32,7 +32,10 @@ class CheckboxGroup extends BaseElement {
 
     this._handleMassSelect = this._handleMassSelect.bind(this);
     this._handleShowMore = this._handleShowMore.bind(this);
-    this._handleChange = debounce(this._handleChange.bind(this), 10);
+    this._computeAllSelected = debounce(
+      this._computeAllSelected.bind(this),
+      10
+    );
 
     this.setAttribute('enhanced', '');
 
@@ -41,7 +44,6 @@ class CheckboxGroup extends BaseElement {
       checkboxes: this._getCheckboxes(),
     };
 
-    this.allSelected = false;
     this.show = 4;
     this.i18n = {};
   }
@@ -66,15 +68,17 @@ class CheckboxGroup extends BaseElement {
     );
 
     this.elements.checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', this._handleChange);
+      checkbox.addEventListener('change', this._computeAllSelected);
     });
+
+    this._computeAllSelected();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
     this.elements.checkboxes.forEach(checkbox => {
-      checkbox.removeEventListener('change', this._handleChange);
+      checkbox.removeEventListener('change', this._computeAllSelected);
     });
 
     this.elements.massSelectButton.removeEventListener(
@@ -114,7 +118,7 @@ class CheckboxGroup extends BaseElement {
     `;
   }
 
-  _handleChange() {
+  _computeAllSelected() {
     const checked = this.elements.checkboxes
       .filter(checkbox => checkbox.disabled === false)
       .find(checkbox => checkbox.checked === false);
