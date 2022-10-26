@@ -17,7 +17,7 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-<!-- Content starts here -->
+<!-- $contentStart -->
 
 ## Hints for inactive CSS properties {: #css-hint }
 
@@ -94,6 +94,8 @@ These are some noteworthy fixes in this release:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ccfb914765146ce514b9645117d9f95052bd3471 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4b6c1b6671e08a39e4d37772e87ff2cf41cb7327 #}
+
+<!-- $contentEnd -->
 
 {% Partial 'devtools/reach-out.md' %}
 {% Partial 'devtools/whats-new.md' %}
