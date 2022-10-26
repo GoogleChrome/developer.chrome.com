@@ -13,7 +13,7 @@ const blogTemplate = './tools/devtools/templates/new-in-devtools.md';
 const bannerTemplate = './tools/devtools/templates/new-in-devtools-banner.svg';
 
 const blogDest = './site/{{lang}}/blog/new-in-devtools-{{version}}/index.md';
-const outlineDest = './site/_includes/partials/devtools/{{lang}}/whats-new.md';
+const outlineDest = './site/{{lang}}/_partials/devtools/whats-new.md';
 const bannerDest = './tools/devtools/_temp/new-in-devtools-banner-{{lang}}.svg';
 
 export const locales = [
