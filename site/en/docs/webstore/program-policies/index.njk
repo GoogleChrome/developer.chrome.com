@@ -6,7 +6,7 @@ sections:
   principles:
     - title: Be Safe
       color: blue
-      description: We strive to make the Chrome Web Store a safe and trusted environment for developers and users, which means that we will remove extensions that pose security threats, access data beyond what is necessary to implement their functions, appear to take advantage of users, encourage harm or hate speech, or otherwise abuse the Store system and network.
+      description: We strive to make the Chrome Web Store a safe and trusted environment for developers and users. This means that we will remove extensions that pose security threats, access data beyond what is necessary to implement their functions, appear to take advantage of users, encourage harm or hate speech, or otherwise abuse the Store system and network.
     - title: Be Honest
       color: red
       description: Building and maintaining user trust in the Chrome Web Store is paramount, which means we set a high bar for developer transparency. All functionalities of extensions should be clearly disclosed to the user, with no surprises. This means we will remove extensions which appear to deceive or mislead users, enable dishonest behavior, or utilize clickbaity functionality to artificially grow their distribution.
@@ -74,7 +74,7 @@ sections:
 
 {{ heroCardWide(
   'Program Policies',
-  "The Chrome Web Store is committed to providing a safe and secure environment for users, built on trust and transparency. For these reasons, the Chrome Web Store requires all developers to comply with both the Developer Program Policies listed below, and the Developer Agreement. When your extension is reviewed by Google, these policies act as a guiding principle for those reviews. These policies apply to the entire user experience of your application/extension/theme – including any marketing materials, user generated content, ads, landing pages, etc. – unless otherwise noted.",
+  "The Chrome Web Store is committed to providing a safe and secure environment for users, built on trust and transparency. For these reasons, the Chrome Web Store requires all developers to comply with both the Developer Program Policies listed below, and the Developer Agreement. When your extension is reviewed by Google, these policies act as a guiding principle for those reviews. These policies apply to the entire user experience of your application/extension/theme – including any marketing materials, user generated content, ads, landing pages, etc – unless otherwise noted.",
   "Documentation",
   "/docs/webstore",
   "",
@@ -105,9 +105,9 @@ sections:
   {% for item in sections.principles %}
     <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
       <h2 class="type--h3 color-{{item.color}}-medium">
-        {{ item.title }}
+        {{ item.title | md | safe }}
       </h2>
-      <p class="flex-1">{{ item.description }}</p>
+      <p class="flex-1">{{ item.description | md | safe }}</p>
     </div>
   {% endfor %}
 </div>
