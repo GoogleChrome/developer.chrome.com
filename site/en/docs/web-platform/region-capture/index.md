@@ -7,14 +7,14 @@ authors:
   - beaufortfrancois
   - eladalon
 date: 2022-06-21
-updated: 2022-08-04
+updated: 2022-10-26
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/05M2IjnWmaeFbIDWaznm.jpeg
 alt: A woman holding her hands up and making a frame with her fingers. Above her the sky is blue with a few clouds.
 tags:
   - chrome-104
 ---
 
-The web platform already allows a web app to capture a video track of the current tab. It now ships with Region Capture, a mechanism for cropping these video tracks. The web app designates a portion of the current tab as its area of interest, and the browser crops all pixels outside that area.
+The web platform already allows a web app to capture a video track of a browser tab. It now ships with Region Capture, a mechanism for cropping these video tracks. The web app designates a portion of a tab as its area of interest, and the browser crops all pixels outside that area.
 
 Web apps could previously crop video tracks “manually”. That is, web apps could manipulate each and every single frame directly. This was neither robust nor performant. Region Capture addresses these shortcomings. The web app can now instruct the browser to do the work on its behalf.
 
@@ -51,7 +51,7 @@ const iframe = document.querySelector("#videoConferenceIframe");
 iframe.contentWindow.postMessage(cropTarget);
 ```
 
-The video conferencing web app asks the browser to crop the track to the area defined by `CropTarget` by calling `cropTo()` on the self-capture video track with the crop target received from the main web app.
+The video conferencing web app asks the browser to crop the track to the area defined by `CropTarget` by calling `cropTo()` on the video track with the crop target received from the main web app.
 
 ```js
 // In the embedded video conferencing web app, ask the user for permission
@@ -61,7 +61,7 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 });
 const [track] = stream.getVideoTracks();
 
-// Start cropping the self-capture video track using the CropTarget
+// Start cropping the video track using the CropTarget
 // received over window.onmessage.
 await track.cropTo(cropTarget);
 
@@ -111,7 +111,7 @@ If unsuccessful, the Promise will be rejected. This will happen if:
 The `cropTo()` method is exposed on any tab-capture video track, and not just for self-capture. It is therefore advisable to check if the user selected the current tab, before attempting to crop the track. This can be accomplished using [Capture Handle]. It is also possible to ask the browser to nudge the user towards self-capture using [`preferCurrentTab`].
 
 ```js
-// Start cropping the self-capture video track using the CropTarget.
+// Start cropping the video track using the CropTarget.
 await track.cropTo(cropTarget);
 ```
 
