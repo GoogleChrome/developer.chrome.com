@@ -76,6 +76,8 @@ To add a custom profile:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UcFQuHdcjI3VRFr6gnmQ.png", alt="The new profile in the throttling drop-down menu in the Network panel.", width="800", height="464" %}
 
+To edit or remove an existing profile, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
+
 ## Locations
 
 The **Location** tab contains a list of geolocation presets. You can use these presets to [override geolocation](/devtools/device-mode/geolocation/) in Chrome. You can also populate the list with your own preset that you use frequently.
