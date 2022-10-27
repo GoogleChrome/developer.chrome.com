@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Update to the `CanMakePayment` event behavior of the Payment Handler API
+title: Update to the CanMakePayment event behavior of the Payment Handler API
 subtitle: >
    The `canmakepayment` service worker event in the Payment Handler API lets the merchant know whether the user has a card on file in an installed payment app. Chrome is removing properties attached to the event.
 description: >
@@ -98,7 +98,7 @@ $ curl --head <Service Worker JS file URL> | grep -i origin-trial
 origin-trial: Auw/tjTQ2eJQ911wiMHi1Bb7i71...
 ```
  
-# Next steps
+## Next steps
  
 This change is planned to be enabled by default from Chrome 111. Start testing today to be prepared
 for the change in time for the launch.
