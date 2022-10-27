@@ -37,7 +37,7 @@ tags:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d061128ff63a97ab2c6c0d2b5e655e6fcbed829c #}
 
-Chromium issues: [1335274](https://crbug.com/1335274), [174309](https://crbug.com/174309)
+Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.com/174309)
 
 
 ## 使用键盘快捷键对浅色与深色主题进行快速切换。 {: #toggle-themes }
@@ -51,7 +51,7 @@ Chromium issues: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4853b34457f43e41ae9cebc7dfc97c0b734f463a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/029ac9db0b7e7d08945bcf7a16b407bde50183a1 #}
 
-Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
+Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
 
 
 ## 强标记忆检查器里的C/C++对象。 {: #memory } 
@@ -67,7 +67,7 @@ Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d5f3befb47eaaa373d697b42dec6f179baf9d42c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4e6bdb4321cbc0b783647e855a616096beaabfd #}
 
-Chromium issue: [1336568](https://crbug.com/1336568)
+Chromium 议题: [1336568](https://crbug.com/1336568)
 
 
 ## 支持HAR 导入的完整初始者的资讯。{: #har } 
@@ -80,7 +80,7 @@ Chromium issue: [1336568](https://crbug.com/1336568)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3a659b0711f52a2e200395b85f16ed9f266d1571 #}
 
-Chromium issue: [1343185](https://crbug.com/1343185)
+Chromium 议题: [1343185](https://crbug.com/1343185)
 
 
 
@@ -100,7 +100,7 @@ Chromium issue: [1343185](https://crbug.com/1343185)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b4643a4703b4a26945d1446eedc907ac81373e23 #}
 
-Chromium issue: [1344526](https://crbug.com/1344526)
+Chromium 议题: [1344526](https://crbug.com/1344526)
 
 
 ## 在`align-content`的CSS flexbox 属性中显示`开始` 和 `结束`图标。 {: #flexbox } 
