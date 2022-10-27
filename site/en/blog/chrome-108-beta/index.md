@@ -117,6 +117,8 @@ This release of Chrome has two new [origin trials](/docs/web-platform/origin-tri
 
 The `canmakepayment` service worker event lets the merchant know whether the user has a card on file in an installed payment app. It silently passes the merchant's origin and arbitrary data to a service worker from payment app origin. This cross-origin communication happens on `PaymentRequest` construction in JavaScript, does not require a user gesture, and does not show any user interface. The developer trial for removing the identity fields from "canmakepayment" event can be enabled via: `chrome://flags/#clear-identity-in-can-make-payment`. Enabling this flag will empty-out the identity fields in the "canmakepayment" event (and the Android `IS_READY_TO_PAY` Intent).
 
+Find out more in [Update to the CanMakePayment event behavior of the Payment Handler API](/blog/payment-handler-canmakepayment-update/).
+
 
 ## Back/forward cache NotRestoredReason API
 
