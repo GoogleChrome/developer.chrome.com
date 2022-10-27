@@ -120,3 +120,4 @@ and you'll get an email notification whenever we launch a new video.
 
 I’m Adriana Jara, and as soon as Chrome 108 is released, I'll be right here to
 tell you what's new in Chrome!
+
