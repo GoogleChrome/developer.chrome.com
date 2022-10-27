@@ -74,8 +74,6 @@ To add a custom profile:
 
 1. Click **Add** to save the new profile. You can now select it from the [throttling drop-down list in the **Network** panel](/docs/devtools/network/reference/#throttling-profile).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UcFQuHdcjI3VRFr6gnmQ.png", alt="The new profile in the throttling drop-down menu in the Network panel.", width="800", height="464" %}
-
 To edit or remove an existing profile, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
 ## Locations
