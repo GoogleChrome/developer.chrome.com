@@ -18,8 +18,8 @@ sessions:
       set around things like motion.
 
       In this talk, Rachel Andrew will take a look at what is available right now across browsers,
-      and what is just around the corner. She’ll also dive into plenty of information about browser
-      support to help you adopt new things with confidence."
+      and what is just around the corner. She'll also dive into plenty of information about browser
+      support to help you adopt new things with confidence.
     topics:
       - Web UI and CSS
     time: null
