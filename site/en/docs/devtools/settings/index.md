@@ -59,6 +59,23 @@ The **Settings** panel has a list of tabs explained in detail in the sections be
 
 ## Throttling
 
+The **Throttling** tab contains a list of custom throttling profiles. You can use these profiles to test [custom connection speeds in the **Network** panel](/docs/devtools/network/reference/#throttling-profile).
+
+To add a custom profile:
+
+1. In the **Throttling** tab, click **Add custom profile**.
+1. Specify the following values for the new entry:
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/g3rn7EG4jq5Y3gofMlJH.png", alt="Creating a new profile in the Throttling tab.", width="800", height="464" %}
+
+   - **Profile Name**.
+   - **Download** and **Upload** speeds in Kbps.
+   - **Latency** in milliseconds.
+
+1. Click **Add** to save the new profile. You can now select it from the [throttling drop-down list in the **Network** panel](/docs/devtools/network/reference/#throttling-profile).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UcFQuHdcjI3VRFr6gnmQ.png", alt="The new profile in the throttling drop-down menu in the Network panel.", width="800", height="464" %}
+
 ## Locations
 
 The **Location** tab contains a list of geolocation presets. You can use these presets to [override geolocation](/devtools/device-mode/geolocation/) in Chrome. You can also populate the list with your own preset that you use frequently.
@@ -66,7 +83,7 @@ The **Location** tab contains a list of geolocation presets. You can use these p
 To add a custom preset:
 
 1. In the **Locations** tab, click **Add location**.
-1. Then specify the following values for the new entry:
+1. Specify the following values for the new entry:
    {% Aside 'gotchas' %}
    To copy latitude and longitude, right-click a city name on [Google Maps](https://www.google.co.uk/maps/place/New+York,+NY,+USA/).
    {% endAside %}

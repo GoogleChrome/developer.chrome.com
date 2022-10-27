@@ -120,13 +120,12 @@ In addition to presets, such as slow or fast 3G, you can also add your own
 custom throttling profiles:
 
 1. Open the **Throttling** menu and select **Custom** > **Add...**.
-1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
-1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile.", width="800", height="426" %}
+1. Set up a new throttling profile as described in [**Settings** > **Throttling**](/docs/devtools/settings/#throttling).
 1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
 
-DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
-enabled.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UnSmIJe1OEp98TkLFlUE.png", alt="A custom profile selected from the throttling menu. The Network panel displays a warning icon.", width="800", height="464" %}
+
+DevTools displays a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} warning icon next to the **Network** panel to remind you that throttling is enabled.
 
 #### Throttle WebSocket connections {: #throttle-websocket}
 
