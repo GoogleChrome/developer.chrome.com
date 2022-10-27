@@ -57,6 +57,28 @@ The **Settings** panel has a list of tabs explained in detail in the sections be
 
 ## Devices
 
+The **Devices** tab contains a list of devices and their dimensions. You can select these devices from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
+
+To add a device to the list:
+
+1. [Open Settings][1].
+1. In the **Device** tab, enable the checkbox next to a device you want to add.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/81OxvjyGhfLMe1UZFJQX.png", alt="A list of enabled devices in the Devices tab.", width="800", height="606" %}
+
+1. If you don't see a device you want to test, click **Add custom device**.
+1. Specify the device details, for example, as shown on the screenshot:
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/saf99v91L29TNeFEAKev.png", alt="Pixel 7 Pro device details.", width="800", height="1039" %}
+
+   {% Aside 'gotchas' %}
+   For more information on what to specify, see [User-Agent Client Hints](https://web.dev/user-agent-client-hints/).
+   {% endAside %}
+
+1. Click **Add**. Your device is enabled by default and you can select it from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
+
+To edit or remove a custom device you added, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
+
 ## Throttling
 
 The **Throttling** tab contains a list of custom throttling profiles. You can use these profiles to test [custom connection speeds in the **Network** panel](/docs/devtools/network/reference/#throttling-profile).
