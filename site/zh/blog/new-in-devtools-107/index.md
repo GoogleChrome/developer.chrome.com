@@ -42,7 +42,7 @@ Chromium issues: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 
 ## 使用键盘快捷键对光亮与暗黑主题进行快速切换。 {: #toggle-themes }
 
-设置一个键盘快捷键来对光亮与暗黑主图便利地进行快速切换。这个行动的快捷键并没有被系统预设。 
+设置一个键盘快捷键来对浅色与深色主图便利地进行快速切换。这个行动的快捷键并没有被系统预设。 
 
 <!-- Configure a keyboard shortcut to toggle [light and dark themes](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) conveniently. By default, the action doesn’t map to any keyboard shortcut. -->
 
