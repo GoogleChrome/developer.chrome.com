@@ -32,7 +32,6 @@ const githubLink = inputPath => {
     );
   }
   const branch = 'main';
-  // fix: duplicate `/` in github url
   return `${repo}/${path.join('blob', branch, inputPath)}`;
 };
 
