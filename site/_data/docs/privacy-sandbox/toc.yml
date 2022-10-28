@@ -44,13 +44,22 @@
     - url: /docs/privacy-sandbox/fledge-best-practices
 - title: i18n.docs.privacy-sandbox.measure
   sections:
-    - url: /docs/privacy-sandbox/attribution-reporting
-    - url: /docs/privacy-sandbox/attribution-reporting/system-overview
-    - url: /docs/privacy-sandbox/attribution-reporting-experiment
-    - url: /docs/privacy-sandbox/attribution-reporting-updates
-    - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
-    - url: /docs/privacy-sandbox/private-aggregation
-    - url: /docs/privacy-sandbox/private-aggregation-fundamentals
+    - title: i18n.docs.privacy-sandbox.attribution-reporting
+      sections:
+        - url: /docs/privacy-sandbox/attribution-reporting
+          title: i18n.docs.privacy-sandbox.attribution-reporting-overview
+        - url: /docs/privacy-sandbox/attribution-reporting/system-overview
+          title: i18n.docs.privacy-sandbox.attribution-reporting-system
+        - url: /docs/privacy-sandbox/attribution-reporting-experiment
+          title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
+        - url: /docs/privacy-sandbox/attribution-reporting-updates
+          title: i18n.docs.privacy-sandbox.attribution-reporting-changing
+        - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
+          title: i18n.docs.privacy-sandbox.attribution-reporting-summary
+    - title: i18n.docs.privacy-sandbox.private-aggregation
+      sections:
+        - url: /docs/privacy-sandbox/private-aggregation
+        - url: /docs/privacy-sandbox/private-aggregation-fundamentals
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
     - url: /docs/privacy-sandbox/trust-tokens
