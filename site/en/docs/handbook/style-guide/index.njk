@@ -453,5 +453,61 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
   </div>
 
+  <div class="pad-500" style="background:rgba(0,0,0,0.48); height: 500px;">
+    <div class="filter-sheet display-flex direction-column">
+      <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+        {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}
+      </p>
+
+      <div class="filter-sheet__filters">
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Section</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Location</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+
+        <section class="gap-bottom-500">
+          <p class="type--h5 weight-medium gap-bottom-200">Googler</p>
+
+          <p><label><input type="checkbox" /> Option 1</label></p>
+
+          <p><label><input type="checkbox" /> Option 2</label></p>
+
+          <p><label><input type="checkbox" /> Option 3</label></p>
+        </section>
+      </div>
+
+      <div
+        class="filter-sheet__buttons display-flex align-center justify-content-end"
+      >
+        <button class="material-button button-filled color-primary bg-white">
+          Reset
+        </button>
+
+        <button class="material-button button-filled color-bg bg-primary">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
 </article>
+{% endblock %}
+
+{% block chromescss %}
+  <link rel="stylesheet" href="/css/styleguide-main.css">
 {% endblock %}
