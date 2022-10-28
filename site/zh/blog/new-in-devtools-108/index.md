@@ -4,14 +4,13 @@ title: "DevTools 新功能（Chrome 108）"
 authors:
   - jecelynyeen
 date: 2022-10-26
-description: 'Hints for inactive CSS properties, new XPath and text selectors in the Recorder, and more.'
+description: '不活跃 CSS 属性、记录器中的新 XPath 和文本选择器等的提示。'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fQvLwDdC3o6d1wwKCCHT.png'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-108
-draft: true
 ---
 
 *感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*
@@ -26,37 +25,44 @@ draft: true
   5. Update the sites/zh/_partials/devtools/whats-new.md file -->
 
 
-<!-- ## Hints for inactive CSS properties {: #css-hint <!-- } --> -->
+<!-- ## Hints for inactive CSS properties {: #css-hint } -->
+## 不活跃 CSS 属性的提示 {: #css-hint }
 
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
+DevTools 现在可以识别有效但没有可见效果的 CSS 样式。 在 **Styles** 窗格中，DevTools 淡出不活跃的属性。 将鼠标悬停在它旁边的图标上以了解为什么该规则没有可见效果。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="Hints for inactive CSS properties.", width="800", height="526" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="不活跃 CSS 属性的提示。", width="800", height="526" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d6c1fea1e79b8373ff913a6d9919d097d1141254 #}
 
-Chromium issue: [1178508](https://crbug.com/1178508)
+Chromium 议题: [1178508](https://crbug.com/1178508)
 
 
 <!-- ## Auto-detect XPath and text selectors in the Recorder panel {: #recorder } -->
+## 在 Recorder 面板中自动检测 XPath 和文本选择器 {: #recorder }
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
+**Recorder** 面板现在支持 XPath 和文本选择器。 [开始记录用户流程](/docs/devtools/recorder/#record)，如果有可用的选择器，记录器会自动选择元素的 XPath 和最短的唯一文本作为选择器。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="XPath and text selectors in the Recorder panel.", width="800", height="579" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="在 Recorder 面板中的 XPath 和文本选择器", width="800", height="579" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/7441acfff5d9dfd373742797d2db46a809c9df67 #}
 
-Chromium issues: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.com/1327209)
+Chromium 议题: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.com/1327209)
 
 
 <!-- ## Step through comma-separated expressions {: #debugging } -->
+## 逐步执行逗号分隔的表达式 {: #debugging }
 
 <!-- You can now step through comma-separated expressions during debugging. This improves the debuggability of minified code. -->
+您现在可以在调试期间逐步执行逗号分隔的表达式。 这提高了缩小代码的可调试性。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="Step through comma-separated expressions.", width="800", height="473" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="逐步执行逗号分隔的表达式。", width="800", height="473" %}
 
 <!-- Previously, DevTools only supported stepping through semicolon-separated expressions. -->
-
+之前 DevTools 仅支持单步执行以分号分隔的表达式。
 <!-- Given the code below, -->
+鉴于下面的代码，
 
 ```js
 function foo() {}
@@ -69,35 +75,41 @@ function bar() {
 ```
 
 <!-- Transpilers and minifiers may turn them into comma-separated expressions. -->
+转译器和压缩器可能将它们转换为逗号分隔的表达式。
 
 ```js
 function bar(){return foo(),foo(),42}
 ``` 
 
 <!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
+这会在调试过程中造成混乱，因为缩小代码和编写代码之间的步进行为是不同的。 使用源映射来调试原始代码的缩小代码时更加令人困惑，因为开发人员正在查看分号（在后台被工具链转换为逗号）但调试器并没有停止它们 .
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 
-Chromium issue: [1370200](https://crbug.com/1370200)
+Chromium 议题: [1370200](https://crbug.com/1370200)
 
 
 <!-- ## Improved Ignore list setting {: #ignore-list } -->
-
+## 改进的忽略列表设置 {: #ignore-list }
 <!-- Go to **Settings** > **Ignore List**. DevTools improves the design to help you configure the rules to [ignore a single script or pattern of scripts](/docs/devtools/javascript/reference/#settings-ignore-list). -->
+转到 **Settings** > **Ignore List** 。 DevTools 改进了设计以帮助您配置规则以[忽略单个脚本或脚本模式](/docs/devtools/javascript/reference/#settings-ignore-list)。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qazPkaZ3TkSrIBU89Jtn.png", alt="The Ignore List tab.", width="800", height="535" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qazPkaZ3TkSrIBU89Jtn.png", alt="忽略列表选项卡。", width="800", height="535" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9441d8775b38b47db91bb5182f6349f3036d3751 #}
 
-Chromium issue: [1356517](https://crbug.com/1356517)
+Chromium 议题: [1356517](https://crbug.com/1356517)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-
+## 其他的更新 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
-
+以下是此版本中一些值得注意的修复：
 <!-- - Autocomplete CSS property name in the **Styles** pane on pressing space. ([1343316](https://crbug.com/1343316)) -->
+在 **Styles** 窗格中按空格自动完成 CSS 属性名称。 （[1343316](https://crbug.com/1343316))
+
 <!-- - Remove auto scroll in the **Element** panel’s breadcrumb. ([1369734](https://crbug.com/1369734)) -->
+删除 **Element** 面板的页面路径/面包屑导览中的自动滚动。 ([1369734](https://crbug.com/1369734))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ccfb914765146ce514b9645117d9f95052bd3471 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4b6c1b6671e08a39e4d37772e87ff2cf41cb7327 #}
