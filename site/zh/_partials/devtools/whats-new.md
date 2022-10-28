@@ -19,7 +19,7 @@
 * [使用键盘快捷键对光亮与深色主题进行快速切换](/zh/blog/new-in-devtools-107/#toggle-themes)
 * [强标记忆检查器里的C/C++对象](/zh/blog/new-in-devtools-107/#memory)
 * [支持HAR 导入的完整初始者的资讯](/zh/blog/new-in-devtools-107/#har)
-* [点击Enter（回车键）后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
+* [点击 Enter（回车键）后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
 * [在align-content的CSS flexbox 属性中显示开始 和 结束图标](/zh/blog/new-in-devtools-107/#flexbox)
 * [其他的更新](/zh/blog/new-in-devtools-107/#misc)
 
