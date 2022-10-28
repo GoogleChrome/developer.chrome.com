@@ -70,7 +70,7 @@ Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 Chromium 议题: [1336568](https://crbug.com/1336568)
 
 
-## 支持HAR 导入的完整初始者的资讯。{: #har } 
+## 支持 HAR 导入的完整初始者的资讯。{: #har } 
 
 [HAR import]的完整**Initiator（初始者)** 讯息现在可以可见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **Network（网络）** 界面只显示导入时的部分初始者讯息。 
 
