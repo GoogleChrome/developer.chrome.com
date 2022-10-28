@@ -4,7 +4,7 @@
   "url": "https://developer.chrome.com",
   "imgixDomain": "wd.imgix.net",
   "bucket": "web-dev-uploads",
-  "repo": "https://github.com/GoogleChrome/developer.chrome.com/",
+  "repo": "https://github.com/GoogleChrome/developer.chrome.com",
   "locales": [
     "en",
     "es",
