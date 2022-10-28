@@ -119,7 +119,7 @@ const logsBucket = await navigator.storageBuckets.open('logs', {
 };
 ```
 
-#### Creating an expiring storage bucket.
+#### Creating an expiring storage bucket
 
 By passing in an `expires` timestamp in milliseconds, you can create a storage bucket that will
 automatically expire when the timestamp is reached.
