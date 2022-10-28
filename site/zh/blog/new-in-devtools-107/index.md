@@ -88,7 +88,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 您现在可以禁止 **Search as you type（输入即搜索** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
-在**Elements（元素）**界面, 使用<kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd>来对搜索栏进行快速切换。 当您在搜索栏中输入一个查询时, DOM数会跳跃至第一个符合条件的元素并将至设置为预设。 
+在**元素**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏。 每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
 
 对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在您输入时，不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
