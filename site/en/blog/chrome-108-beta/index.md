@@ -5,7 +5,7 @@ description: >
 subhead: >
   New CSS viewport units, Federated Credential Management API, Variable COLRv1 fonts, and more.
 layout: 'layouts/blog-post.njk'
-date: 2022-10-27
+date: 2022-10-28
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/FbdknipjOqHfVYEbvcLz.png'
 alt: >
   Chrome 108 beta hero logo
