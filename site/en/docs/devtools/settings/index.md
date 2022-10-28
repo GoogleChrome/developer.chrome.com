@@ -12,14 +12,20 @@ Configure DevTools to your preferences with this comprehensive list of all DevTo
 
 ## Open Settings {: #open }
 
-To open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings**:
+To open **Settings**:
 
 1. [Open DevTools](/docs/devtools/open/) on any page.
-1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** button in the action bar at the top of DevTools.
+1. Do one of the following:
+
+   - Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** button in the action bar at the top.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KSgG5FtMU6pvdR8qUpJq.png", alt="The Settings button in the action bar at the top of DevTools.", width="800", height="464" %}
 
-   Alternatively, you can press <kbd>F1</kbd> (Windows or Linux) or <kbd>Fn</kbd> + <kbd>F1</kbd> (Mac) when focused in DevTools.
+   Or, when focused in DevTools, press:
+
+   - <kbd>?</kbd>
+   - <kbd>F1</kbd> on Windows or Linux
+   - <kbd>Fn</kbd> + <kbd>F1</kbd> on Mac
 
 The **Settings** panel has a list of tabs explained in detail in the sections below.
 
