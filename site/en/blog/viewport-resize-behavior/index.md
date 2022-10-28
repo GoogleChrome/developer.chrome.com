@@ -158,7 +158,7 @@ If you want your website to use the pre-108 resize behavior, fear not. Also ship
 Through [the `interactive-widget` key](https://drafts.csswg.org/css-viewport/#interactive-widget-section), you can tell Chrome which resize behavior you want.
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget-content=overlays">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=overlays-content">
 ```
 
 Accepted values for `interactive-widget` are:
