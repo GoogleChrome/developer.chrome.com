@@ -65,13 +65,14 @@
 
 .project-sections__nested-title {
   @include flex-font((14px 24px), (16px 24px), (16px 24px));
-  padding-bottom:0.5em;
+  padding-bottom: 0.5em;
 }
 
 .project-sections__nested-column > li > .project-sections__icon-optional ~ * { /* stylelint-disable-line selector-max-compound-selectors */
   margin-left: calc(#{get-size(400)} + 28px);
 }
-.project-sections__nested-column > li > div  {
+
+.project-sections__nested-column > li > div {
   display: flex;
 }
 
