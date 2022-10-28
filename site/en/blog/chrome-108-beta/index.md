@@ -109,6 +109,10 @@ Updates the asynchronous methods `flush()`, `getSize()`, and ` truncate()` in `F
 
 This is a potential breaking change, you can read more in [Breaking change: sync methods for AccessHandles](/blog/sync-methods-for-accesshandles/).
 
+## WebAuthn conditional UI
+
+[Conditional UI](https://web.dev/passkey-form-autofill/) for WebAuthn is supported on Windows 22H2 or later, macOS, and Android P or later. The WebAuthn UI on desktop platforms has also been refreshed.
+
 ## Origin trials
 
 This release of Chrome has two new [origin trials](/docs/web-platform/origin-trials/).
