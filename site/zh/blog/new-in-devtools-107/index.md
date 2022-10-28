@@ -76,7 +76,7 @@ Chromium 议题: [1336568](https://crbug.com/1336568)
 
 完整的初始者讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="支持HAR 导入的完整初始者的资讯。", width="800", height="376" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="支持 HAR 导入的完整初始者的资讯。", width="800", height="376" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3a659b0711f52a2e200395b85f16ed9f266d1571 #}
 
