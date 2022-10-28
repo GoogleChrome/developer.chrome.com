@@ -1,5 +1,9 @@
 attribution-reporting:
   en: 'Attribution Reporting'
+interest-ads:
+  en: 'Interest-based ads'
+ondevice-auctions:
+  en: 'On-device auctions'
 fledge:
   en: 'FLEDGE'
 fledge-best-practices:
@@ -37,9 +41,9 @@ blog:
   en: 'Blog'
   ja: 'ブログ'
 measure-ads:
-  en: 'Measure ad conversions'
+  en: 'Measure ad conversions with Attribution Reporting'
 measure-cross-site:
-  en: 'Measure cross-site data'
+  en: 'Measure cross-site data with Private Aggregation'
 attribution-reporting-overview:
   en: 'Attribution Reporting overview'
 attribution-reporting-experiment:
@@ -49,7 +53,7 @@ attribution-reporting-changing:
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
 attribution-reporting-system:
-  en: 'End-to-end system overview'
+  en: 'Attribution Reporting end-to-end'
 attribution-reporting-summary:
   en: 'Summary reports'
 private-aggregation:
