@@ -94,7 +94,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
-去到**Settings（设置）** > **Preferences（喜好）**, 禁止**Search as you type（输入即搜索）**. 通过这个改良, 搜索将会在点击 <kbd>Enter</kbd>才会发生。 
+打开 **设置** > **偏好设置**，禁止**即输即搜**。更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type setting.", width="800", height="449" %}
 
