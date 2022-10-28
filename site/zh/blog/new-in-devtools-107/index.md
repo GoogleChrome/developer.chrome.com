@@ -90,7 +90,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 在**Elements（元素）**界面, 使用<kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd>来对搜索栏进行快速切换。 当您在搜索栏中输入一个查询时, DOM数会跳跃至第一个符合条件的元素并将至设置为预设。 
 
-对于用户, 特别时经常使用长查询语句的测试者, 这中行为是很不理想的. 因为您输入的长查询语句， DOM 树可能会发生数次跳跃 (e.g. `//div[@id="example"]`)。这个行为发生了不必需要的举动。 
+对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在您输入时，不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
