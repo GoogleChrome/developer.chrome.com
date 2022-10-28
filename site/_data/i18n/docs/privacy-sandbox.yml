@@ -4,6 +4,8 @@ interest-ads:
   en: 'Interest-based ads'
 ondevice-auctions:
   en: 'On-device auctions'
+cross-site-storage:
+  en: 'Secure cross-site storage'
 fledge:
   en: 'FLEDGE'
 fledge-best-practices:
