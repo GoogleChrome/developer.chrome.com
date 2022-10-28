@@ -1,9 +1,4 @@
 {% Aside 'warning' %}
-
-The page you're viewing describes the Manifest V2 extension platform.
-
-As of [January 17, 2022](/docs/extensions/mv3/mv2-sunset/) Chrome Web Store has stopped accepting
-new Manifest V2 extensions. Use [Manifest
-V3](/docs/extensions/mv3/intro) when building new extensions.
-
+The Chrome Web Store no longer acceppts Manifest V2 extensions. Please use [Manifest
+V3](/docs/extensions/mv3/intro) when building new extensions. You will find a section on upgrading in the navigation tree at left, including the [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/).
 {% endAside %}
