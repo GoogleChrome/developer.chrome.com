@@ -84,7 +84,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 
 
-## 点击`Enter（回车键）`后开始DOM搜索。 {: #search-type } 
+## 点击 `Enter（回车键）`后开始 DOM 搜索。 {: #search-type } 
 
 您现在可以禁止**Search as you type（输入即搜索** 设置来启动点击<kbd>Enter</kbd>后开始DOM搜索。  
 
