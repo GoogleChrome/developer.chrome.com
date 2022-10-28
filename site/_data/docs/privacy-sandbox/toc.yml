@@ -44,7 +44,7 @@
     - url: /docs/privacy-sandbox/fledge-best-practices
 - title: i18n.docs.privacy-sandbox.measure
   sections:
-    - title: i18n.docs.privacy-sandbox.attribution-reporting
+    - title: i18n.docs.privacy-sandbox.measure-ads
       sections:
         - url: /docs/privacy-sandbox/attribution-reporting
           title: i18n.docs.privacy-sandbox.attribution-reporting-overview
@@ -56,7 +56,7 @@
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
         - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
           title: i18n.docs.privacy-sandbox.attribution-reporting-summary
-    - title: i18n.docs.privacy-sandbox.private-aggregation
+    - title: i18n.docs.privacy-sandbox.measure-cross-site
       sections:
         - url: /docs/privacy-sandbox/private-aggregation
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals

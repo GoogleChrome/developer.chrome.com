@@ -36,8 +36,12 @@ events:
 blog:
   en: 'Blog'
   ja: 'ブログ'
+measure-ads:
+  en: 'Measure ad conversions'
+measure-cross-site:
+  en: 'Measure cross-site data'
 attribution-reporting-overview:
-  en: 'Measure digital ads with Attribution Reporting'
+  en: 'Attribution Reporting overview'
 attribution-reporting-experiment:
   en: 'Experiment and participate'
 attribution-reporting-changing:
