@@ -54,7 +54,7 @@ Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
 
 
-## 强标记忆检查器里的C/C++对象。 {: #memory } 
+## 高亮内存检查器里的 C/C++ 对象。 {: #memory } 
 
 <!-- The [Memory Inspector](/docs/devtools/memory-inspector/) highlights all the bytes of a C/C++ memory object. -->
 
