@@ -45,6 +45,7 @@ Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 
 <!-- Configure a keyboard shortcut to toggle [light and dark themes](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) conveniently. By default, the action doesn’t map to any keyboard shortcut. -->
 
+您可以设置一个快捷键来快速切换浅色与深色主题。这个行动并没有系统默认快捷键。 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="使用键盘快捷键对浅色与深色主题进行快速切换。", width="800", height="576" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4853b34457f43e41ae9cebc7dfc97c0b734f463a #}
