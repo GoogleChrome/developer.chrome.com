@@ -105,7 +105,7 @@ Chromium 议题: [1344526](https://crbug.com/1344526)
 
 ## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
 
-在**Styles（风格）**界面中 , `使用在一个CSS 类中的display: flex` 或 `display: inline-flex`的`开始` and `结束`图标来编辑`align-content` 的属性 。 
+在 **样式**边栏中 , 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="在`align-content`的CSS flexbox 属性中显示`开始` 和 `结束`图标。", width="800", height="424" %}
 
