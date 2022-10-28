@@ -59,6 +59,12 @@ to be removed from the client if their browser is under heavy storage pressure.
 The Storage Buckets API is implemented from Chromium&nbsp;106 and available behind the
 `#enable-experimental-web-platform-features` flag.
 
+## Using the Storage Buckets API
+
+{% Aside %} This article only teases the main features of the Storage Buckets API. For a full
+reference of what's possible with the API, see the
+[Storage Buckets proposal](https://wicg.github.io/storage-buckets/explainer). {% endAside %}
+
 ### Creating a new storage bucket
 
 A new storage bucket can be created with the `open()` method on the `StorageBucketManager`
@@ -99,38 +105,6 @@ const draftsBucket = await navigator.storageBuckets.open('drafts', {
 });
 ```
 
-#### Checking the persistence status of a storage bucket
-
-To see if an existing storage bucket is persisted, you can call its `persisted()` method.
-
-```js
-await draftsBucket.persisted();
-// `true`
-```
-
-#### Limiting the amount of storage of a storage bucket
-
-By passing in a `quota` in bytes, you can limit the amount of storage a storage a storage bucket can
-consume.
-
-```js
-const logsBucket = await navigator.storageBuckets.open('logs', {
-  quota: 20 * 1024 * 1024, // 20 MB.
-};
-```
-
-#### Creating an expiring storage bucket
-
-By passing in an `expires` timestamp in milliseconds, you can create a storage bucket that will
-automatically expire when the timestamp is reached.
-
-```js
-const twoWeeks = 14 * 24 * 60 * 60 * 1000;
-const newsBucket = await navigator.storageBuckets.open('news', {
-  expires: Date.now() + twoWeeks,
-});
-```
-
 ### Accessing the storage APIs from a storage bucket
 
 Each storage bucket is associated with storage APIs, for example,
@@ -147,47 +121,6 @@ const inboxDb = await new Promise(resolve => {
   request.onsuccess = () => resolve(request.result);
   request.onerror = () => reject(request.error);
 });
-```
-
-### Preventing parallel access to a storage bucket
-
-It's possible to asynchronously acquire a
-[web lock](https://developer.mozilla.org/docs/Web/API/Web_Locks_API) over a storage bucket, hold it
-while work is performed, and then release it.
-
-```js
-inboxBucket.locks.request('cache', (lock) => console.log(lock));
-// Lock {name: 'cache', mode: 'exclusive'}
-```
-
-### Getting a storage bucket's estimate
-
-To obtain a storage estimate for a storage bucket, call its `estimate()` method. This is similar to
-the `StorageManager` interface's
-[`estimate()`](https://developer.mozilla.org/docs/Web/API/StorageManager/estimate) method.
-
-```js
-await inboxBucket.estimate();
-// {quota: 0, usage: 0, usageDetails: {…}}
-```
-
-### Deleting a storage bucket
-
-To delete a storage bucket, call the `StorageBucketManager` interface's `delete()` method with the
-name of the storage bucket.
-
-```js
-await navigator.storageBuckets.delete('inbox');
-```
-
-### Getting a list of all storage buckets
-
-To get a list of all storage buckets for the origin, call the `StorageBucketManager` interface's
-`keys()` method.
-
-```js
-await navigator.storageBuckets.keys();
-// [ "drafts", "inbox" ]
 ```
 
 ## Feedback
