@@ -103,7 +103,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 Chromium 议题: [1344526](https://crbug.com/1344526)
 
 
-## 在`align-content`的CSS flexbox 属性中显示`开始` 和 `结束`图标。 {: #flexbox } 
+## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
 
 在**Styles（风格）**界面中 , `使用在一个CSS 类中的display: flex` 或 `display: inline-flex`的`开始` and `结束`图标来编辑`align-content` 的属性 。 
 
