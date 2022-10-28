@@ -86,7 +86,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 ## 点击 `Enter（回车键）`后开始 DOM 搜索。 {: #search-type } 
 
-您现在可以禁止**Search as you type（输入即搜索** 设置来启动点击<kbd>Enter</kbd>后开始DOM搜索。  
+您现在可以禁止 **Search as you type（输入即搜索** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
 在**Elements（元素）**界面, 使用<kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd>来对搜索栏进行快速切换。 当您在搜索栏中输入一个查询时, DOM数会跳跃至第一个符合条件的元素并将至设置为预设。 
 
