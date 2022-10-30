@@ -40,7 +40,7 @@ Chromium issue: [1178508](https://crbug.com/1178508)
 
 
 <!-- ## Auto-detect XPath and text selectors in the Recorder panel {: #recorder } -->
-## Recorder パネルでXPathとテキストのセレクタの自動検出が可能に {: #recorder }
+## Recorder パネルで XPath とテキストのセレクタ自動検出が可能に {: #recorder }
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
 **Recorder** パネルが XPath とテキストのセレクタをサポートするようになりました。[ユーザーフローの記録を開始](/docs/devtools/recorder/#record)すると、 XPath と要素の最短ユニークテキストがあればレコーダーは自動的にセレクタとして選択します。
