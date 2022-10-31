@@ -29,7 +29,11 @@ status:
 storage:
   en: 'Secure cross-site storage'
 trust-tokens:
-  en: 'Trust Tokens'
+  en: 'Private State Tokens'
+limit-passive-fingerprint:
+  en: 'Limit passive fingerprinting'
+control-browser-features:
+  en: 'Control access to browser features'
 start:
   en: 'Get started'
   ja: 'はじめに'
@@ -83,8 +87,6 @@ proposals:
   en: 'Proposal lifecycle'
 permissions-policy:
   en: 'Permissions Policy'
-permissions-policy-description:
-  en: 'Manage browser access to your page and embedded third-party iframes.'
 feedback:
   en: 'Feedback'
 faq:
