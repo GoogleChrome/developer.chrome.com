@@ -15,7 +15,7 @@ tags:
   - cws
 ---
 
-On the Chrome team, we are constantly amazed by the pace of innovation on the web. Since the launch of the Chrome Web Store, our goal has been to enable the creation of innovative and useful products, and we couldn't do this without a rich community of developers. As the variety of products offered on CWS has evolved over the years, we've received some important feedback regarding how our policies are written and enforced. We agree that we can do better to make our policies clearer to developers and to enforce them in a way that does not come at the expense of good-intentioned developers who provide useful products.
+On the Chrome team, we are constantly amazed by the pace of innovation on the web. Since the launch of the Chrome Web Store (CWS), our goal has been to enable the creation of innovative and useful products, and we couldn't do this without a rich community of developers. As the variety of products offered on CWS has evolved over the years, we've received some important feedback regarding how our policies are written and enforced. We agree that we can do better to make our policies clearer to developers and to enforce them in a way that does not come at the expense of good-intentioned developers who provide useful products.
 
 To that end, we've decided to provide more context on our policies and our general philosophy for the evolution of the Chrome Web Store. Through this update, we hope to better communicate our intent with developers, move to a more adaptive enforcement approach, and provide the information necessary to stay compliant.
 
@@ -23,7 +23,7 @@ First, we are introducing a new section to the Chrome Web Store Developer Policy
 
 Be Safe {: #be-safe .type--h4 }
 
-We strive to make the Chrome Web Store a safe and trusted environment for developers and users. This means that we will remove extensions that pose security threats, access data beyond what is necessary to implement their functions, appear to take advantage of users, encourage harm or hate speech, or otherwise abuse the Store system and network.
+We strive to make the Chrome Web Store a safe and trusted environment for developers and users. This means that we will remove extensions that pose security threats, access data beyond what is necessary to implement their functions, appear to take advantage of users, encourage harm or hate speech, or otherwise abuse the store system and network.
 
 Be Honest {: #be-honest .type--h4 }
 
