@@ -17,12 +17,7 @@
 const authorsData = require('../_data/authorsData.json');
 const {i18n} = require('../_filters/i18n');
 const {Img} = require('../_shortcodes/Img');
-
-const AUTHOR_PLACEHOLDER =
-  'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
-
-const PARTICIPANT_PLACEHOLDER =
-  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
+const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
 
 const EVENT_PLACEHOLDER =
   'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
@@ -105,7 +100,7 @@ const getAuthorData = (authorHandle, locale) => {
   const authorData = authorsData[authorHandle];
 
   return {
-    image: authorData.image ?? AUTHOR_PLACEHOLDER,
+    image: authorData.image ?? defaultAvatarImg,
     title: i18n(`i18n.authors.${authorHandle}.title`, locale),
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
@@ -144,7 +139,7 @@ const processSession = (session, locale) => {
     src:
       session.participants.length === 1
         ? session.participants[0].image
-        : PARTICIPANT_PLACEHOLDER,
+        : chromeImg,
     width: 40,
     height: 40,
     alt: session.title,
