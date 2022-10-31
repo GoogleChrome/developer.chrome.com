@@ -16,7 +16,7 @@
 
 const fs = require('fs/promises');
 const path = require('path');
-const {distPath} = require('./utils');
+const distPath = path.resolve(path.join(__dirname, '/dist'));
 
 const puppeteer = require('puppeteer');
 
