@@ -15,11 +15,11 @@
 
 ### Chrome 107 {: #chrome107 }
 
-* [客制化 DevTools 的键盘快捷键](/zh/blog/new-in-devtools-107/#shortcuts)
+* [客制化开发者工具 （DevTools） 的键盘快捷键](/zh/blog/new-in-devtools-107/#shortcuts)
 * [使用键盘快捷键对光亮与深色主题进行快速切换](/zh/blog/new-in-devtools-107/#toggle-themes)
-* [强标记忆检查器里的 C/C++ 对象](/zh/blog/new-in-devtools-107/#memory)
-* [支持 HAR 导入的完整初始者的资讯](/zh/blog/new-in-devtools-107/#har)
-* [点击 Enter（回车键）后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
+* [标注记忆检查器里的 C/C++ 对象](/zh/blog/new-in-devtools-107/#memory)
+* [支持 HAR 导入的完整启动器的资讯](/zh/blog/new-in-devtools-107/#har)
+* [点击回车键 (Enter) 后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
 * [在 `align-content` 的 CSS flexbox 属性中显示 `start` 和 `end` 图标](/zh/blog/new-in-devtools-107/#flexbox)
 * [其他的更新](/zh/blog/new-in-devtools-107/#misc)
 
