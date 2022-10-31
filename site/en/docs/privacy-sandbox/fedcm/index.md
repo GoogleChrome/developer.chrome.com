@@ -256,8 +256,7 @@ proposal](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html).
 
 ## How can identity providers develop FedCM?
 
-You need a secure context (HTTPS or localhost) in Chrome to use the Federated
-Credential Management API.
+You need a secure context (HTTPS or localhost) in Chrome to use the FedCM.
 
 ### Debug code on Chrome on Android {: #remote-debug-android}
 
@@ -271,13 +270,38 @@ devices](/docs/devtools/remote-debugging/).
 
 ## Use the FedCM API {: #use-api }
 
-You integrate with FedCM by creating [a well-known file, config file and
-endpoints](#idp-config-file) for [accounts list](#accounts-list-endpoint),
-[assertion issuance](#id-assertion-endpoint) and optionally [client
-metadata](#client-metadata-endpoint).
+You integrate with FedCM by creating [a well-known file](#well-known-file),
+[config file and endpoints](#idp-config-file) for [accounts
+list](#accounts-list-endpoint), [assertion issuance](#id-assertion-endpoint) and
+optionally [client metadata](#client-metadata-endpoint).
 
 From there, FedCM exposes JavaScript APIs that RPs can use to [sign
 in](#sign-into-rp) from the IdP.
+
+### Create a well-known file {: #well-known-file }
+
+To prevent [trackers from abusing the
+API](https://github.com/fedidcg/FedCM/issues/230), a well-known file must be
+served from `/.well-known/web-identity` of
+[eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) of the
+IdP.
+
+For example, if an IdP endpoints are served under
+`https://accounts.idp.example/sub/`, they must serve a well-known file at
+`https://idp.example/.well-known/web-identity` as well as [an IdP config
+file](#idp-config-file). Here's an example well-known file content:
+
+```json
+{
+  "provider_urls": ["https://accounts.idp.example/sub/anything.json"]
+}
+```
+
+The JSON file must contain the `provider_urls` property with an array of [IdP
+config file](#idp-config-file) URLs that can be [specified as a path part of
+`configURL` in `navigator.credentials.get` by RPs](#sign-into-rp). The number of
+URL strings in the array is limited to one, but this may change with [your
+feedback](#next-steps) in the future.
 
 ### Create an IdP config file and endpoints {: #idp-config-file }
 
@@ -371,7 +395,7 @@ following properties:
      <td>Branding option which sets the icon object, displayed in the sign-in dialog. The icon object is an array with two parameters:
         <ul>
            <li><code>url</code> (required): URL of the icon image. This does not support SVG images.<li>
-           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution. This number must be greater or equal to 25.</li>
+           <li><code>size</code> (optional): icon dimensions, assumed by the application to be square and single resolution. This number must be greater than or equal to 25.</li>
          </ul>
       </td>
   </tr>
@@ -411,83 +435,9 @@ IdP endpoints:
 If the RP deploys [Content Security Policy
 (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) on the page FedCM is
 called and enforce `connect-src` directive, they must explicitly allow endpoints
-and icon image URLs described in the config file.
+described in the config file.
 
 {% endAside %}
-
-#### Well-known file {: #well-known-file }
-
-To prevent [trackers from abusing the
-API](https://github.com/fedidcg/FedCM/issues/230), an additional well-known file
-must be served from `/.well-known/web-identity` of
-[eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) of the
-IdP.
-
-For example, if an IdP serves [an IdP config file](#idp-config-file) at
-`https://accounts.idp.example/sub/anything.json`, they must also serve a
-well-known file at `https://idp.example/.well-known/web-identity` with the
-following content:
-
-```json
-{
-  "provider_urls": ["https://accounts.idp.example/sub/anything.json"]
-}
-```
-
-The JSON file must contain the `provider_urls` property with an array of URL
-strings that can be [specified as a path part of `configURL` in
-`navigator.credentials.get` by RPs](#sign-into-rp). The number of URL strings
-in the array is limited to one, but this may change with [your
-feedback](#next-steps) in the future.
-
-#### Client metadata endpoint {: #client-metadata-endpoint }
-
-The IdP's client metadata endpoint returns the relying party's metadata such as
-the RP's privacy policy and terms of service. RPs should provide links to their
-privacy policy and terms of service to the IdP in advance. These links are
-displayed in the sign-in dialog when the user hasn't registered with the RP yet.
-
-The browser sends a `GET` request using the `client_id`
-[`navigator.credentials.get`](#sign-into-rp) without cookies. For example:
-
-```http
-GET /metadata.php?client_id=1234 HTTP/1.1
-Host: idp.example
-Referer: https://rp.example/
-Accept: application/json
-Sec-Fetch-Dest: webidentity
-```
-
-The properties for the client metadata endpoint include:
-
-<table class="with-heading-tint with-borders">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tr>
-    <td><code>privacy_policy_url</code> (optional)</td>
-    <td>RP privacy policy URL.</td>
-  </tr>
-  <tr>
-     <td><code>terms_of_service_url</code> (optional)</td>
-     <td>RP terms of service URL.</td>
-  </tr>
-</table>
-
-The browser expects a JSON response from the endpoint:
-
-```json
-{
-  "privacy_policy_url": "https://rp.example/privacy_policy.html",
-  "terms_of_service_url": "https://rp.example/terms_of_service.html",
-}
-```
-
-The returned client metadata is consumed by the browser and will not be
-available to the RP.
 
 #### Accounts list endpoint {: #accounts-list-endpoint }
 
@@ -496,7 +446,7 @@ currently signed in on the IdP. If the IdP supports multiple accounts, this
 endpoint will return all signed in accounts.
 
 The browser sends a `GET` request with cookies, but without a `client_id`
-parameter and the `Referer` header. This effectively prevents the IdP from
+parameter or the `Referer` header. This effectively prevents the IdP from
 learning which RP the user is trying to sign in to. For example:
 
 ```http
@@ -570,6 +520,56 @@ If the user is not signed in, respond with HTTP 401 (Unauthorized).
 The returned accounts list is consumed by the browser and will not be
 available to the RP.
 
+#### Client metadata endpoint {: #client-metadata-endpoint }
+
+The IdP's client metadata endpoint returns the relying party's metadata such as
+the RP's privacy policy and terms of service. RPs should provide links to their
+privacy policy and terms of service to the IdP in advance. These links are
+displayed in the sign-in dialog when the user hasn't registered on the RP with
+the IdP yet.
+
+The browser sends a `GET` request using the `client_id`
+[`navigator.credentials.get`](#sign-into-rp) without cookies. For example:
+
+```http
+GET /metadata.php?client_id=1234 HTTP/1.1
+Host: idp.example
+Referer: https://rp.example/
+Accept: application/json
+Sec-Fetch-Dest: webidentity
+```
+
+The properties for the client metadata endpoint include:
+
+<table class="with-heading-tint with-borders">
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><code>privacy_policy_url</code> (optional)</td>
+    <td>RP privacy policy URL.</td>
+  </tr>
+  <tr>
+     <td><code>terms_of_service_url</code> (optional)</td>
+     <td>RP terms of service URL.</td>
+  </tr>
+</table>
+
+The browser expects a JSON response from the endpoint:
+
+```json
+{
+  "privacy_policy_url": "https://rp.example/privacy_policy.html",
+  "terms_of_service_url": "https://rp.example/terms_of_service.html",
+}
+```
+
+The returned client metadata is consumed by the browser and will not be
+available to the RP.
+
 #### ID assertion endpoint {: #id-assertion-endpoint }
 
 The IdP's ID assertion endpoint returns an assertion for their signed-in user.
@@ -599,7 +599,7 @@ following information:
   </tr>
   <tr>
      <td><code>disclosure_text_shown</code></td>
-     <td>Results in a string of <code>true</code> or <code>false</code> (rather than a boolean). The result is <code>false</code> if the RP's client ID was included in the <code>approved_clients</code> property list and the sign-in dialog displayed both the privacy policy and the terms of service.</td>
+     <td>Results in a string of <code>"true"</code> or <code>"false"</code> (rather than a boolean). The result is <code>"false"</code> if the disclosure text was not shown. This happens when the RP's client ID was included in the <code>approved_clients</code> property list of the response from the <a href="#accounts-list-endpoint">accounts list endpoint</a>.</td>
   </tr>
 </table>
 
@@ -718,7 +718,7 @@ existence of `approved_clients` in the response from [the accounts list
 endpoint](#accounts-list-endpoint). The browser will only display [the RP's
 privacy policy and terms of service](#client-metadata-endpoint) in the dialog if
 `approved_clients` isn't provided or does not include the RP's `clientId` and
-the user hasn't previously signed p for the RP in this browser.
+the user hasn't previously signed up for the RP in this browser.
 
 <figure class="float-right screenshot" style="max-width:300px">
 {% Video
