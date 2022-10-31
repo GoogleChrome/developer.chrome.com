@@ -24,10 +24,6 @@ const launchIcon = '';
 const videoIcon = '';
 const slidesIcon = '';
 
-const i18n = path => {
-  return path;
-};
-
 /**
  * Renders an event card.
  *
@@ -104,7 +100,7 @@ function RenderEventCard(event) {
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
-                      ${i18n('i18n.events.talk_title')}
+                      Talk title
                     </p>
 
                     <p class="gap-bottom-300">${session.title}</p>
@@ -112,7 +108,7 @@ function RenderEventCard(event) {
                     ${Boolean(session.description) &&
                     html`
                       <p class="event-card__sub-title gap-bottom-200">
-                        ${i18n('i18n.events.details')}
+                        Details
                       </p>
 
                       <div class="gap-bottom-300">
@@ -146,7 +142,7 @@ function RenderEventCard(event) {
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
-                      ${i18n('i18n.events.participant_details')}
+                      Participant details
                     </p>
 
                     ${session.description.length > 0 &&
@@ -162,7 +158,7 @@ function RenderEventCard(event) {
                     ${session.participants.length > 1 &&
                     html`
                       <p class="event-card__sub-title gap-bottom-200">
-                        ${i18n('i18n.events.participants')}
+                        Participants
                       </p>
                       <p class="gap-bottom-300">
                         ${participantHTML(session.participants)}
@@ -220,7 +216,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center gap-right-300 decoration-none"
         >
-          ${slidesIcon} ${i18n('i18n.events.slides')}
+          ${slidesIcon} Slides
         </a>
       `
     : '';
@@ -233,7 +229,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center decoration-none"
         >
-          ${videoIcon} ${i18n('i18n.events.video')}
+          ${videoIcon} Video
         </a>
       `
     : '';
