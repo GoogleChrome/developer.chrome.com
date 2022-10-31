@@ -15,7 +15,7 @@
  */
 
 const test = require('ava');
-const {withPage, addPageScript} = require('../../puppeteer');
+const {withPage, addPageScript} = require('../../../../puppeteer');
 const {html} = require('common-tags');
 
 test(
@@ -31,7 +31,7 @@ test(
       </enhanced-select>
     `);
 
-    await addPageScript(page, 'enhanced-select.js');
+    await addPageScript(page, '_enhanced-select.js');
 
     const numOptions = await page.evaluate(() => {
       return document.querySelectorAll('li').length;
@@ -52,7 +52,7 @@ test('enhanced-select: can preset value', withPage, async (t, page) => {
     </enhanced-select>
   `);
 
-  await addPageScript(page, 'enhanced-select.js');
+  await addPageScript(page, '_enhanced-select.js');
 
   const value = await page.evaluate(() => {
     return document.querySelector('enhanced-select').getAttribute('value');
@@ -74,7 +74,7 @@ test(
       </enhanced-select>
     `);
 
-    await addPageScript(page, 'enhanced-select.js');
+    await addPageScript(page, '_enhanced-select.js');
 
     const massSelect = await page.$('enhanced-select li:last-child');
     await massSelect.click();
