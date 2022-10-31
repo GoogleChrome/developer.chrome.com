@@ -60,7 +60,7 @@ Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 
 辨识围绕在一个对象字节中的网络组件记忆体是一个用户痛点，您必须知道对象的体积以及从对象启动的时候开始计算字节数。 
 
-有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离， 参看 [延伸为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
+有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离, 参看 [延伸为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="标注记忆检查器里的C/C++对象。", width="800", height="527" %}
 
@@ -88,13 +88,13 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 您现在可以禁止 ** 即输即搜 （Search as you type） ** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
-在 ** 元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏。 每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
+在 ** 元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏，每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
 
-对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在用户输入时，不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
+对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在用户输入时, 不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
-打开 ** 设置 (Settings) ** > ** 偏好设置 (Preferences) **，禁止 ** 即输即搜 (Search as you type) ** 。更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
+打开 ** 设置 (Settings) ** > ** 偏好设置 (Preferences) ** , 禁止 ** 即输即搜 (Search as you type) ** , 更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type setting.", width="800", height="449" %}
 
@@ -105,7 +105,8 @@ Chromium 议题: [1344526](https://crbug.com/1344526)
 
 ## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
 
-在 ** 样式 (Styles) **边栏中 , 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
+在 ** 样式 (Styles) **边栏中, 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。
+您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="align-content 的 CSS flexbox 属性", width="800", height="424" %}
 
@@ -116,7 +117,8 @@ Chromium 议题: [1139945](https://crbug.com/1139945)
 
  ## 其他的更新 {: #misc } 
 
- 在 ** 控制台 (Console) ** 中显示正确的网页错误计数. 在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。
+ 在 ** 控制台 (Console) ** 中显示正确的网页错误计数。
+ 在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。
 ([1343311](https://crbug.com/1343311)) 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
