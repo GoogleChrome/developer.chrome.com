@@ -6,7 +6,7 @@ subhead: >
 description: >
   A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-10-25
+updated: 2022-10-28
 authors:
   - samdutton
 ---
