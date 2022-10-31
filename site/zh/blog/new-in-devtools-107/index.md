@@ -27,13 +27,13 @@ tags:
 
 <!-- Content starts here -->
 
-## 客制化 DevTools 的键盘快捷键 {: #shortcuts }
+## 客制化 DevTools (开发者工具) 的键盘快捷键 {: #shortcuts }
 
-您现在可以在 DevTools 里客制化您喜爱的键盘快捷键。
+您现在可以在 DevTools (开发者工具) 里客制化您喜爱的键盘快捷键。
 
-在 **Settings（设置）** > **Shortcuts（快捷键）**, 将鼠标悬停在命令上并点击 **编辑** 按钮 (钢笔图示）来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
+在 ** 设置 （Settings）** > ** 快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击 ** 编辑 ** 的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化 DevTools 的键盘快捷键。", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化 开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d061128ff63a97ab2c6c0d2b5e655e6fcbed829c #}
 
@@ -45,7 +45,7 @@ Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 
 <!-- Configure a keyboard shortcut to toggle [light and dark themes](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) conveniently. By default, the action doesn’t map to any keyboard shortcut. -->
 
-您可以设置一个快捷键来快速切换浅色与深色主题。这个行动并没有系统默认快捷键。 
+您可以设置一个快捷键来快速切换浅色与深色主题。开发者工具 （Dev Tools） 没有为这个东走预设任何快捷键。 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="使用键盘快捷键对浅色与深色主题进行快速切换。", width="800", height="576" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4853b34457f43e41ae9cebc7dfc97c0b734f463a #}
@@ -54,15 +54,15 @@ Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
 
 
-## 高亮内存检查器里的 C/C++ 对象 {: #memory } 
+## 标注内存检查器里的 C/C++ 对象 {: #memory } 
 
 <!-- The [Memory Inspector](/docs/devtools/memory-inspector/) highlights all the bytes of a C/C++ memory object. -->
 
-辨识围绕在一个对象字节中的网络组件记忆体是一个用户痛点，您必须知道对象的体积以及从对象初始的时候开始计算字节数。 
+辨识围绕在一个对象字节中的网络组件记忆体是一个用户痛点，您必须知道对象的体积以及从对象启动的时候开始计算字节数。 
 
-有了这个新功能,  它会帮助您指示他们从围绕的记忆体中分离， 参看 [延伸为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
+有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离， 参看 [延伸为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="强标记忆检查器里的C/C++对象。", width="800", height="527" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="标注记忆检查器里的C/C++对象。", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d5f3befb47eaaa373d697b42dec6f179baf9d42c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4e6bdb4321cbc0b783647e855a616096beaabfd #}
@@ -70,13 +70,13 @@ Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 Chromium 议题: [1336568](https://crbug.com/1336568)
 
 
-## 支持 HAR 导入的完整初始者的资讯。{: #har } 
+## 支持 HAR 导入的完整启动器 （Initiator）的讯息。{: #har } 
 
-[HAR import] 的完整 **Initiator（初始者)** 讯息现在可以可见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **Network（网络）** 界面只显示导入时的部分初始者讯息。 
+[HAR import] 的完整 ** 启动器 （Initiator） ** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, ** 网络 （Network）** 界面只显示导入时的部分启动器 （Initiator) 讯息。 
 
-完整的初始者讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
+完整的启动器讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="支持 HAR 导入的完整初始者的资讯。", width="800", height="376" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="支持 HAR 导入的完整启动器的资讯。", width="800", height="376" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3a659b0711f52a2e200395b85f16ed9f266d1571 #}
 
@@ -84,17 +84,17 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 
 
-## 点击 `Enter（回车键）`后开始 DOM 搜索。 {: #search-type } 
+## 点击 ` 回车键 （Enter) `后开始 DOM 搜索。 {: #search-type } 
 
-您现在可以禁止 **Search as you type（输入即搜索** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
+您现在可以禁止 ** 即输即搜 （Search as you type） ** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
-在**元素**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏。 每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
+在 ** 元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏。 每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
 
-对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在您输入时，不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
+对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在用户输入时，不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
-打开 **设置** > **偏好设置**，禁止**即输即搜**。更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
+打开 ** 设置 (Settings) ** > ** 偏好设置 (Preferences) **，禁止 ** 即输即搜 (Search as you type) ** 。更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type setting.", width="800", height="449" %}
 
@@ -105,7 +105,7 @@ Chromium 议题: [1344526](https://crbug.com/1344526)
 
 ## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
 
-在 **样式**边栏中 , 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
+在 ** 样式 (Styles) **边栏中 , 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="align-content 的 CSS flexbox 属性", width="800", height="424" %}
 
@@ -116,7 +116,7 @@ Chromium 议题: [1139945](https://crbug.com/1139945)
 
  ## 其他的更新 {: #misc } 
 
- 在**控制台**中显示正确的错误计数. 之前, 错误计数并没有在清除控制台的讯息后自动更新。
+ 在 ** 控制台 (Console) ** 中显示正确的网页错误计数. 在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。
 ([1343311](https://crbug.com/1343311)) 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
