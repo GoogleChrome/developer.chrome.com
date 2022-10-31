@@ -27,6 +27,8 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
   const total = getTotalItems(container, params);
   const take = params.take || 10;
 
+  if (currentOffset >= total) return;
+
   function removeButton() {
     button.classList.add('display-none');
     button.setAttribute('disabled', '');
