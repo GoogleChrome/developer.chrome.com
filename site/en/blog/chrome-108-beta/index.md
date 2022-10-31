@@ -57,27 +57,40 @@ An event that fires on an element with `content-visibility: auto` when the rende
 
 The use-case for this is to let developers have greater control over when to stop or start rendering in response to the user-agent stopping or starting rendering of the content-visibility subtree. For example, the developer may want to stop React updates in a subtree that is not rendered by the user-agent. Similarly, the developer may want to stop any other script updates (for example, canvas updates) when the user-agent is not rendering the element.
 
-## Federated Credentials Management (was WebID)
+## Web APIs
+
+### Federated Credentials Management (was WebID)
 
 The Federated Credential Management API allows users to bring their federated identity to login to websites in a manner compatible with improvements to browser privacy.
 
-## Media Source Extensions in workers
+### Media Source Extensions in workers
 
 Enables Media Source Extensions (MSE) API usage from DedicatedWorker contexts to enable improved performance of buffering media for playback by an HTMLMediaElement on the main Window context. By creating a MediaSource object on a DedicatedWorker context, an application may then obtain a MediaSourceHandle from it and transfer that handle to the main thread for use in attaching to an HTMLMediaElement. The context that created the MediaSource object may then use it to buffer media. 
 
-## `Sec-CH-Prefers-Reduced-Motion` User Preference Media Features Client Hints Header
+### `Sec-CH-Prefers-Reduced-Motion` User Preference Media Features Client Hints Header
 
 [User Preference Media Features Client Hints Headers](https://web.dev/user-preference-media-features-headers/) defines a set of HTTP Client Hints headers around user preference media features as defined by Media Queries Level 5. If used as Critical Client Hints, these headers allow servers to make smart choices regarding, for example, CSS inlining. `Sec-CH-Prefers-Reduced-Motion` reflects the user's `prefers-reduced-motion` preference. 
 
-## WebTransport BYOB readers
+### WebTransport BYOB readers
 
 Supports BYOB(bring-your-own-buffer) readers for WebTransport to allow reading into a developer-supplied buffer. BYOB readers can minimize buffer copies, and reduce memory allocations. 
 
-## Wildcards in Permissions Policy Origins
+### Wildcards in Permissions Policy Origins
 
 The Permissions Policy specification defines a mechanism that allows developers to selectively enable and disable use of various browser features and APIs. One capability of this mechanism allows features to be enabled only on explicitly enumerated origins (for example, `https://foo.com/`). This mechanism is not flexible enough for the design of some CDNs, which deliver content via an origin that might be hosted on one of several hundred possible subdomains.
 
 Therefore, this feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, `https://*.foo.com/`) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, `https://foo.com/`). This requires that HOST is a registrable domain. This means that `https://*.bar.foo.com/` works but `https://*.com/` won’t (if you want to allow all domains to use the feature, you should just delegate to `*`). 
+
+### Sync methods for AccessHandles in File System Access API
+
+Updates the asynchronous methods `flush()`, `getSize()`, and ` truncate()` in `FileSystemSyncAccessHandle` in the File System Access API to synchronous methods.
+`FileSystemSyncAccessHandle` currently has a mix of sync and async methods, hindering the performance and the usability, especially for applications porting C/C++ to Wasm. This update will bring consistency in the API usage and improve the performance for Wasm-based libraries.
+
+This is a potential breaking change, you can read more in [Breaking change: sync methods for AccessHandles](/blog/sync-methods-for-accesshandles/).
+
+### WebAuthn conditional UI
+
+[Conditional UI](https://web.dev/passkey-form-autofill/) for WebAuthn is supported on Windows 22H2 or later, macOS, and Android P or later. The WebAuthn UI on desktop platforms has also been refreshed.
 
 ## Variable COLRv1 fonts and font feature detection
 
@@ -98,20 +111,11 @@ Using `font-tech()` and `font-format()` together with CSS @supports allows detec
 
 CSS Fonts Level 4 provides additional means of selecting or filtering font resources. The `tech()` function was introduced, which allows passing in a list of font technologies that this respective font blob requires to function. Based on that, the User Agent will select the first suitable resource.
 
-## Android OSK now resizes the visual viewport by default
+## Chrome on Android
+
+### Android OSK now resizes the visual viewport by default
 
 The Android On-Screen Keyboard [resizes the visual viewport by default](/blog/viewport-resize-behavior/) rather than the initial containing block. Authors can opt out of this using the new `interactive-widget` meta-viewport key.
-
-## Sync methods for AccessHandles in File System Access API
-
-Updates the asynchronous methods `flush()`, `getSize()`, and ` truncate()` in `FileSystemSyncAccessHandle` in the File System Access API to synchronous methods.
-`FileSystemSyncAccessHandle` currently has a mix of sync and async methods, hindering the performance and the usability, especially for applications porting C/C++ to Wasm. This update will bring consistency in the API usage and improve the performance for Wasm-based libraries.
-
-This is a potential breaking change, you can read more in [Breaking change: sync methods for AccessHandles](/blog/sync-methods-for-accesshandles/).
-
-## WebAuthn conditional UI
-
-[Conditional UI](https://web.dev/passkey-form-autofill/) for WebAuthn is supported on Windows 22H2 or later, macOS, and Android P or later. The WebAuthn UI on desktop platforms has also been refreshed.
 
 ## Origin trials
 
@@ -124,7 +128,7 @@ The `canmakepayment` service worker event lets the merchant know whether the use
 Find out more in [Update to the CanMakePayment event behavior of the Payment Handler API](/blog/payment-handler-canmakepayment-update/).
 
 
-## Back/forward cache NotRestoredReason API
+### Back/forward cache NotRestoredReason API
 
 The NotRestoredReason API will report the list of reasons why a page is not served from BFcache in a frame tree structure, via the PerformanceNavigationTiming API.
 
@@ -134,29 +138,33 @@ Pages can be blocked from BFcache for different reasons, such as reasons require
 
 This version of Chrome introduces the deprecations and removals listed below. Visit ChromeStatus.com for lists of planned deprecations, current deprecations and previous removals.
 
+### Deprecations
+
 This release of Chrome deprecates one feature.
 
-### Deprecate and remove `window.defaultStatus` and `window.defaultstatus`
+#### Deprecate and remove `window.defaultStatus` and `window.defaultstatus`
 
 These are non-standard APIs that aren't implemented by all browsers and have no effect on browser behavior. This cleans them up, and removes a potential fingerprinting signal.
 
 They were originally used to modify/control the "status bar" text at the bottom of browser windows. However, they have never had any actual effect on Chrome's status bar, and they are not standardized attributes. Gecko has not supported these attributes since version 23; WebKit still supports these attributes. The related `window.status` attribute *is* standardized, but also [must never have an impact on the window status bar](https://html.spec.whatwg.org/multipage/window-object.html#dom-window-status).
 
+### Removals
+
 This release of Chrome removes four features.
 
-### `ImageDecoderInit.premultiplyAlpha`
+#### Remove `ImageDecoderInit.premultiplyAlpha`
 
-The feature has no observable effects in primary use cases, but may constrain implementations in suboptimal ways. See https://github.com/w3c/webcodecs/issues/508 for a more detailed description. Per consensus of WebCodecs spec editors and lack of usage (0.000000339% - 0.00000687% of page loads per use counter in M106)
+The feature has no observable effects in primary use cases, but may constrain implementations in suboptimal ways. See [this issue](https://github.com/w3c/webcodecs/issues/508) for a more detailed description. Per consensus of WebCodecs spec editors and lack of usage (0.000000339% - 0.00000687% of page loads per use counter in M106).
 
-### `navigateEvent.restoreScroll()`
+#### Remove `navigateEvent.restoreScroll()`
 
 `restoreScroll()` is being replaced by `navigateEvent.scroll()`. `scroll()` works identically except that it allows the developer to control scroll timing for non-traverse navigations (`scroll()` works when the scroll is not a restore, hence the name change along with the behavior change). 
 
-### `navigateEvent.transitionWhile()`
+#### Remove `navigateEvent.transitionWhile()`
 
 `transitionWhile()` is being replaced by `navigateEvent.intercept()` due to design flaws reported by developers. intercept() behaves nearly identically to transitionWhile(), but instead of taking a mandatory Promise parameter, it takes an optional handler function that returns a Promise. This allows the browser to control when the handler executes, which is later and more intuitive than for `transitionWhile()`. 
 
-### WebRTC mediaConstraint's `googIPv6`
+#### Remove WebRTC mediaConstraint's `googIPv6`
 
 `"googIPv6: false"` can be used to disable IPv6 support in WebRTC, as in the following example. 
 
