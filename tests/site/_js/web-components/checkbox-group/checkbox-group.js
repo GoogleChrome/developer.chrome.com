@@ -15,7 +15,7 @@
  */
 
 const test = require('ava');
-const {withPage, addPageScript} = require('../../puppeteer');
+const {withPage, addPageScript} = require('../../../../puppeteer');
 const {html} = require('common-tags');
 
 test(
@@ -36,7 +36,7 @@ test(
       </checkbox-group>
     `);
 
-    await addPageScript(page, 'checkbox-group.js');
+    await addPageScript(page, '_checkbox-group.js');
 
     const numRendered = await page.evaluate(() => {
       return document.querySelectorAll('input').length;
@@ -56,7 +56,7 @@ test('checkbox group: can show more', withPage, async (t, page) => {
     </checkbox-group>
   `);
 
-  await addPageScript(page, 'checkbox-group.js');
+  await addPageScript(page, '_checkbox-group.js');
 
   const showMore = await page.$('.checkbox-group__show-more');
   await showMore.click();
@@ -83,7 +83,7 @@ test('checkbox group: can select all', withPage, async (t, page) => {
     </checkbox-group>
   `);
 
-  await addPageScript(page, 'checkbox-group.js');
+  await addPageScript(page, '_checkbox-group.js');
 
   const massSelect = await page.$('.checkbox-group__mass-select');
   await massSelect.click();
@@ -113,7 +113,7 @@ test(
       </checkbox-group>
     `);
 
-    await addPageScript(page, 'checkbox-group.js');
+    await addPageScript(page, '_checkbox-group.js');
 
     const massSelect = await page.$('.checkbox-group__mass-select');
     await massSelect.click();
@@ -134,7 +134,7 @@ test('checkbox group: can deselect all', withPage, async (t, page) => {
     </checkbox-group>
   `);
 
-  await addPageScript(page, 'checkbox-group.js');
+  await addPageScript(page, '_checkbox-group.js');
 
   const massSelect = await page.$('.checkbox-group__mass-select');
 
@@ -156,7 +156,7 @@ test('checkbox group: shows all if show > total', withPage, async (t, page) => {
     </checkbox-group>
   `);
 
-  await addPageScript(page, 'checkbox-group.js');
+  await addPageScript(page, '_checkbox-group.js');
 
   const numRendered = await page.evaluate(() => {
     return document.querySelectorAll('input').length;
@@ -173,7 +173,7 @@ test('checkbox group: i18n works as expected', withPage, async (t, page) => {
     </checkbox-group>
   `);
 
-  await addPageScript(page, 'checkbox-group.js');
+  await addPageScript(page, '_checkbox-group.js');
 
   const buttonText = await page.evaluate(() => {
     return document.querySelector('.checkbox-group__mass-select').innerText;
@@ -195,7 +195,7 @@ test(
       </checkbox-group>
     `);
 
-    await addPageScript(page, 'checkbox-group.js');
+    await addPageScript(page, '_checkbox-group.js');
 
     await page.keyboard.press('Tab');
     await page.keyboard.press('Enter');
@@ -223,7 +223,7 @@ test(
       </checkbox-group>
     `);
 
-    await addPageScript(page, 'checkbox-group.js');
+    await addPageScript(page, '_checkbox-group.js');
 
     await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
