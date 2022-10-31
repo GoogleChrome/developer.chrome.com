@@ -377,6 +377,8 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
 To ignore a script from the **Call Stack** pane:
@@ -386,16 +388,11 @@ To ignore a script from the **Call Stack** pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from [Settings](/docs/devtools/settings/#manage-custom-ignore-list).
+
 ### Ignore a script from Settings {: #settings-ignore-list }
 
-To ignore a single script or pattern of scripts from Settings:
-
-1.  Open [Settings][3].
-2.  Go to the **Ignore List** tab.
-    {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
-3.  Click **Add pattern**.
-4.  Enter the script name or a regex pattern of script names to ignore.
-5.  Click **Add**.
+See **Settings** > **Ignore List** > [Skip scripts based on a custom pattern](/docs/devtools/settings/#custom-ignore-pattern).
 
 ## Run snippets of debug code from any page {: #snippets }
 
