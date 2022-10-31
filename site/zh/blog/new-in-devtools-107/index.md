@@ -33,7 +33,7 @@ tags:
 
 在 ** 设置 （Settings）** > ** 快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击 ** 编辑 ** 的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化 开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d061128ff63a97ab2c6c0d2b5e655e6fcbed829c #}
 
@@ -54,15 +54,15 @@ Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.co
 Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
 
 
-## 标注内存检查器里的 C/C++ 对象 {: #memory } 
+## 高亮内存检查器里的 C/C++ 对象 {: #memory } 
 
 <!-- The [Memory Inspector](/docs/devtools/memory-inspector/) highlights all the bytes of a C/C++ memory object. -->
 
 辨识围绕在一个对象字节中的网络组件记忆体是一个用户痛点，您必须知道对象的体积以及从对象启动的时候开始计算字节数。 
 
-有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离, 参看 [延伸为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
+有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离, 参看 [延伸 - 为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="标注记忆检查器里的C/C++对象。", width="800", height="527" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="高亮记忆检查器里的C/C++对象。", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d5f3befb47eaaa373d697b42dec6f179baf9d42c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4e6bdb4321cbc0b783647e855a616096beaabfd #}
@@ -72,11 +72,11 @@ Chromium 议题: [1336568](https://crbug.com/1336568)
 
 ## 支持 HAR 导入的完整启动器 （Initiator）的讯息。{: #har } 
 
-[HAR import] 的完整 ** 启动器 （Initiator） ** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, ** 网络 （Network）** 界面只显示导入时的部分启动器 （Initiator) 讯息。 
+[HAR import] 的完整 ** 启动器 （Initiator） ** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, ** 网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
 
 完整的启动器讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="支持 HAR 导入的完整启动器的资讯。", width="800", height="376" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="导入 HAR 导入的完整启动器的资讯", width="800", height="376" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3a659b0711f52a2e200395b85f16ed9f266d1571 #}
 
