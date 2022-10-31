@@ -19,7 +19,7 @@ import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
 import {RenderEventCard} from './render-event-card';
-import {loadMore} from './behaviors/load-more';
+import {loadMore} from './load-more';
 import memoize from './utils/memoize';
 import {isPastEvent, sortAsc, sortDesc} from './utils/events';
 
@@ -39,8 +39,9 @@ const getEvents = async () => {
 };
 
 (async function () {
-  //todo:ensure elements exist
   const getMemoizedEvents = memoize(getEvents);
+  const skip = 5;
+  const take = 1;
 
   loadMore(
     document.getElementById('load-upcoming-events'),
@@ -53,6 +54,20 @@ const getEvents = async () => {
         .slice(skip, take + skip)
         .map(event => RenderEventCard(event));
     },
-    {skip: 5, take: 1}
+    {skip, take}
+  );
+
+  loadMore(
+    document.getElementById('load-past-events'),
+    document.getElementById('past-events'),
+    async (skip, take) => {
+      const {pastEvents} = await getMemoizedEvents();
+
+      return pastEvents
+        .sort(sortDesc)
+        .slice(skip, take + skip)
+        .map(event => RenderEventCard(event));
+    },
+    {skip, take}
   );
 })();
