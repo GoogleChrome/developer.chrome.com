@@ -18,14 +18,23 @@ Credential Management API (FedCM).
 
 *  The [FedCM proposal](https://github.com/fedidcg/FedCM) is open for [public
    discussion](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM origin trial](/blog/fedcm-origin-trial) ends in Chrome 107 and FedCM
-   is shipped in Chrome 108.
-*  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
-   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) in Firefox,
-   while the [WebKit team has expressed general
+*  FedCM is shipped in Chrome 108.
+*  FedCM isn't supported in other browsers yet, but Firefox team is
+   [implementing a
+   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066), while the
+   [WebKit team has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
+
+While the feature is already shipped in Chrome, we plan to introduce [a number
+of new features](#use-cases) with more identity providers, relying parties and
+browser vendors. While we hope identity providers will adapt to FedCM, please be
+aware that backward incompatible changes are expected until the API settles
+before Q4 2023.
+
+We expect FedCM to be more stable and reliable in Q4 2023 as it enters general
+availability with other Privacy Sandbox APIs.
 
 ## Why do we need FedCM?
 
@@ -54,11 +63,26 @@ user agent isn't able to differentiate between identity federation and
 tracking, this makes it difficult to determine when these mechanisms are 
 being used to support identity federation
 
-The Federated Credential Management API (FedCM) provides a use case specific
+[The Federated Credential Management API
+(FedCM)](https://fedidcg.github.io/FedCM/) provides a use case specific
 abstraction for federated identity flows on the web. This purpose-built API
-allows the browser to understand the context in which the RP and IdP
-exchange information, inform the user as to the information and privilege
-levels being shared and prevent unintended abuse.
+allows the browser to understand the context in which the relying party (RP) and
+the identity providers (IdP) exchange information, inform the user as to the
+information and authentication assertion being shared and prevent unintended
+abuse. FedCM is a multi-step journey to make identity on the web better, and in
+its first step we are focused on reducing the impact of the third-party cookie
+phase-out on identity federation. FedCM accomplishes that by exposing a browser
+mediated dialog that allows users to choose accounts from IdPs to login to
+websites. With FedCM, IdPs can continue providing their services without third
+party cookies.
+
+<figure class="screenshot">
+  {% Video
+    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/2ZZ58TQMavJfj047XM5I.mov",
+    autoplay="true"
+  %}
+  <figcaption>A user is signing to an RP using FedCM</figcaption>
+</figure>
 
 ### What do we expect will be affected?
 
