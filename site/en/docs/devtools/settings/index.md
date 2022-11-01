@@ -63,16 +63,19 @@ The **Settings** panel has a list of tabs explained in detail in the sections be
 DevTools automatically maps your local sources to network resources using source maps. This way, you can make changes to sources in DevTools and immediately see the effect on the website you host locally and view in Chrome.
 {% endAside %}
 
-The **Workspace** tab lists the following:
+### Customize exclusions {: #workspace-exclusions }
 
-- **Folder exclude pattern** is the default global RegEx pattern that lists common and third-party folders and file types that DevTools excludes from workspaces so you can focus only on your code.
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m6NjzWTH82irjOeSOCGu.png", alt="Folder exclude pattern in the Workspace tab.", width="800", height="471" %}
-  You can manually add new folders or file types to the pattern. Pattern changes take effect after reloading DevTools.
-- Folders you have set up as **Workspaces** and, for each folder, subfolders you manually excluded.
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qtIbAfoPg7C7OlMMygWk.png", alt="A workspace folder with excluded subfolders.", width="800", height="536" %}
-  Changes to files in subfolders listed as excluded don't persist. Excluded subfolders are workplace-specific, not global.
+The **Folder exclude pattern** is the default global RegEx pattern that lists common and third-party folders and file types that DevTools excludes from workspaces so you can focus only on your code.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m6NjzWTH82irjOeSOCGu.png", alt="Folder exclude pattern in the Workspace tab.", width="800", height="471" %}
+You can manually add new folders or file types to the pattern. Pattern changes take effect after reloading DevTools.
 
-To change the default global list of excluded filed, edit the **Folder exclude pattern**.
+To change the default global list of excluded folders and files, edit the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Workspace** > **Folder exclude pattern** textbox.
+
+### Manage Workspaces {: #manage-workspaces }
+
+The **Workspace** tab lists folders you have set up as **Workspaces** and, for each folder, subfolders you manually excluded.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qtIbAfoPg7C7OlMMygWk.png", alt="A workspace folder with excluded subfolders.", width="800", height="536" %}
+Changes to files in subfolders listed as excluded don't persist. Excluded subfolders are workplace-specific, not global.
 
 To add a new **Workspace**:
 
@@ -96,11 +99,11 @@ To enable or disable all ignore listing for the debugger, check or clear {% Img 
 
 With ignore-listing enabled, you can further customize the list of scripts to ignore.
 
-### Skip code in Extensions {: #skip-extensions }
+### Ignore Chrome Extensions code  {: #skip-extensions }
 
 To make [the debugger skip code from Chrome Extensions](/docs/devtools/javascript/ignore-chrome-extension-scripts/), check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Ignore List** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Add content scripts to ignore list**.
 
-### Skip known third-party scripts {: #skip-third-party }
+### Ignore known third-party scripts {: #skip-third-party }
 
 To make the debugger skip known third-party scripts, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Ignore List** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**.
 
@@ -110,7 +113,7 @@ DevTools adds third-party scripts to the ignore list based on the `x_google_igno
 As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](http://localhost:8080/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 {% endAside %}
 
-### Skip scripts based on a custom pattern {: #custom-ignore-pattern }
+### Ignore scripts based on a custom pattern {: #custom-ignore-pattern }
 
 To ignore a single script or a custom pattern of scripts:
 
@@ -132,6 +135,8 @@ To edit or remove a script or a pattern of script names, click {% Img src="image
 
 The **Devices** tab contains a list of devices and their dimensions. You can select these devices from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
+### Add a device to the Dimensions list {: #add-device }
+
 To add a device to the list:
 
 1. [Open Settings][1].
@@ -139,7 +144,12 @@ To add a device to the list:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/81OxvjyGhfLMe1UZFJQX.png", alt="A list of enabled devices in the Devices tab.", width="800", height="606" %}
 
-1. If you don't see a device you want to test, click **Add custom device**.
+### Add a custom device {: #add-custom-device }
+
+If you don't see a device you want to test, add a custom one:
+
+1. [Open Settings][1].
+1. In the **Device** tab, click **Add custom device**.
 1. Specify the device details, for example, as shown on the screenshot:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/saf99v91L29TNeFEAKev.png", alt="Pixel 7 Pro device details.", width="800", height="1039" %}
@@ -148,7 +158,7 @@ To add a device to the list:
    For more information on what to specify, see [User-Agent Client Hints](https://web.dev/user-agent-client-hints/).
    {% endAside %}
 
-1. Click **Add**. Your device is enabled by default and you can select it from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
+1. Click **Save**. Your device is enabled by default and you can select it from the **Dimentions** drop-down list in [device mode](/docs/devtools/device-mode/#device).
 
 To edit or remove a custom device you added, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
@@ -180,13 +190,8 @@ To add a custom preset:
 
 1. [Open Settings][1].
 1. In the **Locations** tab, click **Add location**.
-1. Specify the following values for the new entry:
-   {% Aside 'gotchas' %}
-   To copy latitude and longitude, right-click a city name on [Google Maps](https://www.google.co.uk/maps/place/New+York,+NY,+USA/).
-   {% endAside %}
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AMgkP56ZekXmsK64VkS7.png", alt="New York coordinates on Google Maps.", width="400", height="351" %}
-
-   - **Location name**: for example, `New York`.
+1. Specify the following values for the new entry. For example, let's add New York as a new location.
+   - **Location name**: `New York`.
    - **Latitude**: `40.72403285608484`.
    - **Longitude**: `-73.94397543423175`.
    - **Timezone ID**: `America/New_York` as defined in the [latest release of the Time Zone Database](https://data.iana.org/time-zones/releases/).
@@ -194,17 +199,28 @@ To add a custom preset:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/poZ1KfliVyP8Np7bbZmV.png", alt="Specifying values for a new entry in the Locations list.", width="800", height="526" %}
 
+   {% Aside 'gotchas' %}
+   To copy latitude and longitude, right-click a city name on [Google Maps](https://www.google.co.uk/maps/place/New+York,+NY,+USA/).
+   {% endAside %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AMgkP56ZekXmsK64VkS7.png", alt="New York coordinates on Google Maps.", width="400", height="351" %}
+
 1. Click **Save**. Now you can select this preset from the [**Sensors** > **Location** drop-down list](/docs/devtools/device-mode/geolocation/#override).
 
 To edit or remove an existing preset, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YxQ6ggkbUKxxxqHiaUz4.svg", alt="Delete.", width="22", height="22" %} buttons that appear on hover.
 
 ## Shortcuts
 
+The **Shortcuts** tab lists default shortcuts you can use while focused in DevTools to speed up your workflow. You can customize shortcuts to your preferences.
+
+For a full list of default shortcuts, see [Keyboard shortcuts](/docs/devtools/shortcuts/).
+
 {% Aside 'gotchas' %}
 You can use the Visual Studio Code alternatives to default shortcuts. Select `Visual Studio Code` from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Shortcuts** > **Match shortcuts from preset** drop-down list.
 {% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bi4B0or5wylM4jit6DfD.png", alt="Visual Studio Code shortcut alternatives.", width="800", height="416" %}
+
+### Customize shortcuts {: #customize-shortcuts }
 
 To customize keyboard shortcuts:
 
@@ -219,15 +235,25 @@ To customize keyboard shortcuts:
 
 1. Record a new combination and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7l4ffLtFrht87gVnT0IZ.svg", alt="Check.", width="24", height="24" %} **Check** button.
 
+   {% Aside 'gotchas' %}
+   To add an additional synonymous combination, click **Add a shortcut** and record another chord in a similar way.
+   {% endAside %}
+
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3VBJ5QKkUCG1H2FX8f78.png", alt="Save the new shortcut.", width="800", height="565" %}
 
 To revert or delete changes, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tby5LrQzKTKzHia2fEBO.svg", alt="Back.", width="24", height="24" %} **Back** or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w9Vbnqf9cVz7YeqMkAi0.svg", alt="Delete.", width="24", height="24" %} **Delete**.
 
-By default, DevTools doesn't assign shortcuts to all available actions. For example, to toggle [light and dark theme preference](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) with a keystroke, set your own shortcut in the **Shortcuts** > **Rendering** section as described above.
+### Add shortcuts to unassigned actions {: #assign-shortcuts }
+
+By default, DevTools doesn't assign shortcuts to all available actions.
+
+For example, to toggle [light and dark theme preference](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) with a keystroke, in the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %}  **Settings** > **Shortcuts** > **Rendering** section, set your own shortcut as described in [Customize shortcuts](#customize-shortcuts).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="Toggle light and dark themes with keyboard shortcut.", width="800", height="576" %}
 
-To bring back defaults, click **Restore default shortcuts** in the bottom-right corner of the **Settings** > **Shortcuts** tab.
+### Restore default shortcuts {: #restore-defaults }
+
+To bring back defaults, click **Restore default shortcuts** in the bottom-right corner of the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %}  **Settings** > **Shortcuts** tab.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nQK0bSoeOzjAzWnmC3AY.png", alt="Restore default shortcuts.", width="800", height="463" %}
 
