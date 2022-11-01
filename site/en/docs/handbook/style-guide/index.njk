@@ -453,6 +453,18 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
   </div>
 
+  <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
+    <label><input type="checkbox" /> Option 1</label>
+    <label><input type="checkbox" /> Option 2</label>
+    <label><input type="checkbox" disabled /> Option 3</label>
+    <label><input type="checkbox" /> Option 4</label>
+    <label><input type="checkbox" /> Option 5</label>
+    <label><input type="checkbox" /> Option 6</label>
+    <label><input type="checkbox" /> Option 7</label>
+    <label><input type="checkbox" /> Option 8</label>
+    <label><input type="checkbox" /> Option 9</label>
+  </checkbox-group>
+
   <div class="pad-500" style="background:rgba(0,0,0,0.48); height: 500px;">
     <div class="filter-sheet display-flex direction-column">
       <p class="filter-sheet__title type--xsmall weight-medium case-upper">
@@ -510,4 +522,8 @@ line-height: 160%;
 
 {% block chromescss %}
   <link rel="stylesheet" href="/css/styleguide-main.css">
+{% endblock %}
+
+{% block chromescripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
 {% endblock %}
