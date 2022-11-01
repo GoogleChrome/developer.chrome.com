@@ -20,7 +20,8 @@ for a high-level explanation of the proposal.
 
 This post is written for developers as a technical reference for the most
 recent iteration of the experimental FLEDGE API. A [demo](#demo) of a basic
-FLEDGE deployment is available.
+FLEDGE deployment is available, as are
+[API references for ad buyers and sellers](#api-reference).
 
 ## What is FLEDGE? {: #what}
 
@@ -151,6 +152,10 @@ and status are discussed in the regular WICG meetings.
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing for FLEDGE and other Privacy Sandbox proposals.
 
 {% endAside %}
+
+### FLEDGE API references {: #api-reference }
+
+{% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
 
 ## Supported features
 
