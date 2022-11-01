@@ -22,7 +22,7 @@ Credential Management API (FedCM).
 *  FedCM isn't supported in other browsers yet, but Firefox team is
    [implementing a
    prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066), while the
-   [WebKit team has expressed general
+   [Apple has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
@@ -277,7 +277,7 @@ Then, there are a few things we know need to be done and are actively exploring
 
 Finally, there are things we believe need to be done (based on feedback from
 [Mozila](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
-[Webkit](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
+[Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
 and [TAG
 reviewers](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549))
 but don’t quite yet know how:
@@ -295,11 +295,11 @@ but don’t quite yet know how:
   we’d like to continue exploring  mechanisms to offer better privacy guarantees
   (e.g. IdP blindness, directed identifiers, etc).
 * **Relationship with WebAuthn**: As suggested by
-  [Webkit](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html),
+  [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html),
   we are super excited to see the progress on passkeys and to work on providing
   a coherent and cohesive experience between FedCM, Passwords, WebAuthn and
   WebOTP.
-* **Login Status**: As Webkit suggested with the Privacy CG’s [Login Status
+* **Login Status**: As Apple suggested with the Privacy CG’s [Login Status
   API](https://github.com/privacycg/is-logged-in), we share the intuition that
   the user’s login status is a useful bit of information that can help browsers
   make informed decisions and are excited to see what opportunities arise from
