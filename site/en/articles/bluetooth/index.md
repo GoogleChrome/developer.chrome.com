@@ -535,7 +535,7 @@ and let us know where and how you are using it.
 - Spec Issues: [https://github.com/WebBluetoothCG/web-bluetooth/issues](https://github.com/WebBluetoothCG/web-bluetooth/issues)
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
 
-{% YouTube 'id=_BUwOBdLjzQ' %}
+{% YouTube id='_BUwOBdLjzQ' %}
 
 ## Acknowledgements
 
