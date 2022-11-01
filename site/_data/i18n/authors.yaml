@@ -368,6 +368,11 @@ afuchs:
     en: 'Andy Fuchs'
   description:
     en: 'Technical Writer, Chrome Extensions'
+patrickbrosset:
+  title:
+    en: 'Patrick Brosset'
+  description:
+    en: 'Our latest news, updates, and stories by Patrick Brosset'
 dotproto:
   title:
     en: 'Simeon Vincent'
