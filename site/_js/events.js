@@ -29,8 +29,6 @@ import slidesIcon from '../_includes/icons/slides.svg';
 import videoIcon from '../_includes/icons/video.svg';
 import launchIcon from '../_includes/icons/launch.svg';
 
-const take = 10;
-
 const icons = {
   calendarIcon,
   pinIcon,
@@ -61,7 +59,7 @@ async function initLoadMore(button, container, fetchItems) {
 
   const skip = container.querySelectorAll('enhanced-event-card').length;
 
-  loadMore(button, container, fetchItems, {skip, take});
+  loadMore(button, container, fetchItems, {skip, take: 10});
 }
 
 initLoadMore(
