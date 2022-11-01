@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Chrome Apps"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 To ensure a great user experience, Chrome Apps distributed through the Chrome Web Store must follow the additional quality guidelines listed below. The guidelines in this section apply only to Chrome Apps.

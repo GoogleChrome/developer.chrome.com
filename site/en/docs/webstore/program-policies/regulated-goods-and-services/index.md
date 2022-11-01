@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Regulated Goods and Services"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. Don't engage in or promote unlawful activities in your product, such as rape, illegal sex work, or the sale of prescription drugs without a prescription. We will remove content which promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm to those involved.

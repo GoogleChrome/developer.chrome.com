@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Handling Requirements"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. If your product is associated with a security vulnerability that could be exploited to compromise another application, service, browser, or system, we may remove your product from the Chrome Web Store and take other measures to protect users. In such an event, you may be contacted about remediation steps required to restore the product. Chrome extension security vulnerabilities can be reported [here][report].

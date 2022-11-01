@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Quality Guidelines"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. An extension must have a single purpose that is narrow and easy to understand. Do not create an extension that requires users to accept bundles of unrelated functionality. If two pieces of functionality are clearly separate, they should be put into two different extensions, and users should have the ability to install and uninstall them separately. Common violations include:

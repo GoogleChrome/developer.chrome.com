@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Limited Use"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. This policy establishes the Chrome Web Store's minimum user data privacy requirements; you or your Product must comply with applicable laws.

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Disclosure Requirements"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. You must be transparent in how you handle user data (e.g., information provided by a user or collected about a user or a user's use of the Product or Chrome Browser), including by disclosing the collection, use, and sharing of the data.

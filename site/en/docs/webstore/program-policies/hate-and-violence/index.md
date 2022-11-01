@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Hate Speech and Violent Behavior"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. Depictions of gratuitous violence are not allowed. Products should not contain materials that threaten, harass, or bully other users.

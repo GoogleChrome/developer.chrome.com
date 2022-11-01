@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Spam and Abuse"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. We don't allow any developer, related developer accounts, or their affiliates to submit multiple extensions that provide duplicate experiences or functionality on the Chrome Web Store. Extensions should provide value to users through the creation of unique content or services.

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Mature & Sexually Explicit Material"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or content that drives traffic to commercial pornography sites.

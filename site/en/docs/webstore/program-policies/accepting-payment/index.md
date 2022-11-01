@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Accepting Payment From Users"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 If you collect sensitive personal information through your Product for sales, you must follow these requirements:

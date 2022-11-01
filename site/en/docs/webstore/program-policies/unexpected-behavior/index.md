@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Misleading or Unexpected Behavior"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. We do not allow products that deceive or mislead users, including in the content, title, description, or screenshots. If any of your product's content, title, icon, description, or screenshots contains false or misleading information, we may remove it.

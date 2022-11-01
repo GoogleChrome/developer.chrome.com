@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Ads"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. Ads are considered part of your Product for purposes of content review and compliance with developer terms, and therefore must comply with the above content policies.

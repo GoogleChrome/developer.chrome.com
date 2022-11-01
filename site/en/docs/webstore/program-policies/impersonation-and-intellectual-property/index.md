@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Impersonation & Intellectual Property"
-date: 2022-07-21
+date: 2022-11-01
 ---
 
 1. Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed by, or produced by another company or organization, if that is not the case.
