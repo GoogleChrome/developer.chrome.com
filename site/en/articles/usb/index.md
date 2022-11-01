@@ -410,7 +410,7 @@ Thanks to [Joe Medley] for reviewing this article.
 [TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [feature policy]: https://developer.mozilla.org/docs/Web/HTTP/Feature_Policy
 [Promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[Promises tutorial]: /promises
+[Promises tutorial]: https://web.dev/promises
 [Arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 [List of USB ID's]: http://www.linux-usb.org/usb.ids
 [device USB Descriptor]: http://www.beyondlogic.org/usbnutshell/usb5.shtml#DeviceDescriptors
