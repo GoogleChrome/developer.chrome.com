@@ -29,6 +29,8 @@ import slidesIcon from '../_includes/icons/slides.svg';
 import videoIcon from '../_includes/icons/video.svg';
 import launchIcon from '../_includes/icons/launch.svg';
 
+const take = 10;
+
 const icons = {
   calendarIcon,
   pinIcon,
@@ -52,36 +54,38 @@ const getEvents = async () => {
   };
 };
 
-(async function () {
-  const getMemoizedEvents = memoize(getEvents);
-  const skip = 5;
-  const take = 1;
+const getMemoizedEvents = memoize(getEvents);
 
-  loadMore(
-    document.getElementById('load-upcoming-events'),
-    document.getElementById('upcoming-events'),
-    async (skip, take) => {
-      const {upcomingEvents} = await getMemoizedEvents();
+async function initLoadMore(button, container, fetchItems) {
+  if (button === null || container === null) return;
 
-      return upcomingEvents
-        .sort(sortAsc)
-        .slice(skip, take + skip)
-        .map(event => RenderEventCard(event, icons));
-    },
-    {skip, take}
-  );
+  const skip = container.querySelectorAll('enhanced-event-card').length;
 
-  loadMore(
-    document.getElementById('load-past-events'),
-    document.getElementById('past-events'),
-    async (skip, take) => {
-      const {pastEvents} = await getMemoizedEvents();
+  loadMore(button, container, fetchItems, {skip, take});
+}
 
-      return pastEvents
-        .sort(sortDesc)
-        .slice(skip, take + skip)
-        .map(event => RenderEventCard(event, icons));
-    },
-    {skip, take}
-  );
-})();
+initLoadMore(
+  document.getElementById('load-upcoming-events'),
+  document.getElementById('upcoming-events'),
+  async (skip, take) => {
+    const {upcomingEvents} = await getMemoizedEvents();
+
+    return upcomingEvents
+      .sort(sortAsc)
+      .slice(skip, take + skip)
+      .map(event => RenderEventCard(event, icons));
+  }
+);
+
+initLoadMore(
+  document.getElementById('load-past-events'),
+  document.getElementById('past-events'),
+  async (skip, take) => {
+    const {pastEvents} = await getMemoizedEvents();
+
+    return pastEvents
+      .sort(sortDesc)
+      .slice(skip, take + skip)
+      .map(event => RenderEventCard(event, icons));
+  }
+);
