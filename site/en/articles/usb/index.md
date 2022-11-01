@@ -1,4 +1,4 @@
---
+---
 layout: 'layouts/blog-post.njk'
 title: Access USB Devices on the Web
 subhead: >
