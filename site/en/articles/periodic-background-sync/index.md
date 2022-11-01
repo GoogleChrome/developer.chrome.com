@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Richer offline experiences with the Periodic Background Sync API
 subhead:
   Sync your web app's data in the background for a more app-like experience

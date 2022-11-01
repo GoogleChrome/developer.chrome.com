@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Communicating with Bluetooth devices over JavaScript
 subhead: >
   The Web Bluetooth API allows websites to communicate with Bluetooth devices.

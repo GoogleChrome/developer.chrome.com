@@ -1,4 +1,5 @@
 --
+layout: 'layouts/blog-post.njk'
 title: Access USB Devices on the Web
 subhead: >
   The WebUSB API makes USB safer and easier to use by bringing it to the Web.
