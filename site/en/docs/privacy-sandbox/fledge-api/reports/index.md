@@ -150,3 +150,5 @@ methods will still be available but do nothing.
 ## All FLEDGE API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
+
+{% Partial 'privacy-sandbox/fledge-api-next.njk' %}

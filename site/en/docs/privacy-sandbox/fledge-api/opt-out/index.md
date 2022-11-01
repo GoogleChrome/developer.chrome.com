@@ -16,12 +16,14 @@ You can block access to the FLEDGE API, as a [site owner](#opt-out-site) or as a
 ## Site owners {: #opt-out-site}
 
 FLEDGE will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
-to allow FLEDGE functionality to be available. This will help ensure that arbitrary third parties can't use the API without a site's
-knowledge. However, to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
+to allow FLEDGE functionality to be available. This will help ensure that
+arbitrary third parties can't use the API without a site's knowledge. However,
+to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
 this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
 
 Sites that would like to explicitly disable FLEDGE functionality during the
-testing period can use the relevant Permissions Policy to block access. There are two FLEDGE permissions policies that can be set independently:
+testing period can use the relevant Permissions Policy to block access. There
+are two FLEDGE permissions policies that can be set independently:
 
 * `join-ad-interest-group` enables/disables functionality to add a browser to
   interest groups
@@ -41,7 +43,8 @@ attribute to an iframe element:
 <iframe src="https://example.com" allow="join-ad-interest-group 'none'; run-ad-auction 'none'"></iframe>
 ```
 
-The [Proposed First FLEDGE Origin Trial Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy) section provides more detail.
+The [Proposed First FLEDGE Origin Trial Permissions-Policy](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy)
+section provides more detail.
 
 ## User opt-out {: #opt-out-user}
 
@@ -54,4 +57,6 @@ using any of the following mechanisms:
 * Set **Cookies and other site data** to either "Block third-party cookies" or "Block all cookies" from `chrome://settings/cookies`.
 * Use Incognito mode.
 
-The FLEDGE explainer provides [more detail about API design elements](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements) and describes how the API seeks to meet [privacy goals](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=privacy%20goal).
+The FLEDGE explainer provides [more detail about API design elements](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements)
+and describes how the API seeks to meet
+[privacy goals](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=privacy%20goal).

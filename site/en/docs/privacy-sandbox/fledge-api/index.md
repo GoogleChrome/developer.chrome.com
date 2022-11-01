@@ -34,14 +34,13 @@ the browser, to choose relevant ads for websites the user has previously visited
 FLEDGE is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-The diagram below provides an overview of the FLEDGE lifecycle:
-<a href="https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png?auto=format&w=1600"
-  target="_blank">view a larger version</a>.
-
 <figure class="w-figure">
-  {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png", alt="Illustration providing
-  an overview of each stage of the FLEDGE lifecycle",
-  width="800", height="366" %}
+  {% Img
+    src="image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png",
+    alt="An overview of each stage of the FLEDGE lifecycle.",
+    width="800", height="366"
+    %}
+  <figcaption>This diagram provides an overview of the FLEDGE lifecycle. <a href="https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png?auto=format&w=1600" target="_blank">View a larger version</a>.</a>
 </figure>
 
 ## Try FLEDGE {: #try-fledge}
@@ -153,10 +152,6 @@ The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides imp
 
 {% endAside %}
 
-### FLEDGE API references {: #api-reference }
-
-{% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
-
 ## Supported features
 
 FLEDGE behind feature flags in Chromium is a first experiment to test the
@@ -227,7 +222,7 @@ privacy, there is no way to check for this programmatically.
 
 {% endAside %}
 
-### All available API references
+### All available API references {: #api-reference }
 
 This document serves as an overview of the FLEDGE API. If you're looking for specific API references:
 

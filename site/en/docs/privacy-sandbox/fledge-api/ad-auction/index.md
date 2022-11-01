@@ -150,12 +150,14 @@ for rendering: the publisher page cannot inspect the winning ad.
 
 {% Aside %}
 The origin of the script with [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge/interest-groups) 
-must match the interest group owner's origin, so `joinAdInterestGroup()` will need to be called from an
-iframe (for example, from a DSP) unless the origin of the interest group owner
-matches the origin of the current document (for example, a website with its own
-interest groups).
+must match the interest group owner's origin, so `joinAdInterestGroup()` will
+need to be called from an iframe (for example, from a DSP) unless the origin of
+the interest group owner matches the origin of the current document (for
+example, a website with its own interest groups).
 
-[`runAdAuction`](/docs/privacy-sandbox/fledge/ad-auction) doesn't have the same requirements, so using a `<script>` tag is probably far more performant than a cross-origin iframe.
+[`runAdAuction`](/docs/privacy-sandbox/fledge/ad-auction) doesn't have the same
+requirements, so using a `<script>` tag is probably far more performant than a
+cross-origin iframe.
 {% endAside %}
 
 The `decisionLogicUrl` script considers each individual ad, along with its
@@ -255,7 +257,9 @@ desirability score.
 ### `decisionLogicUrl`
 
 The `decisionLogicUrl` is a property of the auction configuration object,
-passed to `runAdAuction()`. This URL must include a script for the [`scoreAd()`](#scoread) function. This logic is run once for each ad to determine its desirability.
+passed to `runAdAuction()`. This URL must include a script for the
+[`scoreAd()`](#scoread) function. This logic is run once for each ad to
+determine its desirability.
 
 ```javascript
 scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {

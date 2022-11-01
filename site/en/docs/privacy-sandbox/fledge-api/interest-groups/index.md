@@ -20,12 +20,15 @@ Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
 cycle of FLEDGE, and refer to the FLEDGE explainer for an in-depth proposal of
 how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 
-Not a developer? Refer to the [FLEDGE API overview](/docs/privacy-sandbox/fledge).
+Not a developer? Refer to the
+[FLEDGE API overview](/docs/privacy-sandbox/fledge).
 
 ## FLEDGE interest groups
 
 A FLEDGE interest group represents a group of people with a common interest,
-corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing) list. Every FLEDGE interest group has an [owner](/docs/privacy-sandbox/fledge#interest-group-types).
+corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing)
+list. Every FLEDGE interest group has an
+[owner](/docs/privacy-sandbox/fledge#interest-group-types).
 
 Interest group owners act as the buyer in the FLEDGE ad auction. Interest group
 membership is stored by the browser, on the user's device, and is not shared
@@ -327,7 +330,8 @@ function.
 
 The script at `biddingLogicUrl` provided by a buyer must include a `generateBid()` function.
 
-This function is called once for each candidate ad. [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/)
+This function is called once for each candidate ad.
+[`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/)
 individually checks each ad, along with its associated bid and metadata, then
 assigns the ad a numerical desirability score.
 
