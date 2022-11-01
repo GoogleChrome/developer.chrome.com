@@ -402,28 +402,28 @@ and let us know where and how you're using it.
 Thanks to [Joe Medley] for reviewing this article.
 
 [contain malfunctioning websites]: https://www.youtube.com/watch?v=29e0CtgXZSI
-[USB in a NutShell]: http://www.beyondlogic.org/usbnutshell
-[official USB specifications]: https://www.usb.org/
-[WebUSB API]: https://wicg.github.io/webusb/
+[usb in a nutshell]: http://www.beyondlogic.org/usbnutshell
+[official usb specifications]: https://www.usb.org/
+[webusb api]: https://wicg.github.io/webusb/
 [origin trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [secure contexts]: https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro
-[TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security
+[tls]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [feature policy]: https://developer.mozilla.org/docs/Web/HTTP/Feature_Policy
-[Promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[Promises tutorial]: https://web.dev/promises
-[Arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-[List of USB ID's]: http://www.linux-usb.org/usb.ids
-[device USB Descriptor]: http://www.beyondlogic.org/usbnutshell/usb5.shtml#DeviceDescriptors
-[support for WebUSB]: https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
+[promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[promises tutorial]: https://web.dev/promises
+[arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+[list of usb id's]: http://www.linux-usb.org/usb.ids
+[device usb descriptor]: http://www.beyondlogic.org/usbnutshell/usb5.shtml#DeviceDescriptors
+[support for webusb]: https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
 [https://github.com/webusb/arduino]: https://github.com/webusb/arduino
 [sketches]: http://www.arduino.cc/en/Tutorial/Sketch
-[WebUSB Arduino library]: https://github.com/webusb/arduino/tree/gh-pages/library/WebUSB
-[landing page URL]: https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
-[DataView]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView
-[WebLight project]: https://github.com/sowbug/weblight
+[webusb arduino library]: https://github.com/webusb/arduino/tree/gh-pages/library/WebUSB
+[landing page url]: https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
+[dataview]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView
+[weblight project]: https://github.com/sowbug/weblight
 [udev rule]: https://www.freedesktop.org/software/systemd/man/udev.html
 [member]: https://wiki.debian.org/SystemGroups
-[Shared Worker]: https://developer.mozilla.org/docs/Web/API/SharedWorker
-[Service Worker]: https://jakearchibald.github.io/isserviceworkerready/resources.html
+[shared worker]: https://developer.mozilla.org/docs/Web/API/SharedWorker
+[service worker]: https://jakearchibald.github.io/isserviceworkerready/resources.html
 [#webusb]: https://twitter.com/search?q=%23webusb&src=typed_query&f=live
-[Joe Medley]: https://github.com/jpmedley
+[joe medley]: https://github.com/jpmedley
