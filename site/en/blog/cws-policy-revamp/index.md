@@ -7,7 +7,7 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - rebeccasoares
-date: 2022-10-28
+date: 2022-11-01
 hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/Z3DIUjSZNKZzmdYcNL6m.jpg'
 alt: 'Photo by Sara Cohen on Unsplash'
 tags:
