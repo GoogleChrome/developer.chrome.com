@@ -151,7 +151,7 @@ See [Give users options][docs-options] to learn more.
 
 ### Additional HTML files {: #html-files}
 
-An extension can also have other HTML files that are not declared in the manifest. All extension HTML files can access the [Chrome APIs][section-apis] and can use script tags include Javascript files, but cannot declare inline JavaScript.
+An extension can also have other HTML files that are not declared in the manifest. All extension HTML files can access the [Chrome APIs][section-apis] and can use script tags including Javascript files, but cannot declare inline JavaScript.
 
 You can open these pages using the web api [window.open()][mdn-window-open], the Chrome APIs
 [windows.create()][api-window-create], or [tabs.create()][api-create-tab].
