@@ -46,7 +46,13 @@ const launchIcon = fs.readFileSync(
  * @returns {string}
  */
 function EventCard(event) {
-  return RenderEventCard(event);
+  return RenderEventCard(event, {
+    calendarIcon,
+    pinIcon,
+    slidesIcon,
+    videoIcon,
+    launchIcon,
+  });
 }
 
 module.exports = {EventCard};

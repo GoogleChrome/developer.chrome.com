@@ -18,19 +18,14 @@ const {html} = require('common-tags');
 const {formatDateShort} = require('../_data/lib/date');
 const {isPastEvent} = require('./utils/events');
 
-const pinIcon = '';
-const calendarIcon = '';
-const launchIcon = '';
-const videoIcon = '';
-const slidesIcon = '';
-
 /**
  * Renders an event card.
  *
  * @param {object} event
- * @returns {string}
+ * @param {object} icons
+ * @returns string
  */
-function RenderEventCard(event) {
+function RenderEventCard(event, icons) {
   const buttonLabel = isPastEvent(event) ? 'See details' : "See who's joining";
 
   return html`
@@ -64,12 +59,12 @@ function RenderEventCard(event) {
 
                 <div class="event-card__meta display-flex gap-bottom-400">
                   <p class="display-flex align-center gap-right-500">
-                      ${pinIcon}
+                      ${icons.pinIcon}
                       ${event.location}
                   </p>
 
                   <p class="display-flex align-center">
-                      ${calendarIcon}
+                      ${icons.calendarIcon}
                       ${formatDateShort(event.date)}
                   </p>
                 </div>
@@ -96,7 +91,7 @@ function RenderEventCard(event) {
                         ${session.image} ${session.speaker.title}
                       </span>
 
-                      ${launchIcon}
+                      ${icons.launchIcon}
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
@@ -119,7 +114,7 @@ function RenderEventCard(event) {
                         </p>
                       </div>
                     `}
-                    ${linksHtml(session)}
+                    ${linksHtml(session, icons)}
                     ${session.topics.map(topic => topicHtml(topic))}
                   `)
                 )}
@@ -138,7 +133,7 @@ function RenderEventCard(event) {
                         ${session.image} ${session.title}
                       </span>
 
-                      ${launchIcon}
+                      ${icons.launchIcon}
                     </a>
 
                     <p class="event-card__sub-title gap-bottom-200">
@@ -173,6 +168,10 @@ function RenderEventCard(event) {
   `;
 }
 
+/**
+ * @param {object[]} participants
+ * @returns {string}
+ */
 const participantHTML = participants => {
   const processed = participants.map(participant => {
     if (participant.twitter) {
@@ -203,7 +202,13 @@ const participantHTML = participants => {
   return processed.join(', ');
 };
 
-const linksHtml = session => {
+/**
+ *
+ * @param {object} session
+ * @param {object} icons
+ * @returns {string}
+ */
+const linksHtml = (session, icons) => {
   if (!session.slidesUrl && !session.videoUrl) {
     return '';
   }
@@ -216,7 +221,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center gap-right-300 decoration-none"
         >
-          ${slidesIcon} Slides
+          ${icons.slidesIcon} Slides
         </a>
       `
     : '';
@@ -229,7 +234,7 @@ const linksHtml = session => {
           rel="noopener noreferrer"
           class="display-flex align-center decoration-none"
         >
-          ${videoIcon} Video
+          ${icons.videoIcon} Video
         </a>
       `
     : '';
@@ -243,6 +248,10 @@ const linksHtml = session => {
   `;
 };
 
+/**
+ * @param {string} topic
+ * @returns {string}
+ */
 const topicHtml = topic => {
   return html`
     <span
@@ -253,6 +262,10 @@ const topicHtml = topic => {
   `;
 };
 
+/**
+ * @param {string} content
+ * @returns {string}
+ */
 const sessionHtml = content => {
   return html` <article class="event-session-card bg-bg">${content}</article>`;
 };
