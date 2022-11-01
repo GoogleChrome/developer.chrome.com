@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,84 +15,138 @@
  */
 
 const authorsData = require('../_data/authorsData.json');
-const PLACEHOLDER_IMG =
-  'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
+const {i18n} = require('../_filters/i18n');
+const {Img} = require('../_shortcodes/Img');
+const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
+
+const EVENT_PLACEHOLDER =
+  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
 /**
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
-const getEvents = (collections, filter, sort) => {
+const getEvents = ({collections, filter, sort, locale = 'en'}) => {
   return collections
-    .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
+    .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
     .filter(filter)
     .map(event => {
-      event.data.isPastEvent = isPastEvent(event);
+      const sessions = event.data.sessions.map(session =>
+        processSession(session, locale)
+      );
 
-      event.data.sessions = event.data.sessions.map(session => {
-        if (session.type === 'speaker') {
-          session.speaker = getAuthorData(session.speaker);
-        }
-
-        if (session.type === 'participant') {
-          session.participants = session.participants.map(p => {
-            return getAuthorData(p);
-          });
-        }
-
-        return session;
+      const image = Img({
+        src: event.data.image ?? EVENT_PLACEHOLDER,
+        width: 400,
+        height: 400,
+        alt: event.data.title,
       });
 
-      return event;
+      return {
+        id: event.data.id,
+        title: event.data.title,
+        externalUrl: event.data.externalUrl,
+        summary: event.data.summary,
+        location: event.data.location,
+        date: event.data.date,
+        isPastEvent: isPastEvent(event),
+        sessions,
+        image,
+      };
     })
     .sort(sort);
 };
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event),
-    (a, b) => {
+    filter: event => isPastEvent(event),
+    sort: (a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
-    }
-  );
+    },
+  });
 };
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event) === false,
-    (a, b) => {
+    filter: event => isPastEvent(event) === false,
+    sort: (a, b) => {
       return new Date(a.date).getTime() - new Date(b.date).getTime();
-    }
-  );
+    },
+  });
 };
 
 /**
- * @param authorHandle
+ * @param {String} authorHandle
+ * @param {String} locale
  * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
  */
-const getAuthorData = authorHandle => {
+const getAuthorData = (authorHandle, locale) => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
 
+  const authorData = authorsData[authorHandle];
+
   return {
-    image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
-    title: `i18n.authors.${authorHandle}.title`,
-    twitter: authorsData[authorHandle].twitter,
-    linkedin: authorsData[authorHandle].linkedin,
+    image: authorData.image ?? defaultAvatarImg,
+    title: i18n(`i18n.authors.${authorHandle}.title`, locale),
+    twitter: authorData.twitter,
+    linkedin: authorData.linkedin,
   };
+};
+
+/**
+ * @param session
+ * @param {String} locale
+ * @returns {{title}|*}
+ */
+const processSession = (session, locale) => {
+  if (session.type === 'speaker') {
+    session.speaker = getAuthorData(session.speaker, locale);
+    session.image = Img({
+      src: session.speaker.image,
+      width: 40,
+      height: 40,
+      alt: session.speaker.title ?? session.title,
+      class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+    });
+
+    return session;
+  }
+
+  session.participants = session.participants.map(p => {
+    return getAuthorData(p, locale);
+  });
+
+  session.title =
+    session.participants.length === 1
+      ? session.participants[0].title
+      : i18n('i18n.events.multiple_participants');
+
+  session.image = Img({
+    src:
+      session.participants.length === 1
+        ? session.participants[0].image
+        : chromeImg,
+    width: 40,
+    height: 40,
+    alt: session.title,
+    class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+  });
+
+  return session;
 };
 
 /**
