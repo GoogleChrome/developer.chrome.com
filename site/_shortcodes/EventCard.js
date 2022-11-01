@@ -20,7 +20,6 @@ const {formatDateShort} = require('../_data/lib/date');
 const {EventSessionCard} = require('./EventSessionCard');
 const {html} = require('common-tags');
 const {i18n} = require('../_filters/i18n');
-const {Img} = require('./Img');
 
 const calendarIcon = fs.readFileSync(
   path.join(__dirname, '../_includes/icons/calendar.svg'),
@@ -43,9 +42,6 @@ const launchIcon = fs.readFileSync(
   'utf-8'
 );
 
-const PLACEHOLDER_IMG =
-  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
-
 /**
  * Renders an event card.
  *
@@ -53,13 +49,6 @@ const PLACEHOLDER_IMG =
  * @returns {string}
  */
 function EventCard(event) {
-  const image = Img({
-    src: event.image ?? PLACEHOLDER_IMG,
-    width: 400,
-    height: 400,
-    alt: event.title,
-  });
-
   const buttonLabel = event.isPastEvent
     ? i18n('i18n.events.see_details')
     : i18n('i18n.events.see_whos_joining');
@@ -72,14 +61,14 @@ function EventCard(event) {
                show-details="">
           <div class="display-flex">
             <figure class="event-card__desktop-image gap-right-500 flex-shrink-none">
-              ${image}
+              ${event.image}
             </figure>
 
             <div class="event-card__overview display-flex direction-column justify-content-between">
               <div>
                 <div class="event-card__title">
                   <figure class="event-card__image gap-right-200 flex-shrink-none">
-                    ${image}
+                    ${event.image}
                   </figure>
 
                   <a href="${event.externalUrl}"
@@ -124,15 +113,7 @@ function EventCard(event) {
                       class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
                     >
                       <span class="display-flex align-center">
-                        ${Img({
-                          src: session.speaker.image,
-                          width: 40,
-                          height: 40,
-                          alt: i18n(session.speaker.title),
-                          class:
-                            'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                        })}
-                        ${i18n(session.speaker.title)}
+                        ${session.image} ${session.speaker.title}
                       </span>
 
                       ${launchIcon}
@@ -166,15 +147,6 @@ function EventCard(event) {
               ${event.sessions
                 .filter(talk => talk.type === 'participant')
                 .map(session => {
-                  const icon =
-                    session.participants.length === 1
-                      ? session.participants[0].image
-                      : 'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/NLdnaqMpBEjPaCtVEfcJ.svg';
-                  const title =
-                    session.participants.length === 1
-                      ? i18n(session.participants[0].title)
-                      : i18n('i18n.events.multiple_participants');
-
                   return EventSessionCard(html`
                     <a
                       href="${event.externalUrl}"
@@ -183,15 +155,7 @@ function EventCard(event) {
                       class="event-card__title decoration-none gap-bottom-300 display-flex align-center justify-content-between"
                     >
                       <span class="display-flex align-center">
-                        ${Img({
-                          src: icon,
-                          width: 40,
-                          height: 40,
-                          alt: title,
-                          class:
-                            'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-                        })}
-                        ${title}
+                        ${session.image} ${session.title}
                       </span>
 
                       ${launchIcon}
@@ -231,15 +195,13 @@ function EventCard(event) {
 
 const participantHTML = participants => {
   const processed = participants.map(participant => {
-    const title = i18n(participant.title);
-
     if (participant.twitter) {
       return html`
         <a
           href="https://twitter.com/${participant.twitter}"
           target="_blank"
           rel="noopener noreferrer"
-          >${title}</a
+          >${participant.title}</a
         >
       `;
     }
@@ -250,12 +212,12 @@ const participantHTML = participants => {
           href="${participant.linkedin}"
           target="_blank"
           rel="noopener noreferrer"
-          >${title}</a
+          >${participant.title}</a
         >
       `;
     }
 
-    return html` ${title}`;
+    return html` ${participant.title}`;
   });
 
   return processed.join(', ');
