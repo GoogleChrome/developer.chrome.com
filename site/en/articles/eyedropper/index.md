@@ -16,7 +16,6 @@ date: 2021-10-27
 tags:
   - capabilities
   - progressive-web-apps
-  - blog
 ---
 
 ## What is the EyeDropper API? {: #what }
