@@ -1,5 +1,5 @@
 ---
-layout: layouts/blog-post.njk
+layout: 'layouts/blog-post.njk'
 title: Picking colors of any pixel on the screen with the EyeDropper API
 subhead: >
   The EyeDropper API enables authors to use a browser-supplied eyedropper in the construction of
@@ -16,7 +16,6 @@ date: 2021-10-27
 tags:
   - capabilities
   - progressive-web-apps
-  - blog
 ---
 
 ## What is the EyeDropper API? {: #what }
