@@ -15,3 +15,4 @@
  */
 
 import './web-components/enhanced-select';
+import './web-components/checkbox-group';
