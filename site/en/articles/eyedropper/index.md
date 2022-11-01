@@ -19,9 +19,6 @@ tags:
   - blog
 ---
 
-{% Aside %} The EyeDropper API is part of the [capabilities project](/blog/fugu-status/) and is currently
-in development. This post will be updated as the implementation progresses. {% endAside %}
-
 ## What is the EyeDropper API? {: #what }
 
 Many creative applications allow users to pick colors from parts of the app window or even from the
@@ -48,20 +45,6 @@ Going with this option also means other browsers would not have access to the fe
 The EyeDropper API fills this gap by providing a way to sample colors from the screen.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/JqDpX2OSqF6WAO9ytD8x.png", alt="Chromium color picker.", width="308", height="400" %}
-
-## Current status {: #status }
-
-<div>
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | [Complete][spec]         |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. Origin trial                          | Complete                 |
-| 5. **Launch**                            | **Chromium&nbsp;95**<br/>(Desktop only.)             |
-
-</div>
 
 ## How to use the EyeDropper API {: #use }
 
