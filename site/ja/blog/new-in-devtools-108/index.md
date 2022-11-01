@@ -43,7 +43,7 @@ Chromium issue: [1178508](https://crbug.com/1178508)
 ## Recorder パネルで XPath とテキストのセレクタ自動検出が可能に {: #recorder }
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
-**Recorder** パネルが XPath とテキストのセレクタをサポートするようになりました。[ユーザーフローの記録を開始](/docs/devtools/recorder/#record)すると、 XPath と要素の最短ユニークテキストがあればレコーダーは自動的にセレクタとして選択します。
+**Recorder** パネルが XPath とテキストのセレクタをサポートするようになりました。[ユーザーフローの記録を開始](/docs/devtools/recorder/#record)すると、 要素の XPath と最短ユニークテキストがあればレコーダーは自動的にセレクタとして選択します。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="Recorder パネルでXPathとテキストのセレクタの自動検出が可能に", width="800", height="579" %}
 
@@ -64,7 +64,7 @@ Chromium issues: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.c
 これまでは、 DevTools はセミコロンで区切られた式のステップ実行のみをサポートしていました。
 
 <!-- Given the code below, -->
-以下のようなコードがあります。
+以下のようなコードを考えてください。
 
 ```js
 function foo() {}
@@ -77,14 +77,14 @@ function bar() {
 ```
 
 <!-- Transpilers and minifiers may turn them into comma-separated expressions. -->
-これらはトランスパイラやミニファイアによって、カンマ区切りの式に変換されることがあります。
+このようなコードはトランスパイラやミニファイアによって、カンマ区切りの式に変換されることがあります。
 
 ```js
 function bar(){return foo(),foo(),42}
 ``` 
 
 <!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
-このため、デバッグ時には、ミニファイされたコードと 書かれたコードの間でステップの動作が異なるため混乱が生じます。ソースマップを使用して、オリジナルのコードの観点からミニファイコードをデバッグする場合は、さらに混乱します。開発者はセミコロン (ツールチェーンではカンマに変換されていた) を見ていますが、デバッガーはセミコロンで停止しないためです。
+こうなるとミニファイされたコードと 書かれたコードの間でステップ実行の動作が異なることになるため、デバッグ時に混乱が生じます。ソースマップを使用して、オリジナルのコードを見ながらミニファイされたコードをデバッグする場合は、さらに混乱します。開発者にはセミコロン (ツールチェーンではカンマに変換されていた) が見えていますが、デバッガーはセミコロンで停止しないためです。
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 
