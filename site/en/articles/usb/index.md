@@ -32,6 +32,7 @@ by the Web. And that's one of the reasons the WebUSB API has been created: to
 provide a way to expose USB device services to the Web. With this API, hardware
 manufacturers will be able to build cross-platform JavaScript SDKs for their
 devices.
+
 But most importantly this will **make USB safer and easier to use by bringing
 it to the Web**.
 
