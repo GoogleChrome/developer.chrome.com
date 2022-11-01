@@ -543,55 +543,55 @@ Thanks to [Kayce Basques] for reviewing this article.
 Hero image by [SparkFun Electronics from Boulder, USA].
 
 [turtles]: https://www.youtube.com/watch?v=1LV1Fk5ZXwA
-[Generic Attribute Profile]: https://www.bluetooth.com/specifications/gatt/
-[Web Bluetooth API specification]: https://webbluetoothcg.github.io/web-bluetooth/
+[generic attribute profile]: https://www.bluetooth.com/specifications/gatt/
+[web bluetooth api specification]: https://webbluetoothcg.github.io/web-bluetooth/
 [feedback on the spec]: https://github.com/WebBluetoothCG/web-bluetooth/issues
 [feedback on the implementation]: https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth
 [request]: #request
 [connect to]: #connect
 [read]: #read
 [write]: #write
-[receive GATT Notifications]: #notifications
-[Bluetooth device gets disconnected]: #disconnect
-[read and write to Bluetooth descriptors]: #descriptors
-[Browser compatibility]: https://developer.mozilla.org/docs/Web/API/Web_Bluetooth_API#Browser_compatibility
+[receive gatt notifications]: #notifications
+[bluetooth device gets disconnected]: #disconnect
+[read and write to bluetooth descriptors]: #descriptors
+[browser compatibility]: https://developer.mozilla.org/docs/Web/API/Web_Bluetooth_API#Browser_compatibility
 [origin trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
-[Web Bluetooth Security Model]: https://medium.com/@jyasskin/the-web-bluetooth-security-model-666b4e7eed2
+[web bluetooth security model]: https://medium.com/@jyasskin/the-web-bluetooth-security-model-666b4e7eed2
 [secure contexts]: https://w3c.github.io/webappsec-secure-contexts/#intro
-[TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security
+[tls]: https://en.wikipedia.org/wiki/Transport_Layer_Security
 [a user gesture]: https://html.spec.whatwg.org/multipage/interaction.html#activation
 [`pointerup`]: https://developers.google.com/web/updates/2016/10/pointer-events
-[Promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[Promises tutorial]: /promises
-[Arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-[Bluetooth GATT Battery Service]: https://www.bluetooth.com/specifications/gatt/
-[the standardized Bluetooth GATT services]: https://www.bluetooth.com/specifications/assigned-numbers/
-[standardized Battery Level Characteristic]: https://www.bluetooth.com/specifications/gatt/
-[Read Characteristic Value Changed Sample]: https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html
-[Heart Rate Control Point Characteristic page]: https://www.bluetooth.com/specifications/gatt/
-[Heart Rate Measurement]: https://www.bluetooth.com/specifications/gatt/
-[Notifications Sample]: https://googlechrome.github.io/samples/web-bluetooth/notifications.html
-[Device Disconnect Sample]: https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html
-[Automatic Reconnect Sample]: https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html
-[Health Thermometer service]: https://www.bluetooth.com/specifications/gatt/
-[Measurement Interval characteristic]: https://www.bluetooth.com/specifications/gatt/
-[Characteristic User Description descriptor]: https://www.bluetooth.com/specifications/assigned-numbers/
-[Web Bluetooth samples]: https://googlechrome.github.io/samples/web-bluetooth/index.html
-[BLE Peripheral Simulator Android App]: https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral
-[curated Web Bluetooth Demos]: https://github.com/WebBluetoothCG/demos
-[official Web Bluetooth Codelabs]: https://github.com/search?q=org%3Agooglecodelabs+bluetooth
+[promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[promises tutorial]: /promises
+[arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+[bluetooth gatt battery service]: https://www.bluetooth.com/specifications/gatt/
+[the standardized bluetooth gatt services]: https://www.bluetooth.com/specifications/assigned-numbers/
+[standardized battery level characteristic]: https://www.bluetooth.com/specifications/gatt/
+[read characteristic value changed sample]: https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html
+[heart rate control point characteristic page]: https://www.bluetooth.com/specifications/gatt/
+[heart rate measurement]: https://www.bluetooth.com/specifications/gatt/
+[notifications sample]: https://googlechrome.github.io/samples/web-bluetooth/notifications.html
+[device disconnect sample]: https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html
+[automatic reconnect sample]: https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html
+[health thermometer service]: https://www.bluetooth.com/specifications/gatt/
+[measurement interval characteristic]: https://www.bluetooth.com/specifications/gatt/
+[characteristic user description descriptor]: https://www.bluetooth.com/specifications/assigned-numbers/
+[web bluetooth samples]: https://googlechrome.github.io/samples/web-bluetooth/index.html
+[blue peripheral simulator android app]: https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral
+[curated web bluetooth demos]: https://github.com/WebBluetoothCG/demos
+[official web bluetooth codelabs]: https://github.com/search?q=org%3Agooglecodelabs+bluetooth
 [web-bluetooth-utils]: https://www.npmjs.com/package/web-bluetooth-utils
 [noble]: https://github.com/sandeepmistry/noble
 [angular-web-bluetooth]: https://github.com/manekinekko/angular-web-bluetooth
-[Angular]: https://angularjs.org
-[Polymer]: https://www.polymer-project.org/
-[Get Started with Web Bluetooth]: https://beaufortfrancois.github.io/sandbox/web-bluetooth/generator
-[Web Bluetooth Developer Studio Plugin]: https://github.com/beaufortfrancois/sandbox/tree/gh-pages/web-bluetooth/bluetooth-developer-studio-plugin
-[How to file Web Bluetooth bugs]: https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs
+[angular]: https://angularjs.org
+[polymer]: https://www.polymer-project.org/
+[get started with web bluetooth]: https://beaufortfrancois.github.io/sandbox/web-bluetooth/generator
+[web bluetooth developer studio plugin]: https://github.com/beaufortfrancois/sandbox/tree/gh-pages/web-bluetooth/bluetooth-developer-studio-plugin
+[how to file web bluetooth bugs]: https://sites.google.com/a/chromium.org/dev/developers/how-tos/file-web-bluetooth-bugs
 [browser and platform implementation status]: https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md
-[Kayce Basques]: https://github.com/kaycebasques
-[SparkFun Electronics from Boulder, USA]: https://commons.wikimedia.org/wiki/File:Bluetooth_4.0_Module_-_BR-LE_4.0-S2A_(16804031059).jpg
+[kayce basques]: https://github.com/kaycebasques
+[sparkfun electronics from boulder, usa]: https://commons.wikimedia.org/wiki/File:Bluetooth_4.0_Module_-_BR-LE_4.0-S2A_(16804031059).jpg
 [cr-dev-twitter]: https://twitter.com/ChromiumDev
-[Bluetooth company identifier]: https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/
-[Bluetooth data filters explainer]: https://github.com/WebBluetoothCG/web-bluetooth/blob/main/data-filters-explainer.md
+[bluetooth company identifier]: https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/
+[bluetooth data filters explainer]: https://github.com/WebBluetoothCG/web-bluetooth/blob/main/data-filters-explainer.md
 [example]: https://groups.google.com/a/chromium.org/g/blink-dev/c/5Id2LANtFko/m/5SIig7ktAgAJ
