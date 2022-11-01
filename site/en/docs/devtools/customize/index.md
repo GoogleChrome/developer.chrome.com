@@ -105,14 +105,4 @@ See [Settings > Shortcuts](/docs/devtools/settings/#shortcuts).
 
 ## Enable experiments {: #experiments }
 
-To enable DevTools experiments:
-
-1.  Go to **Settings** > **Experiments**.
-2.  Search for the experiment you would like to try, enable on checkbox.
-3.  Close the page.
-4.  Click **Reload DevTools**.
-
-The next time you open DevTools, the experiment should be enabled. You can disable the experiment with similar steps above.
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PIV27gTdvjHqc2RfrRPo.png", alt="Experiments", width="800", height="487" %}
-
+See [Settings > Experiments](/docs/devtools/settings/#experiments).

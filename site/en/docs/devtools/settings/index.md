@@ -89,6 +89,22 @@ To remove a workspace, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0G3y
 
 ## Experiments
 
+{% Aside 'caution' %}
+Chrome DevTools experiments may be unstable.
+{% endAside %}
+
+To enable an experiment:
+
+1. [Open Settings][1].
+1. In the **Experiments** tab, search for the experiment you would like to try in the **Filter** textbox.
+1. Enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} checkbox next to the experiment.
+1. Close {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings**.
+1. If required, click **Reload DevTools** in the prompt at the top.
+
+The next time you open DevTools, the experiment is enabled. To disable an experiment, clear the corresponding checkbox.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PIV27gTdvjHqc2RfrRPo.png", alt="Experiments", width="800", height="487" %}
+
 ## Ignore List
 
 The **Ignore List** tab lets you configure the list of scripts the [debugger](/docs/devtools/javascript/) ignores.
@@ -210,7 +226,7 @@ To edit or remove an existing preset, click {% Img src="image/NJdAV9UgKuN8AhoaPB
 
 ## Shortcuts
 
-The **Shortcuts** tab lists default shortcuts you can use while focused in DevTools to speed up your workflow. You can customize shortcuts to your preferences.
+The **Shortcuts** tab lists default shortcuts you can use while focused in DevTools to speed up your workflow.
 
 For a full list of default shortcuts, see [Keyboard shortcuts](/docs/devtools/shortcuts/).
 
@@ -221,6 +237,10 @@ You can use the Visual Studio Code alternatives to default shortcuts. Select `Vi
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bi4B0or5wylM4jit6DfD.png", alt="Visual Studio Code shortcut alternatives.", width="800", height="416" %}
 
 ### Customize shortcuts {: #customize-shortcuts }
+
+{% Aside %}
+This is a preview option. To enable it, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} [**Settings** > **Experiments**](#experiments) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable keyboard shortcut editor**.
+{% endAside %}
 
 To customize keyboard shortcuts:
 
@@ -244,6 +264,10 @@ To customize keyboard shortcuts:
 To revert or delete changes, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tby5LrQzKTKzHia2fEBO.svg", alt="Back.", width="24", height="24" %} **Back** or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w9Vbnqf9cVz7YeqMkAi0.svg", alt="Delete.", width="24", height="24" %} **Delete**.
 
 ### Add shortcuts to unassigned actions {: #assign-shortcuts }
+
+{% Aside %}
+This is a preview option. To enable it, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} [**Settings** > **Experiments**](#experiments) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable keyboard shortcut editor**.
+{% endAside %}
 
 By default, DevTools doesn't assign shortcuts to all available actions.
 
