@@ -342,7 +342,7 @@ Business related issues by contacting [CWS support][cws-support].
 [internationalize]: /docs/webstore/i18n
 [malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
-[program-policies]: /docs/webstore/program_policies
+[program-policies]: /docs/webstore/program-policies
 [region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [stackoverflow-extensions]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url
