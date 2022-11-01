@@ -13,7 +13,7 @@ tags:
   - chrome-92
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 92 beta was released on June 3, 2021 and is expected to become the
 stable version in late July, 2021.
@@ -25,4 +25,4 @@ events with non-URL, but standardized payment method identifiers, such as
 `"basic-card"` or `"tokenized-card"`, [has been
 removed](https://www.chromestatus.com/feature/5717324021628928).
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

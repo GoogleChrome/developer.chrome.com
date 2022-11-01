@@ -3,7 +3,7 @@ title: State of the browser
 summary: >-
   A yearly one-day, single-track conference with widely-varying talks about the modern web,
   accessibility, web standards, and more, organised by London Web Standards.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: London, UK
 date: 2022-10-22
 externalUrl: https://2022.stateofthebrowser.com/

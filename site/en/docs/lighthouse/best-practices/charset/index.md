@@ -35,7 +35,7 @@ Lighthouse considers the character encoding to be declared if it finds any of th
   [valid IANA name][iana]
 - A [byte-order mark](https://www.w3.org/International/questions/qa-byte-order-mark) (BOM)
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to pass the `charset` audit
 

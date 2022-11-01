@@ -36,7 +36,7 @@ Make sure to immediately show any content that's already available,
 such as the page title or thumbnail,
 while the rest of the content loads.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Resources
 

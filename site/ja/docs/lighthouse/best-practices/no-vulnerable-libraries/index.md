@@ -19,7 +19,7 @@ updated: 2020-06-04
 - [Chrome 用 Library Detector](https://www.npmjs.com/package/js-library-detector) を実行します。
 - 検出されたライブラリのリストを [snyk の Vulnerability DB](https://snyk.io/vuln?packageManager=all) と照合します。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## セキュリティで保護されていない JavaScript ライブラリの使用をやめる
 

@@ -90,7 +90,7 @@ This table shows how to interpret your FMP score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your FMP score
 
@@ -109,7 +109,7 @@ for more on collecting real-user metrics.
 The [User Timing marks and measures Lighthouse audit](/docs/lighthouse/performance/user-timings/)
 enables you to see User Timing data in your report.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

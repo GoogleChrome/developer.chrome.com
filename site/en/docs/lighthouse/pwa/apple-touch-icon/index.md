@@ -34,7 +34,7 @@ tag in the `<head>`:
 Lighthouse doesn't check whether the icon actually exists or whether the icon is
 the correct size.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to add an Apple touch icon
 

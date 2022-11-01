@@ -808,6 +808,10 @@
     "country": "US",
     "image": "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/CFDMEqVwcngFoi1NCxTF.png"
   },
+  "cilvento": {
+    "country": "US",
+    "image": "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/wZV82yyQSeklFCQj7Nd2.jpeg"
+  },
   "crystalwang": {
     "country": "US",
     "image": "image/WlD8wC6g8khYWPJUsQceQkhXSlv1/8NhYSp5dX1NtITmlqqDT.jpeg"
@@ -944,5 +948,11 @@
   "rouslan": {
     "github": "rsolomakhin",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dZOnFhReaU2NKpk1Rr9f.jpg"
+  },
+  "chrisdavidmills": {
+    "github": "chrisdavidmills",
+    "twitter": "chrisdavidmills",
+    "linkedin": "https://www.linkedin.com/in/chris-mills-4471711/",
+    "image": "image/nkovDlvelCQoTyX9N57xf85AR9T2/jlh9RMlHQcyL1oQ7tP7z.jpg"
   }
 }

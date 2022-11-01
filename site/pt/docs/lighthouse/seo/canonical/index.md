@@ -34,7 +34,7 @@ Uma página falha nesta auditoria se qualquer uma das seguintes condições for 
 - O link canônico aponta para um domínio diferente.
 - O link canônico aponta para a raiz do site. Observe que esse cenário pode ser válido em alguns cenários, como para AMP ou variações de página para dispositivos móveis, mas o Lighthouse o considera uma falha.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Como adicionar links canônicos às suas páginas
 

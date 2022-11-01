@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-19
+updated: 2022-10-20
 
 # Optional
 # How to add a new author
@@ -243,13 +243,13 @@ As of October 2022, the CrUX API contains a `collectionPeriod` object with `firs
     "collectionPeriod": {
       "firstDate": {
         "year": 2022,
-        "month": 10,
-        "day": 9
+        "month": 9,
+        "day": 12
       },
       "lastDate": {
         "year": 2022,
-        "month": 9,
-        "day": 12
+        "month": 10,
+        "day": 9
       }
     }
 ```
@@ -280,7 +280,7 @@ For example, this can be called from `curl` with the following command line (rep
 curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
-    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics",["largest_contentful_paint", "experimental_time_to_first_byte"]}'
+    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
 ```
 
 
@@ -480,13 +480,13 @@ For example, the response to the request body in the above request could be:
     "collectionPeriod": {
       "firstDate": {
         "year": 2022,
-        "month": 10,
-        "day": 9
+        "month": 9,
+        "day": 12
       },
       "lastDate": {
         "year": 2022,
-        "month": 9,
-        "day": 12
+        "month": 10,
+        "day": 9
       }
     }
   }

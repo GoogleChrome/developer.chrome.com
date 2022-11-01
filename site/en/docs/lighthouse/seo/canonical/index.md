@@ -48,7 +48,7 @@ A page fails this audit if any of the following conditions are met:
   valid in some scenarios, such as for AMP or mobile page variations, but
   Lighthouse nonetheless treats it as a failure.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to add canonical links to your pages
 

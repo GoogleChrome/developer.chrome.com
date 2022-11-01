@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/) . Revisão por [Lucas Santos](https://lsantos.dev).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -209,5 +209,5 @@ Estas são algumas correções dignas de nota nesta versão:
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Um novo link **Creator Ad Script** está disponível para [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) se o DevTools encontrar o script que fez com que o frame fosse rotulado como um anúncio. Você pode abrir um frame em **Aplicativo** > **Frames**. ([1217041](https://crbug.com/1217041))
   
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

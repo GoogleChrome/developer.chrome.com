@@ -63,7 +63,7 @@ FMP와 FCP가 같을 때 점수는 같다. FCP 이후에 FMP가 발생하는 경
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## FMP 점수를 높이는 방법
 
@@ -75,7 +75,7 @@ FMP가 실제로 사용자의 기기에서 발생하는 시점을 측정하는 �
 
 실제 사용자 측정항목 수집에 대한 자세한 내용은 [탐색 및 리소스 타이밍을 사용하여 실생활에서 로드 성능 평가](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/)를 참조하세요. [사용자 시간 표시 및 측정 Lighthouse 감사](/docs/lighthouse/performance/user-timings/)를 사용하면 보고서에서 사용자 시간 데이터를 볼 수 있습니다.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 리소스
 

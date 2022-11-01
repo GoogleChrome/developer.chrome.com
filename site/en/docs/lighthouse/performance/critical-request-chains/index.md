@@ -20,7 +20,7 @@ reports critical requests loaded with a high priority:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="A screenshot of the Lighthouse Minimize critical request depth audit", width="800", height="452" %}
 </figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How Lighthouse identifies critical request chains
 

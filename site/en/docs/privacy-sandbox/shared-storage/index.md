@@ -63,9 +63,9 @@ The Shared Storage API intends to support many use cases, replacing several
 existing uses for third-party cookies. This may include:
 
 *  [Frequency control](/docs/privacy-sandbox/shared-storage/frequency-control/)
-*  [A/B or lift experiments](docs/privacy-sandbox/shared-storage/ab-testing/)
-*  [Creative rotation](docs/privacy-sandbox/shared-storage/creative-rotation/)
-*  [Determining known customers](docs/privacy-sandbox/shared-storage/known-customer/)
+*  [A/B or lift experiments](/docs/privacy-sandbox/shared-storage/ab-testing/)
+*  [Creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/)
+*  [Determining known customers](/docs/privacy-sandbox/shared-storage/known-customer/)
 *  Recording aggregated statistics, such as demographics, reach, frequency
    measurement, and conversion measurement with the
    [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)
@@ -92,7 +92,7 @@ storage worklet.
 
 The shared storage data can be used for:
 
-*  [**URL selection**](/docs/privacy-sandbox/shared-storage/url-selection): 
+*  **URL selection**: 
    you can run a worklet script to select a URL from a provided list, based on
    the stored data, and then render that URL in a fenced frame.  The returned
    URL will be an opaque URL, which means the developer and other viewers of
@@ -118,4 +118,4 @@ You can also enable Shared Storage with the `--enable-features=PrivacySandboxAds
 
 Check out the [example use cases and code samples](/docs/privacy-sandbox/use-shared-storage).
 
-{% include 'content/privacysandbox-partials/sharedstorage-engage.njk' %}
+{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}

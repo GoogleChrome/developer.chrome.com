@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -217,5 +217,5 @@ Aquí hay algunos arreglos en los sourcemaps para mejorar la experiencia general
 
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

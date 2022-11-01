@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
@@ -94,5 +94,5 @@ The Memory Inspector is not only available for `ArrayBuffers` in JavaScript, but
 
 This article presented the Memory Inspector and showed a glimpse of its design. We hope that the Memory Inspector will help you to understand what’s happening in your ArrayBuffer :-). If you have suggestions to improve it let us know and [file a bug](https://crbug.com/new)!
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

@@ -75,7 +75,11 @@ determines whether you're using the Manifest V2 or Manifest V3 feature set:
 
 ### Service worker  {: #man-sw }
 
-In Manifest V3, background pages are now [*extension service workers*][mdn-service-workers]. Register the service worker under the `"background"` field, which uses the `"service_worker"` key, which specifies a single JavaScript file.
+Manifest V3, replaces background pages with a single [*extension service workers*][mdn-service-workers]. Register the service worker under the `"background"` field, which uses the `"service_worker"` key, which specifies a single JavaScript file.
+
+Even though Manifest V3, does not support multiple background scripts, you can optionally declare
+the service worker as an [ES Module][webdev-esm] by specifying `"type": "module"`, which allows you
+to import further code.
 
 {% Columns %}
 
@@ -107,10 +111,6 @@ In Manifest V3, background pages are now [*extension service workers*][mdn-servi
 ```
 
 {% endColumns %}
-
-Even though Manifest V3, does not support multiple background scripts, you can optionally declare
-the service worker as an [ES Module][webdev-esm] by specifying `"type": "module"`, which allows you
-to import further code.
 
 ### Host permissions  {: #host-permissions }
 
