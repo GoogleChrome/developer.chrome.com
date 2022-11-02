@@ -8,7 +8,7 @@
 ### Chrome 107 {: #chrome107 }
 
 * [Кастомизация сочетаний клавиш в DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
-* [Переключение между светлой и тёмной темами по сочитанию клавиш](/ru/blog/new-in-devtools-107/#toggle-themes)
+* [Переключение между светлой и тёмной темами по сочетанию клавиш](/ru/blog/new-in-devtools-107/#toggle-themes)
 * [Подсветка объектов C/C++ в Инспекторе памяти (Memory Inspector)](/ru/blog/new-in-devtools-107/#memory)
 * [Поддержка полной информации об инициаторе для импорта HAR](/ru/blog/new-in-devtools-107/#har)
 * [Начало поиска по DOM по нажатию по <kbd>Enter</kbd>](/ru/blog/new-in-devtools-107/#search-type)
