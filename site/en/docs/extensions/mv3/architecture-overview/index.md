@@ -29,7 +29,7 @@ An extension's architecture will depend on its functionality, but all extensions
 ### The manifest {: #manifest }
 
 The manifest file, titled `manifest.json`, gives the browser information about the extension, such
-as the most important files and the capabilities the extension might use. An example is shown below. For information and descriptions of what the manifest can contain, see [Mainfest file format][docs-manifest].
+as the most important files and the capabilities the extension might use. 
 
 ```json
 {
