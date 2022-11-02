@@ -31,7 +31,7 @@ tags:
 
 您现在可以在 DevTools (开发者工具) 里客制化您喜爱的键盘快捷键。
 
-在 ** 设置 （Settings）** > **快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
+在 **设置 （Settings）** > **快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
