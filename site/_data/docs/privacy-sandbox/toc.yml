@@ -38,7 +38,7 @@
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/topics
-    - url: /docs/privacy-sandbox/topics-api
+    - url: /docs/privacy-sandbox/topics/latest
     - url: /docs/privacy-sandbox/topics-experiment
     - url: /docs/privacy-sandbox/fledge
     - url: /docs/privacy-sandbox/fledge-experiment
