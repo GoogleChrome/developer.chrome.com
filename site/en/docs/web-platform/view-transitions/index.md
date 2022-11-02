@@ -416,7 +416,7 @@ One way to handle this is to wait for the full image to load before starting the
 ::view-transition-old(full-embed),
 ::view-transition-new(full-embed) {
   /* Prevent the default animation,
-  so both images remain opacity:1 throughout the transition */
+  so both views remain opacity:1 throughout the transition */
   animation: none;
   /* Use normal blending,
   so the new view sits on top and obscures the old view */
@@ -449,7 +449,7 @@ Conveniently, all the transitions so far have been to elements with the same asp
   <figcaption>One element transitioning to another, with an aspect ratio change. <a href="https://simple-set-demos.glitch.me/7-expanding-image-ratio/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=7-expanding-image-ratio%2Fstyles.css%3A59%3A0">Source</a>.</figcaption>
 </figure>
 
-In the default transition, the container animates from the before size to the after size. The outgoing and new views are 100% width of the container, and auto height, meaning they keep their aspect ratio regardless of the container's size.
+In the default transition, the container animates from the before size to the after size. The old and new views are 100% width of the container, and auto height, meaning they keep their aspect ratio regardless of the container's size.
 
 This is a good default, but it isn't what we want in this case. So:
 
@@ -457,28 +457,28 @@ This is a good default, but it isn't what we want in this case. So:
 ::view-transition-old(full-embed),
 ::view-transition-new(full-embed) {
   /* Prevent the default animation,
-  so both images remain opacity:1 throughout the transition */
+  so both views remain opacity:1 throughout the transition */
   animation: none;
   /* Use normal blending,
   so the new view sits on top and obscures the old view */
   mix-blend-mode: normal;
   /* Make the height the same as the container,
-  meaning the image size might not match its aspect-ratio. */
+  meaning the view size might not match its aspect-ratio. */
   height: 100%;
-  /* Clip any overflow of the image */
+  /* Clip any overflow of the view */
   overflow: clip;
 }
 
 /* The old view is the thumbnail */
 ::view-transition-old(full-embed) {
-  /* Maintain the aspect ratio of the image,
+  /* Maintain the aspect ratio of the view,
   by shrinking it to fit within the bounds of the element */
   object-fit: contain;
 }
 
 /* The new view is the full image */
 ::view-transition-new(full-embed) {
-  /* Maintain the aspect ratio of the image,
+  /* Maintain the aspect ratio of the view,
   by growing it to cover the bounds of the element */
   object-fit: cover;
 }
@@ -822,7 +822,7 @@ Instance members of `ViewTransition`:
 `::view-transition-image-set`
 : Absolutely positioned to fill the container.
 
-    Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the incoming and old views.
+    Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the old and new views.
 
 `::view-transition-new` and `::view-transition-old`
 : Absolutely positioned to the top-left of the wrapper.
