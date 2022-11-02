@@ -34,16 +34,20 @@ the browser, to choose relevant ads for websites the user has previously visited
 FLEDGE is the first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-<figure class="w-figure">
-  {% Img
-    src="image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png",
-    alt="An overview of each stage of the FLEDGE lifecycle.",
-    width="800", height="366"
-    %}
-  <figcaption>This diagram provides an overview of the FLEDGE lifecycle. <a href="https://wd.imgix.net/image/80mq7dk16vVEg8BBhsVe42n6zn82/XLqHPEchhnDcrXGzbby6.png?auto=format&w=1600" target="_blank">View a larger version</a>.</a>
-</figure>
-
 ## Try FLEDGE {: #try-fledge}
+
+### Available API reference {: #api-reference }
+
+This document serves as an overview of the FLEDGE API. If you're looking for specific API methods and parameters:
+
+* Buyers guide for [`joinAdInterestGroup()` and `generateBid()`](/docs/privacy-sandbox/fledge-api/interest-groups).
+* Seller's guide for the FLEDGE
+  [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction)
+* Buyers guide to [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) and
+  sellers guide to [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports)
+* [Troubleshoot FLEDGE API](/docs/privacy-sandbox/fledge-api/troubleshoot)
+
+You can also read [FLEDGE ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
 
 ### FLEDGE demo {: #demo}
 
@@ -69,9 +73,9 @@ the FLEDGE, [Topics](/docs/privacy-sandbox/topics/), and
 To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
 
 Once you have successfully enrolled in the trial, you can try out the FLEDGE
-JavaScript API on pages that provide a valid trial token. For example, to ask
+API on pages that provide a valid trial token. For example, to ask
 the browser to [join one or more interest groups](#joinadinterestgroup),
-and then to [run an ad auction](#ad-auction) to select and display an ad.
+and then to run an ad auction to select and display an ad.
 
 Provide a trial token for every page on which you would like to run FLEDGE API code:
 
@@ -94,11 +98,13 @@ Provide a trial token for every page on which you would like to run FLEDGE API c
   document.head.append(otMeta);
   ```
 
-An iframe running FLEDGE code—such as a [`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
+An iframe running FLEDGE code—such as a
+[`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
 call by an interest group owner—will need to provide a token that matches its origin.
 
 [Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the first trial and explains what features are supported.
+provides more details about the goals of the first trial and explains what
+features are supported.
 
 {% Aside 'caution' %}
 
@@ -222,15 +228,6 @@ privacy, there is no way to check for this programmatically.
 
 {% endAside %}
 
-### All available API references {: #api-reference }
-
-This document serves as an overview of the FLEDGE API. If you're looking for specific API references:
-
-* Buyers guide for [`joinAdInterestGroup()` and `generateBid()`](/docs/privacy-sandbox/fledge-api/interest-groups).
-* Seller's guide for the FLEDGE [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction).
-* Buyers guide to [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) and sellers guide to [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports)
-* [Troubleshoot FLEDGE API](/docs/privacy-sandbox/fledge-api/troubleshoot)
-
 ## How does the FLEDGE API work? {: #how}
 
 In this example, a user browses the website of a custom bike maker, then later
@@ -334,7 +331,7 @@ along with data from ad-space buyers and the sellers from the
 
 * **Read the FLEDGE explainer**: [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
 * **Read the API guide**: sellers can learn more about
-  [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/).
+  [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/) and the [ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
 
 ### 5. The seller and participating buyers request real-time data from the Key/Value service
 
@@ -383,7 +380,7 @@ owner. Learn more in [Bring Your Own Server](https://github.com/WICG/turtledove/
 <figure>
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/wlkJ84sb3tRjJXHkCDfE.png",
   alt="A person views a news website in a browser on their laptop. An ad
-  for a bike (20% off) is displayed—with a lock above to show that the ad is displayed in a fenced frame.",
+  for 20% off a bike is displayed in a secure fenced frame.",
   width="400", height="192"
 %}
 </figure>
@@ -493,7 +490,7 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 
 {% DetailsSummary %}
 
-### Available browser configuration is available
+### Available browser configuration
 
 {% endDetailsSummary %}
 
@@ -519,7 +516,9 @@ and membership is removed when users clear their site data.
 
 {: #engage}
  
-## Get support {: #get-support }
+## Engage and share feedback
+
+### Get support {: #get-support }
 
 To ask a questions and get support with your implementation, the demo, or the
 documentation:
@@ -549,7 +548,7 @@ Want to opt-out of FLEDGE? Learn how to
 [block access to the FLEDGE API](/docs/privacy-sandbox/fledge/opt-out),
 as a site owner or an individual user.
 
-## Get updates
+### Get updates
 
 * For notificiations of API status changes, join the
   [mailing list for developers](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce).

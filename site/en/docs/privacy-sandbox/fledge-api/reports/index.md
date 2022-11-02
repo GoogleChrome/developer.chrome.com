@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'FLEDGE reports'
+title: 'Report on FLEDGE auction results'
 subhead: >
   Seller and buyer guide to generate FLEDGE auction reports.
 description: >
@@ -10,6 +10,7 @@ authors:
   - samdutton
   - alexandrawhite
 ---
+
 In this article, you'll find a technical reference for generating reports for
 FLEDGE auction wins, as used in the current iteration of the experimental
 FLEDGE API.

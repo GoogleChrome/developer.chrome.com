@@ -21,7 +21,7 @@ cycle of FLEDGE, and refer to the FLEDGE explainer for an in-depth proposal of
 how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 
 Not a developer? Refer to the
-[FLEDGE API overview](/docs/privacy-sandbox/fledge).
+[FLEDGE overview](/docs/privacy-sandbox/fledge).
 
 ## FLEDGE interest groups
 
