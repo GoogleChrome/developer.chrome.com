@@ -40,7 +40,7 @@ on the **Network** panel to clear all requests from the **Requests** table.
 To save requests across page loads, check the **Preserve log** checkbox on the **Network** panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MPcVmmemtEEDURBN6lGK.png", alt="The Preserve Log checkbox.", width="800", height="470" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
 
 ### Capture screenshots during page load {: #screenshots }
 
@@ -331,6 +331,16 @@ To add a custom column to the **Requests** table:
 1. In the dialog window, click **Add custom header**, enter its name, and click **Add**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCXdKBGzlfwQBBeyNdta.png", alt="Adding a custom column to the Requests table.", width="800", height="563" %}
+
+### Group requests by inline frames {: #group-by-frames }
+
+If inline frames on a page initiate a lot of requests, you can make the request log frendlier by grouping them.
+
+To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
+
+To view request initiated by an inline frame, expand it in the request log.
 
 ### View the timing of requests in relation to one another {: #waterfall }
 
