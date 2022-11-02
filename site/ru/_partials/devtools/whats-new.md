@@ -22,7 +22,7 @@
 * [Связанные трассировки стека для асинхронных операций](/ru/blog/new-in-devtools-106/#async)
 * [Автоматическое игнорирование известных сторонних скриптов](/ru/blog/new-in-devtools-106/#auto-ignore)
 * [Улучшен стек вызовов во время отладки](/ru/blog/new-in-devtools-106/#call-stack)
-* [Скрытые источников из списка игнорируемых во вкладке Источники (Sources)](/ru/blog/new-in-devtools-106/#ignore-nav)
+* [Скрытие источников из списка игнорируемых во вкладке Источники (Sources)](/ru/blog/new-in-devtools-106/#ignore-nav)
 * [Скрытие игнорируемых файлов из Меню Команд (Command Menu)](/ru/blog/new-in-devtools-106/#ignore-search)
 * [Новый трек Взаимодействия (Interactions) во вкладке Производительность (Performance)](/ru/blog/new-in-devtools-106/#performance)
 * [Разбивка по времени LCP во вкладке Performance Insights](/ru/blog/new-in-devtools-106/#insights)

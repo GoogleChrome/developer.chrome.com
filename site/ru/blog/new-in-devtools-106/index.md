@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-16
 updated: 2022-09-16
-description: "Улучшенна поддержка современных способов отладки, разбивка по времени LCP во вкладке Performance Insights и другое."
+description: "Улучшена поддержка современных способов отладки, разбивка по времени LCP во вкладке Performance Insights и другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OFe0BqlHU5C0Pwrotq03.jpg'
 alt: ''
 tags:
@@ -27,7 +27,7 @@ tags:
 Опция **Сгруппировать по авторским и развёрнутым** (Group files by Authored / Deployed) теперь показывается по клику на иконку меню &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}. Раньше она отображалась прямо на панели навигации.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). Enable the **Group files by Authored / Deployed** setting to view your original source code (Authored) first and navigate to them quicker. -->
-Откройте это [демо](https://ng-devtools.netlify.app/). Включите опцию **Сгруппировать по авторским и развёрнутым** чтобы видеть ваш оригинальный (Авторский) исходный код в начале и проще по нему навигироваться.
+Откройте это [демо](https://ng-devtools.netlify.app/). Включите опцию **Сгруппировать по авторским и развёрнутым**, чтобы видеть ваш оригинальный (Авторский) исходный код в начале и проще по нему перемещаться.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HI12Jz3K7CCy0cm01jBk.png", alt="Сгруппировать по авторским и развёрнутым", width="800", height="405" %}
 
@@ -58,15 +58,15 @@ async increment() {
 ```
 
 <!-- Previously, the stack trace only showed the timeout operation. It did not show the “root cause” of the operation.  -->
-Раньше трассировка стека показывала только операцию таймаута. Она не показывала корень операции.
+Раньше трассировка стека показывала только операцию таймаута. Она не показывала первопричину операции.
 
 <!-- With the latest changes, DevTools now shows the operation originates from the `onClick` event in the button component, then the `increment` function, followed by the timeout operation. -->
-Благодаря последним изменениям DevTools теперь показывают всю операцию начиная с события `onClick` на кнопке компонента, затем функцию `increment`, за которой следует функция таймаута.
+Благодаря последним изменениям, DevTools теперь показывают всю операцию начиная с события `onClick` на кнопке компонента, затем функцию `increment`, за которой следует функция таймаута.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2jAETpw8QWzsg1Wqk0Ya.png", alt="Связанные трассировки стека для асинхронных операций", width="800", height="442" %}
 
 <!-- Behind the scenes, DevTools introduced a new “Async Stack Tagging” feature. You can tell the whole story of the operation by linking both parts of the async code together with the new `console.createTask()` method. See [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces) to learn more.  -->
-Под капотом этого улучшения скрывается новая возможность “Async Stack Tagging”, представленная в DevTools. Вы можете рассказать полную историю операции при помощи перелинковки обеих частей асинхронного кода с помощью нового метода `console.createTask()`. Прочитайте [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces) чтобы узнать больше.
+Под капотом этого улучшения скрывается новая возможность “Async Stack Tagging”, представленная в DevTools. Вы можете рассказать полную историю операции при помощи связывания обеих частей асинхронного кода с помощью нового метода `console.createTask()`. Прочитайте [Modern debugging in DevTools](/blog/devtools-modern-web-debugging/#linked-stack-traces), чтобы узнать больше.
 
 <!-- Does it sound complicated? Not at all. Most of the time, the framework you are using handles the scheduling and async execution. In that case, it is up to the framework to implement the API, you don’t need to worry about it. (e.g. Angular implemented these [changes](https://chromium-review.googlesource.com/c/v8/v8/+/3776678)) -->
 Звучит сложно? Вовсе нет. Большую часть времени фреймворк, который вы используете, обрабатывает порядок и выполнение асинхронного кода. В этом случае реализация API зависит от фреймворка, вам не нужно беспокоиться об этом. (например, в Angular реализованы следующие [изменения](https://chromium-review.googlesource.com/c/v8/v8/+/3776678))
@@ -80,15 +80,15 @@ async increment() {
 ### Автоматическое игнорирование известных сторонних скриптов {: #auto-ignore }
 
 <!-- Identify issues in your code quicker during debugging because DevTools now automatically adds known third-party scripts to the ignore list. -->
-Быстрее находите ошибки в своём коде при отладке, теперь DevTools добавляют известные сторонные скрипты в список игнорируемых. 
+Быстрее находите ошибки в своём коде при отладке благодаря тому, что теперь DevTools добавляет известные сторонние скрипты в список игнорируемых. 
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. The stack trace shows only your code (e.g. `app.component.ts` `button.component.ts`). Click **Show more frames** to view the full stack trace. -->
-Откройте [демо](https://ng-devtools.netlify.app/) и нажмите на кнопку <kbd>+</kbd>. Разверните ошибку в консоли. Трассировка стека покажет только ваш код (например, `app.component.ts` и `button.component.ts`). Нажмите **Показать ещё фреймы** (Show more frames) чтобы увидеть полную трассировку стека.
+Откройте [демо](https://ng-devtools.netlify.app/) и нажмите на кнопку <kbd>+</kbd>. Разверните ошибку в консоли. Трассировка стека покажет только ваш код (например, `app.component.ts` и `button.component.ts`). Нажмите **Показать ещё фреймы** (Show more frames), чтобы увидеть полную трассировку стека.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Автоматическое игнорирование известных сторонних скриптов при трассировке стека", width="800", height="425" %}
 
 <!-- Previously, the stack trace included third-party scripts like `zone.js` and `core.mjs`. These are not your source code, they are generated by bundlers (e.g. webpack) or frameworks (e.g. Angular). It took a longer time to identify the root cause of an error.  -->
-Раньше трассировка стека включала в себя сторонние скрипты, например, `zone.js` and `core.mjs`. Это не ваш исходный код, они генерируются сборщиками (webpack и другие) или фреймворками (Angular и прочие). Из-за этого определение причины ошибки занимало больше времени.
+Раньше трассировка стека включала в себя сторонние скрипты, например, `zone.js` and `core.mjs`. Это не ваш исходный код, он генерируются сборщиками (Webpack и другими) или фреймворками (например, Angular). Из-за этого определение причины ошибки занимало больше времени.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Автоматическое игнорирование известных сторонних скриптов при трассировке стека", width="800", height="425" %}
 
@@ -96,7 +96,7 @@ async increment() {
 По капотом DevTools игнорируют сторонние скрипты при помощи нового свойства `x_google_ignoreList` для карт источников. Фреймворки и сборщики должны предоставлять эту информацию. Читайте [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
-Опционально, если вы предпочитаете видеть полную трассировку стека, то вы можете отключить эту настройку в **Настройки** (Settings) > **Список игнорируемых фреймворков** (Ignore list) > **Автоматически добавлять известные сторонние скрипты в список игнорируемых** (Automatically add known third-party scripts to ignore list).
+Если же вы предпочитаете видеть полную трассировку стека, то можете отключить эту настройку в **Настройки** (Settings) > **Список игнорируемых фреймворков** (Ignore list) > **Автоматически добавлять известные сторонние скрипты в список игнорируемых** (Automatically add known third-party scripts to ignore list).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/elkhLqA0KV8pWYFgKk8g.png", alt="Настройка автоматического добавления известных сторонних скриптов в игнорируемые", width="800", height="516" %}
 
@@ -112,10 +112,10 @@ async increment() {
 С настройкой **Автоматически добавлять известные сторонние скрипты в список игнорируемых** (Automatically add known third-party scripts to ignore list) стек вызовов теперь показывает только фреймы, относящиеся к вашему коду.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and set a breakpoint at the `increment()` function in `app.component.ts`. Click the increment button on the page to trigger the breakpoint. The call stack shows only frames from your code (e.g.  `app.component.ts` and `button.component.ts`).  -->
-Откройте это [демо](https://ng-devtools.netlify.app/) и установите точку останова на функции `increment()` в файле `app.component.ts`. Нажмите на кнопку <kbd>+</kbd> на странице чтобы задествовать точку останова. Стек вызовов покажет фреймы только из вашего кода (например,  `app.component.ts` и `button.component.ts`).
+Откройте это [демо](https://ng-devtools.netlify.app/) и установите точку останова на функции `increment()` в файле `app.component.ts`. Нажмите на кнопку <kbd>+</kbd> на странице, чтобы задействовать точку останова. Стек вызовов покажет фреймы только из вашего кода (например,  `app.component.ts` и `button.component.ts`).
 
 <!-- To view all frames, enable **Show ignore-listed frames**. Previously, DevTools displayed all frames by default.  -->
-Чтобы увидеть все фреймы нажмите на **Показать фреймы из списка игнорируемых** (Show ignore-listed frames). Раньше DevTools отключал все фреймы по умолчанию.
+Чтобы увидеть все фреймы, нажмите на **Показать фреймы из списка игнорируемых** (Show ignore-listed frames). Раньше DevTools отключал все фреймы по умолчанию.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PdjPrBAV7TXn8FHcRR6R.png", alt="Улучшен стек вызовов во время отладки", width="800", height="601" %}
 
@@ -125,15 +125,15 @@ async increment() {
 
 
 <!-- ## Hiding ignore-listed sources in the Sources panel {: #ignore-nav } -->
-## Скрытые источников из списка игнорируемых во вкладке Источники (Sources) {: #ignore-nav }
+## Скрытие источников из списка игнорируемых во вкладке Источники (Sources) {: #ignore-nav }
 
 <!-- Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code. -->
-Включите настроку **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) чтобы спрятать нерелевантные файлы в панели **Навигация** (Navigation). 
+Включите настроку **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources), чтобы спрятать нерелевантные файлы в панели **Навигация** (Navigation). 
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). In the **Sources** panel. The `node_modules` and `webpack` are the third-party scripts. Click on the 3-dot menu and select **hide ignore-listed sources** to hide them from the pane. -->
-Откройте это [демо](https://ng-devtools.netlify.app/). Перейдите на вкладку **Источники** (Sources). `node_modules` и `webpack` — сторонние скрипты. Нажмите на иконку меню  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; и выберите  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) чтобы спрятать такие файлы из дерева навигации.
+Откройте это [демо](https://ng-devtools.netlify.app/). Перейдите на вкладку **Источники** (Sources). `node_modules` и `webpack` — сторонние скрипты. Нажмите на иконку меню  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; и выберите  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources), чтобы спрятать такие файлы из дерева навигации.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Скрытые источников из списка игнорируемых во вкладке Источники (Sources)", width="800", height="449" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Скрытие источников из списка игнорируемых во вкладке Источники (Sources)", width="800", height="449" %}
 
 Задача в трекере Chromium: [1352488](https://crbug.com/1352488)
 
@@ -142,7 +142,7 @@ async increment() {
 ## Скрытие игнорируемых файлов из Меню Команд (Command Menu) {: #ignore-search }
 
 <!-- With the **hide ignore-listed sources** setting, you can find your file quicker with the [Command Menu](/docs/devtools/command-menu/). Previously, searching files in the **Command Menu** returns third-party files that might not be relevant to you. -->
-Благодаря настройке  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) вы можете быстрее искать свои файлы в [Меню Команд](/docs/devtools/command-menu/). Раньше поиск в ** Меню Команд** (Command Menu) показывал сторонние файлы, которые моглы быть не релевантны для вас.
+Благодаря настройке  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) вы можете быстрее искать свои файлы в [Меню Команд](/docs/devtools/command-menu/). Раньше поиск в ** Меню Команд** (Command Menu) показывал сторонние файлы, которые могли быть нерелевантны для вас.
 
 <!-- For example, enable the **hide ignore-listed sources** setting and click on the 3-dot menu. Select **Open file**. Type “ton” to search for button components. Previously, the results include files from `node_modules`, one of the `node_modules` files even shown up as the first result.  -->
 Для примера включите настройку  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) и нажмите на иконку меню  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}. Выберите **Открыть файл** (Open file). Напишите «ton» чтобы начать поиск компонента кнопки. Раньше в результатх поиска показывались бы файлы из `node_modules`. Один из файлов из `node_modules` был бы показан первым в списке результатов.
@@ -159,7 +159,7 @@ async increment() {
 ## Новый трек Взаимодействия (Interactions) во вкладке Производительность (Performance) {: #performance }
 
 <!-- Use the new **Interactions** track in the **Performance** panel to visualize interactions and track down potential responsiveness issues.  -->
-Используйте новый трек **Взаимодействия** (Interactions) во вкладке **Производительность** (Performance) чтобы визуализировать взаимодействия и отследить потенциальные проблемы с отзывчивостью.
+Используйте новый трек **Взаимодействия** (Interactions) во вкладке **Производительность** (Performance), чтобы визуализировать взаимодействия и отследить потенциальные проблемы с отзывчивостью.
 
 <!-- For example, [start a performance recording](/docs/devtools/evaluate-performance/#record ) on this [demo page](https://coffee-cart.netlify.app/?ad=1). Click on a coffee and stop recording. Two interactions show in the **Interactions** track. Both interactions have the same IDs, indicating the interactions are triggered from the same user interaction. -->
 Например, [начните запись производительности](/docs/devtools/evaluate-performance/#record ) на этой [демо-странице](https://coffee-cart.netlify.app/?ad=1). Кликните на кофе и остановите запись. Два взаимодействия будут показаны на треке **Взаимодействия** (Interactions). Оба взаимодействия имеют одинаковый ID, показывая, что взаимодействия произошли от одного действия пользователя.
