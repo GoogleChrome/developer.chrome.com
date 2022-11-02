@@ -31,7 +31,7 @@ tags:
 
 您现在可以在 DevTools (开发者工具) 里客制化您喜爱的键盘快捷键。
 
-在 ** 设置 （Settings）** > ** 快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击 ** 编辑 ** 的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
+在 ** 设置 （Settings）** > **快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
@@ -40,7 +40,7 @@ tags:
 Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.com/174309)
 
 
-## 使用键盘快捷键对浅色与深色主题进行快速切换。 {: #toggle-themes }
+## 使用键盘快捷键对浅色与深色主题进行快速切换 {: #toggle-themes }
 
 
 <!-- Configure a keyboard shortcut to toggle [light and dark themes](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) conveniently. By default, the action doesn’t map to any keyboard shortcut. -->
@@ -72,7 +72,7 @@ Chromium 议题: [1336568](https://crbug.com/1336568)
 
 ## 支持 HAR 导入的完整启动器 （Initiator）的讯息。{: #har } 
 
-[HAR import] 的完整 ** 启动器 （Initiator） ** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, ** 网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
+[HAR import] 的完整 **启动器 （Initiator）** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
 
 完整的启动器讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
@@ -86,15 +86,15 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 ## 点击 ` 回车键 （Enter) `后开始 DOM 搜索。 {: #search-type } 
 
-您现在可以禁止 ** 即输即搜 （Search as you type） ** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
+您现在可以禁止 **即输即搜 （Search as you type）** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
-在 ** 元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏，每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
+在**元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏，每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
 
 对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在用户输入时, 不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
-打开 ** 设置 (Settings) ** > ** 偏好设置 (Preferences) ** , 禁止 ** 即输即搜 (Search as you type) ** , 更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
+打开 **设置 (Settings)** > **偏好设置 (Preferences)** , 禁止 **即输即搜 (Search as you type)** , 更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type setting.", width="800", height="449" %}
 
@@ -105,7 +105,7 @@ Chromium 议题: [1344526](https://crbug.com/1344526)
 
 ## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
 
-在 ** 样式 (Styles) **边栏中, 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。
+在 **样式 (Styles)**边栏中, 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。
 您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="align-content 的 CSS flexbox 属性", width="800", height="424" %}
@@ -117,7 +117,7 @@ Chromium 议题: [1139945](https://crbug.com/1139945)
 
  ## 其他的更新 {: #misc } 
 
- 在 ** 控制台 (Console) ** 中显示正确的网页错误计数。
+ 在 **控制台 (Console)** 中显示正确的网页错误计数。
  在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。
 ([1343311](https://crbug.com/1343311)) 
 
