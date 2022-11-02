@@ -6,9 +6,10 @@ subhead: >
 description: >
   A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2022-10-28
+updated: 2022-11-02
 authors:
-  - samdutton
+  - leeronisrael
+  - joeytrotz
 ---
 
 This is a landing page for the latest information about the Topics API for the web.

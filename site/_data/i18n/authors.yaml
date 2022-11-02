@@ -1147,3 +1147,13 @@ chrisdavidmills:
     en: 'Chris Mills'
   description:
     en: 'Independent tech writer specializing in web platform docs.'
+leeronisrael:
+  title:
+    en: 'Leeron Israel'
+  description:
+    en: 'Product Manager, Privacy Sandbox'
+joeytrotz:
+  title:
+    en: 'Joey Trotz'
+  description:
+    en: 'Director of Product Management, Privacy Sandbox'
