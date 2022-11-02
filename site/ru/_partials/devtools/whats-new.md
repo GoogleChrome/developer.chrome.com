@@ -14,16 +14,15 @@
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-108/#misc)
  -->
 
-<!-- ### Chrome 107 {: #chrome107 }
+### Chrome 107 {: #chrome107 }
 
-* [Customize keyboard shortcuts in DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
-* [Toggle light and dark themes with keyboard shortcut](/ru/blog/new-in-devtools-107/#toggle-themes)
-* [Highlight C/C++ objects in the Memory Inspector](/ru/blog/new-in-devtools-107/#memory)
-* [Support full initiator information for HAR import](/ru/blog/new-in-devtools-107/#har)
-* [Start DOM search after pressing `Enter`](/ru/blog/new-in-devtools-107/#search-type)
-* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ru/blog/new-in-devtools-107/#flexbox)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-107/#misc)
- -->
+* [Кастомизация сочетаний клавиш в DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
+* [Переключение между светлой и тёмной темами по сочетанию клавиш](/ru/blog/new-in-devtools-107/#toggle-themes)
+* [Подсветка объектов C/C++ в Инспекторе памяти (Memory Inspector)](/ru/blog/new-in-devtools-107/#memory)
+* [Поддержка полной информации об инициаторе для импорта HAR](/ru/blog/new-in-devtools-107/#har)
+* [Начало поиска по DOM по нажатию по <kbd>Enter</kbd>](/ru/blog/new-in-devtools-107/#search-type)
+* [Отображение иконок `start` и `end` для свойства флексбокса `align-content`](/ru/blog/new-in-devtools-107/#flexbox)
+* [Другие важные моменты](/ru/blog/new-in-devtools-107/#misc)
 
 <!-- ### Chrome 106 {: #chrome106 }
 
