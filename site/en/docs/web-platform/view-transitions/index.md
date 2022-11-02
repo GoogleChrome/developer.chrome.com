@@ -1,25 +1,21 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: Smooth and simple page transitions with the shared element transition API
+layout: 'layouts/doc-post.njk'
+title: Smooth and simple transitions with the View Transitions API
 authors:
   - jakearchibald
 description: >
-  The shared element transition API allows page transitions within single-page apps, and is available as an origin trial now!
+  The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
 date: 2021-08-17
 updated: 2022-08-02
-hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/6bO4bz5DfFIZxiBMd1oW.jpg
-alt: A layout plan for a web page.
 ---
 
-{% Aside 'caution' %}
-Big changes are coming! Following developer and working group feedback, this feature is being renamed "View Transitions", and the API is being tweaked to better-integrate existing routers, and the [Navigation API](/docs/web-platform/navigation-api/).
-
-This article still applies to Chrome 104-108. However, Chrome 109 already has some of the changes, so the current demos won't work there. This article will be updated when the changes are complete.
+{% Aside %}
+This feature was previously called "Shared Element Transitions", and is sometimes referred to as "page transitions".
 {% endAside %}
 
-The Shared Element Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
+The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#document-transition` flag in Chrome 104+. You can also experiment with it in production via the [origin trial](/origintrials/#/view_trial/1762033354208706561).
+It's currently behind the `chrome://flags/#document-transition` flag in Chrome 109+.
 
 <style>
   .video-full-demo {
@@ -36,12 +32,12 @@ It's currently behind the `chrome://flags/#document-transition` flag in Chrome 1
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the Shared Element Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 104+ and the <code>chrome://flags/#document-transition</code> flag.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#document-transition</code> flag.</figcaption>
 </figure>
 
 ## Why do we need this feature?
 
-Page transitions look great, but they also communicate direction of flow, and make it clear which elements are related from page to page. They can even happen during data fetching, leading to a faster perception of performance.
+Page transitions not only look great, they also communicate direction of flow, and make it clear which elements are related from page to page. They can even happen during data fetching, leading to a faster perception of performance.
 
 But, we already have animation tools on the web, such as [CSS transitions](https://developer.mozilla.org/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions), [CSS animations](https://developer.mozilla.org/docs/Web/CSS/CSS_Animations/Using_CSS_animations), and the [Web Animation API](https://developer.mozilla.org/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API), so why do we need a new thing to move stuff around?
 
@@ -57,27 +53,26 @@ Additionally, although the current implementation targets single page apps (SPAs
 
 ## Standardization status
 
-We're currently tweaking the API and behavior in response to developer feedback, while working on a [draft specification](https://tabatkins.github.io/specs/css-shared-element-transitions/).
+The feature is being developed within the [W3C CSS Working Group](https://www.w3.org/groups/wg/css) as a [draft specification](https://drafts.csswg.org/css-view-transitions-1/).
 
-The feature is being discussed within the [W3C CSS Working Group](https://www.w3.org/groups/wg/css), and once we're happy with the API design, we'll request to move it onto the standards track.
+Once we're happy with the API design, we'll start the processes and checks required to ship this feature to stable.
 
-Developer feedback is really important at this stage, so please [file issues on GitHub](https://github.com/WICG/shared-element-transitions/) with suggestions and questions.
+Developer feedback is really important, so please [file issues on GitHub](https://github.com/WICG/shared-element-transitions/) with suggestions and questions.
 
 ## The simplest transition: A cross-fade
 
-The default Shared Element Transition is a cross-fade, so it serves as a nice introduction to the API:
+The default View Transition is a cross-fade, so it serves as a nice introduction to the API:
 
 ```js
 function spaNavigate(data) {
   // Fallback for browsers that don't support this API:
-  if (!document.createDocumentTransition) {
+  if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
   }
 
   // With a transition:
-  const transition = document.createDocumentTransition();
-  transition.start(() => updateTheDOMSomehow(data));
+  document.startViewTransition(() => updateTheDOMSomehow(data));
 }
 ```
 
@@ -109,29 +104,28 @@ Ok, a cross-fade isn't that impressive. Thankfully, transitions can be customize
 Taking the code sample from above:
 
 ```js
-const transition = document.createDocumentTransition();
-transition.start(() => updateTheDOMSomehow(data));
+document.startViewTransition(() => updateTheDOMSomehow(data));
 ```
 
-When `.start()` is called, the API captures the current state of the page. This includes taking a screenshot.
+When `.startViewTransition()` is called, the API captures the current state of the page. This includes taking a screenshot.
 
-Once that's complete, the callback passed to `.start()` is called. That's where the DOM is changed. Then, the API captures the new state of the page.
+Once that's complete, the callback passed to `.startViewTransition()` is called. That's where the DOM is changed. Then, the API captures the new state of the page.
 
 Once the state is captured, the API constructs a pseudo-element tree like this:
 
 ```diff
-::page-transition
-└─ ::page-transition-container(root)
-   └─ ::page-transition-image-wrapper(root)
-      ├─ ::page-transition-outgoing-image(root)
-      └─ ::page-transition-incoming-image(root)
+::view-transition
+└─ ::view-transition-group(root)
+   └─ ::view-transition-image-set(root)
+      ├─ ::view-transition-old(root)
+      └─ ::view-transition-new(root)
 ```
 
-The `::page-transition` sits in a top-layer, over everything else on the page.
+The `::view-transition` sits in a top-layer, over everything else on the page.
 
-`::page-transition-outgoing-image(root)` is a screenshot of the old state, and `::page-transition-incoming-image(root)` is a live representation of the new state. Both render as CSS 'replaced content' (like an `<img>`).
+`::view-transition-old(root)` is a screenshot of the old view, and `::view-transition-new(root)` is a live representation of the new view. Both render as CSS 'replaced content' (like an `<img>`).
 
-The outgoing image animates from `opacity: 1` to `opacity: 0`, while the incoming image animates from `opacity: 0` to `opacity: 1`, creating a cross-fade.
+The old view animates from `opacity: 1` to `opacity: 0`, while the new view animates from `opacity: 0` to `opacity: 1`, creating a cross-fade.
 
 All of the animation is performed using CSS animations, so they can be customized with CSS.
 
@@ -140,8 +134,8 @@ All of the animation is performed using CSS animations, so they can be customize
 All of the pseudo-elements above can be targeted with CSS, and since the animations are defined using CSS, you can modify them using existing CSS animation properties. For example:
 
 ```css
-::page-transition-outgoing-image(root),
-::page-transition-incoming-image(root) {
+::view-transition-old(root),
+::view-transition-new(root) {
   animation-duration: 5s;
 }
 ```
@@ -179,12 +173,12 @@ Ok, that's still not impressive. Instead, let's implement [Material Design's sha
   to { transform: translateX(-30px); }
 }
 
-::page-transition-outgoing-image(root) {
+::view-transition-old(root) {
   animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
 }
 
-::page-transition-incoming-image(root) {
+::view-transition-new(root) {
   animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
@@ -211,20 +205,20 @@ In this example, the animation always moves from right to left, which doesn't fe
 
 In the previous demo, the whole page is involved in the shared axis transition. That works for most of the page, but it doesn't seem quite right for the heading, as it slides out just to slide back in again.
 
-To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `page-transition-tag` to the element, and giving the element [`paint` containment](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment).
-
-{% Aside %}
-The paint containment requirement is being relaxed in future iterations of this API, where only [`layout` containment](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) is required.
-{% endAside %}
+To avoid this, you can extract the header from the rest of the page so it can be animated separately. This is done by assigning a `view-transition-name` to the element, and giving the element [`layout`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#layout_containment) or [`paint`](https://developer.mozilla.org/docs/Web/CSS/CSS_Containment#paint_containment) containment. `layout` containment has fewer restrictions, so it's usually the better choice.
 
 ```css
 .main-header {
-  page-transition-tag: main-header;
-  contain: paint;
+  view-transition-name: main-header;
+  contain: layout;
 }
 ```
 
-The value of `page-transition-tag` can be whatever you want (except for `none`, which means there's no transition tag). It's used to uniquely identify the element across the transition.
+The value of `view-transition-name` can be whatever you want (except for `none`, which means there's no transition name). It's used to _uniquely_ identify the element across the transition.
+
+{% Aside %}
+`view-transition-name` must be unique. If two rendered elements have the same `view-transition-name` at the same time, the transition will be skipped.
+{% endAside %}
 
 And the result of that:
 
@@ -244,15 +238,15 @@ Now the header stays in place and cross-fades.
 That CSS declaration caused the pseudo-element tree to change:
 
 ```diff
-::page-transition
-├─ ::page-transition-container(root)
-│  └─ ::page-transition-image-wrapper(root)
-│     ├─ ::page-transition-outgoing-image(root)
-│     └─ ::page-transition-incoming-image(root)
-└─ ::page-transition-container(main-header)
-   └─ ::page-transition-image-wrapper(main-header)
-      ├─ ::page-transition-outgoing-image(main-header)
-      └─ ::page-transition-incoming-image(main-header)
+::view-transition
+├─ ::view-transition-container(root)
+│  └─ ::view-transition-image-set(root)
+│     ├─ ::view-transition-old(root)
+│     └─ ::view-transition-new(root)
+└─ ::view-transition-container(main-header)
+   └─ ::view-transition-image-set(main-header)
+      ├─ ::view-transition-old(main-header)
+      └─ ::view-transition-new(main-header)
 ```
 
 There are now two transition containers. One for the header, and another for the rest. These can be targeted independently with CSS, and given different transitions. Although, in this case `main-header` was left with the default transition, which is a cross-fade.
@@ -267,8 +261,8 @@ That hasn't mattered until now, as the header is the same size and position both
 
 ```css
 .main-header-text {
-  page-transition-tag: main-header-text;
-  contain: paint;
+  view-transition-name: main-header-text;
+  contain: layout;
   width: fit-content;
 }
 ```
@@ -278,12 +272,12 @@ That hasn't mattered until now, as the header is the same size and position both
 So now we have three parts to play with:
 
 ```diff
-::page-transition
-├─ ::page-transition-container(root)
+::view-transition
+├─ ::view-transition-container(root)
 │  └─ …
-├─ ::page-transition-container(main-header)
+├─ ::view-transition-container(main-header)
 │  └─ …
-└─ ::page-transition-container(main-header-text)
+└─ ::view-transition-container(main-header-text)
    └─ …
 ```
 
@@ -303,12 +297,12 @@ But again, just going with the defaults:
 Now the heading text does a little satisfying slide across to make space for the back button.
 
 {% Aside %}
-Page transitions use a flat structure. In the real DOM, the heading text was in the header. But, during the transition, their respective `::page-transition-container`s are siblings. This is really handy when animating items from one container to another, as you don't need to worry about clipping from parent elements.
+View transitions use a flat structure. In the real DOM, the heading text was in the header. But, during the transition, their respective `::view-transition-container`s are siblings. This is really handy when animating items from one container to another, as you don't need to worry about clipping from parent elements.
 {% endAside %}
 
 ## Debugging transitions
 
-Since Shared Element Transitions are built on top of CSS animations, the animations panel in Chrome Dev Tools is great for debugging transitions.
+Since View Transitions are built on top of CSS animations, the animations panel in Chrome Dev Tools is great for debugging transitions.
 
 Using the animations panel, you can pause the next animation, then scrub back and forth through the animation. During this, the transition pseudo-elements can be found in the elements panel.
 
@@ -325,32 +319,30 @@ Using the animations panel, you can pause the next animation, then scrub back an
     muted="true",
     controls="true"
   %}
-  <figcaption>Debugging page transitions with Chrome Dev Tools.</figcaption>
+  <figcaption>Debugging View Transitions with Chrome Dev Tools.</figcaption>
 </figure>
 
 ## Transitioning elements don't need to be the same DOM element
 
-So far we've used `page-transition-tag` to create separate transition elements for the header, and the text in the header. These are conceptually the same element before and after the DOM change, but you can create transitions where that isn't the case.
+So far we've used `view-transition-name` to create separate transition elements for the header, and the text in the header. These are conceptually the same element before and after the DOM change, but you can create transitions where that isn't the case.
 
-For instance, the main video embed can be given a `page-transition-tag`:
+For instance, the main video embed can be given a `view-transition-name`:
 
 ```css
 .full-embed {
-  page-transition-tag: full-embed;
-  contain: paint;
+  view-transition-name: full-embed;
+  contain: layout;
 }
 ```
 
-Then, when the thumbnail is clicked, it can be given the same `page-transition-tag`, just for the duration of the transition:
+Then, when the thumbnail is clicked, it can be given the same `view-transition-name`, just for the duration of the transition:
 
 ```js
 thumbnail.onclick = async () => {
-  const transition = document.createDocumentTransition();
+  thumbnail.style.viewTransitionName = 'full-embed';
 
-  thumbnail.style.pageTransitionTag = 'full-embed';
-
-  await transition.start(() => {
-    thumbnail.style.pageTransitionTag = '';
+  document.startViewTransition(() => {
+    thumbnail.style.viewTransitionName = '';
     updateTheDOMSomehow();
   });
 };
@@ -369,32 +361,30 @@ And the result:
   <figcaption>One element transitioning to another. <a href="https://simple-set-demos.glitch.me/6-expanding-image/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=6-expanding-image%2Fscript.js%3A15%3A17">Source</a>.</figcaption>
 </figure>
 
-The thumbnail now transitions into the main image. Even though they're conceptually (and literally) different elements, the transition API treats them as the same thing because they shared the same `page-transition-tag`.
+The thumbnail now transitions into the main image. Even though they're conceptually (and literally) different elements, the transition API treats them as the same thing because they shared the same `view-transition-name`.
 
 The real code for this is a little more complicated than the simple example above, as it also handles the transition back to the thumbnail page. [See the source](https://glitch.com/edit/#!/simple-set-demos?path=6-expanding-image%2Fscript.js%3A15%3A17) for the full implementation.
 
 ## Async DOM updates, and waiting for content
 
-The callback passed to `.start()` can return a promise, which allows for async DOM updates, and waiting for important content to be ready.
+The callback passed to `.startViewTransition()` can return a promise, which allows for async DOM updates, and waiting for important content to be ready.
 
 ```js
-const transition = document.createDocumentTransition();
-transition.start(async () => {
+document.startViewTransition(async () => {
   await something;
   await updateTheDOMSomehow();
   await somethingElse;
 });
 ```
 
-The transition won't be started until the promise fulfills. During this time, the page is frozen, so delays here should be kept to a minimum. Specifically, network fetches should be done before calling `.start()`, while the page is still fully interactive, rather than doing them as part of the `.start()` callback.
+The transition won't be started until the promise fulfills. During this time, the page is frozen, so delays here should be kept to a minimum. Specifically, network fetches should be done before calling `.startViewTransition()`, while the page is still fully interactive, rather than doing them as part of the `.startViewTransition()` callback.
 
 If you decide to wait for images or fonts to be ready, be sure to use an aggressive timeout:
 
 ```js
 const wait = ms => new Promise(r => setTimeout(r, ms));
 
-const transition = document.createDocumentTransition();
-transition.start(async () => {
+document.startViewTransition(async () => {
   updateTheDOMSomehow();
 
   // Pause for up to 100ms for fonts to be ready:
@@ -420,23 +410,23 @@ In the case where the thumbnail transitions to a larger image:
 
 The default transition is to cross-fade, which means the thumbnail could be cross-fading with a not-yet-loaded full image.
 
-One way to handle this is to wait for the full image to load before starting the transition. Ideally this would be done before calling `.start()`, so the page remains interactive, and a spinner can be shown to indicate to the user that things are loading. But in this case there's a better way:
+One way to handle this is to wait for the full image to load before starting the transition. Ideally this would be done before calling `.startViewTransition()`, so the page remains interactive, and a spinner can be shown to indicate to the user that things are loading. But in this case there's a better way:
 
 ```css
-::page-transition-outgoing-image(full-embed),
-::page-transition-incoming-image(full-embed) {
+::view-transition-old(full-embed),
+::view-transition-new(full-embed) {
   /* Prevent the default animation,
   so both images remain opacity:1 throughout the transition */
   animation: none;
   /* Use normal blending,
-  so the incoming image sits on top and obscures the outgoing image */
+  so the new view sits on top and obscures the old view */
   mix-blend-mode: normal;
 }
 ```
 
-Now the thumbnail doesn't fade away, it just sits underneath the full image. This means if the incoming image hasn't loaded, the thumbnail is visible throughout the transition. This means the transition can start straight away, and the full image can load in its own time.
+Now the thumbnail doesn't fade away, it just sits underneath the full image. This means if the new view hasn't loaded, the thumbnail is visible throughout the transition. This means the transition can start straight away, and the full image can load in its own time.
 
-This wouldn't work if the incoming image featured transparency, but in this case we know it doesn't, so we can make this optimization.
+This wouldn't work if the new view featured transparency, but in this case we know it doesn't, so we can make this optimization.
 
 ## Handling changes in aspect ratio
 
@@ -459,18 +449,18 @@ Conveniently, all the transitions so far have been to elements with the same asp
   <figcaption>One element transitioning to another, with an aspect ratio change. <a href="https://simple-set-demos.glitch.me/7-expanding-image-ratio/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=7-expanding-image-ratio%2Fstyles.css%3A59%3A0">Source</a>.</figcaption>
 </figure>
 
-In the default transition, the container animates from the before size to the after size. The outgoing and incoming images are 100% width of the container, and auto height, meaning they keep their aspect ratio regardless of the container's size.
+In the default transition, the container animates from the before size to the after size. The outgoing and new views are 100% width of the container, and auto height, meaning they keep their aspect ratio regardless of the container's size.
 
 This is a good default, but it isn't what we want in this case. So:
 
 ```css
-::page-transition-outgoing-image(full-embed),
-::page-transition-incoming-image(full-embed) {
+::view-transition-old(full-embed),
+::view-transition-new(full-embed) {
   /* Prevent the default animation,
   so both images remain opacity:1 throughout the transition */
   animation: none;
   /* Use normal blending,
-  so the incoming image sits on top and obscures the outgoing image */
+  so the new view sits on top and obscures the old view */
   mix-blend-mode: normal;
   /* Make the height the same as the container,
   meaning the image size might not match its aspect-ratio. */
@@ -479,15 +469,15 @@ This is a good default, but it isn't what we want in this case. So:
   overflow: clip;
 }
 
-/* The outgoing image is the thumbnail */
-::page-transition-outgoing-image(full-embed) {
+/* The old view is the thumbnail */
+::view-transition-old(full-embed) {
   /* Maintain the aspect ratio of the image,
   by shrinking it to fit within the bounds of the element */
   object-fit: contain;
 }
 
-/* The incoming image is the full image */
-::page-transition-incoming-image(full-embed) {
+/* The new view is the full image */
+::view-transition-new(full-embed) {
   /* Maintain the aspect ratio of the image,
   by growing it to cover the bounds of the element */
   object-fit: cover;
@@ -497,7 +487,7 @@ This is a good default, but it isn't what we want in this case. So:
 This means the thumbnail stays in the center of the element as the width expands, but the full image 'un-crops' as it transitions from 1:1 to 16:9.
 
 {% Aside %}
-Animating width and height, as happens here on the `::page-transition-container`, is generally frowned upon in web performance circles as it runs layout per frame. However, for page transitions, we plan to optimize it so it can run off the main thread in most cases. This optimization hasn't been implemented yet.
+Animating width and height, as happens here on the `::view-transition-container`, is generally frowned upon in web performance circles as it runs layout per frame. However, for View Transitions, we plan to optimize it so it can run off the main thread in most cases. This optimization hasn't been implemented yet.
 {% endAside %}
 
 ## Changing the transition depending on device state
@@ -520,30 +510,30 @@ This can be achieved using regular media queries:
 <!-- prettier-ignore -->
 ```css
 /* Transitions for mobile */
-::page-transition-outgoing-image(root) {
+::view-transition-old(root) {
   animation: 300ms ease-out both full-slide-to-left;
 }
 
-::page-transition-incoming-image(root) {
+::view-transition-new(root) {
   animation: 300ms ease-out both full-slide-from-right;
 }
 
 @media (min-width: 500px) {
   /* Overrides for larger displays.
   This is the shared axis transition from earlier in the article. */
-  ::page-transition-outgoing-image(root) {
+  ::view-transition-old(root) {
     animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
       300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
   }
 
-  ::page-transition-incoming-image(root) {
+  ::view-transition-new(root) {
     animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
       300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
   }
 }
 ```
 
-You may also want to change which elements you assign a `page-transition-tag` depending on matching media queries.
+You may also want to change which elements you assign a `view-transition-name` depending on matching media queries.
 
 ### Reacting to the 'reduced motion' preference
 
@@ -553,9 +543,9 @@ You could chose to prevent any transitions for these users:
 
 ```css
 @media (prefers-reduced-motion) {
-  ::page-transition-container(*),
-  ::page-transition-outgoing-image(*),
-  ::page-transition-incoming-image(*) {
+  ::view-transition-container(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
     animation: none !important;
   }
 }
@@ -585,10 +575,18 @@ if (isBackNavigation) {
   document.documentElement.classList.add('back-transition');
 }
 
-const transition = document.createDocumentTransition();
-await transition.start(() => updateTheDOMSomehow(data));
-document.documentElement.classList.remove('back-transition');
+const transition = document.startViewTransition(() =>
+  updateTheDOMSomehow(data)
+);
+
+try {
+  await transition.finished;
+} finally {
+  document.documentElement.classList.remove('back-transition');
+}
 ```
+
+This example uses `transition.finished`, a promise that resolves once the transition has reached its end state. Other properties of this object are covered in the [API reference](#api-reference).
 
 {% Aside %}
 The above doesn't define how `isBackNavigation` is determined, as that depends on how the navigation is performed. [The Navigation API](/docs/web-platform/navigation-api/) is really useful here, and that's what's used in the [minimal demo](https://glitch.com/edit/#!/simple-set-demos?path=directional-transition%2Fscript.js%3A16%3A0).
@@ -599,29 +597,29 @@ Now you can use that class name in your CSS to change the transition:
 <!-- prettier-ignore -->
 ```css
 /* 'Forward' transitions */
-::page-transition-outgoing-image(root) {
+::view-transition-old(root) {
   animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
     300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
 }
 
-::page-transition-incoming-image(root) {
+::view-transition-new(root) {
   animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in, 300ms
       cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
 
 /* Overrides for 'back' transitions */
-.back-transition::page-transition-outgoing-image(root) {
+.back-transition::view-transition-old(root) {
   animation-name: fade-out, slide-to-right;
 }
 
-.back-transition::page-transition-incoming-image(root) {
+.back-transition::view-transition-new(root) {
   animation-name: fade-in, slide-from-left;
 }
 ```
 
-As with media queries, the presence of these classes could also be used to change which elements get a `page-transition-tag`.
+As with media queries, the presence of these classes could also be used to change which elements get a `view-transition-name`.
 
-## Animating with JavaScript
+## Animating with JavaScript {:#animating-with-javascript}
 
 So far, all the transitions have been defined using CSS, but sometimes CSS isn't enough:
 
@@ -649,14 +647,13 @@ addEventListener('click', event => (lastClick = event));
 
 function spaNavigate(data) {
   // Fallback for browsers that don't support this API:
-  if (!document.createDocumentTransition) {
+  if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
   }
 
   // With a transition:
-  const transition = document.createDocumentTransition();
-  transition.start(() => {
+  const transition = document.startViewTransition(() => {
     // Get the click position, or fallback to the middle of the screen
     const x = lastClick?.clientX ?? innerWidth / 2;
     const y = lastClick?.clientY ?? innerHeight / 2;
@@ -666,83 +663,176 @@ function spaNavigate(data) {
     );
 
     updateTheDOMSomehow(data);
+  });
 
-    // Use requestAnimationFrame to wait for the pseudo-elements to be created:
-    requestAnimationFrame(() => {
-      // Animate the root's incoming image
-      document.documentElement.animate(
-        [
-          {clipPath: `circle(0 at ${x}px ${y}px)`},
-          {clipPath: `circle(${endRadius}px at ${x}px ${y}px)`},
+  // Wait for the pseudo-elements to be created:
+  transition.ready.then(() => {
+    // Animate the root's new view
+    document.documentElement.animate(
+      {
+        clipPath: [
+          `circle(0 at ${x}px ${y}px)`,
+          `circle(${endRadius}px at ${x}px ${y}px)`,
         ],
-        {
-          duration: 500,
-          easing: 'ease-in',
-          // Specify which pseudo-element to animate
-          pseudoElement: '::page-transition-incoming-image(root)',
-        }
-      );
-    });
+      },
+      {
+        duration: 500,
+        easing: 'ease-in',
+        // Specify which pseudo-element to animate
+        pseudoElement: '::view-transition-new(root)',
+      }
+    );
   });
 }
 ```
 
-{% Aside %}
-Although the above works, the ergonomics will be improved in future. Specifically:
+This example uses `transition.ready`, a promise that resolves once the transition pseudo-elements have been successfully created. Other properties of this object are covered in the [API reference](#api-reference).
 
-Using `requestAnimationFrame` to wait for the pseudo-elements is a bit weird. The [next iteration of the API](https://github.com/WICG/shared-element-transitions/issues/159#issuecomment-1153564740) will have a specific promise for this.
+## Transitions as an enhancement
 
-It's also a bit weird that the code appears to animate `document.documentElement`, only for an option (`pseudoElement`) to change the target of the animation. Fixing this is a larger piece of work, and involves [exposing pseudo-elements as DOM objects](https://drafts.csswg.org/css-pseudo-4/#cssom), so things like `animate` can be called on them directly.
-{% endAside %}
+The View Transition API is designed to 'wrap' a DOM change and create a transition for it. However, the transition should be treated as an enhancement, as in, your app shouldn't enter an 'error' state if the DOM change succeeds, but the transition fails. Ideally the transition shouldn't fail, but if it does, it shouldn't break the rest of the user experience.
 
-## API reference
+In order to treat transitions as an enhancement, take care not to use transition promises in a way that would cause your app to throw if the transition fails.
 
-`document.createDocumentTransition()`
-: Create a new `DocumentTransition`.
+{% Compare 'worse' %}
 
-Instance members of `DocumentTransition`:
+```js
+async function switchView(data) {
+  // Fallback for browsers that don't support this API:
+  if (!document.startViewTransition) {
+    await updateTheDOM(data);
+    return;
+  }
 
-`const finishedPromise = documentTransition.start(callback)`
-: `callback` is called once the current state of the document is captured.
+  const transition = document.startViewTransition(async () => {
+    await updateTheDOM(data);
+  });
 
-    Then, when the promise returned by `callback` fulfills, the transition begins in the next frame. If the promise returned by `callback` rejects, the transition is abandoned.
+  await transition.ready;
 
-    `finishedPromise` fulfills once the transition is complete, or rejects if the transition is abandoned.
+  document.documentElement.animate(
+    {
+      clipPath: [`inset(50%)`, `inset(0)`],
+    },
+    {
+      duration: 500,
+      easing: 'ease-in',
+      pseudoElement: '::view-transition-new(root)',
+    }
+  );
+}
+```
 
-`documentTransition.abandon()`
-: Abandon the transition, skipping to the final state.
+{% endCompare %}
 
-{% Aside %}
-This API will likely change after the origin trial, to improve usability.
-{% endAside %}
+The problem with this example is that `switchView()` will reject if the _transition_ cannot reach a `ready` state, but that doesn't mean that the view failed to switch. The DOM may have successfully updated, but there were duplicate `view-transition-name`s, so the transition was skipped.
+
+Instead:
+
+{% Compare 'better' %}
+
+```js
+async function switchView(data) {
+  // Fallback for browsers that don't support this API:
+  if (!document.startViewTransition) {
+    await updateTheDOM(data);
+    return;
+  }
+
+  const transition = document.startViewTransition(async () => {
+    await updateTheDOM(data);
+  });
+
+  animateFromMiddle(transition);
+
+  await transition.domUpdated;
+}
+
+async function animateFromMiddle(transition) {
+  try {
+    await transition.ready;
+
+    document.documentElement.animate(
+      {
+        clipPath: [`inset(50%)`, `inset(0)`],
+      },
+      {
+        duration: 500,
+        easing: 'ease-in',
+        pseudoElement: '::view-transition-new(root)',
+      }
+    );
+  } catch (err) {
+    // You might want to log this error, but it shouldn't break the app
+  }
+}
+```
+
+{% endCompare %}
+
+This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
+
+## API reference {:#api-reference}
+
+`const viewTransition = document.startViewTransition(domUpdateCallback)`
+: Start a new `ViewTransition`.
+
+    `domUpdateCallback` is called once the current state of the document is captured.
+
+    Then, when the promise returned by `domUpdateCallback` fulfills, the transition begins in the next frame. If the promise returned by `domUpdateCallback` rejects, the transition is abandoned.
+
+Instance members of `ViewTransition`:
+
+`viewTransition.domUpdated`
+: A promise that fulfills when the promise returned by `domUpdateCallback` fulfills, or rejects when it rejects.
+
+    The View Transition API wraps a DOM change and creates a transition. However, sometimes you don't care about the success/failure of the transition animation, you just want to know if and when the DOM change happens. `domUpdated` is for that use-case.
+
+`viewTransition.ready`
+: A promise that fulfills once the pseudo-elements for the transition are created, and the animation is about to start.
+
+    It rejects if the transition cannot begin. This can be due to misconfiguration, such as duplicate `view-transition-name`s, or if `domUpdateCallback` returns a rejected promise.
+
+    This is useful for [animating the transition pseudo-elements with JavaScript](#animating-with-javascript).
+
+`viewTransition.finished`
+: A promise that fulfills once the end state is fully visible and interactive to the user.
+
+    It only rejects if `domUpdateCallback` returns a rejected promise, as this indicates the end state wasn't created.
+
+    Otherwise, if a transition fails to begin, or is skipped during the transition, the end state is still reached, so `finished` fulfills.
+
+`viewTransition.skipTransition()`
+: Skip the animation part of the transition.
+
+    This won't skip calling `domUpdateCallback`, as the DOM change is separate to the transition.
 
 ## Default style and transition reference
 
-`::page-transition-container`
+`::view-transition`
+: The root pseudo-element which fills the viewport and contains each `::view-transition-container`.
+
+`::view-transition-container`
 : Absolutely positioned.
 
     Transitions `width` and `height` between the 'before' and 'after' states.
 
     Transitions `transform` between the 'before' and 'after' viewport-space quad.
 
-`::page-transition-image-wrapper`
+`::view-transition-image-set`
 : Absolutely positioned to fill the container.
 
-    Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the incoming and outgoing images. In the current implementation, removing this boosts performance in cases where `plus-lighter` isn't needed.
+    Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the incoming and old views.
 
-`::page-transition-incoming-image` and `::page-transition-outgoing-image`
+`::view-transition-new` and `::view-transition-old`
 : Absolutely positioned to the top-left of the wrapper.
 
     Fills 100% of the container width, but has an auto height, so it will maintain its aspect ratio rather than filling the container.
 
     Has `mix-blend-mode: plus-lighter` to allow for a true cross-fade.
 
-    The outgoing image transitions from `opacity: 1` to `opacity: 0`. The incoming image transitions from `opacity: 0` to `opacity: 1`.
+    The old view transitions from `opacity: 1` to `opacity: 0`. The new view transitions from `opacity: 0` to `opacity: 1`.
 
 ## Feedback
 
 Developer feedback is really important at this stage, so please [file issues on GitHub](https://github.com/WICG/shared-element-transitions/) with suggestions and questions.
-
-## Acknowledgements
-
-Hero image by [Sigmund](https://unsplash.com/@sigmund) on [Unsplash](https://unsplash.com/photos/4UGmm3WRUoQ).
