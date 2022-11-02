@@ -249,7 +249,7 @@ promises, but newer methods do. You can verify whether a method supports promise
 its API reference page. If you need to support both promises and callbacks for the same
 function (because your users have older browsers), you can test whether the method returns a
 promise using `typeof` and
-[optional chaning](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+[optional chaning](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
 For example:
 
 
@@ -356,7 +356,7 @@ with the following resources:
 [docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
 [manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
-[mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+[mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
 [mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
 [sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
