@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-05-13
+updated: 2022-11-02
 description: A high-level explanation of the software architecture of Chrome Extensions.
 subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
@@ -29,7 +29,7 @@ An extension's architecture will depend on its functionality, but all extensions
 ### The manifest {: #manifest }
 
 The manifest file, titled `manifest.json`, gives the browser information about the extension, such
-as the most important files and the capabilities the extension might use.
+as the most important files and the capabilities the extension might use. An example is shown below. For information and descriptions of what the manifest can contain, see [Mainfest file format][docs-manifest].
 
 ```json
 {
@@ -234,65 +234,33 @@ using [chrome.tabs.create()][api-create-tab] instead.
 
 For more information, explore the [Chrome API reference docs][api-reference].
 
-### Asynchronous vs. synchronous methods {: #async-sync }
+### Asynchronous methods {: #async-sync }
 
-#### Callbacks {: #callbacks }
+Most Chrome API methods are asynchronous; they return immediately without waiting for the operation to finish. If an extension needs to know the outcome of an asynchronous operation, there are two choices:
 
-Most Chrome API methods are asynchronous: they return immediately without waiting for the operation
-to finish. If an extension needs to know the outcome of an asynchronous operation it can pass a
-callback function into the method. The callback is executed later, potentially much later, after the
-method returns.
+* Use the returned promise.
+* Pass a callback function into the method.
 
-A method is asynchronous when the callback parameter is available in its signature.
+Note that these choiced are mutually exclusive. If you pass a callback to a method, no promise
+will be returned. If you use the returned promise, do not pass a callback.
+
+Generally, you should prefer promises to callbacks. Not all methods in extensions APIs support
+promises, but newer methods do. You can verify whether a method supports promises by checking
+its API reference page. If you need to support both promises and callbacks for the same
+function (because your users have older browsers), you can test whether the method returns a
+promise using `typeof` and
+[optional chaning](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+For example:
+
 
 ```js
-// Signature for an asynchronous method
-chrome.tabs.query(object queryInfo, function callback)
+typeof chrome.contextMenus.removeAll()?.then()
 ```
-
-If the extension needed to navigate the user's currently selected tab to a new URL, it would need to
-get the current tab's ID and then update that tab's address to the new URL.
-
-If the [tabs.query][api-tabs-query] method were synchronous, it may look something like below.
-
-{% Compare 'worse' %}
-```js
-let tab = chrome.tabs.query(queryOptions); //WRONG!!!
-chrome.tabs.update(tab.id, {url:newUrl});
-someOtherFunction();
-```
-{% CompareCaption %}
-
-This approach will fail because `query()` is **asynchronous**. It returns without waiting for the
-work to complete, and does not return a value.
-
-{% endCompareCaption %}
-
-{% endCompare %}
-
-To correctly query a tab and update its URL the extension must use the callback parameter.
-
-{% Compare 'better' %}
-```js
-chrome.tabs.query(queryOptions, function(tabs) {
-  chrome.tabs.update(tabs[0].id, {url: newUrl});
-});
-someOtherFunction();
-```
-
-{% endCompare %}
-
-In the above code, the lines are executed in the following order: 1, 4, 2. The callback function
-specified to `query()` is called and then executes line 2, but only after information about the
-currently selected tab is available. This happens sometime after `query()` returns. Although
-`update()` is asynchronous the code doesn't use a callback parameter, since the extension doesn't do
-anything with the results of the update.
 
 #### Promises {: #async }
 
-With the introduction of Manifest V3, many extension API methods now return promises. Not all
-methods in extensions APIs support promises. You can verify whether a method supports promises by
-checking its API reference page.
+Both methods of handling promises are supported. See [Using promises][docs-promises] to learn
+more.
 
 ```js
 // Promise
@@ -310,16 +278,14 @@ async function queryTab() {
 }
 ```
 
-See [Using promises][docs-promises] to learn more.
+#### Callbacks {: #callbacks }
 
-#### Synchronous methods {: #sync }
+A method is asynchronous when the callback parameter is available in its signature.
 
 ```js
-// Synchronous methods have no callback
-const imgUrl = chrome.runtime.getURL("images/icon.png")
+// Signatures for an asynchronous method
+chrome.tabs.query(object queryInfo, function callback)
 ```
-
-This method synchronously returns the URL as a `string` and performs no other asynchronous work.
 
 ## Communication between pages {: #pageComm }
 
