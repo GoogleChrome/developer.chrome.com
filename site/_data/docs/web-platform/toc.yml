@@ -15,6 +15,7 @@
   sections:
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/webgpu
+    - url: /docs/web-platform/popup-api
 
 - title: i18n.docs.web-platform.developer-trials
   sections:

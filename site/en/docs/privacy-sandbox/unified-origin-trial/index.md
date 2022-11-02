@@ -29,7 +29,58 @@ your configuration, and provides further resources for testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### October 2022
+### October 2022: 5% increase
+
+Attribution Reporting, Topics, FLEDGE, and Fenced Frames are all currently
+available in Chrome Stable and will be part of the increased traffic. We will
+start increasing traffic for Attribution Reporting and Topics from this week,
+FLEDGE and Fenced Frames will increase from November 9th. Read more in the
+[Increasing the Privacy Sandbox Relevance and Measurement origin trial to
+5%](/blog/privacy-sandbox-origin-trial-increase/) blog post.
+
+<table>
+  <tr>
+   <th>API</th>
+   <th>Notes</th>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
+   </td>
+   <td>Available in Stable, increasing to 5% after October 26th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
+   </td>
+   <td>Available in Stable, increasing to 5% after October 26th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
+   </td>
+   <td>Only available in M105+ Canary, Dev, and Beta for now.
+   </td>
+  </tr>
+</table>
+
+{% Details %} {% DetailsSummary %}
+### Previous updates
+
+Check out previous updates on the origin trial. {% endDetailsSummary %}
+
+#### October 2022
 
 -  Origin trial has been [extended to Chrome
 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8).
@@ -104,12 +155,7 @@ Only available in M105+ Canary, Dev, and Beta for now.
   </tbody>
 </table>
 
-{% Details %} {% DetailsSummary %}
-### Previous updates
-
-Check out previous updates on the origin trial. {% endDetailsSummary %}
-
-### August 2022
+#### August 2022
 
 -  Origin trial availability ramps up to [1% of desktop users from Chrome Stable
     104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
@@ -372,17 +418,18 @@ site.
 
 ## Control your participation in the origin trial {: #control-participation }
 
+The mechanics of the origin trial remain the same: you obtain origin trial
+tokens for the contexts where you want to experiment with the APIs. With the
+expanded testing population, you should ensure that you are actively monitoring
+and controlling the level of traffic where you choose to enable the trial.
+
 {% Aside %}
-
-The percentage of Chrome traffic enabled for the origin trial will not directly
-correspond to that same proportion of traffic for your site. The actual
-proportion of traffic your sites and services receive will depend on the make-up
-of your visitors.
-
+5% of Chrome Stable traffic won’t directly correspond to 5% of your own traffic.
+The actual proportion of traffic your sites and services receive will depend on
+the make-up of your visitors.
 {% endAside %}
 
-You should ensure that you are actively monitoring and controlling the level of
-traffic where you choose to enable the trial. A good approach here is to:
+A good approach here is to:
 
 1. Include the origin trial tokens by default in all contexts where you wish to
    experiment.
@@ -405,7 +452,7 @@ Origin trial tokens expire six weeks from their issue date (or at the end of the
 trial if that's sooner).
 
 It’s critical that you [renew and deploy your new
-tokens](//docs/web-platform/origin-trials/#renew) within that window for
+tokens](/docs/web-platform/origin-trials/#renew) within that window for
 uninterrupted use of the origin trial features.
 
 Renewing tokens only takes a few minutes, and you can deploy multiple tokens for
@@ -413,12 +460,10 @@ the same trial within the same page. You can deploy a renewed token before your
 existing token expires, so there's no break in service for users.
 
 {% Aside 'caution'%}
-
 Renewing a token at the end of October only takes you through to early December.
 If you have a code freeze over the end of the year, you will either want to
 ensure that you can still deploy an updated token or plan to pause participation
 in the origin trial over that period.
-
 {% endAside %}
 
 ## Test locally {: #test-locally}

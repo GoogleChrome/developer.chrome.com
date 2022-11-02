@@ -1,13 +1,14 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Run Snippets of JavaScript"
+title: "Run snippets of JavaScript"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2015-10-12
-#updated: YYYY-MM-DD
+updated: 2022-10-20
 description:
   "Snippets are small scripts that you can author and execute within the Sources panel of Chrome
-  DevTools. You can access and run them from any page. When you run a Snippet, it executes from the
+  DevTools. You can access and run them from any page. When you run a snippet, it executes from the
   context of the currently open page."
 tags:
   - javascript
@@ -15,145 +16,120 @@ tags:
 ---
 
 If you find yourself running the same code in the [**Console**][1] repeatedly, consider saving the
-code as a Snippet instead. Snippets are scripts that you author in the [**Sources** panel][2]. They
+code as a snippet instead. Snippets are scripts that you author in the [**Sources** panel][2]. They
 have access to the page's JavaScript context, and you can run them on any page. Snippets are an
-alternative to [bookmarklets][3]. Firefox DevTools has a feature similar to Snippets called
-[Scratchpad][4].
+alternative to [bookmarklets][3].
 
-For example, **Figure 1** shows the DevTools homepage on the left and some Snippet source code on
-the right.
+For example, the screenshot below shows the DevTools documentation homepage on the left and some snippet source code in the **Sources** > **Snippets** pane on the right.
 
-{% Img src="image/admin/EWQszqRC7ElFmBEL7F7N.png", alt="How the page looks before running the Snippet.", width="800", height="514" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TYnLVgJrfZtcqjP9eEyT.png", alt="The DevTools documentation homepage before running the snippet. The Run button is highlighted.", width="800", height="483" %}
 
-**Figure 1**. How the page looks before running the Snippet.
-
-Here's the Snippet source code from **Figure 1**:
+Here's the snippet source code that [logs some message](/docs/devtools/console/log/) and replaces the homepage's HTML body with a `<p>` element that contains the message:
 
 ```js
 console.log('Hello, Snippets!');
 document.body.innerHTML = '';
-var p = document.createElement('p');
+const p = document.createElement('p');
 p.textContent = 'Hello, Snippets!';
 document.body.appendChild(p);
 ```
 
-**Figure 2** shows how the page looks after running the Snippet. The **Console Drawer** pops up to
-display the `Hello, Snippets!` message that the Snippet logs, and the page's content changes
-completely.
+When you click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MaSHbLXzcTFbxhx9K8hX.svg", alt="Run.", width="24", height="24" %} **Run** button, the [**Console** drawer](/docs/devtools/console/) pops up to display the `Hello, Snippets!` message that the snippet logs, and the page's content changes.
 
-{% Img src="image/admin/0LdPF6MB3EzkAu04pXYs.png", alt="How the page looks after running the Snippet.", width="800", height="514" %}
-
-**Figure 2**. How the page looks after running the Snippet.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vsJ9UtrJHaBTXASCJmVl.png", alt="The homepage after running the snippet.", width="800", height="483" %}
 
 ## Open the Snippets pane {: #open }
 
-The **Snippets** pane lists your Snippets. When you want to edit a Snippet, you need to open it from
-the **Snippets** pane.
+The **Snippets** pane lists your snippets. To edit a snippet, open it in one of two ways:
 
-{% Img src="image/admin/P9yNZWUJKt2hUUYsDy1v.png", alt="The Snippets pane.", width="800", height="573" %}
+- Navigate to **Sources** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XJkvYrQpjC40JNYnoNAw.svg", alt="More tabs.", width="24", height="24" %} **More tabs** > **Snippets**.
 
-**Figure 3**. The **Snippets** pane.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/a6oQMn9OhKw0QYVjKgcl.png", alt="The More tabs menu on the Sources pane.", width="800", height="455" %}
 
-### Open the Snippets pane with a mouse {: #openmouse }
+- From the [**Command Menu**](/docs/devtools/command-menu/):
 
-1.  Click the **Sources** tab to open the **Sources** panel. The **Page** pane usually opens by
-    default.
+  1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the **Command Menu**.
+  1. Start typing `Snippets`, select **Show Snippets**, and press <kbd>Enter</kbd>.
 
-    {% Img src="image/admin/rloloE1a9afaWUDo4Typ.png", alt="The Sources panel with the Page pane open on the left.", width="800", height="589" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qdz4GlZKxgo3OGsMBNVW.png", alt="Selecting Show Snippets from the Command Menu.", width="800", height="455" %}
 
-    **Figure 4**. The **Sources** panel with the **Page** pane open on the left.
+The **Sources** > **Snippets** pane shows you a list of snippets you saved, empty in this example.
 
-2.  Click the **Snippets** tab to open the **Snippets** pane. You might need to click **More Tabs**
-    {% Img src="image/admin/kXITLxKrpFwp1ir6Tl3b.png", alt="More Tabs", width="18", height="16" %} in order to access the
-    **Snippets** option.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/anW1OzkdZIl1UGTvZHEC.png", alt="An empty Snippets pane.", width="800", height="397" %}
 
-### Open the Snippets pane with the Command Menu {: #opencommandmenu }
+## Create snippets {: #create }
 
-1.  Focus your cursor somewhere inside of DevTools.
-2.  Press Control+Shift+P or Command+Shift+P (Mac) to open the Command Menu.
-3.  Start typing `Snippets`, select **Show Snippets**, and then press Enter to run the command.
+You can create snippets in the **Snippets** pane or by running the corresponding command from the **Command Menu** anywhere in DevTools.
 
-    {% Img src="image/admin/6zVZHNVXNXxMP2SziTMa.png", alt="The Show Snippets command.", width="800", height="573" %}
+The **Snippets** pane sorts your snippets in alphabetical order.
 
-    **Figure 5**. The **Show Snippets** command.
-
-## Create Snippets {: #create }
-
-### Create a Snippet through the Sources panel {: #createsources }
+### Create a snippet in the Sources panel {: #create-sources }
 
 1.  [Open the **Snippets** pane][5].
-2.  Click **New snippet**.
-3.  Enter a name for your Snippet then press Enter to save.
+2.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="New snippet.", width="24", height="24" %} **New snippet**.
+3.  Enter a name for your snippet and press <kbd>Enter</kbd> to save.
 
-    {% Img src="image/admin/QCPp5Bcgm7Ns4pgYKGpS.png", alt="Naming a Snippet.", width="800", height="573" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oCTjWAPob5VqxI0GWkz6.png", alt="Naming a snippet.", width="800", height="397" %}
 
-    **Figure 6**. Naming a Snippet.
+### Create a snippet from the Command Menu {: #create-command-menu }
 
-### Create a Snippet through the Command Menu {: #createcommandmenu }
+1. Focus your cursor anywhere inside of DevTools.
+1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the **Command Menu**.
+1. Start typing `Snippet`, select **Create new snippet**, then press <kbd>Enter</kbd> to run the command.
 
-1.  Focus your cursor somewhere inside of DevTools.
-2.  Press Control+Shift+P or Command+Shift+P (Mac) to open the Command Menu.
-3.  Start typing `Snippet`, select **Create new snippet**, then press Enter to run the command.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S3sUv9Fyh9FFBKVCFvOH.png", alt="Selecting Create new snippet from the Command Menu.", width="800", height="397" %}
 
-    {% Img src="image/admin/THzXr6JqYkTv6lv83iSN.png", alt="The command for creating a new Snippet.", width="800", height="573" %}
+See [Rename snippets][6] if you'd like to give your new snippet a custom name.
 
-    **Figure 7**. The command for creating a new Snippet.
-
-See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
-
-## Edit Snippets {: #edit }
+## Edit snippets {: #edit }
 
 1.  [Open the **Snippets** pane][7].
-2.  In the **Snippets** pane click the name of the Snippet that you want to edit in order to open it
-    in the **Code Editor**.
+1.  In the **Snippets** pane, click the name of the snippet that you want to edit. The **Sources** panel opens it in the **Code Editor**.
 
-    {% Img src="image/admin/XEIt2GZsfU8MtZJqeDRv.png", alt="The Code Editor.", width="800", height="573" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/T3NLtPKuEraxm4QvUdWw.png", alt="A snippet opened in the Code Editor.", width="800", height="334" %}
 
-    **Figure 8**. The **Code Editor**.
+1.  Use the **Code Editor** to edit code in your snippet. An asterisk next to the snippet name means that you haven't saved your changes yet.
 
-3.  Use the **Code Editor** to add JavaScript to your Snippet.
-4.  When there's an asterisk next to the name of your Snippet it means you have unsaved code. Press
-    Control+S or Command+S (Mac) to save.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NZemthHxlUVsPhuHEGLl.png", alt="An asterisk next to the snippet name that indicates unsaved code.", width="800", height="334" %}
 
-    {% Img src="image/admin/Nz3usljhLTIN0SAvYHAs.png", alt="An asterisk next to the Snippet name, which indicates unsaved code.", width="800", height="573" %}
+1.   Press <kbd>Control</kbd>+<kbd>S</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>S</kbd> (Mac) to save.
 
-    **Figure 9**. An asterisk next to the Snippet name, which indicates unsaved code.
+## Run snippets {: #run }
 
-## Run Snippets {: #run }
+Similar to creating a snippet, you can run it both in the **Snippets** pane and from the **Command Menu**.
 
-### Run a Snippet from the Sources panel {: #runsources }
+### Run a snippet in the Sources panel {: #run-sources }
 
 1.  [Open the **Snippets** pane][8].
-2.  Click the name of the Snippet that you want to run. The Snippet opens in the **Code Editor**.
-3.  Click **Run Snippet** {% Img src="image/admin/uz8qSHNEFlBv9yiK7re1.png", alt="Run Snippet", width="20", height="20" %},
-    or press Control+Enter or Command+Enter (Mac).
+1.  Click the name of the snippet you want to run. The **Sources** panel opens it in the **Code Editor**.
+1.  Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MaSHbLXzcTFbxhx9K8hX.svg", alt="Run.", width="24", height="24" %} **Run** in the action bar at the bottom of the editor,
+    or press <kbd>Control</kbd>+<kbd>Enter</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac).
 
-### Run a Snippet with the Command Menu {: #runcommandmenu }
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ng3ZidWcXAaxLmR6MtDy.png", alt="The Run button.", width="800", height="334" %}
 
-1.  Focus your cursor somewhere inside of DevTools.
-2.  Press Control+O or Command+O (Mac) to open the Command Menu.
-3.  Type the `!` character followed by the name of the Snippet that you want to run.
+### Run a snippet from the Command Menu {: #run-command-menu }
 
-    {% Img src="image/admin/Ua8t4kX7zmVps6tntHOT.png", alt="Running a Snippet from the Command Menu.", width="800", height="603" %}
+1.  Focus your cursor anywhere inside of DevTools.
+1.  Press <kbd>Control</kbd>+<kbd>O</kbd> (Windows/Linux) or <kbd>Command</kbd>+<kbd>O</kbd> (Mac) to open the **Command Menu**.
+1.  Type the `!` character followed by the name of the snippet that you want to run.
 
-    **Figure 10**. Running a Snippet from the Command Menu.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jWa8jF8Tn1JxiTJmOq4j.png", alt="Running a snippet from the Open Menu.", width="800", height="346" %}
 
-4.  Press Enter to run the Snippet.
+1.  Press <kbd>Enter</kbd> to run the snippet.
 
-## Rename Snippets {: #rename }
+## Rename snippets {: #rename }
 
 1.  [Open the **Snippets** pane][9].
-2.  Right-click the Snippet name and select **Rename**.
+1.  Right-click the snippet name and select **Rename**.
 
-## Delete Snippets {: #delete }
+## Delete snippets {: #delete }
 
 1.  [Open the **Snippets** pane][10].
-2.  Right-click the Snippet name and select **Remove**.
+1.  Right-click the snippet name and select **Remove**.
 
 [1]: /docs/devtools/console
 [2]: /docs/devtools/javascript/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
-[4]: https://developer.mozilla.org/docs/Tools/Scratchpad
 [5]: #open
 [6]: #rename
 [7]: #open

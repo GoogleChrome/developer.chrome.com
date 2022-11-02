@@ -186,5 +186,5 @@ be the single purpose of the extension.
 
 [complaint-faq]: /docs/webstore/complaint-faq
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[spam-policy]: /docs/webstore/program_policies#spam
+[spam-policy]: /docs/webstore/program-policies/spam-and-abuse
 [test-accounts]: /docs/webstore/cws-dashboard-distribution#private-visibility-trusted-testers

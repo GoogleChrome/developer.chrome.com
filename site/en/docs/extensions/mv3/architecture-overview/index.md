@@ -70,8 +70,10 @@ popup", width="187", height="153" %}
 The extension service worker is the extension's event handler; it contains listeners for browser
 events that are important to the extension. It lies dormant until an event is fired then performs
 the instructed logic; it is only loaded when it is needed and unloaded when it goes idle. The
-service worker has access to all the [Chrome APIs][section-apis], as long it declares the
+service worker has access to all the [Chrome APIs][section-apis], as long as it declares the
 required permissions in the `manifest.json`.
+
+An extension can only have a single service worker. To import further code, the service worker can be declared as an [ES Module][webdev-imports] by specifying `"type": "module"` in the manifest `"background"`.
 
 See [Manage events with service workers][docs-service-worker] to learn more. 
 
@@ -149,9 +151,7 @@ See [Give users options][docs-options] to learn more.
 
 ### Additional HTML files {: #html-files}
 
-You can display other HTML files present in the extension that are not declared in the manifest.
-These HTML files can access the same [Chrome APIs][section-apis] as the popup or other extension
-files. 
+An extension can also have other HTML files that are not declared in the manifest. All extension HTML files can access the [Chrome APIs][section-apis] and can use script tags including Javascript files, but cannot declare inline JavaScript.
 
 You can open these pages using the web api [window.open()][mdn-window-open], the Chrome APIs
 [windows.create()][api-window-create], or [tabs.create()][api-create-tab].
@@ -388,11 +388,12 @@ with the following resources:
 [docs-ui]: /docs/extensions/mv3/user_interface
 [docs-unpacked]: /docs/extensions/mv3/getstarted/#unpacked
 [docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
-[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+[incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
+[manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
 [mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
 [mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
-[sample-getting-started]:
-    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
+[sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-apis]: #apis
 [section-bg]: #background_script
 [section-cs]: #contentScripts
@@ -401,5 +402,4 @@ with the following resources:
 [section-options]: #optionsPage
 [section-ui]: #pages
 [section-web-res]: #web-resources
-[incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
-[manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
+[webdev-imports]: https://web.dev/es-modules-in-sw/#static-imports-only

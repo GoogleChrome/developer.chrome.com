@@ -5,6 +5,15 @@
 
 <!-- $content -->
 
+<!-- ### Chrome 108 {: #chrome108 }
+
+* [Hints for inactive CSS properties](/ru/blog/new-in-devtools-108/#css-hint)
+* [Auto-detect XPath and text selectors in the Recorder panel](/ru/blog/new-in-devtools-108/#recorder)
+* [Step through comma-separated expressions](/ru/blog/new-in-devtools-108/#debugging)
+* [Improved Ignore list setting](/ru/blog/new-in-devtools-108/#ignore-list)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-108/#misc)
+ -->
+
 ### Chrome 107 {: #chrome107 }
 
 * [Кастомизация сочетаний клавиш в DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
@@ -14,7 +23,6 @@
 * [Начало поиска по DOM по нажатию по <kbd>Enter</kbd>](/ru/blog/new-in-devtools-107/#search-type)
 * [Отображение иконок `start` и `end` для свойства флексбокса `align-content`](/ru/blog/new-in-devtools-107/#flexbox)
 * [Другие важные моменты](/ru/blog/new-in-devtools-107/#misc)
-
 
 <!-- ### Chrome 106 {: #chrome106 }
 

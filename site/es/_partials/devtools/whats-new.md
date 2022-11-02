@@ -4,6 +4,15 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 
 <!-- $content -->
 
+<!-- ### Chrome 108 {: #chrome108 }
+
+* [Hints for inactive CSS properties](/es/blog/new-in-devtools-108/#css-hint)
+* [Auto-detect XPath and text selectors in the Recorder panel](/es/blog/new-in-devtools-108/#recorder)
+* [Step through comma-separated expressions](/es/blog/new-in-devtools-108/#debugging)
+* [Improved Ignore list setting](/es/blog/new-in-devtools-108/#ignore-list)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-108/#misc)
+ -->
+
 ### Chrome 107 {: #chrome107 }
 
 * [Personalizar atajos de teclado en DevTools](/es/blog/new-in-devtools-107/#shortcuts)
