@@ -142,7 +142,7 @@ async increment() {
 ## Скрытие игнорируемых файлов из Меню Команд (Command Menu) {: #ignore-search }
 
 <!-- With the **hide ignore-listed sources** setting, you can find your file quicker with the [Command Menu](/docs/devtools/command-menu/). Previously, searching files in the **Command Menu** returns third-party files that might not be relevant to you. -->
-Благодаря настройке  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) вы можете быстрее искать свои файлы в [Меню Команд](/docs/devtools/command-menu/). Раньше поиск в ** Меню Команд** (Command Menu) показывал сторонние файлы, которые могли быть нерелевантны для вас.
+Благодаря настройке  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) вы можете быстрее искать свои файлы в [Меню Команд](/docs/devtools/command-menu/). Раньше поиск в **Меню Команд** (Command Menu) показывал сторонние файлы, которые могли быть нерелевантны для вас.
 
 <!-- For example, enable the **hide ignore-listed sources** setting and click on the 3-dot menu. Select **Open file**. Type “ton” to search for button components. Previously, the results include files from `node_modules`, one of the `node_modules` files even shown up as the first result.  -->
 Для примера включите настройку  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources) и нажмите на иконку меню  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}. Выберите **Открыть файл** (Open file). Напишите «ton» чтобы начать поиск компонента кнопки. Раньше в результатх поиска показывались бы файлы из `node_modules`. Один из файлов из `node_modules` был бы показан первым в списке результатов.
