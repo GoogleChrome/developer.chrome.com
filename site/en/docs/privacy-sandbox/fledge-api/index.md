@@ -178,7 +178,8 @@ Read more about feature support and constraints in the
 ### Interest group permissions
 
 The default for the current implementation of FLEDGE is to allow calling
-`joinAdInterestGroup()` from anywhere in a page, even from cross-domain iframes.
+[`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups)
+from anywhere in a page, even from cross-domain iframes.
 
 In the future, once site owners have had time to update their cross-domain
 iframe [permissions policies](/docs/privacy-sandbox/permissions-policy/), the
@@ -197,7 +198,7 @@ information could be used in a number ways:
 The [FLEDGE key/value service code](https://github.com/privacysandbox/fledge-key-value-service)
 is now available. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update.
 
-For initial testing, a ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)
+For initial testing, a "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)"
 model was introduced. In the long-term, adtechs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
@@ -248,7 +249,8 @@ Features of FLEDGE will be added over time as work on implementation progresses.
 
 <figure>
 {% Img
-  src="image/80mq7dk16vVEg8BBhsVe42n6zn82/lrC3QOqthGpWyI6Ou9Eb.png", alt="A person visiting a custom bike manufacturer site in a browser on their laptop.",
+  src="image/80mq7dk16vVEg8BBhsVe42n6zn82/lrC3QOqthGpWyI6Ou9Eb.png",
+  alt="A person visiting a custom bike manufacturer site in a browser on their laptop.",
   width="400", height="190"
 %}
 </figure>
@@ -282,7 +284,7 @@ on the user's device, and is not shared with the browser vendor or anyone else.
 The origin of the calling context for `joinAdInterestGroup()` must match the
 interest group owner's origin.
 
-`joinAdInterestGroup()` must be called from an iframe owned by the interest group owner (for example, from a DSP). If the origin of the current document is the same as the interest group owner (for example, a website with its own interest groups), no iframe is needed.
+[`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups) must be called from an iframe owned by the interest group owner (for example, from a DSP). If the origin of the current document is the same as the interest group owner (for example, a website with its own interest groups), no iframe is needed.
 {% endAside %}
 
 #### Specify ads for an interest group
@@ -299,9 +301,10 @@ optionally, arbitrary metadata that can be used at bidding time. For example:
 
 #### How do buyers make bids? {: #generatebid}
 
-`generatedBid()` is called for each interest group that the browser is a member of&mdash;if the interest group's owner is invited to bid.
+`generateBid()` is called for each interest group that the browser is a member
+of&mdash;if the interest group's owner is invited to bid.
 
-Read the [`generatedBid()` developer documentation](/docs/privacy-sandbox/fledge-api/interest-groups).
+Read the [`generatedBid()` developer documentation](/docs/privacy-sandbox/fledge-api/interest-groups#generatebid).
 
 ### 3. The user visits a site that sells ad space
 
@@ -543,7 +546,8 @@ You can also discuss industry use cases in the W3C's
 Use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
 to share feedback privately with the Chrome team outside of public forums.
 
-{: #opt-out}
+#### Opt-out {: #opt-out}
+
 Want to opt-out of FLEDGE? Learn how to
 [block access to the FLEDGE API](/docs/privacy-sandbox/fledge/opt-out),
 as a site owner or an individual user.
