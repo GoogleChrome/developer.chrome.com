@@ -26,7 +26,7 @@ import {BaseElement} from './base-element';
 
 import {activateSearch, deactivateSearch} from '../actions/search';
 
-const client = algoliasearch('0PPZV3EY55', 'c0da407ed02cbe9874b8bea05d2c2983');
+const client = algoliasearch('0PPZV3EY55', 'dc0d3a2d53885be29eacc351026dcdcf');
 const index = client.initIndex('prod_developer_chrome');
 
 export class SearchBox extends BaseElement {

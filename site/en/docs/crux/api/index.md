@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-19
+updated: 2022-11-01
 
 # Optional
 # How to add a new author
@@ -243,13 +243,13 @@ As of October 2022, the CrUX API contains a `collectionPeriod` object with `firs
     "collectionPeriod": {
       "firstDate": {
         "year": 2022,
-        "month": 10,
-        "day": 9
+        "month": 9,
+        "day": 12
       },
       "lastDate": {
         "year": 2022,
-        "month": 9,
-        "day": 12
+        "month": 10,
+        "day": 9
       }
     }
 ```
@@ -280,9 +280,12 @@ For example, this can be called from `curl` with the following command line (rep
 curl -s --request POST 'https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
-    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics",["largest_contentful_paint", "experimental_time_to_first_byte"]}'
+    --data '{"formFactor":"PHONE","origin":"https://www.example.com","metrics":["largest_contentful_paint", "experimental_time_to_first_byte"]}'
 ```
 
+{% Aside 'note' %}
+The above example is for MacOS or Linux based systems—including the Git BASH shell for Windows. Other systems may require slight modifications. For example, the `cmd.exe` command line does not allow single quotes for parameters, nor the line continuations (`\`), so requires using double quotes (escaping inner quotes as appropriate with `\"`), and also using a single line.
+{% endAside %}
 
 Page-level data is available through the API by passing a `url` property in the query, instead of `origin`:
 
@@ -480,13 +483,13 @@ For example, the response to the request body in the above request could be:
     "collectionPeriod": {
       "firstDate": {
         "year": 2022,
-        "month": 10,
-        "day": 9
+        "month": 9,
+        "day": 12
       },
       "lastDate": {
         "year": 2022,
-        "month": 9,
-        "day": 12
+        "month": 10,
+        "day": 9
       }
     }
   }

@@ -4,6 +4,15 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 <!-- $content -->
 
+### Chrome 108 {: #chrome108 }
+
+* [Hints for inactive CSS properties](/blog/new-in-devtools-108/#css-hint)
+* [Auto-detect XPath and text selectors in the Recorder panel](/blog/new-in-devtools-108/#recorder)
+* [Step through comma-separated expressions](/blog/new-in-devtools-108/#debugging)
+* [Improved Ignore list setting](/blog/new-in-devtools-108/#ignore-list)
+* [Miscellaneous highlights](/blog/new-in-devtools-108/#misc)
+
+
 ### Chrome 107 {: #chrome107 }
 
 * [Customize keyboard shortcuts in DevTools](/blog/new-in-devtools-107/#shortcuts)
