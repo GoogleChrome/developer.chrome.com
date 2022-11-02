@@ -14,6 +14,8 @@ floc:
   en: 'Federated Learning of Cohorts (FLoC)'
 topics-api:
   en: 'The Topics API'
+topics-latest:
+  en: 'Latest updates to the Topics API'
 glossary:
   en: 'Privacy Sandbox glossary'
   ja: 'プライバシー サンドボックスの用語集'
