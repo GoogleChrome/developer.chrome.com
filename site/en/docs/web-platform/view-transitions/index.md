@@ -57,7 +57,7 @@ The feature is being developed within the [W3C CSS Working Group](https://www.w3
 
 Once we're happy with the API design, we'll start the processes and checks required to ship this feature to stable.
 
-Developer feedback is really important, so please [file issues on GitHub](https://github.com/WICG/shared-element-transitions/) with suggestions and questions.
+Developer feedback is really important, so please [file issues on GitHub](https://github.com/w3c/csswg-drafts/labels/css-view-transitions-1) with suggestions and questions.
 
 ## The simplest transition: A cross-fade
 
@@ -835,4 +835,4 @@ Instance members of `ViewTransition`:
 
 ## Feedback
 
-Developer feedback is really important at this stage, so please [file issues on GitHub](https://github.com/WICG/shared-element-transitions/) with suggestions and questions.
+Developer feedback is really important at this stage, so please [file issues on GitHub](https://github.com/w3c/csswg-drafts/labels/css-view-transitions-1) with suggestions and questions.
