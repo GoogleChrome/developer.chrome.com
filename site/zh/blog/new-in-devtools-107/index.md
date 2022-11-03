@@ -13,7 +13,7 @@ tags:
   - chrome-107
 ---
 
-*感谢 [JimLim](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译*
+*感谢 [Jim Lim](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译。*
 
 {% Partial 'devtools/banner.md' %}
 {% YouTube id='1uwv6HbR8HU' %}
@@ -27,11 +27,11 @@ tags:
 
 <!-- Content starts here -->
 
-## 客制化 DevTools (开发者工具) 的键盘快捷键 {: #shortcuts }
+## 客制化 DevTools 的键盘快捷键 {: #shortcuts }
 
-您现在可以在 DevTools (开发者工具) 里客制化您喜爱的键盘快捷键。
+您现在可以在 DevTools 里客制化您喜爱的键盘快捷键。
 
-在 **设置 （Settings）** > **快捷键 （Shortcuts）**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
+点击**设置** > **快捷键**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
@@ -70,9 +70,9 @@ Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.c
 Chromium 议题: [1336568](https://crbug.com/1336568)
 
 
-## 支持 HAR 导入的完整启动器 （Initiator）的讯息。{: #har } 
+## 支持 HAR 导入的完整启动器（Initiator）的讯息 {: #har } 
 
-[HAR import] 的完整 **启动器 （Initiator）** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
+[HAR import] 的完整 **启动器（Initiator）** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
 
 完整的启动器讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
@@ -84,7 +84,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 
 
 
-## 点击 ` 回车键 （Enter) `后开始 DOM 搜索。 {: #search-type } 
+## 点击 `Enter` 后开始 DOM 搜索 {: #search-type } 
 
 您现在可以禁止 **即输即搜 （Search as you type）** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
@@ -103,7 +103,7 @@ Chromium 议题: [1343185](https://crbug.com/1343185)
 Chromium 议题: [1344526](https://crbug.com/1344526)
 
 
-## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标。 {: #flexbox } 
+## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标 {: #flexbox } 
 
 在 **样式 (Styles)**边栏中, 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。
 您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
@@ -115,7 +115,7 @@ Chromium 议题: [1344526](https://crbug.com/1344526)
 Chromium 议题: [1139945](https://crbug.com/1139945)
 
 
- ## 其他的更新 {: #misc } 
+## 其他的更新 {: #misc } 
 
 - 在 **控制台 (Console)** 中显示正确的网页错误计数。在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。([1343311](https://crbug.com/1343311)) 
 
