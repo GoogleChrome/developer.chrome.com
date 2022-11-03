@@ -105,7 +105,11 @@ The screenshots below show how each option customizes the **Elements** panel.
 
 ### Console
 
-Most of the following options are the same as in [Console settings](/docs/devtools/console/reference/#settings). Click links to read relevant documentation or examine screenshots, if any, to understand how the options work.
+Most of the following options are the same as in [Console Settings](/docs/devtools/console/reference/#settings).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2W5sU2YKs7YDKdW4q18n.png", alt="Similar options in Console and in Settings.", width="800", height="425" %}
+
+Click links to read relevant documentation or examine screenshots, if any, to understand how the options work.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Hide network messages**](/docs/devtools/console/reference/#network)
 
