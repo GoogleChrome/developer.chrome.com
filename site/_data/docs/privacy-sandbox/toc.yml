@@ -53,6 +53,7 @@
         - url: /docs/privacy-sandbox/fledge
         - url: /docs/privacy-sandbox/fledge-api
         - url: /docs/privacy-sandbox/fledge-experiment
+        - url: /docs/privacy-sandbox/fledge-api/latency
 - title: i18n.docs.privacy-sandbox.measure
   sections:
     - title: i18n.docs.privacy-sandbox.measure-ads
