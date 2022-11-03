@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Customize keyboard shortcuts, highlight C/C++ objects in the Memory Inspector and more.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wchUXKvGXO7WtfDYmrsj.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uzf52nA5SHTJ1wHGiolx.png'
 alt: ''
 tags:
   - new-in-devtools
