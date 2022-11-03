@@ -241,7 +241,7 @@ Most Chrome API methods are asynchronous; they return immediately without waitin
 * Use the returned promise.
 * Pass a callback function into the method.
 
-Note that these choiced are mutually exclusive. If you pass a callback to a method, no promise
+Note that these choices are mutually exclusive. If you pass a callback to a method, no promise
 will be returned. If you use the returned promise, do not pass a callback.
 
 Generally, you should prefer promises to callbacks. Not all methods in extensions APIs support
