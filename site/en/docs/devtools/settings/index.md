@@ -105,6 +105,30 @@ The screenshots below show how each option customizes the **Elements** panel.
 
 ### Console
 
+Most of the following options are the same as in [Console settings](/docs/devtools/console/reference/#settings). Click links to read relevant documentation or examine screenshots, if any, to understand how the options work.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Hide network messages**](/docs/devtools/console/reference/#network)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Selected context only**](/docs/devtools/console/reference/#filtercontext)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Log XMLHttpRequests**](/docs/devtools/console/reference/#xhr)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show timestamps**
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Autocomplete from history**](/docs/devtools/console/reference/#autocomplete)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Group similar messages in console**](/docs/devtools/console/reference/#group)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Show CORS errors in console**](/docs/devtools/console/reference/#cors-errors)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Eager evaluation**](/docs/devtools/console/reference/#eagereval)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Evaluate triggers user activation**](/docs/devtools/console/reference/#trigger-user-activation)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Preserve log upon navigation**](/docs/devtools/console/reference/#persist)
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable custom formatters**
+
 ### Extension
 
 ### Persistence
