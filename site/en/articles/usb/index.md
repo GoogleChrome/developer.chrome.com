@@ -402,6 +402,7 @@ and let us know where and how you're using it.
 
 Thanks to [Joe Medley] for reviewing this article.
 
+[cr-dev-twitter]: https://twitter.com/chromiumdev
 [contain malfunctioning websites]: https://www.youtube.com/watch?v=29e0CtgXZSI
 [usb in a nutshell]: http://www.beyondlogic.org/usbnutshell
 [official usb specifications]: https://www.usb.org/
