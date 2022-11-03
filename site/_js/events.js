@@ -21,7 +21,7 @@ import './web-components/checkbox-group';
 import {RenderEventCard} from './render-event-card';
 import {loadMore} from './load-more';
 import memoize from './utils/memoize';
-import {isPastEvent, sortAsc, sortDesc} from './utils/events';
+import {sortAsc, sortDesc} from './utils/events';
 
 import calendarIcon from '../_includes/icons/calendar.svg';
 import pinIcon from '../_includes/icons/pin.svg';
@@ -47,8 +47,8 @@ const getEvents = async () => {
   const all = await response.json();
 
   return {
-    upcomingEvents: all.filter(event => !isPastEvent(event)),
-    pastEvents: all.filter(event => isPastEvent(event)),
+    upcomingEvents: all.filter(event => !event.isPastEvent),
+    pastEvents: all.filter(event => event.isPastEvent),
   };
 };
 

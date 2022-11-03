@@ -49,6 +49,7 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         summary: event.data.summary,
         location: event.data.location,
         date: event.data.date,
+        isPastEvent: isPastEvent(event),
         sessions,
         image,
       };
