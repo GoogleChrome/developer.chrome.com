@@ -54,36 +54,37 @@ const getEvents = async () => {
 
 const getMemoizedEvents = memoize(getEvents);
 
-async function initLoadMore(button, container, fetchItems) {
-  if (button === null || container === null) return;
+const eventLists = [
+  {
+    loadMore: document.getElementById('load-upcoming-events'),
+    container: document.getElementById('upcoming-events'),
+    fetchItems: async (skip, take) => {
+      const {upcomingEvents} = await getMemoizedEvents();
 
-  const skip = container.querySelectorAll('enhanced-event-card').length;
+      return upcomingEvents
+        .sort(sortAsc)
+        .slice(skip, take + skip)
+        .map(event => RenderEventCard(event, icons));
+    },
+  },
+  {
+    loadMore: document.getElementById('load-past-events'),
+    container: document.getElementById('past-events'),
+    fetchItems: async (skip, take) => {
+      const {pastEvents} = await getMemoizedEvents();
 
-  loadMore(button, container, fetchItems, {skip, take: 10});
-}
+      return pastEvents
+        .sort(sortDesc)
+        .slice(skip, take + skip)
+        .map(event => RenderEventCard(event, icons));
+    },
+  },
+];
 
-initLoadMore(
-  document.getElementById('load-upcoming-events'),
-  document.getElementById('upcoming-events'),
-  async (skip, take) => {
-    const {upcomingEvents} = await getMemoizedEvents();
+eventLists.forEach(list => {
+  if (list.loadMore === null || list.container === null) return;
 
-    return upcomingEvents
-      .sort(sortAsc)
-      .slice(skip, take + skip)
-      .map(event => RenderEventCard(event, icons));
-  }
-);
+  const skip = list.container.querySelectorAll('enhanced-event-card').length;
 
-initLoadMore(
-  document.getElementById('load-past-events'),
-  document.getElementById('past-events'),
-  async (skip, take) => {
-    const {pastEvents} = await getMemoizedEvents();
-
-    return pastEvents
-      .sort(sortDesc)
-      .slice(skip, take + skip)
-      .map(event => RenderEventCard(event, icons));
-  }
-);
+  loadMore(list.loadMore, list.container, list.fetchItems, {skip, take: 10});
+});
