@@ -249,7 +249,7 @@ promises, but newer methods do. You can verify whether a method supports promise
 its API reference page. If you need to support both promises and callbacks for the same
 function (because your users have older browsers), you can test whether the method returns a
 promise using `typeof` and
-[optional chaning](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+[optional chaining](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
 For example:
 
 
