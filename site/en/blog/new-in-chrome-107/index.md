@@ -31,34 +31,34 @@ see what's new for developers in Chrome 107.
 
 In this version the Screen Capture API adds new properties to improve the screen sharing experiences.
 
-The `DisplayMediaStreamConstraints` added the `selfBrowserSurface` property. With this hint the application can tell the browser that when calling `getDisplayMedia()` the current tab should be excluded.
+The `DisplayMediaStreamOptions` added the `selfBrowserSurface` property. With this hint the application can tell the browser that when calling `getDisplayMedia()` the current tab should be excluded.
 
 ```js
 // Exclude the streaming tab
-const constraints = {
+const options = {
   selfBrowserSurface: 'exclude',
 };
 const stream = await navigator
                     .mediaDevices
-                    .getDisplayMedia(constraints);
+                    .getDisplayMedia(options);
 ```
 
 It helps prevent accidental self capture and avoids the “Hall of Mirrors” effect we’ve seen in video conferences.
 
-`DisplayMediaStreamConstraints `now also has the `surfaceSwitching` property.
+`DisplayMediaStreamOptions `now also has the `surfaceSwitching` property.
 This property adds an option to programmatically control whether Chrome shows a button for switching tabs while screen sharing. These options will be passed to`getDisplayMedia()`. The `Share this tab instead` button allows users to switch to a new tab without going back to the video-conferencing tab or selecting from a long list of tabs, but the behavior is exposed conditionally in case the web application doesn’t handle it.
 
 ```js
 // Show the switch to this tab button
-const constraints = {
+const options = {
   surfaceSwitching: 'include',
 };
 const stream = await navigator
                     .mediaDevices
-                    .getDisplayMedia(constraints);
+                    .getDisplayMedia(options);
 ```
 
-Also `MediaTrackConstraintSet` adds the property displaySurface. When `getDisplayMedia()` is called the browser offers the user a choice of display surfaces: tabs, windows or monitors. Using the displaySurface constraint, the web app may now hint to the browser if it prefers one of the surface types to be offered more prominently.
+Also `MediaTrackConstraintSet` adds the property `displaySurface`. When `getDisplayMedia()` is called the browser offers the user a choice of display surfaces: tabs, windows or monitors. Using the `displaySurface` constraint, the web app may now hint to the browser if it prefers one of the surface types to be offered more prominently.
 
 For example, it can help [prevent oversharing](/blog/avoiding-oversharing-when-screen-sharing/) by accident since sharing a single tab can be the default.
 {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/7z4i2ZI77UZA80WRg4Rc.jpg", alt="Screenshots of the old and new media picker prompts.", width="800", height="556" %}
