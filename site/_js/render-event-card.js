@@ -16,7 +16,6 @@
 
 const {html} = require('common-tags');
 const {formatDateShort} = require('../_data/lib/date');
-const {isPastEvent} = require('./utils/events');
 
 /**
  * Renders an event card.
@@ -26,7 +25,7 @@ const {isPastEvent} = require('./utils/events');
  * @returns string
  */
 function RenderEventCard(event, icons) {
-  const buttonLabel = isPastEvent(event) ? 'See details' : "See who's joining";
+  const buttonLabel = event.isPastEvent ? 'See details' : "See who's joining";
 
   return html`
     <enhanced-event-card>
