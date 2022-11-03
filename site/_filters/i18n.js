@@ -31,21 +31,30 @@ const defaultLocale = 'en';
 const walk = dir => {
   const results = {};
   const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    file = path.join(dir, file);
-    const ext = path.extname(file);
-    const name = path.basename(file, ext);
-    const stat = fs.statSync(file);
-    if (stat && stat.isDirectory()) {
-      /* Recurse into a subdirectory */
-      results[name] = walk(file);
-    } else {
-      /* Is a file */
-      if (ext === '.yaml' || ext === '.yml') {
+  files
+    .filter(file => {
+      // Only allow directories and yaml files.
+      const ext = path.extname(file);
+      // !ext implies a directory
+      if (!ext || ext === '.yaml' || ext === '.yml') {
+        return true;
+      }
+
+      return false;
+    })
+    .forEach(file => {
+      file = path.join(dir, file);
+      const ext = path.extname(file);
+      const name = path.basename(file, ext);
+      const stat = fs.statSync(file);
+      if (stat && stat.isDirectory()) {
+        /* Recurse into a subdirectory */
+        results[name] = walk(file);
+      } else {
+        /* Is a file */
         results[name] = yaml.load(fs.readFileSync(file, 'utf-8'));
       }
-    }
-  });
+    });
   return results;
 };
 
