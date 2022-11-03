@@ -15,7 +15,7 @@
  */
 
 const {html} = require('common-tags');
-const {formatDateShort} = require('../_data/lib/date');
+const {formatDateShort} = require('../../_data/lib/date');
 
 /**
  * Renders an event card.

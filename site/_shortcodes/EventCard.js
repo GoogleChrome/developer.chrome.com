@@ -16,7 +16,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const {RenderEventCard} = require('../_js/render-event-card');
+const {RenderEventCard} = require('../_js/misc/render-event-card');
 
 const calendarIcon = fs.readFileSync(
   path.join(__dirname, '../_includes/icons/calendar.svg'),

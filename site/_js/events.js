@@ -18,8 +18,8 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-import {RenderEventCard} from './render-event-card';
-import {loadMore} from './load-more';
+import {RenderEventCard} from './misc/render-event-card';
+import {loadMore} from './misc/load-more';
 import memoize from './utils/memoize';
 import {sortAsc, sortDesc} from './utils/events';
 
