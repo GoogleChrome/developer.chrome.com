@@ -4,6 +4,15 @@
 
 <!-- $content -->
 
+### Chrome 108 {: #chrome108 }
+
+* [非アクティブな CSS プロパティのヒント](/ja/blog/new-in-devtools-108/#css-hint)
+* [Recorder パネルで XPath とテキストのセレクタ自動検出が可能に](/ja/blog/new-in-devtools-108/#recorder)
+* [カンマ区切りの式をステップスルー](/ja/blog/new-in-devtools-108/#debugging)
+* [無視リスト設定の改善](/ja/blog/new-in-devtools-108/#ignore-list)
+* [その他のハイライト](/ja/blog/new-in-devtools-108/#misc)
+
+
 ### Chrome 107 {: #chrome107 }
 
 * [DevTools のキーボードショートカットのカスタマイズ](/ja/blog/new-in-devtools-107/#shortcuts)

@@ -349,7 +349,10 @@ redirects:
   to: /docs/webstore/one_time_payments/
 
 - from: /webstore/intl/en/program_policies
-  to: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
+
+- from: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
 
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
