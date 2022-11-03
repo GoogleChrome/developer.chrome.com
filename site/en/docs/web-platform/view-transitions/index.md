@@ -15,7 +15,7 @@ This feature was previously called "Shared Element Transitions", and is sometime
 
 The View Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
-It's currently behind the `chrome://flags/#document-transition` flag in Chrome 109+.
+It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
 
 <style>
   .video-full-demo {
