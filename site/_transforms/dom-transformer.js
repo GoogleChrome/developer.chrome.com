@@ -7,7 +7,7 @@ const {processInlineJs} = require('./process-inline-js');
 /**
  * @param {string} content
  * @param {string} outputPath
- * @return {string}
+ * @return {Promise<string>}
  */
 const domTransformer = async (content, outputPath) => {
   // Make sure we're not interacting with something weird that has
