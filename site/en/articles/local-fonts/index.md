@@ -1,11 +1,7 @@
 ---
 title: Use advanced typography with local fonts
 subhead: Learn how the Local Font Access API allows you to access the user's locally installed fonts and
-obtain low-level details about them.
-tags:
-  - blog
-  - fonts
-  - capabilities
+obtain low-level details about them
 authors:
   - thomassteiner
 description: >
@@ -15,6 +11,10 @@ date: 2020-08-24
 updated: 2022-07-01
 hero: image/admin/oeXwG1zSwnivzpvcUJly.jpg
 alt: Page of a font book.
+tags:
+  - blog
+  - fonts
+  - capabilities
 feedback:
   - api
 ---
