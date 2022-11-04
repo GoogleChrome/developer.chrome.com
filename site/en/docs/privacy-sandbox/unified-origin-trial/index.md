@@ -31,8 +31,9 @@ your configuration, and provides further resources for testing against the APIs.
 
 ### November 2022
 
-Shared Storage’s `selectURL` API will be joining the origin trial at 1% of
-Chrome Stable traffic from November 9th. As previously announced in the
+Shared Storage’s `selectURL` API will be [joining the origin
+trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlBwB_UAQAJ)
+at 1% of Chrome Stable traffic from November 9th. As previously announced in the
 [Increasing the Privacy Sandbox Relevance and Measurement origin trial to
 5%](/blog/privacy-sandbox-origin-trial-increase/) blog post, Attribution
 Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
