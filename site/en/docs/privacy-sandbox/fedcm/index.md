@@ -27,23 +27,22 @@ Credential Management API (FedCM).
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
 
-Moving forward, we plan to introduce a number of [new features](#roadmap) that
-we heard from identity providers (IdP), relying parties (RP) and browser
-vendors. While we hope identity providers will adopt FedCM, please be aware that
-FedCM is still an API under active development and that backward incompatible
-changes are expected until the Privacy Sandbox API enters [general
-availability](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
-in Q4 2023.
+Moving forward, we plan to introduce [a number of new features](#roadmap) based
+on the feedback we received from identity providers (IdP), relying parties (RP)
+and browser vendors. While we hope identity providers will adopt FedCM, please
+be aware that FedCM is still an API under active development and that backward
+incompatible changes are expected until Q4 2023.
 
-To decrease the challenges of deploying backwards incompatible changes, we
-currently have two recommendations for Identity Providers:
+To minimize the challenges of deploying backwards incompatible changes, we
+currently have two recommendations for identity providers:
 
 * Subscribe to our
   [newsletter](https://groups.google.com/g/fedcm-developer-newsletter) where we
   will send updates as the API evolves.
-* We encourage IdPs to distribute the FedCM API via JS SDKs while it is
-  maturing, so that you have the ability to make changes without asking all of
-  your relying parties to redeploy.
+* We encourage IdPs to distribute the FedCM API via JavaScript SDKs while the
+  API is maturing, and to discourage RPs from self-hosting SDKs. This will
+  ensure IdPs can make changes as the API evolves, without having to ask all of
+  their relying parties to redeploy.
 
 
 ## Why do we need FedCM?
