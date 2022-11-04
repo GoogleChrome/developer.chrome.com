@@ -9,8 +9,8 @@ description: >
   buckets first, and keep the mission-critical ones around.
 authors:
   - thomassteiner
-date: 2022-10-28
-# updated: 2022-10-28
+date: 2022-11-04
+# updated: 2022-11-04
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/uSUKNoGdlmEsXAtHr0yJ.jpg
 alt: Several buckets with paint in different colors in them.
 tags:
