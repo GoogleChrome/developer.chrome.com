@@ -50,7 +50,7 @@ Lastly, there is a [polyfill](https://github.com/oddbird/popup-polyfill) under d
 You can check for pop-up support with:
 
 ```js
-const supported = Element.prototype.hasOwnProperty("popover");
+const supported = HTMLElement.prototype.hasOwnProperty("popover");
 ```
 
 ## Current solutions
