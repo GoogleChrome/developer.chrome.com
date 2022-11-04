@@ -111,25 +111,85 @@ Most of the following options are the same as in [Console Settings](/docs/devtoo
 
 Click links to read relevant documentation or examine screenshots, if any, to understand how the options work.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Hide network messages**](/docs/devtools/console/reference/#network)
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide network messages**
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Selected context only**](/docs/devtools/console/reference/#filtercontext)
+{% Aside 'gotchas' %}
+If enabled, the Console won't show network messages. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#network).
+{% endAside %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Log XMLHttpRequests**](/docs/devtools/console/reference/#xhr)
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Selected context only**
+
+{% Aside 'gotchas' %}
+If enabled, the Console only shows selected context on a page with inline frames. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#filtercontext).
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Log XMLHttpRequests**
+
+{% Aside 'gotchas' %}
+If enabled, the Console logs XHR and fetch requests. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#xhr).
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show timestamps**
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Autocomplete from history**](/docs/devtools/console/reference/#autocomplete)
+{% Aside 'gotchas' %}
+If enabled, the **Console** shows timestamps next to messages.
+{% endAside %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Group similar messages in console**](/docs/devtools/console/reference/#group)
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dOxVraGB4d2mXkvIV8IP.png", alt="Messages with timestamps listed in the Console.", width="800", height="528" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Show CORS errors in console**](/docs/devtools/console/reference/#cors-errors)
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocomplete from history**
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Eager evaluation**](/docs/devtools/console/reference/#eagereval)
+{% Aside 'gotchas' %}
+If enabled, the **Console** suggests commands you ran earlier as you type. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#autocomplete).
+{% endAside %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Evaluate triggers user activation**](/docs/devtools/console/reference/#trigger-user-activation)
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZExKvWICbDczngyGrgRw.png", alt="Autocomplete drop-down with a command option from Console history.", width="800", height="517" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Preserve log upon navigation**](/docs/devtools/console/reference/#persist)
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group similar messages in console**
+
+{% Aside 'gotchas' %}
+If enabled, the **Console** groups similar messages together. The groups are expandable. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#group).
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/p5wek29Dgubg7aNeqim4.png", alt="Similar messages in the Console grouped together.", width="800", height="513" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CORS errors in console**
+
+{% Aside 'gotchas' %}
+If enabled, the **Console** shows [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors). You can find the same option in [Console > Settings](/docs/devtools/console/reference/#cors-errors).
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/z8PhGt1M7ri90edOFKqY.png", alt="Console shows CORS errors.", width="800", height="483" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Eager evaluation**
+
+{% Aside 'gotchas' %}
+If enabled, the **Console** shows a preview of an output as you type a command. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation**
+
+{% Aside 'gotchas' %}
+If enabled, the **Console** sets `navigator.userActivation.isActive` to `true` upon evaluation, that is, any command that you run. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation**
+
+{% Aside 'gotchas' %}
+If enabled, the **Console** persists log across page loads. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#persist).
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/0qxdteXV5kjZNIXnX49Y.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable custom formatters**
 
@@ -143,9 +203,19 @@ Click links to read relevant documentation or examine screenshots, if any, to un
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups**
 
+{% Aside 'gotchas' %}
+If enabled, DevTools opens for all links open a new tab. That is, all links with `target=_blank`.
+{% endAside %}
+
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search)
+
+{% Aside 'gotchas' %}
+If disabled, DevTools won't "jump" to the first search result as you type your search query. Instead, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
+{% endAside %}
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
 
 ### Sync
 
