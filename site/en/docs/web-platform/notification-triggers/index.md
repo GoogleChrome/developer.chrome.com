@@ -1,5 +1,5 @@
 ---
-layout: "layouts/blog-post.njk"
+layout: 'layouts/blog-post.njk'
 title: Notification Triggers
 subhead:
   Notification Triggers allows you to schedule local notifications that don't require a network
