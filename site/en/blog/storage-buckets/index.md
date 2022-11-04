@@ -2,8 +2,8 @@
 layout: 'layouts/blog-post.njk'
 title: 'Not all storage is created equal: introducing Storage Buckets'
 subtitle: >
-  When the browser is under heavy storage pressure, it can evict your least important storage
-  buckets first, and keep the mission-critical ones around.
+  We're experimenting with an API for making persistent storage eviction under heavy
+  memory pressure more predictable, and we'd love your feedback.
 description: >
   When the browser is under heavy storage pressure, it can evict your least important storage
   buckets first, and keep the mission-critical ones around.
