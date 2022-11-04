@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'キーボードショートカットのカスタマイズ、 Memory Inspector で C/C++ オブジェクトのハイライト表示など'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ax9N3DYfyH3ZOT7iSXu5.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q31K9IiREUxfRjlmg6Gp.png'
 alt: ''
 tags:
   - new-in-devtools

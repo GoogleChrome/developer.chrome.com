@@ -6,7 +6,7 @@ description: >
 authors:
   - jakearchibald
 date: 2013-12-12
-updated: 2019-01-16 
+updated: 2022-10-21
 ---
 
 {% YouTube id="AjUpiwvIa5A" %}
@@ -37,7 +37,7 @@ html {
 }
 ```
 
-This technique isn't supported in Firefox, so the viewport tag is much preferred.
+This technique [isn't supported in Safari](https://caniuse.com/?search=touch-action), so the viewport tag is much preferred.
 
 ## Is losing double-tap-to-zoom an accessibility concern?
 

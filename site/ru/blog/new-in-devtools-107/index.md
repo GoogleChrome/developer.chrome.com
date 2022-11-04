@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Кастомизация сочетаний клавиш, Подсветка объектов C/C++ в Инспекторе памяти и другое.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/heebwToNEemRk1sbV35e.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/P1WaG2na1EJG8CXQpesJ.png'
 alt: ''
 tags:
   - new-in-devtools

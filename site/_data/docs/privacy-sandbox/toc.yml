@@ -47,6 +47,7 @@
     - title: i18n.docs.privacy-sandbox.interest-ads
       sections:
         - url: /docs/privacy-sandbox/topics
+        - url: /docs/privacy-sandbox/topics/latest
         - url: /docs/privacy-sandbox/topics-experiment
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:

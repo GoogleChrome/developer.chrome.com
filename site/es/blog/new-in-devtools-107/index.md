@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Personaliza atajos, resalta objetos C/C++ en el Inspector de Memoria y más.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/l7oEB9r6niG2IL7I4Klw.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vXh40bvF65vjMaQ1PWYd.png'
 alt: ''
 tags:
   - new-in-devtools
