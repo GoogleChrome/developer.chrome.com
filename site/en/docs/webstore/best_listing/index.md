@@ -145,7 +145,7 @@ Small promo tile: 440x280 pixels
 results.
 
 Marquee image: 1400x560 pixels
-: This image is used if your item is chosen for the marquee
+: Used if your item is chosen for the marquee
 feature (the rotating carousel on the top of the Chrome Web Store homepage). To increase your
 chances of being featured, ensure your marquee image is uncluttered, high-resolution, and has
 consistent branding elements to your other assets so users can immediately associate it with your
