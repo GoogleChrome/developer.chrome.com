@@ -1,20 +1,18 @@
 ---
-layout: "layouts/doc-post.njk"
-title: "Manifest file format"
+layout: 'layouts/doc-post.njk'
+title: 'Manifest file format'
 date: 2012-09-18
-updated: 2021-10-08
-description: An overview of the manifest.json properties that you can use in your Chrome Extension.
+updated: 2022-11-08
+description: An overview of the manifest.json properties of a Chrome Extension.
 ---
 
-{# TODO: need to create any required child pages for new mv3 properties, e.g. host_permissions, and link them here. #}
-
-Every extension has a [JSON][1]\-formatted manifest file, named `manifest.json`, that provides
-important information.
+Every extension requires a [JSON][1]\-formatted file, named `manifest.json`, that provides
+important information. This file must be located in the extension's root directory.
 
 ## Field summary {: #overview }
 
-The following code shows the supported manifest fields for Extensions, with links to the page that
-discusses each field.
+The following code shows the supported manifest keys, with links to pages that
+describe each property.
 
 <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token comment">// Required</span>
