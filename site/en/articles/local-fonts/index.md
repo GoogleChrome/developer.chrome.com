@@ -14,7 +14,6 @@ description: >
   The Local Font Access API enumerates the user's installed local fonts and provides low-level access to
   the various TrueType/OpenType tables
 tags:
-  - blog
   - fonts
   - capabilities
 feedback:
