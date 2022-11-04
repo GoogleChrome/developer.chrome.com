@@ -18,9 +18,14 @@ tags:
 ---
 
 The [Storage Standard](https://storage.spec.whatwg.org/) defines an API for persistent storage and
-quota estimates, and the platform storage architecture. Traditionally, as the user runs out of
-storage space on their device, the data stored with APIs like IndexedDB or `localStorage` gets lost
-without the user being able to intervene. A way to make storage persistent is through invoking the
+quota estimates, and the platform storage architecture. It's available behind the
+`#enable-experimental-web-platform-features` flag in Chromium 106, and we'd love your feedback.
+
+## What problem does the storage standard aim to solve?
+
+Traditionally, as the user runs out of storage space on their device, the data stored with APIs like
+IndexedDB or `localStorage` gets lost without the user being able to intervene. A way to make
+storage persistent is through invoking the
 [`persist()`](https://developer.mozilla.org/docs/Web/API/StorageManager/persist) method of the
 `StorageManager` interface. It simultaneously requests the end user for permission and changes the
 storage to be persistent once granted:
@@ -53,11 +58,6 @@ to be removed from the client if their browser is under heavy storage pressure.
   {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/P0ETJprf3gBBlCqyFyl1.png", alt="Email app interface", width="509", height="267" %}
   <figcaption>Email app with separate storage buckets for inbox and drafts. (For illustrative purposes only, this does not necessarily reflect how Gmail works.)</figcaption>
 </figure>
-
-## Browser support
-
-The Storage Buckets API is implemented from Chromium&nbsp;106 and available behind the
-`#enable-experimental-web-platform-features` flag.
 
 ## Using the Storage Buckets API
 
