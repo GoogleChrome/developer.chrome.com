@@ -41,13 +41,10 @@ describe each property.
   <span class="token property">"content_capabilities"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/content_scripts">content_scripts</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/intro/mv3-migration/#content-security-policy">content_security_policy</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"converted_from_user_script"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/cross_origin_embedder_policy">cross_origin_embedder_policy</a>"</span><span class="token operator">:</span> <span class="token string">{"value": "require-corp"}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/cross_origin_opener_policy">cross_origin_opener_policy</a>"</span><span class="token operator">:</span> <span class="token string">{"value": "same-origin"}</span><span class="token punctuation">,</span>
-  <span class="token property">"current_locale"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"declarative_net_request"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/devtools">devtools_page</a>"</span><span class="token operator">:</span> <span class="token string">"devtools.html"</span><span class="token punctuation">,</span>
-  <span class="token property">"differential_fingerprint"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/event_rules">event_rules</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/externally_connectable">externally_connectable</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"matches"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"*://*.example.com/*"</span><span class="token punctuation">]</span>
@@ -79,7 +76,6 @@ describe each property.
     <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"options.html"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"platforms"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"replacement_web_app"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/requirements">requirements</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/sandbox">sandbox</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -87,7 +83,6 @@ describe each property.
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/storage">storage</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"managed_schema"</span><span class="token operator">:</span> <span class="token string">"schema.json"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"system_indicator"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/ttsEngine">tts_engine</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/hosting">update_url</a>"</span><span class="token operator">:</span> <span class="token string">"https://path/to/updateInfo.xml"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/version#version_name">version_name</a>"</span><span class="token operator">:</span> <span class="token string">"aString"</span><span class="token punctuation">,</span>
