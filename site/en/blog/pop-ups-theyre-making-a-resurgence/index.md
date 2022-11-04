@@ -15,7 +15,7 @@ last_updated: 2022-11-04
 
 {% Aside 'caution' %}
 The Open UI initiative resolved to change the attribute from `popup` to `popover` for the Pop-up API on [October 27, 2022](https://github.com/openui/open-ui/issues/627).
-This change request was merged into Chromium on [TBC](https://chromium-review.googlesource.com/c/chromium/src/+/3991667). All of the demos and references have been updated to make use of the new `popover` naming convention.
+This [change request](https://chromium-review.googlesource.com/c/chromium/src/+/3991667) was merged into Chromium on [November 3, 2022](https://chromium-review.googlesource.com/c/chromium/src/+/3991667). All of the demos and references have been updated to make use of the new `popover` naming convention.
 {% endAside %}
 
 The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier for developers to make great user experiences. To do this, we are trying to tackle the more problematic patterns that developers face. We can do this by providing better platform built-in APIs and components.
@@ -50,7 +50,7 @@ Lastly, there is a [polyfill](https://github.com/oddbird/popup-polyfill) under d
 You can check for pop-up support with:
 
 ```js
-const supported = Element.prototype.hasOwnProperty("popOver");
+const supported = Element.prototype.hasOwnProperty("popover");
 ```
 
 ## Current solutions
@@ -446,7 +446,7 @@ A third type of pop-up using `popover=hint` was previously implemented for use c
 
 ## JavaScript API
 
-When you need more control over your pop-ups, you can approach things with JavaScript. You get both a `showPopOver` and `hidePopOver` method. You also have `show` and `hide` events to listen for:
+When you need more control over your pop-ups, you can approach things with JavaScript. You get both a `showPopOver` and `hidePopOver` method. You also have `popovershow` and `popoverhide` events to listen for:
 
 Show a pop-up
 ```js
@@ -460,12 +460,12 @@ popUpElement.hidePopOver()
 Listen for a pop-up being shown:
 
 ```js
-popUpElement.addEventListener('show', doSomethingWhenPopUpShows)
+popUpElement.addEventListener('popovershow', doSomethingWhenPopUpShows)
 ```
 Listen for a pop-up being shown and cancel it being shown:
 
 ```js
-popUpElement.addEventListener('show',event => {
+popUpElement.addEventListener('popovershow',event => {
   event.preventDefault();
   console.warn(‘We blocked a pop-up from being shown’);
 })
@@ -473,12 +473,12 @@ popUpElement.addEventListener('show',event => {
 Listen for a pop-up being hidden:
 
 ```js
-popUpElement.addEventListener('hide', doSomethingWhenPopUpHides)
+popUpElement.addEventListener('popoverhide', doSomethingWhenPopUpHides)
 ```
 You can't cancel a pop-up being hidden:
 
 ```js
-popUpElement.addEventListener('hide',event => {
+popUpElement.addEventListener('popoverhide',event => {
   event.preventDefault();
   console.warn("You aren't allowed to cancel the hiding of a pop-up");
 })
@@ -677,7 +677,7 @@ This demo shows how you might pop media up.
 
 - Uses `[popover=auto]` for light dismiss.
 - JavaScript listens for the video's `play` event and pops the video up.
-- The pop-ups `hide` event pauses the video.
+- The pop-ups `popoverhide` event pauses the video.
 
 {% Codepen {
     user: 'web-dot-dev',
