@@ -5,8 +5,8 @@ subtitle: >
   We're experimenting with an API for making persistent storage eviction under heavy
   memory pressure more predictable, and we'd love your feedback.
 description: >
-  When the browser is under heavy storage pressure, it can evict your least important storage
-  buckets first, and keep the mission-critical ones around.
+  We're experimenting with an API for making persistent storage eviction under heavy
+  memory pressure more predictable, and we'd love your feedback.
 authors:
   - thomassteiner
 date: 2022-11-04
