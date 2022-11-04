@@ -62,6 +62,12 @@ redirects:
 - from: /blog/wasm-debugging-2020/
   to: /blog/wasm-debugging/
 
+- from: /docs/privacy-sandbox/fledge-best-practices/
+  to: /docs/privacy-sandbox/fledge/latency/
+
+- from: /blog/fledge-api/
+  to: /docs/privacy-sandbox/fledge-api/
+
 - from: /docs/privacy-sandbox/attribution-reporting-introduction/
   to: /docs/privacy-sandbox/attribution-reporting/
 
