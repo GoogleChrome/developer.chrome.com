@@ -468,6 +468,46 @@ redirects:
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
 
+# Renaming of Pop-up API attribute from popup to popover
+- from: /docs/web-platform/popup-api/
+  to: /docs/web-platform/pop-up-api/
+
+- from: /docs/web-platform/popup-api/hidepopup-method/
+  to: /docs/web-platform/pop-up-api/hidepopover-method/
+
+- from: /docs/web-platform/popup-api/showpopup-method/
+  to: /docs/web-platform/pop-up-api/showpopover-method/
+
+- from: /docs/web-platform/popup-api/popup-attribute/
+  to: /docs/web-platform/pop-up-api/popover-attribute/
+
+- from: /docs/web-platform/popup-api/popup-property/
+  to: /docs/web-platform/pop-up-api/popover-property/
+
+- from: /docs/web-platform/popup-api/popuphide-event/
+  to: /docs/web-platform/pop-up-api/popoverhide-event/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-attribute/
+  to: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-property/
+  to: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+
+- from: /docs/web-platform/popup-api/popupshow-event/
+  to: /docs/web-platform/pop-up-api/popovershow-event/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-attribute/
+  to: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-property/
+  to: /docs/web-platform/pop-up-api/popovershowtarget-property/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
+  to: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-property/
+  to: /docs/web-platform/pop-up-api/popovertoggletarget-property/
+
 # Generic
 
 - from: /...
