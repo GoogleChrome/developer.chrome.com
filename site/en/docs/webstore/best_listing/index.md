@@ -140,13 +140,12 @@ Promotional images are your chance to capture users' attention and entice them t
 just use a screenshot; your images should communicate the brand and appear professional. Here are
 specifics about each promotional image:
 
-**Small promo tile: 440x280 pixels** &emsp; Appears on the homepage, category pages, and in search
+Small promo tile: 440x280 pixels
+: Appears on the homepage, category pages, and in search
 results.
 
-**Large promo tile: 920x680 pixels** &emsp; Not currently used. You do not need to provide a large
-promo tile at this time.
-
-**Marquee image: 1400x560 pixels** &emsp; This image is used if your item is chosen for the marquee
+Marquee image: 1400x560 pixels
+: Used if your item is chosen for the marquee
 feature (the rotating carousel on the top of the Chrome Web Store homepage). To increase your
 chances of being featured, ensure your marquee image is uncluttered, high-resolution, and has
 consistent branding elements to your other assets so users can immediately associate it with your
