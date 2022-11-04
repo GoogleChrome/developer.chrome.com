@@ -6,7 +6,7 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-10-27
+updated: 2022-11-08
 authors:
   - agektmr
 ---
@@ -49,10 +49,10 @@ currently have two recommendations for Identity Providers:
 ## Why do we need FedCM?
 
 Over the last decade, identity federation has played a central role in raising
-the bar for authentication on the web, in terms of ease-of-use (e.g.
-password-less single sign-in), security (e.g. improved resistance to phishing
-and credential stuffing attacks) and trustworthiness compared to per-site
-usernames and passwords.
+the bar for authentication on the web, in terms of trustworthiness, ease-of-use
+(for example, passwordless single sign-in) and security (for example, improved
+resistance to phishing and credential stuffing attacks) compared to per-site
+usernames and passwords. 
 
 With identity federation, a RP (relying party) relies on an IdP (identity
 provider) to provide the user an account without requiring a new username
@@ -67,22 +67,22 @@ sign in to a website (a _relying party_ or RP).
 
 {% endAside %}
 
-Unfortunately, the mechanisms that identity federation was designed on (iframes,
+Unfortunately, the mechanisms that identity federation has relied on (iframes,
 redirects and cookies) are actively being abused to track users across the web.
-As the user agent isn’t able to distinguish between identity federation and
+As the user agent isn’t able to differentiate between identity federation and
 tracking, the mitigations for the various types of abuse make the deployment of
 identity federation more difficult.
 
 [The Federated Credential Management API
-(FedCM)](https://fedidcg.github.io/FedCM/) provides a use case specific
-abstraction for federated identity flows on the web by exposing a browser
+(FedCM)](https://fedidcg.github.io/FedCM/) provides a use-case-specific
+abstraction for federated identity flows on the web, by exposing a browser
 mediated dialog that allows users to choose accounts from IdPs to login to
 websites. 
 
 FedCM is a multi-step journey to make identity on the web better, and in its
-first step we are focused on reducing the impact of the third-party cookie
-phase-out on federated identity (see [the Roadmap section](#roadmap) to see a
-few steps further).
+first step we are focused on reducing the impact of third-party cookie phase-out
+on federated identity (see [the Roadmap section](#roadmap) to see a few steps
+further).
 
 <figure class="screenshot">
   {% Video
@@ -245,42 +245,44 @@ They can do the same for Chrome on desktop by going to
 
 ## Roadmap {: #roadmap}
 
-We are working on a number of changes landing on the FedCM as well.
+We are working on landing a number of changes on the FedCM.
 
-There are a few things we know need to be done (for example, issues we heard
-about from IdPs, RPs and browser vendors) and we believe we know how to do them:
+There are a few things we know that still need to be done, including issues we
+heard about from IdPs, RPs and browser vendors. We believe we know how to
+resolve these issues:
 
 * **Cross-origin iframe support**: IdPs can call FedCM from within a
   cross-origin iframe.
-* **Personalized button**: IdPs can display returning user's identity on the
+* **Personalized button**: IdPs can display a returning user's identity on the
   sign-in button from within a cross-origin iframe.
 * **Metrics endpoint**: Provides performance metrics to IdPs.
 
-Then, there are a few things we know need to be done and are actively exploring
-(for example, specific proposals that we are evaluating or prototyping):
+Additionally, there are unresolved issues we are actively exploring including
+specific proposals that we are evaluating or prototyping:
 
-* **CORS**: We are [discussing here with Safari and
+* **CORS**: We are [discussing with Apple and
   Mozilla](https://github.com/fedidcg/FedCM/issues/320) if and how FedCM should
   use CORS.
-* **Multiple IdP API**: We are exploring ways to support [multiple
+* **Multiple-IdP API**: We are exploring ways to support [multiple
   IdPs](https://github.com/fedidcg/FedCM/issues/319) to coexist cooperatively in
   the FedCM account chooser.
 * **IdP Sign-in Status API**: Mozilla has identified a [timing attack
   issue](https://github.com/fedidcg/FedCM/issues/230), and we are exploring ways
-  for an IdP to proactively [notify the browser the user's sign-in
+  for an IdP to proactively [notify the browser of the user's sign-in
   status](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api) to
-  mitigate it.
+  mitigate the issue.
 * **Sign in to IdP API**: To support [various
   scenarios](https://github.com/fedidcg/FedCM/issues/348), when a user is not
   signed in to the IdP, the browser provides a UI for the user to sign in
   without leaving the RP.
 
-Finally, there are things we believe need to be done (based on feedback from
+Finally, there are things we believe still need to be done, based on feedback
+from
 [Mozila](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
 [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
 and [TAG
-reviewers](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549))
-but don’t quite yet know how:
+reviewers](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549).
+We are working to evaluate the best solution for these open questions:
 
 * **Improving user comprehension and matching intent**: As [Mozilla
   noted](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
@@ -288,31 +290,31 @@ but don’t quite yet know how:
   as well as triggering criteria.
 * **Identity Attributes and Selective Disclosure**: As our [TAG Reviewers
   noted](https://github.com/w3ctag/design-reviews/issues/718#issuecomment-1171733526),
-  we’d like to provide a mechanism to selectively share more/less identity
-  attributes (e.g. emails, age brackets, phone numbers, etc).
+  we’d like to provide a mechanism to selectively share more or less identity
+  attributes (such as emails, age brackets, phone numbers, and so on).
 * **Raising the Privacy Properties**: As Mozilla suggested
   [here](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
-  we’d like to continue exploring  mechanisms to offer better privacy guarantees
-  (e.g. IdP blindness, directed identifiers, etc).
+  we’d like to continue exploring  mechanisms to offer better privacy
+  guarantees, such as IdP blindness, directed identifiers.
 * **Relationship with WebAuthn**: As suggested by
   [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html),
-  we are super excited to see the progress on passkeys and to work on providing
-  a coherent and cohesive experience between FedCM, Passwords, WebAuthn and
-  WebOTP.
+  we are super excited to see the progress on
+  [passkeys](http://goo.gle/passkeys) and to work on providing a coherent and
+  cohesive experience between FedCM, Passwords, WebAuthn and WebOTP.
 * **Login Status**: As Apple suggested with the Privacy CG’s [Login Status
   API](https://github.com/privacycg/is-logged-in), we share the intuition that
   the user’s login status is a useful bit of information that can help browsers
-  make informed decisions and are excited to see what opportunities arise from
-  that.
-* **Enterprises and Education**: As it is clear at the FedID CG, there are still
-  [a lot of use
+  make informed decisions, and we are excited to see what opportunities arise
+  from that.
+* **Enterprises and Education**: As is clear at the FedID CG, there are still [a
+  lot of use
   cases](https://github.com/fedidcg/use-case-library/blob/main/decision_tree_flows/login/Federated%20Login%20OIDC%20Oauth2%20Auth%20Code%20Flow.png)
-  that are not well served by FedCM that we’d like to work on, e.g.
-  front-channel logout ( Ability for an IdP to send a signal to RPs to logout)
-  and supporting SAML.
+  that are not well served by FedCM that we’d like to work on, such as  
+  front-channel logout (the ability for an IdP to send a signal to RPs to
+  logout) and support for SAML.
 * **Relationship with mDLs/VCs/etc**: continue working to understand how these
-  fit within FedCM, for example
-  [here](https://github.com/WICG/mobile-document-request-api).
+  fit within FedCM, for example with the [Mobile Document Request
+  API](https://github.com/WICG/mobile-document-request-api).
 
 ## How can identity providers develop FedCM?
 
