@@ -1,8 +1,9 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Use advanced typography with local fonts
-subhead: Learn how the Local Font Access API allows you to access the user's locally installed fonts and
-obtain low-level details about them
+subhead:
+  Learn how the Local Font Access API allows you to access the user's locally installed fonts and
+  obtain low-level details about them
 date: 2020-08-24
 updated: 2022-07-01
 hero: image/admin/oeXwG1zSwnivzpvcUJly.jpg
