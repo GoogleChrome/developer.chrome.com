@@ -5,8 +5,7 @@ subhead: >
  Updates and enhancements to the design and implementation of the API.
 description: >
  Updates and enhancements to the design and implementation of the API.
-date: 2022-01-25
-updated: 2022-11-02
+date: 2022-11-04
 authors:
  - leeronisrael
  - joeytrotz
@@ -16,7 +15,7 @@ authors:
 
 For technical resources, see the developer guides:
 
-* [Web platforms](/docs/privacy-sandbox/topics/)
+* [Web platform](/docs/privacy-sandbox/topics/)
 * [Android](https://developer.android.com/design-for-safety/privacy-sandbox/guides/topics)
 
 For a non-technical introduction, see the [Topics overview on privacysandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
