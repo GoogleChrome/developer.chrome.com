@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'FLEDGE API'
+title: 'FLEDGE API: developer guide'
 subhead: >
   Developer guide for on-device ad auctions to serve remarketing and custom audiences,
   without cross-site third-party tracking.
