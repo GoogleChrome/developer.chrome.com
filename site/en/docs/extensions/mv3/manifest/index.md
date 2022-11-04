@@ -6,7 +6,7 @@ updated: 2022-11-08
 description: An overview of the manifest.json properties of a Chrome Extension.
 ---
 
-Every extension requires a [JSON][1]\-formatted file, named `manifest.json`, that provides
+Every extension requires a [JSON][mdn-json]\-formatted file, named `manifest.json`, that provides
 important information. This file must be located in the extension's root directory.
 
 ## Field summary {: #overview }
@@ -89,4 +89,4 @@ describe each property.
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/web_accessible_resources">web_accessible_resources</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span>
 <span class="token punctuation">}</span></code></pre>
 
-[1]: https://www.json.org
+[mdn-json]: https://developer.mozilla.org/docs/Glossary/JSON
