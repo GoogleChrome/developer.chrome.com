@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Use advanced typography with local fonts
 subhead: Learn how the Local Font Access API allows you to access the user's locally installed fonts and
 obtain low-level details about them
