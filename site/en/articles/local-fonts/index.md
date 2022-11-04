@@ -5,7 +5,7 @@ subhead: Learn how the Local Font Access API allows you to access the user's loc
 obtain low-level details about them
 description: >
   The Local Font Access API enumerates the user's installed local fonts and provides low-level access to
-  the various TrueType/OpenType tables.
+  the various TrueType/OpenType tables
 date: 2020-08-24
 updated: 2022-07-01
 hero: image/admin/oeXwG1zSwnivzpvcUJly.jpg
