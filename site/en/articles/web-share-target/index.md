@@ -14,10 +14,10 @@ description: >
   choosing an app, then choosing who to share with. The Web Share Target API
   allows installed web apps to register with the underlying operating system to receive shared content.
 tags:
-- capabilities
-- progressive-web-apps
+  - capabilities
+  - progressive-web-apps
 feedback:
-- api
+  - api
 ---
 
 On a mobile or desktop device, sharing should be as straightforward as clicking the **Share** button,
