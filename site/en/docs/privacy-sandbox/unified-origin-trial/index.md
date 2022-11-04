@@ -71,7 +71,7 @@ on November 9th.
   <tr>
    <td><a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
    </td>
-   <td>Will be available in Stable, starting a 1% from November 9th.
+   <td>Will be available in Stable, starting at 1% from November 9th.
    </td>
   </tr>
 </table>
