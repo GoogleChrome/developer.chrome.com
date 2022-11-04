@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Receiving shared data with the Web Share Target API
 subhead: Sharing on mobile and desktop simplified with the Web Share Target API
 authors:
