@@ -249,7 +249,7 @@ self.addEventListener('fetch', event => {
   </figcaption>
 </figure>
 
-Be sure to verify incoming data. Unfortunately, there is no guarantee that other
+Be sure to verify incoming data. Unfortunately there is no guarantee that other
 apps will share the appropriate content in the right parameter.
 
 For example, on Android, the [`url` field will be
