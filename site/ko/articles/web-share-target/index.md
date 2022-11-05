@@ -11,7 +11,6 @@ hero: image/admin/RfxdrfKdh5Fp8camulRt.png
 alt: 플랫폼 종속 앱이 이제 웹 앱에 콘텐츠를 공유할 수 있음을 보여주는 그림.
 description: 모바일 또는 데스크톱 장치에서, 공유는 공유 버튼을 누르고, 앱을 선택한 후 공유할 사람을 선택하는 것처럼 간단해야 합니다. 웹 공유 대상 API를 사용하면 설치된 웹 앱을 기본 운영 체제에 등록하여 공유 콘텐츠를 수신할 수 있습니다.
 tags:
-  - blog
   - capabilities
   - progressive-web-apps
 feedback:
