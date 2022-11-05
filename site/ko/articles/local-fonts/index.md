@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 'layouts/blog-post.njk'
 title: 로컬 글꼴로 고급 입력 체계 사용
 subhead: Local Font Access API를 사용하여 사용자의 로컬에 설치된 글꼴에 액세스하고 해당 글꼴에 대한 낮은 수준의 세부 정보를 얻는 방법을 알아봅니다.
 tags:

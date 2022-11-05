@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 'layouts/blog-post.njk'
 title: 使用带有本地字体的高级排版
 subhead: 了解本地字体访问 API 如何允许您访问用户本地安装的字体并获取有关它们的低级详细信息。
 tags:
