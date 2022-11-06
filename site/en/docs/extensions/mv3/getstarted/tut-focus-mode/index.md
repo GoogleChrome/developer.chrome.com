@@ -145,6 +145,7 @@ To use the `activeTab` permission, add it to the manifest's permission array:
 {
   ...
   "permissions": ["activeTab"],
+  "action": {},
   ...
 }
 ```
