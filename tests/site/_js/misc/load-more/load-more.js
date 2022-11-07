@@ -47,6 +47,31 @@ test(
   }
 );
 
+test('load-more: calculates offset as expected', withPage, async (t, page) => {
+  await page.setContent(html`
+    <div id="container1"></div>
+    <button id="button1">Load more</button>
+  `);
+
+  await addPageScript(page, '_load-more.js');
+
+  const button = await page.$('#button1');
+  await button.click();
+
+  const offset1 = await page.evaluate(() => {
+    return window.instance1.currentOffset();
+  });
+
+  await button.click();
+
+  const offset2 = await page.evaluate(() => {
+    return window.instance1.currentOffset();
+  });
+
+  t.is(offset1, 5);
+  t.is(offset2, 10);
+});
+
 test(
   'load-more: hides the button if no further items are available',
   withPage,
