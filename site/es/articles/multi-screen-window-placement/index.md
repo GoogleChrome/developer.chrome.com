@@ -75,7 +75,7 @@ Una primera prueba de origen se realizó de Chromium 86 a Chromium 88. Después 
 
 A partir de Chromium 93, la API de colocación de ventanas multipantalla volverá a estar disponible como prueba de origen en Chromium. Se espera que esta segunda prueba de origen finalice en Chromium 96 (15 de diciembre de 2021).
 
-{% include 'content/origin-trials.njk' %}
+{% include 'partials/origin-trials.njk' %}
 
 ### Regístrese para la prueba de origen {: #register-for-ot}
 

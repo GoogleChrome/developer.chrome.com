@@ -74,7 +74,7 @@ feedback:
 
 从 Chromium 93 开始，Multi-Screen Window Placement API 将再次作为 Chromium 中的初始试用版提供。第二次初始试用预计将以 Chromium 96（2021 年 12 月 15 日）结束。
 
-{% include 'content/origin-trials.njk' %}
+{% include 'partials/origin-trials.njk' %}
 
 ### 登记进行初始试用 {: #register-for-ot }
 

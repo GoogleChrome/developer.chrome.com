@@ -75,7 +75,7 @@ Muti-Screen Window Placement API를 사용하면 컴퓨터에 연결된 디스�
 
 Chromium 93부터 Multi-Screen Window Placement API는 Chromium에서 원본 평가판으로 다시 사용할 수 있습니다. 이 두 번째 원본 평가판은 Chromium 96(2021년 12월 15일)에서 종료될 것으로 예상됩니다.
 
-{% include 'content/origin-trials.njk' %}
+{% include 'partials/origin-trials.njk' %}
 
 ### 원본 평가판 등록 {: #register-for-ot }
 
