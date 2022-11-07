@@ -45,11 +45,11 @@ access and modify selected resources and actions in Chrome. There are two aspect
 Extensions let you "extend" the browser by using APIs to modify browser behavior and access web
 content. Extensions operate by means of an end-user UI and a developer API:
 
-**The extensions user interface**&emsp;This provides a consistent way for users to manage their
-extensions.
+The extensions user interface
+: Provides a consistent way for users to manage their extensions.
 
-**Extensions APIs**&emsp;The [extensions APIs](/docs/extensions/reference/) allow the extension's
-code to access features of the browser itself: activating tabs, modifying net requests, and so on.
+Extensions APIs
+: Allow the extension's code to access features of the browser itself: activating tabs, modifying net requests, and so on.
 
 To create an extension, you assemble some resources -- a manifest, JavaScript and HTML files,
 images, and others -- that constitute the extension. For development and testing, you can load these
