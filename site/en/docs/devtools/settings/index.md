@@ -39,6 +39,43 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 ### Appearance
 
+The **Themes** drop-down list sets a color theme for DevTools UI.
+
+<fieldset>
+   <legend>Themes:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m0URI9jodUrMxioYEZ11.gif", alt="Changing DevTools theme from system preference to dark to light.", width="350", height="350", style="float:right;", class="screenshot" %}
+
+- System preference
+- Light
+- Dark
+
+</fieldset>
+
+The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and **Sources** > **Debugger** pane. The **auto** option makes the layout depend on DevTools width.
+
+<fieldset>
+   <legend>Panel layout:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RO1dKsa37xhMhqCKRD6j.gif", alt="Changing the Element's panel layout from horizontal to vertical.", width="350", height="350", style="float:right;", class="screenshot" %}
+
+- horizontal
+- vertical
+- auto
+
+</fieldset>
+
+<fieldset>
+   <legend>Color format:</legend>
+
+- As authored
+- HEX: #dac0de
+- RGB: rgb(128 255 255)
+- HSL: hsl(300deg 80% 90%)
+
+</fieldset>
+
+
 ### Sources
 
 ### Elements
