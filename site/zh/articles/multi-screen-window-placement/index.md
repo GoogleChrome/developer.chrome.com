@@ -78,7 +78,7 @@ feedback:
 
 ### 登记进行初始试用 {: #register-for-ot }
 
-{% include 'content/origin-trial-register.njk' %}
+{% include 'partials/origin-trial-register.njk' %}
 
 ### 问题
 

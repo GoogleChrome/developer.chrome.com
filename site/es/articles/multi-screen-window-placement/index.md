@@ -79,7 +79,7 @@ A partir de Chromium 93, la API de colocación de ventanas multipantalla volver�
 
 ### Regístrese para la prueba de origen {: #register-for-ot}
 
-{% include 'content/origin-trial-register.njk' %}
+{% include 'partials/origin-trial-register.njk' %}
 
 ### El problema
 

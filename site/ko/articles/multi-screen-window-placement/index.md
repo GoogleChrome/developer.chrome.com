@@ -79,7 +79,7 @@ Chromium 93부터 Multi-Screen Window Placement API는 Chromium에서 원본 평
 
 ### 원본 평가판 등록 {: #register-for-ot }
 
-{% include 'content/origin-trial-register.njk' %}
+{% include 'partials/origin-trial-register.njk' %}
 
 ### 문제
 
