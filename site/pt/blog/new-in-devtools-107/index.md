@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Personalize atalhos de teclado, highlight de objetos C/C++ no Inspetor de Memória muito mais.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1p4sWeksdkx6NqGAG2TO.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YP4wAJ8mRPNFX6cVOwSc.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -16,7 +16,9 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/) . Revisão por [Lucas Santos](https://lsantos.dev).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
+
+{% YouTube id='1uwv6HbR8HU' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR
@@ -127,5 +129,5 @@ Issue no Chromium: [1139945](https://crbug.com/1139945)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
 
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

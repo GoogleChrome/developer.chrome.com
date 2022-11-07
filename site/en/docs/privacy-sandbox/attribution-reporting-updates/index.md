@@ -15,7 +15,7 @@ authors:
 The Attribution Reporting proposal [has changed](#changelog) to address
 community feedback, from API mechanism changes to new functionality.
 
-{% include 'content/privacysandbox-partials/feedback-aside.njk' %}
+{% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 ## Who are these updates for?
 

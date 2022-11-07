@@ -34,7 +34,7 @@ To help you identify the sources of main thread load,
 Lighthouse shows a breakdown of where CPU time was spent
 while the browser loaded your page.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to minimize main thread work
 

@@ -35,7 +35,7 @@ O Lighthouse sinaliza páginas com árvores DOM:
 - Ele gera avisos quando o elemento body tem mais de 800 nós.
 - Ele gera erros quando o elemento body tem mais de 1.400 nós.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como otimizar o tamanho do DOM
 

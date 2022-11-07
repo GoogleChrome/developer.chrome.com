@@ -35,7 +35,7 @@ the median network payload is between 1,700 and 1,900&nbsp;KiB.
 To help surface the highest payloads,
 Lighthouse flags pages whose total network requests exceed 5,000&nbsp;KiB.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to reduce payload size
 

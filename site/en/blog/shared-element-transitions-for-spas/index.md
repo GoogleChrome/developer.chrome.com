@@ -11,6 +11,12 @@ hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/6bO4bz5DfFIZxiBMd1oW.jpg
 alt: A layout plan for a web page.
 ---
 
+{% Aside 'caution' %}
+Big changes are coming! Following developer and working group feedback, this feature is being renamed "View Transitions", and the API is being tweaked to better-integrate existing routers, and the [Navigation API](/docs/web-platform/navigation-api/).
+
+This article still applies to Chrome 104-108. However, Chrome 109 already has some of the changes, so the current demos won't work there. This article will be updated when the changes are complete.
+{% endAside %}
+
 The Shared Element Transition API makes it easy to change the DOM in a single step, while creating an animated transition between the two states.
 
 It's currently behind the `chrome://flags/#document-transition` flag in Chrome 104+. You can also experiment with it in production via the [origin trial](/origintrials/#/view_trial/1762033354208706561).

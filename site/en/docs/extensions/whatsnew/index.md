@@ -217,7 +217,7 @@ December 10, 2021
 
 Added [a new reference page](/docs/webstore/review-process) that provides an overview of the Chrome
 Web Store review process and explains how [developer program
-policy](/docs/webstore/program_policies/) enforcement is handled.
+policy](/docs/webstore/program-policies/) enforcement is handled.
 
 ### Chrome 98: scripting.executeScript() and scripting.insertCSS() accept multiple files {: #m98-execute-multiple-files }
 
@@ -370,7 +370,7 @@ resources can load an extension's pages and enables the use of low level web pla
 
 June 29, 2021
 
-The Chrome Web Store [Developer Program Policies](/docs/webstore/program_policies) have been updated
+The Chrome Web Store [Developer Program Policies](/docs/webstore/program-policies) have been updated
 with clarifications to the deceptive installation tactics, spam, and repetitive content policies.
 This update also includes a new two step verification requirement to publish on the Chrome Web
 Store. [Read the blog post](/blog/policy-update-2sv/) for more information.

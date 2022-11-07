@@ -16,7 +16,7 @@ tags:
 
 *感谢[韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -158,5 +158,5 @@ Chromium 议题: [1261130](https://crbug.com/1261130)
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 **来源**面板现在可以在页面重加载后正确恢复滚动位置。在此之前，滚动位置没有正确恢复，造成了调试的不便。
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

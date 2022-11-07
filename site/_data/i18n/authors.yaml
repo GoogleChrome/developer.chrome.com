@@ -368,6 +368,11 @@ afuchs:
     en: 'Andy Fuchs'
   description:
     en: 'Technical Writer, Chrome Extensions'
+patrickbrosset:
+  title:
+    en: 'Patrick Brosset'
+  description:
+    en: 'Our latest news, updates, and stories by Patrick Brosset'
 dotproto:
   title:
     en: 'Simeon Vincent'
@@ -888,6 +893,11 @@ barbsmith:
     en: Barb Smith
   description:
     en: Barb leads Chrome's Privacy Sandbox Partnerships team
+cilvento:
+  title:
+    en: Christina Ilvento
+  description:
+    en: Christina is a Group Product Manager on Chrome
 crystalwang:
   title:
     en: Crystal Wang
@@ -1137,3 +1147,18 @@ rouslan:
     en: 'Rouslan Solomakhin'
   description:
     en: 'Software Engineer on the Chrome team.'
+chrisdavidmills:
+  title:
+    en: 'Chris Mills'
+  description:
+    en: 'Independent tech writer specializing in web platform docs.'
+leeronisrael:
+  title:
+    en: 'Leeron Israel'
+  description:
+    en: 'Product Manager, Privacy Sandbox'
+joeytrotz:
+  title:
+    en: 'Joey Trotz'
+  description:
+    en: 'Director of Product Management, Privacy Sandbox'

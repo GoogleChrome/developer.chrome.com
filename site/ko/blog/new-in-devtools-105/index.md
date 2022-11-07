@@ -16,7 +16,7 @@ tags:
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -214,5 +214,5 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 - **레이아웃** 창에서 CSS Flex 와 grid item 을 일관되게 표시하고 이들을 **요소**패널에 배지로서 표시합니다. 이전에는 flex item과 grid item 이 양쪽 모두에서 무작위로 누락되었습니다. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - DevTools 가 특정 프레임을 광고로서 표시하도록 하는 스크립트를 발견한 경우, [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)에 대해 새로운 **Creator Ad Script** 링크가 이용가능해집니다. 여러분은 **애플리케이션** > **프레임** 을 통해 프레임을 열 수 있습니다. ([1217041](https://crbug.com/1217041))
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -10,7 +10,13 @@ tags:
   - css
   - html
 date: 2022-09-13
+last_updated: 2022-11-04
 ---
+
+{% Aside 'caution' %}
+The Open UI initiative resolved to change the attribute from `popup` to `popover` for the Pop-up API on [October 27, 2022](https://github.com/openui/open-ui/issues/627).
+This [change request](https://chromium-review.googlesource.com/c/chromium/src/+/3991667) was merged into Chromium on [November 3, 2022](https://chromium-review.googlesource.com/c/chromium/src/+/3991667). All of the demos and references have been updated to make use of the new `popover` naming convention.
+{% endAside %}
 
 The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier for developers to make great user experiences. To do this, we are trying to tackle the more problematic patterns that developers face. We can do this by providing better platform built-in APIs and components.
 
@@ -44,7 +50,7 @@ Lastly, there is a [polyfill](https://github.com/oddbird/popup-polyfill) under d
 You can check for pop-up support with:
 
 ```js
-const supported = Element.prototype.hasOwnProperty("popUp");
+const supported = HTMLElement.prototype.hasOwnProperty("popover");
 ```
 
 ## Current solutions
@@ -71,8 +77,8 @@ This requires an extra dependency and more decisions for developers. It also req
 This is all you need.
 
 ```js
-<div id="my-first-popup" popup>PopUp Content!</div>
-<button popuptoggletarget="my-first-popup">Toggle Pop-Up</button>
+<div id="my-first-popup" popover>PopUp Content!</div>
+<button popovertoggletarget="my-first-popup">Toggle Pop-Up</button>
 ```
 
 {% Codepen {
@@ -93,7 +99,7 @@ This is all you need.
 But, what is happening here?
 
 - You don’t have to put the pop-up element into a container or anything—it's hidden by default.
-- You don’t have to write any JavaScript to make it appear. That gets handled by the `popuptoggletarget` attribute.
+- You don’t have to write any JavaScript to make it appear. That gets handled by the `popovertoggletarget` attribute.
 - When it appears, it gets promoted to the top layer. That means it gets promoted above the `document` in the viewport. You don’t have to manage `z-index` or worry about where your pop-up is in the DOM. It could be deep down nested in the DOM, with clipping ancestors. You can also see which elements are currently in the top layer through DevTools. For more on the top layer, [check out this article](/blog/what-is-the-top-layer/).
 
 ![GIF of DevTools top layer support being demonstrated](https://wd.imgix.net/image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/36Yck7O77zDipSNGNNbB.gif?auto=format&w=1600
@@ -145,7 +151,7 @@ By default, the `::backdrop` on a pop-up has `pointer-events: none` set.
 Let's turn our attention to styling the pop-up. By default, a pop-up has a fixed position and some applied padding. It also has `display: none`. You could override this to show a pop-up. But, that wouldn't promote it to the top layer.
 
 ```css
-[popup] { display: block; } 
+[popover] { display: block; } 
 ```
 
 {% Codepen {
@@ -166,7 +172,7 @@ Let's turn our attention to styling the pop-up. By default, a pop-up has a fixed
 If you want a pop-up to be shown on load, you can use the `defaultopen` attribute.
 
 ```html
-<div popup defaultopen id=”pop”>Pop-up content!</div>
+<div popover defaultopen id=”pop”>Pop-up content!</div>
 ```
 
 {% Codepen {
@@ -196,7 +202,7 @@ Regardless of how you promote your pop-up, once you promote a pop-up to the top 
 By default, a pop-up will lay out in the center of the viewport using `margin: auto`. But, in some cases, you may want to be explicit about positioning. For example:
 
 ```css
-[popup] {
+[popover] {
   top: 50%;
   left: 50%;
   translate: -50%;
@@ -206,7 +212,7 @@ By default, a pop-up will lay out in the center of the viewport using `margin: a
 If you want to lay out content inside your pop-up using CSS grid or flexbox, it might be wise to wrap this in an element. Otherwise, you'll need to declare a separate rule that changes the `display` once the pop-up is in the top layer. Setting it by default would have it shown by default overriding `display: none`.
 
 ```css
-[popup]:open {
+[popover]:open {
  display: flex;
 }
 ```
@@ -240,40 +246,40 @@ To check whether an element is open with JavaScript, use:
 This example uses a custom property to drive the transition. And you can apply a transition to the pop-up’s `::backdrop` too.
 
 ```css
-[popup] {
+[popover] {
   --hide: 1;
   transition: transform 0.2s;
   transform: translateY(calc(var(--hide) * -100vh))
             scale(calc(1 - var(--hide)));
 }
 
-[popup]::backdrop {
+[popover]::backdrop {
   transition: opacity 0.2s;
   opacity: calc(1 - var(--hide, 1));
 }
 
-[popup]:open,
-[popup]:open::backdrop  {
+[popover]:open,
+[popover]:open::backdrop  {
   --hide: 0;
 }
 ```
 
-A tip here is to group transitions and animations under a media query for motion. This can help to maintain your timings too. This is because you can't share values between the `popup` and the `::backdrop` via custom property.
+A tip here is to group transitions and animations under a media query for motion. This can help to maintain your timings too. This is because you can't share values between the `popover` and the `::backdrop` via custom property.
 
 ```css
 @media(prefers-reduced-motion: no-preference) {
-  [popup] { transition: transform 0.2s; }
-  [popup]::backdrop { transition: opacity 0.2s; }
+  [popover] { transition: transform 0.2s; }
+  [popover]::backdrop { transition: opacity 0.2s; }
 }
 ```
 
-Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up. To dismiss it, we're using "Light dismiss". But, you also get `popupshowtarget` and `popuphidetarget` attributes you can use. Let's add a button to a pop-up that hides it and change the toggle button to use `popupshowtarget`.
+Up until this point, you've seen the use of `popovertoggletarget` to show a pop-up. To dismiss it, we're using "Light dismiss". But, you also get `popovershowtarget` and `popoverhidetarget` attributes you can use. Let's add a button to a pop-up that hides it and change the toggle button to use `popovershowtarget`.
 
 ```html
-<div id="code-pop-up" popup>
-  <button popuphidetarget="code-pop-up">Hide Code</button>
+<div id="code-pop-up" popover>
+  <button popoverhidetarget="code-pop-up">Hide Code</button>
 </div>
-<button popupshowtarget="code-pop-up">Reveal Code</button>
+<button popovershowtarget="code-pop-up">Reveal Code</button>
 ```
 
 {% Codepen {
@@ -293,25 +299,26 @@ Up until this point, you've seen the use of `popuptoggletarget` to show a pop-up
 
 
 {% Aside %}
-You may also notice that the transition in and out has changed. It's now powered by separate animations to enter from one side and exit on the other. This means you can do things like enter on one axis and exit on another. Make sure you set `animation-fill-mode` if your `::backdrop` and `[popup]` timings are different.
+You may also notice that the transition in and out has changed. It's now powered by separate animations to enter from one side and exit on the other. This means you can do things like enter on one axis and exit on another. Make sure you set `animation-fill-mode` if your `::backdrop` and `[popover]` timings are different.
 {% endAside %}
 
 As mentioned earlier, the pop-up API covers more than only our historical notion of pop-ups. You could build for all types of scenarios such as notifications, menus, tooltips etc.
 
-Some of those scenarios need different interaction patterns. Interactions like hover. The use of a `popuphovertarget` attribute was experimented with but isn't currently implemented.
+Some of those scenarios need different interaction patterns. Interactions like hover. The use of a `popoverhovertarget` attribute was experimented with but isn't currently implemented.
+
 {% Aside %}
 You can get involved with the discussion about hover interactions for pop-ups [here](https://github.com/openui/open-ui/issues/526).
 {% endAside %}
 
 
 ```html
-<div popuphovertarget="hover-pop-up">Hover for Code</div>
+<div popoverhovertarget="hover-pop-up">Hover for Code</div>
 ```
 
 The idea being that you hover an element to show the target. This behavior could get configured via CSS properties. These CSS properties would define the window of time for hovering on and off an element that a pop-up reacts to. The default behavior experimented with had a pop-up show after an explicit `0.5s` of `:hover`. Then it would need a light dismiss or the opening of another pop-up to dismiss (More on this coming up). This was due to the pop-up hide duration being set to `Infinity`.
 
 {% Aside ‘warning' %}
-The use of `popuphovertarget` is something __not__ standardized or currently implemented.
+The use of `popoverhovertarget` is something __not__ standardized or currently implemented.
 {% endAside %}
 
 
@@ -319,17 +326,17 @@ In the meantime, you could use JavaScript to polyfill that functionality.
 
 ```js
 let hoverTimer;
-const HOVER_TRIGGERS = document.querySelectorAll("[popuphovertarget]");
+const HOVER_TRIGGERS = document.querySelectorAll("[popoverhovertarget]");
 const tearDown = () => {
   if (hoverTimer) clearTimeout(hoverTimer);
 };
 HOVER_TRIGGERS.forEach((trigger) => {
   const popup = document.querySelector(
-    `#${trigger.getAttribute("popuphovertarget")}`
+    `#${trigger.getAttribute("popoverhovertarget")}`
   );
   trigger.addEventListener("pointerenter", () => {
     hoverTimer = setTimeout(() => {
-      if (!popup.matches(":open")) popup.showPopUp();
+      if (!popup.matches(":open")) popup.showPopOver();
     }, 500);
     trigger.addEventListener("pointerleave", tearDown);
   });
@@ -368,13 +375,13 @@ We've covered non-JavaScript interaction behavior. But what about pop-up behavio
 
 The pop-up API allows you to specify three types of pop-up which differ in behavior.
 
-`[popup=auto]/[popup]`: 
-- Nesting support. This doesn't only mean nested in the DOM either.  The definition of an ancestral pop-up is one that is:
+`[popover=auto]/[popover]`: 
+- Nesting support. This doesn't only mean nested in the DOM either. The definition of an ancestral pop-up is one that is:
   - related by DOM position (child).
-  - related by triggering attributes on child elements such as `popuptoggletarget`, `popuphovertarget`, and so on.
+  - related by triggering attributes on child elements such as `popovertoggletarget`, `popovershowtarget`, and so on.
   - related by the `anchor` attribute (Under development CSS Anchoring API).
 - Light dismiss.
-- Opening dismisses other pop-ups that are not [ancestral pop-ups](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-pop-up). Have a play with the demo below that highlights how nesting with ancestral pop-ups works. See how changing some of the `popuphidetarget`/`popupshowtarget` instances to `popuptoggletarget` changes things.
+- Opening dismisses other pop-ups that are not [ancestral pop-ups](https://open-ui.org/components/popup.research.explainer#nearest-open-ancestral-pop-up). Have a play with the demo below that highlights how nesting with ancestral pop-ups works. See how changing some of the `popoverhidetarget`/`popovershowtarget` instances to `popovertoggletarget` changes things.
 - Light dismissing one dismisses all, but dismissing one in the stack only dismisses those above it in the stack.
 
 {% Codepen {
@@ -392,7 +399,12 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
   }
 %}
 
-`[popup=hint]`
+{% Aside 'caution' %}
+A third type of pop-up using `popover=hint` was previously implemented for use cases such as tool tips. It was resolved on [October 13, 2022](https://github.com/openui/open-ui/issues/617), to move this to a second version of the implementation.
+{% endAside %}
+
+<!-- Removed until v2 of the pop-up API -->
+<!-- `[popup=hint]`
 - Singleton. Can only show one pop-up of type hint at a time. Other pop-up types remain open. Check out the demo below. Even though there are ancestral pop-ups, they’re dismissed when a different pop-up gets shown.
 - Light dismiss.
 - Can’t be shown by default with `defaultopen`.
@@ -410,9 +422,9 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
     loop: true,
     src: "video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JOhSvvJKY3J0YYrQHNq0.mp4"
   }
-%}
+%} -->
 
-`[popup=manual]`
+`[popover=manual]`
 - Doesn't close other pop-ups.
 - No light dismiss.
 - Requires explicit dismiss via trigger element or JavaScript.
@@ -434,26 +446,26 @@ The pop-up API allows you to specify three types of pop-up which differ in behav
 
 ## JavaScript API
 
-When you need more control over your pop-ups, you can approach things with JavaScript. You get both a `showPopUp` and `hidePopUp` method. You also have `show` and `hide` events to listen for:
+When you need more control over your pop-ups, you can approach things with JavaScript. You get both a `showPopOver` and `hidePopOver` method. You also have `popovershow` and `popoverhide` events to listen for:
 
 Show a pop-up
 ```js
-popUpElement.showPopUp()
+popUpElement.showPopOver()
 ```
 Hide a pop-up:
 
 ```js
-popUpElement.hidePopUp()
+popUpElement.hidePopOver()
 ```
 Listen for a pop-up being shown:
 
 ```js
-popUpElement.addEventListener('show', doSomethingWhenPopUpShows)
+popUpElement.addEventListener('popovershow', doSomethingWhenPopUpShows)
 ```
 Listen for a pop-up being shown and cancel it being shown:
 
 ```js
-popUpElement.addEventListener('show',event => {
+popUpElement.addEventListener('popovershow',event => {
   event.preventDefault();
   console.warn(‘We blocked a pop-up from being shown’);
 })
@@ -461,12 +473,12 @@ popUpElement.addEventListener('show',event => {
 Listen for a pop-up being hidden:
 
 ```js
-popUpElement.addEventListener('hide', doSomethingWhenPopUpHides)
+popUpElement.addEventListener('popoverhide', doSomethingWhenPopUpHides)
 ```
 You can't cancel a pop-up being hidden:
 
 ```js
-popUpElement.addEventListener('hide',event => {
+popUpElement.addEventListener('popoverhide',event => {
   event.preventDefault();
   console.warn("You aren't allowed to cancel the hiding of a pop-up");
 })
@@ -497,7 +509,7 @@ This demo has pop-ups with audible pops, so we'll need JavaScript to play the au
 
 ## Accessibility
 
-Accessibility is at the forefront of thinking with the pop-up API. Accessibility mappings associate the pop-up with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popuptoggletarget`.
+Accessibility is at the forefront of thinking with the pop-up API. Accessibility mappings associate the pop-up with its trigger element, as needed. This means you don't need to declare `aria-*` attributes such as `aria-haspopup`, assuming you use one of the triggering attributes like `popovertoggletarget`.
 
 For focus management, you can use the autofocus attribute to move focus to an element inside a pop-up. This is the same as for a Dialog, but the difference comes when returning focus, and that's because of light dismiss. In most cases, closing a pop-up returns focus to the previously focused element. But focus gets moved to a clicked element on light dismiss, if it can get focus. Check out the [section about focus management](https://open-ui.org/components/popup.research.explainer#focus-management) in the explainer.
 
@@ -527,7 +539,7 @@ In this demo, the focussed element gets a green outline. Try tabbing around the 
 When it comes to pop-ups, a tricky pattern to cater for is anchoring the element to its trigger. For example, if a tooltip is set to show above its trigger but the document gets scrolled. That tooltip could get cut off by the viewport. There are current JavaScript offerings to deal with this such as "[Floating UI](https://floating-ui.com/)". They will reposition the tooltip for you to stop this happening and rely on a desired position order.
 
 
-But, we want you to be able to define this with your styles. There is a companion API under development alongside the pop-up API to tackle this. The "[CSS Anchor Positioning](https://tabatkins.github.io/specs/css-anchor-position)" API will allow you to tether elements to other elements, and it will do this in a manner that re-positions elements so that they aren't cut off by the viewport.
+But, we want you to be able to define this with your styles. There is a companion API under development alongside the pop-up API to tackle this. The "[CSS Anchor Positioning](https://drafts.csswg.org/css-anchor-1/)" API will allow you to tether elements to other elements, and it will do this in a manner that re-positions elements so that they aren't cut off by the viewport.
 
 This demo uses the Anchoring API in its current state. The position of the boat responds to the anchor's position in the viewport.
 
@@ -568,7 +580,7 @@ Here's a snippet of the CSS making this demo work. No JavaScript required.
 }
 ```
 
-You can check out the [spec here](https://tabatkins.github.io/specs/css-anchor-position/). There will also be a polyfill for this API.
+You can check out the [spec here](https://drafts.csswg.org/css-anchor-1/). There will also be a polyfill for this API.
 
 
 ## Examples
@@ -579,9 +591,9 @@ Now you’re familiar with what pop-up has to offer and how, let’s dig into so
 
 This demo shows a "Copy to clipboard" notification.
 
-- Uses `[popup=manual]`.
-- On action show pop-up with `showPopUp`.
-- After a `2000ms` timeout, hide it with `hidePopUp`.
+- Uses `[popover=manual]`.
+- On action show pop-up with `showPopOver`.
+- After a `2000ms` timeout, hide it with `hidePopOver`.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -626,7 +638,7 @@ This demo uses the top layer to show toast style notifications.
 
 This demo shows how a nested navigation menu could work.
 
-- Use `[popup=auto]` as it allows nested pop-ups.
+- Use `[popover=auto]` as it allows nested pop-ups.
 - Use `autofocus` on the first link of each dropdown in order to keyboard navigate.
 - This is a perfect candidate for the CSS Anchoring API. But, for this demo you can use a small amount of JavaScript to update the positions using custom properties.
 
@@ -663,9 +675,9 @@ Remember, because this demo uses `autofocus`, it will need to be opened in "[ful
 
 This demo shows how you might pop media up. 
 
-- Uses `[popup=auto]` for light dismiss.
+- Uses `[popover=auto]` for light dismiss.
 - JavaScript listens for the video's `play` event and pops the video up.
-- The pop-ups `hide` event pauses the video.
+- The pop-ups `popoverhide` event pauses the video.
 
 {% Codepen {
     user: 'web-dot-dev',
@@ -686,7 +698,7 @@ This demo shows how you might pop media up.
 
 This demos shows how you might create inline content tooltips that contain media.
 
-- Uses `[popup=hint]` for singleton pattern pop-ups. Showing one hides the others.
+- Uses `[popover=auto]`. Showing one hides the others because they are not ancestral.
 - Shown on `pointerenter` with JavaScript.
 - Another perfect candidate for the CSS Anchoring API.
 
@@ -710,7 +722,7 @@ This demos shows how you might create inline content tooltips that contain media
 
 This demo creates a navigation drawer using a pop-up.
 
-- Uses `[popup=auto]` for light dismiss.
+- Uses `[popover=auto]` for light dismiss.
 - Uses `autofocus` to focus the first navigation item.
 
 {% Codepen {
@@ -752,9 +764,9 @@ This demo shows how you might manage backdrops for mutliple pop-ups where you on
 
 ### Custom cursor pop-up
 
-This demo shows how to use `popup` to promote a `canvas` to the top layer and use it to show a custom cursor.
+This demo shows how to use `popover` to promote a `canvas` to the top layer and use it to show a custom cursor.
 
-- Promote `canvas` to top layer with `defaultopen` and `[popup=manual]`.
+- Promote `canvas` to top layer with `defaultopen` and `[popover=manual]`.
 - When other pop-ups are opened, hide and show the `canvas` pop-up to make sure it's on top.
 
 {% Codepen {
@@ -895,7 +907,7 @@ This demo shows how you could use pop-up to implement a floating action button m
 
 - Have a `manual` type pop-up with the `defaultopen` attribute set. This is the main button.
 - The menu is another pop-up that is the target of the main button.
-- Menu is opened with `popuptoggletarget`.
+- Menu is opened with `popovertoggletarget`.
 - Use `autofocus` to focus the first menu item on show.
 - Light dismiss closes the menu.
 - The icon twist uses `:has()`. You can read more about `:has()` in [this article](/blog/has-m105/).

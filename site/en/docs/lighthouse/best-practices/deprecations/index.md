@@ -22,7 +22,7 @@ after they're removed causes errors on your site.
 Lighthouse includes all deprecated API warnings that Chrome logs
 to the DevTools Console.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to remove deprecated APIs
 

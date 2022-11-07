@@ -192,7 +192,7 @@ able to visit `uk.example.com`. Those users would see features and functions
 for the United States site that were blocked for the United Kingdom site.
 {% endAside %}
 
-## Trust Tokens
+## Privacy State Tokens
 
 ### How can I ask a question about this feature?
 
@@ -207,7 +207,7 @@ for the United States site that were blocked for the United Kingdom site.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
 
-### Is tooling available for Trust Tokens?
+### Is tooling available for Privacy State Tokens?
 
 Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read

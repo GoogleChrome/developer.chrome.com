@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: '키보드 단축키 커스터마이징, 메모리 인스펙터에서 C/C++ 객체 하이라이팅 등'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PBk8j2ojs57qI4RIKTCX.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yDRjqPiA7WSfo7ED5rOS.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,9 +15,11 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi) 님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
-## DevTools에서 키보드 단축키 커스터마이징 {: #shortcuts }
+{% YouTube id='1uwv6HbR8HU' %}
+
+## DevTools 에서 키보드 단축키 커스터마이징 {: #shortcuts }
 
 DevTools 에서 선호하는 명령어에 대한 키보드 단축키를 커스터마이징할 수 있습니다.
 
@@ -109,5 +111,5 @@ Chromium issue: [1139945](https://crbug.com/1139945)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
 
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

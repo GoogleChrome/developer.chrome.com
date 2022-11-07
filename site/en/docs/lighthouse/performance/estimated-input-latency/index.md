@@ -18,7 +18,7 @@ The Lighthouse reports displays Estimated Input Latency in milliseconds:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ofvYff7EQ5oDMME20mmF.png", alt="A screenshot of the Lighthouse Estimated Input Latency audit", width="800", height="512" %}
 </figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## What Estimated Input Latency measures
 

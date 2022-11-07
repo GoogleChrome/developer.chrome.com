@@ -6,6 +6,8 @@ updated: 2015-01-07
 description: Reference documentation for the offline_enabled property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 Whether the app or extension is expected to work offline. When Chrome detects that it is offline,
 apps with this field set to true will be highlighted on the New Tab page.
 

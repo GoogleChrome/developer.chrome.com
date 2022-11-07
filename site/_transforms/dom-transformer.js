@@ -7,9 +7,9 @@ const {processInlineJs} = require('./process-inline-js');
 /**
  * @param {string} content
  * @param {string} outputPath
- * @return {string}
+ * @return {Promise<string>}
  */
-const domTransformer = (content, outputPath) => {
+const domTransformer = async (content, outputPath) => {
   // Make sure we're not interacting with something weird that has
   // permalink set to false or undefined.
   if (!outputPath || typeof outputPath !== 'string') {
@@ -34,7 +34,7 @@ const domTransformer = (content, outputPath) => {
   // These transforms mutate the cheerio object.
   prettyUrls($, outputPath, locale);
   tables($);
-  processInlineJs($);
+  await processInlineJs($);
 
   // Return the final html.
   return $.html();

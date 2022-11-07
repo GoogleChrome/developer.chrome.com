@@ -105,6 +105,7 @@
 - title: i18n.docs.devtools.accessibility
   sections:
     - url: /docs/devtools/accessibility/reference/
+    - url: /docs/devtools/accessibility/contrast/
     - url: /docs/devtools/accessibility/navigation/
     - url: /docs/devtools/accessibility/focus/ 
 - title: i18n.docs.devtools.customization
