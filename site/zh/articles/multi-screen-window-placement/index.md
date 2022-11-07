@@ -11,7 +11,7 @@ tags:
 hero: image/admin/9wQYJACMKOM6aUA0BPsW.jpg
 alt: 显示多种假加密货币及其价格图表的模拟交易台。
 origin_trial:
-url: "https://developer.chrome.com/origintrials/#/view_trial/-8087339030850568191"
+url: "/origintrials/#/view_trial/-8087339030850568191"
 feedback:
   - api
 ---
