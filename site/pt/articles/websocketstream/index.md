@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: 'WebSocketStream: integração de streams com a API WebSocket'
 subhead: Evite que seu aplicativo seja afogado em mensagens WebSocket ou inunde um servidor WebSocket com mensagens aplicando contrapressão.
 authors:

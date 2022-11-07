@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: 'API de detecção de formas: uma imagem vale mais que mil palavras, rostos e códigos de barras'
 subhead: A API de detecção de formas detecta faces, códigos de barras e texto em imagens.
 authors:

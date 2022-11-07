@@ -1,4 +1,5 @@
 --
+layout: 'layouts/blog-post.njk'
 title: "The Shape Detection API: a picture is worth a thousand words, faces, and barcodes"
 subhead: The Shape Detection API detects faces, barcodes, and text in images.
 authors:

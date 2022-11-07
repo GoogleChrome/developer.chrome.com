@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: WebSocketStream：ストリームをWebSocket APIと統合する
 subhead: アプリがWebSocketメッセージに溺れるのを防ぎます または、バックプレッシャを適用してWebSocketサーバーをメッセージで溢れさせます。
 authors:

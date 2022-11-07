@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Managing several displays with the Multi-Screen Window Placement API
 subhead: Get information about connected displays and position windows relative to those displays.
 authors:

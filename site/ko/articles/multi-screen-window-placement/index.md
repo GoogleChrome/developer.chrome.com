@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Multi-Screen Window Placement API로 여러 디스플레이 관리하기
 subhead: 연결된 디스플레이에 대한 정보를 얻고 해당 디스플레이와 관련된 창 위치를 지정합니다.
 authors:

@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: 'WebSocketStream: WebSocket API와 스트림 통합'
 subhead: 역 압력(backpressure)을 적용하여 앱이 WebSocket 메시지의 홍수에 빠지거나 WebSocket 서버에 메시지가 넘쳐나는 것을 방지합니다.
 authors:

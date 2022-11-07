@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Administrar varias pantallas con la API de colocación de ventanas multipantalla
 subhead: Obtenga información sobre las pantallas conectadas y la posición de las ventanas en relación con esas pantallas.
 authors:
