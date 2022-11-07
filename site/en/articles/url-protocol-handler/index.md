@@ -14,7 +14,7 @@ tags:
 ---
 
 {% Aside 'success' %} URL protocol handler registration for PWAs is part of the
-[capabilities project](https://developer.chrome.com/blog/fugu-status/) and is shipped. {% endAside %}
+[capabilities project](/blog/fugu-status/) and is shipped. {% endAside %}
 
 ## Background on schemes (aka. protocols)
 

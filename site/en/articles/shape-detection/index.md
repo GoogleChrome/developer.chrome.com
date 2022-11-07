@@ -21,7 +21,7 @@ feedback:
 
 {% Aside %}
 This API is part of the new
-[capabilities project](https://developer.chrome.com/blog/capabilities/).
+[capabilities project](/blog/capabilities/).
 Barcode detection has launched in Chrome 83.
 Face and text detection are available behind a flag. This post will be updated as
 the Shape Detection API evolves.
@@ -110,12 +110,12 @@ of use cases for all three features.
 
 <div>
 
-| Step                                       | Status                       |
-| ------------------------------------------ | ---------------------------- |
-| 1. Create explainer                        | [Complete][explainer]        |
-| 2. Create initial draft of specification   | [In Progress][spec]          |
-| **3. Gather feedback & iterate on design** | [**In progress**](#feedback) |
-| 4. Origin trial                            | [Complete](https://developers.chrome.com/origintrials/#/view_trial/-2341871806232657919) |
+| Step                                       | Status                                                                                                                                                                                                       |
+| ------------------------------------------ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. Create explainer                        | [Complete][explainer]                                                                                                                                                                                        |
+| 2. Create initial draft of specification   | [In Progress][spec]                                                                                                                                                                                          |
+| **3. Gather feedback & iterate on design** | [**In progress**](#feedback)                                                                                                                                                                                 |
+| 4. Origin trial                            | [Complete](/origintrials/#/view_trial/-2341871806232657919/)                                                                                                                                                 |
 | **5. Launch**                              | Barcode detection **Complete**<br>Face Detection [In Progress](https://www.chromestatus.com/feature/5678216012365824)<br>Text Detection [In Progress](https://www.chromestatus.com/feature/5644087665360896) |
 
 </div>

@@ -13,9 +13,10 @@ alt: Simulated trading desk showing multiple fake cryptocurrencies and their pri
 feedback:
   - api
 ---
-
 {% Aside 'success' %} The Multi-Screen Window Placement API was part of the
-[capabilities project](https://developer.chrome.com/blog/fugu-status/) and is now launched. {% endAside %}
+[capabilities project](/blog/fugu-status/) and is now launched. {% endAside %}
+
+## Multi-Screen Window Placement API
 
 The Multi-Screen Window Placement API allows you to enumerate the displays connected to your machine
 and to place windows on specific screens.
