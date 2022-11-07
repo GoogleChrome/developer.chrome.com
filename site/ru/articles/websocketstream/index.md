@@ -1,6 +1,6 @@
 ---
-title: WebSocketStream: интеграция потоков с WebSocket API
-subhead: Как с помощью обратной реакции не дать приложению утонуть в сообщениях WebSocket и не переполнить данными сервер WebSocket.
+title: 'WebSocketStream: интеграция потоков с WebSocket API'
+subhead: 'Как с помощью обратной реакции не дать приложению утонуть в сообщениях WebSocket и не переполнить данными сервер WebSocket.'
 authors:
   - thomassteiner
 date: 2020-03-27
@@ -11,7 +11,7 @@ description: WebSocketStream позволяет использовать пот�
 tags:
   - capabilities
 origin_trial:
-url: "https://developers.chrome.com/origintrials/#/view_trial/1977080236415647745"
+url: "/origintrials/#/view_trial/1977080236415647745"
 feedback:
   - api
 ---
