@@ -52,7 +52,7 @@ feedback:
 <tr data-md-type="table_row">
 <td data-md-type="table_cell">4. <strong data-md-type="double_emphasis">初始试用</strong>
 </td>
-<td data-md-type="table_cell"><strong data-md-type="double_emphasis"><p data-md-type="paragraph"><a href="https://developer.chrome.com/origintrials/#/view_trial/-8087339030850568191" data-md-type="link">进行中</a></p></strong></td>
+<td data-md-type="table_cell"><strong data-md-type="double_emphasis"><p data-md-type="paragraph"><a href="/origintrials/#/view_trial/-8087339030850568191" data-md-type="link">进行中</a></p></strong></td>
 </tr>
 <tr data-md-type="table_row">
 <td data-md-type="table_cell">5. 发布</td>

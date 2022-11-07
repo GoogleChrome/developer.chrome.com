@@ -22,7 +22,7 @@ feedback:
 
 La API de colocación de ventanas multipantalla le permite enumerar las pantallas conectadas a su máquina y colocar ventanas en pantallas específicas.
 
-### Casos de uso sugeridos {: #use-cases}
+## Casos de uso sugeridos {: #use-cases}
 
 Ejemplos de sitios que pueden usar esta API incluyen:
 

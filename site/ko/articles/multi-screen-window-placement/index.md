@@ -20,7 +20,7 @@ feedback:
 
 Muti-Screen Window Placement API를 사용하면 컴퓨터에 연결된 디스플레이를 열거하고 특정 화면에 창을 배치할 수 있습니다.
 
-### 제안된 사용 사례 {: #use-cases }
+## 제안된 사용 사례 {: #use-cases }
 
 이 API를 사용할 수 있는 사이트의 예는 다음과 같습니다.
 
