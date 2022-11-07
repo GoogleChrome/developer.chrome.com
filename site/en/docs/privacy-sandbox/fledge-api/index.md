@@ -203,7 +203,7 @@ model was introduced. In the long-term, adtechs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
 
-Refer to the [FLEDGE services blog post](/blog/fledge-services-overview#timeline)
+Refer to the [FLEDGE services blog post](/blog/fledge-service-overview/#timeline)
 for timeline updates. We'll provide substantial notice for developers to begin
 testing and adoption before this transition takes place.
 
@@ -549,7 +549,7 @@ to share feedback privately with the Chrome team outside of public forums.
 #### Opt-out {: #opt-out}
 
 Want to opt-out of FLEDGE? Learn how to
-[block access to the FLEDGE API](/docs/privacy-sandbox/fledge/opt-out),
+[block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out/),
 as a site owner or an individual user.
 
 ### Get updates
