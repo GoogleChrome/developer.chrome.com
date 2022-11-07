@@ -4,8 +4,7 @@ title: Administrar varias pantallas con la API de colocación de ventanas multip
 subhead: Obtenga información sobre las pantallas conectadas y la posición de las ventanas en relación con esas pantallas.
 authors:
   - thomassteiner
-description: La API de ubicación de ventanas multipantalla le permite enumerar las pantallas conectadas a su
-máquina y colocar ventanas en pantallas específicas.
+description: La API de ubicación de ventanas multipantalla le permite enumerar las pantallas conectadas a su máquina y colocar ventanas en pantallas específicas.
 date: 2020-09-14
 updated: 2021-11-10
 tags:
