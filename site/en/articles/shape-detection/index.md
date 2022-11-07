@@ -29,8 +29,7 @@ the Shape Detection API evolves.
 
 ## What is the Shape Detection API? {: #what }
 
-With APIs like
-[`navigator.mediaDevices.getUserMedia`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getUserMedia)
+With APIs like [`navigator.mediaDevices.getUserMedia`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getUserMedia)
 and the Chrome for Android
 [photo picker](https://bugs.chromium.org/p/chromium/issues/detail?id=656015),
 it has become fairly easy to capture images or live video data from device
