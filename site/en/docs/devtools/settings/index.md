@@ -96,7 +96,7 @@ The screenshots below show how each option customizes the **Elements** panel.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Reveal DOM node on hover** (in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="20" %} inspect mode)
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZSVQcWURpAEpBKzhfk9.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZSVQcWURpAEpBKzhfk9.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show detailed inspect tooltip** (in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="20" %} inspect mode)
 
@@ -112,7 +112,7 @@ The screenshots below show how each option customizes the **Elements** panel.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log** is the same as [**Preserve log**](/docs/devtools/network/reference/#preserve-log) in the **Network** panel.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay=false, controls="true", muted="true", class="screenshot"%}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Record network log** is the same as {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Record network log.", width="18", height="18" %} [Record network log](/docs/devtools/network/reference/#stop-recording) in the **Network** panel.
 
@@ -154,7 +154,7 @@ Click links to read relevant documentation or examine screenshots, if any, to un
 If enabled, the Console won't show network messages. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#network).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Selected context only**
 
@@ -162,7 +162,7 @@ If enabled, the Console won't show network messages. You can find the same optio
 If enabled, the Console only shows selected context on a page with inline frames. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#filtercontext).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Log XMLHttpRequests**
 
@@ -170,7 +170,7 @@ If enabled, the Console only shows selected context on a page with inline frames
 If enabled, the Console logs XHR and fetch requests. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#xhr).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show timestamps**
 
@@ -210,7 +210,7 @@ If enabled, the **Console** shows [CORS errors](https://developer.mozilla.org/do
 If enabled, the **Console** shows a preview of an output as you type a command. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation**
 
@@ -218,7 +218,7 @@ If enabled, the **Console** shows a preview of an output as you type a command. 
 If enabled, the **Console** sets `navigator.userActivation.isActive` to `true` upon evaluation, that is, any command that you run. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation**
 
@@ -226,7 +226,7 @@ If enabled, the **Console** sets `navigator.userActivation.isActive` to `true` u
 If enabled, the **Console** persists log across page loads. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#persist).
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/0qxdteXV5kjZNIXnX49Y.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/0qxdteXV5kjZNIXnX49Y.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable custom formatters**
 
@@ -244,7 +244,7 @@ If enabled, the **Console** persists log across page loads. You can find the sam
 If enabled, DevTools opens for all links open a new tab. That is, all links with `target=_blank`.
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search)
 
@@ -252,7 +252,7 @@ If enabled, DevTools opens for all links open a new tab. That is, all links with
 If disabled, DevTools won't "jump" to the first search result as you type your search query. Instead, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
 {% endAside %}
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
 ### Sync
 
