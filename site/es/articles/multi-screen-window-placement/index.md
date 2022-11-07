@@ -214,7 +214,8 @@ await window.getScreenDetails();
 */
 ```
 
-La información sobre las pantallas conectadas está disponible en la matriz de `screens`. Observe cómo el valor de `left` para el iPad comienza en `1680`, que es exactamente el `width` de la pantalla incorporada. Esto me permite determinar exactamente cómo están dispuestas lógicamente las pantallas (una al lado de la otra, una encima de la otra, etc.). También hay datos ahora de cada pantalla para mostrar si es interna (`isInternal`) y si es una Principal `isPrimary`. Tenga en cuenta que la pantalla incorporada [no es necesariamente la pantalla principal](https://osxdaily.com/2010/04/27/set-the-primary-display-mac/#:~:text=Click%20on%20the%20Display%20icon,primary%20display%20for%20your%20Mac) .
+La información sobre las pantallas conectadas está disponible en la matriz de `screens`. Observe cómo el valor de `left` para el iPad comienza en `1680`, que es exactamente el `width` de la pantalla incorporada.
+Esto me permite determinar exactamente cómo están dispuestas lógicamente las pantallas (una al lado de la otra, una encima de la otra, etc.). También hay datos ahora de cada pantalla para mostrar si es interna (`isInternal`) y si es una Principal `isPrimary`. Tenga en cuenta que la pantalla incorporada [no es necesariamente la pantalla principal](https://osxdaily.com/2010/04/27/set-the-primary-display-mac/#:~:text=Click%20on%20the%20Display%20icon,primary%20display%20for%20your%20Mac) .
 
 El campo `currentScreen` es un objeto vivo correspondiente a la pantalla `window.screen` actual. El objeto se actualiza en ubicaciones cruzadas de ventanas o cambios de dispositivo.
 
