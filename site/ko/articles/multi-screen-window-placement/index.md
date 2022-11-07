@@ -65,22 +65,6 @@ Muti-Screen Window Placement API를 사용하면 컴퓨터에 연결된 디스�
 
 ## Multi-Screen Window Placement API 사용 방법 {: #use }
 
-### about://flags를 통해 활성화
-
-원본 평가판 토큰 없이 로컬에서 Multi-Screen Window Placement API를 실험하려면 `about://flags`에서 `#enable-experimental-web-platform-features`플래그를 활성화하십시오.
-
-### 원본 평가판 단계 동안 지원 활성화
-
-첫 번째 원본 평가판은 Chromium 86에서 Chromium 88로 실행되었습니다. 이 원본 평가판 이후에 API를 일부 [변경](https://github.com/webscreens/window-placement/blob/main/CHANGES.md)했습니다. 이에 따라 기사가 업데이트되었습니다.
-
-Chromium 93부터 Multi-Screen Window Placement API는 Chromium에서 원본 평가판으로 다시 사용할 수 있습니다. 이 두 번째 원본 평가판은 Chromium 96(2021년 12월 15일)에서 종료될 것으로 예상됩니다.
-
-{% include 'content/origin-trials.njk' %}
-
-### 원본 평가판 등록 {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### 문제
 
 오랜 시간 검증된 창 제어 접근 방식인 [`Window.open()`](https://developer.mozilla.org/docs/Web/API/Window/open)은 불행히도 추가 화면을 인식하지 못합니다. 이 API의 일부 측면(예: [`windowFeatures`](https://developer.mozilla.org/docs/Web/API/Window/open#Parameters:~:text=title.-,windowFeatures) `DOMString` 매개변수)은 약간 구식인 것처럼 보이지만 그럼에도 불구하고 수년 동안 우리에게 도움이 되었습니다. 창의 [위치](https://developer.mozilla.org/docs/Web/API/Window/open#Position)를 지정하려면 좌표를 `left`와 `top` (또는 `screenX` 및 `screenY`)으로 전달하고 원하는 [크기](https://developer.mozilla.org/docs/Web/API/Window/open#Size:~:text=well.-,Size)를 `width`와 `height` (또는 `innerWidth` 및 `innerHeight`)로 전달할 수 있습니다. 예를 들어, 왼쪽에서 50픽셀, 위쪽에서 50픽셀 떨어진 400×300 창을 열려면 다음 코드를 사용할 수 있습니다.

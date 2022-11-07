@@ -66,20 +66,6 @@ feedback:
 
 ### 通过 about://flags 启用
 
-要在没有初始试用令牌的情况下在本地试验 Multi-Screen Window Placement API，请在 `about://flags` 中启用 `#enable-experimental-web-platform-features` 标志。
-
-### 在初始试用期间启用支持
-
-第一次初始试用在 Chromium 86 到 Chromium 88 版本间进行。在此次初始试用之后，我们对该 API 进行了一些[更改](https://github.com/webscreens/window-placement/blob/main/CHANGES.md)。本文也进行了相应的更新。
-
-从 Chromium 93 开始，Multi-Screen Window Placement API 将再次作为 Chromium 中的初始试用版提供。第二次初始试用预计将以 Chromium 96（2021 年 12 月 15 日）结束。
-
-{% include 'content/origin-trials.njk' %}
-
-### 登记进行初始试用 {: #register-for-ot }
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### 问题
 
 不幸的是，长久以来用于控制窗口的良好方法 [`Window.open()`](https://developer.mozilla.org/docs/Web/API/Window/open) 不兼容其他屏幕。虽然该 API 的某些方面看起来有点陈旧，例如它的 [`windowFeatures`](https://developer.mozilla.org/docs/Web/API/Window/open#Parameters:~:text=title.-,windowFeatures) `DOMString`参数，但多年来它一直为我们服务。要指定窗口的[位置](https://developer.mozilla.org/docs/Web/API/Window/open#Position)，您可以将坐标作为 `left` 和 `top`（或 `screenX` 和 `screenY` ）传递，并将所需的[大小](https://developer.mozilla.org/docs/Web/API/Window/open#Size:~:text=well.-,Size)作为 `width` 和 `height`（或分别为 `innerWidth` 和 `innerHeight`）传递。例如，要在距左侧 50 像素和距顶部 50 像素的位置打开一个 400×300 的窗口，您可以使用以下代码：

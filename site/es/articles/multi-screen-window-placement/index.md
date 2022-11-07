@@ -65,22 +65,6 @@ Ejemplos de sitios que pueden usar esta API incluyen:
 
 ## Cómo utilizar la API de colocación de ventanas multipantalla {: #use}
 
-### Habilitación a través de about://flags
-
-Para experimentar con la API de colocación de ventanas multipantalla localmente, sin un token de prueba de origen, habilite la bandera `#enable-experimental-web-platform-features` en `about://flags`.
-
-### Habilitación de soporte durante la fase de prueba de origen
-
-Una primera prueba de origen se realizó de Chromium 86 a Chromium 88. Después de esta prueba de origen, hicimos algunos [cambios](https://github.com/webscreens/window-placement/blob/main/CHANGES.md) en la API. El artículo se ha actualizado en consecuencia.
-
-A partir de Chromium 93, la API de colocación de ventanas multipantalla volverá a estar disponible como prueba de origen en Chromium. Se espera que esta segunda prueba de origen finalice en Chromium 96 (15 de diciembre de 2021).
-
-{% include 'content/origin-trials.njk' %}
-
-### Regístrese para la prueba de origen {: #register-for-ot}
-
-{% include 'content/origin-trial-register.njk' %}
-
 ### El problema
 
 El enfoque probado con el tiempo para controlar las ventanas, [`Window.open()`](https://developer.mozilla.org/docs/Web/API/Window/open), desafortunadamente no toma en cuenta las pantallas adicionales. Si bien algunos aspectos de esta API parecen un poco arcaicos, como su parámetro [`windowFeatures`](https://developer.mozilla.org/docs/Web/API/Window/open#Parameters:~:text=title.-,windowFeatures) `DOMString`, nos ha servido bien a lo largo de los años. Para especificar la [posición](https://developer.mozilla.org/docs/Web/API/Window/open#Position) de una ventana, puede pasar las coordenadas como `left` y `top` (o `screenX` y `screenY` respectivamente) y pasar el [tamaño](https://developer.mozilla.org/docs/Web/API/Window/open#Size:~:text=well.-,Size) deseado como `width` y `height` (o `innerwidth` e `innerHeight` respectivamente). Por ejemplo, para abrir una ventana de 400 × 300 a 50 píxeles de la izquierda y 50 píxeles de la parte superior, podría usar este código:
