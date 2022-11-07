@@ -19,10 +19,9 @@ Credential Management API (FedCM).
 *  The [FedCM proposal](https://github.com/fedidcg/FedCM) is open for [public
    discussion](https://github.com/fedidcg/FedCM/issues).
 *  FedCM is shipped in Chrome 108.
-*  FedCM isn't supported in other browsers yet, but Firefox team is
-   [implementing a
-   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066), while the
-   [Apple has expressed general
+*  FedCM isn't supported in other browsers yet, but Mozilla is [implementing a
+   prototype](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066) to Firefox,
+   while the [Apple has expressed general
    support](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
    and interest in working together on the FedCM proposal.
 *  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
@@ -53,7 +52,7 @@ the bar for authentication on the web, in terms of trustworthiness, ease-of-use
 resistance to phishing and credential stuffing attacks) compared to per-site
 usernames and passwords. 
 
-With identity federation, a RP (relying party) relies on an IdP (identity
+With identity federation, an RP (relying party) relies on an IdP (identity
 provider) to provide the user an account without requiring a new username
 and password.
 
@@ -141,7 +140,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 ### You're an IdP {: #idp }
 
 FedCM requires support from an identity provider. A relying party cannot use
-FedCM independently. If you are a RP, you can ask your IdP to provide
+FedCM independently. If you are an RP, you can ask your IdP to provide
 instructions.
 
 ### You're affected by the third-party cookie phase out {: #unaffected-by-3p-cookies }
@@ -154,7 +153,7 @@ instructions.
 </figure>
 
 You should only use FedCM if your current integration is affected by the
-third-party cookie phase out. If you're not affected, you should not use FedCM.
+third-party cookie phase out.
 
 If you're unsure if your identity federation will continue to work after
 Chrome's third-party cookie phase out, you can test the effect on a website
@@ -199,28 +198,33 @@ authentication-related functionalities.
 <figure class="float-right screenshot">
 {% Video
    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qx48SEGIEqi5OtPE9ogn.mp4",
-   width="280", autoplay="true"
+   width="280", autoplay="true", loop="true"
 %}
   <figcaption>A user is signing to an RP using FedCM</figcaption>
 </figure>
 
-When the user lands on the relying party (RP) website, a FedCM sign-in dialog will appear if the user is signed in to the IdP. 
+When the user lands on the relying party (RP) website, a FedCM sign-in dialog
+will appear if the user is signed in to the IdP. 
 
-If the user hasn't signed in to the RP, a sign-up dialog appears with additional disclosure text such as the RP's terms of service (which is required) and a privacy policy (if provided).
+If the user hasn't signed in to the RP, a sign-up dialog appears with additional
+disclosure text such as the RP's terms of service and a privacy policy if they
+are provided.
 
-The user can complete sign in by tapping **Continue as...**. If successful,
-the user's account status and the sign-in status is stored in the browser.
+The user can complete sign in by tapping **Continue as...**. If successful, the
+browser stores the fact that the user has created a federated account on the RP
+with the IdP.
 
-{% Aside 'caution' %}
+{% Aside %}
 
-**There is a known issue**. If the user doesn't sign in with an IdP or if the
-session has expired, the FedCM dialog won't be displayed. [Share
-feedback](#share-feedback) if you need this to be fixed.
+If a user dismissed the UI, an entry would be added to the [settings
+UI](#user-settings). Users can reenable FedCM on the RP by either going to the
+settings page or clicking on the PageInfo UI (a lock icon beside the URL bar)
+and reset the permission.
 
 {% endAside %}
 
-RPs are expected to support browsers which don't support FedCM. Users should
-be able to use an existing, non-FedCM sign-in process. Learn more about [how
+RPs are expected to work on browsers which don't support FedCM. Users should be
+able to use an existing, non-FedCM sign-in process. Learn more about [how
 sign-in works in the FedCM](#sign-into-rp).
 
 ### Setting to enable or disable FedCM {: #user-settings}
@@ -253,7 +257,7 @@ resolve these issues:
 * **Cross-origin iframe support**: IdPs can call FedCM from within a
   cross-origin iframe.
 * **Personalized button**: IdPs can display a returning user's identity on the
-  sign-in button from within a cross-origin iframe.
+  sign-in button from within an IdP owned cross-origin iframe.
 * **Metrics endpoint**: Provides performance metrics to IdPs.
 
 Additionally, there are unresolved issues we are actively exploring including
@@ -277,11 +281,11 @@ specific proposals that we are evaluating or prototyping:
 
 Finally, there are things we believe still need to be done, based on feedback
 from
-[Mozila](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
+[Mozilla](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
 [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
 and [TAG
 reviewers](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549).
-We are working to evaluate the best solution for these open questions:
+We are working to evaluate the best solutions for these open questions:
 
 * **Improving user comprehension and matching intent**: As [Mozilla
   noted](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
@@ -315,9 +319,10 @@ We are working to evaluate the best solution for these open questions:
   fit within FedCM, for example with the [Mobile Document Request
   API](https://github.com/WICG/mobile-document-request-api).
 
-## How can identity providers develop FedCM?
+## How can you develop FedCM?
 
-You need a secure context (HTTPS or localhost) in Chrome to use the FedCM.
+You need a secure context (HTTPS or localhost) both on the IdP and RP in Chrome
+to use the FedCM.
 
 ### Debug code on Chrome on Android {: #remote-debug-android}
 
@@ -337,7 +342,7 @@ list](#accounts-list-endpoint), [assertion issuance](#id-assertion-endpoint) and
 optionally [client metadata](#client-metadata-endpoint).
 
 From there, FedCM exposes JavaScript APIs that RPs can use to [sign
-in](#sign-into-rp) from the IdP.
+in](#sign-into-rp) with the IdP.
 
 ### Create a well-known file {: #well-known-file }
 
@@ -347,14 +352,14 @@ served from `/.well-known/web-identity` of
 [eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) of the
 IdP.
 
-For example, if an IdP endpoints are served under
-`https://accounts.idp.example/sub/`, they must serve a well-known file at
+For example, if the IdP endpoints are served under
+`https://accounts.idp.example/`, they must serve a well-known file at
 `https://idp.example/.well-known/web-identity` as well as [an IdP config
 file](#idp-config-file). Here's an example well-known file content:
 
 ```json
 {
-  "provider_urls": ["https://accounts.idp.example/sub/anything.json"]
+  "provider_urls": ["https://accounts.idp.example/config.json"]
 }
 ```
 
@@ -377,7 +382,7 @@ The config file's URL is determined by the values provided to the
 const credential = await navigator.credentials.get({
   identity: {
     providers: [{
-      configURL: 'https://idp.example/anything.json',
+      configURL: 'https://accounts.idp.example/config.json',
       clientId: '********',
       nonce: '******'
     }]
@@ -394,8 +399,8 @@ prevents the IdP from learning who made the request and which RP is attempting
 to connect. For example:
 
 ```http
-GET /anything.json HTTP/1.1
-Host: idp.example
+GET /config.json HTTP/1.1
+Host: accounts.idp.example
 Accept: application/json
 Sec-Fetch-Dest: webidentity
 ```
@@ -437,7 +442,7 @@ following properties:
   </tr>
   <tr>
      <td><code>branding.background_color</code> (optional)</td>
-     <td>Background color of the "Continue as..." button. Use the relevant CSS syntax, namely
+     <td>Branding option which sets the background color of the "Continue as..." button. Use the relevant CSS syntax, namely
 <a href="https://drafts.csswg.org/css-color-4/#typedef-hex-color"><code>hex-color</code></a>,
 <a href="https://drafts.csswg.org/css-color-5/#funcdef-hsl"><code>hsl()</code></a>,
 <a href="https://drafts.csswg.org/css-color-5/#funcdef-rgb"><code>rgb()</code></a>, or
@@ -445,7 +450,7 @@ following properties:
   </tr>
   <tr>
      <td><code>branding.color</code> (optional)</td>
-     <td>Branding option which sets the background color of the "Continue as..." button. Use the relevant CSS syntax, namely
+     <td>Branding option which sets the text color of the "Continue as..." button. Use the relevant CSS syntax, namely
 <a href="https://drafts.csswg.org/css-color-4/#typedef-hex-color"><code>hex-color</code></a>,
 <a href="https://drafts.csswg.org/css-color-5/#funcdef-hsl"><code>hsl()</code></a>,
 <a href="https://drafts.csswg.org/css-color-5/#funcdef-rgb"><code>rgb()</code></a>, or
@@ -471,8 +476,8 @@ Here's an example response body from the IdP:
 ```json
 {
   "accounts_endpoint": "/accounts.php",
-  "client_metadata_endpoint": "/metadata.php",
-  "id_assertion_endpoint": "/id_assertions.php",
+  "client_metadata_endpoint": "/client_metadata.php",
+  "id_assertion_endpoint": "/assertion.php",
   "branding": {
     "background_color": "green",
     "color": "0xFFEEAA",
@@ -488,7 +493,7 @@ Once the browser fetches the config file, it sends subsequent requests to the
 IdP endpoints:
 
 {%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/8EzrPvIwOsuuzdKJUJ6E.png", alt="IdP endpoints", width="800", height="419", class="type--full-bleed"
+  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="IdP endpoints", width="800", height="1085", class="type--full-bleed"
 %}
 
 {% Aside 'caution' %}
@@ -512,7 +517,7 @@ learning which RP the user is trying to sign in to. For example:
 
 ```http
 GET /accounts.php HTTP/1.1
-Host: idp.example
+Host: accounts.idp.example
 Accept: application/json
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
@@ -593,8 +598,8 @@ The browser sends a `GET` request using the `client_id`
 [`navigator.credentials.get`](#sign-into-rp) without cookies. For example:
 
 ```http
-GET /metadata.php?client_id=1234 HTTP/1.1
-Host: idp.example
+GET /client_metadata.php?client_id=1234 HTTP/1.1
+Host: accounts.idp.example
 Referer: https://rp.example/
 Accept: application/json
 Sec-Fetch-Dest: webidentity
@@ -660,15 +665,15 @@ following information:
   </tr>
   <tr>
      <td><code>disclosure_text_shown</code></td>
-     <td>Results in a string of <code>"true"</code> or <code>"false"</code> (rather than a boolean). The result is <code>"false"</code> if the disclosure text was not shown. This happens when the RP's client ID was included in the <code>approved_clients</code> property list of the response from the <a href="#accounts-list-endpoint">accounts list endpoint</a>.</td>
+     <td>Results in a string of <code>"true"</code> or <code>"false"</code> (rather than a boolean). The result is <code>"false"</code> if the disclosure text was not shown. This happens when the RP's client ID was included in the <code>approved_clients</code> property list of the response from the <a href="#accounts-list-endpoint">accounts list endpoint</a> or if the browser has observed a sign-up moment in the past in the absence of <code>approved_clients</code>.</td>
   </tr>
 </table>
 
 Example HTTP header:
 
 ```http
-POST /id_assertions.php HTTP/1.1
-Host: idp.example
+POST /assertion.php HTTP/1.1
+Host: accounts.idp.example
 Referer: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
@@ -708,18 +713,18 @@ The browser expects a JSON response that includes the following property:
 
 ```json
 {
-  "token": "eyJ********"
+  "token": "***********"
 }
 ```
 
 The returned token is passed to the RP by the browser, so that the RP can
 validate the authentication.
 
-### Sign in to the identity provider from the relying party {: #sign-into-rp }
+### Sign in to the relying party with the identity provider {: #sign-into-rp }
 
 Once the IdP's configuration and endpoints are available, RPs can call
-`navigator.credentials.get()` to request allowing users to sign in to the IdP
-from the RP.
+`navigator.credentials.get()` to request allowing users to sign in to the RP
+with the IdP.
 
 <a name="feature-detection"></a>
 
@@ -740,7 +745,7 @@ for example:
 const credential = await navigator.credentials.get({
   identity: {
     providers: [{
-      configURL: 'https://idp.example/anything.json',
+      configURL: 'https://accounts.idp.example/config.json',
       clientId: '********',
       nonce: '******'
     }]
@@ -806,8 +811,7 @@ place:
 4. The RP can validate the token to authenticate the user.
 
 {%
-  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/8EzrPvIwOsuuzdKJUJ6E.png",
-alt="login API call", width="800", height="419", class="type--full-bleed"
+  Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="login API call", width="800", height="1085", class="type--full-bleed"
 %}
 
 {% Aside 'caution' %}
@@ -831,9 +835,8 @@ let them sign-in and start a new session.
 ## Engage and share feedback {: #share-feedback}
 
 *  **GitHub**: Read the
-   [proposal](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md),
-   [raise issues and follow
-   discussion](https://github.com/fedidcg/FedCM/issues).
+   [proposal](https://github.com/fedidcg/FedCM/blob/main/explainer.md), [raise
+   issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
 *  **Developer support**: Ask questions and join discussions on the [Privacy
    Sandbox Developer Support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
