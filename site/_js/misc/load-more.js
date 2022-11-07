@@ -19,7 +19,7 @@
  * @param {HTMLElement} container
  * @param {Function} fetchItems
  * @param {{skip?:number,take?:number, total?:number}} params
- * @returns {Promise<void>}
+ * @returns {Promise<{}>}
  */
 export const loadMore = async (button, container, fetchItems, params = {}) => {
   let loading = false;
@@ -27,10 +27,8 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
   const total = getTotalItems(container, params);
   const take = params.take || 10;
 
-  if (currentOffset >= total) return;
-
   function removeButton() {
-    button.classList.add('display-none');
+    button.setAttribute('hidden', '');
     button.setAttribute('disabled', '');
   }
 
@@ -65,6 +63,16 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
 
     toggleLoading();
   });
+
+  if (currentOffset >= total) {
+    removeButton();
+  }
+
+  return {
+    currentOffset: () => currentOffset,
+    total: () => total,
+    take: () => take,
+  };
 };
 
 /**
@@ -74,7 +82,7 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
  */
 function getTotalItems(container, params) {
   if (
-    typeof params.total === undefined &&
+    typeof params.total === 'undefined' &&
     !container.hasAttribute('total-items')
   ) {
     throw new Error('Missing total: please pass via attribute or params');
