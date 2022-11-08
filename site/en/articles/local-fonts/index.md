@@ -21,7 +21,7 @@ feedback:
 ---
 
 {% Aside 'success' %} The Local Font Access API was part of the
-[capabilities project](https://developer.chrome.com/blog/capabilities/) and is now shipped.
+[capabilities project](/blog/capabilities/) and is now available from Chrome 103 on desktop.
 {% endAside %}
 
 ## Web safe fonts
@@ -150,20 +150,6 @@ The Local Font Access API is an attempt at solving these challenges. It consists
   fonts.
 - From each enumeration result, the ability to request low-level (byte-oriented) **SFNT container
   access** that includes the full font data.
-
-### Current status {: #status }
-
-<div>
-
-| Step                                     | Status                                      |
-| ---------------------------------------- | ------------------------------------------- |
-| 1. Create explainer                      | [Complete][explainer]                       |
-| 2. Create initial draft of specification | [In progress][spec]                         |
-| 3. Gather feedback & iterate on design   | [Complete](#feedback).                      |
-| 4. Origin trial                          | Complete                                    |
-| 5. **Launch**                            | **Complete** (Chromium&nbsp;103 on desktop) |
-
-</div>
 
 ### How to use the Local Font Access API
 
