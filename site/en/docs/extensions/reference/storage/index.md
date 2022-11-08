@@ -177,21 +177,23 @@ allows the user to toggle a "debug mode" (implementation not shown here).  The o
 const options = {};
 const optionsForm = document.getElementById("optionsForm");
 
-// Initialize the form with the user's option settings
-const data = await chrome.storage.sync.get("options");
-Object.assign(options, data.options);
-optionsForm.debug.checked = Boolean(options.debug);
-
 // Immediately persist options changes
 optionsForm.debug.addEventListener("change", (event) => {
   options.debug = event.target.checked;
   chrome.storage.sync.set({ options });
 });
+
+// Initialize the form with the user's option settings
+const data = await chrome.storage.sync.get("options");
+Object.assign(options, data.options);
+optionsForm.debug.checked = Boolean(options.debug);
 ```
 
 {% Label %}background.js:{% endLabel %}
 
 ```js
+function setDebugMode() { /* ... */ }
+
 // Watch for changes to the user's options & apply them
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync' && changes.options?.newValue) {
