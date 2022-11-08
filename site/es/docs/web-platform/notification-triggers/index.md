@@ -6,7 +6,8 @@ authors:
   - thomassteiner
 description: La API de activadores de notificaciones permite que los desarrolladores programen las notificaciones locales que no requieren una conexión de red, lo que los hace ideales para casos de uso como aplicaciones de calendario.
 date: 2019-10-24
-updated: 2021-12-03 hero: image/admin/6ZuVN2HFiIqTVrmjN5XC.jpg
+updated: 2021-12-03
+hero: image/admin/6ZuVN2HFiIqTVrmjN5XC.jpg
 hero_position: center
 tags:
   - capabilities
