@@ -9,13 +9,12 @@ date: 2019-11-08
 updated: 2021-06-07
 hero: image/admin/RfxdrfKdh5Fp8camulRt.png
 alt: Una ilustración que demuestra que las aplicaciones específicas de la plataforma ahora pueden compartir contenido con aplicaciones web.
-description: >
-  En un dispositivo móvil o de escritorio, compartir debería ser tan simple como hacer clic en el botón Compartir, elegir una aplicación y luego elegir con quién compartir. La API de destino de recurso compartido web permite que las aplicaciones web instaladas se registren con el sistema operativo subyacente para recibir contenido compartido. \
+description: En un dispositivo móvil o de escritorio, compartir debería ser tan simple como hacer clic en el botón Compartir, elegir una aplicación y luego elegir con quién compartir. La API de destino de recurso compartido web permite que las aplicaciones web instaladas se registren con el sistema operativo subyacente para recibir contenido compartido.
 tags:
-- capabilities
-- progressive-web-apps
+  - capabilities
+  - progressive-web-apps
 feedback:
-- api
+  - api
 ---
 
 En un dispositivo móvil o de escritorio, compartir debería ser tan sencillo como hacer clic en el botón **Compartir**, elegir una aplicación y elegir con quién compartir. Por ejemplo, es posible que desee compartir un artículo interesante, ya sea al enviarlo por correo electrónico a sus amigos o mediante un tuit para todo el mundo.
