@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Activadores de notificaciones
 subhead: Los activadores de notificaciones le permiten programar las notificaciones locales que no requieren una conexión de red, lo que los hace ideales para casos de uso como aplicaciones de calendario.
 authors:

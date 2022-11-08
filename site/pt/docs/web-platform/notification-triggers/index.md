@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Acionadores de notificação
 subhead: Os acionadores de notificação permitem que você agende notificações locais que não requerem uma conexão de rede, o que os torna ideais para casos de uso como aplicações de calendário.
 authors:
