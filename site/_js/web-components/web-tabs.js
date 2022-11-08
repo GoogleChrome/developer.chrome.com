@@ -107,7 +107,9 @@ export class WebTabs extends BaseElement {
       return 0;
     }
 
-    return Array.from(this.children).indexOf(tab);
+    return Array.from(this.children)
+      .filter(e => e.nodeName === 'WEB-TAB')
+      .indexOf(tab);
   }
 
   render() {
@@ -115,12 +117,19 @@ export class WebTabs extends BaseElement {
       return Array.from(this.children);
     }
 
-    this._tabPanels = Array.from(this.children);
+    this._tabPanels = Array.from(this.children).filter(
+      e => e.nodeName === 'WEB-TAB'
+    );
+
+    const interlude = Array.from(this.children).filter(
+      e => e.nodeName === 'WEB-TABS-INTERLUDE'
+    );
+
     const tabs = this._formatTabs();
 
     return html`
       <div role="tablist">${tabs}</div>
-      ${this._tabPanels}
+      ${interlude} ${this._tabPanels}
     `;
   }
 }
