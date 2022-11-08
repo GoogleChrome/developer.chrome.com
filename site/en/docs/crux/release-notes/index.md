@@ -45,7 +45,7 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 
 ## 202210
 
-[Announcement](TBC)
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/DmTmMHll7_o)
 
 Publication date
  : November 8, 2022
