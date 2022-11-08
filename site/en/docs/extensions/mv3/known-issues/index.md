@@ -23,19 +23,19 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
-**Estimated timeline:** Canary support around October, 2022.
+**Estimated timeline:** Canary support around December, 2022.
 
 ### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
 **Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
 
-**Estimated timeline**: Targeting Canary support around October, 2022.
+**Estimated timeline**: Targeting Canary support around November, 2022.
 
 ### Offscreen Documents API {: #offscreen-documents-api }
 
 **Summary:** Offscreen documents are a new capability that will allow Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions will be able to use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
 
-**Estimated timeline:** Targeting Canary support around October, 2022.
+**Estimated timeline:** Targeting Canary support around November, 2022.
 
 **Tracking issue:** [1339382][]
 
