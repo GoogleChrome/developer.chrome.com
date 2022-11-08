@@ -267,8 +267,7 @@ specific proposals that we are evaluating or prototyping:
 
 * **CORS**: We are [discussing with Apple and
   Mozilla](https://github.com/fedidcg/FedCM/issues/320) to ensure to improve the
-  specification of FedCM fetches, but for now we don't anticipate backwards
-  incompatible changes as a result of this.
+  specification of FedCM fetches.
 * **Multiple-IdP API**: We are exploring ways to support [multiple
   IdPs](https://github.com/fedidcg/FedCM/issues/319) to coexist cooperatively in
   the FedCM account chooser.
