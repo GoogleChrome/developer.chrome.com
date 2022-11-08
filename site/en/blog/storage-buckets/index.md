@@ -10,7 +10,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-11-04
-# updated: 2022-11-04
+updated: 2022-11-08
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/uSUKNoGdlmEsXAtHr0yJ.jpg
 alt: Several buckets with paint in different colors in them.
 tags:
@@ -18,8 +18,10 @@ tags:
 ---
 
 The [Storage Standard](https://storage.spec.whatwg.org/) defines an API for persistent storage and
-quota estimates, and the platform storage architecture. It's available behind the
-`#enable-experimental-web-platform-features` flag in Chromium 106, and we'd love your feedback.
+quota estimates, and the platform storage architecture.
+We're experimenting with an API for making persistent storage eviction under heavy
+memory pressure more predictable. It's available behind the
+`#enable-experimental-web-platform-features` flag in Chromium&nbsp;106, and we'd love your feedback.
 
 ## What problem does the storage standard aim to solve?
 
