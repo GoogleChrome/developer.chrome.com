@@ -4,7 +4,7 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but has been optimized to meet the storage needs of extensions. The following are a few key features: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
 - Stores JSON serializable values as object properties.
 - Storage is asynchronous with bulk read and write operations.
@@ -20,9 +20,9 @@ The Storage API provides an extension-specific way to persist user data and stat
 
 Even though extensions can access [Window.localStorage][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
 
-- The service worker cannot access localStorage API.
+- The extension's service worker cannot access the localStorage API.
 - Content scripts share the localStorage of the host page.
-- The browser clears any data stored by the extension in localStorage when the user clear their browsing history and data for privacy reasons.
+- Data saved to localStorage is lost when the user clears their browsing history.
 
 {% endDetails %}
 
@@ -38,12 +38,12 @@ The Storage API is divided into the following four buckets ("storage areas"):
 - [**storage.sync**][prop-sync]
   - If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`.
   - When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online.
-  - Quota limitation is 100 KB approx, 8 KB per item
+  - Quota limitation is 100 KB approx, 8 KB per item.
   - Consider using it to preserve user settings across synced browsers. 
 
 {% Aside 'warning' %}
 
-Local and sync storage areas should not store confidential user data because they are not encrypted. We recommend using the `session` storage area, which is not saved on disk for sensitive data.
+Local and sync storage areas should not store confidential user data because they are not encrypted at rest. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
 
 {% endAside %}
 
@@ -51,10 +51,10 @@ Local and sync storage areas should not store confidential user data because the
   - Holds small amounts of data in memory for the duration of a browser session.
   - Not available in content scripts.
   - Quota limitation is 1 MB approx.
-  - Consider using it to store global variables or confidential user information.
+  - Consider using it to store global variables across service worker runs.
 
 - [**storage.managed**][prop-managed]
-  - Administrator can use a [schema][manifest-storage] to configure enterprise policies.
+  - Administrator can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment.
   - Storage is read-only.
 
 ## Manifest {: #manifest}
@@ -239,7 +239,6 @@ To see other demos of the Storage API, explore any of the following examples:
 
 - [Global search extension][gh-global-context-search].
 - [Water alarm extension][gh-water-alarm].
-
 
 [doc-manifest]: /docs/extensions/mv3/manifest
 [gh-global-context-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/api/contextMenus/global_context_search
