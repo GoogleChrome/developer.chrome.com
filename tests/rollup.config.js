@@ -1,7 +1,14 @@
 import originalConfig from '../rollup.config';
 
-const testConfig = Object.assign({}, originalConfig(), {
-  input: ['site/_js/web-components/checkbox-group/_checkbox-group'],
+const inputs = [
+  'site/_js/web-components/enhanced-select/_enhanced-select',
+  'site/_js/web-components/checkbox-group/_checkbox-group',
+];
+
+const configs = inputs.map(input => {
+  return Object.assign({}, originalConfig(), {
+    input: input,
+  });
 });
 
-export default testConfig;
+export default configs;
