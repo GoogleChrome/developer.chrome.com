@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: '모양 감지 API: 사진은 천 단어, 얼굴 및 바코드의 가치가 있습니다.'
 subhead: 모양 감지 API는 이미지에서 얼굴, 바코드 및 텍스트를 감지합니다.
 authors:

@@ -1,4 +1,5 @@
 --
+layout: 'layouts/blog-post.njk'
 title: 使用 Multi-Screen Window Placement API 管理多个显示器
 subhead: 获取有关连接的显示器和相对于这些显示器的位置窗口的信息。
 authors:
