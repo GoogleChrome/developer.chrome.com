@@ -49,7 +49,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Tracking issue:** [1247690][]
 
-## Resolved {: #resolved }
+## Fixed but not yet in Stable {: #resolved }
 
 ### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
