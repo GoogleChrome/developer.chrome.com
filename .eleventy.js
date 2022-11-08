@@ -167,7 +167,7 @@ module.exports = eleventyConfig => {
   // HTML for the page and inline CSS / minify.
   if (isProduction) {
     eleventyConfig.addTransform('purifyCss', (new CssTransform()).configure({
-      cssPath: 'dist/css/main.css',
+      cssBasePath: 'dist',
       jsPaths: [
         'dist/js/**/*.js'
       ],
