@@ -52,7 +52,7 @@ The **Themes** drop-down list sets a color theme for DevTools UI.
 
 </fieldset>
 
-The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and **Sources** > **Debugger** pane. The **auto** option makes the layout depend on DevTools width.
+The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and **Sources** > **Debugger** pane.
 
 <fieldset>
    <legend>Panel layout:</legend>
@@ -61,12 +61,16 @@ The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles**
 
 - horizontal
 - vertical
-- auto
+- auto (depends on DevTools width)
 
 </fieldset>
 
+The **Color format** drop-down list sets the format of CSS color values in **Elements** > **Styles** and [Color Picker](/docs/devtools/css/reference/#color-picker).
+
 <fieldset>
    <legend>Color format:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EbCbudgcqUV01eWiGEWP.gif", alt="Changing color formats in the Styles pane.", width="350", height="350", style="float:right;", class="screenshot" %}
 
 - As authored
 - HEX: #dac0de
@@ -75,6 +79,29 @@ The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles**
 
 </fieldset>
 
+The **Language** drop-down list sets locale for DevTools UI. To apply this setting, reload DevTools.
+
+<fieldset>
+   <legend>Language:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UTiCVB0hCtDhrUyHumc6.png", alt="The Settings panel in Chinese.", width="400", height="400", style="float:right;" %}
+
+- Browser UI language
+- One of locale options, in this example, Chinese
+
+</fieldset>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** allows you to open DevTools panels using your keyboard.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable paused state overlay** hides the **Paused in debugger** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VI5VMTjA0xztwDvQzH2j.png", alt="Play and step over buttons.", width="50", height="22" %} overlay in the viewport when code execution is paused.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/arkcXtPmTBTuqZJJ4sz6.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show What's New after each update** automatically opens the **What's New** drawer tab after each Chrome update.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bUkU6F9okmYJ5L88neGH.png", alt="The What's New drawer tab.", width="800", height="616" %}
 
 ### Sources
 
