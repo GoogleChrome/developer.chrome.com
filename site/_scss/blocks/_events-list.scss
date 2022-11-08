@@ -30,10 +30,25 @@
 
 .events-list__selected-filters {
   .tag-pill {
+    cursor: pointer;
+
     .icon {
       height: get-size(300);
       margin-left: get-size(200);
       width: get-size(300);
+    }
+  }
+}
+
+.mobile-filters-btn {
+  @include media-query('lg') {
+    display: none;
+  }
+
+  &.tag-pill {
+    .icon {
+      margin-left: 0;
+      margin-right: get-size(200);
     }
   }
 }

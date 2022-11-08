@@ -12,7 +12,11 @@
 
 <web-tabs class="events-list">
   <web-tabs-interlude>
-    <div class="events-list__selected-filters gap-bottom-500">
+    <div class="events-list__selected-filters display-flex flex-flow-row-wrap grid-gap-100 gap-bottom-500">
+      <span class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        {{ icon('filters') }} Filters
+      </span>
+
       <span class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
         Hybrid  {{ icon('close') }}
       </span>

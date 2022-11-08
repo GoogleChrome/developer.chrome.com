@@ -36,6 +36,12 @@
   max-width: calc(1290px + 3rem);
 
   &__filters {
+    display: none;
+
+    @include media-query('lg') {
+      display: flex;
+    }
+
     > span {
       color: var(--color-grey-medium);
       font-size: 1rem;
