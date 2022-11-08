@@ -237,5 +237,5 @@ ORDER BY
 </table>
 
 
-Learn more about [using CrUX on BigQuery](https://developer.chrome.com/docs/crux/bigquery/) and [browse the CrUX Cookbook](https://github.com/GoogleChrome/CrUX/tree/main/sql) for more example queries. Share your queries if you like, and let us know what you find.
+Learn more about [using CrUX on BigQuery](/docs/crux/bigquery/) and [browse the CrUX Cookbook](https://github.com/GoogleChrome/CrUX/tree/main/sql) for more example queries. Share your queries if you like, and let us know what you find.
 
