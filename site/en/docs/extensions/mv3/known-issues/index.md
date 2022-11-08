@@ -19,19 +19,19 @@ When a capability is added to the platform or a bug is addressed, it will be rem
 
 This section lists major features that will be added to the Manifest V3 platform in order to aid developers migrating from Manifest V2. Timelines included here are best effort estimates, not hard commitments.
 
-### Userscript managers support
+### Userscript managers support {: #userscript-managers-support }
 
 **Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
 **Estimated timeline:** Canary support around October, 2022.
 
-### Increased quota for session storage in the Storage API
+### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
 **Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
 
 **Estimated timeline**: Targeting Canary support around October, 2022.
 
-### Offscreen Documents API
+### Offscreen Documents API {: #offscreen-documents-api }
 
 **Summary:** Offscreen documents are a new capability that will allow Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions will be able to use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
 
@@ -39,7 +39,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Tracking issue:** [1339382][]
 
-### webRequest.onAuthRequired events
+### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
 **Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome will provide extensions with a way to supply credentials for authentication requests in Manifest V3.
 
@@ -57,7 +57,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Tracking issue:** [1247690][]
 
-### Service workers are not started in response to webRequest events
+### Service workers are not started in response to webRequest events {: #webrequest-in-sw }
 
 **Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
 
