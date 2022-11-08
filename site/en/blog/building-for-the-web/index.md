@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: Why not everyone's building for the web yet, but why potentially they should
 subhead: >
 
-date: 2022-07-08
-# updated: 2022-07-08
+date: 2022-11-08
+# updated: 2022-11-08
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg
 alt: Blowfish swarm swimming in the ocean.
 tags:
@@ -14,22 +14,22 @@ tags:
 {% Aside %} This is part one of a two part mini series on the capable web. Be sure to also read
 [How Fugu is my browser? and How Fugu is the web?](/blog/how-fugu/)! {% endAside %}
 
-Nowadays, if you want to build an app, you have several ways of doing it. You can build a
-platform-specific app for the platforms you care about, like, for example, Windows, Android, and
-iOS. In which case, technically, you would build three apps. You can also build a (progressive) web
-app, possibly _on top_ of platform-specific apps. Alternatively, you can choose a cross-platform
+If you want to build an app, you have several ways of doing it. You can build a
+platform-specific app for the platforms you care about, for example, Windows, Android, and
+iOS. In which case you would build three apps. You can also build a (progressive) web
+app, possibly _in addition to_ platform-specific apps. Alternatively, you can choose a cross-platform
 framework such as [Electron.js](https://www.electronjs.org/) or [Ionic](https://ionicframework.com/)
 that promises to let you write once and run anywhere. This very site being about the web, let me
-begin by walking you through three extraordinary examples of apps whose makers chose to build for
+begin by walking you through three extraordinary examples of apps whose makers chose to _also_ build for
 the web.
 
 ## Beacon cases that demonstrate the web's abilities
 
-Photoshop has for a longtime been recognized as one of the last bastions of high quality apps that
-supposedly would never make it to the web platform. Forget that—this last bastion has finally
-fallen. With [Photoshop now on the web](https://web.dev/ps-on-the-web/), Adobe, together with
-Chromium engineering, has managed to get a version of Photoshop running in the browser that can
+I always saw Photoshop as one of the last bastions of high quality apps that supposedly would never make it to the web platform. Forget that—this last bastion has finally
+fallen. With [Photoshop](https://web.dev/ps-on-the-web/), Adobe, together with
+Chromium engineering, has managed to get a beta version of Photoshop running in the browser that can
 serve as the new beacon showcase of what is possible on the web.
+In it, you can try out the commenting workflow and test some early Photoshop editing features Adobe is piloting on the web. You and your collaborators can now open and view Photoshop cloud documents in the browser, provide feedback, and make basic edits all in one place without having to download or launch the app.
 
 <figure>
   {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/bobe9QD2jUL0hTbpnNMU.png", alt="Adobe Photoshop running in the browser.", width="800", height="500" %}
@@ -53,7 +53,7 @@ local file system.
 
 Lastly Twitter—whose progressive web app (PWA) is
 [largely seen](https://www.thurrott.com/cloud/social/150171/twitter-lite-now-adapts-larger-screens#:~:text=probably%20the%20best%20mainstream%20progressive%20web%20app)
-as _probably the best mainstream progressive web app_—has, for some time now,
+as _probably the best mainstream progressive web app_—has
 [used](https://blog.twitter.com/engineering/en_us/topics/insights/2019/twitter-for-mac-is-coming-back#:~:text=This%20led%20to%20our%20Responsive%20Web%20codebase%20being%20the%20spearhead%20for%20all%20platforms%20via%20web%20browsers)
 its responsive web codebase for all platforms, mobile and desktop, via web browsers. On Windows, the
 PWA is the experience the company is confident enough to make _the_ Twitter experience that you get
@@ -87,8 +87,7 @@ sole fact that you can share a link to your work unlocks collaboration patterns 
 embraced and loved since the birth of apps such as Google Docs. Twitter, of course, lives and dies
 by its links. News sites regularly
 [link to newsworthy tweets](https://edition.cnn.com/2021/11/09/politics/gosar-anime-video-violence-ocasio-cortez-biden/index.html#:~:text=Ocasio-Cortez%20tweeted%20in%20response%20Monday%20saying%20a%20%22creepy%20member%22%20of%20the%20House%20had%20%22shared%20a%20fantasy%20video%20of%20him%20killing%20me.%22),
-which _means "keeping it quick"
-_[is core](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/progressively-enhancing-desktop-devices#:~:text=%C2%A0-,Keeping%20it%20quick,-With%20all%20the)
+which _means "keeping it quick"_ [is core](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/progressively-enhancing-desktop-devices#:~:text=%C2%A0-,Keeping%20it%20quick,-With%20all%20the)
 to ensuring people can get from an article straight into the app, where they can read or engage with
 the linked tweet.
 
@@ -115,14 +114,14 @@ into a web app.
 ## The slow decline of interest in cross-platform app frameworks and the rise of Flutter
 
 The web isn't the only platform that promises "write once, run anywhere". Cross-platform frameworks
-such as Electron.js do, too. With the web becoming powerful enough to drive apps such as Photoshop
+_à la_ Electron.js do, too. With the web becoming powerful enough to drive apps such as Photoshop
 that were thought to be impossible, we can, however, observe a slow decline of interest in
 cross-platform desktop app frameworks such as [Electron.js](https://www.electronjs.org/) and
 [NW.js](https://nwjs.io/), and mobile app frameworks such as [Cordova](https://cordova.apache.org/)
 or [React Native](https://reactnative.dev/); while at the same time there is an undeniable increase
 of interest in [Flutter](https://flutter.dev/). The following
 [Google Trends chart](https://trends.google.com/trends/explore/TIMESERIES/1636457400?hl=en-US&tz=-60&cat=5&date=today+5-y&q=%2Fg%2F11bw_559wr,%2Fg%2F11f11js9bh,%2Fm%2F06znsr5,%2Fg%2F11f03_rzbg,%2Fg%2F11h03gfxy9&sni=3)
-shows all five frameworks side by side. While noting that this chart shows disambiguated topic
+shows the five frameworks side by side. While noting that this chart shows disambiguated topic
 trends as detected by Google (as opposed to ambiguous
 [search term trends](https://blog.tomayac.com/2021/11/08/things-mode-and-strings-mode-in-google-trends/)),
 nevertheless it is clearly not an exact science.
@@ -170,12 +169,12 @@ realms of possibility.
 
 Given the examples of Photoshop, VS Code, and Twitter, that it is indeed possible to build amazing
 applications on the web, and given the web's super powers of linkability and universality, then
-_(1)_, why do people still not fully bet on PWAs but build platform-specific apps, and _(2),_ do at
+①, why do people still not fully bet on PWAs but build platform-specific apps, and ②, do at
 least in part happily flock to Flutter?
 
 ### Why do people not fully bet on PWA?
 
-For _(1)_, the answer is complex and manyfold. I want to break it down into different
+For ①, the answer is complex and manyfold. I want to break it down into different
 sub-categories.
 
 #### Missing capabilities: aka the app gap
@@ -194,7 +193,7 @@ purchases on macOS that can be handled via Electron's
 <code>[inAppPurchase()](https://www.electronjs.org/docs/latest/tutorial/in-app-purchases)</code>
 method. (On the web, the next best thing is the
 [Digital Goods API](/docs/android/trusted-web-activity/receive-payments-play-billing/),
-currently limited to Android and Chrome OS.) Installers are a common way users have learned to
+currently limited to Android and ChromeOS.) Installers are a common way users have learned to
 install applications on Windows. With Electron.js, it is possible to create
 [installers](https://www.electronjs.org/docs/latest/api/auto-updater#windows) and make installed
 applications [update automatically](https://www.electronjs.org/docs/latest/api/auto-updater). (On
@@ -213,7 +212,7 @@ Collectively, we have educated users to look for apps in app stores. Some stores
 [Windows Store](https://developer.microsoft.com/en-us/microsoft-store/pwa/) and the
 [Android Play Store](/docs/android/trusted-web-activity/quick-start/)
 have started to embrace (wrapped!) PWAs (optionally
-[limited to Chrome OS](https://chromeos.dev/en/publish/pwa-in-play#chrome-os-only)), and offer
+[limited to ChromeOS](https://chromeos.dev/en/publish/pwa-in-play#chrome-os-only)), and offer
 graphical user interface tools like [PWABuilder](https://www.pwabuilder.com/) (internally based on
 the command line tool [bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap)) for submitting
 applications. Meanwhile, on other stores such as Apple's App Store, the situation is different and
@@ -254,7 +253,7 @@ is [Netflix with their external subscriptions](https://9to5mac.com/2022/07/22/ne
 From personal experience through talking to many of Google's partners, a lot of
 [companies struggle with hiring great web developers](https://medium.com/javascript-scene/why-hiring-is-so-hard-in-tech-c462c3230017).
 The talent shortage is real, and recruiting costs are high, which is why startups commonly hire
-in-house recruiters who often approach recruiting with a shotgun approach that has not has not helped
+in-house recruiters who often approach recruiting with a breadth-first approach that has not helped
 the reputation of recruiters with IT professionals. Also, companies often already employ teams of Android
 and/or iOS developers that they cannot just retrain to become web developers. Creating a PWA
 requires a high level of specialization that not all web developers can offer.
@@ -350,7 +349,7 @@ where developers can specify [minimum required device capabilities](https://deve
 
 ### Why is Flutter so popular?
 
-For _(2)_, one possible explanation is that it is a
+For ②, one possible explanation is that it is a
 [Google-backed](https://flutter.dev/#:~:text=Flutter%20is%20Google%27s%20UI%20toolkit%20for%20building%20beautiful%2C%20natively%20compiled%20applications%20for%20mobile%2C%20web%2C%20desktop%2C%20and%20embedded%20devices%20from%20a%20single%20codebase.)
 toolkit for _"building beautiful, natively compiled applications for mobile, web, desktop, and
 embedded devices from a single codebase"_. If even Google, as the maker of Android, trusts Flutter
@@ -405,11 +404,11 @@ help if you are stuck.
 ## Conclusions
 
 It is undeniable that amazing apps can be built on the web. Photoshop, VS Code, and Twitter are the
-stand-out examples in this article, but there are many others. The web's super power is its
+stand-out examples in this article, but there are many others. One of the web's super powers is its
 linkability, which is hard to beat on platforms other than the web. There seems to be a certain
 tendency for cross-platform app frameworks becoming less attractive to developers, with the notable
 exception of Flutter, which allows for web as one of its target platforms. Reasons for _not_
-building for the web are not hard to find, but it is also not hard to find counter-arguments to take
+building for the web are easy to find, but it is also not hard to find counter-arguments to take
 these reasons apart. Some of them rely on outdated or weak assumptions, for example, PWAs not being
 welcome on app stores, or platform-specific apps being more secure than PWAs. Others are things that
 are in process, like closing the app gap by adding missing web platform APIs. Some reasons apply
@@ -418,7 +417,7 @@ boils down to the concrete circumstances your use case needs to be built for. In
 have given a number of really strong arguments for building for the web, while also not hiding the
 fact that the web is a platform that is still not perfect, and pointing out that other alternatives
 exist. And as the three stand-out examples have shown, the decision is also not mutually exclusive.
-You can build a powerful PWA for the web, and have a great, platform-specific application at the
+You can build a powerful web app, and have a great, platform-specific application at the
 same time. It is up to you to decide if you want to.
 
 {% Aside %} This is part one of a two part mini series on the capable web. Be sure to also read
