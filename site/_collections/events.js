@@ -82,7 +82,7 @@ const currentEvents = collections => {
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {{locations:string[], speakers:{}[], topics:string[]}}
+ * @returns {{locations:string[], googlers:{}[], topics:string[]}}
  */
 const eventTags = collections => {
   const events = getEvents({
@@ -93,7 +93,7 @@ const eventTags = collections => {
 
   return {
     locations: uniqueLocations(events),
-    speakers: uniqueSpeakers(events),
+    googlers: uniqueGooglers(events),
     topics: uniqueTopics(events),
   };
 };
@@ -144,7 +144,7 @@ const isPastEvent = event => {
  * @param {EventsCollectionItem[]} events
  * @returns {{}[]}
  */
-const uniqueSpeakers = events => {
+const uniqueGooglers = events => {
   const rawSpeakers = events
     .map(e =>
       e.sessions.flatMap(s => {
