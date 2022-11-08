@@ -7,6 +7,9 @@
 {% block content %}
   <div class="events-container width-full pad-400">
     {% include 'partials/events-hero.njk' %}
+
+    {{collections.eventTags | dump | safe }}
+
     {% include 'partials/events-list.njk' %}
   </div>
 {% endblock %}
