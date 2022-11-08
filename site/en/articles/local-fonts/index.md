@@ -21,7 +21,7 @@ feedback:
 ---
 
 {{% Aside 'success' %} The Local Font Access API was part of the
-[capabilities project](https://developer.chrome.com/blog/capabilities/) and is now shipped.
+[capabilities project](/blog/capabilities/) and is now available from Chrome 103 on desktop.
 {% endAside %}
 
 ## Web safe fonts
