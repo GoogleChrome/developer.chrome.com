@@ -8,6 +8,7 @@ description: A API dos acionadores de notificação permite aos desenvolvedores 
 date: 2019-10-24
 updated: 2021-12-03
 hero: image/admin/6ZuVN2HFiIqTVrmjN5XC.jpg
+alt: ''
 hero_position: Centro
 tags:
   - capabilities

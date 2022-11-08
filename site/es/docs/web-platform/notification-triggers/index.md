@@ -8,6 +8,7 @@ description: La API de activadores de notificaciones permite que los desarrollad
 date: 2019-10-24
 updated: 2021-12-03
 hero: image/admin/6ZuVN2HFiIqTVrmjN5XC.jpg
+alt: ''
 hero_position: center
 tags:
   - capabilities
