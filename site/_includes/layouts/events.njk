@@ -7,6 +7,47 @@
 {% block content %}
   <div class="events-container width-full pad-400">
     {% include 'partials/events-hero.njk' %}
+
+    <div class="events-container__filters display-flex align-center gap-bottom-600">
+      <span class="color-secondary-text type--eyebrow">
+        Filter by:
+      </span>
+
+      <select name="topics">
+        {% for topic in collections.eventTags.topics %}
+          <option value="{{ topic }}">{{ topic }}</option>
+        {% endfor %}
+      </select>
+
+      <enhanced-select class="gap-right-600"
+                       label="Topic"
+                       fixedLabel>
+        <select name="topics" multiple>
+          {% for topic in collections.eventTags.topics %}
+            <option value="{{ topic }}">{{ topic }}</option>
+          {% endfor %}
+        </select>
+      </enhanced-select>
+
+      <enhanced-select class="gap-right-600"
+                       label="Location"
+                       fixedLabel>
+        <select name="location">
+          {% for location in collections.eventTags.locations %}
+            <option value="{{ location }}">{{ location }}</option>
+          {% endfor %}
+        </select>
+      </enhanced-select>
+
+      <enhanced-select label="Googler" fixedLabel>
+        <select name="googler">
+          {% for googler in collections.eventTags.googlers %}
+            <option value="{{ googler.handle }}">{{ googler.title }}</option>
+          {% endfor %}
+        </select>
+      </enhanced-select>
+    </div>
+
     {% include 'partials/events-list.njk' %}
   </div>
 {% endblock %}

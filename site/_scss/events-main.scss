@@ -34,4 +34,30 @@
 
 .events-container {
   max-width: calc(1290px + 3rem);
+
+  &__filters {
+    > span {
+      color: var(--color-grey-medium);
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      line-height: 1rem;
+      margin-right: 0.75rem;
+    }
+
+    select {
+      display: none;
+    }
+
+    .enhanced-select__wrapper {
+      border: 0;
+    }
+  }
+
+  &__filters label {
+    color: var(--color-blue-medium);
+
+    path {
+      fill: var(--color-blue-medium);
+    }
+  }
 }
