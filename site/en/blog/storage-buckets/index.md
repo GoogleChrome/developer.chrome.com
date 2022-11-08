@@ -127,10 +127,10 @@ const inboxDb = await new Promise(resolve => {
 
 {% Aside %}
 Apart from IndexedDB, the
-[explainer mentions several other storage APIs](https://wicg.github.io/storage-buckets/explainer#accessing-storage-apis-from-buckets)
-like the [Cache API](https://developer.mozilla.org/docs/Web/API/Cache)
-or the [File API](https://developer.mozilla.org/docs/Web/API/File_API). Currently implemented
-is only the IndexedDB API.
+[explainer mentions several other storage APIs](https://wicg.github.io/storage-buckets/explainer#accessing-storage-apis-from-buckets).
+ For example, the [Cache API](https://developer.mozilla.org/docs/Web/API/Cache)
+and [File API](https://developer.mozilla.org/docs/Web/API/File_API). The current implementation is only 
+the IndexedDB API.
 {% endAside %}
 
 ## Feedback
