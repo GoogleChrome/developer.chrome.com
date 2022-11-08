@@ -11,6 +11,22 @@
 </div>
 
 <web-tabs class="events-list">
+  <web-tabs-interlude>
+    <div class="events-list__selected-filters gap-bottom-500">
+      <span class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        Hybrid  {{ icon('close') }}
+      </span>
+
+      <span class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        Topic 3 {{ icon('close') }}
+      </span>
+
+      <span class="surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        Location 5 {{ icon('close') }}
+      </span>
+    </div>
+  </web-tabs-interlude>
+
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <div id="upcoming-events"
          class="display-grid grid-cols-1 grid-gap-400"

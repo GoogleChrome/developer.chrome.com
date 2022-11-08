@@ -27,3 +27,13 @@
     }
   }
 }
+
+.events-list__selected-filters {
+  .tag-pill {
+    .icon {
+      height: get-size(300);
+      margin-left: get-size(200);
+      width: get-size(300);
+    }
+  }
+}
