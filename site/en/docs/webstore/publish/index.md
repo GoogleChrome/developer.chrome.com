@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2022-11-04
+updated: 2022-11-10
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -72,13 +72,13 @@ Here you can provide your developer profile information, configure management se
 | Field                | Description                                                                                                                                                        |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Publisher name**   | (Required) Appears under the title of each of your extensions. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead. |
-| **Add email**    | (Required) Only be displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.                       |
+| **Add email**    | (Required) Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.                       |
 | **Privacy policy**   | (Required) A link to the privacy policy for all your extensions. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details. |
-| **Physical address** | (Required) Only items that offer a functionality to purchase items, additional features, or subscriptions must include a physical address.                                     |
+| **Physical address** | (Required) Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.                                     |
 | **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
 
 {% Aside 'important' %}
-The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups.
+The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums.
 {% endAside %}
 
 
