@@ -39,14 +39,6 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Tracking issue:** [1339382][]
 
-### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
-
-**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome will provide extensions with a way to supply credentials for authentication requests in Manifest V3.
-
-**Estimated timeline:** Targeting Canary support around October, 2022.
-
-**Tracking issue:** [1135492][]
-
 ## Bugs {: #bugs }
 
 ### Sandboxed page CSP can't be customized {: #sandboxed-csp }
@@ -57,11 +49,21 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Tracking issue:** [1247690][]
 
+## Resolved {: #resolved }
+
+### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
+
+**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome will provide extensions with a way to supply credentials for authentication requests in Manifest V3.
+
+**Estimated timeline:** Slated for release in Chrome 108.
+
+**Tracking issue:** [1135492][]
+
 ### Service workers are not started in response to webRequest events {: #webrequest-in-sw }
 
 **Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
 
-**Estimated timeline**: Targeting Canary support before October, 2022.
+**Estimated timeline**: Slated for release in Chrome 107.
 
 **Tracking issue**: [1024211][]
 
