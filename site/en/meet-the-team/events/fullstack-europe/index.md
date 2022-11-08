@@ -18,7 +18,8 @@ sessions:
       of the features that will be landing across all browsers by the end of
       this year.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: TBC
     type: speaker
     slidesUrl: null
