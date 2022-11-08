@@ -20,7 +20,7 @@ feedback:
   - api
 ---
 
-{{% Aside 'success' %} The Local Font Access API was part of the
+{% Aside 'success' %} The Local Font Access API was part of the
 [capabilities project](https://developer.chrome.com/blog/capabilities/) and is now shipped.
 {% endAside %}
 
