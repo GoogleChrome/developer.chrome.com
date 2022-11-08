@@ -23,27 +23,37 @@ startOfDay.setHours(0, 0, 0, 0);
  * @returns {EventsCollectionItem[]}
  */
 const getEvents = ({collections, filter, sort, locale = 'en'}) => {
-  return collections
-    .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
-    .filter(filter)
-    .map(event => {
-      const sessions = event.data.sessions.map(session =>
-        processSession(session)
-      );
+  let payload = collections.getFilteredByGlob(
+    `./site/${locale}/meet-the-team/events/**/*.md`
+  );
 
-      return {
-        id: event.data.id,
-        title: event.data.title,
-        externalUrl: event.data.externalUrl,
-        summary: event.data.summary,
-        location: event.data.location,
-        date: event.data.date,
-        isPastEvent: isPastEvent(event),
-        sessions,
-        image: event.data.image,
-      };
-    })
-    .sort(sort);
+  if (filter) {
+    payload = payload.filter(filter);
+  }
+
+  payload = payload.map(event => {
+    const sessions = event.data.sessions.map(session =>
+      processSession(session)
+    );
+
+    return {
+      id: event.data.id,
+      title: event.data.title,
+      externalUrl: event.data.externalUrl,
+      summary: event.data.summary,
+      location: event.data.location,
+      date: event.data.date,
+      isPastEvent: isPastEvent(event),
+      sessions,
+      image: event.data.image,
+    };
+  });
+
+  if (sort) {
+    return payload.sort(sort);
+  }
+
+  return payload;
 };
 
 /**
@@ -68,6 +78,24 @@ const currentEvents = collections => {
     filter: event => isPastEvent(event) === false,
     sort: (a, b) => a.date - b.date,
   });
+};
+
+/**
+ * @param {EleventyCollectionObject} collections
+ * @returns {{locations:string[], speakers:{}[], topics:string[]}}
+ */
+const eventTags = collections => {
+  const events = getEvents({
+    collections,
+    filter: null,
+    sort: null,
+  });
+
+  return {
+    locations: uniqueLocations(events),
+    speakers: uniqueSpeakers(events),
+    topics: uniqueTopics(events),
+  };
 };
 
 /**
@@ -112,4 +140,48 @@ const isPastEvent = event => {
   return event.date < startOfDay;
 };
 
-module.exports = {currentEvents, pastEvents};
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {{}[]}
+ */
+const uniqueSpeakers = events => {
+  const rawSpeakers = events
+    .map(e =>
+      e.sessions.flatMap(s => {
+        if (s.speaker) {
+          return {handle: s.speaker.handle, title: s.speaker.title};
+        }
+
+        return s.participants.map(p => ({handle: p.handle, title: p.title}));
+      })
+    )
+    .flat();
+
+  return rawSpeakers
+    .filter(
+      (s, i) => rawSpeakers.findIndex(first => s.handle === first.handle) === i
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueTopics = events => {
+  const topics = events.map(e => e.sessions.flatMap(s => s.topics)).flat();
+
+  return [...new Set(topics)].sort((a, b) => a.localeCompare(b));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueLocations = events => {
+  const locations = events.map(e => e.location);
+
+  return [...new Set(locations)].sort((a, b) => a.localeCompare(b));
+};
+
+module.exports = {currentEvents, pastEvents, eventTags};
