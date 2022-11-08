@@ -117,9 +117,7 @@ integrations that are affected by third-party cookie phase-out:
 * [Iframe-based background token
   renewal](https://github.com/fedidcg/use-case-library/issues/10)
 * [Iframe-based login
-  widgets](https://github.com/fedidcg/use-case-library/issues/12) (for example,
-  [Facebook's personalized login
-  button](https://developers.facebook.com/docs/facebook-login/web/login-button/))
+  widgets](https://github.com/fedidcg/use-case-library/issues/12)
 
 FedCM's first goal is to reduce the impact of third-party cookie phase-out on
 identity federation and above is a list of areas we expect to be affected. If
@@ -206,9 +204,9 @@ authentication-related functionalities.
 When the user lands on the relying party (RP) website, a FedCM sign-in dialog
 will appear if the user is signed in to the IdP. 
 
-If the user hasn't signed in to the RP, a sign-up dialog appears with additional
-disclosure text such as the RP's terms of service and a privacy policy if they
-are provided.
+If the user doesn't have an account on the RP with the IdP, a sign-up dialog
+appears with additional disclosure text such as the RP's terms of service and a
+privacy policy if they are provided.
 
 The user can complete sign in by tapping **Continue as...**. If successful, the
 browser stores the fact that the user has created a federated account on the RP
@@ -216,10 +214,14 @@ with the IdP.
 
 {% Aside %}
 
-If a user dismissed the UI, an entry would be added to the [settings
-UI](#user-settings). Users can reenable FedCM on the RP by either going to the
-settings page or clicking on the PageInfo UI (a lock icon beside the URL bar)
-and reset the permission.
+If the user closes the UI manually, an entry would be added to the [settings
+UI](#user-settings) and the UI won't be displayed in the same website for a
+period of time. The UI will be reenabled after the period, but the duration will
+[be exponentially
+expanded](https://developers.google.com/identity/gsi/web/guides/features#exponential_cooldown).
+Users can reenable FedCM on the RP manually by either going to the [settings
+page](#user-settings) or clicking on the PageInfo UI (a lock icon beside the URL
+bar) and reset the permission.
 
 {% endAside %}
 
