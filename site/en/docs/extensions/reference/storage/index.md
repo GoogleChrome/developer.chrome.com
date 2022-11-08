@@ -6,6 +6,7 @@ api: storage
 
 The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
+- Content scripts can directly access chrome.storage.
 - Stores JSON serializable values as object properties.
 - Storage is asynchronous with bulk read and write operations.
 - Storage data persists when the user clears the cache and browsing history.
