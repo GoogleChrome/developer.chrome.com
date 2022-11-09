@@ -49,10 +49,8 @@ used by sandboxed pages (e.g. stylesheets or JavaScript source files) do not nee
 `pages` list because they will use the sandbox of the frame that embeds them.
 
 ["Using eval in Chrome Extensions. Safely."][4] goes into more detail about implementing a
-sandboxing workflow that enables use of libraries that would otherwise have issues executing under
+sandboxing workflow that enables the use of libraries that would otherwise have issues executing under
 extension's [default Content Security Policy][5].
-
-Sandboxed pages may only be specified when using [`manifest_version`][6] 2 or above.
 
 [1]: /docs/apps/webview_tag
 [2]: /docs/extensions/mv3/contentSecurityPolicy

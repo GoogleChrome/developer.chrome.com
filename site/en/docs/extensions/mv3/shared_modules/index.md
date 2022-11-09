@@ -20,6 +20,8 @@ extensions and apps. Common uses of Shared Modules are:
 
 Shared Modules are used through two [manifest][1] fields: export and import.
 
+### Export {: #export}
+
 The _export_ field indicates an extension is a Shared Module that exports its resources:
 
 ```json
@@ -38,6 +40,8 @@ The _export_ field indicates an extension is a Shared Module that exports its re
   // Note: no permissions are allowed in Shared Modules
 }
 ```
+
+### Import {: #import}
 
 The _import_ field is used by extensions and apps to declare that they depend on the resources from
 particular Shared Modules:
