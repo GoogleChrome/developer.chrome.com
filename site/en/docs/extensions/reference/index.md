@@ -4,7 +4,7 @@ description: 'The complete reference to all APIs made available to Chrome Extens
 layout: 'layouts/reference-landing.njk'
 ---
 
-Chrome provides extensions with many special-purpose interfaces such as `chrome.runtime` and `chrome.alarms`.
+Chrome provides extensions with many special-purpose APIs such as `chrome.alarms` and `chrome.action`. Many APIs consist of a namespace and its related manifest fields. These fields are frequently permissions, but not always. For example, `chrome.alarms` requires only the `alarms` permission, while `chrome.action` requires an action object in the `manifest.json` file.
 
 ## API conventions
 
