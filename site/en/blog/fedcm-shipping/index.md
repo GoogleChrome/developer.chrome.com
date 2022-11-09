@@ -9,6 +9,7 @@ hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
 alt: "Four people holding and crossing hands."
 authors:
  - agektmr
+ - samuelgoto
 date: 2022-11-09
 ---
 
@@ -63,12 +64,16 @@ from IdPs to login to websites.
 FedCM is a multi-step journey to make identity on the web better, and in its
 first step we are focused on reducing the impact of third-party cookie phase-out
 on federated identity (see below for a few [steps
-further](#whats-next).
+further](#whats-next)).
 
-
-
-{% Video src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TJLjWp1nVLlDMMCK2ugQ.mov", autoplay="true", loop="true" %}
-
+<figure class="screenshot">
+  {% Video
+    src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TJLjWp1nVLlDMMCK2ugQ.mov",
+    autoplay="true",
+    loop="true"
+  %}
+  <figcaption>A user is signing to an RP using FedCM</figcaption>
+</figure>
 
 Chrome has been
 [experimenting with FedCM since Chrome 101](/origintrials/#/register_trial/3977804370874990593).
@@ -145,7 +150,7 @@ We are working to evaluate the best solution for these open questions:
     attributes (such as emails, age brackets, phone numbers, and so on).
 -   **Raising the Privacy Properties**: As Mozilla suggested
     [here](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
-    we'd like to continue exploring** **mechanisms to offer better privacy
+    we'd like to continue exploring mechanisms to offer better privacy
     guarantees, such as  IdP blindness and directed identifiers.
 -   **Relationship with WebAuthn**: As suggested by
     [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html),
