@@ -14,7 +14,7 @@ The Federated Credential Management API is
 [shipping in Chrome 108](/blog/fedcm-shipping),
 but it's expected to continue evolving until Q4 2023 at least to stabilize.
 
-# Who are these updates for?
+## Who are these updates for?
 
 These updates are for you if:
 
