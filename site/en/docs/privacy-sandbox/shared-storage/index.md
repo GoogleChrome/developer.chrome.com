@@ -148,6 +148,10 @@ A [demo is available](https://shared-storage-demo.web.app/), and you can review 
 
 This demo is constructed from the perspective of an advertiser, adtech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
 
-The demo contains use cases for URL selection and Private Aggregation.  For the URL selection demo, [frequency control](/docs/privacy-sandbox/shared-storage/frequency-control), [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/), [known customer](/docs/privacy-sandbox/shared-storage/known-customer/), and [A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/) use cases are available.  For the Private Aggregation demo, you can preview unique [reach measurement](/docs/privacy-sandbox/shared-storage/unique-reach), [demographics measurement](/docs/privacy-sandbox/shared-storage/user-demographics), and [K-frequency measurement](/docs/privacy-sandbox/shared-storage/k-freq-reach).
+The demo contains use cases for URL selection and Private Aggregation.
+
+For the URL selection demo, [frequency control](/docs/privacy-sandbox/shared-storage/frequency-control), [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/), [known customer](/docs/privacy-sandbox/shared-storage/known-customer/), and [A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/) use cases are available.
+
+For the Private Aggregation demo, you can preview unique [reach measurement](/docs/privacy-sandbox/shared-storage/unique-reach), [demographics measurement](/docs/privacy-sandbox/shared-storage/user-demographics), and [K-frequency measurement](/docs/privacy-sandbox/shared-storage/k-freq-reach).
 
 {% Partial 'privacy-sandbox/sharedstorage-engage.md' %}
