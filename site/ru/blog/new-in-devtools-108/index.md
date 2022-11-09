@@ -4,14 +4,13 @@ title: "Новинки DevTools (Chrome 108)"
 authors:
   - jecelynyeen
 date: 2022-10-26
-description: 'Hints for inactive CSS properties, new XPath and text selectors in the Recorder, and more.'
+description: 'Подсказки для неактивных CSS-свойств, новые XPath и текстовые селекторы во вкладке Recorder и другое.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/r7kjGEuoMqcVZvjrJmrG.png'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-108
-draft: true
 ---
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
@@ -19,44 +18,52 @@ draft: true
 {% Partial 'devtools/banner.md' %}
 
 <!-- Translation instructions:
-  1. Remove the "draft: true" tag above when submitting PR
-  2. Provide translations under each of the English commented original content
-  3. Translate the "description" tag above
-  4. Translate all the <img> alt text
+  + 1. Remove the "draft: true" tag above when submitting PR
+  + 2. Provide translations under each of the English commented original content
+  + 3. Translate the "description" tag above
+  + 4. Translate all the <img> alt text
   5. Update the sites/ru/_partials/devtools/whats-new.md file -->
 
 
-<!-- ## Hints for inactive CSS properties {: #css-hint <!-- } --> -->
+<!-- ## Hints for inactive CSS properties {: #css-hint <!-- } -->
+## Подсказки для неактивных CSS-свойств {: #css-hint }
 
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
+В DevTools теперь определяются стили CSS, которые не имеют визуального эффекта. Во вкладке **Стили** (Styles) неактивные свойства отображаются более светлым цветом. Наведите курсор на иконку сразу после неактивного свойства и прочитайте пояснение, почему свойство не имеет визуального эффекта.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="Hints for inactive CSS properties.", width="800", height="526" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="Подсказки для неактивных CSS-свойств.", width="800", height="526" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d6c1fea1e79b8373ff913a6d9919d097d1141254 #}
 
-Chromium issue: [1178508](https://crbug.com/1178508)
+Задача в трекере Chromium: [1178508](https://crbug.com/1178508)
 
 
 <!-- ## Auto-detect XPath and text selectors in the Recorder panel {: #recorder } -->
+## Автоматическое определение XPath и текстовых селекторов во вкладке Recorder {: #recorder }
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
+Во вкладке **Recorder** теперь поддерживаются XPath и текстовые селекторы. [Начните запись пользовательского сценария](/docs/devtools/recorder/#record), XPath и короткие уникальный текст элемента в качестве селектора будут определены автоматически.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="XPath and text selectors in the Recorder panel.", width="800", height="579" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="XPath и текстовые селекторы во вкладке Recorder.", width="800", height="579" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/7441acfff5d9dfd373742797d2db46a809c9df67 #}
 
-Chromium issues: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.com/1327209)
+Задачи в трекере Chromium: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.com/1327209)
 
 
 <!-- ## Step through comma-separated expressions {: #debugging } -->
+## Перебор выражений, разделенных запятыми {: #debugging }
 
 <!-- You can now step through comma-separated expressions during debugging. This improves the debuggability of minified code. -->
+Теперь вы можете при отладке навигироваться по выражениям, разделённым запятыми.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="Step through comma-separated expressions.", width="800", height="473" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="Перебор выражений, разделенных запятыми.", width="800", height="473" %}
 
 <!-- Previously, DevTools only supported stepping through semicolon-separated expressions. -->
+Раньше DevTools поддерживали перебор выражений, разделённых только точкой с запятой.
 
 <!-- Given the code below, -->
+Возьмём код ниже:
 
 ```js
 function foo() {}
@@ -69,35 +76,43 @@ function bar() {
 ```
 
 <!-- Transpilers and minifiers may turn them into comma-separated expressions. -->
+Транспайлеры и минификаторы могут преобразовать его в выражение, разделённое запятыми:
 
 ```js
 function bar(){return foo(),foo(),42}
 ``` 
 
 <!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
+Это создаёт затруднения при отладке потому что повидение перебора отличается для минифицированного и авторского кода. Ещё больше путаницы возникает при использовании карт исходного кода для отладки минифицированного кода по исходному коду, поскольку разработчик видит точки с запятой (которые под капотом инструментарий превратил в запятые), но отладчик на них не останавливается.
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 
-Chromium issue: [1370200](https://crbug.com/1370200)
+Задача в трекере Chromium: [1370200](https://crbug.com/1370200)
 
 
 <!-- ## Improved Ignore list setting {: #ignore-list } -->
+## Улучшение настроек Списка игнорируемых фрейсворков {: #ignore-list }
 
 <!-- Go to **Settings** > **Ignore List**. DevTools improves the design to help you configure the rules to [ignore a single script or pattern of scripts](/docs/devtools/javascript/reference/#settings-ignore-list). -->
+Откройте **Настройки** (Settings) > **Список игнорируемых фрейсворков** (Ignore List). В DevTools улучшен дизайн чтобы помочь вам настроить правила [игнорирования отдельных скриптов или групп скриптов по шаблону](/docs/devtools/javascript/reference/#settings-ignore-list).
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qazPkaZ3TkSrIBU89Jtn.png", alt="The Ignore List tab.", width="800", height="535" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qazPkaZ3TkSrIBU89Jtn.png", alt="Вкладка Список игнорируемых фрейсворков.", width="800", height="535" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9441d8775b38b47db91bb5182f6349f3036d3751 #}
 
-Chromium issue: [1356517](https://crbug.com/1356517)
+Задача в трекере Chromium: [1356517](https://crbug.com/1356517)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
+## Другие важные моменты {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
+Вот несколько заслуживающих внимания исправлений в этом выпуске:
 
 <!-- - Autocomplete CSS property name in the **Styles** pane on pressing space. ([1343316](https://crbug.com/1343316)) -->
+- Автоматическое завершение имени свойства CSS во вкладке **Стили** (Styles) по нажатию пробела. ([1343316](https://crbug.com/1343316))
 <!-- - Remove auto scroll in the **Element** panel’s breadcrumb. ([1369734](https://crbug.com/1369734)) -->
+- Удалён автоматический скрол в хлебных крошках вкладки **Элементы** (Element). ([1369734](https://crbug.com/1369734))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ccfb914765146ce514b9645117d9f95052bd3471 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4b6c1b6671e08a39e4d37772e87ff2cf41cb7327 #}

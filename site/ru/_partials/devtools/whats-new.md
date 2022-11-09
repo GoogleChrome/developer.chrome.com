@@ -5,14 +5,14 @@
 
 <!-- $content -->
 
-<!-- ### Chrome 108 {: #chrome108 }
+### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/ru/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/ru/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/ru/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/ru/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-108/#misc)
- -->
+* [Подсказки для неактивных CSS-свойств](/ru/blog/new-in-devtools-108/#css-hint)
+* [Автоматическое определение XPath и текстовых селекторов во вкладке Recorder](/ru/blog/new-in-devtools-108/#recorder)
+* [Перебор выражений, разделенных запятыми](/ru/blog/new-in-devtools-108/#debugging)
+* [Улучшение настроек Списка игнорируемых фрейсворков](/ru/blog/new-in-devtools-108/#ignore-list)
+* [Другие важные моменты](/ru/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 
