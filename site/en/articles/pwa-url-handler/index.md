@@ -49,20 +49,6 @@ Examples of sites that may use this API include:
   the app.
 - News or RSS readers so followed or subscribed-to sites open in the app's reader mode.
 
-## Current status {: #status }
-
-<div>
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | Not started              |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | **[In progress][ot]**    |
-| 5. Launch                                | Not started              |
-
-</div>
-
 ## How to use PWAs as URL Handlers {: #use }
 
 ### Enabling via about://flags

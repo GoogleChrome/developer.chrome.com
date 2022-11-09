@@ -47,20 +47,6 @@ Use cases for insertable streams for `MediaStreamTrack` include, but are not lim
 - Video conferencing gadgets like "funny hats" or virtual backgrounds.
 - Voice processing like software [vocoders](https://en.wikipedia.org/wiki/Vocoder).
 
-## Current status {: #status }
-
-<div>
-
-| Step                                     | Status                   |
-| ---------------------------------------- | ------------------------ |
-| 1. Create explainer                      | [Complete][explainer]    |
-| 2. Create initial draft of specification | [In Progress][spec]      |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. Origin trial                          | Completed                |
-| 5. **Launch**                            | **Completed**            |
-
-</div>
-
 ## How to use insertable streams for `MediaStreamTrack`
 
 ### Feature detection
