@@ -63,7 +63,7 @@ from IdPs to login to websites.
 FedCM is a multi-step journey to make identity on the web better, and in its
 first step we are focused on reducing the impact of third-party cookie phase-out
 on federated identity (see below for a few [steps
-further](#heading=h.hd4vvssat3s0)).
+further](#whats-next).
 
 
 
