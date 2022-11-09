@@ -77,7 +77,7 @@ To use the storage API, you must declare the `"storage"` permission in the exten
 ## Usage {: #usage }
 
 The following samples demonstrate the `local`, `sync`, and
-`sessions` storage areas:
+`session` storage areas:
 
 <web-tabs>
   <web-tab title="storage.local">
@@ -131,7 +131,7 @@ The Storage API is not a big truck. It's a series of tubes. And if you don't und
 tubes can be filled, and if they are filled when you put your message in, it gets in line, and it's
 going to be delayed by anyone that puts into that tube enormous amounts of material.
 
-For details on storage area limitations and what happens when they are exceed, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
+For details on storage area limitations and what happens when they are exceeded, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
 
 ## Use cases {: #examples}
 
