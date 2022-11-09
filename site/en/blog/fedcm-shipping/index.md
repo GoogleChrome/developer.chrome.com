@@ -18,7 +18,7 @@ Check the final API changes in the [accumulated update page](docs/privacy-sandbo
 
 {% Aside %}
 
-If you are participating in the FedCM origin trial, please note that the trial is scheduled to end on November 22nd, which is slightly earlier than Chrome 108 ships.
+If you are participating in the [FedCM origin trial](/origintrials/#/register_trial/3977804370874990593), please note that the trial is scheduled to end on November 22nd, which is slightly earlier than Chrome 108 ships.
 
 {% endAside %}
 
