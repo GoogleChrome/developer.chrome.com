@@ -20,7 +20,7 @@ API (v1)</strong>, which uses the <code>Reporting-Endpoints</code> header.</p>
 
 <p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about [API migration](/reporting-api-migration/) instead.</p>
 
-<p>Are you looking for [Network Error Logging](/network-error-logging/) documentation? Head over to [Network Error logging] instead.</p>
+<p>Are you looking for [Network Error Logging](https://web.dev/network-error-logging/) documentation? Head over to [Network Error logging] instead.</p>
 {% endAside %}
 
 Some errors only occur in production. You won't see them locally or during
@@ -770,21 +770,21 @@ the **Network** panel of your Developer Tools.
 
 - The endpoint is used but not configured. Example:
 
-  {% Compare 'worse', 'Code with a mistake' %}
+{% Compare 'worse', 'Code with a mistake' %}
 
-  ```http
-  Document-Policy: document-write=?0;report-to=endpoint-1;
-  Reporting-Endpoints: default="https://reports.example/default"
-  ```
+```http
+ Document-Policy: document-write=?0;report-to=endpoint-1;
+ Reporting-Endpoints: default="https://reports.example/default"
+ ```
 
-  {% CompareCaption %}
+{% CompareCaption %}
 
-  Document-Policy violation reports should be sent to `endpoint-1`, but this endpoint name isn't configured in
-  `Reporting-Endpoints`.
+Document-Policy violation reports should be sent to `endpoint-1`, but this endpoint name isn't configured in
+`Reporting-Endpoints`.
 
-  {% endCompareCaption %}
+{% endCompareCaption %}
 
-  {% endCompare %}
+{% endCompare %}
 
 - The `default` endpoint is missing. Some reports types, such as deprecation and intervention
   reports, will only be sent to the endpoint named `default`. Read more in [Configure the
@@ -848,10 +848,9 @@ look the same, but they enable slightly different uses cases.
 Use `ReportingObserver` if:
 
 - You only want to monitor deprecations and/or browser interventions.
-  `ReportingObserver` surfaces **client-side warnings** such as deprecations
-  and browser interventions, but unlike `Reporting-Endpoints`, it doesn't
-  capture any other types of reports such as CSP
-  or COOP/COEP violations.
+`ReportingObserver` surfaces **client-side warnings** such as deprecations
+and browser interventions, but unlike `Reporting-Endpoints`, it doesn't
+capture any other types of reports such as CSP or COOP/COEP violations.
 - You need to react to these violations in real-time. `ReportingObserver` makes
   it possible to [attach a callback](/reporting-observer/#the-api) to a violation event.
 - You want to attach additional information to a report to aid in debugging,
