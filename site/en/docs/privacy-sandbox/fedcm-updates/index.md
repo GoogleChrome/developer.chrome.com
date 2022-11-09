@@ -53,7 +53,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 -   Added important security information to the document. The identity
     provider (IdP) needs to check if the `Referer` header matches the origin
     the RP registered in advance on
-    [the ID token endpoint](/docs/privacy-sandbox/fedcm/#id-token-endpoint).
+    [the ID token endpoint](/docs/privacy-sandbox/fedcm/#id-assertion-endpoint).
 -   The top-level manifest is renamed from `/.well-known/fedcm.json` to
     `/.well-known/web-identity` and the URL specified in `provider_urls` should
     include the file name.
