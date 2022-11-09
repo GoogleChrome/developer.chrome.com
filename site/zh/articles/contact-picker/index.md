@@ -1,4 +1,4 @@
---
+---
 layout: 'layouts/blog-post.njk'
 title: Web 联系人选取器
 subhead: Contact Picker API 为用户提供了一种从他们的联系人列表中共享联系人的简单方法。
