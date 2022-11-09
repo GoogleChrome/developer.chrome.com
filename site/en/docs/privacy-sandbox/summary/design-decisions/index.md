@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Get started with summary reports
+title: Experiment with summary report design decisions
 subhead: >
-  Understand essential noise parameters and quickly explore and assess various noise management strategies.
+  Use Noise Lab to preview how noise affects your summary reports.
 authors:
   - akashnadan
   - alexandrawhite
@@ -12,7 +12,7 @@ authors:
 date: 2022-11-09
 updated: 2022-11-09
 description: >
-  Understand essential noise parameters and quickly explore and assess various noise management strategies.
+  Use Noise Lab to preview how noise affects your summary reports.
 tags:
   - privacy
 ---
