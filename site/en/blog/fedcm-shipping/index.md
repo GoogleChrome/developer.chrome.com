@@ -5,7 +5,7 @@ description: >
   The Federated Credential Management API is shipping in Chrome 108.
 subhead: >
   FedCM is shipping. This is an announcement article for it.
-hero: image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/vXdChvtQPzRiOfXbQNHw.avif
+hero: 'image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/M82LMMIlER7E25dSqQwB.avif'
 alt: 'The individual hands of four people, all gripping the wrist of another'
 date: 2022-11-09
 authors:
