@@ -65,7 +65,9 @@ first step we are focused on reducing the impact of third-party cookie phase-out
 on federated identity (see below for a few [steps
 further](#heading=h.hd4vvssat3s0)).
 
-{% Video src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TJLjWp1nVLlDMMCK2ugQ.mov" %}
+
+
+{% Video src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/TJLjWp1nVLlDMMCK2ugQ.mov", autoplay="true", loop="true" %}
 
 
 Chrome has been
