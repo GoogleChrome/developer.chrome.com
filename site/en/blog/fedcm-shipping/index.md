@@ -6,14 +6,13 @@ description: >
 subhead: >
   FedCM is shipping. This is an announcement article for it.
 hero: 'image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/M82LMMIlER7E25dSqQwB.avif'
-alt: 'The individual hands of four people, all gripping the wrist of another'
+alt: 'The individual hands of four people, each gripping the wrist of another'
 date: 2022-11-09
 authors:
   - agektmr
   - goto
 tags:
   - privacy
-
 ---
 
 ## Federated Credential Management API is shipping
