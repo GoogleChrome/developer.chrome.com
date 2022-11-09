@@ -14,7 +14,7 @@ tags:
 ---
 
 {% Aside 'success' %} URL protocol handler registration for PWAs is part of the
-[capabilities project](/blog/fugu-status/) and is shipped. {% endAside %}
+[capabilities project](/blog/fugu-status/) and is available from Chrome 96. {% endAside %}
 
 ## Background on schemes (aka. protocols)
 
@@ -91,19 +91,6 @@ allowing the possibility for complementary user-experiences:
   `web+music://songid=1234&time=0:13` and the user clicks on it, the music streaming PWA will
   automatically launch in a standalone window.
 
-## Current status {: #status }
-
-<div>
-
-| Step                                     | Status                                       |
-| ---------------------------------------- | -------------------------------------------- |
-| 1. Create explainer                      | [Complete][explainer]                        |
-| 2. Create initial draft of specification | [In progress][specification]                 |
-| 3. Gather feedback & iterate on design   | Complete                                     |
-| 4. Origin trial.                         | Complete                                     |
-| 5. **Launch**                            | Complete<br/>Chromium&nbsp;96 (on Windows, macOS, and Linux) |
-
-</div>
 
 ## How to use URL protocol handler registration for PWAs
 

@@ -15,7 +15,7 @@ feedback:
   - api
 ---
 {% Aside 'success' %} The Multi-Screen Window Placement API was part of the
-[capabilities project](/blog/fugu-status/) and is now launched. {% endAside %}
+[capabilities project](/blog/fugu-status/) and is now available from Chrome 100. {% endAside %}
 
 ## Multi-Screen Window Placement API
 
@@ -39,19 +39,6 @@ Examples of sites that may use this API include:
 - Slideshow apps can show speaker notes on the internal primary screen and the presentation on an
   external projector.
 
-## Current status {: #status }
-
-<div>
-
-| Step                                     | Status                           |
-| ---------------------------------------- | -------------------------------- |
-| 1. Create explainer                      | [Complete][explainer]            |
-| 2. Create initial draft of specification | [Complete][spec]                 |
-| 3. Gather feedback & iterate on design   | [In progress](#feedback)         |
-| 4. Origin trial                          | Complete                         |
-| 5. **Launch**                            | **Complete** (Chromium&nbsp;100) |
-
-</div>
 
 ## How to use the Multi-Screen Window Placement API {: #use }
 

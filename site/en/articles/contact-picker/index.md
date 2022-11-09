@@ -40,7 +40,7 @@ Access to the user's contacts on a mobile device has been a feature of iOS/Andro
 I hear from web developers, and is often the key reason they build an iOS/Android
 app.
 
-Available in Chrome 80 on Android, the [Contact Picker API][spec] is an
+Available from Chrome 80 on Android M or later, the [Contact Picker API][spec] is an
 on-demand API that allows users to select entries from their contact list and
 share limited details of the selected entries with a website. It allows users to
 share only what they want, when they want, and makes it easier for users to
@@ -58,19 +58,6 @@ what people choose. See the [Security and Privacy](#security-considerations)
 section below.
 {% endAside %}
 
-## Current status {: #status }
-
-<div>
-
-| Step                                       | Status                       |
-| ------------------------------------------ | ---------------------------- |
-| 1. Create explainer                        | [Complete][explainer]        |
-| 2. Create initial draft of specification   | [Complete][spec]             |
-| 3. Gather feedback & iterate on design     | [Complete][spec]             |
-| 4. Origin trial                            | Complete                     |
-| **5. Launch**                              | **Chrome 80**<br>Available on Android only.        |
-
-</div>
 
 ## Using the Contact Picker API {: #how-to-use }
 
