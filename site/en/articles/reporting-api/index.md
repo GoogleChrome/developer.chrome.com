@@ -18,7 +18,7 @@ tags:
 <p>This is an API guide with detailed usage examples for the <strong>Reporting
 API (v1)</strong>, which uses the <code>Reporting-Endpoints</code> header.</p>
 
-<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about [API migration](/reporting-api-migration) instead.</p>
+<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about [API migration](/reporting-api-migration/) instead.</p>
 
 <p>Are you looking for [Network Error Logging](/network-error-logging/) documentation? Head over to [Network Error logging] instead.</p>
 {% endAside %}
@@ -27,7 +27,7 @@ Some errors only occur in production. You won't see them locally or during
 development because **real users**, **real networks**, and **real devices**
 change the game. The Reporting API helps catch some of these errors&mdash;such
 as security violations or deprecated and soon-to-be-deprecated API
-calls&mdash;across your site, and transmits them to an endpoint you've
+calls across your site, and transmits them to an endpoint you've
 specified.
 
 It lets you declare what you'd like to monitor via HTTP headers, and is
@@ -768,27 +768,27 @@ the **Network** panel of your Developer Tools.
   `Queued` (it might jump to `Pending`, and then quickly back to `Queued` when a delivery attempt is
   made) in this case. Some common mistakes that may cause this:
 
-  - The endpoint is used but not configured. Example:
+- The endpoint is used but not configured. Example:
 
-    {% Compare 'worse', 'Code with a mistake' %}
+  {% Compare 'worse', 'Code with a mistake' %}
 
-    ```http
-    Document-Policy: document-write=?0;report-to=endpoint-1;
-    Reporting-Endpoints: default="https://reports.example/default"
-    ```
+  ```http
+  Document-Policy: document-write=?0;report-to=endpoint-1;
+  Reporting-Endpoints: default="https://reports.example/default"
+  ```
 
-    {% CompareCaption %}
+  {% CompareCaption %}
 
-    Document-Policy violation reports should be sent to `endpoint-1`, but this endpoint name isn't configured in
-    `Reporting-Endpoints`.
+  Document-Policy violation reports should be sent to `endpoint-1`, but this endpoint name isn't configured in
+  `Reporting-Endpoints`.
 
-    {% endCompareCaption %}
+  {% endCompareCaption %}
 
-    {% endCompare %}
+  {% endCompare %}
 
-  - The `default` endpoint is missing. Some reports types, such as deprecation and intervention
-    reports, will only be sent to the endpoint named `default`. Read more in [Configure the
-    Reporting-Endpoints header](#configure-the-reporting-endpoints-header).
+- The `default` endpoint is missing. Some reports types, such as deprecation and intervention
+  reports, will only be sent to the endpoint named `default`. Read more in [Configure the
+  Reporting-Endpoints header](#configure-the-reporting-endpoints-header).
 
 - Look for issues in your policy headers syntax, such as missing quotes. [See
   details](#configure-the-reporting-endpoints-header).
