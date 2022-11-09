@@ -41,15 +41,14 @@ Is your company looking for cross-site storage solutions that haven’t yet been
 
 The Shared Storage API intends to support many use cases, replacing several existing uses for third-party cookies. This may include:
 
-<table>
+<table class="with-heading-tint width-full">
+  <thead>
   <tr>
-   <td style="background-color: #1967d2">Use Case 
-   </td>
-   <td style="background-color: #1967d2">Description
-   </td>
-   <td style="background-color: #1967d2">Shared Storage API Output Gates
-   </td>
+   <th>Use case</th>
+   <th>Description</th>
+   <th>Output gate</th>
   </tr>
+  </thead>
   <tr>
    <td><strong><a href="/docs/privacy-sandbox/shared-storage/frequency-control/">Frequency Controls</a></strong>
    </td>
