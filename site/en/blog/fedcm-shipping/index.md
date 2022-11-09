@@ -71,7 +71,7 @@ further](#whats-next).
 
 
 Chrome has been
-[experimenting with FedCM since Chrome 101](/blog/fedcm-origin-trial/).
+[experimenting with FedCM since Chrome 101](/origintrials/#/register_trial/3977804370874990593).
 
 The
 [Google Identity Services](https://developers.google.com/identity/gsi/web/guides/overview)
