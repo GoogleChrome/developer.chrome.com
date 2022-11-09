@@ -14,7 +14,7 @@ date: 2022-11-09
 
 The Federated Credential Management API (FedCM) is shipping in Chrome 108 (currently on the Beta channel). When it ships in Chrome Stable at the end of November 2022, the FedCM API will work in Chrome without requiring a flag or an origin trial token.
 
-Check the final API changes in the [accumulated update page](https://developer.chrome.com/fedcm-updates).
+Check the final API changes in the [accumulated update page](/fedcm-updates).
 
 {% Aside %}
 
@@ -69,12 +69,12 @@ further](#heading=h.hd4vvssat3s0)).
 
 
 Chrome has been
-[experimenting with FedCM since Chrome 101](https://developer.chrome.com/blog/fedcm-origin-trial/).
+[experimenting with FedCM since Chrome 101](/blog/fedcm-origin-trial/).
 
 The
 [Google Identity Services](https://developers.google.com/identity/gsi/web/guides/overview)
 team participated in
-[the origin trial](https://developer.chrome.com/docs/web-platform/origin-trials/)
+[the origin trial](/docs/web-platform/origin-trials/)
 and demonstrated that switching to a more private and secure sign-in process
 that does not rely on third-party cookies can occur transparently through
 backward-compatible updates to their existing library. They enabled FedCM across
@@ -169,9 +169,9 @@ We are working to evaluate the best solution for these open questions:
 
 -   Try the [FedCM demo](https://fedcm-rp-demo.glitch.me/).
 -   If you are an IdP and interested to learn how to implement FedCM, read
-    [the developer guide](https://developer.chrome.com/docs/privacy-sandbox/fedcm/).
+    [the developer guide](/docs/privacy-sandbox/fedcm/).
     If you are a relying party, ask your IdP if they plan to implement FedCM.
 -   We've also accumulated FedCM API updates at the
-    [Federated Credential Management API updates](https://developer.chrome.com/docs/privacy-sandbox/fedcm-updates/).
+    [Federated Credential Management API updates](/docs/privacy-sandbox/fedcm-updates/).
 -   If you have feature requests, feedback or issues, file them against [the
     FedCM public repository on GitHub](https://github.com/fedidcg/FedCM/).
