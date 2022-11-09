@@ -43,7 +43,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 -   "IdP manifest" is now called "config file" in the document. No
     implementation changes are required.
 -   The `id_token_endpoint` in the "config file" is renamed to
-    [`id_assertion_endpoint`](https://fedidcg.github.io/FedCM/#dom-manifest-id_assertion_endpoint)`.
+    [`id_assertion_endpoint`](https://fedidcg.github.io/FedCM/#dom-manifest-id_assertion_endpoint).
 -   The requests to IdP now include a
     [`Sec-Fetch-Dest: webidentity`](https://fedidcg.github.io/FedCM/#sec-fetch-dest-header)`
     header instead of a `Sec-FedCM-CSRF: ?1` header.
