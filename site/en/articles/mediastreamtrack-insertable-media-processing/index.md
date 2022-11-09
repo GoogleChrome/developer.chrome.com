@@ -1,8 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Insertable streams for MediaStreamTrack
-subhead: The content of a `MediaStreamTrack` is exposed as a stream that can be manipulated or used to
-generate new content
+subhead: The content of a `MediaStreamTrack` is exposed as a stream that can be manipulated or used to generate new content
 date: 2021-05-04
 updated: 2021-10-18
 authors:
