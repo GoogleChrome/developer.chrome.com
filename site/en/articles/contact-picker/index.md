@@ -13,7 +13,7 @@ tags:
 hero: image/admin/K1IN7zWIjFLjZzJ4Us3J.jpg
 alt: Telephone on yellow background.
 feedback:
-- api
+  - api
 ---
 
 ## What is the Contact Picker API? {: #what }
