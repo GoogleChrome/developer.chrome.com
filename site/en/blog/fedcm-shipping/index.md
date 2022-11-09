@@ -93,7 +93,7 @@ Apple has indicated
 and is starting to participate in discussions at the [FedID
 CG](https://www.w3.org/community/fed-id/).
 
-## What's next
+## What's next {: #whats-next}
 
 We are working on landing a number of changes to FedCM.
 
