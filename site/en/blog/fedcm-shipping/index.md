@@ -23,8 +23,8 @@ If you are participating in the [FedCM origin trial](/origintrials/#/register_tr
 {% endAside %}
 
 
-Moving forward, we plan to introduce a number of new
-features based on the feedback we received from
+Moving forward, we plan to introduce [a number of new
+features](#whats-next) based on the feedback we received from
 identity providers (IdP), relying parties (RP) and browser vendors. While we
 hope identity providers will adopt FedCM, please be aware that FedCM is still an
 API under active development and that backward incompatible changes are expected
