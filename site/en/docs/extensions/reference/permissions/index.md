@@ -35,7 +35,7 @@ using the same format as the [permissions][2] field:
   "name": "My extension",
   ...
   "optional_permissions": ["tabs"],
-  "host_permissions": ["https://www.google.com/"],
+  "optional_host_permissions": ["https://www.google.com/"],
   ...
 }
 ```
