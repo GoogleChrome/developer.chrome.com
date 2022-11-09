@@ -238,11 +238,6 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
-maudnalpas:
-  title:
-    en: 'Maud Nalpas'
-  description:
-    en: 'Developer advocate at Google, working on Chrome privacy and security'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -549,7 +544,12 @@ maudn:
   title:
     en: 'Maud Nalpas'
   description:
-    en: 'Developer Advocate for Chrome and web'
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
+maudnalpas:
+  title:
+    en: 'Maud Nalpas'
+  description:
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
 beaufortfrancois:
   title:
     en: 'François Beaufort'
@@ -739,7 +739,7 @@ sofiayem:
   title:
     en: 'Sofia Emelianova'
   description:
-    en: "Technical Writer, Google Chrome"
+    en: 'Technical Writer, Google Chrome'
 kevinkiklee:
   title:
     en: 'Kevin K. Lee'
@@ -795,7 +795,7 @@ simonhearne:
   title:
     en: 'Simon Hearne'
   description:
-    en: "Simon is an independent web performance consultant"
+    en: 'Simon is an independent web performance consultant'
 jarhar:
   title:
     en: 'Joey Arhar'
@@ -1167,3 +1167,18 @@ samuelgoto:
     en: 'Sam Goto'
   description:
     en: 'Software Engineer on the Chrome team'
+zachmastromatto:
+  title:
+    en: Zach Mastromatto
+  description:
+    en: Privacy Sandbox Partnerships
+akashnadan:
+  title:
+    en: Akash Nadan
+  description:
+    en: Product Manager
+andreeacucu:
+  title:
+    en: Andreea Cucu
+  description:
+    en: Privacy Web Ecosystem Consultant
