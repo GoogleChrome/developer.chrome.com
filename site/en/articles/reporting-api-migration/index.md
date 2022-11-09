@@ -98,17 +98,17 @@ A new mechanism for Network Error Logging will be developed. Once that becomes a
 
 - The scope of the report is different.
 
-  {% Compare 'worse', 'v0 (legacy)' %}
+{% Compare 'worse', 'v0 (legacy)' %}
 
-  With v0, you can set reporting endpoints on some responses only. Other documents (pages) on that
-  origin would automatically use these ambient endpoints.
+With v0, you can set reporting endpoints on some responses only. Other documents (pages) on that
+origin would automatically use these ambient endpoints.
 
-  {% endCompare %}
+{% endCompare %}
 
-  {% Compare 'better', 'v1 (new)' %}
+{% Compare 'better', 'v1 (new)' %}
 
-  With v1, you need to set the `Reporting-Endpoints` header on all responses that might generate
-  reports. {% endCompare %}
+With v1, you need to set the `Reporting-Endpoints` header on all responses that might generate
+reports. {% endCompare %}
 
 - Both APIs support the same report types, with one exception: v1 does not support **Network Error reports**. Read more in the [migration steps](#migration-steps).
 - v0 is not and will not be supported across browsers. v1 is more likely to be supported across
