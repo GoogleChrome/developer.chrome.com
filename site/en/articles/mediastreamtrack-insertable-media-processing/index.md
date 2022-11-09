@@ -3,10 +3,10 @@ layout: 'layouts/blog-post.njk'
 title: Insertable streams for MediaStreamTrack
 subhead: The content of a `MediaStreamTrack` is exposed as a stream that can be manipulated or used to
 generate new content
-authors:
-  - thomassteiner
 date: 2021-05-04
 updated: 2021-10-18
+authors:
+- thomassteiner
 description: Insertable streams for MediaStreamTrack is about exposing the content of a MediaStreamTrack as a stream that can be manipulated or used to generate new content.
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/Qu2wfQ3pxR8AeEfty88S.jpg
 alt: Cup of coffee and a laptop with a video conference showing many participants.
