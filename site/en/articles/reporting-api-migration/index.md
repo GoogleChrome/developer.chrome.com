@@ -70,31 +70,31 @@ A new mechanism for Network Error Logging will be developed. Once that becomes a
 
 - The API surface is different.
 
-  {% Compare 'worse', 'v0 (legacy)' %}
+{% Compare 'worse', 'v0 (legacy)' %}
 
-  ```http
-  Report-To: { group: "main-endpoint", "max_age": 86400, "endpoints": [ { "url": ... }, { "url": ... }] }, { group: "default-endpoint", "max_age": 86400, "endpoints": [ { "url": ... }, { "url": ... }] }
-  Document-Policy: ...; report-to main-endpoint
-  ```
+```http
+ Report-To: { group: "main-endpoint", "max_age": 86400, "endpoints": [ { "url": ... }, { "url": ... }] }, { group: "default-endpoint", "max_age": 86400, "endpoints": [ { "url": ... }, { "url": ... }] }
+ Document-Policy: ...; report-to main-endpoint
+ ```
 
-  {% CompareCaption %}
-  v0 uses the `Report-To` header to configure **named endpoint groups**, and the `report-to` directive in other headers to reference these endpoint groups.
-  {% endCompareCaption %}
+{% CompareCaption %}
+{0 uses the `Report-To` header to configure **named endpoint groups**, and the `report-to` directive in other headers to reference these endpoint groups.
+{% endCompareCaption %}
 
-  {% endCompare %}
+{% endCompare %}
 
-  {% Compare 'better', 'v1 (new)' %}
+{% Compare 'better', 'v1 (new)' %}
 
-  ```http
-  Reporting-Endpoints: main-endpoint="https://reports.example/main", default="https://reports.example/default"
-  Document-Policy: ...; report-to main-endpoint
-  ```
+```http
+ Reporting-Endpoints: main-endpoint="https://reports.example/main", default="https://reports.example/default"
+ Document-Policy: ...; report-to main-endpoint
+ ```
 
-  {% CompareCaption %}
-  v1 uses the `Reporting-Endpoints` header to configure **named
-  endpoints**. Like v0, it uses the `report-to` directive in other headers to reference these endpoint groups.
-  {% endCompareCaption %}
-  {% endCompare %}
+{% CompareCaption %}
+v1 uses the `Reporting-Endpoints` header to configure **named
+endpoints**. Like v0, it uses the `report-to` directive in other headers to reference these endpoint groups.
+{% endCompareCaption %}
+{% endCompare %}
 
 - The scope of the report is different.
 
