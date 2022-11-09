@@ -96,7 +96,7 @@ const { token } = credential;
     [`disclosure_text_shown`](https://fedidcg.github.io/FedCM/#dom-id_assertion_endpoint_request-disclosure_text_shown).
     The value is unchanged.
 -   branding icons in
-    [the IdP manifest](/docs/privacy-sandbox/fedcm-updates/#manifest-endpoints)
+    [the IdP manifest](/docs/privacy-sandbox/fedcm-updates/#idp-config-file)
     have stopped supporting SVG images, but no longer need to be allowed by the
     RP's
     [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP).
