@@ -83,7 +83,7 @@ const credential = await navigator.credentials.get({
     providers: [{
       configURL: 'https://idp.example/anything.json',
       clientId: '********',
-          nonce: '******'
+      nonce: '******'
     }]
   }
 });
