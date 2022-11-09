@@ -410,5 +410,3 @@ and
 ## Acknowledgements
 
 See the [original explainer document](https://github.com/WICG/urlpattern/blob/main/explainer.md#references--acknowledgements) for a full list of acknowledgements.
-
-The thumbnail image for this post is by <a href="https://unsplash.com/@megindoors?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vic</a> on <a href="https://unsplash.com/s/photos/route-66?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
