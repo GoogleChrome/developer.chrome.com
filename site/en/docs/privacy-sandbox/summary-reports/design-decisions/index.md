@@ -19,7 +19,7 @@ tags:
 
 ## About this document
 
-Readers will:
+When you read this article, you will:
 
 - Understand what to strategize on before running a summary reports origin trial.
 - Be introduced to [Noise Lab](#quick-tour), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
@@ -77,8 +77,6 @@ lead to a slightly different implementation—thus these decisions must be taken
 {% Aside %}
 New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#quick-tour).
 {% endAside %}
-
-**Try it out:**
 
 1. Go to **Advanced** mode.
 2. In the **Parameters** side panel, look for **Your conversion data**.
@@ -144,8 +142,6 @@ In the **Simple** mode, the default key structure is used. In the **Advanced**
 mode, you can experiment with different key structures. Some example dimensions
 are included; you can also modify these.
 
-**Try it out:**
-
 1.  Go to **Advanced** mode.
 2.  In the **Parameters** side panel, look for **Key strategy**. Observe
     that the default strategy, named **A** in the tool, uses one granular key
@@ -208,8 +204,6 @@ management](#key-management-advanced).
 New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#quick-tour).
 {% endAside %}
 
-**Try it out:**
-
 1.  Go to the **Simple** mode (or **Advanced** mode — both modes work the
     same way when it comes to batching frequency)
 2.  In the **Parameters** side panel, look for **Your aggregation strategy** > **Batching frequency**. This refers to the batching frequency of
@@ -258,7 +252,6 @@ addition to seasonality effects, try and estimate the number of daily
 single-touch attributable conversions to the closest power of 10: 10, 100,
 1,000, or 10,000.
 
-**Try it out:**
 
 1. Go to **Advanced** mode.
 1. In the **Parameters** side panel, look for **Your conversion data**.
@@ -317,7 +310,6 @@ Things to consider:
 New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#quick-tour).
 {% endAside %}
 
-**Try it out:**
 
 1.  Go to **Advanced** mode.
 1.  In the **Parameters** side panel, look for **Your aggregation strategy** > **Scaling**. It's set to **Yes** by default.
@@ -362,7 +354,6 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 
 A measurement goal is a distinct data point collected in conversion events.
 
-**Try it out:**
 
 1. Go to **Advanced** mode.
 1. In the **Parameters** side panel, look for **Data you want to track:
@@ -412,7 +403,10 @@ If you measure one data point (measurement goal) on a conversion event, such as
 conversion count, that data point can get all the contribution budget (65536). If you set multiple measurement goals on a conversion event,
 such as conversion count and purchase value, then those data points will need to
 share the contribution budget. This means you have less leeway to scale up your
-values. **Therefore, the more measurement goals you have, the lower signal-to-noise ratios are likely to be (higher noise)**.
+values. 
+
+**Therefore, the more measurement goals you have, the lower signal-to-noise ratios
+are likely to be (higher noise)**.
 
 Another decision to make regarding measurement goals is the budget split. If you split the contribution budget equally across two data points, each data point gets a
 budget of 65536/2 = 32768. This may or may not be optimal depending on the
@@ -420,7 +414,7 @@ maximum possible value for each data point. For example, if you're measuring
 purchase count that has a maximum value of 1, and purchase value with a
 minimum of 1 and a maximum of 120, the purchase value would benefit from having
 "more space" to be scaled up—that is, to be given a larger proportion of the
-contribution budget. **See if some measurement goals need to be prioritized over
+contribution budget. **You'll see if some measurement goals should be prioritized over
 others in relation to the impact of noise.**
 
 ### Decision: Outlier management {: #outlier-management}
@@ -439,7 +433,6 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 
 A measurement goal is a distinct data point collected in conversion events.
 
-**Try it out:**
 
 1.  Go to **Advanced** mode.
 1.  In the **Parameters** side panel, look for **Your aggregation strategy** > **Scaling**.
@@ -539,7 +532,7 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
   and click **Simulate** to see how they impact the output:
 
 <figure>
-{% Img src="image/EvKqfXr4ercavLaApW41d8uGXN72/8o20EoPwoN2fxoNHPg82.jpg", alt="Screenshot: Noise Lab interface for Simple mode", width="800", height="450" %}
+{% Img src="image/EvKqfXr4ercavLaApW41d8uGXN72/8o20EoPwoN2fxoNHPg82.jpg", alt="Noise Lab interface for Simple mode", width="800", height="450" %}
   <figcaption>
     Noise Lab interface for Simple mode.
   </figcaption>
@@ -562,14 +555,22 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
   - Click **Simulate** to see the output.
 
 <figure>
-{% Img src="image/EvKqfXr4ercavLaApW41d8uGXN72/5qH8KUvKhhW4vbUbNzbT.jpg", alt="Screenshot: Noise Lab interface for Advanced mode", width="800", height="450" %}
+{% Img
+  src="image/EvKqfXr4ercavLaApW41d8uGXN72/5qH8KUvKhhW4vbUbNzbT.jpg",
+  alt="Advanced mode offers controls for measurement goals and dimensions to track, highlighted in the sidebar.",
+  width="800", height="450"
+%}
   <figcaption>
     Noise Lab interface for Advanced mode.
   </figcaption>
 </figure>
 
 <figure>
-{% Img src="image/EvKqfXr4ercavLaApW41d8uGXN72/DfUCCLzvay9SgExqUMc0.jpg", alt="Screenshot: Noise Lab interface for Advanced mode", width="800", height="450" %}
+{% Img
+  src="image/EvKqfXr4ercavLaApW41d8uGXN72/DfUCCLzvay9SgExqUMc0.jpg",
+  alt="Advanced mode also a Key strategy option in the Parameters section of the sidebar.",
+  width="800", height="450"
+%}
   <figcaption>
     Noise Lab interface for Advanced mode.
   </figcaption>
