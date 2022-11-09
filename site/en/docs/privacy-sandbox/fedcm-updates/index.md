@@ -45,7 +45,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 -   The `id_token_endpoint` in the "config file" is renamed to
     [`id_assertion_endpoint`](https://fedidcg.github.io/FedCM/#dom-manifest-id_assertion_endpoint).
 -   The requests to IdP now include a
-    [`Sec-Fetch-Dest: webidentity`](https://fedidcg.github.io/FedCM/#sec-fetch-dest-header)`
+    [`Sec-Fetch-Dest: webidentity`](https://fedidcg.github.io/FedCM/#sec-fetch-dest-header)
     header instead of a `Sec-FedCM-CSRF: ?1` header.
 
 **Chrome 105 (August 2022)**
