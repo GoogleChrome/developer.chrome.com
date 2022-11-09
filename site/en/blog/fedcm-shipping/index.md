@@ -22,7 +22,6 @@ in Chrome Stable at the end of November 2022, the FedCM API will work in Chrome 
 
 Check the final API changes in [the accumulated update page](https://docs.google.com/document/u/0/d/1jmFge4GOoiR8UcHbJIfEzV7gusVv8OfHsh3wK0VvfvY/edit?resourcekey=0-UQ748omNCkSI3_xR4p11SQ).
 
-
 {% Aside %} If you are participating in the [FedCM origin trial](/origintrials/#/register_trial/3977804370874990593),
 please note that the trial is scheduled to end on November 22nd, which is slightly earlier than Chrome 108 ships. {% endAside %}
 
