@@ -7,8 +7,6 @@ authors:
 date: 2021-07-22
 updated: 2021-09-07
 description: An approach to standardizing common pattern matching use cases.
-thumbnail: image/FNkVSAX8UDTTQWQkKftSgGe9clO2/YWhOUaN06kzk4mu93a1v.jpg
-alt: ''
 ---
 
 ## Background
