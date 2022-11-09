@@ -21,7 +21,7 @@ To experiment with user demographic measurement with Shared Storage and Private 
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",
-	alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs",
+	alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs.",
 	width="744", height="124"
 %}
 
@@ -39,6 +39,7 @@ for the given use cases. These are not meant to be used in production.
 You may want to measure certain demographics of the users who have seen your content across different sites, for example age range or geographical location. In this example, the content ID, age group ID, and the geography ID dimensions are encoded into the aggregation key (bucket), and the count is used as the aggregatable value. The summary report generated will provide information such as "Approximately 391 users who have seen the content ID 123 are between the age of 18-39 and are from Europe."
 
 In this example:
+
 * `demographic-measurement.js` is loaded via a frame, and is responsible for loading the shared storage worklet.
 * `demographic-measurement-worklet.js` is the shared storage worklet that reads the demographics data in shared storage and sends a report via the Private Aggregation API.
 
