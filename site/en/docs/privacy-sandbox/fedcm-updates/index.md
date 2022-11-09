@@ -20,7 +20,7 @@ These updates are for you if:
 
 -   You are an IdP using the Federated Credential Management API—for
     example,
-    [you have run an origin trial](https://developer.chrome.com/blog/fedcm-origin-trial/).
+    [you have run an origin trial](/blog/fedcm-origin-trial/).
 -   You are an IdP or RP and interested in extending the API to fit your use
     case – e.g. you've been observing or participating in
     [the discussions on the FedID CG repository](https://github.com/fedidcg/FedCM/issues)
@@ -29,7 +29,7 @@ These updates are for you if:
     status of the API.
 
 If you're new to this API or have not experimented with it yet, read the
-[introduction to the Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/).
+[introduction to the Federated Credential Management API](/docs/privacy-sandbox/fedcm/).
 
 ## Changelog
 
@@ -99,7 +99,7 @@ const { token } = credential;
     [the IdP manifest](/docs/privacy-sandbox/fedcm-updates/#manifest-endpoints)
     have stopped supporting SVG images, but no longer need to be allowed by the
     RP's
-    [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
+    [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP).
 
 **Chrome 103 (May 2022)**
 
