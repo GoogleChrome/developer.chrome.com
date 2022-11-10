@@ -666,7 +666,7 @@ Data][docs-dpp-limited-use] policy for additional information.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to `the user what data is being collected and how it will be handled. This
+- Prominently disclose to the user what data is being collected and how it will be handled. This
   information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
     - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
