@@ -13,6 +13,7 @@ The "extension pages" policy applies to page and worker contexts in the extensio
 ## Default Policy
 
 If the [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) is not defined by the user in the manifest, the default properties will be used for both extension pages and sandboxed extension pages.   
+
 These defaults are equivalent to specifying the following policies in your manifest:
 
 ```json
