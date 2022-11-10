@@ -107,12 +107,32 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Search in anonymous and content scripts**
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically reveal files in sidebar**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically reveal files in sidebar** selects files on the **Sources** > **Page** pane when you switch between tabs in the **Editor**.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQ2BduTutmhTREwULIqY.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps** lets DevTools find sources of generated or minified JavaScript files. This option does the following:
+
+- Works only if source maps are present.
+- The **Sources** panel shows the source files under the **Authored** drop-down in the navigation tree.
+- The **Sources** panel also puts a link to the generated or minified file in the status bar.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** makes the Tab key move focus inside DevTools instead of inserting a Tab character in the **Editor**. Requires to reload DevTools.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/sKSYoqCLFlVCXTVEMYln.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocompletion**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bracket matching**
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocompletion** enables handy suggestions in the **Editor**.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z4KyM0L8km8dvZ8dXbNW.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bracket matching** highlights and underlines in red in the **Editor** a square bracket, curly bracket, or parenthesis without a pair.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Pb1iDVxwwgudmhHAjRLq.png", alt="A curly bracket without a pair underlined with red.", width="800", height="480" %}
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Code folding**
 
 <fieldset>
@@ -126,10 +146,24 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 </fieldset>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Display variable values inline while debugging**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Display variable values inline while debugging** shows you the variable values next to assignment statements while the execution is paused.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x4Q1Jeo4eATAFMF1rRB3.png", alt="The Debugger paused during function execution displays variable values next to assignment statements.", width="800", height="471" %}
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Focus Sources panel when triggering a breakpoint**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS sources maps**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow scrolling past end of line**
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`. This option does the following:
+
+- Works only if source maps are present.
+- The **Sources** panel shows `.scss` files under the **Authored** section of the navigation tree.
+- The **Elements** > **Styles** pane shows links to sources next to CSS rules applied to an element.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W3OaNvTptDewtDK9uP5S.png", alt="The Sources panel shows .scss files in the Authored section of the navigation tree. The Styles pane in the Elements panel shows links to .scss sources next to CSS rules.", width="800", height="627" %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow scrolling past end of file** lets you scroll further than the last line in the **Editor**.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/xYbfk6alu2SelsyENVa3.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from Windows Shares via UNC paths**
 
 <fieldset>
