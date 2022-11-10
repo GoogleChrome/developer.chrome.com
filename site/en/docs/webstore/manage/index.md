@@ -122,7 +122,7 @@ Users will be able to communicate with you using the **Support** tab of your sto
 Having a Support section on your extension's Chrome Web Store page allows users to easily report issues and suggest new features separately from leaving a review. To enable user feedback on your extension, the Visibility option (located in the Support tab area) must be switched on.   
 The Support Visibility option switch is located in the Chrome Web Store Developer Dashboard, in the Support Tab section of Account Options.
 
-{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/3h8A6IglCHjMN4uncopz.png", alt="Support Visibility option", width="800", height="239" %}
+{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/3h8A6IglCHjMN4uncopz.png", alt="Visibility option", width="800", height="239" %}
 
 In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
