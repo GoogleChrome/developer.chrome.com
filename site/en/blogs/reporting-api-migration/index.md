@@ -16,9 +16,9 @@ tags:
 
 {% Aside 'caution' %} This post covers how to migrate to the new version of the Reporting
 API (v1). If you're new to the Reporting API or need detailed usage examples, head over to the [main
-post on the Reporting API](/reporting-api) instead. {% endAside %}
+post on the Reporting API](articles/reporting-api) instead. {% endAside %}
 
-The [Reporting API](/reporting-api) informs you about errors that happen across your site as visitors use it. It gives
+The [Reporting API](articles/reporting-api) informs you about errors that happen across your site as visitors use it. It gives
 you visibility on browser interventions, browser crashes, Content-Security-Policy violations,
 COOP/COEP violations, deprecation warnings and more.
 
@@ -121,7 +121,7 @@ reports. {% endCompare %}
   `application/reports+json`.
 - Mapping certain endpoints to certain report types is supported in both v0 and v1.
 - The role of the `default` endpoint is unchanged.
-- The Reporting API v1 has no impact on the [`ReportingObserver`](/reporting-observer).
+- The Reporting API v1 has no impact on the [`ReportingObserver`](https://web.dev/reporting-observer).
   `ReportingObserver` continues getting access to all observable reports, and their format is
   identical.
 
@@ -169,7 +169,7 @@ All differences between v0 and v1
             <li>Content-Security-Policy Level 3 (CSP Level 3)</li>
             <li>Network Error Logging (NEL)</li>
           </ul>
-          <sub>Learn more about the report types in the <a href="/reporting-api">Reporting API post</a>.</sub>
+          <sub>Learn more about the report types in the <a href="/articles/reporting-api">Reporting API post</a>.</sub>
         </td>
         <td>Unchanged, except from <strong>Network Error Logging (NEL): this is not supported in the new Reporting API (v1)</strong>.</td>
       </tr>
@@ -473,7 +473,7 @@ visitors have upgraded to 96+ browser versions, remove `Report-To`.
 
 ## Further reading
 
-- [Monitor your web application with the Reporting API](/reporting-api) (main post on the Reporting API)
+- [Monitor your web application with the Reporting API](/articles/reporting-api) (main post on the Reporting API)
 - [Specification: legacy Reporting API (v0)](https://www.w3.org/TR/reporting/)
 - [Specification: new Reporting API (v1)](https://w3c.github.io/reporting/)
 

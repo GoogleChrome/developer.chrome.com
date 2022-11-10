@@ -166,7 +166,7 @@ that happen throughout your site:
 {% Aside 'caution' %}
 [Network Error Logging](https://w3c.github.io/network-error-logging/) isn't listed because it isn't
 supported in the new version of the API. Check the [migration
-guide](/reporting-api-migration/#network-error-logging) for details.
+guide](/blogs/reporting-api-migration/#network-error-logging) for details.
 {% endAside %}
 
 <div>
@@ -315,7 +315,7 @@ example, whether a given user’s account is triggering errors consistently, or 
 of actions taken on other pages is triggering a report on this page.
 
 {% Aside %}
-[Cross-origin](/same-site-same-origin/#same-origin-and-cross-origin) endpoints
+[Cross-origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin) endpoints
 don't receive credentials. This is a security measure and can't be changed.
 {% endAside %}
 
@@ -372,7 +372,7 @@ sent to your endpoint: the formers will, the latters won't.
 The table below sums up browser support for the **Reporting API v1**, that is with the
 `Reporting-Endpoints` header. Browser support for the Reporting API v0 (`Report-To` header) is the
 same, except for one report type: Network Error Logging isn't supported in the new Reporting API.
-Read the [migration guide](/reporting-api-migration/#network-error-logging) for details.
+Read the [migration guide](/blogs/reporting-api-migration/#network-error-logging) for details.
 
 <div>
   <table>
