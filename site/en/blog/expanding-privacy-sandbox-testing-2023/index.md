@@ -1,5 +1,5 @@
 ---
-title: Expanding Privacy Sandbox testing into 2023
+title: Expanding Privacy Sandbox for the Web testing into 2023
 description: >
   Testing takes time. We’re taking a deliberate approach to testing the Privacy
   Sandbox for the web. We made the APIs available for functional testing through
@@ -24,7 +24,7 @@ for their next exam, success often comes down to rigorous testing and
 preparation.
 
 This is why we're taking a deliberate approach to testing the Privacy Sandbox
-for the wWeb. We began by researching user preferences and trends, legal
+for the Web. We began by researching user preferences and trends, legal
 requirements, and ecosystem dependencies. We also met with industry participants
 to understand their use cases and with regulators to hear their perspectives.
 This year, we made Privacy Sandbox technologies available for functional testing
