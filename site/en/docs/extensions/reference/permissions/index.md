@@ -40,8 +40,7 @@ using the same format as the [permissions][2] field:
 }
 ```
 
-If you want to request hosts that you only discover at runtime, include `"https://*/"` in your
-in your Manifest V3 extension's `host_permissions` field (or `optional_permissions` for Manifest
+If you want to request hosts that you only discover at runtime, include `"https://*/"` in your Manifest V3 extension's `optional_host_permissions` field (or `optional_permissions` for Manifest
 V2). This lets you specify any origin in [Permissions.origins][3] as long as it has a matching
 scheme.
 
