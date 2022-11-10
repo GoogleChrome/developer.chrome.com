@@ -29,7 +29,7 @@ Watch the video to see these tips in action or read on for highlights.
 
 - Press <kbd>Escape</kbd> to open or close the **Drawer**.
 
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7qVeHmolnGaM71A07iap.png", alt="The Drawer", width="800", height="485" %}
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7qVeHmolnGaM71A07iap.png", alt="The Drawer.", width="800", height="485" %}
 
 - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="More Tools.", width="24", height="24" %} **More Tools** to open other **Drawer**
 tabs.
