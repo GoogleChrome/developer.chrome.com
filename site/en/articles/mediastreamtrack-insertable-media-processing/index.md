@@ -40,6 +40,10 @@ traditional methods requires developers to use intermediaries such as `<canvas>`
 details of this type of process, see, for example,
 [video + canvas = magic](https://html5doctor.com/video-canvas-magic/).)
 
+## Browser support 
+
+Insertable streams for `MediaStreamTrack` is supported from Chrome 94.
+
 ## Use cases
 
 Use cases for insertable streams for `MediaStreamTrack` include, but are not limited to:
