@@ -62,4 +62,4 @@ The default content security policy for sandbox pages is as follows:
 ...
 ```
 
-The default policy for sandboxed pages is much more lenient than with extension pages, as the sandbox page does not have access to extension APIs, or direct access to non-sandboxed pages. The sandbox content security policy can only be further restricted from its default state.
+The default policy for sandboxed pages is much more lenient than with extension pages, as the sandbox page does not have access to extension APIs, or direct access to non-sandboxed pages. The sandbox content security policy can be customized as desired.
