@@ -2,16 +2,16 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
+{# ### Chrome 108 {: #chrome108 }
 
 * [Hints for inactive CSS properties](/es/blog/new-in-devtools-108/#css-hint)
 * [Auto-detect XPath and text selectors in the Recorder panel](/es/blog/new-in-devtools-108/#recorder)
 * [Step through comma-separated expressions](/es/blog/new-in-devtools-108/#debugging)
 * [Improved Ignore list setting](/es/blog/new-in-devtools-108/#ignore-list)
 * [Miscellaneous highlights](/es/blog/new-in-devtools-108/#misc)
- -->
+ #}
 
 ### Chrome 107 {: #chrome107 }
 
@@ -78,7 +78,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
 * [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps) -->
+* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
@@ -125,7 +125,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Muestra los archivos de fuente de Worker en el panel de Fuentes](/es/blog/new-in-devtools-99/#worker-sourcemap)
 * [Actualizaciones del modo oscuro automático de Chrome](/es/blog/new-in-devtools-99/#auto-dark-mode)
 * [Selector de color y panel de división en modo táctil](/es/blog/new-in-devtools-99/#touch-friendly)
-* [Destacados varios](/es/blog/new-in-devtools-99/#misc) -->
+* [Destacados varios](/es/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }
@@ -157,7 +157,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 ### Chrome 96 {: #chrome96 }
 
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
-<!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
+{# * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) #}
 * [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
 * [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)
