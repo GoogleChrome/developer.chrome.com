@@ -48,8 +48,11 @@ Chrome enforces a minimum content security policy for extension pages. It is equ
 ...
 ```
 
-Developers can then add further restrictions as needed, such as disabling WebAssembly, and adding specific security policies to only allow scripts and objects from certain domains and subdomains.  
-enable potentially unsafe practices such as the use of eval() to run code.
+The `extension_pages` policy cannot be relaxed beyond this minimum value. In other words, developers cannot add the `'unsafe-eval'` expression to the `script-src` directive in order to call `eval()` in extension page or worker contexts. Attempting to load an extension with such a CSP will cause Chrome to throw the following error at install time:
+
+```
+'content_security_policy.extension_pages': Insecure CSP value "'unsafe-eval'" in directive 'script-src'.
+```
 ### Sandbox Pages Policy
 
 The default content security policy for sandbox pages is as follows:
