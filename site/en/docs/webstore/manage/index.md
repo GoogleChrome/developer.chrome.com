@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2021-10-05
+updated: 2022-11-02
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -119,9 +119,10 @@ Users will be able to communicate with you using the **Support** tab of your sto
 
 ### Using the User Support tab {: #user-support-tab }
 
-First, you must enable user feedback in the developer console Account setting page.
+Having a Support section on your extension's Chrome Web Store page allows users to easily report issues and suggest new features separately from leaving a review. To enable user feedback on your extension, the Visibility option (located in the Support tab area) must be switched on.   
+The Support Visibility option switch is located in the Chrome Web Store Developer Dashboard, in the Support Tab section of Account Options.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/7K825tSAz4wbXJpjGYj2.png", alt="Visibility option", width="800", height="239" %}
 
 In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
