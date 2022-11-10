@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-10-11
+updated: 2022-11-08
 
 # Optional
 # How to add a new author
@@ -42,6 +42,20 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202210
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/DmTmMHll7_o)
+
+Publication date
+ : November 8, 2022
+
+What's new
+ : - In this release we have further broken down our "rank" popularity. Previously these were in groupings of log 10 (i.e. top 1,000 sites, top 10,000, top 100,000 sites, … up to top 100 million sites). From this release these are provided in half-rank steps (i.e. top 1,000 sites, top 5,000 sites, top 10,000, top 50,000 sites, top 100,000 sites, top 500,000 sites… up to top 100 million sites). The top rank (1,000) will not be altered with this change (i.e. we are not providing a top 500 rank).
+
+Notable stats
+ : - 17,637,195 origins
+ : - 41.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
 
 ## 202209
 

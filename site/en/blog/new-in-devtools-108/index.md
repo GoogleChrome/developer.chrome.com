@@ -38,7 +38,7 @@ The **Recorder** panel now supports XPath and text selectors. [Start recording a
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/7441acfff5d9dfd373742797d2db46a809c9df67 #}
 
-Chromium issues: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.com/1327209)
+Chromium issues: [1327206](https://crbug.com/1327206),[1327209](https://crbug.com/1327209)
 
 
 ## Step through comma-separated expressions {: #debugging }

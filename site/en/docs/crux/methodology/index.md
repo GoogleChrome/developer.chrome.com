@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-15
+updated: 2022-11-08
 
 # Optional
 # How to add a new author
@@ -333,7 +333,7 @@ Interaction to Next Paint (INP) was added to the CrUX dataset in [February 2022]
 
 #### Popularity {: #popularity-metric}
 
-The [popularity rank](/blog/crux-rank-magnitude/) metric is a relative measure of site popularity within the CrUX dataset, measured by the total number of navigations on the origin. Rank is on a log10 scale (e.g. top 1k, 10k, 100k, 1M, etc.) with each rank excluding the previous (e.g. top 10k is actually 9k URLs, excluding top 1k). The upper limit is dynamic as the dataset grows.
+The [popularity rank](/blog/crux-rank-magnitude/) metric is a relative measure of site popularity within the CrUX dataset, measured by the total number of navigations on the origin. Rank is on a log10 scale with half steps (e.g. top 1k, top 5k, top 10k, top 50k, top 100k, top 500k, top 1M, etc.) with each rank excluding the previous (e.g. top 5k is actually 4k URLs, excluding top 1k). The upper limit is dynamic as the dataset grows.
 
 Popularity is provided as a guide for broad analysis, e.g. to determine performance by country for the top 1,000 origins.
 

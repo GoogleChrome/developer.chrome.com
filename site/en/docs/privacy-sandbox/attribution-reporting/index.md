@@ -117,8 +117,8 @@ At the time of this writing, you can try Attribution Reporting:
     </tr>
     <tr>
     <tr>
-    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md">Explainer</a></td>
-    <td>Proposal, not implemented yet.</td>
+    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md">Explainer</a></td>
+    <td>Not planned for the first version of the API.</td>
     </tr>
 </tbody>
 </table>
@@ -190,12 +190,8 @@ conversion data is too coarse)—is an area of active research.
 
 ### Other features
 
-Other features proposed in this API include:
-
-- [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
-  see or click an ad in an app and convert on the web.
-- [Cross-device attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md):
-  see or click an ad on mobile and convert on desktop.
+Other features proposed include [app-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
+see or click an ad in an app and convert on the web.
 
 {% Aside %}
 In a future without third-party cookies, this API would be combined with other privacy-preserving

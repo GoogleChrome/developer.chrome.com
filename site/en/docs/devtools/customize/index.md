@@ -34,10 +34,10 @@ Press <kbd>Escape</kbd> to open or close the Drawer.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7qVeHmolnGaM71A07iap.png", alt="The Drawer", width="800", height="485" %}
 
-Click **More** {% Img src="image/admin/412azsDzeKPM2HQ6p5Rr.png", alt="More", width="6", height="26" %} to open other Drawer
+Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="More Tools.", width="24", height="24" %} **More Tools** to open other **Drawer**
 tabs.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CUmjkDySI6MMzgEjukxi.png", alt="The button for opening Drawer tabs.", width="800", height="485" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CUmjkDySI6MMzgEjukxi.png", alt="The More Tools button that opens other Drawer tabs.", width="800", height="485" %}
 
 
 ## Reorder panels, tabs, and panes {: #reorder }

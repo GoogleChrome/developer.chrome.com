@@ -139,14 +139,14 @@ extension and Chrome Web store documentation:
 [doc-apis]: /docs/extensions/reference/
 [doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts/
-[doc-cws-policy]: /docs/webstore/program_policies/
+[doc-cws-policy]: /docs/webstore/program-policies/
 [doc-cws-publish]: /docs/webstore/publish/
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-overview]: /docs/extensions/mv3/devguide
 [doc-ext-pages]: /docs/extensions/mv3/architecture-overview/#html-files
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-options]: /docs/extensions/mv3/options/
-[doc-policy-sp]: /docs/webstore/program_policies/#single-purpose
+[doc-policy-sp]: /docs/webstore/program-policies/#single-purpose
 [doc-popup]: /docs/extensions/mv3/user_interface/#popup
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/

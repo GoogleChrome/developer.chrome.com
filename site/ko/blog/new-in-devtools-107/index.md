@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: '키보드 단축키 커스터마이징, 메모리 인스펙터에서 C/C++ 객체 하이라이팅 등'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PBk8j2ojs57qI4RIKTCX.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yDRjqPiA7WSfo7ED5rOS.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -19,7 +19,7 @@ tags:
 
 {% YouTube id='1uwv6HbR8HU' %}
 
-## DevTools에서 키보드 단축키 커스터마이징 {: #shortcuts }
+## DevTools 에서 키보드 단축키 커스터마이징 {: #shortcuts }
 
 DevTools 에서 선호하는 명령어에 대한 키보드 단축키를 커스터마이징할 수 있습니다.
 

@@ -14,29 +14,29 @@
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-108/#misc)
  -->
 
-<!-- ### Chrome 107 {: #chrome107 }
+### Chrome 107 {: #chrome107 }
 
-* [Customize keyboard shortcuts in DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
-* [Toggle light and dark themes with keyboard shortcut](/ru/blog/new-in-devtools-107/#toggle-themes)
-* [Highlight C/C++ objects in the Memory Inspector](/ru/blog/new-in-devtools-107/#memory)
-* [Support full initiator information for HAR import](/ru/blog/new-in-devtools-107/#har)
-* [Start DOM search after pressing `Enter`](/ru/blog/new-in-devtools-107/#search-type)
-* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/ru/blog/new-in-devtools-107/#flexbox)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-107/#misc)
- -->
+* [Кастомизация сочетаний клавиш в DevTools](/ru/blog/new-in-devtools-107/#shortcuts)
+* [Переключение между светлой и тёмной темами по сочетанию клавиш](/ru/blog/new-in-devtools-107/#toggle-themes)
+* [Подсветка объектов C/C++ в Инспекторе памяти (Memory Inspector)](/ru/blog/new-in-devtools-107/#memory)
+* [Поддержка полной информации об инициаторе для импорта HAR](/ru/blog/new-in-devtools-107/#har)
+* [Начало поиска по DOM по нажатию по <kbd>Enter</kbd>](/ru/blog/new-in-devtools-107/#search-type)
+* [Отображение иконок `start` и `end` для свойства флексбокса `align-content`](/ru/blog/new-in-devtools-107/#flexbox)
+* [Другие важные моменты](/ru/blog/new-in-devtools-107/#misc)
 
-<!-- ### Chrome 106 {: #chrome106 }
 
-* [Group files by Authored / Deployed in the Sources panel](/ru/blog/new-in-devtools-106/#authored)
-* [Linked stack traces for asynchronous operations](/ru/blog/new-in-devtools-106/#async)
-* [Automatically ignore known third-party scripts](/ru/blog/new-in-devtools-106/#auto-ignore)
-* [Improved call stack during debugging](/ru/blog/new-in-devtools-106/#call-stack)
-* [Hiding ignore-listed sources in the Sources panel](/ru/blog/new-in-devtools-106/#ignore-nav)
-* [Hiding ignore-listed files in the Command Menu](/ru/blog/new-in-devtools-106/#ignore-search)
-* [New Interactions track in the Performance panel](/ru/blog/new-in-devtools-106/#performance)
-* [LCP timings breakdown in the Performance Insights panel](/ru/blog/new-in-devtools-106/#insights)
-* [Auto-generate default name for recordings in the Recorder panel](/ru/blog/new-in-devtools-106/#recorder)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-106/#misc) -->
+### Chrome 106 {: #chrome106 }
+
+* [Группировка по авторским и развёрнутым файлам во вкладке Источники (Sources)](/ru/blog/new-in-devtools-106/#authored)
+* [Связанные трассировки стека для асинхронных операций](/ru/blog/new-in-devtools-106/#async)
+* [Автоматическое игнорирование известных сторонних скриптов](/ru/blog/new-in-devtools-106/#auto-ignore)
+* [Улучшен стек вызовов во время отладки](/ru/blog/new-in-devtools-106/#call-stack)
+* [Скрытие источников из списка игнорируемых во вкладке Источники (Sources)](/ru/blog/new-in-devtools-106/#ignore-nav)
+* [Скрытие игнорируемых файлов из Меню Команд (Command Menu)](/ru/blog/new-in-devtools-106/#ignore-search)
+* [Новый трек Взаимодействия (Interactions) во вкладке Производительность (Performance)](/ru/blog/new-in-devtools-106/#performance)
+* [Разбивка по времени LCP во вкладке Performance Insights](/ru/blog/new-in-devtools-106/#insights)
+* [Автоматическая генерация стандартного имени для записи во вкладке Recorder](/ru/blog/new-in-devtools-106/#recorder)
+* [Другие важные моменты](/ru/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }

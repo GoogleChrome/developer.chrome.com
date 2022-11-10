@@ -15,6 +15,10 @@ const entrypoints = [
     src: './site/_scss/events-main.scss',
     dest: './dist/css/events-main.css',
   },
+  {
+    src: './site/_scss/styleguide-main.scss',
+    dest: './dist/css/styleguide-main.css',
+  },
 ];
 
 // Flags whether we generate sourcemaps

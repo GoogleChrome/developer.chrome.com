@@ -238,11 +238,6 @@ johannes:
     en: 'Johannes Henkel'
   description:
     en: 'Software Engineer working on the Chrome User Experience Report at Google.'
-maudnalpas:
-  title:
-    en: 'Maud Nalpas'
-  description:
-    en: 'Developer advocate at Google, working on Chrome privacy and security'
 emilaeklund:
   title:
     en: 'Emil Eklund'
@@ -368,6 +363,11 @@ afuchs:
     en: 'Andy Fuchs'
   description:
     en: 'Technical Writer, Chrome Extensions'
+patrickbrosset:
+  title:
+    en: 'Patrick Brosset'
+  description:
+    en: 'Our latest news, updates, and stories by Patrick Brosset'
 dotproto:
   title:
     en: 'Simeon Vincent'
@@ -544,7 +544,12 @@ maudn:
   title:
     en: 'Maud Nalpas'
   description:
-    en: 'Developer Advocate for Chrome and web'
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
+maudnalpas:
+  title:
+    en: 'Maud Nalpas'
+  description:
+    en: 'Developer Relations Engineer for security/privacy, Chrome and web'
 beaufortfrancois:
   title:
     en: 'François Beaufort'
@@ -734,7 +739,7 @@ sofiayem:
   title:
     en: 'Sofia Emelianova'
   description:
-    en: "Technical Writer, Google Chrome"
+    en: 'Technical Writer, Google Chrome'
 kevinkiklee:
   title:
     en: 'Kevin K. Lee'
@@ -790,7 +795,7 @@ simonhearne:
   title:
     en: 'Simon Hearne'
   description:
-    en: "Simon is an independent web performance consultant"
+    en: 'Simon is an independent web performance consultant'
 jarhar:
   title:
     en: 'Joey Arhar'
@@ -1147,3 +1152,38 @@ chrisdavidmills:
     en: 'Chris Mills'
   description:
     en: 'Independent tech writer specializing in web platform docs.'
+leeronisrael:
+  title:
+    en: 'Leeron Israel'
+  description:
+    en: 'Product Manager, Privacy Sandbox'
+joeytrotz:
+  title:
+    en: 'Joey Trotz'
+  description:
+    en: 'Director of Product Management, Privacy Sandbox'
+samuelgoto:
+  title:
+    en: 'Sam Goto'
+  description:
+    en: 'Software Engineer on the Chrome team'
+zachmastromatto:
+  title:
+    en: Zach Mastromatto
+  description:
+    en: Privacy Sandbox Partnerships
+akashnadan:
+  title:
+    en: Akash Nadan
+  description:
+    en: Product Manager
+andreeacucu:
+  title:
+    en: Andreea Cucu
+  description:
+    en: Privacy Web Ecosystem Consultant
+adamsilverstein:
+  title:
+    en: 'Adam Silverstein'
+  description:
+    en: 'Developer Relations Engineer at Google'

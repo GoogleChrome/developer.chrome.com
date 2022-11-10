@@ -36,6 +36,9 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+- from: /blog/fedcm-origin-trial
+  to: /docs/privacy-sandbox/fedcm
+
 # FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
 # redirect destination will be ignored
 - from: /docs/extensions/mv3/manifest/content_security_policy
@@ -61,6 +64,12 @@ redirects:
 
 - from: /blog/wasm-debugging-2020/
   to: /blog/wasm-debugging/
+
+- from: /docs/privacy-sandbox/fledge-best-practices/
+  to: /docs/privacy-sandbox/fledge/latency/
+
+- from: /blog/fledge-api/
+  to: /docs/privacy-sandbox/fledge-api/
 
 - from: /docs/privacy-sandbox/attribution-reporting-introduction/
   to: /docs/privacy-sandbox/attribution-reporting/
@@ -349,7 +358,10 @@ redirects:
   to: /docs/webstore/one_time_payments/
 
 - from: /webstore/intl/en/program_policies
-  to: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
+
+- from: /docs/webstore/program_policies/
+  to: /docs/webstore/program-policies/
 
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
@@ -464,6 +476,46 @@ redirects:
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
+
+# Renaming of Pop-up API attribute from popup to popover
+- from: /docs/web-platform/popup-api/
+  to: /docs/web-platform/pop-up-api/
+
+- from: /docs/web-platform/popup-api/hidepopup-method/
+  to: /docs/web-platform/pop-up-api/hidepopover-method/
+
+- from: /docs/web-platform/popup-api/showpopup-method/
+  to: /docs/web-platform/pop-up-api/showpopover-method/
+
+- from: /docs/web-platform/popup-api/popup-attribute/
+  to: /docs/web-platform/pop-up-api/popover-attribute/
+
+- from: /docs/web-platform/popup-api/popup-property/
+  to: /docs/web-platform/pop-up-api/popover-property/
+
+- from: /docs/web-platform/popup-api/popuphide-event/
+  to: /docs/web-platform/pop-up-api/popoverhide-event/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-attribute/
+  to: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuphidetarget-property/
+  to: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+
+- from: /docs/web-platform/popup-api/popupshow-event/
+  to: /docs/web-platform/pop-up-api/popovershow-event/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-attribute/
+  to: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+
+- from: /docs/web-platform/popup-api/popupshowtarget-property/
+  to: /docs/web-platform/pop-up-api/popovershowtarget-property/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
+  to: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+
+- from: /docs/web-platform/popup-api/popuptoggletarget-property/
+  to: /docs/web-platform/pop-up-api/popovertoggletarget-property/
 
 # Generic
 
