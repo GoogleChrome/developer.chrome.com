@@ -4,9 +4,7 @@ title: User-Agent の情報量削減
 subhead: |2-
 
   ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
-description: |2
-
-  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
+description: ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
 date: '2021-11-09'
 updated: '2022-07-28'
 authors:
@@ -93,7 +91,7 @@ Critical-CH: Device-Memory
 
 要約すると、`Accept-CH` はページにあると望ましいすべての値をリクエストするのに対し、 `Critical-CH` はページを適切に読み込むために必要不可欠な一部の値のみをリクエストします。詳しくは、[Client Hints の信頼性に関する仕様](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md) をご覧ください。
 
-## How do I prepare for reduced UA? {: #prepare-and-test}
+## UA の情報量削減への準備方法 {: #prepare-and-test}
 
 Stable 版 Chrome で情報量削減後の User-Agent が大規模に利用可能になるのに合わせて、User-Agent 文字列のインスタンスや使用に関係する [サイトのコードをご確認ください](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data) 。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、 [UA-CH API の実装](https://web.dev/migrate-to-ua-ch/)が必要になります。
 
@@ -101,19 +99,19 @@ UA-CH API に更新したら、User-Agent から想定どおりのデータが�
 
 情報量削減後の User-Agent が大規模に利用可能になるのは、完全に情報量が削減された UA 文字列がすべての Chrome デバイスで提供されるようになるときです。この情報量削減は、2022 年第 2 四半期の Chrome のマイナー リリースで開始される予定です。
 
-### Test the string locally {: #test-locally}
+### 文字列をローカル環境でテストする {: #test-locally}
 
 情報量削減後の User-Agent をローカルでテストするには、次の方法を使用します。
 
 -  `chrome://flags/#reduce-user-agent`  フラグを有効化する
     - これにより、ローカルのブラウザがすべてのサイトから情報量削減後の`user-agent` 文字列のみを受信するよう（それがデフォルトの設定になる前に）設定できます。
-- Configure an emulated device in DevTools with the right `user-agent` string and client hints.
+- DevTools で正しい `user-agent` 文字列と Client Hints を使ってエミュレートされたデバイスを設定する
     - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="28", height="28" %} &gt; **設定 **&gt;**&nbsp;[デバイス] **&gt;**&nbsp;[カスタム デバイスを追加] **をクリックし、必要な  `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
     - DevTools 画面の左上で {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/eLRsSnxmkhz0yKsXTjxD.png", alt="ALT_TEXT_HERE", width="30", height="32" %} **T [デバイスのツールバーを切り替え]** をクリックして DevTools の UI を開き、デバイスをエミュレートします。
 - Chrome を `「--user-agent="（ここにカスタム文字列を記述）"」` 付きで起動する
     - この[コマンドラインフラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) を使用して、カスタム User-Agent 文字列を付けて Chrome を起動します。
 
-### Transform the string in your site's code
+### サイト上のコードで文字列を変換する
 
 既存の Chrome の `user-agent` 文字列をクライアントサイドまたはサーバーサイドのコードで処理している場合、その文字列を新しい形式に変換することで互換性をテストできます。オーバーライドと置き換えによりテストすることも、新しいバージョンを作成して並列にテストすることもできます。
 
@@ -125,29 +123,29 @@ UA-CH API に更新したら、User-Agent から想定どおりのデータが�
 
 他のウェブサイトに埋め込まれるコンテンツ（つまり、サードパーティのコンテンツ）を作成している場合は、[サードパーティのオリジントライアル](/blog/third-party-origin-trials/) に参加して複数のサイトにわたってこの変更をテストできます。Chrome オリジン トライアルに登録する際に「サードパーティ マッチング」のオプションを選択すると、サイトがサードパーティに埋め込まれるときにスクリプトを挿入できます。
 
-## Support for Client Hints and critical hints
+## Client Hints と Critical Hints のサポート
 
-There are three [default Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data) returned to the server, including browser name and major version, a boolean which indicates if the browser is on a mobile device, and the operating system name. These are sent after the TLS handshake. These are already available and supported in your browser.
+サーバーに返される[デフォルトの Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data) は 3 つあります。これには、ブラウザー名とメジャー バージョン、ブラウザーがモバイル デバイス上にあるかどうかを示すブール値、およびオペレーティング システム名が含まれます。これらは TLS ハンドシェイクの後に送信されます。これらは既に利用可能で、ブラウザでサポートされています。
 
-However, there may be some times when you need to retrieve critical information for your site to render.
+ただし、サイトをレンダリングするために重要な情報を取得する必要がある場合があります。
 
-### Optimize critical hints
+### Critical Hints を最適化する
 
 {% Aside 'warning' %}
 
-Using critical hints should be rare, so make sure you've reviewed the reason for implementation. The question to ask yourself is, do you require extended data on the initial page load? Will your page fail to load without this information?
+Critical Hints を使用することはめったにないはずなので、実装の理由を確認してください。考えるべきなのは、最初のページ読み込みで拡張データが必要かどうかです。この情報がないとページの読み込みに失敗しますか?
 
 {% endAside %}
 
-A Transport Layer Security protocol (TLS) handshake is the first step to create a secure connection between the browser and web server. Without an intervention, the [Critical-CH response header](https://www.ietf.org/archive/id/draft-davidben-http-client-hint-reliability-03.html#name-the-critical-ch-response-he) was designed to tell the browser to immediately retry the request if the first one was sent without a critical hint.
+Transport Layer Security プロトコル (TLS) ハンドシェイクは、ブラウザーと Web サーバー間の安全な接続を確立するための最初のステップです。 [Critical-CH レスポンス ヘッダー](https://www.ietf.org/archive/id/draft-davidben-http-client-hint-reliability-03.html#name-the-critical-ch-response-he)は、最初のリクエストが Critical Hints なしで送信された場合、ブラウザにリクエストをすぐに再試行するように指示するように設計されています。
 
-<figure>   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Ce0SL7g881Kjoa0VyhUc.png", alt="Sequence diagram for Client Hints with critical hints", width="800", height="939" %}   <figcaption>When a critical hint is requested by the server, the client will retry sending the first request for the webpage with the critical hint. In this example, the hint for <code>Sec-CH-UA-Model</code> is requested twice: once as a Client Hint with <code>Accept-CH</code> and again as a critical hint with <code>Critical-CH</code>.</figcaption> </figure>
+<figure>{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/Ce0SL7g881Kjoa0VyhUc.png", alt="Critical Hints を含む Client Hints のシーケンス図", width="800", height="939" %}<figcaption>サーバーから重要なヒントが要求されると、クライアントは重要なヒントを含む Web ページの最初のリクエストの送信を再試行します。この例では、 <code>Sec-CH-UA-Model</code>のヒントが 2 回リクエストされます。1 回目は<code>Accept-CH</code>を使用した Client Hints として、2 回目は<code>Critical-CH</code>を使用した Critical Hints としてリクエストされます。</figcaption></figure>
 
-To optimize critical hints ([`Critical-CH` header](https://groups.google.com/a/chromium.org/g/blink-dev/c/zPYGbULXn7o/m/q3OJ2kZAAQAJ)), you must intercept this handshake and provide a model for Client Hints. These steps may be complex, and require advanced knowledge.
+Critical Hints ( [`Critical-CH`ヘッダー](https://groups.google.com/a/chromium.org/g/blink-dev/c/zPYGbULXn7o/m/q3OJ2kZAAQAJ)) を最適化するには、このハンドシェイクをインターセプトし、Client Hints のモデルを提供する必要があります。これらの手順は複雑な場合があり、高度な知識が必要です。
 
-The [`ACCEPT_CH` HTTP/2 and HTTP/3 frames](https://datatracker.ietf.org/doc/html/draft-davidben-http-client-hint-reliability-02#section-4), combined with the [TLS ALPS extension](https://github.com/vasilvv/tls-alps), are a connection-level optimization to deliver the server’s Client Hint preferences in time for the first HTTP request. These require complex configuration, and we recommend only using this for truly critical information. BoringSSL (a fork of OpenSSL) helps you work with Google’s experimental features in Chromium. At this time, ALPS is only [implemented in BoringSSL](https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Application-layer-protocol-settings).
+[`ACCEPT_CH` HTTP/2 および HTTP/3 フレーム](https://datatracker.ietf.org/doc/html/draft-davidben-http-client-hint-reliability-02#section-4)は、 [TLS ALPS 拡張機能](https://github.com/vasilvv/tls-alps)と組み合わせて、最初の HTTP リクエストに間に合うようにサーバーの Client Hints 設定を配信するための接続レベルの最適化です。これらには複雑な構成が必要なため、本当に重要な情報にのみ使用することをお勧めします。 BoringSSL (OpenSSL のフォーク) は、Chromium で Google の実験的な機能を操作するのに役立ちます。現時点では、ALPS は[BoringSSL にのみ実装されています](https://commondatastorage.googleapis.com/chromium-boringssl-docs/ssl.h.html#Application-layer-protocol-settings)。
 
-If you need to use critical hints, refer to our guide on [critical hints reliability and optimization](https://docs.google.com/document/d/1HQd3vosjFls2jp6DwpkNMUN4CBdmmxZJJz0WhhcqOPw/edit?usp=sharing).
+Critical Hints を使用する必要がある場合は、 [Critical Hints の信頼性と最適化](https://docs.google.com/document/d/1HQd3vosjFls2jp6DwpkNMUN4CBdmmxZJJz0WhhcqOPw/edit?usp=sharing)に関するガイドを参照してください。
 
 ## 意見交換とフィードバックの提供
 
