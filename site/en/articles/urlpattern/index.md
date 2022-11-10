@@ -19,6 +19,7 @@ maps a path to files on disk, or logic in a single-page app that waits for
 changes to the current location and creates a corresponding piece of DOM to
 display.
 
+
 While there is no one definitive standard, web developers have gravitated
 towards a common syntax for expressing URL routing patterns that share a lot in
 common with
@@ -44,6 +45,26 @@ and returning information about the token and group matches.
 Another benefit to providing URL matching directly in the web platform is that a
 common syntax can then be shared with [other APIs](#future-features) that also
 need to match against URLs.
+
+## Browser support and polyfills
+
+`URLPattern` is enabled by default in Chrome and Edge version 95 and above.
+
+The
+<code>[urlpattern-polyfill](https://github.com/kenchris/urlpattern-polyfill)</code>
+library provides a way to use the <code>URLPattern</code> interface in browsers
+or environments like [Node](https://nodejs.org/) which lack built-in support. If
+you use the polyfill, make sure that you use feature detection to ensure that
+you're only loading it if the current environment lacks support. Otherwise,
+you'll lose one of the key benefits of <code>URLPattern</code>: the fact that
+support environments don't have to download and parse additional code in order
+to use it.
+
+```js
+if (!(globalThis && 'URLPattern' in globalThis)) {
+  // URLPattern is not available, so the polyfill is needed.
+}
+```
 
 ## Syntax compatibility
 
@@ -350,26 +371,6 @@ id: 'urlpattern-sw-routing',
 path: 'service-worker.js',
 previewSize: 35
 } %}
-
-## Browser support and polyfills
-
-`URLPattern` is enabled by default in Chrome and Edge version 95 and above.
-
-The
-<code>[urlpattern-polyfill](https://github.com/kenchris/urlpattern-polyfill)</code>
-library provides a way to use the <code>URLPattern</code> interface in browsers
-or environments like [Node](https://nodejs.org/) which lack built-in support. If
-you use the polyfill, make sure that you use feature detection to ensure that
-you're only loading it if the current environment lacks support. Otherwise,
-you'll lose one of the key benefits of <code>URLPattern</code>: the fact that
-support environments don't have to download and parse additional code in order
-to use it.
-
-```js
-if (!(globalThis && 'URLPattern' in globalThis)) {
-  // URLPattern is not available, so the polyfill is needed.
-}
-```
 
 ## Feedback and future plans
 
