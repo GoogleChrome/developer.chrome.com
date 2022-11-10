@@ -18,7 +18,7 @@ Supported values for this key are:
 * `2`: Use the [Manifest V2][mv2] format and associated feature set.
 
 The current version is Manifest V3. The Chrome Web Store no longer accepts manifest V2 extensions
-(see [Manifest V2 support timeline[mv2-timeline] for more details). There will be other manifest
+(see [Manifest V2 support timeline][mv2-timeline] for more details). There will be other manifest
 versions in the future (V4 and beyond), but these aren't scheduled yet.
 
 [mv3]: /docs/extensions/mv3/intro/mv3-overview/
