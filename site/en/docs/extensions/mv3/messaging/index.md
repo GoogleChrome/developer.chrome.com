@@ -350,4 +350,4 @@ directory.
 [40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
 [41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples
-[43]; /docs/extensions/mv3/manifest/externally_connectable
+[43]: /docs/extensions/mv3/manifest/externally_connectable
