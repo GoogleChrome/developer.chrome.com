@@ -52,7 +52,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 </fieldset>
 
-The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and **Sources** > **Debugger** pane.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane.
 
 <fieldset>
    <legend>Panel layout:</legend>
