@@ -144,13 +144,30 @@ To apply this setting, reload DevTools.
 
 ### Sources
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Search in anonymous and content scripts**
+{% Details %}
 
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Search in anonymous and content scripts**
+{% endDetailsSummary %}
+
+
+{% endDetails %}
+
+
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically reveal files in sidebar** selects files on the **Sources** > **Page** pane when you switch between tabs in the **Editor**.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQ2BduTutmhTREwULIqY.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps** lets DevTools find sources of generated or minified JavaScript files.
+{% endDetailsSummary %}
 
 {% Aside 'gotchas' %}
 - This option works only if the source maps are available.
@@ -159,16 +176,30 @@ To apply this setting, reload DevTools.
 {% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** makes the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key move focus inside DevTools instead of inserting a Tab character in the **Editor**. Requires to reload DevTools.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** makes the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key move focus inside DevTools instead of inserting a Tab character in the **Editor**.
+{% endDetailsSummary %}
+
+Requires to reload DevTools.
 
 {% Aside 'gotchas' %}
 This setting makes {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation** inactive because the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key doesn't insert characters in this case.
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/sKSYoqCLFlVCXTVEMYln.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** sets the indentation to the one in the source file opened in the **Editor**. Requires to reload DevTools.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** sets indentation to the one in the source file opened in the **Editor**.
+{% endDetailsSummary %}
+
+Requires to reload DevTools.
 
 {% Aside 'gotchas' %}
 This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation**. In the video below, the default indentation is set to eight spaces, while the detected indentation in the file is two spaces.
@@ -177,22 +208,46 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 {% endAside %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/8ygLiSj7HNZUMo6dzvcL.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocompletion** enables handy suggestions in the **Editor**.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z4KyM0L8km8dvZ8dXbNW.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bracket matching** underlines and highlights in <span style="background-color: rgb(255 0 0 / 10%);">light red</span> in the **Editor** a square bracket, curly bracket, or parenthesis without a pair.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Pb1iDVxwwgudmhHAjRLq.png", alt="A curly bracket without a pair underlined with red.", width="800", height="480" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Code folding** lets you fold and unfold code blocks in curly brackets in the **Editor**. Requires to reload DevTools.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Code folding** lets you fold and unfold code blocks in curly brackets in the **Editor**.
+{% endDetailsSummary %}
+
+Requires to reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kHPWexKmutMWp3LcUq70.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Show whitespace characters** requires to reload DevTools and provides options for displaying whitespace characters in the **Editor**:
+{% Details %}
 
-- **All** denotes all whitespace characters as dots (`...`). Additionally, The **Editor** denotes the <kbd>Tab</kbd> character as a line (`—`).
+{% DetailsSummary %}
+**Show whitespace characters** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} displays whitespace characters in the **Editor**.
+{% endDetailsSummary %}
+
+Requires to reload DevTools. Options do the following:
+
+- **All** denotes all whitespace characters as dots (`...`). Additionally, the **Editor** denotes the <kbd>Tab</kbd> character as a line (`—`).
 - **Trailing** highlights whitespace characters at the end of lines in <span style="background-color: rgb(255 0 0 / 10%);">light red</span>.
 
 <fieldset>
@@ -205,16 +260,31 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 - <span style="background-color: rgb(255 0 0 / 10%);">Trailing</span>
 
 </fieldset>
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Display variable values inline while debugging** shows you the variable values next to assignment statements while the execution is paused.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x4Q1Jeo4eATAFMF1rRB3.png", alt="The Debugger paused during function execution displays variable values next to assignment statements.", width="800", height="471" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Focus Sources panel when triggering a breakpoint** opens **Sources** > **Editor** on the line with the breakpoint that paused execution.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Focus Sources panel when triggering a breakpoint** opens **Sources** > **Editor** at the line with the breakpoint that paused execution.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/glzqVP8HXvfLtazD7SAb.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`, and show them to you.
+{% endDetailsSummary %}
 
 {% Aside 'gotchas' %}
 - This option works only if the source maps are available.
@@ -223,14 +293,31 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 {% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W3OaNvTptDewtDK9uP5S.png", alt="The Sources panel shows .scss files in the Authored section of the navigation tree. The Styles pane in the Elements panel shows links to .scss sources next to CSS rules.", width="800", height="627" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow scrolling past end of file** lets you scroll further than the last line in the **Editor**.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/xYbfk6alu2SelsyENVa3.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from Windows Shares via UNC paths**
+{% endDetailsSummary %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation** lets you set the characters to insert with the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key in the **Editor**.
+
+{% endDetails %}
+
+{% Details %}
+
+{% DetailsSummary %}
+**Default indentation** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} lets you choose the number of spaces the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key inserts in the **Editor**.
+{% endDetailsSummary %}
 
 {% Aside 'gotchas' %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** overrides this setting and sets indentation to the that of the source file. Requires to reaload DevTools.
@@ -251,7 +338,7 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 - Tab character
 
 </fieldset>
-
+{% endDetails %}
 
 ### Elements
 
