@@ -42,7 +42,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 {% Details %}
 
 {% DetailsSummary 'h4'%}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Themes** sets a color theme for DevTools UI.
+**Themes** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets a color theme for DevTools UI.
 {% endDetailsSummary %}
 
 <fieldset>
@@ -60,7 +60,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 {% Details %}
 
 {% DetailsSummary 'h4' %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Panel layout** arranges panes on panels.
+**Panel layout** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} arranges panes on panels.
 {% endDetailsSummary %}
 
 Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane. The **auto** option depends on DevTools width.
@@ -80,7 +80,7 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 {% Details %}
 
 {% DetailsSummary 'h4' %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Color format** sets the format of CSS color values in **Elements** > **Styles**.
+**Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
 {% endDetailsSummary %}
 
 <fieldset>
@@ -99,7 +99,7 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 {% Details %}
 
 {% DetailsSummary 'h3' %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Language** sets the locale for DevTools UI.
+**Language** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the locale for DevTools UI.
 {% endDetailsSummary %}
 
 To apply this setting, reload DevTools.
