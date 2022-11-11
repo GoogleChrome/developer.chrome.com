@@ -14,7 +14,7 @@ more about [**migrating your app**][2].
 
 {% endAside %}
 
-Used by [packaged apps][3] to specify URL patterns the app wants to intercept and handle. An app can
+Used by [packaged apps](/apps/app_lifecycle) to specify URL patterns the app wants to intercept and handle. An app can
 define multiple URL handlers under this manifest entry, each having an identifier, a URL pattern,
 and a title. Here's an example of how to specify `url_handlers`:
 
