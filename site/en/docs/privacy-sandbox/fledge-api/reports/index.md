@@ -25,8 +25,8 @@ Not a developer? Refer to the [FLEDGE API overview](/docs/privacy-sandbox/fledge
 
 There are two available FLEDGE reports:
 
-* Seller report: Informs the seller of the ad auction winner.
-* Buyer report: Available to winning buyers only, to learn that they've won an auction.
+* **Seller report**: Informs the seller of the ad auction winner.
+* **Buyer report**: Available to winning buyers only, to learn that they've won an auction.
 
 The long-term plan is to allow the browser to report auction results for the
 seller and buyers with the [Private Aggregation API APIs](/docs/privacy-sandbox/private-aggregation).
@@ -40,7 +40,9 @@ event-level information to be reported.
 
 ### Seller: `reportResult()` 
 
-**Explainer section:** [Seller Reporting on Render](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#51-seller-reporting-on-render).
+{% Aside %}
+**Read the FLEDGE explainer**:  [Seller reporting on Render](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#51-seller-reporting-on-render).
+{% endAside %}
 
 The seller's JavaScript provided in `decisionLogicUrl` (which also provides
 `scoreAd()`) can include a `reportResult()` function, to report the auction
@@ -79,7 +81,9 @@ the winning bidder's `reportWin()` function.
 
 ### Buyer: `reportWin()`
 
-**Explainer section:** [Buyer Reporting on Render and Ad Events](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#52-buyer-reporting-on-render-and-ad-events)
+{% Aside %}
+ **Read the FLEDGE explainer**: [Buyer reporting on render and ad events](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#52-buyer-reporting-on-render-and-ad-events).
+{% endAside %}
 
 The winning bidder's JavaScript (which also provided `generateBid()`) can
 include a `reportWin()` function to report the auction outcome.
@@ -124,7 +128,6 @@ For example:
   'bid': <bidValue>
 }
 ```
-
 
 ## Temporary reporting implementation {: #temporary-reporting}
 
