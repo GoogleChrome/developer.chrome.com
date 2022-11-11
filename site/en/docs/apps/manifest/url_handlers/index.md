@@ -62,4 +62,4 @@ action that the app performs when launched with this type of URL handler.
 [2]: /apps/migration
 [3]:/docs/apps/app_lifecycle#eventpage
 [4]: https://chrome.google.com/webstore
-[5]: /docs/apps/app_runtime#event-onLaunched
+[5]: /docs/apps/app_lifecycle/#create_event_page
