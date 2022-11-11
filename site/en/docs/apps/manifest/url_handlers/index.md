@@ -60,6 +60,6 @@ action that the app performs when launched with this type of URL handler.
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
-[3]: ../app_lifecycle#eventpage
+[3]: /apps/app_lifecycle#eventpage
 [4]: https://chrome.google.com/webstore
 [5]: ../app_runtime#event-onLaunched
