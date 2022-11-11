@@ -253,7 +253,7 @@ For example, to completely disable use of the Topics API within all browsing con
 
 ### Can Topics API be used with on websites with `prebid.js`?
 
-As noted in the release of the [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
+As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
 the community is actively developing an integration with the Topics API via a new module. 
 However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
 development, we recommend the following:
