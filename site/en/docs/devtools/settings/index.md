@@ -119,7 +119,7 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** makes the Tab key move focus inside DevTools instead of inserting a Tab character in the **Editor**. Requires to reload DevTools.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** makes the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key move focus inside DevTools instead of inserting a Tab character in the **Editor**. Requires to reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/sKSYoqCLFlVCXTVEMYln.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
@@ -129,7 +129,7 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z4KyM0L8km8dvZ8dXbNW.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bracket matching** highlights and underlines in red in the **Editor** a square bracket, curly bracket, or parenthesis without a pair.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bracket matching** underlines and highlights in <span style="background-color: rgb(255 0 0 / 10%);">light red</span> in the **Editor** a square bracket, curly bracket, or parenthesis without a pair.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Pb1iDVxwwgudmhHAjRLq.png", alt="A curly bracket without a pair underlined with red.", width="800", height="480" %}
 
@@ -137,14 +137,19 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kHPWexKmutMWp3LcUq70.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
+The **Show whitespace characters** drop-down list requires to reload DevTools and provides options for displaying whitespace characters in the **Editor**:
+
+- **All** denotes all whitespace characters as dots (`...`). Additionally, The **Editor** denotes the <kbd>Tab</kbd> character as a line (`—`).
+- **Trailing** highlights whitespace characters at the end of lines in <span style="background-color: rgb(255 0 0 / 10%);">light red</span>.
+
 <fieldset>
    <legend>Show whitespace characters:</legend>
 
-
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9fwpKgKO8BjWqtCfsFQK.png", alt="Options selected: All and Trailing.", width="500", height="450", style="float:right;" %}
 
 - None
-- All
-- Trailing
+- All (`...`)
+- <span style="background-color: rgb(255 0 0 / 10%);">Trailing</span>
 
 </fieldset>
 
@@ -170,10 +175,20 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from Windows Shares via UNC paths**
 
+The **Default indentation** drop-down list lets you set the characters to insert with the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key in the **Editor**.
+
+{% Aside 'gotchas' %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** overrides this setting and sets indentation to the that of the source file. Requires to reaload DevTools.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** overrides the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key. It moves focus instead of inserting characters.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Show whitespace characters: All** lets you to see whitespace characters as dots (`...`) and tabs as lines (`—`).
+{% endAside %}
+
 <fieldset>
-   <legend>Default Indentation:</legend>
+   <legend>Default indentation:</legend>
 
-
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MGVhZwyQduSG0YHI5Zz9.gif", alt="Disabling overriding options and changing default indentation from two spaces to eitght, then to the Tab key.", width="450", height="350", style="float:right;", class="screenshot" %}
 
 - 2 spaces
 - 4 spaces
@@ -181,6 +196,7 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 - Tab character
 
 </fieldset>
+
 
 ### Elements
 
