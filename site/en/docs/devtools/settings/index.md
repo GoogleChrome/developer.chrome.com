@@ -111,11 +111,13 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/eQ2BduTutmhTREwULIqY.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps** lets DevTools find sources of generated or minified JavaScript files. This option does the following:
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps** lets DevTools find sources of generated or minified JavaScript files.
 
-- Works only if source maps are present.
+{% Aside 'gotchas' %}
+- This option works only if the source maps are available.
 - The **Sources** panel shows the source files under the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Authored** drop-down in the navigation tree.
 - The **Sources** panel also puts a link to the generated or minified file in the status bar.
+{% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
 
@@ -173,11 +175,13 @@ This setting overrides {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgN
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/glzqVP8HXvfLtazD7SAb.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`. This option does the following:
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`.
 
-- Works only if source maps are present.
+{% Aside 'gotchas' %}
+- This option works only if the source maps are available.
 - The **Sources** panel shows `.scss` files under the **Authored** section of the navigation tree.
 - The **Elements** > **Styles** pane shows links to sources next to CSS rules applied to an element.
+{% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/W3OaNvTptDewtDK9uP5S.png", alt="The Sources panel shows .scss files in the Authored section of the navigation tree. The Styles pane in the Elements panel shows links to .scss sources next to CSS rules.", width="800", height="627" %}
 
@@ -326,19 +330,11 @@ Most of the following options are the same as in [Console Settings](/docs/devtoo
 
 ### Global
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups**
-
-{% Aside 'gotchas' %}
-If enabled, DevTools opens for all links open a new tab. That is, all links with `target=_blank`.
-{% endAside %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups** makes DevTools open for all links open a new tab. That is, all links with `target=_blank`.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search)
-
-{% Aside 'gotchas' %}
-If disabled, DevTools won't "jump" to the first search result as you type your search query. Instead, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
-{% endAside %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search) makes DevTools "jump" to the first search result as you type your search query. If disabled, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
@@ -520,7 +516,7 @@ The **Shortcuts** tab lists default shortcuts you can use while focused in DevTo
 For a full list of default shortcuts, see [Keyboard shortcuts](/docs/devtools/shortcuts/).
 
 {% Aside 'gotchas' %}
-You can use the Visual Studio Code alternatives to default shortcuts. Select `Visual Studio Code` from the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Shortcuts** > **Match shortcuts from preset** drop-down list.
+You can use the Visual Studio Code alternatives to default shortcuts. Select `Visual Studio Code` from {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Shortcuts** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Match shortcuts from preset**.
 {% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bi4B0or5wylM4jit6DfD.png", alt="Visual Studio Code shortcut alternatives.", width="800", height="416" %}
