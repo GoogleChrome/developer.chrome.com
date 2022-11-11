@@ -21,7 +21,10 @@
     - url: /docs/privacy-sandbox/first-party-sets
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/fenced-frame
-    - url: /docs/privacy-sandbox/fedcm
+    - title: i18n.docs.privacy-sandbox.cross-site-federation
+      sections:
+        - url: /docs/privacy-sandbox/fedcm
+        - url: /docs/privacy-sandbox/fedcm-updates
     - title: i18n.docs.privacy-sandbox.control-browser-features
       sections:
         - url: /docs/privacy-sandbox/permissions-policy
