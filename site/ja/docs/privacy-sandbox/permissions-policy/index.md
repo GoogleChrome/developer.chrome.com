@@ -81,7 +81,7 @@ Permissions-Policy: geolocation=(self "https://trusted-site.example")
 
 1. 自分のサイト `https://your-site.example` は、ユーザーの同意を得て位置情報機能を使用することが許可されています。
 1. 同一オリジンの iframe（`https://your-site.example`）は、`allow` 属性を使用せずにこの機能を使用できます。
-1. オリジンリストには追加されていないが、iframe タグに allow 属性が設定されている、別のサブドメイン（`https://subdomain.your-site-example`）から配信される iframe は、この機能の使用をブロックされています。 異なるサブドメインは同一サイトであってもクロスオリジンとは見なされます。
+1. オリジンリストには追加されていないが、iframe タグに allow 属性が設定されている、別のサブドメイン（`https://subdomain.your-site-example`）から配信される iframe は、この機能の使用をブロックされています。 異なるサブドメインは同一サイトであってもクロスオリジンと見なされます。
 1. オリジンリストに追加されており、iframe タグに `allow` 属性が設定されているクロスオリジン iframe（`https://trusted-site.example`）は、この機能を使用できます。
 1. オリジンリストに追加されたクロスオリジン iframe（`https://trusted-site.example`）は、`allow` 属性ないため、この機能の使用をブロックされています。
 1. オリジンリストに追加されていないクロスオリジン iframe（`https://ad.example`）は、`allow` 属性が iframe に含まれていてる場合でも、この機能の使用をブロックされています。
