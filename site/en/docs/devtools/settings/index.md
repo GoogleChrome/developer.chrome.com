@@ -39,7 +39,11 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 ### Appearance
 
+{% Details %}
+
+{% DetailsSummary 'h4'%}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Themes** sets a color theme for DevTools UI.
+{% endDetailsSummary %}
 
 <fieldset>
    <legend>Themes:</legend>
@@ -51,8 +55,15 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 - Dark
 
 </fieldset>
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Panel layout** arranges panes on panels. Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane.
+{% Details %}
+
+{% DetailsSummary 'h4' %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Panel layout** arranges panes on panels.
+{% endDetailsSummary %}
+
+Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane. The **auto** option depends on DevTools width.
 
 <fieldset>
    <legend>Panel layout:</legend>
@@ -61,11 +72,16 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 - horizontal
 - vertical
-- auto (depends on DevTools width)
+- auto
 
 </fieldset>
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Color format** sets the format of CSS color values in **Elements** > **Styles** and [Color Picker](/docs/devtools/css/reference/#color-picker).
+{% Details %}
+
+{% DetailsSummary 'h4' %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Color format** sets the format of CSS color values in **Elements** > **Styles**.
+{% endDetailsSummary %}
 
 <fieldset>
    <legend>Color format:</legend>
@@ -78,8 +94,15 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 - HSL: hsl(300deg 80% 90%)
 
 </fieldset>
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Language** sets the locale for DevTools UI. To apply this setting, reload DevTools.
+{% Details %}
+
+{% DetailsSummary 'h3' %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Language** sets the locale for DevTools UI.
+{% endDetailsSummary %}
+
+To apply this setting, reload DevTools.
 
 <fieldset>
    <legend>Language:</legend>
@@ -90,18 +113,34 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 - One of locale options, in this example, Chinese
 
 </fieldset>
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** allows you to open DevTools panels using your keyboard.
+{% Details %}
+
+{% DetailsSummary 'h3' %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** lets you open panels with the keyboard.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary 'h3' %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable paused state overlay** hides the **Paused in debugger** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VI5VMTjA0xztwDvQzH2j.png", alt="Play and step over buttons.", width="50", height="22" %} overlay in the viewport when code execution is paused.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/arkcXtPmTBTuqZJJ4sz6.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show What's New after each update** automatically opens the **What's New** drawer tab after each Chrome update.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bUkU6F9okmYJ5L88neGH.png", alt="The What's New drawer tab.", width="800", height="616" %}
+{% endDetails %}
 
 ### Sources
 
