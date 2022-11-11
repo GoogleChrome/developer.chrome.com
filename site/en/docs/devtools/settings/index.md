@@ -39,7 +39,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 ### Appearance
 
-The **Themes** drop-down list sets a color theme for DevTools UI.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Themes** sets a color theme for DevTools UI.
 
 <fieldset>
    <legend>Themes:</legend>
@@ -65,7 +65,7 @@ The **Panel layout** arranges panes on panels. Affects **Elements** > **Styles**
 
 </fieldset>
 
-The **Color format** drop-down list sets the format of CSS color values in **Elements** > **Styles** and [Color Picker](/docs/devtools/css/reference/#color-picker).
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Color format** sets the format of CSS color values in **Elements** > **Styles** and [Color Picker](/docs/devtools/css/reference/#color-picker).
 
 <fieldset>
    <legend>Color format:</legend>
@@ -79,7 +79,7 @@ The **Color format** drop-down list sets the format of CSS color values in **Ele
 
 </fieldset>
 
-The **Language** drop-down list sets locale for DevTools UI. To apply this setting, reload DevTools.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Language** sets the locale for DevTools UI. To apply this setting, reload DevTools.
 
 <fieldset>
    <legend>Language:</legend>
@@ -114,7 +114,7 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable JavaScript source maps** lets DevTools find sources of generated or minified JavaScript files. This option does the following:
 
 - Works only if source maps are present.
-- The **Sources** panel shows the source files under the **Authored** drop-down in the navigation tree.
+- The **Sources** panel shows the source files under the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Authored** drop-down in the navigation tree.
 - The **Sources** panel also puts a link to the generated or minified file in the status bar.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/APHkhTpIXCfhyTuqS1qd.png", alt="The Sources panel shows the source file under the Authored section in the navigation tree and a link to the file in the status bar.", width="800", height="523" %}
@@ -137,7 +137,7 @@ The **Language** drop-down list sets locale for DevTools UI. To apply this setti
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/kHPWexKmutMWp3LcUq70.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-The **Show whitespace characters** drop-down list requires to reload DevTools and provides options for displaying whitespace characters in the **Editor**:
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Show whitespace characters** requires to reload DevTools and provides options for displaying whitespace characters in the **Editor**:
 
 - **All** denotes all whitespace characters as dots (`...`). Additionally, The **Editor** denotes the <kbd>Tab</kbd> character as a line (`—`).
 - **Trailing** highlights whitespace characters at the end of lines in <span style="background-color: rgb(255 0 0 / 10%);">light red</span>.
@@ -175,7 +175,7 @@ The **Show whitespace characters** drop-down list requires to reload DevTools an
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from Windows Shares via UNC paths**
 
-The **Default indentation** drop-down list lets you set the characters to insert with the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key in the **Editor**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} **Default indentation** lets you set the characters to insert with the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key in the **Editor**.
 
 {% Aside 'gotchas' %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** overrides this setting and sets indentation to the that of the source file. Requires to reaload DevTools.
