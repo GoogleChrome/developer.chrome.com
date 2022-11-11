@@ -39,7 +39,7 @@ specify which tab to send it to. This example demonstrates sending a message to 
 in the selected tab.
 
 ```js
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
   await response = chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"});
   console.log(response.farewell);
 });
