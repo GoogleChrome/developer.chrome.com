@@ -47,7 +47,7 @@ ownership of as determined by the [Chrome Web Store][4]. Apps that violate this 
 attempt to register for handling external URLs will be rejected by the Chrome Web Store on upload.
 
 This automatically means that at least a complete domain should always be specified for all the
-patterns under `matches` (otherwise ownership cannot be verified).
+patterns under `matches`. Otherwise, ownership cannot be verified.
 
 Upon successful registration and installation, an app will be launched for all matching navigations
 inside browser tabs as well as other apps. The app will receive a new kind of the
