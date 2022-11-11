@@ -39,6 +39,9 @@ redirects:
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
+- from: /android
+  to: /docs/android
+
 # FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
 # redirect destination will be ignored
 - from: /docs/extensions/mv3/manifest/content_security_policy
