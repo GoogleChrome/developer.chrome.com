@@ -157,7 +157,7 @@
 ### Chrome 96 {: #chrome96 }
 
 * [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
-{# * [Restored and improved CSS length edit and copy experince](/ja/blog/new-in-devtools-966/#length) #}
+* [CSS の length の編集とコピーの挙動の復旧と改善](/ja/blog/new-in-devtools-966/#length)
 * [CSS の prefers-contrast メディア機能のエミュレート](/ja/blog/new-in-devtools-96/#prefers-contrast)
 * [Chrome の Auto Dark Theme 機能のエミュレート](/ja/blog/new-in-devtools-96/#auto-dark-mode)
 * [Styles ペインで JavaScript として宣言をコピー](/ja/blog/new-in-devtools-96/#copy-as-js)
