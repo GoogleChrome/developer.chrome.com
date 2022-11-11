@@ -290,7 +290,7 @@ Permissions-Policy:
 
 ### `document.allowsFeature(feature, origin)` の使用を更新する
 
-`document.allowsFeature(feature, origin)` メソッドを使用して iframe に許可された機能を確認する場合は、iframe を格納する `document` ではなく、iframe element に関連付けられた `allowFeature(feature)` メソッドを使用します。 `element.allowsFeature(feature)` メソッドは allow 属性を考慮しますが、`document.allowsFeature(feature, origin)` は考慮しません。
+`document.allowsFeature(feature, origin)` メソッドを使用して iframe に許可された機能を確認する場合は、iframe を格納する `document` ではなく、iframe element に関連付けられた `allowsFeature(feature)` メソッドを使用します。 `element.allowsFeature(feature)` メソッドは allow 属性を考慮しますが、`document.allowsFeature(feature, origin)` は考慮しません。
 
 #### `document` で機能アクセスをチェックする
 `document` をベースノードとして引き続き使用する場合は、iframe タグの `allow` 属性をさらにチェックする必要があります。
