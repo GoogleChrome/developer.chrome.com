@@ -69,7 +69,7 @@ For example:
     'topWindowHostname': 'publisher.example',
     'interestGroupOwner': 'https://dsp.example',
     'renderUrl': 'https://cdn.example/url-of-winning-creative.wbn',
-    'bid:' <bidValue>,
+    'bid': <bidValue>,
     'desirability': <winningAdScore>
   }
 ```
@@ -121,7 +121,7 @@ For example:
   'interestGroupOwner': 'https://dsp.example',
   'interestGroupName': 'custom-bikes',
   'renderUrl': 'https://cdn.example/winning-creative.wbn',
-  'bid:' <bidValue>
+  'bid': <bidValue>
 }
 ```
 
