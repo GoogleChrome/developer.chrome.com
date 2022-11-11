@@ -3,16 +3,16 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
+{# ### Chrome 108 {: #chrome108 }
 
 * [Hints for inactive CSS properties](/ru/blog/new-in-devtools-108/#css-hint)
 * [Auto-detect XPath and text selectors in the Recorder panel](/ru/blog/new-in-devtools-108/#recorder)
 * [Step through comma-separated expressions](/ru/blog/new-in-devtools-108/#debugging)
 * [Improved Ignore list setting](/ru/blog/new-in-devtools-108/#ignore-list)
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-108/#misc)
- -->
+ #}
 
 ### Chrome 107 {: #chrome107 }
 
@@ -67,7 +67,7 @@
 * [Определение блокирующего фрейма на панели Возвратного кэша (Back/forward cache)](/ru/blog/new-in-devtools-104/#bfcache)
 * [Улучшены подсказки автодополнения для объектов JavaScript](/ru/blog/new-in-devtools-104/#autocomplete)
 * [Улучшение карт источников](/ru/blog/new-in-devtools-104/#sourcemaps)
-* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc) -->
+* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc)
 
 ### Chrome 103 {: #chrome103 }
 

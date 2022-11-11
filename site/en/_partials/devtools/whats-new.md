@@ -2,7 +2,7 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
-<!-- $content -->
+{# $content #}
 
 ### Chrome 108 {: #chrome108 }
 
