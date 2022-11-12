@@ -1,5 +1,4 @@
 ---
-layout: 'layouts/blog-post.njk'
 title: Processamento de vídeo com WebCodecs
 subhead: Manipulando componentes de stream de vídeo.
 description: Trabalhe com componentes de um fluxo de vídeo, como quadros e pedaços não movidos de vídeo ou áudio codificado.

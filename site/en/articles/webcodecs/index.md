@@ -1,5 +1,4 @@
 ---
-layout: 'layouts/blog-post.njk'
 title: Video processing with WebCodecs
 subhead: Manipulating video stream components.
 description: Work with components of a video stream, such as frames and unmixed chunks of encoded video or audio.
