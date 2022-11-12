@@ -368,7 +368,7 @@ async function renderFrame() {
 
 ## Dev Tips {: #dev-tips }
 
-Use the [Media Panel](https://developer.chrome.com/docs/devtools/media-panel/)
+Use the [Media Panel](/docs/devtools/media-panel/)
 in Chrome DevTools to view media logs and debug WebCodecs.
 
 <figure>

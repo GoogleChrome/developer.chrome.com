@@ -20,7 +20,7 @@ editor app as a file handler and after installing it, you can right-click a `.tx
 select "Get Info" to then instruct the OS that it should always open `.txt` files with this app as
 default.
 
-### Suggested use cases for the File Handling API {: #use-cases }
+## Suggested use cases for the File Handling API {: #use-cases }
 
 Examples of sites that may use this API include:
 

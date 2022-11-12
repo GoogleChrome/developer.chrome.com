@@ -19,7 +19,7 @@ stack_overflow_tag: webhid
 ---
 
 {% Aside 'success' %}
-The WebHID API, part of the [capabilities project](https://developer.chrome.com/blog/fugu-status/), launched in
+The WebHID API, part of the [capabilities project](/blog/fugu-status/), launched in
 Chrome&nbsp;89.
 {% endAside %}
 
@@ -471,34 +471,34 @@ Thanks to [Matt Reynolds] and [Joe Medley] for their reviews of this article.
 Red and blue Nintendo Switch photo by [Sara Kurfeß], and black and silver laptop
 computer photo by [Athul Cyriac Ajay] on Unsplash.
 
-[Capabilities project]: /fugu-status/
-[HID protocol]: https://www.usb.org/hid
-[Elgato Stream Deck]: https://www.elgato.com/en/gaming/stream-deck
-[Jabra headsets]: https://www.jabra.com/business/office-headsets
+[capabilities project]: https://web.dev/fugu-status/
+[hid protocol]: https://www.usb.org/hid
+[elgato stream deck]: https://www.elgato.com/en/gaming/stream-deck
+[jabra headsets]: https://www.jabra.com/business/office-headsets
 [X-keys]: https://xkeys.com/xkeys.html
 [explainer]: https://github.com/WICG/webhid/blob/main/EXPLAINER.md
 [spec]: https://wicg.github.io/webhid/
 [format]: https://gist.github.com/beaufortfrancois/583424dfef66be1ade86231fd1a260c7
-[the USB ID Repository]: http://www.linux-usb.org/usb-ids.html
-[HID usage tables document]: https://usb.org/document-library/hid-usage-tables-12
-[`DataView`]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView
-[`BufferSource`]: https://developer.mozilla.org/docs/Web/API/BufferSource
+[the usb id Repository]: http://www.linux-usb.org/usb-ids.html
+[hid usage tables document]: https://usb.org/document-library/hid-usage-tables-12
+[`dataview`]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView
+[`buffersource`]: https://developer.mozilla.org/docs/Web/API/BufferSource
 [hid-explorer]: https://nondebug.github.io/webhid-explorer/
 [web.dev/hid-examples]: /hid-examples/
 [udev rule]: https://www.freedesktop.org/software/systemd/man/udev.html
 [member]: https://wiki.debian.org/SystemGroups
-[Controlling Access to Powerful Web Platform Features]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
-[Security and Privacy Considerations]: https://wicg.github.io/webhid/#security-and-privacy
+[controlling access to powerful web platform features]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
+[security and privacy considerations]: https://wicg.github.io/webhid/#security-and-privacy
 [publicly available]: https://source.chromium.org/chromium/chromium/src/+/main:services/device/public/cpp/hid/hid_usage_and_page.cc
-[USB blocklist]: https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/usb/usb_blocklist.cc
-[HID blocklist]: https://source.chromium.org/chromium/chromium/src/+/main:services/device/public/cpp/hid/hid_blocklist.cc
+[usb blocklist]: https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/usb/usb_blocklist.cc
+[hid blocklist]: https://source.chromium.org/chromium/chromium/src/+/main:services/device/public/cpp/hid/hid_blocklist.cc
 [issues]: https://github.com/wicg/webhid/issues
 [how-to-file]: https://www.chromium.org/developers/how-tos/file-web-hid-bugs/
 [cr-dev-twitter]: https://twitter.com/chromiumdev
 [ot]: https://developers.chrome.com/origintrials/#/register_trial/1074108511127863297
 [cr-bug]: https://crbug.com/890096
 [cr-status]: https://chromestatus.com/feature/5172464636133376
-[Matt Reynolds]: https://github.com/nondebug
-[Joe Medley]: https://github.com/jpmedley
-[Sara Kurfeß]: https://unsplash.com/photos/jqpRECmiNEU
-[Athul Cyriac Ajay]: https://unsplash.com/photos/ndokCrfQWrI
+[matt reynolds]: https://github.com/nondebug
+[joe medley]: https://github.com/jpmedley
+[sara kurfeß]: https://unsplash.com/photos/jqpRECmiNEU
+[athul cyriac ajay]: https://unsplash.com/photos/ndokCrfQWrI
