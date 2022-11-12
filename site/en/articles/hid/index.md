@@ -475,11 +475,11 @@ computer photo by [Athul Cyriac Ajay] on Unsplash.
 [hid protocol]: https://www.usb.org/hid
 [elgato stream deck]: https://www.elgato.com/en/gaming/stream-deck
 [jabra headsets]: https://www.jabra.com/business/office-headsets
-[X-keys]: https://xkeys.com/xkeys.html
+[x-keys]: https://xkeys.com/xkeys.html
 [explainer]: https://github.com/WICG/webhid/blob/main/EXPLAINER.md
 [spec]: https://wicg.github.io/webhid/
 [format]: https://gist.github.com/beaufortfrancois/583424dfef66be1ade86231fd1a260c7
-[the usb id Repository]: http://www.linux-usb.org/usb-ids.html
+[the usb id repository]: http://www.linux-usb.org/usb-ids.html
 [hid usage tables document]: https://usb.org/document-library/hid-usage-tables-12
 [`dataview`]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView
 [`buffersource`]: https://developer.mozilla.org/docs/Web/API/BufferSource
