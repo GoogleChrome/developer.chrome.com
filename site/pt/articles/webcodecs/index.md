@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Processamento de vídeo com WebCodecs
 subhead: Manipulando componentes de stream de vídeo.
 description: Trabalhe com componentes de um fluxo de vídeo, como quadros e pedaços não movidos de vídeo ou áudio codificado.
@@ -34,6 +35,7 @@ Além disso, `VideoFrame` funciona bem com outras APIs da Web por ser um [`Canva
 
 A API WebCodecs funciona bem em conjunto com as classes da [API](https://w3c.github.io/mediacapture-transform/) Insertable Streams que conectam WebCodecs a [faixas de fluxo de mídia](https://developer.mozilla.org/docs/Web/API/MediaStreamTrack).
 
+- `MediaStreamTrackProcessor` divide as trilhas de mídia em quadros individuais.
 - `MediaStreamTrackProcessor` divide as trilhas de mídia em quadros individuais.
 - `MediaStreamTrackGenerator` cria uma trilha de mídia a partir de um fluxo de quadros.
 
@@ -303,7 +305,7 @@ A demonstração abaixo mostra como os quadros de animação de uma tela são:
 - decodificado novamente em uma sequência de quadros de vídeo
 - e renderizado na segunda tela usando `transferControlToOffscreen()`
 
-{% Glitch 'new-webcodecs-blogpost-demo' %}
+{% Glitch { id: 'new-webcodecs-blogpost-demo' } %}
 
 ### Outras demos
 

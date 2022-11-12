@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Video processing with WebCodecs
 subhead: Manipulating video stream components.
 description: Work with components of a video stream, such as frames and unmixed chunks of encoded video or audio.
@@ -384,7 +385,7 @@ The demo below shows how animation frames from a canvas are:
 - decoded again into a sequence of video frames
 - and rendered on the second canvas using `transferControlToOffscreen()`
 
-{% Glitch 'new-webcodecs-blogpost-demo' %}
+{% Glitch { id: 'new-webcodecs-blogpost-demo' } %}
 
 ### Other demos
 
