@@ -6,7 +6,7 @@ subhead: >
 description: >
   Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 date: 2022-01-25
-updated: 2022-11-02
+updated: 2022-11-13
 authors:
   - samdutton
 ---
@@ -41,6 +41,9 @@ This explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
 
+{% YouTube
+  id='hEBzWuXjeTQ'
+%}
 
 ## Take part in a Topics origin trial {: #origin-trial}
 
