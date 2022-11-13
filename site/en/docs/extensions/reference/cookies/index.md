@@ -13,7 +13,7 @@ to access. For example:
   "name": "My extension",
   ...
   "host_permissions": [
-    "*://*.google.com"
+    "*://*.google.com/"
   ],
   "permissions": [
     "cookies"

@@ -30,7 +30,7 @@ flags every JavaScript file with more than 20 kibibytes of unused code:
   </figcaption>
 </figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to remove unused JavaScript
 

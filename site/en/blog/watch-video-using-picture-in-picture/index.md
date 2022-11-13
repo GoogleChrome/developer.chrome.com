@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Restricting Wasm module sharing to same-origin
+title: Watch video using Picture-in-Picture
 description: >
   Control Picture-in-Picture for video elements on your website.
 date: 2018-10-19
-updated: 2019-05-08
+updated: 2022-07-20
 authors:
   - beaufortfrancois
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/8wfOD3xpMPTZ2KxvZUaz.png'
@@ -18,7 +18,7 @@ Picture-in-Picture (PiP) allows users to watch videos in a floating window
 (always on top of other windows) so they can keep an eye on what they’re
 watching while interacting with other sites, or applications.
 
-With the new [Picture-in-Picture Web API], you can initiate and control
+With the [Picture-in-Picture Web API], you can start and control
 Picture-in-Picture for video elements on your website. Try it out on our
 official [Picture-in-Picture sample].
 
@@ -349,8 +349,13 @@ API are currently implemented in Chrome and other browsers.
 
 Here's what you can expect to see in the near future:
 
-- Picture-in-Picture will be supported in Android O.
 - Web developers will be able to [add custom Picture-in-Picture controls].
+- A [new Web API] will be provided to display arbitrary `HTMLElement` objects in a floating window.
+
+## Browser support
+
+The Picture-in-Picture Web API is supported in Chrome, Edge, Opera, and Safari.
+See [MDN] for details.
 
 ## Resources {: #resources }
 
@@ -377,7 +382,7 @@ involved in the [standardization effort].
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
 [applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [feature support]: #feature-support
-[feature policy]: /feature-policy
+[feature policy]: /blog/feature-policy
 [video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
 [media session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
@@ -393,5 +398,7 @@ involved in the [standardization effort].
 [https://github.com/gbentaieb/pip-polyfill/]: https://github.com/gbentaieb/pip-polyfill/
 [standardization effort]: https://github.com/WICG/picture-in-picture/issues?utf8=%E2%9C%93&q=
 [jennifer apacible]: https://twitter.com/japacible
-[media session api]: /media-session
+[media session api]: https://web.dev/media-session
 [audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
+[new web api]: https://github.com/steimelchrome/document-pip-explainer/blob/main/explainer.md
+[mdn]: https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API#browser_compatibility

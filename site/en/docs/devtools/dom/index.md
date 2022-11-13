@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-updated: 2022-06-09
+updated: 2022-10-25
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
@@ -70,7 +70,7 @@ keyboard.
 1. Press the <kbd>Left</kbd> arrow key. The `<ul>` list collapses.
 1. Press the <kbd>Left</kbd> arrow key again. The parent of the `<ul>` node
    is selected. In this case it's the `<li>` node containing the instructions for step 1.
-1. Press the <kbd>Down</kbd> arrow key 2 times so that you've re-selected the `<ul>`
+1. Press the <kbd>Down</kbd> arrow key 3 times so that you've re-selected the `<ul>`
    list that you just collapsed. It should look like this: `<ul>...</ul>`
 1. Press the <kbd>Right</kbd> arrow key. The list expands.
 
@@ -116,6 +116,12 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qigo04bdlo2evHazfIAp.png", alt="Highlighting the query in the Search bar", width="800", height="545" %}
 
 As mentioned above, the Search bar also supports CSS and XPath selectors.
+
+The **Elements** panel selects the first matching result in the DOM tree and rolls it into view in the viewport. By default, this happens as you type. If you always work with long search queries, you can make DevTools run search only when you press <kbd>Enter</kbd>.
+
+To avoid unnecessary jumps between nodes, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Global** > **Search as you type** checkbox.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BKcshLBj0EI1OahoEXbS.png", alt="Cleared Search as you type checkbox in Settings.", width="800", height="425" %}
 
 ## Edit the DOM {: #edit }
 
@@ -175,6 +181,37 @@ To edit a node's type, double-click the type and then type in the new type.
    node.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nbdyNWefo9fqESvfWdha.png", alt="Changing the node type to button", width="800", height="545" %}
+
+### Edit as HTML {: #as-html }
+
+To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit as HTML** from the node's drop-down menu.
+
+1. Right-click **Leonard** below and select **Inspect**.
+
+     * Penny
+     * Howard
+     * Rajesh
+     * Leonard
+
+1. In the **Elements** panel, right-click the current node and select **Edit as HTML** from the drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2If7eY0I3aNpQcb1fAZg.png", alt="The drop-down menu of a node.", width="800", height="747" %}
+
+1. Press <kbd>Enter</kbd> to start a new line and start typing `<l`. DevTool highlights HTML syntax and autocompletes tags for you.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/B7kQKGGUGf3S2ERmF5dc.png", alt="Autocompletion of HTML tags.", width="800", height="645" %}
+
+    {% Aside %}
+    **Note**: Additionally, DevTools can autocomplete DOM properties.
+    {% endAside %}
+
+1. Select the `li` element from the autocomplete menu and type `>`. DevTools automatically adds the closing `</li>` tag after the cursor.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/26XrzZDhuvL4KcUGDSvU.png", alt="DevTools closes the tag automatically.", width="800", height="678" %}
+
+1. Type `Sheldon` inside the tag and press <kbd>Control</kbd> / <kbd>Command</kbd> + <kbd>Enter</kbd> to apply changes.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/unvKWSLDvzoh7kHZoWbK.png", alt="Applying changes.", width="800", height="678" %}
 
 ### Reorder DOM nodes {: #reorder }
 

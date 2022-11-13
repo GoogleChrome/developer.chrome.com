@@ -258,6 +258,11 @@ the steps in [Viewing Warnings][27].
       <td>Grants your extension access to the <a href="/docs/extensions/reference/downloads">chrome.downloads</a> API.</td>
       <td><strong>Manage your downloads</strong></td>
     </tr>
+    <tr id="favicon">
+      <td><code>"favicon"</code></td>
+      <td>Allows the extension to use the Favicon API.</td>
+      <td><strong>Read the icons of the websites you visit.</strong></td>
+    </tr>
     <tr id="geolocation">
       <td><code>"geolocation"</code></td>
       <td>Allows the extension to use the HTML5 <a href="https://dev.w3.org/geo/api/spec-source.html">geolocation API</a>

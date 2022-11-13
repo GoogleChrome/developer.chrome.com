@@ -27,7 +27,7 @@ There are two common causes for an incorrect image aspect ratio:
 - An image is set to explicit width and height values that differ from the source image's dimensions.
 - An image is set to a width and height as a percentage of a variably-sized container.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Ensure images display with the correct aspect ratio
 

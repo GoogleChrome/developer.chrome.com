@@ -1,6 +1,7 @@
 type: info
-text: Check out what's new for the web platform at Google IO!
+text:
+  "From fun and frightful web tips and tricks to scary good scroll-linked animations, we're celebrating the web Halloween-style, in Chrometober."
 actions:
-  - text: Join the party
-    href: https://io.google/2022/products/web/
+  - text: Check it out!
+    href: http://web.dev/chrometober-2022
   - text: Dismiss

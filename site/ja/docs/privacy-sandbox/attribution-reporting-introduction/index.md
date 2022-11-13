@@ -71,11 +71,11 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 
 #### デプロイされたサイトでエンド ユーザーに対して試す
 
-1. 使用できる場合は、[オリジン  トライアル](/blog/origin-trials/)に登録して、エンド ユーザーの API を有効にします。オリジン トライアルでは、実験的な機能にアクセスして、限られた時間で試すことができる機能を構築できます。[サードパーティのオリジン トライアル](/blog/third-party-origin-trials/)では、広告配信や測定プロバイダーなどのサードパーティのアクターが複数のサイトで API をテストできてしまうことに注意してください。**この API で現在利用可能なオリジン トライアルを確認するには、[ステータス](#status)にアクセスしてください**。今後のオリジン トライアルについては、 [開発者向け Attribution Reporting メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録ください。
+1. 使用できる場合は、[オリジン  トライアル](/blog/origin-trials/)に登録して、エンド ユーザーの API を有効にします。オリジン トライアルでは、実験的な機能にアクセスして、限られた時間で試すことができる機能を構築できます。[サードパーティのオリジン トライアル](/blog/third-party-origin-trials/)では、広告配信や測定プロバイダーなどのサードパーティのアクターが複数のサイトで API をテストできてしまうことに注意してください。**この API で現在利用可能なオリジン トライアルを確認するには、[ステータス](#status)にアクセスしてください**。今後のオリジン トライアルについては、 [開発者向けアトリビューション レポート メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録ください。
 
 2. API をサイトやシステムに統合します。
 
-{% Aside %}実装に関する質問は[、開発者向け Attribution Reporting メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録してからお尋ねください。
+{% Aside %}実装に関する質問は[、開発者向けアトリビューション レポート メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録してからお尋ねください。
 
 ユース ケースについて、技術に関する一般的な質問がある場合は、[プライバシー サンドボックス開発サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で課題を開くことを検討してください。 {% endAside %}
 
@@ -86,7 +86,7 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 - イベントレベルのレポート、クリックのみ:
 
     - [ライブ デモ](https://goo.gle/sppi-devrel-eventlevel)。
-    - このデモの[ソース コード](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement)。必要に応じて[フォークしてカスタマイズできます。](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize)
+    - このデモの[ソース コード](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)。必要に応じて[フォークしてカスタマイズできます。](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize)
 
 ## ユース ケースと機能
 

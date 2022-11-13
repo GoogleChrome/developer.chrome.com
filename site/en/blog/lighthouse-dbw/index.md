@@ -74,7 +74,7 @@ improve scrolling performance".
 
 We'll continue to add more recommendations over time. If you have suggestions
 for best practices or want to help us write an audit, [file an issue][dbwissues]
-on Github.
+on GitHub.
 
 ## Report Viewer
 
@@ -92,8 +92,8 @@ Lighthouse HTML report.
 </figure>
 
 Lighthouse Viewer also lets you share reports with others. Clicking the share 
-icon will sign you in to Github. We stash reports as secret gist in your account
-so you can easily delete a shared report or update it later on. Using Github for
+icon will sign you in to GitHub. We stash reports as secret gist in your account
+so you can easily delete a shared report or update it later on. Using GitHub for
 data storage also means you get version control for free!
 
 <figure>
@@ -111,7 +111,7 @@ to the URL:
 
 For all the details on the latest in Lighthouse, see the
 [full release notes](https://github.com/GoogleChrome/lighthouse/tags) over on
-Github. As always, [hit us up][contribs] to [report bugs][lhbugs], file feature
+GitHub. As always, [hit us up][contribs] to [report bugs][lhbugs], file feature
 requests, or brainstorm [ideas](https://github.com/GoogleChrome/lighthouse/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+bug%22) on what you'd like
 to see next.
 

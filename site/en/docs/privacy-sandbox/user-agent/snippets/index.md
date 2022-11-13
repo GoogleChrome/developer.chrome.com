@@ -4,7 +4,7 @@ title: 'User-Agent reduction snippets'
 subhead: >
   Code snippets to transform the current Chrome user-agent to the reduced format.
 description: >
-  Test your own sites and services against the reduced Chrome user-agent format by using a regular expression to transform the current Chrome user-agent to the reduced format.
+  Test your sites and services against the reduced Chrome user-agent with regular expressions.
 date: 2021-11-26
 authors:
   - rowan_m
@@ -83,7 +83,7 @@ replacing it with the appropriate reduced value.
 * `Lin`    → `Linux; Android 10; K`
 * `Win`    → `Windows NT 10.0; Win64; x64`
 * `Mac`    → `Macintosh; Intel Mac OS X 10_15_7`
-* `X11; C` → `X11; CrOS x86_64`
+* `X11; C` → `X11; CrOS x86_64 14541.0.0`
 * `X11; L` → `X11; Linux x86_64`
 
 ### JavaScript
@@ -106,7 +106,7 @@ if (matched) {
     'Lin': 'Linux; Android 10; K',
     'Win': 'Windows NT 10.0; Win64; x64',
     'Mac': 'Macintosh; Intel Mac OS X 10_15_7',
-    'X11; C': 'X11; CrOS x86_64',
+    'X11; C': 'X11; CrOS x86_64 14541.0.0',
     'X11; L': 'X11; Linux x86_64',
   };
   const reducedUA =
@@ -141,7 +141,7 @@ if (matched) {
     'Lin': 'Linux; Android 10; K',
     'Win': 'Windows NT 10.0; Win64; x64',
     'Mac': 'Macintosh; Intel Mac OS X 10_15_7',
-    'X11; C': 'X11; CrOS x86_64',
+    'X11; C': 'X11; CrOS x86_64 14541.0.0',
     'X11; L': 'X11; Linux x86_64',
   };
   request.headers['user-agent'] = `Mozilla/5.0 (${unifiedPlatform[matched.groups.platform]}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${matched.groups.major}.0.0.0${matched.groups.mobile} Safari/537.36`;
@@ -170,7 +170,7 @@ async function handleRequest(request) {
       'Lin': 'Linux; Android 10; K',
       'Win': 'Windows NT 10.0; Win64; x64',
       'Mac': 'Macintosh; Intel Mac OS X 10_15_7',
-      'X11; C': 'X11; CrOS x86_64',
+      'X11; C': 'X11; CrOS x86_64 14541.0.0',
       'X11; L': 'X11; Linux x86_64',
     };
 

@@ -18,7 +18,7 @@ updated: 2019-08-28
 
 Lighthouse собирает все ресурсы, запрашиваемые страницей, и проверяет версию протокола HTTP для каждого из них. В некоторых случаях запросы, отличные от HTTP/2, игнорируются в результатах аудита. См. [реализацию](https://github.com/GoogleChrome/lighthouse/blob/9fad007174f240982546887a7e97f452e0eeb1d1/lighthouse-core/audits/dobetterweb/uses-http2.js#L138) для получения более подробной информации.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Как пройти этот аудит
 

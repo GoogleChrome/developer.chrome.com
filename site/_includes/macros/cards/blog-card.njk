@@ -3,8 +3,11 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-
-  {% set thumbnail = pd.hero or pd.thumbnail %}
+  {% if pd.thumbnail %}
+  {% set thumbnail = pd.thumbnail %}
+  {% else %}
+  {% set thumbnail = pd.hero %}
+  {% endif %}
   {% set alt = pd.alt %}
   {% set tags = pd.tags %}
 

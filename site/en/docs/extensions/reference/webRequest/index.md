@@ -354,7 +354,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 For more example code, see the [web request samples][16].
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv2/declare_permissions
 [3]: #life_cycle_footnote
 [4]: #implementation-details

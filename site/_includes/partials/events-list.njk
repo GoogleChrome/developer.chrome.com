@@ -1,0 +1,17 @@
+<web-tabs class="events-list">
+  <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
+    <div class="display-grid grid-cols-1 grid-gap-400">
+      {% for event in collections.currentEvents %}
+        {% EventCard event %}
+      {% endfor %}
+    </div>
+  </web-tab>
+
+  <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
+    <div class="display-grid grid-cols-1 grid-gap-400">
+      {% for event in collections.pastEvents %}
+        {% EventCard event %}
+      {% endfor %}
+    </div>
+  </web-tab>
+</web-tabs>

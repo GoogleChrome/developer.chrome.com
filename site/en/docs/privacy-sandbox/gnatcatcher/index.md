@@ -4,7 +4,7 @@ title: 'Gnatcatcher'
 subhead: >
   Keep individual users' IP addresses hidden to prevent cross-site covert tracking.
 description: >
-  Keep individual users' IP addresses hidden to prevent cross-site covert tracking. 
+  A proposal to keep individual users' IP addresses hidden to prevent cross-site covert tracking. 
 date: 2022-03-04
 authors:
   - alexandrawhite

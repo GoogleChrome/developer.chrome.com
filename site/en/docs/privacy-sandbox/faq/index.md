@@ -3,10 +3,10 @@ layout: layouts/doc-post.njk
 title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
-date: 2021-09-21
-updated: 2021-04-12
+date: 2021-04-12
+updated: 2022-11-11
 authors:
-	- samdutton
+  - samdutton
 ---
 
 Here you'll find common questions about the Privacy Sandbox. The range of
@@ -45,7 +45,8 @@ The Privacy Sandbox is a set of proposed web standards.
 Chrome and other browser vendors, as well as ad companies and other
 stakeholders, have offered more than 30 proposals to date. These proposals can
 be found in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo) and cover a wide variety of use cases and requirements.
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
+and cover a wide variety of use cases and requirements.
 
 ### How can I keep track of changes and progress in the Privacy Sandbox?
 
@@ -141,6 +142,24 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Will `SameSite` become irrelevant after third-party cookies are deprecated?
+
+- `SameSite=Lax` is the current default. While it does not strictly *need* to
+   be included, it's good practice to specify it for cross-browser consistency.
+- `SameSite=Strict` continues to be a more restrictive option, for cookies that
+   must only be sent when the user is already on the site. This is and remains
+   a good security practice for cookies that are part of managing particularly
+   sensitive access.
+- `SameSite=None` should continue to be sent for cross-browser consistency. However,
+   Chrome's proposed change to phase out third-party cookies would result in those
+   cookies no longer being sent as is in cross-site contexts.
+
+The exception is cookies that are modified by either the
+[CHIPS](/docs/privacy-sandbox/chips/) or
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
+These allow for a subset of cross-site use cases. As these proposals are
+under active discussion, the final formats and functionality may change.
+
 ### Can a site participate in origin trials but opt-out of using a feature in specific geographic regions?
 
 In short, no, you cannot opt-out of an origin trial for specific regions.
@@ -173,7 +192,7 @@ able to visit `uk.example.com`. Those users would see features and functions
 for the United States site that were blocked for the United Kingdom site.
 {% endAside %}
 
-## Trust Tokens
+## Privacy State Tokens
 
 ### How can I ask a question about this feature?
 
@@ -188,7 +207,7 @@ for the United States site that were blocked for the United Kingdom site.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
 
-### Is tooling available for Trust Tokens?
+### Is tooling available for Privacy State Tokens?
 
 Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
@@ -234,14 +253,17 @@ For example, to completely disable use of the Topics API within all browsing con
 
 ### Can Topics API be used with on websites with `prebid.js`?
 
-Yes. Topics are available to API callers when the `document.browsingTopics()` call
-to access topics is made from a document with the
-[same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin)
-as the call to observe topics. 
+As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
+the community is actively developing an integration with the Topics API via a new module. 
+However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
+development, we recommend the following:
 
-For example, a call to observe topics could be made from an iframe whose `src` is
-same-origin as the source of the Topics API call to access topics. You can try out an
-example at [topics-demo.glitch.me](https://topics-demo.glitch.me).
+- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947) 
+which is the PR to create the Prebid Topics Module
+- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741) 
+which has an active discussion on the Prebid Topics module's intended workflow.
+- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
+through whatever standard channel they offer.
 
 ## FLEDGE
 
@@ -269,7 +291,8 @@ have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
 attribute.
 
 At auction time, the browser communicates with the trusted server to
-fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
+fetch the values for those keys, and then makes those values available
+to the `generate_bid()` function. The advertiser (ad buyer) can store additional
 metadata, along with the interest group, to improve on-device bidding.
 
 ### Can the Topics API be used with the FLEDGE API? 
@@ -380,6 +403,21 @@ regardless of how that origin is defined on the DNS side. Delegation must be
 handled via `Permissions-Policy` for any cross-origin subresource or obtained
 via JavaScript which executes in the cross-origin context.
 
+### How does User-Agent reduction affect bot detection?
+
+Chrome's change to its user-agent string does not directly impact the
+user-agent string that a bot chooses to send.
+
+Bots may choose to update their own strings to reflect the reduced
+information Chrome sends, but that is entirely their implementation
+choice. Chrome is still sending the same user-agent format, and bots
+that append their own identifier to the end of a Chrome user-agent
+string can continue to do so.
+
+For any concerns with specific bots, it may be worth reaching out
+directly to the owners to ask if they have any plans to change their
+user-agent string.
+
 ## Shared storage
 
 ### How can I ask a question about this feature?
@@ -431,7 +469,7 @@ that will allow new APIs to isolate themselves from their embedders. This
 prevents cross-site recognition.
 
 For ads use cases, see
-[Fenced frames for Ads Design Doc](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
+[Fenced frames for Ads design document](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
 
 ## Network State Partitioning
 
@@ -456,9 +494,8 @@ For ads use cases, see
 
 ### What is FedCM?
 
-FedCM (Federated Credential Management) is a proposal for a privacy-preserving approach to federated
+[FedCM (Federated Credential Management)](/docs/privacy-sandbox/fedcm/)
+is a proposal for a privacy-preserving approach to federated
 identity services (such as "Sign in with&nbsp;...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
-
-FedCM is still [in incubation in the W3C](https://github.com/WICG/FedCM).

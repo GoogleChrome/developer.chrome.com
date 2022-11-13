@@ -6,7 +6,7 @@ authors:
 date: 2022-06-14
 updated: 2022-06-14
 description: "Record double-click and right-click events, new options to measure user flow in Lighthouse and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KDGrFqdw3eSDcZ00qt72.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TWCiJaqb6IKBRsOyqYBo.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -14,9 +14,7 @@ tags:
   - chrome-103
 ---
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zDmJK6jWRUal7SAiezJl.jpg -->
-
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LyMts4yfQu8' %}
 
@@ -171,5 +169,5 @@ Here are a few fixes on sourcemaps to improve the overall debugging experience:
 Chromium issues: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

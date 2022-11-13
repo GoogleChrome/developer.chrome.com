@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Experimenting with First Input Delay in the Chrome UX Report
 date: 2018-07-10
-updated: 2018-07-10
+updated: 2022-07-19
 authors:
   - rviscomi
 description: Announcing the addition of the First Input Delay (FID) experimental metric to the Chrome User Experience Report.
@@ -11,7 +11,7 @@ description: Announcing the addition of the First Input Delay (FID) experimental
 
 
 The goal of the
-[Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/)
+[Chrome User Experience Report](/docs/crux/)
 is to help the web community understand the distribution and evolution of real
 user performance. To date, our focus has been on paint and page load metrics
 like First Contentful Paint (FCP) and Onload (OL), which have helped us
@@ -43,7 +43,7 @@ announcement blog post:
 <figure>
   {% YouTube id="5mo8JfIi3HI" %}
 	<figcaption class="clearfix align-center">
-			Animation showing how a busy main thread delays the response to a 
+			Animation showing how a busy main thread delays the response to a
 			user interaction.
 	</figcaption>
 </figure>
@@ -207,7 +207,7 @@ of interactivity experiences. Using this baseline, we can observe its change in
 future releases or benchmark individual origins. If you’d like to start
 collecting FID in your own site’s field measurements, sign up for the origin
 trial by going to [bit.ly/event-timing-ot](http://bit.ly/event-timing-ot)
-and select the Event Timing feature. And of course, [start exploring](https://developers.google.com/web/tools/chrome-user-experience-report/getting-started)
+and select the Event Timing feature. And of course, [start exploring](/docs/crux/)
 the dataset for interesting insights into the state of interactivity on the web.
 This is still an experimental metric, so please give us your feedback and share
 your analysis on the [Chrome UX Report discussion group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report)

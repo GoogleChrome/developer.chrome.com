@@ -26,8 +26,8 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
-  "deprecations": {
-    "title": "i18n.tags.deprecations"
+  "deprecations-removals": {
+    "title": "i18n.tags.deprecations-removals"
   },
   "device-characteristics": {
     "title": "i18n.tags.device-characteristics"
@@ -76,9 +76,6 @@
   },
   "progressive-web-apps": {
     "title": "i18n.tags.progressive-web-apps"
-  },
-  "removals": {
-    "title": "i18n.tags.removals"
   },
   "security": {
     "title": "i18n.tags.security"

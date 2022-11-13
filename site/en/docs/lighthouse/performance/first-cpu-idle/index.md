@@ -82,14 +82,14 @@ This table shows how to interpret your First CPU Idle score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your First CPU Idle score
 
 See [How to improve your TTI score][tti]. The strategies for improving First CPU Idle are
 largely the same as the strategies for improving TTI.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

@@ -50,7 +50,7 @@ You can read more about the tool and the improvements it introduced in the Webma
 
 ## Linking components to a structured data source
 
-The code for the demo and for the web components used to build it is on [Github](https://github.com/googlearchive/structured-data-web-components). Let’s look at the `combined-demo.html` page [source code](https://github.com/googlearchive/structured-data-web-components/tree/master/demo).
+The code for the demo and for the web components used to build it is on [GitHub](https://github.com/googlearchive/structured-data-web-components). Let’s look at the `combined-demo.html` page [source code](https://github.com/googlearchive/structured-data-web-components/tree/master/demo).
 
 As a first step, we embed the data in the page using a JSON-LD script:
 
@@ -105,7 +105,7 @@ To sum up, JSON-LD and schema.org combined with the web components technology en
 
 ## Create your own components
 
-You can try out [the examples on Github](https://github.com/googlearchive/structured-data-web-components) or read the Polymer’s guide on [creating reusable components](https://polymer-library.polymer-project.org/1.0/docs/tools/reusable-elements) to start writing your own.
+You can try out [the examples on GitHub](https://github.com/googlearchive/structured-data-web-components) or read the Polymer’s guide on [creating reusable components](https://polymer-library.polymer-project.org/1.0/docs/tools/reusable-elements) to start writing your own.
 Check the [Structured Data documentation](https://developers.google.com/structured-data/) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
 
 Consider giving us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) to show off custom elements you've built!

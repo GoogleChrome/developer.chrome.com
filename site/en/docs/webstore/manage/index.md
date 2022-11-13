@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2021-10-05
+updated: 2022-11-02
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -10,7 +10,7 @@ description: >
 This page describes how to manage an extension or theme ("item") that was previously submitted to
 the Chrome Web Store.
 
-## About the lifecycle of an item in the Chrome Web Store 
+## About the lifecycle of an item in the Chrome Web Store
 
 All Chrome Web Store items go through an automated [review process][cws-review]. In some instances a manual review
 is required, especially when sensitive permissions are requested. For this reason review times
@@ -20,7 +20,7 @@ it's important to keep track of your item's status. See the lifecycle diagram be
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/yakIoAzWEchO8urosQLs.png", alt="Diagram of lifecycle of a Chrome Web Store item", width="800", height="177" %}
 
 ## Check your item's status
- 
+
 The status of your item appears in the [developer dashboard][dev-dashboard] next to each item. The
 status can be Published, Pending, Rejected, or Taken Down.
 
@@ -31,7 +31,7 @@ To stay informed of your item's status, you can:
 
 -  **Enable email notifications**. There are mandatory emails like take down or rejection
    notifications that are enabled by default. To receive notification when your item is published or
-   staged, you can enable email notifications in the Account page. 
+   staged, you can enable email notifications in the Account page.
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/FgPIwRl3QEbNowNV1zRn.png", alt="How to enable
     email notifications", width="658", height="219" %}
@@ -56,11 +56,11 @@ Status Tab", width="700", height="276" %}
 If you have been informed about a violation and you do not rectify your item will be taken down. See
 [Violation enforcement][enforcement] for more details.
 
-{% Aside %} 
+{% Aside %}
 
 To request further clarification on the reasons for the take down or appeal the decision
 contact [Chrome Web Store Developer Support][cws-support]. For more examples and instructions on how
-you can remedy the problem check the [Troubleshooting guide][troubleshooting]. 
+you can remedy the problem check the [Troubleshooting guide][troubleshooting].
 
 {% endAside %}
 
@@ -119,9 +119,10 @@ Users will be able to communicate with you using the **Support** tab of your sto
 
 ### Using the User Support tab {: #user-support-tab }
 
-First, you must enable user feedback in the developer console Account setting page.
+Having a Support section on your extension's Chrome Web Store page allows users to easily report issues and suggest new features separately from leaving a review. To enable user feedback on your extension, the Visibility option (located in the Support tab area) must be switched on.   
+The Support Visibility option switch is located in the Chrome Web Store Developer Dashboard, in the Support Tab section of Account Options.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/7K825tSAz4wbXJpjGYj2.png", alt="Visibility option", width="800", height="239" %}
 
 In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
@@ -179,8 +180,8 @@ statistics chart", width="800", height="299" %}
 ### Daily installs and uninstalls
 
 You can track customer acquisition and churn using these reports:
-- Track acquisition using the daily install report. 
-- Monitor user churn using the daily uninstalls analytics. 
+- Track acquisition using the daily install report.
+- Monitor user churn using the daily uninstalls analytics.
 
 These numbers include new and returning
   users. You can configure this data by country, language, operating system, or time period using
@@ -214,7 +215,7 @@ analytics id", width="787", height="121" %}
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
-[dev-policies]: /docs/webstore/program_policies
+[dev-policies]: /docs/webstore/program-policies
 [enforcement]: /docs/webstore/review-process/#enforcement
 [support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/

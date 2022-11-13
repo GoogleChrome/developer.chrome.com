@@ -10,6 +10,9 @@ jobs:
     env:
       # Increase RAM limit, and make uncaught exceptions crash (default in 16+).
       NODE_OPTIONS: --max_old_space_size=4096 --unhandled-rejections=strict
+      # Make sure we check all translations in our GH Action presubmit.
+      # See https://github.com/GoogleChrome/developer.chrome.com/issues/3029
+      ELEVENTY_INCLUDE_TRANSLATED: true
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -66,7 +69,6 @@ jobs:
         run: npm run lint:scss
 
       - name: Build External
-        if: ${{ steps.filter.outputs._external == 'true' }}
         run: npm run build-external
 
       - name: Build Eleventy

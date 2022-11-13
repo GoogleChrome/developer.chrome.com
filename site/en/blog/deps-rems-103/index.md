@@ -8,12 +8,11 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/e4rTEZiq12OlwkvB9WQH.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-103
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 103 beta was released on May 26, 2022 and is expected to become the
 stable version in late June, 2022.
@@ -36,4 +35,4 @@ The Battery Status API is [no longer supported on insecure contexts](https://chr
 
 Given the removal of plugins from the web platform, and the relative lack of use of `<param>`, it is being [removed from the web platform](https://chromestatus.com/feature/6283184588193792).
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

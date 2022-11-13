@@ -210,3 +210,5 @@ they were scheduled to be sent soon.
 ## Attribution Reporting: all resources
 
 See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+
+{% Partial 'privacy-sandbox/ar-get-updates.njk' %}

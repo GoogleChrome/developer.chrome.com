@@ -6,6 +6,8 @@ updated: 2018-05-14
 description: Reference documentation for the storage property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 Unlike the `local` and `sync` storage areas, the `managed` storage area requires its structure to be
 declared as [JSON Schema][1] and is strictly validated by Chrome. This schema must be stored in a
 file indicated by the `"managed_schema"` property of the `"storage"` manifest key and declares the

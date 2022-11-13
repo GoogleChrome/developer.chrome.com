@@ -172,6 +172,6 @@ extension removes data on their behalf.
 
 Samples for the `browsingData` API are available [on the samples page][3].
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: https://chrome.google.com/webstore/detail/aknpkdffaafgjchaibgeefbgmgeghloj
 [3]: /docs/extensions/mv2/samples#search:browsingData

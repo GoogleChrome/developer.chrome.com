@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Topics API: experiment and participate'
 subhead: >
-  Enable interest-based advertising, without having to resort to tracking the sites a user visits.
+  Quick guide to implement and test the API. Access topics with JavaScript and share your feedback.
 description: >
- A proposal for a mechanism to enable interest-based advertising without having to resort to tracking the sites a user visits.
+  Quick guide to implement and test the API. Access topics with JavaScript and share your feedback.
 date: 2022-03-31
 updated: 2022-04-19
 authors:

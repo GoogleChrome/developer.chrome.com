@@ -32,7 +32,7 @@ To set a line-of-code breakpoint in DevTools:
 
 1.  Click the **Sources** tab.
 2.  Open the file containing the line of code you want to break on.
-3.  Go the line of code.
+3.  Go to the line of code.
 4.  To the left of the line of code is the line number column. Click on it. A blue icon appears on
     top of the line number column.
 
@@ -61,7 +61,7 @@ To set a conditional line-of-code breakpoint:
 
 1.  Click the **Sources** tab.
 2.  Open the file containing the line of code you want to break on.
-3.  Go the line of code.
+3.  Go to the line of code.
 4.  To the left of the line of code is the line number column. Right-click it.
 5.  Select **Add conditional breakpoint**. A dialog displays underneath the line of code.
 6.  Enter your condition in the dialog.
@@ -99,7 +99,7 @@ children.
 To set a DOM change breakpoint:
 
 1.  Click the **Elements** tab.
-2.  Go the element that you want to set the breakpoint on.
+2.  Go to the element that you want to set the breakpoint on.
 3.  Right-click the element.
 4.  Hover over **Break on** then select **Subtree modifications**, **Attribute modifications**, or
     **Node removal**.
@@ -170,16 +170,14 @@ uncaught exception.
 2.  Click **Pause on exceptions**
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ko2qtw41xR12rOnCfQzt.png", alt="Pause on exceptions", width="28", height="28" %}.
     It turns blue when enabled.
-
-    {% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
-    **Figure 8**: The **Pause on exceptions** button
-
+    <figure>{% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
+    <figcaption><strong>Figure 8</strong>: The <strong>Pause on exceptions</strong> button</figcaption>
+    </figure>
 3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
     exceptions, in addition to uncaught ones.
-
-{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
-
-**Figure 9**: Paused on an uncaught exception
+    <figure>{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
+    <figcaption><strong>Figure 9</strong>: Paused on an uncaught exception</figcaption>
+    </figure>
 
 ## Function breakpoints {: #function }
 

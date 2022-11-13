@@ -17,6 +17,8 @@ tags:
 
 Emulate various CSS media features with this reference of emulation options on the **Rendering** tab.
 
+{% YouTube id='gOkM1L6azEI' %}
+
 ## Emulate CSS media feature `prefers-color-scheme`
 
 The [`prefers-color-scheme` CSS media feature][7] indicates if the user prefers light or dark color scheme.

@@ -183,7 +183,7 @@ chrome.permissions.remove({
 });
 ```
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv2/declare_permissions#manifest
 [3]: #property-Permissions-origins
 [4]: /docs/extensions/debugger

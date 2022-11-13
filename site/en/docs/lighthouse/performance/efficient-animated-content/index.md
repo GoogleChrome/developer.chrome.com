@@ -15,7 +15,7 @@ achieved by converting these GIFs to video:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/MTfWMspCIMjREn2rpwlG.png", alt="A screenshot of the Lighthouse Use video formats for animated content audit", width="800", height="235" %}
 </figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Why you should replace animated GIFs with video
 

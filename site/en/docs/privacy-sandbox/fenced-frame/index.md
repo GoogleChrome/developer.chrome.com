@@ -17,7 +17,7 @@ updated: 2022-05-10
 
 This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
-*  Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M105. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
+*  Experiment with fenced frames in the [Privacy Sandbox unified origin trial](/origintrials/#/view_trial/771241436187197441) from M102 to M107. Learn how to [set up the origin trial](/blog/privacy-sandbox-unified-origin-trial/) and [join us for a feedback/discussion](https://github.com/WICG/fenced-frame/issues).
 *  [Fenced frames proposal](https://github.com/shivanigithub/fenced-frame)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064) 
 *  This feature is [available behind a Chrome flag](#try-fenced-frames).
@@ -133,8 +133,14 @@ publisher&mdash;aren't available in fenced frames.
 
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
-(such as a browser tab). The characteristics of fenced frames are further
-detailed in the [explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
+(such as a browser tab). Although a fenced frame in [certain modes](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md#fenced-frame-modes)
+(such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
+group), the frame cannot access unpartitioned storage or cookies. An
+`opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
+partition.
+
+The characteristics of fenced frames are further detailed in the
+[explainer](https://github.com/shivanigithub/fenced-frame/blob/master/explainer/README.md).
 
 ### How do fenced frames compare to iframes? {: #compare }
 
@@ -147,9 +153,9 @@ to existing iframe features.
 | Embedded content can access embedding context DOM | Yes | No |
 | Embedding context can access embedded content DOM | Yes | No | 
 | Observable attributes, such as `name` | Yes | No |
-| URLs (`http://example.com`) | Yes | Yes (mode-dependent) |
+| URLs (`http://example.com`) | Yes | Yes ([mode-dependent](https://github.com/WICG/fenced-frame/blob/master/explainer/modes.md)) |
 | Browser-managed opaque source (`urn:uuid`) | No | Yes |
-| Access to unpartitioned storage | No | Yes |
+| Access to cross-site data | No | Yes (mode-dependent) |
 
 Fenced frames support fewer external communication options to preserve privacy.
 

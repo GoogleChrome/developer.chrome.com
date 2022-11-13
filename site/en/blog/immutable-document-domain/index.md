@@ -6,7 +6,7 @@ description: >
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
-updated: 2022-04-28
+updated: 2022-07-25
 authors:
   - agektmr
 tags:
@@ -18,6 +18,8 @@ alt: >
 
 **Updates**
 
+- **July 25, 2022**: Updated timeline—`document.domain` setter will be removed
+    by default starting from Chrome 109.
 - **February 4, 2022**: Updated with the new timeline - we'll show a warning in
   the Issues panel starting from Chrome 100, removing `document.domain` setter
   by default starting from Chrome 106.
@@ -36,7 +38,7 @@ was designed to get or set the origin's hostname.
 
 On Chrome, websites will be unable to set `document.domain`. You will need to
 use alternative approaches, such as `postMessage()` or the Channel Messaging
-API, to communicate cross-origin. We're targeting Chrome 106 to ship this change
+API, to communicate cross-origin. We're targeting Chrome 109 to ship this change
 at the earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
@@ -118,7 +120,7 @@ To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome plans to make `document.domain` immutable in Chrome 106.
+Chrome plans to make `document.domain` immutable in Chrome 109.
 
 ### How do I know if my site is affected?
 

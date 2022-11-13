@@ -20,7 +20,7 @@ storage capabilities as the [localStorage API][local-storage] with the following
 
 ## Manifest
 
-You must declare the "storage" permission in the [extension manifest][api-tabs] to use the storage
+You must declare the "storage" permission in the [extension manifest][doc-manifest] to use the storage
 API. For example:
 
 ```json
@@ -203,7 +203,7 @@ function getAllStorageSyncData() {
 ```
 
 [api-storage]: /docs/extensions/mv2/manifest/storage
-[api-tabs]: /docs/extensions/mv2/tabs
+[doc-manifest]: /docs/extensions/mv3/manifest
 [incognito]: /docs/extensions/mv2/manifest/incognito
 [local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/

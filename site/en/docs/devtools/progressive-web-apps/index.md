@@ -3,8 +3,9 @@ layout: "layouts/doc-post.njk"
 title: "Debug Progressive Web Apps"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2016-07-25
-#updated: YYYY-MM-DD
+updated: 2022-08-30
 description:
   "Use the Application panel to inspect, modify, and debug web app manifests, service workers, and
   service worker caches."
@@ -15,9 +16,13 @@ tags:
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
 service worker caches.
 
-Related Guides:
+[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology. 
+PWAs offer similar capabilities to iOS, Android, and desktop apps. They are:
 
-- [Progressive Web Apps][1]
+- Reliable even in unstable network conditions.
+- Installable to launch surfaces of operating systems, such as the **Applications** folder on Mac OS X,
+  the **Start** menu on Windows, and the home screen on Android and iOS.
+- Show up in activity switchers, device search engines such as Spotlight, and in content sharing sheets.
 
 This guide only discusses the Progressive Web App features of the **Application** panel. If you're
 looking for help on the other panes, check out the last section of this guide, [Other Application
@@ -25,7 +30,7 @@ panel guides][2].
 
 ## Summary {: #summary }
 
-- Use the **Manifest** pane to inspect your web app manifest and trigger Add to Homescreen events.
+- Use the **Manifest** pane to inspect your web app manifest.
 - Use the **Service Workers** pane for a whole range of service-worker-related tasks, like
   unregistering or updating a service, emulating push events, going offline, or stopping a service
   worker.
@@ -35,54 +40,70 @@ panel guides][2].
 
 ## Web app manifest {: #manifest }
 
-If you want your users to be able to add your app to their mobile homescreens, you need a web app
-manifest. The manifest defines how the app appears on the homescreen, where to direct the user when
-launching from homescreen, and what the app looks like on launch.
-
-Related Guides:
-
-- [Improve user experiences with a Web App Manifest][3]
-- [Using App Install Banners][4]
+If you want your users to be able to add your app to their the **Applications** folder on Mac OS X,
+the **Start** menu on Windows, and the home screen on Android and iOS, you need a [web app
+manifest][3]. The manifest defines how the app appears on the home screen, where to direct the user when
+launching from home screen, and what the app looks like on launch.
 
 Once you've got your manifest set up, you can use the **Manifest** pane of the **Application** panel
 to inspect it.
 
-{% Img src="image/admin/lcj1XOPDeY6HMzWOE12x.png", alt="manifest pane", width="602", height="541" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/whsOfT3UtuAXpAbxt9kX.png", alt="The Manifest pane.", width="800", height="486" %}
 
 - To look at the manifest source, click the link below **App Manifest** label
   (`https://airhorner.com/manifest.json` in the screenshot above).
-- Press the **Add to homescreen** button to simulate an Add to Homescreen event. Check out the next
-  section for more information.
 - The **Identity** and **Presentation** sections just display fields from the manifest source in a
-  more user-friendly display.
+  more user-friendly way.
+- The **Protocol Handlers** section lets you to test the URL protocol handler registration of your PWA with a click of a button.
+  To learn more, see [Test URL protocol handler registration](#test-protocol-handler).
 - The **Icons** section displays every icon that you've specified.
 
-### Simulate Add to Homescreen events {: #add-to-homescreen }
+### Trigger installation {: #trigger-installation }
 
-A web app can only be added to a homescreen when the site is visited at least twice, with at least
-five minutes between visits. While developing or debugging your Add to Homescreen workflow, this
-criteria can be inconvenient. The **Add to homescreen** button on the **App Manifest** pane lets you
-simulate Add to Homescreen events whenever you want.
+Chrome makes it possible for you to enable and promote the installation of your PWA directly within its user interface.
+Learn [How to provide your own in-app installation experience][4].
 
-You can test out this feature with the [Google I/O 2016 progressive web app][5], which has proper
-support for Add to Homescreen. Clicking on **Add to Homescreen** while the app is open prompts
-Chrome to display the "add this site to your shelf" banner, which is the desktop equivalent of the
-"add to homescreen" banner for mobile devices.
+To trigger the installation flow of your PWA:
 
-{% Img src="image/admin/dcHC145P0QVJTCapLWFd.png", alt="add to desktop shelf", width="800", height="611" %}
+1. Open the PWA's landing page in Chrome.
+1. On the right side of the address bar at the top, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ewOETYv1jmGaqDKl0363.svg", alt="Install.", width="24", height="24" %} **Install**.
 
-**Tip**: Keep the **Console** drawer open while simulating Add to Homescreen events. The Console
-tells you if your manifest has any issues and logs other information about the Add to Homescreen
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jiBO2oDEU5TYKKBNfuMc.png", alt="The Install button.", width="800", height="577" %}
+
+1. Follow the on-screen instructions.
+
+{% Aside 'gotchas' %}
+Keep the **Console** drawer open when you trigger installation. The **Console**
+tells you if your manifest has any issues and logs other information about the installation
 lifecycle.
+{% endAside %}
 
-The **Add to Homescreen** feature cannot yet simulate the workflow for mobile devices. Notice how
-the "add to shelf" prompt was triggered in the screenshot above, even though DevTools is in Device
-Mode. However, if you can successfully add your app to your desktop shelf, then it'll work for
+The **Install app** feature cannot simulate the workflow for mobile devices. Notice how
+the desktop Chrome browser displays the installation button in the address bar, even though DevTools is in [Device Mode](/docs/devtools/device-mode/).
+However, if you can successfully add your app to your desktop, then it'll work for
 mobile, too.
 
 If you want to test out the genuine mobile experience, you can connect a real mobile device to
-DevTools via \[remote debugging\][remote debugging][6], and then click the **Add to Homescreen**
-button (on DevTools) to trigger the "add to homescreen" prompt on the connected mobile device.
+DevTools via [remote debugging][6]. To trigger the installation on the connected mobile device, open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="22", height="22" %} three-dot menu and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YwNSnnzuZ3dJwtVhcC4I.svg", alt="Install app.", width="24", height="24" %} **Install app**.
+
+### Test URL protocol handler registration {: #test-protocol-handler }
+
+PWAs can handle links that use a specific protocol for a more integrated experience.
+To learn how to create a handler, see [URL protocol handler registration for PWAs](https://web.dev/url-protocol-handler/).
+
+To test your handler:
+
+1. [Open DevTools](/docs/devtools/open/) on the landing page of your PWA. For example, check out this [demo PWA](https://protocol-handler.glitch.me/).
+1. From the demo page, install the PWA and reload the app after the installation. The browser has now registered the PWA as a handler for the `web+coffee` protocol.
+1. In the **Application** > **Manifest** > **Protocol Handler** section, enter the URL you want the handler to test and click **Test protocol**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eV8j54Q0sK8Rf8FbVx2Y.png", alt="Testing the handler.", width="800", height="415" %}
+   In this example, the handler can process `americano`, `chai`, and `latte-macchiato`.
+1. When Chrome asks you if it can open the app, confirm by clicking **Open Protocol Handler**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5erFmV4W0QaZl9ey1d8A.png", alt="Open the app.", width="800", height="524" %}
+1. In the next dialog, allow the app to handle `web+coffee` links.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wJbd9nGPkLCap9423xwk.png", alt="Allow to handle links.", width="500", height="300" %}
+
+If the handler successfully processes the link, you'll see an image of a coffee cup opened in the app.
 
 ## Service workers {: #service-workers }
 

@@ -27,8 +27,7 @@ updated: 2017-12-14
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - chrome64
-  - deprecations
-  - removals
+  - deprecations-removals
 
 
 

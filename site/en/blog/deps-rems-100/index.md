@@ -8,12 +8,11 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/v9Z37wMz90insDTB56fx.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-100
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 100 beta was released on March 3, 2022 and is expected to become the
 stable version in late March, 2022.
@@ -25,4 +24,4 @@ Chromium 100 will be the last version to support an unreduced User-Agent string 
 This is part of a strategy to replace use of the User-Agent string with the
 new User-Agent Client Hints API. To learn about User-Agent Client Hints, see [Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) and [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/).
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

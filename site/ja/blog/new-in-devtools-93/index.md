@@ -18,7 +18,7 @@ tags:
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
 
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -88,7 +88,7 @@ Attribution Reporting API のエラーが **Issues** タブでレポートされ
 <!--
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 -->
-[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
+[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 
@@ -246,5 +246,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

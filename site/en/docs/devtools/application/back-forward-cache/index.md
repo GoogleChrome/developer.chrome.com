@@ -4,7 +4,7 @@ title: "Test back/forward cache"
 authors:
   - sofiayem
 date: 2022-05-04
-#updated: YYYY-MM-DD
+updated: 2022-07-21
 description: "Ensure your pages are optimized for back/forward caching."
 tags:
   - test
@@ -42,18 +42,25 @@ If the back/forward cache works for your page with no issues, you'll see the fol
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kf5vmtKRZpe4SMV4Gp8G.png", alt="Successfully served from back/forward cache", width="800", height="405" %}
 
-Otherwise, you'll see a list of issues explained in the next section.
+Otherwise, you'll see a list of issues.
 
-## Identify and resolve issues that may prevent caching {: #identify-issues }
+To find out which issues affect which frames, expand the **Frames** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand icon.", width="24", height="24" %} section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tZ0xe08gxc7VKQywRRhS.png", alt="Expanded Frames section.", width="800", height="474" %}
+
+## Resolve issues that prevent caching {: #resolve-issues }
 
 If your page isn't eligible for back/forward caching, the **Back/forward cache** tab shows you a list with three types of causes:
 
-<div class="elevation--2" style="margin-top: 20px; margin-bottom: 20px;">
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NJA0g2CuAfmihkuOomyQ.png", alt="Not eligible for back/forward cache", width="800", height="583" %}</div>
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vzkDhFw87Ra9vnpDTu0a.png", alt="Not eligible for back/forward cache.", width="800", height="667" %}
 
 - **Actionable**. You can fix these issues to enable caching. For example, [stop using `unload` events](https://web.dev/bfcache/#never-use-the-unload-event).
 - **Pending Support**. Chrome doesn't support these features yet, so they prevent caching. However, once supported, Chrome removes these limitations.
 - **Not Actionable**. You can't fix these issues on this page. Something that is outside the page's control prevents caching.
+
+To find out which frame is the blocker, expand the corresponding section under the issue's description.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XFqCj82S8pAPaWlzJBfB.png", alt="Affected frames.", width="800", height="333" %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/API/Cache

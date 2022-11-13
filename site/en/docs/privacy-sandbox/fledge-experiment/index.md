@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
-updated: 2022-04-19
+updated: 2022-08-12
 authors:
   - samdutton
 ---
@@ -47,11 +47,11 @@ implementation status of the FLEDGE API.
    and parameters.
    * The [source code](https://github.com/JackJey/fledge-demo) for the [FLEDGE demo](https://fledge-demo.glitch.me)
    provides a starting point for your own experimentation.
-   * [Debug FLEDGE worklets](/blog/fledge-api/#debug-fledge-worklets)
+   * [Debug FLEDGE worklets](/blog/fledge-api/#debugging)
    explains how to use Chrome DevTools to help debug FLEDGE bidding and auction code.
-   * The [developer guide](/blog/fledge-api/#what-features-are-supported-behind-these-feature-flags-in-the-latest-version-of-chrome)
-   details the features supported in the latest version of Chrome. [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)
-   about feature support and constraints.
+   * The [developer guide](/blog/fledge-api) details the features supported in the latest version of Chrome. 
+   [The API explainer provides more detail](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary)about feature 
+   support and constraints.
 
 ## Get support
 

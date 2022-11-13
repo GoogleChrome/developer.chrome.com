@@ -76,11 +76,12 @@ state](#developer-recommendations-for-each-state) for the exceptions).
 Perhaps the easiest way to explain the Page Lifecycle states &mdash; as well as
 the events that signal transitions between them &mdash; is with a diagram:
 
-<a href="/web/updates/images/2018/07/page-lifecycle-api-state-event-flow.png">
+
   <figure>
-    {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/Wx4Sfx3jsX2uOES5TTKh.png", alt="Page Lifecycle API state and event flow.", width="800", height="400" %}
+<a href="https://wd.imgix.net/image/kheDArv5csY6rvQUJDbWRscckLr1/Hs3H9gK98YT0pvvU3k25.png">
+    {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/Hs3H9gK98YT0pvvU3k25.png", alt="Page Lifecycle API state and event flow.", width="800", height="541" %}
+    </a>
   </figure>
-</a>
 
 ### States
 

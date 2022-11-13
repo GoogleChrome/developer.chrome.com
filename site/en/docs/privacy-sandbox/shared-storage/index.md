@@ -6,222 +6,152 @@ subhead: >
 description: >
   Allow access to unpartitioned cross-site data in a secure environment.
 date: 2022-04-25
-updated: 2022-06-06
+updated: 2022-11-08
 authors:
   - alexandrawhite
   - kevinkiklee
 ---
-
 ## Implementation status
 
-This document outlines a new proposal for unpartitioned storage: the Shared
-Storage API.
+This document outlines a new proposal for unpartitioned, cross-site storage: the Shared Storage API.
 
-*  The [Shared Storage proposal](https://github.com/pythagoraskitty/shared-storage)
-   has entered [public discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  We are [implementing this API in Chrome](#try-the-shared-storage-api).
-   *  The initial origin trial will likely only include the `selectURL` API
-	 function. Support for the Private Aggregation API is planned shortly after.
-   *  The `selectURL` API is available for testing in Chrome Canary as of M104.
-*  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline)
-   provides implementation timings for the Shared Storage API and other
-   Privacy Sandbox proposals.
+*   The [Shared Storage proposal](https://github.com/WICG/shared-storage) has entered [public discussion](https://github.com/WICG/shared-storage/issues).
+*   We are implementing this API in Chrome, and the [live demo is available](#try-the-shared-storage-api).
+    *   The initial origin trial opened with the URL selection output,  from Chrome version 105 (Canary, Dev, Beta). 
+    *   Support for the Private Aggregation output gate is available from Chrome version 107 (Canary, Dev).
+*   [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timings for the Shared Storage API and other Privacy Sandbox proposals.
 
 ## Why do we need this API?
 
-To prevent cross-site user tracking, browsers are 
-[partitioning](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)
-all forms of storage (cookies, localStorage, caches, etc). However, there are
-a number of legitimate use cases that rely on unpartitioned storage which
-would be impossible without help from new web APIs. For example, a publisher
-may want to measure reach of an ad campaign across different sites, while
-preserving individual user privacy and identity.
+To prevent cross-site user tracking, browsers are [partitioning](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) all forms of storage (cookies, localStorage, caches, etc). However, there are a number of legitimate use cases that rely on unpartitioned storage which would be impossible without help from new web APIs. For example, a content producer may want to measure reach across different sites, without relying on cross-site identifiers.
 
-The proposed Shared Storage API will allow sites to store and access
-unpartitioned cross-site data. This data must be read in a secure environment
-to prevent leakage. This API will work in combination with other proposals,
-such as [Trust Tokens](/docs/privacy-sandbox/trust-tokens/),
-[Fenced Frames](/docs/privacy-sandbox/fenced-frame/), and others.
+The Shared Storage API allows sites to store and access unpartitioned cross-site data. This data must be read in a secure environment to prevent leakage. 
 
-## Use cases for Shared Storage
+### Who is this for?
 
-The Shared Storage API intends to support many use cases, replacing several
-existing uses for third-party cookies. This may include:
+There are many different kinds of companies which may benefit from using the Shared Storage API. For example:
 
-*  Recording aggregated statistics, such as demographics, reach, frequency
-   measurement, and conversion measurement with the
-   [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api)
-*  Frequency capping
-*  Lift experiments
-*  A/B experimentation
+*   Adtechs could measure campaign reach, set frequency caps, and rotate creatives, all of which currently rely on third-party cookies.
+*   Payments providers could determine if a user is an existing customer and tailor the checkout experience.
+*   Web security companies can build custom logic to flag suspicious or dangerous behavior.
 
-The proposal intends to create a general purpose API which supports many
-possible future use cases. This allows for further experimentation and change,
-to grow alongside the web ecosystem.
+Is your company looking for cross-site storage solutions that haven’t yet been addressed? [Share your use case](https://github.com/WICG/shared-storage/issues).
 
-## How will shared storage work?
+### Use cases
 
-Shared storage will allow you to make informed decisions based on cross-site
-data, without sharing user information (such as browser history or other
-personal details) with an embedding site. You can write to  shared storage at
-any time, like other JavaScript storage APIs (like localStorage or indexedDB).
-Unlike the other storage APIs, you can only read the shared storage values in
-a secure environment, known as a shared storage worklet.
+The Shared Storage API intends to support many use cases, replacing several existing uses for third-party cookies. This may include:
 
-The shared storage data can be used for:
+<table class="with-heading-tint width-full">
+  <thead>
+  <tr>
+   <th>Use case</th>
+   <th>Description</th>
+   <th>Output gate</th>
+  </tr>
+  </thead>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/frequency-control/">Frequency Controls</a></strong>
+   </td>
+   <td>The opposite side of the pendulum to effective frequency is oversaturation, showing users the same content too often leading to poor user experience.  To balance and control for the number of views, organizations can record a user’s view counts in shared storage and display different content once the user has reached a predefined and customizable limit. 
+   </td>
+   <td>URL Selection
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/ab-testing/">A/B testing</a></strong>
+   </td>
+   <td>You can assign a user to an experiment group, then store that group in shared storage to be accessed cross-site. 
+   </td>
+   <td>URL Selection
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/creative-rotation/">Creative rotation</a></strong>
+   </td>
+   <td>You can store the creative rotation mode, and other metadata, to rotate the creatives across different sites.
+   </td>
+   <td>URL Selection
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/known-customer/">Known customer for payment provider</a></strong>
+   </td>
+   <td>You can store whether the user has registered on your site into shared storage, then render a different element based on that stored status.
+   </td>
+   <td>URL Selection
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Anti-abuse mitigation</strong>
+   </td>
+   <td>Anti-abuse, anti-fraud, and web security organizations often use proprietary techniques to detect malicious users, whether automated bots or real humans trying to cause harm.  It’s possible to test many different strategies here, whether it’s using URL Selection output gate to encode a user trustworthiness rating or using the Private Aggregation output gate to build datasets for anomaly detection.  
+   </td>
+   <td>URL Selection, Private Aggregation API
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/unique-reach/">Unique Reach Reporting</a></strong>
+   </td>
+   <td>Many content producers and advertisers often want to know how many unique people saw their content.  You can use shared storage to report on the first time a user saw your ad, embedded video, publication, and prevent duplicative counting of that same user on a different site, giving you an aggregated noisy report of your approximate unique reach. 
+   </td>
+   <td>Private Aggregation API
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/user-demographics">User Demographics Reporting</a></strong>
+   </td>
+   <td>Content producers often want to understand the demographics of their audience.  You can use shared storage to record user demographic data in a context where you have it, such as your 1P site, and use aggregated reporting to report on it across many other sites, such as embedded content. 
+   </td>
+   <td>Private Aggregation API
+   </td>
+  </tr>
+  <tr>
+   <td><strong><a href="/docs/privacy-sandbox/shared-storage/k-freq-reach">K+ Frequency Reach Reporting</a></strong>
+   </td>
+   <td>Sometimes described as “effective frequency”, there is often a minimum number of views before a user will recognize or recall certain content (often in the context of advertisement views). You can use Shared Storage to build reports of unique users that have seen a piece of content at least K times. 
+   </td>
+   <td>Private Aggregation API
+   </td>
+  </tr>
+</table>
 
-*  [**URL selection**](#url-selection): you can run a worklet script to select
-   a URL from a provided list, based on the stored data, and then render that
-   URL in a fenced frame.  The returned URL will be an opaque URL, which means
-   the developer and other viewers of the code won't know which URL was
-   selected.
-*  [**Noisy aggregation of cross-site data**](#aggregated-data): you will be
-   able to run a worklet script to send your data through the
-   [Private Aggregation API](https://github.com/alexmturner/private-aggregation-api),
-   a Privacy Sandbox proposal, which returns a privacy-preserving report. 
+The proposal intends to create a general purpose API which supports many possible future use cases. This allows for further experimentation and change, to grow alongside the web ecosystem.
 
-### Example: URL selection for frequency capping {: #url-selection }
+## How does shared storage work?
 
-To select and create an opaque URL, register a worklet module to read shared
-storage data. The worklet class receives a list of up to eight URLs and then
-returns the index of the chosen URL. 
+Shared storage allows you to make informed decisions based on cross-site data, without sharing user information (such as browser history or other personal details) with an embedding site or exfiltrating data to your own servers.
 
-When the client calls `sharedStorage.selectURL()`, the worklet
-executes and returns an opaque URL to be rendered into a fenced frame.
+You can write to shared storage at any time, like other JavaScript storage APIs (like localStorage or indexedDB). Unlike the other storage APIs, you can only read the shared storage values in a secure environment, known as a shared storage worklet. 
 
-Let's say you want to render an ad based on the advertiser's frequency cap
-(the maximum number of impressions for a user on a single ad). The frequency
-cap value is stored in shared storage. The shared storage worklet reads the
-values in shared storage, and decrements the value with each additional view.
-If there are available impressions left (the user has not hit their frequency
-cap), the ad is returned (index `1`). If not, the default URL is returned
-(index `0`).
+{% Aside 'key-term' %}
+A [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
+{% endAside %}
 
-In this example, the adtech creates two files:
+Worklets are where you add your business logic. Inside the worklet, you are allowed to read and process a value from Shared Storage, but you cannot directly return the exact value to the worklet caller. To extract useful information from the worklet, a set of “gates” are available. There are two gates available, but more may be added in the future. 
 
-*  `get-url.js` is the shared storage worklet, which evaluates the frequency
-   cap to determine which URL is returned for the ad creative.
-*  `ad-iframe.js` selects and renders the ad creative and is injected on a
-   publisher's website.
+Available Shared Storage API output gates: 
 
-#### `get-url.js`
-
-```javascript
-class SelectURLOperation {
-  async run(data, urls) {
-
-    // Read the frequency cap value in shared storage
-    const frequencycap = await this.sharedStorage.get('frequencycap');
-
-    // If no impressions remain, return the default URL
-    if (frequencyCap === 0) {
-      return 0;
-    }
-
-    // If there are available impressions, subtract 1 and return the ad URL
-    await this.sharedStorage.set('frequencycap', frequencycap - 1);
-    return 1;
-  }
-}
-
-// Register the operation
-register(
-   'select-url', SelectURLOperation
-);
-```
-
-#### `ad-iframe.js`
-
-```javascript
-// Set up the default and ad URLs
-const defaultUrl = new URL('https://default.example');
-const adUrl = new URL('[https://ad.example](https://ad.example)');
-
-// Register the worklet module
-await window.sharedStorage.worklet.addModule('get-url.js');
-
-// Set the frequency cap for this campaign, if it wasn't already set
-window.sharedStorage.set('frequencycap', 5, { ignoreIfPresent: true });
-
-// Select the URL from available options
-const opaqueUrl = await window.sharedStorage.selectURL(
-  'select-url', [defaultUrl, adUrl]
-);
-
-// Render the returned URL into an iframe or a fenced frame
-document.getElementById('example-iframe').src = opaqueUrl;
-```
-
-### Example: aggregation of cross-site data (ad campaign reach) {: #aggregated-data }
-
-You can also send that data to an aggregation service that measures the reach
-across sites, while protecting user privacy by aggregating data about users.
-
-For example, a consumer goods company runs an awareness ad campaign across
-multiple sites, to maximize the number of people who see their ad. The company
-wants to know their reach, how many unique users have seen the ad. In this
-example, the publisher creates two files: 
-
-*  `ad-iframe.js` should be embedded in the iframe, which calls to the shared
-   storage worklet and sends a report with the ad campaign ID.
-*  `reach.js`  is the shared storage worklet which sends the reach report to
-   be aggregated.
-
-#### `ad-iframe.js`
-
-```javascript
-await window.sharedStorage.worklet.addModule("reach.js");
-
-// Send a report to the shared storage worklet
-await window.sharedStorage.run("send-reach-report", {
-  data: {
-     "campaign-id": "1234"
-  }
-});
-```
-
-#### `reach.js`
-
-```javascript
-class SendReachReportOperation {
-  async run(data) {
-    const report_sent_for_campaign = "report-sent-" + data["campaign-id"];
-
-    // Compute reach for users who haven't previously had a report sent
-    // for this campaign.
-    // Users who previously triggered a report for this campaign, on a site
-    // other than the current one, will be skipped.
-    if (await this.sharedStorage.get(report_sent_for_campaign) === "yes") {
-      return;  // Don't send a report.
-    }
-
-    // The user agent sends the report to a default endpoint after a delay.
-    privateAggregation.sendHistogramReport({
-      bucket: data["campaign-id"];
-      value: 128,  // A predetermined fixed value; see Private Aggregation API explainer: Scaling values.
-   });
-
-   await this.sharedStorage.set(report_sent_for_campaign, "yes");
-  }
-}
-
-register("send-reach-report", SendReachReportOperation);
-```
+*   [**URL selection**](/docs/privacy-sandbox/use-shared-storage#url-selection): You can run a worklet script to select a URL from a provided list, based on the stored data, and then render that URL in a fenced frame.
+    *   For example: You may want to conduct A/B testing. You can assign a user to an experiment group when you see that user on your site, then store that group in shared storage to be accessed cross-site. Later, on another site, a frame (e.g., a payment button or ad creative) can be chosen to show the user based on the user’s experiment group stored in shared storage. 
+*   [**Noisy aggregation of cross-site data**](/docs/privacy-sandbox/use-shared-storage#aggregated-data): You can run a worklet to send  cross-site data through the [Private Aggregation API](/docs/privacy-sandbox/use-shared-storage#aggregated-data), which returns a [summary report](/docs/privacy-sandbox/attribution-reporting/summary-reports/). 
+    *   For example: You may want to know how many unique users saw your content across different sites.  Use shared storage to store the first time a user saw your ad, embedded video, publication, or other content. Then run a worklet with the Private Aggregation API to aggregate the data across all users’ first time views and generate an aggregated noisy report of your approximate unique reach. 
 
 ## Try the Shared Storage API
 
-Shared Storage API with Fenced Frames can be tested in Chrome 104 (version
-104.0.5086.0 or later) by enabling the **Privacy Sandbox Ads APIs experiment**
-flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+Shared Storage API for URL selection output gate and Private Aggregation output gate are available for testing.  URL selection can be tested in Chrome Canary/Dev/Beta M105+ and Private Aggregation API is available for testing in Chrome M107+ Canary and Dev. The API can be tested by enabling the \*\*Privacy Sandbox Ads APIs experiment\*\* flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png", alt="Set Privacy Sandbox Ads APIs experiment to enabled to use these APIs", width="744", height="124" %}
 
-## Engage and share feedback
+### Use the demo
 
-The shared storage proposal is under active discussion and subject to change
-in the future. If you try this API and have feedback, we'd love to hear it.
+A [demo is available](https://shared-storage-demo.web.app/), and you can review the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo). 
 
-*  **GitHub**: Read the
-   [proposal](https://github.com/pythagoraskitty/shared-storage), [raise questions and participate in discussion](https://github.com/pythagoraskitty/shared-storage/issues).
-*  **Developer support**: Ask questions and join discussions on the
-   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+This demo is constructed from the perspective of an advertiser, adtech, content distributor or other third party service that wants to store information across different publishers’ sites. In the demo, the same third party’s code will run on both \*\*Publisher A\*\* and \*\*Publisher B\*\* sites for each use case. Visit the publisher’s pages to see how the data is shared in a cross-site context.
+
+The demo contains use cases for URL selection and Private Aggregation.
+
+For the URL selection demo, [frequency control](/docs/privacy-sandbox/shared-storage/frequency-control), [creative rotation](/docs/privacy-sandbox/shared-storage/creative-rotation/), [known customer](/docs/privacy-sandbox/shared-storage/known-customer/), and [A/B testing](/docs/privacy-sandbox/shared-storage/ab-testing/) use cases are available.
+
+For the Private Aggregation demo, you can preview unique [reach measurement](/docs/privacy-sandbox/shared-storage/unique-reach), [demographics measurement](/docs/privacy-sandbox/shared-storage/user-demographics), and [K-frequency measurement](/docs/privacy-sandbox/shared-storage/k-freq-reach).
+
+{% Partial 'privacy-sandbox/shared-storage-engage.md' %}

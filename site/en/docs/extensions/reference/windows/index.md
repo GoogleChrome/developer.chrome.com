@@ -1,9 +1,6 @@
 ---
 api: windows
-extra_permissions_html:
-  The <code>chrome.windows</code> API can be used without declaring any permission. However, the <code>"tabs"</code> permission is required in order to populate the <code>url</code>, <code>pendingUrl</code>, <code>title</code>, and <code>favIconUrl</code> properties of <code><a href="../tabs/#type-Tab">Tab</a></code>.
 ---
-
 ## Manifest
 
 When requested, a [`windows.Window`][1] will contain an array of [`tabs.Tab`][2] objects. You must

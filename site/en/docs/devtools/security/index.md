@@ -89,7 +89,7 @@ shown when available.
 
 **Figure 6**. Main origin details
 
-[1]: https://web.dev/why-https
+[1]: https://web.dev/why-https-matters/
 [2]: /docs/devtools/open
 [3]: https://letsencrypt.org/
 [4]: https://web.dev/redirects-http/

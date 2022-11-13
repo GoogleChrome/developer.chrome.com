@@ -106,7 +106,7 @@ cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-toward
 ## Demo
 
 You can try various header options in this demo:
-[https://first-party-test.glitch.me](https://first-party-test.glitch.me)
+[https://cross-origin-isolation.glitch.me](https://cross-origin-isolation.glitch.me)
 
 ## FAQ
 

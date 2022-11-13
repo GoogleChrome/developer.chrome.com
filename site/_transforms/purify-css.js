@@ -25,11 +25,15 @@ const pathToCss = 'dist/css/main.css';
  */
 
 const purifyCss = async (content, outputPath) => {
-  if (
-    outputPath &&
-    outputPath.endsWith('.html') &&
-    !/data-style-override/.test(content)
-  ) {
+  // For dynamic content (e.g. serverless), outputPath is false.
+  if (outputPath) {
+    // outputPath exists, but it's not HTML content.
+    if (!outputPath.endsWith('.html')) {
+      return content;
+    }
+  }
+
+  if (content.length && !/data-style-override/.test(content)) {
     const before = fs.readFileSync(pathToCss, {
       encoding: 'utf-8',
     });

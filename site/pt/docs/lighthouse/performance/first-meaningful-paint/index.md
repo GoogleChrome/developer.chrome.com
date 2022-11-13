@@ -61,7 +61,7 @@ Esta tabela mostra como interpretar sua pontuação FMP:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação FMP
 
@@ -73,7 +73,7 @@ Para saber como medir quando a FMP realmente ocorre nos dispositivos dos usuári
 
 Consulte [Avaliação do desempenho de carregamento do Google na vida real com navegação e tempo de recursos](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/) para obter mais informações sobre como coletar métricas de usuários reais. A auditoria [Marcas e medidas de tempo do usuário do Lighthouse](/docs/lighthouse/performance/user-timings/) permite que você veja os dados de tempo do usuário em seu relatório.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

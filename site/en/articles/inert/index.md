@@ -104,4 +104,4 @@ Not all users can see all parts of a page at once. For example, users of screen 
 
 By default, `inert` blocks focus and click events. For assistive technologies, this also blocks tabbing and discoverability. The browser may also ignore page search and text selection in the element. 
 
-The default value of `inert` is true, unless defined as false. For nested attributes, the more specific application of inert is respected.
+The default value of `inert` is false.

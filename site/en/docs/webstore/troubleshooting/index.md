@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2021-09-30
+updated: 2022-05-26
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -666,7 +666,7 @@ Data][docs-dpp-limited-use] policy for additional information.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to `the user what data is being collected and how it will be handled. This
+- Prominently disclose to the user what data is being collected and how it will be handled. This
   information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
     - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
@@ -1167,32 +1167,32 @@ Code Readability Requirements:
 [api-tabs]: /docs/extensions/reference/tabs
 [blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
 [dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[docs-dpp-api-use]: /docs/webstore/program_policies/#api-use
-[docs-dpp-bullying]: /docs/webstore/program_policies/#bullying
-[docs-dpp-code-readability]: /docs/webstore/program_policies/#code-readability
-[docs-dpp-content-policies]: /docs/webstore/program_policies/#content_policies
-[docs-dpp-deceptive-installation]: /docs/webstore/program_policies/#deceptive_installation_tactics
-[docs-dpp-functionality]: /docs/webstore/program_policies/#functionality
-[docs-dpp-gambling]: /docs/webstore/program_policies/#gambling
-[docs-dpp-hate-speech]: /docs/webstore/program_policies/#hate-speech
-[docs-dpp-illegal-activities]: /docs/webstore/program_policies/#illegal-activities
-[docs-dpp-impersonation]: /docs/webstore/program_policies/#impersonation
-[docs-dpp-keyword-spam]: /docs/webstore/program_policies/#keyword-spam
-[docs-dpp-limited-use]: /docs/webstore/program_policies/#limited_use
-[docs-dpp-other-userdata]: /docs/webstore/program_policies/#other-userdata
-[docs-dpp-permissions]: /docs/webstore/program_policies/#permissions
-[docs-dpp-privacy-policy]: /docs/webstore/program_policies/#post-privacy-policy
-[docs-dpp-prohibited-products]: /docs/webstore/program_policies/#prohibited-products
-[docs-dpp-prominent-disclosure]: /docs/webstore/program_policies/#prominent-disclosure
-[docs-dpp-repetitive-content]: /docs/webstore/program_policies/#repetitive-content
-[docs-dpp-sexually-explicit]: /docs/webstore/program_policies/#sexually-explicit
-[docs-dpp-single-purpose]: /docs/webstore/program_policies/#single-purpose
-[docs-dpp]: /docs/webstore/program_policies/
+[docs-dpp-api-use]: /docs/webstore/program-policies/api-use/
+[docs-dpp-bullying]: /docs/webstore/program-policies/hate-and-violence/
+[docs-dpp-code-readability]: /docs/webstore/program-policies/code-readability/
+[docs-dpp-content-policies]: /docs/webstore/program-policies/explicit-material/
+[docs-dpp-deceptive-installation]: /docs/webstore/program-policies/deceptive-installation-tactics/
+[docs-dpp-functionality]: /docs/webstore/program-policies/minimum-functionality/
+[docs-dpp-gambling]: /docs/webstore/program-policies/regulated-goods-and-services/
+[docs-dpp-hate-speech]: /docs/webstore/program-policies/hate-and-violence/
+[docs-dpp-illegal-activities]: /docs/webstore/program-policies/regulated-goods-and-services/
+[docs-dpp-impersonation]: /docs/webstore/program-policies/impersonation-and-intellectual-property/
+[docs-dpp-keyword-spam]: /docs/webstore/program-policies/spam-and-abuse/
+[docs-dpp-limited-use]: /docs/webstore/program-policies/limited-use/
+[docs-dpp-other-userdata]: /docs/webstore/program-policies/data-handling/
+[docs-dpp-permissions]: /docs/webstore/program-policies/permissions/
+[docs-dpp-privacy-policy]: /docs/webstore/program-policies/privacy/
+[docs-dpp-prohibited-products]: /docs/webstore/program-policies/malicious-and-prohibited/
+[docs-dpp-prominent-disclosure]: /docs/webstore/program-policies/disclosure-requirements/
+[docs-dpp-repetitive-content]: /docs/webstore/program-policies/spam-and-abuse/
+[docs-dpp-sexually-explicit]: /docs/webstore/program-policies/explicit-material/
+[docs-dpp-single-purpose]: /docs/webstore/program-policies/quality-guidelines/
 [docs-options]: /docs/extensions/mv3/options/
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
 [docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-service-workers]: /docs/extensions/mv3/service_workers/
 [docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
 [lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
