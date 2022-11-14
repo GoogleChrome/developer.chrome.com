@@ -157,7 +157,7 @@ redirects:
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
-  to: /docs/extensions/reference/#platform-apis
+  to: /docs/extensions/reference/#platform_apps_apis
 
 - from: /apps/app_codelab1_setup
   to: /docs/apps/app_codelab_intro
@@ -237,7 +237,7 @@ redirects:
   to: /docs/devtools/javascript/reference/#format
 
 - from: /docs/devtools/manage-data/local-storage/
-  to: /docs/devtools/#storage
+  to: /docs/devtools/storage/localstorage/
 
 - from: /docs/devtools/network/network-conditions/
   to: /docs/devtools/network/reference/
@@ -330,9 +330,6 @@ redirects:
 
 - from: /docs/extensions/mv3/intro/mv3-migration
   to: /docs/extensions/mv3/mv3-migration
-
-- from: /docs/extensions/mv3/getstarted/#unpacked
-  to: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
 - from: /home
   to: /
