@@ -45,7 +45,7 @@ CrUX on BigQuery allows users to directly query the full dataset going back to 2
 
 The data is structured by monthly release, as well as a number of summary tables to provide simple access for querying the data. These are documented further below.
 
-The BigQuery data is the bases of the [CrUX Dashboard](/docs/crux/dashboard/), which allows you to visualize this data without writing SQL queries.
+The BigQuery data is the basis of the [CrUX Dashboard](/docs/crux/dashboard/), which allows you to visualize this data without writing SQL queries.
 
 ## Accessing the dataset in GCP
 

@@ -39,15 +39,15 @@ tags:
 
 The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) dashboard that links to the raw origin-level CrUX data on [BigQuery](/docs/crux/bigquery/) and the visualizes the data for you. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and the dashboard will be generated for you.
 
-## Accessing the CrUX dashboard
+## Accessing the CrUX Dashboard
 
-To use the existing CrUX dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin nees to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
+To use the existing CrUX Dashboard you need to [lauch the dashboard, passing the origin as a query param](https://datastudio.google.com/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22wwww.example.com%22%7D). To make this easier–since the origin nees to be URL encoded—you can use [Rick Viscomi](https://twitter.com/rick_viscomi)'s [CrUX Dash Launcher](https://rviscomi.github.io/crux-dash-launcher/) which takes the URL as an input and constructs the dashboard URL.
 
 The dashboard URL can then be shared and bookmarked for easy reference.
 
 A better way, for those frequently visiting different domains, is to set up a custom Search Engine in Chrome. To do this go into Chrome Settings using the three dots menu in the top right of Chrome. Once in Settings choose the "Search engine" option.
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/QFmABBH8qJJuyA25QXqc.png", alt="ALT_TEXT_HERE", width="800", height="243" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/QFmABBH8qJJuyA25QXqc.png", alt="Chrome settings for Search Engines", width="800", height="243" %}
 
 From here expand the "Manage search engines and site search", scroll down to "Site Search" click the "Add" button and enter the following details:
 
@@ -55,11 +55,11 @@ From here expand the "Manage search engines and site search", scroll down to "Si
 - Shortcut: `crux`
 - URL with %s in place of query: `https://datastudio.google.com/c/u/0/reporting/bbc5698d-57bb-4969-9e07-68810b9fa348/page/keDQB?params=%7B%22origin%22:%22%s%22%7D`
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uMyipuu95G78aQ7hdn9u.png", alt="ALT_TEXT_HERE", width="600", height="422" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/uMyipuu95G78aQ7hdn9u.png", alt="Chrome 'Add search engine' dialog", width="600", height="422" %}
 
-After this, when you type `crux` and press `tab` in the search bar you will now be able to enter a URL, and the CrUX dash board for this will load.
+After this, when you type `crux` and press `tab` in the search bar you will now be able to enter an origin, and Chrome will navigate to the preconfigured CrUX Dashboard.
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/O2sQwX4JwVRxcb24Mfw1.png", alt="ALT_TEXT_HERE", width="400", height="138" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/O2sQwX4JwVRxcb24Mfw1.png", alt="Using a custom search engine in Chrome Omnibox", width="400", height="138" %}
 
 If you omit the protocol, HTTPS is assumed. Subdomains matter, for example `https://developers.google.com` and `https://www.google.com` are considered to be different origins.
 
@@ -69,7 +69,7 @@ Some common issues with origins are providing the wrong protocol, for example `h
 
 If the origin exists, you'll be taken to the dashboard, populated with the CrUX data for this origin:
 
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/9vSp9trQYMwC5kw2DZPJ.png", alt="ALT_TEXT_HERE", width="800", height="565" %}
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/9vSp9trQYMwC5kw2DZPJ.png", alt="Example CrUX Dashboard", width="800", height="565" %}
 
 ## Using the dashboard
 
