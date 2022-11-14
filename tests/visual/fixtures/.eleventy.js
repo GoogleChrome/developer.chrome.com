@@ -14,10 +14,20 @@
  * limitations under the License.
  */
 
-/**
- * @return {EleventyData}
- */
-module.exports = {
-  disable_algolia: true,
-  noindex: true,
-};
+const originalConfig = require('../../../.eleventy.js');
+
+module.exports = (eleventyConfig) => {
+  // First apply the original project config in order to load
+  // all shortcodes, filters, initialize collections, ...
+  const config = originalConfig(eleventyConfig);
+
+  // Only then adapt settings for the test environment
+  return Object.assign({}, config, {
+    dir: {
+      includes: '../../../../site/_includes',
+      data: '../../../../site/_data',
+      input: './site',
+      output: './dist'
+    }
+  });
+}
