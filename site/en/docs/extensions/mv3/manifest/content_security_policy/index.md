@@ -16,6 +16,10 @@ If the [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP
 
 These defaults are equivalent to specifying the following policies in your manifest:
 
+{# This is statically defined in Chromium source. 
+- https://source.chromium.org/chromium/chromium/src/+/main:extensions/common/manifest_handlers/csp_info.cc?q=kDefaultMV3CSP
+-https://source.chromium.org/chromium/chromium/src/+/main:extensions/common/manifest_handlers/csp_info.cc?q=kDefaultSandboxedPageContentSecurityPolicy
+#}
 ```json
 {
   // ...
