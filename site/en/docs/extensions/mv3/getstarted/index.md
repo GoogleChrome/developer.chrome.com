@@ -6,7 +6,7 @@ description: 'Welcome to the Getting Started Guides.'
 date: 2022-10-04
 # updated: 2022-06-13
 anchorRedirects:
-  unpacked: https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+  unpacked: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 ---
 
 Welcome to the Getting Started Guides! The purpose of this page is to describe each article and how to share your feedback.

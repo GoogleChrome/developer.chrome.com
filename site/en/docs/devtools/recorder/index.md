@@ -11,7 +11,7 @@ tags:
   - test
   - performance
 anchorRedirects:
-  selector: https://developer.chrome.com/docs/devtools/recorder/reference/#selector
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.

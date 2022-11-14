@@ -12,7 +12,7 @@ description:
 tags:
   - progressive-web-apps
 anchorRedirects:
-  add-to-homescreen: https://developer.chrome.com/docs/devtools/progressive-web-apps/#trigger-installation
+  add-to-homescreen: /docs/devtools/progressive-web-apps/#trigger-installation
 ---
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
