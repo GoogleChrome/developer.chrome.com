@@ -29,7 +29,7 @@ the right are compared, and so on. For example, 1.2.0 is a newer version than 1.
 A missing integer is equal to zero. For example, 1.1.9.9999 is newer than 1.1, and 1.1.9.9999 is
 older than 1.2.
 
-## Version Name {: #version_name }
+## Version name {: #version_name }
 
 In addition to the `"version"` field, which is used for update purposes, `"version_name"` can be set to a
 descriptive version string and will be used for display purposes if present.
