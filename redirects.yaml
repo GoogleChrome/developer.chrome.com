@@ -13,6 +13,9 @@
 # WARNING! Redirects DO NOT take priority over static content.
 # For example, if you try to redirect "/foo" but the site contains a static file
 # "/foo/index.html", the static file will always win.
+#
+# For anchors that let you redirect from #section to #section,
+# see developer.chrome.com/docs/handbook/how-to/create-anchor-redirects/.
 
 redirects:
 
@@ -193,9 +196,6 @@ redirects:
 
 - from: /docs/devtools/javascript/sources
   to: /docs/devtools/sources
-
-- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
-  to: /docs/devtools/progressive-web-apps/#trigger-installation
 
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
