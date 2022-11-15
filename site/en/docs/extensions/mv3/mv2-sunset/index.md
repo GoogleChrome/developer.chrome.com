@@ -4,7 +4,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'
 date: 2021-09-23
-updated: 2022-09-28
+updated: 2022-11-16
 
 ---
 
@@ -85,7 +85,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
     <td>
       <ul>
-        <li>Manifest V2 enterprise policy expires.</li>
+        <li>Manifest V2 enterprise policy expires. This means Chrome will stop running Manifest V2 extensions, even the one that is installed using `ExtensionInstallForcelist`</li>
       </ul>
     </td>
   </tr>
