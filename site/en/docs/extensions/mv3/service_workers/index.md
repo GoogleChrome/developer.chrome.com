@@ -120,7 +120,7 @@ Extensions can remove listeners from their background scripts by calling `remove
 
 Use APIs that support [event filters][8] to restrict listeners to specific use cases. If an
 extension is listening for the [`tabs.onUpdated`][9] event, try using the
-[`webNavigation.onCompleted`][10] event with filters instead, as the tabs API does not support
+[`webNavigation.onCompleted`][10] event with filters instead, as the `onUpdated` event does not support
 filters.
 
 ```js
