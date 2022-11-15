@@ -271,7 +271,7 @@ scripts.
 When receiving a message from a content script or another extension, your scripts should be careful
 not to fall victim to [cross-site scripting][39]. This advice applies to scripts running inside the
 extension background page as well as to content scripts running inside other web origins.
-Specifically, avoid using dangerous APIs, specifically `chrome.scripting.executeScript()`, `eval()`, and `new Function()`. For example:
+Specifically, avoid using dangerous APIs such as the ones below:
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
