@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,30 +14,15 @@
  * limitations under the License.
  */
 
+const {options} = require('../_transforms/minify-html');
 const minify = require('html-minifier').minify;
 
-const options = {
-  removeAttributeQuotes: true,
-  collapseBooleanAttributes: true,
-  collapseWhitespace: true,
-  removeComments: true,
-  sortClassName: true,
-  sortAttributes: true,
-  html5: true,
-  decodeEntities: true,
-};
-
-const minifyHtml = (content, outputPath) => {
-  if (outputPath && outputPath.endsWith('.html')) {
-    try {
-      content = minify(content, options);
-      return content;
-    } catch (err) {
-      console.warn('Could not minify html for', outputPath);
-    }
+const minifyHtmlFilter = value => {
+  if (typeof value !== 'string') {
+    throw new Error(`Invalid type passed to minifyHtml: ${typeof value}`);
   }
 
-  return content;
+  return minify(value, options);
 };
 
-module.exports = {minifyHtml, options};
+module.exports = {minifyHtmlFilter};

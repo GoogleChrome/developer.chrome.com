@@ -13,6 +13,7 @@ const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {minifyJs} = require('./site/_filters/minify-js');
+const {minifyHtmlFilter} = require('./site/_filters/minify-html');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
@@ -124,6 +125,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('typeof', x => typeof x);
+  eleventyConfig.addFilter('minifyHtml', minifyHtmlFilter);
 
   // Add shortcodes
   eleventyConfig.addShortcode('Codepen', Codepen);
