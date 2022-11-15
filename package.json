@@ -85,7 +85,7 @@
     "purgecss": "^2.3.0",
     "querystring": "^0.2.0",
     "readdirp": "^3.4.0",
-    "redirects-yaml": "^2.0.3",
+    "redirects-yaml": "2.0.4",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
     "terser": "^5.4.0",
