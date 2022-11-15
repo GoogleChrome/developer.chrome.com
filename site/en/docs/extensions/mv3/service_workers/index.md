@@ -8,18 +8,18 @@ description: How to respond to browser triggers (events) from a Chrome Extension
 
 Extensions are event-based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
-Extensions monitor these events using scripts in their [extension service
-worker][doc-sw-migration], which then react with specified instructions.
+Extensions monitor these events using scripts in an [extension service
+worker][doc-sw-migration] (previously called a background script), which then executes specified instructions.
 
-An extension service worker (previously called a background script) is loaded when it is needed,
-and unloaded when it goes idle. Some examples include:
+An extension service worker is loaded when it is needed, and unloaded when it goes dormant.
+Examples include:
 
 - The extension is first installed or updated to a new version.
-- The extension service workers was listening for an event, and the event is dispatched.
+- An extension event is dispatched.
 - A content script or other extension [sends a message.][1]
 - Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage()`][2].
 
-Once it has been loaded, an extension service worker generally keeps running as long as it is
+Once it has been loaded, an extension service worker generally runs as long as it is
 performing an action such as calling a Chrome API or issuing a network request.
 
 {% Aside %}
@@ -29,7 +29,7 @@ loaded.
 
 {% endAside %}
 
-Extension service workers stay dormant until an event they are listening for fires. At which point, they execute the appropriate event litener, then unlod.
+Extension service workers stay dormant until an event they are listening for fires. At which point, they execute the appropriate event litener, then unload.
 
 ## Register the service worker {: #manifest }
 
@@ -79,9 +79,10 @@ Structure extension service workers around events the extension depends on. Defi
 events allows background scripts to lie dormant until those events are fired and prevents the
 extension from missing important triggers.
 
-Listeners must be registered at the start of your extension service worker. Notice that the listener for creating bookmarks is at the top level of the script.
+Listeners must be registered at the start of your extension service worker. Notice that this
+example the listener for creating bookmarks is at the top level of the script.
 
-{% Compare 'worse' %}
+{% Compare 'better' %}
 ```js/8-10
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
@@ -98,9 +99,10 @@ chrome.bookmarks.onCreated.addListener(() => {
 ```
 {% endCompare %}
 
-If put the same listener somewhere else, for examle, inside the `installed` listener, it may not be called when it is needed because it may not even be initialized yet.
+If you put the same listener somewhere else, for examle, inside the `installed` listener, it may
+not be called when it is needed because it may not even be initialized yet.
 
-{% Compare 'better' %}
+{% Compare 'worse' %}
 ```js
 chrome.runtime.onInstalled.addListener(() => {
   // ERROR! Events must be registered synchronously from the start of
@@ -116,8 +118,8 @@ Extensions can remove listeners from their background scripts by calling `remove
 
 ## Filter events {: #filters }
 
-Use APIs that support [event filters][8] to restrict listeners to the cases the extension cares
-about. If an extension is listening for the [`tabs.onUpdated`][9] event, try using the
+Use APIs that support [event filters][8] to restrict listeners to specific use cases. If an
+extension is listening for the [`tabs.onUpdated`][9] event, try using the
 [`webNavigation.onCompleted`][10] event with filters instead, as the tabs API does not support
 filters.
 
@@ -156,7 +158,10 @@ chrome.runtime.onMessage.addListener((message, callback) => {
 
 ## Unload extension service workers {: #unloading }
 
-Extension service workers do not receive any kind of unload suspend event before they are stopped. This is because documents have [`unload`][mdn-unload] and [`beforeUnload`][mdn-beforeunload] events, but web workers (and by extension service workers) do not have an equivalent event.
+Extension service workers do not receive any kind of unload or suspend event before they are
+stopped. This is because documents have [`unload`][mdn-unload] and
+[`beforeUnload`][mdn-beforeunload] events, but web workers (and by extension service workers) do
+not have an equivalent event.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
