@@ -16,7 +16,11 @@
 
 const authorsData = require('../_data/authorsData.json');
 const {defaultAvatarImg} = require('../_data/site.json');
-const {isPastEvent, sortAsc, sortDesc} = require('../_js/utils/events');
+const {
+  isPastEvent,
+  sortAscByTime,
+  sortDescByTime,
+} = require('../_js/utils/events');
 
 /**
  * @returns {EventsCollectionItem[]}
@@ -53,7 +57,7 @@ const pastEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event),
-    sort: sortDesc,
+    sort: sortDescByTime,
   });
 };
 
@@ -65,7 +69,7 @@ const currentEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event) === false,
-    sort: sortAsc,
+    sort: sortAscByTime,
   });
 };
 
