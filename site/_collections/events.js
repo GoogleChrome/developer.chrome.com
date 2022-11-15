@@ -15,8 +15,7 @@
  */
 
 const authorsData = require('../_data/authorsData.json');
-const {i18n} = require('../_filters/i18n');
-const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
+const {defaultAvatarImg} = require('../_data/site.json');
 const {isPastEvent, sortAsc, sortDesc} = require('../_js/utils/events');
 
 /**
@@ -28,7 +27,7 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
     .filter(filter)
     .map(event => {
       const sessions = event.data.sessions.map(session =>
-        processSession(session, locale)
+        processSession(session)
       );
 
       return {
@@ -72,10 +71,9 @@ const currentEvents = collections => {
 
 /**
  * @param {String} authorHandle
- * @param {String} locale
  * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
  */
-const getAuthorData = (authorHandle, locale) => {
+const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
@@ -84,7 +82,7 @@ const getAuthorData = (authorHandle, locale) => {
 
   return {
     image: authorData.image ?? defaultAvatarImg,
-    title: i18n(`i18n.authors.${authorHandle}.title`, locale),
+    title: `i18n.authors.${authorHandle}.title`,
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
   };
@@ -92,30 +90,19 @@ const getAuthorData = (authorHandle, locale) => {
 
 /**
  * @param session
- * @param {String} locale
  * @returns {{title}|*}
  */
-const processSession = (session, locale) => {
+const processSession = session => {
   if (session.type === 'speaker') {
-    session.speaker = getAuthorData(session.speaker, locale);
+    session.speaker = getAuthorData(session.speaker);
     session.image = session.speaker.image;
 
     return session;
   }
 
   session.participants = session.participants.map(p => {
-    return getAuthorData(p, locale);
+    return getAuthorData(p);
   });
-
-  session.title =
-    session.participants.length === 1
-      ? session.participants[0].title
-      : i18n('i18n.events.multiple_participants');
-
-  session.image =
-    session.participants.length === 1
-      ? session.participants[0].image
-      : chromeImg;
 
   return session;
 };

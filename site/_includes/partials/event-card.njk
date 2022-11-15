@@ -1,6 +1,6 @@
 {% from 'macros/icon.njk' import icon with context %}
 
-{% set buttonLabel =  'See details' if event.isPastEvent else "See who's joining" %}
+{% set buttonLabel =  'i18n.events.see_details' | i18n if event.isPastEvent else 'i18n.events.see_whos_joining' | i18n %}
 
 <enhanced-event-card>
   <article id="{{ event.id }}"
@@ -53,7 +53,7 @@
         {% if session.type === 'speaker' %}
           {% set alt = session.speaker.title or session.title %}
           {% set sessionImage = session.speaker.image %}
-          {% set sessionTitle = session.speaker.title %}
+          {% set sessionTitle = session.speaker.title | i18n %}
 
           <article class="event-session-card bg-bg">
             <a
@@ -77,14 +77,14 @@
             </a>
 
             <p class="event-card__sub-title gap-bottom-200">
-              Talk title
+              {{ 'i18n.events.talk_title' | i18n }}
             </p>
 
             <p class="gap-bottom-300">{{ session.title }}</p>
 
             {% if session.description|length %}
               <p class="event-card__sub-title gap-bottom-200">
-                Details
+                {{ 'i18n.events.details' | i18n }}
               </p>
 
               <div class="gap-bottom-300">
@@ -105,7 +105,7 @@
                     rel="noopener noreferrer"
                     class="display-flex align-center gap-right-300 decoration-none"
                   >
-                    {{ icon('slides') }} Slides
+                    {{ icon('slides') }} {{ 'i18n.events.slides' | i18n }}
                   </a>
                 {% endif %}
 
@@ -116,7 +116,7 @@
                     rel="noopener noreferrer"
                     class="display-flex align-center decoration-none"
                   >
-                    {{ icon('video') }} Video
+                    {{ icon('video') }} {{ 'i18n.events.video' | i18n }}
                   </a>
                 {% endif %}
               </div>
@@ -131,9 +131,8 @@
 
       {% for session in event.sessions %}
         {% if session.type === 'participant' %}
-          {% set sessionTitle = session.participants[0].title if session.participants.length === 1 else 'Multiple participants' %}
+          {% set sessionTitle = session.participants[0].title | i18n if session.participants.length === 1 else 'i18n.events.multiple_participants' | i18n  %}
           {% set sessionImage = session.participants[0].image if session.participants.length === 1 else site.chromeImg %}
-          {% set alt = session.speaker.title or session.title %}
 
           <article class="event-session-card bg-bg">
             <a
@@ -145,7 +144,7 @@
               <span class="display-flex align-center">
                 {% Img
                   src=sessionImage,
-                  alt=alt,
+                  alt=sessionTitle,
                   width=40,
                   height=40,
                   class='flex-shrink-none height-600 width-600 rounded-full gap-right-300' %}
@@ -157,7 +156,7 @@
             </a>
 
             <p class="event-card__sub-title gap-bottom-200">
-              Participant details
+              {{ 'i18n.events.participant_details' | i18n }}
             </p>
 
             {% if session.description|length %}
@@ -170,7 +169,7 @@
 
             {% if session.participants|length %}
               <p class="event-card__sub-title gap-bottom-200">
-                Participants
+                {{ 'i18n.events.participants' | i18n }}
               </p>
               <p class="gap-bottom-300">
                 {% if participant.twitter %}
