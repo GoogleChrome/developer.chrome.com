@@ -22,30 +22,12 @@
  * @returns {Promise<{}>}
  */
 export const loadMore = async (button, container, fetchItems, params = {}) => {
-  let loading = false;
   let currentOffset = params.skip || 0;
   const total = getTotalItems(container, params);
   const take = params.take || 10;
 
-  function removeButton() {
-    button.setAttribute('hidden', '');
-    button.setAttribute('disabled', '');
-  }
-
-  function toggleLoading() {
-    loading = !loading;
-
-    loading
-      ? button.setAttribute('disabled', '')
-      : button.removeAttribute('disabled');
-  }
-
   button.addEventListener('click', async e => {
     e.preventDefault();
-
-    if (loading) return;
-
-    toggleLoading();
 
     button.setAttribute('disabled', '');
 
@@ -55,17 +37,15 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
 
     currentOffset += take;
 
-    if (currentOffset >= total) {
-      removeButton();
-      loading = false;
-      return;
-    }
+    button.removeAttribute('disabled');
 
-    toggleLoading();
+    if (currentOffset >= total) {
+      button.setAttribute('hidden', '');
+    }
   });
 
   if (currentOffset >= total) {
-    removeButton();
+    button.setAttribute('hidden', '');
   }
 
   return {
