@@ -172,21 +172,29 @@
                 {{ 'i18n.events.participants' | i18n }}
               </p>
               <p class="gap-bottom-300">
-                {% if participant.twitter %}
-                  <a
-                    href="https://twitter.com/{{ participant.twitter }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >{{ participant.title }}</a>
-                {% elseif participant.linkedin %}
-                  <a
-                    href="{{ participant.linkedin }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >{{ participant.title }}</a>
-                {% else %}
-                  {{ participant.title }}
-                {% endif %}
+                {% for participant in session.participants %}
+                  {% set participantTitle =  participant.title |i18n %}
+
+                  {% set participantHtml %}
+                    {% if participant.twitter %}
+                      <a
+                        href="https://twitter.com/{{ participant.twitter }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{{ participantTitle }}</a>
+                    {% elseif participant.linkedin %}
+                      <a
+                        href="{{ participant.linkedin }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{{ participantTitle }}</a>
+                    {% else %}
+                      {{ participantTitle }}
+                    {% endif %}
+                  {% endset %}
+
+                  {{ participantHtml|safe|trim }} {% if loop.last === false %},{% endif %}
+                {% endfor %}
               </p>
             {% endif %}
 
