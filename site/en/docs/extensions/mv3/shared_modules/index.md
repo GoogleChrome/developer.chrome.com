@@ -6,19 +6,17 @@ updated: 2018-05-22
 description: How to share code between Chrome Extensions.
 ---
 
-_Shared Modules_ are permissionless collections of resources that can be shared between other
-extensions and apps. Common uses of Shared Modules are:
+_Shared Modules_ are permissionless collections of resources that can be shared between
+extensions. Common uses of Shared Modules are:
 
-- As an API. You can distribute a Shared Module that can provide HTML, JS, and other source to
-  provide an API which can be updated independently of the extensions that depend on it. This can be
-  useful for runtimes and game engines, where apps are often smaller payloads of data that run on
-  the Shared Module's code.
+- As an API. You can distribute a Shared Module that can provide HTML, JS, and other resources to
+  provide an API that can be updated independently of the extensions that depend on it.
 - As a download optimization. The Shared Module contains common resources used by many extensions.
   It's downloaded once, the first time a dependent extension is installed.
 
 ## Manifest {: #manifest }
 
-Shared Modules are used through two [manifest][1] fields: export and import.
+Shared Modules are used through two [manifest][manifest] fields: `"export"` and `"import"`.
 
 ### Export {: #export}
 
@@ -63,7 +61,7 @@ particular Shared Modules:
 ## Accessing resources {: #accessing_resources }
 
 Shared Module resources are accessed by a reserved path _\_modules/SHARED\_MODULE\_ID_ in the root
-of your importing extension. For example, to include the script 'foo.js' from a Shared Module with
+of your importing extension. For example, to include the script `foo.js` from a Shared Module with
 ID "cccccccccccccccccccccccccccccccc", use this path from the root of your extension:
 
 ```html
@@ -79,21 +77,20 @@ chrome-extension://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/_modules/ccccccccccccccccccc
 
 Note that since resources from Shared Modules are overlaid into the origin of the importing
 extension, all privileges granted to the importing extension are available to code in Shared
-Modules. Also, the Shared Module is able to access resources in the importing extension by using
+Modules. Also, the Shared Module can access resources in the importing extension by using
 absolute paths.
 
 ## Install / uninstall {: #install_uninstall }
 
-A Shared Module is automatically installed from the Chrome Web Store when needed by a dependent
-extension, and automatically uninstalled when the last extension which references it is uninstalled.
-In order to upload an extension which uses a Shared Module, the Shared Module must be published in
+A Shared Module is automatically installed from the Chrome Web Store when needed by a dependent extension and automatically uninstalled when the last extension which references it is uninstalled.
+To upload an extension that uses a Shared Module, the Shared Module must be published in
 the Chrome Web Store and the extension must not be restricted from using the Shared Module by its
 allowlist.
 
 During development, you will need to manually install any Shared Modules your extension uses.
 Automatic installs do not happen for extensions that are side-loaded or loaded as unpacked
-extensions. For locally installed, unpacked Shared Modules, you must use the [key][2] field to
+extensions. For locally installed, unpacked Shared Modules, you must use the [key][manifest-key] field to
 ensure the Shared Modules use the correct IDs.
 
-[1]: /docs/extensions/mv2/tabs
-[2]: /docs/extensions/mv2/manifest/key
+[manifest]: /docs/extensions/mv3/manifest/
+[manifest-key]: /docs/extensions/mv3/manifest/key
