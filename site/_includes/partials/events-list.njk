@@ -8,7 +8,7 @@
          class="display-grid grid-cols-1 grid-gap-400"
          total-items="{{ collections.currentEvents.length }}">
       {% for event in collections.currentEvents.slice(0,show) %}
-        {% EventCard event %}
+        {% include 'partials/event-card.njk' %}
       {% endfor %}
     </div>
 
@@ -28,7 +28,7 @@
          class="display-grid grid-cols-1 grid-gap-400"
          total-items="{{ collections.pastEvents.length }}">
       {% for event in collections.pastEvents.slice(0,show) %}
-        {% EventCard event %}
+        {% include 'partials/event-card.njk' %}
       {% endfor %}
     </div>
 
