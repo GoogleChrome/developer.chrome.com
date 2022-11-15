@@ -76,7 +76,7 @@ chrome.runtime.onInstalled.addListener(() => {
 ## Set up listeners {: #listeners }
 
 Structure extension service workers around events the extension depends on. Defining functionally relevant
-events allows background scripts to lie dormant until those events are fired and prevents the
+events allows the service wroker to lie dormant until those events are fired and prevents the
 extension from missing important triggers.
 
 Listeners must be registered at the start of your extension service worker. Notice that this
