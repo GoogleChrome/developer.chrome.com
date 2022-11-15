@@ -33,7 +33,7 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
 
     const items = await fetchItems(currentOffset, take);
 
-    items.forEach(html => container.insertAdjacentHTML('beforeend', html));
+    container.insertAdjacentHTML('beforeend', items.join(''));
 
     currentOffset += take;
 
