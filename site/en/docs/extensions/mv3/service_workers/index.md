@@ -99,7 +99,7 @@ chrome.bookmarks.onCreated.addListener(() => {
 ```
 {% endCompare %}
 
-If you put the same listener somewhere else, for examle, inside the `installed` listener, it may
+If you put the same listener somewhere else, for example, inside the `installed` listener, it may
 not be called when it is needed because it may not even be initialized yet.
 
 {% Compare 'worse' %}
