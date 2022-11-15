@@ -18,24 +18,9 @@ import './web-components/enhanced-event-card';
 import './web-components/truncate-text';
 import './web-components/enhanced-select';
 import './web-components/checkbox-group';
-import {RenderEventCard} from './misc/render-event-card';
 import {loadMore} from './misc/load-more';
 import memoize from './utils/memoize';
 import {sortAsc, sortDesc} from './utils/events';
-
-import calendarIcon from '../_includes/icons/calendar.svg';
-import pinIcon from '../_includes/icons/pin.svg';
-import slidesIcon from '../_includes/icons/slides.svg';
-import videoIcon from '../_includes/icons/video.svg';
-import launchIcon from '../_includes/icons/launch.svg';
-
-const icons = {
-  calendarIcon,
-  pinIcon,
-  slidesIcon,
-  videoIcon,
-  launchIcon,
-};
 
 const getEvents = async () => {
   const response = await fetch('/events.json');
@@ -64,7 +49,7 @@ const eventLists = [
       return upcomingEvents
         .sort(sortAsc)
         .slice(skip, take + skip)
-        .map(event => RenderEventCard(event, icons));
+        .map(event => event.html);
     },
   },
   {
@@ -76,7 +61,7 @@ const eventLists = [
       return pastEvents
         .sort(sortDesc)
         .slice(skip, take + skip)
-        .map(event => RenderEventCard(event, icons));
+        .map(event => event.html);
     },
   },
 ];
