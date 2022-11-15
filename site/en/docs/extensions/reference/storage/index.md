@@ -49,8 +49,8 @@ Local and sync storage areas should not store confidential user data because the
 {% endAside %}
 
 - [**storage.session**][prop-session]
-  - Holds small amounts of data in memory for the duration of a browser session.
-  - Not available in content scripts.
+  - Holds data in memory for the duration of a browser session.
+  - By default, not exposed to content scripts, but behavior can be changed by setting [chrome.storage.session.setAccessLevel()][method-access-level].
   - Quota limitation is 1 MB approx.
   - Consider using it to store global variables across service worker runs.
 
@@ -250,6 +250,7 @@ To see other demos of the Storage API, explore any of the following examples:
 [manifest-storage]: /docs/extensions/mv3/manifest/storage
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/Window/indexeddb
 [mdn-localstorage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
+[method-access-level]: #method-StorageArea-setAccessLevel
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/
 [prop-local]: #property-local
 [prop-sync]: #property-sync
