@@ -16,12 +16,8 @@
 
 const authorsData = require('../_data/authorsData.json');
 const {i18n} = require('../_filters/i18n');
-const {Img} = require('../_shortcodes/Img');
 const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
 const {isPastEvent, sortAsc, sortDesc} = require('../_js/utils/events');
-
-const EVENT_PLACEHOLDER =
-  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
 
 /**
  * @returns {EventsCollectionItem[]}
@@ -35,13 +31,6 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         processSession(session, locale)
       );
 
-      const image = Img({
-        src: event.data.image ?? EVENT_PLACEHOLDER,
-        width: 400,
-        height: 400,
-        alt: event.data.title,
-      });
-
       return {
         id: event.data.id,
         title: event.data.title,
@@ -51,7 +40,7 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         date: event.data.date,
         isPastEvent: isPastEvent(event),
         sessions,
-        image,
+        image: event.data.image,
       };
     })
     .sort(sort);
@@ -109,13 +98,7 @@ const getAuthorData = (authorHandle, locale) => {
 const processSession = (session, locale) => {
   if (session.type === 'speaker') {
     session.speaker = getAuthorData(session.speaker, locale);
-    session.image = Img({
-      src: session.speaker.image,
-      width: 40,
-      height: 40,
-      alt: session.speaker.title ?? session.title,
-      class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-    });
+    session.image = session.speaker.image;
 
     return session;
   }
@@ -129,16 +112,10 @@ const processSession = (session, locale) => {
       ? session.participants[0].title
       : i18n('i18n.events.multiple_participants');
 
-  session.image = Img({
-    src:
-      session.participants.length === 1
-        ? session.participants[0].image
-        : chromeImg,
-    width: 40,
-    height: 40,
-    alt: session.title,
-    class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-  });
+  session.image =
+    session.participants.length === 1
+      ? session.participants[0].image
+      : chromeImg;
 
   return session;
 };
