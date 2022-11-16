@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+const memoize = require('../_js/utils/memoize');
 const authorsData = require('../_data/authorsData.json');
 const {defaultAvatarImg} = require('../_data/site.json');
 const startOfDay = new Date();
@@ -22,50 +22,36 @@ startOfDay.setHours(0, 0, 0, 0);
 /**
  * @returns {EventsCollectionItem[]}
  */
-const getEvents = ({collections, filter, sort, locale = 'en'}) => {
-  let payload = collections.getFilteredByGlob(
-    `./site/${locale}/meet-the-team/events/**/*.md`
-  );
+const getEvents = memoize(({collections, locale = 'en'}) => {
+  return collections
+    .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
+    .map(event => {
+      const sessions = event.data.sessions.map(session =>
+        processSession(session)
+      );
 
-  if (filter) {
-    payload = payload.filter(filter);
-  }
-
-  payload = payload.map(event => {
-    const sessions = event.data.sessions.map(session =>
-      processSession(session)
-    );
-
-    return {
-      id: event.data.id,
-      title: event.data.title,
-      externalUrl: event.data.externalUrl,
-      summary: event.data.summary,
-      location: event.data.location,
-      date: event.data.date,
-      isPastEvent: isPastEvent(event),
-      sessions,
-      image: event.data.image,
-    };
-  });
-
-  if (sort) {
-    return payload.sort(sort);
-  }
-
-  return payload;
-};
+      return {
+        id: event.data.id,
+        title: event.data.title,
+        externalUrl: event.data.externalUrl,
+        summary: event.data.summary,
+        location: event.data.location,
+        date: event.data.date,
+        isPastEvent: isPastEvent(event),
+        sessions,
+        image: event.data.image,
+      };
+    });
+});
 
 /**
  * @param {EleventyCollectionObject} collections
  * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event),
-    sort: (a, b) => b.date - a.date,
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event))
+    .sort((a, b) => b.date - a.date);
 };
 
 /**
@@ -73,11 +59,9 @@ const pastEvents = collections => {
  * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event) === false,
-    sort: (a, b) => a.date - b.date,
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event) === false)
+    .sort((a, b) => a.date - b.date);
 };
 
 /**
@@ -85,11 +69,7 @@ const currentEvents = collections => {
  * @returns {{locations:string[], googlers:{}[], topics:string[]}}
  */
 const eventTags = collections => {
-  const events = getEvents({
-    collections,
-    filter: null,
-    sort: null,
-  });
+  const events = getEvents({collections});
 
   return {
     locations: uniqueLocations(events),
@@ -119,7 +99,7 @@ const getAuthorData = authorHandle => {
 
 /**
  * @param session
- * @returns {{title}|*}
+ * @returns {EventSessionCollectionItem}
  */
 const processSession = session => {
   if (session.type === 'speaker') {
