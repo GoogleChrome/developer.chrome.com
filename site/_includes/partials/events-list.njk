@@ -34,8 +34,8 @@
 
     {% if collections.pastEvents.length > show %}
       <button id="load-past-events"
-         class="load-more__button type--small display-inline-flex"
-         aria-controls="upcoming-events"
+              class="load-more__button type--small display-inline-flex"
+              aria-controls="upcoming-events"
       >
         {{ 'i18n.events.load_more' | i18n(locale) }}
         {{ icon('arrow-forward', {hidden: true}) }}
@@ -43,3 +43,9 @@
     {% endif %}
   </web-tab>
 </web-tabs>
+
+<p id="loading-error" class="color-red-medium gap-top-100 display-none">
+  {{ 'i18n.events.load_more_error' | i18n(locale) }}
+  <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+     class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
+</p>

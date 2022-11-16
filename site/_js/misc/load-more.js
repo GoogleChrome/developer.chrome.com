@@ -18,10 +18,17 @@
  * @param {HTMLElement} button
  * @param {HTMLElement} container
  * @param {Function} fetchItems
+ * @param {Function} onError
  * @param {{skip?:number,take?:number, total?:number}} params
  * @returns {Promise<{}>}
  */
-export const loadMore = async (button, container, fetchItems, params = {}) => {
+export const loadMore = async (
+  button,
+  container,
+  fetchItems,
+  onError,
+  params = {}
+) => {
   let currentOffset = params.skip || 0;
   const total = getTotalItems(container, params);
   const take = params.take || 10;
@@ -31,11 +38,15 @@ export const loadMore = async (button, container, fetchItems, params = {}) => {
 
     button.setAttribute('disabled', '');
 
-    const items = await fetchItems(currentOffset, take);
+    try {
+      const items = await fetchItems(currentOffset, take);
 
-    container.insertAdjacentHTML('beforeend', items.join(''));
+      container.insertAdjacentHTML('beforeend', items.join(''));
 
-    currentOffset += take;
+      currentOffset += take;
+    } catch (e) {
+      onError(e);
+    }
 
     button.removeAttribute('disabled');
 

@@ -71,5 +71,18 @@ eventLists.forEach(list => {
 
   const skip = list.container.querySelectorAll('enhanced-event-card').length;
 
-  loadMore(list.loadMore, list.container, list.fetchItems, {skip, take: 10});
+  loadMore(
+    list.loadMore,
+    list.container,
+    list.fetchItems,
+    () => {
+      document
+        .getElementById('loading-error')
+        ?.classList.remove('display-none');
+    },
+    {
+      skip,
+      take: 10,
+    }
+  );
 });
