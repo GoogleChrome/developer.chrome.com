@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Frequently Asked Questions
 date: 2020-06-09
-updated: 2021-09-09
+updated: 2022-11-18
 description: Frequently asked questions about the Chrome Web Store.
 ---
 
@@ -314,6 +314,40 @@ us][cws-support] with any additional details regarding the problem.
 
 European developers can raise concerns about clarity of terms, policies, or other Platform To
 Business related issues by contacting [CWS support][cws-support].
+
+## Keyword spam
+
+### How many sites/keywords/brands can be listed in the metadata?
+
+This depends on how relevant the keywords are in context; however, it's best to keep instances of a
+specific keyword to under five. Keywords must be relevant to the extension's purpose and not
+unnecessarily repeat in an unnatural way. Including more than five instances of a single keyword may
+result in increased scrutiny of your extensions, but will be allowed if its use is considered
+appropriate and relevant.
+
+When listing supported websites or brands in the description, do not list more than five. To provide
+a longer list of brands or websites, provide a link that users can refer to or embed the list in one
+of the extension's promotional screenshots.
+
+### Can the extension description contain information about additional topics related to the extension?
+
+No. Don't provide information that is not directly relevant to the extension. For example, sports
+team wallpaper should not include team stats and history in the description of the wallpaper
+extension. Similarly, an extension targeted at a particular industry should not include general
+information about that industry in its description.
+
+### What is the maximum number of times the extension's primary purpose can be mentioned in the description?
+
+Do not mention one word or phrase repeatedly in the description even if it is the primary purpose of
+the extension, unless its use is critical. For example, an extension that provides puzzles should
+not call out the word puzzle more than five times in the description.
+
+### Can the extension's short description be repeated in the extension's description?
+
+We advise developers to not repeat the short description included in the extension's `manifest.json`
+in its Chrome Web Store's description because the short description is automatically included above
+the extension's description on the Chrome Web Store listing. However, this would not be considered a
+violation. 
 
 [account-suspended]: #faq-listing-12
 [apps]: /docs/apps/
