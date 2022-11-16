@@ -2,6 +2,14 @@
 
 {% set show = 5 %}
 
+<div class="display-none">
+  {{ icon('pin', {id: 'pinIcon', hidden:true}) }}
+  {{ icon('calendar', {id: 'calendarIcon', hidden:true}) }}
+  {{ icon('launch', {id: 'launchIcon', className:'event-card__launch-icon', hidden:true}) }}
+  {{ icon('slides', {id: 'slidesIcon', hidden:true}) }}
+  {{ icon('video', {id: 'videoIcon', hidden:true}) }}
+</div>
+
 <web-tabs class="events-list">
   <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
     <div id="upcoming-events"

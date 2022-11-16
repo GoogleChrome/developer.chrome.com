@@ -32,12 +32,28 @@
 
           <div class="event-card__meta display-flex gap-bottom-400">
             <p class="display-flex align-center gap-right-500">
-              {{ icon('pin') }}
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="14"
+                   height="20"
+                   viewBox="0 0 14 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#pinIcon" />
+              </svg>
+
               {{ event.location }}
             </p>
 
             <p class="display-flex align-center">
-              {{ icon('calendar') }}
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="18"
+                   height="20"
+                   viewBox="0 0 18 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#calendarIcon" />
+              </svg>
+
               {{ helpers.formatDateShort(event.date, locale) }}
             </p>
           </div>
@@ -73,7 +89,14 @@
                 {{ sessionTitle }}
               </span>
 
-              {{ icon('launch') }}
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#launchIcon" />
+              </svg>
             </a>
 
             <p class="event-card__sub-title gap-bottom-200">
@@ -105,7 +128,16 @@
                     rel="noopener noreferrer"
                     class="display-flex align-center gap-right-300 decoration-none"
                   >
-                    {{ icon('slides') }} {{ 'i18n.events.slides' | i18n }}
+                    <svg class="icon"
+                         aria-hidden="true"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#slidesIcon" />
+                    </svg>
+
+                    {{ 'i18n.events.slides' | i18n }}
                   </a>
                 {% endif %}
 
@@ -116,7 +148,16 @@
                     rel="noopener noreferrer"
                     class="display-flex align-center decoration-none"
                   >
-                    {{ icon('video') }} {{ 'i18n.events.video' | i18n }}
+                    <svg class="icon"
+                         aria-hidden="true"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#videoIcon" />
+                    </svg>
+
+                    {{ 'i18n.events.video' | i18n }}
                   </a>
                 {% endif %}
               </div>
@@ -152,7 +193,14 @@
                 {{ sessionTitle }}
               </span>
 
-              {{ icon('launch') }}
+              <svg class="icon"
+                   aria-hidden="true"
+                   width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#launchIcon" />
+              </svg>
             </a>
 
             <p class="event-card__sub-title gap-bottom-200">
