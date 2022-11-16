@@ -14,6 +14,7 @@ import {loadMore} from '../../../../../site/_js/misc/load-more';
           '<div>5</div>',
         ];
       },
+      () => {},
       {
         take: 5,
         skip: 0,
@@ -37,6 +38,7 @@ import {loadMore} from '../../../../../site/_js/misc/load-more';
           '<div>5</div>',
         ];
       },
+      () => {},
       {
         take: 5,
         skip: 0,
