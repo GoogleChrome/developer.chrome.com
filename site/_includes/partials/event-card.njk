@@ -241,7 +241,7 @@
                     {% endif %}
                   {% endset %}
 
-                  {{ participantHtml|safe|trim }} {% if loop.last === false %},{% endif %}
+                  {{ participantHtml|safe|trim }}{% if loop.last === false %},{% endif %}
                 {% endfor %}
               </p>
             {% endif %}
