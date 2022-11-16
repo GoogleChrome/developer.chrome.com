@@ -42,7 +42,7 @@
       <enhanced-select label="Googler" fixedLabel>
         <select name="googler">
           {% for googler in collections.eventTags.googlers %}
-            <option value="{{ googler.handle }}">{{ googler.title }}</option>
+            <option value="{{ googler.handle }}">{{ googler.title | i18n }}</option>
           {% endfor %}
         </select>
       </enhanced-select>
