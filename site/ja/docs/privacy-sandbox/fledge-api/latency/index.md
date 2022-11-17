@@ -1,14 +1,12 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLEDGE オークションの遅延を改善する
-subhead: |2-
-
+subhead: >
   FLEDGE オークションの遅延を改善するベストプラクティス集を確認します。
-description: |2-
-
+description: >
   FLEDGE オークションの遅延を改善するベストプラクティス集を確認します。
-date: '2022-06-27'
-updated: '2022-07-04'
+date: 2022-06-27
+updated: 2022-07-04
 authors:
   - pauljensen
 ---
