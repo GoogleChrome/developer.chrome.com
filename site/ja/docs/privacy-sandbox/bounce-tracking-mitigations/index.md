@@ -32,31 +32,31 @@ authors:
 - ブラウザポリシーまたはユーザー設定のいずれかが原因でサードパーティ Cookie が無効になっている場合に、ステートフルバウンスがサードパーティ Cookie をシミュレートしないようにします。
 - ステートフルリダイレクトを使用して実装されている、ユーザーに重要なユースケースのサポートを維持します。
 - ブロックリストに依存する他のプライバシー対策では適切に対処できない可能性がある短命のドメインの影響を軽減します。
-- Avoid using block or allow lists to decide which websites are affected.
+- 影響を受けるウェブサイトの判定に、拒否リストまたは許可リストの使用は避けます。
 
 ## バウンストラッキング対策の仕組み {: #how-it-works}
 
 この提案は、以下のユースケースでバウンストラッキングに対処します。
 
 - **サードパーティ Cookie のシミュレーション**: サードパーティトラッカーへのリダイレクトを使用して Cookie をバイパスするブラウザ設定を作成するサイト。この問題を軽減するために、ブラウザはトラッカーのドメインストレージを消去することができます。
-- **Outgoing redirection**:  Sites that redirect all outgoing links through a tracker domain. To mitigate this issue, the browser could wipe the tracker's domain storage.
+- **発出リダイレクト**: すべての発出リンクをトラッカードメインを介してリダイレクトするサイト。この問題を軽減するために、ブラウザはトラッカーのドメインストレージを消去することができます。
 
 ### 範囲外のユースケース
 
-Redirect flows that are out-of-scope include: federated authentication, SSO and payments. This is because these flows, while similar to bounce tracking scenarios, involve direct user interaction. You can find [further information in the explainer](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md).
+範囲外のリダイレクトフローには、ID 連携認証、SSO、および決済が含まれます。これは、こういったフローはバウンストラッキングのシナリオに似ているものの、直接的なユーザー操作を伴うものであるためです。[詳細については、Explainer を参照](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md)してください。
 
-- **Federated authentication**: [Federated authentication](/docs/privacy-sandbox/fedcm/) occurs when a user clicks on a **Login with Identity Provider** button on the web, for example, Facebook, GitHub, or Google.
+- **ID 連携認証**: [ID 連携認証](/docs/privacy-sandbox/fedcm/)は、ユーザーがウェブで **ID プロバイダーでログイン**（Facebook、GitHub、Google など）ボタンをクリックすると発生します。
 - **シングル サインオン**: サイトでシングル サインオン（SSO）が使用されている場合、ユーザーは、ID プロバイダーで 1 回ログインしておけば、他のサイトへのすべてのアクセスでも自動的にログインされることを期待しています。
 - **決済**: 今日のウェブではさまざまな決済フローが使用されており、この提案ではそれらが機能し続けることを目指しています。
 
 ## バウンストラッキング対策の適用方法 {: #enforcement}
 
-This proposal doesn't have any additional API surface, instead it changes the behavior of the browser.
+この提案には、追加の API はありません。代わりに、ブラウザの動作が変更されます。
 
 大まかに言えば、以下の両方の条件が当てはまる場合、ブラウザがサイト（eTLD+1）のストレージを自動的に削除することが提案されています。
 
-- The browser believes that state has been stored during a redirect bounce.
-- The browser has not had any signals that the user is performing a supported use case on the site (eTLD+1).
+- ブラウザが、リダイレクトバウンス中に状態が保存されたと認識した場合。
+- ブラウザが、ユーザーがサイト（eTLD+1）でサポートされているユースケースを実行しているという信号を受けていない場合。
 
 これらの定義を明確にすることが、バウンストラッキング対策の取り組みにおいて重要となります。
 
