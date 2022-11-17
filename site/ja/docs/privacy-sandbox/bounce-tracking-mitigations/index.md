@@ -31,7 +31,7 @@ authors:
 - [コンテキストをまたいで人を認識する](https://w3ctag.github.io/privacy-principles/#hl-recognition-cross-context)バウンス トラッキングの機能を抑制または排除します。
 - ブラウザポリシーまたはユーザー設定のいずれかが原因でサードパーティ Cookie が無効になっている場合に、ステートフルバウンスがサードパーティ Cookie をシミュレートしないようにします。
 - ステートフルリダイレクトを使用して実装されている、ユーザーに重要なユースケースのサポートを維持します。
-- Mitigate the impact of short-lived domains that may not be adequately addressed by other privacy interventions that rely on blocklists.
+- ブロックリストに依存する他のプライバシー対策では適切に対処できない可能性がある短命のドメインの影響を軽減します。
 - Avoid using block or allow lists to decide which websites are affected.
 
 ## バウンストラッキング対策の仕組み {: #how-it-works}
@@ -41,7 +41,7 @@ authors:
 - **サードパーティ Cookie のシミュレーション**: サードパーティトラッカーへのリダイレクトを使用して Cookie をバイパスするブラウザ設定を作成するサイト。この問題を軽減するために、ブラウザはトラッカーのドメインストレージを消去することができます。
 - **Outgoing redirection**:  Sites that redirect all outgoing links through a tracker domain. To mitigate this issue, the browser could wipe the tracker's domain storage.
 
-### Out-of-scope use cases
+### 範囲外のユースケース
 
 Redirect flows that are out-of-scope include: federated authentication, SSO and payments. This is because these flows, while similar to bounce tracking scenarios, involve direct user interaction. You can find [further information in the explainer](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md).
 
@@ -62,7 +62,7 @@ This proposal doesn't have any additional API surface, instead it changes the be
 
 バウンストラッキング対策の実施については、まだ[議論中](https://github.com/wanderview/bounce-tracking-mitigations/issues)です。
 
-### Security considerations
+### セキュリティに関する考慮事項
 
 [この提案には、バウンストラッキング対策の Explainer で概説されているセキュリティ上の考慮事項](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md#privacy-and-security-considerations)がいくつかあります。
 
