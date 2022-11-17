@@ -1,13 +1,11 @@
 ---
 layout: layouts/doc-post.njk
 title: バウンストラッキング対策
-subhead: |2-
-
+subhead: >
   コンテキストをまたいで人を認識するバウンス トラッキングの機能を抑制または排除します。
-description: |2-
-
+description: >
   コンテキストをまたいで人を認識するバウンス トラッキングの機能を抑制または排除します。
-date: '2022-10-04'
+date: 2022-10-04
 authors:
   - anusmitaray
 ---
