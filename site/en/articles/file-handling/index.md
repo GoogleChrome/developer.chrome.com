@@ -181,7 +181,7 @@ code.
 </figure>
 
 <figure>
-  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/wCNbMl6kJ11XziG3LO65.png", alt="The context menu that appears when right clicking a file with the Open with… Excalidraw' item highlighted.", width="488", height="266" %}
+  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/wCNbMl6kJ11XziG3LO65.png", alt="The context menu that appears when right clicking a file with the Open with… Excalidraw item highlighted.", width="488", height="266" %}
   <figcaption>
      Excalidraw is the default file handler for <code>.excalidraw</code> files.
   </figcaption>
