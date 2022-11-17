@@ -27,9 +27,9 @@ FLEDGE オークションの効率を最適化するには、次のベストプ�
 
 ### インタレストグループのオーナー数を少なくする
 
-To protect FLEDGE bidders in the same way that the browser protects different origins on the web using [site isolation](https://www.chromium.org/Home/chromium-security/site-isolation/), the browser uses expensive resources (like operating system processes) to protect individual interest group owners.
+ブラウザが[サイト分離](https://www.chromium.org/Home/chromium-security/site-isolation/)を使用してウェブ上のさまざまなオリジンを保護するのと同じ方法で FLEDGE 入札者を保護するために、ブラウザは負荷の高いリソース（オペレーティングシステムのプロセスなど）を使用して、個々のインタレストグループのオーナーを保護します。
 
-To minimize the expenditure of these very expensive resources, having the fewest number of interest group owners is crucial. Avoid having different interest groups owned by various subdomains. For example, if `adtech.example` had interest groups owned by `cats.adtech.example` and `dogs.adtech.example`, the browser would likely use two separate processes to run their bidding scripts.
+これらの非常に負荷の高いリソースの支出を最小限に抑えるには、インタレストグループのオーナー数を最小限にすることが重要です。異なるサブドメインが所有する様々なインタレストグループを持つことは避けましょう。たとえば、 `adtech.example` に、`cats.adtech.example` と `dogs.adtech.example` が所有するインタレストグループがある場合、ブラウザは 2 つの別々のプロセスを使用して入札スクリプトを実行する可能性があります。
 
 ### インタレストグループの入札数を少なくする
 
