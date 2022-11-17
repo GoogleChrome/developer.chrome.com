@@ -1,0 +1,89 @@
+---
+layout: layouts/doc-post.njk
+title: Improve FLEDGE auction latency
+subhead: |2-
+
+  FLEDGE オークションの遅延を改善するベストプラクティス集を確認します。
+description: |2-
+
+  FLEDGE オークションの遅延を改善するベストプラクティス集を確認します。
+date: '2022-06-27'
+updated: '2022-07-04'
+authors:
+  - pauljensen
+---
+
+FLEDGE の効率的な稼動の確保は、誰にとっても重要なことです。
+
+- ウェブを閲覧するユーザーは、サイトがすばやく読み込まれることを望んでいます。つまり、サイトとその埋め込み広告を読み込むために必要な計算リソースやネットワークリソースなど、限られたデバイスリソースを過度に使用しないように、開発者が FLEDGE を使って効率的に構築する必要があります。
+- サイト運営者は、サイトの読み込みが速く、ユーザーに効率的で応答性の高いエクスペリエンスを提供したいと考えています。サイト運営者はまた、収益を最大化できる効果的な広告を求めています。
+- Advertisers and adtechs want their ads to display quickly to provide the greatest utility.
+
+このドキュメントでは、サイトが最大限の効率で動作できるようにするための FLEDGE 実装のベスト プラクティスについて概説します。
+
+## バイヤー（入札者）のベストプラクティス
+
+FLEDGE オークションの効率を最適化するには、次のベストプラクティスに従ってください。
+
+### インタレストグループのオーナー数を少なくする
+
+To protect FLEDGE bidders in the same way that the browser protects different origins on the web using [site isolation](https://www.chromium.org/Home/chromium-security/site-isolation/), the browser uses expensive resources (like operating system processes) to protect individual interest group owners.
+
+To minimize the expenditure of these very expensive resources, having the fewest number of interest group owners is crucial. Avoid having different interest groups owned by various subdomains. For example, if `adtech.example` had interest groups owned by `cats.adtech.example` and `dogs.adtech.example`, the browser would likely use two separate processes to run their bidding scripts.
+
+### インタレストグループの入札数を少なくする
+
+ブラウザは、バイヤーの `generateBid()` スクリプトを呼び出す前に、重要なセットアップと準備を行う必要があります。たとえば、新しいクリーンな JavaScript 実行環境のセットアップや、`generateBid()` コードの解析と読み込みなどです。
+
+- アクティブな広告キャンペーンの現在のターゲットではないユーザーを表すインタレストグループには、空の広告クリエイティブリストが必要です。これにより、FLEDGE が関連する広告なしでインタレストグループに `generateBid()` を実行しないようにすることができます。
+- 同じようなインタレストグループを組み合わせると、 `generateBid()` を実行する必要がある回数が減ります。インタレストグループの `userBiddingSignals` プロパティは、ユーザーに関する追加のメタデータを保存するために使用できるため、インタレストグループの数が少ないからといって、ターゲティングの効果が低下するわけではありません。
+- 現在、FLEDGE は、セラーが指定したインタレストグループの数の制限と、バイヤーがインタレストグループの相対的な優先度を指定するための API をサポートしています。これらの制限を使用すると、実行する入札スクリプトの数を大幅に減らすことができます。
+
+オークションに参加するインタレストグループをフィルタリングする方法については、現在もディスカッションが続いています。この分野でアイデアがある場合は、[GitHub のイシューを提出](https://github.com/WICG/turtledove/issues/new)するか、[Issue 305](https://github.com/WICG/turtledove/issues/305) に貢献してください。
+
+オークション間で JavaScript 実行環境を再利用する方法についてのディスカッションが進行中です。環境を再利用すると、ブラウザが環境の初期化に費やす時間が短縮されます。以下をご覧ください。
+
+- [Issue 304](https://github.com/WICG/turtledove/issues/304)
+- [Issue 310](https://github.com/WICG/turtledove/issues/310)
+- または、[GitHub に新しいイシューを提出](https://github.com/WICG/turtledove/issues/new)してください。
+
+### 入札スクリプトを再利用する
+
+個別のインタレストグループで使用する共有の入札スクリプトをセットアップします。これにより、ブラウザが複数のスクリプトをダウンロード、解析、およびコンパイルして余分なネットワーク リクエストを発生させる必要がなくなります。
+
+### `trustedBiddingSignalsUrls` を再利用する
+
+ネットワークのレイテンシーとリソースの使用量が、非常に重要な場合があります。リアルタイムの信頼できる入札シグナルのフェッチ回数を減らすと、このレイテンシーを短縮できます。
+
+`trustedBiddingSignalsUrl` が複数のインタレストグループ間で再利用される場合、[信頼できる入札シグナルのフェッチを組み合わせる](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups)ことができます。可能な場合には、インタレストグループ間で同じ `trustedBiddingSignalsUrl` を使用します。
+
+### リアルタイムの信頼できる入札シグナルのフェッチ量を小さくする
+
+ネットワークのレイテンシーが非常に大きくなる場合があり、これはリアルタイムの信頼できる入札シグナルのフェッチ中に転送されるデータの量から直接的な影響を受けます。
+
+リアルタイムの信頼できる入札シグナルサービスではなく、広告固有またはインタレストグループ固有のデータをインタレストグループに保存することをお勧めします。キャンペーンの予算編成やキルスイッチなど、真にリアルタイムのシグナルのみのために、リアルタイムの信頼できる入札シグナルデータを予約します。
+
+Any signal that can be updated on a daily or longer basis should be stored in the interest group and updated via the daily updates.
+
+## セラーのベストプラクティス
+
+FLEDGE オークションの効率を監視し、最適化していることを確認します。
+
+### Monitor your auctions
+
+オークションの指標を収集します。インタレストグループのオーナーとインタレストグループの入札の数は、オークションのパフォーマンスに大きな影響を与えるため、監視する必要があります。指標は `scoreAd()` で表示できます。
+
+`scoreAd()` は、入札者が入札の計算にかかった時間を示す `biddingDurationMsec` を受け取ります。マルチコアプロセッサは複数の入札スクリプトを同時に実行できますが、それでもパフォーマンスに大きな影響を与えるため、監視する価値があります。
+
+入札者は、自身のインタレストグループの入札パフォーマンスについて洞察を得ることができますが、これを他の入札者と比較することはできない場合があります。さまざまな入札者の相対的な落札率と入札拒否率を比較すると、インタレストグループが実行可能な入札を行わなかったり、承認されていないクリエイティブで過剰な入札を行ったりしたために入札の計算リソースが浪費されたケースを特定するのに役立つ場合があります。
+
+### Protect against slow bid scripts
+
+入札スクリプトの実行に過度に時間がかかると、関係者全員の FLEDGE オークションを遅らせる可能性があります。
+
+- **タイムアウトを使用します**。FLEDGE には入札スクリプトのデフォルトのタイムアウトが含まれていますが、`perBuyerTimeouts` を調整して、オークションに参加する入札者が過度に計算時間を使用しないようにすることができます。
+    - [Issue 293](https://github.com/WICG/turtledove/issues/293) で説明されているように、将来のタイムアウトと制限のディスカッションに参加することを検討してください。
+- **制限を使用します**。入札スクリプトのタイムアウトを設定すると、1 つのスクリプトの実行に時間がかかり過ぎてしまうのを防ぐことができますが、バイヤーは自由にユーザーを重複する可能性のある多数のインタレストグループに追加できるため、各インタレストグループは入札の機会と個別のタイムアウトを得ることができます。`perBuyerGroupLimits` を使用してインタレストグループの数に制限を設定することで、個々のバイヤーが過度にオークション時間を消費するのを防ぐことができます。
+    - バイヤーと協力して、インタレストグループの優先順位を確実に設定してください。そうすることで、最も重要なインタレストグループが各オークションに確実に含まれるようになります。
+
+{% Partial 'privacy-sandbox/fledge-api-next.njk' %}
