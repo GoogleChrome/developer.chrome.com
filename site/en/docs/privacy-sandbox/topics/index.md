@@ -318,7 +318,9 @@ be returned.
 
 {% Aside %}
 From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}` 
-argument. This does what it says: allows the method to return topics without causing the browser to record 
+argument.
+
+This allows the method to return topics without causing the browser to record 
 a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})` 
 can be used to return topics of interest for the current user, but with no side effects.
 {% endAside %}
