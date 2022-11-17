@@ -45,7 +45,7 @@ Chromium issue: [1178508](https://crbug.com/1178508)
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
 
-El panel **Grabadora** ahora es compatible con XPath y selectores de texto. [Comience a grabar un flujo de usuario](/docs/devtools/recorder/#record) y la grabadora seleccionará automáticamente el XPath y el texto más corto único de un elemento como selector, si éste está disponible.
+El panel **Recorder** ahora es compatible con XPath y selectores de texto. [Comience a grabar un flujo de usuario](/docs/devtools/recorder/#record) y la grabadora seleccionará automáticamente el XPath y el texto más corto único de un elemento como selector, si éste está disponible.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="XPath y selectores de texto en el panel Grabador.", width="800", height="579" %}
 
