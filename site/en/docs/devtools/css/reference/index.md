@@ -44,6 +44,12 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
+### View invalid, overridden, inactive, and other CSS {: #css-issues }
+
+The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
+
+See [Understand CSS issues](/docs/devtools/css/issues/#css-issues).
+
 ### View the external stylesheet where a rule is defined {: #view-external }
 
 In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that

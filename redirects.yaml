@@ -182,6 +182,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/css/overrides/
+  to: /docs/devtools/css/issues/
+
 - from: /docs/devtools/speed/get-started
   to: /docs/devtools/lighthouse
 
