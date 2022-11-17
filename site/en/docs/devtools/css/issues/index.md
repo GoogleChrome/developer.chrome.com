@@ -59,8 +59,6 @@ The **Styles** pane displays [shorthand properties](https://developer.mozilla.or
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vzJiWOkmE0WeeZoJtdah.png", alt="The shorthand property with a drop-down list.", width="800", height="597" %}
 
-In the expanded list, you can't edit the shortened properties but you can find at a glance, for example, overridden shortened properties.
-
 ### Non-editable {: #non-editable}
 
 The **Styles** pane displays properties that can't be edited in *italic text*. For example, the CSS from the following sources can't be edited:
