@@ -314,6 +314,17 @@ the [API caller](#caller) has previously observed, and the number of topics that
 available (such as the number of weeks of data accumulated). Anywhere from zero to three topics may
 be returned.
 
+{: #skipobservation}
+
+{% Aside %}
+From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}` 
+argument.
+
+This allows the method to return topics without causing the browser to record 
+a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})` 
+can be used to return topics of interest for the current user, but with no side effects.
+{% endAside %}
+
 ### Access topics with the JavaScript API {: #access-topics}
 
 Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
