@@ -12,16 +12,16 @@ authors:
 
 ## 実装ステータス
 
-- [オリジントライアル中 ](/blog/user-agent-reduction-origin-trial/) Chrome 95 ～ 103
-- [サポート終了トライアル中 ](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 ～ Chrome 112
-- [Chrome DevTools の統合 ](/blog/new-in-devtools-89/#ua-ch)
--  [UA-CH Chrome プラットフォームのステータス](https://chromestatus.com/feature/5995832180473856)
+- [オリジントライアル中](/blog/user-agent-reduction-origin-trial/) Chrome 95 ～ 103
+- [サポート終了トライアル中](/blog/user-agent-reduction-deprecation-trial/) Chrome 103 ～ Chrome 112
+- [Chrome DevTools の統合](/blog/new-in-devtools-89/#ua-ch)
+- [UA-CH Chrome プラットフォームのステータス](https://chromestatus.com/feature/5995832180473856)
 
 ## User-Agent の情報量削減とは
 
 User-Agent（UA）の情報量削減とは、 [パッシブフィンガープリントに使用される](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control). 可能性のある User-Agent 文字列中の識別情報を最小限に抑える取り組みです。この [変更が展開される](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), と、すべてのリソース リクエストには情報量が削減された `User-Agent` ヘッダーが含まれるようになります。その結果、いくつかの `Navigator` インターフェース `navigator.userAgent`、`navigator.appVersion`、`navigator.platform` など から返される値の情報量が削減されます。
 
-ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](#prepare-and-test) 必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[ User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/) が必要になります。
+ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](#prepare-and-test) 必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/) が必要になります。
 
 User-Agent [の情報量削減のスケジュールに関する最新情報をご確認ください](https://www.chromium.org/updates/ua-reduction)。
 
@@ -105,7 +105,7 @@ UA-CH API に更新したら、User-Agent から想定どおりのデータが�
 -  `chrome://flags/#reduce-user-agent`  フラグを有効化する
     - これにより、ローカルのブラウザがすべてのサイトから情報量削減後の`user-agent` 文字列のみを受信するよう（それがデフォルトの設定になる前に）設定できます。
 - DevTools で正しい `user-agent` 文字列と Client Hints を使ってエミュレートされたデバイスを設定する
-    - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="28", height="28" %} &gt; **設定 **&gt;**&nbsp;[デバイス] **&gt;**&nbsp;[カスタム デバイスを追加] **をクリックし、必要な  `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
+    - DevTools {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/gznkUDBvjL2bg44T30ij.png", alt="画面の右上で", width="28", height="28" %} &gt; **設定** &gt;**&nbsp;[デバイス]** &gt;**&nbsp;[カスタム デバイスを追加]** をクリックし、必要な  `user-agent` 文字列と User-Agent Client Hints 値の組み合わせを提供するようエミュレートされたデバイスを構成します。
     - DevTools 画面の左上で {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/eLRsSnxmkhz0yKsXTjxD.png", alt="ALT_TEXT_HERE", width="30", height="32" %} **T [デバイスのツールバーを切り替え]** をクリックして DevTools の UI を開き、デバイスをエミュレートします。
 - Chrome を `「--user-agent="（ここにカスタム文字列を記述）"」` 付きで起動する
     - この[コマンドラインフラグ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) を使用して、カスタム User-Agent 文字列を付けて Chrome を起動します。
@@ -149,7 +149,7 @@ Critical Hints を使用する必要がある場合は、 [Critical Hints の信
 ## 意見交換とフィードバックの提供
 
 - **オリジン トライアル**: [フィードバックを共有しましょう。](https://github.com/miketaylr/user-agent-reduction/issues).
-- **デモ:** [ User-Agent の情報量削減のデモ](https://uar-ot.glitch.me/) をお試しください。
+- **デモ:** [User-Agent の情報量削減のデモ](https://uar-ot.glitch.me/) をお試しください。
 - **GitHub**: の確認 [UA-CH に関する提案](https://github.com/WICG/ua-client-hints), [質問の投稿、意見交換](https://github.com/WICG/ua-client-hints/issues) を行えます。
 - **デベロッパー サポート**: で質問や意見交換を行えます [プライバシー サンドボックスデベロッパー サポートリポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
