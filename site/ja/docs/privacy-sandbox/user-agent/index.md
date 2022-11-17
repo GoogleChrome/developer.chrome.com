@@ -1,12 +1,11 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: User-Agent の情報量削減
-subhead: |2-
-
+subhead: >
   ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
 description: ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリントを削減します。
-date: '2021-11-09'
-updated: '2022-07-28'
+date: 2021-11-09
+updated: 2022-07-28
 authors:
   - alexandrawhite
 ---
