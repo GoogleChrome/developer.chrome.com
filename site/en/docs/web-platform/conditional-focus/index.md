@@ -60,7 +60,7 @@ When deciding whether to focus, it is possible to take the [Capture Handle] into
 const origin = track.getCaptureHandle().origin;
 if (displaySurface == "browser" && origin == "https://example.com") {
   controller.setFocusBehavior("no-focus-change");
-} else if (displaySurface != "screen") {
+} else if (displaySurface != "monitor") {
   controller.setFocusBehavior("focus-captured-surface");
 }
 ```
