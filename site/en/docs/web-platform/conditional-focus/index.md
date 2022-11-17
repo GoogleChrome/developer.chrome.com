@@ -41,11 +41,12 @@ const controller = new CaptureController();
 const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
 
 const [track] = stream.getVideoTracks();
-if (track.getSettings().displaySurface == "browser") {
+const displaySurface = track.getSettings().displaySurface;
+if (displaySurface == "browser") {
   // Focus the captured tab.
   controller.setFocusBehavior("focus-captured-surface");
-} else {
-  // Do not move focus to the captured window or screen.
+} else if (displaySurface == "window") {
+  // Do not move focus to the captured window.
   // Keep the capturing page focused.
   controller.setFocusBehavior("no-focus-change");
 }
@@ -56,11 +57,10 @@ When deciding whether to focus, it is possible to take the [Capture Handle] into
 ```js
 // Retain focus if capturing a tab dialed to example.com.
 // Focus anything else.
-const displaySurface = track.getSettings().displaySurface;
 const origin = track.getCaptureHandle().origin;
 if (displaySurface == "browser" && origin == "https://example.com") {
   controller.setFocusBehavior("no-focus-change");
-} else {
+} else if (displaySurface != "screen") {
   controller.setFocusBehavior("focus-captured-surface");
 }
 ```

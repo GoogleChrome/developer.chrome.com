@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: 'Screen sharing improvements in Chrome 109'
 description: >
- Details of two screen sharing improvements for the web — a mechanism for controlling tab focus when screen sharing, and a mechanism to control local audio playback.
+ Details of two screen sharing improvements for the web—a mechanism for controlling tab focus when screen sharing, and a mechanism to control local audio playback.
 authors:
   - beaufortfrancois
   - eladalon
@@ -28,11 +28,12 @@ const controller = new CaptureController();
 const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
 
 const [track] = stream.getVideoTracks();
-if (track.getSettings().displaySurface == "browser") {
+const displaySurface = track.getSettings().displaySurface;
+if (displaySurface == "browser") {
   // Focus the captured tab.
   controller.setFocusBehavior("focus-captured-surface");
-} else {
-  // Do not move focus to the captured window or screen.
+} else if (displaySurface == "window") {
+  // Do not move focus to the captured window.
   // Keep the capturing page focused.
   controller.setFocusBehavior("no-focus-change");
 }
