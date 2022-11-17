@@ -20,20 +20,19 @@ to build easy sign-in experiences that are more secure.
 
 ## What is a passkey?
 
-[Passkeys](https://developers.google.com/identity/passkeys) are more secure than
+A [passkey](https://developers.google.com/identity/passkeys) is a digital credential, tied to a user account and a website or application. Passkeys are more secure than
 passwords because they enable users to sign in to apps and websites with a
 biometric sensor (such as a fingerprint or facial recognition), PIN, or pattern,
-freeing them from having to remember and manage passwords.Because they are
+freeing them from having to remember and manage passwords. Because they are
 [WebAuthn](https://www.w3.org/TR/webauthn-2/) credentials, they include the
 following security features:
 
-* Public-key cryptography so sites don't have to store passwords/secrets.
-* Users can't be phished because only the domain a passkey is created can use it
-  to authenticate.
+* Passkeys use public-key cryptography so sites don't have to store passwords or secrets.
+* Users can't be phished because a passkey can only be used with the website or app that created it.
 
-Websites have been able to create and use WebAuthn credentials on devices and
-security keys via a modal UI in the browser. However, this required websites to
-redesign their sign in flow to allow users to select the WebAuthn flow via a
+Websites can create and use WebAuthn credentials on devices and
+security keys via a modal UI in the browser. To do so, websites have to
+redesign their sign-in flow to let users select the WebAuthn flow using a
 separate button. By allowing passkeys to enable autofill, websites can now
 provide the same experience for both password and passkey users.
 
@@ -41,8 +40,8 @@ provide the same experience for both password and passkey users.
 
 Allowing websites to make a WebAuthn request without triggering the modal UI is 
 called "conditional mediation". This autofill integration is often referred to 
-as a "[conditional 
-UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI)".
+as a [conditional 
+UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI).
 
 <figure class="screenshot" style="max-width:300px; margin:auto;">
   {%
@@ -52,12 +51,16 @@ UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI)".
   <figcaption>A user signing in with a condtional UI</figcaption>
 </figure>
 
+### How it works
+
 As soon as the user taps on the username input field, an autofill suggestion
 dialog pops up with the stored passkeys and password autofill suggestions. The
 user can then choose an account and use the device screen lock to sign in. This
 enables users to sign in to the website with the existing password form as if
 nothing has changed, but with [the added security benefit of
 passkeys](https://developers.google.com/identity/passkeys#security-considerations).
+
+### How to use conditional UI
 
 To use the WebAuthn conditional UI, learn how to [Create a passkey for 
 passwordless logins](https://web.dev/passkey-registration/) and [Sign in with a 
