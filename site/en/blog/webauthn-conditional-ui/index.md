@@ -30,8 +30,8 @@ following security features:
 * Passkeys use public-key cryptography so sites don't have to store passwords or secrets.
 * Users can't be phished because a passkey can only be used with the website or app that created it.
 
-Websites can create and use WebAuthn credentials on devices and
-security keys via a modal UI in the browser. To do so, websites have to
+Websites could create and use WebAuthn credentials on devices and
+security keys via a modal UI in the browser. To do so, websites had to
 redesign their sign-in flow to let users select the WebAuthn flow using a
 separate button. By allowing passkeys to enable autofill, websites can now
 provide the same experience for both password and passkey users.
