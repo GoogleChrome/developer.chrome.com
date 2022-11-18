@@ -87,9 +87,11 @@ The **Styles** pane displays properties that can't be edited in *italic text*. F
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yhDE5n8UWyu2T2CwKGOZ.png", alt="The CSS from user agent stylesheet.", width="800", height="445" %}
 
-- Style attributes on the element. You can edit them in the DOM tree and this updates the CSS in the **Styles** pane, but not the other way around.
+- Style-related HTML attributes on the element, for example, height, width, color, etc. You can edit them in the DOM tree and this updates the CSS in the **Styles** pane, but not the other way around.
 
   {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/TwzSI9igPEbgELGEyAzU.mp4", autoplay=false, controls=true, loop=true, class="screenshot" %}
+
+  In this example, the `height="48"` attribute on an `<svg>` element is set to `50`. This updates the corresponding property under `svg[Attributes Style]` in the **Styles** pane.
 
 ## Inspect an element that still isn't styled the way you think  {: #computed }
 
