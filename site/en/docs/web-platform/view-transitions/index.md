@@ -49,6 +49,8 @@ Handling state changes is particularly challenging if the two states differ in s
 
 It isn't impossible, it's just _really hard_.
 
+View Transitions give you an easier way, by allowing you to make your DOM change without any overlap between states, but create a transition animation between the states using snapshotted views.
+
 Additionally, although the current implementation targets single page apps (SPAs), this feature will be expanded to allow for transitions between full page loads, which is currently impossible.
 
 ## Standardization status
@@ -99,6 +101,10 @@ And just like that, pages cross-fade:
 
 Ok, a cross-fade isn't that impressive. Thankfully, transitions can be customized, but before we get to that, we need to understand how this basic cross-fade worked.
 
+{% Aside %}
+Demo links in this article are less visually impressive, but also have a tiny codebase. The goal is to make it easier to read and understand all of the code, without knowing any particular SPA framework.
+{% endAside %}
+
 ## How these transitions work
 
 Taking the code sample from above:
@@ -123,7 +129,7 @@ Once the state is captured, the API constructs a pseudo-element tree like this:
 
 The `::view-transition` sits in a top-layer, over everything else on the page.
 
-`::view-transition-old(root)` is a screenshot of the old view, and `::view-transition-new(root)` is a live representation of the new view. Both render as CSS 'replaced content' (like an `<img>`).
+`::view-transition-old(root)` is a screenshot of the old view, and `::view-transition-new(root)` is a **live** representation of the new view. Both render as CSS 'replaced content' (like an `<img>`).
 
 The old view animates from `opacity: 1` to `opacity: 0`, while the new view animates from `opacity: 0` to `opacity: 1`, creating a cross-fade.
 
@@ -239,17 +245,17 @@ That CSS declaration caused the pseudo-element tree to change:
 
 ```diff
 ::view-transition
-├─ ::view-transition-container(root)
+├─ ::view-transition-group(root)
 │  └─ ::view-transition-image-set(root)
 │     ├─ ::view-transition-old(root)
 │     └─ ::view-transition-new(root)
-└─ ::view-transition-container(main-header)
+└─ ::view-transition-group(main-header)
    └─ ::view-transition-image-set(main-header)
       ├─ ::view-transition-old(main-header)
       └─ ::view-transition-new(main-header)
 ```
 
-There are now two transition containers. One for the header, and another for the rest. These can be targeted independently with CSS, and given different transitions. Although, in this case `main-header` was left with the default transition, which is a cross-fade.
+There are now two transition groups. One for the header, and another for the rest. These can be targeted independently with CSS, and given different transitions. Although, in this case `main-header` was left with the default transition, which is a cross-fade.
 
 Well, ok, the default transition isn't just a cross fade, it also transitions:
 
@@ -273,11 +279,11 @@ So now we have three parts to play with:
 
 ```diff
 ::view-transition
-├─ ::view-transition-container(root)
+├─ ::view-transition-group(root)
 │  └─ …
-├─ ::view-transition-container(main-header)
+├─ ::view-transition-group(main-header)
 │  └─ …
-└─ ::view-transition-container(main-header-text)
+└─ ::view-transition-group(main-header-text)
    └─ …
 ```
 
@@ -297,7 +303,7 @@ But again, just going with the defaults:
 Now the heading text does a little satisfying slide across to make space for the back button.
 
 {% Aside %}
-View transitions use a flat structure. In the real DOM, the heading text was in the header. But, during the transition, their respective `::view-transition-container`s are siblings. This is really handy when animating items from one container to another, as you don't need to worry about clipping from parent elements.
+View transitions use a flat structure. In the real DOM, the heading text was in the header. But, during the transition, their respective `::view-transition-group`s are siblings. This is really handy when animating items from one container to another, as you don't need to worry about clipping from parent elements.
 {% endAside %}
 
 ## Debugging transitions
@@ -449,7 +455,7 @@ Conveniently, all the transitions so far have been to elements with the same asp
   <figcaption>One element transitioning to another, with an aspect ratio change. <a href="https://simple-set-demos.glitch.me/7-expanding-image-ratio/">Minimal demo</a>. <a href="https://glitch.com/edit/#!/simple-set-demos?path=7-expanding-image-ratio%2Fstyles.css%3A59%3A0">Source</a>.</figcaption>
 </figure>
 
-In the default transition, the container animates from the before size to the after size. The old and new views are 100% width of the container, and auto height, meaning they keep their aspect ratio regardless of the container's size.
+In the default transition, the group animates from the before size to the after size. The old and new views are 100% width of the group, and auto height, meaning they keep their aspect ratio regardless of the group's size.
 
 This is a good default, but it isn't what we want in this case. So:
 
@@ -462,7 +468,7 @@ This is a good default, but it isn't what we want in this case. So:
   /* Use normal blending,
   so the new view sits on top and obscures the old view */
   mix-blend-mode: normal;
-  /* Make the height the same as the container,
+  /* Make the height the same as the group,
   meaning the view size might not match its aspect-ratio. */
   height: 100%;
   /* Clip any overflow of the view */
@@ -487,7 +493,7 @@ This is a good default, but it isn't what we want in this case. So:
 This means the thumbnail stays in the center of the element as the width expands, but the full image 'un-crops' as it transitions from 1:1 to 16:9.
 
 {% Aside %}
-Animating width and height, as happens here on the `::view-transition-container`, is generally frowned upon in web performance circles as it runs layout per frame. However, for View Transitions, we plan to optimize it so it can run off the main thread in most cases. This optimization hasn't been implemented yet.
+Animating width and height, as happens here on the `::view-transition-group`, is generally frowned upon in web performance circles as it runs layout per frame. However, for View Transitions, we plan to optimize it so it can run off the main thread in most cases. This optimization hasn't been implemented yet.
 {% endAside %}
 
 ## Changing the transition depending on device state
@@ -543,7 +549,7 @@ You could chose to prevent any transitions for these users:
 
 ```css
 @media (prefers-reduced-motion) {
-  ::view-transition-container(*),
+  ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {
     animation: none !important;
@@ -652,16 +658,17 @@ function spaNavigate(data) {
     return;
   }
 
+  // Get the click position, or fallback to the middle of the screen
+  const x = lastClick?.clientX ?? innerWidth / 2;
+  const y = lastClick?.clientY ?? innerHeight / 2;
+  // Get the distance to the furthest corner
+  const endRadius = Math.hypot(
+    Math.max(x, innerWidth - x),
+    Math.max(y, innerHeight - y)
+  );
+
   // With a transition:
   const transition = document.startViewTransition(() => {
-    // Get the click position, or fallback to the middle of the screen
-    const x = lastClick?.clientX ?? innerWidth / 2;
-    const y = lastClick?.clientY ?? innerHeight / 2;
-    // Get the distance to the furthest corner
-    const endRadius = Math.sqrt(
-      Math.max(x, innerWidth - x) ** 2 + Math.max(y, innerHeight - y) ** 2
-    );
-
     updateTheDOMSomehow(data);
   });
 
@@ -772,6 +779,63 @@ async function animateFromMiddle(transition) {
 
 This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
 
+## Not a polyfill, but… {:#not-a-polyfill}
+
+I don't think this feature can be polyfilled in any useful way, but I'm happy to be proven wrong!
+
+However, this helper function makes things much easier in browsers that don't support view transitions:
+
+```js
+function transitionHelper({
+  skipTransition = false,
+  classNames = [],
+  updateDOM,
+}) {
+  if (skipTransition || !document.startViewTransition) {
+    const domUpdated = Promise.resolve(updateDOM()).then(() => undefined);
+
+    return {
+      ready: Promise.reject(Error('View transitions unsupported')),
+      domUpdated,
+      finished: domUpdated,
+    };
+  }
+
+  document.documentElement.classList.add(...classNames);
+
+  const transition = document.startViewTransition(updateDOM);
+
+  transition.finished.finally(() =>
+    document.documentElement.classList.remove(...classNames)
+  );
+
+  return transition;
+}
+```
+
+And it can be used like this:
+
+```js
+function spaNavigate(data) {
+  const classNames = isBackNavigation ? ['back-transition'] : [];
+
+  const transition = transitionHelper({
+    classNames,
+    updateDOM() {
+      updateTheDOMSomehow(data);
+    },
+  });
+
+  // …
+}
+```
+
+In browsers that don't support View Transitions, `updateDOM` will still be called, but there won't be an animated transition.
+
+You can also provide some `classNames` to add to `<html>` during the transition, making it easier to [change the transition depending on the type of navigation](#changing-on-navigation-type).
+
+You can also pass `true` to `skipTransition` if you don't want an animation, even in browsers that support View Transitions. This is useful if your site has a user preference to disable transitions.
+
 ## API reference {:#api-reference}
 
 `const viewTransition = document.startViewTransition(domUpdateCallback)`
@@ -810,9 +874,9 @@ Instance members of `ViewTransition`:
 ## Default style and transition reference
 
 `::view-transition`
-: The root pseudo-element which fills the viewport and contains each `::view-transition-container`.
+: The root pseudo-element which fills the viewport and contains each `::view-transition-group`.
 
-`::view-transition-container`
+`::view-transition-group`
 : Absolutely positioned.
 
     Transitions `width` and `height` between the 'before' and 'after' states.
@@ -820,14 +884,14 @@ Instance members of `ViewTransition`:
     Transitions `transform` between the 'before' and 'after' viewport-space quad.
 
 `::view-transition-image-set`
-: Absolutely positioned to fill the container.
+: Absolutely positioned to fill the group.
 
     Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the old and new views.
 
 `::view-transition-new` and `::view-transition-old`
 : Absolutely positioned to the top-left of the wrapper.
 
-    Fills 100% of the container width, but has an auto height, so it will maintain its aspect ratio rather than filling the container.
+    Fills 100% of the group width, but has an auto height, so it will maintain its aspect ratio rather than filling the group.
 
     Has `mix-blend-mode: plus-lighter` to allow for a true cross-fade.
 
