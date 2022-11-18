@@ -35,7 +35,9 @@ The **Styles** pane crosses out properties with invalid syntax and displays {% I
 
 The **Styles** pane crosses out properties that are overridden by other properties according to the [Cascading order][3].
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/BNlYQHj8tpojjxyMKNDv.mp4", autoplay=false, controls=true, loop=true, class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/rFzkt37FiDQ2kaxus8HD.mp4", autoplay=false, controls=true, loop=true, class="screenshot" %}
+
+In this example, the `width: 300px;` style attribute on the element overrides `width: 100%` on the `.youtube` class.
 
 ### Inactive {: #inactive }
 
