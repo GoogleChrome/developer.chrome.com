@@ -19,7 +19,7 @@ applied properly. When you refresh the page, the element looks the same as befor
 
 The first thing to do is [inspect the element][2] and make sure that your new CSS is actually applied to the element.
 
-Sometimes, you'll see your new CSS in the **Elements** > **Styles** pane but your new CSS is in pale text, non-editable, crossed out, or has a warning or hint icon next to it.
+Sometimes, you'll see your new CSS in the **Elements** > **Styles** pane but your new CSS is in <span style="opacity: 60%;">pale text</span>, non-editable, crossed out, or has a warning or hint icon next to it.
 
 ## Understand CSS issues {: #css-issues }
 
@@ -41,21 +41,33 @@ In this example, the `width: 300px;` style attribute on the element overrides `w
 
 ### Inactive {: #inactive }
 
-The **Styles** pane displays in pale text the properties that are valid but have no effect because of other properties. These pale properties have {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} information icons next to them and are inactive because of CSS logic, not the [Cascading order][3].
+The **Styles** pane displays in <span style="opacity: 60%;">pale text</span> and puts {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} information icons next to properties that are valid but have no effect because of other properties.
+
+These pale properties are inactive because of CSS logic, not the [Cascading order][3].
 
 {% Aside 'gotchas' %}
-Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} icon to get a hint at what went wrong.
+- The pale inactive properties differ from pale [non-inherited properties](#inherited-and-non-inherited). Inactive properties have icons.
+
+- Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} icon to get a hint at what went wrong.
 {% endAside %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pe6BdDcVryWmOuT3YjLz.png", alt="Inactive CSS declaration with a hint.", width="800", height="498" %}
 
 In this example, the `display: block;` property disables `justify-content` and `align-items` that control flex or grid layouts.
 
-### Inherited {: #inherited }
+### Inherited and non-inherited {: #inherited-and-non-inherited }
 
-The **Styles** pane lists inherited properties in `Inherited from <element-name>` sections. Additionally, the **Styles** pane lists [non-inherited properties](https://developer.mozilla.org/docs/Web/CSS/inheritance) for completeness but in pale text.
+The **Styles** pane lists properties in `Inherited from <element-name>` sections depending on their [default inheritance](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance):
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pkBcVUnT1QLxEZkhq9P9.png", alt="The Inherited from body section listing inherited and non-inherited CSS.", width="800", height="431" %}
+- Inherited by default are in regular text.
+- Non-inherited by default are in <span style="opacity: 60%;">pale text</span>.
+
+{% Aside 'gotchas' %}
+- The pale non-inherited properties differ from pale [inactive properties](#inactive). Non-inherited properties don't have icons and are in the corresponding sections.
+- [Overriding default inheritance](https://developer.mozilla.org/docs/Web/CSS/inheritance#overriding_inheritance_an_example) *doesn't* affect the way the **Styles** pane displays the properties: pale or not.
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pkBcVUnT1QLxEZkhq9P9.png", alt="The 'Inherited from body' section listing inherited and non-inherited CSS.", width="800", height="431" %}
 
 ### Shorthand {: #shorthand }
 
