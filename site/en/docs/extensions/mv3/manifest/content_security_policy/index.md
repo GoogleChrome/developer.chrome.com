@@ -32,7 +32,6 @@ These defaults are equivalent to specifying the following policies in your manif
 }
 ```
 
-
 In this case, the extension will only load local scripts and objects from its own packaged resources. WebAssembly will be disabled, and the extension will not run in-line Javascript or be able to evaluate strings as executable code. If a sandbox page is added, it will have more relaxed permissions for evaluating scripts from outside the extension.
 
 ## Minimum and customized Content Security Policies
