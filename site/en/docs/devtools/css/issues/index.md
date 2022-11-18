@@ -39,13 +39,15 @@ The **Styles** pane crosses out properties that are overridden by other properti
 
 ### Inactive {: #inactive }
 
-The **Styles** pane crosses out properties that are valid but have no effect because of other properties. Such properties have {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} information icons next to them and are inactive because of CSS logic, not the [Cascading order][3].
+The **Styles** pane displays in pale text the properties that are valid but have no effect because of other properties. These pale properties have {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} information icons next to them and are inactive because of CSS logic, not the [Cascading order][3].
 
 {% Aside 'gotchas' %}
 Hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2OyGRodvgk9neTIEAH4g.svg", alt="Information.", width="24", height="24" %} icon to get a hint at what went wrong.
 {% endAside %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6ekURzFTurs4nzzgWfmx.png", alt="Inactive CSS declaration with a hint.", width="800", height="558" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pe6BdDcVryWmOuT3YjLz.png", alt="Inactive CSS declaration with a hint.", width="800", height="498" %}
+
+In this example, the `display: block;` property disables `justify-content` and `align-items` that control flex or grid layouts.
 
 ### Inherited {: #inherited }
 
@@ -55,7 +57,7 @@ The **Styles** pane lists inherited properties in `Inherited from <element-name>
 
 ### Shorthand {: #shorthand }
 
-The **Styles** pane displays [shorthand properties](https://developer.mozilla.org/docs/Web/CSS/Shorthand_properties) as {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} drop-down lists with all the properties that are shortened.
+The **Styles** pane displays [shorthand properties](https://developer.mozilla.org/docs/Web/CSS/Shorthand_properties) as {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} drop-down lists that contain all the properties that are shortened.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vzJiWOkmE0WeeZoJtdah.png", alt="The shorthand property with a drop-down list.", width="800", height="597" %}
 
@@ -75,7 +77,7 @@ The **Styles** pane displays properties that can't be edited in *italic text*. F
 
 Use the **Computed** tab to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed).
 
-The **Elements** > **Styles** pane displays the exact set of CSS rules exactly as they are written in various stylesheets. On the other hand, the **Elements** > **Computed** pane lists resolved CSS values that Chrome uses to render an element:
+The **Elements** > **Styles** pane displays the exact set of CSS rules as they are written in various stylesheets. On the other hand, the **Elements** > **Computed** pane lists resolved CSS values that Chrome uses to render an element:
 
 - CSS derived from [inheritance](https://developer.mozilla.org/docs/Web/CSS/inheritance)
 - [Cascade](https://developer.mozilla.org/docs/Web/CSS/Cascade) winners
