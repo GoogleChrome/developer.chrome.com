@@ -18,16 +18,14 @@ This article assumes you are familiar with Chrome extension development. If not,
 
 An extension is composed of different "parts". We will talk about each one, and what their role is in an extension.
 
-An extension's architecture will depend on its functionality, but all extensions must have a
-[manifest][section-manifest]. The following are other components an extension can include: 
+## The manifest {: #manifest }
 
-- [Service worker][section-bg]
-- [Toolbar icon][section-icons]
-- [UI elements][section-ui]
-- [Content script][section-cs]
-- [Options page][section-options]
+The manifest is the only required file because it provides the browser with a blueprint it can follow to ___ your extension. Without it, the browser wouldn't be able to "interpret" your extension.
+For example:
 
-### The manifest {: #manifest }
+- It uses all the unique/personable information about the extension, like it's name, description of what it does, the version number it's currently on, what icons to use across different xyz, etc to display this information in different places like the browser window, Chrome Web Store listing and the Extensions page (chrome://).
+- It let's the browser know which permissions the extension needs to use Chrome APIs, through specific API related keys and permissions.
+- It knows which are file to run on the page, which is the service worker that will run in the background, which files to 
 
 The manifest file, titled `manifest.json`, gives the browser information about the extension, such
 as the most important files and the capabilities the extension might use. 
