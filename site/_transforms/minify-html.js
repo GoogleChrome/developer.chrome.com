@@ -16,7 +16,7 @@
 
 const minify = require('html-minifier').minify;
 
-const options = {
+const minifyHtmlOptions = {
   removeAttributeQuotes: true,
   collapseBooleanAttributes: true,
   collapseWhitespace: true,
@@ -30,7 +30,7 @@ const options = {
 const minifyHtml = (content, outputPath) => {
   if (outputPath && outputPath.endsWith('.html')) {
     try {
-      content = minify(content, options);
+      content = minify(content, minifyHtmlOptions);
       return content;
     } catch (err) {
       console.warn('Could not minify html for', outputPath);
@@ -40,4 +40,4 @@ const minifyHtml = (content, outputPath) => {
   return content;
 };
 
-module.exports = {minifyHtml, options};
+module.exports = {minifyHtml, minifyHtmlOptions};

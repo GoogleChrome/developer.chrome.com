@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const {options} = require('../_transforms/minify-html');
+const {minifyHtmlOptions} = require('../_transforms/minify-html');
 const minify = require('html-minifier').minify;
 
 const minifyHtmlFilter = value => {
@@ -22,7 +22,7 @@ const minifyHtmlFilter = value => {
     throw new Error(`Invalid type passed to minifyHtml: ${typeof value}`);
   }
 
-  return minify(value, options);
+  return minify(value, minifyHtmlOptions);
 };
 
 module.exports = {minifyHtmlFilter};
