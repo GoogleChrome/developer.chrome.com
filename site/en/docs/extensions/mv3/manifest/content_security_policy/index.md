@@ -45,11 +45,13 @@ Chrome enforces a minimum content security policy for extension pages. It is equ
 - https://source.chromium.org/chromium/chromium/src/+/main:extensions/common/manifest_handlers/csp_info.cc?q=kMinimumMV3CSP
 #}
 ```json
-...
-"content_security_policy": {
+{
+  // ...
+  "content_security_policy": {
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+  // ...
 }
-...
 ```
 
 The `extension_pages` policy cannot be relaxed beyond this minimum value. In other words, developers cannot add the `'unsafe-eval'` expression to the `script-src` directive in order to call `eval()` in extension page or worker contexts. Attempting to load an extension with such a CSP will cause Chrome to throw the following error at install time:
