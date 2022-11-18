@@ -75,7 +75,7 @@ The **Styles** pane displays properties that can't be edited in *italic text*. F
 
 ## Inspect an element that still isn't styled the way you think  {: #computed }
 
-Use the **Computed** tab to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed).
+Use the **Computed** pane to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed).
 
 The **Elements** > **Styles** pane displays the exact set of CSS rules as they are written in various stylesheets. On the other hand, the **Elements** > **Computed** pane lists resolved CSS values that Chrome uses to render an element:
 
