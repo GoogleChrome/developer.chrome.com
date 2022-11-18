@@ -32,7 +32,7 @@ It's currently behind the `chrome://flags/#view-transition` flag in Chrome 109+.
     muted="true",
     controls="true"
   %}
-  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#document-transition</code> flag.</figcaption>
+  <figcaption>Transitions created with the View Transition API. <a href="https://http203-playlist.netlify.app/">Try the demo site</a> – Requires Chrome 109+ and the <code>chrome://flags/#view-transition</code> flag.</figcaption>
 </figure>
 
 ## Why do we need this feature?
