@@ -57,7 +57,7 @@ In this example, the `display: block;` property disables `justify-content` and `
 
 ### Inherited and non-inherited {: #inherited-and-non-inherited }
 
-The **Styles** pane lists properties in `Inherited from <element-name>` sections depending on their [default inheritance](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance):
+The **Styles** pane lists properties in `Inherited from <element-name>` sections depending on their [default inheritance](https://developer.mozilla.org/docs/Web/CSS/inheritance):
 
 - Inherited by default are in regular text.
 - Non-inherited by default are in <span style="opacity: 60%;">pale text</span>.
