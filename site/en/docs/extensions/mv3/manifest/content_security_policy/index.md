@@ -25,8 +25,7 @@ These defaults are equivalent to specifying the following policies in your manif
   // ...
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';",
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';
-"
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
   }
   // ...
 }
