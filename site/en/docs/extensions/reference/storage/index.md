@@ -6,24 +6,23 @@ api: storage
 
 The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
-- Content scripts can directly access chrome.storage.
-- Stores JSON serializable values as object properties.
+- The extension service worker, content scripts, and other extension contexts have access to the storage areas.
+- JSON serializable values are stored as object properties.
 - Storage is asynchronous with bulk read and write operations.
-- Storage data persists when the user clears the cache and browsing history.
-- Available in the service worker, content scripts, and other extension contexts.
+- Data persists even when the user clears the cache and browsing history.
 - A user's extension settings persist even when using [split incognito][incognito].
-- Offers an exclusive read-only [managed storage area][manifest-storage] for enterprise policies.
+- Includes an exclusive read-only [managed storage area][manifest-storage] for enterprise policies.
 
 {% Details %}
 {% DetailsSummary %}
 💡 Can extensions use Window.localStorage?
 {% endDetailsSummary %}
 
-Even though extensions can access [Window.localStorage][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
+Even though extensions can access [`Window.localStorage`][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
 
 - The extension's service worker cannot access the localStorage API.
-- Content scripts share the localStorage of the host page.
-- Data saved to localStorage is lost when the user clears their browsing history.
+- Content scripts share the `localStorage` of the host page.
+- Data saved to `localStorage` is lost when the user clears their browsing history.
 
 {% endDetails %}
 
@@ -44,13 +43,13 @@ The Storage API is divided into the following four buckets ("storage areas"):
 
 {% Aside 'warning' %}
 
-Local and sync storage areas should not store confidential user data because they are not encrypted at rest. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
+Local and sync storage areas should not store confidential user data because they are not encrypted. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
 
 {% endAside %}
 
 - [**storage.session**][prop-session]
   - Holds data in memory for the duration of a browser session.
-  - By default, not exposed to content scripts, but behavior can be changed by setting [chrome.storage.session.setAccessLevel()][method-access-level].
+  - By default, not exposed to content scripts, but behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level].
   - Quota limitation is 1 MB approx.
   - Consider using it to store global variables across service worker runs.
 
@@ -60,7 +59,7 @@ Local and sync storage areas should not store confidential user data because the
 
 ## Manifest {: #manifest}
 
-To use the storage API, you must declare the `"storage"` permission in the extension
+To use the storage API, declare the `"storage"` permission in the extension
 [manifest][doc-manifest]. For example:
 
 ```json
@@ -139,7 +138,8 @@ The following sections demonstrate some common use cases for the Storage API.
 
 ### Synchronous response to storage updates
 
-To track changes made to storage, you can add a listener to its `onChanged` event. When anything changes in storage, that event will fire. The sample code listens for these changes:
+To track changes made to storage, you can add a listener to its `onChanged` event. When anything changes in storage, that event fires. The sample code listens for these changes:
+
 
 {% Label %}background.js:{% endLabel %}
 
