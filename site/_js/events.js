@@ -20,7 +20,6 @@ import './web-components/enhanced-select';
 import './web-components/checkbox-group';
 import {loadMore} from './misc/load-more';
 import memoize from './utils/memoize';
-import {sortAscByTime, sortDescByTime} from './utils/events';
 
 const getEvents = async () => {
   const response = await fetch('/events.json');
@@ -47,7 +46,7 @@ const eventLists = [
       const {upcomingEvents} = await getMemoizedEvents();
 
       return upcomingEvents
-        .sort(sortAscByTime)
+        .sort((a, b) => a.date.localeCompare(b.date))
         .slice(skip, take + skip)
         .map(event => event.html);
     },
@@ -59,7 +58,7 @@ const eventLists = [
       const {pastEvents} = await getMemoizedEvents();
 
       return pastEvents
-        .sort(sortDescByTime)
+        .sort((a, b) => b.date.localeCompare(a.date))
         .slice(skip, take + skip)
         .map(event => event.html);
     },
