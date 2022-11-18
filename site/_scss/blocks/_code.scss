@@ -43,7 +43,10 @@ pre > code {
     color: var(--color-code-comment);
   }
 
-  &.punctuation,
+  &.punctuation {
+    color: var(--color-code-punctuation);
+  }
+
   &.string,
   &.atrule,
   &.attr-value {
