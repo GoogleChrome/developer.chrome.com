@@ -7,15 +7,16 @@ description: A high-level explanation of the software architecture of Chrome Ext
 subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
 
-Extensions are zipped bundles of HTML, CSS, JavaScript, images, and other files used in the web
-platform. Extensions can modify web content that users see and interact with. They can also extend
-and change the behavior of the browser itself. 
+## Overview
 
-This page briefly describes the files that could form part of an extension, how to access these
-files, how to use Chrome APIs, how extension files communicate, and how to store
-data.
+This page briefly describes the structure of a Chrome extension, the role of each part and how they
+interact. Implementation details for each section are outside the scope of this article. 
 
-## Architecture {: #arch }
+This article assumes you are familiar with Chrome extension development. If not, we recommend reading [What extensions are][tbd-link] and [Extensions 101][tdb-link].
+
+## TBD
+
+An extension is composed of different "parts". We will talk about each one, and what their role is in an extension.
 
 An extension's architecture will depend on its functionality, but all extensions must have a
 [manifest][section-manifest]. The following are other components an extension can include: 
