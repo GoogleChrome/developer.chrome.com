@@ -41,6 +41,9 @@ Developers may add or remove rules for their extension, or use the minimum requi
 
 Chrome enforces a minimum content security policy for extension pages. It is equivalent to specifying the following policy in your manifest:
 
+{# This is statically defined in Chromium source. 
+- https://source.chromium.org/chromium/chromium/src/+/main:extensions/common/manifest_handlers/csp_info.cc?q=kMinimumMV3CSP
+#}
 ```json
 ...
 "content_security_policy": {
