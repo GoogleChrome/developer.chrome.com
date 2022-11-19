@@ -61,16 +61,4 @@ The `extension_pages` policy cannot be relaxed beyond this minimum value. In oth
 ```
 ### Sandbox Pages Policy
 
-The default content security policy for sandbox pages is as follows:
-
-```json
-{
-  // ...
-  "content_security_policy": {
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
-  }  
-  // ...
-}
-```
-
 The default policy for sandboxed pages is much more lenient than with extension pages, as the sandbox page does not have access to extension APIs, or direct access to non-sandboxed pages. The sandbox content security policy can be customized as desired.
