@@ -11,7 +11,7 @@
 * [쉼표로 구분된 표현식을 통한 진행](/ko/blog/new-in-devtools-108/#debugging)
 * [개선된 무시 목록 설정](/ko/blog/new-in-devtools-108/#ignore-list)
 * [기타 하이라이트](/ko/blog/new-in-devtools-108/#misc)
- #}
+
 
 ### Chrome 107 {: #chrome107 }
 
