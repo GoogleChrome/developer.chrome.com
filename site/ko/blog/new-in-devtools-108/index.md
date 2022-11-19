@@ -5,13 +5,13 @@ authors:
   - jecelynyeen
 date: 2022-10-26
 description: 'Hints for inactive CSS properties, new XPath and text selectors in the Recorder, and more.'
+description: '비활성화된 CSS 프로퍼티들에 대한 힌트, Recorder 에서의 새로운 XPath와 텍스트 셀렉터 및 그 외'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5PYEDgDI7c4ggFKUSUx4.png'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-108
-draft: true
 ---
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
