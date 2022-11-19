@@ -26,7 +26,7 @@ tags:
 
 
 <!-- ## Hints for inactive CSS properties {: #css-hint } -->
-## 不活跃 CSS 属性的提示 {: #css-hint }
+## 提示非活跃的 CSS 属性 {: #css-hint }
 
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
 DevTools 现在可以识别有效但没有可见效果的 CSS 样式。 在 **Styles** 窗格中，DevTools 淡出不活跃的属性。 将鼠标悬停在它旁边的图标上以了解为什么该规则没有可见效果。
