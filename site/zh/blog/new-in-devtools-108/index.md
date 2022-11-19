@@ -90,7 +90,7 @@ Chromium 议题: [1370200](https://crbug.com/1370200)
 
 
 <!-- ## Improved Ignore list setting {: #ignore-list } -->
-## 改进的忽略列表设置 {: #ignore-list }
+## 改进忽略列表设置 {: #ignore-list }
 <!-- Go to **Settings** > **Ignore List**. DevTools improves the design to help you configure the rules to [ignore a single script or pattern of scripts](/docs/devtools/javascript/reference/#settings-ignore-list). -->
 转到 **Settings** > **Ignore List** 。 DevTools 改进了设计以帮助您配置规则以[忽略单个脚本或脚本模式](/docs/devtools/javascript/reference/#settings-ignore-list)。
 
