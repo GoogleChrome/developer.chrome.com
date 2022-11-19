@@ -4,7 +4,6 @@ title: "DevTools 의 새로운 기능 (Chrome 108)"
 authors:
   - jecelynyeen
 date: 2022-10-26
-description: 'Hints for inactive CSS properties, new XPath and text selectors in the Recorder, and more.'
 description: '비활성화된 CSS 프로퍼티들에 대한 힌트, Recorder 에서의 새로운 XPath와 텍스트 셀렉터 및 그 외'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5PYEDgDI7c4ggFKUSUx4.png'
 alt: ''
@@ -31,7 +30,7 @@ tags:
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
 이제 DevTools는 유효하지만 시각적 효과를 가지고 있지 않은 CSS 스타일들을 식별합니다. **Style** 창에서 DevTools는 비활성화된 프로퍼티들을 페이드아웃시킵니다. 규칙이 시각적 효과가 없는 이유를 이해하기 위해서 그 옆의 아이콘 위로 마우스를 가져가 보세요.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="비활성화된 CSS 프로퍼티에 대한 힌트들.", width="800", height="526" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="비활성화된 CSS 프로퍼티에 대한 힌트.", width="800", height="526" %}
 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d6c1fea1e79b8373ff913a6d9919d097d1141254 #}
