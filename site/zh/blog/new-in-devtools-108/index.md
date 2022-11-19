@@ -60,7 +60,7 @@ Chromium 议题: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.c
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="逐步执行逗号分隔的表达式。", width="800", height="473" %}
 
 <!-- Previously, DevTools only supported stepping through semicolon-separated expressions. -->
-之前 DevTools 仅支持单步执行以分号分隔的表达式。
+之前 DevTools 仅支持单步执行那些以分号分隔的表达式。
 <!-- Given the code below, -->
 鉴于下面的代码，
 
