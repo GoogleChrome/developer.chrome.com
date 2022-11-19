@@ -4,7 +4,7 @@ title: "DevTools 新功能（Chrome 108）"
 authors:
   - jecelynyeen
 date: 2022-10-26
-description: '不活跃 CSS 属性、记录器中的新 XPath 和文本选择器等的提示。'
+description: '提示非活跃的 CSS 属性、记录器（Recorder）新增 XPath 和文本选择器以及更多。'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fQvLwDdC3o6d1wwKCCHT.png'
 alt: ''
 tags:
