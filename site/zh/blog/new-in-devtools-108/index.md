@@ -107,7 +107,6 @@ Chromium 议题: [1356517](https://crbug.com/1356517)
 以下是此版本中一些值得注意的修复：
 <!-- - Autocomplete CSS property name in the **Styles** pane on pressing space. ([1343316](https://crbug.com/1343316)) -->
 在 **Styles** 窗格中按空格自动完成 CSS 属性名称。 （[1343316](https://crbug.com/1343316))
-
 <!-- - Remove auto scroll in the **Element** panel’s breadcrumb. ([1369734](https://crbug.com/1369734)) -->
 删除 **Element** 面板的页面路径/面包屑导览中的自动滚动。 ([1369734](https://crbug.com/1369734))
 
