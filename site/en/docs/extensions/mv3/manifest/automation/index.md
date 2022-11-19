@@ -11,7 +11,7 @@ An optional manifest key only publicly accessible on [dev builds](www.chromium.o
 ```json
 {
   // ...
-         "automation": ["https://www.exampleurl.com"],
+  "automation": ["https://www.exampleurl.com"],
   // ...
 }
 ```
