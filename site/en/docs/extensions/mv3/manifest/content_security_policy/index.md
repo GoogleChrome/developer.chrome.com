@@ -54,7 +54,7 @@ Chrome enforces a minimum content security policy for extension pages. It is equ
 }
 ```
 
-The `extension_pages` policy cannot be relaxed beyond this minimum value. In other words, developers cannot add the `'unsafe-eval'` expression to the `script-src` directive in order to call `eval()` in extension page or worker contexts. Attempting to load an extension with such a CSP will cause Chrome to throw the following error at install time:
+The `extension_pages` policy cannot be relaxed beyond this minimum value. In other words, you cannot add other script sources to directives, such as adding `'unsafe-eval'` to `script-src`. If you add a disallowed source to your extension's policy, Chrome will throw an error like this at install time:
 
 ```json
 'content_security_policy.extension_pages': Insecure CSP value "'unsafe-eval'" in directive 'script-src'.
