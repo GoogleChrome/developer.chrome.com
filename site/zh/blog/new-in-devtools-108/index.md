@@ -31,7 +31,7 @@ tags:
 <!-- DevTools now identifies CSS styles that are valid but have no visible effect. In the **Styles** pane, DevTools fades out the inactive properties. Hover over the icon next to it to understand why the rule has no visible effect.  -->
 DevTools 现在可以识别那些语法有效但在页面上没有效果的 CSS 样式。 在 **Styles** 窗格中，DevTools 会通过淡化字体颜色的方式来展示那些不活跃的属性。 将鼠标悬停在它旁边的图标上，以便于了解为什么该规则没有可见效果。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="不活跃 CSS 属性的提示。", width="800", height="526" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oqkN6QudxNIx4Zq22J89.png", alt="提示非活跃的 CSS 属性", width="800", height="526" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d6c1fea1e79b8373ff913a6d9919d097d1141254 #}
 
