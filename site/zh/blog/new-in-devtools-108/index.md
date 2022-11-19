@@ -55,7 +55,7 @@ Chromium 议题: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.c
 ## 逐步执行逗号分隔的表达式 {: #debugging }
 
 <!-- You can now step through comma-separated expressions during debugging. This improves the debuggability of minified code. -->
-您现在可以在调试期间逐步执行逗号分隔的表达式。 这提高了缩小代码的可调试性。
+您现在可以在调试期间逐步调试那些以逗号分隔的表达式。 这种做法提升了调试压缩代码的可能性。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="逐步执行逗号分隔的表达式。", width="800", height="473" %}
 
