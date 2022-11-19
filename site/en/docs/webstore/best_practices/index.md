@@ -54,7 +54,7 @@ If you already have a login system, consider correlating the Google Account ID t
 in your system. You can use the [Chrome Identity API][identity-api] to support Google accounts in the following
 ways:
 
-- Google OAuth2/OpenID: See [Identifying the User][identify-user]. 
+- Google OAuth2/OpenID: See [Identifying the User][identify-user].
 - OAuth2: See [Authenticate users with Google][oauth2-tutorial].
 
 ## Keep ex-users' data for 30 days or more
@@ -107,7 +107,7 @@ that is most appropriate:
 [identity-api]: /docs/extensions/reference/identity/
 [identify-user]: /docs/webstore/identify_user
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
-[program policies]: /docs/webstore/program_policies/
+[program policies]: /docs/webstore/program-policies/
 [stay-secure]: /docs/extensions/mv3/security/
 [supplying-images]: /docs/webstore/images/
 [user-data-faq]: /docs/webstore/user_data/

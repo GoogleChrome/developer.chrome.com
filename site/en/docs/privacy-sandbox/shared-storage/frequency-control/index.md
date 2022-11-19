@@ -8,6 +8,7 @@ description: >
   Run a Shared Storage worklet to select a URL and render it
   in a fenced frame.
 date: 2022-10-14
+updated: 2022-11-08
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -121,23 +122,6 @@ class SelectURLOperation {
 register('frequency-cap', SelectURLOperation);
 ```
 
-## Other use cases
+{% Partial 'privacy-sandbox/shared-storage-use-cases.md' %}
 
-Explore other Shared Storage use cases and code samples:
-
-*  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can
-   assign a user to an experiment group, then store that group in shared
-   storage to be accessed cross-site. 
-*  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
-   You can store the creative rotation mode, and other metadata, to rotate the
-   creatives across different sites. 
-*  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
-   You can store whether the user has registered on your site into shared
-   storage, then render a different element based on that stored status.
-
-These are only some of the possible use cases for Shared Storage. We'll
-continue to add examples as we
-[receive feedback](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)
-and discover new use cases.
-
-{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}
+{% Partial 'privacy-sandbox/shared-storage-engage.md' %}

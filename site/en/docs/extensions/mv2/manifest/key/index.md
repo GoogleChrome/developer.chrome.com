@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the key property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 This value can be used to control the unique ID of an extension, app, or theme when it is loaded
 during development.
 

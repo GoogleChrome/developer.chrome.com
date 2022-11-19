@@ -90,7 +90,7 @@ If you haven't done so yet, complete your listing by
 -  Filling out your [store listing][listing]
 
 [distribution]: /docs/webstore/cws-dashboard-distribution/
-[extension-policies]: /docs/webstore/program_policies/#extensions
+[extension-policies]: /docs/webstore/program-policies/#extensions
 [listing]: /docs/webstore/cws-dashboard-listing/
 [minimum-permissions]: /docs/extensions/mv3/security/#permissions
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code

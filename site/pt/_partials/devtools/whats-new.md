@@ -2,16 +2,16 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
+### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/pt/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/pt/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/pt/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/pt/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/pt/blog/new-in-devtools-108/#misc)
- -->
+* [Hints para propriedades CSS inativas](/pt/blog/new-in-devtools-108/#css-hint)
+* [Detectação automática de XPath e seletores de texto no painel Gravador](/pt/blog/new-in-devtools-108/#recorder)
+* [Percorrer expressões separadas por vírgulas](/pt/blog/new-in-devtools-108/#debugging)
+* [Configuração de lista de ignorados aprimorada](/pt/blog/new-in-devtools-108/#ignore-list)
+* [Destaques diversos](/pt/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 

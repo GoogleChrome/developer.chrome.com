@@ -216,7 +216,6 @@ if you'd like your extension to be featured more prominently in the Chrome Web S
 of each of the following:
 
 - Small: 440x280 pixels **(required)**
-- Large: 920x680 pixels
 - Marquee: 1400x560 pixels
 
 {% Aside 'note' %}
@@ -239,31 +238,20 @@ thumb for designing your images:
 
 The following graphics are examples of the promotional images for an extension:
 
-<table>
-  <thead>
-    <tr>
-      <th>Small promo image (440x280)</th>
-      <th>Large promo image (920x680)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", 
-               alt="Small promo image", height="140", width="220" %}
-      </td>
-      <td>
-        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/uvSRznxKJngidMKDIeqN.png", 
-               alt="Large promo image", height="340", width="460" %}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<figure>
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", alt="Small promo image", height="140", width="220" %}
+  <figcaption>
+Small promo image (440x280)
+  </figcaption>
+</figure>
 
-Marquee image (1400x560):
+<figure>
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", alt="Marquee", height="280", width="700" %}
+  <figcaption>
+Marquee image (1400x560)
+  </figcaption>
+</figure>
 
-{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", 
-        alt="Marquee", height="280", width="700" %}
 
 {% Aside 'note' %}
 

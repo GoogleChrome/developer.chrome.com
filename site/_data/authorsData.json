@@ -152,11 +152,6 @@
   "johannes": {
     "github": "powdercloud"
   },
-  "maudnalpas": {
-    "twitter": "maudnals",
-    "github": "maudnals",
-    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/9ORwve80jFiyYnPvNcWF.jpg"
-  },
   "housseindjirdeh": {
     "homepage": "https://houssein.me/",
     "twitter": "hdjirdeh",
@@ -474,6 +469,12 @@
     "twitter": "maudnals",
     "github": "maudnals",
     "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bpoFTthopZevDRDPPo3r.jpg"
+  },
+  "maudnalpas": {
+    "country": "DE",
+    "twitter": "maudnals",
+    "github": "maudnals",
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/9ORwve80jFiyYnPvNcWF.jpg"
   },
   "beaufortfrancois": {
     "country": "FR",
@@ -910,7 +911,7 @@
   "gilberto_cocchi": {
     "twitter": "gilberto_cocchi",
     "country": "IT"
-  } ,
+  },
   "harrytheodoulou": {
     "linkedin": "https://www.linkedin.com/in/harrytheo",
     "country": "UK"
@@ -918,7 +919,7 @@
   "milutinkristofic": {
     "linkedin": "https://www.linkedin.com/in/kristofic",
     "country": "DE"
-  } ,
+  },
   "marcdoerrenhaus": {
     "linkedin": "https://www.linkedin.com/in/marc-doerrenhaus-12356758",
     "country": "US"
@@ -954,5 +955,49 @@
     "twitter": "chrisdavidmills",
     "linkedin": "https://www.linkedin.com/in/chris-mills-4471711/",
     "image": "image/nkovDlvelCQoTyX9N57xf85AR9T2/jlh9RMlHQcyL1oQ7tP7z.jpg"
+  },
+  "leeronisrael": {
+    "github": "leeronisrael",
+    "twitter": "leeronisrael",
+    "linkedin": "https://www.linkedin.com/in/leeronisrael",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/E02nz219ZjKaoyuRFtdb.jpg"
+  },
+  "joeytrotz": {
+    "linkedin": "https://www.linkedin.com/in/joeytrotz",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/lDjPb6DT7O39Tz40VEum.jpg"
+  },
+  "samuelgoto": {
+    "github": "samuelgoto",
+    "twitter": "samuelgoto",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/ucaanCmRv31SNr3mp6cA.jpg"
+  },
+
+  "zachmastromatto": {
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bKxprIw5dh9Z8LFcj6Pw.jpeg"
+  },
+  "akashnadan": {
+    "image": "image/EvKqfXr4ercavLaApW41d8uGXN72/FRxVlVGiws1DaBkBTnv3.jpeg"
+  },
+  "andreeacucu": {
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/wLLL41WUJUT8wnqNwERJ.jpeg"
+  },
+  "adamsilverstein": {
+    "github": "adamsilverstein",
+    "twitter": "adamsilverstein",
+    "image": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/a58pQb092GyDr5S7vOeg.webp"
+  },
+  "djuffin": {
+    "github": "djuffin",
+    "image": "image/admin/MWYHP293xzaBdw30G3Ts.jpg"
+  },
+  "nateschloss": {
+    "github": "n8schloss",
+    "twitter": "n8schloss",
+    "image": "image/admin/BS9rSjcVynuKi2SX5Whu.jpg"
+  },
+  "andrewcomminos": {
+    "github": "acomminos",
+    "twitter": "acomminos",
+    "image": "image/admin/ykAIcNpbomeiulF6Kw7P.jpg"
   }
 }
