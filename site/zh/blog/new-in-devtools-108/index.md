@@ -82,7 +82,7 @@ function bar(){return foo(),foo(),42}
 ``` 
 
 <!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
-这会在调试过程中造成混乱，因为缩小代码和编写代码之间的步进行为是不同的。 使用源映射来调试原始代码的缩小代码时更加令人困惑，因为开发人员正在查看分号（在后台被工具链转换为逗号）但调试器并没有停止它们 .
+在调试过程中，上述行为会给人造成思维上的混乱，因为压缩后的代码和用户编写的代码之间存在步进行为不一致的情况。在使用 sourcemap 来调试压缩代码所对应的源码时，会更加让人不解，因为开发人员正在查看分号（背后被工具链转换为逗号）但调试器不会在分号那里停住 .
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 
