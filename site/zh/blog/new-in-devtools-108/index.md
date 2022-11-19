@@ -44,7 +44,7 @@ Chromium 议题: [1178508](https://crbug.com/1178508)
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
 **Recorder** 面板现在支持 XPath 和文本选择器。 [开始记录用户流程](/docs/devtools/recorder/#record)，如果有可用的选择器，记录器会自动选择元素的 XPath 和最短的唯一文本作为选择器。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="在 Recorder 面板中的 XPath 和文本选择器", width="800", height="579" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/NJVIK95TtKaXxzNVoGI6.png", alt="记录器（Recorder）面板支持 XPath 和文本选择器", width="800", height="579" %}
 
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/7441acfff5d9dfd373742797d2db46a809c9df67 #}
 
