@@ -75,7 +75,7 @@ function bar() {
 ```
 
 <!-- Transpilers and minifiers may turn them into comma-separated expressions. -->
-转译器和压缩器可能将它们转换为逗号分隔的表达式。
+转译器和压缩器可能会将它们转换为逗号分隔的表达式。
 
 ```js
 function bar(){return foo(),foo(),42}
