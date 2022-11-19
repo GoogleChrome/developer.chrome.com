@@ -39,7 +39,7 @@ Chromium 议题: [1178508](https://crbug.com/1178508)
 
 
 <!-- ## Auto-detect XPath and text selectors in the Recorder panel {: #recorder } -->
-## 在 Recorder 面板中自动检测 XPath 和文本选择器 {: #recorder }
+## 记录器（Recorder）面板支持自动检测 XPath 和文本选择器 {: #recorder }
 
 <!-- The **Recorder** panel now supports XPath and text selectors. [Start recording a user flow](/docs/devtools/recorder/#record) and the recorder automatically picks the XPath and shortest unique text of an element as selector if available. -->
 **Recorder** 面板现在支持 XPath 和文本选择器。 [开始记录用户流程](/docs/devtools/recorder/#record)，如果有可用的选择器，记录器会自动选择元素的 XPath 和最短的唯一文本作为选择器。
