@@ -3,7 +3,8 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
-<!-- $content -->
+{# $content #}
+
 
 ### Chrome 108 {: #chrome108 }
 
@@ -67,7 +68,7 @@
 * [Определение блокирующего фрейма на панели Возвратного кэша (Back/forward cache)](/ru/blog/new-in-devtools-104/#bfcache)
 * [Улучшены подсказки автодополнения для объектов JavaScript](/ru/blog/new-in-devtools-104/#autocomplete)
 * [Улучшение карт источников](/ru/blog/new-in-devtools-104/#sourcemaps)
-* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc) -->
+* [Другие важные моменты](/ru/blog/new-in-devtools-104/#misc)
 
 ### Chrome 103 {: #chrome103 }
 

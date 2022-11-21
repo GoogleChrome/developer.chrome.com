@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const ISO6391 = require('iso-639-1');
+const {locales} = require('../_data/site.json');
 const {prettyUrls} = require('./pretty-urls');
 const {tables} = require('./tables');
 const {processInlineJs} = require('./process-inline-js');
@@ -23,10 +23,9 @@ const domTransformer = async (content, outputPath) => {
   // Grab the locale for the page. This is used by various transforms.
   const locale = $('html').attr('lang');
 
-  // If we have a path that contains something other than a locale just return
-  // early.
-  // @ts-ignore: validate() exists but ts fails to pick it up.
-  if (!locale || !ISO6391.validate(locale)) {
+  // If we have a path that contains something other than
+  // a locale that is supported just return early.
+  if (!locale || !locales.includes(locale)) {
     return content;
   }
 
