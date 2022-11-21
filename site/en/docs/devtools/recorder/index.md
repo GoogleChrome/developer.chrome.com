@@ -10,6 +10,8 @@ description: "Record, replay, measure user flows, and edit their steps with the 
 tags:
   - test
   - performance
+anchorRedirects:
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.

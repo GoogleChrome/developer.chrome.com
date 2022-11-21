@@ -52,7 +52,7 @@ information for FLEDGE and other Privacy Sandbox proposals.
 ### FLEDGE in one minute {: #overview}
 
 For a more in-depth overview of FLEDGE, read the
-[FLEDGE full system overview](/docs/privacy-sandbox/fledge/system-overview/).
+[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 <figure class="w-figure">
   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="An overview of each stage of the FLEDGE lifecycle",
@@ -457,7 +457,7 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 ## Find out more
 
 For a more in-depth overview of FLEDGE, read the
-[FLEDGE full system overview](/docs/privacy-sandbox/fledge/system-overview/).
+[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 ### Developers
 
