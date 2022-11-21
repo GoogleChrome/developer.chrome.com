@@ -732,7 +732,7 @@ async function switchView(data) {
 
 {% endCompare %}
 
-The problem with this example is that `switchView()` will reject if the _transition_ cannot reach a `ready` state, but that doesn't mean that the view failed to switch. The DOM may have successfully updated, but there were duplicate `view-transition-name`s, so the transition was skipped.
+The problem with this example is that `switchView()` will reject if the transition cannot reach a `ready` state, but that doesn't mean that the view failed to switch. The DOM may have successfully updated, but there were duplicate `view-transition-name`s, so the transition was skipped.
 
 Instead:
 
