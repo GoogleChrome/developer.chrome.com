@@ -9,8 +9,8 @@
 
 * [Подсказки для неактивных CSS-свойств](/ru/blog/new-in-devtools-108/#css-hint)
 * [Автоматическое определение XPath и текстовых селекторов во вкладке Recorder](/ru/blog/new-in-devtools-108/#recorder)
-* [Перебор выражений, разделенных запятыми](/ru/blog/new-in-devtools-108/#debugging)
-* [Улучшение настроек Списка игнорируемых фрейсворков](/ru/blog/new-in-devtools-108/#ignore-list)
+* [Пошаговое выполнение выражений, разделенных запятыми](/ru/blog/new-in-devtools-108/#debugging)
+* [Улучшенные настройки Списка игнорируемых фреймворков](/ru/blog/new-in-devtools-108/#ignore-list)
 * [Другие важные моменты](/ru/blog/new-in-devtools-108/#misc)
 
 
