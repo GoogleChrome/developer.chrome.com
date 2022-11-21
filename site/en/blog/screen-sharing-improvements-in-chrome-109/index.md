@@ -15,17 +15,18 @@ tags:
 
 Web apps can already use [`getDisplayMedia()`] to capture tabs, windows or screens as a [MediaStream]. From Chrome&nbsp;109, you can take advantage of the following improvements:
 
-- When screen sharing starts, [Conditional Focus] allows the capturing web app to control whether the browser activates the captured tab or window, or whether the capturing tab remains active.
+- When screen sharing starts, [Conditional Focus] allows the capturing web app to control whether the browser focuses the captured tab or window, or whether the capturing tab remains active.
 - The `suppressLocalAudioPlayback` option controls whether the audio playing in a tab would be played out of the user’s local speakers.
 
 ## Conditional Focus
 
-Thanks to Conditional Focus, web apps can now control whether the captured tab or window will be focused when capture starts, or whether the capturing page should remain in focus.
+Using Conditional Focus, web apps can now control whether the captured tab or window will be focused when capture starts, or whether the capturing page should remain in focus.
 
 ```js
 const controller = new CaptureController();
 // Prompt the user to share a tab, a window or a screen.
-const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream =
+    await navigator.mediaDevices.getDisplayMedia({ controller });
 
 const [track] = stream.getVideoTracks();
 const displaySurface = track.getSettings().displaySurface;
@@ -43,7 +44,7 @@ Check out [Better screen sharing with Conditional Focus] for more information.
 
 ## Suppress local audio playback
 
-It is common for colleagues to gather in a room so that one of them would present from their laptop to an in-room conferencing solution with a dedicated monitor and speakers. The presenter will typically mute their own laptop, and use the external speakers which are typically louder; this also ensures audio is in sync with video. The [`suppressLocalAudioPlayback`] audio constraint saves time here. When set to `true`, it indicates that the browser should stop relaying audio to the local speakers when capture starts. The default value for this constraint is `false`.
+It is common for colleagues to gather in a room so that one of them would present from their laptop to an in-room conferencing solution with a dedicated monitor and speakers. The presenter will typically mute their own laptop, and use the external speakers which are often louder; this also ensures audio is in sync with video. The [`suppressLocalAudioPlayback`] audio constraint saves time here. When set to `true`, it indicates that the browser should stop relaying audio to the local speakers when capture starts. The default value for this constraint is `false`.
 
 ```js
 // Prompt the user to share a tab, a window or a screen with audio.

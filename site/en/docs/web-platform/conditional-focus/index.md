@@ -23,10 +23,10 @@ Conditional Focus is available from Chrome&nbsp;109.
 
 When a web app starts capturing a tab or a window, the browser faces a decision—should the captured surface be brought to the forefront, or should the capturing page remain focused? The answer depends on the reason for calling `getDisplayMedia()`, and on the surface the user ends up selecting.
 
-Consider a hypothetical video conferencing web app. By reading `track.getSettings().displaySurface` and potentially examining the [Capture Handle], the video conferencing web app can understand what the user chose to share. Then:
+Consider a **hypothetical** video conferencing web app. By reading `track.getSettings().displaySurface` and potentially examining the [Capture Handle], the video conferencing web app can understand what the user chose to share. Then:
 
-- If the captured tab or window can be remotely controlled, **keep the video conference in focus**.
-- Otherwise, **focus the captured tab or window**.
+- If the captured tab or window can be remotely controlled, keep the video conference in focus.
+- Otherwise, focus the captured tab or window.
 
 In the example above, the video conferencing web app would retain focus if sharing a slides deck, allowing the user to remotely flip through the slides; but if the user chose to share a text editor, the video conferencing web app would immediately switch focus to the captured tab or window.
 
@@ -38,7 +38,8 @@ Instantiate a `CaptureController` and pass it to `getDisplayMedia()`. By calling
 const controller = new CaptureController();
 
 // Prompt the user to share a tab, a window or a screen.
-const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream =
+    await navigator.mediaDevices.getDisplayMedia({ controller });
 
 const [track] = stream.getVideoTracks();
 const displaySurface = track.getSettings().displaySurface;
@@ -73,7 +74,8 @@ const controller = new CaptureController();
 controller.setFocusBehavior("focus-captured-surface");
 
 // Prompt the user to share their screen.
-const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream =
+    await navigator.mediaDevices.getDisplayMedia({ controller });
 ```
 
 You can call `setFocusBehavior()` arbitrarily many times before the promise resolves, or at most once immediately after the promise resolves. The last invocation overrides all previous invocations.
@@ -86,7 +88,8 @@ That is, both of the following snippets will fail:
 
 ```js
 // Prompt the user to share their screen.
-const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream =
+    await navigator.mediaDevices.getDisplayMedia({ controller });
 
 // Too late, because it follows the completion of the task
 // on which the getDisplayMedia() promise resolved.
@@ -98,7 +101,8 @@ setTimeout(() => {
 
 ```js
 // Prompt the user to share their screen.
-const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream =
+    await navigator.mediaDevices.getDisplayMedia({ controller });
 
 const start = new Date();
 while (new Date() - start <= 1000) {
@@ -160,7 +164,7 @@ Send a tweet to [@ChromiumDev] and let us know where and how you are using it.
 ## Helpful links {: #links }
 
 - [Specification][spec]
-- [explainer]
+- [Explainer]
 - [TAG review][tag]
 
 ## Acknowledgements
