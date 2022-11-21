@@ -4,7 +4,7 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
 - The extension service worker, content scripts, and other extension contexts have access to the storage areas.
 - JSON serializable values are stored as object properties.
@@ -126,15 +126,16 @@ To learn more about the `managed` storage area, see [Manifest for storage areas]
 
 ## Storage and throttling limits {: #storage-and-throttling-limits}
 
-The Storage API is not a big truck. It's a series of tubes. And if you don't understand, those
-tubes can be filled, and if they are filled when you put your message in, it gets in line, and it's
-going to be delayed by anyone that puts into that tube enormous amounts of material.
+Don't think of adding to the Storage API as putting things in a big truck. Think of adding to
+storage as being like putting something in a pipe. The pipe may have material in it already, and it
+may even be filled. Always assume a delay between when you add to storage and when it is actually
+recorded.
 
 For details on storage area limitations and what happens when they are exceeded, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
 
 ## Use cases {: #examples}
 
-The following sections demonstrate some common use cases for the Storage API.
+The following sections demonstrate common use cases for the Storage API.
 
 ### Synchronous response to storage updates
 
