@@ -297,6 +297,7 @@
     "country": "US",
     "homepage": "https://una.im",
     "twitter": "una",
+    "mastodon": "https://front-end.social/@una",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/gTvIXYVFxXMYjBiZxysB.jpg"
   },
   "surma": {
@@ -331,6 +332,7 @@
   },
   "adrianajara": {
     "country": "US",
+    "mastodon": "https://indieweb.social/@tropicadri",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
   },
   "agektmr": {
@@ -338,6 +340,7 @@
     "twitter": "agektmr",
     "github": "agektmr",
     "glitch": "agektmr",
+    "mastodon": "https://infosec.exchange/@agektmr",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
   "titouan": {
@@ -637,6 +640,7 @@
     "country": "US",
     "github": "heyawhite",
     "twitter": "heyawhite",
+    "mastodon": "https://mstdn.social/@alexandrawhite",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
   },
   "aaronhk": {
