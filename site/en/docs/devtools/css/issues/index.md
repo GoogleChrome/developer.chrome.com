@@ -141,7 +141,7 @@ In this example, Chrome calculated the following for the `<ul>` element:
 
 To make the **Computed** pane show *all* properties and their values, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show all**. All properties include:
 
-- [Initial values for non-inherited properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) in <span style="opacity: 60%;">pale text</span>.
+- [Initial values for non-inherited properties](https://developer.mozilla.org/docs/Web/CSS/inheritance) in <span style="opacity: 60%;">pale text</span>.
 - [Custom properties](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) inherited by default with a `--` prefix in regular text.
 
 {% Aside 'gotchas' %}
