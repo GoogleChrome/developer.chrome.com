@@ -38,6 +38,7 @@ See the [Page Redder][2] sample extension:
   "version": "2.0",
   "permissions": [
     "activeTab"
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
