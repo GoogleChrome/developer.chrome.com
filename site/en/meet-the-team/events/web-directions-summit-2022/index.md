@@ -5,7 +5,7 @@ summary: >-
   front-end engineering, and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: 'Sydney, Australia'
-date: '2022-12-01'
+date: 2022-12-01
 externalUrl: 'https://webdirections.org/summit/'
 sessions:
   - speaker: pjmclachlan

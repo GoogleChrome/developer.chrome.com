@@ -13,6 +13,7 @@ const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {minifyJs} = require('./site/_filters/minify-js');
+const {minifyHtmlFilter} = require('./site/_filters/minify-html');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
@@ -23,7 +24,6 @@ const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
-const {EventCard} = require('./site/_shortcodes/EventCard');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
@@ -125,6 +125,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('typeof', x => typeof x);
+  eleventyConfig.addFilter('minifyHtml', minifyHtmlFilter);
 
   // Add shortcodes
   eleventyConfig.addShortcode('Codepen', Codepen);
@@ -142,7 +143,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
-  eleventyConfig.addShortcode('EventCard', EventCard);
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);

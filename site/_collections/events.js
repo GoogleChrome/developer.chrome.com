@@ -15,13 +15,7 @@
  */
 
 const authorsData = require('../_data/authorsData.json');
-const {i18n} = require('../_filters/i18n');
-const {Img} = require('../_shortcodes/Img');
-const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
-
-const EVENT_PLACEHOLDER =
-  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
-
+const {defaultAvatarImg} = require('../_data/site.json');
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
@@ -34,15 +28,8 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
     .filter(filter)
     .map(event => {
       const sessions = event.data.sessions.map(session =>
-        processSession(session, locale)
+        processSession(session)
       );
-
-      const image = Img({
-        src: event.data.image ?? EVENT_PLACEHOLDER,
-        width: 400,
-        height: 400,
-        alt: event.data.title,
-      });
 
       return {
         id: event.data.id,
@@ -53,7 +40,7 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         date: event.data.date,
         isPastEvent: isPastEvent(event),
         sessions,
-        image,
+        image: event.data.image,
       };
     })
     .sort(sort);
@@ -67,9 +54,7 @@ const pastEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event),
-    sort: (a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    },
+    sort: (a, b) => b.date - a.date,
   });
 };
 
@@ -81,18 +66,15 @@ const currentEvents = collections => {
   return getEvents({
     collections,
     filter: event => isPastEvent(event) === false,
-    sort: (a, b) => {
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    },
+    sort: (a, b) => a.date - b.date,
   });
 };
 
 /**
  * @param {String} authorHandle
- * @param {String} locale
  * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
  */
-const getAuthorData = (authorHandle, locale) => {
+const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
@@ -101,7 +83,7 @@ const getAuthorData = (authorHandle, locale) => {
 
   return {
     image: authorData.image ?? defaultAvatarImg,
-    title: i18n(`i18n.authors.${authorHandle}.title`, locale),
+    title: `i18n.authors.${authorHandle}.title`,
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
   };
@@ -109,52 +91,25 @@ const getAuthorData = (authorHandle, locale) => {
 
 /**
  * @param session
- * @param {String} locale
  * @returns {{title}|*}
  */
-const processSession = (session, locale) => {
+const processSession = session => {
   if (session.type === 'speaker') {
-    session.speaker = getAuthorData(session.speaker, locale);
-    session.image = Img({
-      src: session.speaker.image,
-      width: 40,
-      height: 40,
-      alt: session.speaker.title ?? session.title,
-      class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-    });
+    session.speaker = getAuthorData(session.speaker);
+    session.image = session.speaker.image;
 
     return session;
   }
 
   session.participants = session.participants.map(p => {
-    return getAuthorData(p, locale);
-  });
-
-  session.title =
-    session.participants.length === 1
-      ? session.participants[0].title
-      : i18n('i18n.events.multiple_participants');
-
-  session.image = Img({
-    src:
-      session.participants.length === 1
-        ? session.participants[0].image
-        : chromeImg,
-    width: 40,
-    height: 40,
-    alt: session.title,
-    class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+    return getAuthorData(p);
   });
 
   return session;
 };
 
-/**
- * @param event
- * @returns {boolean}
- */
 const isPastEvent = event => {
-  return new Date(event.date).getTime() < startOfDay.getTime();
+  return event.date < startOfDay;
 };
 
 module.exports = {currentEvents, pastEvents};
