@@ -779,6 +779,8 @@ async function animateFromMiddle(transition) {
 
 This example uses `transition.domUpdated` to wait for the DOM update, and to reject if it fails. `switchView` no longer rejects if the transition fails, it resolves when the DOM update completes, and rejects if it fails.
 
+If you want `switchView` to resolve when the new view has 'settled', as in, any animated transition has completed or skipped to the end, replace `transition.domUpdated` with `transition.finished`.
+
 ## Not a polyfill, but… {:#not-a-polyfill}
 
 I don't think this feature can be polyfilled in any useful way, but I'm happy to be proven wrong!
