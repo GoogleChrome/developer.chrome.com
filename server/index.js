@@ -34,6 +34,13 @@ if (process.env.NODE_ENV === 'test') {
   staticPaths = ['tests/server/fixtures', 'tests/server/fixtures/en'];
 }
 
+if (process.env.NODE_ENV === 'visual-test') {
+  staticPaths = [
+    'tests/visual/fixtures/dist/',
+    'tests/visual/fixtures/dist/en',
+  ];
+}
+
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 const uniqueRedirectHandler = buildUniqueRedirectHandler();
 
