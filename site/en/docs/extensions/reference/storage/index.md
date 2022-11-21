@@ -6,23 +6,23 @@ api: storage
 
 The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [localStorage][mdn-localstorage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
 
-- The extension service worker, content scripts, and other extension contexts have access to the storage areas.
-- JSON serializable values are stored as object properties.
-- Storage is asynchronous with bulk read and write operations.
-- Data persists even when the user clears the cache and browsing history.
-- A user's extension settings persist even when using [split incognito][incognito].
+- All extension contexts, including the extension service worker and content scripts have access to the Storage API.
+- The JSON serializable values are stored as object properties.
+- The Storage API is asynchronous with bulk read and write operations.
+- Even if the user clears the cache and browsing history, the data persists.
+- Stored settings persist even when using [split incognito][incognito].
 - Includes an exclusive read-only [managed storage area][manifest-storage] for enterprise policies.
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can extensions use Window.localStorage?
+💡 Can extensions use the WebStorage API?
 {% endDetailsSummary %}
 
 Even though extensions can access [`Window.localStorage`][mdn-localstorage] in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
 
-- The extension's service worker cannot access the localStorage API.
-- Content scripts share the `localStorage` of the host page.
-- Data saved to `localStorage` is lost when the user clears their browsing history.
+- The extension's service worker cannot access `Window.localStorage`.
+- Content scripts share the `Window.localStorage` of the host page.
+- Data saved to `Window.localStorage` is lost when the user clears their browsing history.
 
 {% endDetails %}
 
@@ -30,16 +30,12 @@ Even though extensions can access [`Window.localStorage`][mdn-localstorage] in s
 
 The Storage API is divided into the following four buckets ("storage areas"): 
 
-- [**storage.local**][prop-local]
-  - Data is stored locally, which is cleared when the extension is removed.
-  - Quota limitation is approx 5 MB, but can be increased by requesting the `"unlimitedStorage"` permission.
-  - Consider using it to store larger amounts of data.
+[`storage.local`][prop-local]
+: Data is stored locally, which is cleared when the extension is removed. The quota limitation is approx 5 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
 
-- [**storage.sync**][prop-sync]
-  - If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`.
-  - When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online.
-  - Quota limitation is 100 KB approx, 8 KB per item.
-  - Consider using it to preserve user settings across synced browsers. 
+[`storage.sync`][prop-sync]
+: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. When the browser is offline, Chrome stores the data locally and resumes syncing when it's back online. The quota limitation is 100 KB approx, 8 KB per item. Consider using it to preserve user settings across synced browsers. 
+
 
 {% Aside 'warning' %}
 
@@ -47,15 +43,11 @@ Local and sync storage areas should not store confidential user data because the
 
 {% endAside %}
 
-- [**storage.session**][prop-session]
-  - Holds data in memory for the duration of a browser session.
-  - By default, not exposed to content scripts, but behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level].
-  - Quota limitation is 1 MB approx.
-  - Consider using it to store global variables across service worker runs.
+[storage.session][prop-session]
+: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The quota limitation is 1 MB approx. Consider using it to store global variables across service worker runs.
 
-- [**storage.managed**][prop-managed]
-  - Administrator can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment.
-  - Storage is read-only.
+[storage.managed][prop-managed]
+: Administrator can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
 
 ## Manifest {: #manifest}
 
