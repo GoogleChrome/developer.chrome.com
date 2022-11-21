@@ -26,7 +26,7 @@
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm run setup && NODE_ENV=production npm run eleventy -- --quiet",
-    "snapshots": "percy snapshot ./dist/en",
+    "snapshots": "percy snapshot ./tests/visual/fixtures/dist/en",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "rollup": "npx rollup -c",
     "stage:personal": "npm run production && gcloud app deploy --project=web-dev-staging --quiet --no-promote",
