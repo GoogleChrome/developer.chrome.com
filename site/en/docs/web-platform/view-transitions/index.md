@@ -122,12 +122,12 @@ Once the state is captured, the API constructs a pseudo-element tree like this:
 ```diff
 ::view-transition
 └─ ::view-transition-group(root)
-   └─ ::view-transition-image-set(root)
+   └─ ::view-transition-image-pair(root)
       ├─ ::view-transition-old(root)
       └─ ::view-transition-new(root)
 ```
 
-The `::view-transition` sits in a top-layer, over everything else on the page.
+The `::view-transition` sits in an overlay, over everything else on the page.
 
 `::view-transition-old(root)` is a screenshot of the old view, and `::view-transition-new(root)` is a **live** representation of the new view. Both render as CSS 'replaced content' (like an `<img>`).
 
@@ -246,11 +246,11 @@ That CSS declaration caused the pseudo-element tree to change:
 ```diff
 ::view-transition
 ├─ ::view-transition-group(root)
-│  └─ ::view-transition-image-set(root)
+│  └─ ::view-transition-image-pair(root)
 │     ├─ ::view-transition-old(root)
 │     └─ ::view-transition-new(root)
 └─ ::view-transition-group(main-header)
-   └─ ::view-transition-image-set(main-header)
+   └─ ::view-transition-image-pair(main-header)
       ├─ ::view-transition-old(main-header)
       └─ ::view-transition-new(main-header)
 ```
@@ -883,7 +883,7 @@ Instance members of `ViewTransition`:
 
     Transitions `transform` between the 'before' and 'after' viewport-space quad.
 
-`::view-transition-image-set`
+`::view-transition-image-pair`
 : Absolutely positioned to fill the group.
 
     Has `isolation: isolate` to limit the effect of the `plus-lighter` blend mode on the old and new views.
