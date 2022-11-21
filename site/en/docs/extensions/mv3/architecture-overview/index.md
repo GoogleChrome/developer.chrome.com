@@ -53,17 +53,6 @@ as the most important files and the capabilities the extension might use.
 }
 ```
 
-### Toolbar icon {: #icons }
-
-Extensions must have an icon that sits in the browser toolbar. Toolbar icons allow easy access and
-keep users aware of which extensions are installed. Most users will interact with an extension that
-uses a [popup][docs-popup] by clicking the icon, like in the [getting started
-example][sample-getting-started].
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Getting started
-popup", width="187", height="153" %}
-<!-- TODO: Show examples of the MV3 getting started tutorial extensions -->
-
 ### Service worker {: #background_script }
 
 The extension service worker is the extension's event handler; it contains listeners for browser
@@ -107,44 +96,6 @@ The following is a list of the most common UI examples:
 - A custom UI injected [into a page][docs-content-scripts].
 
 See [Design the UI of a Chrome extension][docs-ui], to learn more.
-
-### Options page {: #optionsPage }
-
-Just as extensions allow users to customize the Chrome browser, the options page enables
-customization of the extension. Options can be used to enable features and allow users to choose
-what functionality is relevant to their needs.
-
-Users can access the options page via [direct link][docs-link-options] or in the context menu of the
-extension toolbar. The following is an example of the Google Dictionary extension. 
-
-{% Columns %}
-
-{% Column %}
-
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Mz7GV76tFkzxRlb7Pq6e.png", 
-alt="Options page link in the UI", width="800", height="299" %}
-  <figcaption>
-    Link to the Options page.
-  </figcaption>
-</figure>
-
-{% endColumn %}
-
-{% Column %}
-
-<figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BM11QeGCThsUNTlsZbAe.png", 
-alt="Context Menu Options page", width="357", height="222" %}
-
-  <figcaption>
-    Options page in the extension's context menu.
-  </figcaption>
-</figure>
-
-{% endColumn %}
-
-{% endColumns %}
 
 See [Give users options][docs-options] to learn more.
 
