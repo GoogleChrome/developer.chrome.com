@@ -21,7 +21,7 @@ The first thing to do is [inspect the element][2] and make sure that your new CS
 
 Sometimes, you'll see your new CSS in the **Elements** > **Styles** pane but your new CSS is in <span style="opacity: 60%;">pale text</span>, non-editable, crossed out, or has a warning or hint icon next to it.
 
-## Understand CSS issues {: #css-issues }
+## Understand CSS in the Styles pane {: #css-in-styles }
 
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
@@ -95,7 +95,7 @@ The **Styles** pane displays properties that can't be edited in *italic text*. F
 
 ## Inspect an element that still isn't styled the way you think  {: #computed }
 
-Use the **Computed** pane to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed).
+To get a hint at what goes wrong, open the **Computed** pane to see the "final" [CSS applied to an element](/docs/devtools/css/reference/#computed) and compare to that you declared.
 
 The **Elements** > **Styles** pane displays the exact set of CSS rules as they are written in various stylesheets. On the other hand, the **Elements** > **Computed** pane lists resolved CSS values that Chrome uses to render an element:
 
@@ -103,6 +103,56 @@ The **Elements** > **Styles** pane displays the exact set of CSS rules as they a
 - [Cascade](https://developer.mozilla.org/docs/Web/CSS/Cascade) winners
 - Longhand properties (precise), not shorthand (concise)
 - Computed values, for example, `font-size: 14px` instead of `font-size: 70%`
+
+## Understand CSS in the Computed pane {: #css-in-computed }
+
+The **Computed** pane also displays various properties differently.
+
+### Declared and inherited {: #declared }
+
+The **Computed** pane lists the properties declared in any stylesheet in regular font, both element's own and inherited. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nyctZrDPlhQ1A9VReOp9.svg", alt="Expand.", width="24", height="24" %} expand icon next to them to see their source.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z1cxlMCpTopX5xJLQGkb.png", alt="Declared properties.", width="800", height="535" %}
+
+To see the declaration in the **Styles** pane, hover over the expanded property and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E8KSBR4jJbyo7OfK5fJa.svg", alt="Arrow right.", width="24", height="24" %} arrow button.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zRulO8jUcl9z02rynP6K.png", alt="The arrow button next to the property.", width="800", height="559" %}
+
+To see the declaration in the **Sources** pane, click the link to the source file.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IXWr9VSZIjjcX1jtfTDA.png", alt="The link to the source file.", width="800", height="549" %}
+
+For properties with multiple sources, the **Computed** pane shows the [Cascade winner][3] first.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LR2zDV73KcTKTkREzKz7.png", alt="A property with multiple sources.", width="800", height="549" %}
+
+### Runtime {: #runtime }
+
+The **Computed** pane lists property values calculated at runtime in <span style="opacity: 60%;">pale text</span>.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NktGdwh9vgmkfHyfoJiy.png", alt="Property values calculated at runtime.", width="800", height="631" %}
+
+In this example, Chrome calculated the following for the `<ul>` element:
+
+- The `width` relative its parent, `<div>`
+- The `height` relative to its children, the two `<li>` elements
+
+### Non-inherited and custom {: #inherited-and-default }
+
+To make the **Computed** pane show *all* properties and their values, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show all**. All properties include:
+
+- [Initial values for non-inherited properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) in <span style="opacity: 60%;">pale text</span>.
+- [Custom properties](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) inherited by default with a `--` prefix in regular text.
+
+{% Aside 'gotchas' %}
+[Overriding default inheritance](https://developer.mozilla.org/docs/Web/CSS/inheritance#overriding_inheritance_an_example) *doesn't* affect the way the **Computed** pane displays the properties: pale or not.
+{% endAside %}
+
+To break this big list into categories, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/f7aX2rDMN5tp8FYRflcL.png", alt="All properties grouped.", width="800", height="676" %}
+
+This example shows the initial values for non-inherited properties under **Animation** and custom properties under **CSS Variables**.
 
 ## Search for duplicates {: #filter }
 

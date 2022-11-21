@@ -48,7 +48,7 @@ There are many ways to select an element:
 
 The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
 
-See [Understand CSS issues](/docs/devtools/css/issues/#css-issues).
+See [Understand CSS in the Styles pane](/docs/devtools/css/issues/#css-in-styles).
 
 ### View the external stylesheet where a rule is defined {: #view-external }
 
@@ -70,7 +70,9 @@ tab to view only the CSS that's actually being applied to an element.
 
 {% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab.", width="800", height="488" %}
 
-Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
+Check the **Show All** checkbox to see all properties.
+
+See [Understand CSS in the Computed pane](/docs/devtools/css/issues/#css-in-computed).
 
 ### View CSS properties in alphabetical order {: #alphabetical }
 
