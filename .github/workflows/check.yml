@@ -226,4 +226,4 @@ jobs:
         if: ${{ steps.changes.outputs.frontend == 'true' }}
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: npm run percy
+        run: npm run snapshots
