@@ -5,7 +5,7 @@
   command = "npm run production"
   # Don't build NaCl docs during Netlify preview builds.
   # These take forever and we don't need them for PR previews.
-  environment = { CI = "true", ELEVENTY_IGNORE_NACL = "true" }
+  environment = { CI = "true", NODE_OPTIONS = "--max-old-space-size=8192", ELEVENTY_IGNORE_NACL = "true" }
 
 [[redirects]]
   from = "/*"
