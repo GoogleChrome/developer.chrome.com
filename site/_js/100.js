@@ -16,3 +16,5 @@
 
 // These are components that appear on /100 page.
 import './web-components/like-icon';
+
+console.log('Test change to trigger GitHub actions.');
