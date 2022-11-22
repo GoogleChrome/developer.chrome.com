@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-const {html} = require('common-tags');
+const {minifyHtmlOptions} = require('../_transforms/minify-html');
+const minify = require('html-minifier').minify;
 
-/**
- * Renders an event session card.
- *
- * @param {string} content
- * @returns {string}
- */
-function EventSessionCard(content) {
-  return html` <article class="event-session-card bg-bg">${content}</article> `;
-}
+const minifyHtmlFilter = value => {
+  if (typeof value !== 'string') {
+    throw new Error(`Invalid type passed to minifyHtml: ${typeof value}`);
+  }
 
-module.exports = {EventSessionCard};
+  return minify(value, minifyHtmlOptions);
+};
+
+module.exports = {minifyHtmlFilter};

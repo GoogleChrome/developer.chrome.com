@@ -16,19 +16,21 @@
 
 const minify = require('html-minifier').minify;
 
+const minifyHtmlOptions = {
+  removeAttributeQuotes: true,
+  collapseBooleanAttributes: true,
+  collapseWhitespace: true,
+  removeComments: true,
+  sortClassName: true,
+  sortAttributes: true,
+  html5: true,
+  decodeEntities: true,
+};
+
 const minifyHtml = (content, outputPath) => {
   if (outputPath && outputPath.endsWith('.html')) {
     try {
-      content = minify(content, {
-        removeAttributeQuotes: true,
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        removeComments: true,
-        sortClassName: true,
-        sortAttributes: true,
-        html5: true,
-        decodeEntities: true,
-      });
+      content = minify(content, minifyHtmlOptions);
       return content;
     } catch (err) {
       console.warn('Could not minify html for', outputPath);
@@ -38,4 +40,4 @@ const minifyHtml = (content, outputPath) => {
   return content;
 };
 
-module.exports = {minifyHtml};
+module.exports = {minifyHtml, minifyHtmlOptions};

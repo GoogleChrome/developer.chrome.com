@@ -15,7 +15,6 @@
  */
 
 const {html} = require('common-tags');
-const {escape, stringify} = require('querystring');
 const {IFrame} = require('./IFrame');
 
 /**
@@ -61,28 +60,32 @@ const Glitch = args => {
   if (!glitchProps.id) {
     throw new Error('No `id` provided to Glitch shortcode.');
   }
-  const url = 'https://glitch.com/embed/#!/embed/' + escape(glitchProps.id);
-  const queryParams = {
-    attributionHidden: 'true',
-    sidebarCollapsed: 'true',
-  };
+
+  // searchParams are not directly set on `url` here, as URL would move the
+  // query string before the #, which would break for Glitch
+  const url = new URL(`https://glitch.com/embed/#!/embed/${glitchProps.id}`);
+  const searchParams = new URLSearchParams();
+  searchParams.set('attributionHidden', 'true');
+  searchParams.set('sidebarCollapsed', 'true');
 
   if (glitchProps.path) {
-    queryParams.path = glitchProps.path;
+    searchParams.set('path', glitchProps.path);
   }
   if (typeof glitchProps.previewSize === 'number') {
-    queryParams.previewSize = glitchProps.previewSize;
+    searchParams.set('previewSize', String(glitchProps.previewSize));
   }
 
   const allow = Array.from(
     new Set([...defaultAllow, ...expandAllowSource(glitchProps.allow)])
   ).join('; ');
 
-  const src = `${url}?${stringify(queryParams)}`;
-
   return html`
     <div style="height: ${glitchProps.height}px; width: 100%;">
-      ${IFrame({src, title: `${escape(glitchProps.id)} on Glitch`, allow})}
+      ${IFrame({
+        src: `${url.toString()}?${searchParams.toString()}`,
+        title: `${glitchProps.id} on Glitch`,
+        allow,
+      })}
     </div>
   `.replace(/\s\s+/g, ' ');
 };
