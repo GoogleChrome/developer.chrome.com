@@ -80,7 +80,7 @@ const eventTags = collections => {
 
 /**
  * @param {String} authorHandle
- * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
+ * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string, handle:string}}
  */
 const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
@@ -94,6 +94,7 @@ const getAuthorData = authorHandle => {
     title: `i18n.authors.${authorHandle}.title`,
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
+    handle: authorHandle,
   };
 };
 
