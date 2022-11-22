@@ -4,9 +4,9 @@ title: Detect inactive users with the Idle Detection API
 subhead: Use the Idle Detection API to find out when the user isn't actively using their device.
 authors:
   - thomassteiner
-description: The Idle Detection API notifies developers when a user is idle, indicating such things as lack of interaction with the keyboard, mouse, screen, activation of a screensaver, locking of the screen, or moving to a different screen. A developer-defined threshold triggers the notification.
 date: 2020-05-18
 updated: 2021-08-25
+description: The Idle Detection API notifies developers when a user is idle, indicating such things as lack of interaction with the keyboard, mouse, screen, activation of a screensaver, locking of the screen, or moving to a different screen. A developer-defined threshold triggers the notification.
 tags:
   - idle-detection
   - capabilities
