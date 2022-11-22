@@ -7,7 +7,7 @@ date: 2019-08-21
 updated: 2020-05-27
 hero: image/admin/LbRdd1MCPC2zKv6ptamD.jpg
 alt: Apollo Mission Control Center.
-description: `ReportingObserver` lets you know when your site uses a deprecated API or runs into a browser intervention. The basic functionality originally landed in Chrome 69. As of Chrome 84, it can be used in workers. It's pretty simple.
+description: ReportingObserver lets you know when your site uses a deprecated API or runs into a browser intervention. The basic functionality originally landed in Chrome 69. As of Chrome 84, it can be used in workers. It's pretty simple.
 tags:
   - javascript
 feedback:
