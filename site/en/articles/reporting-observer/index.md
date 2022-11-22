@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: Know your code health with the `ReportingObserver` API
 subhead: Find deprecated APIs in your production apps.
 authors:
