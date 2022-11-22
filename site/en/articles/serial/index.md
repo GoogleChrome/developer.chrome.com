@@ -678,28 +678,28 @@ and let us know where and how you're using it.
 Thanks to [Reilly Grant] and [Joe Medley] for their reviews of this article.
 Aeroplane factory photo by [Birmingham Museums Trust] on [Unsplash].
 
-[Capabilities project]: https://developers.google.com/web/updates/capabilities
-[Unlocking new capabilities for the web]: /fugu-status/
-[WebUSB]: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
-[Arduino Create]: https://create.arduino.cc/
-[Betaflight Configurator]: https://github.com/betaflight/betaflight-configurator
-[Espruino Web IDE]: http://espruino.com/ide
-[Microsoft MakeCode]: https://www.microsoft.com/en-us/makecode
+[capabilities project]: https://developers.google.com/web/updates/capabilities
+[unlocking new capabilities for the web]: /fugu-status/
+[webusb]: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
+[arduino create]: https://create.arduino.cc/
+[betaflight configurator]: https://github.com/betaflight/betaflight-configurator
+[espruino web ide]: http://espruino.com/ide
+[microsoft makecode]: https://www.microsoft.com/en-us/makecode
 [explainer]: https://github.com/WICG/serial/blob/main/EXPLAINER.md
 [spec]: https://github.com/WICG/serial
 [default values]: https://wicg.github.io/serial/#serialoptions-dictionary
-[Streams API concepts]: https://developer.mozilla.org/docs/Web/API/Streams_API/Concepts
-[ReadableStream]: https://developer.mozilla.org/docs/Web/API/ReadableStream
-[WritableStream]: https://developer.mozilla.org/docs/Web/API/WritableStream
-[ReadableStreamBYOBReader]: https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader
+[streams api concepts]: https://developer.mozilla.org/docs/Web/API/Streams_API/Concepts
+[readablestream]: https://developer.mozilla.org/docs/Web/API/ReadableStream
+[writablestream]: https://developer.mozilla.org/docs/Web/API/WritableStream
+[readablestreambyobreader]: https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader
 [unlocked]: https://streams.spec.whatwg.org/#lock
 [locked]: https://streams.spec.whatwg.org/#lock
 [output signals]: https://wicg.github.io/serial/#serialoutputsignals-dictionary
 [input signals]: https://wicg.github.io/serial/#serialinputsignals-dictionary
-[BBC micro:bit]: https://microbit.org/
-[Google Developer codelab]: https://codelabs.developers.google.com/codelabs/web-serial
-[Serial API polyfill]: https://github.com/google/web-serial-polyfill
-[Controlling Access to Powerful Web Platform Features]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
+[bbc micro:bit]: https://microbit.org/
+[google developer codelab]: https://codelabs.developers.google.com/codelabs/web-serial
+[serial api polyfill]: https://github.com/google/web-serial-polyfill
+[controlling access to powerful web platform features]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
 [security]: https://wicg.github.io/serial/#security
 [privacy]: https://wicg.github.io/serial/#privacy
 [transform stream]: https://developer.mozilla.org/docs/Web/API/TransformStream
@@ -710,7 +710,7 @@ Aeroplane factory photo by [Birmingham Museums Trust] on [Unsplash].
 [ot]: https://developers.chrome.com/origintrials/#/view_trial/2992641952387694593
 [cr-bug]: https://crbug.com/884928
 [cr-status]: https://chromestatus.com/feature/6577673212002304
-[Reilly Grant]: https://twitter.com/reillyeon
-[Joe Medley]: https://github.com/jpmedley
-[Birmingham Museums Trust]: https://unsplash.com/@birminghammuseumstrust
-[Unsplash]: https://unsplash.com/photos/E1PSU-7aWcY
+[reilly grant]: https://twitter.com/reillyeon
+[joe medley]: https://github.com/jpmedley
+[birmingham museums trust]: https://unsplash.com/@birminghammuseumstrust
+[unsplash]: https://unsplash.com/photos/E1PSU-7aWcY

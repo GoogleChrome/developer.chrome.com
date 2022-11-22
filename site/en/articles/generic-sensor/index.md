@@ -444,7 +444,7 @@ and guidelines.
 
 ### Permissions Policy integration
 
-The [Permissions Policy integration](https://developer.chrome.com/docs/privacy-sandbox/permissions-policy/) in Generic
+The [Permissions Policy integration](/docs/privacy-sandbox/permissions-policy/) in Generic
 Sensor API controls access to sensors data for a frame.
 
 By default the `Sensor` objects can be created only within a main frame or same-origin subframes,

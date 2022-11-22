@@ -20,7 +20,7 @@ feedback:
 
 {% Aside 'success' %}
 The Screen Wake Lock API, part of Google's
-[capabilities project](https://developer.chrome.com/blog/capabilities/),
+[capabilities project](/blog/capabilities/),
 launched in Chrome 84.
 {% endAside %}
 
