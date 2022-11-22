@@ -11,7 +11,7 @@ updated: 2021-02-23
 hero: image/admin/zMncl9cgWdAc8W24yav3.jpg
 hero_position: center
 alt: Cat sleeping. Photo by Kate Stone Matheson on Unsplash.
-  tags:
+tags:
   - capabilities
   - wake-lock
 feedback:
