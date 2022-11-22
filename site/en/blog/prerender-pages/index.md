@@ -151,7 +151,7 @@ Prerender is only enabled for those Chrome users with the “Preload pages for f
 
 Prerendered pages will be sent with the following HTTP header:
 
-```
+```http
 Sec-Purpose: prefetch;prerender
 ```
 
@@ -167,14 +167,12 @@ Once a prerendered document is activated, `PerformanceNavigationTiming`'s` `acti
 
 The easiest way to see if a page was prerendered is to open dev tools after the prerender has happened, and type `performance.getEntriesByType('navigation')[0].activationStart` in the console. If a non-zero value is returned, you know the page was prerendered:
 
-```
-{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/C3pNnuCo3i4zHgbLWEo0.png", alt="Console in Chrome Dev Tools showing a positive activationStart indicating the page was prerendered", width="800", height="197" %}
-```
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/C3pNnuCo3i4zHgbLWEo0.png", alt="Console in Chrome Dev Tools showing a positive activationStart indicating the page was prerendered", width="400", height="98.5" %}
 
 Using these APIs front-end JavaScript can detect and act upon prerendered pages appropriately.
 
 {% Aside 'warning' %}
-  At present the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
+  At present the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
 {% endAside %}
 
 ## Impact on analytics
@@ -212,13 +210,13 @@ This is the method we have implemented on this site and on [https://web.dev](htt
 
 For measuring performance metrics, analytics should consider whether it is better to measure these based upon the activation time rather than the page load time that browser APIs will report.
 
-For Core Web Vitals, measured by Chrome through the [Chrome User Experience Report](https://developer.chrome.com/docs/crux/), these are intended to measure the user experience. So these are measured based on activation time. This will often result in a 0 second LCP for example, showing this is great way of improving your Core Web Vitals.
+For Core Web Vitals, measured by Chrome through the [Chrome User Experience Report](/docs/crux/), these are intended to measure the user experience. So these are measured based on activation time. This will often result in a 0 second LCP for example, showing this is great way of improving your Core Web Vitals.
 
 From version 3.0.4, the [web-vitals.js library](https://github.com/GoogleChrome/web-vitals) has been updated to handle prerendered navigations in the same way Chrome measure Core Web Vitals. This version also flags prerendered navigations for those metrics in the [Metric.navigationType](https://github.com/GoogleChrome/web-vitals#metric) attribute, which is discussed next.
 
 ### Measuring prerenders
 
-Whether a page is prerendered can be seen with a non-zero activationStart entry of [PerformanceNavigationTiming](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming), supplemented with changes for some navigation currently not reported by that. This can then be logged using a Custom Dimension, or similar when logging the page views:
+Whether a page is prerendered can be seen with a non-zero activationStart entry of [PerformanceNavigationTiming](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming), supplemented with changes for some navigation currently not reported by that. This can then be logged using a Custom Dimension, or similar when logging the page views:
 
 ```js
 // Set Custom Dimension for Prerender status
