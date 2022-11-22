@@ -10,6 +10,7 @@ description: The Keyboard Lock API allows websites to capture keys that are norm
 date: 2020-07-28
 updated: 2022-04-04
 hero: image/admin/UypqCqH1QwndHuE6xFfg.jpg
+alt: ''
 feedback:
   - api
 ---
