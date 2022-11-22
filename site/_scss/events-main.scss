@@ -66,4 +66,17 @@
       fill: var(--color-blue-medium);
     }
   }
+
+  dialog {
+    border: 0;
+    border-radius: 4px;
+    margin: get-size(1000) 0 0 auto;
+    max-height: 80vh;
+    overflow-y: scroll;
+
+    &::backdrop {
+      background: var(--color-inverse);
+      opacity: 0.48;
+    }
+  }
 }

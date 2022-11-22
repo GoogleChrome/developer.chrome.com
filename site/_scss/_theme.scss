@@ -1,7 +1,9 @@
-:root {
+:root,
+::backdrop {
   // Set theme aliases
   --color-mode: 'light';
   --color-bg: #{get-color('white')};
+  --color-inverse: #{get-color('black')};
   --color-bg-shade: #{get-color('grey-100')};
   --color-text: #{get-color('grey-900')};
   --color-secondary-text: #{get-color('grey-800')};
