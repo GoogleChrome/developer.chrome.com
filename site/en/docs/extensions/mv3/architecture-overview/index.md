@@ -174,67 +174,7 @@ manifest:
 
 See [Web-accesible resources][docs-web-acc-res] for usage information.
 
-## Using Chrome APIs {: #apis }
 
-In addition to having access to the same [web APIs][mdn-web-apis] as web pages, extensions can also
-use [extension-specific APIs][api-reference] that create tight integration with the browser. For
-example, both extensions and webpages can access the standard [`window.open()`][mdn-window-open]
-method to open a URL, but extensions can specify which window that URL should be displayed in by
-using [chrome.tabs.create()][api-create-tab] instead.
-
-For more information, explore the [Chrome API reference docs][api-reference].
-
-### Asynchronous methods {: #async-sync }
-
-Most Chrome API methods are asynchronous; they return immediately without waiting for the operation to finish. If an extension needs to know the outcome of an asynchronous operation, there are two choices:
-
-* Use the returned promise.
-* Pass a callback function into the method.
-
-Note that these choices are mutually exclusive. If you pass a callback to a method, no promise
-will be returned. If you use the returned promise, do not pass a callback.
-
-Generally, you should prefer promises to callbacks. Not all methods in extensions APIs support
-promises, but newer methods do. You can verify whether a method supports promises by checking
-its API reference page. If you need to support both promises and callbacks for the same
-function (because your users have older browsers), you can test whether the method returns a
-promise using `typeof` and
-[optional chaining](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
-For example:
-
-
-```js
-typeof chrome.contextMenus.removeAll()?.then()
-```
-
-#### Promises {: #async }
-
-Both methods of handling promises are supported. See [Using promises][docs-promises] to learn
-more.
-
-```js
-// Promise
-chrome.tabs.query(queryOptions)
-.then((tabs) => {
-  chrome.tabs.update(tabs[0].id, {url: newUrl});
-  someOtherFunction();
-});
-
-// async-await
-async function queryTab() {
-  let tabs = await chrome.tabs.query(queryOptions);
-  chrome.tabs.update(tabs[0].id, {url: newUrl});
-  someOtherFunction();
-}
-```
-
-#### Callbacks {: #callbacks }
-
-A method is asynchronous when the callback parameter is available in its signature.
-
-```js
-// Signatures for an asynchronous method
-chrome.tabs.query(object queryInfo, function callback)
 ```
 
 ## Communication between pages {: #pageComm }
