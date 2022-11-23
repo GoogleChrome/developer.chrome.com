@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2021-11-02
-updated: 2022-03-25
+updated: 2022-11-29
 description: "Record, replay, measure user flows, and edit their steps with the Recorder panel."
 tags:
   - test
