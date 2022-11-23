@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+const {defaultLocale} = require('../_data/site.json');
+
 /**
  * Prerender by adding Speculation Rules JSON
  * Also adds a GA event so can see how many prerender attempts were made
@@ -28,6 +30,12 @@ function Prerender(url) {
     url.toString().startsWith('https://')
   ) {
     return '';
+  }
+
+  // Strip the /en from URLs
+  // (Handled by prettyURLs for in page links)
+  if (url.toString().startsWith(`/${defaultLocale}/`)) {
+    url = url.substring(`/${defaultLocale}`.length);
   }
 
   // Only prerender if browser supports speculationrules
