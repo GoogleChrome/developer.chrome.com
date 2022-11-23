@@ -33,7 +33,7 @@ function getStaticPaths() {
   return ['dist', 'dist/en'];
 }
 
-function buildFileSystemRouter() {
+function buildFileSystemHandler() {
   const router = express.Router();
   const staticPaths = getStaticPaths();
   for (const staticPath of staticPaths) {
@@ -48,4 +48,4 @@ function buildFileSystemRouter() {
   return router;
 }
 
-module.exports = {buildFileSystemRouter};
+module.exports = {buildFileSystemHandler};

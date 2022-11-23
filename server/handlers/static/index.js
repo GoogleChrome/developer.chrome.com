@@ -20,15 +20,15 @@
  * or the local filesystem handler in all other cases
  */
 
-const {buildFileSystemRouter} = require('./fileSystem');
-const {bucket} = require('./bucket');
+const {buildFileSystemHandler} = require('./fileSystem');
+const {bucketHandler} = require('./bucket');
 
-function buildStaticRouter() {
+function buildStaticHandler() {
   if (process.env.GOOGLE_CLOUD_PROJECT === 'dcc-staging') {
-    return bucket;
+    return bucketHandler;
   }
 
-  return buildFileSystemRouter();
+  return buildFileSystemHandler();
 }
 
-module.exports = {buildStaticRouter};
+module.exports = {buildStaticHandler};

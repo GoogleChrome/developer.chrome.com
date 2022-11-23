@@ -19,7 +19,7 @@ const express = require('express');
 const compression = require('compression');
 const {renderHandler} = require('./render');
 const {notFoundHandler} = require('./not-found');
-const {buildStaticRouter} = require('./routers/static');
+const {buildStaticHandler} = require('./handlers/static');
 
 const unknownDomainRedirectHandler = require('./unknown-domain');
 const healthCheckHandler = require('./health-check');
@@ -55,7 +55,7 @@ const cspHandler = (_req, res, next) => {
 const handlers = [
   cspHandler,
   immutableRootHandler,
-  buildStaticRouter(),
+  buildStaticHandler(),
   healthCheckHandler,
   notFoundHandler,
 ];

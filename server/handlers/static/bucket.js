@@ -76,7 +76,7 @@ async function getActiveCommit(refresh = false) {
 /**
  * @type {express.RequestHandler}
  */
-async function bucket(req, res, next) {
+async function bucketHandler(req, res, next) {
   let activeCommit = await getActiveCommit();
   let filePath = req.path;
 
@@ -112,4 +112,4 @@ async function bucket(req, res, next) {
   }
 }
 
-module.exports = {bucket};
+module.exports = {bucketHandler};
