@@ -6,7 +6,7 @@ steps:
 
   - name: node:18
     entrypoint: npm
-    args: ['run', 'production']
+    args: ['run', 'staging']
     env:
       - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
   - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:slim'
