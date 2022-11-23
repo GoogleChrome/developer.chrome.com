@@ -1,5 +1,5 @@
 const SNAPSHOTS = [
-  '/page-types/author-individual/index.html',
+  '/en/page-types/author-individual/index.html',
 ];
 
 module.exports = {
