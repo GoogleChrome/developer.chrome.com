@@ -19,14 +19,14 @@ const {mkdirSync} = require('fs');
 const {cp} = require('fs/promises');
 
 module.exports = async function preTestVisuals() {
+  // eslint-disable-next-line
   const {execa} = await import('execa');
 
   rimraf.sync('tests/visual/fixtures/dist');
   mkdirSync('tests/visual/fixtures/dist', {recursive: true});
 
   await Promise.all([execa('gulp'), execa('npx', ['rollup', '-c'])]);
-  await Promise.all([
-    cp('dist/js', 'tests/visual/fixtures/dist/js', {recursive: true}),
-    cp('dist/css', 'tests/visual/fixtures/dist/css', {recursive: true}),
-  ]);
+  // Copy all of whats normally built into dist by the default tasks
+  // into the test dist directory as well
+  cp('dist', 'tests/visual/fixtures/dist', {recursive: true});
 };
