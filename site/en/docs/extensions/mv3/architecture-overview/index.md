@@ -3,108 +3,81 @@ layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
 updated: 2022-11-02
-description: A high-level explanation of the software architecture of Chrome Extensions.
-subhead: A high-level explanation of the components and structure of a Chrome Extension.
+description: A high-level explanation of the architecture of Chrome Extensions.
+subhead: A high-level explanation of the structure of a Chrome Extension.
 ---
 
 ## Overview
 
-This page briefly describes the structure of a Chrome extension, the role of each part and how they
-interact. Implementation details for each section are outside the scope of this article. 
+An extension is composed of different parts. This page describes the structure of a Chrome extension, the characteristics of each component and what they use to interact. Implementation details are out of the scope of this article. However, each section includes links to articles that contain code samples and further details.
 
-This article assumes you are familiar with Chrome extension development. If not, we recommend reading [What extensions are][tbd-link] and [Extensions 101][tdb-link].
+This article assumes you are familiar with Chrome extension development. If not, we recommend reading first [What are extensions?][doc-overview] and [Extensions 101][doc-ext-101].
 
-## TBD
+## Parts of a Chrome extension
 
-An extension is composed of different "parts". We will talk about each one, and what their role is in an extension.
+### The manifest {: #manifest }
 
-## The manifest {: #manifest }
+The manifest is the configuration file of a Chrome extension. It is a required JSON file that must be located at the root of the project. It provides the browser with a blueprint of the extension, with important information like:
 
-The manifest is the only required file because it provides the browser with a blueprint it can follow to ___ your extension. Without it, the browser wouldn't be able to "interpret" your extension.
-For example:
+- The name of the extension, a description of what it does, the current version number, and what icons to use.
+- What Chrome APIs the extension requires by declaring API-related keys and a list of permissions.
+- Which file is the extension service worker, the popup HTML file, the content scripts, the sites to inject them into, etc. 
 
-- It uses all the unique/personable information about the extension, like it's name, description of what it does, the version number it's currently on, what icons to use across different xyz, etc to display this information in different places like the browser window, Chrome Web Store listing and the Extensions page (chrome://).
-- It let's the browser know which permissions the extension needs to use Chrome APIs, through specific API related keys and permissions.
-- It knows which are file to run on the page, which is the service worker that will run in the background, which files to 
+The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For copy-paste-ready code samples see [Manifest examples][doc-manifest-examples].
 
-The manifest file, titled `manifest.json`, gives the browser information about the extension, such
-as the most important files and the capabilities the extension might use. 
+### The service worker {: #background_script }
 
-```json
-{
-  "name": "My Extension",
-  "description": "A nice little demo extension.",
-  "version": "2.1",
-  "manifest_version": 3,
-  "icons": {
-    "16": "icon_16.png",
-    "48": "icon_48.png",
-    "128": "icon_128.png"
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "permissions": ["storage"],
-  "host_permissions": ["*://*.example.com/*"],
-  "action": {
-    "default_icon": "icon_16.png",
-    "default_popup": "popup.html"
-  }
-}
-```
+The extension service worker is the event manager of a Chrome extension. It is a script that runs in the background within the context of the browser. Its main role is to listen and respond to browser events; it lies dormant until a browser event is fired and then performs the instructed logic. It listens for browser events such as creating a new tab, adding a new bookmark, installing the extension, clicking on the extension action (toolbar icon), etc.
 
-### Service worker {: #background_script }
+It has access to all the [Chrome APIs][api-reference], but as a service worker, it doesn't have access to the global window object nor all the standard DOM APIs provided by that object. Also, it cannot interact directly with the content of a website.
 
-The extension service worker is the extension's event handler; it contains listeners for browser
-events that are important to the extension. It lies dormant until an event is fired then performs
-the instructed logic; it is only loaded when it is needed and unloaded when it goes idle. The
-service worker has access to all the [Chrome APIs][section-apis], as long as it declares the
-required permissions in the `manifest.json`.
+To learn more about the extension service worker works, see [Manage events][doc-sw]. 
 
-An extension can only have a single service worker. To import further code, the service worker can be declared as an [ES Module][webdev-imports] by specifying `"type": "module"` in the manifest `"background"`.
+### Content scripts {: #content-scripts }
 
-See [Manage events with service workers][docs-service-worker] to learn more. 
+Content scripts allow Chrome extensions to interact and modify the pages in the browser. For
+example, they can insert a new element on the page, modify the style of a website, modify
+a websites' [DOM][mdn-dom] elements, etc. 
 
-### Content scripts {: #contentScripts }
+Content Scripts share the same origin as the host page and they have access to a limited number of [Chrome APIs][api-reference].
 
-Content scripts allow extensions to inject logic into a page in order to read and modify its
-contents. A content script contains JavaScript that executes in the context of a page that has
-been loaded into the browser.
+To learn about the different ways to inject a content scripts, see [Understanding content scripts][docs-content-scripts].
 
-Content scripts can communicate with their parent extension by exchanging [messages][docs-messages]
-and storing values using the [storage][api-storage] API.
+### HTML pages
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png", alt="Shows a communication
-path between the content script and the parent extension", height="316", width="388" %}
+A Chrome extension can include various HTML pages, but none are required.  All extension HTML files can access the [Chrome APIs][section-apis]. They can use script tags to include Javascript files, but cannot declare inline JavaScript. The following are the most common pages:
 
-See [Understanding content scripts][docs-content-scripts] to learn more.
+[The popup][doc-popup]
+: The popup is one way a user can interact with the extension. The popup is displayed when a user clicks on the icon toolbar. The popup closes automatically when user navigates away.
 
-### UI elements {: #pages }
+[The options page][doc-options]
+: The options page allows users to customize the settings of the extension. Users can access the options page in several ways (learn more in [Finding the options page][doc-tbd]).
 
-An extension's user interface should be purposeful and minimal. The UI should customize or enhance
-the browsing experience without distracting from it. 
+HTML pages not declared in the manifest
+: These pages can be used to onboard users, display an HTML page in a content script iframe, blah blah blah among other.
 
-The following is a list of the most common UI examples:
+Other HTML pages include [override Chrome pages][doc-tbd], [sandbox pages][doc-tbd], 
 
-- An [action click][docs-click] event.
-- A [popup][docs-popup].
-- A [context menu][docs-context-menu].
-- An [omnibox][docs-omnibox].
-- A [keyboard shortcut][docs-commands].
-- Desktop [notifications][api-notif].
-- [Text-to-speech][api-tts].
-- A custom UI injected [into a page][docs-content-scripts].
+### Other assets
 
-See [Design the UI of a Chrome extension][docs-ui], to learn more.
+An extension can include icons and fonts. The icons must be declared in the manifest and the fonts must be included in the extension package.
 
-See [Give users options][docs-options] to learn more.
+## How these parts interact
 
-### Additional HTML files {: #html-files}
+### Sending messages
 
-An extension can also have other HTML files that are not declared in the manifest. All extension HTML files can access the [Chrome APIs][section-apis] and can use script tags including Javascript files, but cannot declare inline JavaScript.
+Many times content scripts need information from the extension service worker or the popup needs to send data to the extension service worker. For these cases, either side can listen for messages sent from the other end, and respond on the same channel. You can send a one-time requests or have long-lived connections for exchanging multiple messages.
 
-You can open these pages using the web api [window.open()][mdn-window-open], the Chrome APIs
-[windows.create()][api-window-create], or [tabs.create()][api-create-tab].
+For more information on how to send these messages, see [Message passing][doc-messages].
+
+### Using the Storage API
+
+The chrome platform provides extensions with an optimized [Storage API][api-storage] that all extension components can access. It includes four separate storage areas for specific use-cases and an event listener that tracks whenever data is updated. For example, when you save changes in the popup, the extension service worker can respond with specified logic.
+
+See [storage API][api-storage] for usage and examples.
+
+### Sharing files
+
 
 ## Extension files {: #files }
 
@@ -174,24 +147,6 @@ manifest:
 
 See [Web-accesible resources][docs-web-acc-res] for usage information.
 
-
-```
-
-## Communication between pages {: #pageComm }
-
-Different components in an extension can communicate with each other using [message
-passing][docs-messages]. Either side can listen for messages sent from the other end, and respond on
-the same channel. 
-
-## Saving data {: #data}
-
-The chrome storage API has been optimized to meet the specific storage needs of extensions. For
-example, whenever data is updated, you can use the `onChanged()` event to track these changes. All
-extension components have access to this API. An extension can also store data using the web API
-[indexedDB][mdn-indexeddb].
-
-See [storage API][api-storage] for usage and examples.
-
 ## Incognito mode {: #incognito}
 
 Extensions don't run in incognito windows unless the user manually allows it in the extension's
@@ -207,12 +162,10 @@ After reading the overview and completing the [Getting started][docs-get-started
 should be ready to start writing your own extensions! Dive deeper into the world of custom Chrome
 with the following resources:
 
-- Learn how to debug Extensions in the [debugging tutorial][docs-debugging].
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
   The [chrome APIs documentation][api-reference] will walk through each API.
 - The [developer's guide][docs-dev-guide] has dozens of additional links to pieces of documentation
   relevant to advanced extension creation.
-
 
 [api-reference]: /docs/extensions/reference
 [api-storage]: /docs/extensions/reference/storage
@@ -221,11 +174,14 @@ with the following resources:
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
 [doc-ext-pages]: /docs/extensions/mv3/user_interface/#pages
 [doc-manifest]: /docs/extensions/mv3/manifest
+[doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
 [doc-messages]: /docs/extensions/mv3/messaging
 [doc-options]: /docs/extensions/mv3/options
+[doc-sw]: /docs/extensions/mv3/service-worker
 [doc-overview]: /docs/extensions/mv3/overview
 [doc-popup]: /docs/extensions/mv3/user_interface#popup
 [doc-service-worker]: /docs/extensions/mv3/service_workers
 [doc-ui]: /docs/extensions/mv3/user_interface
 [doc-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
 [manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
+[mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
