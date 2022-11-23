@@ -55,9 +55,5 @@ load_more_error_link:
 meet_the_team_card:
   tag:
     en: Events
-  title:
-    en: Meet the Chrome team
-  body:
-    en: Join us at upcoming web conferences in your region
   cta:
     en: See all events
