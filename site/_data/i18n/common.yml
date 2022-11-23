@@ -76,6 +76,9 @@ gotchas:
   en: 'Gotchas'
   es: 'Gotchas'
 
+important:
+  en: 'Important'
+
 key-term:
   en: 'Key Term'
   es: 'Término Clave'
