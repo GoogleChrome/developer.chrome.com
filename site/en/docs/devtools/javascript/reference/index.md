@@ -186,7 +186,7 @@ The **Debugger** steps through such expressions just the same.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4e1gHFnIkayVnoAu6OGK.png", alt="Stepping through a comma-separated expression.", width="800", height="341" %}
 
-Therefore, the stepping behaviour is identical:
+Therefore, the stepping behavior is identical:
 
 - Between minified and authored code.
 - When using [sourcemaps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
