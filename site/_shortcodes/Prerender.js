@@ -64,6 +64,6 @@ function Prerender(url) {
       }
     </script>
   `;
-};
+}
 
 module.exports = {Prerender};
