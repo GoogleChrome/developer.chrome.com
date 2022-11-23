@@ -88,7 +88,7 @@
     "typescript": "^4.4.4",
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
-    "web-vitals": "^3.0.4",
+    "web-vitals": "^3.1.0",
     "webdev-infra": "^1.0.33",
     "xss": "^1.0.14"
   },
@@ -102,12 +102,12 @@
     "@types/tmp": "^0.2.0"
   },
   "devDependencies": {
-    "ava": "^3.12.1",
     "@ava/babel": "^1.0.1",
     "@google-cloud/secret-manager": "^3.2.2",
     "@percy/cli": "^1.1.0",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-json": "^4.1.0",
+    "ava": "^3.12.1",
     "chalk": "^4.1.0",
     "eslint-plugin-ava": "^12.0.0",
     "gts": "^3.1.0",

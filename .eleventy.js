@@ -37,6 +37,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {Prerender} = require('./site/_shortcodes/Prerender');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -136,6 +137,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
   eleventyConfig.addShortcode('includeRaw', includeRaw);
+  eleventyConfig.addShortcode('Prerender', Prerender);
   eleventyConfig.addPairedShortcode('Blockquote', Blockquote);
   eleventyConfig.addPairedShortcode('Details', Details);
   eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
