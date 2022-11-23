@@ -48,7 +48,9 @@ Prerendering allows a near-instant page load as shown in the Video below when pr
 {% Video src="video/W3z1f5ZkBJSgL1V1IfloTIctbIF3/rO1MGC5jaBAIyo79KrVT.mp4",
   controls="true",
   loop="true",
-  muted="true"
+  muted="true",
+  playsinline="true",
+  poster="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/zFNgVLiXhoPWpuveGPgY.png"
 %}
 
 Web.dev is already a fast site, but even with this we can see how prerendering improves the user experience. This can therefore also have a direct impact on a site’s [Core Web Vitals](https://web.dev/vitals/), with near zero LCP, reduced CLS (since any load CLS happens before the initial view), and improved FID (since the load should be completed before the user interacts).
@@ -122,7 +124,7 @@ if (HTMLScriptElement.supports &&
     const specScript = document.createElement("script");
     specScript.type = 'speculationrules';
     specRules = {
-      'Prerender': [
+      'prerender': [
         {
           source: 'list',
           urls: ['/next.html'],
