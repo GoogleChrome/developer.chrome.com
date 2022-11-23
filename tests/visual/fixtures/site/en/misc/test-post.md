@@ -210,5 +210,45 @@ Ipsum has been the industry's standard dummy text ever since the 1500s
 
 {% endColumns %}
 
+### Compare
+
+The compare shortcode allows two snippets to be clearly contrasted against each other.
+
+There are two types: **better** and **worse**. They look as follows.
+
+{% Compare 'worse' %}
+```html
+<h1>Some bad code</h1>
+```
+{% endCompare %}
+
+In the example above, critters will read and parse the content of `styles.css`, after that it
+matches the two selectors against the HTML and discovers that we use `section button.primary`.
+Finally critters will inline the corresponding styles in the `<head>` of the page resulting in:
+
+{% Compare 'better' %}
+```html
+<h1>Some better code</h1>
+```
+{% endCompare %}
+
+**You can provide custom labels:**
+
+{% Compare 'worse', 'old' %}The old way{% endCompare %}
+
+{% Compare 'better', 'new' %}The new way{% endCompare %}
+
+**And captions:**
+
+{% Compare 'better' %}
+```html
+<h1>Some better code</h1>
+```
+{% CompareCaption %}
+This is better
+{% endCompareCaption %}
+
+{% endCompare %}
+
 
 
