@@ -26,6 +26,8 @@ paged:
         authors:
           - surma
           - mustafa
+          - rachelandrew
+          - dtapuska
         date: 2022-11-09
         url:
       - thumbnail:
