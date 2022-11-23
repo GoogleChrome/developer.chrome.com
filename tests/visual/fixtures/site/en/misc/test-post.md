@@ -157,4 +157,58 @@ This type of callout can be used to describe/expand upon key terms
 This type of callout can be used to link out to code samples
 {% endAside %}
 
+### Columns
+
+The columns shortcode supports an abitrary number of columns. Define as many as you need
+and the available space will be divided equally between the columns.
+
+**Here's an example with 4 columns:**
+
+{% Columns %}
+
+{% Column %}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s
+{% endColumn %}
+
+{% Column %}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s
+{% endColumn %}
+
+{% Column %}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s
+{% endColumn %}
+
+{% Column %}
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s
+{% endColumn %}
+
+{% endColumns %}
+
+**And another with 2:**
+
+{% Columns %}
+
+{% Column %}
+
+* A
+* B
+* C
+
+{% endColumn %}
+
+{% Column %}
+
+1. 1
+2. 2
+3. 3
+
+{% endColumn %}
+
+{% endColumns %}
+
+
 
