@@ -53,15 +53,53 @@ in the width and height boxes. In this example, the width is set to `480` and th
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bzTz5dEpOUIjRCrpdw5C.png", alt="The handles for changing the viewport's dimensions when in Responsive Viewport Mode.", width="800", height="567" %}
 
+Alternatively, use the width presets bar to set the width with a click to one of the following:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rvOX3mx1WcP2kSvoUFNY.png", alt="The width presets bar.", width="800", height="578" %}
+
+<table>
+<thead>
+  <tr>
+    <th>Mobile S</th>
+    <th>Mobile M</th>
+    <th>Mobile L</th>
+    <th>Tablet</th>
+    <th>Laptop</th>
+    <th>Laptop L</th>
+    <th>4K</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>320px</td>
+    <td>375px</td>
+    <td>425px</td>
+    <td>768px</td>
+    <td>1024px</td>
+    <td>1440px</td>
+    <td>2560px</td>
+  </tr>
+</tbody>
+</table>
+
 #### Show media queries {: #queries }
 
 To show media query breakpoints above your viewport, click **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Show media queries**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y8OPepQNYdD6of4QC8if.png", alt="Show media queries.", width="800", height="567" %}
 
-Click a breakpoint to change the viewport's width so that the breakpoint gets triggered.
+DevTools now displays two additional bars above the viewport:
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LrAt7IjFKPoDpjF2Go3Q.png", alt="Click a breakpoint to change the viewport's width.", width="800", height="494" %}
+- The <span style="background-color:lightskyblue">blue</span> bar with `max-width` breakpoints.
+- The <span style="background-color:orange">orange</span> bar with `min-width` breakpoints.
+
+Click between breakpoints to change the viewport's width so that the breakpoint gets triggered.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TL943bgHrNVpZwBQGCWo.png", alt="Click between breakpoints to change the viewport's width.", width="800", height="447" %}
+
+To find the corresponding `@media` declaration, right-click between breakpoints and select **Reveal in source code**. DevTools opens the **Sources** panel at the corresponding line in the **Editor**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rhOtkyEwDf0bJE3TAEjF.png", alt="Reveal in source code drop-down menu.", width="800", height="447" %}
 
 #### Set the device type {: #type }
 
