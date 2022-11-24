@@ -109,17 +109,9 @@ jobs:
 
       - name: Building site
         env:
-          # Increase memory limit as a full build requires around 4GB
-          NODE_OPTIONS: --max_old_space_size=4096
-          ELEVENTY_IGNORE_HANDBOOK: true
-          ELEVENTY_IGNORE_LIGHTHOUSE: true
-          ELEVENTY_IGNORE_MULTIDEVICE: true
-          ELEVENTY_IGNORE_NACL: true
-          ELEVENTY_IGNORE_PRIVACY_SANDBOX: true
-          ELEVENTY_IGNORE_VERSIONHISTORY: true
-          ELEVENTY_IGNORE_WEBSTORE: true
-          ELEVENTY_IGNORE_WORKBOX: true
-          # ELEVENTY_INCLUDE_TRANSLATED: true
+          # Increase memory limit as a full build requires around 8GB
+          NODE_OPTIONS: --max_old_space_size=8192
+          ELEVENTY_INCLUDE_TRANSLATED: true
         run: |
           npm run production
 
