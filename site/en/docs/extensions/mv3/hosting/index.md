@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Extension hosting"
+seoTitle: "Chrome Extension hosting"
 date: 2012-09-18
 updated: 2021-12-10
 description: >

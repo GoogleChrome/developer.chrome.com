@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Known issues when migrating to Manifest V3
+seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
 #updated: 2022-07-12

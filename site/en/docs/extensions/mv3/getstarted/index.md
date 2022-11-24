@@ -1,8 +1,9 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Welcome'
+seoTitle: 'Chrome Extensions getting started guides '
 subhead: 'Welcome to the Getting Started Guides.'
-description: 'Welcome to the Getting Started Guides.'
+description: 'Overview of all Chrome Extensions Getting Started Guides.'
 date: 2022-10-04
 # updated: 2022-06-13
 anchorRedirects:

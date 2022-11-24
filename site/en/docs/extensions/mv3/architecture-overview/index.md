@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
+seoTitle: "Chrome Extensions Architecture overview"
 date: 2012-09-18
 updated: 2022-11-02
 description: A high-level explanation of the software architecture of Chrome Extensions.
