@@ -26,6 +26,7 @@
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm-run-all setup eleventy",
+    "staging": "NODE_ENV=production && npm run setup && npm run eleventy -- --quiet",
     "snapshots": "percy snapshot ./dist/en",
     "percy": "NODE_ENV=production CI=true npm-run-all ignore setup eleventy snapshots",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
