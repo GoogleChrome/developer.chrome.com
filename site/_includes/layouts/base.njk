@@ -15,13 +15,8 @@
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
 
-    {% if process.env.NODE_ENV === 'production' %}
-      {# CSS will be injected by purify-css plugin. #}
-    {% else %}
-      <link rel="stylesheet" href="/css/main.css">
-    {% endif %}
-
-    {% block chromescss %}{% endblock %}
+    {% InlineCss '/css/main.css' %}
+    {% block css %}{% endblock %}
 
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
@@ -92,8 +87,6 @@
     </div>
     {% include 'partials/cookie-banner.njk' %}
 
-    {% block chromescripts %}{% endblock %}
-
-    {% block chromeanalytics %}{% endblock %}
+    {% block scripts %}{% endblock %}
   </body>
 </html>
