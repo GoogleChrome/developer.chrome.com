@@ -11,10 +11,6 @@
   <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
     <div class="blog-grid">
       {% for post in pagination.items %}
-        {% if loop.first %}
-          {# Prerender the first post, for performance reasons #}
-          {% Prerender post.url %}
-        {% endif %}
         {{ blogCard(post) }}
       {% endfor %}
     </div>
