@@ -261,8 +261,6 @@ the `text` field, or occasionally in the `title` field.
 
 The Web Share Target API is supported as described below:
 
-{% BrowserCompat 'html.manifest.share_target' %}
-
 On all platforms, your web app has to be [installed][installability] before it will show up as a
 potential target for receiving shared data.
 
