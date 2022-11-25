@@ -21,7 +21,7 @@ Frameworks make web development more enjoyable through an improved developer exp
 - [nuxt/pwa](https://pwa.nuxtjs.org/workbox/)
 - [@vuepress/plugin-pwa](https://vuepress.vuejs.org/plugin/official/plugin-pwa.html)
 - [@vue/cli-plugin-pwa](https://cli.vuejs.org/core-plugins/pwa.html)
-- [vite-plugin-pwa](​​https://github.com/antfu/vite-plugin-pwa)
+- [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa)
 - [quasar-cli](https://quasar.dev/quasar-cli/developing-pwa/introduction)
 
 ### Other framework integrations
