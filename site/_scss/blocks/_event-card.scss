@@ -159,6 +159,10 @@
       fill: #{get-color('blue-800')};
     }
   }
+
+  &__launch-icon.icon {
+    fill: get-color('blue-500');
+  }
 }
 
 .event-session-card {
@@ -188,7 +192,6 @@
   }
 
   svg {
-    fill: get-color('blue-500');
     height: auto;
     margin-right: 6px;
     width: 20px;

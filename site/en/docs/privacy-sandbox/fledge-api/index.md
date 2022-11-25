@@ -203,8 +203,8 @@ model was introduced. In the long-term, adtechs will need to use the
 open-source FLEDGE Key/Value services running in trusted execution
 environments.
 
-Refer to the [FLEDGE services blog post](/blog/fledge-services-overview#timeline)
-for timeline proposal. We'll provide substantial notice for developers to begin
+Refer to the [FLEDGE services blog post](/blog/fledge-service-overview/#timeline)
+for timeline updates. We'll provide substantial notice for developers to begin
 testing and adoption before this transition takes place.
 
 ### Detect feature support
@@ -413,7 +413,7 @@ event-level information to be reported.
 <figure>
 {% Img
   src="image/80mq7dk16vVEg8BBhsVe42n6zn82/rDAkvTMMDjwc7MuMjzqw.png",
-  alt="A person clicks on an ad for a bike, embeded with a fenced frame, on a news website. The report data is sent to seller and buyers.",
+  alt="A person clicks on an ad for a bike, embedded with a fenced frame, on a news website. The report data is sent to seller and buyers.",
   width="600", height="220"
 %}
 </figure>
@@ -549,12 +549,12 @@ to share feedback privately with the Chrome team outside of public forums.
 #### Opt-out {: #opt-out}
 
 Want to opt-out of FLEDGE? Learn how to
-[block access to the FLEDGE API](/docs/privacy-sandbox/fledge/opt-out),
+[block access to the FLEDGE API](/docs/privacy-sandbox/fledge-api/opt-out/),
 as a site owner or an individual user.
 
 ### Get updates
 
-* For notificiations of API status changes, join the
+- For notifications of API status changes, join the
   [mailing list for developers](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce).
 - To closely follow all ongoing discussions on the API, click the **Watch** button on the [proposal page on
   GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md). This requires you have or [create a GitHub

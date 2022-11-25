@@ -11,6 +11,8 @@ description:
   service worker caches."
 tags:
   - progressive-web-apps
+anchorRedirects:
+  add-to-homescreen: /docs/devtools/progressive-web-apps/#trigger-installation
 ---
 
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and

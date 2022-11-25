@@ -52,7 +52,7 @@ information for FLEDGE and other Privacy Sandbox proposals.
 ### FLEDGE in one minute {: #overview}
 
 For a more in-depth overview of FLEDGE, read the
-[FLEDGE full system overview](/docs/privacy-sandbox/fledge/system-overview/).
+[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 <figure class="w-figure">
   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="An overview of each stage of the FLEDGE lifecycle",
@@ -370,7 +370,7 @@ In FLEDGE, an ad auction is a collection of small JavaScript programs the browse
 device to choose an ad. To preserve privacy, all ad auction code from the seller and buyers is run
 in isolated JavaScript [worklets](/docs/privacy-sandbox/glossary/#worklet) that can't talk to the outside world.
 
-A seller (an advertiser or a [supply-side platform](/docs/privacy-sandbox/glossary/#ssp))
+A seller (a publisher or a [supply-side platform](/docs/privacy-sandbox/glossary/#ssp))
 initiates a FLEDGE ad auction on a site that sells ad space (such as a news
 site). The seller chooses buyers to participate in the auction,
 indicates what space is for sale, and provides additional criteria for the ad. Each buyer is the
@@ -457,7 +457,7 @@ To ensure that the ecosystem has sufficient time to test, we don’t expect to r
 ## Find out more
 
 For a more in-depth overview of FLEDGE, read the
-[FLEDGE full system overview](/docs/privacy-sandbox/fledge/system-overview/).
+[FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api/).
 
 ### Developers
 

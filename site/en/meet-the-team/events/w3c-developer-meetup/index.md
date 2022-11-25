@@ -5,7 +5,7 @@ summary: >-
   of demonstrations, presentations, and discussions with the W3C community.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: 'Vancouver, Canada'
-date: '2022-09-13'
+date: 2022-09-13
 externalUrl: 'https://www.w3.org/2022/09/meetup/index.html'
 sessions:
   - speaker: rachelandrew

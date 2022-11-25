@@ -2,7 +2,7 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
-<!-- $content -->
+{# $content #}
 
 ### Chrome 108 {: #chrome108 }
 
@@ -44,6 +44,7 @@
 * [Recorder パネルでのマウスオーバーイベントのサポート](/ja/blog/new-in-devtools-105/#recorder-hover)
 * [Performance insight パネルに Largest Contentful Paint (LCP) を追加](/ja/blog/new-in-devtools-105/#lcp)
 * [レイアウトシフトの潜在的な主要因であるテキストのフラッシュ（FOIT、FOUT）を識別](/ja/blog/new-in-devtools-105/#foit-fout)
+* [Manifest ペインの Protocol ハンドラ](/ja/blog/new-in-devtools-105/#manifest)
 * [Elements パネルの Top layer バッジ](/ja/blog/new-in-devtools-105/#top-layer)
 * [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
 * [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
@@ -157,7 +158,7 @@
 ### Chrome 96 {: #chrome96 }
 
 * [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
-<!-- * [Restored and improved CSS length edit and copy experince](/ja/blog/new-in-devtools-966/#length) -->
+* [CSS の length の編集とコピーの挙動の復旧と改善](/ja/blog/new-in-devtools-966/#length)
 * [CSS の prefers-contrast メディア機能のエミュレート](/ja/blog/new-in-devtools-96/#prefers-contrast)
 * [Chrome の Auto Dark Theme 機能のエミュレート](/ja/blog/new-in-devtools-96/#auto-dark-mode)
 * [Styles ペインで JavaScript として宣言をコピー](/ja/blog/new-in-devtools-96/#copy-as-js)

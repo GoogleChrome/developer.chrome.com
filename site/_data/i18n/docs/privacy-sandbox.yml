@@ -32,6 +32,8 @@ storage:
   en: 'Secure cross-site storage'
 trust-tokens:
   en: 'Private State Tokens'
+cross-site-federation:
+  en: 'Cross-site federation'
 limit-passive-fingerprint:
   en: 'Limit passive fingerprinting'
 control-browser-features:

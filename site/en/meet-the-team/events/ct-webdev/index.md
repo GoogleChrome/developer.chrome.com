@@ -1,5 +1,5 @@
 ---
-title: c't &lt;webdev&gt;
+title: c't <webdev>
 summary: >-
   The conference for frontend development (Die Konferenz für Frontend-Entwicklung)
 image:  image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
