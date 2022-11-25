@@ -1,9 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Повышение конфиденциальности пользователей и удобства разработчиков с помощью расширения User-Agent Client Hints
-subhead:
-User-Agent Client Hintsэто новое расширение API Client Hints, которое
-позволяет разработчикам получать доступ к информации о браузере эргономичным способом с сохранением конфиденциальности пользователей.
+subhead: User-Agent Client Hintsэто новое расширение API Client Hints, которое позволяет разработчикам получать доступ к информации о браузере эргономичным способом с сохранением конфиденциальности пользователей.
 hero: image/admin/xlg4t3uiTp0L5TBThFHQ.jpg
 thumbnail: image/admin/hgxRNa56Vb9o3QRwIrm9.jpg
 alt: Множество разных следов на снегу. Намек на то, кто там был.
