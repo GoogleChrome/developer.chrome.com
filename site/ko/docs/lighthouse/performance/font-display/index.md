@@ -14,7 +14,7 @@ updated: 2020-04-29
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/251Gbh9tn89GDJY289zZ.png", alt="웹폰트 로드 중에 텍스트가 계속 표시되도록 하기 Lighthouse 감사의 스크린샷", width="800", height="430" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 보이지 않는 텍스트가 표시되지 않도록 하는 방법
 

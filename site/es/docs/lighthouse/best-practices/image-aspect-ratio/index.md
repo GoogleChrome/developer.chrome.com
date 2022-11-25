@@ -21,7 +21,7 @@ Existen dos causas comunes para una relación de aspecto incorrecta de las imág
 - Para una imagen se establecen valores explícitos de ancho y altura que difieren de las dimensiones de la imagen original.
 - Para una imagen se establecen valores de ancho y altura expresados como un porcentaje de un contenedor de tamaño variable.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Compruebe que las imágenes se muestren con la relación de aspecto correcta
 

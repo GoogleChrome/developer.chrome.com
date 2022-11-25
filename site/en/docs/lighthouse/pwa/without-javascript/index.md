@@ -31,7 +31,7 @@ when JavaScript is unavailable:
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty, the audit fails.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to ensure your page has content without JavaScript
 

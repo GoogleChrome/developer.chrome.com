@@ -49,7 +49,7 @@ Before we start:
 - This is the new default, but websites can still pick a policy of their choice.
 - To try out the change in Chrome, enable the flag at
   `chrome://flags/#reduced-referrer-granularity`. You can also check out this
-  [demo](https://site-one-dot-referrer-demo-280711.ey.r.appspot.com/stuff/detail?tag=red&p=p0) to
+  [demo](https://site-one.glitch.me/stuff/detail?tag=blue) to
   see the change in action.
 - Beyond the referrer policy, the way browsers deal with referrers might change—so keep an eye on
   it.
@@ -159,7 +159,7 @@ entry](https://www.chromestatus.com/feature/6251880185331712).
 ### Understand and detect the change
 
 To understand what the new default changes in practice, you can check out this
-[demo](https://site-one-dot-referrer-demo-280711.ey.r.appspot.com/stuff/detail?tag=red&p=p0).
+[demo](https://site-one.glitch.me/stuff/detail?tag=blue).
 
 You can also use this demo to detect what policy is applied in the Chrome instance you are running.
 

@@ -12,7 +12,7 @@ tags:
   - chrome-104
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 104 beta was released on June 23, 2022 and is expected to become the
 stable version in early August, 2022.
@@ -33,4 +33,4 @@ Affected sites should migrate to the [Web Authentication API](https://developer.
 
 U2F is Chrome's original security key API. It allows sites to register public key credentials on USB security keys and challenge them for building phishing-resistant two-factor authentication systems. U2F never became an open web standard and was subsumed by the Web Authentication API (launched in Chrome 67). Chrome never directly supported the FIDO U2F JavaScript API, but rather shipped a component extension called cryptotoken, which exposes an equivalent `chrome.runtime.sendMessage()` method. U2F and Cryptotoken are firmly in maintenance mode and have encouraged sites to migrate to the Web Authentication API for the last two years.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

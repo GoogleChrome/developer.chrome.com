@@ -32,7 +32,7 @@ before running the audit.
 Lighthouse reports the URL and line number
 of each request for notification permission.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to ask for users' notification permissions responsibly
 Remove all calls to `notification.requestPermission()`

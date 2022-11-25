@@ -20,11 +20,11 @@ Se o navegador não receber uma [resposta HTTP 200](https://developer.mozilla.or
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ZR8gYzKNpBkrXEgQQnbl.png", alt="Auditoria do Lighthouse mostrando que URL inicial não responde com 200 quando está off-line", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como garantir que sua página esteja disponível off-line
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 1. Se você ainda não tiver um, [adicione um manifesto de aplicativo da web](https://web.dev/add-manifest/).
 2. Verifique se `start_url` em seu manifesto está correto.

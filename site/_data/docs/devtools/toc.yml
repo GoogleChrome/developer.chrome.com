@@ -36,7 +36,7 @@
     - url: /docs/devtools/console/utilities/
 - title: i18n.docs.devtools.sources
   sections:
-    - url: /docs/devtools/javascript/sources/
+    - url: /docs/devtools/sources/
     - url: /docs/devtools/javascript/
     - url: /docs/devtools/javascript/breakpoints/
     - url: /docs/devtools/javascript/snippets/
@@ -105,6 +105,7 @@
 - title: i18n.docs.devtools.accessibility
   sections:
     - url: /docs/devtools/accessibility/reference/
+    - url: /docs/devtools/accessibility/contrast/
     - url: /docs/devtools/accessibility/navigation/
     - url: /docs/devtools/accessibility/focus/ 
 - title: i18n.docs.devtools.customization

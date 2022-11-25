@@ -68,7 +68,7 @@ This table shows how to interpret your Max Potential FID score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your Max Potential FID score
 
@@ -93,7 +93,7 @@ it's more inherently variable than typical performance metrics.
 See [Analyzing and reporting on FID data][analysis] for guidance
 about how to evaluate the FID data you collect.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 

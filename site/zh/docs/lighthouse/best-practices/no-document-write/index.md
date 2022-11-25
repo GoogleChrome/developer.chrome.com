@@ -31,7 +31,7 @@ data from the network to be reparsed.
 
 Lighthouse 会报告对 `document.write()` 的任何其他调用，因为无论如何使用，它都会对性能产生不利影响，并且我们有更好的替代方法。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 避免使用 `document.write()`
 

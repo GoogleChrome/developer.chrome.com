@@ -34,11 +34,11 @@ JavaScriptの実行に2秒以上かかると、[Lighthouseは警告を表示し�
 
 実行時間が長くなる最大の要因を特定できるように、Lighthouseは、ページが読み込む各JavaScriptファイルの実行、評価、解析に費やされた時間を報告してくれます。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## JavaScriptの実行を高速化する方法
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% Partial 'lighthouse-performance/js-perf.njk' %}
 
 ## リソース
 

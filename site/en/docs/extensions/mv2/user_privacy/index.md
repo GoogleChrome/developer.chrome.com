@@ -6,7 +6,7 @@ updated: 2018-04-26
 description: Guidelines for ensuring that your Chrome Extension protects user privacy.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Users will not install an extension if it compromises their privacy or asks for more permissions
 that it seems to need. Permission requests should make sense to users and be limited to the critical
@@ -107,7 +107,7 @@ All requested user data should be treated with care. Store and retrieve data in 
 a registered domain. Always use HTTPS to connect and avoid keeping sensitive user data in the client
 side of an extension as extension storage is not encrypted.
 
-[1]: /docs/webstore/program_policies#userdata
+[1]: /docs/webstore/program-policies#userdata
 [2]: /docs/extensions/mv2/manifest
 [3]: #optional_permissions
 [4]: /docs/extensions/mv2/manifest/activeTab

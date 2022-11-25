@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io)._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -229,7 +229,7 @@ Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experie
 Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.com/1333411)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-## Otros detalles destacados {: #misc }
+## Otros detalles destacados {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
 Estos son algunos arreglos destacados en esta versión:
 <!-- - Properly remove a local storage key value pair from the table in the **Application** > **Local Storage** pane when it is deleted. ([1339280](https://crbug.com/1339280)) -->
@@ -241,5 +241,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Un nuevo enlace de **Script de anunciante** está disponible para los ([marcos de anuncios](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) si DevTools encontró el script que causó que el marco fuera etiquetado como un anuncio). Puede abrir un marco mediante **Aplicación** > **Marcos**. ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
