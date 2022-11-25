@@ -4,9 +4,9 @@ summary: >-
   A conference for whole teams covering topics such as Machine Learning,
   Accessibility, Next.js, Linux, Serverless, Varnish, Graph Databases and much
   more.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: 'Antwerp, Belgium'
-date: '2022-10-06'
+date: 2022-10-06
 externalUrl: 'https://fullstackeurope.com/2022'
 sessions:
   - speaker: bramus

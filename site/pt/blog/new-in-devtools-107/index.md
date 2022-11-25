@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Personalize atalhos de teclado, highlight de objetos C/C++ no Inspetor de Memória muito mais.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1p4sWeksdkx6NqGAG2TO.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YP4wAJ8mRPNFX6cVOwSc.png'
 alt: ''
 tags:
   - new-in-devtools

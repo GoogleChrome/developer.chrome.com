@@ -3,9 +3,9 @@ title: 'Web Summer Camp, Croatia'
 summary: >-
   An event for professionals in the web community, focused on practical learning
   and peer experience sharing, with a grain of fun.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Šibenik, Croatia'
-date: '2022-09-02'
+date: 2022-09-02
 externalUrl: 'https://2022.websummercamp.com'
 sessions:
   - speaker: samdutton

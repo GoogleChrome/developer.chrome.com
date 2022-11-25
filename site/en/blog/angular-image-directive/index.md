@@ -92,8 +92,8 @@ The highlights of the design are as follows:
     provideImgixLoader('https://mysite.net/assets/')
 
     // in markup
-    <img rawSrc="image.png" >
-    <img rawSrc="image2.png" >
+    <img ngSrc="image.png" >
+    <img ngSrc="image2.png" >
     ```
 
     This is equivalent to including the following image tags and reduces the markup developers must include for every image.

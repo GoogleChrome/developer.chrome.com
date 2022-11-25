@@ -3,9 +3,9 @@ title: W3C Developer Meetup
 summary: >-
   A free of cost meetup for engineers and W3C members to gather for an evening
   of demonstrations, presentations, and discussions with the W3C community.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: 'Vancouver, Canada'
-date: '2022-09-13'
+date: 2022-09-13
 externalUrl: 'https://www.w3.org/2022/09/meetup/index.html'
 sessions:
   - speaker: rachelandrew

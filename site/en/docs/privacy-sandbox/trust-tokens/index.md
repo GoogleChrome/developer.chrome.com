@@ -6,22 +6,24 @@ subhead: >
 description: >
   An API to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 date: 2021-05-18
-updated: 2022-03-31
+updated: 2022-10-06
 authors:
   - samdutton
 ---
 
 {% Aside %}
-This article previously referred to Private State Tokens as "Trust Tokens". The Trust Token API has been renamed to the Private State Token API to better showcase its privacy and utility benefits.
+This article previously referred to Private State Tokens as "Trust Tokens". The Trust
+Token API has been renamed to the Private State Token API to better showcase its
+privacy and utility benefits.
 
-Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens) for more information.
+Check out [Trust Tokens renamed Private State Tokens](/blog/rename-trust-tokens)
+for more information.
 {% endAside %}
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101.
-* [Register for the trial](/origintrials/#/view_trial/2479231594867458049).
-* [Demo](https://trust-token-demo.glitch.me/).
+* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 101: [now closed](/origintrials/#/view_trial/2479231594867458049).
+* [Demo](https://trust-token-demo.glitch.me/): this no longer works, as the origin trial is closed. You can still view the code.
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 
@@ -114,8 +116,8 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 ## Engage and share feedback
 
-* **Origin trial**: Register and take part in the [Chrome origin trial](/origintrials/#/view_trial/2479231594867458049).
-* **Demo**: Try out trust token [issuance and redemption](https://trust-token-demo.glitch.me/).
+* **Origin trial**: Now [closed](/origintrials/#/view_trial/2479231594867458049).
+* **Demo**: The Trust Tokens origin trial has closed, so the [demo](https://trust-token-demo.glitch.me/) won't work, but you can still view the code.
 * **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and 
 follow discussion](https://github.com/WICG/trust-token-api/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
