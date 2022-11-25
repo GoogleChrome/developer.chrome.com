@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 Client Hints を使用することにより、開発者はユーザーの使用デバイスや使用条件に関する情報を User-Agent (UA) 文字列から解析するのではなく、積極的にリクエストすることができるようになります。この代替手法の提供は、最終的に User-Agent 文字列の粒度を低下させるための第一歩となります。
 

@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 Les Client Hints (indications du client, en français) permettent aux développeurs de demander activement des informations sur l'appareil ou les conditions de l'utilisateur, plutôt que d'avoir à les analyser à partir de la chaîne User-Agent (UA). Fournir cette route alternative est la première étape pour éventuellement réduire la granularité de la chaîne User-Agent.
 

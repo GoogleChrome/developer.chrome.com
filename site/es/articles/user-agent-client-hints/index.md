@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 Las sugerencias que se encuentran en Client Hints permiten a los desarrolladores solicitar información de forma activa sobre el dispositivo o las condiciones del usuario, en lugar de tener que analizarla fuera de la cadena User-Agent (UA). Proporcionar esta ruta alternativa es el primer paso para eventualmente reducir la granularidad de la cadena User-Agent.
 

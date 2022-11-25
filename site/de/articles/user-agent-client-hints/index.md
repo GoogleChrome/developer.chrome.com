@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 Client-Hinweise ermöglichen es Entwicklern, aktiv Informationen über das Gerät des Benutzers oder dessen Zustand anzufordern, anstatt sie aus dem User-Agent-String (UA) parsen zu müssen. Die Bereitstellung dieser alternativen Möglichkeit ist der erste Schritt auf dem Weg zur Reduktion der Granularität des Benutzer-Agent-Strings.
 

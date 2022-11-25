@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 As Client Hints (dicas do cliente) permitem que os desenvolvedores solicitem informações sobre o dispositivo ou as condições do usuário, em vez de precisar processá-las a partir da string do cabeçalho User-Agent (UA). Fornecer essa rota alternativa é o primeiro passo para reduzir a granularidade da string User-Agent.
 

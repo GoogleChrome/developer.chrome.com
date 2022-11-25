@@ -17,7 +17,7 @@ feedback:
   - api
 ---
 
-{% YouTube 'f0YY0o2OAKA' %}
+{% YouTube id="f0YY0o2OAKA" %}
 
 Client Hints enable developers to actively request information about the user's
 device or conditions, rather than needing to parse it out of the User-Agent (UA)
