@@ -184,7 +184,7 @@ commands going across the wire, communicating with the browser.
 
 ### Puppeteer
 
-[Puppeteer](/web/tools/puppeteer/) is a Node library
+[Puppeteer](/docs/puppeteer/) is a Node library
 developed by the Chrome team. It provides a high-level API to control headless
 (or full) Chrome. It's similar to other automated testing libraries like Phantom
 and NightmareJS, but it only works with the latest versions of Chrome.
@@ -228,7 +228,7 @@ const puppeteer = require('puppeteer');
 })();
 ```
 
-Check out [Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md)
+Check out [Puppeteer's documentation](https://pptr.dev/api/)
 to learn more about the full API.
 
 ### The CRI library 

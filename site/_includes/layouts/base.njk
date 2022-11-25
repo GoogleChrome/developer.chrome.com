@@ -15,13 +15,8 @@
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
 
-    {% if process.env.NODE_ENV === 'production' %}
-      {# CSS will be injected by purify-css plugin. #}
-    {% else %}
-      <link rel="stylesheet" href="/css/main.css">
-    {% endif %}
-
-    {% block chromescss %}{% endblock %}
+    {% InlineCss '/css/main.css' %}
+    {% block css %}{% endblock %}
 
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
@@ -40,6 +35,31 @@
     {# This needs to be include'd, because it expands 11ty variables #}
     <script>{% include 'partials/script.js' %}</script>
 
+    {# Some articles may have previously used lists with anchors for their
+    content (like FAQs) which may have evolved into their own articles by now. 
+    Such anchors should be able to link to those new articles #}
+    {% if anchorRedirects %}
+    <script>
+      (() => {
+        let anchorRedirects = {{ anchorRedirects|dump|safe }};
+
+        function redirect(targetURL) {
+          let {hash} = new URL(targetURL);
+          if (!hash) {
+            return;
+          }
+
+          hash = hash.substring(1);
+
+          if (anchorRedirects[hash]) {
+            window.location.replace(anchorRedirects[hash]);
+          }
+        }
+        redirect(window.location.href);
+        window.addEventListener('hashchange', (event) => redirect(event.newURL));
+      })();
+    </script>
+    {% endif %}
   </head>
   <body>
     <div class="scaffold">
@@ -67,8 +87,6 @@
     </div>
     {% include 'partials/cookie-banner.njk' %}
 
-    {% block chromescripts %}{% endblock %}
-
-    {% block chromeanalytics %}{% endblock %}
+    {% block scripts %}{% endblock %}
   </body>
 </html>

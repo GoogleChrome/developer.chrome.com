@@ -47,7 +47,7 @@ FCP измеряет, сколько времени требуется брау�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как улучшить оценку FCP
 
@@ -59,7 +59,7 @@ FCP измеряет, сколько времени требуется брау�
 
 См. статью Google [«Оценка производительности загрузки в реальных условиях с помощью API Navigation Timing и API Resource Timing»](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/), чтобы узнать больше о сборе метрик реальных пользователей.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Ресурсы
 

@@ -6,7 +6,7 @@ updated: 2022-06-07
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
+{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 ## Overview {: #overview }
 
@@ -457,7 +457,8 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index].
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][api-index] and [web
+APIs][mdn-web-apis].
 
 [Give us feedback!][group-devtools] Your comments and suggestions help us improve the APIs.
 
@@ -496,3 +497,5 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [header-injecting]: #injecting
 [header-selected-element]: #selected-element
 [mdn-postmessage]: https://developer.mozilla.org/docs/Web/API/Window.postMessage
+[mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
+

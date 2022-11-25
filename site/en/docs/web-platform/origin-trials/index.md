@@ -5,16 +5,20 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-05-13
+updated: 2022-10-07
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid.
 tags:
   - origin-trials
 ---
 
+{% YouTube 
+  id='v_gI8wcsPUA' 
+%}
+
 Origin trials give you access to a new or experimental feature, to build
 functionality your users can try out for a limited time before the feature
-is made available to everyone.
+is made available to everyone. 
 
 When Chrome offers an origin trial for a feature, you can register for the trial to enable
 the feature for all users on your [origin](https://web.dev/same-site-same-origin/#origin),
@@ -34,6 +38,7 @@ If you register for a trial, the Chrome team will periodically ask you for speci
 feedback on your use of the trial feature. Some features may undergo multiple origin
 trials, as feedback is incorporated and adjustments are made.
 
+Origin trials are also available for [Firefox](https://wiki.mozilla.org/Origin_Trials) and [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/).
 
 ## Third-party origin trials {: #third-party}
 
@@ -114,6 +119,21 @@ breakage period may be skipped [upon request](https://sites.google.com/a/chromiu
 
 {% endAside %}
 
+### Renew origin trial enrollment {: #renew}
+
+If an origin trial is extended, you will receive an email warning that you need to renew
+registration and provide a new token, for each origin enrolled in the trial.
+
+1. Navigate to the [My Registrations](/origintrials/#/trials/my) page.
+
+2. For each origin registered for the extended trial, click the **RENEW** button.
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/cyYunVjVUSnDGYZQaC4v.png",
+   alt="Screenshot of Chrome origin trial My Registrations page, showing RENEW buttons",
+   width="800", height="358" %}
+
+3. Copy the new token and make it available for every page that should remain enrolled in the trial.
+You can provide multiple tokens if necessary: Chrome will ignore invalid or expired tokens.
+
 
 ## View origin trial information in Chrome DevTools {: #devtools}
 
@@ -143,4 +163,5 @@ View information about the origin trials available to a page from the **Applicat
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 -  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
 -  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
-
+-  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+-  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)

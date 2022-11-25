@@ -13,7 +13,7 @@ description: >
 # How to add a new author
 # https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
-  - rowanmerewood
+  - rowan_m
 
 # Required
 date: 2020-05-14

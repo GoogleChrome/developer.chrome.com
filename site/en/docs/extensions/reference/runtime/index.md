@@ -1,71 +1,113 @@
 ---
 api: runtime
 ---
-The runtime API provides methods to support a number of areas of functionality that your extensions
+
+## Overview {: # overview }
+
+The Runtime API provides methods to support a number of areas of functionality that your extensions
 can use:
 
 Message passing
 
-: These methods support message passing so that you can communicate with different parts of your extension (such as an extension popup and background scripts), other extensions, or native applications on the user's device. See [Message
-  Passing][message-passing] for an overview of the subject. Methods in this category include
-  [connect](/docs/extensions/reference/runtime/#method-connect),
-  [connectNative](/docs/extensions/reference/runtime/#method-connectNative),
-  [sendMessage](/docs/extensions/reference/runtime/#method-sendMessage), and
-  [sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage).
+: Your extension can communicate with different contexts within your extension and also with other extensions using these methods and events: 
+[connect()][method-connect],
+[onConnect][method-onconnect], 
+[onConnectExternal][method-onconnectexternal],
+[sendMessage()][method-sendmessage], 
+[onMessage][method-onconnect] and
+[onMessageExternal][method-onmessageexternal]. 
+In addition, your extension can pass messages to native applications on the user's device using 
+[connectNative()][method-connectnative] and
+[sendNativeMessage()][method-sendnativemessage]. 
+
+{% Aside %}
+
+See [Message Passing][doc-messages] for an overview of the subject. 
+
+{% endAside %}
 
 Accessing extension and platform metadata
 
 : These methods let you retrieve several specific pieces of metadata about the extension and the
   platform. Methods in this category include
-  [getBackgroundPage](/docs/extensions/reference/runtime/#method-getBackgroundPage),
-  [getManifest](/docs/extensions/reference/runtime/#method-getManifest),
-  [getPackageDirectoryEntry](/docs/extensions/reference/runtime/#method-getPackageDirectoryEntry), and
-  [getPlatformInfo](/docs/extensions/reference/runtime/#method-getPlatformInfo).
+  [getManifest()][method-getmanifest], and
+  [getPlatformInfo()][method-getplatforminfo].
 
 Managing extension lifecycle and options
 
-: These methods let you perform some meta-operations on the extension, and display the options page
-  to the extension user. Methods in this category include
-  [reload](/docs/extensions/reference/runtime/#method-reload),
-  [requestUpdateCheck](/docs/extensions/reference/runtime/#method-requestUpdateCheck),
-  [setUninstallURL](/docs/extensions/reference/runtime/#method-setUninstallURL), and
-  [openOptionsPage](/docs/extensions/reference/runtime/#method-openOptionsPage).
-
-Device restart support
-
-: These methods are available only on ChromeOS, and exist mainly to support kiosk implementations.
-  Methods in this category include
-  [restart](/docs/extensions/reference/runtime/#method-restart) and
-  [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).
+: These properties let you perform some meta-operations on the extension, and display the options page. 
+Methods and events in this category include
+  [onInstalled][method-oninstalled],
+  [onStartup][method-onstartup],
+  [openOptionsPage()][method-openoptionspage],
+  [reload()][method-reload],
+  [requestUpdateCheck()][method-requestupdatecheck], and
+  [setUninstallURL()][method-setuninstallurl].
 
 Helper utilities
 
 : These methods provide utility such as the conversion of internal resource representations to
   external formats. Methods in this category include
-  [getURL](/docs/extensions/reference/runtime/#method-getURL).
+  [getURL()][method-geturl].
 
+Kiosk mode utilities
 
-## Manifest
+: These methods are available only on ChromeOS, and exist mainly to support kiosk implementations.
+  Methods in this category include
+  [restart][method-restart] and
+  [restartAfterDelay][method-restartafterdelay].
 
-Most methods on the runtime API do not require any permission to use. However,
-[sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage) and
-[connectNative](/docs/extensions/reference/runtime/#method-connectNative) require the
-`nativeMessaging` permission to be declared in your manifest.
+## Permissions {: #perms }
 
+Most methods on the Runtime API do **not** require any permission, except for
+[sendNativeMessage][method-sendnativemessage] and [connectNative][method-connectnative], which
+require the `nativeMessaging` permission.
 
+## Manifest {: #manifest }
 
-## Examples
+The following example shows how to declare the `nativeMessaging` permission in the manifest:
 
-### Use [`getURL`][get-url] to add an extension image to a page {: #example-get-url }
+{% Label %}manifest.json:{% endLabel %}
 
-In order for a web page to access an asset hosted on another domain, it must specify the resource's
-full URL (e.g. `<img src="https://example.com/logo.png">`). The same is true for when a web page
-wants to include assets included in an extension. The two main differences here are that the
-extension's assets must be exposed as [web accessible resources][war] and that typically content
-scripts are responsible for injecting extension assets.
+```json
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "nativeMessaging"
+  ],
+  ...
+}
+```
 
-This example shows how a [content script][content] can add an image in the extension's package to
-the page that the content script has been [injected][content-inject] into.
+## Use cases {: #examples}
+
+### Add an image to a web page {: #example-get-url }
+
+For a web page to access an asset hosted on another domain, it must specify the resource's full URL
+(e.g. `<img src="https://example.com/logo.png">`). The same is true to include an extension asset on
+a web page. The two differences are that the extension's assets must be exposed as [web
+accessible resources][doc-war] and that typically content scripts are responsible for injecting
+extension assets.
+
+In this example, the extension will add `logo.png` to the page that the [content
+script][doc-content] is being [injected][content-inject] into by using `runtime.getURL()` to create a
+fully-qualified URL. But first, the asset must be declared as a web accessible resource in the manifest.
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  ...
+  "web_accessible_resources": [
+    {
+      "resources": [ "logo.png" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  ...
+}
+```
 
 {% Label %}content.js:{% endLabel %}
 
@@ -77,23 +119,23 @@ the page that the content script has been [injected][content-inject] into.
 }
 ```
 
-### Getting background data into a content script {: #example-content-msg }
+### Send data from the service worker to a content script {: #example-content-msg }
 
 Its common for an extension's content scripts to need data managed by another part of the extension,
-like the extension's background script. Much like two browser windows opened to the same web page,
-these two contexts cannot directly access each other's values. Instead, the extension can use
-[message passing][message-passing] to coordinate across these different contexts.
+like the service worker. Much like two browser windows opened to the same web page, these
+two contexts cannot directly access each other's values. Instead, the extension can use [message
+passing][doc-messages] to coordinate across these different contexts.
 
-In this example, the content script needs some data from the extension's background script in order
-to initialize its UI. To get this data, it passes a `get-user-data` message to the background, and
-the background responds with a copy of the user's information.
+In this example, the content script needs some data from the extension's service worker to
+initialize its UI. To get this data, it passes a `get-user-data` message to the service worker, and
+it responds with a copy of the user's information.
 
 {% Label %}content.js:{% endLabel %}
 
 ```js
-// 1. Send the background a message requesting the user's data
+// 1. Send a message to the service worker requesting the user's data
 chrome.runtime.sendMessage('get-user-data', (response) => {
-  // 3. Got an asynchronous response with the data from the background
+  // 3. Got an asynchronous response with the data from the service worker
   console.log('received user data', response);
   initializeUI(response);
 });
@@ -115,12 +157,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-### Gathering feedback on uninstall {: #example-uninstall-url }
+### Gather feedback on uninstall {: #example-uninstall-url }
 
 Many extensions use post-uninstall surveys to understand how the extension could better serve its
-users and improve retention. The below example shows how one can add this functionality to their
-extension.
+users and improve retention. The following example shows how to add this functionality.
 
+{% Label %}background.js:{% endLabel %}
 
 ```js
 chrome.runtime.onInstalled.addListener(details => {
@@ -130,12 +172,34 @@ chrome.runtime.onInstalled.addListener(details => {
 });
 ```
 
+## Extension examples {: #more-samples }
+
+See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for more Runtime API examples.
+
 
 [content-inject]: https://developer.chrome.com/docs/extensions/mv3/content_scripts/#functionality
-[content]: /docs/extensions/mv3/content_scripts/
-[get-url]: #method-getURL
-[handshake]: https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
-[key-prop]: /docs/extensions/mv3/manifest/key/
-[message-passing]: /docs/extensions/mv3/messaging/
-[oauth]: https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
-[war]: /docs/extensions/mv3/manifest/web_accessible_resources/
+[doc-content]: /docs/extensions/mv3/content_scripts/
+[doc-external-messaging]: /docs/extensions/mv3/messaging/#external
+[doc-messages]: /docs/extensions/mv3/messaging/
+[doc-native-messaging]: /docs/apps/nativeMessaging/
+[doc-native-messaging]: /docs/extensions/mv3/messaging/#native-messaging
+[doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
+[github-war-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[method-connect]: #method-connect
+[method-connectnative]: #method-connectNative
+[method-getmanifest]: #method-getManifest
+[method-getplatforminfo]: #method-getPlatformInfo
+[method-geturl]: #method-getURL
+[method-onconnect]: #event-onConnect
+[method-onconnectexternal]: #event-onConnectExternal
+[method-onmessageexternal]: #event-onMessageExternal
+[method-oninstalled]: #event-onInstalled
+[method-onstartup]: #event-onStartup
+[method-openoptionspage]: #method-openOptionsPage
+[method-reload]: #method-reload
+[method-requestupdatecheck]: #method-requestUpdateCheck
+[method-restart]: #method-restart
+[method-restartafterdelay]: #method-restartAfterDelay
+[method-sendmessage]: #method-sendMessage
+[method-sendnativemessage]: #method-sendNativeMessage
+[method-setuninstallurl]: #method-setUninstallURL

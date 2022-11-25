@@ -54,7 +54,7 @@ To satisfy the above conditions, a function can be passed to [`output.filename`]
 // webpack.config.js
 import process from 'process';
 
-const isProd = env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production';
 
 export default {
   mode: isProd ? 'production' : 'development',

@@ -13,6 +13,10 @@ tags:
 
 Use the **Performance insights** panel to get actionable and use-case-driven insights on your website's performance.
 
+{% Aside 'note' %}
+This feature is available only in Chrome, not Chromium.
+{% endAside %}
+
 {% YouTube id='5PFmGeCZDvw' %}
 
 {% Aside %}
@@ -129,6 +133,58 @@ Hover over the insights on the **Timeline** to learn more about the metrics.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/23onsIV7BvDJpMI4mnMZ.mp4", controls="true", muted="true", class="screenshot" %}
 
+## Discover delays of the largest contentful paint {: #largest-contentful-paint }
+
+[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is one of the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) metrics. It reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
+
+{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/elqsdYqQEefWJbUM2qMO.svg", alt="LCP thresholds.", width="800", height="212" %}
+
+A [good LCP score](https://web.dev/lcp/#what-is-a-good-lcp-score?) is 2.5 seconds or less.
+
+If the largest contentful paint on your page takes longer to render, in the timeline, you will see the LCP badge with a yellow square or red triangle.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ftLjLtpo9Lki9JGbhHpB.png", alt="The LCP badge.", width="800", height="580" %}
+
+To open the **Details** pane, click the LCP badge on the timeline or on the **Insights** pane on the right. In the pane, you can discover potential causes for the delays and suggestions on how to fix them.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wnl6w6KOnqUQsXSWu0xN.png", alt="The details pane.", width="800", height="627" %}
+
+In this example, a request blocks rendering and you can apply critical styles inline to fix it. To learn more, see [Eliminate render-blocking resources](https://web.dev/render-blocking-resources/).
+
+To view the [sub-parts of LCP render time](https://web.dev/optimize-lcp/#lcp-breakdown), scroll down to the **Details** > **Timings breakdown** section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zog6KF5dnfgnGdshcbvH.png", alt="Timings breakdown.", width="800", height="579" %}
+
+LCP render time consists of the following sub-parts:
+
+<table>
+<thead>
+  <tr>
+    <th>LCP sub-part</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Time to first byte (TTFB)</td>
+    <td>The time from when the user initiates loading the page until when the browser receives the first byte of the HTML document response.</td>
+  </tr>
+  <tr>
+    <td>Resource load delay</td>
+    <td>The delta between TTFB and when the browser starts loading the LCP resource.</td>
+  </tr>
+  <tr>
+    <td>Resource load time</td>
+    <td>The time it takes to load the LCP resource itself.</td>
+  </tr>
+  <tr>
+    <td>Element render delay</td>
+    <td>The delta between when the LCP resource finishes loading until the LCP element is fully rendered.</td>
+  </tr>
+</tbody>
+</table>
+
+If an LCP element doesn't require a resource load to render, the resource load delay and time are omitted. For example, in case the element is a text node rendered with a system font.
 
 ## View layout shifts activity {: #layout-shifts }
 

@@ -37,7 +37,7 @@ Los objetivos que miden menos de 48 px por 48 px o que están a menos de 8 px de
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Cómo arreglar sus objetivos táctiles
 

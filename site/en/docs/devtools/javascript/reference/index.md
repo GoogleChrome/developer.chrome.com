@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-05-30
+updated: 2022-09-22
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
@@ -44,8 +44,6 @@ without stepping into it.
 
 {% Img src="image/admin/Rvty5ws4fZ2lid3XeEue.svg", alt="Selecting 'Step over'.", width="800", height="610" %}
 
-**Figure 1**. **Step over**, outlined in blue
-
 For example, suppose you're debugging the following code:
 
 ```js
@@ -72,8 +70,6 @@ further.
 
 {% Img src="image/admin/dTGivIfR6pShgPSNEpCZ.svg", alt="Selecting 'Step into'.", width="800", height="610" %}
 
-**Figure 2**. **Step into**, outlined in blue
-
 For example, suppose you're debugging the following code:
 
 ```js
@@ -98,8 +94,6 @@ out** {% Img src="image/admin/xMCC8ajA54Dt06xvvni7.png", alt="Step out", width="
 the function's code.
 
 {% Img src="image/admin/Mf2Jkbcv0dBHWTNTMDMQ.svg", alt="Selecting 'Step out'.", width="800", height="610" %}
-
-**Figure 3**. **Step out**, outlined in blue
 
 For example, suppose you're debugging the following code:
 
@@ -132,9 +126,6 @@ runs all of the code up to that point, and then pauses on that line.
 
 {% Img src="image/admin/weTYHv4ceNfpam1GEJC9.png", alt="Selecting 'Continue to here'.", width="800", height="573" %}
 
-**Figure 4**. Selecting **Continue to here**
-
-
 ### Resume script execution {: #resume }
 
 To continue your script's execution after a pause, click **Resume Script Execution**
@@ -142,8 +133,6 @@ To continue your script's execution after a pause, click **Resume Script Executi
 executes the script up until the next breakpoint, if any.
 
 {% Img src="image/admin/y1FEPpRKSDR894RM2TFG.svg", alt="Selecting 'Resume script execution'.", width="800", height="610" %}
-
-**Figure 6**. **Resume script execution**, outlined in blue
 
 #### Force script execution {: #force-resume }
 
@@ -154,16 +143,14 @@ and then select **Force script execution**
 
 {% Img src="image/admin/Bgu0IMoqiDsHm8LbCDjK.png", alt="Selecting 'Force script execution'.", width="800", height="561" %}
 
-**Figure 7**. Selecting **Force script execution**
-
 ### Change thread context {: #threads }
 
-When working with web workers or service workers, click on a context listed in the Threads pane to
+When working with web workers or service workers, click on a context listed in the **Threads** pane to
 switch to that context. The blue arrow icon represents which context is currently selected.
 
 {% Img src="image/admin/bJO6eqgFRXeXmGmN3jv3.svg", alt="The Threads pane.", width="800", height="564" %}
 
-**Figure 8**. The Threads pane, outlined in blue
+The **Threads** pane on the screenshot above is outlined in blue.
 
 For example, suppose that you're paused on a breakpoint in both your main script and your service
 worker script. You want to view the local and global properties for the service worker context, but
@@ -172,7 +159,7 @@ Threads pane, you'd be able to switch to that context.
 
 ## View and edit local, closure, and global properties {: #scope }
 
-While paused on a line of code, use the Scope pane to view and edit the values of properties and
+While paused on a line of code, use the **Scope** pane to view and edit the values of properties and
 variables in the local, closure, and global scopes.
 
 - Double-click a property value to change it.
@@ -180,29 +167,27 @@ variables in the local, closure, and global scopes.
 
 {% Img src="image/admin/E1Pz1oku9apJyINg58N0.svg", alt="The Scope pane.", width="800", height="492" %}
 
-**Figure 9**. The Scope pane, outlined in blue
+The **Scope** pane on the screenshot above is outlined in blue.
 
 ## View the current call stack {: #call-stack }
 
-While paused on a line of code, use the Call Stack pane to view the call stack that got you to this
+While paused on a line of code, use the **Call Stack** pane to view the call stack that got you to this
 point.
-
-If you're working with async code, check the **Async** checkbox to enable async call stacks.
 
 Click on an entry to jump to the line of code where that function was called. The blue arrow icon
 represents which function DevTools is currently highlighting.
 
 {% Img src="image/admin/z85EIYxxKzDde3aAEhCP.svg", alt="The Call Stack pane.", width="800", height="492" %}
 
-**Figure 10**. The Call Stack pane, outlined in blue
+The **Call Stack** pane on the screenshot above is outlined in blue.
 
 {% Aside %}
 
-**Note:** When not paused on a line of code, the Call Stack pane is empty.
+**Note:** When not paused on a line of code, the **Call Stack** pane is empty.
 
 {% endAside %}
 
-### Restart a frame (function) in a call stack {: #restart-frame }
+### Restart a function (frame) in a call stack {: #restart-frame }
 
 To observe the behavior of a function and re-run it without having to restart the entire debugging flow, you can restart the execution of a single function when this function is paused. In other words, you can restart the function's frame in the call stack.
 
@@ -251,7 +236,7 @@ Try restarting the frames of both functions in the following way:
    Notice that the current value increases: `value = 2`.
 1. Optionally, in the **Scope** pane, double-click the value to edit it and set the desired value.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bduFchfauez6IjMrXOm3.png", alt="Editing the value in the Scopes pane.", width="800", height="497" %}
-1. Try restarting the `bar()` frame several more times. The value continues to increase.
+1. Try restarting the `bar()` frame and stepping through the increment statement several more times. The value continues to increase.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
    
    {% Aside 'gotchas' %}
@@ -273,14 +258,42 @@ Try restarting the frames of both functions in the following way:
    {% endAside %}
 1. Resume script execution (`F8`) to complete this tutorial.
 
+### Show ignore-listed frames {: #show-ignore-listed-frames }
+
+With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
+
+To view the full call stack including third-party frames, enable **Show ignore-listed frames** under the **Call Stack** section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1STrMhMqSyUGYXbCMymU.png", alt="Show ignore-listed frames.", width="800", height="422" %}
+
+Try it on this [demo page](https://ng-devtools.netlify.app/):
+
+1. In the **Sources** panel, open the `src` > `app` > `app.component.ts` file.
+2. Set a breakpoint at the `increment()` function.
+3. In the **Call Stack** section, check or clear the **Show ignore-listed frames** checkbox and observe the relevant or full list of frames in the call stack.
+
+### View async frames {: #async-frames }
+
+If supported by the framework you are using, DevTools can trace async operations by linking both parts of the async code together.
+
+In this case, the **Call Stack** shows the entire call history including async call frames.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cytE0zCViowAP6ACyW34.png", alt="Async call frames.", width="800", height="615" %}
+
+{% Aside 'gotchas' %}
+DevTools implements this "Async Stack Tagging" feature based on the `console.createTask()` API method. It is up to frameworks to implement the API.
+
+For example, [Angular supports this feature](/blog/devtools-better-angular-debugging/#the-async-stack-tagging-api-in-angular).
+{% endAside %}
+
 ### Copy stack trace {: #copy-stack-trace }
 
-Right-click anywhere in the Call Stack pane and select **Copy stack trace** to copy the current call
+Right-click anywhere in the **Call Stack** pane and select **Copy stack trace** to copy the current call
 stack to the clipboard.
 
 {% Img src="image/admin/mGJl4FrGxA9mlztfEFeD.png", alt="Selecting 'Copy Stack Trace'.", width="800", height="556" %}
-
-**Figure 11**. Selecting **Copy Stack Trace**
 
 Below is an example of the output:
 
@@ -290,10 +303,55 @@ inputsAreEmpty (get-started.js:22)
 onClick (get-started.js:15)
 ```
 
+## Navigate the file tree {: #file-tree}
+
+Use [the **Page** pane](/docs/devtools/javascript/sources/#files) to navigate the file tree.
+
+### Group authored and deployed files in the file tree {: #group-authored-and-deployed }
+
+{% Aside %}
+**Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available from Chrome version 104.
+{% endAside %}
+
+When developing web applications using frameworks (for example, [React](https://reactjs.org/) or [Angular](https://angular.io/)), it can be difficult to navigate sources due to the minified files generated by the build tools (for example, [webpack](https://webpack.js.org/) or [Vite](https://vitejs.dev/)).
+
+To help you navigate sources, the **Sources** > **Page** pane can group the files into two categories:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps provided by your build tools.
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KDnkz7biIKbfQktK3HXX.svg", alt="Deployed icon.", width="22", height="22" %} **Deployed**. The actual files that the browser reads. Usually these files are minified.
+
+To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Group files by Authored/Deployed** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} option under the three-dot menu at the top of the file tree.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z5zD5HFsOLJRpzAGPz3k.png", alt="Grouping files by Authored / Deployed.", width="800", height="528" %}
+
+### Hide ignore-listed sources from the file tree {: #hide-ignore-listed }
+
+{% Aside %}
+**Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available from Chrome version 106.
+{% endAside %}
+
+To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the file tree.
+
+{% Aside 'gotchas' %}
+By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information.
+
+As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+{% endAside %}
+
+To hide known third-party sources:
+
+1. Make sure the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting is enabled.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4aIHYQjq5gxgrPF9MbkD.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="496" %}
+
+1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
+
+   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Hide ignore-listed sources.", width="800", height="449" %}
+
 ## Ignore a script or pattern of scripts {: #ignore-list }
 
 Ignore a script to skip it while debugging. When ignored, a script is
-obscured in the Call Stack pane, and you never step into the script's functions when you step
+obscured in the **Call Stack** pane, and you never step into the script's functions when you step
 through your code.
 
 For example, suppose you're stepping through this code:
@@ -319,18 +377,14 @@ To ignore a script from the Editor pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
-**Figure 12**. Ignoring a script from the Editor pane
-
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
-To ignore a script from the Call Stack pane:
+To ignore a script from the **Call Stack** pane:
 
 1.  Right-click on a function from the script.
 2.  Select **Add script to ignore list**.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
-
-**Figure 13**. Ignoring a script from the Call Stack pane
 
 ### Ignore a script from Settings {: #settings-ignore-list }
 
@@ -338,13 +392,10 @@ To ignore a single script or pattern of scripts from Settings:
 
 1.  Open [Settings][3].
 2.  Go to the **Ignore List** tab.
+    {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
 3.  Click **Add pattern**.
 4.  Enter the script name or a regex pattern of script names to ignore.
 5.  Click **Add**.
-
-{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
-
-**Figure 14**. Ignoring a script from Settings
 
 ## Run snippets of debug code from any page {: #snippets }
 
@@ -360,8 +411,6 @@ expression.
 
 {% Img src="image/admin/PzX7IuS3Hezm4ZQvKD5m.svg", alt="The Watch pane.", width="800", height="492" %}
 
-**Figure 15**. The Watch pane, outlined in blue
-
 - Click **Add Expression**
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/QU6fmfF1UA1ckrB3tklD.png", alt="Add expression", width="20", height="20" %}
   to create a new watch expression.
@@ -373,12 +422,10 @@ expression.
 
 ## Make a minified file readable {: #format }
 
-Click **Format** {% Img src="image/admin/nLnqjfo4vbFLkwAuExCY.png", alt="Format", width="30", height="24" %} to make a minified
+Click **Format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JCyivmZxQVqpI4tj7Sil.svg", alt="Format.", width="20", height="20" %} to make a minified
 file human-readable.
 
 {% Img src="image/admin/cttlkengXdMrdvwjh5S3.svg", alt="The Format button.", width="800", height="609" %}
-
-**Figure 16**. **Format**, outlined in blue
 
 ## Edit a script {: #edit }
 
@@ -388,14 +435,42 @@ DevTools.
 
 To edit a script:
 
-1.  Open the file in the Editor pane of the Sources panel.
-2.  Make your changes in the Editor pane.
+1.  Open the file in the **Editor** pane of the **Sources** panel.
+2.  Make your changes in the **Editor** pane.
 3.  Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows, Linux) to
     save. DevTools patches the entire JS file into Chrome's JavaScript engine.
 
     {% Img src="image/admin/zOITyiLOZPasp6Zf30Xi.svg", alt="The Editor pane.", width="800", height="564" %}
 
-    **Figure 17**. The Editor pane, outlined in blue
+    The **Editor** pane on the screenshot above is outlined in blue.
+
+## Edit a paused function live {: #live-edit}
+
+{% Aside %}
+**Note:** This feature is available from Chrome version 105.
+{% endAside %}
+
+While the execution is paused, you can edit the current function and apply changes live with the following limitations:
+
+- You can edit only the top-most function in the **Call Stack**.
+- There must be no recursive calls to the same function further down the stack.
+
+{% Aside 'gotchas' %}
+When you apply changes, the debugger [restarts the function](/docs/devtools/javascript/reference/#restart-frame) automatically. So, the limitations of a function restart also apply. You can't restart WebAssembly, async, and generator functions.
+{% endAside %}
+
+To live-edit a function:
+
+1. [Pause the execution with a breakpoint](/docs/devtools/javascript/reference/#breakpoints).
+1. Edit the paused function.
+1. Press <kbd>Command</kbd> / <kbd>Control</kbd> + <kbd>S</kbd> to apply changes. The debugger [restarts the function](/docs/devtools/javascript/reference/#restart-frame) automatically.
+1. Continue the execution.
+
+Watch the video below to learn this workflow.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/NiGaq8trY2YF3TWcTOaS.mp4", autoplay="false", controls="true", muted="true", class="screenshot" %}
+
+In this example, the `addend1` and `addend2` variables initially have an incorrect `string` type. So, instead of adding numbers, the strings are concatenated. To fix it, the `parseInt()` functions are added during live editing.
 
 ## Search and replace text in a script {: #search }
 

@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Reference documentation for the sandbox property of manifest.json.
 ---
 
+{% Partial 'extensions/mv2-legacy-page.md' %}
+
 **_Warning:_** Starting in version 57, Chrome will no longer allow external web content (including
 embedded frames and scripts) inside sandboxed pages. Please use a [webview][1] instead.
 

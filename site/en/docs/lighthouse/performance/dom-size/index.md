@@ -46,7 +46,7 @@ Lighthouse flags pages with DOM trees that:
 - Warns when the body element has more than ~800&nbsp;nodes.
 - Errors when the body element has more than ~1,400&nbsp;nodes.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to optimize the DOM size
 

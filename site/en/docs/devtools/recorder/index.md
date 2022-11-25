@@ -10,6 +10,8 @@ description: "Record, replay, measure user flows, and edit their steps with the 
 tags:
   - test
   - performance
+anchorRedirects:
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
@@ -24,6 +26,10 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 {% endAside %}
 
 For more information on how to share the recorded user flows, edit them and their steps, see the [Recorder features reference](/docs/devtools/recorder/reference/).
+
+{% Aside 'note' %}
+This feature is available only in Chrome, not Chromium.
+{% endAside %}
 
 ## Open the Recorder panel {: #open }
 
@@ -68,8 +74,12 @@ In the next sections, we will walk you through how to record, replay and audit t
 1. Click on *Cappuccino* to add it to the cart.
 1. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="Steps in the Recorder panel.", width="800", height="519" %}
-1. Go to the cart page.
-1. Remove *Americano* from the cart.
+1. Go to the cart page and remove *Americano* from the cart.
+   {% Aside 'gotchas' %}
+   Optionally, you can remove *Americano* on the menu page by hovering over the **Total** button and clicking **-** next to *Americano* in the pop-up menu.
+
+   However, you'll have to [add the hover step manually](/docs/devtools/recorder/reference/#add-steps) after you finish the recording because the **Recorder** doesn't automatically capture hover events.
+   {% endAside %}
 1. Click on the *Total: $19.00* button to start the checkout process.
 1. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UOewwKwP99GldzuTtIL7.png", alt="Payment details form.", width="800", height="519" %}
@@ -85,25 +95,10 @@ After recording a user flow, you can replay it by clicking on the {% Img src="im
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
+If you made a misclick during recording or something doesn't work, you can [debug your user flow](/docs/devtools/recorder/reference/#debug-user-flows): slow down its replay, set a breakpoint, and execute it step by step.
+
 {% Aside 'gotchas' %}
 When replaying a user flow recording, the **Recorder** waits until the element is visible or clickable in the viewport or tries to automatically scroll the element into the viewport before replaying the corresponding step.
-{% endAside %}
-
-### Slow down the replay
-
-By default, the **Recorder** replays the user flow as fast as it can. To understand what is happening in the recording, you can slow down the replay speed:
-
-1. Open the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}**Replay** drop-down menu.
-1. Choose one of the replay speed options:
-   - Normal (Default)
-   - Slow
-   - Very slow
-   - Extremely slow
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/40FyhHaVhPjQGatqUFij.png", alt="Slow replay.", width="800", height="525" %}
-
-{% Aside 'gotchas' %}
-You can use these slow replay options only in the **Recorder**. To add timeouts to the recording itself, see [Adjust timeouts for steps](/docs/devtools/recorder/reference/#adjust-timeout).
 {% endAside %}
 
 ### Simulate slow network
@@ -183,3 +178,11 @@ There are options to add and remove steps too. This is useful if you want to add
     - count: **9** (click **add count** button)
    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zeK91O21jvc5OD9HuovR.png", alt="The new step for coffee checkout has been updated with the aforementioned details.", width="800", height="663" %}
 6. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Replay.", width="20", height="20" %}[Replay](#replay) the flow now to see the changes.
+
+## Next steps {: #next }
+
+Congratulations, you have completed the tutorial!
+
+To explore more features and workflows (for example, import and export) related to the **Recorder**, see the [Recorder features reference](/docs/devtools/recorder/reference).
+
+

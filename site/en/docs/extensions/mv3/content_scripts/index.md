@@ -266,7 +266,7 @@ function injectedFunction() {
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: injectedFunction
+    func: injectedFunction
   });
 });
 ```

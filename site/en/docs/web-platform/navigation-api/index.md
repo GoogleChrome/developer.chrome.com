@@ -4,8 +4,9 @@ title: 'Modern client-side routing: the Navigation API'
 subhead: 'Standardizing client-side routing through a brand new API which completely overhauls building single-page applications.'
 authors:
   - samthor
+  - jakearchibald
 date: 2021-08-25
-updated: 2022-05-26
+updated: 2022-08-19
 hero: image/QMjXarRXcMarxQddwrEdPvHVM242/aDcKXxmGtrMVmwZK43Ta.jpg
 alt: 'Sculpture adorning the General Post Office, Sydney, Australia'
 description: 'Learn about the Navigation API, a new API which adds improved functionality to build single-page applications.'
@@ -33,47 +34,62 @@ If you'd like to read the technical proposal, [check out the Draft Report in the
 
 ## Example Usage
 
-To use the Navigation API, start by adding a "navigate" listener on the global `navigation` object.
+To use the Navigation API, start by adding a `"navigate"` listener on the global `navigation` object.
 This event is fundamentally _centralized_: it will fire for all types of navigations, whether the user performed an action (such as clicking a link, submitting a form, or going back and forward) or when navigation is triggered programmatically (i.e., via your site's code).
 In most cases, it lets your code override the browser's default behavior for that action.
 For SPAs, that likely means keeping the user on the same page and loading or changing the site's content.
 
-A `NavigateEvent` is passed to the "navigate" listener which contains information about the navigation, such as the destination URL, and allows you to respond to the navigation in one centralized place.
-A basic "navigate" listener on example.com could look like this:
+A `NavigateEvent` is passed to the `"navigate"` listener which contains information about the navigation, such as the destination URL, and allows you to respond to the navigation in one centralized place.
+A basic `"navigate"` listener could look like this:
 
 ```js
 navigation.addEventListener('navigate', navigateEvent => {
-  switch (navigateEvent.destination.url) {
-    case 'https://example.com/':
-      navigateEvent.transitionWhile(loadIndexPage());
-      break;
-    case 'https://example.com/cats':
-      navigateEvent.transitionWhile(loadCatsPage());
-      break;
+  // Exit early if this navigation shouldn't be intercepted.
+  // The properties to look at are discussed later in the article.
+  if (shouldNotIntercept(navigateEvent)) return;
+
+  const url = new URL(navigateEvent.destination.url);
+
+  if (url.pathname === '/') {
+    navigateEvent.intercept({handler: loadIndexPage});
+  } else if (url.pathname === '/cats/') {
+    navigateEvent.intercept({handler: loadCatsPage});
   }
 });
 ```
 
-You can intercept the navigation in one of two ways:
+You can deal with the navigation in one of two ways:
 
-- Calling `transitionWhile()` (as described above) to handle the navigation.
+- Calling `intercept({ handler })` (as described above) to handle the navigation.
 - Calling `preventDefault()`, which can cancel the navigation completely.
 
-This example calls `transitionWhile()` on the event with a promise generated from async functions.
-By calling this method, the browser knows that your code will configure the next state of your site.
-This will create a transition object, `navigation.transition`, which other code can use to track the progress of the transition.
+{% Aside %}
+An earlier version of this API used `navigateEvent.transitionWhile(promise)` rather than `navigateEvent.intercept({ handler })`.
 
-Both `transitionWhile()` and `preventDefault()` are usually allowed, but have cases where they're unable to be called.
-You can't handle navigations via `transitionWhile()` if the navigation is a cross-origin navigation, for example, if it's leaving your domain.
+`intercept` is available from Chrome 105.
+`transitionWhile` is deprecated, and will be removed in Chrome 108.
+{% endAside %}
+
+This example calls `intercept()` on the event.
+The browser calls your `handler` callback, which should configure the next state of your site.
+This will create a transition object, `navigation.transition`, which other code can use to track the progress of the navigation.
+
+{% Aside 'key-term' %}
+In this context 'transition' refers to the transition between one history entry and another.
+It isn't related to transition animations.
+{% endAside %}
+
+Both `intercept()` and `preventDefault()` are usually allowed, but have cases where they're unable to be called.
+You can't handle navigations via `intercept()` if the navigation is a cross-origin navigation.
 And you can't cancel a navigation via `preventDefault()` if the user is pressing the Back or Forward buttons in their browser; you should not be able to trap your users on your site.
 (This is [being discussed on GitHub][back-forward-discuss].)
 
-Even if you can't stop or intercept the navigation itself, the "navigate" event will still fire.
+Even if you can't stop or intercept the navigation itself, the `"navigate"` event will still fire.
 It's _informative_, so your code could, for example, log an Analytics event to indicate that a user is leaving your site.
 
 ## Why add another event to the platform?
 
-A "navigate" event listener centralizes handling URL changes inside an SPA.
+A `"navigate"` event listener centralizes handling URL changes inside an SPA.
 This is a difficult proposition using older APIs.
 If you've ever written the routing for your own SPA using the History API, you might have added code like this:
 
@@ -92,35 +108,230 @@ Links might come and go on your page, and they're not the only way users can nav
 E.g., they may submit a form or even use an [image map].
 Your page might deal with these, but there's a long tail of possibilities which could just be simplified—something that the new Navigation API achieves.
 
+Additionally, the above doesn't handle back/forward navigation. There's another event for that, `"popstate"`.
+
 Personally, the History API often _feels_ like it could go some way to help with these possibilities.
 However, it really only has two surface areas: responding if the user presses Back or Forward in their browser, plus pushing and replacing URLs.
-It doesn't have an analogy to "navigate", except if you manually set up listeners for, e.g., click events, as demonstrated above.
+It doesn't have an analogy to `"navigate"`, except if you manually set up listeners for click events for example, as demonstrated above.
 
-## Transition
+## Deciding how to handle a navigation
 
-When your code calls `transitionWhile()` from within its "navigate" listener, it informs the browser that it's now preparing the page for the new, updated state; and that the navigation may take some time. The `Promise` you pass to `transitionWhile()` tells the browser how long the navigation takes.
+The `navigateEvent` contains a lot of information about the navigation that you can use to decide how to deal with a particular navigation.
+
+The key properties are:
+
+`canIntercept`
+: If this is false, you can't intercept the navigation.
+Cross-origin navigations and cross-document traversals cannot be intercepted.
+
+`destination.url`
+: Probably the most important piece of information to consider when handling the navigation.
+
+`hashChange`
+: True if the navigation is same-document, and the hash is the only part of the URL that's different to the current URL.
+In modern SPAs, the hash should be for linking to different parts of the current document. So, if `hashChange` is true, you probably don't need to intercept this navigation.
+
+`downloadRequest`
+: If this is true, the navigation was initiated by a link with a `download` attribute.
+In most cases, you don't need to intercept this.
+
+`formData`
+: If this isn't null, then this navigation is part of a POST form submission.
+Make sure you take this into account when handling the navigation.
+If you only want to handle GET navigations, avoid intercepting navigations where `formData` is not null.
+See the example on handling [form submissions](#form-submissions) later in the article.
+
+`navigationType`
+: This is one of `"reload"`, `"push"`, `"replace"`, or `"traverse"`.
+If it's `"traverse"`, then this navigation cannot be cancelled via `preventDefault()`.
+
+For example, the `shouldNotIntercept` function used in the first example could be something like this:
+
+```js
+function shouldNotIntercept(navigationEvent) {
+  return (
+    !navigationEvent.canIntercept ||
+    // If this is just a hashChange,
+    // just let the browser handle scrolling to the content.
+    navigationEvent.hashChange ||
+    // If this is a download,
+    // let the browser perform the download.
+    navigationEvent.downloadRequest ||
+    // If this is a form submission,
+    // let that go to the server.
+    navigationEvent.formData
+  );
+}
+```
+
+## Intercepting
+
+When your code calls `intercept({ handler })` from within its `"navigate"` listener, it informs the browser that it's now preparing the page for the new, updated state, and that the navigation may take some time.
+
+The browser begins by capturing the scroll position for the current state, so it can be optionally restored later, then it calls your `handler` callback.
+If your `handler` returns a promise (which happens automatically with [async functions](https://web.dev/async-functions/)), that promise tells the browser how long the navigation takes, and whether it's successful.
+
+```js
+navigation.addEventListener('navigate', navigateEvent => {
+  if (shouldNotIntercept(navigateEvent)) return;
+  const url = new URL(navigateEvent.destination.url);
+
+  if (url.pathname.startsWith('/articles/')) {
+    navigateEvent.intercept({
+      async handler() {
+        const articleContent = await getArticleContent(url.pathname);
+        renderArticlePage(articleContent);
+      },
+    });
+  }
+});
+```
 
 As such, this API introduces a semantic concept that the browser understands: an SPA navigation is currently occurring, over time, changing the document from a previous URL and state to a new one.
 This has a number of potential benefits, including accessibility: browsers can surface the beginning, end, or potential failure of a navigation.
 Chrome, for example, activates its native loading indicator, and allows the user to interact with the stop button. (This doesn't currently happen when the user navigates via the back/forward buttons, but that [will be fixed soon][loading-crbug].)
 
-### Transition Success and Failure
+### Navigation committing
 
-After the "navigate" event completes, the URL being navigated to will take effect.
-This happens immediately, even if you've called `transitionWhile()`.
+When intercepting navigations, the new URL will take effect just before your `handler` callback is called.
+If you don't update the DOM immediately, this creates a period where the old content is displayed along with the new URL.
+This impacts things like relative URL resolution when fetching data or loading new subresources.
 
-{% Aside 'caution' %}
-This means `navigation.currentEntry`, `location.href`, etc. will update immediately. This impacts things like relative URL resolution when fetching new data or loading new subresources.
+A way to delay the URL change is being [discussed on GitHub](https://github.com/WICG/navigation-api/issues/66), but it's generally recommended to immediately update the page with some sort of placeholder for the incoming content:
 
-Many web and native applications immediately update the page with some sort of placeholder for the incoming content. But if you don't also immediately update the page's content, it will be out of sync with your application's programmatic view of the current entry and URL, which can be tricky.
+```js
+navigation.addEventListener('navigate', navigateEvent => {
+  if (shouldNotIntercept(navigateEvent)) return;
+  const url = new URL(navigateEvent.destination.url);
 
-These issues are being [discussed on GitHub](https://github.com/WICG/navigation-api/issues/66).
+  if (url.pathname.startsWith('/articles/')) {
+    navigateEvent.intercept({
+      async handler() {
+        // The URL has already changed, so quickly show a placeholder.
+        renderArticlePagePlaceholder();
+        // Then fetch the real data.
+        const articleContent = await getArticleContent(url.pathname);
+        renderArticlePage(articleContent);
+      },
+    });
+  }
+});
+```
+
+This not only avoids URL resolution issues, it also feels fast because you're instantly responding to the user.
+
+### Abort signals
+
+Since you're able to do asynchronous work in an `intercept()` handler, it's possible for the navigation to become redundant.
+This happens when:
+
+- The user clicks another link, or some code performs another navigation.
+  In this case the old navigation is abandoned in favour of the new navigation.
+- The user clicks the 'stop' button in the browser.
+
+To deal with any of these possibilities, the event passed to the `"navigate"` listener contains a `signal` property, which is an `AbortSignal`.
+For more information see [Abortable fetch][abortable-fetch].
+
+The short version is it basically provides an object that fires an event when you should stop your work.
+Notably, you can pass an `AbortSignal` to any calls you make to `fetch()`, which will cancel in-flight network requests if the navigation is preempted.
+This will both save the user's bandwidth, and reject the `Promise` returned by `fetch()`, preventing any following code from actions such as updating the DOM to show a now invalid page navigation.
+
+Here's the previous example, but with `getArticleContent` inlined, showing how the `AbortSignal` can be used with `fetch()`:
+
+```js
+navigation.addEventListener('navigate', navigateEvent => {
+  if (shouldNotIntercept(navigateEvent)) return;
+  const url = new URL(navigateEvent.destination.url);
+
+  if (url.pathname.startsWith('/articles/')) {
+    navigateEvent.intercept({
+      async handler() {
+        // The URL has already changed, so quickly show a placeholder.
+        renderArticlePagePlaceholder();
+        // Then fetch the real data.
+        const articleContentURL = new URL(
+          '/get-article-content',
+          location.href
+        );
+        articleContentURL.searchParams.set('path', url.pathname);
+        const response = await fetch(articleContentURL, {
+          signal: navigateEvent.signal,
+        });
+        const articleContent = await response.json();
+        renderArticlePage(articleContent);
+      },
+    });
+  }
+});
+```
+
+### Scroll handling
+
+When you `intercept()` a navigation, the browser will attempt to handle scrolling automatically.
+
+For navigations to a new history entry (when `navigationEvent.navigationType` is `"push"` or `"replace"`), this means attempting to scroll to the part indicated by the URL fragment (the bit after the `#`), or resetting the scroll to the top of the page.
+
+For reloads and traversals, this means restoring the scroll position to where it was last time this history entry was displayed.
+
+By default, this happens once the promise returned by your `handler` resolves, but if it makes sense to scroll earlier, you can call `navigateEvent.scroll()`:
+
+```js
+navigation.addEventListener('navigate', navigateEvent => {
+  if (shouldNotIntercept(navigateEvent)) return;
+  const url = new URL(navigateEvent.destination.url);
+
+  if (url.pathname.startsWith('/articles/')) {
+    navigateEvent.intercept({
+      async handler() {
+        const articleContent = await getArticleContent(url.pathname);
+        renderArticlePage(articleContent);
+        navigateEvent.scroll();
+
+        const secondaryContent = await getSecondaryContent(url.pathname);
+        addSecondaryContent(secondaryContent);
+      },
+    });
+  }
+});
+```
+
+{% Aside %}
+Although `scroll()` looks like a single call, the browser may try to set the scroll position multiple times asynchronously.
+The means the browser can still scroll to the correct place, even if the content arrives slightly later, or moves around due to layout shifting.
 {% endAside %}
 
-When you pass a promise to `transitionWhile()`, one of two things will happen:
+Alternatively, you can opt out of automatic scroll handling entirely by setting the `scroll` option of `intercept()` to `"manual"`:
 
-- If that `Promise` fulfills (or you did not call `transitionWhile()`), the Navigation API will fire "navigatesuccess" with an `Event`.
-- If that `Promise` rejects, the API will fire "navigateerror" with an `ErrorEvent`.
+```js
+navigateEvent.intercept({
+  scroll: 'manual',
+  async handler() {
+    // …
+  },
+});
+```
+
+### Focus handling
+
+Once the promise returned by your `handler` resolves, the browser will focus the first element with the [`autofocus` attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/autofocus) set, or the `<body>` element if no element has that attribute.
+
+You can opt out of this behavior by setting the `focusReset` option of `intercept()` to `"manual"`:
+
+```js
+navigateEvent.intercept({
+  focusReset: 'manual',
+  async handler() {
+    // …
+  },
+});
+```
+
+### Success and failure events
+
+When your `intercept()` handler is called, one of two things will happen:
+
+- If the returned `Promise` fulfills (or you did not call `intercept()`), the Navigation API will fire `"navigatesuccess"` with an `Event`.
+- If the returned `Promise` rejects, the API will fire `"navigateerror"` with an `ErrorEvent`.
 
 These events allow your code to deal with success or failure in a centralized way.
 For example, you might deal with success by hiding a previously displayed progress indicator, like this:
@@ -131,7 +342,7 @@ navigation.addEventListener('navigatesuccess', event => {
 });
 ```
 
-Or you might show an error message on failure (i.e., if the `Promise` passed to `transitionWhile` rejected):
+Or you might show an error message on failure:
 
 ```js
 navigation.addEventListener('navigateerror', event => {
@@ -140,42 +351,10 @@ navigation.addEventListener('navigateerror', event => {
 });
 ```
 
-The "navigateerror" event listener, which receives an `ErrorEvent`, is particularly handy as it's guaranteed to receive any errors from your code that's setting up a new page.
+The `"navigateerror"` event listener, which receives an `ErrorEvent`, is particularly handy as it's guaranteed to receive any errors from your code that's setting up a new page.
 You can simply `await fetch()` knowing that if the network is unavailable, the error will eventually be routed to `"navigateerror"`.
 
-### Abort Signals
-
-Since you're able to do asynchronous work while preparing a new page, it's possible that the transition your code is handling (to load a specific URL or state) might get preempted, or considered out-of-date.
-This might happen because the user just clicked on another link, or your code performs another navigation.
-
-To deal with any of these possibilities, the event passed to the "navigate" listener contains a `signal` property, which is an `AbortSignal`.
-For more information see [Abortable fetch][abortable-fetch].
-The short version is it basically provides an object that fires an event when you should stop your work.
-Notably, you can pass an `AbortSignal` to any calls you make to `fetch()`, which will cancel in-flight network requests if the navigation is preempted.
-This will both save the user's bandwidth, and reject the `Promise` returned by `fetch()`, preventing any following code from e.g., updating the DOM to show a now invalid page navigation.
-
-For a concrete example, you might set up loading a page of cat memes with a `fetch()` call in your listener.
-By passing the `signal` to it, the fetch will be cancelled if the user decides to instead load a different page on your site before the `fetch` completes.
-Take a look:
-
-```js
-navigation.addEventListener('navigate', navigateEvent => {
-  if (isCatsUrl(navigateEvent.destination.url)) {
-    const processNavigation = async () => {
-      const request = await fetch('/cat-memes.json', {
-        signal: navigateEvent.signal,
-      });
-      const json = await request.json();
-      // TODO: do something with cat memes json
-    };
-    navigateEvent.transitionWhile(processNavigation());
-  } else {
-    // load some other page
-  }
-});
-```
-
-## Navigation Entries
+## Navigation entries
 
 `navigation.currentEntry` provides access to the current entry.
 This is an object which describes where the user is right now.
@@ -192,7 +371,7 @@ This key remains the same even if the current entry's URL or state changes.
 It's still in the same slot.
 Conversely, if a user presses Back and then re-opens the same page, `key` will change as this new entry creates a new slot.
 
-To a developer, "key" is useful because the Navigation API allows you to directly navigate the user to an entry with a matching key.
+To a developer, `key` is useful because the Navigation API allows you to directly navigate the user to an entry with a matching key.
 You're able to hold onto it, even in the states of other entries, in order to easily jump between pages.
 
 ```js
@@ -217,62 +396,105 @@ console.log(navigation.currentEntry.getState());
 ```
 
 By default, this will be `undefined`.
-You can synchronously set the state for the current `NavigationHistoryEntry` by calling:
+
+#### Setting state
+
+Although state objects can be mutated, those changes are not saved back with the history entry, so:
 
 ```js
-navigation.updateCurrentEntry({state: something});
-```
-
-You can also set the state when navigating programmatically with `navigation.navigate()` (this is [described below](#programmatic-navigation)).
-
-In the Navigation API, the state returned from `.getState()` is a copy of the previously set state.
-If you modify it, the stored version won't also change.
-For example:
-
-```js
-navigation.updateCurrentEntry({state: {count: 1}});
-
 const state = navigation.currentEntry.getState();
-state.count = 2;
-
-console.info(navigation.currentEntry.getState().count); // will still be one
+console.log(state.count); // 1
+state.count++;
+console.log(state.count); // 2
+// But:
+console.info(navigation.currentEntry.getState().count); // will still be 1
 ```
 
-### Access All Entries
+The correct way to set state is during script navigation:
+
+```js
+navigation.navigate(url, {state: newState});
+// Or:
+navigation.reload({state: newState});
+```
+
+Where `newState` can be any [clonable object](https://developer.mozilla.org/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types).
+
+If you want to update the state of the current entry, it's best to perform a navigation that replaces the current entry:
+
+```js
+navigation.navigate(location.href, {state: newState, history: 'replace'});
+```
+
+Then, your `"navigate"` event listener can pick up this change via `navigateEvent.destination`:
+
+```js
+navigation.addEventListener('navigate', navigateEvent => {
+  console.log(navigateEvent.destination.getState());
+});
+```
+
+#### Updating state synchronously
+
+Generally, it's better to update state asynchronously via `navigation.reload({state: newState})`, then your `"navigate"` listener can apply that state. However, sometimes the state change has already fully applied by the time your code hears about it, such as when the user toggles a `<details>` element, or the user changes the state of a form input. In these cases, you may want to update state so these changes are preserved through reloads and traversals. This is possible using `updateCurrentEntry()`:
+
+```js
+navigation.updateCurrentEntry({state: newState});
+```
+
+There's also an event to hear about this change:
+
+```js
+navigation.addEventListener('currententrychange', () => {
+  console.log(navigation.currentEntry.getState());
+});
+```
+
+But, if you find yourself reacting to state changes in `"currententrychange"`, you may be splitting or even duplicating your state-handing code between the `"navigate"` event and the `"currententrychange"` event, whereas `navigation.reload({state: newState})` would let you handle it in one place.
+
+#### State vs URL params
+
+Because state can be a structured object, it's tempting to use it for all your application state.
+However, in many cases it's better to store that state in the URL.
+
+If you would expect the state to be retained when the user shares the URL with another user, store it in the URL.
+Otherwise, the state object is the better option.
+
+### Access all entries
 
 The "current entry" is not all, though.
 The API also provides a way to access the entire list of entries that a user has navigated through while using your site via its `navigation.entries()` call, which returns a snapshot array of entries.
 This could be used to, e.g., show a different UI based on how the user navigated to a certain page, or just to look back at the previous URLs or their states.
 This is impossible with the current History API.
 
-You can also listen for a "dispose" event on individual `NavigationHistoryEntry`s, which is fired when the entry is no longer part of browser history. This can happen as part of general cleanup, but also happen when navigating. For example, if you traverse back 10 places, then navigate forwards, those 10 history entries will be disposed.
+You can also listen for a `"dispose"` event on individual `NavigationHistoryEntry`s, which is fired when the entry is no longer part of browser history. This can happen as part of general cleanup, but also happen when navigating. For example, if you traverse back 10 places, then navigate forwards, those 10 history entries will be disposed.
 
 ## Examples
 
-The "navigate" event fires for all types of navigation, as mentioned above.
+The `"navigate"` event fires for all types of navigation, as mentioned above.
 (There's actually a [long appendix in the spec][long-nav-appendix] of all possible types.)
 
 While for many sites the most common case will be when the user clicks a `<a href="...">`, there are two notable, more complex navigation types that are worth covering.
 
-### Programmatic Navigation {: #programmatic-navigation }
+### Programmatic navigation {: #programmatic-navigation }
 
 First is programmatic navigation, where navigation is caused by a method call inside your client-side code.
 
 You can call `navigation.navigate('/another_page')` from anywhere in your code to cause a navigation.
-This will be handled by the centralized event listener registered on the "navigate" listener, and your centralized listener will be called synchronously.
+This will be handled by the centralized event listener registered on the `"navigate"` listener, and your centralized listener will be called synchronously.
 
 This is intended as an improved aggregation of older methods like `location.assign()` and friends, plus the History API's methods `pushState()` and `replaceState()`.
 
 {% Aside %}
 
-These older programmatic methods for changing the URL are all still supported with the Navigation API and now fire the "navigate" listener.
+These older programmatic methods for changing the URL are all still supported with the Navigation API and now fire the` "navigate"` listener.
 That is, they're also handled centrally.
 Their signatures aren't modified in any way (i.e., they won't now return a `Promise`) by this new specification, and we imagine that in an older codebase, they'll be replaced by calls to `.navigate()` over time.
 
 {% endAside %}
 
 The `navigation.navigate()` method returns a object which contains two `Promise` instances in `{ committed, finished }`.
-This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationHistoryEntry` is available) or "finished" (all promises passed to `transitionWhile()` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
+This allows the invoker can wait until either the transition is "committed" (the visible URL has changed and a new `NavigationHistoryEntry` is available) or "finished" (all promises returned by `intercept({ handler })` are complete&mdash;or rejected, due to failure or being preempted by another navigation).
 
 The `navigate` method also has an options object, where you can set:
 
@@ -294,47 +516,52 @@ In fact, it will always be `undefined` in those cases.
     height="320",
     muted="true" %}
   <figcaption>
-    <a href="https://wiry-tricolor-lipstick.glitch.me" target="_blank">Demo of opening from left or right</a>
+    <a href="https://chief-low-specialist.glitch.me/" target="_blank">Demo of opening from left or right</a>
   </figcaption>
 </figure>
 
 `navigation` also has a number of other navigation methods, all which return an object containing `{ committed, finished }`.
 I've already mentioned `traverseTo()` (which accepts a `key` that denotes a specific entry in the user's history) and `navigate()`.
 It also includes `back()`, `forward()` and `reload()`.
-These methods are all handled—just like `navigate()`—by the centralized "navigate" event listener.
+These methods are all handled—just like `navigate()`—by the centralized `"navigate"` event listener.
 
-### Form Submissions
+### Form Submissions {: #form-submissions }
 
 Secondly, HTML `<form>` submission via POST is a special type of navigation, and the Navigation API can intercept it.
-While it includes an additional payload, the navigation is still handled centrally by the "navigate" listener.
+While it includes an additional payload, the navigation is still handled centrally by the `"navigate"` listener.
 
 Form submission can be detected by looking for the `formData` property on the `NavigateEvent`.
 Here's an example that simply turns any form submission into one which stays on the current page via `fetch()`:
 
 ```js
 navigation.addEventListener('navigate', navigateEvent => {
-  if (navigateEvent.formData && navigateEvent.canTransition) {
+  if (navigateEvent.formData && navigateEvent.canIntercept) {
     // User submitted a POST form to a same-domain URL
-    // (If canTransition is false, the event is just informative:
+    // (If canIntercept is false, the event is just informative:
     // you can't intercept this request, although you could
     // likely still call .preventDefault() to stop it completely).
 
-    const submitToServer = async () => {
-      await fetch(navigateEvent.destination.url, {
-        method: 'POST',
-        body: navigateEvent.formData,
-      });
-      // You could navigate again with {history: 'replace'} to change the URL here,
-      // which might indicate "done"
-    };
-    navigateEvent.transitionWhile(submitToServer());
+    navigateEvent.intercept({
+      // Since we don't update the DOM in this navigation,
+      // don't allow focus or scrolling to reset:
+      focusReset: 'manual',
+      scroll: 'manual',
+      handler() {
+        await fetch(navigateEvent.destination.url, {
+          method: 'POST',
+          body: navigateEvent.formData,
+        });
+        // You could navigate again with {history: 'replace'} to change the URL here,
+        // which might indicate "done"
+      },
+    });
   }
 });
 ```
 
 ## What's missing?
 
-Despite the centralized nature of the "navigate" event listener, the current Navigation API specification doesn't trigger "navigate" on a page's first load.
+Despite the centralized nature of the `"navigate"` event listener, the current Navigation API specification doesn't trigger `"navigate"` on a page's first load.
 And for sites which use [Server Side Rendering][ssr-definition] (SSR) for all states, this might be fine—your server could return the correct initial state, which is the fastest way to get content to your users.
 But sites that leverage client-side code to create their pages may need to create an additional function to initialize their page.
 

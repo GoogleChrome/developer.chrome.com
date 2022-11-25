@@ -49,8 +49,8 @@ There are two ways to open the **Animations** tab:
 - Select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More.", width="24", height="24" %} **Customize and control DevTools** > **More tools** > **Animations**.
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/w4767GjJfcHUdokjxB1a.png", alt="Animations in the menu.", width="800", height="572" %}
 - Open the Command Menu by pressing one of the following:
-  - On macOS: <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd>
-  - On Windows, Linux, or ChromeOS: <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> 
+  - On macOS: <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
+  - On Windows, Linux, or ChromeOS: <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> 
 
   Then start typing `Show Animations` and select the corresponding Drawer panel.
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pbUGqPRe0SlaYNyqVMsO.png", alt="Show Animations.", width="800", height="572" %}

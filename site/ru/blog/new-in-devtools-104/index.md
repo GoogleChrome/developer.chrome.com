@@ -16,7 +16,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='4RXWfw7Xg_Y' %}
 
@@ -234,5 +234,5 @@ tags:
 - При [открытии файлов](/docs/devtools/resources/#open) в **Command menu** авторские файлы (файлы, сгенерированные на основе карт источников) теперь находятся в списке выше, чем развёрнутые файлы с аналогичными именами. ([1312929](https://crbug.com/1312929))
 
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

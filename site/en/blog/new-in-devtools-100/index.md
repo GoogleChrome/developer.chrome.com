@@ -16,7 +16,7 @@ tags:
 
 <!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dzxqvpHgEBlwfnfW0osP.jpg -->
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -121,5 +121,5 @@ These are some noteworthy fixes in this release:
 - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422)) 
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

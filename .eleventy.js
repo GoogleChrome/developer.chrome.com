@@ -1,6 +1,5 @@
 const yaml = require('js-yaml');
 const path = require('path');
-const {filterOutDrafts} = require('./site/_utils/drafts');
 
 // Filters
 const {
@@ -14,13 +13,14 @@ const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
-const {minifyJs} = require('./site/_filters/minify-js');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 const {updateSvgForInclude} = require('webdev-infra/filters/svg');
+const {minifyHtml} = require('webdev-infra/filters/minifyHtml');
 
 // Shortcodes
 const {Blockquote} = require('webdev-infra/shortcodes/Blockquote');
+const {InlineCss} = require('webdev-infra/shortcodes/InlineCss');
 const {Codepen} = require('webdev-infra/shortcodes/Codepen');
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
@@ -37,11 +37,12 @@ const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
+const {Partial} = require('./site/_shortcodes/Partial');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
-const {purifyCss} = require('./site/_transforms/purify-css-pool');
-const {minifyHtml} = require('./site/_transforms/minify-html');
+const {InlineCssTransform} = require('webdev-infra/transforms/inlineCss');
+const {MinifyHtmlTransform} = require('webdev-infra/transforms/minifyHtml');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
@@ -53,9 +54,12 @@ const locales = require('./site/_data/site.json').locales;
 
 // Collections
 const algoliaCollection = require('./site/_collections/algolia');
+const authors = require('./site/_collections/authors');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
+const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
+const { pastEvents, currentEvents } = require('./site/_collections/events');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
@@ -89,29 +93,22 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  function addCollectionByDirectory(config, locale, dir) {
-    config.addCollection(`${dir}-${locale}`, collections => {
-      let collection = collections
-        .getFilteredByGlob(path.join('.', 'site', locale, dir, '*', '*.md'))
-        .filter(filterOutDrafts)
-        .reverse();
-      // If we're running inside of Percy then just show the first six posts.
-      if (process.env.PERCY_BRANCH) {
-        collection = collection.slice(collection.length - 6);
-      }
-      return collection;
-    })
-  }
-
   // Add collections
   locales.forEach(locale => {
-    addCollectionByDirectory(eleventyConfig, locale, 'blog');
-    addCollectionByDirectory(eleventyConfig, locale, 'articles');
+    directoryCollection.add(eleventyConfig, locale, 'blog');
+    directoryCollection.add(eleventyConfig, locale, 'articles');
   });
   eleventyConfig.addCollection('algolia', algoliaCollection);
+  eleventyConfig.addCollection('authors', authors);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
+  eleventyConfig.addCollection('partials', (collections) => {
+    return collections
+        .getFilteredByGlob('./site/*/_partials/**/*')
+  });
+  eleventyConfig.addCollection('currentEvents', currentEvents);
+  eleventyConfig.addCollection('pastEvents', pastEvents);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
@@ -124,13 +121,14 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('md', mdFilters.render);
   eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
-  eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
   eleventyConfig.addFilter('typeof', x => typeof x);
+  eleventyConfig.addNunjucksAsyncFilter('minifyHtml', minifyHtml);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('InlineCss', InlineCss);
   eleventyConfig.addShortcode('Codepen', Codepen);
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
@@ -149,6 +147,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+  eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
@@ -166,8 +165,18 @@ module.exports = eleventyConfig => {
   // These transforms should _always_ go last because they look at the final
   // HTML for the page and inline CSS / minify.
   if (isProduction) {
-    eleventyConfig.addTransform('purifyCss', purifyCss);
-    eleventyConfig.addTransform('minifyHtml', minifyHtml);
+    eleventyConfig.addTransform('inlineCss', (new InlineCssTransform()).configure({
+      cssBasePath: path.join(__dirname, 'dist'),
+      jsPaths: [
+        path.join(__dirname, 'dist/js/**/*.js'),
+      ],
+      pool: true,
+      insert: (content, result) => {
+        return content.replace('</head>', `<style>${result}</style></head>`)
+      }
+    }));
+
+    eleventyConfig.addTransform('minifyHtml', (new MinifyHtmlTransform()).configure({}));
   }
 
   return {

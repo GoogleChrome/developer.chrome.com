@@ -8,8 +8,7 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Yj71FJ6FU94BnscmhmVy.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-102
 ---
 
@@ -32,4 +31,4 @@ The Session Description Protocol (SDP) used to establish a session in WebRTC has
 In this version of Chrome an exception will be thrown when Plan B is used. Developers needing to avoid the exception can participate in a [deprecation trial until May 25, 2022](/origintrials/#/view_trial/3892235977954951169). If you participated in the previous deprecation trial that ended in December, and want participate in the current trial, you will need to request a new token.
 
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

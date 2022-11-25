@@ -4,7 +4,7 @@ title: 'Privacy Budget'
 subhead: >
   Limit the amount of individual user data exposed to sites to prevent covert tracking.
 description: >
-  Limit the amount of individual user data exposed to sites to prevent covert tracking.
+  A proposal to limit the amount of individual user data exposed to sites to prevent covert tracking.
 date: 2022-03-04
 authors:
   - alexandrawhite

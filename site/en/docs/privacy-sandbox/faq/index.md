@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-04-12
-updated: 2022-07-27
+updated: 2022-11-11
 authors:
   - samdutton
 ---
@@ -192,7 +192,7 @@ able to visit `uk.example.com`. Those users would see features and functions
 for the United States site that were blocked for the United Kingdom site.
 {% endAside %}
 
-## Trust Tokens
+## Privacy State Tokens
 
 ### How can I ask a question about this feature?
 
@@ -207,7 +207,7 @@ for the United States site that were blocked for the United Kingdom site.
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.
 
-### Is tooling available for Trust Tokens?
+### Is tooling available for Privacy State Tokens?
 
 Chrome DevTools turns on trust token inspection from the Network and
 Application tabs: read
@@ -253,14 +253,17 @@ For example, to completely disable use of the Topics API within all browsing con
 
 ### Can Topics API be used with on websites with `prebid.js`?
 
-Yes. Topics are available to API callers when the `document.browsingTopics()` call
-to access topics is made from a document with the
-[same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin)
-as the call to observe topics. 
+As noted in the release of [Prebid 7](https://prebid.org/blog/the-release-of-prebid-7-0/), 
+the community is actively developing an integration with the Topics API via a new module. 
+However, as of November 2022, the Topics Module has not yet been completed. To stay abreast with the 
+development, we recommend the following:
 
-For example, a call to observe topics could be made from an iframe whose `src` is
-same-origin as the source of the Topics API call to access topics. You can try out an
-example at [topics-demo.glitch.me](https://topics-demo.glitch.me).
+- Follow [Prebid PR #8947: Topics module: Initial Topics iframe implementation](https://github.com/prebid/Prebid.js/pull/8947) 
+which is the PR to create the Prebid Topics Module
+- Follow [Prebid Issue #8741: Enhancements to Topics module](https://github.com/prebid/Prebid.js/pull/8741) 
+which has an active discussion on the Prebid Topics module's intended workflow.
+- If this is a high dependency, reach out to Prebid.js to check in on status updates and timelines, 
+through whatever standard channel they offer.
 
 ## FLEDGE
 

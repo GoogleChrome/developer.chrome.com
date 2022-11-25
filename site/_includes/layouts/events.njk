@@ -1,0 +1,16 @@
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/events-main.css' %}
+{% endblock %}
+
+{% block content %}
+  <div class="events-container width-full pad-400">
+    {% include 'partials/events-hero.njk' %}
+    {% include 'partials/events-list.njk' %}
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ helpers.hashForProd('/js/events.js') }}"></script>
+{% endblock %}

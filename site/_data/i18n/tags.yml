@@ -68,8 +68,8 @@ cws:
 cookies:
   en: Cookies
 
-deprecations:
-  en: Deprecations
+deprecations-removals:
+  en: Deprecations and Removals
 
 device-characteristics:
   en: Device Characteristics
@@ -118,9 +118,6 @@ progress-in-the-privacy-sandbox:
 
 progressive-web-apps:
   en: Progressive Web Apps
-
-removals:
-  en: Removals
 
 security:
   en: Security
@@ -218,6 +215,9 @@ chrome69:
 chrome70:
   en: Chrome 70
 
+beta:
+  en: Beta
+
 insider:
   en: Chrome Dev Insider
 
@@ -227,6 +227,9 @@ web-vitals:
 
 crux:
   en: CrUX
+
+aurora-project:
+  en: Aurora Project
 
 #####
 # These are for Privacy Sandbox

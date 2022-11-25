@@ -1,22 +1,23 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Memory Inspector: Inspect JavaScript ArrayBuffer"
+title: "Memory Inspector: Inspect ArrayBuffer, TypedArray, DataView, and Wasm Memory."
 authors:
   - jecelynyeen
+  - sofiayem
 date: 2020-08-20
-#updated: YYYY-MM-DD
-description: "Use the Memory inspector to inspect an ArrayBuffer in JavaScript, as well as a WebAssembly.Memory"
+updated: 2022-10-25
+description: "Use the Memory inspector to inspect an ArrayBuffer, TypedArray, or DataView in JavaScript as well as WebAssembly.Memory of C++ Wasm apps."
 ---
 
 {% Aside %}
-This feature is available from Chrome 91 onwards. You can check your version with `chrome://version/`. 
+The Memory Inspector panel is available from Chrome 91. You can check your version at `chrome://version/`. 
 {% endAside %}
 
-Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as a `WebAssembly.Memory`. 
+Use the new **Memory inspector** to inspect `ArrayBuffer`, `TypedArray`, and `DataView` memory in JavaScript as well as `WebAssembly.Memory` of Wasm applications written in C++.
+
 ## Open the Memory Inspector {: #open }
 
 There are a few ways to open the **Memory inspector**.
-
 
 ### Open from the menu  {: #open-from-menu }
 
@@ -99,19 +100,43 @@ Let's inspect the memory together.
 7. Let's customize the **Value inspector** to show only **floating point**. Click on the **settings** button and check only **Float 32-bit** and **Float 64-bit**.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZJFQAJFXB3GOA1hqVcfd.png", alt="settings to customize value inspector", width="800", height="602" %}
 8. Let's change the encoding from `dec` to `sci`. Notice the value representations are updated accordingly.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="change the encoding", width="800", height="602" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="Change the encoding.", width="800", height="602" %}
 9. Try to navigate the memory buffer with your keyboard or using the navigation bar. Repeat step 4 to observe values changes. 
 
-
 ## WebAssembly memory inspection {: #wasm }
-For Wasm memory inspection, the process is similar to the JavaScript one.
 
-1. Open [this demo page](http://memory-inspector.glitch.me/demo-wasm.html).
-2. In the **Sources** panel, open **memory-write.wasm** and set a breakpoint at line 5.
-3. Refresh the page.
-4. In the **debugger** pane, expand the **Scope**.
-5. In the **Scope** section,  expand the **Module**.
-6. Click on the icon next to the `$imports.memory` property to reveal the **Memory inspector**.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/k3zWDJprBAnKMiIpbwmf.png", alt="Reveal the Memory inspector", width="800", height="602" %}
+The `WebAssembly.Memory` object is an `ArrayBuffer` that holds the raw bytes of object memory. The **Memory Inspector** panel lets you inspect such objects in Wasm applications written in C++.
 
-Read [this article](/blog/wasm-debugging-2020/) to learn more on debugging WebAssembly with modern tools.
+To take full advantage of `WebAssembly.Memory` inspection:
+
+- Use Chrome 107 or later. Check your version at `chrome://version/`.
+- Install the [C/C++ DevTools Support (DWARF)][1] extension. This is a plugin for debugging C/C++ WebAssembly applications using DWARF debug information.
+- Enable DWARF debugging in DevTools > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > **WebAssembly Debugging: Enable DWARF support** and reload DevTools.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/56o9cpP8JRtNHLhDbeig.png", alt="Enabling DWARF support in the Experiments tab.", width="800", height="341" %} 
+
+To inspect the `WebAssembly.Memory` of an object:
+
+1. [Open DevTools](/docs/devtools/open/) on [this demo page](https://memory-inspector.glitch.me/demo-cpp.html).
+1. In the **Sources** panel, open `demo-cpp.cc` and [set a breakpoint](/docs/devtools/javascript/breakpoints/#loc) in the `main()` function at line 15:  `x[i] = n - i - 1;`.
+1. Reload the page to run the application. The debugger pauses at the breakpoint.
+1. In the **Debugger** pane, expand **Scope** > **Local**.
+1. Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mv5EULMv6Ep9Z6yHmAVz.png", alt="Reveal in Memory Inspector.", width="26", height="20" %} icon next to the `x: int[10]` array.
+
+   Alternatively, right-click the array and select **Reveal in Memory Inspector panel**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ECgMkcQYWSQY9EsbMicm.png", alt="The x array opened in Memory Inspector.", width="800", height="641" %}
+
+{% Aside 'gotchas' %}
+Starting from Chrome version 107, the **Memory Inspector** highlights all the bytes of a C/C++ memory object. This lets you tell them apart from the surrounding memory.
+{% endAside %}
+
+To stop highlighting object memory, in the **Memory Inspector** panel, hover over the object badge and click the `x` button.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rRh4QAwdRpawIHHQ5hF2.png", alt="Stop highlighting object memory.", width="800", height="641" %}
+
+To learn more, see:
+
+- [Extending the Memory Inspector for C/C++ debugging](/blog/memory-inspector-extended-cpp/)
+- [Debugging WebAssembly with modern tools](/blog/wasm-debugging-2020/).
+
+[1]: https://chrome.google.com/webstore/detail/cc%20%20-devtools-support-dwa/pdcpmagijalfljmkmjngeonclgbbannb

@@ -163,4 +163,36 @@ Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix
    {% endAside %}
 1. Get back to the slot's content by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Reveal.", width="20", height="20" %}`reveal` badge.
 
+## Top layer
+
+This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/building-a-dialog-component/) using the [`.showModal()` method][3], the browser puts it into the top layer.
+
+To help you visualize top layer elements, the **Elements** panel adds a `#top-layer` container to the DOM tree after the closing `</html>` tag.
+
+Top layer elements have {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Link.", width="20", height="20" %}`top-layer (N)` badges next to them, where `N` is the element's index number. The badges are links to the corresponding elements in the `#top-layer` container.
+
+{% Aside %}
+This feature is available from Chrome version 105. In earlier versions, the preview below doesn't work.
+{% endAside %}
+
+Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Link.", width="20", height="20" %}`top-layer (N)` badge in the following preview:
+
+{% Codepen {
+  user: 'sofiayem',
+  id: 'ExEGRvR',
+  height: 250,
+  allow: ['geolocation']
+} %}
+
+1. In the preview, click **Open dialog**.
+1. [Inspect the dialog][1].
+1. In the DOM tree, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Link.", width="20", height="20" %}`top-layer (1)` badge next to the `<dialog>` element. The **Elements** panel takes you to the corresponding element in the `#top-layer` container after the closing `</html>` tag.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IMCqBKMDx0fUcu3KnUgC.png", alt="The top-layer container and badge.", width="800", height="520" %}
+   {% Aside 'gotchas' %}
+   The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Link.", width="20", height="20" %}`top-layer (N)` badge has a paired {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Reveal.", width="20", height="20" %}`reveal` badge that takes you back.
+   {% endAside %}
+1. Get back to the `<dialog>` element by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix.svg", alt="Reveal.", width="20", height="20" %}`reveal` badge next to the element or its `::backdrop`.
+
 [1]: /docs/devtools/open/#elements
+[2]: https://developer.mozilla.org/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
+[3]: https://developer.mozilla.org/docs/Web/API/HTMLDialogElement/showModal

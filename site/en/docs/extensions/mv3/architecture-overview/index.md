@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2022-05-13
+updated: 2022-11-02
 description: A high-level explanation of the software architecture of Chrome Extensions.
 subhead: A high-level explanation of the components and structure of a Chrome Extension.
 ---
@@ -29,7 +29,7 @@ An extension's architecture will depend on its functionality, but all extensions
 ### The manifest {: #manifest }
 
 The manifest file, titled `manifest.json`, gives the browser information about the extension, such
-as the most important files and the capabilities the extension might use.
+as the most important files and the capabilities the extension might use. 
 
 ```json
 {
@@ -70,8 +70,10 @@ popup", width="187", height="153" %}
 The extension service worker is the extension's event handler; it contains listeners for browser
 events that are important to the extension. It lies dormant until an event is fired then performs
 the instructed logic; it is only loaded when it is needed and unloaded when it goes idle. The
-service worker has access to all the [Chrome APIs][section-apis], as long it declares the
+service worker has access to all the [Chrome APIs][section-apis], as long as it declares the
 required permissions in the `manifest.json`.
+
+An extension can only have a single service worker. To import further code, the service worker can be declared as an [ES Module][webdev-imports] by specifying `"type": "module"` in the manifest `"background"`.
 
 See [Manage events with service workers][docs-service-worker] to learn more. 
 
@@ -149,9 +151,7 @@ See [Give users options][docs-options] to learn more.
 
 ### Additional HTML files {: #html-files}
 
-You can display other HTML files present in the extension that are not declared in the manifest.
-These HTML files can access the same [Chrome APIs][section-apis] as the popup or other extension
-files. 
+An extension can also have other HTML files that are not declared in the manifest. All extension HTML files can access the [Chrome APIs][section-apis] and can use script tags including Javascript files, but cannot declare inline JavaScript.
 
 You can open these pages using the web api [window.open()][mdn-window-open], the Chrome APIs
 [windows.create()][api-window-create], or [tabs.create()][api-create-tab].
@@ -234,65 +234,33 @@ using [chrome.tabs.create()][api-create-tab] instead.
 
 For more information, explore the [Chrome API reference docs][api-reference].
 
-### Asynchronous vs. synchronous methods {: #async-sync }
+### Asynchronous methods {: #async-sync }
 
-#### Callbacks {: #callbacks }
+Most Chrome API methods are asynchronous; they return immediately without waiting for the operation to finish. If an extension needs to know the outcome of an asynchronous operation, there are two choices:
 
-Most Chrome API methods are asynchronous: they return immediately without waiting for the operation
-to finish. If an extension needs to know the outcome of an asynchronous operation it can pass a
-callback function into the method. The callback is executed later, potentially much later, after the
-method returns.
+* Use the returned promise.
+* Pass a callback function into the method.
 
-A method is asynchronous when the callback parameter is available in its signature.
+Note that these choices are mutually exclusive. If you pass a callback to a method, no promise
+will be returned. If you use the returned promise, do not pass a callback.
+
+Generally, you should prefer promises to callbacks. Not all methods in extensions APIs support
+promises, but newer methods do. You can verify whether a method supports promises by checking
+its API reference page. If you need to support both promises and callbacks for the same
+function (because your users have older browsers), you can test whether the method returns a
+promise using `typeof` and
+[optional chaining](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Optional_chaining).
+For example:
+
 
 ```js
-// Signature for an asynchronous method
-chrome.tabs.query(object queryInfo, function callback)
+typeof chrome.contextMenus.removeAll()?.then()
 ```
-
-If the extension needed to navigate the user's currently selected tab to a new URL, it would need to
-get the current tab's ID and then update that tab's address to the new URL.
-
-If the [tabs.query][api-tabs-query] method were synchronous, it may look something like below.
-
-{% Compare 'worse' %}
-```js
-let tab = chrome.tabs.query(queryOptions); //WRONG!!!
-chrome.tabs.update(tab.id, {url:newUrl});
-someOtherFunction();
-```
-{% CompareCaption %}
-
-This approach will fail because `query()` is **asynchronous**. It returns without waiting for the
-work to complete, and does not return a value.
-
-{% endCompareCaption %}
-
-{% endCompare %}
-
-To correctly query a tab and update its URL the extension must use the callback parameter.
-
-{% Compare 'better' %}
-```js
-chrome.tabs.query(queryOptions, function(tabs) {
-  chrome.tabs.update(tabs[0].id, {url: newUrl});
-});
-someOtherFunction();
-```
-
-{% endCompare %}
-
-In the above code, the lines are executed in the following order: 1, 4, 2. The callback function
-specified to `query()` is called and then executes line 2, but only after information about the
-currently selected tab is available. This happens sometime after `query()` returns. Although
-`update()` is asynchronous the code doesn't use a callback parameter, since the extension doesn't do
-anything with the results of the update.
 
 #### Promises {: #async }
 
-With the introduction of Manifest V3, many extension API methods now return promises. Not all
-methods in extensions APIs support promises. You can verify whether a method supports promises by
-checking its API reference page.
+Both methods of handling promises are supported. See [Using promises][docs-promises] to learn
+more.
 
 ```js
 // Promise
@@ -304,22 +272,20 @@ chrome.tabs.query(queryOptions)
 
 // async-await
 async function queryTab() {
-  let tabs = await chrome.tabs.query(queryOptions});
+  let tabs = await chrome.tabs.query(queryOptions);
   chrome.tabs.update(tabs[0].id, {url: newUrl});
   someOtherFunction();
 }
 ```
 
-See [Using promises][docs-promises] to learn more.
+#### Callbacks {: #callbacks }
 
-#### Synchronous methods {: #sync }
+A method is asynchronous when the callback parameter is available in its signature.
 
 ```js
-// Synchronous methods have no callback
-const imgUrl = chrome.runtime.getURL("images/icon.png")
+// Signatures for an asynchronous method
+chrome.tabs.query(object queryInfo, function callback)
 ```
-
-This method synchronously returns the URL as a `string` and performs no other asynchronous work.
 
 ## Communication between pages {: #pageComm }
 
@@ -388,11 +354,12 @@ with the following resources:
 [docs-ui]: /docs/extensions/mv3/user_interface
 [docs-unpacked]: /docs/extensions/mv3/getstarted/#unpacked
 [docs-web-acc-res]: /docs/extensions/mv3/manifest/web_accessible_resources/
+[incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
+[manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
+[mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
-[mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [mdn-window-open]: https://developer.mozilla.org/docs/Web/API/Window/open
-[sample-getting-started]:
-    https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
+[sample-getting-started]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/getting-started
 [section-apis]: #apis
 [section-bg]: #background_script
 [section-cs]: #contentScripts
@@ -401,5 +368,4 @@ with the following resources:
 [section-options]: #optionsPage
 [section-ui]: #pages
 [section-web-res]: #web-resources
-[incognito-data]: /docs/extensions/mv3/user_privacy/#data-incognito
-[manifest-incognito]: /docs/extensions/mv3/manifest/incognito/
+[webdev-imports]: https://web.dev/es-modules-in-sw/#static-imports-only

@@ -33,7 +33,7 @@ updated: 2020-05-29
 
 `robots.txt` 파일이 올바른 위치에 있는지 확인하지 않습니다. 올바르게 작동하려면 파일이 도메인 또는 하위 도메인의 루트에 있어야 합니다.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## `robots.txt` 관련 문제를 해결하는 방법
 

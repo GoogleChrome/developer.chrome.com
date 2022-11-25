@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -224,5 +224,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 - No se requiere recargar cuando cambias el tema [claro/oscuro](/docs/devtools/customize/dark-theme/) en DevTools. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

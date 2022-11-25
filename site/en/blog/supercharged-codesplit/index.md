@@ -6,7 +6,7 @@ description: >
 authors:
     - surma
 date: 2017-06-22
-updated: 2017-06-22
+updated: 2022-08-18
 ---
 
 {% Aside %}
@@ -81,9 +81,8 @@ have to re-download the entire thing.
 Code splitting is the middle ground. We are willing to invest additional round trips to get
 network efficiency by only downloading what we need, and better caching efficiency by making the
 number of modules per bundle much smaller. If the bundling is done right, the total number of round
-trips will be much lower than with loose modules. Finally, we could make use of [pushing
-mechanisms](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) like `link[rel=preload]` or HTTP/2 Push to
-save additional round trio times if needed.
+trips will be much lower than with loose modules. Finally, we could make use of [preloading
+mechanisms](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) like `link[rel=preload]` to save additional round trio times if needed.
 
 ## Step 1: Obtain a list of your entry points
 

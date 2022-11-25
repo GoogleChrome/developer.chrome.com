@@ -1,0 +1,59 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set show = 5 %}
+
+<div class="display-none">
+  {{ icon('pin', {id: 'pinIcon', hidden:true}) }}
+  {{ icon('calendar', {id: 'calendarIcon', hidden:true}) }}
+  {{ icon('launch', {id: 'launchIcon', className:'event-card__launch-icon', hidden:true}) }}
+  {{ icon('slides', {id: 'slidesIcon', hidden:true}) }}
+  {{ icon('video', {id: 'videoIcon', hidden:true}) }}
+</div>
+
+<web-tabs class="events-list">
+  <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
+    <div id="upcoming-events"
+         class="display-grid grid-cols-1 grid-gap-400"
+         total-items="{{ collections.currentEvents.length }}">
+      {% for event in collections.currentEvents.slice(0,show) %}
+        {% include 'partials/event-card.njk' %}
+      {% endfor %}
+    </div>
+
+    {% if collections.currentEvents.length > show %}
+      <button id="load-upcoming-events"
+         class="load-more__button type--small display-inline-flex"
+         aria-controls="upcoming-events"
+      >
+        {{ 'i18n.events.load_more' | i18n(locale) }}
+        {{ icon('arrow-forward', {hidden: true}) }}
+      </button>
+    {% endif %}
+  </web-tab>
+
+  <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
+    <div id="past-events"
+         class="display-grid grid-cols-1 grid-gap-400"
+         total-items="{{ collections.pastEvents.length }}">
+      {% for event in collections.pastEvents.slice(0,show) %}
+        {% include 'partials/event-card.njk' %}
+      {% endfor %}
+    </div>
+
+    {% if collections.pastEvents.length > show %}
+      <button id="load-past-events"
+              class="load-more__button type--small display-inline-flex"
+              aria-controls="upcoming-events"
+      >
+        {{ 'i18n.events.load_more' | i18n(locale) }}
+        {{ icon('arrow-forward', {hidden: true}) }}
+      </button>
+    {% endif %}
+  </web-tab>
+</web-tabs>
+
+<p id="loading-error" class="color-red-medium gap-top-100 display-none">
+  {{ 'i18n.events.load_more_error' | i18n(locale) }}
+  <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
+     class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
+</p>
