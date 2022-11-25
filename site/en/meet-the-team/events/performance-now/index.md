@@ -5,7 +5,7 @@ summary: >-
   performance culture, performance budgets to Web Vitals, PWAs and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Amsterdam, Netherlands'
-date: '2022-10-27'
+date: 2022-10-27
 externalUrl: 'https://perfnow.nl/'
 sessions:
   - speaker: katiehempenius

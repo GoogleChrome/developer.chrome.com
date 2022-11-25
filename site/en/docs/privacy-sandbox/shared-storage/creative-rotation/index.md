@@ -6,6 +6,7 @@ subhead: >
 description: >
   Use a Shared Storage worklet to rotate creatives across sites.
 date: 2022-10-14
+updated: 2022-11-08
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -40,63 +41,55 @@ for the given use cases. These are not meant to be used in production.
 
 {% endAside %}
 
-An advertiser may want to apply different strategies to an ad campaign, and
-rotate the creatives to increase effectiveness of the ads. Shared storage can
-be used to run different rotation strategies, such as sequential rotation and
-evenly-distributed rotation, across different sites.
+An advertiser or a content producer may want to apply different strategies to a campaign, and rotate the contents or creatives to increase effectiveness.  Shared storage can be used to run different rotation strategies, such as sequential rotation and evenly-distributed rotation, across different sites.
 
 In this example:
-
-*  `creative-rotation.js` is embedded in an ad iframe. This script sets which
-   ads are the most important (ad weight), and calls to the worklet to
-   determine which ad should be displayed.
-*  `creative-rotation-worklet.js`  is the shared storage worklet that
-   determines the weighted distribution for the ad creatives and returns which
-   should be displayed.
+*   `creative-rotation.js` is embedded in a frame. This script sets which ads are the most important ( weight), and calls to the worklet to determine which content should be displayed.
+*   `creative-rotation-worklet.js`  is the shared storage worklet that determines the weighted distribution for the contents and returns which should be displayed.
 
 **[creative-rotation.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/creative-rotation.js)**
 
-```javascript
-// Ad config with the URL of the ad, a probability weight for rotation, and the clickthrough rate.
-const DEMO_AD_CONFIG = [
+```js
+// Ad config with the URL of the content, a probability weight for rotation, and the clickthrough rate.
+const DEMO_CONTENT_CONFIG = [
   {
-    url: 'https://advertiser.example/ads/ad-1.html',
+    url: 'https://your-server.example/contents/content-1.html',
     weight: 0.7,
   },
   {
-    url: 'https://advertiser.example/ads/ad-2.html',
+    url: 'https://your-server.example/contents/content-2.html',
     weight: 0.2,
   },
   {
-    url: 'https://advertiser.example/ads/ad-3.html',
+    url: 'https://your-server.example/contents/content-3.html',
     weight: 0.1,
   },
 ];
 
 // Set the mode to sequential and set the starting index to 0.
 async function seedStorage() {
-  await window.sharedStorage.set('creative-rotation-mode', 'sequential', {
+  await window.sharedStorage.set('content-rotation-mode', 'sequential', {
     ignoreIfPresent: true,
   });
 
-  await window.sharedStorage.set('creative-rotation-index', 0, {
+  await window.sharedStorage.set('content-rotation-index', 0, {
     ignoreIfPresent: true,
   });
 }
 
 async function injectAd() {
   // Load the worklet module
-  await window.sharedStorage.worklet.addModule('creative-rotation-worklet.js');
+  await window.sharedStorage.worklet.addModule('content-rotation-worklet.js');
 
   // Initially set the storage to sequential mode for the demo
   seedStorage();
 
-  // Run the URL selection operation to determine the next ad that should be rendered
-  const urls = DEMO_AD_CONFIG.map(({ url }) => ({ url }));
-  const opaqueURL = await window.sharedStorage.selectURL('creative-rotation', urls, { data: DEMO_AD_CONFIG });
+  // Run the URL selection operation to determine the next content rendered.
+  const urls = DEMO_CONTENT_CONFIG.map(({ url }) => ({ url }));
+  const opaqueURL = await window.sharedStorage.selectURL('content-rotation', urls, { data: DEMO_CONTENT_CONFIG });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('ad-slot').src = opaqueURL;
+  document.getElementById('content-slot').src = opaqueURL;
 }
 
 injectAd();
@@ -104,11 +97,11 @@ injectAd();
 
 **[creative-rotation-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/creative-rotation-worklet.js)**
 
-```javascript
+```js
 class SelectURLOperation {
   async run(urls, data) {
     // Read the rotation mode from Shared Storage
-    const rotationMode = await this.sharedStorage.get('creative-rotation-mode');
+    const rotationMode = await this.sharedStorage.get('content-rotation-mode');
 
     // Generate a random number to be used for rotation
     const randomNumber = Math.random();
@@ -118,7 +111,7 @@ class SelectURLOperation {
     switch (rotationMode) {
       /**
        * Sequential rotation
-       * - Rotates the creatives in order
+       * - Rotates the contents in order
        * - Example: A -> B -> C -> A ...
        */
       case 'sequential':
@@ -126,18 +119,18 @@ class SelectURLOperation {
         index = parseInt(currentIndex, 10);
         const nextIndex = (index + 1) % urls.length;
 
-        await this.sharedStorage.set('creative-rotation-index', nextIndex);
+        await this.sharedStorage.set('content-rotation-index', nextIndex);
         break;
 
       /**
        * Weighted rotation
-       * - Rotates the creatives with weighted probability
+       * - Rotates the contentswith weighted probability
        * - Example: A=70% / B=20% / C=10%
        */
       case 'weighted-distribution':
-        // Find the first URL where the cumulative sum of the weights
-        // exceed the random number. The array is sorted by the weight
-        // in descending order.
+        
+        // Sum the weights cumulatively, and find the first URL where the sum exceeds
+        // the random number. The array is sorted in descending order first.
         let weightSum = 0;
         const { url } = data
           .sort((a, b) => b.weight - a.weight)
@@ -157,27 +150,9 @@ class SelectURLOperation {
   }
 }
 
-register('creative-rotation', SelectURLOperation);
+register('content-rotation', SelectURLOperation);
 ```
 
-## Other use cases
+{% Partial 'privacy-sandbox/shared-storage-use-cases.md' %}
 
-Explore other Shared Storage use cases and code samples:
-
-*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
-   run a worklet script to select a URL from a provided list, based on the
-   stored data, and then render that URL in a fenced frame. This has many
-   possible uses, such as selecting new content when a frequency cap is reached.
-*  [**A/B testing**](/docs/privacy-sandbox/shared-storage/ab-testing): You can
-   assign a user to an experiment group, then store that group in Shared
-   Storage to be accessed cross-site.
-*  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
-   You can store whether the user has registered on your site into shared
-   storage, then render a different element based on that stored status.
-
-These are only some of the possible use cases for Shared Storage. We'll
-continue to add examples as we
-[receive feedback](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)
-and discover new use cases.
-
-{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}
+{% Partial 'privacy-sandbox/shared-storage-engage.md' %}

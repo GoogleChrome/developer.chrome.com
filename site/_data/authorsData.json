@@ -212,6 +212,7 @@
   "paulkinlan": {
     "homepage": "https://paul.kinlan.me/",
     "twitter": "paul_kinlan",
+    "mastodon": "https://status.kinlan.me/@paul",
     "image": "image/T4FyVKpzu4WKF1kBNvXepbi08t52/0O1ZGr2P0l9oTKabyUK5.jpeg"
   },
   "joemedley": {
@@ -246,6 +247,7 @@
     "twitter": "petele",
     "github": "petele",
     "glitch": "petele",
+    "mastodon": "https://techhub.social/@petele",
     "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9l19VVp1vBxCnEA75HwX.jpg"
   },
   "pjmclachlan": {
@@ -295,6 +297,7 @@
     "country": "US",
     "homepage": "https://una.im",
     "twitter": "una",
+    "mastodon": "https://front-end.social/@una",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/gTvIXYVFxXMYjBiZxysB.jpg"
   },
   "surma": {
@@ -311,6 +314,7 @@
     "twitter": "andreban",
     "glitch": "andreban",
     "github": "andreban",
+    "mastodon": "https://mastodon.social/@andreban",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/JEp8KytgeB3nYFintp4W.jpg"
   },
   "peconn": {
@@ -328,6 +332,7 @@
   },
   "adrianajara": {
     "country": "US",
+    "mastodon": "https://indieweb.social/@tropicadri",
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
   },
   "agektmr": {
@@ -335,6 +340,7 @@
     "twitter": "agektmr",
     "github": "agektmr",
     "glitch": "agektmr",
+    "mastodon": "https://infosec.exchange/@agektmr",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
   "titouan": {
@@ -462,6 +468,7 @@
     "twitter": "sw12",
     "github": "samdutton",
     "glitch": "samdutton",
+    "mastodon": "https://techhub.social/@samdutton",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
   },
   "maudn": {
@@ -508,6 +515,7 @@
     "twitter": "tomayac",
     "github": "tomayac",
     "glitch": "tomayac",
+    "mastodon": "https://toot.cafe/@tomayac",
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
@@ -632,6 +640,7 @@
     "country": "US",
     "github": "heyawhite",
     "twitter": "heyawhite",
+    "mastodon": "https://mstdn.social/@alexandrawhite",
     "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
   },
   "aaronhk": {
@@ -683,6 +692,7 @@
     "twitter": "rachelandrew",
     "github": "rachelandrew",
     "homepage": "https://rachelandrew.co.uk",
+    "mastodon": "https://front-end.social/@rachelandrew",
     "image": "image/kheDArv5csY6rvQUJDbWRscckLr1/DbljY0AD921j6PKWl6JC.jpeg"
   },
   "bgalbs": {
@@ -701,6 +711,7 @@
     "github": "jh3y",
     "linkedin": "https://www.linkedin.com/in/jheytompkins/",
     "homepage": "https://jhey.dev/links",
+    "mastodon": "https://front-end.social/@jhey",
     "image": "image/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/JjwUlxDMTmjyFEvBC8wG.jpeg"
   },
   "mariahhart": {
@@ -803,6 +814,7 @@
     "twitter": "tunetheweb",
     "github": "tunetheweb",
     "homepage": "https://www.tunetheweb.com",
+    "mastodon": "https://webperf.social/@tunetheweb",
     "image": "image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/FzCdsVVLfgdqxfgs6BDc.jpeg"
   },
   "barbsmith": {
@@ -835,6 +847,7 @@
     "homepage": "https://www.bram.us/",
     "twitter": "bramus",
     "github": "bramus",
+    "mastodon": "https://front-end.social/@bramus",
     "country": "BE",
     "image": "image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/CQMqvg5UkY4weDnJij3b.jpeg"
   },
@@ -985,5 +998,19 @@
     "github": "adamsilverstein",
     "twitter": "adamsilverstein",
     "image": "image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/a58pQb092GyDr5S7vOeg.webp"
+  },
+  "djuffin": {
+    "github": "djuffin",
+    "image": "image/admin/MWYHP293xzaBdw30G3Ts.jpg"
+  },
+  "nateschloss": {
+    "github": "n8schloss",
+    "twitter": "n8schloss",
+    "image": "image/admin/BS9rSjcVynuKi2SX5Whu.jpg"
+  },
+  "andrewcomminos": {
+    "github": "acomminos",
+    "twitter": "acomminos",
+    "image": "image/admin/ykAIcNpbomeiulF6Kw7P.jpg"
   }
 }

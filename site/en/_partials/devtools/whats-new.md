@@ -2,7 +2,7 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
-<!-- $content -->
+{# $content #}
 
 ### Chrome 108 {: #chrome108 }
 
@@ -44,6 +44,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Support mouse over event in the Recorder panel](/blog/new-in-devtools-105/#recorder-hover)
 * [Largest Contentful Paint (LCP) in the Performance insights panel](/blog/new-in-devtools-105/#lcp)
 * [Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts](/blog/new-in-devtools-105/#foit-fout)
+* [Protocol handlers in the Manifest pane](/blog/new-in-devtools-105/#manifest)
 * [Top layer badge in the Elements panel](/blog/new-in-devtools-105/#top-layer)
 * [Attach Wasm debugging information at runtime](/blog/new-in-devtools-105/#wasm)
 * [Support live edit during debugging](/blog/new-in-devtools-105/#live-edit)

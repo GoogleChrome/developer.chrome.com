@@ -5,7 +5,7 @@ subtitle: >
    The Federated Credential Management API is shipping in Chrome 108.
 description: >
    The Federated Credential Management API is shipping in Chrome 108.
-hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
+hero: image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/hffBwKwv3jmbHSYCsjfQ.png
 alt: "Four people holding and crossing hands."
 authors:
  - agektmr

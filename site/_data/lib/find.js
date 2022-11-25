@@ -66,7 +66,16 @@ const findByUrl = (collection, url, locale = '') => {
     locale = path.join('/', locale);
   }
 
-  const urlToFind = path.join(locale, url);
+  let urlToFind = path.join(locale, url);
+  const result = internalFind(collection, urlCacheKey, 'url', urlToFind);
+  // If something has been found or nothing has been found while
+  // not specifying a locale, end here. If a locale has been defined
+  // we want to try searching again with the default locale
+  if (result || !locale) {
+    return result;
+  }
+
+  urlToFind = path.join('/', defaultLocale, url);
   return internalFind(collection, urlCacheKey, 'url', urlToFind);
 };
 

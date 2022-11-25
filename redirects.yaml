@@ -13,6 +13,9 @@
 # WARNING! Redirects DO NOT take priority over static content.
 # For example, if you try to redirect "/foo" but the site contains a static file
 # "/foo/index.html", the static file will always win.
+#
+# For anchors that let you redirect from #section to #section,
+# see developer.chrome.com/docs/handbook/how-to/create-anchor-redirects/.
 
 redirects:
 
@@ -38,6 +41,9 @@ redirects:
 
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
+
+- from: /android
+  to: /docs/android
 
 # FYI (simeonv): Until https://github.com/samthor/redirects-yaml/pull/2 is merged, the hash on the
 # redirect destination will be ignored
@@ -88,6 +94,9 @@ redirects:
 
 - from: /blog/capture-handle/
   to: /docs/web-platform/capture-handle/
+
+- from: /blog/shared-element-transitions-for-spas/
+  to: /docs/web-platform/view-transitions/
 
 # Removal of /overview pages
 
@@ -151,7 +160,7 @@ redirects:
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
-  to: /docs/extensions/reference/#platform-apis
+  to: /docs/extensions/reference/#platform_apps_apis
 
 - from: /apps/app_codelab1_setup
   to: /docs/apps/app_codelab_intro
@@ -190,9 +199,6 @@ redirects:
 
 - from: /docs/devtools/javascript/sources
   to: /docs/devtools/sources
-
-- from: /docs/devtools/progressive-web-apps/#add-to-homescreen
-  to: /docs/devtools/progressive-web-apps/#trigger-installation
 
 - from: /docs/devtools/css/print-preview
   to: /docs/devtools/rendering
@@ -234,7 +240,7 @@ redirects:
   to: /docs/devtools/javascript/reference/#format
 
 - from: /docs/devtools/manage-data/local-storage/
-  to: /docs/devtools/#storage
+  to: /docs/devtools/storage/localstorage/
 
 - from: /docs/devtools/network/network-conditions/
   to: /docs/devtools/network/reference/
@@ -327,9 +333,6 @@ redirects:
 
 - from: /docs/extensions/mv3/intro/mv3-migration
   to: /docs/extensions/mv3/mv3-migration
-
-- from: /docs/extensions/mv3/getstarted/#unpacked
-  to: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
 - from: /home
   to: /

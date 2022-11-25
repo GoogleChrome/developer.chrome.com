@@ -1161,7 +1161,7 @@ joeytrotz:
   title:
     en: 'Joey Trotz'
   description:
-    en: 'Director of Product Management, Privacy Sandbox'
+    en: 'Joey is the Director of Product for Privacy Sandbox Ecosystems'
 samuelgoto:
   title:
     en: 'Sam Goto'
@@ -1187,3 +1187,88 @@ adamsilverstein:
     en: 'Adam Silverstein'
   description:
     en: 'Developer Relations Engineer at Google'
+djuffin:
+  title:
+    en: Eugene Zemtsov
+    es: Eugene Zemtsov
+    ja: Eugene Zemtsov
+    ko: Eugene Zemtsov
+    pt: Eugene Zemtsov
+    ru: Eugene Zemtsov
+    zh: Eugene Zemtsov
+  description:
+    en: Our latest news, updates, and stories by Eugene Zemtsov.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Eugene Zemtsov.
+    ja: Eugene Zemtsov による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Eugene Zemtsov의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Eugene Zemtsov.
+    ru: Последние новости и статьи от Eugene Zemtsov.
+    zh: Eugene Zemtsov 撰写我们的最新资讯、动态和故事。
+nateschloss:
+  title:
+    en: Nate Schloss
+    es: Nate Schloss
+    ja: Nate Schloss
+    ko: Nate Schloss
+    pt: Nate Schloss
+    ru: Nate Schloss
+    zh: Nate Schloss
+  description:
+    en: Our latest news, updates, and stories by Nate Schloss.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Nate Schloss.
+    ja: Nate Schloss による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Nate Schloss의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Nate Schloss.
+    ru: Последние новости и статьи от Nate Schloss.
+    zh: Nate Schloss 撰写我们的最新资讯、动态和故事。
+andrewcomminos:
+  title:
+    en: Andrew Comminos
+    es: Andrew Comminos
+    ja: Andrew Comminos
+    ko: Andrew Comminos
+    pt: Andrew Comminos
+    ru: Andrew Comminos
+    zh: Andrew Comminos
+  description:
+    en: Our latest news, updates, and stories by Andrew Comminos.
+    es: Consulte las últimas noticias, actualizaciones e historias publicadas por Andrew Comminos.
+    ja: Andrew Comminos による最新のニュース、アップデート情報、記事などをご紹介します。
+    ko: Andrew Comminos의 최신 뉴스, 업데이트 및 스토리.
+    pt: Nossas últimas notícias, atualizações e histórias por Andrew Comminos.
+    ru: Последние новости и статьи от Andrew Comminos.
+    zh: Andrew Comminos 撰写我们的最新资讯、动态和故事。
+alexshalamov:
+  title:
+    en: Alex Shalamov
+    es: Alex Shalamov
+    ja: Alex Shalamov
+    ko: Alex Shalamov
+    pt: Alex Shalamov
+    ru: Alex Shalamov
+    zh: Alex Shalamov
+  description:
+    en: Alex is an Engineer at Intel
+    es: Alex es un ingeniero en Intel
+    ja: Alex は Intel のエンジニアです
+    ko: Alex는 Intel의 엔지니어입니다.
+    pt: Alex é engenheiro na Intel
+    ru: Алекс — инженер в компании Intel
+    zh: Alex 是 Intel 的一名工程师
+pozdnyakov:
+  title:
+    en: Mikhail Pozdnyakov
+    es: Mikhail Pozdnyakov
+    ja: Mikhail Pozdnyakov
+    ko: Mikhail Pozdnyakov
+    pt: Mikhail Pozdnyakov
+    ru: Mikhail Pozdnyakov
+    zh: Mikhail Pozdnyakov
+  description:
+    en: Mikhail is an Engineer at Intel
+    es: Mikhail es un ingeniero en Intel
+    ja: Mikhail は Intel のエンジニアです
+    ko: Mikhail은 Intel의 엔지니어입니다.
+    pt: Mikhail é engenheiro na Intel
+    ru: Михаил — инженер в компании Intel
+    zh: Mikhail 是 Intel 的一名工程师
