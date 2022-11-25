@@ -2,14 +2,14 @@
 layout: 'layouts/blog-post.njk'
 title: Verbesserung des Datenschutzes und der Entwicklererfahrung mit User-Agent-Client-Hinweisen
 subhead: User-Agent-Client-Hinweise (User-Agent Client Hints) sind eine neue Erweiterung des Client-Hinweise-APIs (Client Hints API), die Entwicklern auf datenschutzerhaltende und ergonomische Weise Zugriff auf Browserinformationen eines Benutzers ermöglicht.
+hero: image/admin/xlg4t3uiTp0L5TBThFHQ.jpg
+thumbnail: image/admin/hgxRNa56Vb9o3QRwIrm9.jpg
+alt: Eine Blaupause einer Brücke und einige alte Werkzeuge für Entwurfszeichnungen.
 authors:
   - rowan_m
   - yoavweiss
 date: 2020-06-25
 updated: 2021-09-10
-hero: image/admin/xlg4t3uiTp0L5TBThFHQ.jpg
-thumbnail: image/admin/hgxRNa56Vb9o3QRwIrm9.jpg
-alt: Eine Blaupause einer Brücke und einige alte Werkzeuge für Entwurfszeichnungen.
 tags:
   - privacy
   - security
