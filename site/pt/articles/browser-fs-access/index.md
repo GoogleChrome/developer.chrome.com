@@ -7,6 +7,7 @@ description: Todos os navegadores modernos podem ler arquivos e diretórios loca
 date: 2020-07-27
 updated: 2022-01-25
 hero: image/admin/Y4wGmGP8P0Dc99c3eKkT.jpg
+alt: ''
 tags:
   - progressive-web-apps
   - capabilities

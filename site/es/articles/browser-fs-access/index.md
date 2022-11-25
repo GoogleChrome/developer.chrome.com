@@ -7,6 +7,7 @@ description: Todos los navegadores modernos pueden leer archivos y directorios l
 date: 2020-07-27
 updated: 2021-01-27
 hero: image/admin/Y4wGmGP8P0Dc99c3eKkT.jpg
+alt: ''
 tags:
   - progressive-web-apps
   - capabilities
