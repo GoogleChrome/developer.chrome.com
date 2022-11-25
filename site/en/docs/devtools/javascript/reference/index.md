@@ -340,9 +340,13 @@ As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-c
 
 To hide known third-party sources:
 
-1. Make sure the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting is enabled.
+1. Make sure the following two settings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** are enabled:
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4aIHYQjq5gxgrPF9MbkD.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="496" %}
+   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**
+  
+   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JOwVIMb8WzRCacSq4oeK.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="506" %}
 
 1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
@@ -390,12 +394,21 @@ To ignore a script from the **Call Stack** pane:
 
 To ignore a single script or pattern of scripts from Settings:
 
-1.  Open [Settings][3].
-2.  Go to the **Ignore List** tab.
-    {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
-3.  Click **Add pattern**.
-4.  Enter the script name or a regex pattern of script names to ignore.
-5.  Click **Add**.
+1. Open [Settings][3].
+1. Go to the **Ignore List** tab.
+1. Make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing** is checked.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oNWiT5ZdB1FCDNE6TuXp.png", alt="Ignoring a script from Settings.", width="800", height="576" %}
+1. Under **Custom exclusion rules**, click **Add pattern**.
+1. Enter the script name or a RegEx pattern of script names to ignore.
+1. Click **Add**.
+
+For more information on checkboxes under **General exclusion rules**, see:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Add content scripts to ignore list**](/docs/devtools/javascript/ignore-chrome-extension-scripts/)
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**:
+
+  - [Show ignore-listed frames](/docs/devtools/javascript/reference/#show-ignore-listed-frames)
+  - [Hide ignore-listed sources from the file tree](/docs/devtools/javascript/reference/#hide-ignore-listed)
 
 ## Run snippets of debug code from any page {: #snippets }
 
