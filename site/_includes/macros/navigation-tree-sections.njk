@@ -18,7 +18,7 @@ and marks it as active.
       <div class="navigation-tree__icon">
         {{ icon('arrow-right', {hidden: true}) }}
       </div>
-      <span>{{ item.title | i18n }}</span>
+      <span class="section-title">{{ item.title | i18n }}</span>
     </button>
     <div class="navigation-tree__nested">
       {{ navigationTreeSectionsInternal(item.sections) }}
@@ -48,8 +48,15 @@ and marks it as active.
       {% endif %}
 
       {% if post %}
+      
+        {% if item.title %}
+          {% set articleTitle = item.title | i18n(locale) %}
+        {% else %}
+           {% set articleTitle = post.data.title %}
+        {% endif %}
+        
         <a href="{{ post.url }}" class="navigation-tree__link" {% if item.active %}{{ helpers.getLinkActiveState(post.url, page.url) | safe }}{% endif %}>
-          <span>{{ post.data.title }}</span>
+          <span class="article-title">{{ articleTitle }}</span>
         </a>
       {% endif %}
     {% endif %}

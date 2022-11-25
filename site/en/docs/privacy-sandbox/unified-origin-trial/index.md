@@ -7,7 +7,8 @@ subhead: >
 description: >
    Run unified experiments across Attribution Reporting, FLEDGE,
    Topics, Fenced Frames, and Shared Storage.
-date: 2022-10-20
+date: 2022-09-08
+updated: 2022-11-04
 authors:
   - anusmitaray
   - rowan_m
@@ -29,7 +30,59 @@ your configuration, and provides further resources for testing against the APIs.
 
 ## Check the status of the origin trial {: #status}
 
-### October 2022: 5% increase
+### November 2022
+
+Shared Storage’s `selectURL` API will be [joining the origin
+trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlBwB_UAQAJ)
+at 1% of Chrome Stable traffic from November 9th. As previously announced in the
+[Increasing the Privacy Sandbox Relevance and Measurement origin trial to
+5%](/blog/privacy-sandbox-origin-trial-increase/) blog post, Attribution
+Reporting and Topics are now at 5% with FLEDGE and Fenced Frames also following
+on November 9th.
+
+<table>
+  <tr>
+   <th>API</th>
+   <th>Notes</th>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a>
+   </td>
+   <td>Available in Stable, increased to 5% from October 26th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
+   </td>
+   <td>Available in Stable, increasing to 5% from November 9th.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
+   </td>
+   <td>Will be available in Stable, starting at 1% from November 9th.
+   </td>
+  </tr>
+</table>
+
+{% Details %} {% DetailsSummary %}
+### Previous updates
+
+Check out previous updates on the origin trial. {% endDetailsSummary %}
+
+#### October 2022: 5% increase
 
 Attribution Reporting, Topics, FLEDGE, and Fenced Frames are all currently
 available in Chrome Stable and will be part of the increased traffic. We will
@@ -74,11 +127,6 @@ FLEDGE and Fenced Frames will increase from November 9th. Read more in the
    </td>
   </tr>
 </table>
-
-{% Details %} {% DetailsSummary %}
-### Previous updates
-
-Check out previous updates on the origin trial. {% endDetailsSummary %}
 
 #### October 2022
 
@@ -380,6 +428,10 @@ if ('HTMLFencedFrameElement' in window) {
 
 if ('sharedStorage' in window) {
   // Shared Storage enabled
+}
+
+if (window?.sharedStorage?.selectURL instanceof Function) {
+  // optionally check specifically for the selectURL function in Shared Storage
 }
 ```
 

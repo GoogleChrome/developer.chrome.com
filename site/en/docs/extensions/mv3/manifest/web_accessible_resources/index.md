@@ -61,7 +61,7 @@ Each object in the array contains these elements:
 : An array of strings, each containing the ID of an extension that can access the resources.
 
 `"use_dynamic_url"`
-: If true, only allow resources to be access through a dynamic ID. A dynamic ID is generated per session. That means it is regenerated when the browser restarts or the extension reloads.
+: If true, only allow resources to be accessed through a dynamic ID. A dynamic ID is generated per session. That means it is regenerated when the browser restarts or the extension reloads.
 
 Each element must include a `"resources"` element and either a `"matches"` or `"extension_ids"` element. This establishes a mapping that exposes the specified resources to either web pages matching the pattern or to extensions with matching IDs. The `"use_dynamic_url"` element is optional.
 

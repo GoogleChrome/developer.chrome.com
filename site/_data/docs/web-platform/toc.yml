@@ -20,8 +20,10 @@
 - title: i18n.docs.web-platform.developer-trials
   sections:
     - url: /docs/web-platform/compute-pressure
+    - url: /docs/web-platform/view-transitions
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:
     - url: /docs/web-platform/declarative-link-capturing
     - url: /docs/web-platform/storage-foundation
+    - url: /docs/web-platform/notification-triggers

@@ -38,6 +38,7 @@ See the [Page Redder][2] sample extension:
   "version": "2.0",
   "permissions": [
     "activeTab"
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
@@ -90,7 +91,7 @@ While the `activeTab` permission is enabled for a tab, an extension can:
 
 The following user gestures enable `activeTab`:
 
-- Executing a [action][10]
+- Executing an [action][10]
 - Executing a [context menu item][11]
 - Executing a keyboard shortcut from the [commands API][12]
 - Accepting a suggestion from the [omnibox API][13]
