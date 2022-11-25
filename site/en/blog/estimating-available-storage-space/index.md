@@ -99,7 +99,7 @@ origin.)
 If a web application attempts to store—using, for example, IndexedDB or the
 Cache Storage API—data that's large enough to bring a given origin over its
 available quota, the request will fail with a
-[`QuotaExceededError`](https://developer.mozilla.org/en-US/docs/Web/API/DOMException#exception-QuotaExceededError)
+[`QuotaExceededError`](https://developer.mozilla.org/docs/Web/API/DOMException#exception-QuotaExceededError)
 exception.
 
 ### Storage estimates in action 
