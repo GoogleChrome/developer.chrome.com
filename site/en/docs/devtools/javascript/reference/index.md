@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-09-22
+updated: 2022-11-29
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
