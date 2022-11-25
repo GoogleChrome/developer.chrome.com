@@ -1,9 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: 'The File System Access API: simplifying access to local files'
-subhead:
-The File System Access API allows web apps to read or save changes directly to files and folders
-on the user's device.
+subhead: The File System Access API allows web apps to read or save changes directly to files and folders on the user's device.
 authors:
   - petelepage
   - thomassteiner
