@@ -82,9 +82,9 @@ Alternatively, use the width presets bar to set the width with a click to one of
 </tbody>
 </table>
 
-#### Show media queries {: #queries }
+### Show media queries {: #queries }
 
-To show media query breakpoints above your viewport, click **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Show media queries**.
+To show media query breakpoints above your viewport, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} **More options** > **Show media queries**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y8OPepQNYdD6of4QC8if.png", alt="Show media queries.", width="800", height="567" %}
 
@@ -101,7 +101,7 @@ To find the corresponding `@media` declaration, right-click between breakpoints 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rhOtkyEwDf0bJE3TAEjF.png", alt="Reveal in source code drop-down menu.", width="800", height="447" %}
 
-#### Set the device type {: #type }
+### Set the device type {: #type }
 
 Use the **Device Type** list to simulate a mobile device or desktop device.
 
@@ -124,7 +124,7 @@ To simulate the dimensions of a specific mobile device, select the device from t
 
 For more information, see [Add a custom mobile device](#custom).
 
-#### Rotate the viewport to landscape orientation {: #landscape }
+### Rotate the viewport to landscape orientation {: #landscape }
 
 Click **Rotate** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CjWGNTZnTdtOPPEnZjEk.svg", alt="Rotate.", width="24", height="24" %} to rotate the viewport to landscape orientation.
 
@@ -136,7 +136,7 @@ Note that the **Rotate** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CjWGNTZn
 
 See also [Set orientation][8].
 
-#### Show device frame {: #frame }
+### Show device frame {: #frame }
 
 When simulating the dimensions of a specific mobile device like a Nest Hub, select **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Show device frame** to show the physical device frame around the viewport.
 
@@ -153,7 +153,7 @@ In this example, DevTools shows the frame for the Nest Hub.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DsjFEajcQnpTGxuStqax.png", alt="The device frame for the Nest Hub.", width="800", height="516" %}
 
-#### Add a custom mobile device {: #custom }
+### Add a custom mobile device {: #custom }
 
 To add a custom device:
 
@@ -181,11 +181,21 @@ DevTools shows rulers above and to the left of the viewport.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/R7cckrDXSPs0NJBxQ2GB.png", alt="Rulers above and to the left of the viewport.", width="800", height="546" %}
 
+Click the rulers at specific marks to set the viewport's width and height.
+
 ### Zoom the viewport {: #zoom }
 
 Use the **Zoom** list to zoom in or out.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JFYPAyC2AO5mExJ8p1Je.png", alt="Zoom.", width="800", height="546" %}
+
+### Capture a screenshot {: #screenshot }
+
+To capture a screenshot of what you currently see in the viewport, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} **More options** > **Capture screenshot**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x2EqWnDtfdjjuGnyDmdq.png", alt="The Capture screenshot option in the More options menu.", width="800", height="626" %}
+
+To capture a screenshot of the whole page including the content that isn't currently visible in the viewport, select **Capture a full size screenshot** from the same menu.
 
 ## Throttle the network and CPU {: #throttle }
 
