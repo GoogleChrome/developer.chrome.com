@@ -101,6 +101,22 @@ To find the corresponding `@media` declaration, right-click between breakpoints 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/rhOtkyEwDf0bJE3TAEjF.png", alt="Reveal in source code drop-down menu.", width="800", height="447" %}
 
+### Set device pixel ratio {: #dpr }
+
+[Device pixel ratio (DPR)](https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio) is the ratio between physical pixels on the hardware screen and logical (CSS) pixels. In other words, DPR tells Chrome how many screen pixels to use to draw a CSS pixel. Chrome uses the DPR value when drawing on HiDPI (High Dots Per Inch) displays.
+
+To set a DPR value:
+
+1. Click **More options** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="More options.", width="20", height="20" %} > **Add device pixel ratio**.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lhWacswryP5MHsaesMQe.png", alt="Add device pixel ratio.", width="800", height="489" %}
+
+1. In the action bar at the top of the viewport, select a DPR value from the new **DPR** drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EtjNHXY7QFAQythiNtCw.png", alt="Setting the DPR value.", width="800", height="489" %}
+
+
+
 ### Set the device type {: #type }
 
 Use the **Device Type** list to simulate a mobile device or desktop device.
