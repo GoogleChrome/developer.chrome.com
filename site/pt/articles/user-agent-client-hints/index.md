@@ -1,14 +1,12 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Melhorando a privacidade do usuário e a experiência do desenvolvedor com User-Agent Client Hints
-subhead: |-
-User-Agent Client Hints são uma nova expansão da API Client Hints, que
-permite que os desenvolvedores acessem informações (dicas) sobre o navegador de um usuário de forma ergonômica e preservando sua privacidade.
+subhead: User-Agent Client Hints são uma nova expansão da API Client Hints, que permite que os desenvolvedores acessem informações (dicas) sobre o navegador de um usuário de forma ergonômica e preservando sua privacidade.
+date: 2020-06-25
+updated: 2021-02-12
 authors:
   - rowan_m
   - yoavweiss
-date: 2020-06-25
-updated: 2021-02-12
 hero: image/admin/xlg4t3uiTp0L5TBThFHQ.jpg
 thumbnail: image/admin/hgxRNa56Vb9o3QRwIrm9.jpg
 alt: Uma variedade de pegadas na neve. Uma dica de quem esteve lá.
