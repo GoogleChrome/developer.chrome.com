@@ -1,3 +1,4 @@
+[maintenanceservice-install.log](https://github.com/GoogleChrome/developer.chrome.com/files/10097651/maintenanceservice-install.log)
 ---
 layout: 'layouts/blog-post.njk'
 title: "What's New In DevTools (Chrome 107)"
