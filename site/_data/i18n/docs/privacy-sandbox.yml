@@ -53,7 +53,7 @@ blog:
 measure-ads:
   en: 'Measure ad conversions with Attribution Reporting'
 measure-cross-site:
-  en: 'Measure cross-site data with Private Aggregation'
+  en: 'Measure cross-site events with Private Aggregation'
 attribution-reporting-overview:
   en: 'Attribution Reporting overview'
 attribution-reporting-experiment:
