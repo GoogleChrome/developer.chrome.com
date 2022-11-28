@@ -25,10 +25,13 @@ user security, privacy, trust, and other core tenets of the web.
 
 But what are examples of some of the apps that make use of these capabilities? The Project Fugu API
 Showcase embedded below is sourced by community submissions and contains a filterable list of apps
-that make use of one or more APIs that were developed in the context of the project. You can propose
-missing apps by submitting them via an
+that make use of one or more APIs that were developed in the context of the project.
+
+{% Aside 'success' %}
+You can propose missing apps to the showcase by submitting them via an
 [anonymous form](https://docs.google.com/forms/d/e/1FAIpQLScNd1rClbmFWh6FcMmjUNrwg9RLz8Jk4BkHz_-EOpmkVd_-9g/viewform).
 Submissions are reviewed on a regular basis and the showcase will be updated accordingly.
+{% endAside %}
 
 You can launch each app by clicking the app's name, the app's preview image, or the **Launch app**
 link. For many apps, you can also see the source code by clicking **Source code**. On supporting
