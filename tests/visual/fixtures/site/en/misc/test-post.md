@@ -165,6 +165,30 @@ Text can be *Emphasised*, **Bold** or use ~~Strikethrough.~~
   tincidunt posuere</span>.
 </p>
 
+### Elevation
+
+There are 5 levels of elevation:
+
+<div class="elevation--1">
+  <div>One</div>
+</div>
+
+<div class="elevation--2">
+  <div>Two</div>
+</div>
+
+<div class="elevation--3">
+  <div>Three</div>
+</div>
+
+<div class="elevation--4">
+  <div>Four</div>
+</div>
+
+<div class="elevation--5">
+  <div>Five</div>
+</div>
+
 ### Buttons
 
 Material button with no bg:
