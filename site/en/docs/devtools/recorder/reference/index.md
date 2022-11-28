@@ -410,20 +410,25 @@ Fill in an email address and observe the selector value (`[data-automate=email-a
 
 ### Selector priority {: #selector-priority }
 
-The **Recorder** looks for selectors in the following order:
+The **Recorder** looks for selectors in the following order depending on if you specified a custom CSS selector attribute:
 
-1. ARIA selector if found.
-1. CSS selectors in the following order:
-   1. Your custom selector attribute if you specified it at the start of the recording.
-   1. The most common attributes used for testing: {: #selectors }
-      - `data-testid`
-      - `data-test`
-      - `data-qa`
-      - `data-cy`
-      - `data-test-id`
-      - `data-qa-id`
-      - `data-testing`
-   1. ID attributes, for example, `<div id="some_ID">`.
-   1. Regular CSS selectors.
-1. XPath selector.
-1. A selector with the shortest unique text if found.
+- If specified:
+  1. CSS selector with your custom CSS attribute.
+  1. XPath selector.
+  1. ARIA selector if found.
+  1. A selector with the shortest unique text if found.
+- If not specified:
+  1. ARIA selector if found.
+  1. One of CSS selectors with the following priority:
+     1. The most common attributes used for testing: {: #selectors }
+         - `data-testid`
+         - `data-test`
+         - `data-qa`
+         - `data-cy`
+         - `data-test-id`
+         - `data-qa-id`
+         - `data-testing`
+     1. ID attributes, for example, `<div id="some_ID">`.
+     1. Regular CSS selectors.
+  1. XPath selector.
+  1. A selector with the shortest unique text if found.
