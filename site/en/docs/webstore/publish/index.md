@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2022-11-10
+updated: 2022-12-02
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -63,7 +63,7 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 ### Set up your account {: #setup-a-developer-account }
 
-After registering, finish setting up or developer account on the Account page, accessible via the link in the left menu.
+After registering, finish setting up your developer account on the Account page. (To access the Account page click the link in the left menu.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
 
@@ -78,7 +78,7 @@ Here you can provide your developer profile information, configure management se
 | **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
 
 {% Aside 'important' %}
-The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums.
+The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only truested testers from the current publisher settings**.
 {% endAside %}
 
 
