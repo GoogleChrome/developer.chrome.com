@@ -226,6 +226,23 @@ Text button:
   </div>
 </div>
 
+### Switcher
+
+<div class="switcher">
+  <figure>
+    {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+    <figcaption>
+      Small image.
+    </figcaption>
+  </figure>
+  <figure>
+    {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+    <figcaption>
+      Small image.
+    </figcaption>
+  </figure>
+</div>
+
 ## Shortcodes
 
 ---
@@ -263,6 +280,13 @@ This type of callout can be used to describe/expand upon key terms
 {% Aside 'codelab' %}
 This type of callout can be used to link out to code samples
 {% endAside %}
+
+### Blockquote
+
+{% Blockquote 'Jon Doe', 'pullquote' %}
+[Lorem ipsum](#) dolor sit amet, consectetur adipiscing elit. Proin dictum
+a massa sit amet ullamcorper.
+{% endBlockquote %}
 
 ### Columns
 
@@ -397,6 +421,3 @@ Partials can be used to load and inline templates from the partials directory
 ### Video
 
 {% Video src="video/T4FyVKpzu4WKF1kBNvXepbi08t52/4tFe6RarBGc5Jre1bScp.mp4", muted="true" %}
-
-
-
