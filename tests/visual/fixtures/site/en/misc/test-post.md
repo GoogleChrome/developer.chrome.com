@@ -96,6 +96,8 @@ function foo() {
 }
 ```
 
+{% Label %}Labelled css block:{% endLabel %}
+
 ```css
 figure {
   break-inside: avoid;
@@ -279,6 +281,12 @@ ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus
 ```
 {% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```
+
+### Partials
+
+Partials can be used to load and inline templates from the partials directory
+
+{% Partial 'test.md' %}
 
 
 
