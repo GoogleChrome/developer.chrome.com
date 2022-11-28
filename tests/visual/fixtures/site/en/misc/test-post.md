@@ -12,7 +12,7 @@ tags:
   - aurora-project
 ---
 
-## Markdown
+## Markdown / HTML
 
 ---
 
@@ -48,9 +48,40 @@ sit amet ullamcorper.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper.
 
-### Image
+### Images
+
+**Markdown:**
 
 ![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png)
+
+**Html:**
+
+<figure>
+  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+  <figcaption>Image with caption</figcaption>
+</figure>
+
+**Floated:**
+
+<figure data-float="right">
+  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+</figure>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper.
+
+**Full width:**
+
+<figure data-size="full">
+ {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+</figure>
+
+**Screenshot**
+
+<figure data-screenshot>
+ {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+</figure>
 
 ### Horizontal rule
 
@@ -120,6 +151,26 @@ figure {
 ### Text formatting
 
 Text can be *Emphasised*, **Bold** or use ~~Strikethrough.~~
+
+### Buttons
+
+Material button with no bg:
+
+<a class="material-button button-filled">Test</a>
+
+Material button with bg:
+
+<a class="material-button button-filled color-bg bg-primary">Test</a>
+
+Rounded material button:
+
+<a class="material-button button-filled color-bg bg-primary button-round">Test</a>
+
+Text button:
+
+<button class="material-button button-text color-primary">
+  Text button
+</button>
 
 ## Shortcodes
 
