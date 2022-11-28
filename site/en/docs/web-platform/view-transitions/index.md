@@ -136,7 +136,7 @@ The old view animates from `opacity: 1` to `opacity: 0`, while the new view anim
 All of the animation is performed using CSS animations, so they can be customized with CSS.
 
 {% Aside %}
-The old and new views also have [`mix-blend-box: plus-lighter`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode), and the `::view-transition-image-pair` has [`isolation: isolate`](https://developer.mozilla.org/en-US/docs/Web/CSS/isolation). This is required to create a correct cross-fade. If you're interested in why, here's [far too many words on the topic](https://jakearchibald.com/2021/dom-cross-fade/).
+The old and new views also have [`mix-blend-box: plus-lighter`](https://developer.mozilla.org/docs/Web/CSS/mix-blend-mode), and the `::view-transition-image-pair` has [`isolation: isolate`](https://developer.mozilla.org/docs/Web/CSS/isolation). This is required to create a correct cross-fade. If you're interested in why, here's [far too many words on the topic](https://jakearchibald.com/2021/dom-cross-fade/).
 {% endAside %}
 
 ## Simple customization
