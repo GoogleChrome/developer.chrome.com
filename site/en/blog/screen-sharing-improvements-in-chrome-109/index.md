@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-11-16
+date: 2022-11-28
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/1gYV3BbeqdYWvolyzP0E.jpg
 alt: Brown wooden letter t-embossed decor photo.
 tags:
