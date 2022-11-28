@@ -118,10 +118,12 @@ To apply this setting, reload DevTools.
 {% Details %}
 
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** lets you open panels with the keyboard.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** lets you open panels using the keyboard.
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+This example shows how to switch between four main tabs using the keyboard shortcut.
 {% endDetails %}
 
 {% Details %}
@@ -320,7 +322,7 @@ Requires to reload DevTools. Options do the following:
 {% endDetailsSummary %}
 
 {% Aside 'gotchas' %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** overrides this setting and sets indentation to the that of the source file. Requires to reaload DevTools.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Detect indentation** overrides this setting and sets indentation to the that of the source file. Requires to reload DevTools.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable tab moves focus** overrides the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/S524x8aO4ifUuMRDCf6p.svg", alt="Tab key.", width="24", height="24" %} <kbd>Tab</kbd> key. It moves focus instead of inserting characters.
 
@@ -330,7 +332,7 @@ Requires to reload DevTools. Options do the following:
 <fieldset>
    <legend>Default indentation:</legend>
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MGVhZwyQduSG0YHI5Zz9.gif", alt="Disabling overriding options and changing default indentation from two spaces to eitght, then to the Tab key.", width="450", height="350", style="float:right;", class="screenshot" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MGVhZwyQduSG0YHI5Zz9.gif", alt="Disabling overriding options and changing default indentation from two spaces to eight, then to the Tab key.", width="450", height="350", style="float:right;", class="screenshot" %}
 
 - 2 spaces
 - 4 spaces
