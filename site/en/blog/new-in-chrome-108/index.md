@@ -8,7 +8,7 @@ authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/cGAnSrbzBlcpeD827tFY.png'
 alt: >
-  New in Chrome hero logo
+  New in Chrome hero logo.
 tags:
   - new-in-chrome
   - chrome-108
