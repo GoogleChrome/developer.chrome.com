@@ -1,12 +1,25 @@
 .playlist {
   display: flex;
+  flex-wrap: wrap;
   padding: px-to-rem(32px) 0 px-to-rem(32px) px-to-rem(32px);
 
+  @media screen and (max-width: 960px) {
+    padding: 0;
+  }
+
   .playlist-details {
-    background-color: var(--color-red-lightest);
     flex-basis: px-to-rem(365px);
+    min-width: px-to-rem(365px);
     margin-right: px-to-rem(40px);
-    padding: px-to-rem(24px);
+
+    @media screen and (max-width: 960px) {
+      min-width: 100%;
+    }
+
+    .playlist-details-inner {
+      background-color: var(--color-red-lightest);
+      padding: px-to-rem(24px);
+    }
   }
 
   .playlist-action__link {
@@ -49,6 +62,10 @@
     padding-right: px-to-rem(32px);
     position: relative;
 
+    @media screen and (max-width: 960px) {
+      padding: px-to-rem(16px);
+    }
+
     &:hover {
       &::after {
         background-color: var(--color-red-lightest);
@@ -88,6 +105,11 @@
     display: flex;
     flex-basis: 100%;
     padding-bottom: px-to-rem(32px);
+
+    @media screen and (max-width: 960px) {
+      padding-bottom: px-to-rem(16px);
+      padding-right: px-to-rem(110px);
+    }
   }
 
   .playlist-video__number {
@@ -101,6 +123,15 @@
     min-width: px-to-rem(30px);
     position: relative;
 
+    @media screen and (max-width: 960px) {
+      font-size: px-to-rem(14px);
+      height: px-to-rem(22px);
+      line-height: px-to-rem(22px);
+      margin-right: px-to-rem(16px);
+      min-width: px-to-rem(22px);
+      max-width: px-to-rem(22px);
+    }
+
     &::after {
       border-left: 5px dotted get-color('red-300');
       content: "";
@@ -109,6 +140,10 @@
       left: px-to-rem(13px);
       position: absolute;
       width: 4px;
+
+      @media screen and (max-width: 960px) {
+        display: none;
+      }
     }
   }
 
@@ -116,10 +151,33 @@
     flex-basis: 204px;
     margin-right: px-to-rem(24px);
     min-width: 204px;
+
+    @media screen and (max-width: 960px) {
+      border-radius: px-to-rem(10px);
+      height: auto;
+      margin-right: 0;
+      min-width: px-to-rem(100px);
+      overflow: hidden;
+      position: absolute;
+      right: px-to-rem(16px);;
+      top: px-to-rem(16px);
+      width: px-to-rem(100px);
+    }
   }
 
   .playlist-video__details {
 
+    p {
+      @media screen and (max-width: 960px) {
+         font-size: px-to-rem(14px);
+         line-height: 1.5;
+      }
+    }
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+    }
   }
 
   .playlist-video__action {
@@ -130,5 +188,8 @@
   .playlist-video__title {
     font-weight: 500;
     line-height: 1rem;
+    @media screen and (max-width: 960px) {
+      margin-bottom: px-to-rem(6px);
+    }
   }
 }
