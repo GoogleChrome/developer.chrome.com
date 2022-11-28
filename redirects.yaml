@@ -95,6 +95,9 @@ redirects:
 - from: /blog/capture-handle/
   to: /docs/web-platform/capture-handle/
 
+- from: /blog/shared-element-transitions-for-spas/
+  to: /docs/web-platform/view-transitions/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/

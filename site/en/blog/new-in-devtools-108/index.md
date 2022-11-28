@@ -17,6 +17,8 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
+{% YouTube id='UVtXrWvq_oI' %}
+
 <!-- $contentStart -->
 
 ## Hints for inactive CSS properties {: #css-hint }
