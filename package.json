@@ -65,6 +65,7 @@
     "express": "^4.17.1",
     "glob": "^7.1.7",
     "google-auth-library": "^8.5.2",
+    "googleapis": "^109.0.1",
     "gorko": "^0.2.1",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
@@ -95,7 +96,8 @@
     "uslug": "^1.0.4",
     "web-vitals": "^3.0.4",
     "webdev-infra": "^1.0.33",
-    "xss": "^1.0.14"
+    "xss": "^1.0.14",
+    "youtube-playlist-summary": "^2.1.6"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
