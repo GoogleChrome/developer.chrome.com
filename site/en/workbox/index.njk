@@ -54,6 +54,7 @@ sections:
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/landing-section.njk' import landingSection with context %}
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/featured-section.njk' import featuredSection with context %}
 
 {# unique styles, needed only for Workbox hero card. #}
 <style>
@@ -80,6 +81,25 @@ sections:
   "yellow",
   "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg"
   )
+}}
+
+{{ featuredSection([
+    { postUrl: '/blog/insider-april-2022/',
+      actionUrl: '/blog/insider-april-2022/',
+      actionText: 'Discover'
+    }, 
+    { heading: '#100CoolWebMoments',
+      description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
+      imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
+      imgAlt: '#100CoolWebMoments',
+      actionUrl: '/blog/insider-april-2022/',
+      actionText: 'Discover the timeline'
+    },
+    { postUrl: '/blog/devtools-tips-2/',
+      actionUrl: '/blog/devtools-tips-2/',
+      actionText: 'Discover'
+    }
+  ]) 
 }}
 
 {{ landingSection(
