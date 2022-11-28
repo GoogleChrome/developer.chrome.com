@@ -209,6 +209,23 @@ Text button:
   Text button
 </button>
 
+### Stats
+
+<div class="stats">
+  <div class="stats__item">
+    <p class="stats__figure">30<sub>%</sub></p>
+    <p>Lower cost per conversion</p>
+  </div>
+  <div class="stats__item">
+    <p class="stats__figure">13<sub>%</sub></p>
+    <p>Higher CTR</p>
+  </div>
+  <div class="stats__item">
+    <p class="stats__figure">4<sub>x</sub></p>
+    <p>Faster load times</p>
+  </div>
+</div>
+
 ## Shortcodes
 
 ---
