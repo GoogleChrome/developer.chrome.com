@@ -19,5 +19,5 @@ key value filled in there.
 [1]: /docs/extensions/mv3/overview#relative-urls
 [2]: /docs/extensions/extension#method-getURL
 [3]: https://chrome.google.com/webstore/developer/dashboard
-[4]: /docs/extensions/packaging
+[4]: /docs/extensions/mv3/hosting
 [5]: https://www.chromium.org/user-experience/user-data-directory

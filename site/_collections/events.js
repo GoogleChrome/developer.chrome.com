@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+const memoize = require('../_js/utils/memoize');
 const authorsData = require('../_data/authorsData.json');
 const {defaultAvatarImg} = require('../_data/site.json');
 const startOfDay = new Date();
@@ -22,10 +22,9 @@ startOfDay.setHours(0, 0, 0, 0);
 /**
  * @returns {EventsCollectionItem[]}
  */
-const getEvents = ({collections, filter, sort, locale = 'en'}) => {
+const getEvents = memoize(({collections, locale = 'en'}) => {
   return collections
     .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
-    .filter(filter)
     .map(event => {
       const sessions = event.data.sessions.map(session =>
         processSession(session)
@@ -42,20 +41,17 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         sessions,
         image: event.data.image,
       };
-    })
-    .sort(sort);
-};
+    });
+});
 
 /**
  * @param {EleventyCollectionObject} collections
  * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event),
-    sort: (a, b) => b.date - a.date,
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event))
+    .sort((a, b) => b.date - a.date);
 };
 
 /**
@@ -63,16 +59,28 @@ const pastEvents = collections => {
  * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event) === false,
-    sort: (a, b) => a.date - b.date,
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event) === false)
+    .sort((a, b) => a.date - b.date);
+};
+
+/**
+ * @param {EleventyCollectionObject} collections
+ * @returns {{locations:string[], googlers:{}[], topics:string[]}}
+ */
+const eventTags = collections => {
+  const events = getEvents({collections});
+
+  return {
+    locations: uniqueLocations(events),
+    googlers: uniqueGooglers(events),
+    topics: uniqueTopics(events),
+  };
 };
 
 /**
  * @param {String} authorHandle
- * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
+ * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string, handle:string}}
  */
 const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
@@ -86,12 +94,13 @@ const getAuthorData = authorHandle => {
     title: `i18n.authors.${authorHandle}.title`,
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
+    handle: authorHandle,
   };
 };
 
 /**
  * @param session
- * @returns {{title}|*}
+ * @returns {EventSessionCollectionItem}
  */
 const processSession = session => {
   if (session.type === 'speaker') {
@@ -112,4 +121,48 @@ const isPastEvent = event => {
   return event.date < startOfDay;
 };
 
-module.exports = {currentEvents, pastEvents};
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {{}[]}
+ */
+const uniqueGooglers = events => {
+  const rawSpeakers = events
+    .map(e =>
+      e.sessions.flatMap(s => {
+        if (s.speaker) {
+          return {handle: s.speaker.handle, title: s.speaker.title};
+        }
+
+        return s.participants.map(p => ({handle: p.handle, title: p.title}));
+      })
+    )
+    .flat();
+
+  return rawSpeakers
+    .filter(
+      (s, i) => rawSpeakers.findIndex(first => s.handle === first.handle) === i
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueTopics = events => {
+  const topics = events.map(e => e.sessions.flatMap(s => s.topics)).flat();
+
+  return [...new Set(topics)].sort((a, b) => a.localeCompare(b));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueLocations = events => {
+  const locations = events.map(e => e.location);
+
+  return [...new Set(locations)].sort((a, b) => a.localeCompare(b));
+};
+
+module.exports = {currentEvents, pastEvents, eventTags};
