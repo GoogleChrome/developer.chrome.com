@@ -2,27 +2,28 @@
 
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/zh/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/zh/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/zh/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/zh/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-108/#misc)
- -->
+### Chrome 108 {: #chrome108 }
 
-<!-- ### Chrome 107 {: #chrome107 }
+* [不活跃 CSS 属性的提示](/zh/blog/new-in-devtools-108/#css-hint)
+* [在 Recorder 面板中自动检测 XPath 和文本选择器](/zh/blog/new-in-devtools-108/#recorder)
+* [逐步执行逗号分隔的表达式](/zh/blog/new-in-devtools-108/#debugging)
+* [改进的忽略列表设置](/zh/blog/new-in-devtools-108/#ignore-list)
+* [其他的更新](/zh/blog/new-in-devtools-108/#misc)
 
-* [Customize keyboard shortcuts in DevTools](/zh/blog/new-in-devtools-107/#shortcuts)
-* [Toggle light and dark themes with keyboard shortcut](/zh/blog/new-in-devtools-107/#toggle-themes)
-* [Highlight C/C++ objects in the Memory Inspector](/zh/blog/new-in-devtools-107/#memory)
-* [Support full initiator information for HAR import](/zh/blog/new-in-devtools-107/#har)
-* [Start DOM search after pressing `Enter`](/zh/blog/new-in-devtools-107/#search-type)
-* [Display `start` and `end` icons for `align-content` CSS flexbox properties](/zh/blog/new-in-devtools-107/#flexbox)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-107/#misc)
- -->
+
+### Chrome 107 {: #chrome107 }
+
+* [客制化开发者工具 （DevTools） 的键盘快捷键](/zh/blog/new-in-devtools-107/#shortcuts)
+* [使用键盘快捷键对光亮与深色主题进行快速切换](/zh/blog/new-in-devtools-107/#toggle-themes)
+* [高亮记忆检查器里的 C/C++ 对象](/zh/blog/new-in-devtools-107/#memory)
+* [支持 HAR 导入的完整启动器的资讯](/zh/blog/new-in-devtools-107/#har)
+* [点击回车键 (Enter) 后开始DOM搜索](/zh/blog/new-in-devtools-107/#search-type)
+* [在 `align-content` 的 CSS flexbox 属性中显示 `start` 和 `end` 图标](/zh/blog/new-in-devtools-107/#flexbox)
+* [其他的更新](/zh/blog/new-in-devtools-107/#misc)
+
 
 ### Chrome 106 {: #chrome106 }
 

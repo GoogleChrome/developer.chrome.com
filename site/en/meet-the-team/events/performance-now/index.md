@@ -5,15 +5,17 @@ summary: >-
   performance culture, performance budgets to Web Vitals, PWAs and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Amsterdam, Netherlands'
-date: '2022-10-27'
+date: 2022-10-27
 externalUrl: 'https://perfnow.nl/'
 sessions:
   - speaker: katiehempenius
     title: >-
       What's new in performance?
     description: >-
-      This talk will discuss new APIs, tools, and metrics and how you can
-      apply them to your site.
+      Katie Hempenius will speak on "What's new in performance?" Katie is an
+      engineer on the Chrome team where she works on making the web faster.
+      Previously she was a software engineer on Google Ad Manager and a senior
+      software engineer at Fitbit.
     topics:
       - Performance
     time: null

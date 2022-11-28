@@ -96,7 +96,7 @@ Product (see our [I/O 2014 talk on HTTPS Everywhere][7]).
 
 Extensions must transmit "personal and sensitive user data" over a secure connection (e.g. HTTPS,
 WSS) and stored at rest using a strong encryption method such as RSA or AES. You should not use any
-cipher suite that is blacklisted by IETF. Our requirements may change over time.
+cipher suite that is denylisted by IETF. Our requirements may change over time.
 
 ## 9\. Does my Product's handling of personal or sensitive user data require a prominent disclosure and affirmative consent? {: #ques_9 }
 
@@ -138,7 +138,7 @@ for a user-facing feature. And, even if a user-facing feature required collectio
 use for ad targeting or any other monetization of the data wouldn't be permitted because the Product
 is only permitted to use the data for the user-facing feature.
 
-## 13\. What are examples of "user-facing features" for the purposes of the restriction on collecting and using web browsing activity in the [Other Requirements][8] section? {: #ques_13 }
+## 13\. What are examples of "user-facing features" for the purposes of the restriction on collecting and using web browsing activity in the [Limited Use][limited-use] section? {: #ques_13 }
 
 A "user-facing feature" means functionality provided by the extension via a user interface element
 (including interactive buttons, text, forms, and images). Compliance with the policy requires that
@@ -167,24 +167,18 @@ complicated. It just needs to describe how the Product collects, uses, and share
 
 ## 15\. How does the User Data Policy apply to client applications, such as FTP or IRC clients? {: #ques_15 }
 
-When the Product is a client for an internet protocol with user-specified servers, like an FTP or
-IRC client, the [Personal or Sensitive User Data][9] section does not apply to the Product's
-collection of data for, or transmission of data with, the user-specified server.
+When the Product is a client for an internet protocol with user-specified servers, like an FTP or IRC client, the [Limited Use][limited-use] section does not apply to the Product's collection of data for, or transmission of data with, the user-specified server.
 
 For example, if an FTP client only connects to user-specified servers and does not send any data to
 servers specified by the developer, the policy would not require the developer to post a privacy
 policy or transmit the data securely (which would be impossible for FTP, because it's an unencrypted
 protocol).
 
-The User Data Policy still applies, however, to user data handled for other purposes. For example,
-if the Product required users to enter an email address for registration, then the Product would
-need to comply with the [Personal or Sensitive User Data section][10] of the policy.
+The User Data Policy still applies, however, to user data handled for other purposes. For example, if the Product required users to enter an email address for registration, then the Product would need to comply with the [Limited Use][limited-use] section of the policy.
 
 ## 16\. Does data transmitted between a Chrome app or extension and native programs on the same computer need to be encrypted? {: #ques_16 }
 
-No. The requirement to handle the user data securely (under the [Posting a Privacy Policy & Secure
-Transmission section][11]) does not apply to transmissions between a Chrome extension or app and a
-native program on the same computer.
+No. The requirement to handle the user data securely (under the [Handling Requirements][handling-reqs] section) does not apply to transmissions between a Chrome extension or app and a native program on the same computer.
 
 ## Minimum Permission
 
@@ -268,19 +262,14 @@ Developers have access to the following information:
   member of.
 - Support questions and suggestions.
 - If the developers have published paid for extensions, access to the payment transactions through
-  the
-- rchant center as well as total payments.
+  the merchant center as well as total payments.
 - Information owned by groups to which the developer is a member, such as item stats.
 
 ## Limited uses of personal or sensitive user data {: #limited-use }
 
 ### 1\. What disclosures do I need to display on my project home page?
 
-All extensions that request personal or sensitive user data must show a [][12]Limited Use disclosure
-on your project's homepage or on a page one click away from the homepage; for example, in your
-privacy policy. This Limited Use disclosure should be written by you, the developer, and should
-clearly describe the app's compliance with the Chrome Web Store User Data Policy, including the
-Limited Use requirements.
+All extensions that request personal or sensitive user data must show a [Limited Use][limited-use] disclosure on your project's homepage or on a page one click away from the homepage; for example, in your privacy policy. This Limited Use disclosure should be written by you, the developer, and should clearly describe the app's compliance with the Chrome Web Store User Data Policy, including the Limited Use requirements.
 
 ### 2\. What are the limited use requirements?
 
@@ -349,23 +338,15 @@ suspension of affected items and the deactivation of the existing user-base.
 
 ### 3\. What happens if there are inconsistencies between my item's privacy policy, the disclosures provided through the developer dashboard, and the behavior of my item?
 
-We take our users' privacy very seriously and so should every publisher of the Chrome Web Store. As
-a publisher it is your responsibility to be transparent when handling Chrome users' data. Any
-discrepancies between the developer dashboard disclosures, your privacy policy, and the behavior of
-your item would be a violation of the [Chrome Web Store developer program policies][13]. This can
-result in the suspension of all the items owned by the publisher, deactivation of the existing
-user-base, and ban of the entire publisher entity (including related accounts).
+We take our users' privacy very seriously and so should every publisher of the Chrome Web Store. As a publisher it is your responsibility to be transparent when handling Chrome users' data. Any discrepancies between the developer dashboard disclosures, your privacy policy, and the behavior of your item would be a violation of the [Chrome Web Store developer program policies][cws-policies]. This can result in the suspension of all the items owned by the publisher, deactivation of the existing user-base, and ban of the entire publisher entity (including related accounts).
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: /apps/migration
 [3]: /docs/extensions/branding
 [4]: /docs/extensions/rating
-[5]: /docs/extensions/program_policies
+[5]: /docs/extensions/program-policies
 [6]: /docs/extensions/terms
 [7]: https://www.youtube.com/watch?v=cBhZ6S0PFCY
-[8]: /docs/webstore/program_policies#userdata_psud
-[9]: /docs/webstore/program_policies#userdata_psud
-[10]: /docs/webstore/program_policies#userdata_psud
-[11]: /docs/webstore/program_policies#userdata_psud
-[12]: /docs/webstore/program_policies#limited_use
-[13]: /docs/webstore/program_policies
+[cws-policies]: /docs/webstore/program-policies
+[handling-reqs]: /docs/webstore/program-policies/data-handling/
+[limited-use]: /docs/webstore/program-policies/limited-use/

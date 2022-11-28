@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'The Topics API'
+title: 'Topics API: developer guide'
 subhead: >
-  Enable interest-based advertising, without resorting to tracking the sites a user visits.
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 description: >
-  A proposal to enable interest-based advertising without resorting to tracking the sites a user visits.
+  Try out the Topics demo, and learn about the API and how to run Topics with flags or participate in an origin trial.
 date: 2022-01-25
-updated: 2022-10-11
+updated: 2022-11-13
 authors:
   - samdutton
 ---
@@ -26,6 +26,12 @@ This document outlines a new proposal for interest-based advertising: the Topics
 -  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation
    timings for the Topics API and other Privacy Sandbox proposals.
 
+{% Aside %}
+
+[Topics API: latest updates](/docs/privacy-sandbox/topics/latest) details changes and enhancements to the API and implementations.
+
+{% endAside %}
+
 ---
 
 ## Try the demo {: #demo}
@@ -35,6 +41,9 @@ This explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](#colab) to try out the Topics [classifier model](#classifier-model).
 
+{% YouTube
+  id='hEBzWuXjeTQ'
+%}
 
 ## Take part in a Topics origin trial {: #origin-trial}
 
@@ -165,7 +174,7 @@ The Topics API can help facilitate robust user controls, as the API is built on 
 high-level topics. Chrome plans to offer users the option to remove individual topics, and to show
 the user the topics stored in the browser.
 
-## How would topics be curated and selected?
+### How would topics be curated and selected?
 
 Topics would be selected from a
 [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md): a list of items such as
@@ -304,6 +313,17 @@ The number of topics returned by `document.browsingTopics()` depends on the numb
 the [API caller](#caller) has previously observed, and the number of topics that the user has
 available (such as the number of weeks of data accumulated). Anywhere from zero to three topics may
 be returned.
+
+{: #skipobservation}
+
+{% Aside %}
+From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}` 
+argument.
+
+This allows the method to return topics without causing the browser to record 
+a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})` 
+can be used to return topics of interest for the current user, but with no side effects.
+{% endAside %}
 
 ### Access topics with the JavaScript API {: #access-topics}
 
@@ -630,7 +650,7 @@ days).
   alt="chrome://topics-internal page with Features and Parameters panel selected.",
   width="800", height="695" %}
 
-The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally 
+The meaning of each parameter is explained in the table below. (You'll need to scroll it horizontally
 to see all the details!)
 
 The parameters correspond to flags that can be set when running Chrome from the command line. For
@@ -853,7 +873,7 @@ In addition, both sites and users can [opt out](#opt-out) of the Topics API.
 The [Topics proposal explainer states](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
 
 "Third party cookies can be used to track anything about a user, from the
-exact URLs they visited, to the precise page content on those pages. This 
+exact URLs they visited, to the precise page content on those pages. This
 could include limitless sensitive material. The Topics API, on the other
 hand, is restricted to a human-curated taxonomy of topics. That's not to say
 that other things couldn't be statistically correlated with the topics in
@@ -868,8 +888,8 @@ Users should be able to understand the purpose of the Topics API, recognize what
 them, know when the API is in use, and be provided with controls to enable or disable it.
 
 The API's human-readable taxonomy enables people to learn about and control the topics that may be
-suggested for them by their browser. Users can remove topics they specifically do not want the Topics 
-API to share with advertisers or publishers, and there can be UX for informing the user about the API 
+suggested for them by their browser. Users can remove topics they specifically do not want the Topics
+API to share with advertisers or publishers, and there can be UX for informing the user about the API
 and how to enable or disable it. Chrome would provide information and settings for the Topics API at
 `chrome://settings/privacySandbox`. In addition, topics are not available to API callers in Incognito
 mode, and topics are cleared when browsing history is cleared.
@@ -883,7 +903,7 @@ eligible for topic frequency calculations, and API callers [only receive topics 
 observed](#observed-topics). In other words, sites are not eligible for topic frequency calculations
 without the site or an embedded service taking action to call the API.
 
-The Topics explainer also proposes sites be allowed to block topic 
+The Topics explainer also proposes sites be allowed to block topic
 calculation for their visitors with the following
 [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header:
 

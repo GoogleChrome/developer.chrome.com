@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,71 +15,63 @@
  */
 
 const authorsData = require('../_data/authorsData.json');
-const PLACEHOLDER_IMG =
-  'image/tcFciHGuF3MxnTr1y5ue01OGLBn2/PFaMfvDZoPorronbpdU8.svg';
-
+const {defaultAvatarImg} = require('../_data/site.json');
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
 /**
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
-const getEvents = (collections, filter, sort) => {
+const getEvents = ({collections, filter, sort, locale = 'en'}) => {
   return collections
-    .getFilteredByGlob('./site/en/meet-the-team/events/**/*.md')
+    .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
     .filter(filter)
     .map(event => {
-      event.data.isPastEvent = isPastEvent(event);
+      const sessions = event.data.sessions.map(session =>
+        processSession(session)
+      );
 
-      event.data.sessions = event.data.sessions.map(session => {
-        if (session.type === 'speaker') {
-          session.speaker = getAuthorData(session.speaker);
-        }
-
-        if (session.type === 'participant') {
-          session.participants = session.participants.map(p => {
-            return getAuthorData(p);
-          });
-        }
-
-        return session;
-      });
-
-      return event;
+      return {
+        id: event.data.id,
+        title: event.data.title,
+        externalUrl: event.data.externalUrl,
+        summary: event.data.summary,
+        location: event.data.location,
+        date: event.data.date,
+        isPastEvent: isPastEvent(event),
+        sessions,
+        image: event.data.image,
+      };
     })
     .sort(sort);
 };
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event),
-    (a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    }
-  );
+    filter: event => isPastEvent(event),
+    sort: (a, b) => b.date - a.date,
+  });
 };
 
 /**
  * @param {EleventyCollectionObject} collections
- * @returns {EleventyCollectionItem[]}
+ * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents(
+  return getEvents({
     collections,
-    event => isPastEvent(event) === false,
-    (a, b) => {
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    }
-  );
+    filter: event => isPastEvent(event) === false,
+    sort: (a, b) => a.date - b.date,
+  });
 };
 
 /**
- * @param authorHandle
+ * @param {String} authorHandle
  * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
  */
 const getAuthorData = authorHandle => {
@@ -87,20 +79,37 @@ const getAuthorData = authorHandle => {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
 
+  const authorData = authorsData[authorHandle];
+
   return {
-    image: authorsData[authorHandle].image ?? PLACEHOLDER_IMG,
+    image: authorData.image ?? defaultAvatarImg,
     title: `i18n.authors.${authorHandle}.title`,
-    twitter: authorsData[authorHandle].twitter,
-    linkedin: authorsData[authorHandle].linkedin,
+    twitter: authorData.twitter,
+    linkedin: authorData.linkedin,
   };
 };
 
 /**
- * @param event
- * @returns {boolean}
+ * @param session
+ * @returns {{title}|*}
  */
+const processSession = session => {
+  if (session.type === 'speaker') {
+    session.speaker = getAuthorData(session.speaker);
+    session.image = session.speaker.image;
+
+    return session;
+  }
+
+  session.participants = session.participants.map(p => {
+    return getAuthorData(p);
+  });
+
+  return session;
+};
+
 const isPastEvent = event => {
-  return new Date(event.date).getTime() < startOfDay.getTime();
+  return event.date < startOfDay;
 };
 
 module.exports = {currentEvents, pastEvents};

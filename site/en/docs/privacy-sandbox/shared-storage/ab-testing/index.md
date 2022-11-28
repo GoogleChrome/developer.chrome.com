@@ -6,6 +6,7 @@ subhead: >
 description: >
   Use a Shared Storage worklet to run A/B testing.
 date: 2022-10-14
+updated: 2022-11-08
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -40,100 +41,62 @@ for the given use cases. These are not meant to be used in production.
 
 {% endAside %}
 
-
-To see if an experiment has the desired effect, you can run A/B testing across
-multiple sites. As an advertiser, you can choose to render a different ad based
-on what group the user is assigned to. The group assignment is saved in shared
-storage.
+To see if an experiment has the desired effect, you can run A/B testing across multiple sites. As an advertiser or a content producer, you can choose to render different content or ads based on what group the user is assigned to. The group assignment is saved in shared storage, but cannot be exfiltrated.
 
 In this example:
 
-*  `ab-testing.js` should be embedded in an ad iframe, which maps a control and
-   two experiment ads. The script calls the shared storage worklet for the experiment.
-*  `ab-testing-worklet.js`  is the shared storage worklet that returns which
-   group the user is assigned to, determining which ad is shown.
+*   `ab-testing.js` should be embedded in a frame, which maps a control and two experiment contents. The script calls the shared storage worklet for the experiment.
+*   `ab-testing-worklet.js`  is the shared storage worklet that returns which group the user is assigned to, determining which ad is shown.
 
 **[ab-testing.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/ab-testing.js)**
 
-```javascript
-// Map the experiment groups to the URLs
-const EXPERIMENT_MAP = [
-  {
-    group: 'control',
-    url: `https://advertiser.example/ads/default-ad.html`,
-  },
-  {
-    group: 'experiment-a',
-    url: `https://advertiser.example/ads/experiment-ad-a.html`,
-  },
-  {
-    group: 'experiment-b',
-    url: `https://advertiser.example/ads/experiment-ad-b.html`,
-  },
-];
-
-// Choose a random group for the initial experiment
-function getRandomExperiment() {
-  const randomIndex = Math.floor(Math.random() * EXPERIMENT_MAP.length);
-  return EXPERIMENT_MAP[randomIndex].group;
+```js
+// Randomly assigns a user to a group 0 or 1
+function getExperimentGroup() {
+  return Math.round(Math.random());
 }
 
-async function injectAd() {
-  // Load the worklet module
+async function injectContent() {
+  // Register the Shared Storage worklet
   await window.sharedStorage.worklet.addModule('ab-testing-worklet.js');
 
-  // Set the initial value in the storage to a random experiment group
-  window.sharedStorage.set('ab-testing-group', getRandomExperiment(), {
+  // Assign user to a random group (0 or 1) and store it in Shared Storage
+  window.sharedStorage.set('ab-testing-group', getExperimentGroup(), {
     ignoreIfPresent: true,
   });
 
-  const urls = EXPERIMENT_MAP.map(({ url }) => ({ url }));
-  const groups = EXPERIMENT_MAP.map(({ group }) => group);
+  // Run the URL selection operation
+  const opaqueURL = await window.sharedStorage.selectURL(
+    'ab-testing',
+    [
+      { url: `https://your-server.example/content/default-content.html` },
+      { url: `https://your-server.example/content/experiment-content-a.html` }
+    ]
+  );
 
-  // Run the URL selection operation to select an ad based on the experiment group in shared storage
-  const opaqueURL = await window.sharedStorage.selectURL('ab-testing', urls, { data: groups });
-
-  // Render the opaque URL into a fenced frame
-  document.getElementById('ad-slot').src = opaqueURL;
+  // Render the chosen URL into a fenced frame
+  document.getElementById('content-slot').src = opaqueURL;
 }
 
-injectAd();
+injectContent();
 ```
 
 **[ab-testing-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/ab-testing-worklet.js)**
 
-```javascript
+```js
 class SelectURLOperation {
   async run(urls, data) {
-    // Read the user's group from shared storage
+    // Read the user's experiment group from Shared Storage
     const experimentGroup = await this.sharedStorage.get('ab-testing-group');
 
-    // Return the index of the group
-    return data.indexOf(experimentGroup);
+    // Return the corresponding URL (first or second item in the array)
+    return urls.indexOf(experimentGroup);
   }
 }
 
 register('ab-testing', SelectURLOperation);
 ```
 
-## Other use cases
+{% Partial 'privacy-sandbox/shared-storage-use-cases.md' %}
 
-Explore other Shared Storage use cases and code samples:
-
-*  [**Frequency control**](/docs/privacy-sandbox/shared-storage/frequency-control):
-   run a worklet script to select a URL from a provided list, based on the
-   stored data, and then render that URL in a fenced frame. This has many
-   possible uses, such as selecting new content when a frequency cap is reached.
-*  [**Creative rotation**](/docs/privacy-sandbox/shared-storage/creative-rotation):
-   You can store the creative rotation mode, and other metadata, to rotate the
-   creatives across different sites. 
-*  [**Known customer for payment provider**](/docs/privacy-sandbox/shared-storage/known-customer):
-   You can store whether the user has registered on your site into shared
-   storage, then render a different element based on that stored status.
-
-These are only some of the possible use cases for Shared Storage. We'll
-continue to add examples as we
-[receive feedback](/docs/privacy-sandbox/shared-storage/#engage-and-share-feedback)
-and discover new use cases.
-
-{% Partial 'privacy-sandbox/sharedstorage-engage.md' %}
+{% Partial 'privacy-sandbox/shared-storage-engage.md' %}

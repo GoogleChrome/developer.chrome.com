@@ -156,6 +156,9 @@ documentation page. Next, it will check the state of the current tab and set the
 following code to `background.js`:
 
 ```js
+const extensions = 'https://developer.chrome.com/docs/extensions'
+const webstore = 'https://developer.chrome.com/docs/webstore'
+
 chrome.action.onClicked.addListener(async (tab) => {
   if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
     // Retrieve the action badge to check if the extension is 'ON' or 'OFF'

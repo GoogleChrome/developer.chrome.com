@@ -2,16 +2,24 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
+{# ### Chrome 108 {: #chrome108 }
 
 * [Hints for inactive CSS properties](/es/blog/new-in-devtools-108/#css-hint)
 * [Auto-detect XPath and text selectors in the Recorder panel](/es/blog/new-in-devtools-108/#recorder)
 * [Step through comma-separated expressions](/es/blog/new-in-devtools-108/#debugging)
 * [Improved Ignore list setting](/es/blog/new-in-devtools-108/#ignore-list)
 * [Miscellaneous highlights](/es/blog/new-in-devtools-108/#misc)
- -->
+ #}
+
+### Chrome 108 {: #chrome108 }
+
+* [Sugerencias para las propiedades CSS inactivas](/es/blog/new-in-devtools-108/#css-hint)
+* [Detección automática de XPath y selectores de texto en el panel Grabador](/es/blog/new-in-devtools-108/#recorder)
+* [Paso a paso a través de expresiones separadas por comas](/es/blog/new-in-devtools-108/#debugging)
+* [Mejoras en la configuración de la lista de ignorados](/es/blog/new-in-devtools-108/#ignore-list)
+* [Otros detalles destacados](/es/blog/new-in-devtools-108/#misc)
 
 ### Chrome 107 {: #chrome107 }
 
@@ -34,7 +42,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Nueva pista de interacciones en el panel Rendimiento](/es/blog/new-in-devtools-106/#performance)
 * [Desglose de tiempos de LCP en el panel Perspectivas de Rendimiento](/es/blog/new-in-devtools-106/#insights)
 * [Generar automáticamente el nombre predeterminado para las grabaciones en el panel Grabadora](/es/blog/new-in-devtools-106/#recorder)
-* [Destacados varios](/es/blog/new-in-devtools-106/#misc)
+* [Otros detalles destacados](/es/blog/new-in-devtools-106/#misc)
 
 
 ### Chrome 105 {: #chrome105 }
@@ -42,8 +50,8 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Reproducción paso a paso en el panel Recorder](/es/blog/new-in-devtools-105/#recorder)
 * [Soporte de eventos de ratón en el panel Recorder](/es/blog/new-in-devtools-105/#recorder-hover)
 * [Largest Contentful Paint (LCP) en el panel Performance Insights](/es/blog/new-in-devtools-105/#lcp)
-
 * [Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño](/es/blog/new-in-devtools-105/#foit-fout)
+* [Controladores de protocolo en el panel de Manifiesto](/es/blog/new-in-devtools-105/#manifest)
 * [Insignia de capa superior en el panel de Elementos](/es/blog/new-in-devtools-105/#top-layer)
 * [Enlazar información de depuración de WASM al momento de ejecutar](/es/blog/new-in-devtools-105/#wasm)
 * [Soporte para edición en vivo durante la depuración](/es/blog/new-in-devtools-105/#live-edit)
@@ -64,7 +72,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Identificar los marcos de bloqueo en el panel de caché Atrás/Adelante](/es/blog/new-in-devtools-104/#bfcache)
 * [Sugerencias de autocompletado mejoradas para objetos de JavaScript](/es/blog/new-in-devtools-104/#autocomplete)
 * [Mejoras en los mapas de origen](/es/blog/new-in-devtools-104/#sourcemaps)
-* [Destacados varios](/es/blog/new-in-devtools-104/#misc)
+* [Otros detalles destacados](/es/blog/new-in-devtools-104/#misc)
 
 
 ### Chrome 103 {: #chrome103 }
@@ -78,7 +86,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mejorada previsualización de valor en línea durante la depuración](/es/blog/new-in-devtools-103/#inline-preview)
 * [Soporte para grandes bloques para autenticadores virtuales](/es/blog/new-in-devtools-103/#webauthn)
 * [Nuevos atajos de teclado en el panel Fuentes](/es/blog/new-in-devtools-103/#shortcuts)
-* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps) -->
+* [Mejoras en los sourcemaps](/es/blog/new-in-devtools-103/#sourcemaps)
 
 
 ### Chrome 102 {: #chrome102 }
@@ -112,7 +120,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Cambiar el nombre de una grabación](/es/blog/new-in-devtools-100/#recorder-rename)
 * [Vista previa de propiedades de clase/función al pasar el mouse](/es/blog/new-in-devtools-100/#properties)
 * [Fotogramas presentados parcialmente en el panel Rendimiento](/es/blog/new-in-devtools-100/#perf)
-* [Destacados varios](/es/blog/new-in-devtools-100/#misc)
+* [Otros detalles destacados](/es/blog/new-in-devtools-100/#misc)
 
 ### Chrome 99 {: #chrome99 }
 
@@ -125,7 +133,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Muestra los archivos de fuente de Worker en el panel de Fuentes](/es/blog/new-in-devtools-99/#worker-sourcemap)
 * [Actualizaciones del modo oscuro automático de Chrome](/es/blog/new-in-devtools-99/#auto-dark-mode)
 * [Selector de color y panel de división en modo táctil](/es/blog/new-in-devtools-99/#touch-friendly)
-* [Destacados varios](/es/blog/new-in-devtools-99/#misc) -->
+* [Otros detalles destacados](/es/blog/new-in-devtools-99/#misc)
 
 
 ### Chrome 98 {: #chrome98 }
@@ -157,7 +165,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 ### Chrome 96 {: #chrome96 }
 
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
-<!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
+{# * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) #}
 * [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
 * [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)

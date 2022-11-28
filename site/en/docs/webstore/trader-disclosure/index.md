@@ -24,10 +24,12 @@ dealing with a professional trader and would be able to benefit from consumer ri
 
 The European Commission defines traders and non-traders as follows:
 
-Trader : Any natural person or any legal person, who is acting for purposes relating to his trade,
+Trader
+: Any natural person or any legal person, who is acting for purposes relating to his trade,
 business, craft or profession in relation to contracts on this marketplace.
 
-Non-trader : Any natural person or any legal person, who is acting for purposes which are outside of
+Non-trader
+: Any natural person or any legal person, who is acting for purposes which are outside of
 his trade, business, craft or profession in relation to contracts on this marketplace.
 
 If you are a non-trader, the consumer will be informed that consumer rights stemming from consumer

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: How to add extra HTTP Request Headers to Custom Tab Intents
 date: 2020-08-12
-updated: 2020-09-25
+updated: 2022-10-25
 description: Guide for adding HTTP CORS headers in Custom Tab Intents.
 authors:
   - pavoldrotar
@@ -72,7 +72,7 @@ authenticate malicious server transactions that would otherwise not be possible.
 ### Attaching CORS approvelisted headers to Custom Tabs requests
 [Custom Tabs][8] are a special way of launching web pages in a customised browser tab. Custom Tab
 intents can be created using `CustomTabsIntent.Builder()`. You can also attach headers to these
-intents using a `Bundle` with the [`Borwser.EXTRA_HEADERS` flag][9]:
+intents using a `Bundle` with the [`Browser.EXTRA_HEADERS` flag][9]:
 
 
 ```java

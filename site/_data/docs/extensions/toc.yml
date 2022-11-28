@@ -25,6 +25,7 @@
     - url: /docs/extensions/mv3/mv3-migration-checklist
     - url: /docs/extensions/mv3/migrating_to_service_workers
     - url: /docs/extensions/mv3/mv2-sunset
+    - url: /docs/extensions/mv3/known-issues/
 - url: /docs/extensions/reference
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
