@@ -86,7 +86,7 @@ the events that signal transitions between them &mdash; is with a diagram:
   <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/1mN2saGWo57O6vIOdcGy.svg">
     {% Img
       src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg",
-      alt="Page Lifecycle API state and event flow.",
+      alt="Page Lifecycle API state and event flow. A visual representation of the state and event flow described throughout this document.",
       width="800",
       height="400"
     %}
@@ -100,157 +100,161 @@ states that can come before and after as well as the events developers can
 use to observe changes.
 
 <table>
-  <tr>
-    <th>State</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><strong id="state-active">Active</strong></td>
-    <td>
-      <p>A page is in the <i>active</i> state if it is visible and has
-      input focus.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a>
-          <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        <a href="#state-passive">passive</a>
-          <em>(via the<a href="#event-blur"> <code>blur</code></a> event)</em>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong id="state-passive">Passive</strong></td>
-    <td>
-      <p>A page is in the <i>passive</i> state if it is visible and does
-      not have input focus.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-active">active</a>
-          <em>(via the <a href="#event-blur"><code>blur</code></a> event)</em><br>
-        <a href="#state-hidden">hidden</a>
-          <em>(via the <a href="#event-visibilitychange">
-          <code>visibilitychange</code></a> event)</em>
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        <a href="#state-active">active</a>
-          <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
-        <a href="#state-hidden">hidden</a>
-          <em>(via the <a href="#event-visibilitychange">
-          <code>visibilitychange</code></a> event)</em>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong id="state-hidden">Hidden</strong></td>
-    <td>
-      <p>A page is in the <i>hidden</i> state if it is not visible (and has not
-      been frozen, discarded, or terminated).</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a>
-          <em>(via the <a href="#event-visibilitychange">
-          <code>visibilitychange</code></a> event)</em><br>
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        <a href="#state-passive">passive</a>
-          <em>(via the <a href="#event-visibilitychange">
-          <code>visibilitychange</code></a> event)</em><br>
-        <a href="#state-frozen">frozen</a>
-          <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)</em><br>
-        <a href="#state-discarded">discarded</a>
-          <em>(no events fired)</em><br>
-        <a href="#state-terminated">terminated</a>
-          <em>(no events fired)</em>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong id="state-frozen">Frozen</strong></td>
-    <td>
-      <p>In the <i>frozen</i> state the browser suspends execution of
-      <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
-      freezable</a>
-      <a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">
-      tasks</a> in the page's
-      <a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">
-      task queues</a> until the page is unfrozen. This means things like
-      JavaScript timers and fetch callbacks do not run. Already-running
-      tasks can finish (most importantly the <a href="#event-freeze">
-      <code>freeze</code></a> callback), but they may be limited in what they
-      can do and how long they can run.</p>
-      <p>Browsers freeze pages as a way to preserve CPU/battery/data usage; they
-      also do it as a way to enable faster
-      <a href="#back-forward-cache">
-      back/forward navigations</a> &mdash; avoiding the need for a full page
-      reload.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-          <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        <a href="#state-active">active</a>
-          <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
-          <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
-        <a href="#state-passive">passive</a>
-          <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
-          <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
-        <a href="#state-hidden">hidden</a>
-          <em>(via the <a href="#event-resume"><code>resume</code></a> event)</em><br>
-        <a href="#state-discarded">discarded</a>
-          <em>(no events fired)</em><br>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong id="state-terminated">Terminated</strong></td>
-    <td>
-      <p>A page is in the <i>terminated</i> state once it has started being
-      unloaded and cleared from memory by the browser. No
-      <a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">
-      new tasks</a> can start in this state, and in-progress tasks may be
-      killed if they run too long.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-          <em>(via the <a href="#event-pagehide"><code>pagehide</code></a> event)</em>
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        NONE
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong id="state-discarded">Discarded</strong></td>
-    <td>
-      <p>A page is in the <i>discarded</i> state when it is unloaded by the
-      browser in order to conserve resources. No tasks, event callbacks, or
-      JavaScript of any kind can run in this state, as discards typically
-      occur under resource constraints, where starting new processes is
-      impossible.</p>
-      <p>In the <i>discarded</i> state the tab itself
-      (<a href="#prevent-freeze-discard">including the tab title and favicon
-      </a>) is usually visible to the user even though the page is gone.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-frozen">hidden</a>
-          <em>(no events fired)</em><br>
-        <a href="#state-frozen">frozen</a>
-          <em>(no events fired)</em>
-      </p>
-      <p>
-        <strong>Possible next states:</strong><br>
-        NONE
-      </p>
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong id="state-active">Active</strong></td>
+      <td>
+        <p>A page is in the <i>active</i> state if it is visible and has
+        input focus.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-passive">passive</a>
+            <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          <a href="#state-passive">passive</a>
+            <em>(via the<a href="#event-blur"> <code>blur</code></a> event)</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong id="state-passive">Passive</strong></td>
+      <td>
+        <p>A page is in the <i>passive</i> state if it is visible and does
+        not have input focus.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-active">active</a>
+            <em>(via the <a href="#event-blur"><code>blur</code></a> event)</em><br>
+          <a href="#state-hidden">hidden</a>
+            <em>(via the <a href="#event-visibilitychange">
+            <code>visibilitychange</code></a> event)</em>
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          <a href="#state-active">active</a>
+            <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
+          <a href="#state-hidden">hidden</a>
+            <em>(via the <a href="#event-visibilitychange">
+            <code>visibilitychange</code></a> event)</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong id="state-hidden">Hidden</strong></td>
+      <td>
+        <p>A page is in the <i>hidden</i> state if it is not visible (and has not
+        been frozen, discarded, or terminated).</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-passive">passive</a>
+            <em>(via the <a href="#event-visibilitychange">
+            <code>visibilitychange</code></a> event)</em><br>
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          <a href="#state-passive">passive</a>
+            <em>(via the <a href="#event-visibilitychange">
+            <code>visibilitychange</code></a> event)</em><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)</em><br>
+          <a href="#state-discarded">discarded</a>
+            <em>(no events fired)</em><br>
+          <a href="#state-terminated">terminated</a>
+            <em>(no events fired)</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong id="state-frozen">Frozen</strong></td>
+      <td>
+        <p>In the <i>frozen</i> state the browser suspends execution of
+        <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
+        freezable</a>
+        <a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">
+        tasks</a> in the page's
+        <a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">
+        task queues</a> until the page is unfrozen. This means things like
+        JavaScript timers and fetch callbacks do not run. Already-running
+        tasks can finish (most importantly the <a href="#event-freeze">
+        <code>freeze</code></a> callback), but they may be limited in what they
+        can do and how long they can run.</p>
+        <p>Browsers freeze pages as a way to preserve CPU/battery/data usage; they
+        also do it as a way to enable faster
+        <a href="#back-forward-cache">
+        back/forward navigations</a> &mdash; avoiding the need for a full page
+        reload.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+            <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          <a href="#state-active">active</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+            <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
+          <a href="#state-passive">passive</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+            <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
+          <a href="#state-hidden">hidden</a>
+            <em>(via the <a href="#event-resume"><code>resume</code></a> event)</em><br>
+          <a href="#state-discarded">discarded</a>
+            <em>(no events fired)</em><br>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong id="state-terminated">Terminated</strong></td>
+      <td>
+        <p>A page is in the <i>terminated</i> state once it has started being
+        unloaded and cleared from memory by the browser. No
+        <a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">
+        new tasks</a> can start in this state, and in-progress tasks may be
+        killed if they run too long.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+            <em>(via the <a href="#event-pagehide"><code>pagehide</code></a> event)</em>
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          NONE
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong id="state-discarded">Discarded</strong></td>
+      <td>
+        <p>A page is in the <i>discarded</i> state when it is unloaded by the
+        browser in order to conserve resources. No tasks, event callbacks, or
+        JavaScript of any kind can run in this state, as discards typically
+        occur under resource constraints, where starting new processes is
+        impossible.</p>
+        <p>In the <i>discarded</i> state the tab itself
+        (<a href="#prevent-freeze-discard">including the tab title and favicon
+        </a>) is usually visible to the user even though the page is gone.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-frozen">hidden</a>
+            <em>(no events fired)</em><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(no events fired)</em>
+        </p>
+        <p>
+          <strong>Possible next states:</strong><br>
+          NONE
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ### Events
@@ -260,247 +264,251 @@ possible change in Page Lifecycle state. The table below outlines all events
 that pertain to lifecycle and lists what states they may transition to and from.
 
 <table class="blue">
-  <tr>
-    <th>Name</th>
-    <th>Details</th>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-focus"
-         href="https://developer.mozilla.org/docs/Web/Events/focus">
-        <code>focus</code>
-      </a>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a id="event-focus"
+          href="https://developer.mozilla.org/docs/Web/Events/focus">
+          <code>focus</code>
+        </a>
+      </td>
+      <td>
+        <p>A DOM element has received focus.</p>
+        <p>
+          <em><strong>Note:</strong> a <code>focus</code> event does not
+          necessarily signal a state change. It only signals a state change if
+          the page did not previously have input focus.</em>
+        </p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-passive">passive</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-active">active</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-blur"
+          href="https://developer.mozilla.org/docs/Web/Events/blur">
+          <code>blur</code>
+        </a>
+      </td>
+      <td>
+        <p>A DOM element has lost focus.</p>
+        <p>
+          <em><strong>Note:</strong> a <code>blur</code> event does not
+          necessarily signal a state change. It only signals a state change if
+          the page no longer has input focus (i.e. the page did not just switch
+          focus from one element to another).
+        </p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-active">active</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-passive">passive</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-visibilitychange"
+          href="https://developer.mozilla.org/docs/Web/Events/visibilitychange">
+          <code>visibilitychange</code>
+        </a>
+      </td>
+      <td>
+        <p>The document's
+        <a href="https://developer.mozilla.org/docs/Web/API/Document/visibilityState">
+        <code>visibilityState</code></a> value has changed. This can
+        happen when a user navigates to a new page, switches tabs, closes a tab,
+        minimizes or closes the browser, or switches apps on mobile operating
+        systems.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-passive">passive</a><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-passive">passive</a><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
+          <code>freeze</code>
+        </a>
+        <strong style="color:red">*</strong>
+      </td>
+      <td>
+        <p>The page has just been frozen. Any
+        <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
+        freezable</a> task in the page's task queues will not be started.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-frozen">frozen</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
+          <code>resume</code>
+        </a>
+        <strong style="color:red">*</strong>
+      </td>
+      <td>
+        <p>The browser has resumed a <i>frozen</i> page.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-frozen">frozen</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-active">active</a>
+            <em>(if followed by the
+            <a href="https://developer.mozilla.org/docs/Web/Events/pageshow">
+            <code>pageshow</code></a> event)</em><br>
+          <a href="#state-passive">passive</a>
+            <em>(if followed by the
+            <a href="https://developer.mozilla.org/docs/Web/Events/pageshow">
+            <code>pageshow</code></a> event)</em><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-pageshow"
+          href="https://developer.mozilla.org/docs/Web/Events/pageshow">
+          <code>pageshow</code>
+        </a>
+      </td>
+      <td>
+        <p>A session history entry is being traversed to.</p>
+        <p>This could be either a brand new page load or a page taken from the
+          <a href="#back-forward-cache">back/forward cache</a>. If the page
+          was taken from the back/forward cache, the event's
+          <code>persisted</code> property is <code>true</code>, otherwise it is
+          <code>false</code>.
+        </p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(a <a href="#event-resume"><code>resume</code></a>
+            event would have also fired)</em>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-active">active</a><br>
+          <a href="#state-passive">passive</a><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
     </td>
-    <td>
-      <p>A DOM element has received focus.</p>
-      <p>
-        <em><strong>Note:</strong> a <code>focus</code> event does not
-        necessarily signal a state change. It only signals a state change if
-        the page did not previously have input focus.</em>
-      </p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-active">active</a>
-      </p>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-pagehide"
+          href="https://developer.mozilla.org/docs/Web/Events/pagehide">
+          <code>pagehide</code>
+        </a>
+      </td>
+      <td>
+        <p>A session history entry is being traversed from.</p>
+        <p>If the user is navigating to another page and the browser is able to add
+        the current page to the <a href="#back-forward-cache">back/forward
+        cache</a> to be reused later, the event's <code>persisted</code> property
+        is <code>true</code>. When <code>true</code>, the page is entering the
+        <i>frozen</i> state, otherwise it is entering the <i>terminated</i> state.</p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-frozen">frozen</a>
+            <em>(<code>event.persisted</code> is true, <a href="#event-freeze">
+            <code>freeze</code></a> event follows)</em><br>
+          <a href="#state-terminated">terminated</a>
+            <em>(<code>event.persisted</code> is false,
+            <a href="https://developer.mozilla.org/docs/Web/Events/unload">
+            <code>unload</code></a> event follows)</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-beforeunload"
+          href="https://developer.mozilla.org/docs/Web/Events/beforeunload">
+          <code>beforeunload</code>
+        </a>
+      </td>
+      <td>
+        <p>The window, the document and its resources are about to be unloaded.
+        The document is still visible and the event is still cancelable at this
+        point.</p>
+        <p>
+          <em><strong>Important:</strong> the <code>beforeunload</code> event
+          should only be used to alert the user of unsaved changes. Once those
+          changes are saved, the event should be removed. It should never be
+          added unconditionally to the page, as doing so can hurt performance in
+          some cases. See the <a href="#legacy-lifecycle-apis-to-avoid">legacy
+          APIs section</a> for details.</em>
+        </p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-terminated">terminated</a><br>
+        </p>
     </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-blur"
-         href="https://developer.mozilla.org/docs/Web/Events/blur">
-        <code>blur</code>
-      </a>
-    </td>
-    <td>
-      <p>A DOM element has lost focus.</p>
-      <p>
-        <em><strong>Note:</strong> a <code>blur</code> event does not
-        necessarily signal a state change. It only signals a state change if
-        the page no longer has input focus (i.e. the page did not just switch
-        focus from one element to another).
-      </p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-active">active</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-passive">passive</a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-visibilitychange"
-         href="https://developer.mozilla.org/docs/Web/Events/visibilitychange">
-        <code>visibilitychange</code>
-      </a>
-    </td>
-    <td>
-      <p>The document's
-      <a href="https://developer.mozilla.org/docs/Web/API/Document/visibilityState">
-      <code>visibilityState</code></a> value has changed. This can
-      happen when a user navigates to a new page, switches tabs, closes a tab,
-      minimizes or closes the browser, or switches apps on mobile operating
-      systems.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-passive">passive</a><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
-        <code>freeze</code>
-      </a>
-      <strong style="color:red">*</strong>
-    </td>
-    <td>
-      <p>The page has just been frozen. Any
-      <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
-      freezable</a> task in the page's task queues will not be started.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-frozen">frozen</a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
-        <code>resume</code>
-      </a>
-      <strong style="color:red">*</strong>
-    </td>
-    <td>
-      <p>The browser has resumed a <i>frozen</i> page.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-frozen">frozen</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-active">active</a>
-          <em>(if followed by the
-          <a href="https://developer.mozilla.org/docs/Web/Events/pageshow">
-          <code>pageshow</code></a> event)</em><br>
-        <a href="#state-passive">passive</a>
-          <em>(if followed by the
-          <a href="https://developer.mozilla.org/docs/Web/Events/pageshow">
-          <code>pageshow</code></a> event)</em><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-pageshow"
-         href="https://developer.mozilla.org/docs/Web/Events/pageshow">
-        <code>pageshow</code>
-      </a>
-    </td>
-    <td>
-      <p>A session history entry is being traversed to.</p>
-      <p>This could be either a brand new page load or a page taken from the
-        <a href="#back-forward-cache">back/forward cache</a>. If the page
-        was taken from the back/forward cache, the event's
-        <code>persisted</code> property is <code>true</code>, otherwise it is
-        <code>false</code>.
-      </p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-frozen">frozen</a>
-          <em>(a <a href="#event-resume"><code>resume</code></a>
-          event would have also fired)</em>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-active">active</a><br>
-        <a href="#state-passive">passive</a><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-pagehide"
-         href="https://developer.mozilla.org/docs/Web/Events/pagehide">
-        <code>pagehide</code>
-      </a>
-    </td>
-    <td>
-      <p>A session history entry is being traversed from.</p>
-      <p>If the user is navigating to another page and the browser is able to add
-      the current page to the <a href="#back-forward-cache">back/forward
-      cache</a> to be reused later, the event's <code>persisted</code> property
-      is <code>true</code>. When <code>true</code>, the page is entering the
-      <i>frozen</i> state, otherwise it is entering the <i>terminated</i> state.</p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-frozen">frozen</a>
-          <em>(<code>event.persisted</code> is true, <a href="#event-freeze">
-          <code>freeze</code></a> event follows)</em><br>
-        <a href="#state-terminated">terminated</a>
-          <em>(<code>event.persisted</code> is false,
-          <a href="https://developer.mozilla.org/docs/Web/Events/unload">
-          <code>unload</code></a> event follows)</em>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-beforeunload"
-         href="https://developer.mozilla.org/docs/Web/Events/beforeunload">
-        <code>beforeunload</code>
-      </a>
-    </td>
-    <td>
-      <p>The window, the document and its resources are about to be unloaded.
-      The document is still visible and the event is still cancelable at this
-      point.</p>
-      <p>
-        <em><strong>Important:</strong> the <code>beforeunload</code> event
-        should only be used to alert the user of unsaved changes. Once those
-        changes are saved, the event should be removed. It should never be
-        added unconditionally to the page, as doing so can hurt performance in
-        some cases. See the <a href="#legacy-lifecycle-apis-to-avoid">legacy
-        APIs section</a> for details.</em>
-      </p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-terminated">terminated</a><br>
-      </p>
-   </td>
-  </tr>
-  <tr>
-    <td>
-      <a id="event-unload"
-         href="https://developer.mozilla.org/docs/Web/Events/unload">
-        <code>unload</code>
-      </a>
-    </td>
-    <td>
-      <p>The page is being unloaded.</p>
-      <p>
-        <em><strong>Warning:</strong>
-        using the <code>unload</code> event is never recommended because it's
-        unreliable and can hurt performance in some cases. See the
-        <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
-        for more details.</em>
-      </p>
-      <p>
-        <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a>
-      </p>
-      <p>
-        <strong>Possible current states:</strong><br>
-        <a href="#state-terminated">terminated</a>
-      </p>
-    </td>
-  </tr>
+    </tr>
+    <tr>
+      <td>
+        <a id="event-unload"
+          href="https://developer.mozilla.org/docs/Web/Events/unload">
+          <code>unload</code>
+        </a>
+      </td>
+      <td>
+        <p>The page is being unloaded.</p>
+        <p>
+          <em><strong>Warning:</strong>
+          using the <code>unload</code> event is never recommended because it's
+          unreliable and can hurt performance in some cases. See the
+          <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
+          for more details.</em>
+        </p>
+        <p>
+          <strong>Possible previous states:</strong><br>
+          <a href="#state-hidden">hidden</a>
+        </p>
+        <p>
+          <strong>Possible current states:</strong><br>
+          <a href="#state-terminated">terminated</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <strong style="color:red">*</strong> Indicates a new event defined by the Page Lifecycle API
@@ -914,9 +922,9 @@ freeze or discard the page but still show changes to the tab title or favicon.
 
 <strong id="back-forward-cache">What is the back/forward cache?<strong>
 
-The [back/forward cache](https://web.dev/bfcache/) (or "bfcache" for short) is a
-term used to describe a navigation optimization some browsers implement that
-makes using the back and forward buttons faster.
+The [back/forward cache](https://web.dev/bfcache/) is a term used to describe a
+navigation optimization some browsers implement that makes using the back and
+forward buttons faster.
 
 When a user navigates away from a page, these browsers freeze a version of that
 page so that it can be quickly resumed in case the user navigates back using
