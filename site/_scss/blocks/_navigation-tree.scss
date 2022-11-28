@@ -9,6 +9,13 @@ navigation-tree {
   &:focus {
     outline: 0;
   }
+
+  .toc-container {
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    position: sticky;
+    top: get-size(300);
+  }
 }
 
 .navigation-tree__title {
@@ -25,7 +32,7 @@ navigation-tree {
     .navigation-tree__icon > svg {
       transform: rotate(90deg);
     }
-  
+
     + .navigation-tree__nested {
       display: flex;
     }
