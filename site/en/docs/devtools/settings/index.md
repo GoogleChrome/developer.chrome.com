@@ -123,7 +123,7 @@ To apply this setting, reload DevTools.
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/YrWD91prdAFdWvEOOwyw.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 
-This example shows how to switch between four main tabs using the keyboard shortcut.
+This example shows how to switch between four main tabs using the corresponding keyboard shortcuts.
 {% endDetails %}
 
 {% Details %}
@@ -149,12 +149,11 @@ This example shows how to switch between four main tabs using the keyboard short
 {% Details %}
 
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Search in anonymous and content scripts**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Search in anonymous and content scripts** lets you search all loaded JavaScript files, including those in Chrome extensions, using the **Search** tab.
 {% endDetailsSummary %}
 
-
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zta4SxypaPFjcv91biaq.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
 {% endDetails %}
-
 
 {% Details %}
 
