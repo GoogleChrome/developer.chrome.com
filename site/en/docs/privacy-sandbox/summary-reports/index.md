@@ -7,7 +7,7 @@ subhead: >
 description: >
   Measure data aggregated across users with the Attribution Reporting API
   and the Private Aggregation API.
-date: 2022-11-30
+date: 2022-11-29
 authors:
   - alexandrawhite
 ---
