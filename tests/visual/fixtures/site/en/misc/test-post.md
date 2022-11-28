@@ -289,4 +289,9 @@ Partials can be used to load and inline templates from the partials directory
 {% Partial 'test.md' %}
 
 
+### Video
+
+{% Video src="video/T4FyVKpzu4WKF1kBNvXepbi08t52/4tFe6RarBGc5Jre1bScp.mp4", muted="true" %}
+
+
 
