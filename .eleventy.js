@@ -169,7 +169,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addTransform('inlineCss', (new InlineCssTransform()).configure({
       cssBasePath: path.join(__dirname, 'dist'),
       jsPaths: [
-        path.join(__dirname, 'dist/js/**/*.js'),
+        path.join(__dirname, 'dist/js/**/*.js').split(path.sep).join('/')
       ],
       pool: true,
       insert: (content, result) => {
