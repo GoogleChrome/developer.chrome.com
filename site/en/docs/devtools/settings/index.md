@@ -41,7 +41,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 {% Details %}
 
-{% DetailsSummary 'h4'%}
+{% DetailsSummary %}
 **Themes** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets a color theme for DevTools UI.
 {% endDetailsSummary %}
 
@@ -59,8 +59,8 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 
 {% Details %}
 
-{% DetailsSummary 'h4' %}
-**Panel layout** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} arranges panes on panels.
+{% DetailsSummary %}
+**Panel layout** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} arranges panes in panels.
 {% endDetailsSummary %}
 
 Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane. The **auto** option depends on DevTools width.
@@ -79,7 +79,7 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 
 {% Details %}
 
-{% DetailsSummary 'h4' %}
+{% DetailsSummary %}
 **Color format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the format of CSS color values in **Elements** > **Styles**.
 {% endDetailsSummary %}
 
@@ -98,7 +98,7 @@ Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debug
 
 {% Details %}
 
-{% DetailsSummary 'h3' %}
+{% DetailsSummary %}
 **Language** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} sets the locale for DevTools UI.
 {% endDetailsSummary %}
 
@@ -117,7 +117,7 @@ To apply this setting, reload DevTools.
 
 {% Details %}
 
-{% DetailsSummary 'h3' %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable <kbd>Ctrl/Cmd</kbd> + <kbd>0</kbd>-<kbd>9</kbd> shortcut to switch panels** lets you open panels with the keyboard.
 {% endDetailsSummary %}
 
@@ -126,7 +126,7 @@ To apply this setting, reload DevTools.
 
 {% Details %}
 
-{% DetailsSummary 'h3' %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable paused state overlay** hides the **Paused in debugger** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VI5VMTjA0xztwDvQzH2j.png", alt="Play and step over buttons.", width="50", height="22" %} overlay in the viewport when code execution is paused.
 {% endDetailsSummary %}
 
