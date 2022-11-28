@@ -152,6 +152,19 @@ figure {
 
 Text can be *Emphasised*, **Bold** or use ~~Strikethrough.~~
 
+### Color
+
+<p>
+  Lorem ipsum dolor sit amet, <span class="color-red-medium">consectetur adipiscing elit</span>. In vel feugiat purus. In a eros faucibus,
+  rhoncus diam ac, aliquam libero. Vestibulum non ligula purus. Suspendisse at mauris sem. Nunc elementum
+  vehicula turpis, at <span class="color-blue-darkest">commodo dui convallis sed</span>. Etiam lorem magna, blandit at mauris vitae, ultricies
+  sollicitudin diam. In vulputate fringilla bibendum. Maecenas interdum sem libero, ut <span class="color-green-medium">feugiat nunc pharetra eget</span>.
+  Cras volutpat nisl eu porta tincidunt. Vivamus non consequat sapien. In turpis ante, ornare vitae diam quis,
+  pretium interdum diam. <span class="color-yellow-medium">Nulla imperdiet tincidunt mauris</span>, vitae mattis eros ultricies at. Etiam bibendum
+  ligula a accumsan tempus. Aliquam sed sagittis turpis. Praesent eget malesuada quam. <span class="color-cyan-darkest">Curabitur semper
+  tincidunt posuere</span>.
+</p>
+
 ### Buttons
 
 Material button with no bg:
