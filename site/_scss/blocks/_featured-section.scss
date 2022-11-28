@@ -1,0 +1,52 @@
+.featured-section {
+  @include media-query('lg') {
+    background: get-color('grey-50');
+    padding: 32px;
+  }
+
+  .featured-card {
+    background: get-color('white');
+    height: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+
+    @include media-query('lg') {
+      border-color: transparent;
+    }
+
+    .featured-card__thumbnail,
+    .featured-card__thumbnail * {
+      min-height: 164px;
+    }
+
+    .type--h3-card {
+      font-size: px-to-rem(24px);
+      display: block;
+
+      @include media-query('lg') {
+        font-size: px-to-rem(28px);
+      }
+    }
+
+    .type--caption {
+      color: get-color('grey-700');
+      font-size: px-to-rem(16px);
+    }
+
+    a.material-button {
+      position: absolute;
+      bottom: 1em;
+
+      &:hover::before {
+        display: none;
+      }
+    }
+
+    .surface {
+      &:hover::before {
+        display: none;
+      }
+    }
+  }
+}
+    
