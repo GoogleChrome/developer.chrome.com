@@ -387,8 +387,15 @@ sites, by following the following privacy mechanisms:
 
 - No cross-site identifier is used and no detailed cross-site browsing activity
   leaves the device.
-- Event-level reports associate 64 bits of information on the ad side (`news.example`) with only 1 bit or 3 bits on the conversion side (`shop.example`). 64 bits are enough information to be mapped to an individual user identifier, but these 64 bits can only be linked with very little cross-site information: 1 bit or 3 bits, which are not enough to hold an identifier.
-  - The ad-side 64 bits are not new information. A user ID can already be available on the ad side today. `news.example` or `adtech.example` already knows about a certain user's activity on `news.example`.
+- Event-level reports associate 64 bits of information on the ad side
+  (`news.example`) with only 1 bit or 3 bits on the conversion side
+  (`shop.example`). 64 bits are enough information to be mapped to an
+  individual user identifier, but these 64 bits can only be linked with very
+  little cross-site information: 1 bit or 3 bits, which are not enough to hold
+  an identifier.
+  - The ad-side 64 bits are not new information. A user ID can already be
+    available on the ad side today. `news.example` or `adtech.example` 
+    already knows about a certain user's activity on `news.example`.
 - Additional protections are applied to prevent abuse and cross-site tracking:
   - The reports are sent with a **delay**.
   - The conversion data is **noised**: a certain percentage of the time, fake reports are generated.
