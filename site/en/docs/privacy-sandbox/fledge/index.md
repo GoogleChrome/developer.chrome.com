@@ -370,7 +370,7 @@ In FLEDGE, an ad auction is a collection of small JavaScript programs the browse
 device to choose an ad. To preserve privacy, all ad auction code from the seller and buyers is run
 in isolated JavaScript [worklets](/docs/privacy-sandbox/glossary/#worklet) that can't talk to the outside world.
 
-A seller (an advertiser or a [supply-side platform](/docs/privacy-sandbox/glossary/#ssp))
+A seller (a publisher or a [supply-side platform](/docs/privacy-sandbox/glossary/#ssp))
 initiates a FLEDGE ad auction on a site that sells ad space (such as a news
 site). The seller chooses buyers to participate in the auction,
 indicates what space is for sale, and provides additional criteria for the ad. Each buyer is the

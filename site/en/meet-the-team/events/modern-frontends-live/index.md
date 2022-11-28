@@ -40,7 +40,8 @@ sessions:
     title: Supercharge your skills with Creative Coding
     description: null
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null

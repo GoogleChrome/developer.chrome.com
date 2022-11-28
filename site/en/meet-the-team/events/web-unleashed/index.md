@@ -21,7 +21,8 @@ sessions:
       and what is just around the corner. She'll also dive into plenty of information about browser
       support to help you adopt new things with confidence.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null

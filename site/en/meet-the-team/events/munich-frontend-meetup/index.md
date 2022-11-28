@@ -16,7 +16,8 @@ sessions:
       - Chrome DevTools
       - Testing
       - Debugging
-      - CSS and Web UI
+      - CSS
+      - Web UI
     time: null
     type: participant
     slidesUrl: null
@@ -48,7 +49,8 @@ sessions:
       - Chrome DevTools
       - Testing
       - Debugging
-      - CSS and Web UI
+      - CSS
+      - Web UI
     time: TBC
     type: speaker
     slidesUrl: null

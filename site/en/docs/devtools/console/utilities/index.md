@@ -75,7 +75,7 @@ property:
 This function also supports a second parameter, `startNode`, that specifies an 'element' or Node from
 which to search for elements. The default value of this parameter is `document`.
 
-The following example returns a reference to the first element after the currently selected Node and
+The following example returns a reference to the first `img` element that is a descendant of `devsite-header-background`, and
 displays its `src` property:
 
 {% Img src="image/admin/Q5XlmeIMaHQkpP1QryBd.png", alt="Example of $('img', div).src.", width="800", height="234" %}
@@ -90,7 +90,7 @@ overwritten, and `$` will correspond to that library's implementation.
 ## \$\$(selector \[, startNode\]) {: #querySelectorAll-function }
 
 `$$(selector)` returns an array of elements that match the given CSS selector. This command is
-equivalent to calling [document.querySelectorAll()][3].
+equivalent to calling <code>Array.from([document.querySelectorAll()][3])</code>.
 
 The following example uses `$$()` to create an array of all `<img>` elements in the current document
 and displays the value of each element's `src` property:
