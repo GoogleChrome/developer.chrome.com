@@ -17,7 +17,8 @@ sessions:
       of the features that will be landing across all browsers by the end of
       this year.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: TBC
     type: speaker
     slidesUrl: https://www.bram.us/2022/09/13/css-in-2022-and-beyond-2022-09-09-fronteers-conf/

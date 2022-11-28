@@ -6,7 +6,7 @@ authors:
 description: >
   The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
 date: 2021-08-17
-updated: 2022-08-02
+updated: 2022-11-22
 ---
 
 {% Aside %}

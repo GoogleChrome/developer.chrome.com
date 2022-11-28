@@ -15,7 +15,8 @@ sessions:
       lately in Web UI. With loads of new exciting things happening such as Container queries
       you can take your website to the next level.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null
