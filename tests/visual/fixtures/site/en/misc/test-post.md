@@ -246,5 +246,27 @@ This is better
 
 {% endCompare %}
 
+### Details
+
+{% Details 'open' %}
+{% DetailsSummary %}
+Details summary open - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper
+{% endDetailsSummary %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper. Suspendisse auctor
+ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in.
+
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+  Details summary closed
+{% endDetailsSummary %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper. Suspendisse auctor
+ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in.
+
+{% endDetails %}
+
 
 
