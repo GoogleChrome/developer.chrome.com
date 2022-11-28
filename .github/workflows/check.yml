@@ -225,3 +225,4 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: npm run snapshots
+
