@@ -274,5 +274,11 @@ ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus
   {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
 </figure>
 
+### IncludeRaw
+
+```
+{% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
+```
+
 
 
