@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-11-16
+date: 2022-11-28
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/O12v673aOekK889d5Upi.jpg
 alt: Person holding eyeglasses with distant items in focus through the glasses.
 tags:
