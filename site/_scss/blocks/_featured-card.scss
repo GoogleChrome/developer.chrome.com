@@ -17,6 +17,10 @@
 
   &--bg-yellow {
     background: var(--color-meettheteam-bg);
+
+    .button-text {
+      color: var(--color-blue-medium)
+    }
   }
 }
 
