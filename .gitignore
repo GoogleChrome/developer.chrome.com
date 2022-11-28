@@ -20,6 +20,7 @@ Thumbs.db
 # Node modules and output
 node_modules
 dist
+./dist
 **/_includes/css
 
 # Eleventy

@@ -27,7 +27,7 @@ O Lighthouse usa o seguinte processo para identificar ouvintes de eventos que po
 
 O Lighthouse filtra os ouvintes de hosts diferentes porque provavelmente você não tem controle sobre esses scripts. Pode haver scripts de terceiros que estão prejudicando o desempenho de rolagem da sua página, mas eles não aparecem listados no seu relatório Lighthouse.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como deixar passivos os ouvintes de eventos para melhorar o desempenho da rolagem
 

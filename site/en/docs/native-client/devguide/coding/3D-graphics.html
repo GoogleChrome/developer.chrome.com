@@ -2,7 +2,7 @@
 {"title":"3D Graphics"}
 ---
 <html><head></head><body>
-{% include 'partials/nacl-warning.njk' %}
+{% Partial 'nacl-warning.njk' %}
 
 <hr><section id="d-graphics" class="stack">
 
@@ -106,7 +106,7 @@ also works for OpenGL ES 2.0 because both interfaces use the same driver.</p>
 <p>This manifest item is not required, but if you include it, the Chrome Web Store
 will prevent a user from installing the application if the browser is running on
 a machine that does not support OpenGL ES 2.0 or that is using a known
-blacklisted GPU driver that could invite an attack.</p>
+denylisted GPU driver that could invite an attack.</p>
 <p>If the Web Store determines that the user&#x2019;s driver is deficient, the app won&#x2019;t
 appear on the store&#x2019;s tile display. However, it will appear in store search
 results or if the user links to it directly, in which case the user could still

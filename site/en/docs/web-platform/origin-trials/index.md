@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-08-25
+updated: 2022-10-07
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid.
 tags:
@@ -118,6 +118,21 @@ that their concerns were taken into account in the final API design and implemen
 breakage period may be skipped [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
 
 {% endAside %}
+
+### Renew origin trial enrollment {: #renew}
+
+If an origin trial is extended, you will receive an email warning that you need to renew
+registration and provide a new token, for each origin enrolled in the trial.
+
+1. Navigate to the [My Registrations](/origintrials/#/trials/my) page.
+
+2. For each origin registered for the extended trial, click the **RENEW** button.
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/cyYunVjVUSnDGYZQaC4v.png",
+   alt="Screenshot of Chrome origin trial My Registrations page, showing RENEW buttons",
+   width="800", height="358" %}
+
+3. Copy the new token and make it available for every page that should remain enrolled in the trial.
+You can provide multiple tokens if necessary: Chrome will ignore invalid or expired tokens.
 
 
 ## View origin trial information in Chrome DevTools {: #devtools}

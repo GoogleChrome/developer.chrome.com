@@ -12,7 +12,7 @@ La sección Oportunidades de su informe Lighthouse enumera todos los GIF animado
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/MTfWMspCIMjREn2rpwlG.png", alt="Una captura de pantalla de la auditoría de Lighthouse 'Usar formatos de video para contenido animado'", width="800", height="235" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Por qué debería reemplazar los GIF animados con video
 

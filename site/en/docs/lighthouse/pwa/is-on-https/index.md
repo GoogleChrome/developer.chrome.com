@@ -30,7 +30,7 @@ Lighthouse waits for an event from the [Chrome Remote Debugging Protocol](https:
 indicating that the page is running on a secure connection.
 If the event isn't heard within 10&nbsp;seconds, the audit fails.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to migrate your site to HTTPS
 

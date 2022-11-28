@@ -30,7 +30,7 @@ updated: 2019-09-19
 
 {% Aside 'caution' %} 앱을 설치하려면 웹 앱 매니페스트가 *필요*하지만 *충분*하지 않습니다. 설치 가능성에 대한 모든 요구 사항을 충족하는 방법을 알아보려면 [설치 가능 게시물에 필요한 사항 알아보기](https://web.dev/progressive-web-apps/)를 참조하십시오. {% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## PWA를 설치 가능하게 만드는 방법
 

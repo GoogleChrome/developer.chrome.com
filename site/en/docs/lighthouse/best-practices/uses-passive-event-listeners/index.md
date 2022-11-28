@@ -43,7 +43,7 @@ because you probably don't have control over these scripts.
 There may be third-party scripts that are harming your page's scrolling performance,
 but these aren't listed in your Lighthouse report.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to make event listeners passive to improve scrolling performance
 

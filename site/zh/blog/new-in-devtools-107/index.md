@@ -5,18 +5,18 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'Customize keyboard shortcuts, highlight C/C++ objects in the Memory Inspector and more.'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wchUXKvGXO7WtfDYmrsj.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/uzf52nA5SHTJ1wHGiolx.png'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-107
-draft: true
 ---
 
-*感谢 [Poong Zui Yong](https://www.linkedin.com/in/zui-yong-poong-1b507b14/) 提供的翻译*
+*感谢 [Jim Lim](https://www.linkedin.com/in/jim-lim-539a5638) 提供的翻译。*
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
+{% YouTube id='1uwv6HbR8HU' %}
 
 <!-- Translation instructions:
   1. Remove the "draft: true" tag above when submitting PR
@@ -27,97 +27,100 @@ draft: true
 
 <!-- Content starts here -->
 
-<!-- ## Customize keyboard shortcuts in DevTools {: #shortcuts } -->
+## 客制化 DevTools 的键盘快捷键 {: #shortcuts }
 
-<!-- You can now customize keyboard shortcuts for your favorite commands in DevTools. -->
+您现在可以在 DevTools 里客制化您喜爱的键盘快捷键。
 
-<!-- Go to **Settings** > **Shortcuts**, hover over a command and click the **Edit** button (pen icon) to customize the keyboard shortcut. You can create chords (a.k.a multi-key press shortcuts) as well.  -->
+点击**设置** > **快捷键**, 将鼠标悬停在命令上并点击**编辑**的钢笔图示来客制化键盘快捷键。您也可以创建组合键（a.k.a. 多键点击快捷键）。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="Customize keyboard shortcuts in DevTools.", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/973EfWpxwGOdEF1nN1vv.png", alt="客制化开发者工具 （DevTools） 的键盘快捷键。", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d061128ff63a97ab2c6c0d2b5e655e6fcbed829c #}
 
-Chromium issues: [1335274](https://crbug.com/1335274), [174309](https://crbug.com/174309)
+Chromium 议题: [1335274](https://crbug.com/1335274), [174309](https://crbug.com/174309)
 
 
-<!-- ## Toggle light and dark themes with keyboard shortcut {: #toggle-themes } -->
+## 使用键盘快捷键对浅色与深色主题进行快速切换 {: #toggle-themes }
+
 
 <!-- Configure a keyboard shortcut to toggle [light and dark themes](/docs/devtools/rendering/emulate-css/#emulate-css-media-feature-prefers-color-scheme) conveniently. By default, the action doesn’t map to any keyboard shortcut. -->
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="Toggle light and dark themes with keyboard shortcut.", width="800", height="576" %}
+您可以设置一个快捷键来快速切换浅色与深色主题。开发者工具 （Dev Tools） 没有为这个东走预设任何快捷键。 
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7oGdE2eRsgwokWXW9XvA.png", alt="使用键盘快捷键对浅色与深色主题进行快速切换。", width="800", height="576" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4853b34457f43e41ae9cebc7dfc97c0b734f463a #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/029ac9db0b7e7d08945bcf7a16b407bde50183a1 #}
 
-Chromium issues: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
+Chromium 议题: [1280398](https://crbug.com/1280398), [1226363](https://crbug.com/1226363)
 
 
-<!-- ## Highlight C/C++ objects in the Memory Inspector {: #memory } -->
+## 高亮内存检查器里的 C/C++ 对象 {: #memory } 
 
 <!-- The [Memory Inspector](/docs/devtools/memory-inspector/) highlights all the bytes of a C/C++ memory object. -->
 
-<!-- Recognizing an object’s bytes among the surrounding WebAssembly memory was a pain point. You have to know the object’s size and count bytes from the object’s start. -->
+辨识围绕在一个对象字节中的网络组件记忆体是一个用户痛点，您必须知道对象的体积以及从对象启动的时候开始计算字节数。 
 
-<!-- With this feature,  it helps you tell them apart from the surrounding memory. See [Extending the Memory Inspector for C/C++ debugging](/blog/memory-inspector-extended-cpp/) to learn more about the changes. -->
+有了这个新功能,  将帮助用户讲您指示网络组件记忆对象从围绕的记忆体中分离, 参看 [延伸 - 为了C/C++ 纠错而发生的机器检查器](/blog/memory-inspector-extended-cpp/) 来学习更多的改善。 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="Highlight C/C++ objects in the Memory Inspector.", width="800", height="527" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zqOv2zJTc8ucoeDmQiTo.png", alt="高亮记忆检查器里的C/C++对象。", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d5f3befb47eaaa373d697b42dec6f179baf9d42c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4e6bdb4321cbc0b783647e855a616096beaabfd #}
 
-Chromium issue: [1336568](https://crbug.com/1336568)
+Chromium 议题: [1336568](https://crbug.com/1336568)
 
 
-<!-- ## Support full initiator information for HAR import {: #har } -->
+## 支持 HAR 导入的完整启动器（Initiator）的讯息 {: #har } 
 
-<!-- Full **Initiator** information is available now for [HAR import](/docs/devtools/network/reference/#save-as-har). Previously, the **Network** panel only shows partial initiator information during import. -->
+[HAR import] 的完整 **启动器（Initiator）** 讯息现在可以参见(/docs/devtools/network/reference/#save-as-har). 在之前的版本中, **网络 （Network）** 界面只显示启动器（Initiator) 的部分导入讯息。 
 
-<!-- The initiator information helps developers to trace the origin of a network request and identify network-related issues.  -->
+完整的启动器讯息将帮助开发者检索网络请求的源头并辨别和网络相关的问题。  
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="Support full initiator information for HAR import.", width="800", height="376" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cthh3ZrpDwo4LJiaY4Uo.png", alt="导入 HAR 导入的完整启动器的资讯", width="800", height="376" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3a659b0711f52a2e200395b85f16ed9f266d1571 #}
 
-Chromium issue: [1343185](https://crbug.com/1343185)
+Chromium 议题: [1343185](https://crbug.com/1343185)
 
 
 
-<!-- ## Start DOM search after pressing `Enter` {: #search-type } -->
+## 点击 `Enter` 后开始 DOM 搜索 {: #search-type } 
 
-<!-- You can now disable the **Search as you type** setting to always start DOM search after pressing <kbd>Enter</kbd>.  -->
+您现在可以禁止 **即输即搜 （Search as you type）** 设置来启动点击 <kbd>Enter</kbd> 后开始DOM搜索。  
 
-<!-- In the **Elements** panel, toggle the search bar with <kbd>Control</kbd> or <kbd>Command</kbd> + <kbd>F</kbd>. As you type a query in the search textbox, the DOM tree will jump to the first matching element and highlight it by default.  -->
+在**元素 （Elements）**面板, 使用 <kbd>Control</kbd> 或 <kbd>Command</kbd> + <kbd>F</kbd> 来打开搜索栏，每当您在搜索栏中输入一个字母, DOM 树会默认跳到第一个符合条件的元素。 
 
-<!-- For users, especially testers who always work with lengthy search queries, this behavior is not ideal. The DOM tree might jump multiple times as you type in a lengthy search query (e.g. `//div[@id="example"]`). This behavior creates unnecessary motion. -->
+对于经常使用搜索长语句的用户, 这个设定并不是很不理想。因为 DOM 树 可能会在用户输入时, 不断地跳跃搜寻 (e.g. `//div[@id="example"]`)，造成不必要的动效。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KgTTYf8XaKkHQ2udJc33.png", alt="DOM search.", width="800", height="505" %}
 
-<!-- Go to **Settings** > **Preferences**, disable **Search as you type**. With this change, the search will start only after you press <kbd>Enter</kbd>. -->
+打开 **设置 (Settings)** > **偏好设置 (Preferences)** , 禁止 **即输即搜 (Search as you type)** , 更改设置后，搜索将会在您点击<kbd>回车键</kbd>后才开始。 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HBLiQ5e60g5urU8UT5J7.png", alt="Search as you type setting.", width="800", height="449" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b4643a4703b4a26945d1446eedc907ac81373e23 #}
 
-Chromium issue: [1344526](https://crbug.com/1344526)
+Chromium 议题: [1344526](https://crbug.com/1344526)
 
 
-<!-- ## Display `start` and `end` icons for `align-content` CSS flexbox properties {: #flexbox } -->
+## 在 `align-content` 的 CSS flexbox 属性中显示`start` 和 `end`图标 {: #flexbox } 
 
-<!-- In the **Styles** pane, edit the `align-content` properties in a CSS class with `display: flex` or `display: inline-flex`. The `start` and `end` show in the auto-complete dropdown with icons. -->
+在 **样式 (Styles)**边栏中, 点击 `display: flex` 或 `display: inline-flex` 旁边的图标打开 flexbox 编辑器。
+您可以利用图标来编辑 `align-content` 属性的 `start` 和 `end`。 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="align-content flexbox properties.", width="800", height="424" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fo10I2mt6bQ357itnYhl.png", alt="align-content 的 CSS flexbox 属性", width="800", height="424" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ce2b426818106768d4e6d907cc1f4cd3b9636ca6 #}
 
-Chromium issue: [1139945](https://crbug.com/1139945)
+Chromium 议题: [1139945](https://crbug.com/1139945)
 
 
-<!-- ## Miscellaneous highlights {: #misc } -->
+## 其他的更新 {: #misc } 
 
-<!-- - Display correct message counts in the **Console** sidebar. Previously, the counts didn't refresh when clearing console messages. ([1343311](https://crbug.com/1343311)) -->
+- 在 **控制台 (Console)** 中显示正确的网页错误计数。在之前版本中, 网页错误计数并没有在清除控制台的讯息后被自动更新。([1343311](https://crbug.com/1343311)) 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-updated: 2022-06-09
+updated: 2022-10-25
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
@@ -70,7 +70,7 @@ keyboard.
 1. Press the <kbd>Left</kbd> arrow key. The `<ul>` list collapses.
 1. Press the <kbd>Left</kbd> arrow key again. The parent of the `<ul>` node
    is selected. In this case it's the `<li>` node containing the instructions for step 1.
-1. Press the <kbd>Down</kbd> arrow key 2 times so that you've re-selected the `<ul>`
+1. Press the <kbd>Down</kbd> arrow key 3 times so that you've re-selected the `<ul>`
    list that you just collapsed. It should look like this: `<ul>...</ul>`
 1. Press the <kbd>Right</kbd> arrow key. The list expands.
 
@@ -116,6 +116,12 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qigo04bdlo2evHazfIAp.png", alt="Highlighting the query in the Search bar", width="800", height="545" %}
 
 As mentioned above, the Search bar also supports CSS and XPath selectors.
+
+The **Elements** panel selects the first matching result in the DOM tree and rolls it into view in the viewport. By default, this happens as you type. If you always work with long search queries, you can make DevTools run search only when you press <kbd>Enter</kbd>.
+
+To avoid unnecessary jumps between nodes, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Global** > **Search as you type** checkbox.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BKcshLBj0EI1OahoEXbS.png", alt="Cleared Search as you type checkbox in Settings.", width="800", height="425" %}
 
 ## Edit the DOM {: #edit }
 

@@ -14,7 +14,7 @@ Con frecuencia, las fuentes son archivos grandes que tardan en cargarse. En algu
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/251Gbh9tn89GDJY289zZ.png", alt="Una captura de pantalla de Lighthouse. Asegúrese de que el texto permanece visible durante la auditoría de cargas para fuentes web", width="800", height="430" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo evitar que se muestre el texto invisible
 

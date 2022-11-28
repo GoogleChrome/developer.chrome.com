@@ -27,7 +27,7 @@ The audit fails if:
 
 Lighthouse doesn't evaluate the quality of your description.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## How to add a meta description
 

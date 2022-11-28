@@ -34,7 +34,7 @@ updated: 2019-08-20
 - canonical 链接指向不同的域。
 - canonical 链接指向站点根。请注意，这种情况在某些情况下可能是有效的，例如，对于 AMP 或移动页面变体，但 Lighthouse 仍将其视为失败。
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 如何向您的页面添加 canonical 链接
 

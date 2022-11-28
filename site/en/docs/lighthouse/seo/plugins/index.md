@@ -57,4 +57,4 @@ plugin. For example, MDN explains [how to convert Flash video to HTML5 video](ht
 - [Unplayable content on mobile devices](https://developers.google.com/search/mobile-sites/mobile-seo/common-mistakes#unplayable-content)
 - [Flash video to HTML5 video](https://developer.mozilla.org/docs/Plugins/Flash_to_HTML5/Video)
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}

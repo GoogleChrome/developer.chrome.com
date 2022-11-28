@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='DAD72grzDDc' %}
 
@@ -196,5 +196,5 @@ Estas son algunas correcciones notables en esta versión:
 
 - El panel **Fuentes** ahora restaura la posición de desplazamiento correctamente al cargar la página. Anteriormente, la posición no se restauraba correctamente, lo que generaba inconvenientes en la depuración. ([1294422](https://crbug.com/1294422))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

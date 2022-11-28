@@ -17,6 +17,7 @@
 const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
+const {renderHandler} = require('./render');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
@@ -27,7 +28,11 @@ const app = express();
 
 // The site serves from both roots. We pass this to our redirects handler to
 // see whether redirects will be successful.
-const staticPaths = ['dist', 'dist/en'];
+let staticPaths = ['dist', 'dist/en'];
+
+if (process.env.NODE_ENV === 'test') {
+  staticPaths = ['tests/server/fixtures', 'tests/server/fixtures/en'];
+}
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 const uniqueRedirectHandler = buildUniqueRedirectHandler();
@@ -77,8 +82,15 @@ if (isGAEProd) {
   handlers.unshift(compression());
 }
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+app.post('/_render', renderHandler);
+
 app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
   console.log('The server is listening at:', listener.address());
 });
+
+module.exports = app;

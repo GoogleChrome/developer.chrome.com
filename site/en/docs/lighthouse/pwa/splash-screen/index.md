@@ -24,7 +24,7 @@ flags pages that don't have a custom splash screen:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Lighthouse audit showing site isn't configured for a custom splash screen", width="800", height="98" %}
 </figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to create a custom splash screen
 

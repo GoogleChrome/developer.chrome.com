@@ -17,6 +17,8 @@
 declare global {
   export interface EleventyCollectionObject {
     all: EleventyCollectionItem[];
+    items: EleventyCollectionItem[];
+    length: number;
     [tag: key]: EleventyCollectionItem[];
     /**
      * Unsorted items (in whatever order they were added)

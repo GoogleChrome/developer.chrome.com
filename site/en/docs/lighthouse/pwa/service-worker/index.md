@@ -34,11 +34,11 @@ flags pages that don't register a service worker:
 Lighthouse checks if the [Chrome Remote Debugging Protocol](https://github.com/ChromeDevTools/devtools-protocol)
 returns a service worker version. If it doesn't, the audit fails.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to register a service worker
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 Registering a service worker involves only a few lines of code,
 but the only reason you'd use a service worker

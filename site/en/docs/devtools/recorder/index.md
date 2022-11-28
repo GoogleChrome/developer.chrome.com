@@ -10,6 +10,8 @@ description: "Record, replay, measure user flows, and edit their steps with the 
 tags:
   - test
   - performance
+anchorRedirects:
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
@@ -24,6 +26,10 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 {% endAside %}
 
 For more information on how to share the recorded user flows, edit them and their steps, see the [Recorder features reference](/docs/devtools/recorder/reference/).
+
+{% Aside 'note' %}
+This feature is available only in Chrome, not Chromium.
+{% endAside %}
 
 ## Open the Recorder panel {: #open }
 

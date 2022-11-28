@@ -17,7 +17,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaia](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -240,5 +240,5 @@ Chrome 96 анонсировал [ранний доступ](/blog/origin-trials
 - Больше не нужна перезагрузка при [переключении светлой/тёмной темы](/docs/devtools/customize/dark-theme/) в DevTools. ([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
