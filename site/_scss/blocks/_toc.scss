@@ -57,6 +57,9 @@ toc-active {
 
   li {
     line-height: 1.2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     &::before {
       display: none;
