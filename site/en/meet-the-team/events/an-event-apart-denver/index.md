@@ -5,7 +5,7 @@ summary: >-
   digital design, UX, content, code, and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Denver, USA'
-date: '2022-10-10'
+date: 2022-10-10
 externalUrl: 'https://aneventapart.com/event/denver-2022'
 sessions:
   - speaker: rachelandrew
@@ -27,7 +27,8 @@ sessions:
       inspiration to try combining different features, and a little peek at what
       might be around the corner.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Interop
     time: TBC
     type: speaker
