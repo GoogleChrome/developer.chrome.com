@@ -57,8 +57,8 @@ toc-active {
 
   li {
     line-height: 1.2;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 
     &::before {
