@@ -50,7 +50,7 @@ sit amet ullamcorper.
 
 ### Image
 
-![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/TLSl7GEexHIvhy0YTp3m.avif)
+![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png)
 
 ### Horizontal rule
 
@@ -267,6 +267,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa si
 ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in.
 
 {% endDetails %}
+
+### Img
+
+<figure>
+  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+</figure>
 
 
 
