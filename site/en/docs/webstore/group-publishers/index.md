@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Set up a group publisher
 date: 2020-06-20
-updated: 2021-08-12
+updated: 2022-12-09
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
 <!--lint disable code-block-style-->
@@ -82,7 +82,7 @@ If you haven't already done so, you may wish to create a private [Google Group][
     Google group publishing field", width="800", height="291" %}
 
 1. Select the Google Group that you want to associate with the new group
-publisher, then click **Convert to group publisher**.
+publisher, then click **Create group publisher**.
 
 1. Make sure that the [Google Group][google-group] has mail turned on, as shown below:
 
@@ -107,10 +107,27 @@ Once you finish the group publishing setup, it can take up to 30 minutes for dev
 group to see the changes.
 {% endAside %}
 
-## Adding developers to the group publisher
+## Adding developers to or removing them from the group publisher
 
-Your developer console will show the new group publisher account and the linked
-Google Group. You can [add or remove developers][google-group]. In order for a group member to publish updates, that member must [register as a CWS developer][cws-register] and pay the one-time registration fee.
+Your developer console will show the new group publisher account and the linked Google Group. Use
+[Google Groups][google-group] to add or remove developers. After adding or removing a member to
+your publishing group, you will need to manually sync the developer console with your list.
+
+To manually sync the developer console:
+
+1. Sign in to the [Chrome Web Store developer console][devconsole] and select your group from the
+**Publisher** list. (It's located at the top, right of the screen.)
+
+    {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/1jxISIzNsqVoRbMc8qio.png", alt="Screenshot of the publisher list.", width="292", height="48" %}
+
+1. Go to the **Account** tab.
+
+1. Scroll down to **Group publisher memberships**.
+    {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/KsaEiqyPik0PaecQ9gqh.png", alt="Screenshot of the Group publisher membership field", width="800", height="325" %}
+
+1. Click **Sync**.
+
+For a group member to publish updates, that member must [register as a CWS developer][cws-register] and pay the one-time registration fee.
 
 {% Aside "caution" %}
 Be careful with the membership of your group publisher groups. Any Chrome Web Store developer who is
@@ -118,7 +135,7 @@ a member of the linked group can act on behalf of the new publisher account. For
 edit items, publish items, and edit the publisher's display name. 
 {% endAside %}
 
-To maintain security over your items, we recommend that you manage your group in carefully:
+To maintain security over your items, we recommend that you manage your group carefully.
 
 * Create a Google Group for exclusive use as the group publisher; don't use an existing group that
   you also use for other purposes.
