@@ -47,9 +47,13 @@ your measurement needs.
 
 ### Design your data collection {: #design-data-collection}
 
-A key principle of summary reports is early design decisions. You decide what data to collect in what categories. The output reports provide insights on your campaigns or business. 
+A key principle of summary reports is early design decisions. You decide what
+data to collect in what categories. The output reports provide insights on your
+campaigns or business. 
 
-The output report offers detailed cross-site conversion data and flexibility for joining click and view data with conversion data. You can also think of the final output as an input for the tools you use to make decisions.
+The output report offers detailed cross-site conversion data and flexibility
+for joining click and view data with conversion data. You can also think of the
+final output as an input for the tools you use to make decisions.
 
 Ask yourself: what do I want to learn about user engagement with my content?
 
@@ -59,8 +63,16 @@ Ask yourself: what do I want to learn about user engagement with my content?
 #### Ad conversions
 {% endDetailsSummary %}
 
-For example, if you generate summary reports to determine how many conversions led to some total spend value, that may help your team decide what your next ad campaign should target to generate a higher total spend.
+For example, if you generate summary reports to determine how many conversions
+led to some total spend value, that may help your team decide what your next ad
+campaign should target to generate a higher total spend.
 
+<figure class="screenshot">
+{% Img
+  src="image/VbsHyyQopiec0718rMq2kTE1hke2/RFfm1ulmqrFMASCqZ2dJ.png",
+  alt="Diagram which shows how multiple aggregatable reports are processed and have noise added to generate specific summary reports.", width="800", height="465"
+%}
+</figure>
 {% endDetails %}
 
 {% Details %}
@@ -105,30 +117,62 @@ Before you can capture data, you must define what information you want to collec
 
 There are a number of possible use cases, detailed in the Private Aggregation documentation. Let's explore one example:
 
-You may want to measure the demographics of the users who have seen your content across different sites. Private Aggregation can provide an answer, such as “Approximately 317 unique users are from the age of 18-45 and are from Germany.” First, decide specifically what information you want to collect (such as age and location). Then, use [Shared Storage](/docs/privacy-sandbox/shared-storage/) to collect that specific demographics data from a third-party site. At a later point in time, you can submit a report via Private Aggregation with the age group and country dimensions encoded in the aggregation key. 
+You may want to measure the demographics of the users who have seen your
+content across different sites. Private Aggregation can provide an answer, such
+as "Approximately 317 unique users are from the age of 18-45 and are from
+Germany." First, decide specifically what information you want to collect (such
+as age and location). Then, use
+[Shared Storage](/docs/privacy-sandbox/shared-storage/) to collect that
+specific demographics data from a third-party site. At a later point in time,
+you can submit a report via Private Aggregation with the age group and country
+dimensions encoded in the aggregation key. 
 
 {% endDetails %}
 
 ### How is data captured before aggregation?
 
-As summary reports are made up of the data from a group of individuals, let's start with one individual's browser actions.
+Summary reports are made up of aggregated data from a group of individual devices. While an individual user’s actions cannot be observed and reviewed, the process of collection is the same for each person.
+
+An individual user’s actions are encrypted and collected in an aggregatable report. These reports also include a small amount of [unencrypted metadata relevant to batching](#batching).
+
+{% Aside %}.
+Unencrypted conversion data is only available in summary reports—that is, after the aggregatable reports have been [processed by the aggregation service](#aggregation-service).
+{% endAside %}.
+
+For Attribution Reporting data, aggregatable reports are captured as such:
 
 1. A user visits a publisher site and sees or clicks an ad, otherwise known as an attribution source event.
 2. A few minutes or days later the user converts, otherwise known as an attribution trigger event. For example, a conversion can be defined as a product purchase.
 3. The browser software matches the ad click or view with the conversion event. Based on this match, the browser creates an aggregatable report with specific logic created by an adtech provider.
 4. The browser encrypts this data and, after a small delay, sends it to an adtech server for collection. The adtech server must rely on an aggregation service to access the noised insights.
 
-### Batching aggregatable reports
+For Private Aggregation, it looks like the following:
 
-Before aggregatable reports can be processed and aggregated into a summary report, they must first be collected and batched. A _batch_ is a strategic group of aggregatable reports.
+1. A third-party decides what they want to measure and writes the data into Shared Storage to be read at a later time.
+2. The user triggers an event which matches what the third-party wants to measure. For example, when the user visits a site with embedded content, the third-party can read the data in Shared Storage and use Private Aggregation to send encrypted aggregatable reports to your server for collection. .
+
+<figure class="screenshot">
+{% Img
+  src="image/VbsHyyQopiec0718rMq2kTE1hke2/2Si3rdSh7jr3S6UZTSrg.png",
+  alt="", width="600", height="195"
+%}
+</figure>
+
+### Batching aggregatable reports {: #batching }
+
+Before the collected aggregatable reports can be processed and aggregated into a summary report, they must be batched. A batch is a strategic group of aggregatable reports.
 
 Aggregatable reports have a small amount of unencrypted data, included as `shared_info`, which can be used to create batches. This includes the timestamp and reporting origin. You cannot batch based on encrypted information within the report.
-
-Ideally, batches will contain many reports (in other words, more than 100 reports in a batch). You may decide to batch on a daily, weekly, or monthly basis. This strategy can change for specific events where a higher traffic is expected. 
-
-For example, if batching aggregatable reports for the Attribution Reporting API, you may decide to update your batching strategy for the day of a large sale, where you expect a larger volume of ad conversions.
-
-With the Private Aggregation API, you may expect to change your strategy on the day of a large press release about a specific piece of content, embedded on third-party websites.
+ 
+Ideally, batches will contain many reports. You may decide to batch hourly, daily, weekly, or any other time frame of your choice. This strategy can change for specific events where a higher traffic is expected. 
+ 
+For example, when batching aggregatable reports for the Attribution Reporting
+API, you may decide to update your batching strategy to hourly for the day of a
+large sale, where you expect a larger volume of ad conversions.
+ 
+With the Private Aggregation API, you may expect to change your strategy on the
+day of a large press release about a specific piece of content, embedded on
+third-party websites.
 
 ###  Processing data with the aggregation service
 
@@ -154,25 +198,28 @@ For adtech providers to retrieve a summary report, the following steps must be t
    reports, along with noised data.
 1. The aggregation service returns the summary report to the adtech provider.
 
+<figure class="screenshot">
+  {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/U1ZeswSEnAMSSoCcE5Za.png", alt="", width="800", height="146" %}
+</figure>
+
 The adtech can use the summary report to inform bidding and to offer reporting to its own customers. A [JSON-encoded scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports) is the proposed format for summary reports.
 
 ## Summary reports with Private Aggregation
 
-1. Call your shared storage worklet to generate a histogram report using
-   Private Aggregation. In this call, define what buckets should be aggregated.
-1. The aggregation service schedules a worker to aggregate the data.
+1. Read the cross-site data collected by Shared Storage and generate an aggregation key to group the data. 
+1. Call the Private Aggregation API from a Shared Storage worklet with the aggregation key and the value that you want to accumulate. The browser generates an encrypted aggregatable report from your input and sends it to your server for collection.
+1. Batch the aggregatable reports and send them to the aggregation service for processing.
+1. The aggregation service processes the batched reports, then adds noise.
    {% Aside %}
-   Before the worker can aggregate, attestation is required from the
-   ​​coordinator. If the worker passes attestation, the decryption keys will be
-   provided.
+   Before the aggregation service can process the reports, attestation is required from the ​​coordinator. Learn more about the [aggregation service](/docs/privacy-sandbox/aggregation-service).
    {% endAside %}
-1. The aggregation worker decrypts and aggregates data from the aggregatable
-   reports, along with noised data.
 1. The aggregation service returns the summary report to the requester.
 
 ## Engage and share feedback
 
-Summary reports are a key piece of the Privacy Sandbox measurement offerings.
+Summary reports are a key piece of the Privacy Sandbox measurement proposals.
+Like other Privacy Sandbox proposals, this is documented and discussed publicly
+on GitHub.
 
 * Discuss the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/#discuss-the-api).
 * Discuss the [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/#engage-and-share-feedback).
