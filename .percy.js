@@ -3,6 +3,7 @@ const SNAPSHOTS = [
   '/en/page-types/docs-landing/index.html',
   '/en/page-types/doc-post/index.html',
   '/en/page-types/error/index.html',
+  '/en/page-types/events/index.html',
   '/en/test-post/index.html',
 ];
 
