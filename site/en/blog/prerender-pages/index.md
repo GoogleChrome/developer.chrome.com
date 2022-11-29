@@ -3,7 +3,7 @@
 layout: 'layouts/blog-post.njk'
 title: Prerender pages in Chrome for instant page navigations
 description: |
- ??
+ The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108
 authors:
  - tunetheweb
 date: 2022-11-28
@@ -55,11 +55,11 @@ Prerendering allows a near-instant page load as shown in the Video below when pr
 %}
 </figure>
 
-Web.dev is already a fast site, but even with this we can see how prerendering improves the user experience. This can therefore also have a direct impact on a site's [Core Web Vitals](https://web.dev/vitals/), with near zero LCP, reduced CLS (since any load CLS happens before the initial view), and improved FID (since the load should be completed before the user interacts).
+The [web.dev](https://web.dev/) site is already a fast site, but even with this you can see how prerendering improves the user experience. This can therefore also have a direct impact on a site's [Core Web Vitals](https://web.dev/vitals/), with near zero LCP, reduced CLS (since any load CLS happens before the initial view), and improved FID (since the load should be completed before the user interacts).
 
-Even when a page is not fully prerendered, having a head start to the page load, should improve the loading experience. When a link is activated while prerendering is still happening, the page prerendering page will move to the main frame and continue loading.
+Even when a page activates before it is fully loaded, having a head start to the page load, should improve the loading experience. When a link is activated while prerendering is still happening, the prerendering page will move to the main frame and continue loading.
 
-However, prerendering does use additional memory and network bandwidth. Care must be taken not to over-prerender, at a cost of user resources. Only when there is a high likelihood of the prerender page being navigated to, should the page be prerendered.
+However, prerendering does use additional memory and network bandwidth. Be careful not to over-prerender, at a cost of user resources. Only prerender when there is a high likelihood of the page being navigated to.
 
 See the [Measuring performance](#measuring-performance) section for more information on how to measure the actual performance impact in your analytics.
 
@@ -81,7 +81,7 @@ These predictors are also what drive the address bar suggested options you may h
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/GcJd2GQ76qdXKbcUb1VD.png", alt="Screenshot of the address bar 'Typeahead' feature", width="400", height="216.5" %}
 </figure>
 
-Chrome will continually update its predictors based on your typing, and selections.
+Chrome will continually update its predictors based on your typing and selections.
 
 - For a 50% confidence level (shown in amber), Chrome proactively preconnects to the domain, but does not prerender the page.
 - For a 80% confidence level (shown in green), Chrome will prerender the URL.
@@ -105,7 +105,7 @@ For the third prerender option, web developers can insert JSON instructions onto
 
 The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) (for example, matching `href` patterns). For now, only the above syntax is supported in Chrome.
 
-For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. In Chrome 109 we expect to expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). We are also exploring options to [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. Chrome 109 plans expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
 
 You can feature detect Speculation Rules API support with standard HTML checks:
 
@@ -130,7 +130,7 @@ if (HTMLScriptElement.supports &&
   const specScript = document.createElement('script');
   specScript.type = 'speculationrules';
   specRules = {
-    'prerender': [
+    prerender: [
       {
         source: 'list',
         urls: ['/next.html'],
@@ -151,11 +151,11 @@ Prerender is usually a positive experience for users as it allows fast page rend
 
 However, there may be instances when you do not wish prerendering of pages to happen, for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
 
-### Enabling or disabling prerender in Chrome
+### Enabling and disabling prerender in Chrome
 
 Prerender is only enabled for those Chrome users with the "Preload pages for faster browsing and searching" setting in `chrome://settings/cookies/`. Additionally, prerender is also disabled on low-memory devices, or if the operating system is in data-saver or battery-saver modes.
 
-### Detecting prerender server-side
+### Detecting and disabling prerender server-side
 
 Prerendered pages will be sent with the following HTTP header:
 
@@ -163,7 +163,9 @@ Prerendered pages will be sent with the following HTTP header:
 Sec-Purpose: prefetch;prerender
 ```
 
-Servers can respond based on this header, to log prerender requests, return different content, or prevent the prerender from happening. If a non-success response code is returned (that is, not a 200 or a 304), then the page will not be prerendered. So this is one way to prevent pages you absolutely do not want prerendered, from prerendering.
+Servers can respond based on this header, to log prerender requests, return different content, or prevent the prerender from happening. If a non-success response code is returned (that is, not a 200 or a 304), then the page will not be prerendered.
+
+If you absolutely do not want a particular page to be prerendered, this is the best way to ensure it won't happen.
 
 ### Detecting prerender in JavaScript
 
@@ -222,7 +224,7 @@ For measuring performance metrics, analytics should consider whether it is bette
 
 For Core Web Vitals, measured by Chrome through the [Chrome User Experience Report](/docs/crux/), these are intended to measure the user experience. So these are measured based on activation time. This will often result in a 0 second LCP for example, showing this is great way of improving your Core Web Vitals.
 
-From version 3.0.4, the [`web-vitals` library](https://github.com/GoogleChrome/web-vitals) has been updated to handle prerendered navigations in the same way Chrome measure Core Web Vitals. This version also flags prerendered navigations for those metrics in the [`Metric.navigationType`](https://github.com/GoogleChrome/web-vitals#metric) attribute, which is discussed next.
+From version 3.1.0, the [`web-vitals` library](https://github.com/GoogleChrome/web-vitals) has been updated to handle prerendered navigations in the same way Chrome measure Core Web Vitals. This version also flags prerendered navigations for those metrics in the [`Metric.navigationType`](https://github.com/GoogleChrome/web-vitals#metric) attribute, which is discussed next.
 
 ### Measuring prerenders
 
@@ -231,7 +233,7 @@ Whether a page is prerendered can be seen with a non-zero `activationStart` entr
 ```js
 // Set Custom Dimension for Prerender status
 const prerendered =
-    performance &&
+    self.performance &&
     performance.getEntriesByType &&
     performance.getEntriesByType('navigation')[0] &&
     performance.getEntriesByType('navigation')[0].activationStart > 0;
@@ -246,7 +248,7 @@ As you measure the business impact of prerendering pages for instant navigations
 
 #### Measuring hit rates
 
-As well as measuring the impact of pages that are visited after a prerender, it is also important to measure pages that are prerendered and _not_ subsequently visited. This could imply you are prerendering too much, and using up valuable resources of the user for little benefit.
+In addition to measuring the impact of pages that are visited after a prerender, it is also important to measure pages that are prerendered and _not_ subsequently visited. This could imply you are prerendering too much, and using up valuable resources of the user for little benefit.
 
 This is measured by firing an analytics event when speculation rules are inserted. You can then compare the number of these events, to the actual prerender page views. Or alternatively fire another event (`prerender-activated`) on activation if that makes it easier to compare.
 
