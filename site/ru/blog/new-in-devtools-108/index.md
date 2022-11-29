@@ -85,7 +85,7 @@ function bar(){return foo(),foo(),42}
 ``` 
 
 <!-- This creates confusion during debugging because the stepping behavior is different between minified and authored code. It is even more confusing when using sourcemaps to debug the minified code in terms of the original code, as the developer is then looking at semicolons (which were under the hood turned into commas by the toolchain) but the debugger doesn't stop on them. -->
-Это создаёт путаницу при отладке, поскольку поведение пошагового выполнения отличается для минифицированного и авторского кода. Ещё более запутанно при использовании карт исходного кода отлаживать минифицированный код по исходному коду, поскольку разработчик видит точки с запятой (которые под капотом инструментарий превратил в запятые), но отладчик на них не останавливается.
+Это создаёт путаницу при отладке, поскольку поведение пошагового выполнения отличается для минифицированного и авторского кода. Ещё более запутанной при использовании карт исходного кода может быть отладка минифицированного кода по исходному, поскольку разработчик видит точки с запятой (которые инструментарий превратил в запятые), но отладчик на них не останавливается.
 
 {# https://chromium.googlesource.com/v8/v8/+/ade6d191c8566e3fe7331d2ef37e43760c7cb363 #}
 
@@ -109,12 +109,12 @@ function bar(){return foo(),foo(),42}
 ## Другие важные моменты {: #misc }
 
 <!-- These are some noteworthy fixes in this release: -->
-Вот несколько заслуживающих внимания исправлений в этом выпуске:
+Вот ещё несколько заслуживающих внимания исправлений в этом выпуске:
 
 <!-- - Autocomplete CSS property name in the **Styles** pane on pressing space. ([1343316](https://crbug.com/1343316)) -->
 - Автоматическое завершение имени свойства CSS на панели **Стили** (Styles) по нажатию пробела. ([1343316](https://crbug.com/1343316))
 <!-- - Remove auto scroll in the **Element** panel’s breadcrumb. ([1369734](https://crbug.com/1369734)) -->
-- Удалён автоматический скрол в навигационной цепочке вкладки **Элементы** (Element). ([1369734](https://crbug.com/1369734))
+- Отключена автоматическая прокрутка в навигационной цепочке вкладки **Элементы** (Element). ([1369734](https://crbug.com/1369734))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ccfb914765146ce514b9645117d9f95052bd3471 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4b6c1b6671e08a39e4d37772e87ff2cf41cb7327 #}
