@@ -230,7 +230,7 @@ FedCM 経由でブラウザから送信されるすべてのリクエストに�
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -327,7 +327,7 @@ Sec-Fetch-Dest: webidentity
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -408,7 +408,7 @@ Sec-Fetch-Dest: webidentity
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -442,7 +442,7 @@ IdP の ID アサーション エンドポイントは、サインインして�
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -496,7 +496,7 @@ OAuth または OpenID Connect でのドメイン検証はブラウザのリダ�
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -549,7 +549,7 @@ const { token } = credential;
 <table class="with-heading-tint with-borders">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>プロパティ</th>
       <th>Description</th>
     </tr>
   </thead>
