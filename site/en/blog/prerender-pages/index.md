@@ -120,9 +120,68 @@ Speculation rules can be:
 * Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
 * Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`.
 
-Speculation rules can be added anywhere in the main page and do not need to be in the `<head>` element. Multiple speculation rules can also be added to the same page—adding multiple URLs in the `urls` array, or having multiple `<script type="speculationrules">` are functionally equivalent.
+Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
-Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once the page is activated.
+Multiple speculation rules can also be added to the same page. The following are functionally equivalent:
+
+**List of URLs:**
+
+```html
+<script type="speculationrules">
+{
+  "prerender": [
+    {
+      "source": "list",
+      "urls": ["one.html", "two.html"]
+    }
+  ]
+}
+</script>
+```
+
+**Multiple `speculationrules`:**
+
+```html
+<script type="speculationrules">
+{
+  "prerender": [
+    {
+      "source": "list",
+      "urls": ["one.html"]
+    }
+  ]
+}
+</script>
+<script type="speculationrules">
+{
+  "prerender": [
+    {
+      "source": "list",
+      "urls": ["two.html"]
+    }
+  ]
+}
+</script>
+```
+
+**Multiple lists within one set of `speculationrules`**
+
+```html
+<script type="speculationrules">
+{
+  "prerender": [
+    {
+      "source": "list",
+      "urls": ["one.html"]
+    },
+    {
+      "source": "list",
+      "urls": ["two.html"]
+    }
+  ]
+}
+</script>
+```
 
 Below is a simple example of adding a `prerender` speculation rule:
 
