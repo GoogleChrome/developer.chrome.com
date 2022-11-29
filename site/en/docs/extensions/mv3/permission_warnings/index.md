@@ -314,6 +314,11 @@ the steps in [Viewing Warnings][27].
       <td>Grants the extensions access to the <a href="/docs/extensions/reference/tabCapture">chrome.tabCapture</a> API.</td>
       <td><strong>Read and change all your data on the websites you visit</strong></td>
     </tr>
+    <tr id="tabGroups">
+      <td><code>"tabGroups"</code></td>
+      <td>Grants the extensions access to the <a href="/docs/extensions/reference/tabGroups">chrome.tabGroups</a> API.</td>
+      <td><strong>View and manage your tab groups</strong></td>
+    </tr>
     <tr id="tabs">
       <td><code>"tabs"</code></td>
       <td>Grants the extension access to privileged fields of the <a
