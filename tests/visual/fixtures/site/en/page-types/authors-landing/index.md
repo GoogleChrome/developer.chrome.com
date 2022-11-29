@@ -8,6 +8,8 @@ i18n:
   headings:
     latest-news: 'Authors'
 override:authorsData:
+  alexdanilo:
+    twitter: alexanderdanilo
   leeronisrael:
     image: image/80mq7dk16vVEg8BBhsVe42n6zn82/E02nz219ZjKaoyuRFtdb.jpg
   adamsilverstein:
@@ -29,6 +31,6 @@ override:authorsData:
     image: image/VbsHyyQopiec0718rMq2kTE1hke2/aS7reiLcBKY52w1HUU3m.jpeg
 pagination:
   data: authorsData
-  size: 8
+  size: 9
   resolve: keys
 ---
