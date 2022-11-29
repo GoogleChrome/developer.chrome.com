@@ -9,8 +9,9 @@
 
   .playlist-details {
     flex-basis: px-to-rem(365px);
+    margin-bottom: px-to-rem(32px);
     min-width: px-to-rem(365px);
-    margin-right: px-to-rem(40px);
+    padding-right: px-to-rem(40px);
 
     @media screen and (max-width: 960px) {
       min-width: 100%;
@@ -23,36 +24,36 @@
   }
 
   .playlist-action__link {
-      font-size: 0;
-      margin-right: px-to-rem(24px);
+    font-size: 0;
   }
 
   .playlist-channel {
-      align-items: center;
-      border-top: 1px solid get-color('grey-400');
-      display: flex;
-      justify-content: space-between;
-      padding-top: px-to-rem(24px);
+    align-items: center;
+    border-top: 1px solid get-color('grey-400');
+    display: flex;
+    justify-content: space-between;
+    padding-top: px-to-rem(24px);
   }
 
   .playlist-channel__icon {
     flex-basis: 56px;
-    min-width: 56px;
     margin-right: px-to-rem(8px);
+    min-width: 56px;
+    min-width: 56px;
   }
 
   .playlist-channel__name {
-      line-height: px-to-rem(22px);
-      margin: 0;
+    line-height: px-to-rem(22px);
+    margin: 0;
   }
 
   .playlist-channel__subscribe {
-      display: inline-block;
-      margin-left: px-to-rem(16px);
+    display: inline-block;
+    margin-left: px-to-rem(16px);
   }
 
   .playlist-videos {
-    flex-basis: 100%;
+    flex-basis: calc(100% - #{px-to-rem(365px)});
   }
 
   .playlist-video {
@@ -66,36 +67,29 @@
       padding: px-to-rem(16px);
     }
 
-    &:hover {
-      &::after {
-        background-color: var(--color-red-lightest);
-        content: "";
-        display: block;
-        height: calc(100% - #{px-to-rem(32px)} );
-        left: px-to-rem(18px);
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -1;
-      }
-
-      .playlist-video__action {
-        display: block;
-      }
+    &:hover::after {
+      background-color: var(--color-red-lightest);
+      content: '';
+      display: block;
+      height: calc(100% - #{px-to-rem(32px)});
+      left: px-to-rem(18px);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
     }
 
-    &:last-child {
+    &:hover .playlist-video__action {
+      display: block;
+    }
 
-      .playlist-video__number {
-        &::after {
-          display: none;
-        }
-      }
+    &:last-child .playlist-video__number::after {
+      display: none;
+    }
 
-      .playlist-video--content {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
+    &:last-child.playlist-video--content {
+      border-bottom: unset;
+      padding-bottom: 0;
     }
   }
 
@@ -119,31 +113,33 @@
     height: px-to-rem(30px);
     line-height: px-to-rem(30px);
     margin-right: px-to-rem(24px);
-    text-align: center;
     min-width: px-to-rem(30px);
     position: relative;
+    text-align: center;
 
     @media screen and (max-width: 960px) {
       font-size: px-to-rem(14px);
       height: px-to-rem(22px);
       line-height: px-to-rem(22px);
       margin-right: px-to-rem(16px);
-      min-width: px-to-rem(22px);
       max-width: px-to-rem(22px);
+      min-width: px-to-rem(22px);
     }
 
     &::after {
       border-left: 5px dotted get-color('red-300');
-      content: "";
+      content: '';
       display: block;
       height: 300px;
       left: px-to-rem(13px);
       position: absolute;
       width: 4px;
+    }
+  }
 
-      @media screen and (max-width: 960px) {
-        display: none;
-      }
+  @media screen and (max-width: 960px) {
+    .playlist-video__number::after {
+      display: none;
     }
   }
 
@@ -159,24 +155,21 @@
       min-width: px-to-rem(100px);
       overflow: hidden;
       position: absolute;
-      right: px-to-rem(16px);;
+      right: px-to-rem(16px);
       top: px-to-rem(16px);
       width: px-to-rem(100px);
     }
   }
 
-  .playlist-video__details {
+  .playlist-video__details a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
 
-    p {
-      @media screen and (max-width: 960px) {
-         font-size: px-to-rem(14px);
-         line-height: 1.5;
-      }
-    }
-
-    a {
-      color: var(--color-text);
-      text-decoration: none;
+  .playlist-video__detail p {
+    @media screen and (max-width: 960px) {
+      font-size: px-to-rem(14px);
+      line-height: 1.5;
     }
   }
 
