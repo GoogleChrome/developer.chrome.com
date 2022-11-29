@@ -45,7 +45,7 @@ UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI).
 
 <figure class="screenshot" style="max-width:300px; margin:auto;">
   {%
-    Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/X4wix9T8wu7VjvAAKu2e.mov",
+    Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/0UcI70fCHMslo7Kfmr3d.mp4",
     autoplay="true", loop="true"
   %}
   <figcaption>A user signing in with a condtional UI</figcaption>
