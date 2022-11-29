@@ -131,12 +131,18 @@ dimensions encoded in the aggregation key.
 
 ### How is data captured before aggregation?
 
-Summary reports are made up of aggregated data from a group of individual devices. While an individual user’s actions cannot be observed and reviewed, the process of collection is the same for each person.
+Summary reports are made up of aggregated data from a group of individual
+devices. While an individual user’s actions cannot be observed and reviewed,
+the process of collection is the same for each person.
 
-An individual user’s actions are encrypted and collected in an aggregatable report. These reports also include a small amount of [unencrypted metadata relevant to batching](#batching).
+An individual user’s actions are encrypted and collected in an aggregatable
+report. These reports also include a small amount of
+[unencrypted metadata relevant to batching](#batching).
 
-{% Aside %}.
-Unencrypted conversion data is only available in summary reports—that is, after the aggregatable reports have been [processed by the aggregation service](#aggregation-service).
+{% Aside %}
+Unencrypted conversion data is only available in summary reports—that is,
+after the aggregatable reports have been
+[processed by the aggregation service](#aggregation-service).
 {% endAside %}.
 
 For Attribution Reporting data, aggregatable reports are captured as such:
