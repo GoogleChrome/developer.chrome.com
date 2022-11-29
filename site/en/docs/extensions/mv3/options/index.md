@@ -9,7 +9,7 @@ description: How to let users customize your Extension.
 Allow users to customise the behavior of an extension by providing an options page. A user can view
 an extension's options by right-clicking the extension icon in the toolbar then selecting options or
 by navigating to the extension management page at `chrome://extensions`, locating the desired
-extension, clicking **Details**, then selection the options link.
+extension, clicking **Details**, then selecting the options link.
 
 ## Write the options page {: #write_page }
 
