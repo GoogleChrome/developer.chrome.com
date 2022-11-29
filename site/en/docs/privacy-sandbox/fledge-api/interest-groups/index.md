@@ -468,10 +468,10 @@ Code for an ad can also call this function for its interest group.
 
 {% Details %}
 {% DetailsSummary %}
-### How do you implement frequency control by click?
+### How do I implement frequency control by click?
 {% endDetailsSummary %}
 
-For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Another mechanism is to call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping. 
+For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Alternatively, you can call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping. 
 
 You can also use a first-party cookie to store click information. When the ad is rendered, overwrite an existing interest group with the click data as user bidding signals. The workflow would look something like: 
 
@@ -484,10 +484,14 @@ You can also use a first-party cookie to store click information. When the ad is
 
 {% Details %}
 {% DetailsSummary %}
-### How to update the adComponents by user's browsing history to use for recommendation?
+### How do I use a user's recent browsing history for ad recommendations?
+
+The [`adComponents` property](#specify-ads-for-an-interest-group) can include relevant metadata to inform your bid.
 {% endDetailsSummary %}
 
-`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. User's browsing history for the one site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals` which can be used during on-device bidding. See the [Product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on impact on core metrics for recommendation use case adoption.
+A user's browsing history for the site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals`, which can be used during on-device bidding. See the [product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on the impact of core metrics for recommendation use case adoption.
+
+`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. 
 {% endDetails %}
 
 ## All FLEDGE API references
