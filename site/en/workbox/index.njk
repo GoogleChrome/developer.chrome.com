@@ -83,23 +83,27 @@ sections:
   )
 }}
 
-{{ featuredSection([
+{{ featuredSection({
+  cards: [
     { postUrl: '/blog/insider-april-2022/',
       actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover'
     }, 
-    { heading: '#100CoolWebMoments',
-      description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
-      imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
-      imgAlt: '#100CoolWebMoments',
+    { customPost: {
+        title: '#100CoolWebMoments',
+        description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
+        imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
+        imgAlt: '#100CoolWebMoments'
+      },
       actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover the timeline'
     },
-    { postUrl: '/blog/devtools-tips-2/',
-      actionUrl: '/blog/devtools-tips-2/',
+    { postUrl: '/blog/insider-april-2022/',
+      actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover'
     }
-  ]) 
+  ], 
+  utilities: 'grid-cols-1 lg:grid-cols-3' }) 
 }}
 
 {{ landingSection(

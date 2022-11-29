@@ -20,7 +20,8 @@
     min-height: 164px;
   }
 
-  .type--h3-card {
+  .featured-card .type--h3-card,
+  .featured-card .type--h3-card a {
     display: block;
     font-size: px-to-rem(24px);
 

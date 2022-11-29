@@ -1,10 +1,10 @@
 {% from 'macros/cards/featured-blog-card.njk' import featuredBlogCard with context %}
 {% from 'macros/cards/featured-card.njk' import featuredCard with context %}
 
-{% macro featuredSection(cards) %}
+{% macro featuredSection(options) %}
 
-<section class="featured-section rounded-lg width-full display-grid grid-cols-1 lg:grid-cols-3 justify-items-center grid-gap-400 gap-top-400">
-  {% for card in cards %}
+<section class="featured-section rounded-lg width-full display-grid  {{ options.utilities }} justify-items-center grid-gap-400 gap-top-400">
+  {% for card in options.cards %}
     {% if card.postUrl %}
       {% set post = helpers.findByUrl(collections.all, card.postUrl, locale) %}
       {% if post %}
@@ -22,15 +22,16 @@
           actionUrl: '/blog'
         }) }}
       {% endif %}
-    {% else %}
-      {{ featuredCard(
-        card.heading, 
-        card.description, 
-        card.imgSrc, 
-        card.imgAlt, 
-        card.actionUrl, 
-        card.actionText
-      ) }}
+    {% endif %}
+    {% if card.customPost %}
+      {{ featuredCard({
+        title: card.customPost.title, 
+        description: card.customPost.description, 
+        imgSrc: card.customPost.imgSrc, 
+        imgAlt: card.customPost.imgAlt, 
+        actionUrl: card.actionUrl, 
+        actionText: card.actionText
+      }) }}
     {% endif %}
   {% endfor %}
 </section>
