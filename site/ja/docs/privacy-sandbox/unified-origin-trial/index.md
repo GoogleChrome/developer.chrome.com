@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Relevance and measurement unified origin trial
+title: 関連性と測定の統一オリジントライアル
 subhead: |2-
    アトリビューション レポート、FLEDGE、
   Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
@@ -16,9 +16,9 @@ authors:
 
 プライバシーサンドボックスには、クロスサイトトラッキングを必要とせずに広告のユースケースを有効にするための提案が含まれています。[オリジントライアル](/blog/origin-trials/)では、開発者が実際のテストを通じて新しいウェブテクノロジーを評価し、フィードバックを提供する機会を提供しています。[プライバシーサンドボックスの関連性と測定](/origintrials/#/view_trial/771241436187197441)のオリジントライアルでは、単一のトライアルを提供することで、サイトがアトリビューション レポート、FLEDGE、Topics、Fenced Frames、および共有ストレージを統合した実験を実行できます。
 
-Developers can sign up for this single origin trial that allows you to test across the Topics, FLEDGE, and Attribution Reporting APIs. This guide takes you through the configuration steps to access the APIs, tells you how to validate your configuration, and provides further resources for testing against the APIs.
+開発者は、この単一のオリジントライアルに登録すると、Topics、FLEDGE、および Attribution Reporting API をテストすることができます。このガイドでは、これらの API にアクセスするための構成手順と構成を検証する方法を説明し、API に対してテストするためのその他のリソースを提供しています。
 
-## Check the status of the origin trial {: #status}
+## オリジントライアルのステータスを確認する {: #status}
 
 ### November 2022
 
@@ -27,7 +27,7 @@ Developers can sign up for this single origin trial that allows you to test acro
 <table>
   <tr>
    <th>API</th>
-   <th>Notes</th>
+   <th>備考</th>
   </tr>
   <tr>
    <td>
@@ -35,32 +35,29 @@ Developers can sign up for this single origin trial that allows you to test acro
    <td>Available in Stable, increased to 5% from October 26th.    </td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/topics/">Topics</a>    </td>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a></td>
    <td>Available in Stable, increased to 5% from October 26th.    </td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>    </td>
-   <td>Available in Stable, increasing to 5% from November 9th.    </td>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a></td>
+   <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>    </td>
-   <td>Available in Stable, increasing to 5% from November 9th.    </td>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
+   <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
    <td>
 <a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>    </td>
-   <td>Will be available in Stable, starting at 1% from November 9th.    </td>
+   <td>11 月 9 日に安定版で 1% から提供開始。</td>
   </tr>
 </table>
 
 {% Details %} {% DetailsSummary %}
 
-### Previous updates
+### これまでの更新内容
 
-Check out previous updates on the origin trial. {% endDetailsSummary %}
+オリジントライアルに関する過去の更新内容をご覧ください。 {% endDetailsSummary %}
 
 #### October 2022: 5% increase
 
@@ -69,42 +66,39 @@ Check out previous updates on the origin trial. {% endDetailsSummary %}
 <table>
   <tr>
    <th>API</th>
-   <th>Notes</th>
+   <th>備考</th>
   </tr>
   <tr>
    <td>
 <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>    </td>
-   <td>Available in Stable, increasing to 5% after October 26th.    </td>
+   <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/topics/">Topics</a>    </td>
-   <td>Available in Stable, increasing to 5% after October 26th.    </td>
+   <td><a href="/docs/privacy-sandbox/topics/">Topics</a></td>
+   <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>    </td>
-   <td>Available in Stable, increasing to 5% from November 9th.    </td>
+   <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a></td>
+   <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>    </td>
-   <td>Available in Stable, increasing to 5% from November 9th.    </td>
+   <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
+   <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
    <td>
 <a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>    </td>
-   <td>Only available in M105+ Canary, Dev, and Beta for now.    </td>
+   <td>現在、M105+ Canary、Dev、およびベータ版でのみ利用可能。</td>
   </tr>
 </table>
 
 #### October 2022
 
-- Origin trial has been [extended to Chrome 110](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8). [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/#renew) explains how to renew origin trial enrollment. This includes providing a new token to participating origins, which is the same process followed by any other origin trial extension.
+- オリジントライアルの期間が[Chrome 110 まで延長](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8)されました。[Chrome のオリジントライアルを始める](/docs/web-platform/origin-trials/#renew)では、オリジントライアルの登録を更新する方法について説明されています。これには、参加しているオリジンへの新しいトークンの提供が含まれます。これは、他のオリジントライアルの延長と同じプロセスです。
 
-This extension was granted to give the ecosystem time in Stable channel to continue testing and validating API improvements, while providing feedback consistent with our existing public timeline.
+この延長は、Stable チャンネルのエコシステムに API の改善のテストと検証を継続しながら、既存の公開タイムラインに合わせてフィードバックを提供する時間を提供することを目的としています。
 
-The overall [Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) remains unchanged.
+[プライバシーサンドボックスの全体的なタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)は変更されていません。
 
 APIs included in the trial:
 
@@ -112,87 +106,86 @@ APIs included in the trial:
   <thead>
     <tr>
       <th><strong>API</strong></th>
-      <th><strong>Notes</strong></th>
+      <th><strong>備考</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td> <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 </td>
-      <td> <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">Developer guide for the origin trial</a>.</td>
+      <td>
+<a href="/docs/privacy-sandbox/attribution-reporting-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fledge/">FLEDGE</a>
-</td>
-      <td> <a href="/docs/privacy-sandbox/fledge-experiment/">Developer guide for the origin trial</a>.</td>
+      <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a></td>
+      <td>
+<a href="/docs/privacy-sandbox/fledge-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/topics/">Topics</a>
-</td>
-      <td> <a href="/docs/privacy-sandbox/topics-experiment/">Developer guide for the origin trial</a>.</td>
+      <td><a href="/docs/privacy-sandbox/topics/">Topics</a></td>
+      <td>
+<a href="/docs/privacy-sandbox/topics-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
-</td>
-      <td> See the FLEDGE guidance for origin trial usage.</td>
+      <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
+      <td>オリジントライアルの使用方法については、FLEDGE ガイドをご覧ください。</td>
     </tr>
     <tr>
       <td> <a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
 </td>
-      <td> Only available in M105+ Canary, Dev, and Beta for now. 	  </td>
+      <td>現在、M105+ Canary、Dev、およびベータ版でのみ利用可能。</td>
     </tr>
   </tbody>
 </table>
 
 #### August 2022
 
-- Origin trial availability ramps up to [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
+- オリジントライアルは、[Chrome Stable 104 デスクトップ版の最大 1% のユーザー](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ)に提供されます。
 
-    - Updates will follow when the availability includes mobile users.
+    - この提供にモバイルユーザーが追加されると、更新が行われます。
 
-- Pre-stable channels (Canary, Beta) remain at 50% of users.
+- 安定版前のチャンネル（Canary、ベータ）のユーザー数は 50% のままです。
 
-- APIs are not available on iOS Chrome.
+- これらの API は、iOS Chrome では使用できません。
 
 #### May 2022
 
-Origin trial availability ramps up to [50% of users from Chrome 102 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/WBPqGvscAgAJ). APIs included in the trial:
+オリジントライアルは、[Chrome 102 ベータ版の最大 50% のユーザー](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/WBPqGvscAgAJ)に提供されます。このトライアルには以下の API が含まれます。
 
 <table class="with-heading-tint fixed-table width-full">
   <thead>
     <tr>
       <th><strong>API</strong></th>
-      <th><strong>Notes</strong></th>
+      <th><strong>備考</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td> <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">Attribution Reporting</a>
 </td>
-      <td> <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">Developer guide for the origin trial</a>.</td>
+      <td>
+<a href="/docs/privacy-sandbox/attribution-reporting-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fledge-experiment/">FLEDGE</a>
-</td>
-      <td> <a href="/docs/privacy-sandbox/fledge-experiment/">Developer guide for the origin trial</a>.</td>
+      <td><a href="/docs/privacy-sandbox/fledge-experiment/">FLEDGE</a></td>
+      <td>
+<a href="/docs/privacy-sandbox/fledge-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/topics-experiment/">Topics</a>
-</td>
-      <td> <a href="/docs/privacy-sandbox/topics-experiment/">Developer guide for the origin trial</a>. Topics was briefly disabled in the origin trial due to a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1321140">bug that affected browser stability.</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/topics-experiment/">Topics</a></td>
+      <td>
+<a href="/docs/privacy-sandbox/topics-experiment/">オリジントライアル開発者ガイド</a>。<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1321140">ブラウザの安定性に影響を与えるバグ</a>があったため、オリジントライアルで一時的に Topics が無効にされていました。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a>
-</td>
-      <td> Fenced Frames added to the origin trial. See the FLEDGE guidance for experiment usage.</td>
+      <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced Frames</a></td>
+      <td>Fenced Frames がオリジントライアルに追加されました。実験の使用方法については、FLEDGE ガイドをご覧ください。</td>
     </tr>
   </tbody>
 </table>
 
-#### April 2022
+#### 2022 年 4 月
 
-Origin trial begins with a [limited proportion of users from Chrome 102 Beta](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ). APIs included in the trial:
+オリジントライアルは、[Chrome 102 ベータ版の一部の限定ユーザー](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wzeBWfxxEgAJ)に提供が開始されます。このトライアルには以下の API が含まれます。
 
 <table class="with-heading-tint fixed-table width-full"> <thead> <tr> <th> <strong>API</strong>
 </th> <th> <strong>備考</strong>
@@ -203,15 +196,15 @@ Origin trial begins with a [limited proportion of users from Chrome 102 Beta](ht
 
 ## オリジントライアルへの登録と設定 {: #configure}
 
-To activate the origin trial on your site, you will need to register and embed the assigned origin trial token (a time-based string for your specific access to the origin trial). Learn more in the [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials).
+サイトでオリジントライアルを有効にするには、割り当てられたオリジントライアルトークン（オリジントライアルへの特定のアクセスを提供する時間ベースの文字列）を登録して埋め込む必要があります。詳細については、[Chrome のオリジントライアル入門](/docs/web-platform/origin-trials)をご覧ください。
 
-{% Aside %} Register for the [Privacy Sandbox Relevance and Measurement trial](/origintrials/#/view_trial/771241436187197441). {% endAside %}
+{% Aside %}[プライバシーサンドボックスの関連性と測定のトライアル](/origintrials/#/view_trial/771241436187197441)に登録してください。 {% endAside %}
 
-Origin trial tokens are granted immediately, and you can revoke or recreate them at any time.
+オリジントライアルトークンがすぐに付与されます。取り消しまたは再作成はいつでも可能です。
 
-For every page where you want to use the origin trial, you will need to include a trial token with that specific page's HTML or response.
+オリジントライアルを使用するすべてのページについて、その特定のページの HTML またはレスポンスにトライアルトークンを含める必要があります。
 
-Use a `<meta>` tag in the page's `<head>` section:
+ページの `<head>`セクションに `<meta>` タグを使用します。
 
 ```html
 <meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
@@ -225,15 +218,15 @@ Origin-Trial: TOKEN_GOES_HERE
 
 ### Configure with an iframe
 
-If you're using origin trial features within an iframe (such as FLEDGE's `joinAdInterestGroup()`), then the token needs to be provided within the iframe and match the iframe's origin.
+iframe 内でオリジントライアルの機能（FLEDGE の `joinAdInterestGroup()` など）を使用する場合、トークンは iframe 内に提供し、iframe のオリジンと一致させる必要があります。
 
 ### JavaScript でクロスサイトに構成する
 
-If you are using origin trial features via cross-site JavaScript, as in you are the provider of third-party JavaScript that is included in the top-level page, then you will need to:
+トップレベルページに含まれるサードパーティの JavaScript のプロバイダーとしてクロスサイト JavaScript を介してオリジントライアルの機能を使用する場合は、以下を行う必要があります。
 
-- Select the **Third-party matching** option when registering for the origin trial.
+- オリジントライアルに登録する際に、**Third-party matching** オプションを選択します。
 - The **Web Origin field** should be the origin of your script.
-- Inject the `<meta>` tag into the top-level page (that is, the first-party page, not your own content) from your script. For example:
+- スクリプトからトップレベルページ（あなた自身のコンテンツではなくファーストパーティのページ）に `<meta>` タグを挿入します。例えば以下のようにします。
 
 ```js
 const otMeta = document.createElement('meta');
@@ -242,27 +235,27 @@ otMeta.setAttribute('content', 'TOKEN_GOES_HERE');
 document.querySelector('head').appendChild(otMeta);
 ```
 
-## Debug the origin trial {: #debug}
+## オリジントライアルをデバッグする {: #debug}
 
-You can check the status for an origin trial in **DevTools** &gt; **Applications** panel.
+オリジントライアルのステータスは、**DevTools** &gt; **アプリケーション**パネルで確認できます。
 
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/j2eSl60izhpZDVz4Ea3o.png", alt="Token Success status and enabled.", width="800", height="397" %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/j2eSl60izhpZDVz4Ea3o.png", alt="Token Success ステータスと有効化。", width="800", height="397" %}
 
-1. Scroll down to the **Frames** pane.
-2. Select the frame where you expect to set the token. For example, the **top** frame for the top-level page or the specific **iframe** for embedded pages.
+1. **フレーム**ペインまで下にスクロールします。
+2. トップレベルページの場合は **top** フレーム、埋め込みページの場合は特定の **iframe** など、トークンを設定するフレームを選択します。
 3. In the right-hand pane scroll down to the **Origin Trials** section.
-4. You should see an entry for the `PrivacySandboxAdsAPIs` trial.
-5. Expand this entry to see the status for the origin trial and your specific tokens.
+4. `PrivacySandboxAdsAPIs` トライアルのエントリが表示されます。
+5. このエントリを展開して、オリジントライアルと特定のトークンのステータスを確認します。
 
-The origin trial is limited to a fraction of Chrome users and your browser may not be in the experiment group. As a result, you may see a red `TrialNotAllowed` message against `PrivacySandboxAdsAPIs`. When you expand the entry to check Token Status, if it shows a green `Success` message, your origin trial configuration is correct. Eligible users will see the message set to `Enabled`.
+オリジントライアルはごく一部の Chrome ユーザーに限定して提供されており、お使いのブラウザが実験グループに含まれていない場合があります。その結果、`PrivacySandboxAdsAPIs` に対して赤い `TrialNotAllowed` メッセージが表示されることがあります。エントリを展開してトークンステータスを確認したときに緑色の `Success` メッセージが表示されている場合は、オリジントライアルが正しく構成されています。対象ユーザーには、`Enabled` に設定されたメッセージが表示されます。
 
-{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/BPIbYn2BIAWXHfncyoQi.png", alt="Token Success status and not enabled.", width="800", height="398" %}
+{% Img src="image/udVScdcCFAdRjZwFdLk2jWAFQyr1/BPIbYn2BIAWXHfncyoQi.png", alt="Token Success ステータスと有効化。", width="800", height="398" %}
 
-If you see different messages, refer to [Troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting/#devtools-status) for a detailed checklist to validate your configuration of the origin trial.
+異なるメッセージが表示される場合は、オリジントライアルの構成を検証するための詳細なチェックリストについて、[Chrome のオリジントライアルのトラブルシューティング](/docs/web-platform/origin-trial-troubleshooting/#devtools-status)をご覧ください。
 
-## Detect features {: #feature-detection}
+## 機能を検出する {: #feature-detection}
 
-As with all web features, you should check they are reporting as available in the browser before attempting to use them. You can do this by checking for the existence of the relevant API in the right location:
+ウェブのあらゆる機能と同様に、それらを使用する前に、ブラウザで使用可能であることが報告されていることを確認する必要があります。これを行うには、関連する API が適切な場所に存在するかどうかを確認します。
 
 ```js
 if (document.featurePolicy.allowsFeature('attribution-reporting')) {
@@ -290,66 +283,66 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 }
 ```
 
-## Determine user eligibility {: #eligible-users}
+## ユーザーの資格を判定する {: #eligible-users}
 
-The origin trial is running for a fraction of Chrome users. They must also have the relevant functionality enabled in their settings to be eligible for the trial:
+オリジントライアルは一部の Chrome ユーザーを対象に実施されています。また、トライアルの資格を得るには、関連する機能が設定で有効になっていることが必要です。
 
-### Browser settings
+### ブラウザの設定
 
-For a user to be eligible for the trial, they must:
+ユーザーがトライアルの資格を得るには、次に該当する必要があります。
 
-- Be using a **version and channel of Chrome** where the origin trial is running.
+- オリジントライアルを実施している **Chrome のバージョンとチャンネル**を使用していること。
 
-    - See [Origin Trial Status](#status) for current configurations.
+    - 最新の構成については、[オリジントライアルのステータス](#status)をご覧ください。
 
 - Be within the **active experiment group in Chrome**.
 
 ### User settings
 
-For a user to be eligible for the trial, they must also:
+ユーザーがトライアルの資格を得るには、次にも該当する必要があります。
 
-- have the **Privacy Sandbox trial enabled** via Settings &gt; Security and privacy &gt; Privacy Sandbox, also accessible via `chrome://settings/privacySandbox`.
-- have **third-party cookies enabled** via Settings &gt; Security and privacy &gt; Cookies and other site data set to either "Allow all cookies" or "Block third-party cookies in incognito", also accessible via `chrome://settings/cookies`.
-- be in a standard browsing session and **not Incognito mode**.
+- [設定] &gt; [セキュリティとプライバシー] &gt; [プライバシー サンドボックス] から**プライバシーサンドボックスのトライアルを有効**にすること。これは `chrome://settings/privacySandbox`からもアクセスできます。
+- [設定] &gt; [セキュリティとプライバシー] &gt; [Cookie とその他のサイト データ] で**サードパーティ Cookie を有効**にし、「すべての Cookie を許可する」または「シークレット モードでサードパーティの Cookie をブロックする」に設定すること。これは `chrome://settings/cookies` からもアクセスできます。
+- **シークレットモードではなく**、標準のブラウジングセッションを使用すること。
 
-While the origin trial will only show as active to eligible users, you can also use the [developer flags](#test-locally) to test against your own production site.
+オリジントライアルは資格のあるユーザーに対してのみアクティブとして表示されますが、[開発者フラグ](#test-locally)を使用して、独自の本番サイトに対してテストすることもできます。
 
-## Control your participation in the origin trial {: #control-participation }
+## オリジントライアルへの参加を制御する {: #control-participation }
 
-The mechanics of the origin trial remain the same: you obtain origin trial tokens for the contexts where you want to experiment with the APIs. With the expanded testing population, you should ensure that you are actively monitoring and controlling the level of traffic where you choose to enable the trial.
+オリジントライアルの仕組みは変わりません。API を試したいコンテキストのオリジントライアルトークンを取得します。テスト人口が拡大したため、トライアルを有効にすることを選択したトラフィックのレベルを積極的に監視し、確実に制御することが必要です。
 
-{% Aside %} 5% of Chrome Stable traffic won’t directly correspond to 5% of your own traffic. The actual proportion of traffic your sites and services receive will depend on the make-up of your visitors. {% endAside %}
+{% Aside %} Chrome Stable トラフィックの 5% が、あなた自身のトラフィックの 5% に直接対応するわけではありません。サイトやサービスが受け取るトラフィックの実際の割合は、訪問者の構成によって異なります。 {% endAside %}
 
-A good approach here is to:
+ここでは以下のアプローチが推奨されます。
 
-1. Include the origin trial tokens by default in all contexts where you wish to experiment.
+1. 実験するすべてのコンテキストに、デフォルトでオリジントライアルトークンを含めます。
 2. Use feature detection to check for active APIs.
-3. If the APIs are active (and therefore, the browser is eligible for this experiment), choose whether or not to use them based on your own experiment criteria. For example, if you already have A/B testing infrastructure to experiment on a percentage of traffic, sampling, or some other attribute, then at this point you can decide which features you will actively use.
+3. API がアクティブな場合（したがって、ブラウザがこの実験に適している場合）、独自の実験基準に基づいて使用するかどうかを選択します。たとえば、トラフィックの割合、サンプリング、またはその他の属性で実験するための A/B テスト インフラストラクチャが既に存在する場合は、この時点で積極的に使用する機能を決定できます。
 
-You can prevent participation in the origin trial entirely for any browser instance by not including the token in the response. For instance, if you have met your own quota for an experiment or need to address an issue during the trial, then not including the token ensures no experimental functionality will be available or active in the page.
+レスポンスにトークンを含めないことで、どのブラウザインスタンスもオリジントライアルに参加しないようにすることができます。たとえば、実験の独自のクォータに達した場合、またはトライアル中に問題に対処する必要がある場合、トークンを含めないことで、実験的な機能がページで使用可能にならない、またはアクティブにならないことが保証されます。
 
 ## Renew your token
 
-Origin trial tokens expire six weeks from their issue date (or at the end of the trial if that's sooner).
+オリジントライアルトークンの有効期限は、発行日から 6 週間です（トライアルが終了した場合は、これより早く期限切れとなります）。
 
-It’s critical that you [renew and deploy your new tokens](/docs/web-platform/origin-trials/#renew) within that window for uninterrupted use of the origin trial features.
+オリジントライアルの機能を中断なく使用するには、その期間内に[新しいトークンを更新してデプロイする](/docs/web-platform/origin-trials/#renew)ことが重要です。
 
-Renewing tokens only takes a few minutes, and you can deploy multiple tokens for the same trial within the same page. You can deploy a renewed token before your existing token expires, so there's no break in service for users.
+トークンの更新には数分しかかからず、同じページ内で同じトライアルに複数のトークンをデプロイできます。既存のトークンの有効期限が切れる前に、更新されたトークンをデプロイできるため、ユーザーへのサービスが中断されることはありません。
 
-{% Aside 'caution'%} Renewing a token at the end of October only takes you through to early December. If you have a code freeze over the end of the year, you will either want to ensure that you can still deploy an updated token or plan to pause participation in the origin trial over that period. {% endAside %}
+{% Aside 'caution'%} 10 月末にトークンを更新すると、12 月初旬までしか使えません。年末にかけてコードがフリーズする場合は、更新されたトークンをデプロイできるようにするか、その期間中はオリジントライアルへの参加を一時停止するように計画する必要があります。 {% endAside %}
 
 ## Test locally {: #test-locally}
 
-For specific guidance on local developer testing, see:
+ローカル開発者テストに関する具体的なガイドについては、以下をご覧ください。
 
 - [Topics](/docs/privacy-sandbox/topics-experiment/)
 - [FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
 - [ アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/)
 
-The APIs are not on by default and must be [enabled with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) for testing. You should ensure that you have the same configuration settings enabled above and then:
+API はデフォルトではオンにならないため、テスト用の[フラグで有効にする](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)必要があります。上記と同じ構成設定が有効になっていることを確認してから、以下を行ってください。
 
-- Use a **version and channel of Chrome** where the features are available.
-- Enable the `chrome://flags/#privacy-sandbox-ads-apis` flag.
-    - Additional flags may conflict with this one, so consider only setting this one flag if you experience issues.
+- 機能を利用できる **Chrome のバージョンとチャンネル**を使用します。
+- `chrome://flags/#privacy-sandbox-ads-apis` フラグを有効にします。
+    - 追加のフラグはこれと競合する可能性があるため、問題が発生した場合は、このフラグのみを設定することを検討してください。
 
-Check the developer guides for availability of specific APIs and features and additional flags for more fine-grained configuration.
+特定の API と機能の可用性と、より詳細な構成に使用する追加のフラグについては、開発者ガイドをご覧ください。
