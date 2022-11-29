@@ -18,7 +18,7 @@ authors:
 このドキュメントでは、ID 連携の新しい提案である Federated Credential Management API（FedCM）の概要を説明します。
 
 - [FedCM の提案](https://github.com/fedidcg/FedCM)は[公開ディスカッション](https://github.com/fedidcg/FedCM/issues)を進行中です。
-- FedCM is shipped in Chrome 108.
+- FedCM は Chrome 108 で出荷されます。
 - FedCM は他のブラウザではまだサポートされていませんが、Mozilla は Firefox に[プロトタイプを実装](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066)しています 。[Apple は、FedCM の提案に協力することに全般的な支持と関心を表明](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)しています。
 - [Chrome プラットフォームのステータス](https://chromestatus.com/feature/6438627087220736)
 
@@ -26,7 +26,7 @@ authors:
 
 下位互換性のない変更をデプロイする際の課題を最小限に抑えるために、現在、ID プロバイダーに対し 2 つの推奨事項があります。
 
-- Subscribe to our [newsletter](https://groups.google.com/g/fedcm-developer-newsletter) where we will send updates as the API evolves.
+- API の進化に合わせて更新情報をお送りする[ニュースレター](https://groups.google.com/g/fedcm-developer-newsletter)を購読してください。
 - API が成熟するまでは、IdP が JavaScript SDK を介して FedCM API を配布し、RP はセルフホスティング SDK を使用しないようにすることをお勧めします。これにより、IdP は API の進化に合わせて変更を加えることができ、すべてのリライングパーティーに再デプロイを依頼する必要がなくなります。
 
 ## FedCM が必要な理由
@@ -82,7 +82,7 @@ FedCM には、ID プロバイダーのサポートが必要です。RP は、Fe
 
 <figure class="float-right"> {%    Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Chrome でサードパーティ Cookie をブロックする構成を行い、サードパーティ Cookie の段階的廃止をシミュレーションします", width="800", height="908" %}    <figcaption>Chrome でサードパーティ Cookie をブロックする構成を行い、サードパーティ Cookie の段階的廃止をシミュレーションします</figcaption> </figure>
 
-You should only use FedCM if your current integration is affected by the third-party cookie phase out.
+現在の統合がサードパーティ Cookie の段階的廃止の影響を受ける場合にのみ、FedCM を使用してください。
 
 Chrome のサードパーティ Cookie が段階的に廃止された後も ID 連携が引き続き機能するかどうかわからない場合は、[シークレットモード](https://support.google.com/chrome/answer/95464)でウェブサイトでの統合への影響をテストすることができます。 または、デスクトップの場合は `chrome://settings/cookies` で、モバイルの場合は**設定** &gt; **サイト設定** &gt; **Cookie** に移動して、サードパーティ Cookie をブロックすることができます。
 
@@ -98,7 +98,7 @@ First-Party Sets は常に使用できるわけではありませんが、RP が
 
 ## ユーザーと FedCM の対話 {: #use-cases}
 
-Currently, FedCM's primary focus is to mitigate the impact of third-party cookie phase-out. Users can enable or disable FedCM in [Chrome's user settings](#user-settings).
+現在、FedCM の主な焦点は、サードパーティ Cookie の段階的廃止の影響を軽減することです。ユーザーは、 [Chrome のユーザー設定](#user-settings)で FedCM を有効または無効にできます。
 
 FedCM はプロトコルに依存しないように設計されており、次の認証関連機能を提供します。
 
@@ -134,13 +134,13 @@ RP は、FedCM をサポートしていないブラウザで動作すること�
 
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/8zR9MNWyt0c6M5GjWpfw.png", alt="デスクトップの Chrom 設定でサードパーティのサインインをトグルして、FedCM を有効にします", width="800", height="678", class="screenshot" %}
 
-## Roadmap {: #roadmap}
+## ロードマップ {: #roadmap}
 
-We are working on landing a number of changes on the FedCM.
+FedCM に多くの変更を加える作業を進めています。
 
 IdP、RP、ブラウザベンダーから寄せられた問題点など、まだ解決しなければならないことはいくつかありますが、これらの問題を解決できると信じています。
 
-- **Cross-origin iframe support**: IdPs can call FedCM from within a cross-origin iframe.
+- **クロスオリジン iframe のサポート**: IdP は、クロスオリジン iframe 内から FedCM を呼び出すことができます。
 - **パーソナライズされたボタン**: IdP は、IdP が所有するクロスオリジン iframe 内のサインインボタンに、再度アクセスしたユーザーの ID を表示できます。
 - **Metrics エンドポイント**: IdP にパフォーマンス指標を提供します。
 
@@ -155,7 +155,7 @@ IdP、RP、ブラウザベンダーから寄せられた問題点など、まだ
 
 - **ユーザーの理解と一致する意図の改善**: [Mozilla が指摘](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677)したように、さまざまな UX の定式化とサーフェスエリア、およびトリガー基準を引き続き調査したいと考えています。
 - **個人属性と選択的開示**: [TAG レビュー担当者が指摘](https://github.com/w3ctag/design-reviews/issues/718#issuecomment-1171733526)したように、多かれ少なかれ個人属性（メール、年齢層、電話番号など）を選択的に共有するメカニズムを提供したいと考えています。
-- **Raising the Privacy Properties**: As Mozilla suggested [here](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677), we’d like to continue exploring  mechanisms to offer better privacy guarantees, such as IdP blindness, directed identifiers.
+- **プライバシー プロパティの引き上げ**: Mozilla が[ここ](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677)で提案したように、IdP ブラインドネスや有向識別子など、より優れたプライバシー保証を提供するメカニズムを引き続き調査したいと考えています。
 - **WebAuthn との関係**: [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)が提案したように、[パスキー](http://goo.gle/passkeys)の進歩を確認し、FedCM、パスワード、WebAuthn、および WebOTP の間で首尾一貫したまとまりのあるエクスペリエンスを提供することに取り組むことに非常にワクワクしています。
 - **ログイン ステータス**: Apple がプライバシー CG の [Login Status API](https://github.com/privacycg/is-logged-in)で提案したように、ユーザーのログイン ステータスは、ブラウザが十分な情報に基づいて決定を下すのに役立つ有用な情報であるという直感を共有しており、そこからどのような機会が生まれるか楽しみにしています。
 - **エンタープライズと教育**: FedID CG で明らかなように、FedCM では十分に対応できない[多くのユースケース](https://github.com/fedidcg/use-case-library/blob/main/decision_tree_flows/login/Federated%20Login%20OIDC%20Oauth2%20Auth%20Code%20Flow.png)があり、私たちが取り組みたいと考えています。<br>フロントチャンネル ログアウト（IdP がシグナルを RP に送信してログアウトする機能）、SAML のサポートなどです。
@@ -165,13 +165,13 @@ IdP、RP、ブラウザベンダーから寄せられた問題点など、まだ
 
 FedCM を使用するには、Chrome の IdP と RP の両方で安全なコンテキスト（HTTPS または localhost）が必要です。
 
-### トークンを取り消す  {: #revocation}
+### Android 上の Chrome でコードをデバッグする {: #remote-debug-android}
 
 サーバーをローカルでセットアップして実行し、FedCM コードをデバッグします。[ポートフォワーディング付きの USB ケーブルを使用して接続された Android デバイスの Chrome で、このサーバーにアクセス](/docs/devtools/remote-debugging/local-server/)できます。
 
 デスクトップで DevTools を使用して Android 上の Chrome をデバッグするには、「 [Android デバイスのリモートデバッグ](/docs/devtools/remote-debugging/)」の手順に従います。
 
-## Use the FedCM API {: #use-api }
+## FedCM API を使用する {: #use-api }
 
 [well-known ファイル](#client-metadata-endpoint)と[設定ファイル](#well-known-file)、そして[アカウントリスト](#idp-config-file)、[アサーション発行](#accounts-list-endpoint)、オプションで[クライアントメタデータ](#id-assertion-endpoint)のエンドポイントを作成することにより、FedCM と統合します。
 
@@ -231,7 +231,7 @@ FedCM 経由でブラウザから送信されるすべてのリクエストに�
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
@@ -265,7 +265,7 @@ FedCM 経由でブラウザから送信されるすべてのリクエストに�
   <tr>
      <td>
 <code>branding.color</code>（オプション）</td>
-     <td>Branding option which sets the text color of the "Continue as..." button. Use the relevant CSS syntax, namely <a href="https://drafts.csswg.org/css-color-4/#typedef-hex-color"><code>hex-color</code></a>, <a href="https://drafts.csswg.org/css-color-5/#funcdef-hsl"><code>hsl()</code></a>, <a href="https://drafts.csswg.org/css-color-5/#funcdef-rgb"><code>rgb()</code></a>, or <a href="https://drafts.csswg.org/css-color-4/#typedef-named-color"><code>named-color</code></a>.</td>
+     <td>[Continue as...] ボタンのテキストの色を設定するブランディング オプション。関連する CSS 構文、つまり<a href="https://drafts.csswg.org/css-color-4/#typedef-hex-color"><code>hex-color</code></a> 、 <a href="https://drafts.csswg.org/css-color-5/#funcdef-hsl"><code>hsl()</code></a> 、 <a href="https://drafts.csswg.org/css-color-5/#funcdef-rgb"><code>rgb()</code></a> 、または<a href="https://drafts.csswg.org/css-color-4/#typedef-named-color"><code>named-color</code></a>使用します。</td>
   </tr>
   <tr>
      <td>
@@ -278,7 +278,7 @@ FedCM 経由でブラウザから送信されるすべてのリクエストに�
   </tr>
 </table>
 
-{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/rFrfrCL0awt5zmyqvaM9.jpg", alt="How branding is applied to the FedCM dialog", width="600", height="332", class="screenshot" %}
+{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/rFrfrCL0awt5zmyqvaM9.jpg", alt="FedCM ダイアログにブランディングを適用する方法", width="600", height="332", class="screenshot" %}
 
 IdP からのレスポンス本文の例を次に示します。
 
@@ -300,7 +300,7 @@ IdP からのレスポンス本文の例を次に示します。
 
 ブラウザが設定ファイルをフェッチしたら、後続のリクエストが IdP エンドポイントに送信されます。
 
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="IdP endpoints", width="800", height="1085", class="type--full-bleed" %}
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="IdP エンドポイント", width="800", height="1085", class="type--full-bleed" %}
 
 {% Aside 'caution' %}
 
@@ -328,13 +328,13 @@ Sec-Fetch-Dest: webidentity
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
     <td>
 <code>id</code>（必須）</td>
-    <td>Unique ID of the user.</td>
+    <td>ユーザーの一意の ID。</td>
   </tr>
   <tr>
     <td>
@@ -349,21 +349,21 @@ Sec-Fetch-Dest: webidentity
   <tr>
     <td>
 <code>given_name</code>（オプション）</td>
-    <td>Given name of the user.</td>
+    <td>ユーザーの名。</td>
   </tr>
   <tr>
     <td>
 <code>picture</code>（オプション）</td>
-    <td>URL of the user avatar image.</td>
+    <td>ユーザーのアバター画像の URL。</td>
   </tr>
   <tr>
     <td>
 <code>approved_clients</code>（オプション）</td>
-    <td>An array of RP client IDs which the user has registered with.</td>
+    <td>ユーザーが登録した RP クライアント ID の配列。</td>
   </tr>
 </table>
 
-Example response body:
+レスポンス本文の例:
 
 ```json
 {
@@ -385,7 +385,7 @@ Example response body:
 }
 ```
 
-If the user is not signed in, respond with HTTP 401 (Unauthorized).
+ユーザーがサインインしていない場合は、HTTP 401 (Unauthorized) で応答します。
 
 返されたアカウントリストはブラウザによって消費され、RP は使用できません。
 
@@ -409,7 +409,7 @@ Sec-Fetch-Dest: webidentity
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
@@ -420,7 +420,7 @@ Sec-Fetch-Dest: webidentity
   <tr>
      <td>
 <code>terms_of_service_url</code>（オプション）</td>
-     <td>RP terms of service URL.</td>
+     <td>RP 利用規約の URL。</td>
   </tr>
 </table>
 
@@ -443,18 +443,18 @@ IdP の ID アサーション エンドポイントは、サインインして�
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
     <td>
 <code>client_id</code>（必須）</td>
-    <td>The RP's client identifier.</td>
+    <td>RP のクライアント ID。</td>
   </tr>
   <tr>
      <td>
 <code>account_id</code>（必須）</td>
-     <td>The unique ID of the signing in user.</td>
+     <td>サインインしているユーザーの一意の ID。</td>
   </tr>
   <tr>
      <td>
@@ -468,7 +468,7 @@ IdP の ID アサーション エンドポイントは、サインインして�
   </tr>
 </table>
 
-Example HTTP header:
+HTTP ヘッダーの例:
 
 ```http
 POST /assertion.php HTTP/1.1
@@ -480,7 +480,7 @@ Sec-Fetch-Dest: webidentity
 account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 
-On the server, the IdP should confirm that:
+サーバー上で、IdP は次のことを確認する必要があります。
 
 1. 要求されたアカウント ID が、既にサインインしているアカウントの ID と一致していること。
 2. `Referer` ヘッダーが、所定のクライアント ID に対して事前に登録された RP のオリジンと一致すること。
@@ -497,7 +497,7 @@ OAuth または OpenID Connect でのドメイン検証はブラウザのリダ�
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
@@ -550,7 +550,7 @@ const { token } = credential;
   <thead>
     <tr>
       <th>プロパティ</th>
-      <th>Description</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tr>
@@ -561,12 +561,12 @@ const { token } = credential;
   <tr>
      <td>
 <code>clientId</code>（必須）</td>
-     <td>The RP's client identifier, issued by the IdP.</td>
+     <td>IdP によって発行された RP のクライアント識別子。</td>
   </tr>
   <tr>
     <td>
 <code>nonce</code>（オプション）</td>
-    <td>A random string to ensure the response is issued for this specific request. Prevents replay attacks.</td>
+    <td>この特定のリクエストに対してレスポンスが発行されるようにするためのランダムな文字列。リプレイ攻撃を防ぎます。</td>
   </tr>
 </table>
 
@@ -582,9 +582,9 @@ RP が `navigator.credentials.get()` を呼び出すと、その次のアクテ�
     3. オプション: [クライアントメタデータエンドポイント](#client-metadata-endpoint)から取得した RP のプライバシーポリシーと利用規約の URL。
 2. ブラウザには、ユーザーがサインインに使用できるアカウントのリストと、利用可能な場合は利用規約とプライバシーポリシーが表示されます。
 3. ユーザーがサインインするアカウントを選択すると、[ID アサーションエンドポイント](#id-assertion-endpoint)へのリクエストが IdP に送信され、トークンが取得されます。
-4. The RP can validate the token to authenticate the user.
+4. RP はトークンを検証してユーザーを認証できます。
 
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="login API call", width="800", height="1085", class="type--full-bleed" %}
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="ログイン API 呼び出し", width="800", height="1085", class="type--full-bleed" %}
 
 {% Aside 'caution' %}
 
