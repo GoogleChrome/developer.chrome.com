@@ -22,22 +22,22 @@ authors:
 - FedCM は他のブラウザではまだサポートされていませんが、Mozilla は Firefox に[プロトタイプを実装](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066)しています 。[Apple は、FedCM の提案に協力することに全般的な支持と関心を表明](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)しています。
 - [Chrome プラットフォームのステータス](https://chromestatus.com/feature/6438627087220736)
 
-Moving forward, we plan to introduce [a number of new features](#roadmap) based on the feedback we received from identity providers (IdP), relying parties (RP) and browser vendors. While we hope identity providers will adopt FedCM, please be aware that FedCM is still an API under active development and that backward incompatible changes are expected until Q4 2023.
+今後は、ID プロバイダー（IdP）、リライングパーティー（RP）、およびブラウザベンダーから受け取ったフィードバックに基づいて、[多数の新機能](#roadmap)を導入する予定です。ID プロバイダーが FedCM を採用することを願っていますが、FedCM はまだ開発中の API であり、2023 年第 4 四半期まで下位互換性のない変更が予想されることに注意してください。
 
 下位互換性のない変更をデプロイする際の課題を最小限に抑えるために、現在、ID プロバイダーに対し 2 つの推奨事項があります。
 
 - Subscribe to our [newsletter](https://groups.google.com/g/fedcm-developer-newsletter) where we will send updates as the API evolves.
-- We encourage IdPs to distribute the FedCM API via JavaScript SDKs while the API is maturing, and to discourage RPs from self-hosting SDKs. This will ensure IdPs can make changes as the API evolves, without having to ask all of their relying parties to redeploy.
+- API が成熟するまでは、IdP が JavaScript SDK を介して FedCM API を配布し、RP はセルフホスティング SDK を使用しないようにすることをお勧めします。これにより、IdP は API の進化に合わせて変更を加えることができ、すべてのリライングパーティーに再デプロイを依頼する必要がなくなります。
 
 ## FedCM が必要な理由
 
 過去 10 年間、ID 連携は、サイトごとのユーザー名とパスワードを使用した方法に比べ、信頼性、使いやすさ（パスワードレスのシングルサインインなど）、およびセキュリティ（フィッシングやクレデンシャルスタッフィング攻撃への耐性の向上など）の観点から、ウェブでの認証の基準を引き上げる上で中心的な役割を果たしてきました。
 
-With identity federation, an RP (relying party) relies on an IdP (identity provider) to provide the user an account without requiring a new username and password.
+ID 連携では、RP（リライングパーティー）は IdP（ID プロバイダー）に依存して、新しいユーザー名とパスワードを作成することなくユーザーにアカウントを提供することができます。
 
 {% Aside 'key-term' %}
 
-*Identity federation* delegates authentication or authorization of an individual (user or entity) to a trusted external party (an *identity provider* or IdP). The identity provider then allows the individual to sign in to a website (a *relying party* or RP).
+*ID 連携*では、個人（ユーザーまたはエンティティ）の認証または承認を、信頼できる外部のパーティ（*ID プロバイダー*または IdP）に委任します。ID プロバイダーはその上で、個人がウェブサイト（*リライングパーティー*または RP）にサインインできるようにしています。
 
 {% endAside %}
 
@@ -76,7 +76,7 @@ FedCM の最初の目標は、サードパーティ Cookie の段階的廃止が
 
 ### IdP である場合 {: #idp }
 
-FedCM requires support from an identity provider. A relying party cannot use FedCM independently. If you are an RP, you can ask your IdP to provide instructions.
+FedCM には、ID プロバイダーのサポートが必要です。RP は、FedCM を単独で使用することはできません。RP の場合は、IdP に指示を仰ぎましょう。
 
 ### サードパーティ Cookie の段階的廃止の影響を受ける場合 {: #unaffected-by-3p-cookies }
 
@@ -102,23 +102,23 @@ Currently, FedCM's primary focus is to mitigate the impact of third-party cookie
 
 FedCM はプロトコルに依存しないように設計されており、次の認証関連機能を提供します。
 
-- [リライングパーティへのサインインに、ID プロバイダーを使用する](#sign-in)
+- [RP へのサインインに、ID プロバイダーを使用する](#sign-in)
 
 仕組みについては、[デモを確認](https://fedcm-rp-demo.glitch.me)してください。
 
-### リライングパーティにサインインする {: #sign-in}
+### RP にサインインする {: #sign-in}
 
 <figure class="float-right screenshot">{% Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qx48SEGIEqi5OtPE9ogn.mp4", width="280", autoplay="true", loop="true" %} <figcaption>ユーザーは FedCM を使用して RP にサインインします</figcaption></figure>
 
-ユーザーがリライングパーティ（RP）のウェブサイトにアクセスすると、ユーザーが IdP にサインインしている場合は FedCM サインインダイアログが表示されます。
+ユーザーがリライングパーティー（RP）のウェブサイトにアクセスすると、ユーザーが IdP にサインインしている場合は FedCM サインインダイアログが表示されます。
 
 ユーザーが IdP を使用する RP にアカウントを持っていない場合、サインアップ ダイアログが表示され、RP の利用規約やプライバシーポリシー（提供されている場合）などの追加の開示テキストが表示されます。
 
-ユーザーは、リライングパーティのトークンを取り消すことができます（リライングパーティからの登録解除など）。 ユーザーが IdP にサインインしている場合、RP は FedCM を使用して、その IdP にユーザーのトークンを取り消すように要求できます。 同時に、FedCM は RP のサインイン状態をブラウザからクリアします。
+ユーザーは **Continue as...**（...として続行）をタップしてサインインを完了できます。成功した場合、ブラウザは、ユーザーが IdP を使用して RP でアカウント連携を作成したという事実を保存します。
 
 {% Aside %}
 
-If the user closes the UI manually, an entry would be added to the [settings UI](#user-settings) and the UI won't be displayed in the same website for a period of time. The UI will be reenabled after the period, but the duration will [be exponentially expanded](https://developers.google.com/identity/gsi/web/guides/features#exponential_cooldown). Users can reenable FedCM on the RP manually by either going to the [settings page](#user-settings) or clicking on the PageInfo UI (a lock icon beside the URL bar) and reset the permission.
+ユーザーが手動で UI を閉じると、[設定 UI](#user-settings) にエントリが追加され、UI が同じウェブサイトに一定期間表示されなくなります。 UI は期間後に再度有効になりますが、[期間は指数的に拡大](https://developers.google.com/identity/gsi/web/guides/features#exponential_cooldown)されます。ユーザーは、[設定ページ](#user-settings)に移動するか、ページ情報 UI（URL バーの横にあるロック アイコン）をクリックして、RP で FedCM を手動で再度有効にし、権限をリセットできます。
 
 {% endAside %}
 
@@ -138,29 +138,28 @@ RP は、FedCM をサポートしていないブラウザで動作すること�
 
 We are working on landing a number of changes on the FedCM.
 
-There are a few things we know that still need to be done, including issues we heard about from IdPs, RPs and browser vendors. We believe we know how to resolve these issues:
+IdP、RP、ブラウザベンダーから寄せられた問題点など、まだ解決しなければならないことはいくつかありますが、これらの問題を解決できると信じています。
 
 - **Cross-origin iframe support**: IdPs can call FedCM from within a cross-origin iframe.
 - **パーソナライズされたボタン**: IdP は、IdP が所有するクロスオリジン iframe 内のサインインボタンに、再度アクセスしたユーザーの ID を表示できます。
-- **Metrics endpoint**: Provides performance metrics to IdPs.
+- **Metrics エンドポイント**: IdP にパフォーマンス指標を提供します。
 
 また、評価中またはプロトタイプ作成中の特定の提案を含め、活発に調査を進めている未解決の問題があります。
 
 - **CORS**: FedCM フェッチの仕様を確実に改善するために、[Apple と Mozilla と話し合っています](https://github.com/fedidcg/FedCM/issues/320)。
-- **Multiple-IdP API**: We are exploring ways to support [multiple IdPs](https://github.com/fedidcg/FedCM/issues/319) to coexist cooperatively in the FedCM account chooser.
-- **IdP Sign-in Status API**: Mozilla has identified a [timing attack issue](https://github.com/fedidcg/FedCM/issues/230), and we are exploring ways for an IdP to proactively [notify the browser of the user's sign-in status](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api) to mitigate the issue.
-- **Sign in to IdP API**: To support [various scenarios](https://github.com/fedidcg/FedCM/issues/348), when a user is not signed in to the IdP, the browser provides a UI for the user to sign in without leaving the RP.
+- **Multiple-IdP API** : FedCM アカウントのチューザーで[複数の IdP](https://github.com/fedidcg/FedCM/issues/319) が協調して共存できるようにする方法を検討しています。
+- **IdP Sign-in Status API** : Mozilla は[タイミング攻撃の問題](https://github.com/fedidcg/FedCM/issues/230)を特定しました。私たちは IdP が[ユーザーのサインイン ステータスをブラウザにプロアクティブに通知](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api)することで問題を軽減していく方法を検討しています。
+- **IdP へのサインイン API **: [さまざまなシナリオ](https://github.com/fedidcg/FedCM/issues/348)をサポートできるよう、ブラウザは、ユーザーが IdP にサインインしていない場合に、ユーザーが RP を離れずにサインインするための UI を提供します。
 
 最後に、[Mozilla](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677)、[Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)、および [TAG のレビュー担当者](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549)からのフィードバックに基づき、まだ実行する必要があると思われることがいくつかあります。私たちは、これらの未解決の問題に対する最善の解決策を評価する取り組みを続けています。
 
 - **ユーザーの理解と一致する意図の改善**: [Mozilla が指摘](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677)したように、さまざまな UX の定式化とサーフェスエリア、およびトリガー基準を引き続き調査したいと考えています。
-- **Identity Attributes and Selective Disclosure**: As our [TAG Reviewers noted](https://github.com/w3ctag/design-reviews/issues/718#issuecomment-1171733526), we’d like to provide a mechanism to selectively share more or less identity attributes (such as emails, age brackets, phone numbers, and so on).
+- **個人属性と選択的開示**: [TAG レビュー担当者が指摘](https://github.com/w3ctag/design-reviews/issues/718#issuecomment-1171733526)したように、多かれ少なかれ個人属性（メール、年齢層、電話番号など）を選択的に共有するメカニズムを提供したいと考えています。
 - **Raising the Privacy Properties**: As Mozilla suggested [here](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677), we’d like to continue exploring  mechanisms to offer better privacy guarantees, such as IdP blindness, directed identifiers.
 - **WebAuthn との関係**: [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)が提案したように、[パスキー](http://goo.gle/passkeys)の進歩を確認し、FedCM、パスワード、WebAuthn、および WebOTP の間で首尾一貫したまとまりのあるエクスペリエンスを提供することに取り組むことに非常にワクワクしています。
 - **ログイン ステータス**: Apple がプライバシー CG の [Login Status API](https://github.com/privacycg/is-logged-in)で提案したように、ユーザーのログイン ステータスは、ブラウザが十分な情報に基づいて決定を下すのに役立つ有用な情報であるという直感を共有しており、そこからどのような機会が生まれるか楽しみにしています。
-- **Enterprises and Education**: As is clear at the FedID CG, there are still [a lot of use cases](https://github.com/fedidcg/use-case-library/blob/main/decision_tree_flows/login/Federated%20Login%20OIDC%20Oauth2%20Auth%20Code%20Flow.png) that are not well served by FedCM that we’d like to work on, such as
-     front-channel logout (the ability for an IdP to send a signal to RPs to logout) and support for SAML.
-- **Relationship with mDLs/VCs/etc**: continue working to understand how these fit within FedCM, for example with the [Mobile Document Request API](https://github.com/WICG/mobile-document-request-api).
+- **エンタープライズと教育**: FedID CG で明らかなように、FedCM では十分に対応できない[多くのユースケース](https://github.com/fedidcg/use-case-library/blob/main/decision_tree_flows/login/Federated%20Login%20OIDC%20Oauth2%20Auth%20Code%20Flow.png)があり、私たちが取り組みたいと考えています。<br>フロントチャンネル ログアウト（IdP がシグナルを RP に送信してログアウトする機能）、SAML のサポートなどです。
+- **mDL、VC 等との関係**: [Mobile Document Request API](https://github.com/WICG/mobile-document-request-api) など、FedCM 内でこれらがどのように適合するかを理解するために引き続き作業します。
 
 ## FedCM の開発方法
 
@@ -174,15 +173,15 @@ FedCM を使用するには、Chrome の IdP と RP の両方で安全なコン�
 
 ## Use the FedCM API {: #use-api }
 
-You integrate with FedCM by creating [a well-known file](#well-known-file), [config file and endpoints](#idp-config-file) for [accounts list](#accounts-list-endpoint), [assertion issuance](#id-assertion-endpoint) and optionally [client metadata](#client-metadata-endpoint).
+[well-known ファイル](#client-metadata-endpoint)と[設定ファイル](#well-known-file)、そして[アカウントリスト](#idp-config-file)、[アサーション発行](#accounts-list-endpoint)、オプションで[クライアントメタデータ](#id-assertion-endpoint)のエンドポイントを作成することにより、FedCM と統合します。
 
 そこから、FedCM は、RP が IdP で[サインイン](#sign-into-rp)するために使用できる JavaScript API を公開します。
 
-### Create a well-known file {: #well-known-file }
+### well-known ファイルを作成する {: #well-known-file }
 
 [トラッカーによる API の悪用](https://github.com/fedidcg/FedCM/issues/230)を防ぐには、IdP の [eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) の `/.well-known/web-identity` から well-known ファイルを提供する必要があります。
 
-For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity` as well as [an IdP config file](#idp-config-file). Here's an example well-known file content:
+たとえば、IdP エンドポイントが `https://accounts.idp.example/` で配信されている場合、`https://idp.example/.well-known/web-identity` の well-known ファイルと [IdP 設定ファイル](#idp-config-file)を配信する必要があります。以下は、well-known ファイルの例です。
 
 ```json
 {
@@ -190,13 +189,13 @@ For example, if the IdP endpoints are served under `https://accounts.idp.example
 }
 ```
 
-The JSON file must contain the `provider_urls` property with an array of [IdP config file](#idp-config-file) URLs that can be [specified as a path part of `configURL` in `navigator.credentials.get` by RPs](#sign-into-rp). The number of URL strings in the array is limited to one, but this may change with [your feedback](#next-steps) in the future.
+JSON ファイルには、[RP によって `navigator.credentials.get` の `configURL` のパス部分として指定](#sign-into-rp)できる [IdP 設定ファイル](#idp-config-file)URL の配列を持つ `provider_urls` プロパティが含まれている必要があります。配列内の URL 文字列の数は 1 つに制限されていますが、これは今後の[皆さんからのフィードバック](#next-steps)によって変更される可能性があります。
 
-### Create an IdP config file and endpoints {: #idp-config-file }
+### IdP 設定ファイルとエンドポイントを作成する {: #idp-config-file }
 
-The IdP config file provides a list of required endpoints for the browser. IdPs will host this config file and the required endpoints. All JSON response must be served with `application/json` content type.
+IdP 設定ファイルには、ブラウザに必要なエンドポイントのリストがあり、IdP は、この設定ファイルと必要なエンドポイントをホストします。すべての JSON レスポンスは、`application/json` コンテンツ タイプで提供する必要があります。
 
-The config file's URL is determined by the values provided to the [`navigator.credentials.get` call executed on an RP](#sign-into-rp).
+設定ファイルの URL は、[RP で実行される `navigator.credentials.get`呼び出し](#sign-into-rp)に提供される値によって決定されます。
 
 ```javascript
 const credential = await navigator.credentials.get({
@@ -211,7 +210,7 @@ const credential = await navigator.credentials.get({
 const { token } = credential;
 ```
 
-Specify a full URL of the IdP config file location as a `configURL`. When [`navigator.credentials.get()` is called](#sign-into-rp) on the RP, the browser fetches the config file with a `GET` request without the `Referer` header. The request doesn't have cookies and doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect. For example:
+IdP 設定ファイルの場所の完全な URL を `configURL` として指定します。[`navigator.credentials.get()` が RP で呼び出される](#sign-into-rp)と、ブラウザは `Referer` ヘッダーなしで `GET` リクエストを使用して設定ファイルをフェッチします。リクエストには Cookie がなく、リダイレクトに従いません。これにより、誰がリクエストを行い、どの RP が接続を試みているかを IdP が知ることを効果的に防ぎます。次に例を示します。
 
 ```http
 GET /config.json HTTP/1.1
@@ -299,13 +298,13 @@ IdP からのレスポンス本文の例を次に示します。
 }
 ```
 
-Once the browser fetches the config file, it sends subsequent requests to the IdP endpoints:
+ブラウザが設定ファイルをフェッチしたら、後続のリクエストが IdP エンドポイントに送信されます。
 
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/3tkfSwwLSUnVrbesKX2K.png", alt="IdP endpoints", width="800", height="1085", class="type--full-bleed" %}
 
 {% Aside 'caution' %}
 
-If the RP deploys [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) on the page FedCM is called and enforce `connect-src` directive, they must explicitly allow endpoints described in the config file.
+RP が[Content Security Policy（CSP）](https://developer.mozilla.org/docs/Web/HTTP/CSP)をページに展開し、FedCM が呼び出されて `connect-src` ディレクティブを強制する場合、設定ファイルに記述されているエンドポイントを明示的に許可する必要があります。
 
 {% endAside %}
 
@@ -313,7 +312,7 @@ If the RP deploys [Content Security Policy (CSP)](https://developer.mozilla.org/
 
 IdP のアカウントリストエンドポイントは、ユーザーが現在 IdP にサインインしているアカウントのリストを返します。 IdP が複数のアカウントをサポートしている場合、このエンドポイントはサインインしているすべてのアカウントを返します。
 
-The browser sends a `GET` request with cookies, but without a `client_id` parameter or the `Referer` header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. For example:
+ブラウザは、cookie を含む `GET` リクエストを送信しますが、`client_id`パラメーターまたは `Referer` ヘッダーは使用しません。これにより、ユーザーがサインインしようとしている RP を IdP が知ることを効果的に防止します。次に例を示します。
 
 ```http
 GET /accounts.php HTTP/1.1
@@ -388,11 +387,11 @@ Example response body:
 
 If the user is not signed in, respond with HTTP 401 (Unauthorized).
 
-The returned accounts list is consumed by the browser and will not be available to the RP.
+返されたアカウントリストはブラウザによって消費され、RP は使用できません。
 
 #### クライアントメタデータエンドポイント {: #client-metadata-endpoint }
 
-The IdP's client metadata endpoint returns the relying party's metadata such as the RP's privacy policy and terms of service. RPs should provide links to their privacy policy and terms of service to the IdP in advance. These links are displayed in the sign-in dialog when the user hasn't registered on the RP with the IdP yet.
+IdP のクライアントメタデータエンドポイントは、RP のプライバシーポリシーや利用規約などのリライングパーティーのメタデータを返します。RP は、事前に IdP にプライバシーポリシーと利用規約へのリンクを提供する必要があります。これらのリンクは、ユーザーがまだ IdP を使用して RP に登録していない場合に、サインイン ダイアログに表示されます。
 
 ブラウザは、Cookie なしで `client_id` [`navigator.credentials.get`](#sign-into-rp) を使用して `GET` リクエストを送信します。次に例を示します。
 
@@ -434,7 +433,7 @@ Sec-Fetch-Dest: webidentity
 }
 ```
 
-The returned client metadata is consumed by the browser and will not be available to the RP.
+返されたクライアントメタデータはブラウザによって消費され、RP は使用できません。
 
 #### ID アサーションエンドポイント {: #id-assertion-endpoint }
 
@@ -460,7 +459,7 @@ IdP の ID アサーション エンドポイントは、サインインして�
   <tr>
      <td>
 <code>nonce</code>（オプション）</td>
-     <td>The request nonce, provided by the RP.</td>
+     <td>RP によって提供されるリクエスト nonce。</td>
   </tr>
   <tr>
      <td><code>disclosure_text_shown</code></td>
@@ -516,7 +515,7 @@ OAuth または OpenID Connect でのドメイン検証はブラウザのリダ�
 
 返されたトークンはブラウザによって RP に渡されるため、RP は認証を検証できます。
 
-### Sign in to the relying party with the identity provider {: #sign-into-rp }
+### ID プロバイダーを使って RP にサインインする {: #sign-into-rp }
 
 IdP の構成とエンドポイントが利用可能になると、RP は `navigator.credentials.get()`を呼び出して、ユーザーが IdP を使用して RP にサインインできるように要求できます。
 
@@ -557,7 +556,7 @@ const { token } = credential;
   <tr>
     <td>
 <code>configURL</code>（必須）</td>
-    <td>A full path of the IdP config file.</td>
+    <td>IdP 設定ファイルのフルパス。</td>
   </tr>
   <tr>
      <td>
@@ -578,7 +577,7 @@ const { token } = credential;
 RP が `navigator.credentials.get()` を呼び出すと、その次のアクティビティが発生します。
 
 1. ブラウザはリクエストを送信し、いくつかのドキュメントを取得します。
-    1. [The well-known file](#well-known-file) and [an IdP config file](#idp-config-file) which declare endpoints.
+    1. エンドポイントを宣言する [well-known ファイル](#well-known-file)と [IdP 設定ファイル](#idp-config-file)。
     2. [アカウントリスト](#accounts-list-endpoint)。
     3. オプション: [クライアントメタデータエンドポイント](#client-metadata-endpoint)から取得した RP のプライバシーポリシーと利用規約の URL。
 2. ブラウザには、ユーザーがサインインに使用できるアカウントのリストと、利用可能な場合は利用規約とプライバシーポリシーが表示されます。
