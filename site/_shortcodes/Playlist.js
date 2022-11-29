@@ -1,103 +1,122 @@
-const fetch = require('node-fetch');
+const fetch = require('node-fetch/lib/index');
 const apiKey = 'AIzaSyAzOX6K8IXsxPwQ0rgW7QgJPndroPOiWfc';
 const maxResults = 50;
-const part = 'snippet'
+const part = 'snippet';
 
-/** Renders a filename associated with a code snippet.
- * @param {string} filename A filename representing the code snippet
+/** Renders a a YouTube playlist widget
+ * @param {string} playlistId is a YouTube playlist id
  */
 async function Playlist(playlistId) {
-
-  var videoNumber = 1;
-  var videoTotal = 0;
-  var playlistViews = 0;
+  let videoNumber = 1;
+  let videoTotal = 0;
+  const playlistViews = 0;
 
   // Set some empty variables to populate
-  var channelId = '';
-  var channelName = '';
-  var channelThumb = '';
-  var playlistName = '';
-  var playlistThumb = '';
-  var playlistUpdated = '';
-  var playlistHtml = '';
+  let channelId = '';
+  let channelName = '';
+  let channelThumb = '';
+  let playlistName = '';
+  let playlistThumb = '';
+  let playlistUpdated = '';
+  let playlistHtml = '';
 
   /*
     Playlist Information
   */
-  var playlistQuery = await fetch('https://youtube.googleapis.com/youtube/v3/playlists?part=' + part + '&id=' + playlistId + '&key=' + apiKey)
-  .then(res => res.json())
-  .then( (playlistResult) => {
-    console.log('Playlist Info');
+  await fetch(
+    'https://youtube.googleapis.com/youtube/v3/playlists?part=' +
+      part +
+      '&id=' +
+      playlistId +
+      '&key=' +
+      apiKey
+  )
+    .then(res => res.json())
+    .then(playlistResult => {
+      console.log('Playlist Info');
 
-    if ( playlistResult.items.length > 0 )
-    {
-      channelId = playlistResult.items[0].snippet.channelId;
-      playlistName = playlistResult.items[0].snippet.title;
-      playlistThumb = playlistResult.items[0].snippet.thumbnails.medium.url;
-      playlistUpdated = new Date(playlistResult.items[0].snippet.publishedAt).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
-    }
-    else
-    {
-      return false;
-    }
+      if (playlistResult.items.length > 0) {
+        channelId = playlistResult.items[0].snippet.channelId;
+        playlistName = playlistResult.items[0].snippet.title;
+        playlistThumb = playlistResult.items[0].snippet.thumbnails.medium.url;
+        playlistUpdated = new Date(
+          playlistResult.items[0].snippet.publishedAt
+        ).toLocaleDateString('en-us', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        });
+      } else {
+        return false;
+      }
 
-    // Next Call: Query Channel Information
-    return fetch('https://youtube.googleapis.com/youtube/v3/channels?part=' + part + '&id=' + channelId + '&key=' + apiKey);
-  })
-  .then(res => res.json())
-  .then( (channelResult) => {
-    console.log('Channel Info');
+      // Next Call: Query Channel Information
+      return fetch(
+        'https://youtube.googleapis.com/youtube/v3/channels?part=' +
+          part +
+          '&id=' +
+          channelId +
+          '&key=' +
+          apiKey
+      );
+    })
+    .then(res => res.json())
+    .then(channelResult => {
+      channelName = channelResult.items[0].snippet.title;
+      channelThumb = channelResult.items[0].snippet.thumbnails.medium.url;
 
-   channelName = channelResult.items[0].snippet.title;
-   channelThumb = channelResult.items[0].snippet.thumbnails.medium.url;
+      // Next Call: Query Channel Information
+      return fetch(
+        'https://youtube.googleapis.com/youtube/v3/playlistItems?part=' +
+          part +
+          '&playlistId=' +
+          playlistId +
+          '&maxResults = ' +
+          maxResults +
+          '&key=' +
+          apiKey
+      );
+    })
+    .then(res => res.json())
+    .then(videosResult => {
+      videosResult.items.forEach(video => {
+        playlistHtml =
+          playlistHtml +
+          `<div class="playlist-video">
+            <div class="playlist-video__number">${videoNumber}</div>
 
-   console.log(channelThumb);
 
-    // Next Call: Query Channel Information
-    return fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=' + part + '&playlistId=' + playlistId + '&maxResults = ' + maxResults + '&key=' + apiKey);
-  })
-  .then(res => res.json())
-  .then( (videosResult) => {
-    console.log('Videos');
-    //console.log(videosResult);
+            <div class="playlist-video--content">
+              <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
+              <div class="playlist-video__thumbnail">
+                <img src="${video.snippet.thumbnails.medium.url}" height="114" width="204" alt="Thumbnail">
+              </div>
+              </a>
 
-    videosResult.items.forEach( function(video, index, arr)
-    {
-       playlistHtml = playlistHtml + `<div class="playlist-video">
-        <div class="playlist-video__number">${videoNumber}</div>
+              <div class="playlist-video__details">
+              <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
+                <h4 class="playlist-video__title">${video.snippet.title}</h4>
+                </a>
+                <p>${video.snippet.channelTitle}</p>
+              </div>
 
+              <div class="playlist-video__action">
+               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6004 10.4C21.6004 9.73333 21.8337 9.16667 22.3004 8.7C22.7671 8.23333 23.3337 8 24.0004 8C24.6671 8 25.2337 8.23333 25.7004 8.7C26.1671 9.16667 26.4004 9.73333 26.4004 10.4C26.4004 11.0667 26.1671 11.6333 25.7004 12.1C25.2337 12.5667 24.6671 12.8 24.0004 12.8C23.3337 12.8 22.7671 12.5667 22.3004 12.1C21.8337 11.6333 21.6004 11.0667 21.6004 10.4ZM21.6004 24C21.6004 23.3333 21.8337 22.7667 22.3004 22.3C22.7671 21.8333 23.3337 21.6 24.0004 21.6C24.6671 21.6 25.2337 21.8333 25.7004 22.3C26.1671 22.7667 26.4004 23.3333 26.4004 24C26.4004 24.6667 26.1671 25.2333 25.7004 25.7C25.2337 26.1667 24.6671 26.4 24.0004 26.4C23.3337 26.4 22.7671 26.1667 22.3004 25.7C21.8337 25.2333 21.6004 24.6667 21.6004 24ZM21.6004 37.6C21.6004 36.9333 21.8337 36.3667 22.3004 35.9C22.7671 35.4333 23.3337 35.2 24.0004 35.2C24.6671 35.2 25.2337 35.4333 25.7004 35.9C26.1671 36.3667 26.4004 36.9333 26.4004 37.6C26.4004 38.2667 26.1671 38.8333 25.7004 39.3C25.2337 39.7667 24.6671 40 24.0004 40C23.3337 40 22.7671 39.7667 22.3004 39.3C21.8337 38.8333 21.6004 38.2667 21.6004 37.6Z" fill="#3C4043"/>
+              </svg>
 
-        <div class="playlist-video--content">
-          <a href="https://www.youtube.com/watch?v=${ video.snippet.resourceId.videoid }" target="_blank">
-          <div class="playlist-video__thumbnail">
-            <img src="${ video.snippet.thumbnails.medium.url }" height="114" width="204" alt="Thumbnail">
-          </div>
-          </a>
+              </div>
+            </div>
+          </div>`;
 
-          <div class="playlist-video__details">
-          <a href="https://www.youtube.com/watch?v=${ video.snippet.resourceId.videoId }" target="_blank">
-            <h4 class="playlist-video__title">${ video.snippet.title }</h4>
-            </a>
-            <p>${ video.snippet.channelTitle }</p>
-          </div>
-
-          <div class="playlist-video__action">
-           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.6004 10.4C21.6004 9.73333 21.8337 9.16667 22.3004 8.7C22.7671 8.23333 23.3337 8 24.0004 8C24.6671 8 25.2337 8.23333 25.7004 8.7C26.1671 9.16667 26.4004 9.73333 26.4004 10.4C26.4004 11.0667 26.1671 11.6333 25.7004 12.1C25.2337 12.5667 24.6671 12.8 24.0004 12.8C23.3337 12.8 22.7671 12.5667 22.3004 12.1C21.8337 11.6333 21.6004 11.0667 21.6004 10.4ZM21.6004 24C21.6004 23.3333 21.8337 22.7667 22.3004 22.3C22.7671 21.8333 23.3337 21.6 24.0004 21.6C24.6671 21.6 25.2337 21.8333 25.7004 22.3C26.1671 22.7667 26.4004 23.3333 26.4004 24C26.4004 24.6667 26.1671 25.2333 25.7004 25.7C25.2337 26.1667 24.6671 26.4 24.0004 26.4C23.3337 26.4 22.7671 26.1667 22.3004 25.7C21.8337 25.2333 21.6004 24.6667 21.6004 24ZM21.6004 37.6C21.6004 36.9333 21.8337 36.3667 22.3004 35.9C22.7671 35.4333 23.3337 35.2 24.0004 35.2C24.6671 35.2 25.2337 35.4333 25.7004 35.9C26.1671 36.3667 26.4004 36.9333 26.4004 37.6C26.4004 38.2667 26.1671 38.8333 25.7004 39.3C25.2337 39.7667 24.6671 40 24.0004 40C23.3337 40 22.7671 39.7667 22.3004 39.3C21.8337 38.8333 21.6004 38.2667 21.6004 37.6Z" fill="#3C4043"/>
-          </svg>
-
-          </div>
-        </div>
-      </div>`;
-
-      videoNumber++;
-      videoTotal++;
-   });
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
+        videoNumber++;
+        videoTotal++;
+      });
+    })
+    .catch(error => {
+      console.error(error);
+    });
 
   return `<div class="gap-top-400">
     <div class="playlist hairline rounded-lg width-full">
@@ -157,11 +176,6 @@ async function Playlist(playlistId) {
 
     </div>
   </div>`;
-
 }
 
 module.exports = {Playlist};
-
-
-
-

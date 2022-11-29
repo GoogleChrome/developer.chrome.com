@@ -2,7 +2,7 @@
 title: Components
 layout: 'layouts/doc-post.njk'
 date: 2021-01-12
-updated: 2022-06-17
+updated: 2022-11-29
 ---
 
 ## Asides
@@ -1115,3 +1115,13 @@ Use the {% raw %}`{% YouTube %}`{% endraw %} shortcode to embed a YouTube video.
 ```
 
 {% YouTube id="qPD2yc8BoDk" %}
+
+## YouTube Playlist
+
+Use the {% raw %}`{% Playlist %}`{% endraw %} shortcode to display a YouTube playlist.
+
+```md
+{% raw %}{% Playlist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH"  %}{% endraw %}
+```
+
+{% Playlist "PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH" %}
