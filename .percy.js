@@ -3,7 +3,7 @@ const SNAPSHOTS = [
   '/en/page-types/authors-landing/index.html',
   '/en/page-types/blog-landing/index.html',
   '/en/content-types/blog-post/index.html',
-  '/en/page-types/collections-landing/index.html',
+  '/en/page-types/collection-landing/index.html',
 ];
 
 module.exports = {
