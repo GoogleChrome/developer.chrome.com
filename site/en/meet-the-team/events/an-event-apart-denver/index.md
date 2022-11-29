@@ -27,7 +27,8 @@ sessions:
       inspiration to try combining different features, and a little peek at what
       might be around the corner.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Interop
     time: TBC
     type: speaker

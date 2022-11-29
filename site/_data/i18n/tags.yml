@@ -257,3 +257,6 @@ spc:
 
 webauthn:
   en: WebAuthn
+
+passkeys:
+  en: Passkeys
