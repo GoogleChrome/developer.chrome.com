@@ -33,7 +33,9 @@ For example, if you have previously recorded demographic and geographic data in 
 
 ### Key concepts
 
-When you call the [Private Aggregation API](https://github.com/patcg-individual-drafts/private-aggregation-api) with an aggregation key and an aggregatable value, the browser generates an aggregatable report. The reports are sent to your server that batches the reports. The batched reports are processed later by the [Aggregation Service](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), and a summary report is generated. 
+When you call the Private Aggregation API with an aggregation key and an aggregatable value, the browser generates an aggregatable report. 
+
+Aggregatable reports are sent to your server for collection and batching. The batched reports are processed later by the [Aggregation Service](/docs/privacy-sandbox/aggregation-service/), and a [summary report](/docs/privacy-sandbox/summary-reports/) is generated. 
 
 See the [Private Aggregation API fundamentals](/docs/privacy-sandbox/private-aggregation-fundamentals) document to learn more about the key concepts involved with the Private Aggregation API.
 
@@ -75,17 +77,21 @@ Private Aggregation is a general purpose API for cross-site measurement, and it�
 
 #### Unique reach measurement
 
-You may want to measure how many unique users have seen their content. Private Aggregation API can provide an answer such as “Approximately 317 unique users have seen the Content ID 861”. 
+You may want to measure how many unique users have seen their content. Private Aggregation API can provide an answer such as "Approximately 317 unique users have seen the Content ID 861." 
 
 You can set a flag in Shared Storage to signify whether the user has already seen the content or not. On the first visit where the flag does not exist, a call to Private Aggregation is made and then the flag is set. On subsequent visits by the user, including cross-site visits, you can check Shared Storage and skip submitting a report to Private Aggregation if the flag is set. 
 
 #### Demographics measurement
 
-You may want to measure the demographics of the users who have seen your content across different sites. Private Aggregation can provide an answer, such as “Approximately 317 unique users are from the age of 18-45 and are from Germany.” Use Shared Storage to access demographics data from a third-party context. At a later point in time, you can generate a report with Private Aggregation by encoding the age group and country dimensions in the aggregation key. 
+You may want to measure the demographics of the users who have seen your content across different sites.
+
+Private Aggregation can provide an answer, such as "Approximately 317 unique users are from the age of 18-45 and are from Germany." Use Shared Storage to access demographics data from a third-party context. At a later point in time, you can generate a report with Private Aggregation by encoding the age group and country dimensions in the aggregation key. 
 
 #### K+ frequency measurement
 
-You may want to measure the number of users who have seen a piece of content or an ad at least K times on a given browser, for a pre-chosen value of K. Private Aggregation can provide an answer such as “Approximately 89 users have seen the Content ID 581 at least 3 times.” A counter can be incremented in Shared Storage from different sites and can be read within a worklet. When the count has reached K, a report can be submitted via Private Aggregation. 
+You may want to measure the number of users who have seen a piece of content or an ad at least K times on a given browser, for a pre-chosen value of K.
+
+Private Aggregation can provide an answer such as "Approximately 89 users have seen the Content ID 581 at least 3 times." A counter can be incremented in Shared Storage from different sites and can be read within a worklet. When the count has reached K, a report can be submitted via Private Aggregation. 
 
 ### With FLEDGE
 
@@ -97,10 +103,9 @@ The following functions are available in the `privateAggregation` object availab
 
 ### sendHistogramReport()
 
-You can call `privateAggregation.sendHistogramReport({ bucket: <bucket>, value: <value> })` with the _aggregation key_ as `bucket` and the _aggregatable value_ as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
+You can call `privateAggregation.sendHistogramReport({ bucket: <bucket>, value: <value> })`, where the aggregation key is `bucket` and the aggregatable value as `value`. For the `bucket` parameter, a `BigInt` is required. For the `value` parameter, an integer Number is required.
 
 Here is an example of how it may be called in Shared Storage for reach measurement: 
-
 
 #### `iframe.js`
 
@@ -166,7 +171,7 @@ The above code example will call Private Aggregation whenever the cross-site ifr
 
 ### enableDebugMode()
 
-While third-party cookies are still available, we will provide a temporary mechanism that allows easier debugging and testing by enabling the debug mode. A debug report is useful in comparing your cookie-based measurements with your Private Aggregation measurements, and also allows you to quickly validate your API integration. 
+While third-party cookies are still available, we'll provide a temporary mechanism that allows easier debugging and testing by enabling the debug mode. A debug report is useful in comparing your cookie-based measurements with your Private Aggregation measurements, and also allows you to quickly validate your API integration. 
 
 Calling `privateAggregation.enableDebugMode()` in the worklet enables the debug mode which causes aggregatable reports to include the unencrypted (cleartext) payload. You can then process these payloads with the Aggregation Service [local testing tool](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing). 
 

@@ -25,7 +25,7 @@ Before continuing, make sure to read the
 [Attribution Reporting overview](/docs/privacy-sandbox/attribution-reporting).
 This will help you understand the API's purpose and the flow of the different output reports
 ([event-level report](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
-and [summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)).
+and [summary reports](/docs/privacy-sandbox/summary-reports/)).
 If you come across unfamiliar terms, refer to the
 [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
@@ -92,7 +92,7 @@ data. The output reports provide insights on your campaigns or business.
 The output report can be:
 
 *  _Event-level reports_ associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by limiting the joining of user identity across sites, conversion-side data is very limited, and the data is noisy (meaning that for a small percentage of cases, random data is sent instead of real reports).
-*  _[Summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)_ are not tied to a specific event on the ad side. These reports offer more detailed conversion data and flexibility for joining click and view data with conversion data. 
+*  _[Summary reports](/docs/privacy-sandbox/summary-reports/)_ are not tied to a specific event on the ad side. These reports offer more detailed conversion data and flexibility for joining click and view data with conversion data. 
 
 Your report selection determines what data you'll need to collect.
 
@@ -235,18 +235,17 @@ can be changed without needing to change attribution sources or triggers.
 
 ### Aggregation Service
 
-The Aggregation Service is responsible for processing aggregatable reports to
+The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) is responsible for processing aggregatable reports to
 generate a summary report. Aggregatable reports are encrypted and can only be
 read by the Aggregation Service, which runs on a trusted execution environment
 (TEE).
 
-The Aggregation Service
-[requests decryption keys from the coordinator](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator)
+The Aggregation Service requests decryption keys from the [coordinator](/docs/privacy-sandbox/aggregation-service/#coordinator )
 to decrypt and aggregate the data. Once decrypted and aggregated, the results
 are noised to preserve privacy and returned as a summary report. 
 
-Practitioners can generate aggregatable cleartext reports to [test the
-Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing).
+Practitioners can generate aggregatable cleartext reports to
+[test the Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing).
 Or, you can [test with encrypted reports on AWS with Nitro Enclaves](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports).
 
 ## What's next?
