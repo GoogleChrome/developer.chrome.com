@@ -120,7 +120,9 @@ Speculation rules can be:
 * Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
 * Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`.
 
-Speculation rules can be added anywhere in the main page and do not need to be in the `<head>` element. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages, are only acted upon once the page is activated.
+Speculation rules can be added anywhere in the main page and do not need to be in the `<head>` element. Multiple speculation rules can also be added to the same page—adding multiple URLs in the `urls` array, or having multiple `<script type="speculationrules">` are functionally equivalent.
+
+Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once the page is activated.
 
 Below is a simple example of adding a `prerender` speculation rule:
 
