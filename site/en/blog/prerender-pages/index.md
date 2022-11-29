@@ -179,8 +179,10 @@ You can have a function to check for _prendering_ and _prerendered_ pages like t
 
 ```js
 function pagePrerendered() {
-  return document.prerendering || self.performance?.getEntriesByType?.call(
-      performance, 'navigation')[0]?.activationStart > 0;
+  return (
+    document.prerendering ||
+    self.performance?.getEntriesByType?.('navigation')[0]?.activationStart > 0
+  );
 }
 ```
 
