@@ -1,6 +1,6 @@
 const SNAPSHOTS = [
   '/en/page-types/author-individual/index.html',
-  '/en/misc/test-post/index.html',
+  '/en/test-post/index.html',
 ];
 
 module.exports = {
