@@ -15,13 +15,13 @@ tags:
  - chrome-108
 ---
 
-As [announced previously](https://web.dev/speculative-prerendering/), the Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108.
+The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108.
 
 ## A brief history of prerender
 
 In the past, Chrome supported the `<link rel="prerender" href="/next-page/">` resource hint, however it was not broadly supported beyond Chrome, and it wasn't a very expressive API.
 
-This legacy prerendering via the link `rel=prerender` hint was deprecated in favor of [`NoState Prefetch`](/blog/nostate-prefetch/), which instead fetched the resources needed by the page, but did not fully prerender the page nor execute JavaScript. NoState Prefetch does help improve page performance by improving the resource loading, but will not deliver an _instant_ page load like a full prerender would.
+This legacy prerendering via the link `rel=prerender` hint was deprecated in favor of [NoState Prefetch](/blog/nostate-prefetch/), which instead fetched the resources needed by the future page, but did not fully prerender the page nor execute JavaScript. NoState Prefetch does help improve page performance by improving the resource loading, but will not deliver an _instant_ page load like a full prerender would.
 
 The Chrome team is now ready to reintroduce full prerendering back into Chrome. To avoid complications with existing usage, and to allow for future expansion of prerendering, this new prerender mechanism will not use the `<link rel="prerender"...>` syntax, which remains in place for NoState Prefetch, with a view of retiring this at some point in the future.
 
@@ -331,13 +331,14 @@ Remember to also look at pages which have no prerenders, as that could indicate 
 
 ## Feedback
 
-Prerendering is in active development by the Chrome team, and there are plenty of plans to expand the scope of what has been made available in the Chrome 108 release. We welcome any feedback on [our issue tracker](https://bugs.chromium.org/p/chromium/issues/list), and look forward to hearing and sharing case studies of this exciting new API.
+Prerendering is in active development by the Chrome team, and there are plenty of plans to expand the scope of what has been made available in the Chrome 108 release. We welcome any feedback on [the GitHub repo](https://github.com/WICG/nav-speculation/issues) or via [our issue tracker](https://bugs.chromium.org/p/chromium/issues/list), and look forward to hearing and sharing case studies of this exciting new API.
 
 ## Related links
 
 - [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/)
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
+- [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)
 
 ## Acknowledgements
 
