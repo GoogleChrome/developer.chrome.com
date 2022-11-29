@@ -485,8 +485,6 @@ You can also use a first-party cookie to store click information. When the ad is
 {% Details %}
 {% DetailsSummary %}
 ### How do I use a user's recent browsing history for ad recommendations?
-
-The [`adComponents` property](#specify-ads-for-an-interest-group) can include relevant metadata to inform your bid.
 {% endDetailsSummary %}
 
 A user's browsing history for the site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals`, which can be used during on-device bidding. See the [product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on the impact of core metrics for recommendation use case adoption.
