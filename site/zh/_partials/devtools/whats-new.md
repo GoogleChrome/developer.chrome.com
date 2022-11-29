@@ -4,14 +4,15 @@
 
 {# $content #}
 
-{# ### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/zh/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/zh/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/zh/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/zh/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-108/#misc)
- #}
+### Chrome 108 {: #chrome108 }
+
+* [不活跃 CSS 属性的提示](/zh/blog/new-in-devtools-108/#css-hint)
+* [在 Recorder 面板中自动检测 XPath 和文本选择器](/zh/blog/new-in-devtools-108/#recorder)
+* [逐步执行逗号分隔的表达式](/zh/blog/new-in-devtools-108/#debugging)
+* [改进的忽略列表设置](/zh/blog/new-in-devtools-108/#ignore-list)
+* [其他的更新](/zh/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 
