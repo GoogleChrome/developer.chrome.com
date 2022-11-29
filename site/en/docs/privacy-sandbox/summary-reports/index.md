@@ -186,7 +186,8 @@ The _[aggregation service](/docs/privacy-sandbox/aggregation-service/)_ decrypts
 
 ## Summary reports with Attribution Reporting
 
-For adtech providers to retrieve a summary report, the following steps must be taken:
+For adtech providers to retrieve a summary report, the following steps must
+be taken:
 
 1. The adtech provider collects aggregatable reports from individual users'
    browsers.
@@ -196,9 +197,12 @@ For adtech providers to retrieve a summary report, the following steps must be t
 1. The adtech provider batches the aggregatable reports and sends the batches
    to the aggregation service.
 1. The aggregation service schedules a
-   [worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) to aggregate the data.
+   [worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) to
+   aggregate the data.
    {% Aside %}
-   Before the worker can aggregate, attestation is required from the ​​coordinator. If the worker passes attestation, the decryption keys will be provided.
+   Before the worker can aggregate, attestation is required from the
+   ​​coordinator. If the worker passes attestation, the decryption keys will be
+   provided.
    {% endAside %}
 1. The aggregation worker decrypts and aggregates data from the aggregatable
    reports, along with noised data.
@@ -208,13 +212,21 @@ For adtech providers to retrieve a summary report, the following steps must be t
   {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/U1ZeswSEnAMSSoCcE5Za.png", alt="", width="800", height="146" %}
 </figure>
 
-The adtech can use the summary report to inform bidding and to offer reporting to its own customers. A [JSON-encoded scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports) is the proposed format for summary reports.
+The adtech can use the summary report to inform bidding and to offer reporting
+to its own customers. A
+[JSON-encoded scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
+is the proposed format for summary reports.
 
 ## Summary reports with Private Aggregation
 
-1. Read the cross-site data collected by Shared Storage and generate an aggregation key to group the data. 
-1. Call the Private Aggregation API from a Shared Storage worklet with the aggregation key and the value that you want to accumulate. The browser generates an encrypted aggregatable report from your input and sends it to your server for collection.
-1. Batch the aggregatable reports and send them to the aggregation service for processing.
+1. Read the cross-site data collected by Shared Storage and generate an
+   aggregation key to group the data. 
+1. Call the Private Aggregation API from a Shared Storage worklet with the
+   aggregation key and the value that you want to accumulate. The browser 
+   generates an encrypted aggregatable report from your input and sends it to
+   your server for collection.
+1. Batch the aggregatable reports and send them to the aggregation service for
+   processing.
 1. The aggregation service processes the batched reports, then adds noise.
    {% Aside %}
    Before the aggregation service can process the reports, attestation is required from the ​​coordinator. Learn more about the [aggregation service](/docs/privacy-sandbox/aggregation-service).
