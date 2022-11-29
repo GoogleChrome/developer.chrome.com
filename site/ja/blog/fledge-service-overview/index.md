@@ -19,24 +19,24 @@ FLEDGE（[Android](https://developer.android.com/design-for-safety/ads/fledge)�
 
 ## この更新の対象者 {: #who}
 
-- If you work in **adtech**, **advertising**, or **ad mediation**, this article will share a high-level overview of the cloud services you can use to optimize FLEDGE.
-- If you're a **developer**, the explainers will link to and provide more in-depth technical details and setup.
+- あなたが**アドテック**、**広告**、または**広告仲介**に従事している場合、この記事には、FLEDGE を最適化するために使用できるクラウドサービスの概要が説明されています。
+- あなたが**開発者**の場合、Explainer からより詳細な技術情報とセットアップ情報にアクセスできます。
 
 これらのサービスは、サプライサイド プロバイダー（SSP）とデマンドサイド サプライヤー（DSP）向けに設計されています。ウェブサイトおよびアプリケーションのコンテンツパブリッシャーからの操作は現在必要ありませんが、SSP が直接連絡を取り、取り組みを調整する場合があります。
 
-## Cross-platform, real-time services
+## クロスプラットフォームかつリアルタイムのサービス
 
 FLEDGE はアプリとウェブ向けに構築されているため、サービスがプラットフォーム間でリアルタイムに機能することが重要です。
 
-The [FLEDGE services explainer](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md) details the high-level system overview, trust model, privacy considerations, and security goals for current and future proposed FLEDGE services.
+[FLEDGE サービスの Explainer](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md) では、現時点で提案されている FLEDGE サービスと今後の同サービスに関するハイレベルなシステム概要、信頼モデル、プライバシーの考慮事項、およびセキュリティ目標について詳しく説明しています。
 
-If you've been testing FLEDGE in production, you'll already be familiar with the **[Key/Value service](#key-value-service)**. This proposal has been updated with a new trust model for cloud implementation. If you're familiar with the "Bring Your Own Server" model, we've provided [migration details and timeline updates](#byos-to-tee).
+本番環境で FLEDGE をテストしている場合は、**[Key-Value サービス](#key-value-service)**についてよく理解していると思います。この提案は、クラウド実装のための新しい信頼モデルとして更新されました。「Bring Your Own Server」モデルに精通している場合には、[移行方法の詳細とタイムラインの更新](#byos-to-tee)をご覧ください。
 
 2 つ目のサービスは、FLEDGE の傘下で新たに提案された**[入札・オークション サービス](#bidding-auction-service)**です。この新しい提案では、広告オークションと入札サービスのプライバシーを保護しながら、入札と広告オークションをクライアントからクラウドにオフロードします。新しい入札およびオークション サービスのアイデアと現在のオンデバイス デザインとの比較についてのフィードバックをお待ちしております。特に、進行中の Chrome 広告の関連性と測定のオリジントライアルの一環として、すでに経験を積んでいるテスターからのフィードバックをお待ちしております。この提案は、[提案ライフ サイクルのディスカッションの段階](/docs/privacy-sandbox/proposal-lifecycle/)にあります。入札・オークションサービスは、「Bring Your Own Server」モデルの対象外です。
 
 ### Key-Value サービス {: #key-value-service }
 
-Adtechs can use the [Key/Value service](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) to supply real-time information to the FLEDGE ad auction. This information could be used in a number ways:
+アドテックは、[Key-Value サービス](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md)を使用して、リアルタイムの情報を FLEDGE 広告オークションに提供できます。この情報は、さまざまな方法で使用できます。
 
 - バイヤーが、広告キャンペーンの残りの予算を計算したい場合があります。
 - セラーが、広告クリエイティブをサイト運営者のポリシーに照らして確認する必要がある場合があります。
@@ -49,7 +49,7 @@ TEE ベースの [FLEDGE Key-Value サービス](https://github.com/WICG/turtled
 
 ### 入札・オークションサービスの提案 {: #bidding-auction-service }
 
-{% Aside %} This is a brand new proposal under discussion, and the **current on-device bidding and auction approach for FLEDGE has not changed**. The Bidding and auction service is a complementary proposal to offload bidding and auction computation to a trusted execution environment if and when useful.
+{% Aside %} これは議論中の新しい提案であり、**現在の FLEDGE のオンデバイス入札とオークションのアプローチは変更されていません**。入札・オークションサービスは、必要に応じて入札とオークションの計算を信頼できる実行環境（TEE）にオフロードするための補完的な提案です。
 
 皆様からの[フィードバックをお待ちしております](#engage-and-share-feedback)。特に、[広告の関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)に参加しているテスターからのフィードバックをお待ちしております。 {% endAside %}
 
@@ -75,7 +75,7 @@ FLEDGE サービスがタスクを実行できるように相互作用するエ�
 
 ## プライバシーとセキュリティに関する考慮事項
 
-In the proposed architecture for FLEDGE services, we've made several decisions to ensure the infrastructure is privacy-preserving and secure.
+FLEDGE サービスの提案されたアーキテクチャでは、インフラがプライバシーを保護し、安全であることを保証するためにいくつかの決定を下しました。
 
 アドテックは、必要なセキュリティ機能を備えたクラウドプロバイダーで実行される信頼できる実行環境（TEE）でこれらのサービスを運用します。
 
