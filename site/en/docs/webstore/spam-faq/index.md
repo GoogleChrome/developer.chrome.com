@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Spam policy FAQ"
 date: 2020-05-01
-updated: 2022-11-16
+updated: 2022-11-30
 description: Frequently asked questions about Chrome Web Store's spam policy.
 ---
 
