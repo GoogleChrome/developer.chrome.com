@@ -20,7 +20,7 @@ authors:
 
 ## オリジントライアルのステータスを確認する {: #status}
 
-### November 2022
+### 2022 年 11 月
 
 共有ストレージの `selectURL` API は、11 月 9 日から Chrome Stable トラフィックの 1% で[オリジントライアルに追加](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/wXlBwB_UAQAJ)されます。アトリビューション レポートと Topics については、以前に[プライバシーサンドボックスの関連性と測定のオリジントライアルを 5% に引き上げる](/blog/privacy-sandbox-origin-trial-increase/)というブログ記事で発表したとおり、現在 5% で実施されており、FLEDGE と Fenced Frames も 11 月 9 日からそれに続いています。
 
@@ -30,13 +30,12 @@ authors:
    <th>備考</th>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>    </td>
-   <td>Available in Stable, increased to 5% from October 26th.    </td>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a></td>
+   <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
    <td><a href="/docs/privacy-sandbox/topics/">Topics</a></td>
-   <td>Available in Stable, increased to 5% from October 26th.    </td>
+   <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
    <td><a href="/docs/privacy-sandbox/fledge/">FLEDGE</a></td>
@@ -47,8 +46,7 @@ authors:
    <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>    </td>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">共有ストレージ</a></td>
    <td>11 月 9 日に安定版で 1% から提供開始。</td>
   </tr>
 </table>
@@ -59,7 +57,7 @@ authors:
 
 オリジントライアルに関する過去の更新内容をご覧ください。 {% endDetailsSummary %}
 
-#### October 2022: 5% increase
+#### 2022 年 10 月: 5% 増加
 
 アトリビューション レポート、Topics、FLEDGE、Fenced Frames はすべて Chrome Stable で現在利用可能であり、トラフィック増加の一部になります。アトリビューション レポートと Topics のトラフィック増加は今週から開始し、FLEDGE と Fenced Frames の増加は 11 月 9 日開始予定です。詳しくは、[プライバシーサンドボックスの関連性と測定のオリジントライアルの 5% 引き上げ](/blog/privacy-sandbox-origin-trial-increase/)に関するブログ記事をご覧ください。
 
@@ -69,8 +67,7 @@ authors:
    <th>備考</th>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>    </td>
+   <td><a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a></td>
    <td>安定版で利用可能、10 月 26 日から 5% に増加。</td>
   </tr>
   <tr>
@@ -86,13 +83,12 @@ authors:
    <td>安定版で利用可能、11 月 9 日から 5% に増加。</td>
   </tr>
   <tr>
-   <td>
-<a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>    </td>
+   <td><a href="/docs/privacy-sandbox/shared-storage/">共有ストレージ</a></td>
    <td>現在、M105+ Canary、Dev、およびベータ版でのみ利用可能。</td>
   </tr>
 </table>
 
-#### October 2022
+#### 2022 年 10 月
 
 - オリジントライアルの期間が[Chrome 110 まで延長](https://groups.google.com/a/chromium.org/g/blink-dev/c/xm9EvnaVBj8)されました。[Chrome のオリジントライアルを始める](/docs/web-platform/origin-trials/#renew)では、オリジントライアルの登録を更新する方法について説明されています。これには、参加しているオリジンへの新しいトークンの提供が含まれます。これは、他のオリジントライアルの延長と同じプロセスです。
 
@@ -100,7 +96,7 @@ authors:
 
 [プライバシーサンドボックスの全体的なタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)は変更されていません。
 
-APIs included in the trial:
+トライアルに含まれる API:
 
 <table class="with-heading-tint fixed-table width-full">
   <thead>
@@ -111,8 +107,7 @@ APIs included in the trial:
   </thead>
   <tbody>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a></td>
       <td>
 <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
@@ -131,14 +126,13 @@ APIs included in the trial:
       <td>オリジントライアルの使用方法については、FLEDGE ガイドをご覧ください。</td>
     </tr>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/shared-storage/">Shared Storage</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/shared-storage/">共有ストレージ</a></td>
       <td>現在、M105+ Canary、Dev、およびベータ版でのみ利用可能。</td>
     </tr>
   </tbody>
 </table>
 
-#### August 2022
+#### 2022 年 8 月
 
 - オリジントライアルは、[Chrome Stable 104 デスクトップ版の最大 1% のユーザー](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ)に提供されます。
 
@@ -148,7 +142,7 @@ APIs included in the trial:
 
 - これらの API は、iOS Chrome では使用できません。
 
-#### May 2022
+#### 2022 年 5 月
 
 オリジントライアルは、[Chrome 102 ベータ版の最大 50% のユーザー](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/WBPqGvscAgAJ)に提供されます。このトライアルには以下の API が含まれます。
 
@@ -161,8 +155,7 @@ APIs included in the trial:
   </thead>
   <tbody>
     <tr>
-      <td> <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">Attribution Reporting</a>
-</td>
+      <td><a href="/docs/privacy-sandbox/attribution-reporting-experiment/">アトリビューション レポート</a></td>
       <td>
 <a href="/docs/privacy-sandbox/attribution-reporting-experiment/">オリジントライアル開発者ガイド</a>。</td>
     </tr>
@@ -216,7 +209,7 @@ APIs included in the trial:
 Origin-Trial: TOKEN_GOES_HERE
 ```
 
-### Configure with an iframe
+### iframe で構成する
 
 iframe 内でオリジントライアルの機能（FLEDGE の `joinAdInterestGroup()` など）を使用する場合、トークンは iframe 内に提供し、iframe のオリジンと一致させる必要があります。
 
@@ -225,7 +218,7 @@ iframe 内でオリジントライアルの機能（FLEDGE の `joinAdInterestGr
 トップレベルページに含まれるサードパーティの JavaScript のプロバイダーとしてクロスサイト JavaScript を介してオリジントライアルの機能を使用する場合は、以下を行う必要があります。
 
 - オリジントライアルに登録する際に、**Third-party matching** オプションを選択します。
-- The **Web Origin field** should be the origin of your script.
+- **Web Origin フィールド**は、スクリプトのオリジンである必要があります。
 - スクリプトからトップレベルページ（あなた自身のコンテンツではなくファーストパーティのページ）に `<meta>` タグを挿入します。例えば以下のようにします。
 
 ```js
@@ -243,7 +236,7 @@ document.querySelector('head').appendChild(otMeta);
 
 1. **フレーム**ペインまで下にスクロールします。
 2. トップレベルページの場合は **top** フレーム、埋め込みページの場合は特定の **iframe** など、トークンを設定するフレームを選択します。
-3. In the right-hand pane scroll down to the **Origin Trials** section.
+3. 右側のペインで、 **Origin Trials**セクションまで下にスクロールします。
 4. `PrivacySandboxAdsAPIs` トライアルのエントリが表示されます。
 5. このエントリを展開して、オリジントライアルと特定のトークンのステータスを確認します。
 
@@ -295,9 +288,9 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 
     - 最新の構成については、[オリジントライアルのステータス](#status)をご覧ください。
 
-- Be within the **active experiment group in Chrome**.
+- **Chrome のアクティブな実験グループ**に属していること。
 
-### User settings
+### ユーザー設定
 
 ユーザーがトライアルの資格を得るには、次にも該当する必要があります。
 
@@ -316,12 +309,12 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 ここでは以下のアプローチが推奨されます。
 
 1. 実験するすべてのコンテキストに、デフォルトでオリジントライアルトークンを含めます。
-2. Use feature detection to check for active APIs.
+2. 機能検出を使用して、アクティブな API を確認します。
 3. API がアクティブな場合（したがって、ブラウザがこの実験に適している場合）、独自の実験基準に基づいて使用するかどうかを選択します。たとえば、トラフィックの割合、サンプリング、またはその他の属性で実験するための A/B テスト インフラストラクチャが既に存在する場合は、この時点で積極的に使用する機能を決定できます。
 
 レスポンスにトークンを含めないことで、どのブラウザインスタンスもオリジントライアルに参加しないようにすることができます。たとえば、実験の独自のクォータに達した場合、またはトライアル中に問題に対処する必要がある場合、トークンを含めないことで、実験的な機能がページで使用可能にならない、またはアクティブにならないことが保証されます。
 
-## Renew your token
+## トークンを更新する
 
 オリジントライアルトークンの有効期限は、発行日から 6 週間です（トライアルが終了した場合は、これより早く期限切れとなります）。
 
@@ -331,7 +324,7 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 
 {% Aside 'caution'%} 10 月末にトークンを更新すると、12 月初旬までしか使えません。年末にかけてコードがフリーズする場合は、更新されたトークンをデプロイできるようにするか、その期間中はオリジントライアルへの参加を一時停止するように計画する必要があります。 {% endAside %}
 
-## Test locally {: #test-locally}
+## ローカルでテストする {: #test-locally}
 
 ローカル開発者テストに関する具体的なガイドについては、以下をご覧ください。
 
