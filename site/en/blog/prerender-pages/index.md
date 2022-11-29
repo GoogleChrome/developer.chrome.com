@@ -254,9 +254,11 @@ As you measure the business impact of prerendering pages for instant navigations
 
 In addition to measuring the impact of pages that are visited after a prerender, it is also important to measure pages that are prerendered and _not_ subsequently visited. This could imply you are prerendering too much, and using up valuable resources of the user for little benefit.
 
-This is measured by firing an analytics event when speculation rules are inserted. You can then compare the number of these events, to the actual prerender page views. Or alternatively fire another event (`prerender-activated`) on activation if that makes it easier to compare.
+This can be measured by firing an analytics event when speculation rules are inserted—after checking the browser supports prerendering using `HTMLScriptElement.supports('speculationrules'))`—to indicate that prerender was requested. (Note that just because a prerender was requested, does not indicate that a prerender was started or completed as, as noted previously a prerender is a hint to the browser and it may choose not to prerender pages on user settings, current memory usage, or other heuristics.)
 
-The "successful hit rate" can then be calculated by looking at the difference between these two figures. For pages where you are using the Speculation Rules API to prerender the pages, you can adjust the rules appropriately to ensure you keep a high hit rate to maintain the balance between using up the users resources to help them, versus using it needlessly.
+You can then compare the number of these events, to the actual prerender page views. Or alternatively fire another event on activation if that makes it easier to compare.
+
+The "successful hit rate" can then be approximated by looking at the difference between these two figures. For pages where you are using the Speculation Rules API to prerender the pages, you can adjust the rules appropriately to ensure you keep a high hit rate to maintain the balance between using up the users resources to help them, versus using it needlessly.
 
 Be aware that some prerendering may be taking place due to the address bar prerendering and not just your speculation rules. You can check the `document.referrer` (which will be blank for address bar navigation including prerendered address bar navigations) if you wish to differentiate these.
 
