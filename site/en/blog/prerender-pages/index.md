@@ -6,7 +6,7 @@ description: |
  The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108
 authors:
  - tunetheweb
-date: 2022-11-28
+date: 2022-11-29
 #updated: 2022-11-28
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
@@ -83,8 +83,8 @@ These predictors are also what drive the address bar suggested options you may h
 
 Chrome will continually update its predictors based on your typing and selections.
 
-- For a 50% confidence level (shown in amber), Chrome proactively preconnects to the domain, but does not prerender the page.
-- For a 80% confidence level (shown in green), Chrome will prerender the URL.
+- For a greater than 50% confidence level (shown in amber), Chrome proactively preconnects to the domain, but does not prerender the page.
+- For a greater than 80% confidence level (shown in green), Chrome will prerender the URL.
 
 ### Using the Speculation Rules API to prerender pages
 
@@ -171,15 +171,24 @@ If you absolutely do not want a particular page to be prerendered, this is the b
 
 The `document.prerendering` API will return `true` while the page is prerendering. This can be used by pages to prevent—or delay—certain activities during the prerender until the page is actually activated.
 
-When the page is activated by the user viewing the page, the `prerenderingchange` event will be dispatched on the `document`, which can then be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
-
 Once a prerendered document is activated, `PerformanceNavigationTiming`'s `activationStart` will also be set to a non-zero time representing the time between when the prerender was started and the document was actually activated.
+
+You can have a function to check for _prendering_ and _prerendered_ pages like the following:
+
+```js
+function pagePrerendered() {
+  return document.prerendering || self.performance?.getEntriesByType?.call(
+      performance, 'navigation')[0]?.activationStart > 0;
+}
+```
 
 The easiest way to see if a page was prerendered is to open DevTools after the prerender has happened, and type `performance.getEntriesByType('navigation')[0].activationStart` in the console. If a non-zero value is returned, you know the page was prerendered:
 
 <figure>
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/C3pNnuCo3i4zHgbLWEo0.png", alt="Console in Chrome DevTools showing a positive activationStart indicating the page was prerendered", width="400", height="98.5" %}
 </figure>
+
+When the page is activated by the user viewing the page, the `prerenderingchange` event will be dispatched on the `document`, which can then be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
 
 Using these APIs, front-end JavaScript can detect and act upon prerendered pages appropriately.
 
@@ -228,16 +237,11 @@ From version 3.1.0, the [`web-vitals` library](https://github.com/GoogleChrome/w
 
 ### Measuring prerenders
 
-Whether a page is prerendered can be seen with a non-zero `activationStart` entry of [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming), supplemented with changes for some navigation currently not reported by that. This can then be logged using a Custom Dimension, or similar when logging the page views:
+Whether a page is prerendered can be seen with a non-zero `activationStart` entry of [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming), supplemented with changes for some navigation currently not reported by that. This can then be logged using a Custom Dimension, or similar when logging the page views, for example using the `pagePrerendered` function above:
 
 ```js
 // Set Custom Dimension for Prerender status
-const prerendered =
-    self.performance &&
-    performance.getEntriesByType &&
-    performance.getEntriesByType('navigation')[0] &&
-    performance.getEntriesByType('navigation')[0].activationStart > 0;
-gtag('set', {'dimension1': prerendered});
+gtag('set', { 'dimension1': pagePrerendered() });
 // Initialise GA - including sending page view by default
 gtag('config', 'UA-12345678-1');
 ```
