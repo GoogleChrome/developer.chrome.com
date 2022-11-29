@@ -18,7 +18,8 @@ sessions:
       kinds of animations easy and customisable.
     topics:
       - Performance
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Web Developer Tools
     time: null
     type: speaker
@@ -32,7 +33,8 @@ sessions:
       between sessions. Jhey will also be present at the event in person to
       meet with you.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null

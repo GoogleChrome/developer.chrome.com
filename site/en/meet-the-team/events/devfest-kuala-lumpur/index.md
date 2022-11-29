@@ -6,7 +6,7 @@ summary: >-
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
 location: Kuala Lumpur, Malaysia
 date: 2022-12-03
-externalUrl: https://gdg.community.dev/events/details/google-gdg-singapore-presents-devfest-singapore-2022/
+externalUrl: https://gdg.community.dev/events/details/google-gdg-kuala-lumpur-presents-devfest-2022-kuala-lumpur/
 sessions:
   - speaker: jecelynyeen
     title: How browser automation works?

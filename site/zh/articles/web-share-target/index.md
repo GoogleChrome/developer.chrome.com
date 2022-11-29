@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: 使用 Web Share Target API 接收共享数据
 subhead: Web Share Target API 让在移动设备和桌面上分享变得更简单
 authors:
