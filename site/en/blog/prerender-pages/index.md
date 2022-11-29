@@ -206,6 +206,8 @@ if (HTMLScriptElement.supports &&
 
 You can view a demo of Speculation Rules API prerendering on [this demo page](https://prerender-demos.glitch.me/).
 
+Removing Speculation Rules will result in the prerender being cancelled but by the time this has happened resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
+
 ## Detecting and disabling prerendering
 
 Prerender is usually a positive experience for users as it allows fast page rendering—often instant. This benefits both the user, and the site owner, since prerendered pages allow a better user experience that may be difficult to achieve otherwise.
