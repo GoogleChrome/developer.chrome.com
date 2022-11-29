@@ -7,7 +7,7 @@ subhead: >
 description: >
   Deploy and manage this service to produce summary reports for the
   Attribution Reporting API or the Private Aggregation API.
-date: 2022-11-30
+date: 2022-11-29
 authors:
   - alexandrawhite
 ---
@@ -64,7 +64,7 @@ software and that data remains secured, a coordinator performs attestation.
   <p>Aggregatable reports are collected, batched, and send to the aggregation service, running on a TEE. The aggregation service environment is owned and operated by the same party collecting the data.</p>
 </figure>
 
-### Coordinator attestation of the TEE
+### Coordinator attestation of the TEE {: #coordinator }
 
 The _coordinator_ is an entity responsible for key management and aggregatable
 report accounting.
