@@ -53,10 +53,10 @@ Chromium issues: [1327206](https://crbug.com/1327206),[1327209] (https://crbug.c
 
 
 <!-- ## Step through comma-separated expressions {: #debugging } -->
-## 쉼표로 구분된 표현을 통한 {: #debugging }
+## 쉼표로 구분된 표현을 통해 다음 행으로 건너뛰기 {: #debugging }
 <!-- You can now step through comma-separated expressions during debugging. This improves the debuggability of minified code. -->
 이제 여러분은 디버깅 중에 쉼표로 구분된 표현식을 통해 다음 행으로 건너갈 수 있습니다. 이는 최소화된 코드의 디버깅 가능성을 개선할 수 있습니다.
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="쉼표로 구분된 표현을 통해 다음 행으로 진행", width="800", height="473" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4lUgUfPMhD9qxtZ7uvHV.png", alt="쉼표로 구분된 표현식을 통해 다음 행으로 진행", width="800", height="473" %}
 
 <!-- Previously, DevTools only supported stepping through semicolon-separated expressions. -->
 DevTools는 이전 버전까지는 오직 세미콜론으로 구분된 표현식을 통한 진행만을 지원했습니다.
