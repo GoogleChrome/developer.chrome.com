@@ -11,25 +11,27 @@ authors:
  - agektmr
  - samuelgoto
 date: 2022-11-09
+updated: 2022-11-28
 ---
 
-The Federated Credential Management API (FedCM) is shipping in Chrome 108 (currently on the Beta channel). When it ships in Chrome Stable at the end of November 2022, the FedCM API will work in Chrome without requiring a flag or an origin trial token.
+The [Federated Credential Management API](/docs/privacy-sandbox/fedcm/) (FedCM) is shipping in Chrome 108 (currently on the Beta channel). When it ships in Chrome Stable at the end of November 2022, the FedCM API will work in Chrome without requiring a flag or an origin trial token.
 
-Check the final API changes in the [accumulated update page](/docs/privacy-sandbox/fedcm-updates).
+FedCM is a [Privacy Sandbox API](/docs/privacy-sandbox/overview/) that provides a use-case-specific abstraction for federated identity flows on the web. FedCM exposes browser-mediated dialogs that allows users to choose accounts from identity providers to login to websites.
+
+Review the latest API changes in the [accumulated update page](/docs/privacy-sandbox/fedcm-updates).
 
 {% Aside %}
 
-If you are participating in the [FedCM origin trial](/origintrials/#/register_trial/3977804370874990593), please note that the trial is scheduled to end on November 22nd, which is slightly earlier than Chrome 108 ships.
+The [FedCM origin trial](/origintrials/#/view_trial/3977804370874990593), is
+ended on November 22nd.
 
 {% endAside %}
 
-
-Moving forward, we plan to introduce [a number of new
-features](#whats-next) based on the feedback we received from
-identity providers (IdP), relying parties (RP) and browser vendors. While we
-hope identity providers will adopt FedCM, please be aware that FedCM is still an
-API under active development and that backward incompatible changes are expected
-until Q4 2023.
+We plan to introduce [a number of new features](#whats-next) based on the
+feedback we received from identity providers (IdP), relying parties (RP) and
+browser vendors. While we hope identity providers will adopt FedCM, please be
+aware that FedCM is still an API under active development and that backward
+incompatible changes are expected until Q4 2023.
 
 To minimize the challenges of deploying backwards incompatible changes, we
 currently have two recommendations for identity providers:
@@ -56,15 +58,10 @@ As the user agent isn't able to differentiate between identity federation and
 tracking, the mitigations for the various types of abuse make the deployment of
 identity federation more difficult.
 
-[The Federated Credential Management API (FedCM)](https://fedidcg.github.io/FedCM/)
-provides a use-case-specific abstraction for federated identity flows on the
-web, by exposing a browser mediated dialog that allows users to choose accounts
-from IdPs to login to websites.
-
-FedCM is a multi-step journey to make identity on the web better, and in its
+[FedCM]https://fedidcg.github.io/FedCM) is a multi-step journey to make
+identity on the web better, and in its
 first step we are focused on reducing the impact of third-party cookie phase-out
-on federated identity (see below for a few [steps
-further](#whats-next)).
+on federated identity (see below for [what's next](#whats-next)).
 
 <figure class="screenshot">
   {% Video
@@ -76,7 +73,7 @@ further](#whats-next)).
 </figure>
 
 Chrome has been
-[experimenting with FedCM since Chrome 101](/origintrials/#/register_trial/3977804370874990593).
+[experimenting with FedCM since Chrome 101](/origintrials/#/view_trial/3977804370874990593).
 
 The
 [Google Identity Services](https://developers.google.com/identity/gsi/web/guides/overview)
@@ -89,7 +86,7 @@ backward-compatible updates to their existing library. They enabled FedCM across
 origin trials. Learn more about how they are
 [planning to remove their dependence on third-party cookies](https://developers.google.com/identity/gsi/web/guides/supported-browsers#third-party_cookies).
 
-We are also excited to find a lot of common ground with Mozilla, who have been
+We're excited to find a lot of common ground with Mozilla, who have been
 actively engaged in [design
 discussions](https://github.com/fedidcg/FedCM/issues) and
 [started prototyping FedCM in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066).
@@ -174,10 +171,9 @@ We are working to evaluate the best solution for these open questions:
 ## Resources
 
 -   Try the [FedCM demo](https://fedcm-rp-demo.glitch.me/).
--   If you are an IdP and interested to learn how to implement FedCM, read
+-   If you're an IdP interested in implementing FedCM, read
     [the developer guide](/docs/privacy-sandbox/fedcm/).
-    If you are a relying party, ask your IdP if they plan to implement FedCM.
--   We've also accumulated FedCM API updates at the
-    [Federated Credential Management API updates](/docs/privacy-sandbox/fedcm-updates/).
+    If you're an RP, ask your IdP if they plan to implement FedCM.
+-   Review the [FedCM API updates](/docs/privacy-sandbox/fedcm-updates/).
 -   If you have feature requests, feedback or issues, file them against [the
     FedCM public repository on GitHub](https://github.com/fedidcg/FedCM/).

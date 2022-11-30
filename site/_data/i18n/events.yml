@@ -51,3 +51,9 @@ load_more_error:
 
 load_more_error_link:
     en: "raising a bug"
+
+meet_the_team_card:
+  tag:
+    en: Events
+  cta:
+    en: See all events
