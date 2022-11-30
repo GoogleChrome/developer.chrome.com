@@ -85,7 +85,7 @@ Check this page for any updates and for more specific dates as these milestones 
     </td>
     <td>
       <ul>
-        <li>Manifest V2 enterprise policy expires. This means Chrome will stop running Manifest V2 extensions, even ones installed using `ExtensionInstallForcelist`.</li>
+        <li>Manifest V2 enterprise policy expires. This means Chrome will stop running Manifest V2 extensions, even ones installed using <code>ExtensionInstallForcelist</code>.</li>
       </ul>
     </td>
   </tr>
