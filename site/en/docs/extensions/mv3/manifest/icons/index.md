@@ -16,7 +16,7 @@ can, however, be in any raster format supported by Blink, including BMP, GIF, IC
 
 {% Aside 'caution' %}
 
-SVG files are not supported.
+WebP and SVG files are not supported.
 
 {% endAside %}
 
