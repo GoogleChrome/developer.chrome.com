@@ -4,6 +4,7 @@ const SNAPSHOTS = [
   '/en/page-types/doc-post/index.html',
   '/en/page-types/error/index.html',
   '/en/page-types/events/index.html',
+  '/en/page-types/generic-reference-landing/index.html',
   '/en/test-post/index.html',
 ];
 
