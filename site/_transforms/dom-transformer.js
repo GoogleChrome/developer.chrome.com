@@ -2,7 +2,6 @@ const cheerio = require('cheerio');
 const {locales} = require('../_data/site.json');
 const {prettyUrls} = require('./pretty-urls');
 const {tables} = require('./tables');
-const {processInlineJs} = require('./process-inline-js');
 
 /**
  * @param {string} content
@@ -33,7 +32,6 @@ const domTransformer = async (content, outputPath) => {
   // These transforms mutate the cheerio object.
   prettyUrls($, outputPath, locale);
   tables($);
-  await processInlineJs($);
 
   // Return the final html.
   return $.html();

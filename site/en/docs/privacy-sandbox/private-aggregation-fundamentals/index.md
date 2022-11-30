@@ -24,7 +24,7 @@ Before reading this article, it will be helpful to familiarize yourself with key
 *   An [_aggregation key_](#aggregation-key) (also known as a bucket) is a predetermined collection of data points. For example, you may want to collect a bucket of location data where the browser reports the country name. An aggregation key may contain more than one dimension (for example, country and ID of your content widget).
 *   An [_aggregatable value_](#aggregatable-value) is an individual data point collected into an aggregation key. In the example where the key is `country`, the value may be `Morocco`.
 *   _Aggregatable reports_ are generated and encrypted within a browser. For the Private Aggregation API, this contains data about a single event.
-*   The _Aggregation Service_ processes data from aggregatable reports to create a summary report.
+*   The [_aggregation service_](/docs/privacy-sandbox/aggregation-service) processes data from aggregatable reports to create a summary report.
 *   A _summary report_ is the final output of the aggregation service, and contains noisy aggregated user data and detailed conversion data.
 *   A _[worklet](https://developer.mozilla.org/docs/Web/API/Worklet)_ is a piece of infrastructure which allows you to run specific JavaScript functions and return information back to the requester. Within a worklet, you can execute JavaScript but you cannot interact or communicate with the outside page.
 
@@ -32,7 +32,9 @@ Before reading this article, it will be helpful to familiarize yourself with key
 
 When you call the Private Aggregation API with an aggregation key and an aggregatable value, the browser generates an aggregatable report. The reports are sent to your server that batches the reports.  The batched reports are processed later by the Aggregation Service, and a summary report is generated. 
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="a diagram that shows how the data flows from the client, to the collector, to the aggregation service to generate a summary report", width="800", height="211" %}
+<figure class="screenshot">
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/NqNZ51sVCASKNyNbYoHv.png", alt="Data flows from the client to the collector, then to the aggregation service to generate a summary report", width="800", height="211" %}
+</figure>
 
 1. When you call the Private Aggregation API, the client (browser) generates and sends the aggregatable report to your server to be collected.
 2. Your server collects the reports from the clients and batches them to be sent to the Aggregation Service.
@@ -46,11 +48,12 @@ The workflow described in this section is similar to the [Attribution Reporting 
 
 ## Aggregation key
 
-An _aggregation key_ (“key” for short) represents the bucket where the aggregatable values will be accumulated. One or more dimensions can be encoded into the key. A dimension represents some aspect that you want to gain more insight on, such as the age group of users or the impression count of an ad campaign. 
+An _aggregation key_ ("key" for short) represents the bucket where the aggregatable values will be accumulated. One or more dimensions can be encoded into the key. A dimension represents some aspect that you want to gain more insight on, such as the age group of users or the impression count of an ad campaign. 
 
-For example, you may have a widget that is embedded across multiple sites and want to analyze the country of users who have seen your widget. You are looking to answer questions such as “How many of the users who have seen my widget are from Country X?” To report on this question, you can set up an aggregation key that encodes two dimensions: widget ID and country ID. 
+For example, you may have a widget that is embedded across multiple sites and want to analyze the country of users who have seen your widget. You are looking to answer questions such as "How many of the users who have seen my widget are from Country X?" To report on this question, you can set up an aggregation key that encodes two dimensions: widget ID and country ID. 
 
-The key supplied to the Private Aggregation API is a [BigInt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt), which consists of multiple dimensions. In this example, the dimensions are the widget ID and country ID. Let's say that the widget ID can be up to 4 digits long such as `1234`, and each country is mapped to a number in alphabetical order such as Afghanistan is `1`, France is `61`, and Zimbabwe is '195'.  Therefore, the aggregatable key would be 7 digits long, where the first 4 characters are reserved for the `WidgetID` and the last 3 characters are reserved for the `CountryID`. 
+The key supplied to the Private Aggregation API is a
+[BigInt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/BigInt), which consists of multiple dimensions. In this example, the dimensions are the widget ID and country ID. Let's say that the widget ID can be up to 4 digits long such as `1234`, and each country is mapped to a number in alphabetical order such as Afghanistan is `1`, France is `61`, and Zimbabwe is '195'.  Therefore, the aggregatable key would be 7 digits long, where the first 4 characters are reserved for the `WidgetID` and the last 3 characters are reserved for the `CountryID`. 
 
 Let's say the key represents the count of users from France (country ID `061`) who have seen the widget ID `3276`, The aggregation key is `327061`. 
 
@@ -82,14 +85,14 @@ The aggregation key can also be generated with a hashing mechanism, such as SHA-
 Some important web APIs that are required to generate a hash, like [`crypto`](https://developer.mozilla.org/docs/Web/API/Web_Crypto_API), are not currently available within Shared Storage worklets or FLEDGE worklets. As these worklets cannot communicate outside of itself, if you want to create hashes, you need to pre-generate one or more hashes outside the worklet then pass it in.
 
 {% Aside %}
-Although the concepts are similar, the key is constructed differently for the Private Aggregation API than the Attribution Reporting API.  For Attribution Reporting, the key is generated at separate times, during the impression and conversion.  For Private Aggregation, the complete key is specified at the same time, in the JavaScript call.
+Although the concepts are similar, the key is constructed differently for the Private Aggregation API than the Attribution Reporting API. For Private Aggregation, the complete key is specified at the one time, in the JavaScript call.
 {% endAside %}
 
 ## Aggregatable value
 
 Aggregatable values are summed per key across many users to generate aggregated insights in the form of summary values in summary reports. 
 
-Let's return to the example question posed above: “How many of the users who have seen my widget are from France?” The answer to this question will look something like “Approximately 4881 users who have seen my Widget ID 3276 are from France.”  The _aggregatable value_ is 1 for each user, and “4881 users” is the _aggregated value_ that is the sum of all _aggregatable values_ for that _aggregation key_. 
+Let's return to the example question posed above: "How many of the users who have seen my widget are from France?" The answer to this question will look something like "Approximately 4881 users who have seen my Widget ID 3276 are from France."  The _aggregatable value_ is 1 for each user, and “4881 users” is the _aggregated value_ that is the sum of all _aggregatable values_ for that _aggregation key_. 
 
 <table>
   <tr>
@@ -116,7 +119,7 @@ Let's return to the example question posed above: “How many of the users who h
   </tr>
 </table>
 
-For this example, we increment the value by 1 for each user who sees the widget.  In practice, the aggregatable value can be scaled to improve [signal-to-noise ratio](#noise-and-scaling).
+For this example, we increment the value by 1 for each user who sees the widget. In practice, the aggregatable value can be scaled to improve [signal-to-noise ratio](#noise-and-scaling).
 
 ### Contribution budget
 
@@ -130,7 +133,7 @@ To learn more about contribution budgets, see the [explainer](https://github.com
 
 ## Aggregatable reports
 
-Once the user invokes the Private Aggregation API, the browser generates aggregatable reports to be processed by the Aggregation Service at a later point in time to generate summary reports. An aggregatable report is JSON-formatted and contains an encrypted list of contributions, each one being an `{aggregation key, aggregatable value}` pair. Aggregatable reports are sent with a random delay up to one hour. 
+Once the user invokes the Private Aggregation API, the browser generates aggregatable reports to be processed by the Aggregation Service at a later point in time to generate [summary reports](/docs/privacy-sandbox/summary-reports/). An aggregatable report is JSON-formatted and contains an encrypted list of contributions, each one being an `{aggregation key, aggregatable value}` pair. Aggregatable reports are sent with a random delay up to one hour. 
 
 The contributions are encrypted and not readable outside of Aggregation Service. The Aggregation Service decrypts the reports and generates a summary report. The encryption key for the browser and the decryption key for the Aggregation Service are issued by the coordinator, which acts as the key management service. The coordinator keeps a list of binary hashes of the service image to verify that the caller is allowed to receive the decryption key. 
 

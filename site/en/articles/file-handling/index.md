@@ -36,7 +36,7 @@ Examples of sites that may use this API include:
 The File Handling API per se cannot be polyfilled. The functionality of opening files with a web
 app, however, can be achieved through two other means:
 
-- The [Web Share Target API](/web-share-target/) lets developers specify their app as a share target
+- The [Web Share Target API](/articles/web-share-target/) lets developers specify their app as a share target
   so files can be opened from the operating system's share sheet.
 - The [File System Access API](https://web.dev/file-system-access/) can be integrated with file drag and drop, so
   developers can handle dropped files in the already opened app.

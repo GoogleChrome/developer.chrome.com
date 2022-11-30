@@ -71,14 +71,16 @@
           title: i18n.docs.privacy-sandbox.attribution-reporting-system
         - url: /docs/privacy-sandbox/attribution-reporting-experiment
           title: i18n.docs.privacy-sandbox.attribution-reporting-experiment
+        - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
+          title: i18n.docs.privacy-sandbox.attribution-reporting-handbook
         - url: /docs/privacy-sandbox/attribution-reporting-updates
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
-        - url: /docs/privacy-sandbox/attribution-reporting/summary-reports
-          title: i18n.docs.privacy-sandbox.attribution-reporting-summary
     - title: i18n.docs.privacy-sandbox.measure-cross-site
       sections:
         - url: /docs/privacy-sandbox/private-aggregation
         - url: /docs/privacy-sandbox/private-aggregation-fundamentals
+    - url: /docs/privacy-sandbox/aggregation-service
+    - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
     - url: /docs/privacy-sandbox/trust-tokens
