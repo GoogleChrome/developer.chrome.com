@@ -6,8 +6,11 @@ banner:
   action: 'Got it'
   type: 'info'
 ---
-
 {% extends 'layouts/base.njk' %}
+
+{% block css %}
+{% InlineCss '/css/styleguide-main.css' %}
+{% endblock %}
 
 {% block content %}
 <article class="stack wrapper type">
@@ -566,10 +569,6 @@ line-height: 160%;
 </article>
 {% endblock %}
 
-{% block chromescss %}
-  <link rel="stylesheet" href="/css/styleguide-main.css">
-{% endblock %}
-
-{% block chromescripts %}
+{% block scripts %}
   <script type="module" src="{{ helpers.hashForProd('/js/styleguide.js') }}"></script>
 {% endblock %}
