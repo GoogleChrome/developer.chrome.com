@@ -23,6 +23,7 @@ web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-incl
 - `actionText`— a text of the CTA at the bottom of the card.
 
 To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCard }}`{% endraw %} shortcode.
+
 {% raw %}
 
 ```md
@@ -44,6 +45,7 @@ To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCa
 
 {% from 'macros/cards/featured-card.njk' import featuredCard with context %}
 
+<!-- lint disable no-unescaped-template-tags -->
 {{ featuredCard({
   title: '#100CoolWebMoments',
   description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
@@ -91,6 +93,7 @@ To add an **Featured Blog Card** to the page, you can use the {% raw %}`{{ featu
 {% from 'macros/cards/featured-blog-card.njk' import featuredBlogCard with context %}
 {% set post = helpers.findByUrl(collections.all, '/blog/insider-april-2022/', locale) %}
 
+<!-- lint disable no-unescaped-template-tags -->
 {{ featuredBlogCard(
   post, {
     icon: 'star',
@@ -133,6 +136,7 @@ A featured section is a layout of cards on the same plane. The code below is the
 
 {% from 'macros/featured-section.njk' import featuredSection with context %}
 
+<!-- lint disable no-unescaped-template-tags -->
 {{ featuredSection({
   cards: [
     {
