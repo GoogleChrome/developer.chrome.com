@@ -19,35 +19,37 @@ When a capability is added to the platform or a bug is addressed, it will be rem
 
 This section lists major features that will be added to the Manifest V3 platform in order to aid developers migrating from Manifest V2. Timelines included here are best effort estimates, not hard commitments.
 
-### Userscript managers support
+### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
-**Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
+**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome provides extensions with a way to supply credentials for authentication requests in Manifest V3.
 
-**Estimated timeline:** Canary support around October, 2022.
+**Estimated timeline:** Scheduled for Chrome 108.
 
-### Increased quota for session storage in the Storage API
-
-**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
-
-**Estimated timeline**: Targeting Canary support around October, 2022.
-
-### Offscreen Documents API
+### Offscreen Documents API {: #offscreen-documents-api }
 
 **Summary:** Offscreen documents are a new capability that will allow Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions will be able to use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
 
-**Estimated timeline:** Targeting Canary support around October, 2022.
+**Estimated timeline:** Scheduled for Chrome 109.
 
-**Tracking issue:** [1339382][]
+### Userscript managers support {: #userscript-managers-support }
 
-### webRequest.onAuthRequired events
+**Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
-**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome will provide extensions with a way to supply credentials for authentication requests in Manifest V3.
+**Estimated timeline:** Targeting Canary support around December, 2022.
 
-**Estimated timeline:** Targeting Canary support around October, 2022.
+### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
-**Tracking issue:** [1135492][]
+**Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
+
+**Estimated timeline**: Targeting Canary support around November, 2022.
 
 ## Bugs {: #bugs }
+
+### Service workers are not started in response to webRequest events {: #webrequest-in-sw }
+
+**Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
+
+**Shipped**: Chrome 107.
 
 ### Sandboxed page CSP can't be customized {: #sandboxed-csp }
 
@@ -56,14 +58,6 @@ This section lists major features that will be added to the Manifest V3 platform
 **Estimated timeline:** Targeting Canary support before January, 2023.
 
 **Tracking issue:** [1247690][]
-
-### Service workers are not started in response to webRequest events
-
-**Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
-
-**Estimated timeline**: Targeting Canary support before October, 2022.
-
-**Tracking issue**: [1024211][]
 
 [1024211]: https://bugs.chromium.org/p/chromium/issues/detail?id=1024211
 [1135492]: https://bugs.chromium.org/p/chromium/issues/detail?id=1135492
