@@ -151,21 +151,29 @@ This will align the behavior of Chrome on Android with that of Chrome on iOS, iP
 
 Thanks to this change, authors can know which behavior will be used, no matter which OS Chrome is running on. Furthermore it allows for stable viewport-relative units: showing or hiding the OSK does not affect these units.
 
+{% Aside %}
+These changes do not affect [WebView](/docs/multidevice/webview/)
+{% endAside %}
+
 ## Opting in to a different behavior
 
 If you want your website to use the pre-108 resize behavior, fear not. Also shipping in Chrome 108 is an extension to the [viewport meta tag](https://web.dev/viewport/).
 
 Through [the `interactive-widget` key](https://drafts.csswg.org/css-viewport/#interactive-widget-section), you can tell Chrome which resize behavior you want.
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=overlays-content">
-```
-
 Accepted values for `interactive-widget` are:
 
 - `resizes-visual`: Resize only the Visual Viewport but not the Layout Viewport.
 - `resizes-content`: Resize both the Visual Viewport and Layout Viewport.
 - `overlays-content`: Do not resize any viewport.
+
+To opt back in to the “old” Chrome on Android behavior, set the viewport meta tag to this:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+```
+
+If you don’t include `interactive-widget` in the viewport meta tag, Chrome will use the default behavior, which is `resizes-visual`.
 
 Visualized, the settings have this effect on the various viewports:
 

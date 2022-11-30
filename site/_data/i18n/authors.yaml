@@ -1238,3 +1238,37 @@ andrewcomminos:
     pt: Nossas últimas notícias, atualizações e histórias por Andrew Comminos.
     ru: Последние новости и статьи от Andrew Comminos.
     zh: Andrew Comminos 撰写我们的最新资讯、动态和故事。
+alexshalamov:
+  title:
+    en: Alex Shalamov
+    es: Alex Shalamov
+    ja: Alex Shalamov
+    ko: Alex Shalamov
+    pt: Alex Shalamov
+    ru: Alex Shalamov
+    zh: Alex Shalamov
+  description:
+    en: Alex is an Engineer at Intel
+    es: Alex es un ingeniero en Intel
+    ja: Alex は Intel のエンジニアです
+    ko: Alex는 Intel의 엔지니어입니다.
+    pt: Alex é engenheiro na Intel
+    ru: Алекс — инженер в компании Intel
+    zh: Alex 是 Intel 的一名工程师
+pozdnyakov:
+  title:
+    en: Mikhail Pozdnyakov
+    es: Mikhail Pozdnyakov
+    ja: Mikhail Pozdnyakov
+    ko: Mikhail Pozdnyakov
+    pt: Mikhail Pozdnyakov
+    ru: Mikhail Pozdnyakov
+    zh: Mikhail Pozdnyakov
+  description:
+    en: Mikhail is an Engineer at Intel
+    es: Mikhail es un ingeniero en Intel
+    ja: Mikhail は Intel のエンジニアです
+    ko: Mikhail은 Intel의 엔지니어입니다.
+    pt: Mikhail é engenheiro na Intel
+    ru: Михаил — инженер в компании Intel
+    zh: Mikhail 是 Intel 的一名工程师
