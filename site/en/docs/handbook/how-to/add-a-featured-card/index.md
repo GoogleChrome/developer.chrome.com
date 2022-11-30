@@ -49,7 +49,7 @@ To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCa
   description: 'Take a stroll down memory lane and celebrate #100CoolwebMoments since Chrome’s first release lorem ipsum.',
   imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
   imgAlt: '#100CoolWebMoments',
-  actionUrl: '/blog/insider-april-2022/',
+  actionUrl: '/blog/100-web-moments/',
   actionText: 'Discover the timeline'
 }) }}
 
@@ -136,7 +136,7 @@ A featured section is a layout of cards on the same plane. The code below is the
 {{ featuredSection({
   cards: [
     {
-      postUrl: '/blog/insider-dg-2022fdgdfgdfg/',
+      postUrl: '/blog/insider-dg-2022/',
       actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover'
     },
@@ -147,9 +147,9 @@ A featured section is a layout of cards on the same plane. The code below is the
         imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
         imgAlt: '#100CoolWebMoments'
       },
-      actionUrl: '/blog/insider-april-2022/',
+      actionUrl: '/blog/100-web-moments/',
       actionText: 'Discover the timeline'
     }
   ],
-  utilities: 'grid-cols-1 lg:grid-cols-2' 
+  utilities: 'grid-cols-1 lg:grid-cols-2'
 }) }}
