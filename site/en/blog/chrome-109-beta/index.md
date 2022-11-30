@@ -14,7 +14,7 @@ tags:
   - chrome-109
 ---
 
-Unless otherwise noted, changes described below apply to the newest Chrome beta channel release for Android, ChromeOS, Linux, macOS, and Windows. Learn more about the features listed here through the provided links or from the list on ChromeStatus.com. Chrome 109 is beta as of  December 1, 2022. You can download the latest on [Google.com](https://www.google.com/chrome/beta/) for desktop or on Google Play Store on Android.
+Unless otherwise noted, changes described below apply to the newest Chrome beta channel release for Android, ChromeOS, Linux, macOS, and Windows. Learn more about the features listed here through the provided links or from the list on ChromeStatus.com. Chrome 109 is beta as of December 1, 2022. You can download the latest on [Google.com](https://www.google.com/chrome/beta/) for desktop or on Google Play Store on Android.
 
 ## CSS
 
@@ -22,7 +22,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 Variable fonts provide users the opportunity to choose how heavy or slanted or wide the typeface should be, using the `font-weight`, `font-style`, and `font-stretch`' descriptors inside the `@font-face` rule. The CSS Working Group added a new value of `auto` for these descriptors, which is now the initial value. This value is implemented in 109 to match the new specification.
 
-### CSS 'lh' Length Unit
+### CSS `lh` Length Unit
 
 The `lh` CSS [`<length>`](https://developer.mozilla.org/docs/Web/CSS/length) unit is equivalent to the computed value of the line-height property on the element on which it is used. This allows a `<textarea>` to be given a height equivalent to the number of lines of text expected.
 
@@ -32,7 +32,7 @@ The `hyphenate-limit-chars` property specifies the minimum number of characters 
 
 ### Snap border, outline and column-rule widths before layout
 
-Currently Blink snaps the border widths at paint time. This can cause a visible 1px gap between a parent element's border and a child's background when the border is rounded down during paint since the snapping floors the value but the layout rounded it up to calculate the child’s position (for example, border-width is set to 10.75 pixels, rounded to 10px at paint time, but 11 at layout time). By making this change Blink will behave like Gecko and WebKit, improving interoperability.
+Currently Blink snaps the border widths at paint time. This can cause a visible 1px gap between a parent element's border and a child's background when the border is rounded down during paint, since the snapping floors the value but the layout rounded it up to calculate the child’s position (for example, border-width is set to 10.75 pixels, rounded to 10px at paint time, but 11 at layout time). By making this change Blink will behave like Gecko and WebKit, improving interoperability.
 
 ## MathML
 
@@ -55,12 +55,11 @@ The `MathMLElement` interface provides a convenient way to manipulate MathML in 
 
 ### `MediaTrackSupportedConstraints.suppressLocalAudioPlayback`
 
-It is common for colleagues to gather in a room so that one of them would present from their laptop to an in-room conferencing solution with a dedicated monitor and speakers. The presenter will typically mute their own laptop, and use the external speakers which are often louder; this also ensures audio is in sync with video. The [`suppressLocalAudioPlayback`](/blog/screen-sharing-improvements-in-chrome-109/#suppress-local-audio-playback) audio constraint saves time here. When set to `true`, it indicates that the browser should stop relaying audio to the local speakers when capture starts. 
+It is common for colleagues to gather in a room so that one of them can present from their laptop to an in-room conferencing solution with a dedicated monitor and speakers. The presenter will typically mute their own laptop, and use the external speakers which are often louder; this also ensures audio is in sync with video. The [`suppressLocalAudioPlayback`](/blog/screen-sharing-improvements-in-chrome-109/#suppress-local-audio-playback) audio constraint saves time here. When set to `true`, it indicates that the browser should stop relaying audio to the local speakers when capture starts. 
 
 ### HTTP response status code in the Resource Timing API
 
 Adds a field to `PerfomanceResourceTiming` to indicate the HTTP response status when the resource was fetched. This provides a straightforward way to tell if a resource failed loading for developers using the Resource Timing API. 
-
 
 ## Origin Private File System (OPFS) on Android
 
@@ -72,7 +71,7 @@ Previously Chrome launched same-origin prerendering triggered by the speculation
 
 ### WebTransport BYOB readers
 
-Support BYOB (bring-your-own-buffer) readers for Web Transport to allow reading into a developer-supplied buffer. BYOB readers can minimize buffer copies, and reduce memory allocations. 
+Support BYOB (bring-your-own-buffer) readers for Web Transport to allow reading into a developer-supplied buffer. BYOB readers can minimize buffer copies and reduce memory allocations. 
 
 ## Origin trials in progress
 
@@ -92,7 +91,7 @@ The feature sends a CORS preflight request ahead of any private network requests
 
 ## Deprecations and removals
 
-This version of Chrome introduces the deprecations and removals listed below. Visit ChromeStatus.com for lists of planned deprecations, current deprecations and previous removals.
+This version of Chrome introduces the deprecations and removals listed below. Visit [ChromeStatus.com](https://chromestatus.com) for lists of planned deprecations, current deprecations and previous removals.
 
 ### Deprecations
 
