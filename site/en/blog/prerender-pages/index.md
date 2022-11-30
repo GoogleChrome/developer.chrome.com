@@ -6,8 +6,8 @@ description: |
  The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108
 authors:
  - tunetheweb
-date: 2022-11-29
-#updated: 2022-11-28
+date: 2022-11-30
+#updated: 2022-11-30
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -122,7 +122,7 @@ Speculation rules can be:
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
-Multiple speculation rules can also be added to the same page. The following are functionally equivalent:
+Multiple speculation rules can also be added to the same page, and they append to the existing rules. Therefore, the following different ways of expressing this all result in both `one.html` and `two.html` prerendering:
 
 **List of URLs:**
 
@@ -183,7 +183,7 @@ Multiple speculation rules can also be added to the same page. The following are
 </script>
 ```
 
-Below is a simple example of adding a `prerender` speculation rule:
+Below is a simple example of adding a `prerender` speculation rule with JavaScript:
 
 ```js
 if (HTMLScriptElement.supports &&
