@@ -35,7 +35,7 @@ There are two key dates for the phase-out:
     Store. Developers may still push updates to existing Manifest V2 extensions, but no new Manifest
     V2 items may be submitted.
 
-*   **January 2023**: The Chrome browser will no longer run Manifest V2 extensions. Developers may
+*   **January 2024**: The Chrome browser will no longer run Manifest V2 extensions. Developers may
     no longer push updates to existing Manifest V2 extensions.
 
 As these dates draw closer, we will share more details around the Chrome version targeted for the
