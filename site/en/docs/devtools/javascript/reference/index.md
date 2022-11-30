@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-09-22
+updated: 2022-11-29
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
@@ -32,8 +32,7 @@ While the execution is paused, hover over a class or function name to preview it
 
 ## Step through code {: #stepping }
 
-Once your code is paused, step through it, one line at a time, investigating control flow and
-property values along the way.
+Once your code is paused, step through it, one expression at a time, investigating control flow and property values along the way.
 
 ### Step over line of code {: #step-over }
 
@@ -156,6 +155,42 @@ For example, suppose that you're paused on a breakpoint in both your main script
 worker script. You want to view the local and global properties for the service worker context, but
 the Sources panel is showing the main script context. By clicking on the service worker entry in the
 Threads pane, you'd be able to switch to that context.
+
+### Step through comma-separated expressions {: comma-separated }
+
+{% Aside 'gotchas' %}
+Starting from Chrome version 108, the **Debugger** can step through both semicolon-separated (`;`) and comma-separated (`,`) expressions.
+{% endAside %}
+
+Stepping through comma-separated expressions lets you debug minified code. For example, consider the following code:
+
+```js
+function foo() {}
+
+function bar() {
+  foo();
+  foo();
+  return 42;
+}
+
+bar();
+```
+
+When minified, it contains a comma-separated `foo(),foo(),42` expression:
+
+```js
+function foo(){}function bar(){return foo(),foo(),42}bar();
+```
+
+The **Debugger** steps through such expressions just the same.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4e1gHFnIkayVnoAu6OGK.png", alt="Stepping through a comma-separated expression.", width="800", height="341" %}
+
+Therefore, the stepping behavior is identical:
+
+- Between minified and authored code.
+- When using [sourcemaps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
+  In other words, when you see semicolons, you can always expect to step through them even if the actual source you're debugging is minified.
 
 ## View and edit local, closure, and global properties {: #scope }
 
@@ -340,9 +375,13 @@ As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-c
 
 To hide known third-party sources:
 
-1. Make sure the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting is enabled.
+1. Make sure the following two settings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** are enabled:
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4aIHYQjq5gxgrPF9MbkD.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="496" %}
+   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing**
+  
+   - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JOwVIMb8WzRCacSq4oeK.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="506" %}
 
 1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
@@ -390,12 +429,21 @@ To ignore a script from the **Call Stack** pane:
 
 To ignore a single script or pattern of scripts from Settings:
 
-1.  Open [Settings][3].
-2.  Go to the **Ignore List** tab.
-    {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
-3.  Click **Add pattern**.
-4.  Enter the script name or a regex pattern of script names to ignore.
-5.  Click **Add**.
+1. Open [Settings][3].
+1. Go to the **Ignore List** tab.
+1. Make sure {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Ignore Listing** is checked.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oNWiT5ZdB1FCDNE6TuXp.png", alt="Ignoring a script from Settings.", width="800", height="576" %}
+1. Under **Custom exclusion rules**, click **Add pattern**.
+1. Enter the script name or a RegEx pattern of script names to ignore.
+1. Click **Add**.
+
+For more information on checkboxes under **General exclusion rules**, see:
+
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Add content scripts to ignore list**](/docs/devtools/javascript/ignore-chrome-extension-scripts/)
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**:
+
+  - [Show ignore-listed frames](/docs/devtools/javascript/reference/#show-ignore-listed-frames)
+  - [Hide ignore-listed sources from the file tree](/docs/devtools/javascript/reference/#hide-ignore-listed)
 
 ## Run snippets of debug code from any page {: #snippets }
 
