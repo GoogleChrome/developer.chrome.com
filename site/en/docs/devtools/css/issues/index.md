@@ -71,9 +71,9 @@ The **Styles** pane lists properties in `Inherited from <element-name>` sections
 
 ### Shorthand {: #shorthand }
 
-Shorthand (concise) properties let you set multiple CSS properties at once and can make your stylesheet more readable. However, due to the short nature of such properties, you may miss a longhand (precise) property that overrides a property implied by the shorthand.
+[Shorthand (concise) properties](https://developer.mozilla.org/docs/Web/CSS/Shorthand_properties) let you set multiple CSS properties at once and can make your stylesheet more readable. However, due to the short nature of such properties, you may miss a longhand (precise) property that overrides a property implied by the shorthand.
 
-The **Styles** pane displays [shorthand properties](https://developer.mozilla.org/docs/Web/CSS/Shorthand_properties) as {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} drop-down lists that contain all the properties that are shortened.
+The **Styles** pane displays shorthand properties as {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} drop-down lists that contain all the properties that are shortened.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vzJiWOkmE0WeeZoJtdah.png", alt="The shorthand property with a drop-down list.", width="800", height="597" %}
 
@@ -142,7 +142,7 @@ In this example, Chrome calculated the following for the `<ul>` element:
 To make the **Computed** pane show *all* properties and their values, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show all**. All properties include:
 
 - [Initial values for non-inherited properties](https://developer.mozilla.org/docs/Web/CSS/inheritance) in <span style="opacity: 60%;">pale text</span>.
-- [Custom properties](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) inherited by default with a `--` prefix in regular text.
+- [Custom properties](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties)—with a `--` prefix in regular text. Such properties are inherited by default.
 
 {% Aside 'gotchas' %}
 [Overriding default inheritance](https://developer.mozilla.org/docs/Web/CSS/inheritance#overriding_inheritance_an_example) *doesn't* affect the way the **Computed** pane displays the properties: pale or not.
