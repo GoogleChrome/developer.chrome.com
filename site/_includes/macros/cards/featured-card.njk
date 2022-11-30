@@ -7,8 +7,9 @@
 {% set cardTitle = options.title or 'i18n.common.featured' | i18n(locale) %}
 {% set actionText = options.actionText %}
 {% set actionUrl = options.actionUrl %}
+{% set class = options.class or 'hairline rounded-lg width-full' %}
 
-<div class="featured-card hairline rounded-lg width-full">
+<div class="featured-card {{ class }}">
   <div class="card-title-bar color-blue-medium">
     {{ icon(cardIcon, {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">

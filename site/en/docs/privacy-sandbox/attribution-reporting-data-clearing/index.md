@@ -12,10 +12,10 @@ authors:
 ---
 
 {% Aside %} If you're not familiar with the API, head over to [Introduction to Attribution
-Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/)
+Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting/)
 before reading this post. {% endAside %}
 
-The [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-introduction/) makes it
+The [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) makes it
 possible to measure when an ad click leads to a conversion on an advertiser site, such as a sale or
 a sign-up. The API offers a privacy-preserving approach to measuring ad conversions. It doesn't rely
 on third-party cookies or mechanisms that can be used to identify individual users across sites.
@@ -24,7 +24,7 @@ generated and stored on the user's device; later, the browser sends these report
 endpoint.
 
 Sites have experimented with the Attribution Reporting API in Chrome, via an [origin
-trial](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
+trial](/docs/privacy-sandbox/attribution-reporting/#status).
 
 One of the insights
 provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and adtech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
@@ -209,6 +209,6 @@ they were scheduled to be sent soon.
 
 ## Attribution Reporting: all resources
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).
 
 {% Partial 'privacy-sandbox/ar-get-updates.njk' %}

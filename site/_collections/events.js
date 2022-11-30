@@ -13,36 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+const memoize = require('../_js/utils/memoize');
 const authorsData = require('../_data/authorsData.json');
-const {i18n} = require('../_filters/i18n');
-const {Img} = require('../_shortcodes/Img');
-const {defaultAvatarImg, chromeImg} = require('../_data/site.json');
-
-const EVENT_PLACEHOLDER =
-  'image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/5nwgD8ftJ8DREfN1QF7z.png';
-
+const {defaultAvatarImg} = require('../_data/site.json');
 const startOfDay = new Date();
 startOfDay.setHours(0, 0, 0, 0);
 
 /**
  * @returns {EventsCollectionItem[]}
  */
-const getEvents = ({collections, filter, sort, locale = 'en'}) => {
+const getEvents = memoize(({collections, locale = 'en'}) => {
   return collections
     .getFilteredByGlob(`./site/${locale}/meet-the-team/events/**/*.md`)
-    .filter(filter)
     .map(event => {
       const sessions = event.data.sessions.map(session =>
-        processSession(session, locale)
+        processSession(session)
       );
-
-      const image = Img({
-        src: event.data.image ?? EVENT_PLACEHOLDER,
-        width: 400,
-        height: 400,
-        alt: event.data.title,
-      });
 
       return {
         id: event.data.id,
@@ -53,24 +39,19 @@ const getEvents = ({collections, filter, sort, locale = 'en'}) => {
         date: event.data.date,
         isPastEvent: isPastEvent(event),
         sessions,
-        image,
+        image: event.data.image,
       };
-    })
-    .sort(sort);
-};
+    });
+});
 
 /**
  * @param {EleventyCollectionObject} collections
  * @returns {EventsCollectionItem[]}
  */
 const pastEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event),
-    sort: (a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    },
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event))
+    .sort((a, b) => b.date - a.date);
 };
 
 /**
@@ -78,21 +59,30 @@ const pastEvents = collections => {
  * @returns {EventsCollectionItem[]}
  */
 const currentEvents = collections => {
-  return getEvents({
-    collections,
-    filter: event => isPastEvent(event) === false,
-    sort: (a, b) => {
-      return new Date(a.date).getTime() - new Date(b.date).getTime();
-    },
-  });
+  return getEvents({collections})
+    .filter(event => isPastEvent(event) === false)
+    .sort((a, b) => a.date - b.date);
+};
+
+/**
+ * @param {EleventyCollectionObject} collections
+ * @returns {{locations:string[], googlers:{}[], topics:string[]}}
+ */
+const eventTags = collections => {
+  const events = getEvents({collections});
+
+  return {
+    locations: uniqueLocations(events),
+    googlers: uniqueGooglers(events),
+    topics: uniqueTopics(events),
+  };
 };
 
 /**
  * @param {String} authorHandle
- * @param {String} locale
- * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string}}
+ * @returns {{image: string, twitter: string|undefined, linkedin: string|undefined, title: string, handle:string}}
  */
-const getAuthorData = (authorHandle, locale) => {
+const getAuthorData = authorHandle => {
   if (typeof authorsData[authorHandle] === 'undefined') {
     throw new Error(`Invalid author: ${authorHandle}`);
   }
@@ -101,60 +91,78 @@ const getAuthorData = (authorHandle, locale) => {
 
   return {
     image: authorData.image ?? defaultAvatarImg,
-    title: i18n(`i18n.authors.${authorHandle}.title`, locale),
+    title: `i18n.authors.${authorHandle}.title`,
     twitter: authorData.twitter,
     linkedin: authorData.linkedin,
+    handle: authorHandle,
   };
 };
 
 /**
  * @param session
- * @param {String} locale
- * @returns {{title}|*}
+ * @returns {EventSessionCollectionItem}
  */
-const processSession = (session, locale) => {
+const processSession = session => {
   if (session.type === 'speaker') {
-    session.speaker = getAuthorData(session.speaker, locale);
-    session.image = Img({
-      src: session.speaker.image,
-      width: 40,
-      height: 40,
-      alt: session.speaker.title ?? session.title,
-      class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
-    });
+    session.speaker = getAuthorData(session.speaker);
+    session.image = session.speaker.image;
 
     return session;
   }
 
   session.participants = session.participants.map(p => {
-    return getAuthorData(p, locale);
-  });
-
-  session.title =
-    session.participants.length === 1
-      ? session.participants[0].title
-      : i18n('i18n.events.multiple_participants');
-
-  session.image = Img({
-    src:
-      session.participants.length === 1
-        ? session.participants[0].image
-        : chromeImg,
-    width: 40,
-    height: 40,
-    alt: session.title,
-    class: 'flex-shrink-none height-600 width-600 rounded-full gap-right-300',
+    return getAuthorData(p);
   });
 
   return session;
 };
 
-/**
- * @param event
- * @returns {boolean}
- */
 const isPastEvent = event => {
-  return new Date(event.date).getTime() < startOfDay.getTime();
+  return event.date < startOfDay;
 };
 
-module.exports = {currentEvents, pastEvents};
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {{}[]}
+ */
+const uniqueGooglers = events => {
+  const rawSpeakers = events
+    .map(e =>
+      e.sessions.flatMap(s => {
+        if (s.speaker) {
+          return {handle: s.speaker.handle, title: s.speaker.title};
+        }
+
+        return s.participants.map(p => ({handle: p.handle, title: p.title}));
+      })
+    )
+    .flat();
+
+  return rawSpeakers
+    .filter(
+      (s, i) => rawSpeakers.findIndex(first => s.handle === first.handle) === i
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueTopics = events => {
+  const topics = events.map(e => e.sessions.flatMap(s => s.topics)).flat();
+
+  return [...new Set(topics)].sort((a, b) => a.localeCompare(b));
+};
+
+/**
+ * @param {EventsCollectionItem[]} events
+ * @returns {string[]}
+ */
+const uniqueLocations = events => {
+  const locations = events.map(e => e.location);
+
+  return [...new Set(locations)].sort((a, b) => a.localeCompare(b));
+};
+
+module.exports = {currentEvents, pastEvents, eventTags};

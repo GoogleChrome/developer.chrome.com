@@ -44,6 +44,7 @@
 * [Recorder パネルでのマウスオーバーイベントのサポート](/ja/blog/new-in-devtools-105/#recorder-hover)
 * [Performance insight パネルに Largest Contentful Paint (LCP) を追加](/ja/blog/new-in-devtools-105/#lcp)
 * [レイアウトシフトの潜在的な主要因であるテキストのフラッシュ（FOIT、FOUT）を識別](/ja/blog/new-in-devtools-105/#foit-fout)
+* [Manifest ペインの Protocol ハンドラ](/ja/blog/new-in-devtools-105/#manifest)
 * [Elements パネルの Top layer バッジ](/ja/blog/new-in-devtools-105/#top-layer)
 * [実行時に WASM のデバッグ情報をアタッチ](/ja/blog/new-in-devtools-105/#wasm)
 * [デバッグ中のライブ編集をサポート](/ja/blog/new-in-devtools-105/#live-edit)
