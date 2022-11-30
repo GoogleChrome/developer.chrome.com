@@ -1,14 +1,14 @@
 ---
 layout: layouts/doc-post.njk
 title: 関連性と測定の統一オリジントライアル
-subhead: |2-
+subhead: >
    アトリビューション レポート、FLEDGE、
-  Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
-description: |2-
+   Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
+description: >
    アトリビューション レポート、FLEDGE、
-  Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
-date: '2022-09-08'
-updated: '2022-11-04'
+   Topics、Fenced Frames、および共有ストレージの統一実験を実行します。
+date: 2022-09-08
+updated: 2022-11-04
 authors:
   - anusmitaray
   - rowan_m

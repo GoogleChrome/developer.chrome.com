@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
 title: Federated Credential Management API
-subhead: |2-
-
+subhead: >
   プライバシーを保護する ID 連携のためのウェブ API。
-description: |2-
-
+description: >
   ユーザーがブラウザのプライバシーの向上と互換性のある方法で、アカウント連携を使ってウェブサイトにログインできるようにするウェブプラットフォーム API。
-date: '2022-04-25'
-updated: '2022-11-08'
+date: 2022-04-25
+updated: 2022-11-08
 authors:
   - agektmr
 ---
@@ -147,9 +145,9 @@ IdP、RP、ブラウザベンダーから寄せられた問題点など、まだ
 また、評価中またはプロトタイプ作成中の特定の提案を含め、活発に調査を進めている未解決の問題があります。
 
 - **CORS**: FedCM フェッチの仕様を確実に改善するために、[Apple と Mozilla と話し合っています](https://github.com/fedidcg/FedCM/issues/320)。
-- **Multiple-IdP API** : FedCM アカウントのチューザーで[複数の IdP](https://github.com/fedidcg/FedCM/issues/319) が協調して共存できるようにする方法を検討しています。
-- **IdP Sign-in Status API** : Mozilla は[タイミング攻撃の問題](https://github.com/fedidcg/FedCM/issues/230)を特定しました。私たちは IdP が[ユーザーのサインイン ステータスをブラウザにプロアクティブに通知](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api)することで問題を軽減していく方法を検討しています。
-- **IdP へのサインイン API **: [さまざまなシナリオ](https://github.com/fedidcg/FedCM/issues/348)をサポートできるよう、ブラウザは、ユーザーが IdP にサインインしていない場合に、ユーザーが RP を離れずにサインインするための UI を提供します。
+- **Multiple-IdP API**: FedCM アカウントのチューザーで[複数の IdP](https://github.com/fedidcg/FedCM/issues/319) が協調して共存できるようにする方法を検討しています。
+- **IdP Sign-in Status API**: Mozilla は[タイミング攻撃の問題](https://github.com/fedidcg/FedCM/issues/230)を特定しました。私たちは IdP が[ユーザーのサインイン ステータスをブラウザにプロアクティブに通知](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api)することで問題を軽減していく方法を検討しています。
+- **IdP へのサインイン API**: [さまざまなシナリオ](https://github.com/fedidcg/FedCM/issues/348)をサポートできるよう、ブラウザは、ユーザーが IdP にサインインしていない場合に、ユーザーが RP を離れずにサインインするための UI を提供します。
 
 最後に、[Mozilla](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677)、[Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)、および [TAG のレビュー担当者](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549)からのフィードバックに基づき、まだ実行する必要があると思われることがいくつかあります。私たちは、これらの未解決の問題に対する最善の解決策を評価する取り組みを続けています。
 
