@@ -330,7 +330,7 @@ if (window?.sharedStorage?.selectURL instanceof Function) {
 
 - [Topics](/docs/privacy-sandbox/topics-experiment/)
 - [FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
-- [ アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/)
+- [アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/)
 
 API はデフォルトではオンにならないため、テスト用の[フラグで有効にする](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)必要があります。上記と同じ構成設定が有効になっていることを確認してから、以下を行ってください。
 
