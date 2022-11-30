@@ -9,7 +9,7 @@ alt: >
   A walk sign against a partly cloudy sky.
 tags:
   - chrome-109
-  - extensions
+  - extensions-news
 authors:
   - joemedley
 ---
