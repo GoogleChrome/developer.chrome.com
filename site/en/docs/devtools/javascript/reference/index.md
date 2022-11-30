@@ -32,8 +32,7 @@ While the execution is paused, hover over a class or function name to preview it
 
 ## Step through code {: #stepping }
 
-Once your code is paused, step through it, one line at a time, investigating control flow and
-property values along the way.
+Once your code is paused, step through it, one expression at a time, investigating control flow and property values along the way.
 
 ### Step over line of code {: #step-over }
 
@@ -156,6 +155,42 @@ For example, suppose that you're paused on a breakpoint in both your main script
 worker script. You want to view the local and global properties for the service worker context, but
 the Sources panel is showing the main script context. By clicking on the service worker entry in the
 Threads pane, you'd be able to switch to that context.
+
+### Step through comma-separated expressions {: comma-separated }
+
+{% Aside 'gotchas' %}
+Starting from Chrome version 108, the **Debugger** can step through both semicolon-separated (`;`) and comma-separated (`,`) expressions.
+{% endAside %}
+
+Stepping through comma-separated expressions lets you debug minified code. For example, consider the following code:
+
+```js
+function foo() {}
+
+function bar() {
+  foo();
+  foo();
+  return 42;
+}
+
+bar();
+```
+
+When minified, it contains a comma-separated `foo(),foo(),42` expression:
+
+```js
+function foo(){}function bar(){return foo(),foo(),42}bar();
+```
+
+The **Debugger** steps through such expressions just the same.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4e1gHFnIkayVnoAu6OGK.png", alt="Stepping through a comma-separated expression.", width="800", height="341" %}
+
+Therefore, the stepping behavior is identical:
+
+- Between minified and authored code.
+- When using [sourcemaps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
+  In other words, when you see semicolons, you can always expect to step through them even if the actual source you're debugging is minified.
 
 ## View and edit local, closure, and global properties {: #scope }
 
