@@ -50,7 +50,8 @@ sessions:
       might be around the corner.
     # Required
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Interop
     # Required
     type: speaker
@@ -71,7 +72,8 @@ sessions:
         - Chrome DevTools
         - Testing
         - Debugging
-        - CSS and Web UI
+        - CSS
+        - Web UI
     # Required
     type: participant
     # Optional

@@ -190,6 +190,7 @@ featured:
 
 improve_article:
   en: 'Improve article'
+  zh: '改进文章'
   ja: '記事を改善する'
 
 featured_cards:
@@ -198,11 +199,11 @@ featured_cards:
       en: Google Developer Groups
     body:
       en: |
-        Connect with fellow developers and startups in your area, 
+        Connect with fellow developers and startups in your area,
         hear from industry experts, share your skills, and learn.
     cta:
       en: Find your local group
-      
+
 cookie_banner:
   explainer:
     en: |
