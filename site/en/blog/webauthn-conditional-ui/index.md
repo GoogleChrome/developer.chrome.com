@@ -4,7 +4,7 @@ title: Passwordless sign-in on forms with WebAuthn passkey autofill
 subhead: WebAuthn conditional UI leverages browser's form autofill functionality to let users sign in with a passkey seamlessly in the traditional password based flow.
 authors:
   - agektmr
-date: 2022-11-29
+date: 2022-11-30
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/xMIoePcEqw5uHCkxY3nP.jpg
 alt: A man filling a form
 description: WebAuthn conditional UI leverages browser's form autofill functionality to let users sign in with a passkey seamlessly in the traditional password based flow.
@@ -45,7 +45,7 @@ UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI).
 
 <figure class="screenshot" style="max-width:300px; margin:auto;">
   {%
-    Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/UEnQ6ZKktruBxEcHjXNK.mp4",
+    Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/ZaxgMtkOh5CX2B1ZT9gd.mp4",
     autoplay="true", loop="true"
   %}
   <figcaption>A user signing in with a condtional UI</figcaption>
