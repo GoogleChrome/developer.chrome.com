@@ -49,10 +49,6 @@ Examples of sites that may use this API include:
 
 ## How to use the Idle Detection API {: #use }
 
-### Browser support
-
-{% BrowserCompat 'api.IdleDetector' %}
-
 ### Feature detection
 
 To check if the Idle Detection API is supported, use:
