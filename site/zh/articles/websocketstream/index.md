@@ -1,4 +1,5 @@
 ---
+layout: 'layouts/blog-post.njk'
 title: WebSocketStream：对数据流集成 WebSocket API
 subhead: 通过应用背压，避免应用被 WebSocket 消息淹没或者使用消息淹没 WebSocket 服务器。
 authors:
