@@ -53,7 +53,7 @@ provider if you are interested in using this feature.
 
 {% endAside %}
 
-## Strong Authentication for payments
+## Strong authentication for payments
 
 Authentication plays an important role in payment fraud prevention. However, 
 payment authentication today often uses either weak (for example, CVC code) or 
