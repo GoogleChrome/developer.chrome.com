@@ -17,7 +17,7 @@ tags:
 
 With DevTools, you can test how your website behaves and performs on any device without having to browse it on real devices.
 
-<!--{% YouTube id=' ' %}-->
+{% YouTube id='f7kokNyRe7U' %}
 
 Use the **Device Mode** to simulate a mobile viewport and configure it:
 
