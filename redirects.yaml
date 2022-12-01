@@ -42,6 +42,9 @@ redirects:
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
+- from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
+  to: /docs/privacy-sandbox/summary-reports/
+
 - from: /android
   to: /docs/android
 
@@ -184,6 +187,9 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/css/overrides/
+  to: /docs/devtools/css/issues/
 
 - from: /docs/devtools/speed/get-started
   to: /docs/devtools/lighthouse
