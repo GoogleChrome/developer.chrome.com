@@ -41,6 +41,7 @@
         - url: /docs/privacy-sandbox/shared-storage/known-customer
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
+    - url: /docs/privacy-sandbox/ip-protection
     - url: /docs/privacy-sandbox/gnatcatcher
     - url: /docs/privacy-sandbox/privacy-budget
     - url: /docs/privacy-sandbox/bounce-tracking-mitigations
