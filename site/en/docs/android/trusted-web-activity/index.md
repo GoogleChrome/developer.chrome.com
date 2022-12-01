@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Overview
-seoTitle: Android Trusted Web Activities Overview
+seoTitle: Android Trusted Web Activities overview
 date: 2020-02-04
 updated: 2020-07-31
 description: Learn how you can seamlessly integrate your Progressive Web App into your Android App with a Trusted Web Activity.
