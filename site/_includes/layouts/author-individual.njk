@@ -46,6 +46,11 @@
               {{ icon('glitch', {hidden: true}) }}
             </a>
           {% endif %}
+          {% if paged.mastodon  %}
+            <a href="{{ paged.mastodon }}" class="display-inline-flex color-secondary-text gap-left-200 gap-right-200 social-icon" aria-label="Mastodon">
+              {{ icon('mastodon', {hidden: true}) }}
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>
