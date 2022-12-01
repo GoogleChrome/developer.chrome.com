@@ -88,7 +88,7 @@ Chrome will continually update its predictors based on your typing and selection
 
 ### Using the Speculation Rules API to prerender pages
 
-For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs would benefit from prerendering:
+For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs would to prerender:
 
 ```html
 <script type="speculationrules">
@@ -103,19 +103,11 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) (for example, matching `href` patterns). For now, only the above syntax is supported in Chrome.
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) (for example, matching `href` patterns), which can be combined to only prerender same-orgin links on mouse down, for example.
+
+For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
 
 For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. Chrome 109 plans expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
-
-#### Detecting of Speculation Rules API support
-
-You can feature detect Speculation Rules API support with standard HTML checks:
-
-```js
-if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
-  console.log('Your browser supports the Speculation Rules API.');
-}
-```
 
 Speculation rules can be:
 
@@ -124,7 +116,9 @@ Speculation rules can be:
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
-Multiple speculation rules can also be added to the same page, and they append to the existing rules. Therefore, the following different ways of expressing this all result in both `one.html` and `two.html` prerendering:
+#### Multiple Speculation Rules
+
+Multiple speculation rules can also be added to the same page, and they append to the existing rules. Therefore, the following different ways all result in both `one.html` and `two.html` prerendering:
 
 **List of URLs:**
 
@@ -184,6 +178,18 @@ Multiple speculation rules can also be added to the same page, and they append t
 }
 </script>
 ```
+
+#### Detecting of Speculation Rules API support
+
+You can feature detect Speculation Rules API support with standard HTML checks:
+
+```js
+if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+  console.log('Your browser supports the Speculation Rules API.');
+}
+```
+
+#### Adding Speculation Rules dynamically through JavaScript
 
 Below is a simple example of adding a `prerender` speculation rule with JavaScript:
 
