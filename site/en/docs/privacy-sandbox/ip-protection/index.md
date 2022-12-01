@@ -20,11 +20,11 @@ This document outlines the IP Protection proposal to help prevent covert trackin
 
 *  The [IP Protection proposal](https://github.com/spanicker/ip-blindness) has entered [public discussion](https://github.com/spanicker/ip-blindness/issues).
 *  This proposal has not been implemented in any browser.
-*  [The Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) provides implementation timings for other Privacy Sandbox proposals. IP Protection is still in its early phase and will have firmer timelines available on this website when available.
+*  [The Privacy Sandbox timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) provides implementation timings for other Privacy Sandbox proposals. The IP Protection proposal is still in an early discussion phase. We will provide firmer timelines on this website when available.
 
 ## Why do we need this proposal?
 
-IP addresses were created to provide unique identifiers for a client so that traffic can be routed over the internet. IP addresses can be stable over periods of time, which can lead to user identification across first-parties.
+A user's IP address is the public 'address' of their computer on the internet which, in most cases, is dynamically assigned by the network through which they connect to the internet. However, even dynamic IP addresses may remain stable over periods of time, and this can lead to user identification across first parties.
 
 IP Protection is a proposal to avoid sharing a user's real IP address with third parties. This proposal suggests using a privacy proxy (previously called a Near-Path NAT) for a connection.  An IP address is an effective cross-site identifier as it is unique, relatively stable, cheap to collect, and IP address collection cannot be detected by the browser. Therefore limiting access to IP addresses is important to prevent methods of cross-site tracking beyond third-party cookies.
 
