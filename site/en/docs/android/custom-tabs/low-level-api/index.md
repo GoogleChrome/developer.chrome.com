@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Low level API 
-seoTitle: Custom Tabs Low level API 
+seoTitle: Custom Tabs low level API 
 date: 2020-02-04
 updated: 2020-06-17
 description: Learn how to control a Custom Tab without using a support library.
