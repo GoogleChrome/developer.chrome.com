@@ -16,7 +16,7 @@ date: 2022-12-01
 Secure Payment Confirmation (SPC) is a [proposed web
 standard](https://www.w3.org/TR/secure-payment-confirmation/) that allows
 customers to authenticate with a credit card issuer, bank, or other payment
-service provider using a platform authenticator — typically activated with a
+service provider using a platform authenticator—typically activated with a
 device's screen unlock feature such as a fingerprint sensor. This usually
 happens during a payments authentication protocol such as [EMV 3-D
 Secure](https://www.emvco.com/emv-technologies/3d-secure/) or [Open
@@ -83,7 +83,7 @@ As long as the relying party is the same (for example, the same issuing bank),
 the user should be able to use one registration for all future payments with 
 that relying party across any merchant that integrates SPC.
 
-## API Changes
+## API changes
 
 Developers can follow [the existing implementation 
 guide](/articles/secure-payment-confirmation/) 
