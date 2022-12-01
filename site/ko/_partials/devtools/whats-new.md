@@ -4,7 +4,7 @@
 
 {# $content #}
 
-{# ### Chrome 108 {: #chrome108 }
+### Chrome 108 {: #chrome108 }
 
 * [비활성화된 CSS 프로퍼티에 대한 힌트](/ko/blog/new-in-devtools-108/#css-hint)
 * [Recoder 패널에서의 XPath 와 텍스트 셀렉터의 자동 인식](/ko/blog/new-in-devtools-108/#recorder)
