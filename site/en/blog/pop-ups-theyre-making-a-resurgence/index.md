@@ -20,7 +20,7 @@ This [change request](https://chromium-review.googlesource.com/c/chromium/src/+/
 
 The goal of the [Open UI initiative](https://open-ui.org/) is to make it easier for developers to make great user experiences. To do this, we are trying to tackle the more problematic patterns that developers face. We can do this by providing better platform built-in APIs and components.
 
-One such problem area is pop-ups. Or as they are referred to in Open UI, "Popovers".
+One such problem area is pop-ups, described in Open UI as "Popovers".
 
 Popovers have had a rather polarizing reputation for a long time. This is, in part, due to the way they get both built and deployed. They're not an easy pattern to build well, but they can yield a lot of value by directing users to certain things, or making them aware of the content on your site—especially when used in a tasteful manner. 
 
