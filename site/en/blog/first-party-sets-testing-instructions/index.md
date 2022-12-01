@@ -47,7 +47,7 @@ This can make adopting FPS challenging for top-level sites that use cross-site i
 
 The canonical FPS list will be a publicly viewable list in a JSON file format housed in a new [FPS GitHub repository](https://github.com/googlechrome/first-party-sets), which will serve as the source-of-truth for all sets. Chrome will consume this file to apply to its behavior.
 
-To learn more about the proposed process and requirements for submitting sets, check out the [submission guidelines](https://github.com/googlechrome/first-party-sets). You can also try submitting a set to test the various technical checks that will validate the submissions. Note that all submissions will be cleared before FPS is available in stable versions of Chrome.
+To learn more about the proposed process and requirements for submitting sets, check out the [submission guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). You can also try submitting a set to test the various technical checks that will validate the submissions. Note that all submissions will be cleared before FPS is available in stable versions of Chrome.
 
 As the set submission process is still under active development, for local testing, you can only create sets on the command line and pass them directly to the browser. For local testing, it is not required to submit a set to the GitHub repo in order to test with feature flags.
 
