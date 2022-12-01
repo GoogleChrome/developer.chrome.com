@@ -197,6 +197,8 @@ An extension can override one or more of the following properties in the manifes
 
 - **`startup_pages` (array of string)** - optional
 
+An array of length one containing a URL to be used as the startup page.
+
 [1]: #homepage
 [2]: #search_provider
 [3]: #startup_pages
