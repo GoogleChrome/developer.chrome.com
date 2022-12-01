@@ -49,6 +49,10 @@ The `MathMLElement` interface provides a convenient way to manipulate MathML in 
 
 ## Web APIs
 
+### Secure Payment Confirmation on Android Chrome
+
+[Chrome 109 on Android supports Secure Payment Confirmation (SPC)](/blog/spc-on-android), which is a [proposed web standard](https://www.w3.org/TR/secure-payment-confirmation/) that allows customers to authenticate with a credit card issuer, bank, or other payment service provider using a platform authenticator—typically activated with a device's screen unlock feature such as a fingerprint sensor. This usually happens during a payments authentication protocol such as [EMV 3-D Secure](https://www.emvco.com/emv-technologies/3d-secure/) or [Open Banking](https://standards.openbanking.org.uk/). EMV 3-D Secure, for example, has support for SPC in its [v2.3 spec release](https://www.emvco.com/emv_insights_post/what-is-new-with-emv-3ds-v2-3/). We [previously announced](/articles/secure-payment-confirmation/) that SPC was launched for Google Chrome on macOS and Windows and provided developer guides for both [registration](/articles/register-secure-payment-confirmation/) and [authentication](/articles/authenticate-secure-payment-confirmation/).
+
 ### Conditional Focus
 
 [Conditional Focus](/docs/web-platform/conditional-focus) extends `getDisplayMedia()` by adding a `CaptureController` object which can be passed in as a parameter. This object exposes a `setFocusBehavior()` method. By calling this method, an app can control whether the captured tab or window is focused when capture starts, or whether the capturing page should retain focus.
