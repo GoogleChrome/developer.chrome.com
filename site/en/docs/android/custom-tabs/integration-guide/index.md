@@ -67,7 +67,7 @@ To turn a Custom Tab into a partial Custom Tab, define the initial launch height
 Starting a new browser sessions is the recommended approach to launch a partial Custom Tag, as it enables you to [warm up the browser process](#warm-up-the-browser-process) and [pre-render webpages](/docs/android/custom-tabs/best-practices/#pre-render-content). If you don't need these features, using `startActivityForResult` is the easier way to launch a partial custom tab.
 
 {% Aside 'gotchas' %}
-1. Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
+* Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
 
 2. Custom Tabs will inherit the host app's color scheme for the UI properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a Custom Tab.
 
