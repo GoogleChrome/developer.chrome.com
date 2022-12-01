@@ -51,7 +51,7 @@ By default, Custom Tabs launch as a full-window activity. Starting in Chrome 107
 
 {% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/iMTvWNK7aEqqxHEHEXuv.png", alt="Example Partial Tab", width="584", height="1168", class="screenshot" %}
 
-You can also choose to make the Custom Tab non-resizable. In this case, users will not have the ability to resize the Custom Tab. If you set a value below 50% of the screen height in the intent, Chrome automatically adjusts the Custom Tab to 50% of the screen height. Custom Tabs are not supported when users are in multi-window or landscape mode.
+You can also choose to make the Custom Tab non-resizable, which prevents users from resizing it. If you set a value below 50% of the screen height in the intent, Chrome automatically adjusts the Custom Tab to 50% of the screen height. Custom Tabs are not supported when users are in multi-window or landscape mode.
 
 Partial Custom Tabs are supported by the AndroidX browser library from version 1.5 onwards:
 
