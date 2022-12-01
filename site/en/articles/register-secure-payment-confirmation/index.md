@@ -180,7 +180,7 @@ const options = {
   }],
   authenticatorSelection: {
     userVerification: "required",
-    residentKey: "required",
+    residentKey: "preferred",
     authenticatorAttachment: "platform",
   },
   timeout: 360000,  // 6 minutes
