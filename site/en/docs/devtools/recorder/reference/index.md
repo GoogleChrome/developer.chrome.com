@@ -349,26 +349,36 @@ To remove a timeout overwrite on a step, click the **Delete**{% Img src="image/N
 
 ## Understand selectors {: #selector }
 
-During recording, the **Recorder** automatically detects two types of selectors for most of the steps: ARIA and CSS.
+When you start a new recording, you can configure the following:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/cFxRgfDJpKoznYtlYj2S.png", alt="Configuring a new recording.", width="800", height="546" %}
+
+- In the **Selector attribute** textbox, enter a [custom test attribute](#customize-selector). The **Recorder** will use this attribute to detect selectors instead of a list of [common test attributes](common-test-selector).
+- In the **Selector types to record** set of checkboxes, choose the types of selectors to detect automatically:
+
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **CSS**. Syntactic selectors.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **ARIA**. Semantic selectors.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Text**. Selectors with the shortest unique text if available.
+  - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **XPath**. Selectors that use [XML Path Language](https://developer.mozilla.org/docs/Web/XPath).
 
 {% Aside %}
-For more information on ARIA selectors, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors).
+For more information, see [Syntactic vs. semantic selectors](/blog/puppetaria/#syntactic-vs-semantic-selectors) and [Selector priority](#selector-priority).
 {% endAside %}
 
-For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case, because:
-
-- Your webpages may use dynamic classes or ID's that change
-- Your selectors may break from development changes to CSS styles or JS behavior
-
 ### Common test selectors {: common-test-selector}
+
+For simple webpages, `id` attributes and CSS `class` attributes are sufficient for the **Recorder** to detect the selectors. However, that might not always be the case because:
+
+- Your webpages may use dynamic classes or IDs that change.
+- Your selectors may break because of code or framework changes.
 
 For example, the CSS `class` values might be auto-generated for applications developed with modern JavaScript frameworks (for example, [React](https://reactjs.org/), [Angular](https://angular.io/), [Vue](https://vuejs.org/)) and CSS frameworks.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtK52PaMMzKWiiAcsQfH.png", alt="Auto-generated CSS classes with randomized names.", width="800", height="654" %}
 
-In these cases, you can use `data-*` attributes to create more resilient tests. There are already some common `data-*` selectors that people use for automation. The **Recorder** supports them as well. 
+In these cases, you can use `data-*` attributes to create more resilient tests. There are already some common `data-*` selectors that developers use for automation. The **Recorder** supports them as well. 
 
-If you have the following common test selectors defined, the **Recorder** automatically detects and uses them first:
+If you have the following common test selectors defined on your website, the **Recorder** automatically detects and uses them first:
 
 - `data-testid`
 - `data-test`
@@ -388,7 +398,7 @@ Record a click on "Cappuccino", expand the corresponding step in the recording, 
 
 ### Customize the recording's selector {: #customize-selector }
 
-You can customize the selector of a recording if the above doesn't work for you.
+You can customize the selector of a recording if the common test selectors don't work for you.
 
 For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/reference/#record) and enter the `data-automate` as the selector attribute.
 
@@ -400,16 +410,25 @@ Fill in an email address and observe the selector value (`[data-automate=email-a
 
 ### Selector priority {: #selector-priority }
 
-In addition to the ARIA selector, the **Recorder** looks for the best CSS selector it can find by the following attributes and in the following order:
-1. Your custom selector attribute if you specified it at the start of the recording.
-1. ARIA selector if found.
-1. The most common attributes used for testing: {: #selectors }
-   - `data-testid`
-   - `data-test`
-   - `data-qa`
-   - `data-cy`
-   - `data-test-id`
-   - `data-qa-id`
-   - `data-testing`
-1. ID attributes, for example, `<div id="some_ID">`.
-1. Regular CSS selectors.
+The **Recorder** looks for selectors in the following order depending on if you specified a custom CSS selector attribute:
+
+- If specified:
+  1. CSS selector with your custom CSS attribute.
+  1. XPath selector.
+  1. ARIA selector if found.
+  1. A selector with the shortest unique text if found.
+- If not specified:
+  1. ARIA selector if found.
+  1. One of CSS selectors with the following priority:
+     1. The most common attributes used for testing: {: #selectors }
+         - `data-testid`
+         - `data-test`
+         - `data-qa`
+         - `data-cy`
+         - `data-test-id`
+         - `data-qa-id`
+         - `data-testing`
+     1. ID attributes, for example, `<div id="some_ID">`.
+     1. Regular CSS selectors.
+  1. XPath selector.
+  1. A selector with the shortest unique text if found.
