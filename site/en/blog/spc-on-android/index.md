@@ -107,7 +107,7 @@ navigator.credentials.create({
       ...,  
     },
     extensions: {
-      payments: {  
+      payment: {  
         isPayment: true,  
       } 
     },
