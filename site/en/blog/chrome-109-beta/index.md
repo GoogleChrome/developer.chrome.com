@@ -32,7 +32,7 @@ The `hyphenate-limit-chars` property specifies the minimum number of characters 
 
 ### Snap border, outline and column-rule widths before layout
 
-Currently Blink snaps the border widths at paint time. This can cause a visible 1px gap between a parent element's border and a child's background when the border is rounded down during paint, since the snapping floors the value but the layout rounded it up to calculate the child’s position (for example, border-width is set to 10.75 pixels, rounded to 10px at paint time, but 11 at layout time). By making this change Blink will behave like Gecko and WebKit, improving interoperability.
+Currently Blink snaps the border widths at paint time. This can cause a visible 1px gap between a parent element's border and a child's background when the border is rounded down during paint. This happens because the snapping floors the value, but the layout rounds it up to calculate the child’s position (for example, border-width is set to 10.75 pixels, rounded to 10px at paint time, but 11 at layout time). By making this change Blink will behave like Gecko and WebKit, improving interoperability.
 
 ## MathML
 
