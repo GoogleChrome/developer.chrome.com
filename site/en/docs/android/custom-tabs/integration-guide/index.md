@@ -64,7 +64,7 @@ To turn a Custom Tab into a partial Custom Tab, define the initial launch height
 1. [start a new browser session via a `CustomTabsServiceConnection`](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) and pass it to the Custom Tabs intent or
 2. start the Custom Tab activity via [`startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
-Starting a new browser sessions is the recommended approach to launch a partial Custom Tag, as it enables you to [warm up the browser process](#warm-up-the-browser-process) and [pre-render webpages](/docs/android/custom-tabs/best-practices/#pre-render-content). If you don't need these features, using `startActivityForResult` is the easier way to launch a partial custom tab.
+Starting a new browser sessions is the recommended approach to launching a partial Custom Tag, as it enables you to [warm up the browser process](#warm-up-the-browser-process) and [pre-render webpages](/docs/android/custom-tabs/best-practices/#pre-render-content). If you don't need these features, using `startActivityForResult()` is the easier way to launch a partial custom tab.
 
 {% Aside 'gotchas' %}
 * Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
