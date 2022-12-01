@@ -39,8 +39,15 @@ module.exports = collections => {
           authors[authorId].title = `i18n.authors.${authorId}.title`;
           authors[authorId].key = authorId;
           authors[authorId].url = `/authors/${authorId}/`;
+
           authors[authorId].image =
             authorsData[authorId].image || site.defaultAvatarImg;
+          authors[authorId].homepage = authorsData[authorId].homepage;
+          authors[authorId].twitter = authorsData[authorId].twitter;
+          authors[authorId].github = authorsData[authorId].github;
+          authors[authorId].glitch = authorsData[authorId].glitch;
+          authors[authorId].mastodon = authorsData[authorId].mastodon;
+
           const element = {
             title: item.data.title,
             description: item.data.description,

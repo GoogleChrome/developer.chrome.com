@@ -5,7 +5,7 @@ summary: >-
   front-end engineering, and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: 'Sydney, Australia'
-date: '2022-12-01'
+date: 2022-12-01
 externalUrl: 'https://webdirections.org/summit/'
 sessions:
   - speaker: pjmclachlan
@@ -19,7 +19,8 @@ sessions:
       browser and running standalone or in a tab.
     topics:
       - Performance
-      - Web UI and CSS,
+      - CSS
+      - Web UI
       - Advanced Apps and Project Fugu
       - Web Developer Tools
     time: null
@@ -30,7 +31,8 @@ sessions:
     title: 'CSS Architecture with Layers, Scope, and Nesting'
     description: ''
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null
@@ -54,7 +56,8 @@ sessions:
     description: ''
     topics:
       - Performance
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Advanced Apps and Project Fugu
       - Web Developer Tools
     time: null
@@ -80,7 +83,8 @@ sessions:
       combining different features, and a little peek at what might be around
       the corner.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Interop
     time: null
     type: speaker
