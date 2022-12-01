@@ -73,9 +73,9 @@ Values in the manifest can be customized in the following ways:
   }
   ```
 
-  All occurrences of the substring `"\_\_PARAM\_\_"` in the manifest URLs will be substituted with the
-  `"install_parameter"` value. If `"install_parameter"` is absent, occurrences of `"\_\_PARAM\_\_"` are
-  removed. Note that `"\_\_PARAM\_\_"` cannot be part of the hostname. It needs to occur after the
+  All occurrences of the substring `"__PARAM__"` in the manifest URLs will be substituted with the
+  `"install_parameter"` value. If `"install_parameter"` is absent, occurrences of `"__PARAM__"` are
+  removed. Note that `"__PARAM__"` cannot be part of the hostname. It needs to occur after the
   first '/' in the URL.
 
 ## Reference {: #reference }
