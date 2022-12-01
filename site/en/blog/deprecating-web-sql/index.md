@@ -3,14 +3,14 @@ layout: 'layouts/blog-post.njk'
 title: Deprecating and removing Web SQL
 description: >
   Web SQL was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented
-  it and WebKit removed it in 2019. Web SQL was removed for third-party contexts in Chromium 97. Now
-  Chromium 105 deprecates Web SQL in insecure contexts and shows a warning in the DevTools Issue
-  panel when the feature is used. Complete removal in insecure contexts and eventually all contexts
-  is planned for later Chromium releases.
+  it and WebKit removed it in 2019. Web SQL was removed for third-party contexts in Chromium 97.
+  Chromium 105 deprecated Web SQL in insecure contexts and showed a warning in the DevTools Issue
+  panel when the feature is used. Chromium 110 removes Web SQL in insecure contexts. Complete
+  removal in insecure contexts and eventually all contexts is planned for later Chromium releases.
 authors:
   - thomassteiner
 date: 2022-08-31
-# updated: 2022-08-31
+updated: 2022-11-14
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -45,18 +45,19 @@ web for a reason.
 storage and we're therefore working with the [SQLite](https://www.sqlite.org/index.html) team to
 create a SQLite implementation over WebAssembly. This solution will replace Web SQL. {% endAside %}
 
-## Web SQL deprecation steps
+## Web SQL deprecation and removal steps
 
 - [✅ Done.] Web SQL was deprecated and removed for **third-party contexts** in
-  **Chromium&nbsp;97**.
-- [📍 We are here.] Web SQL access in **insecure contexts** is deprecated as of
-  **Chromium&nbsp;105** at which time a warning message will be shown in the Chrome DevTools Issue
+  **Chromium&nbsp;97** (Tue, Jan 4, 2022).
+- [✅ Done.] Web SQL access in **insecure contexts** was deprecated as of
+  **Chromium&nbsp;105** (Tue, Aug 30, 2022) at which time a warning message was shown in the Chrome DevTools Issue
   panel.
-
+  
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
-- [🔮 In the future.] Web SQL access in **insecure contexts** will be completely removed in a later
-  milestone.
+- [📍 We are here.] Web SQL access in **insecure contexts** is no longer available as of
+  **Chromium&nbsp;110** (Tue, Feb 7, 2023). An **enterprise policy** to keep using the feature is available from
+  **Chromium&nbsp;110** (Tue, Feb 7, 2023) to **Chromium&nbsp;111** Tue, Mar 7, 2023.
 - [🔮 In the future.] The final step will be to remove Web SQL completely **in all contexts**, but
   no date has been set for this step yet.
 

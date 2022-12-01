@@ -47,7 +47,7 @@ ownership of as determined by the [Chrome Web Store][4]. Apps that violate this 
 attempt to register for handling external URLs will be rejected by the Chrome Web Store on upload.
 
 This automatically means that at least a complete domain should always be specified for all the
-patterns under `matches` (otherwise ownership cannot be verified).
+patterns under `matches`. Otherwise, ownership cannot be verified.
 
 Upon successful registration and installation, an app will be launched for all matching navigations
 inside browser tabs as well as other apps. The app will receive a new kind of the
@@ -60,6 +60,6 @@ action that the app performs when launched with this type of URL handler.
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
-[3]: ../app_lifecycle#eventpage
+[3]:/docs/apps/app_lifecycle#eventpage
 [4]: https://chrome.google.com/webstore
-[5]: ../app_runtime#event-onLaunched
+[5]: /docs/apps/app_lifecycle/#create_event_page

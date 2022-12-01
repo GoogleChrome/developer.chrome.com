@@ -29,7 +29,8 @@ underlying concepts, but doesn't go into much technical detail.
   deployment.
 
 {% Aside %}
-🧐 There is a [glossary](#glossary) at the end of this post.
+If you're unfamiliar with some of these terms, consult the
+[Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 {% endAside %}
 
 ## Changes
@@ -58,41 +59,34 @@ This API enables advertisers and adtech providers to measure conversions in the 
 ## Who needs to know about this API?
 
 - **Adtech platforms** such as [demand-side
-  platforms](https://en.wikipedia.org/wiki/Demand-side_platform) (DSP) or [data management
-  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) may use this API to
+  platforms](/docs/privacy-sandbox/glossary/#dsp) (DSP) or [data management
+  platforms](/docs/privacy-sandbox/glossary/#dmp) (DMP) may use this API to
   support functionality that currently relies on third-party cookies.
-- **Advertisers and publishers relying on custom code** for advertising or conversion measurement
-  may use this API to replace existing techniques.
-- **Advertisers and publishers relying on adtech platforms** for conversion measurement don't need
+- **Advertisers and publishers relying on custom code** for advertising or
+  conversion measurement may use this API to replace existing techniques.
+- **Advertisers and publishers relying on adtech platforms** for conversion
+  measurement don't need
   to use the API directly, but may be interested in understanding it if they're working with adtech
   platforms that may integrate the API.
 
-{% Aside %} The Attribution Reporting API may also serve use cases that are not related to advertising. {% endAside %}
+{% Aside %}
 
-## Status
-
-**🕙 [Last updated](/docs/privacy-sandbox/attribution-reporting-updates/): June 2022**
-
-### How can I try Attribution Reporting?
-
-At the time of this writing, you can try Attribution Reporting:
-
-- This API is available for experiments in the ads relevance and measurement origin trial.
-- You can test locally in your browser with a _flag_.
-
-**If you're interested in experimenting with the API, head over to [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).**
-
-{% Aside 'key-term' %}
-
-- A _flag_ is a toggle that tells the Chrome browser to enable specific
-  experimental functionalities.
-- An _origin trial_ is a way to test a new or experimental web platform feature
-  with end users, and give feedback to the web standards
-  community on the feature. Learn more in [Getting started with Chrome's origin trials](/blog/origin-trials/).
-  Multiple rounds of origin trials are run, to improve and adjust the API
-  based on ecosystem feedback.
+In the future, the Attribution Reporting API may serve use cases that are not related to advertising.
 
 {% endAside %}
+
+
+## Try the API
+
+- The Attribution Reporting API is available for experiments in the
+  [ads relevance and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
+   - Multiple rounds of origin trials are run to improve and adjust APIs based on ecosystem feedback.
+- You can test locally in your browser. [Set a _flag_](/blog/browser-flags/),
+  which tells the Chrome browser to enable specific experimental
+  functionalities.
+
+If you're interested in experimenting with the API, head over to
+[Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
 ### Status details
 
@@ -117,7 +111,7 @@ At the time of this writing, you can try Attribution Reporting:
     </tr>
     <tr>
     <tr>
-    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md">Explainer</a></td>
+    <td>Conversion journey: cross-device<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md">Explainer</a></td>
     <td>Proposal, not implemented yet.</td>
     </tr>
 </tbody>
@@ -133,12 +127,12 @@ The Attribution Reporting API gives access to different types of insights via tw
 advertiser or a third-party adtech provider. These two types of reports can be used simultaneously
 and are complementary.
 
-- **Event-level reports** associate a particular ad click or view (on the ad side) with data on the
+- [**Event-level reports**](#event-level-reports) associate a particular ad click or view (on the ad side) with data on the
   conversion side. To preserve user privacy by preventing the joining of user identity across sites,
   conversion-side data is very limited, and the data is noised (meaning that for a small
   percentage of cases, random data is sent instead of real reports). As an extra privacy protection, reports are not sent
   immediately.
-- **Summary reports** are not tied to a specific event on the ad side. These reports provide
+- [**Summary reports**](#summary-reports) are not tied to a specific event on the ad side. These reports provide
   richer, higher-fidelity conversion data than event-level reports. A combination of privacy
   techniques help reduce the risk of identity joining across sites.
 
@@ -148,16 +142,16 @@ Both report types can be used simultaneously. They're complementary.
 
 Event-level reports associate an ad click or view with coarse conversion data.
 
-<figure>
+<figure class="screenshot">
  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/8PZhfv4UXYxt2vTKRNI2.png",
- alt="event-level report", width="400", height="180" %}
+ alt="Event-level report", width="400", height="180" %}
  <figcaption>Example event-level report: Click ID 200400600 on <code>news.example</code> (attached to user ID Bob_Doe on <code>news.example</code>) has led to a purchase on <code>shop.example</code>.</figcaption>
 </figure>
 
 Event-level reports are suited for:
 
-- **Optimization**. Event-level reports help answer questions like _"How can I improve my return on
-  investment?"_. In particular, these reports can be used to optimize for ad placement, since a
+- **Optimization**. Event-level reports help answer questions like "How can I improve my return on
+  investment?". In particular, these reports can be used to optimize for ad placement, since a
   unique ID for the ad side can be made available in the reports. Event-level reports can provide
   training data for machine learning models.
 - **Coarse reporting**, where very little information is needed about the conversion. The current
@@ -173,12 +167,12 @@ Event-level reports are suited for:
 Summary reports (formerly known as aggregate reports) offer more detailed
 conversion data and more flexibility for joining click/view data and conversion data.
 
-Learn more about in [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/).
+Learn more about [summary reports](/docs/privacy-sandbox/summary-reports/).
 
 <figure>
- {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="summary
- report", width="400", height="180"%}
- <figcaption>Example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption>
+ {% Img
+   src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="Example of insights from summary reports.", width="400", height="180"%}
+ <figcaption>Here's an example of insights from summary reports: CampaignID 1234567 on <code>news.example</code> has led to 518 conversions on <code>shoes.example</code>, and to a total spend of $38174. Half of the conversions were from users in NYC, USA.</figcaption>
 </figure>
 
 Summary reports are best suited for reporting use cases. These reports help
@@ -194,7 +188,7 @@ Other features proposed in this API include:
 
 - [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
   see or click an ad in an app and convert on the web.
-- [Cross-device attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md):
+- [Cross-device attribution](https://github.com/WICG/attribution-reporting-api/blob/main/archive/cross_device.md):
   see or click an ad on mobile and convert on desktop.
 
 {% Aside %}
@@ -261,7 +255,7 @@ policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) as w
 
 {% Aside %}
 
-### What's the security benefit?
+### Security benefits
 
 By doing this, a script with top-level access allows the frames it adds itself
 to use Attribution Reporting. Only a third-party script that is trusted by the
@@ -297,7 +291,9 @@ conversion on an advertiser site.
 ### Summary reports
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="ALT_TEXT_HERE", width="800", height="1024" %}
+{% Img
+  src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="", width="800", height="1024"
+%}
  <figcaption style="text-align:left;">Summary reports are generated as follows:<br>
 *  When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br>
 *  Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an adtech company, following a specific logic that is defined by the adtech. The output of this process is an aggregatable report.<br>
@@ -357,84 +353,76 @@ enough to track Bob's activity across sites in detail. Bob's
 activity on `news.example` and on `shoes.example` remains
 separate.
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg", alt="Diagram: side-by-side
-view of today's web (joined identity) and tomorrow's web (partitioned identity)", width="800",
-height="314" %}
+{% Img
+  src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg",
+  alt="Side-by-side view of today's web (joined identity) and tomorrow's web (partitioned identity)",
+  width="800", height="314"
+%}
 
 ### In detail
 
-**Event-level reports** link an ad-side identifier with only a small amount of conversion-side data.
-While they do provide cross-site information about a conversion, but the conversion-side information is
-too coarse to join user identity across sites.
+**Event-level reports** link an ad-side identifier with a small amount of
+conversion-side data. While they do provide cross-site information about a
+conversion, but the conversion-side information is too coarse to join user
+identity across sites.
 
 **Summary reports** provide detailed insights, but only at an aggregated level; because the contents
 of these aggregatable reports are encrypted when they are sent to the adtech, the adtech cannot get
 any information from the reports without using an aggregation service. The aggregation service only
 provides access to noisy aggregates.
 
-Additional privacy protections such as rate limitations are imposed on both event-level and
-aggregate reports.
+Additional privacy protections such as rate limitations are imposed on both
+event-level and aggregate reports.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="ALT_TEXT_HERE", width="800", height="1237" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/mDdo2XLyGLBCAlgH7MPZ.png", alt="", width="800", height="1237" %}
 </figure>
 {% Details %}
 {% DetailsSummary 'h3' %}
-In detail: event-level reports and privacy {% endDetailsSummary %}
+In detail: event-level reports and privacy
+{% endDetailsSummary %}
+
 Event-level reports provide conversion insights without tracking users across
 sites, by following the following privacy mechanisms:
-- No cross-site identifier is used and no detailed cross-site browsing activity leaves the device.
-Event-level reports associate 64 bits of information on the ad side (`news.example`) with only 1
-bit or 3 bits on the conversion side (`shop.example`). 64 bits **are enough information to be
-mapped to an individual user identifier, but these 64 bits can only be linked with very little
-cross-site information:** 1 bit or 3 bits, which are not enough to hold an identifier. Note: the
-ad-side 64 bits are not new information. A user ID can already be available on the ad side today.
-`news.example` or `adtech.example` already knows about a certain user's activity on
-`news.example`.
+
+- No cross-site identifier is used and no detailed cross-site browsing activity
+  leaves the device.
+- Event-level reports associate 64 bits of information on the ad side
+  (`news.example`) with only 1 bit or 3 bits on the conversion side
+  (`shop.example`). 64 bits are enough information to be mapped to an
+  individual user identifier, but these 64 bits can only be linked with very
+  little cross-site information: 1 bit or 3 bits, which are not enough to hold
+  an identifier.
+  - The ad-side 64 bits are not new information. A user ID can already be
+    available on the ad side today. `news.example` or `adtech.example` 
+    already knows about a certain user's activity on `news.example`.
 - Additional protections are applied to prevent abuse and cross-site tracking:
-- The reports are sent with a **delay**.
-- The conversion data is **noised**: a certain percentage of the time, fake reports are generated.
-- The number of attributed conversion reports is limited per click or view.
+  - The reports are sent with a **delay**.
+  - The conversion data is **noised**: a certain percentage of the time, fake reports are generated.
+  - The number of attributed conversion reports is limited per click or view.
 {% endDetails %}
+
 {% Details %}
 {% DetailsSummary 'h3' %}
-In detail: summary reports and privacy {% endDetailsSummary %}
+In detail: summary reports and privacy
+{% endDetailsSummary %}
  
-Summary reports associate a detailed click or view event with detailed conversion data. However,
-they provide conversion insights without tracking users across sites, by following the following
-privacy mechanisms:
+Summary reports associate a click or view event with detailed conversion data.
+They provide conversion insights without tracking users across sites, by using the following privacy mechanisms:
  
 - No cross-site identifier is used.
-- Each attribution can make multiple contributions to a resulting summary report. Any given user can
- trigger multiple attributions for a particular click (or view) and conversion.
-- Data is aggregated up to the level of many events (many users) and no individual events can be
- observed precisely. When drilling down into the aggregated data, as the level of detail increases,
- the relative noise on that data increases as well. Slices of data that aggregate a lot of events
- and users are more accurate to preserve usefulness.
-- The raw reports that associate a detailed click or view event with detailed conversion data are
- encrypted and not readable by the adtech company. Aggregate data is then computed from these
- reports via a trusted server.
- 
+- Each attribution can make multiple contributions to a resulting summary
+  report. Any given user can trigger multiple attributions for a particular
+  click (or view) and conversion.
+- Data is aggregated up to the level of many events (many users) and no
+  individual events can be observed precisely. When looking at the
+  aggregated data, as the level of detail increases so does the relative noise
+  on that data increases as well. Slices of data that aggregate a lot of events
+  and users are more accurate to preserve usefulness.
+- The raw reports that associate a detailed click or view event with detailed conversion data are encrypted and not readable by the adtech company.
+  This data can only be read by the [aggregation service](/docs/privacy-sandbox/aggregation-service).
 - Additional protections are applied to prevent abuse and cross-site tracking:
- 
-- Reports are sent with random delays.
-- Queries on different slices of the data are rate-limited.
+  - Reports are sent with random delays.
+  - Queries on different slices of the data are rate-limited.
  
 {% endDetails %}
-
-## Glossary
-
-- **Adtech platforms**: companies that provide software and tools to enable brands or agencies to
-  target, deliver, and analyze their digital advertising.
-- **Advertisers**: companies paying for advertising.
-- **Publishers**: companies that display ads on their websites.
-- **Click-through conversion**: conversion that is attributed to an ad click.
-- **View-through conversion**: conversion that is attributed to an ad impression (if the user
-  doesn't interact with the ad, then later converts).
-
-{% Aside %}
-
-You may also want to consult the complete [Privacy Sandbox
-glossary](/docs/privacy-sandbox/glossary/).
-
-{% endAside %}

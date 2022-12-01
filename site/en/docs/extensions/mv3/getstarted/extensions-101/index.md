@@ -85,7 +85,7 @@ Extensions" example and familiarize yourself with the extension development work
 ## Designing your extension features {: #quality }
 
 When you start designing your extension and choosing which features to support, make sure it
-fulfills a [single purpose][doc-policy-sp] that is narrowly defined and easy to understand.
+fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
 This will allow your extension to be distributed through the Chrome Web Store.
 
 {% Details %} {% DetailsSummary %}
@@ -146,7 +146,6 @@ extension and Chrome Web store documentation:
 [doc-ext-pages]: /docs/extensions/mv3/architecture-overview/#html-files
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-options]: /docs/extensions/mv3/options/
-[doc-policy-sp]: /docs/webstore/program-policies/#single-purpose
 [doc-popup]: /docs/extensions/mv3/user_interface/#popup
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/

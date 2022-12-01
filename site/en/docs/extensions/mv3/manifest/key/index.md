@@ -17,3 +17,4 @@ during development. The following are some common use cases:
 
 [doc-external-msg]: /docs/extensions/mv3/messaging/#external-webpage
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
+

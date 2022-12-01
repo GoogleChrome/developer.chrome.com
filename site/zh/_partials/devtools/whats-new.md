@@ -2,16 +2,17 @@
 
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- $content -->
+{# $content #}
 
-<!-- ### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/zh/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/zh/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/zh/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/zh/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-108/#misc)
- -->
+### Chrome 108 {: #chrome108 }
+
+* [不活跃 CSS 属性的提示](/zh/blog/new-in-devtools-108/#css-hint)
+* [在 Recorder 面板中自动检测 XPath 和文本选择器](/zh/blog/new-in-devtools-108/#recorder)
+* [逐步执行逗号分隔的表达式](/zh/blog/new-in-devtools-108/#debugging)
+* [改进的忽略列表设置](/zh/blog/new-in-devtools-108/#ignore-list)
+* [其他的更新](/zh/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 

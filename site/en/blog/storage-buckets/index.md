@@ -10,7 +10,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-11-04
-# updated: 2022-11-04
+updated: 2022-11-08
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/uSUKNoGdlmEsXAtHr0yJ.jpg
 alt: Several buckets with paint in different colors in them.
 tags:
@@ -18,8 +18,10 @@ tags:
 ---
 
 The [Storage Standard](https://storage.spec.whatwg.org/) defines an API for persistent storage and
-quota estimates, and the platform storage architecture. It's available behind the
-`#enable-experimental-web-platform-features` flag in Chromium 106, and we'd love your feedback.
+quota estimates, and the platform storage architecture.
+We're experimenting with an API for making persistent storage eviction under heavy
+memory pressure more predictable. It's available behind the
+`#enable-experimental-web-platform-features` flag in Chromium&nbsp;106, and we'd love your feedback.
 
 ## What problem does the storage standard aim to solve?
 
@@ -122,6 +124,14 @@ const inboxDb = await new Promise(resolve => {
   request.onerror = () => reject(request.error);
 });
 ```
+
+{% Aside %}
+Apart from IndexedDB, the
+[explainer mentions several other storage APIs](https://wicg.github.io/storage-buckets/explainer#accessing-storage-apis-from-buckets).
+ For example, the [Cache API](https://developer.mozilla.org/docs/Web/API/Cache)
+and [File API](https://developer.mozilla.org/docs/Web/API/File_API). The current implementation is only 
+the IndexedDB API.
+{% endAside %}
 
 ## Feedback
 
