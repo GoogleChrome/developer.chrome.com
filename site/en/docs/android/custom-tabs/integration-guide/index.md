@@ -69,7 +69,7 @@ Starting a new browser sessions is the recommended approach to launching a parti
 {% Aside 'gotchas' %}
 * Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
 
-2. Custom Tabs will inherit the host app's color scheme for the UI properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a Custom Tab.
+* Custom Tabs will inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a Custom Tab.
 
 {% endAside %}
 
