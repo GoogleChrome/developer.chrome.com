@@ -107,6 +107,8 @@ The Speculation Rules API is planned to be expanded beyond this simple example w
 
 For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. Chrome 109 plans expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
 
+#### Detecting of Speculation Rules API support
+
 You can feature detect Speculation Rules API support with standard HTML checks:
 
 ```js
@@ -206,7 +208,13 @@ if (HTMLScriptElement.supports &&
 
 You can view a demo of Speculation Rules API prerendering on [this demo page](https://prerender-demos.glitch.me/).
 
+#### Cancelling Speculation Rules
+
 Removing Speculation Rules will result in the prerender being cancelled but by the time this has happened resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
+
+#### Speculation Rules and Content Security Policy
+
+As Speculation Rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this, either using a hash or nonce. In future an `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
 
 ## Detecting and disabling prerendering
 
