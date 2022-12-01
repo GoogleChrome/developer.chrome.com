@@ -6,7 +6,7 @@ updated: 2022-11-29
 description: Reference documentation for the key property of manifest.json.
 ---
 
-This value can be used to maintain the unique ID of an extension, or theme when it is loaded
+This value maintains the unique ID of an extension, or theme when it is loaded
 during development. The following are some common use cases:
 
 - To configure a server to only accept requests from your Chrome Extension origin.
