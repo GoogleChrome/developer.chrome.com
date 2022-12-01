@@ -6,8 +6,8 @@ description: |
  The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108
 authors:
  - tunetheweb
-date: 2022-11-30
-#updated: 2022-11-30
+date: 2022-12-01
+#updated: 2022-12-01
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
