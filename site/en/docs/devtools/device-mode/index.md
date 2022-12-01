@@ -12,6 +12,8 @@ tags:
   - test
 ---
 
+{% YouTube id='f7kokNyRe7U' %}
+
 Use Device Mode to approximate how your page looks and performs on a mobile device.
 
 Device Mode is the name for the loose collection of features in Chrome DevTools that help you
