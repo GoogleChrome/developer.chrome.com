@@ -30,7 +30,7 @@ IP Protection is a proposal to avoid sharing a user's real IP address with third
 
 ## How will IP Protection work?
 
-IP Protection proposes to anonymize the IP address for third parties identified as potentially as using IP addresses for web-wide cross-site tracking.
+IP Protection proposes to anonymize the IP address for [third parties identified as potentially using IP addresses for web-wide cross-site tracking](https://github.com/spanicker/ip-blindness#cross-site-tracking-and-the-role-of-ip-addresses).
  
 IP Protection proposes a two-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/spanicker/ip-blindness#privacy-proxy):
 
