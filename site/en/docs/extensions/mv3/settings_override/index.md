@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
 date: 2014-02-14
-updated: 2022-11-18
+updated: 2022-12-01
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
@@ -82,11 +82,13 @@ Values in the manifest can be customized in the following ways:
 
 An extension can override one or more of the following properties in the manifest:
 
-**`homepage` (string)** - optional
-: New value for the homepage.
+- **`homepage` (string)** - optional
 
-**`search_provider` (object)** - optional
-: A search engine. It can take any of the following values:
+  New value for the homepage.
+
+- **`search_provider` (object)** - optional
+
+  A search engine
 
   <table>
     <tbody>
@@ -193,8 +195,7 @@ An extension can override one or more of the following properties in the manifes
     </tbody>
   </table>
 
-**`startup_pages` (array of string)** - optional
-: An array of length one containing a URL to be used as the startup page.
+- **`startup_pages` (array of string)** - optional
 
 [1]: #homepage
 [2]: #search_provider
