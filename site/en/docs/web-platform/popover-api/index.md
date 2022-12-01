@@ -25,7 +25,7 @@ Popovers are used constantly, all over the web. Developers keep having to reimpl
 
 Any HTML element can be turned into a popover using the [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute. The Popover API provides the following default behavior:
 
-* Popovers are hidden by default (using `display: none`). To display a popover by default on page load, you can give it the [`defaultopen`](/docs/web-platform/popover-api/defaultopen-attribute) attribute.
+* Popovers are hidden by default (using `display: none`).
 * Popovers are also given a default fixed position in the center of the viewport, padding, and a border.
 * When shown, popovers are promoted to the [top layer](/blog/what-is-the-top-layer/) (above `document` and outside of `document` flow).
 * Popovers have light dismiss. By that, we mean you can close the popover with a close signal, such as clicking outside the popover, keyboard-navigating to another element, or pressing the Esc key.
@@ -49,9 +49,6 @@ You can show and dismiss popovers in two different ways:
 The Popover API also comes with a couple of handy CSS features, a [`::backdrop`](/docs/web-platform/popover-api/backdrop-pseudo-element) pseudo-element to style the document behind the popover when it is shown (for example, you might want to blur or fade the page while showing popovers), and an [`:open`](/docs/web-platform/popover-api/open-pseudo-class) pseudo-class to style the popover only when it is open.
 
 ## HTML attributes
-
-[`defaultopen`](/docs/web-platform/popover-api/defaultopen-attribute)
-: Causes a popover to automatically open on page load.
 
 [`popover`](/docs/web-platform/popover-api/popover-attribute)
 : Turns an element into a popover.
@@ -78,9 +75,6 @@ The Popover API also comes with a couple of handy CSS features, a [`::backdrop`]
 ### Extensions to `HTMLElement`
 
 Properties:
-
-[`defaultOpen`](/docs/web-platform/popover-api/defaultopen-property)
-: Causes a popover to automatically open on page load. DOM definition of the HTML [`defaultopen`](/docs/web-platform/popover-api/defaultopen-attribute) attribute.
 
 [`popover`](/docs/web-platform/popover-api/popover-property)
 : Turns an element into a popover. DOM definition of the HTML [`popover`](/docs/web-platform/popover-api/popover-attribute) attribute.
@@ -132,12 +126,6 @@ Declaratively create different types of popover. The first two are equivalent:
 <p id="my-popover" popover>Hello!</p>
 <p id="my-popover" popover="auto">Hello!</p>
 <p id="my-popover" popover="manual">Hello!</p>
-```
-
-Specify that a popover should open automatically on page load with [`defaultopen`](/docs/web-platform/popover-api/defaultopen-attribute):
-
-```html
-<p id="my-popover" popover="auto" defaultopen>Hello!</p>
 ```
 
 Declaratively create buttons to show and hide the popover:

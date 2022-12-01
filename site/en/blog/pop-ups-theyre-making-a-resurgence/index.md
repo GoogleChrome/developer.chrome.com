@@ -10,7 +10,7 @@ tags:
   - css
   - html
 date: 2022-09-13
-last_updated: 2022-11-10
+last_updated: 2022-12-01
 ---
 
 {% Aside 'caution' %}
@@ -169,7 +169,8 @@ Let's turn our attention to styling the popover. By default, a popover has a fix
   }
 %}
 
-If you want a popover to be shown on load, you can use the `defaultopen` attribute.
+<!-- Removed until v2 of the Popover API -->
+<!-- If you want a popover to be shown on load, you can use the `defaultopen` attribute.
 
 ```html
 <div popover defaultopen id=”pop”>Popover content!</div>
@@ -188,7 +189,7 @@ If you want a popover to be shown on load, you can use the `defaultopen` attribu
     loop: true,
     src: "video/Dyx9FwYgMyNqy1kMGx8Orz6q0qC3/IuseCtWYY3PzX1KJJRaZ.mp4"
   }
-%}
+%} -->
 
 Regardless of how you promote your popover, once you promote a popover to the top layer, you may need to lay it out or position it. You can't target the top layer and do something like
 
@@ -766,7 +767,7 @@ This demo shows how you might manage backdrops for mutliple popovers where you o
 
 This demo shows how to use `popover` to promote a `canvas` to the top layer and use it to show a custom cursor.
 
-- Promote `canvas` to top layer with `defaultopen` and `[popover=manual]`.
+- Promote `canvas` to top layer with `showPopover` and `[popover=manual]`.
 - When other popovers are opened, hide and show the `canvas` popover to make sure it's on top.
 
 {% Codepen {
@@ -905,7 +906,7 @@ This demo shows how you could have a popover follow an input caret.
 
 This demo shows how you could use popover to implement a floating action button menu without JavaScript.
 
-- Have a `manual` type popover with the `defaultopen` attribute set. This is the main button.
+- Promote a `manual` type popover with the `showPopover` method. This is the main button.
 - The menu is another popover that is the target of the main button.
 - Menu is opened with `popovertoggletarget`.
 - Use `autofocus` to focus the first menu item on show.
