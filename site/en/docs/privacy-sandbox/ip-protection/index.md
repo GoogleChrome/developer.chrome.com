@@ -32,18 +32,18 @@ IP Protection is a proposal to avoid sharing a user's real IP address with third
 
 IP Protection proposes to anonymize the IP address for third parties identified as potentially as using IP addresses for web-wide cross-site tracking.
  
-IP Protection proposes a 2-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/spanicker/ip-blindness#privacy-proxy):
+IP Protection proposes a two-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/spanicker/ip-blindness#privacy-proxy):
 
 * To stop a destination origin from seeing the client’s original IP address.
 * To make sure that proxy and network intermediaries are not privy to the contents of traffic between the client and the destination origin.
 
 ### GeoIP
 
-IP-based geolocation is used by a number of services within proxied third-party traffic to obey local laws and regulations. They let services provide content that is relevant to users, such as content localization (for example, to set language), local cache assignment, and geo targeting for ads. To support these needs, the privacy proxy assigns IP addresses that represent the user’s coarse location, including country.
+IP-based geolocation is used by a number of services within proxied third-party traffic to help services obey local laws and regulations. They also allow services to provide content that is relevant to users, such as content localization (for example, to set language), local cache assignment, and geotargeting for ads. To support these needs, the privacy proxy assigns IP addresses that represent the user’s coarse location, including country.
 
 ## When will IP Protection be available?
 
-IP protection will not launch as a default setting for Chrome users before 2024. Testing and launch timelines will be informed partly from ecosystem input. The timelines are independent of other anti-covert tracking efforts like phasing out third-party cookies and reducing the information shared by default in the user agent.
+IP protection will not be available by default for Chrome Stable users before 2024. Testing and launch timelines will be informed partly by ecosystem input. The timelines are independent of other anti-covert-tracking efforts like phasing out third-party cookies and reducing the information shared by default in the user agent.
 
 ## Engage and share feedback
 
