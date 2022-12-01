@@ -12,12 +12,12 @@ authors:
 
 Accept-Language Reduction is an effort to reduce passive fingerprinting
 surfaces by reducing the user's language preferences in the
-[`Accept-Language`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+[`Accept-Language`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language)
 header and only sending the user's most preferred language (just one).
 
 Beginning with the [Chrome 109](https://chromiumdash.appspot.com/schedule)
 Beta, we'll open up
-[the origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7166352907053301759)
+[the origin trial](/origintrials/#/view_trial/-7166352907053301759)
 for Accept-Language Reduction enabling sites to opt into receiving the reduced
 `Accept-Language` header. This will allow sites to discover and fix problems
 before the reduced `Accept-Language` becomes the default behavior in Chrome in a
@@ -118,13 +118,13 @@ to learn more about the internal Chromium implementation, you can read more in
 ## Participate in the Accept-Language Reduction origin trial
 
 You can read further guidance in
-[Getting started with Chrome's origin trials](https://developer.chrome.com/docs/web-platform/origin-trials/),
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/),
 but the essential steps are shown below.
 
 ### Step 1
 To register for the origin trial and get a token for your domains,
 visit the
-[Trial for Accept-Language Reduction](https://developer.chrome.com/origintrials/#/view_trial/-7166352907053301759)
+[Trial for Accept-Language Reduction](/origintrials/#/view_trial/-7166352907053301759)
 page.
 
 ### Step 2
@@ -231,7 +231,7 @@ redirects on
 ## Third-party origin trial support
 
 We currently don't support registering your domains as a
-[third-party for the trial](https://developer.chrome.com/docs/web-platform/third-party-origin-trials/).
+[third-party for the trial](/docs/web-platform/third-party-origin-trials/).
 If you operate a service that is implemented as a subresource across origins
 (like ad serving or analytics), you will only receive the reduced
 `Accept-Language` header if the top-level site is participating in the origin
@@ -240,7 +240,7 @@ trial.
 ## Validate that the origin trial is working
 
 The guide to
-[troubleshooting Chrome's origin trials](https://developer.chrome.com/docs/web-platform/origin-trial-troubleshooting/)
+[troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting/)
 provides a full checklist for ensuring your token is correctly configured.
 
 You configure multiple languages and their priority from
