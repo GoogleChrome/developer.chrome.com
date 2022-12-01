@@ -16,7 +16,7 @@ This proposal previously had a different scope and was known as Gnatcatcher, or 
 
 ## Implementation status
 
-This document outlines a new proposal to prevent covert tracking: IP Protection.
+This document outlines the IP Protection proposal to help prevent covert tracking, which has evolved from [Gnatcatcher](/docs/privacy-sandbox/gnatcatcher/).
 
 *  The [IP Protection proposal](https://github.com/spanicker/ip-blindness) has entered [public discussion](https://github.com/spanicker/ip-blindness/issues).
 *  This proposal has not been implemented in any browser.
