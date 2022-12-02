@@ -43,7 +43,7 @@ IP-based geolocation is used by a number of services within proxied third-party 
 
 ## When will IP Protection be available?
 
-IP protection will not launch as a default setting for Chrome users before 2024. Testing and launch timelines will be informed partly by ecosystem input. The timelines are independent of other anti-covert-tracking efforts like phasing out third-party cookies and reducing the information shared by default in the user agent.
+IP protection will not launch as a default setting for Chrome users before 2024. Testing and launch timelines will be determined in accordance with [our commitments](https://blog.google/around-the-globe/google-europe/path-forward-privacy-sandbox/) to the UK’s Competition and Markets Authority, and informed by ecosystem input. The timelines are independent of other efforts like reducing the information shared by default in the user agent.
 
 ## Engage and share feedback
 
