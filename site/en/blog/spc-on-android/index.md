@@ -85,13 +85,13 @@ that relying party across any merchant that integrates SPC.
 
 ## API changes
 
-Developers can follow [the existing implementation 
-guide](/articles/secure-payment-confirmation/) 
-written for desktop integration to learn how the API works. There is only one 
-API change that developers need to be aware of with this launch. Due to [a 
-technical limitation](crbug.com/1393662) at time of launch, SPC for Google 
-Chrome on Android does not yet support [discoverable 
-credentials](https://w3c.github.io/webauthn/#client-side-discoverable-credential). 
+Developers can follow [the existing implementation
+guide](/articles/secure-payment-confirmation/) written for desktop integration
+to learn how the API works. There is only one API change that developers need to
+be aware of with this launch. Due to [a technical
+limitation](https://crbug.com/1393662) at time of launch, SPC for Google Chrome
+on Android does not yet support [discoverable
+credentials](https://w3c.github.io/webauthn/#client-side-discoverable-credential).
 This limitation is being worked on, but will not be available in M109.
 
 Due to this, developers should pass `preferred` (instead of `required`) for the
@@ -115,7 +115,7 @@ navigator.credentials.create({
 });
 ```
 
-The `payments` property indicates that this is an SPC credential. See the
+The `payment` property indicates that this is an SPC credential. See the
 previous [registration
 guide](/articles/register-secure-payment-confirmation/#register-an-authenticator)
 to learn how to use it.
