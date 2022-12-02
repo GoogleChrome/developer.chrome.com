@@ -181,7 +181,7 @@ to `"xyz"` when the prerendered page becomes the active page.
 </figure>
 
 When a page transitions from either Back/Forward Cache or prerender to the
-active state there will be three more events (but with `DcumentLifecyle`
+active state there will be three more events (but with `DocumentLifecyle`
 being `"active"`).
 
 ```js
