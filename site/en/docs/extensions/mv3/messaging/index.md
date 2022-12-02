@@ -105,7 +105,7 @@ port.onMessage.addListener(function(msg) {
 
 Sending a request from the extension to a content script is similar, except that you need to
 specify which tab to connect to. Simply replace the call to connect in the above example with
-[tabs.connect][10].
+[tabs.connect()][10].
 
 In order to handle incoming connections, you need to set up a [runtime.onConnect][11] event
 listener. This looks the same from a content script or an extension page. When another part of your
