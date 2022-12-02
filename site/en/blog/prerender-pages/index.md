@@ -6,8 +6,8 @@ description: |
  The Chrome team has been working on options to bring back full prerendering of future pages that a user is likely to navigate to. This modern reboot of prerendering will start rolling out from Chrome 108
 authors:
  - tunetheweb
-date: 2022-12-01
-#updated: 2022-12-01
+date: 2022-12-02
+#updated: 2022-12-02
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -88,7 +88,7 @@ Chrome will continually update its predictors based on your typing and selection
 
 ### Using the Speculation Rules API to prerender pages
 
-For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs would to prerender:
+For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs to prerender:
 
 ```html
 <script type="speculationrules">
@@ -103,7 +103,7 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) (for example, matching `href` patterns), which can be combined to only prerender same-orgin links on mouse down, for example.
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead fo `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
 
 For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
 
@@ -112,7 +112,7 @@ For the initial launch in Chrome 108, prerender is restricted to same-origin pag
 Speculation rules can be:
 
 * Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
-* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`.
+* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
@@ -212,15 +212,15 @@ if (HTMLScriptElement.supports &&
 }
 ```
 
-You can view a demo of Speculation Rules API prerendering on [this demo page](https://prerender-demos.glitch.me/).
+You can view a demo of Speculation Rules API prerendering, using JavaScript insertion, on [this demo page](https://prerender-demos.glitch.me/).
 
 #### Cancelling Speculation Rules
 
-Removing Speculation Rules will result in the prerender being cancelled but by the time this has happened resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
+Removing Speculation Rules will result in the prerender being cancelled but, by the time this has happened, resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
 
 #### Speculation Rules and Content Security Policy
 
-As Speculation Rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this, either using a hash or nonce. In future an `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
+As Speculation Rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce. In future, a new `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
 
 ## Detecting and disabling prerendering
 
@@ -242,7 +242,7 @@ Sec-Purpose: prefetch;prerender
 
 Servers can respond based on this header, to log prerender requests, return different content, or prevent the prerender from happening. If a non-success response code is returned (that is, not a 200 or a 304), then the page will not be prerendered.
 
-If you absolutely do not want a particular page to be prerendered, this is the best way to ensure it won't happen.
+If you absolutely do not want a particular page to be prerendered, this is the best way to ensure it won't happen. However, to deliver the best experience, it is recommended to instead allow prerendering, but delay any actions that should only happen then the page is actually viewed, using JavaScript.
 
 ### Detecting prerender in JavaScript
 
@@ -277,11 +277,11 @@ Using these APIs, front-end JavaScript can detect and act upon prerendered pages
 
 ## Impact on analytics
 
-Analytics is used to measure website usage, for example using Google Analytics to measure page views, and events. Or by measuring performance metrics of pages using [Real User Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring).
+Analytics are used to measure website usage, for example using Google Analytics to measure page views, and events. Or by measuring performance metrics of pages using [Real User Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring).
 
-Pages should only be prerendered when there is a high probability the page will be loaded by the user. This is why the Chrome address bar prerendering options only happen when there is such a high probability (80% or higher).
+Pages should only be prerendered when there is a high probability the page will be loaded by the user. This is why the Chrome address bar prerendering options only happen when there is such a high probability (greater than 80% of the time).
 
-However, particularly when using the Speculation Rules API, prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation.
+However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation.
 
 This could be achieved by using a `Promise` which waits for the `prerenderingchange` event if a document is prerendering, or resolves immediately if it is now:
 
@@ -312,11 +312,11 @@ For measuring performance metrics, analytics should consider whether it is bette
 
 For Core Web Vitals, measured by Chrome through the [Chrome User Experience Report](/docs/crux/), these are intended to measure the user experience. So these are measured based on activation time. This will often result in a 0 second LCP for example, showing this is great way of improving your Core Web Vitals.
 
-From version 3.1.0, the [`web-vitals` library](https://github.com/GoogleChrome/web-vitals) has been updated to handle prerendered navigations in the same way Chrome measure Core Web Vitals. This version also flags prerendered navigations for those metrics in the [`Metric.navigationType`](https://github.com/GoogleChrome/web-vitals#metric) attribute, which is discussed next.
+From version 3.1.0, the [`web-vitals` library](https://github.com/GoogleChrome/web-vitals) has been updated to handle prerendered navigations in the same way Chrome measures Core Web Vitals. This version also flags prerendered navigations for those metrics in the [`Metric.navigationType`](https://github.com/GoogleChrome/web-vitals#metric) attribute.
 
 ### Measuring prerenders
 
-Whether a page is prerendered can be seen with a non-zero `activationStart` entry of [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming), supplemented with changes for some navigation currently not reported by that. This can then be logged using a Custom Dimension, or similar when logging the page views, for example using the `pagePrerendered` function above:
+Whether a page is prerendered can be seen with a non-zero `activationStart` entry of [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming). This can then be logged using a Custom Dimension, or similar when logging the page views, for example using the `pagePrerendered` function above:
 
 ```js
 // Set Custom Dimension for Prerender status
@@ -333,7 +333,7 @@ As you measure the business impact of prerendering pages for instant navigations
 
 In addition to measuring the impact of pages that are visited after a prerender, it is also important to measure pages that are prerendered and _not_ subsequently visited. This could imply you are prerendering too much, and using up valuable resources of the user for little benefit.
 
-This can be measured by firing an analytics event when speculation rules are inserted—after checking the browser supports prerendering using `HTMLScriptElement.supports('speculationrules'))`—to indicate that prerender was requested. (Note that just because a prerender was requested, does not indicate that a prerender was started or completed as, as noted previously a prerender is a hint to the browser and it may choose not to prerender pages on user settings, current memory usage, or other heuristics.)
+This can be measured by firing an analytics event when speculation rules are inserted—after checking the browser supports prerendering using `HTMLScriptElement.supports('speculationrules')`—to indicate that prerender was requested. (Note that just because a prerender was requested, does not indicate that a prerender was started or completed as, as noted previously, a prerender is a hint to the browser and it may choose not to prerender pages on user settings, current memory usage, or other heuristics.)
 
 You can then compare the number of these events, to the actual prerender page views. Or alternatively fire another event on activation if that makes it easier to compare.
 
