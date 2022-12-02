@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a Featured Card
-description: 'Add a Featured Card'
+title: Add a Landing Page
+description: 'Add a Landing Page'
 date: 2022-12-29
 ---
 
