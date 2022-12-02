@@ -32,6 +32,12 @@ compare_before:
 compare_after:
   en: 'After'
 
+compare_current:
+  en: 'Current'
+
+compare_proposed:
+  en: 'Proposed' 
+
 menu:
   en: 'menu'
   es: 'menu'
