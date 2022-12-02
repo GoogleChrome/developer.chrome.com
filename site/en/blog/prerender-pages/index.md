@@ -349,7 +349,6 @@ Prerendering is in active development by the Chrome team, and there are plenty o
 
 ## Related links
 
-- [Bringing instant page-loads to the browser through speculative prerendering](https://web.dev/speculative-prerendering/)
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
 - [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)
