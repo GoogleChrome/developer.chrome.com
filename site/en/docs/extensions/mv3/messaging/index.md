@@ -72,7 +72,7 @@ ignored.
 For new extensions you should prefer promises over callbacks. If you're using callbacks, the
 `sendResponse()` callback is only valid if used synchronously, or if the event handler returns
 `true` to indicate that it will respond asynchronously. The `sendMessage()` function's callback
-will be invoked automatically if no handlers return true or if the `sendResponse() callback is
+will be invoked automatically if no handlers return true or if the `sendResponse()` callback is
 garbage-collected.
 
 ## Long-lived connections {: #connect }
