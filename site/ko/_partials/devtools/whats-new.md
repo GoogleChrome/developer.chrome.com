@@ -4,14 +4,14 @@
 
 {# $content #}
 
-{# ### Chrome 108 {: #chrome108 }
+### Chrome 108 {: #chrome108 }
 
-* [Hints for inactive CSS properties](/ko/blog/new-in-devtools-108/#css-hint)
-* [Auto-detect XPath and text selectors in the Recorder panel](/ko/blog/new-in-devtools-108/#recorder)
-* [Step through comma-separated expressions](/ko/blog/new-in-devtools-108/#debugging)
-* [Improved Ignore list setting](/ko/blog/new-in-devtools-108/#ignore-list)
-* [Miscellaneous highlights](/ko/blog/new-in-devtools-108/#misc)
- #}
+* [비활성화된 CSS 프로퍼티에 대한 힌트](/ko/blog/new-in-devtools-108/#css-hint)
+* [Recoder 패널에서의 XPath 와 텍스트 셀렉터의 자동 인식](/ko/blog/new-in-devtools-108/#recorder)
+* [쉼표로 구분된 표현식을 통한 진행](/ko/blog/new-in-devtools-108/#debugging)
+* [개선된 무시 목록 설정](/ko/blog/new-in-devtools-108/#ignore-list)
+* [기타 하이라이트](/ko/blog/new-in-devtools-108/#misc)
+
 
 ### Chrome 107 {: #chrome107 }
 

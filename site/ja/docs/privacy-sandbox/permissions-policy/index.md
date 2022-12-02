@@ -81,7 +81,7 @@ Permissions-Policy: geolocation=(self "https://trusted-site.example")
 
 1. 自分のサイト `https://your-site.example` は、ユーザーの同意を得て位置情報機能を使用することが許可されています。
 1. 同一オリジンの iframe（`https://your-site.example`）は、`allow` 属性を使用せずにこの機能を使用できます。
-1. オリジンリストには追加されていないが、iframe タグに allow 属性が設定されている、別のサブドメイン（`https://subdomain.your-site-example`）から配信される iframe は、この機能の使用をブロックされています。 異なるサブドメインは同一サイトであってもクロスオリジンとは見なされません。
+1. オリジンリストには追加されていないが、iframe タグに allow 属性が設定されている、別のサブドメイン（`https://subdomain.your-site-example`）から配信される iframe は、この機能の使用をブロックされています。 異なるサブドメインは同一サイトであってもクロスオリジンと見なされます。
 1. オリジンリストに追加されており、iframe タグに `allow` 属性が設定されているクロスオリジン iframe（`https://trusted-site.example`）は、この機能を使用できます。
 1. オリジンリストに追加されたクロスオリジン iframe（`https://trusted-site.example`）は、`allow` 属性ないため、この機能の使用をブロックされています。
 1. オリジンリストに追加されていないクロスオリジン iframe（`https://ad.example`）は、`allow` 属性が iframe に含まれていてる場合でも、この機能の使用をブロックされています。
@@ -290,7 +290,7 @@ Permissions-Policy:
 
 ### `document.allowsFeature(feature, origin)` の使用を更新する
 
-`document.allowsFeature(feature, origin)` メソッドを使用して iframe に許可された機能を確認する場合は、iframe を格納する `document` ではなく、iframe element に関連付けられた `allowFeature(feature)` メソッドを使用します。 `element.allowsFeature(feature)` メソッドは allow 属性を考慮しますが、`document.allowsFeature(feature, origin)` は考慮しません。
+`document.allowsFeature(feature, origin)` メソッドを使用して iframe に許可された機能を確認する場合は、iframe を格納する `document` ではなく、iframe element に関連付けられた `allowsFeature(feature)` メソッドを使用します。 `element.allowsFeature(feature)` メソッドは allow 属性を考慮しますが、`document.allowsFeature(feature, origin)` は考慮しません。
 
 #### `document` で機能アクセスをチェックする
 `document` をベースノードとして引き続き使用する場合は、iframe タグの `allow` 属性をさらにチェックする必要があります。

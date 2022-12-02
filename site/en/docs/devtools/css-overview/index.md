@@ -12,67 +12,67 @@ tags:
 
 {% YouTube id="OAP_Sr0zb5I" %}
 
-Use the **CSS Overview** panel to better understand your page’s CSS and identify potential improvements.
+Use the **CSS Overview** panel to better understand your page's CSS and identify potential improvements.
 
 {% Aside %}
-This is a preview feature in Chrome 96. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. 
+This is a preview feature in Chrome 96. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements.
 {% endAside %}
 
 ## Open the CSS Overview panel {: #open }
 
 1.  Open any web page, such as [this page](/tags/devtools).
 2.  [Open DevTools](/docs/devtools/open).
-3.  Click on **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **More tools** > **CSS Overview**.
+3.  Select {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="More.", width="24", height="24" %} **Customize and control DevTools** > **More tools** > **CSS Overview**.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZgANax148j47ZtV9VRj3.png", alt="CSS Overview in the menu", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZgANax148j47ZtV9VRj3.png", alt="CSS Overview in the menu.", width="800", height="509" %}
 
     Alternatively, use the [Command Menu](/docs/devtools/command-menu/) to open the **CSS Overview** panel.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YmnjqTZFqJOrk9TCwLbo.png", alt="Show CSS Overview command in the Command menu", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YmnjqTZFqJOrk9TCwLbo.png", alt="Show CSS Overview command in the Command menu.", width="800", height="509" %}
 
 
 ## Run and re-run a CSS Overview report {: #run }
 
-1.  Click on the **Capture overview** button to generate a CSS Overview report of your page.
+1.  Click the **Capture overview** button to generate a CSS Overview report of your page.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GbwczkM8mkUWINxxA01j.png", alt="Capture CSS Overview", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GbwczkM8mkUWINxxA01j.png", alt="Capture CSS Overview.", width="800", height="509" %}
 
-2.  To re-run a CSS Overview, click on the **clear overview** icon, and repeat step 1.
+2.  To re-run a CSS Overview, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MadqZsIZpo1sj3qQ3GsZ.svg", alt="Clear.", width="24", height="24" %} **Clear overview** icon and repeat the first step.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4A5jqlRP2nuWeWHDgWZ8.png", alt="Clear overview", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4A5jqlRP2nuWeWHDgWZ8.png", alt="Clear overview.", width="800", height="509" %}
 
 
 ## Understand the CSS Overview report {: #report }
 
-The report consists of 5 sections:-
+The report consists of five sections:
 
 1. **Overview summary**. A high level summary of your page's CSS.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4A5jqlRP2nuWeWHDgWZ8.png", alt="Overview summary", width="800", height="509" %}
-2. **Colors**. All the colors in your page. The colors are grouped by usages such as background colors, text colors, etc. It also shows you the texts that have low contrast issues.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4A5jqlRP2nuWeWHDgWZ8.png", alt="Overview summary.", width="800", height="509" %}
+2. **Colors**. All the colors on your page. The colors are grouped by types, such as background colors, text colors, etc. This sections also shows you texts that have low contrast issues.
     
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eisnLKYHntSVjiGXQr67.png", alt="Colors", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eisnLKYHntSVjiGXQr67.png", alt="Colors.", width="800", height="509" %}
   
-    Each of the color is clickable. For example, say this border color `#DADCE0` doesn’t match the color scheme of your site, click on it to get a list of elements that use the color. 
+    Each color is clickable. For example, suppose the `#DADCE0` border color doesn't match the color scheme of your site. To get a list of elements that use this color, click the color. 
   
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4aRfPegsy9VipGUlfwLf.png", alt="A list of elements that use the color", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4aRfPegsy9VipGUlfwLf.png", alt="A list of elements that use the color.", width="800", height="509" %}
   
-    Hover over an element in the list to highlight the element in the page.
+    To highlight the element on the page, hover over the element in the list.
   
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLqbl8u59606CoksXQtI.png", alt="Hover over an element to highlight the element in the page", width="800", height="592" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLqbl8u59606CoksXQtI.png", alt="Hover over an element to highlight the element on the page.", width="800", height="592" %}
 
-    Click on the element in the list to open the element in the **Elements** panel.
+    To open the element in the **Elements** panel, click the element in the list.
 
-3. **Font info**. All the fonts in your page and its occurrences, grouped by different font size, font weight and line height. Similar to the **Colors** section, you can click on the occurrences to view the list of affected elements.
+3. **Font info**. All the fonts on your page and their occurrences, grouped by different font size, font weight, and line height. Similar to the **Colors** section, to view the list of affected elements, click their occurrences.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5PtqMQtV7WRe6NFEZKRR.png", alt="Font info", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5PtqMQtV7WRe6NFEZKRR.png", alt="Font info.", width="800", height="509" %}
 
-4. **Unused declarations**. All the styles which have no effect, grouped by reason. 
+4. **Unused declarations**. All the styles that have no effect, grouped by reason. 
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LJ2oxJ9C037v66BSWhQ1.png", alt="Unused declarations", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LJ2oxJ9C037v66BSWhQ1.png", alt="Unused declarations.", width="800", height="509" %}
 
-    For example, the 2 declarations above are unused because the height and width of an inline element are determined by its content. Clicking the occurrences to view the affected elements. 
+    For example, the two declarations above are unused because the content determines the height and width of an inline element. To view the corresponding elements, click the occurrences.
 
-5. **Media queries**. All the media queries defined in your page, sorted by the highest occurrences. Click on the occurrences to view the list of affected elements.
+5. **Media queries**. All the media queries defined on your page, sorted by number of occurrences in descending order. To view the list of affected elements, click their occurrences.
 
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aXZMYB5ceeklWzs53fcg.png", alt="Media queries", width="800", height="509" %}
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aXZMYB5ceeklWzs53fcg.png", alt="Media queries.", width="800", height="509" %}
 

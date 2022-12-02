@@ -5,11 +5,13 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2021-11-02
-updated: 2022-03-25
+updated: 2022-11-29
 description: "Record, replay, measure user flows, and edit their steps with the Recorder panel."
 tags:
   - test
   - performance
+anchorRedirects:
+  selector: /docs/devtools/recorder/reference/#selector
 ---
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below.
@@ -62,10 +64,11 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
 1. Enter "coffee checkout" in the **Recording name** textbox.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EnRcThJpdtY6c91ZTRMT.png", alt="Start a new recording.", width="800", height="520" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MTIDldRAYMHBnnKSmnVy.png", alt="Start a new recording.", width="800", height="529" %}
    {% Aside %}
-   The **Selector attribute** textbox is optional. Leave it blank as it is. For more information, see [Customize the recording's selector](/docs/devtools/recorder/reference/#customize-selector).
+   The **Selector attribute** textbox and **Selector types to record** checkboxes are optional. For this tutorial, leave the defaults as they are.
 
+   For more information, see [Understand selectors](/docs/devtools/recorder/reference/#selector).
    {% endAside %}
 1. Click on the **Start a new recording** button. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress.", width="800", height="528" %} 
