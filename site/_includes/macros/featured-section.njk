@@ -1,4 +1,4 @@
-{% from 'macros/cards/featured-blog-card.njk' import featuredBlogCard with context %}
+{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
 {% from 'macros/cards/featured-card.njk' import featuredCard with context %}
 
 {% macro featuredSection(options) %}
@@ -8,7 +8,7 @@
     {% if card.postUrl %}
       {% set post = helpers.findByUrl(collections.all, card.postUrl, locale) %}
       {% if post %}
-        {{ featuredBlogCard(post, {
+        {{ featuredPostCard(post, {
           icon: 'star',
           actionText: card.actionText,
           actionUrl: card.actionUrl
@@ -16,7 +16,7 @@
       {% else %}
         {% set blog = 'blog-' + locale %}
         {% set index =  loop.index  %}
-        {{ featuredBlogCard(collections[blog][index], {
+        {{ featuredPostCard(collections[blog][index], {
           title: 'i18n.nav.side_nav.blog' | i18n(locale),
           actionText: 'i18n.common.see_all_articles' | i18n(locale),
           actionUrl: '/blog'

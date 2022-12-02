@@ -59,7 +59,7 @@ To add an **Featured Card** to the page, you can use the {% raw %}`{{ featuredCa
 
 Featured Blog Card is a card component that displays your post. It includes post title, content, thumbnail, and authors detail.
 
-The `featuredBlogCard` component requires these fields:
+The `featuredPostCard` component requires these fields:
 
 - `post` — a relative url path to a single blog post page.
 - `options`
@@ -67,19 +67,19 @@ The `featuredBlogCard` component requires these fields:
   - `actionUrl`— an url of the CTA at the bottom of the card.
   - `actionText`— a text of the CTA at the bottom of the card.
 
-To add an **Featured Blog Card** to the page, you can use the {% raw %}`{{ featuredBlogCard }}`{% endraw %} shortcode.
+To add an **Featured Blog Card** to the page, you can use the {% raw %}`{{ featuredPostCard }}`{% endraw %} shortcode.
 
 {% raw %}
 
 ```md
-{% from 'macros/cards/featured-blog-card.njk' import featuredBlogCard with context %}
+{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
 ```
 
 ```md
 {% set url = '/blog/devtools-tips-2/' %}
 {% set post = helpers.findByUrl(collections.all, url, locale) %}
 
-{{ featuredBlogCard(
+{{ featuredPostCard(
   post, {
     icon: 'star',
     actionText: 'Discover',
@@ -90,11 +90,11 @@ To add an **Featured Blog Card** to the page, you can use the {% raw %}`{{ featu
 
 {% endraw %}
 
-{% from 'macros/cards/featured-blog-card.njk' import featuredBlogCard with context %}
+{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
 {% set post = helpers.findByUrl(collections.all, '/blog/insider-april-2022/', locale) %}
 
 <!-- lint disable no-unescaped-template-tags -->
-{{ featuredBlogCard(
+{{ featuredPostCard(
   post, {
     icon: 'star',
     actionText: 'Discover',
