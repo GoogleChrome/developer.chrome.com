@@ -62,14 +62,14 @@ In general, the webNavigation events are closely related to the navigation state
 in the UI, while the webRequest events correspond to the state of the network stack which is
 generally opaque to the user.
 
-## A note about tab IDs
+## Tab IDs
 
 Not all navigating tabs correspond to actual tabs in Chrome's UI, e.g., a tab that is being
 pre-rendered. Such tabs are not accessible via the [tabs API][7] nor can you request information
 about them via `webNavigation.getFrame` or `webNavigation.getAllFrames`. Once such a tab is swapped
 in, an `onTabReplaced` event is fired and they become accessible via these APIs.
 
-## A note about timestamps
+## Timestamps
 
 It's important to note that some technical oddities in the OS's handling of distinct Chrome
 processes can cause the clock to be skewed between the browser itself and extension processes. That
@@ -78,7 +78,7 @@ consistent. Comparing one event to another event will give you the correct offse
 comparing them to the current time inside the extension (via `(new Date()).getTime()`, for instance)
 might give unexpected results.
 
-## A note about frame IDs
+## Frame IDs
 
 Frames within a tab can be identified by a frame ID. The frame ID of the main frame is always 0, the
 ID of child frames is a positive number. Once a document is constructed in a frame, its frame ID
@@ -95,6 +95,22 @@ distinguished by the `processId` key.
 Also note that during a provisional load the process might be switched several times. This happens
 when the load is redirected to a different site. In this case, you will receive repeated
 `onBeforeNavigate` and `onErrorOccurred` events, until you receive the final `onCommitted` event.
+
+
+
+
+
+Another concept that is problematic with extensions is the lifecycle of the
+frame. A frame hosts a document (which is associated with a committed URL).
+The document can change (say by navigating) but the *frameId* won’t, and so it
+is difficult to associate that something happened in a specific document with
+just *frameIds*. We are introducing a concept of a [documentId](/docs/extensions/reference/webNavigation/#method-getFrame:~:text=retrieve%20information%20about.-,documentId,-string%C2%A0optional)
+which is a unique identifier per document. If a frame is navigated and opens a
+new document the identifier will change. This field is useful for determining
+when pages change their lifecycle state (between prerender/active/cached)
+because it remains the same.
+
+
 
 ## Transition types and qualifiers
 

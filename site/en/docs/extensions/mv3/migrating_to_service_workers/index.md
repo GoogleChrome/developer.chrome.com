@@ -191,7 +191,7 @@ exposes the capabilities that web developers are used to working with: `window`,
 `cookie`, `localStorage`, etc.
 
 The [global scope for service worker][8] is significantly more limited and doesn't have many of
-these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link].
+these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link]. `URL.createObjectURL` is also not supported for service workers, due to its potential to create memory leaks. 
 
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.

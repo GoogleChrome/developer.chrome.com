@@ -63,7 +63,10 @@
     "github": "schuay"
   },
   "dtapuska": {
-    "twitter": "dtapuska"
+    "twitter": "dtapuska",
+    "github": "dtapuska",
+    "image": "image/zKrSUSkPboWMTTSEkowJbqw5Egi2/PMKyfQoKPntnI4amz8LD.jpeg",
+    "country": "CA"
   },
   "bokan": {
     "twitter": "david_bokan"
@@ -1013,5 +1016,9 @@
     "github": "acomminos",
     "twitter": "acomminos",
     "image": "image/admin/ykAIcNpbomeiulF6Kw7P.jpg"
+  },
+  "smcgruer": {
+    "github": "stephenmcgruer",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/QAh4CYAgpGaIc0JjgpAw.jpg"
   }
 }
