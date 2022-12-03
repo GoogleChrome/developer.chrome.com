@@ -43,7 +43,7 @@ Lighthouse doesn't detect that scenario, either.
 
 To quickly find and inspect the code that's preventing pasting:
 
-1. Expand the [**Event Listener Breakpoints**](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints#event-listeners) pane.
+1. Expand the [**Event Listener Breakpoints**](/docs/devtools/javascript/breakpoints/#event-listeners) pane.
 1. Expand the **Clipboard** list.
 1. Select the **`paste`** checkbox.
 1. Paste some text into a password field on your page.

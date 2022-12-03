@@ -104,7 +104,7 @@ about how to evaluate the FID data you collect.
 - [First paint and first contentful paint][fcp]
 - [How To Think About Speed Tools][tools]
 
-[analysis]: https://developers.google.com/web/updates/2018/05/first-input-delay#analyzing_and_reporting_on_fid_data
+[analysis]: https://web.dev/fid/#analyzing-and-reporting-on-fid-data
 [fid]: https://web.dev/fid/
 [tti]: https://web.dev/interactive/#how-to-improve-your-tti-score
 [fcp]: https://web.dev/user-centric-performance-metrics/#important-metrics-to-measure

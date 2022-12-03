@@ -8,7 +8,7 @@ updated: 2019-08-28
 ---
 
 Most browsers ship with built-in developer tools.
-These developer tools usually include a [console](https://developers.google.com/web/tools/chrome-devtools/console/).
+These developer tools usually include a [console](/docs/devtools/console/).
 The console gives you information about the page that's currently running.
 
 Messages logged in the console come from
