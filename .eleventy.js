@@ -38,6 +38,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const BrowserCompat = require('./site/_shortcodes/BrowserCompat');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -81,7 +82,7 @@ module.exports = eleventyConfig => {
   // Copy binary assets over to the dist/ directory.
   // images should ideally be uploaded to our CDN but if, for whatever reason,
   // they can't be, then this passthrough copy will pick them up.
-  eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
+  eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif,svg}');
 
   // Make .yml files work in the _data directory.
   eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
@@ -149,11 +150,11 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
+  eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
   eleventyConfig.addShortcode('Widget', Empty);
-  eleventyConfig.addShortcode('BrowserCompat', Empty);
   eleventyConfig.addShortcode('CodePattern', Empty);
 
   // Add transforms

@@ -1,0 +1,111 @@
+/// PATTERN LIBRARY LOCATION
+/// https://web.dev/design-system/pattern/browser-compat
+.browser-compat {
+  align-items: center;
+  color: var(--color-shades-gray);
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-query('md') {
+    flex-wrap: nowrap;
+  }
+}
+
+// Icons
+.browser-compat__icon {
+  background: content-box no-repeat transparent;
+  display: inline-block;
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 6px;
+  width: 24px;
+
+  &[data-browser='chrome'] {
+    background-image: url('/en/images/icons/chrome.svg');
+    margin-left: 0;
+
+    @include media-query('md') {
+      margin-left: 24px;
+    }
+  }
+
+  &[data-browser='firefox'] {
+    background-image: url('/en/images/icons/firefox.svg');
+  }
+
+  &[data-browser='edge'] {
+    background-image: url('/en/images/icons/edge.svg');
+  }
+
+  &[data-browser='safari'] {
+    background-image: url('/en/images/icons/safari.svg');
+  }
+}
+
+.browser-compat__items {
+  align-items: center;
+  display: flex;
+  margin: 1rem 1rem 1rem 0;
+}
+
+// Version
+.browser-compat__version {
+  --size-2: clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem); // From web.dev
+  border-radius: 100%;
+  display: inline-block;
+  font-size: var(--size-2);
+  height: 20px;
+  line-height: 20px;
+  min-width: 20px;
+  text-align: center;
+
+  &[data-compat='yes'] {
+    background: var(--color-green-lightest);
+    color: var(--color-green-darkest);
+  }
+
+  &[data-compat='preview'] {
+    background: var(--color-yellow-lightest);
+    color: var(--color-yellow-darkest);
+  }
+
+  &[data-compat='flag'] {
+    background: var(--color-yellow-lightest);
+    color: var(--color-yellow-darkest);
+  }
+
+  &[data-compat='deprecated'] {
+    background: var(--color-red-lightest);
+    color: var(--color-red-darkest);
+  }
+
+  &[data-compat='no'] {
+    background: var(--color-red-lightest);
+    color: var(--color-red-darkest);
+  }
+}
+
+.browser-compat__label {
+  color: var(--color-shades-gray);
+  flex: 0 0 100%;
+  font-style: normal;
+  margin-right: 1rem;
+  width: 100%;
+
+  @include media-query('md') {
+    flex: none;
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.browser-compat__link {
+  flex: 0 0 100%;
+  margin-left: 0;
+
+  @include media-query('md') {
+    flex: none;
+    margin-left: 24px;
+  }
+}
+
