@@ -18,12 +18,11 @@ const {AssetCache} = require('@11ty/eleventy-cache-assets');
 
 // TODO: can we import the whole /types node in JS?
 /** @typedef {import('@mdn/browser-compat-data/types').CompatStatement} CompatStatement */
-/** @typedef {import('@mdn/browser-compat-data/types').PrimaryIdentifier} PrimaryIdentifier */
 
 /**
  * Flatten a tree of data into a flat object (prep for lookup by key).
  *
- * @param {PrimaryIdentifier} obj
+ * @param {Object} obj
  * @param {string} prefix
  * @return {{[id: string]: CompatStatement}}
  */

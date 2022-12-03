@@ -42,7 +42,8 @@ function getInfoFromSupportStatement(support, status, locale) {
       };
     }
 
-    if (support.flags?.length > 0) {
+    // @ts-ignore-line
+    if (support?.flags?.length > 0) {
       return {
         aria: i18n('i18n.browser_compat.flag', locale),
         compatProperty: 'flag',
@@ -86,6 +87,10 @@ function BrowserCompat(feature) {
   const data = bcd();
   let compatIcons = [];
 
+  if (!data) {
+    return `<div>{%BrowserCompat has no data for '${feature}' %}</div>`;
+  }
+
   if (data[feature] && data[feature].support) {
     compatIcons = browsers.map(browser => {
       /** @type {import('@mdn/browser-compat-data/types').SimpleSupportStatement} */
@@ -95,6 +100,7 @@ function BrowserCompat(feature) {
 
       const supportInfo = getInfoFromSupportStatement(
         support,
+        // @ts-ignore-line
         data[feature].status,
         locale
       );
