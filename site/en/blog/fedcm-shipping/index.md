@@ -58,7 +58,7 @@ As the user agent isn't able to differentiate between identity federation and
 tracking, the mitigations for the various types of abuse make the deployment of
 identity federation more difficult.
 
-[FedCM](https://fedidcg.github.io/FedCM) is a multi-step journey to make
+[FedCM]https://fedidcg.github.io/FedCM) is a multi-step journey to make
 identity on the web better, and in its
 first step we are focused on reducing the impact of third-party cookie phase-out
 on federated identity (see below for [what's next](#whats-next)).
