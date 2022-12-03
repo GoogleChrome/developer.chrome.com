@@ -53,7 +53,7 @@ Set the tag's `content` attribute to any valid CSS color value:
 ```
 
 Learn more about the `theme-color` meta tag in Google's
-[Support for `theme-color` in Chrome 39 for Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).
+[Support for `theme-color` in Chrome 39 for Android](/blog/support-for-theme-color-in-chrome-39-for-android/).
 
 ### Step 2: Add the `theme_color` property to your web app manifest
 
@@ -77,4 +77,4 @@ according to the manifest's `theme_color`.
 
 - [Source code for **Does not set a theme color for the address bar** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
 - [Add a web app manifest](https://web.dev/add-manifest/)
-- [Support for `theme-color` in Chrome 39 for Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android)
+- [Support for `theme-color` in Chrome 39 for Android](/blog/support-for-theme-color-in-chrome-39-for-android/)

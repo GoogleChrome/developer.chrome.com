@@ -53,7 +53,7 @@ and there are better alternatives.
 
 Remove all uses of `document.write()` in your code. If it's being used
 to inject third-party scripts, try using
-[asynchronous loading](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript#parser_blocking_versus_asynchronous_javascript)
+[asynchronous loading](https://https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/#parser_blocking_versus_asynchronous_javascript)
 instead.
 
 If third-party code is using `document.write()`,
@@ -62,6 +62,6 @@ ask the provider to support asynchronous loading.
 ## Resources
 
 - [Source code for **Uses `document.write()`** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/no-document-write.js)
-- [Intervening against `document.write()`](https://developers.google.com/web/updates/2016/08/removing-document-write)
-- [Parser blocking versus asynchronous JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript#parser_blocking_versus_asynchronous_javascript)
+- [Intervening against `document.write()`](/blog/removing-document-write/)
+- [Parser blocking versus asynchronous JavaScript](https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/#parser_blocking_versus_asynchronous_javascript)
 - [Speculative parsing](https://developer.mozilla.org/docs/Glossary/speculative_parsing)

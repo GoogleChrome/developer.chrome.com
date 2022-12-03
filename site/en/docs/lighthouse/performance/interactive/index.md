@@ -105,7 +105,7 @@ how to programmatically access TTI data and submit it to Google Analytics.
 
 {% Aside %}
 TTI can be difficult to track in the wild.
-Tracking [First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay)
+Tracking [First Input Delay](https://web.dev/fid/)
 can be a good proxy for TTI.
 {% endAside %}
 
@@ -116,10 +116,10 @@ can be a good proxy for TTI.
 - [Source code for **Time to Interactive** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [First Interactive And Consistently Interactive](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)
-- [JavaScript Start-up Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
-- [Reduce JavaScript Payloads with Tree Shaking](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/)
+- [JavaScript Start-up Optimization](https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/)
+- [Reduce JavaScript Payloads with Tree Shaking](https://web.dev/reduce-javascript-payloads-with-tree-shaking/)
 - [Optimize third-party resources][3p]
 
-[metrics]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
+[metrics]: https://web.dev/user-centric-performance-metrics/
 [tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
 [3p]: https://web.dev/fast/#optimize-your-third-party-resources

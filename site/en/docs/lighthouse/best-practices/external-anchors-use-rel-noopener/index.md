@@ -77,4 +77,4 @@ post for more information.
 
 - [Source code for **Links to cross-origin destinations are unsafe** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
 - [Share cross-origin resources safely](https://web.dev/cross-origin-resource-sharing/)
-- [Site isolation for web developers](https://developers.google.com/web/updates/2018/07/site-isolation)
+- [Site isolation for web developers](/blog/site-isolation/)

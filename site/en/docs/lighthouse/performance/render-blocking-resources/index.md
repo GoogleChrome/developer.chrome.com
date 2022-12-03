@@ -66,7 +66,7 @@ When the page loads, it will have what it needs to handle the page's core functi
 If there's code in a render-blocking URL that's not critical,
 you can keep it in the URL,
 and then mark the URL with `async` or `defer` attributes
-(see also [Adding Interactivity with JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript)).
+(see also [Adding Interactivity with JavaScript](https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/)).
 
 Code that isn't being used at all should be removed (see [Remove unused code](https://web.dev/remove-unused-code/)).
 
@@ -86,7 +86,7 @@ to split up those styles into different files, organized by media query.
 Then add a media attribute to each stylesheet link.
 When loading a page,
 the browser only blocks the first paint to retrieve the stylesheets that match the user's device
-(see [Render-Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)).
+(see [Render-Blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)).
 
 Finally, you'll want to minify your CSS to remove any extra whitespace or
 characters (see [Minify CSS](https://web.dev/minify-css/)).
@@ -124,4 +124,4 @@ resources](https://wordpress.org/plugins/search/defer+css+javascript/).
 - [Source code for **Eliminate render-blocking resources** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/render-blocking-resources.js)
 - [Reduce JavaScript payloads with code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
 - [Remove unused code codelab](https://web.dev/codelab-remove-unused-code)
-- [JavaScript Start-up Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
+- [JavaScript Start-up Optimization](https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/)

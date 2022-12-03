@@ -91,6 +91,6 @@ Specify `@font-display` when [defining custom fonts](https://devdocs.magento.com
 
 - [Source code for **Ensure text remains visible during webfont load** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/font-display.js)
 - [Avoid invisible text during loading](https://web.dev/avoid-invisible-text/)
-- [Controlling font performance with font displays](https://developers.google.com/web/updates/2016/02/font-display)
+- [Controlling font performance with font displays](/blog/font-display/)
 - [Preload web fonts to improve loading speed (codelab)](https://web.dev/codelab-preload-web-fonts/)
 - [Prevent layout shifting and flashes of invisible text (FOIT) by preloading optional fonts](https://web.dev/preload-optional-fonts/)

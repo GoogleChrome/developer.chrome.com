@@ -52,7 +52,7 @@ See [Stick to compositor-only properties and manage layer count][compositor] and
 - [Simplify paint complexity and reduce paint areas][paint]
 - [Inside look at modern web browsers (part 3)][inside]
 
-[compositor]: https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
-[animations]: https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
-[paint]: https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
-[inside]: https://developers.google.com/web/updates/2018/09/inside-browser-part3
+[compositor]: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/
+[animations]: https://web.dev/animations-guide/
+[paint]: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas/
+[inside]: /blog/inside-browser-part3/

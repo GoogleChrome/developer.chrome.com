@@ -103,8 +103,8 @@ plugins](https://wordpress.org/plugins/) loading unused JavaScript in your page.
 - [Find Unused JavaScript And CSS Code With The Coverage Tab In Chrome DevTools][coveragetab]
 - [class: `Coverage`][coverageclass]
 
-[crp]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-[coveragetab]: https://developers.google.com/web/tools/chrome-devtools/coverage
+[crp]: https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/
+[coveragetab]: /docs/devtools/css/reference/#coverage
 [coverageclass]: https://pptr.dev/#?product=Puppeteer&version=v4.0.0&show=api-class-coverage
 [split]: https://bundlers.tooling.report/code-splitting/
 [eliminate]: https://bundlers.tooling.report/transformations/dead-code/
