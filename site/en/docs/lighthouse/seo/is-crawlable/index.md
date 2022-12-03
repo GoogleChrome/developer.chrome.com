@@ -15,7 +15,7 @@ Only block indexing for content that you don't want to appear in search results.
 
 ## How the Lighthouse indexing audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages
+[Lighthouse](/docs/lighthouse/overview/) flags pages
 that search engines can't index:
 
 <figure class="w-figure">
@@ -80,9 +80,9 @@ X-Robots-Tag: noindex
 
 ## Add additional control (optional)
 
-You may want more control over how search engines index your page. (For example,
+You may want more control over how search engines index your page. For example,
 maybe you don't want Google to index images, but you do want the rest of the page
-indexed.)
+indexed.
 
 For information about how to configure your `<meta>` elements and HTTP
 headers for specific search engines, see these guides:

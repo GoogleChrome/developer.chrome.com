@@ -13,7 +13,7 @@ icon, it ensures that the icon takes up all of the space that Android provides f
 
 ## How the Lighthouse maskable icon audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that do not have maskable icon support:
 
 <figure>

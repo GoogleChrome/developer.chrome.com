@@ -13,7 +13,7 @@ are series of dependent network requests important for page rendering.
 The greater the length of the chains and the larger the download sizes,
 the more significant the impact on page load performance.
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 reports critical requests loaded with a high priority:
 
 <figure>

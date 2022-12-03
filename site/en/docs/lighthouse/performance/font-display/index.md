@@ -8,13 +8,13 @@ date: 2019-05-02
 updated: 2020-04-29
 ---
 
-Fonts are often large files that take awhile to load.
+Fonts are often large files with slow load times.
 Some browsers hide text until the font loads,
 causing a [flash of invisible text (FOIT)](https://web.dev/avoid-invisible-text/).
 
 ## How the Lighthouse font-display audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags any font URLs that may flash invisible text:
 
 <figure>

@@ -5,7 +5,7 @@ description: How to pass the "Avoid non-composited animations" Lighthouse audit.
 date: 2020-08-12
 ---
 
-Non-composited animations can appear janky (i.e. not smooth) on low-end phones or when
+Non-composited animations can appear [janky](https://en.wiktionary.org/wiki/jank) (not smooth) on low-end phones or when
 performance-heavy tasks are running on the main thread. Janky animations can increase the
 [Cumulative Layout Shift](https://web.dev/cls/) (CLS) of your page. Reducing CLS will improve your
 Lighthouse Performance score.

@@ -17,7 +17,7 @@ providing a branded, engaging experience.
 
 ## How the Lighthouse splash screen audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't have a custom splash screen:
 
 <figure>
@@ -36,7 +36,7 @@ you meet the following requirements in your [web app manifest](https://web.dev/a
 - The `icons` array specifies an icon that is at least 512x512&nbsp;px.
 - The specified icon exists and is a PNG.
 
-See [Adding a Splash Screen for Installed Web Apps in Chrome 47](https://developers.google.com/web/updates/2015/10/splashscreen)
+See [Adding a Splash Screen for Installed Web Apps in Chrome 47](https://web.dev/add-manifest/#splash-screen)
 for more information.
 
 {% Aside %}

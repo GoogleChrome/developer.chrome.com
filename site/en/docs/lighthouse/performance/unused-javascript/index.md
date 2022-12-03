@@ -11,7 +11,7 @@ Unused JavaScript can slow down your page load speed:
 - If the JavaScript is [render-blocking][crp], the browser must
   download, parse, compile, and evaluate the script before it can proceed
   with all of the other work that's needed for rendering the page.
-- Even if the JavaScript is asynchronous (i.e. not render-blocking), the
+- Even if the JavaScript is asynchronous (not render-blocking), the
   code competes for bandwidth with other resources while it's downloading,
   which has significant performance implications. Sending unused code over
   the network is also wasteful for mobile users who don't have unlimited
@@ -19,7 +19,7 @@ Unused JavaScript can slow down your page load speed:
 
 ## How the unused JavaScript audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags every JavaScript file with more than 20 kibibytes of unused code:
 
 <figure>

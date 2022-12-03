@@ -19,7 +19,7 @@ For more information about why all sites should be protected with HTTPS, see
 
 ## How the Lighthouse HTTPS audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that aren't on HTTPS:
 
 <figure>

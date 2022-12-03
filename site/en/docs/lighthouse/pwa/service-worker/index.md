@@ -5,7 +5,7 @@ description: |
   Learn how to register a service worker that supports Progressive Web App
   features like offline functionality, push notifications, and installability.
 date: 2019-05-04
-updated: 2020-06-10
+updated: 2022-12-03
 ---
 
 Registering a [service worker](https://web.dev/service-workers-cache-storage/)
@@ -19,12 +19,12 @@ Learn more in the [Service workers and the Cache Storage API](https://web.dev/se
 
 ## Browser compatibility
 
-All major browsers except Internet Explorer support service workers. See
+All major browsers support service workers. See
 [Browser compatibility](https://developer.mozilla.org/docs/Web/API/ServiceWorker#Browser_compatibility).
 
 ## How the Lighthouse service worker audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't register a service worker:
 
 <figure>

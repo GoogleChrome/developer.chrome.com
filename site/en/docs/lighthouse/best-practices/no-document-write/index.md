@@ -28,7 +28,7 @@ data from the network to be reparsed.
 
 ## How the Lighthouse `document.write()` audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags
+[Lighthouse](/docs/lighthouse/overview/) flags
 calls to `document.write()` that weren't blocked by Chrome:
 
 <figure>
@@ -39,7 +39,7 @@ For the most problematic uses,
 Chrome will either block calls to `document.write()`
 or emit a console warning about them, depending on the user's connection speed.
 Either way, the affected calls appear in the DevTools Console.
-See Google's [Intervening against `document.write()`](https://developers.google.com/web/updates/2016/08/removing-document-write)
+See Google's [Intervening against `document.write()`](/blog/removing-document-write/)
 article for more information.
 
 Lighthouse reports any remaining calls to `document.write()`

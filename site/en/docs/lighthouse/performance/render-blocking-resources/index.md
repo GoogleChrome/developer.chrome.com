@@ -19,7 +19,7 @@ and removing anything unused.
 
 ## Which URLs get flagged as render-blocking resources?
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags two types of render-blocking URLs: scripts and stylesheets.
 
 A `<script>` tag that:
@@ -36,7 +36,7 @@ A `<link rel="stylesheet">` tag that:
 
 ## How to identify critical resources
 
-The first step to reducing the impact of render-blocking resources,
+The first step towards reducing the impact of render-blocking resources
 is to identify what's critical and what's not.
 Use the [Coverage tab](/docs/devtools/coverage/)
 in Chrome DevTools to identify non-critical CSS and JS.

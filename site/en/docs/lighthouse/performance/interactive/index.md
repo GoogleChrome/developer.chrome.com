@@ -35,7 +35,7 @@ A page is considered fully interactive when:
 - The page responds to user interactions within 50&nbsp;milliseconds.
 
 {% Aside %}
-Both [First CPU Idle]](/docs/lighthouse/performance/first-cpu-idle/) and TTI
+Both [First CPU Idle](/docs/lighthouse/performance/first-cpu-idle/) and TTI
 measure when the page is ready for user input.
 First CPU Idle occurs when the user can _start_ to interact with the page;
 TTI occurs when the user is _fully_ able to interact with the page.

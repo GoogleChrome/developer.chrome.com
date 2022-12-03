@@ -18,7 +18,7 @@ required to make your app installable.
 
 ## How the Lighthouse web app manifest audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't have a [web app manifest](https://web.dev/add-manifest/)
 that meets minimum requirements for installability:
 

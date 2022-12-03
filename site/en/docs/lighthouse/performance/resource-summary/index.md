@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2019-10-04
 ---
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 reports how many network requests were made and
 how much data was transferred while your page loaded:
 

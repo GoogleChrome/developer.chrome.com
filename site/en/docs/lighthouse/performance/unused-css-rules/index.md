@@ -81,7 +81,7 @@ Learn more in [Defer non-critical CSS](https://web.dev/defer-non-critical-css/).
 
 ### Drupal
 
-Consider removing unused CSS rules and only attach the needed Drupal libraries
+Consider removing unused CSS rules. Only attach the needed Drupal libraries
 to the relevant page or component in a page. See the [Defining a
 library](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module#library)
 for details.

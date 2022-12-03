@@ -24,7 +24,7 @@ of the resource by hundreds of milliseconds.
 
 ## How the Lighthouse multiple redirects audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that have multiple redirects:
 
 <figure>

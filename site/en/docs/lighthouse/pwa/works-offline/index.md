@@ -18,7 +18,7 @@ Learn more in the [What is network reliability and how do you measure it?](https
 
 ## How the Lighthouse offline audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't respond with an
 [HTTP 200 response](https://developer.mozilla.org/docs/Web/HTTP/Status#Successful_responses)
 when offline:
