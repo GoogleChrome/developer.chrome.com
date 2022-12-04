@@ -53,7 +53,7 @@ and there are better alternatives.
 
 Remove all uses of `document.write()` in your code. If it's being used
 to inject third-party scripts, try using
-[asynchronous loading](https://https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/#parser_blocking_versus_asynchronous_javascript)
+[asynchronous loading](https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/#parser_blocking_versus_asynchronous_javascript)
 instead.
 
 If third-party code is using `document.write()`,
