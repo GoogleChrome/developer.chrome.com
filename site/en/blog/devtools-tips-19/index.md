@@ -4,7 +4,7 @@ title: >
 description: >
   Simulate mobule devices with Device Mode in DevTools.
 layout: 'layouts/blog-post.njk'
-date: 2022-12-01
+date: 2022-12-04
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UpRwQVA0PEOesxz8a1iz.png'
