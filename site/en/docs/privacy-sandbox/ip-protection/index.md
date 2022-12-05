@@ -11,7 +11,7 @@ authors:
 ---
 
 {% Aside %}
-This proposal used to previously have a different scope and was known as Gnatcatcher, or the Global Network Address Translation Combined with Audited and Trusted CDN or HTTP-Proxy Eliminating Reidentification. You can still view the [deprecated documentation](/docs/privacy-sandbox/gnatcatcher/).
+This proposal used to previously have a different scope and was known as Gnatcatcher, or the Global Network Address Translation Combined with Audited and Trusted CDN or HTTP-Proxy Eliminating Reidentification. You can still view the [deprecated documentation](/docs/privacy-sandbox/archive/gnatcatcher/).
 {% endAside %}
 
 ## Implementation status
