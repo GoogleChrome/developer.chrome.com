@@ -30,8 +30,11 @@ pass a callback as the last argument.)
 Sending a request from a content script looks like this:
 
 ```js
-const response = await chrome.runtime.sendMessage({greeting: "hello"});
-console.log(response.farewell);
+(async () => {
+  const response = await chrome.runtime.sendMessage({greeting: "hello"});
+  // do something with response here, not outside the function
+  console.log(response);
+})();
 ```
 
 Sending a request from the extension to a content script is similar, except that you need to
@@ -39,10 +42,12 @@ specify which tab to send it to. This example demonstrates sending a message to 
 in the selected tab.
 
 ```js
-chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
-  const response = await chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"});
-  console.log(response.farewell);
-});
+(async () => {
+  const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
+  const response = await chrome.tabs.sendMessage(tab.id, {greeting: "hello"});
+  // do something with response here, not outside the function
+  console.log(response);
+})();
 ```
 
 On the receiving end, you need to set up an [runtime.onMessage][6] event listener to handle the
