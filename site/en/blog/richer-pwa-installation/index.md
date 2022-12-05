@@ -3,6 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Richer PWA installation UI
 description: An introduction to the Richer Install UI with guidance on how to implement it.
 date: 2021-04-23
+updated: 2022-12-06
 authors:
   - mustafa
 tags:
@@ -80,12 +81,9 @@ and users' reaction.
 
 ## Previewing the UI {: #previewing }
 
-This UI works in M91 non stable channels (Chrome Dev and Chrome Canary) on Android, with the flag `#mobile-pwa-install-use-bottom-sheet` enabled in `chrome://flags`.
+This UI works in M94 on Android, and M108 on desktop.
 
-This feature is enabled on [squoosh.app](https://squoosh.app) and can be previewed there. As an
-aside, [#screenshots](https://web.dev/add-manifest/#screenshots) and 
-[#description](https://web.dev/add-manifest/#description) fields are already documented; 
-you can give it a try behind the flag. 
+This feature is enabled on [squoosh.app](https://squoosh.app) and can be previewed there. 
 
 ## Implementation {: #implementation }
 
