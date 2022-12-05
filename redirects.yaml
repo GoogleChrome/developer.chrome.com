@@ -101,6 +101,9 @@ redirects:
 - from: /blog/shared-element-transitions-for-spas/
   to: /docs/web-platform/view-transitions/
 
+- from: /docs/privacy-sandbox/gnatcatcher/
+  to: /docs/privacy-sandbox/ip-protection/
+
 # Removal of /overview pages
 
 - from: /docs/android/custom-tabs/overview/
