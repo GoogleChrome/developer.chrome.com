@@ -75,9 +75,9 @@ select {
 textarea {
   &:read-only,
   &[read-only] {
-    pointer-events: none;
     background-color: get-color('grey-100');
     color: get-color('grey-500');
+    pointer-events: none;
   }
 }
 
