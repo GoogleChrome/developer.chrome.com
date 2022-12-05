@@ -77,4 +77,4 @@ are complete within 50&nbsp;ms.
 - [Lighthouse v3 Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [Measure Performance with the RAIL Model](https://web.dev/rail/)
 - [Rendering Performance](https://web.dev/rendering-performance/)
-- [Optimize Website Speed With Chrome DevTools](/docs/devtools/overview/#start/)
+- [Optimize Website Speed With Chrome DevTools](/docs/devtools/overview/#start)
