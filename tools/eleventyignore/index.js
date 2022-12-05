@@ -56,16 +56,16 @@ if (!isProduction || isCI) {
   }
 
   // Ignore /blog/
-  // if (process.env.ELEVENTY_IGNORE_BLOG) {
-  //   console.log(warning('Ignoring BLOG.'));
-  //   ignores.push('site/**/blog/**/*');
-  // }
+  if (process.env.ELEVENTY_IGNORE_BLOG) {
+    console.log(warning('Ignoring BLOG.'));
+    ignores.push('site/**/blog/**/*');
+  }
 
   // Ignore /docs/
-  // if (process.env.ELEVENTY_IGNORE_DOCS) {
-  //   console.log(warning('Ignoring ALL docs.'));
-  //   ignores.push('site/**/docs/**/*');
-  // }
+  if (process.env.ELEVENTY_IGNORE_DOCS) {
+    console.log(warning('Ignoring ALL docs.'));
+    ignores.push('site/**/docs/**/*');
+  }
 
   // Ignore /docs/android/
   if (process.env.ELEVENTY_IGNORE_ANDROID) {
@@ -134,10 +134,10 @@ if (!isProduction || isCI) {
   }
 
   // Ignore /docs/workbox/
-  // if (process.env.ELEVENTY_IGNORE_WORKBOX) {
-  //   console.log(warning('Ignoring workbox docs.'));
-  //   ignores.push('site/**/docs/workbox/**/*');
-  // }
+  if (process.env.ELEVENTY_IGNORE_WORKBOX) {
+    console.log(warning('Ignoring workbox docs.'));
+    ignores.push('site/**/docs/workbox/**/*');
+  }
 }
 
 fs.writeFileSync('.eleventyignore', ignores.join('\n'));
