@@ -65,17 +65,18 @@ const renderHandler = async (req, res) => {
 
   process.env.ELEVENTY_IGNORE_EXTENSIONS = 'true';
   const defaultParsedFm = {
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
     data: {
       layout: 'layouts/blog-post.njk',
       date: new Date().toISOString().split('T')[0],
       title: 'Test title TBD',
       desciption: 'Test description TBD',
       authors: ['rachelandrew'],
-    }
+    },
+    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
   };
 
-  let /** @type {any} */ fm = {}
+  let /** @type {any} */ fm = {};
   try {
     fm = !req.body.fm ? defaultParsedFm : matter(req.body.fm);
   } catch (e) {
