@@ -24,13 +24,13 @@ This document outlines a new proposal to help prevent covert tracking: IP Protec
 
 ## Why do we need this proposal?
 
-IP addresses were created to provide unique identifiers for a client so that traffic could be routed over the internet. IP addresses can be stable over periods of time, which can lead to user identification across first-parties.
+IP addresses were created to provide unique identifiers for a client so that traffic can be routed over the internet. IP addresses can be stable over periods of time, which can lead to user identification across first-parties.
 
 IP Protection is a proposal to avoid sharing a user's real IP address with third parties. This proposal suggests using a privacy proxy (previously called a Near-Path NAT) for a connection.  An IP address is an effective cross-site identifier as it is unique, relatively stable, cheap to collect, and IP address collection cannot be detected by the browser. Therefore limiting access to IP addresses is important to prevent methods of cross-site tracking beyond third-party cookies.
 
 ## How will IP Protection work?
 
-IP Protection proposes to anonymize the IP address for third parties identified as potentially as using IP addresses for web-wide cross-site tracking.
+IP Protection proposes to anonymize the user's IP address, to help protect it from being used by third parties identified as potentially using IP addresses for web-wide cross-site tracking.
  
 IP Protection proposes a two-hop [privacy proxy that anonymizes qualifying traffic](https://github.com/spanicker/ip-blindness#privacy-proxy):
 
