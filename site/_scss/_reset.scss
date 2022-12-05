@@ -71,6 +71,16 @@ select {
   word-spacing: inherit;
 }
 
+// override read-only attr on textarea
+textarea {
+  &:read-only,
+  &[read-only] {
+    pointer-events: none;
+    background-color: get-color('grey-100');
+    color: get-color('grey-500');
+  }
+}
+
 // Remove the default border on iframes
 iframe {
   border: 0;
