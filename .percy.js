@@ -6,6 +6,7 @@ const SNAPSHOTS = [
   '/en/page-types/events/index.html',
   '/en/page-types/generic-reference-landing/index.html',
   '/en/page-types/reference-landing/index.html',
+  '/en/page-types/namespace-reference/index.html',
   '/en/test-post/index.html',
 ];
 
