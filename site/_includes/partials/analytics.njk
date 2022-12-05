@@ -1,0 +1,12 @@
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+{% if process.env.NODE_ENV !== 'production' %}
+  window.gtag = console.debug;
+{% endif %}
+</script>
+{% if process.env.NODE_ENV === 'production' %}
+  <script src="https://www.googletagmanager.com/gtag/js?id={{ analytics.ids.GA4 }}"></script>
+{% endif %}
+

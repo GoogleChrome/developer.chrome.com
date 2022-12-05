@@ -4,7 +4,7 @@ module.exports = {
     sourceType: 'module',
   },
   globals: {
-    ga: true,
+    gtag: true,
   },
   env: {
     browser: true,

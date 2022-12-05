@@ -1,9 +1,13 @@
 {
-  "id": "UA-41980257-1",
-  "dimensions": {
-    "TRACKING_VERSION": "dimension1",
-    "NAVIGATION_TYPE": "dimension2",
-    "WEB_VITALS_DEBUG": "dimension3"
+  "ids": {
+    "UA": "UA-41980257-1",
+    "GA4": "G-H1Y3PXZW9Q"
   },
-  "version": 4
+  "dimensions": {
+    "MEASUREMENT_VERSION": "dimension1",
+    "NAVIGATION_TYPE": "dimension2",
+    "WEB_VITALS_DEBUG": "dimension3",
+    "COLOR_SCHEME_PREFERENCE": "dimension4"
+  },
+  "version": 5
 }
