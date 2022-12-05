@@ -30,7 +30,7 @@ pass a callback as the last argument.)
 Sending a request from a content script looks like this:
 
 ```js
-await response = chrome.runtime.sendMessage({greeting: "hello"});
+const response = await chrome.runtime.sendMessage({greeting: "hello"});
 console.log(response.farewell);
 ```
 
@@ -40,7 +40,7 @@ in the selected tab.
 
 ```js
 chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
-  await response = chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"});
+  const response = await chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"});
   console.log(response.farewell);
 });
 ```
