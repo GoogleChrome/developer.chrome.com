@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-10-25
+updated: 2022-12-05
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
