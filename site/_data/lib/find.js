@@ -66,7 +66,7 @@ const findByUrl = (collection, url, locale = '') => {
     locale = path.join('/', locale);
   }
 
-  let urlToFind = path.join(locale, url);
+  let urlToFind = path.join(locale, url).replace(/\\/g, '/');
   const result = internalFind(collection, urlCacheKey, 'url', urlToFind);
   // If something has been found or nothing has been found while
   // not specifying a locale, end here. If a locale has been defined
