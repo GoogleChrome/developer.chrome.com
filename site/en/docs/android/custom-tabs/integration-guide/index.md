@@ -8,7 +8,7 @@ description: Custom Tabs implementation guide
 
 A complete example is available on [the GitHub sample application][1]. It
 contains re-usable classes to customize the UI, connect to the background service, and handle the
-lifecycle of both the application and the custom tab activity.
+lifecycle of both the application and the Custom Tab activity.
 
 If you follow the guidance from this page, you will be able to create a great integration.
 
@@ -24,7 +24,7 @@ dependencies {
 
 Once the Browser Library is added to your project there are two sets of possible customizations:
 
-- Customizing the UI and interaction with the custom tabs.
+- Customizing the UI and interaction with the Custom Tabs.
 - Making the page load faster, and keeping the application alive.
 
 The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
@@ -56,10 +56,10 @@ You can also choose to make the Custom Tab non-resizable, which prevents users f
 Partial Custom Tabs are supported by the AndroidX browser library from version 1.5 onwards:
 
 ```groovy
-implementation 'androidx.browser:browser:1.5.0-alpha01'
+implementation 'androidx.browser:browser:1.5.0-alpha02'
 ```
 
-To turn a Custom Tab into a partial Custom Tab, define the initial launch height in pixels by calling `CustomTabsIntent.Builder#setInitialActivityHeightPx()`. Furthermore, you need to either:
+To turn a Custom Tab into a partial Custom Tab, define the initial launch height in pixels by calling `new CustomTabsIntent.Builder().setInitialActivityHeightPx()`. Furthermore, you need to either:
 
 1. [start a new browser session via a `CustomTabsServiceConnection`](/docs/android/custom-tabs/integration-guide/#connect-to-the-custom-tabs-service) and pass it to the Custom Tabs intent or
 2. start the Custom Tab activity via [`startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
@@ -69,12 +69,12 @@ Starting a new browser session is the recommended approach to launching a partia
 {% Aside 'gotchas' %}
 * Specifying the initial activity height will not have an effect if the default browser does not support resizing the Custom Tab. In this case, the intent extra will be ignored and the Custom Tab will span the complete display height.
 
-* Custom Tabs will inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a Custom Tab.
+* Custom Tabs will inherit the host app's color scheme for the user interface properties above. You will be responsible for ensuring visual consistency for these properties before launching a Custom Tab. This means the `CustomTabColorScheme.navigationBarColor` and `CustomTabColorScheme.navigationBarDividerColor` properties do not work when building an intent for a partial Custom Tab.
 
 {% endAside %}
 
 
-### Launch a partial custom tab with an existing session
+### Launch a partial Custom Tab with an existing session
 
 ```java
 CustomTabsSession customTabsSession;
@@ -90,7 +90,7 @@ CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(session)
 customTabsIntent.launchUrl(context, Uri.parse(url))
 ```
 
-### Launch a partial custom tab via startActivityForResult
+### Launch a partial Custom Tab via startActivityForResult
 
 ```java
 private ActivityResultLauncher<String> mCustomTabLauncher = registerForActivityResult(new ActivityResultContract<String, Integer>() {
@@ -311,7 +311,7 @@ completed successfully.
 
 [`void onNavigationEvent(int navigationEvent, Bundle extras)`][19]
 
-Will be called when a navigation event happens in the custom tab. The `navigationEvent int`
+Will be called when a navigation event happens in the Custom Tab. The `navigationEvent int`
 is one of 6 values that defines the state of the page is in.  See below for more information.
 
 ```java
@@ -349,13 +349,11 @@ public static final int TAB_HIDDEN = 6;
 
 ```java
 /**
-* Called when Custom Tab's height is resized. This applies when users resize a
-* Custom Tab with {@link CustomTabsIntent#ACTIVITY_HEIGHT_ADJUSTABLE} for the {@link
-* CustomTabsIntent#ActivityResizeBehavior}.
+* Called when the tab is resized.
 */
 private static class ResizeCallback extends CustomTabsCallback {
     @Override
-    public void onActivityResized(int size, @NonNull Bundle extras) {
+    public void onActivityResized(int height, int width, @NonNull Bundle extras) {
             ...
         }
     }
