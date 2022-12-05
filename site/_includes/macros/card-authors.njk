@@ -7,23 +7,23 @@
     If there's no data for the author, just renders their ID.
   #}
   {% if authors.length < 3 %}
-    {% for authorId in authors %}
-      {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
-      {% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
-      {% if authorImage %}
-      <a href="/authors/{{authorId}}/" translate="no" class="card-authors__image">
-        {% Img
-          class="flex-shrink-none width-600 height-600",
-          src=authorImage,
-          alt=authorTitle | i18n(locale),
-          width="40",
-          height="40",
-          sizes="40px",
-          options={minWidth: 40, maxWidth: 120}
-        %}
-      </a>
-      {% endif %}
-    {% endfor %}
+  {% for authorId in authors %}
+  {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
+  {% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
+  {% if authorImage %}
+  <a href="/authors/{{authorId}}/" translate="no" class="card-authors__image">
+    {% Img
+      class="flex-shrink-none width-600 height-600",
+      src=authorImage,
+      alt=authorTitle | i18n(locale),
+      width="40",
+      height="40",
+      sizes="40px",
+      options={minWidth: 40, maxWidth: 120}
+    %}
+  </a>
+  {% endif %}
+  {% endfor %}
   {% endif %}
 
   <div class="card-authors__meta">
