@@ -265,7 +265,7 @@ CustomTabsServiceConnection connection = new CustomTabsServiceConnection() {
 boolean ok = CustomTabsClient.bindCustomTabsService(this, mPackageNameToBind, connection);
 ```
 
-When targeting API level 30, in order to connect to a custom tabs service, you need to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
+When targeting API level 30, in order to connect to a Custom Tabs service, you need to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
 
 ```xml
 <queries>
