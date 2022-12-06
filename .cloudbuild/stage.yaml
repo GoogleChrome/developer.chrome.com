@@ -16,8 +16,8 @@ steps:
       - |
         cp -rf dist/en/* dist/ &&
         rm -rf dist/en &&
-        gsutil -m cp -r dist gs://static-dcc-staging/$SHORT_SHA &&
+        gsutil -q -m cp -r dist gs://static-dcc-staging/$SHORT_SHA &&
         echo $SHORT_SHA > activeCommit.txt &&
-        gcloud storage cp activeCommit.txt gs://static-dcc-staging/activeCommit.txt
+        gsutil cp activeCommit.txt gs://static-dcc-staging/activeCommit.txt
 options:
   machineType: 'E2_HIGHCPU_32'
