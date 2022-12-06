@@ -13,7 +13,7 @@ that automatically request their location on page load.
 
 ## How the Lighthouse geolocation audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages that request geolocation permission on load:
+[Lighthouse](/docs/lighthouse/overview/) flags pages that request geolocation permission on load:
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/EKObTXN3729mGBN5bRyv.png", alt="Lighthouse audit showing geolocation request on page load", width="800", height="213" %}

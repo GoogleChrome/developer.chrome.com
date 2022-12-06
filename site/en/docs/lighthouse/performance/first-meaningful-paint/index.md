@@ -104,7 +104,7 @@ see Google's [User-centric Performance Metrics][metrics] page.
 The [Tracking FMP using hero elements][tracking] section describes
 how to programmatically access FCP data and submit it to Google Analytics.
 
-See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/)
+See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/navigation-and-resource-timing/)
 for more on collecting real-user metrics.
 The [User Timing marks and measures Lighthouse audit](/docs/lighthouse/performance/user-timings/)
 enables you to see User Timing data in your report.

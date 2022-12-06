@@ -13,7 +13,7 @@ a page so that they can display the correct version for each language or region.
 
 ## How the Lighthouse `hreflang` audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags
+[Lighthouse](/docs/lighthouse/overview/) flags
 incorrect `hreflang` links:
 
 <figure class="w-figure">
