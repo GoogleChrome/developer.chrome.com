@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Welcome
+seoTitle: Welcome to Chrome Extensions
 subhead: 'Learn about developing extensions for Chrome.'
 description: 'Documentation for Chrome extensions developers.'
 date: 2020-11-09

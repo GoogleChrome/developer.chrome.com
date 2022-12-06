@@ -1,5 +1,6 @@
 ---
 title: Manifest V2 support timeline
+seoTitle: "Chrome Extensions Manifest V2 support timeline"
 subhead: 'Understand when Manifest V2 will stop working for extensions'
 description: 'Details of the Manifest V2 phase-out and end of life.'
 layout: 'layouts/doc-post.njk'

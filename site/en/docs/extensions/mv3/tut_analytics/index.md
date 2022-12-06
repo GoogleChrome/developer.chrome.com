@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Tutorial: Google analytics"
+seoTitle: "Chrome Extensions Tutorial: Google analytics"
 date: 2012-09-18
 updated: 2021-10-06
 description: >

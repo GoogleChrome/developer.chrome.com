@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Quick Start Guide
+seoTitle: Trusted Web Activities Quick Start Guide
 date: 2019-08-28
 updated: 2020-12-08
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.

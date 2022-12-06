@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Name and Short Name"
+seoTitle: "Chrome Extensions Manifest: name and short_name"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the name and short_name properties of manifest.json.

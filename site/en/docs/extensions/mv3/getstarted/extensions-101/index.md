@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Extensions 101'
+seoTitle: 'Chrome Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
 date: 2022-10-04

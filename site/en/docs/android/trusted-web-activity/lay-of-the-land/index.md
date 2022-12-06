@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Lay of the Land
+seoTitle: "Trusted Web Activities: Lay of the Land"
 date: 2020-02-04
 updated: 2020-07-31
 description: An overview of the libraries and tools for creating Trusted Web Activities.

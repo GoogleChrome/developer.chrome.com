@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Welcome to Manifest V3
+seoTitle: Welcome to the Chrome Extension Manifest V3
 subhead: 'A step in the direction of security, privacy, and performance.'
 description: 'An introduction to Manifest V3'
 date: 2020-11-09

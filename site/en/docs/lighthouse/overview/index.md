@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Overview
+seoTitle: Lighthouse overview
 description: |
   Learn how to set up Lighthouse to audit your web apps.
 date: 2016-09-27
