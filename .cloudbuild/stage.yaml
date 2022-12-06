@@ -1,10 +1,10 @@
 timeout: 2700s # set build timeout to 45 mins
 steps:
-  - name: node:18
+  - name: node:16
     entrypoint: npm
     args: ['ci', '--no-audit', '--omit=optional']
 
-  - name: node:18
+  - name: node:16
     entrypoint: npm
     args: ['run', 'production']
     env:
