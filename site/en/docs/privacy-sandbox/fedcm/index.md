@@ -785,8 +785,9 @@ The browser handles sign-up and sign-in use cases differently depending on the
 existence of `approved_clients` in the response from [the accounts list
 endpoint](#accounts-list-endpoint). The browser will display a disclosure text
 **"To continue with ...."**. If the user has already signed up to the RP, the
-[privacy policy and terms of service]
-(/docs/privacy-sandbox/fedcm/#client-metadata-endpoint) part will be omitted.
+[privacy policy and terms of
+service](/docs/privacy-sandbox/fedcm/#client-metadata-endpoint) part will be
+omitted.
 
 The sign-up state is determined based on whether the following conditions are
 fulfilled or not:
