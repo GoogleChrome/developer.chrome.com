@@ -15,7 +15,6 @@
     - url: /docs/extensions/mv3/intro/mv3-overview
 - title: i18n.docs.extensions.overview
   sections:
-    - url: /docs/extensions/mv3/overview
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
