@@ -17,7 +17,7 @@ authors:
 ---
 
 
-The latest iteration of First-Party Sets is ready for developer feature-flag testing from Chrome 108.
+The latest iteration of First-Party Sets is ready for developer feature-flag testing from Chrome 108. We are actively working on First-Party Sets with an aim to move towards shipping, so we will be considering feedback for this phase of developer testing up until the release of Chrome 111 at the beginning of March (March 7, 2023).
 
 Ecosystem feedback has highlighted cross-site use cases that will be impacted when third-party cookies are no longer supported in Chrome. The First-Party Sets proposal examines and addresses a class of cross-site use cases in which the interdependent sites share a relationship that can be expressed to the browser such that the browser can take the appropriate action on behalf of the user and/or effectively present that information to the user.
 
