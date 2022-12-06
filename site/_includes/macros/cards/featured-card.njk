@@ -30,11 +30,11 @@
   {% endif %}
 
   <h2 class="type--h3-card gap-top-300 display-inline-flex">
-    {{ options.title }}
+    {{ options.title | md | safe }}
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ options.description }}
+    {{ options.description | md | safe }}
   </p>
 
   {% if options.actionText and options.actionUrl %}
