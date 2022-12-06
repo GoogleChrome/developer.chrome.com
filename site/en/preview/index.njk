@@ -13,6 +13,16 @@ layout: 'layouts/landing.njk'
     document.dcc_preview_form.removeAttribute('hidden');
     document.querySelector('.g_id_signin').setAttribute('hidden', true);
   }
+
+  function onSubmit(form) {
+    form.fm.readOnly = true;
+    form.md.readOnly = true;
+    form.s.disabled = true;
+    form.s.value = "Generating";
+
+    return true;
+  };
+
 </script>
 {% endset %}
 
@@ -32,7 +42,7 @@ layout: 'layouts/landing.njk'
     data-logo_alignment="left">
 </div>
 
-<form action="/_render" method="post" name="dcc_preview_form" hidden>
+<form action="/_render" method="post" name="dcc_preview_form" onsubmit="onSubmit(this)" hidden>
   <div class="pad-bottom-400 pad-top-400">
     <label for="fm" class="display-block">FrontMatter</label>
     <textarea
@@ -45,8 +55,5 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
     ></textarea>
   </div>
   <input type="hidden" name="t" />
-  <input name="s" type="submit" class="button button-filled material-button button-primary"/>
+  <input name="s" type="submit" class="button-filled material-button color-bg bg-primary"/>
 </form>
-
-
-
