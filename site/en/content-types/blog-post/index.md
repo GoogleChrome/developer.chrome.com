@@ -533,7 +533,11 @@ It can be nested within a codeblock as below to use code highlighting:
 
 The partial shortcode can be used to add partials (from the _partials directory) to the page:
 
+---
+
 {% Partial 'devtools/reach-out.md' %}
+
+---
 
 ### Video
 
