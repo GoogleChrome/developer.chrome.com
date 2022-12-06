@@ -539,6 +539,4 @@ The partial shortcode can be used to add partials (from the _partials directory)
 
 Once uploaded to `storage.googleapis.com`, videos can be added to the page via the Video shortcode.
 
-The shortcode supports the following parameters:
-
 {% Video src="video/T4FyVKpzu4WKF1kBNvXepbi08t52/4tFe6RarBGc5Jre1bScp.mp4", muted="true" %}
