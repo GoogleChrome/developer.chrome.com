@@ -20,17 +20,17 @@ When a capability is added to the platform or a bug is addressed, it will be rem
 
 This section lists major features that will be added to the Manifest V3 platform in order to aid developers migrating from Manifest V2. Timelines included here are best effort estimates, not hard commitments.
 
-### webRequest.onAuthRequired events {: #webrequest-onauthrequired }
+### FIXED: webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
-**Summary:** User-installed Manifest V3 extensions cannot currently intercept `webRequest.onAuthRequired` events, since the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome provides extensions with a way to supply credentials for authentication requests in Manifest V3.
+**Summary:** User-installed Manifest V3 extensions could not currently intercept `webRequest.onAuthRequired` events because the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome now allows extensions with the `webRequest` and `webRequestAuthProvider` permissions to asynchronously supply credentials for `onAuthRequired` events.
 
-**Estimated timeline:** Scheduled for Chrome 108.
+**Shipped:** Chrome 108.
 
-### Offscreen Documents API {: #offscreen-documents-api }
+### FIXED: Offscreen Documents API {: #offscreen-documents-api }
 
-**Summary:** Offscreen documents are a new capability that will allow Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions will be able to use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
+**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
 
-**Estimated timeline:** Scheduled for Chrome 109.
+**Shipped:** Chrome 109.
 
 ### Userscript managers support {: #userscript-managers-support }
 
@@ -46,9 +46,9 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ## Bugs {: #bugs }
 
-### Service workers are not started in response to webRequest events {: #webrequest-in-sw }
+### FIXED: Service workers are not started in response to webRequest events {: #webrequest-in-sw }
 
-**Summary:** Manifest V3 extensions will only receive [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker is stopped for the first time, events on this API are no longer dispatched as intended. This prevents Manifest V3 extensions from observing network requests.
+**Summary:** Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. The first time an extension service worker stopped after installation or browser start, webRequest API events would no longer be dispatched to the service worker as intended, preventing Manifest V3 extensions from observing network requests. This issue has been resolved.
 
 **Shipped**: Chrome 107.
 
