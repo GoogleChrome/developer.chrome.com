@@ -11,7 +11,7 @@ subhead: A high-level explanation of the structure of a Chrome Extension.
 
 A Chrome extension is composed of different parts. This page describes the structure of an extension, the role each part plays and how they work together. Implementation details are out of the scope of this article.
 
-If you are not familiar with Chrome extensions, we recommend first reading [What are extensions?][doc-overview] and [Extensions 101][doc-ext-101] to begin your extension developer journey.
+If you are not familiar with Chrome extension development, we recommend first reading [Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics].
 
 ## The structure of a Chrome extension {: #architecture }
 
@@ -88,6 +88,7 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
 [doc-dev-guide]: /docs/extensions/mv3/devguide
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-messages]: /docs/extensions/mv3/messaging
