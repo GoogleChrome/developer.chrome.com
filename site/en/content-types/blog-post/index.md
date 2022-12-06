@@ -10,16 +10,7 @@ date: 2017-09-28
 updated: 2019-10-14
 ---
 
-There are six types of headings you can add to a post:
-
-# Heading 1
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper.
-Suspendisse auctor ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus a,
-ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue.
-Nam quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna ac blandit ullamcorper.
-Proin et semper nibh, sit amet imperdiet velit. Morbi quam sem. Integer et erat ac mi scelerisque suscipit
-et vitae nulla. Aliquam scelerisque efficitur ante ut facilisis.
+There are five types of headings you can add to a post:
 
 ## Heading 2
 
@@ -212,10 +203,10 @@ It's possible to add tables using markdown. Here's an example:
 
 You can add links using markdown.
 
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit](https://developer.chrome.com). Proin dictum a massa sit amet ullamcorper.
+Lorem ipsum dolor sit amet, [consectetur adipiscing elit](/). Proin dictum a massa sit amet ullamcorper.
 Suspendisse auctor ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus a,
 ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue.
-Nam quis enim blandit, posuere justo dignissim, [scelerisque diam.](https://developer.chrome.com) Fusce aliquet urna ac blandit ullamcorper.
+Nam quis enim blandit, posuere justo dignissim, [scelerisque diam.](/) Fusce aliquet urna ac blandit ullamcorper.
 Proin et semper nibh, sit amet imperdiet velit. Morbi at quam sem.
 
 ### Emphasis
@@ -308,10 +299,6 @@ The stats block offers a visually appealing way to add statistics to a post:
   <div class="stats__item">
     <p class="stats__figure">13<sub>%</sub></p>
     <p>Higher CTR</p>
-  </div>
-  <div class="stats__item">
-    <p class="stats__figure">4<sub>x</sub></p>
-    <p>Faster load times</p>
   </div>
   <div class="stats__item">
     <p class="stats__figure">4<sub>x</sub></p>
