@@ -192,7 +192,7 @@ jobs:
               - 'site/_shortcodes/**.js'
               - 'site/_transforms/**.js'
               - 'site/_utils/**.js'
-              - 'tests/visual/fixtures/site/**'
+              - 'site/en/content-types/**'
 
       - name: Cloning repository
         uses: actions/checkout@v3
