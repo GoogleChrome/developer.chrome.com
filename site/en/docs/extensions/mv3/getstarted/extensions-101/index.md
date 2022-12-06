@@ -14,9 +14,9 @@ This page describes what an extension is and a brief introduction to Chrome exte
 Chrome extensions enhance the browsing experience by adding features and functionality to the Chrome
 browser, providing things like:
 
-- Productivity tools
-- Web page content enrichment
-- Information aggregation
+- Productivity tools.
+- Web page content enrichment.
+- Information aggregation.
 
 These are just a few examples of the many things that extensions can do. See the [Chrome Web
 Store][chrome-web-store] to see thousands of different examples of published extensions.
