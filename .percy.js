@@ -1,5 +1,5 @@
 const SNAPSHOTS = [
-  '/en/page-types/author-individual/index.html',
+  '/en/content-types/author-individual/index.html',
   '/en/test-post/index.html',
 ];
 
