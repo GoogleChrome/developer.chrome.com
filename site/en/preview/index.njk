@@ -34,26 +34,16 @@ layout: 'layouts/landing.njk'
 
 <form action="/_render" method="post" name="dcc_preview_form" hidden>
   <div class="pad-bottom-400 pad-top-400">
-    <label for="fm" class="display-block">FrontMatter (in Yaml format)</label>
+    <label for="fm" class="display-block">FrontMatter</label>
     <textarea
       id="fm"
       name="fm"
-      rows="5"
+      rows="15"
       class="width-full rounded-200 pad-200 hairline"
-      placeholder="layout: layouts/blog-post.njk"
+      placeholder="---&#10;layout: 'layouts/blog-post.njk'&#10;date: 2020-07-27&#10;title: Test title TBD&#10;desciption: Test description TBD&#10;authors: &#10;  - rachelandrew&#10;---
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     ></textarea>
   </div>
-
-  <div class="pad-bottom-400">
-    <label for="md" class="display-block">Content (in Markdown format)</label>
-    <textarea
-      id="md"
-      name="md"
-      rows="5"
-      class="width-full rounded-200 pad-200 hairline"
-      placeholder="Loerm ipsum..."></textarea>
-  </div>
-
   <input type="hidden" name="t" />
   <input name="s" type="submit" class="button button-filled material-button button-primary"/>
 </form>
