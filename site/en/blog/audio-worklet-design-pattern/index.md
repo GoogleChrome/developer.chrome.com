@@ -211,7 +211,7 @@ silence causing a glitch in the stream.
 
 This pattern is useful when replacing ScriptProcessorNode (SPN) with
 AudioWorkletNode. Since SPN allows the developer to pick a buffer size between
-256 and 4096 frames, so the drop-in substitution of SPN with AudioWorkletNode
+256 and 16384 frames, so the drop-in substitution of SPN with AudioWorkletNode
 can be difficult and using a ring buffer provides a nice workaround. A audio
 recorder would be a great example that can be built on top of this design.
 
