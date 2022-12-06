@@ -28,9 +28,15 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### FIXED: Offscreen Documents API {: #offscreen-documents-api }
 
-**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on.
+**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating on this API in future Chrome milestones.
 
 **Shipped:** Chrome 109.
+
+### Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
+
+**Summary:** Extension service workers are currently terminated a set amount of time after they first start. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
+
+**Estimated timeline:** Targeting Canary support before March, 2023.
 
 ### Userscript managers support {: #userscript-managers-support }
 
@@ -50,7 +56,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. The first time an extension service worker stopped after installation or browser start, webRequest API events would no longer be dispatched to the service worker as intended, preventing Manifest V3 extensions from observing network requests. This issue has been resolved.
 
-**Shipped**: Chrome 107.
+**Shipped:** Chrome 107.
 
 ### Sandboxed page CSP can't be customized {: #sandboxed-csp }
 
