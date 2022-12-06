@@ -7,11 +7,19 @@ date: 2022-10-04
 # updated: 2022-06-13
 ---
 
-## Overview {: #overview }
+This page describes what an extension is and a brief introduction to Chrome extensions development. It also includes links to step-by-step [beginner tutorials][section-tutorials].
+
+## What are extensions? {: #overview }
 
 Chrome extensions enhance the browsing experience by adding features and functionality to the Chrome
-browser. This page introduces Chrome extension development and provides links to step-by-step
-[beginner tutorials][section-tutorials]. 
+browser, providing things like:
+
+- Productivity tools
+- Web page content enrichment
+- Information aggregation
+
+These are just a few examples of the many things that extensions can do. See the [Chrome Web
+Store][chrome-web-store] to see thousands of different examples of published extensions.
 
 ## Web technologies {: #web-tech }
 
@@ -88,7 +96,8 @@ When you start designing your extension and choosing which features to support, 
 fulfills a [single purpose][doc-single-purpose] that is narrowly defined and easy to understand.
 This will allow your extension to be distributed through the Chrome Web Store.
 
-{% Details %} {% DetailsSummary %}
+{% Details %} 
+{% DetailsSummary %}
 
 **💡 What exactly does "single purpose" mean?**
 
@@ -113,9 +122,24 @@ See [Extension quality guidelines][doc-single-purpose] for additional details.
 
 You can set up a developer account with the [Chrome Web Store][chrome-web-store] to host and
 distribute your extension. Bare in mind that extensions must adhere to the [developer program
-policies][doc-cws-policy]. 
+policies][doc-cws-policy].
 
 See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribute your extension.
+
+
+{% Details %} 
+{% DetailsSummary %}
+
+**💡 What if I only want to distribute the extension within my organization?**
+
+{% endDetailsSummary %}
+
+Some organizations use [enterprise policies][doc-cws-enterprise] to install extensions on their user's devices. These
+extensions may either be fetched from the Chrome Web Store or hosted on the organization's web
+servers.
+
+{% endDetails %}
+
 
 ## 🚀 Ready to start building? {: #building }
 
@@ -139,6 +163,7 @@ extension and Chrome Web store documentation:
 [doc-apis]: /docs/extensions/reference/
 [doc-arch]: /docs/extensions/mv3/architecture-overview/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts/
+[doc-cws-enterprise]: /docs/webstore/cws-enterprise/
 [doc-cws-policy]: /docs/webstore/program-policies/
 [doc-cws-publish]: /docs/webstore/publish/
 [doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
