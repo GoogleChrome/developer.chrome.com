@@ -51,7 +51,7 @@ extensions][malicious-mac]).
 
 ### Creating a CRX file {: #create-crx }
 
-Some of the installation methods described here require a CRX file. The procedure below describes creating one. It must be done with a private key file, which you can create with OpenSLL or any other method of creating a key file. If you do not have one, Chrome will create one for you.
+Some of the installation methods described here require a CRX file. The procedure below shows how to do this. It requires a private key file, which you can create with OpenSLL or any other method of creating a key file. If you do not have one, Chrome will create one for you.
 
 To create a CRX file.
 
@@ -59,15 +59,15 @@ To create a CRX file.
 
 1. On the top left of the screen, click Pack Extensions. The Pack extensions dialog box appears.
 
-   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/z4KrJBv7gE0S7wmXhrU2.png", alt="ALT_TEXT_HERE", width="800", height="469" %}
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/z4KrJBv7gE0S7wmXhrU2.png", alt="The Pack extension dialog box.", width="800", height="469" %}
 
 1. Locate the Extensions root directory box and click Browse. A folder selection dialog box appears.
 
-1. Locate the root directory containing your extension files and click Select. The Pack extensions dialog reappears. The Extensions root directory box will contain the path to the location you just selected.
+1. Locate the root directory containing your extension files and click Select. The Pack extensions dialog reappears. The Extensions root directory box now contains the path to the location you just selected.
 
 1. (Optional) Locate the Private key file box and click Browse. A folder selection dialog box appears.
 
-1. Locate your private key file and click Open. The Pack extensions dialog reappears. The Private key file box will contain the path to the file you just selected.
+1. Locate your private key file and click Open. The Pack extensions dialog reappears. The Private key file box now contains the path to the file you just selected.
 
 1. Click Pack extension. A confirmation dialog box appears.
 
@@ -94,9 +94,9 @@ id", width="800", height="165" %}
 
 1. Open the directory where your CRX file is located.
 
-1. Drag the CRX file on the the Chrome Extensions page. The Add box appears.
+1. Drag the CRX file on to the Chrome Extensions page. The Add dialog box appears.
 
-   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/I3qx5JXDNpOQPPrnwoxa.png", alt="ALT_TEXT_HERE", width="800", height="332" %}
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/I3qx5JXDNpOQPPrnwoxa.png", alt="Add dialog box.", width="800", height="332" %}
 
 1. Click Add extension.
 
