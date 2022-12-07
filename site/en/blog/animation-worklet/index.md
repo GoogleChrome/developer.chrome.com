@@ -478,9 +478,7 @@ especially important for AnimationWorklet.
 
 You might know that certain CSS properties are fast to animate, while others are
 not. Some properties just need some work on the GPU to be animated, while others
-force the browser to re-layout the entire document. Sites like
-[CSSTriggers.com](https://csstriggers.com/) show you which properties are fast
-to animate, and which are not.
+force the browser to re-layout the entire document.
 
 In Chrome (as in many other browsers) we have a process called the compositor,
 whose job it is — and I'm very much simplifying here — to arrange layers and
