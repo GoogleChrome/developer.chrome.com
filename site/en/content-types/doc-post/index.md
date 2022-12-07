@@ -113,14 +113,14 @@ Adding another H2 results in a new top level item.
 
 ![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png)
 
-### Or with HTML:
+### Or with HTML
 
 <figure>
   {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
   <figcaption>Image with caption</figcaption>
 </figure>
 
-### When adding with HTML, you can float images as follows:
+### When adding with HTML, you can float images as follows
 
 <figure data-float="right">
   {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
@@ -130,13 +130,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper.
 
-### You can also add fullwidth images:
+### You can also add fullwidth images
 
 <figure data-size="full">
  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
 </figure>
 
-### And images with a border:
+### And images with a border
 
 <figure data-screenshot>
  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
@@ -320,19 +320,19 @@ The elevation class adds a box shadow and can be used to bring more attention to
 
 If the need arises you can add buttons to a post as follows.
 
-### Material button with no background:
+### Material button with no background
 
 <a class="material-button button-filled">Test</a>
 
-### Material button with background:
+### Material button with background
 
 <a class="material-button button-filled color-bg bg-primary">Test</a>
 
-### Rounded material button:
+### Rounded material button
 
 <a class="material-button button-filled color-bg bg-primary button-round">Test</a>
 
-### Text button:
+### Text button
 
 <button class="material-button button-text color-primary">
   Text button
