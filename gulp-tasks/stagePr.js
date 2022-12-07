@@ -55,13 +55,16 @@ async function stagePr() {
 
   console.log('Waiting for Cloud Build job to start ...');
   // Wait for 30 seconds, for the webhook to create the actual
-  // build and Cloud Build propagate the status back to GitHub
+  // build and Cloud Build propagate the status back to GitHub.
+  // This can take up to 1'30".
   await new Promise(resolve => {
-    setTimeout(resolve, 30 * 1000);
+    setTimeout(resolve, 2 * 60 * 1000);
   });
 
+  console.log(`Fetching checks for commit ${process.env.COMMIT_SHA} ...`);
+
   const checks = await fetch(
-    `https://api.github.com/repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-suites`,
+    `https://api.github.com/repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-runs`,
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
