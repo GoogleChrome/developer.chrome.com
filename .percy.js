@@ -1,9 +1,7 @@
 const SNAPSHOTS = [
   '/en/content-types/author-individual/index.html',
-  '/en/content-types/authors-landing/index.html',
   '/en/content-types/blog-landing/index.html',
   '/en/content-types/blog-post/index.html',
-  '/en/content-types/collection-landing/index.html',
 ];
 
 module.exports = {
