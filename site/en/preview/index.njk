@@ -8,13 +8,13 @@ layout: 'layouts/landing.njk'
 {% set script %}
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script>
-  function onSignIn(googleUser) {
+  window.onSignIn = function(googleUser) {
     document.dcc_preview_form.t.value = googleUser.credential;
     document.dcc_preview_form.removeAttribute('hidden');
     document.querySelector('.g_id_signin').setAttribute('hidden', true);
   }
 
-  function onSubmit(form) {
+  window.onSubmit = function(form) {
     form.fm.readOnly = true;
     form.md.readOnly = true;
     form.s.disabled = true;
