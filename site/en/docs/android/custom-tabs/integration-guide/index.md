@@ -1,9 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
 title: Implementation guide
+seoTitle: Android Custom Tabs implementation guide
 date: 2020-02-04
-updated: 2022-10-25
-description: Custom Tabs implementation guide
+updated: 2022-11-24
+description: Learn how to integrate a web browser into your Android app.
 ---
 
 A complete example is available on [the GitHub sample application][1]. It

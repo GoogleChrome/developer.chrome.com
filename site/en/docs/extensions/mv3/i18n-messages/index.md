@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Localization message formats"
+seoTitle: "Chrome Extension Localization message formats"
 date: 2012-09-18
 updated: 2014-05-22
 description: Reference documentation about the format of the messages.json file for Chrome Extensions.

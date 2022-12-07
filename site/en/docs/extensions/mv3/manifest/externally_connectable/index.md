@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "externally_connectable"
+seoTitle: "Chrome Extensions Manifest: externally_connectable"
 date: 2013-08-21
 updated: 2014-10-31
 description: Reference documentation for the externally_connectable property of manifest.json.

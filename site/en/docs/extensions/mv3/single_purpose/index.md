@@ -1,6 +1,7 @@
 ---
+title: "Overriding Chrome settings"
 layout: "layouts/doc-post.njk"
-title: "Extensions quality guidelines FAQ"
+seoTitle: "Chrome Extensions quality guidelines FAQ"
 date: 2014-05-09
 updated: 2021-07-22
 description: Frequently asked questions about the single purpose policy.

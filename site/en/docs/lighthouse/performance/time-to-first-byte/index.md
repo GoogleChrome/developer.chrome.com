@@ -36,7 +36,8 @@ Optimizing the server to do work like this as quickly as possible is one way to 
 
 ## How to improve server response times
 
-The first step to improving server response times is to identify the core conceptual tasks that your server must complete in order to return page content, and then measure how long each of these tasks takes. Once you've identified the longest tasks, search for ways to speed them up.
+The first step to improving server response times is to identify the core conceptual tasks that your server must complete in order to return page content,
+and then measure how long each of these tasks takes. Once you've identified the longest tasks, search for ways to speed them up.
 
 There are many possible causes of slow server responses, and therefore many possible ways to improve:
 

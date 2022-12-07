@@ -14,7 +14,7 @@ traffic.
 
 ## How the Lighthouse meta description audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages
+[Lighthouse](/docs/lighthouse/overview/) flags pages
 without a meta description:
 
 <figure class="w-figure">

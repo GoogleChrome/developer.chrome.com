@@ -8,12 +8,12 @@ date: 2019-05-02
 updated: 2020-04-29
 ---
 
-[Critical request chains](https://developers.google.com/web/fundamentals/performance/critical-rendering-path)
+[Critical request chains](https://web.dev/critical-rendering-path/)
 are series of dependent network requests important for page rendering.
 The greater the length of the chains and the larger the download sizes,
 the more significant the impact on page load performance.
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 reports critical requests loaded with a high priority:
 
 <figure>

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manage events with service workers"
+seoTitle: "Chrome Extensions: Manage events with service workers"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension service worker.

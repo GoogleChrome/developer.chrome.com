@@ -32,6 +32,12 @@ compare_before:
 compare_after:
   en: 'After'
 
+compare_current:
+  en: 'Current'
+
+compare_proposed:
+  en: 'Proposed' 
+
 menu:
   en: 'menu'
   es: 'menu'
@@ -75,6 +81,9 @@ success:
 gotchas:
   en: 'Gotchas'
   es: 'Gotchas'
+
+important:
+  en: 'Important'
 
 key-term:
   en: 'Key Term'

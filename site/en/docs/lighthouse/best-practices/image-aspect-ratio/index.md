@@ -8,14 +8,14 @@ updated: 2020-04-29
 ---
 
 If a rendered image has an [aspect ratio][ar] that's significantly different
-from the aspect ratio in its source file (the _natural_ aspect ratio),
+to the aspect ratio in its source file (the _natural_ aspect ratio),
 the rendered image may look distorted,
 possibly creating an unpleasant user experience.
 
 ## How the Lighthouse image aspect ratio audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags any
-image with a rendered dimension more than a few pixels different from the expected dimension
+[Lighthouse](/docs/lighthouse/overview/) flags any
+image with a rendered dimension of more than a few pixels difference to the expected dimension
 when rendered at its natural ratio:
 
 <figure>
@@ -24,7 +24,7 @@ when rendered at its natural ratio:
 
 There are two common causes for an incorrect image aspect ratio:
 
-- An image is set to explicit width and height values that differ from the source image's dimensions.
+- An image is set with explicit width and height values that differ from the source image's dimensions.
 - An image is set to a width and height as a percentage of a variably-sized container.
 
 {% Partial 'lighthouse-best-practices/scoring.njk' %}
@@ -39,9 +39,10 @@ for an overview and [How to install the Thumbor image CDN](https://web.dev/insta
 hands-on codelab.
 
 ### Check the CSS that affects the image's aspect ratio
+
 If you're having trouble finding the CSS that's causing the incorrect aspect ratio,
 Chrome DevTools can show you the CSS declarations that affect a given image.
-See Google's [View only the CSS that's actually applied to an element](https://developers.google.com/web/tools/chrome-devtools/css/reference#computed)
+See Google's [View only the CSS that's actually applied to an element](/docs/devtools/css/reference/#computed)
 page for more information.
 
 

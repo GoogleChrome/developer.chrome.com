@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Sandbox"
+seoTitle: "Chrome Extensions Manifest: sandbox"
 date: 2013-05-12
 updated: 2022-04-28
 description: Reference documentation for the sandbox property of manifest.json.

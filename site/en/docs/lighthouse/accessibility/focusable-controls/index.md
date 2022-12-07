@@ -68,7 +68,7 @@ the button's focus indicator always looks the same
 
 For users who either cannot or choose not to use a mouse,
 keyboard navigation is the primary means of reaching everything on a screen.
-Good keyboarding experiences depend on a logical tab order and easily discernable focus styles.
+Good keyboarding experiences depend on a logical tab order and easily discernible focus styles.
 If a keyboard user can't see what's focused, they have no way of interacting with the page.
 
 Learn more in [How to do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
