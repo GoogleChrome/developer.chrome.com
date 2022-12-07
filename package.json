@@ -95,7 +95,8 @@
     "@types/js-yaml": "^4.0.3",
     "@types/node": "16.11.7",
     "@types/node-fetch": "^2.5.12",
-    "@types/tmp": "^0.2.0"
+    "@types/tmp": "^0.2.0",
+    "fsevents": "*"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",
