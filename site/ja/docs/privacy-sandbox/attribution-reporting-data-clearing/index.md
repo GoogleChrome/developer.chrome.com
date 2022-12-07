@@ -19,7 +19,7 @@ authors:
 
 複数のサイトが、[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/#status)を通じて、Chrome の Attribution Reporting API を試しました。
 
-これらの早期の実験から得られたインサイトの 1 つに、**ユーザーによるデータ消去（ブラウザの履歴の消去など）**が、広告主やアドテック企業が API から取得したデータに与える影響に関するものがあります。[Chrome の集計統計](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)が最近公開されました。この投稿では、ユーザーによるデータ消去がアトリビューション レポートに与える影響について、一般的な疑問に答えています。
+これらの早期の実験から得られたインサイトの 1 つに、**ユーザーによるデータ消去（ブラウザの履歴の消去など** が、広告主やアドテック企業が API から取得したデータに与える影響に関するものがあります。[Chrome の集計統計](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)が最近公開されました。この投稿では、ユーザーによるデータ消去がアトリビューション レポートに与える影響について、一般的な疑問に答えています。
 
 {% Aside %} このブログ記事に記載されている数値と記述は、公開時点のものです。API の進化に伴い、変更される可能性があります。{% endAside %}
 
@@ -53,7 +53,7 @@ Chrome チームは引き続き統計を監視し、[開発者向けのメーリ
 
 {% Aside %} データ消去の方法が異なれば、測定データの削除に与えられる影響も異なることに注意してください。たとえば、過去 1 時間のデータを消去しても、それより前に設定された Cookie は消去されません。 {% endAside %}
 
-**Attribution Reporting API** を使用すると、クリック後コンバージョン前のデータが消去されるため、一部のコンバージョンが報告されません。Attribution Reporting API を使用した早期の実験（オリジントライアル）では、ソース（クリックイベント）の**[約 16%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** がコンバージョン前に削除されていることが観察されています。これらのソースの一部はコンバージョンにつながりますが、ソースが削除されていれば、これらのコンバージョンのレポートは送信されません。
+**Attribution Reporting API** を使用すると、クリック後コンバージョン前のデータが消去されるため、一部のコンバージョンが報告されません。Attribution Reporting API を使用した早期の実験（オリジントライアル）では、ソース（クリックイベント）の **[約 16%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** がコンバージョン前に削除されていることが観察されています。これらのソースの一部はコンバージョンにつながりますが、ソースが削除されていれば、これらのコンバージョンのレポートは送信されません。
 
 #### 例
 
