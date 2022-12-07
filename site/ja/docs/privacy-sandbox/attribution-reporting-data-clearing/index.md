@@ -7,8 +7,8 @@ subhead: |2-
 description: |2-
 
   ユーザーによるデータ消去はアトリビューション レポートにどのように影響しますか？Cookie ベースの測定と比べてどうですか？
-date: '2021-10-19'
-updated: '2021-10-19'
+date: 2021-10-19
+updated: 2021-10-19
 authors:
   - maudn
 ---
