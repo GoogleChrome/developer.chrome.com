@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Alternative extension installation methods"
 date: 2012-09-17
-updated: 2022-01-28
+updated: 2022-12-12
 description: How to install Chrome Extensions via preferences JSON or Windows registry.
 ---
 
@@ -49,6 +49,31 @@ extensions][malicious-mac]).
 
 ## Before you begin {: #prereqs }
 
+### Creating a CRX file {: #create-crx }
+
+Some of the installation methods described here require a CRX file. The procedure below describes creating one. It must be done with a private key file, which you can create with OpenSLL or any other method of creating a key file. If you do not have one, Chrome will create one for you.
+
+To create a CRX file.
+
+1. Go to `chrome://extensions`.
+
+1. On the top left of the screen, click Pack Extensions. The Pack extensions dialog box appears.
+
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/z4KrJBv7gE0S7wmXhrU2.png", alt="ALT_TEXT_HERE", width="800", height="469" %}
+
+1. Locate the Extensions root directory box and click Browse. A folder selection dialog box appears.
+
+1. Locate the root directory containing your extension files and click Select. The Pack extensions dialog reappears. The Extensions root directory box will contain the path to the location you just selected.
+
+1. (Optional) Locate the Private key file box and click Browse. A folder selection dialog box appears.
+
+1. Locate your private key file and click Open. The Pack extensions dialog reappears. The Private key file box will contain the path to the file you just selected.
+
+1. Click Pack extension. A confirmation dialog box appears.
+
+1. Click OK.
+
+
 ### Installing from the Chrome Web Store {: #prereq-cws }
 
 If you are distributing an extension hosted in the Chrome Web Store, you must first [publish the
@@ -63,7 +88,19 @@ id", width="800", height="165" %}
 
 <!-- Add screenshot -->
 
-### Installing from Local CRX file {: #prereq-crx }
+### Installing a CRX file in Chrome {: #chrome-crx }
+
+1. Open Chrome and go to `chrome://extensions`. The Chrome Extensions page appears.
+
+1. Open the directory where your CRX file is located.
+
+1. Drag the CRX file on the the Chrome Extensions page. The Add box appears.
+
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/I3qx5JXDNpOQPPrnwoxa.png", alt="ALT_TEXT_HERE", width="800", height="332" %}
+
+1. Click Add extension.
+
+### Installing a CRX file on Linux systems {: #prereq-crx }
 
 If you are distributing to Linux users from a local file, you will need to [package a CRX
 file][packing] and note the following information:
