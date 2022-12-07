@@ -60,7 +60,7 @@ On the other hand, the **Issues** tab provides you with actionable insights.
 The **Issues** tab presents warnings from the browser in a structured, aggregated, and actionable
 way.
 
-1.  Click an item in the **Issues** tab to expand the issue and get guidance on how to fix the it and find affected resources.
+1.  Click an item in the **Issues** tab to expand the issue and get guidance on how to fix it and find affected resources.
 
     {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3J588AXoubJbr2llFYmc.png", alt="The Issues tab with a cross-site cookie issue expanded.", width="800", height="747" %}
 
