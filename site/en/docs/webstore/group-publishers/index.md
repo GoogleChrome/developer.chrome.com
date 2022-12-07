@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Set up a group publisher
 date: 2020-06-20
-updated: 2022-12-09
+updated: 2022-12-12
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
 <!--lint disable code-block-style-->
@@ -15,19 +15,22 @@ a *group publisher*. This page explains how group publishers work and how to set
 
 Use a group publisher to establish an entity that owns Chrome Web Store items, allowing multiple
 developers to share ownership of a published item. Consider how this differs from the more basic
-individual publisher role. When you [register as a Chrome Web Store developer][cws-register], your developer account is automatically enrolled as an individual publisher.
+individual publisher role. 
 
-Individual publisher
-: When an individual developer acts as a publisher of an item, only that developer can upload and
-publish updates to the item. The following diagram describes this scenario:
+{% Aside %}
+When you [register as a Chrome Web Store developer][cws-register], your developer account is
+automatically enrolled as an individual publisher.
+{% endAside %}
+
+**Individual publisher** When an individual developer acts as a publisher of an item, only that
+developer can upload and publish updates to the item. The following diagram describes this scenario:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/VCMoTUiD0xFT5pZVj3kO.svg", alt="Diagram of individual
 publishing process", width="800", height="145" %}
 
-Group publisher
-: A Google Group can be set up to associate multiple developers into a composite entity. Any Chrome
-Web Store developer who belongs to the group can publish updates to the item, as depicted in the
-following diagram:
+**Group publisher** By setting up a *group publisher*, you use a Google Group to associate multiple
+developers into a composite entity. Any Chrome Web Store developer who belongs to the group can
+publish updates to the item, as depicted in the following diagram:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/pgzFlq6rxiKFQ5NjYlBi.svg", alt="Diagram of group
 publishing process", width="800", height="395" %}
