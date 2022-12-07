@@ -15,7 +15,7 @@ a *group publisher*. This page explains how group publishers work and how to set
 
 Use a group publisher to establish an entity that owns Chrome Web Store items, allowing multiple
 developers to share ownership of a published item. Consider how this differs from the more basic
-individual publisher role. 
+individual publisher role.
 
 {% Aside %}
 When you [register as a Chrome Web Store developer][cws-register], your developer account is
