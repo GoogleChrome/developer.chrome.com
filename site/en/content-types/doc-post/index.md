@@ -93,7 +93,7 @@ expedita ea officia voluptatibus et quis enim 33 autem veritatis.
 1. Commodo ullamcorper a lacus vestibulum sed arcu non.
 
 
-## Lorem ipsum dolor
+## A title of medium length
 
 Lorem ipsum dolor sit amet. **Qui possimus unde** et nesciunt vero eos vitae cumque. In quidem dicta et obcaecati rerum ex repudiandae
 expedita ea officia voluptatibus et quis enim 33 autem veritatis. Est libero rerum eos autem enim qui dolor rerum aut dolor autem
@@ -130,7 +130,7 @@ Nam vel elementum augue. Nam quis enim blandit, posuere justo dignissim, sceleri
 semper nibh, sit amet imperdiet velit. Morbi quam sem. Integer et erat ac mi scelerisque suscipit et vitae nulla. Aliquam scelerisque efficitur
 ante ut facilisis. Aenean et risus fringilla, hendrerit sapien et, tincidunt orci. Aenean sed tellus aliquam, consectetur metus in, tempus enim.
 
-### Lorem ipsum dolor - 2
+### Suspendisse auctor
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper. Suspendisse auctor ultrices ante, nec
 tempus nibh varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in.
