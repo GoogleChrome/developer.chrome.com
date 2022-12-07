@@ -21,108 +21,107 @@ Sites have experimented with the Attribution Reporting API in Chrome, via an [or
 
 これらの早期の実験から得られたインサイトの 1 つに、**ユーザーによるデータ消去（ブラウザの履歴の消去など）**が、広告主やアドテック企業が API から取得したデータに与える影響に関するものがあります。[Chrome の集計統計](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)が最近公開されました。この投稿では、ユーザーによるデータ消去がアトリビューション レポートに与える影響について、一般的な疑問に答えています。
 
-{% Aside %} Numbers and statements in this blogpost are correct at the time of its publication. They're subject to change as the API evolves. {% endAside %}
+{% Aside %} このブログ記事に記載されている数値と記述は、公開時点のものです。API の進化に伴い、変更される可能性があります。{% endAside %}
 
 ## ユーザーによるデータ消去はアトリビューション レポートにどのように影響しますか？
 
-And how does that compare with cookie-based measurement?
+また、それは Cookie ベースの測定と比べてどうですか？
 
-### About the numbers
+### 数値について
 
-{% Aside 'caution' %} The numbers presented below help understand some observed discrepancies between cookie-based measurement and Attribution Reporting based measurement.
+{% Aside 'caution' %} 以下に示す数値は、Cookie ベースの測定とアトリビューション レポートベースの測定の間に観察される矛盾を理解するのに役立ちます。
 
-However, they likely won't be consistently observable for all organizations that use the API.
+ただし、この API を使用するすべての組織で一貫して観察できる矛盾というわけではありません。
 
-These numbers are aggregated and measured for the set of sites that were running an origin trial. They differ across sites and are likely to change as more organizations use the API in an origin trial and use different parameters. {% endAside %}
+これらの数値は、オリジントライアルを実行していた一連のサイトに対して集計および測定されます。数値はサイト間で異なり、オリジントライアルで様々なパラメーターで API を使用する組織が増えるにつれて、変化する可能性があります。{% endAside %}
 
-**Multiple factors influence these numbers:**
+**以下のような複数の要因が数値に影響しています。**
 
-- Whether users clear history on sites they navigate to by clicking on an ad;
-- Whether users convert on categories of sites where they tend to clear history—possibly shortly after converting. Ads on this type of content might experience higher rates of clearing and hence higher discrepancies with cookie-based measurement;
-- Similarly, whether users clear history on sites they click ads to;
-- Whether the attribution is configured to expire a long or short time after click (`attributionexpiry`);
+- ユーザーが広告クリックによって移動した先のサイトの履歴を消去するかどうか。
+- ユーザーが履歴を消去する傾向があるサイトのカテゴリでコンバージョンしているか（おそらくコンバージョン直後）。このタイプのコンテンツの広告では消去率が高い可能性があり、したがって Cookie ベースの測定との差異が大きくなる可能性があります。
+- 同様に、ユーザーが広告をクリックした先のサイトの履歴を消去するかどうか。
+- クリック後、長い時間または短い時間でアトリビューションが期限切れになるように構成されているかどうか（`attributionexpiry`）。
 - Whether a long time actually elapses between click and conversion.
 
-Chrome teams will continue to monitor and publish statistics on the [mailing list for developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev).
+Chrome チームは引き続き統計を監視し、[開発者向けのメーリングリストで](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev)公開していく予定です。
 
-### Data clearing occurring after a click and before a conversion
+### クリックしてからコンバージョン前までに発生するデータ消去
 
 **Cookie** を使用すると、クリック後コンバージョン前のデータが消去されるため、コンバージョンの一部がレポートされません。Cookie が消去されているため、コンバージョン時にリクエストに添付される Cookie がなく、そのコンバージョンを測定することはできません。ユーザーによるデータ消去が原因で報告されないコンバージョンが実際にどれくらいの割合で存在するかは不明です。この割合はアドテック企業（または広告主）ごとに異なります。
 
-<figure>   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/O7UEJCUZ2vfOYpLvm5wL.png", alt="User-initiated data clearing before a conversion impacts cookie-based measurement.", width="800", height="180" %}   <figcaption>User-initiated data clearing before a conversion impacts cookie-based measurement.</figcaption> </figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/O7UEJCUZ2vfOYpLvm5wL.png", alt="コンバージョン前にユーザーが開始するデータ消去は、Cookie ベースの測定に影響する。", width="800", height="180" %}<figcaption>コンバージョン前にユーザーが開始するデータ消去は、Cookie ベースの測定に影響する。</figcaption></figure>
 
-{% Aside %} Note that different data clearing methods have different impacts on measurement data deletion. For example, clearing data from the last hour doesn't clear a cookie that was set much earlier. {% endAside %}
+{% Aside %} データ消去の方法が異なれば、測定データの削除に与えられる影響も異なることに注意してください。たとえば、過去 1 時間のデータを消去しても、それより前に設定された Cookie は消去されません。 {% endAside %}
 
-**With the Attribution Reporting API**, some percentage of conversions aren't reported due to post-click pre-conversion data clearing. Observations of early experiments (origin trial) using the Attribution Reporting API have shown that **[about 16%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** of sources (click events) are deleted before conversion. A percentage of these sources lead to conversions, and the reports for these conversions won't be sent if the sources have been deleted.
+**Attribution Reporting API** を使用すると、クリック後コンバージョン前のデータが消去されるため、一部のコンバージョンが報告されません。Attribution Reporting API を使用した早期の実験（オリジントライアル）では、ソース（クリックイベント）の**[約 16%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** がコンバージョン前に削除されていることが観察されています。これらのソースの一部はコンバージョンにつながりますが、ソースが削除されていれば、これらのコンバージョンのレポートは送信されません。
 
 #### Example
 
-For a **10%** conversion rate, assuming a total of **1000** clicks and without taking other errors into consideration:
+コンバージョン率が **10%** で、合計クリック数を **1000** と想定し、他のエラーを考慮しない場合:
 
-- If users were never clearing any data: an adtech company would observe **100** conversions.
-- Considering data clearing:
-    - With cookies: data clearing occurring after a click and before a conversion causes some percentage of conversions to not be attributed to certain click events, since there is no cookie to map the click and the conversion. With our example, an adtech company would observe **less than 100** conversions.
-    - With Attribution Reporting: data clearing occurring after a click and before a conversion caused **1.6%** of reports that signified a conversion to be cleared (16% of 10% = 1.6%) in the first origin trial. Without taking other errors into consideration, an adtech company would receive **84** reports that signal a conversion, instead of **100**.
+- ユーザーがデータを消去しない場合: アドテック企業は **100** のコンバージョンを観測します。
+- データ消去を考慮した場合:
+    - Cookie の場合: クリック後からコンバージョン前までにデータ消去が発生すると、クリックとコンバージョンをマッピングする Cookie がないため、一部のコンバージョンが特定のクリックイベントに関連付けられなくなります。この例では、アドテック企業が観測するコンバージョンは **100 未満**となります。
+    - アトリビューション レポートの場合: クリック後からコンバージョン前までにデータ消去が発生すると、最初のオリジントライアルで、コンバージョンを意味するレポートの **1.6%**（10% の 16% = 1.6%）が消去されました。他のエラーを考慮しない場合、アドテック企業はコンバージョンを示すレポートを **100** ではなく **84** 受け取ることになります。
 
-### Data clearing occurring after a conversion
+### コンバージョン後のデータ消去
 
-**With cookies**, post-conversion data clearing has no effect, because conversions are reported immediately to the adtech company.
+**Cookie** を使用すると、コンバージョンはアドテック企業にすぐに報告されるため、コンバージョン後のデータ消去には何の効果もありません。
 
-<figure>   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7H4tlmi9nsa1LRNRkGlV.png", alt="User-initiated data clearing after a conversion doesn't impact cookie-based measurement.", width="800", height="195" %}   <figcaption>User-initiated data clearing after a conversion doesn't impact cookie-based measurement.</figcaption> </figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7H4tlmi9nsa1LRNRkGlV.png", alt="コンバージョン後にユーザーがデータを消去しても、Cookie ベースの測定には影響しない。", width="800", height="195" %}<figcaption>コンバージョン後にユーザーがデータを消去しても、Cookie ベースの測定には影響しない。</figcaption></figure>
 
-**With the Attribution Reporting API**, post-conversion data clearing causes reports to be cleared in order to honor user choice—such as a user clearing browser history, or deleting site data. Because the API doesn't send the reports immediately but with a delay in order to protect user privacy, this means that the browser storage is already empty when the scheduled time comes from the browser to send the report to the predefined endpoint—typically an adtech company.
+**Attribution Reporting API** を使用した場合、コンバージョン後にデータを消去すれば、ユーザーの選択（ブラウザの履歴消去やサイトデータの削除など）を尊重するため、レポートが消去されます。この API は、ユーザーのプライバシーを保護するために、レポートをすぐに送信するのではなく、遅延して送信します。したがって、ブラウザが事前定義されたエンドポイント（通常はアドテック企業）にレポートを送信するスケジュール済みの時刻になった時点で、ブラウザのストレージが空になっていることになります。
 
-<figure>   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/IeZewxklxPft41cQFtFh.png", alt="User-initiated data clearing after a conversion impacts measurement based on the Attribution Reporting API.", width="800", height="280" %}   <figcaption>User-initiated data clearing after a conversion impacts measurement based on the Attribution Reporting API.</figcaption> </figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/IeZewxklxPft41cQFtFh.png", alt="コンバージョン後にユーザーがデータを消去すると、Attribution Reporting API に基づく測定に影響する。", width="800", height="280" %}<figcaption>コンバージョン後にユーザーがデータを消去すると、Attribution Reporting API に基づく測定に影響する。</figcaption></figure>
 
-Observations of early experiments (origin trial) using the Attribution Reporting API have shown that **about [6.5%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** of reports have been deleted in this way.
+Attribution Reporting API を使用した早期の実験（オリジントライアル）では、レポートの**約 [6.5%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** がこの方法で削除されたことが観測されています。
 
-## What exact user actions can impact attribution reports?
+## アトリビューション レポートに実際に影響を与えるユーザー操作は何ですか？
 
 {% Aside %} ユーザーが保留中のコンバージョンを削除する方法は、プライバシーサンドボックスに新しい設定が追加されることで変更される可能性があります。 {% endAside %}
 
-As of Chrome 94—the stable Chrome version at the time of this writing—any of the following actions will clear stored click events and pending reports.
+Chrome 94（この記事の執筆時点での Chrome 安定バージョン）の時点で、次のいずれかの操作を行うと、保存されているクリック イベントと保留中のレポートが消去されます。
 
-- `chrome://settings` &gt; Privacy and Security &gt; Clear browsing data
+- `chrome://settings` &gt; プライバシーとセキュリティ &gt; 閲覧履歴データの消去
 
-    - Check the **Browsing History checkbox**
-    - and/or Check the **Clear Cookies and other site data checkbox**
-    - Click **Clear data**
+    - **閲覧履歴**のチェックボックスをオンにします。
+    - **Cookie と他のサイト データ**の消去チェックボックスをオンにします。
+    - **データを削除**をクリックします。
 
-- `chrome://settings` &gt; Privacy and Security &gt; Cookies and other site data
+- `chrome://settings` &gt; プライバシーとセキュリティ &gt; Cookie と他のサイトデータ
 
-    - Toggle **Clear cookies and site data when you close all windows**
-    - Or add a behavior under **Always clear cookies when windows are closed**
+    - **すべてのウィンドウを閉じるときに Cookie とサイトデータを削除する**を切り替えます。
+    - または、**ウィンドウを閉じるときに常に Cookie を削除**に動作を追加します。
 
 - `chrome://history`:
 
     - Delete any individual entry
 
-- Site-scoped controls:
+- サイトごとの制御:
 
-    - [site-scoped history controls](https://blog.google/products/chrome/privacy-and-performance-working-together-chrome/#:~:text=delete%20the%20site%20from%20your%20browsing%20history)
-    - Click the lock button in the URL bar, Navigate to **Site Settings**, Click **Clear Data**.
+    - [サイトごとの履歴管理](https://blog.google/products/chrome/privacy-and-performance-working-together-chrome/#:~:text=delete%20the%20site%20from%20your%20browsing%20history)
+    - URL バーのロックボタンをクリックし、**サイトの設定**に移動して、**データを削除**をクリックします。
 
-**This list isn't exhaustive**. These are common user actions that impact attribution data. Other user actions, such as uninstalling Chrome or running a system cleaner, would also impact measurement—whether it's based on the Attribution Reporting API or on cookies.
+**このリストはすべてを網羅しているわけではありません**。これらは、アトリビューションデータに影響を与える一般的なユーザー操作です。Attribution Reporting API に基づく測定か、Cookie に基づくかに関係なく、Chrome のアンインストールやシステムクリーナーの実行など、他のユーザー操作も測定に影響を与える可能性があります。
 
-## Does user-initiated data clearing account for any observed loss?
+## 観測される損失は、ユーザーによるデータ消去に起因しますか？
 
-Organizations that have experimented with the API via an origin trial may have observed a **discrepancy between cookie-based measurement and Attribution Reporting based measurement**: less conversions may have been reported for Attribution Reporting. User-initiated data clearing may account for observed loss, but the discrepancy must be monitored in future origin trials in order to answer this question with certainty.
+オリジントライアルを介して API を試した組織は、**Cookie ベースの測定とアトリビューション レポートベースの測定の間に矛盾**があることに気付いたのではないでしょうか。アトリビューション レポートでは、コンバージョン数が少なく報告されている可能性があります。観測された損失は、ユーザーがデータを消去したことに起因する場合がありますが、この質問に確実に答えるには、今後のオリジントライアルにおいて矛盾を監視する必要があります。
 
-Two elements are known to have played a role in the discrepancy between cookie-based measurement and Attribution Reporting based measurement in the past origin trial:
+過去のオリジントライアルにおける Cookie ベースの測定とアトリビューション レポートベースの測定の矛盾には、次の 2 つの要素が関与していることがわかっています。
 
 - ユーザーによるデータ消去。
-- [Network errors](https://bugs.chromium.org/p/chromium/issues/detail?id=1054127#c7). These are considered bugs and should be fixed in Chrome 94.
+- [ネットワークエラー](https://bugs.chromium.org/p/chromium/issues/detail?id=1054127#c7)。これらはバグと見なされており、Chrome 94 での修正が必要です。
 
 ## ユーザーによるデータ消去に関して、Attribution Reporting API でプライバシーと有用性のバランスを取るにはどうすればよいですか？
 
-During the testing phase of the API, the intent is to experiment with some of the parameters of the API to observe the effect on reports sent balanced against identifiability of the user. One of these parameters may be the reporting delay.
- [Ecosystem discussions are ongoing in the regular WICG meetings](https://github.com/WICG/conversion-measurement-api/blob/main/meetings/2021-09-20-minutes.md#:~:text=browser%20clearing%20attribution%20data) to explore these parameters.
+API のテスト段階では、API のいくつかのパラメーターを試して、送信されたレポートへの影響とユーザーの識別可能性とのバランスを観察することを目的としています。これらのパラメーターの 1 つがレポートの遅延である可能性があります。<br>これらのパラメーターを調査するために、[定期的な WICG 会議でエコシステムに関するディスカッションを進行中](https://github.com/WICG/conversion-measurement-api/blob/main/meetings/2021-09-20-minutes.md#:~:text=browser%20clearing%20attribution%20data)です。
 
 {% Aside %} より一般的な注意事項: アトリビューション レポートは、**プライバシーを保護**する測定アプローチを提供しています。これを実現するために、クロスサイトトラッキングが可能となってしまうデータの量を明示的に制限しています。**したがって、この API で利用できるデータは絶対的に、Cookie ベースのソリューションで利用できる量よりも少なくなっています。** {% endAside %}
 
-## Will aggregate reports be impacted in the same way?
+## 集計レポートも同じような影響を受けますか？
 
-{% Aside %} Learn more about the difference between **aggregate** reports and **event-level** reports [here](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features). {% endAside %}
+{% Aside %}**集計**レポートと**イベント レベル**レポートの違いについて詳しくは、[こちら](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features)をご覧ください。 {% endAside %}
 
 ユーザーによるデータ消去によって集計レポートにどのような影響があるかはわかっていません。
 
