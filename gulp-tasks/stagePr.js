@@ -60,7 +60,7 @@ async function stagePr() {
     }
   );
 
-  console.log(checks);
+  console.log(await checks.json());
 }
 
 module.exports = stagePr;

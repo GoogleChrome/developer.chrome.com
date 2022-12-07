@@ -97,6 +97,7 @@ jobs:
     env:
       CLOUD_BUILD_KEY: ${{ secrets.CLOUD_BUILD_KEY }}
       CLOUD_BUILD_SECRET: ${{ secrets.CLOUD_BUILD_SECRET }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Cloning repository
         uses: actions/checkout@v3
