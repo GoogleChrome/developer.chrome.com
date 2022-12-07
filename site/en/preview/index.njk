@@ -14,7 +14,7 @@ layout: 'layouts/landing.njk'
     document.querySelector('.g_id_signin').setAttribute('hidden', true);
   }
 
-  window.onSubmit(form) {
+  window.onSubmit = function(form) {
     form.fm.readOnly = true;
     form.md.readOnly = true;
     form.s.disabled = true;
