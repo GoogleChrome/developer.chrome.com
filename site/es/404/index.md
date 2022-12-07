@@ -4,9 +4,9 @@ layout: 'layouts/error.njk'
 ---
 
 <!--lint disable first-heading-level-->
-# Aw, Snap!
+# ¡Oh, no!
 <!--lint enable first-heading-level-->
 
-We couldn't find that page.
+No encontramos la pagina buscada.
 
-<a class="material-button button-filled button-round display-inline-flex color-bg bg-primary" href="/">Go back home</a>
+<a class="material-button button-filled button-round display-inline-flex color-bg bg-primary" href="/">Volver al home</a>
