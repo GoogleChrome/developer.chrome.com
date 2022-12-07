@@ -3,7 +3,7 @@ title: Simulating restricted host permissions
 description: >
   "In the future, host permissions will be blocked by default when an extension is installed. Though we're still working on the user interface, we're giving you a way to emulate how your extension will work when the user does not grant host permissions."
 layout: 'layouts/blog-post.njk'
-date: 2022-12-05
+date: 2022-12-12
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/EiCV49QB0MW6Ze05OFdg.jpeg'
 alt: >
   A walk sign against a partly cloudy sky.
