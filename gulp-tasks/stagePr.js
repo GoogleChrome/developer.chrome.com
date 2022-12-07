@@ -30,16 +30,25 @@ async function stagePr() {
     return;
   }
 
+  console.log(
+    `Triggering staging build for ${process.env.COMMIT_SHA} (${process.env.GITHUB_SHA})`
+  );
+
   try {
-    await fetch(
+    const build = await fetch(
       `https://cloudbuild.googleapis.com/v1/projects/dcc-staging/triggers/Webhook:webhook?key=${process.env.CLOUD_BUILD_KEY}&secret=${process.env.CLOUD_BUILD_SECRET}`,
       {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
-          COMMIT_SHA: process.env.GITHUB_SHA,
+          COMMIT_SHA: process.env.COMMIT_SHA,
         }),
       }
     );
+
+    console.log('Build requested', await build.json());
   } catch (e) {
     throw Error('Could not create staging build.');
   }
@@ -52,7 +61,7 @@ async function stagePr() {
   });
 
   const checks = await fetch(
-    `https://api.github.com/repos/GoogleChrome/developer.chrome.com/commits/${process.env.GITHUB_SHA}/check-suites`,
+    `https://api.github.com/repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-suites`,
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
