@@ -13,11 +13,11 @@ authors:
   - maudn
 ---
 
-{% Aside %} If you're not familiar with the API, head over to [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting/) before reading this post. {% endAside %}
+{% Aside %} API に慣れていない場合は、この記事を読む前に、[アトリビューション レポートの概要（コンバージョン測定）](/docs/privacy-sandbox/attribution-reporting/)をお読みください。 {% endAside %}
 
-The [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) makes it possible to measure when an ad click leads to a conversion on an advertiser site, such as a sale or a sign-up. The API offers a privacy-preserving approach to measuring ad conversions. It doesn't rely on third-party cookies or mechanisms that can be used to identify individual users across sites. Instead, it works as follows: attribution reports that link an ad click with a conversion are generated and stored on the user's device; later, the browser sends these reports to a predefined endpoint.
+[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/) を使用すると、広告クリックが広告主サイトでのコンバージョン（販売やサインアップなど）につながったタイミングを測定できます。この API は、プライバシーを保護しながら、広告コンバージョンを測定するためのアプローチを提供します。サイト全体で個々のユーザーを識別するために使用できるサードパーティ Cookie やメカニズムには依存しません。代わりに、広告クリックとコンバージョンを関連付けるアトリビューション レポートが生成され、ユーザーのデバイスに保存されます。その後で、これらのレポートはブラウザから定義済みのエンドポイントに送信されます。
 
-Sites have experimented with the Attribution Reporting API in Chrome, via an [origin trial](/docs/privacy-sandbox/attribution-reporting/#status).
+複数のサイトが、[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/#status)を通じて、Chrome の Attribution Reporting API を試しました。
 
 これらの早期の実験から得られたインサイトの 1 つに、**ユーザーによるデータ消去（ブラウザの履歴の消去など）**が、広告主やアドテック企業が API から取得したデータに与える影響に関するものがあります。[Chrome の集計統計](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)が最近公開されました。この投稿では、ユーザーによるデータ消去がアトリビューション レポートに与える影響について、一般的な疑問に答えています。
 
@@ -129,6 +129,6 @@ API のテスト段階では、API のいくつかのパラメーターを試し
 
 ## アトリビューション レポート: すべてのリソース
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).
+[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)をご覧ください。
 
 {% Partial 'privacy-sandbox/ar-get-updates.njk' %}
