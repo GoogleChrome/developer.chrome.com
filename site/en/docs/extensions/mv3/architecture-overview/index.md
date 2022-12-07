@@ -51,7 +51,7 @@ An extension can have different HTML pages depending on the design. All extensio
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
-### Other assets {: #}
+### Other assets {: #assets }
 
 An extension can include many types of resources, but only the [extension icons][manifest-icons] are required. All assets, including images and fonts, must be part of the extension package.
 
