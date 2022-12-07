@@ -91,6 +91,29 @@ jobs:
         run: |
           npm run test
 
+  stage:
+    needs: queue
+    runs-on: ubuntu-latest
+    env:
+      CLOUD_BUILD_KEY: ${{ secrets.CLOUD_BUILD_KEY }}
+      CLOUD_BUILD_SECRET: ${{ secrets.CLOUD_BUILD_SECRET }}
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Staging
+        run: |
+          npx gulp stagePr
+
   build:
     needs: queue
     runs-on: ubuntu-latest
