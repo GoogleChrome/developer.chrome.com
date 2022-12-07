@@ -41,7 +41,7 @@ Sites have experimented with the Attribution Reporting API in Chrome, via an [or
 - ユーザーが履歴を消去する傾向があるサイトのカテゴリでコンバージョンしているか（おそらくコンバージョン直後）。このタイプのコンテンツの広告では消去率が高い可能性があり、したがって Cookie ベースの測定との差異が大きくなる可能性があります。
 - 同様に、ユーザーが広告をクリックした先のサイトの履歴を消去するかどうか。
 - クリック後、長い時間または短い時間でアトリビューションが期限切れになるように構成されているかどうか（`attributionexpiry`）。
-- Whether a long time actually elapses between click and conversion.
+- クリックからコンバージョンまで実際に長い時間が経過したかどうか。
 
 Chrome チームは引き続き統計を監視し、[開発者向けのメーリングリストで](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev)公開していく予定です。
 
@@ -55,7 +55,7 @@ Chrome チームは引き続き統計を監視し、[開発者向けのメーリ
 
 **Attribution Reporting API** を使用すると、クリック後コンバージョン前のデータが消去されるため、一部のコンバージョンが報告されません。Attribution Reporting API を使用した早期の実験（オリジントライアル）では、ソース（クリックイベント）の**[約 16%](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)** がコンバージョン前に削除されていることが観察されています。これらのソースの一部はコンバージョンにつながりますが、ソースが削除されていれば、これらのコンバージョンのレポートは送信されません。
 
-#### Example
+#### 例
 
 コンバージョン率が **10%** で、合計クリック数を **1000** と想定し、他のエラーを考慮しない場合:
 
@@ -95,7 +95,7 @@ Chrome 94（この記事の執筆時点での Chrome 安定バージョン）の
 
 - `chrome://history`:
 
-    - Delete any individual entry
+    - 個々のエントリを削除する
 
 - サイトごとの制御:
 
@@ -127,7 +127,7 @@ API のテスト段階では、API のいくつかのパラメーターを試し
 
 この記事で共有されている統計は、イベントレベルのレポート用です。集計レポートの場合、レポート送信の遅延は[数時間](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#:~:text=Reports%20will%20not%20be%20delayed%20to%20the%20same%20extent%20as%20they%20are%20for%20event%20level%20reports.%20It%20may%20be%20possible%20to%20send%20these%20with%20as%20little%20delay%20as%20~0-1%20hour)と短くなる可能性がありますが（イベントレベルのレポートはクリックから数日または数週間後に送信される可能性があります）、ユーザーによるデータ消去の影響が低くなる可能性はありません。たとえば、特定のカテゴリのサイトでは、コンバージョン後すぐに閲覧データが消去される傾向があります。レポートがすぐに送信されるようにスケジュールされていたとしても、ユーザーが開始するこのような操作によってレポートが消去されてしまう可能性があります。
 
-## Attribution Reporting: all resources
+## アトリビューション レポート: すべてのリソース
 
 See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).
 
