@@ -28,7 +28,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### FIXED: Offscreen Documents API {: #offscreen-documents-api }
 
-**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) in order to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating on this API in future Chrome milestones.
+**Summary:** Offscreen documents are a new capability that allows Manifest V3 extensions to create a headless page (no user visible window) to call DOM APIs that aren't supported in extension service workers. Extensions can use offscreen documents to interact with the clipboard, play audio, parse HTML, and XML documents, and so on. We will continue iterating this API in future Chrome versions.
 
 **Shipped in Chrome 109.**
 
