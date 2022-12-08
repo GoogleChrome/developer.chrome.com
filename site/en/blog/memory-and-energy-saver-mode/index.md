@@ -117,7 +117,7 @@ If you're an analytics provider, you may want to consider adding this dimension 
 
 You can test how a page handles being discarded by loading the page and then visiting `chrome://discards` in a separate tab or window.
 
-From the `chrome://discards` UI you can locate the tab you want to discard from the list and then click "Urgent Discard" from the "Actions" column.
+From the `chrome://discards` UI you can locate the tab you want to discard from the list and then click **Urgent Discard** from the **Actions** column.
 
 {% Img
   src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/tNabAn7X2MKqPpIsORlW.png",
