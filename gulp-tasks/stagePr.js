@@ -22,6 +22,81 @@
 
 const {default: fetch} = require('node-fetch');
 
+const CHECK_NAME_STATIC_BUILD = 'Build (dcc-staging)';
+
+function wait(timeout) {
+  return new Promise(resolve => {
+    setTimeout(resolve, timeout);
+  });
+}
+
+async function requestBuild() {
+  console.log(
+    `Requesting staging build for ${process.env.COMMIT_SHA} (${process.env.GITHUB_SHA})`
+  );
+
+  const request = await fetch(
+    `https://cloudbuild.googleapis.com/v1/projects/dcc-staging/triggers/Webhook:webhook?key=${process.env.CLOUD_BUILD_KEY}&secret=${process.env.CLOUD_BUILD_SECRET}`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        COMMIT_SHA: process.env.COMMIT_SHA,
+      }),
+    }
+  );
+
+  await request.json();
+  console.log('Requested staging build.');
+}
+
+async function fetchGitHubApi(endpoint) {
+  const request = await fetch(`https://api.github.com/${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
+  });
+
+  const data = await request.json();
+  return data;
+}
+
+async function findBuild(checkName) {
+  console.log(`Fetching checks for commit ${process.env.COMMIT_SHA} ...`);
+  let build = null;
+  try {
+    const checks = await fetchGitHubApi(
+      `repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-runs`
+    );
+    build = checks.check_runs.find(run => {
+      return run.name === checkName;
+    });
+  } catch (e) {
+    console.error('Could not fetch checks.');
+  }
+
+  return build;
+}
+
+async function waitForCloudBuild(checkId) {
+  console.log(`Waiting for Cloud Build (${checkId}) to finish ...`);
+  // Wait 30s before querying GitHub. A full build takes approx.
+  // 5 minutes, so we don't need to query that quick/often
+  await wait(30 * 1000);
+  const build = await fetchGitHubApi(
+    `repos/GoogleChrome/developer.chrome.com/check-runs/${checkId}`
+  );
+
+  if (build.status === 'completed') {
+    return build;
+  }
+
+  // If the build has not completed yet, then just query again
+  return waitForCloudBuild(checkId);
+}
+
 async function stagePr() {
   if (!process.env.GITHUB_ACTION) {
     console.warn(
@@ -30,49 +105,32 @@ async function stagePr() {
     return;
   }
 
-  console.log(
-    `Triggering staging build for ${process.env.COMMIT_SHA} (${process.env.GITHUB_SHA})`
-  );
-
   try {
-    const build = await fetch(
-      `https://cloudbuild.googleapis.com/v1/projects/dcc-staging/triggers/Webhook:webhook?key=${process.env.CLOUD_BUILD_KEY}&secret=${process.env.CLOUD_BUILD_SECRET}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          COMMIT_SHA: process.env.COMMIT_SHA,
-        }),
-      }
-    );
-
-    console.log('Build requested', await build.json());
+    await requestBuild();
   } catch (e) {
-    throw Error('Could not create staging build.');
+    throw Error('Failed to request staging build.');
   }
 
-  console.log('Waiting for Cloud Build job to start ...');
   // Wait for 30 seconds, for the webhook to create the actual
   // build and Cloud Build propagate the status back to GitHub.
-  // This can take up to 1'30".
-  await new Promise(resolve => {
-    setTimeout(resolve, 2 * 60 * 1000);
-  });
+  // This can take up to 1m30s - wait for 2m30s to have room to wiggle
+  // and as the build takes a while anyway
+  console.log('Waiting for Cloud Build job to start ...');
+  await wait(2.5 * 60 * 1000);
 
-  console.log(`Fetching checks for commit ${process.env.COMMIT_SHA} ...`);
+  const build = await findBuild(CHECK_NAME_STATIC_BUILD);
+  if (!build) {
+    throw Error('Can not determine Cloud Build job status.');
+  }
 
-  const checks = await fetch(
-    `https://api.github.com/repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-runs`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      },
-    }
-  );
+  try {
+    await waitForCloudBuild(build.id);
+  } catch (e) {
+    throw Error('Can not determine Cloud Build job status.');
+  }
 
-  console.log(await checks.json());
+  console.log('Staging build finished.');
+  // TODO: Post comment to PR.
 }
 
 module.exports = stagePr;
