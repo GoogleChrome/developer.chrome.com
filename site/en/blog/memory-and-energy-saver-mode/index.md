@@ -20,7 +20,7 @@ This post will cover the potential effects of these new modes and what web devel
 
 ## Memory Saver mode
 
-When Memory saver mode is enabled, Chrome will proactively discard tabs that have been unused in the background for some time. This frees up memory for active tabs as well as other applications that may be running. Users can instruct Chrome not to discard tabs for specific sites; however, this is a user preference and not something you can control as a developer.
+When Memory Saver mode is enabled, Chrome will proactively discard tabs that have been unused in the background for some time. This frees up memory for active tabs as well as other applications that may be running. Users can instruct Chrome not to discard tabs for specific sites; however, this is a user preference and not something you can control as a developer.
 
 When a tab is discarded, its title and favicon still appear in the tab strip but the page itself is gone, exactly as if the tab had been closed normally. If the user revisits that tab, the page will be reloaded automatically.
 
