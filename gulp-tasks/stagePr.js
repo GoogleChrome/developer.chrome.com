@@ -80,11 +80,11 @@ async function findBuild(checkName) {
   return build;
 }
 
-async function waitForCloudBuild(checkId) {
-  console.log(`Waiting for Cloud Build (${checkId}) to finish ...`);
-  // Wait 30s before querying GitHub. A full build takes approx.
-  // 5 minutes, so we don't need to query that quick/often
-  await wait(30 * 1000);
+async function waitForCloudBuild(checkId, timeout = 30 * 1000) {
+  console.log(
+    `Waiting ${timeout / 1000}s for Cloud Build (${checkId}) to finish ...`
+  );
+  await wait(timeout);
   const build = await fetchGitHubApi(
     `repos/GoogleChrome/developer.chrome.com/check-runs/${checkId}`
   );
@@ -93,8 +93,9 @@ async function waitForCloudBuild(checkId) {
     return build;
   }
 
-  // If the build has not completed yet, then just query again
-  return waitForCloudBuild(checkId);
+  // If the build has not completed yet, then just query again with
+  // a decreasing timeout, but at least 10 seconds
+  return waitForCloudBuild(checkId, Math.max(10 * 1000, timeout * 0.9));
 }
 
 async function stagePr() {
