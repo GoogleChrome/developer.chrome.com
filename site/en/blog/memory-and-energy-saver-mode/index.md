@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: What developer need to know about Chrome's Memory and Energy Saver modes
+title: What developers need to know about Chrome's Memory and Energy Saver modes
 date: 2022-12-08
 authors:
   - philipwalton
