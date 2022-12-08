@@ -217,8 +217,8 @@ programmatically.][203]
 [6]: https://caniuse.com/
 [7]:
   https://bugs.chromium.org/p/chromium/issues/entry?summary=Fugu+Request:++Add+your+feature+title&comment&labels=Type-Feature,Pri-3,Proj-Fugu
-[8]: https://developers.google.com/web/progressive-web-apps/desktop
-[9]: https://developers.google.com/web/fundamentals/app-install-banners/
+[8]: https://web.dev/learn/pwa/app-design/#optimizing-design-for-desktop/
+[9]: https://web.dev/customize-install/
 [10]: /docs/extensions/reference
 [11]: /extensions/messaging#external-webpage
 [12]: /extensions/browserAction
@@ -234,7 +234,7 @@ programmatically.][203]
 [21]: https://bugs.chromium.org/p/chromium/issues/detail?id=844279
 [22]: https://developer.android.com/guide/components/activities/activity-lifecycle
 [23]: /apps/app_runtime#event-onRestarted
-[24]: https://developers.google.com/web/updates/2018/07/page-lifecycle-api
+[24]: /blog/page-lifecycle-api/
 [25]: https://developer.android.com/guide/components/activities/activity-lifecycle#onresume
 [26]: /apps/app_window
 [27]: https://crbug.com/897300
@@ -273,7 +273,7 @@ programmatically.][203]
 [60]: https://developer.android.com/reference/java/nio/file/spi/FileSystemProvider.html
 [61]: /extensions/fileSystemProvider
 [62]: /apps/gcm
-[63]: https://developers.google.com/web/fundamentals/push-notifications/
+[63]: https://web.dev/notifications/
 [64]: /extensions/gcm
 [65]: /apps/hid
 [66]: https://www.chromestatus.com/feature/5172464636133376
@@ -288,7 +288,7 @@ programmatically.][203]
 [75]: http://crbug.com/878979
 [76]: /extensions/idle
 [77]: /apps/instanceID
-[78]: https://developers.google.com/web/fundamentals/push-notifications/
+[78]: https://web.dev/notifications/
 [79]: /extensions/instanceID
 [80]: /apps/mdns
 [81]: https://developer.android.com/training/connect-devices-wirelessly/nsd
@@ -310,7 +310,7 @@ programmatically.][203]
 [97]: https://developer.android.com/reference/android/printservice/package-summary
 [98]: /extensions/printerProvider
 [99]: /apps/runtime
-[100]: https://developers.google.com/web/updates/2018/07/page-lifecycle-api
+[100]: /blog/page-lifecycle-api/
 [101]: /extensions/runtime
 [102]: /apps/messaging#connect
 [103]: https://www.chromestatus.com/feature/6710044586409984
@@ -335,7 +335,7 @@ programmatically.][203]
 [122]: https://developer.android.com/work/managed-configurations
 [123]: /extensions/storage#property-managed
 [124]: /apps/syncFileSystem
-[125]: https://developers.google.com/drive/api/v3/quickstart/java
+[125]: https://developers.google.com/drive/api/quickstart/java/
 [126]: /apps/system.cpu
 [127]: https://www.chromestatus.com/feature/6248386202173440
 [128]: /extensions/system_cpu
@@ -381,7 +381,7 @@ programmatically.][203]
 [168]: /extensions/management#method-uninstallSelf
 [169]: /extensions/management#method-installReplacementWebApp
 [170]: https://web.dev/progressive-web-apps
-[171]: https://developers.google.com/web/progressive-web-apps/desktop
+[171]: https://web.dev/learn/pwa/app-design/#optimizing-design-for-desktop
 [172]: https://web.dev/customize-install/
 [173]: https://web.dev/add-manifest/#display
 [174]: https://web.dev/add-manifest/
