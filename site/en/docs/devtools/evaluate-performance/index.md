@@ -318,22 +318,19 @@ tips for improving various aspects of runtime performance, such as:
 - [Debounce Your Input Handlers][17]
 
 [1]: /docs/devtools/speed/get-started
-[2]: https://developers.google.com/web/fundamentals/performance/rail
+[2]: https://web.dev/rail/
 [3]: https://support.google.com/chrome/answer/95464
 [4]: /docs/devtools/customize/#placement
 [5]: https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame
-[6]:
-  https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts
-[7]:
-  https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count#use_transform_and_opacity_changes_for_animations
-[8]: https://developers.google.com/web/fundamentals/performance/rail
+[6]: https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/#avoid-forced-synchronous-layouts
+[7]: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/#use-transform-and-opacity-changes-for-animations
+[8]: https://web.dev/rail/
 [9]: http://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[10]: https://developers.google.com/web/fundamentals/performance/rendering
+[10]: https://web.dev/rendering-performance/
 [11]: https://aerotwist.com/blog/the-anatomy-of-a-frame/
-[12]: https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution
-[13]: https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
-[14]: https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
-[15]: https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
-[16]:
-  https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
-[17]: https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers
+[12]: https://web.dev/optimize-javascript-execution/
+[13]: https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/
+[14]: https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/
+[15]: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas/
+[16]: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/
+[17]: https://web.dev/debounce-your-input-handlers/
