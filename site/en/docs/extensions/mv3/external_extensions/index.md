@@ -57,7 +57,7 @@ To create a CRX file.
 
 1. Go to `chrome://extensions`.
 
-1. On the top left of the screen, click Pack Extensions. The Pack extensions dialog box appears.
+1. On the top left of the screen, click Pack Extension. The Pack extension dialog box appears.
 
    {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/z4KrJBv7gE0S7wmXhrU2.png", alt="The Pack extension dialog box.", width="800", height="469" %}
 
