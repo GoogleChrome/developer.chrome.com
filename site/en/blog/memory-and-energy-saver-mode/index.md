@@ -26,7 +26,7 @@ When a tab is discarded, its title and favicon still appear in the tab strip but
 
 For purely content pages, discarding and reloading a tab will likely not affect the user experience, but for rich, interactive sites with complex user flows, a reload in the middle of that flow could be extremely frustrating if the site is not able to restore the page to exactly where the user left off.
 
-Discarding tabs to conserve memory is something Chrome has been doing for years, but it was only done in situations where the system was under critical memory pressure. Given its relatively rare occurrence, web developers may not have realized it was happening.
+Discarding tabs to conserve memory is something Chrome has been doing for years, but it was only done in situations where the system was under memory pressure. Given its relatively rare occurrence, web developers may not have realized it was happening.
 
 Starting in Chrome 108, tab discarding will become more common, so it's critical that sites can handle these occurrences gracefully.
 
