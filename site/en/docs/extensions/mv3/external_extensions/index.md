@@ -63,7 +63,7 @@ To create a CRX file.
 
 1. Locate the Extensions root directory box and click Browse. A folder selection dialog box appears.
 
-1. Locate the root directory containing your extension files and click Select. The Pack extensions dialog reappears. The Extensions root directory box now contains the path to the location you just selected.
+1. Locate the root directory containing your extension files and click Select. The Pack extension dialog reappears. The Extensions root directory box now contains the path to the location you just selected.
 
 1. (Optional) Locate the Private key file box and click Browse. A folder selection dialog box appears.
 
