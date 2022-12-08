@@ -12,7 +12,7 @@ tags:
   - chrome-108
 ---
 
-Chrome 108 [introduced](https://blog.google/products/chrome/new-chrome-features-to-save-battery-and-make-browsing-smoother/) two new modes, [Memory Saver and Energy Saver](https://support.google.com/chrome/answer/12929150), to give users more control over how Chrome utilizes their system resources.
+Chrome 108 [introduced](https://blog.google/products/chrome/new-chrome-features-to-save-battery-and-make-browsing-smoother/) two new modes, [Memory Saver and Energy Saver](https://support.google.com/chrome/answer/12929150#zippy=%2Cturn-memory-saver-on-or-off%2Cturn-energy-saver-on-or-off), to give users more control over how Chrome utilizes their system resources.
 
 While these new modes are primarily user-facing, they do have some implications that are important for web developers to be aware of, as they can potentially impact the user experience of your site.
 
