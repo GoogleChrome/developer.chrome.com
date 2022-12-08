@@ -32,7 +32,7 @@ To simulate a user not granting permissions:
    /Applications/Google\ Chrome\ Canary.app/Contents/cOS/Google\ Chrome\ Canary --enable-features=AllowWithholdingExtensionPermissionsOnInstall
    ```
 
-1. Load your extension [packed](/docs/extensions/mv3/external_extensions#chrome-crx) or install an extension from the Chrome Web Store.
+1. Load your extension [packed](/docs/extensions/mv3/external_extensions#chrome-crx) or install an extension from the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
 
 1. The Add dialog box appears with a new checkbox to “grant access to all requested sites”.
 
