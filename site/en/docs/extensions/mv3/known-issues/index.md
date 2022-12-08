@@ -22,7 +22,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### FIXED: webRequest.onAuthRequired events {: #webrequest-onauthrequired }
 
-**Summary:** User-installed Manifest V3 extensions could not  intercept `webRequest.onAuthRequired` events because the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome now allows extensions with the `webRequest` and `webRequestAuthProvider` permissions to asynchronously supply credentials for `onAuthRequired` events.
+**Summary:** User-installed Manifest V3 extensions could not intercept `webRequest.onAuthRequired` events because the `webRequestBlocking` permission is restricted to policy-installed extensions. Chrome now allows extensions with the `webRequest` and `webRequestAuthProvider` permissions to asynchronously supply credentials for `onAuthRequired` events.
 
 **Shipped in Chrome 108.**
 
@@ -34,27 +34,27 @@ This section lists major features that will be added to the Manifest V3 platform
 
 ### Relax the fixed maximum lifetime for extension service workers {: #sw-fixed-lifetime }
 
-**Summary:** Extension service workers are currently terminated a set amount of time after they first start. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
+**Summary:** Extension service workers are currently terminated a set amount of time after starting. This fixed limit will be replaced by an activity-based system. As a result, an extension's service worker will be able to stay alive so long as it is continuously working.
 
-**Estimated timeline:** Targeting Canary support in Q1 2023.
+**Estimated timeline:** Targeting Canary support in first quarter of 2023.
 
 ### Userscript managers support {: #userscript-managers-support }
 
 **Summary:** Userscript managers cannot inject scripts that are not included in the extension's package due to platform and policy changes that prevent arbitrary code execution. To address this, the Manifest V3 platform will be expanded to specifically support user-authored scripts and styles.
 
-**Estimated timeline:** Targeting Canary support in Q1 2023.
+**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
 
 ### Increased quota for session storage in the Storage API {: #increased-session-storage-quota }
 
 **Summary:** When it was introduced, the `session` storage area had an intentionally conservative maximum quota of 1 MB. We are planning to increase this limit, but have not yet settled on a new value.
 
-**Estimated timeline**: Targeting Canary support in Q1 2023.
+**Estimated timeline**: Targeting Canary support in the first quarter of 2023.
 
 ## Bugs {: #bugs }
 
 ### FIXED: Service workers are not started in response to webRequest events {: #webrequest-in-sw }
 
-**Summary:** Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker stopped for the first time, events on this API would no longer be dispatched as intended. This effectively preventing Manifest V3 extensions from observing network requests. This issue has been resolved.
+**Summary:** Previously, Manifest V3 extensions only received [Web Request API](/docs/extensions/reference/webRequest) events for a short time immediately after installation. After the extension service worker stopped for the first time, events on this API would no longer be dispatched as intended. This effectively prevented Manifest V3 extensions from observing network requests. This issue has been resolved.
 
 **Shipped Chrome 107.**
 
@@ -62,7 +62,7 @@ This section lists major features that will be added to the Manifest V3 platform
 
 **Summary:** Declaring a custom sandboxed page content security policy in the extension's `manifest.json` does not override the default content security policy. This prevents extensions from integrating with services that require their scripts or iframes to be remotely loaded.
 
-**Estimated timeline:** Targeting Canary support in Q1 2023.
+**Estimated timeline:** Targeting Canary support in the first quarter of 2023.
 
 **Tracking issue:** [1247690][]
 
