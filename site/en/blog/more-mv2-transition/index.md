@@ -9,7 +9,7 @@ date: 2022-09-28
 hero: image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/fjebBemTd8DpKrEe3ya3.png
 alt: Image with extensions logo and text saying Manifest V3 transition timeline
 tags:
-  - extensions
+  - extensions-news
 
 ---
 Last year, we [announced](/blog/mv2-transition/) a timeline for the phasing out of Manifest V2 extensions as we shift our focus to Manifest V3. This change will give Chrome users increased safety and peace of mind while browsing and installing extensions by providing more transparency and control over permissions, adding stricter protocols for accessing resources outside the extension’s context, and ensuring that extensions work well on all devices.

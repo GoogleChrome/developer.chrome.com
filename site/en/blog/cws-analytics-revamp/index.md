@@ -12,7 +12,7 @@ date: 2022-07-28
 hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/wSy3XR59pIlrti6XMw8J.png'
 alt: ''
 tags:
-  - extensions
+  - extensions-news
   - cws
 ---
 
