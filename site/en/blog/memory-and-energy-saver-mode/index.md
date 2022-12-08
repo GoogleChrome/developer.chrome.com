@@ -61,7 +61,7 @@ You can refer to the [Page Lifecycle event diagram](/blog/page-lifecycle-api/#ov
   </a>
 </figure>
 
-In fact, any time the user is in the "hidden" state, there is no guarantee that any other events will fire before the page is either discarded by the browser or terminated by the user, which is why it's important to always store any unsaved user state in the `visibilitychange` event, as you may not get another chance.
+In fact, any time the page is in the "hidden" state, there is no guarantee that any other events will fire before the page is either discarded by the browser or terminated by the user, which is why it's important to always store any unsaved user state in the `visibilitychange` event, as you may not get another chance.
 
 The following code outlines some example logic to queue persisting the current user state any time it changes, or immediately if the user backgrounds the tab or navigates away:
 
