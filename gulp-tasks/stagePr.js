@@ -132,12 +132,13 @@ async function stagePr() {
 
   const build = await findBuild(checkName);
   if (!build) {
-    throw Error('Can not determine Cloud Build job status.');
+    throw Error('Can not find Cloud Build job. Has it started?');
   }
 
   try {
     await waitForCloudBuild(build.id);
   } catch (e) {
+    console.log(build);
     throw Error('Can not determine Cloud Build job status.');
   }
 
