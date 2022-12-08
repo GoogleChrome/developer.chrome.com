@@ -52,7 +52,7 @@ To test these examples in your local machine, follow these steps
 1. [Load your extension locally][dev-basics-locally].
 
 Each extension example includes a `README.md` with detailed instructions on how the extension works.
-Read it carefully; some extensions run when you click on the extension icon, and others run automatically but only run specific sites. 
+Read it carefully; each extension is different. For example, some extensions run by clicking on the extension icon, others run automatically but only run specific sites, among others. 
 
 {% Aside %}
 
