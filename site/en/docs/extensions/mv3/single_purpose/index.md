@@ -1,5 +1,5 @@
 ---
-title: "Overriding Chrome settings"
+title: "Extensions quality guidelines FAQ"
 layout: "layouts/doc-post.njk"
 seoTitle: "Chrome Extensions quality guidelines FAQ"
 date: 2014-05-09
