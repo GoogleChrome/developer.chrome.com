@@ -13,7 +13,7 @@ A Chrome extension is composed of different parts. This page describes the struc
 
 If you are not familiar with Chrome extension development, we recommend first reading [Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics].
 
-## The structure of a Chrome extension {: #architecture }
+## The structure of a Chrome extension {: #arch }
 
 ### The manifest {: #manifest }
 
