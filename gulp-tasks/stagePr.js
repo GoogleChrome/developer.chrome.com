@@ -22,7 +22,11 @@
 
 const {default: fetch} = require('node-fetch');
 
-const CHECK_NAME_STATIC_BUILD = 'Build (dcc-staging)';
+const TRIGGER_NAME_STATIC_BUILD = 'Static';
+const TRIGGER_NAME_APP_BUILD = 'App';
+
+const CHECK_NAME_STATIC_BUILD = 'Static (dcc-staging)';
+const CHECK_NAME_APP_BUILD = 'App (dcc-staging)';
 
 function wait(timeout) {
   return new Promise(resolve => {
@@ -30,10 +34,8 @@ function wait(timeout) {
   });
 }
 
-async function requestBuild() {
-  console.log(
-    `Requesting staging build for ${process.env.COMMIT_SHA} (${process.env.GITHUB_SHA})`
-  );
+async function requestBuild(commit, triggerName) {
+  console.log(`Requesting staging build for commit ${commit}`);
 
   const request = await fetch(
     `https://cloudbuild.googleapis.com/v1/projects/dcc-staging/triggers/Webhook:webhook?key=${process.env.CLOUD_BUILD_KEY}&secret=${process.env.CLOUD_BUILD_SECRET}`,
@@ -43,7 +45,8 @@ async function requestBuild() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        COMMIT_SHA: process.env.COMMIT_SHA,
+        COMMIT_SHA: commit,
+        _TRIGGER_NAME: triggerName,
       }),
     }
   );
@@ -80,7 +83,7 @@ async function findBuild(checkName) {
   return build;
 }
 
-async function waitForCloudBuild(checkId, timeout = 30 * 1000) {
+async function waitForCloudBuild(checkId, timeout = 2 * 60 * 1000) {
   console.log(
     `Waiting ${timeout / 1000}s for Cloud Build (${checkId}) to finish ...`
   );
@@ -106,8 +109,16 @@ async function stagePr() {
     return;
   }
 
+  let triggerName = TRIGGER_NAME_STATIC_BUILD;
+  let checkName = CHECK_NAME_STATIC_BUILD;
+  // TODO: Check what files changed
+  if (process.env.GITHUB_ACTION) {
+    triggerName = TRIGGER_NAME_APP_BUILD;
+    checkName = CHECK_NAME_APP_BUILD;
+  }
+
   try {
-    await requestBuild();
+    await requestBuild(process.env.COMMIT_SHA, triggerName);
   } catch (e) {
     throw Error('Failed to request staging build.');
   }
@@ -119,7 +130,7 @@ async function stagePr() {
   console.log('Waiting for Cloud Build job to start ...');
   await wait(2.5 * 60 * 1000);
 
-  const build = await findBuild(CHECK_NAME_STATIC_BUILD);
+  const build = await findBuild(checkName);
   if (!build) {
     throw Error('Can not determine Cloud Build job status.');
   }

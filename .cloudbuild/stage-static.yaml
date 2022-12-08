@@ -1,0 +1,23 @@
+timeout: 2700s # set build timeout to 45 mins
+steps:
+  - name: node:18
+    entrypoint: npm
+    args: ['ci', '--no-audit']
+
+  - name: node:18
+    entrypoint: npm
+    args: ['run', 'production']
+    env:
+      - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
+  - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:slim'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        cp -rf dist/en/* dist/ &&
+        rm -rf dist/en &&
+        gsutil -q -m cp -r dist gs://static-dcc-staging/$SHORT_SHA &&
+        echo $SHORT_SHA > activeCommit.txt &&
+        gsutil cp activeCommit.txt gs://static-dcc-staging/activeCommit.txt
+options:
+  machineType: 'E2_HIGHCPU_32'
