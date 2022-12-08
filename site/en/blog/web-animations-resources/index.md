@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Web animations resources 
+title: Web animations resources
 description: >
    Resources and more for the Web Animations API
 authors:
   - samthorogood
-date: 2015-10-26 
-updated: 2015-10-26 
+date: 2015-10-26
+updated: 2015-10-26
 ---
 
 The Web Animations API provides powerful primitives to describe imperative animations from JavaScript - but what does that mean?
@@ -20,15 +20,15 @@ Let's see an example, which animates the background color from red to green-
 ```js
 var player = document.body.animate(
     [{'background': 'red'}, {'background': 'green'}], 1000);
-```    
+```
 
 This method is supported in all modern browsers, with a great polyfill fallback (more on that later).
-Native support for this method - and its player object - became widely available as part of [Chrome 39](https://developers.google.com/web/updates/2014/12/web-animation-playback).
+Native support for this method - and its player object - became widely available as part of [Chrome 39](/blog/web-animation-playback).
 It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera, and is under [active development](https://birtles.github.io/areweanimatedyet/) for Firefox.
 This is a powerful primitive that deserves a place in your toolbox.
 
 {% Aside %}
-For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](https://developers.google.com/web/fundamentals/design-and-ux/animations/).
+For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on web.dev](https://web.dev/animations/).
 {% endAside%}
 
 ## Codelabs
@@ -67,11 +67,11 @@ To use either polyfill in your code, you have a few options.
 
 1. Install via NPM or Bower
 
-   ```shell   
+   ```shell
     $ npm install web-animations-js
     $ bower install web-animations-js
     ```
-          
+
 
 In all cases, you can simply include the polyfill in a script tag before any other code-
 

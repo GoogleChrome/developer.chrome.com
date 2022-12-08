@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title:  Background tabs in chrome 57
 description: >
      Background tabs in chrome 57
-date: 2017-03-09 
-updated: 2017-03-09 
+date: 2017-03-09
+updated: 2017-03-09
 ---
 Background tabs can have a dramatic negative effect on browser performance,
 especially on battery life. To mitigate this, Chrome has been placing
@@ -26,7 +26,7 @@ should be used
 to detect when page is the backgrounded and suspend all unnecessary work like visual updates.
 
 [For some sites](https://twitter.com/cryptowat_ch/status/817502626896089090),
-this simple optimisation can reduce CPU usage by as much as 75%: 
+this simple optimisation can reduce CPU usage by as much as 75%:
 
 ```js
 var doVisualUpdates = true;
@@ -80,7 +80,7 @@ placing an additional limit on background timer CPU usage. It operates as follow
 
 There are a number of automatic exemptions from this throttling:
 
-* Applications playing audio are considered foreground and aren’t throttled. 
+* Applications playing audio are considered foreground and aren’t throttled.
 * Applications with real-time connections (WebSockets and WebRTC), to avoid closing
   these connections by timeout. The run-timers-once-a-second rule is still
   applied in these cases.
@@ -92,7 +92,7 @@ long time.
 Finally, remember that if you are using long tasks in the background, your application
 can be throttled for a very long period of time (up to 100 times the duration of your task).
 Split your work in to chunks of 50ms or less per
-[the performance guidelines](https://developers.google.com/web/fundamentals/performance/rail)
+[the performance guidelines](https://web.dev/rail/)
 and use the `visibilityChange` listener to avoid doing unnecessary work in background.
 
 ### Opt-outs

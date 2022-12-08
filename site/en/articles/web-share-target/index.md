@@ -205,7 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Be sure to use a service worker to [precache](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker) the `action`
+Be sure to use a service worker to [precache](https://web.dev/learn/pwa/caching/) the `action`
 page so that it loads quickly and works reliably, even if the user is offline.
 [Workbox](/docs/workbox/) is a tool that can help you
 [implement precaching](https://web.dev/precache-with-workbox/) in your service worker.
@@ -288,5 +288,5 @@ and let us know where and how you're using it.
 [issues]: https://github.com/WICG/web-share-target/issues
 [wicg-discourse]: https://discourse.wicg.io/t/web-share-target-api-for-websites-to-receive-shared-content/1854
 [manifest]: https://web.dev/add-manifest/
-[installability]:https://developers.google.com/web/fundamentals/app-install-banners/#criteria
+[installability]: https://web.dev/install-criteria/
 [encoding]:https://developer.mozilla.org/docs/Web/HTML/Element/form#attr-enctype

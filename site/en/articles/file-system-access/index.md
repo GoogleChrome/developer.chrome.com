@@ -778,7 +778,7 @@ https://github.com/GoogleChromeLabs/text-editor/blob/main/src/inline-scripts/fs-
 [text-editor-app-js]:
 https://github.com/GoogleChromeLabs/text-editor/blob/main/src/inline-scripts/app.js
 [download-file]:
-https://developers.google.com/web/updates/2011/08/Downloading-resources-in-HTML5-a-download
+https://web.dev/downloading-resources-in-html5-a-download/
 [cr-dev-twitter]: https://twitter.com/chromiumdev
 [fs-writablestream]: https://wicg.github.io/file-system-access/#api-filesystemwritablefilestream
 [writable-stream]: https://developer.mozilla.org/docs/Web/API/WritableStream
