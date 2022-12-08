@@ -155,7 +155,7 @@ One way to test your site in Energy Saver mode is to [enable the mode](https://s
 If you do not have a device that can be unplugged, you can also enable the mode manually by following these steps:
 
 1. Enable the `chrome://flags/#battery-saver-mode-available` flag.
-2. Visit `chrome://discards` and click the "Toggle battery saver mode" link (**important:** the `#battery-saver-mode-available` flag needs to be enabled for the link to work).
+2. Visit `chrome://discards` and click the **Toggle battery saver mode** link (**important:** the `#battery-saver-mode-available` flag needs to be enabled for the link to work).
 
 {% Img
   src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/1DM3PrsdEUysGqCV7tvL.png",
