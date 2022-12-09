@@ -6,7 +6,7 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2022-12-06
+updated: 2022-12-09
 authors:
  - samdutton
  - mihajlija
@@ -22,7 +22,7 @@ already taken place.
 
 
 **Session A (NA/EMEA/LatAm time-friendly)** 
-* Thursday, December 15, 8 – 9:00pm PST
+* Thursday, December 15, 8 – 9:00am PST
 * Video call: [https://meet.google.com/xnp-mxct-qvd]([url](https://meet.google.com/xnp-mxct-qvd))
 * Or dial:  ‪(US) +1 651-867-0444‬ PIN: ‪530 909 558‬#
 * More phone numbers: [https://tel.meet/xnp-mxct-qvd?pin=9840654025397]([url](https://tel.meet/xnp-mxct-qvd?pin=9840654025397))
@@ -56,7 +56,7 @@ announcements are also made on [this issue](https://github.com/WICG/attribution-
 **Privacy Sandbox Developer Office Hours #5**
 
 **Session A (APAC time-friendly)** 
-* Monday, September 19, 8 – 9:00pm PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
+* Monday, September 19, 8 – 9:00am PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
 * Video call: [meet.google.com/wqr-ubfx-tze]([url](https://meet.google.com/wqr-ubfx-tze))
 * Or dial: ‪(US) +1 503-755-4475‬ PIN: ‪885 701 945‬#
 * More phone numbers: [tel.meet/wqr-ubfx-tze?pin=6856114658371]([url](https://tel.meet/wqr-ubfx-tze?pin=6856114658371))
