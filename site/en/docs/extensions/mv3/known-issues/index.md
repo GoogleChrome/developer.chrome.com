@@ -4,8 +4,14 @@ title: Known issues when migrating to Manifest V3
 seoTitle: Known issues when migrating Chrome Extensions to Manifest V3
 description: ''
 date: 2022-09-23
-#updated: 2022-07-12
+updated: 2022-12-09
 ---
+
+{% Aside %}
+
+**December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+
+{% endAside %}
 
 This page lists major known issues that affect developers as they migrate to Manifest V3. Known issues are divided into two primary groups:
 
