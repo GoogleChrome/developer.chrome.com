@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: First Meaningful Paint
 description: |
-  Learn about Lighthouse's First Meaningful Paint metric and
+  Learn about Lighthouse's deprecated First Meaningful Paint metric and
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-11-05

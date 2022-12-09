@@ -570,6 +570,16 @@ redirects:
 - from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
   to: /docs/web-platform/popover-api/popovertoggletarget-property/
 
+# Defer to web.dev CWV articles for Lighthouse metrics
+- from: /docs/lighthouse/performance/first-contentful-paint
+  to: https://web.dev/fcp/
+- from: /docs/lighthouse/performance/lighthouse-largest-contentful-paint
+  to: https://web.dev/lcp/
+- from: /docs/lighthouse/performance/lighthouse-total-blocking-time
+  to: https://web.dev/tbt/
+- from: /docs/lighthouse/performance/interactive
+  to: https://web.dev/tti/
+
 # Generic
 
 - from: /...
