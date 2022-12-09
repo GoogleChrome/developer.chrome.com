@@ -44,10 +44,10 @@ Content Scripts share the same origin as their host page and they have access to
 An extension can have different HTML pages depending on the design. All extension HTML files can use the [Chrome APIs][api-ref], but cannot include inline Javascript; they must point to a JavaScript file. The two most common HTML pages are:
 
 [The popup][doc-popup]
-: Many extensions use a popup to provide functionality. Users can easily find it by clicking on the extension toolbar icon. When the user navigates away it will automatically close.
+: Many extensions use a popup to provide functionality, such as displaying a list of tabs, or additional information regarding the current tab. Users can easily find it by clicking on the extension toolbar icon. When the user navigates away it will automatically close.
 
 [The options page][doc-options]
-: The options page provides a way for users to customize an extension. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
+: The options page provides a way for users to customize an extension; such as choosing which sites the extension will run on. Users can access the options page in several ways as described in [Finding the options page][doc-options-view].
 
 Other extension HTML pages include [Chrome override pages][doc-override], [sandbox pages][doc-sandbox] or any custom page included for a specific purpose like onboarding the user.
 
@@ -73,7 +73,7 @@ See [Storage API][api-storage] for usage and code samples.
 
 ### Referencing extension resources {: #ref-files }
 
-Extension HTML pages can use the same tags as a regular HTML page to add an extension asset, but all resources must be included in the extension bundle. Content Scripts can also access extension resources but require some extra steps described in [Accessing extension files in Content Scripts][doc-ref].
+Extension HTML pages can use the same tags as a regular HTML page to add an extension asset, but all resources must be included in the extension bundle. Content Scripts can also access extension resources, such as images and fonts, but require some extra steps which are described in [Accessing extension files in Content Scripts][doc-ref].
 
 ## Take the next step {: #next-steps }
 
