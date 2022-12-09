@@ -1,0 +1,5 @@
+---
+api: favicon
+---
+
+<!-- Intentionally blank -->
