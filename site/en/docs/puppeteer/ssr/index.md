@@ -199,7 +199,7 @@ rendering time along with the HTML.
 ### 3. Example web server {: #webserver }
 
 Finally, here's the small express server that brings it all together. The main
-handler prerenders the URL `http://localhost/index.html` (e.g. the main page)
+handler prerenders the URL `http://localhost/index.html` (the main page)
 and serves the result as its response. Users will immediately see posts when
 they hit the page because the static markup is now part of the response.
 
@@ -255,7 +255,7 @@ Example of the response sent back by this server:
 #### A perfect use case for the new Server-Timing API {: #servertiming }
 
 The [Server-Timing](https://w3c.github.io/server-timing/) API allows you to
-communicate server performance metrics (e.g. request/response times, db lookups)
+communicate server performance metrics (such as request/response times and db lookups)
 back to the browser. Client code can use this information to track overall
 performance of a web app.
 
@@ -428,7 +428,7 @@ from aborting more resources than necessary.
 
 ### Inline critical resources {: #inline }
 
-It's common to use separate build tools (e.g. `gulp`) to process an app and
+It's common to use separate build tools (like `gulp`) to process an app and
 inline critical CSS/JS into the page at build-time. Doing so can speed
 up first meaningful paint because the browser makes fewer requests during
 initial page load.

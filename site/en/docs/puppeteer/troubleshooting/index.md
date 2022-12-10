@@ -27,7 +27,7 @@ const browser = await puppeteer.launch({
 
 ## Chrome headless doesn't launch on UNIX
 
-Make sure all the necessary dependencies are installed. You can run `ldd chrome | grep not` on a Linux
+Make sure to install all the necessary dependencies. You can run `ldd chrome | grep not` on a Linux
 machine to check which dependencies are missing. The common ones are provided below.
 
 <details>
