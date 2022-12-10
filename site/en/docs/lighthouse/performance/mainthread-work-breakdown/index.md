@@ -79,6 +79,6 @@ as the page loads.
 
 ## Resources
 
-- [Source code for **Minimize main thread work** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/mainthread-work-breakdown.js)
+- [Source code for **Minimize main thread work** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/mainthread-work-breakdown.js)
 - [Main thread (MDN)](https://developer.mozilla.org/docs/Glossary/Main_thread)
 - [Inside look at modern web browser (part 3)](/blog/inside-browser-part3/)

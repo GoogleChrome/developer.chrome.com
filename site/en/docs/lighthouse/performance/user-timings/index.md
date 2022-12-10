@@ -53,6 +53,6 @@ your components.
 
 ## Resources
 
-- [Source code for **User Timing marks and measures** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/user-timings.js)
+- [Source code for **User Timing marks and measures** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/user-timings.js)
 - [User Timing API (MDN)](https://developer.mozilla.org/docs/Web/API/User_Timing_API)
 - [User Timing API (web.dev)](https://web.dev/usertiming/)
