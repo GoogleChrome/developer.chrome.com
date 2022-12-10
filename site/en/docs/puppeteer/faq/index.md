@@ -105,7 +105,7 @@ In browsers, input events could be divided into two big groups: trusted vs. untr
 Websites can distinguish between these two groups:
 
 - using an [`Event.isTrusted`](https://developer.mozilla.org/docs/Web/API/Event/isTrusted) event flag
-- sniffing for accompanying events. `'mousedown'` and `'mouseup'` events precede every trusted `'click'` event.
+- sniffing for accompanying events. For example, `'mousedown'` and `'mouseup'` events precede every trusted `'click'` event.
 
 For automation purposes it’s important to generate trusted events. **All input events generated with Puppeteer are trusted and fire proper accompanying events.** If, for some reason, one needs an untrusted event, it’s always possible to hop into a page context with `page.evaluate` and generate a fake event:
 
