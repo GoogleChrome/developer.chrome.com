@@ -20,7 +20,7 @@ already taken place.
 **Privacy Sandbox Developer Office Hours #5**
 
 **Session A (APAC time-friendly)** 
-* Monday, September 19, 8 – 9:00pm PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
+* Monday, September 19, 8 – 9:00am PST • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
 * Video call: [meet.google.com/wqr-ubfx-tze]([url](https://meet.google.com/wqr-ubfx-tze))
 * Or dial: ‪(US) +1 503-755-4475‬ PIN: ‪885 701 945‬#
 * More phone numbers: [tel.meet/wqr-ubfx-tze?pin=6856114658371]([url](https://tel.meet/wqr-ubfx-tze?pin=6856114658371))
