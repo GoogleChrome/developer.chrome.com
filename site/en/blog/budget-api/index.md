@@ -4,7 +4,7 @@ title:  Introduction to the Budget API
 description: >
      The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 date: 2017-06-07
-updated: 2018-07-02 
+updated: 2018-07-02
 ---
 
 The Push Messaging API enables us to send notifications to a user even when the
@@ -35,7 +35,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR** The Budget API allows to you to reserve budget, use budget, get a list
+**Summary** The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
@@ -69,12 +69,12 @@ self.addEventListener('push', event => {
 ```
 
 In Chrome 60, 'silent-push' is the only operation type that is
-available, but you can find a 
+available, but you can find a
 [full list of operation types in the spec](https://wicg.github.io/budget-api/#enumdef-operationtype).
-There is also no easy way to increase your budget for testing or debugging 
-purposes once it's used, but as a temporary workaround you can create a new 
+There is also no easy way to increase your budget for testing or debugging
+purposes once it's used, but as a temporary workaround you can create a new
 profile in Chrome. Sadly you can't use incognito for this either as the Budget
-API will return a budget of zero in Incognito (although there is a 
+API will return a budget of zero in Incognito (although there is a
 [bug that results in an error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079)
 during my testing).
 

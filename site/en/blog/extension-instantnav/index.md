@@ -13,7 +13,7 @@ tags:
  - extensions-news
 ---
 
-TL;DR: The Extensions API has been updated to support back/forward cache,
+The Extensions API has been updated to support back/forward cache,
 preloading navigations. See below for details.
 
 Chrome has been working hard at making navigation fast. Instant Navigation

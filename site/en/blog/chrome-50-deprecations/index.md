@@ -44,7 +44,7 @@ This list is subject to change at any time.
 
 ## AppCache deprecated on insecure contexts
 
-**TL;DR**: To hinder cross-site scripting, we're deprecating AppCache on insecure
+**Summary**: To hinder cross-site scripting, we're deprecating AppCache on insecure
 origins. We expect that in Chrome 52 it will only work on origins serving
 content over HTTPS.
 
@@ -62,7 +62,7 @@ deprecating HTTP support in Chrome 50 and expect to remove it entirely in Chrome
 
 ## Document.defaultCharset is removed
 
-**TL;DR**: [`document.defaultCharset`](https://github.com/whatwg/dom/issues/58) has
+**Summary**: [`document.defaultCharset`](https://github.com/whatwg/dom/issues/58) has
 been removed to improve spec compliance.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs) &#124;
@@ -86,7 +86,7 @@ You can read more discussion of the reasoning not to spec this out
 
 ## Subresource attribute removed from link element
 
-**TL;DR**: Remove support for the `subresource` value for the `rel` attribute of
+**Summary**: Remove support for the `subresource` value for the `rel` attribute of
 `HTMLLinkElement`.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!searchin/blink-dev/subresource/blink-dev/Y_2eFRh9BOs/gULYapoRBwAJ) &#124;
@@ -112,7 +112,7 @@ options are experimental and may not be widely supported.
 
 ## Remove insecure TLS version fallback
 
-**TL;DR**: Remove a mechanism for forcing servers to return data using less- or
+**Summary**: Remove a mechanism for forcing servers to return data using less- or
 non-secure versions of TLS.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!searchin/blink-dev/Insecure$20TLS/blink-dev/yz1lU9YTeys/yCsK50I3CQAJ) &#124;
@@ -132,7 +132,7 @@ software vendor to see if a fix is available.
 
 ## Remove KeyboardEvent.prototype.keyLocation
 
-**TL;DR**: Remove an unneeded alias for the `Keyboard.prototype.location`
+**Summary**: Remove an unneeded alias for the `Keyboard.prototype.location`
 attribute.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!searchin/blink-dev/keylocation/blink-dev/lqknEaUYCJM/UbNahDDMAwAJ) &#124;
@@ -146,7 +146,7 @@ distinguish between the two `Enter` keys on an extended keyboard.
 
 ## Error and success handlers required in RTCPeerConnection methods
 
-**TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
+**Summary**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
 and [`createAnswer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)
 now require an error handler as well as a success handler. Previously it had
@@ -192,7 +192,7 @@ WebRTC project, to insulate apps from spec changes and prefix differences.
 
 ## The XMLHttpRequestProgressEvent is no longer supported
 
-**TL;DR**: The `XMLHttpRequestProgressEvent` interface will be removed, together
+**Summary**: The `XMLHttpRequestProgressEvent` interface will be removed, together
 with the attributes `position` and `totalSize`.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/nsLnqT__I78/discussion) &#124;
@@ -218,7 +218,7 @@ functionality has long been superseded by the
 
 ## Remove prefixed Encrypted Media Extensions
 
-**TL;DR**: Prefixed encrypted media extensions have been removed in favor of a
+**Summary**: Prefixed encrypted media extensions have been removed in favor of a
 spec-based, unprefixed replacement.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/3pgmSwtHLLA/discussion) &#124;
@@ -236,7 +236,7 @@ of the API.
 
 ## Remove support for SVGElement.offset properties
 
-**TL;DR**: Offset properties for SVGElement have been dropped in favor of the more
+**Summary**: Offset properties for SVGElement have been dropped in favor of the more
 widely-supported properties on `HTMLElement`.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/jjwLLSG_hGY/discussion) &#124;

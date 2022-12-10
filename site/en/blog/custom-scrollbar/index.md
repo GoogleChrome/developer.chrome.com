@@ -5,7 +5,7 @@ description: >
      Custom transform matrices allow you to build frame-perfect custom scrollbars.
 authors:
   - surma
-date: 2017-03-23 
+date: 2017-03-23
 updated: 2019-10-20
 ---
 Custom scrollbars are extremely rare and that’s mostly due to the fact that
@@ -16,8 +16,8 @@ fidelity and can feel laggy. In this article, we will leverage some
 unconventional CSS matrices to build a custom scroller that doesn’t require any
 JavaScript while scrolling, just some setup code.
 
-## TL;DR
-You don’t care about the nitty gritty? You just want to look at the
+## Summary
+You don’t care about the little things? You just want to look at the
 [Nyan cat demo](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)
 and get the library? You can find the demo’s code in our
 [GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/custom-scrollbar).
@@ -272,7 +272,7 @@ ratio of content that is visible:
   height.", width="460", height="96" %}
 </figure>
 
-```html 
+```html
 <script>
     // …
     thumb.style.height =

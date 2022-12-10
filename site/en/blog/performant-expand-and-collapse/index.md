@@ -10,7 +10,7 @@ date: 2017-03-23
 updated: 2019-10-21
 ---
 
-## TL;DR
+## Summary
 Use scale transforms when animating clips. You can prevent the children from being
 stretched and skewed during the animation by counter-scaling them.
 

@@ -39,7 +39,7 @@ In nearly every version of Chrome, we see a significant number of updates and im
 
 ## Disable navigations in the unload handler
 
-**TL;DR:** All cross-origin navigations will be disallowed in `window.onunload` event handlers to bring Chrome inline with the HTML spec as well as Firefox and Safari.
+**Summary:** All cross-origin navigations will be disallowed in `window.onunload` event handlers to bring Chrome inline with the HTML spec as well as Firefox and Safari.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/VfItzNe3WO0/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5655310928707584) &#124;
@@ -50,16 +50,16 @@ Previous versions of Chrome allowed cross-origin navigation to be interrupted in
 
 ## HTTP/0.9 deprecated
 
-**TL;DR:** HTTP/0.9 is deprecated. Developers should move to a later version, preferably HTTP/2.
+**Summary:** HTTP/0.9 is deprecated. Developers should move to a later version, preferably HTTP/2.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OdKnpLlvVUo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5633064474509312) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=624462)
 
-[HTTP/0.9 is the predecessor to HTTP/1.x](https://hpbn.co/brief-history-of-http/). It lacks many features of its successors. A particular concern for the modern web is its lack of response headers. Without them, there's no way to verify that an HTTP/0.9 response is really an HTTP/0.9 response. This can cause several problems. Examples include, among other problems: 
+[HTTP/0.9 is the predecessor to HTTP/1.x](https://hpbn.co/brief-history-of-http/). It lacks many features of its successors. A particular concern for the modern web is its lack of response headers. Without them, there's no way to verify that an HTTP/0.9 response is really an HTTP/0.9 response. This can cause several problems. Examples include, among other problems:
 
-* Clients that treat certain error responses as valid HTTP/0.9 responses. 
-* Servers that fail to close the request socket causing clients to treat responses as a hanging GET which either stays alive eternally or until a user navigates from a page that made the request. 
+* Clients that treat certain error responses as valid HTTP/0.9 responses.
+* Servers that fail to close the request socket causing clients to treat responses as a hanging GET which either stays alive eternally or until a user navigates from a page that made the request.
 * Servers that are unable to indicate to the browser that a request failed, which can cause problems with caching heuristics.
 
 
@@ -68,7 +68,7 @@ The only foolproof way to fix issues with HTTP/0.9 is to remove support altogeth
 
 ## Use of `initTouchEvent` is removed
 
-**TL;DR**:
+**Summary**:
 [`initTouchEvent`](https://w3c.github.io/touch-events/#dictionary-toucheventinit-members)
 has been deprecated in favor of the
 [`TouchEvent`](https://w3c.github.io/touch-events/#touch-interface)
@@ -86,7 +86,7 @@ either for testing or automating some UIs in your site.  Since Chrome 49, this d
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/738q69zfevkhWGMmg8j4.png", alt="Touch Event Warning", width="800", height="63" %}
   <figcaption>
-    <code>TouchEvent.initTouchEvent</code> is deprecated and will be removed in M53, 
+    <code>TouchEvent.initTouchEvent</code> is deprecated and will be removed in M53,
     around September 2016. Please use the <code>TouchEvent</code> constructor instead. See
     <a href="https://www.chromestatus.com/features/5730982598541312">
     https://www.chromestatus.com/features/5730982598541312</a> for more details.
@@ -97,7 +97,7 @@ Aside from not being in the Touch Events spec, there are a number of reasons why
 [this change is good](https://miketaylr.com/posts/2015/09/init-touch-event-is-a-rats-nest.html).
 The Chrome implementation of `initTouchEvent` was not compatible at all with
 Safari's `initTouchEvent` API and was different to Firefox on Android's. And
-finally, the `TouchEvent` constructor is a lot easier to use. 
+finally, the `TouchEvent` constructor is a lot easier to use.
 
 For these reasons we decided to follow the spec rather than maintain an API
 that is neither specced nor compatible with the only other implementation.
@@ -110,7 +110,7 @@ were so wildly different, sites would often have
 
 ```js
     var event = document.createEvent('TouchEvent');
-    
+
     if(ua === 'Android') {
       event.initTouchEvent(touchItem, touchItem, touchItem, "touchstart", window,
         300, 300, 200, 200, false, false, false, false);
@@ -118,9 +118,9 @@ were so wildly different, sites would often have
       event.initTouchEvent("touchstart", false, false, window, 0, 300, 300, 200,
         200, false, false, false, false, touches, targetTouches, changedTouches, 0, 0);
     }
-    
+
     document.body.dispatchEvent(touchEvent);
-```    
+```
 
 This is bad because it looks for "Android" in the User-Agent and Chrome
 on Android will match and hit this deprecation.  It can't be removed just yet
@@ -146,7 +146,7 @@ constructor that takes an argument) you should use that.
         radiusX: 5,
         radiusY: 5
       });
-    
+
       event = new TouchEvent("touchstart", {
         cancelable: true,
         bubbles: true,
@@ -157,37 +157,37 @@ constructor that takes an argument) you should use that.
     }
     else {
       event = document.createEvent('TouchEvent');
-    
+
       if(ua === 'Android') {
         event.initTouchEvent(touchItem, touchItem, touchItem, "touchstart", window,
           300, 300, 200, 200, false, false, false, false);
       } else {
         event.initTouchEvent("touchstart", false, false, window, 0, 300, 300, 200,
-          200, false, false, false, false, touches, targetTouches, 
+          200, false, false, false, false, touches, targetTouches,
           changedTouches, 0, 0);
       }
     }
-    
+
     document.body.dispatchEvent(touchEvent);
- ```   
+ ```
 
 
 ## KeyboardEvent.keyIdentifier attribute removed
 
-**TL;DR:** The little-supported `keyboardEvent.keyIdentifier` property is being removed in favor the standards-based `KeyboardEvent.key` property. 
+**Summary:** The little-supported `keyboardEvent.keyIdentifier` property is being removed in favor the standards-based `KeyboardEvent.key` property.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/fqnFyoDCOaA/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5316065118650368) &#124;
 [Chromium Bug](https://crbug.com/607349)
 
-The `keyboardEvent.keyIdentifier` attribute was briefly part of a W3C specification in 2009 and 2010. However, it was only ever implemented in WebKit. 
+The `keyboardEvent.keyIdentifier` attribute was briefly part of a W3C specification in 2009 and 2010. However, it was only ever implemented in WebKit.
 
 Developers needing to replace this attribute can use either the standards-based `KeyboardEvent.key` property or the `KeyboardEvent.code` property (as described in [an article we did last spring](https://developers.google.com/web/updates/2016/04/keyboardevent-keys-codes)). The former has the widest implementation base, being supported on [all major desktop browsers](http://caniuse.com/#feat=keyboardevent-key) except Safari. The later is currently supported on Chrome, Firefox, and Opera. Removing this feature is intended to drive adoption of `KeyboardEvent.key` property. There is no word from Apple as to whether will support this; however the also deprecated (but not yet removed from Chrome) `KeyboardEvent.keyCode` and `KeyboardEvent.charCode` properties are still available on Safari.
 
 
 ## Remove MediaStream ended event and attribute and onended attribute
 
-**TL;DR:** The `ended` event and attribute and the `onended` event handler are being removed because they have been removed from the  [Media Capture and Streams spec](https://www.w3.org/TR/mediacapture-streams/).
+**Summary:** The `ended` event and attribute and the `onended` event handler are being removed because they have been removed from the  [Media Capture and Streams spec](https://www.w3.org/TR/mediacapture-streams/).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHy8zm0eVy0/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5730404371791872) &#124;

@@ -12,7 +12,7 @@ updated: 2019-08-26
 ---
 
 
-## TL;DR 
+## Summary
 
 The [CSS `overscroll-behavior`][spec] property allows developers to override the
 browser's default overflow scroll behavior when reaching the top/bottom of
@@ -30,7 +30,7 @@ more information.
 
 ## Background
 
-### Scroll boundaries and scroll chaining 
+### Scroll boundaries and scroll chaining
 
 <figure>
     {% Video src="video/T4FyVKpzu4WKF1kBNvXepbi08t52/bzAPS9xrNe1aaGxh7mWe.mp4", autoplay="true", loop="true", muted="true" %}
@@ -165,7 +165,7 @@ context and the main page. The end result is that the main page stays put when
 the user reaches the top/bottom of the chat history. Scrolls that start in the
 chatbox do not propagate out.
 
-### The page overlay scenario 
+### The page overlay scenario
 
 Another variation of the "underscroll" scenario is when you see content
 scrolling behind a **fixed position overlay**. A dead giveaway
@@ -199,7 +199,7 @@ it ends up making the site look buggy.
 
 
 
-## Disabling pull-to-refresh 
+## Disabling pull-to-refresh
 
 **Turning off the pull-to-refresh action is a single line of CSS**. Just prevent
 scroll chaining on the entire viewport-defining element. In most cases, that's

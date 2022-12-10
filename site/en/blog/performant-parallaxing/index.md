@@ -21,7 +21,7 @@ cross-browser.
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/eFwKE7uRtTVKf3I8MgAC.jpg", alt="Parallax illustration.", width="800", height="447" %}
 </figure>
 
-**TL;DR**
+**Summary**
 
 * Don’t use scroll events or `background-position` to create parallax animations.
 * Use CSS 3D transforms to create a more accurate parallax effect.

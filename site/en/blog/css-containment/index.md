@@ -9,7 +9,7 @@ date: 2016-06-09
 updated: 2019-05-05
 ---
 
-## TL;DR
+## Summary
 The new CSS Containment property lets developers limit the scope of the browser's styles, layout and paint work.
 
 <figure>

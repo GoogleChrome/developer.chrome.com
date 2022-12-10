@@ -9,7 +9,7 @@ date: 2017-06-22
 updated: 2019-10-18
 ---
 
-## TL;DR 
+## Summary
 
 +  Chrome 60 reduces jank by lowering event frequency, thereby improving the
    consistency of frame timing.
@@ -117,7 +117,7 @@ application if you use this API.
 </figure>
 
 {% YouTube id="ihbhkXrfm4A" %}
- 
+
 Instead of receiving a single event, you can access the array of historical
 events that caused the event. [Android](
 https://developer.android.com/reference/android/view/MotionEvent.html#getHistoricalX(int,%20int)),

@@ -29,7 +29,7 @@ loading and caching of script resources.
 - `promisify()` in Node 8: [17:20](https://youtu.be/4KVeNoN1aFM?t=17m20s)
 
 
-## TL;DR
+## Summary
 
 How to do code splitting via route-based chunking:
 

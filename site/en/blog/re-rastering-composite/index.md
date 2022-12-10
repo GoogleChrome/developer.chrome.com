@@ -10,7 +10,7 @@ updated: 2016-09-22
 ---
 
 
-## TL;DR
+## Summary
 
 Starting in Chrome 53, all content is re-rastered when its transform scale
 changes, if it does not have the `will-change: transform` CSS property. In
@@ -71,7 +71,7 @@ developer control.
 +  **Performance**: animating transform when `will-change: transform` is
    present will be fast.
 +  **Developer control**: developers can choose between quality and speed, on
-   a per-element and per-animation frame basis by adding and removing  
+   a per-element and per-animation frame basis by adding and removing
    `will-change: transform`.
 
 See the [referenced design doc](https://docs.google.com/document/d/1CsDfsMxZaM094VhTDrHXF86_rmFnpjM8xL3iEh7HWgg/edit) above for much more detail.
@@ -87,7 +87,7 @@ Examples of transform scale animations from real applications
 
 +  From [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=600482): [Zooming tiger](https://jsfiddle.net/s9rqa2t8/2/)
 +  [Google Maps on mobile](http://maps.google.com) (maps.google.com) - zoom the map
-+  [Google Maps Lite on desktop](https://www.google.com/maps/@37.794656,-122.3908455,16z?force=lite) 
++  [Google Maps Lite on desktop](https://www.google.com/maps/@37.794656,-122.3908455,16z?force=lite)
 +  [Ticketmaster seat map](http://www1.ticketmaster.com/nba-finals-game-4-warriors-watch-oakland-california-06-10-2016/event/1C0050C2D72071FD?artistid=805946&majorcatid=10004&minorcatid=7)
 
 

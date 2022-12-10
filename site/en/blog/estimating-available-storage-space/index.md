@@ -9,7 +9,7 @@ date: 2017-08-02
 updated: 2019-10-17
 ---
 
-## tl;dr
+## Summary
 
 Chrome 61, with more browsers to follow, now exposes an estimate of how much
 storage a web app is using and how much is available via:
@@ -57,7 +57,7 @@ and what happens when you run out of room?
 
 Browsers have historically supported this type of introspection via prefixed
 interfaces, like the very old (and deprecated)
-[`window.webkitStorageInfo`](https://github.com/Modernizr/Modernizr/issues/866), 
+[`window.webkitStorageInfo`](https://github.com/Modernizr/Modernizr/issues/866),
 and the not-quite-as-old, but still non-standard
 [`navigator.webkitTemporaryStorage`](/apps/offline_storage#query).
 While these interfaces provided useful information, they don't have a
@@ -102,7 +102,7 @@ available quota, the request will fail with a
 [`QuotaExceededError`](https://developer.mozilla.org/docs/Web/API/DOMException#exception-QuotaExceededError)
 exception.
 
-### Storage estimates in action 
+### Storage estimates in action
 
 Exactly how you use `estimate()` depends on the type of data your app needs to
 store. For example, you could update a control in your interface letting users
@@ -133,7 +133,7 @@ async function storeDataAndUpdateUI(dataUrl) {
 }
 ```
 
-### How accurate is the estimate? 
+### How accurate is the estimate?
 
 It's hard to miss the fact that the data you get back from the function is just
 an estimate of the space an origin is using. It's right there in the function

@@ -43,7 +43,7 @@ number of changes to Chrome
 
 ## Use of "css" prefix in getComputedStyle(e).cssX is deprecated
 
-**TL;DR**: The use of the "css" prefix in
+**Summary**: The use of the "css" prefix in
 [`getComputedStyle(e)`](https://code.google.com/p/chromium/issues/detail?id=413205)
 has been deprecated since it was not a part of the formal
 [spec](https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle).
@@ -74,7 +74,7 @@ will have to fix your code.
 
 ## Use of initTouchEvent is deprecated
 
-**TL;DR**:
+**Summary**:
 [`initTouchEvent`](https://w3c.github.io/touch-events/#dictionary-toucheventinit-members)
 has been deprecated in favor of the
 [`TouchEvent`](https://w3c.github.io/touch-events/#touch-interface)
@@ -88,14 +88,14 @@ spec compliance and will be removed altogether in Chrome 54.
 For a long time you have been able to create synthetic touch events in Chrome
 using the `initTouchEvent` API, these are frequently used to simulate Touch Events
 either for testing or automating some UI in your site.  In Chrome 49 we have
-deprecated this API and will display the following warning with the intention 
+deprecated this API and will display the following warning with the intention
 to remove it completely in Chrome 53.
 
 <figure>
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/BlfsGdMtqw9J7IxXXvN6.png", alt="'TouchEvent.initTouchEvent' is deprecated and will be removed in M53, 
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/BlfsGdMtqw9J7IxXXvN6.png", alt="'TouchEvent.initTouchEvent' is deprecated and will be removed in M53,
     around September 2016. Please use the TouchEvent constructor instead.", width="800", height="63" %}
   <figcaption>
-    'TouchEvent.initTouchEvent' is deprecated and will be removed in M53, 
+    'TouchEvent.initTouchEvent' is deprecated and will be removed in M53,
     around September 2016. Please use the TouchEvent constructor instead. See
     <a href="https://www.chromestatus.com/features/5730982598541312">
     https://www.chromestatus.com/features/5730982598541312</a> for more details.
@@ -124,7 +124,7 @@ of](https://gist.github.com/basecss/8666646) (frequently forgetting Firefox)
 
 ```js
     var event = document.createEvent('TouchEvent');
-    
+
     if(ua === 'Android') {
       event.initTouchEvent(touchItem, touchItem, touchItem, "touchstart", window,
         300, 300, 200, 200, false, false, false, false);
@@ -132,9 +132,9 @@ of](https://gist.github.com/basecss/8666646) (frequently forgetting Firefox)
       event.initTouchEvent("touchstart", false, false, window, 0, 300, 300, 200,
         200, false, false, false, false, touches, targetTouches, changedTouches, 0, 0);
     }
-    
+
     document.body.dispatchEvent(touchEvent);
- ```   
+ ```
 
 Firstly, this is bad because it looks for "Android" in the User-Agent and Chrome
 on Android will match and hit this deprecation.  It can't be removed just yet
@@ -160,7 +160,7 @@ constructor that takes an argument) you should use that.
         radiusX: 5,
         radiusY: 5
       });
-    
+
       event = new TouchEvent("touchstart", {
         cancelable: true,
         bubbles: true,
@@ -171,36 +171,36 @@ constructor that takes an argument) you should use that.
     }
     else {
       event = document.createEvent('TouchEvent');
-    
+
       if(ua === 'Android') {
         event.initTouchEvent(touchItem, touchItem, touchItem, "touchstart", window,
           300, 300, 200, 200, false, false, false, false);
       } else {
         event.initTouchEvent("touchstart", false, false, window, 0, 300, 300, 200,
-          200, false, false, false, false, touches, targetTouches, 
+          200, false, false, false, false, touches, targetTouches,
           changedTouches, 0, 0);
       }
     }
-    
+
     document.body.dispatchEvent(touchEvent);
- ```   
+ ```
 
 ## Error and success handlers required in RTCPeerConnection methods
 
-**TL;DR:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
+**Summary:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
 and [`createAnswer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)
-now require an error handler as well as a success handler. Previously it had 
+now require an error handler as well as a success handler. Previously it had
 been possible to call these methods with only a success handler. That usage is
 deprecated.
 
-In Chrome 49 we've also added a warning if you call 
-[`setLocalDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description) 
+In Chrome 49 we've also added a warning if you call
+[`setLocalDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description)
 or [`setRemoteDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setRemoteDescription-Promise-void--RTCSessionDescriptionInit-description)
-without supplying an error handler. We expect to make the error handler 
+without supplying an error handler. We expect to make the error handler
 argument mandatory for these methods in Chrome 50.
 
-This is part of clearing the way for introducing promises on these methods, 
+This is part of clearing the way for introducing promises on these methods,
 as required by the [WebRTC spec](https://w3c.github.io/webrtc-pc/).
 
 Here's an example from the WebRTC
@@ -217,7 +217,7 @@ Here's an example from the WebRTC
       }, onSetSessionDescriptionError);
       pc2.createAnswer(onCreateAnswerSuccess, onCreateSessionDescriptionError);
     }
-```    
+```
 
 Note that both `setLocalDescription()` and `setRemoteDescription()` always had an error
 handler parameter, so simply specifying that parameter is a safe change.
@@ -228,7 +228,7 @@ WebRTC project, to insulate apps from spec changes and prefix differences.
 
 ## Document.defaultCharset is deprecated
 
-**TL;DR**: [`Document.defaultCharset`](https://github.com/whatwg/dom/issues/58) has
+**Summary**: [`Document.defaultCharset`](https://github.com/whatwg/dom/issues/58) has
 been deprecated to improve spec compliance.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs)
@@ -244,7 +244,7 @@ meta tag embedded in the page.
 By using document.characterSet you will get the first value specified in the
 HTTP header. If that is not present then you will get the value specified in the
 `charset` attribute of the `<meta>` element (for example, `<meta charset="utf-8">`).
-Finally if none of those are available the `document.characterSet` will be the 
+Finally if none of those are available the `document.characterSet` will be the
 user's system setting.
 
 Gecko has not supported this property and it is not cleanly specced so this
@@ -271,7 +271,7 @@ More discussion of the reasoning not to spec this out can be read on github
 
 ## getStorageUpdates() removed
 
-**TL;DR**: `Navigator.getStorageUpdates()` has been removed as it is no longer in the
+**Summary**: `Navigator.getStorageUpdates()` has been removed as it is no longer in the
 [Navigator spec](https://developer.mozilla.org/docs/Web/API/Navigator).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/ak1kVjiX9T4/mo1rqcyQAQAJ)
@@ -315,7 +315,7 @@ then you will have to check for the presence of the function before calling it.
 
 ## Object.observe() is deprecated
 
-**TL;DR**: `Object.observe()` has been deprecated as it is [no longer on the
+**Summary**: `Object.observe()` has been deprecated as it is [no longer on the
 standardization track](https://esdiscuss.org/topic/an-update-on-object-observe)
 and will be removed in a future release.
 
@@ -329,10 +329,10 @@ deprecated from Chrome 49 and you will see the following warning in the console
 if you try to use it:
 
 <figure>
-{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/0gTq1SGzXdn1IdVGjgpd.png", alt="'Object.observe' is deprecated and will be removed in M50, around April 
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/0gTq1SGzXdn1IdVGjgpd.png", alt="'Object.observe' is deprecated and will be removed in M50, around April
     2016.", width="800", height="55" %}
   <figcaption>
-    'Object.observe' is deprecated and will be removed in M50, around April 
+    'Object.observe' is deprecated and will be removed in M50, around April
     2016. See <a href="https://www.chromestatus.com/features/6147094632988672">
     https://www.chromestatus.com/features/6147094632988672</a> for more details.
   </figcaption>

@@ -16,7 +16,7 @@ scripts starting in Chrome 78.
 {% endAside %}
 
 
-## tl;dr 
+## Summary
 
 Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no
 longer be fulfilled by the [HTTP cache](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)

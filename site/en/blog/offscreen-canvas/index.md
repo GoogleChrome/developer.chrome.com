@@ -12,7 +12,7 @@ alt: >
   Star
 ---
 
-Tl;dr; Now you can render your graphics off the main thread with OffscreenCanvas!
+**Summary:** Now you can render your graphics off the main thread with OffscreenCanvas!
 
 [Canvas](https://developer.mozilla.org/docs/Web/HTML/Element/canvas) is a popular way
 of drawing all kinds of graphics on the screen and an entry point to the world of WebGL.

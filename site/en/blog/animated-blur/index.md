@@ -17,7 +17,7 @@ content they can read. One example would be a list of icons that display details
 about the individual items when hovered over. During that time, the remaining choices
 could be blurred to redirect the user to the newly displayed information.
 
-## TL;DR
+## Summary
 Animating a blur is not really an option as it is very slow. Instead,
 pre-compute a series of increasingly blurred versions and cross-fade between
 them. My colleague Yi Gu wrote a

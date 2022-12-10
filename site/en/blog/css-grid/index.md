@@ -10,7 +10,7 @@ updated: 2017-01-27
 ---
 
 
-## TL;DR
+## Summary
 
 If you are familiar with Flexbox, Grid should feel familiar.
 [Rachel Andrew](https://twitter.com/Rachelandrew) maintains a great

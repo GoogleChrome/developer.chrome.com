@@ -10,7 +10,7 @@ updated: 2019-07-25
 ---
 
 {% Aside %}
-  **TL;DR:** We're giving you more control over the PWA Add to Home Screen
+  **Summary:** We're giving you more control over the PWA Add to Home Screen
   mini-infobar. Starting in Chrome 76 (July 2019), you can prevent the
   mini-infobar from appearing by calling `preventDefault()` on the
   `beforeinstallprompt` event.

@@ -39,7 +39,7 @@ figure {
 }
 </style>
 
-## TL;DR
+## Summary
 
 [Headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 is shipping in Chrome 59. It's a way to run the Chrome browser in a headless environment.
@@ -231,7 +231,7 @@ const puppeteer = require('puppeteer');
 Check out [Puppeteer's documentation](https://pptr.dev/api/)
 to learn more about the full API.
 
-### The CRI library 
+### The CRI library
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a lower-level library than Puppeteer's API. I recommend it if you want to be

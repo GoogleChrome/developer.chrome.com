@@ -8,7 +8,7 @@ authors:
 description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 ---
 
-## TL;DR
+## Summary
 There's a new observer in town! `ReportingObserver` is a new API that lets you
 know when your site uses a deprecated API or runs into a
 [browser intervention][interventions]:
@@ -43,7 +43,7 @@ other browsers.
 {% endAside %}
 
 
-## Introduction 
+## Introduction
 
 A while back, I wrote a blog post ("[Observing your web app](https://ericbidelman.tumblr.com/post/149032341876/observing-your-web-app)")
 because I found it fascinating how many APIs there are for monitoring the
@@ -120,7 +120,7 @@ const observer = new ReportingObserver((reports, observer) => {
 Right now, there are two report types: `'deprecation'` and `'intervention'`.
 {% endAside %}
 
-#### Buffered reports 
+#### Buffered reports
 
 The `buffered: true` option is really useful when you want to see the
 reports that were generated before the observer was created:
@@ -183,7 +183,7 @@ health of your code base (or lack thereof). Send reports to a backend,
 know about the real-world issues users are hitting on your site, update
 code, profit!
 
-### Future work 
+### Future work
 
 In the future, my hope is that `ReportingObserver` becomes the de-facto API
 for catching all types of issues in JS. Imagine one API to catch everything

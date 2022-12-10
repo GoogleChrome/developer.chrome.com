@@ -32,7 +32,7 @@ tags:
 
 ---
 
-**TL;DR:** Stack Packs is a new Lighthouse feature that is currently under
+**Summary:** Stack Packs is a new Lighthouse feature that is currently under
 development, and we would love to hear your feedback!
 
 

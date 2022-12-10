@@ -33,7 +33,7 @@ Guys. We'd obviously like to prevent that if possible.
 This overview highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
 
-## TL;DR
+## Summary
 
 - Use allowlists to tell the client what's allowed and what isn't.
 - Learn what directives are available.

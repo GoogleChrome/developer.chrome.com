@@ -16,10 +16,10 @@ tags:
 {% Partial 'devtools/banner.md' %}
 
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
-TL;DR; The result is achieved by removing a redundant serialization.
+The result is achieved by removing a redundant serialization.
 
 ## Overview
-While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine](https://v8.dev/). 
+While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine](https://v8.dev/).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Cj4F4MSl0yvhWmELEHIQ.svg", alt="DevTools starting up process", width="800", height="240" %}
 
@@ -33,7 +33,7 @@ Let us dive into how the `mojo` mechanism works!
 
 There is a mojo command `EvaluateScript` which runs the JS command. It serializes the whole JS command including the `arguments` into a string of JavaScript source code that can be `eval()`. As you might imagine, these strings can become quite long and expensive. After the command is received by V8, these strings of JavaScript code are deserialized before running. This process of serializing and deserializing for every single message creates significant overhead.
 
-Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole  **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped. 
+Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole  **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped.
 
 Technical details: [`RenderFrameHostImpl::ExecuteJavaScript`](https://source.chromium.org/chromium/chromium/src/+/master:content/browser/renderer_host/render_frame_host_impl.cc;drc=df872ce8fcce25af51aa6b0f9fe8b1135b687524;l=1677)
 

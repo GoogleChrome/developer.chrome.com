@@ -36,12 +36,12 @@ tags:
 
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
-Platform. This article describes the changes in Chrome 52, which is in beta as 
+Platform. This article describes the changes in Chrome 52, which is in beta as
 of June 9. This list is subject to change at any time.
 
 ## Deprecate MediaStream ended event and attribute and onended attribute
 
-**TL;DR:** The `ended` event and attribute and the `onended` event handler are being deprecated because they have been removed from the  [Media Capture and Streams spec](https://www.w3.org/TR/mediacapture-streams/).
+**Summary:** The `ended` event and attribute and the `onended` event handler are being deprecated because they have been removed from the  [Media Capture and Streams spec](https://www.w3.org/TR/mediacapture-streams/).
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHy8zm0eVy0/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5730404371791872) &#124;
@@ -53,7 +53,7 @@ Removal is anticipated in Chrome 53.
 
 ## Block pop-ups from cross-origin iframes during touch events except during a tap gesture
 
-**TL;DR:** Chrome will begin disallowing pop-ups and other sensitive operations on touch events that don't correspond to a tap from inside of cross-origin iframes.
+**Summary:** Chrome will begin disallowing pop-ups and other sensitive operations on touch events that don't correspond to a tap from inside of cross-origin iframes.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/piK75azdN5o/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5649871251963904) &#124;
@@ -65,13 +65,13 @@ To combat this, pop-ups and other sensitive operations will be disallowed on tou
 
 ## Deprecate overload of postMessage()
 
-**TL;DR:** An unneeded and little-used variant of the `postMessage()` interface is being deprecated, specifically `postMessage(message, transferables, targetOrigin)`.
+**Summary:** An unneeded and little-used variant of the `postMessage()` interface is being deprecated, specifically `postMessage(message, transferables, targetOrigin)`.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h4ooaB_Y9JE/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5719033043222528) &#124;
 [Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=425896)
 
-The `postMessage()` method is a way to securely communicate between the scripts of pages on different origins. WebKit/Blink supports three versions: 
+The `postMessage()` method is a way to securely communicate between the scripts of pages on different origins. WebKit/Blink supports three versions:
 
 * `postMessage(message, targetOrigin)`
 * `postMessage(message, targetOrigin, transferables)`
@@ -83,18 +83,18 @@ Removal is anticipated in Chrome 54.
 
 ## Remove support for X-Frame-Options in <meta> tags
 
-**TL;DR:** To both comply with the spec and increase consistency with other browsers, support for `X-Frame-Options` inside a `<meta>` tag is being removed.
+**Summary:** To both comply with the spec and increase consistency with other browsers, support for `X-Frame-Options` inside a `<meta>` tag is being removed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/R1gkjKZI0J8/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=603002)
 
-The `X-Frame-Options` HTTP response header indicates whether a browser can render a page in an`<frame>`, `<iframe>`, or `<object>` tag. This lets a site avoid clickjacking since such pages cannot be embedded in other sites. The current version of the [X-Frame-Options spec](https://tools.ietf.org/html/rfc7034) explicitly restricts user agents from supporting this field inside a `<meta>` tag. 
+The `X-Frame-Options` HTTP response header indicates whether a browser can render a page in an`<frame>`, `<iframe>`, or `<object>` tag. This lets a site avoid clickjacking since such pages cannot be embedded in other sites. The current version of the [X-Frame-Options spec](https://tools.ietf.org/html/rfc7034) explicitly restricts user agents from supporting this field inside a `<meta>` tag.
 
 To both comply with the spec and increase consistency with other browsers, support for `X-Frame-Options` inside a `<meta>` tag is being removed.
 
 ## Remove non-primary button click event
 
-**TL;DR:** Non-primary mouse clicks no longer fire click events, but `MouseEvent.button` is still available.
+**Summary:** Non-primary mouse clicks no longer fire click events, but `MouseEvent.button` is still available.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pYAh8bBl5Yc/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5769439450497024) &#124;

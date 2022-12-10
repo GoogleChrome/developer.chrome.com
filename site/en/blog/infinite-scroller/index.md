@@ -11,7 +11,7 @@ updated: 2020-07-24
 ---
 
 
-TL;DR: Re-use your DOM elements and remove the ones that are far away from the
+**Summary:** Re-use your DOM elements and remove the ones that are far away from the
 viewport. Use placeholders to account for delayed data. Here’s a
 [demo][Infscroller Demo] and the [code][Infscroller Code] for the infinite
 scroller.

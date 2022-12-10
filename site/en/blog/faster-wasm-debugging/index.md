@@ -217,7 +217,7 @@ llvm-dwarfdump mandelbrot.dwo
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/zQRHQfEFxV4N1plPRfpF.png", alt="mandelbrot.wasm and debug info", width="496", height="338" %}
 
 
-### TL;DR: What’s the advantage of using debug fission?
+### What’s the advantage of using debug fission?
 
 There are several advantages to splitting up the debug information if one is working with big applications:
 

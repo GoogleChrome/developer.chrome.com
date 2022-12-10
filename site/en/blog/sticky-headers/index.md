@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title:  An event for CSS position:sticky 
+title:  An event for CSS position:sticky
 description: >
      Using position - sticky and IntersectionObserver together to determine when elements become sticky. Apply scroll effects without scroll events!
 authors:
@@ -9,7 +9,7 @@ date: 2017-09-19
 updated: 2017-09-27
 ---
 
-## TL;DR 
+## Summary
 
 Here's a secret: You may not need `scroll` events in your next app. Using an
 [`IntersectionObserver`](/web/updates/2016/04/intersectionobserver),
@@ -89,7 +89,7 @@ new title at the top of the page.
   </figcaption>
 </figure>
 
-## Scroll effects without scroll events? 
+## Scroll effects without scroll events?
 
 <figure>
     {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/WKwsdb3foiNV3Knx8MgD.png", alt="Structure of the page.", width="476", height="600" %}
@@ -337,7 +337,7 @@ function fireEvent(stuck, target) {
 
 That's it!
 
-## Final demo 
+## Final demo
 
 We created a custom event when elements with `position:sticky` become
 fixed and added scroll effects without the use of `scroll` events.

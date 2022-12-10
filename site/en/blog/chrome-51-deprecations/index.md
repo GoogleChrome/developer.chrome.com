@@ -43,7 +43,7 @@ In Chrome 51 (April, 2016) there are a number of changes to Chrome.
 
 ## Remove support for SPDY/3.1
 
-**TL;DR**: Support for HTTP/2 is widespread enough that SPDY/3.1 support can be
+**Summary**: Support for HTTP/2 is widespread enough that SPDY/3.1 support can be
 dropped.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/_f24SluuXtc/discussion) &#124;
@@ -58,7 +58,7 @@ major servers and clients, it's time to remove SPDY/3.1 from Chrome.
 
 ## Remove TLS next protocol negotiation (NPN)
 
-**TL;DR**: As part of deprecation of SPDY, NPN is removed, having previously been
+**Summary**: As part of deprecation of SPDY, NPN is removed, having previously been
 replaced with ALPN.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Qroz7eyCzRs/discussion) &#124;
@@ -71,13 +71,13 @@ During the standardization process, NPN was replaced with ALPN, published as RFC
 
 ## Remove custom messages in onbeforeunload dialogs
 
-**TL;DR:** A window's `onbeforeunload` property no longer supports a custom string.
+**Summary:** A window's `onbeforeunload` property no longer supports a custom string.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YIH8CoYVGSg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5349061406228480) &#124;
 [Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=587940)
 
-A window’s `onbeforeunload` property may be set to a function that returns a string that is shown to the user in a dialog box to confirm that the user wants to navigate away. This was intended to prevent users from losing data during navigation. Unfortunately, it is often used to scam users. 
+A window’s `onbeforeunload` property may be set to a function that returns a string that is shown to the user in a dialog box to confirm that the user wants to navigate away. This was intended to prevent users from losing data during navigation. Unfortunately, it is often used to scam users.
 
 Starting in Chrome 51, a custom string will no longer be shown to the user. Chrome will still show a dialog to prevent users from losing data, but it's contents will be set by the browser instead of the web page.
 
@@ -85,11 +85,11 @@ With this change, Chrome will be consistent with Safari 9.1 and later, as well a
 
 ## Deprecated results attribute for &lt;input type=search&gt;
 
-**TL;DR:** The `results` attribute is being deprecated because it's not part of any standard and is inconsistently implemented across browsers.
+**Summary:** The `results` attribute is being deprecated because it's not part of any standard and is inconsistently implemented across browsers.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8fHsOWz1XEw/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5738199536107520) &#124;
-[Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=590117) 
+[Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=590117)
 
 The `results` value is only implemented in webkit and behaves highly inconsistently on those that do. For example, Chrome adds a magnifier icon to the input box, while on Safari desktop, it controls how many submitted queries are shown in a popup shown by clicking the magnifier icon. Since this isn't part of any standard, it's being deprecated.
 

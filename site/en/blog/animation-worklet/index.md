@@ -11,7 +11,7 @@ updated: 2020-07-24
 
 ## Supercharge your webapp's animations
 
-**TL;DR:** Animation Worklet allows you to write imperative animations that run
+**Summary** Animation Worklet allows you to write imperative animations that run
 at the device's native frame rate for that extra buttery jank-free smoothness™,
 make your animations more resilient against main thread jank and are linkable
 to scroll instead of time. Animation Worklet is in Chrome Canary (behind the
