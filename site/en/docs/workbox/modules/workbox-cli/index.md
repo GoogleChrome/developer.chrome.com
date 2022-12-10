@@ -99,7 +99,7 @@ npx workbox-cli injectManifest path/to/config.js
 - You want more control over your service worker.
 - You want to precache files.
 - You need to customize routing and strategies.
-- You would like to use your service worker with other platform features, such as [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API).
+- You would like to use your service worker with other platform features, like [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API).
 
 #### When NOT to use `injectManifest`
 
