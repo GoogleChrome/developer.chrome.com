@@ -77,7 +77,7 @@ Applications and HID devices exchange binary data through three report types:
       </tr>
       <tr>
         <td>Output&nbsp;report</td>
-        <td>Data that is sent from the application to the device (such as a request to turn on the keyboard backlight.)</td>
+        <td>Data that is sent from the application to the device, such as a request to turn on the keyboard backlight.</td>
       </tr>
       <tr>
         <td>Feature&nbsp;report</td>
