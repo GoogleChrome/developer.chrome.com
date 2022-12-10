@@ -7,7 +7,7 @@ description: >
   A guide to migrating from Workbox v5 to v6.
 ---
 
-This guide is focused on breaking changes introduced in Workbox v6, with examples of what changes you'd need to make when upgrading from Workbox v5.
+This guide focuses on breaking changes introduced in Workbox v6, with examples of what changes you'd need to make when upgrading from Workbox v5.
 
 ## Breaking Changes
 
@@ -53,11 +53,11 @@ Workbox v6 introduces a new way for third-party developers to define their own W
 
 #### New Strategy base class
 
-In v6, all Workbox strategy classes must extend the new `Strategy` base class. All of the built-in strategies have been rewritten to support this.
+In v6, all Workbox strategy classes must extend the new `Strategy` base class. All built-in strategies have been rewritten to support this.
 
 The `Strategy` base class is responsible for two primary things:
 
-- Invoking plugin lifecycle callbacks common to all strategy handlers (e.g. when they start, respond, and end).
+- Invoking plugin lifecycle callbacks common to all strategy handlers, such as starting, responding, and ending.
 - Creating a "handler" instance, that can manage state for each individual request a strategy is handling.
 
 #### New "handler" class

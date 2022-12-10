@@ -16,7 +16,7 @@ used in actual applications. The Audio Worklet unlocks the full potential of
 WebAudio, but taking advantage of it can be challenging because it requires
 understanding concurrent programming wrapped with several JS APIs. Even for
 developers who are familiar with WebAudio, integrating the Audio Worklet
-with other APIs (e.g. WebAssembly) can be difficult.
+with other APIs (such as WebAssembly) can be difficult.
 
 This article will give the reader a better understanding of how to use the
 Audio Worklet in real-world settings and to offer tips to draw on its fullest
