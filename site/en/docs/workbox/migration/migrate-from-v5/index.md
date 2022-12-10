@@ -72,7 +72,7 @@ This class would also make it possible for developers to add their own custom, l
 
 In Workbox v5, plugins are stateless. That means if a request for `/index.html` triggers both the `requestWillFetch` and `cachedResponseWillBeUsed` callbacks, those two callbacks have no way of communicating with each other or even knowing that they were triggered by the same request.
 
-In v6, all plugin callbacks will also be passed a new `state` object. This state object will be unique to this particular plugin object and this particular strategy invocation (i.e. the call to `handle()`). This allows developers to write plugins where one callback can conditionally do something based on what another callback in the same plugin did (e.g. compute the time delta between running `requestWillFetch` and `fetchDidSucceed` or `fetchDidFail`).
+In v6, all plugin callbacks will also be passed a new `state` object. This state object will be unique to this particular plugin object and this particular strategy invocation (the call to `handle()`). This allows developers to write plugins where one callback can conditionally do something based on what another callback in the same plugin did (e.g. compute the time delta between running `requestWillFetch` and `fetchDidSucceed` or `fetchDidFail`).
 
 #### New plugin lifecycle callbacks
 

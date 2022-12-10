@@ -61,7 +61,7 @@ development machine that is using a custom domain.
 
 For example, suppose that your site uses a third-party JavaScript library that only works on the
 allow-listed domain `chrome.devtools`. So, you create an entry in your `hosts` file on your
-development machine to map this domain to `localhost` (i.e. `127.0.0.1 chrome.devtools`). After
+development machine to map this domain to `localhost` (`127.0.0.1 chrome.devtools`). After
 setting up custom domain mapping and port forwarding, you'll be able to view the site on your
 Android device at the URL `chrome.devtools`.
 

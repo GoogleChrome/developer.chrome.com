@@ -72,7 +72,7 @@ are recommended to use `generateSW` mode.
 
 #### When NOT to use `generateSW`
 
-- You want to use other Service Worker features (i.e. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You want to use other Service Worker features, like [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API).
 - You want to import additional scripts, or add additional logic for custom caching strategies.
 
 ### `injectManifest`
@@ -99,7 +99,7 @@ npx workbox-cli injectManifest path/to/config.js
 - You want more control over your service worker.
 - You want to precache files.
 - You need to customize routing and strategies.
-- You would like to use your service worker with other platform features (e.g. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You would like to use your service worker with other platform features, such as [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API).
 
 #### When NOT to use `injectManifest`
 

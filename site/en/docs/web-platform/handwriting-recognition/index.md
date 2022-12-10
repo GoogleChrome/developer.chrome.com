@@ -67,7 +67,7 @@ The Handwriting Recognition API converts handwritten input into text, regardless
 
 1. A _point_ represents where the pointer was at a particular time.
 2. A _stroke_ consists of one or more points. The recording of a stroke starts when the user puts
-   the pointer down (i.e., clicks the primary mouse button, or touches the screen with their pen or
+   the pointer down (that is, clicks the primary mouse button, or touches the screen with their pen or
    finger) and ends when they raise the pointer back up.
 3. A _drawing_ consists of one or more strokes. The actual recognition takes place at this level.
 4. The _recognizer_ is configured with the expected input language. It is used to create an instance

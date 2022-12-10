@@ -18,7 +18,7 @@ Luckily, now in Chrome DevTools,
 you can view the **full** call stack of
 asynchronous JavaScript callbacks!
 
-<figure> 
+<figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/5opSHJlUCV3aT2JJXOP2.gif", alt="A quick teaser overview of async call stacks.", width="572", height="600" %}
   <figcaption>
     A quick teaser overview of async call stacks.
@@ -68,8 +68,8 @@ be found in the link above but the flow is as follows:</p>
 <figure>
   {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/2OsCmoQfHMz7TRuvHpon.gif", alt="Flow chart of mock Gmail example.", width="660", height="500" %}
   <figcaption>
-    In the diagram above, the methods highlighted in blue are prime spots for this 
-    new DevTool feature to be the most beneficial since these methods work 
+    In the diagram above, the methods highlighted in blue are prime spots for this
+    new DevTool feature to be the most beneficial since these methods work
     asynchronously.
   </figcaption>
 </figure>
@@ -332,17 +332,17 @@ display the full call stack:
 - **Object.observe**:
   Walk back to where the observer callback was originally bound.
 - **MutationObservers**:
-  Walk back to where the mutation observer event was fired.
+  Walk back to where the mutation observer event fired.
 - **window.postMessage()**: Walk over intra-process messaging calls.
 - **DataTransferItem.getAsString()**
 - **FileSystem API**
 - **IndexedDB**
 - **WebSQL**
 - **Eligible DOM events via `addEventListener()`**:
-  Walk back to where the event was fired. Due to performance reasons, not all DOM events are eligible for the async call stacks feature. Examples of currently available events include: 'scroll', 'hashchange', and
+  Walk back to where the event fired. Due to performance reasons, not all DOM events are eligible for the async call stacks feature. Examples of currently available events include: 'scroll', 'hashchange', and
   'selectionchange'.
 - **Multimedia events via `addEventListener()`**:
-  Walk back to where the event was fired. Available multimedia events include: audio and video events (e.g. 'play', 'pause', 'ratechange'), WebRTC MediaStreamTrackList events (e.g. 'addtrack', 'removetrack'), and MediaSource events (e.g. 'sourceopen').
+  Walk back to where the event fired. Available multimedia events include: audio and video events ('play', 'pause', 'ratechange'), WebRTC MediaStreamTrackList events ('addtrack', 'removetrack'), and MediaSource events ('sourceopen').
 
 Being able to see the full stack trace of your JavaScript callbacks should keep
 those hairs on your head. This feature in DevTools will be especially helpful

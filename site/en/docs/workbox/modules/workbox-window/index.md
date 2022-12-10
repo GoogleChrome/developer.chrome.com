@@ -8,9 +8,8 @@ description: >
 ---
 
 The `workbox-window` package is a set of modules that are intended to run in the
-[`window` context](https://developer.mozilla.org/docs/Web/API/Window), which
-is to say, inside of your web pages. They're a complement to the other workbox
-packages that run in the service worker.
+[`window` context](https://developer.mozilla.org/docs/Web/API/Window), inside your web pages.
+They're a complement to the other workbox packages that run in the service worker.
 
 The key features/goals of `workbox-window` are:
 
@@ -272,9 +271,9 @@ The [service worker
 lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
 is complex and can be a challenge to fully understand. Part of the reason it's
 so complex is it must handle all the edge cases for all possible usages of
-service worker (e.g. registering more than one service worker, registering
-different service workers in different frames, registering service workers with
-different names, etc.).
+service worker. Some examples include registering more than one service worker, registering
+different service workers in different frames, and registering service workers with
+different names.
 
 But most developers implementing service worker should not need to worry about
 all these edge cases because their usage is quite simple. Most developer
@@ -667,14 +666,14 @@ your service worker (because that's what served it). And as a result, it's safe
 to use `messageSW()` right away.
 
 However, if an updated version of your service worker is found and activates
-when your page calls `register()` (i.e. you intentionally [skip the waiting
+when your page calls `register()` (and you intentionally [skip the waiting
 phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)),
 it may no longer be safe to send messages to it.
 
 One strategy for managing this possibility is to use a versioning scheme that
 allows you to differentiate between breaking updates and non-breaking updates,
 and in the case of a breaking update you'd know it's not safe to message the
-service worker. Instead you'd want to warn the user that they're running an old
+service worker. Instead, you'd want to warn the user that they're running an old
 version of the page, and suggest they reload to get the update.
 
 ### Skip waiting helper

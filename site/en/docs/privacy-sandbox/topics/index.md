@@ -317,11 +317,11 @@ be returned.
 {: #skipobservation}
 
 {% Aside %}
-From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}` 
+From Chrome 108, the `document.browsingTopics()` method can be passed an optional `{skipObservation:true}`
 argument.
 
-This allows the method to return topics without causing the browser to record 
-a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})` 
+This allows the method to return topics without causing the browser to record
+a topic observation (the default is `false`). In other words, `document.browsingTopics({skipObservation:true})`
 can be used to return topics of interest for the current user, but with no side effects.
 {% endAside %}
 
@@ -726,7 +726,7 @@ of topics. The randomness is sticky to an epoch and site.</td>
     <tr>
       <td><code>BrowsingTopics:number_of_epochs_of_observation_data_to_use_for_filtering</code></td>
       <td>3</td>
-      <td>How many epochs of API usage data (i.e. topics observations) will be used for
+      <td>How many epochs of API usage data (that is, topics observations) will be used for
 filtering the topics for a calling context.</td>
     </tr>
     <tr>

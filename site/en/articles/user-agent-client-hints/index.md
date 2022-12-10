@@ -46,8 +46,8 @@ example:
 User-Agent: CERN-LineMode/2.15 libwww/2.17b3
 ```
 
-This header was intended to specify, in order of significance, the product (e.g.
-browser or library) and a comment (e.g. version).
+This header was intended to specify, in order of significance, the product (browser or library)
+and a comment (the version).
 
 ### The state of the User-Agent string
 
@@ -433,8 +433,8 @@ DPR: 2
 ## Where to use User-Agent Client Hints?
 
 The quick answer is that you should refactor any instances where you are parsing
-either the User-Agent header or making use of any of the JavaScript calls that
-access the same information (i.e. `navigator.userAgent`, `navigator.appVersion`,
+either the User-Agent header or making use of any JavaScript calls that
+access the same information (`navigator.userAgent`, `navigator.appVersion`,
 or `navigator.platform`) to make use of User-Agent Client Hints instead.
 
 Taking this a step further, you should re-examine your use of User-Agent

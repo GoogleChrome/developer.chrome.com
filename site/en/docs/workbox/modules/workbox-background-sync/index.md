@@ -86,10 +86,8 @@ const statusPlugin = {
 ## Advanced Usage
 
 Workbox Background Sync also provides a `Queue` class, which you can
-instantiate and add failed requests to. The failed requests are stored
-in [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
-and are retried when the browser thinks connectivity is restored (i.e.
-when it receives the sync event).
+instantiate and add failed requests to.[IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
+stores the failed requests, and they are retried when the browser thinks connectivity has been restored (when it receives the sync event).
 
 ### Creating a Queue
 

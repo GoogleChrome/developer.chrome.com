@@ -94,7 +94,7 @@ dimension with Workbox Google Analytics, follow these steps:
    (since any interaction can be offline).
 2. Take note of the index assigned for the newly created dimension and pass
    that as the parameter name to the `parameterOverrides` configuration option
-   in your Workbox Google Analytics code.  
+   in your Workbox Google Analytics code.
 
    For example, if this is your first custom dimension, its index would be `1`,
    and the parameter name would be `cd1` (if the index were `8` it would be
@@ -143,8 +143,8 @@ which are different from the
 used by analytics.js. For example, with custom dimensions the Measurement
 Protocol uses
 [`cdXX`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cd_)
-(e.g. `cd1`) whereas analytics.js uses
-[`dimensionXX`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#dimension) (e.g. `dimension1`).
+( `cd1`, for example) whereas analytics.js uses
+[`dimensionXX`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#dimension) (`dimension1`, for example).
 {% endAside %}
 
 ### Using a custom metric to track time requests spent in the queue
@@ -163,7 +163,7 @@ the `hitFilter` configuration option:
    [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
    param and divide it by 1000 (to convert it to seconds). Then set that value
    as a param with the index of the newly created metric. If this is your
-   first custom metric, the parameter name would be `'cm1'`:  
+   first custom metric, the parameter name would be `'cm1'`:
 
     ```js
     import * as googleAnalytics from 'workbox-google-analytics';

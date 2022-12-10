@@ -29,7 +29,7 @@ add it to the webpack asset pipeline.
 
 #### When NOT to use `GenerateSW`
 
-- You want to use other Service Worker features (i.e. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You want to use other Service Worker features, like [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API).
 - You want to import additional scripts, or add additional logic for custom caching strategies.
 
 ### `InjectManifest`
@@ -43,7 +43,7 @@ file. It will otherwise leave the file as-is.
 - You want more control over your service worker.
 - You want to precache files.
 - You need to customize routing and strategies.
-- You would like to use your service worker with other platform features (e.g. [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
+- You would like to use your service worker with other platform features, like [Web Push](https://developer.mozilla.org/docs/Web/API/Push_API)).
 
 #### When NOT to use `InjectManifest`
 

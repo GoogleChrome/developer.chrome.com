@@ -123,7 +123,7 @@ used to determine whether a response received from the network should
 be cached:
 
 - staleWhileRevalidate and networkFirst: Responses with a status of `0`
-  (i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
+  ([opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
   or `200` are considered cacheable.
 - cacheFirst: Responses with a status of `200` are considered cacheable.
 
@@ -132,7 +132,7 @@ By default, response headers are not used to determine cacheability.
 ### Why are there Different Defaults?
 
 The defaults vary around whether responses with a status of `0`
-(i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
+([opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
 will end up cached. Due to the "black box" nature of opaque responses,
 it's not possible for the service worker to know whether the response
 is valid, or whether it reflects an error response returned from the

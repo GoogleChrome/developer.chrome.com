@@ -173,8 +173,8 @@ the page.
 
 There exist cases where the browser isn't able to properly attribute pending
 input events. In particular, setting complex clips and masks for cross-origin
-iframes may report false negatives (i.e. `isInputPending()` may unexpectedly return
-false when targeting these frames). Be sure that you're yielding often enough if
+iframes may report false negatives. `isInputPending()` may unexpectedly return
+false when targeting these frames. Be sure that you're yielding often enough if
 your site does require interactions with stylized subframes.
 
 Be mindful of other pages that share an event loop, as well. On platforms such

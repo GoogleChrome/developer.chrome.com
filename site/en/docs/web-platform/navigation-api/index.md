@@ -35,7 +35,7 @@ If you'd like to read the technical proposal, [check out the Draft Report in the
 ## Example Usage
 
 To use the Navigation API, start by adding a `"navigate"` listener on the global `navigation` object.
-This event is fundamentally _centralized_: it will fire for all types of navigations, whether the user performed an action (such as clicking a link, submitting a form, or going back and forward) or when navigation is triggered programmatically (i.e., via your site's code).
+This event is fundamentally _centralized_: it will fire for all types of navigations, whether the user performed an action (such as clicking a link, submitting a form, or going back and forward) or when navigation is triggered programmatically, via your site's code.
 In most cases, it lets your code override the browser's default behavior for that action.
 For SPAs, that likely means keeping the user on the same page and loading or changing the site's content.
 

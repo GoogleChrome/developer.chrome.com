@@ -243,13 +243,13 @@ As in the web version, the PageSpeed Insights API has no historical data and is 
 
 Search Console presents Core Web Vitals values as aggregates of [groups of similar pages](https://support.google.com/webmasters/answer/9205520#page_groups). This provides a quick indication of which sections of a site are potentially impacting the page experience ranking factor.
 
-Data is updated daily and is split by mobile and desktop form factors. A maximum sample of 20 pages per group are presented for further analysis.
+Data is updated daily and is split by mobile and desktop form factors. The console presents a maximum sample of 20 pages per group for further analysis.
 
 ## Metrics
 
-Metrics in CrUX are powered by standard web platform APIs exposed by browsers. In the BigQuery dataset in particular, this data is aggregated to origin-resolution. Site owners requiring more detailed (e.g. URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
+Metrics in CrUX are powered by standard web platform APIs exposed by browsers. In the BigQuery dataset in particular, this data is aggregated to origin-resolution. Site owners requiring more detailed (such as URL-level resolution) analysis and insight into their site performance can use the same APIs to gather detailed real user measurement (RUM) data for their own origins. Note that while all APIs are available in Chrome, other browsers may not support the full set of metrics.
 
-Most metrics are represented as a histogram aggregation, allowing visualization of the distribution and approximation of percentile values.
+Histogram aggregations represent most metrics, allowing visualization of the distribution and approximation of percentile values.
 
 ### First Paint {: #fp-metric }
 

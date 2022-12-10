@@ -37,8 +37,8 @@ computers using operating system drivers. The web platform supports HID devices
 by relying on these drivers.
 
 The inability to access uncommon HID devices is particularly painful when it
-comes to alternative auxiliary keyboards (e.g. [Elgato Stream Deck], [Jabra
-headsets], [X-keys]) and exotic gamepad support. Gamepads designed for desktop
+comes to alternative auxiliary keyboards (such as [Elgato Stream Deck], [Jabra
+headsets], and [X-keys]) and exotic gamepad support. Gamepads designed for desktop
 often use HID for gamepad inputs (buttons, joysticks, triggers) and outputs
 (LEDs, rumble). Unfortunately, gamepad inputs and outputs are not well
 standardized and web browsers often require custom logic for specific devices.
@@ -73,11 +73,11 @@ Applications and HID devices exchange binary data through three report types:
     <tbody>
       <tr>
         <td>Input&nbsp;report</td>
-        <td>Data that is sent from the device to the application (e.g. a button is pressed.)</td>
+        <td>Data that is sent from the device to the application (a button is pressed, for example.)</td>
       </tr>
       <tr>
         <td>Output&nbsp;report</td>
-        <td>Data that is sent from the application to the device (e.g. a request to turn on the keyboard backlight.)</td>
+        <td>Data that is sent from the application to the device (such as a request to turn on the keyboard backlight.)</td>
       </tr>
       <tr>
         <td>Feature&nbsp;report</td>
@@ -416,7 +416,7 @@ To understand the security tradeoffs, check out the [Security and Privacy
 Considerations] section of the WebHID spec.
 
 On top of this, Chrome inspects the usage of each top-level collection and if a
-top-level collection has a protected usage (e.g. generic keyboard, mouse), then
+top-level collection has a protected usage (like a generic keyboard or mouse), then
 a website won't be able to send and receive any reports defined in that
 collection. The full list of protected usages is [publicly available].
 

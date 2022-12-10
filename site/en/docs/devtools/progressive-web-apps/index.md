@@ -18,7 +18,7 @@ anchorRedirects:
 Use the **Application** panel to inspect, modify, and debug web app manifests, service workers, and
 service worker caches.
 
-[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology. 
+[Progressive Web Apps (PWAs)][1] are modern, high quality applications built using web technology.
 PWAs offer similar capabilities to iOS, Android, and desktop apps. They are:
 
 - Reliable even in unstable network conditions.
@@ -179,7 +179,7 @@ a response retrieved from a different origin, like from a [CDN][14] or remote AP
 is not enabled.
 
 In order to avoid leakage of cross-domain information, there's significant padding added to the size
-of an opaque response used for calculating storage quota limits (i.e. whether a `QuotaExceeded`
+of an opaque response used for calculating storage quota limits (whether a `QuotaExceeded`
 exception is thrown) and reported by the [`navigator.storage` API][16].
 
 The details of this padding vary from browser to browser, but for Google Chrome, this means that the
