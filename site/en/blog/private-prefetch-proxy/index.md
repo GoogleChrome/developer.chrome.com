@@ -62,7 +62,7 @@ There is no action required from website owners to start benefiting from private
 
 In the future, we hope to expand this feature to links with cookies or local state while maintaining its privacy characteristics. The challenge with cookies is that they might be used to alter the user experience in hard to predict ways. So, website owners will most likely have to opt in or adjust their site to benefit from Private Prefetch Proxy for links with cookies.
 
-Concretely, while the prefetch requests will remain uncredentialed, the web page will gain access to cookies, and other local state, when the user navigates to it. Developers could take advantage of this to add back the personalization and changes based on cookies or local state. Or perhaps, developers might also be interested in declaring certain resources as perfectly fine to prefetch and use as is, without cookies (that is, resources that don't depend on any cookies). Please have a look at the [What's next](#next) section to learn more and inform our plan.
+Concretely, while the prefetch requests will remain uncredentialed, the web page will gain access to cookies, and other local state, when the user navigates to it. Developers could take advantage of this to add back the personalization and changes based on cookies or local state. Or perhaps, developers might also be interested in declaring certain resources as perfectly fine to prefetch and use as is, without cookies (that is, resources that don't depend on any cookies). Take a look at the [What's next](#next) section to learn more and inform our plan.
 
 ### Geo-dependent content or services
 

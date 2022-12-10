@@ -34,7 +34,7 @@ Starting DevTools is as easy as using the Chrome icon (upper right of the Chrome
   <figcaption>The DevTools are accessible in the Chrome menu.</figcaption>
 </figure>
 
-For more information on how to get started with DevTools, please read [the official documentation](http://devtools.chrome.com).
+For more information on how to get started with DevTools, read [the official documentation](http://devtools.chrome.com).
 
 The Audits Panel is located in the main tools button panel. You'll notice that, once selected, the Audits Panel has not yet run through its analysis of your web app. Running all of the heuristics can be slow, especially for a large web app such as GMail, so the tool is disabled by default.
 
@@ -93,9 +93,9 @@ For example, let's first dive into the recommendation to leverage browser cachin
 Caching resources is an excellent way to improve network utilization, which leads to lower bandwidth bills for the developer and faster response times for the user. Unfortunately, the tool doesn't tell you exactly what you need to do, so we need to dive into the recommendations a bit and use our knowledge of web app performance optimizations to apply these suggestions.
 
 ### Caching
-  
+
   Without diving into HTTP caching, we can certainly cover some of the basics.  The [HTTP protocol includes caching instructions](http://tools.ietf.org/html/rfc2616#section-13), allowing the server and the client to reduce the amount of data that needs to be transferred over the wire.  For example, the server can tell the client to save the resource locally for a certain amount of time, thus eliminating the need to request the resource again.  The client can also ask if the server's resource is newer than the one that is stored locally.  Ideally, if a resource is static, the server should tell the client to store the resource locally and avoid asking the server for the resource in the future.  There are, as you can imagine, an incredible amount of details regarding HTTP caching, but the general theme is "reduce the amount of data sent over the wire by storing resources locally on the client".
- 
+
 ## Fixing Non-Cacheable Resources
 
 Let's look at one recommendation in depth, and learn how to connect the Audit recommendation to other tools inside DevTools. Specifically, let's look at how to fix "the following resources are explicitly non-cacheable."

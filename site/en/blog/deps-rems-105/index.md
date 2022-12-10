@@ -20,7 +20,7 @@ Chrome 105 beta was released on August 4, 2022 and is expected to become the sta
 
 Web SQL in non-secure contexts is deprecated and developers trying to use the feature under these circumstances will see a warning in the Issues panel. The Web SQL Database standard was first proposed in April 2009 and abandoned in November 2010. Gecko never implemented this feature and WebKit deprecated it in 2019. The W3C encourages [Web Storage](https://developer.mozilla.org//docs/Web/API/Web_Storage_API) and [IndexedDB](https://developer.mozilla.org//docs/Web/API/IndexedDB_API) for those needing alternatives.
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Please use Web Storage or Indexed Database.", width="800", height="158" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/unDM9iaTcPDbedQ3dL84.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated and will be removed in M107. Use Web Storage or Indexed Database.", width="800", height="158" %}
 
 Developers should expect that Web SQL itself will be deprecated and removed when usage is low enough.
 
@@ -43,6 +43,6 @@ A warning is printed to the console starting in 105. Removal is expected in 106.
 
 ## Remove Gesture Scroll DOM Events
 
-The gesture scroll DOM events [have been removed from Chrome](https://chromestatus.com/feature/5166018807726080), specifically, `gesturescrollstart`, `gesturescrollupdate` and `gesturescrollend`. These were non-standard APIs that were added to Blink for use in plugins, but had also been exposed to the web. 
+The gesture scroll DOM events [have been removed from Chrome](https://chromestatus.com/feature/5166018807726080), specifically, `gesturescrollstart`, `gesturescrollupdate` and `gesturescrollend`. These were non-standard APIs that were added to Blink for use in plugins, but had also been exposed to the web.
 
 {% Partial 'deprecations-policy.md' %}

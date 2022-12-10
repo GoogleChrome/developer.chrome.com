@@ -628,9 +628,9 @@ Tony's fans love how fast the site feels now, and Tony is very thankful for your
 
 - File bugs on this doc in the [Web Fundamentals][16] repository.
 - File bug reports on DevTools at [Chromium Bugs][17].
-- Discuss features and changes on the [Mailing List][18]. Please don't use the mailing list for
+- Discuss features and changes on the [Mailing List][18]. Don't use the mailing list for
   support questions. Use Stack Overflow, instead.
-- Get general help on how to use DevTools on [Stack Overflow][19]. Please don't file bugs on Stack
+- Get general help on how to use DevTools on [Stack Overflow][19]. Don't file bugs on Stack
   Overflow. Use Chromium Bugs, instead.
 - Tweet us at [@ChromeDevTools][20].
 

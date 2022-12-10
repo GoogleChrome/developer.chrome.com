@@ -10,7 +10,7 @@ description: "Use the Memory inspector to inspect an ArrayBuffer, TypedArray, or
 ---
 
 {% Aside %}
-The Memory Inspector panel is available from Chrome 91. You can check your version at `chrome://version/`. 
+The Memory Inspector panel is available from Chrome 91. You can check your version at `chrome://version/`.
 {% endAside %}
 
 Use the new **Memory inspector** to inspect `ArrayBuffer`, `TypedArray`, and `DataView` memory in JavaScript as well as `WebAssembly.Memory` of Wasm applications written in C++.
@@ -32,9 +32,9 @@ There are a few ways to open the **Memory inspector**.
 2. [Open DevTools](/docs/devtools/open/).
 3. Open the **demo-js.js** file in the **Sources** panel, set a breakpoint at line 18.
 4. Refresh the page.
-5. Expand the **Scope** section on the right **Debugger** pane. 
+5. Expand the **Scope** section on the right **Debugger** pane.
 6. You can open the **Memory inspector**:
-    
+
     - **From the icon**. Clicking on the icon next to the `buffer` property, or
     - **From the context menu**. Right click on the `buffer` property and select **Reveal in Memory Inspector panel**.
 
@@ -43,7 +43,7 @@ There are a few ways to open the **Memory inspector**.
 ### Inspect multiple objects {: #open-multiple }
 
 1. You can inspect [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView) or [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) as well. For example, `b2` is a `TypedArray`. To inspect that, right click on the `b2` property and select **Reveal in Memory Inspector panel** (No icon for `TypedArray` or `DataView` yet).
-2. A new tab is opened in the **Memory inspector**. Please note that you can inspect multiple objects at once. 
+2. A new tab is opened in the **Memory inspector**. You can inspect multiple objects at once.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZaLWbrktT6N3sHMhyLHA.png", alt="New tab in the Memory inspector", width="800", height="602" %}
 
 
@@ -76,7 +76,7 @@ The **Memory inspector** consists of 3 main areas:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/icshYGOKAiZp1uy7hOoM.jpg", alt="Value inspector", width="800", height="417" %}
 
-1. A top toolbar features a button to switch between **big and little endian** and to open the **settings**. Open the **settings** to select which value types they want to see per default in the inspector. 
+1. A top toolbar features a button to switch between **big and little endian** and to open the **settings**. Open the **settings** to select which value types they want to see per default in the inspector.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Yo4JHzfWgfGKEK5FHPvD.png", alt="toolbar button", width="800", height="333" %}
 2. The main area shows all the **value interpretations** as per the **settings**. By default, all are shown.
 3. The **encoding** is clickable. You can switch between dec, hex, oct for integer and sci, dec for floats.
@@ -85,12 +85,12 @@ The **Memory inspector** consists of 3 main areas:
 
 ## Inspecting memory {: #inspect }
 
-Let's inspect the memory together. 
+Let's inspect the memory together.
 
 1. Follow these steps to [start](#open-debug) the debugging.
-2. Change the address to `0x00000027` in the **address input**. 
+2. Change the address to `0x00000027` in the **address input**.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/S8m0VP5MuCr9YkZQx7mR.png", alt="address input", width="800", height="602" %}
-3. Observe the **ASCII representation** and the **value interpretations**. All values are empty at the moment. 
+3. Observe the **ASCII representation** and the **value interpretations**. All values are empty at the moment.
 4. Notice the blue **Jump to address** button next to `Pointer 32-bit` and `Pointer 64-bit`. You can click on it to jump to the address. The buttons are grayed out and not clickable if the addresses are not valid.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/sMVdWgtnjhTAb0jlxcu7.png", alt="Jump to address button", width="800", height="602" %}
 5. Click on **Resume script execution** to step through the code.
@@ -101,7 +101,7 @@ Let's inspect the memory together.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZJFQAJFXB3GOA1hqVcfd.png", alt="settings to customize value inspector", width="800", height="602" %}
 8. Let's change the encoding from `dec` to `sci`. Notice the value representations are updated accordingly.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="Change the encoding.", width="800", height="602" %}
-9. Try to navigate the memory buffer with your keyboard or using the navigation bar. Repeat step 4 to observe values changes. 
+9. Try to navigate the memory buffer with your keyboard or using the navigation bar. Repeat step 4 to observe values changes.
 
 ## WebAssembly memory inspection {: #wasm }
 
@@ -112,7 +112,7 @@ To take full advantage of `WebAssembly.Memory` inspection:
 - Use Chrome 107 or later. Check your version at `chrome://version/`.
 - Install the [C/C++ DevTools Support (DWARF)][1] extension. This is a plugin for debugging C/C++ WebAssembly applications using DWARF debug information.
 - Enable DWARF debugging in DevTools > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments** > **WebAssembly Debugging: Enable DWARF support** and reload DevTools.
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/56o9cpP8JRtNHLhDbeig.png", alt="Enabling DWARF support in the Experiments tab.", width="800", height="341" %} 
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/56o9cpP8JRtNHLhDbeig.png", alt="Enabling DWARF support in the Experiments tab.", width="800", height="341" %}
 
 To inspect the `WebAssembly.Memory` of an object:
 

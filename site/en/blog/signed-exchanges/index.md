@@ -78,15 +78,14 @@ certificate that works for SXG from
 
 Once you get a certificate for SXG you can create your own SXGs by using the
 [reference generator tools](https://github.com/WICG/webpackage/tree/main/go/signedexchange)
-published on github.
+published on GitHub.
 
 You can also take a look at the actual SXG example files in the
-[Chrome’s code repository](https://cs.chromium.org/chromium/src/content/test/data/sxg/)
-(e.g. [this one](https://cs.chromium.org/chromium/src/content/test/data/sxg/test.example.org_hello.txt.sxg)
+[Chrome’s code repository](https://cs.chromium.org/chromium/src/content/test/data/sxg/).
+[This one](https://cs.chromium.org/chromium/src/content/test/data/sxg/test.example.org_hello.txt.sxg)
 is the simplest one created for
-[a simple text file](https://cs.chromium.org/chromium/src/content/test/data/sxg/hello.txt)).
-Note that they are generated primarily for local testing, please do not expect
-that they have valid certificates and timestamps in the signature.
+[a simple text file](https://cs.chromium.org/chromium/src/content/test/data/sxg/hello.txt).
+Note that they are generated primarily for local testing, and do not have valid certificates or timestamps in their signatures.
 
 ## Testing the Feature Locally
 

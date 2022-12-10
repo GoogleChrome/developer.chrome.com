@@ -146,7 +146,7 @@ For `FaceDetector` and `BarcodeDetector`, optional parameters can be passed
 to the detector's constructor that allow for providing hints to the
 underlying detectors.
 
-Please carefully check the support matrix in the
+Check the support matrix in the
 [explainer](https://github.com/WICG/shape-detection-api#overview) for an
 overview of the different platforms.
 

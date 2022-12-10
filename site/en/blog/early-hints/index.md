@@ -17,7 +17,7 @@ alt: >
 ---
 
 
-## What is Early Hints? 
+## What is Early Hints?
 
 Websites have become more sophisticated over time. As such, it's not unusual that a server needs to perform non-trivial work (for example, access to databases, or CDNs accessing the origin server) to produce the HTML for the requested page. Unfortunately, this "server think-time" results in extra latency before the browser can start rendering the page. Indeed, the connection effectively goes idle for as long as it takes the server to prepare the response.
 
@@ -50,7 +50,7 @@ In some cases, the performance improvement to the [Largest Contentful Paint](htt
 
 Early Hints is available from Chrome version 103, as a response to navigation requests, or user interactions that change the url in the status bar, with support for both preconnect and preload hints.
 
-Before going deep into the topic, please note that Early Hints are not useful if your server can send a 200 (or other final responses) right away. Instead, consider using the regular `link rel=preload` or `link rel=preconnect` on the main response ([Link rel HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Link)), or in the main response (`<link>`  elements), in such situations. For the cases where your server needs a little time to generate the main response, read on!
+Before going deep into the topic,  note that Early Hints are not useful if your server can send a 200 (or other final responses) right away. Instead, consider using the regular `link rel=preload` or `link rel=preconnect` on the main response ([Link rel HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Link)), or in the main response (`<link>`  elements), in such situations. For the cases where your server needs a little time to generate the main response, read on!
 
 The first step to take advantage of Early Hints consists of identifying the top landing pages, that is, the pages where your users typically start when they visit your website. This could be the homepage, or popular product listing pages if you have lots of users coming from other websites. The reason these entry points matter more than other pages is because Early Hints' usefulness decreases as the user navigates around your website (that is, the browser is more likely to have all the sub-resources it needs on the second or third subsequent navigation). It's also always a good idea to deliver a great first impression!
 
@@ -145,9 +145,9 @@ If you are using one of the following CDNs or platforms, you may not need to man
 
 ## Advanced pattern
 
-If you have fully applied Early Hints to your key landing pages and find yourself looking for more opportunities, you might be interested in the following advanced pattern. 
+If you have fully applied Early Hints to your key landing pages and find yourself looking for more opportunities, you might be interested in the following advanced pattern.
 
-For visitors who are on their <em>n</em>th page request as part of a typical user journey, you may want to adapt the Early Hints response to content that is lower and deeper in the page, in other words using Early Hints on lower priority resources. This may sound counter-intuitive given that we recommended focussing on high priority, render-blocking sub-resources or origins. However, by the time a visitor has navigated for a while, it's very likely that their browser already has all the critical resources. From there on, it might make sense to switch your attention toward lower priority resources. For instance, this could mean using Early Hints to load product images, or additional JS/CSS that are only needed for less common user interactions. 
+For visitors who are on their <em>n</em>th page request as part of a typical user journey, you may want to adapt the Early Hints response to content that is lower and deeper in the page, in other words using Early Hints on lower priority resources. This may sound counter-intuitive given that we recommended focussing on high priority, render-blocking sub-resources or origins. However, by the time a visitor has navigated for a while, it's very likely that their browser already has all the critical resources. From there on, it might make sense to switch your attention toward lower priority resources. For instance, this could mean using Early Hints to load product images, or additional JS/CSS that are only needed for less common user interactions.
 
 ## Current limitations
 
@@ -157,7 +157,7 @@ Here are the limitations of Early Hints as implemented in Chrome 103 and future 
 -  Only supports preconnect and preload (that is, prefetch isn't supported).
 -  Early Hint followed by a cross-origin redirect on the final response will result in Chrome dropping the resources and connections it obtained via Early Hints.
 
-## What's next?  
+## What's next?
 
 Depending on interest from the community, we may augment our implementation of Early Hints with the following capabilities:
 

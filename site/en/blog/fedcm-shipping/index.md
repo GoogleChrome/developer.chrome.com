@@ -29,7 +29,7 @@ ended on November 22nd.
 
 We plan to introduce [a number of new features](#whats-next) based on the
 feedback we received from identity providers (IdP), relying parties (RP) and
-browser vendors. While we hope identity providers will adopt FedCM, please be
+browser vendors. While we hope identity providers will adopt FedCM,  be
 aware that FedCM is still an API under active development and that backward
 incompatible changes are expected until Q4 2023.
 
