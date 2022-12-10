@@ -82,7 +82,7 @@ Notice the use of the [`:where(...)`](https://developer.mozilla.org/docs/Web/CSS
 
 Given this CSS, an element with the `.card` class should always have `color: red`, as the later rule would always override the previous rule with the same selector and specificity. Transpiling the first rule and including an additional attribute selector _without_ `:where(...)` would therefore increase the specificity, and cause `color: blue` to be applied erroneously.
 
-However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-css_selectors_where). For browsers that don’t support it, the polyfill provides a safe and easy workaround: you can _intentionally_ increase the specificity of your rules by manually adding a dummy `:not(.container-query-polyfill)` selector to your `@container` rules:
+However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-css_selectors_where). For browsers that don’t support it, the polyfill provides a safe and easy workaround: you can _intentionally_ increase the specificity of your rules by manually adding a placeholder `:not(.container-query-polyfill)` selector to your `@container` rules:
 
 {% Compare 'worse', 'before' %}
 ```css
@@ -91,7 +91,7 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
     color: blue;
   }
 }
-  
+
 .card {
   color: red;
 }
@@ -105,7 +105,7 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
     color: blue;
   }
 }
-  
+
 .card {
   color: red;
 }
@@ -117,7 +117,7 @@ This has a number of benefits:
 * The selector in the source CSS has changed, so the difference in specificity is explicitly visible. This also acts as documentation so you know what is affected when you no longer need to support the workaround or the polyfill.
 * The specificity of the rules will always be the same, since the polyfill does not change it.
 
-During transpilation, the polyfill will replace this dummy with the attribute selector with the same specificity. To avoid any surprises, the polyfill uses both selectors: the original source selector is used to determine if the element should receive the polyfill attribute, and the transpiled selector is used for styling.
+During transpilation, the polyfill will replace this placeholder with the attribute selector with the same specificity. To avoid any surprises, the polyfill uses both selectors: the original source selector is used to determine if the element should receive the polyfill attribute, and the transpiled selector is used for styling.
 
 ### Pseudo-elements
 
