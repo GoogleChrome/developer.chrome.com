@@ -11,7 +11,7 @@ tags:
 ---
 
 This guide teaches you how to use Chrome DevTools to view a web page's resources. Resources are the
-files that a page needs in order to display correctly. Examples of resources include CSS,
+files that a page needs to display correctly. Examples of resources include CSS,
 JavaScript, and HTML files, as well as images.
 
 This guide assumes that you're familiar with the basics of [web development][1] and [Chrome

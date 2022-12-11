@@ -244,7 +244,7 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Hover over **The Lord of the Flies** below. The background color becomes orange.
 
-     <ul> 
+     <ul>
        <li class="demo--hover">The Lord of the Flies</li>
        <li>Crime and Punishment</li>
        <li>Moby Dick</li>
@@ -295,7 +295,7 @@ JavaScript references to them.
 ### Reference the currently-selected node with $0 {: #current }
 
 When you inspect a node, the `== $0` text next to the node means that you can reference this
-node in the Console with the variable `$0`. 
+node in the Console with the variable `$0`.
 
 1. Right-click **The Left Hand of Darkness** below and select **Inspect**.
 
@@ -350,7 +350,7 @@ Copy the JavaScript path to a node when you need to reference it in an automated
 
 ## Break on DOM changes {: #breakpoints }
 
-DevTools allows you to pause a page's JavaScript when the JavaScript modifies the DOM.
+DevTools lets you pause a page's JavaScript when the JavaScript modifies the DOM.
 See [DOM change breakpoints](/docs/devtools/javascript/breakpoints/#dom).
 
 <!--

@@ -24,7 +24,7 @@ index.html |--app.js |--styles.css |--ui.js
 ```
 
 Your `index.html` file declares `<script src="app.js">`. When `app.js` runs , it calls
-`fetch()` in order to download `styles.css` and `ui.js`. The page doesn't appear complete
+`fetch()` to download `styles.css` and `ui.js`. The page doesn't appear complete
 until those last 2 resources are downloaded, parsed, and executed.
 Using the example above, Lighthouse would flag `styles.css` and `ui.js` as candidates.
 

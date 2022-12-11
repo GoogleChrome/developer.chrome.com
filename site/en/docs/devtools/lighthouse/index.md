@@ -472,7 +472,7 @@ everything else.
   many scripts don't need to be requested during the page load, and can instead be requested
   asynchronously. See [Using async or defer][9].
 - If you're using a framework, check if it has a production mode. This mode may use a feature such
-  as [tree shaking][10] in order to eliminate unnecessary code that is blocking the critical render.
+  as [tree shaking][10] to eliminate unnecessary code that is blocking the critical render.
 
 ### Do less main thread work {: #main }
 
@@ -493,7 +493,7 @@ page loads, and find ways to defer or remove unnecessary work.
     more hardware constraints than laptops or desktops, so these settings let you experience the
     page load as if you were using a less powerful device.
 4.  Click **Reload** {% Img src="image/admin/sUKAx2esbJbYN6Ti3K8j.png", alt="Reload", width="24", height="25" %}. DevTools reloads
-    the page and then produces a visualization of all it had to do in order to load the page. This
+    the page and then produces a visualization of all it had to do to load the page. This
     visualization will be referred to as the _trace_.
 
     {% Img src="image/admin/XM6GIspnPnqxmE516rYP.png", alt="The Performance panel's trace of the page load.", width="800", height="713" %}
@@ -547,7 +547,7 @@ Investigate the trace to find ways to do less JavaScript work:
     sometimes you may structure your app in a way that causes the framework to run inefficiently.
     Restructuring your app to use the framework efficiently can be a way to do less main thread
     work. However, this requires a deep understanding of how your framework works, and what kind of
-    changes you can make in your own code in order to use the framework more efficiently.
+    changes you can make in your own code to use the framework more efficiently.
 
     {% endAside %}
 
@@ -615,7 +615,7 @@ Tony's fans love how fast the site feels now, and Tony is very thankful for your
 
 - Whenever you set out to optimize a site's load performance, always start with an audit. The audit
   establishes a baseline, and gives you tips on how to improve.
-- Make one change at a time, and audit the page after each change in order to see how that isolated
+- Make one change at a time, and audit the page after each change to see how that isolated
   change affects performance.
 
 ## Next steps {: #next-steps }

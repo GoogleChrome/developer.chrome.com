@@ -267,7 +267,7 @@ and click on _Force stop_.
 %}
 
 There are 2 pieces of information that the developer needs to collect from the
-app in order to create the association:
+app to create the association:
 
 * **Package Name:** The first information is the package name for the app. This
   is the same package name generated when creating the app. It can also be found

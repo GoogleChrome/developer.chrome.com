@@ -20,7 +20,7 @@ flags pages that do not have maskable icon support:
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/w0lXCcsZdOeLZuAw3wbY.jpg", alt="The maskable icon audit in the Lighthouse Report UI.", width="800", height="110" %}
 </figure>
 
-In order to pass the audit:
+To pass the audit:
 
 * A web app manifest must exist.
 * The web app manifest must have an `icons` array.

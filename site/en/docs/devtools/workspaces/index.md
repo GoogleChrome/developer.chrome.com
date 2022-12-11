@@ -133,7 +133,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 2.  Close the text editor.
 3.  Back in DevTools, click the **Elements** tab.
 4.  Change the value of the `color` property of the `<h1>` element to your favorite color. Remember
-    that you need to click the `<h1>` element in the **DOM Tree** in order to see the CSS rules
+    that you need to click the `<h1>` element in the **DOM Tree** to see the CSS rules
     applied to it in the **Styles** pane. The green dot next to `styles.css:1` means that any change
     you make will get mapped to `~/Desktop/app/styles.css`.
 

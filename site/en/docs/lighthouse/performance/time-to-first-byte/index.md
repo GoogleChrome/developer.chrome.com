@@ -27,7 +27,7 @@ When users navigate to a URL in their web browser,
 the browser makes a network request to fetch that content.
 Your server receives the request and returns the page content.
 
-The server may need to do a lot of work in order to return a page with all of the content that users want.
+The server may need to do a lot of work to return a page with all the content that users want.
 For example, if users are looking at their order history,
 the server needs to fetch each user's history from a database,
 and then insert that content into the page.
