@@ -212,7 +212,7 @@ guide](/blog/reporting-api-migration/#network-error-logging) for details.
 </div>
 
 {% Aside %}
-[Permissions policy](https://developer.chrome.com/docs/privacy-sandbox/permissions-policy/)
+[Permissions policy](/docs/privacy-sandbox/permissions-policy/)
 (formerly feature policy) violation reports may be supported by default in the future. Right now,
 they're experimental. One example situation where such reports would be generated: your site
 has a permission policy that prevents microphone usage, and a script requests audio input.
