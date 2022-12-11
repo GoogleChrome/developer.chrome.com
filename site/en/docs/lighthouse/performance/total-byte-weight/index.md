@@ -32,7 +32,7 @@ The largest requests are presented first:
 
 Based on [HTTP Archive data](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal),
 the median network payload is between 1,700 and 1,900&nbsp;KiB.
-To help bring the highest payloads to attention,
+To help bring the highest payloads to the attention of users,
 Lighthouse flags pages whose total network requests exceed 5,000&nbsp;KiB.
 
 {% Partial 'lighthouse-performance/scoring.njk' %}
