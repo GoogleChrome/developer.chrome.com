@@ -5,7 +5,7 @@ date: 2018-07-26
 updated: 2019-09-28
 authors:
   - philipwalton
-description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
+description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver exposes information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 ---
 
 ## Summary

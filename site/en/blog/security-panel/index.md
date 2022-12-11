@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Security panel debuts in Chrome DevTools 
+title: Security panel debuts in Chrome DevTools
 description: >
    Learn all about the new Security Panel in Chrome DevTools.
 authors:
@@ -31,7 +31,7 @@ Unfortunately, this tab had several problems:
  - But too basic for most developers
  - and makes it unclear what causes a lock icon “downgrade”
 
-## Overview: explain lock icon and surface mixed content
+## Overview: explain lock icon and expose mixed content
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/soYSNZjJqJ2twy4dLnKQ.png", alt="Overview tab.", width="800", height="426" %}

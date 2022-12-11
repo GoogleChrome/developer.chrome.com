@@ -848,7 +848,7 @@ look the same, but they enable slightly different uses cases.
 Use `ReportingObserver` if:
 
 - You only want to monitor deprecations and/or browser interventions.
-`ReportingObserver` surfaces **client-side warnings** such as deprecations
+`ReportingObserver` exposes **client-side warnings** such as deprecations
 and browser interventions, but unlike `Reporting-Endpoints`, it doesn't
 capture any other types of reports such as CSP or COOP/COEP violations.
 - You need to react to these violations in real-time. `ReportingObserver` makes

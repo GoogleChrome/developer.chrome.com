@@ -34,7 +34,7 @@ background pages.
 
 ### How will users find my extension? {: #faq-gen-09 }
 
-The Chrome Web Store will surface extensions in a variety of ways. Of course, each extension gets a page in
+The Chrome Web Store will bring extensions to the attention of users in a variety of ways. Of course, each extension gets a page in
 the store, which will be searchable via the store and other search engines. There will be category
 lists in the store, as well as a variety of curated and algorithmically generated lists. We
 recommend that you broadly promote your extension, through marketing websites and other means, so that
