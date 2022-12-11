@@ -20,14 +20,14 @@ of providing a smooth keyboard navigation experience.
 
 To check if your application's tab order is logical,
 try tabbing through your page.
-The order in which elements are focused should aim to follow the DOM order.
+Elements should be focused in a way that follows the DOM order.
 In general,
 focus should follow reading order, moving from left to right,
 from the top to the bottom of your page.
 
 Learn more in [Keyboard access fundamentals](https://web.dev/keyboard-access/).
 
-Are you able to reach all of the interactive controls on the page?
+Are you able to reach all interactive controls on the page?
 If not, you may need to use `tabindex` to improve the focusability of those controls.
 The general rule of thumb is that any control a user can interact with or provide input to
 should be focusable and display a focus indicator.

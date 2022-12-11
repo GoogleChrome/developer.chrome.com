@@ -3,14 +3,14 @@ layout: 'layouts/doc-post.njk'
 title: Offscreen content is hidden from assistive technology
 description: |
   Learn how to improve your web page's accessibility for assistive technology
-  users by hiding off-screen content from assistive technologies.
+  users by hiding offscreen content from assistive technologies.
 date: 2019-05-02
 updated: 2019-09-19
 web_lighthouse:
   - offscreen-content-hidden
 ---
 
-Ensure that only relevant parts of the page are exposed to screen readers and
+Ensure you only expose relevant parts of the page to screen readers and
 other assistive technologies.
 For instance,
 content that's offscreen or just presentational
@@ -19,7 +19,7 @@ should be hidden from assistive technologies.
 ## How to manually test
 
 To check that offscreen content is hidden,
-you need to manually test that content using a screen reader.
+you need to manually test it using a screen reader.
 - For Mac users, check out
 [this video on using VoiceOver](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=6).
 - For PC users, check out

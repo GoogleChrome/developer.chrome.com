@@ -27,7 +27,7 @@ or a screen reader.
 [NVDA](https://www.nvaccess.org/)
 are two of the more popular screen readers for Windows.
 [VoiceOver](https://www.apple.com/accessibility/mac/vision/)
-is the screen reader built into MacOS.
+is the screen reader built into macOS.
 
 Using CSS, it's possible
 to style the `<div>` and `<button>` elements so they convey the same visual affordances,
@@ -41,7 +41,7 @@ See also [Semantics and screen readers](https://web.dev/semantics-and-screen-rea
 ## How to fix
 
 The simplest
-and often best solution to this problem
+and best solution to this problem
 is to avoid custom interactive controls altogether.
 For example, replace a `<div>` that's acting like a button
 with an actual `<button>`.
@@ -62,8 +62,8 @@ Now screen readers will announce the role and interactive state for the `<div>`.
 
 The only way to truly understand how assistive technology users
 experience your content
-is to check that content yourself using a screen reader.
-Using a screen reader first hand will give you a clear understanding
+is to check it yourself using a screen reader.
+Using a screen reader firsthand will give you a clear understanding
 of how your content is labeled, and if there are any obstructions to
 assistive technology navigation.
 If you're unfamiliar with how semantic markup gets interpreted by assistive technology,

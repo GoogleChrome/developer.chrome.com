@@ -18,7 +18,7 @@ using only the keyboard.
 
 To test that your users can't accidentally trap their focus,
 navigate to and from all page elements using only the keyboard.
-Use `TAB` to navigate "forward" and `SHIFT + TAB` to navigate "backward."
+Use `TAB` to navigate "forward" and `SHIFT + TAB` to navigate "backward".
 
 If you can't tab through all page elements successfully,
 then you've failed the test.

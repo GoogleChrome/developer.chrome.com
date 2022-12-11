@@ -465,7 +465,7 @@ Now, remove the references to these files from the code and audit the page again
 #### Optimizing the Critical Rendering Path in the real-world {: #crp }
 
 The [Critical Rendering Path][8] refers to the code that you need to load a page. In general, you
-can speed up page load by only shipping critical code during the page load, and then lazy-loading
+can speed up page load by only shipping critical code during the page load, and then lazy loading
 everything else.
 
 - It's unlikely that you'll find scripts that you can remove outright, but you will often find that

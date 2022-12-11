@@ -12,7 +12,7 @@ web_lighthouse:
 
 Manually check that all custom controls are keyboard focusable
 and display a focus indicator.
-The order in which elements are focused should aim to follow the DOM order.
+Elements should be focused in a way that follows the DOM order.
 If you're unsure which elements should receive focus,
 see [Introduction to Focus](https://web.dev/focus/).
 
@@ -32,7 +32,7 @@ TAB`) to move between controls, and use the arrow keys and
   height: 346
 } %}
 
-Are you able to reach all of the interactive controls on the page?
+Are you able to reach all interactive controls on the page?
 Is there a focus indicator on each interactive control?
 
 ## How to fix

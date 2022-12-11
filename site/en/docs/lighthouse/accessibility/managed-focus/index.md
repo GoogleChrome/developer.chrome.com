@@ -10,8 +10,8 @@ web_lighthouse:
   - managed-focus
 ---
 
-Whenever new content is added to a page,
-try to ensure the user's focus gets directed to that content,
+Whenever you add new content to a page,
+ensure the user's focus gets directed to that content,
 so they can take action on it.
 
 ## How to manually test
@@ -35,7 +35,7 @@ back to the `<main>` area.
 
 When this happens,
 you'll want to manage the user's focus
-to keep the user's perceived context in sync with the site's visual content.
+to keep their perceived context in sync with the site's visual content.
 
 ## How to fix
 

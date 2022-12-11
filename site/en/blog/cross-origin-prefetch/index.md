@@ -26,7 +26,7 @@ Most users routinely identify slow page loads as a major source of frustration (
 
 As the saying goes, you can't improve what you don't measure. For user experiences on the web, we believe that [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) constitute a solid set of user-centric metrics designed to capture fundamental aspects of the user experience. In particular, [Largest Contentful Paint (LCP)](https://web.dev/lcp/) measures your pages' loading performance by reporting the time it takes to display the largest text or image block that the user sees. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading (namely, the good LCP threshold).
 
-Let's look at what contributes to the LCP of a typical page. 
+Let's look at what contributes to the LCP of a typical page.
 
 <figure>
   {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/v5Fl8GPalSO3brhBWGds.png", alt="Page loading waterfall.", width="800", height="450" %}
@@ -48,7 +48,7 @@ Given the data shared earlier, one could also just prefetch the main resource an
 
 ## Cross-site navigations
 
-While prefetching has been around for a while, an additional consideration is warranted when prefetching pages from one site while the user is on another. 
+While prefetching has been around for a while, an additional consideration is warranted when prefetching pages from one site while the user is on another.
 
 Suppose that a referrer site were to instruct the browser to prefetch a page from a different site. Obviously, when the user clicks on the link to this prefetched page, they would enjoy a better user experience with a much faster page load. However, what if the user never clicks on this link? They wouldn't expect a linked website to learn that they might have been interested in a topic while they were browsing for it on the referrer site. And, yet this is a substantial risk because the prefetching requests would carry the user's IP address, and cookies if any, as any other regular request.
 
@@ -65,8 +65,8 @@ While Private Prefetch Proxy and Signed Exchange solve the same use case, each t
 Cross-site prefetching is easy to enable for users who visit your site for the first time. For repeat visitors, it depends on how much personalization goes on your site. This comes down to the fact that cross-site prefetch requests can't include cookies for privacy reasons.
 
 -  For first-time visitors, this restriction does not introduce any challenge because these visitors have no cookies to begin with. Consequently, you can enable cross-site prefetching for these users without any changes to your site.
--  If you'd like to enable cross-site prefetching for repeat visitors and your site is personalized based on cookies, you will need to lazy-load these personalized elements after the user navigates. This works because upon navigation, the restriction on cookies is no longer needed since  the user explicitly chose to visit your website. So, at navigation time, your site has access to its cookies as usual. For concrete guidance, see these [best practices for lazy-loading](https://web.dev/lazy-loading/). 
-    -  If you currently encode personalization directly into your HTML, you can still continue to do so when cookies are present, and use lazy-loading as a fallback strategy for prefetched pages.
+-  If you'd like to enable cross-site prefetching for repeat visitors and your site is personalized based on cookies, you will need to lazy load these personalized elements after the user navigates. This works because upon navigation, the restriction on cookies is no longer needed since  the user explicitly chose to visit your website. So, at navigation time, your site has access to its cookies as usual. For concrete guidance, see these [best practices for lazy-loading](https://web.dev/lazy-loading/).
+    -  If you currently encode personalization directly into your HTML, you can still continue to do so when cookies are present, and use lazy loading as a fallback strategy for prefetched pages.
     -  If your site is not personalized based on cookies, or if the personalization isn't critical, you can choose to serve the same content to your repeat visitors as you would to first-time visitors.
 
 At the moment, Private Prefetch Proxy is only enabled for first-time visitors (links without cookies) with on-going work to expand coverage to repeat visitors (links with cookies). On the other hand, Signed Exchange already supports cross-site prefetching for both first-time and repeat visitors (with the approaches outlined above).

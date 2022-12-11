@@ -66,7 +66,7 @@ The [available guidance](https://web.dev/efficiently-load-third-party-javascript
     ```
 
 
-3. [Lazy-load](https://web.dev/embed-best-practices/#lazy-loading) third-party resources and embeds after the main page content has finished loading or when the user scrolls down to the part of the page where they are included.
+3. [Lazy load](https://web.dev/embed-best-practices/#lazy-loading) third-party resources and embeds after the main page content has finished loading or when the user scrolls down to the part of the page where they are included.
 
 
 ## The Next.js Script component

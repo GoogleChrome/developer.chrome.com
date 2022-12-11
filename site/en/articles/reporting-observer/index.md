@@ -130,7 +130,7 @@ const observer = new ReportingObserver((reports, observer) => {
 }, {types: ['intervention'], buffered: true});
 ```
 
-This option is great for situations like lazy-loading a library that uses a
+This option is great for situations like lazy loading a library that uses a
 `ReportingObserver`. The observer gets added late, but you don't miss out on
 anything that happened earlier in the page load.
 

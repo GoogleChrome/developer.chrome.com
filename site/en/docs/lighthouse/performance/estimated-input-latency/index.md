@@ -56,8 +56,9 @@ to using CSS properties that minimize the amount of browser-intensive operations
 
 {% Aside 'caution' %}
 The Estimated Input Latency audit isn't a complete measurement of input latency.
-It doesn't measure how long your app truly takes to respond to a user input;
-nor does it does measure that your app's response to the user's input is visually complete.
+It doesn't measure:
+* How long your app truly takes to respond to a user input.
+* That your app's response to the user's input is visually complete.
 {% endAside %}
 
 ## How to measure Estimated Input Latency manually

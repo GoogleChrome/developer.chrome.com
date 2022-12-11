@@ -650,7 +650,7 @@ export {ssr, clearCache};
 When your page is being rendered by headless Chrome on the server, it may be
 helpful for the page's client-side logic to know that. In my app, I used this
 hook to "turn off" portions of my page that don't play a part in rendering the
-posts markup. For example, I disabled code that lazy-loads
+posts markup. For example, I disabled code that lazy loads
 [firebase-auth.js](https://firebase.google.com/docs/web/setup). There's no user
 to sign in!
 

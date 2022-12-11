@@ -57,7 +57,7 @@ On repeat visits, this allows you to get **meaningful pixels** on the screen wit
 
 To test this architecture on real devices, we’ve run our [application shell sample](https://github.com/GoogleChrome/application-shell/) on [WebPageTest.org](http://www.webpagetest.org/) and shown the results below.
 
-**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/) 
+**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/)
 
 The first view of the app has to fetch all the resources from the network and doesn’t achieve a meaningful paint until **1.2 seconds** in. Thanks to service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in **0.5 seconds**.
 
@@ -68,7 +68,7 @@ The first view of the app has to fetch all the resources from the network and do
 </figure>
 </a>
 
-**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/) 
+**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/)
 
 We can also test our sample with a slightly slower 3G connection. This time it takes **2.5 seconds** on first visit for our first meaningful paint. It takes [**7.1 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.0) to fully load the page. With service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in [**0.8 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.1).
 
@@ -143,7 +143,7 @@ During the first load experience, your goal is to get meaningful content to the 
 
 * Prioritize the initial load, but let service worker cache the application shell so repeat visits do not require the shell to be re-fetched from the network.
 
-* Lazy-load or background load everything else. One good option is to use [read-through caching](https://googlechrome.github.io/samples/service-worker/read-through-caching/) for dynamic content.
+* Lazy load or background load everything else. One good option is to use [read-through caching](https://googlechrome.github.io/samples/service-worker/read-through-caching/) for dynamic content.
 
 * Use service worker tools, such as [sw-precache](https://github.com/GoogleChrome/sw-precache), for example to reliably cache and update the service worker that manages your static content. (More about sw-precache later.)
 

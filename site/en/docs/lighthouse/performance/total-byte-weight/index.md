@@ -77,13 +77,13 @@ number of content items shown on a given page.
 
 Consider showing excerpts in your article categories (one popular solution is a "read more"
 link), reducing the number of articles shown on a given page, breaking your long
-posts into multiple pages, or using a plugin to lazy-load comments.
+posts into multiple pages, or using a plugin to lazy load comments.
 
 ### WordPress
 
 Consider showing excerpts in your post lists (you can use the "more" tag), reducing
 the number of posts shown on a given page, breaking your long posts into
-multiple pages, or using a plugin to lazy-load comments.
+multiple pages, or using a plugin to lazy load comments.
 
 ## Resources
 

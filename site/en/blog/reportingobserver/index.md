@@ -43,7 +43,7 @@ other browsers.
 {% endAside %}
 
 
-## Introduction 
+## Introduction
 
 A while back, I wrote a blog post ("[Observing your web app](https://ericbidelman.tumblr.com/post/149032341876/observing-your-web-app)")
 because I found it fascinating how many APIs there are for monitoring the
@@ -120,7 +120,7 @@ const observer = new ReportingObserver((reports, observer) => {
 Right now, there are two report types: `'deprecation'` and `'intervention'`.
 {% endAside %}
 
-#### Buffered reports 
+#### Buffered reports
 
 The `buffered: true` option is really useful when you want to see the
 reports that were generated before the observer was created:
@@ -131,7 +131,7 @@ const observer = new ReportingObserver((reports, observer) => {
 }, {types: ['intervention'], buffered: true});
 ```
 
-It is great for situations like lazy-loading a library that uses
+It is great for situations like lazy loading a library that uses
 a `ReportingObserver`. The observer gets added late, but you
 **don't miss out on anything that happened earlier in the page load**.
 
@@ -183,7 +183,7 @@ health of your code base (or lack thereof). Send reports to a backend,
 know about the real-world issues users are hitting on your site, update
 code, profit!
 
-### Future work 
+### Future work
 
 In the future, my hope is that `ReportingObserver` becomes the de-facto API
 for catching all types of issues in JS. Imagine one API to catch everything

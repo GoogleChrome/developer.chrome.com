@@ -11,8 +11,8 @@ updated: 2019-10-04
 The browser's [renderer process](/blog/inside-browser-part3/)
 is what turns your code into a web page that your users can interact with.
 By default, the [main thread](https://developer.mozilla.org/docs/Glossary/Main_thread)
-of the renderer process typically handles most code:
-it parses the HTML and builds the DOM, parses the CSS and applies the specified styles,
+of the renderer process typically handles most code.
+It parses the HTML and builds the DOM, parses the CSS and applies the specified styles,
 and parses, evaluates, and executes the JavaScript.
 
 The main thread also processes user events.

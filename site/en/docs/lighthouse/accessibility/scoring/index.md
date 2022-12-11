@@ -20,7 +20,7 @@ but others don't, the page gets a 0 for the
 [**Buttons do not have an accessible name** audit](https://dequeuniversity.com/rules/axe/4.4/button-name).
 
 The following table shows the weighting for each accessibility audit.
-More heavily weighted audits have a bigger effect on your score.
+More heavily weighted audits have a greater effect on your score.
 [Manual audits](/docs/lighthouse/accessibility/#additional-items-to-manually-check)
 aren't included in the table because they don't affect your score.
 

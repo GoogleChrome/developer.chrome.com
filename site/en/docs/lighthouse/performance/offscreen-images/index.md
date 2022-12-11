@@ -10,7 +10,7 @@ updated: 2020-05-29
 The Opportunities section of your Lighthouse report lists
 all offscreen or hidden images in your page
 along with the potential savings in [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte).
-Consider lazy-loading these images
+Consider lazy loading these images
 after all critical resources have finished loading
 to lower [Time to Interactive](http://web.dev/tti/):
 
@@ -24,7 +24,7 @@ See also [Lazy load offscreen images with lazysizes codelab](https://web.dev/cod
 
 ### AMP
 
-Automatically lazy-load images with [`amp-img`](https://amp.dev/documentation/components/amp-img/).
+Automatically lazy load images with [`amp-img`](https://amp.dev/documentation/components/amp-img/).
 See the [Images](https://amp.dev/documentation/guides-and-tutorials/develop/media_iframes_3p/#images)
 guide.
 
@@ -35,11 +35,11 @@ provide the ability to defer any offscreen images to improve performance.
 
 ### Joomla
 
-Install a [lazy-load Joomla
+Install a [lazy load Joomla
 plugin](https://extensions.joomla.org/instant-search/?jed_live%5Bquery%5D=lazy%20loading)
 that provides the ability to defer any offscreen images, or switch to a template
 that provides that functionality. Starting with Joomla 4.0, a dedicated
-lazy-loading plugin can be enabled by using the "Content - Lazy Loading Images"
+lazy loading plugin can be enabled by using the "Content - Lazy Loading Images"
 plugin. Also consider using [an AMP
 plugin](https://extensions.joomla.org/instant-search/?jed_live%5Bquery%5D=amp).
 
@@ -50,7 +50,7 @@ platform's [lazy loading](https://web.dev/browser-level-image-lazy-loading/) fea
 
 ### WordPress
 
-Install a [lazy-load WordPress
+Install a [lazy load WordPress
 plugin](https://wordpress.org/plugins/search/lazy+load/) that provides the
 ability to defer any offscreen images, or switch to a theme that provides that
 functionality. Also consider using [the AMP

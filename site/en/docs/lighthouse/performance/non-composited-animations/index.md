@@ -21,7 +21,7 @@ as the _rendering pipeline_.
 </figure>
 
 It's OK if you don't understand what each step of the rendering pipeline means. The key thing to
-understand right now is that at each step of the rendering pipeline the browser uses the result of
+understand right now is that at each step the browser uses the result of
 the previous operation to create new data. For example, if your code does something that triggers
 Layout, the Paint and Composite steps need to run again. A non-composited animation is any animation
 that triggers one of the earlier steps in the rendering pipeline (Style, Layout, or Paint).

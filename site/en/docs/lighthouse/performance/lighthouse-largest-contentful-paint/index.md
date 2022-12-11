@@ -20,8 +20,8 @@ Lighthouse displays LCP in seconds:
 
 ## What LCP measures
 
-LCP measures when the largest content element in the viewport is
-rendered to the screen. This approximates when the main content of the page is
+LCP measures when the screen renders the largest content element in the viewport.
+This approximates when the main content of the page is
 visible to users. See [Largest Contentful Paint defined][definition] for more
 details on how LCP is determined.
 

@@ -27,7 +27,7 @@ press the `TAB` key to navigate through the site:
   height: 346
 } %}
 
-Are you able to reach all of the interactive controls on the page?
+Are you able to reach all interactive controls on the page?
 If not, you may need to use `tabindex` to improve the focusability of those controls.
 See also [Control focus with tabindex](https://web.dev/control-focus-with-tabindex/).
 

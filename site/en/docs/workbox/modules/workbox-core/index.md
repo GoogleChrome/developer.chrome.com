@@ -107,7 +107,7 @@ should switch to calling `self.skipWaiting()` directly. Unlike with
 at the "wrong" time, so there is no need to wrap it in an event handler.
 
 {% Aside %}
-If your web app lazy-loads resources that are uniquely versioned with, e.g.,
+If your web app lazy loads resources that are uniquely versioned with, e.g.,
 hashes in their URLs, it's recommended that you avoid using skip waiting.
 Enabling it could [lead to
 failures](https://stackoverflow.com/questions/51715127) when lazily-loading URLs
