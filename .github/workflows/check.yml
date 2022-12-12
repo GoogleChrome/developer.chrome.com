@@ -100,6 +100,19 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          list-files: json
+          filters: |
+            app:
+              - 'package.json'
+              - 'server/**/*.js'
+            static:
+              - 'site/**/*'
+              - 'server/**/*.js'
+
       - name: Cloning repository
         uses: actions/checkout@v3
 
@@ -113,6 +126,9 @@ jobs:
         run: npm ci
 
       - name: Staging
+        env:
+          CHANGED_APP_FILES: ${{ steps.changes.outputs.app_files }}
+          CHANGED_STATIC_FILES: ${{ steps.changes.outputs.static_files }}
         run: |
           npx gulp stagePr
 

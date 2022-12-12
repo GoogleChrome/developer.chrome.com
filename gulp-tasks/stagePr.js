@@ -28,8 +28,15 @@ const TRIGGER_NAME_APP_BUILD = 'App';
 const CHECK_NAME_STATIC_BUILD = 'Static (dcc-staging)';
 const CHECK_NAME_APP_BUILD = 'App (dcc-staging)';
 
+/**
+ * A full static build takes around 5m30s to 6m as of 12/2022
+ */
 const INITIAL_WAIT_STATIC_BUILD = 4 * 60 * 1000;
-const INITIAL_WAIT_APP_BUILD = 10 * 60 * 1000;
+/**
+ * Building an instance takes 36m30s to 8min as of 12/2022.
+ * It takes longer depending on the amount of changed pages
+ */
+const INITIAL_WAIT_APP_BUILD = 8 * 60 * 1000;
 
 function wait(timeout) {
   return new Promise(resolve => {
@@ -110,6 +117,10 @@ async function stagePr() {
     );
     return;
   }
+
+  console.log('Changed files');
+  console.log(process.env.CHANGED_APP_FILES);
+  console.log(process.env.CHANGED_SERVER_FILES);
 
   let triggerName = TRIGGER_NAME_STATIC_BUILD;
   let checkName = CHECK_NAME_STATIC_BUILD;
