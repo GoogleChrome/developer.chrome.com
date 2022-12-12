@@ -32,7 +32,7 @@ const CHECK_NAME_APP_BUILD = 'App (dcc-staging)';
 /**
  * A full static build takes around 5m30s to 6m as of 12/2022
  */
-const INITIAL_WAIT_STATIC_BUILD = 4 * 60 * 1000;
+const INITIAL_WAIT_STATIC_BUILD = 3 * 60 * 1000;
 /**
  * Building an instance takes 36m30s to 8min as of 12/2022.
  * It takes longer depending on the amount of changed pages
@@ -155,9 +155,10 @@ function createAnnouncement(commit, changedFiles, build) {
   const changedPages = [];
   if (changedFiles.static) {
     for (const path of changedFiles.static) {
-      if (!path.endsWidth('.md')) {
-        continue;
-      }
+      console.log(path);
+      // if (!path.endsWidth('.md')) {
+      //   continue;
+      // }
 
       const cleanPath = path.replace('site', '').replace('index.md');
       changedPages.push(`- ${baseUrl}${cleanPath}`);
