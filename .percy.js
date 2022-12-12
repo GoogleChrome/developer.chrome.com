@@ -4,6 +4,7 @@ const SNAPSHOTS = [
   '/en/docs/handbook/content-types/docs-landing/index.html',
   '/en/docs/handbook/content-types/doc-post/index.html',
   '/en/docs/handbook/content-types/landing/index.html',
+  '/en/content-types/meet-the-team/index.html',
 ];
 
 module.exports = {
