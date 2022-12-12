@@ -28,6 +28,9 @@ const TRIGGER_NAME_APP_BUILD = 'App';
 const CHECK_NAME_STATIC_BUILD = 'Static (dcc-staging)';
 const CHECK_NAME_APP_BUILD = 'App (dcc-staging)';
 
+const INITIAL_WAIT_STATIC_BUILD = 4 * 60 * 1000;
+const INITIAL_WAIT_APP_BUILD = 10 * 60 * 1000;
+
 function wait(timeout) {
   return new Promise(resolve => {
     setTimeout(resolve, timeout);
@@ -83,7 +86,7 @@ async function findBuild(checkName) {
   return build;
 }
 
-async function waitForCloudBuild(checkId, timeout = 2 * 60 * 1000) {
+async function waitForCloudBuild(checkId, timeout) {
   console.log(
     `Waiting ${timeout / 1000}s for Cloud Build (${checkId}) to finish ...`
   );
@@ -96,9 +99,8 @@ async function waitForCloudBuild(checkId, timeout = 2 * 60 * 1000) {
     return build;
   }
 
-  // If the build has not completed yet, then just query again with
-  // a decreasing timeout, but at least 10 seconds
-  return waitForCloudBuild(checkId, Math.max(10 * 1000, timeout * 0.9));
+  // If the build has not completed yet, then just query again in 60s
+  return waitForCloudBuild(checkId, 60 * 1000);
 }
 
 async function stagePr() {
@@ -111,10 +113,12 @@ async function stagePr() {
 
   let triggerName = TRIGGER_NAME_STATIC_BUILD;
   let checkName = CHECK_NAME_STATIC_BUILD;
+  let initialWait = INITIAL_WAIT_STATIC_BUILD;
   // TODO: Check what files changed
   if (process.env.GITHUB_ACTION) {
     triggerName = TRIGGER_NAME_APP_BUILD;
     checkName = CHECK_NAME_APP_BUILD;
+    initialWait = INITIAL_WAIT_APP_BUILD;
   }
 
   try {
@@ -136,7 +140,7 @@ async function stagePr() {
   }
 
   try {
-    await waitForCloudBuild(build.id);
+    await waitForCloudBuild(build.id, initialWait);
   } catch (e) {
     console.log(build);
     throw Error('Can not determine Cloud Build job status.');
