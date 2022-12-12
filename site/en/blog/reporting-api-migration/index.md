@@ -16,9 +16,9 @@ tags:
 
 {% Aside 'caution' %} This post covers how to migrate to the new version of the Reporting
 API (v1). If you're new to the Reporting API or need detailed usage examples, head over to the [main
-post on the Reporting API](articles/reporting-api) instead. {% endAside %}
+post on the Reporting API](/articles/reporting-api) instead. {% endAside %}
 
-The [Reporting API](articles/reporting-api) informs you about errors that happen across your site as visitors use it. It gives
+The [Reporting API](/articles/reporting-api) informs you about errors that happen across your site as visitors use it. It gives
 you visibility on browser interventions, browser crashes, Content-Security-Policy violations,
 COOP/COEP violations, deprecation warnings and more.
 
