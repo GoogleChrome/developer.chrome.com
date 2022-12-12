@@ -23,4 +23,4 @@ Make sure to update any insecure libraries.
 
 ## Resources
 
-[Source code for **Detected JavaScript libraries** audit](https://github.com/GoogleChrome/lighthouse/blob/ecd10efc8230f6f772e672cd4b05e8fbc8a3112d/lighthouse-core/audits/dobetterweb/js-libraries.js)
+[Source code for **Detected JavaScript libraries** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/js-libraries.js)

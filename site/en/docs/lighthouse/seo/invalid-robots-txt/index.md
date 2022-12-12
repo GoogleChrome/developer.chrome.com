@@ -176,7 +176,7 @@ sitemap: https://example.com/sitemap-file.xml
 
 ## Resources
 
-- [Source code for **`robots.txt` is not valid** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/robots-txt.js)
+- [Source code for **`robots.txt` is not valid** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/robots-txt.js)
 - [Create a `robots.txt file`](https://support.google.com/webmasters/answer/6062596)
 - [Robots.txt](https://moz.com/learn/seo/robotstxt)
 - [Robots meta tag and X-Robots-Tag HTTP header specifications](https://developers.google.com/search/reference/robots_meta_tag)

@@ -37,6 +37,6 @@ page for more information.
 
 ## Resources
 
-- [Source code for **Page lacks the HTML doctype, thus triggering quirks mode** audit](https://github.com/GoogleChrome/lighthouse/blob/ecd10efc8230f6f772e672cd4b05e8fbc8a3112d/lighthouse-core/audits/dobetterweb/doctype.js)
+- [Source code for **Page lacks the HTML doctype, thus triggering quirks mode** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/doctype.js)
 - [Doctype](https://developer.mozilla.org/docs/Glossary/Doctype)
 - [Quirks Mode and Standards Mode](https://developer.mozilla.org/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)

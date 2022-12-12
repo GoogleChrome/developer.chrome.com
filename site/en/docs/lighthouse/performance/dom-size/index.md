@@ -89,5 +89,5 @@ If you're rendering large lists, use [virtual scrolling](https://web.dev/virtual
 
 ## Resources
 
-- [Source code for **Avoid an excessive DOM size** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/dom-size.js)
+- [Source code for **Avoid an excessive DOM size** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/dom-size.js)
 - [Reduce the Scope and Complexity of Style Calculations](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/)
