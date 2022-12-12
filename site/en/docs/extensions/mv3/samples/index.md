@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Samples"
 seoTitle: "Chrome Extension examples"
-date: 2022-12-12
+date: 2022-12-16
 # updated: 2021-07-22
 description: Intro to extension examples GitHub repository 
 ---
