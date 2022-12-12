@@ -69,4 +69,4 @@ tap targets.
 ## Resources
 
 - [Accessible tap targets](https://web.dev/accessible-tap-targets/): more information on how to ensure your tap targets are accessible by all users.
-- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/tap-targets.js)
+- [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/seo/tap-targets.js)

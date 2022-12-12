@@ -61,7 +61,7 @@ ask the provider to support asynchronous loading.
 
 ## Resources
 
-- [Source code for **Uses `document.write()`** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/no-document-write.js)
+- [Source code for **Uses `document.write()`** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/no-document-write.js)
 - [Intervening against `document.write()`](/blog/removing-document-write/)
 - [Parser blocking versus asynchronous JavaScript](https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/#parser_blocking_versus_asynchronous_javascript)
 - [Speculative parsing](https://developer.mozilla.org/docs/Glossary/speculative_parsing)

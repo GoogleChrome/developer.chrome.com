@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Implementation guide
 seoTitle: Android Custom Tabs implementation guide
 date: 2020-02-04
-updated: 2022-11-24
+updated: 2022-12-09
 description: Learn how to integrate a web browser into your Android app.
 ---
 
@@ -82,7 +82,7 @@ CustomTabsSession customTabsSession;
 
 // ...
 
-CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(session)
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder(customTabsSession)
   .setInitialActivityHeightPx(500)
   .setCloseButtonPosition(CustomTabsIntent.CLOSE_BUTTON_POSITION_END)
   // ...

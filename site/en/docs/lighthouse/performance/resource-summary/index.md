@@ -83,7 +83,7 @@ Once you've optimized your code to reduce request counts and transfer sizes, see
 
 ## Resources
 
-[Source code for **Keep request counts low and transfer sizes small** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/resource-summary.js)
+[Source code for **Keep request counts low and transfer sizes small** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/resource-summary.js)
 
 [css]: https://web.dev/fast/#optimize-your-css/
 [js]: https://web.dev/fast/#optimize-your-javascript/

@@ -97,7 +97,7 @@ about how to evaluate the FID data you collect.
 
 ## Resources
 
-- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/max-potential-fid.js)
+- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/max-potential-fid.js)
 - [First Input Delay][fid]
 - [Time to Interactive](http://web.dev/tti/)
 - [Are long JavaScript tasks delaying your Time to Interactive?](https://web.dev/long-tasks-devtools/)
