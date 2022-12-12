@@ -284,7 +284,7 @@ Requires to reload DevTools. Options do the following:
 {% Details %}
 
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated `.css` files, for example, `.scss`, and show them to you.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable CSS source maps** lets DevTools find the sources of generated CSS files, for example, `.scss`, and show them to you.
 {% endDetailsSummary %}
 
 {% Aside 'gotchas' %}
@@ -308,9 +308,16 @@ Requires to reload DevTools. Options do the following:
 {% Details %}
 
 {% DetailsSummary %}
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from Windows Shares via UNC paths**
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Allow DevTools to load resources, such as source maps, from remote file paths**. Disabled by default for security reasons.
 {% endDetailsSummary %}
 
+{% Aside 'caution' %}
+[Remote file paths are a security vulnerability](https://bugs.chromium.org/p/chromium/issues/detail?id=1342722). It is best to use this option only if you are aware of consequences.
+{% endAside %}
+
+If left disabled, DevTools logs to the **Console** messages similar to the following:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mGlaXEprcQk0ktzVP6RJ.png", alt="A message in the Console informing that loading from a remote file path is prohibited for security reasons.", width="800", height="347" %}
 
 {% endDetails %}
 
