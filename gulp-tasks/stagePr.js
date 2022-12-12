@@ -110,6 +110,28 @@ async function waitForCloudBuild(checkId, timeout) {
   return waitForCloudBuild(checkId, 60 * 1000);
 }
 
+function getChangedFiles() {
+  const changedFiles = {};
+
+  const staticFiles = process.env.CHANGED_STATIC_FILES;
+  if (staticFiles && staticFiles !== 'undefined') {
+    changedFiles.static = JSON.parse(staticFiles);
+  }
+
+  const appFiles = process.env.CHANGED_APP_FILES;
+  if (appFiles && appFiles !== 'undefined') {
+    changedFiles.app = JSON.parse(appFiles);
+  }
+
+  return changedFiles;
+}
+
+function createAnnouncement(commit, changedFiles, build) {
+  console.log(commit, changedFiles, build);
+  const announcement = `Staging build is ready. Built from commit ${commit}.`;
+  return announcement;
+}
+
 async function stagePr() {
   if (!process.env.GITHUB_ACTION) {
     console.warn(
@@ -118,47 +140,49 @@ async function stagePr() {
     return;
   }
 
-  console.log('Changed files');
-  console.log(process.env.CHANGED_APP_FILES);
-  console.log(process.env.CHANGED_SERVER_FILES);
+  const commit = process.env.COMMIT_SHA;
+  const changedFiles = getChangedFiles();
 
   let triggerName = TRIGGER_NAME_STATIC_BUILD;
   let checkName = CHECK_NAME_STATIC_BUILD;
   let initialWait = INITIAL_WAIT_STATIC_BUILD;
-  // TODO: Check what files changed
-  if (process.env.GITHUB_ACTION) {
+
+  // If any of the app files changed trigger a full app build instead
+  if (changedFiles.app) {
     triggerName = TRIGGER_NAME_APP_BUILD;
     checkName = CHECK_NAME_APP_BUILD;
     initialWait = INITIAL_WAIT_APP_BUILD;
   }
 
   try {
-    await requestBuild(process.env.COMMIT_SHA, triggerName);
+    await requestBuild(commit, triggerName);
   } catch (e) {
     throw Error('Failed to request staging build.');
   }
 
   // Wait for 30 seconds, for the webhook to create the actual
   // build and Cloud Build propagate the status back to GitHub.
-  // This can take up to 1m30s - wait for 2m30s to have room to wiggle
+  // This can take up to 1m30s - wait for 2m to have room to wiggle
   // and as the build takes a while anyway
   console.log('Waiting for Cloud Build job to start ...');
-  await wait(2.5 * 60 * 1000);
+  await wait(2 * 60 * 1000);
 
-  const build = await findBuild(checkName);
+  let build = await findBuild(checkName);
   if (!build) {
     throw Error('Can not find Cloud Build job. Has it started?');
   }
 
   try {
-    await waitForCloudBuild(build.id, initialWait);
+    build = await waitForCloudBuild(build.id, initialWait);
   } catch (e) {
     console.log(build);
     throw Error('Can not determine Cloud Build job status.');
   }
 
+  const announcement = createAnnouncement(commit, changedFiles, build);
+  console.log(`::set-output name=announcement::${announcement}`);
+
   console.log('Staging build finished.');
-  // TODO: Post comment to PR.
 }
 
 module.exports = stagePr;

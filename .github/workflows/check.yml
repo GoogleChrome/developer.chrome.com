@@ -100,6 +100,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
+      - name: Posting announcement
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            Staging build in progress ...
       - name: Getting changes
         id: changes
         uses: dorny/paths-filter@v2
@@ -126,11 +131,17 @@ jobs:
         run: npm ci
 
       - name: Staging
+        id: staging
         env:
           CHANGED_APP_FILES: ${{ steps.changes.outputs.app_files }}
           CHANGED_STATIC_FILES: ${{ steps.changes.outputs.static_files }}
         run: |
           npx gulp stagePr
+
+      - name: Posting announcement
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: ${{ steps.staging.outputs.announcement }}
 
   build:
     needs: queue
