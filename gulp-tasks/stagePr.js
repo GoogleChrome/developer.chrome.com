@@ -21,6 +21,7 @@
  */
 
 const {default: fetch} = require('node-fetch');
+const fs = require('fs/promises');
 
 const TRIGGER_NAME_STATIC_BUILD = 'Static';
 const TRIGGER_NAME_APP_BUILD = 'App';
@@ -128,7 +129,48 @@ function getChangedFiles() {
 
 function createAnnouncement(commit, changedFiles, build) {
   console.log(commit, changedFiles, build);
-  const announcement = `Staging build is ready. Built from commit ${commit}.`;
+  const startedAt = new Date(build.started_at);
+  const completedAt = new Date(build.completed_at);
+  const duration =
+    Math.abs(startedAt.getTime() - completedAt.getTime()) / 1000 / 60;
+
+  const status = build.status;
+  const conclusion = build.conclusion;
+  if (status !== 'completed' && conclusion !== 'success') {
+    return (
+      `Staging build (${build.name}) did not succeed.` +
+      'Please ping engineering for assistance.'
+    );
+  }
+
+  const shortCommitSha = commit.substring(0, 7);
+  const baseUrl = `https://${shortCommitSha}-dot-dcc-staging.uc.r.appspot.com/`;
+
+  let announcement =
+    `Staging build (${build.name}) for commit ${commit} ` +
+    `started at ${startedAt.toString()} completed after ${duration} minutes.` +
+    '\n' +
+    `**${baseUrl}**`;
+
+  const changedPages = [];
+  if (changedFiles.static) {
+    for (const path of changedFiles.static) {
+      if (!path.endsWidth('.md')) {
+        continue;
+      }
+
+      const cleanPath = path.replace('site', '').replace('index.md');
+      changedPages.push(`- ${baseUrl}${cleanPath}`);
+    }
+  }
+
+  if (changedPages.length) {
+    announcement =
+      '\n' +
+      'The following pages likely changed with this PR:\n' +
+      changedPages.join('\n');
+  }
+
   return announcement;
 }
 
@@ -180,7 +222,10 @@ async function stagePr() {
   }
 
   const announcement = createAnnouncement(commit, changedFiles, build);
-  console.log(`::set-output name=announcement::${announcement}`);
+  // Passing output from logs is deprecated and streaming to the
+  // output environment variable would require logs to be less verbose
+  // https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+  await fs.writeFile('announcement.md', announcement, {encoding: 'utf-8'});
 
   console.log('Staging build finished.');
 }
