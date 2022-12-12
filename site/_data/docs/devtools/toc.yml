@@ -16,14 +16,19 @@
 - url: /docs/devtools/device-mode/
 - title: i18n.docs.devtools.elements
   sections:
-    - url: /docs/devtools/dom/
-    - url: /docs/devtools/dom/properties
-    - url: /docs/devtools/css/
-    - url: /docs/devtools/css/grid/
-    - url: /docs/devtools/css/flexbox/
-    - url: /docs/devtools/css/container-queries/
-    - url: /docs/devtools/css/reference/
-    - url: /docs/devtools/elements/badges/
+    - title: i18n.docs.devtools.dom
+      sections:
+        - url: /docs/devtools/dom/
+        - url: /docs/devtools/dom/properties
+        - url: /docs/devtools/elements/badges/
+    - title: i18n.docs.devtools.css
+      sections:
+        - url: /docs/devtools/css/
+        - url: /docs/devtools/css/issues/
+        - url: /docs/devtools/css/grid/
+        - url: /docs/devtools/css/flexbox/
+        - url: /docs/devtools/css/container-queries/
+        - url: /docs/devtools/css/reference/
 - title: i18n.docs.devtools.console
   sections:
     - url: /docs/devtools/console/

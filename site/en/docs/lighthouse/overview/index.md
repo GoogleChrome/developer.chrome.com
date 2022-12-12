@@ -1,19 +1,22 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Overview
+seoTitle: Lighthouse overview
 description: |
   Learn how to set up Lighthouse to audit your web apps.
 date: 2016-09-27
 updated: 2022-05-24
 ---
 
-[Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
+[Lighthouse](https://github.com/GoogleChrome/lighthouse) is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO, and more.
 
 <figure>
   {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/QXJ5lmcjHEFLTHg5B4o8.svg", class="float-right", alt="Lighthouse logo", width="150", height="150" %}
 </figure>
 
-You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. You give Lighthouse a URL to audit, it runs a series of audits against the page, and then it generates a report on how well the page did. From there, use the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why the audit is important, as well as how to fix it.
+You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. You give Lighthouse a URL to audit, it runs a series of audits against the page,
+and then it generates a report on how well the page did. From there, use the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why
+the audit is important, as well as how to fix it.
 
 You can also use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) to prevent regressions on your sites.
 
@@ -189,7 +192,7 @@ Lighthouse aims to provide guidance that is relevant and actionable for all web 
 
 ### Stack Packs
 
-Developers use many different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used.  
+Developers use many different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used.
 
 "Stack Packs" allow Lighthouse to detect what platform your site is built on and display specific stack-based recommendations. These recommendations are defined and curated by experts from the community.
 

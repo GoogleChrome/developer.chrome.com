@@ -464,6 +464,34 @@ function to request the browser remove the interest group.
 
 Code for an ad can also call this function for its interest group.
 
+## Frequently asked questions
+
+{% Details %}
+{% DetailsSummary %}
+### How do I implement frequency control by click?
+{% endDetailsSummary %}
+
+For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Alternatively, you can call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping. 
+
+You can also use a first-party cookie to store click information. When the ad is rendered, overwrite an existing interest group with the click data as user bidding signals. The workflow would look something like: 
+
+*   User visits `advertiser.com/product`.
+*   The advertiser writes "0 clicks" in a first-party cookie and calls `joinAdInterestGroup({ ..., userBiddingSignals: { clicks: [] } })`.
+*   User clicks on an ad at a later time and is taken to `advertiser.com/product`.
+*   The advertiser reads and increments first-party cookie click data, then calls `joinAdInterestGroup({ userBiddingSignals: { clicks: ["1667499972"] } })`.
+*   For future bidding, the click data available in `userBiddingSignals` can be used in bidding logic.
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+### How do I use a user's recent browsing history for ad recommendations?
+{% endDetailsSummary %}
+
+A user's browsing history for the site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals`, which can be used during on-device bidding. See the [product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on the impact of core metrics for recommendation use case adoption.
+
+`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. 
+{% endDetails %}
+
 ## All FLEDGE API references
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}

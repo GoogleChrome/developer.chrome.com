@@ -17,7 +17,7 @@ crawl. An invalid `robots.txt` configuration can cause two types of problems:
 
 ## How the Lighthouse `robots.txt` audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags invalid
+[Lighthouse](/docs/lighthouse/overview/) flags invalid
 `robots.txt` files:
 
 <figure class="w-figure">
@@ -57,7 +57,7 @@ crawled. They may stop crawling your entire site, which would prevent new
 content from being indexed.
 
 To check the HTTP status code, open `robots.txt` in Chrome and
-[check the request in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network/reference#analyze).
+[check the request in Chrome DevTools](/docs/devtools/network/reference/#analyze).
 
 ### Keep `robots.txt` smaller than 500 KiB
 

@@ -13,7 +13,7 @@ and may require users to zoom in to display text at a comfortable reading size.
 
 ## How the Lighthouse font size audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages
+[Lighthouse](/docs/lighthouse/overview/) flags pages
 with font sizes that are too small to read easily on mobile:
 
 <figure class="w-figure">

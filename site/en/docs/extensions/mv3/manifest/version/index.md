@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Version"
+seoTitle: "Chrome Extensions Manifest: version"
 date: 2013-05-12
 updated: 2022-07-13
 description: Reference documentation for the version property of manifest.json.

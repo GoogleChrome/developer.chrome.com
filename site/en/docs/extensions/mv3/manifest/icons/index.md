@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Icons"
+seoTitle: "Chrome Extensions Manifest: icons"
 date: 2013-05-12
 updated: 2022-04-27
 description: Reference documentation for the icons property of manifest.json.

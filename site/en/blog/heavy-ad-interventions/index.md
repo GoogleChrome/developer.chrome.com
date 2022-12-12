@@ -241,7 +241,7 @@ request:
 ## Diagnosing the cause of an intervention
 
 Ad content is just web content, so make use of tools like
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) to audit the overall performance of your
+[Lighthouse](/docs/lighthouse/overview/) to audit the overall performance of your
 content. The resulting audits provide inline guidance on improvements. You can
 also refer to the [web.dev/fast](https://web.dev/fast/) collection.
 

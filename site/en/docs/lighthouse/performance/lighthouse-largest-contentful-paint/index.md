@@ -71,5 +71,5 @@ See [How to improve Largest Contentful Paint on your site][improve].
 - [New in Chrome 77: Largest Contentful Paint][launch]
 
 [definition]: https://web.dev/lcp/#what-is-lcp
-[launch]: https://developers.google.com/web/updates/2019/09/nic77#lcp
+[launch]: /blog/new-in-chrome-77/#lcp
 [improve]: https://web.dev/lcp/#how-to-improve-lcp

@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Manifest V3 migration checklist"
+seoTitle: "Chrome Extensions: Manifest V3 migration checklist"
 date: 2019-11-02
 updated: 2020-11-11
 description: A quick reference on migrating your Chrome Extensions from Manifest V2 to Manifest V3.

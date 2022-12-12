@@ -6,7 +6,7 @@ authors:
 description: >
   The View Transition API allows page transitions within single-page apps, and will later include multi-page apps.
 date: 2021-08-17
-updated: 2022-08-02
+updated: 2022-11-22
 ---
 
 {% Aside %}
@@ -127,13 +127,17 @@ Once the state is captured, the API constructs a pseudo-element tree like this:
       └─ ::view-transition-new(root)
 ```
 
-The `::view-transition` sits in an overlay, over everything else on the page.
+The `::view-transition` sits in an overlay, over everything else on the page. This is useful if you want to set a background color for the transition.
 
 `::view-transition-old(root)` is a screenshot of the old view, and `::view-transition-new(root)` is a **live** representation of the new view. Both render as CSS 'replaced content' (like an `<img>`).
 
 The old view animates from `opacity: 1` to `opacity: 0`, while the new view animates from `opacity: 0` to `opacity: 1`, creating a cross-fade.
 
 All of the animation is performed using CSS animations, so they can be customized with CSS.
+
+{% Aside %}
+The old and new views also have [`mix-blend-box: plus-lighter`](https://developer.mozilla.org/docs/Web/CSS/mix-blend-mode), and the `::view-transition-image-pair` has [`isolation: isolate`](https://developer.mozilla.org/docs/Web/CSS/isolation). This is required to create a correct cross-fade. If you're interested in why, here's [far too many words on the topic](https://jakearchibald.com/2021/dom-cross-fade/).
+{% endAside %}
 
 ## Simple customization
 
@@ -257,7 +261,7 @@ That CSS declaration caused the pseudo-element tree to change:
 
 There are now two transition groups. One for the header, and another for the rest. These can be targeted independently with CSS, and given different transitions. Although, in this case `main-header` was left with the default transition, which is a cross-fade.
 
-Well, ok, the default transition isn't just a cross fade, it also transitions:
+Well, ok, the default transition isn't just a cross fade, the `::view-transition-group` also transitions:
 
 - Position and transform (via a `transform`)
 - Width

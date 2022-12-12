@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Reading time'
+seoTitle: 'Chrome Extensions Tutorial: Reading time'
 description: 'Learn how to insert an element on each page.'
 subhead: 'Create your first extension that inserts a new element on the page.'
 date: 2022-10-04

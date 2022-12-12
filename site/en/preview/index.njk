@@ -8,11 +8,21 @@ layout: 'layouts/landing.njk'
 {% set script %}
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script>
-  function onSignIn(googleUser) {
+  window.onSignIn = function(googleUser) {
     document.dcc_preview_form.t.value = googleUser.credential;
     document.dcc_preview_form.removeAttribute('hidden');
     document.querySelector('.g_id_signin').setAttribute('hidden', true);
   }
+
+  window.onSubmit = function(form) {
+    form.fm.readOnly = true;
+    form.md.readOnly = true;
+    form.s.disabled = true;
+    form.s.value = "Generating";
+
+    return true;
+  };
+
 </script>
 {% endset %}
 
@@ -21,6 +31,7 @@ layout: 'layouts/landing.njk'
 <div id="g_id_onload"
     data-client_id="636061184119-c4pof3b538r4ibs8bt6g8qdfth958nc9.apps.googleusercontent.com"
     data-auto_select="true"
+    data-skip_prompt_cookie="SID"
     data-callback="onSignIn">
 </div>
 <div class="g_id_signin"
@@ -32,31 +43,18 @@ layout: 'layouts/landing.njk'
     data-logo_alignment="left">
 </div>
 
-<form action="/_render" method="post" name="dcc_preview_form" hidden>
+<form action="/_render" method="post" name="dcc_preview_form" onsubmit="onSubmit(this)" hidden>
   <div class="pad-bottom-400 pad-top-400">
-    <label for="fm" class="display-block">FrontMatter (in Yaml format)</label>
+    <label for="fm" class="display-block">FrontMatter</label>
     <textarea
       id="fm"
       name="fm"
-      rows="5"
+      rows="15"
       class="width-full rounded-200 pad-200 hairline"
-      placeholder="layout: layouts/blog-post.njk"
+      placeholder="---&#10;layout: 'layouts/blog-post.njk'&#10;date: 2020-07-27&#10;title: Test title TBD&#10;desciption: Test description TBD&#10;authors: &#10;  - rachelandrew&#10;---
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     ></textarea>
   </div>
-
-  <div class="pad-bottom-400">
-    <label for="md" class="display-block">Content (in Markdown format)</label>
-    <textarea
-      id="md"
-      name="md"
-      rows="5"
-      class="width-full rounded-200 pad-200 hairline"
-      placeholder="Loerm ipsum..."></textarea>
-  </div>
-
   <input type="hidden" name="t" />
-  <input name="s" type="submit" class="button button-filled material-button button-primary"/>
+  <input name="s" type="submit" class="button-filled material-button color-bg bg-primary"/>
 </form>
-
-
-

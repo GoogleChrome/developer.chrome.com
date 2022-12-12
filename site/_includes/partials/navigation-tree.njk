@@ -14,4 +14,8 @@
     {% from 'macros/navigation-tree-sections.njk' import navigationTreeSections with context %}
     {{ navigationTreeSections() }}
   </div>
+
+{% set additionalClasses = 'display-none md:display-block xl:display-none pad-right-400' %}
+{% include 'partials/toc-side.njk' %}
+
 </navigation-tree>

@@ -18,7 +18,7 @@ the browser uses its local copy rather than getting it from the network.
 
 ## How the Lighthouse cache policy audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags all static resources that aren't cached:
 
 <figure>
@@ -68,7 +68,7 @@ The `max-age` directive tells the browser how long it should cache the resource 
 This example sets the duration to `31536000`, which corresponds to 1 year:
 60&nbsp;seconds × 60&nbsp;minutes × 24&nbsp;hours × 365&nbsp;days = 31536000&nbsp;seconds.
 
-When possible, cache immutable static assets for a long time,
+You should cache immutable static assets for a long time,
 such as a year or longer.
 
 {% Aside %}

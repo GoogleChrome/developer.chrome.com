@@ -30,7 +30,7 @@ stereo audio track.
 ## What is insertable streams for `MediaStreamTrack`?
 
 The core idea behind insertable streams for `MediaStreamTrack` is to expose the content of a
-`MediaStreamTrack` as a collection of [streams](/streams/) (as defined by the WHATWG
+`MediaStreamTrack` as a collection of [streams](https://web.dev/streams/) (as defined by the WHATWG
 [Streams API](https://streams.spec.whatwg.org/)). These streams can be manipulated to introduce new
 components.
 
@@ -40,7 +40,7 @@ traditional methods requires developers to use intermediaries such as `<canvas>`
 details of this type of process, see, for example,
 [video + canvas = magic](https://html5doctor.com/video-canvas-magic/).)
 
-## Browser support 
+## Browser support
 
 Insertable streams for `MediaStreamTrack` is supported from Chrome 94.
 
@@ -66,7 +66,7 @@ if ('MediaStreamTrackProcessor' in window && 'MediaStreamTrackGenerator' in wind
 ### Core concepts
 
 Insertable streams for `MediaStreamTrack` builds on concepts previously proposed by
-[WebCodecs](/webcodecs/) and conceptually splits the `MediaStreamTrack` into two
+[WebCodecs](/articles/webcodecs/) and conceptually splits the `MediaStreamTrack` into two
 components:
 
 - The `MediaStreamTrackProcessor`, which consumes a `MediaStreamTrack` object's source and generates

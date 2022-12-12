@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Give users options"
+seoTitle: "Chrome Extensions: Give users options"
 date: 2012-09-18
 updated: 2018-04-29
 description: How to let users customize your Extension.
