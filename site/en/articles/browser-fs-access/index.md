@@ -102,7 +102,7 @@ but also overwrite an existing file.
 
 {% Aside %}
 For a more thorough introduction to the File System Access API, see the article
-[The File System Access API: simplifying access to local files](/file-system-access/).
+[The File System Access API: simplifying access to local files](/articles/file-system-access/).
 {% endAside %}
 
 ### Opening files
