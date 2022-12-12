@@ -39,12 +39,22 @@ const INITIAL_WAIT_STATIC_BUILD = 3 * 60 * 1000;
  */
 const INITIAL_WAIT_APP_BUILD = 8 * 60 * 1000;
 
+/**
+ * Returns a promise that resolves after the specified amount of time
+ * @param {number} timeout Milliseconds the Promise is blocking
+ */
 function wait(timeout) {
   return new Promise(resolve => {
     setTimeout(resolve, timeout);
   });
 }
 
+/**
+ * Sends a request to the Google Cloud Build Webhook API to trigger
+ * a job with the specified name for the specified commit
+ * @param {string} commit The full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
+ * @param {string} triggerName Either TRIGGER_NAME_STATIC_BUILD or TRIGGER_NAME_APP_BUILD
+ */
 async function requestBuild(commit, triggerName) {
   console.log(`Requesting staging build for commit ${commit}`);
 
@@ -66,6 +76,11 @@ async function requestBuild(commit, triggerName) {
   console.log('Requested staging build.');
 }
 
+/**
+ * Sends an authenticated request to the GitHub API
+ * @param {string} endpoint
+ * @returns {Promise<{[key: string]: any}>}
+ */
 async function fetchGitHubApi(endpoint) {
   const request = await fetch(`https://api.github.com/${endpoint}`, {
     headers: {
@@ -77,28 +92,45 @@ async function fetchGitHubApi(endpoint) {
   return data;
 }
 
-async function findBuild(checkName) {
-  console.log(`Fetching checks for commit ${process.env.COMMIT_SHA} ...`);
+/**
+ * Tries to find a check with the specified name on the specified
+ * commit, using the GitHub Checks API
+ * @param {string} commit A full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
+ * @param {string} checkName Either CHECK_NAME_STATIC_BUILD or CHECK_NAME_APP_BUILD
+ * @returns {Promise<{[key: string]: any}>}
+ */
+async function findBuild(commit, checkName) {
+  console.log(`Fetching checks for commit ${commit} ...`);
   let build = null;
   try {
     const checks = await fetchGitHubApi(
-      `repos/GoogleChrome/developer.chrome.com/commits/${process.env.COMMIT_SHA}/check-runs`
+      `repos/GoogleChrome/developer.chrome.com/commits/${commit}/check-runs`
     );
     build = checks.check_runs.find(run => {
       return run.name === checkName;
     });
   } catch (e) {
-    console.error('Could not fetch checks.');
+    console.error(`Could not fetch checks for ${commit}.`);
   }
 
   return build;
 }
 
-async function waitForCloudBuild(checkId, timeout) {
+/**
+ * Waits for the specified amount of time before starting to repeatedly
+ * query the GitHub Checks API for the completion status of the specified
+ * check
+ * @param {string} checkId A numeric check ID like 10036698893
+ * @param {number} initialTimeout Either INITIAL_WAIT_STATIC/APP_BUILD
+ * @returns {Promise<{[key: string]: any}>}
+ */
+async function waitForCloudBuild(checkId, initialTimeout) {
   console.log(
-    `Waiting ${timeout / 1000}s for Cloud Build (${checkId}) to finish ...`
+    `Waiting ${
+      initialTimeout / 1000
+    }s for Cloud Build (${checkId}) to finish ...`
   );
-  await wait(timeout);
+  await wait(initialTimeout);
   const build = await fetchGitHubApi(
     `repos/GoogleChrome/developer.chrome.com/check-runs/${checkId}`
   );
@@ -107,12 +139,19 @@ async function waitForCloudBuild(checkId, timeout) {
     return build;
   }
 
-  // If the build has not completed yet, then just query again in 60s
-  return waitForCloudBuild(checkId, 60 * 1000);
+  // If the build has not completed yet, then just query again in 30s
+  return waitForCloudBuild(checkId, 30 * 1000);
 }
 
+/**
+ * Parses a list of changed files from the env variables CHANGED_STATIC_FILES
+ * and CHANGED_APP_FILES which are filled by the dorny/paths-filter during
+ * the job run. The output of this action are stringified JS values, hence
+ * the dirty undefined check.
+ * @returns {{app: string[], static: string[]}}
+ */
 function getChangedFiles() {
-  const changedFiles = {};
+  const changedFiles = {static: [], app: []};
 
   const staticFiles = process.env.CHANGED_STATIC_FILES;
   if (staticFiles && staticFiles !== 'undefined') {
@@ -127,6 +166,13 @@ function getChangedFiles() {
   return changedFiles;
 }
 
+/**
+ *
+ * @param {string} commit A full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
+ * @param {ReturnType<getChangedFiles>} changedFiles The files changed in this PR
+ * @param {Awaited<ReturnType<waitForCloudBuild>>} build Build details returned from thE Checks API
+ * @returns {string} A short message containing all information about the job
+ */
 function createAnnouncement(commit, changedFiles, build) {
   console.log(commit, changedFiles, build);
   const startedAt = new Date(build.started_at);
@@ -148,8 +194,10 @@ function createAnnouncement(commit, changedFiles, build) {
 
   let announcement =
     `Staging build (${build.name}) for commit ${commit} ` +
-    `started at ${startedAt.toString()} completed after ${duration} minutes.` +
-    '\n' +
+    `started at ${startedAt.toString()} completed after ${duration.toFixed(
+      2
+    )} minutes.` +
+    '\n\n' +
     `**${baseUrl}**`;
 
   const changedPages = [];
@@ -166,7 +214,7 @@ function createAnnouncement(commit, changedFiles, build) {
 
   if (changedPages.length) {
     announcement +=
-      '\n' +
+      '\n\n' +
       'The following pages likely changed with this PR:\n' +
       changedPages.join('\n');
   }
@@ -175,7 +223,7 @@ function createAnnouncement(commit, changedFiles, build) {
 }
 
 async function stagePr() {
-  if (!process.env.GITHUB_ACTION) {
+  if (!process.env.GITHUB_ACTION || !process.env.COMMIT_SHA) {
     console.warn(
       'This task is inteded to run on GitHub actions. Use npm run stage:personal locally instead.'
     );
@@ -190,7 +238,7 @@ async function stagePr() {
   let initialWait = INITIAL_WAIT_STATIC_BUILD;
 
   // If any of the app files changed trigger a full app build instead
-  if (changedFiles.app) {
+  if (changedFiles.app && changedFiles.app.length) {
     triggerName = TRIGGER_NAME_APP_BUILD;
     checkName = CHECK_NAME_APP_BUILD;
     initialWait = INITIAL_WAIT_APP_BUILD;
@@ -209,7 +257,7 @@ async function stagePr() {
   console.log('Waiting for Cloud Build job to start ...');
   await wait(2 * 60 * 1000);
 
-  let build = await findBuild(checkName);
+  let build = await findBuild(commit, checkName);
   if (!build) {
     throw Error('Can not find Cloud Build job. Has it started?');
   }
