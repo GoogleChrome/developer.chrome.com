@@ -317,7 +317,7 @@ the steps in [Viewing Warnings][27].
     </tr>
     <tr id="tabGroups">
       <td><code>"tabGroups"</code></td>
-      <td>Grants the extensions access to the <a href="/docs/extensions/reference/tabGroups">chrome.tabGroups</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/tabGroups">chrome.tabGroups</a> API.</td>
       <td><strong>View and manage your tab groups</strong></td>
     </tr>
     <tr id="tabs">
