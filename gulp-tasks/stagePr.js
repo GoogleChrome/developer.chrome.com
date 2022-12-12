@@ -155,18 +155,17 @@ function createAnnouncement(commit, changedFiles, build) {
   const changedPages = [];
   if (changedFiles.static) {
     for (const path of changedFiles.static) {
-      console.log(path);
-      // if (!path.endsWidth('.md')) {
-      //   continue;
-      // }
+      if (!path.includes('index.md')) {
+        continue;
+      }
 
-      const cleanPath = path.replace('site', '').replace('index.md');
+      const cleanPath = path.replace('site/', '').replace('index.md', '');
       changedPages.push(`- ${baseUrl}${cleanPath}`);
     }
   }
 
   if (changedPages.length) {
-    announcement =
+    announcement +=
       '\n' +
       'The following pages likely changed with this PR:\n' +
       changedPages.join('\n');
