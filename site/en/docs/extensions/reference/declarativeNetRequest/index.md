@@ -42,8 +42,11 @@ a list containing dictionaries of type [Ruleset][4], as shown below.
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
-    "*://example.com/*"
   ],
+  "host_permissions": [
+  "http://www.blogger.com/",
+  "http://*.google.com/"
+],
   ...
 }
 ```
@@ -161,6 +164,10 @@ method.
 
 ## Implementation details
 
+### web_accessible_resources
+
+When an extension uses declarativeWebRequest APIs to redirect a public resource request to a resource that is not web accessible, it is blocked and will result in a net::ERR_UNSAFE_REDIRECT error. The above holds true even if the resource that is not web accessible is owned by the redirecting extension. To declare resources for use with declarativeWebRequest APIs, the `"web_accessible_resources"` array must be declared and populated in the manifest as documented [here](/docs/extensions/mv3/manifest/web_accessible_resources/).
+
 ### Matching algorithm
 
 Before the request is sent, each extension is queried for an action to take. The following actions
@@ -196,25 +203,9 @@ is determined based on the priority of each rule and the operations specified.
   `append` rules from the same extension.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-### Comparison with the [webRequest][16] API
+### Interaction with cached pages
 
-- The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
-  makes it more performant than the webRequest API, where each network request is evaluated in
-  JavaScript in the extension process.
-- Because the requests are not intercepted by the extension process, declarativeNetRequest removes
-  the need for extensions to have a background page; resulting in less memory consumption.
-- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
-  requires no host permissions when used with the `declarativeNetRequest` permission.
-- The declarativeNetRequest API provides better privacy to users because extensions can't actually
-  read the network requests made on the user's behalf.
-- Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are
-  automatically collapsed in the DOM.
-- While deciding whether a request is to be blocked or redirected, the declarativeNetRequest API is
-  given priority over the webRequest API because it allows for synchronous interception. Similarly,
-  any headers removed through declarativeNetRequest API are not made visible to web request
-  extensions.
-- The webRequest API is more flexible as compared to the declarativeNetRequest API because it allows
-  extensions to evaluate a request programmatically.
+
 
 ## Example
 
