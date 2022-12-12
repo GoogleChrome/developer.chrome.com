@@ -1,13 +1,22 @@
 ---
-layout: 'layouts/blog-post.njk'
-title: An example blog post used for visual testing.
+layout: 'layouts/doc-post.njk'
+title: A sample docs post used for visual testing.
+subhead: >
+  A catchy subhead used for demonstration purposes. It is a bit wordy to test what
+  happens when a subhead wraps to a new line.
 description: >
-  A catchy subhead that previews the content and is a bit wordy to test what
-  happens when a subhead wraps.
+  A catchy subhead used for demonstration purposes. It is a bit wordy to test what
+   happens when a subhead wraps to a new line.
+date: 2022-12-07
+updated: 2022-12-07
 authors:
-  - jakearchibald
-date: 2017-09-28
-updated: 2019-10-14
+  - mihajlija
+  - surma
+tags:
+ - origin-trials
+ - cookies
+ - privacy
+project_key: workbox
 ---
 
 There are five types of headings you can add to a post:
@@ -57,20 +66,61 @@ Nam quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet 
 Proin et semper nibh, sit amet imperdiet velit. Morbi quam sem. Integer et erat ac mi scelerisque suscipit
 et vitae nulla. Aliquam scelerisque efficitur ante ut facilisis.
 
-### Images
+## Level 1 - a
 
-**You can add images using Markdown:**
+The headings you use are relevant to the table of contents. Adding a h2, such as the one above, will result in a top level item
+being added. Using a h3 such as the subtitle below, will result in a nested item.
 
-![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png)
+### Level 2 - a
 
-**Or with HTML:**
+You can add as many as these as you like.
+
+Lorem ipsum dolor sit amet. Qui possimus unde et nesciunt vero eos vitae cumque. In quidem dicta et obcaecati rerum ex repudiandae
+expedita ea officia voluptatibus et quis enim 33 autem veritatis.
+
+###  Level 2 - b
+
+Lorem ipsum dolor sit amet. Qui possimus unde et nesciunt vero eos vitae cumque. In quidem dicta et obcaecati rerum ex repudiandae
+expedita ea officia voluptatibus et quis enim 33 autem veritatis. Est libero rerum eos autem enim qui dolor rerum aut dolor autem
+33 harum provident? Sed eius dolorum quo neque maxime qui enim quod id accusamus eius et sint odio a minima nihil qui veritatis labore?
+
+###  Level 2 - c: a longer title used to demonstrate multi lines links in the TOC
+
+Lorem ipsum dolor sit amet. Qui possimus unde et nesciunt vero eos vitae cumque. In quidem dicta et obcaecati rerum ex repudiandae
+expedita ea officia voluptatibus et quis enim 33 autem veritatis. Est libero rerum eos autem enim qui dolor rerum aut dolor autem
+33 harum provident? Sed eius dolorum quo neque maxime qui enim quod id accusamus eius et sint odio a minima nihil qui veritatis labore?
+
+#### You can use other headings too
+
+They'll be added to the page like any other, but they won't show in the TOC.
+
+Lorem ipsum dolor sit amet. Qui possimus unde et nesciunt vero eos vitae cumque. In quidem dicta et obcaecati rerum ex repudiandae
+expedita ea officia voluptatibus et quis enim 33 autem veritatis. Est libero rerum eos autem enim qui dolor rerum aut dolor autem
+33 harum provident? Sed eius dolorum quo neque maxime qui enim quod id accusamus eius et sint odio a minima nihil qui veritatis labore?
 
 <figure>
   {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
   <figcaption>Image with caption</figcaption>
 </figure>
 
-**When adding with HTML, you can float images as follows:**
+## Level 1 - b
+
+Adding another H2 results in a new top level item.
+
+## Images
+
+### You can add images using Markdown
+
+![Sample image](https://wd.imgix.net/image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png)
+
+### Or with HTML
+
+<figure>
+  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
+  <figcaption>Image with caption</figcaption>
+</figure>
+
+### When adding with HTML, you can float images as follows
 
 <figure data-float="right">
   {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
@@ -80,19 +130,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper.
 
-**You can also add fullwidth images:**
+### You can also add fullwidth images
 
 <figure data-size="full">
  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
 </figure>
 
-**And images with a border:**
+### And images with a border
 
 <figure data-screenshot>
  {% Img src="image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/rod9wVThpgeFVILBoi6L.png", alt="ALT_TEXT_HERE", width="528", height="264" %}
 </figure>
 
-### Horizontal line
+## Horizontal line
 
 To break the page up you can add a horizontal line as follows:
 
@@ -104,7 +154,7 @@ Suspendisse auctor ultrices ante, nec tempus nibh varius at.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa sit amet ullamcorper.
 Suspendisse auctor ultrices ante, nec tempus nibh varius at.
 
-### Lists
+## Lists
 
 You can add unordered lists using Markdown:
 
@@ -124,13 +174,13 @@ You can add unordered lists using Markdown:
 You can add ordered lists using Markdown:
 
 1. Lorem
-   * Ordered lists also support nesting
-   * B
-   * C
+  * Ordered lists also support nesting
+  * B
+  * C
 2. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
    Ipsum has been the industry's standard dummy text ever since the 1500s
-   1. You can nest either type of list
-   2. Lorem Ipsum is simply dummy text
+  1. You can nest either type of list
+  2. Lorem Ipsum is simply dummy text
 3. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -167,7 +217,7 @@ or other shortcodes/blocks within the list:
   </li>
 </ul>
 
-### Code
+## Code
 
 You can add code inline `console.warn()`. Great!
 
@@ -188,7 +238,7 @@ figure {
 }
 ```
 
-### Tables
+## Tables
 
 It's possible to add tables using markdown. Here's an example:
 
@@ -199,7 +249,7 @@ It's possible to add tables using markdown. Here's an example:
 | 3. Gather feedback & iterate on design     | Not started        |
 
 
-### Links
+## Links
 
 You can add links using markdown.
 
@@ -209,7 +259,7 @@ ultrices a mauris. Vestibulum porta dolor erat, vel molestie dolor posuere in. N
 Nam quis enim blandit, posuere justo dignissim, [scelerisque diam.](/) Fusce aliquet urna ac blandit ullamcorper.
 Proin et semper nibh, sit amet imperdiet velit. Morbi at quam sem.
 
-### Emphasis
+## Emphasis
 
 You can add emphasis by making text bold or italic:
 
@@ -222,12 +272,12 @@ You can also use both at the same time:
 
 ***Here is some text that really stands out***
 
-### Strikethrough
+## Strikethrough
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. ~~Proin dictum a massa sit amet ullamcorper~~. Suspendisse auctor ultrices ante, nec
 tempus nibh varius at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris.
 
-### Color
+## Color
 
 You can change the color of text as follows:
 
@@ -242,7 +292,7 @@ You can change the color of text as follows:
   tincidunt posuere</span>.
 </p>
 
-### Elevation
+## Elevation
 
 The elevation class adds a box shadow and can be used to bring more attention to an element. There are 5 levels of elevation:
 
@@ -266,29 +316,29 @@ The elevation class adds a box shadow and can be used to bring more attention to
   <div>Five</div>
 </div>
 
-### Buttons
+## Buttons
 
 If the need arises you can add buttons to a post as follows.
 
-**Material button with no background:**
+### Material button with no background
 
 <a class="material-button button-filled">Test</a>
 
-**Material button with background:**
+### Material button with background
 
 <a class="material-button button-filled color-bg bg-primary">Test</a>
 
-**Rounded material button:**
+### Rounded material button
 
 <a class="material-button button-filled color-bg bg-primary button-round">Test</a>
 
-**Text button:**
+### Text button
 
 <button class="material-button button-text color-primary">
   Text button
 </button>
 
-### Stats
+## Stats
 The stats block offers a visually appealing way to add statistics to a post:
 
 <div class="stats">
@@ -329,7 +379,7 @@ it will simply move them to a new row:
 </div>
 
 
-### Switcher
+## Switcher
 
 The switcher block displays two images side-by-side and is useful for contrasting two images against one another.
 
@@ -348,7 +398,7 @@ The switcher block displays two images side-by-side and is useful for contrastin
   </figure>
 </div>
 
-### Aside
+## Aside
 
 There are 8 types of aside which can be added as follows:
 
@@ -384,14 +434,14 @@ This type of callout can be used to describe/expand upon key terms
 This type of callout can be used to link out to code samples
 {% endAside %}
 
-### Blockquote
+## Blockquote
 
 {% Blockquote 'Jon Doe', 'pullquote' %}
 [Lorem ipsum](#) dolor sit amet, consectetur adipiscing elit. Proin dictum
 a massa sit amet ullamcorper.
 {% endBlockquote %}
 
-### Columns
+## Columns
 
 The columns shortcode supports an arbitrary number of columns. Define as many as you need
 and the available space will be divided equally between them.
@@ -444,7 +494,7 @@ Ipsum has been the industry's standard dummy text ever since the 1500s
 
 {% endColumns %}
 
-### Compare
+## Compare
 
 The compare shortcode allows two snippets to be clearly contrasted against each other.
 
@@ -480,7 +530,7 @@ This is better
 
 {% endCompare %}
 
-### Details
+## Details
 
 The details shortcode  allows you to add a summary to the page that shows
 additional information when clicked.
@@ -505,7 +555,7 @@ ultrices ante, nec tempus nibh varius at. Cras ligula lacus, porta vitae maximus
 
 {% endDetails %}
 
-### IncludeRaw
+## IncludeRaw
 
 The includeRaw shortcode takes a filepath as its only parameter. It fetches the content the file
 and renders it to the page.
@@ -516,7 +566,7 @@ It can be nested within a codeblock as below to use code highlighting:
 {% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```
 
-### Partials
+## Partials
 
 The partial shortcode can be used to add partials (from the _partials directory) to the page:
 
@@ -526,7 +576,7 @@ The partial shortcode can be used to add partials (from the _partials directory)
 
 ---
 
-### Video
+## Video
 
 Once uploaded to `storage.googleapis.com`, videos can be added to the page via the Video shortcode.
 
