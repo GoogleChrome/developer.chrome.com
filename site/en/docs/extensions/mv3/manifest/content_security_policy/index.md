@@ -8,7 +8,7 @@ description: Reference documentation for the content security policy properties 
 
 An optional manifest key defining restrictions on the scripts, styles, and other resources an extension can use. Within this manifest key, separate optional policies can be defined for both extension pages and sandboxed extension pages.
 
-The "extension pages" policy applies to page and worker contexts in the extension. This would include the extension popup, background worker, and tabs with html pages or iframes that were opened by the extension. The sandbox policy applies to all pages specified as a [sandbox page](/docs/extensions/mv3/manifest/sandbox/) in the manifest.
+The "extension pages" policy applies to page and worker contexts in the extension. This would include the extension popup, background worker, and tabs with HTML pages or iframes that were opened by the extension. The sandbox policy applies to all pages specified as a [sandbox page](/docs/extensions/mv3/manifest/sandbox/) in the manifest.
 
 ## Default Policy
 
