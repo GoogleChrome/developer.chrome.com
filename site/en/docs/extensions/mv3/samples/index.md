@@ -52,7 +52,7 @@ To test these examples in your local machine, follow these steps:
 Each extension example includes a `README.md` with detailed instructions on how the extension works.
 Read it carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
 
-## Contribute to this repository {: #collaborating }
+## Contributing samples {: #collaborating }
 
 If you encounter any problems with an example, let us know by [posting an issue][gh-issues]. If you want to submit a new extension, check out the [Contributing Guide][gh-contributing] to find out how to submit a new example to this collection.
 
