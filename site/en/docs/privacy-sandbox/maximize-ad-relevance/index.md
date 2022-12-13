@@ -10,8 +10,6 @@ authors:
   - joeytrotz
 ---
 
-## Introduction
-
 The Privacy Sandbox aims to keep people's activity private across an open and free internet. To do this, we are collaborating with the ad industry to transition to new private ad technologies and deprecating support for third-party cookies in Chrome in the [second half of 2024](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline).
 
 Whether you're a product leader, CTO, CMO, or CEO, it's essential to understand how to support advertising use cases in an increasingly privacy-conscious world and embrace solutions that can optimize both business outcomes and user privacy.
@@ -34,19 +32,19 @@ Interest-based advertising can survive and thrive with innovative technologies d
 
 Today, interest-based advertisers typically set up the following for campaigns through their ad tech providers:
 
-1.  **Goal:** What is the business outcome the advertiser is trying to achieve with this ad campaign? This tells ad platforms what to optimize for. For example, the advertiser may want to drive sales on their kids' clothing website. Often, these goals are measured through cross-site conversion tags and attribution reporting.
-1.  **Audience:** Who does the advertiser want to reach? This tells the ad platform who the advertiser thinks is likely a good match for the ad. For example, the advertiser may wish to reach new customers currently in-market for kids' clothing.
-1.  **Placement:** What websites does the advertiser want to run ads on? This specifies where ads are allowed to run in terms of ad inventory or categories of ad inventory. For example, advertisers could place their ads across a broad set of websites, or they might select specific websites which have higher likelihood of reaching their desired audience.
-1.  **Budget and bid:** How much does the advertiser want to spend in total and for a specific action like impression served, ad click, or ad conversion? This ensures the campaign meets cost requirements for its goals. For example, the advertiser may wish to spend up to $1,000 and pay at most $2.00 CPM to serve 500,000 impressions to targeted audiences and on specified websites.
+1.  **Goal**: What is the business outcome the advertiser is trying to achieve with this ad campaign? This tells ad platforms what to optimize for. For example, the advertiser may want to drive sales on their kids' clothing website. Often, these goals are measured through cross-site conversion tags and attribution reporting.
+1.  **Audience**: Who does the advertiser want to reach? This tells the ad platform who the advertiser thinks is likely a good match for the ad. For example, the advertiser may wish to reach new customers currently in-market for kids' clothing.
+1.  **Placement**: What websites does the advertiser want to run ads on? This specifies where ads are allowed to run in terms of ad inventory or categories of ad inventory. For example, advertisers could place their ads across a broad set of websites, or they might select specific websites which have higher likelihood of reaching their desired audience.
+1.  **Budget and bid**: How much does the advertiser want to spend in total and for a specific action like impression served, ad click, or ad conversion? This ensures the campaign meets cost requirements for its goals. For example, the advertiser may wish to spend up to $1,000 and pay at most $2.00 CPM to serve 500,000 impressions to targeted audiences and on specified websites.
 
 ### Evolving audience creation
 
 In a post-third-party cookie world, ad solution providers will want to adapt how their platforms serve relevant ads. Today, ad relevance is commonly achieved through audiences that an advertiser can use to reach people most likely to be interested in their products and services. Today, advertisers commonly use these different audience types:
 
-1.  **Affinity:** Reach users based on what they're passionate about, their habits and their interests.
-1.  **In-market:** Reach users based on their recent purchase intent.
-1.  **Remarketing:** Reach people who have previously visited an advertiser's website.
-1.  **Audience Extension:** Reach users of a particular publisher on other websites
+1.  **Affinity**: Reach users based on what they're passionate about, their habits and their interests.
+1.  **In-market**: Reach users based on their recent purchase intent.
+1.  **Remarketing**: Reach people who have previously visited an advertiser's website.
+1.  **Audience Extension**: Reach users of a particular publisher on other websites
 
 After third-party cookie deprecation, ad solution providers can continue supporting these audience types' goals using new approaches, including Privacy Sandbox APIs.
 
@@ -58,11 +56,9 @@ These segments are typically built by tracking individuals using third-party coo
 
 After third-party cookie deprecation, audience selection based on affinity will evolve to use different signals to qualify users for inclusion in any given audience. There will be several ways to do this using the Privacy Sandbox privacy-preserving APIs including:
 
--   **Topics API:** This API offers a standardized taxonomy of interests and a publicly-known methodology for the on-device classification of interests for a given user based on the types of websites recently visited. Ad tech solutions can call the Topics API to get interests for a given user, while the API protects privacy by limiting the length of browsing history considered, the parties who can access a given topic, the number of categories being returned, and more. This API is particularly useful for ad tech that doesn't have direct publisher relationships or contextual optimization capabilities.\
-
--   **Topics API with contextual data:** A more advanced method involves comparing a user's topics and the context of a page, to estimate additional affinities for users. For example, ad tech solutions may learn that people interested in a particular set of topics (such as outdoor activities) may over-index on visiting specific categories of pages (such as sites about grilling). Ad tech can train a machine learning model to predict that a visitor to an "outdoor activity" website could be interested in grilling even if "BBQ & Grilling" is not returned as a topic through the Topics API. This method is particularly useful for a buy-side ad tech if it has contextual optimization capabilities.\
-
--   **FLEDGE API:** This API enables ad tech solutions to create audience segments by labeling visitors of a web page as members of a particular segment, such as "interested in family adventures." If the ad tech solution provider has other websites in its partner network that pertain to "family adventures," they can also add visitors for those sites to this same segment.
+-   **Topics API**: This API offers a standardized taxonomy of interests and a publicly-known methodology for the on-device classification of interests for a given user based on the types of websites recently visited. Ad tech solutions can call the Topics API to get interests for a given user, while the API protects privacy by limiting the length of browsing history considered, the parties who can access a given topic, the number of categories being returned, and more. This API is particularly useful for ad tech that doesn't have direct publisher relationships or contextual optimization capabilities.
+-   **Topics API with contextual data**: A more advanced method involves comparing a user's topics and the context of a page, to estimate additional affinities for users. For example, ad tech solutions may learn that people interested in a particular set of topics (such as outdoor activities) may over-index on visiting specific categories of pages (such as sites about grilling). Ad tech can train a machine learning model to predict that a visitor to an "outdoor activity" website could be interested in grilling even if "BBQ & Grilling" is not returned as a topic through the Topics API. This method is particularly useful for a buy-side ad tech if it has contextual optimization capabilities.
+-   **FLEDGE API**: This API enables ad tech solutions to create audience segments by labeling visitors of a web page as members of a particular segment, such as "interested in family adventures." If the ad tech solution provider has other websites in its partner network that pertain to "family adventures," they can also add visitors for those sites to this same segment.
 
 FLEDGE protects user privacy by keeping user assignment to audience segments on-device, and not sharing back to ad tech solutions whether the same user belongs to multiple interest groups. This limits cross-site tracking. The API is particularly useful for an ad tech solution with a network of site partnerships.
 
@@ -74,19 +70,18 @@ Presently, advertisers reach users classified as being "in-market" (also known a
 
 After third-party cookie deprecation, privacy-preserving APIs will provide new signals to inform 'in-market' audience creation. Some alternative methods include:
 
--   **Topics API:** Similar to using this API for affinity audiences, using it for in-market involves returning a topic that can approximate purchase intent for a given user based on an on-device, publicly known methodology, and taxonomy.
+-   **Topics API**: Similar to using this API for affinity audiences, using it for in-market involves returning a topic that can approximate purchase intent for a given user based on an on-device, publicly known methodology, and taxonomy.
 
-The standardized three-week lookback window for generating these topics protects user privacy by limiting the total amount of data made available to ad solution providers. However, different categories of products and services have different consideration cycles ranging from days to months, making this API useful for advertisers whose customer purchase cycle aligns with the Topic's lookback window. \
+The standardized three-week lookback window for generating these topics protects user privacy by limiting the total amount of data made available to ad solution providers. However, different categories of products and services have different consideration cycles ranging from days to months, making this API useful for advertisers whose customer purchase cycle aligns with the Topic's lookback window.
 
--   **FLEDGE API:** As in the affinity use case, this API gives ad tech platforms the ability to create their own segments, such as "in-market auto buyers." If the ad tech solution provider has other websites in its partner network that pertain to "in-market auto buyers," they can also add visitors for those sites to this same segment while maintaining cross-site user privacy. FLEDGE is particularly useful for an ad tech solution when there is a direct publisher/advertiser relationship that allows data partnership, and a need for greater customization than Topics would allow. \
-
--   **Topics API + Attribution Reporting API:** By combining Topics and the Attribution Reporting API, you can expand the lists of topics that map to specific conversions, such as purchases, creating additional ways to reach an in-market audience.
+-   **FLEDGE API**: As in the affinity use case, this API gives ad tech platforms the ability to create their own segments, such as "in-market auto buyers." If the ad tech solution provider has other websites in its partner network that pertain to "in-market auto buyers," they can also add visitors for those sites to this same segment while maintaining cross-site user privacy. FLEDGE is particularly useful for an ad tech solution when there is a direct publisher/advertiser relationship that allows data partnership, and a need for greater customization than Topics would allow.
+-   **Topics API + Attribution Reporting API**: By combining Topics and the Attribution Reporting API, you can expand the lists of topics that map to specific conversions, such as purchases, creating additional ways to reach an in-market audience.
 
 For example, analysis or machine learning systems may uncover that users who saw an ad about scuba gear, and bought it, very often have "Beaches & Islands" and "Fishing" topics associated with them. An ad tech solution could translate this insight into improved reach to users "in-market for scuba gear" by selecting users with those two topics. Attribution Reporting protects user privacy in this instance by providing noisy conversion data about associations of topics with conversions.
 
-This approach makes sense when ad solution providers do not have much contextual data but have machine learning or robust data science and analysis capabilities.\
+This approach makes sense when ad solution providers do not have much contextual data but have machine learning or robust data science and analysis capabilities.
 
--   **Contextual data + Attribution Reporting API:** Ad tech solutions can leverage contextual categorization of the pages where ads are shown, categorization of advertisers and products, and data from Attribution Reporting to uncover trends or patterns in the types of sites people favor when in-market to buy certain types of products and services. For example, this combination of data may lead to insights like learning that people who are on web pages about family activities are highly likely to be in-market to buy outdoor apparel too.
+-   **Contextual data + Attribution Reporting API**: Ad tech solutions can leverage contextual categorization of the pages where ads are shown, categorization of advertisers and products, and data from Attribution Reporting to uncover trends or patterns in the types of sites people favor when in-market to buy certain types of products and services. For example, this combination of data may lead to insights like learning that people who are on web pages about family activities are highly likely to be in-market to buy outdoor apparel too.
 
 These methods are just a few of the many ways ad tech solutions can creatively scale and customize audience segments without relying on cross-site user identifiers. They could also integrate more signals like first party data and other combinations of privacy-preserving APIs for even greater results. Thus, ad tech solutions can differentiate themselves by taking different approaches to audience building, securing unique data, and developing superior machine learning capabilities.
 
@@ -96,7 +91,7 @@ Advertisers can re-engage users who have previously visited their website throug
 
 Without third-party cookies, ad tech solutions will be able to utilize the FLEDGE API to support remarketing use cases:
 
--   **FLEDGE API:** Ad tech solutions can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with FLEDGE, ad tech solutions were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into FLEDGE, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
+-   **FLEDGE API**: Ad tech solutions can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with FLEDGE, ad tech solutions were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into FLEDGE, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
 
 Even without third-party cookies, the Privacy Sandbox enables advertisers to use their first-party data for remarketing at scale, across third-party websites.
 
@@ -106,7 +101,7 @@ Advertisers sometimes want to reach more of the same audience they see from a pa
 
 Ad tech solutions can use the FLEDGE API to extend audiences for publishers without third-party cookies:
 
--   **FLEDGE API:** Ad tech solutions can create custom audience extension segments for a site by creating interest groups dependent on user activity such as reading a particular section of a website (e.g. travel section).  This process is effectively similar to remarketing and offers the same privacy protections. It makes sense for advertisers who value the 1P audience data of a publisher but cannot get enough ad inventory on that publisher website for that audience.
+-   **FLEDGE API**: Ad tech solutions can create custom audience extension segments for a site by creating interest groups dependent on user activity such as reading a particular section of a website (e.g. travel section).  This process is effectively similar to remarketing and offers the same privacy protections. It makes sense for advertisers who value the 1P audience data of a publisher but cannot get enough ad inventory on that publisher website for that audience.
 
 ## How can machine learning maximize performance using privacy-safe signals?
 
@@ -128,9 +123,9 @@ Reducing the need for advertisers to manage audiences, placements, and bids will
 
 Ad tech solutions have always factored in multiple signals when deciding whether to bid to serve an ad. In a world without cross-site cookie tracking, ad tech solutions will benefit from using every available privacy-safe signal in machine learning to predict business outcomes like clicks or conversions. The following privacy-safe signals are sometimes undervalued but can contribute significantly to ad relevance in a future without third-party cookies:
 
-1.  **Ad creative features:** Analyzing ad creative at a component level (e.g., text, images, design) may help predict performance with specific audiences or on certain pages, such as the ad's subject matter or whether it includes a lot of text.\
+1.  **Ad creative features**: Analyzing ad creative at a component level (e.g., text, images, design) may help predict performance with specific audiences or on certain pages, such as the ad's subject matter or whether it includes a lot of text.
 
-1.  **First-party data:** Publishers, marketers, and retail networks are increasingly building first-party identifiers and segments, such as [seller-defined audiences](https://iabtechlab.com/sda). Knowing a user's behavior over time on a given site allows you to better predict what ads work best for that user or segment on that site, without cross-site profiling. A publisher's first-party data can help improve bidding across all their sites. These site-specific bid improvements can cumulatively increase performance across a campaign.
+1.  **First-party data**: Publishers, marketers, and retail networks are increasingly building first-party identifiers and segments, such as [seller-defined audiences](https://iabtechlab.com/sda). Knowing a user's behavior over time on a given site allows you to better predict what ads work best for that user or segment on that site, without cross-site profiling. A publisher's first-party data can help improve bidding across all their sites. These site-specific bid improvements can cumulatively increase performance across a campaign.
 
 Ad tech solutions can unlock the best results by combining all available tools, such as machine learning and privacy-safe signals from privacy-preserving APIs, along with contextual data, creative data, and first-party data.
 
