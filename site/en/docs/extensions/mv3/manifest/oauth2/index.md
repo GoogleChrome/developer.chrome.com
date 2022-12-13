@@ -6,7 +6,7 @@ updated:
 description: Reference documentation for the oauth2 property of manifest.json.
 ---
 
-An optional manifest key enabling the use of an oauth2 security ID on the extension. Implementing this manifest key will require the use of the sub-properties "client_id" and "scopes", as well as the "key" property. For more detailed implementation instructions, visit the full [oauth2 tutorial](/docs/extensions/mv3/tut_oauth/).
+An optional manifest key enabling the use of an OAuth 2.0 security ID on the extension. Implementing this manifest key will require the use of the sub-properties "client_id" and "scopes", as well as the "key" property. For more detailed implementation instructions, visit the full [OAuth 2.0 tutorial](/docs/extensions/mv3/tut_oauth/).
  ```json
 {
   // ...
