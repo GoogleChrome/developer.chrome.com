@@ -1,4 +1,4 @@
---
+---
 layout: 'layouts/doc-post.njk'
 title: 'Maximize ad relevance after third-party cookies'
 subhead: >
