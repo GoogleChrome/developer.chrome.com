@@ -171,10 +171,7 @@ self
 You can see the above code in action in the embedded demo. Be sure to check out the [source code](https://glitch.com/edit/#!/sqlite-wasm-opfs?path=index.js%3A1%3A0) on Glitch.
 
 {% Glitch {
-  id: 'sqlite-wasm-opfs',
-  path: 'index.html',
-  previewSize: 0,
-  allow: []
+  id: 'sqlite-wasm-opfs'
 } %}
 
 ### Debugging the Origin Private File System
