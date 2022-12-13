@@ -11,3 +11,4 @@ along with a sample page for each type.
 - [Blog landing](/docs/handbook/content-types/blog-landing)
 - [Docs post](/docs/handbook/content-types/doc-post)
 - [Docs landing](/docs/handbook/content-types/docs-landing)
+- [Landing](/docs/handbook/content-types/landing)
