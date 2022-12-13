@@ -26,7 +26,7 @@ There is no doubt that 2023 will be a critical year to prepare for a world witho
 
 Interest-based advertising, also known as personalized advertising, is a type of advertising that uses information about an individual's interests and preferences to show them more relevant ads. This type of advertising uses a wide range of data as signals to determine what ad to show, such as what content a user has viewed, the pattern of sites the user has recently seen, or a specific site previously visited.
 
-Today, these signals are primarily powered by cross-site identifiers such as third-party cookies, which are unique to an individual device. As third-party cookies are phased out, ad tech solutions for interest-based advertising should evolve to take advantage of privacy-friendly signals to show relevant ads. These include first-party data, contextual signals, and platform-provided privacy-preserving APIs such as the [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/), [FLEDGE API](https://developer.chrome.com/docs/privacy-sandbox/fledge/), and the [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/), which help support critical use cases for the ad industry while protecting against cross-site tracking.
+Today, these signals are primarily powered by cross-site identifiers such as third-party cookies, which are unique to an individual device. As third-party cookies are phased out, ad tech solutions for interest-based advertising should evolve to take advantage of privacy-friendly signals to show relevant ads. These include first-party data, contextual signals, and platform-provided privacy-preserving APIs such as the [Topics API](/docs/privacy-sandbox/topics/), [FLEDGE API](/docs/privacy-sandbox/fledge/), and the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/), which help support critical use cases for the ad industry while protecting against cross-site tracking.
 
 Interest-based advertising can survive and thrive with innovative technologies developed across the ecosystem. These technologies will help us move toward a world where people's data is better protected, while ads can continue to drive marketing outcomes that support a dynamic and open web.
 
@@ -52,7 +52,7 @@ After third-party cookie deprecation, ad solution providers can continue support
 
 #### Affinity
 
-Today, advertisers reach users classified by their affinity (also known as interests), most commonly by leveraging third-party data segments. These audiences are provided by many data marketplaces and distributed for activation across the ad tech ecosystem through channels like demand-side platforms ([DSPs](https://developer.chrome.com/docs/privacy-sandbox/glossary/#dsp)) and data management platforms ([DMPs](https://developer.chrome.com/docs/privacy-sandbox/glossary/#dmp)).
+Today, advertisers reach users classified by their affinity (also known as interests), most commonly by leveraging third-party data segments. These audiences are provided by many data marketplaces and distributed for activation across the ad tech ecosystem through channels like demand-side platforms ([DSPs](/docs/privacy-sandbox/glossary/#dsp)) and data management platforms ([DMPs](/docs/privacy-sandbox/glossary/#dmp)).
 
 These segments are typically built by tracking individuals using third-party cookies and then grouping users based on a taxonomy of categories and proprietary methodologies for determining when a user qualifies for a category.
 
