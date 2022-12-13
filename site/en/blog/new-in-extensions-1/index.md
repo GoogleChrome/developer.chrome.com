@@ -13,7 +13,7 @@ authors:
   - solomonkinard
   - dotproto
 tags:
-  - extensions
+  - extensions-news
   - privacy
   - security
 draft: true
