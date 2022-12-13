@@ -96,7 +96,7 @@ Advertisers can re-engage users who have previously visited their website throug
 
 Without third-party cookies, ad tech solutions will be able to utilize the FLEDGE API to support remarketing use cases:
 
--   **FLEDGE API:** Ad tech solutions can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with FLEDGE, ad tech solutions were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into FLEDGE, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](https://developer.chrome.com/en/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
+-   **FLEDGE API:** Ad tech solutions can create customized remarketing segments for a site by creating interest groups dependent on user activity. In prior use cases with FLEDGE, ad tech solutions were building very large audiences from multiple websites. In this use case, only one website is trying to re-engage a past visitor, and without the privacy protections built into FLEDGE, this use case might lead websites to single out individuals. While allowing effective audience remarketing, this API protects individual privacy by setting [k-anonymity](/docs/privacy-sandbox/glossary/#k-anonymity) thresholds to ensure a sufficient number of individuals are eligible to see the ad.
 
 Even without third-party cookies, the Privacy Sandbox enables advertisers to use their first-party data for remarketing at scale, across third-party websites.
 
