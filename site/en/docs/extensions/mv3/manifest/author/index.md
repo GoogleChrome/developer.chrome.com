@@ -11,7 +11,9 @@ An optional Manifest key containing a String for a valid email address. If provi
 ```json
 {
   // ...
-    "author": "example@email.com",
+  "author": {
+    "email": "user@example.com"
+  },
   // ...
 }
 ```
