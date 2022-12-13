@@ -22,7 +22,7 @@ rather than the end developer.
 
 ## View and Change the Default Cache Names
 
-Workbox defines it's caches via `cacheNames`:
+Workbox defines it's caches using `cacheNames`:
 
 ```js
 import {cacheNames} from 'workbox-core';

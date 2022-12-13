@@ -119,9 +119,9 @@ check its HTTP header data:
 1. Click the **Headers** tab.
 
 <figure>
-  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/dGDjkwsoUBwFVLYM0sVy.png", alt="Inspecting the Cache-Control header via the Headers tab", width="800", height="597" %}
+  {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/dGDjkwsoUBwFVLYM0sVy.png", alt="Inspecting the Cache-Control header with the Headers tab", width="800", height="597" %}
   <figcaption>
-    Inspecting the <code>Cache-Control</code> header via the <b>Headers</b> tab.
+    Inspecting the <code>Cache-Control</code> header with the <b>Headers</b> tab.
   </figcaption>
 </figure>
 

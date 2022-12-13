@@ -15,7 +15,7 @@ The two modes that most developers will use are `generateSW` and `injectManifest
 
 ### `generateSW`
 
-The `generateSW` mode creates a service worker file for you, customized via configuration options, and writes it out to disk.
+The `generateSW` mode creates a service worker file for you, customized with configuration options, and writes it out to disk.
 
 #### When to use `generateSW`
 

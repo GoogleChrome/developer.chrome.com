@@ -72,7 +72,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 1.  [Open the demo][8]. In the bottom-left of the editor, click the button labelled **Tools**.
 3.  Under **Tools**, select **Import/Export** > **Download Project**.
 4.  Close the tab.
-5.  Unzip the source code and move the unzipped `app` directory to your desktop. For the rest of
+5.  Unzip the source code and move the extracted `app` directory to your desktop. For the rest of
     this tutorial this directory will be referred to as `~/Desktop/app`.
 6.  Start a local web server in `~/Desktop/app`. Below is some sample code for starting up
     `SimpleHTTPServer`, but you can use whatever server you prefer.

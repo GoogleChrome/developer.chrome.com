@@ -12,7 +12,7 @@ date: 2022-11-01
 
 1. We don't allow extensions that send messages on behalf of the user without giving the user the ability to confirm the content and intended recipients.
 
-1. In addition to these requirements, all extensions must comply with [Google's Webmaster Quality Guidelines][webmaster].
+1. In addition to these requirements, all extensions must comply with [Google's Search Essentials guidelines][webmaster-quality].
 
 For additional information about the spam policy, see the [Spam FAQ][faq].
 

@@ -31,7 +31,7 @@ Check out the video below from Google I/O to learn more about how to use and con
 Choose the Lighthouse workflow that suits you best:
 
 * [In Chrome DevTools](#devtools). Easily audit pages that require authentication, and read your reports in a user-friendly format.
-* [From the command line](#cli). Automate your Lighthouse runs via shell scripts.
+* [From the command line](#cli). Automate your Lighthouse runs by using shell scripts.
 * [As a Node module](#programmatic). Integrate Lighthouse into your continuous integration systems.
 * [From a web UI](#psi). Run Lighthouse and link to reports without installing a thing.
 

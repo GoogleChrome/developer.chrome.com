@@ -1023,8 +1023,7 @@ the user's browsing experience.
 **Message Spam:** We don't allow extensions that send messages on behalf of the user without giving
 the user the ability to confirm the content and intended recipients.
 
-In addition to these requirements, all extensions must comply with [Google's Webmaster Quality
-Guidelines][webmaster-quality].
+In addition to these requirements, all extensions must comply with [Google's Search Essentials guidelines][webmaster-quality].
 
 {% endAside %}
 
@@ -1204,5 +1203,5 @@ Code Readability Requirements:
 [mdn-web-storage]: https://developer.mozilla.org/docs/Web/API/Web_Storage_API
 [section-does-not-work]: #does-not-work
 [section-misunderstood-perms]: #misunderstood-perms
-[webmaster-quality]: https://support.google.com/webmasters/answer/35769#3
+[webmaster-quality]: https://developers.google.com/search/docs/essentials
 [wiki-case-sensitivity]: https://en.wikipedia.org/wiki/Case_sensitivity

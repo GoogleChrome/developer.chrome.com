@@ -15,7 +15,7 @@ tags:
 
 This tutorial teaches you how to use Chrome DevTools to find ways to make your websites load faster.
 
-Read on, or watch the video version of this tutorial:
+Read on, or watch the video version:
 
 {% YouTube id="5fLW5Q5ODiE" %}
 
@@ -47,10 +47,10 @@ has 2 important functions:
 
 But first, you need to set up the site so that you can make changes to it later:
 
-1.  Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made
-    with Chrome 68. If you're using an earlier or later version, some features may look different or
-    not be available. You should be able to complete the tutorial still, just keep in mind that your
-    UI may look different than the screenshots.
+1.  Go to `chrome://version` to check what version of Chrome you're using. We made this tutorial
+    with Chrome 68. If you're using an earlier or later version some features may be different or
+    unavailable. You should still be able to complete the tutorial, but keep in mind that your
+    UI may look different to the screenshots.
 2.  [Open the source code for the site][2]. This tab will be referred to as the _editor tab_.
 
     {% Img src="image/admin/h2JSHSXIa8G3kOqRILbk.png", alt="The editor tab.", width="800", height="457" %}
@@ -59,7 +59,7 @@ But first, you need to set up the site so that you can make changes to it later:
 
 3.  Click **tony**. A menu appears.
 
-    {% Img src="image/admin/N9c7p2yrUhWgUobkDuVs.png", alt="The menu that appears after clicking 'tony'.", width="800", height="457" %}
+    {% Img src="image/admin/N9c7p2yrUhWgUobkDuVs.png", alt="The menu that appears after clicking 'tony' has two buttons, 'new project' and 'remix this'.", width="800", height="457" %}
 
     **Figure 3**. The menu that appears after clicking **tony**
 
@@ -69,7 +69,7 @@ But first, you need to set up the site so that you can make changes to it later:
 5.  Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the _demo
     tab_. It may take a while for the site to load.
 
-    {% Img src="image/admin/2kZXAZgIbvKrafszL6X3.png", alt="The demo tab.", width="800", height="588" %}
+    {% Img src="image/admin/2kZXAZgIbvKrafszL6X3.png", alt="The demo tab, Tony's Favorite Foods.", width="800", height="588" %}
 
     **Figure 4**. The demo tab
 
@@ -80,9 +80,8 @@ But first, you need to set up the site so that you can make changes to it later:
 
     **Figure 5**. DevTools and the demo
 
-For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
-can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS) to open
-the Command Menu, typing `Undock`, and then selecting **Undock into separate window**.
+For the rest of the tutorial, DevTools will be shown as a separate window. If you would like DevTools displayed in a separate window,
+press Control+Shift+P (Windows, Linux, ChromeOS) or Command+Shift+P (Mac) to open the Command Menu, type `Undock`, and then select **Undock into separate window**.
 
 {% Img src="image/admin/YgPOzT6Re0aIGezSKPZr.png", alt="Undocked DevTools.", width="800", height="514" %}
 
@@ -94,8 +93,7 @@ The baseline is a record of how the site performed before you made any performan
 
 1.  Click the **Audits** tab. It may be hidden behind the **More Panels**
     {% Img src="image/admin/IxLXhwoZksgzzdzr9OCx.png", alt="More Panels", width="18", height="16" %} button. There's a
-    Lighthouse on this panel because the project that powers the Audits panel is called
-    [Lighthouse][3].
+    Lighthouse on this panel because  [Lighthouse][3] is the project that powers the Audits panel.
 
     {% Img src="image/admin/3pLUyTJ93xjvm0itZ3Lb.png", alt="The Audits panel.", width="800", height="1068" %}
 
@@ -105,7 +103,7 @@ The baseline is a record of how the site performed before you made any performan
     different options:
 
     - **Device**. Setting to **Mobile** changes the user agent string and simulates a mobile
-      viewport. Setting to **Desktop** pretty much just disables the **Mobile** changes.
+      viewport. Setting to **Desktop** just disables the **Mobile** changes.
     - **Audits**. Disabling a category prevents the Audits panel from running those audits, and
       excludes those audits from your report. You can leave the other categories enabled, if you
       want to see the types of recommendations they provide. Disabling categories slightly speeds up
@@ -114,10 +112,10 @@ The baseline is a record of how the site performed before you made any performan
       conditions of browsing on a mobile device. It's called "simulated" because the Audits panel
       doesn't actually throttle during the auditing process. Instead, it just extrapolates how long
       the page would take to load under mobile conditions. The **Applied...** setting, on the other
-      hand, actually throttles your CPU and network, with the tradeoff of a longer auditing process.
+      hand, actually throttles your CPU and network, with the tradeoff being a longer auditing process.
     - **Clear Storage**. Enabling this checkbox clears all storage associated with the page before
-      every audit. Leave this setting on if you want to audit how first-time visitors experience
-      your site. Disable this setting when you want the repeat-visit experience.
+      every audit. Leave the setting on if you want to audit how first-time visitors experience
+      your site, and disable it when you want the repeat-visit experience.
 
 3.  Click **Run Audits**. After 10 to 30 seconds, the Audits panel shows you a report of the site's
     performance.

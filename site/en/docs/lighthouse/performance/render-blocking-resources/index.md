@@ -102,7 +102,7 @@ to [server-side render AMP layouts](https://amp.dev/documentation/guides-and-tut
 ### Drupal
 
 Consider using a module to inline critical CSS and JavaScript, or potentially
-load assets asynchronously via JavaScript such as the [Advanced CSS/JS
+load assets asynchronously using JavaScript such as the [Advanced CSS/JS
 Aggregation](https://www.drupal.org/project/advagg) module.
 
 ### Joomla
