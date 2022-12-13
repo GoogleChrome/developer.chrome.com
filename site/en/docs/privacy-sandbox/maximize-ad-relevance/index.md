@@ -275,8 +275,8 @@ learning to predict business outcomes, such as clicks or conversions.
 The following privacy-safe signals are sometimes undervalued but can contribute
 significantly to ad relevance in a future without third-party cookies:
 
-1.  **Ad creative features**: Analyzing ad creative at a component level (e.g., text, images, design) may help predict performance with specific audiences or on certain pages, such as the ad's subject matter or whether it includes a lot of text.
-1.  **First-party data**: Publishers, marketers, and retail networks are increasingly building first-party identifiers and segments, such as [seller-defined audiences](https://iabtechlab.com/sda). Knowing a user's behavior over time on a given site allows you to better predict what ads work best for that user or segment on that site, without cross-site profiling. A publisher's first-party data can help improve bidding across all their sites. These site-specific bid improvements can cumulatively increase performance across a campaign.
+1. **Ad creative features**: Analyzing ad creative at a component level (e.g., text, images, design) may help predict performance with specific audiences or on certain pages, such as the ad's subject matter or whether it includes a lot of text.
+1. **First-party data**: Publishers, marketers, and retail networks are increasingly building first-party identifiers and segments, such as [seller-defined audiences](https://iabtechlab.com/sda). Knowing a user's behavior over time on a given site allows you to better predict what ads work best for that user or segment on that site, without cross-site profiling. A publisher's first-party data can help improve bidding across all their sites. These site-specific bid improvements can cumulatively increase performance across a campaign.
 
 Ad tech providers can unlock the best results by combining all available tools,
 such as machine learning and privacy-safe signals from privacy-preserving APIs,
