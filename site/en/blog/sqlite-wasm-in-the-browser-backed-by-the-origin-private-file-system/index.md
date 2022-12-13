@@ -5,10 +5,10 @@ subhead: >
 date: 2022-12-13
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
-author: thomassteiner
+authors:
+  - thomassteiner
 layout: 'layouts/blog-post.njk'
 tags:
-  - blog
   - capabilities
 ---
 
