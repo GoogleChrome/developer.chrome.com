@@ -10,7 +10,8 @@
           "heyawhite",
           "jpmedley",
           "mihajlija",
-          "sofiayem"
+          "sofiayem",
+          "AaronForinton"
         ],
         "paths" : [
           "site/**/*.md"
@@ -21,7 +22,7 @@
         "teams" : [],
         "users" : [
           "PaulKinlan",
-          "jeffposnick",
+          "matthiasrohmer",
           "devnook"
         ],
         "paths" : [
@@ -48,7 +49,9 @@
           "heyawhite",
           "jpmedley",
           "mihajlija",
-          "sofiayem"
+          "sofiayem",
+          "AaronForinton",
+          "matthiasrohmer"
         ],
         "paths" : [
           "site/_data/**.yml",
