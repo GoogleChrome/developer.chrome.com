@@ -20,11 +20,19 @@ const fs = require('fs');
 // The path to the _includes folder inside developer.chrome.com.
 const includesPath = path.join(__dirname, '../_includes');
 
+const cache = new Map();
+
 /**
- * @param {string} arg
- * @return {string}
+ * @param {string} fileName
+ * @return {string} The contents of the included file
  */
-module.exports = arg => {
-  const p = path.join(includesPath, arg);
-  return fs.readFileSync(p, 'utf-8');
+module.exports = fileName => {
+  let include = cache.get(fileName);
+  if (!include) {
+    const filePath = path.join(includesPath, fileName);
+    include = fs.readFileSync(filePath, 'utf-8');
+    cache.set(fileName, include);
+  }
+
+  return include;
 };
