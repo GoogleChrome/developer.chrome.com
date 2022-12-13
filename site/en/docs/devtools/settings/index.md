@@ -582,6 +582,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Debugger {: #debugger }
 
+This section lists options that control the **Debugger** behavior.
+
 {% Details %}
 {% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable JavaScript** allows you to see how your webpage looks and behaves when [JavaScript is disabled](/docs/devtools/javascript/disable/). 
@@ -605,13 +607,23 @@ For more information, see [View async stack traces](/docs/devtools/console/refer
 
 ### Global
 
+This section lists options that have global effects in DevTools.
+
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Auto-open DevTools for popups** makes DevTools open for all links open a new tab. That is, all links with `target=_blank`.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/c7LuWSe2cqFDjAVFKE0S.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Search as you type**](/docs/devtools/dom/#search) makes DevTools "jump" to the first search result as you type your search query. If disabled, DevTools takes you to the result only when you hit <kbd>Enter</kbd>.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QjpVziHLucolDVylOsG2.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
 ### Sync
 
