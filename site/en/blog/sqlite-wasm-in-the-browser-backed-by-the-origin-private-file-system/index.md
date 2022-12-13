@@ -1,4 +1,4 @@
-​​---
+---
 title: SQLite Wasm in the browser backed by the Origin Private File System
 subhead: >
   Use SQLite to handle all your storage needs performantly on the web.
@@ -6,6 +6,7 @@ date: 2022-12-13
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 author: thomassteiner
+layout: 'layouts/blog-post.njk'
 tags:
   - blog
   - capabilities
