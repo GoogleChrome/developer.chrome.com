@@ -183,6 +183,6 @@ Unlike [event pages in Manifest V2][event-page-unload], extension service worker
 
 [doc-sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
 [event-page-unload]: https://developer.chrome.com/docs/extensions/mv2/background_pages/
-[mdn-beforeunload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
-[mdn-unload]: https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event
+[mdn-beforeunload]: https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event
+[mdn-unload]: https://developer.mozilla.org/docs/Web/API/Window/unload_event
 [sw-module]: https://web.dev/es-modules-in-sw/

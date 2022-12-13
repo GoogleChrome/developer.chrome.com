@@ -5,7 +5,7 @@ description: >
      Custom transform matrices allow you to build frame-perfect custom scrollbars.
 authors:
   - surma
-date: 2017-03-23 
+date: 2017-03-23
 updated: 2019-10-20
 ---
 Custom scrollbars are extremely rare and that’s mostly due to the fact that
@@ -17,7 +17,7 @@ unconventional CSS matrices to build a custom scroller that doesn’t require an
 JavaScript while scrolling, just some setup code.
 
 ## TL;DR
-You don’t care about the nitty gritty? You just want to look at the
+You don’t care about the little things? You just want to look at the
 [Nyan cat demo](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)
 and get the library? You can find the demo’s code in our
 [GitHub repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/custom-scrollbar).
@@ -34,7 +34,7 @@ follow along and see how we used them.
 
 
 A while ago, we built a parallax scroller (Did you read
-[that article](https://developers.google.com/web/updates/2016/12/performant-parallaxing)?
+[that article](/blog/performant-parallaxing/)?
 It’s really good, well worth your time!). By pushing elements back using CSS 3D
 transforms, elements moved _slower_ than our actual scrolling speed.
 
@@ -56,7 +56,7 @@ the desired parallax effect.
 Of course, moving an element back in space will also make it appear smaller,
 which we correct by scaling the element back up. We figured out the exact math
 when we built the
-[parallax scroller](https://developers.google.com/web/updates/2016/12/performant-parallaxing),
+[parallax scroller](/blog/performant-parallaxing/),
 so I won’t repeat all the details.
 
 ## Step 0: What do we wanna do?
@@ -272,7 +272,7 @@ ratio of content that is visible:
   height.", width="460", height="96" %}
 </figure>
 
-```html 
+```html
 <script>
     // …
     thumb.style.height =
@@ -357,7 +357,7 @@ issue here. Because we are scrolling on an element, we need to specify
 scrolling effect stops working. We solved this problem in the parallax scroller
 by detecting iOS Safari and relying on `position: sticky` as a workaround, and
 we’ll do exactly the same thing here. Take a look at the
-[parallaxing article](https://developers.google.com/web/updates/2016/12/performant-parallaxing)
+[parallaxing article](/blog/performant-parallaxing/)
 to refresh your memory.
 
 ## What about the browser scrollbar?

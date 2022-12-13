@@ -203,6 +203,6 @@ on [Unsplash](https://unsplash.com).
 [reportingobserver]: https://w3c.github.io/reporting/#observers
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
 [chromestatus]: https://www.chromestatus.com/feature/4691191559880704
-[featurepolicy]: https://developers.google.com/web/updates/2018/06/feature-policy
+[featurepolicy]: /blog/feature-policy/
 [interventions]: https://www.chromestatus.com/features#intervention
 [deprecations]: https://www.chromestatus.com/features#intervention
