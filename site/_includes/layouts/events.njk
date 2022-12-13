@@ -1,108 +1,112 @@
 {% extends "layouts/base.njk" %}
 
 {% block css %}
-{% InlineCss '/css/events-main.css' %}
+  {% InlineCss '/css/events-main.css' %}
 {% endblock %}
 
 {% block content %}
   <div class="events-container width-full pad-400">
     {% include 'partials/events-hero.njk' %}
 
-    <div class="events-container__filters align-center gap-bottom-500">
-      <span class="color-secondary-text type--eyebrow">
-        Filter by:
-      </span>
-      <enhanced-select class="gap-right-600"
-                       label="Topic"
-                       fixedLabel>
-        <select name="topics[]" multiple>
-          {% for topic in collections.eventTags.topics %}
-            <option value="{{ topic }}">{{ topic }}</option>
-          {% endfor %}
-        </select>
-      </enhanced-select>
+    <enhanced-events-page>
+      <div class="events-container__filters align-center gap-bottom-500">
+        <span class="color-secondary-text type--eyebrow">
+          Filter by:
+        </span>
 
-      <enhanced-select class="gap-right-600"
-                       label="Location"
-                       fixedLabel>
-        <select name="location">
-          {% for location in collections.eventTags.locations %}
-            <option value="{{ location }}">{{ location }}</option>
-          {% endfor %}
-        </select>
-      </enhanced-select>
+        <enhanced-select class="gap-right-600 events-filter"
+                         label="Topic"
+                         fixedLabel>
+          <select name="topics" multiple>
+            {% for topic in collections.eventTags.topics %}
+              <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
+        <enhanced-select class="gap-right-600 events-filter"
+                         label="Location"
+                         fixedLabel>
+          <select name="location">
+            {% for location in collections.eventTags.locations %}
+              <option value="{{ location }}">{{ location }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
 
-      <enhanced-select label="Googler" fixedLabel>
-        <select name="googler">
-          {% for googler in collections.eventTags.googlers %}
-            <option value="{{ googler.handle }}">{{ googler.title | i18n }}</option>
-          {% endfor %}
-        </select>
-      </enhanced-select>
-    </div>
-
-    <dialog id="mobile-filters" class="scrollbar lg:display-none">
-      <div class="filter-sheet display-flex direction-column">
-        <p class="filter-sheet__title type--xsmall weight-medium case-upper">
-          {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}
-        </p>
-
-        <div class="filter-sheet__filters">
-          <section class="gap-bottom-500">
-            <p class="type--h5 weight-medium gap-bottom-200">Topic</p>
-
-            <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
-              {% for topic in collections.eventTags.topics %}
-                <label>
-                  <input type="checkbox" name="topics[]" value="{{ topic }}"/>
-                  {{ topic }}
-                </label>
-              {% endfor %}
-            </checkbox-group>
-          </section>
-
-          <section class="gap-bottom-500">
-            <p class="type--h5 weight-medium gap-bottom-200">Location</p>
-
-            <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
-              {% for location in collections.eventTags.locations %}
-                <label>
-                  <input type="checkbox" name="location" value="{{ location }}"/>
-                  {{ location }}
-                </label>
-              {% endfor %}
-            </checkbox-group>
-          </section>
-
-          <section class="gap-bottom-500">
-            <p class="type--h5 weight-medium gap-bottom-200">Googler</p>
-
-            <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
-              {% for googler in collections.eventTags.googlers%}
-                <label>
-                  <input type="checkbox" name="googler" value="{{ googler.handle }}"/>
-                  {{ googler.title | i18n }}
-                </label>
-              {% endfor %}
-            </checkbox-group>
-          </section>
-        </div>
-
-        <div
-          class="filter-sheet__buttons display-flex align-center justify-content-end"
-        >
-          <button class="material-button button-filled color-primary bg-white">
-            Reset
-          </button>
-
-          <button class="material-button button-filled color-bg bg-primary">
-            Done
-          </button>
-        </div>
+        <enhanced-select class="events-filter"
+                         label="Googler"
+                         fixedLabel>
+          <select name="googler">
+            {% for googler in collections.eventTags.googlers %}
+              <option value="{{ googler.handle }}">{{ googler.title | i18n }}</option>
+            {% endfor %}
+          </select>
+        </enhanced-select>
       </div>
-    </dialog>
 
-    {% include 'partials/events-list.njk' %}
+      <dialog id="mobile-filters" class="scrollbar lg:display-none">
+        <div class="filter-sheet display-flex direction-column">
+          <p class="filter-sheet__title type--xsmall weight-medium case-upper">
+            {{ 'i18n.filter_sheet.filter_by' | i18n(locale) }}
+          </p>
+
+          <div class="filter-sheet__filters">
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">Topic</p>
+
+              <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
+                {% for topic in collections.eventTags.topics %}
+                  <label>
+                    <input type="checkbox" name="topics[]" value="{{ topic }}" />
+                    {{ topic }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">Location</p>
+
+              <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
+                {% for location in collections.eventTags.locations %}
+                  <label>
+                    <input type="checkbox" name="location" value="{{ location }}" />
+                    {{ location }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+
+            <section class="gap-bottom-500">
+              <p class="type--h5 weight-medium gap-bottom-200">Googler</p>
+
+              <checkbox-group show="4" i18n="{{ 'i18n.checkbox_group' | i18n(locale) | dump }}">
+                {% for googler in collections.eventTags.googlers %}
+                  <label>
+                    <input type="checkbox" name="googler" value="{{ googler.handle }}" />
+                    {{ googler.title | i18n }}
+                  </label>
+                {% endfor %}
+              </checkbox-group>
+            </section>
+          </div>
+
+          <div
+            class="filter-sheet__buttons display-flex align-center justify-content-end"
+          >
+            <button class="material-button button-filled color-primary bg-white">
+              Reset
+            </button>
+
+            <button class="material-button button-filled color-bg bg-primary">
+              Done
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      {% include 'partials/events-list.njk' %}
+    </enhanced-events-page>
   </div>
 {% endblock %}
 
