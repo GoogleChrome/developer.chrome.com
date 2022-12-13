@@ -157,7 +157,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('CodePattern', Empty);
 
   // Add transforms
-  eleventyConfig.addTransform('domTransformer', domTransformer);
+  // eleventyConfig.addTransform('domTransformer', domTransformer);
 
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down.
