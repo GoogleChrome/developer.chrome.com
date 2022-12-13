@@ -582,7 +582,7 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Debugger {: #debugger }
 
-This section lists options that control the **Debugger** behavior.
+This section lists options that control **Debugger** behavior.
 
 {% Details %}
 {% DetailsSummary %}
