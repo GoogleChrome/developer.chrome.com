@@ -7,9 +7,9 @@ description: >
 hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/yMuEwpT7UkirIGsRsZSQ.png'
 alt: >
   Maximize ads relevance after third-party cookies.
+date: 2022-12-13
 authors:
   - joeytrotz
-date: 2022-12-13
 ---
 
 Today, we published [Maximize ad relevance without third-party
