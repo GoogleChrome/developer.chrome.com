@@ -79,7 +79,7 @@ sleep wondering if users are hitting unexpected issues on your live site.
 
 {% Aside 'key-term' %}
 `ReportingObserver` is part of a larger spec, the [Reporting
-API](/reporting-api), which provides a common way to send
+API](/articles/reporting-api), which provides a common way to send
 these different reports to a back end. The Reporting API is a generic framework
 to specify a set of server endpoints to report issues to.
 {% endAside %}

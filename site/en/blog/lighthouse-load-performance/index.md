@@ -12,7 +12,7 @@ updated: 2018-06-11
 {% YouTube id="Mv-l3-tJgGk" %}
 
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an automated tool for improving the
+[Lighthouse](/docs/lighthouse/overview/) is an automated tool for improving the
 quality of your site. You give it a URL, and it provides a list of
 recommendations on how to improve page performance, make pages more accessible,
 adhere to best practices and more. You can run it from within Chrome DevTools,

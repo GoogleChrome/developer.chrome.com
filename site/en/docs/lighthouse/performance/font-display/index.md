@@ -8,13 +8,13 @@ date: 2019-05-02
 updated: 2020-04-29
 ---
 
-Fonts are often large files that take awhile to load.
+Fonts are often large files with slow load times.
 Some browsers hide text until the font loads,
 causing a [flash of invisible text (FOIT)](https://web.dev/avoid-invisible-text/).
 
 ## How the Lighthouse font-display audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags any font URLs that may flash invisible text:
 
 <figure>
@@ -89,8 +89,8 @@ Specify `@font-display` when [defining custom fonts](https://devdocs.magento.com
 
 ## Resources
 
-- [Source code for **Ensure text remains visible during webfont load** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/font-display.js)
+- [Source code for **Ensure text remains visible during webfont load** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/font-display.js)
 - [Avoid invisible text during loading](https://web.dev/avoid-invisible-text/)
-- [Controlling font performance with font displays](https://developers.google.com/web/updates/2016/02/font-display)
+- [Controlling font performance with font displays](/blog/font-display/)
 - [Preload web fonts to improve loading speed (codelab)](https://web.dev/codelab-preload-web-fonts/)
 - [Prevent layout shifting and flashes of invisible text (FOIT) by preloading optional fonts](https://web.dev/preload-optional-fonts/)

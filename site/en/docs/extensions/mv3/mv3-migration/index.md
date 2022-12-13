@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Migrating to Manifest V3
+seoTitle: "Chrome Extensions: Migrating to Manifest V3"
 subhead: 'Getting you headed in the right direction.'
 description: 'A high-level guide to how you can migrate your Manifest V2 extensions to Manifest V3.'
 date: 2020-11-09

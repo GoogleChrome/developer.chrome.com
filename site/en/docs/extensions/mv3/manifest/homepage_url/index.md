@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Homepage Url"
+seoTitle: "Chrome Extensions Manifest: Homepage Url"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the homepage_url property of manifest.json.

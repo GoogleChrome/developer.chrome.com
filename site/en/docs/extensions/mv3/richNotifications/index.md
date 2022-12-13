@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Rich notifications API"
+seoTitle: "Chrome Extensions: Rich notifications API"
 date: 2014-06-25
 updated: 2017-04-27
 description: How to show notifications to your Chrome Extension users.

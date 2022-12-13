@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin XMLHttpRequest"
+seoTitle: "Chrome Extensions: Cross-origin XMLHttpRequest"
 date: 2012-09-18
 updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.

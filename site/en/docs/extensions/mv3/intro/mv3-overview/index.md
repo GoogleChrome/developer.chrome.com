@@ -4,6 +4,7 @@ layout: 'layouts/doc-post.njk'
 # The page title. This appears at the top of the doc and as the page name
 # in Google Search.
 title: Overview of Manifest V3
+seoTitle: Overview of the Chrome Extension Manifest V3
 
 # This appears below the title and is an optional teaser
 subhead: 'Key changes and features of Manifest V3.'
