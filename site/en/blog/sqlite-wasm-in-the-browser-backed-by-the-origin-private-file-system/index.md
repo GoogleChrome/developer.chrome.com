@@ -12,7 +12,7 @@ tags:
 ---
 
 {% Aside 'success' %}
-In our blog post [Deprecating and removing Web SQL](https://developer.chrome.com/blog/deprecating-web-sql/), we promised a replacement for Web SQL based on SQLite. The SQLite Wasm library with the Origin Private File System persistence backend now is our fulfillment of this promise.
+In our blog post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/), we promised a replacement for Web SQL based on SQLite. The SQLite Wasm library with the Origin Private File System persistence backend now is our fulfillment of this promise.
 {% endAside %}
 
 ## About SQLite
@@ -41,7 +41,7 @@ You can download the official Wasm build from the [SQLite homepage](https://sqli
 
 ### The Origin Private File System
 
-The Origin Private File System (OPFS, part of the [File System Access API](https://developer.chrome.com/articles/file-system-access/)) is augmented with a special surface that brings very performant access to data. This new surface differs from existing ones by offering in-place and exclusive write access to a file's content. This change, along with the ability to consistently read unflushed modifications and the availability of a synchronous variant on dedicated workers, significantly improves performance and unblocks new use cases.
+The Origin Private File System (OPFS, part of the [File System Access API](/articles/file-system-access/)) is augmented with a special surface that brings very performant access to data. This new surface differs from existing ones by offering in-place and exclusive write access to a file's content. This change, along with the ability to consistently read unflushed modifications and the availability of a synchronous variant on dedicated workers, significantly improves performance and unblocks new use cases.
 
 As you can imagine, the last point of the project's goals, _Support for persistent client-side storage using available JavaScript APIs_ specifically, comes with strict performance requirements regarding persisting data to the database file. This is where the Origin Private File System, and, more specifically, the [`createSyncAccessHandle()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle) method of [`FileSystemFileHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle) objects comes into play. This method returns a Promise which resolves to a [`FileSystemSyncAccessHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle) object that can be used to synchronously read from and write to a file. The synchronous nature of this method brings performance advantages, but therefore it is only usable inside dedicated [Web Workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) for files within the Origin Private File System so the main thread can't be blocked.
 
