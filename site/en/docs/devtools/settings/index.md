@@ -33,7 +33,7 @@ The **Settings** panel has a list of tabs explained in detail in the sections be
 
 ## Preferences
 
-The **Preferences** tab lists both general customization options and panel-specific one.
+The **Preferences** tab lists both general customization options and panel-specific ones.
 
 To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [Settings][1] > **Preferences** and scroll down to one of the sections described below.
 
@@ -63,7 +63,7 @@ To set preferences, open {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY
 **Panel layout** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} arranges panes in panels.
 {% endDetailsSummary %}
 
-Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane. The **auto** option depends on DevTools width.
+Affects **Elements** > **Styles** and sister tabs, and the **Sources** > **Debugger** pane. The **auto** option makes the layout depend on DevTools width.
 
 <fieldset>
    <legend>Panel layout:</legend>
@@ -153,6 +153,8 @@ This example shows how to switch between four main tabs using the corresponding 
 {% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zta4SxypaPFjcv91biaq.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+
+This example shows how to search for text in an extension source file.
 {% endDetails %}
 
 {% Details %}
@@ -350,111 +352,229 @@ If left disabled, DevTools logs to the **Console** messages similar to the follo
 
 ### Elements
 
-The screenshots below show how each option customizes the **Elements** panel.
+This section lists options that customize the **Elements** panel.
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show user agent shadow DOM** displays shadow DOM nodes in the DOM tree.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qSmOLxRlz4AQVqlsKiKB.png", alt="The Elements panel shows shadow DOM nodes.", width="800", height="426" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Word wrap** breaks long lines in the DOM tree and wraps them to the next line.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vPnJzrRG9ApKalbwFkPR.png", alt="The Elements panel breaks long lines by words and wraps them onto the next line.", width="800", height="534" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show HTML comments** displays the comments in the DOM tree.
+{% Details %}
+
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show HTML comments** displays HTML comments in the DOM tree.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HqEIqRj7EUf5nLRO0wet.png", alt="The Elements panel shows HTML comments.", width="800", height="562" %}
+{% endDetails %}
 
+{% Details %}
+
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Reveal DOM node on hover** selects the corresponding node in the DOM tree as you hover over an element in the viewport in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="20" %} inspect mode.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/DZSVQcWURpAEpBKzhfk9.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show detailed inspect tooltip** displays the tooltip in the viewport in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="20" %} inspect mode.
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show detailed inspect tooltip** displays the tooltip in the viewport in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="22", height="20" %} inspect mode as you hover over an element.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3ZY81k912eWqytHKKZex.png", alt="The detailed tooltip shown in inspect mode.", width="800", height="531" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show rulers on hover** displays the rulers in the viewport.
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show rulers on hover** displays the rulers in the viewport as you hover over elements in the DOM tree.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kYLQC0rNON8sAdCSJTpu.png", alt="Rulers shown in viewport.", width="800", height="531" %}
+{% endDetails %}
 
 ### Network
 
-The screenshots below show how each option customizes the **Elements** panel.
+This section lists options that customize the **Network** panel. Most of the options are the same as in the panel's settings.
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log** is the same as [**Preserve log**](/docs/devtools/network/reference/#preserve-log) in the **Network** panel. Saves requests across page loads.
+{% endDetailsSummary %}
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay=false, controls="true", muted="true", class="screenshot"%}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Record network log** is the same as {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Record network log.", width="18", height="18" %} [Record network log](/docs/devtools/network/reference/#stop-recording) in the **Network** panel. Starts or stops recording requests in the network log.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j1rsoseicBEQLePQYflZ.png", alt="The Record network log button in the Network panel.", width="800", height="520" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable network request blocking** blocks requests that match patterns in the **Network request blocking** drawer.
+{% endDetailsSummary %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable cache (while DevTools is open)** is the same as [Disable cache](/docs/devtools/network/reference/#disable-cache) in the **Network** panel. Disables browser cache. 
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable cache (while DevTools is open)** is the same as [Disable cache](/docs/devtools/network/reference/#disable-cache) in the **Network** panel. Disables browser cache.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QTDnaY32hLDipeRW8e3O.png", alt="The Disable Cache checkbox.", width="800", height="497" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Color-code resource types** paints requests by type in the **Waterfall** column of the network log.
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Color-code resource types** highlights requests in different colors depending on their type in the **Waterfall** column of the network log.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yZzFqn1XYAGb0Awv3kcs.png", alt="The Waterfall column on the Network tab without and with color-coding.", width="800", height="458" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group network log by frame** is the same as [Group by frames](/docs/devtools/network/reference/#group-by-frames) in the **Network** panel. Groups by frame the requests initiated by inline frames.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by inline frames.", width="800", height="702" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Force ad blocking on this site** blocks [detected ads](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) on the page while DevTools is open.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BLkQZlLgXuqPNIMnq95b.png", alt="An ad-related network request shown in the Network panel with the Blocked Requests filter enabled.", width="800", height="565" %}
+{% endDetails %}
 
 ### Performance
 
 ### Console
 
-Most of the following options are the same as in [Console Settings](/docs/devtools/console/reference/#settings).
+This section lists options that customize the **Console**. Most of the options are the same as in [Console Settings](/docs/devtools/console/reference/#settings).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2W5sU2YKs7YDKdW4q18n.png", alt="Similar options in Console and in Settings.", width="800", height="425" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide network messages** hides network messages in the **Console**. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#network).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide network messages** hides network messages in the **Console**.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#network).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/aisMEFeYdzs84s9ZKO5M.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Selected context only** makes the **Console** show only the selected context on a page with inline frames. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#filtercontext).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Selected context only** makes the **Console** show only the selected context on a page with inline frames.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#filtercontext).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/cbBhLBD0NUJsfx5nEjCv.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Log XMLHttpRequests** makes the **Console** log XHR and fetch requests. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#xhr).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Log XMLHttpRequests** makes the **Console** log XHR and fetch requests.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#xhr).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/pyFzAk9i8WB8Dbu9wIaV.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show timestamps** makes the **Console** show timestamps next to messages.
+{% endDetailsSummary %}
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dOxVraGB4d2mXkvIV8IP.png", alt="Messages with timestamps listed in the Console.", width="800", height="528" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocomplete from history** makes the **Console** suggest as you type the commands you ran earlier. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#autocomplete).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Autocomplete from history** makes the **Console** suggest commands you ran earlier as you type.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#autocomplete).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZExKvWICbDczngyGrgRw.png", alt="Autocomplete drop-down with a command option from Console history.", width="800", height="517" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group similar messages in console** makes the **Console** group similar messages together. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#group).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group similar messages in console** makes the **Console** group similar messages together.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#group).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/p5wek29Dgubg7aNeqim4.png", alt="Similar messages in the Console grouped together.", width="800", height="513" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CORS errors in console** makes the **Console** show [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors). You can find the same option in [Console > Settings](/docs/devtools/console/reference/#cors-errors).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CORS errors in console** makes the **Console** show [CORS errors](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors).
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#cors-errors).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/z8PhGt1M7ri90edOFKqY.png", alt="Console shows CORS errors.", width="800", height="483" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Eager evaluation** makes the **Console** show a preview of an output as you type a command. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Eager evaluation** makes the **Console** show a preview of an output as you type a command.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#eagereval).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/M54pZmDvnWxKWvDqEuRz.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation** makes the **Console** set `navigator.userActivation.isActive` to `true` upon evaluation, that is, upon any command you run. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Evaluate triggers user activation** makes the **Console** set `navigator.userActivation.isActive` to `true` upon evaluation, that is, upon any command you run.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#trigger-user-activation).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wfwxdk8XSvqR665dVEAr.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation** makes the **Console** save logs across page loads. You can find the same option in [Console > Settings](/docs/devtools/console/reference/#persist).
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Preserve log upon navigation** makes the **Console** save logs across page loads.
+{% endDetailsSummary %}
+
+You can find the same option in [Console > Settings](/docs/devtools/console/reference/#persist).
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/0qxdteXV5kjZNIXnX49Y.mp4", autoplay=false, controls="true", muted="true", class="screenshot" %}
+{% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable custom formatters**
+{% endDetailsSummary %}
+{% endDetails %}
 
 ### Extension
 
