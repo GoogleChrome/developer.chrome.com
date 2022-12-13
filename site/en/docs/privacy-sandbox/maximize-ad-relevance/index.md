@@ -89,10 +89,14 @@ achieved through audiences that an advertiser can use to reach people most
 likely to be interested in their products and services. Advertisers
 commonly use these different audience types:
 
-1.  **Affinity**: Reach users based on what they're passionate about, their habits and their interests.
-1.  **In-market**: Reach users based on their recent purchase intent.
-1.  **Remarketing**: Reach people who have previously visited an advertiser's website.
-1.  **Audience Extension**: Reach users of a particular publisher on other websites
+1. [**Affinity**](#affinity): Reach users based on what they're passionate
+   about, their habits and their interests.
+1. [**In-market**](#in-market): Reach users based on their recent purchase
+   intent.
+1. [**Remarketing**](#remarketing): Reach users who have previously visited an
+   advertiser's website.
+1. [**Audience extension**](#audience-extension): Reach users of a particular
+   publisher on other websites
 
 After third-party cookie deprecation, ad solution providers can continue
 supporting these audience types' goals using new approaches, including Privacy
@@ -107,7 +111,7 @@ across the ad tech ecosystem through channels like demand-side platforms
 ([DSPs](/docs/privacy-sandbox/glossary/#dsp)) and data management platforms
 ([DMPs](/docs/privacy-sandbox/glossary/#dmp)).
 
-These segments are typically built by tracking individuals using third-party
+Segments are typically built by tracking individuals using third-party
 cookies and then grouping users based on a taxonomy of categories and
 proprietary methodologies for determining when a user qualifies for a category.
 
