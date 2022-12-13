@@ -3,7 +3,7 @@ title: Simulating restricted host permissions
 description: >
   "In the future, host permissions will be blocked by default when an extension is installed. Though we're still working on the user interface, we're giving you a way to emulate how your extension will work when the user does not grant host permissions."
 layout: 'layouts/blog-post.njk'
-date: 2022-12-13
+date: 2022-12-14
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/T3Cmk9KsDZxK4oxF2l9p.jpeg'
 alt: >
   A walk sign against a partly cloudy sky.
@@ -12,6 +12,7 @@ tags:
   - extensions-news
 authors:
   - joemedley
+  - dotproto
 ---
 
 In the future host permissions will be blocked by default when an extension is installed. A user gesture will be required to grant host permissions to your extension. We want to make it clearer to users what they're granting and why. 
