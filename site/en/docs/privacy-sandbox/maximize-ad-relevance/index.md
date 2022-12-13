@@ -39,13 +39,14 @@ content a user has viewed, the pattern of sites the user has recently seen, or
 a specific site previously visited.
 
 Today, these signals are primarily powered by cross-site identifiers such as
-third-party cookies, which are unique to an individual device. As third-party
-cookies are phased out, ad tech solutions for interest-based advertising should
-evolve to take advantage of privacy-friendly signals to show relevant ads.
-These include first-party data, contextual signals, and platform-provided
-privacy-preserving APIs such as the
+third-party cookies, which are unique to an individual device.
+
+As third-party cookies are phased out, ad tech solutions for interest-based
+advertising should evolve to take advantage of privacy-friendly signals to show
+relevant ads. These include first-party data, contextual signals, and
+platform-provided privacy-preserving APIs, such as the
 [Topics API](/docs/privacy-sandbox/topics/),
-[FLEDGE API](/docs/privacy-sandbox/fledge/), and the
+[FLEDGE API](/docs/privacy-sandbox/fledge/), and
 [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/),
 which help support critical use cases for the ad industry while protecting
 against cross-site tracking.
@@ -172,7 +173,7 @@ This approach makes sense when ad tech providers don't have much
 contextual data but have machine learning or robust data science and analysis
 capabilities.
 
-* **Contextual data + Attribution Reporting API**: Ad tech solutions can leverage contextual categorization of the pages where ads are shown, categorization of advertisers and products, and data from Attribution Reporting to uncover trends or patterns in the types of sites people favor when in-market to buy certain types of products and services. For example, this combination of data may lead to insights like learning that people who are on web pages about family activities are highly likely to be in-market to buy outdoor apparel too.
+* **Attribution Reporting API with contextual data**: Ad tech solutions can leverage contextual categorization of the pages where ads are shown, categorization of advertisers and products, and data from Attribution Reporting to uncover trends or patterns in the types of sites people favor when in-market to buy certain types of products and services. For example, this combination of data may lead to insights like learning that people who are on web pages about family activities are highly likely to be in-market to buy outdoor apparel too.
 
 These methods are just a few of the many ways ad tech providers can creatively
 scale and customize audience segments without relying on cross-site user
@@ -209,7 +210,8 @@ them on other sites to increase frequency or delivered reach of the same
 audience.
 
 By using audience extension, a publisher can provide an advertiser with an
-audience segment, such as affinity (such as golfers) or demographics (such as an age range), and allow the advertiser to find that audience on other sites.
+audience segment, such as affinity (such as golfers) or demographics (such as
+an age range), and allow the advertiser to find that audience on other sites.
 Audience extension is also used when an advertiser wants to increase awareness 
 of their products by reaching consumers when they shop on a retailer's website
 and elsewhere on the web.
@@ -246,11 +248,22 @@ selection by the advertiser may be treated as a "suggestion" or "starting
 point," but machine learning will look for patterns among all available data
 that may be indiscernible to humans.
 
-Machine learning uses these patterns to optimize performance by adding more relevant audiences and adjusting bids based on the predicted performance of those audiences. The Privacy Sandbox is one of many sources of signals that will be available to inform machine learning after third-party cookie deprecation.
+Machine learning uses these patterns to optimize performance by adding more
+relevant audiences and adjusting bids based on the predicted performance of
+those audiences. The Privacy Sandbox is one of many sources of signals that
+will be available to inform machine learning after third-party cookie
+deprecation.
 
-Machine learning can maximize ad performance by continually testing and learning all the best audiences, placements, and bids across time, campaigns, and even advertisers. It's worth noting that sophisticated analytics performed by skilled teams can also discover similar correlations.
+Machine learning can maximize ad performance by continually testing and
+learning all the best audiences, placements, and bids across time, campaigns,
+and even advertisers. It's worth noting that sophisticated analytics performed
+by skilled teams can also discover similar correlations.
 
-Reducing the need for advertisers to manage audiences, placements, and bids will simplify advertiser workload and enable machine learning systems to drive the best possible outcomes.  Ad tech investments in automated solutions&mdash;in addition to benefiting advertisers&mdash;can also help transition away from third-party cookies.
+Reducing the need for advertisers to manage audiences, placements, and bids
+will simplify advertiser workload and enable machine learning systems to drive
+the best possible outcomes. Ad tech investments in automated solutions&mdash;in
+addition to benefiting advertisers&mdash;can also help transition away from
+third-party cookies.
 
 ### Additional signals for machine learning
 
