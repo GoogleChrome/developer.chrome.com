@@ -86,17 +86,25 @@ See [Use DevTools in your preferred language](/blog/new-in-devtools-94/#localize
 
 ## Sync settings {: #sync }
 
-You can sync your DevTools settings across devices. To enable that, you need to:
+You can sync your DevTools settings across multiple devices.
 
-1. Turn on Chrome profile sync. Your DevTools settings are synced by default when you turn on Chrome profile sync.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome profile sync", width="400", height="579" %}
-2. The DevTools sync settings can be updated via **Settings** > **Sync** > **Enable settings sync** checkbox.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
-3. Most of the settings are synced, except for the **Workspace**, **Experiments**, and **Devices** tabs and a few other general settings. The state of the **Enable settings sync** checkbox is synced across devices as well.
-  For example, the following **appearance** settings are synced so you have a consistent experience across devices and don't need to re-define the same settings again.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="The appearance settings.", width="800", height="584" %}
-  However, the **dock** settings isn't sync because developers have different dock preferences when debugging on different sites.
-    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="The dock.", width="426", height="134" %}
+To enable sync, first turn on [Chrome Sync](https://support.google.com/chrome/answer/185277). Once enabled, your DevTools settings are synced by default.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome profile sync.", width="400", height="579" %}
+
+You can enable or disable the DevTools settings sync separately using the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Sync** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} [**Enable settings sync**](/docs/devtools/settings/#sync) checkbox.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
+
+DevTools syncs most of the settings except those in the **Workspace**, **Experiments**, and **Devices** tabs and a few other general settings. The state of the **Enable settings sync** checkbox is synced across devices as well.
+
+For example, the following **Appearance** settings are synced, so you have a consistent experience across devices and don't need to re-define the same settings again.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="The appearance settings.", width="800", height="584" %}
+
+However, the **dock** setting isn't sync because developers have different dock preferences when debugging on different sites.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="The dock.", width="426", height="134" %}
 
 
 ## Customize keyboard shortcuts {: #keyboard-shortcuts }

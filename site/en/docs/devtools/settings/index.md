@@ -627,6 +627,10 @@ This section lists options that have global effects in DevTools.
 
 ### Sync
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable settings sync** allows you to sync DevTools settings across multiple devices.
+
+To use this setting, first [enable Chrome Sync](https://support.google.com/chrome/answer/185277). For more information, see [Sync settings](/docs/devtools/customize/#sync).
+
 ## Workspace
 
 [**Workspaces**](/docs/devtools/workspaces/) enable you to save changes that you make within DevTools to source code that's stored on your computer.
