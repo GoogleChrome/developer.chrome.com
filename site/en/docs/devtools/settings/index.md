@@ -580,7 +580,28 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Persistence
 
-### Debugger
+### Debugger {: #debugger }
+
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable JavaScript** allows you to see how your webpage looks and behaves when [JavaScript is disabled](/docs/devtools/javascript/disable/). 
+{% endDetailsSummary %}
+
+Reload the page to see if and how the page depends on JavaScript while loading.
+
+When JavaScript is disabled, Chrome shows the corresponding {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SLXe2Th4LGAg34pe6CPj.png", alt="Disabled JavaScript.", width="22", height="20" %} icon in the address bar and DevTools shows a warning {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BOj6neshf7WbowM3j21R.svg", alt="Warning.", width="22", height="22" %} icon next to **Sources**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MeeQhKyCdJ11EC26pU2j.png", alt="An icon in the address bar and a warning icon next to Sources in DevTools.", width="800", height="475" %}
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Disable async stack traces** hides the "full story" of the async operation in the **Call Stack**.
+{% endDetailsSummary %}
+
+By default, the **Debugger** tries to trace async operations if it's supported by the framework you're using.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/d2TM68V7nOeJWYMmvaSW.png", alt="The async operation in the Call Stack.", width="800", height="575" %}
+For more information, see [View async stack traces](/docs/devtools/console/reference/#async-stack-traces).
+{% endDetails %}
 
 ### Global
 
