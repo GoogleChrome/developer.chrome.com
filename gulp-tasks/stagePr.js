@@ -139,8 +139,8 @@ async function waitForCloudBuild(checkId, initialTimeout) {
     return build;
   }
 
-  // If the build has not completed yet, then just query again in 30s
-  return waitForCloudBuild(checkId, 30 * 1000);
+  // If the build has not completed yet, then just query again in 60s
+  return waitForCloudBuild(checkId, 60 * 1000);
 }
 
 /**
@@ -170,7 +170,7 @@ function getChangedFiles() {
  *
  * @param {string} commit A full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
  * @param {ReturnType<getChangedFiles>} changedFiles The files changed in this PR
- * @param {Awaited<ReturnType<waitForCloudBuild>>} build Build details returned from thE Checks API
+ * @param {{[key: string]: any}} build Build details returned from the Checks API
  * @returns {string} A short message containing all information about the job
  */
 function createAnnouncement(commit, changedFiles, build) {
@@ -250,7 +250,7 @@ async function stagePr() {
     throw Error('Failed to request staging build.');
   }
 
-  // Wait for 30 seconds, for the webhook to create the actual
+  // Wait for the webhook to create the actual
   // build and Cloud Build propagate the status back to GitHub.
   // This can take up to 1m30s - wait for 2m to have room to wiggle
   // and as the build takes a while anyway
