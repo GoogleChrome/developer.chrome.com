@@ -15,11 +15,28 @@
  */
 
 /**
- * @fileoverview A component responsible for handling orchestration on th
+ * @fileoverview A component responsible for handling orchestration on the
  * events page.
  */
 import {BaseElement} from './base-element';
 import {EnhancedSelect} from './enhanced-select';
+import {loadMore} from '../misc/load-more';
+
+const getEvents = async () => {
+  const response = await fetch('/events.json');
+
+  //todo - handle
+  if (response.status !== 200) {
+    throw new Error('Unable to fetch /events.json');
+  }
+
+  const all = await response.json();
+
+  return {
+    upcomingEvents: all.filter(event => !event.isPastEvent),
+    pastEvents: all.filter(event => event.isPastEvent),
+  };
+};
 
 export class EnhancedEventsPage extends BaseElement {
   constructor() {
@@ -32,19 +49,29 @@ export class EnhancedEventsPage extends BaseElement {
     };
 
     this.filterElements = this.getFilterElements();
+    //todo - hook the mobile filters up too
     this.mobileElements = this.getMobileElements();
   }
 
-  static get properties() {
-    return {
-      selectedFilters: {type: Object, state: true},
-    };
-  }
-
-  connectedCallback() {
+  async connectedCallback() {
     super.connectedCallback();
     this.mobileElements.handleConnect();
     this.filterElements.handleConnect();
+
+    //todo - error handling
+    const {pastEvents, upcomingEvents} = await getEvents();
+
+    this.loadMoreUpcoming = await this.initLoadMore(
+      '#load-upcoming-events',
+      '#upcoming-events',
+      upcomingEvents
+    );
+
+    this.loadMorePast = await this.initLoadMore(
+      '#load-past-events',
+      '#past-events',
+      pastEvents
+    );
   }
 
   disconnectedCallback() {
@@ -98,17 +125,26 @@ export class EnhancedEventsPage extends BaseElement {
   getFilterElements() {
     const filters = this.querySelectorAll('.events-filter');
 
-    const clickHandler = e => {
+    const clickHandler = async e => {
       const t = e.target;
 
       if (!(t instanceof EnhancedSelect)) {
         return;
       }
 
+      this.currentOffset = 0;
+
+      //todo - update the ui showing list of selected filters.
       this.selectedFilters = {
         ...this.selectedFilters,
         ...{[t.name]: t.value},
       };
+
+      //todo - loading gifs/icons. Error handling/notice
+      //todo - if a card is open this closes it.
+      //todo - show/hide button
+      this.loadMoreUpcoming?.restart();
+      this.loadMorePast?.restart();
     };
 
     return {
@@ -126,8 +162,69 @@ export class EnhancedEventsPage extends BaseElement {
     };
   }
 
-  render() {
-    return Array.from(this.children);
+  /**
+   * @param {{location:array, topics:array, googlers:array}[]} events
+   * @returns {*}
+   */
+  filterEvents(events) {
+    return events.filter(event => {
+      if (
+        this.selectedFilters.location.length &&
+        this.selectedFilters.location[0] !== event.location
+      ) {
+        return false;
+      }
+
+      if (
+        this.selectedFilters.topics.length &&
+        this.selectedFilters.topics.some(topic =>
+          event.topics.includes(topic)
+        ) === false
+      ) {
+        return false;
+      }
+
+      if (
+        this.selectedFilters.googler.length &&
+        event.googlers.includes(this.selectedFilters.googler[0]) === false
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  /**
+   * @param buttonSelector
+   * @param containerSelector
+   * @param events
+   * @returns {Promise<{currentOffset, total, take, restart}>}
+   */
+  async initLoadMore(buttonSelector, containerSelector, events) {
+    return loadMore(
+      this.querySelector(buttonSelector),
+      this.querySelector(containerSelector),
+      async (skip, take) => {
+        const all = this.filterEvents(events);
+
+        return {
+          updated_total: all.length,
+          items: all.slice(skip, take + skip).map(event => event.html),
+        };
+      },
+      () => {
+        document
+          .getElementById('loading-error')
+          ?.classList.remove('display-none');
+      },
+      {
+        skip:
+          document.querySelectorAll(`${containerSelector} enhanced-event-card`)
+            .length ?? 0,
+        take: 10,
+      }
+    );
   }
 }
 

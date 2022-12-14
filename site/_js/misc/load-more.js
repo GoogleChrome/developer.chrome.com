@@ -20,7 +20,7 @@
  * @param {Function} fetchItems
  * @param {Function} onError
  * @param {{skip?:number,take?:number, total?:number}} params
- * @returns {Promise<{}>}
+ * @returns {Promise<{currentOffset, total, take, restart}>}
  */
 export const loadMore = async (
   button,
@@ -30,18 +30,22 @@ export const loadMore = async (
   params = {}
 ) => {
   let currentOffset = params.skip || 0;
-  const total = getTotalItems(container, params);
+  let total = getTotalItems(container, params);
   const take = params.take || 10;
 
-  button.addEventListener('click', async e => {
-    e.preventDefault();
-
+  const fetch = async (append = true) => {
     button.setAttribute('disabled', '');
 
     try {
-      const items = await fetchItems(currentOffset, take);
+      const {items, updated_total} = await fetchItems(currentOffset, take);
 
-      container.insertAdjacentHTML('beforeend', items.join(''));
+      total = updated_total;
+
+      if (append) {
+        container.insertAdjacentHTML('beforeend', items.join(''));
+      } else {
+        container.innerHTML = items.join('');
+      }
 
       currentOffset += take;
     } catch (e) {
@@ -52,7 +56,15 @@ export const loadMore = async (
 
     if (currentOffset >= total) {
       button.setAttribute('hidden', '');
+    } else {
+      button.removeAttribute('hidden');
     }
+  };
+
+  button.addEventListener('click', async e => {
+    e.preventDefault();
+
+    await fetch();
   });
 
   if (currentOffset >= total) {
@@ -63,6 +75,10 @@ export const loadMore = async (
     currentOffset: () => currentOffset,
     total: () => total,
     take: () => take,
+    restart: async () => {
+      currentOffset = 0;
+      await fetch(false);
+    },
   };
 };
 
