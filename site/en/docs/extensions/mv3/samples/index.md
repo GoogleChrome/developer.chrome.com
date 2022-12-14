@@ -18,13 +18,13 @@ APIs. Use these to learn how extensions work or as a starting point for building
 The examples are currently located under the following directories:
 
 [api/][gh-api]
-: These extensions were designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension IU elements such as the popup, tooltip, and badges among others. 
+: Extensions designed to demonstrate the capabilities of a specific API. For example, the [Action API example][gh-action] showcases extension IU elements such as the popup, tooltip, and badges among others. 
 
 [examples/][gh-examples]
-: These are complete extensions that implement all the basic features for a given purpose.
+: Complete extensions that implement all the basic features for a given purpose.
 
 [tutorials/][gh-tutorials]
-: These examples include step-by-step instructions on how to build an extension. A few examples include [Tabs manager][tut-tabs-man], [Focus mode][tut-fm], and [Reading time][tut-rt].
+: Examples covered in the [tutorials][gs-tutorials]. A few examples include [Tabs manager][tut-tabs-man], [Focus mode][tut-fm], and [Reading time][tut-rt].
 
 {% Details %}
 {% DetailsSummary %}
@@ -64,6 +64,7 @@ If you encounter any problems with an example, let us know by [posting an issue]
 [gh-issues]: https://github.com/GoogleChrome/chrome-extensions-samples/issues
 [gh-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
 [gh-tutorials]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials
+[gs-tutorials]: /docs/extensions/mv3/getstarted/#tutorial
 [tut-fm]: /docs/extensions/mv3/getstarted/tut-focus-mode/
 [tut-rt]: /docs/extensions/mv3/getstarted/tut-reading-time/
 [tut-tabs-man]: /docs/extensions/mv3/getstarted/tut-tabs-manager/
