@@ -11,7 +11,8 @@ permalink: "/events.json"
       "id": {{event.id|dump|safe}},
       "html": {{ html|minifyHtml|dump|safe}},
       "date": {{ event.date|dump|safe }},
-      "isPastEvent": {{ event.isPastEvent|dump|safe }}
+      "isPastEvent": {{ event.isPastEvent|dump|safe }},
+      "location": {{ event.location|dump|safe }}
     } {% if loop.last === false %},{% endif %}
   {% endfor %}
 ]
