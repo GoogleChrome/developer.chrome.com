@@ -334,16 +334,13 @@ Step 5: Confirm your setup will generate verbose debug reports
 While there are numerous types of verbose debug reports, it's sufficient to check your verbose debugging setup with only **one type** of verbose debug report. If this one type of verbose debug report is correctly generated and received, this means that all types of verbose debug reports will be correctly generated and received as well, because all verbose debug reports use the same configuration and are sent to the same endpoint.
 
 {% Aside 'gotchas' %}
-Pick a verbose debug report that's simple to test for. `trigger-event-excessive-reports` is a good candidate, because you can generate it by simply converting. Verbose reports that relate to trigger events tend to be better candidates; verbose report types that relates to source events are more tedious to purposefully generate.
+Pick a verbose debug report that's simple to test for. `trigger-no-matching-source` is a good candidate, because you can generate it by simply converting. Verbose reports that relate to trigger events tend to be better candidates; verbose report types that relates to source events are more tedious to purposefully generate.
 {% endAside %}
 
 1. Open `chrome://attribution-internals` in your browser.
-2. Using the sites you have Attribution Reporting set up on, view an ad. Given that this ad engagement is an impression and not a click, you can only trigger one attribution (record one conversion) for it.
-3. Trigger an attribution (convert) for this ad.
-4. In `chrome://attribution-internals`, make sure that a source, a trigger and an attribution report are all correctly generated.
-5. Trigger a second attribution for this ad. This second conversion is over the limit, so you should expect a verbose debug report of type `trigger-event-excessive-reports`.
-6. In `chrome://attribution-internals`, open the **Verbose debug reports** tab and check that a verbose debug report of type `trigger-event-excessive-reports` has been generated.
-7. On your server, verify that your endpoint has immediately received this verbose debug report.
+2. Using the site you have Attribution Reporting set up on, trigger an attribution (convert). Given that there was no ad engagement (impression or click) before that conversion, you should expect a verbose debug report of type `trigger-no-matching-source` to be generated.
+3. In `chrome://attribution-internals`, open the **Verbose debug reports** tab and check that a verbose debug report of type `trigger-event-excessive-reports` has been generated.
+4. On your server, verify that your endpoint has immediately received this verbose debug report.
 
 {% endDetails %}
 
