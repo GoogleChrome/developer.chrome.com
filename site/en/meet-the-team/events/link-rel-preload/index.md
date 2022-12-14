@@ -17,7 +17,7 @@ sessions:
     time: null
     type: participant
     slidesUrl: null
-    videoUrl: null
+    videoUrl: https://www.youtube.com/watch?v=4sia-AYxg3M
   - speaker: egsweeny
     title: Lightning Talk on Performance Tooling
     description: >-
