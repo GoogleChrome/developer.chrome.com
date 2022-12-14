@@ -7,7 +7,7 @@ summary: >-
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Tokyo, Japan
 date: 2022-12-16
-externalUrl:
+externalUrl: https://gdg.community.dev/events/details/google-women-techmakers-tokyo-presents-gdg-devfest-tokyo-2022/
 sessions:
   - speaker: jheyy
     title: Supercharge your skills with creative coding - The quest for a styleable select
