@@ -40,6 +40,7 @@ const getEvents = memoize(({collections, locale = 'en'}) => {
         isPastEvent: isPastEvent(event),
         sessions,
         image: event.data.image,
+        topics: [...new Set(sessions.flatMap(s => s.topics))],
       };
     });
 });
