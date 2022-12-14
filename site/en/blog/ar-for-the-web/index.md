@@ -10,7 +10,7 @@ updated: 2018-07-30
 ---
 
 In Chrome 67,
-[we announced](https://developers.google.com/web/updates/2018/05/welcome-to-immersive)
+[we announced](https://web.dev/welcome-to-immersive/)
 the WebXR Device API for both augmented reality (AR) and virtual reality (VR),
 though only the VR features were enabled. VR is an experience based purely on
 what's in a computing device. AR on the other hand allows you to render virtual
@@ -62,7 +62,7 @@ turned on. Please excuse our construction debris.
 At Google IO this year, we demonstrated augmented reality with an early build of
 Chrome. I said something repeatedly to developers and non-developers alike
 during those three days that I wish I had known to put in my
-[immersive web article](https://developers.google.com/web/updates/2018/05/welcome-to-immersive):
+[immersive web article](https://web.dev/welcome-to-immersive/):
 "It's just the web."
 
 {% YouTube id="1t1gBVykneA" %}
@@ -103,7 +103,7 @@ this article.
 One thing that demo and video doesn't show is how AR can convey the size of a
 real object. The video here shows an educational demo that we built called
 [Chacmool](https://web-education-ar-demo.appspot.com/).
-A [companion article](https://developers.google.com/web/updates/2018/06/webar-chacmool)
+A [companion article](/blog/webar-chacmool/)
 describes this demo in detail. The important thing for this discussion is that
 when you place the Chacmool statue in augmented reality, you're seeing its size
 as though it were actually in the room with you.
@@ -120,7 +120,7 @@ will look next to your other furniture.
 A key problem to solve when implementing augmented reality is how to place
 objects in a real-world view. The method for doing this is called _ray casting_.
 Ray casting means calculating the intersection between the
-[pointer ray](https://developers.google.com/web/updates/2018/05/welcome-to-immersive#the_input_device_and_the_pointer_ray)
+[pointer ray](https://web.dev/welcome-to-immersive/#the-input-device-and-the-pointer-ray)
 and a surface in the real world. That intersection is called a _hit_ and
 determining whether a hit has occurred is a _hit test_.
 
@@ -160,10 +160,10 @@ helping you understand what's going on.
 
 The basics of entering an AR session and running a render loop are the same for
 AR as they are for VR. You can read
-[my previous article](https://developers.google.com/web/updates/2018/05/welcome-to-immersive)
+[my previous article](https://web.dev/welcome-to-immersive/)
 if you're unfamiliar. To be more specific, entering and running an AR session
 looks almost exactly like
-[entering a VR magic window session](https://developers.google.com/web/updates/2018/05/welcome-to-immersive#starting_and_running_an_app).
+[entering a VR magic window session](https://web.dev/welcome-to-immersive/#starting-and-running-an-app).
 As with a magic window, the session type must be non-immersive and the frame of
 reference type must be `'eye-level'`.
 
@@ -236,7 +236,7 @@ function onXRFrame(t, frame) {
 ```
 
 Though not as obvious in the hit test sample, you still need to
-[loop through the views](https://developers.google.com/web/updates/2018/05/welcome-to-immersive#views)
+[loop through the views](https://web.dev/welcome-to-immersive/#views)
 to draw the scene. Drawing is done using WebGL APIs. You can do that if you're
 really ambitious. Though, we recommend using a framework. The immersive web
 samples use one created just for the demos called

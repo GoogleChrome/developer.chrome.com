@@ -422,7 +422,7 @@ release.
 [13]: https://developer.android.com/google/play/billing/terminology
 [14]: https://developer.android.com/google/play/billing
 [15]: https://developers.google.com/android-publisher
-[16]: https://developers.google.com/web/fundamentals/payments/basics/how-payment-request-api-works
+[16]: https://web.dev/how-payment-request-api-works
 [17]: https://developer.android.com/google/play/billing/rtdn-reference
 [18]: https://play.google.com/console/about/
 [19]: https://support.google.com/googleplay/android-developer/answer/9859152

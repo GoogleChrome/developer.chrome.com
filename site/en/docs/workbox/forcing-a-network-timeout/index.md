@@ -6,7 +6,7 @@ description: >
   Learn how to force a network timeout in the presence of a slow network connection, and how to get the timing right.
 ---
 
-There are times when you have a network connection, but that connection is either too slow, or your connection [is lying to you that you're online](https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi). In such situations where a service worker is in the mix, a network-first caching strategy may take too long to get a response from the network, or the request will hang&mdash;and loading spinners will spin endlessly&mdash;until you get an error page.
+There are times when you have a network connection, but that connection is either too slow, or your connection [is lying to you that you're online](https://web.dev/performance-poor-connectivity/#lie-fi). In such situations where a service worker is in the mix, a network-first caching strategy may take too long to get a response from the network, or the request will hang&mdash;and loading spinners will spin endlessly&mdash;until you get an error page.
 
 Whatever the situation is, there are instances in which falling back to the last cached response for an asset or page after a certain period of time would be preferable&mdash;yet another problem that Workbox can help with.
 

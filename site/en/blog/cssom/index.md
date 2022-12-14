@@ -51,7 +51,7 @@ Chrome 66 adds support for the CSS Typed Object Model for a
 {% endAside %}
 
 
-## Introduction 
+## Introduction
 
 ### Old CSSOM
 
@@ -173,9 +173,9 @@ if (window.CSS && CSS.number) {
 }
 ```
 
-## API Basics 
+## API Basics
 
-### Accessing styles 
+### Accessing styles
 
 Values are separate from units in CSS Typed OM. Getting a style returns a
 `CSSUnitValue` containing a `value` and `unit`:
@@ -241,7 +241,7 @@ el.attributeStyleMap.get('z-index').value  === 15.4 // val not rounded.
 el.computedStyleMap().get('z-index').value === 15   // computed style is rounded.
 ```
 
-## CSS numerical values 
+## CSS numerical values
 
 Numbers are represented by two types of `CSSNumericValue` objects in Typed OM:
 
@@ -249,7 +249,7 @@ Numbers are represented by two types of `CSSNumericValue` objects in Typed OM:
 - `CSSMathValue` - values that contain more than one value/unit such as
 mathematical expression (e.g. `"calc(56em + 10%)"`).
 
-### Unit values 
+### Unit values
 
 Simple numerical values (`"50%"`) are represented by `CSSUnitValue` objects.
 While you _could_ create these objects directly (`new CSSUnitValue(10, 'px')`)
@@ -337,7 +337,7 @@ new CSSMathSum(
 );
 ```
 
-## Arithmetic operations 
+## Arithmetic operations
 
 One of the most useful features of The CSS Typed OM is that you can perform
 mathematical operations on `CSSUnitValue` objects.
@@ -547,7 +547,7 @@ If you want to get the value of a custom property, there's a bit of work to do:
 </script>
 ```
 
-## Position values 
+## Position values
 CSS properties that take a space-separated x/y position such as
 `object-position` are represented by `CSSPositionValue` objects.
 
@@ -559,7 +559,7 @@ console.log(position.x.value, position.y.value);
 // → 5, 10
 ```
 
-## Parsing values 
+## Parsing values
 
 The Typed OM introduces parsing methods to the web platform! This means you can
 finally  **parse CSS values programmatically, _before_ trying to use it**! This
@@ -584,7 +584,7 @@ CSSNumericValue.parse('42.0px') // {value: 42, unit: 'px'}
 CSS.px(42.0) // '42px'
 ```
 
-### Error handling 
+### Error handling
 
 **Example** - check if the CSS parser will be happy with this `transform` value:
 
@@ -607,5 +607,5 @@ results in fewer bugs and more performant code down the line.
 [cssom-old]: https://developer.mozilla.org/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 [spec]: https://drafts.css-houdini.org/css-typed-om/
 [chromestatus]: https://www.chromestatus.com/feature/5682491075592192
-[houdini]: https://developers.google.com/web/updates/2016/05/houdini
+[houdini]: /blog/houdini
 [edge-support]: https://lists.w3.org/Archives/Public/public-houdini/2015Oct/0011.html

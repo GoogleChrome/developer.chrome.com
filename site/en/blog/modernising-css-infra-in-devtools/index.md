@@ -43,7 +43,7 @@ An example of a remaining `module.json` file:
 }
 ```
 
-These CSS files would then populate a global object map called `Root.Runtime.cachedResources` as a mapping from a path to their contents. In order to add styles into DevTools, you would need to call [`registerRequiredCSS`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/devtools-frontend/src/front_end/ui/legacy/Widget.ts?q=registerRequiredCSS&ss=chromium) with the exact path to the file you want to load. 
+These CSS files would then populate a global object map called `Root.Runtime.cachedResources` as a mapping from a path to their contents. In order to add styles into DevTools, you would need to call [`registerRequiredCSS`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/devtools-frontend/src/front_end/ui/legacy/Widget.ts?q=registerRequiredCSS&ss=chromium) with the exact path to the file you want to load.
 
 Example `registerRequiredCSS` [call](https://source.chromium.org/chromium/chromium/src/+/main:out/Debug/gen/third_party/devtools-frontend/src/front_end/ui/legacy/components/quick_open/FilteredListWidget.js?q=registerRequiredCSS&ss=chromium&start=21):
 
@@ -65,7 +65,7 @@ const content = Root.Runtime.cachedResources.get(cssFile) || '';
 if (!content) {
   console.error(cssFile + ' not preloaded. Check module.json');
 }
- 
+
 const styleElement = document.createElement('style');
 styleElement.textContent = content;
 node.appendChild(styleElement);
@@ -74,10 +74,10 @@ node.appendChild(styleElement);
 When we introduced modern web components (using custom elements), we **decided initially to use CSS via inline `<style>` tags in the component files** themselves. This presented its own challenges:
 
 - **Lack of syntax highlight support.** Plugins that provide syntax highlighting for inline CSS do not tend to be as good as the syntax highlighting and auto complete features for CSS written in `.css` files.
-- **Build performance overhead.** Inline CSS also meant that there needed to be two passes for linting: one for CSS files and one for inline CSS. This was a performance overhead we could remove if all CSS was written in standalone CSS files. 
+- **Build performance overhead.** Inline CSS also meant that there needed to be two passes for linting: one for CSS files and one for inline CSS. This was a performance overhead we could remove if all CSS was written in standalone CSS files.
 - **Challenge in minification.** Inline CSS could not be easily minified, so none of the CSS was minified. The file size of the release build of DevTools was also increased by the duplicated CSS introduced by multiple instances of the same web component.
 
-The goal of my internship project was to find a solution for the CSS infrastructure that works with both the legacy infrastructure and the new web components being used in DevTools. 
+The goal of my internship project was to find a solution for the CSS infrastructure that works with both the legacy infrastructure and the new web components being used in DevTools.
 
 ## Researching potential solutions {: #solutions }
 
@@ -90,7 +90,7 @@ We looked into different potential solutions for each part and these are outline
 
 ### Importing CSS Files {: #importing-css }
 
-The goal with importing and utilising CSS in the TypeScript files was to stick as close to web standards as possible, **enforce consistency throughout DevTools and avoid duplicated CSS** in our HTML. We also wanted to be able to pick a solution that would make it possible to migrate our changes to new web platform standards, such as CSS Module Scripts. 
+The goal with importing and utilising CSS in the TypeScript files was to stick as close to web standards as possible, **enforce consistency throughout DevTools and avoid duplicated CSS** in our HTML. We also wanted to be able to pick a solution that would make it possible to migrate our changes to new web platform standards, such as CSS Module Scripts.
 
 For these reasons the [@import](https://developer.mozilla.org/docs/Web/CSS/@import) statements and [<link>](https://developer.mozilla.org/docs/Web/HTML/Element/link) tags did not seem like the right fit for DevTools. They would not be uniform with imports throughout the rest of DevTools and result in a [Flash Of Unstyled Content (FOUC)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content). The migration to CSS Module Scripts would be harder because the imports would have to be explicitly added and dealt with differently than they would with `<link>` tags.
 
@@ -107,7 +107,7 @@ const output = LitHtml.html`
 ```
 Potential solutions using `@import` or `<link>`.
 
-Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://developers.google.com/web/fundamentals/web-components/shadowdom) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets#using_constructed_stylesheets) property. 
+Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://web.dev/shadowdom-v1) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://web.dev/constructable-stylesheets/#using-constructed-stylesheets) property.
 
 ### Bundler options {: #bundler-options }
 
@@ -118,7 +118,7 @@ Instead, we explored the option to use the current GN build system to do this tr
 
 ### The new infrastructure of using CSS in DevTools {: #new-infra }
 
-The new solution involves using `adoptedStyleSheets` to add styles to a particular Shadow DOM while using the GN build system to generate CSSStyleSheet objects that can be adopted by a `document` or a `ShadowRoot`. 
+The new solution involves using `adoptedStyleSheets` to add styles to a particular Shadow DOM while using the GN build system to generate CSSStyleSheet objects that can be adopted by a `document` or a `ShadowRoot`.
 
 ```js
 // CustomButton.ts
@@ -128,7 +128,7 @@ import customButtonStyles from './customButton.css.js';
 import otherStyles from './otherStyles.css.js';
 
 export class CustomButton extends HTMLElement{
-  … 
+  …
   connectedCallback(): void {
     // Add the styles to the shadow root scope
     this.shadow.adoptedStyleSheets = [customButtonStyles, otherStyles];
@@ -160,7 +160,7 @@ export default styles;
 
 ### Migrating legacy code using ESLint rules {: #eslint }
 
-While the web components could be easily manually migrated, the process for migrating legacy usages of `registerRequiredCSS` was more involved. The two main functions that registered legacy styles were `registerRequiredCSS` and `createShadowRootWithCoreStyles`. We decided that since the steps to migrate these calls were fairly mechanical, we could use ESLint rules to apply fixes and automatically migrate legacy code. DevTools already uses a number of custom rules specific for the DevTools codebase. This was helpful as [ESLint](https://eslint.org/) already parses the code into an [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)(abbr. AST) and we could query the particular call nodes that were calls to registering CSS. 
+While the web components could be easily manually migrated, the process for migrating legacy usages of `registerRequiredCSS` was more involved. The two main functions that registered legacy styles were `registerRequiredCSS` and `createShadowRootWithCoreStyles`. We decided that since the steps to migrate these calls were fairly mechanical, we could use ESLint rules to apply fixes and automatically migrate legacy code. DevTools already uses a number of custom rules specific for the DevTools codebase. This was helpful as [ESLint](https://eslint.org/) already parses the code into an [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree)(abbr. AST) and we could query the particular call nodes that were calls to registering CSS.
 
 The biggest issue we faced when writing the migration ESLint Rules was capturing edge cases. We wanted to make sure we got the right balance between knowing which edge cases were worth capturing and which should be migrated manually. We also wanted to be able to ensure that we could tell a user when an imported `.css.js` file is not being automatically generated by the build system as this prevents any file not found errors on runtime.
 

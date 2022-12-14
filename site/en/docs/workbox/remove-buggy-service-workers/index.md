@@ -62,7 +62,7 @@ When a service worker doesn't handle requests,
 those requests pass through to the browser as if no service worker was present.
 Once a no-op service worker is deployed, the buggy service worker can be fixed and deployed as an update later.
 
-This approach works in part because browsers [have strong safeguards against placing service workers in the HTTP cache](https://developers.google.com/web/updates/2019/09/fresher-sw), and because they perform byte-for-byte checks of a service worker's contents for updates.
+This approach works in part because browsers [have strong safeguards against placing service workers in the HTTP cache](/blog/fresher-sw/), and because they perform byte-for-byte checks of a service worker's contents for updates.
 These defaults make it possible to deploy a no-op replacement for a buggy service worker to fix the problem quickly.
 
 {% Aside %}
@@ -82,7 +82,7 @@ but additional measures can be taken if necessary.
 Sometimes a previously installed service worker's URL is unknown.
 This might be because it is versioned (for example contains a hash in its file name).
 In this case it can be a challenge to deploy a no-op service worker that matches the URL of each old service worker that might be registered.
-[This goes against best practices](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#avoid-url-change),
+[This goes against best practices](https://web.dev/service-worker-lifecycle/#avoid-url-change),
 as developers likely won't remember every hash for every service worker version that was deployed.
 
 Fortunately, a helpful HTTP request header is sent with a request for a service worker script:

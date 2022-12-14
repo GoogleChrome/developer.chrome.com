@@ -15,7 +15,7 @@ generates a response after receiving a fetch event.
 apply them in your service worker.
 
 We won't go into much detail outside of the strategies supported by Workbox,
-but you can [learn more in the Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/).
+but you can [learn more in the Offline Cookbook](https://web.dev/offline-cookbook/).
 
 ## Using Strategies
 
@@ -31,7 +31,7 @@ the caching strategies directly without `workbox-routing`.
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/CjsxJKEDAzC6l9qezYaO.png", alt="Stale While Revalidate Diagram", width="800", height="388" %}
 
-The [stale-while-revalidate](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
+The [stale-while-revalidate](https://web.dev/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond to the request as quickly as possible with a
 cached response if available, falling back to the network request if it's
 not cached. The network request is then used to update the cache. As opposed to
@@ -58,7 +58,7 @@ registerRoute(
 
 Offline web apps will rely heavily on the cache, but for assets that are
 non-critical and can be gradually cached, a
-[cache first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
+[cache first](https://web.dev/offline-cookbook/#cache-falling-back-to-network)
 is the best option.
 
 If there is a Response in the cache, the Request will be fulfilled using the
@@ -78,7 +78,7 @@ registerRoute(({request}) => request.destination === 'style', new CacheFirst());
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/jP2SpragluJprmpiiZYt.png", alt="Network First Diagram", width="800", height="388" %}
 
 For requests that are updating frequently, the
-[network first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
+[network first](https://web.dev/offline-cookbook/#network-falling-back-to-cache)
 strategy is the ideal solution. By default, it will try to fetch the latest
 response from the network. If the request is successful, it'll put the response
 in the cache. If the network fails to return a response, the cached response
@@ -99,7 +99,7 @@ registerRoute(
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lSmhYmQTXgGJKU773wAR.png", alt="Network Only Diagram", width="800", height="272" %}
 
 If you require specific requests to be fulfilled from the network, the
-[network only](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
+[network only](https://web.dev/offline-cookbook/#network-only)
 is the strategy to use.
 
 ```js
@@ -113,7 +113,7 @@ registerRoute(({url}) => url.pathname.startsWith('/admin/'), new NetworkOnly());
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/wQ6arISYebhPxC1qJ7Fp.png", alt="Cache Only Diagram", width="800", height="272" %}
 
-The [cache only](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
+The [cache only](https://web.dev/offline-cookbook/#cache-only)
 strategy ensures that responses are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 

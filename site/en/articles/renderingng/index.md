@@ -287,7 +287,7 @@ with code that runs on the compositor thread.
 In addition to explicit web APIs,
 RenderingNG allowed us to ship several very significant "automatic features" that benefit all sites:
 
-- [Site Isolation](https://developers.google.com/web/updates/2018/07/site-isolation):
+- [Site Isolation](/blog/site-isolation/):
 puts cross-origin iframes in different CPU processes,
 for better security and performance isolation.
 - [Vulkan](https://www.vulkan.org/),
@@ -599,7 +599,7 @@ Definitions of terms in the chart above:
 Mojo
 : A next-generation IPC subsystem for Chromium.
 
-Surface 
+Surface
 : A concept that is part of the Viz project design.
 
 ## Conclusion
