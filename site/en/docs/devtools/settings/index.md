@@ -580,6 +580,8 @@ You can find the same option in [Console > Settings](/docs/devtools/console/refe
 
 ### Persistence
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable local overrides** makes DevTools persist changes you make to sources across page loads. For more information, see [Local Overrides](/docs/devtools/workspaces/#overrides).
+
 ### Debugger {: #debugger }
 
 This section lists options that control **Debugger** behavior.
