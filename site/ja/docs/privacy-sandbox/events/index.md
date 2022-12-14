@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
 title: Privacy Sandbox 関連イベント
-subhead: |2
-
+subhead: >
   オンラインおよびオフライン イベントに関する情報とリソース
-description: |2
-
+description: >
   オンラインおよびオフライン イベントに関する情報とリソース
-date: '2022-08-19'
-updated: '2022-12-09'
+date: 2022-08-19
+updated: 2022-12-09
 authors:
   - samdutton
   - mihajlija
