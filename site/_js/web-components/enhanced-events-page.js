@@ -25,40 +25,37 @@ export class EnhancedEventsPage extends BaseElement {
   constructor() {
     super();
 
-    this.selectedValues = {
+    this.selectedFilters = {
       topics: [],
       location: [],
       googler: [],
     };
 
-    this.filters = this.querySelectorAll('.events-filter');
-
+    this.filterElements = this.getFilterElements();
     this.mobileElements = this.getMobileElements();
+  }
 
-    //todo - remove these on d/c
-    this.filters.forEach(ele => {
-      ele.addEventListener('change', e => {
-        const t = e.target;
-
-        if (!(t instanceof EnhancedSelect)) {
-          return;
-        }
-
-        this.selectedValues[t.name] = t.value;
-      });
-    });
+  static get properties() {
+    return {
+      selectedFilters: {type: Object, state: true},
+    };
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.mobileElements.handleConnect();
+    this.filterElements.handleConnect();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     this.mobileElements.handleDisconnect();
+    this.filterElements.handleDisconnect();
   }
 
+  /**
+   * @returns {{handleConnect: function, handleDisconnect: function, opener: Element, filters: Element}}
+   */
   getMobileElements() {
     const filters = this.querySelector('#mobile-filters');
     const opener = this.querySelector('#mobile-filters-opener');
@@ -91,6 +88,40 @@ export class EnhancedEventsPage extends BaseElement {
       handleDisconnect: () => {
         opener.removeEventListener('click', handleOpen);
         filters.removeEventListener('click', closeOnBackdropClick);
+      },
+    };
+  }
+
+  /**
+   * @returns {{handleConnect: function, handleDisconnect: function, filters: NodeListOf<Element>}}
+   */
+  getFilterElements() {
+    const filters = this.querySelectorAll('.events-filter');
+
+    const clickHandler = e => {
+      const t = e.target;
+
+      if (!(t instanceof EnhancedSelect)) {
+        return;
+      }
+
+      this.selectedFilters = {
+        ...this.selectedFilters,
+        ...{[t.name]: t.value},
+      };
+    };
+
+    return {
+      filters,
+      handleConnect: () => {
+        filters.forEach(ele => {
+          ele.addEventListener('change', clickHandler);
+        });
+      },
+      handleDisconnect: () => {
+        filters.forEach(ele => {
+          ele.removeEventListener('change', clickHandler);
+        });
       },
     };
   }
