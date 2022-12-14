@@ -18,7 +18,6 @@ sessions:
       software engineer at Fitbit.
     topics:
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
     videoUrl: https://www.youtube.com/watch?v=jXZd-HzKgM4
