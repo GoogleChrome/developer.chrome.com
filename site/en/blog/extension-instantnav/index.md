@@ -9,7 +9,6 @@ hero: 'image/zKrSUSkPboWMTTSEkowJbqw5Egi2/r5IdmaTdE5wBS2d6CCQY.png'
 alt: >
   Instant navigation in a tab.
 date: 2022-11-30
-updated: 2022-12-14
 tags:
  - extensions-news
 ---
