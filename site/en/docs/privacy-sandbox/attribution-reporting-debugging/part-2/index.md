@@ -339,7 +339,7 @@ Pick a verbose debug report that's simple to test for. `trigger-no-matching-sour
 
 1. Open `chrome://attribution-internals` in your browser.
 2. Using the site you have Attribution Reporting set up on, trigger an attribution (convert). Given that there was no ad engagement (impression or click) before that conversion, you should expect a verbose debug report of type `trigger-no-matching-source` to be generated.
-3. In `chrome://attribution-internals`, open the **Verbose debug reports** tab and check that a verbose debug report of type `trigger-event-excessive-reports` has been generated.
+3. In `chrome://attribution-internals`, open the **Verbose debug reports** tab and check that a verbose debug report of type `trigger-no-matching-source` has been generated.
 4. On your server, verify that your endpoint has immediately received this verbose debug report.
 
 {% endDetails %}
