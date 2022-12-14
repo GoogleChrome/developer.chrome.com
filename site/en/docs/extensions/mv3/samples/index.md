@@ -35,7 +35,7 @@ To find all examples of a specific Chrome API use Github's search engine to look
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/2OW6hjG5RLoupNCzZk8u.png", alt="Searching for chrome.tabs in the extension Github repository", width="800", height="122", class="screenshot screenshot--filled"  %}  <figcaption>
-Chrome.tabs search in the extension Github repository
+<code>Chrome.tabs</code> search in the extension Github repository.
   </figcaption>
 </figure>
 
@@ -49,8 +49,8 @@ To test these examples in your local machine, follow these steps:
 1. Navigate to the directory of the extension you want to try.
 1. [Load your extension locally][dev-basics-locally].
 
-Each extension example includes a `README.md` with detailed instructions on how the extension works.
-Read it carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
+Each extension example includes a `README.md` with instructions on how the extension works.
+Read the instructions carefully; each extension is different. For example, some extensions run by clicking on the extension icon, while others run automatically but only run on specific sites. 
 
 ## Contributing samples {: #collaborating }
 
