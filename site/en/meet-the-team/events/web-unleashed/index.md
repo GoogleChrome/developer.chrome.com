@@ -25,7 +25,7 @@ sessions:
       - Web UI
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/nN3xO8/now-and-next-in-responsive-design
     videoUrl: null
   - speaker: addyosmani
     title: >-
