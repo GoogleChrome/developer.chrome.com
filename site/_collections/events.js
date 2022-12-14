@@ -41,6 +41,11 @@ const getEvents = memoize(({collections, locale = 'en'}) => {
         sessions,
         image: event.data.image,
         topics: [...new Set(sessions.flatMap(s => s.topics))],
+        googlers: sessions.flatMap(s => {
+          return s.speaker
+            ? s.speaker.handle
+            : s.participants.map(p => p.handle);
+        }),
       };
     });
 });
