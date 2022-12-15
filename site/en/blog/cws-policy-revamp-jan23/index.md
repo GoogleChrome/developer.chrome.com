@@ -45,4 +45,4 @@ If you have any questions, you can contact developer support.
 Thank you for your cooperation, and for your participation in the Chrome
 extension ecosystem!
 
-- The Google Chrome Web Store team
+&mdash; The Google Chrome Web Store team
