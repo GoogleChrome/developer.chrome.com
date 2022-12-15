@@ -255,7 +255,7 @@ Example of the response sent back by this server:
 #### A perfect use case for the new Server-Timing API {: #servertiming }
 
 The [Server-Timing](https://w3c.github.io/server-timing/) API allows you to
-communicate server performance metrics (such as request/response times and db lookups)
+communicate server performance metrics (such as request/response times and database lookups)
 back to the browser. Client code can use this information to track overall
 performance of a web app.
 
