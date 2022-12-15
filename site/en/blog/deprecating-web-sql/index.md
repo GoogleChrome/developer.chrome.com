@@ -10,7 +10,7 @@ description: >
 authors:
   - thomassteiner
 date: 2022-08-31
-updated: 2022-11-14
+updated: 2022-12-13
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/yUp8lfaCt4EmxmVei3lj.jpg
 alt: Filing cabinet symbolizing a database.
 tags:
@@ -56,8 +56,8 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
 - [📍 We are here.] Web SQL access in **insecure contexts** is no longer available as of
-  **Chromium&nbsp;110** (Tue, Feb 7, 2023). An **enterprise policy** to keep using the feature is available from
-  **Chromium&nbsp;110** (Tue, Feb 7, 2023) to **Chromium&nbsp;111** Tue, Mar 7, 2023.
+  **Chromium&nbsp;110** (Tue, Feb 1, 2023). An **enterprise policy** to keep using the feature is available from
+  **Chromium&nbsp;110** (Tue, Feb 1, 2023) to **Chromium&nbsp;111** Tue, Mar 1, 2023.
 - [🔮 In the future.] The final step will be to remove Web SQL completely **in all contexts**, but
   no date has been set for this step yet.
 
