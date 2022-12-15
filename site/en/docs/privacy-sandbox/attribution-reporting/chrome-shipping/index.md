@@ -60,8 +60,16 @@ on an interoperable standard that satisfies the underlying use case.
 Shipping the Attribution Reporting API offers concrete benefits in terms of
 laying the groundwork for the future of measurement on the web platform:
 
-* Research: Operationalizing the API will give Chrome and other browser vendors key insights needed to design a future interoperable API. We will bring our early insights to venues like the PATCG to improve any future standards.
-* Development paradigm shift: Developers migrating to Attribution Reporting API will ramp up on new technical concepts, such as noise addition, that are likely to be key for future privacy-preserving measurement regardless of the specific API. Developers will also start to adapt their other systems to noisy data. We will do our best to provide developers with the documentation and support they need to handle noise and concepts that are likely to be transferable.
+* Research: Operationalizing the API will give Chrome and other browser vendors
+  key insights needed to design a future interoperable API. We'll bring our
+  early insights to venues like the PATCG to improve any future standards.
+* Development paradigm shift: Developers migrating to Attribution Reporting API
+  will ramp up on new technical concepts, such as noise addition, that are
+  likely to be key for future privacy-preserving measurement regardless of the
+  specific API. Developers will also start to adapt their other systems to
+  noisy data. We'll do our best to provide developers with the documentation
+  and support they need to handle noise and concepts that are likely to be
+  transferable.
 
 These benefits are all in addition to the fundamental improvement to user
 privacy that comes with phasing out third-party cookies—which we believe
