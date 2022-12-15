@@ -62,7 +62,7 @@ Finally, I'm amazed at the pace of innovation happening in computing generally, 
 
 Our focus in 2022 was to **make the web work better for everyone**. And for me, it's going to be our mission for the years to come.
 
-Wow, that was energizing. I hope you are all equally energized about the future of the web. And to keep that energy going, we've put together the key highlights of 2022 in this video below.
+Wow, that was energizing. I hope you are all equally energized about the future of the web. And to keep that going, we've put together the key highlights of 2022 in this video below.
 
 {% YouTube id='W9O4CuSUKb8' %}
 
