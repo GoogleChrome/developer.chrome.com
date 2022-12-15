@@ -39,7 +39,7 @@ To compare cookie-based conversion measurement results with Attribution Reportin
 
 ### Overview
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/vD2ZSI0NXrP6MziDjvmz.png", alt="Steps for a loss analysis", width="800", height="609" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/VZpOhA8ra1QtQ9W34tBH.png", alt="Steps for a loss analysis", width="800", height="609" %}
 
 Use the debug keys (`<source_debug_key, trigger_debug_key>` pair) to map cookie conversions to success debug reports.
 **For each cookie conversion, at conversion time, did you receive a corresponding success debug report?**
