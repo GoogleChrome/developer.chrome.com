@@ -390,8 +390,8 @@ Read the [migration guide](/blog/reporting-api-migration/#network-error-logging)
       <tr>
         <td>CSP violation (Level 3 only)*</td>
         <td>✔ Yes</td>
-        <td>✘ No</td>
-        <td>✘ No</td>
+        <td>✔ Yes</td>
+        <td>✔ Yes</td>
         <td>✘ No</td>
         <td>✔ Yes</td>
       </tr>
