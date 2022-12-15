@@ -39,7 +39,7 @@
 
           {# Use tag to generate collection #}
           {% for post in collections.tags[collection_tag].posts.en %}
-            {% if loop.index0 < 6 %}
+            {% if loop.index0 < 12 %}
               {{ blogCard(post) }}
             {% endif %}
           {% endfor %}
