@@ -25,7 +25,7 @@ articles:
 
 The existence of an `articles` list will always be prioritized over tags.
 
-### Tagged collection.
+### Tagged collection
 
 Choose a tag for your collection. It will become the `<COLLECTION_NAME>`. You can use an
 [existing tag](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/tags.yml)

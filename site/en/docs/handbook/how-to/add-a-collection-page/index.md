@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Add a collection page
-description: 'Add a landing page for a project or initiative.'
+description: >
+  Add a landing page for a project or initiative
 date: 2022-03-08
 ---
 
