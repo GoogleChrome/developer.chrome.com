@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Add a collection page
-description: 'Add a landing page for a project or initiative.'
-date: 2022-12-14
+description: 'Add a landing page within a doc set for a project or initiative.'
+date: 2022-12-15
 ---
 
 These collections can live in your documentation as either tradition [collections](/docs/handbook/how-to/add-a-collection-page/), which are built with tags, or like a [landing page](/docs/handbook/how-to/add-a-landing-page/) with a customized set of docs or articles.
