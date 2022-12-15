@@ -5,8 +5,7 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - dsli
-date: 2022-09-28
-updated: 2022-12-09
+date: 2022-12-09
 hero: image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/fjebBemTd8DpKrEe3ya3.png
 alt: Image with extensions logo and text saying Manifest V3 transition timeline
 tags:
