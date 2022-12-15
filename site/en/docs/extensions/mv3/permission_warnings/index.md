@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Declare permissions and warn users"
 seoTitle: "Chrome Extensions: declare permissions and warn users"
 date: 2012-09-18
-updated: 2023-01-04
+updated: 2022-12-20
 description: >
   How to implement permissions to protect your users and your Extension.
 ---
@@ -340,6 +340,11 @@ the steps in [Viewing Warnings](#view_warnings).
 When an extension is updated to include a new permission that [triggers a warning][section-warnings] it may temporarily disable it. The user will have to
 re-enable it after agreeing to any new warnings.
 
+If the user manually updates an extension that now includes the [tabs][api-tabs] permission, they will get
+a warning on the management page.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gotD9HeWU8LsFdacTQkq.png",
+       alt="Adding tabs Permission", height="193", width="481" %}
 
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
@@ -349,6 +354,7 @@ re-enable it after agreeing to any new warnings.
        alt="Agree to permissions", height="159", width="286" %}
 
 This can be avoided by making the new feature optional and adding new permission updates to
+[`optional_permissions`][api-optional-perms] in the [manifest][doc-manifest].
 [`optional_permissions`][api-optional-perms] in the [manifest][doc-manifest].
 
 [api-optional-perms]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
