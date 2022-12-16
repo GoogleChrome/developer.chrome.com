@@ -14,7 +14,7 @@ alt: >
   A bird nest with a couple of blue eggs inside, surrounded by lush greenery.
 ---
 
-After we ran [the previous survey to help choose the syntax for CSS Nesting](/blog/help-css-nesting), the CSS Working Group continued debate over the best way to define nesting in CSS. During the discussions new syntax ideas were suggested. To help the Working Group choose between any of these syntaxes, a new survey is launched.
+After we ran [the previous survey to help choose the syntax for CSS Nesting](/blog/help-css-nesting), the CSS Working Group continued debate over the best way to define nesting in CSS. During the discussions new syntax ideas were suggested. To help the Working Group choose between any of these syntaxes, there is a new survey.
 
 ## The Options
 
