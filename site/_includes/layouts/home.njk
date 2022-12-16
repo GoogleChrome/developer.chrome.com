@@ -19,12 +19,12 @@
         ) }}
     <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
       <div class="display-flex direction-column grid-gap-500">
-        {% set post = helpers.findByUrl(collections.all, '/blog/insider-oct-2022', 'en') %}
+        {% set post = helpers.findByUrl(collections.all, '/blog/insider-dec-22', 'en') %}
         {% if post %}
         {{ featuredPostCard(post, {
           icon: 'star',
           actionText: 'Discover',
-          actionUrl: '/blog/insider-oct-2022/'
+          actionUrl: '/blog/insider-dec-22/'
         }) }}
         {% endif %}
         {% set blog = 'blog-' + locale %}
