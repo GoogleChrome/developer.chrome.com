@@ -247,7 +247,7 @@ information to provide faster and smoother web experience.
 ### Use Lighthouse
 
 If you want to make your code be nice to the browser but have no idea where to start,
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is a tool that runs audit of any website and gives you a
+[Lighthouse](/docs/lighthouse/overview/) is a tool that runs audit of any website and gives you a
 report on what's being done right and what needs improvement. Reading through the list of audits
 also gives you an idea of what kind of things a browser cares about.
 

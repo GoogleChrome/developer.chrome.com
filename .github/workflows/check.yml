@@ -184,9 +184,15 @@ jobs:
           filters: |
             frontend:
               - 'package.json'
-              - 'site/_js/**/*.js'
-              - 'site/_includes/**/*.njk'
-              - 'site/_scss/**/*.scss'
+              - 'site/_filters/**.js'
+              - 'site/_includes/**'
+              - 'site/_js/**.js'
+              - 'site/_plugins/**.js'
+              - 'site/_scss/**.scss'
+              - 'site/_shortcodes/**.js'
+              - 'site/_transforms/**.js'
+              - 'site/_utils/**.js'
+              - 'site/en/content-types/**'
 
       - name: Cloning repository
         uses: actions/checkout@v3

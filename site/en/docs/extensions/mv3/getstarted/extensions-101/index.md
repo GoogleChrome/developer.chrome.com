@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Extensions 101'
+seoTitle: 'Chrome Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
 date: 2022-10-04
@@ -112,7 +113,7 @@ See [Extension quality guidelines][doc-single-purpose] for additional details.
 ## Distributing your extension {: #distribution }
 
 You can set up a developer account with the [Chrome Web Store][chrome-web-store] to host and
-distribute your extension. Bare in mind that extensions must adhere to the [developer program
+distribute your extension. Bear in mind that extensions must adhere to the [developer program
 policies][doc-cws-policy]. 
 
 See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribute your extension.

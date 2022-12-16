@@ -7,10 +7,10 @@ description: >
   Enable navigation preload, to get a network response for navigation requests faster.
 ---
 
-"[Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload)" does a
+"[Speed up Service Worker with Navigation Preloads](https://web.dev/navigation-preload/)" does a
 great job of explaining what navigation preload is, and the benefits it offers to web apps whose
 service worker does not explicitly handle
-[navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
+[navigation requests](/docs/workbox/caching-strategies-overview/).
 
 ## What does this module do?
 

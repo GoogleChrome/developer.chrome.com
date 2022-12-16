@@ -56,7 +56,7 @@ Another issue is styling scrollbars. They are notoriously unstylable — or at
 least not styleable enough. What if I want a [nyan cat as my
 scrollbar](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)?
 Whatever technique you choose, building a custom scrollbar is neither
-performant, nor [easy](https://developers.google.com/web/updates/2017/03/custom-scrollbar).
+performant, nor [easy](/blog/custom-scrollbar/).
 
 The point is all of these things are awkward and hard to impossible to
 implement efficiently. Most of them rely on events and/or
@@ -478,9 +478,7 @@ especially important for AnimationWorklet.
 
 You might know that certain CSS properties are fast to animate, while others are
 not. Some properties just need some work on the GPU to be animated, while others
-force the browser to re-layout the entire document. Sites like
-[CSSTriggers.com](https://csstriggers.com/) show you which properties are fast
-to animate, and which are not.
+force the browser to re-layout the entire document.
 
 In Chrome (as in many other browsers) we have a process called the compositor,
 whose job it is — and I'm very much simplifying here — to arrange layers and

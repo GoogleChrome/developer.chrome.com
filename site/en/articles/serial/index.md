@@ -678,9 +678,9 @@ and let us know where and how you're using it.
 Thanks to [Reilly Grant] and [Joe Medley] for their reviews of this article.
 Aeroplane factory photo by [Birmingham Museums Trust] on [Unsplash].
 
-[capabilities project]: https://developers.google.com/web/updates/capabilities
-[unlocking new capabilities for the web]: /fugu-status/
-[webusb]: https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
+[capabilities project]: /blog/capabilities/
+[unlocking new capabilities for the web]: /blog/fugu-status/
+[webusb]: /articles/usb/
 [arduino create]: https://create.arduino.cc/
 [betaflight configurator]: https://github.com/betaflight/betaflight-configurator
 [espruino web ide]: http://espruino.com/ide

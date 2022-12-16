@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Web APIs"
+seoTitle: "Web APIs for Chrome Apps"
 date: 2012-09-17
 updated: 2017-03-01
 description: Chrome Apps can use all the APIs that are available to websites.

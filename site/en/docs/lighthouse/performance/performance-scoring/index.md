@@ -30,7 +30,7 @@ problems include:
 
 Furthermore, even though Lighthouse can provide you a single overall Performance score, it might be more
 useful to think of your site performance as a distribution of scores, rather than a single number.
-See the introduction of [User-Centric Performance Metrics](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics)
+See the introduction of [User-Centric Performance Metrics](https://web.dev/user-centric-performance-metrics/)
 to understand why.
 
 ## How the Performance score is weighted {: #weightings }
@@ -133,8 +133,9 @@ impact on user-perceived performance.
 
 ### How metric scores are determined {: #metric-scores }
 
-Once Lighthouse is done gathering the performance metrics (mostly reported in milliseconds), it converts each raw metric value into a metric score from 0 to 100 by looking where the metric value falls on its Lighthouse scoring distribution. The scoring distribution is
-a log-normal distribution derived from the performance metrics of real website performance
+Once Lighthouse has gathered the performance metrics (mostly reported in milliseconds), it converts each raw metric
+value into a metric score from 0 to 100 by looking where the metric value falls on its Lighthouse scoring distribution.
+The scoring distribution is a log-normal distribution derived from the performance metrics of real website performance
 data on [HTTP Archive](https://httparchive.org/).
 
 For example, Largest Contentful Paint (LCP) measures when a user perceives that the
@@ -143,7 +144,12 @@ the user initiating the page load and the page rendering its primary content. Ba
 website data, top-performing sites render LCP in about 1,220ms, so that metric value is mapped to
 a score of 99.
 
-Going a bit deeper, the Lighthouse scoring curve model uses HTTPArchive data to determine two control points that then set the shape of a [log-normal](https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law) curve. The 25th percentile of HTTPArchive data becomes a score of 50 (the median control point), and the 8th percentile becomes a score of 90 (the good/green control point). While exploring the scoring curve plot below, note that between 0.50 and 0.92, there's a near-linear relationship between metric value and score. Around a score of 0.96 is the "point of diminishing returns" as above it, the curve pulls away, requiring increasingly more metric improvement to improve an already high score.
+Going a bit deeper, the Lighthouse scoring curve model uses HTTPArchive data to determine two control points that then set
+the shape of a [log-normal](https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law) curve. The 25th percentile of HTTPArchive
+data becomes a score of 50 (the median control point), and the 8th percentile becomes a score of 90 (the good/green control point).
+While exploring the scoring curve plot below, note that between 0.50 and 0.92, there's a near-linear relationship between metric value and score.
+Around a score of 0.96 is the "point of diminishing returns" as above it, the curve pulls away, requiring increasingly more metric improvement to
+improve an already high score.
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/y321cWrLLbuY4SHlvYCc.png", alt="Image of the scoring curve for TTI", width="600", height="329" %}
@@ -154,7 +160,9 @@ Going a bit deeper, the Lighthouse scoring curve model uses HTTPArchive data to 
 
 ### How desktop vs mobile is handled {: #desktop }
 
-As mentioned above, the score curves are determined from real performance data. Prior to Lighthouse v6, all score curves were based on mobile performance data, however a desktop Lighthouse run would use that. In practice, this led to artificially inflated desktop scores. Lighthouse v6 fixed this bug by using specific desktop scoring. While you certainly can expect overall changes in your perf score from 5 to 6, any scores for desktop will be significantly different.
+As mentioned above, the score curves are determined from real performance data. Prior to Lighthouse v6, all score curves were based on mobile performance data,
+however a desktop Lighthouse run would use that. In practice, this led to artificially inflated desktop scores. Lighthouse v6 fixed this bug by using specific desktop scoring.
+While you certainly can expect overall changes in your perf score from 5 to 6, any scores for desktop will be significantly different.
 
 ### How scores are color-coded {: #color-coding }
 
@@ -164,7 +172,8 @@ The metrics scores and the perf score are colored according to these ranges:
 - 50 to 89 (orange): Needs Improvement
 - 90 to 100 (green): Good
 
-To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected. For example, taking a score from 99 to 100 needs about the same amount of metric improvement that would take a 90 to 94.
+To provide a good user experience, sites should strive to have a good score (90-100). A "perfect" score of 100 is extremely challenging to achieve and not expected.
+For example, taking a score from 99 to 100 needs about the same amount of metric improvement that would take a 90 to 94.
 
 ### What can developers do to improve their performance score?
 

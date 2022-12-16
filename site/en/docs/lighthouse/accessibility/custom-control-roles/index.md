@@ -56,7 +56,7 @@ then add `role="button"` and `aria-pressed="false"` to the `<div>`.
   height: 346
 } #}
 
-Now screen readers will announces the role and interactive state for the `<div>`.
+Now screen readers will announce the role and interactive state for the `<div>`.
 
 ## Why this matters
 

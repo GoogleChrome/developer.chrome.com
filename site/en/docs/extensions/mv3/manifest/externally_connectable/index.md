@@ -1,12 +1,13 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'externally_connectable'
+layout: "layouts/doc-post.njk"
+title: "externally_connectable"
+seoTitle: "Chrome Extensions Manifest: externally_connectable"
 date: 2013-08-21
 updated: 2014-10-31
 description: Reference documentation for the externally_connectable property of manifest.json.
 ---
 
-The `externally_connectable` manifest property declares which extensions and web pages can
+The `"externally_connectable"` manifest property declares which extensions and web pages can
 connect to your extension via [runtime.connect][runtime-connect] and [runtime.sendMessage][runtime-sendmessage].
 
 For a tutorial on message passing see [cross-extension messaging][messages-other-exts] and [sending messages

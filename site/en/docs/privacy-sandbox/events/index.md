@@ -6,9 +6,10 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2022-09-15
+updated: 2022-12-09
 authors:
  - samdutton
+ - mihajlija
 ---
 
 Learn about forthcoming events, and get access to resources for events that have
@@ -16,14 +17,21 @@ already taken place.
 
 ## Future events
 
-### Privacy Sandbox Office Hours: Ask Me Anything {: #oh05}
-**Privacy Sandbox Developer Office Hours #5**
+### First-Party Sets Office Hours {: #oh06}
+**Privacy Sandbox Developer Office Hours #6**
 
-**Session A (APAC time-friendly)** 
-* Monday, September 19, 8 – 9:00pm PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
-* Video call: [meet.google.com/wqr-ubfx-tze]([url](https://meet.google.com/wqr-ubfx-tze))
-* Or dial: ‪(US) +1 503-755-4475‬ PIN: ‪885 701 945‬#
-* More phone numbers: [tel.meet/wqr-ubfx-tze?pin=6856114658371]([url](https://tel.meet/wqr-ubfx-tze?pin=6856114658371))
+
+**Session A (NA/EMEA/LatAm time-friendly)** 
+* Thursday, December 15, 8 – 9:00am PST
+* Video call: [https://meet.google.com/xnp-mxct-qvd]([url](https://meet.google.com/xnp-mxct-qvd))
+* Or dial:  ‪(US) +1 651-867-0444‬ PIN: ‪530 909 558‬#
+* More phone numbers: [https://tel.meet/xnp-mxct-qvd?pin=9840654025397]([url](https://tel.meet/xnp-mxct-qvd?pin=9840654025397))
+
+**Session B (APAC time-friendly, Japanese language)** 
+* Tuesday, December 20, 6 – 7:00pm PST • Wednesday 21 December, 11 – 12:00pm JST
+* Video call: [https://meet.google.com/xnp-mxct-qvd]([url](https://meet.google.com/xnp-mxct-qvd))
+* Or dial:  ‪(US) +1 651-867-0444‬ PIN: ‪530 909 558‬#
+* More phone numbers: [https://tel.meet/xnp-mxct-qvd?pin=9840654025397]([url](https://tel.meet/xnp-mxct-qvd?pin=9840654025397))
 
 Subscribe to the following mailing lists to be notified of other events:
 
@@ -43,6 +51,16 @@ if you plan on participating.
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 
 ## Past events
+
+### Privacy Sandbox Office Hours: Ask Me Anything {: #oh05}
+**Privacy Sandbox Developer Office Hours #5**
+
+**Session A (APAC time-friendly)** 
+* Monday, September 19, 8 – 9:00am PDT • Tuesday 20 September, 8:30am IST / 11am SIN / 1pm AEST / 3pm NZST
+* Video call: [meet.google.com/wqr-ubfx-tze]([url](https://meet.google.com/wqr-ubfx-tze))
+* Or dial: ‪(US) +1 503-755-4475‬ PIN: ‪885 701 945‬#
+* More phone numbers: [tel.meet/wqr-ubfx-tze?pin=6856114658371]([url](https://tel.meet/wqr-ubfx-tze?pin=6856114658371))
+
 
 ### Topics API Office Hours {: #oh04}
 **Privacy Sandbox Developer Office Hours #4**

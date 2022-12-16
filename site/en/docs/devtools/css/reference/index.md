@@ -316,7 +316,7 @@ To copy CSS:
      ```
    - **Copy property**. Copies only the `property` name.
    - **Copy value**. Copies only the `value`.
-   - **Copy rule**. Copies the entire CSS rule: 
+   - **Copy rule**. Copies the entire CSS rule:
      ```css
      selector[, selector] {
          property: value;
@@ -419,7 +419,7 @@ To change the length unit:
 
 1. Hover over the unit name and notice that it's underlined.
 1. Click on the unit name to select a unit from the drop-down.
-   
+
    <div style="margin-top: 20px;">
    {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}</div>
 
@@ -427,7 +427,7 @@ To change the length value:
 
 1. Hover over the unit value and notice that your pointer changes to a horizontal double-headed arrow.
 1. Drag horizontally to increase or decrease the value.
-   
+
    <div style="margin-top: 20px;">
    {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}</div>
 
@@ -776,7 +776,7 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
-[33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+[33]: https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/
 [36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function

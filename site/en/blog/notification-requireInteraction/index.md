@@ -67,5 +67,5 @@ function showNotifications() {
 [Try the demo](https://googlechrome.github.io/samples/notifications/requireInteraction.html).
 
 {% Aside %}
-Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://developers.google.com/web/fundamentals/push-notifications)
+Be sure to check out the full documentation including best practices for using [Web Push Notifications](https://web.dev/notifications)
 {% endAside %}

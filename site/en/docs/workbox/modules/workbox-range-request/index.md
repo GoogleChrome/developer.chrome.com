@@ -44,7 +44,7 @@ registerRoute(
 {% Aside %}
 There are some additional considerations to take into account when serving
 cached media content. Read more in the
-["Serve cached audio and video" recipe](https://developers.google.com/web/tools/workbox/guides/advanced-recipes#cached-av)
+["Serve cached audio and video" recipe](/docs/workbox/serving-cached-audio-and-video)
 {% endAside %}
 
 ## Advanced Usage

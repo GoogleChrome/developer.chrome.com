@@ -11,7 +11,8 @@ date: 2021-09-27
 hero: image/SHhb2PDKzXTggPGAYpv8JgR81pX2/9fCG7BsR8e5Md58xiGMV.jpg
 alt: Candle reflected in a window
 tags:
-  - extensions
+  - extensions-news
+  - cws
 
 ---
 
