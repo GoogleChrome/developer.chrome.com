@@ -66,6 +66,6 @@ While the snippets above are only used to demonstrate the basics of each proposa
 
 ## Cast your vote
 
-To cast your vote head over to [https://webkit.org/blog/13607/](https://webkit.org/blog/13607/). Voting is easy and requires no registration or anything like that. Simply choose “Option 5”, “Option 4”, or “Option 3” and hit Submit.
+To cast your vote head over to [https://webkit.org/blog/13607/](https://webkit.org/blog/13607/). Voting requires no registration, choose “Option 5”, “Option 4”, or “Option 3” and hit Submit.
 
 <a class="material-button button-filled color-bg bg-primary" href="https://webkit.org/blog/13607/">Cast your vote!</a>
