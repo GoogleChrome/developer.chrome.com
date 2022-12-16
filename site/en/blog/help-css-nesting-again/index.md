@@ -18,7 +18,7 @@ After we ran [the previous survey to help choose the syntax for CSS Nesting](/bl
 
 ## The Options
 
-Based on [the results of the previous survey](/blog/help-css-nesting-survey), options 1 and 2 are longer considered. Instead two new options–numbered 4 and 5–were added.
+Based on [the results of the previous survey](/blog/help-css-nesting-survey), options one and two are no longer being considered. Two new options (four and five) have been added.
 
 ### Option 5: Top-level nesting container
 
