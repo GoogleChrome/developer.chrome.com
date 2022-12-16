@@ -5,7 +5,7 @@ authors:
   - bramus
   - argyle
 description: >
-  The CSS Working Group is continuing a debate over the best way to define nesting in CSS. And if you are someone who writes CSS, we’d like your help.
+  The CSS Working Group is continuing a debate over the best way to define nesting in CSS. If you are someone who writes CSS, we’d like your help.
 date: 2022-12-16
 tags:
   - css
