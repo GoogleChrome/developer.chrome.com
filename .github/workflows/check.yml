@@ -95,8 +95,6 @@ jobs:
     needs: queue
     runs-on: ubuntu-latest
     env:
-      CLOUD_BUILD_KEY: ${{ secrets.CLOUD_BUILD_KEY }}
-      CLOUD_BUILD_SECRET: ${{ secrets.CLOUD_BUILD_SECRET }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
@@ -135,7 +133,7 @@ jobs:
           CHANGED_APP_FILES: ${{ steps.changes.outputs.app_files }}
           CHANGED_STATIC_FILES: ${{ steps.changes.outputs.static_files }}
         run: |
-          npx gulp stagePr
+          npm run stage:github -- awaitGoogleCloudBuild
 
       - name: Posting announcement
         uses: marocchino/sticky-pull-request-comment@v2
