@@ -78,6 +78,27 @@ To trigger touch events with your pointer:
 
 ## Emulate idle detector state {: #idle }
 
+Sometimes you might need to test how your website behaves when the user is idle. However, you can't be idle during testing.
+
+Use the **Sensors** tab to emulate idle states:
+
+1. [Open the **Sensors** tab](#open-sensors). For this tutorial, you can try it on this [demo page]().
+1. Enable the checkbox next to *Ephemeral* and, in the prompt, grant the demo page the idle detection permission. Then, reload the page.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1ymZFoBUlCOuksgUirQj.png", alt="Granting the idle detection permission on a demo page.", width="800", height="440" %}
+
+1. Under the **Emulate Idle detector State** drop-down, select one of the following:
+
+   - No idle emulation
+   - User active, screen unlocked
+   - User active, screen locked
+   - User idle, screen unlocked
+   - User idle, screen locked
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VVIvEubB2xO35NcYYSEF.png", alt="Selecting an idle and locked state on a demo page.", width="800", height="395" %}
+
+In this example, DevTools emulates an **User idle, screen locked** state and, in this case, the demo page starts the 10 second countdown to clear the canvas.
+
 
 [1]: https://web.dev/device-orientation/
 [2]: https://web.dev/device-orientation/#alpha
