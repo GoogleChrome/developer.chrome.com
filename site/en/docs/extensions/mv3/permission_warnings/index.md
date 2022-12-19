@@ -202,19 +202,28 @@ the steps in [Viewing Warnings][27].
           <li><code>"&lt;all_urls&gt;"</code></li>
         </ul>
       </td>
-      <td>Grants the extension access to all hosts. It may be possible to avoid declaring any host permissions by using
-        the <a href="#activeTab_permission">activeTab</a> permission.</td>
-      <td><strong>Read and change all your data on the websites you visit</strong></td>
+      <td>Grants the extension access to all hosts. Consider using
+        the <a href="/docs/extensions/mv3/manifest/activeTab/">activeTab</a> permission instead.</td>
+      <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
     <tr id="host">
       <td><code>"https://HostName.com/"</code></td>
-      <td>Grants the extension access to <code>"https://HostName.com/"</code>. It may be possible to avoid declaring any
-        host permissions by using the <a href="#activeTab_permission">activeTab</a> permission.</td>
+      <td>Grants the extension access to <code>"https://HostName.com/"</code>. Consider using the <a href="/docs/extensions/mv3/manifest/activeTab/">activeTab</a> permission instead.</td>
       <td><strong>Read and change your data on <code>HostName.com</code></strong></td>
+    </tr>
+    <tr id="accessibilityFeatures.modify">
+      <td><code>"accessibilityFeatures.modify"</code></td>
+      <td>Allows the extension to modify individual accessibility feature states. See <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
+      <td><strong>Change your accessibility settings</strong></td>
+    </tr>
+    <tr id="accessibilityFeatures.read">
+      <td><code>"accessibilityFeatures.read"</code></td>
+      <td>Allows the extension to read individual accessibility feature states. See <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
+      <td><strong>Read your accessibility settings</strong></td>
     </tr>
     <tr id="bookmarks">
       <td><code>"bookmarks"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/bookmarks">chrome.bookmarks</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/bookmarks">chrome.bookmarks</a> API.</td>
       <td><strong>Read and change your bookmarks</strong></td>
     </tr>
     <tr id="clipboardRead">
@@ -230,39 +239,44 @@ the steps in [Viewing Warnings][27].
     </tr>
     <tr id="contentSettings">
       <td><code>"contentSettings"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/contentSettings">chrome.contentSettings</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/contentSettings">chrome.contentSettings</a> API.</td>
       <td><strong>Change your settings that control websites' access to features such as cookies, JavaScript, plugins,
           geolocation, microphone, camera etc.</strong></td>
     </tr>
     <tr id="debugger">
       <td><code>"debugger"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/debugger">chrome.debugger</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/debugger">chrome.debugger</a> API.</td>
       <td>
         <ul>
           <li><strong>Access the page debugger backend</strong></li>
-          <li><strong>Read and change all your data on the websites you visit</strong></li>
+          <li><strong>Read and change all your data on all websites</strong></li>
         </ul>
       </td>
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
-      <td><strong>Block page content</strong></td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
+      <td><strong>Block content on any page</strong></td>
+    </tr>
+    <tr id="declarativeNetRequestFeedback">
+      <td><code>"declarativeNetRequestFeedback"</code></td>
+      <td>Grants the extension access to functions and events which return information on declarative rules matched. See the <a href="/docs/extensions/reference/declarativeNetRequest">chrome.declarativeNetRequest</a> API for details.</td>
+      <td><strong>Read your browsing history</strong></td>
     </tr>
     <tr id="desktopCapture">
       <td><code>"desktopCapture"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/desktopCapture">chrome.desktopCapture</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/desktopCapture">chrome.desktopCapture</a> API.</td>
       <td><strong>Capture content of your screen</strong></td>
     </tr>
     <tr id="downloads">
       <td><code>"downloads"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/downloads">chrome.downloads</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/downloads">chrome.downloads</a> API.</td>
       <td><strong>Manage your downloads</strong></td>
     </tr>
     <tr id="favicon">
       <td><code>"favicon"</code></td>
       <td>Allows the extension to use the Favicon API.</td>
-      <td><strong>Read the icons of the websites you visit.</strong></td>
+      <td><strong>Read the icons of the websites you visit</strong></td>
     </tr>
     <tr id="geolocation">
       <td><code>"geolocation"</code></td>
@@ -272,8 +286,13 @@ the steps in [Viewing Warnings][27].
     </tr>
     <tr id="history">
       <td><code>"history"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
       <td><strong>Read and change your browsing history</strong></td>
+    </tr>
+    <tr id="identity.email">
+      <td><code>"identity.email"</code></td>
+      <td> Grants the extension access to the email address through the <a href="/docs/extensions/reference/identity">chrome.identity</a> API.</td>
+      <td><strong>Know your email address</strong></td>
     </tr>
     <tr id="management">
       <td><code>"management"</code></td>
@@ -287,13 +306,13 @@ the steps in [Viewing Warnings][27].
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>
-      <td>Grants your extension access to the <a href="/docs/extensions/reference/notifications">chrome.notifications</a> API.</td>
+      <td>Grants the extension access to the <a href="/docs/extensions/reference/notifications">chrome.notifications</a> API.</td>
       <td><strong>Display notifications</strong></td>
     </tr>
     <tr id="pageCapture">
       <td><code>"pageCapture"</code></td>
       <td>Grants the extension access to the <a href="/docs/extensions/reference/pageCapture">chrome.pageCapture</a> API.</td>
-      <td><strong>Read and change all your data on the websites you visit</strong></td>
+      <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
     <tr id="privacy">
       <td><code>"privacy"</code></td>
@@ -303,7 +322,7 @@ the steps in [Viewing Warnings][27].
     <tr id="proxy">
       <td><code>"proxy"</code></td>
       <td>Grants the extension access to the <a href="/docs/extensions/reference/proxy">chrome.proxy</a> API.</td>
-      <td><strong>Read and change all your data on the websites you visit</strong></td>
+      <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
     <tr id="system.storage">
       <td><code>"system.storage"</code></td>
@@ -313,7 +332,7 @@ the steps in [Viewing Warnings][27].
     <tr id="tabCapture">
       <td><code>"tabCapture"</code></td>
       <td>Grants the extensions access to the <a href="/docs/extensions/reference/tabCapture">chrome.tabCapture</a> API.</td>
-      <td><strong>Read and change all your data on the websites you visit</strong></td>
+      <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
     <tr id="tabGroups">
       <td><code>"tabGroups"</code></td>
@@ -324,9 +343,7 @@ the steps in [Viewing Warnings][27].
       <td><code>"tabs"</code></td>
       <td>Grants the extension access to privileged fields of the <a
           href="/extensions/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
-        including <a href="/extensions/tabs">chrome.tabs</a> and <a href="/docs/extensions/reference/windows">chrome.windows</a>. In
-        many circumstances the extension will not need to declare the <code>"tabs"</code> permission to make use of
-        these APIs.</td>
+        including <a href="/docs/extensions/reference/tabs/#perms">chrome.tabs</a> and <a href="/docs/extensions/reference/windows">chrome.windows</a>.</td>
       <td><strong>Read your browsing history</strong></td>
     </tr>
     <tr id="topSites">
