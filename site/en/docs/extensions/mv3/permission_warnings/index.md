@@ -84,39 +84,11 @@ explain warnings.
 
 ## Substitute the activeTab permission {: #activeTab_permission }
 
-The `activeTab` permission grants temporary access to the site the user is on and allows the
-extension to use the [`"tabs"`][9] permission on the current tab. It replaces the need for
+The `"activeTab"` permission grants temporary access to the site the user is on and allows the
+extension to use host permissions on the current tab. It replaces the need for
 `"<all_urls>"` in many cases and displays no warning on installation.
 
-Without activeTab:
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jb7SZPwm4zPoOT7BVMw3.png",
-       alt="Permissions UI without activeTab", height="190", width="490" %}
-
-With activeTab:
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2QKcJJSz35suMsGSWXM4.png",
-       alt="Permissions UI with activeTab", height="190", width="490" %}
-
-The `activeTab` permission grants an extension temporary access to the currently active tab when the
-[user invokes][10] the extension. If the extension is compromised, the attacker would need to wait
-for the user to invoke the extension before obtaining access, and that access would only last until
-the tab is navigated or closed.
-
-While the `activeTab` permission is enabled for a tab, an extension can:
-
-- Call [`scripting.insertCSS`][12] on that tab.
-- Get the URL, title, and favicon for that tab via an API that returns a [`tabs.Tab`][13] object.
-- Intercept network requests in the tab to the tab's main frame origin using the [webRequest][14]
-  API. The extension temporarily gets host permissions for the tab's main frame origin.
-
-The following user gestures enable `activeTab`:
-
-- Executing a [browser action][15]
-- Executing a [page action][16]
-- Executing a [context menu item][17]
-- Executing a keyboard shortcut from the [commands API][18]
-- Accepting a suggestion from the [omnibox API][19]
+For more details, see [Using the activeTab permission][doc-activetab]. 
 
 ## Allowing access {: #allow_access }
 
