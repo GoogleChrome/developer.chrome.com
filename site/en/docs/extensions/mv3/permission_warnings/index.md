@@ -1,92 +1,38 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Declare permissions and warn users"
+title: "Permission warning guidelines"
 seoTitle: "Chrome Extensions: declare permissions and warn users"
 date: 2012-09-18
 updated: 2022-12-20
 description: >
   How to implement permissions to protect your users and your Extension.
+anchorRedirects:
+  activeTab_permission: /docs/extensions/mv3/manifest/activeTab/,
+  optional_events: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest,
+  declare_manifest: /docs/extensions/mv3/declare_permissions#manifest
+  required_permissions: /docs/extensions/mv3/declare_permissions#warnings
+  understanding_permissions: /docs/extensions/mv3/declare_permissions
 ---
 
-An extension's ability to access websites and most [Chrome APIs][doc-apis] is determined by its declared
-[permissions][doc-perms]. Permissions should be restricted to only what is needed for its functionality.
-Limiting permissions establishes an extension's capabilities and reduces possible incursion to data
-if the extension is compromised by an attacker. Protect extensions and their users by implementing
-explicit, minimal and optional permissions.
+## Overview {: overview }
 
-## Organize permissions {: #declare_manifest }
+Chrome extensions can do a wide variety of things, such as adding new features to websites or modifying the appearance of websites. To do all of these things, however, extensions often need to request certain permissions. Some permissions are considered to be relatively harmless and do not require a warning to be granted. Other permissions trigger a warning which displays a message that appears when an extension is installed. 
 
-Permissions are known strings that refer to a Chrome API or [match patterns][doc-match-patterns] that grant access to
-one or more hosts. They are listed in the manifest and specified as required permissions or
-[optional permissions][api-optional-perms].
+This article describes ways to protect extensions and their users by limiting permissions, implementing optional permissions and using the activeTab. It also includes a table with a list of all the permission warnings and how to check what warnings the user will see when installing your extension.
 
-```json
-{
-  "name": "Permissions Extension",
-  ...
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
-  "optional_permissions": [
-    "topSites",
-  ],
-  "host_permissions": [
-    "https://www.developer.chrome.com/*"
-  ],
-  "optional_host_permissions": [
-    "http://*/*", "https://*/*"
-  ],
-  ...
-  "manifest_version": 3
-}
-```
+## Best practices {: #best-practices }
 
-Limit required permissions to only what is needed for the extension's core functionality. An
-extension should not request more permissions than it needs; do not future-proof by requesting permissions that may be needed in a future update.
+Permission warnings exist to describe the capabilities granted by an API, but
+some warnings can be harder to understand than others. Users are more likely to install an extension designed with the following best practices.
 
-Permissions needed for optional features should be registered as [optional permissions][api-optional-perms]. This
-allows users to decide how much access they are willing to provide an extension and which features
-are desired.
+Limit permissions to support core functionality
+: Extensions are required to fulfill a [single purpose](www.tba.com). Choose the minimum permissions needed for the extension's core functionality and any additional features under optional permissions. This also allows your extension to comply with the [Use of permissions][cws-perms] policy. 
 
-## Identify required permissions {: #required_permissions }
+Offer additional features under optional permissions
+: Placing permissions with warnings as optional allows developers to provide an improved onboarding experience by explaining why a particular permission is needed. It also allows users to further customize their experience. See [Permissions API][api-optional-perms] for steps on how to implement optional permissions. 
 
-A simple extension may need to request multiple permissions, and many permissions display
-[warnings][section-warnings] on installation. Users are more likely to trust an extension with limited warnings or
-when permissions are explained to them.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png",
-       alt="Extension permission warnings on installation", height="369", width="486" %}
-
-Identify the core functionality of an extension and what permissions are required for it. Consider
-making features optional if they require permissions with warnings.
-
-## Trigger optional permissions with events {: #optional_events }
-
-The [optional permissions sample extension's][gh-opt-perms] core functionality is overriding the new tab page.
-One feature is displaying the user's goal of the day. This feature only requires the [storage][api-storage]
-permission, which does not include a warning.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
-       alt="Extension button that enables additional features", height="350", width="395" %}
-
-The extension has an additional feature; displaying the user's top sites. This feature requires the
-[topSites][api-top-sites] permission, which has a warning.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
-       alt="Extension warning for topSites API", height="173", width="480" %}
-
-Developing features that rely on permissions with warnings as optional and introducing those
-features organically gives users a risk-free introduction to the extension. Additionally, this
-allows users to further customize their experience with an extension and creates an opportunity to explain warnings.
-
-## Substitute the activeTab permission {: #activeTab_permission }
-
-The `"activeTab"` permission grants temporary access to the site the user is on and allows the
-extension to use host permissions on the current tab. It replaces
-`"<all_urls>"` in many cases and displays no warning on installation.
-
-For details, see [Using the activeTab permission][doc-activetab]. 
+Prefer the `"activeTab"` permission
+: This permission does **_not_** display a permission warning. It grants temporary host permission to the site the user is on. For more details, see [Understanding the activeTab permission][doc-activetab].
 
 ## Allowing access {: #allow_access }
 
@@ -101,17 +47,6 @@ An extension can detect if it is enabled in incognito mode by calling
 [`extension.isAllowedFileSchemeAccess()`][file-scheme-allow] .
 
 <!-- TODO duplicate ID (was previously #view_warnings) -->
-
-## Understanding permissions
-
-Permission warnings exist to describe the capabilities granted by an API to extension users, but
-some of these warnings may not be obvious at first. For instance, adding the `"tabs"`
-permission results in a seemingly unrelated warning: the extension can **Read your browsing
-activity**. Although the [Tabs API][api-tabs] might be used to only open new tabs, it can also be used
-to see the URL that is associated with every newly opened tab by using their [tabs.Tab][23] objects.
-
-When possible, implement [optional permissions][api-optional-perms] or a less powerful API to avoid alarming
-warnings.
 
 ## Viewing warnings {: #view_warnings }
 
@@ -377,3 +312,5 @@ This can be avoided by making the new feature optional and adding new permission
 [section-view-warnings]: #view_warnings
 [section-warnings]: #permissions_with_warnings
 
+[cws-perm]: /docs/webstore/program-policies/permissions/
+[doc-activetab]: /docs/extensions/mv3/manifest/activeTab/

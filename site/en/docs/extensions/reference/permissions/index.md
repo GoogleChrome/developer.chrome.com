@@ -2,6 +2,21 @@
 api: permissions
 ---
 
+## Overview {: #overview }
+
+Permission warnings exist to describe the capabilities granted by an API to extension users, but some of these warnings may not be obvious at first. The Permissions API allows developers to explain permission warnings and introduce new features organically which gives users a risk-free introduction to the extension. This allows users to decide how much access they are willing to provide an extension and which features are desired.
+
+For example, the [optional permissions extension's][gh-optional-perms] core functionality is overriding the new tab page. One feature is displaying the user's goal of the day. This feature only requires the [storage][api-storage] permission, which does not include a warning. The extension has an additional feature, that users can enable by clicking the following button: 
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
+       alt="Extension button that enables additional features", height="350", width="395" %}
+
+Displaying the user's top sites requires the [topSites][api-top-sites] permission, which has the following warning.
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
+       alt="Extension warning for topSites API", height="173", width="480" %}
+
+
 ## Implementing optional permissions
 
 ### Step 1: Decide which permissions are required and which are optional
@@ -199,3 +214,4 @@ chrome.permissions.remove({
 [16]: /docs/extensions/reference/ttsEngine
 [17]: /docs/extensions/mv2/permission_warnings
 [18]: /docs/extensions/mv2/permission_warnings
+[gh-optional-perms]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/optional_permissions

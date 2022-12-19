@@ -7,45 +7,75 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-To use most chrome.\* APIs, your extension must declare its intent in the permissions fields
-of the [manifest][1]. Extensions can request three categories of permissions, specified using the
-respective keys in the manifest:
+To use most [Chrome APIs][doc-apis], your extension must declare its intent in the permissions fields
+of the [manifest](#manifest). Extensions can request four categories of permissions, specified using the respective keys in the manifest:
 
-* **`permissions`** contain items from a list of known strings (such as "geolocation")
-* **`optional_permissions`** are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance
-* **`host_permissions`** contain one or more [match patterns][2] that give access to one or more hosts
+`"permissions"`
+: contain items from a list of known strings (such as `"geolocation"`).
+
+`"optional_permissions"`
+: are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance.
+
+`"host_permissions"`
+: contain one or more [match patterns][2] that give access to one or more hosts.
+
+`"optional_host_permissions"`
+: are like regular `host_permissions`, but are granted by the extension's user at runtime, rather than in advance.
 
 Permissions help to limit damage if your extension is compromised by
 malware. Some permissions are displayed to users for their consent before
-installation or at runtime as needed, as detailed in [Permission Warnings][3].
+installation or at runtime as needed, as detailed in [Permission with warnings](#warnings).
 
 {% Aside %}
-You should use optional permissions wherever the functionality of your extension
+You should use [optional permissions][api-perms] wherever the functionality of your extension
 permits, to provide users with informed control over access to resources and data.
 See the [platform vision][vision-optperms] to better understand this recommendation.
 {% endAside %}
 
-If an API requires you to declare a permission in the manifest, then its documentation tells you how
-to do so. For example, the [Storage][4] page shows you how to declare the "storage" permission.
+If a Chrome API requires you to declare a permission in the manifest, then its documentation tells you how to do so. For example, the [Storage API][4] page shows you how to declare the `"storage"` permission.
 
-Here's an example of the permissions part of a manifest file:
+## Manifest {: #manifest}
+
+The following is an example of the permissions part of a [manifest][1] file:
 
 ```json
-"permissions": [
-  "tabs",
-  "bookmarks",
-  "unlimitedStorage"
-],
-"optional_permissions": [
-  "unlimitedStorage"
-],
-"host_permissions": [
-  "http://www.blogger.com/",
-  "http://*.google.com/"
-],
+{
+  "name": "Permissions Extension",
+  ...
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "optional_permissions": [
+    "topSites",
+  ],
+  "host_permissions": [
+    "https://www.developer.chrome.com/*"
+  ],
+  "optional_host_permissions":[
+    "https://*/*", "http://*/*" 
+  ],
+  ...
+  "manifest_version": 3
+}
 ```
 
-The following table lists the currently available permissions:
+## Permissions with warnings {:#warnings }
+
+When an extension requests multiple permissions, and many of them display
+warnings on installation, the user will see a list of warnings, like in the following example:
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png",
+       alt="Extension permission warnings on installation", height="369", width="486" %}
+
+Users are more likely to trust an extension with limited warnings or when permissions are explained
+to them. Consider implementing optional permissions or a less powerful API to avoid alarming
+warnings. For a complete list of best practices, see [Permission warnings guidelines][3].
+
+## Permissions list {: #permissions }
+
+The following table lists the currently available permissions. For a list of permission warnings, see the [Permission warnings][doc-warning-table] table.
 
 <table>
   <tbody>
@@ -380,77 +410,10 @@ The following table lists the currently available permissions:
 [2]: /docs/extensions/mv3/match_patterns
 [3]: /docs/extensions/mv3/permission_warnings
 [4]: /docs/extensions/reference/storage
+[api-perms]: /docs/extensions/reference/permissions
+[doc-apis]: /docs/extensions/reference/
 [5]: /docs/extensions/activeTab
-[6]: /docs/extensions/alarms
-[7]: /docs/extensions/mv3/background_pages
-[8]: /docs/extensions/mv3/event_pages
-[9]: http://developers.google.com/chrome/apps/docs/background.html
-[10]: /docs/extensions/bookmarks
-[11]: /docs/extensions/browsingData
-[12]: /docs/extensions/certificateProvider
-[13]: /docs/extensions/contentSettings
-[14]: /docs/extensions/contextMenus
-[15]: /docs/extensions/cookies
-[16]: /docs/extensions/debugger
-[17]: /docs/extensions/declarativeContent
-[18]: /docs/extensions/declarativeNetRequest
-[19]: /docs/extensions/declarativeNetRequest
-[20]: /docs/extensions/declarativeWebRequest
-[21]: /docs/extensions/desktopCapture
-[22]: /docs/extensions/displaySource
-[23]: /docs/extensions/dns
-[24]: /docs/extensions/documentScan
-[25]: /docs/extensions/downloads
-[26]: /docs/extensions/enterprise.deviceAttributes
-[27]: /docs/extensions/enterprise.hardwarePlatform
-[28]: /docs/extensions/enterprise.networkingAttributes
-[29]: /docs/extensions/enterprise.platformKeys
-[30]: /docs/extensions/experimental
-[31]: /docs/extensions/reference/fileBrowserHandler
-[32]: /docs/extensions/fileSystemProvider
-[33]: /docs/extensions/fontSettings
-[34]: /docs/extensions/gcm
 [35]: http://dev.w3.org/geo/api/spec-source.html
-[36]: /docs/extensions/history
-[37]: /docs/extensions/identity
-[38]: /docs/extensions/idle
-[39]: /docs/extensions/idltest
-[40]: /docs/extensions/login
-[41]: /docs/extensions/loginScreenStorage
-[42]: /docs/extensions/loginState
-[43]: /docs/extensions/management
-[44]: /docs/extensions/mv3/messaging#native-messaging
-[45]: /docs/extensions/notifications
-[46]: /docs/extensions/pageCapture
-[47]: /docs/extensions/platformKeys
-[48]: /docs/extensions/power
-[49]: /docs/extensions/printerProvider
-[50]: /docs/extensions/printing
-[51]: /docs/extensions/printingMetrics
-[52]: /docs/extensions/privacy
-[53]: /docs/extensions/processes
-[54]: /docs/extensions/proxy
-[55]: /docs/extensions/scripting
-[56]: /docs/extensions/search
-[57]: /docs/extensions/sessions
-[58]: /docs/extensions/signedInDevices
-[59]: /docs/extensions/storage
-[60]: /docs/extensions/system.cpu
-[61]: /docs/extensions/system.display
-[62]: /docs/extensions/system.memory
-[63]: /docs/extensions/system.storage
-[64]: /docs/extensions/tabCapture
-[65]: /docs/extensions/tabGroups
-[66]: /docs/extensions/tabs#type-Tab
-[67]: /docs/extensions/tabs
-[68]: /docs/extensions/windows
-[69]: /docs/extensions/topSites
-[70]: /docs/extensions/tts
-[71]: /docs/extensions/reference/ttsEngine
 [72]: http://crbug.com/58985
-[73]: /docs/extensions/vpnProvider
-[74]: /docs/extensions/wallpaper
-[75]: /docs/extensions/webNavigation
-[76]: /docs/extensions/webRequest
-[77]: /docs/extensions/webRequest
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
+[doc-warning-table]: /docs/extensions/mv3/permission_warnings/#permissions_with_warnings

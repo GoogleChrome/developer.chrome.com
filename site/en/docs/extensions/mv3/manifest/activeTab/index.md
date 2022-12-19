@@ -97,6 +97,45 @@ The following user gestures enable `activeTab`:
 - Executing a keyboard shortcut from the [commands API][12]
 - Accepting a suggestion from the [omnibox API][13]
 
+--
+
+The `activeTab` permission grants temporary access to the site the user is on and allows the
+extension to use the [`"tabs"`][api-tabs] permission on the current tab. It replaces the need for
+`"<all_urls>"` in many cases and displays no warning on installation.
+
+Without activeTab:
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jb7SZPwm4zPoOT7BVMw3.png",
+       alt="Permissions UI without activeTab", height="190", width="490" %}
+
+With activeTab:
+
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2QKcJJSz35suMsGSWXM4.png",
+       alt="Permissions UI with activeTab", height="190", width="490" %}
+
+The `activeTab` permission grants an extension temporary access to the currently active tab when the
+user invokes the extension. If the extension is compromised, the attacker would need to wait
+for the user to invoke the extension before obtaining access, and that access would only last until
+the tab is navigated or closed.
+
+While the `activeTab` permission is enabled for a tab, an extension can:
+
+- Call `scripting.insertCSS` on that tab.
+- Get the URL, title, and favicon for that tab via an API that returns a `tabs.Tab` object.
+- Intercept network requests in the tab to the tab's main frame origin using the webRequest
+  API. The extension temporarily gets host permissions for the tab's main frame origin.
+
+The following user gestures enable `activeTab`:
+
+- Executing a browser action
+- Executing a page action
+- Executing a context menu item
+- Executing a keyboard shortcut from the commands API
+- Accepting a suggestion from the omnibox API
+
+
+
+
 [insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
 [1]: /docs/extensions/reference/action
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/page-redder
