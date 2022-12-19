@@ -23,53 +23,58 @@ Use the **Sensors** tab to emulate sensor input of any device:
 To emulate a viewport of a mobile device and throttle the network and CPU, see [Device Mode](/docs/devtools/device-mode/).
 {% endAside %}
 
+## Open the Sensors tab {: #open-sensors }
+
+1.  Depending on your operating system, press the following to open the Command Menu:
+
+    - On MacOS, <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
+    - On Windows, Linux, or ChromeOS, <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
+
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6035bGpBX27LK8A0KNjh.png", alt="Using the Command Menu to open the Sensors tab.", width="800", height="399" %}
+
+1.  Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>. The **Sensors** tab opens up at the bottom of your DevTools window.
+
 ## Override geolocation {: #geolocation }
 
 Many websites take advantage of [user location][5] in order to provide a more relevant experience for their users. For example, a weather website might show the local forecast for a user's area, once the user has granted the website permission to access their location.
 
 If you're building a UI that changes depending on where the user is located, you probably want to make sure that the site behaves correctly in different places around the world.
 
-To override your geolocation in Chrome DevTools:
+To override your geolocation, [open the **Sensors** tab](#open-sensors) and, from the **Geolocation** list select one of the following:
 
-1.  Depending on your operating system, press the following to open the Command Menu:
+- One of the preset cities, like **Tokyo**.
+- **Custom location** to enter custom longitude and latitude coordinates.
+- Select **Location unavailable** to see how your site behaves when the user's location is not available.
 
-    - On MacOS, <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
-    - On Windows, Linux, or ChromeOS, <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
-
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6035bGpBX27LK8A0KNjh.png", alt="Using the Command Menu to open the Sensors tab.", width="800", height="399" %}
-
-2.  Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>. The **Sensors** tab opens up at the bottom of your DevTools window.
-3.  From the **Geolocation** list select one of the preset cities, like **Tokyo**, or select
-    **Custom location** to enter custom longitude and latitude coordinates, or select **Location unavailable** to see how your site behaves when the user's location is not available.
-
-    {% Img src="image/admin/GLnD87xLckOcCq7Uxi8P.png", alt="Selecting 'Tokyo' from the 'Geolocation' list.", width="800", height="670" %}
+{% Img src="image/admin/GLnD87xLckOcCq7Uxi8P.png", alt="Selecting 'Tokyo' from the 'Geolocation' list.", width="800", height="670" %}
 
 ## Simulate device orientation {: #orientation }
 
-To simulate different [device orientations][1] from Chrome DevTools:
+To simulate different [device orientations][1], [open the **Sensors** tab](#open-sensors), and, from the **Orientation** list, select one of the following:
 
-1.  Depending on your operating system, press the following to open the Command Menu:
+- One of the preset orientations, like **Portrait upside down**.
+- **Custom orientation** to provide your own exact orientation.
 
-    - On MacOS, <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
-    - On Windows, Linux, or ChromeOS, <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
+{% Img src="image/admin/y5lnWi2Sa77ADlcTea2h.png", alt="Selecting 'Portrait upside down' from the 'Orientation' list.", width="800", height="663" %}
 
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6035bGpBX27LK8A0KNjh.png", alt="Using the Command Menu to open the Sensors tab.", width="800", height="399" %}
+After selecting **Custom orientation** the **alpha**, **beta**, and **gamma** fields are
+enabled. See [Alpha][2], [Beta][3], and [Gamma][4] to understand how these axes work.
 
-2.  Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>. The **Sensors** tab opens up at the bottom of your DevTools window.
+You can also set a custom orientation by dragging the **Orientation Model**. Hold
+<kbd>Shift</kbd> before dragging to rotate along the **alpha** axis.
 
-3.  From the **Orientation** list select one of the preset orientations, like **Portrait upside down**, or select **Custom orientation** to provide your own exact orientation.
-
-    {% Img src="image/admin/y5lnWi2Sa77ADlcTea2h.png", alt="Selecting 'Portrait upside down' from the 'Orientation' list.", width="800", height="663" %}
-
-    After selecting **Custom orientation** the **alpha**, **beta**, and **gamma** fields are
-    enabled. See [Alpha][2], [Beta][3], and [Gamma][4] to understand how these axes work.
-
-    You can also set a custom orientation by dragging the **Orientation Model**. Hold
-    <kbd>Shift</kbd> before dragging to rotate along the **alpha** axis.
-
-    {% Img src="image/admin/Dq2YzD2HbRXAyyrSHDun.png", alt="The Orientation Model.", width="800", height="648" %}
+{% Img src="image/admin/Dq2YzD2HbRXAyyrSHDun.png", alt="The Orientation Model.", width="800", height="648" %}
 
 ## Force touch {: #touch }
+
+To test touch events on your website, you can force touch instead of click even if you're testing on a device without a touch screen.
+
+To trigger touch events with your pointer:
+
+1. [Open the **Sensors** tab](#open-sensors).
+1. Under the **Touch** drop-down list, select **Force touch**.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aOVp4dObnNiISmub1K9H.png", alt="Forcing touch instead of click.", width="800", height="441" %}
+1. Click **Reload DevTools** in the prompt at the top.
 
 ## Emulate idle detector state {: #idle }
 
