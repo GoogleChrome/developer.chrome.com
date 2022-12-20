@@ -128,8 +128,7 @@ Specify the path to the extension's folder in the Extension root directory field
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
        alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
 
-Chrome will create two files, a `.crx` file and a `.pem` file, which contain the extension's
-private key.
+Chrome will create two files, a `.crx` file and a `.pem` file. The `.pem` file contain the private key used to sign the extension.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
        alt="Packaged Extension Files", height="288", width="521" %}
