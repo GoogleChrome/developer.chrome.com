@@ -29,11 +29,9 @@ there's a risk that a change might affect performance in ways we didn't expect. 
 mean a performance enhancement in Chrome's code, an update to how the browser looks or functions, or
 occasionally even a modification to a JavaScript API. 
 
-Chrome Variations can also be used to **validate a hypothesis** about a change or an update.   
-For example, for a percentage of users in a Chrome Variations group, we tried tweaking [QUIC
+Chrome Variations can also be used to **validate a hypothesis** about a change or an update. For example, for a percentage of users in a Chrome Variations group, we tried tweaking [QUIC
 networking protocol](https://blog.cloudflare.com/the-road-to-quic/) parameters to make Chrome faster
-for users' real network conditions. We've also conducted Omnibox studies around how many results to
-show for optimal usability. 
+for users' real network conditions.
 
 Another area where you may encounter Chrome Variations is if you work with Chrome's [origin
 trials](/docs/web-platform/origin-trials/). By default, an **origin trial** feature is enabled on
