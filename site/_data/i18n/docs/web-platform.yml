@@ -1,3 +1,6 @@
+chrome-concepts:
+  en: 'Chrome concepts'
+
 origin-trials:
   en: 'Origin Trials'
 
@@ -5,7 +8,7 @@ shipped:
   en: 'Shipped'
 
 developer-trials:
-  en: 'Developer Trials'
+  en: 'Developer trials'
 
 not-pursuing:
   en: 'No longer pursuing'
