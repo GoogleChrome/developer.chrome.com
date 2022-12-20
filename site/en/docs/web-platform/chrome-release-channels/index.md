@@ -150,7 +150,7 @@ Variations?](/docs/web-platform/chrome-variations).
  
 ### Metrics {: #metrics}
  
-If the setting to help improve Chrome's features and performance is enabled (`chrome://settings/syncSetup?search=improve`) then Chrome can automatically monitor and send anonymous metrics to the Chrome backend, such as memory usage, page load times, or the usage of a browser feature. 
+If the setting to help improve Chrome's features and performance is enabled (`chrome://settings/syncSetup?search=improve`) then Chrome can automatically monitor and send anonymous metrics to the Chrome backend—such as memory usage, page load times, or the usage of a browser feature.
 
 Chrome uses metrics to check performance, stability, and for unexpected behavior. This mechanism can also be used with [field trials](#field-trials) to compare metrics for users who
 have a new feature activated, and the control group of those who don't. That way, if a problem
