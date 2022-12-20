@@ -167,5 +167,4 @@ security fixes.
 
 -  [Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/)
 -  [Chrome Release Channels](https://www.chromium.org/getting-involved/dev-channel/)
--  [Chrome Telemetry](https://chromium.googlesource.com/catapult/+/HEAD/telemetry/README.md)
 -  [Run Chrome with command-line switches](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/)
