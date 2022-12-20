@@ -74,21 +74,21 @@ billions of users, with thousands of types of devices on multiple platforms, usi
 different languages for millions of different apps and websites.
 
 Chrome gets valuable feedback from usage and testing in Chrome Canary, Dev, and Beta. We can use
-Chrome Variations to activate or deactivate features within any of these **[release
-channels**](https://www.chromium.org/getting-involved/dev-channel/). However, those channels are
+Chrome Variations to activate or deactivate features within any of these [release
+channels](https://www.chromium.org/getting-involved/dev-channel/). However, those channels are
 primarily used by developers and other specialists. Chrome Stable users interact with Chrome
-differently, and in much larger numbers, so we also need to validate on the Stable channel. This
+differently, and in much larger numbers, so we always need to validate on the Stable channel. This
 allows us to iron out any problems encountered in normal browser usage. Chrome engineers can't
 always predict how real users will respond to changes and new features, at scale.  
 
 Chrome Variations is a crucial mechanism to help with this, making it possible to check usage and
 metrics for Chrome Stable with a feature either activated or deactivated. By measuring the impact of
 changes in Chrome Stable, we can ship the best features possible and build a better browser—even
-when the tradeoffs are complex. 
+when the trade-offs are complex.
 
 ## When do Chrome engineers use Chrome Variations?
 
-There are three main reasons that applications like Chrome need a mechanism like Chrome Variations.
+There are three main reasons that Chrome needs Chrome Variations.
 
 ### Activate a new feature 
 
