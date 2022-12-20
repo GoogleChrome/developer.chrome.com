@@ -134,7 +134,7 @@ Chrome will create two files, a `.crx` file and a `.pem` file. The `.pem` file c
        alt="Packaged Extension Files", height="288", width="521" %}
 
 **Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
-needed to [update](#update-permissions) the extension.
+needed to [update](#update_permissions) the extension.
 
 Install the `.crx` file by dropping it into the Chrome Extension's Management page.
 
@@ -155,7 +155,7 @@ requests `"<all_urls>"`.
 
 The permissions warning table is updated on a best-effort basis and may contain slight discrepancies
 with the [current warnings][chromium-perms]. To verify the most recent warnings shown for extension permissions, follow
-the steps in [Viewing Warnings](#viewing-warnings).
+the steps in [Viewing Warnings](#view_warnings).
 
 <table>
   <tbody>
