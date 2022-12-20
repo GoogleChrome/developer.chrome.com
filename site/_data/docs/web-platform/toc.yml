@@ -1,3 +1,8 @@
+- title: i18n.docs.web-platform.chrome-concepts
+  sections:
+    - url: /docs/web-platform/chrome-flags
+    - url: /docs/web-platform/chrome-variations
+
 - url: /docs/web-platform/origin-trials
 - url: /docs/web-platform/origin-trial-troubleshooting
 - url: /docs/web-platform/third-party-origin-trials
