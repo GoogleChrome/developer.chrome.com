@@ -14,7 +14,7 @@ Chrome flags are a way to activate browser features that are not available by de
 id='K-T3Zz6qv7w'
 %}
 
-For example, Chrome wanted to allow users to try [picture-in-picture](https://developer.chrome.com/blog/watch-video-using-picture-in-picture/) video functionality, before rolling it out to everyone.
+For example, Chrome wanted to allow users to try [picture-in-picture](/blog/watch-video-using-picture-in-picture/) video functionality, before rolling it out to everyone.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/KdaFOBbnf6k7MOEW1RRb.png",  
   alt="Chrome picture-in-picture allows users to keep watching a video from one tab, while working
@@ -25,7 +25,7 @@ and design were tested and polished based on the feedback, so now you can use pi
 default in Chrome—and it works really well.
 
 
-## Understand the risks...
+## Understand the risks
 
 **Most Chrome users will never need to use Chrome flags**.
 
@@ -90,8 +90,8 @@ more Chrome settings you can configure from the command line than what's availab
 `chrome://flags` page. 
 
 For example, to run Chrome Canary from a terminal on a Mac, with the [Topics
-API](https://developer.chrome.com/docs/privacy-sandbox/topics/) activated and [epoch
-length](https://developer.chrome.com/docs/privacy-sandbox/topics/#epoch) set to 15 seconds, use the
+API](/docs/privacy-sandbox/topics/) activated and [epoch
+length](/docs/privacy-sandbox/topics/#epoch) set to 15 seconds, use the
 following command:
 
 ``` text
@@ -154,7 +154,7 @@ that are available by default.
 
 ## What about origin trials?
 
-[Origin trials](https://developer.chrome.com/docs/web-platform/origin-trials/) are a way for
+[Origin trials](/docs/web-platform/origin-trials/) are a way for
 developers to test a new or experimental web platform feature at scale, and give feedback to the web
 standards community before the feature is made available to all users.
 
@@ -162,7 +162,7 @@ Features undergoing an origin trial are activated on all pages that provide a va
 trial. This allow website owners to activate an experimental feature for all their users, without
 requiring users to change browser settings or set flags. By comparison, Chrome flags allow
 individual users to activate or deactivate an experimental feature, on all websites they visit.
-[Getting started with Chrome's origin trials](https://developer.chrome.com/docs/web-platform/origin-trials/)
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/)
 provides more detail.
 
 ## Find out more 
@@ -179,4 +179,4 @@ is automatically updated with all available flags and, last time we checked, the
 than 1400 of them!
 - There are even more flags available to configure individual JavaScript API features. You can
 find out more about them from API documentation and proposal explainers.
-- [Experimental features in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features)
+- [Experimental features in Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Experimental_features)
