@@ -8,7 +8,7 @@ description: >
 
 So far, this documentation has been big on precaching, often touching on the `generateSW` and `injectManifest` build tools. While there are plenty of good reasons to include precaching logic in your service worker, you don't have to use precaching to use Workbox.
 
-Perhaps your project only needs runtime caching, or maybe you want a cleaner way to integrate service worker APIs, such as [web push](https://developers.google.com/web/fundamentals/push-notifications/). These are cases when you won't want to use Workbox's build tools, and that's what is covered in this article.
+Perhaps your project only needs runtime caching, or maybe you want a cleaner way to integrate service worker APIs, such as [web push](https://web.dev/notifications/). These are cases when you won't want to use Workbox's build tools, and that's what is covered in this article.
 
 ## When using a bundler
 

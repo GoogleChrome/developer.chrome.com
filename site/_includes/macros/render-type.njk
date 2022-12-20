@@ -143,8 +143,8 @@
 
             {% if node._method.isReturnsAsync %}
               <p>
-                This only returns a <code>Promise</code> when the <code>callback</code> parameter
-                is not specified, and with MV3+.
+                In Manifest V3 and later, return a <code>Promise</code> by omitting the 
+                <code>callback</code> argument.
                 The type inside the <code>Promise</code> is the same as the 1st argument to <code>callback</code>.
               </p>
             {% endif %}
@@ -445,7 +445,7 @@
 
   {% set inner %}
     {% if node._method.isReturnsAsync %}
-      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise in MV3+">
+      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise in Manifest V3 or later.">
         Promise
       </span>
     {% endif %}

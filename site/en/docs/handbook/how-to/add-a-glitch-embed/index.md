@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Add a Glitch Embed
+title: Add a Glitch embed
 description: 'Add a Glitch embed to a post.'
 date: 2020-11-23
 ---

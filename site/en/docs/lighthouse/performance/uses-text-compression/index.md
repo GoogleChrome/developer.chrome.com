@@ -4,7 +4,7 @@ title: Enable text compression
 description: |
   Learn about how enabling text compression can improve your webpage load performance.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2022-12-03
 ---
 
 Text-based resources should be served with compression
@@ -54,8 +54,7 @@ Accept-Encoding: gzip, compress, br
 If the browser supports [Brotli](https://opensource.googleblog.com/2015/09/introducing-brotli-new-compression.html)
 (`br`) you should use Brotli because it can reduce the file size of the resources more than the
 other compression algorithms. Search for `how to enable Brotli compression in <X>`, where
-`<X>` is the name of your server. As of June 2020 Brotli is supported in all major browsers except
-Internet Explorer, desktop Safari, and Safari on iOS. See
+`<X>` is the name of your server. As of December 2022 Brotli is supported in all major browsers except Safari on iOS. See
 [Browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Browser_compatibility)
 for updates.
 
@@ -98,7 +97,7 @@ To compare the compressed and de-compressed sizes of a response:
 1. Press <code><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></code> (or <code><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></code> on Mac) to open DevTools.
 2. Click the **Network** tab.
 3. Enable large request rows.
-   See [Use large request rows](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows).
+   See [Use large request rows](/docs/devtools/network/reference/#request-rows).
 4. Look at the **Size** column for the response you're interested in. The
    top value is the compressed size. The bottom value is the de-compressed
    size.
@@ -117,4 +116,4 @@ Enable text compression in your web server configuration.
 
 ## Resources
 
-- [Source code for **Enable text compression** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-text-compression.js)
+- [Source code for **Enable text compression** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/uses-text-compression.js)

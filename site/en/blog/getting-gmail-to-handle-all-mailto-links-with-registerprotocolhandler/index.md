@@ -12,7 +12,7 @@ updated: 2019-02-01
 
 If you use Gmail you may become frustrated when you click a `mailto:` link by accident and now your desktop client of Outlook or Mail starts up.
 
-Thanks to `navigator.registerProtocolHandler()` ([which we've covered here before](https://developers.google.com//web/updates/2011/06/Registering-a-custom-protocol-handler)) you can wire up Gmail as your default mail client for all `mailto:` links in Chrome and Firefox.
+Thanks to `navigator.registerProtocolHandler()` ([which we've covered here before](https://web.dev/registering-a-custom-protocol-handler/)) you can wire up Gmail as your default mail client for all `mailto:` links in Chrome and Firefox.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/klFjlPW7hK25xwqKofQR.jpg", alt="Use Gmail popup screenshot", width="640", height="185" %}

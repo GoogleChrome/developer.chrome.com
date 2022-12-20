@@ -42,6 +42,9 @@ redirects:
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 
+- from: /docs/privacy-sandbox/attribution-reporting/summary-reports/
+  to: /docs/privacy-sandbox/summary-reports/
+
 - from: /android
   to: /docs/android
 
@@ -97,6 +100,9 @@ redirects:
 
 - from: /blog/shared-element-transitions-for-spas/
   to: /docs/web-platform/view-transitions/
+
+- from: /docs/privacy-sandbox/gnatcatcher/
+  to: /docs/privacy-sandbox/ip-protection/
 
 # Removal of /overview pages
 
@@ -184,6 +190,9 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/css/overrides/
+  to: /docs/devtools/css/issues/
 
 - from: /docs/devtools/speed/get-started
   to: /docs/devtools/lighthouse
@@ -482,43 +491,84 @@ redirects:
 
 # Renaming of Pop-up API attribute from popup to popover
 - from: /docs/web-platform/popup-api/
-  to: /docs/web-platform/pop-up-api/
+  to: /docs/web-platform/popover-api/
 
 - from: /docs/web-platform/popup-api/hidepopup-method/
-  to: /docs/web-platform/pop-up-api/hidepopover-method/
+  to: /docs/web-platform/popover-api/hidepopover-method/
 
 - from: /docs/web-platform/popup-api/showpopup-method/
-  to: /docs/web-platform/pop-up-api/showpopover-method/
+  to: /docs/web-platform/popover-api/showpopover-method/
 
 - from: /docs/web-platform/popup-api/popup-attribute/
-  to: /docs/web-platform/pop-up-api/popover-attribute/
+  to: /docs/web-platform/popover-api/popover-attribute/
 
 - from: /docs/web-platform/popup-api/popup-property/
-  to: /docs/web-platform/pop-up-api/popover-property/
+  to: /docs/web-platform/popover-api/popover-property/
 
 - from: /docs/web-platform/popup-api/popuphide-event/
-  to: /docs/web-platform/pop-up-api/popoverhide-event/
+  to: /docs/web-platform/popover-api/popoverhide-event/
 
 - from: /docs/web-platform/popup-api/popuphidetarget-attribute/
-  to: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
 
 - from: /docs/web-platform/popup-api/popuphidetarget-property/
-  to: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+  to: /docs/web-platform/popover-api/popoverhidetarget-property/
 
 - from: /docs/web-platform/popup-api/popupshow-event/
-  to: /docs/web-platform/pop-up-api/popovershow-event/
+  to: /docs/web-platform/popover-api/popovershow-event/
 
 - from: /docs/web-platform/popup-api/popupshowtarget-attribute/
-  to: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
 
 - from: /docs/web-platform/popup-api/popupshowtarget-property/
-  to: /docs/web-platform/pop-up-api/popovershowtarget-property/
+  to: /docs/web-platform/popover-api/popovershowtarget-property/
 
 - from: /docs/web-platform/popup-api/popuptoggletarget-attribute/
-  to: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
 
 - from: /docs/web-platform/popup-api/popuptoggletarget-property/
-  to: /docs/web-platform/pop-up-api/popovertoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertoggletarget-property/
+
+# Renaming of pop-up-api to popover-api
+
+- from: /docs/web-platform/pop-up-api/
+  to: /docs/web-platform/popover-api/
+
+- from: /docs/web-platform/pop-up-api/hidepopover-method/
+  to: /docs/web-platform/popover-api/hidepopover-method/
+
+- from: /docs/web-platform/pop-up-api/showpopover-method/
+  to: /docs/web-platform/popover-api/showpopover-method/
+
+- from: /docs/web-platform/pop-up-api/popover-attribute/
+  to: /docs/web-platform/popover-api/popover-attribute/
+
+- from: /docs/web-platform/pop-up-api/popover-property/
+  to: /docs/web-platform/popover-api/popover-property/
+
+- from: /docs/web-platform/pop-up-api/popoverhide-event/
+  to: /docs/web-platform/popover-api/popoverhide-event/
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-attribute/
+  to: /docs/web-platform/popover-api/popoverhidetarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popoverhidetarget-property/
+  to: /docs/web-platform/popover-api/popoverhidetarget-property/
+
+- from: /docs/web-platform/pop-up-api/popovershow-event/
+  to: /docs/web-platform/popover-api/popovershow-event/
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-attribute/
+  to: /docs/web-platform/popover-api/popovershowtarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popovershowtarget-property/
+  to: /docs/web-platform/popover-api/popovershowtarget-property/
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-attribute/
+  to: /docs/web-platform/popover-api/popovertoggletarget-attribute/
+
+- from: /docs/web-platform/pop-up-api/popovertoggletarget-property/
+  to: /docs/web-platform/popover-api/popovertoggletarget-property/
 
 # Generic
 
@@ -544,6 +594,9 @@ redirects:
 
 - from: /tags/deprecations/
   to: /tags/deprecations-removals/
+
+- from: /tags/extensions/
+  to: /tags/extensions-news/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

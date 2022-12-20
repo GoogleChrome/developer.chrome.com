@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2021-11-23
+updated: 2022-12-02
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -63,18 +63,24 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 ### Set up your account {: #setup-a-developer-account }
 
-Once you've registered, you can finish setting up your developer account in the Account page located on the left menu.
+After registering, finish setting up your developer account on the Account page. (To access the Account page click the link in the left menu.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
 
-Here you can provide your developer profile information, configure management settings and enable email notifications. Only the name, email and privacy policy link are mandatory.
+Here you can provide your developer profile information, configure management settings and enable email notifications, among other things. The page itself provides instruction; however, there a few fields worth calling out. 
 
 | Field                | Description                                                                                                                                                        |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Publisher name**   | This name appears under the title of each of your items. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead. |
-| **Email Address**    | This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.                       |
-| **Privacy Policy**   | This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details. |
-| **Physical address** | Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.                                     |
+| **Publisher name**   | (Required) Appears under the title of each of your extensions. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead. |
+| **Add email**    | (Required) Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.                       |
+| **Privacy policy**   | (Required) A link to the privacy policy for all your extensions. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details. |
+| **Physical address** | (Required) Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.                                     |
+| **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
+
+{% Aside 'important' %}
+The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only truested testers from the current publisher settings**.
+{% endAside %}
+
 
 ### Verify your email address {: #verify-contact-email }
 

@@ -4,7 +4,7 @@ title: >
 description: >
   Use the CSS Overview panel to identify potential CSS improvements.
 layout: 'layouts/blog-post.njk'
-date: 2022-11-10
+date: 2022-11-23
 authors:
   - sofiayem
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LDRHsz4mB5aTBCYFNqSD.png'

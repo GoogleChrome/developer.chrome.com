@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What are extensions?"
+seoTitle: "What are Chrome extensions?"
 date: 2013-02-21
 updated: 2021-03-12
 description: An overview of the purpose of Chrome Extensions and how they're developed.
