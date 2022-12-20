@@ -114,7 +114,7 @@ command line. Instead, take a look at the `chrome://version` page. From the **Co
 of the page, you can check what flags are in play.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iWCWmsz0Y7wmc8FQA7Is.png", alt="chrome://version page
-in Chrome Canary, Command Line section highlighted", width="800", height="445" %}
+in Chrome Canary, Command Line section highlighted.", width="800", height="445" %}
 
 This example matches the example above, that runs Chrome from the command line with flags.
 
@@ -130,7 +130,7 @@ experiments and give feedback, by toggling **Experiment** settings and relaunchi
 provides more detail.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/UstQP25xQaPlbih6Ok23.png",
-  alt="Screenshot of Experiments UI in Chrome Beta, showing Tab scrolling options",
+  alt="Screenshot of Experiments UI in Chrome Beta, showing Tab scrolling options.",
   width="800", height="417" %}
 
 ## Which features get a flag?
