@@ -36,7 +36,7 @@ working or be removed without notice.
 If you're an enterprise IT admin, you should not use Chrome flags in production. You might want to
 take a look at [enterprise policies](https://chromeenterprise.google/policies/) instead. 
 
-## ...and proceed with caution
+### ...and proceed with caution
 
 Having said all that, if you're a web developer who needs to try out new technology—or just a
 curious geek—then getting to know Chrome flags can be really worthwhile.
@@ -109,9 +109,9 @@ a `chrome://flags` setting might, in some cases, override your command line conf
 the flags you set running Chrome from the command line don't work as expected, you should check your
 `chrome://flags` page.  
 
-Also be aware that the `chrome://flags` page might not show the flag settings you've used from the
-command line. Instead, take a look at the `chrome://version` page. From the **Command Line** section
-of the page, you can check what flags are in play.
+Also be aware that `chrome://flags` might not show the flag settings you've used from the
+command line. Instead, take a look at `chrome://version`. From the **Command Line** section,
+you can check what flags are enabled in your browser.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iWCWmsz0Y7wmc8FQA7Is.png", alt="chrome://version page
 in Chrome Canary, Command Line section highlighted.", width="800", height="445" %}

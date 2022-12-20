@@ -21,7 +21,7 @@ browser, or to Chrome OS, the Chrome operating system that runs on Chromebooks.
 ## What are Chrome Variations used for?
 
 Chrome Variations enable Chrome to **activate** a new feature, **deactivate** a feature, or try out
-a **change to a feature** for a **subset of users**. 
+a change to a feature for a subset of users. 
 
 Not everything in Chrome is introduced via the Chrome Variations mechanism. However, the Chrome team
 can use Chrome Variations whenever we need to be especially careful about making a change, or where
@@ -35,7 +35,7 @@ example, for a percentage of users in a Chrome Variations group, we tried tweaki
 faster for users' real network conditions.
 
 Another area where you may encounter Chrome Variations is if you work with Chrome's [origin
-trials](/docs/web-platform/origin-trials/). By default, an **origin trial** feature is enabled on
+trials](/docs/web-platform/origin-trials/). By default, an origin trial feature is enabled on
 all pages that provide a valid trial token, but in some cases Chrome Variations is used to control
 activation of a feature. This means that an origin trial feature may not be available to certain
 users, even when they visit a page that provides a valid trial token. Information about the
@@ -46,7 +46,7 @@ documentation and updates for each origin trial.
 
 Every 30 minutes on desktop or mobile, or each time you start Chrome, the browser makes a request to
 the Chrome backend to get the Chrome Variations configuration file, which is known as the variations
-**seed**. In other words, there is a dedicated server to provide Chrome Variations seeds. Chrome
+_seed_. In other words, there is a dedicated server to provide Chrome Variations seeds. Chrome
 makes an HTTPS request to the server, and the server responds with a
 [delta-compressed](https://en.wikipedia.org/wiki/Delta_encoding) seed.
 
@@ -59,7 +59,7 @@ provides information about the version of Chrome, and the operating system it's 
 returned by the Chrome Variations backend is used to turn on features, turn off features, or specify
 variations in a feature. 
 
-Chrome uses the data in the seed file, and a locally stored **randomization seed**, to randomly
+Chrome uses the data in the seed file, and a locally stored _randomization seed_, to randomly
 assign the browser to a variation group. In other words, the randomization seed, combined with the
 seed file from the Chrome Variations backend, can be used to activate or deactivate features in the
 browser, for a subset of users. Your browser, on your device, keeps track of which variation group
@@ -94,17 +94,19 @@ There are three main reasons that Chrome needs Chrome Variations.
 Using Chrome Variations to provide control over activation of a new feature is particularly useful
 for anything that might be more risky in some way, or that might affect performance.
 
-Chrome Variations can enable a new feature to be rolled out to a subset of users, and then Chrome
+Chrome Variations enable us to roll out a new feature to a subset of users. Then, Chrome
 engineers can check for differences in performance or look at other types of feedback from the
 variation group. 
 
 ### Deactivate a feature
 
-Chrome Variations can be used as a safety mechanism to turn off a feature—although this only happens
-rarely. For example, a new networking feature might become subject to a denial-of-service attack.
-Chrome Variations can be used to quickly turn off a feature like that, since the Chrome Variations
-configuration is downloaded every 30 minutes, and settings are activated every time you restart
-Chrome. By contrast, simply updating Chrome and waiting for the new version to be propagated to
+Chrome Variations can be used as a safety mechanism to turn off a feature—although this happens
+rarely.
+
+For example, a new networking feature might become subject to a denial-of-service attack.
+Chrome Variations can be used to quickly turn off a feature like that, as the Chrome Variations
+configuration is downloaded every 30 minutes and settings are activated every time you restart
+Chrome. By contrast, updating Chrome and waiting for the new version to be propagated to
 billions of users would be much slower.
 
 ### Try changes to a feature
@@ -113,13 +115,14 @@ Lastly, Chrome Variations can be used to validate changes and updates. For examp
 
 Chrome Variations can also be used to study the long-term effects of new features. This is done by
 using the Chrome Variations mechanism to hold back features for a small proportion of users, maybe
-1% or less. A **holdback group** can be useful to check for changes and side effects that only
+1% or less. A _holdback group_ can be useful to check for changes and side effects that only
 become visible over time.
 
 A holdback group can be particularly important for user interface changes, where users are likely to
-interact with a feature when it's new, but may behave differently in the long term. For example,
-photo picker functionality was launched in Chrome, but the feature was temporarily held back from a
-small percentage of users, to see how outcomes compared. We shipped the new Android Photo Picker to
+interact with a feature when it's new, but may behave differently in the long term. 
+
+For example, we launched a photo picker functionality in Chrome, but the feature was temporarily held
+back from a small percentage of users, to compare outcomes. We shipped the new Android Photo Picker to
 a high proportion of our users, and initially saw a significant increase in the number of images
 that group shared on the Web. However, in the six months that we had the holdback variation, we saw
 the lift in usage decrease significantly. This was because availability of the new photo picker
@@ -144,7 +147,7 @@ different feature variations.
 
 ### Chrome Variations field trials
 
-Each set of variations for a feature is called a study or **field trial**, and each one has a fixed
+Each set of variations for a feature is called a study or _field trial_, and each one has a fixed
 duration. Once a study is over for a feature, any users who were included in a non-default behavior
 group get the default Chrome setting for the feature: either enabled or disabled. 
 
