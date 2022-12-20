@@ -1,8 +1,13 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: What are third-party origin trials?
-subhead: Origin trials are a way to test a new or experimental web platform feature. A third-party origin trial makes it possible for providers of embedded content to try out a new feature across multiple sites.
-authors:
+title: Third-party origin trials
+subhead: >
+  Providers of embedded content can test new or experimental web platform
+  features.
+description: >
+  Learn how providers of embedded content can test new or experimental web
+  platform features across multiple sites.
+author:
   - samdutton
 date: 2020-10-01
 updated: 2022-04-11
@@ -12,7 +17,7 @@ tags:
   - origin-trials
 ---
 
-[Origin trials](/blog/origin-trials/) are a way to test a new or experimental web platform
+[Origin trials](/docs/web-platform/origin-trials/) are a way to test a new or experimental web platform
 feature.
 
 Origin trials are usually only available on a first-party basis: they only work for a single
@@ -25,12 +30,12 @@ Third-party origin trials make it possible for providers of embedded content to 
 feature across multiple sites by [providing a token using JavaScript](#provide-token).
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="Diagram showing how
-   third-party origin trials enable a single registration token to be used across multiple origins",
+   third-party origin trials enable a single registration token to be used across multiple origins.",
    width="800", height="400" %}
 
 Third-party origin trials don't make sense for all features. Chrome will only make the third-party
 origin trial option available for features where embedding code on third-party sites is a common use
-case.  [Getting started with Chrome's origin trials](https://developers.chrome.com/origintrials/)
+case.  [Get started with Chrome's origin trials](https://developers.chrome.com/origintrials/)
 provides more general information about how to participate in Chrome origin trials.
 
 If you participate in an origin trial as a third-party provider, it will be your responsibility to
@@ -42,7 +47,9 @@ to provide troubleshooting support.
 Supporting third-party origin trials allows for broader participation, but also increases the
 potential for overuse or abuse of experimental features, so a "trusted tester" approach is more
 appropriate. The greater reach of third-party origin trials requires additional scrutiny and
-additional responsibility for web developers that participate as third-party providers. Requests to
+additional responsibility for web developers that participate as third-party providers.
+
+Requests to
 enable a third-party origin trial may be reviewed in order to avoid problematic third-party scripts
 affecting multiple sites. The Origin Trials Developer Guide explains the
 [approval process](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains).
@@ -68,11 +75,13 @@ on progress with third-party origin trials.
 1. Click the Register button to submit your request.
 1. Your third-party token will be issued immediately, unless further review of the request is
    required. (Depending on the trial, token requests may require review.)
-1. If review is required, you'll be notified by email when the review is complete and your
-   third-party token is ready.
-
+1. If review is required, you'll be notified by email when the review is
+   complete and your third-party token is ready.
    <figure class="w-figure">
-     {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/r07Zb0QoHnlgiItETR6q.png", alt="Chrome origin trials registration page for the Conversion Measurement API, with third-party matching checkbox selected.", width="800", height="618" %}
+     {% Img
+       src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/r07Zb0QoHnlgiItETR6q.png",
+       alt="Chrome origin trials registration page for the Conversion Measurement API, with third-party matching checkbox selected.",
+       width="800", height="618" %}
      <figcaption class="w-figcaption">Registration page for the Conversion Measurement trial.</figcaption>
    </figure>
 
@@ -99,7 +108,7 @@ using a token provided by JavaScript from a different origin.
 {% endAside %}
 
 
-## Provide feedback
+## Share feedback
 
 If you're registering for a third-party origin trial and have feedback to share on the process or
 ideas on how we can improve it, [create an Issue](https://github.com/GoogleChrome/OriginTrials/issues/new)
