@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What are Chrome Variations?
 subhead: A mechanism for Chrome to test new browser features
 description: A mechanism for Chrome to test new browser features
-date: 2022-12-18
+date: 2022-12-20
 authors:
 - samdutton
 ---

@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What are Chrome flags?
 subhead: Activate additional debugging tools, or try out new or experimental features.
 description: Enable additional debugging tools or try out new or experimental features in Chrome. 
-date: 2022-10-28
+date: 2022-12-20
 authors:
 - samdutton
 ---
@@ -180,4 +180,3 @@ than 1400 of them!
 - There are even more flags available to configure individual JavaScript API features. You can
 find out more about them from API documentation and proposal explainers.
 - [Experimental features in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features)
-- [Links to flag docs for other browsers.]
