@@ -7,7 +7,7 @@ location: Málaga, Spain
 date: 2022-12-17
 externalUrl: https://biznagafest.com/
 sessions:
-  - speaker: jecelynyeen
+  - speaker: jeremywagner
     title: Optimizing Interaction to Next Paint
     description: >-
       Did you know that 90% of time spent on most web pages is after page load? In this span

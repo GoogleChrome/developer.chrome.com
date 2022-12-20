@@ -26,7 +26,7 @@
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm run setup && NODE_ENV=production npm run eleventy -- --quiet",
-    "snapshots": "percy snapshot ./dist/en",
+    "snapshots": "percy snapshot ./dist",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "rollup": "npx rollup -c",
     "stage:github": "npx gulp --gulpfile gulp-tasks/stageGitHub/index.js --cwd .",
@@ -49,6 +49,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@google-cloud/cloudbuild": "^2.6.0",
     "@google-cloud/error-reporting": "^2.0.4",
+    "@google-cloud/storage": "^6.7.0",
     "@lhci/cli": "^0.7.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "algoliasearch": "^4.6.0",
@@ -96,7 +97,8 @@
     "@types/js-yaml": "^4.0.3",
     "@types/node": "16.11.7",
     "@types/node-fetch": "^2.5.12",
-    "@types/tmp": "^0.2.0"
+    "@types/tmp": "^0.2.0",
+    "fsevents": "*"
   },
   "devDependencies": {
     "@ava/babel": "^1.0.1",

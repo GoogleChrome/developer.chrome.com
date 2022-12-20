@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
+seoTitle: "Chrome Extensions Tutorial: OAuth2 - Authenticate users with Google"
 date: 2012-09-18
 updated: 2021-11-08
 description: >

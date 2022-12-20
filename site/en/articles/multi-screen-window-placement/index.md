@@ -99,7 +99,7 @@ iPad into a second screen.
 </figure>
 
 If I want to take advantage of the bigger screen, I can put the popup from the
-[code sample](/multi-screen-window-placement/#the-problem) above on to the second screen. I do it
+[code sample](/articles/multi-screen-window-placement/#the-problem) above on to the second screen. I do it
 like this:
 
 ```js

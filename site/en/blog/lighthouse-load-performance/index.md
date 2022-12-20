@@ -12,7 +12,7 @@ updated: 2018-06-11
 {% YouTube id="Mv-l3-tJgGk" %}
 
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an automated tool for improving the
+[Lighthouse](/docs/lighthouse/overview/) is an automated tool for improving the
 quality of your site. You give it a URL, and it provides a list of
 recommendations on how to improve page performance, make pages more accessible,
 adhere to best practices and more. You can run it from within Chrome DevTools,
@@ -22,8 +22,8 @@ continuous integration.
 
 For a while now, Lighthouse has provided many tips for improving page load
 performance, such as [enabling text
-compression](https://developers.google.com/web/tools/lighthouse/audits/text-compression) or [reducing
-render-blocking scripts](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources). The
+compression](/docs/lighthouse/performance/uses-text-compression) or [reducing
+render-blocking scripts](/docs/lighthouse/performance/render-blocking-resources). The
 Lighthouse team continues to ship new audits to give you even more useful advice
 for making your sites faster. This post is a roundup of useful performance
 audits that you may not be aware of, such as:
@@ -63,10 +63,10 @@ related to layout, script eval, parsing, and other activity.
 When browsers retrieve resources, they do so as they find references to them
 within the document and its subresources. This can be suboptimal at times,
 because some critical resources are discovered rather late in the page load
-process. Thankfully, [`rel=preload`](https://developers.google.com/web/updates/2016/03/link-rel-preload)
+process. Thankfully, [`rel=preload`](/blog/link-rel-preload)
 gives developers the ability to hint to compliant browsers which resources
 should be fetched as soon as possible. The new [**Preload Key
-Requests**](https://developers.google.com/web/tools/lighthouse/audits/preload) audit lets developers know
+Requests**](/docs/lighthouse/performance/uses-rel-preload) audit lets developers know
 what resources could benefit from being loaded sooner by `rel=preload`.
 
 <figure>
@@ -88,7 +88,7 @@ When too much JavaScript is loaded, the page can become unresponsive as the
 browser parses, compiles, and executes it. 3rd-party scripts and advertisements
 are a particular source of excessive script activity that can bog down even
 powerful devices. The new [**JavaScript Boot-up Time is
-High**](https://developers.google.com/web/tools/lighthouse/audits/bootup) audit reveals how much CPU time
+High**](/docs/lighthouse/performance/bootup-time) audit reveals how much CPU time
 each script on a page consumes, along with its URL:
 
 <figure>
@@ -99,7 +99,7 @@ evaluation, parsing, and compiling time for scripts on a page.</figcaption>
 </figure>
 
 When you run this audit, you can also [enable third party badges in the network
-panel](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/#chrome_devtools_third-party_script_badging)
+panel](https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/#chrome-devtools-third-party-script-badging)
 and filter the list to identify third party script resources. With the data from
 this audit, you'll be better equipped to find sources of excessive JavaScript
 activity that turn pages from snappy to laggy. For scripts specific to your
@@ -170,9 +170,9 @@ the `lighthouse:full` configuration profile.
 
 While much performance advice tends to focus on boosting the speed of a website
 for first time users, it's also important to [use
-caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+caching](https://web.dev/http-cache/)
 to improve loading performance for returning users. [**The Uses Inefficient
-Cache Policy on Static Assets**](https://developers.google.com/web/tools/lighthouse/audits/cache-policy)
+Cache Policy on Static Assets**](/docs/lighthouse/performance/uses-long-cache-ttl)
 audit inspects caching headers for network resources, and notifies you if cache
 policies for static resources are substandard.
 
@@ -189,7 +189,7 @@ users, and they'll appreciate the extra speed!
 
 When browsers retrieve resources from a server, it can take significant time to
 perform a DNS lookup and establish a connection to a server.
-[`rel=preconnect`](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
+[`rel=preconnect`](https://web.dev/preconnect-and-dns-prefetch)
 allows developers to mask this latency by establishing connections to other
 servers before the browser would in due course. The **Avoid Costly Multiple
 Round-Trips to Any Origin** audit will help you discover opportunities to use
@@ -211,7 +211,7 @@ new opportunities to use `rel=preconnect` to do just that.
 Animated GIFs are _huge_, often consuming at least several hundred kilobytes if
 not several megabytes of data. If you care about loading performance,
 [converting those GIFs to
-video](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/)
+video](https://web.dev/replace-gifs-with-videos)
 is the way to go. Thankfully, the **Use Video Formats for Animated Content**
 audit has your back.
 
@@ -253,7 +253,7 @@ If Lighthouse finds web fonts in your application that are delaying text
 rendering, there's a few potential remedies. You can control text rendering with
 the [`font-display` CSS property](https://css-tricks.com/font-display-masses/),
 and/or [the Font Loading
-API](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#the_font_loading_api).
+API](https://web.dev/fast/#optimize-webfonts).
 If you want to dig deeper, consider reading [_A Comprehensive Guide to Font
 Loading Strategies_](https://www.zachleat.com/web/comprehensive-webfonts/), an
 excellent guide by [Zach Leatherman](https://www.zachleat.com/web/) which is an
@@ -261,12 +261,12 @@ excellent resource for optimal font loading.
 
 ## Unminified CSS & JavaScript
 
-[Minification](https://developers.google.com/web/fundamentals/performance/webpack/decrease-frontend-size#enable-minification)
+[Minification](https://web.dev/decrease-frontend-size/#enable-minification)
 has been a suggested technique since web performance has been a thing, and for
 good reason. It significantly reduces the size of text-based resources, which in
 turn is good for loading performance. However, it's easy to overlook this
 optimization, especially if build processes don't take care of it for you. The
-[**Minify CSS**](https://developers.google.com/web/tools/lighthouse/audits/minify-css) and **Minify
+[**Minify CSS**](/docs/lighthouse/performance/unminified-css) and **Minify
 JavaScript** audits will compile a list of unminified resources it finds on the
 current page. From there, you can take action by minifying those files manually,
 or augmenting your build system to do it for you.

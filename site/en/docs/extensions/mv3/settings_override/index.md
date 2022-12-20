@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
+seoTitle: "Overriding Chrome settings in Chrome Extensions"
 date: 2014-02-14
 updated: 2022-12-01
 description: How to override Chrome settings from a Chrome Extension.

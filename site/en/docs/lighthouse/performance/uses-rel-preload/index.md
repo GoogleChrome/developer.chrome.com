@@ -99,4 +99,4 @@ and add `<link rel=preload>` tags.
 
 ## Resources
 
-- [Source code for **Preload key requests** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preload.js)
+- [Source code for **Preload key requests** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/uses-rel-preload.js)

@@ -8,6 +8,12 @@
   svg {
     vertical-align: middle;
   }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
 }
 
 %material-button,
@@ -20,6 +26,12 @@
   color: var(--button-color, inherit);
   padding: get-size(200) get-size(400);
   white-space: nowrap;
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
 }
 
 // Note: Because text buttons define their own left and top margin, they should
