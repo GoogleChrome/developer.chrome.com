@@ -24,7 +24,7 @@ For Chrome 110 the key dates will be:
 -  **Early Stable:** February 1, 2023
 -  **Stable:** February 7, 2023
 
-You can keep track of upcoming release dates and included features on the [Chrome Status Roadmap](https://chromestatus.com/roadmap), and on the [Chromium Dashboard](https://chromiumdash.appspot.com/schedule). The [beta posts](https://developer.chrome.com/tags/beta/) have more details of features, and any deprecations and removals for each release.
+You can keep track of upcoming release dates and included features on the [Chrome Status Roadmap](https://chromestatus.com/roadmap), and on the [Chromium Dashboard](https://chromiumdash.appspot.com/schedule). The [beta posts](/tags/beta/) have more details of features, and any deprecations and removals for each release.
 
 ## Why are we making this change?
 
