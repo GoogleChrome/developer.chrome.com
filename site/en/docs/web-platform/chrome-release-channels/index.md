@@ -177,6 +177,7 @@ Browsers have become so complex to build and maintain that basing the code on an
 project has become a common pattern.
 (The Safari browser uses [WebKit](https://webkit.org/).) Chrome adds extra features to
 Chromium, such as additional video codecs, support for copyright content, and automatic updates.
+
 You can [install Chromium](download-chromium.appspot.com), which frequently has new versions available, but may be missing
 key features you rely on in other browsers (such as automatic updates, and licensed media codecs required to stream video).
 Chromium is best used by browser developers building browser features, rather than an average web consumer.
