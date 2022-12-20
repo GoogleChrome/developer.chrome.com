@@ -5,7 +5,7 @@ description: >
   Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent.
 authors:
   - jakearchibald
-date: 2015-12-08 
+date: 2015-12-08
 updated: 2017-09-22
 
 
@@ -26,7 +26,7 @@ But sometimes, just sometimes, we’re not looking to waste time. The desired us
 
 Unfortunately this experience is frequently broken by poor connectivity. We’ve all been there. You’re staring at a white screen or a spinner, and you know you should just give up and get on with your life, but you give it another 10 seconds just in case. After that 10 seconds? Nothing. But why give up now? You’ve invested time already, so walking away with nothing would be a waste, so you carry on waiting. By this point you *want* to give up, but you know the second you do so, is the second before everything would have loaded if only you’d waited.
 
-[Service workers](https://developers.google.com/web/updates/2015/11/app-shell) solve the page loading part by letting you serve content from a cache. But what about when the page needs to send something to the server?
+[Service workers](/blog/app-shell) solve the page loading part by letting you serve content from a cache. But what about when the page needs to send something to the server?
 
 At the moment, if the user hits "send" on a message they have to stare at a spinner until it completes. If they try to navigate away or close the tab, we use [`onbeforeunload`](https://developer.mozilla.org/docs/Web/API/WindowEventHandlers/onbeforeunload) to display a message like, “Nope, I need you to stare at this spinner some more. Sorry”. If the user has no connection we tell the user “Sorry, *you* must come back later and try again”.
 
@@ -55,7 +55,7 @@ Being able to send in the background like this also yields a perceived performan
 
 In true [extensible web](https://extensiblewebmanifesto.org/) style, this is a low level feature that gives you the freedom to do what you need. You ask for an event to be fired when the user has connectivity, which is immediate if the user already has connectivity. Then, you listen for that event and do whatever you need to do.
 
-Like push messaging, it uses a [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
+Like push messaging, it uses a [service worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
 
 ```js
 // Register your service worker:
@@ -65,7 +65,7 @@ navigator.serviceWorker.register('/sw.js');
 navigator.serviceWorker.ready.then(function(swRegistration) {
   return swRegistration.sync.register('myFirstSync');
 });
- ```   
+ ```
 
 Then listen for the event in `/sw.js`:
 
@@ -75,7 +75,7 @@ self.addEventListener('sync', function(event) {
     event.waitUntil(doSomeStuff());
   }
 });
-```    
+```
 
 And that's it! In the above, `doSomeStuff()` should return a promise indicating the success/failure of whatever it’s trying to do. If it fulfills, the sync is complete. If it fails, another sync will be scheduled to retry. Retry syncs also wait for connectivity, and employ an exponential back-off.
 
@@ -136,7 +136,7 @@ if ('serviceWorker' in navigator && 'SyncManager' in window) {
   // serviceworker/sync not supported
   postDataFromThePage();
 }
- ```   
+ ```
 
 If service workers or background sync aren’t available, just post the content from the page as you’d do today.
 

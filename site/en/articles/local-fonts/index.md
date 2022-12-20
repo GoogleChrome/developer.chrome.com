@@ -50,7 +50,7 @@ body {
 
 The days where web safe fonts really mattered are long gone. Today, we have
 [web fonts](https://developer.mozilla.org/docs/Learn/CSS/Styling_text/Web_fonts), some of which are
-even [variable fonts](/variable-fonts/) that we can tweak further by changing the values for the
+even [variable fonts](https://web.dev/variable-fonts/) that we can tweak further by changing the values for the
 various exposed axes. You can use web fonts by declaring an
 [`@font-face`](https://developer.mozilla.org/docs/Web/CSS/@font-face) block at the start of the CSS,
 which specifies the font file(s) to download:

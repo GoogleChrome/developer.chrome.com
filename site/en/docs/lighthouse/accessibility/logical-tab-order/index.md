@@ -30,7 +30,7 @@ Learn more in [Keyboard access fundamentals](https://web.dev/keyboard-access/).
 Are you able to reach all of the interactive controls on the page?
 If not, you may need to use `tabindex` to improve the focusability of those controls.
 The general rule of thumb is that any control a user can interact with or provide input to
-should aim to be focusable and display a focus indicator.
+should be focusable and display a focus indicator.
 If a keyboard user can't see what's focused, they have no way of interacting with the page.
 
 ## How to fix

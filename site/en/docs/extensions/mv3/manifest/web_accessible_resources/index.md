@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Web Accessible Resources"
+seoTitle: "Chrome Extensions Manifest: web_accessible_resources"
 date: 2013-05-12
 updated: 2022-10-18
 description: Reference documentation for the web_accessible_resources property of manifest.json.

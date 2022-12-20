@@ -97,19 +97,19 @@ about how to evaluate the FID data you collect.
 
 ## Resources
 
-- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/max-potential-fid.js)
+- [Source code for **Max Potential First Input Delay** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/max-potential-fid.js)
 - [First Input Delay][fid]
 - [Time to Interactive](http://web.dev/tti/)
 - [Are long JavaScript tasks delaying your Time to Interactive?](https://web.dev/long-tasks-devtools/)
 - [First paint and first contentful paint][fcp]
 - [How To Think About Speed Tools][tools]
 
-[analysis]: https://developers.google.com/web/updates/2018/05/first-input-delay#analyzing_and_reporting_on_fid_data
-[fid]: https://developers.google.com/web/updates/2018/05/first-input-delay
+[analysis]: https://web.dev/fid/#analyzing-and-reporting-on-fid-data
+[fid]: https://web.dev/fid/
 [tti]: https://web.dev/interactive/#how-to-improve-your-tti-score
-[fcp]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint
-[fid]: https://developers.google.com/web/updates/2018/05/first-input-delay
-[rum]: https://developers.google.com/web/fundamentals/performance/speed-tools#field_data
-[lab]: https://developers.google.com/web/fundamentals/performance/speed-tools#lab_data
+[fcp]: https://web.dev/user-centric-performance-metrics/#important-metrics-to-measure
+[fid]: https://web.dev/fid/
+[rum]: https://web.dev/speed-tools/#field-data
+[lab]: https://web.dev/speed-tools/#lab-data
 [longtask]: https://web.dev/long-tasks-devtools/#what-are-long-tasks
-[tools]: https://developers.google.com/web/fundamentals/performance/speed-tools
+[tools]: https://web.dev/speed-tools/

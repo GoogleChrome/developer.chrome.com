@@ -67,5 +67,5 @@ the manifest, and potentially request and install a new WebAPK, refer to the
 [Updating the WebAPK][webapk-update] section of the [WebAPK][webapk]
 docs.
 
-[webapk]: https://developers.google.com/web/fundamentals/integration/webapks
-[webapk-update]: https://developers.google.com/web/fundamentals/integration/webapks#update-webapk
+[webapk]: https://web.dev/webapks/
+[webapk-update]: https://web.dev/manifest-updates/

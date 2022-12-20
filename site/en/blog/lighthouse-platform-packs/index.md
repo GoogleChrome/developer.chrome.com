@@ -28,7 +28,7 @@ updated: 2019-02-01
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - lighthouse
-  
+
 
 ---
 
@@ -37,7 +37,7 @@ development, and we would love to hear your feedback!
 
 
 By auditing for performance, accessibility and other best practices,
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) provides developers with important guidance
+[Lighthouse](/docs/lighthouse/overview/) provides developers with important guidance
 that they can use to improve their web pages. Many developers, however, use
 different technologies to build their site (such as a CMS or JavaScript
 framework) and may need more specific advice.
@@ -65,7 +65,7 @@ Viewer](https://houssein.me/lighthouse/viewer-wordpress/?gist=9efc3fc22dc500620c
 
 We are starting with WordPress and plan to expand the list in the future
 to other popular CMS and JavaScript frameworks (React, Angular, etc...).
- 
+
 ## How will this feature show up on my Lighthouse report?
 
 There are two options that are being considered:

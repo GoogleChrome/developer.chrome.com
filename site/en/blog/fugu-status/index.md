@@ -109,4 +109,4 @@ Want to try some of these new capabilities? Check out the
 
 [ot-dashboard]: https://developers.chrome.com/origintrials/#/trials/active
 [ot-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
-[capabilities-project]: https://developers.google.com/web/updates/capabilities
+[capabilities-project]: /blog/capabilities

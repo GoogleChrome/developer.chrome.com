@@ -83,6 +83,9 @@ encryption:
 extensions:
   en: Extensions
 
+extensions-news:
+  en: Extensions News
+
 fonts:
   en: Fonts
 

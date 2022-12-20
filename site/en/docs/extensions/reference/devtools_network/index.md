@@ -13,7 +13,7 @@ In terms of HAR, the `chrome.devtools.network.getHAR()` method returns entire _H
 `chrome.devtools.network.onRequestFinished` event provides _HAR entry_ as an argument to the event
 callback.
 
-Note that request content is not provided as part of HAR for efficieny reasons. You may call
+Note that request content is not provided as part of HAR for efficiency reasons. You may call
 request's `getContent()` method to retrieve content.
 
 If the Developer Tools window is opened after the page is loaded, some requests may be missing in

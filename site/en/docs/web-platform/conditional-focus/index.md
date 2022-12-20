@@ -176,7 +176,7 @@ Thanks to [Rachel Andrew] for reviewing this article.
 [screen capture api]: https://w3c.github.io/mediacapture-screen-share/
 [`getdisplaymedia()`]: https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia
 [capture handle]: /docs/web-platform/capture-handle/
-["live"]: https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/readyState
+["live"]: https://developer.mozilla.org/docs/Web/API/MediaStreamTrack/readyState
 [demo]: https://conditional-focus.glitch.me/
 [check out the source code]: https://glitch.com/edit/#!/conditional-focus?path=index.js
 [conditional focus]: https://wicg.github.io/conditional-focus/

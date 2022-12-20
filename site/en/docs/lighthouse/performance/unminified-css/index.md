@@ -118,6 +118,6 @@ to use a build process to do this minification up-front if possible.
 
 ## Resources
 
-- [Source code for **Minify CSS** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unminified-css.js)
+- [Source code for **Minify CSS** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unminified-css.js)
 - [Minify CSS](https://web.dev/minify-css/)
 - [Minify and compress network payloads](https://web.dev/reduce-network-payloads-using-text-compression/)

@@ -1,8 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome settings"
+seoTitle: "Overriding Chrome settings in Chrome Extensions"
 date: 2014-02-14
-updated: 2016-11-07
+updated: 2022-12-01
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
@@ -14,11 +15,14 @@ later.
 
 ## Homepage, search provider, and startup pages {: #others }
 
-Here is an example how [homepage][1], [search provider][2] and [startup pages][3] can be modified 
+Here is an example how [homepage][1], [search provider][2], and [startup pages][3] can be modified 
 in the [extension manifest][4]. Any domain used in the settings API must be [verified][5] (via 
 Google Search Console) by the same developer account publishing the extension. Note that if you 
 verify ownership for a domain (for example, https://example.com) you can use any subdomain or page 
 (for example, https://app.example.com or https://example.com/page.html) within your extension.
+
+Starting in Chrome 107, if an extension only overrides the browser's search provider and provides
+no other capabilities, the post installation dialog box will not be shown.
 
 ```json
 {
@@ -56,12 +60,12 @@ verify ownership for a domain (for example, https://example.com) you can use any
 
 Values in the manifest can be customized in the following ways:
 
-- All values of the `search_provider`, `homepage` and `startup_pages` properties can be localized
-  using the [chrome.i18n API][6].
+- All values of the `search_provider`, `homepage`, and `startup_pages` properties can be localized
+  using the [`chrome.i18n` API][6].
 - For [external extensions][7], the `search_provider`, `homepage` and `startup_pages` URL values can
-  be parametrized using a registry key. A new registry entry should be created next to the
-  "update_url" key (see instructions [here][8]). The value name is "install_parameter", the value
-  data is an arbitrary string:
+  be parametrized using a registry key. Create a new registry entry next to the
+  `"update_url"` key (see instructions [here][8]). The key name is `"install_parameter"`, the value
+  is an arbitrary string:
 
   ```json
   {
@@ -70,9 +74,9 @@ Values in the manifest can be customized in the following ways:
   }
   ```
 
-  All occurrences of the substring "\_\_PARAM\_\_" in the manifest URLs will be substituted with the
-  "install_parameter" value. If "install_parameter" is absent, occurrences of "\_\_PARAM\_\_" are
-  removed. Note that "\_\_PARAM\_\_" cannot be part of the hostname. It needs to occur after the
+  All occurrences of the substring `"__PARAM__"` in the manifest URLs will be substituted with the
+  `"install_parameter"` value. If `"install_parameter"` is absent, occurrences of `"__PARAM__"` are
+  removed. Note that `"__PARAM__"` cannot be part of the hostname. It needs to occur after the
   first '/' in the URL.
 
 ## Reference {: #reference }
@@ -194,7 +198,7 @@ An extension can override one or more of the following properties in the manifes
 
 - **`startup_pages` (array of string)** - optional
 
-  An array of length one containing a URL to be used as the startup page.
+An array of length one containing a URL to be used as the startup page.
 
 [1]: #homepage
 [2]: #search_provider

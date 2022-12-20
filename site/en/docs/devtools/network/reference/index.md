@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-10-25
+updated: 2022-12-05
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -208,6 +208,8 @@ Below is a complete list of supported properties.
 - `priority`. Show resources whose priority level matches the specified value.
 - `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
   autocomplete drop-down with all resource types it has encountered.
+- `response-header-set-cookie`. Show raw Set-Cookie headers in the Issues tab. Malformed cookies
+  with incorrect `Set-Cookie` headers will be flagged in the Network panel.
 - `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`) or protected HTTPS
   (`scheme:https`).
 - `set-cookie-domain`. Show the resources that have a `Set-Cookie` header with a `Domain` attribute
@@ -545,7 +547,7 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oSUzbdlzdwgvsgeRQr6.png", alt="The total size of transferred and loaded resources.", width="800", height="428" %}
 
-See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them. 
+See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them.
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
