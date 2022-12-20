@@ -337,7 +337,7 @@ the steps in [Viewing Warnings](#viewing-warnings).
 
 ## Update permissions {: #update_permissions }
 
-Updating an extension with additional permissions with warnings will temporarily disable it. The user will have to
+Updating an extension with additional permissions with warnings may temporarily disable it. The user will have to
 re-enable it after agreeing to any new warnings.
 
 If the extension is updated automatically it will be disabled until the user agrees to the new
