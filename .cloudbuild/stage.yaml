@@ -10,11 +10,24 @@ steps:
     env:
       - 'NODE_OPTIONS="--max_old_space_size=8192"'
 
+  - name: node:18
+    entrypoint: npm
+    args: ['run', 'stage:github', 'determineDeploymentType']
+
   - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
+    entrypoint: bash
     args:
       - '-c'
       - |
-        npm run stage:github -- deploy
+        BUILD_TYPE=$(cat deploymentType.txt)
+        if [ "$BUILD_TYPE" = "app" ]; then
+          gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
+        elif [ "$BUILD_TYPE" = "static" ]; then
+          cp -rf dist/en/* dist/ &&
+          rm -rf dist/en &&
+          gsutil -q -m cp -r dist gs://static-dcc-staging/pr-${prNumber}
+        else
+          echo "Skipping deployment, no build output."
+        fi
 options:
   machineType: 'E2_HIGHCPU_32'

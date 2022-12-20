@@ -22,6 +22,7 @@
  */
 
 const micromatch = require('micromatch');
+const fs = require('fs/promises');
 
 const APP_GLOB = ['package.json', 'server/**/*.js'];
 const STATIC_GLOB = ['site/**/*'];
@@ -73,6 +74,10 @@ async function determineDeploymentType() {
     output = OUTPUT_STATIC_BUILD;
   }
 
+  // There is no way to pass data between build steps on
+  // Google Cloud Build, except the file system as of 12/2022. See:
+  // https://cloud.google.com/build/docs/configuring-builds/pass-data-between-steps
+  await fs.writeFile('./deploymentType.txt', output, {encoding: 'utf-8'});
   console.log(output);
   return output;
 }
