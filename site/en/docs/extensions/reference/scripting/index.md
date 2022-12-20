@@ -21,7 +21,7 @@ in your [manifest file][manifest].
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
 websites. This is similar to what you can do with [content
-scripts][contentscripts], but by using the `chrome.scripting` API, extensions
+scripts][contentscripts]. But by using the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/), extensions
 can make decisions at runtime.
 
 ### Injection targets
@@ -58,7 +58,7 @@ chrome.scripting
 ```
 
 You can also inject into specific frames of a tab by specifying individual frame
-IDs. For more information on frame IDs, see the [webNavigation
+IDs. For more information on frame IDs, see the [`chrome.webNavigation`
 API][webnavigation].
 
 ```js
@@ -241,7 +241,7 @@ async function unregisterAllDynamicContentScripts() {
   } catch (error) {
     const message = [
       "An unexpected error occurred while",
-      "unregistering dynamic content scripts",
+      "unregistering dynamic content scripts.",
     ].join(" ");
     throw new Error(message, {cause : error});
   }

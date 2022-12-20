@@ -153,7 +153,7 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
     <tr id="run_at">
       <td><code>run_at</code></td>
       <td><a href="/docs/extensions/reference/extensionTypes/#type-RunAt">RunAt</a></td>
-      <td><em>Optional.</em> When the script should be injected into the page. Defaults to
+      <td><em>Optional.</em> Specifies when the script should be injected into the page. Defaults to
         <code>document_idle</code>.</td>
     </tr>
     <tr id="match_about_blank">
@@ -180,12 +180,13 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
 
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
-Dynamic content scripts are useful for situations when the match patterns for a content scripts are
+Dynamic content scripts are useful when the match patterns for content scripts are
 not well known or when content scripts should not always be injected on known hosts.
 
 Introduced in Chrome 96, dynamic declarations are similar to [static
 declarations][header-cs-static], but the content script object is registered with Chrome using
-methods on the Scripting API rather than in [manifest.json][doc-manifest]. In addition to
+methods in the [`chrome.scripting` namespace](/docs/extensions/reference/scripting/) rather than in
+[manifest.json][doc-manifest]. In addition to
 [registering][api-register-cs] content scripts, the Scripting API also allows extension developers
 to [get a list of][api-get-registered-cs], [update][api-update-cs], and [remove][api-remove-cs]
 content script registrations.
@@ -485,7 +486,7 @@ chrome.scripting.registerContentScript({
 ### Run time {: #run_time }
 
 The `run_at` field controls when JavaScript files are injected into the web page. The preferred and
-default value is `"document_idle"`. See the [RunAt][api-runat] type documentation for other possible
+default value is `"document_idle"`. See the [RunAt][api-runat] type for other possible
 values.
 
 ```json/6
