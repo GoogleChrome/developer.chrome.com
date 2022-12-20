@@ -19,10 +19,9 @@ steps:
     args:
       - '-c'
       - |
-        BUILD_TYPE=$(cat deploymentType.txt)
-        if [ "$BUILD_TYPE" = "app" ]; then
+        if [ $(cat deploymentType.txt) = "app" ]; then
           gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
-        elif [ "$BUILD_TYPE" = "static" ]; then
+        elif [ $(cat deploymentType.txt) = "static" ]; then
           cp -rf dist/en/* dist/ &&
           rm -rf dist/en &&
           gsutil -q -m cp -r dist gs://static-dcc-staging/pr-${prNumber}
