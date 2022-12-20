@@ -1,5 +1,6 @@
 - title: i18n.docs.web-platform.chrome-concepts
   sections:
+    - url: /docs/web-platform/chrome-release-channels
     - url: /docs/web-platform/chrome-flags
     - url: /docs/web-platform/chrome-variations
     - url: /docs/web-platform/origin-trials
