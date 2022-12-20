@@ -110,9 +110,7 @@ billions of users would be much slower.
 
 ### Try changes to a feature
 
-Lastly, Chrome Variations can be used to validate changes and updates. For example, we can try
-tweaking the number of results shown in the
-[Omnibox](https://blog.chromium.org/2021/11/searching-browsing-shutdown-chrome-performance-improvements.html).
+Lastly, Chrome Variations can be used to validate changes and updates. For example, we could fine-tune the difficulty for the Chrome Offline Dino game to make the interaction feel more fun.
 
 Chrome Variations can also be used to study the long-term effects of new features. This is done by
 using the Chrome Variations mechanism to hold back features for a small proportion of users, maybe
