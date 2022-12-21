@@ -21,7 +21,7 @@ const express = require('express');
 /**
  * Is this App Engine in production?
  */
-const isGAEProd = Boolean(process.env.GAE_APPLICATION);
+const isGAEProd = false;
 
 /**
  * The domain being served.
