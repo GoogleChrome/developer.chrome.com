@@ -15,9 +15,9 @@
  */
 
 /**
- * @fileoverview Sends a request to a Cloud Build webhook
- * to create a build for the specified commit. Only meant to be run
- * on GitHub actions.
+ * @fileoverview Repeatedly queries the GitHub API for the check result
+ * of the check defined in CHECK_NAME and writes the check result to
+ * the file system afterwards
  */
 
 const fs = require('fs/promises');
@@ -107,10 +107,7 @@ async function awaitGoogleCloudBuild() {
 
   const commit = process.env.PR_HEAD_COMMIT_SHA;
 
-  // Wait for the webhook to create the actual
-  // build and Cloud Build propagate the status back to GitHub.
-  // This can take up to 1m30s - wait for 2m to have room to wiggle
-  // and as the build takes a while anyway
+  // Give the build some time ahead, as it takes at least 5min anyway
   console.log(`Waiting for Cloud Build job to start on commit ${commit} ...`);
   await wait(INITIAL_WAIT);
 
