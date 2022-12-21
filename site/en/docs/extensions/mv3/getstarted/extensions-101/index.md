@@ -18,7 +18,7 @@ browser, providing things like:
 - Web page content enrichment.
 - Information aggregation.
 
-These are just a few examples of the many things that extensions can do. See the [Chrome Web
+These are just a few examples of the many things that extensions can do. Visit the [Chrome Web
 Store][chrome-web-store] to see thousands of different examples of published extensions.
 
 ## Web technologies {: #web-tech }
