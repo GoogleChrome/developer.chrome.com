@@ -75,11 +75,12 @@ async function buildAnnouncementComment() {
       )} minutes.`;
 
     const deploymentType = await fs.readFile(DEPLOYMENT_TYPE_PATH);
-    const baseUrl = `https://$pr-${prNumber}-${deploymentType}-dot-dcc-staging.uc.r.appspot.com/`;
+    const baseUrl = `https://pr-${prNumber}-${deploymentType}-dot-dcc-staging.uc.r.appspot.com/`;
 
     announcement += '\n\n' + `**${baseUrl}**`;
 
     const changedFiles = await fetchGitHubApi(`pulls/${prNumber}/files`);
+    console.log(changedFiles);
     const changedPages = changedFiles
       .filter(file => {
         return file.filename.endsWith('index.md');
