@@ -20,7 +20,7 @@ If you are not familiar with Chrome extension development, we recommend first re
 The manifest is the configuration file of a Chrome extension. It is a required JSON file that must be located at the root of the project. It provides the browser with a blueprint of the extension, with important information such as:
 
 - The name of the extension, a description of what it does, the current version number, and what icons to use.
-- The [Chrome APIs][api-ref] keys and [permissions][doc-perms] that the extension needs.
+- The [Chrome API][api-ref] keys and [permissions][doc-perms] that the extension needs.
 - The files assigned as the extension service worker, the popup HTML file, the options page, the content scripts, etc.
 
 The [Manifest keys][doc-manifest] article contains the complete list of default and optional keys. For copy-paste-ready code samples, check out the [Manifest examples][doc-manifest-examples].
@@ -29,7 +29,7 @@ The [Manifest keys][doc-manifest] article contains the complete list of default 
 
 A service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
 
-A service workers can access all the [Extension APIs][api-ref], but as a type of [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) it can't use the typical DOM APIs that a document's global Window object provides. It also runs in its own environment, so it cannot directly modify a web page's content.
+A service worker can access all the [Extension APIs][api-ref], but as a type of [Worker][mdn-worker] it can't use the typical DOM APIs that a document's global Window object provides. It also runs in its own environment, so it cannot directly modify a web page's content.
 
 See [Handling events in the extension service worker][doc-sw] for more details. 
 
@@ -53,7 +53,7 @@ Other extension HTML pages include [Chrome override pages][doc-override], [sandb
 
 ### Other assets {: #assets }
 
-An extension can include many types of resources, but only the [extension icons][manifest-icons] are required. All assets, including images and fonts, must be part of the extension package.
+An extension can include many types of resources, such as images and fonts, but only the [extension icons][manifest-icons] are required for extensions hosted in the [Chrome Web Store][cws].
 
 ## How they work together {: #interact }
 
@@ -67,13 +67,18 @@ See [Message passing][doc-messages] for more details.
 
 ### Storing data {: #data }
 
-Chrome provides extensions with a specialized [Storage API][api-storage] available to all extension components. It includes four separate storage areas for specific use cases and an event listener that tracks whenever data is updated. For example, when you save changes in the popup, the extension service worker can respond with specified logic.
+Chrome provides extensions with a specialized [Storage API][api-storage] available to all extension
+components. It includes four separate storage areas for specific use cases and an event listener
+that tracks whenever data is updated. For example, when you save changes in the popup, the extension
+service worker can respond with specified logic.
 
 See [Storage API][api-storage] for usage and code samples.
 
 ### Referencing extension resources {: #ref-files }
 
-Extension HTML pages can use the same tags as a regular HTML page to add an extension asset, but all resources must be included in the extension bundle. Content Scripts can also access extension resources, such as images and fonts, but require some extra steps which are described in [Accessing extension files in Content Scripts][doc-ref].
+Extension HTML pages can use the same tags as a regular HTML page to add an extension asset. Content
+Scripts can also access extension resources, such as images and fonts, but require some extra steps
+which are described in [Accessing extension files in Content Scripts][doc-ref].
 
 ## Take the next step {: #next-steps }
 
@@ -85,10 +90,11 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 
 [api-ref]: /docs/extensions/reference
 [api-storage]: /docs/extensions/reference/storage
+[cws]: https://chrome.google.com/webstore/
 [doc-content-scripts]: /docs/extensions/mv3/content_scripts
+[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-dev-guide]: /docs/extensions/mv3/devguide
 [doc-ext-101]: /docs/extensions/mv3/getstarted/extensions-101
-[doc-dev-basics]: /docs/extensions/mv3/getstarted/development-basics
 [doc-manifest-examples]: /docs/extensions/mv3/manifest#manifest-examples
 [doc-manifest]: /docs/extensions/mv3/manifest
 [doc-messages]: /docs/extensions/mv3/messaging
@@ -106,3 +112,4 @@ Now that you have completed the [Getting Started guides][doc-gs] and understand 
 [doc-ui]: /docs/extensions/mv3/user_interface
 [manifest-icons]: /docs/extensions/mv3/manifest/icons/
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
+[mdn-worker]: https://developer.mozilla.org/docs/Web/API/Worker
