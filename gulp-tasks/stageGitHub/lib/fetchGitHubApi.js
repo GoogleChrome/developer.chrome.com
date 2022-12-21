@@ -37,8 +37,6 @@ async function fetchGitHubApi(endpoint) {
   });
 
   const data = await request.json();
-  console.log(data);
-
   return data;
 }
 
