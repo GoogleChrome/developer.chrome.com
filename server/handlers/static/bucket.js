@@ -45,7 +45,7 @@ const storage = new Storage();
 /**
  * @type {express.RequestHandler}
  */
-async function bucketHandler(req, res, next) {
+async function bucketHandler(req, res) {
   let filePath = req.path;
   let folder = defaultFolder;
 
@@ -63,9 +63,6 @@ async function bucketHandler(req, res, next) {
     filePath = path.join(filePath, 'index.html');
   }
 
-  // TODO: For production, lookup if the file exists in
-  // the commit manifest, before trying to stream it
-
   try {
     const file = await storage
       .bucket(bucketName)
@@ -77,7 +74,7 @@ async function bucketHandler(req, res, next) {
     file.createReadStream().pipe(res);
   } catch (e) {
     console.error('Could not serve', filePath);
-    return next();
+    res.send(`Could not send ${filePath} due to ${e}.`);
   }
 }
 
