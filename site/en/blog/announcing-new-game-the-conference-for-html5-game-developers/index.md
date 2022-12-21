@@ -10,7 +10,7 @@ updated: 2019-01-16
 
 ---
 
-Please join us at New Game, to be held November 1-2, 2011 in San Francisco, CA.  New Game is the first HTML5 game conference for North America.
+Please join us at New Game, to be held November 1-2, 2011 in San Francisco, Cali.  New Game is the first HTML5 game conference for North America.
 
 Our theme is "HTML5 games are here today" and the conference will feature speakers building and releasing production HTML5 games for desktop, laptop, and mobile.
 

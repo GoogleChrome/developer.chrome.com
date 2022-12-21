@@ -28,7 +28,7 @@ steps:
       - |
         cp -rf dist/en/* dist/ &&
         rm -rf dist/en &&
-        gsutil -q -m cp -r dist gs://static-dcc-staging/pr-${prNumber}
+        gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
         rm -rf dist
 
         if [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "app" ]; then

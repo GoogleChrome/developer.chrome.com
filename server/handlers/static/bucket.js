@@ -38,7 +38,7 @@ const defaultFolder = 'main';
 /**
  * Used to identify subdomain requests to app engine that request another static build
  */
-const subDomainPostfix = `-static-dot-${process.env.GOOGLE_CLOUD_PROJECT}.uc.r.appspot.com`;
+const subDomainPostfix = `-dot-${process.env.GOOGLE_CLOUD_PROJECT}.uc.r.appspot.com`;
 
 const storage = new Storage();
 
@@ -50,11 +50,14 @@ async function bucketHandler(req, res) {
   let folder = defaultFolder;
 
   // Check if the user requested another folder. This allows uers to do
-  // requests to $folderName-static-dot-dcc-staging.uc.r.appspot.com to overwrite
+  // requests to $folderName-[app|static]-dot-dcc-staging.uc.r.appspot.com to overwrite
   // the default folder and access any other folder in the bucket
   const host = req.get('host');
   if (host && host.includes(subDomainPostfix)) {
-    folder = host.replace(subDomainPostfix, '');
+    folder = host
+      .replace(subDomainPostfix, '')
+      .replace('-app', '')
+      .replace('-static', '');
   }
 
   // If the requested path does not end in an extension, assume
