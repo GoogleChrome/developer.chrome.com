@@ -27,6 +27,13 @@ const {default: fetch} = require('node-fetch');
  * @returns {Promise<{[key: string]: any}>}
  */
 async function fetchGitHubApi(endpoint) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    throw new Error(
+      'GitHub is not authenticated, process.env.GITHUB_TOKEN is not set.'
+    );
+  }
+
   const url = `https://api.github.com/repos/GoogleChrome/developer.chrome.com/${endpoint}`;
   console.log('Requesting GitHub API', url);
 
