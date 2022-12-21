@@ -6,11 +6,9 @@ updated: 2018-04-29
 description: How to let users customize your extension.
 ---
 
-Just as extensions allow users to customize the Chrome browser, the options page enables
-customization of the extension. Options can be used to enable features and allow users to choose
-what functionality is relevant to their needs.
+Just as extensions allow users to customize the Chrome browser, the options page enables customization of the extension. Options can be used to enable features and allow users to choose what functionality is relevant to their needs.
 
-## Locating the options page {: #view_page}
+## Locating the options page {: #view_page }
 
 Users can access the options page via [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, a user can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click on **Details**, and then select the options link.
 
@@ -40,9 +38,7 @@ alt="Context Menu Options page", width="357", height="222" %}
 </figure>
 
 {% endColumn %}
-
 {% endColumns %}
-
 
 ## Write the options page {: #write_page }
 
