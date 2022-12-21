@@ -27,7 +27,7 @@ The [Manifest keys][doc-manifest] article contains the complete list of default 
 
 ### The service worker {: #background_script }
 
-The extension service worker is the event manager of a Chrome extension. It is a script that runs in the background within the context of the browser. It monitors and responds to events in the browser. For example, when a new tab is created, a new bookmark is added, the extension is installed, the extension toolbar icon is clicked, etc.
+A service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
 
 It can access all the [Chrome APIs][api-ref], but as a service worker, it can't use the DOM APIs that the global window object provides. It also cannot modify the page's content.
 
