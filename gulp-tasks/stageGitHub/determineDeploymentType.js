@@ -67,8 +67,7 @@ async function determineDeploymentType() {
   // Google Cloud Build, except the file system as of 12/2022. See:
   // https://cloud.google.com/build/docs/configuring-builds/pass-data-between-steps
   await fs.writeFile(DEPLOYMENT_TYPE_PATH, output, {encoding: 'utf-8'});
-  console.log(output);
-  return output;
+  console.log(`Wrote deployment type (${output}) to`, DEPLOYMENT_TYPE_PATH);
 }
 
 module.exports = {
