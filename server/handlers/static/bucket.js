@@ -15,9 +15,8 @@
  */
 
 /**
- * @fileoverview Reads the current active commit from the configured
- * Cloud Storage bucket, searches the bucket for a directory named after
- * the commit and then proxies requests into that directory
+ * @fileoverview Proxies requests to a Cloud Storage bucket. Either to a
+ * configured folder by default or one specified via subdomain
  */
 
 // eslint-disable-next-line no-unused-vars
@@ -31,61 +30,34 @@ const {Storage} = require('@google-cloud/storage');
 const bucketName = process.env.DCC_STATIC_BUCKET || 'static-dcc-staging';
 
 /**
- * The time in milliseconds the router checks if there is a new active commit.
+ * Name of the folder that is served by the instance, if no other folder
+ * is specified by subdomain
  */
-const commitRefreshTimeout =
-  parseInt(process.env.DCC_STATIC_BUCKET_REFRESH || '') || 60 * 1000;
+const defaultFolder = 'main';
 
 /**
- * Used to identify subdomain requests to app engine
+ * Used to identify subdomain requests to app engine that request another static build
  */
 const subDomainPostfix = `-dot-${process.env.GOOGLE_CLOUD_PROJECT}.uc.r.appspot.com`;
-
-/**
- * The first seven chars of a SHA1 commit that has been deployed to the bucket.
- */
-let activeCommit = null;
 
 const storage = new Storage();
 
 /**
- *
- * @param {boolean} refresh True if called by the check interval
- * @returns The SHA1 of the current active commit
- */
-async function getActiveCommit(refresh = false) {
-  if (!activeCommit || refresh) {
-    const contents = await storage
-      .bucket(bucketName)
-      .file('activeCommit.txt')
-      .download();
-    activeCommit = contents.toString().trim();
-  } else {
-    return activeCommit;
-  }
-
-  // Schedule a refresh of the active commit to allow updating
-  // the delivered content without a server/instance restart
-  setTimeout(() => {
-    getActiveCommit(true);
-  }, commitRefreshTimeout);
-
-  return activeCommit;
-}
-
-/**
  * @type {express.RequestHandler}
  */
-async function bucketHandler(req, res, next) {
-  let activeCommit = await getActiveCommit();
+async function bucketHandler(req, res) {
   let filePath = req.path;
+  let folder = defaultFolder;
 
-  // Check if the user requested another commit. This allows uers to do
-  // requests to $commitHash-dot-dcc-staging.uc.r.appspot.com to overwrite
-  // the current active commit and access any other commit in the bucket
+  // Check if the user requested another folder. This allows uers to do
+  // requests to $folderName-[app|static]-dot-dcc-staging.uc.r.appspot.com to overwrite
+  // the default folder and access any other folder in the bucket
   const host = req.get('host');
   if (host && host.includes(subDomainPostfix)) {
-    activeCommit = host.replace(subDomainPostfix, '');
+    folder = host
+      .replace(subDomainPostfix, '')
+      .replace('-app', '')
+      .replace('-static', '');
   }
 
   // If the requested path does not end in an extension, assume
@@ -94,13 +66,10 @@ async function bucketHandler(req, res, next) {
     filePath = path.join(filePath, 'index.html');
   }
 
-  // TODO: For production, lookup if the file exists in
-  // the commit manifest, before trying to stream it
-
   try {
     const file = await storage
       .bucket(bucketName)
-      .file(path.join(activeCommit, filePath));
+      .file(path.join(folder, filePath));
 
     const [metadata] = await file.getMetadata();
 
@@ -108,7 +77,7 @@ async function bucketHandler(req, res, next) {
     file.createReadStream().pipe(res);
   } catch (e) {
     console.error('Could not serve', filePath);
-    return next();
+    res.send(`Could not send ${filePath} due to ${e}.`);
   }
 }
 
