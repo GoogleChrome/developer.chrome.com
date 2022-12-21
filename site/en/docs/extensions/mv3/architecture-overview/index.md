@@ -5,6 +5,9 @@ date: 2012-09-18
 updated: 2022-12-16
 description: A high-level explanation of the architecture of Chrome Extensions.
 subhead: A high-level explanation of the structure of a Chrome Extension.
+anchorRedirects:
+  view_page: /docs/extensions/mv3/options/#view_page
+  files: /docs/extensions/mv3/content_scripts/#files
 ---
 
 ## Overview {: #overview }
