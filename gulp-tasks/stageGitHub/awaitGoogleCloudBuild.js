@@ -39,7 +39,7 @@ const CHECK_DETAILS_PATH = path.join(__dirname, 'tmp', 'check.json');
  * How long the task waits initially before starting to poll,
  * as the build takes at least 5 minutes as of 12/2022
  */
-const INITIAL_WAIT = 4.5 * 60 * 1000;
+const INITIAL_WAIT = 3.5 * 60 * 1000;
 
 /**
  * Returns a promise that resolves after the specified amount of time
