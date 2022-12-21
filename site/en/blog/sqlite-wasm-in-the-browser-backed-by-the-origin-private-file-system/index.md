@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: SQLite Wasm in the browser backed by the Origin Private File System
 subhead: >
   Use SQLite to handle all your storage needs performantly on the web.
-date: 2022-12-13
+date: 2023-01-11
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/l5kRHOrUI9mQmwOTJKr7.jpg
 alt: Library symbolizing a database.
 authors:
@@ -12,64 +12,117 @@ tags:
   - capabilities
 ---
 
-{% Aside 'success' %}
-In our blog post [Deprecating and removing Web SQL](/blog/deprecating-web-sql/), we promised a replacement for Web SQL based on SQLite. The SQLite Wasm library with the Origin Private File System persistence backend now is our fulfillment of this promise.
-{% endAside %}
+{% Aside 'success' %} In our blog post
+[Deprecating and removing Web SQL](/blog/deprecating-web-sql/), we promised a replacement for Web
+SQL based on SQLite. The SQLite Wasm library with the Origin Private File System persistence backend
+is our fulfillment of this promise. {% endAside %}
 
 ## About SQLite
 
-As you certainly know, [SQLite](https://sqlite.org/) is a popular, [open-source](https://sqlite.org/src/tree), lightweight, embedded relational database management system. Many developers use it to store data in a structured, easy-to-use manner. Because of its small size and low memory requirements, SQLite is often leveraged as a database engine in mobile devices, desktop applications, and web browsers.
+[SQLite](https://sqlite.org/) is a popular, [open-source](https://sqlite.org/src/tree), lightweight,
+embedded relational database management system. Many developers use it to store data in a
+structured, easy-to-use manner. Because of its small size and low memory requirements, SQLite is
+often leveraged as a database engine in mobile devices, desktop applications, and web browsers.
 
-One of the key features of SQLite is that it is a serverless database, which means that it does not require a separate server process to operate. Instead, the database is stored in a single file on the user's device, making it easy to integrate into applications.
+One of the key features of SQLite is that it is a serverless database, which means that it does not
+require a separate server process to operate. Instead, the database is stored in a single file on
+the user's device, making it easy to integrate into applications.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/eDfwxFJirAZ6hqdt6Z8Y.png", alt="SQLite logo.", width="220", height="101" %}
 
 ## SQLite based on Web Assembly
 
-For a long time now, SQLite is available in various, unofficial versions based on Web Assembly (Wasm), which allows it to be used in web browsers, for example, [sql.js](https://github.com/sql-js/sql.js). The [sqlite3 WASM/JS subproject](https://sqlite.org/wasm/doc/tip/about.md) is now the first effort that is "officially" associated with the [SQLite project](https://sqlite.org/) to make Wasm builds of the library established members of the family of supported SQLite deliverables. The concrete goals of this project include:
+There are a number of unofficial SQLite versions based on Web Assembly (Wasm), allowing it to be
+used in web browsers, for example, [sql.js](https://github.com/sql-js/sql.js). The
+[sqlite3 WASM/JS subproject](https://sqlite.org/wasm/doc/tip/about.md) is the first effort that is
+"officially" associated with the [SQLite project](https://sqlite.org/) makingWasm builds of the
+library established members of the family of supported SQLite deliverables. The concrete goals of
+this project include:
 
 - Binding a low-level sqlite3 API which is as close to the C one as feasible in terms of usage.
-- A higher-level object-oriented API, more akin to [sql.js](https://github.com/sql-js/sql.js/) and [Node.js-style implementations](https://www.npmjs.com/package/sqlite3), that speaks directly to the low-level API. This API must be used from the same thread as the low-level API.
-- A Worker-based API which speaks to the previous APIs via Worker messages. This one is intended for use in the main thread, with the lower-level APIs installed in a Worker thread, and talking to them via Worker messages.
-- A Promise-based variant of the Worker API which entirely hides the cross-thread communication aspects from the user.
-- Support for persistent client-side storage using available JavaScript APIs, including the Origin Private File System (OPFS).
+- A higher-level object-oriented API, more akin to [sql.js](https://github.com/sql-js/sql.js/) and
+  [Node.js-style implementations](https://www.npmjs.com/package/sqlite3), that speaks directly to
+  the low-level API. This API must be used from the same thread as the low-level API.
+- A Worker-based API which speaks to the previous APIs via Worker messages. This one is intended for
+  use in the main thread, with the lower-level APIs installed in a Worker thread, and talking to
+  them via Worker messages.
+- A Promise-based variant of the Worker API which entirely hides the cross-thread communication
+  aspects from the user.
+- Support for persistent client-side storage using available JavaScript APIs, including the Origin
+  Private File System (OPFS).
 
 ## Using SQLite Wasm with the Origin Private File System persistence backend
 
 ### Downloading the library
 
-You can download the official Wasm build from the [SQLite homepage](https://sqlite.org//download.html#:~:text=WebAssembly%20%26%20JavaScript). Be sure to download the right build. The description needs to mention `sqlite3.wasm`. After the download has finished, extract the archive.
+Download the official Wasm build from the
+[SQLite homepage](https://sqlite.org//download.html#:~:text=WebAssembly%20%26%20JavaScript). Be sure
+to download the right build. The description needs to mention `sqlite3.wasm`. After the download has
+finished, extract the archive.
 
 ### The Origin Private File System
 
-The Origin Private File System (OPFS, part of the [File System Access API](/articles/file-system-access/)) is augmented with a special surface that brings very performant access to data. This new surface differs from existing ones by offering in-place and exclusive write access to a file's content. This change, along with the ability to consistently read unflushed modifications and the availability of a synchronous variant on dedicated workers, significantly improves performance and unblocks new use cases.
+The Origin Private File System (OPFS, part of the
+[File System Access API](/articles/file-system-access/)) is augmented with a special surface that
+brings very performant access to data. This new surface differs from existing ones by offering
+in-place and exclusive write access to a file's content. This change, along with the ability to
+consistently read unflushed modifications and the availability of a synchronous variant on dedicated
+workers, significantly improves performance and unblocks new use cases.
 
-As you can imagine, the last point of the project's goals, _Support for persistent client-side storage using available JavaScript APIs_ specifically, comes with strict performance requirements regarding persisting data to the database file. This is where the Origin Private File System, and, more specifically, the [`createSyncAccessHandle()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle) method of [`FileSystemFileHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle) objects comes into play. This method returns a Promise which resolves to a [`FileSystemSyncAccessHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle) object that can be used to synchronously read from and write to a file. The synchronous nature of this method brings performance advantages, but therefore it is only usable inside dedicated [Web Workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) for files within the Origin Private File System so the main thread can't be blocked.
+As you can imagine, the last point of the project's goals, _Support for persistent client-side
+storage using available JavaScript APIs_ specifically, comes with strict performance requirements
+regarding persisting data to the database file. This is where the Origin Private File System, and,
+more specifically, the
+[`createSyncAccessHandle()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle)
+method of [`FileSystemFileHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle)
+objects comes into play. This method returns a Promise which resolves to a
+[`FileSystemSyncAccessHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle)
+object that can be used to synchronously read from and write to a file. The synchronous nature of
+this method brings performance advantages, but therefore it is only usable inside dedicated
+[Web Workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API) for files within the
+Origin Private File System so the main thread can't be blocked.
 
 ### Setting the required headers
 
-{% Aside 'warning' %}
-Setting these headers is a _required_ step for the Origin Private File System persistence backend to work.
-{% endAside %}
+{% Aside 'warning' %} Setting these headers is a _required_ step for the Origin Private File System
+persistence backend to work. {% endAside %}
 
-Among other files, the downloaded SQLite Wasm archive contains the `sqlite3.js` and `sqlite3.wasm` files, which make up the sqlite3 WASM/JS build. The `jswasm` directory contains the core sqlite3 deliverables and the top-level directory contains demonstration and test apps. Browsers will not serve Wasm files from `file://` URLs, so any apps you build with this require a web server and that server must include the following headers in its response when serving the files:
+Among other files, the downloaded SQLite Wasm archive contains the `sqlite3.js` and `sqlite3.wasm`
+files, which make up the sqlite3 WASM/JS build. The `jswasm` directory contains the core sqlite3
+deliverables and the top-level directory contains demonstration and test apps. Browsers will not
+serve Wasm files from `file://` URLs, so any apps you build with this require a web server and that
+server must include the following headers in its response when serving the files:
 
-- [`Cross-Origin-Opener-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) set to the [`same-origin` directive](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#directives), which isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
-- [`Cross-Origin-Embedder-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) set to the [`require-corp` directive](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#directives), so a document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.
+- [`Cross-Origin-Opener-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
+  set to the
+  [`same-origin` directive](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy#directives),
+  which isolates the browsing context exclusively to same-origin documents. Cross-origin documents
+  are not loaded in the same browsing context.
+- [`Cross-Origin-Embedder-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
+  set to the
+  [`require-corp` directive](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#directives),
+  so a document can only load resources from the same origin, or resources explicitly marked as
+  loadable from another origin.
 
-Why these headers you may ask. SQLite Wasm depends on [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), and setting these headers is part of its [security requirements](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements).
+The reason for these headers is that SQLite Wasm depends on
+[`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer),
+and setting these headers is part of its
+[security requirements](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements).
 
-If you inspect the traffic with DevTools, this is how it should look like:
+If you inspect the traffic with DevTools, you should find the following information:
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/5IwU6G8KyFjV3SP3f0lX.png", alt="The two headers mentioned above, Cross-Origin-Embedder-Policy and Cross-Origin-Opener-Policy, highlighted in Chrome DevTools.", width="377", height="249" %}
 
 ### Getting started code sample
 
-As mentioned above, SQLite Wasm with the Origin Private File System persistence backend needs to run from a Worker context. So to use it, in the main thread, you need to create the worker and listen to messages from it.
+As mentioned previously, SQLite Wasm with the Origin Private File System persistence backend needs
+to run from a Worker context. So to use it, in the main thread, you need to create the worker and
+listen to messages from it.
 
-{% Aside %}
-When you use SQLite Wasm in production, be sure to also check out its [Worker1 Promiser  API](https://sqlite.org/wasm/doc/trunk/api-worker1.md#promiser), which hides the worker logic behind an abstraction. The example below uses a more classic Worker setup for the sake of clarity.
-{% endAside %}
+{% Aside %} When using SQLite Wasm in production, be sure to also check out its
+[Worker1 Promiser API](https://sqlite.org/wasm/doc/trunk/api-worker1.md#promiser), which hides the
+worker logic behind an abstraction. The example below uses a more classic Worker setup for the sake
+of clarity. {% endAside %}
 
 ```js
 const logHtml = function (cssClass, ...args) {
@@ -84,16 +137,17 @@ const logHtml = function (cssClass, ...args) {
 const worker = new Worker('worker.js?sqlite3.dir=jswasm');
 worker.onmessage = function ({ data }) {
   switch (data.type) {
-      case 'log':
-        logHtml(data.payload.cssClass, ...data.payload.args);
-        break;
-      default:
-        logHtml('error', 'Unhandled message:', data.type);
-    }
+    case 'log':
+      logHtml(data.payload.cssClass, ...data.payload.args);
+      break;
+    default:
+      logHtml('error', 'Unhandled message:', data.type);
+  }
 };
 ```
 
-After that, in the worker thread, you can then set up the communication with the main thread, initialize the Wasm module, and finally start working with SQLite and execute queries.
+After that, in the worker thread, you can then set up the communication with the main thread,
+initialize the Wasm module, and finally start working with SQLite and execute queries.
 
 ```js
 const logHtml = function (cssClass, ...args) {
@@ -169,7 +223,8 @@ self
 
 ### Demo
 
-You can see the above code in action in the embedded demo. Be sure to check out the [source code](https://glitch.com/edit/#!/sqlite-wasm-opfs?path=index.js%3A1%3A0) on Glitch.
+See the above code in action in the embedded demo. Be sure to check out the
+[source code](https://glitch.com/edit/#!/sqlite-wasm-opfs?path=index.js%3A1%3A0) on Glitch.
 
 {% Glitch {
   id: 'sqlite-wasm-opfs'
@@ -177,21 +232,29 @@ You can see the above code in action in the embedded demo. Be sure to check out 
 
 ### Debugging the Origin Private File System
 
-To debug SQLite Wasm's Origin Private File System output, you can use the [OPFS Explorer](https://chrome.google.com/webstore/detail/opfs-explorer/acndjpgkpaclldomagafnognkcgjignd) Chrome extension.
+To debug SQLite Wasm's Origin Private File System output, use the
+[OPFS Explorer](https://chrome.google.com/webstore/detail/opfs-explorer/acndjpgkpaclldomagafnognkcgjignd)
+Chrome extension.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/jT2SFMpWzPuPKjcphLlR.png", alt="OPFS Explorer in the Chrome Web Store.", width="800", height="612" %}
 
-After installing the extension, open the Chrome DevTools, select the **OPFS Explorer** tab, and you're then ready to inspect what SQLite Wasm writes to the Origin Private File System.
+After installing the extension, open the Chrome DevTools, select the **OPFS Explorer** tab, and
+you're then ready to inspect what SQLite Wasm writes to the Origin Private File System.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/vIjB6Gnl879OySnYuueJ.png", alt="OPFS Explorer Chrome extension showing the Origin Private File System structure of the demo app.", width="800", height="416" %}
-If you click on any of the files in the OPFS Explorer window in DevTools, you can save it to the local disk. You can then use an app like [SQLite Viewer](https://sqliteviewer.app/) to inspect the database, so you can assure yourself that SQLite Wasm actually works as promised.
+If you click on any of the files in the OPFS Explorer window in DevTools, you can save it to the
+local disk. You can then use an app like [SQLite Viewer](https://sqliteviewer.app/) to inspect the
+database, so you can assure yourself that SQLite Wasm actually works as promised.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fKoJyNfsmFWI5oC4kEJA.png", alt="SQLite Viewer app used to open a database file from the SQLite Wasm demo.", width="800", height="329" %}
 
 ## Getting help and providing feedback
 
-SQLite Wasm is developed and maintained by the SQLite community. You can get help and provide feedback by searching in and posting to the [support forum](https://sqlite.org/forum/forum). The full [documentation](https://sqlite.org/docs.html) is available on the SQLite site.
+SQLite Wasm is developed and maintained by the SQLite community. Get help and provide feedback by
+searching in and posting to the [support forum](https://sqlite.org/forum/forum). The full
+[documentation](https://sqlite.org/docs.html) is available on the SQLite site.
 
 ## Acknowledgements
 
-Hero image by [Tobias Fischer](https://unsplash.com/@tofi) on [Unsplash](https://unsplash.com/photos/PkbZahEG2Ng).
+Hero image by [Tobias Fischer](https://unsplash.com/@tofi) on
+[Unsplash](https://unsplash.com/photos/PkbZahEG2Ng).
