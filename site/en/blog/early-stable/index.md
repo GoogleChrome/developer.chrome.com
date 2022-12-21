@@ -6,7 +6,7 @@ description: >
   From Chrome 110 an early stable version will be released to a small percentage of users.
 subhead: >
   From Chrome 110 an early stable version will be released to a small percentage of users.
-date: 2022-12-20
+date: 2022-12-21
 authors:
   - rachelandrew
 tags:
