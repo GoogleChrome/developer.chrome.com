@@ -30,3 +30,7 @@ dist
 # External source files
 external/data/
 external/local-build-flag
+
+# Files used during CI
+gulp-tasks/stageGitHub/tmp/**/*
+!gulp-tasks/stageGitHub/tmp/.gitkeep
