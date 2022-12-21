@@ -67,7 +67,7 @@ See [Message passing][doc-messages] for more details.
 
 ### Storing data {: #data }
 
-Chrome provides extensions with an optimized [Storage API][api-storage] available to all extension components. It includes four separate storage areas for specific use cases and an event listener that tracks whenever data is updated. For example, when you save changes in the popup, the extension service worker can respond with specified logic.
+Chrome provides extensions with a specialized [Storage API][api-storage] available to all extension components. It includes four separate storage areas for specific use cases and an event listener that tracks whenever data is updated. For example, when you save changes in the popup, the extension service worker can respond with specified logic.
 
 See [Storage API][api-storage] for usage and code samples.
 
