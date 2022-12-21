@@ -27,16 +27,18 @@ const {default: fetch} = require('node-fetch');
  * @returns {Promise<{[key: string]: any}>}
  */
 async function fetchGitHubApi(endpoint) {
-  const request = await fetch(
-    `https://api.github.com/repos/GoogleChrome/developers.chrome.com/${endpoint}`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      },
-    }
-  );
+  const url = `https://api.github.com/repos/GoogleChrome/developer.chrome.com/${endpoint}`;
+  console.log('Requesting GitHub API', url);
+
+  const request = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
+  });
 
   const data = await request.json();
+  console.log(data);
+
   return data;
 }
 
