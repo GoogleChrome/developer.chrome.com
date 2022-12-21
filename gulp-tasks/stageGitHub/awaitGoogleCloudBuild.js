@@ -100,20 +100,20 @@ async function pollCheck(checkId, initialTimeout) {
 }
 
 async function awaitGoogleCloudBuild() {
-  if (!process.env.GITHUB_ACTION || !process.env.GITHUB_SHA) {
+  if (!process.env.GITHUB_ACTION || !process.env.PR_HEAD_COMMIT_SHA) {
     console.warn(
       'This task is inteded to run on GitHub actions. Use npm run stage:personal locally instead.'
     );
     return;
   }
 
-  const commit = process.env.GITHUB_SHA;
+  const commit = process.env.PR_HEAD_COMMIT_SHA;
 
   // Wait for the webhook to create the actual
   // build and Cloud Build propagate the status back to GitHub.
   // This can take up to 1m30s - wait for 2m to have room to wiggle
   // and as the build takes a while anyway
-  console.log('Waiting for Cloud Build job to start ...');
+  console.log(`Waiting for Cloud Build job to start on commit ${commit} ...`);
   await wait(INITIAL_WAIT);
 
   let check = await findCheck(commit);

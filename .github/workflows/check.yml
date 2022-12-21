@@ -96,6 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR_HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Posting announcement
         uses: marocchino/sticky-pull-request-comment@v2
