@@ -97,6 +97,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+      PR_NUMBER: ${{ github.event.number }}
     steps:
       - name: Posting announcement
         uses: marocchino/sticky-pull-request-comment@v2
@@ -118,10 +119,6 @@ jobs:
 
       - name: Staging
         id: staging
-        env:
-          PR_NUMBER: ${{ github.event.number }}
-          CHANGED_APP_FILES: ${{ steps.changes.outputs.app_files }}
-          CHANGED_STATIC_FILES: ${{ steps.changes.outputs.static_files }}
         run: |
           npm run stage:github -- determineDeploymentType
           npm run stage:github -- awaitGoogleCloudBuild
