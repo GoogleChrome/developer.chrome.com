@@ -46,6 +46,7 @@ async function determineDeploymentType() {
   }
 
   let changedFiles = await fetchGitHubApi(`pulls/${prNumber}/files`);
+  console.log(changedFiles);
   changedFiles = changedFiles.map(file => {
     return file.filename;
   });
@@ -70,5 +71,6 @@ async function determineDeploymentType() {
 }
 
 module.exports = {
-  determineDeploymentType, DEPLOYMENT_TYPE_PATH
+  determineDeploymentType,
+  DEPLOYMENT_TYPE_PATH,
 };
