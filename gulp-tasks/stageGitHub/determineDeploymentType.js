@@ -57,9 +57,9 @@ async function determineDeploymentType() {
   // type. Or return nothing - that would mean nothing chaged
   // that altered the build output
   let output = '';
-  if (micromatch(changedFiles, APP_GLOB)) {
+  if (micromatch(changedFiles, APP_GLOB).length) {
     output = OUTPUT_APP_BUILD;
-  } else if (micromatch(changedFiles, STATIC_GLOB)) {
+  } else if (micromatch(changedFiles, STATIC_GLOB).length) {
     output = OUTPUT_STATIC_BUILD;
   }
 
