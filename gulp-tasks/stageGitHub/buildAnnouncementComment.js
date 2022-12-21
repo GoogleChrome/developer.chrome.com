@@ -79,8 +79,9 @@ async function buildAnnouncementComment() {
 
     announcement += '\n\n' + `**${baseUrl}**`;
 
-    const changedFiles = await fetchGitHubApi(`pulls/${prNumber}/files`);
-    console.log(changedFiles);
+    const changedFiles = await fetchGitHubApi(
+      `pulls/${prNumber}/files?per_page=100`
+    );
     const changedPages = changedFiles
       .filter(file => {
         return file.filename.endsWith('index.md');

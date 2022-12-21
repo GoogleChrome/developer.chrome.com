@@ -45,7 +45,9 @@ async function determineDeploymentType() {
     return;
   }
 
-  let changedFiles = await fetchGitHubApi(`pulls/${prNumber}/files`);
+  let changedFiles = await fetchGitHubApi(
+    `pulls/${prNumber}/files?per_page=100`
+  );
   changedFiles = changedFiles.map(file => {
     return file.filename;
   });
