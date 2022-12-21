@@ -100,14 +100,14 @@ async function pollCheck(checkId, initialTimeout) {
 }
 
 async function awaitGoogleCloudBuild() {
-  if (!process.env.GITHUB_ACTION || !process.env.COMMIT_SHA) {
+  if (!process.env.GITHUB_ACTION || !process.env.GITHUB_SHA) {
     console.warn(
       'This task is inteded to run on GitHub actions. Use npm run stage:personal locally instead.'
     );
     return;
   }
 
-  const commit = process.env.COMMIT_SHA;
+  const commit = process.env.GITHUB_SHA;
 
   // Wait for the webhook to create the actual
   // build and Cloud Build propagate the status back to GitHub.
