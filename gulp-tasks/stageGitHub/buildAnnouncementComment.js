@@ -84,12 +84,15 @@ async function buildAnnouncementComment() {
     );
     const changedPages = changedFiles
       .filter(file => {
-        return file.filename.endsWith('index.md');
+        const filePath = file.filename;
+        return filePath.startsWith('site/') && filePath.endsWith('index.md');
       })
-      .map(path => {
-        return `- ${baseUrl}${path
+      .map(file => {
+        const filePath = file.filename;
+        return `- ${baseUrl}${filePath
           .replace('site/', '')
-          .replace('index.md', '')}`;
+          .replace(/^en\//, '')
+          .replace(/index.md$/, '')}`;
       });
 
     if (changedPages.length) {
