@@ -16,10 +16,6 @@ steps:
       - 'BRANCH_NAME=$BRANCH_NAME'
       - 'PR_NUMBER=$_PR_NUMBER'
     secretEnv: ['GITHUB_TOKEN']
-    availableSecrets:
-      secretManager:
-        - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
-          env: 'GITHUB_TOKEN'
     args: ['run', 'stage:github', 'determineDeploymentType']
 
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -38,3 +34,8 @@ steps:
         fi
 options:
   machineType: 'E2_HIGHCPU_32'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+      env: 'GITHUB_TOKEN'
