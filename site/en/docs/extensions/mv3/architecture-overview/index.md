@@ -9,7 +9,7 @@ subhead: A high-level explanation of the structure of a Chrome Extension.
 
 ## Overview {: #overview }
 
-A Chrome extension is composed of different parts. This page describes the structure of an extension, the role each part plays and how they work together. Implementation details are out of the scope of this article.
+A Chrome extension is composed of different parts. This page describes the structure of an extension, the role each part plays and how they work together. It does not describe the code-level details of how to write an extension.
 
 If you are not familiar with Chrome extension development, we recommend first reading [Extensions 101][doc-ext-101] and [Development Basics][doc-dev-basics].
 
