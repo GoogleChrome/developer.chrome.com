@@ -38,9 +38,9 @@ See [Handling events in the extension service worker][doc-sw] for more details.
 
 ### Content scripts {: #content-scripts }
 
-Extensions use content scripts to inject code into host pages. They allow the extension to interact with and modify the pages in the browser. For example, they can insert a new element on the page, change the style of a website, modify the [DOM][mdn-dom] elements, etc. 
+Extensions use content scripts to inject code into host pages. They allow the extension to interact with and modify pages in the browser. For example, they can insert a new element on the page, change the style of a website, modify the [DOM][mdn-dom] elements, etc. 
 
-Content Scripts share the same origin as their host page and they have access to a limited number of [Chrome APIs][api-ref]. See [Understanding content scripts][doc-content-scripts] for more details.
+Content Scripts share access to the same DOM tree as the host page but run in a separate JavaScript environment. They also have access to a limited number of [Chrome APIs][api-ref]. See [Understanding content scripts][doc-content-scripts] for more details.
 
 ### Extension HTML pages {: #html-files }
 
