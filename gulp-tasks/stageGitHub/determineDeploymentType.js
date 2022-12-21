@@ -23,6 +23,9 @@
 
 const micromatch = require('micromatch');
 const fs = require('fs/promises');
+const path = require('path');
+
+const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
 
 const APP_GLOB = ['package.json', 'server/**/*.js'];
 const STATIC_GLOB = ['site/**/*'];
@@ -30,38 +33,22 @@ const STATIC_GLOB = ['site/**/*'];
 const OUTPUT_APP_BUILD = 'app';
 const OUTPUT_STATIC_BUILD = 'static';
 
-async function determineDeploymentType() {
-  // eslint-disable-next-line node/no-unsupported-features/es-syntax
-  const {execa} = await import('execa');
+const DEPLOYMENT_TYPE_PATH = path.join(__dirname, 'tmp', 'deploymentType.txt');
 
-  const branchName = process.env.BRANCH_NAME;
-  if (!branchName) {
+async function determineDeploymentType() {
+  const prNumber = process.env.PR_NUMBER;
+  if (!prNumber) {
     console.warn(
-      'This task is inteded to run on Google Cloud Build, which exports $BRANCH_NAME. ' +
+      'This task is inteded to run on Google Cloud Build, which exports $PR_NUMBER. ' +
         'Use npm run stage:personal locally instead.'
     );
     return;
   }
 
-  const {stdout: gitLog} = await execa('git', [
-    'log',
-    '--name-only',
-    '--pretty=format:',
-    branchName,
-    '--not',
-    'origin/main',
-  ]);
-
-  let changedFiles = new Set();
-  for (const entry of gitLog.split('\n')) {
-    if (!entry) {
-      continue;
-    }
-
-    changedFiles.add(entry);
-  }
-
-  changedFiles = Array.from(changedFiles);
+  let changedFiles = await fetchGitHubApi(`pulls/${prNumber}/files`);
+  changedFiles = changedFiles.map(file => {
+    return file.filename;
+  });
 
   // Then check if any of the changed files either matches
   // the APP_GLOB or the STATIC_GLOB, to determine the build
@@ -77,13 +64,11 @@ async function determineDeploymentType() {
   // There is no way to pass data between build steps on
   // Google Cloud Build, except the file system as of 12/2022. See:
   // https://cloud.google.com/build/docs/configuring-builds/pass-data-between-steps
-  await fs.writeFile('./deploymentType.txt', output, {encoding: 'utf-8'});
+  await fs.writeFile(DEPLOYMENT_TYPE_PATH, output, {encoding: 'utf-8'});
   console.log(output);
   return output;
 }
 
 module.exports = {
-  determineDeploymentType,
-  OUTPUT_APP_BUILD,
-  OUTPUT_STATIC_BUILD,
+  determineDeploymentType, DEPLOYMENT_TYPE_PATH
 };

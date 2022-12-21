@@ -12,6 +12,14 @@ steps:
 
   - name: node:18
     entrypoint: npm
+    env:
+      - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'PR_NUMBER=$_PR_NUMBER'
+    secretEnv: ['GITHUB_TOKEN']
+    availableSecrets:
+      secretManager:
+        - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+          env: 'GITHUB_TOKEN'
     args: ['run', 'stage:github', 'determineDeploymentType']
 
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -19,9 +27,9 @@ steps:
     args:
       - '-c'
       - |
-        if [ $(cat deploymentType.txt) = "app" ]; then
+        if [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "app" ]; then
           gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
-        elif [ $(cat deploymentType.txt) = "static" ]; then
+        elif [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "static" ]; then
           cp -rf dist/en/* dist/ &&
           rm -rf dist/en &&
           gsutil -q -m cp -r dist gs://static-dcc-staging/pr-${prNumber}

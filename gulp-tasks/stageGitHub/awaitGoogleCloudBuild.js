@@ -20,10 +20,20 @@
  * on GitHub actions.
  */
 
-const {default: fetch} = require('node-fetch');
 const fs = require('fs/promises');
+const path = require('path');
 
+const {fetchGitHubApi} = require('./lib/fetchGitHubApi');
+
+/**
+ * The name of the check to look for in the API response
+ */
 const CHECK_NAME = 'Stage (dcc-staging)';
+
+/**
+ * Path where the check details are persisted for following tasks
+ */
+const CHECK_DETAILS_PATH = path.join(__dirname, 'tmp', 'check.json');
 
 /**
  * How long the task waits initially before starting to poll,
@@ -42,22 +52,6 @@ function wait(timeout) {
 }
 
 /**
- * Sends an authenticated request to the GitHub API
- * @param {string} endpoint
- * @returns {Promise<{[key: string]: any}>}
- */
-async function fetchGitHubApi(endpoint) {
-  const request = await fetch(`https://api.github.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-    },
-  });
-
-  const data = await request.json();
-  return data;
-}
-
-/**
  * Tries to find a check with the specified name on the specified
  * commit, using the GitHub Checks API
  * @param {string} commit A full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
@@ -67,9 +61,7 @@ async function findCheck(commit) {
   console.log(`Fetching checks for commit ${commit} ...`);
   let build = null;
   try {
-    const checks = await fetchGitHubApi(
-      `repos/GoogleChrome/developer.chrome.com/commits/${commit}/check-runs`
-    );
+    const checks = await fetchGitHubApi(`commits/${commit}/check-runs`);
     build = checks.check_runs.find(run => {
       return run.name === CHECK_NAME;
     });
@@ -107,86 +99,6 @@ async function pollCheck(checkId, initialTimeout) {
   return pollCheck(checkId, 60 * 1000);
 }
 
-/**
- * Parses a list of changed files from the env variables CHANGED_STATIC_FILES
- * and CHANGED_APP_FILES which are filled by the dorny/paths-filter during
- * the job run. The output of this action are stringified JS values, hence
- * the dirty undefined check.
- * @returns {{app: string[], static: string[]}}
- */
-function getChangedFiles() {
-  const changedFiles = {static: [], app: []};
-
-  const staticFiles = process.env.CHANGED_STATIC_FILES;
-  if (staticFiles && staticFiles !== 'undefined') {
-    changedFiles.static = JSON.parse(staticFiles);
-  }
-
-  const appFiles = process.env.CHANGED_APP_FILES;
-  if (appFiles && appFiles !== 'undefined') {
-    changedFiles.app = JSON.parse(appFiles);
-  }
-
-  return changedFiles;
-}
-
-/**
- *
- * @param {string} commit A full commit hash like e1d46d0aa61c14e3972f07e3cbf918424c186056
- * @param {ReturnType<getChangedFiles>} changedFiles The files changed in this PR
- * @param {{[key: string]: any}} check Build details returned from the Checks API
- * @returns {string} A short message containing all information about the job
- */
-function createAnnouncement(commit, check) {
-  const changedFiles = getChangedFiles();
-  console.log(commit, changedFiles, check);
-  const startedAt = new Date(check.started_at);
-  const completedAt = new Date(check.completed_at);
-  const duration =
-    Math.abs(startedAt.getTime() - completedAt.getTime()) / 1000 / 60;
-
-  const status = check.status;
-  const conclusion = check.conclusion;
-  if (status !== 'completed' && conclusion !== 'success') {
-    return (
-      `Staging build (${check.name}) did not succeed.` +
-      'Please ping engineering for assistance.'
-    );
-  }
-
-  const shortCommitSha = commit.substring(0, 7);
-  const baseUrl = `https://${shortCommitSha}-dot-dcc-staging.uc.r.appspot.com/`;
-
-  let announcement =
-    `Staging build (${check.name}) for commit ${commit} ` +
-    `started at ${startedAt.toString()} completed after ${duration.toFixed(
-      2
-    )} minutes.` +
-    '\n\n' +
-    `**${baseUrl}**`;
-
-  const changedPages = [];
-  if (changedFiles.static) {
-    for (const path of changedFiles.static) {
-      if (!path.includes('index.md')) {
-        continue;
-      }
-
-      const cleanPath = path.replace('site/', '').replace('index.md', '');
-      changedPages.push(`- ${baseUrl}${cleanPath}`);
-    }
-  }
-
-  if (changedPages.length) {
-    announcement +=
-      '\n\n' +
-      'The following pages likely changed with this PR:\n' +
-      changedPages.join('\n');
-  }
-
-  return announcement;
-}
-
 async function awaitGoogleCloudBuild() {
   if (!process.env.GITHUB_ACTION || !process.env.COMMIT_SHA) {
     console.warn(
@@ -217,14 +129,10 @@ async function awaitGoogleCloudBuild() {
   }
 
   console.log('Cloud Build completed.');
-
-  const announcement = createAnnouncement(commit, check);
-  // Passing output from logs is deprecated and streaming to the
-  // output environment variable would require logs to be less verbose
-  // https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
-  await fs.writeFile('announcement.md', announcement, {encoding: 'utf-8'});
-
-  console.log('Staging build finished.');
+  await fs.writeFile(CHECK_DETAILS_PATH, JSON.stringify(check), {
+    encoding: 'utf-8',
+  });
+  console.log('Wrote details to', CHECK_DETAILS_PATH);
 }
 
-module.exports = {awaitGoogleCloudBuild};
+module.exports = {awaitGoogleCloudBuild, CHECK_DETAILS_PATH};

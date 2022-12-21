@@ -96,24 +96,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Posting announcement
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
             Staging build in progress ...
-      - name: Getting changes
-        id: changes
-        uses: dorny/paths-filter@v2
-        with:
-          list-files: json
-          filters: |
-            app:
-              - 'package.json'
-              - 'server/**/*.js'
-            static:
-              - 'site/**/*'
 
       - name: Cloning repository
         uses: actions/checkout@v3
@@ -130,15 +118,18 @@ jobs:
       - name: Staging
         id: staging
         env:
+          PR_NUMBER: ${{ github.event.number }}
           CHANGED_APP_FILES: ${{ steps.changes.outputs.app_files }}
           CHANGED_STATIC_FILES: ${{ steps.changes.outputs.static_files }}
         run: |
+          npm run stage:github -- determineDeploymentType
           npm run stage:github -- awaitGoogleCloudBuild
+          npm run stage:github -- buildAnnouncementComment
 
       - name: Posting announcement
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          path: announcement.md
+          path: gulp-tasks/stageGitHub/tmp/announcement.md
 
   build:
     needs: queue
