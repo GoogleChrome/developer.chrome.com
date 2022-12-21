@@ -87,9 +87,7 @@ async function pollCheck(checkId, initialTimeout) {
     }s for Cloud Build (${checkId}) to finish ...`
   );
   await wait(initialTimeout);
-  const build = await fetchGitHubApi(
-    `repos/GoogleChrome/developer.chrome.com/check-runs/${checkId}`
-  );
+  const build = await fetchGitHubApi(`check-runs/${checkId}`);
 
   if (build.status === 'completed') {
     return build;
