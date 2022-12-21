@@ -29,7 +29,7 @@ The [Manifest keys][doc-manifest] article contains the complete list of default 
 
 A service worker is an event-based script that the browser runs in the background. It is often used to process data, coordinate tasks in different parts of an extension, and as an extension's event manager. For example, the service worker can listen for and react to events when the extension is first installed, a new tab is created, a new bookmark is added, the extension toolbar icon is clicked, etc.
 
-It can access all the [Chrome APIs][api-ref], but as a service worker, it can't use the DOM APIs that the global window object provides. It also cannot modify the page's content.
+A service workers can access all the [Extension APIs][api-ref], but as a type of [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) it can't use the typical DOM APIs that a document's global Window object provides. It also runs in its own environment, so it cannot directly modify a web page's content.
 
 See [Handling events in the extension service worker][doc-sw] for more details. 
 
