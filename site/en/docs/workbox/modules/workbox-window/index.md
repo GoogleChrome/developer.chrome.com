@@ -46,7 +46,7 @@ The easiest way to import the `Workbox` class on your site is from our CDN:
 ```
 
 Note that this example uses [`<script type="module">` and the `import`
-statement](https://developers.google.com/web/fundamentals/primers/modules) to
+statement](https://v8.dev/features/modules) to
 load the `Workbox` class. While you might think that you need to transpile this
 code to get it working in older browsers, that's actually not necessary.
 
@@ -85,7 +85,7 @@ if ('serviceWorker' in navigator) {
 ```
 
 If your bundler supports [code splitting via dynamic import
-statements](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/#splitting_code_dynamically),
+statements](https://v8.dev/features/dynamic-import),
 you can also conditionally load `workbox-window`, which should help reduce the
 size of your page's main bundle.
 
@@ -136,7 +136,7 @@ import {Workbox} from 'workbox-window/Workbox.mjs';
 If you're importing the source file directly, you'll also need to configure
 your build process to minify the file, and remove development-only code when
 you deploy it to production. See the guide
-[Using Bundlers (webpack/Rollup) with Workbox](https://developers.google.com/web/tools/workbox/guides/using-bundlers)
+[Using Bundlers (webpack/Rollup) with Workbox](/docs/workbox/the-ways-of-workbox/#using-a-bundler)
 for more details.
 {% endAside %}
 
@@ -178,7 +178,7 @@ controlled by the initial service worker have fully unloaded.
 
 This is a common source of confusion for developers, especially in cases where
 [reloading the current page doesn't cause the new service worker to
-activate](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#waiting).
+activate](https://web.dev/service-worker-lifecycle/#waiting).
 
 To help minimize confusion and make it clear when this situation is happening,
 the `Workbox` class provides a `waiting` event that you can listen for:
@@ -269,7 +269,7 @@ you'll need to call its `addCacheListener()` method manually.
 ## Important service worker lifecycle moments
 
 The [service worker
-lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
+lifecycle](https://web.dev/service-worker-lifecycle/)
 is complex and can be a challenge to fully understand. Part of the reason it's
 so complex is it must handle all the edge cases for all possible usages of
 service worker (e.g. registering more than one service worker, registering
@@ -280,7 +280,7 @@ But most developers implementing service worker should not need to worry about
 all these edge cases because their usage is quite simple. Most developer
 register just one service worker per page load, and they [don't change the name
 of the service
-worker](https://developers.google.com/web/fundamentals/primers /service-workers/lifecycle#avoid-url-change)
+worker](https://web.dev/service-worker-lifecycle/#avoid-url-change)
 file they deploy to their server.
 
 The `Workbox` class embraces this simpler view for the service worker lifecycle
@@ -530,7 +530,7 @@ help with debugging why things aren't as you'd expect.
 
 In addition, a common mistake developers make when first using service worker is
 to register a service worker in the
-[wrong scope](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker#registration_and_scope).
+[wrong scope](https://web.dev/learn/pwa/service-workers/#registering-a-service-worker).
 
 To help prevent this from happening, the `Workbox` class will warn you if the
 page registering the service worker is not in that service worker's scope. It'll
@@ -656,7 +656,7 @@ For example, in the code above, if the service worker version returned by that
 until an update is found (which should happen when you call `register()`). At
 that point you can either notify the user or an update, or you can manually
 [skip the waiting
-phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+phase](https://web.dev/service-worker-lifecycle/#skip-the-waiting-phase)
 to activate the new service worker right away.
 
 #### Cache first
@@ -668,7 +668,7 @@ to use `messageSW()` right away.
 
 However, if an updated version of your service worker is found and activates
 when your page calls `register()` (i.e. you intentionally [skip the waiting
-phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)),
+phase](https://web.dev/service-worker-lifecycle/#skip-the-waiting-phase)),
 it may no longer be safe to send messages to it.
 
 One strategy for managing this possibility is to use a versioning scheme that
@@ -681,7 +681,7 @@ version of the page, and suggest they reload to get the update.
 
 A common use convention for window to service worker messaging is send a
 `{type: 'SKIP_WAITING'}` message to instruct a service worker that's installed to
-[skip the waiting phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+[skip the waiting phase](https://web.dev/service-worker-lifecycle/#skip-the-waiting-phase)
 and activate.
 
 Starting with Workbox v6, the `messageSkipWaiting()` method can be used to send a

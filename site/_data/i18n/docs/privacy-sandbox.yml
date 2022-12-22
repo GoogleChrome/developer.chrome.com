@@ -56,8 +56,12 @@ measure-cross-site:
   en: 'Measure cross-site events with Private Aggregation'
 attribution-reporting-overview:
   en: 'Attribution Reporting overview'
+attribution-reporting-chrome-shipping:
+  en: 'Why Chrome plans to ship the Attribution Reporting API'
 attribution-reporting-experiment:
   en: 'Experiment and participate'
+attribution-reporting-debugging:
+  en: 'Debugging Attribution Reporting'
 attribution-reporting-changing:
   en: 'API updates'
 attribution-reporting-handbook:

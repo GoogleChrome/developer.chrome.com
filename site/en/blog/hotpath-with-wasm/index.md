@@ -11,8 +11,8 @@ updated: 2020-07-24
 
 ## It's consistently fast, yo
 
-In my [previous](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library)
-[articles](https://developers.google.com/web/updates/2019/01/emscripten-npm) I talked about how WebAssembly
+In my [previous](https://web.dev/emscripting-a-c-library/)
+[articles](https://web.dev/emscripten-npm/) I talked about how WebAssembly
 allows you to bring the library ecosystem of C/C++ to the web. One app that
 makes extensive use of C/C++ libraries is [squoosh](https://squoosh.app/), our
 web app that allows you compress images with a variety of codecs that have been
@@ -38,7 +38,7 @@ Due to legal concerns, I won’t name any browsers in this article.
 In squoosh we wrote a [JavaScript
 function](https://github.com/GoogleChromeLabs/squoosh/blob/edd2c51eb6d0676a2e7b7e974337d58cbf00f1d1/src/codecs/rotate/processor.ts)
 that rotates an image buffer by multiples of 90 degrees. While
-[OffscreenCanvas](https://developers.google.com/web/updates/2018/08/offscreen-canvas) would be ideal for
+[OffscreenCanvas](/blog/offscreen-canvas/) would be ideal for
 this, it isn't supported across the browsers we were targeting, and a little
 [buggy in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=906619).
 
@@ -270,7 +270,7 @@ allowing us to write code that doesn't comply with that model.
 
 {% Aside %}
 This is not a best practice. In our experience it is usually worth it to
-use binding mechanisms like [embind in Emscripten](https://developers.google.com/web/updates/2018/08/embind)
+use binding mechanisms like [embind in Emscripten](https://web.dev/embind/)
 or [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) for Rust to work at
 a higher level.
 {% endAside %}
