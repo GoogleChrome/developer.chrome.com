@@ -194,8 +194,8 @@ if (article) {
 
 - [Regular
   expressions][mdn-regular-expressions] used to count only the words inside the `<article>` element.
-- [InsertAdjacentElement()][mdn-insert-adjacent] used to insert the reading time node after the element.
-- The [Classlist][mdn-classlist] property used to add CSS class names to the element class attribute.
+- [insertAdjacentElement()][mdn-insert-adjacent] used to insert the reading time node after the element.
+- The [classList][mdn-classlist] property used to add CSS class names to the element class attribute.
 - [Optional chaining][mdn-optional-chaining] used to access an object property that may be undefined or null.
 - [Nullish coalescing][mdn-nullish-coalescing] returns the `<heading>` if the `<date>` is null or undefined.
 
