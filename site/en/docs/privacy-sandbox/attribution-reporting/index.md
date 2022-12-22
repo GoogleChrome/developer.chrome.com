@@ -25,7 +25,7 @@ underlying concepts, but doesn't go into much technical detail.
 
 - If you're a **developer or software engineer**, head over to the [Attribution Reporting: experiment and participate](/docs/privacy-sandbox/attribution-reporting-experiment/).
 
-- [The Attribution Reporting demo](https://attribution-reporting-demo.glitch.me/) provides a walkthrough of a basic Attribution Reporting
+- [The Attribution Reporting demo](https://goo.gle/demo-attribution-reporting) provides a walkthrough of a basic Attribution Reporting
   deployment.
 
 {% Aside %}

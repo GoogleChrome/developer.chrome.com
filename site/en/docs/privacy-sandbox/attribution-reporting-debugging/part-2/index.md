@@ -136,7 +136,7 @@ In the demo code, we give both debug keys the value of the legacy measurement th
 ## Set up success debug reports
 
 {% Aside %}
-Try the [demo](https://goo.gle/attribution-reporting-demo) to generate and preview success debug reports in your browser.
+Try the [demo](https://goo.gle/demo-attribution-reporting) to generate and preview success debug reports in your browser.
 Review the corresponding [code](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting).
 {% endAside %}
 
@@ -256,7 +256,7 @@ A success debug report is identical to an attribution report, and contains both 
 ## Set up verbose debug reports
 
 {% Aside %}
-Try the [demo](https://goo.gle/attribution-reporting-demo) to generate and preview verbose debug reports in your browser.
+Try the [demo](https://goo.gle/demo-attribution-reporting) to generate and preview verbose debug reports in your browser.
 Review the corresponding [code](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting).
 {% endAside %}
 

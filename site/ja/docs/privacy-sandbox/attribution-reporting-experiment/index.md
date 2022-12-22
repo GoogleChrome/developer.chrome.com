@@ -15,7 +15,7 @@ authors:
 
 ## API を試す
 
-1. [デモ](https://goo.gle/attribution-reporting-demo)をお試しになれます。
+1. [デモ](https://goo.gle/demo-attribution-reporting)をお試しになれます。
 2. 今すぐ API を試す方法については、[API のステータス](/docs/privacy-sandbox/attribution-reporting/#status)で確認できます。
 3. API をテストできます。
     * 任意）2021 年にこの API のオリジン トライアルを実施した場合は、[移行ガイド](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit)に沿って最新のオリジン トライアルにご参加ください。
