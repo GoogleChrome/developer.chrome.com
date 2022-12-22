@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const {doRedirect} = require('./env');
+const {doRedirect} = require('../../env');
 const redirectsYaml = require('redirects-yaml');
 const YAML = require('js-yaml');
 const fs = require('fs');

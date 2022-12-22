@@ -1,7 +1,11 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Getting started with Chrome's origin trials
-subhead: Origin trials are a way to test a new or experimental web platform feature, and give feedback to the web standards community on the feature's usability, practicality, and effectiveness, before the feature is made available to all users.
+title: Get started with origin trials
+subhead: Test a new or experimental web platform feature.
+description: >
+  Test a new or experimental web platform feature. Give feedback to the
+  web standards community on the feature's usability, practicality, and
+  effectiveness, before the feature is made available to all users.
 authors:
   - samdutton
 date: 2020-06-22

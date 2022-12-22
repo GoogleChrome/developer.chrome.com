@@ -1,9 +1,9 @@
 const SNAPSHOTS = [
   '/en/index.html',
-  '/en/content-types/blog-landing/index.html',
-  '/en/content-types/docs-landing/index.html',
-  '/en/content-types/doc-post/index.html',
-  '/en/content-types/landing/index.html',
+  '/en/docs/handbook/content-types/blog-landing/index.html',
+  '/en/docs/handbook/content-types/docs-landing/index.html',
+  '/en/docs/handbook/content-types/doc-post/index.html',
+  '/en/docs/handbook/content-types/landing/index.html',
 ];
 
 module.exports = {

@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 description: An API to measure when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 date: 2021-05-18
-updated: 2022-06-23
+updated: 2022-12-15
 authors:
   - maudn
   - samdutton
@@ -36,6 +36,10 @@ If you're unfamiliar with some of these terms, consult the
 ## Changes
 
 Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
+
+Learn why we plan to
+[ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
+in the first half of 2023.
 
 ## What is the Attribution Reporting API?
 
