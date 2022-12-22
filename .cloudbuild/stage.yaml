@@ -2,23 +2,42 @@ timeout: 2700s # set build timeout to 45 mins
 steps:
   - name: node:18
     entrypoint: npm
-    args: ['ci', '--no-audit', '--omit=optional']
+    args: ['ci']
 
   - name: node:18
     entrypoint: npm
     args: ['run', 'production']
     env:
-      - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
-  - name: 'gcr.io/google.com/cloudsdktool/google-cloud-cli:slim'
-    entrypoint: 'bash'
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
+
+  - name: node:18
+    entrypoint: npm
+    env:
+      - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'PR_NUMBER=$_PR_NUMBER'
+    secretEnv: ['GITHUB_TOKEN']
+    args: ['run', 'stage:github', 'determineDeploymentType']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
     args:
       - '-c'
+      # Copy, /en/ to root of /dist, to be able to serve English from /
+      # without further redirects, remove the leftovers and upload everything
+      # to Cloud Storage, remove afterwards to not include it in the instance image
       - |
         cp -rf dist/en/* dist/ &&
         rm -rf dist/en &&
-        gcloud storage cp -L manifest.csv -j html,xml,css,js --recursive dist gs://static-dcc-staging/$SHORT_SHA &&
-        gcloud storage cp manifest.csv gs://static-dcc-staging/$SHORT_SHA/manifest.csv &&
-        echo $SHORT_SHA > activeCommit.txt &&
-        gcloud storage cp activeCommit.txt gs://static-dcc-staging/activeCommit.txt
+        gsutil -q -m cp -r dist gs://static-dcc-staging/pr-$_PR_NUMBER
+        rm -rf dist
+
+        if [ $(cat gulp-tasks/stageGitHub/tmp/deploymentType.txt) = "app" ]; then
+          gcloud app deploy --version pr-$_PR_NUMBER-app --no-promote --project dcc-staging
+        fi
 options:
   machineType: 'E2_HIGHCPU_32'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/dcc-staging/secrets/GITHUB_TOKEN/versions/1
+      env: 'GITHUB_TOKEN'

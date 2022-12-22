@@ -322,15 +322,15 @@ If the need arises you can add buttons to a post as follows.
 
 ### Material button with no background
 
-<a class="material-button button-filled">Test</a>
+<a class="material-button button-filled" href="/">Test</a>
 
 ### Material button with background
 
-<a class="material-button button-filled color-bg bg-primary">Test</a>
+<a class="material-button button-filled color-bg bg-primary" href="/">Test</a>
 
 ### Rounded material button
 
-<a class="material-button button-filled color-bg bg-primary button-round">Test</a>
+<a class="material-button button-filled color-bg bg-primary button-round" href="/">Test</a>
 
 ### Text button
 
