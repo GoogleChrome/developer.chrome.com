@@ -17,7 +17,7 @@ override:blogPosts:
       authors:
         - fawazm
       date: 2022-11-10
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: If a post has a thumbnail then it will use this layout
@@ -26,7 +26,7 @@ override:blogPosts:
       authors:
         - rachelandrew
       date: 2022-11-09
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: This is what a post looks like with a single author
@@ -35,7 +35,7 @@ override:blogPosts:
       authors:
         - surma
       date: 2022-12-09
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: This is what a post looks like with two authors
@@ -45,7 +45,7 @@ override:blogPosts:
         - surma
         - fawazm
       date: 2022-12-09
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: This is what a post looks like with more than two authors
@@ -57,7 +57,7 @@ override:blogPosts:
         - rachelandrew
         - dtapuska
       date: 2022-11-09
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: This is what a post looks like with a single tag
@@ -67,7 +67,7 @@ override:blogPosts:
       authors:
         - surma
       date: 2022-11-09
-    url: /
+      url: /
   - data:
       thumbnail: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/yG6HcKRIK416ewhINL0T.jpg
       title: This is what a post looks like multiple  tags
@@ -81,7 +81,7 @@ override:blogPosts:
       authors:
         - surma
       date: 2022-11-09
-    url: /
+      url: /
   - data:
       thumbnail:
       title: This is the 8th post
@@ -93,7 +93,7 @@ override:blogPosts:
       authors:
         - surma
       date: 2022-11-09
-    url: /
+      url: /
 pagination:
   data: blogPosts
   size: 7
