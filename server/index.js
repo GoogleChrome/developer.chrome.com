@@ -72,7 +72,7 @@ if (isGAEProd) {
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.post('/_render', renderHandler);
+app.post('/_ render', renderHandler);
 
 app.use(...handlers);
 
