@@ -2,12 +2,12 @@
 layout: 'layouts/blog-post.njk'
 title: 'RenderingNG deep-dive: LayoutNG block fragmentation'
 description: >
-  In 2021, we will largely complete the process of designing, building and shipping RenderingNG, a next-generation rendering architecture for Chromium.
+  Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article.
 subhead: >
-  Ready for the next generation of web content
-date: 2022-12-08
+  Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article.
+date: 2023-01-03
 authors:
-  - mortenstenshorne
+  - mstensho
 tags:
   - rendering
 ---
