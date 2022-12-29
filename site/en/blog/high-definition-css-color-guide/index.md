@@ -38,12 +38,18 @@ spaces which have specializations. This guide will explain how you can start to
 take advantage of this new world of color.
 
 <figure>
-  {% Video src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/swYaLIEXuDRZ2VO8SCLH.mp4" %}
+  {% Video
+    src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/swYaLIEXuDRZ2VO8SCLH.mp4",
+    autoplay="true",
+    loop="true",
+    muted="true",
+    controls="true"
+  %}
 
   <figcaption>
     A series of images are shown transitioning between wide and narrow color
     gamuts, illustrating color vividness and its effects.<br>
-    <a href="https://ciechanow.ski/color-spaces/#:~:text=you%20can%20drag%20the%20slider%20to%20see%20how%20the%20extent%20of%20the%20chromaticity%20triangle%20corresponds%20to%20the%20representable%20colors.">Source</a>
+    <a href="https://ciechanow.ski/color-spaces/#:~:text=you%20can%20drag%20the%20slider%20to%20see%20how%20the%20extent%20of%20the%20chromaticity%20triangle%20corresponds%20to%20the%20representable%20colors.">Try it for yourself</a>
   </figcaption>
 </figure>
 
