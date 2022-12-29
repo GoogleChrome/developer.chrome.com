@@ -38,6 +38,7 @@ const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
+const {Assert} = require('webdev-infra/shortcodes/Assert');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -148,6 +149,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Aside', Aside);
   eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
+  eleventyConfig.addShortcode('Assert', Assert);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.

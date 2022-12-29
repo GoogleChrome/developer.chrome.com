@@ -9,6 +9,8 @@
 {% set authorDescription = 'i18n.authors.' + authorId + '.description' %}
 {% set authorImage = authorsData[authorId].image or site.defaultAvatarImg %}
 
+{% Assert value=authorTitle | i18n(locale) | dump != '{}', error='No i18n data for author ' + authorId %}
+
 <div class="display-flex align-start">
   {% if authorImage %}
     <a href="/authors/{{authorId}}/" translate="no" class="card-authors__image">
