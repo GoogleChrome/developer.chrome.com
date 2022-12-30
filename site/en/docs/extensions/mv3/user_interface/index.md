@@ -580,7 +580,7 @@ Specify the name of the message in the `"default_title"` field of the manifest. 
   "name": "Tab Flipper",
   ...
   "action": {
-    "default_title": "__MSG_tooltip__"
+    "default_title": "tooltip"
   },
   "default_locale": "en"
   ...
