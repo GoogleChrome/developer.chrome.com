@@ -37,7 +37,7 @@ tags:
   - crux
 ---
 
-The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) dashboard that links to the raw origin-level CrUX data on [BigQuery](/docs/crux/bigquery/) and the visualizes the data for you. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and the dashboard will be generated for you.
+The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) dashboard that links to the raw origin-level CrUX data on [BigQuery](/docs/crux/bigquery/) and then visualizes the data for you. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and the dashboard will be generated for you.
 
 ## Accessing the CrUX Dashboard
 
