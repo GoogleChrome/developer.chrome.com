@@ -129,7 +129,7 @@ See [Page.evaluate()](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/a
 
 ### Uses Headless mode
 
-Puppeteer launches Chromium in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To launch a full version of Chromium, set the [`headless`](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#puppeteerlaunchoptions) option when launching a browser:
+Puppeteer launches Chromium in [headless mode](/blog/headless-chrome/). To launch a full version of Chromium, set the [`headless`](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#puppeteerlaunchoptions) option when launching a browser:
 
 ```shell
 const browser = await puppeteer.launch({ headless: false }); // default is true

@@ -6,7 +6,7 @@ summary: >-
   more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: 'Antwerp, Belgium'
-date: '2022-10-06'
+date: 2022-10-06
 externalUrl: 'https://fullstackeurope.com/2022'
 sessions:
   - speaker: bramus
@@ -18,7 +18,8 @@ sessions:
       of the features that will be landing across all browsers by the end of
       this year.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: TBC
     type: speaker
     slidesUrl: null

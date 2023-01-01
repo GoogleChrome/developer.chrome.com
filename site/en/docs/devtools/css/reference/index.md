@@ -44,6 +44,12 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
+### View invalid, overridden, inactive, and other CSS {: #css-issues }
+
+The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
+
+See [Understand CSS in the Styles pane](/docs/devtools/css/issues/#css-in-styles).
+
 ### View the external stylesheet where a rule is defined {: #view-external }
 
 In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
@@ -64,7 +70,9 @@ tab to view only the CSS that's actually being applied to an element.
 
 {% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab.", width="800", height="488" %}
 
-Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
+Check the **Show All** checkbox to see all properties.
+
+See [Understand CSS in the Computed pane](/docs/devtools/css/issues/#css-in-computed).
 
 ### View CSS properties in alphabetical order {: #alphabetical }
 
@@ -308,7 +316,7 @@ To copy CSS:
      ```
    - **Copy property**. Copies only the `property` name.
    - **Copy value**. Copies only the `value`.
-   - **Copy rule**. Copies the entire CSS rule: 
+   - **Copy rule**. Copies the entire CSS rule:
      ```css
      selector[, selector] {
          property: value;
@@ -411,7 +419,7 @@ To change the length unit:
 
 1. Hover over the unit name and notice that it's underlined.
 1. Click on the unit name to select a unit from the drop-down.
-   
+
    <div style="margin-top: 20px;">
    {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}</div>
 
@@ -419,7 +427,7 @@ To change the length value:
 
 1. Hover over the unit value and notice that your pointer changes to a horizontal double-headed arrow.
 1. Drag horizontally to increase or decrease the value.
-   
+
    <div style="margin-top: 20px;">
    {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}</div>
 
@@ -768,7 +776,7 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [30]: https://drafts.csswg.org/css-color/#the-hsl-notation
 [31]: https://drafts.csswg.org/css-color/#the-hwb-notation
 [32]: https://drafts.csswg.org/css-color/#hex-notation
-[33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+[33]: https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/
 [36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function

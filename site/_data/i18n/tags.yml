@@ -83,6 +83,9 @@ encryption:
 extensions:
   en: Extensions
 
+extensions-news:
+  en: Extensions News
+
 fonts:
   en: Fonts
 
@@ -257,3 +260,6 @@ spc:
 
 webauthn:
   en: WebAuthn
+
+passkeys:
+  en: Passkeys

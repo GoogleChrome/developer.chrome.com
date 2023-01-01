@@ -5,7 +5,7 @@ summary: >-
   performance culture, performance budgets to Web Vitals, PWAs and more.
 image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: 'Amsterdam, Netherlands'
-date: '2022-10-27'
+date: 2022-10-27
 externalUrl: 'https://perfnow.nl/'
 sessions:
   - speaker: katiehempenius
@@ -18,10 +18,9 @@ sessions:
       software engineer at Fitbit.
     topics:
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
-    videoUrl: null
+    videoUrl: https://www.youtube.com/watch?v=jXZd-HzKgM4
   - topics:
       - Performance
     description: >-
@@ -47,5 +46,5 @@ sessions:
       - milutinkristofic
     type: participant
     slidesUrl: null
-    videoUrl: null
+    videoUrl: https://www.youtube.com/watch?v=_FOQoMvIxeQ
 ---

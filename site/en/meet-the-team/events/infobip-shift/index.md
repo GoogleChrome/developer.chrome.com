@@ -19,7 +19,8 @@ sessions:
       or will be coming soon like container queries, the :has() family selector,
       cascade layers, and much more!
     topics:
-      - Web UI and CSS
+      - Web UI
+      - CSS
     time: null
     type: speaker
     slidesUrl: null

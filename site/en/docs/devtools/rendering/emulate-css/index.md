@@ -105,8 +105,8 @@ To emulate this condition:
 
 [1]: https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries
 [2]: /docs/devtools/css
-[5]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors
-[6]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast
+[5]: https://developer.mozilla.org/docs/Web/CSS/@media/forced-colors
+[6]: https://developer.mozilla.org/docs/Web/CSS/@media/prefers-contrast
 [7]: https://web.dev/prefers-color-scheme/
 [8]: https://web.dev/prefers-reduced-motion/
-[9]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/color-gamut
+[9]: https://developer.mozilla.org/docs/Web/CSS/@media/color-gamut

@@ -1,11 +1,9 @@
 const SNAPSHOTS = [
-  '/index.html', // Home
-  '/docs/index.html', // Docs
-  '/docs/native-client/index.html', // Docs landing page
-  '/docs/extensions/mv3/index.html', // Docs page
-  '/docs/extensions/reference/action/index.html', // API reference page
-  '/docs/handbook/test-post/index.html', // Test blog post
-  '/docs/handbook/components/index.html', // Handbook components
+  '/en/index.html',
+  '/en/docs/handbook/content-types/blog-landing/index.html',
+  '/en/docs/handbook/content-types/docs-landing/index.html',
+  '/en/docs/handbook/content-types/doc-post/index.html',
+  '/en/docs/handbook/content-types/landing/index.html',
 ];
 
 module.exports = {

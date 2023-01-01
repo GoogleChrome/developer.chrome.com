@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Focus Mode'
+seoTitle: 'Chrome Extensions Tutorial: Focus Mode'
 subhead: 'Simplify the styling of the current page by clicking the extension toolbar icon.'
 description: 'Learn how to run code in the active tab.'
 date: 2022-10-04
