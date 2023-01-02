@@ -48,16 +48,16 @@ create a SQLite implementation over WebAssembly. This solution will replace Web 
 ## Web SQL deprecation and removal steps
 
 - [✅ Done.] Web SQL was deprecated and removed for **third-party contexts** in
-  **Chromium&nbsp;97** (Tue, Jan 4, 2022).
+  **Chromium&nbsp;97** ({{ '96'|chromeDate }}).
 - [✅ Done.] Web SQL access in **insecure contexts** was deprecated as of
-  **Chromium&nbsp;105** (Tue, Aug 30, 2022) at which time a warning message was shown in the Chrome DevTools Issue
+  **Chromium&nbsp;105** ({{ '105'|chromeDate }}) at which time a warning message was shown in the Chrome DevTools Issue
   panel.
   
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
 - [📍 We are here.] Web SQL access in **insecure contexts** is no longer available as of
-  **Chromium&nbsp;110** (Tue, Feb 1, 2023). An **enterprise policy** to keep using the feature is available from
-  **Chromium&nbsp;110** (Tue, Feb 1, 2023) to **Chromium&nbsp;111** Tue, Mar 1, 2023.
+  **Chromium&nbsp;110** ({{ '110'|chromeDate }}). An **enterprise policy** to keep using the feature is available from
+  **Chromium&nbsp;110** ({{ '110'|chromeDate }}) to **Chromium&nbsp;111** ({{ '111'|chromeDate }}).
 - [🔮 In the future.] The final step will be to remove Web SQL completely **in all contexts**, but
   no date has been set for this step yet.
 
