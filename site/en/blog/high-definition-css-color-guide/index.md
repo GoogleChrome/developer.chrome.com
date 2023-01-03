@@ -1142,6 +1142,28 @@ now shows how increasing and decreasing works.
 
 {% Codepen { user: 'web-dot-dev', id: 'abjNpxV' } %}
 
+The above Codepen used [ColorJS](https://colorjs.io/) to demonstrate the
+expected result. The CSS you would write to achieve the same effect without a
+Javascript library would be:
+
+```css
+.longer-hue-interpolation-in-css {
+  background: linear-gradient(
+    to right in hsl longer hue,
+    hsl(180deg 100% 75%),
+    hsl(240deg 100% 75%)
+  );
+}
+
+.decreasing-hue-interpolation-in-css {
+  background: linear-gradient(
+    to right in hsl decreasing hue,
+    hsl(180deg 100% 75%),
+    hsl(240deg 100% 75%)
+  );
+}
+```
+
 To close out hue interpolation, here's a fun playground where you can change the
 hue between 2 color stops and see the effects of a hue interpolation choice as
 well as how color spaces change gradient results. The effects can be very
