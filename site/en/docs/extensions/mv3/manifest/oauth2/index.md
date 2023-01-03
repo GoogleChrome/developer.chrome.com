@@ -13,7 +13,7 @@ An optional manifest key enabling the use of an OAuth 2.0 security ID on the ext
 {
   // ...
      "oauth2": {
-      "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
+      "client_id": "YOUR_EXTENSION_OAUTH_CLIENT_ID.apps.googleusercontent.com",
       "scopes": ["https://www.googleapis.com/auth/contacts.readonly"]
     },
     "key": "EXTENSION_PUBLIC_KEY",
