@@ -5,12 +5,14 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2018-12-18
-updated: 2022-12-29
+updated: 2023-01-03
 description: "Use the Sensors tab to override geolocation, simulate device orientation, force touch, and emulate idle state."
 tags:
   - emulate
   - test
 ---
+
+{% YouTube id='7ma_ZyfrgYM' %}
 
 Use the **Sensors** tab to emulate sensor input of any device:
 
