@@ -7,6 +7,7 @@ subhead: >
   Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article.
 date: 2023-01-03
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/TA8zkJYaP914aSjcGUap.jpg
+alt: "Correct and incorrect clipping."
 authors:
   - mstensho
 tags:
