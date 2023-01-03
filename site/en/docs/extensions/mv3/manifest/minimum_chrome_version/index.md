@@ -6,7 +6,7 @@ updated: 2022-11-14
 description: Reference documentation for the minimum_chrome_version property of manifest.json.
 ---
 
-An optional Manifest key containing a string that defines what versions of chrome are able to install the extension. The value set for this string must be identical to an existing Chrome browser version string. Either a full version number can be used if you need to specify a specific update to chrome, or simply the first number in the string for that version.
+An optional manifest key containing a string that defines what versions of Chrome are able to install the extension. The value set for this string must be identical to an existing Chrome browser version string. Either a full version number can be used if you need to specify a specific update to chrome, or simply the first number in the string for that version.
 
  ```json
 {
