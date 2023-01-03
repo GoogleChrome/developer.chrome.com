@@ -11,7 +11,7 @@ An optional Manifest key containing a string that defines what versions of chrom
  ```json
 {
   // ...
-     "minimum_chrome_version": "107.0.5304.87", // Can also be abbreviated to "107", "107.0", or "107.0.5304"
+  "minimum_chrome_version": "107.0.5304.87", // Can also be abbreviated to "107", "107.0", or "107.0.5304"
   // ...
 }
 ```
