@@ -11,7 +11,7 @@ An optional manifest key defining the short version of the extension's name (max
 ```json
 {
   // ...
- "short_name": "Short Name"
+  "short_name": "Short Name"
   // ...
 }
 ```
