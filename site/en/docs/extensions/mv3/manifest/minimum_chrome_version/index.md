@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest - Minimum Chrome Version"
 date: 2013-05-12
-updated: 2022-11-14
+updated: 2023-01-04
 description: Reference documentation for the minimum_chrome_version property of manifest.json.
 ---
 
