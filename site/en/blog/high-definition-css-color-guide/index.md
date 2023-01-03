@@ -1433,6 +1433,31 @@ CSS.supports('background: color(display-p3 0 0 0)')
 CSS.supports('background: oklch(0 0 0)')
 ```
 
+#### Putting the hardware and parsing checks together
+
+While waiting for each browser to implement these new color features, it's a
+good idea to check for both hardware capability and color parsing capability.
+This is often what I use when progressively enhancing colors to high definition:
+
+```css
+:root {
+  --neon-red: red;
+  --neon-blue: blue;
+}
+
+/* is the display HD? */
+@media (dynamic-range: high) {
+
+  /* does this browser understand display-p3? */
+  @supports (color: color(display-p3 0 0 0)) {
+
+    /* safe to use display-p3 colors */
+    --neon-red: color(display-p3 1 0 0);
+    --neon-blue: color(display-p3 0 0 1);
+  }
+}
+```
+
 ## Conclusion
 
 Color spaces on the web are in early days but I believe we'll see an increase in
