@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Declare permissions and warn users"
 seoTitle: "Chrome Extensions: declare permissions and warn users"
 date: 2012-09-18
-updated: 2022-12-20
+updated: 2023-01-04
 description: >
   How to implement permissions to protect your users and your Extension.
 ---
@@ -43,7 +43,7 @@ one or more hosts. They are listed in the manifest and specified as required per
 ```
 
 Limit required permissions to only what is needed for the extension's core functionality. An
-extension should not request more permissions than it currently needs; do not future-proof by requesting permissions that may be needed with updates.
+extension should not request more permissions than it needs; do not future-proof by requesting permissions that may be needed in a future update.
 
 Permissions needed for optional features should be registered as [optional permissions][api-optional-perms]. This
 allows users to decide how much access they are willing to provide an extension and which features
@@ -83,10 +83,10 @@ allows users to further customize their experience with an extension and creates
 ## Substitute the activeTab permission {: #activeTab_permission }
 
 The `"activeTab"` permission grants temporary access to the site the user is on and allows the
-extension to use host permissions on the current tab. It replaces the need for
+extension to use host permissions on the current tab. It replaces
 `"<all_urls>"` in many cases and displays no warning on installation.
 
-For more details, see [Using the activeTab permission][doc-activetab]. 
+For details, see [Using the activeTab permission][doc-activetab]. 
 
 ## Allowing access {: #allow_access }
 
@@ -179,17 +179,17 @@ the steps in [Viewing Warnings](#view_warnings).
     </tr>
     <tr id="host">
       <td><code>"https://HostName.com/"</code></td>
-      <td>Grants the extension access to <code>"https://HostName.com/"</code>. Consider using the <a href="/docs/extensions/mv3/manifest/activeTab/">activeTab</a> permission instead.</td>
+      <td>Grants access to <code>"https://HostName.com/"</code>. Consider using the <a href="/docs/extensions/mv3/manifest/activeTab/">activeTab</a> permission instead.</td>
       <td><strong>Read and change your data on <code>HostName.com</code></strong></td>
     </tr>
     <tr id="accessibilityFeatures.modify">
       <td><code>"accessibilityFeatures.modify"</code></td>
-      <td>Allows the extension to modify individual accessibility feature states. See <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
+      <td>Allows the extension to modify individual accessibility feature states. See the <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
       <td><strong>Change your accessibility settings</strong></td>
     </tr>
     <tr id="accessibilityFeatures.read">
       <td><code>"accessibilityFeatures.read"</code></td>
-      <td>Allows the extension to read individual accessibility feature states. See <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
+      <td>Allows the extension to read individual accessibility feature states. See the <a href="/docs/extensions/reference/accessibilityFeatures/">chrome.accessibilityFeatures</a> API for details.</td>
       <td><strong>Read your accessibility settings</strong></td>
     </tr>
     <tr id="bookmarks">
