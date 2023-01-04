@@ -778,7 +778,7 @@ To edit or remove an existing profile, click {% Img src="image/NJdAV9UgKuN8AhoaP
 
 ## Locations
 
-The **Location** tab contains a list of geolocation presets. You can use these presets to [override geolocation](/devtools/device-mode/geolocation/) in Chrome. You can also populate the list with your own preset that you use frequently.
+The **Location** tab contains a list of geolocation presets. You can use these presets to [override geolocation](/docs/devtools/sensors/#geolocation) in Chrome. You can also populate the list with your own preset that you use frequently.
 
 To add a custom preset:
 
