@@ -1308,14 +1308,14 @@ If a browser doesn't understand `display-p3` color:
 
 ```css//1
 color: red;
-color: color(display-3 1 0 0);
+color: color(display-p3 1 0 0);
 ```
 
 If a browser does understand `display-p3` color:
 
 ```css//0
 color: red;
-color: color(display-3 1 0 0);
+color: color(display-p3 1 0 0);
 ```
 
 There are advantages and disadvantages to each. Here's a quick list of pros and
