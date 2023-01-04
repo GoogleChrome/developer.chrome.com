@@ -8,9 +8,6 @@ date: 2022-10-04
 # updated: 2022-06-13
 ---
 
-
-## Overview {: #overview }
-
 This page describes what an extension is and a brief introduction to Chrome extension development. It also includes links to step-by-step [beginner tutorials][section-tutorials].
 
 ## What are extensions? {: #overview }
