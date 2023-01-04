@@ -19,14 +19,13 @@ Use Device Mode to approximate how your page looks and performs on a mobile devi
 Device Mode is the name for a collection of features in Chrome DevTools that help you
 simulate mobile devices. These features include:
 
-- In the **Elements** panel:
-  - [Simulating a mobile viewport][1]
-  - [Throttling the CPU][3]
-  - [Throttling the network][2]
+- [Simulating a mobile viewport][1]
+- [Throttling the CPU][3]
+- [Throttling the network][2]
   {% Aside 'gotchas' %}
   Alternatively, you can [throttle connection speed](/docs/devtools/network/reference/#throttling) in the **Network** panel.
   {% endAside %}
-- In the [**Sensors** tab](/docs/devtools/sensors/):
+- Additionally, in the [**Sensors** tab](/docs/devtools/sensors/):
   - [Simulating geolocation][4]
   - [Setting orientation][5]
 
