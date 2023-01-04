@@ -3,12 +3,12 @@ layout: "layouts/doc-post.njk"
 title: "Settings reference"
 authors:
   - sofiayem
-date: 2022-10-25
+date: 2023-01-04
 #updated: YYYY-MM-DD
 description: "A comprehensive reference of all DevTools settings."
 ---
 
-Configure DevTools to your preferences with this comprehensive list of all DevTools settings.
+Configure DevTools to your preferences with this comprehensive list of DevTools settings.
 
 ## Open Settings {: #open }
 
@@ -465,6 +465,23 @@ This section lists options that customize the **Network** panel. Most of the opt
 {% endDetails %}
 
 ### Performance
+
+{% Details %}
+
+{% DetailsSummary %}
+**Flamechart mouse wheel action** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VPpFJAIWgNSaTmnYrqNP.svg", alt="Drop-down.", width="24", height="24" %} assigns scroll or zoom action to your mouse wheel when you navigate the flamechart.
+{% endDetailsSummary %}
+
+<fieldset>
+   <legend>Flamechart mouse wheel action:</legend>
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/m2ILo76N2nDtuwfBk9RK.gif", alt="Changing mouse wheel action from scrolls to zoom for the flamechart.", width="500", height="350", style="float:right;", class="screenshot" %}
+
+- Scroll
+- Zoom
+
+</fieldset>
+{% endDetails %}
 
 ### Console
 
