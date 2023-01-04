@@ -8,7 +8,7 @@ date: 2022-10-04
 # updated: 2022-06-13
 ---
 
-This page describes what an extension is and a brief introduction to Chrome extension development. It also includes links to step-by-step [beginner tutorials][section-tutorials].
+This page describes what an extension is and provides a brief introduction to Chrome extension development. It also includes links to [beginner tutorials][section-tutorials].
 
 ## What are extensions? {: #overview }
 
@@ -20,7 +20,7 @@ browser, providing things like:
 - Information aggregation.
 
 These are just a few examples of the many things that extensions can do. Visit the [Chrome Web
-Store][chrome-web-store] to see thousands of different examples of published extensions.
+Store][chrome-web-store] to see thousands of examples of published extensions.
 
 ## Web technologies {: #web-tech }
 
@@ -135,9 +135,10 @@ See [Publish in the Chrome Web Store][doc-cws-publish] to learn how to distribut
 
 {% endDetailsSummary %}
 
-Some organizations use [enterprise policies][doc-cws-enterprise] to install extensions on their user's devices. These
+Some organizations use enterprise policies to install extensions on their user's devices. These
 extensions may either be fetched from the Chrome Web Store or hosted on the organization's web
 servers.
+Read about both in [Enterprise publishing options][doc-cws-enterprise].
 
 {% endDetails %}
 

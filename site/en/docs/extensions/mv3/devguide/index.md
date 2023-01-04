@@ -7,7 +7,7 @@ updated: 2018-06-12
 description: An overview of Chrome Extension capabilities and components.
 ---
 
-After reading the [Getting Started][doc-getstarted] guides and [Architecture Overview][doc-arch], use this guide as an outline of extension components and abilities with Manifest V3 availability. Developers are encouraged to explore and expand extension
+After reading the [Getting Started][doc-getstarted] guides and [Architecture Overview][doc-arch], use this guide as an outline of extension components and their capabilities in Manifest V3. You are encouraged to explore and expand extension
 functionality.
 
 <table class="width-full">
