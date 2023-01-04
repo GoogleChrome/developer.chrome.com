@@ -1,5 +1,6 @@
 - url: /docs/handbook/where-to-publish
 - url: /docs/handbook/components
+- url: /docs/handbook/content-types
 - title: i18n.docs.handbook.how_to
   sections:
     - url: /docs/handbook/how-to/add-a-project
