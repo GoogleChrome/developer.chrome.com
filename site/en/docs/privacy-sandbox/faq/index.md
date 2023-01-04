@@ -305,6 +305,9 @@ the following properties:
 *  `userBiddingSignals`, a property of the interest group configuration
    object passed to `navigator.joinAdInterestGroup()`
 
+### How can a user block an ad when it's shown as a result of a FLEDGE auction?
+
+There can be multiple approaches to controlling which ads are eligible for bidding and serving, and recording user ad preferences. One way is to call `leaveAdInterestGroup()` when a user asks to block an ad, for the winning interest group that provided the ad. This will remove the user's browser from membership of the interest group, and make the group ineligible to bid in the future.
 
 ## Attribution Reporting
 
