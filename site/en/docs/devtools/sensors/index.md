@@ -80,11 +80,12 @@ To trigger touch events with your pointer:
 
 ## Emulate idle detector state {: #idle }
 
-Sometimes you might need to test how your website behaves when the user is idle. However, you can't be idle during testing.
+The [Idle Detection API](/articles/idle-detection/) lets you detect inactive users and react on idle state changes. With DevTools, you can emulate idle state changes for both the user state and screen state instead of waiting for the actual idle state to change.
 
-Use the **Sensors** tab to emulate idle states:
+To emulate idle states:
 
-1. [Open the **Sensors** tab](#open-sensors). For this tutorial, you can try it on this [demo page]().
+1. [Open the **Sensors** tab](#open-sensors). For this tutorial, you can try it on this [demo page](https://idle-detection.glitch.me/).
+
 1. Enable the checkbox next to *Ephemeral* and, in the prompt, grant the demo page the idle detection permission. Then, reload the page.
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1ymZFoBUlCOuksgUirQj.png", alt="Granting the idle detection permission on a demo page.", width="800", height="440" %}
