@@ -18,7 +18,7 @@ alt: >
 For over 25 years, `sRGB` (standard red green blue) has been the only color
 gamut for CSS gradients and colors, with color space offerings within it like
 `rgb()`, `hsl` and hex. It is the most common color gamut capability amongst
-displays; a common denominator.
+displays; a *lowest* common denominator.
 
 As displays become more capable of showing colors, CSS needs a way to access and
 specify colors from within these display capabilities or else it will be stuck
@@ -32,7 +32,7 @@ alternatives offer 70% or more. We can now thank [Color Level
 
 Shipped in Chrome 110 is support for [CSS Color
 4](https://www.w3.org/TR/css-color-4/) gamuts and color spaces, joining Safari
-who's had support for `display-p3` since 2016. CSS can now support HD (high
+which has support for `display-p3` since 2016. CSS can now support HD (high
 definition) displays, specifying colors from HD gamuts and offering more color
 spaces which have specializations. This guide will explain how you can start to
 take advantage of this new world of color.
@@ -53,7 +53,7 @@ take advantage of this new world of color.
   </figcaption>
 </figure>
 
-In addition to more colors, [arguably the most vivid colors the display is
+In addition to more colors, [the most vivid colors the display is
 capable
 of](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/#:~:text=most%20vivid%20colors%20the%20screen%20can%20display),
 additional color spaces provide new tools and methods for managing and creating
@@ -62,7 +62,7 @@ had in CSS, until LCH's "perceptual lightness."
 
 In the following example, `50%` lightness in HSL is compared to `50%` in LCH,
 across a series of hues. The gray next to each color swatch is the perceived
-lightness as defined in LCH. Notice how HSL is wildly sporadic while LCH remains
+lightness as defined in LCH. Notice how HSL is wildly inconsistent while LCH remains
 constant. This makes HSL a poor color space for doing contrast calculations or
 building dynamic color systems.
 
@@ -121,8 +121,8 @@ ready. CSS on the other hand, is not high definition ready, until now. The color
 capability of displays grew faster than CSS, now CSS is here to catch up.
 
 There's much more than just "more colors" too. By the end of this article you'll
-be able to specify more colors, enhance gradients, and pick color spaces and
-color gamuts for a task they excel at.
+be able to specify more colors, enhance gradients, pick the color space and
+color gamut for a task they excel at.
 
 ### What is a color gamut?
 
@@ -216,9 +216,9 @@ demo of an RGB cube filled with color particles.
 
 {% Codepen { user: 'web-dot-dev', id: 'gOjrLwm' } %}
 
-Use color gamuts to talk about a range of colors, like low range gamut vs high
-range gamut. Use color spaces to talk about arrangements of color, syntax used
-to grab a color, manipulate color and interpolate through color.
+Use color gamuts to talk about a range of colors, like low/narrow range gamut vs
+high/wide range gamut. Use color spaces to talk about arrangements of color,
+syntax used to grab a color, manipulate color and interpolate through color.
 
 <figure>
   {% Img
@@ -326,7 +326,7 @@ Colors are in the `sRGB Gamut`; 35.9% of the visible spectrum.
 One of the first color spaces to orient itself towards human language and
 communication, HSL (hue saturation and lightness) offers all the colors in the
 sRGB gamut while not requiring your brain to know how red, green and blue
-interact. Like RGB, it also originally had commas in the syntax, but moving
+interact. Like RGB, it also originally required commas in the syntax, but moving
 forward, commas are no longer required.
 
 ```css
