@@ -1,0 +1,3416 @@
+[
+  {
+    "timestamp": "2022-02-23T11:21:57.000Z",
+    "appURL": "https://editor.bridge-core.app/",
+    "sourceURL": "https://github.com/bridge-core/editor",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "bridge. is a light-weight IDE for Minecraft Add-Ons",
+      "open_graph": {
+        "title": "bridge. v2",
+        "description": "bridge. is a light-weight IDE for Minecraft Add-Ons",
+        "images": [
+          {
+            "url": "https://editor.bridge-core.app/img/social-preview.png",
+            "width": 1200,
+            "height": 630
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "site": "@bridgeIDE",
+        "images": [
+          {
+            "url": "https://editor.bridge-core.app/img/social-preview.png"
+          }
+        ],
+        "title": "bridge. v2",
+        "description": "bridge. is a light-weight IDE for Minecraft Add-Ons"
+      },
+      "title": "No Project",
+      "favicon": "https://editor.bridge-core.app/img/icons/favicon-16x16.png"
+    },
+    "title": "bridge. v2",
+    "description": "bridge. is a light-weight IDE for Minecraft Add-Ons"
+  },
+  {
+    "timestamp": "2022-02-23T11:55:57.000Z",
+    "appURL": "https://sqliteviewer.app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Storage Estimation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "A free online SQLite Explorer, inspired by DB Browser for SQLite and Airtable. Use this web-based SQLite Tool to quickly and easily inspect sqlite files on the web.",
+      "title": "SQLite Viewer Web App",
+      "favicon": "https://sqliteviewer.app/favicon.ico"
+    },
+    "title": "SQLite Viewer Web App",
+    "description": "A free online SQLite Explorer, inspired by DB Browser for SQLite and Airtable. Use this web-based SQLite Tool to quickly and easily inspect sqlite files on the web."
+  },
+  {
+    "timestamp": "2022-02-23T12:26:05.000Z",
+    "appURL": "https://uspeaking.netlify.app/",
+    "sourceURL": "https://github.com/rafaelguinho/u-speaking-react",
+    "usedAPIs": [
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "USpeaking",
+      "favicon": "https://uspeaking.netlify.app/favicon.ico"
+    },
+    "title": "USpeaking",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-02-23T12:43:26.000Z",
+    "appURL": "https://anaesthetics.app/bluetooth/",
+    "sourceURL": "https://github.com/anaestheticsapp/bluetooth",
+    "usedAPIs": [
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Web Bluetooth Demo",
+      "description": "Monitor your oxygen saturation and heart rate with a bluetooth pulse oximeter",
+      "keywords": [
+        "bluetooth",
+        "progressive",
+        "web",
+        "app",
+        "pulse",
+        "oximetry",
+        "pulse",
+        "heart",
+        "rate",
+        "oxygen",
+        "saturation"
+      ],
+      "twitter_card": {
+        "card": "summary_large_image"
+      },
+      "open_graph": {
+        "description": "Monitor your oxygen saturation and heart rate with a bluetooth pulse oximeter",
+        "images": [
+          {
+            "url": "https://anaesthetics.app/img/features1.png"
+          }
+        ],
+        "url": "https://anaesthetics.app/"
+      },
+      "favicon": "https://anaesthetics.app/favicon.ico"
+    },
+    "title": "Web Bluetooth Demo",
+    "description": "Monitor your oxygen saturation and heart rate with a bluetooth pulse oximeter"
+  },
+  {
+    "timestamp": "2022-02-23T12:45:53.000Z",
+    "appURL": "https://thelogbook.app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Logbook",
+      "favicon": "https://thelogbook.app/assets/icons/favicon-32x32.png"
+    },
+    "title": "Logbook",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-02-23T13:25:27.000Z",
+    "appURL": "https://md.nico.dev/",
+    "sourceURL": "https://github.com/nico-martin/markdown-editor/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Local Font Access",
+        "url": "https://web.dev/local-fonts/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "[md.edit]",
+      "description": "A Markdown Editor PWA",
+      "open_graph": {
+        "images": [
+          {
+            "url": "https://md.nico.dev/assets/static/facebook.jpg"
+          }
+        ],
+        "title": "[md.edit]",
+        "description": "[md.edit] is a web based markdown editor that uses modern progressive web app features to provide a great, cross-platform editing experience.",
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "creator": "@nic_o_martin",
+        "title": "[md.edit]",
+        "description": "[md.edit] is a web based markdown editor that uses modern progressive web app features to provide a great, cross-platform editing experience.",
+        "images": [
+          {
+            "url": "https://md.nico.dev/assets/static/twitter.jpg"
+          }
+        ]
+      },
+      "favicon": "https://md.nico.dev/assets/static/favicon/favicon-16x16.png"
+    },
+    "title": "[md.edit]",
+    "description": "[md.edit] is a web based markdown editor that uses modern progressive web app features to provide a great, cross-platform editing experience."
+  },
+  {
+    "timestamp": "2022-02-23T14:41:34.000Z",
+    "appURL": "https://edit.photostack.app",
+    "sourceURL": "https://github.com/photostack/photostack",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "PhotoStack",
+      "favicon": "https://edit.photostack.app/favicon.ico"
+    },
+    "title": "PhotoStack",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-02-23T14:44:17.000Z",
+    "appURL": "https://linkcleaner.app/",
+    "sourceURL": "https://github.com/corbindavenport/link-cleaner",
+    "usedAPIs": [
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Link Cleaner",
+      "description": "Link Cleaner is a web app that removes unnecessary junk from links, complete with share/send support on compatible browsers.",
+      "twitter_card": {
+        "card": "summary",
+        "creator": "@corbindavenport",
+        "title": "Link Cleaner",
+        "description": "Remove tracking code and other variables from web links with the press of a button!",
+        "images": [
+          {
+            "url": "https://linkcleaner.app/img/maskable_icon_x1024.png",
+            "alt": "Link Cleaner app icon"
+          }
+        ]
+      },
+      "favicon": "https://linkcleaner.app/favicon.ico"
+    },
+    "title": "Link Cleaner",
+    "description": "Remove tracking code and other variables from web links with the press of a button!"
+  },
+  {
+    "timestamp": "2022-02-23T15:23:21.000Z",
+    "appURL": "https://avg-colour.netlify.app/",
+    "sourceURL": "https://github.com/ThomasRettig/average-color",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Average Colour",
+      "description": "Average Colour is a tool to find the average colour in an image.",
+      "keywords": [
+        "PWA",
+        "tool",
+        "image"
+      ],
+      "author": "Thomas Rettig",
+      "open_graph": {
+        "title": "Average Colour",
+        "type": "website",
+        "url": "https://avg-colour.netlify.app/",
+        "images": [
+          {
+            "url": "https://avg-colour.netlify.app/og-image.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "title": "Average Colour",
+        "description": "Average Colour is a tool to find the average colour in an image.",
+        "site": "@thomasrettig13",
+        "creator": "@thomasrettig13",
+        "card": "summary_large_image",
+        "images": [
+          {
+            "url": "https://avg-colour.netlify.app/og-image.png",
+            "alt": "An eyedropper icon placed next to text containing the words “Average Color’"
+          }
+        ]
+      },
+      "favicon": "https://avg-colour.netlify.app/favicon-dark.svg"
+    },
+    "title": "Average Colour",
+    "description": "Average Colour is a tool to find the average colour in an image."
+  },
+  {
+    "timestamp": "2022-02-23T17:01:10.000Z",
+    "appURL": "https://www.improv-wifi.com/",
+    "sourceURL": "https://github.com/improv-wifi/sdk-js/",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Improv Wi-Fi: Open standard for setting up Wi-Fi via Bluetooth LE and Serial",
+      "description": "Free and open standard with ready-made SDKs that offer a great user experience to configure Wi-Fi on devices.",
+      "open_graph": {
+        "title": "Improv Wi-Fi: Open standard for setting up Wi-Fi via Bluetooth LE and Serial",
+        "site_name": "Improv Wi-Fi",
+        "url": "https://www.improv-wifi.com/",
+        "type": "website",
+        "description": "Free and open standard with ready-made SDKs that offer a great user experience to configure Wi-Fi on devices.",
+        "images": [
+          {
+            "url": "https://www.improv-wifi.com/images/social.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "title": "Improv Wi-Fi: Open standard for setting up Wi-Fi via Bluetooth LE and Serial",
+        "description": "Free and open standard with ready-made SDKs that offer a great user experience to configure Wi-Fi on devices.",
+        "images": [
+          {
+            "url": "https://www.improv-wifi.com/images/social.png"
+          }
+        ]
+      },
+      "favicon": "https://www.improv-wifi.com/images/improv-favicon.png"
+    },
+    "title": "Improv Wi-Fi: Open standard for setting up Wi-Fi via Bluetooth LE and Serial",
+    "description": "Free and open standard with ready-made SDKs that offer a great user experience to configure Wi-Fi on devices."
+  },
+  {
+    "timestamp": "2022-02-23T17:01:44.000Z",
+    "appURL": "https://esphome.github.io/esp-web-tools/",
+    "sourceURL": "https://github.com/esphome/esp-web-tools",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "ESP Web Tools",
+      "description": "Easily allow users to flash new firmware for their ESP-devices on the web.",
+      "open_graph": {
+        "title": "ESP Web Tools",
+        "site_name": "ESP Web Tools",
+        "url": "https://esphome.github.io/esp-web-tools/",
+        "type": "website",
+        "description": "Easily allow users to flash new firmware for their ESP-devices on the web.",
+        "images": [
+          {
+            "url": "https://esphome.github.io/esp-web-tools/static/social.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "title": "ESP Web Tools",
+        "description": "Easily allow users to flash new firmware for their ESP-devices on the web.",
+        "images": [
+          {
+            "url": "https://esphome.github.io/esp-web-tools/static/social.png"
+          }
+        ]
+      },
+      "favicon": "https://esphome.github.io/favicon.ico"
+    },
+    "title": "ESP Web Tools",
+    "description": "Easily allow users to flash new firmware for their ESP-devices on the web."
+  },
+  {
+    "timestamp": "2022-02-23T17:02:36.000Z",
+    "appURL": "https://esphome.io/",
+    "sourceURL": "https://github.com/esphome/dashboard/",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "ESPHome Homepage - Reimagining DIY Home Automation. ESPHome is a framework that tries to provide the best possible use experience for using ESP8266 and ESP32 microcontrollers for Home Automation. Just write a simple YAML configuration file and get your own customized firmware.",
+      "twitter_card": {
+        "images": [
+          {
+            "url": "https://esphome.io/_images/logo.png"
+          }
+        ],
+        "card": "summary",
+        "site": "@OttoWinter_",
+        "description": "ESPHome Homepage - Reimagining DIY Home Automation. ESPHome is a framework that tries to provide the best possible use experience for using ESP8266 and ESP32 microcontrollers for Home Automation. Just write a simple YAML configuration file and get your own customized firmware."
+      },
+      "open_graph": {
+        "images": [
+          {
+            "url": "https://esphome.io/_images/logo.png"
+          }
+        ],
+        "type": "website",
+        "description": "ESPHome Homepage - Reimagining DIY Home Automation. ESPHome is a framework that tries to provide the best possible use experience for using ESP8266 and ESP32 microcontrollers for Home Automation. Just write a simple YAML configuration file and get your own customized firmware.",
+        "site_name": "ESPHome"
+      },
+      "title": "ESPHome — ESPHome",
+      "favicon": "https://esphome.io/_static/favicon-16x16.png"
+    },
+    "title": "ESPHome — ESPHome",
+    "description": "ESPHome Homepage - Reimagining DIY Home Automation. ESPHome is a framework that tries to provide the best possible use experience for using ESP8266 and ESP32 microcontrollers for Home Automation. Just write a simple YAML configuration file and get your own customized firmware."
+  },
+  {
+    "timestamp": "2022-02-23T19:35:14.000Z",
+    "appURL": "https://stackedit.io ",
+    "sourceURL": "https://github.com/benweet/stackedit/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "StackEdit – In-browser Markdown editor",
+      "description": "Full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.",
+      "author": "Benoit Schweblin",
+      "favicon": "https://stackedit.io/static/landing/favicon.ico"
+    },
+    "title": "StackEdit – In-browser Markdown editor",
+    "description": "Full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites."
+  },
+  {
+    "timestamp": "2022-02-23T19:37:27.000Z",
+    "appURL": "https://hexed.it",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "HexEd.it - Browser-based Online and Offline Hex Editing",
+      "author": "Jens Duttke",
+      "description": "HexEd.it, the powerful online hex editor running in your web browser using HTML5/JavaScript technology. Analyse and edit binary files everywhere.",
+      "open_graph": {
+        "type": "website",
+        "url": "https://hexed.it/",
+        "site_name": "HexEd.it",
+        "title": "HexEd.it - Browser-based Online and Offline Hex Editing",
+        "description": "HexEd.it is a free hex editor for Windows, MacOS, Linux and all other modern operating systems, which uses HTML5 and JavaScript (JS) technology to enable hexediting online, directly in your browser.",
+        "locale": "en-US",
+        "images": [
+          {
+            "url": "https://hexed.it/img/logo.png",
+            "secure_url": "https://hexed.it/img/logo.png",
+            "type": "image/png",
+            "width": 360,
+            "height": 360
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary",
+        "creator": "@JensDuttke"
+      },
+      "favicon": "https://hexed.it/img/logo.png"
+    },
+    "title": "HexEd.it - Browser-based Online and Offline Hex Editing",
+    "description": "HexEd.it is a free hex editor for Windows, MacOS, Linux and all other modern operating systems, which uses HTML5 and JavaScript (JS) technology to enable hexediting online, directly in your browser."
+  },
+  {
+    "timestamp": "2022-02-23T19:38:16.000Z",
+    "appURL": "https://makecode.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Microsoft MakeCode",
+      "twitter_card": {
+        "images": [
+          {
+            "url": "http://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE25u8x?ver=771b"
+          }
+        ],
+        "description": "MakeCode vermittelt allen Schülern Informatik mit unterhaltsamen Projekten, sofortigen Ergebnissen sowie Block- und Texteditoren für alle Kenntnisstufen.",
+        "title": "Microsoft MakeCode",
+        "url": "https://www.microsoft.com/en-us/makecode",
+        "creator": "@MSMakeCode",
+        "site": "@MSMakeCode",
+        "card": "summary_large_image"
+      },
+      "open_graph": {
+        "images": [
+          {
+            "url": "http://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE25u8x?ver=771b"
+          }
+        ],
+        "description": "MakeCode vermittelt allen Schülern Informatik mit unterhaltsamen Projekten, sofortigen Ergebnissen sowie Block- und Texteditoren für alle Kenntnisstufen.",
+        "title": "Informatik-Ausbildung mit Microsoft MakeCode",
+        "url": "https://www.microsoft.com/en-us/makecode",
+        "locale": "en-us",
+        "type": "Website",
+        "site_name": "Microsoft MakeCode"
+      },
+      "keywords": [
+        "Informatikausbildung",
+        "Computing-Ausbildung",
+        "Programmieren lernen",
+        "MakeCode",
+        "Making und Coding",
+        "Minecraft Coding",
+        "Physical Computing"
+      ],
+      "description": "MakeCode vermittelt allen Schülern Informatik mit unterhaltsamen Projekten, sofortigen Ergebnissen sowie Block- und Texteditoren für alle Kenntnisstufen.",
+      "favicon": "https://makecode.com/favicon.ico"
+    },
+    "title": "Informatik-Ausbildung mit Microsoft MakeCode",
+    "description": "MakeCode vermittelt allen Schülern Informatik mit unterhaltsamen Projekten, sofortigen Ergebnissen sowie Block- und Texteditoren für alle Kenntnisstufen."
+  },
+  {
+    "timestamp": "2022-02-23T20:09:29.000Z",
+    "appURL": "https://dannymoerkerke.github.io/file-tree",
+    "sourceURL": "https://github.com/DannyMoerkerke/file-tree",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "file-tree demo",
+      "open_graph": {
+        "title": "file-tree Web Component",
+        "description": "A file tree web component giving access to a device's file system using the File System Access API",
+        "images": [
+          {
+            "url": "https://dannymoerkerke.github.io/file-tree/demo/img/logo.png"
+          }
+        ],
+        "url": "https://dannymoerkerke.github.io/file-tree"
+      },
+      "twitter_card": {
+        "card": "summary_large_image"
+      },
+      "favicon": "https://dannymoerkerke.github.io/favicon.ico"
+    },
+    "title": "file-tree Web Component",
+    "description": "A file tree web component giving access to a device's file system using the File System Access API"
+  },
+  {
+    "timestamp": "2022-02-23T20:11:46.000Z",
+    "appURL": "https://whatpwacando.today ",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Contact Picker",
+        "url": "https://web.dev/contact-picker/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gyroscope",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Linear Acceleration Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Notification Triggers",
+        "url": "https://web.dev/notification-triggers/"
+      },
+      {
+        "name": "Payment Request",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API"
+      },
+      {
+        "name": "Relative Orientation Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "WebNFC",
+        "url": "https://web.dev/nfc/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "What PWA Can Do Today",
+      "open_graph": {
+        "title": "What PWA Can Do Today",
+        "description": "A showcase of what is possible with Progressive Web Apps today.",
+        "images": [
+          {
+            "url": "https://whatpwacando.today/src/img/social-logo.png"
+          }
+        ],
+        "url": "https://whatpwacando.today/"
+      },
+      "twitter_card": {
+        "card": "summary_large_image"
+      },
+      "favicon": "https://whatpwacando.today/src/img/icons/favicon-32.png"
+    },
+    "title": "What PWA Can Do Today",
+    "description": "A showcase of what is possible with Progressive Web Apps today."
+  },
+  {
+    "timestamp": "2022-02-24T05:11:50.000Z",
+    "appURL": "https://yakuneba-community.com/welcome/YwAnWZXanuD7QckXWJwd",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Absolute Orientation Sensor",
+        "url": "https://web.dev/generic-sensor/"
+      },
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Background Fetch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Background_Fetch_API"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "title": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+        "description": "みんネバは約束のネバーランド好きが集まる公式コミュニティです。考察やファンアート、約ネバの話題で盛り上がろう！",
+        "images": [
+          {
+            "url": "https://storage.googleapis.com/yakuneba-community.appspot.com/ogp/yakunebaOGP.png"
+          }
+        ],
+        "url": "https://yakuneba-community.com/",
+        "type": "website",
+        "site_name": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+        "locale": "ja_JP"
+      },
+      "title": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+      "description": "みんネバは約束のネバーランド好きが集まる公式コミュニティです。考察やファンアート、約ネバの話題で盛り上がろう！",
+      "twitter_card": {
+        "site": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+        "card": "summary_large_image",
+        "title": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+        "description": "みんネバは約束のネバーランド好きが集まる公式コミュニティです。考察やファンアート、約ネバの話題で盛り上がろう！",
+        "images": [
+          {
+            "url": "https://storage.googleapis.com/yakuneba-community.appspot.com/ogp/yakunebaOGP.png"
+          }
+        ]
+      },
+      "favicon": "https://yakuneba-community.com/static/yakuneba/logo03.png"
+    },
+    "title": "みんなのネバーランド - 約束のネバーランド公式コミュニティ -",
+    "description": "みんネバは約束のネバーランド好きが集まる公式コミュニティです。考察やファンアート、約ネバの話題で盛り上がろう！"
+  },
+  {
+    "timestamp": "2022-02-24T12:14:05.000Z",
+    "appURL": "https://loilo.github.io/diffr/",
+    "sourceURL": "https://github.com/loilo/diffr",
+    "usedAPIs": [
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Diffr | The Online Text Diffing Tool",
+      "description": "Create and share diffs with Diffr, the privacy focused online text diffing tool.",
+      "author": "Florian Reuschel",
+      "open_graph": {
+        "type": "website",
+        "title": "Diffr | The Online Text Diffing Tool",
+        "site_name": "Diffr | The Online Text Diffing Tool",
+        "description": "Create and share diffs with this privacy focused online text diffing tool."
+      },
+      "favicon": "https://loilo.github.io/diffr/icons/android-icon-48.png"
+    },
+    "title": "Diffr | The Online Text Diffing Tool",
+    "description": "Create and share diffs with this privacy focused online text diffing tool."
+  },
+  {
+    "timestamp": "2022-02-25T09:23:57.000Z",
+    "appURL": "https://panel.hostmeapp.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Hostme",
+      "description": "Hostme is everything you need to successfully run your restaurant business!",
+      "favicon": "https://panel.hostmeapp.com/images/appicon-hdpi.png"
+    },
+    "title": "Hostme",
+    "description": "Hostme is everything you need to successfully run your restaurant business!"
+  },
+  {
+    "timestamp": "2022-02-25T10:14:58.000Z",
+    "appURL": "https://tgstorage.com",
+    "sourceURL": "https://github.com/sh-a-v/tgstorage",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "TgStorage",
+      "open_graph": {
+        "site_name": "TgStorage",
+        "title": "TgStorage",
+        "description": "Advanced Saved Messages of the Telegram. Organize your notes, links, checklists, photos and any documents in the free unlimited Telegram Cloud.",
+        "locale": "en_EN",
+        "type": "website",
+        "url": "https://tgstorage.com/",
+        "images": [
+          {
+            "url": "https://tgstorage.com/share.a79abc19.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "title": "TgStorage",
+        "description": "Advanced Saved Messages of the Telegram. Organize your notes, links, checklists, photos and any documents in the free unlimited Telegram Cloud.",
+        "images": [
+          {
+            "url": "https://tgstorage.com/share.a79abc19.png"
+          }
+        ],
+        "card": "summary_large_image"
+      },
+      "description": "Advanced Saved Messages of the Telegram. Organize your notes, links, checklists, photos and any documents in the free unlimited Telegram Cloud.",
+      "favicon": "https://tgstorage.com/favicon-196.f6d6f83b.png"
+    },
+    "title": "TgStorage",
+    "description": "Advanced Saved Messages of the Telegram. Organize your notes, links, checklists, photos and any documents in the free unlimited Telegram Cloud."
+  },
+  {
+    "timestamp": "2022-02-27T10:48:33.000Z",
+    "appURL": "https://boxy-svg.com/app",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "EyeDropper",
+        "url": "https://github.com/WICG/eyedropper-api/blob/main/README.md"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Local Font Access",
+        "url": "https://web.dev/local-fonts/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Boxy SVG",
+      "favicon": "https://boxy-svg.com/images/app/32.png"
+    },
+    "title": "Boxy SVG",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-03-01T09:29:47.000Z",
+    "appURL": "https://mconverter.eu/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Digital Goods",
+        "url": "https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "MConverter: Easy to Use Online File Converter",
+      "description": "Convert securely video, audio, image, e-book, office & archive files. Bulk convert large files up to 1 GB. Free and easy to use converter.",
+      "open_graph": {
+        "images": [
+          {
+            "url": "https://mconverter.eu/img/icon-fb.png",
+            "width": 400,
+            "height": 400
+          }
+        ],
+        "type": "website",
+        "title": "MConverter: Easy to Use Online File Converter",
+        "description": "Convert securely video, audio, image, e-book, office & archive files. Bulk convert large files up to 1 GB. Free and easy to use converter.",
+        "url": "https://mconverter.eu/"
+      },
+      "twitter_card": {
+        "card": "summary"
+      },
+      "favicon": "https://mconverter.eu/img/icon-favicon.png"
+    },
+    "title": "MConverter: Easy to Use Online File Converter",
+    "description": "Convert securely video, audio, image, e-book, office & archive files. Bulk convert large files up to 1 GB. Free and easy to use converter."
+  },
+  {
+    "timestamp": "2022-03-01T09:40:08.000Z",
+    "appURL": "https://tidepool.org/uploader",
+    "sourceURL": "https://github.com/tidepool-org/uploader",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebHID",
+        "url": "https://web.dev/hid/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Download our software | Tidepool",
+      "twitter_card": {
+        "description": "Tidepool is a nonprofit organization dedicated to making diabetes data more accessible, actionable, and meaningful for people with diabetes, their care teams, and researchers. ",
+        "card": "summary_large_image",
+        "images": [
+          {
+            "url": "https://i.imgur.com/EW0kzFp.png"
+          }
+        ],
+        "site": "@Tidepool_org",
+        "title": "Download our software | Tidepool"
+      },
+      "description": "Download Tidepool Uploader for Mac and Windows, and Tidepool Mobile on iOS and Android.",
+      "keywords": [
+        "Tidepool",
+        "uploader",
+        "mobile",
+        "download",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "open_graph": {
+        "images": [
+          {
+            "url": "https://i.imgur.com/EW0kzFp.png"
+          }
+        ]
+      },
+      "favicon": "https://tidepool.org/favicon.ico"
+    },
+    "title": "Download our software | Tidepool",
+    "description": "Tidepool is a nonprofit organization dedicated to making diabetes data more accessible, actionable, and meaningful for people with diabetes, their care teams, and researchers. "
+  },
+  {
+    "timestamp": "2022-03-31T12:04:37.000Z",
+    "appURL": "https://web.telegram.org/z/",
+    "sourceURL": "https://github.com/Ajaxy/telegram-tt",
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Telegram Web",
+      "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+      "open_graph": {
+        "type": "website",
+        "url": "https://web.telegram.org/z/",
+        "title": "Telegram Web",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "images": [
+          {
+            "url": "https://web.telegram.org/z/icon-192x192.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "url": "https://web.telegram.org/z/",
+        "title": "Telegram Web",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "images": [
+          {
+            "url": "https://web.telegram.org/z/icon-192x192.png"
+          }
+        ]
+      },
+      "favicon": "https://web.telegram.org/z/icon-192x192.png"
+    },
+    "title": "Telegram Web",
+    "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed."
+  },
+  {
+    "timestamp": "2022-04-11T09:35:10.000Z",
+    "appURL": "https://svgco.de/",
+    "sourceURL": "https://github.com/tomayac/SVGcode",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format.",
+      "open_graph": {
+        "title": "SVGcode",
+        "type": "website",
+        "url": "https://svgco.de/",
+        "images": [
+          {
+            "url": "https://svgco.de/screenshots/desktop.png"
+          }
+        ],
+        "description": "SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format."
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "site": "@ChromiumDev",
+        "creator": "@tomayac",
+        "title": "SVGcode",
+        "description": "SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format.",
+        "images": [
+          {
+            "url": "https://svgco.de/screenshots/desktop.png"
+          }
+        ]
+      },
+      "title": "SVGcode—Convert raster images to SVG vector graphics",
+      "favicon": "https://svgco.de/favicon.svg"
+    },
+    "title": "SVGcode",
+    "description": "SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format."
+  },
+  {
+    "timestamp": "2022-04-13T10:31:31.000Z",
+    "appURL": "https://developer.chrome.com/blog/fugu-showcase/",
+    "sourceURL": "https://github.com/GoogleChromeLabs/fugu-showcase",
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Project Fugu API showcase - Chrome Developers",
+      "open_graph": {
+        "site_name": "Chrome Developers",
+        "title": "Project Fugu API showcase - Chrome Developers",
+        "type": "website",
+        "url": "https://developer.chrome.com/blog/fugu-showcase/",
+        "images": [
+          {
+            "url": "https://wd.imgix.net/image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg?auto=format&w=1521"
+          }
+        ],
+        "description": "Build the next generation of web experiences."
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "images": [
+          {
+            "url": "https://wd.imgix.net/image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg?auto=format&w=1521",
+            "alt": "Blowfish swarm swimming in the ocean."
+          }
+        ],
+        "description": "Build the next generation of web experiences."
+      },
+      "description": "Build the next generation of web experiences.",
+      "favicon": "https://developer.chrome.com/images/meta/favicon-16x16.png"
+    },
+    "title": "Project Fugu API showcase - Chrome Developers",
+    "description": "Build the next generation of web experiences."
+  },
+  {
+    "timestamp": "2022-04-13T17:05:39.000Z",
+    "appURL": "https://bpmtech.no",
+    "sourceURL": "https://github.com/webmaxru/bpm-counter",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Protocol Handlers",
+        "url": "https://web.dev/url-protocol-handler/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "URL Handlers",
+        "url": "https://web.dev/pwa-url-handler/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "BPM Techno - Free Online Real-Time BPM Counter for DJ",
+      "description": "Produce some beats using any player, launchpad, keyboard, and mix them live with another track easily and precisely using this free online real-time BPM counter",
+      "open_graph": {
+        "url": "https://bpmtech.no/",
+        "type": "website",
+        "title": "BPM Techno - Free Online Real-Time BPM Counter for DJ",
+        "description": "Produce some beats using any player, launchpad, keyboard, and mix them live with another track easily and precisely using this free online real-time BPM counter",
+        "images": [
+          {
+            "url": "https://bpmtech.no/images/social.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "url": "https://bpmtech.no/",
+        "title": "BPM Techno - Free Online Real-Time BPM Counter for DJ",
+        "description": "Produce some beats using any player, launchpad, keyboard, and mix them live with another track easily and precisely using this free online real-time BPM counter",
+        "images": [
+          {
+            "url": "https://bpmtech.no/images/social.png"
+          }
+        ]
+      },
+      "favicon": "https://bpmtech.no/favicon.ico"
+    },
+    "title": "BPM Techno - Free Online Real-Time BPM Counter for DJ",
+    "description": "Produce some beats using any player, launchpad, keyboard, and mix them live with another track easily and precisely using this free online real-time BPM counter"
+  },
+  {
+    "timestamp": "2022-04-14T18:24:15.000Z",
+    "appURL": "https://case.xchart.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "Automatic anesthesia charting. Focus on your patient — not your paperwork.",
+      "title": "Xchart.com",
+      "favicon": "https://case.xchart.com/icon192.c56c5893.png"
+    },
+    "title": "Xchart.com",
+    "description": "Automatic anesthesia charting. Focus on your patient — not your paperwork."
+  },
+  {
+    "timestamp": "2022-04-14T18:25:00.000Z",
+    "appURL": "https://spike.legoeducation.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "LEGO Education SPIKE",
+      "favicon": "https://spike.legoeducation.com/favicon.ico"
+    },
+    "title": "LEGO Education SPIKE",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-17T08:58:59.000Z",
+    "appURL": "http://postr.me/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "url": "http://postr.me/",
+        "type": "article",
+        "title": "Postr.me",
+        "description": "Capture your social network post as image with nice design",
+        "images": [
+          {
+            "url": "https://postr.me/assets/img/og.png"
+          }
+        ]
+      },
+      "title": "\n      Postr | Capture your social network post as image with nice design\n    ",
+      "favicon": "http://postr.me/assets/img/favicon.ico"
+    },
+    "title": "Postr.me",
+    "description": "Capture your social network post as image with nice design"
+  },
+  {
+    "timestamp": "2022-04-18T04:15:32.000Z",
+    "appURL": "https://dev.to",
+    "sourceURL": "https://github.com/forem/forem",
+    "usedAPIs": [
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "DEV Community 👩‍💻👨‍💻",
+      "description": "A constructive and inclusive social network for software developers. With you every step of your journey.",
+      "keywords": [
+        "software development",
+        "engineering",
+        "rails",
+        "javascript",
+        "ruby"
+      ],
+      "open_graph": {
+        "type": "website",
+        "url": "https://dev.to/",
+        "title": "DEV Community",
+        "images": [
+          {
+            "url": "https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png"
+          }
+        ],
+        "description": "A constructive and inclusive social network for software developers. With you every step of your journey.",
+        "site_name": "DEV Community"
+      },
+      "twitter_card": {
+        "site": "@thepracticaldev",
+        "title": "DEV Community",
+        "description": "A constructive and inclusive social network for software developers. With you every step of your journey.",
+        "images": [
+          {
+            "url": "https://thepracticaldev.s3.amazonaws.com/i/6hqmcjaxbgbon8ydw93z.png"
+          }
+        ],
+        "card": "summary_large_image"
+      },
+      "favicon": "https://res.cloudinary.com/practicaldev/image/fetch/s--lrmEcD2H--/c_limit,f_png,fl_progressive,q_80,w_128/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png"
+    },
+    "title": "DEV Community",
+    "description": "A constructive and inclusive social network for software developers. With you every step of your journey."
+  },
+  {
+    "timestamp": "2022-04-25T07:31:18.000Z",
+    "appURL": "https://photoshop.adobe.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Adobe Creative Cloud | Sign in",
+      "description": "Access Adobe Creative Cloud apps, services, file management, and more. Sign in to start creating.",
+      "favicon": "https://photoshop.adobe.com/cc_favicon_48.png"
+    },
+    "title": "Adobe Creative Cloud | Sign in",
+    "description": "Access Adobe Creative Cloud apps, services, file management, and more. Sign in to start creating."
+  },
+  {
+    "timestamp": "2022-04-25T09:26:54.000Z",
+    "appURL": "https://editor.construct.net",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Compression Streams",
+        "url": "https://wicg.github.io/compression/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Pointer Lock (unadjustedMovement)",
+        "url": "https://web.dev/disable-mouse-acceleration/"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "VirtualKeyboard",
+        "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/VirtualKeyboardAPI/explainer.md"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Game Making Software - Construct 3",
+      "description": "The best browser based game making software. Make games, no programming required. Learn how to make games with Construct 3, the free browser game building software.",
+      "open_graph": {
+        "url": "https://editor.construct.net/",
+        "title": "Construct 3 r293.3 ★★★★★",
+        "description": "Launch Construct 3 r293.3. Make games with the world's easiest browser-based game creator. Try for free now and begin your game development journey.",
+        "images": [
+          {
+            "url": "https://editor.construct.net/r293-3/media/og-image-promo.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "site": "@ConstructTeam",
+        "card": "summary_large_image",
+        "description": "Launch Construct 3 r293.3. Make games with the world's easiest browser-based game creator. Try for free now and begin your game development journey.",
+        "title": "Construct 3 r293.3 ★★★★★",
+        "images": [
+          {
+            "url": "https://editor.construct.net/r293-3/media/twitter-image.png",
+            "alt": "Construct 3 r293.3"
+          }
+        ]
+      },
+      "favicon": "https://editor.construct.net/r293-3/media/icon-512.png"
+    },
+    "title": "Construct 3 r293.3 ★★★★★",
+    "description": "Launch Construct 3 r293.3. Make games with the world's easiest browser-based game creator. Try for free now and begin your game development journey."
+  },
+  {
+    "timestamp": "2022-04-25T10:44:51.000Z",
+    "appURL": "https://remap-keys.app/",
+    "sourceURL": "https://github.com/remap-keys/remap",
+    "usedAPIs": [
+      {
+        "name": "WebHID",
+        "url": "https://web.dev/hid/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "type": "website",
+        "site_name": "Remap",
+        "title": "Remap",
+        "description": "Remap allows you to configure key mappings and lighting of your keyboard with QMK firmware in Web Browser.",
+        "images": [
+          {
+            "url": "https://remap-keys.app/ogp_image.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary"
+      },
+      "title": "Remap",
+      "description": "Remap allows you to configure key mappings and lighting of your keyboard with QMK firmware in Web Browser.",
+      "favicon": "https://remap-keys.app/favicon.ico"
+    },
+    "title": "Remap",
+    "description": "Remap allows you to configure key mappings and lighting of your keyboard with QMK firmware in Web Browser."
+  },
+  {
+    "timestamp": "2022-04-25T10:57:46.000Z",
+    "appURL": "https://qrsnapper.com",
+    "sourceURL": "https://github.com/PaulKinlan/qrcode",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shape Detection (Barcodes)",
+        "url": "https://web.dev/shape-detection/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Capture QR Code",
+      "description": "Instantly snap QR codes on mobile and desktop without installing an app.",
+      "favicon": "https://qrsnapper.com/images/touch/chrome-touch-icon-192x192.png"
+    },
+    "title": "Capture QR Code",
+    "description": "Instantly snap QR codes on mobile and desktop without installing an app."
+  },
+  {
+    "timestamp": "2022-04-25T11:00:25.000Z",
+    "appURL": "https://app.vysor.io/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Vysor",
+      "favicon": "https://app.vysor.io/img/icons/favicon-16x16.png"
+    },
+    "title": "Vysor",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T11:00:59.000Z",
+    "appURL": "https://vscode.dev/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "twitter_card": {
+        "card": "summary_large_image",
+        "site": "@code"
+      },
+      "open_graph": {
+        "title": "Visual Studio Code for the Web",
+        "description": "Build with Visual Studio Code, anywhere, anytime, entirely in your browser.",
+        "images": [
+          {
+            "url": "https://vscode.dev/static/stable/social.png"
+          }
+        ]
+      },
+      "favicon": "https://vscode.dev/favicon.ico"
+    },
+    "title": "Visual Studio Code for the Web",
+    "description": "Build with Visual Studio Code, anywhere, anytime, entirely in your browser."
+  },
+  {
+    "timestamp": "2022-04-25T11:21:36.000Z",
+    "appURL": "https://mishipay.shop/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Device Memory",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shape Detection (Barcodes)",
+        "url": "https://web.dev/shape-detection/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "MishiPay’s app allows shoppers to self-scan and pay for any item in the store and simply walk out with it, so there is absolutely no queueing whatsoever while patent-pending technology ensures security against theft.",
+      "keywords": [
+        "MishiPay",
+        "mishipay",
+        "pay",
+        "phone",
+        "app",
+        "shopping",
+        "shop",
+        "instore",
+        "checkout",
+        "barcode",
+        "scan"
+      ],
+      "author": "MishiPay",
+      "title": "MishiPay | It's time we shop smart",
+      "favicon": "https://mishipay.shop/favicon.ico"
+    },
+    "title": "MishiPay | It's time we shop smart",
+    "description": "MishiPay’s app allows shoppers to self-scan and pay for any item in the store and simply walk out with it, so there is absolutely no queueing whatsoever while patent-pending technology ensures security against theft."
+  },
+  {
+    "timestamp": "2022-04-25T13:05:50.000Z",
+    "appURL": "https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "CrosKeys by CrosExperts - Chrome Web Store",
+      "open_graph": {
+        "title": "CrosKeys by CrosExperts",
+        "description": "Upgrade your keyboard to unlock your Chromebook's potential!",
+        "type": "website",
+        "url": "https://chrome.google.com/webstore/detail/croskeys-by-crosexperts/akiaafoeijpibmbbfaebhkhccepbdgfi",
+        "images": [
+          {
+            "url": "https://lh3.googleusercontent.com/esT_LpOmbOk8EexT86doFm1pCroWkZCC4Zr8iXf6uharmErLF0mspLVeYTkmJD01zpnfSg4gd0EXasysjM-FBnEya04=w128-h128-e365-rj-sc0x00ffffff"
+          }
+        ]
+      },
+      "favicon": "https://ssl.gstatic.com/chrome/webstore/images/icon_144px.png"
+    },
+    "title": "CrosKeys by CrosExperts",
+    "description": "Upgrade your keyboard to unlock your Chromebook's potential!"
+  },
+  {
+    "timestamp": "2022-04-25T13:46:07.000Z",
+    "appURL": "https://codeit.codes",
+    "sourceURL": "https://github.com/codeitcodes/codeit",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Codeit | Mobile code editor connected to Git",
+      "description": "Run JavaScript projects, code your ideas, and share it all with friends, family, and the world on Codeit.",
+      "open_graph": {
+        "title": "Codeit | Mobile code editor connected to Git",
+        "description": "Run JavaScript projects, code your ideas, and share it all on Codeit.",
+        "url": "https://codeit.codes/",
+        "images": [
+          {
+            "url": "https://codeit.codes/images/banner-og.png"
+          }
+        ],
+        "type": "website",
+        "site_name": "Codeit"
+      },
+      "twitter_card": {
+        "title": "Codeit | Mobile code editor connected to Git",
+        "site": "@codeitcodes",
+        "creator": "@codeitcodes",
+        "creator_id": "@codeitcodes",
+        "card": "summary_large_image",
+        "url": "https://codeit.codes/",
+        "description": "Run JavaScript projects, code your ideas, and share it all on Codeit.",
+        "images": [
+          {
+            "url": "https://codeit.codes/images/banner-og.png"
+          }
+        ]
+      },
+      "keywords": [
+        "code editor",
+        "version control tools",
+        "source code versioning",
+        "source code management tools",
+        "python",
+        "jquery demo",
+        "html",
+        "git",
+        "how to",
+        "bootstrap",
+        "jquery",
+        "javascript",
+        "javascript tutorial",
+        "javascript tutorial for beginners",
+        "javascript programming",
+        "html web form",
+        "create form in html",
+        "responsive web design",
+        "html web design",
+        "html design",
+        "responsive website development",
+        "html5 tutorial",
+        "html5 css3",
+        "html5 development",
+        "web design software",
+        "web development software",
+        "git tutorial",
+        "git howto",
+        "git repository",
+        "git command",
+        "git source code",
+        "top programming languages to learn",
+        "best programming language",
+        "best computer language",
+        "open source",
+        "open source code",
+        "open source applications",
+        "source code editor",
+        "software development tools",
+        "development tool",
+        "software developer tools list",
+        "programmer tool",
+        "web application development software"
+      ],
+      "favicon": "https://codeit.codes/icons/android-app-512.png"
+    },
+    "title": "Codeit | Mobile code editor connected to Git",
+    "description": "Run JavaScript projects, code your ideas, and share it all on Codeit."
+  },
+  {
+    "timestamp": "2022-04-25T16:45:29.000Z",
+    "appURL": "https://haven.pages.dev/",
+    "sourceURL": "https://github.com/ThaUnknown/pwa-haven",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Declarative Link Capturing",
+        "url": "https://web.dev/declarative-link-capturing/"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Launch Handler",
+        "url": "https://web.dev/launch-handler/"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Protocol Handlers",
+        "url": "https://web.dev/url-protocol-handler/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "URL Handlers",
+        "url": "https://web.dev/pwa-url-handler/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "title": "PWA Haven",
+        "url": "https://haven.pages.dev/",
+        "description": "Collection of small, fast, simple PWA's to replace native OS apps.",
+        "type": "website",
+        "images": [
+          {
+            "url": "https://haven.pages.dev/128.png"
+          }
+        ]
+      },
+      "title": "PWA Haven",
+      "favicon": "https://haven.pages.dev/128.png"
+    },
+    "title": "PWA Haven",
+    "description": "Collection of small, fast, simple PWA's to replace native OS apps."
+  },
+  {
+    "timestamp": "2022-04-25T16:56:40.000Z",
+    "appURL": "https://app.thepocketlab.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "PocketLab",
+      "favicon": "https://app.thepocketlab.com/favicon.ico"
+    },
+    "title": "PocketLab",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T16:59:47.000Z",
+    "appURL": "https://code.makewonder.com/cue/#/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Cue for Education",
+      "favicon": "https://code.makewonder.com/cue/appIcons/icon-128x128.png"
+    },
+    "title": "Cue for Education",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T17:18:06.000Z",
+    "appURL": "https://code.irobot.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebGPU",
+        "url": "https://web.dev/webgpu"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "iRobot Coding",
+      "favicon": "https://code.irobot.com/assets/assets/images/favicon512.png"
+    },
+    "title": "iRobot Coding",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T17:21:45.000Z",
+    "appURL": "https://studio.samlabs.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "favicon": "https://studio.samlabs.com/favicon.ico"
+    },
+    "title": "studio.samlabs.com",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T17:41:51.000Z",
+    "appURL": "https://fuse.littlebits.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "LittleBits Fuse",
+      "favicon": "https://fuse.littlebits.com/favicon_io/favicon.ico"
+    },
+    "title": "LittleBits Fuse",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T17:50:51.000Z",
+    "appURL": "https://flash.android.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Android Flash Tool",
+      "favicon": "https://www.gstatic.com/images/icons/material/system_gm/2x/system_update_gm_blue_24dp.png"
+    },
+    "title": "Android Flash Tool",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-25T17:51:32.000Z",
+    "appURL": "https://grapheneos.org/install/web",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Web installer | Install | GrapheneOS",
+      "description": "Web-based installer for GrapheneOS, a security and privacy focused mobile OS with Android app compatibility.",
+      "twitter_card": {
+        "site": "@GrapheneOS",
+        "creator": "@GrapheneOS"
+      },
+      "open_graph": {
+        "title": "GrapheneOS web installer",
+        "description": "Web-based installer for GrapheneOS, a security and privacy focused mobile OS with Android app compatibility.",
+        "type": "website",
+        "images": [
+          {
+            "url": "https://grapheneos.org/opengraph.png",
+            "width": 512,
+            "height": 512
+          }
+        ],
+        "site_name": "GrapheneOS",
+        "url": "https://grapheneos.org/install/web"
+      },
+      "favicon": "https://grapheneos.org/favicon.svg"
+    },
+    "title": "GrapheneOS web installer",
+    "description": "Web-based installer for GrapheneOS, a security and privacy focused mobile OS with Android app compatibility."
+  },
+  {
+    "timestamp": "2022-04-25T19:21:13.000Z",
+    "appURL": "https://bundle.js.org",
+    "sourceURL": "https://github.com/okikio/bundle",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "locale": "en_Us",
+        "type": "website",
+        "articles": [
+          {
+            "author": "Okiki Ojo"
+          }
+        ],
+        "site_name": "bundlejs.com",
+        "images": [
+          {
+            "url": "https://bundlejs.com/favicon/social-preview.png"
+          }
+        ],
+        "title": "bundlejs - Online bundler + npm package bundle size checker",
+        "url": "https://bundlejs.com/",
+        "description": "A quick and easy way to bundle, minify, and compress (gzip and brotli) your ts, js, jsx and npm projects all online, with the bundle file size."
+      },
+      "keywords": [
+        "bundlejs",
+        "bundle js",
+        "bundle size",
+        "bundle npm",
+        "rollup",
+        "esbuild",
+        "gzip",
+        "npm",
+        "brotli",
+        "deno",
+        "bundler",
+        "treeshake",
+        "bundlephobia",
+        "cdn",
+        "github",
+        "skypack",
+        "unpkg",
+        "compressed",
+        "jsx",
+        "online bundler",
+        "size",
+        "package",
+        "minify",
+        "es2020",
+        "monaco-editor",
+        "typescript"
+      ],
+      "twitter_card": {
+        "card": "summary_large_image",
+        "images": [
+          {
+            "url": "https://bundlejs.com/favicon/social-preview.png",
+            "alt": "An image of bundlejs's logo."
+          }
+        ],
+        "url": "https://bundlejs.com/",
+        "site": "@okikio_dev",
+        "creator": "@okikio_dev",
+        "title": "bundlejs - Online bundler + npm package bundle size checker",
+        "description": "A quick and easy way to bundle, minify, and compress (gzip and brotli) your ts, js, jsx and npm projects all online, with the bundle file size."
+      },
+      "title": "bundlejs - Online bundler + npm package bundle size checker",
+      "description": "A quick and easy way to bundle, minify, and compress (gzip and brotli) your ts, js, jsx and npm projects all online, with the bundle file size.",
+      "favicon": "https://bundle.js.org/favicon/favicon.svg"
+    },
+    "title": "bundlejs - Online bundler + npm package bundle size checker",
+    "description": "A quick and easy way to bundle, minify, and compress (gzip and brotli) your ts, js, jsx and npm projects all online, with the bundle file size."
+  },
+  {
+    "timestamp": "2022-04-25T21:25:04.000Z",
+    "appURL": "http://leonidasesteban.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Leonidas Esteban, Google Developer Expert en Web Technologies",
+      "description": "Te enseño el cómo y el porqué de cada línea de código, aprendamos a programar juntos.",
+      "open_graph": {
+        "title": "Leonidas Esteban, Google Developer Expert en Web Technologies",
+        "description": "Te enseño el cómo y el porqué de cada línea de código, aprendamos a programar juntos.",
+        "url": "https://leonidasesteban.com/",
+        "images": [
+          {
+            "url": "https://leonidasesteban.com/images/open-graph/aprendizaje-basado-en-proyectos.jpg"
+          }
+        ],
+        "type": "website"
+      },
+      "twitter_card": {
+        "title": "Leonidas Esteban, Google Developer Expert en Web Technologies",
+        "description": "Te enseño el cómo y el porqué de cada línea de código, aprendamos a programar juntos.",
+        "images": [
+          {
+            "url": "https://leonidasesteban.com/images/open-graph/aprendizaje-basado-en-proyectos.jpg"
+          }
+        ],
+        "card": "summary_large_image"
+      },
+      "keywords": [
+        "Leonidas Esteban",
+        "Cursos de Javascript",
+        "Cursos de React",
+        "Cursos de Figma",
+        "Cursos de HTML",
+        "Cursos de CSS",
+        "Aprende a programar"
+      ],
+      "favicon": "http://leonidasesteban.com/icons/icon-96x96.png"
+    },
+    "title": "Leonidas Esteban, Google Developer Expert en Web Technologies",
+    "description": "Te enseño el cómo y el porqué de cada línea de código, aprendamos a programar juntos."
+  },
+  {
+    "timestamp": "2022-04-26T03:33:16.000Z",
+    "appURL": "https://stedit.app",
+    "sourceURL": "https://github.com/Offroaders123/Smart-Text-Editor",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Window Controls Overlay",
+        "url": "https://web.dev/window-controls-overlay/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Smart Text Editor",
+      "author": "Brandon Bennett",
+      "description": "Smart Text Editor is a vanilla JavaScript PWA that allows you to work on your coding projects from any device, in any browser, even if you don't have Internet access.",
+      "open_graph": {
+        "title": "Smart Text Editor",
+        "description": "The text editor that requires only a browser and a keyboard!",
+        "images": [
+          {
+            "url": "https://stedit.app/resources/share-1200.png"
+          }
+        ],
+        "url": "https://stedit.app/"
+      },
+      "twitter_card": {
+        "card": "summary_large_image"
+      },
+      "favicon": "https://stedit.app/resources/icon.svg"
+    },
+    "title": "Smart Text Editor",
+    "description": "The text editor that requires only a browser and a keyboard!"
+  },
+  {
+    "timestamp": "2022-04-26T09:16:50.000Z",
+    "appURL": "https://logseq.com/?spa=true",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Compression Streams",
+        "url": "https://wicg.github.io/compression/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "twitter_card": {
+        "card": "summary",
+        "description": "A privacy-first, open-source platform for knowledge management and collaboration.",
+        "site": "@logseq",
+        "title": "A privacy-first, open-source knowledge base",
+        "images": [
+          {
+            "url": "https://asset.logseq.com/static/img/logo.png",
+            "alt": "A privacy-first, open-source platform for knowledge management and collaboration."
+          }
+        ]
+      },
+      "open_graph": {
+        "title": "A privacy-first, open-source knowledge base",
+        "type": "site",
+        "url": "https://logseq.com/",
+        "images": [
+          {
+            "url": "https://asset.logseq.com/static/img/logo.png"
+          }
+        ],
+        "description": "A privacy-first, open-source platform for knowledge management and collaboration.",
+        "site_name": "logseq"
+      },
+      "title": "Logseq: A privacy-first, open-source knowledge base",
+      "favicon": "https://asset.logseq.com/static/img/logo.png"
+    },
+    "title": "A privacy-first, open-source knowledge base",
+    "description": "A privacy-first, open-source platform for knowledge management and collaboration."
+  },
+  {
+    "timestamp": "2022-04-26T11:29:45.000Z",
+    "appURL": "https://www.jsmusicdb.com",
+    "sourceURL": "https://github.com/lucienimmink/jsmusicdb",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Media Capabilities",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "JSMusicDB",
+      "favicon": "https://www.jsmusicdb.com/assets/favicon-16x16.png"
+    },
+    "title": "JSMusicDB",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-26T13:39:48.000Z",
+    "appURL": "https://tinder.com",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Badging",
+        "url": "https://web.dev/badging-api/"
+      },
+      {
+        "name": "Contact Picker",
+        "url": "https://web.dev/contact-picker/"
+      },
+      {
+        "name": "getInstalledRelatedApps",
+        "url": "https://web.dev/get-installed-related-apps/"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "WebOTP",
+        "url": "https://web.dev/web-otp/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Tinder | Dating, Make Friends & Meet New People",
+      "description": "With 55 billion matches to date, Tinder® is the world’s most popular dating app, making it the place to meet new people.",
+      "twitter_card": {
+        "card": "summary",
+        "description": "With 55 billion matches to date, Tinder® is the world’s most popular dating app, making it the place to meet new people.",
+        "site": "@Tinder",
+        "title": "Tinder | Dating, Make Friends & Meet New People",
+        "images": [
+          {
+            "url": "https://tinder.com/static/tinder.png"
+          }
+        ]
+      },
+      "open_graph": {
+        "description": "With 55 billion matches to date, Tinder® is the world’s most popular dating app, making it the place to meet new people.",
+        "images": [
+          {
+            "url": "https://tinder.com/static/tinder.png",
+            "width": 1200,
+            "height": 1200
+          }
+        ],
+        "site_name": "Tinder",
+        "title": "Tinder | Dating, Make Friends & Meet New People",
+        "type": "website",
+        "url": "https://tinder.com/",
+        "locale": "en_US"
+      },
+      "favicon": "https://tinder.com/favicon-16x16.png"
+    },
+    "title": "Tinder | Dating, Make Friends & Meet New People",
+    "description": "With 55 billion matches to date, Tinder® is the world’s most popular dating app, making it the place to meet new people."
+  },
+  {
+    "timestamp": "2022-04-26T16:52:26.000Z",
+    "appURL": "https://ember.ly",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Emberly - Your knowledge. Organized.",
+      "description": "Emberly’s visual organization of bookmarks, notes, and files let you master information overload and learn better.",
+      "open_graph": {
+        "title": "Emberly - Your knowledge. Organized.",
+        "url": "https://ember.ly/",
+        "description": "Emberly’s visual organization of bookmarks, notes, and files let you master information overload and learn better.",
+        "images": [
+          {
+            "url": "https://ember.ly/assets/link_preview.png"
+          }
+        ],
+        "type": "website"
+      },
+      "twitter_card": {
+        "url": "https://ember.ly/",
+        "description": "Emberly’s visual organization of bookmarks, notes, and files let you master information overload and learn better.",
+        "images": [
+          {
+            "url": "https://ember.ly/assets/link_preview.png"
+          }
+        ],
+        "title": "Emberly - Your knowledge. Organized.",
+        "card": "summary_large_image"
+      },
+      "favicon": "https://ember.ly/icons/favicon-16x16.png"
+    },
+    "title": "Emberly - Your knowledge. Organized.",
+    "description": "Emberly’s visual organization of bookmarks, notes, and files let you master information overload and learn better."
+  },
+  {
+    "timestamp": "2022-04-27T06:54:53.000Z",
+    "appURL": "https://maskable.app",
+    "sourceURL": "https://github.com/NotWoods/maskable",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "EyeDropper",
+        "url": "https://github.com/WICG/eyedropper-api/blob/main/README.md"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Shortcuts",
+        "url": "https://web.dev/app-shortcuts/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Maskable.app",
+      "description": "Preview maskable icons in the browser!",
+      "twitter_card": {
+        "card": "summary_large_image",
+        "site": "@Not_Woods",
+        "title": "Maskable.app",
+        "description": "Preview maskable icons in the browser!",
+        "images": [
+          {
+            "url": "https://maskable.app/favicon/github_social.png"
+          }
+        ]
+      },
+      "open_graph": {
+        "title": "Maskable.app",
+        "images": [
+          {
+            "url": "https://maskable.app/favicon/github_social.png"
+          }
+        ],
+        "url": "https://maskable.app/",
+        "description": "Preview maskable icons in the browser!"
+      },
+      "favicon": "https://maskable.app/favicon/favicon_512.png"
+    },
+    "title": "Maskable.app",
+    "description": "Preview maskable icons in the browser!"
+  },
+  {
+    "timestamp": "2022-04-27T07:02:41.000Z",
+    "appURL": "https://kenchris.github.io/webnfc-groceries/",
+    "sourceURL": "https://github.com/kenchris/webnfc-groceries",
+    "usedAPIs": [
+      {
+        "name": "WebNFC",
+        "url": "https://web.dev/nfc/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Groceries",
+      "favicon": "https://kenchris.github.io/webnfc-groceries/images/favicon.ico"
+    },
+    "title": "Groceries",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T09:53:49.000Z",
+    "appURL": "https://josephrocca.github.io/clip-image-sorter/",
+    "sourceURL": "https://github.com/josephrocca/clip-image-sorter",
+    "usedAPIs": [
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "OpenAI CLIP Image Search in JavaScript (Using ONNX Web Runtime)",
+      "favicon": "https://josephrocca.github.io/favicon.ico"
+    },
+    "title": "OpenAI CLIP Image Search in JavaScript (Using ONNX Web Runtime)",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T16:20:03.000Z",
+    "appURL": "https://yt-playlist-notifier.web.app/",
+    "sourceURL": "https://github.com/jeffposnick/yt-playlist-notifier",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Periodic Background Sync",
+        "url": "https://web.dev/periodic-background-sync/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "twitter_card": {
+        "card": "summary",
+        "site": "@jeffposnick"
+      },
+      "open_graph": {
+        "title": "YT Playlist Notifier",
+        "description": "Get notified when YouTube playlists are updated.",
+        "images": [
+          {
+            "url": "https://yt-playlist-notifier.web.app/icon-512-maskable.png"
+          }
+        ]
+      },
+      "title": "YT Playlist Notifier",
+      "favicon": "https://yt-playlist-notifier.web.app/icon-192.png"
+    },
+    "title": "YT Playlist Notifier",
+    "description": "Get notified when YouTube playlists are updated."
+  },
+  {
+    "timestamp": "2022-04-27T16:21:59.000Z",
+    "appURL": "https://scrapbook-pwa.web.app/",
+    "sourceURL": "https://github.com/GoogleChrome/samples/blob/gh-pages/web-share/",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Content Index",
+        "url": "https://web.dev/content-indexing-api/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      },
+      {
+        "name": "Web Share Target",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Scrapbook PWA",
+      "favicon": "https://scrapbook-pwa.web.app/images/icon.png"
+    },
+    "title": "Scrapbook PWA",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T17:03:59.000Z",
+    "appURL": "https://1tuner.com",
+    "sourceURL": "https://github.com/robinbakker/1tuner",
+    "usedAPIs": [
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "1tuner | listen to radio, podcasts and create playlists",
+      "description": "Listen to radio, podcasts and create playlists.",
+      "open_graph": {
+        "title": "1tuner | listen to radio, podcasts and create playlists",
+        "description": "Listen to radio, podcasts and create playlists.",
+        "type": "website",
+        "url": "https://1tuner.com/",
+        "images": [
+          {
+            "url": "https://1tuner.com/assets/icons/icon-512x512.png"
+          }
+        ]
+      },
+      "twitter_card": {
+        "card": "summary",
+        "site": "@1tuner",
+        "creator": "@robinbakker"
+      },
+      "favicon": "https://1tuner.com/favicon.ico"
+    },
+    "title": "1tuner | listen to radio, podcasts and create playlists",
+    "description": "Listen to radio, podcasts and create playlists."
+  },
+  {
+    "timestamp": "2022-04-27T18:23:26.000Z",
+    "appURL": "https://www.espruino.com/ide/",
+    "sourceURL": "https://github.com/espruino/EspruinoWebIDE",
+    "usedAPIs": [
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      },
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Espruino Web IDE",
+      "favicon": "https://www.espruino.com/ide/favicon.ico"
+    },
+    "title": "Espruino Web IDE",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T18:33:23.000Z",
+    "appURL": "https://make.firialabs.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "CodeSpace - Firia Labs",
+      "favicon": "https://make.firialabs.com/favicon.png"
+    },
+    "title": "CodeSpace - Firia Labs",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T18:35:14.000Z",
+    "appURL": "https://my.numworks.com/",
+    "sourceURL": "https://www.numworks.com/blog/webusb-firmware-update/",
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "NumWorks",
+      "favicon": "https://cdn.numworks.com/b9601ae8.ico"
+    },
+    "title": "NumWorks",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-27T18:35:41.000Z",
+    "appURL": "https://www.stemplayer.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "Customise any song. Ships with Donda. Splits any song into stems.",
+      "open_graph": {
+        "type": "website",
+        "description": "Official site",
+        "images": [
+          {
+            "url": "https://stemplayer.com/images/meta-stem-key-visual.jpg"
+          }
+        ],
+        "title": "STEMPLAYER",
+        "url": "https://stemplayer.com/"
+      },
+      "twitter_card": {
+        "card": "summary_large_image",
+        "description": "Official site",
+        "images": [
+          {
+            "url": "https://stemplayer.com/images/meta-stem-key-visual.jpg"
+          }
+        ],
+        "url": "https://stemplayer.com/",
+        "title": "STEMPLAYER"
+      },
+      "title": "STEMPLAYER",
+      "favicon": "https://www.stemplayer.com/favicon.ico"
+    },
+    "title": "STEMPLAYER",
+    "description": "Official site"
+  },
+  {
+    "timestamp": "2022-04-27T18:38:31.000Z",
+    "appURL": "https://duino.app/",
+    "sourceURL": "https://github.com/duinoapp/duinoapp-client",
+    "usedAPIs": [
+      {
+        "name": "WebSerial",
+        "url": "https://web.dev/serial/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Duino App",
+      "favicon": "https://duino.app/img/icons/favicon-16x16.png"
+    },
+    "title": "Duino App",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-04-28T18:53:24.000Z",
+    "appURL": "https://stadia.google.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Pointer Lock (unadjustedMovement)",
+        "url": "https://web.dev/disable-mouse-acceleration/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "open_graph": {
+        "images": [
+          {
+            "url": "https://ssl.gstatic.com/stadia/gamers/assets/stadia_logo_and_text_v1.jpg"
+          }
+        ],
+        "url": "https://stadia.google.com/",
+        "title": "Stadia - Play for no cost across your favorite devices"
+      },
+      "twitter_card": {
+        "images": [
+          {
+            "url": "https://ssl.gstatic.com/stadia/gamers/assets/stadia_logo_and_text_v1.jpg"
+          }
+        ],
+        "card": "summary_large_image",
+        "title": "Stadia - Play for no cost across your favorite devices"
+      },
+      "title": "Stadia - One place for all the ways we play",
+      "description": "Get instant access to Stadia and a collection of games with a Stadia Pro no cost trial now.",
+      "favicon": "https://ssl.gstatic.com/stadia/gamers/assets/app-icon-v2-512.png"
+    },
+    "title": "Stadia - Play for no cost across your favorite devices",
+    "description": "Get instant access to Stadia and a collection of games with a Stadia Pro no cost trial now."
+  },
+  {
+    "timestamp": "2022-04-28T18:54:22.000Z",
+    "appURL": "https://play.geforcenow.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "GeForce NOW",
+      "open_graph": {
+        "site_name": "GeForce NOW",
+        "type": "Website",
+        "images": [
+          {
+            "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/gfn/webassets/geforce-now-og-no-text-1200x630.jpg"
+          }
+        ],
+        "title": "Experience GeForce NOW Gaming Anywhere & Anytime",
+        "description": "Instantly play the most demanding PC games and seamlessly play across your devices."
+      },
+      "twitter_card": {
+        "card": "summary_large_image"
+      },
+      "favicon": "https://play.geforcenow.com/assets/img/GFN_logo1024.png"
+    },
+    "title": "Experience GeForce NOW Gaming Anywhere & Anytime",
+    "description": "Instantly play the most demanding PC games and seamlessly play across your devices."
+  },
+  {
+    "timestamp": "2022-05-03T10:28:50.000Z",
+    "appURL": "https://lookscanned.io/scan",
+    "sourceURL": "https://github.com/rwv/lookscanned.io",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Look Scanned",
+      "description": "Look Scanned is a pure frontend site that makes your PDFs look scanned! No need for printers and scanners anymore - everything you need to do is just a few clicks.",
+      "favicon": "https://lookscanned.io/icons/favicon.svg"
+    },
+    "title": "Look Scanned",
+    "description": "Look Scanned is a pure frontend site that makes your PDFs look scanned! No need for printers and scanners anymore - everything you need to do is just a few clicks."
+  },
+  {
+    "timestamp": "2022-05-03T16:45:41.000Z",
+    "appURL": "http://sharedgametimer.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "HapticsDevice",
+        "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/HapticsDevice/explainer.md"
+      },
+      {
+        "name": "Media Session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API"
+      },
+      {
+        "name": "Screen Wake Lock",
+        "url": "https://web.dev/wake-lock/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "WebBluetooth",
+        "url": "https://web.dev/bluetooth/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Shared Game Timer",
+      "description": "A board game timer that synchronizes across multiple devices.",
+      "twitter_card": {
+        "card": "summary_large_image",
+        "site": "@SharedGameTimer",
+        "url": "https://sharedgametimer.com/",
+        "title": "Shared Game Timer",
+        "description": "A board game timer that synchronizes across multiple devices.",
+        "images": [
+          {
+            "url": "https://sharedgametimer.com/promo-v2.png",
+            "alt": "Shared Game Timer"
+          }
+        ]
+      },
+      "open_graph": {
+        "type": "website",
+        "url": "https://sharedgametimer.com/",
+        "title": "Shared Game Timer",
+        "description": "A board game timer that synchronizes across multiple devices.",
+        "determiner": "the",
+        "locale": "en_US",
+        "site_name": "Shared Game Timer",
+        "images": [
+          {
+            "url": "https://sharedgametimer.com/promo-v2.png",
+            "secure_url": "https://sharedgametimer.com/promo-v2.png",
+            "type": "image/png",
+            "width": 1200,
+            "height": 628
+          }
+        ]
+      },
+      "favicon": "http://sharedgametimer.com/favicon.ico"
+    },
+    "title": "Shared Game Timer",
+    "description": "A board game timer that synchronizes across multiple devices."
+  },
+  {
+    "timestamp": "2022-05-03T22:08:08.000Z",
+    "appURL": "https://configure.zsa.io/train",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "description": "A powerful, visual tool to configure your keyboard. Based on the open-source QMK firmware.",
+      "title": "Oryx: The ZSA Keyboard Configurator",
+      "favicon": "https://configure.zsa.io/static/favicon.png?v=1"
+    },
+    "title": "Oryx: The ZSA Keyboard Configurator",
+    "description": "A powerful, visual tool to configure your keyboard. Based on the open-source QMK firmware."
+  },
+  {
+    "timestamp": "2022-05-04T07:51:50.000Z",
+    "appURL": "https://hoten.cc/zc/play/",
+    "sourceURL": "https://github.com/connorjclark/ZeldaClassic",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      },
+      {
+        "name": "Persistent Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Zelda Classic",
+      "description": "Play one of hundreds of Zelda Classic quests, or create your own quest! Zelda Classic is a custom game engine where you can make your own quest",
+      "favicon": "https://hoten.cc/zc/favicon.ico"
+    },
+    "title": "Zelda Classic",
+    "description": "Play one of hundreds of Zelda Classic quests, or create your own quest! Zelda Classic is a custom game engine where you can make your own quest"
+  },
+  {
+    "timestamp": "2022-05-04T09:19:18.000Z",
+    "appURL": "https://squoosh.app",
+    "sourceURL": "https://github.com/GoogleChromeLabs/squoosh",
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share (Files)",
+        "url": "https://web.dev/web-share/"
+      },
+      {
+        "name": "Web Share Target (Files)",
+        "url": "https://web.dev/web-share-target/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Squoosh",
+      "description": "Squoosh is the ultimate image optimizer that allows you to compress and compare images with different codecs in your browser.",
+      "twitter_card": {
+        "card": "summary",
+        "site": "@SquooshApp"
+      },
+      "open_graph": {
+        "title": "Squoosh",
+        "type": "website",
+        "images": [
+          {
+            "url": "https://squoosh.app/c/icon-large-maskable-c2078ced.png",
+            "secure_url": "https://squoosh.app/c/icon-large-maskable-c2078ced.png",
+            "type": "image/png",
+            "width": 500,
+            "height": 500
+          }
+        ],
+        "description": "Squoosh is the ultimate image optimizer that allows you to compress and compare images with different codecs in your browser."
+      },
+      "favicon": "https://squoosh.app/c/favicon-c9cf50ef.ico"
+    },
+    "title": "Squoosh",
+    "description": "Squoosh is the ultimate image optimizer that allows you to compress and compare images with different codecs in your browser."
+  },
+  {
+    "timestamp": "2022-05-05T07:57:14.000Z",
+    "appURL": "https://activerecall.com/login.html",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File System Access",
+        "url": "https://web.dev/file-system-access/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Active Recall",
+      "favicon": "https://activerecall.com/assets/ar_favicon_32.png?v=3"
+    },
+    "title": "Active Recall",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-05-06T07:04:51.000Z",
+    "appURL": "https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Gamepad",
+        "url": "https://web.dev/gamepad/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Play Fortnite | Xbox Cloud Gaming (Beta) on Xbox.com",
+      "description": "Play Fortnite with Xbox Cloud Gaming (Beta). Join the Resistance in the final battle to free the Zero Point! The IO has lined up guards and sky stations, but the Resistance is equipped with new tactics like sprinting, mantling, and more. Board an Armored Battle Bus to be a powerful force or attach a Cow Catcher to your truck for extra ramming power. Take on your opponents in the ultimate battle for the Zero Point in Chapter 3 Season 2: Resistance! Fortnite is the always evolving, multiplayer game where you and your friends battle to be the last one standing or collaborate to create your dream Fortnite world. Play both Battle Royale and Fortnite Creative for free or purchase Fortnite’s PvE Campaign mode, Save the World. Download now and jump into the action. ",
+      "keywords": [
+        "play Fortnite",
+        "cloud gaming Fortnite"
+      ],
+      "twitter_card": {
+        "title": "Play Fortnite | Xbox Cloud Gaming (Beta) on Xbox.com",
+        "description": "Play Fortnite with Xbox Cloud Gaming (Beta). Join the Resistance in the final battle to free the Zero Point! The IO has lined up guards and sky stations, but the Resistance is equipped with new tactics like sprinting, mantling, and more. Board an Armored Battle Bus to be a powerful force or attach a Cow Catcher to your truck for extra ramming power. Take on your opponents in the ultimate battle for the Zero Point in Chapter 3 Season 2: Resistance! Fortnite is the always evolving, multiplayer game where you and your friends battle to be the last one standing or collaborate to create your dream Fortnite world. Play both Battle Royale and Fortnite Creative for free or purchase Fortnite’s PvE Campaign mode, Save the World. Download now and jump into the action. ",
+        "images": [
+          {
+            "url": "https://store-images.s-microsoft.com/image/apps.35409.70702278257994163.e5c727b5-ca54-4dba-a1c0-7866c2cdb37c.e3c49016-45be-43b4-862d-33d281d6b486",
+            "alt": "Fortnite"
+          }
+        ],
+        "site": "Xbox Cloud Gaming (Beta) on Xbox.com",
+        "card": "summary_large_image"
+      },
+      "open_graph": {
+        "title": "Play Fortnite | Xbox Cloud Gaming (Beta) on Xbox.com",
+        "description": "Play Fortnite with Xbox Cloud Gaming (Beta). Join the Resistance in the final battle to free the Zero Point! The IO has lined up guards and sky stations, but the Resistance is equipped with new tactics like sprinting, mantling, and more. Board an Armored Battle Bus to be a powerful force or attach a Cow Catcher to your truck for extra ramming power. Take on your opponents in the ultimate battle for the Zero Point in Chapter 3 Season 2: Resistance! Fortnite is the always evolving, multiplayer game where you and your friends battle to be the last one standing or collaborate to create your dream Fortnite world. Play both Battle Royale and Fortnite Creative for free or purchase Fortnite’s PvE Campaign mode, Save the World. Download now and jump into the action. ",
+        "images": [
+          {
+            "url": "https://store-images.s-microsoft.com/image/apps.35409.70702278257994163.e5c727b5-ca54-4dba-a1c0-7866c2cdb37c.e3c49016-45be-43b4-862d-33d281d6b486"
+          }
+        ],
+        "url": "https://www.xbox.com/en-US/play/games/fortnite/BT5P2X999VH2",
+        "site_name": "Xbox Cloud Gaming (Beta) on Xbox.com",
+        "locale": "en-US",
+        "type": "website"
+      },
+      "favicon": "https://www.xbox.com/favicon.ico"
+    },
+    "title": "Play Fortnite | Xbox Cloud Gaming (Beta) on Xbox.com",
+    "description": "Play Fortnite with Xbox Cloud Gaming (Beta). Join the Resistance in the final battle to free the Zero Point! The IO has lined up guards and sky stations, but the Resistance is equipped with new tactics like sprinting, mantling, and more. Board an Armored Battle Bus to be a powerful force or attach a Cow Catcher to your truck for extra ramming power. Take on your opponents in the ultimate battle for the Zero Point in Chapter 3 Season 2: Resistance! Fortnite is the always evolving, multiplayer game where you and your friends battle to be the last one standing or collaborate to create your dream Fortnite world. Play both Battle Royale and Fortnite Creative for free or purchase Fortnite’s PvE Campaign mode, Save the World. Download now and jump into the action. "
+  },
+  {
+    "timestamp": "2022-05-06T07:16:39.000Z",
+    "appURL": "https://www.canva.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "Async Clipboard (Images)",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Async Clipboard",
+        "url": "https://web.dev/async-clipboard/"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "Device Memory",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API"
+      },
+      {
+        "name": "Push",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Web Share",
+        "url": "https://web.dev/web-share/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {},
+    "title": "www.canva.com",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-05-09T18:13:55.000Z",
+    "appURL": "https://apps.tibbo.com/",
+    "sourceURL": null,
+    "usedAPIs": [
+      {
+        "name": "WebUSB",
+        "url": "https://web.dev/usb/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Tibbo Web Apps",
+      "favicon": "https://apps.tibbo.com/static/images/favicon.png"
+    },
+    "title": "Tibbo Web Apps",
+    "description": ""
+  },
+  {
+    "timestamp": "2022-05-12T10:19:13.000Z",
+    "appURL": "https://pwa.kiwix.org/www/index.html",
+    "sourceURL": "https://github.com/kiwix/kiwix-js-windows",
+    "usedAPIs": [
+      {
+        "name": "Add to Home Screen",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent"
+      },
+      {
+        "name": "Cache Storage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage"
+      },
+      {
+        "name": "File Handling",
+        "url": "https://web.dev/file-handling/"
+      },
+      {
+        "name": "Service Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Tabbed Application Mode",
+        "url": "https://web.dev/tabbed-application-mode/"
+      }
+    ],
+    "screenshot": "",
+    "meta": {
+      "title": "Kiwix JS PWA",
+      "description": "Offline Wikipedia reader",
+      "favicon": "https://pwa.kiwix.org/www/favicon.ico"
+    },
+    "title": "Kiwix JS PWA",
+    "description": "Offline Wikipedia reader"
+  }
+]
