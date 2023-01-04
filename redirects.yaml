@@ -39,6 +39,9 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
+- from: /docs/extensions/mv3/overview
+  to: /docs/extensions/mv3/architecture-overview
+
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
 

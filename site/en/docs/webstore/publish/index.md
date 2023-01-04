@@ -18,7 +18,7 @@ publishing][group-publishers].
 {% endAside %}
 
 Before you publish an extension, you need to load it locally and test that it works, as described in
-[Hello extensions][hello-extension]. Make sure that it runs correctly and that all its functionality works as you
+[Development Basics][dev-basics]. Make sure that it runs correctly and that all its functionality works as you
 intend.
 
 To publish your item to the Chrome Web Store, follow these steps:
@@ -200,6 +200,7 @@ staged and reviewed items", width="709", height="238" %}
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [description]: /docs/apps/manifest/description/
+[dev-basics]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [group-publishers]: /docs/webstore/group-publishers
